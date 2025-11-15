@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：64
@@ -9,7 +9,7 @@
 export { i as a }
 export { a as b }
 export { s as c }
-import r = require("./13/303/index");
+import /* [auto-meaningful-name] */$_28_303_index = require("./28/303/index")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,7 +21,7 @@ var o = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(r)
+}($_28_303_index)
 function i(e) {
   return e + "_" + o.a.generate()
 }

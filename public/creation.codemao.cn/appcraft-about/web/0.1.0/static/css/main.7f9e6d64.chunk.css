@@ -1,0 +1,240 @@
+body,html,p {
+    padding: 0;
+    margin: 0
+}
+
+.style_flexTC__1vmw0 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center
+}
+
+.style_pageWrapper__15HMO {
+    min-width: 1300px
+}
+
+.style_pageWrapper__15HMO::-webkit-scrollbar {
+    width: 0
+}
+
+.style_left__xtXu8,.style_right__3ly43 {
+    flex-grow: 1
+}
+
+.style_bannerBox__12cfY {
+    position: relative;
+    height: 640px;
+    background: linear-gradient(166deg,#fbfbff,#f6f5ff)
+}
+
+.style_bannerBox__12cfY .style_bannerLeftBg__9vihJ {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 382px
+}
+
+.style_bannerBox__12cfY .style_bannerRightBg__S_leT {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 400px
+}
+
+.style_bannerBox__12cfY .style_bannerContent__2c3Xo {
+    width: 1300px;
+    height: 640px;
+    text-align: center;
+    z-index: 3
+}
+
+.style_bannerBox__12cfY .style_bannerContent__2c3Xo .style_bannerLogoBox__2uCQU {
+    margin-top: 140px;
+    margin-bottom: 50px
+}
+
+.style_bannerBox__12cfY .style_bannerContent__2c3Xo .style_bannerLogoBox__2uCQU .style_bannerLogoImg__1z90v {
+    width: 283px
+}
+
+.style_bannerBox__12cfY .style_bannerContent__2c3Xo .style_bannerText__1mT-J {
+    position: relative;
+    height: 90px;
+    color: #33383d;
+    font-size: 28px;
+    font-weight: 450;
+    line-height: 56px
+}
+
+.style_bannerBox__12cfY .style_bannerContent__2c3Xo .style_bannerText__1mT-J .style_quotesLeft__PPmik {
+    width: 29px;
+    position: absolute;
+    left: 15%
+}
+
+.style_bannerBox__12cfY .style_bannerContent__2c3Xo .style_bannerText__1mT-J .style_quotesRight__94PM4 {
+    width: 29px;
+    position: absolute;
+    right: 16%;
+    bottom: 0
+}
+
+.style_bannerBox__12cfY .style_bannerContent__2c3Xo .style_bannerTexSpeech__1iB3g {
+    margin-top: 55px;
+    margin-right: 280px;
+    text-align: right;
+    color: #82778c;
+    font-size: 28px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo {
+    padding-bottom: 70px;
+    width: 1300px;
+    text-align: center;
+    background-color: #fff
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseTitle__oY0I8 {
+    padding: 70px 0 0;
+    font-size: 36px;
+    font-weight: 700
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z {
+    position: relative
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseTimelineImg__3MrKy {
+    width: 1270px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseUpList__1uocX {
+    margin-left: 280px;
+    display: flex;
+    position: relative;
+    top: 41px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseUpList__1uocX .style_courseItem__2uSQI {
+    width: 300px;
+    margin-right: 124px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseDownList__3UZQ6 {
+    margin-left: 90px;
+    display: flex;
+    position: relative;
+    top: -45px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseDownList__3UZQ6 .style_courseItem__2uSQI {
+    width: 300px;
+    margin-right: 118px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseDownList__3UZQ6 .style_courseItem__2uSQI .style_courseText__3sU7q {
+    position: relative;
+    top: 70px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseItem__2uSQI {
+    display: flex
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseItem__2uSQI .style_courseDownImg__1deSF,.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseItem__2uSQI .style_courseUpImg__2Buk0 {
+    width: 36px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseText__3sU7q {
+    text-align: left
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseText__3sU7q .style_courseItemTitle__1NVhE {
+    margin-bottom: 8px;
+    font-size: 24px;
+    font-weight: 700;
+    color: #33383d
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_courseList__19a4z .style_courseText__3sU7q .style_courseItemDesc__WzIDF {
+    font-size: 20px;
+    color: #61626b
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_familyTitle__1ekBp {
+    padding: 50px 0 30px;
+    font-size: 36px;
+    font-weight: 700
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_familyBox__1Yg06 {
+    display: flex;
+    flex-direction: column;
+    width: 1072px;
+    height: 1132px;
+    margin: 0 auto;
+    border-radius: 50px;
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,.23)
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_familyBox__1Yg06 .style_familyImgBox__2lnPZ {
+    width: 1000px;
+    height: 993px;
+    margin: 30px auto 0;
+    background-color: #a9d2ff;
+    border-radius: 36px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_familyBox__1Yg06 .style_familyPhotoImg__3D1ie {
+    width: 1000px
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_familyBox__1Yg06 .style_familyIconBox__1Y0qw {
+    padding: 38px 70px 0;
+    text-align: left
+}
+
+.style_courseAndFamilyBox__3ooIE .style_courseAndFamilyContent__3DZMo .style_familyBox__1Yg06 .style_familyIconBox__1Y0qw .style_familyLikeImg__2uLwD {
+    width: 42px
+}
+
+.style_TeamBox__3yEcg {
+    background: linear-gradient(166deg,#5e6ff9,#b94aff)
+}
+
+.style_TeamBox__3yEcg .style_teamContent__2hMrB {
+    width: 1300px;
+    padding-bottom: 80px
+}
+
+.style_TeamBox__3yEcg .style_teamContent__2hMrB .style_thanksText__omGuQ {
+    padding: 60px 0 62px;
+    font-size: 49px;
+    text-align: center;
+    color: #fff
+}
+
+.style_TeamBox__3yEcg .style_teamContent__2hMrB .style_teamItem__2qdu5 {
+    padding: 0 80px 40px 180px;
+    display: flex;
+    align-items: flex-start;
+    color: #fff
+}
+
+.style_TeamBox__3yEcg .style_teamContent__2hMrB .style_teamItem__2qdu5 .style_teamIcon__3Vz4a {
+    width: 50px;
+    margin-right: 30px
+}
+
+.style_TeamBox__3yEcg .style_teamContent__2hMrB .style_teamItem__2qdu5 .style_itemPosition__1qNKy {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 28px
+}
+
+.style_TeamBox__3yEcg .style_teamContent__2hMrB .style_teamItem__2qdu5 .style_itemMember__17lqp {
+    margin: 0;
+    font-size: 24px
+}
+
+/*# sourceMappingURL=main.7f9e6d64.chunk.css.map */

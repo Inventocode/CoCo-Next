@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：10
@@ -7,11 +7,11 @@
 "use strict"
 
 export { a }
-import r = require("./1438");
-import i = require("./768");
-import o = require("./1439");
+import /* [auto-meaningful-name] */$_1438 = require("./1438")
+import /* [auto-meaningful-name] */$$_25_768 = require("../25/768")
+import /* [auto-meaningful-name] */$_1439 = require("./1439")
 function a(e, t) {
-  return r.a(e) || function (e, t) {
+  return $_1438.a(e) || function (e, t) {
     if ("undefined" !== typeof Symbol && Symbol.iterator in Object(e)) {
       var n = []
       var r = true
@@ -37,6 +37,6 @@ function a(e, t) {
       }
       return n
     }
-  }(e, t) || i.a(e, t) || o.a()
+  }(e, t) || $$_25_768.a(e, t) || $_1439.a()
 }
 export default a

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1980
@@ -25,11 +25,11 @@ a.prototype.process = function (e) {
   if (!(e = (e = e || "").toString())) {
     return ""
   }
-  var this$options = this.options
-  var this$options$whiteList = this$options.whiteList
-  var this$options$onAttr = this$options.onAttr
-  var this$options$onIgnoreAttr = this$options.onIgnoreAttr
-  var this$options$safeAttrValue = this$options.safeAttrValue
+  var /* [auto-meaningful-name] */this$options = this.options
+  var /* [auto-meaningful-name] */this$options$whiteList = this$options.whiteList
+  var /* [auto-meaningful-name] */this$options$onAttr = this$options.onAttr
+  var /* [auto-meaningful-name] */this$options$onIgnoreAttr = this$options.onIgnoreAttr
+  var /* [auto-meaningful-name] */this$options$safeAttrValue = this$options.safeAttrValue
   return i(e, function (e, t, i, c, u) {
     var l = this$options$whiteList[i]
     var f = false

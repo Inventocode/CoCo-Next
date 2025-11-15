@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：775
@@ -8,7 +8,7 @@ var r = require("./1984/index")
 r.prototype.formulaEval = function () {
   "use strict"
 
-  for (var e, t, n, r = [], this$value = this.value, o = 0; o < this$value.length; o++) {
+  for (var e, t, n, r = [], /* [auto-meaningful-name] */this$value = this.value, o = 0; o < this$value.length; o++) {
     if (1 === this$value[o].type || 3 === this$value[o].type) {
       r.push({
         value: 3 === this$value[o].type ? this$value[o].show : this$value[o].value,

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：511
@@ -8,38 +8,38 @@
 
 var r
 var i
-import * as o from "../../../../shared/1531/2584/25/index"
-import * as a from "../../../../shared/1531/2584/296"
-import * as _RegeneratorRuntime from "regenerator-runtime"
-import RegeneratorRuntime from "regenerator-runtime"
-import * as c from "../../../../shared/1531/2584/10/index"
-import * as l from "../../../../shared/1531/2584/6"
-import * as d from "../../../../shared/1531/2584/7"
-import * as _React from "react"
-import React from "react"
-import * as p from "../../../../shared/1531/2584/16/index"
-import * as m from "../../../../shared/1531/2584/38/2629"
-import * as _Axios from "axios"
-import Axios from "axios"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_25_index from "../../../../shared/1531/2584/25/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_296 from "../../../../shared/1531/2584/296"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_10_index from "../../../../shared/1531/2584/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_6 from "../../../../shared/1531/2584/6"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_7 from "../../../../shared/1531/2584/7"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_16_index from "../../../../shared/1531/2584/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_38_2629 from "../../../../shared/1531/2584/38/2629"
+import * as /* [auto-meaningful-name] */Axios from "axios"
+import /* [auto-meaningful-name] */_Axios from "axios"
 import "../../../../shared/1531/2584/710/index"
-import * as v from "../../../../../src/shared/widget/custom/load"
-import * as _ from "../../../../../src/shared/widget/custom/type"
-import * as y from "../../../../../src/shared/widget/custom/storage"
-import * as O from "../../../../shared/1531/2584/15"
-import * as w from "../../../../shared/1531/2584/676/index"
-import * as E from "../../../../shared/1531/2584/27"
-import * as T from "../../../../shared/1531/2584/40"
-import * as j from "../../../../shared/1531/2584/57/index"
-import * as S from "../../../../shared/1531/2584/58/index"
-import * as A from "../../../../shared/1531/2584/28/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_15 from "../../../../shared/1531/2584/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_676 from "../../../../shared/1531/2584/676"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_27 from "../../../../shared/1531/2584/27"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_40 from "../../../../shared/1531/2584/40"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_57_index from "../../../../shared/1531/2584/57/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_58_index from "../../../../shared/1531/2584/58/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_28_index from "../../../../shared/1531/2584/28/index"
 var k = []
 var I = function () {}
 var M = {
   callNumber: function (t) {
-    if (A.d()) {
+    if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
       window.cordova.plugins.phonedialer.call(t, I, function (t) {
         console.error("应用需要开启电话权限")
-        var window$cordova$plugins$permissions = window.cordova.plugins.permissions
+        var /* [auto-meaningful-name] */window$cordova$plugins$permissions = window.cordova.plugins.permissions
         window$cordova$plugins$permissions.hasPermission(window$cordova$plugins$permissions.CALL_PHONE, function (t) {
           var /* [auto-meaningful-name] */window$plugins$toast
           if (!t.hasPermission) {
@@ -54,7 +54,7 @@ var M = {
     }
   },
   dialNumber: function (t) {
-    if (A.d()) {
+    if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
       window.cordova.plugins.phonedialer.dial(t, I, function (t) {
         return console.error(t)
       }, false)
@@ -64,11 +64,11 @@ var M = {
   },
   onCall: function (t) {
     var /* [auto-meaningful-name] */window$CallTrap
-    if (A.d()) {
+    if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
       k.push(t)
       if (!(null === (window$CallTrap = window.CallTrap) || undefined === window$CallTrap)) {
         window$CallTrap.onCall(function (t) {
-          var t$state = t.state
+          var /* [auto-meaningful-name] */t$state = t.state
           k.forEach(function (t) {
             return t(t$state)
           })
@@ -77,27 +77,27 @@ var M = {
     }
   }
 }
-import * as C from "../../../../shared/1531/2584/48/72"
-import * as x from "../../../../shared/1531/2584/48/index"
-import * as R from "../../../../shared/1531/2584/38/217/index"
-import * as N from "../../../../shared/1531/2584/676/70"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_48_72 from "../../../../shared/1531/2584/48/72"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_48_index from "../../../../shared/1531/2584/48/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_38_217_index from "../../../../shared/1531/2584/38/217/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_48_70 from "../../../../shared/1531/2584/48/70"
 var L = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var o
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (o = e.call(this, t)).phoneNumber = undefined
     o.oldState = ""
     o.isIncomingCall = false
     o.phoneNumber = t.phoneNumber
     M.onCall(function (t) {
       switch (t) {
-        case N.b.RINGING:
+        case $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING:
           o.emit("onReceivePhoneCall")
           break
-        case N.b.OFFHOOK:
-          if (o.oldState === N.b.RINGING) {
+        case $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK:
+          if (o.oldState === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING) {
             o.emit("onConnectReceivePhoneCall")
             o.isIncomingCall = true
           } else {
@@ -108,14 +108,14 @@ var L = function (t) {
           }
           break
         case "IDLE":
-          if (o.oldState === N.b.RINGING) {
-            o.emit("onPhoneCallEnd", N.a.INCOMING_CALL_REFUSE_END)
+          if (o.oldState === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING) {
+            o.emit("onPhoneCallEnd", $$_$$_$$_$$_shared_1531_2584_48_70.a.INCOMING_CALL_REFUSE_END)
           } else {
-            if (o.isIncomingCall && o.oldState === N.b.OFFHOOK) {
-              o.emit("onPhoneCallEnd", N.a.INCOMING_CALL_CONNECT_END)
+            if (o.isIncomingCall && o.oldState === $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK) {
+              o.emit("onPhoneCallEnd", $$_$$_$$_$$_shared_1531_2584_48_70.a.INCOMING_CALL_CONNECT_END)
             } else {
-              if (!(o.isIncomingCall || o.oldState !== N.b.OFFHOOK)) {
-                o.emit("onPhoneCallEnd", N.a.DIAL_OUT_CALL_END)
+              if (!(o.isIncomingCall || o.oldState !== $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK)) {
+                o.emit("onPhoneCallEnd", $$_$$_$$_$$_shared_1531_2584_48_70.a.DIAL_OUT_CALL_END)
                 i = false
               }
             }
@@ -125,32 +125,32 @@ var L = function (t) {
     })
     return o
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "callNumber",
     value: function () {
       if (this.phoneNumber) {
-        if (A.g()) {
-          if (x.a().getState().emulatorPhoneInfo.callingPageVisible) {
+        if ($$_$$_$$_$$_shared_1531_2584_28_index.g()) {
+          if ($$_$$_$$_$$_shared_1531_2584_48_index.a().getState().emulatorPhoneInfo.callingPageVisible) {
             this.widgetWarn("callNumberRepeat")
           } else {
-            x.a().dispatch(C.s({
+            $$_$$_$$_$$_shared_1531_2584_48_index.a().dispatch($$_$$_$$_$$_shared_1531_2584_48_72.s({
               phoneDialWidgetId: this.__widgetId,
               callingPageVisible: true,
               phoneNumber: this.phoneNumber,
               callType: "dialOutCall",
-              callStatus: N.b.RINGING
+              callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING
             }))
             this.emit("onPhoneCallStart")
-            R.b({
+            $$_$$_$$_$$_shared_1531_2584_38_217_index.b({
               phoneCallInfo: {
                 callType: "dialOutCall",
                 dialOutPhoneNumber: this.phoneNumber,
-                callStatus: N.b.RINGING
+                callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING
               }
             })
           }
         } else {
-          if (!A.d()) {
+          if (!$$_$$_$$_$$_shared_1531_2584_28_index.d()) {
             r = this.__widgetId
             M.callNumber(this.phoneNumber)
           }
@@ -167,11 +167,11 @@ var L = function (t) {
   }, {
     key: "dialNumber",
     value: function () {
-      if (A.g()) {
-        if (x.a().getState().emulatorPhoneInfo.dialPageVisible) {
+      if ($$_$$_$$_$$_shared_1531_2584_28_index.g()) {
+        if ($$_$$_$$_$$_shared_1531_2584_48_index.a().getState().emulatorPhoneInfo.dialPageVisible) {
           this.widgetWarn("dialNumberRepeat")
         }
-        return void x.a().dispatch(C.s({
+        return void $$_$$_$$_$$_shared_1531_2584_48_index.a().dispatch($$_$$_$$_$$_shared_1531_2584_48_72.s({
           phoneDialWidgetId: this.__widgetId,
           dialPageVisible: true,
           phoneNumber: this.phoneNumber
@@ -182,12 +182,12 @@ var L = function (t) {
     }
   }])
   return n
-}(v.c)
-import * as D from "../../../../shared/1531/2584/677/index"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_677_index from "../../../../shared/1531/2584/677/index"
 var B = {
   pickContact: function (t) {
     navigator.contacts.pickContact(function (e) {
-      var e$displayName = e.displayName
+      var /* [auto-meaningful-name] */e$displayName = e.displayName
       var r = ""
       var i = []
       if (e.phoneNumbers) {
@@ -203,7 +203,7 @@ var B = {
       t(e$displayName, r, i, o)
     }, function (t) {
       console.error("应用需要开启通讯录权限")
-      var window$cordova$plugins$permissions = window.cordova.plugins.permissions
+      var /* [auto-meaningful-name] */window$cordova$plugins$permissions = window.cordova.plugins.permissions
       window$cordova$plugins$permissions.hasPermission(window$cordova$plugins$permissions.READ_CONTACTS, function (t) {
         var /* [auto-meaningful-name] */window$plugins$toast
         if (!t.hasPermission) {
@@ -216,11 +216,11 @@ var B = {
   }
 }
 var P = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this, t)).contactName = undefined
     r.phoneNumber = undefined
     r.contactAvatar = undefined
@@ -231,11 +231,11 @@ var P = function (t) {
     r.phoneNumberList = t.phoneNumberList
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "pickContact",
     value: function () {
       var t = this
-      if (A.d()) {
+      if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
         B.pickContact(function (e, n, r, i) {
           t.contactName = e
           t.phoneNumber = n
@@ -244,7 +244,7 @@ var P = function (t) {
           t.emit("onContactPickerSelected", e, n, r)
         })
       } else {
-        x.a().dispatch(C.s({
+        $$_$$_$$_$$_shared_1531_2584_48_index.a().dispatch($$_$$_$$_$$_shared_1531_2584_48_72.s({
           contactWidgetId: this.__widgetId,
           contactPageVisible: true
         }))
@@ -252,14 +252,14 @@ var P = function (t) {
     }
   }])
   return n
-}(v.c)
-import * as U from "../../../../shared/1531/2584/678/index"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_678_index from "../../../../shared/1531/2584/678/index"
 var W = []
 var H = function () {}
 var F = {
   openMessage: function (t, e) {
     if (t) {
-      if (A.d()) {
+      if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
         window.sms.send(t, e, {
           replaceLineBreaks: false,
           android: {
@@ -267,7 +267,7 @@ var F = {
           }
         }, H, H)
       } else {
-        if (A.b()) {
+        if ($$_$$_$$_$$_shared_1531_2584_28_index.b()) {
           window.location.href = "sms:".concat(t, "?body=").concat(e)
         } else {
           window.location.href = "sms:".concat(t, "&body=").concat(e)
@@ -276,7 +276,7 @@ var F = {
     }
   },
   sendMessage: function (t, e, n, r) {
-    if (A.d()) {
+    if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
       window.sms.send(t, e, {
         replaceLineBreaks: false,
         android: {
@@ -287,7 +287,7 @@ var F = {
       }, function () {
         r(e, t)
         console.error("应用需要开启短信权限")
-        var window$cordova$plugins$permissions = window.cordova.plugins.permissions
+        var /* [auto-meaningful-name] */window$cordova$plugins$permissions = window.cordova.plugins.permissions
         window$cordova$plugins$permissions.hasPermission(window$cordova$plugins$permissions.SEND_SMS, function (t) {
           var /* [auto-meaningful-name] */window$plugins$toast
           if (!t.hasPermission) {
@@ -298,7 +298,7 @@ var F = {
         })
       })
     } else {
-      if (A.b()) {
+      if ($$_$$_$$_$$_shared_1531_2584_28_index.b()) {
         window.location.href = "sms:".concat(t, "?body=").concat(e)
       } else {
         window.location.href = "sms:".concat(t, "&body=").concat(e)
@@ -307,7 +307,7 @@ var F = {
   },
   startWatchReceiveSms: function () {
     var /* [auto-meaningful-name] */window$SMSReceive
-    if (A.d()) {
+    if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
       if (!(null === (window$SMSReceive = window.SMSReceive) || undefined === window$SMSReceive)) {
         window$SMSReceive.startWatch(H, function () {
           return console.warn("sms receive: failed to start watching")
@@ -316,10 +316,10 @@ var F = {
     }
   },
   onCall: function (t) {
-    if (A.d()) {
+    if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
       W.push(t)
       document.addEventListener("onSMSArrive", function (t) {
-        var t$data = t.data
+        var /* [auto-meaningful-name] */t$data = t.data
         W.forEach(function (t) {
           return t(t$data.body, t$data.address)
         })
@@ -329,11 +329,11 @@ var F = {
 }
 var V = false
 var G = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this, t)).phoneNumber = undefined
     r.smsContent = undefined
     r.phoneNumber = t.phoneNumber
@@ -347,13 +347,13 @@ var G = function (t) {
     })
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "sendSms",
     value: function () {
       var t = this
       if (this.phoneNumber) {
         if (this.smsContent) {
-          return A.g() ? (this.emit("onSendSmsSuccess", this.smsContent, this.phoneNumber), void this.widgetLog("sendSmsLog", {
+          return $$_$$_$$_$$_shared_1531_2584_28_index.g() ? (this.emit("onSendSmsSuccess", this.smsContent, this.phoneNumber), void this.widgetLog("sendSmsLog", {
             phoneNumber: this.phoneNumber
           })) : void F.sendMessage(this.phoneNumber, this.smsContent, function (e, n) {
             return t.emit("onSendSmsSuccess", e, n)
@@ -369,8 +369,8 @@ var G = function (t) {
   }, {
     key: "openSms",
     value: function () {
-      if (A.g()) {
-        x.a().dispatch(C.s({
+      if ($$_$$_$$_$$_shared_1531_2584_28_index.g()) {
+        $$_$$_$$_$$_shared_1531_2584_48_index.a().dispatch($$_$$_$$_$$_shared_1531_2584_48_72.s({
           smsWidgetId: this.__widgetId,
           sendSmsPageVisible: true,
           sendSmsNumber: this.phoneNumber,
@@ -382,16 +382,16 @@ var G = function (t) {
     }
   }])
   return n
-}(v.c)
-import * as Y from "../../../../shared/1531/2584/679"
-import * as z from "../../../../shared/1531/2584/75/index"
-import K from "../../../../shared/1531/2584/75/index"
-import * as q from "../../../../shared/1531/2584/8"
-import X from "../../../../shared/1531/2584/8"
-import * as _Color from "color"
-import Color from "color"
-import * as Q from "../../../../shared/1531/2584/189"
-import * as Animejs from "animejs"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_679 from "../../../../shared/1531/2584/679"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_75_index from "../../../../shared/1531/2584/75/index"
+import /* [auto-meaningful-name] */_$$_$$_$$_$$_shared_1531_2584_75_index from "../../../../shared/1531/2584/75/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_8 from "../../../../shared/1531/2584/8"
+import /* [auto-meaningful-name] */_$$_$$_$$_$$_shared_1531_2584_ from "../../../../shared/1531/2584/8"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_189 from "../../../../shared/1531/2584/189"
+import * as /* [auto-meaningful-name] */Animejs from "animejs"
 function tt(t, e) {
   return [Animejs.default({
     targets: "#".concat(t),
@@ -410,22 +410,22 @@ function tt(t, e) {
   })]
 }
 var et
-import * as nt from "../../../../shared/1531/2584/233/324"
-import * as rt from "./138"
-import it from "./138"
-var ot = "COCO_PLAYER_DIALOG"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_233_324 from "../../../../shared/1531/2584/233/324"
+import * as /* [auto-meaningful-name] */$_138 from "./138"
+import /* [auto-meaningful-name] */_$_ from "./138"
+var /* [auto-meaningful-name] */COCO_PLAYER_DIALOG = "COCO_PLAYER_DIALOG"
 !function (t) {
   t.MESSAGE = "MESSAGE"
   t.SELECT = "SELECT"
   t.PROMPT = "PROMPT"
 }(et || (et = {}))
 var at = {
-  style: Q.b.styleA,
+  style: $$_$$_$$_$$_shared_1531_2584_189.b.styleA,
   currentDialogId: "",
   dialogArr: [],
   dialogPropMap: new Map(),
   addDialog: function (t) {
-    var e = m.a()
+    var e = $$_$$_$$_$$_shared_1531_2584_38_2629.a()
     this.dialogArr.push(e)
     this.dialogPropMap.set(e, t)
     if (1 === this.dialogArr.length) {
@@ -456,10 +456,10 @@ var at = {
     at.style = t
   },
   setThemeColor: function (t) {
-    var e = O.hb(t, .4)
-    var n = O.hb(t, .04)
-    var r = O.ib(t, .3)
-    var i = Color(t).toString()
+    var e = $$_$$_$$_$$_shared_1531_2584_15.hb(t, .4)
+    var n = $$_$$_$$_$$_shared_1531_2584_15.hb(t, .04)
+    var r = $$_$$_$$_$$_shared_1531_2584_15.ib(t, .3)
+    var i = _Color(t).toString()
     document.documentElement.style.setProperty("--dialog-theme-color", i)
     document.documentElement.style.setProperty("--dialog-theme-color-medium", e)
     document.documentElement.style.setProperty("--dialog-theme-color-light", n)
@@ -469,13 +469,13 @@ var at = {
     var t = document.getElementById("COCO_PLAYER_DIALOG_CONTAINER")
     if (!t) {
       (t = document.createElement("div")).id = "COCO_PLAYER_DIALOG_CONTAINER"
-      var e = document.getElementById(nt.a)
+      var e = document.getElementById($$_$$_$$_$$_shared_1531_2584_233_324.a)
       if (e) {
         e.appendChild(t)
       }
     }
     t.style.opacity = "1"
-    t.className = it.container
+    t.className = _$_.container
     return t
   },
   cancel: function (t) {
@@ -512,21 +512,21 @@ var at = {
     }
     var n = at.getContainer()
     if (this.dialogArr.length) {
-      tt(ot, function () {
-        K.unmountComponentAtNode(n)
+      tt(COCO_PLAYER_DIALOG, function () {
+        _$$_$$_$$_$$_shared_1531_2584_75_index.unmountComponentAtNode(n)
         var e = t.dialogArr[0]
         t.showDialog(e)
       })
     } else {
-      tt(ot, function () {
-        var t
+      tt(COCO_PLAYER_DIALOG, function () {
+        var /* [auto-meaningful-name] */COCO_PLAYER_DIALOG_CONTAINER
         var e
-        t = "COCO_PLAYER_DIALOG_CONTAINER"
+        COCO_PLAYER_DIALOG_CONTAINER = "COCO_PLAYER_DIALOG_CONTAINER"
         e = function () {
-          n.classList.remove(it.container)
+          n.classList.remove(_$_.container)
         }
         Animejs.default({
-          targets: "#".concat(t),
+          targets: "#".concat(COCO_PLAYER_DIALOG_CONTAINER),
           opacity: 0,
           duration: 300,
           easing: "linear",
@@ -536,7 +536,7 @@ var at = {
             }
           }
         })
-        K.unmountComponentAtNode(n)
+        _$$_$$_$$_$$_shared_1531_2584_75_index.unmountComponentAtNode(n)
       })
     }
   },
@@ -549,50 +549,50 @@ var at = {
       a = 0 === s || 1 === s
     }
     var u = ""
-    u = this.style === Q.b.styleA ? t === et.SELECT ? i ? "346px" : "400px" : "454px" : "472px"
+    u = this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA ? t === et.SELECT ? i ? "346px" : "400px" : "454px" : "472px"
     var c = ""
-    c = a ? this.style === Q.b.styleA ? "39px 0" : "42px 0" : e ? "16px 0" : "24px 0 16px 0"
-    return React.createElement("div", {
+    c = a ? this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA ? "39px 0" : "42px 0" : e ? "16px 0" : "24px 0 16px 0"
+    return _React.createElement("div", {
       style: {
         maxHeight: u,
         padding: c
       },
-      className: X(a && it.singleElementContentBox, !a && it.contentBox)
-    }, e && React.createElement("div", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(a && _$_.singleElementContentBox, !a && _$_.contentBox)
+    }, e && _React.createElement("div", {
       style: {
         background: "url(".concat(e, ") no-repeat"),
         backgroundSize: "cover",
         backgroundPosition: "center"
       },
-      className: it.imageBox
-    }), n && React.createElement("p", {
-      className: X(it.title)
-    }, n), r && React.createElement("p", {
-      className: it.textBox
-    }, React.createElement("span", {
-      className: it.text
-    }, r)), t === et.PROMPT && React.createElement("div", {
-      className: it.inputBox
-    }, React.createElement("input", {
+      className: _$_.imageBox
+    }), n && _React.createElement("p", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.title)
+    }, n), r && _React.createElement("p", {
+      className: _$_.textBox
+    }, _React.createElement("span", {
+      className: _$_.text
+    }, r)), t === et.PROMPT && _React.createElement("div", {
+      className: _$_.inputBox
+    }, _React.createElement("input", {
       id: "COCO_PLAYER_DIALOG_INPUT",
-      className: it.dialogInput,
+      className: _$_.dialogInput,
       placeholder: o
     })))
   },
   getButtonBox: function (t, e, n) {
     var r = t === et.MESSAGE ? n || "" : "确定"
-    return React.createElement("div", {
-      className: it.buttonBox
-    }, e && React.createElement("button", {
-      className: X(it.button, it.cancelButton),
+    return _React.createElement("div", {
+      className: _$_.buttonBox
+    }, e && _React.createElement("button", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.button, _$_.cancelButton),
       onClick: this.cancel.bind(null, "取消")
-    }, React.createElement("span", null, "取消")), React.createElement("button", {
-      className: X(it.button, it.mainButton),
+    }, _React.createElement("span", null, "取消")), _React.createElement("button", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.button, _$_.mainButton),
       style: {
-        width: this.style === Q.b.styleA ? e ? "133px" : "100%" : "fit-content"
+        width: this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA ? e ? "133px" : "100%" : "fit-content"
       },
       onClick: t === et.PROMPT ? this.submit : this.confirm.bind(null, r)
-    }, React.createElement("span", null, r)))
+    }, _React.createElement("span", null, r)))
   },
   message: function (t, e, n) {
     at.addDialog({
@@ -603,20 +603,20 @@ var at = {
     })
   },
   _message: function (t) {
-    var t$params = t.params
-    var t$params$title = t$params.title
-    var t$params$text = t$params.text
-    var t$params$confirmButtonText = t$params.confirmButtonText
-    var t$params$image = t$params.image
-    var t$params$showCancelButton = t$params.showCancelButton
+    var /* [auto-meaningful-name] */t$params = t.params
+    var /* [auto-meaningful-name] */t$params$title = t$params.title
+    var /* [auto-meaningful-name] */t$params$text = t$params.text
+    var /* [auto-meaningful-name] */t$params$confirmButtonText = t$params.confirmButtonText
+    var /* [auto-meaningful-name] */t$params$image = t$params.image
+    var /* [auto-meaningful-name] */t$params$showCancelButton = t$params.showCancelButton
     var s = this.getContainer()
     var u = this.getContentBox(et.MESSAGE, t$params$image, t$params$title, t$params$text, t$params$showCancelButton)
     var c = this.getButtonBox(et.MESSAGE, t$params$showCancelButton, t$params$confirmButtonText)
-    var l = React.createElement("div", {
-      id: ot,
-      className: X(it.dialog, this.style === Q.b.styleA ? it.styleA : it.styleB)
+    var l = _React.createElement("div", {
+      id: COCO_PLAYER_DIALOG,
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.dialog, this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA ? _$_.styleA : _$_.styleB)
     }, u, c)
-    K.render(l, s)
+    _$$_$$_$$_$$_shared_1531_2584_75_index.render(l, s)
   },
   select: function (t, e, n) {
     at.addDialog({
@@ -627,37 +627,37 @@ var at = {
     })
   },
   _select: function (t) {
-    var t$params = t.params
-    var t$params$title = t$params.title
-    var t$params$text = t$params.text
-    var t$params$option1 = t$params.option1
-    var t$params$option2 = t$params.option2
-    var t$params$showCancelButton = t$params.showCancelButton
+    var /* [auto-meaningful-name] */t$params = t.params
+    var /* [auto-meaningful-name] */t$params$title = t$params.title
+    var /* [auto-meaningful-name] */t$params$text = t$params.text
+    var /* [auto-meaningful-name] */t$params$option1 = t$params.option1
+    var /* [auto-meaningful-name] */t$params$option2 = t$params.option2
+    var /* [auto-meaningful-name] */t$params$showCancelButton = t$params.showCancelButton
     var s = this.getContainer()
     var u = this.getContentBox(et.SELECT, "", t$params$title, t$params$text, t$params$showCancelButton)
-    var c = React.createElement("div", {
-      id: ot,
-      className: X(it.dialog, this.style === Q.b.styleA ? it.styleA : it.styleB)
-    }, u, React.createElement("div", {
-      className: it.optionButtonBox,
+    var c = _React.createElement("div", {
+      id: COCO_PLAYER_DIALOG,
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.dialog, this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA ? _$_.styleA : _$_.styleB)
+    }, u, _React.createElement("div", {
+      className: _$_.optionButtonBox,
       style: {
-        height: this.style === Q.b.styleA ? t$params$showCancelButton ? "174px" : "120px" : "48px",
-        justifyContent: this.style !== Q.b.styleB || t$params$showCancelButton ? undefined : "flex-end"
+        height: this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA ? t$params$showCancelButton ? "174px" : "120px" : "48px",
+        justifyContent: this.style !== $$_$$_$$_$$_shared_1531_2584_189.b.styleB || t$params$showCancelButton ? undefined : "flex-end"
       }
-    }, t$params$showCancelButton && this.style === Q.b.styleB && React.createElement("button", {
-      className: X(it.button, it.cancelButton),
+    }, t$params$showCancelButton && this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleB && _React.createElement("button", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.button, _$_.cancelButton),
       onClick: this.cancel.bind(null, "")
-    }, React.createElement("span", null, "取消")), React.createElement("div", null, React.createElement("button", {
-      className: X(it.button, it.mainButton),
+    }, _React.createElement("span", null, "取消")), _React.createElement("div", null, _React.createElement("button", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.button, _$_.mainButton),
       onClick: this.confirm.bind(null, t$params$option1)
-    }, React.createElement("span", null, t$params$option1)), React.createElement("button", {
-      className: X(it.button, it.mainButton),
+    }, _React.createElement("span", null, t$params$option1)), _React.createElement("button", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.button, _$_.mainButton),
       onClick: this.confirm.bind(null, t$params$option2)
-    }, React.createElement("span", null, t$params$option2))), t$params$showCancelButton && this.style === Q.b.styleA && React.createElement("button", {
-      className: X(it.button, it.cancelButton),
+    }, _React.createElement("span", null, t$params$option2))), t$params$showCancelButton && this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA && _React.createElement("button", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.button, _$_.cancelButton),
       onClick: this.cancel.bind(null, "")
-    }, React.createElement("span", null, "取消"))))
-    K.render(c, s)
+    }, _React.createElement("span", null, "取消"))))
+    _$$_$$_$$_$$_shared_1531_2584_75_index.render(c, s)
   },
   prompt: function (t, e, n) {
     this.addDialog({
@@ -668,30 +668,30 @@ var at = {
     })
   },
   _prompt: function (t) {
-    var t$params = t.params
-    var t$params$title = t$params.title
-    var t$params$text = t$params.text
-    var t$params$placeholder = t$params.placeholder
-    var t$params$showCancelButton = t$params.showCancelButton
+    var /* [auto-meaningful-name] */t$params = t.params
+    var /* [auto-meaningful-name] */t$params$title = t$params.title
+    var /* [auto-meaningful-name] */t$params$text = t$params.text
+    var /* [auto-meaningful-name] */t$params$placeholder = t$params.placeholder
+    var /* [auto-meaningful-name] */t$params$showCancelButton = t$params.showCancelButton
     var a = this.getContainer()
     var s = this.getContentBox(et.PROMPT, "", t$params$title, t$params$text, t$params$showCancelButton, t$params$placeholder)
     var u = this.getButtonBox(et.PROMPT, t$params$showCancelButton)
-    var c = React.createElement("div", {
-      id: ot,
-      className: X(it.dialog, this.style === Q.b.styleA ? it.styleA : it.styleB)
+    var c = _React.createElement("div", {
+      id: COCO_PLAYER_DIALOG,
+      className: _$$_$$_$$_$$_shared_1531_2584_(_$_.dialog, this.style === $$_$$_$$_$$_shared_1531_2584_189.b.styleA ? _$_.styleA : _$_.styleB)
     }, s, u)
-    K.render(c, a)
+    _$$_$$_$$_$$_shared_1531_2584_75_index.render(c, a)
   }
 }
 var st = at
-import * as ut from "../../../../shared/1531/2584/21/index"
-import * as ct from "../../../../shared/1531/2584/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_21_index from "../../../../shared/1531/2584/21/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_9 from "../../../../shared/1531/2584/9"
 var lt = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this, t)).style = undefined
     r.themeColor = undefined
     r.title = undefined
@@ -708,7 +708,7 @@ var lt = function (t) {
     r.inputText = t.inputText
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "message",
     value: function (t, e, n, r, i) {
       var o = this
@@ -717,10 +717,10 @@ var lt = function (t) {
       this.image = r
       st.setStyle(this.style)
       st.setThemeColor(this.themeColor)
-      var a = x.a().getState().imageFileMap.get(r)
-      var s = O.U(r) ? r : a ? ct.lb(a) : ""
+      var a = $$_$$_$$_$$_shared_1531_2584_48_index.a().getState().imageFileMap.get(r)
+      var s = $$_$$_$$_$$_shared_1531_2584_15.U(r) ? r : a ? $$_$$_$$_$$_shared_1531_2584_9.lb(a) : ""
       var u = function (t) {
-        ut.emitWidgetEvent(Q.a, "onClickButton", o.__widgetId, t)
+        $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_189.a, "onClickButton", o.__widgetId, t)
       }
       st.message({
         title: t,
@@ -746,9 +746,9 @@ var lt = function (t) {
         showCancelButton: i
       }, function (t) {
         o.selectedOption = t
-        ut.emitWidgetEvent(Q.a, "onSelectOption", o.__widgetId, t)
+        $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_189.a, "onSelectOption", o.__widgetId, t)
       }, function () {
-        ut.emitWidgetEvent(Q.a, "onCancelSelection", o.__widgetId)
+        $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_189.a, "onCancelSelection", o.__widgetId)
       })
     }
   }, {
@@ -766,17 +766,17 @@ var lt = function (t) {
         showCancelButton: r
       }, function (t) {
         i.inputText = t
-        ut.emitWidgetEvent(Q.a, "onFinishInput", i.__widgetId, t)
+        $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_189.a, "onFinishInput", i.__widgetId, t)
       }, function () {
-        ut.emitWidgetEvent(Q.a, "onCancelInput", i.__widgetId)
+        $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_189.a, "onCancelInput", i.__widgetId)
       })
     }
   }])
   return n
-}(v.c)
-import * as dt from "../../../../shared/1531/2584/671"
-import * as _Qrcode from "qrcode"
-import Qrcode from "qrcode"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_671 from "../../../../shared/1531/2584/671"
+import * as /* [auto-meaningful-name] */Qrcode from "qrcode"
+import /* [auto-meaningful-name] */_Qrcode from "qrcode"
 var pt = {
   "7%": "L",
   "15%": "M",
@@ -784,11 +784,11 @@ var pt = {
   "30%": "H"
 }
 var mt = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this, t)).image = ""
     r.width = 300
     r.dark = undefined
@@ -801,13 +801,13 @@ var mt = function (t) {
     r.margin = t.margin
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "textToDataUrl",
     value: function (t) {
       var /* [auto-meaningful-name] */this$errorCorrectionLevel
       var n = this
       if (t) {
-        Qrcode.toDataURL(t, {
+        _Qrcode.toDataURL(t, {
           width: this.width,
           color: {
             dark: this.dark,
@@ -836,15 +836,15 @@ var mt = function (t) {
     }
   }])
   return n
-}(v.c)
-import * as bt from "../../../../shared/1531/2584/680"
-import * as gt from "../../../../shared/1531/2584/36/345/392"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_680 from "../../../../shared/1531/2584/680"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_36_345_392 from "../../../../shared/1531/2584/36/345/392"
 var vt = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this, t)).stride = undefined
     r.stepCount = undefined
     r.isStopStep = undefined
@@ -854,13 +854,13 @@ var vt = function (t) {
     r.resetStepCount()
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "startStepUpdate",
     value: function () {
       var t = this
-      if (!A.g()) {
+      if (!$$_$$_$$_$$_shared_1531_2584_28_index.g()) {
         var e = 0
-        gt.default.start(function (n) {
+        $$_$$_$$_$$_shared_1531_2584_36_345_392.default.start(function (n) {
           if (t.isStopStep && ++e % 2 === 0) {
             t.isStopStep = false
             t.stepInStopTime = n - t.stepCount
@@ -883,8 +883,8 @@ var vt = function (t) {
   }, {
     key: "stopStepUpdate",
     value: function () {
-      if (!A.g()) {
-        gt.default.stop()
+      if (!$$_$$_$$_$$_shared_1531_2584_28_index.g()) {
+        $$_$$_$$_$$_shared_1531_2584_36_345_392.default.stop()
         this.isStopStep = true
       }
     }
@@ -892,11 +892,11 @@ var vt = function (t) {
     key: "resetStepCount",
     value: function () {
       var t = this
-      if (!A.g()) {
+      if (!$$_$$_$$_$$_shared_1531_2584_28_index.g()) {
         this.stepCount = 0
         this.stepInStopTime = 0
         this.emit("onStepCountChange", 0)
-        gt.default.reset(function () {
+        $$_$$_$$_$$_shared_1531_2584_36_345_392.default.reset(function () {
           if (false === t.isStopStep) {
             t.startStepUpdate()
           }
@@ -905,47 +905,47 @@ var vt = function (t) {
     }
   }])
   return n
-}(v.c)
-import * as _t from "../../../../shared/1531/2584/681"
-import * as yt from "./721/index"
-import * as Ot from "./81/index"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_681 from "../../../../shared/1531/2584/681"
+import * as /* [auto-meaningful-name] */$_721_index from "./721/index"
+import * as /* [auto-meaningful-name] */$_81_index from "./81/index"
 function wt() {
   var t = new Map()
-  var e = [Ot.BarcodeFormat.QR_CODE]
-  t.set(Ot.DecodeHintType.POSSIBLE_FORMATS, e)
-  return new yt.BrowserQRCodeReader(t)
+  var e = [$_81_index.BarcodeFormat.QR_CODE]
+  t.set($_81_index.DecodeHintType.POSSIBLE_FORMATS, e)
+  return new $_721_index.BrowserQRCodeReader(t)
 }
 function Et() {
   return window.QRScanner
 }
 var Tt
-import * as jt from "../../../../../src/shared/ui/language"
-import * as St from "./249"
-import At from "./249"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */$_249 from "./249"
+import /* [auto-meaningful-name] */_$_2 from "./249"
 function kt(t) {
   switch (t) {
     case Tt.UNEXPECTED_ERROR:
-      return jt.c(jt.b, "ScanQrCode.Error.UnexpectedError")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.UnexpectedError")
     case Tt.CAMERA_ACCESS_DENIED:
-      return jt.c(jt.b, "ScanQrCode.Error.CameraAccessDenied")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.CameraAccessDenied")
     case Tt.CAMERA_ACCESS_RESTRICTED:
-      return jt.c(jt.b, "ScanQrCode.Error.CameraAccessRestricted")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.CameraAccessRestricted")
     case Tt.BACK_CAMERA_UNAVAILABLE:
-      return jt.c(jt.b, "ScanQrCode.Error.BackCameraUnavailable")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.BackCameraUnavailable")
     case Tt.FRONT_CAMERA_UNAVAILABLE:
-      return jt.c(jt.b, "ScanQrCode.Error.FrontCameraUnavailable")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.FrontCameraUnavailable")
     case Tt.CAMERA_UNAVAILABLE:
-      return jt.c(jt.b, "ScanQrCode.Error.CameraUnavailable")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.CameraUnavailable")
     case Tt.SCAN_CANCELED:
-      return jt.c(jt.b, "ScanQrCode.Error.ScanCanceled")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.ScanCanceled")
     case Tt.LIGHT_UNAVAILABLE:
-      return jt.c(jt.b, "ScanQrCode.Error.LightUnavailable")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.LightUnavailable")
     case Tt.OPEN_SETTINGS_UNAVAILABLE:
-      return jt.c(jt.b, "ScanQrCode.Error.SettingsUnavailable")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.SettingsUnavailable")
     case Tt.NOT_FOUND:
-      return jt.c(jt.b, "ScanQrCode.Error.NotFound")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.NotFound")
     default:
-      return jt.c(jt.b, "ScanQrCode.Error.UnexpectedError")
+      return $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.Error.UnexpectedError")
   }
 }
 !function (t) {
@@ -960,25 +960,25 @@ function kt(t) {
   t[t.OPEN_SETTINGS_UNAVAILABLE = 8] = "OPEN_SETTINGS_UNAVAILABLE"
   t[t.NOT_FOUND = 9] = "NOT_FOUND"
 }(Tt || (Tt = {}))
-import * as It from "./898"
-import Mt from "./898"
-import * as Ct from "./899"
-import xt from "./899"
-import * as Rt from "./900"
-import Nt from "./900"
-import * as Lt from "./613"
-import Dt from "./613"
-import * as Bt from "./901"
-import Pt from "./901"
-import * as Ut from "./902"
-import Wt from "./902"
+import * as /* [auto-meaningful-name] */$_898 from "./898"
+import /* [auto-meaningful-name] */_$_3 from "./898"
+import * as /* [auto-meaningful-name] */$_899 from "./899"
+import /* [auto-meaningful-name] */_$_4 from "./899"
+import * as /* [auto-meaningful-name] */$_900 from "./900"
+import /* [auto-meaningful-name] */_$_5 from "./900"
+import * as /* [auto-meaningful-name] */$_613 from "./613"
+import /* [auto-meaningful-name] */_$_6 from "./613"
+import * as /* [auto-meaningful-name] */$_901 from "./901"
+import /* [auto-meaningful-name] */_$_7 from "./901"
+import * as /* [auto-meaningful-name] */$_902 from "./902"
+import /* [auto-meaningful-name] */_$_8 from "./902"
 var Ht = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n() {
     var t
-    E.a(this, n)
-    for (var arguments$length = arguments.length, i = new Array(arguments$length), o = 0; o < arguments$length; o++) {
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n)
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length), o = 0; o < arguments$length; o++) {
       i[o] = arguments[o]
     }
     (t = e.call.apply(e, [this].concat(i))).previewPage = undefined
@@ -986,7 +986,7 @@ var Ht = function (t) {
     t.QRCodeScanner = Et()
     return t
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "showCameraPreview",
     value: function () {
       document.body.style.backgroundColor = "rgba(255, 255, 255, 0)"
@@ -1016,7 +1016,7 @@ var Ht = function (t) {
     value: function () {
       if (this.previewPage) {
         var t = this.previewPage.children[0]
-        t.classList.remove(At.scanning)
+        t.classList.remove(_$_2.scanning)
         t.style.display = "none"
         this.previewPage.children[1].style.display = "none"
         this.previewPage.children[2].style.display = "block"
@@ -1027,11 +1027,11 @@ var Ht = function (t) {
     value: function () {
       if (this.previewPage) {
         var t = this.previewPage.children[0]
-        t.className = At.scanning
+        t.className = _$_2.scanning
         t.style.display = "block"
         this.previewPage.children[1].style.display = "block"
         this.previewPage.children[2].style.display = "none"
-        this.previewPage.children[5].src = Dt
+        this.previewPage.children[5].src = _$_6
       }
     }
   }, {
@@ -1040,15 +1040,15 @@ var Ht = function (t) {
       var t = this
       if (!this.previewPage) {
         var e = function () {
-          var e = d.a(RegeneratorRuntime.mark(function e() {
-            return RegeneratorRuntime.wrap(function (e) {
+          var e = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function e() {
+            return _RegeneratorRuntime.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
                   case 0:
                     e.next = 2
-                    return ut.getCameraChoosePhoto(function () {
-                      var e = d.a(RegeneratorRuntime.mark(function e(n) {
-                        return RegeneratorRuntime.wrap(function (e) {
+                    return $$_$$_$$_$$_shared_1531_2584_21_index.getCameraChoosePhoto(function () {
+                      var e = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function e(n) {
+                        return _RegeneratorRuntime.wrap(function (e) {
                           for (;;) {
                             switch (e.prev = e.next) {
                               case 0:
@@ -1079,10 +1079,10 @@ var Ht = function (t) {
             return e.apply(this, arguments)
           }
         }()
-        var n = "\n        <img class=".concat(At.scanning, " src=").concat(Mt, " />\n        <p class=").concat(At.text, ">\n          ").concat(jt.c(jt.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat(At.error, " style=\"display:none;\">\n          <div>\n            <img src=").concat(Nt, " />\n            <p>网络不佳，二维码识别失败</p>\n          </div>\n        </div>\n        <div class=\"").concat(At.largeBtn, " ").concat(At.photoBtn, "\">\n          <img src=").concat(Wt, " />\n        </div>\n        <div class=\"").concat(At.smallBtn, " ").concat(At.returnBtn, "\">\n          <img src=").concat(xt, " />\n        </div>\n        <div class=\"").concat(At.largeBtn, " ").concat(At.lightBtn, "\">\n          <img src=").concat(Dt, " />\n        </div>\n      ")
+        var n = "\n        <img class=".concat(_$_2.scanning, " src=").concat(_$_3, " />\n        <p class=").concat(_$_2.text, ">\n          ").concat($$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat(_$_2.error, " style=\"display:none;\">\n          <div>\n            <img src=").concat(_$_5, " />\n            <p>网络不佳，二维码识别失败</p>\n          </div>\n        </div>\n        <div class=\"").concat(_$_2.largeBtn, " ").concat(_$_2.photoBtn, "\">\n          <img src=").concat(_$_8, " />\n        </div>\n        <div class=\"").concat(_$_2.smallBtn, " ").concat(_$_2.returnBtn, "\">\n          <img src=").concat(_$_4, " />\n        </div>\n        <div class=\"").concat(_$_2.largeBtn, " ").concat(_$_2.lightBtn, "\">\n          <img src=").concat(_$_6, " />\n        </div>\n      ")
         var r = document.createElement("div")
         r.id = "SCANNER_PREVIEW_CONTAINER_ID"
-        r.className = At.container
+        r.className = _$_2.container
         r.innerHTML = n
         this.previewPage = r
         this.previewPage.children[3].onclick = e
@@ -1098,9 +1098,9 @@ var Ht = function (t) {
                 if (e) {
                   t.emit("onScanError", kt(e.code))
                 } else {
-                  var n = document.getElementsByClassName(At.lightBtn)[0]
+                  var n = document.getElementsByClassName(_$_2.lightBtn)[0]
                   if (n) {
-                    n.innerHTML = "<img src=".concat(Dt, " />")
+                    n.innerHTML = "<img src=".concat(_$_6, " />")
                   }
                 }
               })
@@ -1109,9 +1109,9 @@ var Ht = function (t) {
                 if (e) {
                   t.emit("onScanError", kt(e.code))
                 } else {
-                  var n = document.getElementsByClassName(At.lightBtn)[0]
+                  var n = document.getElementsByClassName(_$_2.lightBtn)[0]
                   if (n) {
-                    n.innerHTML = "<img src=".concat(Pt, " />")
+                    n.innerHTML = "<img src=".concat(_$_7, " />")
                   }
                 }
               })
@@ -1125,7 +1125,7 @@ var Ht = function (t) {
     key: "scan",
     value: function () {
       var t = this
-      if (A.d()) {
+      if ($$_$$_$$_$$_shared_1531_2584_28_index.d()) {
         this.QRCodeScanner.prepare(function (e, n) {
           if (e) {
             t.showErrorMessage()
@@ -1149,10 +1149,10 @@ var Ht = function (t) {
   }, {
     key: "decodeImage",
     value: function () {
-      var t = d.a(RegeneratorRuntime.mark(function t(e) {
+      var t = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function t(e) {
         var n
         var /* [auto-meaningful-name] */t$sent
-        return RegeneratorRuntime.wrap(function (t) {
+        return _RegeneratorRuntime.wrap(function (t) {
           for (;;) {
             switch (t.prev = t.next) {
               case 0:
@@ -1169,7 +1169,7 @@ var Ht = function (t) {
               case 10:
                 t.prev = 10
                 t.t0 = t.catch(3)
-                if (t.t0 instanceof Ot.NotFoundException) {
+                if (t.t0 instanceof $_81_index.NotFoundException) {
                   this.emit("onScanError", kt(Tt.NOT_FOUND))
                 } else {
                   this.emit("onScanError", kt(Tt.UNEXPECTED_ERROR))
@@ -1188,20 +1188,20 @@ var Ht = function (t) {
   }, {
     key: "scanImage",
     value: function () {
-      var t = d.a(RegeneratorRuntime.mark(function t(e) {
+      var t = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function t(e) {
         var n
-        var /* [auto-meaningful-name] */x$a$getState$imageFileMap
+        var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_48_index$a$getState$imageFileMap
         var i
-        return RegeneratorRuntime.wrap(function (t) {
+        return _RegeneratorRuntime.wrap(function (t) {
           for (;;) {
             switch (t.prev = t.next) {
               case 0:
                 n = ""
-                if (O.U(e)) {
+                if ($$_$$_$$_$$_shared_1531_2584_15.U(e)) {
                   n = e
                 } else {
-                  x$a$getState$imageFileMap = x.a().getState().imageFileMap
-                  i = x$a$getState$imageFileMap.get(e)
+                  $$_$$_$$_$$_shared_1531_2584_48_index$a$getState$imageFileMap = $$_$$_$$_$$_shared_1531_2584_48_index.a().getState().imageFileMap
+                  i = $$_$$_$$_$$_shared_1531_2584_48_index$a$getState$imageFileMap.get(e)
                   n = (null === i || undefined === i ? undefined : i.cdnUrl) || ""
                 }
                 this.decodeImage(n)
@@ -1218,45 +1218,45 @@ var Ht = function (t) {
     }()
   }])
   return n
-}(v.c)
-import * as Ft from "../../../../shared/1531/2584/673"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_673 from "../../../../shared/1531/2584/673"
 var Vt = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n() {
-    E.a(this, n)
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n)
     return e.apply(this, arguments)
   }
   return n
-}(v.d)
-import * as Gt from "../../../../shared/1531/2584/675"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.d)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_675 from "../../../../shared/1531/2584/675"
 var Yt = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n() {
-    E.a(this, n)
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n)
     return e.apply(this, arguments)
   }
   return n
-}(v.d)
-import * as zt from "../../../../shared/1531/2584/36/345/114"
-import * as Kt from "../../../../shared/1531/2584/14"
-import * as qt from "../../../../shared/1531/2584/116"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.d)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_21_424_114 from "../../../../shared/1531/2584/21/424/114"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_14 from "../../../../shared/1531/2584/14"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_116 from "../../../../shared/1531/2584/116"
 var Xt = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this, t)).templateMode = undefined
     r.templateMode = t.templateMode
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "setTemplateMode",
     value: function (t, e) {
       this.setProps({
-        backgroundMode: qt.a.TEMPLATE,
+        backgroundMode: $$_$$_$$_$$_shared_1531_2584_116.a.TEMPLATE,
         templateMode: t,
         backgroundColor: e
       })
@@ -1264,14 +1264,14 @@ var Xt = function (t) {
   }, {
     key: "setBackgroundImage",
     value: function (t) {
-      var e = zt.b(t)
+      var e = $$_$$_$$_$$_shared_1531_2584_21_424_114.b(t)
       if (e) {
         this.setProps({
-          backgroundMode: qt.a.IMAGE,
+          backgroundMode: $$_$$_$$_$$_shared_1531_2584_116.a.IMAGE,
           backgroundImage: e
         })
       } else {
-        Kt.a.log({
+        $$_$$_$$_$$_shared_1531_2584_14.a.log({
           messageId: "imageNotExists",
           type: "error",
           widgetId: this.__widgetId
@@ -1280,23 +1280,23 @@ var Xt = function (t) {
     }
   }])
   return n
-}(v.d)
-import * as Jt from "../../../../shared/1531/2584/77"
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.d)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_77 from "../../../../shared/1531/2584/77"
 var Zt = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this, t)).templateMode = undefined
     r.templateMode = t.templateMode
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "setTemplateMode",
     value: function (t, e) {
       this.setProps({
-        backgroundMode: Jt.a.TEMPLATE,
+        backgroundMode: $$_$$_$$_$$_shared_1531_2584_77.a.TEMPLATE,
         templateMode: t,
         backgroundColor: e
       })
@@ -1304,14 +1304,14 @@ var Zt = function (t) {
   }, {
     key: "setBackgroundImage",
     value: function (t) {
-      var e = zt.b(t)
+      var e = $$_$$_$$_$$_shared_1531_2584_21_424_114.b(t)
       if (e) {
         this.setProps({
-          backgroundMode: Jt.a.IMAGE,
+          backgroundMode: $$_$$_$$_$$_shared_1531_2584_77.a.IMAGE,
           backgroundImage: e
         })
       } else {
-        Kt.a.log({
+        $$_$$_$$_$$_shared_1531_2584_14.a.log({
           messageId: "imageNotExists",
           type: "error",
           widgetId: this.__widgetId
@@ -1320,32 +1320,32 @@ var Zt = function (t) {
     }
   }])
   return n
-}(v.d)
-import * as Qt from "../../../../shared/1531/2584/672"
-import * as $t from "../../../../shared/1531/2584/674"
-import * as te from "../../../../shared/1531/2584/58/685"
-var window$WebSocket = window.WebSocket
-var window$XMLHttpRequest = window.XMLHttpRequest
-var window$XMLHttpRequest$prototype$open = window$XMLHttpRequest.prototype.open
-var window$fetch = window.fetch
+}($$_$$_$$_$$_$$_src_shared_widget_custom_load.d)
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_672 from "../../../../shared/1531/2584/672"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_674 from "../../../../shared/1531/2584/674"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_58_685 from "../../../../shared/1531/2584/58/685"
+var /* [auto-meaningful-name] */window$WebSocket = window.WebSocket
+var /* [auto-meaningful-name] */window$XMLHttpRequest = window.XMLHttpRequest
+var /* [auto-meaningful-name] */window$XMLHttpRequest$prototype$open = window$XMLHttpRequest.prototype.open
+var /* [auto-meaningful-name] */window$fetch = window.fetch
 var oe = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t, r) {
     var i
-    E.a(this, n)
-    return new URL(t).hostname.includes("codemao") ? (i = e.call(this, "wss://websocket.com", r), te.a(i)) : e.call(this, t, r)
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n)
+    return new URL(t).hostname.includes("codemao") ? (i = e.call(this, "wss://websocket.com", r), $$_$$_$$_$$_shared_1531_2584_58_685.a(i)) : e.call(this, t, r)
   }
   return n
 }(window$WebSocket)
 var ae = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n() {
-    E.a(this, n)
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n)
     return e.apply(this, arguments)
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "open",
     value: function (t, e, n, r, i) {
       return window$XMLHttpRequest$prototype$open.apply(this, [t, e, null === n || undefined === n || n, r, i])
@@ -1386,11 +1386,11 @@ function ue() {
 var ce
 var le
 var de
-import * as fe from "../../../../../src/shared/widget/custom/external-module"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_externalModule from "../../../../../src/shared/widget/custom/external-module"
 import "./1161"
 import "./1162"
-import * as he from "../../../../shared/1531/2584/2628/index"
-import * as pe from "../../../../shared/1531/2584/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_2628_index from "../../../../shared/1531/2584/2628/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_13_index from "../../../../shared/1531/2584/13/index"
 import * as me from "./71"
 import be from "./71"
 var ge = [{
@@ -1430,74 +1430,74 @@ var ge = [{
   number: "#",
   letter: ""
 }]
-var ve = _React.memo(function () {
-  var t = p.d()
-  var e = p.e(function (t) {
+var ve = React.memo(function () {
+  var t = $$_$$_$$_$$_shared_1531_2584_16_index.d()
+  var e = $$_$$_$$_$$_shared_1531_2584_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  var n = _React.useState("")
-  var r = c.a(n, 2)
+  var n = React.useState("")
+  var r = $$_$$_$$_$$_shared_1531_2584_10_index.a(n, 2)
   var i = r[0]
   var o = r[1]
-  _React.useEffect(function () {
+  React.useEffect(function () {
     o(e.phoneNumber)
   }, [e.phoneNumber])
   var a = function (t) {
     o(i + "" + t)
   }
-  return React.createElement("div", {
-    className: X(be.dialerBox, !e.dialPageVisible && be.dialerBoxHide)
-  }, React.createElement("div", {
+  return _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.dialerBox, !e.dialPageVisible && be.dialerBoxHide)
+  }, _React.createElement("div", {
     className: be.backBox,
     onClick: function () {
-      t(C.s({
+      t($$_$$_$$_$$_shared_1531_2584_48_72.s({
         dialPageVisible: false
       }))
     }
-  }, React.createElement(pe.j, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-nav-back"
-  })), React.createElement("div", {
+  })), _React.createElement("div", {
     className: be.dialNumber
-  }, i), React.createElement("div", {
+  }, i), _React.createElement("div", {
     className: be.numberBox
   }, ge.map(function (t) {
-    return React.createElement("div", {
+    return _React.createElement("div", {
       key: t.number,
-      className: X(be.keyItem, be.numberKey),
+      className: _$$_$$_$$_$$_shared_1531_2584_(be.keyItem, be.numberKey),
       onClick: a.bind(null, t.number)
-    }, React.createElement("div", {
+    }, _React.createElement("div", {
       className: be.number
-    }, t.number), React.createElement("div", {
+    }, t.number), _React.createElement("div", {
       className: be.letter
     }, t.letter))
-  }), React.createElement("div", {
-    className: X(be.keyItem, be.white)
-  }), React.createElement("div", {
-    className: X(be.keyItem, be.callBtn),
+  }), _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.keyItem, be.white)
+  }), _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.keyItem, be.callBtn),
     onClick: function () {
       if (i) {
-        t(C.s({
+        t($$_$$_$$_$$_shared_1531_2584_48_72.s({
           dialPageVisible: false,
           callingPageVisible: true,
           callType: "dialOutCall",
           phoneNumber: i,
-          callStatus: N.b.RINGING
+          callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING
         }))
-        ut.emitWidgetEvent(N.c, "onPhoneCallStart", e.phoneDialWidgetId)
-        R.b({
+        $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_48_70.c, "onPhoneCallStart", e.phoneDialWidgetId)
+        $$_$$_$$_$$_shared_1531_2584_38_217_index.b({
           phoneCallInfo: {
             callType: "dialOutCall",
             dialOutPhoneNumber: i,
-            callStatus: N.b.RINGING
+            callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING
           }
         })
       }
     }
-  }, React.createElement(pe.j, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-call-dial"
-  })), React.createElement("div", {
-    className: X(be.keyItem, be.white)
-  }, React.createElement("div", {
+  })), _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.keyItem, be.white)
+  }, _React.createElement("div", {
     className: be.deleteBtn,
     onClick: function () {
       if (i) {
@@ -1506,22 +1506,22 @@ var ve = _React.memo(function () {
     }
   }, "x"))))
 })
-import * as _e from "../../../../shared/1531/2584/702"
-var ye = _React.memo(function () {
-  var t = p.d()
-  var _e$a$formatMessage = _e.a().formatMessage
-  var n = p.e(function (t) {
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_702 from "../../../../shared/1531/2584/702"
+var ye = React.memo(function () {
+  var t = $$_$$_$$_$$_shared_1531_2584_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_702$a$formatMessage = $$_$$_$$_$$_shared_1531_2584_702.a().formatMessage
+  var n = $$_$$_$$_$$_shared_1531_2584_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = _React.useState(0)
-  var i = c.a(r, 2)
+  var r = React.useState(0)
+  var i = $$_$$_$$_$$_shared_1531_2584_10_index.a(r, 2)
   var o = i[0]
   var a = i[1]
-  _React.useEffect(function () {
+  React.useEffect(function () {
     if (ce) {
       clearInterval(ce)
     }
-    if (n.callingPageVisible && n.callStatus === N.b.OFFHOOK) {
+    if (n.callingPageVisible && n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK) {
       var t = 0
       ce = setInterval(function () {
         t++
@@ -1541,101 +1541,101 @@ var ye = _React.memo(function () {
     return "".concat(e < 10 ? "0" : "").concat(e, " : ").concat(n < 10 ? "0" : "").concat(n)
   }
   var u = function () {
-    t(C.s({
+    t($$_$$_$$_$$_shared_1531_2584_48_72.s({
       callingPageVisible: false,
-      callStatus: N.b.IDEL
+      callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.IDEL
     }))
-    ut.emitWidgetEvent(N.c, "onPhoneCallEnd", n.phoneDialWidgetId, N.a.DIAL_OUT_CALL_END)
-    R.b({
+    $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_48_70.c, "onPhoneCallEnd", n.phoneDialWidgetId, $$_$$_$$_$$_shared_1531_2584_48_70.a.DIAL_OUT_CALL_END)
+    $$_$$_$$_$$_shared_1531_2584_38_217_index.b({
       phoneCallInfo: {
         callType: "dialOutCall",
-        callStatus: N.b.IDEL
+        callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.IDEL
       }
     })
   }
   var l = function () {
-    ut.emitWidgetEventType(N.c, "onPhoneCallEnd", n.callStatus === N.b.RINGING ? N.a.INCOMING_CALL_REFUSE_END : N.a.INCOMING_CALL_CONNECT_END)
-    t(C.s({
+    $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEventType($$_$$_$$_$$_shared_1531_2584_48_70.c, "onPhoneCallEnd", n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING ? $$_$$_$$_$$_shared_1531_2584_48_70.a.INCOMING_CALL_REFUSE_END : $$_$$_$$_$$_shared_1531_2584_48_70.a.INCOMING_CALL_CONNECT_END)
+    t($$_$$_$$_$$_shared_1531_2584_48_72.s({
       callingPageVisible: false,
-      callStatus: N.b.IDEL
+      callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.IDEL
     }))
-    R.b({
+    $$_$$_$$_$$_shared_1531_2584_38_217_index.b({
       phoneCallInfo: {
-        callStatus: N.b.IDEL
+        callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.IDEL
       }
     })
   }
   var d = function () {
-    t(C.s({
-      callStatus: N.b.OFFHOOK
+    t($$_$$_$$_$$_shared_1531_2584_48_72.s({
+      callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK
     }))
-    ut.emitWidgetEventType(N.c, "onConnectReceivePhoneCall")
-    R.b({
+    $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEventType($$_$$_$$_$$_shared_1531_2584_48_70.c, "onConnectReceivePhoneCall")
+    $$_$$_$$_$$_shared_1531_2584_38_217_index.b({
       phoneCallInfo: {
-        callStatus: N.b.OFFHOOK
+        callStatus: $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK
       }
     })
   }
-  return React.createElement("div", {
-    className: X(be.callingBox, !n.callingPageVisible && be.callingBoxHide)
-  }, "dialOutCall" === n.callType && React.createElement(React.Fragment, null, React.createElement("div", {
+  return _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.callingBox, !n.callingPageVisible && be.callingBoxHide)
+  }, "dialOutCall" === n.callType && _React.createElement(_React.Fragment, null, _React.createElement("div", {
     className: be.phoneNumber
-  }, n.phoneNumber), n.callStatus === N.b.RINGING && React.createElement("div", {
+  }, n.phoneNumber), n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING && _React.createElement("div", {
     className: be.phoneStatus
-  }, _e$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.onRinging"
-  })), n.callStatus === N.b.OFFHOOK && React.createElement("div", {
+  })), n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK && _React.createElement("div", {
     className: be.phoneStatus
-  }, s(o)), React.createElement("div", {
-    className: X(be.callBtnBox, be.flexCC)
-  }, React.createElement("div", {
+  }, s(o)), _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.callBtnBox, be.flexCC)
+  }, _React.createElement("div", {
     className: be.callBtnItemBox,
     onClick: u
-  }, React.createElement("div", {
-    className: X(be.callBtnItem, be.callEnd)
-  }, React.createElement(pe.j, {
+  }, _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.callBtnItem, be.callEnd)
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-call-disconnect"
-  })), React.createElement("span", {
+  })), _React.createElement("span", {
     className: be.callBtnText
-  }, _e$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.callEnd"
-  }))))), "incomingCall" === n.callType && React.createElement(React.Fragment, null, React.createElement("div", {
+  }))))), "incomingCall" === n.callType && _React.createElement(_React.Fragment, null, _React.createElement("div", {
     className: be.phoneNumber
-  }, n.phoneNumber), n.callStatus === N.b.RINGING && React.createElement("div", {
+  }, n.phoneNumber), n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING && _React.createElement("div", {
     className: be.phoneStatus
-  }, _e$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.phoneNumber"
-  })), n.callStatus === N.b.OFFHOOK && React.createElement("div", {
+  })), n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.OFFHOOK && _React.createElement("div", {
     className: be.phoneStatus
-  }, s(o)), React.createElement("div", {
-    className: X(be.callBtnBox, n.callStatus === N.b.RINGING ? be.flexSC : be.flexCC)
-  }, React.createElement("div", {
+  }, s(o)), _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.callBtnBox, n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING ? be.flexSC : be.flexCC)
+  }, _React.createElement("div", {
     className: be.callBtnItemBox,
     onClick: l
-  }, React.createElement("div", {
-    className: X(be.callBtnItem, be.callEnd)
-  }, React.createElement(pe.j, {
+  }, _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.callBtnItem, be.callEnd)
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-call-disconnect"
-  })), React.createElement("span", {
+  })), _React.createElement("span", {
     className: be.callBtnText
-  }, n.callStatus === N.b.RINGING ? _e$a$formatMessage({
+  }, n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING ? $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.callRefuse"
-  }) : _e$a$formatMessage({
+  }) : $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.callEnd"
-  }))), n.callStatus === N.b.RINGING && React.createElement("div", {
+  }))), n.callStatus === $$_$$_$$_$$_shared_1531_2584_48_70.b.RINGING && _React.createElement("div", {
     className: be.callBtnItemBox,
     onClick: d
-  }, React.createElement("div", {
-    className: X(be.callBtnItem, be.callConnect)
-  }, React.createElement(pe.j, {
+  }, _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.callBtnItem, be.callConnect)
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-call-dial"
-  })), React.createElement("span", {
+  })), _React.createElement("span", {
     className: be.callBtnText
-  }, _e$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.callConnect"
   }))))))
 })
-import * as Oe from "../../../../shared/1531/2584/677/476"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_677_476 from "../../../../shared/1531/2584/677/476"
 var we = [{
   avatar: "https://static.codemao.cn/crc-uploader/2021/12/bbc05b5084214ba6a0c164be0e557364.jpeg",
   name: "编程猫",
@@ -1657,135 +1657,135 @@ var we = [{
   name: "星能兔",
   number: "123 4567 8905"
 }]
-var Ee = _React.memo(function () {
-  var t = p.d()
-  var e = p.e(function (t) {
+var Ee = React.memo(function () {
+  var t = $$_$$_$$_$$_shared_1531_2584_16_index.d()
+  var e = $$_$$_$$_$$_shared_1531_2584_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
   var n = function (n, r, i) {
-    t(C.s({
+    t($$_$$_$$_$$_shared_1531_2584_48_72.s({
       contactPageVisible: false
     }))
-    ut.setProperties(e.contactWidgetId, {
+    $$_$$_$$_$$_shared_1531_2584_21_index.setProperties(e.contactWidgetId, {
       contactName: n,
       phoneNumber: r,
       phoneNumberList: [r],
       contactAvatar: i
     })
-    ut.emitWidgetEvent(Oe.a, "onContactPickerSelected", e.contactWidgetId, n, r)
+    $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_677_476.a, "onContactPickerSelected", e.contactWidgetId, n, r)
   }
-  return React.createElement("div", {
-    className: X(be.contactBox, !e.contactPageVisible && be.contactBoxHide)
-  }, React.createElement("div", {
+  return _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.contactBox, !e.contactPageVisible && be.contactBoxHide)
+  }, _React.createElement("div", {
     className: be.backBox,
     onClick: function () {
-      t(C.s({
+      t($$_$$_$$_$$_shared_1531_2584_48_72.s({
         contactPageVisible: false
       }))
     }
-  }, React.createElement(pe.j, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-nav-back"
-  })), React.createElement("div", {
+  })), _React.createElement("div", {
     className: be.contactList
   }, we.map(function (t) {
-    return React.createElement("div", {
+    return _React.createElement("div", {
       onClick: n.bind(null, t.name, t.number, t.avatar),
       key: t.name,
-      className: X(be.contactItem, be.flexSC)
-    }, React.createElement("div", {
+      className: _$$_$$_$$_$$_shared_1531_2584_(be.contactItem, be.flexSC)
+    }, _React.createElement("div", {
       className: be.flexCC
-    }, React.createElement("img", {
+    }, _React.createElement("img", {
       src: t.avatar,
       className: be.itemAvatar,
       alt: ""
-    }), React.createElement("div", null, React.createElement("div", {
+    }), _React.createElement("div", null, _React.createElement("div", {
       className: be.itemName
-    }, t.name), React.createElement("div", {
+    }, t.name), _React.createElement("div", {
       className: be.itemNumber
-    }, t.number))), React.createElement(pe.j, {
+    }, t.number))), _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
       type: "icon-fold-left"
     }))
   })))
 })
-import * as Te from "../../../../shared/1531/2584/678/360"
-var je = _React.memo(function () {
-  var t = p.d()
-  var _e$a$formatMessage = _e.a().formatMessage
-  var n = p.e(function (t) {
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_678_360 from "../../../../shared/1531/2584/678/360"
+var je = React.memo(function () {
+  var t = $$_$$_$$_$$_shared_1531_2584_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_702$a$formatMessage = $$_$$_$$_$$_shared_1531_2584_702.a().formatMessage
+  var n = $$_$$_$$_$$_shared_1531_2584_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = _React.useState(n.sendSmsNumber)
-  var i = c.a(r, 2)
+  var r = React.useState(n.sendSmsNumber)
+  var i = $$_$$_$$_$$_shared_1531_2584_10_index.a(r, 2)
   var o = i[0]
   var a = i[1]
-  var s = _React.useState(n.sendSmsContent)
-  var u = c.a(s, 2)
+  var s = React.useState(n.sendSmsContent)
+  var u = $$_$$_$$_$$_shared_1531_2584_10_index.a(s, 2)
   var l = u[0]
   var d = u[1]
-  var m = _React.useState([])
-  var b = c.a(m, 2)
+  var m = React.useState([])
+  var b = $$_$$_$$_$$_shared_1531_2584_10_index.a(m, 2)
   var g = b[0]
   var v = b[1]
-  var _ = _React.useState(1)
-  var y = c.a(_, 2)
+  var _ = React.useState(1)
+  var y = $$_$$_$$_$$_shared_1531_2584_10_index.a(_, 2)
   var O = y[0]
   var w = y[1]
-  var E = _React.useRef(null)
-  var T = _React.useRef(null)
-  _React.useEffect(function () {
+  var E = React.useRef(null)
+  var T = React.useRef(null)
+  React.useEffect(function () {
     if (n.sendSmsPageVisible) {
       a(n.sendSmsNumber)
       d(n.sendSmsContent)
       v([])
     }
   }, [n.sendSmsPageVisible, n.sendSmsNumber, n.sendSmsContent])
-  return React.createElement("div", {
-    className: X(be.sendSmsBox, !n.sendSmsPageVisible && be.sendSmsBoxHide)
-  }, React.createElement("div", {
+  return _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.sendSmsBox, !n.sendSmsPageVisible && be.sendSmsBoxHide)
+  }, _React.createElement("div", {
     className: be.backBox
-  }, React.createElement("div", {
+  }, _React.createElement("div", {
     onClick: function () {
-      t(C.s({
+      t($$_$$_$$_$$_shared_1531_2584_48_72.s({
         sendSmsPageVisible: false
       }))
     }
-  }, React.createElement(pe.j, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-nav-back"
-  })), React.createElement("span", {
+  })), _React.createElement("span", {
     className: be.receiveUser
-  }, _e$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.smsReceiver"
-  }))), React.createElement("div", {
+  }))), _React.createElement("div", {
     className: be.numberBox
-  }, React.createElement(pe.k, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.k, {
     className: be.inputNumber,
     defaultValue: o,
-    placeholder: _e$a$formatMessage({
+    placeholder: $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
       id: "emulator.smsSendNumberPlaceHolder"
     }),
     onChange: function (t) {
       a(t)
     },
     maxLength: 20
-  })), React.createElement("div", {
+  })), _React.createElement("div", {
     className: be.smsBox
   }, g.map(function (t, e) {
-    return React.createElement("div", {
+    return _React.createElement("div", {
       key: e,
       className: be.smsItem
     }, t)
-  }), React.createElement("div", {
+  }), _React.createElement("div", {
     className: be.scrollToView,
     ref: T
-  })), React.createElement("div", {
+  })), _React.createElement("div", {
     className: be.contentBox
-  }, React.createElement(pe.A, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.A, {
     ref: E,
     rows: O,
     maxLength: 200,
     className: be.contentTextArea,
     defaultValue: l,
-    placeholder: _e$a$formatMessage({
+    placeholder: $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
       id: "emulator.smsContentPlaceHolder"
     }),
     onChange: function (t) {
@@ -1794,14 +1794,14 @@ var je = _React.memo(function () {
         w(Math.min(E.current.getRowCount(), 7))
       }
     }
-  }), React.createElement("div", {
+  }), _React.createElement("div", {
     onClick: function () {
       if (o && l) {
         v(g.concat(l))
-        ut.emitWidgetEvent(Te.a, "onSendSmsSuccess", n.smsWidgetId, l, o)
+        $$_$$_$$_$$_shared_1531_2584_21_index.emitWidgetEvent($$_$$_$$_$$_shared_1531_2584_678_360.a, "onSendSmsSuccess", n.smsWidgetId, l, o)
         d("")
         w(1)
-        var t = ut.getWidgetInstance(n.smsWidgetId)
+        var t = $$_$$_$$_$$_shared_1531_2584_21_index.getWidgetInstance(n.smsWidgetId)
         if (t) {
           t.widgetLog("sendSmsLog", {
             phoneNumber: o
@@ -1811,9 +1811,9 @@ var je = _React.memo(function () {
           clearTimeout(le)
         }
         le = setTimeout(function () {
-          var /* [auto-meaningful-name] */t$current
-          if (!(null === (t$current = T.current) || undefined === t$current)) {
-            t$current.scrollIntoView({
+          var /* [auto-meaningful-name] */T$current
+          if (!(null === (T$current = T.current) || undefined === T$current)) {
+            T$current.scrollIntoView({
               behavior: "smooth",
               block: "end"
             })
@@ -1821,24 +1821,24 @@ var je = _React.memo(function () {
         }, 10)
       }
     },
-    className: X(be.sendSmsBtn, (!o || !l) && be.disable)
-  }, React.createElement(pe.j, {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.sendSmsBtn, (!o || !l) && be.disable)
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-phone-send-sms"
   }))))
 })
-var Se = _React.memo(function () {
-  var t = p.d()
-  var _e$a$formatMessage = _e.a().formatMessage
-  var n = p.e(function (t) {
+var Se = React.memo(function () {
+  var t = $$_$$_$$_$$_shared_1531_2584_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_702$a$formatMessage = $$_$$_$$_$$_shared_1531_2584_702.a().formatMessage
+  var n = $$_$$_$$_$$_shared_1531_2584_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  _React.useEffect(function () {
+  React.useEffect(function () {
     if (de) {
       clearTimeout(de)
     }
     if (n.receiveSmsPageVisible) {
       de = setTimeout(function () {
-        t(C.s({
+        t($$_$$_$$_$$_shared_1531_2584_48_72.s({
           receiveSmsPageVisible: false
         }))
       }, 2e3)
@@ -1847,113 +1847,113 @@ var Se = _React.memo(function () {
       return de && clearTimeout(de)
     }
   }, [n.receiveSmsPageVisible, n.receiveSmsNumber, n.receiveSmsContent, t])
-  return React.createElement("div", {
-    className: X(be.receiveSms, !n.receiveSmsPageVisible && be.receiveSmsHide)
-  }, React.createElement("div", {
+  return _React.createElement("div", {
+    className: _$$_$$_$$_$$_shared_1531_2584_(be.receiveSms, !n.receiveSmsPageVisible && be.receiveSmsHide)
+  }, _React.createElement("div", {
     className: be.flexSC
-  }, React.createElement("div", {
+  }, _React.createElement("div", {
     className: be.smsIconBox
-  }, React.createElement("div", {
+  }, _React.createElement("div", {
     className: be.smsIcon
-  }, React.createElement(pe.j, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_13_index.j, {
     type: "icon-widget-sms-service"
-  })), React.createElement("span", null, _e$a$formatMessage({
+  })), _React.createElement("span", null, $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.sms"
-  }))), React.createElement("div", {
+  }))), _React.createElement("div", {
     className: be.smsTime
-  }, _e$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1531_2584_702$a$formatMessage({
     id: "emulator.now"
-  }))), React.createElement("div", {
+  }))), _React.createElement("div", {
     className: be.smsNumber
-  }, n.receiveSmsNumber), React.createElement("div", {
+  }, n.receiveSmsNumber), _React.createElement("div", {
     className: be.smsContent
   }, n.receiveSmsContent))
 })
-var Ae = _React.memo(function () {
-  return React.createElement("div", {
+var Ae = React.memo(function () {
+  return _React.createElement("div", {
     className: be.screenMask,
     id: "cocoScreenMask"
   })
 })
-var ke = _React.memo(function () {
-  var t = p.e(function (t) {
+var ke = React.memo(function () {
+  var t = $$_$$_$$_$$_shared_1531_2584_16_index.e(function (t) {
     return t.language
   })
-  return React.createElement(he.b, {
+  return _React.createElement($$_$$_$$_$$_shared_1531_2584_2628_index.b, {
     locale: t,
-    messages: jt.e[t] || jt.e[jt.b]
-  }, React.createElement(ve, null), React.createElement(Ee, null), React.createElement(je, null), React.createElement(Se, null), React.createElement(ye, null), React.createElement(Ae, null))
+    messages: $$_$$_$$_$$_$$_src_shared_ui_language.e[t] || $$_$$_$$_$$_$$_src_shared_ui_language.e[$$_$$_$$_$$_$$_src_shared_ui_language.b]
+  }, _React.createElement(ve, null), _React.createElement(Ee, null), _React.createElement(je, null), _React.createElement(Se, null), _React.createElement(ye, null), _React.createElement(Ae, null))
 })
-import * as Ie from "../../../../shared/1531/2584/21/424/67/410"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_21_424_67_410 from "../../../../shared/1531/2584/21/424/67/410"
 var Me = function () {
-  return React.createElement("svg", {
+  return _React.createElement("svg", {
     "aria-hidden": "true",
     width: "0",
     height: "0",
     style: {
       position: "absolute"
     }
-  }, React.createElement("symbol", {
+  }, _React.createElement("symbol", {
     id: "icon-radio-correct",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M935.594667 287.573333s-369.322667 393.984-452.096 487.594667c-82.773333 93.610667-147.328 0-147.328 0L96 535.253333s-38.314667-56.533333 30.293333-109.226666a87.552 87.552 0 0 1 117.034667 0l169.557333 171.648 421.802667-380.330667s40.362667-27.306667 82.773333 7.808c32.256 29.269333 18.133333 62.421333 18.133334 62.421333z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-radio-incorrect",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M741.290667 204.074667a63.445333 63.445333 0 0 1 88.618666 1.365333 55.04 55.04 0 0 1-0.896 77.866667l-231.210666 226.005333 225.28 213.205333a59.989333 59.989333 0 0 1-1.706667 88.661334 71.125333 71.125333 0 0 1-96.597333-2.645334l-216.533334-211.669333-216.490666 211.669333c-24.917333 24.32-63.488 26.88-91.221334 6.912l-5.418666-4.266666a59.989333 59.989333 0 0 1-1.706667-88.661334l225.28-213.205333L187.52 283.306667a55.04 55.04 0 0 1 1.621333-80.256 63.445333 63.445333 0 0 1 86.101334 1.024l233.002666 220.501333z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-fold-left",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M361.344 265.344a32 32 0 0 1 45.312 0l224 224a32 32 0 0 1 3.648 40.832l-3.648 4.48-224 224a32 32 0 0 1-48.96-40.832l3.648-4.48L562.752 512 361.344 310.656a32 32 0 0 1 0-45.312z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-phone-nav-back",
     viewBox: "0 0 1350 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M572.330667 25.002667a85.333333 85.333333 0 0 1 7.082666 112.64l-7.082666 8.021333L291.328 426.666667H2048a85.333333 85.333333 0 0 1 9.984 170.069333L2048 597.333333H291.328l281.002667 281.002667a85.333333 85.333333 0 0 1 7.082666 112.64l-7.082666 8.021333a85.333333 85.333333 0 0 1-112.64 7.082667l-8.021334-7.082667-426.666666-426.666666a85.333333 85.333333 0 0 1-7.082667-112.64l7.082667-8.021334 426.666666-426.666666a85.333333 85.333333 0 0 1 120.661334 0z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-phone-call-disconnect",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M524.693333 388.416c-127.402667 0.298667-249.024 27.669333-310.741333 89.386667-27.989333 27.989333-42.282667 61.738667-41.066667 102.485333 0.917333 22.784 7.296 45.909333 21.909334 60.501333 10.026667 10.325333 24.32 16.106667 41.941333 13.077334l112.213333-19.157334c14.890667-2.752 26.133333-7.616 34.048-15.210666 9.728-9.130667 13.376-23.722667 13.376-43.477334l0.618667-30.72c0-4.864 1.813333-8.512 4.864-11.541333 2.730667-3.349333 6.976-4.864 10.325333-5.781333 19.456-5.162667 61.12-10.645333 112.512-10.645334 51.370667 0 92.736 4.266667 112.490667 10.944 3.349333 0.917333 6.997333 2.752 9.728 5.482667a13.376 13.376 0 0 1 4.565333 10.645333L652.373333 576c0.597333 19.754667 4.544 34.048 13.973334 43.477333 7.893333 7.893333 19.157333 12.458667 34.346666 15.210667l108.864 18.56c18.56 3.328 33.749333-3.050667 45.312-14.293333 13.376-13.696 21.290667-34.986667 21.589334-59.904 0.597333-40.746667-14.912-74.197333-42.261334-101.269334-61.738667-61.717333-182.144-89.685333-309.546666-89.386666z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-phone-call-dial",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M375.658667 651.733333c84.522667 84.522667 190.016 151.104 276.992 151.104 39.829333 0 73.877333-13.674667 101.845333-43.776 15.509333-16.426667 27.072-37.696 27.072-58.069333 0-14.592-5.482667-28.586667-20.373333-38.933333l-92.736-65.365334c-12.778667-8.810667-24.021333-13.674667-34.666667-13.674666-13.674667 0-26.453333 7.296-40.448 20.970666l-22.186667 21.589334a15.573333 15.573333 0 0 1-11.562666 4.565333c-4.266667 0-8.213333-1.514667-11.541334-3.050667-17.941333-9.408-50.773333-35.264-81.493333-66.282666-31.018667-30.997333-57.472-63.232-66.282667-81.792-1.514667-3.328-3.050667-7.296-3.050666-10.944a14.72 14.72 0 0 1 4.565333-10.944l21.589333-22.805334c13.376-14.592 20.693333-27.349333 20.693334-40.746666 0-10.944-4.565333-22.186667-13.696-34.965334l-63.850667-90.304c-10.645333-14.890667-25.536-21.589333-41.962667-21.589333-19.157333 0-39.829333 9.429333-57.472 26.773333-29.184 28.266667-41.941333 63.232-41.941333 101.845334 0 86.976 65.664 191.573333 150.506667 276.394666z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-phone-call-idle",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M341.317818 226.513455c23.156364 0 43.589818 10.146909 57.483637 29.626181l61.416727 86.830546c11.240727 15.755636 17.058909 30.510545 17.058909 45.847273 0 18.548364-8.610909 35.048727-25.623273 53.620363l-18.571636 19.549091c2.490182 5.236364 7.074909 12.288 13.218909 20.48l6.656 8.517818 7.586909 9.169455c2.676364 3.141818 5.492364 6.353455 8.424727 9.634909l9.122909 9.960727c3.141818 3.374545 6.4 6.749091 9.728 10.170182l9.797819 9.844364c4.794182 4.701091 9.658182 9.309091 14.498909 13.730909l9.611636 8.587636c1.582545 1.396364 3.165091 2.722909 4.724364 4.049455l9.169454 7.610181c11.892364 9.611636 22.388364 17.035636 29.463273 20.759273l1.117091 0.488727 19.176727-18.618181c16.221091-15.872 31.883636-24.738909 49.198546-26.018909l4.375272-0.16291c14.848 0 29.253818 5.818182 45.428364 16.989091l89.134545 62.836364c19.176727 13.312 28.625455 32.628364 28.625455 54.690909 0 24.413091-12.288 49.617455-31.650909 70.144-30.417455 32.721455-68.491636 48.826182-113.384727 48.826182-84.898909 0-189.207273-59.368727-281.437091-151.598546C283.438545 559.848727 224.674909 456.285091 224.674909 371.269818c0-44.148364 15.429818-82.734545 46.661818-112.965818C291.863273 238.08 316.834909 226.513455 341.317818 226.513455z m0 41.890909c-12.730182 0-27.485091 6.842182-40.727273 19.851636C277.620364 310.481455 266.565818 338.152727 266.565818 371.246545c0 71.633455 53.597091 166.074182 138.728727 251.229091C490.402909 707.560727 585.658182 761.786182 657.105455 761.786182c33.396364 0 60.322909-11.380364 82.804363-35.584 12.730182-13.498182 20.340364-29.090909 20.340364-41.518546 0-8.727273-3.095273-15.034182-10.752-20.340363l-89.088-62.789818c-9.634909-6.679273-16.570182-9.472-21.457455-9.472-6.306909 0-13.824 3.979636-24.32 14.266181l-21.154909 20.573091a35.746909 35.746909 0 0 1-25.925818 10.519273c-7.168 0-13.032727-1.722182-20.875636-5.329455-20.526545-10.775273-54.085818-37.818182-83.502546-67.514181l-5.585454-5.655273c-29.486545-30.161455-53.271273-59.880727-62.464-79.220364-3.072-6.749091-4.794182-12.427636-4.794182-19.2 0-9.541818 3.467636-18.292364 10.123636-24.948363l20.549818-21.690182c10.356364-11.310545 14.382545-19.013818 14.382546-25.064727 0-5.469091-2.676364-12.264727-9.309091-21.573819L364.637091 280.413091A26.903273 26.903273 0 0 0 341.317818 268.404364z m403.828364-18.338909c7.610182 0 14.475636 5.12 17.384727 12.916363a22.341818 22.341818 0 0 1-4.235636 22.714182l-99.956364 108.869818h111.336727c10.356364 0 18.804364 9.378909 18.804364 20.852364 0 11.450182-8.448 20.829091-18.804364 20.829091h-157.323636c-7.610182 0-14.475636-5.12-17.384727-12.916364a22.341818 22.341818 0 0 1 4.235636-22.714182l99.956364-108.869818h-88.482909c-10.356364 0-18.804364-9.378909-18.804364-20.852364 0-11.450182 8.448-20.829091 18.804364-20.82909h134.469818z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-phone-send-sms",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M186.453333 825.813333l54.101334-240.938666a34.133333 34.133333 0 0 1 30.805333-26.538667l332.373333-24.277333-332.544-26.325334a34.133333 34.133333 0 0 1-30.634666-26.496L186.453333 240.896a34.133333 34.133333 0 0 1 48.597334-38.058667l599.893333 299.946667a34.133333 34.133333 0 0 1 0 61.098667l-599.936 299.946666a34.133333 34.133333 0 0 1-48.597333-37.973333z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-widget-sms-service",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M828.970667 140.8A139.562667 139.562667 0 0 1 968.533333 280.362667V743.68a139.562667 139.562667 0 0 1-139.562666 139.562667H194.986667A139.562667 139.562667 0 0 1 55.466667 743.637333V280.32A139.562667 139.562667 0 0 1 195.029333 140.8zM115.2 391.978667v351.658666c0 44.074667 35.754667 79.829333 79.829333 79.829334H829.013333a79.829333 79.829333 0 0 0 79.829334-79.829334V392.021333l-334.464 185.728c-36.181333 19.242667-78.549333 20.522667-115.925334 3.669334l-7.936-3.882667L115.2 391.978667zM828.970667 200.533333H194.986667A79.829333 79.829333 0 0 0 115.2 280.362667v43.349333l363.733333 201.301333c19.157333 10.154667 41.173333 11.178667 60.586667 3.242667l6.314667-2.986667L908.8 323.754667V280.362667c0-41.984-32.426667-76.373333-73.6-79.573334l-6.229333-0.256z"
-  })), React.createElement("symbol", {
+  })), _React.createElement("symbol", {
     id: "icon-close",
     viewBox: "0 0 1024 1024"
-  }, React.createElement("path", {
+  }, _React.createElement("path", {
     d: "M980.906667 43.093333a59.733333 59.733333 0 0 1 6.314666 77.056l-6.314666 7.424L596.394667 512l384.512 384.426667a59.733333 59.733333 0 0 1-77.056 90.794666l-7.424-6.314666L512 596.394667l-384.426667 384.512a59.733333 59.733333 0 0 1-90.794666-77.056l6.314666-7.424L427.605333 512 43.093333 127.573333A59.733333 59.733333 0 0 1 120.149333 36.778667l7.424 6.314666L512 427.605333 896.426667 43.093333a59.733333 59.733333 0 0 1 84.48 0z"
   }), " "))
 }
-var Ce = React.memo(function () {
-  var t = p.e(function (t) {
+var Ce = _React.memo(function () {
+  var t = $$_$$_$$_$$_shared_1531_2584_16_index.e(function (t) {
     return t.currentScreenId
   })
   if (!t) {
     console.error("The currentScreen id is undefined")
   }
-  return React.createElement("div", {
-    id: nt.a,
+  return _React.createElement("div", {
+    id: $$_$$_$$_$$_shared_1531_2584_233_324.a,
     style: {
       width: "100%",
       height: "100%"
@@ -1961,25 +1961,25 @@ var Ce = React.memo(function () {
     onClick: function (t) {
       return t.stopPropagation()
     }
-  }, React.createElement(Ie.a, {
+  }, _React.createElement($$_$$_$$_$$_shared_1531_2584_21_424_67_410.a, {
     id: t || ""
-  }), React.createElement(Me, null), React.createElement(ke, null))
+  }), _React.createElement(Me, null), _React.createElement(ke, null))
 })
-import * as xe from "../../../../shared/1531/2584/38/217/388"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1531_2584_38_217_388 from "../../../../shared/1531/2584/38/217/388"
 var Re = {
   x: 0,
   y: 0,
   z: 0
 }
-R.a.instance.addEventListener("accelerometerUpdate", function (t) {
+$$_$$_$$_$$_shared_1531_2584_38_217_index.a.instance.addEventListener("accelerometerUpdate", function (t) {
   Re = t
 })
 var Ne = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this)).options = t
     r.emitTimer = undefined
     r.emitReading = function () {
@@ -1987,7 +1987,7 @@ var Ne = function (t) {
     }
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "x",
     get: function () {
       return Re.x
@@ -2019,21 +2019,21 @@ var Ne = function (t) {
     }
   }])
   return n
-}(xe.a)
+}($$_$$_$$_$$_shared_1531_2584_38_217_388.a)
 var Le = {
   x: 0,
   y: -50,
   z: 0
 }
-R.a.instance.addEventListener("magnetometerUpdate", function (t) {
+$$_$$_$$_$$_shared_1531_2584_38_217_index.a.instance.addEventListener("magnetometerUpdate", function (t) {
   Le = t
 })
 var De = function (t) {
-  j.a(n, t)
-  var e = S.a(n)
+  $$_$$_$$_$$_shared_1531_2584_57_index.a(n, t)
+  var e = $$_$$_$$_$$_shared_1531_2584_58_index.a(n)
   function n(t) {
     var r
-    E.a(this, n);
+    $$_$$_$$_$$_shared_1531_2584_27.a(this, n);
     (r = e.call(this)).options = t
     r.emitTimer = undefined
     r.emitReading = function () {
@@ -2041,7 +2041,7 @@ var De = function (t) {
     }
     return r
   }
-  T.a(n, [{
+  $$_$$_$$_$$_shared_1531_2584_40.a(n, [{
     key: "x",
     get: function () {
       return Le.x
@@ -2073,13 +2073,13 @@ var De = function (t) {
     }
   }])
   return n
-}(xe.a)
+}($$_$$_$$_$$_shared_1531_2584_38_217_388.a)
 function Be() {
   window.Accelerometer = Ne
   window.Magnetometer = De
-  R.a.instance.emitToParent("ready")
-  R.a.instance.addEventListener("shake", function () {
-    ut.emitDeviceShake()
+  $$_$$_$$_$$_shared_1531_2584_38_217_index.a.instance.emitToParent("ready")
+  $$_$$_$$_$$_shared_1531_2584_38_217_index.a.instance.addEventListener("shake", function () {
+    $$_$$_$$_$$_shared_1531_2584_21_index.emitDeviceShake()
   })
 }
 var Pe = {
@@ -2096,11 +2096,11 @@ var Pe = {
   INPUT_WIDGET: Zt
 }
 function Ue() {
-  var t = "__device_id"
-  var e = localStorage.getItem(t)
+  var /* [auto-meaningful-name] */__device_id = "__device_id"
+  var e = localStorage.getItem(__device_id)
   if (!e) {
-    e = m.a()
-    localStorage.setItem(t, e)
+    e = $$_$$_$$_$$_shared_1531_2584_38_2629.a()
+    localStorage.setItem(__device_id, e)
   }
   return e
 }
@@ -2108,26 +2108,26 @@ function We(t) {
   return He.apply(this, arguments)
 }
 function He() {
-  return (He = d.a(RegeneratorRuntime.mark(function t(e) {
-    var /* [auto-meaningful-name] */_t$sent
-    return RegeneratorRuntime.wrap(function (t) {
+  return (He = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function t(e) {
+    var /* [auto-meaningful-name] */t$sent
+    return _RegeneratorRuntime.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
             t.next = 2
             return Promise.all(e.map(function () {
-              var t = d.a(RegeneratorRuntime.mark(function t(e) {
-                var /* [auto-meaningful-name] */t$sent
-                return RegeneratorRuntime.wrap(function (t) {
+              var t = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function t(e) {
+                var /* [auto-meaningful-name] */_t$sent
+                return _RegeneratorRuntime.wrap(function (t) {
                   for (;;) {
                     switch (t.prev = t.next) {
                       case 0:
                         t.next = 2
-                        return Axios.get("".concat(e.cdnUrl, "?t=").concat(Math.random()))
+                        return _Axios.get("".concat(e.cdnUrl, "?t=").concat(Math.random()))
                       case 2:
-                        t$sent = t.sent
-                        return t.abrupt("return", l.a(l.a({}, e), {}, {
-                          code: t$sent.data
+                        _t$sent = t.sent
+                        return t.abrupt("return", $$_$$_$$_$$_shared_1531_2584_6.a($$_$$_$$_$$_shared_1531_2584_6.a({}, e), {}, {
+                          code: _t$sent.data
                         }))
                       case 4:
                       case "end":
@@ -2141,8 +2141,8 @@ function He() {
               }
             }()))
           case 2:
-            _t$sent = t.sent
-            return t.abrupt("return", _t$sent)
+            t$sent = t.sent
+            return t.abrupt("return", t$sent)
           case 4:
           case "end":
             return t.stop()
@@ -2155,7 +2155,7 @@ function Fe(t, e) {
   return Ve.apply(this, arguments)
 }
 function Ve() {
-  return (Ve = d.a(RegeneratorRuntime.mark(function t(e, n) {
+  return (Ve = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function t(e, n) {
     var r
     var i
     var o
@@ -2165,27 +2165,27 @@ function Ve() {
     var f
     var h
     var p
-    return RegeneratorRuntime.wrap(function (t) {
+    return _RegeneratorRuntime.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
             o = function () {
-              return (o = d.a(RegeneratorRuntime.mark(function t(e, n) {
+              return (o = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function t(e, n) {
                 var /* [auto-meaningful-name] */t$sent
                 var /* [auto-meaningful-name] */t$sent$types
                 var /* [auto-meaningful-name] */t$sent$widget
-                return RegeneratorRuntime.wrap(function (t) {
+                return _RegeneratorRuntime.wrap(function (t) {
                   for (;;) {
                     switch (t.prev = t.next) {
                       case 0:
                         t.next = 2
-                        return v.r(n, e.startsWith(_.a), fe.require)
+                        return $$_$$_$$_$$_$$_src_shared_widget_custom_load.r(n, e.startsWith($$_$$_$$_$$_$$_src_shared_widget_custom_type.a), $$_$$_$$_$$_$$_src_shared_widget_custom_externalModule.require)
                       case 2:
                         t$sent = t.sent
                         t$sent$types = t$sent.types
                         t$sent$widget = t$sent.widget
                         r[e] = t$sent$widget
-                        y.a({
+                        $$_$$_$$_$$_$$_src_shared_widget_custom_storage.a({
                           type: e,
                           types: t$sent$types,
                           code: n
@@ -2204,16 +2204,16 @@ function Ve() {
             r = {}
             t.next = 5
             return Promise.all(e.map(function (t) {
-              var t$type = t.type
-              var t$code = t.code
+              var /* [auto-meaningful-name] */t$type = t.type
+              var /* [auto-meaningful-name] */t$code = t.code
               return i(t$type, t$code)
             }))
           case 5:
             for (a in n) {
               s = n[a]
               s$type = s.type
-              if (v.q(s$type)) {
-                f = l.a(l.a({}, s.attributes), {}, {
+              if ($$_$$_$$_$$_$$_src_shared_widget_custom_load.q(s$type)) {
+                f = $$_$$_$$_$$_shared_1531_2584_6.a($$_$$_$$_$$_shared_1531_2584_6.a({}, s.attributes), {}, {
                   __widgetId: s.id,
                   __widgetType: s.type,
                   __width: s.size.width,
@@ -2221,7 +2221,7 @@ function Ve() {
                 })
                 h = r[s$type]
                 p = new h(f)
-                ut.addWidgetInstance(s.id, p)
+                $$_$$_$$_$$_shared_1531_2584_21_index.addWidgetInstance(s.id, p)
               }
             }
           case 6:
@@ -2235,16 +2235,16 @@ function Ve() {
 function Ge(t) {
   for (var e in t) {
     var n = t[e]
-    var n$type = n.type
+    var /* [auto-meaningful-name] */n$type = n.type
     if (Pe[n$type]) {
-      var i = l.a(l.a({}, n.attributes), {}, {
+      var i = $$_$$_$$_$$_shared_1531_2584_6.a($$_$$_$$_$$_shared_1531_2584_6.a({}, n.attributes), {}, {
         __widgetId: n.id,
         __widgetType: n.type,
         __width: n.size.width,
         __height: n.size.height
       })
       var o = new (0, Pe[n$type])(i)
-      ut.addWidgetInstance(n.id, o)
+      $$_$$_$$_$$_shared_1531_2584_21_index.addWidgetInstance(n.id, o)
     }
   }
 }
@@ -2252,7 +2252,7 @@ function Ye(t) {
   return ze.apply(this, arguments)
 }
 function ze() {
-  return (ze = d.a(RegeneratorRuntime.mark(function t(e) {
+  return (ze = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function t(e) {
     var n
     var /* [auto-meaningful-name] */e$blockCode
     var /* [auto-meaningful-name] */e$shouldOpenEmulator
@@ -2266,11 +2266,11 @@ function ze() {
     var /* [auto-meaningful-name] */t$sent
     var b
     var g
-    return RegeneratorRuntime.wrap(function (t) {
+    return _RegeneratorRuntime.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
-            if (n = e.id, e$blockCode = e.blockCode, e$shouldOpenEmulator = e.shouldOpenEmulator, e$extensionWidgetList = e.extensionWidgetList, e$unsafeExtensionWidgetList = e.unsafeExtensionWidgetList, e$fontFileMap = e.fontFileMap, d = a.a(e, ["id", "blockCode", "shouldOpenEmulator", "extensionWidgetList", "unsafeExtensionWidgetList", "fontFileMap"]), (f = e.apiToken || e["x-coconut-authorization"] || "") || console.warn("api token not set. some api call may fail."), Ge(d$widgetMap = d.widgetMap), p = [], !(null === e$extensionWidgetList || undefined === e$extensionWidgetList ? undefined : e$extensionWidgetList.length)) {
+            if (n = e.id, e$blockCode = e.blockCode, e$shouldOpenEmulator = e.shouldOpenEmulator, e$extensionWidgetList = e.extensionWidgetList, e$unsafeExtensionWidgetList = e.unsafeExtensionWidgetList, e$fontFileMap = e.fontFileMap, d = $$_$$_$$_$$_shared_1531_2584_296.a(e, ["id", "blockCode", "shouldOpenEmulator", "extensionWidgetList", "unsafeExtensionWidgetList", "fontFileMap"]), (f = e.apiToken || e["x-coconut-authorization"] || "") || console.warn("api token not set. some api call may fail."), Ge(d$widgetMap = d.widgetMap), p = [], !(null === e$extensionWidgetList || undefined === e$extensionWidgetList ? undefined : e$extensionWidgetList.length)) {
               t.next = 11
               break
             }
@@ -2278,37 +2278,37 @@ function ze() {
             return We(e$extensionWidgetList)
           case 9:
             t$sent = t.sent
-            p.push.apply(p, o.a(t$sent))
+            p.push.apply(p, $$_$$_$$_$$_shared_1531_2584_25_index.a(t$sent))
           case 11:
-            if ((null === e$unsafeExtensionWidgetList || undefined === e$unsafeExtensionWidgetList ? undefined : e$unsafeExtensionWidgetList.length) && p.push.apply(p, o.a(e$unsafeExtensionWidgetList)), !p.length) {
+            if ((null === e$unsafeExtensionWidgetList || undefined === e$unsafeExtensionWidgetList ? undefined : e$unsafeExtensionWidgetList.length) && p.push.apply(p, $$_$$_$$_$$_shared_1531_2584_25_index.a(e$unsafeExtensionWidgetList)), !p.length) {
               t.next = 15
               break
             }
             t.next = 15
             return Fe(p, d$widgetMap)
           case 15:
-            x.b(d)
+            $$_$$_$$_$$_shared_1531_2584_48_index.b(d)
             if (e$shouldOpenEmulator) {
               Be()
             }
-            ut.initializeRoom({
+            $$_$$_$$_$$_shared_1531_2584_21_index.initializeRoom({
               workId: n,
               context: {
                 authorization: f,
                 device: {
                   groupId: Ue(),
-                  platform: A.l(),
+                  platform: $$_$$_$$_$$_shared_1531_2584_28_index.l(),
                   origin: "coconut"
                 }
               }
             })
-            ut.initializeFontFamily(e$fontFileMap)
-            ut.initializeLocalStorage(n, d.widgetMap)
-            ut.initializeHttpClient(d.widgetMap)
-            ut.initializeCloudDBWidget(d.widgetMap)
-            ut.initializeCloudTableDataMap(d.widgetMap)
+            $$_$$_$$_$$_shared_1531_2584_21_index.initializeFontFamily(e$fontFileMap)
+            $$_$$_$$_$$_shared_1531_2584_21_index.initializeLocalStorage(n, d.widgetMap)
+            $$_$$_$$_$$_shared_1531_2584_21_index.initializeHttpClient(d.widgetMap)
+            $$_$$_$$_$$_shared_1531_2584_21_index.initializeCloudDBWidget(d.widgetMap)
+            $$_$$_$$_$$_shared_1531_2584_21_index.initializeCloudTableDataMap(d.widgetMap)
             t.next = 25
-            return ut.initializeGridMap(d.widgetMap)
+            return $$_$$_$$_$$_shared_1531_2584_21_index.initializeGridMap(d.widgetMap)
           case 25:
             if (b = Object.values(d.widgetMap), !b.some(function (t) {
               return "EXTENSION_QUILL_RICH_TEXT_WIDGET" === t.type || "UNSAFE_EXTENSION_QUILL_RICH_TEXT_WIDGET" === t.type
@@ -2317,16 +2317,16 @@ function ze() {
               break
             }
             t.next = 30
-            return O.ab("https://static.codemao.cn/appcraft/modules/quilljs/1.3.7/quill.snow.css")
+            return $$_$$_$$_$$_shared_1531_2584_15.ab("https://static.codemao.cn/appcraft/modules/quilljs/1.3.7/quill.snow.css")
           case 30:
             window.eval = function () {}
-            g = ut.generateAsyncScheduler()
-            new Function("Coco", "CocoExtension", "asyncScheduler", "AsyncScheduler", e$blockCode)(ut, fe, g, ut.AsyncScheduler)
-            ut.subscribeSensor()
+            g = $$_$$_$$_$$_shared_1531_2584_21_index.generateAsyncScheduler()
+            new Function("Coco", "CocoExtension", "asyncScheduler", "AsyncScheduler", e$blockCode)($$_$$_$$_$$_shared_1531_2584_21_index, $$_$$_$$_$$_$$_src_shared_widget_custom_externalModule, g, $$_$$_$$_$$_shared_1531_2584_21_index.AsyncScheduler)
+            $$_$$_$$_$$_shared_1531_2584_21_index.subscribeSensor()
             window.addEventListener("message", function (t) {
-              var t$data = t.data
+              var /* [auto-meaningful-name] */t$data = t.data
               if ("deviceEvent" === t$data.type) {
-                ut.emitEvent.apply(ut, o.a(t$data.args))
+                $$_$$_$$_$$_shared_1531_2584_21_index.emitEvent.apply($$_$$_$$_$$_shared_1531_2584_21_index, $$_$$_$$_$$_shared_1531_2584_25_index.a(t$data.args))
               }
             })
           case 35:
@@ -2337,26 +2337,26 @@ function ze() {
     }, t)
   }))).apply(this, arguments)
 }
-v.s(w)
-v.s(D)
-v.s(U)
-v.s(Y)
-v.s(dt)
-v.s(bt)
-v.s(_t)
-v.s(Qt)
-v.s(Ft)
-v.s($t)
-v.s(Gt)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_676)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_677_index)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_678_index)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_679)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_671)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_680)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_681)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_672)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_673)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_674)
+$$_$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_shared_1531_2584_675)
 var _a
-_a = React.memo(function (t) {
-  var e = _React.useState(false)
-  var n = c.a(e, 2)
+_a = _React.memo(function (t) {
+  var e = React.useState(false)
+  var n = $$_$$_$$_$$_shared_1531_2584_10_index.a(e, 2)
   var r = n[0]
   var i = n[1]
   var o = function () {
-    var e = d.a(RegeneratorRuntime.mark(function e() {
-      return RegeneratorRuntime.wrap(function (e) {
+    var e = $$_$$_$$_$$_shared_1531_2584_7.a(_RegeneratorRuntime.mark(function e() {
+      return _RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
@@ -2376,12 +2376,12 @@ _a = React.memo(function (t) {
       return e.apply(this, arguments)
     }
   }()
-  _React.useEffect(function () {
+  React.useEffect(function () {
     o()
   }, [])
-  return r ? React.createElement(p.a, {
-    store: x.a()
-  }, React.createElement(Ce, null)) : null
+  return r ? _React.createElement($$_$$_$$_$$_shared_1531_2584_16_index.a, {
+    store: $$_$$_$$_$$_shared_1531_2584_48_index.a()
+  }, _React.createElement(Ce, null)) : null
 })
 export { _a as a }
 export default _a

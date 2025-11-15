@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：540
@@ -6,11 +6,11 @@
 
 "use strict"
 
-export { r as a }
+export { QR_SCANNER_WIDGET as a }
 export { o as b }
-var r = "QR_SCANNER_WIDGET"
+var /* [auto-meaningful-name] */QR_SCANNER_WIDGET = "QR_SCANNER_WIDGET"
 var o = {
-  type: r,
+  type: QR_SCANNER_WIDGET,
   icon: "icon-scan-qr-code",
   title: "widgetNameMsg",
   platforms: ["android", "web"],
@@ -49,4 +49,4 @@ var o = {
     }]
   }]
 }
-export default r
+export default QR_SCANNER_WIDGET

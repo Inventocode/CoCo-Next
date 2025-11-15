@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2483
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.mergeClasses = undefined
-var r = a(require("./1142/index"))
+var r = a(require("../2411/1142/index"))
 var i = a(require("./2484/index"))
 var o = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：544
@@ -6,9 +6,9 @@
 
 "use strict"
 
-import r = require("../11");
-import o = require("../10/index");
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */$$_11 = require("../11")
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,9 +21,9 @@ var a = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import s = require("../7");
-import c = require("../27");
-import React = require("react");
+import s = require("../7")
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */React = require("react")
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -36,7 +36,7 @@ var u = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import d = require("../8");
+import d = require("../8")
 var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -49,13 +49,13 @@ var p = function __importDefault(module) {
   })
   return defaultExport
 }(d)
-import f = require("../5");
-import h = require("../90");
-import m = require("../263");
-import g = require("../13/index");
-import _ = require("../76");
-import v = require("../28/index");
-import b = require("./666");
+import f = require("../5")
+import /* [auto-meaningful-name] */$$_90 = require("../90")
+import /* [auto-meaningful-name] */$$_263 = require("../263")
+import /* [auto-meaningful-name] */$$_13_index = require("../13/index")
+import /* [auto-meaningful-name] */$$_76 = require("../76")
+import /* [auto-meaningful-name] */$$_28_index = require("../28/index")
+import /* [auto-meaningful-name] */$_666 = require("./666")
 var y = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -67,10 +67,10 @@ var y = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(b)
-import E = require("../53");
-import O = require("./667");
-import w = require("./176");
+}($_666)
+import /* [auto-meaningful-name] */$$_53 = require("../53")
+import /* [auto-meaningful-name] */$_667 = require("./667")
+import /* [auto-meaningful-name] */$_176 = require("./176")
 var C = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -82,10 +82,10 @@ var C = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(w)
+}($_176)
 var T = new function e() {
   var t = this
-  c.a(this, e)
+  $$_27.a(this, e)
   this.urlStore = undefined
   this._state = undefined
   this.execute = function () {
@@ -148,26 +148,26 @@ var T = new function e() {
   this._state = "end"
 }()
 function S(e) {
-  var e$isEditState = e.isEditState
-  var e$attributes = e.attributes
-  var e$onLoad = e.onLoad
-  var e$onError = e.onError
-  var e$onLoading = e.onLoading
-  var e$attributes$url = e$attributes.url
-  var e$attributes$refreshTimestamp = e$attributes.refreshTimestamp
-  var d = !E.C.test(e$attributes$url)
-  var p = v.c(e$attributes$url)
-  var f = v.g()
+  var /* [auto-meaningful-name] */e$isEditState = e.isEditState
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$onLoad = e.onLoad
+  var /* [auto-meaningful-name] */e$onError = e.onError
+  var /* [auto-meaningful-name] */e$onLoading = e.onLoading
+  var /* [auto-meaningful-name] */e$attributes$url = e$attributes.url
+  var /* [auto-meaningful-name] */e$attributes$refreshTimestamp = e$attributes.refreshTimestamp
+  var d = !$$_53.C.test(e$attributes$url)
+  var p = $$_28_index.c(e$attributes$url)
+  var f = $$_28_index.g()
   if (f) {
-    f = O.webviewRefusedUrl.some(function (e) {
+    f = $_667.webviewRefusedUrl.some(function (e) {
       return e$attributes$url.startsWith(e)
     })
   }
   var h
   var m = e$attributes$url
-  var g = m.startsWith("http://") && !v.d()
+  var g = m.startsWith("http://") && !$$_28_index.d()
   var _ = React.useState("loading")
-  var b = o.a(_, 2)
+  var b = $$_10_index.a(_, 2)
   var w = b[0]
   var S = b[1]
   var I = React.useRef(null)
@@ -247,7 +247,7 @@ function I() {
     className: C.a.placeholderPoster
   }, u.a.createElement("div", {
     className: C.a.header
-  }, u.a.createElement(g.j, {
+  }, u.a.createElement($$_13_index.j, {
     type: "icon-net"
   }), u.a.createElement("span", null, "www.codemao.cn")), u.a.createElement("div", {
     className: C.a.main
@@ -259,32 +259,32 @@ function A(e) {
 var _a
 _a = function (e) {
   var t = e.id
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$size = e.size
-  var e$isEditState = e.isEditState
-  var e$attributes = e.attributes
-  var e$attributes$url = e$attributes.url
-  var e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$isEditState = e.isEditState
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$url = e$attributes.url
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   return u.a.createElement("div", {
     id: t,
     "data-role": f.M,
     "data-widget-type": f.C,
-    "data-min-width": m.c,
-    "data-max-width": _.e,
-    "data-max-height": _.d,
-    "data-min-height": m.b,
-    className: p()(C.a.webViewWidget, h.b, r.a({}, C.a.hide, !e$visible)),
+    "data-min-width": $$_263.c,
+    "data-max-width": $$_76.e,
+    "data-max-height": $$_76.d,
+    "data-min-height": $$_263.b,
+    className: p()(C.a.webViewWidget, $$_90.b, $$_11.a({}, C.a.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
       height: e$size.height,
       width: e$size.width,
-      minWidth: "".concat(m.c, "px"),
-      minHeight: "".concat(m.b, "px"),
-      maxWidth: "".concat(_.e, "px"),
-      maxHeight: "".concat(_.d, "px"),
+      minWidth: "".concat($$_263.c, "px"),
+      minHeight: "".concat($$_263.b, "px"),
+      maxWidth: "".concat($$_76.e, "px"),
+      maxHeight: "".concat($$_76.d, "px"),
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }
   }, (e$isEditState || e$attributes$disabled) && u.a.createElement("div", {

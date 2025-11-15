@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1318
@@ -13,7 +13,7 @@ exports.WorkspaceDragger = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = function () {
   function e(e) {
     this.start_scroll_xy_ = o.vec2.create()
@@ -40,7 +40,7 @@ var s = function () {
     this.dispose()
   }
   e.prototype.drag = function (e) {
-    var this$start_drag_metrics_ = this.start_drag_metrics_
+    var /* [auto-meaningful-name] */this$start_drag_metrics_ = this.start_drag_metrics_
     var n = o.vec2.add(o.vec2.create(), this.start_scroll_xy_, e)
     o.vec2.min(n, n, [-this$start_drag_metrics_.contentLeft, -this$start_drag_metrics_.contentTop])
     o.vec2.max(n, n, [this$start_drag_metrics_.viewWidth - this$start_drag_metrics_.contentLeft - this$start_drag_metrics_.contentWidth, this$start_drag_metrics_.viewHeight - this$start_drag_metrics_.contentTop - this$start_drag_metrics_.contentHeight])

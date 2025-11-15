@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2169
@@ -106,7 +106,7 @@ exports.block_render_svg = function (e) {
       }
     }
     t.prototype._render_compute = function (e) {
-      for (var /* [auto-meaningful-name] */u$type, this$inputList = this.inputList, r = Object.assign([], {
+      for (var /* [auto-meaningful-name] */u$type, /* [auto-meaningful-name] */this$inputList = this.inputList, r = Object.assign([], {
           type: o.InputRowType.INLINE,
           right_edge: 0,
           statement_width: 0,
@@ -188,7 +188,7 @@ exports.block_render_svg = function (e) {
         this.output_connection.move_to_offset(e)
       }
       for (var t = 0; t < this.inputList.length; ++t) {
-        var this$inputListT$connection = this.inputList[t].connection
+        var /* [auto-meaningful-name] */this$inputListT$connection = this.inputList[t].connection
         if (this$inputListT$connection) {
           this$inputListT$connection.move_to_offset(e)
           if (this$inputListT$connection.is_connected()) {
@@ -214,7 +214,7 @@ exports.block_render_svg = function (e) {
       }
     }
     t.prototype.render_draw_right_ = function (e, t) {
-      for (var n = i.vec2.create(), r = 0, c = 0, u = 0, t$length = t.length; u < t$length; u++) {
+      for (var n = i.vec2.create(), r = 0, c = 0, u = 0, /* [auto-meaningful-name] */t$length = t.length; u < t$length; u++) {
         var f = t[u]
         var d = t[u - 1]
         n[0] = f.padding_l
@@ -271,7 +271,7 @@ exports.block_render_svg = function (e) {
         t = this.render_fields_(u.fieldRow, t, s.height || 0)
         if (u.type == o.InputType.VALUE) {
           t[0] += 0 === u.fieldRow.length && 0 === c ? 0 : u.margin_left
-          var u$connection = u.connection
+          var /* [auto-meaningful-name] */u$connection = u.connection
           var f = u$connection.targetBlock()
           if (u.connection && u.connection.get_targe_connection() && undefined != f) {
             u$connection.set_offset_in_block(t[0], t[1] + (s.height - f.height) / 2)
@@ -282,7 +282,7 @@ exports.block_render_svg = function (e) {
           t[0] = Math.max(t[0], a)
         }
       }
-      var r$right_edge = r.right_edge
+      var /* [auto-meaningful-name] */r$right_edge = r.right_edge
       var h = r[n - 1]
       if (undefined != h && h.type === o.InputType.STATEMENT) {
         r$right_edge = this.theme.renderer.STATEMENT_OTHER_ROW_MIN_WIDTH - this.theme.renderer.BLOCK_EDGE_WIDTH

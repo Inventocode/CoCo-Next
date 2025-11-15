@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：467
@@ -8,11 +8,11 @@
 
 export { l as a }
 export { h as b }
-import r = require("./34/index");
-import i = require("./122");
-import o = require("./65");
-import a = require("./1003");
-import s = require("./128");
+import /* [auto-meaningful-name] */$_34_index = require("./34/index")
+import /* [auto-meaningful-name] */$_122 = require("./122")
+import o = require("./65")
+import /* [auto-meaningful-name] */$_1003 = require("./1003")
+import /* [auto-meaningful-name] */$_128 = require("./128")
 var c = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -66,7 +66,7 @@ var l = function () {
     this.data = t
     this.events = n
     this.playables = new Map()
-    this.playable_container = new r.f()
+    this.playable_container = new $_34_index.f()
     this.playable_container.name = "playable_container"
   }
   e.prototype.add_video = function (e, t, n, r) {
@@ -75,33 +75,33 @@ var l = function () {
       if (r) {
         var a = new f(e, this.playable_container, this.app, this.events, undefined, undefined, r)
         this.playables.set(e, a)
-        return i.b.success(a)
+        return $_122.b.success(a)
       }
-      return i.b.error("Can not find texture with texture id " + t)
+      return $_122.b.error("Can not find texture with texture id " + t)
     }
     if (!o.baseTexture.getDrawableSource || !(o.baseTexture.getDrawableSource() instanceof HTMLVideoElement)) {
-      return i.b.error("texture is not video-based")
+      return $_122.b.error("texture is not video-based")
     }
     var s = new f(e, this.playable_container, this.app, this.events, o, n)
     this.playables.set(e, s)
-    return i.b.success(s)
+    return $_122.b.success(s)
   }
   e.prototype.add_animated_actor = function (e, t, n) {
     for (var r = [], o = 0; o < t.length; o++) {
       var a = this.data.get_texture(t[o])
       if (!a) {
-        return i.b.error("Can not find texture with texture_id " + t[o])
+        return $_122.b.error("Can not find texture with texture_id " + t[o])
       }
       r.push(a)
     }
     var s = new d(e, r, this.playable_container, this.app, n)
     this.playables.set(e, s)
-    return i.b.success(s)
+    return $_122.b.success(s)
   }
   e.prototype.destroy_playable = function (e) {
     var t = this.playables.get(e)
     if (!t) {
-      return new i.a("Can not find video with id " + e)
+      return new $_122.a("Can not find video with id " + e)
     }
     this.playables.delete(e)
     t.destroy({
@@ -116,7 +116,7 @@ var l = function () {
     var /* [auto-meaningful-name] */r$return
     try {
       for (var r = u(this.playables.values()), i = r.next(); !i.done; i = r.next()) {
-        var i$value = i.value
+        var /* [auto-meaningful-name] */i$value = i.value
         if (h(i$value)) {
           return i$value
         }
@@ -143,7 +143,7 @@ var l = function () {
     var n = []
     try {
       for (var r = u(this.playables.values()), i = r.next(); !i.done; i = r.next()) {
-        var i$value = i.value
+        var /* [auto-meaningful-name] */i$value = i.value
         if (h(i$value)) {
           n.push(i$value)
         }
@@ -203,7 +203,7 @@ var l = function () {
 var f = function (e) {
   function t(t, n, i, a, c, u, l) {
     var f = e.call(this, t, n, i, a) || this
-    f.type = s.f.Video
+    f.type = $_128.f.Video
     f.on_play_handler = function () {
       if (f.custom_on_play_handler) {
         f.custom_on_play_handler()
@@ -223,7 +223,7 @@ var f = function (e) {
     f.id = t
     f.app = i
     f.is_played = false
-    f.video_frame = new r.t(c)
+    f.video_frame = new $_34_index.t(c)
     if (l) {
       f.generate_error_frame(l)
     }
@@ -244,9 +244,9 @@ var f = function (e) {
       })
     })
     f.addChild(f.video_frame)
-    var f$app$get_app$view = f.app.get_app().view
-    var f$app$get_app$view$width = f$app$get_app$view.width
-    var f$app$get_app$view$height = f$app$get_app$view.height
+    var /* [auto-meaningful-name] */f$app$get_app$view = f.app.get_app().view
+    var /* [auto-meaningful-name] */f$app$get_app$view$width = f$app$get_app$view.width
+    var /* [auto-meaningful-name] */f$app$get_app$view$height = f$app$get_app$view.height
     var _ = u || o.e({
       width: f.width,
       height: f.height
@@ -350,20 +350,20 @@ var f = function (e) {
     console.error("Can not get video element from base texture")
   }
   t.prototype.generate_error_frame = function (e) {
-    var e$width = e.width
-    var e$height = e.height
-    var e$error_message = e.error_message
-    var o = new r.j()
-    var a = new r.v(e$error_message)
+    var /* [auto-meaningful-name] */e$width = e.width
+    var /* [auto-meaningful-name] */e$height = e.height
+    var /* [auto-meaningful-name] */e$error_message = e.error_message
+    var o = new $_34_index.j()
+    var a = new $_34_index.v(e$error_message)
     o.beginFill(15922422)
     o.drawRect(-e$width / 2, -e$height / 2, e$width, e$height)
-    a.style = s.e
+    a.style = $_128.e
     a.position.set(-a.width / 2, 0)
     o.addChild(a)
     this.video_frame.addChild(o)
   }
   return t
-}(a.a)
+}($_1003.a)
 var d = function (e) {
   function t(t, n, i, a, s) {
     var c = e.call(this) || this
@@ -378,15 +378,15 @@ var d = function (e) {
     c.ended = false
     c.is_played = false
     c.pivot.set(.5)
-    c.animated_actor = new r.a(n)
+    c.animated_actor = new $_34_index.a(n)
     c.animated_actor.loop = false
     c.animated_actor.anchor.set(.5)
     c.animated_actor.onComplete = c.on_complete_handler
     c.animated_actor.animationSpeed = parseFloat((1 / 6).toFixed(2))
     c.addChild(c.animated_actor)
-    var c$app$get_app$view = c.app.get_app().view
-    var c$app$get_app$view$width = c$app$get_app$view.width
-    var c$app$get_app$view$height = c$app$get_app$view.height
+    var /* [auto-meaningful-name] */c$app$get_app$view = c.app.get_app().view
+    var /* [auto-meaningful-name] */c$app$get_app$view$width = c$app$get_app$view.width
+    var /* [auto-meaningful-name] */c$app$get_app$view$height = c$app$get_app$view.height
     var d = s || o.e({
       width: c.width,
       height: c.height
@@ -459,8 +459,8 @@ var d = function (e) {
     }
   }
   return t
-}(r.f)
+}($_34_index.f)
 function h(e) {
-  return !(!e || !e.type) && e.type === s.f.Video
+  return !(!e || !e.type) && e.type === $_128.f.Video
 }
 export default l

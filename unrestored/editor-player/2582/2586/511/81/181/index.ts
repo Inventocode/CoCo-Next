@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：181
@@ -71,7 +71,7 @@ var s = function (t) {
 var c = function () {
   function t() {}
   t.fill = function (t, e) {
-    for (var r = 0, t$length = t.length; r < t$length; r++) {
+    for (var r = 0, /* [auto-meaningful-name] */t$length = t.length; r < t$length; r++) {
       t[r] = e
     }
   }
@@ -132,7 +132,7 @@ var c = function () {
     if (t.length !== e.length) {
       return false
     }
-    for (var r = 0, t$length = t.length; r < t$length; r++) {
+    for (var r = 0, /* [auto-meaningful-name] */t$length = t.length; r < t$length; r++) {
       if (t[r] !== e[r]) {
         return false
       }

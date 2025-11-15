@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1480
@@ -7,18 +7,18 @@
 "use strict"
 
 export { i as a }
-import r = require("./33/index");
-import React = require("react");
+import /* [auto-meaningful-name] */$_33_index = require("./33/index")
+import /* [auto-meaningful-name] */React = require("react")
 function i(e, t) {
   var n = t || {}
-  var n$defaultValue = n.defaultValue
-  var n$value = n.value
-  var n$onChange = n.onChange
-  var n$postState = n.postState
+  var /* [auto-meaningful-name] */n$defaultValue = n.defaultValue
+  var /* [auto-meaningful-name] */n$value = n.value
+  var /* [auto-meaningful-name] */n$onChange = n.onChange
+  var /* [auto-meaningful-name] */n$postState = n.postState
   var l = React.useState(function () {
     return undefined !== n$value ? n$value : undefined !== n$defaultValue ? "function" === typeof n$defaultValue ? n$defaultValue() : n$defaultValue : "function" === typeof e ? e() : e
   })
-  var u = r.a(l, 2)
+  var u = $_33_index.a(l, 2)
   var d = u[0]
   var p = u[1]
   var f = undefined !== n$value ? n$value : d

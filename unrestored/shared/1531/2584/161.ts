@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：161
@@ -6,150 +6,150 @@
 
 "use strict"
 
-export { r as h }
+export { ASYNC_INITIAL_CLOUD_SPACE_DATA as h }
 export { o as G }
-export { i as s }
+export { UPDATE_CLOUD_SPACE_DICT_LIST as s }
 export { a as P }
-export { s as t }
+export { UPDATE_CLOUD_SPACE_TABLE_LIST as t }
 export { c as Q }
-export { l as e }
+export { ASYNC_FETCH_CLOUD_SPACE_LIST as e }
 export { u as D }
-export { d as m }
-export { p as x }
+export { INIT_CLOUD_SPACE_REF_IDS as m }
+export { UPDATE_INITIAL_REF_DICT_IDS as x }
 export { f as U }
-export { h as a }
+export { APPEND_INITIAL_REF_DICT_IDS as a }
 export { m as z }
-export { g as o }
+export { REMOVE_INITIAL_REF_DICT_IDS as o }
 export { _ as L }
-export { v as y }
+export { UPDATE_INITIAL_REF_TABLE_IDS as y }
 export { b as V }
-export { y as b }
+export { APPEND_INITIAL_REF_TABLE_IDS as b }
 export { E as A }
-export { O as p }
+export { REMOVE_INITIAL_REF_TABLE_IDS as p }
 export { w as M }
-export { C as c }
+export { ASYNC_CHECK_WIDGET_DATA_SOURCES_VALID as c }
 export { T as B }
-export { S as q }
+export { UPDATE_CHECKED_TIMESTAMP as q }
 export { I as N }
-export { A as d }
+export { ASYNC_FETCH_CLOUD_DICT_KEYS_DETAIL as d }
 export { j as C }
-export { N as i }
+export { ASYNC_UPDATE_CLOUD_DICT_KEYS_DETAIL as i }
 export { R as H }
-export { k as r }
+export { UPDATE_CLOUD_DICT_KEYS_DETAIL as r }
 export { x as O }
-export { D as u }
+export { UPDATE_CLOUD_TABLE_COLUMN_LIST as u }
 export { M as R }
-export { L as w }
+export { UPDATE_CLOUD_TABLE_LIST_COLUMNS as w }
 export { P as T }
-export { B as n }
-export { F as f }
+export { REMOVE_CLOUD_TABLE_COLUMN_LIST as n }
+export { ASYNC_FETCH_CLOUD_TABLE_COLUMNS_DETAIL as f }
 export { G as E }
-export { U as k }
+export { ASYNC_UPDATE_CLOUD_TABLE_COLUMNS_DETAIL as k }
 export { W as J }
-export { H as g }
+export { ASYNC_FETCH_CLOUD_TABLE_DATA as g }
 export { V as F }
-export { z as v }
+export { UPDATE_CLOUD_TABLE_DATA as v }
 export { Y as S }
-export { K as j }
+export { ASYNC_UPDATE_CLOUD_DICT_LIST as j }
 export { q as I }
-export { X as l }
+export { ASYNC_UPDATE_CLOUD_TABLE_LIST as l }
 export { Q as K }
-var r = "ASYNC_INITIAL_CLOUD_SPACE_DATA"
+var /* [auto-meaningful-name] */ASYNC_INITIAL_CLOUD_SPACE_DATA = "ASYNC_INITIAL_CLOUD_SPACE_DATA"
 var o = function () {
   return {
-    type: r,
+    type: ASYNC_INITIAL_CLOUD_SPACE_DATA,
     payload: undefined
   }
 }
-var i = "UPDATE_CLOUD_SPACE_DICT_LIST"
+var /* [auto-meaningful-name] */UPDATE_CLOUD_SPACE_DICT_LIST = "UPDATE_CLOUD_SPACE_DICT_LIST"
 var a = function (e) {
   return {
     payload: e,
-    type: i
+    type: UPDATE_CLOUD_SPACE_DICT_LIST
   }
 }
-var s = "UPDATE_CLOUD_SPACE_TABLE_LIST"
+var /* [auto-meaningful-name] */UPDATE_CLOUD_SPACE_TABLE_LIST = "UPDATE_CLOUD_SPACE_TABLE_LIST"
 var c = function (e) {
   return {
     payload: e,
-    type: s
+    type: UPDATE_CLOUD_SPACE_TABLE_LIST
   }
 }
-var l = "ASYNC_FETCH_CLOUD_SPACE_LIST"
+var /* [auto-meaningful-name] */ASYNC_FETCH_CLOUD_SPACE_LIST = "ASYNC_FETCH_CLOUD_SPACE_LIST"
 var u = function () {
   return {
     payload: undefined,
-    type: l
+    type: ASYNC_FETCH_CLOUD_SPACE_LIST
   }
 }
-var d = "INIT_CLOUD_SPACE_REF_IDS"
-var p = "UPDATE_INITIAL_REF_DICT_IDS"
+var /* [auto-meaningful-name] */INIT_CLOUD_SPACE_REF_IDS = "INIT_CLOUD_SPACE_REF_IDS"
+var /* [auto-meaningful-name] */UPDATE_INITIAL_REF_DICT_IDS = "UPDATE_INITIAL_REF_DICT_IDS"
 var f = function (e) {
   return {
     payload: e,
-    type: p
+    type: UPDATE_INITIAL_REF_DICT_IDS
   }
 }
-var h = "APPEND_INITIAL_REF_DICT_IDS"
+var /* [auto-meaningful-name] */APPEND_INITIAL_REF_DICT_IDS = "APPEND_INITIAL_REF_DICT_IDS"
 var m = function (e) {
   return {
     payload: e,
-    type: h
+    type: APPEND_INITIAL_REF_DICT_IDS
   }
 }
-var g = "REMOVE_INITIAL_REF_DICT_IDS"
+var /* [auto-meaningful-name] */REMOVE_INITIAL_REF_DICT_IDS = "REMOVE_INITIAL_REF_DICT_IDS"
 var _ = function (e) {
   return {
     payload: e,
-    type: g
+    type: REMOVE_INITIAL_REF_DICT_IDS
   }
 }
-var v = "UPDATE_INITIAL_REF_TABLE_IDS"
+var /* [auto-meaningful-name] */UPDATE_INITIAL_REF_TABLE_IDS = "UPDATE_INITIAL_REF_TABLE_IDS"
 var b = function (e) {
   return {
     payload: e,
-    type: v
+    type: UPDATE_INITIAL_REF_TABLE_IDS
   }
 }
-var y = "APPEND_INITIAL_REF_TABLE_IDS"
+var /* [auto-meaningful-name] */APPEND_INITIAL_REF_TABLE_IDS = "APPEND_INITIAL_REF_TABLE_IDS"
 var E = function (e) {
   return {
     payload: e,
-    type: y
+    type: APPEND_INITIAL_REF_TABLE_IDS
   }
 }
-var O = "REMOVE_INITIAL_REF_TABLE_IDS"
+var /* [auto-meaningful-name] */REMOVE_INITIAL_REF_TABLE_IDS = "REMOVE_INITIAL_REF_TABLE_IDS"
 var w = function (e) {
   return {
     payload: e,
-    type: O
+    type: REMOVE_INITIAL_REF_TABLE_IDS
   }
 }
-var C = "ASYNC_CHECK_WIDGET_DATA_SOURCES_VALID"
+var /* [auto-meaningful-name] */ASYNC_CHECK_WIDGET_DATA_SOURCES_VALID = "ASYNC_CHECK_WIDGET_DATA_SOURCES_VALID"
 var T = function (e) {
   return {
     payload: e,
-    type: C
+    type: ASYNC_CHECK_WIDGET_DATA_SOURCES_VALID
   }
 }
-var S = "UPDATE_CHECKED_TIMESTAMP"
+var /* [auto-meaningful-name] */UPDATE_CHECKED_TIMESTAMP = "UPDATE_CHECKED_TIMESTAMP"
 var I = function (e) {
   return {
     payload: e,
-    type: S
+    type: UPDATE_CHECKED_TIMESTAMP
   }
 }
-var A = "ASYNC_FETCH_CLOUD_DICT_KEYS_DETAIL"
+var /* [auto-meaningful-name] */ASYNC_FETCH_CLOUD_DICT_KEYS_DETAIL = "ASYNC_FETCH_CLOUD_DICT_KEYS_DETAIL"
 var j = function (e, t) {
   return {
     payload: {
       id: e,
       showToast: t
     },
-    type: A
+    type: ASYNC_FETCH_CLOUD_DICT_KEYS_DETAIL
   }
 }
-var N = "ASYNC_UPDATE_CLOUD_DICT_KEYS_DETAIL"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_CLOUD_DICT_KEYS_DETAIL = "ASYNC_UPDATE_CLOUD_DICT_KEYS_DETAIL"
 var R = function (e, t, n) {
   return {
     payload: {
@@ -157,51 +157,51 @@ var R = function (e, t, n) {
       data: t,
       isEmitOT: n
     },
-    type: N
+    type: ASYNC_UPDATE_CLOUD_DICT_KEYS_DETAIL
   }
 }
-var k = "UPDATE_CLOUD_DICT_KEYS_DETAIL"
+var /* [auto-meaningful-name] */UPDATE_CLOUD_DICT_KEYS_DETAIL = "UPDATE_CLOUD_DICT_KEYS_DETAIL"
 var x = function (e, t) {
   return {
     payload: {
       id: e,
       data: t
     },
-    type: k
+    type: UPDATE_CLOUD_DICT_KEYS_DETAIL
   }
 }
-var D = "UPDATE_CLOUD_TABLE_COLUMN_LIST"
+var /* [auto-meaningful-name] */UPDATE_CLOUD_TABLE_COLUMN_LIST = "UPDATE_CLOUD_TABLE_COLUMN_LIST"
 var M = function (e, t) {
   return {
     payload: {
       id: e,
       columns: t
     },
-    type: D
+    type: UPDATE_CLOUD_TABLE_COLUMN_LIST
   }
 }
-var L = "UPDATE_CLOUD_TABLE_LIST_COLUMNS"
+var /* [auto-meaningful-name] */UPDATE_CLOUD_TABLE_LIST_COLUMNS = "UPDATE_CLOUD_TABLE_LIST_COLUMNS"
 var P = function (e, t) {
   return {
     payload: {
       id: e,
       columns: t
     },
-    type: L
+    type: UPDATE_CLOUD_TABLE_LIST_COLUMNS
   }
 }
-var B = "REMOVE_CLOUD_TABLE_COLUMN_LIST"
-var F = "ASYNC_FETCH_CLOUD_TABLE_COLUMNS_DETAIL"
+var /* [auto-meaningful-name] */REMOVE_CLOUD_TABLE_COLUMN_LIST = "REMOVE_CLOUD_TABLE_COLUMN_LIST"
+var /* [auto-meaningful-name] */ASYNC_FETCH_CLOUD_TABLE_COLUMNS_DETAIL = "ASYNC_FETCH_CLOUD_TABLE_COLUMNS_DETAIL"
 var G = function (e, t) {
   return {
     payload: {
       id: e,
       showToast: t
     },
-    type: F
+    type: ASYNC_FETCH_CLOUD_TABLE_COLUMNS_DETAIL
   }
 }
-var U = "ASYNC_UPDATE_CLOUD_TABLE_COLUMNS_DETAIL"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_CLOUD_TABLE_COLUMNS_DETAIL = "ASYNC_UPDATE_CLOUD_TABLE_COLUMNS_DETAIL"
 var W = function (e, t, n) {
   return {
     payload: {
@@ -209,46 +209,46 @@ var W = function (e, t, n) {
       columns: t,
       isEmitOT: n
     },
-    type: U
+    type: ASYNC_UPDATE_CLOUD_TABLE_COLUMNS_DETAIL
   }
 }
-var H = "ASYNC_FETCH_CLOUD_TABLE_DATA"
+var /* [auto-meaningful-name] */ASYNC_FETCH_CLOUD_TABLE_DATA = "ASYNC_FETCH_CLOUD_TABLE_DATA"
 var V = function (e) {
   return {
     payload: {
       id: e
     },
-    type: H
+    type: ASYNC_FETCH_CLOUD_TABLE_DATA
   }
 }
-var z = "UPDATE_CLOUD_TABLE_DATA"
+var /* [auto-meaningful-name] */UPDATE_CLOUD_TABLE_DATA = "UPDATE_CLOUD_TABLE_DATA"
 var Y = function (e, t) {
   return {
     payload: {
       id: e,
       data: t
     },
-    type: z
+    type: UPDATE_CLOUD_TABLE_DATA
   }
 }
-var K = "ASYNC_UPDATE_CLOUD_DICT_LIST"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_CLOUD_DICT_LIST = "ASYNC_UPDATE_CLOUD_DICT_LIST"
 var q = function (e, t) {
   return {
     payload: {
       list: e,
       isEmitOT: t
     },
-    type: K
+    type: ASYNC_UPDATE_CLOUD_DICT_LIST
   }
 }
-var X = "ASYNC_UPDATE_CLOUD_TABLE_LIST"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_CLOUD_TABLE_LIST = "ASYNC_UPDATE_CLOUD_TABLE_LIST"
 var Q = function (e, t) {
   return {
     payload: {
       list: e,
       isEmitOT: t
     },
-    type: X
+    type: ASYNC_UPDATE_CLOUD_TABLE_LIST
   }
 }
-export default h
+export default APPEND_INITIAL_REF_DICT_IDS

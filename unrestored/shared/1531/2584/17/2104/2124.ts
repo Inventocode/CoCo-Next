@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2124
@@ -13,13 +13,13 @@ exports.BlockDragger = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = function (e) {
   function t(t) {
     var n = e.call(this, t.target, t.workspace) || this
     n.type = "block_dragger"
-    var t$target = t.target
-    var t$workspace$get_options$connection_effect = t.workspace.get_options().connection_effect
+    var /* [auto-meaningful-name] */t$target = t.target
+    var /* [auto-meaningful-name] */t$workspace$get_options$connection_effect = t.workspace.get_options().connection_effect
     n._dragged_connection_manager = t$workspace$get_options$connection_effect && "default" === t$workspace$get_options$connection_effect.type ? n.dragged_connection_manager : n.insertion_marker_manager
     n._dragged_connection_manager.init(t$target)
     n._drag_icon_data = n.generate_icon_data(t$target)
@@ -85,7 +85,7 @@ var s = function (e) {
     }
     var r = undefined
     if (this.events.is_enabled()) {
-      var this$_workspace$current_gesture_ = this._workspace.current_gesture_
+      var /* [auto-meaningful-name] */this$_workspace$current_gesture_ = this._workspace.current_gesture_
       r = this.end_drag_event_factory({
         block: this._dragging_block,
         is_outside: this._was_outside,
@@ -116,7 +116,7 @@ var s = function (e) {
     this.redo_stack_before_drag = []
     this.undo_stack_before_drag = []
     this.parent_before_drag = undefined
-    var this$_workspace = this._workspace
+    var /* [auto-meaningful-name] */this$_workspace = this._workspace
     this.dispose()
     if (!(null === this$_workspace || undefined === this$_workspace)) {
       this$_workspace.set_resizes_enabled(true)

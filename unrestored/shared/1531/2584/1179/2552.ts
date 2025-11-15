@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2552
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_text_blocks = undefined
-var r = require("../4/127")
+var r = require("../1036/127")
 var o = require("../125/534")
 var i = require("../125/294")
 var a = require("../125/index")

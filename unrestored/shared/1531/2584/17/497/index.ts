@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：497
@@ -24,7 +24,7 @@ exports.math = c
 exports.maths = c
 var u = (0, r.__importStar)(require("./961"))
 exports.array = u
-var l = (0, r.__importStar)(require("./387"))
+var l = (0, r.__importStar)(require("../../206/725/387"))
 exports.asserts = l
 var f = (0, r.__importStar)(require("../../1001/577"))
 exports.color = f
@@ -37,7 +37,7 @@ Object.defineProperty(exports, "is", {
     return h.is
   }
 })
-var p = (0, r.__importStar)(require("./644"))
+var p = (0, r.__importStar)(require("../../1179/2554/644"))
 exports.block = p
 var _ = (0, r.__importStar)(require("./962"))
 exports.json = _

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1337
@@ -33,8 +33,8 @@ module.exports = function (e, t, n) {
     }
   }
   if ("boolean" == typeof e.schema || !o && !e.schema.$ref) {
-    var e$level = e.level
-    var e$dataLevel = e.dataLevel
+    var /* [auto-meaningful-name] */e$level = e.level
+    var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
     var f = e.schema["false schema"]
     var d = e.schemaPath + e.util.getProperty("false schema")
     var h = e.errSchemaPath + "/false schema"
@@ -83,7 +83,7 @@ module.exports = function (e, t, n) {
     return r
   }
   if (e.isTop) {
-    var e$isTop = e.isTop
+    var /* [auto-meaningful-name] */e$isTop = e.isTop
     e$level = e.level = 0
     e$dataLevel = e.dataLevel = 0
     _ = "data"
@@ -92,11 +92,11 @@ module.exports = function (e, t, n) {
     delete e.isTop
     e.dataPathArr = [""]
     if (undefined !== e.schema.default && e.opts.useDefaults && e.opts.strictDefaults) {
-      var m = "default is ignored in the schema root"
+      var /* [auto-meaningful-name] */DefaultIsIgnoredInTheSchemaRoot = "default is ignored in the schema root"
       if ("log" !== e.opts.strictDefaults) {
-        throw new Error(m)
+        throw new Error(DefaultIsIgnoredInTheSchemaRoot)
       }
-      e.logger.warn(m)
+      e.logger.warn(DefaultIsIgnoredInTheSchemaRoot)
     }
     r += " var vErrors = null; "
     r += " var errors = 0;     "
@@ -116,7 +116,7 @@ module.exports = function (e, t, n) {
   p = !e.opts.allErrors
   var y = ""
   var b = ""
-  var e$schema$type = e.schema.type
+  var /* [auto-meaningful-name] */e$schema$type = e.schema.type
   var E = Array.isArray(e$schema$type)
   if (e$schema$type && e.opts.nullable && true === e.schema.nullable) {
     if (E) {
@@ -274,7 +274,7 @@ module.exports = function (e, t, n) {
       b += "}"
     }
   } else {
-    var e$RULES = e.RULES
+    var /* [auto-meaningful-name] */e$RULES = e.RULES
     if (e$RULES) {
       for (var P = -1, N = e$RULES.length - 1; P < N;) {
         if ($(C = e$RULES[P += 1])) {
@@ -291,11 +291,11 @@ module.exports = function (e, t, n) {
                     var H = _ + e.util.getProperty(j)
                     if (e.compositeRule) {
                       if (e.opts.strictDefaults) {
-                        m = "default is ignored for: " + H
+                        DefaultIsIgnoredInTheSchemaRoot = "default is ignored for: " + H
                         if ("log" !== e.opts.strictDefaults) {
-                          throw new Error(m)
+                          throw new Error(DefaultIsIgnoredInTheSchemaRoot)
                         }
-                        e.logger.warn(m)
+                        e.logger.warn(DefaultIsIgnoredInTheSchemaRoot)
                       }
                     } else {
                       r += " if (" + H + " === undefined "
@@ -314,7 +314,7 @@ module.exports = function (e, t, n) {
                 }
               }
             } else if ("array" == C.type && Array.isArray(e.schema.items)) {
-              var e$schema$items = e.schema.items
+              var /* [auto-meaningful-name] */e$schema$items = e.schema.items
               if (e$schema$items) {
                 D = -1
                 for (var G, z = e$schema$items.length - 1; D < z;) {
@@ -322,11 +322,11 @@ module.exports = function (e, t, n) {
                     H = _ + "[" + D + "]"
                     if (e.compositeRule) {
                       if (e.opts.strictDefaults) {
-                        m = "default is ignored for: " + H
+                        DefaultIsIgnoredInTheSchemaRoot = "default is ignored for: " + H
                         if ("log" !== e.opts.strictDefaults) {
-                          throw new Error(m)
+                          throw new Error(DefaultIsIgnoredInTheSchemaRoot)
                         }
-                        e.logger.warn(m)
+                        e.logger.warn(DefaultIsIgnoredInTheSchemaRoot)
                       }
                     } else {
                       r += " if (" + H + " === undefined "
@@ -346,10 +346,10 @@ module.exports = function (e, t, n) {
               }
             }
           }
-          var c$rules = C.rules
-          if (c$rules) {
-            for (var W, K = -1, X = c$rules.length - 1; K < X;) {
-              if (J(W = c$rules[K += 1])) {
+          var /* [auto-meaningful-name] */C$rules = C.rules
+          if (C$rules) {
+            for (var W, K = -1, X = C$rules.length - 1; K < X;) {
+              if (J(W = C$rules[K += 1])) {
                 var Y = W.code(e, W.keyword, C.type)
                 if (Y) {
                   r += " " + Y + " "
@@ -411,7 +411,7 @@ module.exports = function (e, t, n) {
     }
   }
   function $(e) {
-    for (var e$rules = e.rules, n = 0; n < e$rules.length; n++) {
+    for (var /* [auto-meaningful-name] */e$rules = e.rules, n = 0; n < e$rules.length; n++) {
       if (J(e$rules[n])) {
         return true
       }
@@ -419,7 +419,7 @@ module.exports = function (e, t, n) {
   }
   function J(t) {
     return undefined !== e.schema[t.keyword] || t.implements && function (t) {
-      for (var t$implements = t.implements, r = 0; r < t$implements.length; r++) {
+      for (var /* [auto-meaningful-name] */t$implements = t.implements, r = 0; r < t$implements.length; r++) {
         if (undefined !== e.schema[t$implements[r]]) {
           return true
         }

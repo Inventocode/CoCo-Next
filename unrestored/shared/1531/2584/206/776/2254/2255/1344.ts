@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1344
@@ -43,14 +43,14 @@ export { b as isOpeningBracketToken }
 export { m as isOpeningParenToken }
 export { ne as isParenthesized }
 export { g as isSemicolonToken }
-import r = require("../../../../11");
-import RegeneratorRuntime = require("regenerator-runtime");
-import o = require("../../../../27");
-import a = require("../../../../40");
-import s = require("../../../../36/461");
-import c = require("../../../../25/index");
-import u = require("../../../../47");
-import l = require("../../766/index");
+import /* [auto-meaningful-name] */$$_$$_$$_$$_11 = require("../../../../11")
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_27 = require("../../../../27")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_40 = require("../../../../40")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_36_461 = require("../../../../36/461")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_25_index = require("../../../../25/index")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_47 = require("../../../../47")
+import /* [auto-meaningful-name] */$$_$$_766_index = require("../../766/index")
 function f(e, t) {
   var n = t.range[0]
   var r = e
@@ -58,11 +58,11 @@ function f(e, t) {
   do {
     i = false
     var o
-    var a = u.a(r.childScopes)
+    var a = $$_$$_$$_$$_47.a(r.childScopes)
     try {
       for (a.s(); !(o = a.n()).done;) {
-        var o$value = o.value
-        var o$value$block$range = o$value.block.range
+        var /* [auto-meaningful-name] */o$value = o.value
+        var /* [auto-meaningful-name] */o$value$block$range = o$value.block.range
         if (o$value$block$range[0] <= n && n < o$value$block$range[1]) {
           r = o$value
           i = true
@@ -143,7 +143,7 @@ function M(e, t) {
   return e.id ? t.getTokenAfter(e.id, m) : t.getFirstToken(e, m)
 }
 function j(e, t) {
-  var e$parent = e.parent
+  var /* [auto-meaningful-name] */e$parent = e.parent
   var r = null
   var i = null
   if ("ArrowFunctionExpression" === e.type) {
@@ -164,7 +164,7 @@ function j(e, t) {
 }
 var L = "undefined" !== typeof globalThis ? globalThis : "undefined" !== typeof self ? self : "undefined" !== typeof window ? window : "undefined" !== typeof global ? global : {}
 var U = Object.freeze(new Set(["Array", "ArrayBuffer", "BigInt", "BigInt64Array", "BigUint64Array", "Boolean", "DataView", "Date", "decodeURI", "decodeURIComponent", "encodeURI", "encodeURIComponent", "escape", "Float32Array", "Float64Array", "Function", "Infinity", "Int16Array", "Int32Array", "Int8Array", "isFinite", "isNaN", "isPrototypeOf", "JSON", "Map", "Math", "NaN", "Number", "Object", "parseFloat", "parseInt", "Promise", "Proxy", "Reflect", "RegExp", "Set", "String", "Symbol", "Uint16Array", "Uint32Array", "Uint8Array", "Uint8ClampedArray", "undefined", "unescape", "WeakMap", "WeakSet"]))
-var H = new Set([Array.isArray, "function" === typeof BigInt ? BigInt : undefined, Boolean, Date, Date.parse, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, isFinite, isNaN, isPrototypeOf].concat(c.a(Object.getOwnPropertyNames(Math).map(function (e) {
+var H = new Set([Array.isArray, "function" === typeof BigInt ? BigInt : undefined, Boolean, Date, Date.parse, decodeURI, decodeURIComponent, encodeURI, encodeURIComponent, escape, isFinite, isNaN, isPrototypeOf].concat($$_$$_$$_$$_25_index.a(Object.getOwnPropertyNames(Math).map(function (e) {
   return Math[e]
 }).filter(function (e) {
   return "function" === typeof e
@@ -195,7 +195,7 @@ function z(e, t) {
       if (null == o) {
         return null
       }
-      n.push.apply(n, c.a(o.value))
+      n.push.apply(n, $$_$$_$$_$$_25_index.a(o.value))
     } else {
       var a = W(i, t)
       if (null == a) {
@@ -309,7 +309,7 @@ var Q = Object.freeze({
     return null
   },
   CallExpression: function (e, t) {
-    var e$callee = e.callee
+    var /* [auto-meaningful-name] */e$callee = e.callee
     var r = z(e.arguments, t)
     if (null != r) {
       if ("MemberExpression" === e$callee.type) {
@@ -318,11 +318,11 @@ var Q = Object.freeze({
           value: e$callee.property.name
         }
         if (null != i && null != o) {
-          var i$value = i.value
-          var o$value = o.value
+          var /* [auto-meaningful-name] */i$value = i.value
+          var /* [auto-meaningful-name] */o$value = o.value
           if (H.has(i$value[o$value])) {
             return {
-              value: i$value[o$value].apply(i$value, c.a(r))
+              value: i$value[o$value].apply(i$value, $$_$$_$$_$$_25_index.a(r))
             }
           }
           if (V.has(i$value[o$value])) {
@@ -334,10 +334,10 @@ var Q = Object.freeze({
       } else {
         var u = W(e$callee, t)
         if (null != u) {
-          var u$value = u.value
+          var /* [auto-meaningful-name] */u$value = u.value
           if (H.has(u$value)) {
             return {
-              value: u$value.apply(undefined, c.a(r))
+              value: u$value.apply(undefined, $$_$$_$$_$$_25_index.a(r))
             }
           }
           if (V.has(u$value)) {
@@ -405,10 +405,10 @@ var Q = Object.freeze({
     var n = W(e.callee, t)
     var r = z(e.arguments, t)
     if (null != n && null != r) {
-      var n$value = n.value
+      var /* [auto-meaningful-name] */n$value = n.value
       if (H.has(n$value)) {
         return {
-          value: s.a(n$value, c.a(r))
+          value: $$_$$_$$_$$_36_461.a(n$value, $$_$$_$$_$$_25_index.a(r))
         }
       }
     }
@@ -417,10 +417,10 @@ var Q = Object.freeze({
   ObjectExpression: function (e, t) {
     var n
     var r = {}
-    var i = u.a(e.properties)
+    var i = $$_$$_$$_$$_47.a(e.properties)
     try {
       for (i.s(); !(n = i.n()).done;) {
-        var n$value = n.value
+        var /* [auto-meaningful-name] */n$value = n.value
         if ("Property" === n$value.type) {
           if ("init" !== n$value.kind) {
             return null
@@ -460,7 +460,7 @@ var Q = Object.freeze({
     var n = W(e.tag, t)
     var r = z(e.quasi.expressions, t)
     if (null != n && null != r) {
-      var n$value = n.value
+      var /* [auto-meaningful-name] */n$value = n.value
       var o = e.quasi.quasis.map(function (e) {
         return e.value.cooked
       })
@@ -469,7 +469,7 @@ var Q = Object.freeze({
       })
       if (n$value === String.raw) {
         return {
-          value: n$value.apply(undefined, [o].concat(c.a(r)))
+          value: n$value.apply(undefined, [o].concat($$_$$_$$_$$_25_index.a(r)))
         }
       }
     }
@@ -478,7 +478,7 @@ var Q = Object.freeze({
   TemplateLiteral: function (e, t) {
     var n = z(e.expressions, t)
     if (null != n) {
-      for (var e$quasis0$value$cooked = e.quasis[0].value.cooked, i = 0; i < n.length; ++i) {
+      for (var /* [auto-meaningful-name] */e$quasis0$value$cooked = e.quasis[0].value.cooked, i = 0; i < n.length; ++i) {
         e$quasis0$value$cooked += n[i]
         e$quasis0$value$cooked += e.quasis[i + 1].value.cooked
       }
@@ -560,7 +560,7 @@ function Y(e, t) {
   return null
 }
 function q(e) {
-  var e$parent = e.parent
+  var /* [auto-meaningful-name] */e$parent = e.parent
   var n = []
   if ("MethodDefinition" === e$parent.type && e$parent.static) {
     n.push("static")
@@ -603,22 +603,22 @@ var $ = Object.freeze(new Set(["==", "!=", "<", "<=", ">", ">=", "<<", ">>", ">>
 var J = Object.freeze(new Set(["-", "+", "!", "~"]))
 var Z = Object.freeze(Object.assign(Object.create(null), {
   $visit: function (e, t, n) {
-    var e$type = e.type
+    var /* [auto-meaningful-name] */e$type = e.type
     return "function" === typeof this[e$type] ? this[e$type](e, t, n) : this.$visitChildren(e, t, n)
   },
   $visitChildren: function (e, t, n) {
     var r
-    var e$type = e.type
-    var o = u.a(n[e$type] || l.getKeys(e))
+    var /* [auto-meaningful-name] */e$type = e.type
+    var o = $$_$$_$$_$$_47.a(n[e$type] || $$_$$_766_index.getKeys(e))
     try {
       for (o.s(); !(r = o.n()).done;) {
         var a = e[r.value]
         if (Array.isArray(a)) {
           var s
-          var c = u.a(a)
+          var c = $$_$$_$$_$$_47.a(a)
           try {
             for (c.s(); !(s = c.n()).done;) {
-              var s$value = s.value
+              var /* [auto-meaningful-name] */s$value = s.value
               if (s$value && this.$visit(s$value, t, n)) {
                 return true
               }
@@ -684,17 +684,17 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
 }))
 function ee(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {}
-  var n$considerGetters = n.considerGetters
+  var /* [auto-meaningful-name] */n$considerGetters = n.considerGetters
   var i = undefined !== n$considerGetters && n$considerGetters
-  var n$considerImplicitTypeConversion = n.considerImplicitTypeConversion
+  var /* [auto-meaningful-name] */n$considerImplicitTypeConversion = n.considerImplicitTypeConversion
   var a = undefined !== n$considerImplicitTypeConversion && n$considerImplicitTypeConversion
   return Z.$visit(e, {
     considerGetters: i,
     considerImplicitTypeConversion: a
-  }, t.visitorKeys || l.KEYS)
+  }, t.visitorKeys || $$_$$_766_index.KEYS)
 }
 function te(e, t) {
-  var e$parent = e.parent
+  var /* [auto-meaningful-name] */e$parent = e.parent
   switch (e$parent.type) {
     case "CallExpression":
     case "NewExpression":
@@ -752,9 +752,9 @@ function oe(e, t) {
 var ae = function () {
   function e(t) {
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
-    var n$escaped = n.escaped
+    var /* [auto-meaningful-name] */n$escaped = n.escaped
     var i = undefined !== n$escaped && n$escaped
-    o.a(this, e)
+    $$_$$_$$_$$_27.a(this, e)
     if (!(t instanceof RegExp)) {
       throw new TypeError("'pattern' should be a RegExp instance.")
     }
@@ -766,7 +766,7 @@ var ae = function () {
       escaped: Boolean(i)
     })
   }
-  a.a(e, [{
+  $$_$$_$$_$$_40.a(e, [{
     key: "execAll",
     value: RegeneratorRuntime.mark(function e(t) {
       var n
@@ -820,12 +820,12 @@ var ae = function () {
         var r
         var i = []
         var o = 0
-        var a = u.a(e.execAll(t))
+        var a = $$_$$_$$_$$_47.a(e.execAll(t))
         try {
           for (a.s(); !(r = a.n()).done;) {
-            var r$value = r.value
+            var /* [auto-meaningful-name] */r$value = r.value
             i.push(t.slice(o, r$value.index))
-            i.push(String(n.apply(undefined, c.a(r$value).concat([r$value.index, r$value.input]))))
+            i.push(String(n.apply(undefined, $$_$$_$$_$$_25_index.a(r$value).concat([r$value.index, r$value.input]))))
             o = r$value.index + r$value[0].length
           }
         } catch (l) {
@@ -855,7 +855,7 @@ var ae = function () {
           }
         }
         var s
-        var c = u.a(e.execAll(t))
+        var c = $$_$$_$$_$$_47.a(e.execAll(t))
         try {
           for (c.s(); !(s = c.n()).done;) {
             o = s.value
@@ -882,7 +882,7 @@ var le = Symbol("call")
 var fe = Symbol("construct")
 var de = Symbol("esm")
 var he = {
-  require: r.a({}, le, true)
+  require: $$_$$_$$_$$_11.a({}, le, true)
 }
 function pe(e) {
   return null == e || 0 !== e.defs.length || e.references.some(function (e) {
@@ -890,7 +890,7 @@ function pe(e) {
   })
 }
 function _e(e) {
-  var e$parent = e.parent
+  var /* [auto-meaningful-name] */e$parent = e.parent
   switch (e$parent && e$parent.type) {
     case "ConditionalExpression":
       return e$parent.consequent === e || e$parent.alternate === e
@@ -905,17 +905,17 @@ function _e(e) {
 var Ae = function () {
   function e(t) {
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
-    var n$mode = n.mode
+    var /* [auto-meaningful-name] */n$mode = n.mode
     var i = undefined === n$mode ? "strict" : n$mode
-    var n$globalObjectNames = n.globalObjectNames
+    var /* [auto-meaningful-name] */n$globalObjectNames = n.globalObjectNames
     var s = undefined === n$globalObjectNames ? ["global", "self", "window"] : n$globalObjectNames
-    o.a(this, e)
+    $$_$$_$$_$$_27.a(this, e)
     this.variableStack = []
     this.globalScope = t
     this.mode = i
     this.globalObjectNames = s.slice(0)
   }
-  a.a(e, [{
+  $$_$$_$$_$$_40.a(e, [{
     key: "iterateGlobalReferences",
     value: RegeneratorRuntime.mark(function e(t) {
       var n
@@ -952,7 +952,7 @@ var Ae = function () {
               e.next = 1
               break
             case 12:
-              l = u.a(this.globalObjectNames)
+              l = $$_$$_$$_$$_47.a(this.globalObjectNames)
               e.prev = 13
               l.s()
             case 15:
@@ -1001,7 +1001,7 @@ var Ae = function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              n = u.a(this.iterateGlobalReferences(he))
+              n = $$_$$_$$_$$_47.a(this.iterateGlobalReferences(he))
               e.prev = 1
               n.s()
             case 3:
@@ -1065,7 +1065,7 @@ var Ae = function () {
       var p
       var _
       var A
-      var /* [auto-meaningful-name] */a$value
+      var /* [auto-meaningful-name] */A$value
       var v
       var m
       var y
@@ -1076,7 +1076,7 @@ var Ae = function () {
           switch (e.prev = e.next) {
             case 0:
               this$globalScope$block = this.globalScope.block
-              r = u.a(this$globalScope$block.body)
+              r = $$_$$_$$_$$_47.a(this$globalScope$block.body)
               e.prev = 2
               r.s()
             case 4:
@@ -1138,7 +1138,7 @@ var Ae = function () {
               e.next = 69
               break
             case 29:
-              _ = u.a(o$value.specifiers)
+              _ = $$_$$_$$_$$_47.a(o$value.specifiers)
               e.prev = 30
               _.s()
             case 32:
@@ -1146,7 +1146,7 @@ var Ae = function () {
                 e.next = 61
                 break
               }
-              if (a$value = A.value, v = ce(c, de), m = this._iterateImportReferences(a$value, l, v ? c : "legacy" === this.mode ? Object.assign({
+              if (A$value = A.value, v = ce(c, de), m = this._iterateImportReferences(A$value, l, v ? c : "legacy" === this.mode ? Object.assign({
                 default: c
               }, c) : {
                 default: c
@@ -1159,7 +1159,7 @@ var Ae = function () {
               e.next = 59
               break
             case 40:
-              y = u.a(m)
+              y = $$_$$_$$_$$_47.a(m)
               e.prev = 41
               y.s()
             case 43:
@@ -1241,7 +1241,7 @@ var Ae = function () {
             case 2:
               this.variableStack.push(t)
               e.prev = 3
-              a = u.a(t.references)
+              a = $$_$$_$$_$$_47.a(t.references)
               e.prev = 5
               a.s()
             case 7:
@@ -1445,7 +1445,7 @@ var Ae = function () {
                 e.next = 31
                 break
               }
-              a = u.a(t.properties)
+              a = $$_$$_$$_$$_47.a(t.properties)
               e.prev = 7
               a.s()
             case 9:

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1257
@@ -20,8 +20,8 @@ exports.isEventFromHandle = function (e, t) {
   }
 }
 exports.isValueOutOfRange = function (e, t) {
-  var t$min = t.min
-  var t$max = t.max
+  var /* [auto-meaningful-name] */t$min = t.min
+  var /* [auto-meaningful-name] */t$max = t.max
   return e < t$min || e > t$max
 }
 exports.isNotTouchEvent = function (e) {
@@ -40,8 +40,8 @@ exports.getHandleCenterPosition = function (e, t) {
   return e ? n.top + .5 * n.height : window.pageXOffset + n.left + .5 * n.width
 }
 exports.ensureValueInRange = function (e, t) {
-  var t$max = t.max
-  var t$min = t.min
+  var /* [auto-meaningful-name] */t$max = t.max
+  var /* [auto-meaningful-name] */t$min = t.min
   if (e <= t$min) {
     return t$min
   }
@@ -51,7 +51,7 @@ exports.ensureValueInRange = function (e, t) {
   return e
 }
 exports.ensureValuePrecision = function (e, t) {
-  var t$step = t.step
+  var /* [auto-meaningful-name] */t$step = t.step
   var r = isFinite(s(e, t)) ? s(e, t) : 0
   return null === t$step ? r : parseFloat(r.toFixed(c(t$step)))
 }
@@ -61,19 +61,19 @@ exports.pauseEvent = function (e) {
 }
 exports.calculateNextValue = u
 exports.getKeyboardValueMutator = function (e, t, n) {
-  var r = "increase"
+  var /* [auto-meaningful-name] */Increase = "increase"
   switch (e.keyCode) {
     case a.default.UP:
-      r = t && n ? "decrease" : "increase"
+      Increase = t && n ? "decrease" : "increase"
       break
     case a.default.RIGHT:
-      r = !t && n ? "decrease" : "increase"
+      Increase = !t && n ? "decrease" : "increase"
       break
     case a.default.DOWN:
-      r = t && n ? "increase" : "decrease"
+      Increase = t && n ? "increase" : "decrease"
       break
     case a.default.LEFT:
-      r = !t && n ? "increase" : "decrease"
+      Increase = !t && n ? "increase" : "decrease"
       break
     case a.default.END:
       return function (e, t) {
@@ -95,17 +95,17 @@ exports.getKeyboardValueMutator = function (e, t, n) {
       return
   }
   return function (e, t) {
-    return u(r, e, t)
+    return u(Increase, e, t)
   }
 }
 var i = r(require("./1511/index"))
 var o = require("../../../75/index")
 var a = r(require("./1765"))
 function s(e, t) {
-  var t$marks = t.marks
-  var t$step = t.step
-  var t$min = t.min
-  var t$max = t.max
+  var /* [auto-meaningful-name] */t$marks = t.marks
+  var /* [auto-meaningful-name] */t$step = t.step
+  var /* [auto-meaningful-name] */t$min = t.min
+  var /* [auto-meaningful-name] */t$max = t.max
   var s = Object.keys(t$marks).map(parseFloat)
   if (null !== t$step) {
     var c = Math.floor((t$max - t$min) / t$step)

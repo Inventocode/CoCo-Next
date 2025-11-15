@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：91
@@ -8,10 +8,10 @@
 
 export { i as a }
 export { a as b }
-import r = require("./68");
-import o = require("./28/index");
+import r = require("./68")
+import /* [auto-meaningful-name] */$_28_index = require("./28/index")
 function i(e) {
-  return (o.e() ? window.parent : window).postMessage(e, window.location.origin)
+  return ($_28_index.e() ? window.parent : window).postMessage(e, window.location.origin)
 }
 function a(e, t, n, o) {
   i({

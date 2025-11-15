@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1619
@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("../1623/86")
-var o = require("../1680/473")
+var r = require("../1698/86/index")
+var o = require("../1563/473")
 var i = require("./1620")
-var a = require("../1679/1071")
-var s = require("../1736/167")
-var _1$$toFixed = 1..toFixed
-var math$floor = Math.floor
+var a = require("./1071")
+var s = require("../1541/167")
+var /* [auto-meaningful-name] */_1$$toFixed = 1..toFixed
+var /* [auto-meaningful-name] */Math$floor = Math.floor
 var u = function e(t, n, r) {
   return 0 === n ? r : n % 2 === 1 ? e(t, n - 1, r * t) : e(t * t, n / 2, r)
 }
@@ -20,13 +20,13 @@ var d = function (e, t, n) {
   for (var r = -1, o = n; ++r < 6;) {
     o += t * e[r]
     e[r] = o % 1e7
-    o = math$floor(o / 1e7)
+    o = Math$floor(o / 1e7)
   }
 }
 var p = function (e, t) {
   for (var n = 6, r = 0; --n >= 0;) {
     r += e[n]
-    e[n] = math$floor(r / t)
+    e[n] = Math$floor(r / t)
     r = r % t * 1e7
   }
 }

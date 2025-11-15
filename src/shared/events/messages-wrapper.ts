@@ -1,492 +1,492 @@
 "use strict"
 
-export { o as dd }
-export { i as Qe }
+export { SET_APP_LANGUAGE as dd }
+export { UPDATE_EDIT_AREA as Qe }
 export { a as Qj }
-export { s as Se }
+export { UPDATE_PREVIEW_AREA as Se }
 export { c as Uj }
 export { UPDATE_EXTENSION_WIDGET_LIST as Re }
 export { wrapUpdateExtensionWidgetList as Rj }
 export { SHOW_COMMON_TOAST_INFO as re }
 export { wrapShowCommonToastInfo as mj }
-export { f as pc }
+export { HIDE_COMMON_TOAST_INFO as pc }
 export { h as kh }
-export { m as he }
+export { SET_USER_INFO as he }
 export { g as ej }
-export { _ as nd }
+export { SET_FETCH_USER_INFO_DONE as nd }
 export { v as hi }
-export { b as wb }
+export { ASYNC_SET_USER_INFO as wb }
 export { y as wg }
 export { OPEN_CONFIRM_DIALOG as Ec }
 export { wrapOpenConfirmDialog as zh }
-export { w as Ke }
+export { TOGGLE_PERMISSION_DIALOG as Ke }
 export { C as Ej }
-export { T as Wb }
+export { CLOSE_CONFIRM_DIALOG as Wb }
 export { S as Vg }
-export { I as Fc }
-export { A as Yb }
-export { j as Ae }
+export { OPEN_ICON_LIB_DIALOG as Fc }
+export { CLOSE_ICON_LIB_DIALOG as Yb }
+export { SHOW_IMPORT_FAIL_TOAST as Ae }
 export { N as uj }
-export { R as xc }
+export { HIDE_IMPORT_FAIL_TOAST as xc }
 export { k as rh }
-export { x as Zb }
+export { CLOSE_PROJECT_DIALOG as Zb }
 export { D as Xg }
-export { M as Gc }
+export { OPEN_PROJECT_DIALOG as Gc }
 export { L as Ah }
-export { P as Rd }
+export { SET_PROJECT_MODIFIED as Rd }
 export { B as Fi }
-export { F as Qd }
+export { SET_PROJECT_LAST_SAVED_TIME as Qd }
 export { G as Ei }
-export { U as Vd }
+export { SET_PROJECT_SAVE_PROGRESS_DIALOG as Vd }
 export { W as Qi }
-export { H as Ud }
+export { SET_PROJECT_SAVE_PROGRESS as Ud }
 export { V as Pi }
-export { z as Xd }
+export { SET_PROJECT_SAVING as Xd }
 export { Y as Si }
-export { K as y }
+export { ASYNC_CANCEL_SAVE_PROJECT as y }
 export { q as yf }
-export { X as n }
+export { APPEND_MESSAGE_TO_CONSOLE as n }
 export { Q as nf }
-export { Z as Tb }
+export { CLEAR_CONSOLE_MESSAGE as Tb }
 export { J as Sg }
-export { $ as kd }
+export { SET_CONSOLE_HEIGHT as kd }
 export { ee as ei }
-export { te as De }
+export { SHOW_STAGE_TOAST as De }
 export { ne as xj }
-export { re as zc }
+export { HIDE_STAGE_TOAST as zc }
 export { oe as th }
-export { ie as cd }
+export { SET_ACTOR_DRAGGING as cd }
 export { ae as Yh }
-export { se as Ic }
+export { OPEN_SIGN_IN_DIALOG as Ic }
 export { ce as Ch }
-export { le as bc }
+export { CLOSE_SIGN_IN_DIALOG as bc }
 export { ue as Zg }
-export { de as be }
+export { SET_STAGE_RULER_VISIBLE as be }
 export { pe as Wi }
-export { fe as de }
+export { SET_STAGE_VISIBLE as de }
 export { he as Yi }
-export { me as Ad }
+export { SET_IS_HOVER_BLOCK_AREA as Ad }
 export { ge as ui }
-export { _e as ee }
+export { SET_STAGE_WIDTH as ee }
 export { ve as Zi }
-export { be as gd }
+export { SET_BLOCKY_TOOLBOX_PINED as gd }
 export { ye as ci }
-export { Ee as ie }
+export { SET_WIDGET_ATTRIBUTE_VISIBLE as ie }
 export { Oe as fj }
-export { we as ae }
+export { SET_RIGHT_SIDE_ACTIVE_MENU as ae }
 export { Ce as Vi }
-export { Te as ye }
+export { SHOW_GRID_DIALOG as ye }
 export { Se as sj }
-export { Ie as wc }
+export { HIDE_GRID_DIALOG as wc }
 export { Ae as qh }
-export { je as td }
+export { SET_GRID_COPIED_CONTENT as td }
 export { Ne as ni }
-export { Re as xd }
+export { SET_GRID_SELECTED_CONTENT as xd }
 export { ke as ri }
-export { xe as ud }
+export { SET_GRID_EDITING_HEADER as ud }
 export { De as oi }
-export { Me as wd }
+export { SET_GRID_ERROR_HEADERS as wd }
 export { Le as qi }
-export { Pe as rd }
+export { SET_GRID_ANIMATION_HEADERS as rd }
 export { Be as li }
-export { Fe as vd }
+export { SET_GRID_ERROR_CELL as vd }
 export { Ge as pi }
-export { Ue as sd }
+export { SET_GRID_COLUMN_CUSTOM_WIDTH as sd }
 export { We as mi }
-export { He as ce }
+export { SET_STAGE_SCALE as ce }
 export { Ve as Xi }
-export { ze as id }
+export { SET_COLL_AUTO_SAVE as id }
 export { Ye as di }
-export { Ke as yd }
+export { SET_HISTORY_ARCHIVE_ID as yd }
 export { qe as si }
-export { Xe as Od }
+export { SET_PROJECT_EDIT_PERMISSION as Od }
 export { Qe as Ci }
-export { Ze as ze }
+export { SHOW_HISTORY_DIALOG as ze }
 export { Je as tj }
-export { $e as je }
+export { SET_WIDGET_MALL_VISIBLE as je }
 export { et as gj }
-export { tt as db }
+export { ASYNC_INITIAL_MY_EXTENSION_WIDGETS as db }
 export { nt as eg }
-export { rt as Wc }
+export { REPLACE_MY_EXTENSION_WIDGETS as Wc }
 export { ot as Sh }
-export { it as g }
+export { ADD_MY_EXTENSION_WIDGETS as g }
 export { at as ef }
-export { st as Oc }
+export { REMOVE_MY_EXTENSION_WIDGETS as Oc }
 export { ct as Kh }
-export { lt as hd }
+export { SET_BLOCK_IMAGE_DIALOG_INFO as hd }
 export { ut as bi }
-export { dt as Be }
+export { SHOW_RELEASE_INFO_DIALOG as Be }
 export { pt as vj }
 export { ft as ne }
 export { ht as ij }
-export { mt as oe }
+export { SHOW_CLOUD_DB_MANAGER_DIALOG as oe }
 export { gt as jj }
-export { _t as pe }
+export { SHOW_CLOUD_DB_PUBLISH_DIALOG as pe }
 export { vt as kj }
-export { bt as Bd }
+export { SET_IS_OFF_LINE as Bd }
 export { yt as vi }
-export { Et as Me }
+export { TOGGLE_SLIDER_IMAGE_DIALOG as Me }
 export { Ot as Gj }
-export { wt as Ne }
+export { TOGGLE_SWITCH_IMAGE_DIALOG as Ne }
 export { Ct as Hj }
-export { Tt as Ee }
+export { SHOW_TABLE_DATA_DIALOG as Ee }
 export { St as zj }
-export { It as Ac }
+export { HIDE_TABLE_DATA_DIALOG as Ac }
 export { At as wh }
-export { jt as te }
+export { SHOW_CREATE_TABLE_DATA_DIALOG as te }
 export { Nt as oj }
-export { Rt as rc }
+export { HIDE_CREATE_TABLE_DATA_DIALOG as rc }
 export { kt as mh }
-export { xt as Hc }
+export { OPEN_RICH_TEXT_EDITOR_DIALOG as Hc }
 export { Dt as Bh }
-export { Mt as ac }
+export { CLOSE_RICH_TEXT_EDITOR_DIALOG as ac }
 export { Lt as Yg }
-export { Pt as W }
+export { ASYNC_GET_TEMPLATE_LIST as W }
 export { Bt as Xf }
-export { Ft as ge }
+export { SET_TEMPLATE_LIST as ge }
 export { Gt as bj }
-export { Ut as S }
+export { ASYNC_GET_COURSE_LIST as S }
 export { Wt as Tf }
-export { Ht as md }
+export { SET_COURSE_LIST as md }
 export { Vt as gi }
-export { zt as ld }
+export { SET_COURSE_DIALOG_VISIBLE as ld }
 export { Yt as fi }
-export { Kt as Wd }
+export { SET_PROJECT_SAVE_PROMPT as Wd }
 export { qt as Ri }
 export { Xt as fh }
-export { Qt as d }
+export { ADD_FLOAT_ICON as d }
 export { Zt as cf }
-export { Jt as Mc }
+export { REMOVE_FLOAT_ICON as Mc }
 export { $t as Gh }
-export { en as Uc }
+export { REPLACE_FLOAT_ICON as Uc }
 export { tn as Qh }
-export { nn as od }
+export { SET_FLOAT_ICON_VISIBLE_STATUS as od }
 export { rn as ii }
-export { on as Sd }
+export { SET_PROJECT_OPEN_FINISHED as Sd }
 export { an as Gi }
 export { sn as Nf }
-export { cn as H }
+export { ASYNC_CREATE_PROJECT_SCREEN as H }
 export { ln as Hf }
-export { un as nb }
+export { ASYNC_REMOVE_PROJECT_SCREEN as nb }
 export { dn as ng }
-export { pn as D }
+export { ASYNC_COPY_PROJECT_SCREEN as D }
 export { fn as Df }
-export { hn as M }
+export { ASYNC_DELETE_PROJECT_WIDGET as M }
 export { mn as Mf }
-export { gn as gb }
+export { ASYNC_INSERT_PROJECT_WIDGET as gb }
 export { _n as hg }
-export { vn as lb }
+export { ASYNC_REGISTER_EXTENSION_WIDGET as lb }
 export { bn as lg }
-export { yn as jb }
+export { ASYNC_PACKAGE_PROJECT as jb }
 export { En as jg }
-export { On as Jd }
+export { SET_PACKAGING_PROJECT as Jd }
 export { wn as Oi }
-export { Cn as Hd }
+export { SET_PACKAGE_PROJECT_PROGRESS_VISIBLE as Hd }
 export { Tn as Li }
-export { Sn as Fd }
+export { SET_PACKAGE_PROGRESS_DIALOG_VISIBLE as Fd }
 export { In as Ii }
-export { An as Id }
+export { SET_PACKAGE_QRCODE_DIALOG_VISIBLE as Id }
 export { jn as Mi }
-export { Nn as Gd }
+export { SET_PACKAGE_PROJECT_PROGRESS as Gd }
 export { Rn as Ki }
-export { kn as Jb }
+export { ASYNC_UPDATE_PROJECT_PACKAGE_PROGRESS as Jb }
 export { xn as Ig }
-export { Dn as Td }
+export { SET_PROJECT_PACKAGE_TASK_LABEL as Td }
 export { Mn as Ni }
-export { Ln as Ed }
+export { SET_PACKAGE_INFO as Ed }
 export { Pn as Ji }
-export { Bn as jd }
+export { SET_COMPLETE_PACKAGE_DIALOG as jd }
 export { Fn as Hi }
-export { Gn as T }
+export { ASYNC_GET_PACKAGE_INFO as T }
 export { Un as Vf }
-export { Wn as x }
+export { ASYNC_CANCEL_PACKAGE as x }
 export { Hn as xf }
-export { Vn as N }
+export { ASYNC_EXPORT_PROJECT_AS_JSON as N }
 export { zn as Of }
 export { warpAsyncCreateProject as Gf }
-export { qn as F }
+export { ASYNC_CREATE_PLAYER_PROJECT as F }
 export { Xn as Ff }
-export { Qn as U }
+export { ASYNC_GET_PROJECT_ERROR as U }
 export { Zn as Uf }
-export { Jn as Bc }
+export { IMPORT_PROJECT_FROM_TO_DOC as Bc }
 export { $n as xh }
-export { er as kb }
+export { ASYNC_PLAY_PROJECT as kb }
 export { tr as kg }
-export { nr as Lb }
+export { ASYNC_UPDATE_PROJECT_WIDGET_ATTRIBUTE as Lb }
 export { rr as Kg }
-export { or as Ob }
+export { ASYNC_UPDATE_PROJECT_WIDGET_TITLE as Ob }
 export { ir as Ng }
-export { ar as Nb }
+export { ASYNC_UPDATE_PROJECT_WIDGET_IDS as Nb }
 export { sr as Mg }
-export { cr as Mb }
+export { ASYNC_UPDATE_PROJECT_WIDGET_COMMON_ATTRIBUTE as Mb }
 export { lr as Lg }
-export { ur as Xc }
+export { REPLACE_PROJECT as Xc }
 export { dr as Th }
-export { pr as Yc }
+export { REPLACE_PROJECT_ID as Yc }
 export { fr as Uh }
-export { hr as Te }
+export { UPDATE_PROJECT_BCM_URL as Te }
 export { mr as Vj }
-export { gr as kc }
+export { DELETE_PROJECT_SCREEN as kc }
 export { _r as eh }
-export { vr as k }
+export { ADD_PROJECT_SCREEN as k }
 export { br as if }
-export { yr as We }
+export { UPDATE_PROJECT_SCREEN_TITLE as We }
 export { Er as Yj }
-export { Or as Ue }
+export { UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE as Ue }
 export { wr as Wj }
-export { Cr as Kb }
+export { ASYNC_UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE as Kb }
 export { Tr as Jg }
-export { Sr as Rb }
+export { CHANGE_PROJECT_TITLE as Rb }
 export { Ir as Qg }
-export { Ar as B }
+export { ASYNC_CHANGE_PROJECT_TITLE as B }
 export { jr as Bf }
-export { Nr as Ve }
+export { UPDATE_PROJECT_SCREEN_SNAPSHOT as Ve }
 export { Rr as Xj }
-export { kr as j }
+export { ADD_PROJECT_GLOBAL_WIDGET as j }
 export { xr as hf }
-export { Dr as l }
+export { ADD_PROJECT_WIDGET as l }
 export { Mr as jf }
-export { Lr as Fe }
-export { Pr as He }
+export { SORT_PROJECT_GLOBAL_WIDGET_IDS as Fe }
+export { SORT_PROJECT_SCREEN_WIDGET_IDS as He }
 export { Br as Bj }
-export { Fr as Pc }
+export { REMOVE_PROJECT_GLOBAL_WIDGET as Pc }
 export { Gr as Lh }
-export { Ur as Qc }
+export { REMOVE_PROJECT_WIDGET as Qc }
 export { Wr as Mh }
-export { Hr as bd }
+export { SELECT_PROJECT_WIDGET as bd }
 export { Vr as Xh }
-export { zr as ub }
+export { ASYNC_SELECT_PROJECT_WIDGET as ub }
 export { Yr as ug }
-export { Kr as Nd }
+export { SET_PROJECT_CURRENT_SCREEN_INDEX as Nd }
 export { qr as Bi }
-export { Xr as vb }
+export { ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX as vb }
 export { Qr as vg }
-export { Zr as Ie }
+export { START_PLAYING_PROJECT as Ie }
 export { Jr as Cj }
-export { $r as Je }
+export { STOP_PLAYING_PROJECT as Je }
 export { eo as Dj }
-export { to as u }
+export { ASYNC_ADD_PRIMITIVE_VARIABLE as u }
 export { no as uf }
-export { ro as o }
+export { ASYNC_ADD_ARRAY_VARIABLE as o }
 export { oo as of }
-export { io as L }
+export { ASYNC_DELETE_PRIMITIVE_VARIABLE as L }
 export { ao as Lf }
-export { so as I }
+export { ASYNC_DELETE_ARRAY_VARIABLE as I }
 export { co as If }
-export { lo as t }
+export { ASYNC_ADD_OBJECT_VARIABLE as t }
 export { uo as tf }
-export { po as h }
+export { ADD_OBJECT_VARIABLE as h }
 export { fo as ff }
-export { ho as ic }
+export { DELETE_OBJECT_VARIABLE as ic }
 export { mo as ch }
-export { go as K }
+export { ASYNC_DELETE_OBJECT_VARIABLE as K }
 export { _o as Kf }
-export { vo as Dd }
+export { SET_OBJECT_VARIABLE_NAME as Dd }
 export { bo as xi }
-export { yo as Cd }
+export { SET_OBJECT_VARIABLE_DEFAULT_VALUE as Cd }
 export { Eo as wi }
-export { Oo as Gb }
+export { ASYNC_UPDATE_OBJECT_VARIABLE_PROPERTY as Gb }
 export { wo as Gg }
-export { Co as Dc }
+export { MOVE_PROJECT_SCREEN as Dc }
 export { To as yh }
-export { So as i }
+export { ADD_PRIMITIVE_VARIABLE as i }
 export { Io as gf }
-export { Ao as jc }
+export { DELETE_PRIMITIVE_VARIABLE as jc }
 export { jo as dh }
-export { No as Ld }
+export { SET_PRIMITIVE_VARIABLE_NAME as Ld }
 export { Ro as zi }
-export { ko as Kd }
+export { SET_PRIMITIVE_VARIABLE_DEFAULT_VALUE as Kd }
 export { xo as yi }
-export { Do as Hb }
+export { ASYNC_UPDATE_PRIMITIVE_VARIABLE_PROPERTY as Hb }
 export { Mo as Hg }
-export { Lo as yb }
+export { ASYNC_UPDATE_ARRAY_VARIABLE_PROPERTY as yb }
 export { Po as yg }
-export { Bo as a }
+export { ADD_ARRAY_VARIABLE as a }
 export { Fo as Ye }
-export { Go as ec }
+export { DELETE_ARRAY_VARIABLE as ec }
 export { Uo as ah }
-export { Wo as fd }
+export { SET_ARRAY_VARIABLE_NAME as fd }
 export { Ho as Zh }
-export { Vo as ed }
+export { SET_ARRAY_VARIABLE_DEFAULT_VALUE as ed }
 export { zo as ai }
-export { Yo as b }
+export { ADD_BROADCAST as b }
 export { Ko as Ze }
-export { qo as fc }
-export { Xo as p }
+export { DELETE_BROADCAST as fc }
+export { ASYNC_ADD_BROADCAST as p }
 export { Qo as pf }
-export { Zo as Pb }
+export { CHANGE_CONTEXT_MENU_INFO as Pb }
 export { Jo as Og }
-export { $o as Xb }
+export { CLOSE_CONTEXT_MENU as Xb }
 export { ei as Wg }
-export { ti as E }
+export { ASYNC_COPY_WIDGET_TO_SCREEN as E }
 export { ni as Ef }
-export { ri as Vb }
+export { CLEAR_PROJECT as Vb }
 export { oi as Ug }
-export { ii as fb }
+export { ASYNC_INSERT_BRUSH_WIDGET as fb }
 export { ai as gg }
-export { si as eb }
+export { ASYNC_INSERT_ACTOR_WIDGET as eb }
 export { ci as fg }
-export { li as cc }
+export { CLOSE_STYLE_DIALOG as cc }
 export { ui as vh }
-export { di as Jc }
+export { OPEN_STYLE_DIALOG as Jc }
 export { pi as Dh }
-export { fi as tb }
+export { ASYNC_SAVE_PROJECT as tb }
 export { hi as tg }
-export { mi as hb }
+export { ASYNC_LOCATE_BLOCK_POSITION as hb }
 export { gi as ig }
-export { _i as Ib }
-export { vi as Md }
+export { ASYNC_UPDATE_PROJECT_API_TOKEN as Ib }
+export { SET_PROJECT_API_TOKEN as Md }
 export { bi as Ai }
-export { yi as Ge }
+export { SORT_PROJECT_SCREEN as Ge }
 export { Ei as Aj }
-export { Oi as xb }
+export { SORT_SCREEN_BY_SCREEN_IDS as xb }
 export { wi as xg }
-export { Ci as qd }
+export { SET_FOCUSED_WORKSPACE_AREA as qd }
 export { Ti as ki }
-export { Si as ab }
+export { ASYNC_INITIAL_CLOUD_DB_DATA as ab }
 export { Ii as bg }
-export { Ai as zb }
+export { ASYNC_UPDATE_CLOUD_DATABASE_FIELDS as zb }
 export { ji as Cg }
-export { Ni as Kc }
+export { PUBLISH_WORK_TO_COMMUNITY as Kc }
 export { Ri as Eh }
-export { ki as Lc }
+export { PUBLISH_WORK_TO_H5 as Lc }
 export { xi as Fh }
-export { Di as z }
+export { ASYNC_CHANGE_DATA_VIEWER_TEMPLATE as z }
 export { Mi as Af }
-export { Li as rb }
+export { ASYNC_RESET_DATA_VIEWER_BINDINGS as rb }
 export { Pi as rg }
-export { Bi as sb }
+export { ASYNC_REVERT_HISTORY_VERSION as sb }
 export { Fi as sg }
-export { Gi as dc }
-export { Ui as bb }
+export { COLL_SET_DOC as dc }
+export { ASYNC_INITIAL_CLOUD_DB_WIDGET as bb }
 export { Wi as cg }
-export { Hi as Yd }
+export { SET_PROJECT_SHARE_INFO as Yd }
 export { Vi as Ti }
-export { zi as V }
+export { ASYNC_GET_PROJECT_SHARE_INFO as V }
 export { Yi as Wf }
-export { Ki as Pd }
+export { SET_PROJECT_JSON_FROM as Pd }
 export { qi as Di }
-export { Xi as Zd }
+export { SET_PROJECT_SOURCE as Zd }
 export { Qi as Ui }
-export { Zi as ke }
-export { Ji as lc }
+export { SHOW_BLOCKS_DROPDOWN as ke }
+export { HIDE_BLOCKS_DROPDOWN as lc }
 export { $i as gh }
-export { ea as le }
-export { ta as mc }
+export { SHOW_BLOCKS_SLIDER as le }
+export { HIDE_BLOCKS_SLIDER as mc }
 export { na as ih }
-export { ra as Oe }
-export { oa as se }
+export { UPDATE_BLOCKS_SLIDER_VALUE as Oe }
+export { SHOW_CREATE_DYNAMIC_DATA_DIALOG as se }
 export { ia as nj }
-export { aa as qc }
+export { HIDE_CREATE_DYNAMIC_DATA_DIALOG as qc }
 export { sa as lh }
-export { ca as qe }
+export { SHOW_COMMON_INPUT_DIALOG as qe }
 export { la as lj }
-export { ua as oc }
+export { HIDE_COMMON_INPUT_DIALOG as oc }
 export { da as jh }
-export { pa as we }
+export { SHOW_EDIT_ARRAY_DIALOG as we }
 export { fa as qj }
-export { ha as uc }
+export { HIDE_EDIT_ARRAY_DIALOG as uc }
 export { ma as oh }
-export { ga as xe }
+export { SHOW_EDIT_OBJECT_DIALOG as xe }
 export { _a as rj }
-export { va as vc }
+export { HIDE_EDIT_OBJECT_DIALOG as vc }
 export { ba as ph }
-export { ya as Fb }
+export { ASYNC_UPDATE_DOCUMENT_DATA as Fb }
 export { Ea as Fg }
-export { Oa as ve }
+export { SHOW_DOCUMENT_DIALOG as ve }
 export { wa as yj }
-export { Ca as tc }
+export { HIDE_DOCUMENT_DIALOG as tc }
 export { Ta as uh }
-export { Sa as ib }
+export { ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT as ib }
 export { Ia as af }
-export { Aa as me }
+export { SHOW_BLOCK_PALETTE as me }
 export { ja as hj }
-export { Na as nc }
+export { HIDE_BLOCK_PALETTE as nc }
 export { Ra as hh }
-export { ka as pd }
+export { SET_FLYOUT_VISIBLE as pd }
 export { xa as ji }
-export { Da as zd }
+export { SET_IS_BLOCK_DRAG_DELETE_AREA as zd }
 export { Ma as ti }
-export { La as Ab }
+export { ASYNC_UPDATE_CLOUD_DB_DATA as Ab }
 export { Pa as zg }
-export { Ba as Cc }
-export { Fa as c }
+export { INIT_PROJECT_DATA_WATCH as Cc }
+export { ADD_DATA_WATCH_VARIABLE as c }
 export { Ga as bf }
-export { Ua as Pe }
+export { UPDATE_DATA_WATCH_VARIABLE_PROPERTY as Pe }
 export { Wa as Pj }
-export { Ha as gc }
+export { DELETE_DATA_WATCH_VARIABLE as gc }
 export { Va as bh }
-export { za as ad }
+export { RESET_DATA_WATCH_VALUE as ad }
 export { Ya as Wh }
-export { Ka as Ub }
+export { CLEAR_DATA_WATCH_VALUE as Ub }
 export { qa as Tg }
-export { Xa as fe }
+export { SET_TABLE_DATA_WATCH_DIALOG as fe }
 export { Qa as aj }
-export { Za as ue }
+export { SHOW_DATAWATCH_TOAST as ue }
 export { Ja as pj }
-export { $a as sc }
+export { HIDE_DATAWATCH_TOAST as sc }
 export { es as nh }
-export { ts as Ce }
+export { SHOW_RESOURCE_LIBRARY_DIALOG as Ce }
 export { ns as wj }
-export { rs as yc }
+export { HIDE_RESOURCE_LIBRARY_DIALOG as yc }
 export { os as sh }
-export { is as Le }
+export { TOGGLE_RESOURCE_LIBRARY_DIALOG_VISIBLE as Le }
 export { as as Fj }
-export { ss as Xe }
+export { UPDATE_RESOURCE_LIBRARY_AREA as Xe }
 export { cs as Zj }
-export { ls as A }
+export { ASYNC_CHANGE_IMAGE_FILE_ID as A }
 export { us as zf }
-export { ds as J }
+export { ASYNC_DELETE_IMAGE_FILE as J }
 export { ps as Jf }
-export { fs as X }
+export { ASYNC_IMPORT_IMAGE_TO_IMAGE_WIDGET as X }
 export { hs as Yf }
-export { ms as Y }
+export { ASYNC_IMPORT_IMAGE_TO_RESOURCE_LIBRARY as Y }
 export { gs as Zf }
-export { _s as s }
+export { ASYNC_ADD_IMAGE_FROM_RESOURCE as s }
 export { vs as sf }
-export { bs as f }
-export { ys as hc }
-export { Es as Z }
+export { ADD_IMAGE_RESOURCE_LIBRARY as f }
+export { DELETE_IMAGE_RESOURCE_LIBRARY as hc }
+export { ASYNC_IMPORT_SOUND_TO_AUDIO_WIDGET as Z }
 export { Os as ag }
-export { ws as w }
+export { ASYNC_ADD_SOUND_UPLOAD as w }
 export { Cs as wf }
-export { Ts as Zc }
+export { REPLACE_SOUND_RESOURCE as Zc }
 export { Ss as Vh }
-export { Is as m }
+export { ADD_SOUND_STATE as m }
 export { As as kf }
-export { js as v }
+export { ASYNC_ADD_SOUND_FROM_RESOURCE as v }
 export { Ns as vf }
-export { Rs as Rc }
+export { REMOVE_SOUND_STATE as Rc }
 export { ks as Nh }
-export { xs as ob }
+export { ASYNC_REMOVE_SOUND as ob }
 export { Ds as og }
-export { Ms as Tc }
+export { RENAME_SOUND_STATE as Tc }
 export { Ls as Ph }
-export { Ps as qb }
+export { ASYNC_RENAME_SOUND as qb }
 export { Bs as qg }
-export { Fs as Sb }
+export { CHANGE_SOUND_URL as Sb }
 export { Gs as Rg }
-export { Us as e }
+export { ADD_ICON_STATE as e }
 export { Ws as df }
-export { Hs as q }
+export { ASYNC_ADD_ICON_FROM_RESOURCE as q }
 export { Vs as qf }
-export { zs as r }
+export { ASYNC_ADD_ICON_FROM_UPLOAD as r }
 export { Ys as rf }
-export { Ks as mb }
+export { ASYNC_REMOVE_ICON as mb }
 export { qs as mg }
-export { Xs as Nc }
+export { REMOVE_ICON_STATE as Nc }
 export { Qs as Hh }
-export { Zs as pb }
+export { ASYNC_RENAME_ICON as pb }
 export { Js as pg }
-export { $s as Sc }
+export { RENAME_ICON_STATE as Sc }
 export { ec as Oh }
-export { tc as Qb }
+export { CHANGE_ICON_URL as Qb }
 export { nc as Pg }
-export { rc as Vc }
+export { REPLACE_ICON_RESOURCE as Vc }
 export { oc as Rh }
-export { d as cj } from "../../../unrestored/shared/1531/2584/38/341"
-export { f as ak } from "../../../unrestored/shared/1531/2584/38/341"
-export { e as dj } from "../../../unrestored/shared/1531/2584/38/341"
+export { d as cj } from "../../../unrestored/shared/1531/2584/2/341"
+export { f as ak } from "../../../unrestored/shared/1531/2584/2/341"
+export { e as dj } from "../../../unrestored/shared/1531/2584/2/341"
 export { h as cb } from "../../../unrestored/shared/1531/2584/161"
 export { G as dg } from "../../../unrestored/shared/1531/2584/161"
 export { P as Kj } from "../../../unrestored/shared/1531/2584/161"
@@ -520,20 +520,20 @@ export { j as Cb } from "../../../unrestored/shared/1531/2584/161"
 export { I as Bg } from "../../../unrestored/shared/1531/2584/161"
 export { l as Eb } from "../../../unrestored/shared/1531/2584/161"
 export { K as Eg } from "../../../unrestored/shared/1531/2584/161"
-import r = require("../../../unrestored/shared/1531/2584/6");
-var o = "SET_APP_LANGUAGE"
-var i = "UPDATE_EDIT_AREA"
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_6 = require("../../../unrestored/shared/1531/2584/6")
+var /* [auto-meaningful-name] */SET_APP_LANGUAGE = "SET_APP_LANGUAGE"
+var /* [auto-meaningful-name] */UPDATE_EDIT_AREA = "UPDATE_EDIT_AREA"
 var a = function () {
   return {
     payload: undefined,
-    type: i
+    type: UPDATE_EDIT_AREA
   }
 }
-var s = "UPDATE_PREVIEW_AREA"
+var /* [auto-meaningful-name] */UPDATE_PREVIEW_AREA = "UPDATE_PREVIEW_AREA"
 var c = function () {
   return {
     payload: undefined,
-    type: s
+    type: UPDATE_PREVIEW_AREA
   }
 }
 
@@ -553,32 +553,32 @@ export function wrapShowCommonToastInfo(e) {
   }
 }
 
-var f = "HIDE_COMMON_TOAST_INFO"
+var /* [auto-meaningful-name] */HIDE_COMMON_TOAST_INFO = "HIDE_COMMON_TOAST_INFO"
 var h = function () {
   return {
     payload: undefined,
-    type: f
+    type: HIDE_COMMON_TOAST_INFO
   }
 }
-var m = "SET_USER_INFO"
+var /* [auto-meaningful-name] */SET_USER_INFO = "SET_USER_INFO"
 var g = function (e) {
   return {
     payload: e,
-    type: m
+    type: SET_USER_INFO
   }
 }
-var _ = "SET_FETCH_USER_INFO_DONE"
+var /* [auto-meaningful-name] */SET_FETCH_USER_INFO_DONE = "SET_FETCH_USER_INFO_DONE"
 var v = function () {
   return {
     payload: true,
-    type: _
+    type: SET_FETCH_USER_INFO_DONE
   }
 }
-var b = "ASYNC_SET_USER_INFO"
+var /* [auto-meaningful-name] */ASYNC_SET_USER_INFO = "ASYNC_SET_USER_INFO"
 var y = function (e) {
   return {
     payload: e,
-    type: b
+    type: ASYNC_SET_USER_INFO
   }
 }
 export const OPEN_CONFIRM_DIALOG: string = "OPEN_CONFIRM_DIALOG"
@@ -588,374 +588,374 @@ export function wrapOpenConfirmDialog(e) {
     payload: e
   }
 };
-var w = "TOGGLE_PERMISSION_DIALOG"
+var /* [auto-meaningful-name] */TOGGLE_PERMISSION_DIALOG = "TOGGLE_PERMISSION_DIALOG"
 var C = function (e) {
   return {
-    type: w,
+    type: TOGGLE_PERMISSION_DIALOG,
     payload: e
   }
 }
-var T = "CLOSE_CONFIRM_DIALOG"
+var /* [auto-meaningful-name] */CLOSE_CONFIRM_DIALOG = "CLOSE_CONFIRM_DIALOG"
 var S = function () {
   return {
-    type: T,
+    type: CLOSE_CONFIRM_DIALOG,
     payload: undefined
   }
 }
-var I = "OPEN_ICON_LIB_DIALOG"
-var A = "CLOSE_ICON_LIB_DIALOG"
-var j = "SHOW_IMPORT_FAIL_TOAST"
+var /* [auto-meaningful-name] */OPEN_ICON_LIB_DIALOG = "OPEN_ICON_LIB_DIALOG"
+var /* [auto-meaningful-name] */CLOSE_ICON_LIB_DIALOG = "CLOSE_ICON_LIB_DIALOG"
+var /* [auto-meaningful-name] */SHOW_IMPORT_FAIL_TOAST = "SHOW_IMPORT_FAIL_TOAST"
 var N = function (e, t) {
   return {
-    type: j,
+    type: SHOW_IMPORT_FAIL_TOAST,
     payload: {
       importFailResults: e,
       fileType: t
     }
   }
 }
-var R = "HIDE_IMPORT_FAIL_TOAST"
+var /* [auto-meaningful-name] */HIDE_IMPORT_FAIL_TOAST = "HIDE_IMPORT_FAIL_TOAST"
 var k = function () {
   return {
-    type: R,
+    type: HIDE_IMPORT_FAIL_TOAST,
     payload: undefined
   }
 }
-var x = "CLOSE_PROJECT_DIALOG"
+var /* [auto-meaningful-name] */CLOSE_PROJECT_DIALOG = "CLOSE_PROJECT_DIALOG"
 var D = function () {
   return {
-    type: x,
+    type: CLOSE_PROJECT_DIALOG,
     payload: undefined
   }
 }
-var M = "OPEN_PROJECT_DIALOG"
+var /* [auto-meaningful-name] */OPEN_PROJECT_DIALOG = "OPEN_PROJECT_DIALOG"
 var L = function (e) {
   return {
-    type: M,
+    type: OPEN_PROJECT_DIALOG,
     payload: {
       selected: e
     }
   }
 }
-var P = "SET_PROJECT_MODIFIED"
+var /* [auto-meaningful-name] */SET_PROJECT_MODIFIED = "SET_PROJECT_MODIFIED"
 var B = function (e) {
   return {
     payload: e,
-    type: P
+    type: SET_PROJECT_MODIFIED
   }
 }
-var F = "SET_PROJECT_LAST_SAVED_TIME"
+var /* [auto-meaningful-name] */SET_PROJECT_LAST_SAVED_TIME = "SET_PROJECT_LAST_SAVED_TIME"
 var G = function (e) {
   return {
-    type: F,
+    type: SET_PROJECT_LAST_SAVED_TIME,
     payload: e
   }
 }
-var U = "SET_PROJECT_SAVE_PROGRESS_DIALOG"
+var /* [auto-meaningful-name] */SET_PROJECT_SAVE_PROGRESS_DIALOG = "SET_PROJECT_SAVE_PROGRESS_DIALOG"
 var W = function (e) {
   return {
     payload: e,
-    type: U
+    type: SET_PROJECT_SAVE_PROGRESS_DIALOG
   }
 }
-var H = "SET_PROJECT_SAVE_PROGRESS"
+var /* [auto-meaningful-name] */SET_PROJECT_SAVE_PROGRESS = "SET_PROJECT_SAVE_PROGRESS"
 var V = function (e) {
   return {
     payload: e,
-    type: H
+    type: SET_PROJECT_SAVE_PROGRESS
   }
 }
-var z = "SET_PROJECT_SAVING"
+var /* [auto-meaningful-name] */SET_PROJECT_SAVING = "SET_PROJECT_SAVING"
 var Y = function (e) {
   return {
     payload: e,
-    type: z
+    type: SET_PROJECT_SAVING
   }
 }
-var K = "ASYNC_CANCEL_SAVE_PROJECT"
+var /* [auto-meaningful-name] */ASYNC_CANCEL_SAVE_PROJECT = "ASYNC_CANCEL_SAVE_PROJECT"
 var q = function () {
   return {
     payload: undefined,
-    type: K
+    type: ASYNC_CANCEL_SAVE_PROJECT
   }
 }
-var X = "APPEND_MESSAGE_TO_CONSOLE"
+var /* [auto-meaningful-name] */APPEND_MESSAGE_TO_CONSOLE = "APPEND_MESSAGE_TO_CONSOLE"
 var Q = function (e) {
   return {
-    type: X,
+    type: APPEND_MESSAGE_TO_CONSOLE,
     payload: e
   }
 }
-var Z = "CLEAR_CONSOLE_MESSAGE"
+var /* [auto-meaningful-name] */CLEAR_CONSOLE_MESSAGE = "CLEAR_CONSOLE_MESSAGE"
 var J = function () {
   return {
-    type: Z,
+    type: CLEAR_CONSOLE_MESSAGE,
     payload: undefined
   }
 }
-var $ = "SET_CONSOLE_HEIGHT"
+var /* [auto-meaningful-name] */SET_CONSOLE_HEIGHT = "SET_CONSOLE_HEIGHT"
 var ee = function (e) {
   return {
-    type: $,
+    type: SET_CONSOLE_HEIGHT,
     payload: e
   }
 }
-var te = "SHOW_STAGE_TOAST"
+var /* [auto-meaningful-name] */SHOW_STAGE_TOAST = "SHOW_STAGE_TOAST"
 var ne = function (e, t) {
   return {
-    type: te,
+    type: SHOW_STAGE_TOAST,
     payload: {
       toast: e,
       showIcon: t
     }
   }
 }
-var re = "HIDE_STAGE_TOAST"
+var /* [auto-meaningful-name] */HIDE_STAGE_TOAST = "HIDE_STAGE_TOAST"
 var oe = function () {
   return {
-    type: re,
+    type: HIDE_STAGE_TOAST,
     payload: undefined
   }
 }
-var ie = "SET_ACTOR_DRAGGING"
+var /* [auto-meaningful-name] */SET_ACTOR_DRAGGING = "SET_ACTOR_DRAGGING"
 var ae = function (e) {
   return {
-    type: ie,
+    type: SET_ACTOR_DRAGGING,
     payload: e
   }
 }
-var se = "OPEN_SIGN_IN_DIALOG"
+var /* [auto-meaningful-name] */OPEN_SIGN_IN_DIALOG = "OPEN_SIGN_IN_DIALOG"
 var ce = function (e) {
   return {
-    type: se,
+    type: OPEN_SIGN_IN_DIALOG,
     payload: {
       onSuccess: e
     }
   }
 }
-var le = "CLOSE_SIGN_IN_DIALOG"
+var /* [auto-meaningful-name] */CLOSE_SIGN_IN_DIALOG = "CLOSE_SIGN_IN_DIALOG"
 var ue = function () {
   return {
-    type: le,
+    type: CLOSE_SIGN_IN_DIALOG,
     payload: undefined
   }
 }
-var de = "SET_STAGE_RULER_VISIBLE"
+var /* [auto-meaningful-name] */SET_STAGE_RULER_VISIBLE = "SET_STAGE_RULER_VISIBLE"
 var pe = function (e) {
   return {
-    type: de,
+    type: SET_STAGE_RULER_VISIBLE,
     payload: e
   }
 }
-var fe = "SET_STAGE_VISIBLE"
+var /* [auto-meaningful-name] */SET_STAGE_VISIBLE = "SET_STAGE_VISIBLE"
 var he = function (e) {
   return {
-    type: fe,
+    type: SET_STAGE_VISIBLE,
     payload: e
   }
 }
-var me = "SET_IS_HOVER_BLOCK_AREA"
+var /* [auto-meaningful-name] */SET_IS_HOVER_BLOCK_AREA = "SET_IS_HOVER_BLOCK_AREA"
 var ge = function (e) {
   return {
-    type: me,
+    type: SET_IS_HOVER_BLOCK_AREA,
     payload: e
   }
 }
-var _e = "SET_STAGE_WIDTH"
+var /* [auto-meaningful-name] */SET_STAGE_WIDTH = "SET_STAGE_WIDTH"
 var ve = function (e) {
   return {
-    type: _e,
+    type: SET_STAGE_WIDTH,
     payload: e
   }
 }
-var be = "SET_BLOCKY_TOOLBOX_PINED"
+var /* [auto-meaningful-name] */SET_BLOCKY_TOOLBOX_PINED = "SET_BLOCKY_TOOLBOX_PINED"
 var ye = function (e) {
   return {
-    type: be,
+    type: SET_BLOCKY_TOOLBOX_PINED,
     payload: e
   }
 }
-var Ee = "SET_WIDGET_ATTRIBUTE_VISIBLE"
+var /* [auto-meaningful-name] */SET_WIDGET_ATTRIBUTE_VISIBLE = "SET_WIDGET_ATTRIBUTE_VISIBLE"
 var Oe = function (e) {
   return {
-    type: Ee,
+    type: SET_WIDGET_ATTRIBUTE_VISIBLE,
     payload: e
   }
 }
-var we = "SET_RIGHT_SIDE_ACTIVE_MENU"
+var /* [auto-meaningful-name] */SET_RIGHT_SIDE_ACTIVE_MENU = "SET_RIGHT_SIDE_ACTIVE_MENU"
 var Ce = function (e) {
   return {
-    type: we,
+    type: SET_RIGHT_SIDE_ACTIVE_MENU,
     payload: e
   }
 }
-var Te = "SHOW_GRID_DIALOG"
+var /* [auto-meaningful-name] */SHOW_GRID_DIALOG = "SHOW_GRID_DIALOG"
 var Se = function (e) {
   return {
-    type: Te,
+    type: SHOW_GRID_DIALOG,
     payload: e
   }
 }
-var Ie = "HIDE_GRID_DIALOG"
+var /* [auto-meaningful-name] */HIDE_GRID_DIALOG = "HIDE_GRID_DIALOG"
 var Ae = function () {
   return {
-    type: Ie,
+    type: HIDE_GRID_DIALOG,
     payload: undefined
   }
 }
-var je = "SET_GRID_COPIED_CONTENT"
+var /* [auto-meaningful-name] */SET_GRID_COPIED_CONTENT = "SET_GRID_COPIED_CONTENT"
 var Ne = function (e, t) {
   return {
-    type: je,
+    type: SET_GRID_COPIED_CONTENT,
     payload: {
       rowId: e,
       columnId: t
     }
   }
 }
-var Re = "SET_GRID_SELECTED_CONTENT"
+var /* [auto-meaningful-name] */SET_GRID_SELECTED_CONTENT = "SET_GRID_SELECTED_CONTENT"
 var ke = function (e, t) {
   return {
-    type: Re,
+    type: SET_GRID_SELECTED_CONTENT,
     payload: {
       rowId: e,
       columnId: t
     }
   }
 }
-var xe = "SET_GRID_EDITING_HEADER"
+var /* [auto-meaningful-name] */SET_GRID_EDITING_HEADER = "SET_GRID_EDITING_HEADER"
 var De = function (e) {
   return {
-    type: xe,
+    type: SET_GRID_EDITING_HEADER,
     payload: {
       columnId: e
     }
   }
 }
-var Me = "SET_GRID_ERROR_HEADERS"
+var /* [auto-meaningful-name] */SET_GRID_ERROR_HEADERS = "SET_GRID_ERROR_HEADERS"
 var Le = function (e) {
   return {
-    type: Me,
+    type: SET_GRID_ERROR_HEADERS,
     payload: {
       columnIds: e
     }
   }
 }
-var Pe = "SET_GRID_ANIMATION_HEADERS"
+var /* [auto-meaningful-name] */SET_GRID_ANIMATION_HEADERS = "SET_GRID_ANIMATION_HEADERS"
 var Be = function (e) {
   return {
-    type: Pe,
+    type: SET_GRID_ANIMATION_HEADERS,
     payload: {
       columnIds: e
     }
   }
 }
-var Fe = "SET_GRID_ERROR_CELL"
+var /* [auto-meaningful-name] */SET_GRID_ERROR_CELL = "SET_GRID_ERROR_CELL"
 var Ge = function (e) {
   return {
-    type: Fe,
+    type: SET_GRID_ERROR_CELL,
     payload: {
       errorCells: e
     }
   }
 }
-var Ue = "SET_GRID_COLUMN_CUSTOM_WIDTH"
+var /* [auto-meaningful-name] */SET_GRID_COLUMN_CUSTOM_WIDTH = "SET_GRID_COLUMN_CUSTOM_WIDTH"
 var We = function (e) {
   return {
-    type: Ue,
+    type: SET_GRID_COLUMN_CUSTOM_WIDTH,
     payload: e
   }
 }
-var He = "SET_STAGE_SCALE"
+var /* [auto-meaningful-name] */SET_STAGE_SCALE = "SET_STAGE_SCALE"
 var Ve = function (e) {
   return {
-    type: He,
+    type: SET_STAGE_SCALE,
     payload: e
   }
 }
-var ze = "SET_COLL_AUTO_SAVE"
+var /* [auto-meaningful-name] */SET_COLL_AUTO_SAVE = "SET_COLL_AUTO_SAVE"
 var Ye = function (e) {
   return {
-    type: ze,
+    type: SET_COLL_AUTO_SAVE,
     payload: e
   }
 }
-var Ke = "SET_HISTORY_ARCHIVE_ID"
+var /* [auto-meaningful-name] */SET_HISTORY_ARCHIVE_ID = "SET_HISTORY_ARCHIVE_ID"
 var qe = function (e) {
   return {
-    type: Ke,
+    type: SET_HISTORY_ARCHIVE_ID,
     payload: e
   }
 }
-var Xe = "SET_PROJECT_EDIT_PERMISSION"
+var /* [auto-meaningful-name] */SET_PROJECT_EDIT_PERMISSION = "SET_PROJECT_EDIT_PERMISSION"
 var Qe = function (e) {
   return {
-    type: Xe,
+    type: SET_PROJECT_EDIT_PERMISSION,
     payload: e
   }
 }
-var Ze = "SHOW_HISTORY_DIALOG"
+var /* [auto-meaningful-name] */SHOW_HISTORY_DIALOG = "SHOW_HISTORY_DIALOG"
 var Je = function (e) {
   return {
-    type: Ze,
+    type: SHOW_HISTORY_DIALOG,
     payload: e
   }
 }
-var $e = "SET_WIDGET_MALL_VISIBLE"
+var /* [auto-meaningful-name] */SET_WIDGET_MALL_VISIBLE = "SET_WIDGET_MALL_VISIBLE"
 var et = function (e) {
   return {
-    type: $e,
+    type: SET_WIDGET_MALL_VISIBLE,
     payload: e
   }
 }
-var tt = "ASYNC_INITIAL_MY_EXTENSION_WIDGETS"
+var /* [auto-meaningful-name] */ASYNC_INITIAL_MY_EXTENSION_WIDGETS = "ASYNC_INITIAL_MY_EXTENSION_WIDGETS"
 var nt = function () {
   return {
-    type: tt,
+    type: ASYNC_INITIAL_MY_EXTENSION_WIDGETS,
     payload: undefined
   }
 }
-var rt = "REPLACE_MY_EXTENSION_WIDGETS"
+var /* [auto-meaningful-name] */REPLACE_MY_EXTENSION_WIDGETS = "REPLACE_MY_EXTENSION_WIDGETS"
 var ot = function (e) {
   return {
-    type: rt,
+    type: REPLACE_MY_EXTENSION_WIDGETS,
     payload: {
       widgets: e
     }
   }
 }
-var it = "ADD_MY_EXTENSION_WIDGETS"
+var /* [auto-meaningful-name] */ADD_MY_EXTENSION_WIDGETS = "ADD_MY_EXTENSION_WIDGETS"
 var at = function (e) {
   return {
-    type: it,
+    type: ADD_MY_EXTENSION_WIDGETS,
     payload: {
       widgets: e
     }
   }
 }
-var st = "REMOVE_MY_EXTENSION_WIDGETS"
+var /* [auto-meaningful-name] */REMOVE_MY_EXTENSION_WIDGETS = "REMOVE_MY_EXTENSION_WIDGETS"
 var ct = function (e) {
   return {
-    type: st,
+    type: REMOVE_MY_EXTENSION_WIDGETS,
     payload: {
       widgetTypes: e
     }
   }
 }
-var lt = "SET_BLOCK_IMAGE_DIALOG_INFO"
+var /* [auto-meaningful-name] */SET_BLOCK_IMAGE_DIALOG_INFO = "SET_BLOCK_IMAGE_DIALOG_INFO"
 var ut = function (e, t) {
   return {
-    type: lt,
+    type: SET_BLOCK_IMAGE_DIALOG_INFO,
     payload: {
       visible: e,
       imgSrc: t
     }
   }
 }
-var dt = "SHOW_RELEASE_INFO_DIALOG"
+var /* [auto-meaningful-name] */SHOW_RELEASE_INFO_DIALOG = "SHOW_RELEASE_INFO_DIALOG"
 var pt = function (e) {
   return {
-    type: dt,
+    type: SHOW_RELEASE_INFO_DIALOG,
     payload: e
   }
 }
@@ -972,17 +972,17 @@ var ht = function (e, t, n, r, o) {
     }
   }
 }
-var mt = "SHOW_CLOUD_DB_MANAGER_DIALOG"
+var /* [auto-meaningful-name] */SHOW_CLOUD_DB_MANAGER_DIALOG = "SHOW_CLOUD_DB_MANAGER_DIALOG"
 var gt = function (e) {
   return {
-    type: mt,
+    type: SHOW_CLOUD_DB_MANAGER_DIALOG,
     payload: e
   }
 }
-var _t = "SHOW_CLOUD_DB_PUBLISH_DIALOG"
+var /* [auto-meaningful-name] */SHOW_CLOUD_DB_PUBLISH_DIALOG = "SHOW_CLOUD_DB_PUBLISH_DIALOG"
 var vt = function (e, t, n) {
   return {
-    type: _t,
+    type: SHOW_CLOUD_DB_PUBLISH_DIALOG,
     payload: {
       visible: e,
       type: t,
@@ -990,194 +990,194 @@ var vt = function (e, t, n) {
     }
   }
 }
-var bt = "SET_IS_OFF_LINE"
+var /* [auto-meaningful-name] */SET_IS_OFF_LINE = "SET_IS_OFF_LINE"
 var yt = function (e) {
   return {
-    type: bt,
+    type: SET_IS_OFF_LINE,
     payload: e
   }
 }
-var Et = "TOGGLE_SLIDER_IMAGE_DIALOG"
+var /* [auto-meaningful-name] */TOGGLE_SLIDER_IMAGE_DIALOG = "TOGGLE_SLIDER_IMAGE_DIALOG"
 var Ot = function (e) {
   return {
-    type: Et,
+    type: TOGGLE_SLIDER_IMAGE_DIALOG,
     payload: e
   }
 }
-var wt = "TOGGLE_SWITCH_IMAGE_DIALOG"
+var /* [auto-meaningful-name] */TOGGLE_SWITCH_IMAGE_DIALOG = "TOGGLE_SWITCH_IMAGE_DIALOG"
 var Ct = function (e) {
   return {
-    type: wt,
+    type: TOGGLE_SWITCH_IMAGE_DIALOG,
     payload: e
   }
 }
-var Tt = "SHOW_TABLE_DATA_DIALOG"
+var /* [auto-meaningful-name] */SHOW_TABLE_DATA_DIALOG = "SHOW_TABLE_DATA_DIALOG"
 var St = function (e) {
   return {
-    type: Tt,
+    type: SHOW_TABLE_DATA_DIALOG,
     payload: e
   }
 }
-var It = "HIDE_TABLE_DATA_DIALOG"
+var /* [auto-meaningful-name] */HIDE_TABLE_DATA_DIALOG = "HIDE_TABLE_DATA_DIALOG"
 var At = function () {
   return {
-    type: It,
+    type: HIDE_TABLE_DATA_DIALOG,
     payload: undefined
   }
 }
-var jt = "SHOW_CREATE_TABLE_DATA_DIALOG"
+var /* [auto-meaningful-name] */SHOW_CREATE_TABLE_DATA_DIALOG = "SHOW_CREATE_TABLE_DATA_DIALOG"
 var Nt = function (e) {
   return {
-    type: jt,
+    type: SHOW_CREATE_TABLE_DATA_DIALOG,
     payload: e
   }
 }
-var Rt = "HIDE_CREATE_TABLE_DATA_DIALOG"
+var /* [auto-meaningful-name] */HIDE_CREATE_TABLE_DATA_DIALOG = "HIDE_CREATE_TABLE_DATA_DIALOG"
 var kt = function () {
   return {
-    type: Rt,
+    type: HIDE_CREATE_TABLE_DATA_DIALOG,
     payload: undefined
   }
 }
-var xt = "OPEN_RICH_TEXT_EDITOR_DIALOG"
+var /* [auto-meaningful-name] */OPEN_RICH_TEXT_EDITOR_DIALOG = "OPEN_RICH_TEXT_EDITOR_DIALOG"
 var Dt = function (e) {
   return {
-    type: xt,
+    type: OPEN_RICH_TEXT_EDITOR_DIALOG,
     payload: e
   }
 }
-var Mt = "CLOSE_RICH_TEXT_EDITOR_DIALOG"
+var /* [auto-meaningful-name] */CLOSE_RICH_TEXT_EDITOR_DIALOG = "CLOSE_RICH_TEXT_EDITOR_DIALOG"
 var Lt = function () {
   return {
-    type: Mt,
+    type: CLOSE_RICH_TEXT_EDITOR_DIALOG,
     payload: undefined
   }
 }
-var Pt = "ASYNC_GET_TEMPLATE_LIST"
+var /* [auto-meaningful-name] */ASYNC_GET_TEMPLATE_LIST = "ASYNC_GET_TEMPLATE_LIST"
 var Bt = function () {
   return {
     payload: undefined,
-    type: Pt
+    type: ASYNC_GET_TEMPLATE_LIST
   }
 }
-var Ft = "SET_TEMPLATE_LIST"
+var /* [auto-meaningful-name] */SET_TEMPLATE_LIST = "SET_TEMPLATE_LIST"
 var Gt = function (e) {
   return {
     payload: e,
-    type: Ft
+    type: SET_TEMPLATE_LIST
   }
 }
-var Ut = "ASYNC_GET_COURSE_LIST"
+var /* [auto-meaningful-name] */ASYNC_GET_COURSE_LIST = "ASYNC_GET_COURSE_LIST"
 var Wt = function () {
   return {
     payload: undefined,
-    type: Ut
+    type: ASYNC_GET_COURSE_LIST
   }
 }
-var Ht = "SET_COURSE_LIST"
+var /* [auto-meaningful-name] */SET_COURSE_LIST = "SET_COURSE_LIST"
 var Vt = function (e) {
   return {
     payload: e,
-    type: Ht
+    type: SET_COURSE_LIST
   }
 }
-var zt = "SET_COURSE_DIALOG_VISIBLE"
+var /* [auto-meaningful-name] */SET_COURSE_DIALOG_VISIBLE = "SET_COURSE_DIALOG_VISIBLE"
 var Yt = function (e) {
   return {
     payload: e,
-    type: zt
+    type: SET_COURSE_DIALOG_VISIBLE
   }
 }
-var Kt = "SET_PROJECT_SAVE_PROMPT"
+var /* [auto-meaningful-name] */SET_PROJECT_SAVE_PROMPT = "SET_PROJECT_SAVE_PROMPT"
 var qt = function (e) {
   return {
     payload: e,
-    type: Kt
+    type: SET_PROJECT_SAVE_PROMPT
   }
 }
 var Xt = {
   withClose: false,
   visible: true
 }
-var Qt = "ADD_FLOAT_ICON"
+var /* [auto-meaningful-name] */ADD_FLOAT_ICON = "ADD_FLOAT_ICON"
 var Zt = function (e) {
   return {
-    payload: r.a(r.a({}, Xt), e),
-    type: Qt
+    payload: $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, Xt), e),
+    type: ADD_FLOAT_ICON
   }
 }
-var Jt = "REMOVE_FLOAT_ICON"
+var /* [auto-meaningful-name] */REMOVE_FLOAT_ICON = "REMOVE_FLOAT_ICON"
 var $t = function (e) {
   return {
     payload: e,
-    type: Jt
+    type: REMOVE_FLOAT_ICON
   }
 }
-var en = "REPLACE_FLOAT_ICON"
+var /* [auto-meaningful-name] */REPLACE_FLOAT_ICON = "REPLACE_FLOAT_ICON"
 var tn = function (e, t) {
   return {
     payload: {
       name: e,
-      icon: r.a(r.a({}, Xt), t)
+      icon: $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, Xt), t)
     },
-    type: en
+    type: REPLACE_FLOAT_ICON
   }
 }
-var nn = "SET_FLOAT_ICON_VISIBLE_STATUS"
+var /* [auto-meaningful-name] */SET_FLOAT_ICON_VISIBLE_STATUS = "SET_FLOAT_ICON_VISIBLE_STATUS"
 var rn = function (e, t) {
   return {
     payload: {
       name: e,
       visible: t
     },
-    type: nn
+    type: SET_FLOAT_ICON_VISIBLE_STATUS
   }
 }
-var on = "SET_PROJECT_OPEN_FINISHED"
+var /* [auto-meaningful-name] */SET_PROJECT_OPEN_FINISHED = "SET_PROJECT_OPEN_FINISHED"
 var an = function (e) {
   return {
     payload: e,
-    type: on
+    type: SET_PROJECT_OPEN_FINISHED
   }
 }
 function sn(e, t) {
   return new Promise(function (n, o) {
-    var i = r.a(r.a({}, t), {}, {
+    var i = $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, t), {}, {
       reject: o,
       resolve: n
     })
     e(i)
   })
 }
-var cn = "ASYNC_CREATE_PROJECT_SCREEN"
+var /* [auto-meaningful-name] */ASYNC_CREATE_PROJECT_SCREEN = "ASYNC_CREATE_PROJECT_SCREEN"
 var ln = function (e) {
   return {
     payload: {
       index: e
     },
-    type: cn
+    type: ASYNC_CREATE_PROJECT_SCREEN
   }
 }
-var un = "ASYNC_REMOVE_PROJECT_SCREEN"
+var /* [auto-meaningful-name] */ASYNC_REMOVE_PROJECT_SCREEN = "ASYNC_REMOVE_PROJECT_SCREEN"
 var dn = function (e, t) {
   return {
-    type: un,
+    type: ASYNC_REMOVE_PROJECT_SCREEN,
     payload: {
       screenId: e,
       isEmitOT: t
     }
   }
 }
-var pn = "ASYNC_COPY_PROJECT_SCREEN"
+var /* [auto-meaningful-name] */ASYNC_COPY_PROJECT_SCREEN = "ASYNC_COPY_PROJECT_SCREEN"
 var fn = function (e) {
   return {
-    type: pn,
+    type: ASYNC_COPY_PROJECT_SCREEN,
     payload: {
       screenId: e
     }
   }
 }
-var hn = "ASYNC_DELETE_PROJECT_WIDGET"
+var /* [auto-meaningful-name] */ASYNC_DELETE_PROJECT_WIDGET = "ASYNC_DELETE_PROJECT_WIDGET"
 var mn = function (e, t, n) {
   return {
     payload: {
@@ -1185,10 +1185,10 @@ var mn = function (e, t, n) {
       widgetId: e,
       isEmitOT: n
     },
-    type: hn
+    type: ASYNC_DELETE_PROJECT_WIDGET
   }
 }
-var gn = "ASYNC_INSERT_PROJECT_WIDGET"
+var /* [auto-meaningful-name] */ASYNC_INSERT_PROJECT_WIDGET = "ASYNC_INSERT_PROJECT_WIDGET"
 var _n = function (e, t, n, r, o) {
   return {
     payload: {
@@ -1198,124 +1198,124 @@ var _n = function (e, t, n, r, o) {
       attributes: r,
       setBlockValue: o
     },
-    type: gn
+    type: ASYNC_INSERT_PROJECT_WIDGET
   }
 }
-var vn = "ASYNC_REGISTER_EXTENSION_WIDGET"
+var /* [auto-meaningful-name] */ASYNC_REGISTER_EXTENSION_WIDGET = "ASYNC_REGISTER_EXTENSION_WIDGET"
 var bn = function (e) {
   return {
-    type: vn,
+    type: ASYNC_REGISTER_EXTENSION_WIDGET,
     payload: {
       widgetType: e
     }
   }
 }
-var yn = "ASYNC_PACKAGE_PROJECT"
+var /* [auto-meaningful-name] */ASYNC_PACKAGE_PROJECT = "ASYNC_PACKAGE_PROJECT"
 var En = function () {
   return {
     payload: undefined,
-    type: yn
+    type: ASYNC_PACKAGE_PROJECT
   }
 }
-var On = "SET_PACKAGING_PROJECT"
+var /* [auto-meaningful-name] */SET_PACKAGING_PROJECT = "SET_PACKAGING_PROJECT"
 var wn = function (e, t) {
   return {
     payload: {
       isPackaging: e,
       packageUrl: t
     },
-    type: On
+    type: SET_PACKAGING_PROJECT
   }
 }
-var Cn = "SET_PACKAGE_PROJECT_PROGRESS_VISIBLE"
+var /* [auto-meaningful-name] */SET_PACKAGE_PROJECT_PROGRESS_VISIBLE = "SET_PACKAGE_PROJECT_PROGRESS_VISIBLE"
 var Tn = function (e) {
   return {
     payload: {
       packageProgressVisible: e
     },
-    type: Cn
+    type: SET_PACKAGE_PROJECT_PROGRESS_VISIBLE
   }
 }
-var Sn = "SET_PACKAGE_PROGRESS_DIALOG_VISIBLE"
+var /* [auto-meaningful-name] */SET_PACKAGE_PROGRESS_DIALOG_VISIBLE = "SET_PACKAGE_PROGRESS_DIALOG_VISIBLE"
 var In = function (e) {
   return {
     payload: {
       packageDialogVisible: e
     },
-    type: Sn
+    type: SET_PACKAGE_PROGRESS_DIALOG_VISIBLE
   }
 }
-var An = "SET_PACKAGE_QRCODE_DIALOG_VISIBLE"
+var /* [auto-meaningful-name] */SET_PACKAGE_QRCODE_DIALOG_VISIBLE = "SET_PACKAGE_QRCODE_DIALOG_VISIBLE"
 var jn = function (e) {
   return {
     payload: {
       packageQrCodeVisible: e
     },
-    type: An
+    type: SET_PACKAGE_QRCODE_DIALOG_VISIBLE
   }
 }
-var Nn = "SET_PACKAGE_PROJECT_PROGRESS"
+var /* [auto-meaningful-name] */SET_PACKAGE_PROJECT_PROGRESS = "SET_PACKAGE_PROJECT_PROGRESS"
 var Rn = function (e) {
   return {
     payload: {
       packageProgress: e
     },
-    type: Nn
+    type: SET_PACKAGE_PROJECT_PROGRESS
   }
 }
-var kn = "ASYNC_UPDATE_PROJECT_PACKAGE_PROGRESS"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PROJECT_PACKAGE_PROGRESS = "ASYNC_UPDATE_PROJECT_PACKAGE_PROGRESS"
 var xn = function () {
   return {
-    type: kn,
+    type: ASYNC_UPDATE_PROJECT_PACKAGE_PROGRESS,
     payload: null
   }
 }
-var Dn = "SET_PROJECT_PACKAGE_TASK_LABEL"
+var /* [auto-meaningful-name] */SET_PROJECT_PACKAGE_TASK_LABEL = "SET_PROJECT_PACKAGE_TASK_LABEL"
 var Mn = function (e) {
   return {
-    type: Dn,
+    type: SET_PROJECT_PACKAGE_TASK_LABEL,
     payload: {
       label: e
     }
   }
 }
-var Ln = "SET_PACKAGE_INFO"
+var /* [auto-meaningful-name] */SET_PACKAGE_INFO = "SET_PACKAGE_INFO"
 var Pn = function (e) {
   return {
     payload: e,
-    type: Ln
+    type: SET_PACKAGE_INFO
   }
 }
-var Bn = "SET_COMPLETE_PACKAGE_DIALOG"
+var /* [auto-meaningful-name] */SET_COMPLETE_PACKAGE_DIALOG = "SET_COMPLETE_PACKAGE_DIALOG"
 var Fn = function (e) {
   return {
     payload: {
       packageCompleteVisible: e
     },
-    type: Bn
+    type: SET_COMPLETE_PACKAGE_DIALOG
   }
 }
-var Gn = "ASYNC_GET_PACKAGE_INFO"
+var /* [auto-meaningful-name] */ASYNC_GET_PACKAGE_INFO = "ASYNC_GET_PACKAGE_INFO"
 var Un = function () {
   return {
     payload: null,
-    type: Gn
+    type: ASYNC_GET_PACKAGE_INFO
   }
 }
-var Wn = "ASYNC_CANCEL_PACKAGE"
+var /* [auto-meaningful-name] */ASYNC_CANCEL_PACKAGE = "ASYNC_CANCEL_PACKAGE"
 var Hn = function () {
   return {
     payload: null,
-    type: Wn
+    type: ASYNC_CANCEL_PACKAGE
   }
 }
-var Vn = "ASYNC_EXPORT_PROJECT_AS_JSON"
+var /* [auto-meaningful-name] */ASYNC_EXPORT_PROJECT_AS_JSON = "ASYNC_EXPORT_PROJECT_AS_JSON"
 var zn = function (e) {
   return {
     payload: {
       shouldCloneCloud: e
     },
-    type: Vn
+    type: ASYNC_EXPORT_PROJECT_AS_JSON
   }
 }
 
@@ -1347,43 +1347,43 @@ export function warpAsyncCreateProject({
   }
 }
 
-var qn = "ASYNC_CREATE_PLAYER_PROJECT"
+var /* [auto-meaningful-name] */ASYNC_CREATE_PLAYER_PROJECT = "ASYNC_CREATE_PLAYER_PROJECT"
 var Xn = function (e) {
   return {
     payload: {
       json: e
     },
-    type: qn
+    type: ASYNC_CREATE_PLAYER_PROJECT
   }
 }
-var Qn = "ASYNC_GET_PROJECT_ERROR"
+var /* [auto-meaningful-name] */ASYNC_GET_PROJECT_ERROR = "ASYNC_GET_PROJECT_ERROR"
 var Zn = function (e) {
   return {
     payload: {
       code: e.code
     },
-    type: Qn
+    type: ASYNC_GET_PROJECT_ERROR
   }
 }
-var Jn = "IMPORT_PROJECT_FROM_TO_DOC"
+var /* [auto-meaningful-name] */IMPORT_PROJECT_FROM_TO_DOC = "IMPORT_PROJECT_FROM_TO_DOC"
 var $n = function (e) {
   return {
-    type: Jn,
+    type: IMPORT_PROJECT_FROM_TO_DOC,
     payload: {
       json: e
     }
   }
 }
-var er = "ASYNC_PLAY_PROJECT"
+var /* [auto-meaningful-name] */ASYNC_PLAY_PROJECT = "ASYNC_PLAY_PROJECT"
 var tr = function (e) {
   return {
     payload: {
       isPlayCurrentScreen: e
     },
-    type: er
+    type: ASYNC_PLAY_PROJECT
   }
 }
-var nr = "ASYNC_UPDATE_PROJECT_WIDGET_ATTRIBUTE"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PROJECT_WIDGET_ATTRIBUTE = "ASYNC_UPDATE_PROJECT_WIDGET_ATTRIBUTE"
 var rr = function (e, t, n) {
   return {
     payload: {
@@ -1391,10 +1391,10 @@ var rr = function (e, t, n) {
       key: t,
       value: n
     },
-    type: nr
+    type: ASYNC_UPDATE_PROJECT_WIDGET_ATTRIBUTE
   }
 }
-var or = "ASYNC_UPDATE_PROJECT_WIDGET_TITLE"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PROJECT_WIDGET_TITLE = "ASYNC_UPDATE_PROJECT_WIDGET_TITLE"
 var ir = function (e, t, n, r, o) {
   return {
     payload: {
@@ -1404,10 +1404,10 @@ var ir = function (e, t, n, r, o) {
       shouldUpdateEditArea: r,
       isEmitOT: o
     },
-    type: or
+    type: ASYNC_UPDATE_PROJECT_WIDGET_TITLE
   }
 }
-var ar = "ASYNC_UPDATE_PROJECT_WIDGET_IDS"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PROJECT_WIDGET_IDS = "ASYNC_UPDATE_PROJECT_WIDGET_IDS"
 var sr = function (e, t, n, r, o, i) {
   return {
     payload: {
@@ -1418,10 +1418,10 @@ var sr = function (e, t, n, r, o, i) {
       shouldUpdateEditArea: o,
       isEmitOT: i
     },
-    type: ar
+    type: ASYNC_UPDATE_PROJECT_WIDGET_IDS
   }
 }
-var cr = "ASYNC_UPDATE_PROJECT_WIDGET_COMMON_ATTRIBUTE"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PROJECT_WIDGET_COMMON_ATTRIBUTE = "ASYNC_UPDATE_PROJECT_WIDGET_COMMON_ATTRIBUTE"
 var lr = function (e, t, n, r, o, i, a) {
   return {
     payload: {
@@ -1433,69 +1433,69 @@ var lr = function (e, t, n, r, o, i, a) {
       isEmitOT: i,
       isBasePropertyPriority: a
     },
-    type: cr
+    type: ASYNC_UPDATE_PROJECT_WIDGET_COMMON_ATTRIBUTE
   }
 }
-var ur = "REPLACE_PROJECT"
+var /* [auto-meaningful-name] */REPLACE_PROJECT = "REPLACE_PROJECT"
 var dr = function (e) {
   return {
-    type: ur,
+    type: REPLACE_PROJECT,
     payload: {
       project: e
     }
   }
 }
-var pr = "REPLACE_PROJECT_ID"
+var /* [auto-meaningful-name] */REPLACE_PROJECT_ID = "REPLACE_PROJECT_ID"
 var fr = function (e) {
   return {
-    type: pr,
+    type: REPLACE_PROJECT_ID,
     payload: {
       projectId: e
     }
   }
 }
-var hr = "UPDATE_PROJECT_BCM_URL"
+var /* [auto-meaningful-name] */UPDATE_PROJECT_BCM_URL = "UPDATE_PROJECT_BCM_URL"
 var mr = function (e) {
   return {
-    type: hr,
+    type: UPDATE_PROJECT_BCM_URL,
     payload: {
       bcmUrl: e
     }
   }
 }
-var gr = "DELETE_PROJECT_SCREEN"
+var /* [auto-meaningful-name] */DELETE_PROJECT_SCREEN = "DELETE_PROJECT_SCREEN"
 var _r = function (e) {
   return {
     payload: {
       screenId: e
     },
-    type: gr
+    type: DELETE_PROJECT_SCREEN
   }
 }
-var vr = "ADD_PROJECT_SCREEN"
+var /* [auto-meaningful-name] */ADD_PROJECT_SCREEN = "ADD_PROJECT_SCREEN"
 var br = function (e, t) {
   return {
     payload: {
       screen: e,
       index: t
     },
-    type: vr
+    type: ADD_PROJECT_SCREEN
   }
 }
-var yr = "UPDATE_PROJECT_SCREEN_TITLE"
+var /* [auto-meaningful-name] */UPDATE_PROJECT_SCREEN_TITLE = "UPDATE_PROJECT_SCREEN_TITLE"
 var Er = function (e, t) {
   return {
-    type: yr,
+    type: UPDATE_PROJECT_SCREEN_TITLE,
     payload: {
       screenId: e,
       title: t
     }
   }
 }
-var Or = "UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE"
+var /* [auto-meaningful-name] */UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE = "UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE"
 var wr = function (e, t, n) {
   return {
-    type: Or,
+    type: UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE,
     payload: {
       screenId: e,
       key: t,
@@ -1503,10 +1503,10 @@ var wr = function (e, t, n) {
     }
   }
 }
-var Cr = "ASYNC_UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE = "ASYNC_UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE"
 var Tr = function (e, t, n, r) {
   return {
-    type: Cr,
+    type: ASYNC_UPDATE_PROJECT_SCREEN_COMMON_ATTRIBUTE,
     payload: {
       screenId: e,
       key: t,
@@ -1515,45 +1515,45 @@ var Tr = function (e, t, n, r) {
     }
   }
 }
-var Sr = "CHANGE_PROJECT_TITLE"
+var /* [auto-meaningful-name] */CHANGE_PROJECT_TITLE = "CHANGE_PROJECT_TITLE"
 var Ir = function (e) {
   return {
-    type: Sr,
+    type: CHANGE_PROJECT_TITLE,
     payload: {
       title: e
     }
   }
 }
-var Ar = "ASYNC_CHANGE_PROJECT_TITLE"
+var /* [auto-meaningful-name] */ASYNC_CHANGE_PROJECT_TITLE = "ASYNC_CHANGE_PROJECT_TITLE"
 var jr = function (e, t) {
   return {
-    type: Ar,
+    type: ASYNC_CHANGE_PROJECT_TITLE,
     payload: {
       title: e,
       isEmitOT: t
     }
   }
 }
-var Nr = "UPDATE_PROJECT_SCREEN_SNAPSHOT"
+var /* [auto-meaningful-name] */UPDATE_PROJECT_SCREEN_SNAPSHOT = "UPDATE_PROJECT_SCREEN_SNAPSHOT"
 var Rr = function (e, t) {
   return {
-    type: Nr,
+    type: UPDATE_PROJECT_SCREEN_SNAPSHOT,
     payload: {
       screenId: e,
       snapshot: t
     }
   }
 }
-var kr = "ADD_PROJECT_GLOBAL_WIDGET"
+var /* [auto-meaningful-name] */ADD_PROJECT_GLOBAL_WIDGET = "ADD_PROJECT_GLOBAL_WIDGET"
 var xr = function (e) {
   return {
     payload: {
       widgetId: e
     },
-    type: kr
+    type: ADD_PROJECT_GLOBAL_WIDGET
   }
 }
-var Dr = "ADD_PROJECT_WIDGET"
+var /* [auto-meaningful-name] */ADD_PROJECT_WIDGET = "ADD_PROJECT_WIDGET"
 var Mr = function (e, t, n) {
   return {
     payload: {
@@ -1561,14 +1561,14 @@ var Mr = function (e, t, n) {
       widgetId: t,
       isInvisibleWidget: n
     },
-    type: Dr
+    type: ADD_PROJECT_WIDGET
   }
 }
-var Lr = "SORT_PROJECT_GLOBAL_WIDGET_IDS"
-var Pr = "SORT_PROJECT_SCREEN_WIDGET_IDS"
+var /* [auto-meaningful-name] */SORT_PROJECT_GLOBAL_WIDGET_IDS = "SORT_PROJECT_GLOBAL_WIDGET_IDS"
+var /* [auto-meaningful-name] */SORT_PROJECT_SCREEN_WIDGET_IDS = "SORT_PROJECT_SCREEN_WIDGET_IDS"
 var Br = function (e, t, n) {
   return {
-    type: Pr,
+    type: SORT_PROJECT_SCREEN_WIDGET_IDS,
     payload: {
       widgetIds: t,
       screenId: e,
@@ -1576,16 +1576,16 @@ var Br = function (e, t, n) {
     }
   }
 }
-var Fr = "REMOVE_PROJECT_GLOBAL_WIDGET"
+var /* [auto-meaningful-name] */REMOVE_PROJECT_GLOBAL_WIDGET = "REMOVE_PROJECT_GLOBAL_WIDGET"
 var Gr = function (e) {
   return {
     payload: {
       widgetId: e
     },
-    type: Fr
+    type: REMOVE_PROJECT_GLOBAL_WIDGET
   }
 }
-var Ur = "REMOVE_PROJECT_WIDGET"
+var /* [auto-meaningful-name] */REMOVE_PROJECT_WIDGET = "REMOVE_PROJECT_WIDGET"
 var Wr = function (e, t, n) {
   return {
     payload: {
@@ -1593,60 +1593,60 @@ var Wr = function (e, t, n) {
       widgetId: t,
       isInvisibleWidget: n
     },
-    type: Ur
+    type: REMOVE_PROJECT_WIDGET
   }
 }
-var Hr = "SELECT_PROJECT_WIDGET"
+var /* [auto-meaningful-name] */SELECT_PROJECT_WIDGET = "SELECT_PROJECT_WIDGET"
 var Vr = function (e) {
   return {
     payload: {
       widgetId: e
     },
-    type: Hr
+    type: SELECT_PROJECT_WIDGET
   }
 }
-var zr = "ASYNC_SELECT_PROJECT_WIDGET"
+var /* [auto-meaningful-name] */ASYNC_SELECT_PROJECT_WIDGET = "ASYNC_SELECT_PROJECT_WIDGET"
 var Yr = function (e, t) {
   return {
     payload: {
       widgetId: e,
       isEmitOT: t
     },
-    type: zr
+    type: ASYNC_SELECT_PROJECT_WIDGET
   }
 }
-var Kr = "SET_PROJECT_CURRENT_SCREEN_INDEX"
+var /* [auto-meaningful-name] */SET_PROJECT_CURRENT_SCREEN_INDEX = "SET_PROJECT_CURRENT_SCREEN_INDEX"
 var qr = function (e) {
   return {
     payload: e,
-    type: Kr
+    type: SET_PROJECT_CURRENT_SCREEN_INDEX
   }
 }
-var Xr = "ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX"
+var /* [auto-meaningful-name] */ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX = "ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX"
 var Qr = function (e, t) {
   return {
     payload: {
       index: e,
       shouldSaveCurrentData: t
     },
-    type: Xr
+    type: ASYNC_SET_PROJECT_CURRENT_SCREEN_INDEX
   }
 }
-var Zr = "START_PLAYING_PROJECT"
+var /* [auto-meaningful-name] */START_PLAYING_PROJECT = "START_PLAYING_PROJECT"
 var Jr = function () {
   return {
     payload: undefined,
-    type: Zr
+    type: START_PLAYING_PROJECT
   }
 }
-var $r = "STOP_PLAYING_PROJECT"
+var /* [auto-meaningful-name] */STOP_PLAYING_PROJECT = "STOP_PLAYING_PROJECT"
 var eo = function () {
   return {
     payload: undefined,
-    type: $r
+    type: STOP_PLAYING_PROJECT
   }
 }
-var to = "ASYNC_ADD_PRIMITIVE_VARIABLE"
+var /* [auto-meaningful-name] */ASYNC_ADD_PRIMITIVE_VARIABLE = "ASYNC_ADD_PRIMITIVE_VARIABLE"
 var no = function (e, t, n, r, o, i, a, s) {
   return {
     payload: {
@@ -1659,10 +1659,10 @@ var no = function (e, t, n, r, o, i, a, s) {
       setBlockValue: a,
       isEmitOT: s
     },
-    type: to
+    type: ASYNC_ADD_PRIMITIVE_VARIABLE
   }
 }
-var ro = "ASYNC_ADD_ARRAY_VARIABLE"
+var /* [auto-meaningful-name] */ASYNC_ADD_ARRAY_VARIABLE = "ASYNC_ADD_ARRAY_VARIABLE"
 var oo = function (e, t, n, r, o, i, a, s) {
   return {
     payload: {
@@ -1675,10 +1675,10 @@ var oo = function (e, t, n, r, o, i, a, s) {
       isEmitOT: s,
       index: i
     },
-    type: ro
+    type: ASYNC_ADD_ARRAY_VARIABLE
   }
 }
-var io = "ASYNC_DELETE_PRIMITIVE_VARIABLE"
+var /* [auto-meaningful-name] */ASYNC_DELETE_PRIMITIVE_VARIABLE = "ASYNC_DELETE_PRIMITIVE_VARIABLE"
 var ao = function (e, t, n, r) {
   return {
     payload: {
@@ -1687,10 +1687,10 @@ var ao = function (e, t, n, r) {
       screenId: n,
       isEmitOT: r
     },
-    type: io
+    type: ASYNC_DELETE_PRIMITIVE_VARIABLE
   }
 }
-var so = "ASYNC_DELETE_ARRAY_VARIABLE"
+var /* [auto-meaningful-name] */ASYNC_DELETE_ARRAY_VARIABLE = "ASYNC_DELETE_ARRAY_VARIABLE"
 var co = function (e, t, n, r) {
   return {
     payload: {
@@ -1699,24 +1699,24 @@ var co = function (e, t, n, r) {
       screenId: n,
       isEmitOT: r
     },
-    type: so
+    type: ASYNC_DELETE_ARRAY_VARIABLE
   }
 }
-var lo = "ASYNC_ADD_OBJECT_VARIABLE"
+var /* [auto-meaningful-name] */ASYNC_ADD_OBJECT_VARIABLE = "ASYNC_ADD_OBJECT_VARIABLE"
 var uo = function (e) {
   return {
     payload: e,
-    type: lo
+    type: ASYNC_ADD_OBJECT_VARIABLE
   }
 }
-var po = "ADD_OBJECT_VARIABLE"
+var /* [auto-meaningful-name] */ADD_OBJECT_VARIABLE = "ADD_OBJECT_VARIABLE"
 var fo = function (e) {
   return {
     payload: e,
-    type: po
+    type: ADD_OBJECT_VARIABLE
   }
 }
-var ho = "DELETE_OBJECT_VARIABLE"
+var /* [auto-meaningful-name] */DELETE_OBJECT_VARIABLE = "DELETE_OBJECT_VARIABLE"
 var mo = function (e, t, n) {
   return {
     payload: {
@@ -1724,10 +1724,10 @@ var mo = function (e, t, n) {
       id: t,
       screenId: n
     },
-    type: ho
+    type: DELETE_OBJECT_VARIABLE
   }
 }
-var go = "ASYNC_DELETE_OBJECT_VARIABLE"
+var /* [auto-meaningful-name] */ASYNC_DELETE_OBJECT_VARIABLE = "ASYNC_DELETE_OBJECT_VARIABLE"
 var _o = function (e, t, n, r) {
   return {
     payload: {
@@ -1736,10 +1736,10 @@ var _o = function (e, t, n, r) {
       screenId: n,
       isEmitOT: r
     },
-    type: go
+    type: ASYNC_DELETE_OBJECT_VARIABLE
   }
 }
-var vo = "SET_OBJECT_VARIABLE_NAME"
+var /* [auto-meaningful-name] */SET_OBJECT_VARIABLE_NAME = "SET_OBJECT_VARIABLE_NAME"
 var bo = function (e, t, n, r) {
   return {
     payload: {
@@ -1748,10 +1748,10 @@ var bo = function (e, t, n, r) {
       name: n,
       screenId: r
     },
-    type: vo
+    type: SET_OBJECT_VARIABLE_NAME
   }
 }
-var yo = "SET_OBJECT_VARIABLE_DEFAULT_VALUE"
+var /* [auto-meaningful-name] */SET_OBJECT_VARIABLE_DEFAULT_VALUE = "SET_OBJECT_VARIABLE_DEFAULT_VALUE"
 var Eo = function (e, t, n, r) {
   return {
     payload: {
@@ -1760,27 +1760,27 @@ var Eo = function (e, t, n, r) {
       defaultValue: n,
       screenId: r
     },
-    type: yo
+    type: SET_OBJECT_VARIABLE_DEFAULT_VALUE
   }
 }
-var Oo = "ASYNC_UPDATE_OBJECT_VARIABLE_PROPERTY"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_OBJECT_VARIABLE_PROPERTY = "ASYNC_UPDATE_OBJECT_VARIABLE_PROPERTY"
 var wo = function (e) {
   return {
-    type: Oo,
+    type: ASYNC_UPDATE_OBJECT_VARIABLE_PROPERTY,
     payload: e
   }
 }
-var Co = "MOVE_PROJECT_SCREEN"
+var /* [auto-meaningful-name] */MOVE_PROJECT_SCREEN = "MOVE_PROJECT_SCREEN"
 var To = function (e, t) {
   return {
-    type: Co,
+    type: MOVE_PROJECT_SCREEN,
     payload: {
       from: e,
       to: t
     }
   }
 }
-var So = "ADD_PRIMITIVE_VARIABLE"
+var /* [auto-meaningful-name] */ADD_PRIMITIVE_VARIABLE = "ADD_PRIMITIVE_VARIABLE"
 var Io = function (e, t, n, r, o, i) {
   return {
     payload: {
@@ -1791,10 +1791,10 @@ var Io = function (e, t, n, r, o, i) {
       screenId: o,
       index: i
     },
-    type: So
+    type: ADD_PRIMITIVE_VARIABLE
   }
 }
-var Ao = "DELETE_PRIMITIVE_VARIABLE"
+var /* [auto-meaningful-name] */DELETE_PRIMITIVE_VARIABLE = "DELETE_PRIMITIVE_VARIABLE"
 var jo = function (e, t, n) {
   return {
     payload: {
@@ -1802,10 +1802,10 @@ var jo = function (e, t, n) {
       id: t,
       screenId: n
     },
-    type: Ao
+    type: DELETE_PRIMITIVE_VARIABLE
   }
 }
-var No = "SET_PRIMITIVE_VARIABLE_NAME"
+var /* [auto-meaningful-name] */SET_PRIMITIVE_VARIABLE_NAME = "SET_PRIMITIVE_VARIABLE_NAME"
 var Ro = function (e, t, n, r) {
   return {
     payload: {
@@ -1814,10 +1814,10 @@ var Ro = function (e, t, n, r) {
       name: n,
       screenId: r
     },
-    type: No
+    type: SET_PRIMITIVE_VARIABLE_NAME
   }
 }
-var ko = "SET_PRIMITIVE_VARIABLE_DEFAULT_VALUE"
+var /* [auto-meaningful-name] */SET_PRIMITIVE_VARIABLE_DEFAULT_VALUE = "SET_PRIMITIVE_VARIABLE_DEFAULT_VALUE"
 var xo = function (e, t, n, r) {
   return {
     payload: {
@@ -1826,13 +1826,13 @@ var xo = function (e, t, n, r) {
       defaultValue: n,
       screenId: r
     },
-    type: ko
+    type: SET_PRIMITIVE_VARIABLE_DEFAULT_VALUE
   }
 }
-var Do = "ASYNC_UPDATE_PRIMITIVE_VARIABLE_PROPERTY"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PRIMITIVE_VARIABLE_PROPERTY = "ASYNC_UPDATE_PRIMITIVE_VARIABLE_PROPERTY"
 var Mo = function (e, t, n, r, o, i) {
   return {
-    type: Do,
+    type: ASYNC_UPDATE_PRIMITIVE_VARIABLE_PROPERTY,
     payload: {
       variableType: e,
       id: t,
@@ -1843,10 +1843,10 @@ var Mo = function (e, t, n, r, o, i) {
     }
   }
 }
-var Lo = "ASYNC_UPDATE_ARRAY_VARIABLE_PROPERTY"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_ARRAY_VARIABLE_PROPERTY = "ASYNC_UPDATE_ARRAY_VARIABLE_PROPERTY"
 var Po = function (e, t, n, r, o, i) {
   return {
-    type: Lo,
+    type: ASYNC_UPDATE_ARRAY_VARIABLE_PROPERTY,
     payload: {
       arrayType: e,
       id: t,
@@ -1857,7 +1857,7 @@ var Po = function (e, t, n, r, o, i) {
     }
   }
 }
-var Bo = "ADD_ARRAY_VARIABLE"
+var /* [auto-meaningful-name] */ADD_ARRAY_VARIABLE = "ADD_ARRAY_VARIABLE"
 var Fo = function (e, t, n, r, o, i) {
   return {
     payload: {
@@ -1868,10 +1868,10 @@ var Fo = function (e, t, n, r, o, i) {
       screenId: o,
       index: i
     },
-    type: Bo
+    type: ADD_ARRAY_VARIABLE
   }
 }
-var Go = "DELETE_ARRAY_VARIABLE"
+var /* [auto-meaningful-name] */DELETE_ARRAY_VARIABLE = "DELETE_ARRAY_VARIABLE"
 var Uo = function (e, t, n) {
   return {
     payload: {
@@ -1879,10 +1879,10 @@ var Uo = function (e, t, n) {
       id: t,
       screenId: n
     },
-    type: Go
+    type: DELETE_ARRAY_VARIABLE
   }
 }
-var Wo = "SET_ARRAY_VARIABLE_NAME"
+var /* [auto-meaningful-name] */SET_ARRAY_VARIABLE_NAME = "SET_ARRAY_VARIABLE_NAME"
 var Ho = function (e, t, n, r) {
   return {
     payload: {
@@ -1891,10 +1891,10 @@ var Ho = function (e, t, n, r) {
       name: n,
       screenId: r
     },
-    type: Wo
+    type: SET_ARRAY_VARIABLE_NAME
   }
 }
-var Vo = "SET_ARRAY_VARIABLE_DEFAULT_VALUE"
+var /* [auto-meaningful-name] */SET_ARRAY_VARIABLE_DEFAULT_VALUE = "SET_ARRAY_VARIABLE_DEFAULT_VALUE"
 var zo = function (e, t, n, r) {
   return {
     payload: {
@@ -1903,10 +1903,10 @@ var zo = function (e, t, n, r) {
       defaultValue: n,
       screenId: r
     },
-    type: Vo
+    type: SET_ARRAY_VARIABLE_DEFAULT_VALUE
   }
 }
-var Yo = "ADD_BROADCAST"
+var /* [auto-meaningful-name] */ADD_BROADCAST = "ADD_BROADCAST"
 var Ko = function (e, t, n) {
   return {
     payload: {
@@ -1914,11 +1914,11 @@ var Ko = function (e, t, n) {
       screenId: t,
       index: n
     },
-    type: Yo
+    type: ADD_BROADCAST
   }
 }
-var qo = "DELETE_BROADCAST"
-var Xo = "ASYNC_ADD_BROADCAST"
+var /* [auto-meaningful-name] */DELETE_BROADCAST = "DELETE_BROADCAST"
+var /* [auto-meaningful-name] */ASYNC_ADD_BROADCAST = "ASYNC_ADD_BROADCAST"
 var Qo = function (e, t, n, r, o) {
   return {
     payload: {
@@ -1928,77 +1928,77 @@ var Qo = function (e, t, n, r, o) {
       index: n,
       isEmitOT: o
     },
-    type: Xo
+    type: ASYNC_ADD_BROADCAST
   }
 }
-var Zo = "CHANGE_CONTEXT_MENU_INFO"
+var /* [auto-meaningful-name] */CHANGE_CONTEXT_MENU_INFO = "CHANGE_CONTEXT_MENU_INFO"
 var Jo = function (e) {
   return {
     payload: e,
-    type: Zo
+    type: CHANGE_CONTEXT_MENU_INFO
   }
 }
-var $o = "CLOSE_CONTEXT_MENU"
+var /* [auto-meaningful-name] */CLOSE_CONTEXT_MENU = "CLOSE_CONTEXT_MENU"
 var ei = function () {
   return {
-    type: $o,
+    type: CLOSE_CONTEXT_MENU,
     payload: undefined
   }
 }
-var ti = "ASYNC_COPY_WIDGET_TO_SCREEN"
+var /* [auto-meaningful-name] */ASYNC_COPY_WIDGET_TO_SCREEN = "ASYNC_COPY_WIDGET_TO_SCREEN"
 var ni = function (e, t) {
   return {
-    type: ti,
+    type: ASYNC_COPY_WIDGET_TO_SCREEN,
     payload: {
       widgetCloneList: e,
       screenId: t
     }
   }
 }
-var ri = "CLEAR_PROJECT"
+var /* [auto-meaningful-name] */CLEAR_PROJECT = "CLEAR_PROJECT"
 var oi = function () {
   return {
-    type: ri,
+    type: CLEAR_PROJECT,
     payload: undefined
   }
 }
-var ii = "ASYNC_INSERT_BRUSH_WIDGET"
+var /* [auto-meaningful-name] */ASYNC_INSERT_BRUSH_WIDGET = "ASYNC_INSERT_BRUSH_WIDGET"
 var ai = function (e, t) {
   return {
-    type: ii,
+    type: ASYNC_INSERT_BRUSH_WIDGET,
     payload: {
       widgetId: e,
       position: t
     }
   }
 }
-var si = "ASYNC_INSERT_ACTOR_WIDGET"
+var /* [auto-meaningful-name] */ASYNC_INSERT_ACTOR_WIDGET = "ASYNC_INSERT_ACTOR_WIDGET"
 var ci = function (e, t) {
   return {
-    type: si,
+    type: ASYNC_INSERT_ACTOR_WIDGET,
     payload: {
       widgetId: e,
       position: t
     }
   }
 }
-var li = "CLOSE_STYLE_DIALOG"
+var /* [auto-meaningful-name] */CLOSE_STYLE_DIALOG = "CLOSE_STYLE_DIALOG"
 var ui = function () {
   return {
-    type: li
+    type: CLOSE_STYLE_DIALOG
   }
 }
-var di = "OPEN_STYLE_DIALOG"
+var /* [auto-meaningful-name] */OPEN_STYLE_DIALOG = "OPEN_STYLE_DIALOG"
 var pi = function (e, t) {
   return {
-    type: di,
+    type: OPEN_STYLE_DIALOG,
     payload: {
       actorId: e,
       onSelect: t
     }
   }
 }
-var fi = "ASYNC_SAVE_PROJECT"
+var /* [auto-meaningful-name] */ASYNC_SAVE_PROJECT = "ASYNC_SAVE_PROJECT"
 var hi = function (e) {
   return {
     payload: {
@@ -2007,67 +2007,67 @@ var hi = function (e) {
       isNeedReport: e.isNeedReport,
       isSaveAs: e.isSaveAs
     },
-    type: fi
+    type: ASYNC_SAVE_PROJECT
   }
 }
-var mi = "ASYNC_LOCATE_BLOCK_POSITION"
+var /* [auto-meaningful-name] */ASYNC_LOCATE_BLOCK_POSITION = "ASYNC_LOCATE_BLOCK_POSITION"
 var gi = function (e, t) {
   return {
-    type: mi,
+    type: ASYNC_LOCATE_BLOCK_POSITION,
     payload: {
       blockId: e,
       screenId: t
     }
   }
 }
-var _i = "ASYNC_UPDATE_PROJECT_API_TOKEN"
-var vi = "SET_PROJECT_API_TOKEN"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_PROJECT_API_TOKEN = "ASYNC_UPDATE_PROJECT_API_TOKEN"
+var /* [auto-meaningful-name] */SET_PROJECT_API_TOKEN = "SET_PROJECT_API_TOKEN"
 var bi = function (e) {
   return {
-    type: vi,
+    type: SET_PROJECT_API_TOKEN,
     payload: {
       token: e
     }
   }
 }
-var yi = "SORT_PROJECT_SCREEN"
+var /* [auto-meaningful-name] */SORT_PROJECT_SCREEN = "SORT_PROJECT_SCREEN"
 var Ei = function (e) {
   return {
-    type: yi,
+    type: SORT_PROJECT_SCREEN,
     payload: {
       screens: e
     }
   }
 }
-var Oi = "SORT_SCREEN_BY_SCREEN_IDS"
+var /* [auto-meaningful-name] */SORT_SCREEN_BY_SCREEN_IDS = "SORT_SCREEN_BY_SCREEN_IDS"
 var wi = function (e) {
   return {
-    type: Oi,
+    type: SORT_SCREEN_BY_SCREEN_IDS,
     payload: {
       screenIds: e
     }
   }
 }
-var Ci = "SET_FOCUSED_WORKSPACE_AREA"
+var /* [auto-meaningful-name] */SET_FOCUSED_WORKSPACE_AREA = "SET_FOCUSED_WORKSPACE_AREA"
 var Ti = function (e) {
   return {
-    type: Ci,
+    type: SET_FOCUSED_WORKSPACE_AREA,
     payload: {
       area: e
     }
   }
 }
-var Si = "ASYNC_INITIAL_CLOUD_DB_DATA"
+var /* [auto-meaningful-name] */ASYNC_INITIAL_CLOUD_DB_DATA = "ASYNC_INITIAL_CLOUD_DB_DATA"
 var Ii = function () {
   return {
-    type: Si,
+    type: ASYNC_INITIAL_CLOUD_DB_DATA,
     payload: undefined
   }
 }
-var Ai = "ASYNC_UPDATE_CLOUD_DATABASE_FIELDS"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_CLOUD_DATABASE_FIELDS = "ASYNC_UPDATE_CLOUD_DATABASE_FIELDS"
 var ji = function (e, t, n) {
   return {
-    type: Ai,
+    type: ASYNC_UPDATE_CLOUD_DATABASE_FIELDS,
     payload: {
       widgetId: e,
       fields: t,
@@ -2075,10 +2075,10 @@ var ji = function (e, t, n) {
     }
   }
 }
-var Ni = "PUBLISH_WORK_TO_COMMUNITY"
+var /* [auto-meaningful-name] */PUBLISH_WORK_TO_COMMUNITY = "PUBLISH_WORK_TO_COMMUNITY"
 var Ri = function (e, t, n, r) {
   return {
-    type: Ni,
+    type: PUBLISH_WORK_TO_COMMUNITY,
     payload: {
       name: e,
       description: t,
@@ -2087,19 +2087,19 @@ var Ri = function (e, t, n, r) {
     }
   }
 }
-var ki = "PUBLISH_WORK_TO_H5"
+var /* [auto-meaningful-name] */PUBLISH_WORK_TO_H5 = "PUBLISH_WORK_TO_H5"
 var xi = function (e) {
   return {
-    type: ki,
+    type: PUBLISH_WORK_TO_H5,
     payload: {
       info: e
     }
   }
 }
-var Di = "ASYNC_CHANGE_DATA_VIEWER_TEMPLATE"
+var /* [auto-meaningful-name] */ASYNC_CHANGE_DATA_VIEWER_TEMPLATE = "ASYNC_CHANGE_DATA_VIEWER_TEMPLATE"
 var Mi = function (e, t, n) {
   return {
-    type: Di,
+    type: ASYNC_CHANGE_DATA_VIEWER_TEMPLATE,
     payload: {
       widgetId: e,
       templateType: t,
@@ -2107,140 +2107,140 @@ var Mi = function (e, t, n) {
     }
   }
 }
-var Li = "ASYNC_RESET_DATA_VIEWER_BINDINGS"
+var /* [auto-meaningful-name] */ASYNC_RESET_DATA_VIEWER_BINDINGS = "ASYNC_RESET_DATA_VIEWER_BINDINGS"
 var Pi = function (e, t) {
   return {
-    type: Li,
+    type: ASYNC_RESET_DATA_VIEWER_BINDINGS,
     payload: {
       gridId: e,
       deleteColumnIdList: t
     }
   }
 }
-var Bi = "ASYNC_REVERT_HISTORY_VERSION"
+var /* [auto-meaningful-name] */ASYNC_REVERT_HISTORY_VERSION = "ASYNC_REVERT_HISTORY_VERSION"
 var Fi = function (e) {
   return {
-    type: Bi,
+    type: ASYNC_REVERT_HISTORY_VERSION,
     payload: {
       archiveId: e
     }
   }
 }
-var Gi = "COLL_SET_DOC"
-var Ui = "ASYNC_INITIAL_CLOUD_DB_WIDGET"
+var /* [auto-meaningful-name] */COLL_SET_DOC = "COLL_SET_DOC"
+var /* [auto-meaningful-name] */ASYNC_INITIAL_CLOUD_DB_WIDGET = "ASYNC_INITIAL_CLOUD_DB_WIDGET"
 var Wi = function () {
   return {
-    type: Ui,
+    type: ASYNC_INITIAL_CLOUD_DB_WIDGET,
     payload: undefined
   }
 }
-var Hi = "SET_PROJECT_SHARE_INFO"
+var /* [auto-meaningful-name] */SET_PROJECT_SHARE_INFO = "SET_PROJECT_SHARE_INFO"
 var Vi = function (e) {
   return {
     payload: e,
-    type: Hi
+    type: SET_PROJECT_SHARE_INFO
   }
 }
-var zi = "ASYNC_GET_PROJECT_SHARE_INFO"
+var /* [auto-meaningful-name] */ASYNC_GET_PROJECT_SHARE_INFO = "ASYNC_GET_PROJECT_SHARE_INFO"
 var Yi = function (e) {
   return {
     payload: {
       callback: e
     },
-    type: zi
+    type: ASYNC_GET_PROJECT_SHARE_INFO
   }
 }
-var Ki = "SET_PROJECT_JSON_FROM"
+var /* [auto-meaningful-name] */SET_PROJECT_JSON_FROM = "SET_PROJECT_JSON_FROM"
 var qi = function (e) {
   return {
-    type: Ki,
+    type: SET_PROJECT_JSON_FROM,
     payload: e
   }
 }
-var Xi = "SET_PROJECT_SOURCE"
+var /* [auto-meaningful-name] */SET_PROJECT_SOURCE = "SET_PROJECT_SOURCE"
 var Qi = function (e) {
   return {
-    type: Xi,
+    type: SET_PROJECT_SOURCE,
     payload: e
   }
 }
-var Zi = "SHOW_BLOCKS_DROPDOWN"
-var Ji = "HIDE_BLOCKS_DROPDOWN"
+var /* [auto-meaningful-name] */SHOW_BLOCKS_DROPDOWN = "SHOW_BLOCKS_DROPDOWN"
+var /* [auto-meaningful-name] */HIDE_BLOCKS_DROPDOWN = "HIDE_BLOCKS_DROPDOWN"
 var $i = function () {
   return {
     payload: undefined,
-    type: Ji
+    type: HIDE_BLOCKS_DROPDOWN
   }
 }
-var ea = "SHOW_BLOCKS_SLIDER"
-var ta = "HIDE_BLOCKS_SLIDER"
+var /* [auto-meaningful-name] */SHOW_BLOCKS_SLIDER = "SHOW_BLOCKS_SLIDER"
+var /* [auto-meaningful-name] */HIDE_BLOCKS_SLIDER = "HIDE_BLOCKS_SLIDER"
 var na = function () {
   return {
     payload: undefined,
-    type: ta
+    type: HIDE_BLOCKS_SLIDER
   }
 }
-var ra = "UPDATE_BLOCKS_SLIDER_VALUE"
-var oa = "SHOW_CREATE_DYNAMIC_DATA_DIALOG"
+var /* [auto-meaningful-name] */UPDATE_BLOCKS_SLIDER_VALUE = "UPDATE_BLOCKS_SLIDER_VALUE"
+var /* [auto-meaningful-name] */SHOW_CREATE_DYNAMIC_DATA_DIALOG = "SHOW_CREATE_DYNAMIC_DATA_DIALOG"
 var ia = function (e) {
   return {
     payload: e,
-    type: oa
+    type: SHOW_CREATE_DYNAMIC_DATA_DIALOG
   }
 }
-var aa = "HIDE_CREATE_DYNAMIC_DATA_DIALOG"
+var /* [auto-meaningful-name] */HIDE_CREATE_DYNAMIC_DATA_DIALOG = "HIDE_CREATE_DYNAMIC_DATA_DIALOG"
 var sa = function () {
   return {
     payload: undefined,
-    type: aa
+    type: HIDE_CREATE_DYNAMIC_DATA_DIALOG
   }
 }
-var ca = "SHOW_COMMON_INPUT_DIALOG"
+var /* [auto-meaningful-name] */SHOW_COMMON_INPUT_DIALOG = "SHOW_COMMON_INPUT_DIALOG"
 var la = function (e) {
   return {
     payload: e,
-    type: ca
+    type: SHOW_COMMON_INPUT_DIALOG
   }
 }
-var ua = "HIDE_COMMON_INPUT_DIALOG"
+var /* [auto-meaningful-name] */HIDE_COMMON_INPUT_DIALOG = "HIDE_COMMON_INPUT_DIALOG"
 var da = function () {
   return {
     payload: undefined,
-    type: ua
+    type: HIDE_COMMON_INPUT_DIALOG
   }
 }
-var pa = "SHOW_EDIT_ARRAY_DIALOG"
+var /* [auto-meaningful-name] */SHOW_EDIT_ARRAY_DIALOG = "SHOW_EDIT_ARRAY_DIALOG"
 var fa = function (e) {
   return {
     payload: e,
-    type: pa
+    type: SHOW_EDIT_ARRAY_DIALOG
   }
 }
-var ha = "HIDE_EDIT_ARRAY_DIALOG"
+var /* [auto-meaningful-name] */HIDE_EDIT_ARRAY_DIALOG = "HIDE_EDIT_ARRAY_DIALOG"
 var ma = function () {
   return {
     payload: undefined,
-    type: ha
+    type: HIDE_EDIT_ARRAY_DIALOG
   }
 }
-var ga = "SHOW_EDIT_OBJECT_DIALOG"
+var /* [auto-meaningful-name] */SHOW_EDIT_OBJECT_DIALOG = "SHOW_EDIT_OBJECT_DIALOG"
 var _a = function (e) {
   return {
     payload: e,
-    type: ga
+    type: SHOW_EDIT_OBJECT_DIALOG
   }
 }
-var va = "HIDE_EDIT_OBJECT_DIALOG"
+var /* [auto-meaningful-name] */HIDE_EDIT_OBJECT_DIALOG = "HIDE_EDIT_OBJECT_DIALOG"
 var ba = function () {
   return {
     payload: undefined,
-    type: va
+    type: HIDE_EDIT_OBJECT_DIALOG
   }
 }
-var ya = "ASYNC_UPDATE_DOCUMENT_DATA"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_DOCUMENT_DATA = "ASYNC_UPDATE_DOCUMENT_DATA"
 var Ea = function (e, t, n) {
   return {
-    type: ya,
+    type: ASYNC_UPDATE_DOCUMENT_DATA,
     payload: {
       id: e,
       fields: t,
@@ -2248,21 +2248,21 @@ var Ea = function (e, t, n) {
     }
   }
 }
-var Oa = "SHOW_DOCUMENT_DIALOG"
+var /* [auto-meaningful-name] */SHOW_DOCUMENT_DIALOG = "SHOW_DOCUMENT_DIALOG"
 var wa = function (e) {
   return {
-    type: Oa,
+    type: SHOW_DOCUMENT_DIALOG,
     payload: e
   }
 }
-var Ca = "HIDE_DOCUMENT_DIALOG"
+var /* [auto-meaningful-name] */HIDE_DOCUMENT_DIALOG = "HIDE_DOCUMENT_DIALOG"
 var Ta = function () {
   return {
-    type: Ca,
+    type: HIDE_DOCUMENT_DIALOG,
     payload: undefined
   }
 }
-var Sa = "ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT"
+var /* [auto-meaningful-name] */ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT = "ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT"
 var Ia = function (e, t) {
   return {
     type: "CLOUD_DATABASE",
@@ -2272,38 +2272,38 @@ var Ia = function (e, t) {
     }
   }
 }
-var Aa = "SHOW_BLOCK_PALETTE"
+var /* [auto-meaningful-name] */SHOW_BLOCK_PALETTE = "SHOW_BLOCK_PALETTE"
 var ja = function (e) {
   return {
-    type: Aa,
+    type: SHOW_BLOCK_PALETTE,
     payload: e
   }
 }
-var Na = "HIDE_BLOCK_PALETTE"
+var /* [auto-meaningful-name] */HIDE_BLOCK_PALETTE = "HIDE_BLOCK_PALETTE"
 var Ra = function () {
   return {
-    type: Na,
+    type: HIDE_BLOCK_PALETTE,
     payload: undefined
   }
 }
-var ka = "SET_FLYOUT_VISIBLE"
+var /* [auto-meaningful-name] */SET_FLYOUT_VISIBLE = "SET_FLYOUT_VISIBLE"
 var xa = function (e) {
   return {
     payload: e,
-    type: ka
+    type: SET_FLYOUT_VISIBLE
   }
 }
-var Da = "SET_IS_BLOCK_DRAG_DELETE_AREA"
+var /* [auto-meaningful-name] */SET_IS_BLOCK_DRAG_DELETE_AREA = "SET_IS_BLOCK_DRAG_DELETE_AREA"
 var Ma = function (e) {
   return {
     payload: e,
-    type: Da
+    type: SET_IS_BLOCK_DRAG_DELETE_AREA
   }
 }
-var La = "ASYNC_UPDATE_CLOUD_DB_DATA"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_CLOUD_DB_DATA = "ASYNC_UPDATE_CLOUD_DB_DATA"
 var Pa = function (e, t, n) {
   return {
-    type: La,
+    type: ASYNC_UPDATE_CLOUD_DB_DATA,
     payload: {
       id: e,
       columns: t,
@@ -2311,15 +2311,15 @@ var Pa = function (e, t, n) {
     }
   }
 }
-var Ba = "INIT_PROJECT_DATA_WATCH"
-var Fa = "ADD_DATA_WATCH_VARIABLE"
+var /* [auto-meaningful-name] */INIT_PROJECT_DATA_WATCH = "INIT_PROJECT_DATA_WATCH"
+var /* [auto-meaningful-name] */ADD_DATA_WATCH_VARIABLE = "ADD_DATA_WATCH_VARIABLE"
 var Ga = function (e) {
   return {
     payload: e,
-    type: Fa
+    type: ADD_DATA_WATCH_VARIABLE
   }
 }
-var Ua = "UPDATE_DATA_WATCH_VARIABLE_PROPERTY"
+var /* [auto-meaningful-name] */UPDATE_DATA_WATCH_VARIABLE_PROPERTY = "UPDATE_DATA_WATCH_VARIABLE_PROPERTY"
 var Wa = function (e, t, n) {
   return {
     payload: {
@@ -2327,62 +2327,62 @@ var Wa = function (e, t, n) {
       property: t,
       value: n
     },
-    type: Ua
+    type: UPDATE_DATA_WATCH_VARIABLE_PROPERTY
   }
 }
-var Ha = "DELETE_DATA_WATCH_VARIABLE"
+var /* [auto-meaningful-name] */DELETE_DATA_WATCH_VARIABLE = "DELETE_DATA_WATCH_VARIABLE"
 var Va = function (e) {
   return {
     payload: e,
-    type: Ha
+    type: DELETE_DATA_WATCH_VARIABLE
   }
 }
-var za = "RESET_DATA_WATCH_VALUE"
+var /* [auto-meaningful-name] */RESET_DATA_WATCH_VALUE = "RESET_DATA_WATCH_VALUE"
 var Ya = function () {
   return {
-    type: za,
+    type: RESET_DATA_WATCH_VALUE,
     payload: undefined
   }
 }
-var Ka = "CLEAR_DATA_WATCH_VALUE"
+var /* [auto-meaningful-name] */CLEAR_DATA_WATCH_VALUE = "CLEAR_DATA_WATCH_VALUE"
 var qa = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] && arguments[0]
   return {
-    type: Ka,
+    type: CLEAR_DATA_WATCH_VALUE,
     payload: e
   }
 }
-var Xa = "SET_TABLE_DATA_WATCH_DIALOG"
+var /* [auto-meaningful-name] */SET_TABLE_DATA_WATCH_DIALOG = "SET_TABLE_DATA_WATCH_DIALOG"
 var Qa = function (e, t) {
   return {
-    type: Xa,
+    type: SET_TABLE_DATA_WATCH_DIALOG,
     payload: {
       visible: e,
       id: t
     }
   }
 }
-var Za = "SHOW_DATAWATCH_TOAST"
+var /* [auto-meaningful-name] */SHOW_DATAWATCH_TOAST = "SHOW_DATAWATCH_TOAST"
 var Ja = function (e, t) {
   return {
-    type: Za,
+    type: SHOW_DATAWATCH_TOAST,
     payload: {
       toast: e,
       showIcon: t
     }
   }
 }
-var $a = "HIDE_DATAWATCH_TOAST"
+var /* [auto-meaningful-name] */HIDE_DATAWATCH_TOAST = "HIDE_DATAWATCH_TOAST"
 var es = function () {
   return {
-    type: $a,
+    type: HIDE_DATAWATCH_TOAST,
     payload: undefined
   }
 }
-var ts = "SHOW_RESOURCE_LIBRARY_DIALOG"
+var /* [auto-meaningful-name] */SHOW_RESOURCE_LIBRARY_DIALOG = "SHOW_RESOURCE_LIBRARY_DIALOG"
 var ns = function (e, t, n, r, o) {
   return {
-    type: ts,
+    type: SHOW_RESOURCE_LIBRARY_DIALOG,
     payload: {
       mode: e,
       onSelect: t,
@@ -2392,33 +2392,33 @@ var ns = function (e, t, n, r, o) {
     }
   }
 }
-var rs = "HIDE_RESOURCE_LIBRARY_DIALOG"
+var /* [auto-meaningful-name] */HIDE_RESOURCE_LIBRARY_DIALOG = "HIDE_RESOURCE_LIBRARY_DIALOG"
 var os = function () {
   return {
-    type: rs,
+    type: HIDE_RESOURCE_LIBRARY_DIALOG,
     payload: undefined
   }
 }
-var is = "TOGGLE_RESOURCE_LIBRARY_DIALOG_VISIBLE"
+var /* [auto-meaningful-name] */TOGGLE_RESOURCE_LIBRARY_DIALOG_VISIBLE = "TOGGLE_RESOURCE_LIBRARY_DIALOG_VISIBLE"
 var as = function (e) {
   return {
-    type: is,
+    type: TOGGLE_RESOURCE_LIBRARY_DIALOG_VISIBLE,
     payload: {
       visible: e
     }
   }
 }
-var ss = "UPDATE_RESOURCE_LIBRARY_AREA"
+var /* [auto-meaningful-name] */UPDATE_RESOURCE_LIBRARY_AREA = "UPDATE_RESOURCE_LIBRARY_AREA"
 var cs = function () {
   return {
     payload: undefined,
-    type: ss
+    type: UPDATE_RESOURCE_LIBRARY_AREA
   }
 }
-var ls = "ASYNC_CHANGE_IMAGE_FILE_ID"
+var /* [auto-meaningful-name] */ASYNC_CHANGE_IMAGE_FILE_ID = "ASYNC_CHANGE_IMAGE_FILE_ID"
 var us = function (e, t, n) {
   return {
-    type: ls,
+    type: ASYNC_CHANGE_IMAGE_FILE_ID,
     payload: {
       newId: e,
       oldId: t,
@@ -2426,30 +2426,30 @@ var us = function (e, t, n) {
     }
   }
 }
-var ds = "ASYNC_DELETE_IMAGE_FILE"
+var /* [auto-meaningful-name] */ASYNC_DELETE_IMAGE_FILE = "ASYNC_DELETE_IMAGE_FILE"
 var ps = function (e, t) {
   return {
-    type: ds,
+    type: ASYNC_DELETE_IMAGE_FILE,
     payload: {
       imageFileId: e,
       isEmitOT: t
     }
   }
 }
-var fs = "ASYNC_IMPORT_IMAGE_TO_IMAGE_WIDGET"
+var /* [auto-meaningful-name] */ASYNC_IMPORT_IMAGE_TO_IMAGE_WIDGET = "ASYNC_IMPORT_IMAGE_TO_IMAGE_WIDGET"
 var hs = function (e, t) {
   return {
-    type: fs,
+    type: ASYNC_IMPORT_IMAGE_TO_IMAGE_WIDGET,
     payload: {
       imageFile: e,
       widgetId: t
     }
   }
 }
-var ms = "ASYNC_IMPORT_IMAGE_TO_RESOURCE_LIBRARY"
+var /* [auto-meaningful-name] */ASYNC_IMPORT_IMAGE_TO_RESOURCE_LIBRARY = "ASYNC_IMPORT_IMAGE_TO_RESOURCE_LIBRARY"
 var gs = function (e, t, n) {
   return {
-    type: ms,
+    type: ASYNC_IMPORT_IMAGE_TO_RESOURCE_LIBRARY,
     payload: {
       fileList: e,
       onSuccess: t,
@@ -2457,32 +2457,32 @@ var gs = function (e, t, n) {
     }
   }
 }
-var _s = "ASYNC_ADD_IMAGE_FROM_RESOURCE"
+var /* [auto-meaningful-name] */ASYNC_ADD_IMAGE_FROM_RESOURCE = "ASYNC_ADD_IMAGE_FROM_RESOURCE"
 var vs = function (e, t) {
   return {
-    type: _s,
+    type: ASYNC_ADD_IMAGE_FROM_RESOURCE,
     payload: {
       imageFiles: e,
       isEmitOT: t
     }
   }
 }
-var bs = "ADD_IMAGE_RESOURCE_LIBRARY"
-var ys = "DELETE_IMAGE_RESOURCE_LIBRARY"
-var Es = "ASYNC_IMPORT_SOUND_TO_AUDIO_WIDGET"
+var /* [auto-meaningful-name] */ADD_IMAGE_RESOURCE_LIBRARY = "ADD_IMAGE_RESOURCE_LIBRARY"
+var /* [auto-meaningful-name] */DELETE_IMAGE_RESOURCE_LIBRARY = "DELETE_IMAGE_RESOURCE_LIBRARY"
+var /* [auto-meaningful-name] */ASYNC_IMPORT_SOUND_TO_AUDIO_WIDGET = "ASYNC_IMPORT_SOUND_TO_AUDIO_WIDGET"
 var Os = function (e, t) {
   return {
-    type: Es,
+    type: ASYNC_IMPORT_SOUND_TO_AUDIO_WIDGET,
     payload: {
       soundFile: e,
       widgetId: t
     }
   }
 }
-var ws = "ASYNC_ADD_SOUND_UPLOAD"
+var /* [auto-meaningful-name] */ASYNC_ADD_SOUND_UPLOAD = "ASYNC_ADD_SOUND_UPLOAD"
 var Cs = function (e, t, n) {
   return {
-    type: ws,
+    type: ASYNC_ADD_SOUND_UPLOAD,
     payload: {
       fileList: e,
       onSuccess: t,
@@ -2490,65 +2490,65 @@ var Cs = function (e, t, n) {
     }
   }
 }
-var Ts = "REPLACE_SOUND_RESOURCE"
+var /* [auto-meaningful-name] */REPLACE_SOUND_RESOURCE = "REPLACE_SOUND_RESOURCE"
 var Ss = function (e) {
   return {
     payload: {
       soundFileList: e
     },
-    type: Ts
+    type: REPLACE_SOUND_RESOURCE
   }
 }
-var Is = "ADD_SOUND_STATE"
+var /* [auto-meaningful-name] */ADD_SOUND_STATE = "ADD_SOUND_STATE"
 var As = function (e, t) {
   return {
     payload: {
       soundFiles: e,
       index: t
     },
-    type: Is
+    type: ADD_SOUND_STATE
   }
 }
-var js = "ASYNC_ADD_SOUND_FROM_RESOURCE"
+var /* [auto-meaningful-name] */ASYNC_ADD_SOUND_FROM_RESOURCE = "ASYNC_ADD_SOUND_FROM_RESOURCE"
 var Ns = function (e, t) {
   return {
     payload: {
       soundFiles: e,
       isEmitOT: t
     },
-    type: js
+    type: ASYNC_ADD_SOUND_FROM_RESOURCE
   }
 }
-var Rs = "REMOVE_SOUND_STATE"
+var /* [auto-meaningful-name] */REMOVE_SOUND_STATE = "REMOVE_SOUND_STATE"
 var ks = function (e) {
   return {
     payload: {
       id: e
     },
-    type: Rs
+    type: REMOVE_SOUND_STATE
   }
 }
-var xs = "ASYNC_REMOVE_SOUND"
+var /* [auto-meaningful-name] */ASYNC_REMOVE_SOUND = "ASYNC_REMOVE_SOUND"
 var Ds = function (e, t) {
   return {
     payload: {
       id: e,
       isEmitOT: t
     },
-    type: xs
+    type: ASYNC_REMOVE_SOUND
   }
 }
-var Ms = "RENAME_SOUND_STATE"
+var /* [auto-meaningful-name] */RENAME_SOUND_STATE = "RENAME_SOUND_STATE"
 var Ls = function (e, t) {
   return {
     payload: {
       id: e,
       name: t
     },
-    type: Ms
+    type: RENAME_SOUND_STATE
   }
 }
-var Ps = "ASYNC_RENAME_SOUND"
+var /* [auto-meaningful-name] */ASYNC_RENAME_SOUND = "ASYNC_RENAME_SOUND"
 var Bs = function (e, t, n, r) {
   return {
     payload: {
@@ -2557,69 +2557,69 @@ var Bs = function (e, t, n, r) {
       newName: n,
       isEmitOT: r
     },
-    type: Ps
+    type: ASYNC_RENAME_SOUND
   }
 }
-var Fs = "CHANGE_SOUND_URL"
+var /* [auto-meaningful-name] */CHANGE_SOUND_URL = "CHANGE_SOUND_URL"
 var Gs = function (e, t) {
   return {
-    type: Fs,
+    type: CHANGE_SOUND_URL,
     payload: {
       id: e,
       cdnUrl: t
     }
   }
 }
-var Us = "ADD_ICON_STATE"
+var /* [auto-meaningful-name] */ADD_ICON_STATE = "ADD_ICON_STATE"
 var Ws = function (e, t) {
   return {
     payload: {
       iconFiles: e,
       index: t
     },
-    type: Us
+    type: ADD_ICON_STATE
   }
 }
-var Hs = "ASYNC_ADD_ICON_FROM_RESOURCE"
+var /* [auto-meaningful-name] */ASYNC_ADD_ICON_FROM_RESOURCE = "ASYNC_ADD_ICON_FROM_RESOURCE"
 var Vs = function (e, t) {
   return {
     payload: {
       iconFiles: e,
       isEmitOT: t
     },
-    type: Hs
+    type: ASYNC_ADD_ICON_FROM_RESOURCE
   }
 }
-var zs = "ASYNC_ADD_ICON_FROM_UPLOAD"
+var /* [auto-meaningful-name] */ASYNC_ADD_ICON_FROM_UPLOAD = "ASYNC_ADD_ICON_FROM_UPLOAD"
 var Ys = function (e, t) {
   return {
     payload: {
       fileList: e,
       onSuccess: t
     },
-    type: zs
+    type: ASYNC_ADD_ICON_FROM_UPLOAD
   }
 }
-var Ks = "ASYNC_REMOVE_ICON"
+var /* [auto-meaningful-name] */ASYNC_REMOVE_ICON = "ASYNC_REMOVE_ICON"
 var qs = function (e, t) {
   return {
     payload: {
       id: e,
       isEmitOT: t
     },
-    type: Ks
+    type: ASYNC_REMOVE_ICON
   }
 }
-var Xs = "REMOVE_ICON_STATE"
+var /* [auto-meaningful-name] */REMOVE_ICON_STATE = "REMOVE_ICON_STATE"
 var Qs = function (e) {
   return {
     payload: {
       id: e
     },
-    type: Xs
+    type: REMOVE_ICON_STATE
   }
 }
-var Zs = "ASYNC_RENAME_ICON"
+var /* [auto-meaningful-name] */ASYNC_RENAME_ICON = "ASYNC_RENAME_ICON"
 var Js = function (e, t, n, r) {
   return {
     payload: {
@@ -2628,38 +2628,38 @@ var Js = function (e, t, n, r) {
       newName: n,
       isEmitOT: r
     },
-    type: Zs
+    type: ASYNC_RENAME_ICON
   }
 }
-var $s = "RENAME_ICON_STATE"
+var /* [auto-meaningful-name] */RENAME_ICON_STATE = "RENAME_ICON_STATE"
 var ec = function (e, t) {
   return {
     payload: {
       id: e,
       name: t
     },
-    type: $s
+    type: RENAME_ICON_STATE
   }
 }
-var tc = "CHANGE_ICON_URL"
+var /* [auto-meaningful-name] */CHANGE_ICON_URL = "CHANGE_ICON_URL"
 var nc = function (e, t) {
   return {
-    type: tc,
+    type: CHANGE_ICON_URL,
     payload: {
       id: e,
       cdnUrl: t
     }
   }
 }
-var rc = "REPLACE_ICON_RESOURCE"
+var /* [auto-meaningful-name] */REPLACE_ICON_RESOURCE = "REPLACE_ICON_RESOURCE"
 var oc = function (e) {
   return {
     payload: {
       iconFileList: e
     },
-    type: rc
+    type: REPLACE_ICON_RESOURCE
   }
 }
-import ic = require("../../../unrestored/shared/1531/2584/38/341");
-import ac = require("../../../unrestored/shared/1531/2584/161");
-export default Bo
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_38_341 = require("../../../unrestored/shared/1531/2584/38/341")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_161 = require("../../../unrestored/shared/1531/2584/161")
+export default ADD_ARRAY_VARIABLE

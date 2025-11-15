@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：335
@@ -15,7 +15,7 @@ var u = function () {
     this.field = t
   }
   t.prototype.decode = function (t, e) {
-    for (var this$field = this.field, a = new o.a(this$field, t), u = new Int32Array(e), s = true, c = 0; c < e; c++) {
+    for (var /* [auto-meaningful-name] */this$field = this.field, a = new o.a(this$field, t), u = new Int32Array(e), s = true, c = 0; c < e; c++) {
       var f = a.evaluateAt(this$field.exp(c + this$field.getGeneratorBase()))
       u[u.length - 1 - c] = f
       if (0 !== f) {
@@ -44,7 +44,7 @@ var u = function () {
       t = e
       e = n
     }
-    for (var this$field = this.field, u = t, s = e, c = this$field.getZero(), f = this$field.getOne(); s.getDegree() >= (r / 2 | 0);) {
+    for (var /* [auto-meaningful-name] */this$field = this.field, u = t, s = e, c = this$field.getZero(), f = this$field.getOne(); s.getDegree() >= (r / 2 | 0);) {
       var h = u
       var l = c
       c = f
@@ -75,7 +75,7 @@ var u = function () {
     if (1 === e) {
       return Int32Array.from([t.getCoefficient(1)])
     }
-    for (var r = new Int32Array(e), n = 0, this$field = this.field, a = 1; a < this$field.getSize() && n < e; a++) {
+    for (var r = new Int32Array(e), n = 0, /* [auto-meaningful-name] */this$field = this.field, a = 1; a < this$field.getSize() && n < e; a++) {
       if (0 === t.evaluateAt(a)) {
         r[n] = this$field.inverse(a)
         n++
@@ -87,7 +87,7 @@ var u = function () {
     return r
   }
   t.prototype.findErrorMagnitudes = function (t, e) {
-    for (var e$length = e.length, n = new Int32Array(e$length), this$field = this.field, i = 0; i < e$length; i++) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, n = new Int32Array(e$length), /* [auto-meaningful-name] */this$field = this.field, i = 0; i < e$length; i++) {
       for (var a = this$field.inverse(e[i]), u = 1, s = 0; s < e$length; s++) {
         if (i !== s) {
           var c = this$field.multiply(e[s], a)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2242
@@ -8,8 +8,8 @@
 
 module.exports = function (e, t, n) {
   var r = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var a = e.schema[t]
   var s = e.schemaPath + e.util.getProperty(t)
   var c = e.errSchemaPath + "/" + t
@@ -30,15 +30,15 @@ module.exports = function (e, t, n) {
     var g = "' + " + p + " + '"
     var v = "data" + (d.dataLevel = e.dataLevel + 1)
     var m = "dataProperties" + e$level
-    var e$opts$ownProperties = e.opts.ownProperties
-    var e$baseId = e.baseId
+    var /* [auto-meaningful-name] */e$opts$ownProperties = e.opts.ownProperties
+    var /* [auto-meaningful-name] */e$baseId = e.baseId
     if (e$opts$ownProperties) {
       r += " var " + m + " = undefined; "
     }
     r += e$opts$ownProperties ? " " + m + " = " + m + " || Object.keys(" + l + "); for (var " + _ + "=0; " + _ + "<" + m + ".length; " + _ + "++) { var " + p + " = " + m + "[" + _ + "]; " : " for (var " + p + " in " + l + ") { "
     r += " var startErrs" + e$level + " = errors; "
     var w = p
-    var e$compositeRule = e.compositeRule
+    var /* [auto-meaningful-name] */e$compositeRule = e.compositeRule
     e.compositeRule = d.compositeRule = true
     var x = e.validate(d)
     d.baseId = e$baseId

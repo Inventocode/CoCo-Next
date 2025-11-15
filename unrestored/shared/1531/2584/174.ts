@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：174
@@ -6,7 +6,7 @@
 
 "use strict"
 
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -19,9 +19,9 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("./7");
-import a = require("./27");
-import s = require("./40");
+import i = require("./7")
+import a = require("./27")
+import s = require("./40")
 var c = function () {
   function e() {
     var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "appCraft"
@@ -44,7 +44,7 @@ var c = function () {
         } else {
           var i = indexedDB.open(e, t)
           i.onupgradeneeded = function (e) {
-            var e$target$result = e.target.result
+            var /* [auto-meaningful-name] */e$target$result = e.target.result
             if (false === e$target$result.objectStoreNames.contains(n._tableName)) {
               var o = e$target$result.createObjectStore(n._tableName, {
                 keyPath: "id"
@@ -59,7 +59,7 @@ var c = function () {
             r(e$target$result)
           }
           i.onsuccess = function (o) {
-            var o$target$result = o.target.result
+            var /* [auto-meaningful-name] */o$target$result = o.target.result
             n._dbs[e + t] = o$target$result
             r(o$target$result)
           }

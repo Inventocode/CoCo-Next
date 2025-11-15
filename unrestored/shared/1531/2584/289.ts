@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：289
@@ -9,7 +9,7 @@
 export { s as c }
 export { l as b }
 export { d as a }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -22,8 +22,8 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("./7");
-import a = require("../../../../src/shared/widget/custom/shop");
+import i = require("./7")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop = require("../../../../src/shared/widget/custom/shop")
 function s(e) {
   return c.apply(this, arguments)
 }
@@ -36,9 +36,9 @@ function c() {
     var c
     var l
     var u
-    var /* [auto-meaningful-name] */_e$sent2
-    var p
     var /* [auto-meaningful-name] */e$sent
+    var p
+    var /* [auto-meaningful-name] */_e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -60,11 +60,11 @@ function c() {
             l = 1
             u = 100
             e.next = 13
-            return a.e(l, u)
+            return $$_$$_$$_$$_src_shared_widget_custom_shop.e(l, u)
           case 13:
-            if (_e$sent2 = e.sent, c = c.concat(_e$sent2.items.map(function (e) {
+            if (e$sent = e.sent, c = c.concat(e$sent.items.map(function (e) {
               return e.resource_url
-            })), !((p = Math.ceil(_e$sent2.total / u)) > 1)) {
+            })), !((p = Math.ceil(e$sent.total / u)) > 1)) {
               e.next = 26
               break
             }
@@ -75,10 +75,10 @@ function c() {
               break
             }
             e.next = 21
-            return a.e(l, u)
+            return $$_$$_$$_$$_src_shared_widget_custom_shop.e(l, u)
           case 21:
-            e$sent = e.sent
-            c = c.concat(e$sent.items.map(function (e) {
+            _e$sent = e.sent
+            c = c.concat(_e$sent.items.map(function (e) {
               return e.resource_url
             }))
           case 23:
@@ -114,8 +114,8 @@ function l() {
 }
 function u() {
   return (u = i.a(o.a.mark(function e() {
-    var /* [auto-meaningful-name] */_e$sent5
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent2
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -123,12 +123,12 @@ function u() {
             e.next = 2
             return fetch("https://static.codemao.cn/coco/whitelist.json")
           case 2:
-            _e$sent5 = e.sent
-            e.next = 5
-            return _e$sent5.json()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent)
+            e.next = 5
+            return e$sent.json()
+          case 5:
+            _e$sent2 = e.sent
+            return e.abrupt("return", _e$sent2)
           case 7:
           case "end":
             return e.stop()

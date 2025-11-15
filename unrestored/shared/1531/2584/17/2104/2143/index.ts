@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2143
@@ -16,7 +16,7 @@ var o = require("@kitten-team/gl-matrix")
 var a = require("./2144")
 var s = require("./1320")
 var c = require("./2145")
-var u = require("../../../4/127")
+var u = require("../../../1036/127")
 var l = require("../../../125/195/index")
 var f = require("../../497/961")
 var d = require("../../../125/294")
@@ -97,12 +97,12 @@ var m = function () {
     this.cached_style = ""
   }
   e.prototype.hide_chaff = function (e, t) {
-    for (var n = 0, this$runtime_data$hide_chaff_effects = this.runtime_data.hide_chaff_effects; n < this$runtime_data$hide_chaff_effects.length; n++) {
+    for (var n = 0, /* [auto-meaningful-name] */this$runtime_data$hide_chaff_effects = this.runtime_data.hide_chaff_effects; n < this$runtime_data$hide_chaff_effects.length; n++) {
       (0, this$runtime_data$hide_chaff_effects[n])()
     }
     this.widget_div.hide(t)
     if (!e) {
-      var this$workspace_db$current = this.workspace_db.current
+      var /* [auto-meaningful-name] */this$workspace_db$current = this.workspace_db.current
       var o = this$workspace_db$current && this$workspace_db$current.get_toolbox()
       if (o && o.flyout && o.flyout.is_auto_close()) {
         o.clear_selection()
@@ -157,7 +157,7 @@ var m = function () {
     }
   }
   e.prototype.svg_resize = function (e) {
-    for (var t = e, t$get_options$parentWorkspace = t.get_options().parentWorkspace; t$get_options$parentWorkspace;) {
+    for (var t = e, /* [auto-meaningful-name] */t$get_options$parentWorkspace = t.get_options().parentWorkspace; t$get_options$parentWorkspace;) {
       t$get_options$parentWorkspace = (t = t$get_options$parentWorkspace).get_options().parentWorkspace
     }
     var r = t.get_parent_svg()
@@ -170,8 +170,8 @@ var m = function () {
       if (c && c.is_visible() && !c.is_auto_close()) {
         a += c.get_width()
       }
-      var i$offsetWidth = i.offsetWidth
-      var i$offsetHeight = i.offsetHeight
+      var /* [auto-meaningful-name] */i$offsetWidth = i.offsetWidth
+      var /* [auto-meaningful-name] */i$offsetHeight = i.offsetHeight
       if (!(i$offsetWidth < a || i$offsetHeight < s)) {
         var d = i$offsetWidth
         if (t.options.toolboxPosition === l.TOOLBOX_POSITION.LEFT) {
@@ -323,7 +323,7 @@ var m = function () {
     return r
   }
   e.prototype.is_target_input = function (e) {
-    var e$target = e.target
+    var /* [auto-meaningful-name] */e$target = e.target
     return "textarea" == e$target.type || "text" == e$target.type || "number" == e$target.type || "email" == e$target.type || "password" == e$target.type || "search" == e$target.type || "tel" == e$target.type || "url" == e$target.type || e$target.isContentEditable
   }
   e.prototype.check_message_references = function (e) {
@@ -360,7 +360,7 @@ var m = function () {
     var t = []
     var n = e.split("")
     n.push("")
-    for (var l$TokenizationState$BaseCase = l.TokenizationState.BaseCase, i = [], o = "", a = "", s = 0; s < n.length; s++) {
+    for (var /* [auto-meaningful-name] */l$TokenizationState$BaseCase = l.TokenizationState.BaseCase, i = [], o = "", a = "", s = 0; s < n.length; s++) {
       var c = n[s]
       switch (l$TokenizationState$BaseCase) {
         case l.TokenizationState.BaseCase:
@@ -564,7 +564,7 @@ var m = function () {
       r = this.measure_text(e.textContent || "", this.cached_style)
     } catch (c) {
       console.warn(c)
-      var e$textContent = e.textContent
+      var /* [auto-meaningful-name] */e$textContent = e.textContent
       return undefined == e$textContent ? 0 : 8 * e$textContent.length
     }
     this.cached_widths.set(n, r)

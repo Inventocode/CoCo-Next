@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：150
@@ -63,7 +63,7 @@ var i = function () {
     }
   }
   t.prototype.addResultPoints = function (t) {
-    var this$resultPoints = this.resultPoints
+    var /* [auto-meaningful-name] */this$resultPoints = this.resultPoints
     if (null === this$resultPoints) {
       this.resultPoints = t
     } else if (null !== t && t.length > 0) {

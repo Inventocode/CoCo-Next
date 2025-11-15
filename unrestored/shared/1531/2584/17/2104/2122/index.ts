@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2122
@@ -208,7 +208,7 @@ var l = function (e) {
           })
         } else if ("right" === e.align) {
           i.init_flyout_button(e)
-          var i$current_item_line$offset_right = i.current_item_line.offset_right
+          var /* [auto-meaningful-name] */i$current_item_line$offset_right = i.current_item_line.offset_right
           var s = e.width + e.margin_right
           i.excute_after_next_reflow.push(function (t) {
             var n = t / i.workspace_.get_scale()
@@ -243,15 +243,15 @@ var l = function (e) {
   t.prototype.reflow_internal = function (e) {
     var t = this
     if (this.workspace_ && this.targetWorkspace_) {
-      var this$targetWorkspace_$options$flyout = this.targetWorkspace_.options.flyout
-      var this$targetWorkspace_$options$flyout$max_width = this$targetWorkspace_$options$flyout.max_width
+      var /* [auto-meaningful-name] */this$targetWorkspace_$options$flyout = this.targetWorkspace_.options.flyout
+      var /* [auto-meaningful-name] */this$targetWorkspace_$options$flyout$max_width = this$targetWorkspace_$options$flyout.max_width
       var i = this$targetWorkspace_$options$flyout.min_width || 0
       if ("number" === typeof this.fixed_width) {
         i = this.fixed_width
       } else {
         for (var o = 0; o < e.length; o++) {
           var a = e[o]
-          var a$width = a.width
+          var /* [auto-meaningful-name] */a$width = a.width
           if (a.is_starting_block()) {
             a$width += this.targetWorkspace_.options.flyout.blocks.head_block_offset[0]
           }
@@ -284,7 +284,7 @@ var l = function (e) {
     var t = e[0]
     var n = e[1]
     var r = Math.atan2(n, t) / Math.PI * 180
-    var this$drag_angle_range_ = this.drag_angle_range_
+    var /* [auto-meaningful-name] */this$drag_angle_range_ = this.drag_angle_range_
     return r < this$drag_angle_range_ && r > -this$drag_angle_range_ || r < -180 + this$drag_angle_range_ || r > 180 - this$drag_angle_range_
   }
   t.prototype.place_new_block = function (e, t) {
@@ -318,7 +318,7 @@ var l = function (e) {
     if (this.is_visible()) {
       e.preventDefault()
       e.stopPropagation()
-      var e$deltaY = e.deltaY
+      var /* [auto-meaningful-name] */e$deltaY = e.deltaY
       if (e$deltaY && this.scrollbar_) {
         var n = this.get_metrics()
         if (n) {
@@ -349,11 +349,11 @@ var l = function (e) {
   t.prototype.get_client_rect = function () {
     if (this.svg_group) {
       var e = this.svg_group.getBoundingClientRect()
-      var this$workspace_$get_options$delete_area_margin = this.workspace_.get_options().delete_area_margin
-      var e$left = e.left
-      var e$top = e.top
-      var e$width = e.width
-      var e$height = e.height
+      var /* [auto-meaningful-name] */this$workspace_$get_options$delete_area_margin = this.workspace_.get_options().delete_area_margin
+      var /* [auto-meaningful-name] */e$left = e.left
+      var /* [auto-meaningful-name] */e$top = e.top
+      var /* [auto-meaningful-name] */e$width = e.width
+      var /* [auto-meaningful-name] */e$height = e.height
       return new u.Rect(e$left - this$workspace_$get_options$delete_area_margin[3], e$top - this$workspace_$get_options$delete_area_margin[0], e$width + this$workspace_$get_options$delete_area_margin[1] + this$workspace_$get_options$delete_area_margin[3], e$height + this$workspace_$get_options$delete_area_margin[0] + this$workspace_$get_options$delete_area_margin[2])
     }
   }
@@ -372,8 +372,8 @@ var l = function (e) {
           } else {
             this.svg_group.style.overflow = "hidden"
           }
-          var e$absoluteTop = e.absoluteTop
-          var e$absoluteLeft = e.absoluteLeft
+          var /* [auto-meaningful-name] */e$absoluteTop = e.absoluteTop
+          var /* [auto-meaningful-name] */e$absoluteLeft = e.absoluteLeft
           if (this.toolboxPosition_ === a.TOOLBOX_POSITION.RIGHT) {
             e$absoluteLeft += e.viewWidth
             if (this.is_auto_close() && this.is_visible()) {

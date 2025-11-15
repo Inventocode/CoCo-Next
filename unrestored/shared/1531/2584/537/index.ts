@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：537
@@ -6,9 +6,9 @@
 
 "use strict"
 
-import r = require("../6");
-import o = require("../10/index");
-import i = require("../8");
+import r = require("../6")
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import i = require("../8")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,7 +21,7 @@ var a = function __importDefault(module) {
   })
   return defaultExport
 }(i)
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -34,7 +34,7 @@ var c = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import l = require("../75/index");
+import /* [auto-meaningful-name] */$$_75_index = require("../75/index")
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -46,30 +46,30 @@ var u = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(l)
+}($$_75_index)
 require("./856")
-import d = require("../94/index");
+import /* [auto-meaningful-name] */$$_94_index = require("../94/index")
 var _a
 _a = React.memo(function (e) {
-  var e$className = e.className
-  var e$style = e.style
-  var e$visible = e.visible
-  var e$maskClosable = e.maskClosable
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$maskClosable = e.maskClosable
   var p = undefined !== e$maskClosable && e$maskClosable
-  var e$mask = e.mask
+  var /* [auto-meaningful-name] */e$mask = e.mask
   var h = undefined === e$mask || e$mask
-  var e$onClose = e.onClose
-  var e$children = e.children
-  var e$showCloseButton = e.showCloseButton
+  var /* [auto-meaningful-name] */e$onClose = e.onClose
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$showCloseButton = e.showCloseButton
   var v = undefined === e$showCloseButton || e$showCloseButton
-  var e$withPortal = e.withPortal
+  var /* [auto-meaningful-name] */e$withPortal = e.withPortal
   var y = undefined !== e$withPortal && e$withPortal
-  var e$title = e.title
-  var e$footer = e.footer
+  var /* [auto-meaningful-name] */e$title = e.title
+  var /* [auto-meaningful-name] */e$footer = e.footer
   var w = React.useRef(null)
   var C = React.useRef(null)
   var T = React.useState(false)
-  var S = o.a(T, 2)
+  var S = $$_10_index.a(T, 2)
   S[0]
   var I = S[1]
   var A = document.getElementById("_cocoDialogContainer")
@@ -88,10 +88,10 @@ _a = React.memo(function (e) {
     }
   }, [j, p])
   React.useEffect(function () {
-    var w$current = w.current
+    var /* [auto-meaningful-name] */w$current = w.current
     var t = function (e) {
-      var /* [auto-meaningful-name] */c$current
-      if (!(null === (c$current = C.current) || undefined === c$current ? undefined : c$current.contains(e.target))) {
+      var /* [auto-meaningful-name] */C$current
+      if (!(null === (C$current = C.current) || undefined === C$current ? undefined : C$current.contains(e.target))) {
         e.stopPropagation()
       }
     }
@@ -134,7 +134,7 @@ _a = React.memo(function (e) {
   }, e$title && c.a.createElement("div", null, e$title), v && c.a.createElement("span", {
     className: "coco-dialog-close",
     onClick: j
-  }, c.a.createElement(d.a, {
+  }, c.a.createElement($$_94_index.a, {
     type: "icon-close"
   }))), c.a.createElement("div", {
     className: "coco-dialog-content",

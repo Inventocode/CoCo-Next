@@ -1,18 +1,18 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1592
  */
 
-var r = require("../1623/86")
+var r = require("../1698/86/index")
 var o = require("./1069")
-var math$abs = Math.abs
-var math$pow = Math.pow
+var /* [auto-meaningful-name] */Math$abs = Math.abs
+var /* [auto-meaningful-name] */Math$pow = Math.pow
 r({
   target: "Math",
   stat: true
 }, {
   cbrt: function (e) {
-    return o(e = +e) * math$pow(math$abs(e), 1 / 3)
+    return o(e = +e) * Math$pow(Math$abs(e), 1 / 3)
   }
 })

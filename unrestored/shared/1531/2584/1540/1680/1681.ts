@@ -1,17 +1,17 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1681
  */
 
-var r = require("../1623/309")
-var math$floor = Math.floor
-var $replace = "".replace
+var r = require("../1541/309")
+var /* [auto-meaningful-name] */Math$floor = Math.floor
+var /* [auto-meaningful-name] */$replace = "".replace
 var a = /\$([$&'`]|\d{1,2}|<[^>]*>)/g
 var s = /\$([$&'`]|\d{1,2})/g
 module.exports = function (e, t, n, c, l, u) {
   var d = n + e.length
-  var c$length = c.length
+  var /* [auto-meaningful-name] */c$length = c.length
   var f = s
   if (undefined !== l) {
     l = r(l)
@@ -37,7 +37,7 @@ module.exports = function (e, t, n, c, l, u) {
           return r
         }
         if (s > c$length) {
-          var u = math$floor(s / 10)
+          var u = Math$floor(s / 10)
           return 0 === u ? r : u <= c$length ? undefined === c[u - 1] ? i.charAt(1) : c[u - 1] + i.charAt(1) : r
         }
         a = c[s - 1]

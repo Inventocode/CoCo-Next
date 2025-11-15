@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：261
@@ -7,8 +7,8 @@
 "use strict"
 
 export { f as a }
-import * as r from "../81/index"
-import * as i from "./599"
+import * as /* [auto-meaningful-name] */$$_81_index from "../81/index"
+import * as /* [auto-meaningful-name] */$_599 from "./599"
 function o() {
   return "undefined" !== typeof navigator
 }
@@ -17,7 +17,7 @@ function a() {
 }
 var s = function () {
   return (s = Object.assign || function (t) {
-    for (var e, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var e, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in e = arguments[n]) if (Object.prototype.hasOwnProperty.call(e, i)) {
         t[i] = e[i]
       }
@@ -198,7 +198,7 @@ var f = function () {
   }
   Object.defineProperty(t.prototype, "possibleFormats", {
     set: function (t) {
-      this.hints.set(r.DecodeHintType.POSSIBLE_FORMATS, t)
+      this.hints.set($$_81_index.DecodeHintType.POSSIBLE_FORMATS, t)
     },
     enumerable: false,
     configurable: true
@@ -234,7 +234,7 @@ var f = function () {
     var i = e.getVideoTracks()
     try {
       for (var o = l(i), a = o.next(); !a.done; a = o.next()) {
-        var a$value = a.value
+        var /* [auto-meaningful-name] */a$value = a.value
         if (t.mediaStreamIsTorchCompatibleTrack(a$value)) {
           return true
         }
@@ -271,10 +271,10 @@ var f = function () {
   t.getMediaElement = function (t, e) {
     var n = document.getElementById(t)
     if (!n) {
-      throw new r.ArgumentException("element with id '" + t + "' not found")
+      throw new $$_81_index.ArgumentException("element with id '" + t + "' not found")
     }
     if (n.nodeName.toLowerCase() !== e.toLowerCase()) {
-      throw new r.ArgumentException("element with id '" + t + "' must be an " + e + " element")
+      throw new $$_81_index.ArgumentException("element with id '" + t + "' must be an " + e + " element")
     }
     return n
   }
@@ -319,9 +319,9 @@ var f = function () {
     return !!t.complete && 0 !== t.naturalWidth
   }
   t.createBinaryBitmapFromCanvas = function (t) {
-    var e = new i.a(t)
-    var n = new r.HybridBinarizer(e)
-    return new r.BinaryBitmap(n)
+    var e = new $_599.a(t)
+    var n = new $$_81_index.HybridBinarizer(e)
+    return new $$_81_index.BinaryBitmap(n)
   }
   t.drawImageOnCanvas = function (t, e) {
     t.drawImage(e, 0, 0)
@@ -343,15 +343,15 @@ var f = function () {
   }
   t.createCaptureCanvas = function (e) {
     if (!e) {
-      throw new r.ArgumentException("Cannot create a capture canvas without a media element.")
+      throw new $$_81_index.ArgumentException("Cannot create a capture canvas without a media element.")
     }
     if ("undefined" === typeof document) {
       throw new Error("The page \"Document\" is undefined, make sure you're running in a browser.")
     }
     var n = document.createElement("canvas")
     var i = t.getMediaElementDimensions(e)
-    var i$width = i.width
-    var i$height = i.height
+    var /* [auto-meaningful-name] */i$width = i.width
+    var /* [auto-meaningful-name] */i$height = i.height
     n.style.width = i$width + "px"
     n.style.height = i$height + "px"
     n.width = i$width
@@ -571,7 +571,7 @@ var f = function () {
   }
   t.checkCallbackFnOrThrow = function (t) {
     if (!t) {
-      throw new r.ArgumentException("`callbackFn` is a required parameter, you cannot capture results without it.")
+      throw new $$_81_index.ArgumentException("`callbackFn` is a required parameter, you cannot capture results without it.")
     }
   }
   t.disposeMediaStream = function (t) {
@@ -598,7 +598,7 @@ var f = function () {
         switch (i.label) {
           case 0:
             if (!e) {
-              throw new r.ArgumentException("An image element must be provided.")
+              throw new $$_81_index.ArgumentException("An image element must be provided.")
             }
             n = t.prepareImageElement(e)
             return [4, this._decodeOnLoadImage(n)]
@@ -615,7 +615,7 @@ var f = function () {
         switch (i.label) {
           case 0:
             if (!e) {
-              throw new r.ArgumentException("An URL must be provided.")
+              throw new $$_81_index.ArgumentException("An URL must be provided.")
             }
             (n = t.prepareImageElement()).src = e
             i.label = 1
@@ -811,7 +811,7 @@ var f = function () {
         switch (a.label) {
           case 0:
             if (t.checkCallbackFnOrThrow(n), !e) {
-              throw new r.ArgumentException("A video element must be provided.")
+              throw new $$_81_index.ArgumentException("A video element must be provided.")
             }
             i = t.prepareVideoElement(e)
             this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
@@ -832,7 +832,7 @@ var f = function () {
         switch (s.label) {
           case 0:
             if (t.checkCallbackFnOrThrow(n), !e) {
-              throw new r.ArgumentException("An URL must be provided.")
+              throw new $$_81_index.ArgumentException("An URL must be provided.")
             }
             (i = t.prepareVideoElement()).src = e
             o = function () {
@@ -921,7 +921,7 @@ var f = function () {
         switch (o.label) {
           case 0:
             if (!e) {
-              throw new r.ArgumentException("A video element must be provided.")
+              throw new $$_81_index.ArgumentException("A video element must be provided.")
             }
             n = t.prepareVideoElement(e)
             this$options$tryPlayVideoTimeout = this.options.tryPlayVideoTimeout
@@ -943,7 +943,7 @@ var f = function () {
         switch (o.label) {
           case 0:
             if (!e) {
-              throw new r.ArgumentException("An URL must be provided.")
+              throw new $$_81_index.ArgumentException("An URL must be provided.")
             }
             (n = t.prepareVideoElement()).src = e
             i = this.decodeOnceFromVideoElement(n)
@@ -980,13 +980,13 @@ var f = function () {
           return void u.stop()
         }
         if (o) {
-          if (o instanceof r.NotFoundException && e) {
+          if (o instanceof $$_81_index.NotFoundException && e) {
             return
           }
-          if (o instanceof r.ChecksumException && n) {
+          if (o instanceof $$_81_index.ChecksumException && n) {
             return
           }
-          if (o instanceof r.FormatException && i) {
+          if (o instanceof $$_81_index.FormatException && i) {
             return
           }
           u.stop()
@@ -1028,9 +1028,9 @@ var f = function () {
           u = setTimeout(f, o.options.delayBetweenScanSuccess)
         } catch (g) {
           n(undefined, g, d)
-          var p = g instanceof r.ChecksumException
-          var m = g instanceof r.FormatException
-          var b = g instanceof r.NotFoundException
+          var p = g instanceof $$_81_index.ChecksumException
+          var m = g instanceof $$_81_index.FormatException
+          var b = g instanceof $$_81_index.NotFoundException
           if (p || m || b) {
             return void (u = setTimeout(f, o.options.delayBetweenScanAttempts))
           }

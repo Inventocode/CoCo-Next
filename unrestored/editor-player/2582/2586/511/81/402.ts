@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：402
@@ -63,7 +63,7 @@ var s = function (t) {
     var /* [auto-meaningful-name] */y$return
     var s
     var /* [auto-meaningful-name] */v$return
-    var this$decodeMiddleCounters = this.decodeMiddleCounters
+    var /* [auto-meaningful-name] */this$decodeMiddleCounters = this.decodeMiddleCounters
     this$decodeMiddleCounters[0] = 0
     this$decodeMiddleCounters[1] = 0
     this$decodeMiddleCounters[2] = 0

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：404
@@ -11,10 +11,10 @@ var i = require("../164")
 var o = require("../56")
 var a = require("../37")
 var s = require("../150")
-var u = require("./123")
+var u = require("../603/123")
 var c = require("../105")
 var l = require("../169")
-var d = require("../73/index")
+var d = require("../73")
 var f = require("../117")
 var h = require("../181/index")
 var p = function () {
@@ -89,7 +89,7 @@ var b = function () {
           for (r = undefined, l = m(o), d = l.next(), undefined; !d.done; d = l.next()) {
             var l
             var d
-            var d$value = d.value
+            var /* [auto-meaningful-name] */d$value = d.value
             if (null != d$value[1]) {
               a = Math.trunc(Math.max(a, d$value[1].getY()))
             }
@@ -178,7 +178,7 @@ var b = function () {
     for (var u = n, c = 0; e.get(u, r) && u > 0 && c++ < t.MAX_PIXEL_DRIFT;) {
       u--
     }
-    for (var l = u, d = 0, a$length = a.length, m = o; l < i; l++) {
+    for (var l = u, d = 0, /* [auto-meaningful-name] */a$length = a.length, m = o; l < i; l++) {
       if (e.get(l, r) !== m) {
         s[d]++
       } else {
@@ -201,7 +201,7 @@ var b = function () {
     return d === a$length - 1 && t.patternMatchVariance(s, a, t.MAX_INDIVIDUAL_VARIANCE) < t.MAX_AVG_VARIANCE ? new Int32Array([u, l - 1]) : null
   }
   t.patternMatchVariance = function (t, e, n) {
-    for (var t$length = t.length, i = 0, o = 0, a = 0; a < t$length; a++) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, i = 0, o = 0, a = 0; a < t$length; a++) {
       i += t[a]
       o += e[a]
     }
@@ -235,7 +235,7 @@ var b = function () {
   return t
 }()
 var g = require("../118")
-var v = require("../603")
+var v = require("../603/index")
 var _ = function () {
   function t(e, n, r, i, o) {
     if (e instanceof t) {
@@ -284,10 +284,10 @@ var _ = function () {
     return null == e ? n : null == n ? e : new t(e.image, e.topLeft, e.bottomLeft, n.topRight, n.bottomRight)
   }
   t.prototype.addMissingRows = function (e, n, r) {
-    var this$topLeft = this.topLeft
-    var this$bottomLeft = this.bottomLeft
-    var this$topRight = this.topRight
-    var this$bottomRight = this.bottomRight
+    var /* [auto-meaningful-name] */this$topLeft = this.topLeft
+    var /* [auto-meaningful-name] */this$bottomLeft = this.bottomLeft
+    var /* [auto-meaningful-name] */this$topRight = this.topRight
+    var /* [auto-meaningful-name] */this$bottomRight = this.bottomRight
     if (e > 0) {
       var u = r ? this.topLeft : this.topRight
       var c = Math.trunc(u.getY() - e)
@@ -487,7 +487,7 @@ var O = function () {
     var r = 0
     try {
       for (var i = E(this.codewords), o = i.next(); !o.done; o = i.next()) {
-        var o$value = o.value
+        var /* [auto-meaningful-name] */o$value = o.value
         if (null != o$value) {
           n.format("%3d: %3d|%3d%n", r++, o$value.getRowNumber(), o$value.getValue())
         } else {
@@ -681,7 +681,7 @@ var j = function (t) {
     var /* [auto-meaningful-name] */n$return
     try {
       for (var n = C(this.getCodewords()), r = n.next(); !r.done; r = n.next()) {
-        var r$value = r.value
+        var /* [auto-meaningful-name] */r$value = r.value
         if (null != r$value) {
           r$value.setRowNumberAsRowIndicatorColumn()
         }
@@ -743,7 +743,7 @@ var j = function (t) {
     var r = new Int32Array(n.getRowCount())
     try {
       for (var i = C(this.getCodewords()), o = i.next(); !o.done; o = i.next()) {
-        var o$value = o.value
+        var /* [auto-meaningful-name] */o$value = o.value
         if (null != o$value) {
           var s = o$value.getRowNumber()
           if (s >= r.length) {
@@ -804,7 +804,7 @@ var j = function (t) {
     var a = new S()
     try {
       for (var s = C(n), c = s.next(); !c.done; c = s.next()) {
-        var c$value = c.value
+        var /* [auto-meaningful-name] */c$value = c.value
         if (null != c$value) {
           c$value.setRowNumberAsRowIndicatorColumn()
           var d = c$value.getValue() % 30
@@ -915,7 +915,7 @@ var k = function () {
     this.adjustIndicatorColumnRowNumbers(this.detectionResultColumns[0])
     this.adjustIndicatorColumnRowNumbers(this.detectionResultColumns[this.barcodeColumnCount + 1])
     var t
-    var u$a$MAX_CODEWORDS_IN_BARCODE = u.a.MAX_CODEWORDS_IN_BARCODE
+    var /* [auto-meaningful-name] */u$a$MAX_CODEWORDS_IN_BARCODE = u.a.MAX_CODEWORDS_IN_BARCODE
     do {
       t = u$a$MAX_CODEWORDS_IN_BARCODE
       u$a$MAX_CODEWORDS_IN_BARCODE = this.adjustRowNumbersAndGetCount()
@@ -1047,7 +1047,7 @@ var k = function () {
     }
     try {
       for (var l = M(c), d = l.next(); !d.done; d = l.next()) {
-        var d$value = d.value
+        var /* [auto-meaningful-name] */d$value = d.value
         if (t.adjustRowNumber(a, d$value)) {
           return
         }
@@ -1161,7 +1161,7 @@ var R = function () {
   t.BARCODE_ROW_UNKNOWN = -1
   return t
 }()
-var N = require("../73/515")
+var N = require("./515")
 var x = function () {
   function t() {}
   t.initialize = function () {
@@ -1215,7 +1215,7 @@ var x = function () {
         r[i] = Math.fround(e[i] / n)
       }
     }
-    var n$a$MAX_VALUE = N.a.MAX_VALUE
+    var /* [auto-meaningful-name] */N$a$MAX_VALUE = N.a.MAX_VALUE
     var a = -1
     if (!this.bSymbolTableReady) {
       t.initialize()
@@ -1223,12 +1223,12 @@ var x = function () {
     for (var s = 0; s < t.RATIOS_TABLE.length; s++) {
       for (var c = 0, l = t.RATIOS_TABLE[s], d = 0; d < u.a.BARS_IN_MODULE; d++) {
         var f = Math.fround(l[d] - r[d])
-        if ((c += Math.fround(f * f)) >= n$a$MAX_VALUE) {
+        if ((c += Math.fround(f * f)) >= N$a$MAX_VALUE) {
           break
         }
       }
-      if (c < n$a$MAX_VALUE) {
-        n$a$MAX_VALUE = c
+      if (c < N$a$MAX_VALUE) {
+        N$a$MAX_VALUE = c
         a = u.a.SYMBOL_TABLE[s]
       }
     }
@@ -1336,7 +1336,7 @@ var B = function () {
     var a = 0
     try {
       for (var s = L(i), u = s.next(); !u.done; u = s.next()) {
-        var u$value = u.value
+        var /* [auto-meaningful-name] */u$value = u.value
         a += o - u$value
         if (u$value > 0) {
           break
@@ -1375,7 +1375,7 @@ var B = function () {
     var r = -1
     try {
       for (var i = L(t), o = i.next(); !o.done; o = i.next()) {
-        var o$value = o.value
+        var /* [auto-meaningful-name] */o$value = o.value
         r = Math.max(r, o$value)
       }
     } catch (s) {
@@ -1490,13 +1490,13 @@ var B = function () {
     var u = 0
     try {
       for (var c = L(t.getDetectionResultColumns()), l = c.next(); !l.done; l = c.next()) {
-        var l$value = l.value
+        var /* [auto-meaningful-name] */l$value = l.value
         if (null != l$value) {
           try {
             for (r = undefined, f = L(l$value.getCodewords()), h = f.next(), undefined; !h.done; h = f.next()) {
               var f
               var h
-              var h$value = h.value
+              var /* [auto-meaningful-name] */h$value = h.value
               if (null != h$value) {
                 var m = h$value.getRowNumber()
                 if (m >= 0) {
@@ -1571,7 +1571,7 @@ var B = function () {
         for (o = undefined, l = L(e.getDetectionResultColumn(n).getCodewords()), d = l.next(), undefined; !d.done; d = l.next()) {
           var l
           var d
-          var d$value = d.value
+          var /* [auto-meaningful-name] */d$value = d.value
           if (null != d$value) {
             return (i ? d$value.getEndX() : d$value.getStartX()) + s * c * (d$value.getEndX() - d$value.getStartX())
           }
@@ -1775,7 +1775,7 @@ var U = function () {
     var c = b.detectMultiple(e, n, i)
     try {
       for (var d = P(c.getPoints()), f = d.next(); !f.done; f = d.next()) {
-        var f$value = f.value
+        var /* [auto-meaningful-name] */f$value = f.value
         var p = B.decode(c.getBits(), f$value[4], f$value[5], f$value[6], f$value[7], t.getMinCodewordWidth(f$value), t.getMaxCodewordWidth(f$value))
         var m = new s.a(p.getText(), p.getRawBytes(), undefined, f$value, r.a.PDF_417)
         m.putMetadata(l.a.ERROR_CORRECTION_LEVEL, p.getECLevel())

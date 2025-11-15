@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2425
@@ -7,7 +7,7 @@
 var r = require("../../../../../../254/2513/2514/2515/973/index")
 var i = require("../2468/1398/index")
 module.exports = function (e, t, n, o) {
-  var n$length = n.length
+  var /* [auto-meaningful-name] */n$length = n.length
   var s = n$length
   var c = !o
   if (null == e) {

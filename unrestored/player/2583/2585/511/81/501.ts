@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：501
@@ -8,7 +8,7 @@
 
 var r
 var i = require("./334")
-var o = require("./191/index")
+var o = require("./191")
 var a = require("./335")
 var s = require("./221")
 var u = require("./56")
@@ -39,8 +39,8 @@ var d = function () {
     return this.getEncodedData(t)
   }
   t.getEncodedData = function (e) {
-    for (var e$length = e.length, _r$UPPER = r.UPPER, r$UPPER = r.UPPER, a = "", s = 0; s < e$length;) {
-      if (r$UPPER === r.BINARY) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, /* [auto-meaningful-name] */r$UPPER = r.UPPER, /* [auto-meaningful-name] */_r$UPPER = r.UPPER, a = "", s = 0; s < e$length;) {
+      if (_r$UPPER === r.BINARY) {
         if (e$length - s < 5) {
           break
         }
@@ -62,24 +62,24 @@ var d = function () {
           a += c.a.castAsNonUtf8Char(d)
           s += 8
         }
-        r$UPPER = _r$UPPER
+        _r$UPPER = r$UPPER
       } else {
-        var f = r$UPPER === r.DIGIT ? 4 : 5
+        var f = _r$UPPER === r.DIGIT ? 4 : 5
         if (e$length - s < f) {
           break
         }
         d = t.readCode(e, s, f)
         s += f
-        var h = t.getCharacter(r$UPPER, d)
+        var h = t.getCharacter(_r$UPPER, d)
         if (h.startsWith("CTRL_")) {
-          _r$UPPER = r$UPPER
-          r$UPPER = t.getTable(h.charAt(5))
+          r$UPPER = _r$UPPER
+          _r$UPPER = t.getTable(h.charAt(5))
           if ("L" === h.charAt(6)) {
-            _r$UPPER = r$UPPER
+            r$UPPER = _r$UPPER
           }
         } else {
           a += h
-          r$UPPER = _r$UPPER
+          _r$UPPER = r$UPPER
         }
       }
     }

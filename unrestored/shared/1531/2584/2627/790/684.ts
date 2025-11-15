@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：684
@@ -6,14 +6,14 @@
 
 "use strict"
 
-import r = require("../../29");
-import i = require("../../20");
-import o = require("../../33/index");
-import a = require("../../108");
-import React = require("react");
-import c = require("../../739/1503/1009");
-import u = require("../../1026/690");
-import l = require("../../8");
+import /* [auto-meaningful-name] */$$_$$_29 = require("../../29")
+import /* [auto-meaningful-name] */$$_$$_20 = require("../../20")
+import /* [auto-meaningful-name] */$$_$$_33_index = require("../../33/index")
+import /* [auto-meaningful-name] */$$_$$_108 = require("../../108")
+import /* [auto-meaningful-name] */React = require("react")
+import /* [auto-meaningful-name] */$$_$$_739_1503_1009 = require("../../739/1503/1009")
+import /* [auto-meaningful-name] */$$_$$_1026_690 = require("../../1026/690")
+import /* [auto-meaningful-name] */$$_$$_8 = require("../../8")
 var f = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -25,8 +25,8 @@ var f = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(l)
-import d = require("../462");
+}($$_$$_8)
+import /* [auto-meaningful-name] */$$_462 = require("../462")
 function h(e, t) {
   var n = {}
   n[e.toLowerCase()] = t.toLowerCase()
@@ -50,9 +50,9 @@ var p = function (e, t) {
     }
   }
   return n
-}(d.a(), "undefined" !== typeof window ? window : {})
+}($$_462.a(), "undefined" !== typeof window ? window : {})
 var _ = {}
-if (d.a()) {
+if ($$_462.a()) {
   var A = document.createElement("div")
   _ = A.style
 }
@@ -63,7 +63,7 @@ function v(e) {
   }
   var t = p[e]
   if (t) {
-    for (var n = Object.keys(t), n$length = n.length, i = 0; i < n$length; i += 1) {
+    for (var n = Object.keys(t), /* [auto-meaningful-name] */n$length = n.length, i = 0; i < n$length; i += 1) {
       var o = n[i]
       if (Object.prototype.hasOwnProperty.call(t, o) && o in _) {
         g[e] = t[o]
@@ -79,14 +79,14 @@ var b = !(!m || !y)
 var w = m || "animationend"
 var E = y || "transitionend"
 function x(e, t) {
-  return e ? "object" === a.a(e) ? e[t.replace(/-\w/g, function (e) {
+  return e ? "object" === $$_$$_108.a(e) ? e[t.replace(/-\w/g, function (e) {
     return e[1].toUpperCase()
   })] : "".concat(e, "-").concat(t) : null
 }
 function C(e) {
   var t = React.useRef(false)
   var n = React.useState(e)
-  var r = o.a(n, 2)
+  var r = $$_$$_33_index.a(n, 2)
   var i = r[0]
   var a = r[1]
   React.useEffect(function () {
@@ -100,21 +100,21 @@ function C(e) {
     }
   }]
 }
-var O = d.a() ? React.useLayoutEffect : React.useEffect
-import k = require("../../1026/413");
+var O = $$_462.a() ? React.useLayoutEffect : React.useEffect
+import /* [auto-meaningful-name] */$$_$$_1026_413 = require("../../1026/413")
 var S = ["prepare", "start", "active", "end"]
 function T(e) {
   return "active" === e || "end" === e
 }
 var B = function (e, t) {
   var n = React.useState("none")
-  var r = o.a(n, 2)
+  var r = $$_$$_33_index.a(n, 2)
   var i = r[0]
   var a = r[1]
   var c = function () {
     var e = React.useRef(null)
     function t() {
-      k.a.cancel(e.current)
+      $$_$$_1026_413.a.cancel(e.current)
     }
     React.useEffect(function () {
       return function () {
@@ -124,7 +124,7 @@ var B = function (e, t) {
     return [function n(r) {
       var i = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 2
       t()
-      var o = k.a(function () {
+      var o = $$_$$_1026_413.a(function () {
         if (i <= 1) {
           r({
             isCanceled: function () {
@@ -138,7 +138,7 @@ var B = function (e, t) {
       e.current = o
     }, t]
   }()
-  var u = o.a(c, 2)
+  var u = $$_$$_33_index.a(c, 2)
   var l = u[0]
   var f = u[1]
   O(function () {
@@ -174,37 +174,37 @@ var B = function (e, t) {
   }, i]
 }
 function D(e, t, n, a) {
-  var a$motionEnter = a.motionEnter
+  var /* [auto-meaningful-name] */a$motionEnter = a.motionEnter
   var u = undefined === a$motionEnter || a$motionEnter
-  var a$motionAppear = a.motionAppear
+  var /* [auto-meaningful-name] */a$motionAppear = a.motionAppear
   var f = undefined === a$motionAppear || a$motionAppear
-  var a$motionLeave = a.motionLeave
+  var /* [auto-meaningful-name] */a$motionLeave = a.motionLeave
   var h = undefined === a$motionLeave || a$motionLeave
-  var a$motionDeadline = a.motionDeadline
-  var a$motionLeaveImmediately = a.motionLeaveImmediately
-  var a$onAppearPrepare = a.onAppearPrepare
-  var a$onEnterPrepare = a.onEnterPrepare
-  var a$onLeavePrepare = a.onLeavePrepare
-  var a$onAppearStart = a.onAppearStart
-  var a$onEnterStart = a.onEnterStart
-  var a$onLeaveStart = a.onLeaveStart
-  var a$onAppearActive = a.onAppearActive
-  var a$onEnterActive = a.onEnterActive
-  var a$onLeaveActive = a.onLeaveActive
-  var a$onAppearEnd = a.onAppearEnd
-  var a$onEnterEnd = a.onEnterEnd
-  var a$onLeaveEnd = a.onLeaveEnd
-  var a$onVisibleChanged = a.onVisibleChanged
+  var /* [auto-meaningful-name] */a$motionDeadline = a.motionDeadline
+  var /* [auto-meaningful-name] */a$motionLeaveImmediately = a.motionLeaveImmediately
+  var /* [auto-meaningful-name] */a$onAppearPrepare = a.onAppearPrepare
+  var /* [auto-meaningful-name] */a$onEnterPrepare = a.onEnterPrepare
+  var /* [auto-meaningful-name] */a$onLeavePrepare = a.onLeavePrepare
+  var /* [auto-meaningful-name] */a$onAppearStart = a.onAppearStart
+  var /* [auto-meaningful-name] */a$onEnterStart = a.onEnterStart
+  var /* [auto-meaningful-name] */a$onLeaveStart = a.onLeaveStart
+  var /* [auto-meaningful-name] */a$onAppearActive = a.onAppearActive
+  var /* [auto-meaningful-name] */a$onEnterActive = a.onEnterActive
+  var /* [auto-meaningful-name] */a$onLeaveActive = a.onLeaveActive
+  var /* [auto-meaningful-name] */a$onAppearEnd = a.onAppearEnd
+  var /* [auto-meaningful-name] */a$onEnterEnd = a.onEnterEnd
+  var /* [auto-meaningful-name] */a$onLeaveEnd = a.onLeaveEnd
+  var /* [auto-meaningful-name] */a$onVisibleChanged = a.onVisibleChanged
   var P = C()
-  var N = o.a(P, 2)
+  var N = $$_$$_33_index.a(P, 2)
   var M = N[0]
   var j = N[1]
   var L = C("none")
-  var U = o.a(L, 2)
+  var U = $$_$$_33_index.a(L, 2)
   var H = U[0]
   var V = U[1]
   var G = C(null)
-  var z = o.a(G, 2)
+  var z = $$_$$_33_index.a(G, 2)
   var Q = z[0]
   var W = z[1]
   var K = React.useRef(false)
@@ -265,7 +265,7 @@ function D(e, t, n, a) {
       }
     }, i]
   }(Z)
-  var te = o.a(ee, 1)[0]
+  var te = $$_$$_33_index.a(ee, 1)[0]
   var ne = React.useMemo(function () {
     var e
     var t
@@ -273,21 +273,21 @@ function D(e, t, n, a) {
     switch (H) {
       case "appear":
         e = {}
-        r.a(e, "prepare", a$onAppearPrepare)
-        r.a(e, "start", a$onAppearStart)
-        r.a(e, "active", a$onAppearActive)
+        $$_$$_29.a(e, "prepare", a$onAppearPrepare)
+        $$_$$_29.a(e, "start", a$onAppearStart)
+        $$_$$_29.a(e, "active", a$onAppearActive)
         return e
       case "enter":
         t = {}
-        r.a(t, "prepare", a$onEnterPrepare)
-        r.a(t, "start", a$onEnterStart)
-        r.a(t, "active", a$onEnterActive)
+        $$_$$_29.a(t, "prepare", a$onEnterPrepare)
+        $$_$$_29.a(t, "start", a$onEnterStart)
+        $$_$$_29.a(t, "active", a$onEnterActive)
         return t
       case "leave":
         n = {}
-        r.a(n, "prepare", a$onLeavePrepare)
-        r.a(n, "start", a$onLeaveStart)
-        r.a(n, "active", a$onLeaveActive)
+        $$_$$_29.a(n, "prepare", a$onLeavePrepare)
+        $$_$$_29.a(n, "start", a$onLeaveStart)
+        $$_$$_29.a(n, "active", a$onLeaveActive)
         return n
       default:
         return {}
@@ -295,7 +295,7 @@ function D(e, t, n, a) {
   }, [H])
   var re = B(H, function (e) {
     if ("prepare" === e) {
-      var ne$prepare = ne.prepare
+      var /* [auto-meaningful-name] */ne$prepare = ne.prepare
       return !!ne$prepare && ne$prepare($())
     }
     var n
@@ -315,7 +315,7 @@ function D(e, t, n, a) {
     }
     return true
   })
-  var ie = o.a(re, 2)
+  var ie = $$_$$_33_index.a(re, 2)
   var oe = ie[0]
   var ae = ie[1]
   var se = T(ae)
@@ -323,16 +323,16 @@ function D(e, t, n, a) {
   O(function () {
     j(t)
     var n
-    var k$current = K.current
+    var /* [auto-meaningful-name] */K$current = K.current
     K.current = true
     if (e) {
-      if (!k$current && t && f) {
+      if (!K$current && t && f) {
         n = "appear"
       }
-      if (k$current && t && u) {
+      if (K$current && t && u) {
         n = "enter"
       }
-      if (k$current && !t && h || !k$current && a$motionLeaveImmediately && !t && h) {
+      if (K$current && !t && h || !K$current && a$motionLeaveImmediately && !t && h) {
         n = "leave"
       }
       if (n) {
@@ -361,24 +361,24 @@ function D(e, t, n, a) {
   }, [M, H])
   var ce = Q
   if (ne.prepare && "start" === ae) {
-    ce = i.a({
+    ce = $$_$$_20.a({
       transition: "none"
     }, ce)
   }
   return [H, ae, ce, null !== M && undefined !== M ? M : t]
 }
-import I = require("../../95");
-import F = require("../../96");
-import R = require("../../120");
-import P = require("../../140");
+import /* [auto-meaningful-name] */$$_$$_95 = require("../../95")
+import /* [auto-meaningful-name] */$$_$$_96 = require("../../96")
+import /* [auto-meaningful-name] */$$_$$_120 = require("../../120")
+import /* [auto-meaningful-name] */$$_$$_140 = require("../../140")
 var N = function (e) {
-  R.a(n, e)
-  var t = P.a(n)
+  $$_$$_120.a(n, e)
+  var t = $$_$$_140.a(n)
   function n() {
-    I.a(this, n)
+    $$_$$_95.a(this, n)
     return t.apply(this, arguments)
   }
-  F.a(n, [{
+  $$_$$_96.a(n, [{
     key: "render",
     value: function () {
       return this.props.children
@@ -391,30 +391,30 @@ var M = function (e) {
   function n(e) {
     return !(!e.motionName || !t)
   }
-  if ("object" === a.a(e)) {
+  if ("object" === $$_$$_108.a(e)) {
     t = e.transitionSupport
   }
   var l = React.forwardRef(function (e, t) {
-    var e$visible = e.visible
+    var /* [auto-meaningful-name] */e$visible = e.visible
     var l = undefined === e$visible || e$visible
-    var e$removeOnLeave = e.removeOnLeave
+    var /* [auto-meaningful-name] */e$removeOnLeave = e.removeOnLeave
     var h = undefined === e$removeOnLeave || e$removeOnLeave
-    var e$forceRender = e.forceRender
-    var e$children = e.children
-    var e$motionName = e.motionName
-    var e$leavedClassName = e.leavedClassName
-    var e$eventProps = e.eventProps
+    var /* [auto-meaningful-name] */e$forceRender = e.forceRender
+    var /* [auto-meaningful-name] */e$children = e.children
+    var /* [auto-meaningful-name] */e$motionName = e.motionName
+    var /* [auto-meaningful-name] */e$leavedClassName = e.leavedClassName
+    var /* [auto-meaningful-name] */e$eventProps = e.eventProps
     var m = n(e)
     var y = React.useRef()
     var b = React.useRef()
     var w = D(m, l, function () {
       try {
-        return c.a(y.current || b.current)
+        return $$_$$_739_1503_1009.a(y.current || b.current)
       } catch (e) {
         return null
       }
     }, e)
-    var E = o.a(w, 4)
+    var E = $$_$$_33_index.a(w, 4)
     var C = E[0]
     var O = E[1]
     var k = E[2]
@@ -428,9 +428,9 @@ var M = function (e) {
     var F
     var R = React.useCallback(function (e) {
       y.current = e
-      u.b(I.current, e)
+      $$_$$_1026_690.b(I.current, e)
     }, [])
-    var P = i.a(i.a({}, e$eventProps), {}, {
+    var P = $$_$$_20.a($$_$$_20.a({}, e$eventProps), {}, {
       visible: l
     })
     if (e$children) {
@@ -448,14 +448,14 @@ var M = function (e) {
             }
           }
         }
-        F = e$children(i.a(i.a({}, P), {}, {
-          className: f()(x(e$motionName, C), (M = {}, r.a(M, x(e$motionName, "".concat(C, "-").concat(j)), j), r.a(M, e$motionName, "string" === typeof e$motionName), M)),
+        F = e$children($$_$$_20.a($$_$$_20.a({}, P), {}, {
+          className: f()(x(e$motionName, C), (M = {}, $$_$$_29.a(M, x(e$motionName, "".concat(C, "-").concat(j)), j), $$_$$_29.a(M, e$motionName, "string" === typeof e$motionName), M)),
           style: k
         }), R)
       } else {
-        F = S ? e$children(i.a({}, P), R) : !h && B.current ? e$children(i.a(i.a({}, P), {}, {
+        F = S ? e$children($$_$$_20.a({}, P), R) : !h && B.current ? e$children($$_$$_20.a($$_$$_20.a({}, P), {}, {
           className: e$leavedClassName
-        }), R) : e$forceRender ? e$children(i.a(i.a({}, P), {}, {
+        }), R) : e$forceRender ? e$children($$_$$_20.a($$_$$_20.a({}, P), {}, {
           style: {
             display: "none"
           }
@@ -471,14 +471,14 @@ var M = function (e) {
   l.displayName = "CSSMotion"
   return l
 }(b)
-import j = require("../../19");
-import L = require("../../54");
+import /* [auto-meaningful-name] */$$_$$_19 = require("../../19")
+import /* [auto-meaningful-name] */$$_$$_54 = require("../../54")
 function U(e) {
   var t
-  t = e && "object" === a.a(e) && "key" in e ? e : {
+  t = e && "object" === $$_$$_108.a(e) && "key" in e ? e : {
     key: e
   }
-  return i.a(i.a({}, t), {}, {
+  return $$_$$_20.a($$_$$_20.a({}, t), {}, {
     key: String(t.key)
   })
 }
@@ -491,7 +491,7 @@ function V() {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : []
   var n = []
   var r = 0
-  var t$length = t.length
+  var /* [auto-meaningful-name] */t$length = t.length
   var a = H(e)
   var s = H(t)
   a.forEach(function (e) {
@@ -500,13 +500,13 @@ function V() {
       if (c.key === e.key) {
         if (r < a) {
           n = n.concat(s.slice(r, a).map(function (e) {
-            return i.a(i.a({}, e), {}, {
+            return $$_$$_20.a($$_$$_20.a({}, e), {}, {
               status: "add"
             })
           }))
           r = a
         }
-        n.push(i.a(i.a({}, c), {}, {
+        n.push($$_$$_20.a($$_$$_20.a({}, c), {}, {
           status: "keep"
         }))
         r += 1
@@ -515,21 +515,21 @@ function V() {
       }
     }
     if (!t) {
-      n.push(i.a(i.a({}, e), {}, {
+      n.push($$_$$_20.a($$_$$_20.a({}, e), {}, {
         status: "remove"
       }))
     }
   })
   if (r < t$length) {
     n = n.concat(s.slice(r).map(function (e) {
-      return i.a(i.a({}, e), {}, {
+      return $$_$$_20.a($$_$$_20.a({}, e), {}, {
         status: "add"
       })
     }))
   }
   var c = {}
   n.forEach(function (e) {
-    var e$key = e.key
+    var /* [auto-meaningful-name] */e$key = e.key
     c[e$key] = (c[e$key] || 0) + 1
   })
   var u = Object.keys(c).filter(function (e) {
@@ -537,8 +537,8 @@ function V() {
   })
   u.forEach(function (e) {
     (n = n.filter(function (t) {
-      var t$key = t.key
-      var t$status = t.status
+      var /* [auto-meaningful-name] */t$key = t.key
+      var /* [auto-meaningful-name] */t$status = t.status
       return t$key !== e || "remove" !== t$status
     })).forEach(function (t) {
       if (t.key === e) {
@@ -552,11 +552,11 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
 (function (e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : M
   var n = function (e) {
-    R.a(r, e)
-    var n = P.a(r)
+    $$_$$_120.a(r, e)
+    var n = $$_$$_140.a(r)
     function r() {
       var e
-      I.a(this, r);
+      $$_$$_95.a(this, r);
       (e = n.apply(this, arguments)).state = {
         keyEntities: []
       }
@@ -564,7 +564,7 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
         e.setState(function (e) {
           return {
             keyEntities: e.keyEntities.map(function (e) {
-              return e.key !== t ? e : i.a(i.a({}, e), {}, {
+              return e.key !== t ? e : $$_$$_20.a($$_$$_20.a({}, e), {}, {
                 status: "removed"
               })
             })
@@ -573,16 +573,16 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
       }
       return e
     }
-    F.a(r, [{
+    $$_$$_96.a(r, [{
       key: "render",
       value: function () {
         var e = this
-        var this$state$keyEntities = this.state.keyEntities
-        var this$props = this.props
-        var this$props$component = this$props.component
-        var this$props$children = this$props.children
-        var this$props$onVisibleChanged = this$props.onVisibleChanged
-        var c = L.a(this$props, ["component", "children", "onVisibleChanged"])
+        var /* [auto-meaningful-name] */this$state$keyEntities = this.state.keyEntities
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$component = this$props.component
+        var /* [auto-meaningful-name] */this$props$children = this$props.children
+        var /* [auto-meaningful-name] */this$props$onVisibleChanged = this$props.onVisibleChanged
+        var c = $$_$$_54.a(this$props, ["component", "children", "onVisibleChanged"])
         var u = this$props$component || React.Fragment
         var l = {}
         G.forEach(function (e) {
@@ -591,10 +591,10 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
         })
         delete c.keys
         return React.createElement(u, c, this$state$keyEntities.map(function (n) {
-          var n$status = n.status
-          var i = L.a(n, ["status"])
+          var /* [auto-meaningful-name] */n$status = n.status
+          var i = $$_$$_54.a(n, ["status"])
           var c = "add" === n$status || "keep" === n$status
-          return React.createElement(t, j.a({}, l, {
+          return React.createElement(t, $$_$$_19.a({}, l, {
             key: i.key,
             visible: c,
             eventProps: i,
@@ -614,13 +614,13 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
     }], [{
       key: "getDerivedStateFromProps",
       value: function (e, t) {
-        var e$keys = e.keys
-        var t$keyEntities = t.keyEntities
+        var /* [auto-meaningful-name] */e$keys = e.keys
+        var /* [auto-meaningful-name] */t$keyEntities = t.keyEntities
         var i = H(e$keys)
         return {
           keyEntities: V(t$keyEntities, i).filter(function (e) {
             var t = t$keyEntities.find(function (t) {
-              var t$key = t.key
+              var /* [auto-meaningful-name] */t$key = t.key
               return e.key === t$key
             })
             return !t || "removed" !== t.status || "remove" !== e.status

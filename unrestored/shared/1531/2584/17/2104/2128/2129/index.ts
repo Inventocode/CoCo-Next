@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2129
@@ -12,15 +12,15 @@ Object.defineProperty(exports, "__esModule", {
 exports.onKeyDown_ = exports.Inject = undefined
 var r = require("tslib")
 var i = require("@kitten-team/gl-matrix")
-var o = require("../../../../4/127")
+var o = require("../../../../1036/127")
 var a = require("../../../../125/195/index")
-var s = require("../../2174/755")
+var s = require("../../2175/755")
 var c = require("../../2150/1321")
 var u = require("../../../../1001/213/index")
 var l = (0, r.__importStar)(require("../../../../125/index"))
 var f = require("./2130")
 var d = require("../../../497/index")
-var h = require("../../../497/644")
+var h = require("../../../../1179/2554/644")
 exports.Inject = function (e, t) {
   if ((0, u.is_string)(e)) {
     e = document.getElementById(e) || document.querySelector(e) || undefined

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2336
@@ -9,7 +9,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("./1366/498")
+var r = require("./2342/498")
 var i = require("./645")
 exports.tagged = function (e, t) {
   return function (n, o, a) {

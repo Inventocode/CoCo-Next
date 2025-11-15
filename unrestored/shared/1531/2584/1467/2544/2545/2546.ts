@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2546
@@ -9,7 +9,7 @@ module.exports = function () {
   if (!e.rangeCount) {
     return function () {}
   }
-  for (var document$activeElement = document.activeElement, n = [], r = 0; r < e.rangeCount; r++) {
+  for (var /* [auto-meaningful-name] */document$activeElement = document.activeElement, n = [], r = 0; r < e.rangeCount; r++) {
     n.push(e.getRangeAt(r))
   }
   switch (document$activeElement.tagName.toUpperCase()) {

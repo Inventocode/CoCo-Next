@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2217
@@ -56,13 +56,13 @@ g.prototype.addMetaSchema = function (e, t, n) {
   return this
 }
 g.prototype.validateSchema = function (e, t) {
-  var e$$schema = e.$schema
+  var /* [auto-meaningful-name] */e$$schema = e.$schema
   if (undefined !== e$$schema && "string" != typeof e$$schema) {
     throw new Error("$schema must be a string")
   }
   if (!(e$$schema = e$$schema || this._opts.defaultMeta || function (e) {
-    var e$_opts$meta = e._opts.meta
-    e._opts.defaultMeta = "object" == typeof e$_opts$meta ? e._getId(e$_opts$meta) || e$_opts$meta : e.getSchema(p) ? p : undefined
+    var /* [auto-meaningful-name] */e$_opts$meta = e._opts.meta
+    e._opts.defaultMeta = "object" == typeof e$_opts$meta ? e._getId(e$_opts$meta) || e$_opts$meta : e.getSchema(Http__jsonSchema$org_draft07_schema) ? Http__jsonSchema$org_draft07_schema : undefined
     return e._opts.defaultMeta
   }(this))) {
     this.logger.warn("meta-schema not available")
@@ -92,9 +92,9 @@ g.prototype.getSchema = function (e) {
           schema: {}
         }, t)
         if (n) {
-          var n$schema = n.schema
-          var n$root = n.root
-          var n$baseId = n.baseId
+          var /* [auto-meaningful-name] */n$schema = n.schema
+          var /* [auto-meaningful-name] */n$root = n.root
+          var /* [auto-meaningful-name] */n$baseId = n.baseId
           var u = r.call(e, n$schema, n$root, undefined, n$baseId)
           e._fragments[t] = new a({
             ref: t,
@@ -130,7 +130,7 @@ g.prototype.removeSchema = function (e) {
       delete this._refs[e]
       return this
     case "object":
-      var this$_opts$serialize = this._opts.serialize,
+      var /* [auto-meaningful-name] */this$_opts$serialize = this._opts.serialize,
         r = this$_opts$serialize ? this$_opts$serialize(e) : e
       this._cache.del(r)
       var o = this._getId(e)
@@ -165,7 +165,7 @@ g.prototype._addSchema = function (e, t, n, r) {
   if ("object" != typeof e && "boolean" != typeof e) {
     throw new Error("schema should be object or boolean")
   }
-  var this$_opts$serialize = this._opts.serialize
+  var /* [auto-meaningful-name] */this$_opts$serialize = this._opts.serialize
   var s = this$_opts$serialize ? this$_opts$serialize(e) : e
   var c = this._cache.get(s)
   if (c) {
@@ -233,7 +233,7 @@ g.prototype._compile = function (e, t) {
   e.root = i.root
   return i
   function o() {
-    var e$validate = e.validate
+    var /* [auto-meaningful-name] */e$validate = e.validate
     var n = e$validate.apply(this, arguments)
     o.errors = e$validate.errors
     return n
@@ -249,7 +249,7 @@ var h = require("./1117")
 g.ValidationError = h.Validation
 g.MissingRefError = h.MissingRef
 g.$dataMetaSchema = l
-var p = "http://json-schema.org/draft-07/schema"
+var /* [auto-meaningful-name] */Http__jsonSchema$org_draft07_schema = "http://json-schema.org/draft-07/schema"
 var _ = ["removeAdditional", "useDefaults", "coerceTypes", "strictDefaults"]
 var A = ["/properties"]
 function g(e) {
@@ -258,7 +258,7 @@ function g(e) {
   }
   e = this._opts = f.copy(e) || {};
   (function (e) {
-    var e$_opts$logger = e._opts.logger
+    var /* [auto-meaningful-name] */e$_opts$logger = e._opts.logger
     if (false === e$_opts$logger) {
       e.logger = {
         log: x,
@@ -335,8 +335,8 @@ function g(e) {
     if (e._opts.$data) {
       r = l(r, A)
     }
-    e.addMetaSchema(r, p, true)
-    e._refs["http://json-schema.org/schema"] = p
+    e.addMetaSchema(r, Http__jsonSchema$org_draft07_schema, true)
+    e._refs["http://json-schema.org/schema"] = Http__jsonSchema$org_draft07_schema
   })(this)
   if ("object" == typeof e.meta) {
     this.addMetaSchema(e.meta)
@@ -349,7 +349,7 @@ function g(e) {
     })
   }
   (function (e) {
-    var e$_opts$schemas = e._opts.schemas
+    var /* [auto-meaningful-name] */e$_opts$schemas = e._opts.schemas
     if (!e$_opts$schemas) {
       return
     }

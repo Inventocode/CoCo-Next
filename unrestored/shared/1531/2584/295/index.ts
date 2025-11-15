@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：295
@@ -7,9 +7,9 @@
 "use strict"
 
 var r
-import o = require("../10/index");
-import i = require("../47");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import /* [auto-meaningful-name] */$$_47 = require("../47")
+import /* [auto-meaningful-name] */React = require("react")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -22,7 +22,7 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import c = require("../8");
+import c = require("../8")
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -35,99 +35,99 @@ var l = function __importDefault(module) {
   })
   return defaultExport
 }(c)
-import u = require("../53");
+import /* [auto-meaningful-name] */$$_53 = require("../53")
 require("./829")
-import d = require("../94/index");
+import /* [auto-meaningful-name] */$$_94_index = require("../94/index")
 var _a
 _a = s.a.memo(s.a.forwardRef(function (e, t) {
-  var e$warning = e.warning
-  var e$placeholder = e.placeholder
-  var e$value = e.value
-  var e$defaultValue = e.defaultValue
-  var e$onChange = e.onChange
-  var e$onBlur = e.onBlur
-  var e$onClick = e.onClick
-  var e$onMouseDown = e.onMouseDown
-  var e$onKeyDown = e.onKeyDown
-  var e$onFocus = e.onFocus
-  var e$onCompositionStart = e.onCompositionStart
-  var e$onCompositionEnd = e.onCompositionEnd
-  var e$onClearCallback = e.onClearCallback
-  var e$before = e.before
-  var e$after = e.after
-  var e$style = e.style
-  var e$className = e.className
-  var e$max = e.max
-  var e$min = e.min
-  var e$maxLength = e.maxLength
-  var e$disabled = e.disabled
-  var e$type = e.type
+  var /* [auto-meaningful-name] */e$warning = e.warning
+  var /* [auto-meaningful-name] */e$placeholder = e.placeholder
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onBlur = e.onBlur
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$onMouseDown = e.onMouseDown
+  var /* [auto-meaningful-name] */e$onKeyDown = e.onKeyDown
+  var /* [auto-meaningful-name] */e$onFocus = e.onFocus
+  var /* [auto-meaningful-name] */e$onCompositionStart = e.onCompositionStart
+  var /* [auto-meaningful-name] */e$onCompositionEnd = e.onCompositionEnd
+  var /* [auto-meaningful-name] */e$onClearCallback = e.onClearCallback
+  var /* [auto-meaningful-name] */e$before = e.before
+  var /* [auto-meaningful-name] */e$after = e.after
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$max = e.max
+  var /* [auto-meaningful-name] */e$min = e.min
+  var /* [auto-meaningful-name] */e$maxLength = e.maxLength
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$type = e.type
   var k = undefined === e$type ? "text" : e$type
-  var e$dependency = e.dependency
-  var e$rules = e.rules
-  var e$readOnly = e.readOnly
+  var /* [auto-meaningful-name] */e$dependency = e.dependency
+  var /* [auto-meaningful-name] */e$rules = e.rules
+  var /* [auto-meaningful-name] */e$readOnly = e.readOnly
   var L = undefined !== e$readOnly && e$readOnly
-  var e$isTrimmed = e.isTrimmed
+  var /* [auto-meaningful-name] */e$isTrimmed = e.isTrimmed
   var B = undefined !== e$isTrimmed && e$isTrimmed
-  var e$clearButtonVisible = e.clearButtonVisible
+  var /* [auto-meaningful-name] */e$clearButtonVisible = e.clearButtonVisible
   var G = React.useState(false)
-  var U = o.a(G, 2)
+  var U = $$_10_index.a(G, 2)
   var W = U[0]
   var H = U[1]
   var V = React.useState(false)
-  var z = o.a(V, 2)
+  var z = $$_10_index.a(V, 2)
   var Y = z[0]
   var K = z[1]
   var q = React.useRef(null)
   var X = React.useRef("")
   var Q = React.useState(!!e$defaultValue || !!e$value)
-  var Z = o.a(Q, 2)
+  var Z = $$_10_index.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
   var ee = React.useRef(true)
   React.useEffect(function () {
-    var q$current = q.current
+    var /* [auto-meaningful-name] */q$current = q.current
     if (undefined === e$value && q$current) {
       q$current.value = undefined === e$defaultValue ? "" : e$defaultValue.toString().substr(0, e$maxLength || 1 / 0)
       $(!q$current.value)
     }
   }, [q, e$dependency, e$value, e$defaultValue])
   React.useEffect(function () {
-    var q$current = q.current
+    var /* [auto-meaningful-name] */q$current = q.current
     if (undefined !== e$value && q$current) {
       q$current.value = e$value.toString().substr(0, e$maxLength)
     }
   }, [q, e$value, e$maxLength])
   React.useImperativeHandle(t, function () {
-    var /* [auto-meaningful-name] */_q$current
+    var /* [auto-meaningful-name] */q$current
     return {
       input: q.current,
-      value: (null === (_q$current = q.current) || undefined === _q$current ? undefined : _q$current.value) || "",
+      value: (null === (q$current = q.current) || undefined === q$current ? undefined : q$current.value) || "",
       focus: function () {
-        var /* [auto-meaningful-name] */q$current
-        return null === (q$current = q.current) || undefined === q$current ? undefined : q$current.focus()
+        var /* [auto-meaningful-name] */_q$current
+        return null === (_q$current = q.current) || undefined === _q$current ? undefined : _q$current.focus()
       },
       blur: function () {
-        var /* [auto-meaningful-name] */q$current
-        return null === (q$current = q.current) || undefined === q$current ? undefined : q$current.blur()
+        var /* [auto-meaningful-name] */_q$current2
+        return null === (_q$current2 = q.current) || undefined === _q$current2 ? undefined : _q$current2.blur()
       },
       select: function () {
-        var /* [auto-meaningful-name] */q$current
-        return null === (q$current = q.current) || undefined === q$current ? undefined : q$current.select()
+        var /* [auto-meaningful-name] */_q$current3
+        return null === (_q$current3 = q.current) || undefined === _q$current3 ? undefined : _q$current3.select()
       }
     }
   })
   var te = function (e) {
-    var q$current = q.current
+    var /* [auto-meaningful-name] */q$current = q.current
     if (q$current) {
-      var q$current$value = q$current.value
+      var /* [auto-meaningful-name] */q$current$value = q$current.value
       if (e$rules) {
         var r = function (e, t, n) {
           var r
-          var o = i.a(n)
+          var o = $$_47.a(n)
           try {
             for (o.s(); !(r = o.n()).done;) {
-              var r$value = r.value
+              var /* [auto-meaningful-name] */r$value = r.value
               if (!e.match(r$value.rule)) {
                 return {
                   status: "fail",
@@ -151,21 +151,21 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
           return void (q$current.value = r.value)
         }
       }
-      if (u.u.test(q$current$value)) {
+      if ($$_53.u.test(q$current$value)) {
         q$current.value = "-"
       } else {
         var o = function (e, t) {
-          var n = "success"
-          if (!u.x.test(e)) {
-            n = "fail"
+          var /* [auto-meaningful-name] */Success = "success"
+          if (!$$_53.x.test(e)) {
+            Success = "fail"
           }
           var r = parseFloat(e)
           if (t && r > t) {
-            n = "fail"
+            Success = "fail"
             r = t
           }
           return {
-            status: n,
+            status: Success,
             value: isNaN(r) ? "" : r.toString()
           }
         }(q$current$value, e$max)
@@ -180,19 +180,19 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
     }
   }
   var ne = function () {
-    var q$current = q.current
+    var /* [auto-meaningful-name] */q$current = q.current
     if (q$current) {
-      var q$current$value = q$current.value
+      var /* [auto-meaningful-name] */q$current$value = q$current.value
       var n = q$current$value
       var r = function (e, t, n, r) {
-        var t$current = t.current
+        var /* [auto-meaningful-name] */t$current = t.current
         if ("" !== e) {
           if (r) {
             var a
-            var s = i.a(r)
+            var s = $$_47.a(r)
             try {
               for (s.s(); !(a = s.n()).done;) {
-                var a$value = a.value
+                var /* [auto-meaningful-name] */a$value = a.value
                 if (!e.match(a$value.rule)) {
                   return {
                     status: "fail",
@@ -277,12 +277,12 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
   }, [e$onFocus])
   var ie = React.useCallback(function (e) {
     H(false)
-    var q$current = q.current
+    var /* [auto-meaningful-name] */q$current = q.current
     if (q$current) {
-      var _q$current$value = q$current.value
-      var q$current$value = q$current.value
+      var /* [auto-meaningful-name] */q$current$value = q$current.value
+      var /* [auto-meaningful-name] */_q$current$value = q$current.value
       if ("number" === k) {
-        q$current$value = function (e, t, n) {
+        _q$current$value = function (e, t, n) {
           var r = parseFloat(e) || 0
           if (undefined !== n) {
             r = Math.max(r, n)
@@ -291,17 +291,17 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
             r = Math.min(r, t)
           }
           return r.toString()
-        }(_q$current$value, e$max, e$min)
+        }(q$current$value, e$max, e$min)
       }
       if (B) {
-        q$current$value = q$current$value.trim()
+        _q$current$value = _q$current$value.trim()
       }
-      q$current.value = q$current$value
-      if (q$current$value !== _q$current$value && e$onChange) {
-        e$onChange(q$current$value, e)
+      q$current.value = _q$current$value
+      if (_q$current$value !== q$current$value && e$onChange) {
+        e$onChange(_q$current$value, e)
       }
       if (e$onBlur) {
-        e$onBlur(q$current$value, e)
+        e$onBlur(_q$current$value, e)
       }
     }
   }, [q, k, B, e$onBlur, e$onChange, e$max, e$min])
@@ -338,7 +338,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
     onClick: e$onClick,
     onMouseDown: e$onMouseDown,
     onKeyDown: function (e) {
-      var q$current = q.current
+      var /* [auto-meaningful-name] */q$current = q.current
       if (q$current) {
         if (13 === e.keyCode) {
           q$current.blur()
@@ -364,7 +364,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
     }
   }, ae)), e$clearButtonVisible && !J && s.a.createElement("div", {
     onMouseDown: function (e) {
-      var q$current = q.current
+      var /* [auto-meaningful-name] */q$current = q.current
       e.stopPropagation()
       e.preventDefault()
       if (q$current) {
@@ -377,7 +377,7 @@ _a = s.a.memo(s.a.forwardRef(function (e, t) {
       }
     },
     className: "coco-input-clear-button"
-  }, s.a.createElement(d.a, {
+  }, s.a.createElement($$_94_index.a, {
     type: "icon-close"
   })), e$after)
 }))

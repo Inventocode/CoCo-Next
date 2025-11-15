@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：3277
@@ -57,7 +57,7 @@ var d = function (t) {
     s = true
   }
   addEventListener("visibilitychange", function (n) {
-    var n$timeStamp = n.timeStamp
+    var /* [auto-meaningful-name] */n$timeStamp = n.timeStamp
     if ("hidden" === document.visibilityState) {
       t({
         timeStamp: n$timeStamp,
@@ -99,7 +99,7 @@ var v = function (t) {
   if (r) {
     n = l(t, i, r, e)
     d(function (t) {
-      var t$isUnloading = t.isUnloading
+      var /* [auto-meaningful-name] */t$isUnloading = t.isUnloading
       r.takeRecords().map(a)
       if (t$isUnloading) {
         i.isFinal = true
@@ -112,7 +112,7 @@ var m = function () {
   if (undefined === i) {
     i = "hidden" === document.visibilityState ? 0 : 1 / 0
     d(function (t) {
-      var t$timeStamp = t.timeStamp
+      var /* [auto-meaningful-name] */t$timeStamp = t.timeStamp
       return i = t$timeStamp
     }, true)
   }
@@ -196,7 +196,7 @@ var y = function (t) {
   var i = o("LCP")
   var a = m()
   var r = function (t) {
-    var t$startTime = t.startTime
+    var /* [auto-meaningful-name] */t$startTime = t.startTime
     if (t$startTime < a.timeStamp) {
       i.value = t$startTime
       i.entries.push(t)
@@ -225,7 +225,7 @@ var F = function (t) {
   n = function () {
     try {
       var n = performance.getEntriesByType("navigation")[0] || function () {
-        var performance$timing = performance.timing
+        var /* [auto-meaningful-name] */performance$timing = performance.timing
         var n = {
           entryType: "navigation",
           startTime: 0

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1515
@@ -21,7 +21,7 @@ function o() {
   if ("undefined" === typeof window || "undefined" === typeof window.document) {
     return ""
   }
-  var window$document$documentElement$style = window.document.documentElement.style
+  var /* [auto-meaningful-name] */window$document$documentElement$style = window.document.documentElement.style
   if (e in window$document$documentElement$style) {
     return ""
   }

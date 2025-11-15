@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2158
@@ -14,7 +14,7 @@ var r = require("tslib")
 var i = require("inversify")
 var o = require("../../125/index")
 var a = require("../../125/474")
-var s = require("../../4/127")
+var s = require("../../1036/127")
 var c = function () {
   function e(e) {
     this.last_sound_ = undefined

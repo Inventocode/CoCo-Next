@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2411
@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.flattenNames = undefined
-var r = s(require("./2412/index"))
-var i = s(require("../2483/1142/index"))
+var r = s(require("./2412"))
+var i = s(require("./1142/index"))
 var o = s(require("./1395/index"))
 var a = s(require("./2422/index"))
 function s(e) {

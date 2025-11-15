@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1975
@@ -18,10 +18,10 @@ i.prototype.unsortedForEach = function (e, t) {
 }
 i.prototype.add = function (e) {
   if (!function (e, t) {
-    var e$generatedLine = e.generatedLine
-    var t$generatedLine = t.generatedLine
-    var e$generatedColumn = e.generatedColumn
-    var t$generatedColumn = t.generatedColumn
+    var /* [auto-meaningful-name] */e$generatedLine = e.generatedLine
+    var /* [auto-meaningful-name] */t$generatedLine = t.generatedLine
+    var /* [auto-meaningful-name] */e$generatedColumn = e.generatedColumn
+    var /* [auto-meaningful-name] */t$generatedColumn = t.generatedColumn
     return t$generatedLine > e$generatedLine || t$generatedLine == e$generatedLine && t$generatedColumn >= e$generatedColumn || r.compareByGeneratedPositionsInflated(e, t) <= 0
   }(this._last, e)) {
     this._sorted = false

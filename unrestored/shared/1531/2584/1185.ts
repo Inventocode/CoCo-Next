@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1185
@@ -30,11 +30,11 @@ var u = function (e, t) {
   return n
 }
 var l = i.forwardRef(function (e, t) {
-  var e$prefixCls = e.prefixCls
-  var e$title = e.title
-  var e$content = e.content
+  var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
+  var /* [auto-meaningful-name] */e$title = e.title
+  var /* [auto-meaningful-name] */e$content = e.content
   var d = u(e, ["prefixCls", "title", "content"])
-  var i$useContextA$b$getPrefixCls = i.useContext(a.b).getPrefixCls
+  var /* [auto-meaningful-name] */i$useContextA$b$getPrefixCls = i.useContext(a.b).getPrefixCls
   var p = i$useContextA$b$getPrefixCls("popover", e$prefixCls)
   var _ = i$useContextA$b$getPrefixCls()
   return i.createElement(o.a, r.a({}, d, {

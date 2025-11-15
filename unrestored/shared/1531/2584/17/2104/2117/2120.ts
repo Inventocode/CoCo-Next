@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2120
@@ -12,17 +12,17 @@ Object.defineProperty(exports, "__esModule", {
 exports.GroupEvent = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../../26/208/index")
-var a = require("../../../4/127")
+var o = require("../../../206/208/index")
+var a = require("../../../1036/127")
 var s = require("../../../125/195/index")
-var c = require("../../497/644")
+var c = require("../../../1179/2554/644")
 var u = function (e) {
   function t(t) {
     var n = e.call(this) || this
     n._workspace_id = n.Blink.mainWorkspace.id || ""
     n._record_undo = false
-    var t$type = t.type
-    var t$group = t.group
+    var /* [auto-meaningful-name] */t$type = t.type
+    var /* [auto-meaningful-name] */t$group = t.group
     n.type = t$type
     n._group = t$group
     if (t$type === s.GroupEventType.GroupEnd) {

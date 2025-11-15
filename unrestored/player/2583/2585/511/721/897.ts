@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：897
@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../81/index")
-var i = "http://www.w3.org/2000/svg"
+var /* [auto-meaningful-name] */Http__www$w3$org_2000_svg = "http://www.w3.org/2000/svg"
 !function () {
   function t() {}
   t.prototype.write = function (e, n, i, o) {
@@ -17,8 +17,8 @@ var i = "http://www.w3.org/2000/svg"
     if (n < 0 || i < 0) {
       throw new r.IllegalArgumentException("Requested dimensions are too small: " + n + "x" + i)
     }
-    var r$QRCodeDecoderErrorCorrectionLevel$L = r.QRCodeDecoderErrorCorrectionLevel.L
-    var t$QUIET_ZONE_SIZE = t.QUIET_ZONE_SIZE
+    var /* [auto-meaningful-name] */r$QRCodeDecoderErrorCorrectionLevel$L = r.QRCodeDecoderErrorCorrectionLevel.L
+    var /* [auto-meaningful-name] */t$QUIET_ZONE_SIZE = t.QUIET_ZONE_SIZE
     if (o) {
       if (undefined !== o.get(r.EncodeHintType.ERROR_CORRECTION)) {
         var u = o.get(r.EncodeHintType.ERROR_CORRECTION).toString()
@@ -60,7 +60,7 @@ var i = "http://www.w3.org/2000/svg"
     return m
   }
   t.prototype.createSVGElement = function (t, e) {
-    var n = document.createElementNS(i, "svg")
+    var n = document.createElementNS(Http__www$w3$org_2000_svg, "svg")
     var r = t.toString()
     var o = e.toString()
     n.setAttribute("height", o)
@@ -69,7 +69,7 @@ var i = "http://www.w3.org/2000/svg"
     return n
   }
   t.prototype.createSvgRectElement = function (t, e, n, r) {
-    var o = document.createElementNS(i, "rect")
+    var o = document.createElementNS(Http__www$w3$org_2000_svg, "rect")
     o.setAttribute("x", t.toString())
     o.setAttribute("y", e.toString())
     o.setAttribute("height", n.toString())

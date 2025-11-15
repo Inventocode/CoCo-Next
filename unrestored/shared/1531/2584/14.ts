@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：14
@@ -7,26 +7,26 @@
 "use strict"
 
 export { d as a }
-import r = require("./6");
-import o = require("../../../../src/shared/ui/language");
-import i = require("./21/index");
-import a = require("./28/index");
-import s = require("./55");
+import r = require("./6")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language = require("../../../../src/shared/ui/language")
+import /* [auto-meaningful-name] */$_21_index = require("./21/index")
+import /* [auto-meaningful-name] */$_28_index = require("./28/index")
+import s = require("./55")
 var c = {}
 function l(e, t) {
   c[e] = t
 }
 function u(e) {
-  var e$type = e.type
-  var e$messageId = e.messageId
-  var e$message = e.message
-  var e$values = e.values
-  var e$widgetId = e.widgetId
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$messageId = e.messageId
+  var /* [auto-meaningful-name] */e$message = e.message
+  var /* [auto-meaningful-name] */e$values = e.values
+  var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var l = undefined === e$widgetId ? "" : e$widgetId
-  var u = i.currentContext()
+  var u = $_21_index.currentContext()
   var d = e$message
   if (e$messageId) {
-    d = a.o(e$messageId)
+    d = $_28_index.o(e$messageId)
   }
   if (!d) {
     throw new Error("message not set")
@@ -75,8 +75,8 @@ l("number.isInteger", function (e, t) {
 })
 var d = {
   range: function (e, t, n) {
-    var t$min = t.min
-    var t$max = t.max
+    var /* [auto-meaningful-name] */t$min = t.min
+    var /* [auto-meaningful-name] */t$max = t.max
     return this.condition((undefined === t$min || e >= t$min) && (undefined === t$max || e <= t$max), n)
   },
   condition: function (e, t) {
@@ -92,12 +92,12 @@ var d = {
     return this.condition("number" === typeof e, t)
   },
   validate: function (e) {
-    var e$ruleKey = e.ruleKey
-    var e$ruleOptions = e.ruleOptions
-    var e$inputValue = e.inputValue
-    var e$values = e.values
+    var /* [auto-meaningful-name] */e$ruleKey = e.ruleKey
+    var /* [auto-meaningful-name] */e$ruleOptions = e.ruleOptions
+    var /* [auto-meaningful-name] */e$inputValue = e.inputValue
+    var /* [auto-meaningful-name] */e$values = e.values
     var s = undefined === e$values ? {} : e$values
-    var e$widgetId = e.widgetId
+    var /* [auto-meaningful-name] */e$widgetId = e.widgetId
     var d = true
     var p = c[e$ruleKey]
     if (!p) {
@@ -125,7 +125,7 @@ var d = {
         u({
           widgetId: e$widgetId,
           type: "error",
-          message: o.d(f, m)
+          message: $$_$$_$$_$$_src_shared_ui_language.d(f, m)
         })
       }
     } catch (g) {

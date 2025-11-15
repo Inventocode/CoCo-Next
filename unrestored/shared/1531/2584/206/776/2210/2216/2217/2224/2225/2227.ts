@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2227
@@ -16,7 +16,7 @@ module.exports = function (e, t, n) {
   var u = ""
   c.level++
   var l = "valid" + c.level
-  var c$baseId = c.baseId
+  var /* [auto-meaningful-name] */c$baseId = c.baseId
   var d = true
   var h = i
   if (h) {

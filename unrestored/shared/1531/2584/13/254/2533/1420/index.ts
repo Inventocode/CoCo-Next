@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1420
@@ -7,8 +7,8 @@
 var r = require("./475")
 var i = require("./2530/index")
 var o = require("./2531/index")
-var math$max = Math.max
-var math$min = Math.min
+var /* [auto-meaningful-name] */Math$max = Math.max
+var /* [auto-meaningful-name] */Math$min = Math.min
 module.exports = function (e, t, n) {
   var c
   var u
@@ -46,7 +46,7 @@ module.exports = function (e, t, n) {
     }
     d = setTimeout(b, function (e) {
       var n = t - (e - h)
-      return A ? math$min(n, l - (e - p)) : n
+      return A ? Math$min(n, l - (e - p)) : n
     }(e))
   }
   function w(e) {
@@ -77,7 +77,7 @@ module.exports = function (e, t, n) {
   t = o(t) || 0
   if (r(n)) {
     _ = !!n.leading
-    l = (A = "maxWait" in n) ? math$max(o(n.maxWait) || 0, t) : l
+    l = (A = "maxWait" in n) ? Math$max(o(n.maxWait) || 0, t) : l
     g = "trailing" in n ? !!n.trailing : g
   }
   E.cancel = function () {

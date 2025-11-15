@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1674
@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("./1623/86")
+var r = require("./1698/86/index")
 var o = require("./1684/1075")
-var i = require("./1675/421")
-var a = require("./1745/310")
+var i = require("./1684/421")
+var a = require("./1684/310")
 r({
   target: "String",
   proto: true,

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：340
@@ -9,15 +9,15 @@
 export { a }
 export { s as b }
 export { c }
-import r = require("../../36/483/39");
-import i = require("./2592/index");
+import /* [auto-meaningful-name] */$$_787_39 = require("../787/39")
+import /* [auto-meaningful-name] */$_2592_index = require("./2592/index")
 function o(e) {
   for (var t = [], n = 1; n < arguments.length; n++) {
     t[n - 1] = arguments[n]
   }
-  var o = i.a()
+  var o = $_2592_index.a()
   if (o && o[e]) {
-    return o[e].apply(o, r.f(t))
+    return o[e].apply(o, $$_787_39.f(t))
   }
   throw new Error("No hub defined or " + e + " was not found on the hub, please open a bug report.")
 }

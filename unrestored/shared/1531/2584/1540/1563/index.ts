@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1563
@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../1623/86")
+var r = require("../1698/86/index")
 var o = require("./1216")
-var i = require("../1623/309")
-var a = require("../1735/257")
-var s = require("../1680/473")
+var i = require("../1541/309")
+var a = require("../1684/257")
+var s = require("./473")
 var c = require("../1557/821/index")
 r({
   target: "Array",

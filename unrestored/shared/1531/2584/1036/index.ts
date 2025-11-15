@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1036
@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.effect_of_update_disabled = exports.effect_of_update_param = exports.effect_of_rename_proc = exports.update_after_set_disabled = exports.update_after_set_field_value = exports.update_after_mutation = undefined
 var r = require("ot-json1")
 var o = require("./1363/index")
-var i = require("../4/127")
-var a = require("../301/173")
+var i = require("./127")
+var a = require("./173")
 var s = require("./754")
 function c(e, t, n, a, s, c) {
   var l
@@ -26,7 +26,7 @@ function c(e, t, n, a, s, c) {
   if ("increase" === e) {
     var g = []
     var _ = t.blocks[n]
-    var _$mutation = _.mutation
+    var /* [auto-meaningful-name] */_$mutation = _.mutation
     var b = f.dom_to_string(a)
     _.mutation = b
     var y = ["blocks", _.id, "mutation"]
@@ -130,7 +130,7 @@ function l(e, t, n, a) {
     var l = ["blocks", e.id, "fields", t]
     c.push((0, r.replaceOp)(l, n, a))
   }
-  var e$mutation = e.mutation
+  var /* [auto-meaningful-name] */e$mutation = e.mutation
   var d = s.string_to_dom(e$mutation)
   if (undefined !== d.getAttribute(t.toLowerCase())) {
     d.setAttribute(t.toLowerCase(), a)
@@ -173,7 +173,7 @@ exports.effect_of_update_param = function (e, t, n, r) {
     var d = []
     l.forEach(function (t) {
       if ("increase" === e) {
-        var t$mutation = t.mutation
+        var /* [auto-meaningful-name] */t$mutation = t.mutation
         var i = u.string_to_dom(t$mutation)
         var s = document.createElement("procedures_2_parameter_shadow")
         s.setAttribute("name", n.param_name)

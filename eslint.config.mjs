@@ -1,4 +1,5 @@
 import globals from "globals"
+import stylistic from "@stylistic/eslint-plugin"
 import tseslint from "typescript-eslint"
 import { defineConfig } from "eslint/config"
 
@@ -15,8 +16,23 @@ export default defineConfig([
       globals: globals.browser,
       parser: tseslint.parser
     },
+    plugins: {
+      "@stylistic": stylistic
+    },
     rules: {
-      "semi": ["warn", "never"]
+      "@stylistic/semi": ["warn", "never"],
+      "@stylistic/member-delimiter-style": ["warn", {
+        "multiline": {
+          "delimiter": "none",
+          "requireLast": false
+        },
+        "singleline": {
+          "delimiter": "comma",
+          "requireLast": false
+        },
+        "multilineDetection": "brackets"
+      }],
+      "@stylistic/eol-last": ["error", "always"]
     }
   }
 ])

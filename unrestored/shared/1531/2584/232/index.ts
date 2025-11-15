@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：232
@@ -26,9 +26,9 @@ var i = function (e, t) {
 exports.default = function (e, t, n) {
   var r = Object.keys(t)
   var a = n || {}
-  var a$handleMissingStyleName = a.handleMissingStyleName
+  var /* [auto-meaningful-name] */a$handleMissingStyleName = a.handleMissingStyleName
   var c = undefined === a$handleMissingStyleName ? o.default.handleMissingStyleName : a$handleMissingStyleName
-  var a$autoResolveMultipleImports = a.autoResolveMultipleImports
+  var /* [auto-meaningful-name] */a$autoResolveMultipleImports = a.autoResolveMultipleImports
   var u = undefined === a$autoResolveMultipleImports ? o.default.autoResolveMultipleImports : a$autoResolveMultipleImports
   return e ? e.split(" ").filter(function (e) {
     return e

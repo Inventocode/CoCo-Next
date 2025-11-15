@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2156
@@ -53,7 +53,7 @@ var o = function () {
     if (!this.connections.length) {
       return 0
     }
-    for (var t = 0, this$connections$length = this.connections.length; t < this$connections$length;) {
+    for (var t = 0, /* [auto-meaningful-name] */this$connections$length = this.connections.length; t < this$connections$length;) {
       var r = Math.floor((t + this$connections$length) / 2)
       if (this.connections[r].y_ < e.y_) {
         t = r + 1
@@ -79,7 +79,7 @@ var o = function () {
     this.connections.splice(t, 1)
   }
   e.prototype.get_neighbours = function (e, t) {
-    for (var n = e.x_, r = e.y_, this$connections = this.connections, o = 0, a = this$connections.length - 2, s = a; o < s;) {
+    for (var n = e.x_, r = e.y_, /* [auto-meaningful-name] */this$connections = this.connections, o = 0, a = this$connections.length - 2, s = a; o < s;) {
       if (this$connections[s].y_ < r) {
         o = s
       } else {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：846
@@ -9,7 +9,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("./1366/444")
+var r = require("./2342/444")
 function i(e) {
   return "function" === typeof e ? e.name : "symbol" === typeof e ? e.toString() : e
 }
@@ -28,11 +28,11 @@ exports.listRegisteredBindingsForServiceIdentifier = function (e, t, n) {
   if (0 !== i.length) {
     r = "\nRegistered bindings:"
     i.forEach(function (e) {
-      var t = "Object"
+      var /* [auto-meaningful-name] */Object = "Object"
       if (null !== e.implementationType) {
-        t = o(e.implementationType)
+        Object = o(e.implementationType)
       }
-      r = r + "\n " + t
+      r = r + "\n " + Object
       if (e.constraint.metaData) {
         r = r + " - " + e.constraint.metaData
       }

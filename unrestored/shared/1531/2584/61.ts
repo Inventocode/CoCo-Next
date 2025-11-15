@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：61
@@ -7,10 +7,10 @@
 "use strict"
 
 export { f as d }
-export { h as c }
+export { DROPDOWN_PLACEHOLDER_OPTION_VALUE as c }
 export { m as b }
-export { g as a }
-export { _ as e }
+export { DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE as a }
+export { _nBlockType_Date_get_current_date_Uncache_True__n_block_nBlockType_Date_check_date_is_equal_Uncache_True__nValueName_DATE_A__nShadowType_Date_get_current_date__shadow_n_value_nValueName_DATE_B__nShadowType_Date_get_current_date__shadow_n_value_n_block_nBlockType_Date_get_date_minus_operation_Uncache_True__nValueName_DATE_A__nShadowType_Date_get_current_date__shadow_n_value_nValueName_DATE_B__nShadowType_Date_get_current_date__shadow_n_value_n_block as e }
 export { b as j }
 export { y as h }
 export { E as i }
@@ -18,14 +18,14 @@ export { O as f }
 export { w as g }
 export { C as k }
 export { T as l }
-import r = require("./6");
-import o = require("./25/index");
-import i = require("../../../../src/shared/widget/custom/storage");
-import a = require("../../../../src/shared/widget/custom/load");
-import s = require("./5");
-import c = require("./76");
-import l = require("./4/index");
-import u = require("./46/index");
+import r = require("./6")
+import /* [auto-meaningful-name] */$_25_index = require("./25/index")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage = require("../../../../src/shared/widget/custom/storage")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load = require("../../../../src/shared/widget/custom/load")
+import s = require("./5")
+import c = require("./76")
+import l = require("./4")
+import /* [auto-meaningful-name] */$_46_index = require("./46/index")
 var d = {
   type: s.D,
   category: {
@@ -38,7 +38,7 @@ var d = {
     blocks: []
   },
   getTemplate: function (e) {
-    return ["<block type=\"screen_on_press\" uncache=\"true\"></block>", f, "<block type=\"new_screen_set_background_color\" uncache=\"true\">\n    <value name=\"COLOR\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">".concat(c.c, "</field></shadow>\n    </value>\n    </block>"), "<block type=\"new_screen_set_background_image\" uncache=\"true\">\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">".concat(h, "</field>\n        </shadow>\n      </value>\n    </block>"), f, "<block type=\"new_screen_get_size\" uncache=\"true\">\n    </block>", "<block type=\"new_screen_get_color\" uncache=\"true\">\n    </block>\n    <block type=\"new_screen_get_background_image\" uncache=\"true\">\n    </block>\n    ", f, "<block type=\"screen_check_if_pressed\" uncache=\"true\">\n    </block>"]
+    return ["<block type=\"screen_on_press\" uncache=\"true\"></block>", f, "<block type=\"new_screen_set_background_color\" uncache=\"true\">\n    <value name=\"COLOR\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">".concat(c.c, "</field></shadow>\n    </value>\n    </block>"), "<block type=\"new_screen_set_background_image\" uncache=\"true\">\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">".concat(DROPDOWN_PLACEHOLDER_OPTION_VALUE, "</field>\n        </shadow>\n      </value>\n    </block>"), f, "<block type=\"new_screen_get_size\" uncache=\"true\">\n    </block>", "<block type=\"new_screen_get_color\" uncache=\"true\">\n    </block>\n    <block type=\"new_screen_get_background_image\" uncache=\"true\">\n    </block>\n    ", f, "<block type=\"screen_check_if_pressed\" uncache=\"true\">\n    </block>"]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -56,7 +56,7 @@ var d = {
         return "screenPressPositionY"
       })
       e.insertBlockSnippetGenerator("screen_on_press", function (n, r) {
-        var tNR$block = t(n, r).block
+        var /* [auto-meaningful-name] */tNR$block = t(n, r).block
         var i = e.getFieldValue(tNR$block, "PRESS_EVENT") || ""
         var a = e.statementToCode(n, r, "DO")
         var s = e.valueToCode(n, r, "POSITION_X", e.ORDER_FUNCTION_CALL)
@@ -100,14 +100,14 @@ var d = {
         return l.s("getScreenBackgroundImage", [l.o(r)])
       })
       e.insertBlockSnippetGenerator("new_screen_set_background_color", function (n, r) {
-        var tNR$block = t(n, r).block
+        var /* [auto-meaningful-name] */tNR$block = t(n, r).block
         var i = e.getDynamicValue("__CURRENT_SCREEN_ID__")
         var a = e.valueToCode(n, r, "COLOR", e.ORDER_FUNCTION_CALL)
         return l.l(l.n("setScreenBackgroundColor", [l.o(i), a]), tNR$block, e)
       })
       e.insertBlockSnippetGenerator("new_screen_set_background_image", function (n, r) {
         var o = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-        var tNR$block = t(n, r).block
+        var /* [auto-meaningful-name] */tNR$block = t(n, r).block
         var a = e.valueToCode(n, r, "IMAGE_FILE_ID", e.ORDER_FUNCTION_CALL)
         return a ? l.l(l.n("setScreenBackgroundImageId", [l.o(o), a]), tNR$block, e) : ""
       })
@@ -182,7 +182,7 @@ var d = {
           name: "SCREEN_ID",
           custom: true,
           advancedOptions: function () {
-            return u.c().getScreenList()
+            return $_46_index.c().getScreenList()
           }
         }, {
           type: "input_value",
@@ -213,7 +213,7 @@ var d = {
           name: "SCREEN_ID",
           custom: true,
           options: function () {
-            return u.c().getScreenList()
+            return $_46_index.c().getScreenList()
           }
         }, {
           type: "field_coco_dropdown",
@@ -243,7 +243,7 @@ var d = {
           name: "SCREEN_ID",
           custom: true,
           options: function () {
-            return u.c().getScreenList()
+            return $_46_index.c().getScreenList()
           }
         }],
         output: ["String", "Color"],
@@ -258,7 +258,7 @@ var d = {
           name: "SCREEN_ID",
           custom: true,
           advancedOptions: function () {
-            return u.c().getScreenList()
+            return $_46_index.c().getScreenList()
           }
         }, {
           type: "input_value",
@@ -278,7 +278,7 @@ var d = {
           name: "SCREEN_ID",
           custom: true,
           advancedOptions: function () {
-            return u.c().getScreenList()
+            return $_46_index.c().getScreenList()
           }
         }],
         output: ["String"],
@@ -366,28 +366,28 @@ var d = {
   },
   topBlocks: ["screen_on_open_get_param", "screen_on_open", "screen_on_press", "app_on_switch_background", "broadcast_on_receive", "widget_event"]
 }
-import p = require("./35");
+import p = require("./35")
 var f = "<sep gap=\"".concat(45, "\"></sep>")
-var h = "DROPDOWN_PLACEHOLDER_OPTION_VALUE"
+var /* [auto-meaningful-name] */DROPDOWN_PLACEHOLDER_OPTION_VALUE = "DROPDOWN_PLACEHOLDER_OPTION_VALUE"
 var m = "?"
-var g = "DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE"
-var _ = "\n  <block type=\"date_get_current_date\" uncache=\"true\">\n  </block>\n  <block type=\"date_check_date_is_equal\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>\n  <block type=\"date_get_date_minus_operation\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>"
+var /* [auto-meaningful-name] */DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE = "DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE"
+var /* [auto-meaningful-name] */_nBlockType_Date_get_current_date_Uncache_True__n_block_nBlockType_Date_check_date_is_equal_Uncache_True__nValueName_DATE_A__nShadowType_Date_get_current_date__shadow_n_value_nValueName_DATE_B__nShadowType_Date_get_current_date__shadow_n_value_n_block_nBlockType_Date_get_date_minus_operation_Uncache_True__nValueName_DATE_A__nShadowType_Date_get_current_date__shadow_n_value_nValueName_DATE_B__nShadowType_Date_get_current_date__shadow_n_value_n_block = "\n  <block type=\"date_get_current_date\" uncache=\"true\">\n  </block>\n  <block type=\"date_check_date_is_equal\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>\n  <block type=\"date_get_date_minus_operation\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>"
 function v() {
   var e = [d]
   p.K().forEach(function (t) {
     if (t.blockConfig) {
       e.push(t.blockConfig)
     }
-    var t$blockConfig$getTemplate = t.blockConfig.getTemplate
+    var /* [auto-meaningful-name] */t$blockConfig$getTemplate = t.blockConfig.getTemplate
     t.blockConfig.getTemplate = function (e, r) {
       if (r) {
         if (!t.hasAnyWidget) {
           console.error("anyWidget is not supported")
           return []
         }
-        var o = i.f(t.type)
+        var o = $$_$$_$$_$$_src_shared_widget_custom_storage.f(t.type)
         if (o) {
-          return a.e(null, o.type, o.types, true)
+          return $$_$$_$$_$$_src_shared_widget_custom_load.e(null, o.type, o.types, true)
         }
       }
       return t$blockConfig$getTemplate(e)
@@ -399,7 +399,7 @@ function b() {
   var e = new Map()
   var t = []
   v().forEach(function (e) {
-    t.push.apply(t, o.a(e.topBlocks))
+    t.push.apply(t, $_25_index.a(e.topBlocks))
   })
   t.forEach(function (t) {
     e.set(t, true)
@@ -485,7 +485,7 @@ function T(e, t, n) {
     var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : c.b
     var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : 100
     var o = arguments.length > 4 && undefined !== arguments[4] ? arguments[4] : "NUM"
-    var e$source_block = e.source_block
+    var /* [auto-meaningful-name] */e$source_block = e.source_block
     var a = null === e$source_block || undefined === e$source_block ? undefined : e$source_block.get_shadow_field(o)
     if (a && "FieldNumber" === a.field_type) {
       a.set_value(r.toString())
@@ -493,4 +493,4 @@ function T(e, t, n) {
     }
   }(e, o, r, i)
 }
-export default g
+export default DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE

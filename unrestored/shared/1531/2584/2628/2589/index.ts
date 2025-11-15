@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2589
@@ -7,9 +7,9 @@
 "use strict"
 
 export { f as a }
-import r = require("./183");
-import i = require("./1166");
-import o = require("./792");
+import /* [auto-meaningful-name] */$_183 = require("./183")
+import /* [auto-meaningful-name] */$_1166 = require("./1166")
+import /* [auto-meaningful-name] */$_792 = require("./792")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,18 +21,18 @@ var a = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(o)
-import s = require("../1440/index");
+}($_792)
+import /* [auto-meaningful-name] */$$_1440_index = require("../1440/index")
 function c(e, t) {
   return t ? Object.keys(e).reduce(function (n, i) {
     var o
     var a
-    n[i] = (o = e[i], (a = t[i]) ? r.a(r.a(r.a({}, o || {}), a || {}), Object.keys(o).reduce(function (e, t) {
-      e[t] = r.a(r.a({}, o[t]), a[t] || {})
+    n[i] = (o = e[i], (a = t[i]) ? $_183.a($_183.a($_183.a({}, o || {}), a || {}), Object.keys(o).reduce(function (e, t) {
+      e[t] = $_183.a($_183.a({}, o[t]), a[t] || {})
       return e
     }, {})) : o)
     return n
-  }, r.a({}, e)) : e
+  }, $_183.a({}, e)) : e
 }
 function u(e) {
   return {
@@ -51,7 +51,7 @@ function u(e) {
     }
   }
 }
-var l = a.a || o
+var l = a.a || $_792
 var f = function () {
   function e(t, n, i, o) {
     var a
@@ -80,7 +80,7 @@ var f = function () {
       return n.length <= 1 ? n[0] || "" : n
     }
     this.formatToParts = function (e) {
-      return s.a(f.ast, f.locales, f.formatters, f.formats, e, undefined, f.message)
+      return $$_1440_index.a(f.ast, f.locales, f.formatters, f.formats, e, undefined, f.message)
     }
     this.resolvedOptions = function () {
       return {
@@ -113,28 +113,28 @@ var f = function () {
       pluralRules: {}
     }), {
       getNumberFormat: l(function () {
-        for (var /* [auto-meaningful-name] */intl$NumberFormat, t = [], n = 0; n < arguments.length; n++) {
+        for (var /* [auto-meaningful-name] */Intl$NumberFormat, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n]
         }
-        return new ((intl$NumberFormat = Intl.NumberFormat).bind.apply(intl$NumberFormat, r.c([undefined], t)))()
+        return new ((Intl$NumberFormat = Intl.NumberFormat).bind.apply(Intl$NumberFormat, $_183.c([undefined], t)))()
       }, {
         cache: u(a.number),
         strategy: l.strategies.variadic
       }),
       getDateTimeFormat: l(function () {
-        for (var /* [auto-meaningful-name] */intl$DateTimeFormat, t = [], n = 0; n < arguments.length; n++) {
+        for (var /* [auto-meaningful-name] */Intl$DateTimeFormat, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n]
         }
-        return new ((intl$DateTimeFormat = Intl.DateTimeFormat).bind.apply(intl$DateTimeFormat, r.c([undefined], t)))()
+        return new ((Intl$DateTimeFormat = Intl.DateTimeFormat).bind.apply(Intl$DateTimeFormat, $_183.c([undefined], t)))()
       }, {
         cache: u(a.dateTime),
         strategy: l.strategies.variadic
       }),
       getPluralRules: l(function () {
-        for (var /* [auto-meaningful-name] */intl$PluralRules, t = [], n = 0; n < arguments.length; n++) {
+        for (var /* [auto-meaningful-name] */Intl$PluralRules, t = [], n = 0; n < arguments.length; n++) {
           t[n] = arguments[n]
         }
-        return new ((intl$PluralRules = Intl.PluralRules).bind.apply(intl$PluralRules, r.c([undefined], t)))()
+        return new ((Intl$PluralRules = Intl.PluralRules).bind.apply(Intl$PluralRules, $_183.c([undefined], t)))()
       }, {
         cache: u(a.pluralRules),
         strategy: l.strategies.variadic
@@ -152,7 +152,7 @@ var f = function () {
     configurable: true
   })
   e.memoizedDefaultLocale = null
-  e.__parse = i.a
+  e.__parse = $_1166.a
   e.formats = {
     number: {
       currency: {

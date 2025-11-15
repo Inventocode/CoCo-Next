@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：449
@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("./73/index")
+var r = require("./73")
 var i = require("./587")
 var o = require("./118")
 var a = require("./401")
-var s = require("./191/index")
+var s = require("./191")
 var u = require("./335")
 var c = require("./37")
 var l = require("./372")

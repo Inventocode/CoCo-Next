@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2247
@@ -11,7 +11,7 @@ var i = require("./2248")
 var o = require("./2249")
 module.exports = {
   add: function (e, t) {
-    var this$RULES = this.RULES
+    var /* [auto-meaningful-name] */this$RULES = this.RULES
     if (this$RULES.keywords[e]) {
       throw new Error("Keyword " + e + " is already defined")
     }
@@ -20,7 +20,7 @@ module.exports = {
     }
     if (t) {
       this.validateKeyword(t, true)
-      var t$type = t.type
+      var /* [auto-meaningful-name] */t$type = t.type
       if (Array.isArray(t$type)) {
         for (var a = 0; a < t$type.length; a++) {
           c(e, t$type[a], t)
@@ -28,7 +28,7 @@ module.exports = {
       } else {
         c(e, t$type, t)
       }
-      var t$metaSchema = t.metaSchema
+      var /* [auto-meaningful-name] */t$metaSchema = t.metaSchema
       if (t$metaSchema) {
         if (t.$data && this._opts.$data) {
           t$metaSchema = {
@@ -73,12 +73,12 @@ module.exports = {
     return t ? t.definition : this.RULES.keywords[e] || false
   },
   remove: function (e) {
-    var this$RULES = this.RULES
+    var /* [auto-meaningful-name] */this$RULES = this.RULES
     delete this$RULES.keywords[e]
     delete this$RULES.all[e]
     delete this$RULES.custom[e]
     for (var n = 0; n < this$RULES.length; n++) {
-      for (var this$RULESN$rules = this$RULES[n].rules, i = 0; i < this$RULESN$rules.length; i++) {
+      for (var /* [auto-meaningful-name] */this$RULESN$rules = this$RULES[n].rules, i = 0; i < this$RULESN$rules.length; i++) {
         if (this$RULESN$rules[i].keyword == e) {
           this$RULESN$rules.splice(i, 1)
           break

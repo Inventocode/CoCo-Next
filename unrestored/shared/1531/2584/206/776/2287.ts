@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2287
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../38/607/494")
+var r = require("./494/index")
 var i = require("./807/index")("eslint:source-code-fixer")
 function o(e, t) {
   return e.fix.range[0] - t.fix.range[0] || e.fix.range[1] - t.fix.range[1]
@@ -31,13 +31,13 @@ s.applyFixes = function (e, t, n) {
   var c = []
   var u = e.startsWith("﻿") ? "﻿" : ""
   var l = u ? e.slice(1) : e
-  var number$NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY
+  var /* [auto-meaningful-name] */Number$NEGATIVE_INFINITY = Number.NEGATIVE_INFINITY
   var d = u
   function h(e) {
-    var e$fix = e.fix
+    var /* [auto-meaningful-name] */e$fix = e.fix
     var n = e$fix.range[0]
     var r = e$fix.range[1]
-    return number$NEGATIVE_INFINITY >= n || n > r ? (s.push(e), false) : ((n < 0 && r >= 0 || 0 === n && e$fix.text.startsWith("﻿")) && (d = ""), d += l.slice(Math.max(0, number$NEGATIVE_INFINITY), Math.max(0, n)), d += e$fix.text, number$NEGATIVE_INFINITY = r, true)
+    return Number$NEGATIVE_INFINITY >= n || n > r ? (s.push(e), false) : ((n < 0 && r >= 0 || 0 === n && e$fix.text.startsWith("﻿")) && (d = ""), d += l.slice(Math.max(0, Number$NEGATIVE_INFINITY), Math.max(0, n)), d += e$fix.text, Number$NEGATIVE_INFINITY = r, true)
   }
   t.forEach(function (e) {
     if (Object.prototype.hasOwnProperty.call(e, "fix")) {
@@ -53,7 +53,7 @@ s.applyFixes = function (e, t, n) {
     var A = r(c.sort(o))
     try {
       for (A.s(); !(p = A.n()).done;) {
-        var p$value = p.value
+        var /* [auto-meaningful-name] */p$value = p.value
         if ("function" !== typeof n || n(p$value)) {
           h(p$value)
           _ = true
@@ -66,7 +66,7 @@ s.applyFixes = function (e, t, n) {
     } finally {
       A.f()
     }
-    d += l.slice(Math.max(0, number$NEGATIVE_INFINITY))
+    d += l.slice(Math.max(0, Number$NEGATIVE_INFINITY))
     return {
       fixed: _,
       messages: s.sort(a),

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：463
@@ -9,7 +9,7 @@
 export { u as b }
 export { p as c }
 export { h as a }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -22,12 +22,12 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("./7");
-import a = require("../../../../src/shared/utils/network/axios-with-credentials");
-import s = require("./59/index");
-s.a.materialHost
-var s$a$serverHost = s.a.serverHost
-var s$a$openServiceHost = s.a.openServiceHost
+import i = require("./7")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials = require("../../../../src/shared/utils/network/axios-with-credentials")
+import /* [auto-meaningful-name] */$_59_index = require("./59/index")
+$_59_index.a.materialHost
+var /* [auto-meaningful-name] */$_59_index$a$serverHost = $_59_index.a.serverHost
+var /* [auto-meaningful-name] */$_59_index$a$openServiceHost = $_59_index.a.openServiceHost
 function u() {
   return d.apply(this, arguments)
 }
@@ -42,7 +42,7 @@ function d() {
           case 0:
             e.prev = 0
             e.next = 3
-            return a.a.get(s$a$serverHost + "/coconut/primary-course/list")
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_59_index$a$serverHost + "/coconut/primary-course/list")
           case 3:
             if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
               e.next = 10
@@ -92,7 +92,7 @@ function f() {
           case 0:
             e.prev = 0
             e.next = 3
-            return a.a.get(s$a$serverHost + "/coconut/sample/list")
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_59_index$a$serverHost + "/coconut/sample/list")
           case 3:
             if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
               e.next = 10
@@ -139,7 +139,7 @@ function m() {
           case 0:
             e.prev = 0
             e.next = 3
-            return a.a.post(s$a$openServiceHost + "/content-security/image/sensor", {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($_59_index$a$openServiceHost + "/content-security/image/sensor", {
               businessCode: "coco",
               uri: t,
               params: ["PULP"]

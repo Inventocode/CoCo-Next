@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：7CtK
@@ -91,7 +91,7 @@ function _inherits(subClass, superClass) {
   }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var arguments$length = arguments.length
+  var /* [auto-meaningful-name] */arguments$length = arguments.length
   var r = arguments$length < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc
   var d
   if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {

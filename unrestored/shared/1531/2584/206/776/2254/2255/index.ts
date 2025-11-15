@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2255
@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("../../../../36/2668/220")
-var i = require("../../../../36/2668/230")
-var o = require("./1299")
+var r = require("../../220")
+var i = require("../../230")
+var o = require("../../../../38/607/357/1968/1299")
 var a = require("../../../../38/607/356")
 var s = require("../../../../38/607/357/index")
-var c = require("../../../../38/607/624/index")
-var require$1344$isCommentToken = require("./1344").isCommentToken
+var c = require("../../624/index")
+var /* [auto-meaningful-name] */require$_1344$isCommentToken = require("./1344").isCommentToken
 var l = require("./2256/index")
 var f = require("../../965")
 var d = require("../../1343")
@@ -136,12 +136,12 @@ var _ = function (e) {
         if (("BlockStatement" === e.type || "ClassBody" === e.type) && 0 === e.body.length || "ObjectExpression" === e.type && 0 === e.properties.length || "ArrayExpression" === e.type && 0 === e.elements.length || "SwitchStatement" === e.type && 0 === e.cases.length) {
           t.trailing = this.getTokens(e, {
             includeComments: true,
-            filter: require$1344$isCommentToken
+            filter: require$_1344$isCommentToken
           })
         }
         for (var n = this.getTokenBefore(e, {
           includeComments: true
-        }); n && require$1344$isCommentToken(n) && !(e.parent && n.start < e.parent.start);) {
+        }); n && require$_1344$isCommentToken(n) && !(e.parent && n.start < e.parent.start);) {
           t.leading.push(n)
           n = this.getTokenBefore(n, {
             includeComments: true
@@ -149,7 +149,7 @@ var _ = function (e) {
         }
         for (t.leading.reverse(), n = this.getTokenAfter(e, {
           includeComments: true
-        }); n && require$1344$isCommentToken(n) && !(e.parent && n.end > e.parent.end);) {
+        }); n && require$_1344$isCommentToken(n) && !(e.parent && n.end > e.parent.end);) {
           t.trailing.push(n)
           n = this.getTokenAfter(n, {
             includeComments: true
@@ -168,9 +168,9 @@ var _ = function (e) {
         var t = n.getTokenBefore(e, {
           includeComments: true
         })
-        return t && require$1344$isCommentToken(t) && "Block" === t.type && "*" === t.value.charAt(0) && e.loc.start.line - t.loc.end.line <= 1 ? t : null
+        return t && require$_1344$isCommentToken(t) && "Block" === t.type && "*" === t.value.charAt(0) && e.loc.start.line - t.loc.end.line <= 1 ? t : null
       }
-      var e$parent = e.parent
+      var /* [auto-meaningful-name] */e$parent = e.parent
       switch (e.type) {
         case "ClassDeclaration":
         case "FunctionDeclaration":

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：536
@@ -6,9 +6,9 @@
 
 "use strict"
 
-import r = require("./296");
-import Lodash = require("lodash");
-import React = require("react");
+import /* [auto-meaningful-name] */$_296 = require("./296")
+import /* [auto-meaningful-name] */Lodash = require("lodash")
+import /* [auto-meaningful-name] */React = require("react")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,7 +21,7 @@ var a = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import s = require("./8");
+import s = require("./8")
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -34,17 +34,17 @@ var c = function __importDefault(module) {
   })
   return defaultExport
 }(s)
-import l = require("./13/index");
+import /* [auto-meaningful-name] */$_13_index = require("./13/index")
 require("./13/636")
 var _a
 _a = React.memo(function (e) {
-  var e$onStep = e.onStep
-  var e$max = e.max
-  var e$min = e.min
-  var e$defaultValue = e.defaultValue
-  var e$disabled = e.disabled
-  var e$label = e.label
-  var f = r.a(e, ["onStep", "max", "min", "defaultValue", "disabled", "label"])
+  var /* [auto-meaningful-name] */e$onStep = e.onStep
+  var /* [auto-meaningful-name] */e$max = e.max
+  var /* [auto-meaningful-name] */e$min = e.min
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$label = e.label
+  var f = $_296.a(e, ["onStep", "max", "min", "defaultValue", "disabled", "label"])
   var h = Number(e$max) <= Number(e$defaultValue)
   var m = Number(e$min) >= Number(e$defaultValue)
   var g = Number(e$defaultValue)
@@ -58,7 +58,7 @@ _a = React.memo(function (e) {
       e$onStep("".concat(g - 1), e, "down")
     }
   }, [m, e$onStep, g])
-  return a.a.createElement(l.k, Object.assign({}, f, {
+  return a.a.createElement($_13_index.k, Object.assign({}, f, {
     className: c()(f.className, "coco-number-input-wrapper"),
     defaultValue: e$defaultValue,
     min: e$min,
@@ -71,12 +71,12 @@ _a = React.memo(function (e) {
     }, a.a.createElement("span", {
       className: h || e$disabled ? "disable" : "",
       onClick: _
-    }, a.a.createElement(l.j, {
+    }, a.a.createElement($_13_index.j, {
       type: "icon-up"
     })), a.a.createElement("span", {
       className: m || e$disabled ? "disable" : "",
       onClick: v
-    }, a.a.createElement(l.j, {
+    }, a.a.createElement($_13_index.j, {
       type: "icon-down"
     }))))
   }))

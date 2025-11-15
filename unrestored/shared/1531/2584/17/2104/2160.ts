@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2160
@@ -13,9 +13,9 @@ exports.WorkspaceSvg = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = require("../../125/195/index")
-var c = require("../497/644")
+var c = require("../../1179/2554/644")
 var u = require("../../125/294")
 var l = require("../../125/index")
 var f = require("../497/961")
@@ -195,7 +195,7 @@ var p = function () {
     var n = e ? this.undo_stack_ : this.redo_stack_
     var r = t.pop()
     if (r) {
-      for (var i = [r], r$_group = r._group; t.length && r$_group && r$_group == t[t.length - 1]._group;) {
+      for (var i = [r], /* [auto-meaningful-name] */r$_group = r._group; t.length && r$_group && r$_group == t[t.length - 1]._group;) {
         var a = t.pop()
         if (a) {
           i.push(a)
@@ -468,7 +468,7 @@ var p = function () {
         this.current_gesture_.cancel()
       }
       this.events.disable()
-      var this$resizes_enabled_ = this.resizes_enabled_
+      var /* [auto-meaningful-name] */this$resizes_enabled_ = this.resizes_enabled_
       if (this$resizes_enabled_) {
         this.set_resizes_enabled(false)
       }
@@ -608,7 +608,7 @@ var p = function () {
         y: parseInt(n || "0", 10)
       }
     }
-    var this$resizes_enabled_ = this.resizes_enabled_
+    var /* [auto-meaningful-name] */this$resizes_enabled_ = this.resizes_enabled_
     if (this$resizes_enabled_) {
       this.set_resizes_enabled(false)
     }
@@ -1007,7 +1007,7 @@ var p = function () {
   }
   e.prototype.get_gesture = function (e) {
     var t = "mousedown" == e.type || "touchstart" == e.type
-    var this$current_gesture_ = this.current_gesture_
+    var /* [auto-meaningful-name] */this$current_gesture_ = this.current_gesture_
     return this$current_gesture_ ? t && this$current_gesture_.has_started() ? void this$current_gesture_.cancel() : this$current_gesture_ : t ? (this.current_gesture_ = this.gesture_factory({
       event: e,
       workspace: this
@@ -1061,7 +1061,7 @@ var p = function () {
         this.toolbox_.refresh_selection()
       }
     } else {
-      var this$target_workspace = this.target_workspace
+      var /* [auto-meaningful-name] */this$target_workspace = this.target_workspace
       var t = null === this$target_workspace || undefined === this$target_workspace ? undefined : this$target_workspace.get_toolbox()
       if (this$target_workspace && t && t.flyout && !this$target_workspace.current_gesture_ && this$target_workspace.get_toolbox_refresh_enabled) {
         t.refresh_selection()
@@ -1077,7 +1077,7 @@ var p = function () {
     if (this.cached_parent_svg_) {
       return this.cached_parent_svg_
     }
-    for (var this$svg_group = this.svg_group; this$svg_group;) {
+    for (var /* [auto-meaningful-name] */this$svg_group = this.svg_group; this$svg_group;) {
       if ("svg" == this$svg_group.tagName) {
         this.cached_parent_svg_ = this$svg_group
         return this$svg_group
@@ -1238,7 +1238,7 @@ var p = function () {
       if (undefined == t) {
         throw new ReferenceError()
       }
-      var t$parentNode = t.parentNode
+      var /* [auto-meaningful-name] */t$parentNode = t.parentNode
       if (undefined != t$parentNode) {
         (0, l.remove_node)(t$parentNode)
       }
@@ -1320,7 +1320,7 @@ var p = function () {
     this.set_resizes_enabled(true)
   }
   e.prototype.zoom = function (e, t, n) {
-    var this$options$zoomOptions$scaleSpeed = this.options.zoomOptions.scaleSpeed
+    var /* [auto-meaningful-name] */this$options$zoomOptions$scaleSpeed = this.options.zoomOptions.scaleSpeed
     var i = Math.pow(this$options$zoomOptions$scaleSpeed, n)
     var a = Math.max(this.options.zoomOptions.minScale, Math.min(this.scale * i, this.options.zoomOptions.maxScale))
     i = a / this.scale
@@ -1350,11 +1350,11 @@ var p = function () {
   e.prototype.zoom_to_fit = function () {
     var e = this.get_metrics()
     var t = this.get_blocks_bounding_box()
-    var t$width = t.width
-    var t$height = t.height
+    var /* [auto-meaningful-name] */t$width = t.width
+    var /* [auto-meaningful-name] */t$height = t.height
     if (t$width) {
-      var e$viewWidth = e.viewWidth
-      var e$viewHeight = e.viewHeight
+      var /* [auto-meaningful-name] */e$viewWidth = e.viewWidth
+      var /* [auto-meaningful-name] */e$viewHeight = e.viewHeight
       if (this.flyout_) {
         e$viewWidth -= this.flyout_.get_width()
       }
@@ -1390,7 +1390,7 @@ var p = function () {
         var i = n[1] + r.height / 2
         var o = this.RTL ? -1 : 1
         var a = n[0] + o * r.width / 2
-        var this$scale = this.scale
+        var /* [auto-meaningful-name] */this$scale = this.scale
         var c = a * this$scale
         var u = i * this$scale
         var l = this.get_metrics()
@@ -1449,7 +1449,7 @@ var p = function () {
   }
   e.prototype.scroll = function (e, t) {
     if (this._scrollbar && this.start_drag_metrics) {
-      var this$start_drag_metrics = this.start_drag_metrics
+      var /* [auto-meaningful-name] */this$start_drag_metrics = this.start_drag_metrics
       e = Math.min(e, -this$start_drag_metrics.contentLeft)
       t = Math.min(t, -this$start_drag_metrics.contentTop)
       e = Math.max(e, this$start_drag_metrics.viewWidth - this$start_drag_metrics.contentLeft - this$start_drag_metrics.contentWidth)
@@ -1495,7 +1495,7 @@ var p = function () {
     var i = t.height || 0
     var o = r
     var a = i
-    var e$options$workspace$content_margin = e.options.workspace.content_margin
+    var /* [auto-meaningful-name] */e$options$workspace$content_margin = e.options.workspace.content_margin
     if ("number" === typeof e$options$workspace$content_margin) {
       o = e$options$workspace$content_margin
       a = e$options$workspace$content_margin

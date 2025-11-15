@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2177
@@ -13,7 +13,7 @@ exports.ScrollbarPair = exports.Scrollbar = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = require("../../125/195/index")
 var c = require("../../125/index")
 var u = function () {
@@ -219,18 +219,18 @@ var u = function () {
     this.clean_up()
   }
   e.prototype.on_mousedown_handle = function (e) {
-    var /* [auto-meaningful-name] */_this$workspace_4
     var /* [auto-meaningful-name] */this$workspace_
-    if (!(null === (_this$workspace_4 = this.workspace_) || undefined === _this$workspace_4)) {
-      _this$workspace_4.mark_focused()
+    var /* [auto-meaningful-name] */_this$workspace_
+    if (!(null === (this$workspace_ = this.workspace_) || undefined === this$workspace_)) {
+      this$workspace_.mark_focused()
     }
     this.clean_up()
     if (this.utils.is_right_button(e)) {
       e.stopPropagation()
     } else {
       this.start_drag_handle = this.handle_position_
-      if (!(null === (this$workspace_ = this.workspace_) || undefined === this$workspace_)) {
-        this$workspace_.setup_drag_surface()
+      if (!(null === (_this$workspace_ = this.workspace_) || undefined === _this$workspace_)) {
+        _this$workspace_.setup_drag_surface()
       }
       this.start_drag_mouse = this.horizontal_ ? e.clientX : e.clientY
       t.on_mouse_up_wrapper_ = this.events.bind_event_with_checks(document, "mouseup", this, this.on_mouse_up_handle)
@@ -264,7 +264,7 @@ var u = function () {
       var n = this.horizontal_ ? t.x : t.y
       var r = this.utils.get_injection_div_xy(this.svg_handle_)
       var i = this.horizontal_ ? r[0] : r[1]
-      var this$handle_position_ = this.handle_position_
+      var /* [auto-meaningful-name] */this$handle_position_ = this.handle_position_
       var a = .95 * this.handle_length_
       if (n <= i) {
         this$handle_position_ -= a
@@ -332,7 +332,7 @@ var u = function () {
       }
       if (e !== t) {
         this.workspace_.set_metrics(n)
-        var this$workspace_$content_offset_by_view = this.workspace_.content_offset_by_view
+        var /* [auto-meaningful-name] */this$workspace_$content_offset_by_view = this.workspace_.content_offset_by_view
         if (this.horizontal_) {
           this.set_handle_position(this$workspace_$content_offset_by_view[0] * this.size_ratio_)
         } else {
@@ -438,7 +438,7 @@ var l = function () {
   }
   e.prototype.set = function (e, t) {
     if (this.h_scroll && this.v_scroll && this.workspace_) {
-      var this$workspace_$content_offset_by_view = this.workspace_.content_offset_by_view
+      var /* [auto-meaningful-name] */this$workspace_$content_offset_by_view = this.workspace_.content_offset_by_view
       var r = {
         x: this.h_scroll.constrain_target_pos(e),
         y: this.v_scroll.constrain_target_pos(t)
@@ -466,7 +466,7 @@ var l = function () {
   }
   e.prototype.set_block_offset_by_view = function (e, t) {
     if (this.h_scroll && this.v_scroll && this.workspace_) {
-      var this$workspace_$content_offset_by_view = this.workspace_.content_offset_by_view
+      var /* [auto-meaningful-name] */this$workspace_$content_offset_by_view = this.workspace_.content_offset_by_view
       var r = this.workspace_.get_metrics()
       var i = {
         x: this.h_scroll.constrain_target_pos(-r.contentLeft - e),

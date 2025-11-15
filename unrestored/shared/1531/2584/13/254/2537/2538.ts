@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2538
@@ -85,7 +85,7 @@ exports.handleFocus = function (e) {
       var t
       var n
       c(this, r)
-      for (var arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
+      for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
         o[a] = arguments[a]
       }
       t = n = u(this, (e = r.__proto__ || Object.getPrototypeOf(r)).call.apply(e, [this].concat(o)))

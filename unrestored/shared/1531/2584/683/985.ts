@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：985
@@ -7,7 +7,7 @@
 "use strict"
 
 export { s as a }
-import r = require("./34/index");
+import /* [auto-meaningful-name] */$_34_index = require("./34/index")
 var i = function () {
   function e(e) {
     this.a = this.solve_a(e[0][0].x, e[0][0].y, e[0][1].x, e[1][0].x, e[1][0].y, e[1][1].x, e[2][0].x, e[2][0].y, e[2][1].x)
@@ -118,7 +118,7 @@ var s = function (e) {
     var /* [auto-meaningful-name] */this$uniforms$filterGlobals
     var o
     var s
-    var e$length = e.length
+    var /* [auto-meaningful-name] */e$length = e.length
     if (e$length > this.max_num_anchors) {
       console.error("Length of anchors (" + e$length + ") exceeds the maximum anchors length (" + this.max_num_anchors + ") which decided when the filter was constructed. ")
       e.slice(0, this.max_num_anchors)
@@ -151,5 +151,5 @@ var s = function (e) {
     }
   }
   return t
-}(r.i)
+}($_34_index.i)
 export default s

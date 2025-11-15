@@ -1,36 +1,34 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2271
  */
 
-(function () {
-  var t
-  var r
-  var /* [auto-meaningful-name] */require$1348Index$parseType
-  var o
-  var a
-  t = require("./2272/index")
-  r = require("./2278")
-  require$1348Index$parseType = require("./1348/index").parseType
-  o = function (e, n, i) {
-    if (null == i) {
-      i = {}
-    }
-    if (null == i.explicit) {
-      i.explicit = false
-    }
-    if (null == i.customTypes) {
-      i.customTypes = {}
-    }
-    return r(t(e, n, i), e, i)
+var t
+var r
+var /* [auto-meaningful-name] */require$_1348_index$parseType
+var o
+var a
+t = require("./2272/index")
+r = require("./2278")
+require$_1348_index$parseType = require("./1348/index").parseType
+o = function (e, n, i) {
+  if (null == i) {
+    i = {}
   }
-  a = function (e, t, n) {
-    return o(require$1348Index$parseType(e), t, n)
+  if (null == i.explicit) {
+    i.explicit = false
   }
-  module.exports = {
-    VERSION: "0.3.0",
-    parse: a,
-    parsedTypeParse: o
+  if (null == i.customTypes) {
+    i.customTypes = {}
   }
-}).call(this)
+  return r(t(e, n, i), e, i)
+}
+a = function (e, t, n) {
+  return o(require$_1348_index$parseType(e), t, n)
+}
+module.exports = {
+  VERSION: "0.3.0",
+  parse: a,
+  parsedTypeParse: o
+}

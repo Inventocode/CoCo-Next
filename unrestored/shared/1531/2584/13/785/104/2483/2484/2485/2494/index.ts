@@ -1,16 +1,16 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2494
  */
 
-var r = require("./1157/index")
+var r = require("../../../../../../254/2513/2514/2515/2516/1416/1157/index")
 var i = require("./2495")
 var o = require("./2496")
 var a = require("./2497")
-var s = require("../../../../../../254/2513/2514/2515/2516/1416")
+var s = require("../../../../../../254/2513/2514/2515/2516/1416/index")
 module.exports = function (e, t, n) {
-  var e$constructor = e.constructor
+  var /* [auto-meaningful-name] */e$constructor = e.constructor
   switch (t) {
     case "[object ArrayBuffer]":
       return r(e)

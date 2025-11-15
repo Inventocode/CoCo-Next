@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：448
@@ -8,7 +8,7 @@
 
 export { h as a }
 export { m as b }
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,12 +21,12 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import i = require("../5");
-import a = require("../42/index");
-import s = require("../64");
-import c = require("../205");
-import l = require("../35");
-import u = require("./670");
+import i = require("../5")
+import /* [auto-meaningful-name] */$$_42_index = require("../42/index")
+import /* [auto-meaningful-name] */$$_64 = require("../64")
+import /* [auto-meaningful-name] */$$_205 = require("../205")
+import /* [auto-meaningful-name] */$$_35 = require("../35")
+import /* [auto-meaningful-name] */$_670 = require("./670")
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -38,25 +38,25 @@ var d = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(u)
-import p = require("../76");
+}($_670)
+import /* [auto-meaningful-name] */$$_76 = require("../76")
 function f(e) {
   var t = e.id
-  var e$widgetIds = e.widgetIds
-  var e$position = e.position
-  var e$size = e.size
-  var e$backgroundColor = e.backgroundColor
-  var e$backgroundImage = e.backgroundImage
-  var e$backgroundImageResizeMode = e.backgroundImageResizeMode
+  var /* [auto-meaningful-name] */e$widgetIds = e.widgetIds
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$backgroundColor = e.backgroundColor
+  var /* [auto-meaningful-name] */e$backgroundImage = e.backgroundImage
+  var /* [auto-meaningful-name] */e$backgroundImageResizeMode = e.backgroundImageResizeMode
   var h = []
   e$widgetIds.forEach(function (e, t) {
-    var n = a.g.get(e)
+    var n = $$_42_index.g.get(e)
     if (n) {
       n.zIndex = t
       h.push(n)
     }
   })
-  var m = l.hb(e$backgroundImage)
+  var m = $$_35.hb(e$backgroundImage)
   var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl)
   if (!(g || !e$backgroundImage.includes("://") && !e$backgroundImage.includes("data:image/"))) {
     g = e$backgroundImage
@@ -73,29 +73,29 @@ function f(e) {
       height: e$size.height,
       backgroundColor: e$backgroundColor,
       backgroundImage: g ? "url(".concat(g, ")") : "none",
-      backgroundSize: e$backgroundImageResizeMode === c.a.STRETCH ? "100% 100%" : e$backgroundImageResizeMode
+      backgroundSize: e$backgroundImageResizeMode === $$_205.a.STRETCH ? "100% 100%" : e$backgroundImageResizeMode
     }
   }, h.map(function (e) {
-    return a.f({
+    return $$_42_index.f({
       widget: e
     })
   }))
 }
 function h(e) {
   return {
-    id: s.a(i.D),
+    id: $$_64.a(i.D),
     title: e,
     type: i.D,
     position: {
       x: 0,
       y: 0
     },
-    backgroundColor: p.c,
+    backgroundColor: $$_76.c,
     backgroundImage: "",
-    backgroundImageResizeMode: c.a.COVER,
+    backgroundImageResizeMode: $$_205.a.COVER,
     size: {
-      width: p.e,
-      height: p.d
+      width: $$_76.e,
+      height: $$_76.d
     },
     widgetIds: [],
     invisibleWidgetIds: [],
@@ -109,12 +109,12 @@ function h(e) {
 }
 function m(e) {
   var t = e.id
-  var e$widgetIds = e.widgetIds
-  var e$position = e.position
-  var e$size = e.size
-  var e$backgroundColor = e.backgroundColor
-  var e$backgroundImage = e.backgroundImage
-  var e$backgroundImageResizeMode = e.backgroundImageResizeMode
+  var /* [auto-meaningful-name] */e$widgetIds = e.widgetIds
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$backgroundColor = e.backgroundColor
+  var /* [auto-meaningful-name] */e$backgroundImage = e.backgroundImage
+  var /* [auto-meaningful-name] */e$backgroundImageResizeMode = e.backgroundImageResizeMode
   return o.a.createElement(f, {
     id: t,
     widgetIds: e$widgetIds,

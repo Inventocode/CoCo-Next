@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1483
@@ -6,8 +6,8 @@
 
 "use strict"
 
-import r = require("../702");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_702 = require("../702")
+import /* [auto-meaningful-name] */React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -20,7 +20,7 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import a = require("../8");
+import a = require("../8")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -33,7 +33,7 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(a)
-import c = require("./154");
+import /* [auto-meaningful-name] */$_154 = require("./154")
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -45,15 +45,15 @@ var l = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(c)
+}($_154)
 var _a
 _a = function (e) {
-  var e$type = e.type
-  var e$index = e.index
-  var e$onSelect = e.onSelect
-  var e$position = e.position
-  var e$visible = e.visible
-  var r$a$formatMessage = r.a().formatMessage
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$index = e.index
+  var /* [auto-meaningful-name] */e$onSelect = e.onSelect
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */$$_702$a$formatMessage = $$_702.a().formatMessage
   function d(e) {
     if (e$onSelect) {
       e$onSelect(e$index, e)
@@ -69,12 +69,12 @@ _a = function (e) {
   }, i.a.createElement("div", {
     onClick: d.bind(null, "number"),
     className: s()("number" === e$type && l.a.active)
-  }, r$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "storageItemNumber"
   })), i.a.createElement("div", {
     onClick: d.bind(null, "string"),
     className: s()("string" === e$type && l.a.active)
-  }, r$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "storageItemString"
   })))
 }

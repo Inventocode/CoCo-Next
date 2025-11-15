@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1578
@@ -6,16 +6,16 @@
 
 "use strict"
 
-var r = require("./1623/86")
-var o = require("./1735/706")
-var i = require("./1680/473")
-var a = require("./1735/257")
-var s = require("./1623/309")
+var r = require("./1698/86/index")
+var o = require("./1575/706")
+var i = require("./1563/473")
+var a = require("./1684/257")
+var s = require("./1541/309")
 var c = require("./1557/821/index")
 var l = require("./1557/707")
 var u = require("./1557/822")("splice")
-var math$max = Math.max
-var math$min = Math.min
+var /* [auto-meaningful-name] */Math$max = Math.max
+var /* [auto-meaningful-name] */Math$min = Math.min
 r({
   target: "Array",
   proto: true,
@@ -31,7 +31,7 @@ r({
     var g = s(this)
     var _ = a(g.length)
     var v = o(e, _)
-    var arguments$length = arguments.length
+    var /* [auto-meaningful-name] */arguments$length = arguments.length
     if (0 === arguments$length) {
       n = r = 0
     } else {
@@ -40,7 +40,7 @@ r({
         r = _ - v
       } else {
         n = arguments$length - 2
-        r = math$min(math$max(i(t), 0), _ - v)
+        r = Math$min(Math$max(i(t), 0), _ - v)
       }
     }
     if (_ + n - r > 9007199254740991) {

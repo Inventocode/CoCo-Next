@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：313
@@ -6,18 +6,18 @@
 
 "use strict"
 
-export { c as d }
+export { IconWidgetOldButton as d }
 export { l as e }
 export { u as f }
-export { d as a }
+export { _148cefff as a }
 export { p as c }
 export { f as b }
 var r
 var o
-import i = require("./11");
-import a = require("./76");
-import s = require("./83");
-var c = "icon-widget-old-button"
+import i = require("./11")
+import a = require("./76")
+import s = require("./83")
+var /* [auto-meaningful-name] */IconWidgetOldButton = "icon-widget-old-button"
 r = {}
 i.a(r, s.c.TINY, {
   height: 32,
@@ -82,7 +82,7 @@ i.a(o, s.c.HUGE, {
   minWidth: 78
 })
 var u = o
-var d = "#148cefff"
+var /* [auto-meaningful-name] */_148cefff = "#148cefff"
 var p = false
 var f = false
-export default d
+export default _148cefff

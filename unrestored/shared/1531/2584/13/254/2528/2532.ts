@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2532
@@ -11,8 +11,8 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.calculateChange = function (e, t, n) {
   var r = n.getBoundingClientRect()
-  var r$width = r.width
-  var r$height = r.height
+  var /* [auto-meaningful-name] */r$width = r.width
+  var /* [auto-meaningful-name] */r$height = r.height
   var a = "number" === typeof e.pageX ? e.pageX : e.touches[0].pageX
   var s = "number" === typeof e.pageY ? e.pageY : e.touches[0].pageY
   var c = a - (n.getBoundingClientRect().left + window.pageXOffset)

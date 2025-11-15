@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：673
@@ -19,13 +19,13 @@ var r = {
     backgroundColor: "背景颜色"
   }
 }
-import o = require("./6");
-import i = require("./133/index");
-import a = require("./5");
-import s = require("./35");
+import o = require("./6")
+import /* [auto-meaningful-name] */$_133 = require("./133")
+import a = require("./5")
+import s = require("./35")
 var c = {
   type: a.v,
-  icon: i.a,
+  icon: $_133.a,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
   isGlobalWidget: false,
@@ -47,7 +47,7 @@ var c = {
     key: "backgroundColor",
     label: "backgroundColor",
     valueType: "color",
-    defaultValue: i.g
+    defaultValue: $_133.g
   }, o.a({}, s.i), {
     key: "__width",
     label: "width",

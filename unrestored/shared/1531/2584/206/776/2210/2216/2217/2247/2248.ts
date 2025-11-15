@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2248
@@ -10,8 +10,8 @@ module.exports = function (e, t, n) {
   var /* [auto-meaningful-name] */this$keyword
   var i
   var o = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var c = e.schema[t]
   var u = e.schemaPath + e.util.getProperty(t)
   var l = e.errSchemaPath + "/" + t
@@ -26,17 +26,17 @@ module.exports = function (e, t, n) {
   } else {
     i = c
   }
-  var /* [auto-meaningful-name] */this$definition$compile
-  var /* [auto-meaningful-name] */this$definition$inline
-  var /* [auto-meaningful-name] */this$definition$macro
+  var /* [auto-meaningful-name] */w$compile
+  var /* [auto-meaningful-name] */w$inline
+  var /* [auto-meaningful-name] */w$macro
   var m
   var y
   var b = "definition" + e$level
-  var this$definition = this.definition
+  var /* [auto-meaningful-name] */this$definition = this.definition
   var E = ""
   if (_ && this$definition.$data) {
     y = "keywordValidate" + e$level
-    var this$definition$validateSchema = this$definition.validateSchema
+    var /* [auto-meaningful-name] */this$definition$validateSchema = this$definition.validateSchema
     o += " var " + b + " = RULES.custom['" + t + "'].definition; var " + y + " = " + b + ".validate;"
   } else {
     if (!(m = e.useCustomRule(this, c, e.schema, e))) {
@@ -44,18 +44,18 @@ module.exports = function (e, t, n) {
     }
     i = "validate.schema" + u
     y = m.code
-    this$definition$compile = this$definition.compile
-    this$definition$inline = this$definition.inline
-    this$definition$macro = this$definition.macro
+    w$compile = this$definition.compile
+    w$inline = this$definition.inline
+    w$macro = this$definition.macro
   }
   var C = y + ".errors"
   var O = "i" + e$level
   var k = "ruleErr" + e$level
-  var this$definition$async = this$definition.async
+  var /* [auto-meaningful-name] */this$definition$async = this$definition.async
   if (this$definition$async && !e.async) {
     throw new Error("async keyword in sync schema")
   }
-  if (!(this$definition$inline || this$definition$macro)) {
+  if (!(w$inline || w$macro)) {
     o += C + " = null;"
   }
   o += "var " + p + " = errors;var " + h + ";"
@@ -67,20 +67,20 @@ module.exports = function (e, t, n) {
       o += " " + h + " = " + b + ".validateSchema(" + i + "); if (" + h + ") { "
     }
   }
-  if (this$definition$inline) {
+  if (w$inline) {
     if (this$definition.statements) {
       o += " " + m.validate + " "
     } else {
       o += " " + h + " = " + m.validate + "; "
     }
-  } else if (this$definition$macro) {
+  } else if (w$macro) {
     var T = e.util.copy(e)
     E = ""
     T.level++
     var B = "valid" + T.level
     T.schema = m.validate
     T.schemaPath = ""
-    var e$compositeRule = e.compositeRule
+    var /* [auto-meaningful-name] */e$compositeRule = e.compositeRule
     e.compositeRule = T.compositeRule = true
     var I = e.validate(T).replace(/validate\.schema/g, y)
     e.compositeRule = T.compositeRule = e$compositeRule
@@ -94,7 +94,7 @@ module.exports = function (e, t, n) {
     } else {
       o += "self"
     }
-    if (this$definition$compile || false === this$definition.schema) {
+    if (w$compile || false === this$definition.schema) {
       o += " , " + d + " "
     } else {
       o += " , " + i + " , " + d + " , validate.schema" + e.schemaPath + " "
@@ -130,7 +130,7 @@ module.exports = function (e, t, n) {
     o += " if ( "
     if (undefined === this$definition.valid) {
       o += " !"
-      o += this$definition$macro ? "" + B : "" + h
+      o += w$macro ? "" + B : "" + h
     } else {
       o += " " + !this$definition.valid + " "
     }
@@ -165,7 +165,7 @@ module.exports = function (e, t, n) {
     }
     var j = o
     o = N.pop()
-    if (this$definition$inline) {
+    if (w$inline) {
       if (this$definition.errors) {
         if ("full" != this$definition.errors) {
           o += "  for (var " + O + "=" + p + "; " + O + "<errors; " + O + "++) { var " + k + " = vErrors[" + O + "]; if (" + k + ".dataPath === undefined) " + k + ".dataPath = (dataPath || '') + " + e.errorPath + "; if (" + k + ".schemaPath === undefined) { " + k + ".schemaPath = \"" + l + "\"; } "
@@ -186,7 +186,7 @@ module.exports = function (e, t, n) {
         }
       }
     } else {
-      if (this$definition$macro) {
+      if (w$macro) {
         o += "   var err =   "
         if (false !== e.createErrors) {
           o += " { keyword: '" + (this$keyword || "custom") + "' , dataPath: (dataPath || '') + " + e.errorPath + " , schemaPath: " + e.util.toQuotedString(l) + " , params: { keyword: '" + this.keyword + "' } "

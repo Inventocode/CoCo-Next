@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：520
@@ -10,7 +10,7 @@ var r = require("./908")
 function i(e, t, n, o) {
   var a
   var s = function (r) {
-    for (var t$length = t.length, s = 0; s < t$length;) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, s = 0; s < t$length;) {
       if (e === t[s]) {
         return n[s]
       }

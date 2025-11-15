@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1001
@@ -12,16 +12,16 @@ Object.defineProperty(exports, "__esModule", {
 exports.DARK_THEME_CONFIG = exports.DEFAULT_THEME_CONFIG = exports.RendererParams = exports.Theme = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../4/127")
+var o = require("../1036/127")
 var a = require("./213/index")
 var s = require("./577")
 var c = function () {
   function e() {
     this.current_theme = ""
     this.theme_list = {}
-    this.register(d, h)
+    this.register(Default, h)
     this.register(p, _)
-    this._apply(d)
+    this._apply(Default)
   }
   e.prototype.get_color = function (e) {
     var t = e.match(/^%\{(BKY_)?([^}]+)\}$/)
@@ -304,7 +304,7 @@ var f = {
     border: "#007E8C"
   }
 }
-var d = "default"
+var /* [auto-meaningful-name] */Default = "default"
 var h = {
   font: {
     SIZE: "12pt"

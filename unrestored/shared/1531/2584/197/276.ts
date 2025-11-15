@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：276
@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import r = require("../301/203");
-import i = require("../57/770");
-import o = require("../36/461");
+import /* [auto-meaningful-name] */$$_301_203 = require("../301/203")
+import /* [auto-meaningful-name] */$$_57_770 = require("../57/770")
+import /* [auto-meaningful-name] */$$_36_461 = require("../36/461")
 function a(e) {
   var t = "function" === typeof Map ? new Map() : undefined
   return (a = function (e) {
@@ -27,7 +27,7 @@ function a(e) {
       t.set(e, a)
     }
     function a() {
-      return o.a(e, arguments, r.a(this).constructor)
+      return $$_36_461.a(e, arguments, $$_301_203.a(this).constructor)
     }
     a.prototype = Object.create(e.prototype, {
       constructor: {
@@ -37,7 +37,7 @@ function a(e) {
         configurable: true
       }
     })
-    return i.a(a, e)
+    return $$_57_770.a(a, e)
   })(e)
 }
 export default a

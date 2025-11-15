@@ -1,15 +1,15 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1604
  */
 
-var r = require("./1623/86")
-var o = require("./1736/167")
+var r = require("./1698/86/index")
+var o = require("./1541/167")
 var i = require("./1594/940")
-var math$abs = Math.abs
-var math$exp = Math.exp
-var math$E = Math.E
+var /* [auto-meaningful-name] */Math$abs = Math.abs
+var /* [auto-meaningful-name] */Math$exp = Math.exp
+var /* [auto-meaningful-name] */Math$E = Math.E
 r({
   target: "Math",
   stat: true,
@@ -18,6 +18,6 @@ r({
   })
 }, {
   sinh: function (e) {
-    return math$abs(e = +e) < 1 ? (i(e) - i(-e)) / 2 : (math$exp(e - 1) - math$exp(-e - 1)) * (math$E / 2)
+    return Math$abs(e = +e) < 1 ? (i(e) - i(-e)) / 2 : (Math$exp(e - 1) - Math$exp(-e - 1)) * (Math$E / 2)
   }
 })

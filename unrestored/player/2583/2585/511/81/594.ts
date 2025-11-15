@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：594
@@ -62,7 +62,7 @@ var a = function () {
     var /* [auto-meaningful-name] */i$return
     try {
       for (var i = o(this.bytes), a = i.next(); !a.done; a = i.next()) {
-        var a$value = a.value
+        var /* [auto-meaningful-name] */a$value = a.value
         r.a.fill(a$value, t)
       }
     } catch (u) {
@@ -92,8 +92,8 @@ var a = function () {
     if (this.height !== n.height) {
       return false
     }
-    for (var r = 0, this$height = this.height; r < this$height; ++r) {
-      for (var o = this.bytes[r], a = n.bytes[r], s = 0, this$width = this.width; s < this$width; ++s) {
+    for (var r = 0, /* [auto-meaningful-name] */this$height = this.height; r < this$height; ++r) {
+      for (var o = this.bytes[r], a = n.bytes[r], s = 0, /* [auto-meaningful-name] */this$width = this.width; s < this$width; ++s) {
         if (o[s] !== a[s]) {
           return false
         }
@@ -102,8 +102,8 @@ var a = function () {
     return true
   }
   t.prototype.toString = function () {
-    for (var t = new i.a(), e = 0, this$height = this.height; e < this$height; ++e) {
-      for (var r = this.bytes[e], o = 0, this$width = this.width; o < this$width; ++o) {
+    for (var t = new i.a(), e = 0, /* [auto-meaningful-name] */this$height = this.height; e < this$height; ++e) {
+      for (var r = this.bytes[e], o = 0, /* [auto-meaningful-name] */this$width = this.width; o < this$width; ++o) {
         switch (r[o]) {
           case 0:
             t.append(" 0")

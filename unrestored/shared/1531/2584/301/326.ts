@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：326
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.FieldNumber = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../4/127")
+var o = require("../1036/127")
 var a = require("../125/195/index")
 var s = require("../125/534")
 var c = require("../125/294")
@@ -130,7 +130,7 @@ var f = function (e) {
     var t
     if ("undefined" === typeof this.allow_text && (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.parent_block)) {
       var r = false
-      var this$source_block$parent_block = this.source_block.parent_block
+      var /* [auto-meaningful-name] */this$source_block$parent_block = this.source_block.parent_block
       var o = null === (t = this$source_block$parent_block.get_input_with_block(this.source_block)) || undefined === t ? undefined : t.name
       if (n.WHITE_LIST_BLOCKS.includes(this$source_block$parent_block.type) || Object.keys(n.WHITE_LIST_SPECIAL).includes(this$source_block$parent_block.type) && n.WHITE_LIST_SPECIAL[this$source_block$parent_block.type] === o) {
         r = true

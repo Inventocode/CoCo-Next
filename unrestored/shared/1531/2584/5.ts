@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：5
@@ -10,40 +10,40 @@ var r
 var o
 export { r as s }
 export { o as q }
-export { c as M }
-export { l as d }
-export { u as z }
-export { d as w }
-export { p as H }
-export { f as v }
-export { h as C }
-export { m as g }
-export { g as L }
-export { _ as F }
-export { v as E }
-export { b as x }
-export { y as A }
-export { E as f }
-export { O as c }
-export { w as a }
-export { C as e }
-export { T as b }
-export { S as t }
-export { I as K }
-export { A as n }
-export { j as J }
-export { N as I }
-export { R as u }
-export { k as i }
-export { x as y }
-export { D as B }
-export { M as l }
-export { L as j }
-export { P as m }
-export { B as h }
-export { F as k }
-export { G }
-export { U as D }
+export { WIDGET as M }
+export { BUTTON_WIDGET as d }
+export { NEW_BUTTON_WIDGET as z }
+export { INPUT_WIDGET as w }
+export { TEXT_WIDGET as H }
+export { IMAGE_WIDGET as v }
+export { RADIO_WIDGET as C }
+export { CHECKBOX_WIDGET as g }
+export { WEB_VIEW_WIDGET as L }
+export { SWITCH_WIDGET as F }
+export { SLIDER_WIDGET as E }
+export { LIST_VIEWER_WIDGET as x }
+export { NEW_LIST_VIEWER_WIDGET as A }
+export { CANVAS_WIDGET as f }
+export { BRUSH_WIDGET as c }
+export { ACTOR_WIDGET as a }
+export { CAMERA_WIDGET as e }
+export { AUDIO_WIDGET as b }
+export { GYROSCOPE_WIDGET as t }
+export { VOLUME_SENSOR_WIDGET as K }
+export { DATE_PICKER_WIDGET as n }
+export { TIME_PICKER_WIDGET as J }
+export { TIMER_WIDGET as I }
+export { HTTP_CLIENT_WIDGET as u }
+export { CLOUD_ROOM_WIDGET as i }
+export { LOCAL_STORAGE_WIDGET as y }
+export { NEW_LOCAL_STORAGE_WIDGET as B }
+export { CLOUD_STORAGE_WIDGET as l }
+export { CLOUD_SPACE_DICT_WIDGET as j }
+export { DATABASE_WIDGET as m }
+export { CLOUD_DB_WIDGET as h }
+export { CLOUD_SPACE_TABLE_WIDGET as k }
+export { TABLE_DATA_WIDGET as G }
+export { SCREEN as D }
 export { W as r }
 export { i as p }
 export { s as o };
@@ -61,40 +61,40 @@ export { s as o };
 var i
 var a
 var s
-var c = "WIDGET"
-var l = "BUTTON_WIDGET"
-var u = "NEW_BUTTON_WIDGET"
-var d = "INPUT_WIDGET"
-var p = "TEXT_WIDGET"
-var f = "IMAGE_WIDGET"
-var h = "RADIO_WIDGET"
-var m = "CHECKBOX_WIDGET"
-var g = "WEB_VIEW_WIDGET"
-var _ = "SWITCH_WIDGET"
-var v = "SLIDER_WIDGET"
-var b = "LIST_VIEWER_WIDGET"
-var y = "NEW_LIST_VIEWER_WIDGET"
-var E = "CANVAS_WIDGET"
-var O = "BRUSH_WIDGET"
-var w = "ACTOR_WIDGET"
-var C = "CAMERA_WIDGET"
-var T = "AUDIO_WIDGET"
-var S = "GYROSCOPE_WIDGET"
-var I = "VOLUME_SENSOR_WIDGET"
-var A = "DATE_PICKER_WIDGET"
-var j = "TIME_PICKER_WIDGET"
-var N = "TIMER_WIDGET"
-var R = "HTTP_CLIENT_WIDGET"
-var k = "CLOUD_ROOM_WIDGET"
-var x = "LOCAL_STORAGE_WIDGET"
-var D = "NEW_LOCAL_STORAGE_WIDGET"
-var M = "CLOUD_STORAGE_WIDGET"
-var L = "CLOUD_SPACE_DICT_WIDGET"
-var P = "DATABASE_WIDGET"
-var B = "CLOUD_DB_WIDGET"
-var F = "CLOUD_SPACE_TABLE_WIDGET"
-var G = "TABLE_DATA_WIDGET"
-var U = "SCREEN"
+var /* [auto-meaningful-name] */WIDGET = "WIDGET"
+var /* [auto-meaningful-name] */BUTTON_WIDGET = "BUTTON_WIDGET"
+var /* [auto-meaningful-name] */NEW_BUTTON_WIDGET = "NEW_BUTTON_WIDGET"
+var /* [auto-meaningful-name] */INPUT_WIDGET = "INPUT_WIDGET"
+var /* [auto-meaningful-name] */TEXT_WIDGET = "TEXT_WIDGET"
+var /* [auto-meaningful-name] */IMAGE_WIDGET = "IMAGE_WIDGET"
+var /* [auto-meaningful-name] */RADIO_WIDGET = "RADIO_WIDGET"
+var /* [auto-meaningful-name] */CHECKBOX_WIDGET = "CHECKBOX_WIDGET"
+var /* [auto-meaningful-name] */WEB_VIEW_WIDGET = "WEB_VIEW_WIDGET"
+var /* [auto-meaningful-name] */SWITCH_WIDGET = "SWITCH_WIDGET"
+var /* [auto-meaningful-name] */SLIDER_WIDGET = "SLIDER_WIDGET"
+var /* [auto-meaningful-name] */LIST_VIEWER_WIDGET = "LIST_VIEWER_WIDGET"
+var /* [auto-meaningful-name] */NEW_LIST_VIEWER_WIDGET = "NEW_LIST_VIEWER_WIDGET"
+var /* [auto-meaningful-name] */CANVAS_WIDGET = "CANVAS_WIDGET"
+var /* [auto-meaningful-name] */BRUSH_WIDGET = "BRUSH_WIDGET"
+var /* [auto-meaningful-name] */ACTOR_WIDGET = "ACTOR_WIDGET"
+var /* [auto-meaningful-name] */CAMERA_WIDGET = "CAMERA_WIDGET"
+var /* [auto-meaningful-name] */AUDIO_WIDGET = "AUDIO_WIDGET"
+var /* [auto-meaningful-name] */GYROSCOPE_WIDGET = "GYROSCOPE_WIDGET"
+var /* [auto-meaningful-name] */VOLUME_SENSOR_WIDGET = "VOLUME_SENSOR_WIDGET"
+var /* [auto-meaningful-name] */DATE_PICKER_WIDGET = "DATE_PICKER_WIDGET"
+var /* [auto-meaningful-name] */TIME_PICKER_WIDGET = "TIME_PICKER_WIDGET"
+var /* [auto-meaningful-name] */TIMER_WIDGET = "TIMER_WIDGET"
+var /* [auto-meaningful-name] */HTTP_CLIENT_WIDGET = "HTTP_CLIENT_WIDGET"
+var /* [auto-meaningful-name] */CLOUD_ROOM_WIDGET = "CLOUD_ROOM_WIDGET"
+var /* [auto-meaningful-name] */LOCAL_STORAGE_WIDGET = "LOCAL_STORAGE_WIDGET"
+var /* [auto-meaningful-name] */NEW_LOCAL_STORAGE_WIDGET = "NEW_LOCAL_STORAGE_WIDGET"
+var /* [auto-meaningful-name] */CLOUD_STORAGE_WIDGET = "CLOUD_STORAGE_WIDGET"
+var /* [auto-meaningful-name] */CLOUD_SPACE_DICT_WIDGET = "CLOUD_SPACE_DICT_WIDGET"
+var /* [auto-meaningful-name] */DATABASE_WIDGET = "DATABASE_WIDGET"
+var /* [auto-meaningful-name] */CLOUD_DB_WIDGET = "CLOUD_DB_WIDGET"
+var /* [auto-meaningful-name] */CLOUD_SPACE_TABLE_WIDGET = "CLOUD_SPACE_TABLE_WIDGET"
+var /* [auto-meaningful-name] */TABLE_DATA_WIDGET = "TABLE_DATA_WIDGET"
+var /* [auto-meaningful-name] */SCREEN = "SCREEN"
 var W = {
   CREATE: "CREATE"
 }
@@ -117,4 +117,4 @@ var W = {
   e.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC = "AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC"
   e.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC = "IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC"
 })(s || (s = {}))
-export default w
+export default ACTOR_WIDGET

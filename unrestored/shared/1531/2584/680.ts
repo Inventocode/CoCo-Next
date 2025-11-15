@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：680
@@ -20,4 +20,4 @@ var r = {
     onPedometerPermissionFail: "请求权限失败"
   }
 }
-import o = require("./539");
+import /* [auto-meaningful-name] */$_539 = require("./539")

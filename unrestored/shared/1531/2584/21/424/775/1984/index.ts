@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1984
@@ -10,7 +10,7 @@ r.prototype.postfixEval = function (e) {
 
   (e = e || {}).PI = Math.PI
   e.E = Math.E
-  for (var t, n, i, o = [], this$value = this.value, s = "undefined" !== typeof e.n, c = 0; c < this$value.length; c++) {
+  for (var t, n, i, o = [], /* [auto-meaningful-name] */this$value = this.value, s = "undefined" !== typeof e.n, c = 0; c < this$value.length; c++) {
     if (1 === this$value[c].type) {
       o.push({
         value: this$value[c].value,

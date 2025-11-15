@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：505
@@ -66,7 +66,7 @@ var p = function (t) {
   l(e, t)
   e.prototype.decodeRow = function (t, r, a) {
     var f
-    var /* [auto-meaningful-name] */a$return
+    var /* [auto-meaningful-name] */A$return
     var l = this.decodeStart(r)
     var p = this.decodeEnd(r)
     var g = new c.a()
@@ -79,18 +79,18 @@ var p = function (t) {
     if (null == w) {
       w = e.DEFAULT_ALLOWED_LENGTHS
     }
-    var y$length = y.length
+    var /* [auto-meaningful-name] */y$length = y.length
     var _ = false
     var m = 0
     try {
       for (var A = d(w), E = A.next(); !E.done; E = A.next()) {
-        var e$value = E.value
-        if (y$length === e$value) {
+        var /* [auto-meaningful-name] */E$value = E.value
+        if (y$length === E$value) {
           _ = true
           break
         }
-        if (e$value > m) {
-          m = e$value
+        if (E$value > m) {
+          m = E$value
         }
       }
     } catch (S) {
@@ -99,8 +99,8 @@ var p = function (t) {
       }
     } finally {
       try {
-        if (E && !E.done && (a$return = A.return)) {
-          a$return.call(A)
+        if (E && !E.done && (A$return = A.return)) {
+          A$return.call(A)
         }
       } finally {
         if (f) {
@@ -184,7 +184,7 @@ var p = function (t) {
     }
   }
   e.findGuardPattern = function (t, r, n) {
-    var n$length = n.length
+    var /* [auto-meaningful-name] */n$length = n.length
     var i = new Int32Array(n$length)
     var u = t.getSize()
     var s = false
@@ -214,7 +214,7 @@ var p = function (t) {
     throw new a.a()
   }
   e.decodeDigit = function (t) {
-    for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, n = -1, e$PATTERNS$length = e.PATTERNS.length, i = 0; i < e$PATTERNS$length; i++) {
+    for (var /* [auto-meaningful-name] */e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, n = -1, /* [auto-meaningful-name] */e$PATTERNS$length = e.PATTERNS.length, i = 0; i < e$PATTERNS$length; i++) {
       var u = e.PATTERNS[i]
       var s = h.a.patternMatchVariance(t, u, e.MAX_INDIVIDUAL_VARIANCE)
       if (s < e$MAX_AVG_VARIANCE) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1466
@@ -24,13 +24,13 @@ var a = (r = o) && r.__esModule ? r : {
   default: r
 }
 exports.default = function (e) {
-  var e$fill = e.fill
+  var /* [auto-meaningful-name] */e$fill = e.fill
   var n = undefined === e$fill ? "currentColor" : e$fill
-  var e$width = e.width
+  var /* [auto-meaningful-name] */e$width = e.width
   var o = undefined === e$width ? 24 : e$width
-  var e$height = e.height
+  var /* [auto-meaningful-name] */e$height = e.height
   var c = undefined === e$height ? 24 : e$height
-  var e$style = e.style
+  var /* [auto-meaningful-name] */e$style = e.style
   var l = undefined === e$style ? {} : e$style
   var f = function (e, t) {
     var n = {}

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：126
@@ -22,7 +22,7 @@ var a = function () {
     if (null !== r && undefined !== r && undefined !== r.get(n.a.CHARACTER_SET)) {
       return r.get(n.a.CHARACTER_SET).toString()
     }
-    for (var e$length = e.length, i = true, a = true, u = true, s = 0, c = 0, f = 0, h = 0, l = 0, d = 0, p = 0, g = 0, y = 0, w = 0, v = 0, _ = e.length > 3 && 239 === e[0] && 187 === e[1] && 191 === e[2], m = 0; m < e$length && (i || a || u); m++) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, i = true, a = true, u = true, s = 0, c = 0, f = 0, h = 0, l = 0, d = 0, p = 0, g = 0, y = 0, w = 0, v = 0, _ = e.length > 3 && 239 === e[0] && 187 === e[1] && 191 === e[2], m = 0; m < e$length && (i || a || u); m++) {
       var A = 255 & e[m]
       if (u) {
         if (s > 0) {

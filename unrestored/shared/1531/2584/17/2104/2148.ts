@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2148
@@ -14,9 +14,9 @@ var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
 var a = require("../../125/195/index")
-var s = require("../../4/127")
+var s = require("../../1036/127")
 var c = require("../../1001/213/index")
-var u = require("../497/387")
+var u = require("../../206/725/387")
 var l = require("../../125/294")
 var f = (0, r.__importStar)(require("../../125/index"))
 var d = function () {
@@ -41,7 +41,7 @@ var d = function () {
   e.prototype.dom_to_workspace = function (e, t) {
     var n = []
     this.utils.start_text_cache()
-    var e$childNodes$length = e.childNodes.length
+    var /* [auto-meaningful-name] */e$childNodes$length = e.childNodes.length
     var i = this.events.get_group()
     if (!i) {
       this.events.set_group(true)
@@ -92,8 +92,8 @@ var d = function () {
     return n
   }
   e.prototype.block_to_dom = function (e, t) {
-    var /* [auto-meaningful-name] */_e$next_connection2
     var /* [auto-meaningful-name] */e$next_connection
+    var /* [auto-meaningful-name] */_e$next_connection
     var i
     var o
     if ((0, c.is_block_group)(e)) {
@@ -105,7 +105,7 @@ var d = function () {
       if (e.group_type !== a.BlockGroupType.EXECUTION) {
         return i
       }
-      var l = null === (_e$next_connection2 = e.next_connection) || undefined === _e$next_connection2 ? undefined : _e$next_connection2.targetBlock()
+      var l = null === (e$next_connection = e.next_connection) || undefined === e$next_connection ? undefined : e$next_connection.targetBlock()
       var d = l && this.block_to_dom(l, t)
       if (d) {
         d.setAttribute(a.BLOCK_GROUP_STOPPED_XML_TAG, "true")
@@ -199,7 +199,7 @@ var d = function () {
     if (!e.editable_) {
       i.setAttribute("editable", String(false))
     }
-    var E = null === (e$next_connection = e.next_connection) || undefined === e$next_connection ? undefined : e$next_connection.targetBlock()
+    var E = null === (_e$next_connection = e.next_connection) || undefined === _e$next_connection ? undefined : _e$next_connection.targetBlock()
     if (E) {
       var x = f.create_dom("next", undefined, this.block_to_dom(E, t))
       i.appendChild(x)
@@ -221,7 +221,7 @@ var d = function () {
   e.prototype.field_to_dom = function (e, t) {
     if (e.name && e.editable) {
       var n = f.create_dom("field", undefined, String(e.get_value()))
-      var e$name = e.name
+      var /* [auto-meaningful-name] */e$name = e.name
       if ((0, c.is_field_number)(e)) {
         e$name = this.field_number_to_dom(e, n)
       }
@@ -245,7 +245,7 @@ var d = function () {
       o = i.type === a.ControllerType.SLIDER ? [i.type, i.left_text, i.right_text].join(",") : i.type === a.ControllerType.COLOR_PICKER ? [i.type, i.color_format, i.line].join(",") : i.type
       t.setAttribute("controller", o)
     }
-    var e$name = e.name
+    var /* [auto-meaningful-name] */e$name = e.name
     if (e.allow_text) {
       t.setAttribute("allow_text", "true")
       if (!(0, l.is_valid_number)(e.get_value())) {
@@ -318,10 +318,10 @@ var d = function () {
         this.grouped_blocks.length = 0
         for (i = u.length - 1; i >= 0; i--) {
           var l = u[i]
-          var l$block = l.block
+          var /* [auto-meaningful-name] */l$block = l.block
           var d = l.id
-          var l$name = l.name
-          var l$group_stop_at = l.group_stop_at
+          var /* [auto-meaningful-name] */l$name = l.name
+          var /* [auto-meaningful-name] */l$group_stop_at = l.group_stop_at
           l$block.hide_into_group(l$name, {
             id: d,
             group_stop_at: l$group_stop_at
@@ -531,7 +531,7 @@ var d = function () {
       }
       var r = t.get_field(n)
       if (r) {
-        var e$textContent = e.textContent
+        var /* [auto-meaningful-name] */e$textContent = e.textContent
         if ((0, c.is_field_number)(r)) {
           var o = e.getAttribute("constraints")
           if (o) {
@@ -612,7 +612,7 @@ var d = function () {
         if (!n) {
           n = true
         }
-        var o$parentElement = o.parentElement
+        var /* [auto-meaningful-name] */o$parentElement = o.parentElement
         switch (o$parentElement.nodeName) {
           case "NEXT":
             o$parentElement.parentElement.removeChild(o$parentElement)

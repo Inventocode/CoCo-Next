@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：905
@@ -7,9 +7,9 @@
 "use strict"
 
 export { s as a }
-import r = require("./394");
-var i = r.e()
-var o = "Sentry Logger "
+import /* [auto-meaningful-name] */$_394 = require("./394")
+var i = $_394.e()
+var /* [auto-meaningful-name] */SentryLogger = "Sentry Logger "
 var a = function () {
   function e() {
     this._enabled = false
@@ -25,8 +25,8 @@ var a = function () {
       e[t] = arguments[t]
     }
     if (this._enabled) {
-      r.c(function () {
-        i.console.log(o + "[Log]: " + e.join(" "))
+      $_394.c(function () {
+        i.console.log(SentryLogger + "[Log]: " + e.join(" "))
       })
     }
   }
@@ -35,8 +35,8 @@ var a = function () {
       e[t] = arguments[t]
     }
     if (this._enabled) {
-      r.c(function () {
-        i.console.warn(o + "[Warn]: " + e.join(" "))
+      $_394.c(function () {
+        i.console.warn(SentryLogger + "[Warn]: " + e.join(" "))
       })
     }
   }
@@ -45,8 +45,8 @@ var a = function () {
       e[t] = arguments[t]
     }
     if (this._enabled) {
-      r.c(function () {
-        i.console.error(o + "[Error]: " + e.join(" "))
+      $_394.c(function () {
+        i.console.error(SentryLogger + "[Error]: " + e.join(" "))
       })
     }
   }

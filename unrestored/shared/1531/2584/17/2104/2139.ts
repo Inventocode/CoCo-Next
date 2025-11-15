@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2139
@@ -23,7 +23,7 @@ var o = function () {
     this.field_map[e] = t
   }
   e.prototype.from_json = function (e) {
-    var e$type = e.type
+    var /* [auto-meaningful-name] */e$type = e.type
     if (!e$type || !this.field_map[e$type]) {
       throw new Error("Custom field type \"" + e$type + "\" not found")
     }

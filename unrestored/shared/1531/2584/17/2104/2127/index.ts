@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2127
@@ -37,7 +37,7 @@ var s = function (e) {
     this.block_animations.disconnect_ui_effect_stop(this._dragging_block)
     var n = undefined
     if (this.events.is_enabled()) {
-      var this$_workspace$current_gesture_ = this._workspace.current_gesture_
+      var /* [auto-meaningful-name] */this$_workspace$current_gesture_ = this._workspace.current_gesture_
       n = this.end_drag_event_factory({
         block: this._dragging_block,
         is_outside: this._was_outside,

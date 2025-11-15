@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：144
@@ -24,7 +24,7 @@ export { M as l }
 export { L as m }
 export { P as h }
 export { B as b }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -37,8 +37,8 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("./7");
-import Color = require("color");
+import i = require("./7")
+import /* [auto-meaningful-name] */Color = require("color")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -51,16 +51,16 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import c = require("./15");
-import l = require("./64");
-import u = require("./287");
-var d = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII="
+import c = require("./15")
+import l = require("./64")
+import /* [auto-meaningful-name] */$_287 = require("./287")
+var /* [auto-meaningful-name] */DataImage_pngBase64IVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII="
 function p(e) {
   var t = e.scenes.get_current_scene()
   if (t) {
     var n = e.scenes.get_scene(t)
-    var n$is_error = n.is_error
-    var n$value = n.value
+    var /* [auto-meaningful-name] */n$is_error = n.is_error
+    var /* [auto-meaningful-name] */n$value = n.value
     if (!n$is_error(n$value)) {
       return n$value
     }
@@ -92,7 +92,7 @@ function h() {
             break
           case 7:
             e.next = 9
-            return t.textures.load_texture(i, d)
+            return t.textures.load_texture(i, DataImage_pngBase64IVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII)
           case 9:
             if (a = p(t)) {
               a.get_background().set_texture(i, {
@@ -144,7 +144,7 @@ function _(e, t, n) {
 }
 function v(e, t) {
   var n = t.id
-  var t$source = t.source
+  var /* [auto-meaningful-name] */t$source = t.source
   if (t$source) {
     return e.textures.load_texture(n, t$source)
   }
@@ -379,7 +379,7 @@ function I() {
               l$value.remove_style(n)
               t.textures.destroy_texture(n)
             }
-            f = a === u.a.ARROW ? O(r, i) : a === u.a.CIRCLE ? E(r, i) : w(r, 0, s, c)
+            f = a === $_287.a.ARROW ? O(r, i) : a === $_287.a.CIRCLE ? E(r, i) : w(r, 0, s, c)
             e.prev = 11
             e.next = 14
             return t.textures.load_texture(n, f)
@@ -411,8 +411,8 @@ function I() {
 }
 function A(e, t, n) {
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (r$is_error(r$value)) {
     console.error("setActorVisible error", r$value)
   } else {
@@ -422,8 +422,8 @@ function A(e, t, n) {
 }
 function j(e, t, n) {
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (r$is_error(r$value)) {
     console.error("setActorRotation error", r$value)
   } else {
@@ -433,8 +433,8 @@ function j(e, t, n) {
 }
 function N(e, t, n, r) {
   var o = e.actors.get_actor(t)
-  var o$is_error = o.is_error
-  var o$value = o.value
+  var /* [auto-meaningful-name] */o$is_error = o.is_error
+  var /* [auto-meaningful-name] */o$value = o.value
   if (o$is_error(o$value)) {
     console.error("setActorScale error", o$value)
   } else {
@@ -445,8 +445,8 @@ function N(e, t, n, r) {
 function R(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 100
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (r$is_error(r$value)) {
     console.error("setActorScale error", r$value)
   } else {
@@ -456,8 +456,8 @@ function R(e, t) {
 }
 function k(e, t, n) {
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (r$is_error(r$value)) {
     console.error("setActorScale error", r$value)
   } else {
@@ -480,8 +480,8 @@ function x(e, t, n) {
   var a = arguments.length > 6 ? arguments[6] : undefined
   var s = arguments.length > 7 ? arguments[7] : undefined
   var c = e.actors.get_actor(t)
-  var c$is_error = c.is_error
-  var c$value = c.value
+  var /* [auto-meaningful-name] */c$is_error = c.is_error
+  var /* [auto-meaningful-name] */c$value = c.value
   if (c$is_error(c$value)) {
     console.error("setActorScale error", c$value)
   } else {
@@ -514,8 +514,8 @@ function D(e, t) {
     y: 0
   }
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (r$is_error(r$value)) {
     console.error("setActorScale error", r$value)
   } else {
@@ -530,8 +530,8 @@ function D(e, t) {
 }
 function M(e, t, n) {
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (r$is_error(r$value)) {
     console.error("setBrushPenColor error", r$value)
   } else {
@@ -542,8 +542,8 @@ function M(e, t, n) {
 }
 function L(e, t, n) {
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (r$is_error(r$value)) {
     console.error("setBrushPenSize error", r$value)
   } else {
@@ -553,8 +553,8 @@ function L(e, t, n) {
 }
 function P(e, t, n) {
   var r = e.actors.get_actor(t)
-  var r$is_error = r.is_error
-  var r$value = r.value
+  var /* [auto-meaningful-name] */r$is_error = r.is_error
+  var /* [auto-meaningful-name] */r$value = r.value
   if (!r$is_error(r$value)) {
     r$value.set_position(n.x, n.y)
     e.render()

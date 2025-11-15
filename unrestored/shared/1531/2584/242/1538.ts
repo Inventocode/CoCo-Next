@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1538
@@ -27,7 +27,7 @@ var y = r ? Symbol.for("react.responder") : 60118
 var b = r ? Symbol.for("react.scope") : 60119
 function w(e) {
   if ("object" === typeof e && null !== e) {
-    var e$$$typeof = e.$$typeof
+    var /* [auto-meaningful-name] */e$$$typeof = e.$$typeof
     switch (e$$$typeof) {
       case i:
         switch (e = e.type) {

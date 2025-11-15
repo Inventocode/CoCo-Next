@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1981
@@ -9,7 +9,7 @@ module.exports = function (e, t) {
   if (";" !== (e = r.trimRight(e))[e.length - 1]) {
     e += ";"
   }
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   var i = false
   var o = 0
   var a = 0

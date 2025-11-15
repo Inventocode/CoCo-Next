@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1021
@@ -7,7 +7,7 @@
 "use strict"
 
 export { j as a }
-import r = require("./62");
+import r = require("./62")
 var i = {}
 var a = i
 function o(e, t) {
@@ -37,15 +37,15 @@ function l(e) {
   var c
   var u
   var h
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   var p = 0
-  var number$POSITIVE_INFINITY = Number.POSITIVE_INFINITY
+  var /* [auto-meaningful-name] */Number$POSITIVE_INFINITY = Number.POSITIVE_INFINITY
   for (c = 0; c < e$length; ++c) {
     if (e[c] > p) {
       p = e[c]
     }
-    if (e[c] < number$POSITIVE_INFINITY) {
-      number$POSITIVE_INFINITY = e[c]
+    if (e[c] < Number$POSITIVE_INFINITY) {
+      Number$POSITIVE_INFINITY = e[c]
     }
   }
   for (t = 1 << p, n = new (s ? Uint32Array : Array)(t), r = 1, i = 0, a = 2; r <= p;) {
@@ -65,7 +65,7 @@ function l(e) {
     i <<= 1
     a <<= 1
   }
-  return [n, p, number$POSITIVE_INFINITY]
+  return [n, p, Number$POSITIVE_INFINITY]
 }
 function c(e, t) {
   switch (this.g = [], this.h = 32768, this.d = this.f = this.a = this.l = 0, this.input = s ? new Uint8Array(e) : e, this.m = false, this.i = h, this.r = false, !t && (t = {}) || (t.index && (this.a = t.index), t.bufferSize && (this.h = t.bufferSize), t.bufferType && (this.i = t.bufferType), t.resize && (this.r = t.resize)), this.i) {
@@ -95,13 +95,13 @@ c.prototype.k = function () {
     var e = C(this, 3)
     switch (1 & e && (this.m = true), e >>>= 1) {
       case 0:
-        var this$input = this.input,
-          this$a = this.a,
-          this$c = this.c,
-          this$b = this.b,
-          this$input$length = this$input.length,
+        var /* [auto-meaningful-name] */this$input = this.input,
+          /* [auto-meaningful-name] */this$a = this.a,
+          /* [auto-meaningful-name] */this$c = this.c,
+          /* [auto-meaningful-name] */this$b = this.b,
+          /* [auto-meaningful-name] */this$input$length = this$input.length,
           o = undefined,
-          this$c$length = this$c.length,
+          /* [auto-meaningful-name] */this$c$length = this$c.length,
           d = undefined
         if (this.d = this.f = 0, this$a + 1 >= this$input$length) {
           throw Error("invalid uncompressed block header: LEN")
@@ -215,7 +215,7 @@ c.prototype.k = function () {
   return this.n()
 }
 var p
-var /* [auto-meaningful-name] */t$length
+var /* [auto-meaningful-name] */T$length
 var m = [16, 17, 18, 0, 8, 7, 9, 6, 10, 5, 11, 4, 12, 3, 13, 2, 14, 1, 15]
 var v = s ? new Uint16Array(m) : m
 var g = [3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15, 17, 19, 23, 27, 31, 35, 43, 51, 59, 67, 83, 99, 115, 131, 163, 195, 227, 258, 258, 258]
@@ -227,19 +227,19 @@ var w = s ? new Uint16Array(_) : _
 var M = [0, 0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10, 11, 11, 12, 12, 13, 13]
 var S = s ? new Uint8Array(M) : M
 var T = new (s ? Uint8Array : Array)(288)
-for (p = 0, t$length = T.length; p < t$length; ++p) {
+for (p = 0, T$length = T.length; p < T$length; ++p) {
   T[p] = 143 >= p ? 8 : 255 >= p ? 9 : 279 >= p ? 7 : 8
 }
 var E
-var /* [auto-meaningful-name] */r$length
+var /* [auto-meaningful-name] */R$length
 var L = l(T)
 var R = new (s ? Uint8Array : Array)(30)
-for (E = 0, r$length = R.length; E < r$length; ++E) {
+for (E = 0, R$length = R.length; E < R$length; ++E) {
   R[E] = 5
 }
 var P = l(R)
 function C(e, t) {
-  for (var n, r = e.f, i = e.d, e$input = e.input, o = e.a, e$input$length = e$input.length; i < t;) {
+  for (var n, r = e.f, i = e.d, /* [auto-meaningful-name] */e$input = e.input, o = e.a, /* [auto-meaningful-name] */e$input$length = e$input.length; i < t;) {
     if (o >= e$input$length) {
       throw Error("input buffer is broken")
     }
@@ -253,7 +253,7 @@ function C(e, t) {
   return n
 }
 function I(e, t) {
-  for (var n, r, i = e.f, a = e.d, e$input = e.input, s = e.a, e$input$length = e$input.length, c = t[0], u = t[1]; a < u && !(s >= e$input$length);) {
+  for (var n, r, i = e.f, a = e.d, /* [auto-meaningful-name] */e$input = e.input, s = e.a, /* [auto-meaningful-name] */e$input$length = e$input.length, c = t[0], u = t[1]; a < u && !(s >= e$input$length);) {
     i |= e$input[s++] << a
     a += 8
   }
@@ -289,8 +289,8 @@ function O(e, t) {
   })
 }
 c.prototype.j = function (e, t) {
-  var this$c = this.c
-  var this$b = this.b
+  var /* [auto-meaningful-name] */this$c = this.c
+  var /* [auto-meaningful-name] */this$b = this.b
   this.o = e
   for (var i, a, o, s, l = this$c.length - 258; 256 !== (i = I(this, e));) {
     if (256 > i) {
@@ -313,10 +313,10 @@ c.prototype.j = function (e, t) {
   this.b = this$b
 }
 c.prototype.w = function (e, t) {
-  var this$c = this.c
-  var this$b = this.b
+  var /* [auto-meaningful-name] */this$c = this.c
+  var /* [auto-meaningful-name] */this$b = this.b
   this.o = e
-  for (var i, a, o, s, this$c$length = this$c.length; 256 !== (i = I(this, e));) {
+  for (var i, a, o, s, /* [auto-meaningful-name] */this$c$length = this$c.length; 256 !== (i = I(this, e));) {
     if (256 > i) {
       if (this$b >= this$c$length) {
         this$c$length = (this$c = this.e()).length
@@ -339,7 +339,7 @@ c.prototype.e = function () {
   var /* [auto-meaningful-name] */n$length
   var n = new (s ? Uint8Array : Array)(this.b - 32768)
   var r = this.b - 32768
-  var this$c = this.c
+  var /* [auto-meaningful-name] */this$c = this.c
   if (s) {
     n.set(this$c.subarray(32768, n.length))
   } else {
@@ -364,8 +364,8 @@ c.prototype.z = function (e) {
   var n
   var r
   var i = this.input.length / this.a + 1 | 0
-  var this$input = this.input
-  var this$c = this.c
+  var /* [auto-meaningful-name] */this$input = this.input
+  var /* [auto-meaningful-name] */this$c = this.c
   if (e) {
     if ("number" === typeof e.p) {
       i = e.p
@@ -391,16 +391,16 @@ c.prototype.n = function () {
   var t
   var n
   var r
-  var /* [auto-meaningful-name] */eThis$gT$length
+  var /* [auto-meaningful-name] */ELT$length
   var a = 0
-  var this$c = this.c
-  var this$g = this.g
+  var /* [auto-meaningful-name] */this$c = this.c
+  var /* [auto-meaningful-name] */this$g = this.g
   var c = new (s ? Uint8Array : Array)(this.l + (this.b - 32768))
   if (0 === this$g.length) {
     return s ? this.c.subarray(32768, this.b) : this.c.slice(32768, this.b)
   }
   for (t = 0, n = this$g.length; t < n; ++t) {
-    for (r = 0, eThis$gT$length = (e = this$g[t]).length; r < eThis$gT$length; ++r) {
+    for (r = 0, ELT$length = (e = this$g[t]).length; r < ELT$length; ++r) {
       c[a++] = e[r]
     }
   }
@@ -412,7 +412,7 @@ c.prototype.n = function () {
 }
 c.prototype.v = function () {
   var e
-  var this$b = this.b
+  var /* [auto-meaningful-name] */this$b = this.b
   if (s) {
     if (this.r) {
       (e = new Uint8Array(this$b)).set(this.c.subarray(0, this$b))
@@ -430,7 +430,7 @@ c.prototype.v = function () {
 O.prototype.k = function () {
   var e
   var t
-  var this$input = this.input
+  var /* [auto-meaningful-name] */this$input = this.input
   e = this.q.k()
   this.a = this.q.a
   if (this.A) {
@@ -445,7 +445,7 @@ O.prototype.k = function () {
       }
       r = o
     }
-    for (var s, l = 1, c = 0, r$length = r.length, h = 0; 0 < r$length;) {
+    for (var s, l = 1, c = 0, /* [auto-meaningful-name] */r$length = r.length, h = 0; 0 < r$length;) {
       r$length -= s = 1024 < r$length ? 1024 : r$length
       do {
         c += l += r[h++]
@@ -465,7 +465,7 @@ o("Zlib.Inflate.prototype.decompress", O.prototype.k)
 var N
 var D
 var U
-var /* [auto-meaningful-name] */n$length
+var /* [auto-meaningful-name] */N$length
 var z = {
   ADAPTIVE: d.s,
   BLOCK: d.t
@@ -475,10 +475,10 @@ if (Object.keys) {
 } else {
   for (D in N = [], U = 0, z) N[U++] = D
 }
-for (U = 0, n$length = N.length; U < n$length; ++U) {
+for (U = 0, N$length = N.length; U < N$length; ++U) {
   o("Zlib.Inflate.BufferType." + (D = N[U]), z[D])
 }
-var i$Zlib$Inflate = i.Zlib.Inflate
+var /* [auto-meaningful-name] */i$Zlib$Inflate = i.Zlib.Inflate
 var H = {
   findSpan: function (e, t, n) {
     var r = n.length - e - 1
@@ -599,10 +599,10 @@ var H = {
   },
   calcBSplineDerivatives: function (e, t, n, i, a) {
     for (var o = a < e ? a : e, s = [], l = this.findSpan(e, i, t), c = this.calcBasisFunctionDerivatives(l, i, e, o, t), u = [], h = 0; h < n.length; ++h) {
-      var fNH$clone$w = (f = n[h].clone()).w
-      f.x *= fNH$clone$w
-      f.y *= fNH$clone$w
-      f.z *= fNH$clone$w
+      var /* [auto-meaningful-name] */FNH$clone$w = (f = n[h].clone()).w
+      f.x *= FNH$clone$w
+      f.y *= FNH$clone$w
+      f.z *= FNH$clone$w
       u[h] = f
     }
     for (var p = 0; p <= o; ++p) {
@@ -630,7 +630,7 @@ var H = {
     return n / i
   },
   calcRationalCurveDerivatives: function (e) {
-    for (var e$length = e.length, n = [], i = [], a = 0; a < e$length; ++a) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, n = [], i = [], a = 0; a < e$length; ++a) {
       var o = e[a]
       n[a] = new r.O(o.x, o.y, o.z)
       i[a] = o.w
@@ -753,8 +753,8 @@ var j = function () {
     },
     parse: function (t, n) {
       if (function (e) {
-        var t = "Kaydara FBX Binary  \u0000"
-        return e.byteLength >= t.length && t === _(e, 0, t.length)
+        var /* [auto-meaningful-name] */KaydaraFBXBinary_u0000 = "Kaydara FBX Binary  \u0000"
+        return e.byteLength >= KaydaraFBXBinary_u0000.length && KaydaraFBXBinary_u0000 === _(e, 0, KaydaraFBXBinary_u0000.length)
       }(t)) {
         e = new c().parse(t)
       } else {
@@ -834,7 +834,7 @@ var j = function () {
       var t = {}
       var n = {}
       if ("Video" in e.Objects) {
-        var e$Objects$Video = e.Objects.Video
+        var /* [auto-meaningful-name] */e$Objects$Video = e.Objects.Video
         for (var i in e$Objects$Video) {
           var a = e$Objects$Video[i]
           t[c = parseInt(i)] = a.RelativeFilename || a.Filename
@@ -860,7 +860,7 @@ var j = function () {
     },
     parseImage: function (e) {
       var t
-      var e$Content = e.Content
+      var /* [auto-meaningful-name] */e$Content = e.Content
       var r = e.RelativeFilename || e.Filename
       var i = r.slice(r.lastIndexOf(".") + 1).toLowerCase()
       switch (i) {
@@ -897,7 +897,7 @@ var j = function () {
     parseTextures: function (t) {
       var n = new Map()
       if ("Texture" in e.Objects) {
-        var e$Objects$Texture = e.Objects.Texture
+        var /* [auto-meaningful-name] */e$Objects$Texture = e.Objects.Texture
         for (var i in e$Objects$Texture) {
           var a = this.parseTexture(e$Objects$Texture[i], t)
           n.set(parseInt(i), a)
@@ -909,14 +909,14 @@ var j = function () {
       var n = this.loadTexture(e, t)
       n.ID = e.id
       n.name = e.attrName
-      var e$WrapModeU = e.WrapModeU
-      var e$WrapModeV = e.WrapModeV
+      var /* [auto-meaningful-name] */e$WrapModeU = e.WrapModeU
+      var /* [auto-meaningful-name] */e$WrapModeV = e.WrapModeV
       var o = undefined !== e$WrapModeU ? e$WrapModeU.value : 0
       var s = undefined !== e$WrapModeV ? e$WrapModeV.value : 0
       n.wrapS = 0 === o ? r.G : r.f
       n.wrapT = 0 === s ? r.G : r.f
       if ("Scaling" in e) {
-        var e$Scaling$value = e.Scaling.value
+        var /* [auto-meaningful-name] */e$Scaling$value = e.Scaling.value
         n.repeat.x = e$Scaling$value[0]
         n.repeat.y = e$Scaling$value[1]
       }
@@ -925,8 +925,8 @@ var j = function () {
     loadTexture: function (e, n) {
       var i
       var a
-      var this$textureLoader$path = this.textureLoader.path
-      var t$getE$id$children = t.get(e.id).children
+      var /* [auto-meaningful-name] */this$textureLoader$path = this.textureLoader.path
+      var /* [auto-meaningful-name] */t$getE$id$children = t.get(e.id).children
       if (undefined !== t$getE$id$children && t$getE$id$children.length > 0 && undefined !== n[t$getE$id$children[0].ID]) {
         if (!(0 !== (i = n[t$getE$id$children[0].ID]).indexOf("blob:") && 0 !== i.indexOf("data:"))) {
           this.textureLoader.setPath(undefined)
@@ -953,7 +953,7 @@ var j = function () {
     parseMaterials: function (t) {
       var n = new Map()
       if ("Material" in e.Objects) {
-        var e$Objects$Material = e.Objects.Material
+        var /* [auto-meaningful-name] */e$Objects$Material = e.Objects.Material
         for (var i in e$Objects$Material) {
           var a = this.parseMaterial(e$Objects$Material[i], t)
           if (null !== a) {
@@ -965,8 +965,8 @@ var j = function () {
     },
     parseMaterial: function (e, n) {
       var i = e.id
-      var e$attrName = e.attrName
-      var e$ShadingModel = e.ShadingModel
+      var /* [auto-meaningful-name] */e$attrName = e.attrName
+      var /* [auto-meaningful-name] */e$ShadingModel = e.ShadingModel
       if ("object" === typeof e$ShadingModel) {
         e$ShadingModel = e$ShadingModel.value
       }
@@ -1036,7 +1036,7 @@ var j = function () {
       }
       var o = this
       t.get(i).children.forEach(function (e) {
-        var e$relationship = e.relationship
+        var /* [auto-meaningful-name] */e$relationship = e.relationship
         switch (e$relationship) {
           case "Bump":
             a.bumpMap = o.getTexture(n, e.ID)
@@ -1095,7 +1095,7 @@ var j = function () {
       var n = {}
       var r = {}
       if ("Deformer" in e.Objects) {
-        var e$Objects$Deformer = e.Objects.Deformer
+        var /* [auto-meaningful-name] */e$Objects$Deformer = e.Objects.Deformer
         for (var a in e$Objects$Deformer) {
           var o = e$Objects$Deformer[a]
           var s = t.get(parseInt(a))
@@ -1171,7 +1171,7 @@ var j = function () {
     parseScene: function (i, a, o) {
       n = new r.n()
       var l = this.parseModels(i.skeletons, a, o)
-      var e$Objects$Model = e.Objects.Model
+      var /* [auto-meaningful-name] */e$Objects$Model = e.Objects.Model
       var u = this
       l.forEach(function (e) {
         var r = e$Objects$Model[e.ID]
@@ -1207,7 +1207,7 @@ var j = function () {
     },
     parseModels: function (n, i, a) {
       var o = new Map()
-      var e$Objects$Model = e.Objects.Model
+      var /* [auto-meaningful-name] */e$Objects$Model = e.Objects.Model
       for (var l in e$Objects$Model) {
         var c = parseInt(l)
         var u = e$Objects$Model[l]
@@ -1288,8 +1288,8 @@ var j = function () {
         if (undefined !== i.FarPlane) {
           s = i.FarPlane.value / 1e3
         }
-        var window$innerWidth = window.innerWidth
-        var window$innerHeight = window.innerHeight
+        var /* [auto-meaningful-name] */window$innerWidth = window.innerWidth
+        var /* [auto-meaningful-name] */window$innerHeight = window.innerHeight
         if (undefined !== i.AspectWidth && undefined !== i.AspectHeight) {
           window$innerWidth = i.AspectWidth.value
           window$innerHeight = i.AspectHeight.value
@@ -1466,7 +1466,7 @@ var j = function () {
           if ("LookAtProperty" === t.relationship) {
             var a = e.Objects.Model[t.ID]
             if ("Lcl_Translation" in a) {
-              var a$Lcl_Translation$value = a.Lcl_Translation.value
+              var /* [auto-meaningful-name] */a$Lcl_Translation$value = a.Lcl_Translation.value
               if (undefined !== i.target) {
                 i.target.position.fromArray(a$Lcl_Translation$value)
                 n.add(i.target)
@@ -1497,9 +1497,9 @@ var j = function () {
     parsePoseNodes: function () {
       var t = {}
       if ("Pose" in e.Objects) {
-        var e$Objects$Pose = e.Objects.Pose
+        var /* [auto-meaningful-name] */e$Objects$Pose = e.Objects.Pose
         for (var i in e$Objects$Pose) if ("BindPose" === e$Objects$Pose[i].attrType) {
-          var e$Objects$PoseI$PoseNode = e$Objects$Pose[i].PoseNode
+          var /* [auto-meaningful-name] */e$Objects$PoseI$PoseNode = e$Objects$Pose[i].PoseNode
           if (Array.isArray(e$Objects$PoseI$PoseNode)) {
             e$Objects$PoseI$PoseNode.forEach(function (e) {
               t[e.Node] = new r.u().fromArray(e.Matrix.a)
@@ -1513,7 +1513,7 @@ var j = function () {
     },
     createAmbientLight: function () {
       if ("GlobalSettings" in e && "AmbientColor" in e.GlobalSettings) {
-        var e$GlobalSettings$AmbientColor$value = e.GlobalSettings.AmbientColor.value
+        var /* [auto-meaningful-name] */e$GlobalSettings$AmbientColor$value = e.GlobalSettings.AmbientColor.value
         var i = e$GlobalSettings$AmbientColor$value[0]
         var a = e$GlobalSettings$AmbientColor$value[1]
         var o = e$GlobalSettings$AmbientColor$value[2]
@@ -1538,8 +1538,8 @@ var j = function () {
       })
     },
     setupMorphMaterial: function (e, t, r) {
-      var e$uuid = e.uuid
-      var t$uuid = t.uuid
+      var /* [auto-meaningful-name] */e$uuid = e.uuid
+      var /* [auto-meaningful-name] */t$uuid = t.uuid
       var o = false
       n.traverse(function (e) {
         if (e.isMesh) {
@@ -1574,7 +1574,7 @@ var j = function () {
     parse: function (n) {
       var r = new Map()
       if ("Geometry" in e.Objects) {
-        var e$Objects$Geometry = e.Objects.Geometry
+        var /* [auto-meaningful-name] */e$Objects$Geometry = e.Objects.Geometry
         for (var a in e$Objects$Geometry) {
           var o = t.get(parseInt(a))
           var s = this.parseGeometry(o, e$Objects$Geometry[a], n)
@@ -1592,7 +1592,7 @@ var j = function () {
       }
     },
     parseMeshGeometry: function (t, n, r) {
-      var r$skeletons = r.skeletons
+      var /* [auto-meaningful-name] */r$skeletons = r.skeletons
       var a = []
       var o = t.parents.map(function (t) {
         return e.Objects.Model[t.ID]
@@ -1940,9 +1940,9 @@ var j = function () {
       e.morphAttributes.position.push(m)
     },
     parseNormals: function (e) {
-      var e$MappingInformationType = e.MappingInformationType
-      var e$ReferenceInformationType = e.ReferenceInformationType
-      var e$Normals$a = e.Normals.a
+      var /* [auto-meaningful-name] */e$MappingInformationType = e.MappingInformationType
+      var /* [auto-meaningful-name] */e$ReferenceInformationType = e.ReferenceInformationType
+      var /* [auto-meaningful-name] */e$Normals$a = e.Normals.a
       var i = []
       if ("IndexToDirect" === e$ReferenceInformationType) {
         if ("NormalIndex" in e) {
@@ -1962,9 +1962,9 @@ var j = function () {
       }
     },
     parseUVs: function (e) {
-      var e$MappingInformationType = e.MappingInformationType
-      var e$ReferenceInformationType = e.ReferenceInformationType
-      var e$UV$a = e.UV.a
+      var /* [auto-meaningful-name] */e$MappingInformationType = e.MappingInformationType
+      var /* [auto-meaningful-name] */e$ReferenceInformationType = e.ReferenceInformationType
+      var /* [auto-meaningful-name] */e$UV$a = e.UV.a
       var i = []
       if ("IndexToDirect" === e$ReferenceInformationType) {
         i = e.UVIndex.a
@@ -1978,9 +1978,9 @@ var j = function () {
       }
     },
     parseVertexColors: function (e) {
-      var e$MappingInformationType = e.MappingInformationType
-      var e$ReferenceInformationType = e.ReferenceInformationType
-      var e$Colors$a = e.Colors.a
+      var /* [auto-meaningful-name] */e$MappingInformationType = e.MappingInformationType
+      var /* [auto-meaningful-name] */e$ReferenceInformationType = e.ReferenceInformationType
+      var /* [auto-meaningful-name] */e$Colors$a = e.Colors.a
       var i = []
       if ("IndexToDirect" === e$ReferenceInformationType) {
         i = e.ColorIndex.a
@@ -1994,8 +1994,8 @@ var j = function () {
       }
     },
     parseMaterialIndices: function (e) {
-      var e$MappingInformationType = e.MappingInformationType
-      var e$ReferenceInformationType = e.ReferenceInformationType
+      var /* [auto-meaningful-name] */e$MappingInformationType = e.MappingInformationType
+      var /* [auto-meaningful-name] */e$ReferenceInformationType = e.ReferenceInformationType
       if ("NoMappingInformation" === e$MappingInformationType) {
         return {
           dataSize: 1,
@@ -2005,7 +2005,7 @@ var j = function () {
           referenceType: e$ReferenceInformationType
         }
       }
-      for (var e$Materials$a = e.Materials.a, i = [], a = 0; a < e$Materials$a.length; ++a) {
+      for (var /* [auto-meaningful-name] */e$Materials$a = e.Materials.a, i = [], a = 0; a < e$Materials$a.length; ++a) {
         i.push(a)
       }
       return {
@@ -2026,7 +2026,7 @@ var j = function () {
         console.error("THREE.FBXLoader: Invalid Order %s given for geometry ID: %s", e.Order, e.id)
         return new r.e()
       }
-      for (var n, i, a = t - 1, e$KnotVector$a = e.KnotVector.a, s = [], e$Points$a = e.Points.a, c = 0, e$Points$a$length = e$Points$a.length; c < e$Points$a$length; c += 4) {
+      for (var n, i, a = t - 1, /* [auto-meaningful-name] */e$KnotVector$a = e.KnotVector.a, s = [], /* [auto-meaningful-name] */e$Points$a = e.Points.a, c = 0, /* [auto-meaningful-name] */e$Points$a$length = e$Points$a.length; c < e$Points$a$length; c += 4) {
         s.push(new r.P().fromArray(e$Points$a, c))
       }
       if ("Closed" === e.Form) {
@@ -2071,7 +2071,7 @@ var j = function () {
       }
     },
     parseAnimationCurveNodes: function () {
-      var e$Objects$AnimationCurveNode = e.Objects.AnimationCurveNode
+      var /* [auto-meaningful-name] */e$Objects$AnimationCurveNode = e.Objects.AnimationCurveNode
       var n = new Map()
       for (var r in e$Objects$AnimationCurveNode) {
         var i = e$Objects$AnimationCurveNode[r]
@@ -2087,7 +2087,7 @@ var j = function () {
       return n
     },
     parseAnimationCurves: function (n) {
-      var e$Objects$AnimationCurve = e.Objects.AnimationCurve
+      var /* [auto-meaningful-name] */e$Objects$AnimationCurve = e.Objects.AnimationCurve
       for (var i in e$Objects$AnimationCurve) {
         var a = {
           id: e$Objects$AnimationCurve[i].id,
@@ -2096,8 +2096,8 @@ var j = function () {
         }
         var o = t.get(a.id)
         if (undefined !== o) {
-          var o$parents0$ID = o.parents[0].ID
-          var o$parents0$relationship = o.parents[0].relationship
+          var /* [auto-meaningful-name] */o$parents0$ID = o.parents[0].ID
+          var /* [auto-meaningful-name] */o$parents0$relationship = o.parents[0].relationship
           if (o$parents0$relationship.match(/X/)) {
             n.get(o$parents0$ID).curves.x = a
           } else {
@@ -2117,7 +2117,7 @@ var j = function () {
       }
     },
     parseAnimationLayers: function (i) {
-      var e$Objects$AnimationLayer = e.Objects.AnimationLayer
+      var /* [auto-meaningful-name] */e$Objects$AnimationLayer = e.Objects.AnimationLayer
       var o = new Map()
       for (var s in e$Objects$AnimationLayer) {
         var l = []
@@ -2167,12 +2167,12 @@ var j = function () {
               } else if (undefined !== s.curves.morph) {
                 if (undefined === l[o]) {
                   var u
-                  var t$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID = t.get(a.ID).parents.filter(function (e) {
+                  var /* [auto-meaningful-name] */t$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID = t.get(a.ID).parents.filter(function (e) {
                     return undefined !== e.relationship
                   })[0].ID
-                  var t$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID = t.get(t$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID).parents[0].ID
-                  var t$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID = t.get(t$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID).parents[0].ID
-                  var t$getT$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID$parents0$ID = t.get(t$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID).parents[0].ID
+                  var /* [auto-meaningful-name] */t$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID = t.get(t$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID).parents[0].ID
+                  var /* [auto-meaningful-name] */t$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID = t.get(t$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID).parents[0].ID
+                  var /* [auto-meaningful-name] */t$getT$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID$parents0$ID = t.get(t$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID).parents[0].ID
                   c = {
                     modelName: (u = e.Objects.Model[t$getT$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID$parents0$ID]).attrName ? r.D.sanitizeNodeName(u.attrName) : "",
                     morphName: e.Objects.Deformer[t$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID].attrName
@@ -2189,10 +2189,10 @@ var j = function () {
       return o
     },
     parseAnimStacks: function (n) {
-      var e$Objects$AnimationStack = e.Objects.AnimationStack
+      var /* [auto-meaningful-name] */e$Objects$AnimationStack = e.Objects.AnimationStack
       var i = {}
       for (var a in e$Objects$AnimationStack) {
-        var t$getParseIntA$children = t.get(parseInt(a)).children
+        var /* [auto-meaningful-name] */t$getParseIntA$children = t.get(parseInt(a)).children
         if (t$getParseIntA$children.length > 1) {
           console.warn("THREE.FBXLoader: Encountered an animation stack with multiple layers, this is currently not supported. Ignoring subsequent layers.")
         }
@@ -2293,7 +2293,7 @@ var j = function () {
       return new r.F(e + ".quaternion", s, h)
     },
     generateMorphTrack: function (e) {
-      var e$DeformPercent$curves$morph = e.DeformPercent.curves.morph
+      var /* [auto-meaningful-name] */e$DeformPercent$curves$morph = e.DeformPercent.curves.morph
       var i = e$DeformPercent$curves$morph.values.map(function (e) {
         return e / 100
       })
@@ -2514,7 +2514,7 @@ var j = function () {
           var c = i.split(",").slice(3)
           r = "connections";
           (function (e, t) {
-            for (var n = 0, e$length = e.length, t$length = t.length; n < t$length; n++, e$length++) {
+            for (var n = 0, /* [auto-meaningful-name] */e$length = e.length, /* [auto-meaningful-name] */t$length = t.length; n < t$length; n++, e$length++) {
               e[e$length] = t[n]
             }
           })(i = [s, l], c = c.map(function (e) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：312
@@ -20,22 +20,22 @@ export { w as k }
 export { C as n }
 export { T as b }
 export { S as a }
-import r = require("../../16/index");
-import o = require("../../48/index");
-import i = require("../../28/index");
-import a = require("../../48/72");
-import s = require("../../91");
-import c = require("../../14");
-import l = require("../../15");
-import u = require("../../36/345/114");
+import /* [auto-meaningful-name] */$$_$$_16_index = require("../../16/index")
+import /* [auto-meaningful-name] */$$_$$_48_index = require("../../48/index")
+import /* [auto-meaningful-name] */$$_$$_28_index = require("../../28/index")
+import /* [auto-meaningful-name] */$$_$$_48_72 = require("../../48/72")
+import /* [auto-meaningful-name] */$$_$$_91 = require("../../91")
+import /* [auto-meaningful-name] */$$_$$_14 = require("../../14")
+import /* [auto-meaningful-name] */$$_$$_15 = require("../../15")
+import /* [auto-meaningful-name] */$_114 = require("./114")
 function d(e, t) {
-  var o$a$getState$screenList = o.a().getState().screenList
+  var /* [auto-meaningful-name] */$$_$$_48_index$a$getState$screenList = $$_$$_48_index.a().getState().screenList
   if ("string" === typeof e || "number" === typeof e) {
     if ("number" === typeof e) {
       var r = e - 1
-      var i = o$a$getState$screenList.get(r)
+      var i = $$_$$_48_index$a$getState$screenList.get(r)
       if (!i) {
-        return void c.a.log({
+        return void $$_$$_14.a.log({
           type: "error",
           messageId: "screenIndexNotExist"
         })
@@ -44,23 +44,23 @@ function d(e, t) {
     }
     if ("string" === typeof e) {
       var a = e
-      var s = o$a$getState$screenList.findIndex(function (t) {
+      var s = $$_$$_48_index$a$getState$screenList.findIndex(function (t) {
         return t.id === e || t.title === e
       })
       if (-1 === s) {
-        return void c.a.log({
+        return void $$_$$_14.a.log({
           type: "error",
           messageId: "screenTitleNotExist"
         })
       }
       if (!e.includes("SCREEN")) {
-        var l = o$a$getState$screenList.get(s)
+        var l = $$_$$_48_index$a$getState$screenList.get(s)
         a = (null === l || undefined === l ? undefined : l.id) || ""
       }
       p(a, t)
     }
   } else {
-    c.a.log({
+    $$_$$_14.a.log({
       type: "error",
       messageId: "screenTypeNotNumberAndString"
     })
@@ -68,44 +68,44 @@ function d(e, t) {
 }
 function p(e, t) {
   if (e) {
-    var n = o.a()
-    r.b(function () {
-      n.dispatch(a.t(e))
-      n.dispatch(a.u(undefined !== t ? t : ""))
+    var n = $$_$$_48_index.a()
+    $$_$$_16_index.b(function () {
+      n.dispatch($$_$$_48_72.t(e))
+      n.dispatch($$_$$_48_72.u(undefined !== t ? t : ""))
     })
-    s.b(e, "screen", "", "")
+    $$_$$_91.b(e, "screen", "", "")
   }
 }
 function f(e, t) {
-  var o$a$getState$screenList = o.a().getState().screenList
-  var r = o$a$getState$screenList.findIndex(function (t) {
+  var /* [auto-meaningful-name] */$$_$$_48_index$a$getState$screenList = $$_$$_48_index.a().getState().screenList
+  var r = $$_$$_48_index$a$getState$screenList.findIndex(function (t) {
     return t.id === e
   })
-  var i = o$a$getState$screenList.get(r + 1)
+  var i = $$_$$_48_index$a$getState$screenList.get(r + 1)
   if (i) {
     d(i.id, t)
   }
 }
 function h(e, t) {
-  var o$a$getState$screenList = o.a().getState().screenList
-  var r = o$a$getState$screenList.findIndex(function (t) {
+  var /* [auto-meaningful-name] */$$_$$_48_index$a$getState$screenList = $$_$$_48_index.a().getState().screenList
+  var r = $$_$$_48_index$a$getState$screenList.findIndex(function (t) {
     return t.id === e
   })
-  var i = o$a$getState$screenList.get(r - 1)
+  var i = $$_$$_48_index$a$getState$screenList.get(r - 1)
   if (i && r > 0) {
     d(i.id, t)
   }
 }
 function m(e) {
-  return o.a().getState().screenList.find(function (t) {
+  return $$_$$_48_index.a().getState().screenList.find(function (t) {
     return t.id === e
   })
 }
 function g(e, t) {
-  if (l.pb(t)) {
-    o.a().dispatch(a.x(e, "backgroundColor", t))
+  if ($$_$$_15.pb(t)) {
+    $$_$$_48_index.a().dispatch($$_$$_48_72.x(e, "backgroundColor", t))
   } else {
-    c.a.log({
+    $$_$$_14.a.log({
       type: "warning",
       messageId: "argNotColor",
       widgetId: e
@@ -113,10 +113,10 @@ function g(e, t) {
   }
 }
 function _(e, t) {
-  if (u.d(t)) {
-    o.a().dispatch(a.x(e, "backgroundImage", t))
+  if ($_114.d(t)) {
+    $$_$$_48_index.a().dispatch($$_$$_48_72.x(e, "backgroundImage", t))
   } else {
-    c.a.log({
+    $$_$$_14.a.log({
       messageId: "imageNotExists",
       type: "error",
       widgetId: e
@@ -132,7 +132,7 @@ function v(e) {
 function b(e) {
   var t = m(e)
   if (t) {
-    return t.size.width * i.n()
+    return t.size.width * $$_$$_28_index.n()
   }
 }
 function y(e) {

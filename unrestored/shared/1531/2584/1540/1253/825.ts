@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：825
@@ -6,7 +6,7 @@
 
 var r = require("../1641/1065")
 var o = require("../1608/705")
-var i = require("../1742/247/index")("toStringTag")
+var i = require("../1541/247/index")("toStringTag")
 var a = "Arguments" == o(function () {
   return arguments
 }())

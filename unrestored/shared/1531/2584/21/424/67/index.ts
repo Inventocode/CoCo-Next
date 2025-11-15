@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：67
@@ -9,34 +9,34 @@
 export { d as c }
 export { p as a }
 export { f as b }
-import r = require("../../../6");
-import o = require("../../../5");
-import i = require("../12");
-import a = require("../89");
-import s = require("../../../15");
-import c = require("./410");
-import l = require("../../../36/345/114");
-import u = require("../../../55");
+import /* [auto-meaningful-name] */$$_$$_$$_6 = require("../../../6")
+import /* [auto-meaningful-name] */$$_$$_$$_5 = require("../../../5")
+import /* [auto-meaningful-name] */$$_12 = require("../12")
+import /* [auto-meaningful-name] */$$_89 = require("../89")
+import /* [auto-meaningful-name] */$$_$$_$$_15 = require("../../../15")
+import /* [auto-meaningful-name] */$_410 = require("./410")
+import /* [auto-meaningful-name] */$$_114 = require("../114")
+import /* [auto-meaningful-name] */$$_$$_$$_55 = require("../../../55")
 function d(e, t, n, d) {
   var p
-  var f = i.b(e)
+  var f = $$_12.b(e)
   if (!f) {
     console.error("getWidget error")
     return null
   }
-  var h = s.q(f)
-  var m = i.b(h.parentId || "")
+  var h = $$_$$_$$_15.q(f)
+  var m = $$_12.b(h.parentId || "")
   if (!m) {
     console.error("getParentWidget error")
     return null
   }
   var g = undefined === n ? 1 : n + 1
-  var _ = a.d.get("".concat(m.id, "_").concat(t)) || {}
+  var _ = $$_89.d.get("".concat(m.id, "_").concat(t)) || {}
   if (_[g]) {
-    h.attributes = r.a(r.a({}, h.attributes), _[g])
+    h.attributes = $$_$$_$$_6.a($$_$$_$$_6.a({}, h.attributes), _[g])
   }
   var v = m
-  if (v.attributes.disabled && h.type === o.H) {
+  if (v.attributes.disabled && h.type === $$_$$_$$_5.H) {
     if (["titleSlot"].includes(t)) {
       h.attributes.color = "#7C7C7C"
     } else {
@@ -44,7 +44,7 @@ function d(e, t, n, d) {
     }
   }
   if (undefined === n) {
-    return c.c({
+    return $_410.c({
       widget: h,
       forceRender: true
     })
@@ -52,14 +52,14 @@ function d(e, t, n, d) {
   var b = null === (p = v.attributes.templateSlotMap[t]) || undefined === p ? undefined : p.dataBindings
   if (d && b) {
     var y = d[b]
-    if (h.type === o.H) {
+    if (h.type === $$_$$_$$_5.H) {
       h.attributes.content = y || ""
     }
-    if (h.type === o.v && y) {
-      if (l.b(y)) {
+    if (h.type === $$_$$_$$_5.v && y) {
+      if ($$_114.b(y)) {
         h.attributes.fileId = y
       } else {
-        u.b.widgetError({
+        $$_$$_$$_55.b.widgetError({
           widgetId: h.parentId || "",
           widgetType: m.type,
           message: "ListViewerWidget.imageNotExists"
@@ -67,8 +67,8 @@ function d(e, t, n, d) {
       }
     }
   }
-  return c.c({
-    widget: r.a(r.a({}, h), {}, {
+  return $_410.c({
+    widget: $$_$$_$$_6.a($$_$$_$$_6.a({}, h), {}, {
       id: "".concat(e, "_").concat(n)
     }),
     forceRender: true

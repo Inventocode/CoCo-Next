@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：674
@@ -35,12 +35,12 @@ var r = {
     set: "设置"
   }
 }
-import o = require("./6");
-import i = require("./97");
-import a = require("./5");
-import s = require("./35");
-import c = require("./77");
-import l = require("./60");
+import o = require("./6")
+import i = require("./97")
+import a = require("./5")
+import s = require("./35")
+import c = require("./77")
+import l = require("./60")
 var u = {
   type: a.w,
   icon: i.b,

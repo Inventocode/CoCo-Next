@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2592
@@ -7,23 +7,23 @@
 "use strict"
 
 export { _ as a }
-import r = require("../../../36/483/39");
-import i = require("../../1184/2620");
-import o = require("../../1184/394");
-import a = require("../../1184/2587");
-import s = require("../../1184/905");
-import c = require("./904");
-import u = require("../../1184/1027");
-import l = require("../../1184/561/index");
+import /* [auto-meaningful-name] */$$_$$_787_39 = require("../../787/39")
+import /* [auto-meaningful-name] */$$_$$_1184_2620 = require("../../1184/2620")
+import /* [auto-meaningful-name] */$$_$$_1184_394 = require("../../1184/394")
+import /* [auto-meaningful-name] */$$_$$_1184_2587 = require("../../1184/2587")
+import /* [auto-meaningful-name] */$$_$$_1184_905 = require("../../1184/905")
+import /* [auto-meaningful-name] */$_904 = require("./904")
+import /* [auto-meaningful-name] */$$_$$_1184_1027 = require("../../1184/1027")
+import /* [auto-meaningful-name] */$$_$$_1184_561_index = require("../../1184/561/index")
 var f = function () {
   function e(e) {
     this.errors = 0
-    this.sid = o.i()
+    this.sid = $$_$$_1184_394.i()
     this.duration = 0
-    this.status = i.a.Ok
+    this.status = $$_$$_1184_2620.a.Ok
     this.init = true
     this.ignoreDuration = false
-    var t = a.b()
+    var t = $$_$$_1184_2587.b()
     this.timestamp = t
     this.started = t
     if (e) {
@@ -42,12 +42,12 @@ var f = function () {
         this.did = e.user.id || e.user.email || e.user.username
       }
     }
-    this.timestamp = e.timestamp || a.b()
+    this.timestamp = e.timestamp || $$_$$_1184_2587.b()
     if (e.ignoreDuration) {
       this.ignoreDuration = e.ignoreDuration
     }
     if (e.sid) {
-      this.sid = 32 === e.sid.length ? e.sid : o.i()
+      this.sid = 32 === e.sid.length ? e.sid : $$_$$_1184_394.i()
     }
     if (undefined !== e.init) {
       this.init = e.init
@@ -91,9 +91,9 @@ var f = function () {
         status: e
       })
     } else {
-      if (this.status === i.a.Ok) {
+      if (this.status === $$_$$_1184_2620.a.Ok) {
         this.update({
-          status: i.a.Exited
+          status: $$_$$_1184_2620.a.Exited
         })
       } else {
         this.update()
@@ -101,7 +101,7 @@ var f = function () {
     }
   }
   e.prototype.toJSON = function () {
-    return l.a({
+    return $$_$$_1184_561_index.a({
       sid: "" + this.sid,
       init: this.init,
       started: new Date(1e3 * this.started).toISOString(),
@@ -110,7 +110,7 @@ var f = function () {
       errors: this.errors,
       did: "number" === typeof this.did || "string" === typeof this.did ? "" + this.did : undefined,
       duration: this.duration,
-      attrs: l.a({
+      attrs: $$_$$_1184_561_index.a({
         release: this.release,
         environment: this.environment,
         ip_address: this.ipAddress,
@@ -123,7 +123,7 @@ var f = function () {
 var d = function () {
   function e(e, t, n) {
     if (undefined === t) {
-      t = new u.a()
+      t = new $$_$$_1184_1027.a()
     }
     if (undefined === n) {
       n = 4
@@ -145,7 +145,7 @@ var d = function () {
     }
   }
   e.prototype.pushScope = function () {
-    var e = u.a.clone(this.getScope())
+    var e = $$_$$_1184_1027.a.clone(this.getScope())
     this.getStack().push({
       client: this.getClient(),
       scope: e
@@ -176,7 +176,7 @@ var d = function () {
     return this._stack[this._stack.length - 1]
   }
   e.prototype.captureException = function (e, t) {
-    var n = this._lastEventId = o.i()
+    var n = this._lastEventId = $$_$$_1184_394.i()
     var i = t
     if (!t) {
       var a = undefined
@@ -190,13 +190,13 @@ var d = function () {
         syntheticException: a
       }
     }
-    this._invokeClient("captureException", e, r.a(r.a({}, i), {
+    this._invokeClient("captureException", e, $$_$$_787_39.a($$_$$_787_39.a({}, i), {
       event_id: n
     }))
     return n
   }
   e.prototype.captureMessage = function (e, t, n) {
-    var i = this._lastEventId = o.i()
+    var i = this._lastEventId = $$_$$_1184_394.i()
     var a = n
     if (!n) {
       var s = undefined
@@ -210,14 +210,14 @@ var d = function () {
         syntheticException: s
       }
     }
-    this._invokeClient("captureMessage", e, t, r.a(r.a({}, a), {
+    this._invokeClient("captureMessage", e, t, $$_$$_787_39.a($$_$$_787_39.a({}, a), {
       event_id: i
     }))
     return i
   }
   e.prototype.captureEvent = function (e, t) {
-    var n = this._lastEventId = o.i()
-    this._invokeClient("captureEvent", e, r.a(r.a({}, t), {
+    var n = this._lastEventId = $$_$$_1184_394.i()
+    this._invokeClient("captureEvent", e, $$_$$_787_39.a($$_$$_787_39.a({}, t), {
       event_id: n
     }))
     return n
@@ -227,20 +227,20 @@ var d = function () {
   }
   e.prototype.addBreadcrumb = function (e, t) {
     var n = this.getStackTop()
-    var n$scope = n.scope
-    var n$client = n.client
+    var /* [auto-meaningful-name] */n$scope = n.scope
+    var /* [auto-meaningful-name] */n$client = n.client
     if (n$scope && n$client) {
       var c = n$client.getOptions && n$client.getOptions() || {}
-      var c$beforeBreadcrumb = c.beforeBreadcrumb
+      var /* [auto-meaningful-name] */c$beforeBreadcrumb = c.beforeBreadcrumb
       var l = undefined === c$beforeBreadcrumb ? null : c$beforeBreadcrumb
-      var c$maxBreadcrumbs = c.maxBreadcrumbs
+      var /* [auto-meaningful-name] */c$maxBreadcrumbs = c.maxBreadcrumbs
       var d = undefined === c$maxBreadcrumbs ? 100 : c$maxBreadcrumbs
       if (!(d <= 0)) {
-        var h = a.a()
-        var p = r.a({
+        var h = $$_$$_1184_2587.a()
+        var p = $$_$$_787_39.a({
           timestamp: h
         }, e)
-        var _ = l ? o.c(function () {
+        var _ = l ? $$_$$_1184_394.c(function () {
           return l(p, t)
         }) : p
         if (null !== _) {
@@ -287,8 +287,8 @@ var d = function () {
   }
   e.prototype.configureScope = function (e) {
     var t = this.getStackTop()
-    var t$scope = t.scope
-    var t$client = t.client
+    var /* [auto-meaningful-name] */t$scope = t.scope
+    var /* [auto-meaningful-name] */t$client = t.client
     if (t$scope && t$client) {
       e(t$scope)
     }
@@ -309,7 +309,7 @@ var d = function () {
     try {
       return t.getIntegration(e)
     } catch (n) {
-      s.a.warn("Cannot retrieve integration " + e.id + " from the current Hub")
+      $$_$$_1184_905.a.warn("Cannot retrieve integration " + e.id + " from the current Hub")
       return null
     }
   }
@@ -347,25 +347,25 @@ var d = function () {
   }
   e.prototype.startSession = function (e) {
     var t = this.getStackTop()
-    var t$scope = t.scope
-    var t$client = t.client
+    var /* [auto-meaningful-name] */t$scope = t.scope
+    var /* [auto-meaningful-name] */t$client = t.client
     var s = t$client && t$client.getOptions() || {}
-    var s$release = s.release
-    var s$environment = s.environment
-    var o$e$navigator$userAgent = (o.e().navigator || {}).userAgent
-    var d = new f(r.a(r.a(r.a({
+    var /* [auto-meaningful-name] */s$release = s.release
+    var /* [auto-meaningful-name] */s$environment = s.environment
+    var /* [auto-meaningful-name] */$$_$$_1184_394$e$navigator$userAgent = ($$_$$_1184_394.e().navigator || {}).userAgent
+    var d = new f($$_$$_787_39.a($$_$$_787_39.a($$_$$_787_39.a({
       release: s$release,
       environment: s$environment
     }, t$scope && {
       user: t$scope.getUser()
-    }), o$e$navigator$userAgent && {
-      userAgent: o$e$navigator$userAgent
+    }), $$_$$_1184_394$e$navigator$userAgent && {
+      userAgent: $$_$$_1184_394$e$navigator$userAgent
     }), e))
     if (t$scope) {
       var h = t$scope.getSession && t$scope.getSession()
-      if (h && h.status === i.a.Ok) {
+      if (h && h.status === $$_$$_1184_2620.a.Ok) {
         h.update({
-          status: i.a.Exited
+          status: $$_$$_1184_2620.a.Exited
         })
       }
       this.endSession()
@@ -375,8 +375,8 @@ var d = function () {
   }
   e.prototype._sendSessionUpdate = function () {
     var e = this.getStackTop()
-    var e$scope = e.scope
-    var e$client = e.client
+    var /* [auto-meaningful-name] */e$scope = e.scope
+    var /* [auto-meaningful-name] */e$client = e.client
     if (e$scope) {
       var r = e$scope.getSession && e$scope.getSession()
       if (r && e$client && e$client.captureSession) {
@@ -389,10 +389,10 @@ var d = function () {
       n[i - 1] = arguments[i]
     }
     var o = this.getStackTop()
-    var o$scope = o.scope
-    var o$client = o.client
+    var /* [auto-meaningful-name] */o$scope = o.scope
+    var /* [auto-meaningful-name] */o$client = o.client
     if (o$client && o$client[e]) {
-      (t = o$client)[e].apply(t, r.f(n, [o$scope]))
+      (t = o$client)[e].apply(t, $$_$$_787_39.f(n, [o$scope]))
     }
   }
   e.prototype._callExtensionMethod = function (e) {
@@ -400,16 +400,16 @@ var d = function () {
       t[n - 1] = arguments[n]
     }
     var r = h()
-    var r$__SENTRY__ = r.__SENTRY__
+    var /* [auto-meaningful-name] */r$__SENTRY__ = r.__SENTRY__
     if (r$__SENTRY__ && r$__SENTRY__.extensions && "function" === typeof r$__SENTRY__.extensions[e]) {
       return r$__SENTRY__.extensions[e].apply(this, t)
     }
-    s.a.warn("Extension method " + e + " couldn't be found, doing nothing.")
+    $$_$$_1184_905.a.warn("Extension method " + e + " couldn't be found, doing nothing.")
   }
   return e
 }()
 function h() {
-  var e = o.e()
+  var e = $$_$$_1184_394.e()
   e.__SENTRY__ = e.__SENTRY__ || {
     extensions: {},
     hub: undefined
@@ -427,7 +427,7 @@ function _() {
   if (!(A(e) && !g(e).isOlderThan(4))) {
     v(e, new d())
   }
-  return c.b() ? function (e) {
+  return $_904.b() ? function (e) {
     var /* [auto-meaningful-name] */h$__SENTRY__
     var n
     var r
@@ -438,7 +438,7 @@ function _() {
       }
       if (!A(i) || g(i).isOlderThan(4)) {
         var o = g(e).getStackTop()
-        v(i, new d(o.client, u.a.clone(o.scope)))
+        v(i, new d(o.client, $$_$$_1184_1027.a.clone(o.scope)))
       }
       return g(i)
     } catch (a) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：427
@@ -78,7 +78,7 @@ function o(e) {
 }
 var a
 var s
-import Lodash = require("lodash");
+import /* [auto-meaningful-name] */Lodash = require("lodash")
 function u(e, t) {
   if (a) {
     a({
@@ -117,16 +117,16 @@ function A() {
 function g() {
   return "android" === p()
 }
-import v = require("./1462");
+import /* [auto-meaningful-name] */$_1462 = require("./1462")
 function m() {
-  var /* [auto-meaningful-name] */_u$data$config$record_sample_rate
-  var /* [auto-meaningful-name] */_u$data$config$target_sample_rate
-  var /* [auto-meaningful-name] */_u$data$config$num_channels
+  var /* [auto-meaningful-name] */l$record_sample_rate
+  var /* [auto-meaningful-name] */l$target_sample_rate
+  var /* [auto-meaningful-name] */l$num_channels
   var r = 0
   var i = []
   var o = this
   function a() {
-    for (var e = 0; e < _u$data$config$num_channels; e++) {
+    for (var e = 0; e < l$num_channels; e++) {
       i[e] = []
     }
   }
@@ -149,14 +149,14 @@ function m() {
         if (__DEV__) {
           console.log("WAV Encoding worker init:", u$data$config)
         }
-        _u$data$config$record_sample_rate = u$data$config.record_sample_rate
-        _u$data$config$num_channels = u$data$config.num_channels
-        _u$data$config$target_sample_rate = u$data$config.target_sample_rate
+        l$record_sample_rate = u$data$config.record_sample_rate
+        l$num_channels = u$data$config.num_channels
+        l$target_sample_rate = u$data$config.target_sample_rate
         a()
         break
       case "record":
         !function (e) {
-          for (var t = 0; t < _u$data$config$num_channels; t++) {
+          for (var t = 0; t < l$num_channels; t++) {
             i[t].push(e[t])
           }
           r += e[0].length
@@ -164,10 +164,10 @@ function m() {
         break
       case "exportWAV":
         !function (a) {
-          for (var u, l = [], f = 0; f < _u$data$config$num_channels; f++) {
+          for (var u, l = [], f = 0; f < l$num_channels; f++) {
             l.push(s(i[f], r))
           }
-          u = 2 === _u$data$config$num_channels ? function (e, t) {
+          u = 2 === l$num_channels ? function (e, t) {
             var n = e.length + t.length
             var r = new Float32Array(n)
             var i = 0
@@ -188,10 +188,10 @@ function m() {
             c(i, 12, "fmt ")
             i.setUint32(16, 16, true)
             i.setUint16(20, 1, true)
-            i.setUint16(22, _u$data$config$num_channels, true)
-            i.setUint32(24, _u$data$config$target_sample_rate, true)
-            i.setUint32(28, 4 * _u$data$config$target_sample_rate, true)
-            i.setUint16(32, 2 * _u$data$config$num_channels, true)
+            i.setUint16(22, l$num_channels, true)
+            i.setUint32(24, l$target_sample_rate, true)
+            i.setUint32(28, 4 * l$target_sample_rate, true)
+            i.setUint16(32, 2 * l$num_channels, true)
             i.setUint16(34, 16, true)
             c(i, 36, "data")
             i.setUint32(40, 2 * e.length, true);
@@ -203,13 +203,13 @@ function m() {
             })(i, 44, e)
             return i
           }(function (n) {
-            if (_u$data$config$target_sample_rate == _u$data$config$record_sample_rate) {
+            if (l$target_sample_rate == l$record_sample_rate) {
               return n
             }
-            if (_u$data$config$target_sample_rate > _u$data$config$record_sample_rate) {
+            if (l$target_sample_rate > l$record_sample_rate) {
               throw new Error("downsampling rate show be smaller than original sample rate")
             }
-            var r = _u$data$config$record_sample_rate / _u$data$config$target_sample_rate
+            var r = l$record_sample_rate / l$target_sample_rate
             var i = Math.round(n.length / r)
             var o = new Float32Array(i)
             var a = 0
@@ -236,7 +236,7 @@ function m() {
         break
       case "getBuffer":
         !function () {
-          for (var e = [], t = 0; t < _u$data$config$num_channels; t++) {
+          for (var e = [], t = 0; t < l$num_channels; t++) {
             e.push(s(i[t], r))
           }
           o.postMessage({
@@ -288,7 +288,7 @@ var C = function () {
     }
     e.connect(this.node)
     this.node.connect(this.context.destination)
-    this.worker = new v(m, {})
+    this.worker = new $_1462(m, {})
     this.worker.postMessage({
       command: "init",
       config: {
@@ -558,7 +558,7 @@ var k = function (e, t) {
     })
   }
   e.prototype.create_recorder = function (e, t) {
-    var n
+    var /* [auto-meaningful-name] */Audio_webm
     var r = this
     this.stream = e
     if ("undefined" === typeof MediaRecorder || this.sample_rate || this.num_channels) {
@@ -568,10 +568,10 @@ var k = function (e, t) {
       return this.create_fallback_recorder(e)
     }
     if (MediaRecorder.isTypeSupported("audio/webm")) {
-      n = "audio/webm"
+      Audio_webm = "audio/webm"
     }
     var i = new MediaRecorder(e, {
-      mimeType: n
+      mimeType: Audio_webm
     })
     this.media_stream_recorder = i
     this.media_stream_recorder.ondataavailable = function (e) {
@@ -938,8 +938,8 @@ function R() {
     })
   })
 }
-import P = require("./779");
-import N = require("./516/index");
+import /* [auto-meaningful-name] */$_779 = require("./779")
+import /* [auto-meaningful-name] */$_516_index = require("./516/index")
 var M = {}
 var j = {}
 var L = {}
@@ -947,7 +947,7 @@ function U(e, t, n) {
   if (undefined === n) {
     n = false
   }
-  var r = new P.Howl({
+  var r = new $_779.Howl({
     src: t,
     html5: false,
     format: ["mp3", "wav"]
@@ -960,9 +960,9 @@ function U(e, t, n) {
   return r
 }
 function H(e, t, n, r) {
-  var i = N.v4()
+  var i = $_516_index.v4()
   L[i] = i
-  var document$body = document.body
+  var /* [auto-meaningful-name] */document$body = document.body
   var a = document.createElement("audio")
   a.autoplay = true
   a.src = e
@@ -1025,7 +1025,7 @@ function K(e, t, n) {
   if (undefined === n) {
     n = false
   }
-  var r = new P.Howl({
+  var r = new $_779.Howl({
     src: t,
     html5: true,
     format: ["mp3", "wav"]
@@ -1038,7 +1038,7 @@ function K(e, t, n) {
   return r
 }
 function X(e, t, n, r, i) {
-  var o = K(r || N.v4(), e, true)
+  var o = K(r || $_516_index.v4(), e, true)
   if (o) {
     if ("loaded" === o.state()) {
       return void o.play()
@@ -1106,7 +1106,7 @@ function ee(e, t, n) {
   if (undefined === n) {
     n = false
   }
-  var r = new P.Howl({
+  var r = new $_779.Howl({
     src: t,
     html5: false,
     format: ["mp3", "wav"]
@@ -1366,7 +1366,7 @@ var ae = {
   play_url: function (e, t, n, r, i) {
     if (_()) {
       (function (e, t, n, r, i) {
-        var o = ee(r || N.v4(), e, true)
+        var o = ee(r || $_516_index.v4(), e, true)
         if ("loaded" === o.state()) {
           o.play()
         }
@@ -1395,7 +1395,7 @@ var ae = {
     } else {
       if (g()) {
         (function (e, t, n, r, i) {
-          var o = U(r || N.v4(), e, true)
+          var o = U(r || $_516_index.v4(), e, true)
           if (o) {
             if ("loaded" === o.state()) {
               return void o.play()

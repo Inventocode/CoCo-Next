@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2273
@@ -10,8 +10,8 @@ var i
 var o
 var a
 var s
-var $slice = [].slice
-var $toString = {}.toString
+var /* [auto-meaningful-name] */$slice = [].slice
+var /* [auto-meaningful-name] */$toString = {}.toString
 function l(e, t) {
   var n
   return function r(i) {
@@ -56,9 +56,9 @@ s = function (e) {
     r = function () {
       var e
       var t
-      var /* [auto-meaningful-name] */tN$length
+      var /* [auto-meaningful-name] */TN$length
       var o = []
-      for (e = 0, tN$length = (t = n).length; e < tN$length; ++e) {
+      for (e = 0, TN$length = (t = n).length; e < TN$length; ++e) {
         i = t[e]
         o.push(i + $toString.call(i).slice(8, -1))
       }

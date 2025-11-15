@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1976
@@ -6,9 +6,9 @@
 
 var r = require("../1979/838")
 var i = require("./1977")
-var require$1302$ArraySet = require("./1302").ArraySet
-var a = require("./1301/index")
-var require$1978$quickSort = require("./1978").quickSort
+var /* [auto-meaningful-name] */require$$_1300_1302$ArraySet = require("../1300/1302").ArraySet
+var a = require("../1300/1301/index")
+var /* [auto-meaningful-name] */require$_1978$quickSort = require("./1978").quickSort
 function c(e, t) {
   var n = e
   if ("string" === typeof e) {
@@ -37,8 +37,8 @@ function u(e, t) {
   a = a.map(String).map(r.normalize).map(function (e) {
     return c && r.isAbsolute(c) && r.isAbsolute(e) ? r.relative(c, e) : e
   })
-  this._names = require$1302$ArraySet.fromArray(s.map(String), true)
-  this._sources = require$1302$ArraySet.fromArray(a, true)
+  this._names = require$$_1300_1302$ArraySet.fromArray(s.map(String), true)
+  this._sources = require$$_1300_1302$ArraySet.fromArray(a, true)
   this._absoluteSources = this._sources.toArray().map(function (e) {
     return r.computeSourceURL(c, e, t)
   })
@@ -66,8 +66,8 @@ function f(e, t) {
   if (i != this._version) {
     throw new Error("Unsupported version: " + i)
   }
-  this._sources = new require$1302$ArraySet()
-  this._names = new require$1302$ArraySet()
+  this._sources = new require$$_1300_1302$ArraySet()
+  this._names = new require$$_1300_1302$ArraySet()
   var s = {
     line: -1,
     column: 0
@@ -142,7 +142,7 @@ c.prototype.eachMapping = function (e, t, n) {
     default:
       throw new Error("Unknown order of iteration.")
   }
-  var this$sourceRoot = this.sourceRoot
+  var /* [auto-meaningful-name] */this$sourceRoot = this.sourceRoot
   i.map(function (e) {
     var t = null === e.source ? null : this._sources.at(e.source)
     return {
@@ -171,7 +171,7 @@ c.prototype.allGeneratedPositionsFor = function (e) {
   if (a >= 0) {
     var s = this._originalMappings[a]
     if (undefined === e.column) {
-      for (var s$originalLine = s.originalLine; s && s.originalLine === s$originalLine;) {
+      for (var /* [auto-meaningful-name] */s$originalLine = s.originalLine; s && s.originalLine === s$originalLine;) {
         o.push({
           line: r.getArg(s, "generatedLine", null),
           column: r.getArg(s, "generatedColumn", null),
@@ -180,7 +180,7 @@ c.prototype.allGeneratedPositionsFor = function (e) {
         s = this._originalMappings[++a]
       }
     } else {
-      for (var s$originalColumn = s.originalColumn; s && s.originalLine === t && s.originalColumn == s$originalColumn;) {
+      for (var /* [auto-meaningful-name] */s$originalColumn = s.originalColumn; s && s.originalLine === t && s.originalColumn == s$originalColumn;) {
         o.push({
           line: r.getArg(s, "generatedLine", null),
           column: r.getArg(s, "generatedColumn", null),
@@ -213,8 +213,8 @@ u.prototype._findSourceIndex = function (e) {
 }
 u.fromSourceMap = function (e, t) {
   var n = Object.create(u.prototype)
-  var i = n._names = require$1302$ArraySet.fromArray(e._names.toArray(), true)
-  var a = n._sources = require$1302$ArraySet.fromArray(e._sources.toArray(), true)
+  var i = n._names = require$$_1300_1302$ArraySet.fromArray(e._names.toArray(), true)
+  var a = n._sources = require$$_1300_1302$ArraySet.fromArray(e._sources.toArray(), true)
   n.sourceRoot = e._sourceRoot
   n.sourcesContent = e._generateSourcesContent(n._sources.toArray(), n.sourceRoot)
   n.file = e._file
@@ -222,7 +222,7 @@ u.fromSourceMap = function (e, t) {
   n._absoluteSources = n._sources.toArray().map(function (e) {
     return r.computeSourceURL(n.sourceRoot, e, t)
   })
-  for (var c = e._mappings.toArray().slice(), f = n.__generatedMappings = [], d = n.__originalMappings = [], h = 0, c$length = c.length; h < c$length; h++) {
+  for (var c = e._mappings.toArray().slice(), f = n.__generatedMappings = [], d = n.__originalMappings = [], h = 0, /* [auto-meaningful-name] */c$length = c.length; h < c$length; h++) {
     var _ = c[h]
     var A = new l()
     A.generatedLine = _.generatedLine
@@ -238,7 +238,7 @@ u.fromSourceMap = function (e, t) {
     }
     f.push(A)
   }
-  require$1978$quickSort(n.__originalMappings, r.compareByOriginalPositions)
+  require$_1978$quickSort(n.__originalMappings, r.compareByOriginalPositions)
   return n
 }
 u.prototype._version = 3
@@ -248,7 +248,7 @@ Object.defineProperty(u.prototype, "sources", {
   }
 })
 u.prototype._parseMappings = function (e, t) {
-  for (var n, i, o, c, /* [auto-meaningful-name] */y$value, f = 1, d = 0, h = 0, p = 0, _ = 0, A = 0, e$length = e.length, v = 0, m = {}, y = {}, b = [], w = []; v < e$length;) {
+  for (var n, i, o, c, /* [auto-meaningful-name] */y$value, f = 1, d = 0, h = 0, p = 0, _ = 0, A = 0, /* [auto-meaningful-name] */e$length = e.length, v = 0, m = {}, y = {}, b = [], w = []; v < e$length;) {
     if (";" === e.charAt(v)) {
       f++
       v++
@@ -297,9 +297,9 @@ u.prototype._parseMappings = function (e, t) {
       }
     }
   }
-  require$1978$quickSort(w, r.compareByGeneratedPositionsDeflated)
+  require$_1978$quickSort(w, r.compareByGeneratedPositionsDeflated)
   this.__generatedMappings = w
-  require$1978$quickSort(b, r.compareByOriginalPositions)
+  require$_1978$quickSort(b, r.compareByOriginalPositions)
   this.__originalMappings = b
 }
 u.prototype._findMapping = function (e, t, n, r, o, a) {
@@ -494,7 +494,7 @@ f.prototype._parseMappings = function (e, t) {
   this.__generatedMappings = []
   this.__originalMappings = []
   for (var n = 0; n < this._sections.length; n++) {
-    for (var i = this._sections[n], i$consumer$_generatedMappings = i.consumer._generatedMappings, a = 0; a < i$consumer$_generatedMappings.length; a++) {
+    for (var i = this._sections[n], /* [auto-meaningful-name] */i$consumer$_generatedMappings = i.consumer._generatedMappings, a = 0; a < i$consumer$_generatedMappings.length; a++) {
       var c = i$consumer$_generatedMappings[a]
       var u = i.consumer._sources.at(c.source)
       u = r.computeSourceURL(i.consumer.sourceRoot, u, this._sourceMapURL)
@@ -520,7 +520,7 @@ f.prototype._parseMappings = function (e, t) {
       }
     }
   }
-  require$1978$quickSort(this.__generatedMappings, r.compareByGeneratedPositionsDeflated)
-  require$1978$quickSort(this.__originalMappings, r.compareByOriginalPositions)
+  require$_1978$quickSort(this.__generatedMappings, r.compareByGeneratedPositionsDeflated)
+  require$_1978$quickSort(this.__originalMappings, r.compareByOriginalPositions)
 }
 exports.IndexedSourceMapConsumer = f

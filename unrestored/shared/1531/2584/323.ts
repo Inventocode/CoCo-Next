@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：323
@@ -7,12 +7,12 @@
 "use strict"
 
 export { o as a }
-import r = require("./10/index");
+import /* [auto-meaningful-name] */$_10_index = require("./10/index")
 function o(e) {
   for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {
       line: 1,
       column: 0
-    }, t$line = t.line, t$column = t.column, i = 0, a = 1; i >= 0 && i < e.length && a < t$line;) {
+    }, /* [auto-meaningful-name] */t$line = t.line, /* [auto-meaningful-name] */t$column = t.column, i = 0, a = 1; i >= 0 && i < e.length && a < t$line;) {
     if ((i = e.indexOf("\n", i + 1)) >= 0 && "\r" === e.charAt(i)) {
       i++
     }
@@ -36,7 +36,7 @@ function o(e) {
     var d = u[1]
     d.split(";").forEach(function (e) {
       var t = e.split("=")
-      var n = r.a(t, 2)
+      var n = $_10_index.a(t, 2)
       var o = n[0]
       var i = n[1]
       if (o && i) {

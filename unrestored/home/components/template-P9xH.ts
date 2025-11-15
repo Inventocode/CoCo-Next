@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：P9xH
@@ -93,7 +93,7 @@ function _inherits(subClass, superClass) {
   }
 }
 var __decorate = this && this.__decorate || function (decorators, target, key, desc) {
-  var arguments$length = arguments.length
+  var /* [auto-meaningful-name] */arguments$length = arguments.length
   var r = arguments$length < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc
   var d
   if ((typeof Reflect === "undefined" ? "undefined" : _typeof(Reflect)) === "object" && typeof Reflect.decorate === "function") {
@@ -131,14 +131,14 @@ var WorkItemView = function (_React$Component) {
   _createClass(WorkItemView, [{
     key: "componentDidMount",
     value: function componentDidMount() {
-
-
-
-
-
       //
-    } }, { key: "handleDropdownVisibleChange", value: function handleDropdownVisibleChange(visible) {this.setState({ dropdownVisible: visible
-        })
+    }
+  }, {
+    key: "handleDropdownVisibleChange",
+    value: function handleDropdownVisibleChange(visible) {
+      this.setState({
+        dropdownVisible: visible
+      })
     }
   }, {
     key: "handleSelfOpenWork",
@@ -146,7 +146,7 @@ var WorkItemView = function (_React$Component) {
       if (this.props.workType !== __WEBPACK_IMPORTED_MODULE_8__routes_Work_model_interface__.EWorkType.DELETE) {
         var _config = __WEBPACK_IMPORTED_MODULE_4__cfg__.config()
         var cocoEditorUrl = _config.cocoEditorUrl
-        var this$props$item$work_id = this.props.item.work_id
+        var /* [auto-meaningful-name] */this$props$item$work_id = this.props.item.work_id
         var role = this.props.item.role
         // 打开作品埋点
         __WEBPACK_IMPORTED_MODULE_9__sensorsData__.sensorsCustomReport("OpenWork", {
@@ -168,7 +168,7 @@ var WorkItemView = function (_React$Component) {
       this.setState({
         dropdownVisible: false
       })
-      var this$props$item$work_id = this.props.item.work_id
+      var /* [auto-meaningful-name] */this$props$item$work_id = this.props.item.work_id
       var role = this.props.item.role
       setTimeout(function () {
         // 打开作品埋点
@@ -202,7 +202,7 @@ var WorkItemView = function (_React$Component) {
     key: "handleQuitCollWork",
     value: function handleQuitCollWork() {
       var _this3 = this
-      var this$props$item$work_id = this.props.item.work_id
+      var /* [auto-meaningful-name] */this$props$item$work_id = this.props.item.work_id
       var _props = this.props
       var userInfo = _props.userInfo
       var workType = _props.workType
@@ -229,7 +229,7 @@ var WorkItemView = function (_React$Component) {
   }, {
     key: "handleDeleteWork",
     value: function handleDeleteWork() {
-      var this$props$item$work_id = this.props.item.work_id
+      var /* [auto-meaningful-name] */this$props$item$work_id = this.props.item.work_id
       this.props.deleteWorkAction({
         id: this$props$item$work_id,
         workType: this.props.workType,
@@ -243,14 +243,14 @@ var WorkItemView = function (_React$Component) {
   }, {
     key: "handleAgainDeleteWork",
     value: function handleAgainDeleteWork() {
-      var this$props$item$work_id = this.props.item.work_id
+      var /* [auto-meaningful-name] */this$props$item$work_id = this.props.item.work_id
       this.props.againDeleteWorkAction(this$props$item$work_id)
     }
     // 从回收站恢复作品
   }, {
     key: "handleRecoverDeletedWork",
     value: function handleRecoverDeletedWork() {
-      var this$props$item$work_id = this.props.item.work_id
+      var /* [auto-meaningful-name] */this$props$item$work_id = this.props.item.work_id
       this.props.recoverDeleteWorkAction({
         id: this$props$item$work_id,
         callback: this.props.callback
@@ -259,7 +259,7 @@ var WorkItemView = function (_React$Component) {
   }, {
     key: "handleWorkTitleBlur",
     value: function handleWorkTitleBlur(value) {
-      var this$props$item$work_id = this.props.item.work_id
+      var /* [auto-meaningful-name] */this$props$item$work_id = this.props.item.work_id
       if (value && value !== this.props.item.name) {
         this.props.renameWorkAction({
           id: this$props$item$work_id,

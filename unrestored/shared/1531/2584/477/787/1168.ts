@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1168
@@ -7,10 +7,10 @@
 "use strict"
 
 export { i as a }
-import r = require("./316");
+import /* [auto-meaningful-name] */$_316 = require("./316")
 function i(e, t) {
   try {
-    for (var n = e, r = [], i = 0, a = 0, $length = " > ".length, c = undefined; n && i++ < 5 && !("html" === (c = o(n, t)) || i > 1 && a + r.length * $length + c.length >= 80);) {
+    for (var n = e, r = [], i = 0, a = 0, /* [auto-meaningful-name] */$length = " > ".length, c = undefined; n && i++ < 5 && !("html" === (c = o(n, t)) || i > 1 && a + r.length * $length + c.length >= 80);) {
       r.push(c)
       a += c.length
       n = n.parentNode
@@ -43,7 +43,7 @@ function o(e, t) {
     d.forEach(function (e) {
       f.push("[" + e[0] + "=\"" + e[1] + "\"]")
     })
-  } else if (l.id && f.push("#" + l.id), (l$className = l.className) && r.h(l$className)) {
+  } else if (l.id && f.push("#" + l.id), (l$className = l.className) && $_316.h(l$className)) {
     for (a = l$className.split(/\s+/), u = 0; u < a.length; u++) {
       f.push("." + a[u])
     }

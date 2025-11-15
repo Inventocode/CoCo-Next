@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：988
@@ -8,8 +8,8 @@
 
 export { a$Provider as b }
 export { c as a }
-import React = require("react");
-import i = require("../16/687");
+import /* [auto-meaningful-name] */React = require("react")
+import /* [auto-meaningful-name] */$$_16_687 = require("../16/687")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,11 +21,11 @@ var o = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(i)
+}($$_16_687)
 require("./275")
 o.a
 var a = React.createContext(null)
 a.Consumer
-var a$Provider = a.Provider
+var /* [auto-meaningful-name] */a$Provider = a.Provider
 var c = a
 export default c

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1179
@@ -18,7 +18,7 @@ var s = require("./2550")
 var c = require("./2551")
 var l = require("./2552")
 var u = require("./2553/index")
-var d = require("./2554")
+var d = require("./2554/index")
 Object.defineProperty(exports, "init_extensions", {
   enumerable: true,
   get: function () {

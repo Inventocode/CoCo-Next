@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：330
@@ -113,7 +113,7 @@ var r = {
   MAC_FF_META: 224,
   WIN_IME: 229,
   isTextModifyingKeyEvent: function (e) {
-    var e$keyCode = e.keyCode
+    var /* [auto-meaningful-name] */e$keyCode = e.keyCode
     if (e.altKey && !e.ctrlKey || e.metaKey || e$keyCode >= r.F1 && e$keyCode <= r.F12) {
       return false
     }

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：20
@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import r = require("./29");
+import r = require("./29")
 function i(e, t) {
   var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {

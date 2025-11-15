@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：722
@@ -8,11 +8,11 @@
 
 export { c as b }
 export { u as a }
-import r = require("../../../36/483/39");
-import i = require("../364");
-import o = require("../926");
-import a = require("../435/index");
-import s = require("../350");
+import /* [auto-meaningful-name] */$$_39 = require("../39")
+import /* [auto-meaningful-name] */$$_364 = require("../364")
+import /* [auto-meaningful-name] */$$_926 = require("../926")
+import /* [auto-meaningful-name] */$$_435_index = require("../435/index")
+import /* [auto-meaningful-name] */$$_350 = require("../350")
 var c = function () {
   function e(e) {
     if (undefined === e) {
@@ -32,9 +32,9 @@ var c = function () {
 }()
 var u = function () {
   function e(e) {
-    this.traceId = i.c()
-    this.spanId = i.c().substring(16)
-    this.startTimestamp = o.d()
+    this.traceId = $$_364.c()
+    this.spanId = $$_364.c().substring(16)
+    this.startTimestamp = $$_926.d()
     this.tags = {}
     this.data = {}
     if (!e) {
@@ -78,7 +78,7 @@ var u = function () {
     return this.startChild(e)
   }
   e.prototype.startChild = function (t) {
-    var n = new e(r.a(r.a({}, t), {
+    var n = new e($$_39.a($$_39.a({}, t), {
       parentSpanId: this.spanId,
       sampled: this.sampled,
       traceId: this.traceId
@@ -92,12 +92,12 @@ var u = function () {
   }
   e.prototype.setTag = function (e, t) {
     var n
-    this.tags = r.a(r.a({}, this.tags), ((n = {})[e] = t, n))
+    this.tags = $$_39.a($$_39.a({}, this.tags), ((n = {})[e] = t, n))
     return this
   }
   e.prototype.setData = function (e, t) {
     var n
-    this.data = r.a(r.a({}, this.data), ((n = {})[e] = t, n))
+    this.data = $$_39.a($$_39.a({}, this.data), ((n = {})[e] = t, n))
     return this
   }
   e.prototype.setStatus = function (e) {
@@ -106,17 +106,17 @@ var u = function () {
   }
   e.prototype.setHttpStatus = function (e) {
     this.setTag("http.status_code", String(e))
-    var t = s.a.fromHttpCode(e)
-    if (t !== s.a.UnknownError) {
+    var t = $$_350.a.fromHttpCode(e)
+    if (t !== $$_350.a.UnknownError) {
       this.setStatus(t)
     }
     return this
   }
   e.prototype.isSuccess = function () {
-    return this.status === s.a.Ok
+    return this.status === $$_350.a.Ok
   }
   e.prototype.finish = function (e) {
-    this.endTimestamp = "number" === typeof e ? e : o.d()
+    this.endTimestamp = "number" === typeof e ? e : $$_926.d()
   }
   e.prototype.toTraceparent = function () {
     var e = ""
@@ -126,7 +126,7 @@ var u = function () {
     return this.traceId + "-" + this.spanId + e
   }
   e.prototype.toContext = function () {
-    return a.a({
+    return $$_435_index.a({
       data: this.data,
       description: this.description,
       endTimestamp: this.endTimestamp,
@@ -160,7 +160,7 @@ var u = function () {
     return this
   }
   e.prototype.getTraceContext = function () {
-    return a.a({
+    return $$_435_index.a({
       data: Object.keys(this.data).length > 0 ? this.data : undefined,
       description: this.description,
       op: this.op,
@@ -172,7 +172,7 @@ var u = function () {
     })
   }
   e.prototype.toJSON = function () {
-    return a.a({
+    return $$_435_index.a({
       data: Object.keys(this.data).length > 0 ? this.data : undefined,
       description: this.description,
       op: this.op,

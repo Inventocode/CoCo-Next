@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：727
@@ -12,12 +12,12 @@ Object.defineProperty(exports, "__esModule", {
 exports.FieldDropdown = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../4/127")
+var o = require("../1036/127")
 var a = require("../125/195/index")
 var s = require("../125/index")
 var c = require("../125/474")
 var u = require("../1001/213/index")
-var l = require("../17/497/387")
+var l = require("../206/725/387")
 var f = require("../125/714")
 var d = require("../125/294")
 var h = require("../301/500")
@@ -65,12 +65,12 @@ var _ = function (e) {
     }
   }
   t.prototype.render_ = function () {
-    var /* [auto-meaningful-name] */_this$border_rect2
     var /* [auto-meaningful-name] */this$border_rect
+    var /* [auto-meaningful-name] */_this$border_rect
     if (this.visible_ && this.source_block) {
       if (this.field_group && this.arrow_) {
         (0, s.remove_children)(this.field_group)
-        var this$source_block$workspace$options$dropdown$padding = this.source_block.workspace.options.dropdown.padding
+        var /* [auto-meaningful-name] */this$source_block$workspace$options$dropdown$padding = this.source_block.workspace.options.dropdown.padding
         var r = this.source_block.workspace.options.dropdown.padding + 6
         this.size_.width = this.border_rect ? this$source_block$workspace$options$dropdown$padding : r
         this.update_height()
@@ -89,11 +89,11 @@ var _ = function (e) {
         } else {
           this.render_not_shadow_style()
         }
-        if (!(null === (_this$border_rect2 = this.border_rect) || undefined === _this$border_rect2)) {
-          _this$border_rect2.setAttribute("height", String(this.size_.height))
-        }
         if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
-          this$border_rect.setAttribute("width", String(this.size_.width))
+          this$border_rect.setAttribute("height", String(this.size_.height))
+        }
+        if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
+          _this$border_rect.setAttribute("width", String(this.size_.width))
         }
       }
     } else {
@@ -345,8 +345,8 @@ var _ = function (e) {
     var n = (0, f.get_size)(e)
     var r = (0, f.get_size)(t)
     var i = t.getBoundingClientRect()
-    var i$left = i.left
-    var i$top = i.top
+    var /* [auto-meaningful-name] */i$left = i.left
+    var /* [auto-meaningful-name] */i$top = i.top
     var s = parseFloat((0, f.get_computed_style)(e, "padding-top")) || 0
     var c = parseFloat((0, f.get_computed_style)(e, "padding-bottom")) || 0
     if (i$top + n.height - s >= window.innerHeight) {
@@ -374,7 +374,7 @@ var _ = function (e) {
         return (0, s.remove_node)(e)
       })
     })
-    var this$widget_div$DIV = this.widget_div.DIV
+    var /* [auto-meaningful-name] */this$widget_div$DIV = this.widget_div.DIV
     if (!(null === this$widget_div$DIV || undefined === this$widget_div$DIV)) {
       this$widget_div$DIV.appendChild(e)
     }

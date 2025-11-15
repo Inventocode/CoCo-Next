@@ -1,22 +1,16 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：795
  */
 
-"use strict";
+"use strict"
 
-(function (e) {
-  function r(t, n) {
-    e(function () {
-      t.focus()
-      t.selectionEnd = t.selectionStart = n ? 0 : t.value.length
-    })
-  }
-  Object.defineProperty(exports, "a", {
-    get: function () {
-      return r
-    },
-    enumerable: true
+function r(t, n) {
+  setImmediate(function () {
+    t.focus()
+    t.selectionEnd = t.selectionStart = n ? 0 : t.value.length
   })
-}).call(this, require("./625/index").setImmediate)
+}
+export { r as a }
+export default r

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：99
@@ -13,7 +13,7 @@ export { j as f }
 export { N as d }
 export { R as e }
 export { k as a }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -26,17 +26,17 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("./10/index");
-import a = require("./6");
-import s = require("./25/index");
-import c = require("./7");
-import Lodash = require("lodash");
-import u = require("../../../../src/shared/events/actions");
-import d = require("./9");
-import p = require("./26/index");
-import f = require("./5");
-import h = require("../../../../src/shared/widget/custom/storage");
-import m = require("./38/375");
+import /* [auto-meaningful-name] */$_10_index = require("./10/index")
+import a = require("./6")
+import /* [auto-meaningful-name] */$_25_index = require("./25/index")
+import c = require("./7")
+import /* [auto-meaningful-name] */Lodash = require("lodash")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions = require("../../../../src/shared/events/actions")
+import d = require("./9")
+import /* [auto-meaningful-name] */$_26_index = require("./26/index")
+import f = require("./5")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage = require("../../../../src/shared/widget/custom/storage")
+import /* [auto-meaningful-name] */$_38_375 = require("./38/375")
 function g(e) {
   return _.apply(this, arguments)
 }
@@ -65,7 +65,7 @@ function _() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            r = u.d.getState()
+            r = $$_$$_$$_$$_src_shared_events_actions.d.getState()
             r$project = r.project
             r$project$title = r$project.title
             r$project$globalVariableList = r$project.globalVariableList
@@ -79,11 +79,11 @@ function _() {
             T = r.project.screens.map(function (e) {
               return e.id
             }).toJSON()
-            S = p.z.getWorkspacesRecord()
+            S = $_26_index.z.getWorkspacesRecord()
             I = E(S, r$project$globalWidgetIds)
             A = Lodash.cloneDeep(O(I))
-            j = h.d()
-            N = h.e()
+            j = $$_$$_$$_$$_src_shared_widget_custom_storage.d()
+            N = $$_$$_$$_$$_src_shared_widget_custom_storage.e()
             e.t0 = Lodash.cloneDeep
             e.t1 = y
             e.t2 = r$project$title
@@ -155,10 +155,10 @@ function _() {
   }))).apply(this, arguments)
 }
 function v() {
-  var e = u.d.getState()
-  var e$resource$fontFileList = e.resource.fontFileList
+  var e = $$_$$_$$_$$_src_shared_events_actions.d.getState()
+  var /* [auto-meaningful-name] */e$resource$fontFileList = e.resource.fontFileList
   var n = {}
-  var e$project$screens = e.project.screens
+  var /* [auto-meaningful-name] */e$project$screens = e.project.screens
   var o = []
   var i = {}
   e$resource$fontFileList.forEach(function (e) {
@@ -168,7 +168,7 @@ function v() {
     e.widgetIds.forEach(function (e) {
       var t = d.Bb(e)
       if ((null === t || undefined === t ? undefined : t.type) === f.H || (null === t || undefined === t ? undefined : t.type) === f.z || (null === t || undefined === t ? undefined : t.type) === f.w) {
-        var t$attributes$fontFamily = t.attributes.fontFamily
+        var /* [auto-meaningful-name] */t$attributes$fontFamily = t.attributes.fontFamily
         if (!i[t$attributes$fontFamily]) {
           if (n[t$attributes$fontFamily].cdnUrl) {
             o.push(n[t$attributes$fontFamily])
@@ -177,9 +177,9 @@ function v() {
         }
       }
       if (t && t.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === t.type) {
-        var t$attributes$content = t.attributes.content
+        var /* [auto-meaningful-name] */t$attributes$content = t.attributes.content
         var s = undefined === t$attributes$content ? "" : t$attributes$content
-        m.a(s).forEach(function (e) {
+        $_38_375.a(s).forEach(function (e) {
           if (!i[e]) {
             if (n[e].cdnUrl) {
               o.push(n[e])
@@ -222,7 +222,7 @@ function y() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = u.d.getState()
+            n = $$_$$_$$_$$_src_shared_events_actions.d.getState()
             n$project = n.project
             n$project$title = n$project.title
             n$project$globalVariableList = n$project.globalVariableList
@@ -240,9 +240,9 @@ function y() {
             N = n.project.screens.map(function (e) {
               return e.id
             }).toJSON()
-            R = p.z.getWorkspacesRecord()
-            k = h.d()
-            x = h.e()
+            R = $_26_index.z.getWorkspacesRecord()
+            k = $$_$$_$$_$$_src_shared_widget_custom_storage.d()
+            x = $$_$$_$$_$$_src_shared_widget_custom_storage.e()
             e.t0 = Lodash.cloneDeep
             e.t1 = _
             e.t2 = n$project$title
@@ -322,14 +322,14 @@ function E(e, t) {
     var o = null === (eT$workspaceJson = e[t].workspaceJson) || undefined === eT$workspaceJson ? undefined : eT$workspaceJson.blocks
     if (o) {
       Object.keys(o).forEach(function (e) {
-        var oE$fields$WIDGET_ID = o[e].fields.WIDGET_ID
+        var /* [auto-meaningful-name] */oE$fields$WIDGET_ID = o[e].fields.WIDGET_ID
         if (oE$fields$WIDGET_ID && oE$fields$WIDGET_ID.startsWith(f.l) && !n.includes(oE$fields$WIDGET_ID)) {
           n.push(oE$fields$WIDGET_ID)
         }
       })
     }
   })
-  return [].concat(s.a(t.filter(function (e) {
+  return [].concat($_25_index.a(t.filter(function (e) {
     return !e.startsWith(f.l)
   })), n)
 }
@@ -359,7 +359,7 @@ function C(e) {
   return t
 }
 function T(e) {
-  return s.a(e)
+  return $_25_index.a(e)
 }
 function S(e) {
   var t = {}
@@ -399,7 +399,7 @@ function A(e) {
 function j(e) {
   var t = {}
   Object.entries(e).forEach(function (e) {
-    var n = i.a(e, 2)
+    var n = $_10_index.a(e, 2)
     n[0]
     var r = n[1]
     t = a.a(a.a({}, t), r.widgets)

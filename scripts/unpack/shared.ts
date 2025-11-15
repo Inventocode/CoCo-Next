@@ -1,5 +1,5 @@
 import path from "path"
-import { unpack, SetPath } from "./unpack"
+import { unpack, SetPath } from "./core"
 
 const distPath: string = path.resolve("public", "creation.codemao.cn", "coconut", "web", "1.22.0-0", "static", "js")
 
@@ -64,7 +64,10 @@ unpack({
         }, {
             searchPath: /^(.*\/)?553(\/index)?$/,
             replace: "qrcode"
-        }, {
+        },
+        { key: 616, source: "quill" },
+        { key: 774, source: "js-sha256" },
+        {
             searchPath: /^(.*\/)?781(\/index)?$/,
             replace: "@vikadata/vika"
         }, {
@@ -109,5 +112,13 @@ unpack({
         345: "../../src/shared/widget/custom/external-module",
         1531: ".",
         2584: "../../src/editor/index"
+    },
+    nodePolyfill: {
+        251: "global",
+        368: "process",
+        570: "buffer",
+        571: "module",
+        574: "module",
+        625: "set-immediate"
     }
 })

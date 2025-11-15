@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：772
@@ -7,11 +7,11 @@
 "use strict"
 
 export { s as a }
-import r = require("../33/996");
-import i = require("../80/995");
-import o = require("../33/771");
-import a = require("../33/997");
+import /* [auto-meaningful-name] */$$_33_996 = require("../33/996")
+import /* [auto-meaningful-name] */$$_80_995 = require("../80/995")
+import /* [auto-meaningful-name] */$$_33_771 = require("../33/771")
+import /* [auto-meaningful-name] */$$_33_997 = require("../33/997")
 function s(e) {
-  return r.a(e) || i.a(e) || o.a(e) || a.a()
+  return $$_33_996.a(e) || $$_80_995.a(e) || $$_33_771.a(e) || $$_33_997.a()
 }
 export default s

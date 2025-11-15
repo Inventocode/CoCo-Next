@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2281
@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../../../36/2668/220")
-var i = require("../../../36/2668/230")
-var o = require("../../../38/607/806/index")
+var r = require("../220")
+var i = require("../230")
+var o = require("../806/index")
 var a = require("./2282")
 var s = require("lodash")
 function c(e) {

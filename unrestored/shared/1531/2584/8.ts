@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：8
@@ -8,7 +8,7 @@ var r
 !function () {
   "use strict"
 
-  var $hasOwnProperty = {}.hasOwnProperty
+  var /* [auto-meaningful-name] */$hasOwnProperty = {}.hasOwnProperty
   function i() {
     for (var e = [], t = 0; t < arguments.length; t++) {
       var r = arguments[t]

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1426
@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_tell_blocks = exports.is_controls_if = exports.init_control_blocks = undefined
-var r = require("../4/127")
-var o = require("../17/497/387")
+var r = require("../1036/127")
+var o = require("../206/725/387")
 var i = require("../1001/213/index")
 var a = require("./2555/579")
 var s = ["Boolean"]
@@ -175,7 +175,7 @@ exports.init_control_blocks = function (e) {
         this.elseifCount_++
       }
       this.updateShape_(t)
-      var e$di_container = e.di_container
+      var /* [auto-meaningful-name] */e$di_container = e.di_container
       var o = e$di_container.get(r.BINDING.events)
       var i = e$di_container.get(r.BINDING.ChangeEvent)
       if (o.is_enabled()) {
@@ -194,7 +194,7 @@ exports.init_control_blocks = function (e) {
         this.elseCount_ = 0
       }
       this.updateShape_(t)
-      var e$di_container = e.di_container
+      var /* [auto-meaningful-name] */e$di_container = e.di_container
       var o = e$di_container.get(r.BINDING.events)
       if (o.is_enabled()) {
         var i = e$di_container.get(r.BINDING.ChangeEvent)
@@ -209,7 +209,7 @@ exports.init_control_blocks = function (e) {
       var /* [auto-meaningful-name] */w$connection
       var c
       if (this.prevElseifCount_ !== this.elseifCount_ || this.prevElseCount_ !== this.elseCount_) {
-        var e$di_container = e.di_container
+        var /* [auto-meaningful-name] */e$di_container = e.di_container
         var u = e$di_container.get(r.BINDING.Msg)
         var d = e$di_container.get(r.BINDING.MutationAddButton)
         var p = e$di_container.get(r.BINDING.MutationRemoveButton)

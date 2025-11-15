@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2151
@@ -12,8 +12,8 @@ Object.defineProperty(exports, "__esModule", {
 exports.SimplifiedCommentBubble = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../4/127")
-var a = require("../497/644")
+var o = require("../../1036/127")
+var a = require("../../1179/2554/644")
 var s = require("../../1001/213/index")
 var c = require("../../125/195/index")
 var u = require("../../125/index")
@@ -129,7 +129,7 @@ var l = function () {
   }
   e.prototype.create_comment_bubble_text = function (e) {
     var t = this
-    var e$comment = e.comment
+    var /* [auto-meaningful-name] */e$comment = e.comment
     if (e$comment) {
       var r = document.createElement("div")
       r.classList.add("blocklySimplifiedCommentTextWrapper")
@@ -148,7 +148,7 @@ var l = function () {
         var r
         var i
         if (s()) {
-          var t$selected_comment = t.selected_comment
+          var /* [auto-meaningful-name] */t$selected_comment = t.selected_comment
           if (t$selected_comment) {
             t.selected_comment = ""
             var a = t.comments.get(t$selected_comment)

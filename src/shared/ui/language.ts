@@ -6,8 +6,8 @@ export { f as a }
 export { format as c }
 export { g as f }
 export { _ as d }
-import r = require("../../../unrestored/shared/1531/2584/6");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_6 = require("../../../unrestored/shared/1531/2584/6")
+import React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -20,8 +20,8 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import a = require("../../../unrestored/shared/1531/2584/2628/index");
-import s = require("../../../unrestored/shared/1531/2584/10/index");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_2628_index = require("../../../unrestored/shared/1531/2584/2628/index")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_10_index = require("../../../unrestored/shared/1531/2584/10/index")
 var c = {
   mustToBeString: "{name} 必须是字符串",
   mustToBeNumber: "{name} 必须是数值",
@@ -109,14 +109,14 @@ var c = {
 var l = function () {
   var e = {}
   Object.entries(c).forEach(function (t) {
-    var n = s.a(t, 2)
+    var n = $$_$$_$$_unrestored_shared_1531_2584_10_index.a(t, 2)
     var r = n[0]
     var o = n[1]
     return e["player/" + r] = o
   })
   return e
 }()
-var u = r.a(r.a({}, {
+var u = $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, {
   run: "运行",
   save: "保存",
   notSave: "不保存",
@@ -1011,7 +1011,7 @@ var u = r.a(r.a({}, {
   "RichTextEditor.editDialogTitle": "富文本编辑"
 }), l)
 
-export type Language = "zh-CN";
+export type Language = "zh-CN"
 
 export const zh_CN = "zh-CN"
 
@@ -1024,7 +1024,7 @@ function f(e) {
     Object.assign(p[t], e[t])
   }
 }
-var h = a.a({
+var h = $$_$$_$$_unrestored_shared_1531_2584_2628_index.a({
   locale: zh_CN,
   messages: p[zh_CN]
 })
@@ -1048,7 +1048,7 @@ function _(e, t) {
   t = t || {}
   return h.formatMessage({
     id: e
-  }, r.a(r.a({}, t), {}, {
+  }, $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, t), {}, {
     p: function () {
       for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]

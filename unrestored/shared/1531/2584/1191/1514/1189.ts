@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1189
@@ -13,7 +13,7 @@ exports.getBoundPosition = function (e, t, n) {
   if (!e.props.bounds) {
     return [t, n]
   }
-  var e$props$bounds = e.props.bounds
+  var /* [auto-meaningful-name] */e$props$bounds = e.props.bounds
   e$props$bounds = "string" === typeof e$props$bounds ? e$props$bounds : function (e) {
     return {
       left: e.left,
@@ -25,8 +25,8 @@ exports.getBoundPosition = function (e, t, n) {
   var s = i(e)
   if ("string" === typeof e$props$bounds) {
     var c
-    var s$ownerDocument = s.ownerDocument
-    var s$ownerDocument$defaultView = s$ownerDocument.defaultView
+    var /* [auto-meaningful-name] */s$ownerDocument = s.ownerDocument
+    var /* [auto-meaningful-name] */s$ownerDocument$defaultView = s$ownerDocument.defaultView
     if (!((c = "parent" === e$props$bounds ? s.parentNode : s$ownerDocument.querySelector(e$props$bounds)) instanceof s$ownerDocument$defaultView.HTMLElement)) {
       throw new Error("Bounds selector \"" + e$props$bounds + "\" could not find an element.")
     }
@@ -74,7 +74,7 @@ exports.getControlPosition = function (e, t, n) {
   return (0, o.offsetXYFromParent)(r || e, s, n.props.scale)
 }
 exports.createCoreData = function (e, t, n) {
-  var e$state = e.state
+  var /* [auto-meaningful-name] */e$state = e.state
   var a = !(0, r.isNum)(e$state.lastX)
   var s = i(e)
   return a ? {
@@ -96,7 +96,7 @@ exports.createCoreData = function (e, t, n) {
   }
 }
 exports.createDraggableData = function (e, t) {
-  var e$props$scale = e.props.scale
+  var /* [auto-meaningful-name] */e$props$scale = e.props.scale
   return {
     node: t.node,
     x: e.state.x + t.deltaX / e$props$scale,

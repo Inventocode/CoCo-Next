@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1226
@@ -6,34 +6,34 @@
 
 "use strict"
 
-var r = require("../../1736/194")
-var o = require("../../1623/272")
-var i = require("../../1720/258/1227")
-var a = require("../../1740/422")
-var s = require("../../1738/752")
-var c = require("../../1736/167")
-var l = require("../../1745/635")
-var u = require("../../1680/473")
-var d = require("../../1735/257")
-var p = require("../../1710/576/1228")
+var r = require("../../1541/194")
+var o = require("../../1541/272")
+var i = require("./1227")
+var a = require("../../1541/422")
+var s = require("../../1646/752")
+var c = require("../../1541/167")
+var l = require("../../1646/635")
+var u = require("../../1563/473")
+var d = require("../../1684/257")
+var p = require("./1228")
 var f = require("./1582")
-var h = require("../../1660/495")
-var m = require("../../1666/634")
-var require$$$$1667631Index$f = require("../../1667/631/index").f
-var require$$$$1623300$f = require("../../1623/300").f
-var v = require("../../1713/1063")
-var b = require("../../1745/531")
-var y = require("../../1745/423/index")
-var y$get = y.get
-var y$set = y.set
-var r$ArrayBuffer = r.ArrayBuffer
+var h = require("../../1585/495")
+var m = require("../../1640/634")
+var /* [auto-meaningful-name] */require$$_$$_1541_631_index$f = require("../../1541/631/index").f
+var /* [auto-meaningful-name] */require$$_$$_1541_300_index$f = require("../../1541/300/index").f
+var v = require("../../1559/1063")
+var b = require("../../1541/531")
+var y = require("../../1541/423/index")
+var /* [auto-meaningful-name] */y$get = y.get
+var /* [auto-meaningful-name] */y$set = y.set
+var /* [auto-meaningful-name] */r$ArrayBuffer = r.ArrayBuffer
 var C = r$ArrayBuffer
-var r$DataView = r.DataView
+var /* [auto-meaningful-name] */r$DataView = r.DataView
 var S = r$DataView && r$DataView.prototype
-var object$prototype = Object.prototype
-var r$RangeError = r.RangeError
-var f$pack = f.pack
-var f$unpack = f.unpack
+var /* [auto-meaningful-name] */Object$prototype = Object.prototype
+var /* [auto-meaningful-name] */r$RangeError = r.RangeError
+var /* [auto-meaningful-name] */f$pack = f.pack
+var /* [auto-meaningful-name] */f$unpack = f.unpack
 var R = function (e) {
   return [255 & e]
 }
@@ -53,7 +53,7 @@ var L = function (e) {
   return f$pack(e, 52, 8)
 }
 var P = function (e, t) {
-  require$$$$1623300$f(e.prototype, t, {
+  require$$_$$_1541_300_index$f(e.prototype, t, {
     get: function () {
       return y$get(this)[t]
     }
@@ -65,7 +65,7 @@ var B = function (e, t, n, r) {
   if (o + t > i.byteLength) {
     throw r$RangeError("Wrong index")
   }
-  var y$getI$buffer$bytes = y$get(i.buffer).bytes
+  var /* [auto-meaningful-name] */y$getI$buffer$bytes = y$get(i.buffer).bytes
   var s = o + i.byteOffset
   var c = y$getI$buffer$bytes.slice(s, s + t)
   return r ? c : c.reverse()
@@ -76,7 +76,7 @@ var F = function (e, t, n, r, o, i) {
   if (a + t > s.byteLength) {
     throw r$RangeError("Wrong index")
   }
-  for (var y$getS$buffer$bytes = y$get(s.buffer).bytes, l = a + s.byteOffset, u = r(+o), d = 0; d < t; d++) {
+  for (var /* [auto-meaningful-name] */y$getS$buffer$bytes = y$get(s.buffer).bytes, l = a + s.byteOffset, u = r(+o), d = 0; d < t; d++) {
     y$getS$buffer$bytes[l + d] = u[i ? d : t - d - 1]
   }
 }
@@ -94,27 +94,27 @@ if (i) {
     for (var G, U = (C = function (e) {
         l(this, C)
         return new r$ArrayBuffer(p(e))
-      }).prototype = r$ArrayBuffer.prototype, W = require$$$$1667631Index$f(r$ArrayBuffer), H = 0; W.length > H;) {
+      }).prototype = r$ArrayBuffer.prototype, W = require$$_$$_1541_631_index$f(r$ArrayBuffer), H = 0; W.length > H;) {
       if (!((G = W[H++]) in C)) {
         a(C, G, r$ArrayBuffer[G])
       }
     }
     U.constructor = C
   }
-  if (m && h(S) !== object$prototype) {
-    m(S, object$prototype)
+  if (m && h(S) !== Object$prototype) {
+    m(S, Object$prototype)
   }
   var V = new r$DataView(new C(2))
-  var s$setInt8 = S.setInt8
+  var /* [auto-meaningful-name] */S$setInt8 = S.setInt8
   V.setInt8(0, 2147483648)
   V.setInt8(1, 2147483649)
   if (!(!V.getInt8(0) && V.getInt8(1))) {
     s(S, {
       setInt8: function (e, t) {
-        s$setInt8.call(this, e, t << 24 >> 24)
+        S$setInt8.call(this, e, t << 24 >> 24)
       },
       setUint8: function (e, t) {
-        s$setInt8.call(this, e, t << 24 >> 24)
+        S$setInt8.call(this, e, t << 24 >> 24)
       }
     }, {
       unsafe: true
@@ -135,7 +135,7 @@ if (i) {
   r$DataView = function (e, t, n) {
     l(this, r$DataView, "DataView")
     l(e, C, "DataView")
-    var y$getE$byteLength = y$get(e).byteLength
+    var /* [auto-meaningful-name] */y$getE$byteLength = y$get(e).byteLength
     var i = u(t)
     if (i < 0 || i > y$getE$byteLength) {
       throw r$RangeError("Wrong offset")

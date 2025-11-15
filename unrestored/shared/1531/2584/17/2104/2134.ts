@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2134
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.DraggedConnectionManager = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = require("../../125/195/index")
 var s = function () {
   function e() {
@@ -54,7 +54,7 @@ var s = function () {
   e.prototype.connection_effect = function () {}
   e.prototype.disconnection_effect = function () {}
   e.prototype.update = function (e, t) {
-    var this$closest_connection = this.closest_connection
+    var /* [auto-meaningful-name] */this$closest_connection = this.closest_connection
     var r = this.update_closest(e)
     if (r && this$closest_connection) {
       this$closest_connection.unhighlight()
@@ -89,7 +89,7 @@ var s = function () {
     })
   }
   e.prototype.update_closest = function (e) {
-    var this$closest_connection = this.closest_connection
+    var /* [auto-meaningful-name] */this$closest_connection = this.closest_connection
     this.closest_connection = undefined
     this.local_connection = undefined
     this.radius_connection = this.theme.blink_params.SNAP_RADIUS

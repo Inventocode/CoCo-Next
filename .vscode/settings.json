@@ -1,11 +1,13 @@
 {
     "cSpell.words": [
         "animejs",
+        "appcraft",
         "aqara",
         "bcmcdn",
         "blockly",
         "chunkhash",
         "codemao",
+        "epeiuss",
         "eventorder",
         "fullhash",
         "getorder",
@@ -19,7 +21,8 @@
         "unminimize",
         "unminimizing",
         "vika",
-        "vikadata"
+        "vikadata",
+        "workerpool"
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {

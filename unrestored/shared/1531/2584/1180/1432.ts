@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1432
@@ -39,7 +39,7 @@ exports.conditional = function (e, t) {
 }
 exports.loop = function (e, t) {
   return function (n, r, o, i) {
-    for (var a = [], n$pos = n.pos; t(n, r, o);) {
+    for (var a = [], /* [auto-meaningful-name] */n$pos = n.pos; t(n, r, o);) {
       var c = {}
       i(n, e, r, c)
       if (n.pos === n$pos) {

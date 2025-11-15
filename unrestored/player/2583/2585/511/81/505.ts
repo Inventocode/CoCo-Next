@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：505
@@ -11,7 +11,7 @@ var i = require("./124")
 var o = require("./56")
 var a = require("./37")
 var s = require("./150")
-var u = require("./73/index")
+var u = require("./73")
 var c = require("./109")
 var l = require("./117")
 var d = require("./170")
@@ -79,18 +79,18 @@ var p = function (t) {
     if (null == g) {
       g = e.DEFAULT_ALLOWED_LENGTHS
     }
-    var b$length = b.length
+    var /* [auto-meaningful-name] */b$length = b.length
     var _ = false
     var y = 0
     try {
       for (var w = h(g), E = w.next(); !E.done; E = w.next()) {
-        var e$value = E.value
-        if (b$length === e$value) {
+        var /* [auto-meaningful-name] */E$value = E.value
+        if (b$length === E$value) {
           _ = true
           break
         }
-        if (e$value > y) {
-          y = e$value
+        if (E$value > y) {
+          y = E$value
         }
       }
     } catch (A) {
@@ -184,7 +184,7 @@ var p = function (t) {
     }
   }
   e.findGuardPattern = function (t, n, r) {
-    var r$length = r.length
+    var /* [auto-meaningful-name] */r$length = r.length
     var o = new Int32Array(r$length)
     var s = t.getSize()
     var u = false
@@ -214,7 +214,7 @@ var p = function (t) {
     throw new a.a()
   }
   e.decodeDigit = function (t) {
-    for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, r = -1, e$PATTERNS$length = e.PATTERNS.length, o = 0; o < e$PATTERNS$length; o++) {
+    for (var /* [auto-meaningful-name] */e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, r = -1, /* [auto-meaningful-name] */e$PATTERNS$length = e.PATTERNS.length, o = 0; o < e$PATTERNS$length; o++) {
       var s = e.PATTERNS[o]
       var u = d.a.patternMatchVariance(t, s, e.MAX_INDIVIDUAL_VARIANCE)
       if (u < e$MAX_AVG_VARIANCE) {

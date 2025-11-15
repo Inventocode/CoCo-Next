@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：508
@@ -179,7 +179,7 @@ var c = function () {
     }
   }
   t.embedPositionDetectionPatternsAndSeparators = function (e) {
-    var t$POSITION_DETECTION_PATTERN0$length = t.POSITION_DETECTION_PATTERN[0].length
+    var /* [auto-meaningful-name] */t$POSITION_DETECTION_PATTERN0$length = t.POSITION_DETECTION_PATTERN[0].length
     t.embedPositionDetectionPattern(0, 0, e)
     t.embedPositionDetectionPattern(e.getWidth() - t$POSITION_DETECTION_PATTERN0$length, 0, e)
     t.embedPositionDetectionPattern(0, e.getWidth() - t$POSITION_DETECTION_PATTERN0$length, e)
@@ -192,7 +192,7 @@ var c = function () {
   }
   t.maybeEmbedPositionAdjustmentPatterns = function (e, n) {
     if (!(e.getVersionNumber() < 2)) {
-      for (var r = e.getVersionNumber() - 1, i = t.POSITION_ADJUSTMENT_PATTERN_COORDINATE_TABLE[r], o = 0, i$length = i.length; o !== i$length; o++) {
+      for (var r = e.getVersionNumber() - 1, i = t.POSITION_ADJUSTMENT_PATTERN_COORDINATE_TABLE[r], o = 0, /* [auto-meaningful-name] */i$length = i.length; o !== i$length; o++) {
         var s = i[o]
         if (s >= 0) {
           for (var u = 0; u !== i$length; u++) {

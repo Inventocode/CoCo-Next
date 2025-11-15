@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1363
@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../../38/607/494")
-var i = require("../../38/607/624/index")
+var r = require("../../206/776/494/index")
+var i = require("../../206/776/624/index")
 var o = this && this.__importDefault || function (e) {
   return e && e.__esModule ? e : {
     default: e
@@ -19,18 +19,18 @@ Object.defineProperty(exports, "__esModule", {
 exports.editOp = exports.replaceOp = exports.insertOp = exports.moveOp = exports.removeOp = exports.type = undefined
 var a = o(require("./1349"))
 var s = o(require("./1350"))
-var c = require("../../49/32/1122")
-var u = require("../../49/32/1123")
-var objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE = Object({
+var c = require("./1122/index")
+var u = require("./1123")
+var /* [auto-meaningful-name] */ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE = Object({
   NODE_ENV: "production",
   PUBLIC_URL: "",
   WDS_SOCKET_HOST: undefined,
   WDS_SOCKET_PATH: undefined,
   WDS_SOCKET_PORT: undefined
 }).JSON1_RELEASE_MODE
-var f = objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE ? function () {} : require("./2317").default
+var f = ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE ? function () {} : require("./2317/index").default
 function d(e, t) {
-  if (objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     if (!e) {
       throw new Error(t)
     }
@@ -59,7 +59,7 @@ exports.type = {
   normalize: R,
   apply: function (e, t) {
     f.quiet = !h
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("apply")
       f("snapshot", e)
       f("op", t)
@@ -210,12 +210,12 @@ exports.type = {
       if (null != n) {
         var o = i.getPath()
         t = o.length
-        if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+        if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
           f("path", e, "pi", r, "r", o)
         }
         e = o.concat(e.slice(r))
       }
-      if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+      if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
         f("handleDrop at path", e, "read cursor", i.getPath())
       }
       for (var a = function () {
@@ -537,17 +537,17 @@ function R(e) {
   return r.get()
 }
 var P = function () {
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     f.prefix++
   }
 }
 var N = function () {
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     f.prefix--
   }
 }
 function M(e, t) {
-  if (h && !objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (h && !ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     f("composing:")
     f("  op1:", e)
     f("  op2:", t)
@@ -599,7 +599,7 @@ function M(e, t) {
   var E = c.writeCursor()
   !function e(t, r, i, o, h, b, E, x) {
     d(r || i)
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("xfBoundary", h, !!t && t.getPath(), !!r && r.getPath(), !!i && i.getPath(), !!o && o.getPath(), "lit:", h, "rmParent:", b)
     }
     P()
@@ -614,7 +614,7 @@ function M(e, t) {
     if (null != F) {
       f("teleporting via c2 pick2Slot", F)
       o = _[F]
-      if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+      if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
         f("r2Drop", o && o.getPath())
       }
       E = s[F] = new c.WriteCursor()
@@ -650,7 +650,7 @@ function M(e, t) {
         t = null
       }
     }
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       w("r1Pick", t)
       w("r1Drop", r)
       w("r2Pick", i)
@@ -867,7 +867,7 @@ function M(e, t) {
   })
   var x = o.get()
   f("-> compose returning", x)
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     F(x)
   }
   return x
@@ -883,7 +883,7 @@ function j(e) {
   var a = []
   f("inverting", e);
   (function e(n, i, a) {
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("invertSimple", n.getPath(), a)
     }
     P()
@@ -925,7 +925,7 @@ function j(e) {
     var _ = r(n)
     try {
       for (_.s(); !(h = _.n()).done;) {
-        var h$value = h.value
+        var /* [auto-meaningful-name] */h$value = h.value
         i.descend(h$value)
         var m = "number" === typeof h$value ? h$value - p : h$value
         var y = E(a, m)
@@ -957,13 +957,13 @@ function j(e) {
     }
     i.write("r", a)
   })(n, i, undefined)
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     f("invert after pass 1", i.get())
   }
   if (t) {
     i.reset();
     (function e(n, i, s) {
-      if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+      if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
         f("invXE", null === n || undefined === n ? undefined : n.getPath(), i.getPath(), s.getPath())
       }
       P()
@@ -980,7 +980,7 @@ function j(e) {
           if (!h.invert) {
             throw Error("Cannot invert subtype ".concat(h.name))
           }
-          if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+          if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
             f("inverting subtype", h.name, T(u))
           }
           B(s, h, h.invert(T(u)))
@@ -999,7 +999,7 @@ function j(e) {
       var y = r(i)
       try {
         for (y.s(); !(p = y.n()).done;) {
-          var p$value = p.value
+          var /* [auto-meaningful-name] */p$value = p.value
           if ("number" === typeof p$value) {
             var w = p$value - A
             var E = m(w)
@@ -1026,7 +1026,7 @@ function j(e) {
       N()
     })(n.clone(), n, i)
     if (a.length) {
-      if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+      if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
         f("Merging held writes", a.map(function (e) {
           return e.get()
         }))
@@ -1050,7 +1050,7 @@ function j(e) {
   }
   var s = i.get()
   f("-> invert returning:", s)
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     F(s)
   }
   return s
@@ -1073,7 +1073,7 @@ function L(e, t) {
   var a = []
   var u = [];
   (function e(t, n, i) {
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("traversePick", t.getPath(), i)
     }
     P()
@@ -1110,7 +1110,7 @@ function L(e, t) {
     var y = r(t)
     try {
       for (y.s(); !(g = y.n()).done;) {
-        var g$value = g.value
+        var /* [auto-meaningful-name] */g$value = g.value
         n.descend(g$value)
         var w = "number" === typeof g$value ? g$value - v : g$value
         var x = E(i, w)
@@ -1157,7 +1157,7 @@ function L(e, t) {
   if (o) {
     i.reset();
     (function e(t, n, i, o, s) {
-      if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+      if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
         f("traverseDrop", null === t || undefined === t ? undefined : t.getPath(), n.getPath(), i.getPath(), o)
       }
       P()
@@ -1195,7 +1195,7 @@ function L(e, t) {
       var b = r(n)
       try {
         for (b.s(); !(_ = b.n()).done;) {
-          var _$value = _.value
+          var /* [auto-meaningful-name] */_$value = _.value
           if ("number" === typeof _$value) {
             var x = _$value - m
             var C = y(x)
@@ -1226,7 +1226,7 @@ function L(e, t) {
   }
   var h = i.get()
   f("-> makeInvertible returning", h)
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     F(h)
   }
   return h
@@ -1254,7 +1254,7 @@ function H(e, n, i) {
       result: e
     }
   }
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE && h) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE && h) {
     f("transforming " + i + ":")
     f("op1", e)
     f("op2", n)
@@ -1302,7 +1302,7 @@ function H(e, n, i) {
   (function e(t) {
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : null
     var i = arguments.length > 2 ? arguments[2] : undefined
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("scanOp2Pick", "r1Pick", n && n.getPath(), "r2Pick", t.getPath(), "removed1:", i && i.getPath())
     }
     P()
@@ -1337,7 +1337,7 @@ function H(e, n, i) {
     var h = r(t)
     try {
       for (h.s(); !(u = h.n()).done;) {
-        var u$value = u.value
+        var /* [auto-meaningful-name] */u$value = u.value
         f("->", u$value)
         e(t, d(u$value), i)
       }
@@ -1349,7 +1349,7 @@ function H(e, n, i) {
     d.end()
     N()
   })(z, G, null)
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     f("op1PickAtOp2Pick", L)
     f("cancelledOp2", I)
     f("held op2 pick", C.map(function (e) {
@@ -1357,7 +1357,7 @@ function H(e, n, i) {
     }))
   }
   (function e(n, i, a, s, d) {
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("scanOp2Drop", "r1Pick", n && n.getPath(), i && i.getPath(), "r2Drop", a.getPath(), "pickSlot1", s, "removed:", d && d.getPath())
     }
     P()
@@ -1384,7 +1384,7 @@ function H(e, n, i) {
         } else {
           if (!(!d || 1 !== o && null != L[h])) {
             f("conflicting op2 move because drop destination removed", h)
-            if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+            if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
               f("path", a.getPath(), i.getPath())
             }
             if (null == m) {
@@ -1451,7 +1451,7 @@ function H(e, n, i) {
     var F = r(a)
     try {
       for (F.s(); !(b = F.n()).done;) {
-        var b$value = b.value
+        var /* [auto-meaningful-name] */b$value = b.value
         f("key ->", b$value)
         if ("number" === typeof b$value) {
           var j = b$value - O
@@ -1497,7 +1497,7 @@ function H(e, n, i) {
   var K = null
   f("---- pick ----");
   (function e(t, n, i, a, s) {
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("writeOp1Pick", "r1Pick", t.getPath(), "r2Pick", n && n.getPath(), "r2Drop", i && i.getPath(), "w", a.getPath(), "removed2", s && s.getPath())
     }
     P()
@@ -1506,7 +1506,7 @@ function H(e, n, i) {
     if (g(h)) {
       var _ = h.p
       if (null != _) {
-        if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+        if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
           f("teleporting via op2 slot2", _, "to", E[_].getPath())
         }
         i = E[_]
@@ -1520,7 +1520,7 @@ function H(e, n, i) {
     } else if (v(p(i))) {
       i = null
     }
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       A("op1pick r1Pick", t)
       A("op1pick r2Pick", n)
       A("op1pick r2Drop", i)
@@ -1582,20 +1582,20 @@ function H(e, n, i) {
       var B = r(t)
       try {
         for (B.s(); !(T = B.n()).done;) {
-          var t$value = T.value
-          f("-> k", t$value)
-          if ("string" === typeof t$value) {
-            var I = C(t$value)
-            var F = S(t$value)
-            a.descend(t$value)
+          var /* [auto-meaningful-name] */T$value = T.value
+          f("-> k", T$value)
+          if ("string" === typeof T$value) {
+            var I = C(T$value)
+            var F = S(T$value)
+            a.descend(T$value)
             e(t, I, F, a, s)
             a.ascend()
           } else {
-            var R = C(t$value)
-            var j = t$value - w
+            var R = C(T$value)
+            var j = T$value - w
             var L = g(p(R)) ? null : S(j)
             var U = j + x
-            f("k" + t$value + " -> m" + j + " -> f" + U)
+            f("k" + T$value + " -> m" + j + " -> f" + U)
             d(U >= 0)
             a.descend(U)
             e(t, R, L, a, s)
@@ -1613,7 +1613,7 @@ function H(e, n, i) {
     N()
   })(G, z, z.clone(), Q, null)
   Q.reset()
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     f("intermediate result", Q.get())
     f("held picks", y.map(function (e) {
       return e.getComponent() || !!e
@@ -1631,7 +1631,7 @@ function H(e, n, i) {
   (function e(n, h, _, x, D, F) {
     d(h)
     var R = h.getComponent()
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("drop", n && n.getPath(), h.getPath(), _ && _.getPath(), x && x.getPath(), "c:", R, "r:", !!F)
     }
     P()
@@ -1696,7 +1696,7 @@ function H(e, n, i) {
         n = y[G]
         _ = C[G]
         x = O[G]
-        if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+        if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
           f("p1Pick", n && n.getPath(), "p2Pick", _ && _.getPath(), "p2Drop", x && x.getPath())
         }
       } else {
@@ -1710,7 +1710,7 @@ function H(e, n, i) {
     } else if (g(p(n))) {
       n = _ = x = null
     }
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       A("op1drop op2Pick", _)
       A("op1drop op1Pick", n)
       A("op1drop op1Drop", h)
@@ -1727,7 +1727,7 @@ function H(e, n, i) {
         if (null != Z) {
           f("teleporting p2Drop via c2 slot2", Z)
           x = E[Z]
-          if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+          if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
             f("p2Drop", x && x.getPath())
           }
           if (!(1 !== o && null != L[Z])) {
@@ -1743,7 +1743,7 @@ function H(e, n, i) {
     } else if (!v(R) && v(M)) {
       x = null
     }
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       A("op1drop op2Drop", x)
     }
     M = null != x ? x.getComponent() : null
@@ -1796,13 +1796,13 @@ function H(e, n, i) {
     var ge = r(h)
     try {
       for (ge.s(); !(Ae = ge.n()).done;) {
-        var ae$value = Ae.value
-        f("-> p1Drop looking at child", ae$value)
-        if ("number" === typeof ae$value) {
+        var /* [auto-meaningful-name] */Ae$value = Ae.value
+        f("-> p1Drop looking at child", Ae$value)
+        if ("number" === typeof Ae$value) {
           var me = undefined
-          f("p1DropEachChild k:", ae$value, "p1d:", ae, "p1p:", oe, "raw: -", "p2p:", se, "p2d:", ce, "op:", ue, "od:", le)
+          f("p1DropEachChild k:", Ae$value, "p1d:", ae, "p1p:", oe, "raw: -", "p2p:", se, "p2d:", ce, "op:", ue, "od:", le)
           var ye = v(h.getComponent())
-          var be = ae$value - ae
+          var be = Ae$value - ae
           var we = undefined
           for (f("Looking for p2 Pick at k1Mid", be), P(); fe && "number" === typeof (we = n.getKey());) {
             we += oe
@@ -1877,9 +1877,9 @@ function H(e, n, i) {
           N()
           f("_p2Drop", !!Te)
           var Ne = Se + ce
-          f("->DropEachChild k:", ae$value, "p1d:", ae, "p1p:", oe, "raw:", Oe, "p2p:", se, "p2d:", ce, "op:", ue, "od:", le)
+          f("->DropEachChild k:", Ae$value, "p1d:", ae, "p1p:", oe, "raw:", Oe, "p2p:", se, "p2d:", ce, "op:", ue, "od:", le)
           var Me = Ne + ue + le
-          f("k: " + ae$value + " -> mid " + be + " -> raw " + Oe + " -> k2Mid " + Se + " -> k2Final " + Ne + " -> descend " + Me)
+          f("k: " + Ae$value + " -> mid " + be + " -> raw " + Oe + " -> k2Mid " + Se + " -> k2Final " + Ne + " -> descend " + Me)
           d(Me >= 0, "trying to descend to a negative index")
           D.descend(Me)
           if (ye) {
@@ -1892,14 +1892,14 @@ function H(e, n, i) {
           }
           D.ascend()
         } else {
-          for (var je = undefined; fe && ("string" !== typeof (je = n.getKey()) || !(je > ae$value || je === ae$value));) {
+          for (var je = undefined; fe && ("string" !== typeof (je = n.getKey()) || !(je > Ae$value || je === Ae$value));) {
             fe = n.nextSibling()
           }
-          for (var Le = fe && je === ae$value ? n : null, Ue = he(ae$value), He = undefined; pe && ("string" !== typeof (He = x.getKey()) || !(He > ae$value || He === ae$value));) {
+          for (var Le = fe && je === Ae$value ? n : null, Ue = he(Ae$value), He = undefined; pe && ("string" !== typeof (He = x.getKey()) || !(He > Ae$value || He === Ae$value));) {
             pe = x.nextSibling()
           }
-          var Ve = pe && He === ae$value ? x : null
-          D.descend(ae$value)
+          var Ve = pe && He === Ae$value ? x : null
+          D.descend(Ae$value)
           e(Le, h, Ue, Ve, D, F)
           D.ascend()
         }
@@ -1927,7 +1927,7 @@ function H(e, n, i) {
     }
   }
   Q.reset()
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     f("output slot map", X)
     f("merging picks into partial output", Q.get())
     f("held pick writes", M.map(function (e) {
@@ -1953,7 +1953,7 @@ function H(e, n, i) {
       }
     })
     Q.reset()
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("after merge", Q.get())
     }
   }
@@ -1961,7 +1961,7 @@ function H(e, n, i) {
   var $ = []
   if ((j.length || I.length) && !m) {
     f("------ write held picks and drops -----")
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("held drop writes", j.map(function (e) {
         return e.get()
       }))
@@ -1977,14 +1977,14 @@ function H(e, n, i) {
         })
       }
     })
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("merging writes into", J.get())
       f("heldOutDropRead", q.map(function (e) {
         return e && e.getPath()
       }))
     }
     (function e(t, n, i, o, a, s) {
-      if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+      if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
         f("writeHeldOp2Drop", "p2Drop", t.getPath(), "outPick", n && n.getPath(), "outDrop", i && i.getPath(), "pc", a, "rm out", s)
       }
       f.prefix++
@@ -2015,7 +2015,7 @@ function H(e, n, i) {
           i = c.readCursor(m.get())
         }
       }
-      if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+      if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
         A("outDrop p2Drop", t)
         A("outDrop outPick", n)
       }
@@ -2039,7 +2039,7 @@ function H(e, n, i) {
       var C = r(t)
       try {
         for (C.s(); !(y = C.n()).done;) {
-          var y$value = y.value
+          var /* [auto-meaningful-name] */y$value = y.value
           if ("number" === typeof y$value) {
             var k = E(y$value)
             var S = y$value + b
@@ -2074,7 +2074,7 @@ function H(e, n, i) {
       }
     }
     f("-- after writeHeldOp2Drop", Q.get())
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
       f("held output writes", $.map(function (e) {
         return e.get()
       }))
@@ -2135,7 +2135,7 @@ function H(e, n, i) {
   var oe = Q.get()
   f("-> xf returning", oe)
   f()
-  if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
+  if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE) {
     F(oe)
   }
   return {
@@ -2159,9 +2159,9 @@ var G = function (e) {
   return t.get()
 }
 var z = function (e, t) {
-  var e$type = e.type
-  var e$op1 = e.op1
-  var e$op2 = e.op2
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$op1 = e.op1
+  var /* [auto-meaningful-name] */e$op2 = e.op2
   switch (f("resolving conflict of type", e$type), e$type) {
     case u.ConflictType.DROP_COLLISION:
       return "left" === t ? [null, G(e$op2)] : [G(e$op1), null]
@@ -2180,8 +2180,8 @@ var z = function (e, t) {
   }
 }
 var Q = function (e) {
-  var e$type = e.type
-  var e$op1 = e.op1
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$op1 = e.op1
   return {
     type: e$type,
     op1: e.op2,
@@ -2189,9 +2189,9 @@ var Q = function (e) {
   }
 }
 var W = function (e) {
-  var e$type = e.type
-  var e$op1 = e.op1
-  var e$op2 = e.op2
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$op1 = e.op1
+  var /* [auto-meaningful-name] */e$op2 = e.op2
   return {
     type: e$type,
     op1: R(e$op1),
@@ -2204,12 +2204,12 @@ function K(e, t, n, r) {
     if (s.ok) {
       return M(o, s.result)
     }
-    var s$conflict = s.conflict
+    var /* [auto-meaningful-name] */s$conflict = s.conflict
     f("detected conflict", s$conflict)
     if (!e(s$conflict)) {
       V(s$conflict)
     }
-    if (!objectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE && s$conflict.type === u.ConflictType.BLACKHOLE) {
+    if (!ObjectNODE_ENVProductionPUBLIC_URLWDS_SOCKET_HOSTUndefinedWDS_SOCKET_PATHUndefinedWDS_SOCKET_PORTUndefined$JSON1_RELEASE_MODE && s$conflict.type === u.ConflictType.BLACKHOLE) {
       var h = H(n, t, "left" === r ? "right" : "left")
       d(!h.ok)
       try {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：55
@@ -6,16 +6,16 @@
 
 "use strict"
 
-export { u as a }
+export { EXTENSION_WIDGET_MESSAGE_TYPE as a }
 export { d as b }
-import r = require("./6");
-import o = require("./27");
-import i = require("./40");
-import a = require("./68");
-import s = require("./28/index");
-import c = require("./21/index");
-import l = require("./91");
-var u = "EXTENSION_WIDGET_MESSAGE_TYPE"
+import r = require("./6")
+import o = require("./27")
+import i = require("./40")
+import a = require("./68")
+import /* [auto-meaningful-name] */$_28_index = require("./28/index")
+import /* [auto-meaningful-name] */$_21_index = require("./21/index")
+import l = require("./91")
+var /* [auto-meaningful-name] */EXTENSION_WIDGET_MESSAGE_TYPE = "EXTENSION_WIDGET_MESSAGE_TYPE"
 var d = new (function () {
   function e() {
     o.a(this, e)
@@ -33,11 +33,11 @@ var d = new (function () {
   }, {
     key: "_pushWidgetMessage",
     value: function (e) {
-      var t = c.currentContext()
+      var t = $_21_index.currentContext()
       l.a({
         type: a.b.RUNTIME_LOG,
         data: r.a(r.a({}, e), {}, {
-          msgType: u,
+          msgType: EXTENSION_WIDGET_MESSAGE_TYPE,
           screenId: "log" === e.type ? "" : (null === t || undefined === t ? undefined : t.screenId) || "",
           blockId: "log" === e.type ? "" : (null === t || undefined === t ? undefined : t.blockId) || ""
         })
@@ -69,7 +69,7 @@ var d = new (function () {
         type: "log",
         blockId: "",
         screenId: "",
-        message: s.o(e),
+        message: $_28_index.o(e),
         values: t
       })
     }
@@ -104,7 +104,7 @@ var d = new (function () {
         widgetType: e.widgetType,
         blockId: "",
         screenId: "",
-        message: s.o(e.message),
+        message: $_28_index.o(e.message),
         values: e.values
       })
     }
@@ -132,4 +132,4 @@ var d = new (function () {
   }])
   return e
 }())()
-export default u
+export default EXTENSION_WIDGET_MESSAGE_TYPE

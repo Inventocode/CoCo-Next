@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1003
@@ -7,9 +7,9 @@
 "use strict"
 
 export { u as a }
-import r = require("./215/index");
-import i = require("./34/index");
-import o = require("./65");
+import /* [auto-meaningful-name] */$_215_index = require("./215/index")
+import /* [auto-meaningful-name] */$_34_index = require("./34/index")
+import o = require("./65")
 var a = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -179,11 +179,11 @@ var u = function (e) {
     c.drag_move = function () {
       if (c.is_draggable && c.drag_data) {
         var e = c.drag_data.event_data.getLocalPosition(c.parent)
-        var c$app$get_app$view = c.app.get_app().view
-        var c$app$get_app$view$width = c$app$get_app$view.width
-        var c$app$get_app$view$height = c$app$get_app$view.height
-        e.set(r.a(-c$app$get_app$view$width / 2, c$app$get_app$view$width / 2, e.x), r.a(-c$app$get_app$view$height / 2, c$app$get_app$view$height / 2, e.y))
-        var a = new i.o(c.position.x + e.x - c.drag_data.old_pos.x, c.position.y + e.y - c.drag_data.old_pos.y)
+        var /* [auto-meaningful-name] */c$app$get_app$view = c.app.get_app().view
+        var /* [auto-meaningful-name] */c$app$get_app$view$width = c$app$get_app$view.width
+        var /* [auto-meaningful-name] */c$app$get_app$view$height = c$app$get_app$view.height
+        e.set($_215_index.a(-c$app$get_app$view$width / 2, c$app$get_app$view$width / 2, e.x), $_215_index.a(-c$app$get_app$view$height / 2, c$app$get_app$view$height / 2, e.y))
+        var a = new $_34_index.o(c.position.x + e.x - c.drag_data.old_pos.x, c.position.y + e.y - c.drag_data.old_pos.y)
         c.drag_data.old_pos = e
         var s = c.getBounds()
         var u = {
@@ -202,8 +202,8 @@ var u = function (e) {
         var f = c$app$get_app$view$width / 2 + u.right
         var d = -c$app$get_app$view$height / 2 + u.top
         var h = c$app$get_app$view$height / 2 + u.bottom
-        a.x = r.a(Math.min(l, f), Math.max(l, f), a.x)
-        a.y = r.a(Math.min(d, h), Math.max(d, h), a.y)
+        a.x = $_215_index.a(Math.min(l, f), Math.max(l, f), a.x)
+        a.y = $_215_index.a(Math.min(d, h), Math.max(d, h), a.y)
         c.position.set(a.x, a.y)
         c.emit_event("change", {
           position: c.position
@@ -257,7 +257,7 @@ var u = function (e) {
     return s(this, undefined, undefined, function () {
       var t
       return c(this, function (n) {
-        return e && i.B.TextureCache[e] ? [2, i.B.TextureCache[e]] : e && i.B.BaseTextureCache[e] ? [2, new i.y(i.B.BaseTextureCache[e])] : (t = e ? i.y.from(e) : i.y.EMPTY).valid ? [2, t] : [2, new Promise(function (e, n) {
+        return e && $_34_index.B.TextureCache[e] ? [2, $_34_index.B.TextureCache[e]] : e && $_34_index.B.BaseTextureCache[e] ? [2, new $_34_index.y($_34_index.B.BaseTextureCache[e])] : (t = e ? $_34_index.y.from(e) : $_34_index.y.EMPTY).valid ? [2, t] : [2, new Promise(function (e, n) {
           t.baseTexture.on("loaded", function () {
             e(t)
           })
@@ -308,5 +308,5 @@ var u = function (e) {
     this.events.event_emitter.removeListener("break", this.on_break)
   }
   return t
-}(i.f)
+}($_34_index.f)
 export default u

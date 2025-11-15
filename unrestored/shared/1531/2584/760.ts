@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：760
@@ -8,7 +8,7 @@
 
 var r = require("./683/34/index")
 var o = require("./683/318")
-var i = require("./683/517")
+var i = require("./683/517/index")
 var a = require("./683/65")
 i.a.prototype.set_flipped = function (e) {
   switch (e) {
@@ -33,7 +33,7 @@ i.a.prototype.set_scale = function (e, t) {
   }
   this.set_pixi_scale(n, r)
 }
-var o$a$prototype$drag_start_scale_btn = o.a.prototype.drag_start_scale_btn
+var /* [auto-meaningful-name] */o$a$prototype$drag_start_scale_btn = o.a.prototype.drag_start_scale_btn
 o.a.prototype.drag_start_scale_btn = function (e) {
   this._old_actor_center = a.l(this.target) ? a.d(this.target, this.target.position) : this.target.get_pixi_position()
   var t = this.target.get_scale()
@@ -45,7 +45,7 @@ o.a.prototype.drag_start_scale_btn = function (e) {
 o.a.prototype.drag_move_scale_btn = function (e) {
   if (this.target) {
     var t = Math.hypot(this.target.width / this.target.scale.x / 2, this.target.height / this.target.scale.y / 2)
-    var this$_old_actor_center = this._old_actor_center
+    var /* [auto-meaningful-name] */this$_old_actor_center = this._old_actor_center
     var r = (Math.hypot(e.x - this$_old_actor_center.x, e.y - this$_old_actor_center.y) - this.old_mouse_r) / t
     var o = function (e) {
       var t = Math.max(Math.abs(e) + r, .01)
@@ -69,7 +69,7 @@ o.a.prototype.drag_move_scale_btn = function (e) {
     this.app.render()
   }
 }
-var o$a$prototype$drag_start_rotate_btn = o.a.prototype.drag_start_rotate_btn
+var /* [auto-meaningful-name] */o$a$prototype$drag_start_rotate_btn = o.a.prototype.drag_start_rotate_btn
 o.a.prototype.drag_start_rotate_btn = function (e) {
   var t = this.editor.name && this.data.get_internal_actor(this.editor.name)
   if (t) {

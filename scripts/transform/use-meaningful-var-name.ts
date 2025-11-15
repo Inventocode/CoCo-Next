@@ -1,5 +1,5 @@
 import { NodePath, PluginObj, types } from "@babel/core"
-import _ from "lodash"
+import { isIdentifierName } from "@babel/helper-validator-identifier"
 
 const MARKING_COMMENT_CONTENT = " [auto-meaningful-name] "
 
@@ -8,9 +8,6 @@ export function useMeaningfulVarName(): PluginObj {
         ImportDeclaration(path) {
             const { node: importDeclaration } = path
             const importSourceName = importDeclaration.source.value
-            if (importSourceName.startsWith(".")) {
-                return
-            }
             for (const specifier of path.get("specifiers")) {
                 if (specifier.isImportDefaultSpecifier()) {
                     renameIfNeeds(specifier.get("local"), importSourceName, true)
@@ -27,9 +24,6 @@ export function useMeaningfulVarName(): PluginObj {
                 return
             }
             const importSourceName = moduleReference.expression.value
-            if (importSourceName.startsWith(".")) {
-                return
-            }
             renameIfNeeds(path.get("id"), importSourceName, true)
         },
         VariableDeclarator(path) {
@@ -53,7 +47,10 @@ export function useMeaningfulVarName(): PluginObj {
                 }
                 assignValue = assign.get("right")
             }
-            if (!assignValue?.isMemberExpression({ computed: false })) {
+            if (
+                !assignValue?.isMemberExpression({ computed: false }) &&
+                !assignValue?.isStringLiteral()
+            ) {
                 return
             }
             renameIfNeeds(id, assignValue.toString())
@@ -76,26 +73,34 @@ function renameIfNeeds(
     if (oldName.length > 2 && !hasMarkingComment) {
         return
     }
-    let processedNewName = newName.match(/[A-Z]?(_|\$|[0-9]|[a-z]|\.)*/g)?.map(_.capitalize).join("")
-    if (processedNewName == null) {
+    const nameParts = newName.match(/(_|\$|[0-9]|[a-z]|[A-Z]|\.|\\|\/)*/g)
+    if (nameParts == null) {
         return
     }
+    let processedNewName = capitalize ? nameParts.map(upperFirst).join("") : nameParts.shift() + nameParts.map(upperFirst).join("")
     if (processedNewName.length <= 4) {
         return
     }
-    processedNewName = processedNewName.replace(/\./g, "$")
-    if (!capitalize) {
-        processedNewName = (processedNewName[0] ?? "").toLowerCase() + processedNewName.slice(1)
-    }
-    if (/^\d/.test(processedNewName)) {
+    processedNewName = processedNewName.replace(/\./g, "$").replace(/\\|\//g, "_")
+    if (!isIdentifierName(processedNewName)) {
         processedNewName = "_" + processedNewName
+    }
+    if (oldName == processedNewName) {
+        return
     }
     const { scope } = path
     if (scope.getBinding(processedNewName) != null) {
-        scope.rename(processedNewName, scope.generateUid(processedNewName))
+        processedNewName = scope.generateUid(processedNewName)
+    }
+    if (oldName == processedNewName) {
+        return
     }
     scope.rename(oldName, processedNewName)
     if (!hasMarkingComment) {
         path.addComment("leading", MARKING_COMMENT_CONTENT)
     }
+}
+
+function upperFirst(text: string) {
+    return text.slice(0, 1).toUpperCase() + text.slice(1)
 }

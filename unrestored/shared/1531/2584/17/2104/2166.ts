@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2166
@@ -30,19 +30,19 @@ var c = function (e) {
   }
   (0, r.__extends)(t, e)
   t.prototype.render_ = function () {
-    var /* [auto-meaningful-name] */_this$border_rect2
     var /* [auto-meaningful-name] */this$border_rect
+    var /* [auto-meaningful-name] */_this$border_rect
     this.size_.width = 0
     if (this.visible_ && this.field_group && this.source_block) {
       this.size_.width = this.padding_x
       this.update_height()
       this.render_text_element()
       this.render_arrow()
-      if (!(null === (_this$border_rect2 = this.border_rect) || undefined === _this$border_rect2)) {
-        _this$border_rect2.setAttribute("width", String(this.size_.width))
-      }
       if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
-        this$border_rect.setAttribute("height", String(this.size_.height))
+        this$border_rect.setAttribute("width", String(this.size_.width))
+      }
+      if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
+        _this$border_rect.setAttribute("height", String(this.size_.height))
       }
     }
   }
@@ -171,7 +171,7 @@ var c = function (e) {
           } else {
             i.classList.remove("menu-item-hover")
           }
-        }, n = this, r = 0, this$menu_items$length = this.menu_items.length; r < this$menu_items$length; r++) {
+        }, n = this, r = 0, /* [auto-meaningful-name] */this$menu_items$length = this.menu_items.length; r < this$menu_items$length; r++) {
         t(r)
       }
     }

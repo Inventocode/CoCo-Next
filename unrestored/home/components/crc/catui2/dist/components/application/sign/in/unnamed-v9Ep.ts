@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：v9Ep
@@ -444,7 +444,7 @@ function __extends(d, b) {
 }
 var __assign = function () {
   __assign = Object.assign || function __assign(t) {
-    for (var s, i = 1, arguments$length = arguments.length; i < arguments$length; i++) {
+    for (var s, i = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; i < arguments$length; i++) {
       s = arguments[i]
       for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) {
         t[p] = s[p]
@@ -615,7 +615,7 @@ var CodemaoError = /** @class */function (_super) {
   function CodemaoError(options) {
     var _this = _super.call(this, options.message) || this
     var error_code = options.error_code
-    var options$error_origin_response = options.error_origin_response
+    var /* [auto-meaningful-name] */options$error_origin_response = options.error_origin_response
     var error_origin_response = options$error_origin_response === undefined ? {
       error_code: error_code,
       error_message: options.message,
@@ -1126,7 +1126,7 @@ function check_profile(profile) {
   var sex = profile.sex
   var fullname = profile.fullname
   var nickname = profile.nickname
-  var profile$qq = profile.qq
+  var /* [auto-meaningful-name] */profile$qq = profile.qq
   var description = profile.description
   if (birthday) {
     check_birthday(birthday)
@@ -1659,7 +1659,7 @@ var CodemaoAuth = /** @class */function () {
   CodemaoAuth.prototype.dispatch_request = function (options) {
     return __awaiter(this, undefined, undefined, function () {
       var /* [auto-meaningful-name] */options$headers
-      var _b
+      var /* [auto-meaningful-name] */Authorization
       var _this = this
       return __generator(this, function (_c) {
         switch (_c.label) {
@@ -1670,11 +1670,11 @@ var CodemaoAuth = /** @class */function () {
             options.headers = options.headers || {}
              
             options$headers = options.headers
-            _b = "Authorization"
+            Authorization = "Authorization"
             return [4 /*yield*/, this.token.get_access()]
           case 1:
              
-            options$headers[_b] = _c.sent()
+            options$headers[Authorization] = _c.sent()
             return [2 /*return*/, retry_when_token_err(retries_when_got_token_err, function () {
               return __awaiter(_this, undefined, undefined, function () {
                 return __generator(this, function (_a) {
@@ -3903,9 +3903,9 @@ var index = /*#__PURE__*/Object.freeze({
 function init$1(options) {
   var env = options.env
   var domain = options.domain
-  var options$auth_version = options.auth_version
-  var options$pid = options.pid
-  var options$client_id = options.client_id
+  var /* [auto-meaningful-name] */options$auth_version = options.auth_version
+  var /* [auto-meaningful-name] */options$pid = options.pid
+  var /* [auto-meaningful-name] */options$client_id = options.client_id
   var requestTimeout = options.requestTimeout
   var host = options.host
   if (env) {

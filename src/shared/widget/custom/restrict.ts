@@ -1,9 +1,9 @@
-import r = require("../../../../unrestored/shared/1531/2584/233/324");
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_233_324 = require("../../../../unrestored/shared/1531/2584/233/324")
 var object = {
   window: undefined,
   document: {
     getElementById: function (e) {
-      return e ? document.querySelector("#".concat(r.a, " #").concat(e)) : null
+      return e ? document.querySelector("#".concat($$_$$_$$_$$_unrestored_shared_1531_2584_233_324.a, " #").concat(e)) : null
     }
   },
   history: undefined,

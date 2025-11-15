@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：538
@@ -6,8 +6,8 @@
 
 "use strict"
 
-import r = require("../10/index");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import /* [auto-meaningful-name] */React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -20,7 +20,7 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import a = require("../8");
+import a = require("../8")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -36,10 +36,10 @@ var s = function __importDefault(module) {
 require("./866")
 var _a
 _a = React.memo(function (e) {
-  var e$onChange = e.onChange
-  var e$checked = e.checked
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$checked = e.checked
   var a = React.useState(e$checked)
-  var c = r.a(a, 2)
+  var c = $$_10_index.a(a, 2)
   var l = c[0]
   var u = c[1]
   React.useEffect(function () {

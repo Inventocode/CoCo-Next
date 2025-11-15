@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：42
@@ -13,8 +13,8 @@ export { O as f }
 export { w as c }
 export { C as d }
 export { T as e }
-import r = require("../6");
-import React = require("react");
+import r = require("../6")
+import /* [auto-meaningful-name] */React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -27,7 +27,7 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import a = require("../8");
+import a = require("../8")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -40,50 +40,50 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(a)
-import c = require("../../../../../src/shared/widget/custom/load");
-import l = require("../15");
-import u = require("../5");
-import d = require("../10/index");
-import p = require("../16/index");
-import f = require("../../../../../src/shared/events/messages-wrapper");
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load = require("../../../../../src/shared/widget/custom/load")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
+import u = require("../5")
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import /* [auto-meaningful-name] */$$_16_index = require("../16/index")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper = require("../../../../../src/shared/events/messages-wrapper")
 require("./847")
-import h = require("../9");
-import m = require("./669/index");
-import g = require("../35");
+import h = require("../9")
+import /* [auto-meaningful-name] */$_669_index = require("./669/index")
+import /* [auto-meaningful-name] */$$_35 = require("../35")
 var _ = function (e) {
-  var e$render = e.render
-  var e$widgetId = e.widgetId
-  var e$widgetType = e.widgetType
+  var /* [auto-meaningful-name] */e$render = e.render
+  var /* [auto-meaningful-name] */e$widgetId = e.widgetId
+  var /* [auto-meaningful-name] */e$widgetType = e.widgetType
   var a = React.useState()
-  var s = d.a(a, 2)
+  var s = $$_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var _ = p.d()
-  var v = p.e(function (e) {
+  var _ = $$_16_index.d()
+  var v = $$_16_index.e(function (e) {
     return e.project.selectedWidgetId
   })
   var b = v === e$widgetId
   var y = React.useCallback(function (e, t, r, o) {
-    _(f.Lg(e$widgetId, e, t, r, o))
+    _($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, e, t, r, o))
   }, [_, e$widgetId])
-  var E = "coco-widget-wrapper"
+  var /* [auto-meaningful-name] */CocoWidgetWrapper = "coco-widget-wrapper"
   if (!(e$widgetType !== u.a && e$widgetType !== u.c)) {
-    E = ""
+    CocoWidgetWrapper = ""
   }
   var O = h.qb(e$widgetId)
   if ((null === O || undefined === O ? undefined : O.type) && [u.x, u.A].includes(O.type)) {
-    E += " coco-child-widget"
+    CocoWidgetWrapper += " coco-child-widget"
     if (e$widgetType === u.v) {
-      E += " coco-child-widget-full"
+      CocoWidgetWrapper += " coco-child-widget-full"
     }
     if (e$widgetId === v) {
-      E += " coco-child-widget-selected"
+      CocoWidgetWrapper += " coco-child-widget-selected"
     }
   }
   return i.a.createElement("div", {
-    className: E
-  }, c && i.a.createElement(m.a, c), e$render(y, function (e, t, r) {
-    if (g.r(e$widgetId)) {
+    className: CocoWidgetWrapper
+  }, c && i.a.createElement($_669_index.a, c), e$render(y, function (e, t, r) {
+    if ($$_35.r(e$widgetId)) {
       l({
         target: e,
         callback: t,
@@ -92,22 +92,22 @@ var _ = function (e) {
     }
   }, b))
 }
-import v = require("../90");
+import /* [auto-meaningful-name] */$$_90 = require("../90")
 var b = new Map()
 var y = new Map()
 var E = []
 function O(e) {
-  var e$widget = e.widget
-  var e$forceRender = e.forceRender
-  var e$zIndex = e.zIndex
+  var /* [auto-meaningful-name] */e$widget = e.widget
+  var /* [auto-meaningful-name] */e$forceRender = e.forceRender
+  var /* [auto-meaningful-name] */e$zIndex = e.zIndex
   var a = undefined === e$zIndex ? 0 : e$zIndex
   if (e$forceRender || !e$widget.parentId) {
-    var l = g.Db(e$widget.type)
+    var l = $$_35.Db(e$widget.type)
     if (!l) {
       return null
     }
-    var l$component = l.component
-    if (c.q(e$widget.type) && !l.isInvisibleWidget) {
+    var /* [auto-meaningful-name] */l$component = l.component
+    if ($$_$$_$$_$$_$$_src_shared_widget_custom_load.q(e$widget.type) && !l.isInvisibleWidget) {
       var p = new l$component(r.a(r.a({}, e$widget.attributes), {}, {
         __widgetId: e$widget.id,
         __widgetType: e$widget.type,
@@ -130,7 +130,7 @@ function O(e) {
               height: e$widget.size.height,
               opacity: l.isInvisibleWidget || undefined === e$widget.opacity ? undefined : e$widget.opacity / 100
             },
-            className: s()(v.b),
+            className: s()($$_90.b),
             "data-role": u.M
           }, i.a.createElement("div", {
             style: {
@@ -159,7 +159,7 @@ function O(e) {
   }
 }
 function w(e, t) {
-  var n = g.Cb(e)
+  var n = $$_35.Cb(e)
   return n ? O({
     widget: n,
     forceRender: true,
@@ -167,7 +167,7 @@ function w(e, t) {
   }) : null
 }
 function C(e) {
-  var t = g.Cb(e)
+  var t = $$_35.Cb(e)
   return t ? O({
     widget: t,
     forceRender: true
@@ -175,12 +175,12 @@ function C(e) {
 }
 function T(e, t, n, o) {
   var i
-  var a = g.Cb(e)
+  var a = $$_35.Cb(e)
   if (!a) {
     return null
   }
-  var s = l.q(a)
-  var c = g.Cb(s.parentId || "")
+  var s = $$_15.q(a)
+  var c = $$_35.Cb(s.parentId || "")
   if (!c) {
     console.error("getParentWidget error")
     return null
@@ -205,7 +205,7 @@ function T(e, t, n, o) {
     if (s.type === u.H) {
       s.attributes.content = f || ""
     }
-    if (s.type === u.v && f && g.Fb(f)) {
+    if (s.type === u.v && f && $$_35.Fb(f)) {
       s.attributes.fileId = f
     }
   }

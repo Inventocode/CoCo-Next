@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：429
@@ -8,14 +8,14 @@
 
 export { o as b }
 export { i as a }
-import r = require("./205");
+import /* [auto-meaningful-name] */$_205 = require("./205")
 function o(e) {
   switch (e) {
-    case r.a.CONTAIN:
+    case $_205.a.CONTAIN:
       return "contain"
-    case r.a.COVER:
+    case $_205.a.COVER:
       return "cover"
-    case r.a.STRETCH:
+    case $_205.a.STRETCH:
       return "fill"
     default:
       return "cover"
@@ -23,11 +23,11 @@ function o(e) {
 }
 function i(e) {
   switch (e) {
-    case r.a.CONTAIN:
+    case $_205.a.CONTAIN:
       return "contain"
-    case r.a.COVER:
+    case $_205.a.COVER:
       return "cover"
-    case r.a.STRETCH:
+    case $_205.a.STRETCH:
       return "100% 100%"
     default:
       return "cover"

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：321
@@ -6,8 +6,8 @@
 
 "use strict"
 
-import r = require("./10/index");
-import React = require("react");
+import /* [auto-meaningful-name] */$_10_index = require("./10/index")
+import /* [auto-meaningful-name] */React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -20,22 +20,22 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import a = require("./38/376");
-import s = require("./82");
+import /* [auto-meaningful-name] */$_38_376 = require("./38/376")
+import s = require("./82")
 var _a
 _a = React.memo(function (e) {
   var t = React.useState([])
-  var n = r.a(t, 2)
+  var n = $_10_index.a(t, 2)
   var c = n[0]
   var l = n[1]
   var u = React.useState("0 0 1024 1024")
-  var d = r.a(u, 2)
+  var d = $_10_index.a(u, 2)
   var p = d[0]
   var f = d[1]
-  var e$icon = e.icon
+  var /* [auto-meaningful-name] */e$icon = e.icon
   var m = undefined === e$icon ? s.c : e$icon
   React.useEffect(function () {
-    var e = a.a(m.id)
+    var e = $_38_376.a(m.id)
     if (e) {
       l(e.path)
       return void f(e.viewBox)
@@ -57,7 +57,7 @@ _a = React.memo(function (e) {
         })
         l(n)
         f(o)
-        a.c(m.id, n, o)
+        $_38_376.c(m.id, n, o)
       })
     }
   }, [m])

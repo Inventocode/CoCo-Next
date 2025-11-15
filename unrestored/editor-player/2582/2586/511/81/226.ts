@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：226
@@ -33,7 +33,7 @@ var i = function () {
   t.decodeFallback = function (e, r) {
     var i = this.encodingCharacterSet(r)
     if (t.isDecodeFallbackSupported(i)) {
-      for (var a = "", u = 0, e$length = e.length; u < e$length; u++) {
+      for (var a = "", u = 0, /* [auto-meaningful-name] */e$length = e.length; u < e$length; u++) {
         var c = e[u].toString(16)
         if (c.length < 2) {
           c = "0" + c

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1508
@@ -7,14 +7,14 @@
 "use strict"
 
 export { A as a }
-import r = require("../../36/483/39");
-import i = require("./316");
-import o = require("./265");
-import a = require("./364");
-import s = require("./435/index");
-import c = require("./435/986");
+import r = require("./39")
+import /* [auto-meaningful-name] */$_316 = require("./316")
+import /* [auto-meaningful-name] */$_265 = require("./265")
+import /* [auto-meaningful-name] */$_364 = require("./364")
+import /* [auto-meaningful-name] */$_435_index = require("./435/index")
+import /* [auto-meaningful-name] */$_435_986 = require("./435/986")
 function u() {
-  if (!("fetch" in a.b())) {
+  if (!("fetch" in $_364.b())) {
     return false
   }
   try {
@@ -30,7 +30,7 @@ function l(e) {
   return e && /^function fetch\(\)\s+\{\s+\[native code\]\s+\}$/.test(e.toString())
 }
 var f
-var d = a.b()
+var d = $_364.b()
 var h = {}
 var p = {}
 function _(e) {
@@ -43,7 +43,7 @@ function _(e) {
           }
           ["debug", "info", "warn", "error", "log", "assert"].forEach(function (e) {
             if (e in d.console) {
-              s.b(d.console, e, function (t) {
+              $_435_index.b(d.console, e, function (t) {
                 return function () {
                   for (var n = [], r = 0; r < arguments.length; r++) {
                     n[r] = arguments[r]
@@ -73,7 +73,7 @@ function _(e) {
           ["EventTarget", "Node"].forEach(function (t) {
             var n = d[t] && d[t].prototype
             if (n && n.hasOwnProperty && n.hasOwnProperty("addEventListener")) {
-              s.b(n, "addEventListener", function (t) {
+              $_435_index.b(n, "addEventListener", function (t) {
                 return function (n, r, i) {
                   if ("click" === n || "keypress" == n) {
                     try {
@@ -92,7 +92,7 @@ function _(e) {
                   return t.call(this, n, r, i)
                 }
               })
-              s.b(n, "removeEventListener", function (e) {
+              $_435_index.b(n, "removeEventListener", function (e) {
                 return function (t, n, r) {
                   if ("click" === t || "keypress" == t) {
                     try {
@@ -125,8 +125,8 @@ function _(e) {
           }
           var e = []
           var t = []
-          var xMLHttpRequest$prototype = XMLHttpRequest.prototype
-          s.b(xMLHttpRequest$prototype, "open", function (n) {
+          var /* [auto-meaningful-name] */XMLHttpRequest$prototype = XMLHttpRequest.prototype
+          $_435_index.b(XMLHttpRequest$prototype, "open", function (n) {
             return function () {
               for (var r = [], o = 0; o < arguments.length; o++) {
                 r[o] = arguments[o]
@@ -134,10 +134,10 @@ function _(e) {
               var a = this
               var c = r[1]
               a.__sentry_xhr__ = {
-                method: i.h(r[0]) ? r[0].toUpperCase() : r[0],
+                method: $_316.h(r[0]) ? r[0].toUpperCase() : r[0],
                 url: r[1]
               }
-              if (i.h(c) && "POST" === a.__sentry_xhr__.method && c.match(/sentry_key/)) {
+              if ($_316.h(c) && "POST" === a.__sentry_xhr__.method && c.match(/sentry_key/)) {
                 a.__sentry_own_request__ = true
               }
               var u = function () {
@@ -166,7 +166,7 @@ function _(e) {
                 }
               }
               if ("onreadystatechange" in a && "function" === typeof a.onreadystatechange) {
-                s.b(a, "onreadystatechange", function (e) {
+                $_435_index.b(a, "onreadystatechange", function (e) {
                   return function () {
                     for (var t = [], n = 0; n < arguments.length; n++) {
                       t[n] = arguments[n]
@@ -181,7 +181,7 @@ function _(e) {
               return n.apply(a, r)
             }
           })
-          s.b(xMLHttpRequest$prototype, "send", function (n) {
+          $_435_index.b(XMLHttpRequest$prototype, "send", function (n) {
             return function () {
               for (var r = [], i = 0; i < arguments.length; i++) {
                 r[i] = arguments[i]
@@ -204,12 +204,12 @@ function _(e) {
             if (!u()) {
               return false
             }
-            var e = a.b()
+            var e = $_364.b()
             if (l(e.fetch)) {
               return true
             }
             var t = false
-            var e$document = e.document
+            var /* [auto-meaningful-name] */e$document = e.document
             if (e$document && "function" === typeof e$document.createElement) {
               try {
                 var r = e$document.createElement("iframe")
@@ -220,14 +220,14 @@ function _(e) {
                 }
                 e$document.head.removeChild(r)
               } catch (i) {
-                o.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", i)
+                $_265.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", i)
               }
             }
             return t
           }()) {
             return
           }
-          s.b(d, "fetch", function (e) {
+          $_435_index.b(d, "fetch", function (e) {
             return function () {
               for (var t = [], n = 0; n < arguments.length; n++) {
                 t[n] = arguments[n]
@@ -261,15 +261,15 @@ function _(e) {
       case "history":
         !function () {
           if (!function () {
-            var e = a.b()
-            var e$chrome = e.chrome
+            var e = $_364.b()
+            var /* [auto-meaningful-name] */e$chrome = e.chrome
             var n = e$chrome && e$chrome.app && e$chrome.app.runtime
             var r = "history" in e && !!e.history.pushState && !!e.history.replaceState
             return !n && r
           }()) {
             return
           }
-          var d$onpopstate = d.onpopstate
+          var /* [auto-meaningful-name] */d$onpopstate = d.onpopstate
           function t(e) {
             return function () {
               for (var t = [], n = 0; n < arguments.length; n++) {
@@ -292,7 +292,7 @@ function _(e) {
             for (var t = [], n = 0; n < arguments.length; n++) {
               t[n] = arguments[n]
             }
-            var d$location$href = d.location.href
+            var /* [auto-meaningful-name] */d$location$href = d.location.href
             var i = f
             f = d$location$href
             g("history", {
@@ -305,8 +305,8 @@ function _(e) {
               } catch (o) {}
             }
           }
-          s.b(d.history, "pushState", t)
-          s.b(d.history, "replaceState", t)
+          $_435_index.b(d.history, "pushState", t)
+          $_435_index.b(d.history, "replaceState", t)
         }()
         break
       case "error":
@@ -330,7 +330,7 @@ function _(e) {
         }
         break
       default:
-        o.a.warn("unknown instrumentation type:", e)
+        $_265.a.warn("unknown instrumentation type:", e)
     }
   }
 }
@@ -347,11 +347,11 @@ function g(e, t) {
   if (e && h[e]) {
     try {
       for (var a = r.g(h[e] || []), s = a.next(); !s.done; s = a.next()) {
-        var s$value = s.value
+        var /* [auto-meaningful-name] */s$value = s.value
         try {
           s$value(t)
         } catch (l) {
-          o.a.error("Error while triggering instrumentation handler.\nType: " + e + "\nName: " + c.a(s$value) + "\nError: " + l)
+          $_265.a.error("Error while triggering instrumentation handler.\nType: " + e + "\nName: " + $_435_986.a(s$value) + "\nError: " + l)
         }
       }
     } catch (f) {
@@ -375,13 +375,13 @@ function v(e) {
   if (undefined === e) {
     e = []
   }
-  return "Request" in d && i.d(e[0], Request) && e[0].method ? String(e[0].method).toUpperCase() : e[1] && e[1].method ? String(e[1].method).toUpperCase() : "GET"
+  return "Request" in d && $_316.d(e[0], Request) && e[0].method ? String(e[0].method).toUpperCase() : e[1] && e[1].method ? String(e[1].method).toUpperCase() : "GET"
 }
 function m(e) {
   if (undefined === e) {
     e = []
   }
-  return "string" === typeof e[0] ? e[0] : "Request" in d && i.d(e[0], Request) ? e[0].url : String(e[0])
+  return "string" === typeof e[0] ? e[0] : "Request" in d && $_316.d(e[0], Request) ? e[0].url : String(e[0])
 }
 var y
 var b
@@ -395,7 +395,7 @@ function w(e, t) {
         return false
       }
       try {
-        var e$target = e.target
+        var /* [auto-meaningful-name] */e$target = e.target
         if (!e$target || !e$target.tagName) {
           return true
         }

@@ -1,6 +1,6 @@
 import path from "path"
 import { promises as fs } from "fs"
-import { unpack, SetPath } from "./unpack"
+import { unpack, SetPath } from "./core"
 
 async function main(): Promise<void> {
 
@@ -29,7 +29,10 @@ async function main(): Promise<void> {
         },
         setPath: SetPath.BY_DEPENDENCY,
         publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
-        move: SharedModulesPath
+        move: SharedModulesPath,
+        nodePolyfill: {
+            251: "global"
+        }
     })
 }
 

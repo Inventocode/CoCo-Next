@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：886
@@ -22,9 +22,9 @@ var l = require("./126")
     return this.encodeWithHints(t, e, r, n, null)
   }
   t.prototype.encodeWithHints = function (e, r, n, a, f) {
-    var s$a$ISO_8859_1 = s.a.ISO_8859_1
-    var i$a$DEFAULT_EC_PERCENT = i.a.DEFAULT_EC_PERCENT
-    var i$a$DEFAULT_AZTEC_LAYERS = i.a.DEFAULT_AZTEC_LAYERS
+    var /* [auto-meaningful-name] */s$a$ISO_8859_1 = s.a.ISO_8859_1
+    var /* [auto-meaningful-name] */i$a$DEFAULT_EC_PERCENT = i.a.DEFAULT_EC_PERCENT
+    var /* [auto-meaningful-name] */i$a$DEFAULT_AZTEC_LAYERS = i.a.DEFAULT_AZTEC_LAYERS
     if (null != f) {
       if (f.has(o.a.CHARACTER_SET)) {
         s$a$ISO_8859_1 = u.a.forName(f.get(o.a.CHARACTER_SET).toString())

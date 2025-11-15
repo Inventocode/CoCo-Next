@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1115
@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("./2219")
-var i = require("./1116")
+var i = require("../757/1116")
 var o = require("../757/index")
 var a = require("../1335")
 var s = require("./2221")
@@ -81,8 +81,8 @@ function u(e, t) {
 function l(e, t, n) {
   var r = u.call(this, e, t)
   if (r) {
-    var r$schema = r.schema
-    var r$baseId = r.baseId
+    var /* [auto-meaningful-name] */r$schema = r.schema
+    var /* [auto-meaningful-name] */r$baseId = r.baseId
     e = r.root
     var a = this._getId(r$schema)
     if (a) {

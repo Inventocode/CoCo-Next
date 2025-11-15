@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1002
@@ -7,10 +7,10 @@
 "use strict"
 
 export { s as a }
-import r = require("./215/index");
-import i = require("./34/index");
-import o = require("./65");
-import a = require("./122");
+import /* [auto-meaningful-name] */$_215_index = require("./215/index")
+import /* [auto-meaningful-name] */$_34_index = require("./34/index")
+import o = require("./65")
+import /* [auto-meaningful-name] */$_122 = require("./122")
 var s = function () {
   function e(e, t) {
     var n = this
@@ -25,11 +25,11 @@ var s = function () {
     this.update_twist_offset = function () {
       var e = n.effect_filter_list[4]
       if (n.is_twist_filter(e) && e.enabled) {
-        var n$app$get_app$view = n.app.get_app().view
-        var n$app$get_app$view$width = n$app$get_app$view.width
-        var n$app$get_app$view$height = n$app$get_app$view.height
+        var /* [auto-meaningful-name] */n$app$get_app$view = n.app.get_app().view
+        var /* [auto-meaningful-name] */n$app$get_app$view$width = n$app$get_app$view.width
+        var /* [auto-meaningful-name] */n$app$get_app$view$height = n$app$get_app$view.height
         var a = n.get_target_position()
-        e.offset = new i.o(a.x + n$app$get_app$view$width / 2, -a.y + n$app$get_app$view$height / 2)
+        e.offset = new $_34_index.o(a.x + n$app$get_app$view$width / 2, -a.y + n$app$get_app$view$height / 2)
       }
     }
     this.update_displacement_position = function () {
@@ -76,25 +76,25 @@ var s = function () {
         case 0:
         case 1:
         case 5:
-          n = new i.e()
+          n = new $_34_index.e()
           break
         case 2:
-          n = new i.n()
+          n = new $_34_index.n()
           break
         case 3:
           if (!this.displacement_sprite) {
             throw new Error("Displacement sprite should be init first.")
           }
-          n = new i.g(this.displacement_sprite)
+          n = new $_34_index.g(this.displacement_sprite)
           this.app.get_app().ticker.add(this.update_displacement_position)
           break
         case 4:
-          n = new i.A()
+          n = new $_34_index.A()
           o.m(this.target)
           this.target.add_listener("change", r)
           break
         case 6:
-          n = new i.c()
+          n = new $_34_index.c()
       }
       this.effect_filter_list[e] = n
       this.update_target_filter()
@@ -108,19 +108,19 @@ var s = function () {
     })
   }
   e.prototype.is_color_matrix_filter = function (e) {
-    return e instanceof i.e
+    return e instanceof $_34_index.e
   }
   e.prototype.is_pixelate_filter = function (e) {
-    return e instanceof i.n
+    return e instanceof $_34_index.n
   }
   e.prototype.is_displacement_filter = function (e) {
-    return e instanceof i.g
+    return e instanceof $_34_index.g
   }
   e.prototype.is_twist_filter = function (e) {
-    return e instanceof i.A
+    return e instanceof $_34_index.A
   }
   e.prototype.is_ascii_filter = function (e) {
-    return e instanceof i.c
+    return e instanceof $_34_index.c
   }
   e.prototype.update_displacement_sprite = function (e) {
     if (!e || this.displacement_img !== e || !this.displacement_sprite) {
@@ -128,11 +128,11 @@ var s = function () {
         this.displacement_sprite.destroy()
       }
       this.displacement_img = e
-      this.displacement_sprite = i.t.from(e)
+      this.displacement_sprite = $_34_index.t.from(e)
       this.displacement_sprite.anchor.set(.5, .5)
-      var this$app$get_app$view = this.app.get_app().view
-      var this$app$get_app$view$width = this$app$get_app$view.width
-      var this$app$get_app$view$height = this$app$get_app$view.height
+      var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+      var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+      var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
       this.displacement_sprite.width = 2 * this$app$get_app$view$width
       this.displacement_sprite.height = 2 * this$app$get_app$view$height
       this.target_sprite.parent.addChild(this.displacement_sprite)
@@ -152,7 +152,7 @@ var s = function () {
     var t = this.get_effect_filter(1)
     if (this.is_color_matrix_filter(t)) {
       this.brightness = e
-      var n = r.a(-1, 1, e / 100 - 1)
+      var n = $_215_index.a(-1, 1, e / 100 - 1)
       t.matrix = [1, 0, 0, 0, n, 0, 1, 0, 0, n, 0, 0, 1, 0, n, 0, 0, 0, 1, 0]
     }
   }
@@ -162,7 +162,7 @@ var s = function () {
   e.prototype.set_saturate = function (e) {
     var t = this.get_effect_filter(5)
     if (this.is_color_matrix_filter(t)) {
-      this.saturation = r.a(-100, 100, e)
+      this.saturation = $_215_index.a(-100, 100, e)
       t.saturate(this.saturation / 100, false)
     }
   }
@@ -173,7 +173,7 @@ var s = function () {
     var t = this.get_effect_filter(2)
     if (this.is_pixelate_filter(t)) {
       var n = Math.min(this.target_sprite.width, this.target_sprite.height)
-      this.pixelate_size = r.a(1, n, e)
+      this.pixelate_size = $_215_index.a(1, n, e)
       t.size = this.pixelate_size
     }
   }
@@ -187,9 +187,9 @@ var s = function () {
       if (!this.is_displacement_filter(n)) {
         return
       }
-      return void (this.displacement_speed = r.a(0, 100, e))
+      return void (this.displacement_speed = $_215_index.a(0, 100, e))
     } catch (i) {
-      return new a.a("Init displacement filter failed.")
+      return new $_122.a("Init displacement filter failed.")
     }
   }
   e.prototype.get_displacement = function () {
@@ -198,7 +198,7 @@ var s = function () {
   e.prototype.set_twist = function (e) {
     var t = this.get_effect_filter(4)
     if (this.is_twist_filter(t)) {
-      this.twist_angle = r.a(0, 100, e)
+      this.twist_angle = $_215_index.a(0, 100, e)
       t.angle = o.b(10 * this.twist_angle)
       t.radius = Math.sqrt(Math.pow(this.target_sprite.width / 2, 2) + Math.pow(this.target_sprite.height / 2, 2))
       this.update_twist_offset()
@@ -211,7 +211,7 @@ var s = function () {
     var t = this.get_effect_filter(6)
     if (this.is_ascii_filter(t)) {
       var n = Math.min(this.target_sprite.width, this.target_sprite.height)
-      this.ascii_size = r.a(1, n, e)
+      this.ascii_size = $_215_index.a(1, n, e)
       t.size = this.ascii_size
     }
   }
@@ -265,7 +265,7 @@ var s = function () {
   e.prototype.clone_to = function (e) {
     var t = this
     var n = e.get_effects()
-    var n$value = n.value
+    var /* [auto-meaningful-name] */n$value = n.value
     if (!n.is_error(n$value)) {
       this.effect_filter_list.forEach(function (e, n) {
         if (e && e.enabled) {

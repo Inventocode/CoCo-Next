@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1138
@@ -8,7 +8,7 @@ module.exports = function (e, t) {
   var n = 0
   var r = {}
   e.addEventListener("message", function (t) {
-    var t$data = t.data
+    var /* [auto-meaningful-name] */t$data = t.data
     if ("RPC" === t$data.type) {
       if (t$data.id) {
         var i = r[t$data.id]

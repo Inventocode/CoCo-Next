@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1369
@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 var r = require("./359")
-var i = require("./1366/498")
+var i = require("./2342/498")
 exports.traverseAncerstors = function e(t, n) {
-  var t$parentRequest = t.parentRequest
+  var /* [auto-meaningful-name] */t$parentRequest = t.parentRequest
   return null !== t$parentRequest && (!!n(t$parentRequest) || e(t$parentRequest, n))
 }
 var o = function (e) {
@@ -35,7 +35,7 @@ exports.typeConstraint = function (e) {
       if ("string" === typeof e) {
         return n.serviceIdentifier === e
       }
-      var t$bindings0$implementationType = t.bindings[0].implementationType
+      var /* [auto-meaningful-name] */t$bindings0$implementationType = t.bindings[0].implementationType
       return e === t$bindings0$implementationType
     }
     return false

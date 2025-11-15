@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2553
@@ -14,7 +14,7 @@ var r = require("tslib")
 var o = require("../../1001/577")
 var i = require("../../301/480")
 var a = (0, r.__importStar)(require("../../17/533"))
-var s = require("../../4/127")
+var s = require("../../1036/127")
 var c = require("../2555/579")
 var l = require("./1425")
 function u(e, t) {
@@ -88,7 +88,7 @@ exports.init_color_blocks = function (e) {
         width: 20,
         opt_callback: function (s) {
           !function (s, c) {
-            var s$source_block = s.source_block
+            var /* [auto-meaningful-name] */s$source_block = s.source_block
             if (!s$source_block) {
               return
             }
@@ -154,7 +154,7 @@ exports.init_color_blocks = function (e) {
             e.widget_div.show(s, function () {
               s.focus(false)
             })
-            var e$widget_div$DIV = e.widget_div.DIV
+            var /* [auto-meaningful-name] */e$widget_div$DIV = e.widget_div.DIV
             if (!(null === e$widget_div$DIV || undefined === e$widget_div$DIV)) {
               e$widget_div$DIV.appendChild(d)
             }
@@ -176,7 +176,7 @@ exports.init_color_blocks = function (e) {
     addMutation: function (t, n) {
       if (undefined !== t && "string" !== typeof t) {
         this.updateShape_(t)
-        var e$di_container = e.di_container
+        var /* [auto-meaningful-name] */e$di_container = e.di_container
         var o = e$di_container.get(s.BINDING.events)
         if (o.is_enabled()) {
           var i = e$di_container.get(s.BINDING.ChangeEvent)("mutation", {
@@ -192,7 +192,7 @@ exports.init_color_blocks = function (e) {
     removeMutation: function (t, n) {
       if (undefined !== n) {
         this.updateShape_(parseInt(n))
-        var e$di_container = e.di_container
+        var /* [auto-meaningful-name] */e$di_container = e.di_container
         var o = e$di_container.get(s.BINDING.events)
         if (o.is_enabled()) {
           var i = e$di_container.get(s.BINDING.ChangeEvent)("mutation", {
@@ -243,10 +243,10 @@ exports.init_color_blocks = function (e) {
               b = _[1],
               y = _[2],
               E = _[3]
-            this.append_shadow_input("H", m(v, d, h), 0).set_check("Number").append_field("H")
-            this.append_shadow_input("S", (0, c.number_shadow)(b, f), 1).set_check("Number").append_field("S")
-            this.append_shadow_input("V", (0, c.number_shadow)(y, f), 2).set_check("Number").append_field("V")
-            this.append_shadow_input("A", (0, c.number_shadow)(E, f), 3).set_check("Number").append_field("A");
+            this.append_shadow_input("H", m(v, _03601False, h), 0).set_check("Number").append_field("H")
+            this.append_shadow_input("S", (0, c.number_shadow)(b, _01001), 1).set_check("Number").append_field("S")
+            this.append_shadow_input("V", (0, c.number_shadow)(y, _01001), 2).set_check("Number").append_field("V")
+            this.append_shadow_input("A", (0, c.number_shadow)(E, _01001), 3).set_check("Number").append_field("A");
             ["H", "S", "V", "A"].forEach(function (e) {
               u.get_shadow_field(e).set_controller_option({
                 type: a.ControllerType.COLOR_PICKER,
@@ -262,10 +262,10 @@ exports.init_color_blocks = function (e) {
               C = O[1],
               T = O[2]
             E = O[3]
-            this.append_shadow_input("R", (0, c.number_shadow)(w, p), 0).set_check("Number").append_field("R")
-            this.append_shadow_input("G", (0, c.number_shadow)(C, p), 1).set_check("Number").append_field("G")
-            this.append_shadow_input("B", (0, c.number_shadow)(T, p), 2).set_check("Number").append_field("B")
-            this.append_shadow_input("A", (0, c.number_shadow)(E, f), 3).set_check("Number").append_field("A");
+            this.append_shadow_input("R", (0, c.number_shadow)(w, _02551), 0).set_check("Number").append_field("R")
+            this.append_shadow_input("G", (0, c.number_shadow)(C, _02551), 1).set_check("Number").append_field("G")
+            this.append_shadow_input("B", (0, c.number_shadow)(T, _02551), 2).set_check("Number").append_field("B")
+            this.append_shadow_input("A", (0, c.number_shadow)(E, _01001), 3).set_check("Number").append_field("A");
             ["R", "G", "B", "A"].forEach(function (e) {
               u.get_shadow_field(e).set_controller_option({
                 type: a.ControllerType.COLOR_PICKER,
@@ -300,9 +300,9 @@ exports.init_color_blocks = function (e) {
     color_picker: "<block type=\"color_picker\">\n      <mutation format=\"1\" color=\"#E8308C\"></mutation>\n      <field name=\"COLOR_PALETTE\">#E8308C</field>\n    </block>"
   })
 }
-var d = "0,360,1,false"
-var p = "0,255,1,"
-var f = "0,100,1,"
+var /* [auto-meaningful-name] */_03601False = "0,360,1,false"
+var /* [auto-meaningful-name] */_02551 = "0,255,1,"
+var /* [auto-meaningful-name] */_01001 = "0,100,1,"
 var h = "360"
 var m = function (e, t, n) {
   return "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"" + t + "\" exceptions=\"" + n + "\">" + e + "</field></shadow>"

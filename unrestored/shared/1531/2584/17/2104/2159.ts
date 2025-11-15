@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2159
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.WorkspaceDragSurfaceSvg = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = require("../../125/index")
 var s = require("../../125/534")
 var c = function () {

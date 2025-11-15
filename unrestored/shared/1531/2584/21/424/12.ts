@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：12
@@ -18,17 +18,17 @@ export { m as j }
 export { g as k }
 export { _ as l }
 export { v as i }
-import r = require("../../6");
-import o = require("../../48/index");
-import i = require("../../48/72");
-import a = require("../../14");
+import /* [auto-meaningful-name] */$$_$$_6 = require("../../6")
+import /* [auto-meaningful-name] */$$_$$_48_index = require("../../48/index")
+import /* [auto-meaningful-name] */$$_$$_48_72 = require("../../48/72")
+import /* [auto-meaningful-name] */$$_$$_14 = require("../../14")
 function s(e) {
-  return o.a().getState().widgetMap.get(e)
+  return $$_$$_48_index.a().getState().widgetMap.get(e)
 }
 function c(e) {
-  var t = o.a().getState().widgetMap.get(e)
+  var t = $$_$$_48_index.a().getState().widgetMap.get(e)
   if (t && t.parentId) {
-    return o.a().getState().widgetMap.get(t.parentId)
+    return $$_$$_48_index.a().getState().widgetMap.get(t.parentId)
   }
 }
 function l(e) {
@@ -54,17 +54,17 @@ function f(e) {
 function h(e, t) {
   var n = s(e)
   if (n) {
-    var a = r.a(r.a({}, n), {}, {
-      attributes: r.a(r.a({}, n.attributes), t)
+    var a = $$_$$_6.a($$_$$_6.a({}, n), {}, {
+      attributes: $$_$$_6.a($$_$$_6.a({}, n.attributes), t)
     })
-    o.a().dispatch(i.v(e, a))
+    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, a))
   }
 }
 function m(e, t) {
   var n = s(e)
   if (n) {
     if (undefined !== t.x) {
-      if (!a.a.isNumber(t.x, {
+      if (!$$_$$_14.a.isNumber(t.x, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -77,7 +77,7 @@ function m(e, t) {
       t.x = Math.round(t.x)
     }
     if (undefined !== t.y) {
-      if (!a.a.isNumber(t.y, {
+      if (!$$_$$_14.a.isNumber(t.y, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -89,8 +89,8 @@ function m(e, t) {
       }
       t.y = Math.round(t.y)
     }
-    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
-      position: r.a(r.a({}, n.position), t)
+    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
+      position: $$_$$_6.a($$_$$_6.a({}, n.position), t)
     })))
   } else {
     console.error("updateWidgetPosition error, widget is undefined")
@@ -99,9 +99,9 @@ function m(e, t) {
 function g(e, t) {
   var n = s(e)
   if (n) {
-    var c = r.a({}, n.attributes)
+    var c = $$_$$_6.a({}, n.attributes)
     if (undefined !== t.height) {
-      if (!a.a.isNumber(t.height, {
+      if (!$$_$$_14.a.isNumber(t.height, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -113,7 +113,7 @@ function g(e, t) {
       }
       t.height = Math.round(t.height)
       if (t.height < 0) {
-        return void a.a.log({
+        return void $$_$$_14.a.log({
           type: "warning",
           widgetId: e,
           messageId: "valueOutOfRange"
@@ -121,7 +121,7 @@ function g(e, t) {
       }
     }
     if (undefined !== t.width) {
-      if (!a.a.isNumber(t.width, {
+      if (!$$_$$_14.a.isNumber(t.width, {
         type: "error",
         widgetId: e,
         messageId: "argNotNumber",
@@ -133,16 +133,16 @@ function g(e, t) {
       }
       t.width = Math.round(t.width)
       if (t.width < 0) {
-        return void a.a.log({
+        return void $$_$$_14.a.log({
           type: "warning",
           widgetId: e,
           messageId: "valueOutOfRange"
         })
       }
     }
-    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
-      attributes: r.a({}, c),
-      size: r.a(r.a({}, n.size), t)
+    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
+      attributes: $$_$$_6.a({}, c),
+      size: $$_$$_6.a($$_$$_6.a({}, n.size), t)
     })))
   } else {
     console.error("updateWidgetSize error, widget is undefined")
@@ -151,7 +151,7 @@ function g(e, t) {
 function _(e, t) {
   var n = s(e)
   if (n) {
-    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
+    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
       visible: t
     })))
   }
@@ -159,7 +159,7 @@ function _(e, t) {
 function v(e, t) {
   var n = s(e)
   if (n) {
-    o.a().dispatch(i.v(e, r.a(r.a({}, n), {}, {
+    $$_$$_48_index.a().dispatch($$_$$_48_72.v(e, $$_$$_6.a($$_$$_6.a({}, n), {}, {
       opacity: t
     })))
   }

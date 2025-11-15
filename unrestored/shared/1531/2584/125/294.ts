@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：294
@@ -32,8 +32,8 @@ exports.contains = function (e, t) {
   return e.left < t[0] && e.right > t[0] && e.top < t[1] && e.bottom > t[1]
 }
 exports.gen_uid = function () {
-  for (var e = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", e$length = e.length, n = [], r = 0; r < 20; r++) {
-    n[r] = e.charAt(Math.random() * e$length)
+  for (var /* [auto-meaningful-name] */ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789", /* [auto-meaningful-name] */ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$length = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.length, n = [], r = 0; r < 20; r++) {
+    n[r] = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.charAt(Math.random() * ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789$length)
   }
   return n.join("")
 }

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1646
@@ -9,53 +9,53 @@
 var r
 var o
 var i
-var /* [auto-meaningful-name] */u$then
-var s = require("../1623/86")
+var /* [auto-meaningful-name] */U$then
+var s = require("../1698/86/index")
 var c = require("../1684/530")
-var l = require("../1736/194")
-var u = require("../1664/472")
-var d = require("../1652/1236")
-var p = require("../1745/398/index")
-var f = require("../1738/752")
-var h = require("../1666/634")
-var m = require("../1745/531")
-var g = require("../1667/751")
-var _ = require("../1738/231")
-var v = require("../1623/439")
-var b = require("../1745/635")
+var l = require("../1541/194")
+var u = require("../1541/472")
+var d = require("./1236")
+var p = require("../1541/398")
+var f = require("./752")
+var h = require("../1640/634")
+var m = require("../1541/531")
+var g = require("../1577/751")
+var _ = require("../1541/231")
+var v = require("../1564/439")
+var b = require("./635")
 var y = require("./1058")
-var E = require("./827/index")
+var E = require("../1626/827/index")
 var O = require("../1565/935")
-var w = require("../1683/943")
-var require$$17431072Index$set = require("../1743/1072/index").set
-var T = require("../1744/1238/index")
-var S = require("../1652/1239")
+var w = require("./943")
+var /* [auto-meaningful-name] */require$_1072$set = require("./1072").set
+var T = require("./1238/index")
+var S = require("./1239")
 var I = require("./1649")
 var A = require("./1240")
 var j = require("./1650")
-var N = require("../1745/423/index")
-var R = require("../1667/818")
-var k = require("../1742/247/index")
+var N = require("../1541/423/index")
+var R = require("../1608/818")
+var k = require("../1541/247/index")
 var x = require("./1651")
-var D = require("../1744/750")
-var M = require("../1734/629/index")
+var D = require("../1573/750")
+var M = require("../1557/629/index")
 var L = k("species")
-var P = "Promise"
-var n$get = N.get
-var n$set = N.set
-var G = N.getterFor(P)
+var /* [auto-meaningful-name] */Promise = "Promise"
+var /* [auto-meaningful-name] */N$get = N.get
+var /* [auto-meaningful-name] */N$set = N.set
+var G = N.getterFor(Promise)
 var U = d && d.prototype
 var W = d
 var H = U
-var l$TypeError = l.TypeError
-var l$document = l.document
-var l$process = l.process
+var /* [auto-meaningful-name] */l$TypeError = l.TypeError
+var /* [auto-meaningful-name] */l$document = l.document
+var /* [auto-meaningful-name] */l$process = l.process
 var K = A.f
 var q = K
 var X = !!(l$document && l$document.createEvent && l.dispatchEvent)
 var Q = "function" == typeof PromiseRejectionEvent
 var Z = false
-var J = R(P, function () {
+var J = R(Promise, function () {
   var e = y(W)
   var t = e !== String(W)
   if (!t && 66 === M) {
@@ -86,17 +86,17 @@ var ee = function (e) {
 var te = function (e, t) {
   if (!e.notified) {
     e.notified = true
-    var e$reactions = e.reactions
+    var /* [auto-meaningful-name] */e$reactions = e.reactions
     T(function () {
-      for (var e$value = e.value, o = 1 == e.state, i = 0; e$reactions.length > i;) {
+      for (var /* [auto-meaningful-name] */e$value = e.value, o = 1 == e.state, i = 0; e$reactions.length > i;) {
         var a
         var s
         var c
         var l = e$reactions[i++]
         var u = o ? l.ok : l.fail
-        var l$resolve = l.resolve
-        var l$reject = l.reject
-        var l$domain = l.domain
+        var /* [auto-meaningful-name] */l$resolve = l.resolve
+        var /* [auto-meaningful-name] */l$reject = l.reject
+        var /* [auto-meaningful-name] */l$domain = l.domain
         try {
           if (u) {
             if (!o) {
@@ -167,10 +167,10 @@ var ne = function (e, t, n) {
   }
 }
 var re = function (e) {
-  require$$17431072Index$set.call(l, function () {
+  require$_1072$set.call(l, function () {
     var t
-    var e$facade = e.facade
-    var e$value = e.value
+    var /* [auto-meaningful-name] */e$facade = e.facade
+    var /* [auto-meaningful-name] */e$value = e.value
     if (oe(e) && (t = j(function () {
       if (D) {
         l$process.emit("unhandledRejection", e$value, e$facade)
@@ -186,8 +186,8 @@ var oe = function (e) {
   return 1 !== e.rejection && !e.parent
 }
 var ie = function (e) {
-  require$$17431072Index$set.call(l, function () {
-    var e$facade = e.facade
+  require$_1072$set.call(l, function () {
+    var /* [auto-meaningful-name] */e$facade = e.facade
     if (D) {
       l$process.emit("rejectionHandled", e$facade)
     } else {
@@ -246,18 +246,18 @@ var ce = function e(t, n, r) {
   }
 }
 if (J && (H = (W = function (e) {
-  b(this, W, P)
+  b(this, W, Promise)
   v(e)
   r.call(this)
-  var t = n$get(this)
+  var t = N$get(this)
   try {
     e(ae(ce, t), ae(se, t))
   } catch (n) {
     se(t, n)
   }
 }).prototype, (r = function (e) {
-  n$set(this, {
-    type: P,
+  N$set(this, {
+    type: Promise,
     done: false,
     notified: false,
     parent: false,
@@ -285,19 +285,19 @@ if (J && (H = (W = function (e) {
   }
 }), o = function () {
   var e = new r()
-  var t = n$get(e)
+  var t = N$get(e)
   this.promise = e
   this.resolve = ae(ce, t)
   this.reject = ae(se, t)
 }, A.f = K = function (e) {
   return e === W || e === i ? new o(e) : q(e)
 }, !c && "function" == typeof d && U !== Object.prototype)) {
-  u$then = U.then
+  U$then = U.then
   if (!Z) {
     p(U, "then", function (e, t) {
       var n = this
       return new W(function (e, t) {
-        u$then.call(n, e, t)
+        U$then.call(n, e, t)
       }).then(e, t)
     }, {
       unsafe: true
@@ -320,11 +320,11 @@ s({
 }, {
   Promise: W
 })
-m(W, P, false, true)
-g(P)
-i = u(P)
+m(W, Promise, false, true)
+g(Promise)
+i = u(Promise)
 s({
-  target: P,
+  target: Promise,
   stat: true,
   forced: J
 }, {
@@ -335,7 +335,7 @@ s({
   }
 })
 s({
-  target: P,
+  target: Promise,
   stat: true,
   forced: c || J
 }, {
@@ -344,15 +344,15 @@ s({
   }
 })
 s({
-  target: P,
+  target: Promise,
   stat: true,
   forced: $
 }, {
   all: function (e) {
     var t = this
     var n = K(t)
-    var n$resolve = n.resolve
-    var n$reject = n.reject
+    var /* [auto-meaningful-name] */n$resolve = n.resolve
+    var /* [auto-meaningful-name] */n$reject = n.reject
     var i = j(function () {
       var n = v(t.resolve)
       var i = []
@@ -385,7 +385,7 @@ s({
   race: function (e) {
     var t = this
     var n = K(t)
-    var n$reject = n.reject
+    var /* [auto-meaningful-name] */n$reject = n.reject
     var o = j(function () {
       var o = v(t.resolve)
       E(e, function (e) {

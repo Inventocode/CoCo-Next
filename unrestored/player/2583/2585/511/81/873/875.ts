@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：875
@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("./260")
-var i = require("../349")
+var i = require("../349/index")
 var o = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1440
@@ -9,13 +9,13 @@
 export { a as b }
 export { s as a }
 var r
-import i = require("./253");
-import o = require("../796");
+import /* [auto-meaningful-name] */$_253 = require("./253")
+import /* [auto-meaningful-name] */$$_796 = require("../796")
 function a(e) {
   return "function" === typeof e
 }
 function s(e, t, n, r, c, u, l) {
-  if (1 === e.length && i.e(e[0])) {
+  if (1 === e.length && $_253.e(e[0])) {
     return [{
       type: 0,
       value: e[0].value
@@ -23,12 +23,12 @@ function s(e, t, n, r, c, u, l) {
   }
   for (var f = [], d = 0, h = e; d < h.length; d++) {
     var p = h[d]
-    if (i.e(p)) {
+    if ($_253.e(p)) {
       f.push({
         type: 0,
         value: p.value
       })
-    } else if (i.i(p)) {
+    } else if ($_253.i(p)) {
       if ("number" === typeof u) {
         f.push({
           type: 0,
@@ -36,12 +36,12 @@ function s(e, t, n, r, c, u, l) {
         })
       }
     } else {
-      var _p$value = p.value
-      if (!c || !(_p$value in c)) {
-        throw new o.d(_p$value, l)
+      var /* [auto-meaningful-name] */p$value = p.value
+      if (!c || !(p$value in c)) {
+        throw new $$_796.d(p$value, l)
       }
-      var A = c[_p$value]
-      if (i.b(p)) {
+      var A = c[p$value]
+      if ($_253.b(p)) {
         if (!(A && "string" !== typeof A && "number" !== typeof A)) {
           A = "string" === typeof A || "number" === typeof A ? String(A) : ""
         }
@@ -49,31 +49,31 @@ function s(e, t, n, r, c, u, l) {
           type: "string" === typeof A ? 0 : 1,
           value: A
         })
-      } else if (i.c(p)) {
-        var g = "string" === typeof p.style ? r.date[p.style] : i.d(p.style) ? p.style.parsedOptions : undefined
+      } else if ($_253.c(p)) {
+        var g = "string" === typeof p.style ? r.date[p.style] : $_253.d(p.style) ? p.style.parsedOptions : undefined
         f.push({
           type: 0,
           value: n.getDateTimeFormat(t, g).format(A)
         })
-      } else if (i.l(p)) {
-        g = "string" === typeof p.style ? r.time[p.style] : i.d(p.style) ? p.style.parsedOptions : undefined
+      } else if ($_253.l(p)) {
+        g = "string" === typeof p.style ? r.time[p.style] : $_253.d(p.style) ? p.style.parsedOptions : undefined
         f.push({
           type: 0,
           value: n.getDateTimeFormat(t, g).format(A)
         })
-      } else if (i.f(p)) {
-        g = "string" === typeof p.style ? r.number[p.style] : i.g(p.style) ? p.style.parsedOptions : undefined
+      } else if ($_253.f(p)) {
+        g = "string" === typeof p.style ? r.number[p.style] : $_253.g(p.style) ? p.style.parsedOptions : undefined
         f.push({
           type: 0,
           value: n.getNumberFormat(t, g).format(A)
         })
       } else {
-        if (i.k(p)) {
-          var p$children = p.children
-          var p$value = p.value
-          var y = c[p$value]
+        if ($_253.k(p)) {
+          var /* [auto-meaningful-name] */p$children = p.children
+          var /* [auto-meaningful-name] */_p$value = p.value
+          var y = c[_p$value]
           if (!a(y)) {
-            throw new o.c(p$value, "function", l)
+            throw new $$_796.c(_p$value, "function", l)
           }
           var b = y(s(p$children, t, n, r, c, u).map(function (e) {
             return e.value
@@ -88,16 +88,16 @@ function s(e, t, n, r, c, u, l) {
             }
           }))
         }
-        if (i.j(p)) {
+        if ($_253.j(p)) {
           if (!(w = p.options[A] || p.options.other)) {
-            throw new o.b(p.value, A, Object.keys(p.options), l)
+            throw new $$_796.b(p.value, A, Object.keys(p.options), l)
           }
           f.push.apply(f, s(w.value, t, n, r, c))
-        } else if (i.h(p)) {
+        } else if ($_253.h(p)) {
           var w
           if (!(w = p.options["=" + A])) {
             if (!Intl.PluralRules) {
-              throw new o.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API", l)
+              throw new $$_796.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API", l)
             }
             var E = n.getPluralRules(t, {
               type: p.pluralType
@@ -105,7 +105,7 @@ function s(e, t, n, r, c, u, l) {
             w = p.options[E] || p.options.other
           }
           if (!w) {
-            throw new o.b(p.value, A, Object.keys(p.options), l)
+            throw new $$_796.b(p.value, A, Object.keys(p.options), l)
           }
           f.push.apply(f, s(w.value, t, n, r, c, A - (p.offset || 0)))
         } else {

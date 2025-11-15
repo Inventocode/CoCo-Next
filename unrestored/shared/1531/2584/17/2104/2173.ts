@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2173
@@ -14,7 +14,7 @@ var r = require("tslib")
 var i = require("inversify")
 var o = (0, r.__importDefault)(require("animejs"))
 var a = require("@kitten-team/gl-matrix")
-var s = require("../../4/127")
+var s = require("../../1036/127")
 var c = require("../../125/195/index")
 var u = require("../../1001/213/index")
 var l = require("../../125/index")
@@ -78,17 +78,17 @@ var d = function () {
     return this.target_connection
   }
   e.prototype.move_to = function (e) {
-    var /* [auto-meaningful-name] */_this$db_2
     var /* [auto-meaningful-name] */this$db_
+    var /* [auto-meaningful-name] */_this$db_
     if (this.in_db) {
-      if (!(null === (_this$db_2 = this.db_) || undefined === _this$db_2)) {
-        _this$db_2.remove_connection(this)
+      if (!(null === (this$db_ = this.db_) || undefined === this$db_)) {
+        this$db_.remove_connection(this)
       }
     }
     this.x_ = e[0]
     this.y_ = e[1]
-    if (!(this.hidden_ || null === (this$db_ = this.db_) || undefined === this$db_)) {
-      this$db_.add_connection(this)
+    if (!(this.hidden_ || null === (_this$db_ = this.db_) || undefined === _this$db_)) {
+      _this$db_.add_connection(this)
     }
   }
   e.prototype.move_by = function (e) {
@@ -116,7 +116,7 @@ var d = function () {
     var i = this.y_ - n[1]
     var o = ""
     if (this.target_connection) {
-      var this$target_connection$source_block$svg_path = this.target_connection.source_block.svg_path
+      var /* [auto-meaningful-name] */this$target_connection$source_block$svg_path = this.target_connection.source_block.svg_path
       var s = undefined
       if (undefined != this$target_connection$source_block$svg_path) {
         s = this$target_connection$source_block$svg_path.getAttribute("d")
@@ -134,7 +134,7 @@ var d = function () {
     }, this.source_block.get_svg_root())
   }
   e.prototype.highlight_statement = function (e, n) {
-    var this$source_block = this.source_block
+    var /* [auto-meaningful-name] */this$source_block = this.source_block
     var i = this.offset_in_block[0]
     var a = n ? this.offset_in_block[1] - 1 : -3
     t.highlighted_path = (0, l.create_svg_element)("g", {
@@ -345,7 +345,7 @@ var d = function () {
         block: t
       })
     }
-    var this$target_connection = this.target_connection
+    var /* [auto-meaningful-name] */this$target_connection = this.target_connection
     if (this$target_connection) {
       this$target_connection.target_connection = undefined
       this.target_connection = undefined
@@ -631,7 +631,7 @@ var d = function () {
     var e
     var t
     var n
-    var this$target_connection = this.target_connection
+    var /* [auto-meaningful-name] */this$target_connection = this.target_connection
     if (this$target_connection) {
       if (this$target_connection.target_connection !== this) {
         console.error("Target connection not connected to source connection.")
@@ -686,8 +686,8 @@ var d = function () {
       case c.CONNECTABLE_TYPE.REASON_TARGET_NULL:
         throw new Error("Target connection is undefined.")
       case c.CONNECTABLE_TYPE.REASON_CHECKS_FAILED:
-        var t = "Connection checks failed. "
-        throw t += this + " expected " + this.check_ + ", found " + e.check_
+        var /* [auto-meaningful-name] */ConnectionChecksFailed$ = "Connection checks failed. "
+        throw ConnectionChecksFailed$ += this + " expected " + this.check_ + ", found " + e.check_
       case c.CONNECTABLE_TYPE.REASON_SHADOW_PARENT:
         throw new Error("Connecting non-shadow to shadow block.")
       default:

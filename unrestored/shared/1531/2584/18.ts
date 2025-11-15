@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：18
@@ -25,7 +25,7 @@ export { l as a }
 export { u as b }
 export { d as i }
 export { p as c }
-export { h as k }
+export { __WITHOUT_FOCUS__ as k }
 export { f as j };
 (function (e) {
   e.camera = "camera"
@@ -85,7 +85,7 @@ export { f as j };
   e[e.Preview = 3] = "Preview"
 })(p || (p = {}))
 var f
-var h = "__WITHOUT_FOCUS__"
+var /* [auto-meaningful-name] */__WITHOUT_FOCUS__ = "__WITHOUT_FOCUS__"
 !function (e) {
   e[e.Show = 0] = "Show"
   e[e.Hide = 1] = "Hide"

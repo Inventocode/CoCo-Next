@@ -1,21 +1,21 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2461
  */
 
-var r = require("../../../../../../2483/2484/2485/1401")
-var object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
+var r = require("../../../../../../2483/2484/2485/1401/index")
+var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
 module.exports = function (e, t, n, o, a, s) {
   var c = 1 & n
   var u = r(e)
-  var u$length = u.length
+  var /* [auto-meaningful-name] */u$length = u.length
   if (u$length != r(t).length && !c) {
     return false
   }
   for (var f = u$length; f--;) {
     var d = u[f]
-    if (!(c ? d in t : object$prototype$hasOwnProperty.call(t, d))) {
+    if (!(c ? d in t : Object$prototype$hasOwnProperty.call(t, d))) {
       return false
     }
   }
@@ -42,8 +42,8 @@ module.exports = function (e, t, n, o, a, s) {
     }
   }
   if (_ && !A) {
-    var e$constructor = e.constructor
-    var t$constructor = t.constructor
+    var /* [auto-meaningful-name] */e$constructor = e.constructor
+    var /* [auto-meaningful-name] */t$constructor = t.constructor
     if (!(e$constructor == t$constructor || !("constructor" in e) || !("constructor" in t) || "function" == typeof e$constructor && e$constructor instanceof e$constructor && "function" == typeof t$constructor && t$constructor instanceof t$constructor)) {
       _ = false
     }

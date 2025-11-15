@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2219
@@ -8,7 +8,7 @@
   "use strict"
 
   function t() {
-    for (var arguments$length = arguments.length, t = Array(arguments$length), n = 0; n < arguments$length; n++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = Array(arguments$length), n = 0; n < arguments$length; n++) {
       t[n] = arguments[n]
     }
     if (t.length > 1) {
@@ -33,12 +33,12 @@
   function o(e) {
     var r = t("[0-9]", "[A-Fa-f]")
     var i = n(n("%[EFef]" + r + "%" + r + r + "%" + r + r) + "|" + n("%[89A-Fa-f]" + r + "%" + r + r) + "|" + n("%" + r + r))
-    var o = "[\\!\\$\\&\\'\\(\\)\\*\\+\\,\\;\\=]"
-    var a = t("[\\:\\/\\?\\#\\[\\]\\@]", o)
+    var /* [auto-meaningful-name] */____$__________________ = "[\\!\\$\\&\\'\\(\\)\\*\\+\\,\\;\\=]"
+    var a = t("[\\:\\/\\?\\#\\[\\]\\@]", ____$__________________)
     var s = e ? "[\\uE000-\\uF8FF]" : "[]"
     var c = t("[A-Za-z]", "[0-9]", "[\\-\\.\\_\\~]", e ? "[\\xA0-\\u200D\\u2010-\\u2029\\u202F-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]" : "[]")
     var u = n("[A-Za-z]" + t("[A-Za-z]", "[0-9]", "[\\+\\-\\.]") + "*")
-    var l = n(n(i + "|" + t(c, o, "[\\:]")) + "*")
+    var l = n(n(i + "|" + t(c, ____$__________________, "[\\:]")) + "*")
     n(n("25[0-5]") + "|" + n("2[0-4][0-9]") + "|" + n("1[0-9][0-9]") + "|" + n("[1-9][0-9]") + "|[0-9]")
     var f = n(n("25[0-5]") + "|" + n("2[0-4][0-9]") + "|" + n("1[0-9][0-9]") + "|" + n("0?[1-9][0-9]") + "|0?0?[0-9]")
     var d = n(f + "\\." + f + "\\." + f + "\\." + f)
@@ -57,16 +57,16 @@
     var C = n(n(c + "|" + i) + "+")
     n(x + "\\%25" + C)
     var O = n(x + n("\\%25|\\%(?!" + r + "{2})") + C)
-    var k = n("[vV]" + r + "+\\." + t(c, o, "[\\:]") + "+")
+    var k = n("[vV]" + r + "+\\." + t(c, ____$__________________, "[\\:]") + "+")
     var S = n("\\[" + n(O + "|" + x + "|" + k) + "\\]")
-    var T = n(n(i + "|" + t(c, o)) + "*")
+    var T = n(n(i + "|" + t(c, ____$__________________)) + "*")
     var B = n(S + "|" + d + "(?!" + T + ")|" + T)
     var D = n("[0-9]*")
     var I = n(n(l + "@") + "?" + B + n("\\:" + D) + "?")
-    var F = n(i + "|" + t(c, o, "[\\:\\@]"))
+    var F = n(i + "|" + t(c, ____$__________________, "[\\:\\@]"))
     var R = n(F + "*")
     var P = n(F + "+")
-    var N = n(n(i + "|" + t(c, o, "[\\@]")) + "+")
+    var N = n(n(i + "|" + t(c, ____$__________________, "[\\@]")) + "+")
     var M = n(n("\\/" + R) + "*")
     var j = n("\\/" + n(P + M) + "?")
     var L = n(N + M)
@@ -94,13 +94,13 @@
     n("\\:(" + D + ")")
     return {
       NOT_SCHEME: new RegExp(t("[^]", "[A-Za-z]", "[0-9]", "[\\+\\-\\.]"), "g"),
-      NOT_USERINFO: new RegExp(t("[^\\%\\:]", c, o), "g"),
-      NOT_HOST: new RegExp(t("[^\\%\\[\\]\\:]", c, o), "g"),
-      NOT_PATH: new RegExp(t("[^\\%\\/\\:\\@]", c, o), "g"),
-      NOT_PATH_NOSCHEME: new RegExp(t("[^\\%\\/\\@]", c, o), "g"),
-      NOT_QUERY: new RegExp(t("[^\\%]", c, o, "[\\:\\@\\/\\?]", s), "g"),
-      NOT_FRAGMENT: new RegExp(t("[^\\%]", c, o, "[\\:\\@\\/\\?]"), "g"),
-      ESCAPE: new RegExp(t("[^]", c, o), "g"),
+      NOT_USERINFO: new RegExp(t("[^\\%\\:]", c, ____$__________________), "g"),
+      NOT_HOST: new RegExp(t("[^\\%\\[\\]\\:]", c, ____$__________________), "g"),
+      NOT_PATH: new RegExp(t("[^\\%\\/\\:\\@]", c, ____$__________________), "g"),
+      NOT_PATH_NOSCHEME: new RegExp(t("[^\\%\\/\\@]", c, ____$__________________), "g"),
+      NOT_QUERY: new RegExp(t("[^\\%]", c, ____$__________________, "[\\:\\@\\/\\?]", s), "g"),
+      NOT_FRAGMENT: new RegExp(t("[^\\%]", c, ____$__________________, "[\\:\\@\\/\\?]"), "g"),
+      ESCAPE: new RegExp(t("[^]", c, ____$__________________), "g"),
       UNRESERVED: new RegExp(c, "g"),
       OTHER_CHARS: new RegExp(t("[^\\%]", c, a), "g"),
       PCT_ENCODED: new RegExp(i, "g"),
@@ -152,8 +152,8 @@
     "not-basic": "Illegal input >= 0x80 (not a basic code point)",
     "invalid-input": "Invalid input"
   }
-  var math$floor = Math.floor
-  var string$fromCharCode = String.fromCharCode
+  var /* [auto-meaningful-name] */Math$floor = Math.floor
+  var /* [auto-meaningful-name] */String$fromCharCode = String.fromCharCode
   function A(e) {
     throw new RangeError(h[e])
   }
@@ -165,7 +165,7 @@
       e = n[1]
     }
     var i = function (e, t) {
-      for (var n = [], e$length = e.length; e$length--;) {
+      for (var n = [], /* [auto-meaningful-name] */e$length = e.length; e$length--;) {
         n[e$length] = t(e[e$length])
       }
       return n
@@ -173,7 +173,7 @@
     return r + i
   }
   function v(e) {
-    for (var t = [], n = 0, e$length = e.length; n < e$length;) {
+    for (var t = [], n = 0, /* [auto-meaningful-name] */e$length = e.length; n < e$length;) {
       var i = e.charCodeAt(n++)
       if (i >= 55296 && i <= 56319 && n < e$length) {
         var o = e.charCodeAt(n++)
@@ -194,15 +194,15 @@
   }
   var y = function (e, t, n) {
     var r = 0
-    for (e = n ? math$floor(e / 700) : e >> 1, e += math$floor(e / t); e > 455; r += 36) {
-      e = math$floor(e / 35)
+    for (e = n ? Math$floor(e / 700) : e >> 1, e += Math$floor(e / t); e > 455; r += 36) {
+      e = Math$floor(e / 35)
     }
-    return math$floor(r + 36 * e / (e + 38))
+    return Math$floor(r + 36 * e / (e + 38))
   }
   var b = function (e) {
     var t
     var n = []
-    var e$length = e.length
+    var /* [auto-meaningful-name] */e$length = e.length
     var i = 0
     var o = 128
     var a = 72
@@ -222,7 +222,7 @@
           A("invalid-input")
         }
         var _ = (t = e.charCodeAt(l++)) - 48 < 10 ? t - 22 : t - 65 < 26 ? t - 65 : t - 97 < 26 ? t - 97 : 36
-        if (_ >= 36 || _ > math$floor((u - i) / d)) {
+        if (_ >= 36 || _ > Math$floor((u - i) / d)) {
           A("overflow")
         }
         i += _ * d
@@ -231,17 +231,17 @@
           break
         }
         var v = 36 - g
-        if (d > math$floor(u / v)) {
+        if (d > Math$floor(u / v)) {
           A("overflow")
         }
         d *= v
       }
       var m = n.length + 1
       a = y(i - f, m, 0 == f)
-      if (math$floor(i / m) > u - o) {
+      if (Math$floor(i / m) > u - o) {
         A("overflow")
       }
-      o += math$floor(i / m)
+      o += Math$floor(i / m)
       i %= m
       n.splice(i++, 0, o)
     }
@@ -249,7 +249,7 @@
   }
   var w = function (e) {
     var t = []
-    var eVE$length = (e = v(e)).length
+    var /* [auto-meaningful-name] */EVE$length = (e = v(e)).length
     var r = 128
     var i = 0
     var o = 72
@@ -258,9 +258,9 @@
     var c = undefined
     try {
       for (var l, f = e[Symbol.iterator](); !(a = (l = f.next()).done); a = true) {
-        var l$value = l.value
+        var /* [auto-meaningful-name] */l$value = l.value
         if (l$value < 128) {
-          t.push(string$fromCharCode(l$value))
+          t.push(String$fromCharCode(l$value))
         }
       }
     } catch (U) {
@@ -277,18 +277,18 @@
         }
       }
     }
-    var t$length = t.length
+    var /* [auto-meaningful-name] */t$length = t.length
     var g = t$length
-    for (t$length && t.push("-"); g < eVE$length;) {
+    for (t$length && t.push("-"); g < EVE$length;) {
       var b = u
       var w = true
       var E = false
       var x = undefined
       try {
         for (var C, O = e[Symbol.iterator](); !(w = (C = O.next()).done); w = true) {
-          var c$value = C.value
-          if (c$value >= r && c$value < b) {
-            b = c$value
+          var /* [auto-meaningful-name] */C$value = C.value
+          if (C$value >= r && C$value < b) {
+            b = C$value
           }
         }
       } catch (U) {
@@ -306,7 +306,7 @@
         }
       }
       var S = g + 1
-      if (b - r > math$floor((u - i) / S)) {
+      if (b - r > Math$floor((u - i) / S)) {
         A("overflow")
       }
       i += (b - r) * S
@@ -316,11 +316,11 @@
       var D = undefined
       try {
         for (var I, F = e[Symbol.iterator](); !(T = (I = F.next()).done); T = true) {
-          var i$value = I.value
-          if (i$value < r && ++i > u) {
+          var /* [auto-meaningful-name] */I$value = I.value
+          if (I$value < r && ++i > u) {
             A("overflow")
           }
-          if (i$value == r) {
+          if (I$value == r) {
             for (var P = i, N = 36;; N += 36) {
               var M = N <= o ? 1 : N >= o + 26 ? 26 : N - o
               if (P < M) {
@@ -328,10 +328,10 @@
               }
               var j = P - M
               var L = 36 - M
-              t.push(string$fromCharCode(m(M + j % L, 0)))
-              P = math$floor(j / L)
+              t.push(String$fromCharCode(m(M + j % L, 0)))
+              P = Math$floor(j / L)
             }
-            t.push(string$fromCharCode(m(P, 0)))
+            t.push(String$fromCharCode(m(P, 0)))
             o = y(i, S, g == t$length)
             i = 0
             ++g
@@ -372,7 +372,7 @@
     return t < 16 ? "%0" + t.toString(16).toUpperCase() : t < 128 ? "%" + t.toString(16).toUpperCase() : t < 2048 ? "%" + (t >> 6 | 192).toString(16).toUpperCase() + "%" + (63 & t | 128).toString(16).toUpperCase() : "%" + (t >> 12 | 224).toString(16).toUpperCase() + "%" + (t >> 6 & 63 | 128).toString(16).toUpperCase() + "%" + (63 & t | 128).toString(16).toUpperCase()
   }
   function k(e) {
-    for (var t = "", n = 0, e$length = e.length; n < e$length;) {
+    for (var t = "", n = 0, /* [auto-meaningful-name] */e$length = e.length; n < e$length;) {
       var i = parseInt(e.substr(n + 1, 2), 16)
       if (i < 128) {
         t += String.fromCharCode(i)
@@ -631,7 +631,7 @@
       }
     }
     if (undefined !== e.path) {
-      var e$path = e.path
+      var /* [auto-meaningful-name] */e$path = e.path
       if (!(t.absolutePath || i && i.absolutePath)) {
         e$path = U(e$path)
       }
@@ -777,14 +777,14 @@
     serialize: K.serialize
   }
   var Y = {}
-  var q = "[A-Za-z0-9\\-\\.\\_\\~\\xA0-\\u200D\\u2010-\\u2029\\u202F-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]"
-  var $ = "[0-9A-Fa-f]"
-  var J = n(n("%[EFef]" + $ + "%" + $ + $ + "%" + $ + $) + "|" + n("%[89A-Fa-f]" + $ + "%" + $ + $) + "|" + n("%" + $ + $))
+  var /* [auto-meaningful-name] */AZaZ09____$_______xA0__u200D__u2010__u2029__u202F__uD7FF__uF900__uFDCF__uFDF0__uFFEF = "[A-Za-z0-9\\-\\.\\_\\~\\xA0-\\u200D\\u2010-\\u2029\\u202F-\\uD7FF\\uF900-\\uFDCF\\uFDF0-\\uFFEF]"
+  var /* [auto-meaningful-name] */_09AFaF = "[0-9A-Fa-f]"
+  var J = n(n("%[EFef]" + _09AFaF + "%" + _09AFaF + _09AFaF + "%" + _09AFaF + _09AFaF) + "|" + n("%[89A-Fa-f]" + _09AFaF + "%" + _09AFaF + _09AFaF) + "|" + n("%" + _09AFaF + _09AFaF))
   var Z = t("[\\!\\$\\%\\'\\(\\)\\*\\+\\,\\-\\.0-9\\<\\>A-Z\\x5E-\\x7E]", "[\\\"\\\\]")
-  var ee = new RegExp(q, "g")
+  var ee = new RegExp(AZaZ09____$_______xA0__u200D__u2010__u2029__u202F__uD7FF__uF900__uFDCF__uFDF0__uFFEF, "g")
   var te = new RegExp(J, "g")
   var ne = new RegExp(t("[^]", "[A-Za-z0-9\\!\\$\\%\\'\\*\\+\\-\\^\\_\\`\\{\\|\\}\\~]", "[\\.]", "[\\\"]", Z), "g")
-  var re = new RegExp(t("[^]", q, "[\\!\\$\\'\\(\\)\\*\\+\\,\\;\\:\\@]"), "g")
+  var re = new RegExp(t("[^]", AZaZ09____$_______xA0__u200D__u2010__u2029__u202F__uD7FF__uF900__uFDCF__uFDF0__uFFEF, "[\\!\\$\\'\\(\\)\\*\\+\\,\\;\\:\\@]"), "g")
   var ie = re
   function oe(e) {
     var t = k(e)
@@ -797,11 +797,11 @@
       var r = n.to = n.path ? n.path.split(",") : []
       n.path = undefined
       if (n.query) {
-        for (var i = false, o = {}, a = n.query.split("&"), s = 0, a$length = a.length; s < a$length; ++s) {
+        for (var i = false, o = {}, a = n.query.split("&"), s = 0, /* [auto-meaningful-name] */a$length = a.length; s < a$length; ++s) {
           var u = a[s].split("=")
           switch (u[0]) {
             case "to":
-              for (var l = u[1].split(","), f = 0, l$length = l.length; f < l$length; ++f) {
+              for (var l = u[1].split(","), f = 0, /* [auto-meaningful-name] */l$length = l.length; f < l$length; ++f) {
                 r.push(l[f])
               }
               break
@@ -821,7 +821,7 @@
         }
       }
       n.query = undefined
-      for (var h = 0, r$length = r.length; h < r$length; ++h) {
+      for (var h = 0, /* [auto-meaningful-name] */r$length = r.length; h < r$length; ++h) {
         var _ = r[h].split("@")
         _[0] = G(_[0])
         if (t.unicodeSupport) {
@@ -842,7 +842,7 @@
       var r = e
       var o = undefined !== (n = e.to) && null !== n ? n instanceof Array ? n : "number" !== typeof n.length || n.split || n.setInterval || n.call ? [n] : Array.prototype.slice.call(n) : []
       if (o) {
-        for (var a = 0, o$length = o.length; a < o$length; ++a) {
+        for (var a = 0, /* [auto-meaningful-name] */o$length = o.length; a < o$length; ++a) {
           var c = String(o[a])
           var u = c.lastIndexOf("@")
           var l = c.slice(0, u).replace(te, oe).replace(te, i).replace(ne, O)
@@ -898,14 +898,14 @@
     },
     serialize: function (e, t) {
       var n = t.scheme || e.scheme || "urn"
-      var e$nid = e.nid
+      var /* [auto-meaningful-name] */e$nid = e.nid
       var i = n + ":" + (t.nid || e$nid)
       var o = C[i]
       if (o) {
         e = o.serialize(e, t)
       }
       var a = e
-      var e$nss = e.nss
+      var /* [auto-meaningful-name] */e$nss = e.nss
       a.path = (e$nid || t.nid) + ":" + e$nss
       return a
     }

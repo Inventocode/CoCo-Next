@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：112
@@ -8,7 +8,7 @@
 
 export { o as a }
 export { a as b }
-import r = require("./6");
+import r = require("./6")
 function o(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {}
   var o = r.a({

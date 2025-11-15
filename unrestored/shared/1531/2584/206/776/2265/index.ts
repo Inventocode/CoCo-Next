@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2265
@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../../../36/2668/220")
-var i = require("../../../36/2668/230")
+var r = require("../220")
+var i = require("../230")
 var o = require("../../../1036/1363/569")
-var require$$965$breakableTypePattern = require("../965").breakableTypePattern
+var /* [auto-meaningful-name] */require$$_965$breakableTypePattern = require("../965").breakableTypePattern
 var s = require("./2266/index")
 var c = require("./1120")
 var u = require("./1346")
@@ -32,10 +32,10 @@ function _(e, t) {
   var n
   var r
   var i
-  var e$codePath = e.codePath
+  var /* [auto-meaningful-name] */e$codePath = e.codePath
   var a = s.getState(e$codePath)
-  var a$currentSegments = a.currentSegments
-  var a$headSegments = a.headSegments
+  var /* [auto-meaningful-name] */a$currentSegments = a.currentSegments
+  var /* [auto-meaningful-name] */a$headSegments = a.headSegments
   var d = Math.max(a$currentSegments.length, a$headSegments.length)
   for (n = 0; n < d; ++n) {
     if ((r = a$currentSegments[n]) !== (i = a$headSegments[n]) && r) {
@@ -56,9 +56,9 @@ function _(e, t) {
   }
 }
 function A(e, t) {
-  var e$codePath = e.codePath
+  var /* [auto-meaningful-name] */e$codePath = e.codePath
   var r = e$codePath && s.getState(e$codePath)
-  var t$parent = t.parent
+  var /* [auto-meaningful-name] */t$parent = t.parent
   switch (t.type) {
     case "Program":
     case "FunctionDeclaration":
@@ -76,7 +76,7 @@ function A(e, t) {
     case "LogicalExpression":
       if (d(t.operator)) {
         r.pushChoiceContext(t.operator, function (e) {
-          var e$parent = e.parent
+          var /* [auto-meaningful-name] */e$parent = e.parent
           switch (e$parent.type) {
             case "ConditionalExpression":
             case "IfStatement":
@@ -115,7 +115,7 @@ function A(e, t) {
       r.pushLoopContext(t.type, h(t))
       break
     case "LabeledStatement":
-      if (!require$$965$breakableTypePattern.test(t.body.type)) {
+      if (!require$$_965$breakableTypePattern.test(t.body.type)) {
         r.pushBreakContext(false, t.label.name)
       }
   }
@@ -128,10 +128,10 @@ function g(e, t) {
     case "FunctionDeclaration":
     case "FunctionExpression":
     case "ArrowFunctionExpression":
-      var e$codePath = e.codePath
+      var /* [auto-meaningful-name] */e$codePath = e.codePath
       s.getState(e$codePath).makeFinal();
       (function (e, t) {
-        for (var n = s.getState(e.codePath), n$currentSegments = n.currentSegments, i = 0; i < n$currentSegments.length; ++i) {
+        for (var n = s.getState(e.codePath), /* [auto-meaningful-name] */n$currentSegments = n.currentSegments, i = 0; i < n$currentSegments.length; ++i) {
           var o = n$currentSegments[i]
           l.dump("onCodePathSegmentEnd ".concat(o.id))
           if (o.reachable) {
@@ -164,9 +164,9 @@ var v = function () {
       this.currentNode = e
       if (e.parent) {
         (function (e, t) {
-          var e$codePath = e.codePath
+          var /* [auto-meaningful-name] */e$codePath = e.codePath
           var r = s.getState(e$codePath)
-          var t$parent = t.parent
+          var /* [auto-meaningful-name] */t$parent = t.parent
           switch (t$parent.type) {
             case "LogicalExpression":
               if (t$parent.right === t && d(t$parent.operator)) {
@@ -257,7 +257,7 @@ var v = function () {
     value: function (e) {
       this.currentNode = e;
       (function (e, t) {
-        var e$codePath = e.codePath
+        var /* [auto-meaningful-name] */e$codePath = e.codePath
         var r = s.getState(e$codePath)
         var i = false
         switch (t.type) {
@@ -306,7 +306,7 @@ var v = function () {
             break
           case "Identifier":
             if (function (e) {
-              var e$parent = e.parent
+              var /* [auto-meaningful-name] */e$parent = e.parent
               switch (e$parent.type) {
                 case "LabeledStatement":
                 case "BreakStatement":
@@ -355,7 +355,7 @@ var v = function () {
             r.popForkContext()
             break
           case "LabeledStatement":
-            if (!require$$965$breakableTypePattern.test(t.body.type)) {
+            if (!require$$_965$breakableTypePattern.test(t.body.type)) {
               r.popBreakContext()
             }
         }

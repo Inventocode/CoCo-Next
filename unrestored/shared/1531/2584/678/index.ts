@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：678
@@ -26,4 +26,4 @@ var r = {
     smsContentMinLength: "短信内容长度太短，当前值{inputValue}，最小长度{ruleValue}"
   }
 }
-import o = require("./360");
+import /* [auto-meaningful-name] */$_360 = require("./360")

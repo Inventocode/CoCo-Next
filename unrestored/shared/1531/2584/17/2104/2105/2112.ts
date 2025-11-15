@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2112
@@ -13,7 +13,7 @@ exports.DeleteEvent = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("../../../125/195/index")
-var a = require("../../../4/127")
+var a = require("../../../1036/127")
 var s = (0, r.__importStar)(require("../../497/index"))
 var c = function (e) {
   function t(t) {
@@ -21,7 +21,7 @@ var c = function (e) {
     n.type = o.BlockEventType.DELETE
     n.ids = []
     n.is_shadow = false
-    var t$block = t.block
+    var /* [auto-meaningful-name] */t$block = t.block
     if (s.base.is_block_svg(t$block) && t$block.get_parent()) {
       console.error("Connected blocks cannot be deleted.")
       return n

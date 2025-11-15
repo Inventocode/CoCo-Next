@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：843
@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../../../../../../36/2668/220")
-var i = require("../../../../../../36/2668/230")
+var r = require("../../../../220")
+var i = require("../../../../230")
 module.exports = function () {
   function e() {
     r(this, e)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：999
@@ -6,8 +6,8 @@
 
 "use strict"
 
-import React = require("react");
-import i = require("../75/index");
+import /* [auto-meaningful-name] */React = require("react")
+import /* [auto-meaningful-name] */$$_75_index = require("../75/index")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -19,18 +19,18 @@ var o = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(i)
-import a = require("./378");
+}($$_75_index)
+import /* [auto-meaningful-name] */$_378 = require("./378")
 var s = React.forwardRef(function (e, t) {
-  var e$didUpdate = e.didUpdate
-  var e$getContainer = e.getContainer
-  var e$children = e.children
+  var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
+  var /* [auto-meaningful-name] */e$getContainer = e.getContainer
+  var /* [auto-meaningful-name] */e$children = e.children
   var c = React.useRef()
   React.useImperativeHandle(t, function () {
     return {}
   })
   var u = React.useRef(false)
-  if (!u.current && a.a()) {
+  if (!u.current && $_378.a()) {
     c.current = e$getContainer()
     u.current = true
   }

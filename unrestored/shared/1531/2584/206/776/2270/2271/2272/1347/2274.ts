@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2274
@@ -73,8 +73,8 @@ var he
 var pe
 var _e
 var Ae
-var $toString = {}.toString
-var $slice = [].slice
+var /* [auto-meaningful-name] */$toString = {}.toString
+var /* [auto-meaningful-name] */$slice = [].slice
 function me(e, t) {
   var n
   return function r(i) {
@@ -260,9 +260,9 @@ O = me(function (e, t) {
   return [].concat.apply([], function () {
     var r
     var i
-    var /* [auto-meaningful-name] */iT$length
+    var /* [auto-meaningful-name] */IT$length
     var a = []
-    for (r = 0, iT$length = (i = t).length; r < iT$length; ++r) {
+    for (r = 0, IT$length = (i = t).length; r < IT$length; ++r) {
       n = i[r]
       a.push(e(n))
     }
@@ -274,9 +274,9 @@ k = function (e) {
   return [].concat.apply([], function () {
     var n
     var r
-    var /* [auto-meaningful-name] */rE$length
+    var /* [auto-meaningful-name] */RE$length
     var o = []
-    for (n = 0, rE$length = (r = e).length; n < rE$length; ++n) {
+    for (n = 0, RE$length = (r = e).length; n < RE$length; ++n) {
       t = r[n]
       if ("Array" === $toString.call(t).slice(8, -1)) {
         o.push(k(t))
@@ -331,13 +331,13 @@ B = function () {
   var e
   var t
   var n
-  var /* [auto-meaningful-name] */e$slice$callArguments$length
+  var /* [auto-meaningful-name] */E$slice$callArguments$length
   var i
   var o
-  var /* [auto-meaningful-name] */iEN$length
+  var /* [auto-meaningful-name] */IEN$length
   var s
-  for (t = [], n = 0, e$slice$callArguments$length = (e = $slice.call(arguments)).length; n < e$slice$callArguments$length; ++n) {
-    for (o = 0, iEN$length = (i = e[n]).length; o < iEN$length; ++o) {
+  for (t = [], n = 0, E$slice$callArguments$length = (e = $slice.call(arguments)).length; n < E$slice$callArguments$length; ++n) {
+    for (o = 0, IEN$length = (i = e[n]).length; o < IEN$length; ++o) {
       if (!ye(s = i[o], t)) {
         t.push(s)
       }
@@ -458,9 +458,9 @@ z = function (e) {
   var t
   var n
   var r
-  var /* [auto-meaningful-name] */rE$slice1$length
+  var /* [auto-meaningful-name] */RE$slice1$length
   var o
-  for (t = e[0], n = 0, rE$slice1$length = (r = e.slice(1)).length; n < rE$slice1$length; ++n) {
+  for (t = e[0], n = 0, RE$slice1$length = (r = e.slice(1)).length; n < RE$slice1$length; ++n) {
     if ((o = r[n]) > t) {
       t = o
     }
@@ -471,9 +471,9 @@ Q = function (e) {
   var t
   var n
   var r
-  var /* [auto-meaningful-name] */rE$slice1$length
+  var /* [auto-meaningful-name] */RE$slice1$length
   var o
-  for (t = e[0], n = 0, rE$slice1$length = (r = e.slice(1)).length; n < rE$slice1$length; ++n) {
+  for (t = e[0], n = 0, RE$slice1$length = (r = e.slice(1)).length; n < RE$slice1$length; ++n) {
     if ((o = r[n]) < t) {
       t = o
     }
@@ -484,9 +484,9 @@ W = me(function (e, t) {
   var n
   var r
   var i
-  var /* [auto-meaningful-name] */iT$slice1$length
+  var /* [auto-meaningful-name] */IT$slice1$length
   var a
-  for (n = t[0], r = 0, iT$slice1$length = (i = t.slice(1)).length; r < iT$slice1$length; ++r) {
+  for (n = t[0], r = 0, IT$slice1$length = (i = t.slice(1)).length; r < IT$slice1$length; ++r) {
     if (e(a = i[r]) > e(n)) {
       n = a
     }
@@ -497,9 +497,9 @@ K = me(function (e, t) {
   var n
   var r
   var i
-  var /* [auto-meaningful-name] */iT$slice1$length
+  var /* [auto-meaningful-name] */IT$slice1$length
   var a
-  for (n = t[0], r = 0, iT$slice1$length = (i = t.slice(1)).length; r < iT$slice1$length; ++r) {
+  for (n = t[0], r = 0, IT$slice1$length = (i = t.slice(1)).length; r < IT$slice1$length; ++r) {
     if (e(a = i[r]) < e(n)) {
       n = a
     }
@@ -513,9 +513,9 @@ X = Y = me(function (e, t, n) {
   return [t].concat(function () {
     var t
     var o
-    var /* [auto-meaningful-name] */oN$length
+    var /* [auto-meaningful-name] */ON$length
     var s = []
-    for (t = 0, oN$length = (o = n).length; t < oN$length; ++t) {
+    for (t = 0, ON$length = (o = n).length; t < ON$length; ++t) {
       i = o[t]
       s.push(r = e(r, i))
     }
@@ -617,14 +617,14 @@ le = function () {
   var n
   var r
   var i
-  var /* [auto-meaningful-name] */iEN$length
+  var /* [auto-meaningful-name] */IEN$length
   var a
   var s
   var c
   var u = []
   for (t = undefined, n = 0, r = (e = $slice.call(arguments)).length; n < r; ++n) {
-    if (!(t <= (iEN$length = (i = e[n]).length))) {
-      t = iEN$length
+    if (!(t <= (IEN$length = (i = e[n]).length))) {
+      t = IEN$length
     }
   }
   for (n = 0; n < t; ++n) {
@@ -640,14 +640,14 @@ fe = function (e) {
   var t
   var n
   var r
-  var /* [auto-meaningful-name] */t$slice$callArguments1$length
+  var /* [auto-meaningful-name] */T$slice$callArguments1$length
   var o
-  var /* [auto-meaningful-name] */oTR$length
+  var /* [auto-meaningful-name] */OTR$length
   var s
   var c = []
-  for (n = undefined, r = 0, t$slice$callArguments1$length = (t = $slice.call(arguments, 1)).length; r < t$slice$callArguments1$length; ++r) {
-    if (!(n <= (oTR$length = (o = t[r]).length))) {
-      n = oTR$length
+  for (n = undefined, r = 0, T$slice$callArguments1$length = (t = $slice.call(arguments, 1)).length; r < T$slice$callArguments1$length; ++r) {
+    if (!(n <= (OTR$length = (o = t[r]).length))) {
+      n = OTR$length
     }
   }
   for (r = 0; r < n; ++r) {
@@ -658,9 +658,9 @@ fe = function (e) {
   function u() {
     var e
     var n
-    var /* [auto-meaningful-name] */nT$length
+    var /* [auto-meaningful-name] */NT$length
     var i = []
-    for (e = 0, nT$length = (n = t).length; e < nT$length; ++e) {
+    for (e = 0, NT$length = (n = t).length; e < NT$length; ++e) {
       o = n[e]
       i.push(o[s])
     }

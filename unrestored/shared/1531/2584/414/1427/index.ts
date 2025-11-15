@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1427
@@ -64,7 +64,7 @@ var l = function (e) {
     })
   }
   t.toColDef = function (e) {
-    var e$children = e.children
+    var /* [auto-meaningful-name] */e$children = e.children
     var r = o(e, ["children"])
     if (t.hasChildColumns(e$children)) {
       r.children = t.mapChildColumnDefs(e$children)

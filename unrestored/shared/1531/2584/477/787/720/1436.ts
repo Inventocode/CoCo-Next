@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1436
@@ -7,25 +7,25 @@
 "use strict"
 
 export { s as a }
-import r = require("../1508");
-import i = require("../265");
-import o = require("../350");
-import a = require("../218");
+import /* [auto-meaningful-name] */$$_1508 = require("../1508")
+import /* [auto-meaningful-name] */$$_265 = require("../265")
+import /* [auto-meaningful-name] */$$_350 = require("../350")
+import /* [auto-meaningful-name] */$$_218 = require("../218")
 function s() {
-  r.a({
+  $$_1508.a({
     callback: c,
     type: "error"
   })
-  r.a({
+  $$_1508.a({
     callback: c,
     type: "unhandledrejection"
   })
 }
 function c() {
-  var e = a.b()
+  var e = $$_218.b()
   if (e) {
-    i.a.log("[Tracing] Transaction: " + o.a.InternalError + " -> Global error occured")
-    e.setStatus(o.a.InternalError)
+    $$_265.a.log("[Tracing] Transaction: " + $$_350.a.InternalError + " -> Global error occured")
+    e.setStatus($$_350.a.InternalError)
   }
 }
 export default s

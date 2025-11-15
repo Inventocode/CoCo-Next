@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2141
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Tooltip = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = require("../../125/index")
 var s = require("../../1001/213/index")
 var c = require("../497/841")
@@ -47,7 +47,7 @@ var u = function () {
   }
   e.prototype.on_mouse_over = function (e) {
     if (!this.blocked_) {
-      var e$target = e.target
+      var /* [auto-meaningful-name] */e$target = e.target
       if (e$target && e$target.tooltip) {
         if (this.element_ !== e.target) {
           this.hide()
@@ -121,7 +121,7 @@ var u = function () {
         var u = (0, a.get_viewport_size)()
         t.style.display = "block"
         this.visible = true
-        var this$last_x_ = this.last_x_
+        var /* [auto-meaningful-name] */this$last_x_ = this.last_x_
         this$last_x_ += this.OFFSET_X
         var f = this.last_y_ + this.OFFSET_Y
         if (f + t.offsetHeight > u.height + window.scrollY) {

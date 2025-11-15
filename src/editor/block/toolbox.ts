@@ -12,8 +12,8 @@ export { s as c }
 export { c as f }
 export { l as e }
 export { u as d }
-import r = require("../../../unrestored/shared/1531/2584/9");
-import o = require("./generate");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_9 = require("../../../unrestored/shared/1531/2584/9")
+import /* [auto-meaningful-name] */$_generate = require("./generate")
 var i = {
   PRIMITIVE: "PRIMITIVE",
   ARRAY: "ARRAY",
@@ -102,13 +102,13 @@ var c = {
   }
 }
 var l = function () {
-  return r.O()
+  return $$_$$_$$_unrestored_shared_1531_2584_9.O()
 }
 var u = function (e) {
   var /* [auto-meaningful-name] */cN$text
   for (var n in c) if (c[n].id === e) {
     cN$text = c[n].text
   }
-  return cN$text ? o.b()[cN$text.slice(6, -1)] : ""
+  return cN$text ? $_generate.b()[cN$text.slice(6, -1)] : ""
 }
 export default a

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：298
@@ -14,8 +14,8 @@ export { O as b }
 export { C as d }
 export { S as e }
 export { A as a }
-import r = require("./6");
-import RegeneratorRuntime = require("regenerator-runtime");
+import r = require("./6")
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -28,14 +28,14 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import a = require("./7");
-import s = require("./60");
-import c = require("./197/index");
-import l = require("../../../../src/shared/utils/network/axios-with-credentials");
-import u = require("./59/index");
-import d = require("./278");
-var u$a$serverHost = u.a.serverHost
-var u$a$oTServerHost = u.a.oTServerHost
+import a = require("./7")
+import s = require("./60")
+import /* [auto-meaningful-name] */$_197_index = require("./197/index")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials = require("../../../../src/shared/utils/network/axios-with-credentials")
+import /* [auto-meaningful-name] */$_59_index = require("./59/index")
+import /* [auto-meaningful-name] */$_278 = require("./278")
+var /* [auto-meaningful-name] */$_59_index$a$serverHost = $_59_index.a.serverHost
+var /* [auto-meaningful-name] */$_59_index$a$oTServerHost = $_59_index.a.oTServerHost
 function h(e) {
   return m.apply(this, arguments)
 }
@@ -55,7 +55,7 @@ function m() {
               type: n.type
             })
             e.next = 4
-            return c.e(r, "JSON")
+            return $_197_index.e(r, "JSON")
           case 4:
             e$sent = e.sent
             return e.abrupt("return", e$sent.url)
@@ -76,7 +76,7 @@ function _() {
     var /* [auto-meaningful-name] */t$bcmUrl
     var /* [auto-meaningful-name] */t$coverUrl
     var /* [auto-meaningful-name] */t$sourceTag
-    var /* [auto-meaningful-name] */_e$sent6$data
+    var /* [auto-meaningful-name] */u$data
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data$data$work_id
     var /* [auto-meaningful-name] */e$t0$response
@@ -90,7 +90,7 @@ function _() {
             t$sourceTag = t.sourceTag
             e.prev = 1
             e.next = 4
-            return l.a.post(u$a$serverHost + "/coconut/web/work", {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($_59_index$a$serverHost + "/coconut/web/work", {
               name: t$name,
               preview_url: t$coverUrl,
               bcm_url: t$bcmUrl,
@@ -99,7 +99,7 @@ function _() {
               work_source_label: t$sourceTag
             })
           case 4:
-            if (!(null === (e$sent = e.sent) || undefined === e$sent || null === (_e$sent6$data = e$sent.data) || undefined === _e$sent6$data ? undefined : _e$sent6$data.data)) {
+            if (!(null === (e$sent = e.sent) || undefined === e$sent || null === (u$data = e$sent.data) || undefined === u$data ? undefined : u$data.data)) {
               e.next = 8
               break
             }
@@ -107,13 +107,13 @@ function _() {
             return e.abrupt("return", e$sent$data$data$work_id)
           case 8:
             console.error("saveProject error")
-            throw new Error(d.a.SAVE_PROJECT_ERROR)
+            throw new Error($_278.a.SAVE_PROJECT_ERROR)
           case 12:
             if (e.prev = 12, e.t0 = e.catch(1), console.error("saveProject error", e.t0), 401 !== (null === (e$t0$response = e.t0.response) || undefined === e$t0$response ? undefined : e$t0$response.status)) {
               e.next = 17
               break
             }
-            throw new Error(d.a.USER_NOT_LOGIN)
+            throw new Error($_278.a.USER_NOT_LOGIN)
           case 17:
             throw e.t0
           case 18:
@@ -133,7 +133,7 @@ function b() {
     var /* [auto-meaningful-name] */t$bcmUrl
     var /* [auto-meaningful-name] */t$coverUrl
     var a
-    var /* [auto-meaningful-name] */_e$sent7$data
+    var /* [auto-meaningful-name] */u$data
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$t0$response
     return i.a.wrap(function (e) {
@@ -146,7 +146,7 @@ function b() {
             a = t.id
             e.prev = 1
             e.next = 4
-            return l.a.put(u$a$serverHost + "/coconut/web/work", {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($_59_index$a$serverHost + "/coconut/web/work", {
               id: a,
               name: t$name,
               preview_url: t$coverUrl,
@@ -155,11 +155,11 @@ function b() {
               save_type: t.saveType || s.b.ByUser
             })
           case 4:
-            if (null === (e$sent = e.sent) || undefined === e$sent || null === (_e$sent7$data = e$sent.data) || undefined === _e$sent7$data ? undefined : _e$sent7$data.data) {
+            if (null === (e$sent = e.sent) || undefined === e$sent || null === (u$data = e$sent.data) || undefined === u$data ? undefined : u$data.data) {
               e.next = 7
               break
             }
-            throw new Error(d.a.UPDATE_PROJECT_ERROR)
+            throw new Error($_278.a.UPDATE_PROJECT_ERROR)
           case 7:
             e.next = 14
             break
@@ -168,7 +168,7 @@ function b() {
               e.next = 13
               break
             }
-            throw new Error(d.a.USER_NOT_LOGIN)
+            throw new Error($_278.a.USER_NOT_LOGIN)
           case 13:
             throw e.t0
           case 14:
@@ -196,9 +196,9 @@ function E() {
         switch (e.prev = e.next) {
           case 0:
             o = "?offset=".concat(t, "&limit=").concat(n) + (undefined !== r ? "&published=".concat(r) : "")
-            a = "".concat(u$a$serverHost, "/coconut/web/work/list").concat(o)
+            a = "".concat($_59_index$a$serverHost, "/coconut/web/work/list").concat(o)
             e.next = 4
-            return l.a.get(a)
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(a)
           case 4:
             if (e$sent = e.sent, c = [], !(e$sent$data = e$sent.data)) {
               e.next = 12
@@ -209,13 +209,13 @@ function E() {
             if (Array.isArray(e$sent$data$data$items)) {
               e$sent$data$data$items.forEach(function (e) {
                 var t = e.id
-                var e$work_id = e.work_id
-                var e$name = e.name
-                var e$cover_url = e.cover_url
-                var e$preview_url = e.preview_url
-                var e$updated_at = e.updated_at
-                var e$is_coll_work = e.is_coll_work
-                var e$published_at = e.published_at
+                var /* [auto-meaningful-name] */e$work_id = e.work_id
+                var /* [auto-meaningful-name] */e$name = e.name
+                var /* [auto-meaningful-name] */e$cover_url = e.cover_url
+                var /* [auto-meaningful-name] */e$preview_url = e.preview_url
+                var /* [auto-meaningful-name] */e$updated_at = e.updated_at
+                var /* [auto-meaningful-name] */e$is_coll_work = e.is_coll_work
+                var /* [auto-meaningful-name] */e$published_at = e.published_at
                 var u = {
                   id: e$work_id || t,
                   name: e$name,
@@ -248,7 +248,7 @@ function O(e, t) {
 }
 function w() {
   return (w = a.a(i.a.mark(function e(t, n) {
-    var /* [auto-meaningful-name] */_e$sent9$data
+    var /* [auto-meaningful-name] */o$data
     var /* [auto-meaningful-name] */e$sent
     var a
     var s
@@ -259,14 +259,14 @@ function w() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return l.a.get("".concat(u$a$oTServerHost, "/coll/coco/coll_works"), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get("".concat($_59_index$a$oTServerHost, "/coll/coco/coll_works"), {
               params: {
                 current_page: t,
                 page_size: n
               }
             })
           case 2:
-            if (e$sent = e.sent, a = [], !(s = null === e$sent || undefined === e$sent || null === (_e$sent9$data = e$sent.data) || undefined === _e$sent9$data ? undefined : _e$sent9$data.data)) {
+            if (e$sent = e.sent, a = [], !(s = null === e$sent || undefined === e$sent || null === (o$data = e$sent.data) || undefined === o$data ? undefined : o$data.data)) {
               e.next = 10
               break
             }
@@ -275,11 +275,11 @@ function w() {
             if (Array.isArray(s$items)) {
               s$items.forEach(function (e) {
                 var t = e.id
-                var e$name = e.name
-                var e$cover_url = e.cover_url
-                var e$update_time = e.update_time
-                var e$is_coll_work = e.is_coll_work
-                var e$published_at = e.published_at
+                var /* [auto-meaningful-name] */e$name = e.name
+                var /* [auto-meaningful-name] */e$cover_url = e.cover_url
+                var /* [auto-meaningful-name] */e$update_time = e.update_time
+                var /* [auto-meaningful-name] */e$is_coll_work = e.is_coll_work
+                var /* [auto-meaningful-name] */e$published_at = e.published_at
                 var l = {
                   id: t.toString(),
                   name: e$name,
@@ -312,22 +312,22 @@ function C(e) {
 function T() {
   return (T = a.a(i.a.mark(function e(t) {
     var n
-    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
     var /* [auto-meaningful-name] */e$sent$data$code
     var /* [auto-meaningful-name] */e$sent$data$data
     var /* [auto-meaningful-name] */e$sent$data$data$bcm_url
-    var /* [auto-meaningful-name] */_e$sent3
-    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent
+    var /* [auto-meaningful-name] */_e$sent2
     return i.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = "".concat(u$a$serverHost, "/coconut/web/work/").concat(t, "/content")
+            n = "".concat($_59_index$a$serverHost, "/coconut/web/work/").concat(t, "/content")
             e.next = 3
-            return l.a.get(n)
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(n)
           case 3:
-            if (_e$sent2 = e.sent, e$sent$data = _e$sent2.data, e$sent$data$code = e$sent$data.code, e$sent$data$data = e$sent$data.data) {
+            if (e$sent = e.sent, e$sent$data = e$sent.data, e$sent$data$code = e$sent$data.code, e$sent$data$data = e$sent$data.data) {
               e.next = 9
               break
             }
@@ -340,18 +340,18 @@ function T() {
             e.next = 12
             return fetch(e$sent$data$data$bcm_url)
           case 12:
-            _e$sent3 = e.sent
+            _e$sent = e.sent
             e.next = 15
-            return _e$sent3.json()
+            return _e$sent.json()
           case 15:
-            e$sent = e.sent
-            if (e$sent$data$data.name && e$sent$data$data.name !== e$sent.title) {
-              e$sent.title = e$sent$data$data.name
+            _e$sent2 = e.sent
+            if (e$sent$data$data.name && e$sent$data$data.name !== _e$sent2.title) {
+              _e$sent2.title = e$sent$data$data.name
             }
             return e.abrupt("return", {
               code: e$sent$data$code,
               data: r.a(r.a({}, e$sent$data$data), {}, {
-                content: e$sent
+                content: _e$sent2
               })
             })
           case 18:
@@ -368,32 +368,32 @@ function S(e) {
 function I() {
   return (I = a.a(i.a.mark(function e(t) {
     var n
-    var /* [auto-meaningful-name] */_e$sent0
+    var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data$data
     var /* [auto-meaningful-name] */e$sent$data$data$bcm_url
-    var /* [auto-meaningful-name] */_e$sent11
-    var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent3
+    var /* [auto-meaningful-name] */_e$sent4
     return i.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = "".concat(u$a$serverHost, "/coconut/web/work/archive/").concat(t)
+            n = "".concat($_59_index$a$serverHost, "/coconut/web/work/archive/").concat(t)
             e.next = 3
-            return l.a.get(n)
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(n)
           case 3:
-            _e$sent0 = e.sent
-            e$sent$data$data = _e$sent0.data.data
+            e$sent = e.sent
+            e$sent$data$data = e$sent.data.data
             e$sent$data$data$bcm_url = e$sent$data$data.bcm_url
             e.next = 8
             return fetch(e$sent$data$data$bcm_url)
           case 8:
-            _e$sent11 = e.sent
+            _e$sent3 = e.sent
             e.next = 11
-            return _e$sent11.json()
+            return _e$sent3.json()
           case 11:
-            e$sent = e.sent
+            _e$sent4 = e.sent
             return e.abrupt("return", {
-              content: e$sent
+              content: _e$sent4
             })
           case 13:
           case "end":
@@ -414,9 +414,9 @@ function j() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = "".concat(u$a$serverHost, "/coconut/web/work/").concat(t)
+            n = "".concat($_59_index$a$serverHost, "/coconut/web/work/").concat(t)
             e.next = 3
-            return l.a.delete(n)
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.delete(n)
           case 3:
             e$sent = e.sent
             return e.abrupt("return", 200 === e$sent.data.code)

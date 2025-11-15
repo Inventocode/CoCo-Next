@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：280
@@ -8,14 +8,14 @@
 
 export { o as a }
 export { a as b }
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 require("../50/index")
 var i = React.createContext(null)
 var o = function (e) {
-  var e$utils = e.utils
-  var e$children = e.children
-  var e$locale = e.locale
-  var e$libInstance = e.libInstance
+  var /* [auto-meaningful-name] */e$utils = e.utils
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$locale = e.locale
+  var /* [auto-meaningful-name] */e$libInstance = e.libInstance
   var s = React.useMemo(function () {
     return new e$utils({
       locale: e$locale,

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：609
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.JsonPythonGenerator = exports.load_json_js_generators_data = exports.load_json_js_generator_tell = exports.load_basic_blocks_json_js_generators = exports.JsonJavaScriptGenerator = undefined
-var r = require("./2180")
+var r = require("./2180/index")
 Object.defineProperty(exports, "JsonJavaScriptGenerator", {
   enumerable: true,
   get: function () {
@@ -47,7 +47,7 @@ Object.defineProperty(exports, "load_json_js_generators_data", {
     return d.load_json_js_generators_data
   }
 })
-var h = require("./2188/index")
+var h = require("./2188")
 Object.defineProperty(exports, "JsonPythonGenerator", {
   enumerable: true,
   get: function () {

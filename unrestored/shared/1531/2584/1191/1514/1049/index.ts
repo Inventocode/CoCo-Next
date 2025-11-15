@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1049
@@ -65,25 +65,25 @@ exports.removeEvent = function (e, t, n, r) {
   }
 }
 exports.outerHeight = function (e) {
-  var e$clientHeight = e.clientHeight
+  var /* [auto-meaningful-name] */e$clientHeight = e.clientHeight
   var n = e.ownerDocument.defaultView.getComputedStyle(e)
   e$clientHeight += (0, o.int)(n.borderTopWidth)
   return e$clientHeight += (0, o.int)(n.borderBottomWidth)
 }
 exports.outerWidth = function (e) {
-  var e$clientWidth = e.clientWidth
+  var /* [auto-meaningful-name] */e$clientWidth = e.clientWidth
   var n = e.ownerDocument.defaultView.getComputedStyle(e)
   e$clientWidth += (0, o.int)(n.borderLeftWidth)
   return e$clientWidth += (0, o.int)(n.borderRightWidth)
 }
 exports.innerHeight = function (e) {
-  var e$clientHeight = e.clientHeight
+  var /* [auto-meaningful-name] */e$clientHeight = e.clientHeight
   var n = e.ownerDocument.defaultView.getComputedStyle(e)
   e$clientHeight -= (0, o.int)(n.paddingTop)
   return e$clientHeight -= (0, o.int)(n.paddingBottom)
 }
 exports.innerWidth = function (e) {
-  var e$clientWidth = e.clientWidth
+  var /* [auto-meaningful-name] */e$clientWidth = e.clientWidth
   var n = e.ownerDocument.defaultView.getComputedStyle(e)
   e$clientWidth -= (0, o.int)(n.paddingLeft)
   return e$clientWidth -= (0, o.int)(n.paddingRight)

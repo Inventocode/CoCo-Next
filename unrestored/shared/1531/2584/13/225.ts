@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：225
@@ -9,10 +9,10 @@ var r
   var o = /^\s+/
   var a = /\s+$/
   var s = 0
-  var i$round = i.round
-  var i$min = i.min
-  var i$max = i.max
-  var i$random = i.random
+  var /* [auto-meaningful-name] */i$round = i.round
+  var /* [auto-meaningful-name] */i$min = i.min
+  var /* [auto-meaningful-name] */i$max = i.max
+  var /* [auto-meaningful-name] */i$random = i.random
   function d(e, t) {
     t = t || {}
     if ((e = e || "") instanceof d) {
@@ -688,12 +688,12 @@ var r
   }
   d.mostReadable = function (e, t, n) {
     var r
-    var /* [auto-meaningful-name] */nN$includeFallbackColors
+    var /* [auto-meaningful-name] */NN$includeFallbackColors
     var /* [auto-meaningful-name] */n$level
     var /* [auto-meaningful-name] */n$size
     var s = null
     var c = 0
-    nN$includeFallbackColors = (n = n || {}).includeFallbackColors
+    NN$includeFallbackColors = (n = n || {}).includeFallbackColors
     n$level = n.level
     n$size = n.size
     for (var u = 0; u < t.length; u++) {
@@ -705,7 +705,7 @@ var r
     return d.isReadable(e, s, {
       level: n$level,
       size: n$size
-    }) || !nN$includeFallbackColors ? s : (n.includeFallbackColors = false, d.mostReadable(e, ["#fff", "#000"], n))
+    }) || !NN$includeFallbackColors ? s : (n.includeFallbackColors = false, d.mostReadable(e, ["#fff", "#000"], n))
   }
   var B = d.names = {
     aliceblue: "f0f8ff",
@@ -909,11 +909,11 @@ var r
     return P(e) / 255
   }
   var U = function () {
-    var e = "(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)"
-    var t = "[\\s|\\(]+(" + e + ")[,|\\s]+(" + e + ")[,|\\s]+(" + e + ")\\s*\\)?"
-    var n = "[\\s|\\(]+(" + e + ")[,|\\s]+(" + e + ")[,|\\s]+(" + e + ")[,|\\s]+(" + e + ")\\s*\\)?"
+    var /* [auto-meaningful-name] */____d__$__d____d = "(?:[-\\+]?\\d*\\.\\d+%?)|(?:[-\\+]?\\d+%?)"
+    var t = "[\\s|\\(]+(" + ____d__$__d____d + ")[,|\\s]+(" + ____d__$__d____d + ")[,|\\s]+(" + ____d__$__d____d + ")\\s*\\)?"
+    var n = "[\\s|\\(]+(" + ____d__$__d____d + ")[,|\\s]+(" + ____d__$__d____d + ")[,|\\s]+(" + ____d__$__d____d + ")[,|\\s]+(" + ____d__$__d____d + ")\\s*\\)?"
     return {
-      CSS_UNIT: new RegExp(e),
+      CSS_UNIT: new RegExp(____d__$__d____d),
       rgb: new RegExp("rgb" + t),
       rgba: new RegExp("rgba" + n),
       hsl: new RegExp("hsl" + t),

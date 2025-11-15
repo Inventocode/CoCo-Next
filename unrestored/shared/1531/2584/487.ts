@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：487
@@ -12,13 +12,13 @@ export { a as f }
 export { s as c }
 export { c as b }
 export { u as a }
-import r = require("./80/index");
+import /* [auto-meaningful-name] */$_80_index = require("./80/index")
 function o(e) {
   return Array.isArray(e) ? e : undefined !== e ? [e] : []
 }
 function i(e, t) {
-  var t$labelInValue = t.labelInValue
-  var t$combobox = t.combobox
+  var /* [auto-meaningful-name] */t$labelInValue = t.labelInValue
+  var /* [auto-meaningful-name] */t$combobox = t.combobox
   var o = new Map()
   if (undefined === e || "" === e && t$combobox) {
     return [[], o]
@@ -29,8 +29,8 @@ function i(e, t) {
     a = i.filter(function (e) {
       return null !== e
     }).map(function (e) {
-      var e$key = e.key
-      var e$value = e.value
+      var /* [auto-meaningful-name] */e$key = e.key
+      var /* [auto-meaningful-name] */e$value = e.value
       var r = undefined !== e$value ? e$value : e$key
       o.set(r, e)
       return r
@@ -39,11 +39,11 @@ function i(e, t) {
   return [a, o]
 }
 function a(e, t) {
-  var t$optionLabelProp = t.optionLabelProp
-  var t$labelInValue = t.labelInValue
-  var t$prevValueMap = t.prevValueMap
-  var t$options = t.options
-  var t$getLabeledValue = t.getLabeledValue
+  var /* [auto-meaningful-name] */t$optionLabelProp = t.optionLabelProp
+  var /* [auto-meaningful-name] */t$labelInValue = t.labelInValue
+  var /* [auto-meaningful-name] */t$prevValueMap = t.prevValueMap
+  var /* [auto-meaningful-name] */t$options = t.options
+  var /* [auto-meaningful-name] */t$getLabeledValue = t.getLabeledValue
   var s = e
   if (t$labelInValue) {
     s = s.map(function (e) {
@@ -59,7 +59,7 @@ function a(e, t) {
 }
 function s(e, t) {
   var n
-  var o = r.a(t)
+  var o = $_80_index.a(t)
   for (n = e.length - 1; n >= 0 && e[n].disabled; n -= 1) {
     ;
   }

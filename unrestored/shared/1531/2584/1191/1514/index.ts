@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1514
@@ -263,8 +263,8 @@ function C(e) {
     var n
     var r = I(e)
     if (t) {
-      var iThis$constructor = I(this).constructor
-      n = Reflect.construct(r, arguments, iThis$constructor)
+      var /* [auto-meaningful-name] */IThis$constructor = I(this).constructor
+      n = Reflect.construct(r, arguments, IThis$constructor)
     } else {
       n = r.apply(this, arguments)
     }
@@ -378,9 +378,9 @@ var j = function (e) {
         slackY: 0
       }
       if (Boolean(r.props.position)) {
-        var r$props$position = r.props.position
-        var r$props$position$x = r$props$position.x
-        var r$props$position$y = r$props$position.y
+        var /* [auto-meaningful-name] */r$props$position = r.props.position
+        var /* [auto-meaningful-name] */r$props$position$x = r$props$position.x
+        var /* [auto-meaningful-name] */r$props$position$y = r$props$position.y
         n.x = r$props$position$x
         n.y = r$props$position$y
       }
@@ -404,8 +404,8 @@ var j = function (e) {
   O(n, null, [{
     key: "getDerivedStateFromProps",
     value: function (e, t) {
-      var e$position = e.position
-      var t$prevPropsPosition = t.prevPropsPosition
+      var /* [auto-meaningful-name] */e$position = e.position
+      var /* [auto-meaningful-name] */t$prevPropsPosition = t.prevPropsPosition
       return !e$position || t$prevPropsPosition && e$position.x === t$prevPropsPosition.x && e$position.y === t$prevPropsPosition.y ? null : ((0, d.default)("Draggable: getDerivedStateFromProps %j", {
         position: e$position,
         prevPropsPosition: t$prevPropsPosition
@@ -441,16 +441,16 @@ var j = function (e) {
     key: "render",
     value: function () {
       var e
-      var this$props = this.props
+      var /* [auto-meaningful-name] */this$props = this.props
       this$props.axis
       this$props.bounds
-      var this$props$children = this$props.children
-      var this$props$defaultPosition = this$props.defaultPosition
-      var this$props$defaultClassName = this$props.defaultClassName
-      var this$props$defaultClassNameDragging = this$props.defaultClassNameDragging
-      var this$props$defaultClassNameDragged = this$props.defaultClassNameDragged
-      var this$props$position = this$props.position
-      var this$props$positionOffset = this$props.positionOffset
+      var /* [auto-meaningful-name] */this$props$children = this$props.children
+      var /* [auto-meaningful-name] */this$props$defaultPosition = this$props.defaultPosition
+      var /* [auto-meaningful-name] */this$props$defaultClassName = this$props.defaultClassName
+      var /* [auto-meaningful-name] */this$props$defaultClassNameDragging = this$props.defaultClassNameDragging
+      var /* [auto-meaningful-name] */this$props$defaultClassNameDragged = this$props.defaultClassNameDragged
+      var /* [auto-meaningful-name] */this$props$position = this$props.position
+      var /* [auto-meaningful-name] */this$props$positionOffset = this$props.positionOffset
       this$props.scale
       var h = g(this$props, ["axis", "bounds", "children", "defaultPosition", "defaultClassName", "defaultClassNameDragging", "defaultClassNameDragged", "position", "positionOffset", "scale"])
       var _ = {}

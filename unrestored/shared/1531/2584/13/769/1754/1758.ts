@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1758
@@ -48,19 +48,19 @@ function u(e) {
   return e
 }
 var l = function (e) {
-  var e$prefixCls = e.prefixCls
-  var e$vertical = e.vertical
-  var e$reverse = e.reverse
-  var e$marks = e.marks
-  var e$dots = e.dots
-  var e$step = e.step
-  var e$included = e.included
-  var e$lowerBound = e.lowerBound
-  var e$upperBound = e.upperBound
-  var e$max = e.max
-  var e$min = e.min
-  var e$dotStyle = e.dotStyle
-  var e$activeDotStyle = e.activeDotStyle
+  var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
+  var /* [auto-meaningful-name] */e$vertical = e.vertical
+  var /* [auto-meaningful-name] */e$reverse = e.reverse
+  var /* [auto-meaningful-name] */e$marks = e.marks
+  var /* [auto-meaningful-name] */e$dots = e.dots
+  var /* [auto-meaningful-name] */e$step = e.step
+  var /* [auto-meaningful-name] */e$included = e.included
+  var /* [auto-meaningful-name] */e$lowerBound = e.lowerBound
+  var /* [auto-meaningful-name] */e$upperBound = e.upperBound
+  var /* [auto-meaningful-name] */e$max = e.max
+  var /* [auto-meaningful-name] */e$min = e.min
+  var /* [auto-meaningful-name] */e$dotStyle = e.dotStyle
+  var /* [auto-meaningful-name] */e$activeDotStyle = e.activeDotStyle
   var m = e$max - e$min
   var y = function (e, t, n, r, i, o) {
     (0, s.default)(!n || r > 0, "`Slider[step]` should be a positive number in order to make Slider[dots] work.")

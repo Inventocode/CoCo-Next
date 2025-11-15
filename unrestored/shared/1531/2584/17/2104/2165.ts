@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2165
@@ -92,8 +92,8 @@ var a = function (e) {
     return 1
   }
   t.prototype.on_click = function (e) {
-    var /* [auto-meaningful-name] */this$source_block$addMutation
-    var /* [auto-meaningful-name] */this$source_block$removeMutation
+    var /* [auto-meaningful-name] */o$addMutation
+    var /* [auto-meaningful-name] */o$removeMutation
     if (this.source_block) {
       if (this.rect_element) {
         this.rect_element.style.fill = "rgba(255, 255, 255, .15)"
@@ -111,14 +111,14 @@ var a = function (e) {
         }
         var i = this.events.get_group()
         this.events.set_group(i || true)
-        var this$source_block = this.source_block
+        var /* [auto-meaningful-name] */this$source_block = this.source_block
         if (this.is_add) {
-          if (!(null === (this$source_block$addMutation = this$source_block.addMutation) || undefined === this$source_block$addMutation)) {
-            this$source_block$addMutation.call(this$source_block, this.index_, this.name)
+          if (!(null === (o$addMutation = this$source_block.addMutation) || undefined === o$addMutation)) {
+            o$addMutation.call(this$source_block, this.index_, this.name)
           }
         } else {
-          if (!(null === (this$source_block$removeMutation = this$source_block.removeMutation) || undefined === this$source_block$removeMutation)) {
-            this$source_block$removeMutation.call(this$source_block, this.index_, this.name)
+          if (!(null === (o$removeMutation = this$source_block.removeMutation) || undefined === o$removeMutation)) {
+            o$removeMutation.call(this$source_block, this.index_, this.name)
           }
         }
         this$source_block.bump_neighbours()

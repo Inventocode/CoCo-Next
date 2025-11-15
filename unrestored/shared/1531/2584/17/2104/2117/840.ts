@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：840
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.BaseEvent = undefined
 var r = require("tslib")
-var i = require("../../../4/127")
+var i = require("../../../1036/127")
 var o = function () {
   function e() {
     this._workspace_id = ""

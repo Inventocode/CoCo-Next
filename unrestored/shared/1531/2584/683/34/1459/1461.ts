@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1461
@@ -15,10 +15,10 @@ exports.a = function (e) {
     if (0 === r.length) {
       return t([])
     }
-    var r$length = r.length
+    var /* [auto-meaningful-name] */r$length = r.length
     function o(e, n) {
       if (n && ("object" === typeof n || "function" === typeof n)) {
-        var n$then = n.then
+        var /* [auto-meaningful-name] */n$then = n.then
         if ("function" === typeof n$then) {
           return void n$then.call(n, function (t) {
             o(e, t)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：406
@@ -83,7 +83,7 @@ var w = function () {
     var f = i.getECBlocks()
     try {
       for (var h = p(f), l = h.next(); !l.done; l = h.next()) {
-        var l$value = l.value
+        var /* [auto-meaningful-name] */l$value = l.value
         s += l$value.getCount() * (l$value.getDataCodewords() + c)
       }
     } catch (g) {
@@ -132,7 +132,7 @@ var w = function () {
     }
     try {
       for (var i = p(t.VERSIONS), a = i.next(); !a.done; a = i.next()) {
-        var a$value = a.value
+        var /* [auto-meaningful-name] */a$value = a.value
         if (a$value.symbolSizeRows === e && a$value.symbolSizeColumns === r) {
           return a$value
         }
@@ -514,7 +514,7 @@ var A = function () {
     var d = 0
     try {
       for (var p = m(c), g = p.next(); !g.done; g = p.next()) {
-        for (var g$value = g.value, w = 0; w < g$value.getCount(); w++) {
+        for (var /* [auto-meaningful-name] */g$value = g.value, w = 0; w < g$value.getCount(); w++) {
           var _ = g$value.getDataCodewords()
           var A = u.getECCodewords() + _
           l[d++] = new t(_, new Uint8Array(A))
@@ -548,7 +548,7 @@ var A = function () {
     for (S = 0; S < O; S++) {
       l[S].codewords[E - 1] = e[I++]
     }
-    var l0$codewords$length = l[0].codewords.length
+    var /* [auto-meaningful-name] */l0$codewords$length = l[0].codewords.length
     for (w = E; w < l0$codewords$length; w++) {
       for (S = 0; S < d; S++) {
         var R = T ? (S + 8) % d : S
@@ -623,7 +623,7 @@ var I = function () {
         }
       }
     }
-    for (var f = new Uint8Array(u), a$length = a.length, l = 0; l < a$length; l++) {
+    for (var f = new Uint8Array(u), /* [auto-meaningful-name] */a$length = a.length, l = 0; l < a$length; l++) {
       var d = a[l]
       var p = d.getCodewords()
       var g = d.getNumDataCodewords()

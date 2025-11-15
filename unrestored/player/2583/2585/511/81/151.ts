@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：151
@@ -10,9 +10,9 @@ function r(t, e) {
   if (undefined === e) {
     e = t.constructor
   }
-  var error$captureStackTrace = Error.captureStackTrace
-  if (error$captureStackTrace) {
-    error$captureStackTrace(t, e)
+  var /* [auto-meaningful-name] */Error$captureStackTrace = Error.captureStackTrace
+  if (Error$captureStackTrace) {
+    Error$captureStackTrace(t, e)
   }
 }
 var i = function () {
@@ -37,7 +37,7 @@ var i = function () {
 }()
 var o = function (t) {
   function e(e) {
-    var this$constructor = this.constructor
+    var /* [auto-meaningful-name] */this$constructor = this.constructor
     var i = t.call(this, e) || this
     Object.defineProperty(i, "name", {
       value: this$constructor.name,
@@ -45,9 +45,9 @@ var o = function (t) {
       configurable: true
     });
     (function (t, e) {
-      var object$setPrototypeOf = Object.setPrototypeOf
-      if (object$setPrototypeOf) {
-        object$setPrototypeOf(t, e)
+      var /* [auto-meaningful-name] */Object$setPrototypeOf = Object.setPrototypeOf
+      if (Object$setPrototypeOf) {
+        Object$setPrototypeOf(t, e)
       } else {
         t.__proto__ = e
       }

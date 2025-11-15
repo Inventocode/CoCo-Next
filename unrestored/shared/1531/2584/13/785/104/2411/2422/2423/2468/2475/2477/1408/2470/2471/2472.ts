@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2472
@@ -12,7 +12,7 @@ function i(e, t) {
   var n = function n() {
     var r = arguments
     var i = t ? t.apply(this, r) : r[0]
-    var n$cache = n.cache
+    var /* [auto-meaningful-name] */n$cache = n.cache
     if (n$cache.has(i)) {
       return n$cache.get(i)
     }

@@ -1,5 +1,5 @@
 import path from "path"
-import { unpack, SetPath } from "./unpack"
+import { unpack, SetPath } from "./core"
 
 const distPath: string = path.resolve("public", "creation.codemao.cn", "coco", "home", "dist")
 

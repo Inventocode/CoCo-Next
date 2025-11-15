@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：782
@@ -450,11 +450,11 @@ module.exports = function (e, t) {
     }, {
       key: "getDimensions",
       value: function () {
-        var this$props = this.props
-        var this$props$width = this$props.width
-        var this$props$height = this$props.height
-        var this$props$rotate = this$props.rotate
-        var this$props$border = this$props.border
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$width = this$props.width
+        var /* [auto-meaningful-name] */this$props$height = this$props.height
+        var /* [auto-meaningful-name] */this$props$rotate = this$props.rotate
+        var /* [auto-meaningful-name] */this$props$border = this$props.border
         var o = {}
         var a = h(this.getBorders(this$props$border), 2)
         var s = a[0]
@@ -482,7 +482,7 @@ module.exports = function (e, t) {
       key: "getImage",
       value: function () {
         var e = this.getCroppingRect()
-        var this$state$image = this.state.image
+        var /* [auto-meaningful-name] */this$state$image = this.state.image
         e.x *= this$state$image.resource.width
         e.y *= this$state$image.resource.height
         e.width *= this$state$image.resource.width
@@ -513,8 +513,8 @@ module.exports = function (e, t) {
       key: "getImageScaledToCanvas",
       value: function () {
         var e = this.getDimensions()
-        var e$width = e.width
-        var e$height = e.height
+        var /* [auto-meaningful-name] */e$width = e.width
+        var /* [auto-meaningful-name] */e$height = e.height
         var r = document.createElement("canvas")
         if (this.isVertical()) {
           r.width = e$height
@@ -673,13 +673,13 @@ module.exports = function (e, t) {
         var a
         var s
         var c
-        var this$props$borderRadius = this.props.borderRadius
+        var /* [auto-meaningful-name] */this$props$borderRadius = this.props.borderRadius
         var l = this.getDimensions()
         var f = h(this.getBorders(l.border), 2)
         var d = f[0]
         var p = f[1]
-        var l$canvas$height = l.canvas.height
-        var l$canvas$width = l.canvas.width
+        var /* [auto-meaningful-name] */l$canvas$height = l.canvas.height
+        var /* [auto-meaningful-name] */l$canvas$width = l.canvas.width
         this$props$borderRadius = Math.max(this$props$borderRadius, 0)
         this$props$borderRadius = Math.min(this$props$borderRadius, l$canvas$width / 2 - d, l$canvas$height / 2 - p)
         e.beginPath()
@@ -708,7 +708,7 @@ module.exports = function (e, t) {
     }, {
       key: "render",
       value: function () {
-        var this$props = this.props
+        var /* [auto-meaningful-name] */this$props = this.props
         this$props.scale
         this$props.rotate
         this$props.image
@@ -719,7 +719,7 @@ module.exports = function (e, t) {
         this$props.position
         this$props.color
         this$props.backgroundColor
-        var this$props$style = this$props.style
+        var /* [auto-meaningful-name] */this$props$style = this$props.style
         this$props.crossOrigin
         this$props.onLoadFailure
         this$props.onLoadSuccess

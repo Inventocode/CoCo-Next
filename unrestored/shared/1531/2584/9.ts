@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：9
@@ -6,11 +6,11 @@
 
 "use strict"
 
-import r = require("./42/index");
+import /* [auto-meaningful-name] */$_42_index = require("./42/index")
 export { g as dc } from "./42/index"
-import o = require("./448/index");
+import /* [auto-meaningful-name] */$_448_index = require("./448/index")
 export { a as A } from "./448/index"
-import i = require("./35");
+import i = require("./35")
 export { a } from "./35"
 export { b } from "./35"
 export { c } from "./35"
@@ -106,7 +106,7 @@ export { ac as Zb } from "./35"
 export { bc as ac } from "./35"
 export { cc as bc } from "./35"
 export { dc as cc } from "./35"
-import a = require("./61");
+import a = require("./61")
 export { a as f } from "./61"
 export { b as g } from "./61"
 export { c as h } from "./61"

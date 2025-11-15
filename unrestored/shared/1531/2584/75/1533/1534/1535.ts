@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1535
@@ -49,12 +49,12 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
   }
   s = exports.unstable_forceFrameRate = function () {}
 } else {
-  var window$performance = window.performance
-  var window$Date = window.Date
-  var window$setTimeout = window.setTimeout
-  var window$clearTimeout = window.clearTimeout
+  var /* [auto-meaningful-name] */window$performance = window.performance
+  var /* [auto-meaningful-name] */window$Date = window.Date
+  var /* [auto-meaningful-name] */window$setTimeout = window.setTimeout
+  var /* [auto-meaningful-name] */window$clearTimeout = window.clearTimeout
   if ("undefined" !== typeof console) {
-    var window$cancelAnimationFrame = window.cancelAnimationFrame
+    var /* [auto-meaningful-name] */window$cancelAnimationFrame = window.cancelAnimationFrame
     if ("function" !== typeof window.requestAnimationFrame) {
       console.error("This browser doesn't support requestAnimationFrame. Make sure that you load a polyfill in older browsers. https://fb.me/react-polyfills")
     }
@@ -89,20 +89,20 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
     }
   }
   var E = new MessageChannel()
-  var e$port2 = E.port2
+  var /* [auto-meaningful-name] */E$port2 = E.port2
   E.port1.onmessage = function () {
     if (null !== m) {
       var e = exports.unstable_now()
       w = e + b
       try {
         if (m(true, e)) {
-          e$port2.postMessage(null)
+          E$port2.postMessage(null)
         } else {
           v = false
           m = null
         }
       } catch (n) {
-        e$port2.postMessage(null)
+        E$port2.postMessage(null)
         throw n
       }
     } else {
@@ -113,7 +113,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
     m = e
     if (!v) {
       v = true
-      e$port2.postMessage(null)
+      E$port2.postMessage(null)
     }
   }
   i = function (e, n) {
@@ -127,7 +127,7 @@ if ("undefined" === typeof window || "function" !== typeof MessageChannel) {
   }
 }
 function C(e, t) {
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   e.push(t)
   e: for (;;) {
     var r = e$length - 1 >>> 1
@@ -149,7 +149,7 @@ function k(e) {
     var n = e.pop()
     if (n !== t) {
       e[0] = n
-      e: for (var r = 0, e$length = e.length; r < e$length;) {
+      e: for (var r = 0, /* [auto-meaningful-name] */e$length = e.length; r < e$length;) {
         var o = 2 * (r + 1) - 1
         var a = e[o]
         var s = o + 1
@@ -230,11 +230,11 @@ function L(e, n) {
   var r = F
   try {
     for (M(n), I = O(T); null !== I && (!(I.expirationTime > n) || e && !a());) {
-      var i$callback = I.callback
-      if (null !== i$callback) {
+      var /* [auto-meaningful-name] */I$callback = I.callback
+      if (null !== I$callback) {
         I.callback = null
         F = I.priorityLevel
-        var c = i$callback(I.expirationTime <= n)
+        var c = I$callback(I.expirationTime <= n)
         n = exports.unstable_now()
         if ("function" === typeof c) {
           I.callback = c
@@ -343,7 +343,7 @@ exports.unstable_runWithPriority = function (e, t) {
 exports.unstable_scheduleCallback = function (e, n, a) {
   var s = exports.unstable_now()
   if ("object" === typeof a && null !== a) {
-    var a$delay = a.delay
+    var /* [auto-meaningful-name] */a$delay = a.delay
     a$delay = "number" === typeof a$delay && 0 < a$delay ? s + a$delay : s
     a = "number" === typeof a.timeout ? a.timeout : U(e)
   } else {

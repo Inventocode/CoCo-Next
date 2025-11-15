@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：94
@@ -6,7 +6,7 @@
 
 "use strict"
 
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -19,7 +19,7 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import i = require("../8");
+import i = require("../8")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -34,12 +34,12 @@ var a = function __importDefault(module) {
 }(i)
 require("./830")
 var s = function (e) {
-  var e$type = e.type
-  var e$className = e.className
-  var e$spinning = e.spinning
-  var e$subColor = e.subColor
-  var e$subClassName = e.subClassName
-  var e$twoTone = e.twoTone
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$spinning = e.spinning
+  var /* [auto-meaningful-name] */e$subColor = e.subColor
+  var /* [auto-meaningful-name] */e$subClassName = e.subClassName
+  var /* [auto-meaningful-name] */e$twoTone = e.twoTone
   var l = o.a.createElement("use", {
     xlinkHref: "#".concat(e$type)
   })

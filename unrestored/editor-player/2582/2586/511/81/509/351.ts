@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：351
@@ -116,16 +116,16 @@ var s = function (t) {
     var o = t[0] + t[1]
     var i = o / (o + t[2] + t[3])
     if (i >= e.MIN_FINDER_PATTERN_RATIO && i <= e.MAX_FINDER_PATTERN_RATIO) {
-      var number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER
-      var number$MIN_SAFE_INTEGER = Number.MIN_SAFE_INTEGER
+      var /* [auto-meaningful-name] */Number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER
+      var /* [auto-meaningful-name] */Number$MIN_SAFE_INTEGER = Number.MIN_SAFE_INTEGER
       try {
         for (var c = u(t), f = c.next(); !f.done; f = c.next()) {
-          var f$value = f.value
-          if (f$value > number$MIN_SAFE_INTEGER) {
-            number$MIN_SAFE_INTEGER = f$value
+          var /* [auto-meaningful-name] */f$value = f.value
+          if (f$value > Number$MIN_SAFE_INTEGER) {
+            Number$MIN_SAFE_INTEGER = f$value
           }
-          if (f$value < number$MAX_SAFE_INTEGER) {
-            number$MAX_SAFE_INTEGER = f$value
+          if (f$value < Number$MAX_SAFE_INTEGER) {
+            Number$MAX_SAFE_INTEGER = f$value
           }
         }
       } catch (l) {
@@ -143,7 +143,7 @@ var s = function (t) {
           }
         }
       }
-      return number$MIN_SAFE_INTEGER < 10 * number$MAX_SAFE_INTEGER
+      return Number$MIN_SAFE_INTEGER < 10 * Number$MAX_SAFE_INTEGER
     }
     return false
   }

@@ -78,11 +78,13 @@ function rewriteURL(url: URL): URL {
         .replace(/(?<=^https?:\/\/)dev-/, "")
         .replace(/(?<=^https?:\/\/)backend-dev/, "api")
         + url.pathname
-    if (url.protocol == "https:") {
-        url.protocol = "http:"
-    }
-    if (url.protocol == "wss:") {
-        url.protocol = "ws:"
+    if (location.protocol == "http:") {
+        if (url.protocol == "https:") {
+            url.protocol = "http:"
+        }
+        if (url.protocol == "wss:") {
+            url.protocol = "ws:"
+        }
     }
     url.host = location.host
     return url

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：17
@@ -16,8 +16,8 @@ exports.I = i
 var o = require("./640/index")
 var a = require("./642")
 var s = require("./2104/index")
-var require$1322$version = require("./1322").version
-console.log("%c⭐️ Codemao Blink - v" + require$1322$version + " ⭐️", "\n  color: #FFDB29;\n  text-shadow: 0 1px 0 #BF7000;\n  padding: 140px 10px 20px 35px;\n  background: no-repeat left / 150px 150px url(\"http://kn-cdn.codemao.cn/blink/blink-main-compressed.jpeg\");\n  ")
+var /* [auto-meaningful-name] */require$_1322$version = require("./1322").version
+console.log("%c⭐️ Codemao Blink - v" + require$_1322$version + " ⭐️", "\n  color: #FFDB29;\n  text-shadow: 0 1px 0 #BF7000;\n  padding: 140px 10px 20px 35px;\n  background: no-repeat left / 150px 150px url(\"http://kn-cdn.codemao.cn/blink/blink-main-compressed.jpeg\");\n  ")
 var u = (0, o.get_instance)();
 (0, s.bind_di_modules)(u)
 exports.Blink = u.get(a.BINDING.Blink)

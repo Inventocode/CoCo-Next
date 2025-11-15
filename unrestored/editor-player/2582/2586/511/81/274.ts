@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：274
@@ -15,7 +15,7 @@ var a = function () {
       throw new i.a()
     }
     this.field = t
-    var e$length = e.length
+    var /* [auto-meaningful-name] */e$length = e.length
     if (e$length > 1 && 0 === e[0]) {
       for (var n = 1; n < e$length && 0 === e[n];) {
         n++
@@ -47,19 +47,19 @@ var a = function () {
       return this.getCoefficient(0)
     }
     var e
-    var this$coefficients = this.coefficients
+    var /* [auto-meaningful-name] */this$coefficients = this.coefficients
     if (1 === t) {
       e = 0
-      for (var o = 0, _this$coefficients$length = this$coefficients.length; o !== _this$coefficients$length; o++) {
+      for (var o = 0, /* [auto-meaningful-name] */this$coefficients$length = this$coefficients.length; o !== this$coefficients$length; o++) {
         var a = this$coefficients[o]
         e = n.a.addOrSubtract(e, a)
       }
       return e
     }
     e = this$coefficients[0]
-    var this$coefficients$length = this$coefficients.length
-    var this$field = this.field
-    for (o = 1; o < this$coefficients$length; o++) {
+    var /* [auto-meaningful-name] */_this$coefficients$length = this$coefficients.length
+    var /* [auto-meaningful-name] */this$field = this.field
+    for (o = 1; o < _this$coefficients$length; o++) {
       e = n.a.addOrSubtract(this$field.multiply(t, e), this$coefficients[o])
     }
     return e
@@ -74,8 +74,8 @@ var a = function () {
     if (e.isZero()) {
       return this
     }
-    var this$coefficients = this.coefficients
-    var e$coefficients = e.coefficients
+    var /* [auto-meaningful-name] */this$coefficients = this.coefficients
+    var /* [auto-meaningful-name] */e$coefficients = e.coefficients
     if (this$coefficients.length > e$coefficients.length) {
       var u = this$coefficients
       this$coefficients = e$coefficients
@@ -96,7 +96,7 @@ var a = function () {
     if (this.isZero() || e.isZero()) {
       return this.field.getZero()
     }
-    for (var this$coefficients = this.coefficients, this$coefficients$length = this$coefficients.length, e$coefficients = e.coefficients, e$coefficients$length = e$coefficients.length, s = new Int32Array(this$coefficients$length + e$coefficients$length - 1), this$field = this.field, f = 0; f < this$coefficients$length; f++) {
+    for (var /* [auto-meaningful-name] */this$coefficients = this.coefficients, /* [auto-meaningful-name] */this$coefficients$length = this$coefficients.length, /* [auto-meaningful-name] */e$coefficients = e.coefficients, /* [auto-meaningful-name] */e$coefficients$length = e$coefficients.length, s = new Int32Array(this$coefficients$length + e$coefficients$length - 1), /* [auto-meaningful-name] */this$field = this.field, f = 0; f < this$coefficients$length; f++) {
       for (var h = this$coefficients[f], l = 0; l < e$coefficients$length; l++) {
         s[f + l] = n.a.addOrSubtract(s[f + l], this$field.multiply(h, e$coefficients[l]))
       }
@@ -110,7 +110,7 @@ var a = function () {
     if (1 === e) {
       return this
     }
-    for (var this$coefficients$length = this.coefficients.length, this$field = this.field, o = new Int32Array(this$coefficients$length), this$coefficients = this.coefficients, a = 0; a < this$coefficients$length; a++) {
+    for (var /* [auto-meaningful-name] */this$coefficients$length = this.coefficients.length, /* [auto-meaningful-name] */this$field = this.field, o = new Int32Array(this$coefficients$length), /* [auto-meaningful-name] */this$coefficients = this.coefficients, a = 0; a < this$coefficients$length; a++) {
       o[a] = this$field.multiply(this$coefficients[a], e)
     }
     return new t(this$field, o)
@@ -122,7 +122,7 @@ var a = function () {
     if (0 === r) {
       return this.field.getZero()
     }
-    for (var this$coefficients = this.coefficients, this$coefficients$length = this$coefficients.length, a = new Int32Array(this$coefficients$length + e), this$field = this.field, s = 0; s < this$coefficients$length; s++) {
+    for (var /* [auto-meaningful-name] */this$coefficients = this.coefficients, /* [auto-meaningful-name] */this$coefficients$length = this$coefficients.length, a = new Int32Array(this$coefficients$length + e), /* [auto-meaningful-name] */this$field = this.field, s = 0; s < this$coefficients$length; s++) {
       a[s] = this$field.multiply(this$coefficients[s], r)
     }
     return new t(this$field, a)
@@ -134,7 +134,7 @@ var a = function () {
     if (t.isZero()) {
       throw new i.a("Divide by 0")
     }
-    for (var this$field = this.field, r = this$field.getZero(), n = this, o = t.getCoefficient(t.getDegree()), a = this$field.inverse(o); n.getDegree() >= t.getDegree() && !n.isZero();) {
+    for (var /* [auto-meaningful-name] */this$field = this.field, r = this$field.getZero(), n = this, o = t.getCoefficient(t.getDegree()), a = this$field.inverse(o); n.getDegree() >= t.getDegree() && !n.isZero();) {
       var u = n.getDegree() - t.getDegree()
       var s = this$field.multiply(n.getCoefficient(n.getDegree()), a)
       var c = t.multiplyByMonomial(u, s)

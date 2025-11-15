@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：206
@@ -8,7 +8,7 @@
 
 export { P as a }
 export { W as b }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,22 +21,22 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("../7");
-import a = require("../27");
-import s = require("../40");
-import c = require("../17/index");
-import l = require("../26/208/index");
-import u = require("../4/index");
-import d = require("../../../../../src/editor/block/generate");
-import p = require("../26/426");
-import f = require("../15");
-import h = require("../9");
-import m = require("../38/139");
-import g = require("../47");
-import _ = require("../25/index");
-import v = require("../6");
-import b = require("../11");
-import y = require("./776/index");
+import i = require("../7")
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */$$_40 = require("../40")
+import /* [auto-meaningful-name] */$$_17_index = require("../17/index")
+import /* [auto-meaningful-name] */$_208_index = require("./208/index")
+import u = require("../4")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_generate = require("../../../../../src/editor/block/generate")
+import /* [auto-meaningful-name] */$_426 = require("./426")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
+import h = require("../9")
+import /* [auto-meaningful-name] */$_139 = require("./139")
+import /* [auto-meaningful-name] */$$_47 = require("../47")
+import /* [auto-meaningful-name] */$$_25_index = require("../25/index")
+import v = require("../6")
+import /* [auto-meaningful-name] */$$_11 = require("../11")
+import /* [auto-meaningful-name] */$_776_index = require("./776/index")
 var E = ["loopFinitely", "loopConditionally", "loopInfinitely", "loopStep", "loopStepClosedRange", "listForEach"]
 var O = ["breakLoop", "continueLoop"]
 var w = {
@@ -62,7 +62,7 @@ var w = {
           if ("CallExpression" !== e.type) {
             return false
           }
-          var e$callee = e.callee
+          var /* [auto-meaningful-name] */e$callee = e.callee
           return "MemberExpression" === e$callee.type && "Identifier" === e$callee.object.type && "Identifier" === e$callee.property.type && !e$callee.computed && 0 !== e.arguments.length && ("FunctionExpression" === e.arguments[0].type || "ArrowFunctionExpression" === e.arguments[0].type) && "asyncScheduler" === e$callee.object.name && E.includes(e$callee.property.name)
         }(t)) {
           n = true
@@ -70,7 +70,7 @@ var w = {
           if ("CallExpression" !== e.type) {
             return false
           }
-          var e$callee = e.callee
+          var /* [auto-meaningful-name] */e$callee = e.callee
           return "MemberExpression" === e$callee.type && "Identifier" === e$callee.object.type && "Identifier" === e$callee.property.type && !e$callee.computed && "asyncScheduler" === e$callee.object.name && O.includes(e$callee.property.name)
         }(t)) {
           var o
@@ -89,7 +89,7 @@ var C = /([^=]+)=([^;]+);?/g
 var T = {
   create: function (e) {
     var t = e.getSourceCode()
-    var e$options0$screen = e.options[0].screen
+    var /* [auto-meaningful-name] */e$options0$screen = e.options[0].screen
     var r = e.options[1]
     var o = new Set(e$options0$screen.widgetIds.concat(e$options0$screen.invisibleWidgetIds, r))
     return {
@@ -97,7 +97,7 @@ var T = {
         t.getAllComments().filter(function (e) {
           return "Block" === e.type
         }).forEach(function (t) {
-          var functionEForVarTVarNC$execEIfNBreakTN1$trimN2$trimReturnTT$value$widgetId = function (e) {
+          var /* [auto-meaningful-name] */functionEForVarTVarNC$execEIfNBreakTN1$trimN2$trimReturnTT$value$widgetId = function (e) {
             for (var t = {};;) {
               var n = C.exec(e)
               if (!n) {
@@ -118,10 +118,10 @@ var T = {
     }
   }
 }
-var S = new y.Linter()
+var S = new $_776_index.Linter()
 S.defineRule("no-loop-control-outside-loop", w)
 S.defineRule("widgets-must-exists", T)
-var I = b.a({
+var I = $$_11.a({
   "consistent-return": "warn"
 }, "no-loop-control-outside-loop", "error")
 function A(e, t, n, r) {
@@ -141,7 +141,7 @@ function A(e, t, n, r) {
       sourceType: "module",
       ecmaFeatures: {}
     },
-    rules: v.a(v.a({}, I), {}, b.a({}, "widgets-must-exists", ["error", {
+    rules: v.a(v.a({}, I), {}, $$_11.a({}, "widgets-must-exists", ["error", {
       screen: t
     }, n])),
     env: {
@@ -149,9 +149,9 @@ function A(e, t, n, r) {
     }
   })
 }
-import j = require("../323");
-import N = require("../55");
-import R = require("../28/index");
+import /* [auto-meaningful-name] */$$_323 = require("../323")
+import /* [auto-meaningful-name] */$$_55 = require("../55")
+import /* [auto-meaningful-name] */$$_28_index = require("../28/index")
 var k = ["Coco", "AsyncScheduler", "asyncScheduler"]
 function x(e) {
   var t = /Expected to return a value at the end of async function '(.+)'./.exec(e)
@@ -159,11 +159,11 @@ function x(e) {
     return t[1]
   }
 }
-var D = new RegExp("return \\/\\* blockId=(\\w+);blockType=".concat(l.PROCEDURE_BLOCK_TYPES.RETURN, " \\*\\/"))
+var D = new RegExp("return \\/\\* blockId=(\\w+);blockType=".concat($_208_index.PROCEDURE_BLOCK_TYPES.RETURN, " \\*\\/"))
 function M(e, t) {
   var n = new RegExp("await (?:Coco.tryExecute\\()?".concat(e.map(function (e) {
     return e.replace(/\$/g, "\\$")
-  }).join("|"), " \\/\\* blockId=(\\w+);blockType=").concat(l.PROCEDURE_BLOCK_TYPES.CALL_RETURN, " \\*\\/")).exec(t)
+  }).join("|"), " \\/\\* blockId=(\\w+);blockType=").concat($_208_index.PROCEDURE_BLOCK_TYPES.CALL_RETURN, " \\*\\/")).exec(t)
   if (n) {
     return n[1]
   }
@@ -172,7 +172,7 @@ function L(e, t, n, r, o, i) {
   var a = e + "\n\n" + t
   var s = a.split(/\n{2,}/)
   var c = o.id
-  var l = [].concat(k, _.a(n))
+  var l = [].concat(k, $$_25_index.a(n))
   var u = function (e) {
     var t = D.exec(e)
     if (t) {
@@ -180,23 +180,23 @@ function L(e, t, n, r, o, i) {
     }
   }(e)
   if (u) {
-    throw new m.b(m.a.RETURN_NOT_IN_FUNCTION, c, u, "returnNotInFunction")
+    throw new $_139.b($_139.a.RETURN_NOT_IN_FUNCTION, c, u, "returnNotInFunction")
   }
   var d
-  var p = g.a(s)
+  var p = $$_47.a(s)
   try {
     for (p.s(); !(d = p.n()).done;) {
-      var d$value = d.value
+      var /* [auto-meaningful-name] */d$value = d.value
       if (d$value.trim().length) {
         var h
         var v = A(d$value, o, i, l)
-        var b = g.a(v)
+        var b = $$_47.a(v)
         try {
           for (b.s(); !(h = b.n()).done;) {
-            var h$value = h.value
-            var E = j.a(d$value, h$value)
+            var /* [auto-meaningful-name] */h$value = h.value
+            var E = $$_323.a(d$value, h$value)
             if ("no-undef" === h$value.ruleId) {
-              throw new m.b(m.a.NO_UNDEF, c, E.blockId, "noUndef", E)
+              throw new $_139.b($_139.a.NO_UNDEF, c, E.blockId, "noUndef", E)
             }
             if ("consistent-return" === h$value.ruleId) {
               var O = x(h$value.message)
@@ -206,12 +206,12 @@ function L(e, t, n, r, o, i) {
               }
             } else {
               if ("no-loop-control-outside-loop" === h$value.ruleId) {
-                throw new m.b(m.a.LOOP_CONTROL_NOT_IN_LOOP, c, E.blockId, "loopControlOutsideLoop", E)
+                throw new $_139.b($_139.a.LOOP_CONTROL_NOT_IN_LOOP, c, E.blockId, "loopControlOutsideLoop", E)
               }
               if ("widgets-must-exists" === h$value.ruleId) {
-                N.b.push({
+                $$_55.b.push({
                   type: "warning",
-                  message: R.o("widgetNotExists"),
+                  message: $$_28_index.o("widgetNotExists"),
                   screenId: c,
                   blockId: E.blockId
                 })
@@ -242,17 +242,17 @@ function L(e, t, n, r, o, i) {
     }
   })
   if (u = M(T, a)) {
-    throw new m.b(m.a.NO_RETURN_FUNCTION, c, u, "noReturnFunction")
+    throw new $_139.b($_139.a.NO_RETURN_FUNCTION, c, u, "noReturnFunction")
   }
   if (u = M(C, a)) {
-    throw new m.b(m.a.BRANCH_RETURN_FUNCTION, c, u, "branchReturnFunction")
+    throw new $_139.b($_139.a.BRANCH_RETURN_FUNCTION, c, u, "branchReturnFunction")
   }
 }
 var P
-import B = require("./725");
+import /* [auto-meaningful-name] */$_725_index = require("./725/index")
 var F = function () {
   function e(t, n, r, o, i, s) {
-    a.a(this, e)
+    $$_27.a(this, e)
     this._undoStack = []
     this._redoStack = []
     this._screenId = undefined
@@ -260,8 +260,8 @@ var F = function () {
     this._workspaceOffset = undefined
     this._procedureManager = undefined
     this._screenId = t
-    this._procedureManager = new l.ProcedureManager(o, i, s)
-    this._workspaceJson = n ? B.load_from_json(this._procedureManager, n, false) : {
+    this._procedureManager = new $_208_index.ProcedureManager(o, i, s)
+    this._workspaceJson = n ? $_725_index.load_from_json(this._procedureManager, n, false) : {
       blocks: {},
       connections: {},
       comments: {}
@@ -271,7 +271,7 @@ var F = function () {
       y: 0
     }
   }
-  s.a(e, [{
+  $$_40.a(e, [{
     key: "getScreenId",
     value: function () {
       return this._screenId
@@ -361,12 +361,12 @@ var U = {
 var W = function () {
   function e() {
     var t = this
-    a.a(this, e)
+    $$_27.a(this, e)
     this._currentScreenId = "__NOT_EXIST__"
     this._currentProjectId = "__NOT_EXIST__"
     this.debuggingBlock = undefined
     this.workspaceDataMap = new Map()
-    this.jsGenerator = d.c()
+    this.jsGenerator = $$_$$_$$_$$_$$_src_editor_block_generate.c()
     this.eventBus = undefined
     this.getCurrentScreenId = function () {
       return t._currentScreenId
@@ -409,8 +409,8 @@ var W = function () {
                 }
                 a = i.get_relative_to_surface_xy()[0]
                 s = i.get_relative_to_surface_xy()[1]
-                l = c.Blink.mainWorkspace.get_metrics()
-                u = c.Blink.mainWorkspace.get_scale()
+                l = $$_17_index.Blink.mainWorkspace.get_metrics()
+                u = $$_17_index.Blink.mainWorkspace.get_scale()
                 d = a * u
                 p = s * u
                 r$type = r.type
@@ -433,7 +433,7 @@ var W = function () {
                 I = p - y + O - l.contentTop
                 j = (S - C) / (A = 10)
                 N = (I - T) / A
-                if (R = c.Blink.mainWorkspace.get_scrollbar()) {
+                if (R = $$_17_index.Blink.mainWorkspace.get_scrollbar()) {
                   R.set(S, I)
                 }
                 k = 0
@@ -447,7 +447,7 @@ var W = function () {
                   R.set(C + k * j, T + k * N)
                 }
                 e.next = 30
-                return f.lb(5)
+                return $$_15.lb(5)
               case 30:
                 e.next = 25
                 break
@@ -510,13 +510,13 @@ var W = function () {
                   a = "#686d76"
                 }
                 s = r.get_svg_root()
-                r$svg_path.setAttribute("filter", "url(#".concat(p.b.blocklyFocusedShadowFilterId, ")"))
+                r$svg_path.setAttribute("filter", "url(#".concat($_426.b.blocklyFocusedShadowFilterId, ")"))
                 r$svg_path.setAttribute("fill-backups", a)
-                if (f.Q()) {
+                if ($$_15.Q()) {
                   r$svg_path.removeAttribute("fill")
                 }
                 r$svg_path.setAttribute("id", "@_BLOCK_SVG_PATH_ID_@")
-                if (c = G(f.ib(a, 0), f.ib(a, .2), f.ib(a, 0))) {
+                if (c = G($$_15.ib(a, 0), $$_15.ib(a, .2), $$_15.ib(a, 0))) {
                   s.appendChild(c)
                 }
               case 21:
@@ -550,7 +550,7 @@ var W = function () {
     }
     this.eventBus = U
   }
-  s.a(e, [{
+  $$_40.a(e, [{
     key: "getWorkspaceDataByScreenId",
     value: function (e) {
       return this.workspaceDataMap.get(e)
@@ -638,21 +638,21 @@ var W = function () {
     value: function () {
       this.workspaceDataMap.clear()
       this.jsGenerator.clearAllDynamicValues()
-      c.Blink.events.disable()
-      c.Blink.mainWorkspace.clear()
-      c.Blink.events.enable()
+      $$_17_index.Blink.events.disable()
+      $$_17_index.Blink.mainWorkspace.clear()
+      $$_17_index.Blink.events.enable()
     }
   }, {
     key: "updateCurrentWorkspaceData",
     value: function () {
-      var this$_currentScreenId = this._currentScreenId
+      var /* [auto-meaningful-name] */this$_currentScreenId = this._currentScreenId
       var t = this.getWorkspaceDataByScreenId(this$_currentScreenId)
       if (t) {
-        var n = c.Blink.json.workspace_to_json(c.Blink.mainWorkspace)
+        var n = $$_17_index.Blink.json.workspace_to_json($$_17_index.Blink.mainWorkspace)
         t.setWorkspaceJson(n)
         var r = {
-          x: c.Blink.mainWorkspace.scroll_xy[0],
-          y: c.Blink.mainWorkspace.scroll_xy[1]
+          x: $$_17_index.Blink.mainWorkspace.scroll_xy[0],
+          y: $$_17_index.Blink.mainWorkspace.scroll_xy[1]
         }
         t.setWorkspaceOffset(r)
       }
@@ -679,15 +679,15 @@ var W = function () {
       if (!a) {
         throw Error("Trying to copy screen from invalid id: ".concat(e, ". "))
       }
-      var s = c.Blink.json.reset_element_ids(a.getWorkspaceJson())
+      var s = $$_17_index.Blink.json.reset_element_ids(a.getWorkspaceJson())
       var l = {
-        x: c.Blink.mainWorkspace.scroll_xy[0],
-        y: c.Blink.mainWorkspace.scroll_xy[1]
+        x: $$_17_index.Blink.mainWorkspace.scroll_xy[0],
+        y: $$_17_index.Blink.mainWorkspace.scroll_xy[1]
       }
       if (s) {
-        var s$blocks = s.blocks
+        var /* [auto-meaningful-name] */s$blocks = s.blocks
         for (var d in s$blocks) {
-          var s$blocksD$fields = s$blocks[d].fields
+          var /* [auto-meaningful-name] */s$blocksD$fields = s$blocks[d].fields
           if (s$blocksD$fields.WIDGET_ID) {
             var f = n.get(s$blocksD$fields.WIDGET_ID)
             if (f) {
@@ -756,29 +756,29 @@ var W = function () {
     key: "checkDisabledBlocks",
     value: function (e, t) {
       var n = this
-      var e$blocks = e.blocks
+      var /* [auto-meaningful-name] */e$blocks = e.blocks
       var o = []
       Object.keys(e$blocks).forEach(function (e) {
         var t = n.getBlockById(e)
         if (t && t.disabled) {
           var r = t.get_top_parent()
-          if (c.BU.base.is_block_svg(r) && r.is_starting_block()) {
+          if ($$_17_index.BU.base.is_block_svg(r) && r.is_starting_block()) {
             o.push(t)
           }
         }
       })
       o.forEach(function (e) {
-        if (e.type === l.PROCEDURE_BLOCK_TYPES.CALL_NORETURN) {
-          throw new m.b(m.a.FUNCTION_IS_UNDEF, t, e.id, "functionIsUndefined")
+        if (e.type === $_208_index.PROCEDURE_BLOCK_TYPES.CALL_NORETURN) {
+          throw new $_139.b($_139.a.FUNCTION_IS_UNDEF, t, e.id, "functionIsUndefined")
         }
-        if (e.type === l.PROCEDURE_BLOCK_TYPES.CALL_RETURN) {
-          throw new m.b(m.a.NO_RETURN_FUNCTION, t, e.id, "noReturnFunction")
+        if (e.type === $_208_index.PROCEDURE_BLOCK_TYPES.CALL_RETURN) {
+          throw new $_139.b($_139.a.NO_RETURN_FUNCTION, t, e.id, "noReturnFunction")
         }
         if ("param" === e.element_type) {
-          if (e.type === l.PROCEDURE_BLOCK_TYPES.PARAM) {
-            throw new m.b(m.a.PARAMETER_NOT_IN_FUNCTION, t, e.id, "parameterNotInFunction")
+          if (e.type === $_208_index.PROCEDURE_BLOCK_TYPES.PARAM) {
+            throw new $_139.b($_139.a.PARAMETER_NOT_IN_FUNCTION, t, e.id, "parameterNotInFunction")
           }
-          throw new m.b(m.a.PARAM_NOT_IN_CONTEXT, t, e.id, "paramNotInContext")
+          throw new $_139.b($_139.a.PARAM_NOT_IN_CONTEXT, t, e.id, "paramNotInContext")
         }
       })
     }
@@ -817,7 +817,7 @@ var W = function () {
         return p.has(e)
       })
       var m = this.jsGenerator.workspaceToCode(s, function (e) {
-        return e === l.PROCEDURE_BLOCK_TYPES.DEF
+        return e === $_208_index.PROCEDURE_BLOCK_TYPES.DEF
       })
       L(f, m, c, d, t, i)
       return m + "\n" + f
@@ -829,7 +829,7 @@ var W = function () {
         var n = this.workspaceDataMap.get(t)
         return 0 === Object.keys((null === n || undefined === n ? undefined : n.getWorkspaceJson().blocks) || {}).length
       }
-      return 0 === c.Blink.mainWorkspace.get_all_blocks().length
+      return 0 === $$_17_index.Blink.mainWorkspace.get_all_blocks().length
     }
   }, {
     key: "replaceWorkspaces",
@@ -860,25 +860,25 @@ var W = function () {
   }, {
     key: "disabledShortcut",
     value: function () {
-      c.Blink.mainWorkspace.set_hotkey_enable(false)
+      $$_17_index.Blink.mainWorkspace.set_hotkey_enable(false)
     }
   }, {
     key: "ableShortcut",
     value: function () {
-      c.Blink.mainWorkspace.set_hotkey_enable(true)
+      $$_17_index.Blink.mainWorkspace.set_hotkey_enable(true)
     }
   }, {
     key: "resizeWorkspace",
     value: function () {
-      c.Blink.utils.svg_resize(c.Blink.mainWorkspace)
+      $$_17_index.Blink.utils.svg_resize($$_17_index.Blink.mainWorkspace)
     }
   }, {
     key: "unselectCurrentBlock",
     value: function () {
-      var /* [auto-meaningful-name] */c$Blink$runtime_data
-      var /* [auto-meaningful-name] */c$Blink$runtime_data$selected
-      if (!(null === (c$Blink$runtime_data = c.Blink.runtime_data) || undefined === c$Blink$runtime_data || null === (c$Blink$runtime_data$selected = c$Blink$runtime_data.selected) || undefined === c$Blink$runtime_data$selected)) {
-        c$Blink$runtime_data$selected.unselect()
+      var /* [auto-meaningful-name] */$$_17_index$Blink$runtime_data
+      var /* [auto-meaningful-name] */$$_17_index$Blink$runtime_data$selected
+      if (!(null === ($$_17_index$Blink$runtime_data = $$_17_index.Blink.runtime_data) || undefined === $$_17_index$Blink$runtime_data || null === ($$_17_index$Blink$runtime_data$selected = $$_17_index$Blink$runtime_data.selected) || undefined === $$_17_index$Blink$runtime_data$selected)) {
+        $$_17_index$Blink$runtime_data$selected.unselect()
       }
     }
   }, {
@@ -908,7 +908,7 @@ var W = function () {
   }, {
     key: "getBlockById",
     value: function (e) {
-      return c.Blink.mainWorkspace.get_block_by_id(e)
+      return $$_17_index.Blink.mainWorkspace.get_block_by_id(e)
     }
   }, {
     key: "getField",
@@ -924,14 +924,14 @@ var W = function () {
   }, {
     key: "checkFieldValueIsSelected",
     value: function (e, t) {
-      return c.Blink.mainWorkspace.get_all_blocks().some(function (n) {
+      return $$_17_index.Blink.mainWorkspace.get_all_blocks().some(function (n) {
         return n.get_field_value(e) === t
       })
     }
   }, {
     key: "checkSomeFieldValueIsSelected",
     value: function (e, t) {
-      return c.Blink.mainWorkspace.get_all_blocks().some(function (n) {
+      return $$_17_index.Blink.mainWorkspace.get_all_blocks().some(function (n) {
         var r = n.get_field_value(e)
         return !!r && t.includes(r)
       })
@@ -941,9 +941,9 @@ var W = function () {
     value: function (e, t) {
       var n = {}
       this.workspaceDataMap.forEach(function (r, o) {
-        var r$getWorkspaceJson$blocks = r.getWorkspaceJson().blocks
+        var /* [auto-meaningful-name] */r$getWorkspaceJson$blocks = r.getWorkspaceJson().blocks
         for (var a in r$getWorkspaceJson$blocks) {
-          var r$getWorkspaceJson$blocksA$fields = r$getWorkspaceJson$blocks[a].fields
+          var /* [auto-meaningful-name] */r$getWorkspaceJson$blocksA$fields = r$getWorkspaceJson$blocks[a].fields
           for (var c in r$getWorkspaceJson$blocksA$fields) if (c === e && r$getWorkspaceJson$blocksA$fields[c] === t) {
             n[o] = true
             break
@@ -955,7 +955,7 @@ var W = function () {
   }, {
     key: "replaceFieldValue",
     value: function (e, t, n, r) {
-      c.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
+      $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
         var i
         if (o.type === e && o.get_field_value(t) === n) {
           if (!(null === (i = o.get_field(t)) || undefined === i)) {
@@ -967,7 +967,7 @@ var W = function () {
   }, {
     key: "replaceTextValue",
     value: function (e, t, n, r) {
-      c.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
+      $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
         var i
         var a
         if (o.type === e && (null === (i = o.get_field(t)) || undefined === i ? undefined : i.get_text()) === n) {
@@ -980,12 +980,12 @@ var W = function () {
   }, {
     key: "_renderWorkspaceByData",
     value: function (e) {
-      c.Blink.events.disable()
-      c.Blink.mainWorkspace.clear()
+      $$_17_index.Blink.events.disable()
+      $$_17_index.Blink.mainWorkspace.clear()
       var t = e.getWorkspaceJson()
       var n = e.getWorkspaceOffset()
-      c.Blink.json.json_to_workspace(t, c.Blink.mainWorkspace)
-      c.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
+      $$_17_index.Blink.json.json_to_workspace(t, $$_17_index.Blink.mainWorkspace)
+      $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
         if (!("param" !== e.element_type || e.deletable_)) {
           e.set_deletable(true)
         }
@@ -994,14 +994,14 @@ var W = function () {
         x: 0,
         y: 0
       })
-      c.Blink.mainWorkspace.set_undo_stack(e.getUndoStack())
-      c.Blink.mainWorkspace.set_redo_stack(e.getRedoStack())
-      c.Blink.events.enable()
+      $$_17_index.Blink.mainWorkspace.set_undo_stack(e.getUndoStack())
+      $$_17_index.Blink.mainWorkspace.set_redo_stack(e.getRedoStack())
+      $$_17_index.Blink.events.enable()
     }
   }, {
     key: "_setWorkspaceOffset",
     value: function (e) {
-      var t = c.Blink.mainWorkspace.get_metrics()
+      var t = $$_17_index.Blink.mainWorkspace.get_metrics()
       var n = {
         x: e.x,
         y: e.y
@@ -1012,7 +1012,7 @@ var W = function () {
       o = Math.max(o, t.viewHeight - t.contentTop - t.contentHeight)
       r = -n.x - t.contentLeft
       o = -n.y - t.contentTop
-      var i = c.Blink.mainWorkspace.get_scrollbar()
+      var i = $$_17_index.Blink.mainWorkspace.get_scrollbar()
       if (i) {
         i.set(r, o)
       }
@@ -1023,7 +1023,7 @@ var W = function () {
       var t = false
       this.workspaceDataMap.forEach(function (n) {
         if (!t) {
-          var n$getWorkspaceJson$blocks = n.getWorkspaceJson().blocks
+          var /* [auto-meaningful-name] */n$getWorkspaceJson$blocks = n.getWorkspaceJson().blocks
           t = Object.values(n$getWorkspaceJson$blocks).some(function (t) {
             return e.includes(t.type)
           })
@@ -1061,8 +1061,8 @@ var W = function () {
   }, {
     key: "refreshProcedureToolbox",
     value: function () {
-      var e = c.Blink.mainWorkspace.get_toolbox()
-      var t = c.Blink.mainWorkspace.get_flyout()
+      var e = $$_17_index.Blink.mainWorkspace.get_toolbox()
+      var t = $$_17_index.Blink.mainWorkspace.get_flyout()
       if (t && e && !t.is_auto_close()) {
         var n = e.get_selected()
         if (n && "toolbox-function" === n.get_name()) {

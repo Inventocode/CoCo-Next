@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：736
@@ -9,7 +9,7 @@
 export { i as c }
 export { o as b }
 export { a }
-import r = require("./316");
+import /* [auto-meaningful-name] */$_316 = require("./316")
 function i(e, t) {
   if (undefined === t) {
     t = 0
@@ -18,7 +18,7 @@ function i(e, t) {
 }
 function o(e, t) {
   var n = e
-  var n$length = n.length
+  var /* [auto-meaningful-name] */n$length = n.length
   if (n$length <= 150) {
     return n
   }
@@ -46,6 +46,6 @@ function o(e, t) {
   return n
 }
 function a(e, t) {
-  return !!r.h(e) && (r.g(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t))
+  return !!$_316.h(e) && ($_316.g(t) ? t.test(e) : "string" === typeof t && -1 !== e.indexOf(t))
 }
 export default a

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2104
@@ -67,8 +67,8 @@ var ne = require("./2169/index")
 var re = require("./2172")
 var ie = require("./1325")
 var oe = require("./2173")
-var ae = require("./2174/index")
-var se = require("./2175")
+var ae = require("./2174")
+var se = require("./2175/index")
 var ce = require("./2176")
 var ue = require("./2177")
 var le = require("./2178")

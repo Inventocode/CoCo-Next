@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：769
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1046/index")
+var r = require("./1046")
 var i = require("./568")
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -77,7 +77,7 @@ function v(e) {
     var n
     var r = (0, l.default)(e)
     if (t) {
-      var _0L$defaultThis$constructor = (0, l.default)(this).constructor
+      var /* [auto-meaningful-name] */_0L$defaultThis$constructor = (0, l.default)(this).constructor
       n = Reflect.construct(r, arguments, _0L$defaultThis$constructor)
     } else {
       n = r.apply(this, arguments)
@@ -92,7 +92,7 @@ var m = function (e) {
     var r;
     (0, a.default)(this, n);
     (r = t.call(this, e)).onEnd = function (e) {
-      var r$state$dragging = r.state.dragging
+      var /* [auto-meaningful-name] */r$state$dragging = r.state.dragging
       r.removeDocumentEvents()
       if (r$state$dragging || e) {
         r.props.onAfterChange(r.getValue())
@@ -131,9 +131,9 @@ var m = function (e) {
     key: "componentDidUpdate",
     value: function (e, t) {
       if ("value" in this.props || "min" in this.props || "max" in this.props) {
-        var this$props = this.props
-        var this$props$value = this$props.value
-        var this$props$onChange = this$props.onChange
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$value = this$props.value
+        var /* [auto-meaningful-name] */this$props$onChange = this$props.onChange
         var o = undefined !== this$props$value ? this$props$value : t.value
         var a = this.trimAlignValue(o, this.props)
         if (a !== t.value) {
@@ -149,7 +149,7 @@ var m = function (e) {
   }, {
     key: "onChange",
     value: function (e) {
-      var this$props = this.props
+      var /* [auto-meaningful-name] */this$props = this.props
       var n = !("value" in this$props)
       var r = e.value > this.props.max ? g(g({}, e), {}, {
         value: this.props.max
@@ -157,7 +157,7 @@ var m = function (e) {
       if (n) {
         this.setState(r)
       }
-      var r$value = r.value
+      var /* [auto-meaningful-name] */r$value = r.value
       this$props.onChange(r$value)
     }
   }, {
@@ -166,7 +166,7 @@ var m = function (e) {
       this.setState({
         dragging: true
       })
-      var this$props = this.props
+      var /* [auto-meaningful-name] */this$props = this.props
       var n = this.getValue()
       this$props.onBeforeChange(n)
       var r = this.calcValueByPos(e)
@@ -183,7 +183,7 @@ var m = function (e) {
     key: "onMove",
     value: function (e, t) {
       _.pauseEvent(e)
-      var this$state$value = this.state.value
+      var /* [auto-meaningful-name] */this$state$value = this.state.value
       var r = this.calcValueByPos(t)
       if (r !== this$state$value) {
         this.onChange({
@@ -194,13 +194,13 @@ var m = function (e) {
   }, {
     key: "onKeyboard",
     value: function (e) {
-      var this$props = this.props
-      var this$props$reverse = this$props.reverse
-      var this$props$vertical = this$props.vertical
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$reverse = this$props.reverse
+      var /* [auto-meaningful-name] */this$props$vertical = this$props.vertical
       var i = _.getKeyboardValueMutator(e, this$props$vertical, this$props$reverse)
       if (i) {
         _.pauseEvent(e)
-        var this$state$value = this.state.value
+        var /* [auto-meaningful-name] */this$state$value = this.state.value
         var a = i(this$state$value, this.props)
         var s = this.trimAlignValue(a)
         if (s === this$state$value) {
@@ -243,26 +243,26 @@ var m = function (e) {
     key: "render",
     value: function () {
       var e = this
-      var this$props = this.props
-      var this$props$prefixCls = this$props.prefixCls
-      var this$props$vertical = this$props.vertical
-      var this$props$included = this$props.included
-      var this$props$disabled = this$props.disabled
-      var this$props$minimumTrackStyle = this$props.minimumTrackStyle
-      var this$props$trackStyle = this$props.trackStyle
-      var this$props$handleStyle = this$props.handleStyle
-      var this$props$tabIndex = this$props.tabIndex
-      var this$props$ariaLabelForHandle = this$props.ariaLabelForHandle
-      var this$props$ariaLabelledByForHandle = this$props.ariaLabelledByForHandle
-      var this$props$ariaValueTextFormatterForHandle = this$props.ariaValueTextFormatterForHandle
-      var this$props$min = this$props.min
-      var this$props$max = this$props.max
-      var this$props$startPoint = this$props.startPoint
-      var this$props$reverse = this$props.reverse
-      var this$props$handle = this$props.handle
-      var this$state = this.state
-      var this$state$value = this$state.value
-      var this$state$dragging = this$state.dragging
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$prefixCls = this$props.prefixCls
+      var /* [auto-meaningful-name] */this$props$vertical = this$props.vertical
+      var /* [auto-meaningful-name] */this$props$included = this$props.included
+      var /* [auto-meaningful-name] */this$props$disabled = this$props.disabled
+      var /* [auto-meaningful-name] */this$props$minimumTrackStyle = this$props.minimumTrackStyle
+      var /* [auto-meaningful-name] */this$props$trackStyle = this$props.trackStyle
+      var /* [auto-meaningful-name] */this$props$handleStyle = this$props.handleStyle
+      var /* [auto-meaningful-name] */this$props$tabIndex = this$props.tabIndex
+      var /* [auto-meaningful-name] */this$props$ariaLabelForHandle = this$props.ariaLabelForHandle
+      var /* [auto-meaningful-name] */this$props$ariaLabelledByForHandle = this$props.ariaLabelledByForHandle
+      var /* [auto-meaningful-name] */this$props$ariaValueTextFormatterForHandle = this$props.ariaValueTextFormatterForHandle
+      var /* [auto-meaningful-name] */this$props$min = this$props.min
+      var /* [auto-meaningful-name] */this$props$max = this$props.max
+      var /* [auto-meaningful-name] */this$props$startPoint = this$props.startPoint
+      var /* [auto-meaningful-name] */this$props$reverse = this$props.reverse
+      var /* [auto-meaningful-name] */this$props$handle = this$props.handle
+      var /* [auto-meaningful-name] */this$state = this.state
+      var /* [auto-meaningful-name] */this$state$value = this$state.value
+      var /* [auto-meaningful-name] */this$state$dragging = this$state.dragging
       var x = this.calcOffset(this$state$value)
       var C = this$props$handle({
         className: "".concat(this$props$prefixCls, "-handle"),

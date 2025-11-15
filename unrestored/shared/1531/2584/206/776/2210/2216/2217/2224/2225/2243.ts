@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2243
@@ -8,8 +8,8 @@
 
 module.exports = function (e, t, n) {
   var r = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var a = e.schema[t]
   var s = e.schemaPath + e.util.getProperty(t)
   var c = e.errSchemaPath + "/" + t
@@ -39,9 +39,9 @@ module.exports = function (e, t, n) {
     }
   }
   if (d || p.length) {
-    var e$errorPath = e.errorPath
+    var /* [auto-meaningful-name] */e$errorPath = e.errorPath
     var b = d || p.length >= e.opts.loopRequired
-    var e$opts$ownProperties = e.opts.ownProperties
+    var /* [auto-meaningful-name] */e$opts$ownProperties = e.opts.ownProperties
     if (u) {
       r += " var missing" + e$level + "; "
       if (b) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2201
@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../../../../36/2668/220")
-var i = require("../../../../36/2668/230")
-var o = require("../../../../36/2668/2689/703/index")
-var a = require("../../../../38/607/1970/529")
+var r = require("../../220")
+var i = require("../../230")
+var o = require("../../../../1036/1363/1122/703/index")
+var a = require("../../../../1036/1363/1122/529")
 var s = require("../../../../38/607/356")
 var c = require("../../../../38/607/357/index")
 var u = require("./2202")
@@ -20,9 +20,9 @@ function h(e) {
   e = e.Parser.acorn || e
   var t = d.get(e)
   if (!t) {
-    var e$tokTypes = e.tokTypes
-    var e$TokContext = e.TokContext
-    var e$TokenType = e.TokenType
+    var /* [auto-meaningful-name] */e$tokTypes = e.tokTypes
+    var /* [auto-meaningful-name] */e$TokContext = e.TokContext
+    var /* [auto-meaningful-name] */e$TokenType = e.TokenType
     var o = new e$TokContext("<tag", false)
     var a = new e$TokContext("</tag", false)
     var s = new e$TokContext("<tag>...</tag>", true, true)
@@ -72,15 +72,15 @@ module.exports = function (e) {
     return function (e, t) {
       var d = t.acorn || require("../1111")
       var _ = h(d)
-      var d$tokTypes = d.tokTypes
-      var _$tokTypes = _.tokTypes
-      var d$tokContexts = d.tokContexts
-      var _$tokContexts$tc_oTag = _.tokContexts.tc_oTag
-      var _$tokContexts$tc_cTag = _.tokContexts.tc_cTag
-      var _$tokContexts$tc_expr = _.tokContexts.tc_expr
-      var d$isNewLine = d.isNewLine
-      var d$isIdentifierStart = d.isIdentifierStart
-      var d$isIdentifierChar = d.isIdentifierChar
+      var /* [auto-meaningful-name] */d$tokTypes = d.tokTypes
+      var /* [auto-meaningful-name] */_$tokTypes = _.tokTypes
+      var /* [auto-meaningful-name] */d$tokContexts = d.tokContexts
+      var /* [auto-meaningful-name] */_$tokContexts$tc_oTag = _.tokContexts.tc_oTag
+      var /* [auto-meaningful-name] */_$tokContexts$tc_cTag = _.tokContexts.tc_cTag
+      var /* [auto-meaningful-name] */_$tokContexts$tc_expr = _.tokContexts.tc_expr
+      var /* [auto-meaningful-name] */d$isNewLine = d.isNewLine
+      var /* [auto-meaningful-name] */d$isIdentifierStart = d.isIdentifierStart
+      var /* [auto-meaningful-name] */d$isIdentifierChar = d.isIdentifierChar
       return function (t) {
         s(d, t)
         var n = c(d)
@@ -91,7 +91,7 @@ module.exports = function (e) {
         i(d, [{
           key: "jsx_readToken",
           value: function () {
-            for (var e = "", this$pos = this.pos;;) {
+            for (var e = "", /* [auto-meaningful-name] */this$pos = this.pos;;) {
               if (this.pos >= this.input.length) {
                 this.raise(this.start, "Unterminated JSX contents")
               }
@@ -202,7 +202,7 @@ module.exports = function (e) {
           key: "jsx_readWord",
           value: function () {
             var e
-            var this$pos = this.pos
+            var /* [auto-meaningful-name] */this$pos = this.pos
             do {
               e = this.input.charCodeAt(++this.pos)
             } while (d$isIdentifierChar(e) || 45 === e)
@@ -227,8 +227,8 @@ module.exports = function (e) {
         }, {
           key: "jsx_parseNamespacedName",
           value: function () {
-            var this$start = this.start
-            var this$startLoc = this.startLoc
+            var /* [auto-meaningful-name] */this$start = this.start
+            var /* [auto-meaningful-name] */this$startLoc = this.startLoc
             var r = this.jsx_parseIdentifier()
             if (!e.allowNamespaces || !this.eat(d$tokTypes.colon)) {
               return r
@@ -244,8 +244,8 @@ module.exports = function (e) {
             if (this.type === _$tokTypes.jsxTagEnd) {
               return ""
             }
-            var this$start = this.start
-            var this$startLoc = this.startLoc
+            var /* [auto-meaningful-name] */this$start = this.start
+            var /* [auto-meaningful-name] */this$startLoc = this.startLoc
             var r = this.jsx_parseNamespacedName()
             for (this.type !== d$tokTypes.dot || "JSXNamespacedName" !== r.type || e.allowNamespacedObjects || this.unexpected(); this.eat(d$tokTypes.dot);) {
               var i = this.startNodeAt(this$start, this$startLoc)
@@ -367,8 +367,8 @@ module.exports = function (e) {
         }, {
           key: "jsx_parseElement",
           value: function () {
-            var this$start = this.start
-            var this$startLoc = this.startLoc
+            var /* [auto-meaningful-name] */this$start = this.start
+            var /* [auto-meaningful-name] */this$startLoc = this.startLoc
             this.next()
             return this.jsx_parseElementAt(this$start, this$startLoc)
           }

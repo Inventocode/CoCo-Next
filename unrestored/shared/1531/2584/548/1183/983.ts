@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：983
@@ -7,25 +7,25 @@
 "use strict"
 
 export { o as a }
-import r = require("../../430");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_$$_430 = require("../../430")
+import /* [auto-meaningful-name] */React = require("react")
 var o = function (e) {
   function t(t) {
     var n;
     (n = e.call(this, t) || this)._state = null
     n._del = false
     n._handleChange = function (e) {
-      var n$state$value = n.state.value
-      var e$target$value = e.target.value
-      var e$target = e.target
+      var /* [auto-meaningful-name] */n$state$value = n.state.value
+      var /* [auto-meaningful-name] */e$target$value = e.target.value
+      var /* [auto-meaningful-name] */e$target = e.target
       var o = e$target$value.length > n$state$value.length
-      var n$_del = n._del
+      var /* [auto-meaningful-name] */n$_del = n._del
       var s = n$state$value === n.props.format(e$target$value)
       n.setState({
         value: e$target$value,
         local: true
       }, function () {
-        var e$target$selectionStart = e$target.selectionStart
+        var /* [auto-meaningful-name] */e$target$selectionStart = e$target.selectionStart
         var c = n.props.refuse || /[^\d]+/g
         var u = e$target$value.substr(0, e$target$selectionStart).replace(c, "")
         n._state = {
@@ -69,17 +69,17 @@ var o = function (e) {
     }
     return n
   }
-  r.a(t, e)
+  $$_$$_430.a(t, e)
   t.getDerivedStateFromProps = function (e, t) {
     return {
       value: t.local ? t.value : e.value,
       local: false
     }
   }
-  var t$prototype = t.prototype
+  var /* [auto-meaningful-name] */t$prototype = t.prototype
   t$prototype.render = function () {
-    var this$_handleChange = this._handleChange
-    var this$state$value = this.state.value
+    var /* [auto-meaningful-name] */this$_handleChange = this._handleChange
+    var /* [auto-meaningful-name] */this$state$value = this.state.value
     return (0, this.props.children)({
       value: this$state$value,
       onChange: this$_handleChange
@@ -94,9 +94,9 @@ var o = function (e) {
     document.addEventListener("keyup", this._hKU)
   }
   t$prototype.componentDidUpdate = function () {
-    var this$_state = this._state
+    var /* [auto-meaningful-name] */this$_state = this._state
     if (this$_state) {
-      for (var this$state$value = this.state.value, n = -1, r = 0; r !== this$_state.before.length; ++r) {
+      for (var /* [auto-meaningful-name] */this$state$value = this.state.value, n = -1, r = 0; r !== this$_state.before.length; ++r) {
         n = Math.max(n, this$state$value.toLowerCase().indexOf(this$_state.before[r].toLowerCase(), n + 1))
       }
       if (this.props.replace && (this$_state.op || this$_state.del && !this$_state.di)) {

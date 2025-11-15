@@ -1,11 +1,11 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：932
  */
 
 var r = require("../1684/530")
-var o = require("../1745/423/1055");
+var o = require("./423/1055");
 (module.exports = function (e, t) {
   return o[e] || (o[e] = undefined !== t ? t : {})
 })("versions", []).push({

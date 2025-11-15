@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：723
@@ -11,11 +11,11 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.register_procedure_blocks = exports.icon_procedure = undefined
 var r = require("tslib")
-var i = require("../17/497/387")
-var o = require("../4/127")
+var i = require("../206/725/387")
+var o = require("../1036/127")
 var a = require("../1001/213/index")
 var s = require("../1036/754")
-var c = require("../301/173")
+var c = require("../1036/173")
 exports.icon_procedure = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzYiIGhlaWdodD0iMzYiIHZpZXdCb3g9IjAgMCAzNiAzNiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xOCAzNkM4LjA1OSAzNiAwIDI3Ljk0MSAwIDE4UzguMDU5IDAgMTggMHMxOCA4LjA1OSAxOCAxOC04LjA1OSAxOC0xOCAxOHptMC0xYzkuMzg5IDAgMTctNy42MTEgMTctMTdTMjcuMzg5IDEgMTggMSAxIDguNjExIDEgMThzNy42MTEgMTcgMTcgMTd6IiBmaWxsPSIjRDc4MDU4IiBmaWxsLXJ1bGU9Im5vbnplcm8iLz48Y2lyY2xlIGZpbGw9IiNGRkYiIGN4PSIxOCIgY3k9IjE4IiByPSIxNyIvPjxwYXRoIGQ9Ik0yNy4xNTcgMjIuOTM1Yy0uMDQzLjE1LS4yMzUuMjUzLS40OS4zOWEuOTEyLjkxMiAwIDAgMS0uNjg1LjA4NC44Ni44NiAwIDAgMS0uNDQtLjMyNWwtMi4yOTItMy4wMzItMi43OCAzLjAxN2MtLjMzMi4zNi0uNzA4LjQxMy0xLjEzOC4xNTgtLjE3Ny0uMTAzLS41LS40ODctLjUzOC0uNjYtLjAzNi0uMTczLjAzMi0uMzU0LjIxLS41NDhsMy4wNzMtMy4zNDUtMi4yNC0yLjk2M2MtLjA5Mi0uMTM2LS4xMDEtLjI5NC0uMDI4LS40NzQuMDctLjE4LjIzNi0uMjg3LjQxMy0uMzkyLjI1NC0uMTQzLjQ4Ny0uMTQ3LjY2LS4xMzQuMTczLjAxLjMzLjExLjQ3NS4yOTNsMS44NjEgMi40MjcgMi4yNTQtMi40NTVjLjE5NS0uMjE2LjQxNi0uMjkyLjYyOS0uMzUzLjIxMi0uMDYxLjYzLjE1OC44Ni4yODYuMjM0LjEyNy4zNTYuMjczLjM3LjQzOC4wMTUuMTY0LS4wNS4zMjYtLjE5Ni40ODZsLTIuNzUzIDIuOTg1IDIuNzE3IDMuNzI1YS40MDUuNDA1IDAgMCAxIC4wNTguMzkyem0tNy4wNzUtMTQuODVjLS45NTYtLjEwNy0yLjk1Ni0uMjUtNC4xNjkuNTM0LTEuMjE1Ljc4OC0xLjkxMyAyLjE0LTIuMjUxIDMuNzVsLS40NzcgMi4yNzJIOS43NjJjLS4zOTggMC0uNzE1LjExNC0uNzQ4LjgyNy4wMzMuMzg5LjM1LjY5Ny43NDguNjk3aDMuMDk1bC0yLjA0IDkuOTY2cy0uNTIyIDEuNjI2LjYyIDEuNjk3Yy45OTguMDYzIDEuMTk2LTEuNTYxIDEuMTk2LTEuNTYxbDIuMDU3LTEwLjEwMmgyLjYxM2EuNzYyLjc2MiAwIDAgMCAwLTEuNTI0aC0yLjI4OGwuNDUyLTIuMjI3Yy45NjctMy41NSAyLjc3MS0yLjY4OCA0LjQzOC0yLjY4OC4yNzMgMCAxLjMwMS4wNzIgMS4zNzMtLjYzMi4wOTEtLjg4LS43OTQtLjk2My0xLjE5Ni0xLjAwOHpNOSAxNS41OGMwLS4wNDYuMDQ1LS4wNjkuMDU4LS4xMS0uMDEzLS4wMjMtLjA1OC0uMDQzLS4wNTgtLjA2N3YuMTc3eiIgZmlsbD0iI0YwOEY2MyIgZmlsbC1ydWxlPSJub256ZXJvIi8+PC9nPjwvc3ZnPgo="
 exports.register_procedure_blocks = function (e, n, u, l) {
   var f = e.di_container.get(o.BINDING.FieldIcon)
@@ -33,7 +33,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
         src: exports.icon_procedure,
         opt_is_head: true
       })
-      var e$Msg$PROCEDURES_DEFNORETURN_PROCEDURE = e.Msg.PROCEDURES_DEFNORETURN_PROCEDURE
+      var /* [auto-meaningful-name] */e$Msg$PROCEDURES_DEFNORETURN_PROCEDURE = e.Msg.PROCEDURES_DEFNORETURN_PROCEDURE
       var v = e$Msg$PROCEDURES_DEFNORETURN_PROCEDURE
       var m = l.get_procedure_by_def(this.id)
       if (m) {
@@ -147,7 +147,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
     },
     domToMutation: function (e) {
       if (e) {
-        for (var e$children$length = e.children.length, n = 0; n < e$children$length; n++) {
+        for (var /* [auto-meaningful-name] */e$children$length = e.children.length, n = 0; n < e$children$length; n++) {
           var r = e.children[n]
           if ("arg" === r.nodeName.toLowerCase()) {
             var o = r.getAttribute("name");
@@ -374,7 +374,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       var o = e.get_procedure_by_name(r) || e.get_procedure_by_def(r);
       (0, i.assert)(o)
       t.setAttribute("def_id", o.def_id)
-      for (var o$params = o.params, u = 0; u < o$params.length; u++) {
+      for (var /* [auto-meaningful-name] */o$params = o.params, u = 0; u < o$params.length; u++) {
         var l = document.createElement("procedures_2_parameter_shadow")
         var f = o$params[u]
         l.setAttribute("name", f.param_name)
@@ -385,7 +385,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
     },
     addMutation: function (e) {
       var t
-      var this$inputList$filterFunctionEReturnE$name$includesC$PROCEDURE_BLOCK_INPUT_NAMES$ARG_PREFIX$length = this.inputList.filter(function (e) {
+      var /* [auto-meaningful-name] */this$inputList$filterFunctionEReturnE$name$includesC$PROCEDURE_BLOCK_INPUT_NAMES$ARG_PREFIX$length = this.inputList.filter(function (e) {
         return e.name.includes(c.PROCEDURE_BLOCK_INPUT_NAMES.ARG_PREFIX)
       }).length
       var r = this.append_default_value_shadow("" + c.PROCEDURE_BLOCK_INPUT_NAMES.ARG_PREFIX + this$inputList$filterFunctionEReturnE$name$includesC$PROCEDURE_BLOCK_INPUT_NAMES$ARG_PREFIX$length)
@@ -404,7 +404,7 @@ exports.register_procedure_blocks = function (e, n, u, l) {
       }
     },
     removeMutation: function () {
-      var this$inputList$filterFunctionEReturnE$name$includesC$PROCEDURE_BLOCK_INPUT_NAMES$ARG_PREFIX$length = this.inputList.filter(function (e) {
+      var /* [auto-meaningful-name] */this$inputList$filterFunctionEReturnE$name$includesC$PROCEDURE_BLOCK_INPUT_NAMES$ARG_PREFIX$length = this.inputList.filter(function (e) {
         return e.name.includes(c.PROCEDURE_BLOCK_INPUT_NAMES.ARG_PREFIX)
       }).length
       if (!this$inputList$filterFunctionEReturnE$name$includesC$PROCEDURE_BLOCK_INPUT_NAMES$ARG_PREFIX$length) {

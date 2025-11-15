@@ -1,11 +1,11 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1303
  */
 
-var require$19821100Index$FilterCSS = require("./1982/1100/index").FilterCSS
-var require$19821100Index$getDefaultWhiteList = require("./1982/1100/index").getDefaultWhiteList
+var /* [auto-meaningful-name] */require$_1982_1100_index$FilterCSS = require("./1982/1100/index").FilterCSS
+var /* [auto-meaningful-name] */require$_1982_1100_index$getDefaultWhiteList = require("./1982/1100/index").getDefaultWhiteList
 var o = require("./1982/1101")
 function a() {
   return {
@@ -79,7 +79,7 @@ function a() {
     video: ["autoplay", "controls", "crossorigin", "loop", "muted", "playsinline", "poster", "preload", "src", "height", "width"]
   }
 }
-var s = new require$19821100Index$FilterCSS()
+var s = new require$_1982_1100_index$FilterCSS()
 function c(e) {
   return e.replace(u, "&lt;").replace(l, "&gt;")
 }
@@ -108,7 +108,7 @@ function w(e) {
   return e.replace(p, ":").replace(_, " ")
 }
 function E(e) {
-  for (var t = "", n = 0, e$length = e.length; n < e$length; n++) {
+  for (var t = "", n = 0, /* [auto-meaningful-name] */e$length = e.length; n < e$length; n++) {
     t += e.charCodeAt(n) < 32 ? " " : e.charAt(n)
   }
   return o.trim(t)
@@ -247,11 +247,11 @@ exports.StripTagBody = function (e, t) {
         return !!n || -1 !== o.indexOf(e, t)
       }(a)) {
         if (c.isClosing) {
-          var u = "[/removed]"
-          var l = c.position + u.length
+          var /* [auto-meaningful-name] */_removed = "[/removed]"
+          var l = c.position + _removed.length
           r.push([false !== i ? i : c.position, l])
           i = false
-          return u
+          return _removed
         }
         if (!i) {
           i = c.position
@@ -296,4 +296,4 @@ exports.stripBlankChar = function (e) {
 }
 exports.attributeWrapSign = "\""
 exports.cssFilter = s
-exports.getDefaultCSSWhiteList = require$19821100Index$getDefaultWhiteList
+exports.getDefaultCSSWhiteList = require$_1982_1100_index$getDefaultWhiteList

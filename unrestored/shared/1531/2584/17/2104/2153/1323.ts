@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1323
@@ -103,12 +103,12 @@ var i = function () {
   e.prototype.set_expanded = function (e) {
     if (e !== this.expanded_) {
       this.expanded_ = e
-      var t = "blocklyTreeExpanded"
-      if (!this.expanded_ && this.html_div.classList.contains(t)) {
-        this.html_div.classList.remove(t)
+      var /* [auto-meaningful-name] */BlocklyTreeExpanded = "blocklyTreeExpanded"
+      if (!this.expanded_ && this.html_div.classList.contains(BlocklyTreeExpanded)) {
+        this.html_div.classList.remove(BlocklyTreeExpanded)
       } else {
-        if (this.expanded_ && !this.html_div.classList.contains(t)) {
-          this.html_div.classList.add(t)
+        if (this.expanded_ && !this.html_div.classList.contains(BlocklyTreeExpanded)) {
+          this.html_div.classList.add(BlocklyTreeExpanded)
         }
       }
       this.children_container_.style.display = this.expanded_ ? "" : "none"

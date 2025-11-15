@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：425
@@ -8,7 +8,7 @@
 
 export { m as a }
 var r
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,56 +21,56 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import a = require("../7");
-import s = require("../27");
-import c = require("../40");
-import l = require("../57/index");
-import u = require("../58/index");
-import d = require("../197/276");
+import a = require("../7")
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */$$_40 = require("../40")
+import /* [auto-meaningful-name] */$$_57_index = require("../57/index")
+import /* [auto-meaningful-name] */$$_58_index = require("../58/index")
+import /* [auto-meaningful-name] */$$_197_276 = require("../197/276")
 !function (e) {
   e.BREAK = "BREAK"
   e.CONTINUE = "CONTINUE"
   e.TERMINATE = "TERMINATE"
 }(r || (r = {}))
 var p = function (e) {
-  l.a(n, e)
-  var t = u.a(n)
+  $$_57_index.a(n, e)
+  var t = $$_58_index.a(n)
   function n() {
     var e
     var o = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "Scheduler terminated!"
-    s.a(this, n);
+    $$_27.a(this, n);
     (e = t.call(this, o)).name = r.TERMINATE
     return e
   }
   return n
-}(d.a(Error))
+}($$_197_276.a(Error))
 var f = function (e) {
-  l.a(n, e)
-  var t = u.a(n)
+  $$_57_index.a(n, e)
+  var t = $$_58_index.a(n)
   function n() {
     var e
     var o = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "Repetition continued!"
-    s.a(this, n);
+    $$_27.a(this, n);
     (e = t.call(this, o)).name = r.CONTINUE
     return e
   }
   return n
-}(d.a(Error))
+}($$_197_276.a(Error))
 var h = function (e) {
-  l.a(n, e)
-  var t = u.a(n)
+  $$_57_index.a(n, e)
+  var t = $$_58_index.a(n)
   function n() {
     var e
     var o = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "Repetition broken!"
-    s.a(this, n);
+    $$_27.a(this, n);
     (e = t.call(this, o)).name = r.BREAK
     return e
   }
   return n
-}(d.a(Error))
+}($$_197_276.a(Error))
 var m = function () {
   function e() {
-    s.a(this, e)
+    $$_27.a(this, e)
     this._continuous = undefined
     this._terminated = undefined
     this._continuous = {
@@ -78,7 +78,7 @@ var m = function () {
     }
     this._terminated = false
   }
-  c.a(e, [{
+  $$_40.a(e, [{
     key: "checkContinuity",
     value: function () {
       return this._continuous.promise

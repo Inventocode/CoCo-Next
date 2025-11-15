@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2111
@@ -48,9 +48,9 @@ var s = function (e) {
   }
   t.prototype.run = function (e) {
     var /* [auto-meaningful-name] */u$addMutation
-    var /* [auto-meaningful-name] */_this$_data$name4
-    var /* [auto-meaningful-name] */u$removeMutation
     var /* [auto-meaningful-name] */this$_data$name
+    var /* [auto-meaningful-name] */u$removeMutation
+    var /* [auto-meaningful-name] */_this$_data$name
     var /* [auto-meaningful-name] */u$parent_group
     var s
     var c = this._get_event_workspace()
@@ -71,28 +71,28 @@ var s = function (e) {
         }
       } else if ((0, a.is_block_svg)(u)) {
         if (this.is("field", this._data)) {
-          var _this$_data = this._data
-          var _this$_data$name = _this$_data.name
-          var this$_data$new_value = _this$_data.new_value
-          var this$_data$old_value = _this$_data.old_value
+          var /* [auto-meaningful-name] */this$_data = this._data
+          var /* [auto-meaningful-name] */_this$_data$name2 = this$_data.name
+          var /* [auto-meaningful-name] */this$_data$new_value = this$_data.new_value
+          var /* [auto-meaningful-name] */this$_data$old_value = this$_data.old_value
           l = e ? this$_data$new_value : this$_data$old_value
-          if (undefined != _this$_data$name && (s = u.get_field(String(_this$_data$name)))) {
+          if (undefined != _this$_data$name2 && (s = u.get_field(String(_this$_data$name2)))) {
             s.call_validator(l)
             s.set_value(l, true)
           }
         } else if (this.is("field_default_value", this._data)) {
-          var _this$_data2 = this._data
-          var _this$_data$name2 = _this$_data2.name
-          this$_data$new_value = _this$_data2.new_value
-          this$_data$old_value = _this$_data2.old_value
+          var /* [auto-meaningful-name] */_this$_data = this._data
+          var /* [auto-meaningful-name] */_this$_data$name3 = _this$_data.name
+          this$_data$new_value = _this$_data.new_value
+          this$_data$old_value = _this$_data.old_value
           l = e ? this$_data$new_value : this$_data$old_value
-          if (undefined != _this$_data$name2 && (s = u.get_field(String(_this$_data$name2))) && (0, a.is_field_default_value)(s)) {
+          if (undefined != _this$_data$name3 && (s = u.get_field(String(_this$_data$name3))) && (0, a.is_field_default_value)(s)) {
             s.set_has_been_edited(l)
           }
         } else if (this.is("comment", this._data)) {
-          var _this$_data3 = this._data
-          this$_data$new_value = _this$_data3.new_value
-          this$_data$old_value = _this$_data3.old_value
+          var /* [auto-meaningful-name] */_this$_data2 = this._data
+          this$_data$new_value = _this$_data2.new_value
+          this$_data$old_value = _this$_data2.old_value
           switch (typeof (l = e ? this$_data$new_value : this$_data$old_value)) {
             case "string":
               u.set_comment_text("", l)
@@ -130,12 +130,12 @@ var s = function (e) {
           this$_data$old_value = e ? this._data.old_value : this._data.new_value
           if ("undefined" !== typeof (this$_data$new_value = e ? this._data.new_value : this._data.old_value)) {
             if (!(null === (u$addMutation = u.addMutation) || undefined === u$addMutation)) {
-              u$addMutation.call(u, this$_data$new_value, null === (_this$_data$name4 = this._data.name) || undefined === _this$_data$name4 ? undefined : _this$_data$name4.toString())
+              u$addMutation.call(u, this$_data$new_value, null === (this$_data$name = this._data.name) || undefined === this$_data$name ? undefined : this$_data$name.toString())
             }
           } else {
             if ("undefined" !== typeof this$_data$old_value) {
               if (!(null === (u$removeMutation = u.removeMutation) || undefined === u$removeMutation)) {
-                u$removeMutation.call(u, this$_data$old_value, null === (this$_data$name = this._data.name) || undefined === this$_data$name ? undefined : this$_data$name.toString())
+                u$removeMutation.call(u, this$_data$old_value, null === (_this$_data$name = this._data.name) || undefined === _this$_data$name ? undefined : _this$_data$name.toString())
               }
             }
           }
@@ -143,9 +143,9 @@ var s = function (e) {
           u.set_chunk_visibility(e ? this._data.new_value : this._data.old_value)
           u.update_chunk_visibility()
         } else if (this.is("group_block", this._data)) {
-          var this$_data = this._data
-          this$_data$new_value = this$_data.new_value
-          this$_data$old_value = this$_data.old_value
+          var /* [auto-meaningful-name] */_this$_data3 = this._data
+          this$_data$new_value = _this$_data3.new_value
+          this$_data$old_value = _this$_data3.old_value
           if (l = e ? this$_data$new_value : this$_data$old_value) {
             var w = l[0]
             var E = l[1]

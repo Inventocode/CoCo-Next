@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1308
@@ -191,13 +191,13 @@ function a(e, t, n, r, i, f, d) {
   }
 }
 function s(e) {
-  var e$prev = e.prev
+  var /* [auto-meaningful-name] */e$prev = e.prev
   var n = e
-  var e$next = e.next
+  var /* [auto-meaningful-name] */e$next = e.next
   if (v(e$prev, n, e$next) >= 0) {
     return false
   }
-  for (var e$prev$x = e$prev.x, o = n.x, e$next$x = e$next.x, e$prev$y = e$prev.y, c = n.y, e$next$y = e$next.y, l = e$prev$x < o ? e$prev$x < e$next$x ? e$prev$x : e$next$x : o < e$next$x ? o : e$next$x, f = e$prev$y < c ? e$prev$y < e$next$y ? e$prev$y : e$next$y : c < e$next$y ? c : e$next$y, d = e$prev$x > o ? e$prev$x > e$next$x ? e$prev$x : e$next$x : o > e$next$x ? o : e$next$x, h = e$prev$y > c ? e$prev$y > e$next$y ? e$prev$y : e$next$y : c > e$next$y ? c : e$next$y, e$next$next = e$next.next; e$next$next !== e$prev;) {
+  for (var /* [auto-meaningful-name] */e$prev$x = e$prev.x, o = n.x, /* [auto-meaningful-name] */e$next$x = e$next.x, /* [auto-meaningful-name] */e$prev$y = e$prev.y, c = n.y, /* [auto-meaningful-name] */e$next$y = e$next.y, l = e$prev$x < o ? e$prev$x < e$next$x ? e$prev$x : e$next$x : o < e$next$x ? o : e$next$x, f = e$prev$y < c ? e$prev$y < e$next$y ? e$prev$y : e$next$y : c < e$next$y ? c : e$next$y, d = e$prev$x > o ? e$prev$x > e$next$x ? e$prev$x : e$next$x : o > e$next$x ? o : e$next$x, h = e$prev$y > c ? e$prev$y > e$next$y ? e$prev$y : e$next$y : c > e$next$y ? c : e$next$y, /* [auto-meaningful-name] */e$next$next = e$next.next; e$next$next !== e$prev;) {
     if (e$next$next.x >= l && e$next$next.x <= d && e$next$next.y >= f && e$next$next.y <= h && A(e$prev$x, e$prev$y, o, c, e$next$x, e$next$y, e$next$next.x, e$next$next.y) && v(e$next$next.prev, e$next$next, e$next$next.next) >= 0) {
       return false
     }
@@ -206,13 +206,13 @@ function s(e) {
   return true
 }
 function c(e, t, n, r) {
-  var e$prev = e.prev
+  var /* [auto-meaningful-name] */e$prev = e.prev
   var o = e
-  var e$next = e.next
+  var /* [auto-meaningful-name] */e$next = e.next
   if (v(e$prev, o, e$next) >= 0) {
     return false
   }
-  for (var e$prev$x = e$prev.x, c = o.x, e$next$x = e$next.x, e$prev$y = e$prev.y, f = o.y, e$next$y = e$next.y, h = e$prev$x < c ? e$prev$x < e$next$x ? e$prev$x : e$next$x : c < e$next$x ? c : e$next$x, _ = e$prev$y < f ? e$prev$y < e$next$y ? e$prev$y : e$next$y : f < e$next$y ? f : e$next$y, g = e$prev$x > c ? e$prev$x > e$next$x ? e$prev$x : e$next$x : c > e$next$x ? c : e$next$x, m = e$prev$y > f ? e$prev$y > e$next$y ? e$prev$y : e$next$y : f > e$next$y ? f : e$next$y, y = p(h, _, t, n, r), b = p(g, m, t, n, r), e$prevZ = e.prevZ, e$nextZ = e.nextZ; e$prevZ && e$prevZ.z >= y && e$nextZ && e$nextZ.z <= b;) {
+  for (var /* [auto-meaningful-name] */e$prev$x = e$prev.x, c = o.x, /* [auto-meaningful-name] */e$next$x = e$next.x, /* [auto-meaningful-name] */e$prev$y = e$prev.y, f = o.y, /* [auto-meaningful-name] */e$next$y = e$next.y, h = e$prev$x < c ? e$prev$x < e$next$x ? e$prev$x : e$next$x : c < e$next$x ? c : e$next$x, _ = e$prev$y < f ? e$prev$y < e$next$y ? e$prev$y : e$next$y : f < e$next$y ? f : e$next$y, g = e$prev$x > c ? e$prev$x > e$next$x ? e$prev$x : e$next$x : c > e$next$x ? c : e$next$x, m = e$prev$y > f ? e$prev$y > e$next$y ? e$prev$y : e$next$y : f > e$next$y ? f : e$next$y, y = p(h, _, t, n, r), b = p(g, m, t, n, r), /* [auto-meaningful-name] */e$prevZ = e.prevZ, /* [auto-meaningful-name] */e$nextZ = e.nextZ; e$prevZ && e$prevZ.z >= y && e$nextZ && e$nextZ.z <= b;) {
     if (e$prevZ.x >= h && e$prevZ.x <= g && e$prevZ.y >= _ && e$prevZ.y <= m && e$prevZ !== e$prev && e$prevZ !== e$next && A(e$prev$x, e$prev$y, c, f, e$next$x, e$next$y, e$prevZ.x, e$prevZ.y) && v(e$prevZ.prev, e$prevZ, e$prevZ.next) >= 0) {
       return false
     }
@@ -239,8 +239,8 @@ function c(e, t, n, r) {
 function u(e, t, n) {
   var r = e
   do {
-    var r$prev = r.prev
-    var r$next$next = r.next.next
+    var /* [auto-meaningful-name] */r$prev = r.prev
+    var /* [auto-meaningful-name] */r$next$next = r.next.next
     if (!m(r$prev, r$next$next) && y(r$prev, r, r.next, r$next$next) && E(r$prev, r$next$next) && E(r$next$next, r$prev)) {
       t.push(r$prev.i / n | 0)
       t.push(r.i / n | 0)
@@ -256,7 +256,7 @@ function u(e, t, n) {
 function l(e, t, n, r, i, s) {
   var c = e
   do {
-    for (var c$next$next = c.next.next; c$next$next !== c.prev;) {
+    for (var /* [auto-meaningful-name] */c$next$next = c.next.next; c$next$next !== c.prev;) {
       if (c.i !== c$next$next.i && g(c, c$next$next)) {
         var l = x(c, c$next$next)
         c = o(c, c.next)
@@ -385,8 +385,8 @@ function E(e, t) {
 function x(e, t) {
   var n = new k(e.i, e.x, e.y)
   var r = new k(t.i, t.x, t.y)
-  var e$next = e.next
-  var t$prev = t.prev
+  var /* [auto-meaningful-name] */e$next = e.next
+  var /* [auto-meaningful-name] */t$prev = t.prev
   e.next = t
   t.prev = e
   n.next = e$next
@@ -445,7 +445,7 @@ r.deviation = function (e, t, n, r) {
   var o = i ? t[0] * n : e.length
   var a = Math.abs(S(e, 0, o, n))
   if (i) {
-    for (var s = 0, t$length = t.length; s < t$length; s++) {
+    for (var s = 0, /* [auto-meaningful-name] */t$length = t.length; s < t$length; s++) {
       var u = t[s] * n
       var l = s < t$length - 1 ? t[s + 1] * n : e.length
       a -= Math.abs(S(e, u, l, n))
@@ -461,7 +461,7 @@ r.deviation = function (e, t, n, r) {
   return 0 === a && 0 === f ? 0 : Math.abs((f - a) / a)
 }
 r.flatten = function (e) {
-  for (var e00$length = e[0][0].length, n = {
+  for (var /* [auto-meaningful-name] */e00$length = e[0][0].length, n = {
       vertices: [],
       holes: [],
       dimensions: e00$length

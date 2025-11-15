@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：Slns
@@ -26,7 +26,7 @@ PERFORMANCE OF THIS SOFTWARE.
 ***************************************************************************** */
 var __assign = function () {
   __assign = Object.assign || function __assign(t) {
-    for (var s, i = 1, arguments$length = arguments.length; i < arguments$length; i++) {
+    for (var s, i = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; i < arguments$length; i++) {
       s = arguments[i]
       for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) {
         t[p] = s[p]
@@ -254,15 +254,15 @@ function ajax(url, options) {
   return __awaiter(this, undefined, undefined, function () {
     return __generator(this, function (_a) {
       return [2, new Promise(function (resolve, reject) {
-        var options$async = options.async
+        var /* [auto-meaningful-name] */options$async = options.async
         var async = options$async === undefined ? true : options$async
-        var options$data = options.data
+        var /* [auto-meaningful-name] */options$data = options.data
         var data = options$data === undefined ? null : options$data
-        var options$headers = options.headers
+        var /* [auto-meaningful-name] */options$headers = options.headers
         var headers = options$headers === undefined ? {} : options$headers
-        var options$method = options.method
+        var /* [auto-meaningful-name] */options$method = options.method
         var method = options$method === undefined ? "get" : options$method
-        var options$timeout = options.timeout
+        var /* [auto-meaningful-name] */options$timeout = options.timeout
         var timeout = options$timeout === undefined ? 0 : options$timeout
         var onprogress = options.onprogress
         var xhr = new XMLHttpRequest()

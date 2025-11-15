@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：260
@@ -7,14 +7,14 @@
 "use strict"
 
 export { p as a }
-import * as r from "../248"
-import * as i from "../581"
-import * as o from "../164"
-import * as a from "../582"
-import * as s from "../56"
-import * as u from "../37"
-import * as c from "./585"
-import * as l from "./586"
+import * as /* [auto-meaningful-name] */$$_248 from "../248"
+import * as /* [auto-meaningful-name] */$$_581 from "../581"
+import * as /* [auto-meaningful-name] */$$_164 from "../164"
+import * as /* [auto-meaningful-name] */$$_582 from "../582"
+import * as /* [auto-meaningful-name] */$$_56 from "../56"
+import * as /* [auto-meaningful-name] */$$_37 from "../37"
+import * as /* [auto-meaningful-name] */$_585 from "./585"
+import * as /* [auto-meaningful-name] */$_586 from "./586"
 var d = function (t, e, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(t) {
@@ -293,7 +293,7 @@ var p = function () {
             return [4, this.listVideoInputDevices()]
           case 1:
             return [2, t.sent().map(function (t) {
-              return new l.a(t.deviceId, t.label)
+              return new $_586.a(t.deviceId, t.label)
             })]
         }
       })
@@ -526,34 +526,34 @@ var p = function () {
   t.prototype.getMediaElement = function (t, e) {
     var n = document.getElementById(t)
     if (!n) {
-      throw new r.a("element with id '" + t + "' not found")
+      throw new $$_248.a("element with id '" + t + "' not found")
     }
     if (n.nodeName.toLowerCase() !== e.toLowerCase()) {
-      throw new r.a("element with id '" + t + "' must be an " + e + " element")
+      throw new $$_248.a("element with id '" + t + "' must be an " + e + " element")
     }
     return n
   }
   t.prototype.decodeFromImage = function (t, e) {
     if (!t && !e) {
-      throw new r.a("either imageElement with a src set or an url must be provided")
+      throw new $$_248.a("either imageElement with a src set or an url must be provided")
     }
     return e && !t ? this.decodeFromImageUrl(e) : this.decodeFromImageElement(t)
   }
   t.prototype.decodeFromVideo = function (t, e) {
     if (!t && !e) {
-      throw new r.a("Either an element with a src set or an URL must be provided")
+      throw new $$_248.a("Either an element with a src set or an URL must be provided")
     }
     return e && !t ? this.decodeFromVideoUrl(e) : this.decodeFromVideoElement(t)
   }
   t.prototype.decodeFromVideoContinuously = function (t, e, n) {
     if (undefined === t && undefined === e) {
-      throw new r.a("Either an element with a src set or an URL must be provided")
+      throw new $$_248.a("Either an element with a src set or an URL must be provided")
     }
     return e && !t ? this.decodeFromVideoUrlContinuously(e, n) : this.decodeFromVideoElementContinuously(t, n)
   }
   t.prototype.decodeFromImageElement = function (t) {
     if (!t) {
-      throw new r.a("An image element must be provided.")
+      throw new $$_248.a("An image element must be provided.")
     }
     this.reset()
     var e = this.prepareImageElement(t)
@@ -570,7 +570,7 @@ var p = function () {
   }
   t.prototype._decodeFromVideoElementSetup = function (t) {
     if (!t) {
-      throw new r.a("A video element must be provided.")
+      throw new $$_248.a("A video element must be provided.")
     }
     this.reset()
     var e = this.prepareVideoElement(t)
@@ -579,7 +579,7 @@ var p = function () {
   }
   t.prototype.decodeFromImageUrl = function (t) {
     if (!t) {
-      throw new r.a("An URL must be provided.")
+      throw new $$_248.a("An URL must be provided.")
     }
     this.reset()
     var e = this.prepareImageElement()
@@ -590,7 +590,7 @@ var p = function () {
   }
   t.prototype.decodeFromVideoUrl = function (t) {
     if (!t) {
-      throw new r.a("An URL must be provided.")
+      throw new $$_248.a("An URL must be provided.")
     }
     this.reset()
     var e = this.prepareVideoElement()
@@ -600,7 +600,7 @@ var p = function () {
   }
   t.prototype.decodeFromVideoUrlContinuously = function (t, e) {
     if (!t) {
-      throw new r.a("An URL must be provided.")
+      throw new $$_248.a("An URL must be provided.")
     }
     this.reset()
     var n = this.prepareVideoElement()
@@ -692,14 +692,14 @@ var p = function () {
     return new Promise(function (i, a) {
       return function i(a, c) {
         if (r._stopAsyncDecode) {
-          c(new u.a("Video stream has ended before any code could be detected."))
+          c(new $$_37.a("Video stream has ended before any code could be detected."))
           return void (r._stopAsyncDecode = undefined)
         }
         try {
           a(r.decode(t))
         } catch (f) {
-          var l = e && f instanceof u.a
-          var d = f instanceof o.a || f instanceof s.a
+          var l = e && f instanceof $$_37.a
+          var d = f instanceof $$_164.a || f instanceof $$_56.a
           if (l || d && n) {
             return setTimeout(i, r._timeBetweenDecodingAttempts, a, c)
           }
@@ -721,8 +721,8 @@ var p = function () {
           setTimeout(r, n.timeBetweenScansMillis)
         } catch (l) {
           e(null, l)
-          var a = l instanceof o.a || l instanceof s.a
-          var c = l instanceof u.a
+          var a = l instanceof $$_164.a || l instanceof $$_56.a
+          var c = l instanceof $$_37.a
           if (a || c) {
             setTimeout(r, n._timeBetweenDecodingAttempts)
           }
@@ -738,9 +738,9 @@ var p = function () {
     var e = this.getCaptureCanvasContext(t)
     this.drawImageOnCanvas(e, t)
     var n = this.getCaptureCanvas(t)
-    var r = new c.a(n)
-    var o = new a.a(r)
-    return new i.a(o)
+    var r = new $_585.a(n)
+    var o = new $$_582.a(r)
+    return new $$_581.a(o)
   }
   t.prototype.getCaptureCanvasContext = function (t) {
     if (!this.captureCanvasContext) {

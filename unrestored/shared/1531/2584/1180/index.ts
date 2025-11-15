@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1180
@@ -24,7 +24,7 @@ exports.parseGIF = function (e) {
 }
 var l = function (e, t, n) {
   if (e.image) {
-    var e$image = e.image
+    var /* [auto-meaningful-name] */e$image = e.image
     var o = e$image.descriptor.width * e$image.descriptor.height
     var i = (0, c.lzw)(e$image.data.minCodeSize, e$image.data.blocks, o)
     if (e$image.descriptor.lct.interlaced) {
@@ -53,7 +53,7 @@ var l = function (e, t, n) {
     }
     if (n) {
       a.patch = function (e) {
-        for (var e$pixels$length = e.pixels.length, n = new Uint8ClampedArray(4 * e$pixels$length), r = 0; r < e$pixels$length; r++) {
+        for (var /* [auto-meaningful-name] */e$pixels$length = e.pixels.length, n = new Uint8ClampedArray(4 * e$pixels$length), r = 0; r < e$pixels$length; r++) {
           var o = 4 * r
           var i = e.pixels[r]
           var a = e.colorTable[i] || [0, 0, 0]

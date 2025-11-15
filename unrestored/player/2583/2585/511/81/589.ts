@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：589
@@ -30,7 +30,7 @@ var d = function () {
     var n = new a.a()
     var s = new a.a()
     var u = new Array()
-    var r$ASCII_ENCODE = r.ASCII_ENCODE
+    var /* [auto-meaningful-name] */r$ASCII_ENCODE = r.ASCII_ENCODE
     do {
       if (r$ASCII_ENCODE === r.ASCII_ENCODE) {
         r$ASCII_ENCODE = this.decodeAsciiSegment(e, n, s)

@@ -1,11 +1,11 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2527
  */
 
 var r = require("./851")
-var i = require("./762/index")
+var i = require("../../2515/853/762/index")
 var o = require("./1144")
 var a = require("../../../../2533/1420/475")
 module.exports = function (e, t, n) {

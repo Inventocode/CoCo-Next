@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：D4UY
@@ -26,7 +26,7 @@ var Controls = function Controls(_ref) {
   var ref = __WEBPACK_IMPORTED_MODULE_0_react__.useRef()
   var _useThree = __WEBPACK_IMPORTED_MODULE_1_react_three_fiber__.useThree()
   var camera = _useThree.camera
-  var _useThree$gl = _useThree.gl
+  var /* [auto-meaningful-name] */_useThree$gl = _useThree.gl
   __WEBPACK_IMPORTED_MODULE_0_react__.useEffect(function () {
     _useThree$gl.domElement.style.outline = "none"
     var orbitControls = ref.current

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：503
@@ -45,7 +45,7 @@ var l = function (t) {
         i[o]++
       } else {
         if (5 === o) {
-          for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, l = -1, e$CODE_START_A = e.CODE_START_A; e$CODE_START_A <= e.CODE_START_C; e$CODE_START_A++) {
+          for (var /* [auto-meaningful-name] */e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, l = -1, /* [auto-meaningful-name] */e$CODE_START_A = e.CODE_START_A; e$CODE_START_A <= e.CODE_START_C; e$CODE_START_A++) {
             var p = f.a.patternMatchVariance(i, e.CODE_PATTERNS[e$CODE_START_A], e.MAX_INDIVIDUAL_VARIANCE)
             if (p < e$MAX_AVG_VARIANCE) {
               e$MAX_AVG_VARIANCE = p
@@ -70,7 +70,7 @@ var l = function (t) {
   }
   e.decodeCode = function (t, r, n) {
     f.a.recordPattern(t, n, r)
-    for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, i = -1, a = 0; a < e.CODE_PATTERNS.length; a++) {
+    for (var /* [auto-meaningful-name] */e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, i = -1, a = 0; a < e.CODE_PATTERNS.length; a++) {
       var s = e.CODE_PATTERNS[a]
       var c = this.patternMatchVariance(r, s, e.MAX_INDIVIDUAL_VARIANCE)
       if (c < e$MAX_AVG_VARIANCE) {
@@ -249,14 +249,14 @@ var l = function (t) {
     if ((S -= T * C) % 103 !== C) {
       throw new o.a()
     }
-    var _$length = _.length
+    var /* [auto-meaningful-name] */_$length = _.length
     if (0 === _$length) {
       throw new u.a()
     }
     if (_$length > 0 && O) {
       _ = h === e.CODE_CODE_C ? _.substring(0, _$length - 2) : _.substring(0, _$length - 1)
     }
-    for (var P = (d[1] + d[0]) / 2, B = m + D / 2, y$length = y.length, F = new Uint8Array(y$length), x = 0; x < y$length; x++) {
+    for (var P = (d[1] + d[0]) / 2, B = m + D / 2, /* [auto-meaningful-name] */y$length = y.length, F = new Uint8Array(y$length), x = 0; x < y$length; x++) {
       F[x] = y[x]
     }
     var k = [new c.a(P, t), new c.a(B, t)]

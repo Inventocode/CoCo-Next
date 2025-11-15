@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：245
@@ -10,7 +10,7 @@ export { r as i }
 export { o as h }
 export { i as g }
 export { a as f }
-export { s as a }
+export { FFFFFFFF as a }
 export { c }
 export { l as b }
 export { u as e }
@@ -19,9 +19,9 @@ var r = 40
 var o = 40
 var i = 1800
 var a = 3200
-var s = "#FFFFFFFF"
+var /* [auto-meaningful-name] */FFFFFFFF = "#FFFFFFFF"
 var c = 300
 var l = 300
 var u = false
 var d = false
-export default s
+export default FFFFFFFF

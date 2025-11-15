@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2537
@@ -29,16 +29,16 @@ function c(e) {
   }
 }
 var u = exports.Swatch = function (e) {
-  var e$color = e.color
-  var e$style = e.style
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var c = undefined === e$onClick ? function () {} : e$onClick
-  var e$onHover = e.onHover
-  var e$title = e.title
+  var /* [auto-meaningful-name] */e$onHover = e.onHover
+  var /* [auto-meaningful-name] */e$title = e.title
   var f = undefined === e$title ? e$color : e$title
-  var e$children = e.children
-  var e$focus = e.focus
-  var e$focusStyle = e.focusStyle
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$focus = e.focus
+  var /* [auto-meaningful-name] */e$focusStyle = e.focusStyle
   var _ = undefined === e$focusStyle ? {} : e$focusStyle
   var A = "transparent" === e$color
   var g = (0, o.default)({

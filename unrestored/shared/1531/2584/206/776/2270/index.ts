@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2270
@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../../../38/607/624/index")
-var i = require("../../../36/2668/220")
-var o = require("../../../36/2668/230")
+var r = require("../624/index")
+var i = require("../220")
+var o = require("../230")
 var a = require("./2271/index")
 var s = require("../1112")
 var c = require("../807/index")("eslint:config-comment-parser")

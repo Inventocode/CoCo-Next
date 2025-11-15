@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：500
@@ -13,7 +13,7 @@ exports.Field = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../4/127")
+var a = require("../1036/127")
 var s = require("../125/195/index")
 var c = require("../125/294")
 var u = require("../125/index")
@@ -157,7 +157,7 @@ var f = function () {
     return new c.Size(t.width * n, t.height * n)
   }
   e.prototype.update_editable = function () {
-    var this$field_group = this.field_group
+    var /* [auto-meaningful-name] */this$field_group = this.field_group
     if (this.editable && this$field_group) {
       if (!this.source_block || !this.field_group) {
         throw new Error("no necessary elements.")
@@ -227,8 +227,8 @@ var f = function () {
     this.validator_ = undefined
   }
   e.prototype.render_ = function () {
-    var /* [auto-meaningful-name] */_this$border_rect2
     var /* [auto-meaningful-name] */this$border_rect
+    var /* [auto-meaningful-name] */_this$border_rect
     if (this.visible_) {
       if (this.image_element) {
         this.size_.width = parseFloat(this.image_element.getAttribute("width") || "0") || 0
@@ -238,11 +238,11 @@ var f = function () {
           this.text_element.appendChild(document.createTextNode(this.get_display_text()))
           this.update_width()
           this.update_height()
-          if (!(null === (_this$border_rect2 = this.border_rect) || undefined === _this$border_rect2)) {
-            _this$border_rect2.setAttribute("width", "" + this.size_.width)
-          }
           if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
-            this$border_rect.setAttribute("height", "" + this.size_.height)
+            this$border_rect.setAttribute("width", "" + this.size_.width)
+          }
+          if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
+            _this$border_rect.setAttribute("height", "" + this.size_.height)
           }
         } else {
           this.size_.width = 0
@@ -288,7 +288,7 @@ var f = function () {
     }
   }
   e.prototype.get_display_text = function () {
-    var this$text_ = this.text_
+    var /* [auto-meaningful-name] */this$text_ = this.text_
     return this$text_ ? (this$text_.length > this.max_display_length && (this$text_ = this$text_.substring(0, this.max_display_length - 2) + "…"), this$text_ = this$text_.replace(/\s/g, " ")) : " "
   }
   e.prototype.call_validator = function (e) {
@@ -312,7 +312,7 @@ var f = function () {
       e = true
     }
     if (this.source_block) {
-      var _this$runtime_data$editing = this.runtime_data.editing
+      var /* [auto-meaningful-name] */this$runtime_data$editing = this.runtime_data.editing
       if (e) {
         this.value_before_editing = this.get_value()
         this.runtime_data.editing = this
@@ -320,10 +320,10 @@ var f = function () {
         this.value_before_editing = undefined
         this.runtime_data.editing = undefined
       }
-      var this$runtime_data$editing = this.runtime_data.editing
-      if (_this$runtime_data$editing && _this$runtime_data$editing !== this$runtime_data$editing && this.events.is_enabled()) {
-        if (_this$runtime_data$editing.value_before_editing) {
-          _this$runtime_data$editing.value_before_editing = undefined
+      var /* [auto-meaningful-name] */_this$runtime_data$editing = this.runtime_data.editing
+      if (this$runtime_data$editing && this$runtime_data$editing !== _this$runtime_data$editing && this.events.is_enabled()) {
+        if (this$runtime_data$editing.value_before_editing) {
+          this$runtime_data$editing.value_before_editing = undefined
         }
         this.events.fire(this.ui_event_factory({
           type: s.UIEventType.FIELD_FOCUS_CHANGE,
@@ -333,7 +333,7 @@ var f = function () {
           block_id: this.source_block.id
         }))
       }
-      if (this$runtime_data$editing && this$runtime_data$editing !== _this$runtime_data$editing && this.events.is_enabled()) {
+      if (_this$runtime_data$editing && _this$runtime_data$editing !== this$runtime_data$editing && this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: s.UIEventType.FIELD_FOCUS_CHANGE,
           workspace_id: this.source_block.workspace.id,

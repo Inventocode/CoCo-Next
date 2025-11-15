@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1760
@@ -75,7 +75,7 @@ function A(e) {
     var n
     var r = (0, l.default)(e)
     if (t) {
-      var _0L$defaultThis$constructor = (0, l.default)(this).constructor
+      var /* [auto-meaningful-name] */_0L$defaultThis$constructor = (0, l.default)(this).constructor
       n = Reflect.construct(r, arguments, _0L$defaultThis$constructor)
     } else {
       n = r.apply(this, arguments)
@@ -153,20 +153,20 @@ var g = function (e) {
       var e
       var t
       var n
-      var this$props = this.props
-      var this$props$prefixCls = this$props.prefixCls
-      var this$props$vertical = this$props.vertical
-      var this$props$reverse = this$props.reverse
-      var this$props$offset = this$props.offset
-      var this$props$style = this$props.style
-      var this$props$disabled = this$props.disabled
-      var this$props$min = this$props.min
-      var this$props$max = this$props.max
-      var this$props$value = this$props.value
-      var this$props$tabIndex = this$props.tabIndex
-      var this$props$ariaLabel = this$props.ariaLabel
-      var this$props$ariaLabelledBy = this$props.ariaLabelledBy
-      var this$props$ariaValueTextFormatter = this$props.ariaValueTextFormatter
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$prefixCls = this$props.prefixCls
+      var /* [auto-meaningful-name] */this$props$vertical = this$props.vertical
+      var /* [auto-meaningful-name] */this$props$reverse = this$props.reverse
+      var /* [auto-meaningful-name] */this$props$offset = this$props.offset
+      var /* [auto-meaningful-name] */this$props$style = this$props.style
+      var /* [auto-meaningful-name] */this$props$disabled = this$props.disabled
+      var /* [auto-meaningful-name] */this$props$min = this$props.min
+      var /* [auto-meaningful-name] */this$props$max = this$props.max
+      var /* [auto-meaningful-name] */this$props$value = this$props.value
+      var /* [auto-meaningful-name] */this$props$tabIndex = this$props.tabIndex
+      var /* [auto-meaningful-name] */this$props$ariaLabel = this$props.ariaLabel
+      var /* [auto-meaningful-name] */this$props$ariaLabelledBy = this$props.ariaLabelledBy
+      var /* [auto-meaningful-name] */this$props$ariaValueTextFormatter = this$props.ariaValueTextFormatter
       var w = (0, o.default)(this$props, ["prefixCls", "vertical", "reverse", "offset", "style", "disabled", "min", "max", "value", "tabIndex", "ariaLabel", "ariaLabelledBy", "ariaValueTextFormatter"])
       var E = (0, d.default)(this.props.className, (0, i.default)({}, "".concat(this$props$prefixCls, "-handle-click-focused"), this.state.clickFocused))
       var x = this$props$vertical ? (e = {}, (0, i.default)(e, this$props$reverse ? "top" : "bottom", "".concat(this$props$offset, "%")), (0, i.default)(e, this$props$reverse ? "bottom" : "top", "auto"), (0, i.default)(e, "transform", this$props$reverse ? null : "translateY(+50%)"), e) : (t = {}, (0, i.default)(t, this$props$reverse ? "right" : "left", "".concat(this$props$offset, "%")), (0, i.default)(t, this$props$reverse ? "left" : "right", "auto"), (0, i.default)(t, "transform", "translateX(".concat(this$props$reverse ? "+" : "-", "50%)")), t)

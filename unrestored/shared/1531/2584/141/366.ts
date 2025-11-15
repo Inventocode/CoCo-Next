@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：366
@@ -20,8 +20,8 @@ module.exports = function () {
         object: true
       }
       var t = e[typeof window] && window || this
-      var t$JSON = t.JSON
-      var t$JSON3 = t.JSON3
+      var /* [auto-meaningful-name] */t$JSON = t.JSON
+      var /* [auto-meaningful-name] */t$JSON3 = t.JSON3
       var i = false
       var o = function n(r, i) {
         if (!r) {
@@ -43,9 +43,9 @@ module.exports = function () {
           i.parse = d.parse
         }
         var h
-        var s$prototype = s.prototype
-        var s$prototype$toString = s$prototype.toString
-        var s$prototype$hasOwnProperty = s$prototype.hasOwnProperty
+        var /* [auto-meaningful-name] */s$prototype = s.prototype
+        var /* [auto-meaningful-name] */s$prototype$toString = s$prototype.toString
+        var /* [auto-meaningful-name] */s$prototype$hasOwnProperty = s$prototype.hasOwnProperty
         function g(e, t) {
           try {
             e()
@@ -67,14 +67,14 @@ module.exports = function () {
             t = m("json-stringify") && m("date-serialization") && m("json-parse")
           } else if ("date-serialization" == e) {
             if (t = m("json-stringify") && v) {
-              var i$stringify = i.stringify
+              var /* [auto-meaningful-name] */i$stringify = i.stringify
               g(function () {
                 t = "\"-271821-04-20T00:00:00.000Z\"" == i$stringify(new c(-864e13)) && "\"+275760-09-13T00:00:00.000Z\"" == i$stringify(new c(864e13)) && "\"-000001-01-01T00:00:00.000Z\"" == i$stringify(new c(-621987552e5)) && "\"1969-12-31T23:59:59.999Z\"" == i$stringify(new c(-1))
               })
             }
           } else {
             var r
-            var s = "{\"a\":[1,true,false,null,\"\\u0000\\b\\n\\f\\r\\t\"]}"
+            var /* [auto-meaningful-name] */_A_1TrueFalseNull___u0000__b__n__f__r__t_ = "{\"a\":[1,true,false,null,\"\\u0000\\b\\n\\f\\r\\t\"]}"
             if ("json-stringify" == e) {
               var u = "function" == typeof (i$stringify = i.stringify)
               if (u) {
@@ -84,7 +84,7 @@ module.exports = function () {
                 g(function () {
                   u = "0" === i$stringify(0) && "0" === i$stringify(new o()) && "\"\"" == i$stringify(new a()) && i$stringify(s$prototype$toString) === h && i$stringify(h) === h && i$stringify() === h && "1" === i$stringify(r) && "[1]" == i$stringify([r]) && "[null]" == i$stringify([h]) && "null" == i$stringify(null) && "[null,null,null]" == i$stringify([h, s$prototype$toString, null]) && i$stringify({
                     a: [r, true, false, null, "\u0000\b\n\f\r\t"]
-                  }) == s && "1" === i$stringify(null, r) && "[\n 1,\n 2\n]" == i$stringify([1, 2], null, 1)
+                  }) == _A_1TrueFalseNull___u0000__b__n__f__r__t_ && "1" === i$stringify(null, r) && "[\n 1,\n 2\n]" == i$stringify([1, 2], null, 1)
                 }, function () {
                   u = false
                 })
@@ -93,11 +93,11 @@ module.exports = function () {
             }
             if ("json-parse" == e) {
               var l
-              var i$parse = i.parse
+              var /* [auto-meaningful-name] */i$parse = i.parse
               if ("function" == typeof i$parse) {
                 g(function () {
                   if (!(0 !== i$parse("0") || i$parse(false))) {
-                    r = i$parse(s)
+                    r = i$parse(_A_1TrueFalseNull___u0000__b__n__f__r__t_)
                     if (l = 5 == r.a.length && 1 === r.a[0]) {
                       g(function () {
                         l = !i$parse("\"\t\"")
@@ -205,7 +205,7 @@ module.exports = function () {
                   u = e.getUTCMilliseconds()
                 }
               } else {
-                var f$floor = f.floor
+                var /* [auto-meaningful-name] */f$floor = f.floor
                 var d = [0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334]
                 var h = function (e, t) {
                   return d[t] + 365 * (e - 1970) + f$floor((e - 1969 + (t = +(t > 1))) / 4) - f$floor((e - 1901 + t) / 100) + f$floor((e - 1601 + t) / 400)
@@ -239,9 +239,9 @@ module.exports = function () {
               var C = function (e) {
                 return x(this)
               }
-              var i$stringify = i.stringify
+              var /* [auto-meaningful-name] */i$stringify = i.stringify
               i.stringify = function (e, t, n) {
-                var c$prototype$toJSON = c.prototype.toJSON
+                var /* [auto-meaningful-name] */c$prototype$toJSON = c.prototype.toJSON
                 c.prototype.toJSON = C
                 var i = i$stringify(e, t, n)
                 c.prototype.toJSON = c$prototype$toJSON
@@ -335,7 +335,7 @@ module.exports = function () {
                     o = n
                   } else if ("[object Array]" == s) {
                     a = {}
-                    for (var c, u = 0, n$length = n.length; u < n$length;) {
+                    for (var c, u = 0, /* [auto-meaningful-name] */n$length = n.length; u < n$length;) {
                       c = n[u++]
                       if (!("[object String]" != (s = s$prototype$toString.call(c)) && "[object Number]" != s)) {
                         a[c] = 1
@@ -361,7 +361,7 @@ module.exports = function () {
           if (!m("json-parse")) {
             var D
             var I
-            var a$fromCharCode = a.fromCharCode
+            var /* [auto-meaningful-name] */a$fromCharCode = a.fromCharCode
             var R = {
               92: "\\",
               34: "\"",
@@ -377,7 +377,7 @@ module.exports = function () {
               throw u()
             }
             var N = function () {
-              for (var e, t, n, r, i, o = I, o$length = o.length; D < o$length;) {
+              for (var e, t, n, r, i, o = I, /* [auto-meaningful-name] */o$length = o.length; D < o$length;) {
                 switch (i = o.charCodeAt(D)) {
                   case 9:
                   case 10:
@@ -604,14 +604,14 @@ module.exports = function () {
       } else {
         var /* [auto-meaningful-name] */e$atob
         var r
-        var i = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+        var /* [auto-meaningful-name] */ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_ = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
         var o = /^(?:[A-Za-z\d+\/]{4})*?(?:[A-Za-z\d+\/]{2}(?:==)?|[A-Za-z\d+\/]{3}=?)?$/
         e.btoa = function (e) {
           for (var n, r, o, a, s = "", c = 0, u = (e = String(e)).length % 3; c < e.length;) {
             if ((r = e.charCodeAt(c++)) > 255 || (o = e.charCodeAt(c++)) > 255 || (a = e.charCodeAt(c++)) > 255) {
               t.log("Failed to execute 'btoa' on 'Window': The string to be encoded contains characters outside of the Latin1 range.")
             }
-            s += i.charAt((n = r << 16 | o << 8 | a) >> 18 & 63) + i.charAt(n >> 12 & 63) + i.charAt(n >> 6 & 63) + i.charAt(63 & n)
+            s += ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt((n = r << 16 | o << 8 | a) >> 18 & 63) + ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt(n >> 12 & 63) + ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt(n >> 6 & 63) + ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt(63 & n)
           }
           return u ? s.slice(0, u - 3) + "===".substring(u) : s
         }
@@ -622,7 +622,7 @@ module.exports = function () {
           }
           e += "==".slice(2 - (3 & e.length))
           for (var n, r, a, s = "", c = 0; c < e.length;) {
-            n = i.indexOf(e.charAt(c++)) << 18 | i.indexOf(e.charAt(c++)) << 12 | (r = i.indexOf(e.charAt(c++))) << 6 | (a = i.indexOf(e.charAt(c++)))
+            n = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(e.charAt(c++)) << 18 | ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(e.charAt(c++)) << 12 | (r = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(e.charAt(c++))) << 6 | (a = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(e.charAt(c++)))
             s += 64 === r ? String.fromCharCode(n >> 16 & 255) : 64 === a ? String.fromCharCode(n >> 16 & 255, n >> 8 & 255) : String.fromCharCode(n >> 16 & 255, n >> 8 & 255, 255 & n)
           }
           return s
@@ -634,31 +634,31 @@ module.exports = function () {
         return "[object regexp]" === Object.prototype.toString.call(e).toLowerCase() ? this.replace(e, t) : this.replace(new RegExp(e, "g"), t)
       }
     }
-    array$prototype = Array.prototype
-    function$prototype = Function.prototype
-    object$prototype = Object.prototype
-    array$prototype$slice = array$prototype.slice
-    object$prototype$toString = object$prototype.toString
-    object$prototype$hasOwnProperty = object$prototype.hasOwnProperty
-    function$prototype.bind
-    array$prototype$forEach = array$prototype.forEach
-    array$prototype.indexOf
-    array$isArray = Array.isArray
+    Array$prototype = Array.prototype
+    Function$prototype = Function.prototype
+    Object$prototype = Object.prototype
+    Array$prototype$slice = Array$prototype.slice
+    Object$prototype$toString = Object$prototype.toString
+    Object$prototype$hasOwnProperty = Object$prototype.hasOwnProperty
+    Function$prototype.bind
+    Array$prototype$forEach = Array$prototype.forEach
+    Array$prototype.indexOf
+    Array$isArray = Array.isArray
     x = {}
     C = n.each = function (e, t, r) {
       if (null == e) {
         return false
       }
-      if (array$prototype$forEach && e.forEach === array$prototype$forEach) {
+      if (Array$prototype$forEach && e.forEach === Array$prototype$forEach) {
         e.forEach(t, r)
       } else if (n.isArray(e) && e.length === +e.length) {
-        for (var i = 0, e$length = e.length; i < e$length; i++) {
+        for (var i = 0, /* [auto-meaningful-name] */e$length = e.length; i < e$length; i++) {
           if (i in e && t.call(r, e[i], i, e) === x) {
             return false
           }
         }
       } else {
-        for (var a in e) if (object$prototype$hasOwnProperty.call(e, a) && t.call(r, e[a], a, e) === x) {
+        for (var a in e) if (Object$prototype$hasOwnProperty.call(e, a) && t.call(r, e[a], a, e) === x) {
           return false
         }
       }
@@ -670,15 +670,15 @@ module.exports = function () {
       }), n)
     }
     n.extend = function (e) {
-      C(array$prototype$slice.call(arguments, 1), function (t) {
-        for (var n in t) if (object$prototype$hasOwnProperty.call(t, n) && undefined !== t[n]) {
+      C(Array$prototype$slice.call(arguments, 1), function (t) {
+        for (var n in t) if (Object$prototype$hasOwnProperty.call(t, n) && undefined !== t[n]) {
           e[n] = t[n]
         }
       })
       return e
     }
     n.extend2Lev = function (e) {
-      C(array$prototype$slice.call(arguments, 1), function (t) {
+      C(Array$prototype$slice.call(arguments, 1), function (t) {
         for (var r in t) if (undefined !== t[r]) {
           if (n.isObject(t[r]) && n.isObject(e[r])) {
             n.extend(e[r], t[r])
@@ -690,15 +690,15 @@ module.exports = function () {
       return e
     }
     n.coverExtend = function (e) {
-      C(array$prototype$slice.call(arguments, 1), function (t) {
+      C(Array$prototype$slice.call(arguments, 1), function (t) {
         for (var n in t) if (undefined !== t[n] && undefined === e[n]) {
           e[n] = t[n]
         }
       })
       return e
     }
-    n.isArray = array$isArray || function (e) {
-      return "[object Array]" === object$prototype$toString.call(e)
+    n.isArray = Array$isArray || function (e) {
+      return "[object Array]" === Object$prototype$toString.call(e)
     }
     n.isFunction = function (e) {
       if (!e) {
@@ -708,10 +708,10 @@ module.exports = function () {
       return "[object Function]" == t || "[object AsyncFunction]" == t
     }
     n.isArguments = function (e) {
-      return !(!e || !object$prototype$hasOwnProperty.call(e, "callee"))
+      return !(!e || !Object$prototype$hasOwnProperty.call(e, "callee"))
     }
     n.toArray = function (e) {
-      return e ? e.toArray ? e.toArray() : n.isArray(e) || n.isArguments(e) ? array$prototype$slice.call(e) : n.values(e) : []
+      return e ? e.toArray ? e.toArray() : n.isArray(e) || n.isArguments(e) ? Array$prototype$slice.call(e) : n.values(e) : []
     }
     n.values = function (e) {
       var t = []
@@ -723,7 +723,7 @@ module.exports = function () {
       return t
     }
     n.indexOf = function (e, t) {
-      var e$indexOf = e.indexOf
+      var /* [auto-meaningful-name] */e$indexOf = e.indexOf
       if (e$indexOf) {
         return e$indexOf.call(e, t)
       }
@@ -752,12 +752,12 @@ module.exports = function () {
       return e.hasAttribute ? e.hasAttribute(t) : !(!e.attributes[t] || !e.attributes[t].specified)
     }
     n.filter = function (e, t, n) {
-      var object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
+      var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
       if (e.filter) {
         return e.filter(t)
       }
       for (var i = [], o = 0; o < e.length; o++) {
-        if (object$prototype$hasOwnProperty.call(e, o)) {
+        if (Object$prototype$hasOwnProperty.call(e, o)) {
           var a = e[o]
           if (t.call(n, a, o, e)) {
             i.push(a)
@@ -776,11 +776,11 @@ module.exports = function () {
       return e.replace(/^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g, "")
     }
     n.isObject = function (e) {
-      return null != e && "[object Object]" == object$prototype$toString.call(e)
+      return null != e && "[object Object]" == Object$prototype$toString.call(e)
     }
     n.isEmptyObject = function (e) {
       if (n.isObject(e)) {
-        for (var t in e) if (object$prototype$hasOwnProperty.call(e, t)) {
+        for (var t in e) if (Object$prototype$hasOwnProperty.call(e, t)) {
           return false
         }
         return true
@@ -791,16 +791,16 @@ module.exports = function () {
       return undefined === e
     }
     n.isString = function (e) {
-      return "[object String]" == object$prototype$toString.call(e)
+      return "[object String]" == Object$prototype$toString.call(e)
     }
     n.isDate = function (e) {
-      return "[object Date]" == object$prototype$toString.call(e)
+      return "[object Date]" == Object$prototype$toString.call(e)
     }
     n.isBoolean = function (e) {
-      return "[object Boolean]" == object$prototype$toString.call(e)
+      return "[object Boolean]" == Object$prototype$toString.call(e)
     }
     n.isNumber = function (e) {
-      return "[object Number]" == object$prototype$toString.call(e) && /[\d\.]+/.test(String(e))
+      return "[object Number]" == Object$prototype$toString.call(e) && /[\d\.]+/.test(String(e))
     }
     n.isElement = function (e) {
       return !(!e || 1 !== e.nodeType)
@@ -1009,7 +1009,7 @@ module.exports = function () {
       }
     }
     n.parseSuperProperties = function (e) {
-      var e$properties = e.properties
+      var /* [auto-meaningful-name] */e$properties = e.properties
       var i = JSON.parse(JSON.stringify(e))
       if (n.isObject(e$properties)) {
         n.each(e$properties, function (e, o) {
@@ -1045,7 +1045,7 @@ module.exports = function () {
     }
     n.searchConfigData = function (e) {
       if ("object" == typeof e && e.$option) {
-        var e$$option = e.$option
+        var /* [auto-meaningful-name] */e$$option = e.$option
         delete e.$option
         return e$$option
       }
@@ -1110,7 +1110,7 @@ module.exports = function () {
       return d() + "-" + n.getRandom().toString(16).replace(".", "") + "-" + function (e) {
         var t
         var n
-        var navigator$userAgent = navigator.userAgent
+        var /* [auto-meaningful-name] */navigator$userAgent = navigator.userAgent
         var i = []
         var o = 0
         function a(e, t) {
@@ -1212,7 +1212,7 @@ module.exports = function () {
         var t = this
         return this.path || this.composedPath && this.composedPath() || function () {
           try {
-            var t$target = t.target
+            var /* [auto-meaningful-name] */t$target = t.target
             var r = [t$target]
             if (null === t$target || null === t$target.parentElement) {
               return []
@@ -1272,9 +1272,9 @@ module.exports = function () {
       n.addEvent(window, t, e)
     }
     n.addSinglePageEvent = function (e) {
-      var location$href = location.href
-      var window$history$pushState = window.history.pushState
-      var window$history$replaceState = window.history.replaceState
+      var /* [auto-meaningful-name] */location$href = location.href
+      var /* [auto-meaningful-name] */window$history$pushState = window.history.pushState
+      var /* [auto-meaningful-name] */window$history$replaceState = window.history.replaceState
       window.history.pushState = function () {
         window$history$pushState.apply(window.history, arguments)
         e(location$href)
@@ -1407,7 +1407,7 @@ module.exports = function () {
       if (!e.target) {
         return false
       }
-      var e$target = e.target
+      var /* [auto-meaningful-name] */e$target = e.target
       var i = e$target.tagName.toLowerCase()
       var o = {}
       o.$element_type = i
@@ -1444,13 +1444,13 @@ module.exports = function () {
       isSupport: function () {
         var e = true
         try {
-          var t = "__sensorsdatasupport__"
-          var r = "testIsSupportStorage"
-          n.localStorage.set(t, r)
-          if (n.localStorage.get(t) !== r) {
+          var /* [auto-meaningful-name] */__sensorsdatasupport__ = "__sensorsdatasupport__"
+          var /* [auto-meaningful-name] */TestIsSupportStorage = "testIsSupportStorage"
+          n.localStorage.set(__sensorsdatasupport__, TestIsSupportStorage)
+          if (n.localStorage.get(__sensorsdatasupport__) !== TestIsSupportStorage) {
             e = false
           }
-          n.localStorage.remove(t)
+          n.localStorage.remove(__sensorsdatasupport__)
         } catch (i) {
           e = false
         }
@@ -1460,11 +1460,11 @@ module.exports = function () {
     n.sessionStorage = {
       isSupport: function () {
         var e = true
-        var t = "testIsSupportStorage"
+        var /* [auto-meaningful-name] */TestIsSupportStorage = "testIsSupportStorage"
         try {
           if (sessionStorage && sessionStorage.setItem) {
-            sessionStorage.setItem("__sensorsdatasupport__", t)
-            sessionStorage.removeItem("__sensorsdatasupport__", t)
+            sessionStorage.setItem("__sensorsdatasupport__", TestIsSupportStorage)
+            sessionStorage.removeItem("__sensorsdatasupport__", TestIsSupportStorage)
             e = true
           } else {
             e = false
@@ -1523,8 +1523,8 @@ module.exports = function () {
       }, e)
       t.debug.protocol.ajax(e.url)
       var o
-      var e$success = e.success
-      var e$error = e.error
+      var /* [auto-meaningful-name] */e$success = e.success
+      var /* [auto-meaningful-name] */e$error = e.error
       e.success = function (e) {
         e$success(e)
         if (o) {
@@ -1738,7 +1738,7 @@ module.exports = function () {
       return i
     }
     n.getCurrentDomain = function (e) {
-      var t$para$current_domain = t.para.current_domain
+      var /* [auto-meaningful-name] */t$para$current_domain = t.para.current_domain
       switch (typeof t$para$current_domain) {
         case "function":
           var i = t$para$current_domain()
@@ -1802,7 +1802,7 @@ module.exports = function () {
       offset: function () {
         var e = this.ele.getBoundingClientRect()
         if (e.width || e.height) {
-          var this$ele$ownerDocument$documentElement = this.ele.ownerDocument.documentElement
+          var /* [auto-meaningful-name] */this$ele$ownerDocument$documentElement = this.ele.ownerDocument.documentElement
           return {
             top: e.top + window.pageYOffset - this$ele$ownerDocument$documentElement.clientTop,
             left: e.left + window.pageXOffset - this$ele$ownerDocument$documentElement.clientLeft
@@ -1879,12 +1879,12 @@ module.exports = function () {
         return this.siblings(this.ele.firstChild)
       },
       parent: function () {
-        var this$ele$parentNode = this.ele.parentNode
+        var /* [auto-meaningful-name] */this$ele$parentNode = this.ele.parentNode
         this$ele$parentNode = this$ele$parentNode && 11 !== this$ele$parentNode.nodeType ? this$ele$parentNode : null
         return n.ry(this$ele$parentNode)
       },
       previousElementSibling: function () {
-        var this$ele = this.ele
+        var /* [auto-meaningful-name] */this$ele = this.ele
         if ("previousElementSibling" in document.documentElement) {
           return n.ry(this$ele.previousElementSibling)
         }
@@ -1896,7 +1896,7 @@ module.exports = function () {
         return n.ry(null)
       },
       getSameTypeSiblings: function () {
-        for (var this$ele = this.ele, this$ele$parentNode = this$ele.parentNode, n = this$ele.tagName.toLowerCase(), r = [], i = 0; i < this$ele$parentNode.children.length; i++) {
+        for (var /* [auto-meaningful-name] */this$ele = this.ele, /* [auto-meaningful-name] */this$ele$parentNode = this$ele.parentNode, n = this$ele.tagName.toLowerCase(), r = [], i = 0; i < this$ele$parentNode.children.length; i++) {
           var o = this$ele$parentNode.children[i]
           if (1 === o.nodeType && o.tagName.toLowerCase() === n) {
             r.push(this$ele$parentNode.children[i])
@@ -1920,7 +1920,7 @@ module.exports = function () {
     }
     n.getKeywordFromReferrer = function (e) {
       e = e || document.referrer
-      var t$para$source_type$keyword = t.para.source_type.keyword
+      var /* [auto-meaningful-name] */t$para$source_type$keyword = t.para.source_type.keyword
       if (document && "string" == typeof e) {
         if (0 === e.indexOf("http")) {
           var i = n.getReferSearchEngine(e)
@@ -1983,7 +1983,7 @@ module.exports = function () {
         sogou: [/^.*\.sogou\.com$/],
         yahoo: [/^.*\.yahoo\.com$/]
       }
-      for (var o in i) for (var a = i[o], s = 0, a$length = a.length; s < a$length; s++) {
+      for (var o in i) for (var a = i[o], s = 0, /* [auto-meaningful-name] */a$length = a.length; s < a$length; s++) {
         if (a[s].test(r)) {
           return o
         }
@@ -1999,10 +1999,10 @@ module.exports = function () {
         }
       }
       var r = "(" + t.para.source_type.utm.join("|") + ")\\=[^&]+"
-      var t$para$source_type$search = t.para.source_type.search
-      var t$para$source_type$social = t.para.source_type.social
+      var /* [auto-meaningful-name] */t$para$source_type$search = t.para.source_type.search
+      var /* [auto-meaningful-name] */t$para$source_type$social = t.para.source_type.social
       var a = document.referrer || ""
-      var n$info$pageProp$url = n.info.pageProp.url
+      var /* [auto-meaningful-name] */n$info$pageProp$url = n.info.pageProp.url
       if (n$info$pageProp$url) {
         var c = n$info$pageProp$url.match(new RegExp(r))
         return c && c[0] ? "付费广告流量" : e(t$para$source_type$search, a) ? "自然搜索流量" : e(t$para$source_type$social, a) ? "社交网站流量" : "" === a ? "直接流量" : "引荐流量"
@@ -2012,7 +2012,7 @@ module.exports = function () {
     n.info = {
       initPage: function () {
         var e = n.getReferrer()
-        var location$href = location.href
+        var /* [auto-meaningful-name] */location$href = location.href
         var i = n.getCurrentDomain(location$href)
         if (!i) {
           t.debug.jssdkDebug("url_domain异常_" + location$href + "_" + i)
@@ -2184,7 +2184,7 @@ module.exports = function () {
     }
     n.rot13obfs = function (e, t) {
       t = "number" == typeof t ? t : 13
-      for (var n = (e = String(e)).split(""), r = 0, n$length = n.length; r < n$length; r++) {
+      for (var n = (e = String(e)).split(""), r = 0, /* [auto-meaningful-name] */n$length = n.length; r < n$length; r++) {
         if (n[r].charCodeAt(0) < 126) {
           n[r] = String.fromCharCode((n[r].charCodeAt(0) + t) % 126)
         }
@@ -2319,7 +2319,7 @@ module.exports = function () {
               if (!(n.isElement(t) && t.children && t.children.length > 0)) {
                 return null
               }
-              for (var t$children = t.children, u = 0; u < t$children.length; u++) {
+              for (var /* [auto-meaningful-name] */t$children = t.children, u = 0; u < t$children.length; u++) {
                 if (n.isElement(t$children[u]) && t$children[u].tagName.toLowerCase() === o && 0 == --s) {
                   r = t$children[u]
                   break
@@ -2761,17 +2761,17 @@ module.exports = function () {
         })
       },
       apph5: function (e) {
-        var r = "app_h5打通失败-"
+        var /* [auto-meaningful-name] */App_h5 = "app_h5打通失败-"
         var i = {
-          1: r + "use_app_track为false",
-          2: r + "Android或者iOS，没有暴露相应方法",
-          3.1: r + "Android校验server_url失败",
-          3.2: r + "iOS校验server_url失败",
-          4.1: r + "H5 校验 iOS server_url 失败",
-          4.2: r + "H5 校验 Android server_url 失败"
+          1: App_h5 + "use_app_track为false",
+          2: App_h5 + "Android或者iOS，没有暴露相应方法",
+          3.1: App_h5 + "Android校验server_url失败",
+          3.2: App_h5 + "iOS校验server_url失败",
+          4.1: App_h5 + "H5 校验 iOS server_url 失败",
+          4.2: App_h5 + "H5 校验 Android server_url 失败"
         }
-        var e$output = e.output
-        var e$step = e.step
+        var /* [auto-meaningful-name] */e$output = e.output
+        var /* [auto-meaningful-name] */e$step = e.step
         var s = e.data || ""
         if (!("all" !== e$output && "console" !== e$output)) {
           t.log(i[e$step])
@@ -2927,7 +2927,7 @@ module.exports = function () {
       },
       autoTrackSinglePage: function (e, r) {
         if (this.autoTrackIsUsed) {
-          var n$info$pageProp$url = n.info.pageProp.url
+          var /* [auto-meaningful-name] */n$info$pageProp$url = n.info.pageProp.url
         } else {
           n$info$pageProp$url = n.info.pageProp.referrer
         }
@@ -3002,7 +3002,7 @@ module.exports = function () {
         if (e.not_set_profile) {
           delete e.not_set_profile
         }
-        var location$href = location.href
+        var /* [auto-meaningful-name] */location$href = location.href
         if (t.para.is_single_page) {
           n.addHashEvent(function () {
             var i = n.getReferrer(location$href)
@@ -3373,11 +3373,11 @@ module.exports = function () {
       var e = {
         searchKeywordMatch: location.search.match(/sa-request-id=([^&#]+)/),
         isSeachHasKeyword: function () {
-          var this$searchKeywordMatch = this.searchKeywordMatch
+          var /* [auto-meaningful-name] */this$searchKeywordMatch = this.searchKeywordMatch
           return !!(this$searchKeywordMatch && this$searchKeywordMatch[0] && this$searchKeywordMatch[1]) && ("string" == typeof sessionStorage.getItem("sensors-visual-mode") && sessionStorage.removeItem("sensors-visual-mode"), true)
         },
         hasKeywordHandle: function () {
-          var this$searchKeywordMatch = this.searchKeywordMatch
+          var /* [auto-meaningful-name] */this$searchKeywordMatch = this.searchKeywordMatch
           var t = location.search.match(/sa-request-type=([^&#]+)/)
           var r = location.search.match(/sa-request-url=([^&#]+)/)
           l.setNotice(r)
@@ -3542,7 +3542,7 @@ module.exports = function () {
               if (e) {
                 sa_jssdk_app_define_mode(t, e)
               } else {
-                var location$protocol = location.protocol
+                var /* [auto-meaningful-name] */location$protocol = location.protocol
                 location$protocol = n.indexOf(["http:", "https:"], location$protocol) > -1 ? location$protocol : "https:"
                 n.loadScript({
                   success: function () {
@@ -3738,7 +3738,7 @@ module.exports = function () {
       },
       sendPrepare: function (e) {
         this.appendPendingItems(e.keys)
-        var e$vals = e.vals
+        var /* [auto-meaningful-name] */e$vals = e.vals
         if (e$vals.length > 0) {
           this.send({
             keys: e.keys,
@@ -3763,7 +3763,7 @@ module.exports = function () {
         }, t.para.batch_send.send_interval)
       },
       readStore: function () {
-        for (var e = [], r = [], i = null, o = new Date().getTime(), localStorage$length = localStorage.length, s = this.getPendingItems(), c = 0; c < localStorage$length; c++) {
+        for (var e = [], r = [], i = null, o = new Date().getTime(), /* [auto-meaningful-name] */localStorage$length = localStorage.length, s = this.getPendingItems(), c = 0; c < localStorage$length; c++) {
           var u = localStorage.key(c)
           if (0 === u.indexOf("sawebjssdk-") && /^sawebjssdk\-\d+$/.test(u)) {
             if (s.length && n.indexOf(s, u) > -1) {
@@ -3808,7 +3808,7 @@ module.exports = function () {
       },
       getInstance: function (e) {
         var r = new this[this.getSendType(e)](e)
-        var r$start = r.start
+        var /* [auto-meaningful-name] */r$start = r.start
         r.start = function () {
           if (n.isObject(t.para.is_debug) && t.para.is_debug.storage && t.store.requests) {
             t.store.requests.push({
@@ -3857,7 +3857,7 @@ module.exports = function () {
       },
       getRealtimeInstance: function (e) {
         var n = new this[this.getSendType(e)](e)
-        var n$start = n.start
+        var /* [auto-meaningful-name] */n$start = n.start
         n.start = function () {
           var e = this
           n$start.apply(this, arguments)
@@ -4259,7 +4259,7 @@ module.exports = function () {
       },
       set: function (e, n) {
         this._state = this._state || {}
-        var this$_state$distinct_id = this._state.distinct_id
+        var /* [auto-meaningful-name] */this$_state$distinct_id = this._state.distinct_id
         this._state[e] = n
         if ("first_id" === e) {
           delete this._state._first_id
@@ -4277,12 +4277,12 @@ module.exports = function () {
         this._state["_" + e] = t
       },
       setSessionProps: function (e) {
-        var this$_sessionState = this._sessionState
+        var /* [auto-meaningful-name] */this$_sessionState = this._sessionState
         n.extend(this$_sessionState, e)
         this.sessionSave(this$_sessionState)
       },
       setSessionPropsOnce: function (e) {
-        var this$_sessionState = this._sessionState
+        var /* [auto-meaningful-name] */this$_sessionState = this._sessionState
         n.coverExtend(this$_sessionState, e)
         this.sessionSave(this$_sessionState)
       },
@@ -4429,7 +4429,7 @@ module.exports = function () {
         }
       },
       checkIsFirstLatest: function () {
-        for (var n$info$pageProp$url_domain = n.info.pageProp.url_domain, r = ["$utm_source", "$utm_medium", "$utm_campaign", "$utm_content", "$utm_term"], i = c.getProps(), o = 0; o < r.length; o++) {
+        for (var /* [auto-meaningful-name] */n$info$pageProp$url_domain = n.info.pageProp.url_domain, r = ["$utm_source", "$utm_medium", "$utm_campaign", "$utm_content", "$utm_term"], i = c.getProps(), o = 0; o < r.length; o++) {
           if (r[o] in i) {
             delete i[r[o]]
           }
@@ -4496,8 +4496,8 @@ module.exports = function () {
         t.register(a)
         if (t.para.preset_properties.latest_utm) {
           var s = n.info.campaignParamsStandard("$latest_", "_latest_")
-          var s$$utms = s.$utms
-          var s$otherUtms = s.otherUtms
+          var /* [auto-meaningful-name] */s$$utms = s.$utms
+          var /* [auto-meaningful-name] */s$otherUtms = s.otherUtms
           if (!n.isEmptyObject(s$$utms)) {
             t.register(s$$utms)
           }
@@ -4635,7 +4635,7 @@ module.exports = function () {
         return !!/sa-sdk-ios/.test(navigator.userAgent)
       },
       dataSend: function (e, r, i) {
-        var e$data = e.data
+        var /* [auto-meaningful-name] */e$data = e.data
         if (n.isObject(t.para.app_js_bridge) && !t.para.app_js_bridge.is_mui) {
           if (window.webkit && window.webkit.messageHandlers && window.webkit.messageHandlers.sensorsdataNativeTracker && window.webkit.messageHandlers.sensorsdataNativeTracker.postMessage && n.isObject(window.SensorsData_iOS_JS_Bridge) && window.SensorsData_iOS_JS_Bridge.sensorsdata_app_server_url) {
             if (t.bridge.is_verify_success) {
@@ -4927,10 +4927,10 @@ module.exports = function () {
         if (!i || !i.parentNode || !i.parentNode.children) {
           return null
         }
-        var i$parentNode = i.parentNode
+        var /* [auto-meaningful-name] */i$parentNode = i.parentNode
         var s = this.hasElement(r.originalEvent || r)
-        var t$para$heatmap$track_attr = t.para.heatmap.track_attr
-        var this$otherTags = this.otherTags
+        var /* [auto-meaningful-name] */t$para$heatmap$track_attr = t.para.heatmap.track_attr
+        var /* [auto-meaningful-name] */this$otherTags = this.otherTags
         if ("a" === o || "button" === o || "input" === o || "textarea" === o || n.hasAttributes(i, t$para$heatmap$track_attr)) {
           return i
         }
@@ -5011,7 +5011,7 @@ module.exports = function () {
         }
         var a = e.tagName.toLowerCase()
         var s = o.getElementsByTagName(a)
-        var s$length = s.length
+        var /* [auto-meaningful-name] */s$length = s.length
         var u = []
         if (s$length > 1) {
           for (var l = 0; l < s$length; l++) {
@@ -5053,7 +5053,7 @@ module.exports = function () {
         if (!e.parentNode) {
           return -1
         }
-        for (var t = 0, e$tagName = e.tagName, e$parentNode$children = e.parentNode.children, i = 0; i < e$parentNode$children.length; i++) {
+        for (var t = 0, /* [auto-meaningful-name] */e$tagName = e.tagName, /* [auto-meaningful-name] */e$parentNode$children = e.parentNode.children, i = 0; i < e$parentNode$children.length; i++) {
           if (e$parentNode$children[i].tagName === e$tagName) {
             if (e === e$parentNode$children[i]) {
               return t
@@ -5184,7 +5184,7 @@ module.exports = function () {
       },
       getCollectableParent: function (e, n) {
         try {
-          var e$parentNode = e.parentNode
+          var /* [auto-meaningful-name] */e$parentNode = e.parentNode
           var i = e$parentNode ? e$parentNode.tagName.toLowerCase() : ""
           if ("body" === i) {
             return false
@@ -5404,7 +5404,7 @@ module.exports = function () {
           if ("input" === s.tagName.toLowerCase()) {
             i = s.value || ""
           } else if ("select" === s.tagName.toLowerCase()) {
-            var s$selectedIndex = s.selectedIndex
+            var /* [auto-meaningful-name] */s$selectedIndex = s.selectedIndex
             if (n.isNumber(s$selectedIndex) && n.isElement(s[s$selectedIndex])) {
               i = t._.getElementContent(s[s$selectedIndex], "select")
             }
@@ -5787,7 +5787,7 @@ module.exports = function () {
             return false
           }
           var t = this.sd._.cookie.get("sensors_amp_id")
-          var this$sd$store$_state$distinct_id = this.sd.store._state.distinct_id
+          var /* [auto-meaningful-name] */this$sd$store$_state$distinct_id = this.sd.store._state.distinct_id
           if (t && t.length > 0) {
             var r = "amp-" === t.slice(0, 4)
             if (t !== this$sd$store$_state$distinct_id) {
@@ -5909,7 +5909,7 @@ module.exports = function () {
           n.track("$ChannelLinkReaching")
         },
         getUrlDomain: function () {
-          var t$info$pageProp$url_domain = t.info.pageProp.url_domain
+          var /* [auto-meaningful-name] */t$info$pageProp$url_domain = t.info.pageProp.url_domain
           if ("" === t$info$pageProp$url_domain) {
             t$info$pageProp$url_domain = "url解析失败"
           }
@@ -6156,7 +6156,7 @@ module.exports = function () {
           }
         },
         addListeners: function () {
-          var t$visibilityChange = t().visibilityChange
+          var /* [auto-meaningful-name] */t$visibilityChange = t().visibilityChange
           if (t$visibilityChange) {
             document.addEventListener(t$visibilityChange, function () {
               clearTimeout(this.timer)
@@ -6185,7 +6185,7 @@ module.exports = function () {
 
       var e = {
         getPart: function (e) {
-          var this$option$length = this.option.length
+          var /* [auto-meaningful-name] */this$option$length = this.option.length
           if (this$option$length) {
             for (var n = 0; n < this$option$length; n++) {
               if (e.indexOf(this.option[n].part_url) > -1) {
@@ -6196,7 +6196,7 @@ module.exports = function () {
           return false
         },
         getPartHash: function (e) {
-          var this$option$length = this.option.length
+          var /* [auto-meaningful-name] */this$option$length = this.option.length
           if (this$option$length) {
             for (var n = 0; n < this$option$length; n++) {
               if (e.indexOf(this.option[n].part_url) > -1) {
@@ -6288,9 +6288,9 @@ module.exports = function () {
           var t = function (t) {
             var n
             var r
-            var t$target = t.target
+            var /* [auto-meaningful-name] */t$target = t.target
             var o = t$target.tagName.toLowerCase()
-            var t$target$parentNode = t$target.parentNode
+            var /* [auto-meaningful-name] */t$target$parentNode = t$target.parentNode
             if ("a" === o && t$target.href || t$target$parentNode && t$target$parentNode.tagName && "a" === t$target$parentNode.tagName.toLowerCase() && t$target$parentNode.href) {
               if ("a" === o && t$target.href) {
                 n = t$target.href
@@ -6299,7 +6299,7 @@ module.exports = function () {
                 n = t$target$parentNode.href
                 r = t$target$parentNode
               }
-              var e$_$URLN$protocol = e._.URL(n).protocol
+              var /* [auto-meaningful-name] */e$_$URLN$protocol = e._.URL(n).protocol
               if (!("http:" !== e$_$URLN$protocol && "https:" !== e$_$URLN$protocol)) {
                 if (e.getPart(n)) {
                   e.rewireteUrl(n, r)
@@ -6322,7 +6322,7 @@ module.exports = function () {
             this.addListen()
             this.option = t.linker
             this.option = function (t) {
-              for (var t$length = t.length, r = [], i = 0; i < t$length; i++) {
+              for (var /* [auto-meaningful-name] */t$length = t.length, r = [], i = 0; i < t$length; i++) {
                 if (/[A-Za-z0-9]+\./.test(t[i].part_url) && "[object Boolean]" == Object.prototype.toString.call(t[i].after_hash)) {
                   r.push(t[i])
                 } else {
@@ -6365,14 +6365,14 @@ module.exports = function () {
   var d
   var h
   var p
-  var /* [auto-meaningful-name] */array$prototype
-  var /* [auto-meaningful-name] */function$prototype
-  var /* [auto-meaningful-name] */object$prototype
-  var /* [auto-meaningful-name] */array$prototype$slice
-  var /* [auto-meaningful-name] */object$prototype$toString
-  var /* [auto-meaningful-name] */object$prototype$hasOwnProperty
-  var /* [auto-meaningful-name] */array$prototype$forEach
-  var /* [auto-meaningful-name] */array$isArray
+  var /* [auto-meaningful-name] */Array$prototype
+  var /* [auto-meaningful-name] */Function$prototype
+  var /* [auto-meaningful-name] */Object$prototype
+  var /* [auto-meaningful-name] */Array$prototype$slice
+  var /* [auto-meaningful-name] */Object$prototype$toString
+  var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty
+  var /* [auto-meaningful-name] */Array$prototype$forEach
+  var /* [auto-meaningful-name] */Array$isArray
   var x
   var C
 }()

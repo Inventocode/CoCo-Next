@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1317
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.ElementDragger = undefined
 var r = require("tslib")
 var i = require("@kitten-team/gl-matrix")
-var o = require("../../../4/127")
+var o = require("../../../1036/127")
 var a = require("../../../125/195/index")
 var s = function () {
   function e(e, t) {
@@ -65,7 +65,7 @@ var s = function () {
       }
     }
     if (this.events.is_enabled()) {
-      var this$_workspace$current_gesture_ = this._workspace.current_gesture_
+      var /* [auto-meaningful-name] */this$_workspace$current_gesture_ = this._workspace.current_gesture_
       this.events.fire(this.start_drag_event_factory({
         block: this._dragging_block,
         is_from_flyout: (null === this$_workspace$current_gesture_ || undefined === this$_workspace$current_gesture_ ? undefined : this$_workspace$current_gesture_.is_start_from_flyout()) || false

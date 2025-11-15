@@ -179,8 +179,8 @@ function x(e, t, n, r, o, i, a) {
 function D(e) {
   return _.abort(e)
 }
-import * as M from "../../../../unrestored/shared/1531/2584/28/index"
-if (!M.d()) {
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_28_index from "../../../../unrestored/shared/1531/2584/28/index"
+if (!$$_$$_$$_$$_unrestored_shared_1531_2584_28_index.d()) {
   var L = {}
   var P = function (e) {
     var t = L[e]
@@ -252,10 +252,10 @@ if (!M.d()) {
   }
   window.CordovaWebsocketPlugin = B
 }
-import * as F from "../../../../unrestored/shared/1531/2584/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_15 from "../../../../unrestored/shared/1531/2584/15"
 function G(e, t, n, r) {
   var /* [auto-meaningful-name] */e$url
-  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || F.O(e.url || ""))) {
+  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || $$_$$_$$_$$_unrestored_shared_1531_2584_15.O(e.url || ""))) {
     window.CordovaWebsocketPlugin.wsConnect(e, function (e) {
       t(e)
     }, function (e) {
@@ -273,7 +273,7 @@ function W(e, t, n) {
   n = n || "bye"
   window.CordovaWebsocketPlugin.wsClose(e, t, n)
 }
-import * as Brightness from "../../../../unrestored/shared/1531/2584/36/345/344"
+import * as Brightness from "../../../../unrestored/shared/1531/2584/21/424/344"
 function V() {
   return new Promise(function (e) {
     window.stepper.isStepCountingAvailable().then(function (t) {
@@ -318,20 +318,20 @@ Axios.interceptors.request.use(function (e) {
   if (e.baseURL) {
     t = e.baseURL + t.slice(1)
   }
-  return F.Y(t) ? e : Promise.reject(new Error("auth failed"))
+  return $$_$$_$$_$$_unrestored_shared_1531_2584_15.Y(t) ? e : Promise.reject(new Error("auth failed"))
 }, function (e) {
   return Promise.reject(e)
 })
-import * as J from "../../../../unrestored/shared/1531/2584/36/345/114"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_21_424_114 from "../../../../unrestored/shared/1531/2584/21/424/114"
 var Utils = {
-  isNative: M.d,
-  filterXss: M.i,
-  getWidgetImageUrl: J.b
+  isNative: $$_$$_$$_$$_unrestored_shared_1531_2584_28_index.d,
+  filterXss: $$_$$_$$_$$_unrestored_shared_1531_2584_28_index.i,
+  getWidgetImageUrl: $$_$$_$$_$$_unrestored_shared_1531_2584_21_424_114.b
 }
 export var modules: Map<string, string> = new Map()
 const MODULES_INFO: Record<string, {
-  url: string;
-  ref: string;
+  url: string
+  ref: string
 }> = {
   "crypto-js": {
     url: "https://static.codemao.cn/appcraft/modules/crypto-js/4.1.1/crypto-js.js",

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2198
@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../../../../36/2668/220")
-var i = require("../../../../36/2668/230")
+var r = require("../../220")
+var i = require("../../230")
 var o = require("../../../../38/607/356")
 var a = require("../../../../38/607/357/index")
-var require$$13281109Index$Syntax = require("../1328/1109/index").Syntax
+var /* [auto-meaningful-name] */require$_1109_index$Syntax = require("./1109/index").Syntax
 var c = function (e) {
   o(n, e)
   var t = a(n)
@@ -46,7 +46,7 @@ var c = function (e) {
   }, {
     key: "ArrayPattern",
     value: function (e) {
-      for (var t = 0, e$elements$length = e.elements.length; t < e$elements$length; ++t) {
+      for (var t = 0, /* [auto-meaningful-name] */e$elements$length = e.elements.length; t < e$elements$length; ++t) {
         var r = e.elements[t]
         this.visit(r)
       }
@@ -104,8 +104,8 @@ var c = function (e) {
   }], [{
     key: "isPattern",
     value: function (e) {
-      var e$type = e.type
-      return e$type === require$$13281109Index$Syntax.Identifier || e$type === require$$13281109Index$Syntax.ObjectPattern || e$type === require$$13281109Index$Syntax.ArrayPattern || e$type === require$$13281109Index$Syntax.SpreadElement || e$type === require$$13281109Index$Syntax.RestElement || e$type === require$$13281109Index$Syntax.AssignmentPattern
+      var /* [auto-meaningful-name] */e$type = e.type
+      return e$type === require$_1109_index$Syntax.Identifier || e$type === require$_1109_index$Syntax.ObjectPattern || e$type === require$_1109_index$Syntax.ArrayPattern || e$type === require$_1109_index$Syntax.SpreadElement || e$type === require$_1109_index$Syntax.RestElement || e$type === require$_1109_index$Syntax.AssignmentPattern
     }
   }])
   return n

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：269
@@ -26,7 +26,7 @@ var c = require("./2336")
 exports.tagged = c.tagged
 var u = require("./2337")
 exports.named = u.named
-var l = require("./1366/index")
+var l = require("./1366")
 exports.inject = l.inject
 exports.LazyServiceIdentifer = l.LazyServiceIdentifer
 var f = require("./2338")
@@ -37,7 +37,7 @@ var h = require("./2340")
 exports.multiInject = h.multiInject
 var p = require("./2341")
 exports.targetName = p.targetName
-var _ = require("./2342")
+var _ = require("./2342/index")
 exports.postConstruct = _.postConstruct
 var A = require("./1364")
 exports.MetadataReader = A.MetadataReader

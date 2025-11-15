@@ -1,16 +1,16 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1252
  */
 
-var r = require("../1736/167")
-var o = require("../1742/247/index")
+var r = require("../1541/167")
+var o = require("../1541/247/index")
 var i = require("../1684/530")
 var a = o("iterator")
 module.exports = !r(function () {
   var e = new URL("b?a=1&b=2&c=3", "http://a")
-  var e$searchParams = e.searchParams
+  var /* [auto-meaningful-name] */e$searchParams = e.searchParams
   var n = ""
   e.pathname = "c%20d"
   e$searchParams.forEach(function (e, r) {

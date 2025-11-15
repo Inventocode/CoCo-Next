@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：623
@@ -9,9 +9,9 @@
 export { p as a }
 var r
 var i
-import o = require("./19");
-import a = require("./171");
-import s = require("./110");
+import o = require("./19")
+import /* [auto-meaningful-name] */$_171 = require("./171")
+import /* [auto-meaningful-name] */$_110 = require("./110")
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -23,8 +23,8 @@ var c = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(s)
-import React = require("react");
+}($_110)
+import /* [auto-meaningful-name] */React = require("react")
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -37,7 +37,7 @@ var l = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import f = require("./75/index");
+import /* [auto-meaningful-name] */$_75_index = require("./75/index")
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -49,11 +49,11 @@ var d = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(f)
+}($_75_index)
 var h = false
 var p = {
   load: function () {
-    var e = a.a(c.a.mark(function e(t) {
+    var e = $_171.a(c.a.mark(function e(t) {
       var a
       return c.a.wrap(function (e) {
         for (;;) {
@@ -100,8 +100,8 @@ var p = {
       var a = document.getElementsByClassName("CUI-kitten-video-player-draggable")[0]
       if (a) {
         var s = a.getBoundingClientRect()
-        var s$width = s.width
-        var s$height = s.height
+        var /* [auto-meaningful-name] */s$width = s.width
+        var /* [auto-meaningful-name] */s$height = s.height
         a.style.transform += " scale(1)"
         var l = {
           x: 0,

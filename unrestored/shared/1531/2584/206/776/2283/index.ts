@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2283
@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../842")
-var i = require("../../../38/607/494")
+var i = require("../494/index")
 var o = require("../../../1036/1363/569")
 var a = require("./2284")
 var s = require("./2285")
@@ -55,21 +55,21 @@ function d(e, t) {
     }
     e.sort(f)
     var n
-    var t$text = t.text
+    var /* [auto-meaningful-name] */t$text = t.text
     var a = e[0].range[0]
     var s = e[e.length - 1].range[1]
     var c = ""
-    var number$MIN_SAFE_INTEGER = Number.MIN_SAFE_INTEGER
+    var /* [auto-meaningful-name] */Number$MIN_SAFE_INTEGER = Number.MIN_SAFE_INTEGER
     var l = i(e)
     try {
       for (l.s(); !(n = l.n()).done;) {
-        var n$value = n.value
-        o(n$value.range[0] >= number$MIN_SAFE_INTEGER, "Fix objects must not be overlapped in a report.")
+        var /* [auto-meaningful-name] */n$value = n.value
+        o(n$value.range[0] >= Number$MIN_SAFE_INTEGER, "Fix objects must not be overlapped in a report.")
         if (n$value.range[0] >= 0) {
-          c += t$text.slice(Math.max(0, a, number$MIN_SAFE_INTEGER), n$value.range[0])
+          c += t$text.slice(Math.max(0, a, Number$MIN_SAFE_INTEGER), n$value.range[0])
         }
         c += n$value.text
-        number$MIN_SAFE_INTEGER = n$value.range[1]
+        Number$MIN_SAFE_INTEGER = n$value.range[1]
       }
     } catch (h) {
       l.e(h)
@@ -78,7 +78,7 @@ function d(e, t) {
     }
     return {
       range: [a, s],
-      text: c += t$text.slice(Math.max(0, a, number$MIN_SAFE_INTEGER), s)
+      text: c += t$text.slice(Math.max(0, a, Number$MIN_SAFE_INTEGER), s)
     }
   }(Array.from(n), t) : n
 }
@@ -119,7 +119,7 @@ function _(e, t) {
   if (e && Array.isArray(e)) {
     e.forEach(function (e) {
       if (e.messageId) {
-        var e$messageId = e.messageId
+        var /* [auto-meaningful-name] */e$messageId = e.messageId
         if (!t) {
           throw new TypeError("context.report() called with a suggest option with a messageId '".concat(e$messageId, "', but no messages were present in the rule metadata."))
         }
@@ -142,13 +142,13 @@ module.exports = function (e) {
   return function () {
     var t
     var n = c.apply(undefined, arguments)
-    var e$messageIds = e.messageIds
+    var /* [auto-meaningful-name] */e$messageIds = e.messageIds
     u(n)
     if (n.messageId) {
       if (!e$messageIds) {
         throw new TypeError("context.report() called with a messageId, but no messages were present in the rule metadata.")
       }
-      var n$messageId = n.messageId
+      var /* [auto-meaningful-name] */n$messageId = n.messageId
       if (n.message) {
         throw new TypeError("context.report() called with a message and a messageId. Please only pass one.")
       }

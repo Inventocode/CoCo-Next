@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：60
@@ -6,7 +6,7 @@
 
 "use strict"
 
-export { s as v }
+export { PROJECT as v }
 export { r as b }
 export { o as a }
 export { i as c }
@@ -32,7 +32,7 @@ var r
 var o
 var i
 var a
-var s = "PROJECT"
+var /* [auto-meaningful-name] */PROJECT = "PROJECT"
 !function (e) {
   e[e.ByUser = 1] = "ByUser"
   e[e.AutoSave = 2] = "AutoSave"

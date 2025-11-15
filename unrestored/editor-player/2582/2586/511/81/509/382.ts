@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：382
@@ -53,7 +53,7 @@ var o = function () {
         }
       }
     }
-    for (var f = 0, h = 0, e$length = e.length, d = 0; d < e$length - 1; d++) {
+    for (var f = 0, h = 0, /* [auto-meaningful-name] */e$length = e.length, d = 0; d < e$length - 1; d++) {
       var p = undefined
       for (p = 1, h |= 1 << d; p < e[d]; p++, h &= ~(1 << d)) {
         var g = t.combins(u - p - 1, e$length - d - 2)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2246
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var require$1117$MissingRef = require("./1117").MissingRef
+var /* [auto-meaningful-name] */require$_1117$MissingRef = require("./1117").MissingRef
 module.exports = function e(t, n, i) {
   var o = this
   if ("function" != typeof this._opts.loadSchema) {
@@ -22,13 +22,13 @@ module.exports = function e(t, n, i) {
       try {
         return o._compile(t)
       } catch (a) {
-        if (a instanceof require$1117$MissingRef) {
+        if (a instanceof require$_1117$MissingRef) {
           return i(a)
         }
         throw a
       }
       function i(r) {
-        var r$missingSchema = r.missingSchema
+        var /* [auto-meaningful-name] */r$missingSchema = r.missingSchema
         if (u(r$missingSchema)) {
           throw new Error("Schema " + r$missingSchema + " is loaded but " + r.missingRef + " cannot be resolved")
         }
@@ -63,7 +63,7 @@ module.exports = function e(t, n, i) {
   }
   return a
   function s(t) {
-    var t$$schema = t.$schema
+    var /* [auto-meaningful-name] */t$$schema = t.$schema
     return t$$schema && !o.getSchema(t$$schema) ? e.call(o, {
       $ref: t$$schema
     }, true) : Promise.resolve()

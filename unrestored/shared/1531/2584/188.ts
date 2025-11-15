@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：188
@@ -9,9 +9,9 @@
 export { d as b }
 export { p as a }
 var r
-import o = require("./27");
-import i = require("./40");
-import React = require("react");
+import o = require("./27")
+import i = require("./40")
+import /* [auto-meaningful-name] */React = require("react")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -82,9 +82,9 @@ var u = function e(t, n) {
   return false
 }
 function d(e) {
-  var e$keys = e.keys
-  var e$callback = e.callback
-  var e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$keys = e.keys
+  var /* [auto-meaningful-name] */e$callback = e.callback
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
   var o = React.useContext(l)
   React.useEffect(function () {
     if (!e$disabled) {
@@ -101,15 +101,15 @@ function d(e) {
   return null
 }
 function p(e) {
-  var e$children = e.children
-  var e$useCapture = e.useCapture
-  var e$emitter = e.emitter
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$useCapture = e.useCapture
+  var /* [auto-meaningful-name] */e$emitter = e.emitter
   var o = React.useRef(new c())
   React.useEffect(function () {
     var e = function (e) {
-      var document$activeElement = document.activeElement
+      var /* [auto-meaningful-name] */document$activeElement = document.activeElement
       if (document$activeElement) {
-        var document$activeElement$tagName = document$activeElement.tagName
+        var /* [auto-meaningful-name] */document$activeElement$tagName = document$activeElement.tagName
         if ("INPUT" === document$activeElement$tagName || "TEXTAREA" === document$activeElement$tagName) {
           return
         }

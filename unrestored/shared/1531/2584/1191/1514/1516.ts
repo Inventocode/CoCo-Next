@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1516
@@ -173,8 +173,8 @@ function v(e) {
     var n
     var r = E(e)
     if (t) {
-      var eThis$constructor = E(this).constructor
-      n = Reflect.construct(r, arguments, eThis$constructor)
+      var /* [auto-meaningful-name] */EThis$constructor = E(this).constructor
+      n = Reflect.construct(r, arguments, EThis$constructor)
     } else {
       n = r.apply(this, arguments)
     }
@@ -242,7 +242,7 @@ var S = function (e) {
   function u() {
     var e
     m(this, u)
-    for (var arguments$length = arguments.length, n = new Array(arguments$length), r = 0; r < arguments$length; r++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, n = new Array(arguments$length), r = 0; r < arguments$length; r++) {
       n[r] = arguments[r]
     }
     O(y(e = c.call.apply(c, [this].concat(n))), "state", {
@@ -261,7 +261,7 @@ var S = function (e) {
       if (!n || !n.ownerDocument || !n.ownerDocument.body) {
         throw new Error("<DraggableCore> not mounted on DragStart!")
       }
-      var n$ownerDocument = n.ownerDocument
+      var /* [auto-meaningful-name] */n$ownerDocument = n.ownerDocument
       if (!(e.props.disabled || !(t.target instanceof n$ownerDocument.defaultView.Node) || e.props.handle && !(0, a.matchesSelectorAndParentsTo)(t.target, e.props.handle, n) || e.props.cancel && (0, a.matchesSelectorAndParentsTo)(t.target, e.props.cancel, n))) {
         if ("touchstart" === t.type) {
           t.preventDefault()
@@ -391,7 +391,7 @@ var S = function (e) {
       this.mounted = false
       var e = this.findDOMNode()
       if (e) {
-        var e$ownerDocument = e.ownerDocument;
+        var /* [auto-meaningful-name] */e$ownerDocument = e.ownerDocument;
         (0, a.removeEvent)(e$ownerDocument, C.move, this.handleDrag);
         (0, a.removeEvent)(e$ownerDocument, w.move, this.handleDrag);
         (0, a.removeEvent)(e$ownerDocument, C.stop, this.handleDragStop);

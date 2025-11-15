@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1240
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1623/439")
+var r = require("../1564/439")
 var o = function (e) {
   var t
   var n

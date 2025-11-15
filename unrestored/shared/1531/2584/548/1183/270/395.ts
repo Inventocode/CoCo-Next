@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：395
@@ -11,7 +11,7 @@ export { u as c }
 export { l as a }
 export { f as b }
 export { d as e }
-import r = require("./1506");
+import /* [auto-meaningful-name] */$_1506 = require("./1506")
 function i(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 1
@@ -39,7 +39,7 @@ function o(e) {
   var t = e.indexOf("(")
   var n = e.substring(0, t)
   if (-1 === ["rgb", "rgba", "hsl", "hsla"].indexOf(n)) {
-    throw new Error(r.a(3, e))
+    throw new Error($_1506.a(3, e))
   }
   var i = e.substring(t + 1, e.length - 1).split(",")
   return {
@@ -50,8 +50,8 @@ function o(e) {
   }
 }
 function a(e) {
-  var e$type = e.type
-  var e$values = e.values
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$values = e.values
   if (-1 !== e$type.indexOf("rgb")) {
     e$values = e$values.map(function (e, t) {
       return t < 3 ? parseInt(e, 10) : e
@@ -71,10 +71,10 @@ function s(e, t) {
 }
 function c(e) {
   var t = "hsl" === (e = o(e)).type ? o(function (e) {
-    var eOE$values = (e = o(e)).values
-    var n = eOE$values[0]
-    var r = eOE$values[1] / 100
-    var i = eOE$values[2] / 100
+    var /* [auto-meaningful-name] */EOE$values = (e = o(e)).values
+    var n = EOE$values[0]
+    var r = EOE$values[1] / 100
+    var i = EOE$values[2] / 100
     var s = r * Math.min(i, 1 - i)
     var c = function (e) {
       var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : (e + n / 30) % 12
@@ -84,7 +84,7 @@ function c(e) {
     var l = [Math.round(255 * c(0)), Math.round(255 * c(8)), Math.round(255 * c(4))]
     if ("hsla" === e.type) {
       u += "a"
-      l.push(eOE$values[3])
+      l.push(EOE$values[3])
     }
     return a({
       type: u,

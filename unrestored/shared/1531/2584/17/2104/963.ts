@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：963
@@ -12,10 +12,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.WorkspaceElement = undefined
 var r = require("tslib")
 var i = require("@kitten-team/gl-matrix")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = require("../../125/195/index")
 var s = require("../../125/index")
-var c = require("./2174/755")
+var c = require("./2175/755")
 var u = function () {
   function e(e) {
     this.id = ""
@@ -71,7 +71,7 @@ var u = function () {
     if (undefined == this.svg_group) {
       throw new ReferenceError("Cannot update movable to block without svg group.")
     }
-    var this$svg_group$classList = this.svg_group.classList
+    var /* [auto-meaningful-name] */this$svg_group$classList = this.svg_group.classList
     if (this.is_movable()) {
       this$svg_group$classList.add("blocklyDraggable")
     } else {
@@ -109,7 +109,7 @@ var u = function () {
   }
   e.prototype.dispose = function (e, t) {
     if (this.workspace) {
-      var this$workspace = this.workspace
+      var /* [auto-meaningful-name] */this$workspace = this.workspace
       if (this.runtime_data.selected === this) {
         this.unselect()
         this$workspace.cancel_current_gesture()
@@ -145,7 +145,7 @@ var u = function () {
     var e
     var t
     var n = this.use_drag_surface ? null === (e = this.workspace.get_block_drag_surface()) || undefined === e ? undefined : e.get_group() : undefined
-    var this$svg_group = this.svg_group
+    var /* [auto-meaningful-name] */this$svg_group = this.svg_group
     if (undefined == this$svg_group) {
       return i.vec2.create()
     }
@@ -161,7 +161,7 @@ var u = function () {
     return o
   }
   e.prototype.translate = function (e) {
-    var this$svg_group = this.svg_group
+    var /* [auto-meaningful-name] */this$svg_group = this.svg_group
     if (undefined == this$svg_group) {
       throw new ReferenceError("Block should have svg root when translating.")
     }
@@ -198,7 +198,7 @@ var u = function () {
   }
   e.prototype.set_dragging = function (e) {
     if (undefined != this.svg_group) {
-      var this$svg_group = this.svg_group
+      var /* [auto-meaningful-name] */this$svg_group = this.svg_group
       if (e) {
         this$svg_group.translate_ = ""
         this$svg_group.skew_ = "";
@@ -224,7 +224,7 @@ var u = function () {
     }
   }
   e.prototype.bring_to_front = function () {
-    var this$svg_group = this.svg_group
+    var /* [auto-meaningful-name] */this$svg_group = this.svg_group
     if (undefined != this$svg_group && undefined != this$svg_group.parentNode) {
       this$svg_group.parentNode.appendChild(this$svg_group)
     }

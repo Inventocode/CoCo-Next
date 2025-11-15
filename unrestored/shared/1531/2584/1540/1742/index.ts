@@ -1,17 +1,17 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1742
  */
 
-var r = require("../1736/194")
-var o = require("../1740/1251")
+var r = require("../1541/194")
+var o = require("./1251")
 var i = require("../936/index")
-var a = require("../1740/422")
-var s = require("./247/index")
+var a = require("../1541/422")
+var s = require("../1541/247/index")
 var c = s("iterator")
 var l = s("toStringTag")
-var i$values = i.values
+var /* [auto-meaningful-name] */i$values = i.values
 for (var d in o) {
   var p = r[d]
   var f = p && p.prototype

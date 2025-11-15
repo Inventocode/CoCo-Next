@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2544
@@ -126,15 +126,15 @@ var g = function (e) {
     var e
     var n
     l(this, t)
-    for (var arguments$length = arguments.length, a = new Array(arguments$length), s = 0; s < arguments$length; s++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, a = new Array(arguments$length), s = 0; s < arguments$length; s++) {
       a[s] = arguments[s]
     }
     m(f(n = d(this, (e = p(t)).call.apply(e, [this].concat(a)))), "onClick", function (e) {
-      var n$props = n.props
-      var n$props$text = n$props.text
-      var n$props$onCopy = n$props.onCopy
-      var n$props$children = n$props.children
-      var n$props$options = n$props.options
+      var /* [auto-meaningful-name] */n$props = n.props
+      var /* [auto-meaningful-name] */n$props$text = n$props.text
+      var /* [auto-meaningful-name] */n$props$onCopy = n$props.onCopy
+      var /* [auto-meaningful-name] */n$props$children = n$props.children
+      var /* [auto-meaningful-name] */n$props$options = n$props.options
       var l = r.default.Children.only(n$props$children)
       var u = (0, o.default)(n$props$text, n$props$options)
       if (n$props$onCopy) {
@@ -168,11 +168,11 @@ var g = function (e) {
   if (i = [{
     key: "render",
     value: function () {
-      var this$props = this.props
+      var /* [auto-meaningful-name] */this$props = this.props
       this$props.text
       this$props.onCopy
       this$props.options
-      var this$props$children = this$props.children
+      var /* [auto-meaningful-name] */this$props$children = this$props.children
       var n = c(this$props, ["text", "onCopy", "options", "children"])
       var o = r.default.Children.only(this$props$children)
       return r.default.cloneElement(o, function (e) {

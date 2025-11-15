@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：726
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.FieldColour = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../4/127")
+var o = require("../1036/127")
 var a = require("../125/index")
 var s = require("../1001/213/index")
 var c = require("../125/714")
@@ -131,9 +131,9 @@ var l = function (e) {
     }
     this.widget_div.position(u[0], u[1], i, o, null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.RTL)
     r.addEventListener("click", function (e) {
-      var e$target = e.target
+      var /* [auto-meaningful-name] */e$target = e.target
       if (e$target.classList.contains("color_selector_item")) {
-        var e$target$dataset$value = e$target.dataset.value
+        var /* [auto-meaningful-name] */e$target$dataset$value = e$target.dataset.value
         t.widget_div.hide()
         if (t.source_block) {
           e$target$dataset$value = t.call_validator(e$target$dataset$value)

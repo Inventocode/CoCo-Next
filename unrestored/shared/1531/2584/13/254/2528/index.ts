@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2528
@@ -115,7 +115,7 @@ var l = exports.Saturation = function (e) {
   }, {
     key: "getContainerRenderWindow",
     value: function () {
-      for (var this$container = this.container, t = window; !t.document.contains(this$container) && t.parent !== t;) {
+      for (var /* [auto-meaningful-name] */this$container = this.container, t = window; !t.document.contains(this$container) && t.parent !== t;) {
         t = t.parent
       }
       return t
@@ -132,11 +132,11 @@ var l = exports.Saturation = function (e) {
     value: function () {
       var e = this
       var t = this.props.style || {}
-      var t$color = t.color
-      var t$white = t.white
-      var t$black = t.black
-      var t$pointer = t.pointer
-      var t$circle = t.circle
+      var /* [auto-meaningful-name] */t$color = t.color
+      var /* [auto-meaningful-name] */t$white = t.white
+      var /* [auto-meaningful-name] */t$black = t.black
+      var /* [auto-meaningful-name] */t$pointer = t.pointer
+      var /* [auto-meaningful-name] */t$circle = t.circle
       var u = (0, a.default)({
         default: {
           color: {

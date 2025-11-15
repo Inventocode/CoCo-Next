@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：177
@@ -20,7 +20,7 @@ export { N as j }
 export { k as g }
 export { D as n }
 export { L as f }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -33,15 +33,15 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("./7");
-import a = require("./35");
-import s = require("../../../../src/shared/widget/custom/storage");
-import c = require("./53");
-import l = require("./59/index");
-import u = require("../../../../src/shared/utils/network/axios-with-credentials");
+import i = require("./7")
+import a = require("./35")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage = require("../../../../src/shared/widget/custom/storage")
+import c = require("./53")
+import /* [auto-meaningful-name] */$_59_index = require("./59/index")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials = require("../../../../src/shared/utils/network/axios-with-credentials")
 function d(e, t, n, r, o, i, l, u, d, p, f, h) {
-  var m = s.d()
-  var g = s.e()
+  var m = $$_$$_$$_$$_src_shared_widget_custom_storage.d()
+  var g = $$_$$_$$_$$_src_shared_widget_custom_storage.e()
   var _ = {
     id: e,
     version: c.e,
@@ -122,14 +122,14 @@ function p(e, t) {
 }
 function f() {
   return (f = i.a(o.a.mark(function e(t, n) {
-    var /* [auto-meaningful-name] */_e$sent2
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch(l.a.serverHost + "/coconut/web/build", {
+            return fetch($_59_index.a.serverHost + "/coconut/web/build", {
               method: "POST",
               credentials: "include",
               body: JSON.stringify({
@@ -144,12 +144,12 @@ function f() {
               }
             })
           case 2:
-            _e$sent2 = e.sent
-            e.next = 5
-            return _e$sent2.json()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent.data)
+            e.next = 5
+            return e$sent.json()
+          case 5:
+            _e$sent = e.sent
+            return e.abrupt("return", _e$sent.data)
           case 7:
           case "end":
             return e.stop()
@@ -163,26 +163,26 @@ function h(e) {
 }
 function m() {
   return (m = i.a(o.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent4
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent2
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch(l.a.serverHost + "/coconut/web/build/progress?pack_label=" + t, {
+            return fetch($_59_index.a.serverHost + "/coconut/web/build/progress?pack_label=" + t, {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
               credentials: "include"
             })
           case 2:
-            _e$sent4 = e.sent
-            e.next = 5
-            return _e$sent4.json()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent.data)
+            e.next = 5
+            return e$sent.json()
+          case 5:
+            _e$sent2 = e.sent
+            return e.abrupt("return", _e$sent2.data)
           case 7:
           case "end":
             return e.stop()
@@ -196,26 +196,26 @@ function g(e) {
 }
 function _() {
   return (_ = i.a(o.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent6
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent3
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch(l.a.serverHost + "/coconut/web/apk/info/latest?work_id=" + t, {
+            return fetch($_59_index.a.serverHost + "/coconut/web/apk/info/latest?work_id=" + t, {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
               credentials: "include"
             })
           case 2:
-            _e$sent6 = e.sent
-            e.next = 5
-            return _e$sent6.json()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent.data)
+            e.next = 5
+            return e$sent.json()
+          case 5:
+            _e$sent3 = e.sent
+            return e.abrupt("return", _e$sent3.data)
           case 7:
           case "end":
             return e.stop()
@@ -229,26 +229,26 @@ function v(e) {
 }
 function b() {
   return (b = i.a(o.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent8
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent4
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch(l.a.serverHost + "/coconut/web/apk/pack/stop?pack_label=" + t, {
+            return fetch($_59_index.a.serverHost + "/coconut/web/apk/pack/stop?pack_label=" + t, {
               mode: "cors",
               method: "put",
               cache: "no-cache",
               credentials: "include"
             })
           case 2:
-            _e$sent8 = e.sent
-            e.next = 5
-            return _e$sent8.json()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent.success)
+            e.next = 5
+            return e$sent.json()
+          case 5:
+            _e$sent4 = e.sent
+            return e.abrupt("return", _e$sent4.success)
           case 7:
           case "end":
             return e.stop()
@@ -262,29 +262,29 @@ function y(e) {
 }
 function E() {
   return (E = i.a(o.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent10
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent5
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch(l.a.serverHost + "/coconut/web/apk/info?pack_label=" + encodeURIComponent(t), {
+            return fetch($_59_index.a.serverHost + "/coconut/web/apk/info?pack_label=" + encodeURIComponent(t), {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
               credentials: "include"
             })
           case 2:
-            _e$sent10 = e.sent
-            e.next = 5
-            return _e$sent10.json()
-          case 5:
             e$sent = e.sent
+            e.next = 5
+            return e$sent.json()
+          case 5:
+            _e$sent5 = e.sent
             return e.abrupt("return", {
-              url: e$sent.data.apk_url,
-              version: e$sent.data.version,
-              expireTime: e$sent.data.apk_download_url_expire_time
+              url: _e$sent5.data.apk_url,
+              version: _e$sent5.data.version,
+              expireTime: _e$sent5.data.apk_download_url_expire_time
             })
           case 7:
           case "end":
@@ -332,8 +332,8 @@ function C(e) {
 }
 function T() {
   return (T = i.a(o.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent14
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent6
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -343,12 +343,12 @@ function T() {
               method: "GET"
             })
           case 2:
-            _e$sent14 = e.sent
-            e.next = 5
-            return _e$sent14.text()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent)
+            e.next = 5
+            return e$sent.text()
+          case 5:
+            _e$sent6 = e.sent
+            return e.abrupt("return", _e$sent6)
           case 7:
           case "end":
             return e.stop()
@@ -362,25 +362,25 @@ function S(e) {
 }
 function I() {
   return (I = i.a(o.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent19
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent7
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch(l.a.serverHost + "/coconut/web/token?work_id=".concat(t), {
+            return fetch($_59_index.a.serverHost + "/coconut/web/token?work_id=".concat(t), {
               mode: "cors",
               method: "GET",
               credentials: "include"
             })
           case 2:
-            _e$sent19 = e.sent
-            e.next = 5
-            return _e$sent19.json()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent.data)
+            e.next = 5
+            return e$sent.json()
+          case 5:
+            _e$sent7 = e.sent
+            return e.abrupt("return", _e$sent7.data)
           case 7:
           case "end":
             return e.stop()
@@ -414,7 +414,7 @@ function j() {
             t$playerUrl = t.playerUrl
             t$workId = t.workId
             e.next = 3
-            return u.a.put(l.a.serverHost + "/coconut/web/work/".concat(t$workId, "/publish"), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($_59_index.a.serverHost + "/coconut/web/work/".concat(t$workId, "/publish"), {
               name: t$name,
               description: t$description,
               operation: t$operation,
@@ -444,7 +444,7 @@ function R() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return u.a.get(l.a.serverHost + "/coconut/web/work/".concat(t, "/info"))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_59_index.a.serverHost + "/coconut/web/work/".concat(t, "/info"))
           case 2:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data)
@@ -470,7 +470,7 @@ function x() {
           case 0:
             n = i.length > 1 && undefined !== i[1] ? i[1] : 1
             e.next = 3
-            return u.a.get(l.a.serverHost + "/coconut/web/work/".concat(t, "/load?channel=").concat(n))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_59_index.a.serverHost + "/coconut/web/work/".concat(t, "/load?channel=").concat(n))
           case 3:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data)
@@ -493,7 +493,7 @@ function M() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return u.a.put(l.a.serverHost + "/coconut/web/work/".concat(t, "/publish_h5"), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($_59_index.a.serverHost + "/coconut/web/work/".concat(t, "/publish_h5"), {
               bcmc_url: n
             })
           case 2:
@@ -518,7 +518,7 @@ function P() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return u.a.get(l.a.serverHost + "/coconut/web/work/archive/list/".concat(t, "?offset=0&limit=").concat(50))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_59_index.a.serverHost + "/coconut/web/work/archive/list/".concat(t, "?offset=0&limit=").concat(50))
           case 2:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data.data.items)

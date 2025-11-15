@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2511
@@ -70,7 +70,7 @@ var f = exports.Hue = function (e) {
     var n
     var r
     u(this, t)
-    for (var arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
       o[a] = arguments[a]
     }
     n = r = l(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))
@@ -125,7 +125,7 @@ var f = exports.Hue = function (e) {
     key: "render",
     value: function () {
       var e = this
-      var this$props$direction = this.props.direction
+      var /* [auto-meaningful-name] */this$props$direction = this.props.direction
       var n = undefined === this$props$direction ? "horizontal" : this$props$direction
       var r = (0, a.default)({
         default: {

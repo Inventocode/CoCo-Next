@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：454
@@ -24,9 +24,9 @@ var o = function () {
       throw new n.a("" + t)
     }
     var e = 0
-    var this$bitOffset = this.bitOffset
-    var this$byteOffset = this.byteOffset
-    var this$bytes = this.bytes
+    var /* [auto-meaningful-name] */this$bitOffset = this.bitOffset
+    var /* [auto-meaningful-name] */this$byteOffset = this.byteOffset
+    var /* [auto-meaningful-name] */this$bytes = this.bytes
     if (this$bitOffset > 0) {
       var a = 8 - this$bitOffset
       var u = t < a ? t : a

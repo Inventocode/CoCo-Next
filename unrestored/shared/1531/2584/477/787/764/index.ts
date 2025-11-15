@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：764
@@ -8,12 +8,12 @@
 
 export { u as a }
 export { f as b }
-import r = require("../../../36/483/39");
-import i = require("../926");
-import o = require("../265");
-import a = require("./722");
-import s = require("../350");
-import c = require("./765");
+import /* [auto-meaningful-name] */$$_39 = require("../39")
+import /* [auto-meaningful-name] */$$_926 = require("../926")
+import /* [auto-meaningful-name] */$$_265 = require("../265")
+import /* [auto-meaningful-name] */$_722 = require("./722")
+import /* [auto-meaningful-name] */$$_350 = require("../350")
+import /* [auto-meaningful-name] */$$_720_765 = require("../720/765")
 var u = 1e3
 var l = function (e) {
   function t(t, n, r, i) {
@@ -26,12 +26,12 @@ var l = function (e) {
     o.transactionSpanId = r
     return o
   }
-  r.c(t, e)
+  $$_39.c(t, e)
   t.prototype.add = function (t) {
     var n = this
     if (t.spanId !== this.transactionSpanId) {
       t.finish = function (e) {
-        t.endTimestamp = "number" === typeof e ? e : i.d()
+        t.endTimestamp = "number" === typeof e ? e : $$_926.d()
         n._popActivity(t.spanId)
       }
       if (undefined === t.endTimestamp) {
@@ -41,7 +41,7 @@ var l = function (e) {
     e.prototype.add.call(this, t)
   }
   return t
-}(a.b)
+}($_722.b)
 var f = function (e) {
   function t(t, n, r, i) {
     if (undefined === r) {
@@ -61,7 +61,7 @@ var f = function (e) {
     a._beforeFinishCallbacks = []
     if (n && i) {
       d(n)
-      o.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
+      $$_265.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
       n.configureScope(function (e) {
         return e.setSpan(a)
       })
@@ -73,20 +73,20 @@ var f = function (e) {
     }, a._idleTimeout)
     return a
   }
-  r.c(t, e)
+  $$_39.c(t, e)
   t.prototype.finish = function (t) {
     var n
     var /* [auto-meaningful-name] */u$return
     var c = this
     if (undefined === t) {
-      t = i.d()
+      t = $$_926.d()
     }
     this._finished = true
     this.activities = {}
     if (this.spanRecorder) {
-      o.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
+      $$_265.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
       try {
-        for (var u = r.g(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
+        for (var u = $$_39.g(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
           (0, l.value)(this, t)
         }
       } catch (f) {
@@ -110,18 +110,18 @@ var f = function (e) {
         }
         if (!e.endTimestamp) {
           e.endTimestamp = t
-          e.setStatus(s.a.Cancelled)
-          o.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
+          e.setStatus($$_350.a.Cancelled)
+          $$_265.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
         }
         var n = e.startTimestamp < t
         if (!n) {
-          o.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
+          $$_265.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
         }
         return n
       })
-      o.a.log("[Tracing] flushing IdleTransaction")
+      $$_265.a.log("[Tracing] flushing IdleTransaction")
     } else {
-      o.a.log("[Tracing] No active IdleTransaction")
+      $$_265.a.log("[Tracing] No active IdleTransaction")
     }
     if (this._onScope) {
       d(this._idleHub)
@@ -143,7 +143,7 @@ var f = function (e) {
           t._popActivity(e)
         }
       }, this.spanId, e)
-      o.a.log("Starting heartbeat")
+      $$_265.a.log("Starting heartbeat")
       this._pingHeartbeat()
     }
     this.spanRecorder.add(this)
@@ -153,20 +153,20 @@ var f = function (e) {
       clearTimeout(this._initTimeout)
       this._initTimeout = undefined
     }
-    o.a.log("[Tracing] pushActivity: " + e)
+    $$_265.a.log("[Tracing] pushActivity: " + e)
     this.activities[e] = true
-    o.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+    $$_265.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
   }
   t.prototype._popActivity = function (e) {
     var t = this
     if (this.activities[e]) {
-      o.a.log("[Tracing] popActivity " + e)
+      $$_265.a.log("[Tracing] popActivity " + e)
       delete this.activities[e]
-      o.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+      $$_265.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
     }
     if (0 === Object.keys(this.activities).length) {
-      var this$_idleTimeout = this._idleTimeout
-      var r = i.d() + this$_idleTimeout / 1e3
+      var /* [auto-meaningful-name] */this$_idleTimeout = this._idleTimeout
+      var r = $$_926.d() + this$_idleTimeout / 1e3
       setTimeout(function () {
         if (!t._finished) {
           t.finish(r)
@@ -188,8 +188,8 @@ var f = function (e) {
       }
       this._prevHeartbeatString = t
       if (this._heartbeatCounter >= 3) {
-        o.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
-        this.setStatus(s.a.DeadlineExceeded)
+        $$_265.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
+        this.setStatus($$_350.a.DeadlineExceeded)
         this.setTag("heartbeat", "failed")
         this.finish()
       } else {
@@ -199,13 +199,13 @@ var f = function (e) {
   }
   t.prototype._pingHeartbeat = function () {
     var e = this
-    o.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
+    $$_265.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
     this._heartbeatTimer = setTimeout(function () {
       e._beat()
     }, 5e3)
   }
   return t
-}(c.a)
+}($$_720_765.a)
 function d(e) {
   if (e) {
     var t = e.getScope()

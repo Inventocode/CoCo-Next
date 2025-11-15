@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：688
@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as b }
-import r = require("../../../54");
+import /* [auto-meaningful-name] */$$_$$_$$_54 = require("../../../54")
 var i = {
   easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
   easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",
@@ -33,13 +33,13 @@ _a = {
   create: function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : ["all"]
     var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
-    var t$duration = t.duration
+    var /* [auto-meaningful-name] */t$duration = t.duration
     var s = undefined === t$duration ? o.standard : t$duration
-    var t$easing = t.easing
+    var /* [auto-meaningful-name] */t$easing = t.easing
     var u = undefined === t$easing ? i.easeInOut : t$easing
-    var t$delay = t.delay
+    var /* [auto-meaningful-name] */t$delay = t.delay
     var f = undefined === t$delay ? 0 : t$delay
-    r.a(t, ["duration", "easing", "delay"])
+    $$_$$_$$_54.a(t, ["duration", "easing", "delay"])
     return (Array.isArray(e) ? e : [e]).map(function (e) {
       return "".concat(e, " ").concat("string" === typeof s ? s : a(s), " ").concat(u, " ").concat("string" === typeof f ? f : a(f))
     }).join(",")

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：143
@@ -6,7 +6,7 @@
 
 "use strict"
 
-export { i }
+export { STYLE_DEFAULT_STYLE_ID as i }
 export { a as h }
 export { s as c }
 export { c as e }
@@ -14,14 +14,14 @@ export { l as g }
 export { u as f }
 export { d as b }
 export { p as d }
-export { f as a }
+export { ACTOR_ACTION as a }
 export { h as j }
-import r = require("./47");
-import o = require("./547");
-var i = "STYLE_DEFAULT_STYLE_ID"
+import r = require("./47")
+import /* [auto-meaningful-name] */$_547 = require("./547")
+var /* [auto-meaningful-name] */STYLE_DEFAULT_STYLE_ID = "STYLE_DEFAULT_STYLE_ID"
 var a = {
-  id: i,
-  source: o.a
+  id: STYLE_DEFAULT_STYLE_ID,
+  source: $_547.a
 }
 var s = 100
 var c = .01
@@ -29,7 +29,7 @@ var l = false
 var u = false
 var d = 9999
 var p = 10
-var f = "ACTOR_ACTION"
+var /* [auto-meaningful-name] */ACTOR_ACTION = "ACTOR_ACTION"
 function h(e, t) {
   var n
   var o
@@ -37,11 +37,11 @@ function h(e, t) {
   try {
     for (i.s(); !(o = i.n()).done;) {
       var s
-      var o$value = o.value
+      var /* [auto-meaningful-name] */o$value = o.value
       var l = r.a(o$value.styleList)
       try {
         for (l.s(); !(s = l.n()).done;) {
-          var s$value = s.value
+          var /* [auto-meaningful-name] */s$value = s.value
           if (s$value.id === t) {
             return s$value
           }
@@ -62,4 +62,4 @@ function h(e, t) {
   }
   return n || a
 }
-export default f
+export default ACTOR_ACTION

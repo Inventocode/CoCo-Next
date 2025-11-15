@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：714
@@ -14,8 +14,8 @@ var r = require("@kitten-team/gl-matrix")
 var i = require("./index")
 var o = require("./474")
 function a(e) {
-  var e$offsetWidth = e.offsetWidth
-  var e$offsetHeight = e.offsetHeight
+  var /* [auto-meaningful-name] */e$offsetWidth = e.offsetWidth
+  var /* [auto-meaningful-name] */e$offsetHeight = e.offsetHeight
   var r = o.is.webkit() && !e$offsetWidth && !e$offsetHeight
   if ((undefined != e$offsetWidth || r) && e.getBoundingClientRect) {
     var i = e.getBoundingClientRect()
@@ -45,8 +45,8 @@ function c(e, t) {
   return ""
 }
 exports.get_viewport_page_offset = function (e) {
-  var e$body = e.body
-  var e$documentElement = e.documentElement
+  var /* [auto-meaningful-name] */e$body = e.body
+  var /* [auto-meaningful-name] */e$documentElement = e.documentElement
   var i = e$body.scrollLeft || e$documentElement.scrollLeft
   var o = e$body.scrollTop || e$documentElement.scrollTop
   return r.vec2.fromValues(i, o)
@@ -56,10 +56,10 @@ exports.get_size = function (e) {
     if ("none" != s(t, "display")) {
       return e(t)
     }
-    var t$style = t.style
-    var t$style$display = t$style.display
-    var t$style$visibility = t$style.visibility
-    var t$style$position = t$style.position
+    var /* [auto-meaningful-name] */t$style = t.style
+    var /* [auto-meaningful-name] */t$style$display = t$style.display
+    var /* [auto-meaningful-name] */t$style$visibility = t$style.visibility
+    var /* [auto-meaningful-name] */t$style$position = t$style.position
     t$style.visibility = "hidden"
     t$style.position = "absolute"
     t$style.display = "inline"

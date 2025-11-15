@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2236
@@ -8,8 +8,8 @@
 
 module.exports = function (e, t, n) {
   var r = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var a = e.schema[t]
   var s = e.schemaPath + e.util.getProperty(t)
   var c = e.errSchemaPath + "/" + t
@@ -24,10 +24,10 @@ module.exports = function (e, t, n) {
   var A = "i" + e$level
   var g = h.dataLevel = e.dataLevel + 1
   var v = "data" + g
-  var e$baseId = e.baseId
+  var /* [auto-meaningful-name] */e$baseId = e.baseId
   r += "var " + d + " = errors;var " + f + ";"
   if (Array.isArray(a)) {
-    var e$schema$additionalItems = e.schema.additionalItems
+    var /* [auto-meaningful-name] */e$schema$additionalItems = e.schema.additionalItems
     if (false === e$schema$additionalItems) {
       r += " " + f + " = " + l + ".length <= " + a.length + "; "
       var b = c

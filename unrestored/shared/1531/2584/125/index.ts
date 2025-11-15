@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：125
@@ -53,7 +53,7 @@ function h(e) {
   return false
 }
 function p() {
-  var window$document$body = window.document.body
+  var /* [auto-meaningful-name] */window$document$body = window.document.body
   return new c.Size(window$document$body.clientWidth, window$document$body.clientHeight)
 }
 function _(e, t) {
@@ -198,7 +198,7 @@ exports.create_dom = function (e, t, n) {
   return i
 }
 exports.remove_children = function (e) {
-  for (var e$firstChild = e.firstChild; undefined != e$firstChild;) {
+  for (var /* [auto-meaningful-name] */e$firstChild = e.firstChild; undefined != e$firstChild;) {
     e.removeChild(e$firstChild)
     e$firstChild = e.firstChild
   }
@@ -210,7 +210,7 @@ exports.get_document_scroll = function () {
     }
     return e.body || e.documentElement
   }(document)
-  var document$defaultView = document.defaultView
+  var /* [auto-meaningful-name] */document$defaultView = document.defaultView
   return i.vec2.fromValues(document$defaultView.pageXOffset || e.scrollLeft, document$defaultView.pageYOffset || e.scrollTop)
 }
 exports.get_viewport_size = p
@@ -262,7 +262,7 @@ exports.is_inside_shadow = function (e) {
   return false
 }
 exports.is_in_same_shadow = function (e, t) {
-  for (var e$parentElement = e.parentElement; e$parentElement;) {
+  for (var /* [auto-meaningful-name] */e$parentElement = e.parentElement; e$parentElement;) {
     if (!e$parentElement) {
       return false
     }
@@ -322,8 +322,8 @@ exports.clone_node = function (e, t) {
   return e.cloneNode(t)
 }
 exports.insert_after = function (e, t) {
-  var t$nextSibling = t.nextSibling
-  var t$parentNode = t.parentNode
+  var /* [auto-meaningful-name] */t$nextSibling = t.nextSibling
+  var /* [auto-meaningful-name] */t$parentNode = t.parentNode
   if (!t$parentNode) {
     throw new ReferenceError("Reference node has no parent.")
   }
@@ -334,7 +334,7 @@ exports.insert_after = function (e, t) {
   }
 }
 exports.insert_before = function (e, t) {
-  var t$parentNode = t.parentNode
+  var /* [auto-meaningful-name] */t$parentNode = t.parentNode
   if (undefined == t$parentNode) {
     throw new ReferenceError("Reference node has no parent.")
   }

@@ -1,36 +1,36 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1667
  */
 
-var r = require("../1623/272")
-var o = require("../1736/194")
-var i = require("./818")
-var a = require("./939")
-var s = require("../1740/422")
-var require$$1623300$f = require("../1623/300").f
-var require$631Index$f = require("./631/index").f
-var u = require("../1683/1073")
-var d = require("../1745/310")
-var p = require("../1668/944")
-var f = require("../1683/1074")
-var h = require("../1745/398/index")
-var m = require("../1736/167")
-var g = require("../1745/332")
-var require$$1745423Index$enforce = require("../1745/423/index").enforce
-var v = require("./751")
-var b = require("../1742/247/index")
+var r = require("../1541/272")
+var o = require("../1541/194")
+var i = require("../1608/818")
+var a = require("../1608/939")
+var s = require("../1541/422")
+var /* [auto-meaningful-name] */require$$_1541_300_index$f = require("../1541/300/index").f
+var /* [auto-meaningful-name] */require$$_1541_631_index$f = require("../1541/631/index").f
+var u = require("./1073")
+var d = require("../1684/310")
+var p = require("./944")
+var f = require("./1074")
+var h = require("../1541/398")
+var m = require("../1541/167")
+var g = require("../1541/332")
+var /* [auto-meaningful-name] */require$$_1541_423_index$enforce = require("../1541/423/index").enforce
+var v = require("../1577/751")
+var b = require("../1541/247/index")
 var y = require("./1242")
 var E = require("./1243")
 var O = b("match")
-var o$RegExp = o.RegExp
-var o$RegExp$prototype = o$RegExp.prototype
+var /* [auto-meaningful-name] */o$RegExp = o.RegExp
+var /* [auto-meaningful-name] */o$RegExp$prototype = o$RegExp.prototype
 var T = /^\?<[^\s\d!#%&*+<=>@^][^\s!#%&*+<=>@^]*>/
 var S = /a/g
 var I = /a/g
 var A = new o$RegExp(S) !== S
-var f$UNSUPPORTED_Y = f.UNSUPPORTED_Y
+var /* [auto-meaningful-name] */f$UNSUPPORTED_Y = f.UNSUPPORTED_Y
 var N = r && (!A || f$UNSUPPORTED_Y || y || E || m(function () {
   I[O] = false
   return o$RegExp(S) != S || o$RegExp(I) == I || "/a/i" != o$RegExp(S, "i")
@@ -69,7 +69,7 @@ if (i("RegExp", N)) {
       }
       if (E) {
         e = (i = function (e) {
-          for (var t, e$length = e.length, r = 0, o = "", i = [], a = {}, s = false, c = false, l = 0, u = ""; r <= e$length; r++) {
+          for (var t, /* [auto-meaningful-name] */e$length = e.length, r = 0, o = "", i = [], a = {}, s = false, c = false, l = 0, u = ""; r <= e$length; r++) {
             if ("\\" === (t = e.charAt(r))) {
               t += e.charAt(++r)
             } else if ("]" === t) {
@@ -110,11 +110,11 @@ if (i("RegExp", N)) {
       }
       c = a(o$RegExp(e, t), f ? this : o$RegExp$prototype, R)
       if (r || o || v.length) {
-        l = require$$1745423Index$enforce(c)
+        l = require$$_1541_423_index$enforce(c)
         if (r) {
           l.dotAll = true
           l.raw = R(function (e) {
-            for (var t, e$length = e.length, r = 0, o = "", i = false; r <= e$length; r++) {
+            for (var t, /* [auto-meaningful-name] */e$length = e.length, r = 0, o = "", i = false; r <= e$length; r++) {
               if ("\\" !== (t = e.charAt(r))) {
                 if (i || "." !== t) {
                   if ("[" === t) {
@@ -150,7 +150,7 @@ if (i("RegExp", N)) {
       return c
     }, k = function (e) {
       if (!(e in R)) {
-        require$$1623300$f(R, e, {
+        require$$_1541_300_index$f(R, e, {
           configurable: true,
           get: function () {
             return o$RegExp[e]
@@ -160,7 +160,7 @@ if (i("RegExp", N)) {
           }
         })
       }
-    }, x = require$631Index$f(o$RegExp), D = 0; x.length > D;) {
+    }, x = require$$_1541_631_index$f(o$RegExp), D = 0; x.length > D;) {
     k(x[D++])
   }
   o$RegExp$prototype.constructor = R

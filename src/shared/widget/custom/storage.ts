@@ -5,28 +5,28 @@ export { getExtension as f }
 export { unsafeExtensionsToFileStorage as e }
 export { safeExtensionsToFileStorage as d }
 
-import r = require("../../../../unrestored/shared/1531/2584/9");
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_9 = require("../../../../unrestored/shared/1531/2584/9")
 
-import * as t from "./types"
+import * as types from "./types"
 import * as Type from "./type"
 
 export interface UnsafeExtensionStorage extends UnsafeExtensionFileStorage {
-  types: t.Types;
+  types: types.Types
 }
 
 export interface SafeExtensionStorage extends SafeExtensionFileStorage {
-  types: t.Types;
+  types: types.Types
 }
 
 export interface UnsafeExtensionFileStorage {
-  type: string;
-  code: string;
+  type: string
+  code: string
 }
 
 export interface SafeExtensionFileStorage {
-  id: number;
-  type: string;
-  cdnUrl: string;
+  id: number
+  type: string
+  cdnUrl: string
 }
 
 const safeExtensions = new Map<string, SafeExtensionStorage>()
@@ -58,7 +58,7 @@ export function safeExtensionsToFileStorage() {
   const safeExtensionsArray = Array.from(safeExtensions.values())
   const storage: SafeExtensionFileStorage[] = []
   safeExtensionsArray.forEach(({ id, type, cdnUrl }) => {
-    if (r.Mb(type)) {
+    if ($$_$$_$$_$$_unrestored_shared_1531_2584_9.Mb(type)) {
       storage.push({ id, type, cdnUrl })
     }
   })

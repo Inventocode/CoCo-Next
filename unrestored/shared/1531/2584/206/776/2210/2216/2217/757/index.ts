@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：757
@@ -66,7 +66,7 @@ module.exports = {
   toHash: o,
   getProperty: c,
   escapeQuotes: u,
-  equal: require("../1115/1116"),
+  equal: require("./1116"),
   ucs2length: require("./2220"),
   varOccurences: function (e, t) {
     t += "[^0-9]"

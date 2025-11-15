@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：450
@@ -20,9 +20,9 @@ export { k as l }
 export { x as h }
 export { M as j }
 export { P as k }
-import r = require("../47");
-import o = require("../10/index");
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */$$_47 = require("../47")
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -35,8 +35,8 @@ var a = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import s = require("../7");
-import c = require("./282/index");
+import s = require("../7")
+import /* [auto-meaningful-name] */$_282_index = require("./282/index")
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -48,12 +48,12 @@ var l = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(c)
-import u = require("../../../../../src/shared/ui/language");
-import d = require("../64");
-import p = require("../53");
-import f = require("../9");
-import h = require("../141/311");
+}($_282_index)
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language = require("../../../../../src/shared/ui/language")
+import /* [auto-meaningful-name] */$$_64 = require("../64")
+import /* [auto-meaningful-name] */$$_53 = require("../53")
+import f = require("../9")
+import /* [auto-meaningful-name] */$$_141_311 = require("../141/311")
 function m(e, t) {
   var n = document.createElement("a")
   document.body.appendChild(n)
@@ -75,7 +75,7 @@ function _() {
               var r = new FileReader()
               r.readAsText(t)
               r.onload = function () {
-                var this$result = this.result
+                var /* [auto-meaningful-name] */this$result = this.result
                 if ("string" === typeof this$result) {
                   try {
                     var n = JSON.parse(this$result)
@@ -135,7 +135,7 @@ function y(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : [".gif", ".jpeg", ".png", ".svg", ".gif", ".bmp", ".jpg"]
   return t.includes(w(e.name)) ? new Promise(function (t) {
     var n = new window.Image()
-    n.src = h.A(e)
+    n.src = $$_141_311.A(e)
     n.onload = function () {
       t(true)
     }
@@ -162,7 +162,7 @@ function O() {
             s = {
               status: "fail",
               file: t,
-              message: u.c(n, "illegalFormat").toString()
+              message: $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "illegalFormat").toString()
             }
             c = {
               status: "success",
@@ -181,17 +181,17 @@ function O() {
             if (".gif" === o) {
               if (Number(t.size) > 10 * i) {
                 c.status = "fail"
-                c.message = u.c(n, "tooLargeGifImage").toString()
+                c.message = $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "tooLargeGifImage").toString()
               }
             } else {
               if (Number(t.size) > 5 * i) {
                 c.status = "fail"
-                c.message = u.c(n, "tooLargeImage").toString()
+                c.message = $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "tooLargeImage").toString()
               }
             }
             if (!t.name.slice(0, t.name.lastIndexOf(".")).trim()) {
               c.status = "fail"
-              c.message = u.c(n, "imageNameError").toString()
+              c.message = $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "imageNameError").toString()
             }
             return e.abrupt("return", c)
           case 15:
@@ -220,7 +220,7 @@ function T() {
               e.next = 5
               break
             }
-            (n = document.createElement("audio")).src = h.A(t)
+            (n = document.createElement("audio")).src = $$_141_311.A(t)
             return e.abrupt("return", new Promise(function (e) {
               n.oncanplay = function () {
                 e(true)
@@ -255,7 +255,7 @@ function I() {
             o = {
               status: "fail",
               file: t,
-              message: u.c(n, "illegalFormat").toString()
+              message: $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "illegalFormat").toString()
             }
             i = {
               status: "success",
@@ -273,11 +273,11 @@ function I() {
           case 8:
             if (Number(t.size) > 10 * r) {
               i.status = "fail"
-              i.message = u.c(n, "tooLargeSound").toString()
+              i.message = $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "tooLargeSound").toString()
             }
             if (!t.name.slice(0, t.name.lastIndexOf(".")).trim()) {
               i.status = "fail"
-              i.message = u.c(n, "soundNameError").toString()
+              i.message = $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "soundNameError").toString()
             }
             return e.abrupt("return", i)
           case 12:
@@ -353,11 +353,11 @@ function D() {
               var d
               var h = w(n)
               var m = t.name.slice(0, n.length - h.length)
-              var g = r.a(o)
+              var g = $$_47.a(o)
               try {
                 for (g.s(); !(d = g.n()).done;) {
                   if (!d.value.validator(m)) {
-                    m = m.replace(p.z, "")
+                    m = m.replace($$_53.z, "")
                     break
                   }
                 }
@@ -530,10 +530,10 @@ function L(e, t) {
   }
   var i = {}
   Object.entries(e[0]).forEach(function (e) {
-    var t = o.a(e, 2)
+    var t = $$_10_index.a(e, 2)
     var a = t[0]
     var s = t[1]
-    var c = d.a("COLUMN")
+    var c = $$_64.a("COLUMN")
     i[a] = c
     r.header[c] = {
       field: s,
@@ -543,9 +543,9 @@ function L(e, t) {
   e.splice(0, 1)
   Object.values(e).forEach(function (e) {
     var t = {}
-    t.rowId = d.a("ROW")
+    t.rowId = $$_64.a("ROW")
     Object.entries(e).forEach(function (e) {
-      var n = o.a(e, 2)
+      var n = $$_10_index.a(e, 2)
       var r = n[0]
       var a = n[1].replace("&#x000d;<br/>", " ")
       var s = i[r]
@@ -573,8 +573,8 @@ function B() {
                 o.src = t
                 o.setAttribute("crossOrigin", "Anonymous")
                 o.onload = function () {
-                  var this$width = this.width
-                  var this$height = this.height
+                  var /* [auto-meaningful-name] */this$width = this.width
+                  var /* [auto-meaningful-name] */this$height = this.height
                   i.width = this$height
                   i.height = this$width
                   if (!(null === a || undefined === a)) {

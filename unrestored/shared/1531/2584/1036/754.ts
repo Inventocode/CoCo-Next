@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：754
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.find_caller_blocks = exports.add_procedure_and_generate_rename_map = exports.get_legal_procedure_name = undefined
-var r = require("../301/173")
+var r = require("./173")
 function i(e) {
   if (e.length > 15) {
     var t = parseInt(e.substring(0, 15), 10)
@@ -37,9 +37,9 @@ function o(e, t) {
 }
 exports.get_legal_procedure_name = o
 exports.add_procedure_and_generate_rename_map = function (e) {
-  var e$procedure_manager = e.procedure_manager
-  var e$procedure_to_add = e.procedure_to_add
-  var e$callers_to_add = e.callers_to_add
+  var /* [auto-meaningful-name] */e$procedure_manager = e.procedure_manager
+  var /* [auto-meaningful-name] */e$procedure_to_add = e.procedure_to_add
+  var /* [auto-meaningful-name] */e$callers_to_add = e.callers_to_add
   var i = {}
   Object.keys(e$procedure_to_add).forEach(function (e) {
     var a = e$procedure_manager.get_procedures()

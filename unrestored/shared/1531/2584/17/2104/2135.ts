@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2135
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.InsertionMarkerManager = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = require("../../125/195/index")
 var s = function () {
   function e() {
@@ -40,7 +40,7 @@ var s = function () {
   }
   e.prototype.create_marker_block = function (e) {
     var t
-    var e$type = e.type
+    var /* [auto-meaningful-name] */e$type = e.type
     this.events.disable()
     try {
       if (undefined == this._workspace) {
@@ -102,9 +102,9 @@ var s = function () {
     return !!t && !this.top_block.get_parent() && this.top_block.is_deletable() && !n
   }
   e.prototype.should_update_previews = function (e, t) {
-    var e$local = e.local
-    var e$closest = e.closest
-    var e$radius = e.radius
+    var /* [auto-meaningful-name] */e$local = e.local
+    var /* [auto-meaningful-name] */e$closest = e.closest
+    var /* [auto-meaningful-name] */e$radius = e.radius
     if (!e$local || !e$closest) {
       return !(!this.local_connection || !this.closest_connection)
     }
@@ -123,8 +123,8 @@ var s = function () {
     return !this.local_connection && !this.closest_connection || (console.error("Only one of localConnection_ and closestConnection_ was set."), console.error("Returning true from shouldUpdatePreviews, but it's not clear why."), true)
   }
   e.prototype.unhighlight_block = function () {
-    var this$closest_connection = this.closest_connection
-    var this$highlighted_block = this.highlighted_block
+    var /* [auto-meaningful-name] */this$closest_connection = this.closest_connection
+    var /* [auto-meaningful-name] */this$highlighted_block = this.highlighted_block
     if (undefined == this$closest_connection || undefined == this$highlighted_block) {
       throw new ReferenceError("Connection not found for unhighlight.")
     }
@@ -134,10 +134,10 @@ var s = function () {
   }
   e.prototype.disconnect_marker = function () {
     if (this.marker_connection) {
-      var this$marker_connection = this.marker_connection
+      var /* [auto-meaningful-name] */this$marker_connection = this.marker_connection
       var t = this$marker_connection.get_source_block()
-      var t$next_connection = t.next_connection
-      var t$previous_connection = t.previous_connection
+      var /* [auto-meaningful-name] */t$next_connection = t.next_connection
+      var /* [auto-meaningful-name] */t$previous_connection = t.previous_connection
       if (this$marker_connection != t$next_connection || t$previous_connection && t$previous_connection.get_targe_connection()) {
         if (this$marker_connection.type == a.CONNECTION_TYPE.NEXT_STATEMENT && this$marker_connection != t$next_connection) {
           var i = this$marker_connection.get_targe_connection()
@@ -194,8 +194,8 @@ var s = function () {
     this.local_connection = undefined
   }
   e.prototype.should_replace = function () {
-    var this$closest_connection = this.closest_connection
-    var this$local_connection = this.local_connection
+    var /* [auto-meaningful-name] */this$closest_connection = this.closest_connection
+    var /* [auto-meaningful-name] */this$local_connection = this.local_connection
     if (undefined == this$local_connection) {
       throw new ReferenceError("Local connection not found when trying replace/insert block.")
     }
@@ -205,8 +205,8 @@ var s = function () {
     return this$local_connection.type == a.CONNECTION_TYPE.OUTPUT_VALUE || this$local_connection != this$local_connection.get_source_block().get_first_statement_connection() && !(this.top_block.next_connection || this$local_connection.type != a.CONNECTION_TYPE.PREVIOUS_STATEMENT || undefined == this$closest_connection || !this$closest_connection.is_connected())
   }
   e.prototype.highlight_block = function () {
-    var this$closest_connection = this.closest_connection
-    var this$local_connection = this.local_connection
+    var /* [auto-meaningful-name] */this$closest_connection = this.closest_connection
+    var /* [auto-meaningful-name] */this$local_connection = this.local_connection
     if (undefined != this$closest_connection && undefined != this$local_connection) {
       var n = this$closest_connection.targetBlock()
       if (n) {
@@ -217,8 +217,8 @@ var s = function () {
     }
   }
   e.prototype.connect_marker = function () {
-    var this$local_connection = this.local_connection
-    var this$closest_connection = this.closest_connection
+    var /* [auto-meaningful-name] */this$local_connection = this.local_connection
+    var /* [auto-meaningful-name] */this$closest_connection = this.closest_connection
     if (undefined != this$closest_connection) {
       var n = this.last_on_stack && this$local_connection == this.last_on_stack ? this.last_marker : this.first_marker
       if (undefined != n && undefined != this$local_connection) {
@@ -248,8 +248,8 @@ var s = function () {
   }
   e.prototype.maybe_show_preview = function (e) {
     if (!this.would_delete_block_) {
-      var e$closest = e.closest
-      var e$local = e.local
+      var /* [auto-meaningful-name] */e$closest = e.closest
+      var /* [auto-meaningful-name] */e$local = e.local
       if (e$closest) {
         if (!(e$closest == this.closest_connection || e$closest.source_block.is_insertion_marker())) {
           this.closest_connection = e$closest

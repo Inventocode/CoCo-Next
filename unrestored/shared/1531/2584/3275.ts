@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：3275
@@ -222,7 +222,7 @@ function d(t, e) {
 }
 var h = function () {
   return (h = Object.assign || function (t) {
-    for (var e, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var e, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var o in e = arguments[n]) if (Object.prototype.hasOwnProperty.call(e, o)) {
         t[o] = e[o]
       }
@@ -366,8 +366,8 @@ var E
 var f = function (t) {
   function e(e) {
     var n = t.call(this, e.message) || this
-    var e$error_code = e.error_code
-    var e$error_origin_response = e.error_origin_response
+    var /* [auto-meaningful-name] */e$error_code = e.error_code
+    var /* [auto-meaningful-name] */e$error_origin_response = e.error_origin_response
     var i = undefined === e$error_origin_response ? {
       error_code: e$error_code,
       error_message: e.message,
@@ -572,7 +572,7 @@ var A = {}
 var m = function () {
   return A
 }
-var o$prod = o.prod
+var /* [auto-meaningful-name] */o$prod = o.prod
 var C = function () {
   return o$prod
 }
@@ -598,10 +598,10 @@ var O = function () {
       var e = this
       return l(this, function (n) {
         return [2, new Promise(function (n, o) {
-          var t$url = t.url
-          var t$method = t.method
-          var t$data = t.data
-          var t$without_base_url = t.without_base_url
+          var /* [auto-meaningful-name] */t$url = t.url
+          var /* [auto-meaningful-name] */t$method = t.method
+          var /* [auto-meaningful-name] */t$data = t.data
+          var /* [auto-meaningful-name] */t$without_base_url = t.without_base_url
           var u = t.params || {}
           var _ = {}
           if (m().auth_version) {
@@ -620,10 +620,10 @@ var O = function () {
           l.timeout = m().requestTimeout || e.timeout
           l.withCredentials = true
           l.onreadystatechange = function () {
-            var /* [auto-meaningful-name] */l$response$catastrophe
+            var /* [auto-meaningful-name] */e$catastrophe
             if (l && 4 === l.readyState && (0 !== l.status || l.responseURL && 0 === l.responseURL.indexOf("file:"))) {
               if (l.status >= 200 && l.status <= 300) {
-                var l$response = l.response
+                var /* [auto-meaningful-name] */l$response = l.response
                 n(l$response ? {
                   status: l.status,
                   statusText: l.statusText,
@@ -641,7 +641,7 @@ var O = function () {
                     error_origin_response: l$response
                   }) : {
                     error_code: l$response.error_code,
-                    error_body: (null === (l$response$catastrophe = l$response.catastrophe) || undefined === l$response$catastrophe ? undefined : l$response$catastrophe.error) || l$response,
+                    error_body: (null === (e$catastrophe = l$response.catastrophe) || undefined === e$catastrophe ? undefined : e$catastrophe.error) || l$response,
                     error_origin_response: l$response,
                     message: "Get error from " + p + "."
                   }))
@@ -741,10 +741,10 @@ function M(t) {
   }
 }
 function B(t) {
-  var t$phone_number = t.phone_number
-  var t$password = t.password
-  var t$captcha = t.captcha
-  var t$agreement_ids = t.agreement_ids
+  var /* [auto-meaningful-name] */t$phone_number = t.phone_number
+  var /* [auto-meaningful-name] */t$password = t.password
+  var /* [auto-meaningful-name] */t$captcha = t.captcha
+  var /* [auto-meaningful-name] */t$agreement_ids = t.agreement_ids
   k(t$phone_number)
   S(t$password)
   y(t$captcha)
@@ -759,12 +759,12 @@ function V(t) {
   }
 }
 function K(t) {
-  var t$birthday = t.birthday
-  var t$sex = t.sex
-  var t$fullname = t.fullname
-  var t$nickname = t.nickname
+  var /* [auto-meaningful-name] */t$birthday = t.birthday
+  var /* [auto-meaningful-name] */t$sex = t.sex
+  var /* [auto-meaningful-name] */t$fullname = t.fullname
+  var /* [auto-meaningful-name] */t$nickname = t.nickname
   var i = t.qq
-  var t$description = t.description
+  var /* [auto-meaningful-name] */t$description = t.description
   if (t$birthday) {
     M(t$birthday)
   }
@@ -839,8 +839,8 @@ function j(t, e) {
   })
 }
 function Q(t) {
-  var c$env = C().env
-  var n = "prod" === c$env ? "" : c$env + "-"
+  var /* [auto-meaningful-name] */C$env = C().env
+  var n = "prod" === C$env ? "" : C$env + "-"
   return "token_type" === t ? n + "token-type" : "" + n + t + "-token"
 }
 function X(t) {
@@ -959,9 +959,9 @@ var nt = function () {
     if (X(t) && X(e)) {
       return t + " " + e
     }
-    var c$domain = C().domain
-    j(Q("access"), c$domain)
-    j(Q("token_type"), c$domain)
+    var /* [auto-meaningful-name] */C$domain = C().domain
+    j(Q("access"), C$domain)
+    j(Q("token_type"), C$domain)
     throw new f({
       error_code: r.NO_TOKEN,
       message: "NO Token(cookie might have been expired). Please login."
@@ -1032,20 +1032,20 @@ var nt = function () {
     return Y(Q("refresh"))
   }
   t.prototype.set = function (t) {
-    var t$access = t.access
-    var t$refresh = t.refresh
-    var c$domain = C().domain
+    var /* [auto-meaningful-name] */t$access = t.access
+    var /* [auto-meaningful-name] */t$refresh = t.refresh
+    var /* [auto-meaningful-name] */C$domain = C().domain
     if (t$access && t$access.token && t$access.type && t$access.expires_in) {
       F({
         name: Q("access"),
         value: t$access.token,
-        domain: c$domain,
+        domain: C$domain,
         max_age: t$access.expires_in
       })
       F({
         name: Q("token_type"),
         value: t$access.type,
-        domain: c$domain,
+        domain: C$domain,
         max_age: t$access.expires_in
       })
     } else {
@@ -1058,7 +1058,7 @@ var nt = function () {
       F({
         name: Q("refresh"),
         value: t$refresh.token,
-        domain: c$domain,
+        domain: C$domain,
         max_age: t$refresh.expires_in
       })
     }
@@ -1104,10 +1104,10 @@ var nt = function () {
     return X(Y(Q("access"))) && X(Y(Q("token_type"))) ? "ACCESS_EXIST" : X(Y(Q("refresh"))) ? "REFRESH_EXIST" : "NO_TOKEN"
   }
   t.prototype.clear = function () {
-    var c$domain = C().domain
-    j(Q("access"), c$domain)
-    j(Q("token_type"), c$domain)
-    j(Q("refresh"), c$domain)
+    var /* [auto-meaningful-name] */C$domain = C().domain
+    j(Q("access"), C$domain)
+    j(Q("token_type"), C$domain)
+    j(Q("refresh"), C$domain)
   }
   return t
 }()
@@ -1155,14 +1155,14 @@ var it = function () {
   t.prototype.dispatch_request = function (t) {
     return p(this, undefined, undefined, function () {
       var /* [auto-meaningful-name] */t$headers
-      var n
+      var /* [auto-meaningful-name] */Authorization
       var r = this
       return l(this, function (o) {
         switch (o.label) {
           case 0:
-            return t.with_token && m().auth_version ? (t.headers = t.headers || {}, t$headers = t.headers, n = "Authorization", [4, this.token.get_access()]) : [3, 2]
+            return t.with_token && m().auth_version ? (t.headers = t.headers || {}, t$headers = t.headers, Authorization = "Authorization", [4, this.token.get_access()]) : [3, 2]
           case 1:
-            t$headers[n] = o.sent()
+            t$headers[Authorization] = o.sent()
             return [2, rt(2, function () {
               return p(r, undefined, undefined, function () {
                 return l(this, function (e) {
@@ -2282,12 +2282,12 @@ var dt = function (t) {
     })
   }
   e.create = function (t, n) {
-    var t$dom_id = t.dom_id
-    var t$success_callback = t.success_callback
-    var t$fail_callback = t.fail_callback
-    var t$close_callback = t.close_callback
-    var t$product_id = t.product_id
-    var t$init_options = t.init_options
+    var /* [auto-meaningful-name] */t$dom_id = t.dom_id
+    var /* [auto-meaningful-name] */t$success_callback = t.success_callback
+    var /* [auto-meaningful-name] */t$fail_callback = t.fail_callback
+    var /* [auto-meaningful-name] */t$close_callback = t.close_callback
+    var /* [auto-meaningful-name] */t$product_id = t.product_id
+    var /* [auto-meaningful-name] */t$init_options = t.init_options
     return new e({
       product_id: t$product_id || n.appid,
       dom_id: t$dom_id,
@@ -2421,7 +2421,7 @@ var pt = function (t) {
     })
   }
   e.prototype.show = function () {
-    var this$options$init_options = this.options.init_options
+    var /* [auto-meaningful-name] */this$options$init_options = this.options.init_options
     if (this.options && ["embed", "float"].includes((null === this$options$init_options || undefined === this$options$init_options ? undefined : this$options$init_options.product) || "")) {
       this.instance.appendTo("#" + this.options.dom_id)
     } else {
@@ -2445,11 +2445,11 @@ var pt = function (t) {
     })
   }
   e.create = function (t, n) {
-    var t$dom_id = t.dom_id
-    var t$success_callback = t.success_callback
-    var t$fail_callback = t.fail_callback
-    var t$close_callback = t.close_callback
-    var t$init_options = t.init_options
+    var /* [auto-meaningful-name] */t$dom_id = t.dom_id
+    var /* [auto-meaningful-name] */t$success_callback = t.success_callback
+    var /* [auto-meaningful-name] */t$fail_callback = t.fail_callback
+    var /* [auto-meaningful-name] */t$close_callback = t.close_callback
+    var /* [auto-meaningful-name] */t$init_options = t.init_options
     return new e({
       product_id: t.product_id || n.appid,
       dom_id: t$dom_id,
@@ -2567,10 +2567,10 @@ var Et = function (t) {
     })
   }
   e.create = function (t, n) {
-    var t$dom_id = t.dom_id
-    var t$success_callback = t.success_callback
-    var t$fail_callback = t.fail_callback
-    var t$close_callback = t.close_callback
+    var /* [auto-meaningful-name] */t$dom_id = t.dom_id
+    var /* [auto-meaningful-name] */t$success_callback = t.success_callback
+    var /* [auto-meaningful-name] */t$fail_callback = t.fail_callback
+    var /* [auto-meaningful-name] */t$close_callback = t.close_callback
     return new e({
       product_id: t.product_id || n.appid,
       dom_id: t$dom_id,
@@ -2734,11 +2734,11 @@ var vt = function (t) {
     })
   }
   e.create = function (t, n) {
-    var t$dom_id = t.dom_id
-    var t$success_callback = t.success_callback
-    var t$fail_callback = t.fail_callback
-    var t$close_callback = t.close_callback
-    var t$init_options = t.init_options
+    var /* [auto-meaningful-name] */t$dom_id = t.dom_id
+    var /* [auto-meaningful-name] */t$success_callback = t.success_callback
+    var /* [auto-meaningful-name] */t$fail_callback = t.fail_callback
+    var /* [auto-meaningful-name] */t$close_callback = t.close_callback
+    var /* [auto-meaningful-name] */t$init_options = t.init_options
     return new e({
       product_id: t.product_id || n.appid,
       dom_id: t$dom_id,
@@ -2882,10 +2882,10 @@ var mt = function (t) {
     })
   }
   e.create = function (t, n) {
-    var t$dom_id = t.dom_id
-    var t$success_callback = t.success_callback
-    var t$fail_callback = t.fail_callback
-    var t$close_callback = t.close_callback
+    var /* [auto-meaningful-name] */t$dom_id = t.dom_id
+    var /* [auto-meaningful-name] */t$success_callback = t.success_callback
+    var /* [auto-meaningful-name] */t$fail_callback = t.fail_callback
+    var /* [auto-meaningful-name] */t$close_callback = t.close_callback
     return new e({
       product_id: t.product_id || n.appid,
       dom_id: t$dom_id,
@@ -3049,13 +3049,13 @@ var Ot = Object.freeze({
   DisableCaptcha: Ct
 })
 function bt(t) {
-  var t$env = t.env
-  var t$domain = t.domain
+  var /* [auto-meaningful-name] */t$env = t.env
+  var /* [auto-meaningful-name] */t$domain = t.domain
   t.auth_version
   t.pid
   t.client_id
   t.requestTimeout
-  var t$host = t.host
+  var /* [auto-meaningful-name] */t$host = t.host
   if (t$env) {
     if (o[t$env]) {
       (function (t) {

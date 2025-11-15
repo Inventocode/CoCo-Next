@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1745
@@ -8,29 +8,29 @@
 
 require("../1245")
 var r
-var o = require("../1623/86")
-var i = require("../1623/272")
+var o = require("../1698/86/index")
+var i = require("../1541/272")
 var a = require("./1252")
-var s = require("../1736/194")
+var s = require("../1541/194")
 var c = require("./1212")
-var l = require("./398/index")
-var u = require("./635")
-var d = require("./332")
-var p = require("./1233")
-var f = require("./1217/index")
-var require$946$codeAt = require("./946").codeAt
+var l = require("../1541/398")
+var u = require("../1646/635")
+var d = require("../1541/332")
+var p = require("../1621/1233")
+var f = require("../1565/1217/index")
+var /* [auto-meaningful-name] */require$$_1671_946$codeAt = require("../1671/946").codeAt
 var m = require("./1746")
-var g = require("./310")
-var _ = require("./531")
+var g = require("../1684/310")
+var _ = require("../1541/531")
 var v = require("../1253/index")
-var b = require("./423/index")
-var s$URL = s.URL
-var v$URLSearchParams = v.URLSearchParams
-var v$getState = v.getState
-var b$set = b.set
+var b = require("../1541/423/index")
+var /* [auto-meaningful-name] */s$URL = s.URL
+var /* [auto-meaningful-name] */v$URLSearchParams = v.URLSearchParams
+var /* [auto-meaningful-name] */v$getState = v.getState
+var /* [auto-meaningful-name] */b$set = b.set
 var C = b.getterFor("URL")
-var math$floor = Math.floor
-var math$pow = Math.pow
+var /* [auto-meaningful-name] */Math$floor = Math.floor
+var /* [auto-meaningful-name] */Math$pow = Math.pow
 var I = /[A-Za-z]/
 var A = /[\d+-.A-Za-z]/
 var j = /\d/
@@ -110,7 +110,7 @@ var F = function (e) {
   for (r = 0; r < c$length; r++) {
     a = n[r]
     if (r == c$length - 1) {
-      if (a >= math$pow(256, 5 - c$length)) {
+      if (a >= Math$pow(256, 5 - c$length)) {
         return null
       }
     } else if (a > 255) {
@@ -118,7 +118,7 @@ var F = function (e) {
     }
   }
   for (s = n.pop(), r = 0; r < n.length; r++) {
-    s += n[r] * math$pow(256, 3 - r)
+    s += n[r] * Math$pow(256, 3 - r)
   }
   return s
 }
@@ -234,7 +234,7 @@ var U = function (e) {
   if ("number" == typeof e) {
     for (t = [], n = 0; n < 4; n++) {
       t.unshift(e % 256)
-      e = math$floor(e / 256)
+      e = Math$floor(e / 256)
     }
     return t.join(".")
   }
@@ -307,7 +307,7 @@ var z = p({}, V, {
   "|": 1
 })
 var Y = function (e, t) {
-  var n = require$946$codeAt(e, 0)
+  var n = require$$_1671_946$codeAt(e, 0)
   return n > 32 && n < 127 && !d(t, e) ? e : encodeURIComponent(e)
 }
 var K = {
@@ -336,8 +336,8 @@ var J = function (e) {
   return e.length > 1 && Z(e.slice(0, 2)) && (2 == e.length || "/" === (t = e.charAt(2)) || "\\" === t || "?" === t || "#" === t)
 }
 var $ = function (e) {
-  var e$path = e.path
-  var e$path$length = e$path.length
+  var /* [auto-meaningful-name] */e$path = e.path
+  var /* [auto-meaningful-name] */e$path$length = e$path.length
   if (!(!e$path$length || "file" == e.scheme && 1 == e$path$length && Z(e$path[0], true))) {
     e$path.pop()
   }
@@ -843,17 +843,17 @@ var we = function (e) {
     r.hash = Le.call(r)
   }
 }
-var we$prototype = we.prototype
+var /* [auto-meaningful-name] */we$prototype = we.prototype
 var Te = function () {
   var e = C(this)
-  var e$scheme = e.scheme
-  var e$username = e.username
-  var e$password = e.password
-  var e$host = e.host
-  var e$port = e.port
-  var e$path = e.path
-  var e$query = e.query
-  var e$fragment = e.fragment
+  var /* [auto-meaningful-name] */e$scheme = e.scheme
+  var /* [auto-meaningful-name] */e$username = e.username
+  var /* [auto-meaningful-name] */e$password = e.password
+  var /* [auto-meaningful-name] */e$host = e.host
+  var /* [auto-meaningful-name] */e$port = e.port
+  var /* [auto-meaningful-name] */e$path = e.path
+  var /* [auto-meaningful-name] */e$query = e.query
+  var /* [auto-meaningful-name] */e$fragment = e.fragment
   var l = e$scheme + ":"
   if (null !== e$host) {
     l += "//"
@@ -880,8 +880,8 @@ var Te = function () {
 }
 var Se = function () {
   var e = C(this)
-  var e$scheme = e.scheme
-  var e$port = e.port
+  var /* [auto-meaningful-name] */e$scheme = e.scheme
+  var /* [auto-meaningful-name] */e$port = e.port
   if ("blob" == e$scheme) {
     try {
       return new we(e$scheme.path[0]).origin
@@ -902,33 +902,33 @@ var je = function () {
 }
 var Ne = function () {
   var e = C(this)
-  var e$host = e.host
-  var e$port = e.port
+  var /* [auto-meaningful-name] */e$host = e.host
+  var /* [auto-meaningful-name] */e$port = e.port
   return null === e$host ? "" : null === e$port ? U(e$host) : U(e$host) + ":" + e$port
 }
 var Re = function () {
-  var cThis$host = C(this).host
-  return null === cThis$host ? "" : U(cThis$host)
+  var /* [auto-meaningful-name] */CThis$host = C(this).host
+  return null === CThis$host ? "" : U(CThis$host)
 }
 var ke = function () {
-  var cThis$port = C(this).port
-  return null === cThis$port ? "" : String(cThis$port)
+  var /* [auto-meaningful-name] */CThis$port = C(this).port
+  return null === CThis$port ? "" : String(CThis$port)
 }
 var xe = function () {
   var e = C(this)
-  var e$path = e.path
+  var /* [auto-meaningful-name] */e$path = e.path
   return e.cannotBeABaseURL ? e$path[0] : e$path.length ? "/" + e$path.join("/") : ""
 }
 var De = function () {
-  var cThis$query = C(this).query
-  return cThis$query ? "?" + cThis$query : ""
+  var /* [auto-meaningful-name] */CThis$query = C(this).query
+  return CThis$query ? "?" + CThis$query : ""
 }
 var Me = function () {
   return C(this).searchParams
 }
 var Le = function () {
-  var cThis$fragment = C(this).fragment
-  return cThis$fragment ? "#" + cThis$fragment : ""
+  var /* [auto-meaningful-name] */CThis$fragment = C(this).fragment
+  return CThis$fragment ? "#" + CThis$fragment : ""
 }
 var Pe = function (e, t) {
   return {
@@ -1042,8 +1042,8 @@ l(we$prototype, "toString", function () {
   enumerable: true
 })
 if (s$URL) {
-  var s$URL$createObjectURL = s$URL.createObjectURL
-  var s$URL$revokeObjectURL = s$URL.revokeObjectURL
+  var /* [auto-meaningful-name] */s$URL$createObjectURL = s$URL.createObjectURL
+  var /* [auto-meaningful-name] */s$URL$revokeObjectURL = s$URL.revokeObjectURL
   if (s$URL$createObjectURL) {
     l(we, "createObjectURL", function (e) {
       return s$URL$createObjectURL.apply(s$URL, arguments)

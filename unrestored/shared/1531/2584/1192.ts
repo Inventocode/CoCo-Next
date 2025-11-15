@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1192
@@ -219,7 +219,7 @@ var g = function (e) {
   }, {
     key: "getParentSize",
     value: function () {
-      var this$base = this.base
+      var /* [auto-meaningful-name] */this$base = this.base
       if (!this$base) {
         return {
           width: window.innerWidth,
@@ -227,8 +227,8 @@ var g = function (e) {
         }
       }
       var t = false
-      var this$parentNode$style$flexWrap = this.parentNode.style.flexWrap
-      var this$base$style$minWidth = this$base.style.minWidth
+      var /* [auto-meaningful-name] */this$parentNode$style$flexWrap = this.parentNode.style.flexWrap
+      var /* [auto-meaningful-name] */this$base$style$minWidth = this$base.style.minWidth
       if ("wrap" !== this$parentNode$style$flexWrap) {
         t = true
         this.parentNode.style.flexWrap = "wrap"
@@ -249,12 +249,12 @@ var g = function (e) {
   }, {
     key: "componentDidMount",
     value: function () {
-      var this$size = this.size
+      var /* [auto-meaningful-name] */this$size = this.size
       this.setState({
         width: this.state.width || this$size.width,
         height: this.state.height || this$size.height
       })
-      var this$parentNode = this.parentNode
+      var /* [auto-meaningful-name] */this$parentNode = this.parentNode
       if (this$parentNode instanceof HTMLElement && !this.base) {
         var n = document.createElement("div")
         n.style.width = "100%"
@@ -285,8 +285,8 @@ var g = function (e) {
         window.removeEventListener("mouseleave", this.onMouseUp)
         window.removeEventListener("touchmove", this.onMouseMove)
         window.removeEventListener("touchend", this.onMouseUp)
-        var this$parentNode = this.parentNode
-        var this$base = this.base
+        var /* [auto-meaningful-name] */this$parentNode = this.parentNode
+        var /* [auto-meaningful-name] */this$base = this.base
         if (!this$base || !this$parentNode) {
           return
         }
@@ -350,46 +350,46 @@ var g = function (e) {
       if (this.state.isResizing) {
         var t = e instanceof MouseEvent ? e.clientX : e.touches[0].clientX
         var n = e instanceof MouseEvent ? e.clientY : e.touches[0].clientY
-        var this$state = this.state
-        var this$state$direction = this$state.direction
-        var this$state$original = this$state.original
-        var this$state$width = this$state.width
-        var this$state$height = this$state.height
-        var _this$props = this.props
-        var this$props$lockAspectRatio = _this$props.lockAspectRatio
-        var this$props$lockAspectRatioExtraHeight = _this$props.lockAspectRatioExtraHeight
-        var this$props$lockAspectRatioExtraWidth = _this$props.lockAspectRatioExtraWidth
+        var /* [auto-meaningful-name] */this$state = this.state
+        var /* [auto-meaningful-name] */this$state$direction = this$state.direction
+        var /* [auto-meaningful-name] */this$state$original = this$state.original
+        var /* [auto-meaningful-name] */this$state$width = this$state.width
+        var /* [auto-meaningful-name] */this$state$height = this$state.height
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$lockAspectRatio = this$props.lockAspectRatio
+        var /* [auto-meaningful-name] */this$props$lockAspectRatioExtraHeight = this$props.lockAspectRatioExtraHeight
+        var /* [auto-meaningful-name] */this$props$lockAspectRatioExtraWidth = this$props.lockAspectRatioExtraWidth
         var g = this.props.scale || 1
-        var this$props = this.props
-        var this$props$maxWidth = this$props.maxWidth
-        var this$props$maxHeight = this$props.maxHeight
-        var this$props$minWidth = this$props.minWidth
-        var this$props$minHeight = this$props.minHeight
+        var /* [auto-meaningful-name] */_this$props = this.props
+        var /* [auto-meaningful-name] */_this$props$maxWidth = _this$props.maxWidth
+        var /* [auto-meaningful-name] */_this$props$maxHeight = _this$props.maxHeight
+        var /* [auto-meaningful-name] */_this$props$minWidth = _this$props.minWidth
+        var /* [auto-meaningful-name] */_this$props$minHeight = _this$props.minHeight
         var O = this.props.resizeRatio || 1
         var w = this.getParentSize()
-        if (this$props$maxWidth && "string" === typeof this$props$maxWidth && f(this$props$maxWidth, "%")) {
-          var C = Number(this$props$maxWidth.replace("%", "")) / 100
-          this$props$maxWidth = w.width * C
+        if (_this$props$maxWidth && "string" === typeof _this$props$maxWidth && f(_this$props$maxWidth, "%")) {
+          var C = Number(_this$props$maxWidth.replace("%", "")) / 100
+          _this$props$maxWidth = w.width * C
         }
-        if (this$props$maxHeight && "string" === typeof this$props$maxHeight && f(this$props$maxHeight, "%")) {
-          var T = Number(this$props$maxHeight.replace("%", "")) / 100
-          this$props$maxHeight = w.height * T
+        if (_this$props$maxHeight && "string" === typeof _this$props$maxHeight && f(_this$props$maxHeight, "%")) {
+          var T = Number(_this$props$maxHeight.replace("%", "")) / 100
+          _this$props$maxHeight = w.height * T
         }
-        if (this$props$minWidth && "string" === typeof this$props$minWidth && f(this$props$minWidth, "%")) {
-          var S = Number(this$props$minWidth.replace("%", "")) / 100
-          this$props$minWidth = w.width * S
+        if (_this$props$minWidth && "string" === typeof _this$props$minWidth && f(_this$props$minWidth, "%")) {
+          var S = Number(_this$props$minWidth.replace("%", "")) / 100
+          _this$props$minWidth = w.width * S
         }
-        if (this$props$minHeight && "string" === typeof this$props$minHeight && f(this$props$minHeight, "%")) {
-          var I = Number(this$props$minHeight.replace("%", "")) / 100
-          this$props$minHeight = w.height * I
+        if (_this$props$minHeight && "string" === typeof _this$props$minHeight && f(_this$props$minHeight, "%")) {
+          var I = Number(_this$props$minHeight.replace("%", "")) / 100
+          _this$props$minHeight = w.height * I
         }
-        this$props$maxWidth = "undefined" === typeof this$props$maxWidth ? undefined : Number(this$props$maxWidth)
-        this$props$maxHeight = "undefined" === typeof this$props$maxHeight ? undefined : Number(this$props$maxHeight)
-        this$props$minWidth = "undefined" === typeof this$props$minWidth ? undefined : Number(this$props$minWidth)
-        this$props$minHeight = "undefined" === typeof this$props$minHeight ? undefined : Number(this$props$minHeight)
+        _this$props$maxWidth = "undefined" === typeof _this$props$maxWidth ? undefined : Number(_this$props$maxWidth)
+        _this$props$maxHeight = "undefined" === typeof _this$props$maxHeight ? undefined : Number(_this$props$maxHeight)
+        _this$props$minWidth = "undefined" === typeof _this$props$minWidth ? undefined : Number(_this$props$minWidth)
+        _this$props$minHeight = "undefined" === typeof _this$props$minHeight ? undefined : Number(_this$props$minHeight)
         var A = "number" === typeof this$props$lockAspectRatio ? this$props$lockAspectRatio : this$state$original.width / this$state$original.height
-        var this$state$original$width = this$state$original.width
-        var this$state$original$height = this$state$original.height
+        var /* [auto-meaningful-name] */this$state$original$width = this$state$original.width
+        var /* [auto-meaningful-name] */this$state$original$height = this$state$original.height
         if (/right/i.test(this$state$direction)) {
           this$state$original$width = this$state$original.width + (t - this$state$original.x) * O / g
           if (this$props$lockAspectRatio) {
@@ -415,48 +415,48 @@ var g = function (e) {
           }
         }
         if ("parent" === this.props.bounds) {
-          var this$parentNode = this.parentNode
+          var /* [auto-meaningful-name] */this$parentNode = this.parentNode
           if (this$parentNode instanceof HTMLElement) {
             var k = this$parentNode.getBoundingClientRect()
-            var k$left = k.left
-            var k$top = k.top
+            var /* [auto-meaningful-name] */k$left = k.left
+            var /* [auto-meaningful-name] */k$top = k.top
             var M = this.resizable.getBoundingClientRect()
-            var m$left = M.left
-            var m$top = M.top
-            var B = this$parentNode.offsetWidth + (k$left - m$left)
-            var F = this$parentNode.offsetHeight + (k$top - m$top)
-            this$props$maxWidth = this$props$maxWidth && this$props$maxWidth < B ? this$props$maxWidth : B
-            this$props$maxHeight = this$props$maxHeight && this$props$maxHeight < F ? this$props$maxHeight : F
+            var /* [auto-meaningful-name] */M$left = M.left
+            var /* [auto-meaningful-name] */M$top = M.top
+            var B = this$parentNode.offsetWidth + (k$left - M$left)
+            var F = this$parentNode.offsetHeight + (k$top - M$top)
+            _this$props$maxWidth = _this$props$maxWidth && _this$props$maxWidth < B ? _this$props$maxWidth : B
+            _this$props$maxHeight = _this$props$maxHeight && _this$props$maxHeight < F ? _this$props$maxHeight : F
           }
         } else if ("window" === this.props.bounds) {
           if ("undefined" !== typeof window) {
             var G = this.resizable.getBoundingClientRect()
-            var g$left = G.left
-            var g$top = G.top
-            var H = window.innerWidth - g$left
-            var V = window.innerHeight - g$top
-            this$props$maxWidth = this$props$maxWidth && this$props$maxWidth < H ? this$props$maxWidth : H
-            this$props$maxHeight = this$props$maxHeight && this$props$maxHeight < V ? this$props$maxHeight : V
+            var /* [auto-meaningful-name] */G$left = G.left
+            var /* [auto-meaningful-name] */G$top = G.top
+            var H = window.innerWidth - G$left
+            var V = window.innerHeight - G$top
+            _this$props$maxWidth = _this$props$maxWidth && _this$props$maxWidth < H ? _this$props$maxWidth : H
+            _this$props$maxHeight = _this$props$maxHeight && _this$props$maxHeight < V ? _this$props$maxHeight : V
           }
         } else if (this.props.bounds instanceof HTMLElement) {
           var z = this.props.bounds.getBoundingClientRect()
-          var z$left = z.left
-          var z$top = z.top
+          var /* [auto-meaningful-name] */z$left = z.left
+          var /* [auto-meaningful-name] */z$top = z.top
           var q = this.resizable.getBoundingClientRect()
-          var q$left = q.left
-          var q$top = q.top
+          var /* [auto-meaningful-name] */q$left = q.left
+          var /* [auto-meaningful-name] */q$top = q.top
           if (!(this.props.bounds instanceof HTMLElement)) {
             return
           }
           var Z = this.props.bounds.offsetWidth + (z$left - q$left)
           var J = this.props.bounds.offsetHeight + (z$top - q$top)
-          this$props$maxWidth = this$props$maxWidth && this$props$maxWidth < Z ? this$props$maxWidth : Z
-          this$props$maxHeight = this$props$maxHeight && this$props$maxHeight < J ? this$props$maxHeight : J
+          _this$props$maxWidth = _this$props$maxWidth && _this$props$maxWidth < Z ? _this$props$maxWidth : Z
+          _this$props$maxHeight = _this$props$maxHeight && _this$props$maxHeight < J ? _this$props$maxHeight : J
         }
-        var $ = "undefined" === typeof this$props$minWidth ? 10 : this$props$minWidth
-        var ee = "undefined" === typeof this$props$maxWidth || this$props$maxWidth < 0 ? this$state$original$width : this$props$maxWidth
-        var te = "undefined" === typeof this$props$minHeight ? 10 : this$props$minHeight
-        var ne = "undefined" === typeof this$props$maxHeight || this$props$maxHeight < 0 ? this$state$original$height : this$props$maxHeight
+        var $ = "undefined" === typeof _this$props$minWidth ? 10 : _this$props$minWidth
+        var ee = "undefined" === typeof _this$props$maxWidth || _this$props$maxWidth < 0 ? this$state$original$width : _this$props$maxWidth
+        var te = "undefined" === typeof _this$props$minHeight ? 10 : _this$props$minHeight
+        var ne = "undefined" === typeof _this$props$maxHeight || _this$props$maxHeight < 0 ? this$state$original$height : _this$props$maxHeight
         if (this$props$lockAspectRatio) {
           var re = (te - this$props$lockAspectRatioExtraHeight) * A + this$props$lockAspectRatioExtraWidth
           var oe = (ne - this$props$lockAspectRatioExtraHeight) * A + this$props$lockAspectRatioExtraWidth
@@ -506,10 +506,10 @@ var g = function (e) {
   }, {
     key: "onMouseUp",
     value: function (e) {
-      var this$state = this.state
-      var this$state$isResizing = this$state.isResizing
-      var this$state$direction = this$state.direction
-      var this$state$original = this$state.original
+      var /* [auto-meaningful-name] */this$state = this.state
+      var /* [auto-meaningful-name] */this$state$isResizing = this$state.isResizing
+      var /* [auto-meaningful-name] */this$state$direction = this$state.direction
+      var /* [auto-meaningful-name] */this$state$original = this$state.original
       if (this$state$isResizing) {
         var i = {
           width: this.size.width - this$state$original.width,
@@ -539,13 +539,13 @@ var g = function (e) {
     key: "renderResizer",
     value: function () {
       var e = this
-      var this$props = this.props
-      var this$props$enable = this$props.enable
-      var this$props$handleStyles = this$props.handleStyles
-      var this$props$handleClasses = this$props.handleClasses
-      var this$props$handleWrapperStyle = this$props.handleWrapperStyle
-      var this$props$handleWrapperClass = this$props.handleWrapperClass
-      var this$props$handleComponent = this$props.handleComponent
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$enable = this$props.enable
+      var /* [auto-meaningful-name] */this$props$handleStyles = this$props.handleStyles
+      var /* [auto-meaningful-name] */this$props$handleClasses = this$props.handleClasses
+      var /* [auto-meaningful-name] */this$props$handleWrapperStyle = this$props.handleWrapperStyle
+      var /* [auto-meaningful-name] */this$props$handleWrapperClass = this$props.handleWrapperClass
+      var /* [auto-meaningful-name] */this$props$handleComponent = this$props.handleComponent
       if (!this$props$enable) {
         return null
       }
@@ -613,7 +613,7 @@ var g = function (e) {
   }, {
     key: "base",
     get: function () {
-      var this$parentNode = this.parentNode
+      var /* [auto-meaningful-name] */this$parentNode = this.parentNode
       if (this$parentNode) {
         for (var t = [].slice.call(this$parentNode.children), n = 0; n < t.length; n += 1) {
           var r = t[n]
@@ -629,9 +629,9 @@ var g = function (e) {
       var e = 0
       var t = 0
       if ("undefined" !== typeof window) {
-        var this$resizable$offsetWidth = this.resizable.offsetWidth
-        var this$resizable$offsetHeight = this.resizable.offsetHeight
-        var this$resizable$style$position = this.resizable.style.position
+        var /* [auto-meaningful-name] */this$resizable$offsetWidth = this.resizable.offsetWidth
+        var /* [auto-meaningful-name] */this$resizable$offsetHeight = this.resizable.offsetHeight
+        var /* [auto-meaningful-name] */this$resizable$style$position = this.resizable.style.position
         if ("relative" !== this$resizable$style$position) {
           this.resizable.style.position = "relative"
         }
@@ -648,7 +648,7 @@ var g = function (e) {
     key: "sizeStyle",
     get: function () {
       var e = this
-      var this$props$size = this.props.size
+      var /* [auto-meaningful-name] */this$props$size = this.props.size
       var n = function (t) {
         if ("undefined" === typeof e.state[t] || "auto" === e.state[t]) {
           return "auto"

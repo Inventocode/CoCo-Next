@@ -1,19 +1,19 @@
-import a = require("../../../../unrestored/shared/1531/2584/9");
-import s = require("../../../../unrestored/shared/1531/2584/64");
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_9 = require("../../../../unrestored/shared/1531/2584/9")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_64 = require("../../../../unrestored/shared/1531/2584/64")
 import * as Type from "./type"
 import { axiosWithCredentials } from "../../utils/network/axios-with-credentials"
-import u = require("../../../../unrestored/shared/1531/2584/59/index");
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_59_index = require("../../../../unrestored/shared/1531/2584/59/index")
 
 import { MyResponse, PageResponse } from "../../utils/network/response"
 import * as Internal from "../internal/types"
 
-const baseURL: string = `${u.a.serverHost}/coconut`
+const baseURL: string = `${$$_$$_$$_$$_unrestored_shared_1531_2584_59_index.a.serverHost}/coconut`
 
 export interface Label {
-  id: number;
-  name: string;
-  code: string;
-  sort: number;
+  id: number
+  name: string
+  code: string
+  sort: number
 }
 
 export async function getLabels(): Promise<Label[]> {
@@ -25,16 +25,16 @@ export async function getLabels(): Promise<Label[]> {
 }
 
 export interface Info {
-  id: number;
-  widget_name: string;
-  icon: string;
-  author_name: string;
-  resource_url: string;
-  intro: string;
-  widget_code: string;
-  widget_type: number;
-  sort: number;
-  if_have: number;
+  id: number
+  widget_name: string
+  icon: string
+  author_name: string
+  resource_url: string
+  intro: string
+  widget_code: string
+  widget_type: number
+  sort: number
+  if_have: number
 }
 
 export async function getList(
@@ -57,29 +57,29 @@ labelID?: (/** TODO */any))
 export { getList as e }
 
 export interface BoughtInfoResponse {
-  id: number;
-  widget_name: string;
-  icon: string;
-  resource_url: string;
-  intro: string;
-  widget_code: string;
-  widget_type: number;
+  id: number
+  widget_name: string
+  icon: string
+  resource_url: string
+  intro: string
+  widget_code: string
+  widget_type: number
 }
 
 export interface BoughtInfo {
-  id: number;
-  type: string;
-  widgetName: string;
-  icon: string;
-  cdnUrl: string;
-  isInvisibleWidget: boolean;
+  id: number
+  type: string
+  widgetName: string
+  icon: string
+  cdnUrl: string
+  isInvisibleWidget: boolean
 }
 
 export async function boughtList(
 currentPage: number,
 pageSize: number,
 widgetType: (/** TODO */any))
-: Promise<{list: BoughtInfo[];total: number;}> {
+: Promise<{list: BoughtInfo[],total: number}> {
   const { data } = await axiosWithCredentials.get<MyResponse<PageResponse<BoughtInfoResponse>>>(baseURL + "/web/user/widget/list", {
     params: {
       widget_type: widgetType,
@@ -135,11 +135,11 @@ export async function remove(widgetsID: number[]): Promise<boolean> {
 }
 
 export function reportUse(type: string, userID?: number | undefined): void {
-  var widget: Internal.Widget | null = a.Db(type)
+  var widget: Internal.Widget | null = $$_$$_$$_$$_unrestored_shared_1531_2584_9.Db(type)
   if (widget) {
     let guestID
     if (!(userID || (guestID = localStorage.getItem("guestId")))) {
-      guestID = s.a("GUEST")
+      guestID = $$_$$_$$_$$_unrestored_shared_1531_2584_64.a("GUEST")
       localStorage.setItem("guestId", guestID)
     }
     let source: number = 1
@@ -149,7 +149,7 @@ export function reportUse(type: string, userID?: number | undefined): void {
     } else if (Type.isExtensions(type)) {
       source = 3
     }
-    axiosWithCredentials.post(u.a.serverHost + "/data-center/widget", {
+    axiosWithCredentials.post($$_$$_$$_$$_unrestored_shared_1531_2584_59_index.a.serverHost + "/data-center/widget", {
       widget_code: type,
       widget_type: widget.isInvisibleWidget ? 2 : 1,
       source_type: source,
@@ -162,8 +162,8 @@ export async function getUsedTimes<T extends string>(
 widgetsType: T[])
 : Promise<Partial<Record<T, number>>> {
   const { data } = await axiosWithCredentials.get<MyResponse<{
-    totalList: Partial<Record<T, number>>;
-  }>>(u.a.serverHost + "/data-center/widget/total", {
+    totalList: Partial<Record<T, number>>
+  }>>($$_$$_$$_$$_unrestored_shared_1531_2584_59_index.a.serverHost + "/data-center/widget/total", {
     params: {
       widget_code_list: widgetsType.join(",")
     }

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：243
@@ -41,11 +41,11 @@ Object.defineProperty(i, "checkNormal", {
     return b
   }
 })
-import a = require("../../25/index");
-import s = require("../../11");
-import c = require("../../5");
-import Animejs = require("animejs");
-import Color = require("color");
+import /* [auto-meaningful-name] */$$_$$_25_index = require("../../25/index")
+import /* [auto-meaningful-name] */$$_$$_11 = require("../../11")
+import /* [auto-meaningful-name] */$$_$$_5 = require("../../5")
+import /* [auto-meaningful-name] */Animejs = require("animejs")
+import /* [auto-meaningful-name] */Color = require("color")
 var d = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -89,7 +89,7 @@ function m(e) {
   })]
 }
 var g
-import _ = require("../../729/302");
+import /* [auto-meaningful-name] */$$_$$_729_302 = require("../../729/302")
 function v(e, t) {
   var n = document.querySelectorAll("#".concat(e, " .radio-widget-button"))[t]
   return n ? [Animejs.default({
@@ -112,21 +112,21 @@ function b(e, t) {
   })] : []
 }
 g = {}
-s.a(g, c.w, r)
-s.a(g, c.d, _)
-s.a(g, c.C, o)
-s.a(g, c.g, i)
+$$_$$_11.a(g, $$_$$_5.w, r)
+$$_$$_11.a(g, $$_$$_5.d, $$_$$_729_302)
+$$_$$_11.a(g, $$_$$_5.C, o)
+$$_$$_11.a(g, $$_$$_5.g, i)
 var y = g
 var E = new Map()
 function O(e, t, n) {
   w(e)
   var r = y[t]
   if (n && r && n in r) {
-    for (var arguments$length = arguments.length, i = new Array(arguments$length > 3 ? arguments$length - 3 : 0), s = 3; s < arguments$length; s++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length > 3 ? arguments$length - 3 : 0), s = 3; s < arguments$length; s++) {
       i[s - 3] = arguments[s]
     }
     var c = r[n].apply(r, [e].concat(i))
-    E.set(e, [].concat(a.a(E.get(e) || []), a.a(c)))
+    E.set(e, [].concat($$_$$_25_index.a(E.get(e) || []), $$_$$_25_index.a(c)))
   }
 }
 function w(e) {

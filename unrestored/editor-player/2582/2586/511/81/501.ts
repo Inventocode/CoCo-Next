@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：501
@@ -39,8 +39,8 @@ var h = function () {
     return this.getEncodedData(t)
   }
   t.getEncodedData = function (e) {
-    for (var e$length = e.length, _n$UPPER = n.UPPER, n$UPPER = n.UPPER, a = "", u = 0; u < e$length;) {
-      if (n$UPPER === n.BINARY) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, /* [auto-meaningful-name] */n$UPPER = n.UPPER, /* [auto-meaningful-name] */_n$UPPER = n.UPPER, a = "", u = 0; u < e$length;) {
+      if (_n$UPPER === n.BINARY) {
         if (e$length - u < 5) {
           break
         }
@@ -62,24 +62,24 @@ var h = function () {
           a += c.a.castAsNonUtf8Char(h)
           u += 8
         }
-        n$UPPER = _n$UPPER
+        _n$UPPER = n$UPPER
       } else {
-        var l = n$UPPER === n.DIGIT ? 4 : 5
+        var l = _n$UPPER === n.DIGIT ? 4 : 5
         if (e$length - u < l) {
           break
         }
         h = t.readCode(e, u, l)
         u += l
-        var d = t.getCharacter(n$UPPER, h)
+        var d = t.getCharacter(_n$UPPER, h)
         if (d.startsWith("CTRL_")) {
-          _n$UPPER = n$UPPER
-          n$UPPER = t.getTable(d.charAt(5))
+          n$UPPER = _n$UPPER
+          _n$UPPER = t.getTable(d.charAt(5))
           if ("L" === d.charAt(6)) {
-            _n$UPPER = n$UPPER
+            n$UPPER = _n$UPPER
           }
         } else {
           a += d
-          n$UPPER = _n$UPPER
+          _n$UPPER = n$UPPER
         }
       }
     }

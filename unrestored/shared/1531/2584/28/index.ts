@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：28
@@ -23,9 +23,9 @@ export { E as k }
 export { O as m }
 export { w as i }
 require("color")
-import r = require("./773/index");
-import Lodash = require("lodash");
-import i = require("../13/303/index");
+import /* [auto-meaningful-name] */$_773_index = require("./773/index")
+import /* [auto-meaningful-name] */Lodash = require("lodash")
+import /* [auto-meaningful-name] */$_303_index = require("./303/index")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -37,8 +37,8 @@ var a = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(i)
-import s = require("./651");
+}($_303_index)
+import /* [auto-meaningful-name] */$_651 = require("./651")
 function c(e) {
   return e + "_" + a.a.generate()
 }
@@ -56,18 +56,18 @@ function p(e) {
   return "%{COCO_player/".concat(e, "}")
 }
 function f() {
-  var navigator$userAgent = navigator.userAgent
+  var /* [auto-meaningful-name] */navigator$userAgent = navigator.userAgent
   return navigator$userAgent.indexOf("Android") > -1 || navigator$userAgent.indexOf("Linux") > -1 ? "Android" : navigator$userAgent.indexOf("iPhone") > -1 ? "ios" : "web"
 }
 function h() {
   return window.location.pathname.includes("/editor-player.html")
 }
 function m() {
-  var navigator$userAgent = navigator.userAgent
+  var /* [auto-meaningful-name] */navigator$userAgent = navigator.userAgent
   return navigator$userAgent.includes("Android") || navigator$userAgent.includes("Linux")
 }
 function g() {
-  var navigator$userAgent = navigator.userAgent
+  var /* [auto-meaningful-name] */navigator$userAgent = navigator.userAgent
   return /\sQQ\/\d/.test(navigator$userAgent)
 }
 function _() {
@@ -80,7 +80,7 @@ function b() {
   return "web" === f()
 }
 function y(e) {
-  return s.findIndex(function (t) {
+  return $_651.findIndex(function (t) {
     return e.includes(t)
   }) > -1
 }
@@ -115,7 +115,7 @@ function O(e, t, n) {
   return i || ""
 }
 function w(e) {
-  return r.filterXSS(e)
+  return $_773_index.filterXSS(e)
 }
 a.a.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
 export default u

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2153
@@ -12,9 +12,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.Toolbox = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../../4/127")
+var o = require("../../../1036/127")
 var a = require("../../../125/195/index")
-var s = require("../../497/387")
+var s = require("../../../206/725/387")
 var c = require("../../../125/index")
 var u = require("../../../1001/213/index")
 var l = require("../../../125/294")
@@ -24,7 +24,7 @@ var h = function (e) {
   function t(t) {
     var n = e.call(this) || this
     n.get_node_from_event_ = function (e) {
-      for (var e$target = e.target; undefined != e$target;) {
+      for (var /* [auto-meaningful-name] */e$target = e.target; undefined != e$target;) {
         var r = n.find_node_by_name(e$target.id)
         if (undefined != r) {
           return r
@@ -35,7 +35,7 @@ var h = function (e) {
         e$target = e$target.parentNode
       }
     }
-    var t$options = t.options
+    var /* [auto-meaningful-name] */t$options = t.options
     n.workspace_ = t
     n.toolbox_position = t.get_options().toolboxPosition
     var i = Object.assign({}, n.workspace_.options, {
@@ -67,7 +67,7 @@ var h = function (e) {
   t.prototype.init = function () {
     var e = this
     if (this.workspace_) {
-      var this$workspace_ = this.workspace_
+      var /* [auto-meaningful-name] */this$workspace_ = this.workspace_
       var n = this$workspace_.get_options()
       var r = this.workspace_.get_workspace_drag_surface()
       var i = r && r.get_svg()
@@ -252,11 +252,11 @@ var h = function (e) {
   t.prototype.get_client_rect = function () {
     if (undefined != this.html_div) {
       var e = this.html_div.getBoundingClientRect()
-      var this$workspace_$get_options$delete_area_margin = this.workspace_.get_options().delete_area_margin
-      var e$left = e.left
-      var e$top = e.top
-      var e$width = e.width
-      var e$height = e.height
+      var /* [auto-meaningful-name] */this$workspace_$get_options$delete_area_margin = this.workspace_.get_options().delete_area_margin
+      var /* [auto-meaningful-name] */e$left = e.left
+      var /* [auto-meaningful-name] */e$top = e.top
+      var /* [auto-meaningful-name] */e$width = e.width
+      var /* [auto-meaningful-name] */e$height = e.height
       return new l.Rect(e$left - this$workspace_$get_options$delete_area_margin[3], e$top - this$workspace_$get_options$delete_area_margin[0], e$width + this$workspace_$get_options$delete_area_margin[1] + this$workspace_$get_options$delete_area_margin[3], e$height + this$workspace_$get_options$delete_area_margin[0] + this$workspace_$get_options$delete_area_margin[2])
     }
   }
@@ -279,14 +279,14 @@ var h = function (e) {
     return this.last_selected_node
   }
   t.prototype.set_selected_item = function (e) {
-    var /* [auto-meaningful-name] */_this$workspace_2
     var /* [auto-meaningful-name] */this$workspace_
-    var this$selected_node = this.selected_node
+    var /* [auto-meaningful-name] */_this$workspace_
+    var /* [auto-meaningful-name] */this$selected_node = this.selected_node
     if (e !== this$selected_node) {
       if (this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: a.UIEventType.CATEGORY_WILL_CHANGE,
-          workspace_id: (null === (_this$workspace_2 = this.workspace_) || undefined === _this$workspace_2 ? undefined : _this$workspace_2.id) || "",
+          workspace_id: (null === (this$workspace_ = this.workspace_) || undefined === this$workspace_ ? undefined : this$workspace_.id) || "",
           old_value: this$selected_node,
           new_value: e
         }))
@@ -321,7 +321,7 @@ var h = function (e) {
       if (this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: a.UIEventType.CATEGORY,
-          workspace_id: (null === (this$workspace_ = this.workspace_) || undefined === this$workspace_ ? undefined : this$workspace_.id) || "",
+          workspace_id: (null === (_this$workspace_ = this.workspace_) || undefined === _this$workspace_ ? undefined : _this$workspace_.id) || "",
           old_value: this$selected_node,
           new_value: e
         }))

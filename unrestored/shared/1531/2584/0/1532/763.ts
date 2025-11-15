@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：763
@@ -6,9 +6,9 @@
 
 "use strict"
 
-var object$getOwnPropertySymbols = Object.getOwnPropertySymbols
-var object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
-var object$prototype$propertyIsEnumerable = Object.prototype.propertyIsEnumerable
+var /* [auto-meaningful-name] */Object$getOwnPropertySymbols = Object.getOwnPropertySymbols
+var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */Object$prototype$propertyIsEnumerable = Object.prototype.propertyIsEnumerable
 function a(e) {
   if (null === e || undefined === e) {
     throw new TypeError("Object.assign cannot be called with null or undefined")
@@ -43,13 +43,13 @@ module.exports = function () {
   }
 }() ? Object.assign : function (e, t) {
   for (var n, s, c = a(e), u = 1; u < arguments.length; u++) {
-    for (var l in n = Object(arguments[u])) if (object$prototype$hasOwnProperty.call(n, l)) {
+    for (var l in n = Object(arguments[u])) if (Object$prototype$hasOwnProperty.call(n, l)) {
       c[l] = n[l]
     }
-    if (object$getOwnPropertySymbols) {
-      s = object$getOwnPropertySymbols(n)
+    if (Object$getOwnPropertySymbols) {
+      s = Object$getOwnPropertySymbols(n)
       for (var f = 0; f < s.length; f++) {
-        if (object$prototype$propertyIsEnumerable.call(n, s[f])) {
+        if (Object$prototype$propertyIsEnumerable.call(n, s[f])) {
           c[s[f]] = n[s[f]]
         }
       }

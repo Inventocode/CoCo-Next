@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2485
@@ -11,20 +11,20 @@ var a = require("./2486")
 var s = require("./2487")
 var c = require("../../../../../254/2513/2514/2515/2516/1413")
 var u = require("../../../../../254/2513/2514/2515/2516/1414")
-var l = require("./2490/index")
+var l = require("./2490")
 var f = require("./2491/index")
-var d = require("./1401")
-var h = require("./2492/index")
+var d = require("./1401/index")
+var h = require("./2492")
 var p = require("./978/index")
 var _ = require("./2493")
 var A = require("./2494/index")
 var g = require("../../../../../254/2513/2514/2515/2516/1417/index")
-var v = require("../../../2411/2412/446")
+var v = require("../../../2411/2422/446")
 var m = require("../../../../../254/2513/2514/2515/2516/971/index")
 var y = require("./2499/index")
 var b = require("../../../../../254/2533/1420/475")
 var w = require("./2501/index")
-var E = require("../../1142/1390/850/index")
+var E = require("../../../2411/1142/1390/850/index")
 var x = require("../../../../../254/2513/2514/2515/853/index")
 var C = {}
 C["[object Arguments]"] = C["[object Array]"] = C["[object ArrayBuffer]"] = C["[object DataView]"] = C["[object Boolean]"] = C["[object Date]"] = C["[object Float32Array]"] = C["[object Float64Array]"] = C["[object Int8Array]"] = C["[object Int16Array]"] = C["[object Int32Array]"] = C["[object Map]"] = C["[object Number]"] = C["[object Object]"] = C["[object RegExp]"] = C["[object Set]"] = C["[object String]"] = C["[object Symbol]"] = C["[object Uint8Array]"] = C["[object Uint8ClampedArray]"] = C["[object Uint16Array]"] = C["[object Uint32Array]"] = true

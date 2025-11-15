@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：84
@@ -135,7 +135,7 @@ export { Mt as W }
 export { Lt as rc }
 export { Pt as Eb }
 var r
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -148,11 +148,11 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import a = require("../7");
-import s = require("../15");
-import c = require("../48/index");
+import a = require("../7")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
+import /* [auto-meaningful-name] */$$_48_index = require("../48/index")
 var l = new Map()
-var u = "!@_APP_@!"
+var /* [auto-meaningful-name] */_APP_ = "!@_APP_@!"
 function d(e) {
   return l.get(e)
 }
@@ -193,7 +193,7 @@ function h(e, t) {
   return n || []
 }
 function m(e, t) {
-  for (var arguments$length = arguments.length, r = new Array(arguments$length > 2 ? arguments$length - 2 : 0), o = 2; o < arguments$length; o++) {
+  for (var /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length > 2 ? arguments$length - 2 : 0), o = 2; o < arguments$length; o++) {
     r[o - 2] = arguments[o]
   }
   var i = h(e, t)
@@ -279,7 +279,7 @@ function S() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return s.lb(10)
+            return $$_15.lb(10)
           case 2:
             for (c$length = c.length, o = new Array(c$length > 1 ? c$length - 1 : 0), a = 1; a < c$length; a++) {
               o[a - 1] = c[a]
@@ -359,28 +359,28 @@ function R() {
   }))).apply(this, arguments)
 }
 function k() {
-  m(r.MOUNT, u)
+  m(r.MOUNT, _APP_)
 }
 function x(e) {
-  p(r.MOUNT, u, e)
+  p(r.MOUNT, _APP_, e)
 }
 function D() {
-  m(r.UNMOUNT, u)
+  m(r.UNMOUNT, _APP_)
 }
 function M(e) {
-  p(r.UNMOUNT, u, e)
+  p(r.UNMOUNT, _APP_, e)
 }
 function L() {
-  m(r.ACTIVE, u)
+  m(r.ACTIVE, _APP_)
 }
 function P(e) {
-  p(r.ACTIVE, u, e)
+  p(r.ACTIVE, _APP_, e)
 }
 function B() {
-  m(r.BACKGROUND, u)
+  m(r.BACKGROUND, _APP_)
 }
 function F(e) {
-  p(r.BACKGROUND, u, e)
+  p(r.BACKGROUND, _APP_, e)
 }
 function G(e) {
   m(r.MOUNT, e)
@@ -596,16 +596,16 @@ function nt(e, t) {
   m(r.END_TO_SLIDE, e, t)
 }
 function rt(e) {
-  p(r.ROOM_MEMBER_JOIN, u, e)
+  p(r.ROOM_MEMBER_JOIN, _APP_, e)
 }
 function ot(e) {
-  m(r.ROOM_MEMBER_JOIN, u, e)
+  m(r.ROOM_MEMBER_JOIN, _APP_, e)
 }
 function it(e) {
-  p(r.ROOM_MEMBER_LEAVE, u, e)
+  p(r.ROOM_MEMBER_LEAVE, _APP_, e)
 }
 function at(e) {
-  m(r.ROOM_MEMBER_LEAVE, u, e)
+  m(r.ROOM_MEMBER_LEAVE, _APP_, e)
 }
 function st(e, t) {
   p(r.ROOM_MESSAGE, e, t)
@@ -614,10 +614,10 @@ function ct(e, t) {
   m(r.ROOM_MESSAGE, e, t)
 }
 function lt(e) {
-  p(r.ROOM_ERROR, u, e)
+  p(r.ROOM_ERROR, _APP_, e)
 }
 function ut(e) {
-  m(r.ROOM_ERROR, u, e)
+  m(r.ROOM_ERROR, _APP_, e)
 }
 function dt(e, t) {
   p(r.CLOUD_DOCUMENT_ERROR, e, t)
@@ -671,7 +671,7 @@ function St(e, t, n) {
 function It() {
   return (It = a.a(i.a.mark(function e(t, n, o) {
     var a
-    var /* [auto-meaningful-name] */c$a$getState$currentScreenId
+    var /* [auto-meaningful-name] */$$_48_index$a$getState$currentScreenId
     var /* [auto-meaningful-name] */f$length
     var u
     var d
@@ -681,11 +681,11 @@ function It() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            for (a = [t, n, o].join("_@@_"), c$a$getState$currentScreenId = c.a().getState().currentScreenId, f$length = f.length, u = new Array(f$length > 3 ? f$length - 3 : 0), d = 3; d < f$length; d++) {
+            for (a = [t, n, o].join("_@@_"), $$_48_index$a$getState$currentScreenId = $$_48_index.a().getState().currentScreenId, f$length = f.length, u = new Array(f$length > 3 ? f$length - 3 : 0), d = 3; d < f$length; d++) {
               u[d - 3] = f[d]
             }
             m.apply(undefined, [r.WIDGET_EVENT, a].concat(u))
-            p = [t, n, c$a$getState$currentScreenId].join("_@@_")
+            p = [t, n, $$_48_index$a$getState$currentScreenId].join("_@@_")
             m.apply(undefined, [r.WIDGET_EVENT, p, o].concat(u))
           case 6:
           case "end":
@@ -727,7 +727,7 @@ function jt() {
   }))).apply(this, arguments)
 }
 function Nt(e) {
-  p(r.CLOUD_DB_ERROR, u, e)
+  p(r.CLOUD_DB_ERROR, _APP_, e)
 }
 function Rt(e, t) {
   p(r.CLOUD_TABLE_ERROR, e, t)
@@ -739,7 +739,7 @@ function kt(e, t) {
 function xt(e) {
   var t = JSON.parse(e)
   var n = [t.cloudDBName, t.errorInfo]
-  m.apply(undefined, [r.CLOUD_DB_ERROR, u].concat(n))
+  m.apply(undefined, [r.CLOUD_DB_ERROR, _APP_].concat(n))
 }
 function Dt(e, t) {
   p(r.CLOUD_DICT_ERROR, e, t)

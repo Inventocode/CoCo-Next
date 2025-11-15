@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：838
@@ -138,7 +138,7 @@ function l(e) {
   if (!e) {
     return false
   }
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   if (e$length < 9) {
     return false
   }

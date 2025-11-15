@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：180
@@ -33,7 +33,7 @@ var s = function () {
     }
   }
   t.parseFromBooleanArray = function (e) {
-    for (var e$length = e.length, e0$length = e[0].length, o = new t(e0$length, e$length), i = 0; i < e$length; i++) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, /* [auto-meaningful-name] */e0$length = e[0].length, o = new t(e0$length, e$length), i = 0; i < e$length; i++) {
       for (var a = e[i], u = 0; u < e0$length; u++) {
         if (a[u]) {
           o.set(u, i)
@@ -106,14 +106,14 @@ var s = function () {
     if (this.width !== t.getWidth() || this.height !== t.getHeight() || this.rowSize !== t.getRowSize()) {
       throw new u.a("input matrix dimensions do not match")
     }
-    for (var e = new n.a(Math.floor(this.width / 32) + 1), this$rowSize = this.rowSize, this$bits = this.bits, i = 0, this$height = this.height; i < this$height; i++) {
+    for (var e = new n.a(Math.floor(this.width / 32) + 1), /* [auto-meaningful-name] */this$rowSize = this.rowSize, /* [auto-meaningful-name] */this$bits = this.bits, i = 0, /* [auto-meaningful-name] */this$height = this.height; i < this$height; i++) {
       for (var s = i * this$rowSize, c = t.getRow(i, e).getBitArray(), f = 0; f < this$rowSize; f++) {
         this$bits[s + f] ^= c[f]
       }
     }
   }
   t.prototype.clear = function () {
-    for (var this$bits = this.bits, this$bits$length = this$bits.length, r = 0; r < this$bits$length; r++) {
+    for (var /* [auto-meaningful-name] */this$bits = this.bits, /* [auto-meaningful-name] */this$bits$length = this$bits.length, r = 0; r < this$bits$length; r++) {
       this$bits[r] = 0
     }
   }
@@ -129,7 +129,7 @@ var s = function () {
     if (i > this.height || o > this.width) {
       throw new u.a("The region must fit inside the matrix")
     }
-    for (var this$rowSize = this.rowSize, this$bits = this.bits, c = e; c < i; c++) {
+    for (var /* [auto-meaningful-name] */this$rowSize = this.rowSize, /* [auto-meaningful-name] */this$bits = this.bits, c = e; c < i; c++) {
       for (var f = c * this$rowSize, h = t; h < o; h++) {
         this$bits[f + Math.floor(h / 32)] |= 1 << (31 & h) & 4294967295
       }
@@ -141,7 +141,7 @@ var s = function () {
     } else {
       e.clear()
     }
-    for (var this$rowSize = this.rowSize, this$bits = this.bits, i = t * this$rowSize, a = 0; a < this$rowSize; a++) {
+    for (var /* [auto-meaningful-name] */this$rowSize = this.rowSize, /* [auto-meaningful-name] */this$bits = this.bits, i = t * this$rowSize, a = 0; a < this$rowSize; a++) {
       e.setBulk(32 * a, this$bits[i + a])
     }
     return e
@@ -160,7 +160,7 @@ var s = function () {
     }
   }
   t.prototype.getEnclosingRectangle = function () {
-    for (var this$width = this.width, this$height = this.height, this$rowSize = this.rowSize, this$bits = this.bits, o = this$width, i = this$height, a = -1, u = -1, s = 0; s < this$height; s++) {
+    for (var /* [auto-meaningful-name] */this$width = this.width, /* [auto-meaningful-name] */this$height = this.height, /* [auto-meaningful-name] */this$rowSize = this.rowSize, /* [auto-meaningful-name] */this$bits = this.bits, o = this$width, i = this$height, a = -1, u = -1, s = 0; s < this$height; s++) {
       for (var c = 0; c < this$rowSize; c++) {
         var f = this$bits[s * this$rowSize + c]
         if (0 !== f) {
@@ -192,7 +192,7 @@ var s = function () {
     return a < o || u < i ? null : Int32Array.from([o, i, a - o + 1, u - i + 1])
   }
   t.prototype.getTopLeftOnBit = function () {
-    for (var this$rowSize = this.rowSize, this$bits = this.bits, r = 0; r < this$bits.length && 0 === this$bits[r];) {
+    for (var /* [auto-meaningful-name] */this$rowSize = this.rowSize, /* [auto-meaningful-name] */this$bits = this.bits, r = 0; r < this$bits.length && 0 === this$bits[r];) {
       r++
     }
     if (r === this$bits.length) {
@@ -205,7 +205,7 @@ var s = function () {
     return Int32Array.from([o, n])
   }
   t.prototype.getBottomRightOnBit = function () {
-    for (var this$rowSize = this.rowSize, this$bits = this.bits, r = this$bits.length - 1; r >= 0 && 0 === this$bits[r];) {
+    for (var /* [auto-meaningful-name] */this$rowSize = this.rowSize, /* [auto-meaningful-name] */this$bits = this.bits, r = this$bits.length - 1; r >= 0 && 0 === this$bits[r];) {
       r--
     }
     if (r < 0) {
@@ -234,7 +234,7 @@ var s = function () {
     return this.width === r.width && this.height === r.height && this.rowSize === r.rowSize && i.a.equals(this.bits, r.bits)
   }
   t.prototype.hashCode = function () {
-    var this$width = this.width
+    var /* [auto-meaningful-name] */this$width = this.width
     return this$width = 31 * (this$width = 31 * (this$width = 31 * (this$width = 31 * this$width + this.width) + this.height) + this.rowSize) + i.a.hashCode(this.bits)
   }
   t.prototype.toString = function (t, e, r) {
@@ -250,8 +250,8 @@ var s = function () {
     return this.buildToString(t, e, r)
   }
   t.prototype.buildToString = function (t, e, r) {
-    for (var n = new a.a(), o = 0, this$height = this.height; o < this$height; o++) {
-      for (var u = 0, this$width = this.width; u < this$width; u++) {
+    for (var n = new a.a(), o = 0, /* [auto-meaningful-name] */this$height = this.height; o < this$height; o++) {
+      for (var u = 0, /* [auto-meaningful-name] */this$width = this.width; u < this$width; u++) {
         n.append(this.get(u, o) ? t : e)
       }
       n.append(r)

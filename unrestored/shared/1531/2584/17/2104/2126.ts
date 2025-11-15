@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2126
@@ -14,7 +14,7 @@ var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
 var a = require("../../125/195/index")
-var s = require("../../4/127")
+var s = require("../../1036/127")
 var c = require("../../1001/213/index")
 var u = require("../497/1105")
 var l = require("../497/841")
@@ -165,8 +165,8 @@ var d = function () {
   }
   e.prototype.handle_move = function (e) {
     if (f.is.mobile()) {
-      var e$clientX = e.clientX
-      var e$clientY = e.clientY
+      var /* [auto-meaningful-name] */e$clientX = e.clientX
+      var /* [auto-meaningful-name] */e$clientY = e.clientY
       if (e$clientX <= this.PADDING || e$clientX >= this.body_width - this.PADDING || e$clientY <= this.PADDING || e$clientY >= this.body_height - this.PADDING) {
         return void this.handle_up(e)
       }
@@ -311,9 +311,9 @@ var d = function () {
           t.workspace.set_resizes_enabled(true)
         }
       } else if (!this.widget_div.is_visible() && this.events.is_enabled()) {
-        var this$start_block$id = this.start_block.id
-        var this$start_block$workspace$id = this.start_block.workspace.id
-        var this$start_block$get_root_block$id = this.start_block.get_root_block().id
+        var /* [auto-meaningful-name] */this$start_block$id = this.start_block.id
+        var /* [auto-meaningful-name] */this$start_block$workspace$id = this.start_block.workspace.id
+        var /* [auto-meaningful-name] */this$start_block$get_root_block$id = this.start_block.get_root_block().id
         this.events.fire(this.ui_event_factory({
           type: a.UIEventType.CLICK,
           workspace_id: this$start_block$workspace$id,

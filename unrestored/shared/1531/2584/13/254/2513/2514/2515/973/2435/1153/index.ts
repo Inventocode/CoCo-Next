@@ -1,14 +1,14 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1153
  */
 
 var r = require("./2440/index")
-var i = require("./2447")
+var i = require("./2447/index")
 var o = require("./2449")
 var a = require("./2450")
-var s = require("./2451/index")
+var s = require("./2451")
 function c(e) {
   var t = -1
   var n = null == e ? 0 : e.length

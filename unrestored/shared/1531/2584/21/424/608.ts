@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：608
@@ -17,14 +17,14 @@ var r
     LN10: "2.302585092994045684017991454684364207601101488628772976033327900967572609677352480235997205089598298341967784042286"
   }
   var s = true
-  var c = "[DecimalError] "
-  var u = c + "Invalid argument: "
-  var l = c + "Exponent out of range: "
-  var math$floor = Math.floor
-  var math$pow = Math.pow
+  var /* [auto-meaningful-name] */DecimalError = "[DecimalError] "
+  var u = DecimalError + "Invalid argument: "
+  var l = DecimalError + "Exponent out of range: "
+  var /* [auto-meaningful-name] */Math$floor = Math.floor
+  var /* [auto-meaningful-name] */Math$pow = Math.pow
   var h = /^(\d+(\.\d*)?|\.\d+)(e[+-]?\d+)?$/i
   var p = 1e7
-  var _ = math$floor(1286742750677284.5)
+  var _ = Math$floor(1286742750677284.5)
   var A = {}
   function g(e, t) {
     var n
@@ -35,8 +35,8 @@ var r
     var c
     var u
     var l
-    var e$constructor = e.constructor
-    var e$constructor$precision = e$constructor.precision
+    var /* [auto-meaningful-name] */e$constructor = e.constructor
+    var /* [auto-meaningful-name] */e$constructor$precision = e$constructor.precision
     if (!e.s || !t.s) {
       if (!t.s) {
         t = new e$constructor(e)
@@ -137,7 +137,7 @@ var r
     return y(this, new this.constructor(e))
   }
   A.dividedToIntegerBy = A.idiv = function (e) {
-    var this$constructor = this.constructor
+    var /* [auto-meaningful-name] */this$constructor = this.constructor
     return k(y(this, new this$constructor(e), 0, 1), this$constructor.precision)
   }
   A.equals = A.eq = function (e) {
@@ -173,16 +173,16 @@ var r
   A.logarithm = A.log = function (e) {
     var t
     var n = this
-    var n$constructor = n.constructor
-    var n$constructor$precision = n$constructor.precision
+    var /* [auto-meaningful-name] */n$constructor = n.constructor
+    var /* [auto-meaningful-name] */n$constructor$precision = n$constructor.precision
     var a = n$constructor$precision + 5
     if (undefined === e) {
       e = new n$constructor(10)
     } else if ((e = new n$constructor(e)).s < 1 || e.eq(o)) {
-      throw Error(c + "NaN")
+      throw Error(DecimalError + "NaN")
     }
     if (n.s < 1) {
-      throw Error(c + (n.s ? "NaN" : "-Infinity"))
+      throw Error(DecimalError + (n.s ? "NaN" : "-Infinity"))
     }
     return n.eq(o) ? new n$constructor(0) : (s = false, t = y(C(n, a), C(e, a), a), s = true, k(t, n$constructor$precision))
   }
@@ -194,10 +194,10 @@ var r
   A.modulo = A.mod = function (e) {
     var t
     var n = this
-    var n$constructor = n.constructor
-    var n$constructor$precision = n$constructor.precision
+    var /* [auto-meaningful-name] */n$constructor = n.constructor
+    var /* [auto-meaningful-name] */n$constructor$precision = n$constructor.precision
     if (!(e = new n$constructor(e)).s) {
-      throw Error(c + "NaN")
+      throw Error(DecimalError + "NaN")
     }
     return n.s ? (s = false, t = y(n, e, 0, 1).times(e), s = true, n.minus(t)) : k(new n$constructor(n), n$constructor$precision)
   }
@@ -240,25 +240,25 @@ var r
   A.squareRoot = A.sqrt = function () {
     var e
     var t
-    var /* [auto-meaningful-name] */u$constructor$precision
+    var /* [auto-meaningful-name] */l$precision
     var r
     var i
     var o
     var a
     var u = this
-    var u$constructor = u.constructor
+    var /* [auto-meaningful-name] */u$constructor = u.constructor
     if (u.s < 1) {
       if (!u.s) {
         return new u$constructor(0)
       }
-      throw Error(c + "NaN")
+      throw Error(DecimalError + "NaN")
     }
-    for (e = w(u), s = false, 0 == (i = Math.sqrt(+u)) || i == 1 / 0 ? (((t = m(u.d)).length + e) % 2 == 0 && (t += "0"), i = Math.sqrt(t), e = math$floor((e + 1) / 2) - (e < 0 || e % 2), r = new u$constructor(t = i == 1 / 0 ? "5e" + e : (t = i.toExponential()).slice(0, t.indexOf("e") + 1) + e)) : r = new u$constructor(i.toString()), i = a = (u$constructor$precision = u$constructor.precision) + 3;;) {
+    for (e = w(u), s = false, 0 == (i = Math.sqrt(+u)) || i == 1 / 0 ? (((t = m(u.d)).length + e) % 2 == 0 && (t += "0"), i = Math.sqrt(t), e = Math$floor((e + 1) / 2) - (e < 0 || e % 2), r = new u$constructor(t = i == 1 / 0 ? "5e" + e : (t = i.toExponential()).slice(0, t.indexOf("e") + 1) + e)) : r = new u$constructor(i.toString()), i = a = (l$precision = u$constructor.precision) + 3;;) {
       r = (o = r).plus(y(u, o, a + 2)).times(.5)
       if (m(o.d).slice(0, a) === (t = m(r.d)).slice(0, a)) {
         t = t.slice(a - 3, a + 1)
         if (i == a && "4999" == t) {
-          k(o, u$constructor$precision + 1, 0)
+          k(o, l$precision + 1, 0)
           if (o.times(o).eq(u)) {
             r = o
             break
@@ -270,7 +270,7 @@ var r
       }
     }
     s = true
-    return k(r, u$constructor$precision)
+    return k(r, l$precision)
   }
   A.times = A.mul = function (e) {
     var t
@@ -283,18 +283,18 @@ var r
     var u
     var l
     var f = this
-    var f$constructor = f.constructor
+    var /* [auto-meaningful-name] */f$constructor = f.constructor
     var h = f.d
-    var eNewF$constructorE$d = (e = new f$constructor(e)).d
+    var /* [auto-meaningful-name] */ENewF$constructorE$d = (e = new f$constructor(e)).d
     if (!f.s || !e.s) {
       return new f$constructor(0)
     }
-    for (e.s *= f.s, n = f.e + e.e, (u = h.length) < (l = eNewF$constructorE$d.length) && (o = h, h = eNewF$constructorE$d, eNewF$constructorE$d = o, a = u, u = l, l = a), o = [], r = a = u + l; r--;) {
+    for (e.s *= f.s, n = f.e + e.e, (u = h.length) < (l = ENewF$constructorE$d.length) && (o = h, h = ENewF$constructorE$d, ENewF$constructorE$d = o, a = u, u = l, l = a), o = [], r = a = u + l; r--;) {
       o.push(0)
     }
     for (r = l; --r >= 0;) {
       for (t = 0, i = u + r; i > r;) {
-        c = o[i] + eNewF$constructorE$d[r] * h[i - r - 1] + t
+        c = o[i] + ENewF$constructorE$d[r] * h[i - r - 1] + t
         o[i--] = c % p | 0
         t = c / p | 0
       }
@@ -314,14 +314,14 @@ var r
   }
   A.toDecimalPlaces = A.todp = function (e, t) {
     var n = this
-    var n$constructor = n.constructor
+    var /* [auto-meaningful-name] */n$constructor = n.constructor
     n = new n$constructor(n)
     return undefined === e ? n : (v(e, 0, 1e9), undefined === t ? t = n$constructor.rounding : v(t, 0, 8), k(n, e + w(n) + 1, t))
   }
   A.toExponential = function (e, t) {
     var n
     var r = this
-    var r$constructor = r.constructor
+    var /* [auto-meaningful-name] */r$constructor = r.constructor
     if (undefined === e) {
       n = T(r, true)
     } else {
@@ -339,12 +339,12 @@ var r
     var n
     var r
     var i = this
-    var i$constructor = i.constructor
+    var /* [auto-meaningful-name] */i$constructor = i.constructor
     return undefined === e ? T(i) : (v(e, 0, 1e9), undefined === t ? t = i$constructor.rounding : v(t, 0, 8), n = T((r = k(new i$constructor(i), e + w(i) + 1, t)).abs(), false, e + w(r) + 1), i.isneg() && !i.isZero() ? "-" + n : n)
   }
   A.toInteger = A.toint = function () {
     var e = this
-    var e$constructor = e.constructor
+    var /* [auto-meaningful-name] */e$constructor = e.constructor
     return k(new e$constructor(e), w(e) + 1, e$constructor.rounding)
   }
   A.toNumber = function () {
@@ -353,46 +353,46 @@ var r
   A.toPower = A.pow = function (e) {
     var t
     var n
-    var /* [auto-meaningful-name] */l$constructor$precision
+    var /* [auto-meaningful-name] */d$precision
     var i
     var a
     var u
     var l = this
-    var l$constructor = l.constructor
+    var /* [auto-meaningful-name] */l$constructor = l.constructor
     var h = +(e = new l$constructor(e))
     if (!e.s) {
       return new l$constructor(o)
     }
     if (!(l = new l$constructor(l)).s) {
       if (e.s < 1) {
-        throw Error(c + "Infinity")
+        throw Error(DecimalError + "Infinity")
       }
       return l
     }
     if (l.eq(o)) {
       return l
     }
-    l$constructor$precision = l$constructor.precision
+    d$precision = l$constructor.precision
     if (e.eq(o)) {
-      return k(l, l$constructor$precision)
+      return k(l, d$precision)
     }
     u = (t = e.e) >= (n = e.d.length - 1)
     a = l.s
     if (u) {
       if ((n = h < 0 ? -h : h) <= 9007199254740991) {
-        for (i = new l$constructor(o), t = Math.ceil(l$constructor$precision / 7 + 4), s = false; n % 2 && B((i = i.times(l)).d, t), 0 !== (n = math$floor(n / 2));) {
+        for (i = new l$constructor(o), t = Math.ceil(d$precision / 7 + 4), s = false; n % 2 && B((i = i.times(l)).d, t), 0 !== (n = Math$floor(n / 2));) {
           B((l = l.times(l)).d, t)
         }
         s = true
-        return e.s < 0 ? new l$constructor(o).div(i) : k(i, l$constructor$precision)
+        return e.s < 0 ? new l$constructor(o).div(i) : k(i, d$precision)
       }
     } else if (a < 0) {
-      throw Error(c + "NaN")
+      throw Error(DecimalError + "NaN")
     }
     a = a < 0 && 1 & e.d[Math.max(t, n)] ? -1 : 1
     l.s = 1
     s = false
-    i = e.times(C(l, l$constructor$precision + 12))
+    i = e.times(C(l, d$precision + 12))
     s = true;
     (i = b(i)).s = a
     return i
@@ -401,7 +401,7 @@ var r
     var n
     var r
     var i = this
-    var i$constructor = i.constructor
+    var /* [auto-meaningful-name] */i$constructor = i.constructor
     if (undefined === e) {
       r = T(i, (n = w(i)) <= i$constructor.toExpNeg || n >= i$constructor.toExpPos)
     } else {
@@ -416,7 +416,7 @@ var r
     return r
   }
   A.toSignificantDigits = A.tosd = function (e, t) {
-    var this$constructor = this.constructor
+    var /* [auto-meaningful-name] */this$constructor = this.constructor
     if (undefined === e) {
       e = this$constructor.precision
       t = this$constructor.rounding
@@ -433,14 +433,14 @@ var r
   A.toString = A.valueOf = A.val = A.toJSON = function () {
     var e = this
     var t = w(e)
-    var e$constructor = e.constructor
+    var /* [auto-meaningful-name] */e$constructor = e.constructor
     return T(e, t <= e$constructor.toExpNeg || t >= e$constructor.toExpPos)
   }
   var y = function () {
     function e(e, t) {
       var n
       var r = 0
-      var e$length = e.length
+      var /* [auto-meaningful-name] */e$length = e.length
       for (e = e.slice(); e$length--;) {
         n = e[e$length] * t + r
         e[e$length] = n % p | 0
@@ -495,7 +495,7 @@ var r
       var C
       var O
       var S
-      var r$constructor = r.constructor
+      var /* [auto-meaningful-name] */r$constructor = r.constructor
       var B = r.s == i.s ? 1 : -1
       var D = r.d
       var I = i.d
@@ -503,7 +503,7 @@ var r
         return new r$constructor(r)
       }
       if (!i.s) {
-        throw Error(c + "Division by zero")
+        throw Error(DecimalError + "Division by zero")
       }
       for (u = r.e - i.e, O = I.length, x = D.length, A = (_ = new r$constructor(B)).d = [], l = 0; I[l] == (D[l] || 0);) {
         ++l
@@ -591,8 +591,8 @@ var r
     var c
     var u = 0
     var f = 0
-    var e$constructor = e.constructor
-    var e$constructor$precision = e$constructor.precision
+    var /* [auto-meaningful-name] */e$constructor = e.constructor
+    var /* [auto-meaningful-name] */e$constructor$precision = e$constructor.precision
     if (w(e) > 16) {
       throw Error(l + w(e))
     }
@@ -603,7 +603,7 @@ var r
       e = e.times(a)
       f += 5
     }
-    for (c += Math.log(math$pow(2, f)) / Math.LN10 * 2 + 5 | 0, n = r = i = new e$constructor(o), e$constructor.precision = c;;) {
+    for (c += Math.log(Math$pow(2, f)) / Math.LN10 * 2 + 5 | 0, n = r = i = new e$constructor(o), e$constructor.precision = c;;) {
       r = k(r.times(e), c)
       n = n.times(++u)
       if (m((a = i.plus(y(r, n, c))).d).slice(0, c) === m(i.d).slice(0, c)) {
@@ -628,7 +628,7 @@ var r
       if (n) {
         e.precision = n
       }
-      throw Error(c + "LN10 precision limit exceeded")
+      throw Error(DecimalError + "LN10 precision limit exceeded")
     }
     return k(new e(e.LN10), t)
   }
@@ -651,10 +651,10 @@ var r
     var p = 1
     var _ = e
     var A = _.d
-    var _$constructor = _.constructor
-    var _$constructor$precision = _$constructor.precision
+    var /* [auto-meaningful-name] */_$constructor = _.constructor
+    var /* [auto-meaningful-name] */_$constructor$precision = _$constructor.precision
     if (_.s < 1) {
-      throw Error(c + (_.s ? "NaN" : "-Infinity"))
+      throw Error(DecimalError + (_.s ? "NaN" : "-Infinity"))
     }
     if (_.eq(o)) {
       return new _$constructor(0)
@@ -713,7 +713,7 @@ var r
     if (t = t.slice(r, i)) {
       i -= r
       n = n - r - 1
-      e.e = math$floor(n / 7)
+      e.e = Math$floor(n / 7)
       e.d = []
       r = (n + 1) % 7
       if (n < 0) {
@@ -768,17 +768,17 @@ var r
       i = (r %= 7) - 7 + a
     }
     if (undefined !== n) {
-      c = h / (o = math$pow(10, a - i - 1)) % 10 | 0
+      c = h / (o = Math$pow(10, a - i - 1)) % 10 | 0
       u = t < 0 || undefined !== g[A + 1] || h % o
-      u = n < 4 ? (c || u) && (0 == n || n == (e.s < 0 ? 3 : 2)) : c > 5 || 5 == c && (4 == n || u || 6 == n && (r > 0 ? i > 0 ? h / math$pow(10, a - i) : 0 : g[A - 1]) % 10 & 1 || n == (e.s < 0 ? 8 : 7))
+      u = n < 4 ? (c || u) && (0 == n || n == (e.s < 0 ? 3 : 2)) : c > 5 || 5 == c && (4 == n || u || 6 == n && (r > 0 ? i > 0 ? h / Math$pow(10, a - i) : 0 : g[A - 1]) % 10 & 1 || n == (e.s < 0 ? 8 : 7))
     }
     if (t < 1 || !g[0]) {
       if (u) {
         o = w(e)
         g.length = 1
         t = t - o - 1
-        g[0] = math$pow(10, (7 - t % 7) % 7)
-        e.e = math$floor(-t / 7) || 0
+        g[0] = Math$pow(10, (7 - t % 7) % 7)
+        e.e = Math$floor(-t / 7) || 0
       } else {
         g.length = 1
         g[0] = e.e = e.s = 0
@@ -791,8 +791,8 @@ var r
       A--
     } else {
       g.length = A + 1
-      o = math$pow(10, 7 - r)
-      g[A] = i > 0 ? (h / math$pow(10, a - i) % math$pow(10, i) | 0) * o : 0
+      o = Math$pow(10, 7 - r)
+      g[A] = i > 0 ? (h / Math$pow(10, a - i) % Math$pow(10, i) | 0) * o : 0
     }
     if (u) {
       for (;;) {
@@ -830,8 +830,8 @@ var r
     var l
     var f
     var d
-    var e$constructor = e.constructor
-    var e$constructor$precision = e$constructor.precision
+    var /* [auto-meaningful-name] */e$constructor = e.constructor
+    var /* [auto-meaningful-name] */e$constructor$precision = e$constructor.precision
     if (!e.s || !t.s) {
       if (t.s) {
         t.s = -t.s
@@ -884,7 +884,7 @@ var r
     var r
     var i = w(e)
     var o = m(e.d)
-    var o$length = o.length
+    var /* [auto-meaningful-name] */o$length = o.length
     if (t) {
       if (n && (r = n - o$length) > 0) {
         o = o.charAt(0) + "." + o.slice(1) + x(r)
@@ -929,7 +929,7 @@ var r
   }
   function D(e) {
     if (!e || "object" !== typeof e) {
-      throw Error(c + "Object expected")
+      throw Error(DecimalError + "Object expected")
     }
     var t
     var n
@@ -937,7 +937,7 @@ var r
     var i = ["precision", 1, 1e9, "rounding", 0, 8, "toExpNeg", -1 / 0, 0, "toExpPos", 0, 1 / 0]
     for (t = 0; t < i.length; t += 3) {
       if (undefined !== (r = e[n = i[t]])) {
-        if (!(math$floor(r) === r && r >= i[t + 1] && r <= i[t + 2])) {
+        if (!(Math$floor(r) === r && r >= i[t + 1] && r <= i[t + 2])) {
           throw Error(u + n + ": " + r)
         }
         this[n] = r

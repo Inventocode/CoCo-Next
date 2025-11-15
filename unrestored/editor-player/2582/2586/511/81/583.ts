@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：583
@@ -47,7 +47,7 @@ var s = function (t) {
       r.clear()
     }
     this.initArrays(i)
-    for (var a = n.getRow(t, this.luminances), this$buckets = this.buckets, s = 0; s < i; s++) {
+    for (var a = n.getRow(t, this.luminances), /* [auto-meaningful-name] */this$buckets = this.buckets, s = 0; s < i; s++) {
       this$buckets[(255 & a[s]) >> e.LUMINANCE_SHIFT]++
     }
     var c = e.estimateBlackPoint(this$buckets)
@@ -77,7 +77,7 @@ var s = function (t) {
     var n = t.getHeight()
     var o = new i.a(r, n)
     this.initArrays(r)
-    for (var this$buckets = this.buckets, u = 1; u < 5; u++) {
+    for (var /* [auto-meaningful-name] */this$buckets = this.buckets, u = 1; u < 5; u++) {
       for (var s = Math.floor(n * u / 5), c = t.getRow(s, this.luminances), f = Math.floor(4 * r / 5), h = Math.floor(r / 5); h < f; h++) {
         this$buckets[(255 & c[h]) >> e.LUMINANCE_SHIFT]++
       }
@@ -101,12 +101,12 @@ var s = function (t) {
     if (this.luminances.length < t) {
       this.luminances = new Uint8ClampedArray(t)
     }
-    for (var this$buckets = this.buckets, n = 0; n < e.LUMINANCE_BUCKETS; n++) {
+    for (var /* [auto-meaningful-name] */this$buckets = this.buckets, n = 0; n < e.LUMINANCE_BUCKETS; n++) {
       this$buckets[n] = 0
     }
   }
   e.estimateBlackPoint = function (t) {
-    for (var t$length = t.length, n = 0, o = 0, i = 0, u = 0; u < t$length; u++) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, n = 0, o = 0, i = 0, u = 0; u < t$length; u++) {
       if (t[u] > i) {
         o = u
         i = t[u]

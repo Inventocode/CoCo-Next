@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2269
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../38/607/494")
+var r = require("./494/index")
 var i = require("lodash")
 function o(e, t) {
   return e.line - t.line || e.column - t.column
@@ -22,7 +22,7 @@ function a(e) {
   var l = r(e.problems)
   try {
     for (l.s(); !(t = l.n()).done;) {
-      for (var t$value = t.value; i < e.directives.length && o(e.directives[i], t$value) <= 0;) {
+      for (var /* [auto-meaningful-name] */t$value = t.value; i < e.directives.length && o(e.directives[i], t$value) <= 0;) {
         var d = e.directives[i++]
         switch (d.type) {
           case "disable":
@@ -85,9 +85,9 @@ function a(e) {
   }
 }
 module.exports = function (e) {
-  var e$directives = e.directives
-  var e$problems = e.problems
-  var e$reportUnusedDisableDirectives = e.reportUnusedDisableDirectives
+  var /* [auto-meaningful-name] */e$directives = e.directives
+  var /* [auto-meaningful-name] */e$problems = e.problems
+  var /* [auto-meaningful-name] */e$reportUnusedDisableDirectives = e.reportUnusedDisableDirectives
   var s = undefined === e$reportUnusedDisableDirectives ? "off" : e$reportUnusedDisableDirectives
   var c = e$directives.filter(function (e) {
     return "disable" === e.type || "enable" === e.type

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：455
@@ -45,23 +45,23 @@ var a = function () {
   t.doDecodeFormatInformation = function (e, r) {
     var n
     var /* [auto-meaningful-name] */s$return
-    var number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER
+    var /* [auto-meaningful-name] */Number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER
     var u = 0
     try {
       for (var s = i(t.FORMAT_INFO_DECODE_LOOKUP), c = s.next(); !c.done; c = s.next()) {
-        var c$value = c.value
+        var /* [auto-meaningful-name] */c$value = c.value
         var h = c$value[0]
         if (h === e || h === r) {
           return new t(c$value[1])
         }
         var l = t.numBitsDiffering(e, h)
-        if (l < number$MAX_SAFE_INTEGER) {
+        if (l < Number$MAX_SAFE_INTEGER) {
           u = c$value[1]
-          number$MAX_SAFE_INTEGER = l
+          Number$MAX_SAFE_INTEGER = l
         }
-        if (e !== r && (l = t.numBitsDiffering(r, h)) < number$MAX_SAFE_INTEGER) {
+        if (e !== r && (l = t.numBitsDiffering(r, h)) < Number$MAX_SAFE_INTEGER) {
           u = c$value[1]
-          number$MAX_SAFE_INTEGER = l
+          Number$MAX_SAFE_INTEGER = l
         }
       }
     } catch (d) {
@@ -79,7 +79,7 @@ var a = function () {
         }
       }
     }
-    return number$MAX_SAFE_INTEGER <= 3 ? new t(u) : null
+    return Number$MAX_SAFE_INTEGER <= 3 ? new t(u) : null
   }
   t.prototype.getErrorCorrectionLevel = function () {
     return this.errorCorrectionLevel

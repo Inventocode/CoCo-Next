@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2181
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.load_json_js_generator_logic = undefined
 exports.load_json_js_generator_logic = function (e) {
   e.register("logic_negate", function (t, n) {
-    var e$ORDER_LOGICAL_NOT = e.ORDER_LOGICAL_NOT
+    var /* [auto-meaningful-name] */e$ORDER_LOGICAL_NOT = e.ORDER_LOGICAL_NOT
     return ["!" + (e.value_to_code(t, n, "BOOL", e$ORDER_LOGICAL_NOT) || "false"), e$ORDER_LOGICAL_NOT]
   })
   e.register("logic_boolean", function (t, n) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1107
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.BlockRenderer = undefined
 var r = require("tslib")
 var i = require("../../../125/195/index")
-var o = require("../../../4/127")
+var o = require("../../../1036/127")
 var a = require("../../../125/index")
 var s = function () {
   function e(e) {
@@ -50,7 +50,7 @@ var s = function () {
       n = true
     }
     var o = i ? Math.min(i / 2, this.edge_width) : this.edge_width
-    var t$height = t.height
+    var /* [auto-meaningful-name] */t$height = t.height
     e.push("a " + o + " " + o + " 0 0 1 " + o + " " + o)
     if (0 == n) {
       e.push("V " + (t$height - this.min_height / 2))
@@ -65,7 +65,7 @@ var s = function () {
     e.push("a " + o + " " + o + " 0 0 1 -" + o + " " + o)
   }
   e.prototype.render_edge_shape_collapsed_right = function (e, t) {
-    var t$height = t.height
+    var /* [auto-meaningful-name] */t$height = t.height
     e.push(this.theme.renderer.COLLAPSED_PATH)
     e.push("v " + (t$height - this.min_height + t.height / 2))
   }
@@ -98,7 +98,7 @@ var s = function () {
     }
     e.decoration_block_paths.forEach(a.remove_node)
     e.decoration_block_paths.length = 0
-    var e$origin_block = e.origin_block
+    var /* [auto-meaningful-name] */e$origin_block = e.origin_block
     var n = e$origin_block.get_full_next_block()
     var r = Math.min(this.theme.renderer.EXECUTION_GROUP_DECORATION_WIDTH, e.width - this.theme.renderer.STATEMENT_MIN_WIDTH - this.theme.renderer.EXECUTION_GROUP_DECORATION_RIGHT_MARGIN)
     if (n) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：54
@@ -7,14 +7,14 @@
 "use strict"
 
 export { i as a }
-import r = require("./337");
+import /* [auto-meaningful-name] */$_337 = require("./337")
 function i(e, t) {
   if (null == e) {
     return {}
   }
   var n
   var i
-  var o = r.a(e, t)
+  var o = $_337.a(e, t)
   if (Object.getOwnPropertySymbols) {
     var a = Object.getOwnPropertySymbols(e)
     for (i = 0; i < a.length; i++) {

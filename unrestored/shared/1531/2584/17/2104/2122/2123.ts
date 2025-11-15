@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2123
@@ -13,7 +13,7 @@ exports.Flyout = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../../4/127")
+var a = require("../../../1036/127")
 var s = require("../../../125/195/index")
 var c = require("../../../125/index")
 var u = function () {
@@ -255,7 +255,7 @@ var u = function () {
             block: a,
             inline: "true" === e.getAttribute("layout_inline")
           })
-          var this$targetWorkspace_$options$flyout$blocks$default_gap = this.targetWorkspace_.options.flyout.blocks.default_gap
+          var /* [auto-meaningful-name] */this$targetWorkspace_$options$flyout$blocks$default_gap = this.targetWorkspace_.options.flyout.blocks.default_gap
           if (a.is_starting_block() && n.length > 0 && n[n.length - 1] === this$targetWorkspace_$options$flyout$blocks$default_gap) {
             var c = this.targetWorkspace_.options.flyout.blocks.head_block_offset[1]
             n[n.length - 1] += c

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：539
@@ -6,11 +6,11 @@
 
 "use strict"
 
-export { r as a }
+export { PEDOMETER_WIDGET as a }
 export { o as b }
-var r = "PEDOMETER_WIDGET"
+var /* [auto-meaningful-name] */PEDOMETER_WIDGET = "PEDOMETER_WIDGET"
 var o = {
-  type: r,
+  type: PEDOMETER_WIDGET,
   icon: "icon-widget-pedometer",
   title: "widgetName",
   platforms: ["android"],
@@ -63,4 +63,4 @@ var o = {
     }
   }]
 }
-export default r
+export default PEDOMETER_WIDGET

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：53
@@ -31,11 +31,11 @@ export { q as r } from "./60"
 export { i as n } from "./60"
 export { _ as j }
 export { v as i }
-export { b as f }
+export { _1$21$7 as f }
 export { y as k }
 export { E as b }
 export { O as d }
-export { w as c }
+export { Http__www$w3$org_2000_svg as c }
 export { C as e }
 var r = [{
   id: "sans-serif",
@@ -112,13 +112,13 @@ var h = /^[^-]{0,}$/i
 function m(e) {
   return new RegExp("^[\\d-]{0,".concat(e, "}$"), "i")
 }
-import g = require("./60");
+import g = require("./60")
 var _ = 20
 var v = 40
-var b = "1.21.7"
+var /* [auto-meaningful-name] */_1$21$7 = "1.21.7"
 var y = []
 var E = 320
 var O = .8
-var w = "http://www.w3.org/2000/svg"
+var /* [auto-meaningful-name] */Http__www$w3$org_2000_svg = "http://www.w3.org/2000/svg"
 var C = 3
 export default r

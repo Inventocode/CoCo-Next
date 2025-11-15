@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2231
@@ -8,8 +8,8 @@
 
 module.exports = function (e, t, n) {
   var r = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var a = e.schema[t]
   var s = e.schemaPath + e.util.getProperty(t)
   var c = e.errSchemaPath + "/" + t
@@ -23,11 +23,11 @@ module.exports = function (e, t, n) {
   var _ = "i" + e$level
   var A = h.dataLevel = e.dataLevel + 1
   var g = "data" + A
-  var e$baseId = e.baseId
+  var /* [auto-meaningful-name] */e$baseId = e.baseId
   var m = e.opts.strictKeywords ? "object" == typeof a && Object.keys(a).length > 0 || false === a : e.util.schemaHasRules(a, e.RULES.all)
   r += "var " + d + " = errors;var " + f + ";"
   if (m) {
-    var e$compositeRule = e.compositeRule
+    var /* [auto-meaningful-name] */e$compositeRule = e.compositeRule
     e.compositeRule = h.compositeRule = true
     h.schema = a
     h.schemaPath = s

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：121
@@ -7,22 +7,22 @@
 "use strict"
 
 export { f as a }
-import r = require("../6");
-import o = require("../27");
-import i = require("../40");
-import a = require("../57/index");
-import s = require("../58/index");
-import c = require("../17/index");
-import l = require("./727");
-import u = require("../18");
-import d = require("../9");
-import p = require("../46/index");
+import r = require("../6")
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */$$_40 = require("../40")
+import /* [auto-meaningful-name] */$$_57_index = require("../57/index")
+import /* [auto-meaningful-name] */$$_58_index = require("../58/index")
+import /* [auto-meaningful-name] */$$_17_index = require("../17/index")
+import /* [auto-meaningful-name] */$_727 = require("./727")
+import /* [auto-meaningful-name] */$$_18 = require("../18")
+import d = require("../9")
+import /* [auto-meaningful-name] */$$_46_index = require("../46/index")
 var f = function (e) {
-  a.a(n, e)
-  var t = s.a(n)
+  $$_57_index.a(n, e)
+  var t = $$_58_index.a(n)
   function n(e) {
     var r
-    o.a(this, n);
+    $$_27.a(this, n);
     (r = t.call(this, {
       menu_generator: e.options,
       opt_onchange: e.optOnchange,
@@ -33,31 +33,31 @@ var f = function (e) {
     r.SVG_WIDTH = 2
     return r
   }
-  i.a(n, [{
+  $$_40.a(n, [{
     key: "show_editor",
     value: function () {
-      var /* [auto-meaningful-name] */_this$source_block3
+      var /* [auto-meaningful-name] */this$source_block
       var t = this
       var n = this.get_advanced_options() || this.get_options()
       var o = []
       if ("SCREEN_ID" === this.name) {
         for (var i in n) {
-          var /* [auto-meaningful-name] */_f$snapshot2
-          var /* [auto-meaningful-name] */_f$snapshot3
           var /* [auto-meaningful-name] */f$snapshot
+          var /* [auto-meaningful-name] */_f$snapshot
+          var /* [auto-meaningful-name] */_f$snapshot2
           var f = n[i]
           var h = r.a(r.a({}, f), {}, {
             icon: {
-              width: (null === (_f$snapshot2 = f.snapshot) || undefined === _f$snapshot2 ? undefined : _f$snapshot2.width) || 40,
-              height: (null === (_f$snapshot3 = f.snapshot) || undefined === _f$snapshot3 ? undefined : _f$snapshot3.height) || 40,
-              src: (null === (f$snapshot = f.snapshot) || undefined === f$snapshot ? undefined : f$snapshot.src) || ""
+              width: (null === (f$snapshot = f.snapshot) || undefined === f$snapshot ? undefined : f$snapshot.width) || 40,
+              height: (null === (_f$snapshot = f.snapshot) || undefined === _f$snapshot ? undefined : _f$snapshot.height) || 40,
+              src: (null === (_f$snapshot2 = f.snapshot) || undefined === _f$snapshot2 ? undefined : _f$snapshot2.src) || ""
             }
           })
           o.push(h)
         }
       }
-      var _this$source_block = this.source_block
-      var g = (null === (_this$source_block3 = this.source_block) || undefined === _this$source_block3 ? undefined : _this$source_block3.is_shadow()) && this.source_block.parent_block || this.source_block
+      var /* [auto-meaningful-name] */_this$source_block = this.source_block
+      var g = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.is_shadow()) && this.source_block.parent_block || this.source_block
       if (!_this$source_block || !g) {
         throw Error("field is not attached to any block.")
       }
@@ -67,19 +67,19 @@ var f = function (e) {
           payload: undefined,
           type: "ASYNC_OPEN_TOAST_ON_NOT_SELECT_DOCUMENT"
         }
-        p.c().dispatchAction(v)
+        $$_46_index.c().dispatchAction(v)
       } else {
-        var /* [auto-meaningful-name] */this$source_block
+        var /* [auto-meaningful-name] */_this$source_block2
         var /* [auto-meaningful-name] */_this$source_block$parent_block
         var E
         var O
         var w
         var C
         var T = g.workspace.get_scale()
-        var S = (c.Blink.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * T + 1
+        var S = ($$_17_index.Blink.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * T + 1
         if (_this$source_block.is_shadow()) {
-          var this$source_block$svg_group = _this$source_block.svg_group
-          E = c.BU.dom.get_page_offset(this$source_block$svg_group)
+          var /* [auto-meaningful-name] */_this$source_block$svg_group = _this$source_block.svg_group
+          E = $$_17_index.BU.dom.get_page_offset(_this$source_block$svg_group)
           var A = _this$source_block.get_height_width()
           O = A.width * T
           w = A.height * T + 2 * S
@@ -94,7 +94,7 @@ var f = function (e) {
         this.change_editor_style(true)
         var N = {
           payload: {
-            type: u.a.DYNAMIC_DROPDOWN,
+            type: $$_18.a.DYNAMIC_DROPDOWN,
             value: this.get_value(),
             setValue: function (e) {
               t.set_value(e)
@@ -109,7 +109,7 @@ var f = function (e) {
               scale: T < 1 ? 1 : T,
               fieldWidth: O,
               blockHeight: w,
-              sourceBlockId: (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.id) || "",
+              sourceBlockId: (null === (_this$source_block2 = this.source_block) || undefined === _this$source_block2 ? undefined : _this$source_block2.id) || "",
               fieldName: this.name || "",
               emptyImageVisible: "image_set_file_id" === (null === (_this$source_block$parent_block = _this$source_block.parent_block) || undefined === _this$source_block$parent_block ? undefined : _this$source_block$parent_block.type)
             },
@@ -126,31 +126,31 @@ var f = function (e) {
           N.payload.showCurrentScreenIndex = true
         }
         if ("IMAGE_FILE_ID" === this.name) {
-          N.payload.type = u.a.IMAGE_DROPDOWN
+          N.payload.type = $$_18.a.IMAGE_DROPDOWN
         } else {
           if ("ICON_FILE_ID" === this.name) {
-            N.payload.type = u.a.ICON_DROPDOWN
+            N.payload.type = $$_18.a.ICON_DROPDOWN
           } else {
             if ("ACTOR_ACTION_ID" === this.name || "ACTOR_STYLE_ID" === this.name) {
-              N.payload.type = u.a.ACTOR_STYLE_DROPDOWN
+              N.payload.type = $$_18.a.ACTOR_STYLE_DROPDOWN
             } else {
               if ("SCREEN_ID" === this.name) {
-                N.payload.type = u.a.SCREEN_DROPDOWN
+                N.payload.type = $$_18.a.SCREEN_DROPDOWN
               } else {
                 if ("SOUND_FILE_ID" === this.name) {
-                  N.payload.type = u.a.SOUND_DROPDOWN
+                  N.payload.type = $$_18.a.SOUND_DROPDOWN
                 }
               }
             }
           }
         }
-        p.c().dispatchAction(N)
+        $$_46_index.c().dispatchAction(N)
       }
     }
   }, {
     key: "get_display_text",
     value: function () {
-      var this$text_ = this.text_
+      var /* [auto-meaningful-name] */this$text_ = this.text_
       if (!this$text_) {
         return " "
       }
@@ -170,6 +170,6 @@ var f = function (e) {
     }
   }])
   return n
-}(l.FieldDropdown)
+}($_727.FieldDropdown)
 f.field_type = "field_coco_dropdown"
 export default f

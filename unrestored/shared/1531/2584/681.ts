@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：681
@@ -20,4 +20,4 @@ var r = {
     errorMsg: "失败原因"
   }
 }
-import o = require("./540");
+import /* [auto-meaningful-name] */$_540 = require("./540")

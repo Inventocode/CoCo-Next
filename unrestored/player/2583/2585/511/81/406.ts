@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：406
@@ -14,7 +14,7 @@ var s = require("./150")
 var u = require("./169")
 var c = require("./117")
 var l = require("./164")
-var d = require("./191/index")
+var d = require("./191")
 var f = require("./335")
 var h = require("./56")
 var p = function (t) {
@@ -83,7 +83,7 @@ var g = function () {
     var l = o.getECBlocks()
     try {
       for (var d = p(l), f = d.next(); !f.done; f = d.next()) {
-        var f$value = f.value
+        var /* [auto-meaningful-name] */f$value = f.value
         u += f$value.getCount() * (f$value.getDataCodewords() + c)
       }
     } catch (m) {
@@ -132,7 +132,7 @@ var g = function () {
     }
     try {
       for (var o = p(t.VERSIONS), a = o.next(); !a.done; a = o.next()) {
-        var a$value = a.value
+        var /* [auto-meaningful-name] */a$value = a.value
         if (a$value.symbolSizeRows === e && a$value.symbolSizeColumns === n) {
           return a$value
         }
@@ -514,7 +514,7 @@ var w = function () {
     var h = 0
     try {
       for (var p = y(c), m = p.next(); !m.done; m = p.next()) {
-        for (var m$value = m.value, g = 0; g < m$value.getCount(); g++) {
+        for (var /* [auto-meaningful-name] */m$value = m.value, g = 0; g < m$value.getCount(); g++) {
           var _ = m$value.getDataCodewords()
           var w = s.getECCodewords() + _
           f[h++] = new t(_, new Uint8Array(w))
@@ -548,7 +548,7 @@ var w = function () {
     for (A = 0; A < I; A++) {
       f[A].codewords[E - 1] = e[T++]
     }
-    var f0$codewords$length = f[0].codewords.length
+    var /* [auto-meaningful-name] */f0$codewords$length = f[0].codewords.length
     for (g = E; g < f0$codewords$length; g++) {
       for (A = 0; A < h; A++) {
         var j = S ? (A + 8) % h : A
@@ -623,7 +623,7 @@ var T = function () {
         }
       }
     }
-    for (var l = new Uint8Array(s), a$length = a.length, f = 0; f < a$length; f++) {
+    for (var l = new Uint8Array(s), /* [auto-meaningful-name] */a$length = a.length, f = 0; f < a$length; f++) {
       var h = a[f]
       var p = h.getCodewords()
       var m = h.getNumDataCodewords()
@@ -650,7 +650,7 @@ var T = function () {
 var A = require("./401")
 var S = require("./371")
 var I = require("./372")
-var C = require("./73/index")
+var C = require("./73")
 var j = function () {
   function t(t) {
     this.image = t

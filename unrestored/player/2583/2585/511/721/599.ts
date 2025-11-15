@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：599
@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import * as r from "../81/index"
+import * as /* [auto-meaningful-name] */$$_81_index from "../81/index"
 var i = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -45,7 +45,7 @@ var o = function (t) {
     return e.toGrayscaleBuffer(r.data, t.width, t.height)
   }
   e.toGrayscaleBuffer = function (t, e, n) {
-    for (var r = new Uint8ClampedArray(e * n), i = 0, o = 0, t$length = t.length; i < t$length; i += 4, o++) {
+    for (var r = new Uint8ClampedArray(e * n), i = 0, o = 0, /* [auto-meaningful-name] */t$length = t.length; i < t$length; i += 4, o++) {
       var s = undefined
       if (0 === t[i + 3]) {
         s = 255
@@ -58,7 +58,7 @@ var o = function (t) {
   }
   e.prototype.getRow = function (t, e) {
     if (t < 0 || t >= this.getHeight()) {
-      throw new r.IllegalArgumentException("Requested row is outside the image: " + t)
+      throw new $$_81_index.IllegalArgumentException("Requested row is outside the image: " + t)
     }
     var n = this.getWidth()
     var i = t * n
@@ -94,7 +94,7 @@ var o = function (t) {
     return this
   }
   e.prototype.invert = function () {
-    return new r.InvertedLuminanceSource(this)
+    return new $$_81_index.InvertedLuminanceSource(this)
   }
   e.prototype.getTempCanvasElement = function () {
     if (null === this.tempCanvasElement) {
@@ -111,8 +111,8 @@ var o = function (t) {
       throw new Error("Could not create a Canvas element.")
     }
     var r = t * e.DEGREE_TO_RADIANS
-    var this$canvas$width = this.canvas.width
-    var this$canvas$height = this.canvas.height
+    var /* [auto-meaningful-name] */this$canvas$width = this.canvas.width
+    var /* [auto-meaningful-name] */this$canvas$height = this.canvas.height
     var a = Math.ceil(Math.abs(Math.cos(r)) * this$canvas$width + Math.abs(Math.sin(r)) * this$canvas$height)
     var s = Math.ceil(Math.abs(Math.sin(r)) * this$canvas$width + Math.abs(Math.cos(r)) * this$canvas$height)
     n.width = a
@@ -129,5 +129,5 @@ var o = function (t) {
   }
   e.DEGREE_TO_RADIANS = Math.PI / 180
   return e
-}(r.LuminanceSource)
+}($$_81_index.LuminanceSource)
 export default o

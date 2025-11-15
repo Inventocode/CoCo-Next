@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：72
@@ -6,43 +6,43 @@
 
 "use strict"
 
-export { r as h }
-export { o as j }
-export { i as k }
-export { a as l }
-export { s as f }
-export { c as i }
-export { l as g }
+export { SET_NAVIGATOR as h }
+export { SET_WIDGET as j }
+export { UNSET_WIDGET as k }
+export { UPDATE_SCREEN as l }
+export { SET_CAMERA_DIRECTION as f }
+export { SET_SWITCH_SCREEN_PARAM as i }
+export { SET_EMULATOR_PHONE_INFO as g }
 export { u as t }
 export { d as u }
 export { p as v }
 export { f as w }
 export { h as x }
 export { m as r }
-export { g as e }
+export { ASYNC_SET_CLOUD_DOC_FIELD_VALUE as e }
 export { _ as q }
-export { v as b }
+export { ASYNC_DELETE_CLOUD_DOC_FIELD_VALUE as b }
 export { b as n }
-export { y as a }
+export { ASYNC_CLEAR_CLOUD_DOC_ALL_FIELD_VALUE as a }
 export { E as m }
-export { O as d }
+export { ASYNC_GET_CLOUD_DOC_FIELD_VALUE as d }
 export { w as p }
-export { C as c }
+export { ASYNC_GET_CLOUD_DOC_ALL_FIELD_VALUE as c }
 export { T as o }
 export { S as s }
-var r = "SET_NAVIGATOR"
-var o = "SET_WIDGET"
-var i = "UNSET_WIDGET"
-var a = "UPDATE_SCREEN"
-var s = "SET_CAMERA_DIRECTION"
-var c = "SET_SWITCH_SCREEN_PARAM"
-var l = "SET_EMULATOR_PHONE_INFO"
+var /* [auto-meaningful-name] */SET_NAVIGATOR = "SET_NAVIGATOR"
+var /* [auto-meaningful-name] */SET_WIDGET = "SET_WIDGET"
+var /* [auto-meaningful-name] */UNSET_WIDGET = "UNSET_WIDGET"
+var /* [auto-meaningful-name] */UPDATE_SCREEN = "UPDATE_SCREEN"
+var /* [auto-meaningful-name] */SET_CAMERA_DIRECTION = "SET_CAMERA_DIRECTION"
+var /* [auto-meaningful-name] */SET_SWITCH_SCREEN_PARAM = "SET_SWITCH_SCREEN_PARAM"
+var /* [auto-meaningful-name] */SET_EMULATOR_PHONE_INFO = "SET_EMULATOR_PHONE_INFO"
 var u = function (e) {
   return {
     payload: {
       navigator: e
     },
-    type: r
+    type: SET_NAVIGATOR
   }
 }
 var d = function (e) {
@@ -50,7 +50,7 @@ var d = function (e) {
     payload: {
       param: e
     },
-    type: c
+    type: SET_SWITCH_SCREEN_PARAM
   }
 }
 var p = function (e, t) {
@@ -59,7 +59,7 @@ var p = function (e, t) {
       id: e,
       widget: t
     },
-    type: o
+    type: SET_WIDGET
   }
 }
 var f = function (e) {
@@ -67,7 +67,7 @@ var f = function (e) {
     payload: {
       id: e
     },
-    type: i
+    type: UNSET_WIDGET
   }
 }
 var h = function (e, t, n) {
@@ -77,7 +77,7 @@ var h = function (e, t, n) {
       key: t,
       value: n
     },
-    type: a
+    type: UPDATE_SCREEN
   }
 }
 var m = function (e) {
@@ -85,13 +85,13 @@ var m = function (e) {
     payload: {
       cameraDirection: e
     },
-    type: s
+    type: SET_CAMERA_DIRECTION
   }
 }
-var g = "ASYNC_SET_CLOUD_DOC_FIELD_VALUE"
+var /* [auto-meaningful-name] */ASYNC_SET_CLOUD_DOC_FIELD_VALUE = "ASYNC_SET_CLOUD_DOC_FIELD_VALUE"
 var _ = function (e, t, n, r) {
   return {
-    type: g,
+    type: ASYNC_SET_CLOUD_DOC_FIELD_VALUE,
     payload: {
       documentId: e,
       key: t,
@@ -100,10 +100,10 @@ var _ = function (e, t, n, r) {
     }
   }
 }
-var v = "ASYNC_DELETE_CLOUD_DOC_FIELD_VALUE"
+var /* [auto-meaningful-name] */ASYNC_DELETE_CLOUD_DOC_FIELD_VALUE = "ASYNC_DELETE_CLOUD_DOC_FIELD_VALUE"
 var b = function (e, t, n) {
   return {
-    type: v,
+    type: ASYNC_DELETE_CLOUD_DOC_FIELD_VALUE,
     payload: {
       documentId: e,
       key: t,
@@ -111,19 +111,19 @@ var b = function (e, t, n) {
     }
   }
 }
-var y = "ASYNC_CLEAR_CLOUD_DOC_ALL_FIELD_VALUE"
+var /* [auto-meaningful-name] */ASYNC_CLEAR_CLOUD_DOC_ALL_FIELD_VALUE = "ASYNC_CLEAR_CLOUD_DOC_ALL_FIELD_VALUE"
 var E = function (e) {
   return {
-    type: y,
+    type: ASYNC_CLEAR_CLOUD_DOC_ALL_FIELD_VALUE,
     payload: {
       documentId: e
     }
   }
 }
-var O = "ASYNC_GET_CLOUD_DOC_FIELD_VALUE"
+var /* [auto-meaningful-name] */ASYNC_GET_CLOUD_DOC_FIELD_VALUE = "ASYNC_GET_CLOUD_DOC_FIELD_VALUE"
 var w = function (e, t, n) {
   return {
-    type: O,
+    type: ASYNC_GET_CLOUD_DOC_FIELD_VALUE,
     payload: {
       documentId: e,
       key: t,
@@ -131,10 +131,10 @@ var w = function (e, t, n) {
     }
   }
 }
-var C = "ASYNC_GET_CLOUD_DOC_ALL_FIELD_VALUE"
+var /* [auto-meaningful-name] */ASYNC_GET_CLOUD_DOC_ALL_FIELD_VALUE = "ASYNC_GET_CLOUD_DOC_ALL_FIELD_VALUE"
 var T = function (e) {
   return {
-    type: C,
+    type: ASYNC_GET_CLOUD_DOC_ALL_FIELD_VALUE,
     payload: {
       documentId: e
     }
@@ -143,7 +143,7 @@ var T = function (e) {
 var S = function (e) {
   return {
     payload: e,
-    type: l
+    type: SET_EMULATOR_PHONE_INFO
   }
 }
-export default y
+export default ASYNC_CLEAR_CLOUD_DOC_ALL_FIELD_VALUE

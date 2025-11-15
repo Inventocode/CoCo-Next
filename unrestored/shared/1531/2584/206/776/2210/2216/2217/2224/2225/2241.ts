@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2241
@@ -8,8 +8,8 @@
 
 module.exports = function (e, t, n) {
   var r = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var a = e.schema[t]
   var s = e.schemaPath + e.util.getProperty(t)
   var c = e.errSchemaPath + "/" + t
@@ -28,15 +28,15 @@ module.exports = function (e, t, n) {
   var y = Object.keys(a || {}).filter(F)
   var b = e.schema.patternProperties || {}
   var w = Object.keys(b).filter(F)
-  var e$schema$additionalProperties = e.schema.additionalProperties
+  var /* [auto-meaningful-name] */e$schema$additionalProperties = e.schema.additionalProperties
   var x = y.length || w.length
   var C = false === e$schema$additionalProperties
   var O = "object" == typeof e$schema$additionalProperties && Object.keys(e$schema$additionalProperties).length
-  var e$opts$removeAdditional = e.opts.removeAdditional
+  var /* [auto-meaningful-name] */e$opts$removeAdditional = e.opts.removeAdditional
   var S = C || O || e$opts$removeAdditional
-  var e$opts$ownProperties = e.opts.ownProperties
-  var e$baseId = e.baseId
-  var e$schema$required = e.schema.required
+  var /* [auto-meaningful-name] */e$opts$ownProperties = e.opts.ownProperties
+  var /* [auto-meaningful-name] */e$baseId = e.baseId
+  var /* [auto-meaningful-name] */e$schema$required = e.schema.required
   if (e$schema$required && (!e.opts.$data || !e$schema$required.$data) && e$schema$required.length < e.opts.loopRequired) {
     var I = e.util.toHash(e$schema$required)
   }
@@ -78,7 +78,7 @@ module.exports = function (e, t, n) {
     if ("all" == e$opts$removeAdditional) {
       r += " delete " + l + "[" + _ + "]; "
     } else {
-      var e$errorPath = e.errorPath
+      var /* [auto-meaningful-name] */e$errorPath = e.errorPath
       var H = "' + " + _ + " + '"
       if (e.opts._errorDataPathProperty) {
         e.errorPath = e.util.getPathExpr(e.errorPath, _, e.opts.jsonPointers)
@@ -129,7 +129,7 @@ module.exports = function (e, t, n) {
       } else if (O) {
         if ("failing" == e$opts$removeAdditional) {
           r += " var " + f + " = errors;  "
-          var e$compositeRule = e.compositeRule
+          var /* [auto-meaningful-name] */e$compositeRule = e.compositeRule
           e.compositeRule = d.compositeRule = true
           d.schema = e$schema$additionalProperties
           d.schemaPath = e.schemaPath + ".additionalProperties"

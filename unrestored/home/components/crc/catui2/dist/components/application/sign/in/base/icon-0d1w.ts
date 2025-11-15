@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：0d1w
@@ -121,7 +121,7 @@ var Icon = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var _this$props = this.props
-      var _this$props$id = _this$props.id
+      var /* [auto-meaningful-name] */_this$props$id = _this$props.id
       var className = _this$props.className
       var size = _this$props.size
       var color = _this$props.color

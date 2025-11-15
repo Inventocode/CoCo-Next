@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：480
@@ -33,7 +33,7 @@ exports.position_dropdown = function (e, t) {
   if (!f) {
     return r.vec2.create()
   }
-  var t$source_block$workspace$options$dropdown = t.source_block.workspace.options.dropdown
+  var /* [auto-meaningful-name] */t$source_block$workspace$options$dropdown = t.source_block.workspace.options.dropdown
   var h = t$source_block$workspace$options$dropdown.menu.scalable ? Math.max(u, 1) : 1
   if (e.parentElement) {
     e.parentElement.style.transform = "scale(" + h + ")"

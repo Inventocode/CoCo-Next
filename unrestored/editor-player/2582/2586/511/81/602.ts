@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：602
@@ -50,7 +50,7 @@ var d = function () {
   }
   return t
 }()
-var p = require("./600/index")
+var p = require("./600")
 var g = function () {
   function t(t, e, r, n) {
     this.leftchar = t
@@ -248,7 +248,7 @@ var _ = function (t) {
         for (n = undefined, s = v(t), c = s.next(), undefined; !c.done; c = s.next()) {
           var s
           var c
-          var c$value = c.value
+          var /* [auto-meaningful-name] */c$value = c.value
           this.pairs.push(c$value.getPairs())
         }
       } catch (l) {
@@ -287,7 +287,7 @@ var _ = function (t) {
     var /* [auto-meaningful-name] */o$return
     try {
       for (var o = v(e.FINDER_PATTERN_SEQUENCES), i = o.next(); !i.done; i = o.next()) {
-        var i$value = i.value
+        var /* [auto-meaningful-name] */i$value = i.value
         if (!(t.length > i$value.length)) {
           for (var u = true, s = 0; s < t.length; s++) {
             if (t[s].getFinderPattern().getValue() != i$value[s]) {
@@ -341,19 +341,19 @@ var _ = function (t) {
     var /* [auto-meaningful-name] */y$return
     try {
       for (var s = v(e), c = s.next(); !c.done; c = s.next()) {
-        var c$value = c.value
+        var /* [auto-meaningful-name] */c$value = c.value
         if (c$value.getPairs().length !== t.length) {
           try {
             for (o = undefined, h = v(c$value.getPairs()), l = h.next(), undefined; !l.done; l = h.next()) {
               var h
               var l
-              var l$value = l.value
+              var /* [auto-meaningful-name] */l$value = l.value
               var p = false
               try {
                 for (a = undefined, y = v(t), w = y.next(), undefined; !w.done; w = y.next()) {
                   var y
                   var w
-                  var w$value = w.value
+                  var /* [auto-meaningful-name] */w$value = w.value
                   if (g.equals(l$value, w$value)) {
                     p = true
                     break
@@ -420,19 +420,19 @@ var _ = function (t) {
     var /* [auto-meaningful-name] */y$return
     try {
       for (var s = v(e), c = s.next(); !c.done; c = s.next()) {
-        var c$value = c.value
+        var /* [auto-meaningful-name] */c$value = c.value
         var h = true
         try {
           for (o = undefined, l = v(t), d = l.next(), undefined; !d.done; d = l.next()) {
             var l
             var d
-            var d$value = d.value
+            var /* [auto-meaningful-name] */d$value = d.value
             var g = false
             try {
               for (a = undefined, y = v(c$value.getPairs()), w = y.next(), undefined; !w.done; w = y.next()) {
                 var y
                 var w
-                var w$value = w.value
+                var /* [auto-meaningful-name] */w$value = w.value
                 if (d$value.equals(w$value)) {
                   g = true
                   break
@@ -620,7 +620,7 @@ var _ = function (t) {
     throw new i.a()
   }
   e.reverseCounters = function (t) {
-    for (var t$length = t.length, r = 0; r < t$length / 2; ++r) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, r = 0; r < t$length / 2; ++r) {
       var n = t[r]
       t[r] = t[t$length - r - 1]
       t[t$length - r - 1] = n

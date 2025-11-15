@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：297
@@ -45,7 +45,7 @@ var a = function () {
     var t
     var /* [auto-meaningful-name] */o$return
     var r = 0
-    var this$ecBlocks = this.ecBlocks
+    var /* [auto-meaningful-name] */this$ecBlocks = this.ecBlocks
     try {
       for (var o = i(this$ecBlocks), a = o.next(); !a.done; a = o.next()) {
         r += a.value.getCount()
@@ -125,7 +125,7 @@ var h = function () {
     var s = o[0].getECBlocks()
     try {
       for (var c = f(s), h = c.next(); !h.done; h = c.next()) {
-        var h$value = h.value
+        var /* [auto-meaningful-name] */h$value = h.value
         a += h$value.getCount() * (h$value.getDataCodewords() + u)
       }
     } catch (d) {
@@ -177,18 +177,18 @@ var h = function () {
     return t.VERSIONS[e - 1]
   }
   t.decodeVersionInformation = function (e) {
-    for (var number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER, n = 0, i = 0; i < t.VERSION_DECODE_INFO.length; i++) {
+    for (var /* [auto-meaningful-name] */Number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER, n = 0, i = 0; i < t.VERSION_DECODE_INFO.length; i++) {
       var a = t.VERSION_DECODE_INFO[i]
       if (a === e) {
         return t.getVersionForNumber(i + 7)
       }
       var u = o.a.numBitsDiffering(e, a)
-      if (u < number$MAX_SAFE_INTEGER) {
+      if (u < Number$MAX_SAFE_INTEGER) {
         n = i + 7
-        number$MAX_SAFE_INTEGER = u
+        Number$MAX_SAFE_INTEGER = u
       }
     }
-    return number$MAX_SAFE_INTEGER <= 3 ? t.getVersionForNumber(n) : null
+    return Number$MAX_SAFE_INTEGER <= 3 ? t.getVersionForNumber(n) : null
   }
   t.prototype.buildFunctionPattern = function () {
     var t = this.getDimensionForVersion()
@@ -196,7 +196,7 @@ var h = function () {
     e.setRegion(0, 0, 9, 9)
     e.setRegion(t - 8, 0, 8, 9)
     e.setRegion(0, t - 8, 9, 8)
-    for (var this$alignmentPatternCenters$length = this.alignmentPatternCenters.length, o = 0; o < this$alignmentPatternCenters$length; o++) {
+    for (var /* [auto-meaningful-name] */this$alignmentPatternCenters$length = this.alignmentPatternCenters.length, o = 0; o < this$alignmentPatternCenters$length; o++) {
       for (var i = this.alignmentPatternCenters[o] - 2, a = 0; a < this$alignmentPatternCenters$length; a++) {
         if (!(0 === o && (0 === a || a === this$alignmentPatternCenters$length - 1) || o === this$alignmentPatternCenters$length - 1 && 0 === a)) {
           e.setRegion(this.alignmentPatternCenters[a] - 2, i, 5, 5)

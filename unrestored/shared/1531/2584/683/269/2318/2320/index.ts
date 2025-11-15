@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2320
@@ -10,13 +10,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 var r = require("./2321")
-var i = require("../../1366/444")
+var i = require("../../2342/444")
 var o = require("../../580")
 var a = require("../../359")
-var s = require("../2327/1365")
+var s = require("./1365")
 var c = require("../../846")
 var u = require("./2322")
-var l = require("../../1366/498")
+var l = require("../../2342/498")
 var f = require("./2323")
 var d = require("./2324")
 var h = require("./2326")
@@ -42,7 +42,7 @@ function A(e, t, n, o, a) {
           return t
         }
         var a = c.getServiceIdentifierAsString(e),
-          i$NOT_REGISTERED = i.NOT_REGISTERED
+          /* [auto-meaningful-name] */i$NOT_REGISTERED = i.NOT_REGISTERED
         i$NOT_REGISTERED += c.listMetadataForTarget(a, n)
         i$NOT_REGISTERED += c.listRegisteredBindingsForServiceIdentifier(o, a, g)
         throw new Error(i$NOT_REGISTERED)

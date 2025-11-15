@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1166
@@ -7,13 +7,13 @@
 "use strict"
 
 export { A as a }
-import r = require("./183");
-import i = require("../1440/253");
+import /* [auto-meaningful-name] */$_183 = require("./183")
+import /* [auto-meaningful-name] */$$_1440_253 = require("../1440/253")
 var o = /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g
 function a(e) {
   var t = {}
   e.replace(o, function (e) {
-    var e$length = e.length
+    var /* [auto-meaningful-name] */e$length = e.length
     switch (e[0]) {
       case "G":
         t.era = 4 === e$length ? "long" : 5 === e$length ? "narrow" : "short"
@@ -201,17 +201,17 @@ function d(e) {
         t.compactDisplay = "long"
         continue
       case "scientific":
-        t = r.a(r.a(r.a({}, t), {
+        t = $_183.a($_183.a($_183.a({}, t), {
           notation: "scientific"
         }), o.options.reduce(function (e, t) {
-          return r.a(r.a({}, e), f(t))
+          return $_183.a($_183.a({}, e), f(t))
         }, {}))
         continue
       case "engineering":
-        t = r.a(r.a(r.a({}, t), {
+        t = $_183.a($_183.a($_183.a({}, t), {
           notation: "engineering"
         }), o.options.reduce(function (e, t) {
-          return r.a(r.a({}, e), f(t))
+          return $_183.a($_183.a({}, e), f(t))
         }, {}))
         continue
       case "notation-simple":
@@ -256,14 +256,14 @@ function d(e) {
         return ""
       })
       if (o.options.length) {
-        t = r.a(r.a({}, t), u(o.options[0]))
+        t = $_183.a($_183.a({}, t), u(o.options[0]))
       }
     } else if (c.test(o.stem)) {
-      t = r.a(r.a({}, t), u(o.stem))
+      t = $_183.a($_183.a({}, t), u(o.stem))
     } else {
       var a = l(o.stem)
       if (a) {
-        t = r.a(r.a({}, t), a)
+        t = $_183.a($_183.a({}, t), a)
       }
     }
   }
@@ -282,7 +282,7 @@ var h = function (e) {
     }
     return a
   }
-  r.b(t, e)
+  $_183.b(t, e)
   t.buildMessage = function (e, t) {
     function n(e) {
       return e.charCodeAt(0).toString(16).toUpperCase()
@@ -382,8 +382,8 @@ var p = function (e, t) {
   var B = Ce(",", false)
   var D = Ce("number", false)
   var I = function (e, t, n) {
-    return r.a({
-      type: "number" === t ? i.a.number : "date" === t ? i.a.date : i.a.time,
+    return $_183.a({
+      type: "number" === t ? $$_1440_253.a.number : "date" === t ? $$_1440_253.a.date : $$_1440_253.a.time,
       style: n && n[2],
       value: e
     }, at())
@@ -404,31 +404,7 @@ var p = function (e, t) {
   var W = Ce("=", false)
   var K = ke("whitespace")
   var X = /^[\t-\r \x85\xA0\u1680\u2000-\u200A\u2028\u2029\u202F\u205F\u3000]/
-  var Y = Oe([["\t", "\r"], " ", "", " ", " ", [" ", " "], " ",
-
-
-
-
-
-
-
-
-
-
-
-  " ",
-
-
-
-
-
-
-
-
-
-
-
-  " ", " ", "　"], false, false)
+  var Y = Oe([["\t", "\r"], " ", "", " ", " ", [" ", " "], " ", " ", " ", " ", "　"], false, false)
   var q = ke("syntax pattern")
   var $ = /^[!-\/:-@[-\^`{-~\xA1-\xA7\xA9\xAB\xAC\xAE\xB0\xB1\xB6\xBB\xBF\xD7\xF7\u2010-\u2027\u2030-\u203E\u2041-\u2053\u2055-\u205E\u2190-\u245F\u2500-\u2775\u2794-\u2BFF\u2E00-\u2E7F\u3001-\u3003\u3008-\u3020\u3030\uFD3E\uFD3F\uFE45\uFE46]/
   var J = Oe([["!", "/"], [":", "@"], ["[", "^"], "`", ["{", "~"], ["¡", "§"], "©", "«", "¬", "®", "°", "±", "¶", "»", "¿", "×", "÷", ["‐", "‧"], ["‰", "‾"], ["⁁", "⁓"], ["⁕", "⁞"], ["←", "⑟"], ["─", "❵"], ["➔", "⯿"], ["⸀", "⹿"], ["、", "〃"], ["〈", "〠"], "〰", "﴾", "﴿", "﹅", "﹆"], false, false)
@@ -582,8 +558,8 @@ var p = function (e, t) {
           if ((s = t) !== (u = a)) {
             xe("Mismatch tag \"" + s + "\" !== \"" + u + "\"", Ee())
           }
-          t = r.a({
-            type: i.a.tag,
+          t = $_183.a({
+            type: $$_1440_253.a.tag,
             value: s,
             children: c
           }, at())
@@ -618,8 +594,8 @@ var p = function (e, t) {
       if ((t = Pe()) !== o) {
         ge = e
         n = t
-        t = r.a({
-          type: i.a.literal,
+        t = $_183.a({
+          type: $$_1440_253.a.literal,
           value: n
         }, at())
       }
@@ -654,8 +630,8 @@ var p = function (e, t) {
         if (s !== o) {
           ge = t
           c = a
-          n = r.a({
-            type: i.a.argument,
+          n = $_183.a({
+            type: $$_1440_253.a.argument,
             value: c
           }, at())
           t = n
@@ -760,7 +736,7 @@ var p = function (e, t) {
                   if (t !== o) {
                     ge = e
                     i = t
-                    t = r.a({
+                    t = $_183.a({
                       type: 0,
                       tokens: i,
                       parsedOptions: ct ? d(i) : {}
@@ -935,7 +911,7 @@ var p = function (e, t) {
                     if (n !== o) {
                       ge = t
                       c = n
-                      n = r.a({
+                      n = $_183.a({
                         type: 1,
                         pattern: c,
                         parsedOptions: ct ? a(c) : {}
@@ -1124,15 +1100,15 @@ var p = function (e, t) {
                                 if (p !== o) {
                                   ge = t
                                   n = function (e, t, n, o) {
-                                    return r.a({
-                                      type: i.a.plural,
+                                    return $_183.a({
+                                      type: $$_1440_253.a.plural,
                                       pluralType: "plural" === t ? "cardinal" : "ordinal",
                                       value: e,
                                       offset: n ? n[2] : 0,
                                       options: o.reduce(function (e, t) {
                                         var n = t.id
-                                        var t$value = t.value
-                                        var t$location = t.location
+                                        var /* [auto-meaningful-name] */t$value = t.value
+                                        var /* [auto-meaningful-name] */t$location = t.location
                                         if (n in e) {
                                           xe("Duplicate option \"" + n + "\" in plural element: \"" + we() + "\"", Ee())
                                         }
@@ -1281,13 +1257,13 @@ var p = function (e, t) {
                             if (d !== o) {
                               ge = t
                               n = function (e, t) {
-                                return r.a({
-                                  type: i.a.select,
+                                return $_183.a({
+                                  type: $$_1440_253.a.select,
                                   value: e,
                                   options: t.reduce(function (e, t) {
                                     var n = t.id
-                                    var t$value = t.value
-                                    var t$location = t.location
+                                    var /* [auto-meaningful-name] */t$value = t.value
+                                    var /* [auto-meaningful-name] */t$location = t.location
                                     if (n in e) {
                                       xe("Duplicate option \"" + n + "\" in select element: \"" + we() + "\"", Ee())
                                     }
@@ -1365,8 +1341,8 @@ var p = function (e, t) {
         }
         if (n !== o) {
           ge = t
-          n = r.a({
-            type: i.a.pound
+          n = $_183.a({
+            type: $$_1440_253.a.pound
           }, at())
         }
         return t = n
@@ -1529,8 +1505,8 @@ var p = function (e, t) {
     if (n !== o) {
       ge = t
       f = n
-      n = r.a({
-        type: i.a.literal,
+      n = $_183.a({
+        type: $$_1440_253.a.literal,
         value: f.join("")
       }, at())
     }
@@ -1965,7 +1941,7 @@ var p = function (e, t) {
             c = n
             u = a
             it.pop()
-            t = r.a({
+            t = $_183.a({
               id: c,
               value: u
             }, at())
@@ -2050,7 +2026,7 @@ var p = function (e, t) {
             c = n
             u = a
             it.pop()
-            t = r.a({
+            t = $_183.a({
               id: c,
               value: u
             }, at())
@@ -2679,7 +2655,7 @@ var p = function (e, t) {
 }
 var _ = /(^|[^\\])#/g
 function A(e, t) {
-  t = r.a({
+  t = $_183.a({
     normalizeHashtagInPlural: true,
     shouldParseSkeleton: true
   }, t || {})
@@ -2687,11 +2663,11 @@ function A(e, t) {
   if (t.normalizeHashtagInPlural) {
     (function e(t) {
       t.forEach(function (t) {
-        if (i.h(t) || i.j(t)) {
+        if ($$_1440_253.h(t) || $$_1440_253.j(t)) {
           Object.keys(t.options).forEach(function (n) {
             for (var /* [auto-meaningful-name] */a$value, a = t.options[n], s = -1, c = undefined, u = 0; u < a.value.length; u++) {
               var l = a.value[u]
-              if (i.e(l) && _.test(l.value)) {
+              if ($$_1440_253.e(l) && _.test(l.value)) {
                 s = u
                 c = l
                 break
@@ -2700,7 +2676,7 @@ function A(e, t) {
             if (c) {
               var f = c.value.replace(_, "$1{" + t.value + ", number}")
               var d = p(f);
-              (a$value = a.value).splice.apply(a$value, r.c([s, 1], d))
+              (a$value = a.value).splice.apply(a$value, $_183.c([s, 1], d))
             }
             e(a.value)
           })

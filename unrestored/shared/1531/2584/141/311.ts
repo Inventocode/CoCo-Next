@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：311
@@ -6,7 +6,7 @@
 
 "use strict"
 
-export { c as a }
+export { Https__owfemtgc1d$feishu$cn_share_base_form_shrcnlokP3seuMFtmTLxCAh40Sc as a }
 export { l as t }
 export { u as v }
 export { d as u }
@@ -33,7 +33,7 @@ export { G as x }
 export { U as y }
 export { H as r }
 export { V as m }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -46,10 +46,10 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("../7");
-import a = require("../59/index");
-import s = require("../133/index");
-var c = "https://owfemtgc1d.feishu.cn/share/base/form/shrcnlokP3seuMFtmTLxCAh40Sc"
+import i = require("../7")
+import /* [auto-meaningful-name] */$$_59_index = require("../59/index")
+import /* [auto-meaningful-name] */$$_133 = require("../133")
+var /* [auto-meaningful-name] */Https__owfemtgc1d$feishu$cn_share_base_form_shrcnlokP3seuMFtmTLxCAh40Sc = "https://owfemtgc1d.feishu.cn/share/base/form/shrcnlokP3seuMFtmTLxCAh40Sc"
 function l(e) {
   return 0 === e.indexOf("data:")
 }
@@ -69,7 +69,7 @@ function h(e) {
   var t = e.split(",")
   var n = t[0].match(/:(.*?);/)
   if (n) {
-    for (var r = n[1], o = atob(t[1]), o$length = o.length, a = new Uint8Array(o$length); o$length--;) {
+    for (var r = n[1], o = atob(t[1]), /* [auto-meaningful-name] */o$length = o.length, a = new Uint8Array(o$length); o$length--;) {
       a[o$length] = o.charCodeAt(o$length)
     }
     return new Blob([a], {
@@ -89,8 +89,8 @@ function g(e) {
 }
 function _() {
   return (_ = i.a(o.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent2
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent
     return o.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -98,12 +98,12 @@ function _() {
             e.next = 2
             return fetch(t)
           case 2:
-            _e$sent2 = e.sent
-            e.next = 5
-            return _e$sent2.blob()
-          case 5:
             e$sent = e.sent
-            return e.abrupt("return", e$sent)
+            e.next = 5
+            return e$sent.blob()
+          case 5:
+            _e$sent = e.sent
+            return e.abrupt("return", _e$sent)
           case 7:
           case "end":
             return e.stop()
@@ -117,8 +117,8 @@ function v(e, t) {
 }
 function b() {
   return (b = i.a(o.a.mark(function e(t, n) {
-    var /* [auto-meaningful-name] */_e$sent4
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent2
     var a
     return o.a.wrap(function (e) {
       for (;;) {
@@ -127,21 +127,21 @@ function b() {
             e.next = 2
             return g(t)
           case 2:
-            if ((_e$sent4 = e.sent).type !== s.c) {
+            if ((e$sent = e.sent).type !== $$_133.c) {
               e.next = 9
               break
             }
             e.next = 6
-            return _e$sent4.text()
+            return e$sent.text()
           case 6:
-            e$sent = e.sent
-            a = y(e$sent)
+            _e$sent2 = e.sent
+            a = y(_e$sent2)
             return e.abrupt("return", new File([a], n, {
-              type: _e$sent4.type
+              type: e$sent.type
             }))
           case 9:
-            return e.abrupt("return", new File([_e$sent4], n, {
-              type: _e$sent4.type
+            return e.abrupt("return", new File([e$sent], n, {
+              type: e$sent.type
             }))
           case 10:
           case "end":
@@ -161,7 +161,7 @@ function y(e) {
     }
   }
   for (var o = t.getElementsByTagName("*"), i = 0; i < o.length; i++) {
-    for (var a = o[i], a$attributes = a.attributes, c = a$attributes.length - 1; c >= 0; c--) {
+    for (var a = o[i], /* [auto-meaningful-name] */a$attributes = a.attributes, c = a$attributes.length - 1; c >= 0; c--) {
       var l = a$attributes[c]
       if (l.name.startsWith("on") || "href" === l.name && l.value.startsWith("javascript:") || "xlink:href" === l.name && l.value.startsWith("javascript:")) {
         a.removeAttribute(l.name)
@@ -175,8 +175,8 @@ function E(e, t) {
 }
 function O() {
   return (O = i.a(o.a.mark(function e(t, n) {
-    var /* [auto-meaningful-name] */_e$sent8
     var /* [auto-meaningful-name] */e$sent
+    var /* [auto-meaningful-name] */_e$sent3
     var a
     return o.a.wrap(function (e) {
       for (;;) {
@@ -185,14 +185,14 @@ function O() {
             e.next = 2
             return g(t)
           case 2:
-            _e$sent8 = e.sent
-            e.next = 5
-            return _e$sent8.text()
-          case 5:
             e$sent = e.sent
-            a = y(e$sent)
+            e.next = 5
+            return e$sent.text()
+          case 5:
+            _e$sent3 = e.sent
+            a = y(_e$sent3)
             return e.abrupt("return", new File([a], n, {
-              type: _e$sent8.type
+              type: e$sent.type
             }))
           case 8:
           case "end":
@@ -265,10 +265,10 @@ function A(e) {
 }
 function j(e) {
   var t = new URLSearchParams(e)
-  var n = "inviteCode"
-  var r = t.get(n)
+  var /* [auto-meaningful-name] */InviteCode = "inviteCode"
+  var r = t.get(InviteCode)
   if (r) {
-    t.set(n, r.split(" ")[0])
+    t.set(InviteCode, r.split(" ")[0])
   }
   return t
 }
@@ -308,7 +308,7 @@ function x(e, t) {
   return window.location.origin + window.location.pathname + n
 }
 function D() {
-  return "production" === a.b() ? "https://coco.codemao.cn" : window.location.origin
+  return "production" === $$_59_index.b() ? "https://coco.codemao.cn" : window.location.origin
 }
 function M(e) {
   return D() + "/editor/player/".concat(e, "?channel=community")
@@ -317,7 +317,7 @@ function L(e) {
   return D() + "/editor/player/".concat(e, "?channel=h5")
 }
 function P(e) {
-  var t = a.b()
+  var t = $$_59_index.b()
   var n = ""
   if ("development" === t || "dev" === t) {
     n = "dev-"
@@ -333,7 +333,7 @@ function P(e) {
   return "https://".concat(n, "shequ.codemao.cn/work/").concat(e)
 }
 function B() {
-  var e = a.b()
+  var e = $$_59_index.b()
   var t = ""
   if ("development" === e || "dev" === e) {
     t = "dev-"
@@ -349,7 +349,7 @@ function B() {
   return "https://".concat(t, "coco.codemao.cn")
 }
 function F() {
-  var e = a.b()
+  var e = $$_59_index.b()
   var t = ""
   if ("development" === e || "dev" === e) {
     t = "dev-"
@@ -390,7 +390,7 @@ function H(e) {
 }
 function V() {
   return "https://".concat(function () {
-    var e = a.b()
+    var e = $$_59_index.b()
     var t = ""
     if ("development" === e || "dev" === e) {
       t = "dev-"
@@ -406,4 +406,4 @@ function V() {
     return t
   }(), "shequ.codemao.cn/setting")
 }
-export default c
+export default Https__owfemtgc1d$feishu$cn_share_base_form_shrcnlokP3seuMFtmTLxCAh40Sc

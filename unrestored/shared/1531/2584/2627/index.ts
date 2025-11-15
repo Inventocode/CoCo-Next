@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2627
@@ -6,11 +6,11 @@
 
 "use strict"
 
-import r = require("../29");
-import i = require("../19");
-import React = require("react");
-import a = require("./1501");
-import s = require("../8");
+import /* [auto-meaningful-name] */$$_29 = require("../29")
+import /* [auto-meaningful-name] */$$_19 = require("../19")
+import /* [auto-meaningful-name] */React = require("react")
+import /* [auto-meaningful-name] */$_1501 = require("./1501")
+import s = require("../8")
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -23,18 +23,18 @@ var c = function __importDefault(module) {
   })
   return defaultExport
 }(s)
-import u = require("../791");
-import l = require("./611");
-import f = require("../612");
-import d = require("./790/index");
-import h = require("./686/index");
-import p = require("../789");
-import _ = require("./462");
+import /* [auto-meaningful-name] */$$_791 = require("../791")
+import /* [auto-meaningful-name] */$_611 = require("./611")
+import /* [auto-meaningful-name] */$$_612 = require("../612")
+import /* [auto-meaningful-name] */$_790_index = require("./790/index")
+import /* [auto-meaningful-name] */$_686 = require("./686")
+import /* [auto-meaningful-name] */$$_789 = require("../789")
+import /* [auto-meaningful-name] */$_462 = require("./462")
 var A
 var g = function () {
-  return _.a() && window.document.documentElement
+  return $_462.a() && window.document.documentElement
 }
-import v = require("../431");
+import /* [auto-meaningful-name] */$$_431 = require("../431")
 var m = function (e, t) {
   var n = {}
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -63,57 +63,57 @@ if (g()) {
 }
 var y = function (e) {
   var t
-  var n = React.useContext(p.b)
-  var n$getPopupContainer = n.getPopupContainer
-  var n$getPrefixCls = n.getPrefixCls
-  var n$direction = n.direction
+  var n = React.useContext($$_789.b)
+  var /* [auto-meaningful-name] */n$getPopupContainer = n.getPopupContainer
+  var /* [auto-meaningful-name] */n$getPrefixCls = n.getPrefixCls
+  var /* [auto-meaningful-name] */n$direction = n.direction
   var y = function (t) {
-    var e$onCancel = e.onCancel
+    var /* [auto-meaningful-name] */e$onCancel = e.onCancel
     if (!(null === e$onCancel || undefined === e$onCancel)) {
       e$onCancel(t)
     }
   }
   var b = function (t) {
-    var e$onOk = e.onOk
+    var /* [auto-meaningful-name] */e$onOk = e.onOk
     if (!(null === e$onOk || undefined === e$onOk)) {
       e$onOk(t)
     }
   }
   var w = function (t) {
-    var e$okText = e.okText
-    var e$okType = e.okType
-    var e$cancelText = e.cancelText
-    var e$confirmLoading = e.confirmLoading
-    return React.createElement(React.Fragment, null, React.createElement(f.a, i.a({
+    var /* [auto-meaningful-name] */e$okText = e.okText
+    var /* [auto-meaningful-name] */e$okType = e.okType
+    var /* [auto-meaningful-name] */e$cancelText = e.cancelText
+    var /* [auto-meaningful-name] */e$confirmLoading = e.confirmLoading
+    return React.createElement(React.Fragment, null, React.createElement($$_612.a, $$_19.a({
       onClick: y
-    }, e.cancelButtonProps), e$cancelText || t.cancelText), React.createElement(f.a, i.a({}, d.a(e$okType), {
+    }, e.cancelButtonProps), e$cancelText || t.cancelText), React.createElement($$_612.a, $$_19.a({}, $_790_index.a(e$okType), {
       loading: e$confirmLoading,
       onClick: b
     }, e.okButtonProps), e$okText || t.okText))
   }
-  var e$prefixCls = e.prefixCls
-  var e$footer = e.footer
-  var e$visible = e.visible
-  var e$wrapClassName = e.wrapClassName
-  var e$centered = e.centered
-  var e$getContainer = e.getContainer
-  var e$closeIcon = e.closeIcon
-  var e$focusTriggerAfterClose = e.focusTriggerAfterClose
+  var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
+  var /* [auto-meaningful-name] */e$footer = e.footer
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$wrapClassName = e.wrapClassName
+  var /* [auto-meaningful-name] */e$centered = e.centered
+  var /* [auto-meaningful-name] */e$getContainer = e.getContainer
+  var /* [auto-meaningful-name] */e$closeIcon = e.closeIcon
+  var /* [auto-meaningful-name] */e$focusTriggerAfterClose = e.focusTriggerAfterClose
   var D = undefined === e$focusTriggerAfterClose || e$focusTriggerAfterClose
   var I = m(e, ["prefixCls", "footer", "visible", "wrapClassName", "centered", "getContainer", "closeIcon", "focusTriggerAfterClose"])
   var F = n$getPrefixCls("modal", e$prefixCls)
   var R = n$getPrefixCls()
-  var P = React.createElement(h.a, {
+  var P = React.createElement($_686.a, {
     componentName: "Modal",
-    defaultLocale: l.b()
+    defaultLocale: $_611.b()
   }, w)
   var N = React.createElement("span", {
     className: "".concat(F, "-close-x")
-  }, e$closeIcon || React.createElement(u.a, {
+  }, e$closeIcon || React.createElement($$_791.a, {
     className: "".concat(F, "-close-icon")
   }))
-  var M = c()(e$wrapClassName, (t = {}, r.a(t, "".concat(F, "-centered"), !!e$centered), r.a(t, "".concat(F, "-wrap-rtl"), "rtl" === n$direction), t))
-  return React.createElement(a.a, i.a({}, I, {
+  var M = c()(e$wrapClassName, (t = {}, $$_29.a(t, "".concat(F, "-centered"), !!e$centered), $$_29.a(t, "".concat(F, "-wrap-rtl"), "rtl" === n$direction), t))
+  return React.createElement($_1501.a, $$_19.a({}, I, {
     getContainer: undefined === e$getContainer ? n$getPopupContainer : e$getContainer,
     prefixCls: F,
     wrapClassName: M,
@@ -123,8 +123,8 @@ var y = function (e) {
     onClose: y,
     closeIcon: N,
     focusTriggerAfterClose: D,
-    transitionName: v.b(R, "zoom", e.transitionName),
-    maskTransitionName: v.b(R, "fade", e.maskTransitionName)
+    transitionName: $$_431.b(R, "zoom", e.transitionName),
+    maskTransitionName: $$_431.b(R, "fade", e.maskTransitionName)
   }))
 }
 y.defaultProps = {
@@ -134,12 +134,12 @@ y.defaultProps = {
   okType: "primary"
 }
 var b = y
-import w = require("../75/index");
-import E = require("./1024");
-import x = require("./1023");
-import C = require("./1025");
-import O = require("./914");
-import k = require("../33/index");
+import /* [auto-meaningful-name] */$$_75_index = require("../75/index")
+import /* [auto-meaningful-name] */$_1024 = require("./1024")
+import /* [auto-meaningful-name] */$_1023 = require("./1023")
+import /* [auto-meaningful-name] */$_1025 = require("./1025")
+import /* [auto-meaningful-name] */$_914 = require("./914")
+import /* [auto-meaningful-name] */$$_33_index = require("../33/index")
 function S(e) {
   return !(!e || !e.then)
 }
@@ -147,13 +147,13 @@ var T = function (e) {
   var t = React.useRef(false)
   var n = React.useRef()
   var r = React.useState(false)
-  var a = k.a(r, 2)
+  var a = $$_33_index.a(r, 2)
   var s = a[0]
   var c = a[1]
   React.useEffect(function () {
     var t
     if (e.autoFocus) {
-      var n$current = n.current
+      var /* [auto-meaningful-name] */n$current = n.current
       t = setTimeout(function () {
         return n$current.focus()
       })
@@ -164,14 +164,14 @@ var T = function (e) {
       }
     }
   }, [])
-  var e$type = e.type
-  var e$children = e.children
-  var e$prefixCls = e.prefixCls
-  var e$buttonProps = e.buttonProps
-  return React.createElement(f.a, i.a({}, d.a(e$type), {
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
+  var /* [auto-meaningful-name] */e$buttonProps = e.buttonProps
+  return React.createElement($$_612.a, $$_19.a({}, $_790_index.a(e$type), {
     onClick: function (n) {
-      var e$actionFn = e.actionFn
-      var _e$close = e.close
+      var /* [auto-meaningful-name] */e$actionFn = e.actionFn
+      var /* [auto-meaningful-name] */e$close = e.close
       if (!t.current) {
         t.current = true
         if (e$actionFn) {
@@ -180,21 +180,21 @@ var T = function (e) {
             o = e$actionFn(n)
             if (e.quitOnNullishReturnValue && !S(o)) {
               t.current = false
-              return void _e$close(n)
+              return void e$close(n)
             }
           } else if (e$actionFn.length) {
-            o = e$actionFn(_e$close)
+            o = e$actionFn(e$close)
             t.current = false
           } else if (!(o = e$actionFn())) {
-            return void _e$close()
+            return void e$close()
           }
           !function (n) {
-            var e$close = e.close
+            var /* [auto-meaningful-name] */_e$close = e.close
             if (S(n)) {
               c(true)
               n.then(function () {
                 c(false)
-                e$close.apply(undefined, arguments)
+                _e$close.apply(undefined, arguments)
                 t.current = false
               }, function (e) {
                 console.error(e)
@@ -204,7 +204,7 @@ var T = function (e) {
             }
           }(o)
         } else {
-          _e$close()
+          e$close()
         }
       }
     },
@@ -214,35 +214,35 @@ var T = function (e) {
     ref: n
   }), e$children)
 }
-import B = require("../363/index");
-import D = require("./285/index");
+import /* [auto-meaningful-name] */$$_363_index = require("../363/index")
+import /* [auto-meaningful-name] */$_285_index = require("./285/index")
 var I = function (e) {
-  var e$icon = e.icon
-  var e$onCancel = e.onCancel
-  var e$onOk = e.onOk
-  var e$close = e.close
-  var e$zIndex = e.zIndex
-  var e$afterClose = e.afterClose
-  var e$visible = e.visible
-  var e$keyboard = e.keyboard
-  var e$centered = e.centered
-  var e$getContainer = e.getContainer
-  var e$maskStyle = e.maskStyle
-  var e$okText = e.okText
-  var e$okButtonProps = e.okButtonProps
-  var e$cancelText = e.cancelText
-  var e$cancelButtonProps = e.cancelButtonProps
-  var e$direction = e.direction
-  var e$prefixCls = e.prefixCls
-  var e$rootPrefixCls = e.rootPrefixCls
-  var e$iconPrefixCls = e.iconPrefixCls
-  var e$bodyStyle = e.bodyStyle
-  var e$closable = e.closable
+  var /* [auto-meaningful-name] */e$icon = e.icon
+  var /* [auto-meaningful-name] */e$onCancel = e.onCancel
+  var /* [auto-meaningful-name] */e$onOk = e.onOk
+  var /* [auto-meaningful-name] */e$close = e.close
+  var /* [auto-meaningful-name] */e$zIndex = e.zIndex
+  var /* [auto-meaningful-name] */e$afterClose = e.afterClose
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$keyboard = e.keyboard
+  var /* [auto-meaningful-name] */e$centered = e.centered
+  var /* [auto-meaningful-name] */e$getContainer = e.getContainer
+  var /* [auto-meaningful-name] */e$maskStyle = e.maskStyle
+  var /* [auto-meaningful-name] */e$okText = e.okText
+  var /* [auto-meaningful-name] */e$okButtonProps = e.okButtonProps
+  var /* [auto-meaningful-name] */e$cancelText = e.cancelText
+  var /* [auto-meaningful-name] */e$cancelButtonProps = e.cancelButtonProps
+  var /* [auto-meaningful-name] */e$direction = e.direction
+  var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
+  var /* [auto-meaningful-name] */e$rootPrefixCls = e.rootPrefixCls
+  var /* [auto-meaningful-name] */e$iconPrefixCls = e.iconPrefixCls
+  var /* [auto-meaningful-name] */e$bodyStyle = e.bodyStyle
+  var /* [auto-meaningful-name] */e$closable = e.closable
   var k = undefined !== e$closable && e$closable
-  var e$closeIcon = e.closeIcon
-  var e$modalRender = e.modalRender
-  var e$focusTriggerAfterClose = e.focusTriggerAfterClose
-  B.a(!("string" === typeof e$icon && e$icon.length > 2), "Modal", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(e$icon, "` at https://ant.design/components/icon"))
+  var /* [auto-meaningful-name] */e$closeIcon = e.closeIcon
+  var /* [auto-meaningful-name] */e$modalRender = e.modalRender
+  var /* [auto-meaningful-name] */e$focusTriggerAfterClose = e.focusTriggerAfterClose
+  $$_363_index.a(!("string" === typeof e$icon && e$icon.length > 2), "Modal", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(e$icon, "` at https://ant.design/components/icon"))
   var R = e.okType || "primary"
   var P = "".concat(e$prefixCls, "-confirm")
   var N = !("okCancel" in e) || e.okCancel
@@ -251,7 +251,7 @@ var I = function (e) {
   var L = undefined === e.mask || e.mask
   var U = undefined !== e.maskClosable && e.maskClosable
   var H = null !== e.autoFocusButton && (e.autoFocusButton || "ok")
-  var V = c()(P, "".concat(P, "-").concat(e.type), r.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
+  var V = c()(P, "".concat(P, "-").concat(e.type), $$_29.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
   var G = N && React.createElement(T, {
     actionFn: e$onCancel,
     close: e$close,
@@ -259,14 +259,14 @@ var I = function (e) {
     buttonProps: e$cancelButtonProps,
     prefixCls: "".concat(e$rootPrefixCls, "-btn")
   }, e$cancelText)
-  return React.createElement(D.a, {
+  return React.createElement($_285_index.a, {
     prefixCls: e$rootPrefixCls,
     iconPrefixCls: e$iconPrefixCls,
     direction: e$direction
   }, React.createElement(b, {
     prefixCls: e$prefixCls,
     className: V,
-    wrapClassName: c()(r.a({}, "".concat(P, "-centered"), !!e.centered)),
+    wrapClassName: c()($$_29.a({}, "".concat(P, "-centered"), !!e.centered)),
     onCancel: function () {
       return e$close({
         triggerCancel: true
@@ -275,8 +275,8 @@ var I = function (e) {
     visible: e$visible,
     title: "",
     footer: "",
-    transitionName: v.b(e$rootPrefixCls, "zoom", e.transitionName),
-    maskTransitionName: v.b(e$rootPrefixCls, "fade", e.maskTransitionName),
+    transitionName: $$_431.b(e$rootPrefixCls, "zoom", e.transitionName),
+    maskTransitionName: $$_431.b(e$rootPrefixCls, "fade", e.maskTransitionName),
     mask: L,
     maskClosable: U,
     maskStyle: e$maskStyle,
@@ -330,13 +330,13 @@ var R = function (e, t) {
 var P = ""
 function N(e) {
   var t = document.createDocumentFragment()
-  var n = i.a(i.a({}, e), {
+  var n = $$_19.a($$_19.a({}, e), {
     close: s,
     visible: true
   })
   function r() {
-    w.unmountComponentAtNode(t)
-    for (var arguments$length = arguments.length, r = new Array(arguments$length), i = 0; i < arguments$length; i++) {
+    $$_75_index.unmountComponentAtNode(t)
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length), i = 0; i < arguments$length; i++) {
       r[i] = arguments[i]
     }
     var o = r.some(function (e) {
@@ -354,19 +354,19 @@ function N(e) {
     }
   }
   function a(e) {
-    var e$okText = e.okText
-    var e$cancelText = e.cancelText
-    var e$prefixCls = e.prefixCls
+    var /* [auto-meaningful-name] */e$okText = e.okText
+    var /* [auto-meaningful-name] */e$cancelText = e.cancelText
+    var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
     var s = R(e, ["okText", "cancelText", "prefixCls"])
     setTimeout(function () {
-      var e = l.b()
-      var c = D.b()
-      var c$getPrefixCls = c.getPrefixCls
-      var c$getIconPrefixCls = c.getIconPrefixCls
+      var e = $_611.b()
+      var c = $_285_index.b()
+      var /* [auto-meaningful-name] */c$getPrefixCls = c.getPrefixCls
+      var /* [auto-meaningful-name] */c$getIconPrefixCls = c.getIconPrefixCls
       var d = c$getPrefixCls(undefined, P)
       var h = e$prefixCls || "".concat(d, "-modal")
       var p = c$getIconPrefixCls()
-      w.render(React.createElement(I, i.a({}, s, {
+      $$_75_index.render(React.createElement(I, $$_19.a({}, s, {
         prefixCls: h,
         rootPrefixCls: d,
         iconPrefixCls: p,
@@ -376,10 +376,10 @@ function N(e) {
     })
   }
   function s() {
-    for (var t = this, arguments$length = arguments.length, s = new Array(arguments$length), c = 0; c < arguments$length; c++) {
+    for (var t = this, /* [auto-meaningful-name] */arguments$length = arguments.length, s = new Array(arguments$length), c = 0; c < arguments$length; c++) {
       s[c] = arguments[c]
     }
-    a(n = i.a(i.a({}, n), {
+    a(n = $$_19.a($$_19.a({}, n), {
       visible: false,
       afterClose: function () {
         if ("function" === typeof e.afterClose) {
@@ -394,71 +394,71 @@ function N(e) {
   return {
     destroy: s,
     update: function (e) {
-      a(n = "function" === typeof e ? e(n) : i.a(i.a({}, n), e))
+      a(n = "function" === typeof e ? e(n) : $$_19.a($$_19.a({}, n), e))
     }
   }
 }
 function M(e) {
-  return i.a(i.a({
-    icon: React.createElement(O.a, null),
+  return $$_19.a($$_19.a({
+    icon: React.createElement($_914.a, null),
     okCancel: false
   }, e), {
     type: "warning"
   })
 }
 function j(e) {
-  return i.a(i.a({
-    icon: React.createElement(E.a, null),
+  return $$_19.a($$_19.a({
+    icon: React.createElement($_1024.a, null),
     okCancel: false
   }, e), {
     type: "info"
   })
 }
 function L(e) {
-  return i.a(i.a({
-    icon: React.createElement(x.a, null),
+  return $$_19.a($$_19.a({
+    icon: React.createElement($_1023.a, null),
     okCancel: false
   }, e), {
     type: "success"
   })
 }
 function U(e) {
-  return i.a(i.a({
-    icon: React.createElement(C.a, null),
+  return $$_19.a($$_19.a({
+    icon: React.createElement($_1025.a, null),
     okCancel: false
   }, e), {
     type: "error"
   })
 }
 function H(e) {
-  return i.a(i.a({
-    icon: React.createElement(O.a, null),
+  return $$_19.a($$_19.a({
+    icon: React.createElement($_914.a, null),
     okCancel: true
   }, e), {
     type: "confirm"
   })
 }
-import V = require("../80/index");
-import G = require("./605");
+import /* [auto-meaningful-name] */$$_80_index = require("../80/index")
+import /* [auto-meaningful-name] */$_605 = require("./605")
 var z = function (e, t) {
-  var e$afterClose = e.afterClose
-  var e$config = e.config
+  var /* [auto-meaningful-name] */e$afterClose = e.afterClose
+  var /* [auto-meaningful-name] */e$config = e.config
   var a = React.useState(true)
-  var s = k.a(a, 2)
+  var s = $$_33_index.a(a, 2)
   var c = s[0]
   var u = s[1]
   var l = React.useState(e$config)
-  var f = k.a(l, 2)
+  var f = $$_33_index.a(l, 2)
   var d = f[0]
   var _ = f[1]
-  var A = React.useContext(p.b)
-  var a$direction = A.direction
-  var a$getPrefixCls = A.getPrefixCls
-  var m = a$getPrefixCls("modal")
-  var y = a$getPrefixCls()
+  var A = React.useContext($$_789.b)
+  var /* [auto-meaningful-name] */A$direction = A.direction
+  var /* [auto-meaningful-name] */A$getPrefixCls = A.getPrefixCls
+  var m = A$getPrefixCls("modal")
+  var y = A$getPrefixCls()
   var b = function () {
     u(false)
-    for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
       t[n] = arguments[n]
     }
     var r = t.some(function (e) {
@@ -473,16 +473,16 @@ var z = function (e, t) {
       destroy: b,
       update: function (e) {
         _(function (t) {
-          return i.a(i.a({}, t), e)
+          return $$_19.a($$_19.a({}, t), e)
         })
       }
     }
   })
-  return React.createElement(h.a, {
+  return React.createElement($_686.a, {
     componentName: "Modal",
-    defaultLocale: G.a.Modal
+    defaultLocale: $_605.a.Modal
   }, function (e) {
-    return React.createElement(I, i.a({
+    return React.createElement(I, $$_19.a({
       prefixCls: m,
       rootPrefixCls: y
     }, d, {
@@ -490,7 +490,7 @@ var z = function (e, t) {
       visible: c,
       afterClose: e$afterClose,
       okText: d.okText || (d.okCancel ? e.okText : e.justOkText),
-      direction: a$direction,
+      direction: A$direction,
       cancelText: d.cancelText || e.cancelText
     }))
   })
@@ -500,12 +500,12 @@ var W = 0
 var K = React.memo(React.forwardRef(function (e, t) {
   var n = function () {
     var e = React.useState([])
-    var t = k.a(e, 2)
+    var t = $$_33_index.a(e, 2)
     var n = t[0]
     var r = t[1]
     return [n, React.useCallback(function (e) {
       r(function (t) {
-        return [].concat(V.a(t), [e])
+        return [].concat($$_80_index.a(t), [e])
       })
       return function () {
         r(function (t) {
@@ -516,7 +516,7 @@ var K = React.memo(React.forwardRef(function (e, t) {
       }
     }, [])]
   }()
-  var r = k.a(n, 2)
+  var r = $$_33_index.a(n, 2)
   var i = r[0]
   var a = r[1]
   React.useImperativeHandle(t, function () {
@@ -533,12 +533,12 @@ var Y = b
 Y.useModal = function () {
   var e = React.useRef(null)
   var t = React.useState([])
-  var n = k.a(t, 2)
+  var n = $$_33_index.a(t, 2)
   var r = n[0]
   var i = n[1]
   React.useEffect(function () {
     if (r.length) {
-      V.a(r).forEach(function (e) {
+      $$_80_index.a(r).forEach(function (e) {
         e()
       })
       i([])
@@ -571,7 +571,7 @@ Y.useModal = function () {
             e()
           } else {
             i(function (t) {
-              return [].concat(V.a(t), [e])
+              return [].concat($$_80_index.a(t), [e])
             })
           }
         },
@@ -586,7 +586,7 @@ Y.useModal = function () {
             t()
           } else {
             i(function (e) {
-              return [].concat(V.a(e), [t])
+              return [].concat($$_80_index.a(e), [t])
             })
           }
         }
@@ -628,8 +628,8 @@ Y.destroyAll = function () {
   }
 }
 Y.config = function (e) {
-  var e$rootPrefixCls = e.rootPrefixCls
-  B.a(false, "Modal", "Modal.config is deprecated. Please use ConfigProvider.config instead.")
+  var /* [auto-meaningful-name] */e$rootPrefixCls = e.rootPrefixCls
+  $$_363_index.a(false, "Modal", "Modal.config is deprecated. Please use ConfigProvider.config instead.")
   P = e$rootPrefixCls
 }
 export { Y as a }

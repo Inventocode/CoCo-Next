@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2329
@@ -9,10 +9,10 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("../../1366/444")
+var r = require("../../2342/444")
 var i = require("../../580")
 var o = require("./2330/index")
-var a = require("./1368/index")
+var a = require("./1368")
 var s = function () {
   function e(e) {
     this._binding = e
@@ -26,7 +26,7 @@ var s = function () {
     if ("function" !== typeof this._binding.serviceIdentifier) {
       throw new Error("" + r.INVALID_TO_SELF_VALUE)
     }
-    var this$_binding$serviceIdentifier = this._binding.serviceIdentifier
+    var /* [auto-meaningful-name] */this$_binding$serviceIdentifier = this._binding.serviceIdentifier
     return this.to(this$_binding$serviceIdentifier)
   }
   e.prototype.toConstantValue = function (e) {

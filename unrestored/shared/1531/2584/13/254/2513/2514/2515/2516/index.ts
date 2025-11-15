@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2516
@@ -6,11 +6,11 @@
 
 var r = require("../1418/index")
 var i = require("./1413")
-var o = require("./1416")
+var o = require("./1416/index")
 var a = require("./1414")
 var s = require("./1417/index")
 var c = require("./1143/index")
-var u = require("../../../../../785/104/2411/2412/446")
+var u = require("../../../../../785/104/2411/2422/446")
 var l = require("./2517")
 var f = require("./971/index")
 var d = require("./1150")

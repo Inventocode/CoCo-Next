@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：590
@@ -10,7 +10,7 @@ var r = require("./124")
 var i = require("./74")
 var o = require("./405")
 var a = require("./400")
-var s = require("./349")
+var s = require("./349/index")
 var u = require("./406")
 var c = require("./37")
 var l = require("./404/index")
@@ -124,7 +124,7 @@ var h = function () {
     }
     try {
       for (var r = f(this.readers), i = r.next(); !i.done; i = r.next()) {
-        var i$value = i.value
+        var /* [auto-meaningful-name] */i$value = i.value
         try {
           return i$value.decode(t, this.hints)
         } catch (a) {

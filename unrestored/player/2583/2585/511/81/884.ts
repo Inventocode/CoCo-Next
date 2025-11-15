@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：884
@@ -86,7 +86,7 @@ var s = function () {
     return new e(this.yuvData, this.dataWidth, this.dataHeight, this.left + t, this.top + n, r, i, false)
   }
   e.prototype.renderThumbnail = function () {
-    for (var t = this.getWidth() / e.THUMBNAIL_SCALE_FACTOR, n = this.getHeight() / e.THUMBNAIL_SCALE_FACTOR, r = new Int32Array(t * n), this$yuvData = this.yuvData, o = this.top * this.dataWidth + this.left, a = 0; a < n; a++) {
+    for (var t = this.getWidth() / e.THUMBNAIL_SCALE_FACTOR, n = this.getHeight() / e.THUMBNAIL_SCALE_FACTOR, r = new Int32Array(t * n), /* [auto-meaningful-name] */this$yuvData = this.yuvData, o = this.top * this.dataWidth + this.left, a = 0; a < n; a++) {
       for (var s = a * t, u = 0; u < t; u++) {
         var c = 255 & this$yuvData[o + u * e.THUMBNAIL_SCALE_FACTOR]
         r[s + u] = 4278190080 | 65793 * c
@@ -102,7 +102,7 @@ var s = function () {
     return this.getHeight() / e.THUMBNAIL_SCALE_FACTOR
   }
   e.prototype.reverseHorizontal = function (t, e) {
-    for (var this$yuvData = this.yuvData, r = 0, i = this.top * this.dataWidth + this.left; r < e; r++, i += this.dataWidth) {
+    for (var /* [auto-meaningful-name] */this$yuvData = this.yuvData, r = 0, i = this.top * this.dataWidth + this.left; r < e; r++, i += this.dataWidth) {
       for (var o = i + t / 2, a = i, s = i + t - 1; a < o; a++, s--) {
         var u = this$yuvData[a]
         this$yuvData[a] = this$yuvData[s]

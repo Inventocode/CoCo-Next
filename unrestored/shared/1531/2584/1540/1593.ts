@@ -1,18 +1,18 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1593
  */
 
-var r = require("./1623/86")
-var math$floor = Math.floor
-var math$log = Math.log
-var math$LOG2E = Math.LOG2E
+var r = require("./1698/86/index")
+var /* [auto-meaningful-name] */Math$floor = Math.floor
+var /* [auto-meaningful-name] */Math$log = Math.log
+var /* [auto-meaningful-name] */Math$LOG2E = Math.LOG2E
 r({
   target: "Math",
   stat: true
 }, {
   clz32: function (e) {
-    return (e >>>= 0) ? 31 - math$floor(math$log(e + .5) * math$LOG2E) : 32
+    return (e >>>= 0) ? 31 - Math$floor(Math$log(e + .5) * Math$LOG2E) : 32
   }
 })

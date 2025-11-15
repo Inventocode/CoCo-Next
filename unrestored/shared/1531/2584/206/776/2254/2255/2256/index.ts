@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2256
@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../../../../../36/2668/220")
-var i = require("../../../../../36/2668/230")
+var r = require("../../../220")
+var i = require("../../../230")
 var o = require("../../../../../1036/1363/569")
-var require$$1344$isCommentToken = require("../1344").isCommentToken
+var /* [auto-meaningful-name] */require$$_1344$isCommentToken = require("../1344").isCommentToken
 var s = require("./2257/index")
 var c = require("./1119/index")
 var u = require("./2264")
@@ -66,7 +66,7 @@ function A(e, t, n, r, i, o, a) {
   return "undefined" === typeof o && "undefined" === typeof a ? new c(e, t, n, r, i) : "number" === typeof o || "undefined" === typeof o ? new u(e, t, n, r, i, 0 | o, 0 | a) : _(s.forward, e, t, n, r, i, o)
 }
 function g(e) {
-  for (var t = [], n = e.getOneToken(); n && require$$1344$isCommentToken(n);) {
+  for (var t = [], n = e.getOneToken(); n && require$$_1344$isCommentToken(n);) {
     t.push(n)
     n = e.getOneToken()
   }
@@ -211,7 +211,7 @@ module.exports = function () {
     value: function (e) {
       return this.getTokens(e, {
         includeComments: true,
-        filter: require$$1344$isCommentToken
+        filter: require$$_1344$isCommentToken
       })
     }
   }])

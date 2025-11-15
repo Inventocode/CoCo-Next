@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：675
@@ -15,10 +15,10 @@ var r = {
     backgroundColor: "背景颜色"
   }
 }
-import o = require("./6");
-import i = require("./5");
-import a = require("./35");
-import s = require("./245");
+import o = require("./6")
+import i = require("./5")
+import a = require("./35")
+import /* [auto-meaningful-name] */$_245 = require("./245")
 var c = {
   type: i.f,
   icon: "icon-widget-canvas",
@@ -30,7 +30,7 @@ var c = {
     key: "backgroundColor",
     label: "backgroundColor",
     valueType: "color",
-    defaultValue: s.a
+    defaultValue: $_245.a
   }, o.a({}, a.i)],
   methods: [],
   events: []

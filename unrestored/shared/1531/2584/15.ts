@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：15
@@ -12,7 +12,7 @@ export { s as z }
 export { c as mb }
 export { l as r }
 export { u as j }
-export { g as a }
+export { B3B3B3 as a }
 export { _ as i }
 export { v as hb }
 export { b as Z }
@@ -76,8 +76,8 @@ export { V as cb }
 export { z as ab }
 export { Y as H }
 export { K as t }
-import r = require("./10/index");
-import o = require("./47");
+import /* [auto-meaningful-name] */$_10_index = require("./10/index")
+import o = require("./47")
 function i(e, t, n) {
   return (e / t * 100).toFixed(n)
 }
@@ -105,7 +105,7 @@ function l(e, t) {
   var s = o.a(r)
   try {
     for (s.s(); !(n = s.n()).done;) {
-      var n$value = n.value
+      var /* [auto-meaningful-name] */n$value = n.value
       if (!i.has(n$value)) {
         a.push(n$value)
       }
@@ -120,7 +120,7 @@ function l(e, t) {
 function u(e) {
   return /^[\u4E00-\u9FA5A-Za-z][\u4E00-\u9FA5A-Za-z0-9_]*$/.test(e)
 }
-import Color = require("color");
+import /* [auto-meaningful-name] */Color = require("color")
 var p = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -133,8 +133,8 @@ var p = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import Lodash = require("lodash");
-import h = require("./13/225");
+import /* [auto-meaningful-name] */Lodash = require("lodash")
+import /* [auto-meaningful-name] */$_13_225 = require("./13/225")
 var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -146,8 +146,8 @@ var m = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(h)
-var g = "#B3B3B3"
+}($_13_225)
+var /* [auto-meaningful-name] */B3B3B3 = "#B3B3B3"
 var _ = function (e) {
   return "#00000000" === e || "rgba(0,0,0,0)" === e || "transparent" === e
 }
@@ -229,9 +229,9 @@ var I = function (e, t) {
     source: e.source
   }
 }
-import A = require("./450/index");
+import /* [auto-meaningful-name] */$_450_index = require("./450/index")
 function j() {
-  var navigator$userAgent = navigator.userAgent
+  var /* [auto-meaningful-name] */navigator$userAgent = navigator.userAgent
   return !!["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"].find(function (t) {
     return navigator$userAgent.includes(t)
   })
@@ -243,7 +243,7 @@ function R() {
   var e = navigator.userAgent.indexOf("Chrome") > -1
   return navigator.userAgent.indexOf("Safari") > -1 && !e
 }
-import k = require("./141/311");
+import /* [auto-meaningful-name] */$_141_311 = require("./141/311")
 function x(e, t) {
   var n = new Date(e)
   n.setDate(n.getDate() + t)
@@ -258,7 +258,7 @@ function D(e) {
   var n = "0".concat(e.getMinutes()).slice(-2)
   return "".concat(t, ":").concat(n)
 }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var L = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -271,7 +271,7 @@ var L = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import P = require("./7");
+import P = require("./7")
 var B = {}
 function F(e, t) {
   return G.apply(this, arguments)
@@ -303,7 +303,7 @@ function U(e, t, n) {
       window.clearTimeout(r)
     }
     if (!r) {
-      for (var arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
+      for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
         o[i] = arguments[i]
       }
       e.apply(this, o)
@@ -312,7 +312,7 @@ function U(e, t, n) {
       r = null
     }, t)
   } : function () {
-    for (var n = this, arguments$length = arguments.length, i = new Array(arguments$length), a = 0; a < arguments$length; a++) {
+    for (var n = this, /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length), a = 0; a < arguments$length; a++) {
       i[a] = arguments[a]
     }
     if (r) {
@@ -327,7 +327,7 @@ function W(e) {
   if ("object" === typeof e) {
     var t = Array.isArray(e) ? [] : {}
     Object.entries(e).forEach(function (e) {
-      var n = r.a(e, 2)
+      var n = $_10_index.a(e, 2)
       var o = n[0]
       var i = n[1]
       t[o] = W(i)
@@ -380,4 +380,4 @@ function Y(e, t) {
 function K(e) {
   return e && e.replace ? e.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/\\/g, "&#92;").replace(/\'/g, "&#39;").replace(/\"/g, "&quot;") : e
 }
-export default g
+export default B3B3B3

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：852
@@ -11,7 +11,7 @@ module.exports = function (e, t, n, o) {
   if (!n) {
     n = {}
   }
-  for (var s = -1, t$length = t.length; ++s < t$length;) {
+  for (var s = -1, /* [auto-meaningful-name] */t$length = t.length; ++s < t$length;) {
     var u = t[s]
     var l = o ? o(n[u], e[u], u, n, e) : undefined
     if (undefined === l) {

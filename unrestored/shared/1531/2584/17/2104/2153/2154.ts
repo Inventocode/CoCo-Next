@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2154
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.TreeNode = undefined
 var r = require("tslib")
-var i = require("../../../4/127")
+var i = require("../../../1036/127")
 var o = require("../../../1001/213/index")
 var a = require("../../../125/index")
 var s = function (e) {

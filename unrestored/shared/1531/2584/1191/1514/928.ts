@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：928
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.findInArray = function (e, t) {
-  for (var n = 0, e$length = e.length; n < e$length; n++) {
+  for (var n = 0, /* [auto-meaningful-name] */e$length = e.length; n < e$length; n++) {
     if (t.apply(t, [e[n], n, e])) {
       return e[n]
     }

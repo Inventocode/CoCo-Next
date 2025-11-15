@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：542
@@ -6,9 +6,9 @@
 
 "use strict"
 
-import r = require("./6");
-import o = require("./11");
-import React = require("react");
+import r = require("./6")
+import o = require("./11")
+import /* [auto-meaningful-name] */React = require("react")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,7 +21,7 @@ var a = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import Color = require("color");
+import /* [auto-meaningful-name] */Color = require("color")
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -34,7 +34,7 @@ var c = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import l = require("./8");
+import l = require("./8")
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -47,9 +47,9 @@ var u = function __importDefault(module) {
   })
   return defaultExport
 }(l)
-import d = require("./5");
-import p = require("./90");
-import f = require("./240");
+import d = require("./5")
+import p = require("./90")
+import /* [auto-meaningful-name] */$_240 = require("./240")
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -61,20 +61,20 @@ var h = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(f)
+}($_240)
 var _a
 _a = function (e) {
   var t = e.id
-  var e$visible = e.visible
-  var e$attributes = e.attributes
-  var e$onClick = e.onClick
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$content = e$attributes.content
-  var e$attributes$color = e$attributes.color
-  var e$attributes$fontFamily = e$attributes.fontFamily
-  var e$attributes$fontSize = e$attributes.fontSize
-  var e$attributes$textAlign = e$attributes.textAlign
-  var e$attributes$lineClamp = e$attributes.lineClamp
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$content = e$attributes.content
+  var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
+  var /* [auto-meaningful-name] */e$attributes$fontFamily = e$attributes.fontFamily
+  var /* [auto-meaningful-name] */e$attributes$fontSize = e$attributes.fontSize
+  var /* [auto-meaningful-name] */e$attributes$textAlign = e$attributes.textAlign
+  var /* [auto-meaningful-name] */e$attributes$lineClamp = e$attributes.lineClamp
   var y = {
     minWidth: 16,
     minHeight: 16,

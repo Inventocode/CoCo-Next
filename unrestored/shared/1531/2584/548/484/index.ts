@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：484
@@ -8,7 +8,7 @@
 
 var r = require("./168")
 var i = require("./111")
-var o = require("./106")
+var o = require("../485/106")
 function a(e, t) {
   o.a(2, arguments)
   var n = i.a(e)
@@ -45,7 +45,7 @@ function u(e) {
 function l(e, t) {
   o.a(1, arguments)
   var n = t || {}
-  var n$locale = n.locale
+  var /* [auto-meaningful-name] */n$locale = n.locale
   var s = n$locale && n$locale.options && n$locale.options.weekStartsOn
   var c = null == s ? 0 : r.a(s)
   var u = null == n.weekStartsOn ? c : r.a(n.weekStartsOn)
@@ -135,7 +135,7 @@ var h = {
     other: "almost {{count}} years"
   }
 }
-var p = require("./692")
+var p = require("../485/692")
 var _ = {
   date: p.a({
     formats: {
@@ -173,7 +173,7 @@ var A = {
   nextWeek: "eeee 'at' p",
   other: "P"
 }
-var g = require("./489")
+var g = require("../485/489")
 var v = {
   ordinalNumber: function (e, t) {
     var n = Number(e)
@@ -295,8 +295,8 @@ var v = {
     defaultFormattingWidth: "wide"
   })
 }
-var m = require("./1004")
-var y = require("./490")
+var m = require("../485/1004")
+var y = require("../485/490")
 var b = {
   code: "en-US",
   formatDistance: function (e, t, n) {
@@ -456,7 +456,7 @@ var C = {
     return x(e.getUTCSeconds(), t.length)
   },
   S: function (e, t) {
-    var t$length = t.length
+    var /* [auto-meaningful-name] */t$length = t.length
     var r = e.getUTCMilliseconds()
     return x(Math.floor(r * Math.pow(10, t$length - 3)), t.length)
   }
@@ -500,13 +500,13 @@ function T(e) {
   var n = O(t).getTime() - S(t).getTime()
   return Math.round(n / 6048e5) + 1
 }
-var B = require("./432")
+var B = require("../485/432")
 function D(e, t) {
   o.a(1, arguments)
   var n = i.a(e, t)
   var a = n.getUTCFullYear()
   var s = t || {}
-  var s$locale = s.locale
+  var /* [auto-meaningful-name] */s$locale = s.locale
   var u = s$locale && s$locale.options && s$locale.options.firstWeekContainsDate
   var l = null == u ? 1 : r.a(u)
   var f = null == s.firstWeekContainsDate ? l : r.a(s.firstWeekContainsDate)
@@ -526,7 +526,7 @@ function D(e, t) {
 function I(e, t) {
   o.a(1, arguments)
   var n = t || {}
-  var n$locale = n.locale
+  var /* [auto-meaningful-name] */n$locale = n.locale
   var a = n$locale && n$locale.options && n$locale.options.firstWeekContainsDate
   var s = null == a ? 1 : r.a(a)
   var c = null == n.firstWeekContainsDate ? s : r.a(n.firstWeekContainsDate)
@@ -543,12 +543,12 @@ function F(e, t) {
   var r = B.a(n, t).getTime() - I(n, t).getTime()
   return Math.round(r / 6048e5) + 1
 }
-var R = "midnight"
+var /* [auto-meaningful-name] */Midnight = "midnight"
 var P = "noon"
-var N = "morning"
-var M = "afternoon"
-var j = "evening"
-var L = "night"
+var /* [auto-meaningful-name] */Morning = "morning"
+var /* [auto-meaningful-name] */Afternoon = "afternoon"
+var /* [auto-meaningful-name] */Evening = "evening"
+var /* [auto-meaningful-name] */Night = "night"
 function U(e, t) {
   var n = e > 0 ? "-" : "+"
   var r = Math.abs(e)
@@ -923,7 +923,7 @@ var G = {
   b: function (e, t, n) {
     var r
     var i = e.getUTCHours()
-    switch (r = 12 === i ? P : 0 === i ? R : i / 12 >= 1 ? "pm" : "am", t) {
+    switch (r = 12 === i ? P : 0 === i ? Midnight : i / 12 >= 1 ? "pm" : "am", t) {
       case "b":
       case "bb":
         return n.dayPeriod(r, {
@@ -951,7 +951,7 @@ var G = {
   B: function (e, t, n) {
     var r
     var i = e.getUTCHours()
-    switch (r = i >= 17 ? j : i >= 12 ? M : i >= 4 ? N : L, t) {
+    switch (r = i >= 17 ? Evening : i >= 12 ? Afternoon : i >= 4 ? Morning : Night, t) {
       case "B":
       case "BB":
       case "BBB":
@@ -1228,7 +1228,7 @@ function ue(e, t) {
 function le(e, t, n) {
   o.a(2, arguments)
   var a = n || {}
-  var a$locale = a.locale
+  var /* [auto-meaningful-name] */a$locale = a.locale
   var c = a$locale && a$locale.options && a$locale.options.weekStartsOn
   var u = null == c ? 0 : r.a(c)
   var l = null == a.weekStartsOn ? u : r.a(a.weekStartsOn)
@@ -2479,7 +2479,7 @@ function nt(e) {
 function rt(e, t) {
   o.a(1, arguments)
   var n = t || {}
-  var n$locale = n.locale
+  var /* [auto-meaningful-name] */n$locale = n.locale
   var s = n$locale && n$locale.options && n$locale.options.weekStartsOn
   var c = null == s ? 0 : r.a(s)
   var u = null == n.weekStartsOn ? c : r.a(n.weekStartsOn)
@@ -2503,7 +2503,7 @@ function it(e) {
 }
 var ot = function () {
   function e(e) {
-    var undefinedEE$locale = (undefined === e ? {} : e).locale
+    var /* [auto-meaningful-name] */UndefinedEE$locale = (undefined === e ? {} : e).locale
     this.yearFormat = "yyyy"
     this.yearMonthFormat = "MMMM yyyy"
     this.dateTime12hFormat = "MMMM do hh:mm aaaa"
@@ -2511,7 +2511,7 @@ var ot = function () {
     this.time12hFormat = "hh:mm a"
     this.time24hFormat = "HH:mm"
     this.dateFormat = "MMMM do"
-    this.locale = undefinedEE$locale
+    this.locale = UndefinedEE$locale
   }
   e.prototype.addDays = function (e, t) {
     return a(e, t)
@@ -2692,11 +2692,11 @@ var ot = function () {
         var C = x[0]
         var O = Qe[C]
         if (O) {
-          var o$incompatibleTokens = O.incompatibleTokens
-          if (Array.isArray(o$incompatibleTokens)) {
+          var /* [auto-meaningful-name] */O$incompatibleTokens = O.incompatibleTokens
+          if (Array.isArray(O$incompatibleTokens)) {
             for (var S = undefined, T = 0; T < w.length; T++) {
-              var wT$token = w[T].token
-              if (-1 !== o$incompatibleTokens.indexOf(wT$token) || wT$token === C) {
+              var /* [auto-meaningful-name] */wT$token = w[T].token
+              if (-1 !== O$incompatibleTokens.indexOf(wT$token) || wT$token === C) {
                 S = w[T]
                 break
               }

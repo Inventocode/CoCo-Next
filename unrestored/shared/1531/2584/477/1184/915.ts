@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：915
@@ -8,7 +8,7 @@
 
 export { o as a }
 var r
-import i = require("./306");
+import /* [auto-meaningful-name] */$_306 = require("./306")
 !function (e) {
   e.PENDING = "PENDING"
   e.RESOLVED = "RESOLVED"
@@ -27,7 +27,7 @@ var o = function () {
     }
     this._setResult = function (e, n) {
       if (t._state === r.PENDING) {
-        if (i.m(n)) {
+        if ($_306.m(n)) {
           n.then(t._resolve, t._reject)
         } else {
           t._state = e
@@ -77,7 +77,7 @@ var o = function () {
     return new e(function (n, r) {
       if (Array.isArray(t)) {
         if (0 !== t.length) {
-          var t$length = t.length
+          var /* [auto-meaningful-name] */t$length = t.length
           var o = []
           t.forEach(function (t, a) {
             e.resolve(t).then(function (e) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2172
@@ -14,9 +14,9 @@ var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
 var a = require("../../125/195/index")
-var s = require("../497/387")
+var s = require("../../206/725/387")
 var c = require("../../1001/213/index")
-var u = require("../497/644")
+var u = require("../../1179/2554/644")
 var l = function (e) {
   function t(t) {
     var n = e.call(this, {
@@ -47,9 +47,9 @@ var l = function (e) {
     }
     n.init = function () {
       var /* [auto-meaningful-name] */n$nested_blocks_with_comment0$comment
-      var /* [auto-meaningful-name] */_n$comment2
-      var /* [auto-meaningful-name] */n$origin_block$comment
       var /* [auto-meaningful-name] */n$comment
+      var /* [auto-meaningful-name] */n$origin_block$comment
+      var /* [auto-meaningful-name] */_n$comment
       n.events.disable()
       var o = n.origin_xy || n.origin_block.get_relative_to_surface_xy()
       n.move_by(o)
@@ -82,14 +82,14 @@ var l = function (e) {
           if (n.nested_blocks_with_comment.length) {
             var s = null === (n$nested_blocks_with_comment0$comment = n.nested_blocks_with_comment[0].comment) || undefined === n$nested_blocks_with_comment0$comment ? undefined : n$nested_blocks_with_comment0$comment.get_text()
             n.set_comment_text(s)
-            if (!(null === (_n$comment2 = n.comment) || undefined === _n$comment2)) {
-              _n$comment2.init_svg(true)
+            if (!(null === (n$comment = n.comment) || undefined === n$comment)) {
+              n$comment.init_svg(true)
             }
           }
         } else {
           n.set_comment_text(null === (n$origin_block$comment = n.origin_block.comment) || undefined === n$origin_block$comment ? undefined : n$origin_block$comment.get_text())
-          if (!(null === (n$comment = n.comment) || undefined === n$comment)) {
-            n$comment.init_svg(true)
+          if (!(null === (_n$comment = n.comment) || undefined === _n$comment)) {
+            _n$comment.init_svg(true)
           }
         }
         n.origin_block.set_connectable(false)
@@ -133,7 +133,7 @@ var l = function (e) {
     (0, s.assert)(this.origin_block.output_connection)
     this.set_output(true, null === (this$origin_block$output_connection = this.origin_block.output_connection) || undefined === this$origin_block$output_connection ? undefined : this$origin_block$output_connection.check_);
     (0, s.assert)(this.output_connection)
-    var this$origin_block$output_connection$target_connection = this.origin_block.output_connection.target_connection
+    var /* [auto-meaningful-name] */this$origin_block$output_connection$target_connection = this.origin_block.output_connection.target_connection
     if (!(null === this$origin_block$output_connection$target_connection || undefined === this$origin_block$output_connection$target_connection)) {
       this$origin_block$output_connection$target_connection.connect(this.output_connection)
     }
@@ -148,7 +148,7 @@ var l = function (e) {
     (0, s.assert)(this.origin_block.previous_connection)
     this.set_previous_statement(true);
     (0, s.assert)(this.previous_connection)
-    var this$origin_block$previous_connection$target_connection = this.origin_block.previous_connection.target_connection
+    var /* [auto-meaningful-name] */this$origin_block$previous_connection$target_connection = this.origin_block.previous_connection.target_connection
     var n = undefined
     if (this.group_stop_at) {
       this.set_next_statement(true)
@@ -204,23 +204,23 @@ var l = function (e) {
     }
   }
   t.prototype.release = function () {
-    var /* [auto-meaningful-name] */_this$previous_connection2
     var /* [auto-meaningful-name] */this$previous_connection
-    var /* [auto-meaningful-name] */_this$next_connection2
+    var /* [auto-meaningful-name] */_this$previous_connection
     var /* [auto-meaningful-name] */this$next_connection
-    var /* [auto-meaningful-name] */_this$output_connection2
+    var /* [auto-meaningful-name] */_this$next_connection
     var /* [auto-meaningful-name] */this$output_connection
+    var /* [auto-meaningful-name] */_this$output_connection
     var /* [auto-meaningful-name] */this$origin_block$comment
     var /* [auto-meaningful-name] */this$on_release
     switch (this.events.disable(), this.group_name = this.get_field_value(a.BLOCK_GROUP_NAME_FIELD_NAME), this.origin_block.move_by(o.vec2.sub(o.vec2.create(), this.get_relative_to_surface_xy(), this.origin_block.get_relative_to_surface_xy())), this.origin_block.get_svg_root().style.display = this.origin_block_display, this.origin_block.set_connectable(true), this.origin_block.set_chunk_visibility(this.get_visibility()), this.origin_block.update_chunk_visibility(), this.group_type) {
       case a.BlockGroupType.EXECUTION:
         (0, s.assert)(this.origin_block.previous_connection, "Statement block must have prev conn. ")
-        var d = null === (_this$previous_connection2 = this.previous_connection) || undefined === _this$previous_connection2 ? undefined : _this$previous_connection2.target_connection
-        if (!(null === (this$previous_connection = this.previous_connection) || undefined === this$previous_connection)) {
-          this$previous_connection.disconnect()
+        var d = null === (this$previous_connection = this.previous_connection) || undefined === this$previous_connection ? undefined : this$previous_connection.target_connection
+        if (!(null === (_this$previous_connection = this.previous_connection) || undefined === _this$previous_connection)) {
+          _this$previous_connection.disconnect()
         }
-        var h = null === (_this$next_connection2 = this.next_connection) || undefined === _this$next_connection2 ? undefined : _this$next_connection2.target_connection
-        if (this.group_stop_at = null === h || undefined === h ? undefined : h.source_block.id, null === (this$next_connection = this.next_connection) || undefined === this$next_connection || this$next_connection.disconnect(), h) {
+        var h = null === (this$next_connection = this.next_connection) || undefined === this$next_connection ? undefined : this$next_connection.target_connection
+        if (this.group_stop_at = null === h || undefined === h ? undefined : h.source_block.id, null === (_this$next_connection = this.next_connection) || undefined === _this$next_connection || _this$next_connection.disconnect(), h) {
           var p = this.origin_block.last_connection_in_stack();
           (0, s.assert)(p)
           p.connect(h)
@@ -233,9 +233,9 @@ var l = function (e) {
         break
       case a.BlockGroupType.OUTPUT:
         (0, s.assert)(this.origin_block.output_connection, "Output block must have output conn. ")
-        var _ = null === (_this$output_connection2 = this.output_connection) || undefined === _this$output_connection2 ? undefined : _this$output_connection2.target_connection
-        if (!(null === (this$output_connection = this.output_connection) || undefined === this$output_connection)) {
-          this$output_connection.disconnect()
+        var _ = null === (this$output_connection = this.output_connection) || undefined === this$output_connection ? undefined : this$output_connection.target_connection
+        if (!(null === (_this$output_connection = this.output_connection) || undefined === _this$output_connection)) {
+          _this$output_connection.disconnect()
         }
         if (!(null === _ || undefined === _)) {
           _.connect(this.origin_block.output_connection)

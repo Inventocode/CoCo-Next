@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：48
@@ -8,23 +8,23 @@
 
 export { oe as b }
 export { ie as a }
-import r = require("../38/66");
-import Redux = require("redux");
-import i = require("../38/486/index");
-import a = require("../38/343");
-import s = require("../11");
-import c = require("../6");
-import l = require("../676/70");
-import u = require("./72");
+import r = require("./66")
+import /* [auto-meaningful-name] */Redux = require("redux")
+import /* [auto-meaningful-name] */$_486_index = require("./486/index")
+import /* [auto-meaningful-name] */$_343 = require("./343")
+import /* [auto-meaningful-name] */$$_11 = require("../11")
+import c = require("../6")
+import l = require("./70")
+import u = require("./72")
 function d(e, t) {
   var n = t.id
-  var t$key = t.key
-  var t$value = t.value
+  var /* [auto-meaningful-name] */t$key = t.key
+  var /* [auto-meaningful-name] */t$value = t.value
   var i = e.findIndex(function (e) {
     return e.id === n
   })
   return i > -1 ? e.update(i, function (e) {
-    return c.a(c.a({}, e), {}, s.a({}, t$key, t$value))
+    return c.a(c.a({}, e), {}, $$_11.a({}, t$key, t$value))
   }) : e
 }
 var p = window.localStorage.getItem("LANGUAGE") || navigator.language
@@ -148,7 +148,7 @@ var f = Redux.combineReducers({
     return e
   }
 })
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var m = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -161,57 +161,57 @@ var m = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import g = require("../38/3");
-import _ = require("../7");
-import v = require("./209");
-import b = require("./200");
-import y = require("../14");
-import E = require("./87");
-import O = require("../28/index");
-import w = require("./119/index");
-var C = "".concat(b.a.serverHost, "/coconut")
-var T = O.e() ? 0 : 1
+import g = require("./3")
+import _ = require("../7")
+import /* [auto-meaningful-name] */$_209 = require("./209")
+import /* [auto-meaningful-name] */$_200 = require("./200")
+import /* [auto-meaningful-name] */$$_14 = require("../14")
+import /* [auto-meaningful-name] */$$_146_87 = require("../146/87")
+import /* [auto-meaningful-name] */$$_28_index = require("../28/index")
+import /* [auto-meaningful-name] */$$_146_119_index = require("../146/119/index")
+var C = "".concat($_200.a.serverHost, "/coconut")
+var T = $$_28_index.e() ? 0 : 1
 function S(e) {
   return I.apply(this, arguments)
 }
 function I() {
   return (I = _.a(m.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
-    var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */e$sent$data
+    var /* [auto-meaningful-name] */_e$sent
+    var /* [auto-meaningful-name] */_e$sent$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.prev = 0
             e.next = 3
-            return w.a("dictId=".concat(t))
+            return $$_146_119_index.a("dictId=".concat(t))
           case 3:
-            _e$sent2 = e.sent
-            e$sent$sign = _e$sent2.sign
-            e$sent$timestamp = _e$sent2.timestamp
+            e$sent = e.sent
+            e$sent$sign = e$sent.sign
+            e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return v.a.get(C + "/webdb/try/dict/".concat(t, "/keys"), {
+            return $_209.a.get(C + "/webdb/try/dict/".concat(t, "/keys"), {
               headers: c.a({
                 env: T,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, E.a())
+              }, $$_146_87.a())
             })
           case 8:
-            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+            if (_e$sent = e.sent, 200 !== (_e$sent$data = _e$sent.data).code) {
               e.next = 12
               break
             }
-            return e.abrupt("return", e$sent$data.data)
+            return e.abrupt("return", _e$sent$data.data)
           case 12:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               message: "网络通讯异常，无法获取所有键或者键值对个数"
             })
-            throw new TypeError(e$sent$data.msg)
+            throw new TypeError(_e$sent$data.msg)
           case 16:
             if (e.prev = 16, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
               e.next = 20
@@ -219,7 +219,7 @@ function I() {
             }
             throw e.t0
           case 20:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               message: "网络通讯异常，无法获取所有键或者键值对个数"
             })
@@ -237,42 +237,42 @@ function A(e) {
 }
 function j() {
   return (j = _.a(m.a.mark(function e(t) {
-    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
-    var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */e$sent$data
+    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */_e$sent2$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.prev = 0
             e.next = 3
-            return w.a("dictId=".concat(t))
+            return $$_146_119_index.a("dictId=".concat(t))
           case 3:
-            _e$sent4 = e.sent
-            e$sent$sign = _e$sent4.sign
-            e$sent$timestamp = _e$sent4.timestamp
+            e$sent = e.sent
+            e$sent$sign = e$sent.sign
+            e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return v.a.delete(C + "/webdb/try/dict/clear/".concat(t), {
+            return $_209.a.delete(C + "/webdb/try/dict/clear/".concat(t), {
               headers: c.a({
                 env: T,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, E.a())
+              }, $$_146_87.a())
             })
           case 8:
-            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+            if (_e$sent2 = e.sent, 200 !== (_e$sent2$data = _e$sent2.data).code) {
               e.next = 12
               break
             }
-            return e.abrupt("return", e$sent$data.success)
+            return e.abrupt("return", _e$sent2$data.success)
           case 12:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               message: "无法清空所有键值对"
             })
-            throw new TypeError(e$sent$data.msg)
+            throw new TypeError(_e$sent2$data.msg)
           case 16:
             if (e.prev = 16, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
               e.next = 20
@@ -280,7 +280,7 @@ function j() {
             }
             throw e.t0
           case 20:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               message: "网络通讯异常，无法清空所有键值对"
             })
@@ -298,24 +298,24 @@ function N(e, t, n) {
 }
 function R() {
   return (R = _.a(m.a.mark(function e(t, n, r) {
-    var /* [auto-meaningful-name] */_e$sent6
+    var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
-    var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */e$sent$data
+    var /* [auto-meaningful-name] */_e$sent3
+    var /* [auto-meaningful-name] */_e$sent3$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.prev = 0
             e.next = 3
-            return w.a("dictId=".concat(t, "&key=").concat(n))
+            return $$_146_119_index.a("dictId=".concat(t, "&key=").concat(n))
           case 3:
-            _e$sent6 = e.sent
-            e$sent$sign = _e$sent6.sign
-            e$sent$timestamp = _e$sent6.timestamp
+            e$sent = e.sent
+            e$sent$sign = e$sent.sign
+            e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return v.a.get(C + "/webdb/try/dict/".concat(t, "/getvalue"), {
+            return $_209.a.get(C + "/webdb/try/dict/".concat(t, "/getvalue"), {
               params: {
                 key: n
               },
@@ -323,28 +323,28 @@ function R() {
                 env: T,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, E.a())
+              }, $$_146_87.a())
             })
           case 8:
-            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+            if (_e$sent3 = e.sent, 200 !== (_e$sent3$data = _e$sent3.data).code) {
               e.next = 12
               break
             }
-            return e.abrupt("return", e$sent$data.data)
+            return e.abrupt("return", _e$sent3$data.data)
           case 12:
-            if (r && y.a.condition(false, {
+            if (r && $$_14.a.condition(false, {
               type: "error",
               messageId: "keyNotExists",
               values: {
                 key: n
               }
-            }), 40400912 !== e$sent$data.code) {
+            }), 40400912 !== _e$sent3$data.code) {
               e.next = 15
               break
             }
             return e.abrupt("return", [])
           case 15:
-            throw new TypeError(e$sent$data.msg)
+            throw new TypeError(_e$sent3$data.msg)
           case 18:
             if (e.prev = 18, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
               e.next = 22
@@ -352,7 +352,7 @@ function R() {
             }
             throw e.t0
           case 22:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               messageId: "notNetwork",
               values: {
@@ -375,11 +375,11 @@ function k(e, t, n, r) {
 function x() {
   return (x = _.a(m.a.mark(function e(t, n, r, o) {
     var i
-    var /* [auto-meaningful-name] */_e$sent0
+    var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
-    var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */e$sent$data
+    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */_e$sent4$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -391,13 +391,13 @@ function x() {
               value: r.toString()
             }
             e.next = 4
-            return w.a("".concat(JSON.stringify(i)))
+            return $$_146_119_index.a("".concat(JSON.stringify(i)))
           case 4:
-            _e$sent0 = e.sent
-            e$sent$sign = _e$sent0.sign
-            e$sent$timestamp = _e$sent0.timestamp
+            e$sent = e.sent
+            e$sent$sign = e$sent.sign
+            e$sent$timestamp = e$sent.timestamp
             e.next = 9
-            return v.a.post(C + "/webdb/try/dict/".concat(t, "/set"), {
+            return $_209.a.post(C + "/webdb/try/dict/".concat(t, "/set"), {
               key: n,
               type: o,
               value: r
@@ -406,22 +406,22 @@ function x() {
                 env: T,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, E.a())
+              }, $$_146_87.a())
             })
           case 9:
-            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+            if (_e$sent4 = e.sent, 200 !== (_e$sent4$data = _e$sent4.data).code) {
               e.next = 13
               break
             }
-            return e.abrupt("return", e$sent$data.success)
+            return e.abrupt("return", _e$sent4$data.success)
           case 13:
-            if (40400914 === e$sent$data.code) {
-              y.a.condition(false, {
+            if (40400914 === _e$sent4$data.code) {
+              $$_14.a.condition(false, {
                 type: "error",
-                message: e$sent$data.msg
+                message: _e$sent4$data.msg
               })
             } else {
-              y.a.condition(false, {
+              $$_14.a.condition(false, {
                 type: "error",
                 messageId: "keyNotExists",
                 values: {
@@ -429,7 +429,7 @@ function x() {
                 }
               })
             }
-            throw new TypeError(e$sent$data.msg)
+            throw new TypeError(_e$sent4$data.msg)
           case 17:
             if (e.prev = 17, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
               e.next = 21
@@ -437,7 +437,7 @@ function x() {
             }
             throw e.t0
           case 21:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               messageId: "notNetwork",
               values: {
@@ -459,45 +459,45 @@ function D(e, t, n) {
 }
 function M() {
   return (M = _.a(m.a.mark(function e(t, n, r) {
-    var /* [auto-meaningful-name] */_e$sent12
+    var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$sign
     var /* [auto-meaningful-name] */e$sent$timestamp
-    var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */e$sent$data
+    var /* [auto-meaningful-name] */_e$sent5
+    var /* [auto-meaningful-name] */_e$sent5$data
     return m.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             e.prev = 0
             e.next = 3
-            return w.a("dictId=".concat(t, "&id=").concat(r, "&key=").concat(n))
+            return $$_146_119_index.a("dictId=".concat(t, "&id=").concat(r, "&key=").concat(n))
           case 3:
-            _e$sent12 = e.sent
-            e$sent$sign = _e$sent12.sign
-            e$sent$timestamp = _e$sent12.timestamp
+            e$sent = e.sent
+            e$sent$sign = e$sent.sign
+            e$sent$timestamp = e$sent.timestamp
             e.next = 8
-            return v.a.delete(C + "/webdb/try/dict/".concat(t, "/remove?key=").concat(n, "&id=").concat(r), {
+            return $_209.a.delete(C + "/webdb/try/dict/".concat(t, "/remove?key=").concat(n, "&id=").concat(r), {
               headers: c.a({
                 env: T,
                 sign: e$sent$sign,
                 timestamp: e$sent$timestamp
-              }, E.a())
+              }, $$_146_87.a())
             })
           case 8:
-            if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
+            if (_e$sent5 = e.sent, 200 !== (_e$sent5$data = _e$sent5.data).code) {
               e.next = 12
               break
             }
-            return e.abrupt("return", e$sent$data.success)
+            return e.abrupt("return", _e$sent5$data.success)
           case 12:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               messageId: "keyNotExists",
               values: {
                 key: n
               }
             })
-            throw new TypeError(e$sent$data.msg)
+            throw new TypeError(_e$sent5$data.msg)
           case 16:
             if (e.prev = 16, e.t0 = e.catch(0), !(e.t0 instanceof TypeError)) {
               e.next = 20
@@ -505,7 +505,7 @@ function M() {
             }
             throw e.t0
           case 20:
-            y.a.condition(false, {
+            $$_14.a.condition(false, {
               type: "error",
               messageId: "deleteNotNetwork",
               values: {
@@ -750,7 +750,7 @@ function J() {
   }, H)
 }
 var $
-var ee = i.a()
+var ee = $_486_index.a()
 var te = Redux.createStore(f)
 var ne = false
 try {
@@ -765,15 +765,15 @@ function re(e) {
   return t
 }
 function oe(e) {
-  var e$screenList = e.screenList
-  var e$widgetMap = e.widgetMap
-  var e$variableMap = e.variableMap
-  var e$imageFileMap = e.imageFileMap
-  var e$soundFileMap = e.soundFileMap
-  var e$iconFileMap = e.iconFileMap
-  var e$initialScreenId = e.initialScreenId
-  var e$version = e.version
-  a.c(e$widgetMap, e$version)
+  var /* [auto-meaningful-name] */e$screenList = e.screenList
+  var /* [auto-meaningful-name] */e$widgetMap = e.widgetMap
+  var /* [auto-meaningful-name] */e$variableMap = e.variableMap
+  var /* [auto-meaningful-name] */e$imageFileMap = e.imageFileMap
+  var /* [auto-meaningful-name] */e$soundFileMap = e.soundFileMap
+  var /* [auto-meaningful-name] */e$iconFileMap = e.iconFileMap
+  var /* [auto-meaningful-name] */e$initialScreenId = e.initialScreenId
+  var /* [auto-meaningful-name] */e$version = e.version
+  $_343.c(e$widgetMap, e$version)
   var p = {
     screenList: r.a.List(e$screenList),
     widgetMap: r.a.Map(e$widgetMap),

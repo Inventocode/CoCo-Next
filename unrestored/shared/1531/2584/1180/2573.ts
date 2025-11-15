@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2573
@@ -14,7 +14,7 @@ var r = require("./1432")
 var o = require("./1433")
 var i = {
   blocks: function (e) {
-    for (var t = [], e$data$length = e.data.length, r = 0, i = (0, o.readByte)()(e); 0 !== i && i; i = (0, o.readByte)()(e)) {
+    for (var t = [], /* [auto-meaningful-name] */e$data$length = e.data.length, r = 0, i = (0, o.readByte)()(e); 0 !== i && i; i = (0, o.readByte)()(e)) {
       if (e.pos + i >= e$data$length) {
         var a = e$data$length - e.pos
         t.push((0, o.readBytes)(a)(e))

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2286
@@ -17,7 +17,7 @@ module.exports = function () {
       }
     },
     emit: function (t) {
-      for (var arguments$length = arguments.length, r = new Array(arguments$length > 1 ? arguments$length - 1 : 0), i = 1; i < arguments$length; i++) {
+      for (var /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length > 1 ? arguments$length - 1 : 0), i = 1; i < arguments$length; i++) {
         r[i - 1] = arguments[i]
       }
       if (t in e) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2234
@@ -8,8 +8,8 @@
 
 module.exports = function (e, t, n) {
   var r = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var a = e.schema[t]
   var s = e.schemaPath + e.util.getProperty(t)
   var c = e.errSchemaPath + "/" + t
@@ -29,7 +29,7 @@ module.exports = function (e, t, n) {
   } else {
     f = a
   }
-  var e$opts$unknownFormats = e.opts.unknownFormats
+  var /* [auto-meaningful-name] */e$opts$unknownFormats = e.opts.unknownFormats
   var p = Array.isArray(e$opts$unknownFormats)
   if (d) {
     r += " var " + (_ = "format" + e$level) + " = formats[" + f + "]; var " + (A = "isObject" + e$level) + " = typeof " + _ + " == 'object' && !(" + _ + " instanceof RegExp) && " + _ + ".validate; var " + (g = "formatType" + e$level) + " = " + A + " && " + _ + ".type || 'string'; if (" + A + ") { "

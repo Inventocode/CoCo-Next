@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2204
@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("../../../../36/2668/220")
-var i = require("../../../../36/2668/230")
-var o = require("../../../../36/2668/2689/703/index")
-var a = require("../../../../38/607/1970/529")
+var r = require("../../220")
+var i = require("../../230")
+var o = require("../../../../1036/1363/1122/703/index")
+var a = require("../../../../1036/1363/1122/529")
 var s = require("../../../../38/607/356")
 var c = require("../../../../38/607/357/index")
 var u = require("./2205")
-var require$$1332$normalizeOptions = require("../1332").normalizeOptions
+var /* [auto-meaningful-name] */require$$_1332$normalizeOptions = require("../1332").normalizeOptions
 var f = Symbol("espree's internal state")
 var d = Symbol("espree's esprimaFinishNode")
 module.exports = function () {
@@ -34,7 +34,7 @@ module.exports = function () {
         if (!("string" === typeof n || n instanceof String)) {
           n = String(n)
         }
-        var o = require$$1332$normalizeOptions(e)
+        var o = require$$_1332$normalizeOptions(e)
         var a = o.ecmaFeatures || {}
         var s = true === o.tokens ? new u(t, n) : null;
         (i = h.call(this, {
@@ -92,7 +92,7 @@ module.exports = function () {
           } while (this.type !== t.eof)
           this.next()
           var e = this[f]
-          var e$tokens = e.tokens
+          var /* [auto-meaningful-name] */e$tokens = e.tokens
           if (e.comments) {
             e$tokens.comments = e.comments
           }
@@ -101,7 +101,7 @@ module.exports = function () {
       }, {
         key: "finishNode",
         value: function () {
-          for (var e, arguments$length = arguments.length, n = new Array(arguments$length), r = 0; r < arguments$length; r++) {
+          for (var e, /* [auto-meaningful-name] */arguments$length = arguments.length, n = new Array(arguments$length), r = 0; r < arguments$length; r++) {
             n[r] = arguments[r]
           }
           var i = (e = o(a(p.prototype), "finishNode", this)).call.apply(e, [this].concat(n))
@@ -110,7 +110,7 @@ module.exports = function () {
       }, {
         key: "finishNodeAt",
         value: function () {
-          for (var e, arguments$length = arguments.length, n = new Array(arguments$length), r = 0; r < arguments$length; r++) {
+          for (var e, /* [auto-meaningful-name] */arguments$length = arguments.length, n = new Array(arguments$length), r = 0; r < arguments$length; r++) {
             n[r] = arguments[r]
           }
           var i = (e = o(a(p.prototype), "finishNodeAt", this)).call.apply(e, [this].concat(n))
@@ -164,7 +164,7 @@ module.exports = function () {
       }, {
         key: "unexpected",
         value: function (e) {
-          var t = "Unexpected token"
+          var /* [auto-meaningful-name] */UnexpectedToken = "Unexpected token"
           if (null !== e && undefined !== e) {
             this.pos = e
             if (this.options.locations) {
@@ -176,9 +176,9 @@ module.exports = function () {
             this.nextToken()
           }
           if (this.end > this.start) {
-            t += " ".concat(this.input.slice(this.start, this.end))
+            UnexpectedToken += " ".concat(this.input.slice(this.start, this.end))
           }
-          this.raise(this.start, t)
+          this.raise(this.start, UnexpectedToken)
         }
       }, {
         key: "jsx_readString",

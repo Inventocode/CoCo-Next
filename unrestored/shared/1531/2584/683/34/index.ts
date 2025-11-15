@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：34
@@ -220,8 +220,8 @@ Object.defineProperty(r, "url", {
     return ge
   }
 })
-import i = require("./1459/index");
-import o = require("../../0/1532/763");
+import /* [auto-meaningful-name] */$_1459_index = require("./1459/index")
+import /* [auto-meaningful-name] */$$_$$_0_1532_763 = require("../../0/1532/763")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -233,9 +233,9 @@ var a = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(o)
+}($$_$$_0_1532_763)
 if (!self.Promise) {
-  self.Promise = i.a
+  self.Promise = $_1459_index.a
 }
 if (!Object.assign) {
   Object.assign = a.a
@@ -370,7 +370,7 @@ var W = function (e) {
       maxTouchPoints: navigator.maxTouchPoints || 0
     }
   }
-  var t$userAgent = t.userAgent
+  var /* [auto-meaningful-name] */t$userAgent = t.userAgent
   var r = t$userAgent.split("[FBAN")
   if ("undefined" !== typeof r[1]) {
     t$userAgent = r[0]
@@ -636,7 +636,7 @@ var fe = {
   CREATE_IMAGE_BITMAP: false,
   ROUND_PIXELS: false
 }
-import de = require("./1307");
+import /* [auto-meaningful-name] */$_1307 = require("./1307")
 var he = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -648,8 +648,8 @@ var he = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(de)
-import pe = require("./1308");
+}($_1307)
+import /* [auto-meaningful-name] */$_1308 = require("./1308")
 var _e = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -661,8 +661,8 @@ var _e = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(pe)
-import Ae = require("./1028/index");
+}($_1308)
+import /* [auto-meaningful-name] */$_1028_index = require("./1028/index")
 !function (e) {
   e[e.WEBGL_LEGACY = 0] = "WEBGL_LEGACY"
   e[e.WEBGL = 1] = "WEBGL"
@@ -808,9 +808,9 @@ import Ae = require("./1028/index");
   e[e.HIGH = 8] = "HIGH"
 })(le || (le = {}))
 var ge = {
-  parse: Ae.parse,
-  format: Ae.format,
-  resolve: Ae.resolve
+  parse: $_1028_index.parse,
+  format: $_1028_index.format,
+  resolve: $_1028_index.resolve
 }
 fe.RETINA_PREFIX = /@([0-9\.]+)x/
 fe.FAIL_IF_MAJOR_PERFORMANCE_CAVEAT = false
@@ -1170,7 +1170,7 @@ function Le(e) {
 }
 function Ue(e, t, n) {
   var r
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   if (!(t >= e$length || 0 === n)) {
     var o = e$length - (n = t + n > e$length ? e$length - t : n)
     for (r = t; r < o; ++r) {
@@ -1192,7 +1192,7 @@ function Qe(e, t, n) {
     n = 3
   }
   if (!ze[t]) {
-    var newError$stack = new Error().stack
+    var /* [auto-meaningful-name] */newError$stack = new Error().stack
     if ("undefined" === typeof newError$stack) {
       console.warn("PixiJS Deprecation Warning: ", t + "\nDeprecated since v" + e)
     } else {
@@ -1267,11 +1267,11 @@ function Je(e) {
   var t
   var n
   var r
-  var e$width = e.width
-  var e$height = e.height
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$height = e.height
   var a = e.getContext("2d")
-  var a$getImageData00E$widthE$height$data = a.getImageData(0, 0, e$width, e$height).data
-  var a$getImageData00E$widthE$height$data$length = a$getImageData00E$widthE$height$data.length
+  var /* [auto-meaningful-name] */a$getImageData00E$widthE$height$data = a.getImageData(0, 0, e$width, e$height).data
+  var /* [auto-meaningful-name] */a$getImageData00E$widthE$height$data$length = a$getImageData00E$widthE$height$data.length
   var u = {
     top: null,
     left: null,
@@ -1565,7 +1565,7 @@ var ft = function () {
     }
     var r = Array.isArray(t[0]) ? t[0] : t
     if ("number" !== typeof r[0]) {
-      for (var i = [], o = 0, r$length = r.length; o < r$length; o++) {
+      for (var i = [], o = 0, /* [auto-meaningful-name] */r$length = r.length; o < r$length; o++) {
         i.push(r[o].x, r[o].y)
       }
       r = i
@@ -1888,9 +1888,9 @@ var _t = function () {
   e.prototype.rotate = function (e) {
     var t = Math.cos(e)
     var n = Math.sin(e)
-    var this$a = this.a
-    var this$c = this.c
-    var this$tx = this.tx
+    var /* [auto-meaningful-name] */this$a = this.a
+    var /* [auto-meaningful-name] */this$c = this.c
+    var /* [auto-meaningful-name] */this$tx = this.tx
     this.a = this$a * t - this.b * n
     this.b = this$a * n + this.b * t
     this.c = this$c * t - this.d * n
@@ -1900,10 +1900,10 @@ var _t = function () {
     return this
   }
   e.prototype.append = function (e) {
-    var this$a = this.a
-    var this$b = this.b
-    var this$c = this.c
-    var this$d = this.d
+    var /* [auto-meaningful-name] */this$a = this.a
+    var /* [auto-meaningful-name] */this$b = this.b
+    var /* [auto-meaningful-name] */this$c = this.c
+    var /* [auto-meaningful-name] */this$d = this.d
     this.a = e.a * this$a + e.b * this$c
     this.b = e.a * this$b + e.b * this$d
     this.c = e.c * this$a + e.d * this$c
@@ -1922,10 +1922,10 @@ var _t = function () {
     return this
   }
   e.prototype.prepend = function (e) {
-    var this$tx = this.tx
+    var /* [auto-meaningful-name] */this$tx = this.tx
     if (1 !== e.a || 0 !== e.b || 0 !== e.c || 1 !== e.d) {
-      var this$a = this.a
-      var this$c = this.c
+      var /* [auto-meaningful-name] */this$a = this.a
+      var /* [auto-meaningful-name] */this$c = this.c
       this.a = this$a * e.a + this.b * e.c
       this.b = this$a * e.b + this.b * e.d
       this.c = this$c * e.a + this.d * e.c
@@ -1936,11 +1936,11 @@ var _t = function () {
     return this
   }
   e.prototype.decompose = function (e) {
-    var this$a = this.a
-    var this$b = this.b
-    var this$c = this.c
-    var this$d = this.d
-    var e$pivot = e.pivot
+    var /* [auto-meaningful-name] */this$a = this.a
+    var /* [auto-meaningful-name] */this$b = this.b
+    var /* [auto-meaningful-name] */this$c = this.c
+    var /* [auto-meaningful-name] */this$d = this.d
+    var /* [auto-meaningful-name] */e$pivot = e.pivot
     var a = -Math.atan2(-this$c, this$d)
     var s = Math.atan2(this$b, this$a)
     var c = Math.abs(a + s)
@@ -1959,11 +1959,11 @@ var _t = function () {
     return e
   }
   e.prototype.invert = function () {
-    var this$a = this.a
-    var this$b = this.b
-    var this$c = this.c
-    var this$d = this.d
-    var this$tx = this.tx
+    var /* [auto-meaningful-name] */this$a = this.a
+    var /* [auto-meaningful-name] */this$b = this.b
+    var /* [auto-meaningful-name] */this$c = this.c
+    var /* [auto-meaningful-name] */this$d = this.d
+    var /* [auto-meaningful-name] */this$tx = this.tx
     var o = this$a * this$d - this$b * this$c
     this.a = this$d / o
     this.b = -this$b / o
@@ -2035,13 +2035,13 @@ var vt = [0, -1, -1, -1, 0, 1, 1, 1, 0, 1, 1, 1, 0, -1, -1, -1]
 var mt = [1, 1, 0, -1, -1, -1, 0, 1, -1, -1, 0, 1, 1, 1, 0, -1]
 var yt = []
 var bt = []
-var math$sign = Math.sign
+var /* [auto-meaningful-name] */Math$sign = Math.sign
 !function () {
   for (var e = 0; e < 16; e++) {
     var t = []
     yt.push(t)
     for (var n = 0; n < 16; n++) {
-      for (var r = math$sign(At[e] * At[n] + vt[e] * gt[n]), i = math$sign(gt[e] * At[n] + mt[e] * gt[n]), o = math$sign(At[e] * vt[n] + vt[e] * mt[n]), a = math$sign(gt[e] * vt[n] + mt[e] * mt[n]), s = 0; s < 16; s++) {
+      for (var r = Math$sign(At[e] * At[n] + vt[e] * gt[n]), i = Math$sign(gt[e] * At[n] + mt[e] * gt[n]), o = Math$sign(At[e] * vt[n] + vt[e] * mt[n]), a = Math$sign(gt[e] * vt[n] + mt[e] * mt[n]), s = 0; s < 16; s++) {
         if (At[s] === r && gt[s] === i && vt[s] === o && mt[s] === a) {
           t.push(s)
           break
@@ -2144,7 +2144,7 @@ var Ct = function () {
     return "[@pixi/math:Transform position=(" + this.position.x + ", " + this.position.y + ") rotation=" + this.rotation + " scale=(" + this.scale.x + ", " + this.scale.y + ") skew=(" + this.skew.x + ", " + this.skew.y + ") ]"
   }
   e.prototype.updateLocalTransform = function () {
-    var this$localTransform = this.localTransform
+    var /* [auto-meaningful-name] */this$localTransform = this.localTransform
     if (this._localID !== this._currentLocalID) {
       this$localTransform.a = this._cx * this.scale.x
       this$localTransform.b = this._sx * this.scale.x
@@ -2157,7 +2157,7 @@ var Ct = function () {
     }
   }
   e.prototype.updateTransform = function (e) {
-    var this$localTransform = this.localTransform
+    var /* [auto-meaningful-name] */this$localTransform = this.localTransform
     if (this._localID !== this._currentLocalID) {
       this$localTransform.a = this._cx * this.scale.x
       this$localTransform.b = this._sx * this.scale.x
@@ -2169,8 +2169,8 @@ var Ct = function () {
       this._parentID = -1
     }
     if (this._parentID !== e._worldID) {
-      var e$worldTransform = e.worldTransform
-      var this$worldTransform = this.worldTransform
+      var /* [auto-meaningful-name] */e$worldTransform = e.worldTransform
+      var /* [auto-meaningful-name] */this$worldTransform = this.worldTransform
       this$worldTransform.a = this$localTransform.a * e$worldTransform.a + this$localTransform.b * e$worldTransform.c
       this$worldTransform.b = this$localTransform.a * e$worldTransform.b + this$localTransform.b * e$worldTransform.d
       this$worldTransform.c = this$localTransform.c * e$worldTransform.a + this$localTransform.d * e$worldTransform.c
@@ -2242,7 +2242,7 @@ var Ot = function () {
         this.fn(e)
       }
     }
-    var this$next = this.next
+    var /* [auto-meaningful-name] */this$next = this.next
     if (this.once) {
       this.destroy(true)
     }
@@ -2272,7 +2272,7 @@ var Ot = function () {
     if (this.next) {
       this.next.previous = this.previous
     }
-    var this$next = this.next
+    var /* [auto-meaningful-name] */this$next = this.next
     this.next = e ? null : this$next
     this.previous = null
     return this$next
@@ -2340,8 +2340,8 @@ var kt = function () {
     return this._addListener(new Ot(e, t, n, true))
   }
   e.prototype._addListener = function (e) {
-    var this$_head$next = this._head.next
-    var this$_head = this._head
+    var /* [auto-meaningful-name] */this$_head$next = this._head.next
+    var /* [auto-meaningful-name] */this$_head = this._head
     if (this$_head$next) {
       for (; this$_head$next;) {
         if (e.priority > this$_head$next.priority) {
@@ -2361,7 +2361,7 @@ var kt = function () {
     return this
   }
   e.prototype.remove = function (e, t) {
-    for (var this$_head$next = this._head.next; this$_head$next;) {
+    for (var /* [auto-meaningful-name] */this$_head$next = this._head.next; this$_head$next;) {
       this$_head$next = this$_head$next.match(e, t) ? this$_head$next.destroy() : this$_head$next.next
     }
     if (!this._head.next) {
@@ -2374,7 +2374,7 @@ var kt = function () {
       if (!this._head) {
         return 0
       }
-      for (var e = 0, this$_head = this._head; this$_head = this$_head.next;) {
+      for (var e = 0, /* [auto-meaningful-name] */this$_head = this._head; this$_head = this$_head.next;) {
         e++
       }
       return e
@@ -2397,7 +2397,7 @@ var kt = function () {
   e.prototype.destroy = function () {
     if (!this._protected) {
       this.stop()
-      for (var this$_head$next = this._head.next; this$_head$next;) {
+      for (var /* [auto-meaningful-name] */this$_head$next = this._head.next; this$_head$next;) {
         this$_head$next = this$_head$next.destroy(true)
       }
       this._head.destroy()
@@ -2423,7 +2423,7 @@ var kt = function () {
       }
       this.deltaMS = t
       this.deltaTime = this.deltaMS * fe.TARGET_FPMS
-      for (var this$_head = this._head, this$_head$next = this$_head.next; this$_head$next;) {
+      for (var /* [auto-meaningful-name] */this$_head = this._head, /* [auto-meaningful-name] */this$_head$next = this$_head.next; this$_head$next;) {
         this$_head$next = this$_head$next.emit(this.deltaTime)
       }
       if (!this$_head.next) {
@@ -2530,7 +2530,7 @@ var St = function () {
   }
   e.destroy = function () {
     if (this._ticker) {
-      var this$_ticker = this._ticker
+      var /* [auto-meaningful-name] */this$_ticker = this._ticker
       this.ticker = null
       this$_ticker.destroy()
     }
@@ -2580,10 +2580,10 @@ var Tt = function () {
     this.maxY = Math.max(this.maxY, u)
   }
   e.prototype.addQuad = function (e) {
-    var this$minX = this.minX
-    var this$minY = this.minY
-    var this$maxX = this.maxX
-    var this$maxY = this.maxY
+    var /* [auto-meaningful-name] */this$minX = this.minX
+    var /* [auto-meaningful-name] */this$minY = this.minY
+    var /* [auto-meaningful-name] */this$maxX = this.maxX
+    var /* [auto-meaningful-name] */this$maxY = this.maxY
     var o = e[0]
     var a = e[1]
     this$minX = o < this$minX ? o : this$minX
@@ -2617,10 +2617,10 @@ var Tt = function () {
     var c = e.d
     var u = e.tx
     var l = e.ty
-    var this$minX = this.minX
-    var this$minY = this.minY
-    var this$maxX = this.maxX
-    var this$maxY = this.maxY
+    var /* [auto-meaningful-name] */this$minX = this.minX
+    var /* [auto-meaningful-name] */this$minY = this.minY
+    var /* [auto-meaningful-name] */this$maxX = this.maxX
+    var /* [auto-meaningful-name] */this$maxY = this.maxY
     var _ = o * t + s * n + u
     var A = a * t + c * n + l
     this$minX = _ < this$minX ? _ : this$minX
@@ -2645,7 +2645,7 @@ var Tt = function () {
     this.maxY = this$maxY
   }
   e.prototype.addVertexData = function (e, t, n) {
-    for (var this$minX = this.minX, this$minY = this.minY, this$maxX = this.maxX, this$maxY = this.maxY, s = t; s < n; s += 2) {
+    for (var /* [auto-meaningful-name] */this$minX = this.minX, /* [auto-meaningful-name] */this$minY = this.minY, /* [auto-meaningful-name] */this$maxX = this.maxX, /* [auto-meaningful-name] */this$maxY = this.maxY, s = t; s < n; s += 2) {
       var c = e[s]
       var u = e[s + 1]
       this$minX = c < this$minX ? c : this$minX
@@ -2668,7 +2668,7 @@ var Tt = function () {
     if (undefined === o) {
       o = i
     }
-    for (var a = e.a, s = e.b, c = e.c, u = e.d, l = e.tx, f = e.ty, this$minX = this.minX, this$minY = this.minY, this$maxX = this.maxX, this$maxY = this.maxY, A = n; A < r; A += 2) {
+    for (var a = e.a, s = e.b, c = e.c, u = e.d, l = e.tx, f = e.ty, /* [auto-meaningful-name] */this$minX = this.minX, /* [auto-meaningful-name] */this$minY = this.minY, /* [auto-meaningful-name] */this$maxX = this.maxX, /* [auto-meaningful-name] */this$maxY = this.maxY, A = n; A < r; A += 2) {
       var g = t[A]
       var v = t[A + 1]
       var m = a * g + c * v + l
@@ -2684,10 +2684,10 @@ var Tt = function () {
     this.maxY = this$maxY
   }
   e.prototype.addBounds = function (e) {
-    var this$minX = this.minX
-    var this$minY = this.minY
-    var this$maxX = this.maxX
-    var this$maxY = this.maxY
+    var /* [auto-meaningful-name] */this$minX = this.minX
+    var /* [auto-meaningful-name] */this$minY = this.minY
+    var /* [auto-meaningful-name] */this$maxX = this.maxX
+    var /* [auto-meaningful-name] */this$maxY = this.maxY
     this.minX = e.minX < this$minX ? e.minX : this$minX
     this.minY = e.minY < this$minY ? e.minY : this$minY
     this.maxX = e.maxX > this$maxX ? e.maxX : this$maxX
@@ -2699,10 +2699,10 @@ var Tt = function () {
     var i = e.maxX < t.maxX ? e.maxX : t.maxX
     var o = e.maxY < t.maxY ? e.maxY : t.maxY
     if (n <= i && r <= o) {
-      var this$minX = this.minX
-      var this$minY = this.minY
-      var this$maxX = this.maxX
-      var this$maxY = this.maxY
+      var /* [auto-meaningful-name] */this$minX = this.minX
+      var /* [auto-meaningful-name] */this$minY = this.minY
+      var /* [auto-meaningful-name] */this$maxX = this.maxX
+      var /* [auto-meaningful-name] */this$maxY = this.maxY
       this.minX = n < this$minX ? n : this$minX
       this.minY = r < this$minY ? r : this$minY
       this.maxX = i > this$maxX ? i : this$maxX
@@ -2718,10 +2718,10 @@ var Tt = function () {
     var i = e.maxX < t.x + t.width ? e.maxX : t.x + t.width
     var o = e.maxY < t.y + t.height ? e.maxY : t.y + t.height
     if (n <= i && r <= o) {
-      var this$minX = this.minX
-      var this$minY = this.minY
-      var this$maxX = this.maxX
-      var this$maxY = this.maxY
+      var /* [auto-meaningful-name] */this$minX = this.minX
+      var /* [auto-meaningful-name] */this$minY = this.minY
+      var /* [auto-meaningful-name] */this$maxX = this.maxX
+      var /* [auto-meaningful-name] */this$maxY = this.maxY
       this.minX = n < this$minX ? n : this$minX
       this.minY = r < this$minY ? r : this$minY
       this.maxX = i > this$maxX ? i : this$maxX
@@ -2851,12 +2851,12 @@ var It = function (e) {
     if (!this._localBounds) {
       this._localBounds = new Tt()
     }
-    var this$transform = this.transform
-    var this$parent = this.parent
+    var /* [auto-meaningful-name] */this$transform = this.transform
+    var /* [auto-meaningful-name] */this$parent = this.parent
     this.parent = null
     this.transform = this._tempDisplayObjectParent.transform
-    var this$_bounds = this._bounds
-    var this$_boundsID = this._boundsID
+    var /* [auto-meaningful-name] */this$_bounds = this._bounds
+    var /* [auto-meaningful-name] */this$_boundsID = this._boundsID
     this._bounds = this._localBounds
     var o = this.getBounds(false, e)
     this.parent = this$parent
@@ -2970,7 +2970,7 @@ var It = function (e) {
     configurable: true
   })
   t.prototype.enableTempParent = function () {
-    var this$parent = this.parent
+    var /* [auto-meaningful-name] */this$parent = this.parent
     this.parent = this._tempDisplayObjectParent
     return this$parent
   }
@@ -3281,7 +3281,7 @@ var Pt = function (e) {
     throw new RangeError("removeChildren: numeric values are outside the acceptable range.")
   }
   t.prototype.sortChildren = function () {
-    for (var e = false, t = 0, this$children$length = this.children.length; t < this$children$length; ++t) {
+    for (var e = false, t = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; t < this$children$length; ++t) {
       var r = this.children[t]
       r._lastSortedIndex = t
       if (!(e || 0 === r.zIndex)) {
@@ -3300,7 +3300,7 @@ var Pt = function (e) {
     this._boundsID++
     this.transform.updateTransform(this.parent.transform)
     this.worldAlpha = this.alpha * this.parent.worldAlpha
-    for (var e = 0, this$children$length = this.children.length; e < this$children$length; ++e) {
+    for (var e = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; e < this$children$length; ++e) {
       var n = this.children[e]
       if (n.visible) {
         n.updateTransform()
@@ -3333,7 +3333,7 @@ var Pt = function (e) {
     }
     var r = e.prototype.getLocalBounds.call(this, t)
     if (!n) {
-      for (var i = 0, this$children$length = this.children.length; i < this$children$length; ++i) {
+      for (var i = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; i < this$children$length; ++i) {
         var a = this.children[i]
         if (a.visible) {
           a.updateTransform()
@@ -3349,7 +3349,7 @@ var Pt = function (e) {
         this.renderAdvanced(e)
       } else {
         this._render(e)
-        for (var t = 0, this$children$length = this.children.length; t < this$children$length; ++t) {
+        for (var t = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; t < this$children$length; ++t) {
           this.children[t].render(e)
         }
       }
@@ -3357,8 +3357,8 @@ var Pt = function (e) {
   }
   t.prototype.renderAdvanced = function (e) {
     e.batch.flush()
-    var this$filters = this.filters
-    var this$_mask = this._mask
+    var /* [auto-meaningful-name] */this$filters = this.filters
+    var /* [auto-meaningful-name] */this$_mask = this._mask
     if (this$filters) {
       if (!this._enabledFilters) {
         this._enabledFilters = []
@@ -3378,7 +3378,7 @@ var Pt = function (e) {
     }
     this._render(e)
     r = 0
-    for (var this$children$length = this.children.length; r < this$children$length; r++) {
+    for (var /* [auto-meaningful-name] */this$children$length = this.children.length; r < this$children$length; r++) {
       this.children[r].render(e)
     }
     e.batch.flush()
@@ -3406,7 +3406,7 @@ var Pt = function (e) {
       return this.scale.x * this.getLocalBounds().width
     },
     set: function (e) {
-      var this$getLocalBounds$width = this.getLocalBounds().width
+      var /* [auto-meaningful-name] */this$getLocalBounds$width = this.getLocalBounds().width
       this.scale.x = 0 !== this$getLocalBounds$width ? e / this$getLocalBounds$width : 1
       this._width = e
     },
@@ -3418,7 +3418,7 @@ var Pt = function (e) {
       return this.scale.y * this.getLocalBounds().height
     },
     set: function (e) {
-      var this$getLocalBounds$height = this.getLocalBounds().height
+      var /* [auto-meaningful-name] */this$getLocalBounds$height = this.getLocalBounds().height
       this.scale.y = 0 !== this$getLocalBounds$height ? e / this$getLocalBounds$height : 1
       this._height = e
     },
@@ -3596,7 +3596,7 @@ var Ut = function () {
     if (!t || !t.visible) {
       return false
     }
-    var e$data$global = e.data.global
+    var /* [auto-meaningful-name] */e$data$global = e.data.global
     var a = false
     var s = i = t.interactive || i
     var c = true
@@ -3619,7 +3619,7 @@ var Ut = function () {
       }
     }
     if (c && t.interactiveChildren && t.children) {
-      for (var t$children = t.children, l = t$children.length - 1; l >= 0; l--) {
+      for (var /* [auto-meaningful-name] */t$children = t.children, l = t$children.length - 1; l >= 0; l--) {
         var f = t$children[l]
         var d = this.recursiveFindHit(e, f, n, r, s)
         if (d) {
@@ -3797,7 +3797,7 @@ var Gt = function (e) {
   }
   t.prototype.addEvents = function () {
     if (!this.eventsAdded && this.interactionDOMElement) {
-      var this$interactionDOMElement$style = this.interactionDOMElement.style
+      var /* [auto-meaningful-name] */this$interactionDOMElement$style = this.interactionDOMElement.style
       if (self.navigator.msPointerEnabled) {
         this$interactionDOMElement$style.msContentZooming = "none"
         this$interactionDOMElement$style.msTouchAction = "none"
@@ -3831,7 +3831,7 @@ var Gt = function (e) {
   }
   t.prototype.removeEvents = function () {
     if (this.eventsAdded && this.interactionDOMElement) {
-      var this$interactionDOMElement$style = this.interactionDOMElement.style
+      var /* [auto-meaningful-name] */this$interactionDOMElement$style = this.interactionDOMElement.style
       if (self.navigator.msPointerEnabled) {
         this$interactionDOMElement$style.msContentZooming = ""
         this$interactionDOMElement$style.msTouchAction = ""
@@ -3949,18 +3949,18 @@ var Gt = function (e) {
   }
   t.prototype.processInteractive = function (e, t, n, r) {
     var i = this.search.findHit(e, t, n, r)
-    var this$delayedEvents = this.delayedEvents
+    var /* [auto-meaningful-name] */this$delayedEvents = this.delayedEvents
     if (!this$delayedEvents.length) {
       return i
     }
     e.stopPropagationHint = false
-    var this$delayedEvents$length = this$delayedEvents.length
+    var /* [auto-meaningful-name] */this$delayedEvents$length = this$delayedEvents.length
     this.delayedEvents = []
     for (var s = 0; s < this$delayedEvents$length; s++) {
       var c = this$delayedEvents[s]
-      var c$displayObject = c.displayObject
-      var c$eventString = c.eventString
-      var c$eventData = c.eventData
+      var /* [auto-meaningful-name] */c$displayObject = c.displayObject
+      var /* [auto-meaningful-name] */c$eventString = c.eventString
+      var /* [auto-meaningful-name] */c$eventData = c.eventData
       if (c$eventData.stopsPropagatingAt === c$displayObject) {
         c$eventData.stopPropagationHint = true
       }
@@ -3976,7 +3976,7 @@ var Gt = function (e) {
           e.preventDefault()
         }
       }
-      for (var t$length = t.length, r = 0; r < t$length; r++) {
+      for (var /* [auto-meaningful-name] */t$length = t.length, r = 0; r < t$length; r++) {
         var i = t[r]
         var o = this.getInteractionDataForPointerId(i)
         var a = this.configureInteractionEventForDOMEvent(this.eventData, i, o)
@@ -3993,8 +3993,8 @@ var Gt = function (e) {
     }
   }
   t.prototype.processPointerDown = function (e, t, n) {
-    var e$data = e.data
-    var e$data$identifier = e.data.identifier
+    var /* [auto-meaningful-name] */e$data = e.data
+    var /* [auto-meaningful-name] */e$data$identifier = e.data.identifier
     if (n) {
       if (!t.trackedPointers[e$data$identifier]) {
         t.trackedPointers[e$data$identifier] = new Lt(e$data$identifier)
@@ -4014,7 +4014,7 @@ var Gt = function (e) {
     }
   }
   t.prototype.onPointerComplete = function (e, t, n) {
-    for (var r = this.normalizeToPointerData(e), r$length = r.length, o = e.target !== this.interactionDOMElement ? "outside" : "", a = 0; a < r$length; a++) {
+    for (var r = this.normalizeToPointerData(e), /* [auto-meaningful-name] */r$length = r.length, o = e.target !== this.interactionDOMElement ? "outside" : "", a = 0; a < r$length; a++) {
       var s = r[a]
       var c = this.getInteractionDataForPointerId(s)
       var u = this.configureInteractionEventForDOMEvent(this.eventData, s, c)
@@ -4036,8 +4036,8 @@ var Gt = function (e) {
     }
   }
   t.prototype.processPointerCancel = function (e, t) {
-    var e$data = e.data
-    var e$data$identifier = e.data.identifier
+    var /* [auto-meaningful-name] */e$data = e.data
+    var /* [auto-meaningful-name] */e$data$identifier = e.data.identifier
     if (undefined !== t.trackedPointers[e$data$identifier]) {
       delete t.trackedPointers[e$data$identifier]
       this.dispatchEvent(t, "pointercancel", e)
@@ -4052,16 +4052,16 @@ var Gt = function (e) {
     }
   }
   t.prototype.processPointerUp = function (e, t, n) {
-    var e$data = e.data
-    var e$data$identifier = e.data.identifier
+    var /* [auto-meaningful-name] */e$data = e.data
+    var /* [auto-meaningful-name] */e$data$identifier = e.data.identifier
     var o = t.trackedPointers[e$data$identifier]
     var a = "touch" === e$data.pointerType
     var s = "mouse" === e$data.pointerType || "pen" === e$data.pointerType
     var c = false
     if (s) {
       var u = 2 === e$data.button
-      var lt$FLAGS = Lt.FLAGS
-      var f = u ? lt$FLAGS.RIGHT_DOWN : lt$FLAGS.LEFT_DOWN
+      var /* [auto-meaningful-name] */Lt$FLAGS = Lt.FLAGS
+      var f = u ? Lt$FLAGS.RIGHT_DOWN : Lt$FLAGS.LEFT_DOWN
       var d = undefined !== o && o.flags & f
       if (n) {
         this.dispatchEvent(t, u ? "rightup" : "mouseup", e)
@@ -4115,7 +4115,7 @@ var Gt = function (e) {
         this._didMove = true
         this.cursor = null
       }
-      for (var t$length = t.length, r = 0; r < t$length; r++) {
+      for (var /* [auto-meaningful-name] */t$length = t.length, r = 0; r < t$length; r++) {
         var i = t[r]
         var o = this.getInteractionDataForPointerId(i)
         var a = this.configureInteractionEventForDOMEvent(this.eventData, i, o)
@@ -4135,7 +4135,7 @@ var Gt = function (e) {
     }
   }
   t.prototype.processPointerMove = function (e, t, n) {
-    var e$data = e.data
+    var /* [auto-meaningful-name] */e$data = e.data
     var i = "touch" === e$data.pointerType
     var o = "mouse" === e$data.pointerType || "pen" === e$data.pointerType
     if (o) {
@@ -4171,8 +4171,8 @@ var Gt = function (e) {
     }
   }
   t.prototype.processPointerOverOut = function (e, t, n) {
-    var e$data = e.data
-    var e$data$identifier = e.data.identifier
+    var /* [auto-meaningful-name] */e$data = e.data
+    var /* [auto-meaningful-name] */e$data$identifier = e.data.identifier
     var o = "mouse" === e$data.pointerType || "pen" === e$data.pointerType
     var a = t.trackedPointers[e$data$identifier]
     if (n && !a) {
@@ -4219,7 +4219,7 @@ var Gt = function (e) {
   }
   t.prototype.getInteractionDataForPointerId = function (e) {
     var t
-    var e$pointerId = e.pointerId
+    var /* [auto-meaningful-name] */e$pointerId = e.pointerId
     if (1 === e$pointerId || "mouse" === e.pointerType) {
       t = this.mouse
     } else {
@@ -4255,7 +4255,7 @@ var Gt = function (e) {
   t.prototype.normalizeToPointerData = function (e) {
     var t = []
     if (this.supportsTouchEvents && e instanceof TouchEvent) {
-      for (var n = 0, e$changedTouches$length = e.changedTouches.length; n < e$changedTouches$length; n++) {
+      for (var n = 0, /* [auto-meaningful-name] */e$changedTouches$length = e.changedTouches.length; n < e$changedTouches$length; n++) {
         var i = e.changedTouches[n]
         if ("undefined" === typeof i.button) {
           i.button = e.touches.length ? 1 : 0
@@ -4375,10 +4375,10 @@ var zt = function () {
       throw new Error("max arguments reached")
     }
     var c = this
-    var c$name = c.name
-    var c$items = c.items
+    var /* [auto-meaningful-name] */c$name = c.name
+    var /* [auto-meaningful-name] */c$items = c.items
     this._aliasCount++
-    for (var f = 0, c$items$length = c$items.length; f < c$items$length; f++) {
+    for (var f = 0, /* [auto-meaningful-name] */c$items$length = c$items.length; f < c$items$length; f++) {
       c$items[f][c$name](e, t, n, r, i, o, a, s)
     }
     if (c$items === this.items) {
@@ -4575,8 +4575,8 @@ var qt = function (e) {
   function t(t, n) {
     var r = this
     var i = n || {}
-    var i$width = i.width
-    var i$height = i.height
+    var /* [auto-meaningful-name] */i$width = i.width
+    var /* [auto-meaningful-name] */i$height = i.height
     if (!i$width || !i$height) {
       throw new Error("BufferResource width or height invalid")
     }
@@ -4587,8 +4587,8 @@ var qt = function (e) {
   t.prototype.upload = function (e, t, n) {
     var r = e.gl
     r.pixelStorei(r.UNPACK_PREMULTIPLY_ALPHA_WEBGL, t.alphaMode === oe.UNPACK)
-    var t$realWidth = t.realWidth
-    var t$realHeight = t.realHeight
+    var /* [auto-meaningful-name] */t$realWidth = t.realWidth
+    var /* [auto-meaningful-name] */t$realHeight = t.realHeight
     if (n.width === t$realWidth && n.height === t$realHeight) {
       r.texSubImage2D(t.target, 0, 0, 0, t$realWidth, t$realHeight, t.format, t.type, this.data)
     } else {
@@ -4620,18 +4620,18 @@ var Jt = function (e) {
       n = null
     }
     var r = e.call(this) || this
-    var nN$alphaMode = (n = n || {}).alphaMode
-    var n$mipmap = n.mipmap
-    var n$anisotropicLevel = n.anisotropicLevel
-    var n$scaleMode = n.scaleMode
-    var n$width = n.width
-    var n$height = n.height
-    var n$wrapMode = n.wrapMode
-    var n$format = n.format
-    var n$type = n.type
-    var n$target = n.target
-    var n$resolution = n.resolution
-    var n$resourceOptions = n.resourceOptions
+    var /* [auto-meaningful-name] */NN$alphaMode = (n = n || {}).alphaMode
+    var /* [auto-meaningful-name] */n$mipmap = n.mipmap
+    var /* [auto-meaningful-name] */n$anisotropicLevel = n.anisotropicLevel
+    var /* [auto-meaningful-name] */n$scaleMode = n.scaleMode
+    var /* [auto-meaningful-name] */n$width = n.width
+    var /* [auto-meaningful-name] */n$height = n.height
+    var /* [auto-meaningful-name] */n$wrapMode = n.wrapMode
+    var /* [auto-meaningful-name] */n$format = n.format
+    var /* [auto-meaningful-name] */n$type = n.type
+    var /* [auto-meaningful-name] */n$target = n.target
+    var /* [auto-meaningful-name] */n$resolution = n.resolution
+    var /* [auto-meaningful-name] */n$resourceOptions = n.resourceOptions
     if (!(!t || t instanceof Yt)) {
       (t = Wt(t, n$resourceOptions)).internal = true
     }
@@ -4645,7 +4645,7 @@ var Jt = function (e) {
     r.format = n$format || J.RGBA
     r.type = n$type || ee.UNSIGNED_BYTE
     r.target = n$target || Z.TEXTURE_2D
-    r.alphaMode = undefined !== nN$alphaMode ? nN$alphaMode : oe.UNPACK
+    r.alphaMode = undefined !== NN$alphaMode ? NN$alphaMode : oe.UNPACK
     r.uid = Ge()
     r.touched = 0
     r.isPowerOfTwo = false
@@ -4714,7 +4714,7 @@ var Jt = function (e) {
     this.isPowerOfTwo = je(this.realWidth) && je(this.realHeight)
   }
   t.prototype.setResolution = function (e) {
-    var this$resolution = this.resolution
+    var /* [auto-meaningful-name] */this$resolution = this.resolution
     if (!(this$resolution === e)) {
       this.resolution = e
       if (this.valid) {
@@ -4853,8 +4853,8 @@ var Zt = function (e) {
   function t(t, n) {
     var r = this
     var i = n || {}
-    var i$width = i.width
-    var i$height = i.height;
+    var /* [auto-meaningful-name] */i$width = i.width
+    var /* [auto-meaningful-name] */i$height = i.height;
     (r = e.call(this, i$width, i$height) || this).items = []
     r.itemDirtyIds = []
     for (var s = 0; s < t; s++) {
@@ -4884,7 +4884,7 @@ var Zt = function (e) {
     }
   }
   t.prototype.dispose = function () {
-    for (var e = 0, this$length = this.length; e < this$length; e++) {
+    for (var e = 0, /* [auto-meaningful-name] */this$length = this.length; e < this$length; e++) {
       this.items[e].destroy()
     }
     this.items = null
@@ -4932,8 +4932,8 @@ var Zt = function (e) {
     })
     this._load = Promise.all(t).then(function () {
       var t = e.items[0]
-      var t$realWidth = t.realWidth
-      var t$realHeight = t.realHeight
+      var /* [auto-meaningful-name] */t$realWidth = t.realWidth
+      var /* [auto-meaningful-name] */t$realHeight = t.realHeight
       e.resize(t$realWidth, t$realHeight)
       return Promise.resolve(e)
     })
@@ -4947,8 +4947,8 @@ var en = function (e) {
     var i
     var o = this
     var a = n || {}
-    var a$width = a.width
-    var a$height = a.height
+    var /* [auto-meaningful-name] */a$width = a.width
+    var /* [auto-meaningful-name] */a$height = a.height
     if (Array.isArray(t)) {
       r = t
       i = t.length
@@ -4977,9 +4977,9 @@ var en = function (e) {
     t.target = Z.TEXTURE_2D_ARRAY
   }
   t.prototype.upload = function (e, t, n) {
-    var this$length = this.length
-    var this$itemDirtyIds = this.itemDirtyIds
-    var this$items = this.items
+    var /* [auto-meaningful-name] */this$length = this.length
+    var /* [auto-meaningful-name] */this$itemDirtyIds = this.itemDirtyIds
+    var /* [auto-meaningful-name] */this$items = this.items
     var a = e.gl
     if (n.dirtyId < 0) {
       a.texImage3D(a.TEXTURE_2D_ARRAY, 0, t.format, this._width, this._height, this$length, 0, t.format, t.type, null)
@@ -5019,8 +5019,8 @@ var tn = function (e) {
   }
   t.prototype.upload = function (e, t, n, r) {
     var i = e.gl
-    var t$realWidth = t.realWidth
-    var t$realHeight = t.realHeight
+    var /* [auto-meaningful-name] */t$realWidth = t.realWidth
+    var /* [auto-meaningful-name] */t$realHeight = t.realHeight
     r = r || this.source
     i.pixelStorei(i.UNPACK_PREMULTIPLY_ALPHA_WEBGL, t.alphaMode === oe.UNPACK)
     if (this.noSubImage || t.target !== i.TEXTURE_2D || n.width !== t$realWidth || n.height !== t$realHeight) {
@@ -5034,7 +5034,7 @@ var tn = function (e) {
   }
   t.prototype.update = function () {
     if (!this.destroyed) {
-      var this$source = this.source
+      var /* [auto-meaningful-name] */this$source = this.source
       var n = this$source.naturalWidth || this$source.videoWidth || this$source.width
       var r = this$source.naturalHeight || this$source.videoHeight || this$source.height
       this.resize(n, r)
@@ -5052,7 +5052,7 @@ var nn = function (e) {
   }
   Xt(t, e)
   t.test = function (e) {
-    var self$OffscreenCanvas = self.OffscreenCanvas
+    var /* [auto-meaningful-name] */self$OffscreenCanvas = self.OffscreenCanvas
     return !!(self$OffscreenCanvas && e instanceof self$OffscreenCanvas) || self.HTMLCanvasElement && e instanceof HTMLCanvasElement
   }
   return t
@@ -5061,10 +5061,10 @@ var rn = function (e) {
   function t(n, r) {
     var i = this
     var o = r || {}
-    var o$width = o.width
-    var o$height = o.height
-    var o$autoLoad = o.autoLoad
-    var o$linkBaseTexture = o.linkBaseTexture
+    var /* [auto-meaningful-name] */o$width = o.width
+    var /* [auto-meaningful-name] */o$height = o.height
+    var /* [auto-meaningful-name] */o$autoLoad = o.autoLoad
+    var /* [auto-meaningful-name] */o$linkBaseTexture = o.linkBaseTexture
     if (n && n.length !== t.SIDES) {
       throw new Error("Invalid length. Got " + n.length + ", expected 6")
     }
@@ -5113,7 +5113,7 @@ var rn = function (e) {
     return this
   }
   t.prototype.upload = function (e, n, r) {
-    for (var this$itemDirtyIds = this.itemDirtyIds, o = 0; o < t.SIDES; o++) {
+    for (var /* [auto-meaningful-name] */this$itemDirtyIds = this.itemDirtyIds, o = 0; o < t.SIDES; o++) {
       var a = this.items[o]
       if (this$itemDirtyIds[o] < a.dirtyId) {
         if (a.valid && a.resource) {
@@ -5170,7 +5170,7 @@ var on = function (e) {
         this.createBitmap = e
       }
       this._load = new Promise(function (e, n) {
-        var t$source = t.source
+        var /* [auto-meaningful-name] */t$source = t.source
         t.url = t$source.src
         var i = function () {
           if (!t.destroyed) {
@@ -5200,7 +5200,7 @@ var on = function (e) {
   }
   t.prototype.process = function () {
     var e = this
-    var this$source = this.source
+    var /* [auto-meaningful-name] */this$source = this.source
     return null !== this._process ? this._process : null === this.bitmap && self.createImageBitmap ? (this._process = self.createImageBitmap(this$source, 0, 0, this$source.width, this$source.height, {
       premultiplyAlpha: this.alphaMode === oe.UNPACK ? "premultiply" : "none"
     }).then(function (t) {
@@ -5220,7 +5220,7 @@ var on = function (e) {
     e.prototype.upload.call(this, t, n, r, this.bitmap)
     if (!this.preserveBitmap) {
       var i = true
-      var n$_glTextures = n._glTextures
+      var /* [auto-meaningful-name] */n$_glTextures = n._glTextures
       for (var a in n$_glTextures) {
         var s = n$_glTextures[a]
         if (s !== r && s.dirtyId !== n.dirtyId) {
@@ -5304,8 +5304,8 @@ var an = function (e) {
     }
     t.onload = function () {
       if (e._resolve) {
-        var t$width = t.width
-        var t$height = t.height
+        var /* [auto-meaningful-name] */t$width = t.width
+        var /* [auto-meaningful-name] */t$height = t.height
         if (!t$width || !t$height) {
           throw new Error("The SVG image must have width and height defined (in pixels), canvas API needs them.")
         }
@@ -5317,7 +5317,7 @@ var an = function (e) {
         }
         i = Math.round(i)
         o = Math.round(o)
-        var e$source = e.source
+        var /* [auto-meaningful-name] */e$source = e.source
         e$source.width = i
         e$source.height = o
         e$source._pixiId = "canvas_" + Ge()
@@ -5364,8 +5364,8 @@ var sn = function (e) {
       for (var s = 0; s < n.length; ++s) {
         var c = document.createElement("source")
         var u = n[s]
-        var u$src = u.src
-        var u$mime = u.mime
+        var /* [auto-meaningful-name] */u$src = u.src
+        var /* [auto-meaningful-name] */u$mime = u.mime
         var d = (u$src = u$src || n[s]).split("?").shift().toLowerCase()
         var h = d.substr(d.lastIndexOf(".") + 1)
         u$mime = u$mime || t.MIME_TYPES[h] || "video/" + h
@@ -5406,7 +5406,7 @@ var sn = function (e) {
     if (this._load) {
       return this._load
     }
-    var this$source = this.source
+    var /* [auto-meaningful-name] */this$source = this.source
     if ((this$source.readyState === this$source.HAVE_ENOUGH_DATA || this$source.readyState === this$source.HAVE_FUTURE_DATA) && this$source.width && this$source.height) {
       this$source.complete = true
     }
@@ -5434,11 +5434,11 @@ var sn = function (e) {
     this.onError.emit(e)
   }
   t.prototype._isSourcePlaying = function () {
-    var this$source = this.source
+    var /* [auto-meaningful-name] */this$source = this.source
     return this$source.currentTime > 0 && false === this$source.paused && false === this$source.ended && this$source.readyState > 2
   }
   t.prototype._isSourceReady = function () {
-    var this$source = this.source
+    var /* [auto-meaningful-name] */this$source = this.source
     return 3 === this$source.readyState || 4 === this$source.readyState
   }
   t.prototype._onPlayStart = function () {
@@ -5457,10 +5457,10 @@ var sn = function (e) {
     }
   }
   t.prototype._onCanPlay = function () {
-    var this$source = this.source
+    var /* [auto-meaningful-name] */this$source = this.source
     this$source.removeEventListener("canplay", this._onCanPlay)
     this$source.removeEventListener("canplaythrough", this._onCanPlay)
-    var this$valid = this.valid
+    var /* [auto-meaningful-name] */this$valid = this.valid
     this.resize(this$source.videoWidth, this$source.videoHeight)
     if (!this$valid && this._resolve) {
       this._resolve(this)
@@ -5478,7 +5478,7 @@ var sn = function (e) {
     if (this._isConnectedToTicker) {
       kt.shared.remove(this.update, this)
     }
-    var this$source = this.source
+    var /* [auto-meaningful-name] */this$source = this.source
     if (this$source) {
       this$source.removeEventListener("error", this._onError, true)
       this$source.pause()
@@ -5575,8 +5575,8 @@ var fn = function (e) {
   t.prototype.upload = function (e, t, n) {
     var r = e.gl
     r.pixelStorei(r.UNPACK_PREMULTIPLY_ALPHA_WEBGL, t.alphaMode === oe.UNPACK)
-    var t$realWidth = t.realWidth
-    var t$realHeight = t.realHeight
+    var /* [auto-meaningful-name] */t$realWidth = t.realWidth
+    var /* [auto-meaningful-name] */t$realHeight = t.realHeight
     if (n.width === t$realWidth && n.height === t$realHeight) {
       r.texSubImage2D(t.target, 0, 0, 0, t$realWidth, t$realHeight, t.format, t.type, this.data)
     } else {
@@ -5664,7 +5664,7 @@ var dn = function () {
       this.dirtySize++
       for (var n = 0; n < this.colorTextures.length; n++) {
         var r = this.colorTextures[n]
-        var r$resolution = r.resolution
+        var /* [auto-meaningful-name] */r$resolution = r.resolution
         r.setSize(e / r$resolution, t / r$resolution)
       }
       if (this.depthTexture) {
@@ -5703,8 +5703,8 @@ var hn = function (e) {
     }
     n = e.call(this, null, t) || this
     var s = t || {}
-    var s$width = s.width
-    var s$height = s.height
+    var /* [auto-meaningful-name] */s$width = s.width
+    var /* [auto-meaningful-name] */s$height = s.height
     n.mipmap = ie.OFF
     n.width = Math.ceil(s$width) || 100
     n.height = Math.ceil(s$height) || 100
@@ -5745,8 +5745,8 @@ var pn = function () {
     this.uvsFloat32 = new Float32Array(8)
   }
   e.prototype.set = function (e, t, n) {
-    var t$width = t.width
-    var t$height = t.height
+    var /* [auto-meaningful-name] */t$width = t.width
+    var /* [auto-meaningful-name] */t$height = t.height
     if (n) {
       var o = e.width / 2 / t$width
       var a = e.height / 2 / t$height
@@ -5855,7 +5855,7 @@ var An = function (e) {
   t.prototype.destroy = function (e) {
     if (this.baseTexture) {
       if (e) {
-        var this$baseTexture$resource = this.baseTexture.resource
+        var /* [auto-meaningful-name] */this$baseTexture$resource = this.baseTexture.resource
         if (this$baseTexture$resource && this$baseTexture$resource.url && Ke[this$baseTexture$resource.url]) {
           t.removeFromCache(this$baseTexture$resource.url)
         }
@@ -5928,7 +5928,7 @@ var An = function (e) {
     var i = t.from(e, Object.assign({
       resourceOptions: r
     }, n), false)
-    var i$baseTexture$resource = i.baseTexture.resource
+    var /* [auto-meaningful-name] */i$baseTexture$resource = i.baseTexture.resource
     return i.baseTexture.valid ? Promise.resolve(i) : i$baseTexture$resource.load().then(function () {
       return Promise.resolve(i)
     })
@@ -5941,7 +5941,7 @@ var An = function (e) {
       scaleMode: fe.SCALE_MODE,
       resolution: rt(n)
     }, i))
-    var o$resource = o.resource
+    var /* [auto-meaningful-name] */o$resource = o.resource
     if (o$resource instanceof on) {
       o$resource.url = n
     }
@@ -6010,8 +6010,8 @@ var An = function (e) {
       this.noFrame = false
       var t = e.x
       var n = e.y
-      var e$width = e.width
-      var e$height = e.height
+      var /* [auto-meaningful-name] */e$width = e.width
+      var /* [auto-meaningful-name] */e$height = e.height
       var o = t + e$width > this.baseTexture.width
       var a = n + e$height > this.baseTexture.height
       if (o || a) {
@@ -6115,7 +6115,7 @@ var vn = function (e) {
     this.updateUvs()
   }
   t.prototype.setResolution = function (e) {
-    var this$baseTexture = this.baseTexture
+    var /* [auto-meaningful-name] */this$baseTexture = this.baseTexture
     if (this$baseTexture.resolution !== e) {
       this$baseTexture.setResolution(e)
       this.resize(this$baseTexture.width, this$baseTexture.height, false)
@@ -6158,7 +6158,7 @@ var mn = function () {
     if (undefined === r) {
       r = 1
     }
-    var e$SCREEN_KEY = e.SCREEN_KEY
+    var /* [auto-meaningful-name] */e$SCREEN_KEY = e.SCREEN_KEY
     t *= r
     n *= r
     if (!(this.enableFullScreen && t === this._pixelsWidth && n === this._pixelsHeight)) {
@@ -6181,7 +6181,7 @@ var mn = function () {
     return n
   }
   e.prototype.returnTexture = function (e) {
-    var e$filterPoolKey = e.filterPoolKey
+    var /* [auto-meaningful-name] */e$filterPoolKey = e.filterPoolKey
     e.filterFrame = null
     this.texturePool[e$filterPoolKey].push(e)
   }
@@ -6203,7 +6203,7 @@ var mn = function () {
   }
   e.prototype.setScreenSize = function (t) {
     if (t.width !== this._pixelsWidth || t.height !== this._pixelsHeight) {
-      var e$SCREEN_KEY = e.SCREEN_KEY
+      var /* [auto-meaningful-name] */e$SCREEN_KEY = e.SCREEN_KEY
       var r = this.texturePool[e$SCREEN_KEY]
       this.enableFullScreen = t.width > 0 && t.height > 0
       if (r) {
@@ -6509,7 +6509,7 @@ var Sn = function () {
         }
       }
       for (s = 0; s < t.length; s++) {
-        var tS$indexBuffer$data = t[s].indexBuffer.data
+        var /* [auto-meaningful-name] */tS$indexBuffer$data = t[s].indexBuffer.data
         for (c = 0; c < tS$indexBuffer$data.length; c++) {
           r.indexBuffer.data[c + f] += u
         }
@@ -6641,7 +6641,7 @@ var Nn = function (e) {
   }
   Xt(t, e)
   t.prototype.push = function (e, t) {
-    for (var this$renderer = this.renderer, this$defaultFilterStack = this.defaultFilterStack, i = this.statePool.pop() || new Fn(), this$renderer$renderTexture = this.renderer.renderTexture, t0$resolution = t[0].resolution, t0$padding = t[0].padding, t0$autoFit = t[0].autoFit, t0$legacy = t[0].legacy, l = 1; l < t.length; l++) {
+    for (var /* [auto-meaningful-name] */this$renderer = this.renderer, /* [auto-meaningful-name] */this$defaultFilterStack = this.defaultFilterStack, i = this.statePool.pop() || new Fn(), /* [auto-meaningful-name] */this$renderer$renderTexture = this.renderer.renderTexture, /* [auto-meaningful-name] */t0$resolution = t[0].resolution, /* [auto-meaningful-name] */t0$padding = t[0].padding, /* [auto-meaningful-name] */t0$autoFit = t[0].autoFit, /* [auto-meaningful-name] */t0$legacy = t[0].legacy, l = 1; l < t.length; l++) {
       var f = t[l]
       t0$resolution = Math.min(t0$resolution, f.resolution)
       t0$padding = this.useMaxPadding ? Math.max(t0$padding, f.padding) : t0$padding + f.padding
@@ -6669,7 +6669,7 @@ var Nn = function (e) {
     i.filters = t
     i.destinationFrame.width = i.renderTexture.width
     i.destinationFrame.height = i.renderTexture.height
-    var this$tempRect = this.tempRect
+    var /* [auto-meaningful-name] */this$tempRect = this.tempRect
     this$tempRect.x = 0
     this$tempRect.y = 0
     this$tempRect.width = i.sourceFrame.width
@@ -6683,16 +6683,16 @@ var Nn = function (e) {
     this$renderer.framebuffer.clear(0, 0, 0, 0)
   }
   t.prototype.pop = function () {
-    var this$defaultFilterStack = this.defaultFilterStack
+    var /* [auto-meaningful-name] */this$defaultFilterStack = this.defaultFilterStack
     var t = this$defaultFilterStack.pop()
-    var t$filters = t.filters
+    var /* [auto-meaningful-name] */t$filters = t.filters
     this.activeState = t
-    var this$globalUniforms$uniforms = this.globalUniforms.uniforms
+    var /* [auto-meaningful-name] */this$globalUniforms$uniforms = this.globalUniforms.uniforms
     this$globalUniforms$uniforms.outputFrame = t.sourceFrame
     this$globalUniforms$uniforms.resolution = t.resolution
-    var this$globalUniforms$uniforms$inputSize = this$globalUniforms$uniforms.inputSize
-    var this$globalUniforms$uniforms$inputPixel = this$globalUniforms$uniforms.inputPixel
-    var this$globalUniforms$uniforms$inputClamp = this$globalUniforms$uniforms.inputClamp
+    var /* [auto-meaningful-name] */this$globalUniforms$uniforms$inputSize = this$globalUniforms$uniforms.inputSize
+    var /* [auto-meaningful-name] */this$globalUniforms$uniforms$inputPixel = this$globalUniforms$uniforms.inputPixel
+    var /* [auto-meaningful-name] */this$globalUniforms$uniforms$inputClamp = this$globalUniforms$uniforms.inputClamp
     this$globalUniforms$uniforms$inputSize[0] = t.destinationFrame.width
     this$globalUniforms$uniforms$inputSize[1] = t.destinationFrame.height
     this$globalUniforms$uniforms$inputSize[2] = 1 / this$globalUniforms$uniforms$inputSize[0]
@@ -6706,7 +6706,7 @@ var Nn = function (e) {
     this$globalUniforms$uniforms$inputClamp[2] = t.sourceFrame.width * this$globalUniforms$uniforms$inputSize[2] - .5 * this$globalUniforms$uniforms$inputPixel[2]
     this$globalUniforms$uniforms$inputClamp[3] = t.sourceFrame.height * this$globalUniforms$uniforms$inputSize[3] - .5 * this$globalUniforms$uniforms$inputPixel[3]
     if (t.legacy) {
-      var this$globalUniforms$uniforms$filterArea = this$globalUniforms$uniforms.filterArea
+      var /* [auto-meaningful-name] */this$globalUniforms$uniforms$filterArea = this$globalUniforms$uniforms.filterArea
       this$globalUniforms$uniforms$filterArea[0] = t.destinationFrame.width
       this$globalUniforms$uniforms$filterArea[1] = t.destinationFrame.height
       this$globalUniforms$uniforms$filterArea[2] = t.sourceFrame.x
@@ -6722,7 +6722,7 @@ var Nn = function (e) {
       t$filters[0].apply(this, t.renderTexture, c.renderTexture, ae.BLEND, t)
       this.returnFilterTexture(t.renderTexture)
     } else {
-      var t$renderTexture = t.renderTexture
+      var /* [auto-meaningful-name] */t$renderTexture = t.renderTexture
       var l = this.getOptimalFilterTexture(t$renderTexture.width, t$renderTexture.height, t.resolution)
       l.filterFrame = t$renderTexture.filterFrame
       var f = 0
@@ -6743,16 +6743,16 @@ var Nn = function (e) {
     if (undefined === t) {
       t = ae.CLEAR
     }
-    var this$renderer = this.renderer
-    var this$renderer$renderTexture = this$renderer.renderTexture
-    var this$renderer$state = this$renderer.state
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer$renderTexture = this$renderer.renderTexture
+    var /* [auto-meaningful-name] */this$renderer$state = this$renderer.state
     if (e === this.defaultFilterStack[this.defaultFilterStack.length - 1].renderTexture) {
       this.renderer.projection.transform = this.activeState.transform
     } else {
       this.renderer.projection.transform = null
     }
     if (e && e.filterFrame) {
-      var this$tempRect = this.tempRect
+      var /* [auto-meaningful-name] */this$tempRect = this.tempRect
       this$tempRect.x = 0
       this$tempRect.y = 0
       this$tempRect.width = e.filterFrame.width
@@ -6769,7 +6769,7 @@ var Nn = function (e) {
     }
   }
   t.prototype.applyFilter = function (e, t, n, r) {
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     this$renderer.state.set(e.state)
     this.bindAndClear(n, r)
     e.uniforms.uSampler = t
@@ -6785,10 +6785,10 @@ var Nn = function (e) {
     }
   }
   t.prototype.calculateSpriteMatrix = function (e, t) {
-    var this$activeState = this.activeState
-    var this$activeState$sourceFrame = this$activeState.sourceFrame
-    var this$activeState$destinationFrame = this$activeState.destinationFrame
-    var t$_texture$orig = t._texture.orig
+    var /* [auto-meaningful-name] */this$activeState = this.activeState
+    var /* [auto-meaningful-name] */this$activeState$sourceFrame = this$activeState.sourceFrame
+    var /* [auto-meaningful-name] */this$activeState$destinationFrame = this$activeState.destinationFrame
+    var /* [auto-meaningful-name] */t$_texture$orig = t._texture.orig
     var a = e.set(this$activeState$destinationFrame.width, 0, 0, this$activeState$destinationFrame.height, this$activeState$sourceFrame.x, this$activeState$sourceFrame.y)
     var s = t.worldTransform.copyTo(_t.TEMP_MATRIX)
     s.invert()
@@ -6902,7 +6902,7 @@ var jn = function (e) {
     this.setObjectRenderer(this.emptyRenderer)
   }
   t.prototype.copyBoundTextures = function (e, t) {
-    for (var this$renderer$texture$boundTextures = this.renderer.texture.boundTextures, r = t - 1; r >= 0; --r) {
+    for (var /* [auto-meaningful-name] */this$renderer$texture$boundTextures = this.renderer.texture.boundTextures, r = t - 1; r >= 0; --r) {
       e[r] = this$renderer$texture$boundTextures[r] || null
       if (e[r]) {
         e[r]._batchLocation = r
@@ -6910,9 +6910,9 @@ var jn = function (e) {
     }
   }
   t.prototype.boundArray = function (e, t, n, r) {
-    for (var e$elements = e.elements, e$ids = e.ids, e$count = e.count, s = 0, c = 0; c < e$count; c++) {
+    for (var /* [auto-meaningful-name] */e$elements = e.elements, /* [auto-meaningful-name] */e$ids = e.ids, /* [auto-meaningful-name] */e$count = e.count, s = 0, c = 0; c < e$count; c++) {
       var u = e$elements[c]
-      var u$_batchLocation = u._batchLocation
+      var /* [auto-meaningful-name] */u$_batchLocation = u._batchLocation
       if (u$_batchLocation >= 0 && u$_batchLocation < r && t[u$_batchLocation] === u) {
         e$ids[c] = u$_batchLocation
       } else {
@@ -6988,7 +6988,7 @@ var Un = function (e) {
     return this.gl
   }
   t.prototype.getExtensions = function () {
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     var t = {
       anisotropicFiltering: this$gl.getExtension("EXT_texture_filter_anisotropic"),
       floatTextureLinear: this$gl.getExtension("OES_texture_float_linear"),
@@ -7027,7 +7027,7 @@ var Un = function (e) {
     this.renderer.runners.contextChange.emit(this.gl)
   }
   t.prototype.destroy = function () {
-    var this$renderer$view = this.renderer.view
+    var /* [auto-meaningful-name] */this$renderer$view = this.renderer.view
     this$renderer$view.removeEventListener("webglcontextlost", this.handleContextLost)
     this$renderer$view.removeEventListener("webglcontextrestored", this.handleContextRestored)
     this.gl.useProgram(null)
@@ -7086,8 +7086,8 @@ var Gn = function (e) {
     this.writeDepthTexture = true
     this.disposeAll(true)
     if (1 === this.renderer.context.webGLVersion) {
-      var this$renderer$context$extensions$drawBuffers = this.renderer.context.extensions.drawBuffers
-      var this$renderer$context$extensions$depthTexture = this.renderer.context.extensions.depthTexture
+      var /* [auto-meaningful-name] */this$renderer$context$extensions$drawBuffers = this.renderer.context.extensions.drawBuffers
+      var /* [auto-meaningful-name] */this$renderer$context$extensions$depthTexture = this.renderer.context.extensions.depthTexture
       if (fe.PREFER_ENV === K.WEBGL_LEGACY) {
         this$renderer$context$extensions$drawBuffers = null
         this$renderer$context$extensions$depthTexture = null
@@ -7108,7 +7108,7 @@ var Gn = function (e) {
     }
   }
   t.prototype.bind = function (e, t) {
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     if (e) {
       var r = e.glFramebuffers[this.CONTEXT_UID] || this.initFramebuffer(e)
       if (this.current !== e) {
@@ -7152,7 +7152,7 @@ var Gn = function (e) {
     }
   }
   t.prototype.setViewport = function (e, t, n, r) {
-    var this$viewport = this.viewport
+    var /* [auto-meaningful-name] */this$viewport = this.viewport
     if (!(this$viewport.width === n && this$viewport.height === r && this$viewport.x === e && this$viewport.y === t)) {
       this$viewport.x = e
       this$viewport.y = t
@@ -7182,12 +7182,12 @@ var Gn = function (e) {
     if (undefined === i) {
       i = Y.COLOR | Y.DEPTH
     }
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     this$gl.clearColor(e, t, n, r)
     this$gl.clear(i)
   }
   t.prototype.initFramebuffer = function (e) {
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     var n = new Hn(this$gl.createFramebuffer())
     n.multisample = this.detectSamples(e.multisample)
     e.glFramebuffers[this.CONTEXT_UID] = n
@@ -7196,13 +7196,13 @@ var Gn = function (e) {
     return n
   }
   t.prototype.resizeFramebuffer = function (e) {
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     var n = e.glFramebuffers[this.CONTEXT_UID]
     if (n.stencil) {
       this$gl.bindRenderbuffer(this$gl.RENDERBUFFER, n.stencil)
       this$gl.renderbufferStorage(this$gl.RENDERBUFFER, this$gl.DEPTH_STENCIL, e.width, e.height)
     }
-    for (var e$colorTextures = e.colorTextures, i = 0; i < e$colorTextures.length; i++) {
+    for (var /* [auto-meaningful-name] */e$colorTextures = e.colorTextures, i = 0; i < e$colorTextures.length; i++) {
       this.renderer.texture.bind(e$colorTextures[i], 0)
     }
     if (e.depthTexture) {
@@ -7210,9 +7210,9 @@ var Gn = function (e) {
     }
   }
   t.prototype.updateFramebuffer = function (e) {
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     var n = e.glFramebuffers[this.CONTEXT_UID]
-    var e$colorTextures$length = e.colorTextures.length
+    var /* [auto-meaningful-name] */e$colorTextures$length = e.colorTextures.length
     if (!this$gl.drawBuffers) {
       e$colorTextures$length = Math.min(e$colorTextures$length, 1)
     }
@@ -7232,7 +7232,7 @@ var Gn = function (e) {
       }
     }
     if ((i.length > 1 && this$gl.drawBuffers(i), e.depthTexture) && this.writeDepthTexture) {
-      var e$depthTexture = e.depthTexture
+      var /* [auto-meaningful-name] */e$depthTexture = e.depthTexture
       this.renderer.texture.bind(e$depthTexture, 0)
       this$gl.framebufferTexture2D(this$gl.FRAMEBUFFER, this$gl.DEPTH_ATTACHMENT, this$gl.TEXTURE_2D, e$depthTexture._glTextures[this.CONTEXT_UID].texture, 0)
     }
@@ -7246,8 +7246,8 @@ var Gn = function (e) {
     }
   }
   t.prototype.detectSamples = function (e) {
-    var this$msaaSamples = this.msaaSamples
-    var le$NONE = le.NONE
+    var /* [auto-meaningful-name] */this$msaaSamples = this.msaaSamples
+    var /* [auto-meaningful-name] */le$NONE = le.NONE
     if (e <= 1 || null === this$msaaSamples) {
       return le$NONE
     }
@@ -7263,10 +7263,10 @@ var Gn = function (e) {
     return le$NONE
   }
   t.prototype.blit = function (e, t, n) {
-    var this$current = this.current
-    var this$renderer = this.renderer
-    var this$gl = this.gl
-    var this$CONTEXT_UID = this.CONTEXT_UID
+    var /* [auto-meaningful-name] */this$current = this.current
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$gl = this.gl
+    var /* [auto-meaningful-name] */this$CONTEXT_UID = this.CONTEXT_UID
     if (2 === this$renderer.context.webGLVersion && this$current) {
       var s = this$current.glFramebuffers[this$CONTEXT_UID]
       if (s) {
@@ -7297,7 +7297,7 @@ var Gn = function (e) {
   }
   t.prototype.disposeFramebuffer = function (e, t) {
     var n = e.glFramebuffers[this.CONTEXT_UID]
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     if (n) {
       delete e.glFramebuffers[this.CONTEXT_UID]
       var i = this.managedFramebuffers.indexOf(e)
@@ -7314,21 +7314,21 @@ var Gn = function (e) {
     }
   }
   t.prototype.disposeAll = function (e) {
-    var this$managedFramebuffers = this.managedFramebuffers
+    var /* [auto-meaningful-name] */this$managedFramebuffers = this.managedFramebuffers
     this.managedFramebuffers = []
     for (var n = 0; n < this$managedFramebuffers.length; n++) {
       this.disposeFramebuffer(this$managedFramebuffers[n], e)
     }
   }
   t.prototype.forceStencil = function () {
-    var this$current = this.current
+    var /* [auto-meaningful-name] */this$current = this.current
     if (this$current) {
       var t = this$current.glFramebuffers[this.CONTEXT_UID]
       if (t && !t.stencil) {
         this$current.enableStencil()
-        var this$current$width = this$current.width
-        var this$current$height = this$current.height
-        var this$gl = this.gl
+        var /* [auto-meaningful-name] */this$current$width = this$current.width
+        var /* [auto-meaningful-name] */this$current$height = this$current.height
+        var /* [auto-meaningful-name] */this$gl = this.gl
         var o = this$gl.createRenderbuffer()
         this$gl.bindRenderbuffer(this$gl.RENDERBUFFER, o)
         this$gl.renderbufferStorage(this$gl.RENDERBUFFER, this$gl.DEPTH_STENCIL, this$current$width, this$current$height)
@@ -7370,10 +7370,10 @@ var Wn = function (e) {
   t.prototype.contextChange = function () {
     this.disposeAll(true)
     var e = this.gl = this.renderer.gl
-    var this$renderer$context = this.renderer.context
+    var /* [auto-meaningful-name] */this$renderer$context = this.renderer.context
     this.CONTEXT_UID = this.renderer.CONTEXT_UID
     if (2 !== this$renderer$context.webGLVersion) {
-      var this$renderer$context$extensions$vertexArrayObject = this.renderer.context.extensions.vertexArrayObject
+      var /* [auto-meaningful-name] */this$renderer$context$extensions$vertexArrayObject = this.renderer.context.extensions.vertexArrayObject
       if (fe.PREFER_ENV === K.WEBGL_LEGACY) {
         this$renderer$context$extensions$vertexArrayObject = null
       }
@@ -7420,7 +7420,7 @@ var Wn = function (e) {
   }
   t.prototype.bind = function (e, t) {
     t = t || this.renderer.shader.shader
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     var r = e.glVertexArrayObjects[this.CONTEXT_UID]
     var i = false
     if (!r) {
@@ -7445,7 +7445,7 @@ var Wn = function (e) {
     this.unbind()
   }
   t.prototype.updateBuffers = function () {
-    for (var this$_activeGeometry = this._activeGeometry, this$gl = this.gl, n = 0; n < this$_activeGeometry.buffers.length; n++) {
+    for (var /* [auto-meaningful-name] */this$_activeGeometry = this._activeGeometry, /* [auto-meaningful-name] */this$gl = this.gl, n = 0; n < this$_activeGeometry.buffers.length; n++) {
       var r = this$_activeGeometry.buffers[n]
       var i = r._glBuffers[this.CONTEXT_UID]
       if (r._updateID !== i.updateID) {
@@ -7464,15 +7464,15 @@ var Wn = function (e) {
     }
   }
   t.prototype.checkCompatibility = function (e, t) {
-    var e$attributes = e.attributes
-    var t$attributeData = t.attributeData
+    var /* [auto-meaningful-name] */e$attributes = e.attributes
+    var /* [auto-meaningful-name] */t$attributeData = t.attributeData
     for (var i in t$attributeData) if (!e$attributes[i]) {
       throw new Error("shader and geometry incompatible, geometry missing the \"" + i + "\" attribute")
     }
   }
   t.prototype.getSignature = function (e, t) {
-    var e$attributes = e.attributes
-    var t$attributeData = t.attributeData
+    var /* [auto-meaningful-name] */e$attributes = e.attributes
+    var /* [auto-meaningful-name] */t$attributeData = t.attributeData
     var i = ["g", e.id]
     for (var o in e$attributes) if (t$attributeData[o]) {
       i.push(o)
@@ -7484,8 +7484,8 @@ var Wn = function (e) {
       n = true
     }
     this.checkCompatibility(e, t)
-    var this$gl = this.gl
-    var this$CONTEXT_UID = this.CONTEXT_UID
+    var /* [auto-meaningful-name] */this$gl = this.gl
+    var /* [auto-meaningful-name] */this$CONTEXT_UID = this.CONTEXT_UID
     var o = this.getSignature(e, t)
     var a = e.glVertexArrayObjects[this.CONTEXT_UID]
     var s = a[o]
@@ -7493,8 +7493,8 @@ var Wn = function (e) {
       a[t.id] = s
       return s
     }
-    var e$buffers = e.buffers
-    var e$attributes = e.attributes
+    var /* [auto-meaningful-name] */e$buffers = e.buffers
+    var /* [auto-meaningful-name] */e$attributes = e.attributes
     var l = {}
     var f = {}
     for (var d in e$buffers) {
@@ -7513,7 +7513,7 @@ var Wn = function (e) {
     }
     for (var d in e$attributes) {
       var h = e$attributes[d]
-      var h$size = h.size
+      var /* [auto-meaningful-name] */h$size = h.size
       if (undefined === h.stride) {
         if (l[h.buffer] === h$size * Qn[h.type]) {
           h.stride = 0
@@ -7549,7 +7549,7 @@ var Wn = function (e) {
     if (this.managedBuffers[e.id]) {
       delete this.managedBuffers[e.id]
       var n = e._glBuffers[this.CONTEXT_UID]
-      var this$gl = this.gl
+      var /* [auto-meaningful-name] */this$gl = this.gl
       e.disposeRunner.remove(this)
       if (n) {
         if (!t) {
@@ -7563,8 +7563,8 @@ var Wn = function (e) {
     if (this.managedGeometries[e.id]) {
       delete this.managedGeometries[e.id]
       var n = e.glVertexArrayObjects[this.CONTEXT_UID]
-      var this$gl = this.gl
-      var e$buffers = e.buffers
+      var /* [auto-meaningful-name] */this$gl = this.gl
+      var /* [auto-meaningful-name] */e$buffers = e.buffers
       e.disposeRunner.remove(this)
       if (n) {
         for (var o = 0; o < e$buffers.length; o++) {
@@ -7597,10 +7597,10 @@ var Wn = function (e) {
     }
   }
   t.prototype.activateVao = function (e, t) {
-    var this$gl = this.gl
-    var this$CONTEXT_UID = this.CONTEXT_UID
-    var e$buffers = e.buffers
-    var e$attributes = e.attributes
+    var /* [auto-meaningful-name] */this$gl = this.gl
+    var /* [auto-meaningful-name] */this$CONTEXT_UID = this.CONTEXT_UID
+    var /* [auto-meaningful-name] */e$buffers = e.buffers
+    var /* [auto-meaningful-name] */e$attributes = e.attributes
     if (e.indexBuffer) {
       this$gl.bindBuffer(this$gl.ELEMENT_ARRAY_BUFFER, e.indexBuffer._glBuffers[this$CONTEXT_UID].buffer)
     }
@@ -7613,7 +7613,7 @@ var Wn = function (e) {
           this$gl.bindBuffer(this$gl.ARRAY_BUFFER, u.buffer)
           a = u
         }
-        var t$attributeDataS$location = t.attributeData[s].location
+        var /* [auto-meaningful-name] */t$attributeDataS$location = t.attributeData[s].location
         this$gl.enableVertexAttribArray(t$attributeDataS$location)
         this$gl.vertexAttribPointer(t$attributeDataS$location, c.size, c.type || this$gl.FLOAT, c.normalized, c.stride, c.start)
         if (c.instance) {
@@ -7626,10 +7626,10 @@ var Wn = function (e) {
     }
   }
   t.prototype.draw = function (e, t, n, r) {
-    var this$gl = this.gl
-    var this$_activeGeometry = this._activeGeometry
+    var /* [auto-meaningful-name] */this$gl = this.gl
+    var /* [auto-meaningful-name] */this$_activeGeometry = this._activeGeometry
     if (this$_activeGeometry.indexBuffer) {
-      var this$_activeGeometry$indexBuffer$data$BYTES_PER_ELEMENT = this$_activeGeometry.indexBuffer.data.BYTES_PER_ELEMENT
+      var /* [auto-meaningful-name] */this$_activeGeometry$indexBuffer$data$BYTES_PER_ELEMENT = this$_activeGeometry.indexBuffer.data.BYTES_PER_ELEMENT
       var s = 2 === this$_activeGeometry$indexBuffer$data$BYTES_PER_ELEMENT ? this$gl.UNSIGNED_SHORT : this$gl.UNSIGNED_INT
       if (2 === this$_activeGeometry$indexBuffer$data$BYTES_PER_ELEMENT || 4 === this$_activeGeometry$indexBuffer$data$BYTES_PER_ELEMENT && this.canUseUInt32ElementIndex) {
         if (this$_activeGeometry.instanced) {
@@ -8314,7 +8314,7 @@ var br = function () {
     if (undefined === t) {
       t = e
     }
-    for (var this$mapCoord = this.mapCoord, r = 0; r < e.length; r += 2) {
+    for (var /* [auto-meaningful-name] */this$mapCoord = this.mapCoord, r = 0; r < e.length; r += 2) {
       var i = e[r]
       var o = e[r + 1]
       t[r] = i * this$mapCoord.a + o * this$mapCoord.c + this$mapCoord.tx
@@ -8323,7 +8323,7 @@ var br = function () {
     return t
   }
   e.prototype.update = function (e) {
-    var this$_texture = this._texture
+    var /* [auto-meaningful-name] */this$_texture = this._texture
     if (!this$_texture || !this$_texture.valid) {
       return false
     }
@@ -8332,18 +8332,18 @@ var br = function () {
     }
     this._textureID = this$_texture._updateID
     this._updateID++
-    var this$_texture$_uvs = this$_texture._uvs
+    var /* [auto-meaningful-name] */this$_texture$_uvs = this$_texture._uvs
     this.mapCoord.set(this$_texture$_uvs.x1 - this$_texture$_uvs.x0, this$_texture$_uvs.y1 - this$_texture$_uvs.y0, this$_texture$_uvs.x3 - this$_texture$_uvs.x0, this$_texture$_uvs.y3 - this$_texture$_uvs.y0, this$_texture$_uvs.x0, this$_texture$_uvs.y0)
-    var this$_texture$orig = this$_texture.orig
-    var this$_texture$trim = this$_texture.trim
+    var /* [auto-meaningful-name] */this$_texture$orig = this$_texture.orig
+    var /* [auto-meaningful-name] */this$_texture$trim = this$_texture.trim
     if (this$_texture$trim) {
       yr.set(this$_texture$orig.width / this$_texture$trim.width, 0, 0, this$_texture$orig.height / this$_texture$trim.height, -this$_texture$trim.x / this$_texture$trim.width, -this$_texture$trim.y / this$_texture$trim.height)
       this.mapCoord.append(yr)
     }
-    var this$_texture$baseTexture = this$_texture.baseTexture
-    var this$uClampFrame = this.uClampFrame
+    var /* [auto-meaningful-name] */this$_texture$baseTexture = this$_texture.baseTexture
+    var /* [auto-meaningful-name] */this$uClampFrame = this.uClampFrame
     var s = this.clampMargin / this$_texture$baseTexture.resolution
-    var this$clampOffset = this.clampOffset
+    var /* [auto-meaningful-name] */this$clampOffset = this.clampOffset
     this$uClampFrame[0] = (this$_texture._frame.x + s + this$clampOffset) / this$_texture$baseTexture.width
     this$uClampFrame[1] = (this$_texture._frame.y + s + this$clampOffset) / this$_texture$baseTexture.height
     this$uClampFrame[2] = (this$_texture._frame.x + this$_texture._frame.width - s + this$clampOffset) / this$_texture$baseTexture.width
@@ -8367,8 +8367,8 @@ var wr = function (e) {
   }
   Xt(t, e)
   t.prototype.apply = function (e, t, n, r) {
-    var this$maskSprite = this.maskSprite
-    var this$maskSprite$_texture = this$maskSprite._texture
+    var /* [auto-meaningful-name] */this$maskSprite = this.maskSprite
+    var /* [auto-meaningful-name] */this$maskSprite$_texture = this$maskSprite._texture
     if (this$maskSprite$_texture.valid) {
       if (!this$maskSprite$_texture.uvMatrix) {
         this$maskSprite$_texture.uvMatrix = new br(this$maskSprite$_texture, 0)
@@ -8443,11 +8443,11 @@ var Er = function (e) {
     }
   }
   t.prototype.detect = function (e) {
-    var e$maskObject = e.maskObject
+    var /* [auto-meaningful-name] */e$maskObject = e.maskObject
     if (e$maskObject.isSprite) {
       e.type = ue.SPRITE
     } else if (e.type = ue.STENCIL, this.enableScissor && e$maskObject.isFastRect && e$maskObject.isFastRect()) {
-      var e$maskObject$worldTransform = e$maskObject.worldTransform
+      var /* [auto-meaningful-name] */e$maskObject$worldTransform = e$maskObject.worldTransform
       var r = Math.atan2(e$maskObject$worldTransform.b, e$maskObject$worldTransform.a)
       var i = Math.atan2(e$maskObject$worldTransform.d, e$maskObject$worldTransform.c)
       r = Math.round(r * (180 / Math.PI) * 100)
@@ -8458,15 +8458,15 @@ var Er = function (e) {
     }
   }
   t.prototype.pushSpriteMask = function (e) {
-    var e$maskObject = e.maskObject
-    var e$_target = e._target
+    var /* [auto-meaningful-name] */e$maskObject = e.maskObject
+    var /* [auto-meaningful-name] */e$_target = e._target
     var r = this.alphaMaskPool[this.alphaMaskIndex]
     if (!r) {
       r = this.alphaMaskPool[this.alphaMaskIndex] = [new wr(e$maskObject)]
     }
     r[0].resolution = this.renderer.resolution
     r[0].maskSprite = e$maskObject
-    var e$_target$filterArea = e$_target.filterArea
+    var /* [auto-meaningful-name] */e$_target$filterArea = e$_target.filterArea
     e$_target.filterArea = e$maskObject.getBounds(true)
     this.renderer.filter.push(e$_target, r)
     e$_target.filterArea = e$_target$filterArea
@@ -8490,7 +8490,7 @@ var xr = function (e) {
     return this.maskStack.length
   }
   t.prototype.setMaskStack = function (e) {
-    var this$renderer$gl = this.renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
     var n = this.getStackLength()
     this.maskStack = e
     var r = this.getStackLength()
@@ -8522,11 +8522,11 @@ var Cr = function (e) {
     return e ? e._scissorCounter : 0
   }
   t.prototype.push = function (e) {
-    var e$maskObject = e.maskObject
+    var /* [auto-meaningful-name] */e$maskObject = e.maskObject
     e$maskObject.renderable = true
-    var e$_scissorRect = e._scissorRect
+    var /* [auto-meaningful-name] */e$_scissorRect = e._scissorRect
     var r = e$maskObject.getBounds(true)
-    var this$renderer$gl = this.renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
     e$maskObject.renderable = false
     if (e$_scissorRect) {
       r.fit(e$_scissorRect)
@@ -8538,7 +8538,7 @@ var Cr = function (e) {
     this._useCurrent()
   }
   t.prototype.pop = function () {
-    var this$renderer$gl = this.renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
     if (this.getStackLength() > 0) {
       this._useCurrent()
     } else {
@@ -8546,12 +8546,12 @@ var Cr = function (e) {
     }
   }
   t.prototype._useCurrent = function () {
-    var this$maskStackThis$maskStack$length1$_scissorRect = this.maskStack[this.maskStack.length - 1]._scissorRect
-    var this$renderer$renderTexture$current = this.renderer.renderTexture.current
-    var this$renderer$projection = this.renderer.projection
-    var this$renderer$projection$transform = this$renderer$projection.transform
-    var this$renderer$projection$sourceFrame = this$renderer$projection.sourceFrame
-    var this$renderer$projection$destinationFrame = this$renderer$projection.destinationFrame
+    var /* [auto-meaningful-name] */this$maskStackThis$maskStack$length1$_scissorRect = this.maskStack[this.maskStack.length - 1]._scissorRect
+    var /* [auto-meaningful-name] */this$renderer$renderTexture$current = this.renderer.renderTexture.current
+    var /* [auto-meaningful-name] */this$renderer$projection = this.renderer.projection
+    var /* [auto-meaningful-name] */this$renderer$projection$transform = this$renderer$projection.transform
+    var /* [auto-meaningful-name] */this$renderer$projection$sourceFrame = this$renderer$projection.sourceFrame
+    var /* [auto-meaningful-name] */this$renderer$projection$destinationFrame = this$renderer$projection.destinationFrame
     var a = this$renderer$renderTexture$current ? this$renderer$renderTexture$current.resolution : this.renderer.resolution
     var s = this$renderer$projection$destinationFrame.width / this$renderer$projection$sourceFrame.width
     var c = this$renderer$projection$destinationFrame.height / this$renderer$projection$sourceFrame.height
@@ -8582,9 +8582,9 @@ var Or = function (e) {
     return e ? e._stencilCounter : 0
   }
   t.prototype.push = function (e) {
-    var e$maskObject = e.maskObject
-    var this$renderer$gl = this.renderer.gl
-    var e$_stencilCounter = e._stencilCounter
+    var /* [auto-meaningful-name] */e$maskObject = e.maskObject
+    var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
+    var /* [auto-meaningful-name] */e$_stencilCounter = e._stencilCounter
     if (0 === e$_stencilCounter) {
       this.renderer.framebuffer.forceStencil()
       this$renderer$gl.enable(this$renderer$gl.STENCIL_TEST)
@@ -8601,7 +8601,7 @@ var Or = function (e) {
     this._useCurrent()
   }
   t.prototype.pop = function (e) {
-    var this$renderer$gl = this.renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
     if (0 === this.getStackLength()) {
       this$renderer$gl.disable(this$renderer$gl.STENCIL_TEST)
       this$renderer$gl.clear(this$renderer$gl.STENCIL_BUFFER_BIT)
@@ -8617,7 +8617,7 @@ var Or = function (e) {
     }
   }
   t.prototype._useCurrent = function () {
-    var this$renderer$gl = this.renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
     this$renderer$gl.colorMask(true, true, true, true)
     this$renderer$gl.stencilFunc(this$renderer$gl.EQUAL, this.getStackLength(), this._getBitwiseMask())
     this$renderer$gl.stencilOp(this$renderer$gl.KEEP, this$renderer$gl.KEEP, this$renderer$gl.KEEP)
@@ -8645,7 +8645,7 @@ var kr = function (e) {
     if (this.transform) {
       this.projectionMatrix.append(this.transform)
     }
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     this$renderer.globalUniforms.uniforms.projectionMatrix = this.projectionMatrix
     this$renderer.globalUniforms.update()
     if (this$renderer.shader.shader) {
@@ -8653,7 +8653,7 @@ var kr = function (e) {
     }
   }
   t.prototype.calculateProjection = function (e, t, n, r) {
-    var this$projectionMatrix = this.projectionMatrix
+    var /* [auto-meaningful-name] */this$projectionMatrix = this.projectionMatrix
     var o = r ? -1 : 1
     this$projectionMatrix.identity()
     this$projectionMatrix.a = 1 / t.width * 2
@@ -8685,7 +8685,7 @@ var Br = function (e) {
     var /* [auto-meaningful-name] */e$baseTexture
     var /* [auto-meaningful-name] */e$baseTexture$framebuffer
     var o
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     this.current = e
     if (e) {
       o = (e$baseTexture = e.baseTexture).resolution
@@ -8714,7 +8714,7 @@ var Br = function (e) {
         n.height = t.height
       }
     }
-    var this$viewportFrame = this.viewportFrame
+    var /* [auto-meaningful-name] */this$viewportFrame = this.viewportFrame
     this$viewportFrame.x = n.x * o
     this$viewportFrame.y = n.y * o
     this$viewportFrame.width = n.width * o
@@ -8734,15 +8734,15 @@ var Br = function (e) {
   }
   t.prototype.clear = function (e, t) {
     e = this.current ? e || this.current.baseTexture.clearColor : e || this.clearColor
-    var this$destinationFrame = this.destinationFrame
+    var /* [auto-meaningful-name] */this$destinationFrame = this.destinationFrame
     var r = this.current ? this.current.baseTexture : this.renderer.screen
     var i = this$destinationFrame.width !== r.width || this$destinationFrame.height !== r.height
     if (i) {
-      var this$viewportFrame = this.viewportFrame
-      var this$viewportFrame$x = this$viewportFrame.x
-      var this$viewportFrame$y = this$viewportFrame.y
-      var this$viewportFrame$width = this$viewportFrame.width
-      var this$viewportFrame$height = this$viewportFrame.height
+      var /* [auto-meaningful-name] */this$viewportFrame = this.viewportFrame
+      var /* [auto-meaningful-name] */this$viewportFrame$x = this$viewportFrame.x
+      var /* [auto-meaningful-name] */this$viewportFrame$y = this$viewportFrame.y
+      var /* [auto-meaningful-name] */this$viewportFrame$width = this$viewportFrame.width
+      var /* [auto-meaningful-name] */this$viewportFrame$height = this$viewportFrame.height
       this.renderer.gl.enable(this.renderer.gl.SCISSOR_TEST)
       this.renderer.gl.scissor(this$viewportFrame$x, this$viewportFrame$y, this$viewportFrame$width, this$viewportFrame$height)
     }
@@ -8813,7 +8813,7 @@ var Rr = function (e) {
   }
   t.prototype.bind = function (e, t) {
     e.uniforms.globals = this.renderer.globalUniforms
-    var e$program = e.program
+    var /* [auto-meaningful-name] */e$program = e.program
     var r = e$program.glPrograms[this.renderer.CONTEXT_UID] || this.generateShader(e)
     this.shader = e
     if (this.program !== e$program) {
@@ -8827,7 +8827,7 @@ var Rr = function (e) {
     return r
   }
   t.prototype.setUniforms = function (e) {
-    var this$shader$program = this.shader.program
+    var /* [auto-meaningful-name] */this$shader$program = this.shader.program
     var n = this$shader$program.glPrograms[this.renderer.CONTEXT_UID]
     this$shader$program.syncUniforms(n.uniformData, e, this.renderer)
   }
@@ -8871,7 +8871,7 @@ var Rr = function (e) {
     return e.syncUniforms[this.shader.program.id]
   }
   t.prototype.getSignature = function (e, t) {
-    var e$uniforms = e.uniforms
+    var /* [auto-meaningful-name] */e$uniforms = e.uniforms
     var r = []
     for (var i in e$uniforms) {
       r.push(i)
@@ -8885,8 +8885,8 @@ var Rr = function (e) {
     return this.shader ? this.shader.program.glPrograms[this.renderer.CONTEXT_UID] : null
   }
   t.prototype.generateShader = function (e) {
-    var this$gl = this.gl
-    var e$program = e.program
+    var /* [auto-meaningful-name] */this$gl = this.gl
+    var /* [auto-meaningful-name] */e$program = e.program
     var r = {}
     for (var i in e$program.attributeData) r[i] = e$program.attributeData[i].location
     var o = Yn(this$gl, e$program.vertexSrc, e$program.fragmentSrc, r)
@@ -9023,7 +9023,7 @@ var Pr = function (e) {
     if (e !== this.blendMode) {
       this.blendMode = e
       var t = this.blendModes[e]
-      var this$gl = this.gl
+      var /* [auto-meaningful-name] */this$gl = this.gl
       if (2 === t.length) {
         this$gl.blendFunc(t[0], t[1])
       } else {
@@ -9092,7 +9092,7 @@ var Nr = function (e) {
     }
   }
   t.prototype.run = function () {
-    for (var this$renderer$texture = this.renderer.texture, this$renderer$texture$managedTextures = this$renderer$texture.managedTextures, n = false, r = 0; r < this$renderer$texture$managedTextures.length; r++) {
+    for (var /* [auto-meaningful-name] */this$renderer$texture = this.renderer.texture, /* [auto-meaningful-name] */this$renderer$texture$managedTextures = this$renderer$texture.managedTextures, n = false, r = 0; r < this$renderer$texture$managedTextures.length; r++) {
       var i = this$renderer$texture$managedTextures[r]
       if (!i.framebuffer && this.count - i.touched > this.maxIdle) {
         this$renderer$texture.destroyTexture(i, true)
@@ -9111,8 +9111,8 @@ var Nr = function (e) {
     }
   }
   t.prototype.unload = function (e) {
-    var this$renderer$texture = this.renderer.texture
-    var e$_texture = e._texture
+    var /* [auto-meaningful-name] */this$renderer$texture = this.renderer.texture
+    var /* [auto-meaningful-name] */e$_texture = e._texture
     if (e$_texture && !e$_texture.framebuffer) {
       this$renderer$texture.destroyTexture(e$_texture)
     }
@@ -9175,7 +9175,7 @@ var jr = function (e) {
     if (undefined === t) {
       t = 0
     }
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     if (e) {
       if ((e = e.castToBaseTexture()).parentTextureArray) {
         return
@@ -9217,8 +9217,8 @@ var jr = function (e) {
     }
   }
   t.prototype.unbind = function (e) {
-    var this$gl = this.gl
-    var this$boundTextures = this.boundTextures
+    var /* [auto-meaningful-name] */this$gl = this.gl
+    var /* [auto-meaningful-name] */this$boundTextures = this.boundTextures
     if (this._unknownBoundTextures) {
       this._unknownBoundTextures = false
       for (var r = 0; r < this$boundTextures.length; r++) {
@@ -9239,9 +9239,9 @@ var jr = function (e) {
     }
   }
   t.prototype.ensureSamplerType = function (e) {
-    var this$boundTextures = this.boundTextures
-    var this$hasIntegerTextures = this.hasIntegerTextures
-    var this$CONTEXT_UID = this.CONTEXT_UID
+    var /* [auto-meaningful-name] */this$boundTextures = this.boundTextures
+    var /* [auto-meaningful-name] */this$hasIntegerTextures = this.hasIntegerTextures
+    var /* [auto-meaningful-name] */this$CONTEXT_UID = this.CONTEXT_UID
     if (this$hasIntegerTextures) {
       for (var i = e - 1; i >= 0; --i) {
         var o = this$boundTextures[i]
@@ -9265,7 +9265,7 @@ var jr = function (e) {
     t.internalFormat = e.format
     t.type = e.type
     if (2 === this.webGLVersion) {
-      var this$renderer$gl = this.renderer.gl
+      var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
       if (e.type === this$renderer$gl.FLOAT && e.format === this$renderer$gl.RGBA) {
         t.internalFormat = this$renderer$gl.RGBA32F
       }
@@ -9280,16 +9280,16 @@ var jr = function (e) {
   t.prototype.updateTexture = function (e) {
     var t = e._glTextures[this.CONTEXT_UID]
     if (t) {
-      var this$renderer = this.renderer
+      var /* [auto-meaningful-name] */this$renderer = this.renderer
       this.initTextureType(e, t)
       if (e.resource && e.resource.upload(this$renderer, e, t)) {
         if (t.samplerType !== te.FLOAT) {
           this.hasIntegerTextures = true
         }
       } else {
-        var e$realWidth = e.realWidth
-        var e$realHeight = e.realHeight
-        var this$renderer$gl = this$renderer.gl
+        var /* [auto-meaningful-name] */e$realWidth = e.realWidth
+        var /* [auto-meaningful-name] */e$realHeight = e.realHeight
+        var /* [auto-meaningful-name] */this$renderer$gl = this$renderer.gl
         if (t.width !== e$realWidth || t.height !== e$realHeight || t.dirtyId < 0) {
           t.width = e$realWidth
           t.height = e$realHeight
@@ -9303,7 +9303,7 @@ var jr = function (e) {
     }
   }
   t.prototype.destroyTexture = function (e, t) {
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     if ((e = e.castToBaseTexture())._glTextures[this.CONTEXT_UID] && (this.unbind(e), this$gl.deleteTexture(e._glTextures[this.CONTEXT_UID].texture), e.off("dispose", this.destroyTexture, this), delete e._glTextures[this.CONTEXT_UID], !t)) {
       var r = this.managedTextures.indexOf(e)
       if (-1 !== r) {
@@ -9331,7 +9331,7 @@ var jr = function (e) {
     }
   }
   t.prototype.setStyle = function (e, t) {
-    var this$gl = this.gl
+    var /* [auto-meaningful-name] */this$gl = this.gl
     if (t.mipmap && e.mipmap !== ie.ON_MANUAL) {
       this$gl.generateMipmap(e.target)
     }
@@ -9339,7 +9339,7 @@ var jr = function (e) {
     this$gl.texParameteri(e.target, this$gl.TEXTURE_WRAP_T, t.wrapMode)
     if (t.mipmap) {
       this$gl.texParameteri(e.target, this$gl.TEXTURE_MIN_FILTER, e.scaleMode === ne.LINEAR ? this$gl.LINEAR_MIPMAP_LINEAR : this$gl.NEAREST_MIPMAP_NEAREST)
-      var this$renderer$context$extensions$anisotropicFiltering = this.renderer.context.extensions.anisotropicFiltering
+      var /* [auto-meaningful-name] */this$renderer$context$extensions$anisotropicFiltering = this.renderer.context.extensions.anisotropicFiltering
       if (this$renderer$context$extensions$anisotropicFiltering && e.anisotropicLevel > 0 && e.scaleMode === ne.LINEAR) {
         var i = Math.min(e.anisotropicLevel, this$gl.getParameter(this$renderer$context$extensions$anisotropicFiltering.MAX_TEXTURE_MAX_ANISOTROPY_EXT))
         this$gl.texParameterf(e.target, this$renderer$context$extensions$anisotropicFiltering.TEXTURE_MAX_ANISOTROPY_EXT, i)
@@ -9775,7 +9775,7 @@ var Wr = function (e) {
   }
   Xt(t, e)
   t.prototype.contextChange = function () {
-    var this$renderer$gl = this.renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this.renderer.gl
     if (fe.PREFER_ENV === K.WEBGL_LEGACY) {
       this.MAX_TEXTURES = 1
     } else {
@@ -9803,7 +9803,7 @@ var Wr = function (e) {
     this.initFlushBuffers()
   }
   t.prototype.initFlushBuffers = function () {
-    for (var t$_drawCallPool = t._drawCallPool, t$_textureArrayPool = t._textureArrayPool, r = this.size / 4, i = Math.floor(r / this.MAX_TEXTURES) + 1; t$_drawCallPool.length < r;) {
+    for (var /* [auto-meaningful-name] */t$_drawCallPool = t._drawCallPool, /* [auto-meaningful-name] */t$_textureArrayPool = t._textureArrayPool, r = this.size / 4, i = Math.floor(r / this.MAX_TEXTURES) + 1; t$_drawCallPool.length < r;) {
       t$_drawCallPool.push(new Gr())
     }
     for (; t$_textureArrayPool.length < i;) {
@@ -9828,12 +9828,12 @@ var Wr = function (e) {
     }
   }
   t.prototype.buildTexturesAndDrawCalls = function () {
-    var this$_bufferedTextures = this._bufferedTextures
-    var this$MAX_TEXTURES = this.MAX_TEXTURES
-    var t$_textureArrayPool = t._textureArrayPool
-    var this$renderer$batch = this.renderer.batch
-    var this$_tempBoundTextures = this._tempBoundTextures
-    var this$renderer$textureGC$count = this.renderer.textureGC.count
+    var /* [auto-meaningful-name] */this$_bufferedTextures = this._bufferedTextures
+    var /* [auto-meaningful-name] */this$MAX_TEXTURES = this.MAX_TEXTURES
+    var /* [auto-meaningful-name] */t$_textureArrayPool = t._textureArrayPool
+    var /* [auto-meaningful-name] */this$renderer$batch = this.renderer.batch
+    var /* [auto-meaningful-name] */this$_tempBoundTextures = this._tempBoundTextures
+    var /* [auto-meaningful-name] */this$renderer$textureGC$count = this.renderer.textureGC.count
     var s = ++Jt._globalBatch
     var c = 0
     var u = t$_textureArrayPool[0]
@@ -9867,20 +9867,20 @@ var Wr = function (e) {
     Jt._globalBatch = s
   }
   t.prototype.buildDrawCalls = function (e, n, r) {
-    var this$_bufferedElements = this._bufferedElements
-    var this$_attributeBuffer = this._attributeBuffer
-    var this$_indexBuffer = this._indexBuffer
-    var this$vertexSize = this.vertexSize
-    var t$_drawCallPool = t._drawCallPool
-    var this$_dcIndex = this._dcIndex
-    var this$_aIndex = this._aIndex
-    var this$_iIndex = this._iIndex
+    var /* [auto-meaningful-name] */this$_bufferedElements = this._bufferedElements
+    var /* [auto-meaningful-name] */this$_attributeBuffer = this._attributeBuffer
+    var /* [auto-meaningful-name] */this$_indexBuffer = this._indexBuffer
+    var /* [auto-meaningful-name] */this$vertexSize = this.vertexSize
+    var /* [auto-meaningful-name] */t$_drawCallPool = t._drawCallPool
+    var /* [auto-meaningful-name] */this$_dcIndex = this._dcIndex
+    var /* [auto-meaningful-name] */this$_aIndex = this._aIndex
+    var /* [auto-meaningful-name] */this$_iIndex = this._iIndex
     var d = t$_drawCallPool[this$_dcIndex]
     d.start = this._iIndex
     d.texArray = e
     for (var h = n; h < r; ++h) {
       var p = this$_bufferedElements[h]
-      var p$_texture$baseTexture = p._texture.baseTexture
+      var /* [auto-meaningful-name] */p$_texture$baseTexture = p._texture.baseTexture
       var A = Se[p$_texture$baseTexture.alphaMode ? 1 : 0][p.blendMode]
       this$_bufferedElements[h] = null
       if (n < h && d.blend !== A) {
@@ -9903,16 +9903,16 @@ var Wr = function (e) {
     this._iIndex = this$_iIndex
   }
   t.prototype.bindAndClearTexArray = function (e) {
-    for (var this$renderer$texture = this.renderer.texture, n = 0; n < e.count; n++) {
+    for (var /* [auto-meaningful-name] */this$renderer$texture = this.renderer.texture, n = 0; n < e.count; n++) {
       this$renderer$texture.bind(e.elements[n], e.ids[n])
       e.elements[n] = null
     }
     e.count = 0
   }
   t.prototype.updateGeometry = function () {
-    var this$_packedGeometries = this._packedGeometries
-    var this$_attributeBuffer = this._attributeBuffer
-    var this$_indexBuffer = this._indexBuffer
+    var /* [auto-meaningful-name] */this$_packedGeometries = this._packedGeometries
+    var /* [auto-meaningful-name] */this$_attributeBuffer = this._attributeBuffer
+    var /* [auto-meaningful-name] */this$_indexBuffer = this._indexBuffer
     if (fe.CAN_UPLOAD_SAME_BUFFER) {
       this$_packedGeometries[this._flushId]._buffer.update(this$_attributeBuffer.rawBinaryData)
       this$_packedGeometries[this._flushId]._indexBuffer.update(this$_indexBuffer)
@@ -9930,13 +9930,13 @@ var Wr = function (e) {
     }
   }
   t.prototype.drawBatches = function () {
-    for (var this$_dcIndex = this._dcIndex, this$renderer = this.renderer, this$renderer$gl = this$renderer.gl, this$renderer$state = this$renderer.state, t$_drawCallPool = t._drawCallPool, a = null, s = 0; s < this$_dcIndex; s++) {
+    for (var /* [auto-meaningful-name] */this$_dcIndex = this._dcIndex, /* [auto-meaningful-name] */this$renderer = this.renderer, /* [auto-meaningful-name] */this$renderer$gl = this$renderer.gl, /* [auto-meaningful-name] */this$renderer$state = this$renderer.state, /* [auto-meaningful-name] */t$_drawCallPool = t._drawCallPool, a = null, s = 0; s < this$_dcIndex; s++) {
       var c = t$_drawCallPool[s]
-      var c$texArray = c.texArray
-      var c$type = c.type
-      var c$size = c.size
-      var c$start = c.start
-      var c$blend = c.blend
+      var /* [auto-meaningful-name] */c$texArray = c.texArray
+      var /* [auto-meaningful-name] */c$type = c.type
+      var /* [auto-meaningful-name] */c$size = c.size
+      var /* [auto-meaningful-name] */c$start = c.start
+      var /* [auto-meaningful-name] */c$blend = c.blend
       if (a !== c$texArray) {
         a = c$texArray
         this.bindAndClearTexArray(c$texArray)
@@ -10017,7 +10017,7 @@ var Wr = function (e) {
     return i
   }
   t.prototype.packInterleavedGeometry = function (e, t, n, r, i) {
-    for (var t$uint32View = t.uint32View, t$float32View = t.float32View, s = r / this.vertexSize, e$uvs = e.uvs, e$indices = e.indices, e$vertexData = e.vertexData, e$_texture$baseTexture$_batchLocation = e._texture.baseTexture._batchLocation, d = Math.min(e.worldAlpha, 1), h = d < 1 && e._texture.baseTexture.alphaMode ? De(e._tintRGB, d) : e._tintRGB + (255 * d << 24), p = 0; p < e$vertexData.length; p += 2) {
+    for (var /* [auto-meaningful-name] */t$uint32View = t.uint32View, /* [auto-meaningful-name] */t$float32View = t.float32View, s = r / this.vertexSize, /* [auto-meaningful-name] */e$uvs = e.uvs, /* [auto-meaningful-name] */e$indices = e.indices, /* [auto-meaningful-name] */e$vertexData = e.vertexData, /* [auto-meaningful-name] */e$_texture$baseTexture$_batchLocation = e._texture.baseTexture._batchLocation, d = Math.min(e.worldAlpha, 1), h = d < 1 && e._texture.baseTexture.alphaMode ? De(e._tintRGB, d) : e._tintRGB + (255 * d << 24), p = 0; p < e$vertexData.length; p += 2) {
       t$float32View[r++] = e$vertexData[p]
       t$float32View[r++] = e$vertexData[p + 1]
       t$float32View[r++] = e$uvs[p]
@@ -10054,7 +10054,7 @@ var Kr = function () {
       this.defaultGroupCache[e] = In.from({
         uSamplers: t
       }, true)
-      var this$fragTemplate = this.fragTemplate
+      var /* [auto-meaningful-name] */this$fragTemplate = this.fragTemplate
       this$fragTemplate = (this$fragTemplate = this$fragTemplate.replace(/%count%/gi, "" + e)).replace(/%forloop%/gi, this.generateSampleSrc(e))
       this.programCache[e] = new Ar(this.vertexSrc, this$fragTemplate)
     }
@@ -10099,21 +10099,21 @@ var Xr = function (e) {
   Xt(t, e)
   return t
 }(Sn)
-var Yr = "precision highp float;\nattribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\nattribute vec4 aColor;\nattribute float aTextureId;\n\nuniform mat3 projectionMatrix;\nuniform mat3 translationMatrix;\nuniform vec4 tint;\n\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\nvarying float vTextureId;\n\nvoid main(void){\n    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = aTextureCoord;\n    vTextureId = aTextureId;\n    vColor = aColor * tint;\n}\n"
-var qr = "varying vec2 vTextureCoord;\nvarying vec4 vColor;\nvarying float vTextureId;\nuniform sampler2D uSamplers[%count%];\n\nvoid main(void){\n    vec4 color;\n    %forloop%\n    gl_FragColor = color * vColor;\n}\n"
+var /* [auto-meaningful-name] */PrecisionHighpFloat_nattributeVec2AVertexPosition_nattributeVec2ATextureCoord_nattributeVec4AColor_nattributeFloatATextureId_n_nuniformMat3ProjectionMatrix_nuniformMat3TranslationMatrix_nuniformVec4Tint_n_nvaryingVec2VTextureCoord_nvaryingVec4VColor_nvaryingFloatVTextureId_n_nvoidMainVoid_nGl_PositionVec4ProjectionMatrixTranslationMatrixVec3AVertexPosition1$0$xy0$01$0_n_nVTextureCoordATextureCoord_nVTextureIdATextureId_nVColorAColorTint_n_n = "precision highp float;\nattribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\nattribute vec4 aColor;\nattribute float aTextureId;\n\nuniform mat3 projectionMatrix;\nuniform mat3 translationMatrix;\nuniform vec4 tint;\n\nvarying vec2 vTextureCoord;\nvarying vec4 vColor;\nvarying float vTextureId;\n\nvoid main(void){\n    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = aTextureCoord;\n    vTextureId = aTextureId;\n    vColor = aColor * tint;\n}\n"
+var /* [auto-meaningful-name] */VaryingVec2VTextureCoord_nvaryingVec4VColor_nvaryingFloatVTextureId_nuniformSampler2DUSamplersCount_n_nvoidMainVoid_nVec4Color_nForloop_nGl_FragColorColorVColor_n_n = "varying vec2 vTextureCoord;\nvarying vec4 vColor;\nvarying float vTextureId;\nuniform sampler2D uSamplers[%count%];\n\nvoid main(void){\n    vec4 color;\n    %forloop%\n    gl_FragColor = color * vColor;\n}\n"
 var $r = function () {
   function e() {}
   e.create = function (e) {
     var t = Object.assign({
-      vertex: Yr,
-      fragment: qr,
+      vertex: PrecisionHighpFloat_nattributeVec2AVertexPosition_nattributeVec2ATextureCoord_nattributeVec4AColor_nattributeFloatATextureId_n_nuniformMat3ProjectionMatrix_nuniformMat3TranslationMatrix_nuniformVec4Tint_n_nvaryingVec2VTextureCoord_nvaryingVec4VColor_nvaryingFloatVTextureId_n_nvoidMainVoid_nGl_PositionVec4ProjectionMatrixTranslationMatrixVec3AVertexPosition1$0$xy0$01$0_n_nVTextureCoordATextureCoord_nVTextureIdATextureId_nVColorAColorTint_n_n,
+      fragment: VaryingVec2VTextureCoord_nvaryingVec4VColor_nvaryingFloatVTextureId_nuniformSampler2DUSamplersCount_n_nvoidMainVoid_nVec4Color_nForloop_nGl_FragColorColorVColor_n_n,
       geometryClass: Xr,
       vertexSize: 6
     }, e)
-    var t$vertex = t.vertex
-    var t$fragment = t.fragment
-    var t$vertexSize = t.vertexSize
-    var t$geometryClass = t.geometryClass
+    var /* [auto-meaningful-name] */t$vertex = t.vertex
+    var /* [auto-meaningful-name] */t$fragment = t.fragment
+    var /* [auto-meaningful-name] */t$vertexSize = t.vertexSize
+    var /* [auto-meaningful-name] */t$geometryClass = t.geometryClass
     return function (e) {
       function t(t) {
         var a = e.call(this, t) || this
@@ -10128,14 +10128,14 @@ var $r = function () {
   }
   Object.defineProperty(e, "defaultVertexSrc", {
     get: function () {
-      return Yr
+      return PrecisionHighpFloat_nattributeVec2AVertexPosition_nattributeVec2ATextureCoord_nattributeVec4AColor_nattributeFloatATextureId_n_nuniformMat3ProjectionMatrix_nuniformMat3TranslationMatrix_nuniformVec4Tint_n_nvaryingVec2VTextureCoord_nvaryingVec4VColor_nvaryingFloatVTextureId_n_nvoidMainVoid_nGl_PositionVec4ProjectionMatrixTranslationMatrixVec3AVertexPosition1$0$xy0$01$0_n_nVTextureCoordATextureCoord_nVTextureIdATextureId_nVColorAColorTint_n_n
     },
     enumerable: false,
     configurable: true
   })
   Object.defineProperty(e, "defaultFragmentTemplate", {
     get: function () {
-      return qr
+      return VaryingVec2VTextureCoord_nvaryingVec4VColor_nvaryingFloatVTextureId_nuniformSampler2DUSamplersCount_n_nvoidMainVoid_nVec4Color_nForloop_nGl_FragColorColorVColor_n_n
     },
     enumerable: false,
     configurable: true
@@ -10251,7 +10251,7 @@ var ii = function () {
           e = self.innerWidth
           n = self.innerHeight
         } else {
-          var t$_resizeTo = t._resizeTo
+          var /* [auto-meaningful-name] */t$_resizeTo = t._resizeTo
           e = t$_resizeTo.clientWidth
           n = t$_resizeTo.clientHeight
         }
@@ -10290,7 +10290,7 @@ var ai = function () {
     var n
     var r
     var i
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     var a = false
     var s = false
     if (t) {
@@ -10317,7 +10317,7 @@ var ai = function () {
     var u = Math.floor(r.height * n + 1e-4)
     var l = new $e(c, u, 1)
     var f = new Uint8Array(4 * c * u)
-    var this$renderer$gl = this$renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this$renderer.gl
     this$renderer$gl.readPixels(r.x * n, r.y * n, c, u, this$renderer$gl.RGBA, this$renderer$gl.UNSIGNED_BYTE, f)
     var h = l.context.getImageData(0, 0, c, u)
     e.arrayPostDivide(f, h.data)
@@ -10338,7 +10338,7 @@ var ai = function () {
     var n
     var r
     var i
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     var a = false
     if (t) {
       if (t instanceof vn) {
@@ -10361,7 +10361,7 @@ var ai = function () {
     var s = r.width * n
     var c = r.height * n
     var u = new Uint8Array(4 * s * c)
-    var this$renderer$gl = this$renderer.gl
+    var /* [auto-meaningful-name] */this$renderer$gl = this$renderer.gl
     this$renderer$gl.readPixels(r.x * n, r.y * n, s, c, this$renderer$gl.RGBA, this$renderer$gl.UNSIGNED_BYTE, u)
     if (a) {
       i.destroy(true)
@@ -10388,7 +10388,7 @@ var ai = function () {
   }
   return e
 }()
-import si = require("./1172");
+import /* [auto-meaningful-name] */$_1172 = require("./1172")
 var ci = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -10400,8 +10400,8 @@ var ci = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(si)
-import ui = require("./562");
+}($_1172)
+import /* [auto-meaningful-name] */$_562 = require("./562")
 var li = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -10413,11 +10413,11 @@ var li = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(ui)
+}($_562)
 function fi() {}
 function di(e, t, n, r) {
   var i = 0
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   !function a(s) {
     if (s || i === e$length) {
       if (n) {
@@ -10619,7 +10619,7 @@ var bi = function () {
   e.setExtensionXhrType = function (t, n) {
     wi(e._xhrTypeMap, t, n)
   }
-  var e$prototype = e.prototype
+  var /* [auto-meaningful-name] */e$prototype = e.prototype
   e$prototype.complete = function () {
     this._clearEvents()
     this._finish()
@@ -10756,12 +10756,12 @@ var bi = function () {
         if (navigator.isCocoonJS) {
           this.data.src = Array.isArray(this.url) ? this.url[0] : this.url
         } else if (Array.isArray(this.url)) {
-          for (var _this$metadata$mimeType = this.metadata.mimeType, n = 0; n < this.url.length; ++n) {
-            this.data.appendChild(this._createSource(e, this.url[n], Array.isArray(_this$metadata$mimeType) ? _this$metadata$mimeType[n] : _this$metadata$mimeType))
+          for (var /* [auto-meaningful-name] */this$metadata$mimeType = this.metadata.mimeType, n = 0; n < this.url.length; ++n) {
+            this.data.appendChild(this._createSource(e, this.url[n], Array.isArray(this$metadata$mimeType) ? this$metadata$mimeType[n] : this$metadata$mimeType))
           }
         } else {
-          var this$metadata$mimeType = this.metadata.mimeType
-          this.data.appendChild(this._createSource(e, this.url, Array.isArray(this$metadata$mimeType) ? this$metadata$mimeType[0] : this$metadata$mimeType))
+          var /* [auto-meaningful-name] */_this$metadata$mimeType = this.metadata.mimeType
+          this.data.appendChild(this._createSource(e, this.url, Array.isArray(_this$metadata$mimeType) ? _this$metadata$mimeType[0] : _this$metadata$mimeType))
         }
       }
       this.data.addEventListener("error", this._boundOnError, false)
@@ -10831,19 +10831,19 @@ var bi = function () {
     this.abort("Load timed out.")
   }
   e$prototype._xhrOnError = function () {
-    var this$xhr = this.xhr
+    var /* [auto-meaningful-name] */this$xhr = this.xhr
     this.abort(Ei(this$xhr) + " Request failed. Status: " + this$xhr.status + ", text: \"" + this$xhr.statusText + "\"")
   }
   e$prototype._xhrOnTimeout = function () {
-    var this$xhr = this.xhr
+    var /* [auto-meaningful-name] */this$xhr = this.xhr
     this.abort(Ei(this$xhr) + " Request timed out.")
   }
   e$prototype._xhrOnAbort = function () {
-    var this$xhr = this.xhr
+    var /* [auto-meaningful-name] */this$xhr = this.xhr
     this.abort(Ei(this$xhr) + " Request was aborted by the user.")
   }
   e$prototype._xhrOnLoad = function () {
-    var this$xhr = this.xhr
+    var /* [auto-meaningful-name] */this$xhr = this.xhr
     var n = ""
     var r = "undefined" === typeof this$xhr.status ? 200 : this$xhr.status
     if (!("" !== this$xhr.responseType && "text" !== this$xhr.responseType && "undefined" !== typeof this$xhr.responseType)) {
@@ -10914,7 +10914,7 @@ var bi = function () {
     return e._loadTypeMap[this.extension] || e.LOAD_TYPE.XHR
   }
   e$prototype._getExtension = function () {
-    var this$url = this.url
+    var /* [auto-meaningful-name] */this$url = this.url
     var t = ""
     if (this.isDataUrl) {
       var n = this$url.indexOf("/")
@@ -11149,7 +11149,7 @@ var ki = function () {
       this.use(e._defaultAfterMiddleware[o])
     }
   }
-  var e$prototype = e.prototype
+  var /* [auto-meaningful-name] */e$prototype = e.prototype
   e$prototype.add = function (e, t, n, r) {
     if (Array.isArray(e)) {
       for (var i = 0; i < e.length; ++i) {
@@ -11187,7 +11187,7 @@ var ki = function () {
       this.resources[e].onAfterMiddleware.once(r)
     }
     if (this.loading) {
-      for (var n$parentResource = n.parentResource, a = [], s = 0; s < n$parentResource.children.length; ++s) {
+      for (var /* [auto-meaningful-name] */n$parentResource = n.parentResource, a = [], s = 0; s < n$parentResource.children.length; ++s) {
         if (!n$parentResource.children[s].isComplete) {
           a.push(n$parentResource.children[s])
         }
@@ -11350,10 +11350,10 @@ var Ti = function () {
     if (!e.data || e.type !== bi.TYPE.IMAGE && "svg" !== e.extension) {
       t()
     } else {
-      var e$data = e.data
-      var e$url = e.url
-      var e$name = e.name
-      var e$metadata = e.metadata
+      var /* [auto-meaningful-name] */e$data = e.data
+      var /* [auto-meaningful-name] */e$url = e.url
+      var /* [auto-meaningful-name] */e$name = e.name
+      var /* [auto-meaningful-name] */e$metadata = e.metadata
       An.fromLoader(e$data, e$url, e$name, e$metadata).then(function (n) {
         e.texture = n
         t()
@@ -11366,8 +11366,8 @@ var Bi = function (e) {
   function t(n, r) {
     for (var i = e.call(this, n, r) || this, o = 0; o < t._plugins.length; ++o) {
       var a = t._plugins[o]
-      var a$pre = a.pre
-      var a$use = a.use
+      var /* [auto-meaningful-name] */a$pre = a.pre
+      var /* [auto-meaningful-name] */a$use = a.use
       if (a$pre) {
         i.pre(a$pre)
       }
@@ -11392,7 +11392,7 @@ var Bi = function (e) {
   }
   Object.defineProperty(t, "shared", {
     get: function () {
-      var t$_shared = t._shared
+      var /* [auto-meaningful-name] */t$_shared = t._shared
       if (!t$_shared) {
         (t$_shared = new t())._protected = true
         t._shared = t$_shared
@@ -11443,7 +11443,7 @@ var Fi = function () {
     this.textures = {}
     this.animations = {}
     this.data = t
-    var this$baseTexture$resource = this.baseTexture.resource
+    var /* [auto-meaningful-name] */this$baseTexture$resource = this.baseTexture.resource
     this.resolution = this._updateResolution(n || (this$baseTexture$resource ? this$baseTexture$resource.url : null))
     this._frames = this.data.frames
     this._frameKeys = Object.keys(this._frames)
@@ -11454,7 +11454,7 @@ var Fi = function () {
     if (undefined === e) {
       e = null
     }
-    var this$data$meta$scale = this.data.meta.scale
+    var /* [auto-meaningful-name] */this$data$meta$scale = this.data.meta.scale
     var n = rt(e, null)
     if (null === n) {
       n = undefined !== this$data$meta$scale ? parseFloat(this$data$meta$scale) : 1
@@ -11476,10 +11476,10 @@ var Fi = function () {
     }
   }
   e.prototype._processFrames = function (t) {
-    for (var n = t, e$BATCH_SIZE = e.BATCH_SIZE; n - t < e$BATCH_SIZE && n < this._frameKeys.length;) {
+    for (var n = t, /* [auto-meaningful-name] */e$BATCH_SIZE = e.BATCH_SIZE; n - t < e$BATCH_SIZE && n < this._frameKeys.length;) {
       var i = this._frameKeys[n]
       var o = this._frames[i]
-      var o$frame = o.frame
+      var /* [auto-meaningful-name] */o$frame = o.frame
       if (o$frame) {
         var s = null
         var c = null
@@ -11506,7 +11506,7 @@ var Fi = function () {
     }
   }
   e.prototype._parseComplete = function () {
-    var this$_callback = this._callback
+    var /* [auto-meaningful-name] */this$_callback = this._callback
     this._callback = null
     this._batchIndex = 0
     this$_callback.call(this, this.textures)
@@ -11664,24 +11664,24 @@ var ji = function (e) {
     this._transformTrimmedID = -1
   }
   t.prototype.calculateVertices = function () {
-    var this$_texture = this._texture
+    var /* [auto-meaningful-name] */this$_texture = this._texture
     if (this._transformID !== this.transform._worldID || this._textureID !== this$_texture._updateID) {
       if (this._textureID !== this$_texture._updateID) {
         this.uvs = this._texture._uvs.uvsFloat32
       }
       this._transformID = this.transform._worldID
       this._textureID = this$_texture._updateID
-      var this$transform$worldTransform = this.transform.worldTransform
-      var this$transform$worldTransform$a = this$transform$worldTransform.a
-      var this$transform$worldTransform$b = this$transform$worldTransform.b
-      var this$transform$worldTransform$c = this$transform$worldTransform.c
-      var this$transform$worldTransform$d = this$transform$worldTransform.d
-      var this$transform$worldTransform$tx = this$transform$worldTransform.tx
-      var this$transform$worldTransform$ty = this$transform$worldTransform.ty
-      var this$vertexData = this.vertexData
-      var this$_texture$trim = this$_texture.trim
-      var this$_texture$orig = this$_texture.orig
-      var this$_anchor = this._anchor
+      var /* [auto-meaningful-name] */this$transform$worldTransform = this.transform.worldTransform
+      var /* [auto-meaningful-name] */this$transform$worldTransform$a = this$transform$worldTransform.a
+      var /* [auto-meaningful-name] */this$transform$worldTransform$b = this$transform$worldTransform.b
+      var /* [auto-meaningful-name] */this$transform$worldTransform$c = this$transform$worldTransform.c
+      var /* [auto-meaningful-name] */this$transform$worldTransform$d = this$transform$worldTransform.d
+      var /* [auto-meaningful-name] */this$transform$worldTransform$tx = this$transform$worldTransform.tx
+      var /* [auto-meaningful-name] */this$transform$worldTransform$ty = this$transform$worldTransform.ty
+      var /* [auto-meaningful-name] */this$vertexData = this.vertexData
+      var /* [auto-meaningful-name] */this$_texture$trim = this$_texture.trim
+      var /* [auto-meaningful-name] */this$_texture$orig = this$_texture.orig
+      var /* [auto-meaningful-name] */this$_anchor = this._anchor
       var d = 0
       var h = 0
       var p = 0
@@ -11702,7 +11702,7 @@ var ji = function (e) {
       this$vertexData[6] = this$transform$worldTransform$a * h + this$transform$worldTransform$c * p + this$transform$worldTransform$tx
       this$vertexData[7] = this$transform$worldTransform$d * p + this$transform$worldTransform$b * h + this$transform$worldTransform$ty
       if (this._roundPixels) {
-        for (var fe$RESOLUTION = fe.RESOLUTION, g = 0; g < this$vertexData.length; ++g) {
+        for (var /* [auto-meaningful-name] */fe$RESOLUTION = fe.RESOLUTION, g = 0; g < this$vertexData.length; ++g) {
           this$vertexData[g] = Math.round((this$vertexData[g] * fe$RESOLUTION | 0) / fe$RESOLUTION)
         }
       }
@@ -11718,17 +11718,17 @@ var ji = function (e) {
     }
     this._transformTrimmedID = this.transform._worldID
     this._textureTrimmedID = this._texture._updateID
-    var this$_texture = this._texture
-    var this$vertexTrimmedData = this.vertexTrimmedData
-    var this$_texture$orig = this$_texture.orig
-    var this$_anchor = this._anchor
-    var this$transform$worldTransform = this.transform.worldTransform
-    var this$transform$worldTransform$a = this$transform$worldTransform.a
-    var this$transform$worldTransform$b = this$transform$worldTransform.b
-    var this$transform$worldTransform$c = this$transform$worldTransform.c
-    var this$transform$worldTransform$d = this$transform$worldTransform.d
-    var this$transform$worldTransform$tx = this$transform$worldTransform.tx
-    var this$transform$worldTransform$ty = this$transform$worldTransform.ty
+    var /* [auto-meaningful-name] */this$_texture = this._texture
+    var /* [auto-meaningful-name] */this$vertexTrimmedData = this.vertexTrimmedData
+    var /* [auto-meaningful-name] */this$_texture$orig = this$_texture.orig
+    var /* [auto-meaningful-name] */this$_anchor = this._anchor
+    var /* [auto-meaningful-name] */this$transform$worldTransform = this.transform.worldTransform
+    var /* [auto-meaningful-name] */this$transform$worldTransform$a = this$transform$worldTransform.a
+    var /* [auto-meaningful-name] */this$transform$worldTransform$b = this$transform$worldTransform.b
+    var /* [auto-meaningful-name] */this$transform$worldTransform$c = this$transform$worldTransform.c
+    var /* [auto-meaningful-name] */this$transform$worldTransform$d = this$transform$worldTransform.d
+    var /* [auto-meaningful-name] */this$transform$worldTransform$tx = this$transform$worldTransform.tx
+    var /* [auto-meaningful-name] */this$transform$worldTransform$ty = this$transform$worldTransform.ty
     var f = -this$_anchor._x * this$_texture$orig.width
     var d = f + this$_texture$orig.width
     var h = -this$_anchor._y * this$_texture$orig.height
@@ -11748,8 +11748,8 @@ var ji = function (e) {
     e.plugins[this.pluginName].render(this)
   }
   t.prototype._calculateBounds = function () {
-    var this$_texture$trim = this._texture.trim
-    var this$_texture$orig = this._texture.orig
+    var /* [auto-meaningful-name] */this$_texture$trim = this._texture.trim
+    var /* [auto-meaningful-name] */this$_texture$orig = this._texture.orig
     if (!this$_texture$trim || this$_texture$trim.width === this$_texture$orig.width && this$_texture$trim.height === this$_texture$orig.height) {
       this.calculateVertices()
       this._bounds.addQuad(this.vertexData)
@@ -11763,8 +11763,8 @@ var ji = function (e) {
   }
   t.prototype.containsPoint = function (e) {
     this.worldTransform.applyInverse(e, Ni)
-    var this$_texture$orig$width = this._texture.orig.width
-    var this$_texture$orig$height = this._texture.orig.height
+    var /* [auto-meaningful-name] */this$_texture$orig$width = this._texture.orig.width
+    var /* [auto-meaningful-name] */this$_texture$orig$height = this._texture.orig.height
     var r = -this$_texture$orig$width * this.anchor.x
     var i = 0
     return Ni.x >= r && Ni.x < r + this$_texture$orig$width && (i = -this$_texture$orig$height * this.anchor.y, Ni.y >= i && Ni.y < i + this$_texture$orig$height)
@@ -11942,7 +11942,7 @@ var Vi = function (e) {
     this._cachedTint = 16777215
   }
   t.prototype._render = function (e) {
-    var this$_texture = this._texture
+    var /* [auto-meaningful-name] */this$_texture = this._texture
     if (this$_texture && this$_texture.valid) {
       this.tileTransform.updateLocalTransform()
       this.uvMatrix.update()
@@ -11962,8 +11962,8 @@ var Vi = function (e) {
   }
   t.prototype.containsPoint = function (e) {
     this.worldTransform.applyInverse(e, Hi)
-    var this$_width = this._width
-    var this$_height = this._height
+    var /* [auto-meaningful-name] */this$_width = this._width
+    var /* [auto-meaningful-name] */this$_height = this._height
     var r = -this$_width * this.anchor._x
     if (Hi.x >= r && Hi.x < r + this$_width) {
       var i = -this$_height * this.anchor._y
@@ -12003,7 +12003,7 @@ var Vi = function (e) {
   })
   return t
 }(ji)
-var Gi = "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 translationMatrix;\nuniform mat3 uTransform;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = (uTransform * vec3(aTextureCoord, 1.0)).xy;\n}\n"
+var /* [auto-meaningful-name] */AttributeVec2AVertexPosition_nattributeVec2ATextureCoord_n_nuniformMat3ProjectionMatrix_nuniformMat3TranslationMatrix_nuniformMat3UTransform_n_nvaryingVec2VTextureCoord_n_nvoidMainVoid_n_nGl_PositionVec4ProjectionMatrixTranslationMatrixVec3AVertexPosition1$0$xy0$01$0_n_nVTextureCoordUTransformVec3ATextureCoord1$0$xy_n_n = "attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\nuniform mat3 translationMatrix;\nuniform mat3 uTransform;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * translationMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n\n    vTextureCoord = (uTransform * vec3(aTextureCoord, 1.0)).xy;\n}\n"
 var zi = new _t()
 var Qi = function (e) {
   function t(t) {
@@ -12011,17 +12011,17 @@ var Qi = function (e) {
     var r = {
       globals: n.renderer.globalUniforms
     }
-    n.shader = gr.from(Gi, "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\nuniform mat3 uMapCoord;\nuniform vec4 uClampFrame;\nuniform vec2 uClampOffset;\n\nvoid main(void)\n{\n    vec2 coord = vTextureCoord + ceil(uClampOffset - vTextureCoord);\n    coord = (uMapCoord * vec3(coord, 1.0)).xy;\n    coord = clamp(coord, uClampFrame.xy, uClampFrame.zw);\n\n    vec4 texSample = texture2D(uSampler, coord);\n    gl_FragColor = texSample * uColor;\n}\n", r)
-    n.simpleShader = gr.from(Gi, "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\n\nvoid main(void)\n{\n    vec4 sample = texture2D(uSampler, vTextureCoord);\n    gl_FragColor = sample * uColor;\n}\n", r)
+    n.shader = gr.from(AttributeVec2AVertexPosition_nattributeVec2ATextureCoord_n_nuniformMat3ProjectionMatrix_nuniformMat3TranslationMatrix_nuniformMat3UTransform_n_nvaryingVec2VTextureCoord_n_nvoidMainVoid_n_nGl_PositionVec4ProjectionMatrixTranslationMatrixVec3AVertexPosition1$0$xy0$01$0_n_nVTextureCoordUTransformVec3ATextureCoord1$0$xy_n_n, "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\nuniform mat3 uMapCoord;\nuniform vec4 uClampFrame;\nuniform vec2 uClampOffset;\n\nvoid main(void)\n{\n    vec2 coord = vTextureCoord + ceil(uClampOffset - vTextureCoord);\n    coord = (uMapCoord * vec3(coord, 1.0)).xy;\n    coord = clamp(coord, uClampFrame.xy, uClampFrame.zw);\n\n    vec4 texSample = texture2D(uSampler, coord);\n    gl_FragColor = texSample * uColor;\n}\n", r)
+    n.simpleShader = gr.from(AttributeVec2AVertexPosition_nattributeVec2ATextureCoord_n_nuniformMat3ProjectionMatrix_nuniformMat3TranslationMatrix_nuniformMat3UTransform_n_nvaryingVec2VTextureCoord_n_nvoidMainVoid_n_nGl_PositionVec4ProjectionMatrixTranslationMatrixVec3AVertexPosition1$0$xy0$01$0_n_nVTextureCoordUTransformVec3ATextureCoord1$0$xy_n_n, "varying vec2 vTextureCoord;\n\nuniform sampler2D uSampler;\nuniform vec4 uColor;\n\nvoid main(void)\n{\n    vec4 sample = texture2D(uSampler, vTextureCoord);\n    gl_FragColor = sample * uColor;\n}\n", r)
     n.quad = new Bn()
     n.state = vr.for2d()
     return n
   }
   Ui(t, e)
   t.prototype.render = function (e) {
-    var this$renderer = this.renderer
-    var this$quad = this.quad
-    var this$quad$vertices = this$quad.vertices
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$quad = this.quad
+    var /* [auto-meaningful-name] */this$quad$vertices = this$quad.vertices
     this$quad$vertices[0] = this$quad$vertices[6] = e._width * -e.anchor.x
     this$quad$vertices[1] = this$quad$vertices[3] = e._height * -e.anchor.y
     this$quad$vertices[2] = this$quad$vertices[4] = e._width * (1 - e.anchor.x)
@@ -12033,10 +12033,10 @@ var Qi = function (e) {
     this$quad$vertices[2] = this$quad$vertices[4] = 1 - i
     this$quad$vertices[5] = this$quad$vertices[7] = 1 - o
     this$quad.invalidate()
-    var e$_texture = e._texture
-    var e$_texture$baseTexture = e$_texture.baseTexture
-    var e$tileTransform$localTransform = e.tileTransform.localTransform
-    var e$uvMatrix = e.uvMatrix
+    var /* [auto-meaningful-name] */e$_texture = e._texture
+    var /* [auto-meaningful-name] */e$_texture$baseTexture = e$_texture.baseTexture
+    var /* [auto-meaningful-name] */e$tileTransform$localTransform = e.tileTransform.localTransform
+    var /* [auto-meaningful-name] */e$uvMatrix = e.uvMatrix
     var l = e$_texture$baseTexture.isPowerOfTwo && e$_texture.frame.width === e$_texture$baseTexture.width && e$_texture.frame.height === e$_texture$baseTexture.height
     if (l) {
       if (e$_texture$baseTexture._glTextures[this$renderer.CONTEXT_UID]) {
@@ -12048,10 +12048,10 @@ var Qi = function (e) {
       }
     }
     var f = l ? this.simpleShader : this.shader
-    var e$_texture$width = e$_texture.width
-    var e$_texture$height = e$_texture.height
-    var e$_width = e._width
-    var e$_height = e._height
+    var /* [auto-meaningful-name] */e$_texture$width = e$_texture.width
+    var /* [auto-meaningful-name] */e$_texture$height = e$_texture.height
+    var /* [auto-meaningful-name] */e$_width = e._width
+    var /* [auto-meaningful-name] */e$_height = e._height
     zi.set(e$tileTransform$localTransform.a * e$_texture$width / e$_width, e$tileTransform$localTransform.b * e$_texture$width / e$_height, e$tileTransform$localTransform.c * e$_texture$height / e$_width, e$tileTransform$localTransform.d * e$_texture$height / e$_height, e$tileTransform$localTransform.tx / e$_width, e$tileTransform$localTransform.ty / e$_height)
     zi.invert()
     if (l) {
@@ -12157,19 +12157,19 @@ It.prototype._renderCached = function (e) {
 }
 It.prototype._initCachedDisplayObject = function (e) {
   if (!this._cacheData || !this._cacheData.sprite) {
-    var this$alpha = this.alpha
+    var /* [auto-meaningful-name] */this$alpha = this.alpha
     this.alpha = 1
     e.batch.flush()
     var n = this.getLocalBounds(null, true).clone()
     if (this.filters) {
-      var this$filters0$padding = this.filters[0].padding
+      var /* [auto-meaningful-name] */this$filters0$padding = this.filters[0].padding
       n.pad(this$filters0$padding)
     }
     n.ceil(fe.RESOLUTION)
-    var e$renderTexture$current = e.renderTexture.current
+    var /* [auto-meaningful-name] */e$renderTexture$current = e.renderTexture.current
     var o = e.renderTexture.sourceFrame.clone()
     var a = e.renderTexture.destinationFrame.clone()
-    var e$projection$transform = e.projection.transform
+    var /* [auto-meaningful-name] */e$projection$transform = e.projection.transform
     var c = vn.create({
       width: n.width,
       height: n.height,
@@ -12224,10 +12224,10 @@ It.prototype._renderCachedCanvas = function (e) {
 It.prototype._initCachedDisplayObjectCanvas = function (e) {
   if (!this._cacheData || !this._cacheData.sprite) {
     var t = this.getLocalBounds(null, true)
-    var this$alpha = this.alpha
+    var /* [auto-meaningful-name] */this$alpha = this.alpha
     this.alpha = 1
-    var e$context = e.context
-    var e$_projTransform = e._projTransform
+    var /* [auto-meaningful-name] */e$context = e.context
+    var /* [auto-meaningful-name] */e$_projTransform = e._projTransform
     t.ceil(fe.RESOLUTION)
     var o = vn.create({
       width: t.width,
@@ -12298,7 +12298,7 @@ It.prototype._cacheAsBitmapDestroy = function (e) {
 }
 It.prototype.name = null
 Pt.prototype.getChildByName = function (e, t) {
-  for (var n = 0, this$children$length = this.children.length; n < this$children$length; n++) {
+  for (var n = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; n < this$children$length; n++) {
     if (this.children[n].name === e) {
       return this.children[n]
     }
@@ -12347,17 +12347,17 @@ var Yi = function () {
     this._foundShapes = []
   }
   e.prototype.pushMask = function (e) {
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     var n = e.maskObject || e
     this$renderer.context.save()
-    var this$_foundShapes = this._foundShapes
+    var /* [auto-meaningful-name] */this$_foundShapes = this._foundShapes
     this.recursiveFindShapes(n, this$_foundShapes)
     if (this$_foundShapes.length > 0) {
-      var this$renderer$context = this$renderer.context
+      var /* [auto-meaningful-name] */this$renderer$context = this$renderer.context
       this$renderer$context.beginPath()
       for (var o = 0; o < this$_foundShapes.length; o++) {
         var a = this$_foundShapes[o]
-        var a$transform$worldTransform = a.transform.worldTransform
+        var /* [auto-meaningful-name] */a$transform$worldTransform = a.transform.worldTransform
         this.renderer.setContextTransform(a$transform$worldTransform)
         this.renderGraphicsShape(a)
       }
@@ -12369,7 +12369,7 @@ var Yi = function () {
     if (e.geometry && e.geometry.graphicsData) {
       t.push(e)
     }
-    var e$children = e.children
+    var /* [auto-meaningful-name] */e$children = e.children
     if (e$children) {
       for (var r = 0; r < e$children.length; r++) {
         this.recursiveFindShapes(e$children[r], t)
@@ -12378,14 +12378,14 @@ var Yi = function () {
   }
   e.prototype.renderGraphicsShape = function (e) {
     e.finishPoly()
-    var this$renderer$context = this.renderer.context
-    var e$geometry$graphicsData = e.geometry.graphicsData
-    var e$geometry$graphicsData$length = e$geometry$graphicsData.length
+    var /* [auto-meaningful-name] */this$renderer$context = this.renderer.context
+    var /* [auto-meaningful-name] */e$geometry$graphicsData = e.geometry.graphicsData
+    var /* [auto-meaningful-name] */e$geometry$graphicsData$length = e$geometry$graphicsData.length
     if (0 !== e$geometry$graphicsData$length) {
       for (var i = 0; i < e$geometry$graphicsData$length; i++) {
-        var e$geometry$graphicsDataI$shape = e$geometry$graphicsData[i].shape
+        var /* [auto-meaningful-name] */e$geometry$graphicsDataI$shape = e$geometry$graphicsData[i].shape
         if (e$geometry$graphicsDataI$shape.type === it.POLY) {
-          var e$geometry$graphicsDataI$shape$points = e$geometry$graphicsDataI$shape.points
+          var /* [auto-meaningful-name] */e$geometry$graphicsDataI$shape$points = e$geometry$graphicsDataI$shape.points
           this$renderer$context.moveTo(e$geometry$graphicsDataI$shape$points[0], e$geometry$graphicsDataI$shape$points[1])
           for (var s = 1; s < e$geometry$graphicsDataI$shape$points.length / 2; s++) {
             this$renderer$context.lineTo(e$geometry$graphicsDataI$shape$points[2 * s], e$geometry$graphicsDataI$shape$points[2 * s + 1])
@@ -12417,11 +12417,11 @@ var Yi = function () {
           this$renderer$context.bezierCurveTo(A - d, _, l, g + h, l, g)
           this$renderer$context.closePath()
         } else if (e$geometry$graphicsDataI$shape.type === it.RREC) {
-          var e$geometry$graphicsDataI$shape$x = e$geometry$graphicsDataI$shape.x
-          var e$geometry$graphicsDataI$shape$y = e$geometry$graphicsDataI$shape.y
-          var e$geometry$graphicsDataI$shape$width = e$geometry$graphicsDataI$shape.width
-          var e$geometry$graphicsDataI$shape$height = e$geometry$graphicsDataI$shape.height
-          var e$geometry$graphicsDataI$shape$radius = e$geometry$graphicsDataI$shape.radius
+          var /* [auto-meaningful-name] */e$geometry$graphicsDataI$shape$x = e$geometry$graphicsDataI$shape.x
+          var /* [auto-meaningful-name] */e$geometry$graphicsDataI$shape$y = e$geometry$graphicsDataI$shape.y
+          var /* [auto-meaningful-name] */e$geometry$graphicsDataI$shape$width = e$geometry$graphicsDataI$shape.width
+          var /* [auto-meaningful-name] */e$geometry$graphicsDataI$shape$height = e$geometry$graphicsDataI$shape.height
+          var /* [auto-meaningful-name] */e$geometry$graphicsDataI$shape$radius = e$geometry$graphicsDataI$shape.radius
           var E = Math.min(e$geometry$graphicsDataI$shape$width, e$geometry$graphicsDataI$shape$height) / 2 | 0
           e$geometry$graphicsDataI$shape$radius = e$geometry$graphicsDataI$shape$radius > E ? E : e$geometry$graphicsDataI$shape$radius
           this$renderer$context.moveTo(e$geometry$graphicsDataI$shape$x, e$geometry$graphicsDataI$shape$y + e$geometry$graphicsDataI$shape$radius)
@@ -12471,7 +12471,7 @@ function $i() {
   if (!i) {
     return false
   }
-  var i$data = i.data
+  var /* [auto-meaningful-name] */i$data = i.data
   return 255 === i$data[0] && 0 === i$data[1] && 0 === i$data[2]
 }
 var Ji = new _t()
@@ -12487,7 +12487,7 @@ var Zi = function (e) {
     i.maskManager = new Yi(i)
     i.smoothProperty = "imageSmoothingEnabled"
     if (!i.rootContext.imageSmoothingEnabled) {
-      var i$rootContext = i.rootContext
+      var /* [auto-meaningful-name] */i$rootContext = i.rootContext
       if (i$rootContext.webkitImageSmoothingEnabled) {
         i.smoothProperty = "webkitImageSmoothingEnabled"
       } else {
@@ -12543,7 +12543,7 @@ var Zi = function (e) {
       }
       this.renderingToScreen = !n
       this.emit("prerender")
-      var this$resolution = this.resolution
+      var /* [auto-meaningful-name] */this$resolution = this.resolution
       if (n) {
         if (!(n = n.castToBaseTexture())._canvasRenderTarget) {
           n._canvasRenderTarget = new $e(n.width, n.height, n.resolution)
@@ -12555,7 +12555,7 @@ var Zi = function (e) {
       } else {
         this.context = this.rootContext
       }
-      var _this$context = this.context
+      var /* [auto-meaningful-name] */this$context = this.context
       this._projTransform = i || null
       if (!n) {
         this._lastObjectRendered = e
@@ -12565,37 +12565,37 @@ var Zi = function (e) {
         e.updateTransform()
         e.disableTempParent(c)
       }
-      _this$context.save()
-      _this$context.setTransform(1, 0, 0, 1, 0, 0)
-      _this$context.globalAlpha = 1
+      this$context.save()
+      this$context.setTransform(1, 0, 0, 1, 0, 0)
+      this$context.globalAlpha = 1
       this._activeBlendMode = q.NORMAL
       this._outerBlend = false
-      _this$context.globalCompositeOperation = this.blendModes[q.NORMAL]
+      this$context.globalCompositeOperation = this.blendModes[q.NORMAL]
       if (undefined !== r ? r : this.clearBeforeRender) {
         if (this.renderingToScreen) {
-          _this$context.clearRect(0, 0, this.width, this.height)
+          this$context.clearRect(0, 0, this.width, this.height)
           if (this.backgroundAlpha > 0) {
-            _this$context.globalAlpha = this.useContextAlpha ? this.backgroundAlpha : 1
-            _this$context.fillStyle = this._backgroundColorString
-            _this$context.fillRect(0, 0, this.width, this.height)
-            _this$context.globalAlpha = 1
+            this$context.globalAlpha = this.useContextAlpha ? this.backgroundAlpha : 1
+            this$context.fillStyle = this._backgroundColorString
+            this$context.fillRect(0, 0, this.width, this.height)
+            this$context.globalAlpha = 1
           }
         } else {
           (n = n)._canvasRenderTarget.clear()
-          var n$clearColor = n.clearColor
+          var /* [auto-meaningful-name] */n$clearColor = n.clearColor
           if (n$clearColor[3] > 0) {
-            _this$context.globalAlpha = this.useContextAlpha ? n$clearColor[3] : 1
-            _this$context.fillStyle = Ce(ke(n$clearColor))
-            _this$context.fillRect(0, 0, n.realWidth, n.realHeight)
-            _this$context.globalAlpha = 1
+            this$context.globalAlpha = this.useContextAlpha ? n$clearColor[3] : 1
+            this$context.fillStyle = Ce(ke(n$clearColor))
+            this$context.fillRect(0, 0, n.realWidth, n.realHeight)
+            this$context.globalAlpha = 1
           }
         }
       }
-      var this$context = this.context
-      this.context = _this$context
-      e.renderCanvas(this)
+      var /* [auto-meaningful-name] */_this$context = this.context
       this.context = this$context
-      _this$context.restore()
+      e.renderCanvas(this)
+      this.context = _this$context
+      this$context.restore()
       this.resolution = this$resolution
       this._projTransform = null
       this.emit("postrender")
@@ -12603,8 +12603,8 @@ var Zi = function (e) {
   }
   t.prototype.setContextTransform = function (e, t, n) {
     var r = e
-    var this$_projTransform = this._projTransform
-    var this$resolution = this.resolution
+    var /* [auto-meaningful-name] */this$_projTransform = this._projTransform
+    var /* [auto-meaningful-name] */this$resolution = this.resolution
     n = n || this$resolution
     if (this$_projTransform) {
       (r = Ji).copyFrom(e)
@@ -12623,7 +12623,7 @@ var Zi = function (e) {
     if (undefined === t) {
       t = this.backgroundAlpha
     }
-    var this$context = this.context
+    var /* [auto-meaningful-name] */this$context = this.context
     this$context.clearRect(0, 0, this.width, this.height)
     if (e) {
       this$context.globalAlpha = this.useContextAlpha ? t : 1
@@ -12669,7 +12669,7 @@ var Zi = function (e) {
 var eo = {
   canvas: null,
   getTintedCanvas: function (e, t) {
-    var e$texture = e.texture
+    var /* [auto-meaningful-name] */e$texture = e.texture
     var r = "#" + ("00000" + (0 | (t = eo.roundColor(t))).toString(16)).substr(-6)
     e$texture.tintCache = e$texture.tintCache || {}
     var i
@@ -12710,7 +12710,7 @@ var eo = {
   tintWithMultiply: function (e, t, n) {
     var r = n.getContext("2d")
     var i = e._frame.clone()
-    var e$baseTexture$resolution = e.baseTexture.resolution
+    var /* [auto-meaningful-name] */e$baseTexture$resolution = e.baseTexture.resolution
     i.x *= e$baseTexture$resolution
     i.y *= e$baseTexture$resolution
     i.width *= e$baseTexture$resolution
@@ -12730,7 +12730,7 @@ var eo = {
   tintWithOverlay: function (e, t, n) {
     var r = n.getContext("2d")
     var i = e._frame.clone()
-    var e$baseTexture$resolution = e.baseTexture.resolution
+    var /* [auto-meaningful-name] */e$baseTexture$resolution = e.baseTexture.resolution
     i.x *= e$baseTexture$resolution
     i.y *= e$baseTexture$resolution
     i.width *= e$baseTexture$resolution
@@ -12748,7 +12748,7 @@ var eo = {
   tintWithPerPixel: function (e, t, n) {
     var r = n.getContext("2d")
     var i = e._frame.clone()
-    var e$baseTexture$resolution = e.baseTexture.resolution
+    var /* [auto-meaningful-name] */e$baseTexture$resolution = e.baseTexture.resolution
     i.x *= e$baseTexture$resolution
     i.y *= e$baseTexture$resolution
     i.width *= e$baseTexture$resolution
@@ -12759,7 +12759,7 @@ var eo = {
     r.globalCompositeOperation = "copy"
     r.drawImage(e.baseTexture.getDrawableSource(), i.x, i.y, i.width, i.height, 0, 0, i.width, i.height)
     r.restore()
-    for (var a = xe(t), s = a[0], c = a[1], u = a[2], l = r.getImageData(0, 0, i.width, i.height), l$data = l.data, d = 0; d < l$data.length; d += 4) {
+    for (var a = xe(t), s = a[0], c = a[1], u = a[2], l = r.getImageData(0, 0, i.width, i.height), /* [auto-meaningful-name] */l$data = l.data, d = 0; d < l$data.length; d += 4) {
       l$data[d + 0] *= s
       l$data[d + 1] *= c
       l$data[d + 2] *= u
@@ -12767,7 +12767,7 @@ var eo = {
     r.putImageData(l, 0, 0)
   },
   roundColor: function (e) {
-    var eo$cacheStepsPerColorChannel = eo.cacheStepsPerColorChannel
+    var /* [auto-meaningful-name] */eo$cacheStepsPerColorChannel = eo.cacheStepsPerColorChannel
     var n = xe(e)
     n[0] = Math.min(255, n[0] / eo$cacheStepsPerColorChannel * eo$cacheStepsPerColorChannel)
     n[1] = Math.min(255, n[1] / eo$cacheStepsPerColorChannel * eo$cacheStepsPerColorChannel)
@@ -12782,17 +12782,17 @@ var eo = {
 eo.tintMethod = eo.canUseMultiply ? eo.tintWithMultiply : eo.tintWithPerPixel
 var to
 var no
-var vr$create = Vr.create
+var /* [auto-meaningful-name] */Vr$create = Vr.create
 Vr.create = function (e) {
   if (!(e && e.forceCanvas)) {
     try {
-      return vr$create(e)
+      return Vr$create(e)
     } catch (t) {}
   }
   return new Zi(e)
 }
 Jt.prototype.getDrawableSource = function () {
-  var this$resource = this.resource
+  var /* [auto-meaningful-name] */this$resource = this.resource
   return this$resource ? this$resource.bitmap || this$resource.source : null
 }
 hn.prototype._canvasRenderTarget = null
@@ -12886,10 +12886,10 @@ var co = {
     e.points = e.shape.points.slice()
   },
   triangulate: function (e, t) {
-    var e$points = e.points
-    var e$holes = e.holes
-    var t$points = t.points
-    var t$indices = t.indices
+    var /* [auto-meaningful-name] */e$points = e.points
+    var /* [auto-meaningful-name] */e$holes = e.holes
+    var /* [auto-meaningful-name] */t$points = t.points
+    var /* [auto-meaningful-name] */t$indices = t.indices
     if (e$points.length >= 6) {
       for (var a = [], s = 0; s < e$holes.length; s++) {
         var c = e$holes[s]
@@ -12916,21 +12916,21 @@ var uo = {
   build: function (e) {
     var t
     var n
-    var _e$shape = e.shape
-    var e$points = e.points
-    var e$shape$x = _e$shape.x
-    var e$shape$y = _e$shape.y
+    var /* [auto-meaningful-name] */e$shape = e.shape
+    var /* [auto-meaningful-name] */e$points = e.points
+    var /* [auto-meaningful-name] */e$shape$x = e$shape.x
+    var /* [auto-meaningful-name] */e$shape$y = e$shape.y
     e$points.length = 0
     if (e.type === it.CIRC) {
-      t = _e$shape.radius
-      n = _e$shape.radius
+      t = e$shape.radius
+      n = e$shape.radius
     } else {
-      var e$shape = e.shape
-      t = e$shape.width
-      n = e$shape.height
+      var /* [auto-meaningful-name] */_e$shape = e.shape
+      t = _e$shape.width
+      n = _e$shape.height
     }
     if (0 !== t && 0 !== n) {
-      var c = Math.floor(30 * Math.sqrt(_e$shape.radius)) || Math.floor(15 * Math.sqrt(t + n))
+      var c = Math.floor(30 * Math.sqrt(e$shape.radius)) || Math.floor(15 * Math.sqrt(t + n))
       c /= 2.3
       for (var u = 2 * Math.PI / c, l = 0; l < c - .5; l++) {
         e$points.push(e$shape$x + Math.sin(-u * l) * t, e$shape$y + Math.cos(-u * l) * n)
@@ -12939,15 +12939,15 @@ var uo = {
     }
   },
   triangulate: function (e, t) {
-    var e$points = e.points
-    var t$points = t.points
-    var t$indices = t.indices
+    var /* [auto-meaningful-name] */e$points = e.points
+    var /* [auto-meaningful-name] */t$points = t.points
+    var /* [auto-meaningful-name] */t$indices = t.indices
     var o = t$points.length / 2
     var a = o
-    var e$shape = e.shape
-    var e$matrix = e.matrix
-    var e$shape$x = e$shape.x
-    var e$shape$y = e$shape.y
+    var /* [auto-meaningful-name] */e$shape = e.shape
+    var /* [auto-meaningful-name] */e$matrix = e.matrix
+    var /* [auto-meaningful-name] */e$shape$x = e$shape.x
+    var /* [auto-meaningful-name] */e$shape$y = e$shape.y
     t$points.push(e.matrix ? e$matrix.a * e$shape$x + e$matrix.c * e$shape$y + e$matrix.tx : e$shape$x, e.matrix ? e$matrix.b * e$shape$x + e$matrix.d * e$shape$y + e$matrix.ty : e$shape$y)
     for (var f = 0; f < e$points.length; f += 2) {
       t$points.push(e$points[f], e$points[f + 1])
@@ -12957,18 +12957,18 @@ var uo = {
 }
 var lo = {
   build: function (e) {
-    var e$shape = e.shape
-    var e$shape$x = e$shape.x
-    var e$shape$y = e$shape.y
-    var e$shape$width = e$shape.width
-    var e$shape$height = e$shape.height
-    var e$points = e.points
+    var /* [auto-meaningful-name] */e$shape = e.shape
+    var /* [auto-meaningful-name] */e$shape$x = e$shape.x
+    var /* [auto-meaningful-name] */e$shape$y = e$shape.y
+    var /* [auto-meaningful-name] */e$shape$width = e$shape.width
+    var /* [auto-meaningful-name] */e$shape$height = e$shape.height
+    var /* [auto-meaningful-name] */e$points = e.points
     e$points.length = 0
     e$points.push(e$shape$x, e$shape$y, e$shape$x + e$shape$width, e$shape$y, e$shape$x + e$shape$width, e$shape$y + e$shape$height, e$shape$x, e$shape$y + e$shape$height)
   },
   triangulate: function (e, t) {
-    var e$points = e.points
-    var t$points = t.points
+    var /* [auto-meaningful-name] */e$points = e.points
+    var /* [auto-meaningful-name] */t$points = t.points
     var i = t$points.length / 2
     t$points.push(e$points[0], e$points[1], e$points[2], e$points[3], e$points[6], e$points[7], e$points[4], e$points[5])
     t.indices.push(i, i + 1, i + 2, i + 1, i + 2, i + 3)
@@ -12994,12 +12994,12 @@ function ho(e, t, n, r, i, o, a) {
 }
 var po = {
   build: function (e) {
-    var e$shape = e.shape
-    var e$points = e.points
-    var e$shape$x = e$shape.x
-    var e$shape$y = e$shape.y
-    var e$shape$width = e$shape.width
-    var e$shape$height = e$shape.height
+    var /* [auto-meaningful-name] */e$shape = e.shape
+    var /* [auto-meaningful-name] */e$points = e.points
+    var /* [auto-meaningful-name] */e$shape$x = e$shape.x
+    var /* [auto-meaningful-name] */e$shape$y = e$shape.y
+    var /* [auto-meaningful-name] */e$shape$width = e$shape.width
+    var /* [auto-meaningful-name] */e$shape$height = e$shape.height
     var s = Math.max(0, Math.min(e$shape.radius, Math.min(e$shape$width, e$shape$height) / 2))
     e$points.length = 0
     if (s) {
@@ -13012,7 +13012,7 @@ var po = {
     }
   },
   triangulate: function (e, t) {
-    for (var e$points = e.points, t$points = t.points, t$indices = t.indices, o = t$points.length / 2, a = _e()(e$points, null, 2), s = 0, a$length = a.length; s < a$length; s += 3) {
+    for (var /* [auto-meaningful-name] */e$points = e.points, /* [auto-meaningful-name] */t$points = t.points, /* [auto-meaningful-name] */t$indices = t.indices, o = t$points.length / 2, a = _e()(e$points, null, 2), s = 0, /* [auto-meaningful-name] */a$length = a.length; s < a$length; s += 3) {
       t$indices.push(a[s] + o)
       t$indices.push(a[s + 1] + o)
       t$indices.push(a[s + 2] + o)
@@ -13084,12 +13084,12 @@ function go(e, t) {
   if (e.lineStyle.native) {
     (function (e, t) {
       var n = 0
-      var e$shape = e.shape
+      var /* [auto-meaningful-name] */e$shape = e.shape
       var i = e.points || e$shape.points
       var o = e$shape.type !== it.POLY || e$shape.closeStroke
       if (0 !== i.length) {
-        var t$points = t.points
-        var t$indices = t.indices
+        var /* [auto-meaningful-name] */t$points = t.points
+        var /* [auto-meaningful-name] */t$indices = t.indices
         var c = i.length / 2
         var u = t$points.length / 2
         var l = u
@@ -13105,11 +13105,11 @@ function go(e, t) {
     })(e, t)
   } else {
     (function (e, t) {
-      var e$shape = e.shape
+      var /* [auto-meaningful-name] */e$shape = e.shape
       var r = e.points || e$shape.points.slice()
-      var t$closePointEps = t.closePointEps
+      var /* [auto-meaningful-name] */t$closePointEps = t.closePointEps
       if (0 !== r.length) {
-        var e$lineStyle = e.lineStyle
+        var /* [auto-meaningful-name] */e$lineStyle = e.lineStyle
         var a = new ht(r[0], r[1])
         var s = new ht(r[r.length - 2], r[r.length - 1])
         var c = e$shape.type !== it.POLY || e$shape.closeStroke
@@ -13126,9 +13126,9 @@ function go(e, t) {
           r.unshift(l, f)
           r.push(l, f)
         }
-        var t$points = t.points
+        var /* [auto-meaningful-name] */t$points = t.points
         var h = r.length / 2
-        var r$length = r.length
+        var /* [auto-meaningful-name] */r$length = r.length
         var _ = t$points.length / 2
         var A = e$lineStyle.width / 2
         var g = A * A
@@ -13148,7 +13148,7 @@ function go(e, t) {
         O /= T
         C *= A
         O *= A
-        var e$lineStyle$alignment = e$lineStyle.alignment
+        var /* [auto-meaningful-name] */e$lineStyle$alignment = e$lineStyle.alignment
         var D = 2 * (1 - e$lineStyle$alignment)
         var I = 2 * e$lineStyle$alignment
         if (!c) {
@@ -13278,7 +13278,7 @@ function go(e, t) {
             }
           }
         }
-        var t$indices = t.indices
+        var /* [auto-meaningful-name] */t$indices = t.indices
         var $ = io.epsilon * io.epsilon
         for (F = _; F < r$length + _ - 2; ++F) {
           m = t$points[2 * F]
@@ -13590,7 +13590,7 @@ var Bo = function (e) {
     this._bounds = null
   }
   t.prototype.containsPoint = function (e) {
-    for (var this$graphicsData = this.graphicsData, n = 0; n < this$graphicsData.length; ++n) {
+    for (var /* [auto-meaningful-name] */this$graphicsData = this.graphicsData, n = 0; n < this$graphicsData.length; ++n) {
       var r = this$graphicsData[n]
       if (r.fillStyle.visible && r.shape && (r.matrix ? r.matrix.applyInverse(e, So) : So.copyFrom(e), r.shape.contains(So.x, So.y))) {
         var i = false
@@ -13613,18 +13613,18 @@ var Bo = function (e) {
     if (this.graphicsData.length) {
       if (this.validateBatching()) {
         this.cacheDirty = this.dirty
-        var this$uvs = this.uvs
-        var this$graphicsData = this.graphicsData
+        var /* [auto-meaningful-name] */this$uvs = this.uvs
+        var /* [auto-meaningful-name] */this$graphicsData = this.graphicsData
         var r = null
         var i = null
         if (this.batches.length > 0) {
           i = (r = this.batches[this.batches.length - 1]).style
         }
-        for (var this$shapeIndex = this.shapeIndex; this$shapeIndex < this$graphicsData.length; this$shapeIndex++) {
+        for (var /* [auto-meaningful-name] */this$shapeIndex = this.shapeIndex; this$shapeIndex < this$graphicsData.length; this$shapeIndex++) {
           this.shapeIndex++
           var a = this$graphicsData[this$shapeIndex]
-          var a$fillStyle = a.fillStyle
-          var a$lineStyle = a.lineStyle
+          var /* [auto-meaningful-name] */a$fillStyle = a.fillStyle
+          var /* [auto-meaningful-name] */a$lineStyle = a.lineStyle
           xo[a.type].build(a)
           if (a.matrix) {
             this.transformPoints(a.points, a.matrix)
@@ -13632,8 +13632,8 @@ var Bo = function (e) {
           for (var u = 0; u < 2; u++) {
             var l = 0 === u ? a$fillStyle : a$lineStyle
             if (l.visible) {
-              var l$texture$baseTexture = l.texture.baseTexture
-              var _this$indices$length = this.indices.length
+              var /* [auto-meaningful-name] */l$texture$baseTexture = l.texture.baseTexture
+              var /* [auto-meaningful-name] */this$indices$length = this.indices.length
               var h = this.points.length / 2
               l$texture$baseTexture.wrapMode = re.REPEAT
               if (0 === u) {
@@ -13644,11 +13644,11 @@ var Bo = function (e) {
               var p = this.points.length / 2 - h
               if (0 !== p) {
                 if (r && !this._compareStyles(i, l)) {
-                  r.end(_this$indices$length, h)
+                  r.end(this$indices$length, h)
                   r = null
                 }
                 if (!r) {
-                  (r = Co.pop() || new Eo()).begin(l, _this$indices$length, h)
+                  (r = Co.pop() || new Eo()).begin(l, this$indices$length, h)
                   this.batches.push(r)
                   i = l
                 }
@@ -13657,10 +13657,10 @@ var Bo = function (e) {
             }
           }
         }
-        var this$indices$length = this.indices.length
+        var /* [auto-meaningful-name] */_this$indices$length = this.indices.length
         var A = this.points.length / 2
         if (r) {
-          r.end(this$indices$length, A)
+          r.end(_this$indices$length, A)
         }
         if (0 !== this.batches.length) {
           if (this.indicesUint16 && this.indices.length === this.indicesUint16.length) {
@@ -13690,10 +13690,10 @@ var Bo = function (e) {
     if (this.dirty === this.cacheDirty || !this.graphicsData.length) {
       return false
     }
-    for (var e = 0, this$graphicsData$length = this.graphicsData.length; e < this$graphicsData$length; e++) {
+    for (var e = 0, /* [auto-meaningful-name] */this$graphicsData$length = this.graphicsData.length; e < this$graphicsData$length; e++) {
       var n = this.graphicsData[e]
-      var n$fillStyle = n.fillStyle
-      var n$lineStyle = n.lineStyle
+      var /* [auto-meaningful-name] */n$fillStyle = n.fillStyle
+      var /* [auto-meaningful-name] */n$lineStyle = n.lineStyle
       if (n$fillStyle && !n$fillStyle.texture.baseTexture.valid) {
         return false
       }
@@ -13706,7 +13706,7 @@ var Bo = function (e) {
   t.prototype.packBatches = function () {
     this.batchDirty++
     this.uvsFloat32 = new Float32Array(this.uvs)
-    for (var this$batches = this.batches, t = 0, this$batches$length = this$batches.length; t < this$batches$length; t++) {
+    for (var /* [auto-meaningful-name] */this$batches = this.batches, t = 0, /* [auto-meaningful-name] */this$batches$length = this$batches.length; t < this$batches$length; t++) {
       for (var r = this$batches[t], i = 0; i < r.size; i++) {
         var o = r.start + i
         this.indicesUint16[o] = this.indicesUint16[o] - r.attribStart
@@ -13717,7 +13717,7 @@ var Bo = function (e) {
     if (this.points.length > 131070) {
       return false
     }
-    for (var this$batches = this.batches, n = 0; n < this$batches.length; n++) {
+    for (var /* [auto-meaningful-name] */this$batches = this.batches, n = 0; n < this$batches.length; n++) {
       if (this$batches[n].style.native) {
         return false
       }
@@ -13730,8 +13730,8 @@ var Bo = function (e) {
       Oo.push(this.drawCalls[t])
     }
     this.drawCalls.length = 0
-    var this$colors = this.colors
-    var this$textureIds = this.textureIds
+    var /* [auto-meaningful-name] */this$colors = this.colors
+    var /* [auto-meaningful-name] */this$textureIds = this.textureIds
     var i = Oo.pop()
     if (!i) {
       (i = new Gr()).texArray = new zr()
@@ -13744,13 +13744,13 @@ var Bo = function (e) {
     var a = null
     var s = 0
     var c = false
-    var $$TRIANGLES = $.TRIANGLES
+    var /* [auto-meaningful-name] */$$TRIANGLES = $.TRIANGLES
     var l = 0
     this.drawCalls.push(i)
     for (t = 0; t < this.batches.length; t++) {
       var f = this.batches[t]
-      var f$style = f.style
-      var f$style$texture$baseTexture = f$style.texture.baseTexture
+      var /* [auto-meaningful-name] */f$style = f.style
+      var /* [auto-meaningful-name] */f$style$texture$baseTexture = f$style.texture.baseTexture
       if (c !== !!f$style.native) {
         $$TRIANGLES = (c = !!f$style.native) ? $.LINES : $.TRIANGLES
         a = null
@@ -13792,7 +13792,7 @@ var Bo = function (e) {
     this.packAttributes()
   }
   t.prototype.packAttributes = function () {
-    for (var this$points = this.points, this$uvs = this.uvs, this$colors = this.colors, this$textureIds = this.textureIds, i = new ArrayBuffer(3 * this$points.length * 4), o = new Float32Array(i), a = new Uint32Array(i), s = 0, c = 0; c < this$points.length / 2; c++) {
+    for (var /* [auto-meaningful-name] */this$points = this.points, /* [auto-meaningful-name] */this$uvs = this.uvs, /* [auto-meaningful-name] */this$colors = this.colors, /* [auto-meaningful-name] */this$textureIds = this.textureIds, i = new ArrayBuffer(3 * this$points.length * 4), o = new Float32Array(i), a = new Uint32Array(i), s = 0, c = 0; c < this$points.length / 2; c++) {
       o[s++] = this$points[2 * c]
       o[s++] = this$points[2 * c + 1]
       o[s++] = this$uvs[2 * c]
@@ -13827,20 +13827,20 @@ var Bo = function (e) {
     }
   }
   t.prototype.calculateBounds = function () {
-    var this$_bounds = this._bounds
+    var /* [auto-meaningful-name] */this$_bounds = this._bounds
     var t = To
-    var _t$IDENTITY = _t.IDENTITY
+    var /* [auto-meaningful-name] */_t$IDENTITY = _t.IDENTITY
     this._bounds.clear()
     t.clear()
     for (var r = 0; r < this.graphicsData.length; r++) {
       var i = this.graphicsData[r]
-      var i$shape = i.shape
-      var i$type = i.type
-      var i$lineStyle = i.lineStyle
+      var /* [auto-meaningful-name] */i$shape = i.shape
+      var /* [auto-meaningful-name] */i$type = i.type
+      var /* [auto-meaningful-name] */i$lineStyle = i.lineStyle
       var c = i.matrix || _t.IDENTITY
       var u = 0
       if (i$lineStyle && i$lineStyle.visible) {
-        var i$lineStyle$alignment = i$lineStyle.alignment
+        var /* [auto-meaningful-name] */i$lineStyle$alignment = i$lineStyle.alignment
         u = i$lineStyle.width
         if (i$type === it.POLY) {
           u *= .5 + Math.abs(.5 - i$lineStyle$alignment)
@@ -13896,7 +13896,7 @@ var Bo = function (e) {
     if (undefined === o) {
       o = null
     }
-    for (var a = 0, t$length = t.length, n$frame = n.frame; a < i;) {
+    for (var a = 0, /* [auto-meaningful-name] */t$length = t.length, /* [auto-meaningful-name] */n$frame = n.frame; a < i;) {
       var u = e[2 * (r + a)]
       var l = e[2 * (r + a) + 1]
       if (o) {
@@ -13907,13 +13907,13 @@ var Bo = function (e) {
       a++
       t.push(u / n$frame.width, l / n$frame.height)
     }
-    var n$baseTexture = n.baseTexture
+    var /* [auto-meaningful-name] */n$baseTexture = n.baseTexture
     if (n$frame.width < n$baseTexture.width || n$frame.height < n$baseTexture.height) {
       this.adjustUvs(t, n, t$length, i)
     }
   }
   t.prototype.adjustUvs = function (e, t, n, r) {
-    for (var t$baseTexture = t.baseTexture, o = 1e-6, a = n + 2 * r, t$frame = t.frame, c = t$frame.width / t$baseTexture.width, u = t$frame.height / t$baseTexture.height, l = t$frame.x / t$frame.width, f = t$frame.y / t$frame.height, d = Math.floor(e[n] + o), h = Math.floor(e[n + 1] + o), p = n + 2; p < a; p += 2) {
+    for (var /* [auto-meaningful-name] */t$baseTexture = t.baseTexture, o = 1e-6, a = n + 2 * r, /* [auto-meaningful-name] */t$frame = t.frame, c = t$frame.width / t$baseTexture.width, u = t$frame.height / t$baseTexture.height, l = t$frame.x / t$frame.width, f = t$frame.y / t$frame.height, d = Math.floor(e[n] + o), h = Math.floor(e[n + 1] + o), p = n + 2; p < a; p += 2) {
       d = Math.min(d, Math.floor(e[p] + o))
       h = Math.min(h, Math.floor(e[p + 1] + o))
     }
@@ -14095,8 +14095,8 @@ var Ro = function (e) {
   }
   t.prototype.startPoly = function () {
     if (this.currentPath) {
-      var this$currentPath$points = this.currentPath.points
-      var this$currentPath$points$length = this.currentPath.points.length
+      var /* [auto-meaningful-name] */this$currentPath$points = this.currentPath.points
+      var /* [auto-meaningful-name] */this$currentPath$points$length = this.currentPath.points.length
       if (this$currentPath$points$length > 2) {
         this.drawShape(this.currentPath)
         this.currentPath = new ft()
@@ -14128,7 +14128,7 @@ var Ro = function (e) {
     if (!this.currentPath) {
       this.moveTo(0, 0)
     }
-    var this$currentPath$points = this.currentPath.points
+    var /* [auto-meaningful-name] */this$currentPath$points = this.currentPath.points
     var r = this$currentPath$points[this$currentPath$points.length - 2]
     var i = this$currentPath$points[this$currentPath$points.length - 1]
     if (!(r === e && i === t)) {
@@ -14153,7 +14153,7 @@ var Ro = function (e) {
   }
   t.prototype.quadraticCurveTo = function (e, t, n, r) {
     this._initCurve()
-    var this$currentPath$points = this.currentPath.points
+    var /* [auto-meaningful-name] */this$currentPath$points = this.currentPath.points
     if (0 === this$currentPath$points.length) {
       this.moveTo(0, 0)
     }
@@ -14167,15 +14167,15 @@ var Ro = function (e) {
   }
   t.prototype.arcTo = function (e, t, n, r, i) {
     this._initCurve(e, t)
-    var this$currentPath$points = this.currentPath.points
+    var /* [auto-meaningful-name] */this$currentPath$points = this.currentPath.points
     var a = yo.curveTo(e, t, n, r, i, this$currentPath$points)
     if (a) {
       var s = a.cx
       var c = a.cy
-      var a$radius = a.radius
-      var a$startAngle = a.startAngle
-      var a$endAngle = a.endAngle
-      var a$anticlockwise = a.anticlockwise
+      var /* [auto-meaningful-name] */a$radius = a.radius
+      var /* [auto-meaningful-name] */a$startAngle = a.startAngle
+      var /* [auto-meaningful-name] */a$endAngle = a.endAngle
+      var /* [auto-meaningful-name] */a$anticlockwise = a.anticlockwise
       this.arc(s, c, a$radius, a$startAngle, a$endAngle, a$anticlockwise)
     }
     return this
@@ -14199,7 +14199,7 @@ var Ro = function (e) {
     }
     var a = e + Math.cos(r) * n
     var s = t + Math.sin(r) * n
-    var this$_geometry$closePointEps = this._geometry.closePointEps
+    var /* [auto-meaningful-name] */this$_geometry$closePointEps = this._geometry.closePointEps
     var u = this.currentPath ? this.currentPath.points : null
     if (u) {
       var l = Math.abs(u[u.length - 2] - a)
@@ -14304,13 +14304,13 @@ var Ro = function (e) {
     return this
   }
   t.prototype.isFastRect = function () {
-    var this$_geometry$graphicsData = this._geometry.graphicsData
+    var /* [auto-meaningful-name] */this$_geometry$graphicsData = this._geometry.graphicsData
     return 1 === this$_geometry$graphicsData.length && this$_geometry$graphicsData[0].shape.type === it.RECT && !this$_geometry$graphicsData[0].holes.length && !(this$_geometry$graphicsData[0].lineStyle.visible && this$_geometry$graphicsData[0].lineStyle.width)
   }
   t.prototype._render = function (e) {
     this.finishPoly()
-    var this$_geometry = this._geometry
-    var e$context$supports$uint32Indices = e.context.supports.uint32Indices
+    var /* [auto-meaningful-name] */this$_geometry = this._geometry
+    var /* [auto-meaningful-name] */e$context$supports$uint32Indices = e.context.supports.uint32Indices
     this$_geometry.updateBatches(e$context$supports$uint32Indices)
     if (this$_geometry.batchable) {
       if (this.batchDirty !== this$_geometry.batchDirty) {
@@ -14323,9 +14323,9 @@ var Ro = function (e) {
     }
   }
   t.prototype._populateBatches = function () {
-    var this$_geometry = this._geometry
-    var this$blendMode = this.blendMode
-    var this$_geometry$batches$length = this$_geometry.batches.length
+    var /* [auto-meaningful-name] */this$_geometry = this._geometry
+    var /* [auto-meaningful-name] */this$blendMode = this.blendMode
+    var /* [auto-meaningful-name] */this$_geometry$batches$length = this$_geometry.batches.length
     this.batchTint = -1
     this._transformID = -1
     this.batchDirty = this$_geometry.batchDirty
@@ -14333,7 +14333,7 @@ var Ro = function (e) {
     this.vertexData = new Float32Array(this$_geometry.points)
     for (var r = 0; r < this$_geometry$batches$length; r++) {
       var i = this$_geometry.batches[r]
-      var i$style$color = i.style.color
+      var /* [auto-meaningful-name] */i$style$color = i.style.color
       var a = new Float32Array(this.vertexData.buffer, 4 * i.attribStart * 2, 2 * i.attribSize)
       var s = new Float32Array(this$_geometry.uvsFloat32.buffer, 4 * i.attribStart * 2, 2 * i.attribSize)
       var c = {
@@ -14355,7 +14355,7 @@ var Ro = function (e) {
       e.batch.setObjectRenderer(e.plugins[this.pluginName])
       this.calculateVertices()
       this.calculateTints()
-      for (var t = 0, this$batches$length = this.batches.length; t < this$batches$length; t++) {
+      for (var t = 0, /* [auto-meaningful-name] */this$batches$length = this.batches.length; t < this$batches$length; t++) {
         var r = this.batches[t]
         r.worldAlpha = this.worldAlpha * r.alpha
         e.plugins[this.pluginName].render(r)
@@ -14364,11 +14364,11 @@ var Ro = function (e) {
   }
   t.prototype._renderDirect = function (e) {
     var t = this._resolveDirectShader(e)
-    var this$_geometry = this._geometry
-    var this$tint = this.tint
-    var this$worldAlpha = this.worldAlpha
-    var t$uniforms = t.uniforms
-    var this$_geometry$drawCalls = this$_geometry.drawCalls
+    var /* [auto-meaningful-name] */this$_geometry = this._geometry
+    var /* [auto-meaningful-name] */this$tint = this.tint
+    var /* [auto-meaningful-name] */this$worldAlpha = this.worldAlpha
+    var /* [auto-meaningful-name] */t$uniforms = t.uniforms
+    var /* [auto-meaningful-name] */this$_geometry$drawCalls = this$_geometry.drawCalls
     t$uniforms.translationMatrix = this.transform.worldTransform
     t$uniforms.tint[0] = (this$tint >> 16 & 255) / 255 * this$worldAlpha
     t$uniforms.tint[1] = (this$tint >> 8 & 255) / 255 * this$worldAlpha
@@ -14377,22 +14377,22 @@ var Ro = function (e) {
     e.shader.bind(t)
     e.geometry.bind(this$_geometry, t)
     e.state.set(this.state)
-    for (var s = 0, this$_geometry$drawCalls$length = this$_geometry$drawCalls.length; s < this$_geometry$drawCalls$length; s++) {
+    for (var s = 0, /* [auto-meaningful-name] */this$_geometry$drawCalls$length = this$_geometry$drawCalls.length; s < this$_geometry$drawCalls$length; s++) {
       this._renderDrawCallDirect(e, this$_geometry.drawCalls[s])
     }
   }
   t.prototype._renderDrawCallDirect = function (e, t) {
-    for (var t$texArray = t.texArray, t$type = t.type, t$size = t.size, t$start = t.start, t$texArray$count = t$texArray.count, s = 0; s < t$texArray$count; s++) {
+    for (var /* [auto-meaningful-name] */t$texArray = t.texArray, /* [auto-meaningful-name] */t$type = t.type, /* [auto-meaningful-name] */t$size = t.size, /* [auto-meaningful-name] */t$start = t.start, /* [auto-meaningful-name] */t$texArray$count = t$texArray.count, s = 0; s < t$texArray$count; s++) {
       e.texture.bind(t$texArray.elements[s], s)
     }
     e.geometry.draw(t$type, t$size, t$start)
   }
   t.prototype._resolveDirectShader = function (e) {
-    var this$shader = this.shader
-    var this$pluginName = this.pluginName
+    var /* [auto-meaningful-name] */this$shader = this.shader
+    var /* [auto-meaningful-name] */this$pluginName = this.pluginName
     if (!this$shader) {
       if (!Fo[this$pluginName]) {
-        for (var e$plugins$batch$MAX_TEXTURES = e.plugins.batch.MAX_TEXTURES, i = new Int32Array(e$plugins$batch$MAX_TEXTURES), o = 0; o < e$plugins$batch$MAX_TEXTURES; o++) {
+        for (var /* [auto-meaningful-name] */e$plugins$batch$MAX_TEXTURES = e.plugins.batch.MAX_TEXTURES, i = new Int32Array(e$plugins$batch$MAX_TEXTURES), o = 0; o < e$plugins$batch$MAX_TEXTURES; o++) {
           i[o] = o
         }
         var a = {
@@ -14402,7 +14402,7 @@ var Ro = function (e) {
             uSamplers: i
           }, true)
         }
-        var e$pluginsThis$pluginName$_shader$program = e.plugins[this$pluginName]._shader.program
+        var /* [auto-meaningful-name] */e$pluginsThis$pluginName$_shader$program = e.plugins[this$pluginName]._shader.program
         Fo[this$pluginName] = new gr(e$pluginsThis$pluginName$_shader$program, a)
       }
       this$shader = Fo[this$pluginName]
@@ -14411,13 +14411,13 @@ var Ro = function (e) {
   }
   t.prototype._calculateBounds = function () {
     this.finishPoly()
-    var this$_geometry = this._geometry
+    var /* [auto-meaningful-name] */this$_geometry = this._geometry
     if (this$_geometry.graphicsData.length) {
-      var this$_geometry$bounds = this$_geometry.bounds
-      var this$_geometry$bounds$minX = this$_geometry$bounds.minX
-      var this$_geometry$bounds$minY = this$_geometry$bounds.minY
-      var this$_geometry$bounds$maxX = this$_geometry$bounds.maxX
-      var this$_geometry$bounds$maxY = this$_geometry$bounds.maxY
+      var /* [auto-meaningful-name] */this$_geometry$bounds = this$_geometry.bounds
+      var /* [auto-meaningful-name] */this$_geometry$bounds$minX = this$_geometry$bounds.minX
+      var /* [auto-meaningful-name] */this$_geometry$bounds$minY = this$_geometry$bounds.minY
+      var /* [auto-meaningful-name] */this$_geometry$bounds$maxX = this$_geometry$bounds.maxX
+      var /* [auto-meaningful-name] */this$_geometry$bounds$maxY = this$_geometry$bounds.maxY
       this._bounds.addFrame(this.transform, this$_geometry$bounds$minX, this$_geometry$bounds$minY, this$_geometry$bounds$maxX, this$_geometry$bounds$maxY)
     }
   }
@@ -14430,17 +14430,17 @@ var Ro = function (e) {
       this.batchTint = this.tint
       for (var e = xe(this.tint, Io), t = 0; t < this.batches.length; t++) {
         var n = this.batches[t]
-        var n$_batchRGB = n._batchRGB
+        var /* [auto-meaningful-name] */n$_batchRGB = n._batchRGB
         var i = (e[0] * n$_batchRGB[0] * 255 << 16) + (e[1] * n$_batchRGB[1] * 255 << 8) + (0 | e[2] * n$_batchRGB[2] * 255)
         n._tintRGB = (i >> 16) + (65280 & i) + ((255 & i) << 16)
       }
     }
   }
   t.prototype.calculateVertices = function () {
-    var this$transform$_worldID = this.transform._worldID
+    var /* [auto-meaningful-name] */this$transform$_worldID = this.transform._worldID
     if (this._transformID !== this$transform$_worldID) {
       this._transformID = this$transform$_worldID
-      for (var this$transform$worldTransform = this.transform.worldTransform, this$transform$worldTransform$a = this$transform$worldTransform.a, this$transform$worldTransform$b = this$transform$worldTransform.b, this$transform$worldTransform$c = this$transform$worldTransform.c, this$transform$worldTransform$d = this$transform$worldTransform.d, this$transform$worldTransform$tx = this$transform$worldTransform.tx, this$transform$worldTransform$ty = this$transform$worldTransform.ty, this$_geometry$points = this._geometry.points, this$vertexData = this.vertexData, l = 0, f = 0; f < this$_geometry$points.length; f += 2) {
+      for (var /* [auto-meaningful-name] */this$transform$worldTransform = this.transform.worldTransform, /* [auto-meaningful-name] */this$transform$worldTransform$a = this$transform$worldTransform.a, /* [auto-meaningful-name] */this$transform$worldTransform$b = this$transform$worldTransform.b, /* [auto-meaningful-name] */this$transform$worldTransform$c = this$transform$worldTransform.c, /* [auto-meaningful-name] */this$transform$worldTransform$d = this$transform$worldTransform.d, /* [auto-meaningful-name] */this$transform$worldTransform$tx = this$transform$worldTransform.tx, /* [auto-meaningful-name] */this$transform$worldTransform$ty = this$transform$worldTransform.ty, /* [auto-meaningful-name] */this$_geometry$points = this._geometry.points, /* [auto-meaningful-name] */this$vertexData = this.vertexData, l = 0, f = 0; f < this$_geometry$points.length; f += 2) {
         var d = this$_geometry$points[f]
         var h = this$_geometry$points[f + 1]
         this$vertexData[l++] = this$transform$worldTransform$a * d + this$transform$worldTransform$c * h + this$transform$worldTransform$tx
@@ -14449,7 +14449,7 @@ var Ro = function (e) {
     }
   }
   t.prototype.closePath = function () {
-    var this$currentPath = this.currentPath
+    var /* [auto-meaningful-name] */this$currentPath = this.currentPath
     if (this$currentPath) {
       this$currentPath.closeStroke = true
     }
@@ -14511,17 +14511,17 @@ var Po = function () {
     return n
   }
   e.prototype.render = function (e) {
-    var this$renderer = this.renderer
-    var this$renderer$context = this$renderer.context
-    var e$worldAlpha = e.worldAlpha
-    var e$transform$worldTransform = e.transform.worldTransform
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer$context = this$renderer.context
+    var /* [auto-meaningful-name] */e$worldAlpha = e.worldAlpha
+    var /* [auto-meaningful-name] */e$transform$worldTransform = e.transform.worldTransform
     this$renderer.setContextTransform(e$transform$worldTransform)
     this$renderer.setBlendMode(e.blendMode)
-    for (var o, a, e$geometry$graphicsData = e.geometry.graphicsData, c = (e.tint >> 16 & 255) / 255, u = (e.tint >> 8 & 255) / 255, l = (255 & e.tint) / 255, f = 0; f < e$geometry$graphicsData.length; f++) {
+    for (var o, a, /* [auto-meaningful-name] */e$geometry$graphicsData = e.geometry.graphicsData, c = (e.tint >> 16 & 255) / 255, u = (e.tint >> 8 & 255) / 255, l = (255 & e.tint) / 255, f = 0; f < e$geometry$graphicsData.length; f++) {
       var d = e$geometry$graphicsData[f]
-      var d$shape = d.shape
-      var d$fillStyle = d.fillStyle
-      var d$lineStyle = d.lineStyle
+      var /* [auto-meaningful-name] */d$shape = d.shape
+      var /* [auto-meaningful-name] */d$fillStyle = d.fillStyle
+      var /* [auto-meaningful-name] */d$lineStyle = d.lineStyle
       var A = 0 | d.fillStyle.color
       var g = 0 | d.lineStyle.color
       if (d.matrix) {
@@ -14541,43 +14541,43 @@ var Po = function () {
       this$renderer$context.miterLimit = d$lineStyle.miterLimit
       if (d.type === it.POLY) {
         this$renderer$context.beginPath()
-        var sD$shape$points = (S = d$shape).points
-        var d$holes = d.holes
+        var /* [auto-meaningful-name] */SD$shape$points = (S = d$shape).points
+        var /* [auto-meaningful-name] */d$holes = d.holes
         var w = undefined
         var E = undefined
         var x = undefined
         var C = undefined
-        this$renderer$context.moveTo(sD$shape$points[0], sD$shape$points[1])
-        for (var O = 2; O < sD$shape$points.length; O += 2) {
-          this$renderer$context.lineTo(sD$shape$points[O], sD$shape$points[O + 1])
+        this$renderer$context.moveTo(SD$shape$points[0], SD$shape$points[1])
+        for (var O = 2; O < SD$shape$points.length; O += 2) {
+          this$renderer$context.lineTo(SD$shape$points[O], SD$shape$points[O + 1])
         }
         if (S.closeStroke) {
           this$renderer$context.closePath()
         }
         if (d$holes.length > 0) {
           w = 0
-          x = sD$shape$points[0]
-          C = sD$shape$points[1]
-          for (O = 2; O + 2 < sD$shape$points.length; O += 2) {
-            w += (sD$shape$points[O] - x) * (sD$shape$points[O + 3] - C) - (sD$shape$points[O + 2] - x) * (sD$shape$points[O + 1] - C)
+          x = SD$shape$points[0]
+          C = SD$shape$points[1]
+          for (O = 2; O + 2 < SD$shape$points.length; O += 2) {
+            w += (SD$shape$points[O] - x) * (SD$shape$points[O + 3] - C) - (SD$shape$points[O + 2] - x) * (SD$shape$points[O + 1] - C)
           }
           for (var k = 0; k < d$holes.length; k++) {
-            if (sD$shape$points = d$holes[k].shape.points) {
+            if (SD$shape$points = d$holes[k].shape.points) {
               E = 0
-              x = sD$shape$points[0]
-              C = sD$shape$points[1]
-              for (O = 2; O + 2 < sD$shape$points.length; O += 2) {
-                E += (sD$shape$points[O] - x) * (sD$shape$points[O + 3] - C) - (sD$shape$points[O + 2] - x) * (sD$shape$points[O + 1] - C)
+              x = SD$shape$points[0]
+              C = SD$shape$points[1]
+              for (O = 2; O + 2 < SD$shape$points.length; O += 2) {
+                E += (SD$shape$points[O] - x) * (SD$shape$points[O + 3] - C) - (SD$shape$points[O + 2] - x) * (SD$shape$points[O + 1] - C)
               }
               if (E * w < 0) {
-                this$renderer$context.moveTo(sD$shape$points[0], sD$shape$points[1])
-                for (O = 2; O < sD$shape$points.length; O += 2) {
-                  this$renderer$context.lineTo(sD$shape$points[O], sD$shape$points[O + 1])
+                this$renderer$context.moveTo(SD$shape$points[0], SD$shape$points[1])
+                for (O = 2; O < SD$shape$points.length; O += 2) {
+                  this$renderer$context.lineTo(SD$shape$points[O], SD$shape$points[O + 1])
                 }
               } else {
-                this$renderer$context.moveTo(sD$shape$points[sD$shape$points.length - 2], sD$shape$points[sD$shape$points.length - 1])
-                for (O = sD$shape$points.length - 4; O >= 0; O -= 2) {
-                  this$renderer$context.lineTo(sD$shape$points[O], sD$shape$points[O + 1])
+                this$renderer$context.moveTo(SD$shape$points[SD$shape$points.length - 2], SD$shape$points[SD$shape$points.length - 1])
+                for (O = SD$shape$points.length - 4; O >= 0; O -= 2) {
+                  this$renderer$context.lineTo(SD$shape$points[O], SD$shape$points[O + 1])
                 }
               }
               if (d$holes[k].shape.closeStroke) {
@@ -14652,23 +14652,23 @@ var Po = function () {
           this$renderer$context.stroke()
         }
       } else if (d.type === it.RREC) {
-        var sD$shape$x = (S = d$shape).x
+        var /* [auto-meaningful-name] */SD$shape$x = (S = d$shape).x
         var U = S.y
-        var s$width = S.width
-        var s$height = S.height
-        var s$radius = S.radius
-        var z = Math.min(s$width, s$height) / 2 | 0
-        s$radius = s$radius > z ? z : s$radius
+        var /* [auto-meaningful-name] */S$width = S.width
+        var /* [auto-meaningful-name] */S$height = S.height
+        var /* [auto-meaningful-name] */S$radius = S.radius
+        var z = Math.min(S$width, S$height) / 2 | 0
+        S$radius = S$radius > z ? z : S$radius
         this$renderer$context.beginPath()
-        this$renderer$context.moveTo(sD$shape$x, U + s$radius)
-        this$renderer$context.lineTo(sD$shape$x, U + s$height - s$radius)
-        this$renderer$context.quadraticCurveTo(sD$shape$x, U + s$height, sD$shape$x + s$radius, U + s$height)
-        this$renderer$context.lineTo(sD$shape$x + s$width - s$radius, U + s$height)
-        this$renderer$context.quadraticCurveTo(sD$shape$x + s$width, U + s$height, sD$shape$x + s$width, U + s$height - s$radius)
-        this$renderer$context.lineTo(sD$shape$x + s$width, U + s$radius)
-        this$renderer$context.quadraticCurveTo(sD$shape$x + s$width, U, sD$shape$x + s$width - s$radius, U)
-        this$renderer$context.lineTo(sD$shape$x + s$radius, U)
-        this$renderer$context.quadraticCurveTo(sD$shape$x, U, sD$shape$x, U + s$radius)
+        this$renderer$context.moveTo(SD$shape$x, U + S$radius)
+        this$renderer$context.lineTo(SD$shape$x, U + S$height - S$radius)
+        this$renderer$context.quadraticCurveTo(SD$shape$x, U + S$height, SD$shape$x + S$radius, U + S$height)
+        this$renderer$context.lineTo(SD$shape$x + S$width - S$radius, U + S$height)
+        this$renderer$context.quadraticCurveTo(SD$shape$x + S$width, U + S$height, SD$shape$x + S$width, U + S$height - S$radius)
+        this$renderer$context.lineTo(SD$shape$x + S$width, U + S$radius)
+        this$renderer$context.quadraticCurveTo(SD$shape$x + S$width, U, SD$shape$x + S$width - S$radius, U)
+        this$renderer$context.lineTo(SD$shape$x + S$radius, U)
+        this$renderer$context.quadraticCurveTo(SD$shape$x, U, SD$shape$x, U + S$radius)
         this$renderer$context.closePath()
         if (d$fillStyle.visible) {
           this$renderer$context.globalAlpha = d$fillStyle.alpha * e$worldAlpha
@@ -14754,12 +14754,12 @@ var jo = function () {
     this.renderer = e
   }
   e.prototype.render = function (e) {
-    var e$_texture = e._texture
-    var this$renderer = this.renderer
-    var this$renderer$context = this$renderer.context
-    var e$_texture$_frame$width = e$_texture._frame.width
-    var e$_texture$_frame$height = e$_texture._frame.height
-    var e$transform$worldTransform = e.transform.worldTransform
+    var /* [auto-meaningful-name] */e$_texture = e._texture
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer$context = this$renderer.context
+    var /* [auto-meaningful-name] */e$_texture$_frame$width = e$_texture._frame.width
+    var /* [auto-meaningful-name] */e$_texture$_frame$height = e$_texture._frame.height
+    var /* [auto-meaningful-name] */e$transform$worldTransform = e.transform.worldTransform
     var s = 0
     var c = 0
     var u = e$_texture.baseTexture.getDrawableSource()
@@ -14791,8 +14791,8 @@ var jo = function () {
         s |= 0
         c |= 0
       }
-      var e$_texture$baseTexture$resolution = e$_texture.baseTexture.resolution
-      var this$renderer$_outerBlend = this$renderer._outerBlend
+      var /* [auto-meaningful-name] */e$_texture$baseTexture$resolution = e$_texture.baseTexture.resolution
+      var /* [auto-meaningful-name] */this$renderer$_outerBlend = this$renderer._outerBlend
       if (this$renderer$_outerBlend) {
         this$renderer$context.save()
         this$renderer$context.beginPath()
@@ -14841,7 +14841,7 @@ var Uo = function () {
     var n
     var r
     var i
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     if (e) {
       i = e instanceof vn ? e : this$renderer.generateTexture(e)
     }
@@ -14867,7 +14867,7 @@ var Uo = function () {
     var /* [auto-meaningful-name] */i$baseTexture$_canvasRenderTarget$resolution
     var r
     var i
-    var this$renderer = this.renderer
+    var /* [auto-meaningful-name] */this$renderer = this.renderer
     if (e) {
       i = e instanceof vn ? e : this$renderer.generateTexture(e)
     }
@@ -14895,13 +14895,13 @@ var Ho = new _t()
 var Vo = new _t()
 var Go = [new ht(), new ht(), new ht(), new ht()]
 Vi.prototype._renderCanvas = function (e) {
-  var this$_texture = this._texture
+  var /* [auto-meaningful-name] */this$_texture = this._texture
   if (this$_texture.baseTexture.valid) {
-    var e$context = e.context
-    var this$worldTransform = this.worldTransform
-    var this$_texture$baseTexture = this$_texture.baseTexture
+    var /* [auto-meaningful-name] */e$context = e.context
+    var /* [auto-meaningful-name] */this$worldTransform = this.worldTransform
+    var /* [auto-meaningful-name] */this$_texture$baseTexture = this$_texture.baseTexture
     var o = this$_texture$baseTexture.getDrawableSource()
-    var this$_texture$baseTexture$resolution = this$_texture$baseTexture.resolution
+    var /* [auto-meaningful-name] */this$_texture$baseTexture$resolution = this$_texture$baseTexture.resolution
     if (this._textureID !== this._texture._updateID || this._cachedTint !== this.tint) {
       this._textureID = this._texture._updateID
       var s = new $e(this$_texture._frame.width, this$_texture._frame.height, this$_texture$baseTexture$resolution)
@@ -14917,9 +14917,9 @@ Vi.prototype._renderCanvas = function (e) {
     e$context.globalAlpha = this.worldAlpha
     e.setBlendMode(this.blendMode)
     this.tileTransform.updateLocalTransform()
-    var this$tileTransform$localTransform = this.tileTransform.localTransform
-    var this$_width = this._width
-    var this$_height = this._height
+    var /* [auto-meaningful-name] */this$tileTransform$localTransform = this.tileTransform.localTransform
+    var /* [auto-meaningful-name] */this$_width = this._width
+    var /* [auto-meaningful-name] */this$_height = this._height
     Ho.identity()
     Vo.copyFrom(this$tileTransform$localTransform)
     if (!this.uvRespectAnchor) {
@@ -14954,7 +14954,7 @@ Pt.prototype.renderCanvas = function (e) {
       e.maskManager.pushMask(this._mask)
     }
     this._renderCanvas(e)
-    for (var t = 0, this$children$length = this.children.length; t < this$children$length; ++t) {
+    for (var t = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; t < this$children$length; ++t) {
       this.children[t].renderCanvas(e)
     }
     if (this._mask) {
@@ -15420,7 +15420,7 @@ var Xo = function () {
   })
   e.prototype.toFontString = function () {
     var e = "number" === typeof this.fontSize ? this.fontSize + "px" : this.fontSize
-    var this$fontFamily = this.fontFamily
+    var /* [auto-meaningful-name] */this$fontFamily = this.fontFamily
     if (!Array.isArray(this.fontFamily)) {
       this$fontFamily = this.fontFamily.split(",")
     }
@@ -15499,7 +15499,7 @@ var Jo = function () {
     if (undefined === r) {
       r = e._canvas
     }
-    for (var i = r.getContext("2d"), o = 0, a = "", s = "", c = Object.create(null), n$letterSpacing = n.letterSpacing, n$whiteSpace = n.whiteSpace, f = e.collapseSpaces(n$whiteSpace), d = e.collapseNewlines(n$whiteSpace), h = !f, p = n.wordWrapWidth + n$letterSpacing, _ = e.tokenize(t), A = 0; A < _.length; A++) {
+    for (var i = r.getContext("2d"), o = 0, a = "", s = "", c = Object.create(null), /* [auto-meaningful-name] */n$letterSpacing = n.letterSpacing, /* [auto-meaningful-name] */n$whiteSpace = n.whiteSpace, f = e.collapseSpaces(n$whiteSpace), d = e.collapseNewlines(n$whiteSpace), h = !f, p = n.wordWrapWidth + n$letterSpacing, _ = e.tokenize(t), A = 0; A < _.length; A++) {
       var g = _[A]
       if (e.isNewline(g)) {
         if (!d) {
@@ -15657,8 +15657,8 @@ var Jo = function () {
       descent: 0,
       fontSize: 0
     }
-    var e$_canvas = e._canvas
-    var e$_context = e._context
+    var /* [auto-meaningful-name] */e$_canvas = e._canvas
+    var /* [auto-meaningful-name] */e$_context = e._context
     e$_context.font = t
     var o = e.METRICS_STRING + e.BASELINE_SYMBOL
     var a = Math.ceil(e$_context.measureText(o).width)
@@ -15673,8 +15673,8 @@ var Jo = function () {
     e$_context.textBaseline = "alphabetic"
     e$_context.fillStyle = "#000"
     e$_context.fillText(o, 0, s)
-    var e$_context$getImageData00AC$data = e$_context.getImageData(0, 0, a, c).data
-    var e$_context$getImageData00AC$data$length = e$_context$getImageData00AC$data.length
+    var /* [auto-meaningful-name] */e$_context$getImageData00AC$data = e$_context.getImageData(0, 0, a, c).data
+    var /* [auto-meaningful-name] */e$_context$getImageData00AC$data$length = e$_context$getImageData00AC$data.length
     var f = 4 * a
     var d = 0
     var h = 0
@@ -15779,7 +15779,7 @@ var ta = function (e) {
     e.prototype = null === t ? Object.create(t) : (n.prototype = t.prototype, new n())
   })(t, e)
   t.prototype.updateText = function (e) {
-    var this$_style = this._style
+    var /* [auto-meaningful-name] */this$_style = this._style
     if (this.localStyleID !== this$_style.styleID) {
       this.dirty = true
       this.localStyleID = this$_style.styleID
@@ -15788,15 +15788,15 @@ var ta = function (e) {
       this._font = this._style.toFontString()
       var r
       var i
-      var this$context = this.context
+      var /* [auto-meaningful-name] */this$context = this.context
       var a = Jo.measureText(this._text || " ", this._style, this._style.wordWrap, this.canvas)
-      var a$width = a.width
-      var a$height = a.height
-      var a$lines = a.lines
-      var a$lineHeight = a.lineHeight
-      var a$lineWidths = a.lineWidths
-      var a$maxLineWidth = a.maxLineWidth
-      var a$fontProperties = a.fontProperties
+      var /* [auto-meaningful-name] */a$width = a.width
+      var /* [auto-meaningful-name] */a$height = a.height
+      var /* [auto-meaningful-name] */a$lines = a.lines
+      var /* [auto-meaningful-name] */a$lineHeight = a.lineHeight
+      var /* [auto-meaningful-name] */a$lineWidths = a.lineWidths
+      var /* [auto-meaningful-name] */a$maxLineWidth = a.maxLineWidth
+      var /* [auto-meaningful-name] */a$fontProperties = a.fontProperties
       this.canvas.width = Math.ceil((Math.max(1, a$width) + 2 * this$_style.padding) * this._resolution)
       this.canvas.height = Math.ceil((Math.max(1, a$height) + 2 * this$_style.padding) * this._resolution)
       this$context.scale(this._resolution, this._resolution)
@@ -15813,7 +15813,7 @@ var ta = function (e) {
         if (A) {
           this$context.fillStyle = "black"
           this$context.strokeStyle = "black"
-          var this$_style$dropShadowColor = this$_style.dropShadowColor
+          var /* [auto-meaningful-name] */this$_style$dropShadowColor = this$_style.dropShadowColor
           var y = xe("number" === typeof this$_style$dropShadowColor ? this$_style$dropShadowColor : Oe(this$_style$dropShadowColor))
           this$context.shadowColor = "rgba(" + 255 * y[0] + "," + 255 * y[1] + "," + 255 * y[2] + "," + this$_style.dropShadowAlpha + ")"
           this$context.shadowBlur = this$_style.dropShadowBlur
@@ -15856,9 +15856,9 @@ var ta = function (e) {
     if (undefined === r) {
       r = false
     }
-    var this$_style$letterSpacing = this._style.letterSpacing
+    var /* [auto-meaningful-name] */this$_style$letterSpacing = this._style.letterSpacing
     if (0 !== this$_style$letterSpacing) {
-      for (var o = t, a = Array.from ? Array.from(e) : e.split(""), this$context$measureTextE$width = this.context.measureText(e).width, c = 0, u = 0; u < a.length; ++u) {
+      for (var o = t, a = Array.from ? Array.from(e) : e.split(""), /* [auto-meaningful-name] */this$context$measureTextE$width = this.context.measureText(e).width, c = 0, u = 0; u < a.length; ++u) {
         var l = a[u]
         if (r) {
           this.context.strokeText(l, o, n)
@@ -15875,7 +15875,7 @@ var ta = function (e) {
     }
   }
   t.prototype.updateTexture = function () {
-    var this$canvas = this.canvas
+    var /* [auto-meaningful-name] */this$canvas = this.canvas
     if (this._style.trim) {
       var t = Je(this$canvas)
       if (t.data) {
@@ -15884,10 +15884,10 @@ var ta = function (e) {
         this.context.putImageData(t.data, 0, 0)
       }
     }
-    var this$_texture = this._texture
-    var this$_style = this._style
+    var /* [auto-meaningful-name] */this$_texture = this._texture
+    var /* [auto-meaningful-name] */this$_style = this._style
     var i = this$_style.trim ? 0 : this$_style.padding
-    var this$_texture$baseTexture = this$_texture.baseTexture
+    var /* [auto-meaningful-name] */this$_texture$baseTexture = this$_texture.baseTexture
     this$_texture.trim.width = this$_texture._frame.width = Math.ceil(this$canvas.width / this._resolution)
     this$_texture.trim.height = this$_texture._frame.height = Math.ceil(this$canvas.height / this._resolution)
     this$_texture.trim.x = -i
@@ -15918,7 +15918,7 @@ var ta = function (e) {
   }
   t.prototype._generateFillStyle = function (e, t, n) {
     var r
-    var e$fill = e.fill
+    var /* [auto-meaningful-name] */e$fill = e.fill
     if (!Array.isArray(e$fill)) {
       return e$fill
     }
@@ -16120,14 +16120,14 @@ var ra = function (e) {
   }
   t.prototype.gotoAndStop = function (e) {
     this.stop()
-    var this$currentFrame = this.currentFrame
+    var /* [auto-meaningful-name] */this$currentFrame = this.currentFrame
     this._currentTime = e
     if (this$currentFrame !== this.currentFrame) {
       this.updateTexture()
     }
   }
   t.prototype.gotoAndPlay = function (e) {
-    var this$currentFrame = this.currentFrame
+    var /* [auto-meaningful-name] */this$currentFrame = this.currentFrame
     this._currentTime = e
     if (this$currentFrame !== this.currentFrame) {
       this.updateTexture()
@@ -16137,7 +16137,7 @@ var ra = function (e) {
   t.prototype.update = function (e) {
     if (this._playing) {
       var t = this.animationSpeed * e
-      var this$currentFrame = this.currentFrame
+      var /* [auto-meaningful-name] */this$currentFrame = this.currentFrame
       if (null !== this._durations) {
         var r = this._currentTime % 1 * this._durations[this.currentFrame]
         for (r += t / 60 * 1e3; r < 0;) {
@@ -16176,7 +16176,7 @@ var ra = function (e) {
     }
   }
   t.prototype.updateTexture = function () {
-    var this$currentFrame = this.currentFrame
+    var /* [auto-meaningful-name] */this$currentFrame = this.currentFrame
     if (this._previousFrame !== this$currentFrame) {
       this._previousFrame = this$currentFrame
       this._texture = this._textures[this$currentFrame]
@@ -16504,7 +16504,7 @@ var sa = function (e) {
     this.uniforms.filterMatrix = e.calculateSpriteMatrix(this.maskMatrix, this.maskSprite)
     this.uniforms.scale.x = this.scale.x
     this.uniforms.scale.y = this.scale.y
-    var this$maskSprite$worldTransform = this.maskSprite.worldTransform
+    var /* [auto-meaningful-name] */this$maskSprite$worldTransform = this.maskSprite.worldTransform
     var o = Math.sqrt(this$maskSprite$worldTransform.a * this$maskSprite$worldTransform.a + this$maskSprite$worldTransform.b * this$maskSprite$worldTransform.b)
     var a = Math.sqrt(this$maskSprite$worldTransform.c * this$maskSprite$worldTransform.c + this$maskSprite$worldTransform.d * this$maskSprite$worldTransform.d)
     if (0 !== o && 0 !== a) {
@@ -16604,8 +16604,8 @@ var ua = function (e) {
     }, 0))
   }
   t.prototype._generateKernels = function () {
-    var this$_blur = this._blur
-    var this$_quality = this._quality
+    var /* [auto-meaningful-name] */this$_blur = this._blur
+    var /* [auto-meaningful-name] */this$_quality = this._quality
     var n = [this$_blur]
     if (this$_blur > 0) {
       for (var r = this$_blur, i = this$_blur / this$_quality, o = 1; o < this$_quality; o++) {
@@ -16708,11 +16708,11 @@ var fa = function (e) {
     r._distance = 5
     r._resolution = fe.FILTER_RESOLUTION
     var i = Object.assign(t.defaults, n)
-    var i$kernels = i.kernels
-    var i$blur = i.blur
-    var i$quality = i.quality
-    var i$pixelSize = i.pixelSize
-    var i$resolution = i.resolution
+    var /* [auto-meaningful-name] */i$kernels = i.kernels
+    var /* [auto-meaningful-name] */i$blur = i.blur
+    var /* [auto-meaningful-name] */i$quality = i.quality
+    var /* [auto-meaningful-name] */i$pixelSize = i.pixelSize
+    var /* [auto-meaningful-name] */i$resolution = i.resolution
     r._tintFilter = new mr("attribute vec2 aVertexPosition;\nattribute vec2 aTextureCoord;\n\nuniform mat3 projectionMatrix;\n\nvarying vec2 vTextureCoord;\n\nvoid main(void)\n{\n    gl_Position = vec4((projectionMatrix * vec3(aVertexPosition, 1.0)).xy, 0.0, 1.0);\n    vTextureCoord = aTextureCoord;\n}", "varying vec2 vTextureCoord;\nuniform sampler2D uSampler;\nuniform float alpha;\nuniform vec3 color;\n\nuniform vec2 shift;\nuniform vec4 inputSize;\n\nvoid main(void){\n    vec4 sample = texture2D(uSampler, vTextureCoord - shift * inputSize.zw);\n\n    // Premultiply alpha\n    sample.rgb = color.rgb * sample.a;\n\n    // alpha user alpha\n    sample *= alpha;\n\n    gl_FragColor = sample;\n}")
     r._tintFilter.uniforms.color = new Float32Array(4)
     r._tintFilter.uniforms.shift = new ht()
@@ -16720,11 +16720,11 @@ var fa = function (e) {
     r._blurFilter = i$kernels ? new ua(i$kernels) : new ua(i$blur, i$quality)
     r.pixelSize = i$pixelSize
     r.resolution = i$resolution
-    var i$shadowOnly = i.shadowOnly
-    var i$rotation = i.rotation
-    var i$distance = i.distance
-    var i$alpha = i.alpha
-    var i$color = i.color
+    var /* [auto-meaningful-name] */i$shadowOnly = i.shadowOnly
+    var /* [auto-meaningful-name] */i$rotation = i.rotation
+    var /* [auto-meaningful-name] */i$distance = i.distance
+    var /* [auto-meaningful-name] */i$alpha = i.alpha
+    var /* [auto-meaningful-name] */i$color = i.color
     r.shadowOnly = i$shadowOnly
     r.rotation = i$rotation
     r.distance = i$distance
@@ -17059,7 +17059,7 @@ ri.registerPlugin(St)
 ri.registerPlugin(Di)
 var ya = new _t()
 Nn.prototype.push = function (e, t) {
-  for (var this$renderer = this.renderer, this$defaultFilterStack = this.defaultFilterStack, i = this.statePool.pop() || new Fn(), this$renderer$renderTexture = this.renderer.renderTexture, t0$resolution = t[0].resolution, t0$padding = t[0].padding, t0$autoFit = t[0].autoFit, t0$legacy = t[0].legacy, l = 1; l < t.length; l++) {
+  for (var /* [auto-meaningful-name] */this$renderer = this.renderer, /* [auto-meaningful-name] */this$defaultFilterStack = this.defaultFilterStack, i = this.statePool.pop() || new Fn(), /* [auto-meaningful-name] */this$renderer$renderTexture = this.renderer.renderTexture, /* [auto-meaningful-name] */t0$resolution = t[0].resolution, /* [auto-meaningful-name] */t0$padding = t[0].padding, /* [auto-meaningful-name] */t0$autoFit = t[0].autoFit, /* [auto-meaningful-name] */t0$legacy = t[0].legacy, l = 1; l < t.length; l++) {
     var f = t[l]
     t0$resolution = Math.min(t0$resolution, f.resolution)
     t0$padding = Math.max(t0$padding, f.padding)

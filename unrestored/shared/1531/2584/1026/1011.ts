@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1011
@@ -7,24 +7,24 @@
 "use strict"
 
 export { s as a }
-import r = require("../2627/462");
+import /* [auto-meaningful-name] */$$_2627_462 = require("../2627/462")
 function i(e) {
   return e.attachTo ? e.attachTo : document.querySelector("head") || document.body
 }
 function o(e) {
-  var /* [auto-meaningful-name] */_n$csp2
+  var /* [auto-meaningful-name] */n$csp
   var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
-  if (!r.a()) {
+  if (!$$_2627_462.a()) {
     return null
   }
-  var /* [auto-meaningful-name] */n$csp
+  var /* [auto-meaningful-name] */_n$csp
   var a = document.createElement("style")
-  if (null === (_n$csp2 = n.csp) || undefined === _n$csp2 ? undefined : _n$csp2.nonce) {
-    a.nonce = null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce
+  if (null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) {
+    a.nonce = null === (_n$csp = n.csp) || undefined === _n$csp ? undefined : _n$csp.nonce
   }
   a.innerHTML = e
   var s = i(n)
-  var s$firstChild = s.firstChild
+  var /* [auto-meaningful-name] */s$firstChild = s.firstChild
   if (n.prepend && s.prepend) {
     s.prepend(a)
   } else {
@@ -42,7 +42,7 @@ function s(e, t) {
   var r = i(n)
   if (!a.has(r)) {
     var s = o("", n)
-    var s$parentNode = s.parentNode
+    var /* [auto-meaningful-name] */s$parentNode = s.parentNode
     a.set(r, s$parentNode)
     s$parentNode.removeChild(s)
   }
@@ -50,11 +50,11 @@ function s(e, t) {
     return "STYLE" === e.tagName && e["rc-util-key"] === t
   })
   if (u) {
-    var /* [auto-meaningful-name] */_n$csp4
-    var /* [auto-meaningful-name] */_n$csp6
     var /* [auto-meaningful-name] */n$csp
-    if ((null === (_n$csp4 = n.csp) || undefined === _n$csp4 ? undefined : _n$csp4.nonce) && u.nonce !== (null === (_n$csp6 = n.csp) || undefined === _n$csp6 ? undefined : _n$csp6.nonce)) {
-      u.nonce = null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce
+    var /* [auto-meaningful-name] */_n$csp2
+    var /* [auto-meaningful-name] */_n$csp3
+    if ((null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) && u.nonce !== (null === (_n$csp2 = n.csp) || undefined === _n$csp2 ? undefined : _n$csp2.nonce)) {
+      u.nonce = null === (_n$csp3 = n.csp) || undefined === _n$csp3 ? undefined : _n$csp3.nonce
     }
     if (u.innerHTML !== e) {
       u.innerHTML = e

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2550
@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_math_blocks = undefined
-var r = require("../4/127")
+var r = require("../1036/127")
 var o = require("./2555/579")
 exports.init_math_blocks = function (e) {
-  var e$Blocks = e.Blocks
+  var /* [auto-meaningful-name] */e$Blocks = e.Blocks
   e.define_blocks_with_json_array([{
     type: "random",
     message0: (0, o.i18n)("random_num"),

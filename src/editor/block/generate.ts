@@ -191,10 +191,10 @@ Object.defineProperty(f, "setBlockGroupSnippet", {
     return ve
   }
 })
-import h = require("../../../unrestored/shared/1531/2584/25/index");
-import m = require("../../../unrestored/shared/1531/2584/17/index");
-import g = require("../../../unrestored/shared/1531/2584/9");
-import _ = require("../../../unrestored/shared/1531/2584/4/index");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_25_index = require("../../../unrestored/shared/1531/2584/25/index")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_17_index = require("../../../unrestored/shared/1531/2584/17/index")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_9 = require("../../../unrestored/shared/1531/2584/9")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_4 = require("../../../unrestored/shared/1531/2584/4")
 function v(e) {
   e.insertBlockProfile("phone_vibrate", {
     type: "phone_vibrate",
@@ -263,35 +263,35 @@ function b(e) {
 function y(e) {
   e.insertBlockSnippetGenerator("phone_vibrate", function (t, n) {
     var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0"
-    return _.n("startDeviceVibrating", [r + " * 1000"])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.n("startDeviceVibrating", [r + " * 1000"])
   })
   e.insertBlockSnippetGenerator("brightness_set_brightness", function (t, n) {
     var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     var o = t.blocks[n]
-    return _.l(_.j("brightness.setBrightness", [r]), o, e, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.j("brightness.setBrightness", [r]), o, e, true)
   })
   e.insertBlockSnippetGenerator("brightness_get_brightness", function (t, n) {
     var r = t.blocks[n]
-    return _.l(_.r("brightness.getBrightness"), r, e, true, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.r("brightness.getBrightness"), r, e, true, true)
   })
   e.insertBlockSnippetGenerator("brightness_set_keep_screen_on", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("brightness.setKeepScreenOn", [o]), r, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("brightness.setKeepScreenOn", [o]), r, e)
   })
   e.insertBlockSnippetGenerator("phone_battery_level", function (t, n) {
     var r = t.blocks[n]
-    return _.l(_.r("device.getBatteryLevel"), r, e, true, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.r("device.getBatteryLevel"), r, e, true, true)
   })
 }
 var E
-import O = require("../../../unrestored/shared/1531/2584/46/index");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_46_index = require("../../../unrestored/shared/1531/2584/46/index")
 function w(e, t) {
-  var n = "%{BKY_BLOCK_TAB_ICON}"
+  var /* [auto-meaningful-name] */BKY_BLOCK_TAB_ICON = "%{BKY_BLOCK_TAB_ICON}"
   e.insertBlockProfile("screen_on_open", {
     type: "screen_on_open",
     message0: "%{BKY_SCREEN_ON_OPEN}",
-    args0: [_.e(n, true)],
+    args0: [$$_$$_$$_unrestored_shared_1531_2584_4.e(BKY_BLOCK_TAB_ICON, true)],
     message1: "%1",
     args1: [{
       type: "input_statement",
@@ -311,7 +311,7 @@ function w(e, t) {
   e.insertBlockProfile("screen_on_open_get_param", {
     type: "screen_on_open_get_param",
     message0: "%{BKY_SCREEN_ON_OPEN_GET_PARAM}",
-    args0: [_.e(n, true), {
+    args0: [$$_$$_$$_unrestored_shared_1531_2584_4.e(BKY_BLOCK_TAB_ICON, true), {
       type: "input_value",
       name: "PARAMETER",
       align: "CENTRE",
@@ -335,7 +335,7 @@ function w(e, t) {
       name: "SCREEN_ID",
       custom: true,
       options: function () {
-        return [].concat(h.a(O.c().getScreenList()), [{
+        return [].concat($$_$$_$$_unrestored_shared_1531_2584_25_index.a($$_$$_$$_unrestored_shared_1531_2584_46_index.c().getScreenList()), [{
           type: "line"
         }, {
           type: "basic",
@@ -361,7 +361,7 @@ function w(e, t) {
       name: "SCREEN_ID",
       custom: true,
       options: function () {
-        return [].concat(h.a(O.c().getScreenList()), [{
+        return [].concat($$_$$_$$_unrestored_shared_1531_2584_25_index.a($$_$$_$$_unrestored_shared_1531_2584_46_index.c().getScreenList()), [{
           type: "line"
         }, {
           type: "basic",
@@ -403,7 +403,7 @@ function w(e, t) {
       name: "SCREEN_ID",
       custom: true,
       options: function () {
-        return [].concat(h.a(O.c().getScreenList()), [{
+        return [].concat($$_$$_$$_unrestored_shared_1531_2584_25_index.a($$_$$_$$_unrestored_shared_1531_2584_46_index.c().getScreenList()), [{
           type: "line"
         }, {
           type: "basic",
@@ -456,7 +456,7 @@ function T(e) {
   })
   e.insertBlockSnippetGenerator("screen_on_open", function (t, n) {
     var r = e.statementToCode(t, n, "DO")
-    return r ? _.m("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : ""
+    return r ? $$_$$_$$_unrestored_shared_1531_2584_4.m("onScreenOpen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : ""
   })
   e.insertBlockSnippetGenerator("screen_on_open_get_param_value", function () {
     return "screenOpenParamValue"
@@ -467,27 +467,27 @@ function T(e) {
       return ""
     }
     var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
-    return _.n("onScreenOpen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.n("onScreenOpen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r, [o])
   })
   e.insertBlockSnippetGenerator("screen_navigate_to", function (t, n) {
-    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
-    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : _.n("navigateToScreen", [r])
+    var r = $$_$$_$$_unrestored_shared_1531_2584_4.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
+    return r === $$_$$_$$_unrestored_shared_1531_2584_4.o("nextScreen") ? $$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToNextScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : r === $$_$$_$$_unrestored_shared_1531_2584_4.o("prevScreen") ? $$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToPrevScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]) : $$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToScreen", [r])
   })
   e.insertBlockSnippetGenerator("screen_navigate_to_by_value", function (t, n) {
-    var r = _.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
+    var r = $$_$$_$$_unrestored_shared_1531_2584_4.o(e.getFieldValue(t.blocks[n], "SCREEN_ID") || "")
     var o = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
-    return r === _.o("nextScreen") ? _.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === _.o("prevScreen") ? _.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : _.n("navigateToScreen", [r, o])
+    return r === $$_$$_$$_unrestored_shared_1531_2584_4.o("nextScreen") ? $$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToNextScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : r === $$_$$_$$_unrestored_shared_1531_2584_4.o("prevScreen") ? $$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToPrevScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), o]) : $$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToScreen", [r, o])
   })
   e.insertBlockSnippetGenerator("new_screen_navigate_to", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL)
-    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : _.l(_.n("navigateToScreen", [o]), r, e)
+    return o.includes($$_$$_$$_unrestored_shared_1531_2584_4.o("nextScreen")) ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToNextScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : o.includes($$_$$_$$_unrestored_shared_1531_2584_4.o("prevScreen")) ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToPrevScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))]), r, e) : $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToScreen", [o]), r, e)
   })
   e.insertBlockSnippetGenerator("new_screen_navigate_to_by_value", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "SCREEN_ID", e.ORDER_FUNCTION_CALL)
     var i = e.valueToCode(t, n, "PARAMETER", e.ORDER_FUNCTION_CALL)
-    return o.includes(_.o("nextScreen")) ? _.l(_.n("navigateToNextScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes(_.o("prevScreen")) ? _.l(_.n("navigateToPrevScreen", [_.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : _.l(_.n("navigateToScreen", [o, i]), r, e)
+    return o.includes($$_$$_$$_unrestored_shared_1531_2584_4.o("nextScreen")) ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToNextScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : o.includes($$_$$_$$_unrestored_shared_1531_2584_4.o("prevScreen")) ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToPrevScreen", [$$_$$_$$_unrestored_shared_1531_2584_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__")), i]), r, e) : $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("navigateToScreen", [o, i]), r, e)
   })
 }
 function S(e, t) {
@@ -734,22 +734,22 @@ function A(e) {
   e.insertBlockSnippetGenerator("loop_conditionally", function (t, n) {
     var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false"
     var o = e.statementToCode(t, n, "DO")
-    return o ? _.i("asyncScheduler.loopConditionally", o, [_.g(r, true)]) : ""
+    return o ? $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.loopConditionally", o, [$$_$$_$$_unrestored_shared_1531_2584_4.g(r, true)]) : ""
   })
   e.insertBlockSnippetGenerator("break_loop", function () {
-    return _.i("asyncScheduler.breakLoop")
+    return $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.breakLoop")
   })
   e.insertBlockSnippetGenerator("continue_loop", function () {
-    return _.i("asyncScheduler.continueLoop")
+    return $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.continueLoop")
   })
   e.insertBlockSnippetGenerator("loop_finitely", function (t, n) {
     var r = e.valueToCode(t, n, "TIMES", e.ORDER_FUNCTION_CALL)
     var o = e.statementToCode(t, n, "DO")
-    return o ? _.i("asyncScheduler.loopFinitely", o, [r]) : ""
+    return o ? $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.loopFinitely", o, [r]) : ""
   })
   e.insertBlockSnippetGenerator("loop_infinitely", function (t, n) {
     var r = e.statementToCode(t, n, "DO")
-    return r ? _.i("asyncScheduler.loopInfinitely", r) : ""
+    return r ? $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.loopInfinitely", r) : ""
   })
   e.insertBlockSnippetGenerator("sleep", function (t, n) {
     var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0"
@@ -757,45 +757,45 @@ function A(e) {
   })
   e.insertBlockSnippetGenerator("wait_until", function (t, n) {
     var r = e.valueToCode(t, n, "CONDITION", e.ORDER_FUNCTION_CALL) || "false"
-    return _.i("asyncScheduler.waitUntil", undefined, [_.g(r, true)])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.waitUntil", undefined, [$$_$$_$$_unrestored_shared_1531_2584_4.g(r, true)])
   })
   e.insertBlockSnippetGenerator("console_log", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, a = m.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, a = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
       var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
         o.push(l)
       }
     }
     var u = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-    return _.n("consoleLog", [_.o(u), _.o(r.id)].concat(o))
+    return $$_$$_$$_unrestored_shared_1531_2584_4.n("consoleLog", [$$_$$_$$_unrestored_shared_1531_2584_4.o(u), $$_$$_$$_unrestored_shared_1531_2584_4.o(r.id)].concat(o))
   })
   e.insertBlockSnippetGenerator("new_console_log", function (t, n) {
-    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, s = m.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
+    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, s = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
       var u = e.valueToCode(t, n, "VALUE".concat(l), e.ORDER_FUNCTION_CALL)
       if (u) {
         i.push(u)
       }
     }
-    var d = "consoleLog"
+    var /* [auto-meaningful-name] */ConsoleLog = "consoleLog"
     if (o === E.ERROR) {
-      d = "consoleError"
+      ConsoleLog = "consoleError"
     } else {
       if (o === E.WARNING) {
-        d = "consoleWarning"
+        ConsoleLog = "consoleWarning"
       }
     }
     var p = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-    return _.n(d, [_.o(p), _.o(r.id)].concat(i))
+    return $$_$$_$$_unrestored_shared_1531_2584_4.n(ConsoleLog, [$$_$$_$$_unrestored_shared_1531_2584_4.o(p), $$_$$_$$_unrestored_shared_1531_2584_4.o(r.id)].concat(i))
   })
   e.insertBlockSnippetGenerator("console_error", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, a = m.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], r$mutation = r.mutation, a = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
       var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
         o.push(l)
       }
     }
     var u = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-    return _.n("consoleError", [_.o(u), _.o(r.id)].concat(o))
+    return $$_$$_$$_unrestored_shared_1531_2584_4.n("consoleError", [$$_$$_$$_unrestored_shared_1531_2584_4.o(u), $$_$$_$$_unrestored_shared_1531_2584_4.o(r.id)].concat(o))
   })
   e.insertBlockSnippetGenerator("controls_for", function (t, n) {
     var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL)
@@ -803,7 +803,7 @@ function A(e) {
     var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     var s = e.statementToCode(t, n, "DO")
-    return s ? _.i("asyncScheduler.loopStep", s, [r, o, i], [a]) : ""
+    return s ? $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.loopStep", s, [r, o, i], [a]) : ""
   })
   e.insertBlockSnippetGenerator("controls_for_closed_range", function (t, n) {
     var r = e.valueToCode(t, n, "FROM", e.ORDER_FUNCTION_CALL)
@@ -811,21 +811,21 @@ function A(e) {
     var i = e.valueToCode(t, n, "BY", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     var s = e.statementToCode(t, n, "DO")
-    return s ? _.i("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : ""
+    return s ? $$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.loopStepClosedRange", s, [r, o, i], [a]) : ""
   })
   e.insertBlockSnippetGenerator("controls_for_value", function () {
-    return "".concat(_.a, "value")
+    return "".concat($$_$$_$$_unrestored_shared_1531_2584_4.a, "value")
   })
 }
 function j(e) {
-  var t = "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>"
+  var /* [auto-meaningful-name] */ShadowType_Text_FieldName_TEXT__field_shadow = "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>"
   e.extensions.register_mutator("CONSOLE_MUTATOR", {
     updateShape_: function () {
       e.events.disable()
       for (var n = 0; n < this.itemCount_; n++) {
         var r = "VALUE".concat(n)
         if (!this.get_input(r)) {
-          this.append_shadow_input(r, t)
+          this.append_shadow_input(r, ShadowType_Text_FieldName_TEXT__field_shadow)
         }
       }
       if (0 === this.itemCount_) {
@@ -833,14 +833,14 @@ function j(e) {
           this.remove_input("MUTATE_REMOVE_BUTTON")
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.p(), "MUTATE_ADD_BUTTON")
         }
       } else {
         if (!this.get_input("MUTATE_REMOVE_BUTTON")) {
-          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
+          this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.q(undefined), "MUTATE_REMOVE_BUTTON")
         }
         if (!this.get_input("MUTATE_ADD_BUTTON")) {
-          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+          this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.p(), "MUTATE_ADD_BUTTON")
         }
       }
       e.events.enable()
@@ -848,19 +848,19 @@ function j(e) {
     addMutation: function (e) {
       var n = this
       var r = "VALUE".concat(this.itemCount_)
-      _.b.call(this, r, function () {
+      $$_$$_$$_unrestored_shared_1531_2584_4.b.call(this, r, function () {
         if (!n.get_input("MUTATE_REMOVE_BUTTON")) {
-          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
+          n.append_dummy_input("MUTATE_REMOVE_BUTTON", "MUTATE_ADD_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.q(undefined), "MUTATE_REMOVE_BUTTON")
         }
         var e = n.append_value_input(r, "MUTATE_REMOVE_BUTTON")
         n.itemCount_++
         return e
-      }, t, e)
+      }, ShadowType_Text_FieldName_TEXT__field_shadow, e)
     },
     removeMutation: function () {
       var e = this
       var t = "VALUE".concat(this.itemCount_ - 1)
-      _.t.call(this, t, "TEXT", function () {
+      $$_$$_$$_unrestored_shared_1531_2584_4.t.call(this, t, "TEXT", function () {
         e.remove_input(t)
         if (1 === e.itemCount_) {
           e.remove_input("MUTATE_REMOVE_BUTTON")
@@ -889,7 +889,7 @@ function N(e, t) {
       name: "VAR",
       custom: true,
       advancedOptions: function () {
-        return O.c().getPrimitiveVariableList(this)
+        return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getPrimitiveVariableList(this)
       }
     }],
     output: true,
@@ -904,7 +904,7 @@ function N(e, t) {
       name: "VAR",
       custom: true,
       advancedOptions: function () {
-        return O.c().getPrimitiveVariableList(this)
+        return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getPrimitiveVariableList(this)
       }
     }, {
       type: "input_value",
@@ -924,7 +924,7 @@ function N(e, t) {
       name: "VAR",
       custom: true,
       advancedOptions: function () {
-        return O.c().getPrimitiveVariableList(this)
+        return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getPrimitiveVariableList(this)
       }
     }, {
       type: "field_coco_dropdown",
@@ -954,13 +954,13 @@ function k(e) {
   e.insertBlockSnippetGenerator("variables_get", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "VAR")
-    return o !== g.h && o ? _.s("getVariableValue", [_.o(o)]) : ""
+    return o !== $$_$$_$$_unrestored_shared_1531_2584_9.h && o ? $$_$$_$$_unrestored_shared_1531_2584_4.s("getVariableValue", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o)]) : ""
   })
   e.insertBlockSnippetGenerator("variables_set", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_ASSIGNMENT) || "0"
     var i = e.getFieldValue(r, "VAR") || ""
-    return i !== g.h && i ? _.n("setVariableValue", [_.o(i), o]) : ""
+    return i !== $$_$$_$$_unrestored_shared_1531_2584_9.h && i ? $$_$$_$$_unrestored_shared_1531_2584_4.n("setVariableValue", [$$_$$_$$_unrestored_shared_1531_2584_4.o(i), o]) : ""
   })
   e.insertBlockSnippetGenerator("variables_change", function (t, n) {
     var r = t.blocks[n]
@@ -971,7 +971,7 @@ function k(e) {
     if (!isNaN(s)) {
       a = s > 0 ? a : "(".concat(a, ")")
     }
-    return "increase" === o ? _.n("increaseVariable", [_.o(i), a]) : "decrease" === o ? _.n("decreaseVariable", [_.o(i), a]) : ""
+    return "increase" === o ? $$_$$_$$_unrestored_shared_1531_2584_4.n("increaseVariable", [$$_$$_$$_unrestored_shared_1531_2584_4.o(i), a]) : "decrease" === o ? $$_$$_$$_unrestored_shared_1531_2584_4.n("decreaseVariable", [$$_$$_$$_unrestored_shared_1531_2584_4.o(i), a]) : ""
   })
 }
 !function (e) {
@@ -986,8 +986,8 @@ var L
 var P
 var B
 var F
-import G = require("../../../unrestored/shared/1531/2584/323");
-var U = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_323 = require("../../../unrestored/shared/1531/2584/323")
+var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
 function W(e, t) {
   function n(e) {
     if (!t.events.is_undoing()) {
@@ -1013,7 +1013,7 @@ function W(e, t) {
       name: "ARRAY",
       custom: true,
       advancedOptions: function () {
-        return O.c().getArrayVariableList(this)
+        return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getArrayVariableList(this)
       }
     }],
     output: "Array",
@@ -1272,10 +1272,10 @@ function V(e) {
   e.insertBlockSnippetGenerator("array_get", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "ARRAY") || ""
-    return _.s("getVariableValue", [_.o(o)])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("getVariableValue", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o)])
   })
   var t = function (t, n) {
-    var r = G.a(n)
+    var r = $$_$$_$$_unrestored_shared_1531_2584_323.a(n)
     var o = r.blockId && t.blocks[r.blockId]
     return o && e.getFieldValue(o, "ARRAY") || ""
   }
@@ -1284,7 +1284,7 @@ function V(e) {
     var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
     var a = t(n, i)
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("pushArrayItem", [i, s, _.o(a)]), o, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("pushArrayItem", [i, s, $$_$$_$$_unrestored_shared_1531_2584_4.o(a)]), o, e)
   })
   e.insertBlockSnippetGenerator("lists_insert_value", function (n, r) {
     var o = n.blocks[r]
@@ -1292,7 +1292,7 @@ function V(e) {
     var a = t(n, i)
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
     var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("insertArrayItemByIndex", [i, s, c + " - 1", _.o(a)]), o, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("insertArrayItemByIndex", [i, s, c + " - 1", $$_$$_$$_unrestored_shared_1531_2584_4.o(a)]), o, e)
   })
   e.insertBlockSnippetGenerator("array_remove_item", function (n, r) {
     var o = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
@@ -1301,9 +1301,9 @@ function V(e) {
     var s = e.getFieldValue(a, "ITEM_POS") || ""
     if ("nth" === s) {
       var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
-      return _.l(_.n("removeArrayItemByIndex", [o, c + " - 1", _.o(i)]), a, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("removeArrayItemByIndex", [o, c + " - 1", $$_$$_$$_unrestored_shared_1531_2584_4.o(i)]), a, e)
     }
-    return "lastItem" === s ? _.l(_.n("removeLastArrayItem", [o, _.o(i)]), a, e) : _.l(_.n("removeAllArrayItem", [o, _.o(i)]), a, e)
+    return "lastItem" === s ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("removeLastArrayItem", [o, $$_$$_$$_unrestored_shared_1531_2584_4.o(i)]), a, e) : $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("removeAllArrayItem", [o, $$_$$_$$_unrestored_shared_1531_2584_4.o(i)]), a, e)
   })
   e.insertBlockSnippetGenerator("lists_replace", function (n, r) {
     var o = n.blocks[r]
@@ -1313,39 +1313,39 @@ function V(e) {
     var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
     if ("nth" === s) {
       var l = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
-      return _.l(_.n("setArrayItemByIndex", [i, c, l + " - 1", _.o(a)]), o, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setArrayItemByIndex", [i, c, l + " - 1", $$_$$_$$_unrestored_shared_1531_2584_4.o(a)]), o, e)
     }
-    return _.l(_.n("setArrayLastItem", [i, c, _.o(a)]), o, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setArrayLastItem", [i, c, $$_$$_$$_unrestored_shared_1531_2584_4.o(a)]), o, e)
   })
   e.insertBlockSnippetGenerator("array_copy", function (n, r) {
     var o = n.blocks[r]
     var i = e.valueToCode(n, r, "FROM", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(n, r, "TO", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("copyArray", [i, a, _.o(t(n, a))]), o, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("copyArray", [i, a, $$_$$_$$_unrestored_shared_1531_2584_4.o(t(n, a))]), o, e)
   })
   e.insertBlockSnippetGenerator("array_get_item", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     if ("nth" === (e.getFieldValue(r, "ITEM_POS") || "")) {
       var i = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL)
-      return _.l(_.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true)
     }
-    return _.l(_.s("getArrayLastItem", [o]), r, e, false, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.s("getArrayLastItem", [o]), r, e, false, true)
   })
   e.insertBlockSnippetGenerator("array_get_length", function (t, n) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
-    return _.s("getArrayLength", [r])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("getArrayLength", [r])
   })
   e.insertBlockSnippetGenerator("lists_index_of", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.l(_.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true)
   })
   e.insertBlockSnippetGenerator("lists_is_exist", function (t, n) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.s("checkItemInArray", [r, o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("checkItemInArray", [r, o])
   })
   e.insertBlockSnippetGenerator("array_current_item", function () {
     return "arrayCurrentItem"
@@ -1354,7 +1354,7 @@ function V(e) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "ARRAY_CURRENT_ITEM", e.ORDER_FUNCTION_CALL)
     var i = e.statementToCode(t, n, "DO")
-    return i ? _.l(_.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : ""
+    return i ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : ""
   })
 }
 function z(e) {
@@ -1366,7 +1366,7 @@ function z(e) {
         if (!r) {
           var o = this.get_input_index("VALUE")
           var i = -1 === o ? o : 2
-          this.append_shadow_input("INDEX", U, i).set_check("Number")
+          this.append_shadow_input("INDEX", ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, i).set_check("Number")
           this.append_dummy_input("ITEM", i + 1).append_field(e.Msg.ARRAY_ITEM)
         }
       } else if (r) {
@@ -1376,17 +1376,17 @@ function z(e) {
     },
     addMutation: function (t) {
       var n = this
-      _.b.call(this, "INDEX", function () {
+      $$_$$_$$_unrestored_shared_1531_2584_4.b.call(this, "INDEX", function () {
         var t = n.get_input_index("VALUE")
         var r = -1 === t ? 2 : t
         var o = n.append_value_input("INDEX", r).set_check("Number")
         n.append_dummy_input("ITEM", r + 1).append_field(e.Msg.ARRAY_ITEM)
         return o
-      }, U, t)
+      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, t)
     },
     removeMutation: function () {
       var e = this
-      _.t.call(this, "INDEX", "NUM", function () {
+      $$_$$_$$_unrestored_shared_1531_2584_4.t.call(this, "INDEX", "NUM", function () {
         e.remove_input("INDEX")
         e.remove_input("ITEM")
       })
@@ -1415,7 +1415,7 @@ function Y(e, t) {
       name: "OBJECT",
       custom: true,
       advancedOptions: function () {
-        return O.c().getObjectVariableList(this)
+        return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getObjectVariableList(this)
       }
     }],
     output: "Object",
@@ -1537,7 +1537,7 @@ function K(e) {
 }
 function q(e) {
   var t = function (t, n) {
-    var r = G.a(n)
+    var r = $$_$$_$$_unrestored_shared_1531_2584_323.a(n)
     var o = r.blockId && t.blocks[r.blockId]
     var i = o && e.getFieldValue(o, "OBJECT")
     return JSON.stringify(i)
@@ -1545,7 +1545,7 @@ function q(e) {
   e.insertBlockSnippetGenerator("object_get", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OBJECT") || ""
-    return _.s("getVariableValue", [_.o(o)])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("getVariableValue", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o)])
   })
   e.insertBlockSnippetGenerator("object_create", function (t, n) {
     for (var r = 0, o = "[";;) {
@@ -1559,7 +1559,7 @@ function q(e) {
     }
     o += "]"
     var s = t.blocks[n]
-    return _.l(_.s("createTempObject", [o]), s, e, false, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.s("createTempObject", [o]), s, e, false, true)
   })
   e.insertBlockSnippetGenerator("object_set_item", function (n, r) {
     var o = n.blocks[r]
@@ -1567,37 +1567,37 @@ function q(e) {
     var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
     var c = t(n, i)
-    return _.l(_.n("setObjectItem", [c, i, a, s]), o, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setObjectItem", [c, i, a, s]), o, e)
   })
   e.insertBlockSnippetGenerator("object_delete_item", function (n, r) {
     var o = n.blocks[r]
     var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
     var s = t(n, i)
-    return _.l(_.n("deleteObjectItem", [s, i, a]), o, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("deleteObjectItem", [s, i, a]), o, e)
   })
   e.insertBlockSnippetGenerator("object_get_item", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
     var i = t.blocks[n]
-    return _.l(_.s("getObjectItem", [r, o]), i, e, false, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.s("getObjectItem", [r, o]), i, e, false, true)
   })
   e.insertBlockSnippetGenerator("object_clear", function (n, r) {
     var o = n.blocks[r]
     var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
     var a = t(n, i)
-    return _.l(_.n("clearObject", [a, i]), o, e)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("clearObject", [a, i]), o, e)
   })
   e.insertBlockSnippetGenerator("object_length", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
     var o = t.blocks[n]
-    return _.l(_.s("getObjectLength", [r]), o, e, false, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.s("getObjectLength", [r]), o, e, false, true)
   })
   e.insertBlockSnippetGenerator("object_include_key", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
     var i = t.blocks[n]
-    return _.l(_.s("checkKeyInObject", [r, o]), i, e, false, true)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.s("checkKeyInObject", [r, o]), i, e, false, true)
   })
 }
 function X(e) {
@@ -1644,10 +1644,10 @@ function X(e) {
         if (this.get_input("MUTATE_REMOVE_BUTTON")) {
           this.remove_input("MUTATE_REMOVE_BUTTON")
         }
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.p(), "MUTATE_ADD_BUTTON")
       } else {
-        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.q(undefined), "MUTATE_REMOVE_BUTTON")
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.p(), "MUTATE_ADD_BUTTON")
       }
       e.events.enable()
     },
@@ -1661,7 +1661,7 @@ function X(e) {
         var this$itemCount_ = this.itemCount_
         this.itemCount_++
         this.updateShape_()
-        var r = _.c("mutation", {
+        var r = $$_$$_$$_unrestored_shared_1531_2584_4.c("mutation", {
           block: this,
           old_value: this$itemCount_,
           new_value: this.itemCount_
@@ -1679,7 +1679,7 @@ function X(e) {
         var this$itemCount_ = this.itemCount_
         this.itemCount_--
         this.updateShape_()
-        var r = _.c("mutation", {
+        var r = $$_$$_$$_unrestored_shared_1531_2584_4.c("mutation", {
           block: this,
           old_value: this$itemCount_,
           new_value: this.itemCount_
@@ -1699,11 +1699,11 @@ function X(e) {
   })
 }
 function Q(e, t) {
-  var n = "%{BKY_BLOCK_CLOUD_ICON}"
+  var /* [auto-meaningful-name] */BKY_BLOCK_CLOUD_ICON = "%{BKY_BLOCK_CLOUD_ICON}"
   e.insertBlockProfile("app_on_mount", {
     type: "app_on_mount",
     message0: "%{BKY_APP_ON_MOUNT}",
-    args0: [_.e(n, true), {
+    args0: [$$_$$_$$_unrestored_shared_1531_2584_4.e(BKY_BLOCK_CLOUD_ICON, true), {
       type: "input_dummy",
       align: "CENTRE"
     }, {
@@ -1716,7 +1716,7 @@ function Q(e, t) {
   e.insertBlockProfile("app_on_switch_background", {
     type: "app_on_switch_background",
     message0: "%{BKY_APP_ON_SWITCH}",
-    args0: [_.e(n, true), {
+    args0: [$$_$$_$$_unrestored_shared_1531_2584_4.e(BKY_BLOCK_CLOUD_ICON, true), {
       type: "field_coco_dropdown",
       name: "APP_STATE",
       custom: true,
@@ -1741,7 +1741,7 @@ function Q(e, t) {
       name: "BROADCAST",
       custom: true,
       advancedOptions: function () {
-        return O.c().getBroadcastList(this)
+        return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getBroadcastList(this)
       }
     }],
     colour: "#ffffff",
@@ -1751,7 +1751,7 @@ function Q(e, t) {
   e.insertBlockProfile("broadcast_on_receive", {
     type: "broadcast_on_receive",
     message0: "%{BKY_BROADCAST_ON_RECEIVE}",
-    args0: [_.e(n, true), {
+    args0: [$$_$$_$$_unrestored_shared_1531_2584_4.e(BKY_BLOCK_CLOUD_ICON, true), {
       type: "input_value",
       name: "BROADCAST",
       check: ["String", "Boolean"]
@@ -1806,12 +1806,12 @@ function J(e) {
   }
   e.insertBlockSnippetGenerator("app_on_mount", function (t, n) {
     var r = e.statementToCode(t, n, "DO")
-    return r ? _.m("onAppMount", undefined, r) : ""
+    return r ? $$_$$_$$_unrestored_shared_1531_2584_4.m("onAppMount", undefined, r) : ""
   })
   e.insertBlockSnippetGenerator("app_on_switch_background", function (t, n) {
     var r = t.blocks[n]
     var o = e.statementToCode(t, n, "DO")
-    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? _.m("onAppActive", undefined, o) : _.m("onAppBackground", undefined, o) : ""
+    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? $$_$$_$$_unrestored_shared_1531_2584_4.m("onAppActive", undefined, o) : $$_$$_$$_unrestored_shared_1531_2584_4.m("onAppBackground", undefined, o) : ""
   })
   e.insertBlockSnippetGenerator("broadcast_input", function (t, n) {
     var r = t.blocks[n]
@@ -1819,13 +1819,13 @@ function J(e) {
   })
   e.insertBlockSnippetGenerator("broadcast_on_receive", function (n, r) {
     var o = e.statementToCode(n, r, "DO")
-    return o ? _.m("onCustomEvent", [t(n, r)], o) : ""
+    return o ? $$_$$_$$_unrestored_shared_1531_2584_4.m("onCustomEvent", [t(n, r)], o) : ""
   })
   e.insertBlockSnippetGenerator("broadcast_send", function (e, n) {
-    return _.n("emitCustomEvent", [t(e, n)])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.n("emitCustomEvent", [t(e, n)])
   })
   e.insertBlockSnippetGenerator("broadcast_send_and_wait", function (e, n) {
-    return _.j("emitCustomEventAndWait", [t(e, n)])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.j("emitCustomEventAndWait", [t(e, n)])
   })
 }
 function $(e) {
@@ -2193,46 +2193,46 @@ function te(e, t) {
       }
     }
   }
-  var n = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
+  var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
   e.extensions.register_mutator("TEXT_SLICE_MUTATOR", {
     updateShape_: function () {
       e.events.disable()
       if (1 === this.itemCount_) {
         this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
-        this.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
+        this.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.p(), "MUTATE_BUTTON")
       } else {
         this.append_dummy_input("CONTENT_TO").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
-        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), n)
+        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow)
         this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
-        this.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
+        this.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.q(undefined), "MUTATE_BUTTON")
       }
       e.events.enable()
     },
     addMutation: function (t) {
       var r = this
       var o = "NUM".concat(this.itemCount_)
-      _.b.call(this, o, function () {
+      $$_$$_$$_unrestored_shared_1531_2584_4.b.call(this, o, function () {
         r.append_dummy_input("CONTENT_TO", "TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
         var t = r.append_value_input(o, "TITLE_TAIL")
         r.itemCount_++
         if (r.get_input("MUTATE_BUTTON")) {
           r.remove_input("MUTATE_BUTTON")
         }
-        r.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
+        r.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.q(undefined), "MUTATE_BUTTON")
         return t
-      }, n, t)
+      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow, t)
     },
     removeMutation: function () {
       var e = this
       var t = "NUM".concat(this.itemCount_ - 1)
-      _.t.call(this, t, "NUM", function () {
+      $$_$$_$$_unrestored_shared_1531_2584_4.t.call(this, t, "NUM", function () {
         e.remove_input("CONTENT_TO")
         e.remove_input(t)
         e.itemCount_--
         if (e.get_input("MUTATE_BUTTON")) {
           e.remove_input("MUTATE_BUTTON")
         }
-        e.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
+        e.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_unrestored_shared_1531_2584_4.p(), "MUTATE_BUTTON")
       })
     },
     mutationToDom: function () {
@@ -2264,23 +2264,23 @@ function ne(e) {
     var a = r[i]
     var s = e.valueToCode(t, n, "A", a)
     var c = e.valueToCode(t, n, "B", a)
-    return _.s("mathOperation", [_.o(i), s, c])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("mathOperation", [$$_$$_$$_unrestored_shared_1531_2584_4.o(i), s, c])
   })
   e.insertBlockSnippetGenerator("math_random_integer", function (t, n) {
     var r = e.valueToCode(t, n, "INPUT_A", e.ORDER_COMMA)
     var o = e.valueToCode(t, n, "INPUT_B", e.ORDER_COMMA)
-    return _.s("getRandomInteger", [r, o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("getRandomInteger", [r, o])
   })
   e.insertBlockSnippetGenerator("math_number_property", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
     var i = e.getFieldValue(r, "PROPERTY") || ""
-    return _.s("determineNumberType", [_.o(i), o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("determineNumberType", [$$_$$_$$_unrestored_shared_1531_2584_4.o(i), o])
   })
   e.insertBlockSnippetGenerator("math_check_divisible", function (t, n) {
     var r = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
     var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
-    return _.s("checkDivisibility", [r, o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("checkDivisibility", [r, o])
   })
   e.insertBlockSnippetGenerator("logic_operation", function (t, n) {
     var r = t.blocks[n]
@@ -2288,34 +2288,34 @@ function ne(e) {
     var i = "AND" === o ? e.ORDER_LOGICAL_AND : e.ORDER_LOGICAL_OR
     var a = e.valueToCode(t, n, "A", i) || "false"
     var s = e.valueToCode(t, n, "B", i) || "false"
-    return _.s("logicOperation", [_.o(o), a, s])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("logicOperation", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o), a, s])
   })
   e.insertBlockSnippetGenerator("math_calculate_expression", function (t, n) {
     var r = e.valueToCode(t, n, "INPUT", e.ORDER_MEMBER)
-    return _.s("calculateMathExpression", [r])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("calculateMathExpression", [r])
   })
   e.insertBlockSnippetGenerator("math_complex_operation", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OP") || ""
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
-    return _.s("complexMathOperation", [_.o(o), i])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("complexMathOperation", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o), i])
   })
   e.insertBlockSnippetGenerator("math_modulo", function (t, n) {
     var r = e.valueToCode(t, n, "DIVIDEND", e.ORDER_MODULUS)
     var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
-    return _.s("remainderOperation", [r, o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("remainderOperation", [r, o])
   })
   e.insertBlockSnippetGenerator("math_trig", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OP") || ""
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
-    return _.s("mathTrig", [_.o(o), i])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("mathTrig", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o), i])
   })
   e.insertBlockSnippetGenerator("math_round", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OP") || ""
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
-    return _.s("mathRound", [_.o(o), i])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("mathRound", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o), i])
   })
   e.insertBlockSnippetGenerator("math_compare", function (t, n) {
     var r = t.blocks[n]
@@ -2323,42 +2323,42 @@ function ne(e) {
     var i = "EQ" === o || "NEQ" === o ? e.ORDER_EQUALITY : e.ORDER_RELATIONAL
     var a = e.valueToCode(t, n, "A", i)
     var s = e.valueToCode(t, n, "B", i)
-    return _.s("compareNumbers", [_.o(o), a, s])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("compareNumbers", [$$_$$_$$_unrestored_shared_1531_2584_4.o(o), a, s])
   })
   e.insertBlockSnippetGenerator("text_convert_type", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "TYPE") || ""
     var i = e.valueToCode(t, n, "ORIGINAL_VALUE", e.ORDER_FUNCTION_CALL)
-    return i ? _.s("convertValueType", [i, _.o(o)]) : ""
+    return i ? $$_$$_$$_unrestored_shared_1531_2584_4.s("convertValueType", [i, $$_$$_$$_unrestored_shared_1531_2584_4.o(o)]) : ""
   })
   e.insertBlockSnippetGenerator("text_slice", function (t, n) {
     var r = e.valueToCode(t, n, "STRING", e.ORDER_MEMBER)
     var o = e.valueToCode(t, n, "NUM0", e.ORDER_COMMA)
     var i = e.valueToCode(t, n, "NUM1", e.ORDER_COMMA)
-    return i ? _.s("extractString", [r, o, i]) : _.s("extractString", [r, o])
+    return i ? $$_$$_$$_unrestored_shared_1531_2584_4.s("extractString", [r, o, i]) : $$_$$_$$_unrestored_shared_1531_2584_4.s("extractString", [r, o])
   })
   e.insertBlockSnippetGenerator("text_join", function (t, n) {
     for (var object$keysT$connectionsN$length = Object.keys(t.connections[n]).length, o = new Array(object$keysT$connectionsN$length), i = 0; i < object$keysT$connectionsN$length; i++) {
       o[i] = e.valueToCode(t, n, "ADD".concat(i), e.ORDER_COMMA) || "''"
     }
-    return _.s("concatStrings", o)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("concatStrings", o)
   })
   e.insertBlockSnippetGenerator("text_shadow", function (t, n) {
     return e.valueToCode(t, n, "VALUE", e.ORDER_NONE)
   })
   e.insertBlockSnippetGenerator("text_get_length", function (t, n) {
     var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.s("getStringLength", [r])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("getStringLength", [r])
   })
   e.insertBlockSnippetGenerator("text_check_contain", function (t, n) {
     var r = e.valueToCode(t, n, "TEXT1", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "TEXT2", e.ORDER_COMMA)
-    return _.s("checkStringContain", [r, o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("checkStringContain", [r, o])
   })
   e.insertBlockSnippetGenerator("text_split_text", function (t, n) {
     var r = e.valueToCode(t, n, "STR_TO_SPLIT", e.ORDER_FUNCTION_CALL) || "''"
     var o = e.valueToCode(t, n, "SPLIT_STR", e.ORDER_COMMA)
-    return _.s("splitString", [r, o])
+    return $$_$$_$$_unrestored_shared_1531_2584_4.s("splitString", [r, o])
   })
   e.insertBlockSnippetGenerator("text_multiline", function (t, n) {
     var r = t.blocks[n]
@@ -2420,7 +2420,7 @@ function ne(e) {
   e.GREATER_THAN = "GT"
   e.GREATER_THAN_OR_EQUAL = "GTE"
 })(F || (F = {}))
-import re = require("../../../unrestored/shared/1531/2584/301/173");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_1036_173 = require("../../../unrestored/shared/1531/2584/1036/173")
 function oe(e) {
   e.insertBlockProfile("procedures_2_param_block", {
     type: "procedures_2_param_block",
@@ -2436,31 +2436,31 @@ function oe(e) {
   })
 }
 function ie(e) {
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.DEF, "", true)
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true)
-  e.insertBlockXML(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true)
+  e.insertBlockXML($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.DEF, "", true)
+  e.insertBlockXML($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true)
+  e.insertBlockXML($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true)
 }
 function ae(e) {
   function t(t, n, r) {
     var o = n.blocks[r]
     var i = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var a = e.getFieldValue(o, "NAME") || ""
-    var s = _.f(a, i)
+    var s = $$_$$_$$_unrestored_shared_1531_2584_4.f(a, i)
     var c = Object.keys(o.shadows).filter(function (e) {
       return e.startsWith("ARG")
     }).map(function (t) {
       return e.valueToCode(n, r, t, e.ORDER_ATOMIC)
     })
-    return _.l("(await Coco.tryExecute(".concat(["".concat(s), JSON.stringify({
+    return $$_$$_$$_unrestored_shared_1531_2584_4.l("(await Coco.tryExecute(".concat(["".concat(s), JSON.stringify({
       functionName: s,
       screenId: i
-    })].concat(h.a(c)).join(", "), "))"), o, e, true, true)
+    })].concat($$_$$_$$_unrestored_shared_1531_2584_25_index.a(c)).join(", "), "))"), o, e, true, true)
   }
   e.insertBlockSnippetGenerator("procedures_2_param_block", function (t, n) {
     var r = t.blocks[n]
     return e.getFieldValue(r, "param") || ""
   })
-  e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
     var r = t.blocks[n]
     var o = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var i = e.getFieldValue(r, "NAME") || ""
@@ -2472,24 +2472,24 @@ function ae(e) {
     e.setDynamicValue("__DEFINING_PROCEDURE__", "true")
     var s = e.statementToCode(t, n, "STACK")
     e.deleteDynamicValue("__DEFINING_PROCEDURE__")
-    return "async function ".concat(_.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n")
+    return "async function ".concat($$_$$_$$_unrestored_shared_1531_2584_4.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n")
   })
-  e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
     var r = t.blocks[n]
-    return "return /* blockId=".concat(n, ";blockType=").concat(re.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n")
+    return "return /* blockId=".concat(n, ";blockType=").concat($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n")
   })
-  e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, function (e, n) {
-    return t(re.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n"
+  e.insertBlockSnippetGenerator($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, function (e, n) {
+    return t($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n"
   })
-  e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, function (n, r) {
-    return [t(re.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL]
+  e.insertBlockSnippetGenerator($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, function (n, r) {
+    return [t($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL]
   })
-  e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.PARAM, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.PARAM, function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "param_name")
-    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat(re.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC]
+    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC]
   })
-  e.insertBlockSnippetGenerator(re.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_unrestored_shared_1531_2584_1036_173.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK, function (t, n) {
     var r = t.blocks[n]
     return [e.getFieldValue(r, "param_name") || "", e.ORDER_ATOMIC]
   })
@@ -2554,23 +2554,23 @@ function ce(e) {
     var r = t.blocks[n]
     switch (e.getFieldValue(r, "DATE_TYPE")) {
       case "time":
-        return _.s("getCurrentFormatDateTime")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentFormatDateTime")
       case "year":
-        return _.s("getCurrentYear")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentYear")
       case "month":
-        return _.s("getCurrentMonth")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentMonth")
       case "date":
-        return _.s("getCurrentDate")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentDate")
       case "dayName":
-        return _.s("getCurrentDayName")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentDayName")
       case "day":
-        return _.s("getCurrentDay")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentDay")
       case "hour":
-        return _.s("getCurrentHour")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentHour")
       case "minute":
-        return _.s("getCurrentMinute")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentMinute")
       case "second":
-        return _.s("getCurrentSecond")
+        return $$_$$_$$_unrestored_shared_1531_2584_4.s("getCurrentSecond")
       default:
         return ""
     }
@@ -2578,20 +2578,20 @@ function ce(e) {
   e.insertBlockSnippetGenerator("date_check_date_is_equal", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
-    return r && o ? _.s("checkDateIsEqual", [r, o]) : ""
+    return r && o ? $$_$$_$$_unrestored_shared_1531_2584_4.s("checkDateIsEqual", [r, o]) : ""
   })
   e.insertBlockSnippetGenerator("date_get_date_minus_operation", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
     var i = t.blocks[n]
     var a = e.getFieldValue(i, "OPERATION_TYPE")
-    return a && r && o ? _.s("getDateOperation", [r, o, _.o(a)]) : ""
+    return a && r && o ? $$_$$_$$_unrestored_shared_1531_2584_4.s("getDateOperation", [r, o, $$_$$_$$_unrestored_shared_1531_2584_4.o(a)]) : ""
   })
 }
-import LoadCustomWidget = require("../../shared/widget/custom/load");
-import ue = require("../../../unrestored/shared/1531/2584/121/index");
-import de = require("../../../unrestored/shared/1531/2584/15");
-import pe = require("../../../unrestored/shared/1531/2584/36/85");
+import LoadCustomWidget = require("../../shared/widget/custom/load")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_121_index = require("../../../unrestored/shared/1531/2584/121/index")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_15 = require("../../../unrestored/shared/1531/2584/15")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_85 = require("../../../unrestored/shared/1531/2584/301/85")
 
 import * as CustomWidgetTypes from "../../shared/widget/custom/types"
 
@@ -2612,13 +2612,13 @@ function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.ValueType,
       shadow = `<shadow type="widget_boolean">\n      <field name="BOOL">${defaultValue ? "TRUE" : "FALSE"}</field>\n    </shadow>`
       break
     case "color":
-      shadow = `<shadow type="color_picker">\n      <field name="COLOR_PALETTE">${de.i(defaultValue) ? "#ffffff" : defaultValue}</field>\n    </shadow>`
+      shadow = `<shadow type="color_picker">\n      <field name="COLOR_PALETTE">${$$_$$_$$_unrestored_shared_1531_2584_15.i(defaultValue) ? "#ffffff" : defaultValue}</field>\n    </shadow>`
       break
     case "image":
-      shadow = `<shadow type="image_file_list_dropdown">\n        <field name="IMAGE_FILE_ID">${g.h}</field>\n      </shadow>`
+      shadow = `<shadow type="image_file_list_dropdown">\n        <field name="IMAGE_FILE_ID">${$$_$$_$$_unrestored_shared_1531_2584_9.h}</field>\n      </shadow>`
       break
     case "icon":
-      shadow = `<shadow type="icon_file_list_dropdown">\n          <field name="ICON_FILE_ID">${g.h}</field>\n        </shadow>`
+      shadow = `<shadow type="icon_file_list_dropdown">\n          <field name="ICON_FILE_ID">${$$_$$_$$_unrestored_shared_1531_2584_9.h}</field>\n        </shadow>`
       break
     case "multilineString":
       shadow = `<shadow type="text_multiline">\n        <field name="TEXT">${defaultValue}</field>\n      </shadow>`
@@ -2639,7 +2639,7 @@ function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.ValueType,
 }
 function he(e, t) {
   return t.map(function (t) {
-    var n = pe.a(e, t.label)
+    var n = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(e, t.label)
     if (undefined === n) {
       n = t.label
     }
@@ -2652,8 +2652,8 @@ function he(e, t) {
     }] : [n, String(t.value)]
   })
 }
-import me = require("../../../unrestored/shared/1531/2584/301/541");
-import ge = require("../../../unrestored/shared/1531/2584/301/652");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_541 = require("../../../unrestored/shared/1531/2584/301/541")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_652 = require("../../../unrestored/shared/1531/2584/301/652")
 function _e(e, t) {
   !function (e, t) {
     var n = {
@@ -2676,7 +2676,7 @@ function _e(e, t) {
         var n$tooltip = n.tooltip
         var n$blockOptions = n.blockOptions
         var n$key = n.key
-        var l = pe.a(this.widgetType, n$label)
+        var l = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, n$label)
         if (this.isAnyWidget) {
           var u
           var d = "任意" + LoadCustomWidget.getWidgetTitle(this.widgetType)
@@ -2685,12 +2685,12 @@ function _e(e, t) {
           }
         } else {
           var p
-          var f = new ue.a({
+          var f = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(e.widgetType)
+              return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getWidgetListByType(e.widgetType)
             }
           })
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
@@ -2698,7 +2698,7 @@ function _e(e, t) {
           }
         }
         if (n$tooltip) {
-          var h = pe.a(this.widgetType, n$tooltip)
+          var h = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, n$tooltip)
           this.set_tooltip(h)
         }
         if (null === n$blockOptions || undefined === n$blockOptions ? undefined : n$blockOptions.icon) {
@@ -2716,7 +2716,7 @@ function _e(e, t) {
             var t$key = t.key
             var t$dropdown = t.dropdown
             var o = "PARAM_".concat(t$key)
-            var i = new ue.a({
+            var i = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: o,
               custom: true,
@@ -2732,9 +2732,9 @@ function _e(e, t) {
           var t$label = t.label
           var t$dropdown = t.dropdown
           var i = "PARAM_".concat(t$key)
-          var a = pe.a(e.widgetType, t$label)
+          var a = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(e.widgetType, t$label)
           if (t$dropdown) {
-            var s = new ue.a({
+            var s = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: i,
               custom: true,
@@ -2818,7 +2818,7 @@ function _e(e, t) {
     t.define_blocks_with_json_array([{
       type: "widget_event",
       message0: "%{BKY_WIDGET_EVENT_MSG}",
-      args0: [_.e("%{BKY_BLOCK_TAB_ICON}", true), {
+      args0: [$$_$$_$$_unrestored_shared_1531_2584_4.e("%{BKY_BLOCK_TAB_ICON}", true), {
         type: "input_dummy",
         name: "WIDGET_ID_CONTAINER"
       }, {
@@ -2867,7 +2867,7 @@ function _e(e, t) {
         var r$tooltip = r.tooltip
         var r$blockOptions = r.blockOptions
         var u = undefined === r$blockOptions ? {} : r$blockOptions
-        var d = pe.a(this.widgetType, r$label)
+        var d = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, r$label)
         this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
         if (this.isAnyWidget) {
           var p
@@ -2878,12 +2878,12 @@ function _e(e, t) {
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
           var h
-          var m = new ue.a({
+          var m = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(n.widgetType)
+              return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getWidgetListByType(n.widgetType)
             }
           })
           if (!(null === (h = this.get_input("WIDGET_ID_CONTAINER")) || undefined === h)) {
@@ -2895,13 +2895,13 @@ function _e(e, t) {
           u$getter$keys.forEach(function (e) {
             var t = LoadCustomWidget.l(n.widgetType, e)
             if (t) {
-              var r = pe.a(n.widgetType, t.label)
+              var r = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(n.widgetType, t.label)
               g.push([r, e])
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
             }
           })
-          this.append_dummy_input().append_field(new ue.a({
+          this.append_dummy_input().append_field(new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
@@ -2915,7 +2915,7 @@ function _e(e, t) {
         }
         switch (r.key) {
           case "__position":
-            this.append_dummy_input().append_field(new ue.a({
+            this.append_dummy_input().append_field(new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -2941,7 +2941,7 @@ function _e(e, t) {
         var _ = LoadCustomWidget.g(r$valueType)
         this.set_output(true, _)
         if (r$tooltip) {
-          var v = pe.a(this.widgetType, r$tooltip)
+          var v = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, r$tooltip)
           this.set_tooltip(v)
         }
       },
@@ -3006,7 +3006,7 @@ function _e(e, t) {
         var r$validators = r.validators
         var r$blockOptions = r.blockOptions
         var v = undefined === r$blockOptions ? {} : r$blockOptions
-        var b = pe.a(this.widgetType, r$label)
+        var b = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, r$label)
         var y = false
         if (r$validators && "number" === r$valueType) {
           var E = r$validators
@@ -3032,12 +3032,12 @@ function _e(e, t) {
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
           var S
-          var I = new ue.a({
+          var I = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(n.widgetType)
+              return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getWidgetListByType(n.widgetType)
             }
           })
           if (!(null === (S = this.get_input("WIDGET_ID_CONTAINER")) || undefined === S)) {
@@ -3058,14 +3058,14 @@ function _e(e, t) {
                   o = 0
                 }
               }
-              var a = pe.a(n.widgetType, r.label)
+              var a = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(n.widgetType, r.label)
               A.push([a, e])
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
             }
           })
           this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
-          this.append_dummy_input().append_field(new ue.a({
+          this.append_dummy_input().append_field(new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
@@ -3075,13 +3075,13 @@ function _e(e, t) {
             optOnchange: function (e) {
               var t = LoadCustomWidget.l(n.widgetType, e)
               if (t) {
-                var r
+                var /* [auto-meaningful-name] */COLOR
                 if ("color" === t.valueType) {
-                  r = "COLOR"
+                  COLOR = "COLOR"
                 }
                 var o
                 var i
-                var a = n.get_shadow_field("VALUE", r)
+                var a = n.get_shadow_field("VALUE", COLOR)
                 if (a) {
                   a.set_value(String(t.defaultValue))
                   if ("number" === t.valueType) {
@@ -3104,7 +3104,7 @@ function _e(e, t) {
         switch (r.key) {
           case "__position":
             this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
-            this.append_dummy_input().append_field(new ue.a({
+            this.append_dummy_input().append_field(new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -3118,7 +3118,7 @@ function _e(e, t) {
             this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY")
             break
           case "__visible":
-            this.append_dummy_input("", 0).append_field(new ue.a({
+            this.append_dummy_input("", 0).append_field(new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -3133,7 +3133,7 @@ function _e(e, t) {
             })
             break
           case "__disabled":
-            this.append_dummy_input("", 0).append_field(new ue.a({
+            this.append_dummy_input("", 0).append_field(new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -3155,7 +3155,7 @@ function _e(e, t) {
         var N = LoadCustomWidget.getCheckType(r$valueType, r$checkType)
         if ("__visible" !== r.key && "__disabled" !== r.key) {
           if (r$dropdown) {
-            var R = new ue.a({
+            var R = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -3166,7 +3166,7 @@ function _e(e, t) {
           } else {
             var k = ""
             if ("string" === r$valueType) {
-              k = pe.a(this.widgetType, String(r$defaultValue))
+              k = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, String(r$defaultValue))
             }
             var x = getCustomWidgetBlockParamShadow(r$valueType, k || r$defaultValue)
             this.append_shadow_input("VALUE", x).set_check(N)
@@ -3177,14 +3177,14 @@ function _e(e, t) {
           D.set_constraints(o, i, y ? 1 : undefined)
           if ("__opacity" === r.key) {
             D.set_controller_option({
-              type: m.I.ControllerType.SLIDER,
+              type: $$_$$_$$_unrestored_shared_1531_2584_17_index.I.ControllerType.SLIDER,
               left_text: t.Msg["opacity.invisible"],
               right_text: t.Msg["opacity.visible"]
             })
           }
         }
         if (r$tooltip) {
-          var M = pe.a(this.widgetType, r$tooltip)
+          var M = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, r$tooltip)
           this.set_tooltip(M)
         }
       },
@@ -3244,7 +3244,7 @@ function _e(e, t) {
           }
           this.append_shadow_input("WIDGET_ID", `<empty type="widget_any_id"></empty>`)
           if ("__setVisible" === n.key) {
-            var i = new ue.a({
+            var i = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: "DISPLAY",
               custom: true,
@@ -3255,7 +3255,7 @@ function _e(e, t) {
             this.append_dummy_input().append_field(i, "DISPLAY")
           }
           if ("__setDisabled" === n.key) {
-            var a = new ue.a({
+            var a = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: "DISABLED",
               custom: true,
@@ -3266,12 +3266,12 @@ function _e(e, t) {
             this.append_dummy_input().append_field(a, "DISABLED")
           }
         } else {
-          var s = new ue.a({
+          var s = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return O.c().getWidgetListByType(e.widgetType)
+              return $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getWidgetListByType(e.widgetType)
             }
           })
           if (!(null === r || undefined === r)) {
@@ -3288,8 +3288,8 @@ function _e(e, t) {
         if (false !== f.callMethodLabel) {
           var /* [auto-meaningful-name] */f$callMethodLabel
           var _ = (null === (f$callMethodLabel = f.callMethodLabel) || undefined === f$callMethodLabel ? undefined : f$callMethodLabel.toString()) || ""
-          var v = pe.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG
-          var b = new ge.FieldLabel({
+          var v = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG
+          var b = new $$_$$_$$_unrestored_shared_1531_2584_301_652.FieldLabel({
             text: v
           })
           if (!(null === r || undefined === r)) {
@@ -3297,7 +3297,7 @@ function _e(e, t) {
           }
         }
         if (f.icon && (t.Msg[f.icon] ? c = t.Msg[f.icon] : f.icon.startsWith("https://") && (c = f.icon), c)) {
-          var y = new me.FieldImage({
+          var y = new $$_$$_$$_unrestored_shared_1531_2584_301_541.FieldImage({
             src: c
           })
           this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(y)
@@ -3311,12 +3311,12 @@ function _e(e, t) {
           var E = LoadCustomWidget.g(n$valueType)
           this.set_output(true, E)
         }
-        var w = pe.a(this.widgetType, n$label)
+        var w = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, n$label)
         if (w) {
           this.append_dummy_input().append_field(w, "METHOD")
         }
         if (n$tooltip) {
-          var C = pe.a(this.widgetType, n$tooltip)
+          var C = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(this.widgetType, n$tooltip)
           this.set_tooltip(C)
         }
         if (false === f.inputsInline) {
@@ -3332,10 +3332,10 @@ function _e(e, t) {
           dropdown,
           controller
         }) => {
-          var u = pe.a(e.widgetType, label)
+          var u = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(e.widgetType, label)
           var paramKey = "PARAM_".concat(key)
           if (dropdown) {
-            var p = new ue.a({
+            var p = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
               type: "field_coco_dropdown",
               name: paramKey,
               custom: true,
@@ -3362,7 +3362,7 @@ function _e(e, t) {
               if (controller.leftText && controller.rightText) {
                 if (!(null === v || undefined === v)) {
                   v.set_controller_option({
-                    type: m.I.ControllerType.SLIDER,
+                    type: $$_$$_$$_unrestored_shared_1531_2584_17_index.I.ControllerType.SLIDER,
                     left_text: controller.leftText,
                     right_text: controller.rightText
                   })
@@ -3371,7 +3371,7 @@ function _e(e, t) {
             }
           }
           if (labelAfter) {
-            var b = pe.a(e.widgetType, labelAfter)
+            var b = $$_$$_$$_unrestored_shared_1531_2584_301_85.a(e.widgetType, labelAfter)
             e.append_dummy_input("").append_field(b, "".concat(paramKey, "_LABEL_AFTER"))
           }
         })
@@ -3416,7 +3416,7 @@ function _e(e, t) {
         var t$dropdown = t.dropdown
         if (t$dropdown) {
           this.set_shadow(true)
-          var o = new ue.a({
+          var o = new $$_$$_$$_unrestored_shared_1531_2584_121_index.a({
             type: "field_coco_dropdown",
             name: "VALUE",
             custom: true,
@@ -3491,7 +3491,7 @@ function ve(e) {
     var /* [auto-meaningful-name] */h$getter
     var o = t.blocks[n]
     var o$mutation = o.mutation
-    var a = m.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -3499,7 +3499,7 @@ function ve(e) {
       return ""
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || ""
-    u = _.o(u)
+    u = $$_$$_$$_unrestored_shared_1531_2584_4.o(u)
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
@@ -3520,29 +3520,29 @@ function ve(e) {
     }
     var v = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.s("getWidgetOpacity", [u])
+      return $$_$$_$$_unrestored_shared_1531_2584_4.s("getWidgetOpacity", [u])
     }
     if ("__visible" === s) {
-      return _.s("getWidgetVisible", [u])
+      return $$_$$_$$_unrestored_shared_1531_2584_4.s("getWidgetVisible", [u])
     }
     if ("__disabled" === s) {
-      return _.s("getWidgetDisabled", [u])
+      return $$_$$_$$_unrestored_shared_1531_2584_4.s("getWidgetDisabled", [u])
     }
     if ("__width" === s || "__height" === s) {
       var b = "__width" === s ? "getWidgetWidth" : "getWidgetHeight"
-      return _.s(b, [u])
+      return $$_$$_$$_unrestored_shared_1531_2584_4.s(b, [u])
     }
     if (v) {
       var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY"
-      return _.s(y, [u])
+      return $$_$$_$$_unrestored_shared_1531_2584_4.s(y, [u])
     }
-    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], LoadCustomWidget.q(c))
+    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? $$_$$_$$_unrestored_shared_1531_2584_4.s(h.getter.func, [u, $$_$$_$$_unrestored_shared_1531_2584_4.o(s)]) : $$_$$_$$_unrestored_shared_1531_2584_4.s("getProperty", [u, $$_$$_$$_unrestored_shared_1531_2584_4.o(s)], LoadCustomWidget.q(c))
   })
   e.insertBlockSnippetGenerator("widget_set", function (t, n) {
     var /* [auto-meaningful-name] */h$setter
     var o = t.blocks[n]
     var o$mutation = o.mutation
-    var a = m.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -3550,7 +3550,7 @@ function ve(e) {
       return ""
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || ""
-    u = _.o(u)
+    u = $$_$$_$$_unrestored_shared_1531_2584_4.o(u)
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
@@ -3571,35 +3571,35 @@ function ve(e) {
     }
     var v = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     if (d.dropdown) {
-      v = _.o(e.getFieldValue(o, "VALUE") || "")
+      v = $$_$$_$$_unrestored_shared_1531_2584_4.o(e.getFieldValue(o, "VALUE") || "")
     }
     var b = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.l(_.n("setWidgetOpacity", [u, v]), o, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setWidgetOpacity", [u, v]), o, e)
     }
     if ("__visible" === s) {
       var y = "show" === e.getFieldValue(o, "VALUE")
-      return _.l(_.n("setWidgetVisible", [u, y]), o, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setWidgetVisible", [u, y]), o, e)
     }
     if ("__disabled" === s) {
       var E = "disabled" === e.getFieldValue(o, "VALUE")
-      return _.l(_.n("setWidgetAttribute", [u, _.o("disabled"), E]), o, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setWidgetAttribute", [u, $$_$$_$$_unrestored_shared_1531_2584_4.o("disabled"), E]), o, e)
     }
     if ("__width" === s || "__height" === s) {
       var O = "__width" === s ? "setWidgetWidth" : "setWidgetHeight"
-      return _.l(_.n(O, [u, v]), o, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n(O, [u, v]), o, e)
     }
     if (b) {
       var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY"
-      return _.l(_.n(w, [u, v]), o, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n(w, [u, v]), o, e)
     }
-    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e)
+    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n(h.setter.func, [u, v]), o, e) : $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setProperty", [u, $$_$$_$$_unrestored_shared_1531_2584_4.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e)
   })
   e.insertBlockSnippetGenerator("widget_event", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "WIDGET_ID") || ""
     var r$mutation = r.mutation
-    var a = m.Blink.xml.text_to_dom(r$mutation)
+    var a = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(r$mutation)
     var s = a.getAttribute("event")
     var c = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var l = a.getAttribute("widget_type")
@@ -3620,23 +3620,23 @@ function ve(e) {
       })
     }
     d$params.forEach(function (e) {
-      h.push("".concat(_.a).concat(e.key))
+      h.push("".concat($$_$$_$$_unrestored_shared_1531_2584_4.a).concat(e.key))
     })
     if (u) {
-      h.push("".concat(_.a).concat(LoadCustomWidget.a))
+      h.push("".concat($$_$$_$$_unrestored_shared_1531_2584_4.a).concat(LoadCustomWidget.a))
     }
     var g = e.statementToCode(t, n, "DO")
-    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, LoadCustomWidget.q(l)) : ""
+    return g ? $$_$$_$$_unrestored_shared_1531_2584_4.n("onWidgetEvent", [$$_$$_$$_unrestored_shared_1531_2584_4.o(l), $$_$$_$$_unrestored_shared_1531_2584_4.o(s), u ? $$_$$_$$_unrestored_shared_1531_2584_4.o(c) : $$_$$_$$_unrestored_shared_1531_2584_4.o(o)], g, h, LoadCustomWidget.q(l)) : ""
   })
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
     var e$blocksT$mutation = e.blocks[t].mutation
-    var r = m.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
-    return "".concat(_.a).concat(r)
+    var r = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
+    return "".concat($$_$$_$$_unrestored_shared_1531_2584_4.a).concat(r)
   })
   e.insertBlockSnippetGenerator("widget_method", function (t, n) {
     var r = t.blocks[n]
     var r$mutation = r.mutation
-    var i = m.Blink.xml.text_to_dom(r$mutation)
+    var i = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(r$mutation)
     var a = i.getAttribute("method")
     var s = i.getAttribute("widget_type")
     var c = "true" === i.getAttribute("is_any_widget")
@@ -3653,9 +3653,9 @@ function ve(e) {
       d = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
       u.push(d)
     } else {
-      u.push(_.o(d))
+      u.push($$_$$_$$_unrestored_shared_1531_2584_4.o(d))
     }
-    u.push(_.o(a))
+    u.push($$_$$_$$_unrestored_shared_1531_2584_4.o(a))
     var l$params = l.params
     var l$valueType = l.valueType
     var h = []
@@ -3670,45 +3670,45 @@ function ve(e) {
         console.error("widget_method valueToCode error", l)
       }
       if (o$dropdown) {
-        c = _.o(e.getFieldValue(r, s) || "")
+        c = $$_$$_$$_unrestored_shared_1531_2584_4.o(e.getFieldValue(r, s) || "")
       }
       u.push(c)
       h.push(c)
     })
     if ("__setVisible" === l.key) {
       var g = "show" === e.getFieldValue(r, "DISPLAY")
-      return _.l(_.n("setWidgetVisible", [d, g]), r, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setWidgetVisible", [d, g]), r, e)
     }
     if ("__setDisabled" === l.key) {
       var v = "disabled" === e.getFieldValue(r, "DISABLED")
-      return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e)
+      return $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.n("setWidgetAttribute", [d, $$_$$_$$_unrestored_shared_1531_2584_4.o("disabled"), v]), r, e)
     }
-    return l$valueType ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e)
+    return l$valueType ? $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.r("callMethod", u), r, e, true, true) : $$_$$_$$_unrestored_shared_1531_2584_4.l($$_$$_$$_unrestored_shared_1531_2584_4.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e)
   })
   e.insertBlockSnippetGenerator("widget_color", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "COLOR")
-    return _.o(o)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.o(o)
   })
   e.insertBlockSnippetGenerator("color_picker", function (t, n) {
     var r
     var o = t.blocks[n]
-    var i = m.Blink.xml.text_to_dom(o.mutation)
+    var i = $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.xml.text_to_dom(o.mutation)
     var a = function (r) {
       return e.valueToCode(t, n, r, e.ORDER_COMMA)
     }
     switch (Number(i.getAttribute("format"))) {
-      case m.I.EColorFormat.ColorPalette:
-        r = _.s("getColorHex", [_.o(i.getAttribute("color") || "")])
+      case $$_$$_$$_unrestored_shared_1531_2584_17_index.I.EColorFormat.ColorPalette:
+        r = $$_$$_$$_unrestored_shared_1531_2584_4.s("getColorHex", [$$_$$_$$_unrestored_shared_1531_2584_4.o(i.getAttribute("color") || "")])
         break
-      case m.I.EColorFormat.ColorString:
-        r = _.s("getColorHex", [a("COLOR_STRING")])
+      case $$_$$_$$_unrestored_shared_1531_2584_17_index.I.EColorFormat.ColorString:
+        r = $$_$$_$$_unrestored_shared_1531_2584_4.s("getColorHex", [a("COLOR_STRING")])
         break
-      case m.I.EColorFormat.HSVA:
-        r = _.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
+      case $$_$$_$$_unrestored_shared_1531_2584_17_index.I.EColorFormat.HSVA:
+        r = $$_$$_$$_unrestored_shared_1531_2584_4.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
         break
-      case m.I.EColorFormat.RGBA:
-        r = _.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
+      case $$_$$_$$_unrestored_shared_1531_2584_17_index.I.EColorFormat.RGBA:
+        r = $$_$$_$$_unrestored_shared_1531_2584_4.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
     }
     return r || ""
   })
@@ -3719,10 +3719,10 @@ function ve(e) {
   e.insertBlockSnippetGenerator("widget_dropdown", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "VALUE")
-    return _.o(o)
+    return $$_$$_$$_unrestored_shared_1531_2584_4.o(o)
   })
   e.insertBlockSnippetGenerator("widget_any_id", function (e, t) {
-    return _.o("")
+    return $$_$$_$$_unrestored_shared_1531_2584_4.o("")
   })
 }
 var be = {
@@ -4436,24 +4436,24 @@ var be = {
     CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "清空云数据表所有数据，不可撤销。"
   }
 }
-import ye = require("../../../unrestored/shared/1531/2584/6");
-import Ee = require("../../../unrestored/shared/1531/2584/27");
-import Oe = require("../../../unrestored/shared/1531/2584/40");
-import we = require("../../../unrestored/shared/1531/2584/301/224");
-import Ce = require("../../../unrestored/shared/1531/2584/301/203");
-import Te = require("../../../unrestored/shared/1531/2584/57/index");
-import Se = require("../../../unrestored/shared/1531/2584/58/index");
-import Ie = require("../../../unrestored/shared/1531/2584/301/326");
-import Ae = require("../../../unrestored/shared/1531/2584/125/index");
-import je = require("../../../unrestored/shared/1531/2584/301/480");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_6 = require("../../../unrestored/shared/1531/2584/6")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_27 = require("../../../unrestored/shared/1531/2584/27")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_40 = require("../../../unrestored/shared/1531/2584/40")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_224 = require("../../../unrestored/shared/1531/2584/301/224")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_203 = require("../../../unrestored/shared/1531/2584/301/203")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_57_index = require("../../../unrestored/shared/1531/2584/57/index")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_58_index = require("../../../unrestored/shared/1531/2584/58/index")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_326 = require("../../../unrestored/shared/1531/2584/301/326")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_125_index = require("../../../unrestored/shared/1531/2584/125/index")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_480 = require("../../../unrestored/shared/1531/2584/301/480")
 var Ne = function (e) {
-  Te.a(n, e)
-  var t = Se.a(n)
+  $$_$$_$$_unrestored_shared_1531_2584_57_index.a(n, e)
+  var t = $$_$$_$$_unrestored_shared_1531_2584_58_index.a(n)
   function n(e) {
     var r
     var o
-    Ee.a(this, n);
-    (o = t.call(this, ye.a(ye.a({}, e), {}, {
+    $$_$$_$$_unrestored_shared_1531_2584_27.a(this, n);
+    (o = t.call(this, $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, e), {}, {
       opt_value: e.opt_value || (null === (r = e.get_options()[0]) || undefined === r ? undefined : r.value) || 0
     }, e.numberOptions))).dropdownConfig = e
     o.arrow = undefined
@@ -4463,11 +4463,11 @@ var Ne = function (e) {
     o.text_margin = 0
     return o
   }
-  Oe.a(n, [{
+  $$_$$_$$_unrestored_shared_1531_2584_40.a(n, [{
     key: "render_text_element",
     value: function () {
       if (this.text_element && this.field_group) {
-        Ae.remove_children(this.text_element)
+        $$_$$_$$_unrestored_shared_1531_2584_125_index.remove_children(this.text_element)
         this.text_element.appendChild(document.createTextNode(this.get_display_text()))
         var e = this.utils.get_cached_width(this.text_element)
         this.text_margin = e < this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD ? (this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD - e) / 2 : 0
@@ -4483,7 +4483,7 @@ var Ne = function (e) {
       var e = this
       if (this.field_group && this.source_block) {
         if (!this.arrow) {
-          this.arrow = je.draw_arrow(this.source_block.workspace.options.dropdown.arrow_type)
+          this.arrow = $$_$$_$$_unrestored_shared_1531_2584_301_480.draw_arrow(this.source_block.workspace.options.dropdown.arrow_type)
           this.field_group.appendChild(this.arrow)
         }
         this.size_.width += this.source_block.workspace.options.dropdown.padding
@@ -4510,7 +4510,7 @@ var Ne = function (e) {
   }, {
     key: "show_editor",
     value: function () {
-      var e = we.a(Ce.a(n.prototype), "show_editor", this).call(this)
+      var e = $$_$$_$$_unrestored_shared_1531_2584_301_224.a($$_$$_$$_unrestored_shared_1531_2584_301_203.a(n.prototype), "show_editor", this).call(this)
       if (!this.source_block) {
         return e
       }
@@ -4523,7 +4523,7 @@ var Ne = function (e) {
   }, {
     key: "on_html_input_change",
     value: function () {
-      we.a(Ce.a(n.prototype), "on_html_input_change", this).call(this)
+      $$_$$_$$_unrestored_shared_1531_2584_301_224.a($$_$$_$$_unrestored_shared_1531_2584_301_203.a(n.prototype), "on_html_input_change", this).call(this)
       if (this.html_input) {
         var /* [auto-meaningful-name] */this$workspace_
         var t = (null === (this$workspace_ = this.workspace_) || undefined === this$workspace_ ? undefined : this$workspace_.get_scale()) || 1
@@ -4561,14 +4561,14 @@ var Ne = function (e) {
         r(o)
       }
       t.classList.add("blocklyDropdownMenu")
-      var i = Ae.create_dom("div", {
+      var i = $$_$$_$$_unrestored_shared_1531_2584_125_index.create_dom("div", {
         style: "position: fixed",
         class: "blocklyWidgetDiv"
       })
       i.appendChild(t)
       document.body.appendChild(i)
       i.style.display = "block"
-      var a = je.position_dropdown(t, this)
+      var a = $$_$$_$$_unrestored_shared_1531_2584_301_480.position_dropdown(t, this)
       i.style.left = "".concat(a[0], "px")
       i.style.top = "".concat(a[1], "px")
       return i
@@ -4620,9 +4620,9 @@ var Ne = function (e) {
     value: function () {
       var e = this
       return function () {
-        we.a(Ce.a(n.prototype), "widget_dispose", e).call(e)()
+        $$_$$_$$_unrestored_shared_1531_2584_301_224.a($$_$$_$$_unrestored_shared_1531_2584_301_203.a(n.prototype), "widget_dispose", e).call(e)()
         if (e.menu) {
-          Ae.remove_node(e.menu)
+          $$_$$_$$_unrestored_shared_1531_2584_125_index.remove_node(e.menu)
         }
         e.menu_items = []
         e.menu = undefined
@@ -4632,21 +4632,21 @@ var Ne = function (e) {
   }, {
     key: "dispose",
     value: function () {
-      we.a(Ce.a(n.prototype), "dispose", this).call(this)
+      $$_$$_$$_unrestored_shared_1531_2584_301_224.a($$_$$_$$_unrestored_shared_1531_2584_301_203.a(n.prototype), "dispose", this).call(this)
       if (this.menu) {
-        Ae.remove_node(this.menu)
+        $$_$$_$$_unrestored_shared_1531_2584_125_index.remove_node(this.menu)
       }
       this.widget_div.hide_if_owner(this)
     }
   }])
   return n
-}(Ie.FieldNumber)
+}($$_$$_$$_unrestored_shared_1531_2584_301_326.FieldNumber)
 Ne.field_type = "field_coco_number_dropdown"
-import Re = require("../../../unrestored/shared/1531/2584/135");
-var ie$FieldNumber$prototype$show_editor = Ie.FieldNumber.prototype.show_editor
-Ie.FieldNumber.prototype.show_editor = function () {
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_135 = require("../../../unrestored/shared/1531/2584/135")
+var ie$FieldNumber$prototype$show_editor = $$_$$_$$_unrestored_shared_1531_2584_301_326.FieldNumber.prototype.show_editor
+$$_$$_$$_unrestored_shared_1531_2584_301_326.FieldNumber.prototype.show_editor = function () {
   var e = this
-  var t = m.BU.dom.create_dom("input", "blocklyHtmlInput")
+  var t = $$_$$_$$_unrestored_shared_1531_2584_17_index.BU.dom.create_dom("input", "blocklyHtmlInput")
   if (!this.source_block) {
     return t
   }
@@ -4663,8 +4663,8 @@ Ie.FieldNumber.prototype.show_editor = function () {
   var d = ""
   if ("audio_set_volume_or_rate" === r.type) {
     var p = r.get_field_value("OP")
-    c = "SOUND_VOLUME" === p ? Re.g : Re.e
-    l = "SOUND_VOLUME" === p ? Re.f : Re.d
+    c = "SOUND_VOLUME" === p ? $$_$$_$$_unrestored_shared_1531_2584_135.g : $$_$$_$$_unrestored_shared_1531_2584_135.e
+    l = "SOUND_VOLUME" === p ? $$_$$_$$_unrestored_shared_1531_2584_135.f : $$_$$_$$_unrestored_shared_1531_2584_135.d
     u = "SOUND_VOLUME" === p ? "小" : "慢"
     d = "SOUND_VOLUME" === p ? "大" : "快"
     this.set_constraints(c, l, 1)
@@ -4683,18 +4683,18 @@ Ie.FieldNumber.prototype.show_editor = function () {
       },
       type: "SHOW_BLOCKS_SLIDER"
     }
-    O.c().dispatchAction(f)
+    $$_$$_$$_unrestored_shared_1531_2584_46_index.c().dispatchAction(f)
   }
   return t
 }
-var ie$FieldNumber$prototype$set_value = Ie.FieldNumber.prototype.set_value
-Ie.FieldNumber.prototype.set_value = function (e) {
+var ie$FieldNumber$prototype$set_value = $$_$$_$$_unrestored_shared_1531_2584_301_326.FieldNumber.prototype.set_value
+$$_$$_$$_unrestored_shared_1531_2584_301_326.FieldNumber.prototype.set_value = function (e) {
   ie$FieldNumber$prototype$set_value.call(this, e)
-  if (O.c().getSliderVisible()) {
+  if ($$_$$_$$_unrestored_shared_1531_2584_46_index.c().getSliderVisible()) {
     if (!e || isNaN(Number(e))) {
       return
     }
-    O.c().dispatchAction({
+    $$_$$_$$_unrestored_shared_1531_2584_46_index.c().dispatchAction({
       payload: {
         value: e
       },
@@ -4702,43 +4702,43 @@ Ie.FieldNumber.prototype.set_value = function (e) {
     })
   }
 }
-import De = require("../../../unrestored/shared/1531/2584/301/374");
-import Me = require("../../../unrestored/shared/1531/2584/301/500");
-import Le = require("../../shared/events/actions");
-import Pe = require("../../shared/events/messages-wrapper");
-import Be = require("../../../unrestored/shared/1531/2584/28/index");
-var de$FieldTextInput$prototype$show_editor = De.FieldTextInput.prototype.show_editor
-De.FieldTextInput.prototype.show_editor = function () {
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_374 = require("../../../unrestored/shared/1531/2584/301/374")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_500 = require("../../../unrestored/shared/1531/2584/301/500")
+import /* [auto-meaningful-name] */$$_$$_shared_events_actions = require("../../shared/events/actions")
+import /* [auto-meaningful-name] */$$_$$_shared_events_messagesWrapper = require("../../shared/events/messages-wrapper")
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_28_index = require("../../../unrestored/shared/1531/2584/28/index")
+var de$FieldTextInput$prototype$show_editor = $$_$$_$$_unrestored_shared_1531_2584_301_374.FieldTextInput.prototype.show_editor
+$$_$$_$$_unrestored_shared_1531_2584_301_374.FieldTextInput.prototype.show_editor = function () {
   var /* [auto-meaningful-name] */this$source_block
   var t = this
   var n = de$FieldTextInput$prototype$show_editor.call(this)
   if ("text_rich_text" === (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.type)) {
-    Le.a(Pe.Bh({
+    $$_$$_shared_events_actions.a($$_$$_shared_events_messagesWrapper.Bh({
       content: this.get_value(),
       onConfirm: function (e) {
-        t.set_value(Be.i(e))
+        t.set_value($$_$$_$$_unrestored_shared_1531_2584_28_index.i(e))
       }
     }))
-    m.Blink.widget_div.hide()
+    $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.widget_div.hide()
   }
   return n
 }
-De.FieldTextInput.prototype.get_display_text = function () {
+$$_$$_$$_unrestored_shared_1531_2584_301_374.FieldTextInput.prototype.get_display_text = function () {
   var /* [auto-meaningful-name] */this$source_block
   if ("text_rich_text" === (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.type)) {
     var t = this.get_value()
     var n = document.createElement("div")
     n.innerHTML = t
     var n$innerText = n.innerText
-    return Be.i(n$innerText)
+    return $$_$$_$$_unrestored_shared_1531_2584_28_index.i(n$innerText)
   }
-  return Me.Field.prototype.get_display_text.call(this)
+  return $$_$$_$$_unrestored_shared_1531_2584_301_500.Field.prototype.get_display_text.call(this)
 }
-import Ge = require("../../../unrestored/shared/1531/2584/301/726");
-Ge.FieldColour.prototype.show_editor = function () {
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_301_726 = require("../../../unrestored/shared/1531/2584/301/726")
+$$_$$_$$_unrestored_shared_1531_2584_301_726.FieldColour.prototype.show_editor = function () {
   var /* [auto-meaningful-name] */this$source_block
   var t = this
-  m.Blink.widget_div.hide()
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.widget_div.hide()
   this.widget_div.show(this, this.widget_dispose.bind(this))
   var n = this.get_absolute_xy()
   var r = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.workspace.get_scale()) || 1
@@ -4755,7 +4755,7 @@ Ge.FieldColour.prototype.show_editor = function () {
   }
   var l = n[1] + s
   var u = n[0] + c
-  var d = Pe.hj({
+  var d = $$_$$_shared_events_messagesWrapper.hj({
     value: o,
     selectValue: function (e) {
       var /* [auto-meaningful-name] */t$border_rect
@@ -4764,23 +4764,23 @@ Ge.FieldColour.prototype.show_editor = function () {
       }
     },
     setValue: function (e) {
-      t.set_value(de.nb(e))
+      t.set_value($$_$$_$$_unrestored_shared_1531_2584_15.nb(e))
     },
     top: l,
     left: u
   })
-  O.c().dispatchAction(d)
+  $$_$$_$$_unrestored_shared_1531_2584_46_index.c().dispatchAction(d)
 }
 var Ue
-import We = require("../../../unrestored/shared/1531/2584/21/index");
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_21_index = require("../../../unrestored/shared/1531/2584/21/index")
 function He() {
   var e = this
   this.set_on_block_change(function (t) {
-    if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
+    if (!$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.events.is_undoing() && t.type === $$_$$_$$_unrestored_shared_1531_2584_17_index.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS")
       if (n) {
         var r
-        var o = O.c().getLocalDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n)
+        var o = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getLocalDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n)
         n.set_value(o[0].value)
       }
     }
@@ -4789,11 +4789,11 @@ function He() {
 function Ve() {
   var e = this
   this.set_on_block_change(function (t) {
-    if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
+    if (!$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.events.is_undoing() && t.type === $$_$$_$$_unrestored_shared_1531_2584_17_index.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("DOC_KEYS_WRAPPER", "DOC_KEYS")
       if (n) {
         var r
-        var o = O.c().getCloudDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n)
+        var o = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getCloudDocumentFieldList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString(), n)
         n.set_value(o[0].value)
       }
     }
@@ -4802,17 +4802,17 @@ function Ve() {
 function ze() {
   var e = this
   this.set_on_block_change(function (t) {
-    if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
+    if (!$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.events.is_undoing() && t.type === $$_$$_$$_unrestored_shared_1531_2584_17_index.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("INPUT_COLUMN", "COLUMNS")
       var r = e.get_shadow_field("UPDATE_COLUMN_VALUE", "COLUMNS")
       if (n) {
         var o
-        var i = O.c().getCloudDBColumnList(null === (o = t.get_new_value()) || undefined === o ? undefined : o.toString(), n)
+        var i = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getCloudDBColumnList(null === (o = t.get_new_value()) || undefined === o ? undefined : o.toString(), n)
         n.set_value(i[0].value)
       }
       if (r) {
         var a
-        var s = O.c().getCloudDBColumnList(null === (a = t.get_new_value()) || undefined === a ? undefined : a.toString(), r)
+        var s = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getCloudDBColumnList(null === (a = t.get_new_value()) || undefined === a ? undefined : a.toString(), r)
         r.set_value(s[0].value)
       }
     }
@@ -4821,11 +4821,11 @@ function ze() {
 function Ye() {
   var e = this
   this.set_on_block_change(function (t) {
-    if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
+    if (!$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.events.is_undoing() && t.type === $$_$$_$$_unrestored_shared_1531_2584_17_index.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("COLUMN_WRAPPER", "COLUMN")
       if (n) {
         var r
-        var o = O.c().getTableDataColumnList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString())
+        var o = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getTableDataColumnList(null === (r = t.get_new_value()) || undefined === r ? undefined : r.toString())
         n.set_value(o[0].value)
       }
     }
@@ -4834,10 +4834,10 @@ function Ye() {
 function Ke() {
   var e = this
   this.set_on_block_change(function (t) {
-    if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
-      var n = We.getActorActionInputField(e)
+    if (!$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.events.is_undoing() && t.type === $$_$$_$$_unrestored_shared_1531_2584_17_index.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
+      var n = $$_$$_$$_unrestored_shared_1531_2584_21_index.getActorActionInputField(e)
       if (n) {
-        var r = O.c().getActorActionList(t.get_new_value())[0].value || g.h
+        var r = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getActorActionList(t.get_new_value())[0].value || $$_$$_$$_unrestored_shared_1531_2584_9.h
         if (!(null === n || undefined === n)) {
           n.set_value(r)
         }
@@ -4848,10 +4848,10 @@ function Ke() {
 function qe() {
   var e = this
   this.set_on_block_change(function (t) {
-    if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
+    if (!$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.events.is_undoing() && t.type === $$_$$_$$_unrestored_shared_1531_2584_17_index.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("DICT_KEYS_WRAPPER", "KEYS")
       if (n) {
-        var r = O.c().getCloudDictKeyList(t.get_new_value())
+        var r = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getCloudDictKeyList(t.get_new_value())
         n.set_value(r[0].value)
       }
     }
@@ -4860,28 +4860,28 @@ function qe() {
 function Xe() {
   var e = this
   this.set_on_block_change(function (t) {
-    if (!m.Blink.events.is_undoing() && t.type === m.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
+    if (!$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.events.is_undoing() && t.type === $$_$$_$$_unrestored_shared_1531_2584_17_index.I.BlockEventType.CHANGE && "WIDGET_ID" === t.get_name()) {
       var n = e.get_shadow_field("INPUT_COLUMN", "COLUMNS")
       if (n) {
-        var r = O.c().getCloudTableColumnList(t.get_new_value())
+        var r = $$_$$_$$_unrestored_shared_1531_2584_46_index.c().getCloudTableColumnList(t.get_new_value())
         n.set_value(r[0].value)
       }
     }
   })
 }
 function Qe() {
-  m.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_DOC, He)
-  m.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC, Ve)
-  m.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB, ze)
-  m.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA, Ye)
-  m.Blink.extensions.register(Ue.UPDATE_ACTION_AFTER_SELECT_ACTOR, Ke)
-  m.Blink.extensions.register(Ue.UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT, qe)
-  m.Blink.extensions.register(Ue.UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE, Xe)
-  m.Blink.registry.field.register(ue.a.field_type, ue.a)
-  m.Blink.registry.field.register(Ne.field_type, Ne)
-  O.e.apply(undefined, [m.Blink, ue.a, s, c, o, i, u, r, a, d, l, p, f].concat(h.a(g.M())))
-  var e = O.a()
-  m.Blink.define_blocks_with_json_array(e)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_DOC, He)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.extensions.register(Ue.UPDATE_KEY_AFTER_SELECTING_CLOUD_DOC, Ve)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_CLOUD_DB, ze)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.extensions.register(Ue.UPDATE_COLUMN_AFTER_SELECT_TABLE_DATA, Ye)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.extensions.register(Ue.UPDATE_ACTION_AFTER_SELECT_ACTOR, Ke)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.extensions.register(Ue.UPDATE_KEYS_AFTER_SELECT_CLOUD_DICT, qe)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.extensions.register(Ue.UPDATE_COLUMNS_AFTER_SELECT_CLOUD_TABLE, Xe)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.registry.field.register($$_$$_$$_unrestored_shared_1531_2584_121_index.a.field_type, $$_$$_$$_unrestored_shared_1531_2584_121_index.a)
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.registry.field.register(Ne.field_type, Ne)
+  $$_$$_$$_unrestored_shared_1531_2584_46_index.e.apply(undefined, [$$_$$_$$_unrestored_shared_1531_2584_17_index.Blink, $$_$$_$$_unrestored_shared_1531_2584_121_index.a, s, c, o, i, u, r, a, d, l, p, f].concat($$_$$_$$_unrestored_shared_1531_2584_25_index.a($$_$$_$$_unrestored_shared_1531_2584_9.M())))
+  var e = $$_$$_$$_unrestored_shared_1531_2584_46_index.a()
+  $$_$$_$$_unrestored_shared_1531_2584_17_index.Blink.define_blocks_with_json_array(e)
 }
 function Ze() {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "zh-CN"

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1158
@@ -41,13 +41,13 @@ function c(e) {
   }
 }
 var u = exports.Checkboard = function (e) {
-  var e$white = e.white
-  var e$grey = e.grey
-  var e$size = e.size
-  var e$renderers = e.renderers
-  var e$borderRadius = e.borderRadius
-  var e$boxShadow = e.boxShadow
-  var e$children = e.children
+  var /* [auto-meaningful-name] */e$white = e.white
+  var /* [auto-meaningful-name] */e$grey = e.grey
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$renderers = e.renderers
+  var /* [auto-meaningful-name] */e$borderRadius = e.borderRadius
+  var /* [auto-meaningful-name] */e$boxShadow = e.boxShadow
+  var /* [auto-meaningful-name] */e$children = e.children
   var h = (0, a.default)({
     default: {
       grid: {

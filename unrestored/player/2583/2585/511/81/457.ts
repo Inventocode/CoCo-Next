@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：457
@@ -9,7 +9,7 @@
 var r = require("./187")
 var i = require("./165")
 var o = require("./166")
-var a = require("./191/index")
+var a = require("./191")
 var s = require("./456")
 var u = require("./156")
 var c = require("./297")
@@ -63,7 +63,7 @@ var v = function () {
     if (undefined === a) {
       a = null
     }
-    var t$DEFAULT_BYTE_MODE_ENCODING = t.DEFAULT_BYTE_MODE_ENCODING
+    var /* [auto-meaningful-name] */t$DEFAULT_BYTE_MODE_ENCODING = t.DEFAULT_BYTE_MODE_ENCODING
     var l = null !== a && undefined !== a.get(r.a.CHARACTER_SET)
     if (l) {
       t$DEFAULT_BYTE_MODE_ENCODING = a.get(r.a.CHARACTER_SET).toString()
@@ -130,7 +130,7 @@ var v = function () {
     if (o.a.SJIS.getName() === n && this.isOnlyDoubleByteKanji(e)) {
       return u.a.KANJI
     }
-    for (var r = false, i = false, a = 0, e$length = e.length; a < e$length; ++a) {
+    for (var r = false, i = false, a = 0, /* [auto-meaningful-name] */e$length = e.length; a < e$length; ++a) {
       var c = e.charAt(a)
       if (t.isDigit(c)) {
         r = true
@@ -150,7 +150,7 @@ var v = function () {
     } catch (a) {
       return false
     }
-    var e$length = e.length
+    var /* [auto-meaningful-name] */e$length = e.length
     if (e$length % 2 !== 0) {
       return false
     }
@@ -163,11 +163,11 @@ var v = function () {
     return true
   }
   t.chooseMaskPattern = function (t, e, n, r) {
-    for (var number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER, o = -1, a = 0; a < f.a.NUM_MASK_PATTERNS; a++) {
+    for (var /* [auto-meaningful-name] */Number$MAX_SAFE_INTEGER = Number.MAX_SAFE_INTEGER, o = -1, a = 0; a < f.a.NUM_MASK_PATTERNS; a++) {
       h.a.buildMatrix(t, e, n, a, r)
       var s = this.calculateMaskPenalty(r)
-      if (s < number$MAX_SAFE_INTEGER) {
-        number$MAX_SAFE_INTEGER = s
+      if (s < Number$MAX_SAFE_INTEGER) {
+        Number$MAX_SAFE_INTEGER = s
         o = a
       }
     }
@@ -238,9 +238,9 @@ var v = function () {
   }
   t.interleaveWithECBytes = function (e, n, r, o) {
     var a
-    var /* [auto-meaningful-name] */t$return
+    var /* [auto-meaningful-name] */T$return
     var u
-    var /* [auto-meaningful-name] */s$return
+    var /* [auto-meaningful-name] */S$return
     if (e.getSizeInBytes() !== r) {
       throw new b.a("Number of bits and data bytes does not match")
     }
@@ -276,8 +276,8 @@ var v = function () {
         }
       } finally {
         try {
-          if (A && !A.done && (t$return = T.return)) {
-            t$return.call(T)
+          if (A && !A.done && (T$return = T.return)) {
+            T$return.call(T)
           }
         } finally {
           if (a) {
@@ -301,8 +301,8 @@ var v = function () {
         }
       } finally {
         try {
-          if (I && !I.done && (s$return = S.return)) {
-            s$return.call(S)
+          if (I && !I.done && (S$return = S.return)) {
+            S$return.call(S)
           }
         } finally {
           if (u) {
@@ -317,7 +317,7 @@ var v = function () {
     return O
   }
   t.generateECBytes = function (t, e) {
-    for (var t$length = t.length, r = new Int32Array(t$length + e), i = 0; i < t$length; i++) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, r = new Int32Array(t$length + e), i = 0; i < t$length; i++) {
       r[i] = 255 & t[i]
     }
     new s.a(a.a.QR_CODE_FIELD_256).encode(r, e)
@@ -363,7 +363,7 @@ var v = function () {
     return n >= 0 && n <= 9
   }
   t.appendNumericBytes = function (e, n) {
-    for (var e$length = e.length, i = 0; i < e$length;) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, i = 0; i < e$length;) {
       var o = t.getDigit(e.charAt(i))
       if (i + 2 < e$length) {
         var a = t.getDigit(e.charAt(i + 1))
@@ -381,7 +381,7 @@ var v = function () {
     }
   }
   t.appendAlphanumericBytes = function (e, n) {
-    for (var e$length = e.length, i = 0; i < e$length;) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, i = 0; i < e$length;) {
       var o = t.getAlphanumericCode(e.charCodeAt(i))
       if (-1 === o) {
         throw new b.a()
@@ -406,7 +406,7 @@ var v = function () {
     } catch (s) {
       throw new b.a(s)
     }
-    for (var i = 0, r$length = r.length; i !== r$length; i++) {
+    for (var i = 0, /* [auto-meaningful-name] */r$length = r.length; i !== r$length; i++) {
       var a = r[i]
       e.appendBits(a, 8)
     }
@@ -418,7 +418,7 @@ var v = function () {
     } catch (c) {
       throw new b.a(c)
     }
-    for (var n$length = n.length, i = 0; i < n$length; i += 2) {
+    for (var /* [auto-meaningful-name] */n$length = n.length, i = 0; i < n$length; i += 2) {
       var a = (255 & n[i]) << 8 & 4294967295 | 255 & n[i + 1]
       var s = -1
       if (a >= 33088 && a <= 40956) {

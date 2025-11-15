@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：766
@@ -7,13 +7,13 @@
 "use strict"
 
 var r
-var i = require("../../../38/607/494")
+var i = require("../494/index")
 var o = require("./2200")
 var a = Object.freeze(Object.keys(o))
 var s = i(a)
 try {
   for (s.s(); !(r = s.n()).done;) {
-    var r$value = r.value
+    var /* [auto-meaningful-name] */r$value = r.value
     Object.freeze(o[r$value])
   }
 } catch (f) {
@@ -40,7 +40,7 @@ module.exports = Object.freeze({
         var u = i(t[a])
         try {
           for (u.s(); !(s = u.n()).done;) {
-            var s$value = s.value
+            var /* [auto-meaningful-name] */s$value = s.value
             c.add(s$value)
           }
         } catch (f) {

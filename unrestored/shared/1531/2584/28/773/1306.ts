@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1306
@@ -58,7 +58,7 @@ exports.parseTag = function (e, t, n) {
   var s = false
   var c = false
   var u = 0
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   var f = ""
   var d = ""
   e: for (u = 0; u < e$length; u++) {
@@ -109,7 +109,7 @@ exports.parseAttr = function (e, t) {
   var i = 0
   var o = []
   var f = false
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   function h(e, n) {
     if (!((e = (e = r.trim(e)).replace(a, "").toLowerCase()).length < 1)) {
       var i = t(e, n || "")

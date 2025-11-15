@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：560
@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 var i = "undefined" !== typeof window ? React.useLayoutEffect : React.useEffect
 function o(e) {
   var t = React.useRef(e)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：552
@@ -6,8 +6,8 @@
 
 "use strict"
 
-import r = require("../11");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_11 = require("../11")
+import /* [auto-meaningful-name] */React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -20,7 +20,7 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import Color = require("color");
+import /* [auto-meaningful-name] */Color = require("color")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -33,7 +33,7 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import c = require("../8");
+import c = require("../8")
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -46,10 +46,10 @@ var l = function __importDefault(module) {
   })
   return defaultExport
 }(c)
-import u = require("../5");
-import d = require("../90");
-import p = require("../199");
-import f = require("./290");
+import u = require("../5")
+import /* [auto-meaningful-name] */$$_90 = require("../90")
+import /* [auto-meaningful-name] */$$_199 = require("../199")
+import /* [auto-meaningful-name] */$_290 = require("./290")
 var h = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -61,18 +61,18 @@ var h = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(f)
-import m = require("../13/index");
-import g = require("../15");
+}($_290)
+import /* [auto-meaningful-name] */$$_13_index = require("../13/index")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
 var _ = function (e) {
-  var e$text = e.text
-  var e$isSelected = e.isSelected
-  var e$state = e.state
-  var e$color = e.color
-  var e$index = e.index
-  var e$onClick = e.onClick
-  var e$sizeType = e.sizeType
-  var e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$text = e.text
+  var /* [auto-meaningful-name] */e$isSelected = e.isSelected
+  var /* [auto-meaningful-name] */e$state = e.state
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$index = e.index
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$sizeType = e.sizeType
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
   var f = React.useRef(null)
   var _ = function (e, t) {
     var n = ""
@@ -87,7 +87,7 @@ var _ = function (e) {
         }
       }
     }
-    return n ? i.a.createElement(m.j, {
+    return n ? i.a.createElement($$_13_index.j, {
       type: n,
       className: h.a.selected
     }) : null
@@ -97,25 +97,25 @@ var _ = function (e) {
       return {
         default: {
           color: "inherit",
-          borderColor: g.v(e),
+          borderColor: $$_15.v(e),
           borderWidth: 1
         },
         selected: {
           color: "inherit",
-          borderColor: g.v(e),
-          backgroundColor: g.v(e),
+          borderColor: $$_15.v(e),
+          backgroundColor: $$_15.v(e),
           borderWidth: 1
         },
         correct: {
-          borderColor: g.v(p.a),
-          color: g.v(p.a),
-          backgroundColor: g.v(p.a),
+          borderColor: $$_15.v($$_199.a),
+          color: $$_15.v($$_199.a),
+          backgroundColor: $$_15.v($$_199.a),
           borderWidth: 1
         },
         inCorrect: {
-          borderColor: g.v(p.d),
-          color: g.v(p.d),
-          backgroundColor: g.v(p.d),
+          borderColor: $$_15.v($$_199.d),
+          color: $$_15.v($$_199.d),
+          backgroundColor: $$_15.v($$_199.d),
           borderWidth: 1
         },
         disabled: {
@@ -135,15 +135,15 @@ var _ = function (e) {
     }
     return e$disabled ? e.disabled : e$isSelected ? e.selected : e.default
   }()
-  var b = p.g[e$sizeType]
+  var b = $$_199.g[e$sizeType]
   return i.a.createElement("div", {
     style: {
       color: null === v || undefined === v ? undefined : v.color,
-      backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && g.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
+      backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && $$_15.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
     },
     className: l()(h.a.defaultCheckbox, "checkbox-widget-box"),
     onClick: function (e) {
-      var f$current = f.current
+      var /* [auto-meaningful-name] */f$current = f.current
       if (f$current && e$onClick) {
         e$onClick(e$index, f$current)
       }
@@ -168,32 +168,32 @@ var _ = function (e) {
 var _a
 _a = function (e) {
   var t = e.id
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$onHeadlineClick = e.onHeadlineClick
-  var e$onOptionClick = e.onOptionClick
-  var e$size = e.size
-  var e$attributes = e.attributes
-  var e$attributes$options = e$attributes.options
-  var e$attributes$color = e$attributes.color
-  var e$attributes$headline = e$attributes.headline
-  var e$attributes$sizeType = e$attributes.sizeType
-  var e$attributes$headlineVisible = e$attributes.headlineVisible
-  var e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$onHeadlineClick = e.onHeadlineClick
+  var /* [auto-meaningful-name] */e$onOptionClick = e.onOptionClick
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$options = e$attributes.options
+  var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
+  var /* [auto-meaningful-name] */e$attributes$headline = e$attributes.headline
+  var /* [auto-meaningful-name] */e$attributes$sizeType = e$attributes.sizeType
+  var /* [auto-meaningful-name] */e$attributes$headlineVisible = e$attributes.headlineVisible
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var C = function (e, t) {
     if (e$onOptionClick) {
       e$onOptionClick(e, t)
     }
   }
-  var T = p.g[e$attributes$sizeType]
+  var T = $$_199.g[e$attributes$sizeType]
   return i.a.createElement("div", {
     id: t,
     "data-role": u.M,
     "data-widget-type": u.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
-    className: l()(h.a.checkboxWidget, d.b, r.a({}, h.a.hide, !e$visible)),
+    className: l()(h.a.checkboxWidget, $$_90.b, $$_11.a({}, h.a.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,

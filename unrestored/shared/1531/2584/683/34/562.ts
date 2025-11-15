@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：562
@@ -76,7 +76,7 @@ var s = function () {
     key: "handlers",
     value: function () {
       var e = !(arguments.length <= 0 || undefined === arguments[0]) && arguments[0]
-      var this$_head = this._head
+      var /* [auto-meaningful-name] */this$_head = this._head
       if (e) {
         return !!this$_head
       }
@@ -97,7 +97,7 @@ var s = function () {
   }, {
     key: "dispatch",
     value: function () {
-      var this$_head = this._head
+      var /* [auto-meaningful-name] */this$_head = this._head
       if (!this$_head) {
         return false
       }
@@ -159,7 +159,7 @@ var s = function () {
   }, {
     key: "detachAll",
     value: function () {
-      var this$_head = this._head
+      var /* [auto-meaningful-name] */this$_head = this._head
       if (!this$_head) {
         return this
       }

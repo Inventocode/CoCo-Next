@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：789
@@ -8,10 +8,10 @@
 
 export { g as b }
 export { g$Consumer as a }
-import r = require("./19");
-import React = require("react");
-import o = require("./29");
-import a = require("./8");
+import r = require("./19")
+import /* [auto-meaningful-name] */React = require("react")
+import o = require("./29")
+import a = require("./8")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -24,7 +24,7 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(a)
-import c = require("./2627/686/index");
+import /* [auto-meaningful-name] */$_2627_686 = require("./2627/686")
 var u = function () {
   var e = (0, React.useContext(g).getPrefixCls)("empty-img-default")
   return React.createElement("svg", {
@@ -118,18 +118,18 @@ var f = function (e, t) {
 var d = React.createElement(u, null)
 var h = React.createElement(l, null)
 var p = function (e) {
-  var e$className = e.className
-  var e$prefixCls = e.prefixCls
-  var e$image = e.image
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
+  var /* [auto-meaningful-name] */e$image = e.image
   var u = undefined === e$image ? d : e$image
-  var e$description = e.description
-  var e$children = e.children
-  var e$imageStyle = e.imageStyle
+  var /* [auto-meaningful-name] */e$description = e.description
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$imageStyle = e.imageStyle
   var A = f(e, ["className", "prefixCls", "image", "description", "children", "imageStyle"])
   var v = React.useContext(g)
-  var v$getPrefixCls = v.getPrefixCls
-  var v$direction = v.direction
-  return React.createElement(c.a, {
+  var /* [auto-meaningful-name] */v$getPrefixCls = v.getPrefixCls
+  var /* [auto-meaningful-name] */v$direction = v.direction
+  return React.createElement($_2627_686.a, {
     componentName: "Empty"
   }, function (e) {
     var a
@@ -185,5 +185,5 @@ var g = React.createContext({
   },
   renderEmpty: A
 })
-var g$Consumer = g.Consumer
+var /* [auto-meaningful-name] */g$Consumer = g.Consumer
 export default g$Consumer

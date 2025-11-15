@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2192
@@ -6,20 +6,20 @@
 
 "use strict"
 
-var r = require("../../../36/2668/220")
-var i = require("../../../36/2668/230")
-var o = require("./1328/index")
+var r = require("../220")
+var i = require("../230")
+var o = require("./1328")
 var a = require("../../../1036/1363/569")
-var o$GlobalScope = o.GlobalScope
-var o$CatchScope = o.CatchScope
-var o$WithScope = o.WithScope
-var o$ModuleScope = o.ModuleScope
-var o$ClassScope = o.ClassScope
-var o$SwitchScope = o.SwitchScope
-var o$FunctionScope = o.FunctionScope
-var o$ForScope = o.ForScope
-var o$FunctionExpressionNameScope = o.FunctionExpressionNameScope
-var o$BlockScope = o.BlockScope
+var /* [auto-meaningful-name] */o$GlobalScope = o.GlobalScope
+var /* [auto-meaningful-name] */o$CatchScope = o.CatchScope
+var /* [auto-meaningful-name] */o$WithScope = o.WithScope
+var /* [auto-meaningful-name] */o$ModuleScope = o.ModuleScope
+var /* [auto-meaningful-name] */o$ClassScope = o.ClassScope
+var /* [auto-meaningful-name] */o$SwitchScope = o.SwitchScope
+var /* [auto-meaningful-name] */o$FunctionScope = o.FunctionScope
+var /* [auto-meaningful-name] */o$ForScope = o.ForScope
+var /* [auto-meaningful-name] */o$FunctionExpressionNameScope = o.FunctionExpressionNameScope
+var /* [auto-meaningful-name] */o$BlockScope = o.BlockScope
 var g = function () {
   function e(t) {
     r(this, e)
@@ -96,7 +96,7 @@ var g = function () {
           }
         }
       } else {
-        for (var a = 0, r$length = r.length; a < r$length; ++a) {
+        for (var a = 0, /* [auto-meaningful-name] */r$length = r.length; a < r$length; ++a) {
           var c = r[a]
           if (n(c)) {
             return c
@@ -115,7 +115,7 @@ var g = function () {
     value: function (e, t) {
       var n = this.__get(e)
       if (n && n.length) {
-        var n0$upper = n[0].upper
+        var /* [auto-meaningful-name] */n0$upper = n[0].upper
         return n0$upper ? this.acquire(n0$upper.block, t) : null
       }
       return null

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2164
@@ -29,8 +29,8 @@ var a = function (e) {
     return this.text_ ? this.text_ : " "
   }
   t.prototype.render_ = function () {
-    var /* [auto-meaningful-name] */_this$border_rect2
     var /* [auto-meaningful-name] */this$border_rect
+    var /* [auto-meaningful-name] */_this$border_rect
     var n = this
     if (this.visible_ && this.text_element && this.source_block) {
       (0, o.remove_children)(this.text_element)
@@ -62,7 +62,7 @@ var a = function (e) {
       if (!this.source_block.is_shadow()) {
         this.padding_x = i >= this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD ? this.theme.renderer.TEXT_PADDING_IN_FIELD : (this.theme.renderer.TEXT_MIN_WIDTH_IN_FIELD + 2 * this.theme.renderer.TEXT_PADDING_IN_FIELD - i) / 2
       }
-      var this$padding_y = this.padding_y
+      var /* [auto-meaningful-name] */this$padding_y = this.padding_y
       Array.from(this.text_element.children).forEach(function (e) {
         e.setAttribute("x", "" + n.padding_x)
         e.setAttribute("y", "" + (this$padding_y + n.line_height / 2))
@@ -71,11 +71,11 @@ var a = function (e) {
       this$padding_y += this.padding_y
       this.size_.height = this$padding_y
       this.size_.width = i + 2 * this.padding_x
-      if (!(null === (_this$border_rect2 = this.border_rect) || undefined === _this$border_rect2)) {
-        _this$border_rect2.setAttribute("width", String(this.size_.width))
-      }
       if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
-        this$border_rect.setAttribute("height", String(this.size_.height))
+        this$border_rect.setAttribute("width", String(this.size_.width))
+      }
+      if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
+        _this$border_rect.setAttribute("height", String(this.size_.height))
       }
     } else {
       this.size_.width = 0

@@ -1,17 +1,17 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1599
  */
 
-var r = require("./1623/86")
-var o = require("./1736/167")
-var math$imul = Math.imul
+var r = require("./1698/86/index")
+var o = require("./1541/167")
+var /* [auto-meaningful-name] */Math$imul = Math.imul
 r({
   target: "Math",
   stat: true,
   forced: o(function () {
-    return -5 != math$imul(4294967295, 5) || 2 != math$imul.length
+    return -5 != Math$imul(4294967295, 5) || 2 != Math$imul.length
   })
 }, {
   imul: function (e, t) {

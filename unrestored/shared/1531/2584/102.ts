@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：102
@@ -6,123 +6,123 @@
 
 "use strict"
 
-export { r as e }
+export { SET_EDIT_COOPERATION_INVITATION_URL as e }
 export { o as p }
-export { i as g }
+export { SET_READONLY_COOPERATION_INVITATION_URL as g }
 export { a as r }
-export { s as f }
+export { SET_IS_AUTHOR as f }
 export { c as q }
-export { l as d }
+export { SET_COLL_WORK_ID as d }
 export { u as o }
-export { d as h }
+export { UPDATE_COOPERATION_USER_LIST as h }
 export { p as s }
-export { f as j }
+export { UPDATE_ONLINE_COOPERATION_USER_LIST as j }
 export { h as u }
-export { m as a }
+export { ASYNC_UPDATE_ONLINE_COOPERATION_USER_LIST as a }
 export { g as l }
-export { _ as k }
+export { UPDATE_USER_FOCUS_OT_INFO_LIST as k }
 export { v }
-export { b }
+export { ASYNC_UPDATE_USER_FOCUS_OT_INFO as b }
 export { y as m }
-export { E as i }
+export { UPDATE_ONLINE_COOPERATION_USER_COLOR_RECORD as i }
 export { O as t }
-export { w as c }
+export { INITIAL_OT_STATE as c }
 export { C as n }
-var r = "SET_EDIT_COOPERATION_INVITATION_URL"
+var /* [auto-meaningful-name] */SET_EDIT_COOPERATION_INVITATION_URL = "SET_EDIT_COOPERATION_INVITATION_URL"
 var o = function (e) {
   return {
-    type: r,
+    type: SET_EDIT_COOPERATION_INVITATION_URL,
     payload: {
       url: e
     }
   }
 }
-var i = "SET_READONLY_COOPERATION_INVITATION_URL"
+var /* [auto-meaningful-name] */SET_READONLY_COOPERATION_INVITATION_URL = "SET_READONLY_COOPERATION_INVITATION_URL"
 var a = function (e) {
   return {
-    type: i,
+    type: SET_READONLY_COOPERATION_INVITATION_URL,
     payload: {
       url: e
     }
   }
 }
-var s = "SET_IS_AUTHOR"
+var /* [auto-meaningful-name] */SET_IS_AUTHOR = "SET_IS_AUTHOR"
 var c = function (e) {
   return {
-    type: s,
+    type: SET_IS_AUTHOR,
     payload: {
       isAuthor: e
     }
   }
 }
-var l = "SET_COLL_WORK_ID"
+var /* [auto-meaningful-name] */SET_COLL_WORK_ID = "SET_COLL_WORK_ID"
 var u = function (e) {
   return {
-    type: l,
+    type: SET_COLL_WORK_ID,
     payload: {
       id: e
     }
   }
 }
-var d = "UPDATE_COOPERATION_USER_LIST"
+var /* [auto-meaningful-name] */UPDATE_COOPERATION_USER_LIST = "UPDATE_COOPERATION_USER_LIST"
 var p = function (e) {
   return {
     payload: {
       list: e
     },
-    type: d
+    type: UPDATE_COOPERATION_USER_LIST
   }
 }
-var f = "UPDATE_ONLINE_COOPERATION_USER_LIST"
+var /* [auto-meaningful-name] */UPDATE_ONLINE_COOPERATION_USER_LIST = "UPDATE_ONLINE_COOPERATION_USER_LIST"
 var h = function (e) {
   return {
     payload: {
       list: e
     },
-    type: f
+    type: UPDATE_ONLINE_COOPERATION_USER_LIST
   }
 }
-var m = "ASYNC_UPDATE_ONLINE_COOPERATION_USER_LIST"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_ONLINE_COOPERATION_USER_LIST = "ASYNC_UPDATE_ONLINE_COOPERATION_USER_LIST"
 var g = function (e) {
   return {
     payload: {
       list: e
     },
-    type: m
+    type: ASYNC_UPDATE_ONLINE_COOPERATION_USER_LIST
   }
 }
-var _ = "UPDATE_USER_FOCUS_OT_INFO_LIST"
+var /* [auto-meaningful-name] */UPDATE_USER_FOCUS_OT_INFO_LIST = "UPDATE_USER_FOCUS_OT_INFO_LIST"
 var v = function (e) {
   return {
-    type: _,
+    type: UPDATE_USER_FOCUS_OT_INFO_LIST,
     payload: {
       list: e
     }
   }
 }
-var b = "ASYNC_UPDATE_USER_FOCUS_OT_INFO"
+var /* [auto-meaningful-name] */ASYNC_UPDATE_USER_FOCUS_OT_INFO = "ASYNC_UPDATE_USER_FOCUS_OT_INFO"
 var y = function (e) {
   return {
-    type: b,
+    type: ASYNC_UPDATE_USER_FOCUS_OT_INFO,
     payload: {
       info: e
     }
   }
 }
-var E = "UPDATE_ONLINE_COOPERATION_USER_COLOR_RECORD"
+var /* [auto-meaningful-name] */UPDATE_ONLINE_COOPERATION_USER_COLOR_RECORD = "UPDATE_ONLINE_COOPERATION_USER_COLOR_RECORD"
 var O = function (e) {
   return {
-    type: E,
+    type: UPDATE_ONLINE_COOPERATION_USER_COLOR_RECORD,
     payload: {
       colors: e
     }
   }
 }
-var w = "INITIAL_OT_STATE"
+var /* [auto-meaningful-name] */INITIAL_OT_STATE = "INITIAL_OT_STATE"
 var C = function () {
   return {
-    type: w,
+    type: INITIAL_OT_STATE,
     payload: undefined
   }
 }
-export default m
+export default ASYNC_UPDATE_ONLINE_COOPERATION_USER_LIST

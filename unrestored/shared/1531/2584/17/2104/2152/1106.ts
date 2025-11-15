@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1106
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Controller = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../../4/127")
+var o = require("../../../1036/127")
 var a = require("../../../125/index")
 var s = function () {
   function e() {
@@ -29,13 +29,13 @@ var s = function () {
   e.prototype.update_value = function (e) {}
   e.prototype.position = function () {
     if (this.owner && this.container) {
-      var this$owner$source_block = this.owner.source_block
+      var /* [auto-meaningful-name] */this$owner$source_block = this.owner.source_block
       if (this$owner$source_block) {
         var t = this$owner$source_block.get_workspace().get_scale() || 1
         this.container.style.transformOrigin = "top left"
         this.container.style.transform = "scale(" + t + ")"
         var n = (this.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * t
-        var this$container$getBoundingClientRect$width = this.container.getBoundingClientRect().width
+        var /* [auto-meaningful-name] */this$container$getBoundingClientRect$width = this.container.getBoundingClientRect().width
         if (!this$owner$source_block.is_shadow()) {
           var i = this.owner.get_absolute_xy()
           var o = this.owner.get_size()
@@ -46,7 +46,7 @@ var s = function () {
           this.container.style.left = u + "px"
           return void (this.container.style.top = l + "px")
         }
-        var this$owner$source_block$svg_group = this$owner$source_block.svg_group
+        var /* [auto-meaningful-name] */this$owner$source_block$svg_group = this$owner$source_block.svg_group
         var d = (0, a.get_page_offset)(this$owner$source_block$svg_group)
         var h = this$owner$source_block.width * t
         var p = this$owner$source_block.height * t

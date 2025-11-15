@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2136
@@ -147,7 +147,7 @@ var u = function () {
     return this.group_
   }
   e.prototype.set_group = function (e) {
-    var this$group_ = this.group_
+    var /* [auto-meaningful-name] */this$group_ = this.group_
     this.group_ = "boolean" == typeof e ? e ? (0, c.gen_uid)() : "" : e
     if (this$group_ && this$group_ !== this.group_ && this.is_enabled()) {
       var n = this.group_event_factory({
@@ -231,9 +231,9 @@ var u = function () {
     return a
   }
   e.prototype.unbind_event_by_data = function (e) {
-    var e$target = e.target
-    var e$name = e.name
-    var e$listener = e.listener
+    var /* [auto-meaningful-name] */e$target = e.target
+    var /* [auto-meaningful-name] */e$name = e.name
+    var /* [auto-meaningful-name] */e$listener = e.listener
     e$target.removeEventListener(e$name, e$listener, false)
     return e$listener
   }

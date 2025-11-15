@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2505
@@ -63,7 +63,7 @@ var l = exports.active = function (e) {
       var o
       var u
       s(this, r)
-      for (var arguments$length = arguments.length, f = Array(arguments$length), d = 0; d < arguments$length; d++) {
+      for (var /* [auto-meaningful-name] */arguments$length = arguments.length, f = Array(arguments$length), d = 0; d < arguments$length; d++) {
         f[d] = arguments[d]
       }
       o = u = c(this, (n = r.__proto__ || Object.getPrototypeOf(r)).call.apply(n, [this].concat(f)))

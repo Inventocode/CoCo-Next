@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1753
@@ -48,13 +48,13 @@ function s(e) {
 var c = function (e) {
   var t
   var n
-  var e$className = e.className
-  var e$included = e.included
-  var e$vertical = e.vertical
-  var e$style = e.style
-  var e$length = e.length
-  var e$offset = e.offset
-  var e$reverse = e.reverse
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$included = e.included
+  var /* [auto-meaningful-name] */e$vertical = e.vertical
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$length = e.length
+  var /* [auto-meaningful-name] */e$offset = e.offset
+  var /* [auto-meaningful-name] */e$reverse = e.reverse
   if (e$length < 0) {
     e$reverse = !e$reverse
     e$length = Math.abs(e$length)

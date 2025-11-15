@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1028
@@ -147,7 +147,7 @@ o.prototype.parse = function (e, t, n) {
         var D
         var I = B[k]
         if (I && !I.match(h)) {
-          for (var F = "", R = 0, i$length = I.length; R < i$length; R++) {
+          for (var F = "", R = 0, /* [auto-meaningful-name] */I$length = I.length; R < I$length; R++) {
             if (I.charCodeAt(R) > 127) {
               F += "x"
             } else {
@@ -431,16 +431,16 @@ o.prototype.resolveObject = function (e) {
     n.href = n.format()
     return n
   }
-  for (var C = E.slice(-1)[0], O = (n.host || e.host || E.length > 1) && ("." === C || ".." === C) || "" === C, k = 0, e$length = E.length; e$length >= 0; e$length--) {
-    if ("." === (C = E[e$length])) {
-      E.splice(e$length, 1)
+  for (var C = E.slice(-1)[0], O = (n.host || e.host || E.length > 1) && ("." === C || ".." === C) || "" === C, k = 0, /* [auto-meaningful-name] */E$length = E.length; E$length >= 0; E$length--) {
+    if ("." === (C = E[E$length])) {
+      E.splice(E$length, 1)
     } else {
       if (".." === C) {
-        E.splice(e$length, 1)
+        E.splice(E$length, 1)
         k++
       } else {
         if (k) {
-          E.splice(e$length, 1)
+          E.splice(E$length, 1)
           k--
         }
       }
@@ -484,7 +484,7 @@ o.prototype.resolveObject = function (e) {
   return n
 }
 o.prototype.parseHost = function () {
-  var this$host = this.host
+  var /* [auto-meaningful-name] */this$host = this.host
   var t = s.exec(this$host)
   if (t) {
     if (":" !== (t = t[0])) {

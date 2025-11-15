@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：eV9l
@@ -131,8 +131,8 @@ var Tooltip = function Tooltip(props) {
         "autoResolveMultipleImports": true,
         "handleMissingStyleName": "throw"
       })
-    }, typeof props.content === "function" ? props.content() : props.content)))
-
+    }, typeof props.content === "function" ? props.content() : props.content))
+  )
 }
 Tooltip.defaultProps = {
   trigger: "hover",

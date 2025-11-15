@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2235
@@ -8,8 +8,8 @@
 
 module.exports = function (e, t, n) {
   var r = " "
-  var e$level = e.level
-  var e$dataLevel = e.dataLevel
+  var /* [auto-meaningful-name] */e$level = e.level
+  var /* [auto-meaningful-name] */e$dataLevel = e.dataLevel
   var a = e.schema[t]
   var s = e.schemaPath + e.util.getProperty(t)
   var c = e.errSchemaPath + "/" + t
@@ -20,11 +20,11 @@ module.exports = function (e, t, n) {
   var h = e.util.copy(e)
   h.level++
   var p = "valid" + h.level
-  var e$schema$then = e.schema.then
-  var e$schema$else = e.schema.else
+  var /* [auto-meaningful-name] */e$schema$then = e.schema.then
+  var /* [auto-meaningful-name] */e$schema$else = e.schema.else
   var g = undefined !== e$schema$then && (e.opts.strictKeywords ? "object" == typeof e$schema$then && Object.keys(e$schema$then).length > 0 || false === e$schema$then : e.util.schemaHasRules(e$schema$then, e.RULES.all))
   var v = undefined !== e$schema$else && (e.opts.strictKeywords ? "object" == typeof e$schema$else && Object.keys(e$schema$else).length > 0 || false === e$schema$else : e.util.schemaHasRules(e$schema$else, e.RULES.all))
-  var h$baseId = h.baseId
+  var /* [auto-meaningful-name] */h$baseId = h.baseId
   if (g || v) {
     var y
     h.createErrors = false
@@ -32,7 +32,7 @@ module.exports = function (e, t, n) {
     h.schemaPath = s
     h.errSchemaPath = c
     r += " var " + d + " = errors; var " + f + " = true;  "
-    var e$compositeRule = e.compositeRule
+    var /* [auto-meaningful-name] */e$compositeRule = e.compositeRule
     e.compositeRule = h.compositeRule = true
     r += "  " + e.validate(h) + " "
     h.baseId = h$baseId

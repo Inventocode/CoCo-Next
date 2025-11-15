@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2539
@@ -17,7 +17,7 @@ function c(e, t) {
   this.dataCache = null
   this.dataList = []
 }
-var c$prototype = c.prototype
+var /* [auto-meaningful-name] */c$prototype = c.prototype
 c$prototype.addData = function (e) {
   var t = new r(e)
   this.dataList.push(t)
@@ -233,7 +233,7 @@ c.createData = function (e, t, n) {
 }
 c.createBytes = function (e, t) {
   for (var n = 0, r = 0, o = 0, i = new Array(t.length), c = new Array(t.length), l = 0; l < t.length; l++) {
-    var tL$dataCount = t[l].dataCount
+    var /* [auto-meaningful-name] */tL$dataCount = t[l].dataCount
     var d = t[l].totalCount - tL$dataCount
     r = Math.max(r, tL$dataCount)
     o = Math.max(o, d)

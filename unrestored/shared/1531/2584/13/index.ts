@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：13
@@ -34,8 +34,8 @@ export { Pe as a }
 export { Fe as v }
 export { We as c }
 export { a as z } from "../321"
-import r = require("../10/index");
-import o = require("../8");
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import o = require("../8")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -48,7 +48,7 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(o)
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -63,13 +63,13 @@ var s = function __importDefault(module) {
 }(React)
 require("./828")
 var c = React.createContext(null)
-var c$Provider = c.Provider
+var /* [auto-meaningful-name] */c$Provider = c.Provider
 var u = c
 var d = React.memo(function (e) {
-  var e$children = e.children
-  var e$value = e.value
-  var e$disabled = e.disabled
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$className = e.className
   var c = React.useContext(u)
   var l = React.useCallback(function () {
     if (c) {
@@ -86,13 +86,13 @@ var d = React.memo(function (e) {
   }, e$children || e$value)
 })
 var p = React.memo(function (e) {
-  var e$children = e.children
-  var e$value = e.value
-  var e$onChange = e.onChange
-  var e$style = e.style
-  var e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var d = React.useState(e$defaultValue)
-  var p = r.a(d, 2)
+  var p = $$_10_index.a(d, 2)
   var f = p[0]
   var h = p[1]
   React.useEffect(function () {
@@ -125,17 +125,17 @@ var p = React.memo(function (e) {
     style: e$style
   }, e$children))
 })
-import f = require("../295/index");
-import h = require("../296");
-import Lodash = require("lodash");
+import /* [auto-meaningful-name] */$$_295_index = require("../295/index")
+import /* [auto-meaningful-name] */$$_296 = require("../296")
+import /* [auto-meaningful-name] */Lodash = require("lodash")
 require("./636")
 var g = React.memo(function (e) {
-  var e$onStep = e.onStep
-  var e$max = e.max
-  var e$min = e.min
-  var e$defaultValue = e.defaultValue
-  var e$disabled = e.disabled
-  var c = h.a(e, ["onStep", "max", "min", "defaultValue", "disabled"])
+  var /* [auto-meaningful-name] */e$onStep = e.onStep
+  var /* [auto-meaningful-name] */e$max = e.max
+  var /* [auto-meaningful-name] */e$min = e.min
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
+  var c = $$_296.a(e, ["onStep", "max", "min", "defaultValue", "disabled"])
   var l = Number(e$max) <= Number(e$defaultValue)
   var u = Number(e$min) >= Number(e$defaultValue)
   var d = Number(e$defaultValue)
@@ -149,7 +149,7 @@ var g = React.memo(function (e) {
       e$onStep("".concat(d - 1), e, "down")
     }
   }, [u, e$onStep, d])
-  return s.a.createElement(f.a, Object.assign({}, c, {
+  return s.a.createElement($$_295_index.a, Object.assign({}, c, {
     defaultValue: e$defaultValue,
     min: e$min,
     max: e$max,
@@ -159,19 +159,19 @@ var g = React.memo(function (e) {
     }, s.a.createElement("span", {
       className: l || e$disabled ? "disable" : "",
       onClick: p
-    }, s.a.createElement(E.a, {
+    }, s.a.createElement($$_94_index.a, {
       type: "icon-up"
     })), s.a.createElement("span", {
       className: u || e$disabled ? "disable" : "",
       onClick: g
-    }, s.a.createElement(E.a, {
+    }, s.a.createElement($$_94_index.a, {
       type: "icon-down"
     })))
   }))
 })
-import _ = require("../536");
+import /* [auto-meaningful-name] */$$_536 = require("../536")
 require("./1080")
-import v = require("./769/index");
+import /* [auto-meaningful-name] */$_769_index = require("./769/index")
 var b = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -183,24 +183,24 @@ var b = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(v)
+}($_769_index)
 require("./831")
 var y = React.memo(function (e) {
-  var e$step = e.step
+  var /* [auto-meaningful-name] */e$step = e.step
   var n = undefined === e$step ? 1 : e$step
-  var e$max = e.max
+  var /* [auto-meaningful-name] */e$max = e.max
   var c = undefined === e$max ? 100 : e$max
-  var e$min = e.min
+  var /* [auto-meaningful-name] */e$min = e.min
   var u = undefined === e$min ? 1 : e$min
-  var e$onChange = e.onChange
-  var e$value = e.value
-  var e$className = e.className
-  var e$isShowLeftInput = e.isShowLeftInput
-  var e$isShowRightInput = e.isShowRightInput
-  var e$inputAfter = e.inputAfter
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$isShowLeftInput = e.isShowLeftInput
+  var /* [auto-meaningful-name] */e$isShowRightInput = e.isShowRightInput
+  var /* [auto-meaningful-name] */e$inputAfter = e.inputAfter
   var v = React.useRef(null)
   var y = React.useState(e$value || u)
-  var E = r.a(y, 2)
+  var E = $$_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
   React.useEffect(function () {
@@ -231,7 +231,7 @@ var y = React.memo(function (e) {
   }
   return s.a.createElement("div", {
     className: i()("coco-slider", e$className)
-  }, e$isShowLeftInput && s.a.createElement(f.a, {
+  }, e$isShowLeftInput && s.a.createElement($$_295_index.a, {
     defaultValue: O,
     className: i()("coco-slider-input", "coco-slider-left-input"),
     type: "number",
@@ -246,7 +246,7 @@ var y = React.memo(function (e) {
     min: u,
     max: c,
     onChange: C
-  }), e$isShowRightInput && s.a.createElement(f.a, {
+  }), e$isShowRightInput && s.a.createElement($$_295_index.a, {
     defaultValue: O,
     className: i()("coco-slider-input", "coco-slider-right-input"),
     type: "number",
@@ -257,30 +257,30 @@ var y = React.memo(function (e) {
     after: e$inputAfter
   }))
 })
-import E = require("../94/index");
+import /* [auto-meaningful-name] */$$_94_index = require("../94/index")
 require("./637")
-import O = require("../361");
+import /* [auto-meaningful-name] */$$_361 = require("../361")
 var w = React.memo(function (e) {
-  var e$style = e.style
-  var e$children = e.children
-  var e$value = e.value
-  var e$onChange = e.onChange
-  var e$className = e.className
-  var e$defaultValue = e.defaultValue
-  var e$open = e.open
-  var e$autoCloseWhenChanged = e.autoCloseWhenChanged
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$open = e.open
+  var /* [auto-meaningful-name] */e$autoCloseWhenChanged = e.autoCloseWhenChanged
   var f = undefined === e$autoCloseWhenChanged || e$autoCloseWhenChanged
   var h = React.useState(e$value || e$defaultValue)
-  var m = r.a(h, 2)
+  var m = $$_10_index.a(h, 2)
   var g = m[0]
   var _ = m[1]
   var v = React.useState(e$open)
-  var b = r.a(v, 2)
+  var b = $$_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
   var C = React.useRef(null)
   var T = React.useState(null)
-  var S = r.a(T, 2)
+  var S = $$_10_index.a(T, 2)
   var I = S[0]
   var A = S[1]
   React.useEffect(function () {
@@ -306,7 +306,7 @@ var w = React.memo(function (e) {
   }, [y])
   React.useEffect(function () {
     var e = function e(t) {
-      var t$target = t.target
+      var /* [auto-meaningful-name] */t$target = t.target
       if (C.current && !C.current.contains(t$target)) {
         w(false)
         document.body.removeEventListener("click", e)
@@ -318,7 +318,7 @@ var w = React.memo(function (e) {
       document.body.removeEventListener("click", e)
     }
   }, [y])
-  return s.a.createElement(O.a, {
+  return s.a.createElement($$_361.a, {
     value: {
       value: g,
       onChange: function (e) {
@@ -343,7 +343,7 @@ var w = React.memo(function (e) {
     onClick: R
   }, s.a.createElement("div", {
     className: i()("coco-select-label")
-  }, I), s.a.createElement(E.a, {
+  }, I), s.a.createElement($$_94_index.a, {
     type: "icon-up",
     className: i()("coco-select-arrow", {
       active: y
@@ -353,11 +353,11 @@ var w = React.memo(function (e) {
   }, e$children)))
 })
 var C = React.memo(function (e) {
-  var e$value = e.value
-  var e$suffix = e.suffix
-  var e$children = e.children
-  var e$className = e.className
-  var c = React.useContext(O.b)
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$suffix = e.suffix
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$className = e.className
+  var c = React.useContext($$_361.b)
   React.useEffect(function () {
     if ((null === c || undefined === c ? undefined : c.value) === e$value) {
       c.onChangeSelectorContent(e$children || e$value)
@@ -376,7 +376,7 @@ var C = React.memo(function (e) {
     className: "coco-option-content"
   }, s.a.createElement("p", null, e$value), e$suffix))
 })
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var S = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -389,11 +389,11 @@ var S = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import I = require("../7");
-import A = require("../16/index");
-import j = require("../702");
-import N = require("../1185");
-import Color = require("color");
+import I = require("../7")
+import /* [auto-meaningful-name] */$$_16_index = require("../16/index")
+import /* [auto-meaningful-name] */$$_702 = require("../702")
+import /* [auto-meaningful-name] */$$_1185 = require("../1185")
+import /* [auto-meaningful-name] */Color = require("color")
 var k = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -406,20 +406,20 @@ var k = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import x = require("../../../../../src/shared/events/messages-wrapper");
-import D = require("../133/342");
-import M = require("../15");
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper = require("../../../../../src/shared/events/messages-wrapper")
+import /* [auto-meaningful-name] */$_342 = require("./342")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
 require("./646")
 function L(e) {
   return "#ffffff" === k()(e).hex().toLocaleLowerCase()
 }
 var P
 var B = React.memo(function (e) {
-  var e$onClick = e.onClick
-  var e$color = e.color
-  var e$selected = e.selected
-  var e$className = e.className
-  var a = M.i(e$color)
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$selected = e.selected
+  var /* [auto-meaningful-name] */e$className = e.className
+  var a = $$_15.i(e$color)
   return s.a.createElement("div", {
     onClick: function () {
       if (e$onClick) {
@@ -434,14 +434,14 @@ var B = React.memo(function (e) {
     }, e$className, a && "color-palette-transparent-block", !a && L(e$color) && "color-palette-white-block")
   }, a && s.a.createElement("div", {
     className: "coco-palette-bias"
-  }), e$selected && !a && s.a.createElement(E.a, {
+  }), e$selected && !a && s.a.createElement($$_94_index.a, {
     className: "coco-palette-icon-selected",
     type: "icon-selected"
   }))
 })
-import F = require("./785/index");
-import G = require("./254/index");
-import U = require("./225");
+import /* [auto-meaningful-name] */$_785_index = require("./785/index")
+import /* [auto-meaningful-name] */$_254_index = require("./254/index")
+import /* [auto-meaningful-name] */$_225 = require("./225")
 var W = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -453,7 +453,7 @@ var W = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(U)
+}($_225)
 !function (e) {
   e.HEX = "HEX"
   e.HSVA = "HSVA"
@@ -462,10 +462,10 @@ var W = function __importDefault(module) {
 var H
 var V = [P.HEX, P.HSVA, P.RGBA]
 var z = React.memo(function (e) {
-  var e$color = e.color
-  var e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = React.useState(P.HEX)
-  var i = r.a(o, 2)
+  var i = $$_10_index.a(o, 2)
   var c = i[0]
   var l = i[1]
   var u = React.useMemo(function () {
@@ -483,10 +483,10 @@ var z = React.memo(function (e) {
       rgb: o
     }
   }, [e$color])
-  var u$hex = u.hex
-  var u$hsl = u.hsl
-  var u$hsv = u.hsv
-  var u$rgb = u.rgb
+  var /* [auto-meaningful-name] */u$hex = u.hex
+  var /* [auto-meaningful-name] */u$hsl = u.hsl
+  var /* [auto-meaningful-name] */u$hsv = u.hsv
+  var /* [auto-meaningful-name] */u$rgb = u.rgb
   var g = function (e) {
     var t
     if (e.HEX) {
@@ -538,8 +538,8 @@ var z = React.memo(function (e) {
         }
       }
     }
-    if (t && M.kb(t)) {
-      var r = M.C(t, e.H || u$hsv.h)
+    if (t && $$_15.kb(t)) {
+      var r = $$_15.C(t, e.H || u$hsv.h)
       e$onChange(r)
     }
   }
@@ -549,7 +549,7 @@ var z = React.memo(function (e) {
     className: "coco-platte-input-box"
   }, c === P.HEX && s.a.createElement("div", {
     className: "coco-platte-hex-box"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "HEX",
     value: u$hex,
     onChange: g
@@ -557,25 +557,25 @@ var z = React.memo(function (e) {
     className: "coco-platte-flex-box"
   }, s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "H",
     value: Math.round(u$hsv.h),
     onChange: g
   })), s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "S",
     value: Math.round(100 * u$hsv.s),
     onChange: g
   })), s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "V",
     value: Math.round(100 * u$hsv.v),
     onChange: g
   })), s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "A",
     value: u$hsl.a,
     onChange: g
@@ -583,25 +583,25 @@ var z = React.memo(function (e) {
     className: "coco-platte-flex-box"
   }, s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "R",
     value: u$rgb.r,
     onChange: g
   })), s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "G",
     value: u$rgb.g,
     onChange: g
   })), s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "B",
     value: u$rgb.b,
     onChange: g
   })), s.a.createElement("div", {
     className: "coco-platte-field"
-  }, s.a.createElement(G.EditableInput, {
+  }, s.a.createElement($_254_index.EditableInput, {
     label: "A",
     value: u$rgb.a,
     onChange: g
@@ -613,7 +613,7 @@ var z = React.memo(function (e) {
       var e = V.indexOf(c) - 1
       l(V[e = e < 0 ? 2 : e])
     }
-  }, s.a.createElement(E.a, {
+  }, s.a.createElement($$_94_index.a, {
     className: "coco-palette-arrow-up",
     type: "icon-fold"
   })), s.a.createElement("div", {
@@ -623,7 +623,7 @@ var z = React.memo(function (e) {
       e = e >= V.length ? 0 : e
       l(V[e])
     }
-  }, s.a.createElement(E.a, {
+  }, s.a.createElement($$_94_index.a, {
     className: "coco-palette-arrow-down",
     type: "icon-fold"
   }))))
@@ -672,11 +672,11 @@ var Y = {
   }
 }
 var K = React.memo(function (e) {
-  var e$color = e.color
-  var e$handleColorChange = e.handleColorChange
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$handleColorChange = e.handleColorChange
   var r = function (e) {
-    var e$hex = e.hex
-    if (!M.i(e$hex)) {
+    var /* [auto-meaningful-name] */e$hex = e.hex
+    if (!$$_15.i(e$hex)) {
       e$hex = undefined !== e.rgb.a ? "".concat(e.hex).concat(function (e) {
         var t = Math.round(255 * Lodash.clamp(e, 0, 1))
         var n = t.toString(16)
@@ -685,7 +685,7 @@ var K = React.memo(function (e) {
     }
     e$handleColorChange(e$hex)
   }
-  return s.a.createElement(s.a.Fragment, null, s.a.createElement(F.a, {
+  return s.a.createElement(s.a.Fragment, null, s.a.createElement($_785_index.a, {
     onChange: r,
     color: e$color,
     presetColors: [],
@@ -698,20 +698,20 @@ var K = React.memo(function (e) {
 })
 var q = []
 var X = React.memo(React.forwardRef(function (e, t) {
-  var e$value = e.value
-  var e$onChange = e.onChange
-  var e$onClose = e.onClose
-  var e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onClose = e.onClose
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var d = undefined === e$defaultValue ? "#000000ff" : e$defaultValue
-  var e$style = e.style
+  var /* [auto-meaningful-name] */e$style = e.style
   var f = undefined === e$style ? {} : e$style
   var h = React.useRef(null)
   var m = React.useRef(null)
   var g = React.useRef(false)
-  var _ = A.d()
-  var j$a$formatMessage = j.a().formatMessage
+  var _ = $$_16_index.d()
+  var /* [auto-meaningful-name] */$$_702$a$formatMessage = $$_702.a().formatMessage
   var b = React.useState(e$value || d)
-  var y = r.a(b, 2)
+  var y = $$_10_index.a(b, 2)
   var O = y[0]
   var w = y[1]
   var C = React.useRef(O)
@@ -737,14 +737,14 @@ var X = React.memo(React.forwardRef(function (e, t) {
   })
   React.useEffect(function () {
     var e = function (e) {
-      var e$target = e.target
-      var h$current = h.current
-      var m$current = m.current
+      var /* [auto-meaningful-name] */e$target = e.target
+      var /* [auto-meaningful-name] */h$current = h.current
+      var /* [auto-meaningful-name] */m$current = m.current
       if ((!h$current || !h$current.contains(e$target)) && (!m$current || !m$current.contains(e$target))) {
         if (e$onClose) {
           e$onClose(O)
         }
-        _(x.hh())
+        _($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.hh())
         if (H) {
           var i = q.indexOf(H)
           if (i > -1) {
@@ -820,8 +820,8 @@ var X = React.memo(React.forwardRef(function (e, t) {
                 e.next = 3
                 break
               }
-              _(x.mj({
-                message: j$a$formatMessage({
+              _($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                message: $$_702$a$formatMessage({
                   id: "colorPicker.eyeDropperTips"
                 })
               }))
@@ -861,19 +861,19 @@ var X = React.memo(React.forwardRef(function (e, t) {
     ref: h
   }, s.a.createElement("div", {
     className: "coco-palette-body"
-  }, D.b.map(function (e, t) {
+  }, $_342.b.map(function (e, t) {
     return s.a.createElement(B, {
       onClick: R,
       key: t,
       color: e,
       selected: O === e,
-      className: M.V(e) ? "coco-palette-light-color-selected" : "coco-palette-dark-color-selected"
+      className: $$_15.V(e) ? "coco-palette-light-color-selected" : "coco-palette-dark-color-selected"
     })
   })), s.a.createElement("div", {
     className: "coco-palette-history-color"
   }, s.a.createElement("span", {
     className: "coco-palette-history-title"
-  }, j$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "colorPicker.history"
   })), s.a.createElement("div", {
     className: "coco-palette-history-color-list"
@@ -883,7 +883,7 @@ var X = React.memo(React.forwardRef(function (e, t) {
       key: t,
       color: e
     })
-  }))), s.a.createElement(N.a, {
+  }))), s.a.createElement($$_1185.a, {
     placement: "rightBottom",
     overlayClassName: "coco-palette-picker",
     onVisibleChange: P,
@@ -895,7 +895,7 @@ var X = React.memo(React.forwardRef(function (e, t) {
     }, s.a.createElement("div", {
       className: "coco-palette-icon-picker-box",
       onClick: F
-    }, s.a.createElement(E.a, {
+    }, s.a.createElement($$_94_index.a, {
       type: "icon-picker-color"
     })), s.a.createElement(K, {
       color: O,
@@ -913,30 +913,30 @@ var X = React.memo(React.forwardRef(function (e, t) {
     src: require("./854")
   }), s.a.createElement("span", {
     className: "coco-palette-more-title"
-  }, j$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "colorPicker.more"
-  }))), s.a.createElement(E.a, {
+  }))), s.a.createElement($$_94_index.a, {
     className: "coco-palette-more-arrow",
     type: "icon-fold"
   })))))
 }))
 require("./855")
 var Q = React.memo(React.forwardRef(function (e, t) {
-  var e$children = e.children
-  var e$defaultVisible = e.defaultVisible
-  var e$className = e.className
-  var e$style = e.style
-  var e$content = e.content
-  var e$onOpen = e.onOpen
-  var e$onClose = e.onClose
-  var e$onHide = e.onHide
-  var e$contentClassName = e.contentClassName
-  var e$autoClose = e.autoClose
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$defaultVisible = e.defaultVisible
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$content = e.content
+  var /* [auto-meaningful-name] */e$onOpen = e.onOpen
+  var /* [auto-meaningful-name] */e$onClose = e.onClose
+  var /* [auto-meaningful-name] */e$onHide = e.onHide
+  var /* [auto-meaningful-name] */e$contentClassName = e.contentClassName
+  var /* [auto-meaningful-name] */e$autoClose = e.autoClose
   var g = undefined === e$autoClose || e$autoClose
-  var e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
   var v = undefined !== e$disabled && e$disabled
   var b = React.useState(!!e$defaultVisible)
-  var y = r.a(b, 2)
+  var y = $$_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
   var w = React.useRef(null)
@@ -947,7 +947,7 @@ var Q = React.memo(React.forwardRef(function (e, t) {
   }, [E])
   React.useLayoutEffect(function () {
     var e = function e(t) {
-      var t$target = t.target
+      var /* [auto-meaningful-name] */t$target = t.target
       if (w.current && !w.current.contains(t$target)) {
         O(false)
         document.body.removeEventListener("click", e)
@@ -997,19 +997,19 @@ var Q = React.memo(React.forwardRef(function (e, t) {
     className: "coco-popover-disabled-mask"
   }))
 }))
-import Z = require("../537/index");
+import /* [auto-meaningful-name] */$$_537_index = require("../537/index")
 require("./857")
 var J = React.memo(s.a.forwardRef(function (e, t) {
-  var e$type = e.type
-  var e$icon = e.icon
-  var e$onClick = e.onClick
-  var e$disabled = e.disabled
-  var e$style = e.style
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$icon = e.icon
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$style = e.style
   var u = undefined === e$style ? {} : e$style
-  var e$className = e.className
-  var e$danger = e.danger
-  var e$children = e.children
-  var e$shape = e.shape
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$danger = e.danger
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$shape = e.shape
   var m = undefined === e$shape ? "circle" : e$shape
   var g = React.useRef(null)
   React.useImperativeHandle(t, function () {
@@ -1020,36 +1020,36 @@ var J = React.memo(s.a.forwardRef(function (e, t) {
   return s.a.createElement("button", {
     ref: g,
     className: i()("coco-button", function () {
-      var e = "coco-button-"
-      return (e$type ? e + e$type : "") + " " + (e$danger ? e + "dangerous" : "") + " " + (m ? e + m : "")
+      var /* [auto-meaningful-name] */CocoButton = "coco-button-"
+      return (e$type ? CocoButton + e$type : "") + " " + (e$danger ? CocoButton + "dangerous" : "") + " " + (m ? CocoButton + m : "")
     }(), e$className),
     disabled: e$disabled,
     style: u,
     onClick: e$onClick
-  }, e$icon && s.a.createElement(E.a, {
+  }, e$icon && s.a.createElement($$_94_index.a, {
     type: e$icon
   }), e$children)
 }))
 require("./858")
 var $ = React.createContext(null)
-var $$Provider = $.Provider
+var /* [auto-meaningful-name] */$$Provider = $.Provider
 var te = $
 React.memo(function (e) {
-  var e$children = e.children
-  var e$onSelect = e.onSelect
-  var e$value = e.value
-  var e$defaultValue = e.defaultValue
-  var e$className = e.className
-  var e$style = e.style
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$onSelect = e.onSelect
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$style = e.style
   var d = undefined === e$style ? {} : e$style
-  var e$open = e.open
-  var e$onBlur = e.onBlur
+  var /* [auto-meaningful-name] */e$open = e.open
+  var /* [auto-meaningful-name] */e$onBlur = e.onBlur
   var h = React.useState(e$value || e$defaultValue)
-  var m = r.a(h, 2)
+  var m = $$_10_index.a(h, 2)
   var g = m[0]
   var _ = m[1]
   var v = React.useState(false)
-  var b = r.a(v, 2)
+  var b = $$_10_index.a(v, 2)
   var y = b[0]
   var O = b[1]
   React.useEffect(function () {
@@ -1061,9 +1061,9 @@ React.memo(function (e) {
     }
   }, [e$open])
   React.useEffect(function () {
-    var /* [auto-meaningful-name] */s$current
-    if (!(null === (s$current = S.current) || undefined === s$current)) {
-      s$current.setAttribute("tabindex", "-1")
+    var /* [auto-meaningful-name] */S$current
+    if (!(null === (S$current = S.current) || undefined === S$current)) {
+      S$current.setAttribute("tabindex", "-1")
     }
   }, [])
   var w = React.useCallback(function (e) {
@@ -1105,7 +1105,7 @@ React.memo(function (e) {
     className: i()("coco-tree-select-arrow", {
       active: y
     })
-  }, s.a.createElement(E.a, {
+  }, s.a.createElement($$_94_index.a, {
     type: "icon-up"
   }))), s.a.createElement("div", {
     className: i()("coco-tree-select-list", {
@@ -1114,11 +1114,11 @@ React.memo(function (e) {
   }, e$children)))
 })
 var ne = React.memo(function (e) {
-  var e$title = e.title
-  var e$children = e.children
-  var e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$title = e.title
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
   var c = React.useState(false)
-  var l = r.a(c, 2)
+  var l = $$_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = React.useCallback(function () {
@@ -1141,7 +1141,7 @@ var ne = React.memo(function (e) {
     })
   }, s.a.createElement("span", null, e$title), s.a.createElement("i", {
     className: "coco-tree-node-arrows"
-  }, s.a.createElement(E.a, {
+  }, s.a.createElement($$_94_index.a, {
     type: "icon-right"
   }))), s.a.createElement("div", {
     className: i()("coco-tree-group-main", {
@@ -1150,10 +1150,10 @@ var ne = React.memo(function (e) {
   }, e$children))
 })
 var re = React.memo(function (e) {
-  var e$value = e.value
-  var e$title = e.title
-  var e$content = e.content
-  var e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$title = e.title
+  var /* [auto-meaningful-name] */e$content = e.content
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
   var c = React.useContext(te)
   var l = React.useCallback(function () {
     if (null === c || undefined === c ? undefined : c.onSelect) {
@@ -1170,27 +1170,27 @@ var re = React.memo(function (e) {
   }, e$content || s.a.createElement("span", null, e$title))
 })
 React.memo(function (e) {
-  var e$children = e.children
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$className = e.className
   return s.a.createElement("div", {
     className: i()(e$className, "coco-tree-node")
   }, e$children ? s.a.createElement(ne, e) : s.a.createElement(re, e))
 })
 require("./859")
 var oe = React.memo(function (e) {
-  var e$type = e.type
+  var /* [auto-meaningful-name] */e$type = e.type
   var n = undefined === e$type ? "info" : e$type
-  var e$message = e.message
-  var e$showPrefixIcon = e.showPrefixIcon
+  var /* [auto-meaningful-name] */e$message = e.message
+  var /* [auto-meaningful-name] */e$showPrefixIcon = e.showPrefixIcon
   var l = undefined === e$showPrefixIcon || e$showPrefixIcon
-  var e$showCloseIcon = e.showCloseIcon
+  var /* [auto-meaningful-name] */e$showCloseIcon = e.showCloseIcon
   var d = undefined !== e$showCloseIcon && e$showCloseIcon
-  var e$visible = e.visible
-  var e$onClose = e.onClose
-  var e$icon = e.icon
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$onClose = e.onClose
+  var /* [auto-meaningful-name] */e$icon = e.icon
+  var /* [auto-meaningful-name] */e$className = e.className
   var g = React.useState(true)
-  var _ = r.a(g, 2)
+  var _ = $$_10_index.a(g, 2)
   var v = _[0]
   var b = _[1]
   React.useLayoutEffect(function () {
@@ -1220,7 +1220,7 @@ var oe = React.memo(function (e) {
         t = "coco-alert-info"
     }
     return {
-      icon: s.a.createElement(E.a, {
+      icon: s.a.createElement($$_94_index.a, {
         type: e
       }),
       className: t
@@ -1243,63 +1243,63 @@ var oe = React.memo(function (e) {
   }, l && (e$icon || O.icon)), s.a.createElement("span", null, e$message)), d && s.a.createElement("div", {
     className: "coco-alert-close",
     onClick: w
-  }, s.a.createElement(E.a, {
+  }, s.a.createElement($$_94_index.a, {
     type: "icon-close"
   })))
 })
-import ie = require("../11");
+import /* [auto-meaningful-name] */$$_11 = require("../11")
 require("./647")
 var ae = React.memo(function (e) {
   var t
-  var e$children = e.children
-  var e$justify = e.justify
-  var e$align = e.align
-  var e$className = e.className
-  var e$label = e.label
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$justify = e.justify
+  var /* [auto-meaningful-name] */e$align = e.align
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$label = e.label
   return s.a.createElement("div", {
     "data-row-label": e$label,
-    className: i()("coco-row", e$className, (t = {}, ie.a(t, "coco-row-".concat(e$align), e$align), ie.a(t, "coco-row-".concat(e$justify), e$justify), t))
+    className: i()("coco-row", e$className, (t = {}, $$_11.a(t, "coco-row-".concat(e$align), e$align), $$_11.a(t, "coco-row-".concat(e$justify), e$justify), t))
   }, e$children)
 })
 var se = React.memo(function (e) {
-  var e$children = e.children
-  var e$span = e.span
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$span = e.span
   if ("string" === typeof e$span) {
     var r = parseInt(e$span)
     e$span = isNaN(r) ? undefined : 48 * r / 100
   }
   return s.a.createElement("div", {
-    className: i()("coco-col", ie.a({}, "coco-col-".concat(e$span), undefined !== e$span))
+    className: i()("coco-col", $$_11.a({}, "coco-col-".concat(e$span), undefined !== e$span))
   }, e$children)
 })
-import ce = require("../27");
-import le = require("../40");
-import ue = require("../57/index");
-import de = require("../58/index");
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */$$_40 = require("../40")
+import /* [auto-meaningful-name] */$$_57_index = require("../57/index")
+import /* [auto-meaningful-name] */$$_58_index = require("../58/index")
 var pe = React.createContext({
   draggedItemIndex: -1
 })
-var pe$Consumer = pe.Consumer
-var pe$Provider = pe.Provider
+var /* [auto-meaningful-name] */pe$Consumer = pe.Consumer
+var /* [auto-meaningful-name] */pe$Provider = pe.Provider
 require("./860")
 function me(e) {
   return e.target.closest("[data-coco-draggable-index]")
 }
 function ge(e, t, n) {
-  var n$offsetTop = n.offsetTop
+  var /* [auto-meaningful-name] */n$offsetTop = n.offsetTop
   var o = n.getBoundingClientRect()
-  var o$height = o.height
-  var o$top = o.top
+  var /* [auto-meaningful-name] */o$height = o.height
+  var /* [auto-meaningful-name] */o$top = o.top
   var s = e.y < o$top + o$height / 2 ? 0 : 1
   t.style.top = n$offsetTop + s * o$height + "px"
   return s
 }
 var _e = function (e) {
-  ue.a(n, e)
-  var t = de.a(n)
+  $$_57_index.a(n, e)
+  var t = $$_58_index.a(n)
   function n(e) {
     var r
-    ce.a(this, n);
+    $$_27.a(this, n);
     (r = t.call(this, e)).separationLineRef = React.createRef()
     r.dragContentRef = React.createRef()
     r.dragWrapperRef = React.createRef()
@@ -1308,12 +1308,12 @@ var _e = function (e) {
     r._mousemoveTimeId = undefined
     r.handleMouseDown = function (e) {
       if (0 === e.button) {
-        var r$props = r.props
-        var r$props$onDragStart = r$props.onDragStart
-        var r$props$children = r$props.children
+        var /* [auto-meaningful-name] */r$props = r.props
+        var /* [auto-meaningful-name] */r$props$onDragStart = r$props.onDragStart
+        var /* [auto-meaningful-name] */r$props$children = r$props.children
         if (r$props$children && s.a.Children.count(r$props$children) > 1) {
           var a = me(e)
-          var r$separationLineRef$current = r.separationLineRef.current
+          var /* [auto-meaningful-name] */r$separationLineRef$current = r.separationLineRef.current
           var l = {
             x: e.clientX,
             y: e.clientY
@@ -1342,7 +1342,7 @@ var _e = function (e) {
       }
     }
     r.handleMouseUp = function () {
-      var r$props$onDragEnd = r.props.onDragEnd
+      var /* [auto-meaningful-name] */r$props$onDragEnd = r.props.onDragEnd
       if (r._mousedownTimeId) {
         clearTimeout(r._mousedownTimeId)
       }
@@ -1372,7 +1372,7 @@ var _e = function (e) {
           isDragging: true
         })
         var t = me(e)
-        var r$separationLineRef$current = r.separationLineRef.current
+        var /* [auto-meaningful-name] */r$separationLineRef$current = r.separationLineRef.current
         if (t && r$separationLineRef$current) {
           var o = ge({
             x: e.clientX,
@@ -1389,14 +1389,14 @@ var _e = function (e) {
     }
     r._setScrollOffset = function () {
       var e = s.a.Children.count(r.props.children)
-      var r$dragWrapperRef$current = r.dragWrapperRef.current
-      var r$separationLineRef$current = r.separationLineRef.current
-      var r$dragContentRef$current = r.dragContentRef.current
+      var /* [auto-meaningful-name] */r$dragWrapperRef$current = r.dragWrapperRef.current
+      var /* [auto-meaningful-name] */r$separationLineRef$current = r.separationLineRef.current
+      var /* [auto-meaningful-name] */r$dragContentRef$current = r.dragContentRef.current
       if (r$dragWrapperRef$current && r$separationLineRef$current && r$dragContentRef$current) {
         var i = r$dragContentRef$current.getBoundingClientRect().height / e
-        var r$dragWrapperRef$current$getBoundingClientRect$height = r$dragWrapperRef$current.getBoundingClientRect().height
-        var r$separationLineRef$current$offsetTop = r$separationLineRef$current.offsetTop
-        var r$dragWrapperRef$current$scrollTop = r$dragWrapperRef$current.scrollTop
+        var /* [auto-meaningful-name] */r$dragWrapperRef$current$getBoundingClientRect$height = r$dragWrapperRef$current.getBoundingClientRect().height
+        var /* [auto-meaningful-name] */r$separationLineRef$current$offsetTop = r$separationLineRef$current.offsetTop
+        var /* [auto-meaningful-name] */r$dragWrapperRef$current$scrollTop = r$dragWrapperRef$current.scrollTop
         if (0 !== r$separationLineRef$current$offsetTop) {
           if (r$dragWrapperRef$current$getBoundingClientRect$height + r$dragWrapperRef$current$scrollTop - i < r$separationLineRef$current$offsetTop) {
             r$dragWrapperRef$current.scrollTop += 10
@@ -1422,15 +1422,15 @@ var _e = function (e) {
     }
     return r
   }
-  le.a(n, [{
+  $$_40.a(n, [{
     key: "render",
     value: function () {
-      var this$state = this.state
-      var this$state$isDragging = this$state.isDragging
-      var this$state$draggedItemIndex = this$state.draggedItemIndex
-      var this$props = this.props
-      var this$props$children = this$props.children
-      var this$props$className = this$props.className
+      var /* [auto-meaningful-name] */this$state = this.state
+      var /* [auto-meaningful-name] */this$state$isDragging = this$state.isDragging
+      var /* [auto-meaningful-name] */this$state$draggedItemIndex = this$state.draggedItemIndex
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$children = this$props.children
+      var /* [auto-meaningful-name] */this$props$className = this$props.className
       return s.a.createElement(pe$Provider, {
         value: {
           draggedItemIndex: this$state$draggedItemIndex
@@ -1455,10 +1455,10 @@ var _e = function (e) {
 _e.DELAY = 200
 React.memo(_e)
 React.memo(function (e) {
-  var e$index = e.index
-  var e$children = e.children
+  var /* [auto-meaningful-name] */e$index = e.index
+  var /* [auto-meaningful-name] */e$children = e.children
   return s.a.createElement(pe$Consumer, null, function (e) {
-    var e$draggedItemIndex = e.draggedItemIndex
+    var /* [auto-meaningful-name] */e$draggedItemIndex = e.draggedItemIndex
     return s.a.createElement("div", {
       className: i()("coco-draggable", {
         dragged: e$draggedItemIndex === e$index
@@ -1470,27 +1470,27 @@ React.memo(function (e) {
 require("./861")
 var ve
 var be = React.memo(function (e) {
-  var e$children = e.children
-  var e$showDropdownIcon = e.showDropdownIcon
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$showDropdownIcon = e.showDropdownIcon
   var o = undefined === e$showDropdownIcon || e$showDropdownIcon
-  var e$overlay = e.overlay
-  var e$className = e.className
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$overlay = e.overlay
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var d = React.useState(false)
-  var p = r.a(d, 2)
+  var p = $$_10_index.a(d, 2)
   var f = p[0]
   var h = p[1]
   var m = React.useRef(null)
   function g(e) {
-    var /* [auto-meaningful-name] */_m$current2
     var /* [auto-meaningful-name] */m$current
+    var /* [auto-meaningful-name] */_m$current
     if (e) {
-      if (!(null === (_m$current2 = m.current) || undefined === _m$current2)) {
-        _m$current2.showContent()
+      if (!(null === (m$current = m.current) || undefined === m$current)) {
+        m$current.showContent()
       }
     } else {
-      if (!(null === (m$current = m.current) || undefined === m$current)) {
-        m$current.hideContent()
+      if (!(null === (_m$current = m.current) || undefined === _m$current)) {
+        _m$current.hideContent()
       }
     }
   }
@@ -1525,26 +1525,26 @@ var be = React.memo(function (e) {
       "coco-dropdown-active": f
     }),
     onClick: function () {
-      var /* [auto-meaningful-name] */_m$current7
       var /* [auto-meaningful-name] */m$current
-      if (null === (_m$current7 = m.current) || undefined === _m$current7 ? undefined : _m$current7.visible) {
-        if (!(null === (m$current = m.current) || undefined === m$current)) {
-          m$current.hideContent()
+      var /* [auto-meaningful-name] */_m$current2
+      if (null === (m$current = m.current) || undefined === m$current ? undefined : m$current.visible) {
+        if (!(null === (_m$current2 = m.current) || undefined === _m$current2)) {
+          _m$current2.hideContent()
         }
       }
     }
-  }, e$children, o && s.a.createElement(E.a, {
+  }, e$children, o && s.a.createElement($$_94_index.a, {
     type: "icon-dropdown-down",
     className: i()("coco-dropdown-down-icon")
   }))))
 })
 var ye = React.createContext(null)
-var ye$Provider = ye.Provider
+var /* [auto-meaningful-name] */ye$Provider = ye.Provider
 var Oe = ye
 require("./862")
 var we = React.memo(function (e) {
-  var e$children = e.children
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   return s.a.createElement(ye$Provider, {
     value: {
       onClick: function (e) {
@@ -1558,8 +1558,8 @@ var we = React.memo(function (e) {
   }, e$children))
 })
 var Ce = React.memo(function (e) {
-  var e$children = e.children
-  var e$value = e.value
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$value = e.value
   var r = React.useContext(Oe)
   return s.a.createElement("div", {
     className: "coco-menu-item",
@@ -1570,7 +1570,7 @@ var Ce = React.memo(function (e) {
     }
   }, e$children)
 })
-import Te = require("./317");
+import /* [auto-meaningful-name] */$_317 = require("./317")
 var Se = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -1582,24 +1582,24 @@ var Se = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(Te)
+}($_317)
 var Ie = React.memo(function (e) {
   var t
-  var e$value = e.value
-  var e$children = e.children
-  var e$subMenu = e.subMenu
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$subMenu = e.subMenu
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var u = React.useRef(null)
   var d = React.useState("right")
-  var p = r.a(d, 2)
+  var p = $$_10_index.a(d, 2)
   var f = p[0]
   var h = p[1]
   var m = React.useState(false)
-  var g = r.a(m, 2)
+  var g = $$_10_index.a(m, 2)
   var _ = g[0]
   var v = g[1]
   var b = React.useMemo(function () {
-    return M.p(v, 100)
+    return $$_15.p(v, 100)
   }, [])
   return s.a.createElement("div", {
     ref: u,
@@ -1609,7 +1609,7 @@ var Ie = React.memo(function (e) {
         b(function () {
           return true
         })
-        var u$current = u.current
+        var /* [auto-meaningful-name] */u$current = u.current
         if (u$current) {
           var t = u$current.getClientRects()[0]
           if (t.x + t.width + t.width < window.innerWidth) {
@@ -1636,30 +1636,30 @@ var Ie = React.memo(function (e) {
     value: e$value
   }, s.a.createElement("div", null, e$children, e$subMenu && s.a.createElement("span", {
     className: Se.a.subMenuArrow
-  }, s.a.createElement(E.a, {
+  }, s.a.createElement($$_94_index.a, {
     type: "icon-arrow-down"
   })))), e$subMenu && s.a.createElement("div", {
-    className: i()(Se.a.subMenuOverlay, (t = {}, ie.a(t, Se.a.visible, _), ie.a(t, Se.a.placementLeft, "left" === f), ie.a(t, Se.a.placementRight, "right" === f), t))
+    className: i()(Se.a.subMenuOverlay, (t = {}, $$_11.a(t, Se.a.visible, _), $$_11.a(t, Se.a.placementLeft, "left" === f), $$_11.a(t, Se.a.placementRight, "right" === f), t))
   }, e$subMenu))
 })
-import Ae = require("../739/index");
+import /* [auto-meaningful-name] */$$_739_index = require("../739/index")
 require("./863")
 var je = React.memo(function (e) {
-  var e$children = e.children
-  var e$onChange = e.onChange
-  var e$onCancel = e.onCancel
-  var e$multiple = e.multiple
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onCancel = e.onCancel
+  var /* [auto-meaningful-name] */e$multiple = e.multiple
   var l = undefined !== e$multiple && e$multiple
-  var e$accept = e.accept
+  var /* [auto-meaningful-name] */e$accept = e.accept
   var d = undefined === e$accept ? "" : e$accept
-  var e$className = e.className
-  var e$tooltip = e.tooltip
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$tooltip = e.tooltip
   var h = undefined === e$tooltip ? "" : e$tooltip
-  var e$style = e.style
+  var /* [auto-meaningful-name] */e$style = e.style
   var g = undefined === e$style ? {} : e$style
   var _ = React.useRef(null)
   var v = React.useState(false)
-  var b = r.a(v, 2)
+  var b = $$_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
   React.useEffect(function () {
@@ -1679,7 +1679,7 @@ var je = React.memo(function (e) {
   }, [y, e$onCancel])
   return s.a.createElement("div", {
     onClick: function () {
-      var _$current = _.current
+      var /* [auto-meaningful-name] */_$current = _.current
       if (_$current) {
         E(true)
         _$current.click()
@@ -1687,7 +1687,7 @@ var je = React.memo(function (e) {
     },
     className: i()("coco-upload-button", e$className),
     style: g
-  }, s.a.createElement(Ae.a, {
+  }, s.a.createElement($$_739_index.a, {
     placement: "right",
     title: h
   }, s.a.createElement("input", {
@@ -1696,7 +1696,7 @@ var je = React.memo(function (e) {
       display: "none"
     },
     onChange: function (e) {
-      var e$target = e.target
+      var /* [auto-meaningful-name] */e$target = e.target
       if (e$target && e$onChange) {
         e$onChange(e$target.files)
         e$target.value = ""
@@ -1710,19 +1710,19 @@ var je = React.memo(function (e) {
   }, e$children)))
 })
 var Ne = React.memo(function (e) {
-  var e$children = e.children
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$className = e.className
   return s.a.createElement("div", {
     className: i()(e$className, "coco-form")
   }, e$children)
 })
 require("./864")
 var Re = React.memo(function (e) {
-  var e$children = e.children
-  var e$className = e.className
-  var e$label = e.label
-  var e$labelWidth = e.labelWidth
-  var e$align = e.align
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$label = e.label
+  var /* [auto-meaningful-name] */e$labelWidth = e.labelWidth
+  var /* [auto-meaningful-name] */e$align = e.align
   var c = undefined === e$align ? "horizontal" : e$align
   return s.a.createElement("div", {
     className: i()(e$className, "coco-form-item", ["horizontal" === c ? "coco-form-item-horizontal" : "coco-form-item-vertical"])
@@ -1737,66 +1737,66 @@ var Re = React.memo(function (e) {
 })
 require("./865")
 var ke = React.memo(s.a.forwardRef(function (e, t) {
-  var e$defaultValue = e.defaultValue
-  var e$value = e.value
-  var e$className = e.className
-  var e$placeholder = e.placeholder
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$placeholder = e.placeholder
   var u = undefined === e$placeholder ? "" : e$placeholder
-  var e$rows = e.rows
+  var /* [auto-meaningful-name] */e$rows = e.rows
   var p = undefined === e$rows ? 1 : e$rows
-  var e$cols = e.cols
-  var e$maxLength = e.maxLength
-  var e$minLength = e.minLength
-  var e$autoComplete = e.autoComplete
+  var /* [auto-meaningful-name] */e$cols = e.cols
+  var /* [auto-meaningful-name] */e$maxLength = e.maxLength
+  var /* [auto-meaningful-name] */e$minLength = e.minLength
+  var /* [auto-meaningful-name] */e$autoComplete = e.autoComplete
   var _ = undefined === e$autoComplete ? "on" : e$autoComplete
-  var e$onChange = e.onChange
-  var e$onFocus = e.onFocus
-  var e$onBlur = e.onBlur
-  var e$dependency = e.dependency
-  var e$disabled = e.disabled
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onFocus = e.onFocus
+  var /* [auto-meaningful-name] */e$onBlur = e.onBlur
+  var /* [auto-meaningful-name] */e$dependency = e.dependency
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
   var w = React.useRef(null)
   var C = React.useRef(null)
   var T = React.useRef(null)
   var S = React.useState(false)
-  var I = r.a(S, 2)
+  var I = $$_10_index.a(S, 2)
   var A = I[0]
   var j = I[1]
   var N = React.useCallback(function (e) {
-    var c$current = C.current
-    if (c$current) {
-      c$current.innerHTML = e + "/" + e$maxLength
+    var /* [auto-meaningful-name] */C$current = C.current
+    if (C$current) {
+      C$current.innerHTML = e + "/" + e$maxLength
     }
   }, [e$maxLength])
   React.useEffect(function () {
-    var w$current = w.current
+    var /* [auto-meaningful-name] */w$current = w.current
     if (w$current && undefined === e$value) {
       w$current.value = undefined === e$defaultValue ? "" : e$defaultValue.toString()
       N(w$current.value.length)
     }
   }, [w, N, e$dependency, e$value, e$defaultValue])
   React.useEffect(function () {
-    var w$current = w.current
+    var /* [auto-meaningful-name] */w$current = w.current
     if (undefined !== e$value && w$current) {
       w$current.value = e$value
       N(e$value.toString().length)
     }
   }, [w, N, e$value])
   var R = function () {
-    var w$current = w.current
-    var t$current = T.current
-    if (w$current && t$current) {
-      t$current.style.display = "block"
+    var /* [auto-meaningful-name] */w$current = w.current
+    var /* [auto-meaningful-name] */T$current = T.current
+    if (w$current && T$current) {
+      T$current.style.display = "block"
       var n = w$current.value.replace(/'\n'/g, "<br>")
       var r = getComputedStyle(w$current)
-      t$current.innerHTML = M.t(n)
-      t$current.style.width = r.width
-      t$current.style.lineHeight = r.lineHeight
-      t$current.style.minHeight = r.lineHeight
-      var t$current$clientHeight = t$current.clientHeight
-      t$current.style.display = "none"
-      var i = t$current$clientHeight / parseInt(r.lineHeight)
-      var w$current$value$splitN$length = w$current.value.split("\n").length
-      return Math.max(i, w$current$value$splitN$length)
+      T$current.innerHTML = $$_15.t(n)
+      T$current.style.width = r.width
+      T$current.style.lineHeight = r.lineHeight
+      T$current.style.minHeight = r.lineHeight
+      var /* [auto-meaningful-name] */T$current$clientHeight = T$current.clientHeight
+      T$current.style.display = "none"
+      var i = T$current$clientHeight / parseInt(r.lineHeight)
+      var /* [auto-meaningful-name] */w$current$value$split_n$length = w$current.value.split("\n").length
+      return Math.max(i, w$current$value$split_n$length)
     }
     return 1
   }
@@ -1857,7 +1857,7 @@ var ke = React.memo(s.a.forwardRef(function (e, t) {
   }))
 }))
 require("../538/index")
-import xe = require("./303/index");
+import /* [auto-meaningful-name] */$$_28_303_index = require("../28/303/index")
 var De = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -1869,20 +1869,20 @@ var De = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(xe)
+}($$_28_303_index)
 require("./867")
-var Me = "@__EMPTY_ADVANCE_TEXT_TIP_ID__@"
+var /* [auto-meaningful-name] */__EMPTY_ADVANCE_TEXT_TIP_ID__ = "@__EMPTY_ADVANCE_TEXT_TIP_ID__@"
 var Le = function () {
   var e
-  if (!(null === (e = document.getElementById(Me)) || undefined === e)) {
+  if (!(null === (e = document.getElementById(__EMPTY_ADVANCE_TEXT_TIP_ID__)) || undefined === e)) {
     e.remove()
   }
 }
 var Pe = function (e) {
-  var e$text = e.text
-  var e$duration = e.duration
+  var /* [auto-meaningful-name] */e$text = e.text
+  var /* [auto-meaningful-name] */e$duration = e.duration
   var r = undefined === e$duration ? 500 : e$duration
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var c = React.useRef(null)
   React.useEffect(function () {
     return function () {
@@ -1892,11 +1892,11 @@ var Pe = function (e) {
   return s.a.createElement("div", {
     ref: c,
     onMouseMove: function (e) {
-      var e$clientX = e.clientX
-      var e$clientY = e.clientY
+      var /* [auto-meaningful-name] */e$clientX = e.clientX
+      var /* [auto-meaningful-name] */e$clientY = e.clientY
       function i(e) {
-        var c$current = c.current
-        var e$target = e.target
+        var /* [auto-meaningful-name] */c$current = c.current
+        var /* [auto-meaningful-name] */e$target = e.target
         if (!(c$current && e$target && c$current.contains(e$target))) {
           Le()
           clearTimeout(ve)
@@ -1909,11 +1909,11 @@ var Pe = function (e) {
       ve = setTimeout(function () {
         !function (e, t, n) {
           Le()
-          Me = "coco-advanced-text-tip—" + De()()
+          __EMPTY_ADVANCE_TEXT_TIP_ID__ = "coco-advanced-text-tip—" + De()()
           var r = document.createElement("div")
           r.innerHTML = e
           r.className = "coco-advanced-text-tip"
-          r.id = Me
+          r.id = __EMPTY_ADVANCE_TEXT_TIP_ID__
           r.style.top = n + 10 + "px"
           r.style.left = t + 10 + "px"
           document.body.appendChild(r)
@@ -1925,17 +1925,17 @@ var Pe = function (e) {
   }, e$text)
 }
 require("./868")
-var Be = M.p(function (e) {
+var Be = $$_15.p(function (e) {
   if (e) {
     e()
   }
 }, 30, true)
 var Fe = function (e) {
-  var e$children = e.children
-  var e$onScrollBottom = e.onScrollBottom
-  var e$height = e.height
-  var e$classnames = e.classnames
-  var e$offsetY = e.offsetY
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$onScrollBottom = e.onScrollBottom
+  var /* [auto-meaningful-name] */e$height = e.height
+  var /* [auto-meaningful-name] */e$classnames = e.classnames
+  var /* [auto-meaningful-name] */e$offsetY = e.offsetY
   var c = undefined === e$offsetY ? 10 : e$offsetY
   return s.a.createElement("div", {
     style: {
@@ -1943,14 +1943,14 @@ var Fe = function (e) {
     },
     className: i()("coco-scroll-paginate", e$classnames),
     onScroll: function (e) {
-      var e$currentTarget = e.currentTarget
+      var /* [auto-meaningful-name] */e$currentTarget = e.currentTarget
       if (e$currentTarget.scrollTop + e$height > e$currentTarget.scrollHeight - c && e$onScrollBottom) {
         Be(e$onScrollBottom)
       }
     }
   }, e$children)
 }
-import Ge = require("./782");
+import /* [auto-meaningful-name] */$_782 = require("./782")
 var Ue = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -1962,27 +1962,27 @@ var Ue = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(Ge)
+}($_782)
 require("./869")
 var We = React.memo(React.forwardRef(function (e, t) {
-  var e$sourceImage = e.sourceImage
-  var e$defaultScale = e.defaultScale
+  var /* [auto-meaningful-name] */e$sourceImage = e.sourceImage
+  var /* [auto-meaningful-name] */e$defaultScale = e.defaultScale
   var l = undefined === e$defaultScale ? 1 : e$defaultScale
-  var e$width = e.width
-  var e$height = e.height
-  var e$border = e.border
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$height = e.height
+  var /* [auto-meaningful-name] */e$border = e.border
   var f = undefined === e$border ? 0 : e$border
-  var e$rotate = e.rotate
+  var /* [auto-meaningful-name] */e$rotate = e.rotate
   var m = undefined === e$rotate ? 0 : e$rotate
-  var e$step = e.step
+  var /* [auto-meaningful-name] */e$step = e.step
   var _ = undefined === e$step ? .01 : e$step
-  var e$minScale = e.minScale
+  var /* [auto-meaningful-name] */e$minScale = e.minScale
   var b = undefined === e$minScale ? 1 : e$minScale
-  var e$maxScale = e.maxScale
+  var /* [auto-meaningful-name] */e$maxScale = e.maxScale
   var E = undefined === e$maxScale ? 2 : e$maxScale
   var O = React.useRef(null)
   var w = React.useState(l)
-  var C = r.a(w, 2)
+  var C = $$_10_index.a(w, 2)
   var T = C[0]
   var S = C[1]
   var I = function (e) {
@@ -2051,5 +2051,5 @@ var We = React.memo(React.forwardRef(function (e, t) {
     className: "coco-avatar-editor-zoomInIcon"
   }))))
 }))
-import He = require("../321");
+import /* [auto-meaningful-name] */$$_321 = require("../321")
 export default Pe

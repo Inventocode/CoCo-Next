@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：82
@@ -6,8 +6,8 @@
 
 "use strict"
 
-export { r as g }
-export { o as a }
+export { IconWidgetButton as g }
+export { B8DFFF as a }
 export { i as o }
 export { a as l }
 export { s as h }
@@ -19,13 +19,13 @@ export { p as r }
 export { f as q }
 export { h as j }
 export { m as i }
-export { g as b }
-export { _ as e }
-export { v as d }
-export { b as f }
+export { SansSerif as b }
+export { _32383E as e }
+export { _32383E2 as d }
+export { Https__static$codemao$cn_coco_image_defaultButtonBackground$png as f }
 export { y as c }
-var r = "icon-widget-button"
-var o = "#B8DFFF"
+var /* [auto-meaningful-name] */IconWidgetButton = "icon-widget-button"
+var /* [auto-meaningful-name] */B8DFFF = "#B8DFFF"
 var i = 12
 var a = 80
 var s = 60
@@ -37,10 +37,10 @@ var p = 12
 var f = 8
 var h = 20
 var m = 12
-var g = "sans-serif"
-var _ = "#32383E"
-var v = "#32383E"
-var b = "https://static.codemao.cn/coco/image/default-button-background.png"
+var /* [auto-meaningful-name] */SansSerif = "sans-serif"
+var /* [auto-meaningful-name] */_32383E = "#32383E"
+var /* [auto-meaningful-name] */_32383E2 = "#32383E"
+var /* [auto-meaningful-name] */Https__static$codemao$cn_coco_image_defaultButtonBackground$png = "https://static.codemao.cn/coco/image/default-button-background.png"
 var y = {
   id: "button_widget_default_icon",
   md5: "",
@@ -48,4 +48,4 @@ var y = {
   cdnUrl: "https://ocean.codemao.cn/appcraft/resource/icon/社交/收藏.svg",
   source: ""
 }
-export default o
+export default B8DFFF

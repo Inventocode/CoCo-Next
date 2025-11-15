@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：189
@@ -8,15 +8,15 @@
 
 var r
 export { r as b }
-export { o as a }
+export { DIALOG_WIDGET as a }
 export { i as c };
 (function (e) {
   e.styleA = "styleA"
   e.styleB = "styleB"
 })(r || (r = {}))
-var o = "DIALOG_WIDGET"
+var /* [auto-meaningful-name] */DIALOG_WIDGET = "DIALOG_WIDGET"
 var i = {
-  type: o,
+  type: DIALOG_WIDGET,
   icon: "icon-dialog",
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -228,4 +228,4 @@ var i = {
     params: []
   }]
 }
-export default o
+export default DIALOG_WIDGET

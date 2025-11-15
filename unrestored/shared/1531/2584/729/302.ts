@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：302
@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as press }
-import Animejs = require("animejs");
+import /* [auto-meaningful-name] */Animejs = require("animejs")
 function o(e) {
   return [Animejs.default({
     targets: "#".concat(e),

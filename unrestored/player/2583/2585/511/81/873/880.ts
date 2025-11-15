@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：880
@@ -23,8 +23,8 @@ var s = require("../221")
     if (n < 0 || s < 0) {
       throw new a.a("Requested dimensions are too small: " + n + "x" + s)
     }
-    var o$a$L = o.a.L
-    var t$QUIET_ZONE_SIZE = t.QUIET_ZONE_SIZE
+    var /* [auto-meaningful-name] */o$a$L = o.a.L
+    var /* [auto-meaningful-name] */t$QUIET_ZONE_SIZE = t.QUIET_ZONE_SIZE
     if (null !== u) {
       if (undefined !== u.get(r.a.ERROR_CORRECTION)) {
         o$a$L = o.a.fromString(u.get(r.a.ERROR_CORRECTION).toString())

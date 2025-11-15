@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：896
@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../81/index")
-var i = "http://www.w3.org/2000/svg"
+var /* [auto-meaningful-name] */Http__www$w3$org_2000_svg = "http://www.w3.org/2000/svg"
 !function () {
   function t(t) {
     if ("string" === typeof t) {
@@ -33,27 +33,27 @@ var i = "http://www.w3.org/2000/svg"
   }
   t.prototype.createSVGElement = function (e, n) {
     var r = document.createElementNS(t.SVG_NS, "svg")
-    r.setAttributeNS(i, "width", n.toString())
-    r.setAttributeNS(i, "height", e.toString())
+    r.setAttributeNS(Http__www$w3$org_2000_svg, "width", n.toString())
+    r.setAttributeNS(Http__www$w3$org_2000_svg, "height", e.toString())
     return r
   }
   t.prototype.createSvgPathPlaceholderElement = function (e, n) {
     var r = document.createElementNS(t.SVG_NS, "path")
-    r.setAttributeNS(i, "d", "M0 0h" + e + "v" + n + "H0z")
-    r.setAttributeNS(i, "fill", "none")
+    r.setAttributeNS(Http__www$w3$org_2000_svg, "d", "M0 0h" + e + "v" + n + "H0z")
+    r.setAttributeNS(Http__www$w3$org_2000_svg, "fill", "none")
     return r
   }
   t.prototype.createSvgRectElement = function (e, n, r, o) {
     var a = document.createElementNS(t.SVG_NS, "rect")
-    a.setAttributeNS(i, "x", e.toString())
-    a.setAttributeNS(i, "y", n.toString())
-    a.setAttributeNS(i, "height", r.toString())
-    a.setAttributeNS(i, "width", o.toString())
-    a.setAttributeNS(i, "fill", "#000000")
+    a.setAttributeNS(Http__www$w3$org_2000_svg, "x", e.toString())
+    a.setAttributeNS(Http__www$w3$org_2000_svg, "y", n.toString())
+    a.setAttributeNS(Http__www$w3$org_2000_svg, "height", r.toString())
+    a.setAttributeNS(Http__www$w3$org_2000_svg, "width", o.toString())
+    a.setAttributeNS(Http__www$w3$org_2000_svg, "fill", "#000000")
     return a
   }
   t.prototype.encode = function (t, e) {
-    var r$QRCodeDecoderErrorCorrectionLevel$L = r.QRCodeDecoderErrorCorrectionLevel.L
+    var /* [auto-meaningful-name] */r$QRCodeDecoderErrorCorrectionLevel$L = r.QRCodeDecoderErrorCorrectionLevel.L
     if (t && undefined !== t.get(r.EncodeHintType.ERROR_CORRECTION)) {
       var i = t.get(r.EncodeHintType.ERROR_CORRECTION).toString()
       r$QRCodeDecoderErrorCorrectionLevel$L = r.QRCodeDecoderErrorCorrectionLevel.fromString(i)

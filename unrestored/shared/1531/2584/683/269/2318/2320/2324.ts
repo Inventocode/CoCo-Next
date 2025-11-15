@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2324
@@ -9,8 +9,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("../../1366/index")
-var i = require("../../1366/444")
+var r = require("../../1366")
+var i = require("../../2342/444")
 var o = require("../../580")
 var a = require("../../359")
 var s = require("../../846")
@@ -18,12 +18,12 @@ exports.getFunctionName = s.getFunctionName
 var c = require("./1367/index")
 function u(e, t, n, r) {
   var a = e.getConstructorMetadata(n)
-  var a$compilerGeneratedMetadata = a.compilerGeneratedMetadata
+  var /* [auto-meaningful-name] */a$compilerGeneratedMetadata = a.compilerGeneratedMetadata
   if (undefined === a$compilerGeneratedMetadata) {
     var u = i.MISSING_INJECTABLE_ANNOTATION + " " + t + "."
     throw new Error(u)
   }
-  var a$userGeneratedMetadata = a.userGeneratedMetadata
+  var /* [auto-meaningful-name] */a$userGeneratedMetadata = a.userGeneratedMetadata
   var h = Object.keys(a$userGeneratedMetadata)
   var p = function (e, t, n, r, i) {
     for (var o = [], a = 0; a < i; a++) {
@@ -45,9 +45,9 @@ function u(e, t, n, r) {
       A.metadata = d
       i.push(A)
     }
-    var object$getPrototypeOfN$prototype$constructor = Object.getPrototypeOf(n.prototype).constructor
-    if (object$getPrototypeOfN$prototype$constructor !== Object) {
-      var v = e(t, object$getPrototypeOfN$prototype$constructor)
+    var /* [auto-meaningful-name] */Object$getPrototypeOfN$prototype$constructor = Object.getPrototypeOf(n.prototype).constructor
+    if (Object$getPrototypeOfN$prototype$constructor !== Object) {
+      var v = e(t, Object$getPrototypeOfN$prototype$constructor)
       i = i.concat(v)
     }
     return i
@@ -90,17 +90,17 @@ exports.getDependencies = function (e, t) {
   return u(e, s.getFunctionName(t), t, false)
 }
 exports.getBaseClassDependencyCount = function e(t, n) {
-  var object$getPrototypeOfN$prototype$constructor = Object.getPrototypeOf(n.prototype).constructor
-  if (object$getPrototypeOfN$prototype$constructor !== Object) {
-    var i = u(t, s.getFunctionName(object$getPrototypeOfN$prototype$constructor), object$getPrototypeOfN$prototype$constructor, true)
+  var /* [auto-meaningful-name] */Object$getPrototypeOfN$prototype$constructor = Object.getPrototypeOf(n.prototype).constructor
+  if (Object$getPrototypeOfN$prototype$constructor !== Object) {
+    var i = u(t, s.getFunctionName(Object$getPrototypeOfN$prototype$constructor), Object$getPrototypeOfN$prototype$constructor, true)
     var o = i.map(function (e) {
       return e.metadata.filter(function (e) {
         return e.key === a.UNMANAGED_TAG
       })
     })
-    var $concat$applyO$length = [].concat.apply([], o).length
+    var /* [auto-meaningful-name] */$concat$applyO$length = [].concat.apply([], o).length
     var l = i.length - $concat$applyO$length
-    return l > 0 ? l : e(t, object$getPrototypeOfN$prototype$constructor)
+    return l > 0 ? l : e(t, Object$getPrototypeOfN$prototype$constructor)
   }
   return 0
 }

@@ -1,13 +1,13 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1979
  */
 
-var require$$1300Index$SourceMapGenerator = require("../1300/index").SourceMapGenerator
+var /* [auto-meaningful-name] */require$$_1300_index$SourceMapGenerator = require("../1300/index").SourceMapGenerator
 var i = require("./838")
 var o = /(\r?\n)/
-var a = "$$$isSourceNode$$$"
+var /* [auto-meaningful-name] */$$$isSourceNode$$$ = "$$$isSourceNode$$$"
 function s(e, t, n, r, i) {
   this.children = []
   this.sourceContents = {}
@@ -15,7 +15,7 @@ function s(e, t, n, r, i) {
   this.column = null == t ? null : t
   this.source = null == n ? null : n
   this.name = null == i ? null : i
-  this[a] = true
+  this[$$$isSourceNode$$$] = true
   if (null != r) {
     this.add(r)
   }
@@ -89,7 +89,7 @@ s.prototype.add = function (e) {
       this.add(e)
     }, this)
   } else {
-    if (!e[a] && "string" !== typeof e) {
+    if (!e[$$$isSourceNode$$$] && "string" !== typeof e) {
       throw new TypeError("Expected a SourceNode, string, or an array of SourceNodes and strings. Got " + e)
     }
     if (e) {
@@ -104,7 +104,7 @@ s.prototype.prepend = function (e) {
       this.prepend(e[t])
     }
   } else {
-    if (!e[a] && "string" !== typeof e) {
+    if (!e[$$$isSourceNode$$$] && "string" !== typeof e) {
       throw new TypeError("Expected a SourceNode, string, or an array of SourceNodes and strings. Got " + e)
     }
     this.children.unshift(e)
@@ -112,8 +112,8 @@ s.prototype.prepend = function (e) {
   return this
 }
 s.prototype.walk = function (e) {
-  for (var t, n = 0, this$children$length = this.children.length; n < this$children$length; n++) {
-    if ((t = this.children[n])[a]) {
+  for (var t, n = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; n < this$children$length; n++) {
+    if ((t = this.children[n])[$$$isSourceNode$$$]) {
       t.walk(e)
     } else {
       if ("" !== t) {
@@ -130,7 +130,7 @@ s.prototype.walk = function (e) {
 s.prototype.join = function (e) {
   var t
   var n
-  var this$children$length = this.children.length
+  var /* [auto-meaningful-name] */this$children$length = this.children.length
   if (this$children$length > 0) {
     for (t = [], n = 0; n < this$children$length - 1; n++) {
       t.push(this.children[n])
@@ -143,7 +143,7 @@ s.prototype.join = function (e) {
 }
 s.prototype.replaceRight = function (e, t) {
   var n = this.children[this.children.length - 1]
-  if (n[a]) {
+  if (n[$$$isSourceNode$$$]) {
     n.replaceRight(e, t)
   } else {
     if ("string" === typeof n) {
@@ -158,8 +158,8 @@ s.prototype.setSourceContent = function (e, t) {
   this.sourceContents[i.toSetString(e)] = t
 }
 s.prototype.walkSourceContents = function (e) {
-  for (var t = 0, this$children$length = this.children.length; t < this$children$length; t++) {
-    if (this.children[t][a]) {
+  for (var t = 0, /* [auto-meaningful-name] */this$children$length = this.children.length; t < this$children$length; t++) {
+    if (this.children[t][$$$isSourceNode$$$]) {
       this.children[t].walkSourceContents(e)
     }
   }
@@ -181,7 +181,7 @@ s.prototype.toStringWithSourceMap = function (e) {
     line: 1,
     column: 0
   }
-  var n = new require$$1300Index$SourceMapGenerator(e)
+  var n = new require$$_1300_index$SourceMapGenerator(e)
   var i = false
   var o = null
   var a = null
@@ -221,7 +221,7 @@ s.prototype.toStringWithSourceMap = function (e) {
         i = false
       }
     }
-    for (var u = 0, e$length = e.length; u < e$length; u++) {
+    for (var u = 0, /* [auto-meaningful-name] */e$length = e.length; u < e$length; u++) {
       if (10 === e.charCodeAt(u)) {
         t.line++
         t.column = 0

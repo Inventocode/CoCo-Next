@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：456
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./274")
+var r = require("./274/index")
 var i = require("./117")
 var o = require("./63")
 var a = function () {
@@ -16,9 +16,9 @@ var a = function () {
     this.cachedGenerators.push(new r.a(t, Int32Array.from([1])))
   }
   t.prototype.buildGenerator = function (t) {
-    var this$cachedGenerators = this.cachedGenerators
+    var /* [auto-meaningful-name] */this$cachedGenerators = this.cachedGenerators
     if (t >= this$cachedGenerators.length) {
-      for (var n = this$cachedGenerators[this$cachedGenerators.length - 1], this$field = this.field, this$cachedGenerators$length = this$cachedGenerators.length; this$cachedGenerators$length <= t; this$cachedGenerators$length++) {
+      for (var n = this$cachedGenerators[this$cachedGenerators.length - 1], /* [auto-meaningful-name] */this$field = this.field, /* [auto-meaningful-name] */this$cachedGenerators$length = this$cachedGenerators.length; this$cachedGenerators$length <= t; this$cachedGenerators$length++) {
         var a = n.multiply(new r.a(this$field, Int32Array.from([1, this$field.exp(this$cachedGenerators$length - 1 + this$field.getGeneratorBase())])))
         this$cachedGenerators.push(a)
         n = a

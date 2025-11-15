@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1170
@@ -15,7 +15,7 @@ module.exports = function (e, t) {
   }
   var n = Object.keys(e)
   var r = Object.keys(t)
-  var n$length = n.length
+  var /* [auto-meaningful-name] */n$length = n.length
   if (r.length !== n$length) {
     return false
   }

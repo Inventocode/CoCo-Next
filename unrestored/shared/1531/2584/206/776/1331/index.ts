@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1331
@@ -11,8 +11,8 @@ var i = require("./2201/index")
 var o = require("./2203")
 var a = require("./2204/index")
 var s = require("./1332")
-var s$getLatestEcmaVersion = s.getLatestEcmaVersion
-var s$getSupportedEcmaVersions = s.getSupportedEcmaVersions
+var /* [auto-meaningful-name] */s$getLatestEcmaVersion = s.getLatestEcmaVersion
+var /* [auto-meaningful-name] */s$getSupportedEcmaVersions = s.getSupportedEcmaVersions
 var l = {
   _regular: null,
   _jsx: null,

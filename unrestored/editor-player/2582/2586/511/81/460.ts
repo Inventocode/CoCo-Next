@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：460
@@ -225,7 +225,7 @@ var d = function () {
     g.appendBits(0, p)
     try {
       for (var y = l(Array.from(d)), w = y.next(); !w.done; w = y.next()) {
-        var w$value = w.value
+        var /* [auto-meaningful-name] */w$value = w.value
         g.appendBits(w$value, o)
       }
     } catch (_) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：729
@@ -6,7 +6,7 @@
 
 "use strict"
 
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -19,13 +19,13 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import i = require("../16/index");
+import /* [auto-meaningful-name] */$$_16_index = require("../16/index")
 require("../710/index")
-import Redux = require("redux");
-import s = require("../6");
-import c = require("../38/66");
-import l = require("./62");
-import u = require("../676/70");
+import /* [auto-meaningful-name] */Redux = require("redux")
+import s = require("../6")
+import /* [auto-meaningful-name] */$$_48_66 = require("../48/66")
+import l = require("./62")
+import /* [auto-meaningful-name] */$$_48_70 = require("../48/70")
 var d = function (e) {
   return {
     type: "SET_ROTATION",
@@ -87,7 +87,7 @@ var w = function (e) {
     }
   }
 }
-var C = c.a.Record({
+var C = $$_48_66.a.Record({
   language: O,
   acceleration: {
     x: b.x,
@@ -109,18 +109,18 @@ var C = c.a.Record({
     dialOutPhoneNumber: "123 4567 8901",
     incomingPhoneNumber: "123 4567 8901",
     callType: "",
-    callStatus: u.b.IDEL
+    callStatus: $$_48_70.b.IDEL
   }
 })()
 var T = function (e) {
-  var e$rotation = e.rotation
-  var e$rotation$x = e$rotation.x
-  var e$rotation$y = e$rotation.y
-  var e$rotation$z = e$rotation.z
-  var e$additionalAcceleration = e.additionalAcceleration
-  var e$additionalAcceleration$x = e$additionalAcceleration.x
-  var e$additionalAcceleration$y = e$additionalAcceleration.y
-  var e$additionalAcceleration$z = e$additionalAcceleration.z
+  var /* [auto-meaningful-name] */e$rotation = e.rotation
+  var /* [auto-meaningful-name] */e$rotation$x = e$rotation.x
+  var /* [auto-meaningful-name] */e$rotation$y = e$rotation.y
+  var /* [auto-meaningful-name] */e$rotation$z = e$rotation.z
+  var /* [auto-meaningful-name] */e$additionalAcceleration = e.additionalAcceleration
+  var /* [auto-meaningful-name] */e$additionalAcceleration$x = e$additionalAcceleration.x
+  var /* [auto-meaningful-name] */e$additionalAcceleration$y = e$additionalAcceleration.y
+  var /* [auto-meaningful-name] */e$additionalAcceleration$z = e$additionalAcceleration.z
   var u = new l.k(-e$rotation$x * E, -e$rotation$y * E, -e$rotation$z * E, "ZYX")
   var d = new l.O(e$additionalAcceleration$x, e$additionalAcceleration$y, e$additionalAcceleration$z).add(b)
   var p = new l.O().copy(y)
@@ -177,7 +177,7 @@ var I = function () {
   }
 }
 var A = Redux.createStore(I)
-import j = require("../8");
+import j = require("../8")
 var N = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -190,10 +190,10 @@ var N = function __importDefault(module) {
   })
   return defaultExport
 }(j)
-import R = require("../2628/index");
-import k = require("../../../../../src/shared/ui/language");
-import x = require("../10/index");
-import D = require("./1021");
+import /* [auto-meaningful-name] */$$_2628_index = require("../2628/index")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language = require("../../../../../src/shared/ui/language")
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import /* [auto-meaningful-name] */$_1021 = require("./1021")
 var M = function (e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : .001
   return Math.abs(e.x) <= t && Math.abs(e.y) <= t && Math.abs(e.z) <= t
@@ -204,11 +204,11 @@ function P() {
   var t = React.useRef(0)
   var n = React.useRef()
   var a = React.useState(false)
-  var s = x.a(a, 2)
+  var s = $$_10_index.a(a, 2)
   var c = s[0]
   var u = s[1]
-  var d = i.d()
-  var p = i.e(function (e) {
+  var d = $$_16_index.d()
+  var p = $$_16_index.e(function (e) {
     return e
   })
   n.current = p
@@ -234,7 +234,7 @@ function P() {
     i.setSize(n.width, n.height)
     i.setClearColor(L)
     i.autoClear = false
-    var s = new D.a()
+    var s = new $_1021.a()
     var c = new l.M().load("/editor/model/background.png")
     r.background = c
     s.loadAsync("/editor/model/phone.fbx").then(function (t) {
@@ -274,33 +274,33 @@ function P() {
       }
     }, [a])
   }(function (r) {
-    var e$current = e.current
-    var n$current = n.current
+    var /* [auto-meaningful-name] */e$current = e.current
+    var /* [auto-meaningful-name] */n$current = n.current
     if (e$current && n$current) {
-      var e$current$renderer = e$current.renderer
-      var e$current$scene = e$current.scene
-      var e$current$camera = e$current.camera
-      var e$current$phone = e$current.phone
+      var /* [auto-meaningful-name] */e$current$renderer = e$current.renderer
+      var /* [auto-meaningful-name] */e$current$scene = e$current.scene
+      var /* [auto-meaningful-name] */e$current$camera = e$current.camera
+      var /* [auto-meaningful-name] */e$current$phone = e$current.phone
       var p = 8 * r
       e$current$phone.rotation.toVector3(h)
       g.copy(e$current$phone.position)
-      var e$current$phone$rotation = e$current$phone.rotation
-      var e$current$phone$rotation$x = e$current$phone$rotation.x
-      var e$current$phone$rotation$y = e$current$phone$rotation.y
-      var e$current$phone$rotation$z = e$current$phone$rotation.z
-      var n$current$rotation = n$current.rotation
-      var n$current$rotation$x = n$current$rotation.x
-      var n$current$rotation$y = n$current$rotation.y
-      var n$current$rotation$z = n$current$rotation.z
+      var /* [auto-meaningful-name] */e$current$phone$rotation = e$current$phone.rotation
+      var /* [auto-meaningful-name] */e$current$phone$rotation$x = e$current$phone$rotation.x
+      var /* [auto-meaningful-name] */e$current$phone$rotation$y = e$current$phone$rotation.y
+      var /* [auto-meaningful-name] */e$current$phone$rotation$z = e$current$phone$rotation.z
+      var /* [auto-meaningful-name] */n$current$rotation = n$current.rotation
+      var /* [auto-meaningful-name] */n$current$rotation$x = n$current$rotation.x
+      var /* [auto-meaningful-name] */n$current$rotation$y = n$current$rotation.y
+      var /* [auto-meaningful-name] */n$current$rotation$z = n$current$rotation.z
       e$current$phone.rotation.set(l.s.lerp(e$current$phone$rotation$x, n$current$rotation$x * l.s.DEG2RAD, p), l.s.lerp(e$current$phone$rotation$y, n$current$rotation$y * l.s.DEG2RAD, p), l.s.lerp(e$current$phone$rotation$z, n$current$rotation$z * l.s.DEG2RAD, p))
-      var e$current$phone$position = e$current$phone.position
-      var e$current$phone$position$x = e$current$phone$position.x
-      var e$current$phone$position$y = e$current$phone$position.y
-      var e$current$phone$position$z = e$current$phone$position.z
-      var n$current$position = n$current.position
-      var n$current$position$x = n$current$position.x
-      var n$current$position$y = n$current$position.y
-      var n$current$position$z = n$current$position.z
+      var /* [auto-meaningful-name] */e$current$phone$position = e$current$phone.position
+      var /* [auto-meaningful-name] */e$current$phone$position$x = e$current$phone$position.x
+      var /* [auto-meaningful-name] */e$current$phone$position$y = e$current$phone$position.y
+      var /* [auto-meaningful-name] */e$current$phone$position$z = e$current$phone$position.z
+      var /* [auto-meaningful-name] */n$current$position = n$current.position
+      var /* [auto-meaningful-name] */n$current$position$x = n$current$position.x
+      var /* [auto-meaningful-name] */n$current$position$y = n$current$position.y
+      var /* [auto-meaningful-name] */n$current$position$z = n$current$position.z
       e$current$phone.position.set(l.s.lerp(e$current$phone$position$x, n$current$position$x, p), l.s.lerp(e$current$phone$position$y, n$current$position$y, p), l.s.lerp(e$current$phone$position$z, n$current$position$z, p))
       e$current$renderer.clear(true, true, true)
       e$current$renderer.render(e$current$scene, e$current$camera)
@@ -358,9 +358,9 @@ function P() {
     id: "emulatorCanvasWrapper"
   })
 }
-import B = require("../11");
-import F = require("../13/index");
-import G = require("../94/index");
+import /* [auto-meaningful-name] */$$_11 = require("../11")
+import /* [auto-meaningful-name] */$$_13_index = require("../13/index")
+import /* [auto-meaningful-name] */$$_94_index = require("../94/index")
 var U = {
   rotation: [{
     title: "X 旋转",
@@ -414,21 +414,21 @@ var U = {
   }]
 }
 var W = function (e) {
-  var e$type = e.type
-  var e$style = e.style
-  var r = i.d()
-  var a = i.e(function (e) {
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$style = e.style
+  var r = $$_16_index.d()
+  var a = $$_16_index.e(function (e) {
     return e[e$type]
   })
   var c = function (e) {
     switch (e$type) {
       case "rotation":
         return function (t) {
-          r(d(s.a(s.a({}, a), {}, B.a({}, e, t))))
+          r(d(s.a(s.a({}, a), {}, $$_11.a({}, e, t))))
         }
       case "position":
         return function (t) {
-          r(p(s.a(s.a({}, a), {}, B.a({}, e, t))))
+          r(p(s.a(s.a({}, a), {}, $$_11.a({}, e, t))))
         }
     }
   }
@@ -436,27 +436,27 @@ var W = function (e) {
   return o.a.createElement("div", {
     className: "emulator-sensors",
     style: e$style
-  }, o.a.createElement(F.h, {
+  }, o.a.createElement($$_13_index.h, {
     className: "emulator-sensor-form"
   }, l.map(function (e) {
-    var e$title = e.title
-    var e$prop = e.prop
-    var e$icon = e.icon
-    var e$max = e.max
-    var e$min = e.min
-    var e$unit = e.unit
+    var /* [auto-meaningful-name] */e$title = e.title
+    var /* [auto-meaningful-name] */e$prop = e.prop
+    var /* [auto-meaningful-name] */e$icon = e.icon
+    var /* [auto-meaningful-name] */e$max = e.max
+    var /* [auto-meaningful-name] */e$min = e.min
+    var /* [auto-meaningful-name] */e$unit = e.unit
     return o.a.createElement("div", {
       key: e$prop
     }, o.a.createElement("div", {
       className: "emulator-sensor-item-title"
-    }, o.a.createElement(G.a, {
+    }, o.a.createElement($$_94_index.a, {
       className: "emulator-icon",
       type: e$icon
     }), o.a.createElement("span", {
       className: "emulator-sensor-direction"
     }, e$title)), o.a.createElement("div", {
       className: "emulator-form-slider-wrapper"
-    }, o.a.createElement(F.x, {
+    }, o.a.createElement($$_13_index.x, {
       className: "emulator-formControl",
       min: e$min,
       max: e$max,
@@ -468,8 +468,8 @@ var W = function (e) {
   })))
 }
 var H = function (e) {
-  var e$style = e.style
-  var n = i.d()
+  var /* [auto-meaningful-name] */e$style = e.style
+  var n = $$_16_index.d()
   return o.a.createElement("div", {
     className: "emulator-sensors",
     style: e$style
@@ -509,14 +509,14 @@ var H = function (e) {
     }
   }, o.a.createElement("div", {
     className: "emulator-shakeBtn"
-  }, o.a.createElement(G.a, {
+  }, o.a.createElement($$_94_index.a, {
     type: "icon-phone-shake-selected"
   }), o.a.createElement("p", {
     className: "emulator-shakeBtnName"
   }, "摇一摇"))))
 }
 var V = function () {
-  var e = i.e(function (e) {
+  var e = $$_16_index.e(function (e) {
     return e.visiblePanel
   })
   var t = function (t) {
@@ -536,7 +536,7 @@ var V = function () {
     style: t("SHAKE")
   }))
 }
-import z = require("../702");
+import /* [auto-meaningful-name] */$$_702 = require("../702")
 var Y = [{
   type: "SHAKE",
   icon: "icon-phone-shake",
@@ -571,25 +571,25 @@ var Y = [{
   name: "emulator.receiveSms"
 }]
 var K = o.a.memo(function (e) {
-  var e$icon = e.icon
-  var e$selected = e.selected
-  var e$name = e.name
-  var z$a$formatMessage = z.a().formatMessage
+  var /* [auto-meaningful-name] */e$icon = e.icon
+  var /* [auto-meaningful-name] */e$selected = e.selected
+  var /* [auto-meaningful-name] */e$name = e.name
+  var /* [auto-meaningful-name] */$$_702$a$formatMessage = $$_702.a().formatMessage
   return o.a.createElement("div", {
     className: N()("emulator-channel-item", e$selected && "selected")
   }, o.a.createElement("div", {
     className: "emulator-icon"
-  }, e$icon && o.a.createElement(G.a, {
+  }, e$icon && o.a.createElement($$_94_index.a, {
     type: e$icon
   })), o.a.createElement("div", {
     className: "emulator-text"
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: e$name
   })))
 })
 var q = o.a.memo(function () {
-  var e = i.d()
-  var t = i.e(function (e) {
+  var e = $$_16_index.d()
+  var t = $$_16_index.e(function (e) {
     return e
   })
   return o.a.createElement("div", {
@@ -597,11 +597,11 @@ var q = o.a.memo(function () {
   }, o.a.createElement("ul", {
     className: "emulator-channel-list"
   }, Y.map(function (n) {
-    var n$type = n.type
-    var n$icon = n.icon
-    var n$name = n.name
-    var n$iconSelected = n.iconSelected
-    var n$spaceLine = n.spaceLine
+    var /* [auto-meaningful-name] */n$type = n.type
+    var /* [auto-meaningful-name] */n$icon = n.icon
+    var /* [auto-meaningful-name] */n$name = n.name
+    var /* [auto-meaningful-name] */n$iconSelected = n.iconSelected
+    var /* [auto-meaningful-name] */n$spaceLine = n.spaceLine
     return o.a.createElement("li", {
       key: n$type,
       onClick: function () {
@@ -643,8 +643,8 @@ var q = o.a.memo(function () {
     }))
   })))
 })
-import X = require("./302");
-import Q = require("./115");
+import /* [auto-meaningful-name] */$_302 = require("./302")
+import /* [auto-meaningful-name] */$_115 = require("./115")
 var Z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -656,95 +656,95 @@ var Z = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(Q)
+}($_115)
 var J = function () {
-  var e = i.d()
-  var z$a$formatMessage = z.a().formatMessage
-  var n = i.e(function (e) {
+  var e = $$_16_index.d()
+  var /* [auto-meaningful-name] */$$_702$a$formatMessage = $$_702.a().formatMessage
+  var n = $$_16_index.e(function (e) {
     return e.phoneCallInfo
   })
   return o.a.createElement("div", {
     className: Z.a.dialCall
   }, o.a.createElement("div", {
     className: Z.a.deviceBox
-  }, n.callStatus === u.b.IDEL && o.a.createElement("div", {
+  }, n.callStatus === $$_48_70.b.IDEL && o.a.createElement("div", {
     className: Z.a.callStatus
-  }, o.a.createElement(F.j, {
+  }, o.a.createElement($$_13_index.j, {
     type: "icon-phone-call-idle",
     className: Z.a.noCallIcon
-  }), o.a.createElement("div", null, z$a$formatMessage({
+  }), o.a.createElement("div", null, $$_702$a$formatMessage({
     id: "emulator.noCall"
-  }))), n.callStatus !== u.b.IDEL && o.a.createElement("div", {
+  }))), n.callStatus !== $$_48_70.b.IDEL && o.a.createElement("div", {
     className: Z.a.callStatus
   }, o.a.createElement("div", {
     className: Z.a.phoneNumber
-  }, n.dialOutPhoneNumber), n.callStatus === u.b.RINGING && o.a.createElement("div", null, z$a$formatMessage({
+  }, n.dialOutPhoneNumber), n.callStatus === $$_48_70.b.RINGING && o.a.createElement("div", null, $$_702$a$formatMessage({
     id: "emulator.incomingNumber"
-  })), n.callStatus === u.b.OFFHOOK && o.a.createElement("div", null, z$a$formatMessage({
+  })), n.callStatus === $$_48_70.b.OFFHOOK && o.a.createElement("div", null, $$_702$a$formatMessage({
     id: "emulator.onCalling"
   })))), o.a.createElement("div", {
     className: N()(Z.a.callBtnBox, Z.a.flexSC)
   }, o.a.createElement("div", {
-    className: "dialOutCall" === n.callType && n.callStatus !== u.b.IDEL ? Z.a.active : ""
+    className: "dialOutCall" === n.callType && n.callStatus !== $$_48_70.b.IDEL ? Z.a.active : ""
   }, o.a.createElement("div", {
     id: "emulatorDialCallEnd",
     className: N()(Z.a.callBtnItem, Z.a.callEnd),
     onClick: function () {
-      if ("dialOutCall" === n.callType && n.callStatus !== u.b.IDEL) {
-        X.press("emulatorDialCallEnd")
+      if ("dialOutCall" === n.callType && n.callStatus !== $$_48_70.b.IDEL) {
+        $_302.press("emulatorDialCallEnd")
         e(h({
           onPhoneCallEnd: {
             callingPageVisible: false,
             callType: "dialOutCall",
-            callStatus: u.b.IDEL
+            callStatus: $$_48_70.b.IDEL
           }
         }))
         e(_({
-          callStatus: u.b.IDEL
+          callStatus: $$_48_70.b.IDEL
         }))
       }
     }
-  }, o.a.createElement(F.j, {
+  }, o.a.createElement($$_13_index.j, {
     type: "icon-phone-call-disconnect"
   })), o.a.createElement("span", {
     className: Z.a.callBtnText
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.callEndByOtherSide"
   }))), o.a.createElement("div", {
-    className: "dialOutCall" === n.callType && n.callStatus === u.b.RINGING ? Z.a.active : ""
+    className: "dialOutCall" === n.callType && n.callStatus === $$_48_70.b.RINGING ? Z.a.active : ""
   }, o.a.createElement("div", {
     id: "emulatorDialCallConnect",
     className: N()(Z.a.callBtnItem, Z.a.callConnect),
     onClick: function () {
-      if ("dialOutCall" === n.callType && n.callStatus === u.b.RINGING) {
-        X.press("emulatorDialCallConnect")
+      if ("dialOutCall" === n.callType && n.callStatus === $$_48_70.b.RINGING) {
+        $_302.press("emulatorDialCallConnect")
         e(h({
           onPhoneCallConnect: {
             callType: "dialOutCall",
-            callStatus: u.b.OFFHOOK
+            callStatus: $$_48_70.b.OFFHOOK
           }
         }))
         e(_({
-          callStatus: u.b.OFFHOOK
+          callStatus: $$_48_70.b.OFFHOOK
         }))
       }
     }
-  }, o.a.createElement(F.j, {
+  }, o.a.createElement($$_13_index.j, {
     type: "icon-phone-call-dial"
   })), o.a.createElement("span", {
     className: Z.a.callBtnText
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.callConnectByOtherSide"
   })))))
 }
 var $ = function () {
-  var e = i.d()
-  var z$a$formatMessage = z.a().formatMessage
-  var n = i.e(function (e) {
+  var e = $$_16_index.d()
+  var /* [auto-meaningful-name] */$$_702$a$formatMessage = $$_702.a().formatMessage
+  var n = $$_16_index.e(function (e) {
     return e.phoneCallInfo
   })
   var a = React.useState(n.incomingPhoneNumber)
-  var s = x.a(a, 2)
+  var s = $$_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
   return o.a.createElement("div", {
@@ -755,22 +755,22 @@ var $ = function () {
     className: Z.a.callStatus
   }, o.a.createElement("div", {
     className: Z.a.phoneNumber
-  }, c), n.callStatus === u.b.IDEL && o.a.createElement("div", null, z$a$formatMessage({
+  }, c), n.callStatus === $$_48_70.b.IDEL && o.a.createElement("div", null, $$_702$a$formatMessage({
     id: "emulator.callNumber"
-  })), n.callStatus === u.b.RINGING && o.a.createElement("div", null, z$a$formatMessage({
+  })), n.callStatus === $$_48_70.b.RINGING && o.a.createElement("div", null, $$_702$a$formatMessage({
     id: "emulator.onRinging"
-  })), n.callStatus === u.b.OFFHOOK && o.a.createElement("div", null, z$a$formatMessage({
+  })), n.callStatus === $$_48_70.b.OFFHOOK && o.a.createElement("div", null, $$_702$a$formatMessage({
     id: "emulator.onCalling"
   })))), o.a.createElement("div", {
     className: Z.a.phoneNumberBox
   }, o.a.createElement("div", {
     className: Z.a.phoneNumber
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.incomingNumber"
-  })), o.a.createElement(F.k, {
+  })), o.a.createElement($$_13_index.k, {
     warning: !c,
     defaultValue: c,
-    placeholder: z$a$formatMessage({
+    placeholder: $$_702$a$formatMessage({
       id: "emulator.incomingNumberPlaceHolder"
     }),
     onChange: function (e) {
@@ -778,78 +778,78 @@ var $ = function () {
     }
   }), o.a.createElement("div", {
     className: Z.a.warning
-  }, !c && o.a.createElement("span", null, z$a$formatMessage({
+  }, !c && o.a.createElement("span", null, $$_702$a$formatMessage({
     id: "emulator.incomingNumberPlaceHolder"
   })))), o.a.createElement("div", {
     className: N()(Z.a.callBtnBox, Z.a.flexSC)
   }, o.a.createElement("div", {
-    className: "incomingCall" === n.callType && n.callStatus !== u.b.IDEL ? Z.a.active : ""
+    className: "incomingCall" === n.callType && n.callStatus !== $$_48_70.b.IDEL ? Z.a.active : ""
   }, o.a.createElement("div", {
     id: "emulatorReceiveCallEnd",
     className: N()(Z.a.callBtnItem, Z.a.callEnd),
     onClick: function () {
-      if ("incomingCall" === n.callType && n.callStatus !== u.b.IDEL) {
-        X.press("emulatorReceiveCallEnd")
+      if ("incomingCall" === n.callType && n.callStatus !== $$_48_70.b.IDEL) {
+        $_302.press("emulatorReceiveCallEnd")
         e(h({
           onPhoneCallEnd: {
             callingPageVisible: false,
             callType: "incomingCall",
-            callStatus: u.b.IDEL
+            callStatus: $$_48_70.b.IDEL
           }
         }))
         e(_({
-          callStatus: u.b.IDEL
+          callStatus: $$_48_70.b.IDEL
         }))
       }
     }
-  }, o.a.createElement(F.j, {
+  }, o.a.createElement($$_13_index.j, {
     type: "icon-phone-call-disconnect"
   })), o.a.createElement("span", {
     className: Z.a.callBtnText
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.callEndByOtherSide"
   }))), o.a.createElement("div", {
-    className: n.callStatus === u.b.IDEL && c ? Z.a.active : ""
+    className: n.callStatus === $$_48_70.b.IDEL && c ? Z.a.active : ""
   }, o.a.createElement("div", {
     id: "emulatorReceiveCallConnect",
     className: N()(Z.a.callBtnItem, Z.a.callConnect),
     onClick: function () {
-      if (n.callStatus === u.b.IDEL && c) {
-        X.press("emulatorReceiveCallConnect")
+      if (n.callStatus === $$_48_70.b.IDEL && c) {
+        $_302.press("emulatorReceiveCallConnect")
         e(h({
           onReceivePhoneCall: {
             callingPageVisible: true,
             phoneNumber: c,
             callType: "incomingCall",
-            callStatus: u.b.RINGING
+            callStatus: $$_48_70.b.RINGING
           }
         }))
         e(_({
           incomingPhoneNumber: c,
           callType: "incomingCall",
-          callStatus: u.b.RINGING
+          callStatus: $$_48_70.b.RINGING
         }))
       }
     }
-  }, o.a.createElement(F.j, {
+  }, o.a.createElement($$_13_index.j, {
     type: "icon-phone-call-dial"
   })), o.a.createElement("span", {
     className: Z.a.callBtnText
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.callByOtherSide"
   })))))
 }
 var ee = function () {
-  var e = i.d()
-  var z$a$formatMessage = z.a().formatMessage
+  var e = $$_16_index.d()
+  var /* [auto-meaningful-name] */$$_702$a$formatMessage = $$_702.a().formatMessage
   var n = React.useState("123 4567 8901")
-  var a = x.a(n, 2)
+  var a = $$_10_index.a(n, 2)
   var s = a[0]
   var c = a[1]
-  var l = React.useState(z$a$formatMessage({
+  var l = React.useState($$_702$a$formatMessage({
     id: "emulator.smsContentDefault"
   }))
-  var u = x.a(l, 2)
+  var u = $$_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
   return o.a.createElement("div", {
@@ -858,12 +858,12 @@ var ee = function () {
     className: Z.a.phoneNumberBox
   }, o.a.createElement("div", {
     className: Z.a.phoneNumber
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.smsNumber"
-  })), o.a.createElement(F.k, {
+  })), o.a.createElement($$_13_index.k, {
     defaultValue: s,
     warning: !s,
-    placeholder: z$a$formatMessage({
+    placeholder: $$_702$a$formatMessage({
       id: "emulator.smsNumberPlaceHolder"
     }),
     onChange: function (e) {
@@ -872,19 +872,19 @@ var ee = function () {
     maxLength: 20
   }), o.a.createElement("div", {
     className: Z.a.warning
-  }, !s && o.a.createElement("span", null, z$a$formatMessage({
+  }, !s && o.a.createElement("span", null, $$_702$a$formatMessage({
     id: "emulator.smsNumberPlaceHolder"
   })))), o.a.createElement("div", {
     className: Z.a.phoneNumberBox
   }, o.a.createElement("div", {
     className: Z.a.phoneNumber
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.smsContent"
-  })), o.a.createElement(F.A, {
+  })), o.a.createElement($$_13_index.A, {
     defaultValue: d,
     rows: 10,
     maxLength: 200,
-    placeholder: z$a$formatMessage({
+    placeholder: $$_702$a$formatMessage({
       id: "emulator.smsContentPlaceHolder"
     }),
     onChange: function (e) {
@@ -892,13 +892,13 @@ var ee = function () {
     }
   }), o.a.createElement("div", {
     className: Z.a.textAreaWarning
-  }, !d && o.a.createElement("span", null, z$a$formatMessage({
+  }, !d && o.a.createElement("span", null, $$_702$a$formatMessage({
     id: "emulator.smsContentPlaceHolder"
   })))), o.a.createElement("div", {
     id: "emulatorReceiveSms",
     onClick: function () {
       if (s && d) {
-        X.press("emulatorReceiveSms")
+        $_302.press("emulatorReceiveSms")
         e(h({
           onReceiveSms: {
             receiveSmsPageVisible: true,
@@ -909,18 +909,18 @@ var ee = function () {
       }
     },
     className: N()(Z.a.receiveSmsBtn, (!s || !d) && Z.a.disabled)
-  }, z$a$formatMessage({
+  }, $$_702$a$formatMessage({
     id: "emulator.receiveSms"
   })))
 }
 var te = ["SHAKE", "ROTATION", "POSITION"]
 var ne = function (e) {
-  var e$messageWindow = e.messageWindow
-  var n = i.d()
-  var a = i.e(function (e) {
+  var /* [auto-meaningful-name] */e$messageWindow = e.messageWindow
+  var n = $$_16_index.d()
+  var a = $$_16_index.e(function (e) {
     return e.visiblePanel
   })
-  var s = i.e(function (e) {
+  var s = $$_16_index.e(function (e) {
     return e.language
   })
   var c = React.useRef(null)
@@ -936,9 +936,9 @@ var ne = function (e) {
   }, [n, e$messageWindow])
   React.useEffect(function () {
     var e = function (e) {
-      var e$data = e.data
-      var e$data$type = e$data.type
-      var e$data$data = e$data.data
+      var /* [auto-meaningful-name] */e$data = e.data
+      var /* [auto-meaningful-name] */e$data$type = e$data.type
+      var /* [auto-meaningful-name] */e$data$data = e$data.data
       if ("EMULATOR" === e$data$type) {
         Object.keys(e$data$data).forEach(function (e) {
           !function (e, t) {
@@ -956,7 +956,7 @@ var ne = function (e) {
         Object.keys(e$data$data).forEach(function (e) {
           if ("playing" === e) {
             n(_({
-              callStatus: u.b.IDEL
+              callStatus: $$_48_70.b.IDEL
             }))
           }
           if ("phoneCallInfo" === e) {
@@ -978,9 +978,9 @@ var ne = function (e) {
       window.removeEventListener("click", t)
     }
   }, [n])
-  return o.a.createElement(R.b, {
+  return o.a.createElement($$_2628_index.b, {
     locale: s,
-    messages: k.e[s] || k.e[k.b]
+    messages: $$_$$_$$_$$_$$_src_shared_ui_language.e[s] || $$_$$_$$_$$_$$_src_shared_ui_language.e[$$_$$_$$_$$_$$_src_shared_ui_language.b]
   }, o.a.createElement("div", {
     className: "emulator-wrapper",
     ref: c,
@@ -1183,8 +1183,8 @@ var re = function () {
 }
 var _a
 _a = o.a.memo(function (e) {
-  var e$messageWindow = e.messageWindow
-  return o.a.createElement(i.a, {
+  var /* [auto-meaningful-name] */e$messageWindow = e.messageWindow
+  return o.a.createElement($$_16_index.a, {
     store: A
   }, o.a.createElement(re, null), o.a.createElement(ne, {
     messageWindow: e$messageWindow

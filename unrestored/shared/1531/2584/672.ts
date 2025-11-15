@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：672
@@ -48,12 +48,12 @@ var r = {
     outOfRange: "嵌入积木数值超过取值范围"
   }
 }
-import o = require("./6");
-import i = require("./5");
-import a = require("./60");
-import s = require("./82");
-import c = require("./116");
-import l = require("./9");
+import o = require("./6")
+import i = require("./5")
+import a = require("./60")
+import s = require("./82")
+import /* [auto-meaningful-name] */$_116 = require("./116")
+import l = require("./9")
 var u = {
   type: i.z,
   icon: s.g,
@@ -246,7 +246,7 @@ var u = {
     key: "backgroundMode",
     label: "backgroundMode",
     valueType: "string",
-    defaultValue: c.a.TEMPLATE,
+    defaultValue: $_116.a.TEMPLATE,
     hidePropertyEditor: true,
     blockOptions: {
       generateBlock: false
@@ -255,7 +255,7 @@ var u = {
     key: "templateMode",
     label: "templateMode",
     valueType: "string",
-    defaultValue: c.b.RECTANGLE_FILL,
+    defaultValue: $_116.b.RECTANGLE_FILL,
     hidePropertyEditor: true,
     blockOptions: {
       generateBlock: false
@@ -287,7 +287,7 @@ var u = {
     key: "imageResizeMode",
     label: "imageResizeMode",
     valueType: "string",
-    defaultValue: c.c.CONTAIN,
+    defaultValue: $_116.c.CONTAIN,
     hidePropertyEditor: true,
     blockOptions: {
       generateBlock: false
@@ -351,25 +351,25 @@ var u = {
       label: "",
       valueType: "string",
       checkType: ["string"],
-      defaultValue: c.b.RECTANGLE_FILL,
+      defaultValue: $_116.b.RECTANGLE_FILL,
       dropdown: [{
         label: "rectangleFill",
-        value: c.b.RECTANGLE_FILL,
+        value: $_116.b.RECTANGLE_FILL,
         image: "https://static.codemao.cn/coco/image/button-rect-fill-template.png",
         isHideFieldImage: true
       }, {
         label: "rectangleOutline",
-        value: c.b.RECTANGLE_OUTLINE,
+        value: $_116.b.RECTANGLE_OUTLINE,
         image: "https://static.codemao.cn/coco/image/button-rect-outline-template.png",
         isHideFieldImage: true
       }, {
         label: "circleFill",
-        value: c.b.CIRCLE_FILL,
+        value: $_116.b.CIRCLE_FILL,
         image: "https://static.codemao.cn/coco/image/button-circle-fill-template.png",
         isHideFieldImage: true
       }, {
         label: "circleOutline",
-        value: c.b.CIRCLE_OUTLINE,
+        value: $_116.b.CIRCLE_OUTLINE,
         image: "https://static.codemao.cn/coco/image/button-circle-outline-template.png",
         isHideFieldImage: true
       }]

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：374
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.FieldTextInput = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../4/127")
+var o = require("../1036/127")
 var a = require("../125/294")
 var s = require("../125/index")
 var c = require("../125/474")
@@ -39,7 +39,7 @@ var u = function (e) {
     if (this.source_block && this.workspace_) {
       var t
       var n
-      var this$widget_div$DIV = this.widget_div.DIV
+      var /* [auto-meaningful-name] */this$widget_div$DIV = this.widget_div.DIV
       if (this.field_group && this$widget_div$DIV) {
         if (this.source_block.is_shadow()) {
           t = {
@@ -168,7 +168,7 @@ var u = function (e) {
           t.events.unbind_event(t.html_input.on_composition_end_wrapper_)
         }
         delete t.html_input
-        var t$widget_div$DIV$style = t.widget_div.DIV.style
+        var /* [auto-meaningful-name] */t$widget_div$DIV$style = t.widget_div.DIV.style
         t$widget_div$DIV$style.width = "auto"
         t$widget_div$DIV$style.height = "auto"
         t$widget_div$DIV$style.fontSize = ""
@@ -206,7 +206,7 @@ var u = function (e) {
   t.prototype.on_html_input_change = function () {
     var /* [auto-meaningful-name] */this$source_block
     if (this.html_input) {
-      var this$html_input$value = this.html_input.value
+      var /* [auto-meaningful-name] */this$html_input$value = this.html_input.value
       if (this$html_input$value !== this.html_input.oldValue_) {
         this.html_input.oldValue_ = this$html_input$value
         this.set_value(this$html_input$value)
@@ -229,7 +229,7 @@ var u = function (e) {
     if (undefined === t) {
       t = "blocklyHtmlInput"
     }
-    var this$widget_div$DIV = this.widget_div.DIV
+    var /* [auto-meaningful-name] */this$widget_div$DIV = this.widget_div.DIV
     if (!this.source_block || !this.workspace_ || !this$widget_div$DIV) {
       throw new Error("Trying to create a field editor without a source block.")
     }

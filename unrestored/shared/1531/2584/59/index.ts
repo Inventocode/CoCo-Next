@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：59
@@ -7,7 +7,7 @@
 "use strict"
 
 export { a as b }
-import r = require("./767/index");
+import /* [auto-meaningful-name] */$_767_index = require("./767/index")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -19,7 +19,7 @@ var o = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(r)
+}($_767_index)
 var i = {
   openServiceHost: "https://dev-open-service.codemao.cn",
   serverHost: "https://backend-dev.codemao.cn",
@@ -39,7 +39,7 @@ function a() {
       return t
     }
   }
-  var window$location$hostname = window.location.hostname
+  var /* [auto-meaningful-name] */window$location$hostname = window.location.hostname
   return window$location$hostname.startsWith("dev") || "localhost" === window$location$hostname || o()(window$location$hostname) ? "development" : window$location$hostname.startsWith("test") ? "test" : window$location$hostname.startsWith("staging") ? "staging" : window$location$hostname.startsWith("press") ? "press" : "production"
 }
 !function () {

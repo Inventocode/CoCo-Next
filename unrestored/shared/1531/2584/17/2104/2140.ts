@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2140
@@ -13,7 +13,7 @@ exports.RuntimeData = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = (0, r.__importStar)(require("hammerjs"))
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = require("../../125/index")
 var c = function () {
   function e() {
@@ -26,11 +26,11 @@ var c = function () {
     this.document_events_bound = false
     this.before_scale = 1
     this.pinch_listener = function (t) {
-      var e$workspace_db$current = e.workspace_db.current
+      var /* [auto-meaningful-name] */e$workspace_db$current = e.workspace_db.current
       if (e$workspace_db$current.current_gesture_) {
         e$workspace_db$current.current_gesture_.cancel()
       }
-      var t$scale = t.scale
+      var /* [auto-meaningful-name] */t$scale = t.scale
       if (t$scale - e.before_scale > .08) {
         e$workspace_db$current.mark_focused()
         e$workspace_db$current.zoom_center(.5)
@@ -71,19 +71,19 @@ var c = function () {
     this.hammer_manager.on("pinchend", this.pinchend_listener)
   }
   e.prototype.unregister_finger_events = function () {
-    var /* [auto-meaningful-name] */_this$hammer_manager2
-    var /* [auto-meaningful-name] */_this$hammer_manager3
     var /* [auto-meaningful-name] */this$hammer_manager
+    var /* [auto-meaningful-name] */_this$hammer_manager
+    var /* [auto-meaningful-name] */_this$hammer_manager2
     if (this.pinch_recognizer) {
-      if (!(null === (_this$hammer_manager2 = this.hammer_manager) || undefined === _this$hammer_manager2)) {
-        _this$hammer_manager2.remove(this.pinch_recognizer)
+      if (!(null === (this$hammer_manager = this.hammer_manager) || undefined === this$hammer_manager)) {
+        this$hammer_manager.remove(this.pinch_recognizer)
       }
     }
-    if (!(null === (_this$hammer_manager3 = this.hammer_manager) || undefined === _this$hammer_manager3)) {
-      _this$hammer_manager3.off("pinch", this.pinch_listener)
+    if (!(null === (_this$hammer_manager = this.hammer_manager) || undefined === _this$hammer_manager)) {
+      _this$hammer_manager.off("pinch", this.pinch_listener)
     }
-    if (!(null === (this$hammer_manager = this.hammer_manager) || undefined === this$hammer_manager)) {
-      this$hammer_manager.off("pinchend", this.pinchend_listener)
+    if (!(null === (_this$hammer_manager2 = this.hammer_manager) || undefined === _this$hammer_manager2)) {
+      _this$hammer_manager2.off("pinchend", this.pinchend_listener)
     }
   }
   e.prototype.cancel_gesture_when_multi_touch = function () {
@@ -91,7 +91,7 @@ var c = function () {
     var t = this
     if (!(null === (this$workspace_db$current = this.workspace_db.current) || undefined === this$workspace_db$current)) {
       this$workspace_db$current.get_parent_svg().addEventListener("touchmove", function (e) {
-        var t$workspace_db$current = t.workspace_db.current
+        var /* [auto-meaningful-name] */t$workspace_db$current = t.workspace_db.current
         if (e.touches.length > 1 && t$workspace_db$current.current_gesture_) {
           t$workspace_db$current.current_gesture_.cancel()
         }

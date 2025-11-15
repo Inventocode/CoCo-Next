@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1125
@@ -166,7 +166,7 @@ function p(e, n, o) {
   }
   i(e)
   i(n)
-  for (var a, s = [], c = u(s), f = d(e), f$take = f.take, f$peek = f.peek, A = 0; A < n.length; A++) {
+  for (var a, s = [], c = u(s), f = d(e), /* [auto-meaningful-name] */f$take = f.take, /* [auto-meaningful-name] */f$peek = f.peek, A = 0; A < n.length; A++) {
     var g = n[A]
     var v = undefined
     var m = undefined
@@ -208,7 +208,7 @@ function p(e, n, o) {
 function _(e, n) {
   i(e)
   i(n)
-  for (var o, a = [], s = u(a), dE$take = d(e).take, p = 0; p < n.length; p++) {
+  for (var o, a = [], s = u(a), /* [auto-meaningful-name] */dE$take = d(e).take, p = 0; p < n.length; p++) {
     var _ = n[p]
     var A = undefined
     var g = undefined

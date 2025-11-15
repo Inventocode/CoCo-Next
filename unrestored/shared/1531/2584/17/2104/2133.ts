@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2133
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.Css = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = function () {
   function e() {
     this.style_sheet = undefined
@@ -26,12 +26,12 @@ var a = function () {
   }
   e.prototype.inject = function (e, t) {
     if (!this.style_sheet) {
-      var n = ".blocklyDraggable {}\n"
+      var /* [auto-meaningful-name] */$blocklyDraggable_n = ".blocklyDraggable {}\n"
       if (e) {
-        n += this.CONTENT
+        $blocklyDraggable_n += this.CONTENT
       }
       this.media_path = t.replace(/[\\\/]$/, "")
-      n = n.replace(/<<<PATH>>>/g, this.media_path)
+      $blocklyDraggable_n = $blocklyDraggable_n.replace(/<<<PATH>>>/g, this.media_path)
       var r = document.createElement("style")
       if (document.head) {
         document.head.insertBefore(r, document.head.firstChild)
@@ -40,7 +40,7 @@ var a = function () {
         i.insertBefore(r, i.firstChild)
         document.appendChild(i)
       }
-      var o = document.createTextNode(n)
+      var o = document.createTextNode($blocklyDraggable_n)
       r.appendChild(o)
       this.style_sheet = r.sheet
     }

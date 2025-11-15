@@ -1,10 +1,10 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2252
  */
 
-var r = require("../../../../38/607/806/index")
+var r = require("../../806/index")
 module.exports = function (e) {
   function t(e) {
     for (var t = 0, n = 0; n < e.length; n++) {
@@ -16,7 +16,7 @@ module.exports = function (e) {
   function i(e) {
     var n
     function r() {
-      for (var arguments$length = arguments.length, t = new Array(arguments$length), o = 0; o < arguments$length; o++) {
+      for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), o = 0; o < arguments$length; o++) {
         t[o] = arguments[o]
       }
       if (r.enabled) {
@@ -96,7 +96,7 @@ module.exports = function (e) {
     i.names = []
     i.skips = []
     var n = ("string" === typeof e ? e : "").split(/[\s,]+/)
-    var n$length = n.length
+    var /* [auto-meaningful-name] */n$length = n.length
     for (t = 0; t < n$length; t++) {
       if (n[t]) {
         if ("-" === (e = n[t].replace(/\*/g, ".*?"))[0]) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1636
@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("./1623/86")
-var o = require("./1623/272")
-var i = require("./1623/942")
-var a = require("./1623/309")
-var s = require("./1656/628")
-var c = require("./1660/495")
-var require$1659386Index$f = require("./1659/386/index").f
+var r = require("./1698/86/index")
+var o = require("./1541/272")
+var i = require("./1622/942")
+var a = require("./1541/309")
+var s = require("./1541/628")
+var c = require("./1585/495")
+var /* [auto-meaningful-name] */require$_1684_386$f = require("./1684/386").f
 if (o) {
   r({
     target: "Object",
@@ -24,7 +24,7 @@ if (o) {
       var n = a(this)
       var r = s(e)
       do {
-        if (t = require$1659386Index$f(n, r)) {
+        if (t = require$_1684_386$f(n, r)) {
           return t.get
         }
       } while (n = c(n))

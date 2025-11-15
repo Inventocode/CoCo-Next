@@ -1,13 +1,13 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1300
  */
 
-var r = require("../1976/1301/index")
+var r = require("./1301/index")
 var i = require("../1979/838")
-var require$$19761302$ArraySet = require("../1976/1302").ArraySet
-var require$1975$MappingList = require("./1975").MappingList
+var /* [auto-meaningful-name] */require$_1302$ArraySet = require("./1302").ArraySet
+var /* [auto-meaningful-name] */require$_1975$MappingList = require("./1975").MappingList
 function s(e) {
   if (!e) {
     e = {}
@@ -15,14 +15,14 @@ function s(e) {
   this._file = i.getArg(e, "file", null)
   this._sourceRoot = i.getArg(e, "sourceRoot", null)
   this._skipValidation = i.getArg(e, "skipValidation", false)
-  this._sources = new require$$19761302$ArraySet()
-  this._names = new require$$19761302$ArraySet()
-  this._mappings = new require$1975$MappingList()
+  this._sources = new require$_1302$ArraySet()
+  this._names = new require$_1302$ArraySet()
+  this._mappings = new require$_1975$MappingList()
   this._sourcesContents = null
 }
 s.prototype._version = 3
 s.fromSourceMap = function (e) {
-  var e$sourceRoot = e.sourceRoot
+  var /* [auto-meaningful-name] */e$sourceRoot = e.sourceRoot
   var n = new s({
     file: e.file,
     sourceRoot: e$sourceRoot
@@ -120,12 +120,12 @@ s.prototype.applySourceMap = function (e, t, n) {
     }
     r = e.file
   }
-  var this$_sourceRoot = this._sourceRoot
+  var /* [auto-meaningful-name] */this$_sourceRoot = this._sourceRoot
   if (null != this$_sourceRoot) {
     r = i.relative(this$_sourceRoot, r)
   }
-  var s = new require$$19761302$ArraySet()
-  var c = new require$$19761302$ArraySet()
+  var s = new require$_1302$ArraySet()
+  var c = new require$_1302$ArraySet()
   this._mappings.unsortedForEach(function (t) {
     if (t.source === r && null != t.originalLine) {
       var o = e.originalPositionFor({
@@ -147,11 +147,11 @@ s.prototype.applySourceMap = function (e, t, n) {
         }
       }
     }
-    var t$source = t.source
+    var /* [auto-meaningful-name] */t$source = t.source
     if (!(null == t$source || s.has(t$source))) {
       s.add(t$source)
     }
-    var t$name = t.name
+    var /* [auto-meaningful-name] */t$name = t.name
     if (!(null == t$name || c.has(t$name))) {
       c.add(t$name)
     }
@@ -185,7 +185,7 @@ s.prototype._validateMapping = function (e, t, n, r) {
   }
 }
 s.prototype._serializeMappings = function () {
-  for (var e, t, n, o, a = 0, s = 1, c = 0, u = 0, l = 0, f = 0, d = "", h = this._mappings.toArray(), p = 0, h$length = h.length; p < h$length; p++) {
+  for (var e, t, n, o, a = 0, s = 1, c = 0, u = 0, l = 0, f = 0, d = "", h = this._mappings.toArray(), p = 0, /* [auto-meaningful-name] */h$length = h.length; p < h$length; p++) {
     e = ""
     if ((t = h[p]).generatedLine !== s) {
       for (a = 0; t.generatedLine !== s;) {

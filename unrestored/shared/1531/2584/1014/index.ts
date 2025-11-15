@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1014
@@ -238,9 +238,9 @@ function w(e, t) {
   })
 }
 function C(e, t) {
-  var e$imageSettings = e.imageSettings
-  var e$size = e.size
-  var e$includeMargin = e.includeMargin
+  var /* [auto-meaningful-name] */e$imageSettings = e.imageSettings
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$includeMargin = e.includeMargin
   if (null == e$imageSettings) {
     return null
   }
@@ -284,7 +284,7 @@ var S = function (e) {
     var e
     var n
     c(this, t)
-    for (var arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
       o[i] = arguments[i]
     }
     g(f(n = d(this, (e = p(t)).call.apply(e, [this].concat(o)))), "_canvas", undefined)
@@ -327,24 +327,24 @@ var S = function (e) {
   }, {
     key: "update",
     value: function () {
-      var this$props = this.props
-      var this$props$value = this$props.value
-      var this$props$size = this$props.size
-      var this$props$level = this$props.level
-      var this$props$bgColor = this$props.bgColor
-      var this$props$fgColor = this$props.fgColor
-      var this$props$includeMargin = this$props.includeMargin
-      var this$props$imageSettings = this$props.imageSettings
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$value = this$props.value
+      var /* [auto-meaningful-name] */this$props$size = this$props.size
+      var /* [auto-meaningful-name] */this$props$level = this$props.level
+      var /* [auto-meaningful-name] */this$props$bgColor = this$props.bgColor
+      var /* [auto-meaningful-name] */this$props$fgColor = this$props.fgColor
+      var /* [auto-meaningful-name] */this$props$includeMargin = this$props.includeMargin
+      var /* [auto-meaningful-name] */this$props$imageSettings = this$props.imageSettings
       var c = new v(-1, b[this$props$level])
       c.addData(y(this$props$value))
       c.make()
       if (null != this._canvas) {
-        var this$_canvas = this._canvas
+        var /* [auto-meaningful-name] */this$_canvas = this._canvas
         var u = this$_canvas.getContext("2d")
         if (!u) {
           return
         }
-        var c$modules = c.modules
+        var /* [auto-meaningful-name] */c$modules = c.modules
         if (null === c$modules) {
           return
         }
@@ -381,15 +381,15 @@ var S = function (e) {
     key: "render",
     value: function () {
       var e = this
-      var this$props = this.props
+      var /* [auto-meaningful-name] */this$props = this.props
       this$props.value
-      var this$props$size = this$props.size
+      var /* [auto-meaningful-name] */this$props$size = this$props.size
       this$props.level
       this$props.bgColor
       this$props.fgColor
-      var this$props$style = this$props.style
+      var /* [auto-meaningful-name] */this$props$style = this$props.style
       this$props.includeMargin
-      var this$props$imageSettings = this$props.imageSettings
+      var /* [auto-meaningful-name] */this$props$imageSettings = this$props.imageSettings
       var c = s(this$props, ["value", "size", "level", "bgColor", "fgColor", "style", "includeMargin", "imageSettings"])
       var l = a({
         height: this$props$size,
@@ -431,19 +431,19 @@ var I = function (e) {
   u(t, [{
     key: "render",
     value: function () {
-      var this$props = this.props
-      var this$props$value = this$props.value
-      var this$props$size = this$props.size
-      var this$props$level = this$props.level
-      var this$props$bgColor = this$props.bgColor
-      var this$props$fgColor = this$props.fgColor
-      var this$props$includeMargin = this$props.includeMargin
-      var this$props$imageSettings = this$props.imageSettings
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$value = this$props.value
+      var /* [auto-meaningful-name] */this$props$size = this$props.size
+      var /* [auto-meaningful-name] */this$props$level = this$props.level
+      var /* [auto-meaningful-name] */this$props$bgColor = this$props.bgColor
+      var /* [auto-meaningful-name] */this$props$fgColor = this$props.fgColor
+      var /* [auto-meaningful-name] */this$props$includeMargin = this$props.includeMargin
+      var /* [auto-meaningful-name] */this$props$imageSettings = this$props.imageSettings
       var u = s(this$props, ["value", "size", "level", "bgColor", "fgColor", "includeMargin", "imageSettings"])
       var d = new v(-1, b[this$props$level])
       d.addData(y(this$props$value))
       d.make()
-      var d$modules = d.modules
+      var /* [auto-meaningful-name] */d$modules = d.modules
       if (null === d$modules) {
         return null
       }
@@ -483,7 +483,7 @@ var I = function (e) {
 }(_.PureComponent)
 g(I, "defaultProps", E)
 var A = function (e) {
-  var e$renderAs = e.renderAs
+  var /* [auto-meaningful-name] */e$renderAs = e.renderAs
   var n = s(e, ["renderAs"])
   var r = "svg" === e$renderAs ? I : S
   return _.createElement(r, n)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：170
@@ -90,7 +90,7 @@ var s = function () {
     throw new u.a()
   }
   t.recordPattern = function (t, e, r) {
-    for (var r$length = r.length, o = 0; o < r$length; o++) {
+    for (var /* [auto-meaningful-name] */r$length = r.length, o = 0; o < r$length; o++) {
       r[o] = 0
     }
     var i = t.getSize()
@@ -114,7 +114,7 @@ var s = function () {
     }
   }
   t.recordPatternInReverse = function (e, r, n) {
-    for (var n$length = n.length, i = e.get(r); r > 0 && n$length >= 0;) {
+    for (var /* [auto-meaningful-name] */n$length = n.length, i = e.get(r); r > 0 && n$length >= 0;) {
       if (e.get(--r) !== i) {
         n$length--
         i = !i
@@ -126,7 +126,7 @@ var s = function () {
     t.recordPattern(e, r + 1, n)
   }
   t.patternMatchVariance = function (t, e, r) {
-    for (var t$length = t.length, o = 0, i = 0, a = 0; a < t$length; a++) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, o = 0, i = 0, a = 0; a < t$length; a++) {
       o += t[a]
       i += e[a]
     }

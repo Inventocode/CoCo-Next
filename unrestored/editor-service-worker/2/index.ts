@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2
@@ -6,12 +6,12 @@
 
 "use strict"
 
-import * as n from "./0/index"
-import o from "./0/index"
+import * as /* [auto-meaningful-name] */$_0_index from "./0/index"
+import /* [auto-meaningful-name] */_$_0_index from "./0/index"
 function i(t, e, r, n, o, i, a) {
   try {
     var c = t[i](a)
-    var c$value = c.value
+    var /* [auto-meaningful-name] */c$value = c.value
   } catch (s) {
     return void r(s)
   }
@@ -40,12 +40,12 @@ function a(t) {
 var c
 var u = new Map()
 function s() {
-  return (s = a(o.mark(function t(e) {
+  return (s = a(_$_0_index.mark(function t(e) {
     var /* [auto-meaningful-name] */t$sent
     var /* [auto-meaningful-name] */t$sent$id
     var /* [auto-meaningful-name] */t$sent$data
     var a
-    return o.wrap(function (t) {
+    return _$_0_index.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:
@@ -90,7 +90,7 @@ c.addEventListener("activate", function () {
   c.clients.claim()
 })
 c.addEventListener("fetch", function (t) {
-  var t$request = t.request
+  var /* [auto-meaningful-name] */t$request = t.request
   var r = new URL(t$request.url)
   if ("POST" === t$request.method && r.origin === c.location.origin && "/editor/service/compile" === r.pathname) {
     return t.respondWith(function (t) {

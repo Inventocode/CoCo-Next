@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1367
@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 })
 var r = require("../../../359")
 var i = require("../../../715")
-var o = require("../../../1366/498")
+var o = require("../../../2342/498")
 var a = require("./2325")
 var s = function () {
   function e(e, t, n, s) {
@@ -33,7 +33,7 @@ var s = function () {
     }
   }
   e.prototype.hasTag = function (e) {
-    for (var t = 0, this$metadata = this.metadata; t < this$metadata.length; t++) {
+    for (var t = 0, /* [auto-meaningful-name] */this$metadata = this.metadata; t < this$metadata.length; t++) {
       if (this$metadata[t].key === e) {
         return true
       }
@@ -73,7 +73,7 @@ var s = function () {
   e.prototype.matchesTag = function (e) {
     var t = this
     return function (n) {
-      for (var r = 0, t$metadata = t.metadata; r < t$metadata.length; r++) {
+      for (var r = 0, /* [auto-meaningful-name] */t$metadata = t.metadata; r < t$metadata.length; r++) {
         var o = t$metadata[r]
         if (o.key === e && o.value === n) {
           return true

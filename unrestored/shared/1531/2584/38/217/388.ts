@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：388
@@ -7,14 +7,14 @@
 "use strict"
 
 export { i as a }
-import r = require("../../27");
-import o = require("../../40");
+import /* [auto-meaningful-name] */$$_$$_27 = require("../../27")
+import /* [auto-meaningful-name] */$$_$$_40 = require("../../40")
 var i = function () {
   function e() {
-    r.a(this, e)
+    $$_$$_27.a(this, e)
     this.listeners = {}
   }
-  o.a(e, [{
+  $$_$$_40.a(e, [{
     key: "addEventListener",
     value: function (e, t) {
       var n = this.listeners[e]

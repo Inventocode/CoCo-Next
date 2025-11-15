@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2318
@@ -141,7 +141,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 var o = require("./2319")
-var a = require("../1366/444")
+var a = require("../2342/444")
 var s = require("../580")
 var c = require("../359")
 var u = require("../1364")

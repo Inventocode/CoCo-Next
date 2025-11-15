@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：452
@@ -23,7 +23,7 @@ var n = function () {
     return t.squareToQuadrilateral(c, f, h, l, d, p, g, y).times(w)
   }
   t.prototype.transformPoints = function (t) {
-    for (var t$length = t.length, this$a11 = this.a11, this$a12 = this.a12, this$a13 = this.a13, this$a21 = this.a21, this$a22 = this.a22, this$a23 = this.a23, this$a31 = this.a31, this$a32 = this.a32, this$a33 = this.a33, h = 0; h < t$length; h += 2) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, /* [auto-meaningful-name] */this$a11 = this.a11, /* [auto-meaningful-name] */this$a12 = this.a12, /* [auto-meaningful-name] */this$a13 = this.a13, /* [auto-meaningful-name] */this$a21 = this.a21, /* [auto-meaningful-name] */this$a22 = this.a22, /* [auto-meaningful-name] */this$a23 = this.a23, /* [auto-meaningful-name] */this$a31 = this.a31, /* [auto-meaningful-name] */this$a32 = this.a32, /* [auto-meaningful-name] */this$a33 = this.a33, h = 0; h < t$length; h += 2) {
       var l = t[h]
       var d = t[h + 1]
       var p = this$a13 * l + this$a23 * d + this$a33
@@ -32,7 +32,7 @@ var n = function () {
     }
   }
   t.prototype.transformPointsWithValues = function (t, e) {
-    for (var this$a11 = this.a11, this$a12 = this.a12, this$a13 = this.a13, this$a21 = this.a21, this$a22 = this.a22, this$a23 = this.a23, this$a31 = this.a31, this$a32 = this.a32, this$a33 = this.a33, t$length = t.length, l = 0; l < t$length; l++) {
+    for (var /* [auto-meaningful-name] */this$a11 = this.a11, /* [auto-meaningful-name] */this$a12 = this.a12, /* [auto-meaningful-name] */this$a13 = this.a13, /* [auto-meaningful-name] */this$a21 = this.a21, /* [auto-meaningful-name] */this$a22 = this.a22, /* [auto-meaningful-name] */this$a23 = this.a23, /* [auto-meaningful-name] */this$a31 = this.a31, /* [auto-meaningful-name] */this$a32 = this.a32, /* [auto-meaningful-name] */this$a33 = this.a33, /* [auto-meaningful-name] */t$length = t.length, l = 0; l < t$length; l++) {
       var d = t[l]
       var p = e[l]
       var g = this$a13 * d + this$a23 * p + this$a33

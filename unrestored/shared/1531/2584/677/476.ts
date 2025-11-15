@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：476
@@ -6,11 +6,11 @@
 
 "use strict"
 
-export { r as a }
+export { CONTACT_PICKER_WIDGET as a }
 export { o as b }
-var r = "CONTACT_PICKER_WIDGET"
+var /* [auto-meaningful-name] */CONTACT_PICKER_WIDGET = "CONTACT_PICKER_WIDGET"
 var o = {
-  type: r,
+  type: CONTACT_PICKER_WIDGET,
   icon: "icon-widget-contact-picker",
   title: "widgetName",
   platforms: ["web", "android"],
@@ -62,4 +62,4 @@ var o = {
     }]
   }]
 }
-export default r
+export default CONTACT_PICKER_WIDGET

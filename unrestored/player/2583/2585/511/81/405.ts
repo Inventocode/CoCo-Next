@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：405
@@ -13,7 +13,7 @@ var a = require("./37")
 var s = require("./150")
 var u = require("./169")
 var c = require("./164")
-var l = require("./191/index")
+var l = require("./191")
 var d = require("./335")
 var f = require("./297")
 var h = require("./455")
@@ -135,7 +135,7 @@ var b = function () {
     this.isMirror = t
   }
   t.prototype.mirror = function () {
-    for (var this$bitMatrix = this.bitMatrix, e = 0, n = this$bitMatrix.getWidth(); e < n; e++) {
+    for (var /* [auto-meaningful-name] */this$bitMatrix = this.bitMatrix, e = 0, n = this$bitMatrix.getWidth(); e < n; e++) {
       for (var r = e + 1, i = this$bitMatrix.getHeight(); r < i; r++) {
         if (this$bitMatrix.get(e, r) !== this$bitMatrix.get(r, e)) {
           this$bitMatrix.flip(r, e)
@@ -208,7 +208,7 @@ var _ = function () {
     var p = 0
     try {
       for (var m = v(l), b = m.next(); !b.done; b = m.next()) {
-        for (var b$value = b.value, y = 0; y < b$value.getCount(); y++) {
+        for (var /* [auto-meaningful-name] */b$value = b.value, y = 0; y < b$value.getCount(); y++) {
           var w = b$value.getDataCodewords()
           var E = u.getECCodewordsPerBlock() + w
           h[p++] = new t(w, new Uint8Array(E))
@@ -229,14 +229,14 @@ var _ = function () {
         }
       }
     }
-    for (var _h0$codewords$length = h[0].codewords.length, T = h.length - 1; T >= 0;) {
-      if (h[T].codewords.length === _h0$codewords$length) {
+    for (var /* [auto-meaningful-name] */h0$codewords$length = h[0].codewords.length, T = h.length - 1; T >= 0;) {
+      if (h[T].codewords.length === h0$codewords$length) {
         break
       }
       T--
     }
     T++
-    var A = _h0$codewords$length - u.getECCodewordsPerBlock()
+    var A = h0$codewords$length - u.getECCodewordsPerBlock()
     var S = 0
     for (y = 0; y < A; y++) {
       for (var I = 0; I < p; I++) {
@@ -246,8 +246,8 @@ var _ = function () {
     for (I = T; I < p; I++) {
       h[I].codewords[A] = e[S++]
     }
-    var h0$codewords$length = h[0].codewords.length
-    for (y = A; y < h0$codewords$length; y++) {
+    var /* [auto-meaningful-name] */_h0$codewords$length = h[0].codewords.length
+    for (y = A; y < _h0$codewords$length; y++) {
       for (I = 0; I < p; I++) {
         var j = I < T ? y : y + 1
         h[I].codewords[j] = e[S++]
@@ -408,7 +408,7 @@ var T = require("./118")
 var A = require("./371")
 var S = require("./372")
 var I = require("./452")
-var C = require("./73/index")
+var C = require("./73")
 var j = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -483,7 +483,7 @@ var R = function () {
     this.crossCheckStateCount = new Int32Array(3)
   }
   t.prototype.find = function () {
-    for (var this$startX = this.startX, this$height = this.height, n = this$startX + this.width, r = this.startY + this$height / 2, i = new Int32Array(3), this$image = this.image, s = 0; s < this$height; s++) {
+    for (var /* [auto-meaningful-name] */this$startX = this.startX, /* [auto-meaningful-name] */this$height = this.height, n = this$startX + this.width, r = this.startY + this$height / 2, i = new Int32Array(3), /* [auto-meaningful-name] */this$image = this.image, s = 0; s < this$height; s++) {
       var u = r + (0 === (1 & s) ? Math.floor((s + 1) / 2) : -Math.floor((s + 1) / 2))
       i[0] = 0
       i[1] = 0
@@ -532,7 +532,7 @@ var R = function () {
     return e - t[2] - t[1] / 2
   }
   t.prototype.foundPatternCross = function (t) {
-    for (var this$moduleSize = this.moduleSize, n = this$moduleSize / 2, r = 0; r < 3; r++) {
+    for (var /* [auto-meaningful-name] */this$moduleSize = this.moduleSize, n = this$moduleSize / 2, r = 0; r < 3; r++) {
       if (Math.abs(this$moduleSize - t[r]) >= n) {
         return false
       }
@@ -540,9 +540,9 @@ var R = function () {
     return true
   }
   t.prototype.crossCheckVertical = function (e, n, r, i) {
-    var this$image = this.image
+    var /* [auto-meaningful-name] */this$image = this.image
     var a = this$image.getHeight()
-    var this$crossCheckStateCount = this.crossCheckStateCount
+    var /* [auto-meaningful-name] */this$crossCheckStateCount = this.crossCheckStateCount
     this$crossCheckStateCount[0] = 0
     this$crossCheckStateCount[1] = 0
     this$crossCheckStateCount[2] = 0
@@ -587,7 +587,7 @@ var R = function () {
       var c = (e[0] + e[1] + e[2]) / 3
       try {
         for (var l = k(this.possibleCenters), d = l.next(); !d.done; d = l.next()) {
-          var d$value = d.value
+          var /* [auto-meaningful-name] */d$value = d.value
           if (d$value.aboutEquals(c, u, s)) {
             return d$value.combineEstimate(u, s, c)
           }
@@ -723,7 +723,7 @@ var B = function () {
   t.prototype.find = function (e) {
     var n = null !== e && undefined !== e && undefined !== e.get(o.a.TRY_HARDER)
     var r = null !== e && undefined !== e && undefined !== e.get(o.a.PURE_BARCODE)
-    var this$image = this.image
+    var /* [auto-meaningful-name] */this$image = this.image
     var a = this$image.getHeight()
     var s = this$image.getWidth()
     var u = Math.floor(3 * a / (4 * t.MAX_MODULES))
@@ -817,7 +817,7 @@ var B = function () {
     return Math.abs(i - t[0]) < o && Math.abs(i - t[1]) < o && Math.abs(3 * i - t[2]) < 3 * o && Math.abs(i - t[3]) < o && Math.abs(i - t[4]) < o
   }
   t.prototype.getCrossCheckStateCount = function () {
-    var this$crossCheckStateCount = this.crossCheckStateCount
+    var /* [auto-meaningful-name] */this$crossCheckStateCount = this.crossCheckStateCount
     this$crossCheckStateCount[0] = 0
     this$crossCheckStateCount[1] = 0
     this$crossCheckStateCount[2] = 0
@@ -826,7 +826,7 @@ var B = function () {
     return this$crossCheckStateCount
   }
   t.prototype.crossCheckDiagonal = function (e, n, r, i) {
-    for (var o = this.getCrossCheckStateCount(), a = 0, this$image = this.image; e >= a && n >= a && this$image.get(n - a, e - a);) {
+    for (var o = this.getCrossCheckStateCount(), a = 0, /* [auto-meaningful-name] */this$image = this.image; e >= a && n >= a && this$image.get(n - a, e - a);) {
       o[2]++
       a++
     }
@@ -874,7 +874,7 @@ var B = function () {
     return Math.abs(l - i) < 2 * i && t.foundPatternCross(o)
   }
   t.prototype.crossCheckVertical = function (e, n, r, i) {
-    for (var this$image = this.image, a = this$image.getHeight(), s = this.getCrossCheckStateCount(), u = e; u >= 0 && this$image.get(n, u);) {
+    for (var /* [auto-meaningful-name] */this$image = this.image, a = this$image.getHeight(), s = this.getCrossCheckStateCount(), u = e; u >= 0 && this$image.get(n, u);) {
       s[2]++
       u--
     }
@@ -920,7 +920,7 @@ var B = function () {
     return 5 * Math.abs(c - i) >= 2 * i ? NaN : t.foundPatternCross(s) ? t.centerFromEnd(s, u) : NaN
   }
   t.prototype.crossCheckHorizontal = function (e, n, r, i) {
-    for (var this$image = this.image, a = this$image.getWidth(), s = this.getCrossCheckStateCount(), u = e; u >= 0 && this$image.get(u, n);) {
+    for (var /* [auto-meaningful-name] */this$image = this.image, a = this$image.getWidth(), s = this.getCrossCheckStateCount(), u = e; u >= 0 && this$image.get(u, n);) {
       s[2]++
       u--
     }
@@ -970,7 +970,7 @@ var B = function () {
     var a = t.centerFromEnd(e, r)
     var s = this.crossCheckVertical(n, Math.floor(a), e[2], o)
     if (!isNaN(s) && (a = this.crossCheckHorizontal(Math.floor(a), Math.floor(s), e[2], o), !isNaN(a) && (!i || this.crossCheckDiagonal(Math.floor(s), Math.floor(a), e[2], o)))) {
-      for (var u = o / 7, c = false, this$possibleCenters = this.possibleCenters, d = 0, this$possibleCenters$length = this$possibleCenters.length; d < this$possibleCenters$length; d++) {
+      for (var u = o / 7, c = false, /* [auto-meaningful-name] */this$possibleCenters = this.possibleCenters, d = 0, /* [auto-meaningful-name] */this$possibleCenters$length = this$possibleCenters.length; d < this$possibleCenters$length; d++) {
         var h = this$possibleCenters[d]
         if (h.aboutEquals(u, s, a)) {
           this$possibleCenters[d] = h.combineEstimate(s, a, u)
@@ -998,7 +998,7 @@ var B = function () {
     var r = null
     try {
       for (var i = L(this.possibleCenters), o = i.next(); !o.done; o = i.next()) {
-        var o$value = o.value
+        var /* [auto-meaningful-name] */o$value = o.value
         if (o$value.getCount() >= t.CENTER_QUORUM) {
           if (null != r) {
             this.hasSkipped = true
@@ -1031,7 +1031,7 @@ var B = function () {
     var /* [auto-meaningful-name] */f$return
     var o = 0
     var a = 0
-    var this$possibleCenters$length = this.possibleCenters.length
+    var /* [auto-meaningful-name] */this$possibleCenters$length = this.possibleCenters.length
     try {
       for (var u = L(this.possibleCenters), c = u.next(); !c.done; c = u.next()) {
         if ((h$value = c.value).getCount() >= t.CENTER_QUORUM) {
@@ -1061,7 +1061,7 @@ var B = function () {
     var d = 0
     try {
       for (var f = L(this.possibleCenters), h = f.next(); !h.done; h = f.next()) {
-        var h$value = h.value
+        var /* [auto-meaningful-name] */h$value = h.value
         d += Math.abs(h$value.getEstimatedModuleSize() - l)
       }
     } catch (b) {
@@ -1086,12 +1086,12 @@ var B = function () {
     var /* [auto-meaningful-name] */l$return
     var n
     var /* [auto-meaningful-name] */g$return
-    var this$possibleCenters$length = this.possibleCenters.length
+    var /* [auto-meaningful-name] */this$possibleCenters$length = this.possibleCenters.length
     if (this$possibleCenters$length < 3) {
       throw new a.a()
     }
     var o
-    var this$possibleCenters = this.possibleCenters
+    var /* [auto-meaningful-name] */this$possibleCenters = this.possibleCenters
     if (this$possibleCenters$length > 3) {
       var u = 0
       var c = 0

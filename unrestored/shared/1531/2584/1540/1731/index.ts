@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1731
@@ -6,16 +6,16 @@
 
 "use strict"
 
-var r = require("../1720/258/index")
-var o = require("../1735/257")
+var r = require("../1724/258")
+var o = require("../1684/257")
 var i = require("./1248/index")
-var a = require("../1623/309")
-var s = require("../1736/167")
-var r$aTypedArray = r.aTypedArray;
+var a = require("../1541/309")
+var s = require("../1541/167")
+var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("set", function (e) {
   r$aTypedArray(this)
   var t = i(arguments.length > 1 ? arguments[1] : undefined, 1)
-  var this$length = this.length
+  var /* [auto-meaningful-name] */this$length = this.length
   var r = a(e)
   var s = o(r.length)
   var l = 0

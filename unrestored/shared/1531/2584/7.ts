@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：7
@@ -9,7 +9,7 @@
 function r(e, t, n, r, i, o, a) {
   try {
     var s = e[o](a)
-    var s$value = s.value
+    var /* [auto-meaningful-name] */s$value = s.value
   } catch (u) {
     return void n(u)
   }

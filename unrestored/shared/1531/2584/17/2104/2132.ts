@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2132
@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.ContextMenu = undefined
 var r = require("tslib")
 var i = require("inversify")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = require("../../125/195/index")
 var s = require("../../125/index")
 var c = require("../../125/714")
@@ -65,7 +65,7 @@ var l = function () {
     var n = document.createElement("div")
     n.setAttribute("tabindex", "-1")
     n.classList.add("menu-wrapper")
-    for (var e$options = e.options, i = function (i) {
+    for (var /* [auto-meaningful-name] */e$options = e.options, i = function (i) {
         var o = e$options[i]
         var a = document.createElement("div")
         a.classList.add("menu-item")

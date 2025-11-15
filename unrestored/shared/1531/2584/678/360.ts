@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：360
@@ -6,11 +6,11 @@
 
 "use strict"
 
-export { r as a }
+export { SMS_SERVICE_WIDGET as a }
 export { o as b }
-var r = "SMS_SERVICE_WIDGET"
+var /* [auto-meaningful-name] */SMS_SERVICE_WIDGET = "SMS_SERVICE_WIDGET"
 var o = {
-  type: r,
+  type: SMS_SERVICE_WIDGET,
   icon: "icon-widget-sms-service",
   title: "widgetName",
   platforms: ["web", "android"],
@@ -100,4 +100,4 @@ var o = {
     }
   }]
 }
-export default r
+export default SMS_SERVICE_WIDGET

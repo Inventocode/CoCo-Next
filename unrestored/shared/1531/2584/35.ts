@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：35
@@ -32,7 +32,7 @@ export { Z as qb }
 export { J as w }
 export { $ as cb }
 export { se as f }
-export { ce as e }
+export { DB_NOT_EXIST as e }
 export { le as c }
 export { ue as d }
 export { de as b }
@@ -115,7 +115,7 @@ export { Ft as xb }
 export { Gt as eb }
 export { Ut as o }
 var r
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -128,25 +128,25 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import a = require("./7");
-import s = require("./10/index");
-import c = require("./11");
-import l = require("./6");
-import u = require("./25/index");
-import d = require("./47");
-import p = require("./42/index");
-import f = require("./5");
-import h = require("./64");
-import m = require("./15");
-import g = require("./83");
-import _ = require("./313");
-import v = require("./97");
-import b = require("./190");
-import y = require("./133/index");
-import E = require("./76");
-import O = require("../../../../src/shared/events/actions");
-import w = require("./26/index");
-import C = require("./53");
+import a = require("./7")
+import /* [auto-meaningful-name] */$_10_index = require("./10/index")
+import c = require("./11")
+import l = require("./6")
+import /* [auto-meaningful-name] */$_25_index = require("./25/index")
+import d = require("./47")
+import /* [auto-meaningful-name] */$_42_index = require("./42/index")
+import f = require("./5")
+import h = require("./64")
+import m = require("./15")
+import g = require("./83")
+import /* [auto-meaningful-name] */$_313 = require("./313")
+import v = require("./97")
+import /* [auto-meaningful-name] */$_190 = require("./190")
+import /* [auto-meaningful-name] */$_133 = require("./133")
+import E = require("./76")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions = require("../../../../src/shared/events/actions")
+import /* [auto-meaningful-name] */$_26_index = require("./26/index")
+import C = require("./53")
 !function (e) {
   e[e.UI = 0] = "UI"
   e[e.STAGE = 1] = "STAGE"
@@ -165,7 +165,7 @@ var T = new Map()
 var S = new Map()
 function I(e, t) {
   t.forEach(function (t) {
-    var t$type = t.type
+    var /* [auto-meaningful-name] */t$type = t.type
     if (T.has(t$type)) {
       console.error("Component ".concat(t$type, " is registered"))
     } else {
@@ -217,7 +217,7 @@ function k(e) {
 }
 function x() {
   var e = []
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (!(t.type !== f.y && t.type !== f.B)) {
       e.push({
         id: t.id,
@@ -229,7 +229,7 @@ function x() {
 }
 function D() {
   var e = []
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (t.type === f.l) {
       e.push({
         id: t.id,
@@ -241,7 +241,7 @@ function D() {
 }
 function M() {
   var e = []
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (t.type === f.h) {
       e.push({
         id: t.id,
@@ -254,7 +254,7 @@ function M() {
 function L(e) {
   var t = Se(e)
   if (t && (t.type === f.y || t.type === f.B || t.type === f.l)) {
-    var t$attributes$fields = t.attributes.fields
+    var /* [auto-meaningful-name] */t$attributes$fields = t.attributes.fields
     return undefined === t$attributes$fields ? [] : t$attributes$fields
   }
   return []
@@ -279,9 +279,9 @@ function U(e) {
   var t = Se(e)
   return t && t.type === f.j ? t.attributes.cloudDictId : null
 }
-import W = require("./17/index");
-import H = require("./60");
-import V = require("./36/85");
+import /* [auto-meaningful-name] */$_17_index = require("./17/index")
+import H = require("./60")
+import /* [auto-meaningful-name] */$_301_85 = require("./301/85")
 var z = ["Size", "Coordinate", "VisibleSwitch", "WidgetOpacity"]
 var Y = ["size", "position", "visible", "opacity"]
 var K = {
@@ -308,19 +308,19 @@ var X = {
   defaultValue: false
 }
 function Q(e) {
-  var e$property = e.property
-  var e$widgetType = e.widgetType
-  var e$widgetId = e.widgetId
-  var o = "widget_get"
+  var /* [auto-meaningful-name] */e$property = e.property
+  var /* [auto-meaningful-name] */e$widgetType = e.widgetType
+  var /* [auto-meaningful-name] */e$widgetId = e.widgetId
+  var /* [auto-meaningful-name] */Widget_get = "widget_get"
   if (e.isSetProperty) {
-    o = "widget_set"
+    Widget_get = "widget_set"
   }
-  return "<block type=\"".concat(o, "\" uncache=\"true\">\n    <mutation property=\"").concat(e$property, "\" widget_type=\"").concat(e$widgetType, "\"></mutation>\n    <field name=\"WIDGET_ID\">").concat(e$widgetId, "</field>\n  </block>")
+  return "<block type=\"".concat(Widget_get, "\" uncache=\"true\">\n    <mutation property=\"").concat(e$property, "\" widget_type=\"").concat(e$widgetType, "\"></mutation>\n    <field name=\"WIDGET_ID\">").concat(e$widgetId, "</field>\n  </block>")
 }
 function Z(e) {
-  var e$property = e.property
-  var e$widgetType = e.widgetType
-  var e$widgetId = e.widgetId
+  var /* [auto-meaningful-name] */e$property = e.property
+  var /* [auto-meaningful-name] */e$widgetType = e.widgetType
+  var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   return "<block type=\"widget_method\" uncache=\"true\">\n  <mutation\n    widget_type=\"".concat(e$widgetType, "\"\n    method=\"").concat(e$property, "\">\n  </mutation>\n  <field name=\"WIDGET_ID\">").concat(e$widgetId, "</field>\n</block>")
 }
 function J(e, t) {
@@ -332,8 +332,8 @@ function J(e, t) {
   }
   e.forEach(function (e) {
     var n
-    var e$lineLabel = e.lineLabel
-    var e$text = e.text
+    var /* [auto-meaningful-name] */e$lineLabel = e.lineLabel
+    var /* [auto-meaningful-name] */e$text = e.text
     var a = document.getElementById(e$lineLabel)
     if (!a) {
       (a = document.createElement("div")).id = e$lineLabel
@@ -350,7 +350,7 @@ function J(e, t) {
       c.style.fontFamily = "NotoSansCJKsc-Medium, NotoSansCJKsc"
       c.style.color = "#82778C"
       c.style.marginLeft = "8px"
-      var l = V.a(t, e$text) || e$text
+      var l = $_301_85.a(t, e$text) || e$text
       c.innerText = l
       var u = document.createElement("div")
       u.style.flex = "1"
@@ -363,13 +363,13 @@ function J(e, t) {
       if (!(null === (n = r) || undefined === n)) {
         n.appendChild(a)
       }
-      W.Blink.mainWorkspace.register_flyout_button(e$lineLabel, function () {
+      $_17_index.Blink.mainWorkspace.register_flyout_button(e$lineLabel, function () {
         var e = document.createElementNS(C.c, "foreignObject")
         e.style.overflow = "visible"
         var t = document.getElementById(e$lineLabel)
         if (t) {
-          var t$clientWidth = t.clientWidth
-          var t$clientHeight = t.clientHeight
+          var /* [auto-meaningful-name] */t$clientWidth = t.clientWidth
+          var /* [auto-meaningful-name] */t$clientHeight = t.clientHeight
           e.setAttribute("width", "".concat(t$clientWidth))
           e.setAttribute("height", "".concat(t$clientHeight))
           e.appendChild(t)
@@ -379,8 +379,8 @@ function J(e, t) {
           update_callback: function (t) {
             var n = e.querySelector("#".concat(e$lineLabel))
             if (n) {
-              var n$clientWidth = n.clientWidth
-              var n$clientHeight = n.clientHeight
+              var /* [auto-meaningful-name] */n$clientWidth = n.clientWidth
+              var /* [auto-meaningful-name] */n$clientHeight = n.clientHeight
               n$clientWidth /= C.d
               n$clientHeight /= C.d
               e.setAttribute("width", "".concat(n$clientWidth))
@@ -396,9 +396,9 @@ function J(e, t) {
   document.body.append(r)
 }
 function $(e) {
-  var e$widgetType = e.widgetType
-  var e$title = e.title
-  var e$lineId = e.lineId
+  var /* [auto-meaningful-name] */e$widgetType = e.widgetType
+  var /* [auto-meaningful-name] */e$title = e.title
+  var /* [auto-meaningful-name] */e$lineId = e.lineId
   var o = "flyout-line-".concat(e$widgetType, "-").concat(e$lineId)
   J([{
     lineLabel: o,
@@ -406,22 +406,22 @@ function $(e) {
   }], e$widgetType)
   return "<label type=\"".concat(o, "\"></label>")
 }
-import Lodash = require("lodash");
-import te = require("./38/3");
-import ne = require("./38/22");
+import /* [auto-meaningful-name] */Lodash = require("lodash")
+import /* [auto-meaningful-name] */$_48_3 = require("./48/3")
+import /* [auto-meaningful-name] */$_38_22 = require("./38/22")
 var re = i.a.mark(_e)
 var oe = i.a.mark(ve)
 var ie = i.a.mark(be)
 var ae = i.a.mark(ye)
 var se = 0
-var ce = "DB_NOT_EXIST"
+var /* [auto-meaningful-name] */DB_NOT_EXIST = "DB_NOT_EXIST"
 var le = 2e3
 var ue = 5e3
 var de = .8
 var pe = 1
 function fe() {
   var e = []
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (t.type === f.j) {
       e.push(t)
     }
@@ -430,7 +430,7 @@ function fe() {
 }
 function he() {
   var e = []
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (t.type === f.k && t.attributes.cloudTableId) {
       e.push(t.attributes.cloudTableId)
     }
@@ -460,7 +460,7 @@ function me(e) {
   return t
 }
 function ge() {
-  return p.b.clear()
+  return $_42_index.b.clear()
 }
 function _e() {
   var /* [auto-meaningful-name] */r$sent
@@ -471,14 +471,14 @@ function _e() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2
-          return te.f(ne.p)
+          return $_48_3.f($_38_22.p)
         case 2:
           r$sent = r.sent
           t = fe()
           n = t.map(function (e) {
             return e.attributes.cloudDictId
           })
-          return r.abrupt("return", m.r(n, u.a(r$sent)).filter(function (e) {
+          return r.abrupt("return", m.r(n, $_25_index.a(r$sent)).filter(function (e) {
             return e !== se
           }))
         case 6:
@@ -496,11 +496,11 @@ function ve() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return te.f(ne.q)
+          return $_48_3.f($_38_22.q)
         case 2:
           n$sent = n.sent
           t = he()
-          return n.abrupt("return", m.r(t, u.a(n$sent)).filter(function (e) {
+          return n.abrupt("return", m.r(t, $_25_index.a(n$sent)).filter(function (e) {
             return e !== se
           }))
         case 5:
@@ -519,14 +519,14 @@ function be() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2
-          return te.f(ne.p)
+          return $_48_3.f($_38_22.p)
         case 2:
           r$sent = r.sent
           t = fe()
           n = t.map(function (e) {
             return e.attributes.cloudDictId
           })
-          return r.abrupt("return", m.r(u.a(r$sent), n).filter(function (e) {
+          return r.abrupt("return", m.r($_25_index.a(r$sent), n).filter(function (e) {
             return e !== se
           }))
         case 6:
@@ -544,11 +544,11 @@ function ye() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return te.f(ne.q)
+          return $_48_3.f($_38_22.q)
         case 2:
           n$sent = n.sent
           t = he()
-          return n.abrupt("return", m.r(u.a(n$sent), t).filter(function (e) {
+          return n.abrupt("return", m.r($_25_index.a(n$sent), t).filter(function (e) {
             return e !== se
           }))
         case 5:
@@ -609,7 +609,7 @@ function Oe(e, t) {
 }
 function we() {
   var e = false
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if ((null === t || undefined === t ? undefined : t.type) === f.A && "number" === typeof t.attributes.dataSource) {
       e = true
     }
@@ -617,9 +617,9 @@ function we() {
   return e
 }
 function Ce(e, t) {
-  var o$d$getState$project$screens = O.d.getState().project.screens
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions$d$getState$project$screens = $$_$$_$$_$$_src_shared_events_actions.d.getState().project.screens
   var r = new Set()
-  Array.from(o$d$getState$project$screens).forEach(function (t) {
+  Array.from($$_$$_$$_$$_src_shared_events_actions$d$getState$project$screens).forEach(function (t) {
     if (t.id !== e) {
       r.add(t.title)
     }
@@ -627,27 +627,27 @@ function Ce(e, t) {
   return r.has(t)
 }
 function Te(e) {
-  p.g.delete(e)
+  $_42_index.g.delete(e)
 }
 function Se(e) {
-  return p.g.get(e)
+  return $_42_index.g.get(e)
 }
 function Ie(e) {
-  var t = p.g.get(e)
+  var t = $_42_index.g.get(e)
   if (t && t.parentId) {
-    return p.g.get(t.parentId)
+    return $_42_index.g.get(t.parentId)
   }
 }
 function Ae(e) {
   var t
   var n = []
-  var r = p.g.keys()
+  var r = $_42_index.g.keys()
   var o = d.a(r)
   try {
     for (o.s(); !(t = o.n()).done;) {
       var i
-      var t$value = t.value
-      if ((null === (i = p.g.get(t$value)) || undefined === i ? undefined : i.parentId) === e) {
+      var /* [auto-meaningful-name] */t$value = t.value
+      if ((null === (i = $_42_index.g.get(t$value)) || undefined === i ? undefined : i.parentId) === e) {
         n.push(t$value)
       }
     }
@@ -659,14 +659,14 @@ function Ae(e) {
   return n
 }
 function je() {
-  return O.d.getState().project.globalWidgetIds
+  return $$_$$_$$_$$_src_shared_events_actions.d.getState().project.globalWidgetIds
 }
 function Ne(e, t) {
-  return p.g.set(e, t)
+  return $_42_index.g.set(e, t)
 }
 function Re() {
   var e = []
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (t.type === f.l) {
       e.push(t)
     }
@@ -675,7 +675,7 @@ function Re() {
 }
 function ke() {
   var e = []
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (t.type === f.h) {
       e.push(t)
     }
@@ -683,12 +683,12 @@ function ke() {
   return e
 }
 function xe() {
-  var o$d$getState$project$currentScreenIndex = O.d.getState().project.currentScreenIndex
-  return O.d.getState().project.screens.get(o$d$getState$project$currentScreenIndex)
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions$d$getState$project$currentScreenIndex = $$_$$_$$_$$_src_shared_events_actions.d.getState().project.currentScreenIndex
+  return $$_$$_$$_$$_src_shared_events_actions.d.getState().project.screens.get($$_$$_$$_$$_src_shared_events_actions$d$getState$project$currentScreenIndex)
 }
 function De(e) {
   var t = []
-  p.g.forEach(function (n) {
+  $_42_index.g.forEach(function (n) {
     if (n.type === e) {
       t.push(n.id)
     }
@@ -721,7 +721,7 @@ function Me(e) {
   return n
 }
 function Le(e) {
-  for (var t in p.g.clear(), e) p.g.set(t, e[t])
+  for (var t in $_42_index.g.clear(), e) $_42_index.g.set(t, e[t])
 }
 function Pe(e) {
   var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1]
@@ -754,7 +754,7 @@ function Pe(e) {
       var d = Se(a.parentId)
       if (d) {
         var p = d
-        p.widgetIds = [].concat(u.a(p.widgetIds), [s])
+        p.widgetIds = [].concat($_25_index.a(p.widgetIds), [s])
       }
     }
     if (o.type === f.f) {
@@ -862,10 +862,10 @@ function We(e, t) {
   switch (t) {
     case g.b.CONTAINED_ICON:
     case g.b.OUTLINED_ICON:
-      return _.e[e]
+      return $_313.e[e]
     case g.b.CONTAINED_TEXT:
     case g.b.OUTLINED_TEXT:
-      return _.f[e]
+      return $_313.f[e]
   }
 }
 var He = function (e) {
@@ -879,14 +879,14 @@ var He = function (e) {
   }
 }
 var Ve = function (e) {
-  var t = p.g.get(e)
+  var t = $_42_index.g.get(e)
   return t && t.type === f.d ? He(t.attributes.mode) : ""
 }
 var ze = function (e) {
   return v.p[e]
 }
 function Ye(e) {
-  return Array.from(p.g).some(function (t) {
+  return Array.from($_42_index.g).some(function (t) {
     return t[1].type === f.v && t[1].attributes.fileId === e || t[1].type === f.z && t[1].attributes.backgroundImage === e || t[1].type === f.w && t[1].attributes.backgroundImage === e || t[1].type === f.E && (t[1].attributes.backgroundImageFileId === e || t[1].attributes.handleImageFileId === e || t[1].attributes.trackImageFileId === e) || t[1].type === f.f && t[1].attributes.backgroundImage === e || !(t[1].type !== f.a || !t[1].attributes.actionList.some(function (t) {
       return t.styleList.some(function (t) {
         return t.source === e
@@ -896,8 +896,8 @@ function Ye(e) {
 }
 function Ke(e) {
   var t = []
-  Array.from(p.g).forEach(function (n) {
-    var r = s.a(n, 2)
+  Array.from($_42_index.g).forEach(function (n) {
+    var r = $_10_index.a(n, 2)
     r[0]
     var o = r[1]
     if (o.type === f.a && o.attributes.actionList.some(function (t) {
@@ -911,22 +911,22 @@ function Ke(e) {
   return t
 }
 function qe(e) {
-  return Array.from(p.g).some(function (t) {
+  return Array.from($_42_index.g).some(function (t) {
     return t[1].type === f.b && t[1].attributes.fileId === e
   })
 }
 function Xe(e) {
-  return Array.from(p.g).some(function (t) {
+  return Array.from($_42_index.g).some(function (t) {
     return (t[1].type === f.d || t[1].type === f.z) && t[1].attributes.iconId === e
   })
 }
 function Qe(e) {
-  var e$size = e.size
-  return !e.attributes.fileId && e$size.height === y.h && e$size.width === y.l
+  var /* [auto-meaningful-name] */e$size = e.size
+  return !e.attributes.fileId && e$size.height === $_133.h && e$size.width === $_133.l
 }
 function Ze(e) {
-  var e$width = e.width
-  var e$height = e.height
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$height = e.height
   var r = E.d
   var o = E.e
   return e$width > o || e$height > r ? e$width / e$height > o / r ? {
@@ -941,7 +941,7 @@ function Ze(e) {
   }
 }
 function Je(e, t) {
-  p.g.forEach(function (n) {
+  $_42_index.g.forEach(function (n) {
     if (n.type === f.v) {
       if (n.attributes.fileId === e) {
         n.attributes.fileId = t
@@ -974,12 +974,12 @@ function Je(e, t) {
   })
 }
 function $e() {
-  return p.a
+  return $_42_index.a
 }
 function et() {
   var e = arguments.length > 0 && undefined !== arguments[0] && arguments[0]
   var t = {}
-  p.a.forEach(function (n) {
+  $_42_index.a.forEach(function (n) {
     t[n.id] = l.a(l.a({}, n), {}, {
       cdnUrl: e && n.source || n.cdnUrl
     })
@@ -990,18 +990,18 @@ function tt(e) {
   return e.cdnUrl || e.source
 }
 function nt(e) {
-  var t = p.a.find(function (t) {
+  var t = $_42_index.a.find(function (t) {
     return t.id === e
   })
   return (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl)
 }
 function rt(e) {
-  return p.a.find(function (t) {
+  return $_42_index.a.find(function (t) {
     return t.id === e
   })
 }
 function ot(e, t) {
-  return p.a.find(function (n) {
+  return $_42_index.a.find(function (n) {
     return n.groupId === e && n.groupImageIndex === t
   })
 }
@@ -1022,13 +1022,13 @@ function it(e) {
 }
 function at(e, t) {
   if (undefined !== t) {
-    p.a.splice(t, 0, e)
+    $_42_index.a.splice(t, 0, e)
   } else {
-    p.a.push(e)
+    $_42_index.a.push(e)
   }
 }
 function st(e, t) {
-  var n = p.a.find(function (t) {
+  var n = $_42_index.a.find(function (t) {
     return t.id === e
   })
   if (n) {
@@ -1036,7 +1036,7 @@ function st(e, t) {
   }
 }
 function ct(e, t) {
-  p.a.filter(function (t) {
+  $_42_index.a.filter(function (t) {
     return t.groupId === e
   }).forEach(function (e) {
     e.groupId = t
@@ -1058,20 +1058,20 @@ function ut(e, t, n) {
   }
 }
 function dt(e) {
-  return O.d.getState().resource.soundFileList.find(function (t) {
+  return $$_$$_$$_$$_src_shared_events_actions.d.getState().resource.soundFileList.find(function (t) {
     return t.id === e
   })
 }
 function pt() {
-  return O.d.getState().resource.soundFileList
+  return $$_$$_$$_$$_src_shared_events_actions.d.getState().resource.soundFileList
 }
 function ft(e) {
-  return O.d.getState().resource.iconFileList.find(function (t) {
+  return $$_$$_$$_$$_src_shared_events_actions.d.getState().resource.iconFileList.find(function (t) {
     return t.id === e
   })
 }
 function ht() {
-  return O.d.getState().resource.iconFileList
+  return $$_$$_$$_$$_src_shared_events_actions.d.getState().resource.iconFileList
 }
 function mt(e, t) {
   if (t.includes(e)) {
@@ -1137,7 +1137,7 @@ function yt(e, t, n) {
   })
   var o = n.replace(C.E, "")
   o = o.trim()
-  return o = vt(t, r, o = b.c(o, 40))
+  return o = vt(t, r, o = $_190.c(o, 40))
 }
 function Et(e) {
   var t = e.slice(0, e.lastIndexOf(".") < 0 ? undefined : e.lastIndexOf("."))
@@ -1188,17 +1188,17 @@ function wt() {
   }))).apply(this, arguments)
 }
 function Ct(e) {
-  p.a.length = 0
+  $_42_index.a.length = 0
   var t
   var n = d.a(e)
   try {
     for (n.s(); !(t = n.n()).done;) {
-      var t$value = t.value
-      var t$value$source = t$value.source
+      var /* [auto-meaningful-name] */t$value = t.value
+      var /* [auto-meaningful-name] */t$value$source = t$value.source
       if (t$value$source && m.R(t$value$source)) {
         t$value.source = m.n(t$value$source)
       }
-      p.a.push(t$value)
+      $_42_index.a.push(t$value)
     }
   } catch (i) {
     n.e(i)
@@ -1223,7 +1223,7 @@ function St() {
         switch (e.prev = e.next) {
           case 0:
             t = []
-            n = d.a(p.a)
+            n = d.a($_42_index.a)
             e.prev = 2
             n.s()
           case 4:
@@ -1288,7 +1288,7 @@ function At() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            t = O.d.getState().resource.soundFileList.toJS()
+            t = $$_$$_$$_$$_src_shared_events_actions.d.getState().resource.soundFileList.toJS()
             n = []
             r = d.a(t)
             e.prev = 3
@@ -1355,7 +1355,7 @@ function Nt() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            t = O.d.getState().resource.iconFileList.toJS()
+            t = $$_$$_$$_$$_src_shared_events_actions.d.getState().resource.iconFileList.toJS()
             n = []
             r = d.a(t)
             e.prev = 3
@@ -1406,11 +1406,11 @@ function Nt() {
   }))).apply(this, arguments)
 }
 function Rt(e) {
-  var t = p.a.findIndex(function (t) {
+  var t = $_42_index.a.findIndex(function (t) {
     return t.id === e
   })
   !function (e) {
-    p.g.forEach(function (t) {
+    $_42_index.g.forEach(function (t) {
       if (t.type === f.v && t.attributes.fileId === e) {
         t.attributes.fileId = ""
       }
@@ -1419,14 +1419,14 @@ function Rt(e) {
       }
     })
   }(e)
-  p.a.splice(t, 1)
+  $_42_index.a.splice(t, 1)
 }
 function kt(e) {
   var t = document.getElementById(e)
   return (null === t || undefined === t ? undefined : t.dataset.clickType) === C.h.CLICK
 }
 function xt(e) {
-  p.g.forEach(function (t) {
+  $_42_index.g.forEach(function (t) {
     if (t.type === f.b && t.attributes.fileId === e) {
       t.attributes.fileId = ""
     }
@@ -1436,17 +1436,17 @@ function Dt(e) {
   return !!rt(e)
 }
 function Mt(e, t) {
-  var n = w.z.checkOtherScreenFieldValueIsSelected(e, t)
-  var o$d$getState$project$screens = O.d.getState().project.screens
-  var o$d$getState$project$currentScreenIndex = O.d.getState().project.currentScreenIndex
+  var n = $_26_index.z.checkOtherScreenFieldValueIsSelected(e, t)
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions$d$getState$project$screens = $$_$$_$$_$$_src_shared_events_actions.d.getState().project.screens
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions$d$getState$project$currentScreenIndex = $$_$$_$$_$$_src_shared_events_actions.d.getState().project.currentScreenIndex
   var i = []
-  o$d$getState$project$screens.forEach(function (e, t) {
+  $$_$$_$$_$$_src_shared_events_actions$d$getState$project$screens.forEach(function (e, t) {
     if (n.includes(e.id)) {
       i.push(t + 1)
     }
   })
-  if (w.z.checkFieldValueIsSelected(e, t) && !i.includes(o$d$getState$project$currentScreenIndex + 1)) {
-    i.push(o$d$getState$project$currentScreenIndex + 1)
+  if ($_26_index.z.checkFieldValueIsSelected(e, t) && !i.includes($$_$$_$$_$$_src_shared_events_actions$d$getState$project$currentScreenIndex + 1)) {
+    i.push($$_$$_$$_$$_src_shared_events_actions$d$getState$project$currentScreenIndex + 1)
   }
   i.sort(function (e, t) {
     return e - t
@@ -1455,8 +1455,8 @@ function Mt(e, t) {
 }
 function Lt(e) {
   var t
-  var o$d$getState$project$screens = O.d.getState().project.screens
-  var r = d.a(o$d$getState$project$screens)
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions$d$getState$project$screens = $$_$$_$$_$$_src_shared_events_actions.d.getState().project.screens
+  var r = d.a($$_$$_$$_$$_src_shared_events_actions$d$getState$project$screens)
   try {
     for (r.s(); !(t = r.n()).done;) {
       if (t.value.backgroundImage === e) {
@@ -1471,13 +1471,13 @@ function Lt(e) {
   return false
 }
 function Pt(e) {
-  return Array.from(p.g).some(function (t) {
+  return Array.from($_42_index.g).some(function (t) {
     return t[1].type === e
   })
 }
 function Bt(e) {
   var t = []
-  p.a.forEach(function (n) {
+  $_42_index.a.forEach(function (n) {
     if (n.groupId === e) {
       t.push(n)
     }
@@ -1485,7 +1485,7 @@ function Bt(e) {
   return t
 }
 function Ft(e) {
-  return p.a.find(function (t) {
+  return $_42_index.a.find(function (t) {
     return (null === t || undefined === t ? undefined : t.cdnUrl) === (null === e || undefined === e ? undefined : e.cdnUrl) && t.groupId === e.id
   })
 }

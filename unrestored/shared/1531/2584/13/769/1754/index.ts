@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1754
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1046/index")
+var r = require("../1046")
 var i = require("../568")
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -37,7 +37,7 @@ exports.default = function (e) {
         var n
         var r = (0, d.default)(e)
         if (t) {
-          var _0D$defaultThis$constructor = (0, d.default)(this).constructor
+          var /* [auto-meaningful-name] */_0D$defaultThis$constructor = (0, d.default)(this).constructor
           n = Reflect.construct(r, arguments, _0D$defaultThis$constructor)
         } else {
           n = r.apply(this, arguments)
@@ -50,7 +50,7 @@ exports.default = function (e) {
       (0, s.default)(this, n);
       (r = t.call(this, e)).onMouseDown = function (e) {
         if (0 === e.button) {
-          var r$props$vertical = r.props.vertical
+          var /* [auto-meaningful-name] */r$props$vertical = r.props.vertical
           var n = y.getMousePosition(r$props$vertical, e)
           if (y.isEventFromHandle(e, r.handlesRefs)) {
             var i = y.getHandleCenterPosition(r$props$vertical, e.target)
@@ -66,7 +66,7 @@ exports.default = function (e) {
       }
       r.onTouchStart = function (e) {
         if (!y.isNotTouchEvent(e)) {
-          var r$props$vertical = r.props.vertical
+          var /* [auto-meaningful-name] */r$props$vertical = r.props.vertical
           var n = y.getTouchPosition(r$props$vertical, e)
           if (y.isEventFromHandle(e, r.handlesRefs)) {
             var i = y.getHandleCenterPosition(r$props$vertical, e.target)
@@ -81,9 +81,9 @@ exports.default = function (e) {
         }
       }
       r.onFocus = function (e) {
-        var r$props = r.props
-        var r$props$onFocus = r$props.onFocus
-        var r$props$vertical = r$props.vertical
+        var /* [auto-meaningful-name] */r$props = r.props
+        var /* [auto-meaningful-name] */r$props$onFocus = r$props.onFocus
+        var /* [auto-meaningful-name] */r$props$vertical = r$props.vertical
         if (y.isEventFromHandle(e, r.handlesRefs)) {
           var o = y.getHandleCenterPosition(r$props$vertical, e.target)
           r.dragOffset = 0
@@ -95,7 +95,7 @@ exports.default = function (e) {
         }
       }
       r.onBlur = function (e) {
-        var r$props$onBlur = r.props.onBlur
+        var /* [auto-meaningful-name] */r$props$onBlur = r.props.onBlur
         r.onEnd()
         if (r$props$onBlur) {
           r$props$onBlur(e)
@@ -141,9 +141,9 @@ exports.default = function (e) {
       r.saveSlider = function (e) {
         r.sliderRef = e
       }
-      var e$step = e.step
-      var e$max = e.max
-      var e$min = e.min
+      var /* [auto-meaningful-name] */e$step = e.step
+      var /* [auto-meaningful-name] */e$max = e.max
+      var /* [auto-meaningful-name] */e$min = e.min
       var c = !isFinite(e$max - e$min) || (e$max - e$min) % e$step === 0;
       (0, A.default)(!e$step || Math.floor(e$step) !== e$step || c, "Slider[max] - Slider[min] (".concat(e$max - e$min, ") should be a multiple of Slider[step] (").concat(e$step, ")"))
       r.handlesRefs = {}
@@ -153,9 +153,9 @@ exports.default = function (e) {
       key: "componentDidMount",
       value: function () {
         this.document = this.sliderRef && this.sliderRef.ownerDocument
-        var this$props = this.props
-        var this$props$autoFocus = this$props.autoFocus
-        var this$props$disabled = this$props.disabled
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$autoFocus = this$props.autoFocus
+        var /* [auto-meaningful-name] */this$props$disabled = this$props.disabled
         if (this$props$autoFocus && !this$props$disabled) {
           this.focus()
         }
@@ -171,17 +171,17 @@ exports.default = function (e) {
     }, {
       key: "getSliderStart",
       value: function () {
-        var this$sliderRef = this.sliderRef
-        var this$props = this.props
-        var this$props$vertical = this$props.vertical
-        var this$props$reverse = this$props.reverse
+        var /* [auto-meaningful-name] */this$sliderRef = this.sliderRef
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$vertical = this$props.vertical
+        var /* [auto-meaningful-name] */this$props$reverse = this$props.reverse
         var i = this$sliderRef.getBoundingClientRect()
         return this$props$vertical ? this$props$reverse ? i.bottom : i.top : window.pageXOffset + (this$props$reverse ? i.right : i.left)
       }
     }, {
       key: "getSliderLength",
       value: function () {
-        var this$sliderRef = this.sliderRef
+        var /* [auto-meaningful-name] */this$sliderRef = this.sliderRef
         if (!this$sliderRef) {
           return 0
         }
@@ -238,10 +238,10 @@ exports.default = function (e) {
     }, {
       key: "calcValue",
       value: function (e) {
-        var this$props = this.props
-        var this$props$vertical = this$props.vertical
-        var this$props$min = this$props.min
-        var this$props$max = this$props.max
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$vertical = this$props.vertical
+        var /* [auto-meaningful-name] */this$props$min = this$props.min
+        var /* [auto-meaningful-name] */this$props$max = this$props.max
         var o = Math.abs(Math.max(e, 0) / this.getSliderLength())
         return this$props$vertical ? (1 - o) * (this$props$max - this$props$min) + this$props$min : o * (this$props$max - this$props$min) + this$props$min
       }
@@ -254,8 +254,8 @@ exports.default = function (e) {
     }, {
       key: "calcOffset",
       value: function (e) {
-        var this$props = this.props
-        var this$props$min = this$props.min
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$min = this$props.min
         var r = (e - this$props$min) / (this$props.max - this$props$min)
         return Math.max(0, 100 * r)
       }
@@ -268,27 +268,27 @@ exports.default = function (e) {
       key: "render",
       value: function () {
         var e
-        var this$props = this.props
-        var this$props$prefixCls = this$props.prefixCls
-        var this$props$className = this$props.className
-        var this$props$marks = this$props.marks
-        var this$props$dots = this$props.dots
-        var this$props$step = this$props.step
-        var this$props$included = this$props.included
-        var this$props$disabled = this$props.disabled
-        var this$props$vertical = this$props.vertical
-        var this$props$reverse = this$props.reverse
-        var this$props$min = this$props.min
-        var this$props$max = this$props.max
-        var this$props$children = this$props.children
-        var this$props$maximumTrackStyle = this$props.maximumTrackStyle
-        var this$props$style = this$props.style
-        var this$props$railStyle = this$props.railStyle
-        var this$props$dotStyle = this$props.dotStyle
-        var this$props$activeDotStyle = this$props.activeDotStyle
+        var /* [auto-meaningful-name] */this$props = this.props
+        var /* [auto-meaningful-name] */this$props$prefixCls = this$props.prefixCls
+        var /* [auto-meaningful-name] */this$props$className = this$props.className
+        var /* [auto-meaningful-name] */this$props$marks = this$props.marks
+        var /* [auto-meaningful-name] */this$props$dots = this$props.dots
+        var /* [auto-meaningful-name] */this$props$step = this$props.step
+        var /* [auto-meaningful-name] */this$props$included = this$props.included
+        var /* [auto-meaningful-name] */this$props$disabled = this$props.disabled
+        var /* [auto-meaningful-name] */this$props$vertical = this$props.vertical
+        var /* [auto-meaningful-name] */this$props$reverse = this$props.reverse
+        var /* [auto-meaningful-name] */this$props$min = this$props.min
+        var /* [auto-meaningful-name] */this$props$max = this$props.max
+        var /* [auto-meaningful-name] */this$props$children = this$props.children
+        var /* [auto-meaningful-name] */this$props$maximumTrackStyle = this$props.maximumTrackStyle
+        var /* [auto-meaningful-name] */this$props$style = this$props.style
+        var /* [auto-meaningful-name] */this$props$railStyle = this$props.railStyle
+        var /* [auto-meaningful-name] */this$props$dotStyle = this$props.dotStyle
+        var /* [auto-meaningful-name] */this$props$activeDotStyle = this$props.activeDotStyle
         var T = (0, u.default)((0, d.default)(n.prototype), "render", this).call(this)
-        var t$tracks = T.tracks
-        var t$handles = T.handles
+        var /* [auto-meaningful-name] */T$tracks = T.tracks
+        var /* [auto-meaningful-name] */T$handles = T.handles
         var I = (0, _.default)(this$props$prefixCls, (e = {}, (0, a.default)(e, "".concat(this$props$prefixCls, "-with-marks"), Object.keys(this$props$marks).length), (0, a.default)(e, "".concat(this$props$prefixCls, "-disabled"), this$props$disabled), (0, a.default)(e, "".concat(this$props$prefixCls, "-vertical"), this$props$vertical), (0, a.default)(e, this$props$className, this$props$className), e))
         return h.default.createElement("div", {
           ref: this.saveSlider,
@@ -303,7 +303,7 @@ exports.default = function (e) {
         }, h.default.createElement("div", {
           className: "".concat(this$props$prefixCls, "-rail"),
           style: w(w({}, this$props$maximumTrackStyle), this$props$railStyle)
-        }), t$tracks, h.default.createElement(g.default, {
+        }), T$tracks, h.default.createElement(g.default, {
           prefixCls: this$props$prefixCls,
           vertical: this$props$vertical,
           reverse: this$props$reverse,
@@ -317,7 +317,7 @@ exports.default = function (e) {
           min: this$props$min,
           dotStyle: this$props$dotStyle,
           activeDotStyle: this$props$activeDotStyle
-        }), t$handles, h.default.createElement(v.default, {
+        }), T$handles, h.default.createElement(v.default, {
           className: "".concat(this$props$prefixCls, "-mark"),
           onClickLabel: this$props$disabled ? E : this.onClickMarkLabel,
           vertical: this$props$vertical,
@@ -341,7 +341,7 @@ exports.default = function (e) {
     step: 1,
     marks: {},
     handle: function (e) {
-      var e$index = e.index
+      var /* [auto-meaningful-name] */e$index = e.index
       var n = (0, o.default)(e, ["index"])
       delete n.dragging
       return null === n.value ? null : h.default.createElement(m.default, Object.assign({}, n, {

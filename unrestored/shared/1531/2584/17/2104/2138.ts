@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2138
@@ -13,9 +13,9 @@ exports.Json = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = require("../../125/195/index")
-var c = require("../497/387")
+var c = require("../../206/725/387")
 var u = require("../../125/294")
 var l = require("../../1001/213/index")
 var f = require("../../125/index")
@@ -90,8 +90,8 @@ var h = function () {
     var o = {}
     var a = {}
     e.inputList.map(function (c) {
-      var /* [auto-meaningful-name] */_c$connection2
       var /* [auto-meaningful-name] */c$connection
+      var /* [auto-meaningful-name] */_c$connection
       c.fieldRow.forEach(function (e) {
         if (e.editable && "string" === typeof e.name) {
           if ((0, l.is_field_number)(e)) {
@@ -132,10 +132,10 @@ var h = function () {
         }
       })
       if (c.name) {
-        var h = null === (_c$connection2 = c.connection) || undefined === _c$connection2 ? undefined : _c$connection2.get_shadow_string()
+        var h = null === (c$connection = c.connection) || undefined === c$connection ? undefined : c$connection.get_shadow_string()
         a[c.name] = h || ""
       }
-      var p = null === (c$connection = c.connection) || undefined === c$connection ? undefined : c$connection.targetBlock()
+      var p = null === (_c$connection = c.connection) || undefined === _c$connection ? undefined : _c$connection.targetBlock()
       if (p) {
         var _ = t.block_to_json(p)
         t.merge_workspace_data(n, _)
@@ -232,7 +232,7 @@ var h = function () {
       var n
       t.fieldRow.forEach(function (t) {
         if (t.editable && undefined !== t.name) {
-          var t$name = t.name
+          var /* [auto-meaningful-name] */t$name = t.name
           if ((0, l.is_field_number)(t)) {
             if (undefined === e.fields.NUM && undefined !== e.fields.TEXT) {
               t$name = "TEXT"
@@ -270,7 +270,7 @@ var h = function () {
           }
           if ((0, l.is_field_default_value)(t)) {
             if (undefined !== (r = e.field_extra_attr && e.field_extra_attr[t$name]) && undefined !== r.has_been_edited) {
-              var r$has_been_edited = r.has_been_edited
+              var /* [auto-meaningful-name] */r$has_been_edited = r.has_been_edited
               t.set_has_been_edited(r$has_been_edited)
             }
           }
@@ -347,7 +347,7 @@ var h = function () {
     if (null !== e.auto_layout) {
       n.set_auto_layout(e.auto_layout)
     }
-    var e$color_theme = e.color_theme
+    var /* [auto-meaningful-name] */e$color_theme = e.color_theme
     if ((0, l.is_comment_theme)(e$color_theme)) {
       n.set_color_theme(e$color_theme, true)
     }
@@ -355,9 +355,9 @@ var h = function () {
   }
   e.prototype.json_to_workspace_headless = function (e, t) {
     var n = this
-    var e$blocks = e.blocks
-    var e$connections = e.connections
-    var e$comments = e.comments
+    var /* [auto-meaningful-name] */e$blocks = e.blocks
+    var /* [auto-meaningful-name] */e$connections = e.connections
+    var /* [auto-meaningful-name] */e$comments = e.comments
     var a = []
     if (e$blocks) {
       Object.keys(e$blocks).forEach(function (e) {
@@ -531,7 +531,7 @@ var h = function () {
     var n = function (e, t) {
       r.blocks[t] = e.blocks[t]
       r.connections[t] = e.connections[t]
-      var e$blocksT$comment = e.blocks[t].comment
+      var /* [auto-meaningful-name] */e$blocksT$comment = e.blocks[t].comment
       if (e$blocksT$comment) {
         r.comments[e$blocksT$comment] = e.comments[e$blocksT$comment]
       }
@@ -569,7 +569,7 @@ var h = function () {
         r.add(t)
       }
     })
-    for (var e$childNodes$length = e.childNodes.length, o = 0; o < e$childNodes$length; o++) {
+    for (var /* [auto-meaningful-name] */e$childNodes$length = e.childNodes.length, o = 0; o < e$childNodes$length; o++) {
       if (e.childNodes[o].nodeType !== s.NodeType.TEXT) {
         var a = e.childNodes[o]
         var c = a.tagName.toLowerCase()
@@ -604,7 +604,7 @@ var h = function () {
     var i = e.nodeName.toLowerCase()
     var o = e.getAttribute("id") || ""
     r.connections[o] = {}
-    for (var a = e.getAttribute("x") || "0", c = e.getAttribute("y") || "0", l = null, f = "", h = {}, p = {}, _ = {}, A = {}, e$childNodes$length = e.childNodes.length, v = 0; v < e$childNodes$length; v++) {
+    for (var a = e.getAttribute("x") || "0", c = e.getAttribute("y") || "0", l = null, f = "", h = {}, p = {}, _ = {}, A = {}, /* [auto-meaningful-name] */e$childNodes$length = e.childNodes.length, v = 0; v < e$childNodes$length; v++) {
       if (e.childNodes[v].nodeType !== s.NodeType.TEXT) {
         var m = e.childNodes[v]
         var y = m.tagName.toLowerCase()

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：595
@@ -25,8 +25,8 @@ var f = function () {
     if (i < 0 || c < 0) {
       throw new s.a("Requested dimensions are too small: " + i + "x" + c)
     }
-    var a$a$L = a.a.L
-    var t$QUIET_ZONE_SIZE = t.QUIET_ZONE_SIZE
+    var /* [auto-meaningful-name] */a$a$L = a.a.L
+    var /* [auto-meaningful-name] */t$QUIET_ZONE_SIZE = t.QUIET_ZONE_SIZE
     if (null !== f) {
       if (undefined !== f.get(o.a.ERROR_CORRECTION)) {
         a$a$L = a.a.fromString(f.get(o.a.ERROR_CORRECTION).toString())

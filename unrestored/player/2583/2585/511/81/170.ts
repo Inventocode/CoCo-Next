@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：170
@@ -9,7 +9,7 @@
 var r = require("./165")
 var i = require("./124")
 var o = require("./169")
-var a = require("./73/index")
+var a = require("./73")
 var s = require("./37")
 var u = function () {
   function t() {}
@@ -90,7 +90,7 @@ var u = function () {
     throw new s.a()
   }
   t.recordPattern = function (t, e, n) {
-    for (var n$length = n.length, i = 0; i < n$length; i++) {
+    for (var /* [auto-meaningful-name] */n$length = n.length, i = 0; i < n$length; i++) {
       n[i] = 0
     }
     var o = t.getSize()
@@ -114,7 +114,7 @@ var u = function () {
     }
   }
   t.recordPatternInReverse = function (e, n, r) {
-    for (var r$length = r.length, o = e.get(n); n > 0 && r$length >= 0;) {
+    for (var /* [auto-meaningful-name] */r$length = r.length, o = e.get(n); n > 0 && r$length >= 0;) {
       if (e.get(--n) !== o) {
         r$length--
         o = !o
@@ -126,7 +126,7 @@ var u = function () {
     t.recordPattern(e, n + 1, r)
   }
   t.patternMatchVariance = function (t, e, n) {
-    for (var t$length = t.length, i = 0, o = 0, a = 0; a < t$length; a++) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, i = 0, o = 0, a = 0; a < t$length; a++) {
       i += t[a]
       o += e[a]
     }

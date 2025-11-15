@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：685
@@ -14,8 +14,8 @@ function r(e) {
   })(e)
 }
 export { o as a }
-import i = require("../292");
+import /* [auto-meaningful-name] */$$_292 = require("../292")
 function o(e, t) {
-  return !t || "object" !== r(t) && "function" !== typeof t ? i.a(e) : t
+  return !t || "object" !== r(t) && "function" !== typeof t ? $$_292.a(e) : t
 }
 export default o

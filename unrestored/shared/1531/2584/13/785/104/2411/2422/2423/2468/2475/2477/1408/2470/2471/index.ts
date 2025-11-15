@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2471
@@ -12,6 +12,6 @@ module.exports = function (e) {
     }
     return e
   })
-  var t$cache = t.cache
+  var /* [auto-meaningful-name] */t$cache = t.cache
   return t
 }

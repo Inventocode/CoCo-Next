@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2155
@@ -13,7 +13,7 @@ exports.BlockDragSurfaceSvg = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = require("../../125/index")
 var c = require("../../125/534")
 var u = function () {

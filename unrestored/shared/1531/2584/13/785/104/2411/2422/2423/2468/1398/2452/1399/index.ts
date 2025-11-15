@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1399
@@ -9,8 +9,8 @@ var i = require("./2456")
 var o = require("./2457")
 module.exports = function (e, t, n, a, s, c) {
   var u = 1 & n
-  var e$length = e.length
-  var t$length = t.length
+  var /* [auto-meaningful-name] */e$length = e.length
+  var /* [auto-meaningful-name] */t$length = t.length
   if (e$length != t$length && !(u && t$length > e$length)) {
     return false
   }

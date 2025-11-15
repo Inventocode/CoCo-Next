@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1253
@@ -7,32 +7,32 @@
 "use strict"
 
 require("../936/index")
-var r = require("../1623/86")
-var o = require("../1664/472")
+var r = require("../1698/86/index")
+var o = require("../1541/472")
 var i = require("../1745/1252")
-var a = require("../1745/398/index")
-var s = require("../1738/752")
-var c = require("../1745/531")
-var l = require("./1219/index")
-var u = require("../1745/423/index")
-var d = require("../1745/635")
-var p = require("../1745/332")
+var a = require("../1541/398")
+var s = require("../1646/752")
+var c = require("../1541/531")
+var l = require("./1219")
+var u = require("../1541/423/index")
+var d = require("../1646/635")
+var p = require("../1541/332")
 var f = require("./632")
 var h = require("./825")
-var m = require("../1659/241")
-var g = require("../1738/231")
-var _ = require("../1745/310")
-var v = require("../1654/575/index")
-var b = require("../1665/627")
+var m = require("../1541/241")
+var g = require("../1541/231")
+var _ = require("../1684/310")
+var v = require("../1541/575/index")
+var b = require("../1541/627")
 var y = require("./934")
 var E = require("./824")
-var O = require("../1742/247/index")
+var O = require("../1541/247/index")
 var w = o("fetch")
 var C = o("Request")
 var T = C && C.prototype
 var S = o("Headers")
 var I = O("iterator")
-var u$set = u.set
+var /* [auto-meaningful-name] */u$set = u.set
 var j = u.getterFor("URLSearchParams")
 var N = u.getterFor("URLSearchParamsIterator")
 var R = /\+/g
@@ -104,9 +104,9 @@ var H = l(function (e, t) {
   })
 }, "Iterator", function () {
   var e = N(this)
-  var e$kind = e.kind
+  var /* [auto-meaningful-name] */e$kind = e.kind
   var n = e.iterator.next()
-  var n$value = n.value
+  var /* [auto-meaningful-name] */n$value = n.value
   if (!n.done) {
     n.value = "keys" === e$kind ? n$value.key : "values" === e$kind ? n$value.value : [n$value.key, n$value.value]
   }
@@ -116,10 +116,10 @@ var V = function () {
   d(this, V, "URLSearchParams")
   var e
   var t
-  var /* [auto-meaningful-name] */tYLE$next
+  var /* [auto-meaningful-name] */TYLE$next
   var r
   var o
-  var /* [auto-meaningful-name] */oYMR$value$next
+  var /* [auto-meaningful-name] */OYMR$value$next
   var a
   var s
   var c
@@ -135,8 +135,8 @@ var V = function () {
   if (undefined !== l) {
     if (g(l)) {
       if ("function" === typeof (e = E(l))) {
-        for (tYLE$next = (t = y(l, e)).next; !(r = tYLE$next.call(t)).done;) {
-          if ((a = (oYMR$value$next = (o = y(m(r.value))).next).call(o)).done || (s = oYMR$value$next.call(o)).done || !oYMR$value$next.call(o).done) {
+        for (TYLE$next = (t = y(l, e)).next; !(r = TYLE$next.call(t)).done;) {
+          if ((a = (OYMR$value$next = (o = y(m(r.value))).next).call(o)).done || (s = OYMR$value$next.call(o)).done || !OYMR$value$next.call(o).done) {
             throw TypeError("Expected sequence with length 2")
           }
           f.push({
@@ -157,8 +157,8 @@ var V = function () {
     }
   }
 }
-var v$prototype = V.prototype
-s(v$prototype, {
+var /* [auto-meaningful-name] */V$prototype = V.prototype
+s(V$prototype, {
   append: function (e, t) {
     W(arguments.length, 2)
     var n = j(this)
@@ -170,7 +170,7 @@ s(v$prototype, {
   },
   delete: function (e) {
     W(arguments.length, 1)
-    for (var t = j(this), t$entries = t.entries, r = _(e), o = 0; o < t$entries.length;) {
+    for (var t = j(this), /* [auto-meaningful-name] */t$entries = t.entries, r = _(e), o = 0; o < t$entries.length;) {
       if (t$entries[o].key === r) {
         t$entries.splice(o, 1)
       } else {
@@ -181,7 +181,7 @@ s(v$prototype, {
   },
   get: function (e) {
     W(arguments.length, 1)
-    for (var jThis$entries = j(this).entries, n = _(e), r = 0; r < jThis$entries.length; r++) {
+    for (var /* [auto-meaningful-name] */jThis$entries = j(this).entries, n = _(e), r = 0; r < jThis$entries.length; r++) {
       if (jThis$entries[r].key === n) {
         return jThis$entries[r].value
       }
@@ -190,7 +190,7 @@ s(v$prototype, {
   },
   getAll: function (e) {
     W(arguments.length, 1)
-    for (var jThis$entries = j(this).entries, n = _(e), r = [], o = 0; o < jThis$entries.length; o++) {
+    for (var /* [auto-meaningful-name] */jThis$entries = j(this).entries, n = _(e), r = [], o = 0; o < jThis$entries.length; o++) {
       if (jThis$entries[o].key === n) {
         r.push(jThis$entries[o].value)
       }
@@ -199,7 +199,7 @@ s(v$prototype, {
   },
   has: function (e) {
     W(arguments.length, 1)
-    for (var jThis$entries = j(this).entries, n = _(e), r = 0; r < jThis$entries.length;) {
+    for (var /* [auto-meaningful-name] */jThis$entries = j(this).entries, n = _(e), r = 0; r < jThis$entries.length;) {
       if (jThis$entries[r++].key === n) {
         return true
       }
@@ -208,7 +208,7 @@ s(v$prototype, {
   },
   set: function (e, t) {
     W(arguments.length, 1)
-    for (var n, r = j(this), r$entries = r.entries, i = false, a = _(e), s = _(t), c = 0; c < r$entries.length; c++) {
+    for (var n, r = j(this), /* [auto-meaningful-name] */r$entries = r.entries, i = false, a = _(e), s = _(t), c = 0; c < r$entries.length; c++) {
       if ((n = r$entries[c]).key === a) {
         if (i) {
           r$entries.splice(c--, 1)
@@ -231,7 +231,7 @@ s(v$prototype, {
     var t
     var n
     var r = j(this)
-    var r$entries = r.entries
+    var /* [auto-meaningful-name] */r$entries = r.entries
     var i = r$entries.slice()
     for (r$entries.length = 0, n = 0; n < i.length; n++) {
       for (e = i[n], t = 0; t < n; t++) {
@@ -247,7 +247,7 @@ s(v$prototype, {
     r.updateURL()
   },
   forEach: function (e) {
-    for (var t, jThis$entries = j(this).entries, r = f(e, arguments.length > 1 ? arguments[1] : undefined, 3), o = 0; o < jThis$entries.length;) {
+    for (var t, /* [auto-meaningful-name] */jThis$entries = j(this).entries, r = f(e, arguments.length > 1 ? arguments[1] : undefined, 3), o = 0; o < jThis$entries.length;) {
       r((t = jThis$entries[o++]).value, t.key, this)
     }
   },
@@ -263,9 +263,9 @@ s(v$prototype, {
 }, {
   enumerable: true
 })
-a(v$prototype, I, v$prototype.entries)
-a(v$prototype, "toString", function () {
-  for (var e, jThis$entries = j(this).entries, n = [], r = 0; r < jThis$entries.length;) {
+a(V$prototype, I, V$prototype.entries)
+a(V$prototype, "toString", function () {
+  for (var e, /* [auto-meaningful-name] */jThis$entries = j(this).entries, n = [], r = 0; r < jThis$entries.length;) {
     e = jThis$entries[r++]
     n.push(F(e.key) + "=" + F(e.value))
   }
@@ -284,7 +284,7 @@ if (!i && "function" == typeof S) {
   var Y = function (e) {
     if (g(e)) {
       var t
-      var e$body = e.body
+      var /* [auto-meaningful-name] */e$body = e.body
       if ("URLSearchParams" === h(e$body)) {
         if (!(t = e.headers ? new S(e.headers) : new S()).has("content-type")) {
           t.set("content-type", "application/x-www-form-urlencoded;charset=UTF-8")

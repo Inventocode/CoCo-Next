@@ -1,14 +1,14 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1982
  */
 
-var require$1100Index$FilterCSS = require("./1100/index").FilterCSS
+var /* [auto-meaningful-name] */require$_1100_index$FilterCSS = require("./1100/index").FilterCSS
 var i = require("../1303")
 var o = require("../1306")
-var o$parseTag = o.parseTag
-var o$parseAttr = o.parseAttr
+var /* [auto-meaningful-name] */o$parseTag = o.parseTag
+var /* [auto-meaningful-name] */o$parseAttr = o.parseAttr
 var c = require("./1101")
 function u(e) {
   return undefined === e || null === e
@@ -51,23 +51,23 @@ function l(e) {
     this.cssFilter = false
   } else {
     e.css = e.css || {}
-    this.cssFilter = new require$1100Index$FilterCSS(e.css)
+    this.cssFilter = new require$_1100_index$FilterCSS(e.css)
   }
 }
 l.prototype.process = function (e) {
   if (!(e = (e = e || "").toString())) {
     return ""
   }
-  var this$options = this.options
-  var this$options$whiteList = this$options.whiteList
-  var this$options$onTag = this$options.onTag
-  var this$options$onIgnoreTag = this$options.onIgnoreTag
-  var this$options$onTagAttr = this$options.onTagAttr
-  var this$options$onIgnoreTagAttr = this$options.onIgnoreTagAttr
-  var this$options$safeAttrValue = this$options.safeAttrValue
-  var this$options$escapeHtml = this$options.escapeHtml
-  var this$attributeWrapSign = this.attributeWrapSign
-  var this$cssFilter = this.cssFilter
+  var /* [auto-meaningful-name] */this$options = this.options
+  var /* [auto-meaningful-name] */this$options$whiteList = this$options.whiteList
+  var /* [auto-meaningful-name] */this$options$onTag = this$options.onTag
+  var /* [auto-meaningful-name] */this$options$onIgnoreTag = this$options.onIgnoreTag
+  var /* [auto-meaningful-name] */this$options$onTagAttr = this$options.onTagAttr
+  var /* [auto-meaningful-name] */this$options$onIgnoreTagAttr = this$options.onIgnoreTagAttr
+  var /* [auto-meaningful-name] */this$options$safeAttrValue = this$options.safeAttrValue
+  var /* [auto-meaningful-name] */this$options$escapeHtml = this$options.escapeHtml
+  var /* [auto-meaningful-name] */this$attributeWrapSign = this.attributeWrapSign
+  var /* [auto-meaningful-name] */this$cssFilter = this.cssFilter
   if (this$options.stripBlankChar) {
     e = i.stripBlankChar(e)
   }

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：166
@@ -70,13 +70,13 @@ var a = function () {
     this.otherEncodingNames = s
     t.VALUE_IDENTIFIER_TO_ECI.set(e, this)
     t.NAME_TO_ECI.set(r, this)
-    for (var this$values = this.values, l = 0, this$values$length = this$values.length; l !== this$values$length; l++) {
+    for (var /* [auto-meaningful-name] */this$values = this.values, l = 0, /* [auto-meaningful-name] */this$values$length = this$values.length; l !== this$values$length; l++) {
       var f = this$values[l]
       t.VALUES_TO_ECI.set(f, this)
     }
     try {
       for (var h = o(s), p = h.next(); !p.done; p = h.next()) {
-        var p$value = p.value
+        var /* [auto-meaningful-name] */p$value = p.value
         t.NAME_TO_ECI.set(p$value, this)
       }
     } catch (b) {

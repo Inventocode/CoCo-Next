@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：118
@@ -17,7 +17,7 @@ var r = function () {
     return Math.sqrt(i * i + o * o)
   }
   t.sum = function (t) {
-    for (var e = 0, n = 0, t$length = t.length; n !== t$length; n++) {
+    for (var e = 0, n = 0, /* [auto-meaningful-name] */t$length = t.length; n !== t$length; n++) {
       e += t[n]
     }
     return e

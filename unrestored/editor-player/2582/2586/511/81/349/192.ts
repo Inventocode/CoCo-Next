@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：192
@@ -56,7 +56,7 @@ var l = function (t) {
     return e.checkStandardUPCEANChecksum(t)
   }
   e.checkStandardUPCEANChecksum = function (t) {
-    var t$length = t.length
+    var /* [auto-meaningful-name] */t$length = t.length
     if (0 === t$length) {
       return false
     }
@@ -64,7 +64,7 @@ var l = function (t) {
     return e.getStandardUPCEANChecksum(t.substring(0, t$length - 1)) === n
   }
   e.getStandardUPCEANChecksum = function (t) {
-    for (var t$length = t.length, r = 0, n = t$length - 1; n >= 0; n -= 2) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, r = 0, n = t$length - 1; n >= 0; n -= 2) {
       if ((o = t.charAt(n).charCodeAt(0) - "0".charCodeAt(0)) < 0 || o > 9) {
         throw new f.a()
       }
@@ -87,7 +87,7 @@ var l = function (t) {
     return this.findGuardPattern(t, e, r, n, new Int32Array(n.length))
   }
   e.findGuardPattern = function (t, r, n, o, i) {
-    for (var a = t.getSize(), u = 0, f = r = n ? t.getNextUnset(r) : t.getNextSet(r), o$length = o.length, l = n, d = r; d < a; d++) {
+    for (var a = t.getSize(), u = 0, f = r = n ? t.getNextUnset(r) : t.getNextSet(r), /* [auto-meaningful-name] */o$length = o.length, l = n, d = r; d < a; d++) {
       if (t.get(d) !== l) {
         i[u]++
       } else {
@@ -113,7 +113,7 @@ var l = function (t) {
   }
   e.decodeDigit = function (t, r, n, o) {
     this.recordPattern(t, n, r)
-    for (var this$MAX_AVG_VARIANCE = this.MAX_AVG_VARIANCE, a = -1, o$length = o.length, f = 0; f < o$length; f++) {
+    for (var /* [auto-meaningful-name] */this$MAX_AVG_VARIANCE = this.MAX_AVG_VARIANCE, a = -1, /* [auto-meaningful-name] */o$length = o.length, f = 0; f < o$length; f++) {
       var h = o[f]
       var l = s.a.patternMatchVariance(r, h, e.MAX_INDIVIDUAL_VARIANCE)
       if (l < this$MAX_AVG_VARIANCE) {
@@ -163,7 +163,7 @@ var p = function () {
     this.decodeRowStringBuffer = ""
   }
   t.prototype.decodeRow = function (e, r, o) {
-    var this$decodeRowStringBuffer = this.decodeRowStringBuffer
+    var /* [auto-meaningful-name] */this$decodeRowStringBuffer = this.decodeRowStringBuffer
     var s = this.decodeMiddle(r, o, this$decodeRowStringBuffer)
     var c = this$decodeRowStringBuffer.toString()
     var f = t.parseExtensionString(c)
@@ -177,7 +177,7 @@ var p = function () {
   t.prototype.decodeMiddle = function (e, r, n) {
     var o
     var /* [auto-meaningful-name] */g$return
-    var this$decodeMiddleCounters = this.decodeMiddleCounters
+    var /* [auto-meaningful-name] */this$decodeMiddleCounters = this.decodeMiddleCounters
     this$decodeMiddleCounters[0] = 0
     this$decodeMiddleCounters[1] = 0
     this$decodeMiddleCounters[2] = 0
@@ -224,7 +224,7 @@ var p = function () {
     return s
   }
   t.extensionChecksum = function (t) {
-    for (var t$length = t.length, r = 0, n = t$length - 2; n >= 0; n -= 2) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, r = 0, n = t$length - 2; n >= 0; n -= 2) {
       r += t.charAt(n).charCodeAt(0) - "0".charCodeAt(0)
     }
     r *= 3
@@ -305,7 +305,7 @@ var y = function () {
     this.decodeRowStringBuffer = ""
   }
   t.prototype.decodeRow = function (e, r, o) {
-    var this$decodeRowStringBuffer = this.decodeRowStringBuffer
+    var /* [auto-meaningful-name] */this$decodeRowStringBuffer = this.decodeRowStringBuffer
     var s = this.decodeMiddle(r, o, this$decodeRowStringBuffer)
     var c = this$decodeRowStringBuffer.toString()
     var f = t.parseExtensionString(c)
@@ -319,7 +319,7 @@ var y = function () {
   t.prototype.decodeMiddle = function (t, e, r) {
     var n
     var /* [auto-meaningful-name] */d$return
-    var this$decodeMiddleCounters = this.decodeMiddleCounters
+    var /* [auto-meaningful-name] */this$decodeMiddleCounters = this.decodeMiddleCounters
     this$decodeMiddleCounters[0] = 0
     this$decodeMiddleCounters[1] = 0
     this$decodeMiddleCounters[2] = 0
@@ -427,8 +427,8 @@ var m = function (t) {
       l.foundPossibleResultPoint(d)
     }
     var p = this.decodeMiddle(r, h, this.decodeRowStringBuffer)
-    var p$rowOffset = p.rowOffset
-    var p$resultString = p.resultString
+    var /* [auto-meaningful-name] */p$rowOffset = p.rowOffset
+    var /* [auto-meaningful-name] */p$resultString = p.resultString
     if (null != l) {
       var _ = new u.a(p$rowOffset, t)
       l.foundPossibleResultPoint(_)
@@ -483,7 +483,7 @@ var m = function (t) {
     return e.checkStandardUPCEANChecksum(t)
   }
   e.checkStandardUPCEANChecksum = function (t) {
-    var t$length = t.length
+    var /* [auto-meaningful-name] */t$length = t.length
     if (0 === t$length) {
       return false
     }
@@ -491,7 +491,7 @@ var m = function (t) {
     return e.getStandardUPCEANChecksum(t.substring(0, t$length - 1)) === n
   }
   e.getStandardUPCEANChecksum = function (t) {
-    for (var t$length = t.length, r = 0, n = t$length - 1; n >= 0; n -= 2) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, r = 0, n = t$length - 1; n >= 0; n -= 2) {
       if ((o = t.charAt(n).charCodeAt(0) - "0".charCodeAt(0)) < 0 || o > 9) {
         throw new f.a()
       }

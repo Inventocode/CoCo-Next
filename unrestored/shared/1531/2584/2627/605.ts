@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：605
@@ -54,7 +54,7 @@ var a = {
   }, i),
   timePickerLocale: r.a({}, o)
 }
-var s = "${label} is not a valid ${type}"
+var /* [auto-meaningful-name] */$LabelIsNotAValid$Type = "${label} is not a valid ${type}"
 var c = {
   locale: "en",
   Pagination: {
@@ -151,19 +151,19 @@ var c = {
         invalid: "${label} is an invalid date"
       },
       types: {
-        string: s,
-        method: s,
-        array: s,
-        object: s,
-        number: s,
-        date: s,
-        boolean: s,
-        integer: s,
-        float: s,
-        regexp: s,
-        email: s,
-        url: s,
-        hex: s
+        string: $LabelIsNotAValid$Type,
+        method: $LabelIsNotAValid$Type,
+        array: $LabelIsNotAValid$Type,
+        object: $LabelIsNotAValid$Type,
+        number: $LabelIsNotAValid$Type,
+        date: $LabelIsNotAValid$Type,
+        boolean: $LabelIsNotAValid$Type,
+        integer: $LabelIsNotAValid$Type,
+        float: $LabelIsNotAValid$Type,
+        regexp: $LabelIsNotAValid$Type,
+        email: $LabelIsNotAValid$Type,
+        url: $LabelIsNotAValid$Type,
+        hex: $LabelIsNotAValid$Type
       },
       string: {
         len: "${label} must be ${len} characters",

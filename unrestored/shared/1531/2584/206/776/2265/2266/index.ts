@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2266
@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../../../../36/2668/220")
-var i = require("../../../../36/2668/230")
+var r = require("../../220")
+var i = require("../../230")
 var o = require("./2267/index")
 var a = require("../1346")
 var s = function () {
@@ -61,7 +61,7 @@ var s = function () {
         r = t
       }
       var i = n.first || this.internal.initialSegment
-      var n$last = n.last
+      var /* [auto-meaningful-name] */n$last = n.last
       var a = null
       var s = 0
       var c = 0

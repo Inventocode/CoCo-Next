@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：197
@@ -12,7 +12,7 @@ export { y as c }
 export { w as b }
 export { I as f }
 export { j as d }
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -25,36 +25,36 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import i = require("../47");
-import a = require("../7");
-import s = require("../27");
-import c = require("../57/index");
-import l = require("../58/index");
-import u = require("./276");
-import d = require("./479/index");
-import p = require("../9");
-import f = require("../64");
-import h = require("../15");
-import m = require("../59/index");
-var g = new d.a({
-  env: m.a.env,
-  projectName: m.a.productCode,
+import /* [auto-meaningful-name] */$$_47 = require("../47")
+import a = require("../7")
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */$$_57_index = require("../57/index")
+import /* [auto-meaningful-name] */$$_58_index = require("../58/index")
+import /* [auto-meaningful-name] */$_276 = require("./276")
+import /* [auto-meaningful-name] */$_479_index = require("./479/index")
+import p = require("../9")
+import /* [auto-meaningful-name] */$$_64 = require("../64")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
+import /* [auto-meaningful-name] */$$_59_index = require("../59/index")
+var g = new $_479_index.a({
+  env: $$_59_index.a.env,
+  projectName: $$_59_index.a.productCode,
   config: {
-    pid: m.a.pid,
-    api: m.a.openServiceHost
+    pid: $$_59_index.a.pid,
+    api: $$_59_index.a.openServiceHost
   }
 })
 var _ = function (e) {
-  c.a(n, e)
-  var t = l.a(n)
+  $$_57_index.a(n, e)
+  var t = $$_58_index.a(n)
   function n(e, r) {
     var o
-    s.a(this, n);
+    $$_27.a(this, n);
     (o = t.call(this, r)).uploadResult = e
     return o
   }
   return n
-}(u.a(Error))
+}($_276.a(Error))
 function v(e) {
   return b.apply(this, arguments)
 }
@@ -73,7 +73,7 @@ function b() {
             e.next = 4
             return new Promise(function (e, o) {
               g.create(t, {
-                filename: "".concat(m.a.productCode, "/").concat(f.a(n), "_").concat(Date.now()) + h.I(r),
+                filename: "".concat($$_59_index.a.productCode, "/").concat($$_64.a(n), "_").concat(Date.now()) + $$_15.I(r),
                 onsuccess: function (t) {
                   return e(t)
                 },
@@ -100,10 +100,10 @@ function b() {
 function y(e, t) {
   var n
   var r = []
-  var o = i.a(e)
+  var o = $$_47.a(e)
   try {
     for (o.s(); !(n = o.n()).done;) {
-      var n$value = n.value
+      var /* [auto-meaningful-name] */n$value = n.value
       r.push(E(n$value, t))
     }
   } catch (s) {
@@ -131,20 +131,20 @@ function O() {
               e.next = 16
               break
             }
-            if (a = null, !h.R(t$source)) {
+            if (a = null, !$$_15.R(t$source)) {
               e.next = 7
               break
             }
-            a = h.o(t$source, t.id)
+            a = $$_15.o(t$source, t.id)
             e.next = 11
             break
           case 7:
-            if (!h.P(t$source)) {
+            if (!$$_15.P(t$source)) {
               e.next = 11
               break
             }
             e.next = 10
-            return h.f(t$source, t.id)
+            return $$_15.f(t$source, t.id)
           case 10:
             a = e.sent
           case 11:
@@ -188,7 +188,7 @@ function C() {
         switch (e.prev = e.next) {
           case 0:
             r = []
-            a = i.a(t)
+            a = $$_47.a(t)
             try {
               for (a.s(); !(s = a.n()).done;) {
                 s$value = s.value
@@ -229,20 +229,20 @@ function S() {
               e.next = 16
               break
             }
-            if (a = null, !h.R(t$source)) {
+            if (a = null, !$$_15.R(t$source)) {
               e.next = 7
               break
             }
-            a = h.o(t$source, t.id)
+            a = $$_15.o(t$source, t.id)
             e.next = 11
             break
           case 7:
-            if (!h.P(t$source)) {
+            if (!$$_15.P(t$source)) {
               e.next = 11
               break
             }
             e.next = 10
-            return h.g(t$source, t.id)
+            return $$_15.g(t$source, t.id)
           case 10:
             a = e.sent
           case 11:
@@ -281,7 +281,7 @@ function A() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (n = h.m(t), "screenshot.png", !n) {
+            if (n = $$_15.m(t), "screenshot.png", !n) {
               e.next = 10
               break
             }
@@ -310,10 +310,10 @@ function A() {
 function j(e, t) {
   var n
   var r = []
-  var o = i.a(e)
+  var o = $$_47.a(e)
   try {
     for (o.s(); !(n = o.n()).done;) {
-      var n$value = n.value
+      var /* [auto-meaningful-name] */n$value = n.value
       r.push(N(n$value, t))
     }
   } catch (s) {
@@ -341,20 +341,20 @@ function R() {
               e.next = 16
               break
             }
-            if (a = null, !h.R(t$source)) {
+            if (a = null, !$$_15.R(t$source)) {
               e.next = 7
               break
             }
-            a = h.o(t$source, t.name)
+            a = $$_15.o(t$source, t.name)
             e.next = 11
             break
           case 7:
-            if (!h.P(t$source)) {
+            if (!$$_15.P(t$source)) {
               e.next = 11
               break
             }
             e.next = 10
-            return h.f(t$source, t.name)
+            return $$_15.f(t$source, t.name)
           case 10:
             a = e.sent
           case 11:

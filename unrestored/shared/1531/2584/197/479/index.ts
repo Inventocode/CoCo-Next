@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：479
@@ -9,7 +9,7 @@
 var r = require("./1458")
 var i = function () {
   return (i = Object.assign || function (e) {
-    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
         e[i] = t[i]
       }
@@ -173,8 +173,8 @@ var f = function () {
   var e = u
   return {
     init: function (t) {
-      var t$env = t.env
-      var t$config = t.config
+      var /* [auto-meaningful-name] */t$env = t.env
+      var /* [auto-meaningful-name] */t$config = t.config
       switch (t$env) {
         case "dev":
           e = s
@@ -214,17 +214,17 @@ function h(e, t) {
   return o(this, undefined, undefined, function () {
     return a(this, function (n) {
       return [2, new Promise(function (n, r) {
-        var t$async = t.async
+        var /* [auto-meaningful-name] */t$async = t.async
         var o = undefined === t$async || t$async
-        var t$data = t.data
+        var /* [auto-meaningful-name] */t$data = t.data
         var s = undefined === t$data ? null : t$data
-        var t$headers = t.headers
+        var /* [auto-meaningful-name] */t$headers = t.headers
         var u = undefined === t$headers ? {} : t$headers
-        var t$method = t.method
+        var /* [auto-meaningful-name] */t$method = t.method
         var f = undefined === t$method ? "get" : t$method
-        var t$timeout = t.timeout
+        var /* [auto-meaningful-name] */t$timeout = t.timeout
         var h = undefined === t$timeout ? 0 : t$timeout
-        var t$onprogress = t.onprogress
+        var /* [auto-meaningful-name] */t$onprogress = t.onprogress
         var _ = new XMLHttpRequest()
         if (t.withCredentials) {
           _.withCredentials = true

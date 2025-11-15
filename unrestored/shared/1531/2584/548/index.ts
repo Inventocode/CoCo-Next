@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：548
@@ -6,8 +6,8 @@
 
 "use strict"
 
-import r = require("../11");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_11 = require("../11")
+import /* [auto-meaningful-name] */React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -20,7 +20,7 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import Color = require("color");
+import /* [auto-meaningful-name] */Color = require("color")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -33,7 +33,7 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import c = require("../8");
+import c = require("../8")
 var l = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -46,16 +46,16 @@ var l = function __importDefault(module) {
   })
   return defaultExport
 }(c)
-import u = require("./484/index");
-import d = require("./485");
-import p = require("./280");
-import f = require("./1183/index");
-import h = require("../16/index");
-import m = require("../90");
-import g = require("../235");
-import _ = require("../5");
-import v = require("../53");
-import b = require("./433");
+import /* [auto-meaningful-name] */$_484_index = require("./484/index")
+import /* [auto-meaningful-name] */$_485_index = require("./485/index")
+import /* [auto-meaningful-name] */$_280 = require("./280")
+import /* [auto-meaningful-name] */$_1183_index = require("./1183/index")
+import /* [auto-meaningful-name] */$$_16_index = require("../16/index")
+import /* [auto-meaningful-name] */$$_90 = require("../90")
+import /* [auto-meaningful-name] */$$_235 = require("../235")
+import _ = require("../5")
+import /* [auto-meaningful-name] */$$_53 = require("../53")
+import /* [auto-meaningful-name] */$_433 = require("./433")
 var y = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -67,22 +67,22 @@ var y = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(b)
+}($_433)
 var _a
 _a = React.memo(function (e) {
   var t = e.id
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$attributes = e.attributes
-  var e$size = e.size
-  var e$onDatePickerChange = e.onDatePickerChange
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$color = e$attributes.color
-  var e$attributes$fontSize = e$attributes.fontSize
-  var e$attributes$timeStamp = e$attributes.timeStamp
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$onDatePickerChange = e.onDatePickerChange
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
+  var /* [auto-meaningful-name] */e$attributes$fontSize = e$attributes.fontSize
+  var /* [auto-meaningful-name] */e$attributes$timeStamp = e$attributes.timeStamp
   var S = React.useRef(null)
   var I = new Date(e$attributes$timeStamp)
-  var A = h.e(function (e) {
+  var A = $$_16_index.e(function (e) {
     var /* [auto-meaningful-name] */e$project
     return null === e || undefined === e || null === (e$project = e.project) || undefined === e$project ? undefined : e$project.playing
   })
@@ -90,11 +90,11 @@ _a = React.memo(function (e) {
     id: t,
     "data-role": _.M,
     "data-widget-type": _.n,
-    "data-min-width": g.l,
-    "data-max-width": g.j,
-    "data-min-height": g.k,
-    "data-max-height": g.i,
-    className: l()(m.b, r.a({}, y.a.hide, !e$visible), y.a.dataPicker),
+    "data-min-width": $$_235.l,
+    "data-max-width": $$_235.j,
+    "data-min-height": $$_235.k,
+    "data-max-height": $$_235.i,
+    className: l()($$_90.b, $$_11.a({}, y.a.hide, !e$visible), y.a.dataPicker),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -107,10 +107,10 @@ _a = React.memo(function (e) {
       borderRadius: "18px"
     },
     ref: S
-  }, i.a.createElement(p.a, {
-    utils: u.a,
-    locale: d.a
-  }, i.a.createElement(f.a, {
+  }, i.a.createElement($_280.a, {
+    utils: $_484_index.a,
+    locale: $_485_index.a
+  }, i.a.createElement($_1183_index.a, {
     format: "yyyy年MM月dd日",
     value: I,
     onChange: function (e) {
@@ -145,9 +145,9 @@ _a = React.memo(function (e) {
     className: l()(y.a.mask),
     onClick: function () {
       var e
-      var s$current = S.current
-      if (s$current) {
-        if (s$current.dataset.clickType === v.h.CLICK) {
+      var /* [auto-meaningful-name] */S$current = S.current
+      if (S$current) {
+        if (S$current.dataset.clickType === $$_53.h.CLICK) {
           if (!(null === (e = document.getElementById("date-picker-".concat(t))) || undefined === e)) {
             e.click()
           }

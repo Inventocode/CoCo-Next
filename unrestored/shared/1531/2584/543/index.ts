@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：543
@@ -6,9 +6,9 @@
 
 "use strict"
 
-import r = require("../6");
-import o = require("../11");
-import React = require("react");
+import r = require("../6")
+import /* [auto-meaningful-name] */$$_11 = require("../11")
+import /* [auto-meaningful-name] */React = require("react")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,7 +21,7 @@ var a = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import Color = require("color");
+import /* [auto-meaningful-name] */Color = require("color")
 var c = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -34,7 +34,7 @@ var c = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import l = require("../8");
+import l = require("../8")
 var u = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -47,13 +47,13 @@ var u = function __importDefault(module) {
   })
   return defaultExport
 }(l)
-import d = require("../5");
-import p = require("../15");
-import f = require("../35");
-import h = require("../90");
-import m = require("../321");
-import g = require("../83");
-import _ = require("./380");
+import d = require("../5")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
+import /* [auto-meaningful-name] */$$_35 = require("../35")
+import /* [auto-meaningful-name] */$$_90 = require("../90")
+import /* [auto-meaningful-name] */$$_321 = require("../321")
+import /* [auto-meaningful-name] */$$_83 = require("../83")
+import /* [auto-meaningful-name] */$_380 = require("./380")
 var v = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -65,66 +65,66 @@ var v = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(_)
+}($_380)
 var _a
 _a = function (e) {
-  var e$position = e.position
-  var e$size = e.size
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$size = e.size
   var s = e.id
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$attributes = e.attributes
-  var e$iconFile = e.iconFile
-  var e$onClick = e.onClick
-  var e$onMouseDown = e.onMouseDown
-  var e$onMouseUp = e.onMouseUp
-  var e$attributes$color = e$attributes.color
-  var e$attributes$mode = e$attributes.mode
-  var e$attributes$disabled = e$attributes.disabled
-  var e$attributes$text = e$attributes.text
-  var e$attributes$sizeType = e$attributes.sizeType
-  var e$attributes$iconId = e$attributes.iconId
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$iconFile = e.iconFile
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$onMouseDown = e.onMouseDown
+  var /* [auto-meaningful-name] */e$onMouseUp = e.onMouseUp
+  var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
+  var /* [auto-meaningful-name] */e$attributes$mode = e$attributes.mode
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$attributes$text = e$attributes.text
+  var /* [auto-meaningful-name] */e$attributes$sizeType = e$attributes.sizeType
+  var /* [auto-meaningful-name] */e$attributes$iconId = e$attributes.iconId
   var N = React.useRef(null)
   var R = React.useRef(null)
-  var k = f.O(e$attributes$mode) === g.a.ICON
+  var k = $$_35.O(e$attributes$mode) === $$_83.a.ICON
   var x = React.useMemo(function () {
     var e = function (e, t) {
       var n
       var r = c()(t).toString()
-      return (n = {}, o.a(n, g.b.CONTAINED_TEXT, {
+      return (n = {}, $$_11.a(n, $$_83.b.CONTAINED_TEXT, {
         default: {
           backgroundColor: r,
-          color: p.Z(r) ? p.a : "#ffffff"
+          color: $$_15.Z(r) ? $$_15.a : "#ffffff"
         },
         disabled: {
           backgroundColor: "#cccccc",
           color: "#e6e6e6"
         }
-      }), o.a(n, g.b.OUTLINED_TEXT, {
+      }), $$_11.a(n, $$_83.b.OUTLINED_TEXT, {
         default: {
           borderColor: r,
           color: r,
-          background: p.Z(r) ? p.a : "#ffffff"
+          background: $$_15.Z(r) ? $$_15.a : "#ffffff"
         },
         disabled: {
           background: "#ffffff",
           borderColor: "#e9e9e9",
           color: "#e9e9e9"
         }
-      }), o.a(n, g.b.CONTAINED_ICON, {
+      }), $$_11.a(n, $$_83.b.CONTAINED_ICON, {
         default: {
           backgroundColor: r,
-          color: p.Z(r) ? p.a : "#ffffff"
+          color: $$_15.Z(r) ? $$_15.a : "#ffffff"
         },
         disabled: {
           backgroundColor: "#cccccc",
           color: "#e6e6e6"
         }
-      }), o.a(n, g.b.OUTLINED_ICON, {
+      }), $$_11.a(n, $$_83.b.OUTLINED_ICON, {
         default: {
           borderColor: r,
           color: r,
-          background: p.Z(r) ? p.a : "#ffffff"
+          background: $$_15.Z(r) ? $$_15.a : "#ffffff"
         },
         disabled: {
           background: "#ffffff",
@@ -136,25 +136,25 @@ _a = function (e) {
     return e$attributes$disabled ? e.disabled : e.default
   }, [e$attributes$mode, e$attributes$color, e$attributes$disabled])
   var D = React.useMemo(function () {
-    return f.Q(e$attributes$sizeType, e$attributes$mode)
+    return $$_35.Q(e$attributes$sizeType, e$attributes$mode)
   }, [e$attributes$mode, e$attributes$sizeType])
-  var d$height = D.height
-  var d$fontSize = D.fontSize
-  var d$minWidth = D.minWidth
-  var d$maxWidth = D.maxWidth
+  var /* [auto-meaningful-name] */D$height = D.height
+  var /* [auto-meaningful-name] */D$fontSize = D.fontSize
+  var /* [auto-meaningful-name] */D$minWidth = D.minWidth
+  var /* [auto-meaningful-name] */D$maxWidth = D.maxWidth
   return a.a.createElement("button", {
     id: s,
-    className: u()(h.b, v.a.buttonWidget, o.a({}, v.a.hide, !e$visible)),
+    className: u()($$_90.b, v.a.buttonWidget, $$_11.a({}, v.a.hide, !e$visible)),
     "data-role": d.M,
     "data-widget-type": d.d,
     "data-lock-height": true,
-    "data-min-width": d$minWidth,
-    "data-max-width": d$maxWidth,
+    "data-min-width": D$minWidth,
+    "data-max-width": D$maxWidth,
     ref: N,
     onClick: function () {
-      var r$current = R.current
+      var /* [auto-meaningful-name] */R$current = R.current
       if (e$onClick) {
-        e$onClick(r$current)
+        e$onClick(R$current)
       }
     },
     onMouseDown: function () {
@@ -168,16 +168,16 @@ _a = function (e) {
       }
     },
     style: r.a({
-      borderRadius: k ? d$height / 2 : d$height / 4,
+      borderRadius: k ? D$height / 2 : D$height / 4,
       top: e$position.y,
       left: e$position.x,
-      height: d$height,
+      height: D$height,
       width: e$size.width,
-      fontSize: d$fontSize,
+      fontSize: D$fontSize,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }, x)
-  }, k ? a.a.createElement(m.a, {
-    icon: e$iconFile || f.fb(e$attributes$iconId)
+  }, k ? a.a.createElement($$_321.a, {
+    icon: e$iconFile || $$_35.fb(e$attributes$iconId)
   }) : a.a.createElement("div", {
     className: u()(v.a.inputWrapper)
   }, a.a.createElement("div", {

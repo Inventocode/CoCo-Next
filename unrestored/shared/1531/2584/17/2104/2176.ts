@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2176
@@ -67,7 +67,7 @@ var l = function () {
     var p
     var _
     var A = !!e.rtl
-    var e$horizontalLayout = e.horizontalLayout
+    var /* [auto-meaningful-name] */e$horizontalLayout = e.horizontalLayout
     if (undefined == e$horizontalLayout) {
       e$horizontalLayout = false
     }
@@ -96,15 +96,15 @@ var l = function () {
         _ = l
       }
     }
-    var e$css = e.css
+    var /* [auto-meaningful-name] */e$css = e.css
     if (undefined == e$css) {
       e$css = true
     }
     var y
     var b
-    var w = "https://static.codemao.cn/blockly/media/"
+    var /* [auto-meaningful-name] */Https__static$codemao$cn_blockly_media_ = "https://static.codemao.cn/blockly/media/"
     if (e.media) {
-      w = e.media
+      Https__static$codemao$cn_blockly_media_ = e.media
     }
     y = undefined == e.oneBasedIndex || !!e.oneBasedIndex
     b = undefined != e.blockly_type ? e.blockly_type : "default"
@@ -116,7 +116,7 @@ var l = function () {
     this.disable = r
     this.readOnly = a
     this.maxBlocks = e.maxBlocks || 1 / 0
-    this.pathToMedia = w
+    this.pathToMedia = Https__static$codemao$cn_blockly_media_
     this.has_categories = l
     this.ws_scrollable = d
     this.ws_show_scrollbars = p
@@ -193,7 +193,7 @@ var l = function () {
     }
   }
   e.prototype.parse_delete_area_margin = function (e, t) {
-    var e$delete_area_margin = e.delete_area_margin
+    var /* [auto-meaningful-name] */e$delete_area_margin = e.delete_area_margin
     return Array.isArray(e$delete_area_margin) ? e$delete_area_margin : ("undefined" === typeof e$delete_area_margin && (e$delete_area_margin = 1e7), t === u.TOOLBOX_POSITION.LEFT ? [e$delete_area_margin, 0, e$delete_area_margin, e$delete_area_margin] : t === u.TOOLBOX_POSITION.TOP ? [e$delete_area_margin, e$delete_area_margin, 0, e$delete_area_margin] : t === u.TOOLBOX_POSITION.RIGHT ? [e$delete_area_margin, e$delete_area_margin, e$delete_area_margin, 0] : [0, e$delete_area_margin, e$delete_area_margin, e$delete_area_margin])
   }
   e.prototype.parse_flyout_options = function (e) {
@@ -229,13 +229,13 @@ var l = function () {
     }
   }
   e.prototype.parse_context_menu_options = function (e) {
-    var /* [auto-meaningful-name] */_e$context_menu2
     var /* [auto-meaningful-name] */e$context_menu
+    var /* [auto-meaningful-name] */_e$context_menu
     var r = [u.WorkspaceOptionType.PASTE, u.WorkspaceOptionType.CLEAN_UP, u.WorkspaceOptionType.DELETE_ALL, u.WorkspaceOptionType.COPY_ALL, u.WorkspaceOptionType.GLOBAL_COMMENT]
     var i = [u.BlockOptionType.COPY_AND_PASTE, u.BlockOptionType.COPY, u.BlockOptionType.ADD_COMMENT, u.BlockOptionType.COLLAPSE, u.BlockOptionType.DELETE, u.BlockOptionType.SET_GROUP]
     return {
-      workspace: (null === (_e$context_menu2 = e.context_menu) || undefined === _e$context_menu2 ? undefined : _e$context_menu2.workspace) || r,
-      block: (null === (e$context_menu = e.context_menu) || undefined === e$context_menu ? undefined : e$context_menu.block) || i
+      workspace: (null === (e$context_menu = e.context_menu) || undefined === e$context_menu ? undefined : e$context_menu.workspace) || r,
+      block: (null === (_e$context_menu = e.context_menu) || undefined === _e$context_menu ? undefined : _e$context_menu.block) || i
     }
   }
   return e = (0, r.__decorate)([(0, i.injectable)()], e)

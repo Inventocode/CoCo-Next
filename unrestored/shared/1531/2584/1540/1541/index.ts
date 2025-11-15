@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1541
@@ -6,49 +6,49 @@
 
 "use strict"
 
-var r = require("../1623/86")
-var o = require("../1736/194")
-var i = require("../1664/472")
+var r = require("../1698/86/index")
+var o = require("./194")
+var i = require("./472")
 var a = require("../1684/530")
-var s = require("../1623/272")
+var s = require("./272")
 var c = require("./1054")
-var l = require("../1736/167")
-var u = require("../1745/332")
+var l = require("./167")
+var u = require("./332")
 var d = require("./819")
-var p = require("../1738/231")
+var p = require("./231")
 var f = require("./749")
-var h = require("../1659/241")
-var m = require("../1623/309")
-var g = require("../1678/437")
-var _ = require("../1656/628")
-var v = require("../1745/310")
-var b = require("../1665/627")
-var y = require("../1654/575/index")
+var h = require("./241")
+var m = require("./309")
+var g = require("./437")
+var _ = require("./628")
+var v = require("../1684/310")
+var b = require("./627")
+var y = require("./575/index")
 var E = require("./820")
-var O = require("../1667/631/index")
+var O = require("./631/index")
 var w = require("./1062")
 var C = require("./1061")
-var T = require("../1659/386/index")
-var S = require("../1623/300")
+var T = require("../1684/386")
+var S = require("./300/index")
 var I = require("./931")
-var A = require("../1740/422")
-var j = require("../1745/398/index")
+var A = require("./422")
+var j = require("./398")
 var N = require("./932")
 var R = require("./933")
 var k = require("./816")
 var x = require("./815")
-var D = require("../1742/247/index")
+var D = require("./247/index")
 var M = require("./1214")
 var L = require("./438/index")
-var P = require("../1745/531")
-var B = require("../1745/423/index")
-var require$$1733399$forEach = require("../1733/399").forEach
+var P = require("./531")
+var B = require("./423/index")
+var /* [auto-meaningful-name] */require$_399$forEach = require("./399").forEach
 var G = R("hidden")
 var U = D("toPrimitive")
-var b$set = B.set
+var /* [auto-meaningful-name] */B$set = B.set
 var H = B.getterFor("Symbol")
-var object$prototype = Object.prototype
-var o$Symbol = o.Symbol
+var /* [auto-meaningful-name] */Object$prototype = Object.prototype
+var /* [auto-meaningful-name] */o$Symbol = o.Symbol
 var Y = i("JSON", "stringify")
 var K = T.f
 var q = S.f
@@ -59,7 +59,7 @@ var J = N("op-symbols")
 var $ = N("string-to-symbol-registry")
 var ee = N("symbol-to-string-registry")
 var te = N("wks")
-var o$QObject = o.QObject
+var /* [auto-meaningful-name] */o$QObject = o.QObject
 var re = !o$QObject || !o$QObject.prototype || !o$QObject.prototype.findChild
 var oe = s && l(function () {
   return 7 != y(q({}, "a", {
@@ -70,18 +70,18 @@ var oe = s && l(function () {
     }
   })).a
 }) ? function (e, t, n) {
-  var r = K(object$prototype, t)
+  var r = K(Object$prototype, t)
   if (r) {
-    delete object$prototype[t]
+    delete Object$prototype[t]
   }
   q(e, t, n)
-  if (r && e !== object$prototype) {
-    q(object$prototype, t, r)
+  if (r && e !== Object$prototype) {
+    q(Object$prototype, t, r)
   }
 } : q
 var ie = function (e, t) {
   var n = Z[e] = y(o$Symbol.prototype)
-  b$set(n, {
+  B$set(n, {
     type: "Symbol",
     tag: e,
     description: t
@@ -92,7 +92,7 @@ var ie = function (e, t) {
   return n
 }
 var ae = function (e, t, n) {
-  if (e === object$prototype) {
+  if (e === Object$prototype) {
     ae(J, t, n)
   }
   h(e)
@@ -106,7 +106,7 @@ var se = function (e, t) {
   h(e)
   var n = g(t)
   var r = E(n).concat(de(n))
-  require$$1733399$forEach(r, function (t) {
+  require$_399$forEach(r, function (t) {
     if (!(s && !ce.call(n, t))) {
       ae(e, t, n[t])
     }
@@ -116,12 +116,12 @@ var se = function (e, t) {
 var ce = function (e) {
   var t = _(e)
   var n = Q.call(this, t)
-  return !(this === object$prototype && u(Z, t) && !u(J, t)) && (!(n || !u(this, t) || !u(Z, t) || u(this, G) && this[G][t]) || n)
+  return !(this === Object$prototype && u(Z, t) && !u(J, t)) && (!(n || !u(this, t) || !u(Z, t) || u(this, G) && this[G][t]) || n)
 }
 var le = function (e, t) {
   var n = g(e)
   var r = _(t)
-  if (n !== object$prototype || !u(Z, r) || u(J, r)) {
+  if (n !== Object$prototype || !u(Z, r) || u(J, r)) {
     var o = K(n, r)
     if (!(!o || !u(Z, r) || u(n, G) && n[G][r])) {
       o.enumerable = true
@@ -132,7 +132,7 @@ var le = function (e, t) {
 var ue = function (e) {
   var t = X(g(e))
   var n = []
-  require$$1733399$forEach(t, function (e) {
+  require$_399$forEach(t, function (e) {
     if (!(u(Z, e) || u(k, e))) {
       n.push(e)
     }
@@ -140,11 +140,11 @@ var ue = function (e) {
   return n
 }
 var de = function (e) {
-  var t = e === object$prototype
+  var t = e === Object$prototype
   var n = X(t ? J : g(e))
   var r = []
-  require$$1733399$forEach(n, function (e) {
-    if (!(!u(Z, e) || t && !u(object$prototype, e))) {
+  require$_399$forEach(n, function (e) {
+    if (!(!u(Z, e) || t && !u(Object$prototype, e))) {
       r.push(Z[e])
     }
   })
@@ -158,7 +158,7 @@ if (!c) {
     var e = arguments.length && undefined !== arguments[0] ? v(arguments[0]) : undefined
     var t = x(e)
     var n = function e(n) {
-      if (this === object$prototype) {
+      if (this === Object$prototype) {
         e.call(J, n)
       }
       if (u(this, G) && u(this[G], t)) {
@@ -167,7 +167,7 @@ if (!c) {
       oe(this, t, b(1, n))
     }
     if (s && re) {
-      oe(object$prototype, t, {
+      oe(Object$prototype, t, {
         configurable: true,
         set: n
       })
@@ -195,7 +195,7 @@ if (!c) {
       }
     })
     if (!a) {
-      j(object$prototype, "propertyIsEnumerable", ce, {
+      j(Object$prototype, "propertyIsEnumerable", ce, {
         unsafe: true
       })
     }
@@ -209,7 +209,7 @@ r({
 }, {
   Symbol: o$Symbol
 })
-require$$1733399$forEach(E(te), function (e) {
+require$_399$forEach(E(te), function (e) {
   L(e)
 })
 r({

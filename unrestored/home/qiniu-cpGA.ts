@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：cpGA
@@ -74,7 +74,7 @@
   }, function (t, e, n) {
     var r = n(31)("wks")
     var o = n(22)
-    var n0$Symbol = n(0).Symbol
+    var /* [auto-meaningful-name] */n0$Symbol = n(0).Symbol
     var a = "function" == typeof n0$Symbol;
     (t.exports = function (t) {
       return r[t] || (r[t] = a && n0$Symbol[t] || (a ? n0$Symbol : o)("Symbol." + t))
@@ -112,7 +112,7 @@
       var m = t & u.B
       var v = t & u.W
       var y = p ? o : o[e] || (o[e] = {})
-      var y$prototype = y.prototype
+      var /* [auto-meaningful-name] */y$prototype = y.prototype
       var w = p ? r : d ? r[e] : (r[e] || {}).prototype
       for (c in p && (n = e), n) if (!((f = !h && w && undefined !== w[c]) && s(y, c))) {
         l = f ? w[c] : n[c]
@@ -164,14 +164,14 @@
     var r = n(3)
     var o = n(43)
     var i = n(29)
-    var object$defineProperty = Object.defineProperty
+    var /* [auto-meaningful-name] */Object$defineProperty = Object.defineProperty
     e.f = n(4) ? Object.defineProperty : function (t, e, n) {
       r(t)
       e = i(e, true)
       r(n)
       if (o) {
         try {
-          return object$defineProperty(t, e, n)
+          return Object$defineProperty(t, e, n)
         } catch (t) {}
       }
       if ("get" in n || "set" in n) {
@@ -187,7 +187,7 @@
       return "object" == typeof t ? null !== t : "function" == typeof t
     }
   }, function (t, e) {
-    var $hasOwnProperty = {}.hasOwnProperty
+    var /* [auto-meaningful-name] */$hasOwnProperty = {}.hasOwnProperty
     t.exports = function (t, e) {
       return $hasOwnProperty.call(t, e)
     }
@@ -250,7 +250,7 @@
         var r = new FileReader()
         r.readAsArrayBuffer(t)
         r.onload = function (t) {
-          var t$target$result = t.target.result
+          var /* [auto-meaningful-name] */t$target$result = t.target.result
           e(t$target$result)
         }
         r.onerror = function () {
@@ -279,7 +279,7 @@
           }
         })
         o.onreadystatechange = function () {
-          var o$responseText = o.responseText
+          var /* [auto-meaningful-name] */o$responseText = o.responseText
           if (4 === o.readyState) {
             var e = o.getResponseHeader("x-reqId") || ""
             if (200 !== o.status) {
@@ -363,7 +363,7 @@
       if (r.mimeType) {
         o += "/mimeType/" + (0, v.urlSafeBase64Encode)(e.type)
       }
-      var r$fname = r.fname
+      var /* [auto-meaningful-name] */r$fname = r.fname
       if (r$fname) {
         o += "/fname/" + (0, v.urlSafeBase64Encode)(r$fname)
       }
@@ -441,7 +441,7 @@
           return p.default.reject(t)
         }
       }(e).then(function (t) {
-        var t$data$up$acc$main = t.data.up.acc.main
+        var /* [auto-meaningful-name] */t$data$up$acc$main = t.data.up.acc.main
         return n + "//" + t$data$up$acc$main[0]
       })
     }
@@ -452,8 +452,8 @@
       return (window.URL || window.webkitURL || window.mozURL).createObjectURL(t)
     }
     e.getTransform = function (t, e) {
-      var t$width = t.width
-      var t$height = t.height
+      var /* [auto-meaningful-name] */t$width = t.width
+      var /* [auto-meaningful-name] */t$height = t.height
       switch (e) {
         case 1:
           return {
@@ -519,7 +519,7 @@
       return r(t, o)
     }
   }, function (t, e) {
-    var $toString = {}.toString
+    var /* [auto-meaningful-name] */$toString = {}.toString
     t.exports = function (t) {
       return $toString.call(t).slice(8, -1)
     }
@@ -604,10 +604,10 @@
   }, function (t, e) {
     e.f = {}.propertyIsEnumerable
   }, function (t, e) {
-    var math$ceil = Math.ceil
-    var math$floor = Math.floor
+    var /* [auto-meaningful-name] */Math$ceil = Math.ceil
+    var /* [auto-meaningful-name] */Math$floor = Math.floor
     t.exports = function (t) {
-      return isNaN(t = +t) ? 0 : (t > 0 ? math$floor : math$ceil)(t)
+      return isNaN(t = +t) ? 0 : (t > 0 ? Math$floor : Math$ceil)(t)
     }
   }, function (t, e) {
     t.exports = function (t) {
@@ -618,7 +618,7 @@
     }
   }, function (t, e, n) {
     var r = n(8)
-    var n0$document = n(0).document
+    var /* [auto-meaningful-name] */n0$document = n(0).document
     var i = r(n0$document) && r(n0$document.createElement)
     t.exports = function (t) {
       return i ? n0$document.createElement(t) : {}
@@ -750,8 +750,8 @@
       this._i = 0
     }, function () {
       var t
-      var this$_t = this._t
-      var this$_i = this._i
+      var /* [auto-meaningful-name] */this$_t = this._t
+      var /* [auto-meaningful-name] */this$_i = this._i
       return this$_i >= this$_t.length ? {
         value: undefined,
         done: true
@@ -799,7 +799,7 @@
       var S = e + " Iterator"
       var P = "values" == g
       var _ = false
-      var t$prototype = t.prototype
+      var /* [auto-meaningful-name] */t$prototype = t.prototype
       var U = t$prototype[l] || t$prototype["@@iterator"] || g && t$prototype[g]
       var F = U || x(g)
       var I = g ? P ? x("entries") : F : undefined
@@ -856,7 +856,7 @@
     var u = function () {
       var /* [auto-meaningful-name] */e$contentWindow$document
       var e = n(28)("iframe")
-      var i$length = i.length
+      var /* [auto-meaningful-name] */i$length = i.length
       for (e.style.display = "none", n(49).appendChild(e), e.src = "javascript:", (e$contentWindow$document = e.contentWindow.document).open(), e$contentWindow$document.write("<script>document.F=Object</script>"), e$contentWindow$document.close(), u = e$contentWindow$document.F; i$length--;) {
         delete u.prototype[i[i$length]]
       }
@@ -903,12 +903,12 @@
     }
   }, function (t, e, n) {
     var r = n(26)
-    var math$min = Math.min
+    var /* [auto-meaningful-name] */Math$min = Math.min
     t.exports = function (t) {
-      return t > 0 ? math$min(r(t), 9007199254740991) : 0
+      return t > 0 ? Math$min(r(t), 9007199254740991) : 0
     }
   }, function (t, e, n) {
-    var n0$document = n(0).document
+    var /* [auto-meaningful-name] */n0$document = n(0).document
     t.exports = n0$document && n0$document.documentElement
   }, function (t, e, n) {
     n(66)
@@ -943,23 +943,23 @@
     var i = n(2)("species")
     t.exports = function (t, e) {
       var n
-      var rT$constructor = r(t).constructor
+      var /* [auto-meaningful-name] */rT$constructor = r(t).constructor
       return undefined === rT$constructor || undefined == (n = r(rT$constructor)[i]) ? e : o(n)
     }
   }, function (t, e, n) {
     var r
     var o
-    var /* [auto-meaningful-name] */oNewF$MessageChannel$port2
+    var /* [auto-meaningful-name] */ONewD$port2
     var a = n(19)
     var s = n(75)
     var u = n(49)
     var c = n(28)
     var f = n(0)
-    var f$process = f.process
-    var f$setImmediate = f.setImmediate
-    var f$clearImmediate = f.clearImmediate
-    var f$MessageChannel = f.MessageChannel
-    var f$Dispatch = f.Dispatch
+    var /* [auto-meaningful-name] */f$process = f.process
+    var /* [auto-meaningful-name] */f$setImmediate = f.setImmediate
+    var /* [auto-meaningful-name] */f$clearImmediate = f.clearImmediate
+    var /* [auto-meaningful-name] */f$MessageChannel = f.MessageChannel
+    var /* [auto-meaningful-name] */f$Dispatch = f.Dispatch
     var m = 0
     var v = {}
     var y = function () {
@@ -998,9 +998,9 @@
           }
         } else {
           if (f$MessageChannel) {
-            oNewF$MessageChannel$port2 = (o = new f$MessageChannel()).port2
+            ONewD$port2 = (o = new f$MessageChannel()).port2
             o.port1.onmessage = b
-            r = a(oNewF$MessageChannel$port2.postMessage, oNewF$MessageChannel$port2, 1)
+            r = a(ONewD$port2.postMessage, ONewD$port2, 1)
           } else {
             if (f.addEventListener && "function" == typeof postMessage && !f.importScripts) {
               r = function (t) {
@@ -1058,7 +1058,7 @@
     e.__esModule = true
     e.urlSafeBase64Encode = function (t) {
       return (t = function (t) {
-        var e = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+        var /* [auto-meaningful-name] */ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_ = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
         var n = undefined
         var r = undefined
         var o = undefined
@@ -1126,7 +1126,7 @@
           a = c >> 12 & 63
           s = c >> 6 & 63
           u = 63 & c
-          p[l++] = e.charAt(i) + e.charAt(a) + e.charAt(s) + e.charAt(u)
+          p[l++] = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt(i) + ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt(a) + ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt(s) + ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.charAt(u)
         } while (f < t.length)
         switch (h = p.join(""), t.length % 3) {
           case 1:
@@ -1140,7 +1140,7 @@
     }
     e.urlSafeBase64Decode = function (t) {
       return function (t) {
-        var e = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
+        var /* [auto-meaningful-name] */ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_ = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/="
         var n = undefined
         var r = undefined
         var o = undefined
@@ -1157,10 +1157,10 @@
         }
         t += ""
         do {
-          i = e.indexOf(t.charAt(f++))
-          a = e.indexOf(t.charAt(f++))
-          s = e.indexOf(t.charAt(f++))
-          u = e.indexOf(t.charAt(f++))
+          i = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(t.charAt(f++))
+          a = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(t.charAt(f++))
+          s = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(t.charAt(f++))
+          u = ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789_.indexOf(t.charAt(f++))
           n = (c = i << 18 | a << 12 | s << 6 | u) >> 16 & 255
           r = c >> 8 & 255
           o = 255 & c
@@ -1246,7 +1246,7 @@
         var a
         var s = String(o(e))
         var u = r(n)
-        var s$length = s.length
+        var /* [auto-meaningful-name] */s$length = s.length
         return u < 0 || u >= s$length ? t ? "" : undefined : (i = s.charCodeAt(u)) < 55296 || i > 56319 || u + 1 === s$length || (a = s.charCodeAt(u + 1)) < 56320 || a > 57343 ? t ? s.charAt(u) : i : t ? s.slice(u, u + 2) : a - 56320 + (i - 55296 << 10) + 65536
       }
     }
@@ -1272,7 +1272,7 @@
     var i = n(15)
     t.exports = n(4) ? Object.defineProperties : function (t, e) {
       o(t)
-      for (var n, a = i(e), a$length = a.length, u = 0; a$length > u;) {
+      for (var n, a = i(e), /* [auto-meaningful-name] */a$length = a.length, u = 0; a$length > u;) {
         r.f(t, n = a[u++], e[n])
       }
       return t
@@ -1305,19 +1305,19 @@
     }
   }, function (t, e, n) {
     var r = n(26)
-    var math$max = Math.max
-    var math$min = Math.min
+    var /* [auto-meaningful-name] */Math$max = Math.max
+    var /* [auto-meaningful-name] */Math$min = Math.min
     t.exports = function (t, e) {
-      return (t = r(t)) < 0 ? math$max(t + e, 0) : math$min(t, e)
+      return (t = r(t)) < 0 ? Math$max(t + e, 0) : Math$min(t, e)
     }
   }, function (t, e, n) {
     var r = n(9)
     var o = n(24)
     var i = n(30)("IE_PROTO")
-    var object$prototype = Object.prototype
+    var /* [auto-meaningful-name] */Object$prototype = Object.prototype
     t.exports = Object.getPrototypeOf || function (t) {
       t = o(t)
-      return r(t, i) ? t[i] : "function" == typeof t.constructor && t instanceof t.constructor ? t.constructor.prototype : t instanceof Object ? object$prototype : null
+      return r(t, i) ? t[i] : "function" == typeof t.constructor && t instanceof t.constructor ? t.constructor.prototype : t instanceof Object ? Object$prototype : null
     }
   }, function (t, e, n) {
     "use strict"
@@ -1331,8 +1331,8 @@
       this._i = 0
       this._k = e
     }, function () {
-      var this$_t = this._t
-      var this$_k = this._k
+      var /* [auto-meaningful-name] */this$_t = this._t
+      var /* [auto-meaningful-name] */this$_k = this._k
       var n = this._i++
       return !this$_t || n >= this$_t.length ? (this._t = undefined, o(1)) : o(0, "keys" == this$_k ? n : "values" == this$_k ? this$_t[n] : [n, this$_t[n]])
     }, "values")
@@ -1366,17 +1366,17 @@
     var d = n(70)
     var g = n(71)
     var m = n(52)
-    var n53$set = n(53).set
+    var /* [auto-meaningful-name] */n53$set = n(53).set
     var y = n(76)()
     var b = n(33)
     var w = n(54)
     var x = n(77)
     var S = n(55)
-    var u$TypeError = u.TypeError
-    var u$process = u.process
+    var /* [auto-meaningful-name] */u$TypeError = u.TypeError
+    var /* [auto-meaningful-name] */u$process = u.process
     var C = u$process && u$process.versions
     var U = C && C.v8 || ""
-    var u$Promise = u.Promise
+    var /* [auto-meaningful-name] */u$Promise = u.Promise
     var I = "process" == f(u$process)
     var k = function () {}
     var E = o = b.f
@@ -1404,9 +1404,9 @@
               var i
               var a
               var s = o ? e.ok : e.fail
-              var e$resolve = e.resolve
-              var e$reject = e.reject
-              var e$domain = e.domain
+              var /* [auto-meaningful-name] */e$resolve = e.resolve
+              var /* [auto-meaningful-name] */e$reject = e.reject
+              var /* [auto-meaningful-name] */e$domain = e.domain
               try {
                 if (s) {
                   if (!o) {
@@ -1624,8 +1624,8 @@
       all: function (t) {
         var e = this
         var n = E(e)
-        var n$resolve = n.resolve
-        var n$reject = n.reject
+        var /* [auto-meaningful-name] */n$resolve = n.resolve
+        var /* [auto-meaningful-name] */n$reject = n.reject
         var i = w(function () {
           var n = []
           var i = 0
@@ -1657,7 +1657,7 @@
       race: function (t) {
         var e = this
         var n = E(e)
-        var n$reject = n.reject
+        var /* [auto-meaningful-name] */n$reject = n.reject
         var o = w(function () {
           g(t, false, function (t) {
             e.resolve(t).then(n.resolve, n$reject)
@@ -1719,7 +1719,7 @@
       try {
         return o ? e(r(n)[0], n[1]) : e(n)
       } catch (e) {
-        var t$return = t.return
+        var /* [auto-meaningful-name] */t$return = t.return
         if (undefined !== t$return) {
           r(t$return.call(t))
         }
@@ -1729,9 +1729,9 @@
   }, function (t, e, n) {
     var r = n(14)
     var o = n(2)("iterator")
-    var array$prototype = Array.prototype
+    var /* [auto-meaningful-name] */Array$prototype = Array.prototype
     t.exports = function (t) {
-      return undefined !== t && (r.Array === t || array$prototype[o] === t)
+      return undefined !== t && (r.Array === t || Array$prototype[o] === t)
     }
   }, function (t, e, n) {
     var r = n(51)
@@ -1761,10 +1761,10 @@
     }
   }, function (t, e, n) {
     var r = n(0)
-    var n53$set = n(53).set
+    var /* [auto-meaningful-name] */n53$set = n(53).set
     var i = r.MutationObserver || r.WebKitMutationObserver
-    var r$process = r.process
-    var r$Promise = r.Promise
+    var /* [auto-meaningful-name] */r$process = r.process
+    var /* [auto-meaningful-name] */r$Promise = r.Promise
     var u = "process" == n(16)(r$process)
     t.exports = function () {
       var t
@@ -1833,7 +1833,7 @@
       }
     }
   }, function (t, e, n) {
-    var n0$navigator = n(0).navigator
+    var /* [auto-meaningful-name] */n0$navigator = n(0).navigator
     t.exports = n0$navigator && n0$navigator.userAgent || ""
   }, function (t, e, n) {
     var r = n(6)
@@ -1950,20 +1950,20 @@
     var a = n(25)
     var s = n(24)
     var u = n(47)
-    var object$assign = Object.assign
-    t.exports = !object$assign || n(10)(function () {
+    var /* [auto-meaningful-name] */Object$assign = Object.assign
+    t.exports = !Object$assign || n(10)(function () {
       var t = {}
       var e = {}
       var n = Symbol()
-      var r = "abcdefghijklmnopqrst"
+      var /* [auto-meaningful-name] */Abcdefghijklmnopqrst = "abcdefghijklmnopqrst"
       t[n] = 7
-      r.split("").forEach(function (t) {
+      Abcdefghijklmnopqrst.split("").forEach(function (t) {
         e[t] = t
       })
-      return 7 != object$assign({}, t)[n] || Object.keys(object$assign({}, e)).join("") != r
+      return 7 != Object$assign({}, t)[n] || Object.keys(Object$assign({}, e)).join("") != Abcdefghijklmnopqrst
     }) ? function (t, e) {
-      for (var n = s(t), arguments$length = arguments.length, f = 1, l = i.f, h = a.f; arguments$length > f;) {
-        for (var p, d = u(arguments[f++]), g = l ? o(d).concat(l(d)) : o(d), g$length = g.length, v = 0; g$length > v;) {
+      for (var n = s(t), /* [auto-meaningful-name] */arguments$length = arguments.length, f = 1, l = i.f, h = a.f; arguments$length > f;) {
+        for (var p, d = u(arguments[f++]), g = l ? o(d).concat(l(d)) : o(d), /* [auto-meaningful-name] */g$length = g.length, v = 0; g$length > v;) {
           p = g[v++]
           if (!(r && !h.call(d, p))) {
             n[p] = d[p]
@@ -1971,7 +1971,7 @@
         }
       }
       return n
-    } : object$assign
+    } : Object$assign
   }, function (t, e, n) {
     t.exports = {
       default: n(87),
@@ -2057,17 +2057,17 @@
         }
         function o(t) {
           var r
-          var /* [auto-meaningful-name] */tT$substringR64$length
+          var /* [auto-meaningful-name] */TT$substringR64$length
           var i
           var a
           var s
           var u
-          var t$length = t.length
+          var /* [auto-meaningful-name] */t$length = t.length
           var f = [1732584193, -271733879, -1732584194, 271733878]
           for (r = 64; r <= t$length; r += 64) {
             e(f, n(t.substring(r - 64, r)))
           }
-          for (tT$substringR64$length = (t = t.substring(r - 64)).length, i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], r = 0; r < tT$substringR64$length; r += 1) {
+          for (TT$substringR64$length = (t = t.substring(r - 64)).length, i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], r = 0; r < TT$substringR64$length; r += 1) {
             i[r >> 2] |= t.charCodeAt(r) << (r % 4 << 3)
           }
           i[r >> 2] |= 128 << (r % 4 << 3)
@@ -2108,7 +2108,7 @@
         function u(t) {
           var e
           var n = []
-          var t$length = t.length
+          var /* [auto-meaningful-name] */t$length = t.length
           for (e = 0; e < t$length - 1; e += 2) {
             n.push(parseInt(t.substr(e, 2), 16))
           }
@@ -2129,7 +2129,7 @@
               var i
               var a
               var s
-              var this$byteLength = this.byteLength
+              var /* [auto-meaningful-name] */this$byteLength = this.byteLength
               var c = e(n, this$byteLength)
               var f = this$byteLength
               if (r !== t) {
@@ -2147,7 +2147,7 @@
           this._buff += t
           this._length += t.length
           var r
-          var this$_buff$length = this._buff.length
+          var /* [auto-meaningful-name] */this$_buff$length = this._buff.length
           for (r = 64; r <= this$_buff$length; r += 64) {
             e(this._hash, n(this._buff.substring(r - 64, r)))
           }
@@ -2157,8 +2157,8 @@
         c.prototype.end = function (t) {
           var e
           var n
-          var this$_buff = this._buff
-          var this$_buff$length = this$_buff.length
+          var /* [auto-meaningful-name] */this$_buff = this._buff
+          var /* [auto-meaningful-name] */this$_buff$length = this$_buff.length
           var i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
           for (e = 0; e < this$_buff$length; e += 1) {
             i[e >> 2] |= this$_buff.charCodeAt(e) << (e % 4 << 3)
@@ -2231,7 +2231,7 @@
             r.set(new Uint8Array(e), t.byteLength)
             return r
           }(this._buff.buffer, t)
-          var o$length = o.length
+          var /* [auto-meaningful-name] */o$length = o.length
           for (this._length += t.byteLength, n = 64; n <= o$length; n += 64) {
             e(this._hash, r(o.subarray(n - 64, n)))
           }
@@ -2241,8 +2241,8 @@
         c.ArrayBuffer.prototype.end = function (t) {
           var e
           var n
-          var this$_buff = this._buff
-          var this$_buff$length = this$_buff.length
+          var /* [auto-meaningful-name] */this$_buff = this._buff
+          var /* [auto-meaningful-name] */this$_buff$length = this$_buff.length
           var i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
           for (e = 0; e < this$_buff$length; e += 1) {
             i[e >> 2] |= this$_buff[e] << (e % 4 << 3)
@@ -2271,7 +2271,7 @@
         c.ArrayBuffer.prototype.setState = function (t) {
           t.buff = function (t, e) {
             var n
-            var t$length = t.length
+            var /* [auto-meaningful-name] */t$length = t.length
             var o = new ArrayBuffer(t$length)
             var i = new Uint8Array(o)
             for (n = 0; n < t$length; n += 1) {
@@ -2286,17 +2286,17 @@
         c.ArrayBuffer.hash = function (t, n) {
           var o = a(function (t) {
             var n
-            var /* [auto-meaningful-name] */tN64T$lengthT$subarrayN64NewUint8Array0$length
+            var /* [auto-meaningful-name] */TN64CT$subarrayN64NewUint8Array0$length
             var i
             var a
             var s
             var u
-            var t$length = t.length
+            var /* [auto-meaningful-name] */t$length = t.length
             var f = [1732584193, -271733879, -1732584194, 271733878]
             for (n = 64; n <= t$length; n += 64) {
               e(f, r(t.subarray(n - 64, n)))
             }
-            for (tN64T$lengthT$subarrayN64NewUint8Array0$length = (t = n - 64 < t$length ? t.subarray(n - 64) : new Uint8Array(0)).length, i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], n = 0; n < tN64T$lengthT$subarrayN64NewUint8Array0$length; n += 1) {
+            for (TN64CT$subarrayN64NewUint8Array0$length = (t = n - 64 < t$length ? t.subarray(n - 64) : new Uint8Array(0)).length, i = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], n = 0; n < TN64CT$subarrayN64NewUint8Array0$length; n += 1) {
               i[n >> 2] |= t[n] << (n % 4 << 3)
             }
             i[n >> 2] |= 128 << (n % 4 << 3)
@@ -2486,12 +2486,12 @@
       }
       t.prototype.uploadChunk = function (t) {
         var e = this
-        var t$index = t.index
-        var t$chunk = t.chunk
+        var /* [auto-meaningful-name] */t$index = t.index
+        var /* [auto-meaningful-name] */t$chunk = t.chunk
         var i = this.localInfo[t$index]
         var a = this.uploadUrl + "/mkblk/" + t$chunk.size
         var u = i && !(0, s.isChunkExpired)(i.time)
-        var this$config$checkByMD5 = this.config.checkByMD5
+        var /* [auto-meaningful-name] */this$config$checkByMD5 = this.config.checkByMD5
         var f = function () {
           e.updateChunkProgress(t$chunk.size, t$index)
           e.ctxList[t$index] = {
@@ -2510,7 +2510,7 @@
           var c = function (t) {
             e.updateChunkProgress(t.loaded, t$index)
           }
-          var e$xhrHandler = e.xhrHandler
+          var /* [auto-meaningful-name] */e$xhrHandler = e.xhrHandler
           return (0, s.request)(a, {
             method: "POST",
             headers: o,
@@ -2541,7 +2541,7 @@
           return t.ctx
         }).join(",")
         var a = (0, s.getHeadersForMkFile)(this.token)
-        var this$xhrHandler = this.xhrHandler
+        var /* [auto-meaningful-name] */this$xhrHandler = this.xhrHandler
         return (0, s.request)(n, {
           method: "POST",
           body: r,
@@ -2565,7 +2565,7 @@
           }
           return void this.onData(this.progress)
         }
-        var this$progress$total = this.progress.total
+        var /* [auto-meaningful-name] */this$progress$total = this.progress.total
         this.progress = {
           total: this.getProgressInfoItem(this$progress$total.loaded + 1, this$progress$total.size)
         }
@@ -2653,7 +2653,7 @@
       }
       t.prototype.check = function () {
         var t = this
-        var this$processing$length = this.processing.length
+        var /* [auto-meaningful-name] */this$processing$length = this.processing.length
         var n = this.limit - this$processing$length
         this.queue.slice(0, n).forEach(function (e, n) {
           t.run(e)
@@ -2675,11 +2675,11 @@
       if (!/^\d$/.test(t.mode)) {
         throw "mode should be number in imageView2"
       }
-      var t$mode = t.mode
+      var /* [auto-meaningful-name] */t$mode = t.mode
       var i = t.w
       var a = t.h
       var s = t.q
-      var t$format = t.format
+      var /* [auto-meaningful-name] */t$format = t.format
       if (!i && !a) {
         throw "param w and h is empty in imageView2"
       }
@@ -2695,31 +2695,31 @@
     }
     function i(t, e, n) {
       var o = t["auto-orient"]
-      var t$thumbnail = t.thumbnail
-      var t$strip = t.strip
-      var t$gravity = t.gravity
-      var t$crop = t.crop
-      var t$quality = t.quality
-      var t$rotate = t.rotate
-      var t$format = t.format
-      var t$blur = t.blur
-      var p = "imageMogr2"
-      p += o ? "/auto-orient" : ""
-      p += t$thumbnail ? "/thumbnail/" + encodeURIComponent(t$thumbnail) : ""
-      p += t$strip ? "/strip" : ""
-      p += t$gravity ? "/gravity/" + encodeURIComponent(t$gravity) : ""
-      p += t$quality ? "/quality/" + encodeURIComponent(t$quality) : ""
-      p += t$crop ? "/crop/" + encodeURIComponent(t$crop) : ""
-      p += t$rotate ? "/rotate/" + encodeURIComponent(t$rotate) : ""
-      p += t$format ? "/format/" + encodeURIComponent(t$format) : ""
-      p += t$blur ? "/blur/" + encodeURIComponent(t$blur) : ""
+      var /* [auto-meaningful-name] */t$thumbnail = t.thumbnail
+      var /* [auto-meaningful-name] */t$strip = t.strip
+      var /* [auto-meaningful-name] */t$gravity = t.gravity
+      var /* [auto-meaningful-name] */t$crop = t.crop
+      var /* [auto-meaningful-name] */t$quality = t.quality
+      var /* [auto-meaningful-name] */t$rotate = t.rotate
+      var /* [auto-meaningful-name] */t$format = t.format
+      var /* [auto-meaningful-name] */t$blur = t.blur
+      var /* [auto-meaningful-name] */ImageMogr2 = "imageMogr2"
+      ImageMogr2 += o ? "/auto-orient" : ""
+      ImageMogr2 += t$thumbnail ? "/thumbnail/" + encodeURIComponent(t$thumbnail) : ""
+      ImageMogr2 += t$strip ? "/strip" : ""
+      ImageMogr2 += t$gravity ? "/gravity/" + encodeURIComponent(t$gravity) : ""
+      ImageMogr2 += t$quality ? "/quality/" + encodeURIComponent(t$quality) : ""
+      ImageMogr2 += t$crop ? "/crop/" + encodeURIComponent(t$crop) : ""
+      ImageMogr2 += t$rotate ? "/rotate/" + encodeURIComponent(t$rotate) : ""
+      ImageMogr2 += t$format ? "/format/" + encodeURIComponent(t$format) : ""
+      ImageMogr2 += t$blur ? "/blur/" + encodeURIComponent(t$blur) : ""
       if (e) {
-        p = r(e, n) + "?" + p
+        ImageMogr2 = r(e, n) + "?" + ImageMogr2
       }
-      return p
+      return ImageMogr2
     }
     function a(t, e, n) {
-      var t$mode = t.mode
+      var /* [auto-meaningful-name] */t$mode = t.mode
       if (!t$mode) {
         throw "mode can't be empty in watermark"
       }
@@ -2728,17 +2728,17 @@
         throw "mode is wrong"
       }
       if (1 === t$mode) {
-        var t$image = t.image
+        var /* [auto-meaningful-name] */t$image = t.image
         if (!t$image) {
           throw "image can't be empty in watermark"
         }
         i += t$image ? "/image/" + (0, u.urlSafeBase64Encode)(t$image) : ""
       }
       if (2 === t$mode) {
-        var t$text = t.text
-        var t$font = t.font
-        var t$fontsize = t.fontsize
-        var t$fill = t.fill
+        var /* [auto-meaningful-name] */t$text = t.text
+        var /* [auto-meaningful-name] */t$font = t.font
+        var /* [auto-meaningful-name] */t$fontsize = t.fontsize
+        var /* [auto-meaningful-name] */t$fill = t.fill
         if (!t$text) {
           throw "text can't be empty in watermark"
         }
@@ -2747,8 +2747,8 @@
         i += t$fontsize ? "/fontsize/" + t$fontsize : ""
         i += t$fill ? "/fill/" + (0, u.urlSafeBase64Encode)(t$fill) : ""
       }
-      var t$dissolve = t.dissolve
-      var t$gravity = t.gravity
+      var /* [auto-meaningful-name] */t$dissolve = t.dissolve
+      var /* [auto-meaningful-name] */t$gravity = t.gravity
       var d = t.dx
       var g = t.dy
       i += t$dissolve ? "/dissolve/" + encodeURIComponent(t$dissolve) : ""
@@ -2781,7 +2781,7 @@
       var u = undefined
       var c = ""
       if ("[object Array]" === Object.prototype.toString.call(t)) {
-        for (var f = 0, t$length = t.length; f < t$length; f++) {
+        for (var f = 0, /* [auto-meaningful-name] */t$length = t.length; f < t$length; f++) {
           if (!(s = t[f]).fop) {
             throw "fop can't be empty in pipeline"
           }
@@ -2803,9 +2803,9 @@
           }
         }
         if (e) {
-          var cRENC$length = (c = r(e, n) + "?" + c).length
-          if ("|" === c.slice(cRENC$length - 1)) {
-            c = c.slice(0, cRENC$length - 1)
+          var /* [auto-meaningful-name] */CRENC$length = (c = r(e, n) + "?" + c).length
+          if ("|" === c.slice(CRENC$length - 1)) {
+            c = c.slice(0, CRENC$length - 1)
           }
         }
         return c
@@ -2932,7 +2932,7 @@
     var i = n(4)
     var a = n(5)
     var s = n(44)
-    var n102$KEY = n(102).KEY
+    var /* [auto-meaningful-name] */n102$KEY = n(102).KEY
     var c = n(10)
     var f = n(31)
     var l = n(23)
@@ -2957,18 +2957,18 @@
     var E = U.f
     var M = I.f
     var O = C.f
-    var r$Symbol = r.Symbol
-    var r$JSON = r.JSON
+    var /* [auto-meaningful-name] */r$Symbol = r.Symbol
+    var /* [auto-meaningful-name] */r$JSON = r.JSON
     var A = r$JSON && r$JSON.stringify
     var L = p("_hidden")
     var D = p("toPrimitive")
-    var $propertyIsEnumerable = {}.propertyIsEnumerable
+    var /* [auto-meaningful-name] */$propertyIsEnumerable = {}.propertyIsEnumerable
     var B = f("symbol-registry")
     var G = f("symbols")
     var q = f("op-symbols")
-    var object$prototype = Object.prototype
+    var /* [auto-meaningful-name] */Object$prototype = Object.prototype
     var z = "function" == typeof r$Symbol && !!F.f
-    var r$QObject = r.QObject
+    var /* [auto-meaningful-name] */r$QObject = r.QObject
     var V = !r$QObject || !r$QObject.prototype || !r$QObject.prototype.findChild
     var W = i && c(function () {
       return 7 != _(M({}, "a", {
@@ -2979,13 +2979,13 @@
         }
       })).a
     }) ? function (t, e, n) {
-      var r = E(object$prototype, e)
+      var r = E(Object$prototype, e)
       if (r) {
-        delete object$prototype[e]
+        delete Object$prototype[e]
       }
       M(t, e, n)
-      if (r && t !== object$prototype) {
-        M(object$prototype, e, r)
+      if (r && t !== Object$prototype) {
+        M(Object$prototype, e, r)
       }
     } : M
     var J = function (t) {
@@ -2999,7 +2999,7 @@
       return t instanceof r$Symbol
     }
     var Y = function (t, e, n) {
-      if (t === object$prototype) {
+      if (t === Object$prototype) {
         Y(q, e, n)
       }
       y(t)
@@ -3011,19 +3011,19 @@
     }
     var K = function (t, e) {
       y(t)
-      for (var n, r = m(e = x(e)), o = 0, r$length = r.length; r$length > o;) {
+      for (var n, r = m(e = x(e)), o = 0, /* [auto-meaningful-name] */r$length = r.length; r$length > o;) {
         Y(t, n = r[o++], e[n])
       }
       return t
     }
     var $ = function (t) {
       var e = $propertyIsEnumerable.call(this, t = S(t, true))
-      return !(this === object$prototype && o(G, t) && !o(q, t)) && (!(e || !o(this, t) || !o(G, t) || o(this, L) && this[L][t]) || e)
+      return !(this === Object$prototype && o(G, t) && !o(q, t)) && (!(e || !o(this, t) || !o(G, t) || o(this, L) && this[L][t]) || e)
     }
     var Q = function (t, e) {
       t = x(t)
       e = S(e, true)
-      if (t !== object$prototype || !o(G, e) || o(q, e)) {
+      if (t !== Object$prototype || !o(G, e) || o(q, e)) {
         var n = E(t, e)
         if (!(!n || !o(G, e) || o(t, L) && t[L][e])) {
           n.enumerable = true
@@ -3040,8 +3040,8 @@
       return r
     }
     var tt = function (t) {
-      for (var e, n = t === object$prototype, r = O(n ? q : x(t)), i = [], a = 0; r.length > a;) {
-        if (!(!o(G, e = r[a++]) || n && !o(object$prototype, e))) {
+      for (var e, n = t === Object$prototype, r = O(n ? q : x(t)), i = [], a = 0; r.length > a;) {
+        if (!(!o(G, e = r[a++]) || n && !o(Object$prototype, e))) {
           i.push(G[e])
         }
       }
@@ -3054,7 +3054,7 @@
         }
         var t = h(arguments.length > 0 ? arguments[0] : undefined)
         var e = function (n) {
-          if (this === object$prototype) {
+          if (this === Object$prototype) {
             e.call(q, n)
           }
           if (o(this, L) && o(this[L], t)) {
@@ -3063,7 +3063,7 @@
           W(this, t, P(1, n))
         }
         if (i && V) {
-          W(object$prototype, t, {
+          W(Object$prototype, t, {
             configurable: true,
             set: e
           })
@@ -3078,7 +3078,7 @@
       n(25).f = $
       F.f = tt
       if (i && !n(13)) {
-        s(object$prototype, "propertyIsEnumerable", $, true)
+        s(Object$prototype, "propertyIsEnumerable", $, true)
       }
       d.f = function (t) {
         return J(p(t))
@@ -3245,8 +3245,8 @@
     }
   }, function (t, e, n) {
     var r = n(11)
-    var n57$f = n(57).f
-    var $toString = {}.toString
+    var /* [auto-meaningful-name] */n57$f = n(57).f
+    var /* [auto-meaningful-name] */$toString = {}.toString
     var a = "object" == typeof window && window && Object.getOwnPropertyNames ? Object.getOwnPropertyNames(window) : []
     t.exports.f = function (t) {
       return a && "[object Window]" == $toString.call(t) ? function (t) {
@@ -3264,13 +3264,13 @@
     var a = n(29)
     var s = n(9)
     var u = n(43)
-    var object$getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
-    e.f = n(4) ? object$getOwnPropertyDescriptor : function (t, e) {
+    var /* [auto-meaningful-name] */Object$getOwnPropertyDescriptor = Object.getOwnPropertyDescriptor
+    e.f = n(4) ? Object$getOwnPropertyDescriptor : function (t, e) {
       t = i(t)
       e = a(e, true)
       if (u) {
         try {
-          return object$getOwnPropertyDescriptor(t, e)
+          return Object$getOwnPropertyDescriptor(t, e)
         } catch (t) {}
       }
       if (s(t, e)) {
@@ -3345,7 +3345,7 @@
     var h = (0, s.default)(f).map(function (t) {
       return f[t]
     })
-    var f$JPEG = f.JPEG
+    var /* [auto-meaningful-name] */f$JPEG = f.JPEG
     var d = function () {
       function t(e, n) {
         (0, a.default)(this, t)
@@ -3415,9 +3415,9 @@
           u.EXIF.getData(t, function () {
             var r = u.EXIF.getTag(t, "Orientation") || 1
             var o = (0, c.getTransform)(t, r)
-            var o$width = o.width
-            var o$height = o.height
-            var o$matrix = o.matrix
+            var /* [auto-meaningful-name] */o$width = o.width
+            var /* [auto-meaningful-name] */o$height = o.height
+            var /* [auto-meaningful-name] */o$matrix = o.matrix
             var f = document.createElement("canvas")
             var l = f.getContext("2d")
             f.width = o$width
@@ -3438,8 +3438,8 @@
         var i = Math.pow(e, 1 / r)
         var a = document.createElement("canvas")
         var s = a.getContext("2d")
-        var t$width = t.width
-        var t$height = t.height
+        var /* [auto-meaningful-name] */t$width = t.width
+        var /* [auto-meaningful-name] */t$height = t.height
         var f = t$width
         var h = t$height
         a.width = t$width
@@ -3505,7 +3505,7 @@
               }
               return false
             }
-            for (var n = 2, t$byteLength = t.byteLength; n < t$byteLength;) {
+            for (var n = 2, /* [auto-meaningful-name] */t$byteLength = t.byteLength; n < t$byteLength;) {
               if (function (t, e) {
                 return 56 === t.getUint8(e) && 66 === t.getUint8(e + 1) && 73 === t.getUint8(e + 2) && 77 === t.getUint8(e + 3) && 4 === t.getUint8(e + 4) && 4 === t.getUint8(e + 5)
               }(e, n)) {
@@ -3535,7 +3535,7 @@
                   }
                   return false
                 }
-                for (var n = 2, t$byteLength = t.byteLength, o = new DOMParser(); n < t$byteLength - 4;) {
+                for (var n = 2, /* [auto-meaningful-name] */t$byteLength = t.byteLength, o = new DOMParser(); n < t$byteLength - 4;) {
                   if ("http" == f(e, n, 4)) {
                     var i = n - 1
                     var a = e.getUint16(n - 2) - 1
@@ -3560,7 +3560,7 @@
             n(function (t, e) {
               e = e || t.match(/^data\:([^\;]+)\;base64,/im)[1] || ""
               t = t.replace(/^data\:([^\;]+)\;base64,/gim, "")
-              for (var n = atob(t), n$length = n.length, o = new ArrayBuffer(n$length), i = new Uint8Array(o), a = 0; a < n$length; a++) {
+              for (var n = atob(t), /* [auto-meaningful-name] */n$length = n.length, o = new ArrayBuffer(n$length), i = new Uint8Array(o), a = 0; a < n$length; a++) {
                 i[a] = n.charCodeAt(a)
               }
               return o
@@ -3617,7 +3617,7 @@
           }
           return false
         }
-        for (var n, r = 2, t$byteLength = t.byteLength; r < t$byteLength;) {
+        for (var n, r = 2, /* [auto-meaningful-name] */t$byteLength = t.byteLength; r < t$byteLength;) {
           if (255 != e.getUint8(r)) {
             if (d) {
               console.log("Not a valid marker at offset " + r + ", found: " + e.getUint8(r))
@@ -3844,7 +3844,7 @@
               case 6:
                 if (i.JpegIFOffset && i.JpegIFByteCount) {
                   var a = e + i.JpegIFOffset
-                  var i$JpegIFByteCount = i.JpegIFByteCount
+                  var /* [auto-meaningful-name] */i$JpegIFByteCount = i.JpegIFByteCount
                   i.blob = new Blob([new Uint8Array(t.buffer, a, i$JpegIFByteCount)], {
                     type: "image/jpeg"
                   })
@@ -3879,7 +3879,7 @@
         if (t.hasChildNodes()) {
           for (var o = 0; o < t.childNodes.length; o++) {
             var i = t.childNodes.item(o)
-            var i$nodeName = i.nodeName
+            var /* [auto-meaningful-name] */i$nodeName = i.nodeName
             if (null == e[i$nodeName]) {
               e[i$nodeName] = h(i)
             } else {
@@ -3900,16 +3900,16 @@
           if (t.children.length > 0) {
             for (var n = 0; n < t.children.length; n++) {
               var r = t.children.item(n)
-              var r$attributes = r.attributes
+              var /* [auto-meaningful-name] */r$attributes = r.attributes
               for (var i in r$attributes) {
                 var a = r$attributes[i]
-                var a$nodeName = a.nodeName
-                var a$nodeValue = a.nodeValue
+                var /* [auto-meaningful-name] */a$nodeName = a.nodeName
+                var /* [auto-meaningful-name] */a$nodeValue = a.nodeValue
                 if (undefined !== a$nodeName) {
                   e[a$nodeName] = a$nodeValue
                 }
               }
-              var r$nodeName = r.nodeName
+              var /* [auto-meaningful-name] */r$nodeName = r.nodeName
               if (undefined === e[r$nodeName]) {
                 e[r$nodeName] = h(r)
               } else {
@@ -4258,7 +4258,7 @@
           return {}
         }
         var e
-        var t$exifdata = t.exifdata
+        var /* [auto-meaningful-name] */t$exifdata = t.exifdata
         var o = {}
         for (e in t$exifdata) if (t$exifdata.hasOwnProperty(e)) {
           o[e] = t$exifdata[e]
@@ -4270,7 +4270,7 @@
           return {}
         }
         var e
-        var t$iptcdata = t.iptcdata
+        var /* [auto-meaningful-name] */t$iptcdata = t.iptcdata
         var o = {}
         for (e in t$iptcdata) if (t$iptcdata.hasOwnProperty(e)) {
           o[e] = t$iptcdata[e]
@@ -4282,7 +4282,7 @@
           return ""
         }
         var e
-        var t$exifdata = t.exifdata
+        var /* [auto-meaningful-name] */t$exifdata = t.exifdata
         var o = ""
         for (e in t$exifdata) if (t$exifdata.hasOwnProperty(e)) {
           if ("object" == typeof t$exifdata[e]) {
@@ -4308,6 +4308,5 @@
     }).call(this)
   }])
 })
-
 
 /***/

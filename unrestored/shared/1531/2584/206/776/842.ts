@@ -1,10 +1,10 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：842
  */
 
-var r = require("../../38/607/1050")
+var r = require("./1050")
 function i(e, t) {
   var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {

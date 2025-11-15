@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：165
@@ -43,15 +43,15 @@ var s = function () {
     this.bits[Math.floor(t / 32)] ^= 1 << (31 & t)
   }
   t.prototype.getNextSet = function (t) {
-    var this$size = this.size
+    var /* [auto-meaningful-name] */this$size = this.size
     if (t >= this$size) {
       return this$size
     }
-    var this$bits = this.bits
+    var /* [auto-meaningful-name] */this$bits = this.bits
     var r = Math.floor(t / 32)
     var i = this$bits[r]
     i &= ~((1 << (31 & t)) - 1)
-    for (var this$bits$length = this$bits.length; 0 === i;) {
+    for (var /* [auto-meaningful-name] */this$bits$length = this$bits.length; 0 === i;) {
       if (++r === this$bits$length) {
         return this$size
       }
@@ -61,15 +61,15 @@ var s = function () {
     return s > this$size ? this$size : s
   }
   t.prototype.getNextUnset = function (t) {
-    var this$size = this.size
+    var /* [auto-meaningful-name] */this$size = this.size
     if (t >= this$size) {
       return this$size
     }
-    var this$bits = this.bits
+    var /* [auto-meaningful-name] */this$bits = this.bits
     var r = Math.floor(t / 32)
     var i = ~this$bits[r]
     i &= ~((1 << (31 & t)) - 1)
-    for (var this$bits$length = this$bits.length; 0 === i;) {
+    for (var /* [auto-meaningful-name] */this$bits$length = this$bits.length; 0 === i;) {
       if (++r === this$bits$length) {
         return this$size
       }
@@ -87,14 +87,14 @@ var s = function () {
     }
     if (e !== t) {
       e--
-      for (var n = Math.floor(t / 32), i = Math.floor(e / 32), this$bits = this.bits, a = n; a <= i; a++) {
+      for (var n = Math.floor(t / 32), i = Math.floor(e / 32), /* [auto-meaningful-name] */this$bits = this.bits, a = n; a <= i; a++) {
         var s = (2 << (a < i ? 31 : 31 & e)) - (1 << (a > n ? 0 : 31 & t))
         this$bits[a] |= s
       }
     }
   }
   t.prototype.clear = function () {
-    for (var this$bits$length = this.bits.length, this$bits = this.bits, n = 0; n < this$bits$length; n++) {
+    for (var /* [auto-meaningful-name] */this$bits$length = this.bits.length, /* [auto-meaningful-name] */this$bits = this.bits, n = 0; n < this$bits$length; n++) {
       this$bits[n] = 0
     }
   }
@@ -106,7 +106,7 @@ var s = function () {
       return true
     }
     e--
-    for (var i = Math.floor(t / 32), o = Math.floor(e / 32), this$bits = this.bits, s = i; s <= o; s++) {
+    for (var i = Math.floor(t / 32), o = Math.floor(e / 32), /* [auto-meaningful-name] */this$bits = this.bits, s = i; s <= o; s++) {
       var u = (2 << (s < o ? 31 : 31 & e)) - (1 << (s > i ? 0 : 31 & t)) & 4294967295
       if ((this$bits[s] & u) !== (n ? u : 0)) {
         return false
@@ -131,7 +131,7 @@ var s = function () {
     }
   }
   t.prototype.appendBitArray = function (t) {
-    var t$size = t.size
+    var /* [auto-meaningful-name] */t$size = t.size
     this.ensureCapacity(this.size + t$size)
     for (var n = 0; n < t$size; n++) {
       this.appendBit(t.get(n))
@@ -141,7 +141,7 @@ var s = function () {
     if (this.size !== t.size) {
       throw new r.a("Sizes don't match")
     }
-    for (var this$bits = this.bits, n = 0, this$bits$length = this$bits.length; n < this$bits$length; n++) {
+    for (var /* [auto-meaningful-name] */this$bits = this.bits, n = 0, /* [auto-meaningful-name] */this$bits$length = this$bits.length; n < this$bits$length; n++) {
       this$bits[n] ^= t.bits[n]
     }
   }
@@ -160,7 +160,7 @@ var s = function () {
     return this.bits
   }
   t.prototype.reverse = function () {
-    for (var t = new Int32Array(this.bits.length), e = Math.floor((this.size - 1) / 32), n = e + 1, this$bits = this.bits, i = 0; i < n; i++) {
+    for (var t = new Int32Array(this.bits.length), e = Math.floor((this.size - 1) / 32), n = e + 1, /* [auto-meaningful-name] */this$bits = this.bits, i = 0; i < n; i++) {
       var o = this$bits[i]
       o = (o = (o = (o = (o = o >> 1 & 1431655765 | (1431655765 & o) << 1) >> 2 & 858993459 | (858993459 & o) << 2) >> 4 & 252645135 | (252645135 & o) << 4) >> 8 & 16711935 | (16711935 & o) << 8) >> 16 & 65535 | (65535 & o) << 16
       t[e - i] = o
@@ -192,7 +192,7 @@ var s = function () {
     return 31 * this.size + i.a.hashCode(this.bits)
   }
   t.prototype.toString = function () {
-    for (var t = "", e = 0, this$size = this.size; e < this$size; e++) {
+    for (var t = "", e = 0, /* [auto-meaningful-name] */this$size = this.size; e < this$size; e++) {
       if (0 === (7 & e)) {
         t += " "
       }

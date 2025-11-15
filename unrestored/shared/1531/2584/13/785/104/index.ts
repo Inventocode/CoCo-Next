@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：104
@@ -26,7 +26,7 @@ exports.handleHover = a.default
 exports.handleActive = s.default
 exports.loop = c.default
 var l = exports.ReactCSS = function (e) {
-  for (var arguments$length = arguments.length, n = Array(arguments$length > 1 ? arguments$length - 1 : 0), a = 1; a < arguments$length; a++) {
+  for (var /* [auto-meaningful-name] */arguments$length = arguments.length, n = Array(arguments$length > 1 ? arguments$length - 1 : 0), a = 1; a < arguments$length; a++) {
     n[a - 1] = arguments[a]
   }
   var s = (0, r.default)(n)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：947
@@ -6,14 +6,14 @@
 
 "use strict"
 
-require("../1244")
-var r = require("../1745/398/index")
-var o = require("../1683/945")
-var i = require("../1736/167")
-var a = require("../1742/247/index")
-var s = require("../1740/422")
+require("../1244/index")
+var r = require("../1541/398")
+var o = require("../1244/945")
+var i = require("../1541/167")
+var a = require("../1541/247/index")
+var s = require("../1541/422")
 var c = a("species")
-var regExp$prototype = RegExp.prototype
+var /* [auto-meaningful-name] */RegExp$prototype = RegExp.prototype
 module.exports = function (e, t, n, u) {
   var d = a(e)
   var p = !i(function () {
@@ -44,8 +44,8 @@ module.exports = function (e, t, n, u) {
   if (!p || !f || n) {
     var h = /./[d]
     var m = t(d, ""[e], function (e, t, n, r, i) {
-      var t$exec = t.exec
-      return t$exec === o || t$exec === regExp$prototype.exec ? p && !i ? {
+      var /* [auto-meaningful-name] */t$exec = t.exec
+      return t$exec === o || t$exec === RegExp$prototype.exec ? p && !i ? {
         done: true,
         value: h.call(t, n, r)
       } : {
@@ -56,9 +56,9 @@ module.exports = function (e, t, n, u) {
       }
     })
     r(String.prototype, e, m[0])
-    r(regExp$prototype, d, m[1])
+    r(RegExp$prototype, d, m[1])
   }
   if (u) {
-    s(regExp$prototype[d], "sham", true)
+    s(RegExp$prototype[d], "sham", true)
   }
 }

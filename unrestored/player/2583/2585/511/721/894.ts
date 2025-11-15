@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：894
@@ -7,8 +7,8 @@
 "use strict"
 
 export { a }
-import * as r from "../81/index"
-import * as i from "./261"
+import * as /* [auto-meaningful-name] */$$_81_index from "../81/index"
+import * as /* [auto-meaningful-name] */$_261 from "./261"
 var o = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -31,9 +31,9 @@ var o = function () {
 }()
 var a = function (t) {
   function e(e, n) {
-    return t.call(this, new r.QRCodeReader(), e, n) || this
+    return t.call(this, new $$_81_index.QRCodeReader(), e, n) || this
   }
   o(e, t)
   return e
-}(i.a)
+}($_261.a)
 export default a

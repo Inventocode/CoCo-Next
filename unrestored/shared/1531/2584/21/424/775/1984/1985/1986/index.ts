@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1986
@@ -95,7 +95,7 @@ function g(e, t, n, r) {
 }
 r.addToken = function (e) {
   for (var t = 0; t < e.length; t++) {
-    var eT$token$length = e[t].token.length
+    var /* [auto-meaningful-name] */eT$token$length = e[t].token.length
     var r = -1
     A[eT$token$length] = A[eT$token$length] || []
     for (var i = 0; i < A[eT$token$length].length; i++) {
@@ -153,7 +153,7 @@ r.lex = function (e, t) {
   }
   var S = {}
   var T = function (e) {
-    for (var t, n, i, l = [], e$length = e.length, d = 0; d < e$length; d++) {
+    for (var t, n, i, l = [], /* [auto-meaningful-name] */e$length = e.length, d = 0; d < e$length; d++) {
       if (!(d < e$length - 1 && " " === e[d] && " " === e[d + 1])) {
         for (t = "", n = e.length - d > A.length - 2 ? A.length - 1 : e.length - d; n > 0; n--) {
           if (undefined !== A[n]) {
@@ -188,17 +188,17 @@ r.lex = function (e, t) {
     if (14 !== B.type) {
       B.index
       var D
-      var b$token = B.token
-      var b$type = B.type
-      var b$eval = B.eval
-      var b$precedence = B.precedence
-      var b$show = B.show
+      var /* [auto-meaningful-name] */B$token = B.token
+      var /* [auto-meaningful-name] */B$type = B.type
+      var /* [auto-meaningful-name] */B$eval = B.eval
+      var /* [auto-meaningful-name] */B$precedence = B.precedence
+      var /* [auto-meaningful-name] */B$show = B.show
       var M = b[b.length - 1]
       for (D = w.length; D-- && 0 === w[D];) {
-        if (-1 !== [0, 2, 3, 4, 5, 9, 11, 12, 13].indexOf(b$type)) {
-          if (true !== x[b$type]) {
+        if (-1 !== [0, 2, 3, 4, 5, 9, 11, 12, 13].indexOf(B$type)) {
+          if (true !== x[B$type]) {
             console.log(e, B, T, x)
-            throw new r.Exception(b$token + " is not allowed after " + k)
+            throw new r.Exception(B$token + " is not allowed after " + k)
           }
           b.push(m)
           x = f
@@ -206,53 +206,53 @@ r.lex = function (e, t) {
           i(w, -1).pop()
         }
       }
-      if (true !== x[b$type]) {
-        throw new r.Exception(b$token + " is not allowed after " + k)
+      if (true !== x[B$type]) {
+        throw new r.Exception(B$token + " is not allowed after " + k)
       }
-      if (true === O[b$type]) {
-        b$type = 2
-        b$eval = r.math.mul
-        b$show = "&times;"
-        b$precedence = 3
-        n -= b$token.length
+      if (true === O[B$type]) {
+        B$type = 2
+        B$eval = r.math.mul
+        B$show = "&times;"
+        B$precedence = 3
+        n -= B$token.length
       }
       S = {
-        value: b$eval,
-        type: b$type,
-        pre: b$precedence,
-        show: b$show
+        value: B$eval,
+        type: B$type,
+        pre: B$precedence,
+        show: B$show
       }
-      if (0 === b$type) {
+      if (0 === B$type) {
         x = l
         O = h
         i(w, 2).push(2)
         b.push(S)
         b.push(y)
-      } else if (1 === b$type) {
+      } else if (1 === B$type) {
         if (1 === M.type) {
-          M.value += b$eval
+          M.value += B$eval
           i(w, 1)
         } else {
           b.push(S)
         }
         x = f
         O = d
-      } else if (2 === b$type) {
+      } else if (2 === B$type) {
         x = l
         O = h
         i(w, 2)
         b.push(S)
-      } else if (3 === b$type) {
+      } else if (3 === B$type) {
         b.push(S)
         x = f
         O = p
-      } else if (4 === b$type) {
+      } else if (4 === B$type) {
         i(w, 1)
         C++
         x = l
         O = h
         b.push(S)
-      } else if (5 === b$type) {
+      } else if (5 === B$type) {
         if (!C) {
           throw new r.Exception("Closing parenthesis are more than opening one, wait What!!!")
         }
@@ -261,7 +261,7 @@ r.lex = function (e, t) {
         O = p
         b.push(S)
         i(w, 1)
-      } else if (6 === b$type) {
+      } else if (6 === B$type) {
         if (M.hasDec) {
           throw new r.Exception("Two decimals are not allowed in one number")
         }
@@ -277,29 +277,29 @@ r.lex = function (e, t) {
         x = _
         i(w, 1)
         O = h
-        M.value += b$eval
+        M.value += B$eval
         M.hasDec = true
-      } else if (7 === b$type) {
+      } else if (7 === B$type) {
         x = f
         O = p
         i(w, 1)
         b.push(S)
       }
-      if (8 === b$type) {
+      if (8 === B$type) {
         x = l
         O = h
         i(w, 4).push(4)
         b.push(S)
         b.push(y)
       } else {
-        if (9 === b$type) {
+        if (9 === B$type) {
           if (9 === M.type) {
             if (M.value === r.math.add) {
-              M.value = b$eval
-              M.show = b$show
+              M.value = B$eval
+              M.show = B$show
               i(w, 1)
             } else {
-              if (M.value === r.math.sub && "-" === b$show) {
+              if (M.value === r.math.sub && "-" === B$show) {
                 M.value = r.math.add
                 M.show = "+"
                 i(w, 1)
@@ -307,7 +307,7 @@ r.lex = function (e, t) {
             }
           } else {
             if (5 !== M.type && 7 !== M.type && 1 !== M.type && 3 !== M.type && 13 !== M.type) {
-              if ("-" === b$token) {
+              if ("-" === B$token) {
                 x = l
                 O = h
                 i(w, 2).push(2)
@@ -322,25 +322,25 @@ r.lex = function (e, t) {
           x = l
           O = h
         } else {
-          if (10 === b$type) {
+          if (10 === B$type) {
             x = l
             O = h
             i(w, 2)
             b.push(S)
           } else {
-            if (11 === b$type) {
+            if (11 === B$type) {
               x = l
               O = h
               b.push(S)
             } else {
-              if (12 === b$type) {
+              if (12 === B$type) {
                 x = l
                 O = h
                 i(w, 6).push(6)
                 b.push(S)
                 b.push(y)
               } else {
-                if (13 === b$type) {
+                if (13 === B$type) {
                   x = f
                   O = p
                   b.push(S)
@@ -351,7 +351,7 @@ r.lex = function (e, t) {
         }
       }
       i(w, -1)
-      k = b$token
+      k = B$token
     } else if (n > 0 && n < T.length - 1 && 1 === T[n + 1].type && (1 === T[n - 1].type || 6 === T[n - 1].type)) {
       throw new r.Exception("Unexpected Space")
     }

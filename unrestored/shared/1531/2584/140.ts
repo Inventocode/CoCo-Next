@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：140
@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import r = require("./273");
-import i = require("./322");
+import /* [auto-meaningful-name] */$_273 = require("./273")
+import /* [auto-meaningful-name] */$_322 = require("./322")
 function o(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {
@@ -29,14 +29,14 @@ function o(e) {
   }()
   return function () {
     var n
-    var o = r.a(e)
+    var o = $_273.a(e)
     if (t) {
-      var r$aThis$constructor = r.a(this).constructor
-      n = Reflect.construct(o, arguments, r$aThis$constructor)
+      var /* [auto-meaningful-name] */$_273$aThis$constructor = $_273.a(this).constructor
+      n = Reflect.construct(o, arguments, $_273$aThis$constructor)
     } else {
       n = o.apply(this, arguments)
     }
-    return i.a(this, n)
+    return $_322.a(this, n)
   }
 }
 export default o

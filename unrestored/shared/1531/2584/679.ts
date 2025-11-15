@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：679
@@ -40,4 +40,4 @@ var r = {
     buttonText: "按钮文案"
   }
 }
-import o = require("./189");
+import /* [auto-meaningful-name] */$_189 = require("./189")

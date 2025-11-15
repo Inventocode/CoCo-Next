@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：504
@@ -12,7 +12,7 @@ var o = require("./56")
 var a = require("./37")
 var s = require("./170")
 var u = require("./150")
-var c = require("./73/index")
+var c = require("./73")
 var l = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -75,8 +75,8 @@ var f = function (t) {
     var s
     var /* [auto-meaningful-name] */w$return
     var f
-    var /* [auto-meaningful-name] */a$return
-    var this$counters = this.counters
+    var /* [auto-meaningful-name] */A$return
+    var /* [auto-meaningful-name] */this$counters = this.counters
     this$counters.fill(0)
     this.decodeRowResult = ""
     var m
@@ -129,8 +129,8 @@ var f = function (t) {
       }
     } finally {
       try {
-        if (S && !S.done && (a$return = A.return)) {
-          a$return.call(A)
+        if (S && !S.done && (A$return = A.return)) {
+          A$return.call(A)
         }
       } finally {
         if (f) {
@@ -159,7 +159,7 @@ var f = function (t) {
     return new u.a(O, null, 0, [new c.a(M, t), new c.a(k, t)], r.a.CODE_39, new Date().getTime())
   }
   e.findAsteriskPattern = function (t, n) {
-    for (var r = t.getSize(), i = t.getNextSet(0), o = 0, s = i, u = false, n$length = n.length, l = i; l < r; l++) {
+    for (var r = t.getSize(), i = t.getNextSet(0), o = 0, s = i, u = false, /* [auto-meaningful-name] */n$length = n.length, l = i; l < r; l++) {
       if (t.get(l) !== u) {
         n[o]++
       } else {
@@ -185,7 +185,7 @@ var f = function (t) {
     var e
     var /* [auto-meaningful-name] */s$return
     var r
-    var t$length = t.length
+    var /* [auto-meaningful-name] */t$length = t.length
     var o = 0
     do {
       var a = 2147483647
@@ -245,57 +245,57 @@ var f = function (t) {
     throw new a.a()
   }
   e.decodeExtended = function (t) {
-    for (var t$length = t.length, n = "", r = 0; r < t$length; r++) {
+    for (var /* [auto-meaningful-name] */t$length = t.length, n = "", r = 0; r < t$length; r++) {
       var i = t.charAt(r)
       if ("+" === i || "$" === i || "%" === i || "/" === i) {
         var a = t.charAt(r + 1)
-        var s = "\u0000"
+        var /* [auto-meaningful-name] */_u0000 = "\u0000"
         switch (i) {
           case "+":
             if (!(a >= "A" && a <= "Z")) {
               throw new o.a()
             }
-            s = String.fromCharCode(a.charCodeAt(0) + 32)
+            _u0000 = String.fromCharCode(a.charCodeAt(0) + 32)
             break
           case "$":
             if (!(a >= "A" && a <= "Z")) {
               throw new o.a()
             }
-            s = String.fromCharCode(a.charCodeAt(0) - 64)
+            _u0000 = String.fromCharCode(a.charCodeAt(0) - 64)
             break
           case "%":
             if (a >= "A" && a <= "E") {
-              s = String.fromCharCode(a.charCodeAt(0) - 38)
+              _u0000 = String.fromCharCode(a.charCodeAt(0) - 38)
             } else if (a >= "F" && a <= "J") {
-              s = String.fromCharCode(a.charCodeAt(0) - 11)
+              _u0000 = String.fromCharCode(a.charCodeAt(0) - 11)
             } else if (a >= "K" && a <= "O") {
-              s = String.fromCharCode(a.charCodeAt(0) + 16)
+              _u0000 = String.fromCharCode(a.charCodeAt(0) + 16)
             } else if (a >= "P" && a <= "T") {
-              s = String.fromCharCode(a.charCodeAt(0) + 43)
+              _u0000 = String.fromCharCode(a.charCodeAt(0) + 43)
             } else if ("U" === a) {
-              s = "\u0000"
+              _u0000 = "\u0000"
             } else if ("V" === a) {
-              s = "@"
+              _u0000 = "@"
             } else if ("W" === a) {
-              s = "`"
+              _u0000 = "`"
             } else {
               if ("X" !== a && "Y" !== a && "Z" !== a) {
                 throw new o.a()
               }
-              s = ""
+              _u0000 = ""
             }
             break
           case "/":
             if (a >= "A" && a <= "O") {
-              s = String.fromCharCode(a.charCodeAt(0) - 32)
+              _u0000 = String.fromCharCode(a.charCodeAt(0) - 32)
             } else {
               if ("Z" !== a) {
                 throw new o.a()
               }
-              s = ":"
+              _u0000 = ":"
             }
         }
-        n += s
+        n += _u0000
         r++
       } else {
         n += i

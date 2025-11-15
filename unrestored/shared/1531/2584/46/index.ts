@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：46
@@ -12,14 +12,14 @@ export { _ as e }
 export { v as a }
 export { b }
 export { y as d }
-import r = require("../27");
-import o = require("../40");
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */$$_40 = require("../40")
 var i = function () {
   function e() {
-    r.a(this, e)
+    $$_27.a(this, e)
     this.profileMap = new Map()
   }
-  o.a(e, [{
+  $$_40.a(e, [{
     key: "insertBlockProfile",
     value: function (e, t) {
       this.profileMap.set(e, t)
@@ -36,14 +36,14 @@ var i = function () {
   }])
   return e
 }()
-import a = require("./609/index");
-import s = require("../4/index");
+import /* [auto-meaningful-name] */$_609_index = require("./609/index")
+import s = require("../4")
 var c = function () {
   function e() {
     var t = this
-    r.a(this, e)
+    $$_27.a(this, e)
     this.dynamicValueMap = new Map()
-    this.generator = new a.JsonJavaScriptGenerator()
+    this.generator = new $_609_index.JsonJavaScriptGenerator()
     this.getFieldValue = this.generator.get_field_value.bind(this.generator)
     this.quote = this.generator.quote.bind(this.generator)
     this.registerDelegate = this.generator.register.bind(this.generator)
@@ -100,9 +100,9 @@ var c = function () {
     this.ORDER_ASSIGNMENT = this.generator.ORDER_ASSIGNMENT
     this.ORDER_COMMA = this.generator.ORDER_COMMA
     this.ORDER_NONE = this.generator.ORDER_NONE
-    a.load_basic_blocks_json_js_generators(this.generator)
+    $_609_index.load_basic_blocks_json_js_generators(this.generator)
   }
-  o.a(e, [{
+  $$_40.a(e, [{
     key: "getDynamicValue",
     value: function (e) {
       var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1]
@@ -129,10 +129,10 @@ var c = function () {
 }()
 var l = function () {
   function e() {
-    r.a(this, e)
+    $$_27.a(this, e)
     this.xmlMap = new Map()
   }
-  o.a(e, [{
+  $$_40.a(e, [{
     key: "insertBlockXML",
     value: function (e) {
       var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : ""
@@ -147,8 +147,8 @@ var l = function () {
     value: function () {
       var e = {}
       this.xmlMap.forEach(function (t, n) {
-        var t$xml = t.xml
-        var t$notCached = t.notCached
+        var /* [auto-meaningful-name] */t$xml = t.xml
+        var /* [auto-meaningful-name] */t$notCached = t.notCached
         var i = ""
         if ("string" === typeof t$xml) {
           i = "<block type=\"".concat(n, "\" uncache=\"").concat(t$notCached, "\">").concat(t$xml, "</block>")
@@ -261,7 +261,7 @@ function g(e, t, n) {
   }
 }
 function _(e, t) {
-  for (var arguments$length = arguments.length, r = new Array(arguments$length > 2 ? arguments$length - 2 : 0), o = 2; o < arguments$length; o++) {
+  for (var /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length > 2 ? arguments$length - 2 : 0), o = 2; o < arguments$length; o++) {
     r[o - 2] = arguments[o]
   }
   r.forEach(g.bind(undefined, e, t))

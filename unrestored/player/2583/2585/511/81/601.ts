@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：601
@@ -159,7 +159,7 @@ var g = function (t) {
   var /* [auto-meaningful-name] */r$return
   try {
     for (var r = b(t), i = r.next(); !i.done; i = r.next()) {
-      var i$value = i.value
+      var /* [auto-meaningful-name] */i$value = i.value
       m.a.fill(i$value, -1)
     }
   } catch (a) {
@@ -228,8 +228,8 @@ var y = function () {
     return this.bitCount
   }
   t.prototype.latchAndAppend = function (e, n) {
-    var this$bitCount = this.bitCount
-    var this$token = this.token
+    var /* [auto-meaningful-name] */this$bitCount = this.bitCount
+    var /* [auto-meaningful-name] */this$token = this.token
     if (e !== this.mode) {
       var o = p[this.mode][e]
       this$token = d(this$token, 65535 & o, o >> 16)
@@ -239,15 +239,15 @@ var y = function () {
     return new t(this$token = d(this$token, n, a), e, 0, this$bitCount + a)
   }
   t.prototype.shiftAndAppend = function (e, n) {
-    var this$token = this.token
+    var /* [auto-meaningful-name] */this$token = this.token
     var i = 2 === this.mode ? 4 : 5
     this$token = d(this$token, g[this.mode][e], i)
     return new t(this$token = d(this$token, n, 5), this.mode, 0, this.bitCount + i + 5)
   }
   t.prototype.addBinaryShiftChar = function (e) {
-    var this$token = this.token
-    var this$mode = this.mode
-    var this$bitCount = this.bitCount
+    var /* [auto-meaningful-name] */this$token = this.token
+    var /* [auto-meaningful-name] */this$mode = this.mode
+    var /* [auto-meaningful-name] */this$bitCount = this.bitCount
     if (4 === this.mode || 2 === this.mode) {
       var o = p[this$mode][0]
       this$token = d(this$token, 65535 & o, o >> 16)
@@ -265,7 +265,7 @@ var y = function () {
     if (0 === this.binaryShiftByteCount) {
       return this
     }
-    var this$token = this.token
+    var /* [auto-meaningful-name] */this$token = this.token
     return new t(this$token = function (t, e, n) {
       return new l(t, e, n)
     }(this$token, e - this.binaryShiftByteCount, this.binaryShiftByteCount), this.mode, 0, this.bitCount)
@@ -282,7 +282,7 @@ var y = function () {
     return n <= e.bitCount
   }
   t.prototype.toBitArray = function (t) {
-    for (var e, /* [auto-meaningful-name] */s$return, r = [], this$endBinaryShiftT$length$token = this.endBinaryShift(t.length).token; null !== this$endBinaryShiftT$length$token; this$endBinaryShiftT$length$token = this$endBinaryShiftT$length$token.getPrevious()) {
+    for (var e, /* [auto-meaningful-name] */s$return, r = [], /* [auto-meaningful-name] */this$endBinaryShiftT$length$token = this.endBinaryShift(t.length).token; null !== this$endBinaryShiftT$length$token; this$endBinaryShiftT$length$token = this$endBinaryShiftT$length$token.getPrevious()) {
       r.unshift(this$endBinaryShiftT$length$token)
     }
     var a = new i.a()
@@ -412,7 +412,7 @@ var O = function () {
     var o = []
     try {
       for (var a = E(e), s = a.next(); !s.done; s = a.next()) {
-        var s$value = s.value
+        var /* [auto-meaningful-name] */s$value = s.value
         this.updateStateForChar(s$value, n, o)
       }
     } catch (c) {
@@ -460,7 +460,7 @@ var O = function () {
     var o = []
     try {
       for (var a = E(t), s = a.next(); !s.done; s = a.next()) {
-        var s$value = s.value
+        var /* [auto-meaningful-name] */s$value = s.value
         this.updateStateForPair(s$value, e, n, o)
       }
     } catch (c) {
@@ -503,7 +503,7 @@ var O = function () {
     var o = []
     try {
       for (var a = E(t), s = a.next(); !s.done; s = a.next()) {
-        var s$value = s.value
+        var /* [auto-meaningful-name] */s$value = s.value
         var c = true
         var l = function (t) {
           if (t.isBetterThanOrEqualTo(s$value)) {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：509
@@ -121,13 +121,13 @@ var m = function (t) {
     r.reverse()
     try {
       for (var h = _(this.possibleLeftPairs), l = h.next(); !l.done; l = h.next()) {
-        var l$value = l.value
+        var /* [auto-meaningful-name] */l$value = l.value
         if (l$value.getCount() > 1) {
           try {
             for (a = undefined, p = _(this.possibleRightPairs), g = p.next(), undefined; !g.done; g = p.next()) {
               var p
               var g
-              var g$value = g.value
+              var /* [auto-meaningful-name] */g$value = g.value
               if (g$value.getCount() > 1 && e.checkChecksum(l$value, g$value)) {
                 return e.constructResult(l$value, g$value)
               }
@@ -173,7 +173,7 @@ var m = function (t) {
       var o = false
       try {
         for (var i = _(t), a = i.next(); !a.done; a = i.next()) {
-          var a$value = a.value
+          var /* [auto-meaningful-name] */a$value = a.value
           if (a$value.getValue() === e.getValue()) {
             a$value.incrementCount()
             o = true

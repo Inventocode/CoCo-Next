@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2121
@@ -13,7 +13,7 @@ exports.FlyoutButton = undefined
 var r = require("tslib")
 var i = require("inversify")
 var o = require("@kitten-team/gl-matrix")
-var a = require("../../4/127")
+var a = require("../../1036/127")
 var s = require("../../125/index")
 var c = function () {
   function e(e) {
@@ -42,8 +42,8 @@ var c = function () {
     this.flyout_padding_left = e.flyout_padding_left
     this.flyout_padding_right = e.flyout_padding_right
     this.callback_ = undefined
-    var e$xml = e.xml
-    var e$target_workspace = e.target_workspace
+    var /* [auto-meaningful-name] */e$xml = e.xml
+    var /* [auto-meaningful-name] */e$target_workspace = e.target_workspace
     var i = e$xml.getAttribute("callbackkey")
     if (this.is_label && i) {
       console.warn("Labels should not have callbacks. Label text: " + this.text_)
@@ -150,11 +150,11 @@ var c = function () {
   }
   e.prototype.create_dom = function (e) {
     var /* [auto-meaningful-name] */this$target_workspace
-    var /* [auto-meaningful-name] */_this$workspace_2
-    var r
-    var /* [auto-meaningful-name] */_this$workspace_3
-    var o
     var /* [auto-meaningful-name] */this$workspace_
+    var r
+    var /* [auto-meaningful-name] */_this$workspace_
+    var o
+    var /* [auto-meaningful-name] */_this$workspace_2
     var c
     var u = this
     var l = function () {
@@ -175,12 +175,12 @@ var c = function () {
       if (d instanceof Element) {
         this.svg_group = d
       } else {
-        var d$svg_group = d.svg_group
-        var d$update_callback = d.update_callback
+        var /* [auto-meaningful-name] */d$svg_group = d.svg_group
+        var /* [auto-meaningful-name] */d$update_callback = d.update_callback
         this.svg_group = d$svg_group
         this.update_callback = d$update_callback
       }
-      if (!(null === (r = null === (_this$workspace_2 = this.workspace_) || undefined === _this$workspace_2 ? undefined : _this$workspace_2.svg_block_canvas_) || undefined === r)) {
+      if (!(null === (r = null === (this$workspace_ = this.workspace_) || undefined === this$workspace_ ? undefined : this$workspace_.svg_block_canvas_) || undefined === r)) {
         r.appendChild(this.svg_group)
       }
       if (this.svg_group.cachedWidth_) {
@@ -200,7 +200,7 @@ var c = function () {
         this.svg_group = (0, s.create_svg_element)("g", {
           class: "blocklyLine"
         })
-        if (!(null === (o = null === (_this$workspace_3 = this.workspace_) || undefined === _this$workspace_3 ? undefined : _this$workspace_3.svg_block_canvas_) || undefined === o)) {
+        if (!(null === (o = null === (_this$workspace_ = this.workspace_) || undefined === _this$workspace_ ? undefined : _this$workspace_.svg_block_canvas_) || undefined === o)) {
           o.appendChild(this.svg_group)
         }
         var _ = (0, s.create_svg_element)("rect", {
@@ -220,11 +220,11 @@ var c = function () {
           console.warn("Flyout button type [" + this.type + "] is not defined. ", "Rendering " + this + " as a normal button. ")
         }
         var A = this.height || 32,
-          this$vertical_padding = this.vertical_padding
+          /* [auto-meaningful-name] */this$vertical_padding = this.vertical_padding
         this.svg_group = (0, s.create_svg_element)("g", {
           class: this.css_class
         })
-        if (!(null === (c = null === (this$workspace_ = this.workspace_) || undefined === this$workspace_ ? undefined : this$workspace_.svg_block_canvas_) || undefined === c)) {
+        if (!(null === (c = null === (_this$workspace_2 = this.workspace_) || undefined === _this$workspace_2 ? undefined : _this$workspace_2.svg_block_canvas_) || undefined === c)) {
           c.appendChild(this.svg_group)
         }
         var v = (0, s.create_svg_element)("rect", {

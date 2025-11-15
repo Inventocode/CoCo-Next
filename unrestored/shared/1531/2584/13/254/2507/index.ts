@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2507
@@ -80,7 +80,7 @@ var h = exports.Alpha = function (e) {
     var n
     var r
     f(this, t)
-    for (var arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
       o[a] = arguments[a]
     }
     n = r = d(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))
@@ -133,7 +133,7 @@ var h = exports.Alpha = function (e) {
     key: "render",
     value: function () {
       var e = this
-      var this$props$rgb = this.props.rgb
+      var /* [auto-meaningful-name] */this$props$rgb = this.props.rgb
       var n = (0, s.default)({
         default: {
           alpha: {

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：24
@@ -8,7 +8,7 @@
 
 var r
 var o
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,31 +21,31 @@ var a = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import s = require("../7");
-import c = require("../27");
-import l = require("../40");
-import OtJson1 = require("ot-json1");
-import d = require("../15");
-import p = require("../38/66");
-import Lodash = require("lodash");
-import h = require("../389");
-import m = require("../../../../../src/shared/ui/language");
-import g = require("../../../../../src/shared/events/messages-wrapper");
-import _ = require("../102");
-import v = require("../18");
-import b = require("../10/index");
-import y = require("../25/index");
-import E = require("../49/304");
-import O = require("../49/index");
-import w = require("../43");
-import C = require("../49/244");
+import s = require("../7")
+import /* [auto-meaningful-name] */$$_27 = require("../27")
+import /* [auto-meaningful-name] */$$_40 = require("../40")
+import /* [auto-meaningful-name] */OtJson1 = require("ot-json1")
+import /* [auto-meaningful-name] */$$_15 = require("../15")
+import /* [auto-meaningful-name] */$$_48_66 = require("../48/66")
+import /* [auto-meaningful-name] */Lodash = require("lodash")
+import /* [auto-meaningful-name] */$$_389 = require("../389")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language = require("../../../../../src/shared/ui/language")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper = require("../../../../../src/shared/events/messages-wrapper")
+import /* [auto-meaningful-name] */$$_102 = require("../102")
+import /* [auto-meaningful-name] */$$_18 = require("../18")
+import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
+import /* [auto-meaningful-name] */$$_25_index = require("../25/index")
+import /* [auto-meaningful-name] */$_304 = require("./304")
+import /* [auto-meaningful-name] */$$_49 = require("../49")
+import /* [auto-meaningful-name] */$$_43 = require("../43")
+import /* [auto-meaningful-name] */$_244 = require("./244")
 var T = function () {
   function e() {
-    c.a(this, e)
+    $$_27.a(this, e)
     this._doc = null
     this._previousDoc = null
   }
-  l.a(e, [{
+  $$_40.a(e, [{
     key: "setDoc",
     value: function (e) {
       this._previousDoc = this._doc
@@ -72,13 +72,13 @@ var T = function () {
   }, {
     key: "onGetSnapShort",
     value: function (e) {
-      w.f(Lodash.cloneDeep(e))
+      $$_43.f(Lodash.cloneDeep(e))
     }
   }, {
     key: "applyServerOp2IDE",
     value: function (e) {
       var t = this
-      if (C.c(e)) {
+      if ($_244.c(e)) {
         e.forEach(function (e) {
           t.handleServerOp2IDE(e)
         })
@@ -95,41 +95,41 @@ var T = function () {
         this.setDoc(n)
         if ("blockly" !== e[0]) {
           var r = new Map()
-          var o = C.b(e)
-          var o$picks = o.picks
-          var o$drops = o.drops
+          var o = $_244.b(e)
+          var /* [auto-meaningful-name] */o$picks = o.picks
+          var /* [auto-meaningful-name] */o$drops = o.drops
           o$picks.forEach(function (e) {
-            if (C.f(e.op)) {
-              r.set(e.op.p, E.a({
-                path: ["$"].concat(y.a(e.path)),
+            if ($_244.f(e.op)) {
+              r.set(e.op.p, $_304.a({
+                path: ["$"].concat($$_25_index.a(e.path)),
                 json: t._previousDoc
               })[0])
             }
-            Object.entries(O.oTHelper).forEach(function (t) {
-              var n = b.a(t, 2)[1]
+            Object.entries($$_49.oTHelper).forEach(function (t) {
+              var n = $$_10_index.a(t, 2)[1]
               if (n && n.serverOp && n.serverOp.pick) {
                 n.serverOp.pick(e)
               }
             })
           })
           o$drops.forEach(function (e) {
-            if (C.d(e.op)) {
+            if ($_244.d(e.op)) {
               var t = r.get(e.op.d)
               e.op = {
                 i: t
               }
             }
-            Object.entries(O.oTHelper).forEach(function (t) {
-              var n = b.a(t, 2)[1]
+            Object.entries($$_49.oTHelper).forEach(function (t) {
+              var n = $$_10_index.a(t, 2)[1]
               if (n && n.serverOp && n.serverOp.drop) {
                 n.serverOp.drop(e)
               }
             })
           })
         } else {
-          var /* [auto-meaningful-name] */o$oTHelper$blink
-          if (!(null === (o$oTHelper$blink = O.oTHelper.blink) || undefined === o$oTHelper$blink)) {
-            o$oTHelper$blink.serverOp.applyServerOp(e)
+          var /* [auto-meaningful-name] */$$_49$oTHelper$blink
+          if (!(null === ($$_49$oTHelper$blink = $$_49.oTHelper.blink) || undefined === $$_49$oTHelper$blink)) {
+            $$_49$oTHelper$blink.serverOp.applyServerOp(e)
           }
         }
       }
@@ -145,25 +145,25 @@ var T = function () {
   }])
   return e
 }()
-var S = "set_doc"
-var I = "set_doc_ack"
+var /* [auto-meaningful-name] */Set_doc = "set_doc"
+var /* [auto-meaningful-name] */Set_doc_ack = "set_doc_ack"
 var A = "join"
-var j = "join_ack"
-var N = "operation"
-var R = "operation_ack"
-var k = "operation_relay"
-var x = "get_online_user_list_ack"
-var D = "svr_user_status_change"
-var M = "svr_coll_user_change"
-var L = "svr_coll_user_eliminated"
-var P = "svr_save_work"
-var B = "svr_edit_permit_change"
-var F = "set_doc_relay"
-var G = "user_focus_on_pos"
-var U = "user_focus_on_pos_ack"
-var W = "user_focus_on_pos_relay"
-import H = require("../../../../../src/shared/events/actions");
-import Socket$ioClient = require("socket.io-client");
+var /* [auto-meaningful-name] */Join_ack = "join_ack"
+var /* [auto-meaningful-name] */Operation = "operation"
+var /* [auto-meaningful-name] */Operation_ack = "operation_ack"
+var /* [auto-meaningful-name] */Operation_relay = "operation_relay"
+var /* [auto-meaningful-name] */Get_online_user_list_ack = "get_online_user_list_ack"
+var /* [auto-meaningful-name] */Svr_user_status_change = "svr_user_status_change"
+var /* [auto-meaningful-name] */Svr_coll_user_change = "svr_coll_user_change"
+var /* [auto-meaningful-name] */Svr_coll_user_eliminated = "svr_coll_user_eliminated"
+var /* [auto-meaningful-name] */Svr_save_work = "svr_save_work"
+var /* [auto-meaningful-name] */Svr_edit_permit_change = "svr_edit_permit_change"
+var /* [auto-meaningful-name] */Set_doc_relay = "set_doc_relay"
+var /* [auto-meaningful-name] */User_focus_on_pos = "user_focus_on_pos"
+var /* [auto-meaningful-name] */User_focus_on_pos_ack = "user_focus_on_pos_ack"
+var /* [auto-meaningful-name] */User_focus_on_pos_relay = "user_focus_on_pos_relay"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_actions = require("../../../../../src/shared/events/actions")
+import /* [auto-meaningful-name] */Socket$ioClient = require("socket.io-client")
 var z = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -176,13 +176,13 @@ var z = function __importDefault(module) {
   })
   return defaultExport
 }(Socket$ioClient)
-var require$$59Index$a$oTSocketHost = require("../59/index").a.oTSocketHost
+var /* [auto-meaningful-name] */require$$_59_index$a$oTSocketHost = require("../59/index").a.oTSocketHost
 var K = function () {
   function e(t, n) {
-    c.a(this, e)
+    $$_27.a(this, e)
     this.subject = undefined
     this.client = undefined
-    this.subject = z()(require$$59Index$a$oTSocketHost, {
+    this.subject = z()(require$$_59_index$a$oTSocketHost, {
       path: "/collaborate/",
       query: {
         work_id: n,
@@ -194,12 +194,12 @@ var K = function () {
     this.client = t
     this.onSocketEvent(n)
   }
-  l.a(e, [{
+  $$_40.a(e, [{
     key: "onSocketEvent",
     value: function (e) {
       var t = this
-      this.subject.on(R, function (e) {
-        var e$code = e.code
+      this.subject.on(Operation_ack, function (e) {
+        var /* [auto-meaningful-name] */e$code = e.code
         console.info("===OPERATION_ACK====")
         if (1e7 === e$code) {
           if (window.confirm("服务器响应错误，是否刷新页面？")) {
@@ -207,36 +207,36 @@ var K = function () {
           }
         }
         t.client.handleOperationAck()
-      }).on(k, function (e) {
+      }).on(Operation_relay, function (e) {
         console.info("===OPERATION_RELAY===", e)
         t.client.handleApplyServer(e.op[0][0])
-      }).on(j, function (e) {
+      }).on(Join_ack, function (e) {
         console.info("===JOIN_ACK===", e)
         t.client.handleJoinAck(e)
-      }).on(I, function (e) {
+      }).on(Set_doc_ack, function (e) {
         console.info("===SET_DOC_ACK===")
         t.client.handleSetDocAck(e)
-      }).on(x, function (e) {
+      }).on(Get_online_user_list_ack, function (e) {
         console.info("===GET_ONLINE_USER_LIST_ACK===")
-      }).on(D, function (e) {
+      }).on(Svr_user_status_change, function (e) {
         console.info("===SVR_USER_STATUS_CHANGE===")
         t.client.handleServerUserStatusChanged(e)
-      }).on(M, function (e) {
+      }).on(Svr_coll_user_change, function (e) {
         t.client.handleUserCountChange(e)
         console.info("===SVR_COLL_USER_CHANGE===")
-      }).on(L, function (e) {
+      }).on(Svr_coll_user_eliminated, function (e) {
         console.info("===SVR_COLL_USER_ELIMINATED===")
         t.client.handleUserEliminated(e.eliminated_code)
-      }).on(U, function () {
+      }).on(User_focus_on_pos_ack, function () {
         console.info("===USER_FOCUS_ON_POS_ACK===")
-      }).on(W, function (e) {
+      }).on(User_focus_on_pos_relay, function (e) {
         console.info("===USER_FOCUS_ON_POS_RELAY===", e)
         t.client.handleCustomEventRelay(e)
-      }).on(P, function () {
+      }).on(Svr_save_work, function () {
         t.client.handleSetCollAutoSave()
-      }).on(B, function (e) {
+      }).on(Svr_edit_permit_change, function (e) {
         t.client.handleUserPermissionChange(e)
-      }).on(F, function (e) {
+      }).on(Set_doc_relay, function (e) {
         t.client.collSetDoc(e)
       }).on("reconnect", function () {
         t.client.handleServerReconnect()
@@ -251,7 +251,7 @@ var K = function () {
 }()
 var q = function () {
   function e() {
-    c.a(this, e)
+    $$_27.a(this, e)
     this.applyClient = function (e, t) {
       e.sendOperation(e.revision, t)
       e.setState(new X(t))
@@ -263,7 +263,7 @@ var q = function () {
       return e
     }
   }
-  l.a(e, [{
+  $$_40.a(e, [{
     key: "applyServer",
     value: function (e, t) {
       e.setState(this)
@@ -279,11 +279,11 @@ var q = function () {
 }()
 var X = function () {
   function e(t) {
-    c.a(this, e)
+    $$_27.a(this, e)
     this.outstanding = undefined
     this.outstanding = t
   }
-  l.a(e, [{
+  $$_40.a(e, [{
     key: "applyClient",
     value: function (e, t) {
       e.setState(new Q(this.outstanding, t))
@@ -317,13 +317,13 @@ var X = function () {
 }()
 var Q = function () {
   function e(t, n) {
-    c.a(this, e)
+    $$_27.a(this, e)
     this.outstanding = undefined
     this.buffer = undefined
     this.outstanding = t
     this.buffer = n
   }
-  l.a(e, [{
+  $$_40.a(e, [{
     key: "applyClient",
     value: function (t, n) {
       var r = OtJson1.type.compose(this.buffer, n)
@@ -372,7 +372,7 @@ var Q = function () {
 var Z = function () {
   function e(t) {
     var n = this
-    c.a(this, e)
+    $$_27.a(this, e)
     this._socket = undefined
     this.revision = undefined
     this.adapter = undefined
@@ -382,7 +382,7 @@ var Z = function () {
     this._canRefreshUrl = true
     this.socketSuc = undefined
     this.sendOperation = function (e, t) {
-      n._socket.subject.emit(N, {
+      n._socket.subject.emit(Operation, {
         revision: e,
         op: [[t]]
       })
@@ -407,7 +407,7 @@ var Z = function () {
     this.state = new q()
     this._canRefreshUrl = true
   }
-  l.a(e, [{
+  $$_40.a(e, [{
     key: "disconnect",
     value: function () {
       this._canRefreshUrl = false
@@ -427,7 +427,7 @@ var Z = function () {
     key: "emitCustomEvent",
     value: function (e) {
       console.info("======= USER_FOCUS_ON_POS=======")
-      this._socket.subject.emit(G, e)
+      this._socket.subject.emit(User_focus_on_pos, e)
     }
   }, {
     key: "applyClient",
@@ -448,7 +448,7 @@ var Z = function () {
       console.info("================== accept Server op ==================")
       try {
         this.revision++
-        var this$state$applyServerThisE$op = this.state.applyServer(this, e).op
+        var /* [auto-meaningful-name] */this$state$applyServerThisE$op = this.state.applyServer(this, e).op
         this.applyOperation(this$state$applyServerThisE$op)
       } catch (n) {
         console.error("applyServer error", n)
@@ -497,10 +497,10 @@ var Z = function () {
                   break
                 }
                 e.next = 5
-                return w.b()
+                return $$_43.b()
               case 5:
                 this.initDocData = e.sent
-                this._socket.subject.emit(S, {
+                this._socket.subject.emit(Set_doc, {
                   doc: this.initDocData
                 })
                 e.next = 10
@@ -554,8 +554,8 @@ var Z = function () {
   }, {
     key: "_distributeUserColor",
     value: function (e) {
-      var /* [auto-meaningful-name] */o$oTHelper$customEvent
-      var n = w.c()
+      var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent
+      var n = $$_43.c()
       Object.keys(n).forEach(function (t) {
         if (!e.some(function (e) {
           return e.id === Number(t)
@@ -566,33 +566,33 @@ var Z = function () {
       var r = []
       e.forEach(function (e) {
         n[e.id] = function (e) {
-          return h.b.find(function (t) {
+          return $$_389.b.find(function (t) {
             return !e.includes(t.toUpperCase())
-          }) || h.a
+          }) || $$_389.a
         }(r)
         r.push(n[e.id])
       })
-      if (!(null === (o$oTHelper$customEvent = O.oTHelper.customEvent) || undefined === o$oTHelper$customEvent)) {
-        o$oTHelper$customEvent.emit.userColors(n)
+      if (!(null === ($$_49$oTHelper$customEvent = $$_49.oTHelper.customEvent) || undefined === $$_49$oTHelper$customEvent)) {
+        $$_49$oTHelper$customEvent.emit.userColors(n)
       }
-      H.a(_.t(n))
+      $$_$$_$$_$$_$$_src_shared_events_actions.a($$_102.t(n))
     }
   }, {
     key: "handleServerUserStatusChanged",
     value: function (e) {
-      var /* [auto-meaningful-name] */o$oTHelper$customEvent
+      var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent
       this._distributeUserColor(e)
       this._updateUserFocusInfoList(e)
-      H.a(_.l(e))
-      if (!(null === (o$oTHelper$customEvent = O.oTHelper.customEvent) || undefined === o$oTHelper$customEvent)) {
-        o$oTHelper$customEvent.emit.focusItem("widget")
+      $$_$$_$$_$$_$$_src_shared_events_actions.a($$_102.l(e))
+      if (!(null === ($$_49$oTHelper$customEvent = $$_49.oTHelper.customEvent) || undefined === $$_49$oTHelper$customEvent)) {
+        $$_49$oTHelper$customEvent.emit.focusItem("widget")
       }
     }
   }, {
     key: "_updateUserFocusInfoList",
     value: function (e) {
-      var t = w.d()
-      H.a(_.v(p.a.List(t.filter(function (t) {
+      var t = $$_43.d()
+      $$_$$_$$_$$_$$_src_shared_events_actions.a($$_102.v($$_48_66.a.List(t.filter(function (t) {
         return e.some(function (e) {
           return e.id === t.userId
         })
@@ -611,63 +611,63 @@ var Z = function () {
           edit_permission: e.edit_permission
         })
       })
-      H.a(_.s(t))
+      $$_$$_$$_$$_$$_src_shared_events_actions.a($$_102.s(t))
     }
   }, {
     key: "handleUserEliminated",
     value: function (e) {
-      var t = H.b()
+      var t = $$_$$_$$_$$_$$_src_shared_events_actions.b()
       this.disconnect()
-      H.a(g.zh({
+      $$_$$_$$_$$_$$_src_shared_events_actions.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
         onConfirm: function () {
-          H.a(g.Gf())
+          $$_$$_$$_$$_$$_src_shared_events_actions.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
         },
-        allowText: m.c(t, "confirm").toString(),
+        allowText: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "confirm").toString(),
         onClose: function () {
-          H.a(g.Gf())
+          $$_$$_$$_$$_$$_src_shared_events_actions.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
         },
-        title: m.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
-        content: m.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
+        title: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
+        content: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
         cancelBtnVisible: false
       }))
     }
   }, {
     key: "handleCustomEventRelay",
     value: function (e) {
-      var /* [auto-meaningful-name] */o$oTHelper$customEvent
-      if (!(null === (o$oTHelper$customEvent = O.oTHelper.customEvent) || undefined === o$oTHelper$customEvent)) {
-        o$oTHelper$customEvent.accept(e)
+      var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent
+      if (!(null === ($$_49$oTHelper$customEvent = $$_49.oTHelper.customEvent) || undefined === $$_49$oTHelper$customEvent)) {
+        $$_49$oTHelper$customEvent.accept(e)
       }
     }
   }, {
     key: "handleSetCollAutoSave",
     value: function () {
-      H.a(g.di(true))
+      $$_$$_$$_$$_$$_src_shared_events_actions.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.di(true))
     }
   }, {
     key: "handleUserPermissionChange",
     value: function (e) {
-      var /* [auto-meaningful-name] */h$d$getState$common$userInfo
-      var n = H.b()
-      var r = e.edit_permission === v.c.ReadOnly ? m.c(n, "OT.permissionChangeToReadOnly").toString() : m.c(n, "OT.permissionChangeToEdit").toString()
-      var o = null === (h$d$getState$common$userInfo = H.d.getState().common.userInfo) || undefined === h$d$getState$common$userInfo ? undefined : h$d$getState$common$userInfo.id
-      var e$coll_user_id = e.coll_user_id
+      var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_actions$d$getState$common$userInfo
+      var n = $$_$$_$$_$$_$$_src_shared_events_actions.b()
+      var r = e.edit_permission === $$_18.c.ReadOnly ? $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "OT.permissionChangeToReadOnly").toString() : $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "OT.permissionChangeToEdit").toString()
+      var o = null === ($$_$$_$$_$$_$$_src_shared_events_actions$d$getState$common$userInfo = $$_$$_$$_$$_$$_src_shared_events_actions.d.getState().common.userInfo) || undefined === $$_$$_$$_$$_$$_src_shared_events_actions$d$getState$common$userInfo ? undefined : $$_$$_$$_$$_$$_src_shared_events_actions$d$getState$common$userInfo.id
+      var /* [auto-meaningful-name] */e$coll_user_id = e.coll_user_id
       if (o === e$coll_user_id) {
-        H.a(g.mj({
+        $$_$$_$$_$$_$$_src_shared_events_actions.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
           visible: true,
           message: r,
           duration: 2e3
         }))
-        H.a(g.Ci(e.edit_permission === v.c.ReadOnly ? v.c.ReadOnly : v.c.Edit))
+        $$_$$_$$_$$_$$_src_shared_events_actions.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ci(e.edit_permission === $$_18.c.ReadOnly ? $$_18.c.ReadOnly : $$_18.c.Edit))
       }
-      var a = Array.from(H.d.getState().oTState.cooperationUserList)
+      var a = Array.from($$_$$_$$_$$_$$_src_shared_events_actions.d.getState().oTState.cooperationUserList)
       var s = a.find(function (e) {
         return e.id === e$coll_user_id
       })
       if (s) {
         s.edit_permission = e.edit_permission
       }
-      H.a(_.s(a))
+      $$_$$_$$_$$_$$_src_shared_events_actions.a($$_102.s(a))
     }
   }, {
     key: "forceSetDoc",
@@ -678,11 +678,11 @@ var Z = function () {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return w.b()
+                return $$_43.b()
               case 2:
                 this.initDocData = e.sent
                 this.adapter.setDoc(this.initDocData)
-                this._socket.subject.emit(S, {
+                this._socket.subject.emit(Set_doc, {
                   doc: this.initDocData,
                   force: 1,
                   business_type: r.RevertProject
@@ -703,11 +703,11 @@ var Z = function () {
     key: "collSetDoc",
     value: function (e) {
       if (e.business_type === r.RevertProject) {
-        var t = H.b()
-        H.a(g.zh({
-          allowText: m.c(t, "confirm").toString(),
-          title: m.c(t, "OT.tips").toString(),
-          content: m.c(t, "OT.revert").toString(),
+        var t = $$_$$_$$_$$_$$_src_shared_events_actions.b()
+        $$_$$_$$_$$_$$_src_shared_events_actions.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+          allowText: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "confirm").toString(),
+          title: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "OT.tips").toString(),
+          content: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "OT.revert").toString(),
           cancelBtnVisible: false
         }))
       }
@@ -718,15 +718,15 @@ var Z = function () {
   }])
   return e
 }()
-import J = require("../49/377/index");
+import /* [auto-meaningful-name] */$_377_index = require("./377/index")
 var $ = new (function () {
   function e() {
-    c.a(this, e)
+    $$_27.a(this, e)
     this.client = undefined
     this.workerId = undefined
     this.workerId = ""
   }
-  l.a(e, [{
+  $$_40.a(e, [{
     key: "init",
     value: function () {
       var e = s.a(a.a.mark(function e(t) {
@@ -744,8 +744,8 @@ var $ = new (function () {
                   e.next = 11
                   break
                 }
-                O.oTHelper.init()
-                J.blinkOTAdapter.start()
+                $$_49.oTHelper.init()
+                $_377_index.blinkOTAdapter.start()
                 e.next = 13
                 break
               case 11:
@@ -771,7 +771,7 @@ var $ = new (function () {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return d.lb(500)
+                return $$_15.lb(500)
               case 2:
                 this.disconnect()
                 e.next = 5
@@ -800,8 +800,8 @@ var $ = new (function () {
                   this$client.disconnect()
                 }
                 this.client = undefined
-                J.blinkOTAdapter.stop()
-                O.oTHelper.dispose()
+                $_377_index.blinkOTAdapter.stop()
+                $$_49.oTHelper.dispose()
               case 4:
               case "end":
                 return e.stop()

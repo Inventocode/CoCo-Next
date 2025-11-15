@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：410
@@ -8,7 +8,7 @@
 
 export { ze as c }
 export { Ye as b }
-import Color = require("color");
+import /* [auto-meaningful-name] */Color = require("color")
 var o = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -21,8 +21,8 @@ var o = function __importDefault(module) {
   })
   return defaultExport
 }(Color)
-import i = require("../../../16/index");
-import React = require("react");
+import /* [auto-meaningful-name] */$$_$$_$$_16_index = require("../../../16/index")
+import /* [auto-meaningful-name] */React = require("react")
 var s = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -35,14 +35,14 @@ var s = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import c = require("../../../5");
-import l = require("../../../15");
-import u = require("../../../205");
-import d = require("../../../9");
-import p = require("../../../../../../../src/shared/widget/custom/storage");
-import f = require("../../../../../../../src/shared/widget/custom/load");
-import h = require("../../../11");
-import m = require("../../../8");
+import /* [auto-meaningful-name] */$$_$$_$$_5 = require("../../../5")
+import /* [auto-meaningful-name] */$$_$$_$$_15 = require("../../../15")
+import /* [auto-meaningful-name] */$$_$$_$$_205 = require("../../../205")
+import /* [auto-meaningful-name] */$$_$$_$$_9 = require("../../../9")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage = require("../../../../../../../src/shared/widget/custom/storage")
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load = require("../../../../../../../src/shared/widget/custom/load")
+import /* [auto-meaningful-name] */$$_$$_$$_11 = require("../../../11")
+import /* [auto-meaningful-name] */$$_$$_$$_8 = require("../../../8")
 var g = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -54,10 +54,10 @@ var g = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(m)
-import _ = require("../../../90");
-import v = require("../../../145");
-import b = require("../../../240");
+}($$_$$_$$_8)
+import /* [auto-meaningful-name] */$$_$$_$$_90 = require("../../../90")
+import /* [auto-meaningful-name] */$$_$$_$$_145 = require("../../../145")
+import /* [auto-meaningful-name] */$$_$$_$$_240 = require("../../../240")
 var y = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -69,29 +69,29 @@ var y = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(b)
+}($$_$$_$$_240)
 var E = function (e) {
   var t = e.id
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$attributes = e.attributes
-  var e$size = e.size
-  var e$opacity = e.opacity
-  var e$onClick = e.onClick
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$content = e$attributes.content
-  var e$attributes$color = e$attributes.color
-  var e$attributes$fontFamily = e$attributes.fontFamily
-  var e$attributes$fontSize = e$attributes.fontSize
-  var e$attributes$justifyContent = e$attributes.justifyContent
-  var e$attributes$textAlign = e$attributes.textAlign
-  var e$attributes$overflow = e$attributes.overflow
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$content = e$attributes.content
+  var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
+  var /* [auto-meaningful-name] */e$attributes$fontFamily = e$attributes.fontFamily
+  var /* [auto-meaningful-name] */e$attributes$fontSize = e$attributes.fontSize
+  var /* [auto-meaningful-name] */e$attributes$justifyContent = e$attributes.justifyContent
+  var /* [auto-meaningful-name] */e$attributes$textAlign = e$attributes.textAlign
+  var /* [auto-meaningful-name] */e$attributes$overflow = e$attributes.overflow
   var C = undefined === e$attributes$overflow ? "hidden" : e$attributes$overflow
   var T = {
     width: e$size.width,
     height: e$size.height,
-    minWidth: "".concat(v.m, "px"),
-    minHeight: "".concat(v.l, "px"),
+    minWidth: "".concat($$_$$_$$_145.m, "px"),
+    minHeight: "".concat($$_$$_$$_145.l, "px"),
     backgroundColor: o()(e$attributes$backgroundColor).toString(),
     color: o()(e$attributes$color).toString(),
     fontFamily: e$attributes$fontFamily,
@@ -105,9 +105,9 @@ var E = function (e) {
   }
   return s.a.createElement("div", {
     id: t,
-    "data-widget-type": c.H,
-    "data-role": c.M,
-    className: g()(_.b, y.a.textWidget, h.a({}, y.a.hide, !e$visible)),
+    "data-widget-type": $$_$$_$$_5.H,
+    "data-role": $$_$$_$$_5.M,
+    className: g()($$_$$_$$_90.b, y.a.textWidget, $$_$$_$$_11.a({}, y.a.hide, !e$visible)),
     onClick: function () {
       e$onClick()
     },
@@ -116,51 +116,51 @@ var E = function (e) {
     className: y.a.content
   }, e$attributes$content))
 }
-import O = require("../../../542");
-import w = require("../../index");
-import C = require("../../../55");
+import /* [auto-meaningful-name] */$$_$$_$$_542 = require("../../../542")
+import /* [auto-meaningful-name] */$$_$$_index = require("../../index")
+import /* [auto-meaningful-name] */$$_$$_$$_55 = require("../../../55")
 var T = function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$parentId = e.parentId
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$parentId = e.parentId
   function o() {
-    w.emitWidgetEvent(e$type, "onTextPress", t)
-    w.emitTextPress(t)
-    C.b.playerWidgetLog({
+    $$_$$_index.emitWidgetEvent(e$type, "onTextPress", t)
+    $$_$$_index.emitTextPress(t)
+    $$_$$_$$_55.b.playerWidgetLog({
       widgetId: e$parentId ? t.replace(/_\d+$/, "") : t,
       widgetType: e$type,
       message: "onWidgetPress"
     })
   }
-  return e$parentId ? s.a.createElement(O.a, Object.assign({}, e, {
+  return e$parentId ? s.a.createElement($$_$$_$$_542.a, Object.assign({}, e, {
     onClick: o
   })) : s.a.createElement(E, Object.assign({}, e, {
     onClick: o
   }))
 }
-import S = require("../../../543/index");
-import I = require("../243");
-import A = require("../../../28/index");
+import /* [auto-meaningful-name] */$$_$$_$$_543_index = require("../../../543/index")
+import /* [auto-meaningful-name] */$$_243 = require("../243")
+import /* [auto-meaningful-name] */$$_$$_$$_28_index = require("../../../28/index")
 var j = function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$attributes = e.attributes
-  var e$animationRecord = e.animationRecord
-  var e$attributes$disabled = e$attributes.disabled
-  var l = i.e(function (e) {
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$animationRecord = e.animationRecord
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
+  var l = $$_$$_$$_16_index.e(function (e) {
     return e.iconFileMap
   }).get(e$attributes.iconId)
-  return s.a.createElement(S.a, Object.assign({}, e, {
+  return s.a.createElement($$_$$_$$_543_index.a, Object.assign({}, e, {
     iconFile: l,
     onClick: function () {
       if (!e$attributes$disabled) {
-        w.emitButtonPress(t)
+        $$_$$_index.emitButtonPress(t)
       }
       if (!e$attributes$disabled) {
-        w.emitWidgetEvent(e$type, "onButtonPressPress", t)
+        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPress", t)
       }
-      I.b(t, c.d, A.m("click", e$animationRecord))
-      C.b.playerWidgetLog({
+      $$_243.b(t, $$_$$_$$_5.d, $$_$$_$$_28_index.m("click", e$animationRecord))
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onWidgetPress"
@@ -168,28 +168,28 @@ var j = function (e) {
     },
     onMouseDown: function () {
       if (!e$attributes$disabled) {
-        w.emitButtonPressIn(t)
+        $$_$$_index.emitButtonPressIn(t)
       }
       if (!e$attributes$disabled) {
-        w.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
+        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
       }
     },
     onMouseUp: function () {
       if (!e$attributes$disabled) {
-        w.emitButtonPressOut(t)
+        $$_$$_index.emitButtonPressOut(t)
       }
       if (!e$attributes$disabled) {
-        w.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
+        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
       }
     }
   }))
 }
-import N = require("../../../6");
-import R = require("../../../321");
-import k = require("../../../82");
-import x = require("../../../60");
-import D = require("../../../116");
-import M = require("../../../216");
+import /* [auto-meaningful-name] */$$_$$_$$_6 = require("../../../6")
+import /* [auto-meaningful-name] */$$_$$_$$_321 = require("../../../321")
+import /* [auto-meaningful-name] */$$_$$_$$_82 = require("../../../82")
+import /* [auto-meaningful-name] */$$_$$_$$_60 = require("../../../60")
+import /* [auto-meaningful-name] */$$_$$_$$_116 = require("../../../116")
+import /* [auto-meaningful-name] */$$_$$_$$_216 = require("../../../216")
 var L = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -201,72 +201,72 @@ var L = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(M)
+}($$_$$_$$_216)
 var P = function (e) {
-  var e$position = e.position
-  var e$size = e.size
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$size = e.size
   var r = e.id
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$attributes = e.attributes
-  var e$iconFileOrUrl = e.iconFileOrUrl
-  var e$onClick = e.onClick
-  var e$onMouseDown = e.onMouseDown
-  var e$onMouseUp = e.onMouseUp
-  var e$attributes$textVisible = e$attributes.textVisible
-  var e$attributes$text = e$attributes.text
-  var e$attributes$fontFamily = e$attributes.fontFamily
-  var e$attributes$maxFontSize = e$attributes.maxFontSize
-  var e$attributes$textColor = e$attributes.textColor
-  var e$attributes$textAlign = e$attributes.textAlign
-  var e$attributes$iconVisible = e$attributes.iconVisible
-  var e$attributes$iconColor = e$attributes.iconColor
-  var e$attributes$backgroundMode = e$attributes.backgroundMode
-  var e$attributes$templateMode = e$attributes.templateMode
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$backgroundImage = e$attributes.backgroundImage
-  var e$attributes$imageResizeMode = e$attributes.imageResizeMode
-  var e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$iconFileOrUrl = e.iconFileOrUrl
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$onMouseDown = e.onMouseDown
+  var /* [auto-meaningful-name] */e$onMouseUp = e.onMouseUp
+  var /* [auto-meaningful-name] */e$attributes$textVisible = e$attributes.textVisible
+  var /* [auto-meaningful-name] */e$attributes$text = e$attributes.text
+  var /* [auto-meaningful-name] */e$attributes$fontFamily = e$attributes.fontFamily
+  var /* [auto-meaningful-name] */e$attributes$maxFontSize = e$attributes.maxFontSize
+  var /* [auto-meaningful-name] */e$attributes$textColor = e$attributes.textColor
+  var /* [auto-meaningful-name] */e$attributes$textAlign = e$attributes.textAlign
+  var /* [auto-meaningful-name] */e$attributes$iconVisible = e$attributes.iconVisible
+  var /* [auto-meaningful-name] */e$attributes$iconColor = e$attributes.iconColor
+  var /* [auto-meaningful-name] */e$attributes$backgroundMode = e$attributes.backgroundMode
+  var /* [auto-meaningful-name] */e$attributes$templateMode = e$attributes.templateMode
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
+  var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var P = "true" === e$attributes$textVisible.toString()
   var B = "true" === e$attributes$iconVisible.toString()
-  var F = P ? e$attributes$textAlign : x.a.CENTER
+  var F = P ? e$attributes$textAlign : $$_$$_$$_60.a.CENTER
   var G = e$attributes$maxFontSize
   if (!P) {
-    G = k.l
+    G = $$_$$_$$_82.l
   }
-  var U = 2 * k.r
-  var W = 2 * k.q
-  if (e$attributes$backgroundMode === D.a.IMAGE) {
-    U = 2 * k.j
-    W = 2 * k.i
+  var U = 2 * $$_$$_$$_82.r
+  var W = 2 * $$_$$_$$_82.q
+  if (e$attributes$backgroundMode === $$_$$_$$_116.a.IMAGE) {
+    U = 2 * $$_$$_$$_82.j
+    W = 2 * $$_$$_$$_82.i
   }
   var H = (e$size.width - U) / 1.5
   var V = (e$size.height - W) / 1.5
   var z = Math.min(H, V, G)
-  z = Math.max(z, k.o)
+  z = Math.max(z, $$_$$_$$_82.o)
   z = Math.floor(z)
   var Y = React.useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}
-      h.a(o, D.b.RECTANGLE_FILL, {
+      $$_$$_$$_11.a(o, $$_$$_$$_116.b.RECTANGLE_FILL, {
         color: r ? "#e6e6e6" : t,
         backgroundColor: r ? "#cccccc" : n,
         borderRadius: e / 4
       })
-      h.a(o, D.b.RECTANGLE_OUTLINE, {
+      $$_$$_$$_11.a(o, $$_$$_$$_116.b.RECTANGLE_OUTLINE, {
         color: r ? "#e9e9e9" : t,
         border: "2px solid ".concat(r ? "#e9e9e9" : n),
         backgroundColor: "white",
         borderRadius: e / 4,
         padding: "0 10px"
       })
-      h.a(o, D.b.CIRCLE_FILL, {
+      $$_$$_$$_11.a(o, $$_$$_$$_116.b.CIRCLE_FILL, {
         color: r ? "#e6e6e6" : t,
         backgroundColor: r ? "#cccccc" : n,
         borderRadius: e / 2
       })
-      h.a(o, D.b.CIRCLE_OUTLINE, {
+      $$_$$_$$_11.a(o, $$_$$_$$_116.b.CIRCLE_OUTLINE, {
         color: r ? "#e9e9e9" : t,
         border: "2px solid ".concat(r ? "#e9e9e9" : n),
         backgroundColor: "white",
@@ -277,14 +277,14 @@ var P = function (e) {
     }(e$size.height, e$attributes$textColor, e$attributes$backgroundColor, e$attributes$disabled)
   }, [e$attributes$backgroundColor, e$attributes$disabled, e$size.height, e$attributes$textColor])
   var K = undefined
-  K = e$attributes$backgroundMode === D.a.IMAGE ? {
+  K = e$attributes$backgroundMode === $$_$$_$$_116.a.IMAGE ? {
     color: e$attributes$disabled ? "#7E7E7E" : e$attributes$textColor,
     backgroundImage: "url(".concat(e$attributes$backgroundImage, ")"),
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     backgroundSize: "contain" === e$attributes$imageResizeMode ? "contain" : "100% 100%"
   } : Y[e$attributes$templateMode]
-  var q = N.a({
+  var q = $$_$$_$$_6.a({
     top: e$position.y,
     left: e$position.x,
     height: e$size.height,
@@ -293,18 +293,18 @@ var P = function (e) {
     fontFamily: e$attributes$fontFamily,
     justifyContent: F,
     opacity: undefined === e$opacity ? undefined : e$opacity / 100,
-    filter: e$attributes$disabled && e$attributes$backgroundMode === D.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined,
-    padding: e$attributes$backgroundMode === D.a.TEMPLATE || e$size.width < 2 * k.j ? "0 ".concat(k.r, "px") : "0 ".concat(k.j, "px")
+    filter: e$attributes$disabled && e$attributes$backgroundMode === $$_$$_$$_116.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined,
+    padding: e$attributes$backgroundMode === $$_$$_$$_116.a.TEMPLATE || e$size.width < 2 * $$_$$_$$_82.j ? "0 ".concat($$_$$_$$_82.r, "px") : "0 ".concat($$_$$_$$_82.j, "px")
   }, K)
   return s.a.createElement("button", {
     id: r,
-    className: g()(_.b, L.a.buttonWidget, !e$attributes$disabled && L.a.transform, h.a({}, L.a.hide, !e$visible)),
-    "data-role": c.M,
-    "data-widget-type": c.z,
-    "data-min-width": k.p,
-    "data-max-width": k.m,
-    "data-min-height": k.n,
-    "data-max-height": k.k,
+    className: g()($$_$$_$$_90.b, L.a.buttonWidget, !e$attributes$disabled && L.a.transform, $$_$$_$$_11.a({}, L.a.hide, !e$visible)),
+    "data-role": $$_$$_$$_5.M,
+    "data-widget-type": $$_$$_$$_5.z,
+    "data-min-width": $$_$$_$$_82.p,
+    "data-max-width": $$_$$_$$_82.m,
+    "data-min-height": $$_$$_$$_82.n,
+    "data-max-height": $$_$$_$$_82.k,
     onClick: function () {
       if (e$onClick) {
         e$onClick()
@@ -320,13 +320,13 @@ var P = function (e) {
         e$onMouseUp()
       }
     },
-    style: N.a(N.a({}, q), {}, {
-      flexDirection: F === x.a.RIGHT ? "row-reverse" : "row"
+    style: $$_$$_$$_6.a($$_$$_$$_6.a({}, q), {}, {
+      flexDirection: F === $$_$$_$$_60.a.RIGHT ? "row-reverse" : "row"
     })
   }, B && s.a.createElement("div", {
     className: L.a.iconWrapper,
     style: {
-      color: e$attributes$disabled ? e$attributes$backgroundMode === D.a.TEMPLATE ? K.color : "#7E7E7E" : e$attributes$iconColor
+      color: e$attributes$disabled ? e$attributes$backgroundMode === $$_$$_$$_116.a.TEMPLATE ? K.color : "#7E7E7E" : e$attributes$iconColor
     }
   }, "string" === typeof e$iconFileOrUrl ? s.a.createElement("img", {
     style: {
@@ -335,10 +335,10 @@ var P = function (e) {
     },
     src: e$iconFileOrUrl,
     alt: ""
-  }) : e$iconFileOrUrl && s.a.createElement(R.a, {
+  }) : e$iconFileOrUrl && s.a.createElement($$_$$_$$_321.a, {
     icon: e$iconFileOrUrl
   })), P && s.a.createElement("div", {
-    className: g()(L.a.textWrapper, B && e$attributes$text && (F === x.a.RIGHT ? L.a.iconToTextRightSpacing : L.a.iconToTextLeftSpacing))
+    className: g()(L.a.textWrapper, B && e$attributes$text && (F === $$_$$_$$_60.a.RIGHT ? L.a.iconToTextRightSpacing : L.a.iconToTextLeftSpacing))
   }, s.a.createElement("div", {
     className: L.a.text,
     style: {
@@ -347,25 +347,25 @@ var P = function (e) {
     }
   }, s.a.createElement("span", null, e$attributes$text))))
 }
-import B = require("../../../36/345/114");
+import /* [auto-meaningful-name] */$$_114 = require("../114")
 var F = function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$attributes = e.attributes
-  var e$animationRecord = e.animationRecord
-  var e$attributes$disabled = e$attributes.disabled
-  var e$attributes$textColor = e$attributes.textColor
-  var e$attributes$iconColor = e$attributes.iconColor
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$iconId = e$attributes.iconId
-  var e$attributes$backgroundImage = e$attributes.backgroundImage
-  var m = B.a(e$attributes$iconId) || k.c
-  var g = B.b(e$attributes$backgroundImage) || k.f
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$animationRecord = e.animationRecord
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$attributes$textColor = e$attributes.textColor
+  var /* [auto-meaningful-name] */e$attributes$iconColor = e$attributes.iconColor
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$iconId = e$attributes.iconId
+  var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
+  var m = $$_114.a(e$attributes$iconId) || $$_$$_$$_82.c
+  var g = $$_114.b(e$attributes$backgroundImage) || $$_$$_$$_82.f
   var _ = React.useMemo(function () {
     try {
       return o()(e$attributes$textColor.toString()).toString()
     } catch (e) {
-      C.b.widgetError({
+      $$_$$_$$_55.b.widgetError({
         widgetId: t,
         widgetType: e$type,
         message: "player/colorError"
@@ -377,7 +377,7 @@ var F = function (e) {
     try {
       return o()(e$attributes$iconColor.toString()).toString()
     } catch (e) {
-      C.b.widgetError({
+      $$_$$_$$_55.b.widgetError({
         widgetId: t,
         widgetType: e$type,
         message: "player/colorError"
@@ -389,7 +389,7 @@ var F = function (e) {
     try {
       return o()(e$attributes$backgroundColor.toString()).toString()
     } catch (e) {
-      C.b.widgetError({
+      $$_$$_$$_55.b.widgetError({
         widgetId: t,
         widgetType: e$type,
         message: "player/colorError"
@@ -399,7 +399,7 @@ var F = function (e) {
   }, [e$attributes$backgroundColor, t, e$type])
   return s.a.createElement(P, Object.assign({}, e, {
     iconFileOrUrl: m,
-    attributes: N.a(N.a({}, e.attributes), {}, {
+    attributes: $$_$$_$$_6.a($$_$$_$$_6.a({}, e.attributes), {}, {
       textColor: _,
       iconColor: v,
       backgroundColor: b,
@@ -407,13 +407,13 @@ var F = function (e) {
     }),
     onClick: function () {
       if (!e$attributes$disabled) {
-        w.emitButtonPress(t)
+        $$_$$_index.emitButtonPress(t)
       }
       if (!e$attributes$disabled) {
-        w.emitWidgetEvent(e$type, "onButtonPressPress", t)
+        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPress", t)
       }
-      I.b(t, c.z, A.m("click", e$animationRecord))
-      C.b.playerWidgetLog({
+      $$_243.b(t, $$_$$_$$_5.z, $$_$$_$$_28_index.m("click", e$animationRecord))
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onWidgetPress"
@@ -421,23 +421,23 @@ var F = function (e) {
     },
     onMouseDown: function () {
       if (!e$attributes$disabled) {
-        w.emitButtonPressIn(t)
+        $$_$$_index.emitButtonPressIn(t)
       }
       if (!e$attributes$disabled) {
-        w.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
+        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressIn", t)
       }
     },
     onMouseUp: function () {
       if (!e$attributes$disabled) {
-        w.emitButtonPressOut(t)
+        $$_$$_index.emitButtonPressOut(t)
       }
       if (!e$attributes$disabled) {
-        w.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
+        $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPressOut", t)
       }
     }
   }))
 }
-import G = require("../../../510");
+import /* [auto-meaningful-name] */$$_$$_$$_510 = require("../../../510")
 var U = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -449,38 +449,38 @@ var U = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(G)
-import W = require("../../../429");
-import H = require("../../../133/index");
+}($$_$$_$$_510)
+import /* [auto-meaningful-name] */$$_$$_$$_429 = require("../../../429")
+import /* [auto-meaningful-name] */$$_$$_$$_133 = require("../../../133")
 var V = React.memo(function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$size = e.size
-  var e$parentId = e.parentId
-  var e$attributes = e.attributes
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$resizeMode = e$attributes.resizeMode
-  var e$attributes$borderRadius = e$attributes.borderRadius
-  var e$attributes$fileId = e$attributes.fileId
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$parentId = e.parentId
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$resizeMode = e$attributes.resizeMode
+  var /* [auto-meaningful-name] */e$attributes$borderRadius = e$attributes.borderRadius
+  var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
   var b = React.useRef(null)
-  var y = B.b(e$attributes$fileId)
+  var y = $$_114.b(e$attributes$fileId)
   if (!y) {
-    y = e$parentId ? H.i : H.m
+    y = e$parentId ? $$_$$_$$_133.i : $$_$$_$$_133.m
   }
   return s.a.createElement("div", {
     id: t,
-    className: g()(U.a.imageWidget, _.b),
-    "data-role": c.M,
-    "data-type": c.v,
-    "data-scale-mode": c.p.PROPORTIONAL,
+    className: g()(U.a.imageWidget, $$_$$_$$_90.b),
+    "data-role": $$_$$_$$_5.M,
+    "data-type": $$_$$_$$_5.v,
+    "data-scale-mode": $$_$$_$$_5.p.PROPORTIONAL,
     ref: b,
     onClick: function () {
-      w.emitWidgetEvent(e$type, "onImagePress", t)
-      w.emitImagePress(t)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitWidgetEvent(e$type, "onImagePress", t)
+      $$_$$_index.emitImagePress(t)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: e$parentId ? t.replace(/_\d+$/, "") : t,
         widgetType: e$type,
         message: "onWidgetPress"
@@ -498,7 +498,7 @@ var V = React.memo(function (e) {
       backgroundImage: "url(".concat(y, ")"),
       backgroundRepeat: "no-repeat",
       backgroundPosition: "center center",
-      backgroundSize: W.a(e$attributes$resizeMode),
+      backgroundSize: $$_$$_$$_429.a(e$attributes$resizeMode),
       borderRadius: e$attributes$borderRadius,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }
@@ -508,13 +508,13 @@ var V = React.memo(function (e) {
     style: {
       visibility: "hidden",
       borderRadius: e$attributes$borderRadius,
-      objectFit: W.b(e$attributes$resizeMode)
+      objectFit: $$_$$_$$_429.b(e$attributes$resizeMode)
     }
   }))
 })
-import z = require("../../../10/index");
-import Y = require("../../../77");
-import K = require("../../../291");
+import /* [auto-meaningful-name] */$$_$$_$$_10_index = require("../../../10/index")
+import /* [auto-meaningful-name] */$$_$$_$$_77 = require("../../../77")
+import /* [auto-meaningful-name] */$$_$$_$$_291 = require("../../../291")
 var q = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -526,9 +526,9 @@ var q = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(K)
-import X = require("../../../97");
-import Q = require("../index");
+}($$_$$_$$_291)
+import /* [auto-meaningful-name] */$$_$$_$$_97 = require("../../../97")
+import /* [auto-meaningful-name] */$$_index = require("../index")
 function Z(e, t) {
   try {
     return o()(e.toString()).alpha(t).toString()
@@ -536,24 +536,24 @@ function Z(e, t) {
     return ""
   }
 }
-import J = require("../../../551/index");
+import /* [auto-meaningful-name] */$$_$$_$$_551_index = require("../../../551/index")
 var $ = function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$animationRecord = e.animationRecord
-  var e$attributes = e.attributes
-  var e$attributes$options = e$attributes.options
-  var e$attributes$disabled = e$attributes.disabled
-  var e$attributes$mode = e$attributes.mode
-  return s.a.createElement(J.a, Object.assign({}, e, {
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$animationRecord = e.animationRecord
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$options = e$attributes.options
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$attributes$mode = e$attributes.mode
+  return s.a.createElement($$_$$_$$_551_index.a, Object.assign({}, e, {
     onOptionClick: function (e) {
       if (!e$attributes$disabled && "disabled" !== e$attributes$options[e].state && e$attributes$options.findIndex(function (e) {
         return e.isSelected
       }) !== e) {
         var o = e + 1
-        w.setRadioWidgetOptionSelectedOrDisabled(t, o, "selected")
-        I.b(t, c.C, A.m("click", e$animationRecord, e$attributes$mode), e)
-        C.b.playerWidgetLog({
+        $$_$$_index.setRadioWidgetOptionSelectedOrDisabled(t, o, "selected")
+        $$_243.b(t, $$_$$_$$_5.C, $$_$$_$$_28_index.m("click", e$animationRecord, e$attributes$mode), e)
+        $$_$$_$$_55.b.playerWidgetLog({
           widgetId: t,
           widgetType: e$type,
           message: "onRadioSelected",
@@ -565,14 +565,14 @@ var $ = function (e) {
     }
   }))
 }
-import ee = require("../../../552/index");
+import /* [auto-meaningful-name] */$$_$$_$$_552_index = require("../../../552/index")
 var te = function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$attributes = e.attributes
-  var e$attributes$options = e$attributes.options
-  var e$attributes$disabled = e$attributes.disabled
-  return s.a.createElement(ee.a, Object.assign({}, e, {
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$options = e$attributes.options
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
+  return s.a.createElement($$_$$_$$_552_index.a, Object.assign({}, e, {
     onOptionClick: function (e) {
       if (!e$attributes$disabled && "disabled" !== e$attributes$options[e].state) {
         var r = []
@@ -583,8 +583,8 @@ var te = function (e) {
         })
         var a = e + 1
         if (r.includes(e)) {
-          w.setCheckboxWidgetOptionUnselected(t, a)
-          C.b.playerWidgetLog({
+          $$_$$_index.setCheckboxWidgetOptionUnselected(t, a)
+          $$_$$_$$_55.b.playerWidgetLog({
             widgetId: t,
             widgetType: e$type,
             message: "onCheckboxUnselected",
@@ -594,8 +594,8 @@ var te = function (e) {
             }
           })
         } else {
-          w.setCheckboxWidgetOptionSelected(t, a)
-          C.b.playerWidgetLog({
+          $$_$$_index.setCheckboxWidgetOptionSelected(t, a)
+          $$_$$_$$_55.b.playerWidgetLog({
             widgetId: t,
             widgetType: e$type,
             message: "onCheckboxSelected",
@@ -609,30 +609,30 @@ var te = function (e) {
     }
   }))
 }
-import ne = require("../../../544/index");
+import /* [auto-meaningful-name] */$$_$$_$$_544_index = require("../../../544/index")
 var re = function (e) {
   var t = e.id
-  var e$type = e.type
-  return s.a.createElement(ne.a, Object.assign({}, e, {
+  var /* [auto-meaningful-name] */e$type = e.type
+  return s.a.createElement($$_$$_$$_544_index.a, Object.assign({}, e, {
     onLoad: function () {
-      w.emitWebViewWidgetLoaded(t)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitWebViewWidgetLoaded(t)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onWebViewUrlLoaded"
       })
     },
     onLoading: function () {
-      w.emitWebViewWidgetStartLoad(t)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitWebViewWidgetStartLoad(t)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onWebViewUrlStartLoad"
       })
     },
     onError: function () {
-      w.emitWebViewWidgetLoadError(t)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitWebViewWidgetLoadError(t)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onWebViewUrlLoadError"
@@ -640,26 +640,26 @@ var re = function (e) {
     }
   }))
 }
-import oe = require("../../../545/index");
-import ie = require("../../../131");
+import /* [auto-meaningful-name] */$$_$$_$$_545_index = require("../../../545/index")
+import /* [auto-meaningful-name] */$$_$$_$$_131 = require("../../../131")
 var ae = function (e) {
-  var e$attributes = e.attributes
-  var e$attributes$backgroundOpenImage = e$attributes.backgroundOpenImage
-  var r = undefined === e$attributes$backgroundOpenImage ? ie.b : e$attributes$backgroundOpenImage
-  var e$attributes$backgroundCloseImage = e$attributes.backgroundCloseImage
-  var i = undefined === e$attributes$backgroundCloseImage ? ie.a : e$attributes$backgroundCloseImage
-  var a = B.b(r) || ie.b
-  var c = B.b(i) || ie.a
-  return s.a.createElement(oe.a, Object.assign({}, e, {
-    attributes: N.a(N.a({}, e.attributes), {}, {
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$backgroundOpenImage = e$attributes.backgroundOpenImage
+  var r = undefined === e$attributes$backgroundOpenImage ? $$_$$_$$_131.b : e$attributes$backgroundOpenImage
+  var /* [auto-meaningful-name] */e$attributes$backgroundCloseImage = e$attributes.backgroundCloseImage
+  var i = undefined === e$attributes$backgroundCloseImage ? $$_$$_$$_131.a : e$attributes$backgroundCloseImage
+  var a = $$_114.b(r) || $$_$$_$$_131.b
+  var c = $$_114.b(i) || $$_$$_$$_131.a
+  return s.a.createElement($$_$$_$$_545_index.a, Object.assign({}, e, {
+    attributes: $$_$$_$$_6.a($$_$$_$$_6.a({}, e.attributes), {}, {
       backgroundCloseImage: c,
       backgroundOpenImage: a
     }),
     onSwitch: function (t) {
       var n = e.id
-      var e$type = e.type
-      w.setSwitchWidgetState(n, t)
-      C.b.playerWidgetLog({
+      var /* [auto-meaningful-name] */e$type = e.type
+      $$_$$_index.setSwitchWidgetState(n, t)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: n,
         widgetType: e$type,
         message: t ? "onSwitchChangeTrue" : "onSwitchChangeFalse"
@@ -667,29 +667,29 @@ var ae = function (e) {
     }
   }))
 }
-import se = require("../../../546/index");
-import ce = require("../../../148");
+import /* [auto-meaningful-name] */$$_$$_$$_546_index = require("../../../546/index")
+import /* [auto-meaningful-name] */$$_$$_$$_148 = require("../../../148")
 var le = function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$attributes = e.attributes
-  var e$attributes$handleImageFileId = e$attributes.handleImageFileId
-  var i = undefined === e$attributes$handleImageFileId ? ce.c : e$attributes$handleImageFileId
-  var e$attributes$backgroundImageFileId = e$attributes.backgroundImageFileId
-  var c = undefined === e$attributes$backgroundImageFileId ? ce.a : e$attributes$backgroundImageFileId
-  var e$attributes$trackImageFileId = e$attributes.trackImageFileId
-  var u = undefined === e$attributes$trackImageFileId ? ce.g : e$attributes$trackImageFileId
-  var d = B.b(c) || ce.a
-  var p = B.b(i) || ce.c
-  var f = B.b(u) || ce.g
-  return s.a.createElement(se.a, Object.assign({}, e, {
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$handleImageFileId = e$attributes.handleImageFileId
+  var i = undefined === e$attributes$handleImageFileId ? $$_$$_$$_148.c : e$attributes$handleImageFileId
+  var /* [auto-meaningful-name] */e$attributes$backgroundImageFileId = e$attributes.backgroundImageFileId
+  var c = undefined === e$attributes$backgroundImageFileId ? $$_$$_$$_148.a : e$attributes$backgroundImageFileId
+  var /* [auto-meaningful-name] */e$attributes$trackImageFileId = e$attributes.trackImageFileId
+  var u = undefined === e$attributes$trackImageFileId ? $$_$$_$$_148.g : e$attributes$trackImageFileId
+  var d = $$_114.b(c) || $$_$$_$$_148.a
+  var p = $$_114.b(i) || $$_$$_$$_148.c
+  var f = $$_114.b(u) || $$_$$_$$_148.g
+  return s.a.createElement($$_$$_$$_546_index.a, Object.assign({}, e, {
     onSliderChange: function (e) {
-      w.setSliderWidgetValue(t, e, false)
-      w.emitSliderWidgetChange(t, e)
+      $$_$$_index.setSliderWidgetValue(t, e, false)
+      $$_$$_index.emitSliderWidgetChange(t, e)
     },
     onEndToSlid: function (e) {
-      w.emitSliderWidgetEndToSlide(t, e)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitSliderWidgetEndToSlide(t, e)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onSliderEndSlide",
@@ -699,8 +699,8 @@ var le = function (e) {
       })
     },
     onStartToSlid: function (e) {
-      w.emitSliderWidgetStartToSlide(t, e)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitSliderWidgetStartToSlide(t, e)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: "onSliderStartSlide",
@@ -714,8 +714,8 @@ var le = function (e) {
     trackImageUrl: f
   }))
 }
-import ue = require("../../../129");
-import de = require("../../../30");
+import /* [auto-meaningful-name] */$$_$$_$$_129 = require("../../../129")
+import /* [auto-meaningful-name] */$$_$$_$$_30 = require("../../../30")
 var pe = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -727,32 +727,32 @@ var pe = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(de)
-import fe = require("../../../13/index");
-import he = require("../89");
-import me = require("../12");
-import ge = require("./index");
+}($$_$$_$$_30)
+import /* [auto-meaningful-name] */$$_$$_$$_13_index = require("../../../13/index")
+import /* [auto-meaningful-name] */$$_89 = require("../89")
+import /* [auto-meaningful-name] */$$_12 = require("../12")
+import /* [auto-meaningful-name] */$_index = require("./index")
 var _e = {}
 var ve = React.memo(function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$size = e.size
-  var e$attributes = e.attributes
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$dataSource = e$attributes.dataSource
-  var e$attributes$templateType = e$attributes.templateType
-  var e$attributes$templateRenderType = e$attributes.templateRenderType
-  var e$attributes$templateSlotMap = e$attributes.templateSlotMap
-  var e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$dataSource = e$attributes.dataSource
+  var /* [auto-meaningful-name] */e$attributes$templateType = e$attributes.templateType
+  var /* [auto-meaningful-name] */e$attributes$templateRenderType = e$attributes.templateRenderType
+  var /* [auto-meaningful-name] */e$attributes$templateSlotMap = e$attributes.templateSlotMap
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   for (var b in e$attributes$templateSlotMap) {
-    var y = me.b(e$attributes$templateSlotMap[b].widgetId)
+    var y = $$_12.b(e$attributes$templateSlotMap[b].widgetId)
     _e[b] = false !== (null === y || undefined === y ? undefined : y.visible)
   }
   function E(e, t) {
-    return s.a.createElement(s.a.Fragment, null, e$attributes$templateType === c.o.ONLY_TITLE && function (e, t) {
+    return s.a.createElement(s.a.Fragment, null, e$attributes$templateType === $$_$$_$$_5.o.ONLY_TITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       return s.a.createElement("div", {
         onClick: function (t) {
@@ -763,13 +763,13 @@ var ve = React.memo(function (e) {
       }, _e.titleSlot ? s.a.createElement("div", {
         className: pe.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
         className: pe.a.iconBox
-      }, s.a.createElement(fe.j, {
+      }, s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: pe.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       return s.a.createElement("div", {
@@ -781,16 +781,16 @@ var ve = React.memo(function (e) {
       }, _e.titleSlot ? s.a.createElement("div", {
         className: pe.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
         className: g()(pe.a.flexSC, pe.a.subTitleBox)
       }, _e.subTitleSlot && s.a.createElement("div", {
         className: pe.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement(fe.j, {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: pe.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -805,18 +805,18 @@ var ve = React.memo(function (e) {
       }, _e.imageSlot && s.a.createElement("div", {
         className: pe.a.smallImgBox,
         onClick: O.bind(null, "imageSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), _e.titleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), _e.titleSlot && s.a.createElement("div", {
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t))), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t))), s.a.createElement("div", {
         className: g()(pe.a.flexSC, pe.a.subTitleBox)
       }, _e.subTitleSlot && s.a.createElement("div", {
         className: pe.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement(fe.j, {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: pe.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -831,21 +831,21 @@ var ve = React.memo(function (e) {
       }, _e.avatarSlot && s.a.createElement("div", {
         className: pe.a.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
         className: pe.a.titleBox
       }, _e.titleSlot && s.a.createElement("div", {
         className: pe.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && s.a.createElement("div", {
         className: pe.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), s.a.createElement("div", {
         className: pe.a.iconBox
-      }, s.a.createElement(fe.j, {
+      }, s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: pe.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.IMAGE_AND_TITLE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_AND_TITLE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
@@ -860,19 +860,19 @@ var ve = React.memo(function (e) {
       }, _e.imageSlot && s.a.createElement("div", {
         className: pe.a.smallImgBox,
         onClick: O.bind(null, "imageSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), s.a.createElement("div", null, _e.titleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), s.a.createElement("div", null, _e.titleSlot && s.a.createElement("div", {
         className: pe.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.descSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.descSlot && s.a.createElement("div", {
         className: pe.a.desc,
         onClick: O.bind(null, "descSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))), s.a.createElement("div", {
         className: pe.a.iconBox
-      }, s.a.createElement(fe.j, {
+      }, s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: pe.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -889,22 +889,22 @@ var ve = React.memo(function (e) {
       }, _e.avatarSlot && s.a.createElement("div", {
         className: pe.a.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
         className: pe.a.titleBox
       }, _e.titleSlot && s.a.createElement("div", {
         className: pe.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && s.a.createElement("div", {
         className: pe.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), _e.bannerSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), _e.bannerSlot && s.a.createElement("div", {
         className: pe.a.bannerImgBox,
         onClick: O.bind(null, "bannerSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), _e.descSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), _e.descSlot && s.a.createElement("div", {
         className: pe.a.desc,
         onClick: O.bind(null, "descSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
-    }(e, t), e$attributes$templateType === c.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
+      }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$bannerSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
@@ -919,34 +919,34 @@ var ve = React.memo(function (e) {
       }, _e.bannerSlot && s.a.createElement("div", {
         className: pe.a.bannerImgBox,
         onClick: O.bind(null, "bannerSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), s.a.createElement("div", {
         className: pe.a.avatarAndTitle
       }, _e.avatarSlot && s.a.createElement("div", {
         className: pe.a.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
         className: pe.a.titleBox
       }, _e.titleSlot && s.a.createElement("div", {
         className: pe.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && s.a.createElement("div", {
         className: pe.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), _e.descSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), _e.descSlot && s.a.createElement("div", {
         className: pe.a.desc,
         onClick: O.bind(null, "descSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
+      }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
     }(e, t))
   }
   function O(e, n) {
     if (!e$attributes$disabled) {
-      w.emitListViewerChildWidgetPress("".concat(t, "_").concat(e), n + 1)
+      $$_$$_index.emitListViewerChildWidgetPress("".concat(t, "_").concat(e), n + 1)
     }
   }
   function T(e) {
     if (!e$attributes$disabled) {
-      w.emitListViewerPress(t, e)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitListViewerPress(t, e)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: e ? "onListViewerIndexPress" : "onWidgetPress",
@@ -959,13 +959,13 @@ var ve = React.memo(function (e) {
   return s.a.createElement("div", {
     onClick: T.bind(null, ""),
     id: t,
-    "data-role": c.M,
-    "data-widget-type": c.x,
-    "data-min-width": ue.m,
-    "data-max-width": ue.k,
-    "data-min-height": ue.l,
-    "data-max-height": ue.j,
-    className: g()(_.b, pe.a.listViewerBox, h.a({}, pe.a.hide, !e$visible)),
+    "data-role": $$_$$_$$_5.M,
+    "data-widget-type": $$_$$_$$_5.x,
+    "data-min-width": $$_$$_$$_129.m,
+    "data-max-width": $$_$$_$$_129.k,
+    "data-min-height": $$_$$_$$_129.l,
+    "data-max-height": $$_$$_$$_129.j,
+    className: g()($$_$$_$$_90.b, pe.a.listViewerBox, $$_$$_$$_11.a({}, pe.a.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -978,7 +978,7 @@ var ve = React.memo(function (e) {
     }
   }, function () {
     if (e$attributes$dataSource) {
-      var e = he.b.get(e$attributes$dataSource)
+      var e = $$_89.b.get(e$attributes$dataSource)
       if (e) {
         return s.a.createElement(s.a.Fragment, null, e.data.map(function (e, t) {
           return s.a.createElement("div", {
@@ -990,8 +990,8 @@ var ve = React.memo(function (e) {
     return null
   }())
 })
-import be = require("../../../172");
-import ye = require("../../../45");
+import /* [auto-meaningful-name] */$$_$$_$$_172 = require("../../../172")
+import /* [auto-meaningful-name] */$$_$$_$$_45 = require("../../../45")
 var Ee = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -1003,28 +1003,28 @@ var Ee = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(ye)
+}($$_$$_$$_45)
 var Oe = {}
 var we = React.memo(function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$size = e.size
-  var e$attributes = e.attributes
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$dataSource = e$attributes.dataSource
-  var e$attributes$templateType = e$attributes.templateType
-  var e$attributes$templateRenderType = e$attributes.templateRenderType
-  var e$attributes$templateSlotMap = e$attributes.templateSlotMap
-  var e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$dataSource = e$attributes.dataSource
+  var /* [auto-meaningful-name] */e$attributes$templateType = e$attributes.templateType
+  var /* [auto-meaningful-name] */e$attributes$templateRenderType = e$attributes.templateRenderType
+  var /* [auto-meaningful-name] */e$attributes$templateSlotMap = e$attributes.templateSlotMap
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   for (var b in e$attributes$templateSlotMap) {
-    var y = me.b(e$attributes$templateSlotMap[b].widgetId)
+    var y = $$_12.b(e$attributes$templateSlotMap[b].widgetId)
     Oe[b] = false !== (null === y || undefined === y ? undefined : y.visible)
   }
   function E(e, t) {
-    return s.a.createElement(s.a.Fragment, null, e$attributes$templateType === c.o.ONLY_TITLE && function (e, t) {
+    return s.a.createElement(s.a.Fragment, null, e$attributes$templateType === $$_$$_$$_5.o.ONLY_TITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       return s.a.createElement("div", {
         onClick: function (t) {
@@ -1035,13 +1035,13 @@ var we = React.memo(function (e) {
       }, Oe.titleSlot ? s.a.createElement("div", {
         className: Ee.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
         className: Ee.a.iconBox
-      }, s.a.createElement(fe.j, {
+      }, s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: Ee.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       return s.a.createElement("div", {
@@ -1053,16 +1053,16 @@ var we = React.memo(function (e) {
       }, Oe.titleSlot ? s.a.createElement("div", {
         className: Ee.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : s.a.createElement("div", null), s.a.createElement("div", {
         className: g()(Ee.a.flexSC, Ee.a.subTitleBox)
       }, Oe.subTitleSlot && s.a.createElement("div", {
         className: Ee.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement(fe.j, {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: Ee.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -1077,18 +1077,18 @@ var we = React.memo(function (e) {
       }, Oe.imageSlot && s.a.createElement("div", {
         className: Ee.a.smallImgBox,
         onClick: O.bind(null, "imageSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), Oe.titleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), Oe.titleSlot && s.a.createElement("div", {
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t))), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t))), s.a.createElement("div", {
         className: g()(Ee.a.flexSC, Ee.a.subTitleBox)
       }, Oe.subTitleSlot && s.a.createElement("div", {
         className: Ee.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement(fe.j, {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: Ee.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -1103,21 +1103,21 @@ var we = React.memo(function (e) {
       }, Oe.avatarSlot && s.a.createElement("div", {
         className: Ee.a.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
         className: Ee.a.titleBox
       }, Oe.titleSlot && s.a.createElement("div", {
         className: Ee.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.subTitleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.subTitleSlot && s.a.createElement("div", {
         className: Ee.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), s.a.createElement("div", {
         className: Ee.a.iconBox
-      }, s.a.createElement(fe.j, {
+      }, s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: Ee.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.IMAGE_AND_TITLE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_AND_TITLE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
@@ -1132,19 +1132,19 @@ var we = React.memo(function (e) {
       }, Oe.imageSlot && s.a.createElement("div", {
         className: Ee.a.smallImgBox,
         onClick: O.bind(null, "imageSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), s.a.createElement("div", null, Oe.titleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), s.a.createElement("div", null, Oe.titleSlot && s.a.createElement("div", {
         className: Ee.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.descSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.descSlot && s.a.createElement("div", {
         className: Ee.a.desc,
         onClick: O.bind(null, "descSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))), s.a.createElement("div", {
         className: Ee.a.iconBox
-      }, s.a.createElement(fe.j, {
+      }, s.a.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
         className: Ee.a.icon
       })))
-    }(e, t), e$attributes$templateType === c.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -1161,22 +1161,22 @@ var we = React.memo(function (e) {
       }, Oe.avatarSlot && s.a.createElement("div", {
         className: Ee.a.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
         className: Ee.a.titleBox
       }, Oe.titleSlot && s.a.createElement("div", {
         className: Ee.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.subTitleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.subTitleSlot && s.a.createElement("div", {
         className: Ee.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), Oe.bannerSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), Oe.bannerSlot && s.a.createElement("div", {
         className: Ee.a.bannerImgBox,
         onClick: O.bind(null, "bannerSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), Oe.descSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), Oe.descSlot && s.a.createElement("div", {
         className: Ee.a.desc,
         onClick: O.bind(null, "descSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
-    }(e, t), e$attributes$templateType === c.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
+      }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
+    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$bannerSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
@@ -1191,23 +1191,23 @@ var we = React.memo(function (e) {
       }, Oe.bannerSlot && s.a.createElement("div", {
         className: Ee.a.bannerImgBox,
         onClick: O.bind(null, "bannerSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), s.a.createElement("div", {
         className: Ee.a.avatarAndTitle
       }, Oe.avatarSlot && s.a.createElement("div", {
         className: Ee.a.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), s.a.createElement("div", {
         className: Ee.a.titleBox
       }, Oe.titleSlot && s.a.createElement("div", {
         className: Ee.a.title,
         onClick: O.bind(null, "titleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.subTitleSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), Oe.subTitleSlot && s.a.createElement("div", {
         className: Ee.a.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), Oe.descSlot && s.a.createElement("div", {
+      }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), Oe.descSlot && s.a.createElement("div", {
         className: Ee.a.desc,
         onClick: O.bind(null, "descSlot", e)
-      }, ge.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
+      }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
     }(e, t))
   }
   function O(e, n) {
@@ -1215,7 +1215,7 @@ var we = React.memo(function (e) {
       n = 0
     }
     if (!e$attributes$disabled) {
-      w.emitListViewerChildWidgetPress("".concat(t, "_").concat(e), n + 1)
+      $$_$$_index.emitListViewerChildWidgetPress("".concat(t, "_").concat(e), n + 1)
     }
   }
   function T(e) {
@@ -1226,8 +1226,8 @@ var we = React.memo(function (e) {
       e += 1
     }
     if (!e$attributes$disabled) {
-      w.emitListViewerPress(t, e)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitListViewerPress(t, e)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,
         message: e ? "onListViewerIndexPress" : "onWidgetPress",
@@ -1240,19 +1240,19 @@ var we = React.memo(function (e) {
   return s.a.createElement("div", {
     onClick: T.bind(null, ""),
     id: t,
-    "data-role": c.M,
-    "data-widget-type": c.A,
-    "data-min-width": be.k,
-    "data-max-width": be.i,
-    "data-min-height": be.j,
-    "data-max-height": be.h,
-    className: g()(_.b, Ee.a.listViewerBox, h.a({}, Ee.a.hide, !e$visible)),
+    "data-role": $$_$$_$$_5.M,
+    "data-widget-type": $$_$$_$$_5.A,
+    "data-min-width": $$_$$_$$_172.k,
+    "data-max-width": $$_$$_$$_172.i,
+    "data-min-height": $$_$$_$$_172.j,
+    "data-max-height": $$_$$_$$_172.h,
+    className: g()($$_$$_$$_90.b, Ee.a.listViewerBox, $$_$$_$$_11.a({}, Ee.a.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
       width: e$size.width,
       height: e$size.height,
-      background: e$attributes$disabled ? be.f : e$attributes$backgroundColor,
+      background: e$attributes$disabled ? $$_$$_$$_172.f : e$attributes$backgroundColor,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100,
       filter: e$attributes$disabled ? "saturate(0)" : undefined,
       overflowY: "auto"
@@ -1262,9 +1262,9 @@ var we = React.memo(function (e) {
       var e
       var t
       if ("string" === typeof e$attributes$dataSource) {
-        e = null === (t = he.b.get(e$attributes$dataSource)) || undefined === t ? undefined : t.data
+        e = null === (t = $$_89.b.get(e$attributes$dataSource)) || undefined === t ? undefined : t.data
       } else {
-        e = he.a.get(e$attributes$dataSource)
+        e = $$_89.a.get(e$attributes$dataSource)
       }
       if (e && e.length > 0) {
         return s.a.createElement(s.a.Fragment, null, e.map(function (e, t) {
@@ -1277,69 +1277,69 @@ var we = React.memo(function (e) {
     return s.a.createElement("div", null, E())
   }())
 })
-import Ce = require("../../../683/index");
-import Te = require("../../../144");
+import /* [auto-meaningful-name] */$$_$$_$$_683_index = require("../../../683/index")
+import /* [auto-meaningful-name] */$$_$$_$$_144 = require("../../../144")
 require("../../../760")
 function Se(e, t) {
   var n
-  return (null === (n = me.b(t)) || undefined === n ? undefined : n.parentId) === e
+  return (null === (n = $$_12.b(t)) || undefined === n ? undefined : n.parentId) === e
 }
 function Ie(e, t) {
   var n = React.useMemo(function () {
     return function (e, t) {
       return {
         handleActorClick: function (t) {
-          var t$target_id = t.target_id
+          var /* [auto-meaningful-name] */t$target_id = t.target_id
           if (Se(e, t$target_id)) {
-            w.unsetPressedActorId(t$target_id)
-            w.emitActorPress(t$target_id, t.data.position)
-            C.b.playerWidgetLog({
+            $$_$$_index.unsetPressedActorId(t$target_id)
+            $$_$$_index.emitActorPress(t$target_id, t.data.position)
+            $$_$$_$$_55.b.playerWidgetLog({
               widgetId: t$target_id,
-              widgetType: c.a,
+              widgetType: $$_$$_$$_5.a,
               message: "onWidgetPress"
             })
           }
         },
         handleActorMouseDown: function (n) {
-          var n$target_id = n.target_id
+          var /* [auto-meaningful-name] */n$target_id = n.target_id
           if (Se(e, n$target_id)) {
-            w.setPressedActorId(n$target_id)
+            $$_$$_index.setPressedActorId(n$target_id)
             document.addEventListener("mouseup", function () {
-              return w.clearPressedActorIds()
+              return $$_$$_index.clearPressedActorIds()
             }, {
               once: true
             })
-            w.emitActorPressIn(n$target_id, n.data.position)
-            C.b.playerWidgetLog({
+            $$_$$_index.emitActorPressIn(n$target_id, n.data.position)
+            $$_$$_$$_55.b.playerWidgetLog({
               widgetId: n$target_id,
-              widgetType: c.a,
+              widgetType: $$_$$_$$_5.a,
               message: "onWidgetPressIn"
             })
             if (t) {
-              w.setStageMouse(t, n.data.position)
-              ge.a(function () {
-                var e = w.getStageMouse(t)
-                return w.emitActorPressHoldAndWait(n$target_id, e || {
+              $$_$$_index.setStageMouse(t, n.data.position)
+              $_index.a(function () {
+                var e = $$_$$_index.getStageMouse(t)
+                return $$_$$_index.emitActorPressHoldAndWait(n$target_id, e || {
                   x: 0,
                   y: 0
                 })
               })
-              C.b.playerWidgetLog({
+              $$_$$_$$_55.b.playerWidgetLog({
                 widgetId: n$target_id,
-                widgetType: c.a,
+                widgetType: $$_$$_$$_5.a,
                 message: "onWidgetPressHold"
               })
             }
           }
         },
         handleActorMouseUp: function (t) {
-          var t$target_id = t.target_id
+          var /* [auto-meaningful-name] */t$target_id = t.target_id
           if (Se(e, t$target_id)) {
-            w.unsetPressedActorId(t$target_id)
-            w.emitActorPressOut(t$target_id, t.data.position)
-            C.b.playerWidgetLog({
+            $$_$$_index.unsetPressedActorId(t$target_id)
+            $$_$$_index.emitActorPressOut(t$target_id, t.data.position)
+            $$_$$_$$_55.b.playerWidgetLog({
               widgetId: t$target_id,
-              widgetType: c.a,
+              widgetType: $$_$$_$$_5.a,
               message: "onWidgetPressOut"
             })
           }
@@ -1347,12 +1347,12 @@ function Ie(e, t) {
       }
     }(e, t)
   }, [e, t])
-  var n$handleActorClick = n.handleActorClick
-  var n$handleActorMouseDown = n.handleActorMouseDown
-  var n$handleActorMouseUp = n.handleActorMouseUp
+  var /* [auto-meaningful-name] */n$handleActorClick = n.handleActorClick
+  var /* [auto-meaningful-name] */n$handleActorMouseDown = n.handleActorMouseDown
+  var /* [auto-meaningful-name] */n$handleActorMouseUp = n.handleActorMouseUp
   React.useEffect(function () {
     if (t) {
-      var t$events = t.events
+      var /* [auto-meaningful-name] */t$events = t.events
       t$events.add_listener("actor:click", n$handleActorClick)
       t$events.add_listener("actor:mousedown", n$handleActorMouseDown)
       t$events.add_listener("actor:touchstart", n$handleActorMouseDown)
@@ -1373,105 +1373,105 @@ var Ae = React.memo(function (e) {
   var n = React.useRef(null)
   var r = React.useRef(null)
   var o = React.useState(false)
-  var l = z.a(o, 2)
+  var l = $$_$$_$$_10_index.a(o, 2)
   var u = l[0]
   var p = l[1]
   var f = React.useState()
-  var h = z.a(f, 2)
+  var h = $$_$$_$$_10_index.a(f, 2)
   var m = h[0]
   var g = h[1]
   var _ = e.id
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$size = e.size
-  var e$onload = e.onload
-  var e$widgetIds = e.widgetIds
-  var e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$onload = e.onload
+  var /* [auto-meaningful-name] */e$widgetIds = e.widgetIds
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
   var S = undefined === e$opacity ? 100 : e$opacity
-  var e$attributes = e.attributes
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$backgroundImage = e$attributes.backgroundImage
-  var e$attributes$resizeMode = e$attributes.resizeMode
-  var e$attributes$coordinateRatio = e$attributes.coordinateRatio
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
+  var /* [auto-meaningful-name] */e$attributes$resizeMode = e$attributes.resizeMode
+  var /* [auto-meaningful-name] */e$attributes$coordinateRatio = e$attributes.coordinateRatio
   var k = undefined === e$attributes$coordinateRatio ? 2 : e$attributes$coordinateRatio
-  var e$size$width = e$size.width
-  var e$size$height = e$size.height
+  var /* [auto-meaningful-name] */e$size$width = e$size.width
+  var /* [auto-meaningful-name] */e$size$height = e$size.height
   var M = _
   var L = _
-  var P = i.e(function (e) {
+  var P = $$_$$_$$_16_index.e(function (e) {
     return e.imageFileMap
   })
   !function (e, t) {
     React.useEffect(function () {
       if (t) {
         var n = function (n) {
-          var n$target_id = n.target_id
-          var n$data = n.data
+          var /* [auto-meaningful-name] */n$target_id = n.target_id
+          var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            w.setStageMouse(t, n$data.position)
-            w.unsetPressedCanvasId(e)
-            w.emitCanvasPress(e, n$data.position)
-            C.b.playerWidgetLog({
+            $$_$$_index.setStageMouse(t, n$data.position)
+            $$_$$_index.unsetPressedCanvasId(e)
+            $$_$$_index.emitCanvasPress(e, n$data.position)
+            $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: c.f,
+              widgetType: $$_$$_$$_5.f,
               message: "onWidgetPress"
             })
           }
         }
         var r = function (n) {
-          var n$target_id = n.target_id
-          var n$data = n.data
+          var /* [auto-meaningful-name] */n$target_id = n.target_id
+          var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            w.setPressedCanvasId(e)
+            $$_$$_index.setPressedCanvasId(e)
             document.addEventListener("mouseup", function () {
-              return w.clearPressedCanvasIds()
+              return $$_$$_index.clearPressedCanvasIds()
             }, {
               once: true
             })
-            w.setStageMouse(t, n$data.position)
-            w.emitCanvasPressIn(e, n$data.position)
-            C.b.playerWidgetLog({
+            $$_$$_index.setStageMouse(t, n$data.position)
+            $$_$$_index.emitCanvasPressIn(e, n$data.position)
+            $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: c.f,
+              widgetType: $$_$$_$$_5.f,
               message: "onWidgetPressIn"
             })
-            ge.a(function () {
-              var n = w.getStageMouse(t)
-              return w.emitCanvasPressHoldAndWait(e, n || {
+            $_index.a(function () {
+              var n = $$_$$_index.getStageMouse(t)
+              return $$_$$_index.emitCanvasPressHoldAndWait(e, n || {
                 x: 0,
                 y: 0
               })
             })
-            C.b.playerWidgetLog({
+            $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: c.f,
+              widgetType: $$_$$_$$_5.f,
               message: "onWidgetPressHold"
             })
           }
         }
         var o = function (n) {
-          var n$target_id = n.target_id
-          var n$data = n.data
+          var /* [auto-meaningful-name] */n$target_id = n.target_id
+          var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            w.unsetPressedCanvasId(e)
-            w.setStageMouse(t, n$data.position)
-            w.emitCanvasPressOut(e, n$data.position)
-            C.b.playerWidgetLog({
+            $$_$$_index.unsetPressedCanvasId(e)
+            $$_$$_index.setStageMouse(t, n$data.position)
+            $$_$$_index.emitCanvasPressOut(e, n$data.position)
+            $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: c.f,
+              widgetType: $$_$$_$$_5.f,
               message: "onWidgetPressOut"
             })
           }
         }
         var i = function (e) {}
         var a = function (n) {
-          var n$target_id = n.target_id
-          var n$data = n.data
+          var /* [auto-meaningful-name] */n$target_id = n.target_id
+          var /* [auto-meaningful-name] */n$data = n.data
           if (n$target_id === e) {
-            w.setStageMouse(t, n$data.position)
+            $$_$$_index.setStageMouse(t, n$data.position)
           }
         }
-        var t$events = t.events
+        var /* [auto-meaningful-name] */t$events = t.events
         t$events.add_listener("stage:click", n)
         t$events.add_listener("stage:mousedown", r)
         t$events.add_listener("stage:mouseup", o)
@@ -1496,7 +1496,7 @@ var Ae = React.memo(function (e) {
   Ie(M, m)
   React.useEffect(function () {
     if (null === n || undefined === n ? undefined : n.current) {
-      var e = Ce.a()
+      var e = $$_$$_$$_683_index.a()
       r.current = e
       e.init({
         renderer: {
@@ -1515,46 +1515,46 @@ var Ae = React.memo(function (e) {
       e.scenes.load_scene(L, "")
       e.scenes.set_current_scene(L)
       g(e)
-      w.setStage(M, e)
+      $$_$$_index.setStage(M, e)
       e.start_rendering()
       e.stage_animation.init().finally(function () {
         p(true)
       })
       return function () {
-        w.deleteStage(M)
+        $$_$$_index.deleteStage(M)
       }
     }
   }, [])
   React.useEffect(function () {
-    var r$current = r.current
+    var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
-      Te.q(r$current, e$size$width * k, e$size$height * k)
+      $$_$$_$$_144.q(r$current, e$size$width * k, e$size$height * k)
     }
   }, [k, e$size$width, e$size$height])
   React.useEffect(function () {
-    var r$current = r.current
+    var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
-      Te.n(r$current, e$attributes$backgroundColor)
+      $$_$$_$$_144.n(r$current, e$attributes$backgroundColor)
     }
   }, [e$attributes$backgroundColor])
   React.useEffect(function () {
-    var r$current = r.current
+    var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
       var t
       if (e$attributes$backgroundImage) {
         var n = P.get(e$attributes$backgroundImage)
         if (n) {
-          t = d.lb(n)
+          t = $$_$$_$$_9.lb(n)
         } else {
           if (e$attributes$backgroundImage.includes("://") || e$attributes$backgroundImage.includes("data:image/")) {
             t = e$attributes$backgroundImage
           }
         }
       }
-      Te.o(r$current, t, e$attributes$resizeMode)
+      $$_$$_$$_144.o(r$current, t, e$attributes$resizeMode)
     }
   }, [e$attributes$backgroundImage, P, e$attributes$resizeMode])
-  var e$widgetIds$length = e$widgetIds.length
+  var /* [auto-meaningful-name] */e$widgetIds$length = e$widgetIds.length
   var F = 0
   React.useEffect(function () {
     if (0 === e$widgetIds$length && e$onload) {
@@ -1568,8 +1568,8 @@ var Ae = React.memo(function (e) {
   }
   return s.a.createElement(s.a.Fragment, null, s.a.createElement("div", {
     id: _,
-    "data-role": c.M,
-    "data-widget-type": c.f,
+    "data-role": $$_$$_$$_5.M,
+    "data-widget-type": $$_$$_$$_5.f,
     ref: t,
     style: {
       top: e$position.y,
@@ -1588,7 +1588,7 @@ var Ae = React.memo(function (e) {
     }
   })), u && e$widgetIds.map(function (e) {
     if (r.current) {
-      w.setStage(e, r.current)
+      $$_$$_index.setStage(e, r.current)
     }
     return Ye({
       widgetId: e,
@@ -1596,7 +1596,7 @@ var Ae = React.memo(function (e) {
     })
   }))
 })
-import RegeneratorRuntime = require("regenerator-runtime");
+import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
 var Ne = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -1609,35 +1609,35 @@ var Ne = function __importDefault(module) {
   })
   return defaultExport
 }(RegeneratorRuntime)
-import Re = require("../../../7");
-import ke = require("../../../287");
+import /* [auto-meaningful-name] */$$_$$_$$_7 = require("../../../7")
+import /* [auto-meaningful-name] */$$_$$_$$_287 = require("../../../287")
 var xe = function (e) {
   var t = e.id
-  var e$parentId = e.parentId
-  var e$onload = e.onload
-  var o = i.e(function (e) {
+  var /* [auto-meaningful-name] */e$parentId = e.parentId
+  var /* [auto-meaningful-name] */e$onload = e.onload
+  var o = $$_$$_$$_16_index.e(function (e) {
     return e.widgetMap
   }).get(t)
-  var o$position = o.position
-  var o$attributes = o.attributes
-  var o$attributes$color = o$attributes.color
-  var o$attributes$penSize = o$attributes.penSize
-  var o$attributes$rotation = o$attributes.rotation
+  var /* [auto-meaningful-name] */o$position = o.position
+  var /* [auto-meaningful-name] */o$attributes = o.attributes
+  var /* [auto-meaningful-name] */o$attributes$color = o$attributes.color
+  var /* [auto-meaningful-name] */o$attributes$penSize = o$attributes.penSize
+  var /* [auto-meaningful-name] */o$attributes$rotation = o$attributes.rotation
   var p = undefined === o$attributes$rotation ? 0 : o$attributes$rotation
-  var o$attributes$cursorShape = o$attributes.cursorShape
-  var h = undefined === o$attributes$cursorShape ? ke.a.NONE : o$attributes$cursorShape
+  var /* [auto-meaningful-name] */o$attributes$cursorShape = o$attributes.cursorShape
+  var h = undefined === o$attributes$cursorShape ? $$_$$_$$_287.a.NONE : o$attributes$cursorShape
   var m = t
   var g = React.useState(true)
-  var _ = z.a(g, 2)
+  var _ = $$_$$_$$_10_index.a(g, 2)
   var v = _[0]
   var b = _[1]
-  var y = React.useCallback(Re.a(Ne.a.mark(function e() {
+  var y = React.useCallback($$_$$_$$_7.a(Ne.a.mark(function e() {
     var n
     return Ne.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (n = w.getStage(m)) {
+            if (n = $$_$$_index.getStage(m)) {
               e.next = 4
               break
             }
@@ -1645,13 +1645,13 @@ var xe = function (e) {
             return e.abrupt("return")
           case 4:
             e.next = 6
-            return Te.d(n, m, o$position, true)
+            return $$_$$_$$_144.d(n, m, o$position, true)
           case 6:
             if (e$onload) {
               e$onload(t)
             }
-            Te.l(n, m, o$attributes$color)
-            Te.m(n, m, o$attributes$penSize)
+            $$_$$_$$_144.l(n, m, o$attributes$color)
+            $$_$$_$$_144.m(n, m, o$attributes$penSize)
             b(false)
           case 10:
           case "end":
@@ -1663,7 +1663,7 @@ var xe = function (e) {
   React.useEffect(function () {
     y()
   }, [y])
-  var E = React.useCallback(Re.a(Ne.a.mark(function e() {
+  var E = React.useCallback($$_$$_$$_7.a(Ne.a.mark(function e() {
     var t
     var /* [auto-meaningful-name] */t$attributes$coordinateRatio
     var o
@@ -1678,13 +1678,13 @@ var xe = function (e) {
             }
             return e.abrupt("return")
           case 2:
-            if (t = me.b(e$parentId)) {
+            if (t = $$_12.b(e$parentId)) {
               e.next = 5
               break
             }
             return e.abrupt("return")
           case 5:
-            if (t$attributes$coordinateRatio = t.attributes.coordinateRatio, o = undefined === t$attributes$coordinateRatio ? 2 : t$attributes$coordinateRatio, i = w.getStage(m)) {
+            if (t$attributes$coordinateRatio = t.attributes.coordinateRatio, o = undefined === t$attributes$coordinateRatio ? 2 : t$attributes$coordinateRatio, i = $$_$$_index.getStage(m)) {
               e.next = 10
               break
             }
@@ -1692,7 +1692,7 @@ var xe = function (e) {
             return e.abrupt("return")
           case 10:
             e.next = 12
-            return Te.r(i, m, o$attributes$penSize, o$attributes$color, h, o, true)
+            return $$_$$_$$_144.r(i, m, o$attributes$penSize, o$attributes$color, h, o, true)
           case 12:
           case "end":
             return e.stop()
@@ -1707,7 +1707,7 @@ var xe = function (e) {
   }, [v, E])
   React.useLayoutEffect(function () {
     if (!v) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (e) {
         e.set_rotation(p)
       }
@@ -1715,7 +1715,7 @@ var xe = function (e) {
   }, [t, v, p])
   React.useLayoutEffect(function () {
     if (!v) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (e) {
         e.set_position(o$position.x, o$position.y)
       }
@@ -1723,15 +1723,15 @@ var xe = function (e) {
   }, [t, v, o$position])
   return null
 }
-import De = require("../../../143");
+import /* [auto-meaningful-name] */$$_$$_$$_143 = require("../../../143")
 var Me = function () {
-  var e = Re.a(Ne.a.mark(function e(t, n, r) {
+  var e = $$_$$_$$_7.a(Ne.a.mark(function e(t, n, r) {
     return Ne.a.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             return e.abrupt("return", Promise.all(r.map(function (e) {
-              return Te.a(t, n, e)
+              return $$_$$_$$_144.a(t, n, e)
             })))
           case 1:
           case "end":
@@ -1746,33 +1746,33 @@ var Me = function () {
 }()
 var Le = function (e) {
   var t = e.id
-  var e$onload = e.onload
-  var r = i.e(function (e) {
+  var /* [auto-meaningful-name] */e$onload = e.onload
+  var r = $$_$$_$$_16_index.e(function (e) {
     return e.widgetMap
   }).get(t)
-  var r$opacity = r.opacity
-  var r$position = r.position
-  var r$parentId = r.parentId
-  var r$visible = r.visible
-  var r$attributes = r.attributes
-  var r$attributes$selectedStyleId = r$attributes.selectedStyleId
-  var r$attributes$flipped = r$attributes.flipped
-  var r$attributes$scaleAndLock = r$attributes.scaleAndLock
-  var r$attributes$scale = r$attributes.scale
-  var r$attributes$rotation = r$attributes.rotation
-  var r$attributes$actionList = r$attributes.actionList
-  var r$attributes$pivotToCenter = r$attributes.pivotToCenter
+  var /* [auto-meaningful-name] */r$opacity = r.opacity
+  var /* [auto-meaningful-name] */r$position = r.position
+  var /* [auto-meaningful-name] */r$parentId = r.parentId
+  var /* [auto-meaningful-name] */r$visible = r.visible
+  var /* [auto-meaningful-name] */r$attributes = r.attributes
+  var /* [auto-meaningful-name] */r$attributes$selectedStyleId = r$attributes.selectedStyleId
+  var /* [auto-meaningful-name] */r$attributes$flipped = r$attributes.flipped
+  var /* [auto-meaningful-name] */r$attributes$scaleAndLock = r$attributes.scaleAndLock
+  var /* [auto-meaningful-name] */r$attributes$scale = r$attributes.scale
+  var /* [auto-meaningful-name] */r$attributes$rotation = r$attributes.rotation
+  var /* [auto-meaningful-name] */r$attributes$actionList = r$attributes.actionList
+  var /* [auto-meaningful-name] */r$attributes$pivotToCenter = r$attributes.pivotToCenter
   var v = React.useState(false)
-  var b = z.a(v, 2)
+  var b = $$_$$_$$_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
   var O = t
-  var C = i.e(function (e) {
+  var C = $$_$$_$$_16_index.e(function (e) {
     return e.imageFileMap
   })
   React.useEffect(function () {
     if (y) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (!e) {
         return
       }
@@ -1781,7 +1781,7 @@ var Le = function (e) {
   }, [t, y, r$position.x, r$position.y])
   React.useEffect(function () {
     if (y) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (!e) {
         return
       }
@@ -1793,7 +1793,7 @@ var Le = function (e) {
   }, [t, y, r$attributes$scaleAndLock])
   React.useEffect(function () {
     if (y) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (!e) {
         return
       }
@@ -1802,7 +1802,7 @@ var Le = function (e) {
   }, [t, y, r$visible])
   React.useEffect(function () {
     if (y) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (e) {
         e.set_current_style(r$attributes$selectedStyleId)
       }
@@ -1810,7 +1810,7 @@ var Le = function (e) {
   }, [O, t, y, r$attributes$selectedStyleId])
   React.useEffect(function () {
     if (y) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (!e) {
         return
       }
@@ -1819,7 +1819,7 @@ var Le = function (e) {
   }, [t, y, r$attributes$rotation])
   React.useEffect(function () {
     if (y) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (!e) {
         return
       }
@@ -1828,7 +1828,7 @@ var Le = function (e) {
   }, [t, y, r$opacity])
   React.useEffect(function () {
     if (y) {
-      var e = w.getActor(t)
+      var e = $$_$$_index.getActor(t)
       if (!e || !r$attributes$flipped) {
         return
       }
@@ -1841,9 +1841,9 @@ var Le = function (e) {
     }
   }, [t, y, r$attributes$flipped])
   var T = React.useCallback(function () {
-    var e = Re.a(Ne.a.mark(function e(t) {
+    var e = $$_$$_$$_7.a(Ne.a.mark(function e(t) {
       var r
-      var /* [auto-meaningful-name] */rR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x
+      var /* [auto-meaningful-name] */RR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x
       var i
       var a
       var /* [auto-meaningful-name] */a$is_error
@@ -1861,7 +1861,7 @@ var Le = function (e) {
               }
               return e.abrupt("return")
             case 2:
-              if (rR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x = (r = r$attributes$scaleAndLock || (r$attributes$scale ? {
+              if (RR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x = (r = r$attributes$scaleAndLock || (r$attributes$scale ? {
                 x: r$attributes$scale,
                 y: r$attributes$scale
               } : {
@@ -1872,7 +1872,7 @@ var Le = function (e) {
                 parent_scene_id: r$parentId,
                 position: r$position,
                 scale: {
-                  x: rR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x,
+                  x: RR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x,
                   y: i
                 },
                 rotation: r$attributes$rotation
@@ -1896,12 +1896,12 @@ var Le = function (e) {
                 })
               })
               e.next = 11
-              return Me(t, a$value, [].concat(b, [De.h]))
+              return Me(t, a$value, [].concat(b, [$$_$$_$$_143.h]))
             case 11:
               if (r$attributes$selectedStyleId) {
                 a$value.set_current_style(r$attributes$selectedStyleId)
               } else {
-                a$value.set_current_style(De.h.id)
+                a$value.set_current_style($$_$$_$$_143.h.id)
               }
               a$value.set_visible(r$visible)
               a$value.set_draggable(false)
@@ -1916,7 +1916,7 @@ var Le = function (e) {
                   a$value.set_flipped("vertical")
                 }
               }
-              a$value.set_scale(rR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x, i)
+              a$value.set_scale(RR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x, i)
               a$value.set_rotation(r$attributes$rotation)
               a$value.set_pivot_by_stage_point(r$position.x, r$position.y)
               E(true)
@@ -1935,7 +1935,7 @@ var Le = function (e) {
     }
   }(), [])
   React.useEffect(function () {
-    var e = w.getStage(O)
+    var e = $$_$$_index.getStage(O)
     if (e) {
       T(e)
     } else {
@@ -1944,39 +1944,39 @@ var Le = function (e) {
   }, [O, T])
   return null
 }
-import Pe = require("../../../548/index");
+import /* [auto-meaningful-name] */$$_$$_$$_548_index = require("../../../548/index")
 var Be = function (e) {
   var t = e.id
-  var e$type = e.type
+  var /* [auto-meaningful-name] */e$type = e.type
   var r = React.useCallback(function (e) {
-    var r = A.k(e)
-    w.emitDatePickerSelectDone(t, r.date, r.y, r.m, r.d)
-    w.setWidgetAttribute(t, "timeStamp", new Date(e).getTime())
-    C.b.playerWidgetLog({
+    var r = $$_$$_$$_28_index.k(e)
+    $$_$$_index.emitDatePickerSelectDone(t, r.date, r.y, r.m, r.d)
+    $$_$$_index.setWidgetAttribute(t, "timeStamp", new Date(e).getTime())
+    $$_$$_$$_55.b.playerWidgetLog({
       widgetId: t,
       widgetType: e$type,
       message: "onWidgetSelected"
     })
   }, [t, e$type])
-  return s.a.createElement(Pe.a, Object.assign({}, e, {
+  return s.a.createElement($$_$$_$$_548_index.a, Object.assign({}, e, {
     onDatePickerChange: r
   }))
 }
-import Fe = require("../../../549/index");
+import /* [auto-meaningful-name] */$$_$$_$$_549_index = require("../../../549/index")
 var Ge = function (e) {
   var t = e.id
-  var e$type = e.type
+  var /* [auto-meaningful-name] */e$type = e.type
   var r = React.useCallback(function (e) {
-    var r = A.k(e)
-    w.emitTimePickerSelectDone(t, r.time, r.h, r.min, r.s)
-    w.setWidgetAttribute(t, "timeStamp", new Date(e).getTime())
-    C.b.playerWidgetLog({
+    var r = $$_$$_$$_28_index.k(e)
+    $$_$$_index.emitTimePickerSelectDone(t, r.time, r.h, r.min, r.s)
+    $$_$$_index.setWidgetAttribute(t, "timeStamp", new Date(e).getTime())
+    $$_$$_$$_55.b.playerWidgetLog({
       widgetId: t,
       widgetType: e$type,
       message: "onWidgetSelected"
     })
   }, [t, e$type])
-  return s.a.createElement(Fe.a, Object.assign({}, e, {
+  return s.a.createElement($$_$$_$$_549_index.a, Object.assign({}, e, {
     onDatePickerChange: r
   }))
 }
@@ -1985,49 +1985,49 @@ var We = function () {
   return null
 }
 Ue = {}
-h.a(Ue, c.H, T)
-h.a(Ue, c.d, j)
-h.a(Ue, c.z, F)
-h.a(Ue, c.v, V)
-h.a(Ue, c.w, function (e) {
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.H, T)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.d, j)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.z, F)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.v, V)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.w, function (e) {
   var t = e.id
-  var e$type = e.type
-  var e$position = e.position
-  var e$visible = e.visible
-  var e$opacity = e.opacity
-  var e$size = e.size
-  var e$attributes = e.attributes
-  var e$attributes$disabled = e$attributes.disabled
-  var e$attributes$placeholder = e$attributes.placeholder
-  var e$attributes$errorMessage = e$attributes.errorMessage
-  var e$attributes$value = e$attributes.value
-  var e$attributes$textAlign = e$attributes.textAlign
+  var /* [auto-meaningful-name] */e$type = e.type
+  var /* [auto-meaningful-name] */e$position = e.position
+  var /* [auto-meaningful-name] */e$visible = e.visible
+  var /* [auto-meaningful-name] */e$opacity = e.opacity
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$attributes = e.attributes
+  var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
+  var /* [auto-meaningful-name] */e$attributes$placeholder = e$attributes.placeholder
+  var /* [auto-meaningful-name] */e$attributes$errorMessage = e$attributes.errorMessage
+  var /* [auto-meaningful-name] */e$attributes$value = e$attributes.value
+  var /* [auto-meaningful-name] */e$attributes$textAlign = e$attributes.textAlign
   var b = undefined === e$attributes$textAlign ? "left" : e$attributes$textAlign
-  var e$attributes$placeholderColor = e$attributes.placeholderColor
-  var e$attributes$valueColor = e$attributes.valueColor
-  var e$attributes$fontFamily = e$attributes.fontFamily
-  var e$attributes$fontSize = e$attributes.fontSize
-  var e$attributes$backgroundMode = e$attributes.backgroundMode
-  var e$attributes$templateMode = e$attributes.templateMode
-  var e$attributes$backgroundColor = e$attributes.backgroundColor
-  var e$attributes$backgroundImage = e$attributes.backgroundImage
-  var e$attributes$imageResizeMode = e$attributes.imageResizeMode
-  var e$size$width = e$size.width
-  var e$size$height = e$size.height
+  var /* [auto-meaningful-name] */e$attributes$placeholderColor = e$attributes.placeholderColor
+  var /* [auto-meaningful-name] */e$attributes$valueColor = e$attributes.valueColor
+  var /* [auto-meaningful-name] */e$attributes$fontFamily = e$attributes.fontFamily
+  var /* [auto-meaningful-name] */e$attributes$fontSize = e$attributes.fontSize
+  var /* [auto-meaningful-name] */e$attributes$backgroundMode = e$attributes.backgroundMode
+  var /* [auto-meaningful-name] */e$attributes$templateMode = e$attributes.templateMode
+  var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
+  var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
+  var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
+  var /* [auto-meaningful-name] */e$size$width = e$size.width
+  var /* [auto-meaningful-name] */e$size$height = e$size.height
   var M = React.useState(e$attributes$placeholder)
-  var L = z.a(M, 2)
+  var L = $$_$$_$$_10_index.a(M, 2)
   var P = L[0]
   var F = L[1]
   var G = React.useState(false)
-  var U = z.a(G, 2)
+  var U = $$_$$_$$_10_index.a(G, 2)
   var W = U[0]
   var H = U[1]
   var V = React.useMemo(function () {
-    var e = e$attributes$errorMessage ? X.d : e$attributes$backgroundColor
+    var e = e$attributes$errorMessage ? $$_$$_$$_97.d : e$attributes$backgroundColor
     try {
       return o()(e.toString()).toString()
     } catch (r) {
-      C.b.widgetError({
+      $$_$$_$$_55.b.widgetError({
         widgetId: t,
         widgetType: e$type,
         message: "player/colorError"
@@ -2035,21 +2035,21 @@ h.a(Ue, c.w, function (e) {
       return ""
     }
   }, [e$attributes$backgroundColor, e$attributes$errorMessage, t, e$type])
-  var K = B.b(e$attributes$backgroundImage) || X.a
+  var K = $$_114.b(e$attributes$backgroundImage) || $$_$$_$$_97.a
   var J = React.useMemo(function () {
-    if (!W || e$attributes$backgroundMode === Y.a.IMAGE) {
+    if (!W || e$attributes$backgroundMode === $$_$$_$$_77.a.IMAGE) {
       return {}
     }
-    var e = undefined !== e$attributes$errorMessage ? X.d : V
+    var e = undefined !== e$attributes$errorMessage ? $$_$$_$$_97.d : V
     return function (e, t) {
       var n
-      return (n = {}, h.a(n, Y.c.OUTLINED_NORMAL, {
+      return (n = {}, $$_$$_$$_11.a(n, $$_$$_$$_77.c.OUTLINED_NORMAL, {
         borderColor: t
-      }), h.a(n, Y.c.CONTAINED_NORMAL, {
+      }), $$_$$_$$_11.a(n, $$_$$_$$_77.c.CONTAINED_NORMAL, {
         background: Z(t, .3)
-      }), h.a(n, Y.c.CONTAINED_ROUND, {
+      }), $$_$$_$$_11.a(n, $$_$$_$$_77.c.CONTAINED_ROUND, {
         background: Z(t, .3)
-      }), h.a(n, Y.c.OUTLINED_FLAT, {
+      }), $$_$$_$$_11.a(n, $$_$$_$$_77.c.OUTLINED_FLAT, {
         borderBottomColor: t
       }), n)[e]
     }(e$attributes$templateMode, e)
@@ -2058,24 +2058,24 @@ h.a(Ue, c.w, function (e) {
   var ee = React.useMemo(function () {
     return function (e, t, n) {
       var r
-      return (r = {}, h.a(r, Y.c.OUTLINED_NORMAL, {
+      return (r = {}, $$_$$_$$_11.a(r, $$_$$_$$_77.c.OUTLINED_NORMAL, {
         background: "rgba(255, 255, 255)",
         borderRadius: "4px",
         border: "2px solid ".concat(Z(t, .5)),
         borderColor: Z(t, .5)
-      }), h.a(r, Y.c.CONTAINED_NORMAL, {
+      }), $$_$$_$$_11.a(r, $$_$$_$$_77.c.CONTAINED_NORMAL, {
         background: Z(t, .14),
         borderRadius: "4px"
-      }), h.a(r, Y.c.CONTAINED_ROUND, {
+      }), $$_$$_$$_11.a(r, $$_$$_$$_77.c.CONTAINED_ROUND, {
         background: Z(t, .14),
         borderRadius: "".concat(n / 2, "px")
-      }), h.a(r, Y.c.OUTLINED_FLAT, {
+      }), $$_$$_$$_11.a(r, $$_$$_$$_77.c.OUTLINED_FLAT, {
         borderBottom: "2px solid ".concat(Z(t, .5)),
         borderBottomColor: Z(t, .5)
       }), r)[e]
     }(e$attributes$templateMode, V, e$size$height)
   }, [V, e$size$height, e$attributes$templateMode])
-  if (e$attributes$backgroundMode === Y.a.IMAGE) {
+  if (e$attributes$backgroundMode === $$_$$_$$_77.a.IMAGE) {
     $ = {
       backgroundImage: "url(".concat(K, ")"),
       backgroundRepeat: "no-repeat",
@@ -2084,7 +2084,7 @@ h.a(Ue, c.w, function (e) {
       padding: "6px ".concat(20, "px")
     }
   } else {
-    $ = N.a(N.a({}, ee), {}, {
+    $ = $$_$$_$$_6.a($$_$$_$$_6.a({}, ee), {}, {
       padding: "6px ".concat(14, "px")
     })
   }
@@ -2092,16 +2092,16 @@ h.a(Ue, c.w, function (e) {
     if (e$attributes$disabled) {
       return function (e) {
         var t
-        return (t = {}, h.a(t, Y.c.OUTLINED_NORMAL, {
+        return (t = {}, $$_$$_$$_11.a(t, $$_$$_$$_77.c.OUTLINED_NORMAL, {
           color: "#CCCCCC",
           borderColor: "#E9E9E9"
-        }), h.a(t, Y.c.CONTAINED_NORMAL, {
+        }), $$_$$_$$_11.a(t, $$_$$_$$_77.c.CONTAINED_NORMAL, {
           background: "#E7E7E7",
           color: "#FFFFFF"
-        }), h.a(t, Y.c.CONTAINED_ROUND, {
+        }), $$_$$_$$_11.a(t, $$_$$_$$_77.c.CONTAINED_ROUND, {
           background: "#E7E7E7",
           color: "#FFFFFF"
-        }), h.a(t, Y.c.OUTLINED_FLAT, {
+        }), $$_$$_$$_11.a(t, $$_$$_$$_77.c.OUTLINED_FLAT, {
           color: "#CCCCCC",
           borderBottomColor: "#E9E9E9"
         }), t)[e]
@@ -2119,10 +2119,10 @@ h.a(Ue, c.w, function (e) {
   }, [t, e$attributes$placeholderColor])
   return s.a.createElement("div", {
     id: t,
-    className: g()(q.a.inputWidget, e$attributes$backgroundMode === Y.a.TEMPLATE && e$attributes$templateMode !== Y.c.OUTLINED_FLAT && q.a.inputWidgetUnderpainting),
-    "data-role": c.M,
-    "data-type": c.w,
-    style: N.a(N.a(N.a({
+    className: g()(q.a.inputWidget, e$attributes$backgroundMode === $$_$$_$$_77.a.TEMPLATE && e$attributes$templateMode !== $$_$$_$$_77.c.OUTLINED_FLAT && q.a.inputWidgetUnderpainting),
+    "data-role": $$_$$_$$_5.M,
+    "data-type": $$_$$_$$_5.w,
+    style: $$_$$_$$_6.a($$_$$_$$_6.a($$_$$_$$_6.a({
       top: e$position.y,
       left: e$position.x,
       height: e$size$height,
@@ -2131,7 +2131,7 @@ h.a(Ue, c.w, function (e) {
       pointerEvents: e$visible ? undefined : "none",
       fontSize: e$attributes$fontSize,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100,
-      filter: e$attributes$disabled && e$attributes$backgroundMode === Y.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined,
+      filter: e$attributes$disabled && e$attributes$backgroundMode === $$_$$_$$_77.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined,
       fontFamily: e$attributes$fontFamily,
       color: e$attributes$valueColor
     }, $), J), te)
@@ -2141,17 +2141,17 @@ h.a(Ue, c.w, function (e) {
     placeholder: P,
     value: e$attributes$value,
     onChange: function (e) {
-      var e$target$value = e.target.value
-      Q.Yh(t, e$target$value)
-      w.emitInputChange(t)
+      var /* [auto-meaningful-name] */e$target$value = e.target.value
+      $$_index.Yh(t, e$target$value)
+      $$_$$_index.emitInputChange(t)
     },
     onBlur: function () {
       if (!e$attributes$disabled) {
         H(false)
         F(e$attributes$placeholder)
-        I.a(t)
-        w.emitInputBlur(t)
-        C.b.playerWidgetLog({
+        $$_243.a(t)
+        $$_$$_index.emitInputBlur(t)
+        $$_$$_$$_55.b.playerWidgetLog({
           widgetId: t,
           widgetType: e$type,
           message: "onInputBlur"
@@ -2161,9 +2161,9 @@ h.a(Ue, c.w, function (e) {
     onFocus: function () {
       if (!e$attributes$disabled) {
         F("")
-        w.emitInputFocus(t)
+        $$_$$_index.emitInputFocus(t)
         H(true)
-        C.b.playerWidgetLog({
+        $$_$$_$$_55.b.playerWidgetLog({
           widgetId: t,
           widgetType: e$type,
           message: "onInputFocus"
@@ -2173,57 +2173,57 @@ h.a(Ue, c.w, function (e) {
     disabled: e$attributes$disabled,
     style: {
       textAlign: b,
-      color: e$attributes$disabled ? X.o : e$attributes$valueColor,
+      color: e$attributes$disabled ? $$_$$_$$_97.o : e$attributes$valueColor,
       fontFamily: e$attributes$fontFamily
     }
   }), undefined !== e$attributes$errorMessage && s.a.createElement("span", {
     className: q.a.errorMessage,
     style: {
-      color: X.d
+      color: $$_$$_$$_97.d
     }
   }, e$attributes$errorMessage), e$attributes$disabled && s.a.createElement("div", {
     className: q.a.mask
   })))
 })
-h.a(Ue, c.C, $)
-h.a(Ue, c.g, te)
-h.a(Ue, c.L, re)
-h.a(Ue, c.F, ae)
-h.a(Ue, c.E, le)
-h.a(Ue, c.x, ve)
-h.a(Ue, c.A, we)
-h.a(Ue, c.f, Ae)
-h.a(Ue, c.c, xe)
-h.a(Ue, c.a, Le)
-h.a(Ue, c.b, Audio)
-h.a(Ue, c.n, Be)
-h.a(Ue, c.J, Ge)
-h.a(Ue, c.e, We)
-h.a(Ue, c.t, We)
-h.a(Ue, c.K, We)
-h.a(Ue, c.I, We)
-h.a(Ue, c.u, We)
-h.a(Ue, c.i, We)
-h.a(Ue, c.y, We)
-h.a(Ue, c.B, We)
-h.a(Ue, c.l, We)
-h.a(Ue, c.m, We)
-h.a(Ue, c.h, We)
-h.a(Ue, c.G, We)
-h.a(Ue, c.j, We)
-h.a(Ue, c.k, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.C, $)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.g, te)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.L, re)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.F, ae)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.E, le)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.x, ve)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.A, we)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.f, Ae)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.c, xe)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.a, Le)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.b, Audio)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.n, Be)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.J, Ge)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.e, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.t, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.K, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.I, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.u, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.i, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.y, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.B, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.l, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.m, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.h, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.G, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.j, We)
+$$_$$_$$_11.a(Ue, $$_$$_$$_5.k, We)
 var He = Ue
-import Ve = require("../312");
+import /* [auto-meaningful-name] */$$_312 = require("../312")
 function ze(e) {
-  var e$widget = e.widget
-  var e$forceRender = e.forceRender
-  var e$onload = e.onload
-  var e$widget$type = e$widget.type
+  var /* [auto-meaningful-name] */e$widget = e.widget
+  var /* [auto-meaningful-name] */e$forceRender = e.forceRender
+  var /* [auto-meaningful-name] */e$onload = e.onload
+  var /* [auto-meaningful-name] */e$widget$type = e$widget.type
   if (!e$widget.parentId || e$forceRender) {
     var i = ""
     if (e$widget.parentId) {
-      var a = me.b(e$widget.parentId)
-      if ((null === a || undefined === a ? undefined : a.type) && [c.x, c.A].includes(a.type) && e$widget$type === c.v) {
+      var a = $$_12.b(e$widget.parentId)
+      if ((null === a || undefined === a ? undefined : a.type) && [$$_$$_$$_5.x, $$_$$_$$_5.A].includes(a.type) && e$widget$type === $$_$$_$$_5.v) {
         i += "coco-child-widget-full"
       }
     }
@@ -2236,18 +2236,18 @@ function ze(e) {
         onload: e$onload
       })))
     }
-    var u = p.f(e$widget$type)
+    var u = $$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage.f(e$widget$type)
     if (!u) {
       console.error("getWidget error", e$widget$type)
       return null
     }
-    var u$types = u.types
-    if (f.q(e$widget$type) && false === u$types.isInvisibleWidget) {
-      var h = w.getWidgetInstance(e$widget.id)
+    var /* [auto-meaningful-name] */u$types = u.types
+    if ($$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.q(e$widget$type) && false === u$types.isInvisibleWidget) {
+      var h = $$_$$_index.getWidgetInstance(e$widget.id)
       return h ? s.a.createElement("div", {
         key: e$widget.id,
         id: e$widget.id,
-        "data-role": c.M,
+        "data-role": $$_$$_$$_5.M,
         "data-widget-type": e$widget.type,
         style: {
           position: "absolute",
@@ -2263,9 +2263,9 @@ function ze(e) {
   }
 }
 function Ye(e) {
-  var e$widgetId = e.widgetId
-  var e$onload = e.onload
-  var r = me.b(e$widgetId)
+  var /* [auto-meaningful-name] */e$widgetId = e.widgetId
+  var /* [auto-meaningful-name] */e$onload = e.onload
+  var r = $$_12.b(e$widgetId)
   return r ? ze({
     widget: r,
     forceRender: true,
@@ -2275,22 +2275,22 @@ function Ye(e) {
 var _a
 _a = React.memo(function (e) {
   var t = e.id
-  var n = i.e(function (e) {
+  var n = $$_$$_$$_16_index.e(function (e) {
     return e.widgetMap
   })
   var r = React.useRef({
     x: 0,
     y: 0
   })
-  var p = i.e(function (e) {
+  var p = $$_$$_$$_16_index.e(function (e) {
     return e.screenList.find(function (e) {
       return e.id === t
     })
   })
-  var f = i.e(function (e) {
+  var f = $$_$$_$$_16_index.e(function (e) {
     return e.imageFileMap
   })
-  var h = i.e(function (e) {
+  var h = $$_$$_$$_16_index.e(function (e) {
     return e.currentScreenParam
   })
   var m = 0
@@ -2298,28 +2298,28 @@ _a = React.memo(function (e) {
   var _ = (null === p || undefined === p ? undefined : p.widgetIds) || []
   _.forEach(function (e) {
     var t = n.get(e)
-    if (t && t.type === c.f) {
+    if (t && t.type === $$_$$_$$_5.f) {
       m++
     }
   })
   var v = React.useCallback(function (e) {
-    w.emitScreenOpen(e, h)
+    $$_$$_index.emitScreenOpen(e, h)
   }, [h])
   React.useEffect(function () {
     if (0 === m) {
       v(t)
     }
     var e = function () {
-      w.emitGyroscopePhoneShake(t)
-      C.b.playerWidgetLog({
+      $$_$$_index.emitGyroscopePhoneShake(t)
+      $$_$$_$$_55.b.playerWidgetLog({
         widgetId: "",
-        widgetType: c.t,
+        widgetType: $$_$$_$$_5.t,
         message: "onGyroscopeShake"
       })
     }
-    w.onDeviceShake(e)
+    $$_$$_index.onDeviceShake(e)
     return function () {
-      w.offDeviceShake(e)
+      $$_$$_index.offDeviceShake(e)
     }
   }, [m, t, v])
   var b = React.useCallback(function (e) {
@@ -2327,12 +2327,12 @@ _a = React.memo(function (e) {
       v(t)
     }
   }, [m, t, g, v])
-  if (p && p.type === c.D) {
-    var p$backgroundColor = p.backgroundColor
-    var p$backgroundImageResizeMode = p.backgroundImageResizeMode
-    var p$backgroundImage = p.backgroundImage
+  if (p && p.type === $$_$$_$$_5.D) {
+    var /* [auto-meaningful-name] */p$backgroundColor = p.backgroundColor
+    var /* [auto-meaningful-name] */p$backgroundImageResizeMode = p.backgroundImageResizeMode
+    var /* [auto-meaningful-name] */p$backgroundImage = p.backgroundImage
     var T = f.get(p$backgroundImage)
-    var S = T ? d.lb(T) : ""
+    var S = T ? $$_$$_$$_9.lb(T) : ""
     if (!(S || !p$backgroundImage.includes("://") && !p$backgroundImage.includes("data:image/"))) {
       S = p$backgroundImage
     }
@@ -2348,66 +2348,66 @@ _a = React.memo(function (e) {
       "data-screen-id": p.id,
       className: "screen-view",
       onClick: function (e) {
-        var e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith(c.D)) {
-          Ve.n(t)
-          w.emitScreenPress(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
+        var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+          $$_312.n(t)
+          $$_$$_index.emitScreenPress(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
         }
       },
       onMouseDown: function (e) {
-        var e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith(c.D)) {
-          Ve.k(t)
+        var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+          $$_312.k(t)
           document.addEventListener("mouseup", function () {
-            return Ve.b()
+            return $$_312.b()
           }, {
             once: true
           })
-          w.emitScreenPressIn(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
-          ge.a(function () {
-            return w.emitScreenPressHoldAndWait(t, r.current.x || 0, r.current.y || 0)
+          $$_$$_index.emitScreenPressIn(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
+          $_index.a(function () {
+            return $$_$$_index.emitScreenPressHoldAndWait(t, r.current.x || 0, r.current.y || 0)
           })
         }
       },
       onMouseUp: function (e) {
-        var e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith(c.D)) {
-          Ve.n(t)
-          w.emitScreenPressOut(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
+        var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+          $$_312.n(t)
+          $$_$$_index.emitScreenPressOut(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
         }
       },
       onMouseMove: function (e) {
-        var e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith(c.D)) {
+        var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
           r.current.x = e.nativeEvent.offsetX
           r.current.y = e.nativeEvent.offsetY
         }
       },
       onTouchStart: function (e) {
-        if (l.W()) {
-          var e$target$dataset$screenId = e.target.dataset.screenId
-          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith(c.D)) {
-            w.emitScreenPressIn(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)
-            ge.a(function () {
-              return w.emitScreenPressHoldAndWait(t, r.current.x || 0, r.current.y || 0)
+        if ($$_$$_$$_15.W()) {
+          var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
+          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+            $$_$$_index.emitScreenPressIn(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)
+            $_index.a(function () {
+              return $$_$$_index.emitScreenPressHoldAndWait(t, r.current.x || 0, r.current.y || 0)
             })
           }
         }
       },
       onTouchMove: function (e) {
-        if (l.W()) {
-          var e$target$dataset$screenId = e.target.dataset.screenId
-          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith(c.D)) {
+        if ($$_$$_$$_15.W()) {
+          var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
+          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
             r.current.x = e.targetTouches[0].clientX
             r.current.y = e.targetTouches[0].clientX
           }
         }
       },
       onTouchEnd: function (e) {
-        if (l.W()) {
-          var e$target$dataset$screenId = e.target.dataset.screenId
-          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith(c.D)) {
-            w.emitScreenPressOut(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)
+        if ($$_$$_$$_15.W()) {
+          var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
+          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+            $$_$$_index.emitScreenPressOut(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)
           }
         }
       },
@@ -2416,7 +2416,7 @@ _a = React.memo(function (e) {
         backgroundImage: S ? "url(".concat(S, ")") : "none",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        backgroundSize: p$backgroundImageResizeMode === u.a.STRETCH ? "100% 100%" : p$backgroundImageResizeMode
+        backgroundSize: p$backgroundImageResizeMode === $$_$$_$$_205.a.STRETCH ? "100% 100%" : p$backgroundImageResizeMode
       }
     }, s.a.createElement("div", {
       className: "screen-view-inner",

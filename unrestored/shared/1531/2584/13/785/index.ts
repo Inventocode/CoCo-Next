@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：785
@@ -7,7 +7,7 @@
 "use strict"
 
 export { io as a }
-import React = require("react");
+import /* [auto-meaningful-name] */React = require("react")
 var i = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -20,7 +20,7 @@ var i = function __importDefault(module) {
   })
   return defaultExport
 }(React)
-import o = require("./104/index");
+import /* [auto-meaningful-name] */$_104_index = require("./104/index")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -32,10 +32,10 @@ var a = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(o)
+}($_104_index)
 var s = function (e, t, n, r, i) {
-  var i$clientWidth = i.clientWidth
-  var i$clientHeight = i.clientHeight
+  var /* [auto-meaningful-name] */i$clientWidth = i.clientWidth
+  var /* [auto-meaningful-name] */i$clientHeight = i.clientHeight
   var s = "number" === typeof e.pageX ? e.pageX : e.touches[0].pageX
   var c = "number" === typeof e.pageY ? e.pageY : e.touches[0].pageY
   var u = s - (i.getBoundingClientRect().left + window.pageXOffset)
@@ -95,13 +95,13 @@ var l = Object.assign || function (e) {
   return e
 }
 var f = function (e) {
-  var e$white = e.white
-  var e$grey = e.grey
-  var e$size = e.size
-  var e$renderers = e.renderers
-  var e$borderRadius = e.borderRadius
-  var e$boxShadow = e.boxShadow
-  var e$children = e.children
+  var /* [auto-meaningful-name] */e$white = e.white
+  var /* [auto-meaningful-name] */e$grey = e.grey
+  var /* [auto-meaningful-name] */e$size = e.size
+  var /* [auto-meaningful-name] */e$renderers = e.renderers
+  var /* [auto-meaningful-name] */e$borderRadius = e.borderRadius
+  var /* [auto-meaningful-name] */e$boxShadow = e.boxShadow
+  var /* [auto-meaningful-name] */e$children = e.children
   var h = a()({
     default: {
       grid: {
@@ -173,7 +173,7 @@ var g = function (e) {
     var n
     var r
     _(this, t)
-    for (var arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
       o[a] = arguments[a]
     }
     n = r = A(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))
@@ -226,7 +226,7 @@ var g = function (e) {
     key: "render",
     value: function () {
       var e = this
-      var this$props$rgb = this.props.rgb
+      var /* [auto-meaningful-name] */this$props$rgb = this.props.rgb
       var n = a()({
         default: {
           alpha: {
@@ -512,8 +512,8 @@ var b = function (e) {
   return t
 }(React.PureComponent || React.Component)
 var w = function (e, t, n, r) {
-  var r$clientWidth = r.clientWidth
-  var r$clientHeight = r.clientHeight
+  var /* [auto-meaningful-name] */r$clientWidth = r.clientWidth
+  var /* [auto-meaningful-name] */r$clientHeight = r.clientHeight
   var a = "number" === typeof e.pageX ? e.pageX : e.touches[0].pageX
   var s = "number" === typeof e.pageY ? e.pageY : e.touches[0].pageY
   var c = a - (r.getBoundingClientRect().left + window.pageXOffset)
@@ -596,7 +596,7 @@ var O = function (e) {
     var n
     var r
     x(this, t)
-    for (var arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
       o[a] = arguments[a]
     }
     n = r = C(this, (e = t.__proto__ || Object.getPrototypeOf(t)).call.apply(e, [this].concat(o)))
@@ -651,7 +651,7 @@ var O = function (e) {
     key: "render",
     value: function () {
       var e = this
-      var this$props$direction = this.props.direction
+      var /* [auto-meaningful-name] */this$props$direction = this.props.direction
       var n = undefined === this$props$direction ? "horizontal" : this$props$direction
       var r = a()({
         default: {
@@ -709,7 +709,7 @@ var O = function (e) {
   }])
   return t
 }(React.PureComponent || React.Component)
-import k = require("../../50/index");
+import /* [auto-meaningful-name] */$$_$$_50_index = require("../../50/index")
 var S = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -721,7 +721,7 @@ var S = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(k)
+}($$_$$_50_index)
 var T = function () {
   this.__data__ = []
   this.size = 0
@@ -730,21 +730,21 @@ var B = function (e, t) {
   return e === t || e !== e && t !== t
 }
 var D = function (e, t) {
-  for (var e$length = e.length; e$length--;) {
+  for (var /* [auto-meaningful-name] */e$length = e.length; e$length--;) {
     if (B(e[e$length][0], t)) {
       return e$length
     }
   }
   return -1
 }
-var array$prototype$splice = Array.prototype.splice
+var /* [auto-meaningful-name] */Array$prototype$splice = Array.prototype.splice
 var F = function (e) {
-  var this$__data__ = this.__data__
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
   var n = D(this$__data__, e)
-  return !(n < 0) && (n == this$__data__.length - 1 ? this$__data__.pop() : array$prototype$splice.call(this$__data__, n, 1), --this.size, true)
+  return !(n < 0) && (n == this$__data__.length - 1 ? this$__data__.pop() : Array$prototype$splice.call(this$__data__, n, 1), --this.size, true)
 }
 var R = function (e) {
-  var this$__data__ = this.__data__
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
   var n = D(this$__data__, e)
   return n < 0 ? undefined : this$__data__[n][1]
 }
@@ -752,7 +752,7 @@ var P = function (e) {
   return D(this.__data__, e) > -1
 }
 var N = function (e, t) {
-  var this$__data__ = this.__data__
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
   var r = D(this$__data__, e)
   if (r < 0) {
     ++this.size
@@ -781,7 +781,7 @@ var L = function () {
   this.size = 0
 }
 var U = function (e) {
-  var this$__data__ = this.__data__
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
   var n = this$__data__.delete(e)
   this.size = this$__data__.size
   return n
@@ -792,20 +792,20 @@ var H = function (e) {
 var V = function (e) {
   return this.__data__.has(e)
 }
-import G = require("./325");
-var g$a$Symbol = G.a.Symbol
-var _object$prototype = Object.prototype
-var _object$prototype$hasOwnProperty = _object$prototype.hasOwnProperty
-var _object$prototype$toString = _object$prototype.toString
-var X = g$a$Symbol ? g$a$Symbol.toStringTag : undefined
+import /* [auto-meaningful-name] */$_325_index = require("./325/index")
+var /* [auto-meaningful-name] */$_325_index$a$Symbol = $_325_index.a.Symbol
+var /* [auto-meaningful-name] */Object$prototype = Object.prototype
+var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object$prototype.hasOwnProperty
+var /* [auto-meaningful-name] */Object$prototype$toString = Object$prototype.toString
+var X = $_325_index$a$Symbol ? $_325_index$a$Symbol.toStringTag : undefined
 var Y = function (e) {
-  var t = _object$prototype$hasOwnProperty.call(e, X)
+  var t = Object$prototype$hasOwnProperty.call(e, X)
   var n = e[X]
   try {
     e[X] = undefined
     var r = true
   } catch (o) {}
-  var i = _object$prototype$toString.call(e)
+  var i = Object$prototype$toString.call(e)
   if (r) {
     if (t) {
       e[X] = n
@@ -815,11 +815,11 @@ var Y = function (e) {
   }
   return i
 }
-var object$prototype$toString = Object.prototype.toString
+var /* [auto-meaningful-name] */_Object$prototype$toString = Object.prototype.toString
 var $ = function (e) {
-  return object$prototype$toString.call(e)
+  return _Object$prototype$toString.call(e)
 }
-var J = g$a$Symbol ? g$a$Symbol.toStringTag : undefined
+var J = $_325_index$a$Symbol ? $_325_index$a$Symbol.toStringTag : undefined
 var Z = function (e) {
   return null == e ? undefined === e ? "[object Undefined]" : "[object Null]" : J && J in Object(e) ? Y(e) : $(e)
 }
@@ -834,7 +834,7 @@ var te = function (e) {
   var t = Z(e)
   return "[object Function]" == t || "[object GeneratorFunction]" == t || "[object AsyncFunction]" == t || "[object Proxy]" == t
 }
-var ne = G.a["__core-js_shared__"]
+var ne = $_325_index.a["__core-js_shared__"]
 var re = function () {
   var e = /[^.]+$/.exec(ne && ne.keys && ne.keys.IE_PROTO || "")
   return e ? "Symbol(src)_1." + e : ""
@@ -842,11 +842,11 @@ var re = function () {
 var ie = function (e) {
   return !!re && re in e
 }
-var _function$prototype$toString = Function.prototype.toString
+var /* [auto-meaningful-name] */Function$prototype$toString = Function.prototype.toString
 var ae = function (e) {
   if (null != e) {
     try {
-      return _function$prototype$toString.call(e)
+      return Function$prototype$toString.call(e)
     } catch (t) {}
     try {
       return e + ""
@@ -855,11 +855,11 @@ var ae = function (e) {
   return ""
 }
 var se = /^\[object .+?Constructor\]$/
-var _function$prototype = Function.prototype
-var _object$prototype2 = Object.prototype
-var _function$prototype$toString2 = _function$prototype.toString
-var _object$prototype$hasOwnProperty2 = _object$prototype2.hasOwnProperty
-var de = RegExp("^" + _function$prototype$toString2.call(_object$prototype$hasOwnProperty2).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$")
+var /* [auto-meaningful-name] */Function$prototype = Function.prototype
+var /* [auto-meaningful-name] */_Object$prototype = Object.prototype
+var /* [auto-meaningful-name] */_Function$prototype$toString = Function$prototype.toString
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty = _Object$prototype.hasOwnProperty
+var de = RegExp("^" + _Function$prototype$toString.call(_Object$prototype$hasOwnProperty).replace(/[\\^$.*+?()[\]{}|]/g, "\\$&").replace(/hasOwnProperty|(function).*?(?=\\\()| for .+?(?=\\\])/g, "$1.*?") + "$")
 var he = function (e) {
   return !(!ee(e) || ie(e)) && (te(e) ? de : se).test(ae(e))
 }
@@ -870,7 +870,7 @@ var _e = function (e, t) {
   var n = pe(e, t)
   return he(n) ? n : undefined
 }
-var Ae = _e(G.a, "Map")
+var Ae = _e($_325_index.a, "Map")
 var ge = _e(Object, "create")
 var ve = function () {
   this.__data__ = ge ? ge(null) : {}
@@ -881,22 +881,22 @@ var me = function (e) {
   this.size -= t ? 1 : 0
   return t
 }
-var _object$prototype$hasOwnProperty3 = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty2 = Object.prototype.hasOwnProperty
 var be = function (e) {
-  var this$__data__ = this.__data__
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
   if (ge) {
     var n = this$__data__[e]
     return "__lodash_hash_undefined__" === n ? undefined : n
   }
-  return _object$prototype$hasOwnProperty3.call(this$__data__, e) ? this$__data__[e] : undefined
+  return _Object$prototype$hasOwnProperty2.call(this$__data__, e) ? this$__data__[e] : undefined
 }
-var _object$prototype$hasOwnProperty4 = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty3 = Object.prototype.hasOwnProperty
 var Ee = function (e) {
-  var this$__data__ = this.__data__
-  return ge ? undefined !== this$__data__[e] : _object$prototype$hasOwnProperty4.call(this$__data__, e)
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
+  return ge ? undefined !== this$__data__[e] : _Object$prototype$hasOwnProperty3.call(this$__data__, e)
 }
 var xe = function (e, t) {
-  var this$__data__ = this.__data__
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
   this.size += this.has(e) ? 0 : 1
   this$__data__[e] = ge && undefined === t ? "__lodash_hash_undefined__" : t
   return this
@@ -928,7 +928,7 @@ var Se = function (e) {
   return "string" == t || "number" == t || "symbol" == t || "boolean" == t ? "__proto__" !== e : null === e
 }
 var Te = function (e, t) {
-  var e$__data__ = e.__data__
+  var /* [auto-meaningful-name] */e$__data__ = e.__data__
   return Se(t) ? e$__data__["string" == typeof t ? "string" : "hash"] : e$__data__.map
 }
 var Be = function (e) {
@@ -944,7 +944,7 @@ var Ie = function (e) {
 }
 var Fe = function (e, t) {
   var n = Te(this, e)
-  var n$size = n.size
+  var /* [auto-meaningful-name] */n$size = n.size
   n.set(e, t)
   this.size += n.size == n$size ? 0 : 1
   return this
@@ -964,9 +964,9 @@ Re.prototype.has = Ie
 Re.prototype.set = Fe
 var Pe = Re
 var Ne = function (e, t) {
-  var this$__data__ = this.__data__
+  var /* [auto-meaningful-name] */this$__data__ = this.__data__
   if (this$__data__ instanceof j) {
-    var this$__data__$__data__ = this$__data__.__data__
+    var /* [auto-meaningful-name] */this$__data__$__data__ = this$__data__.__data__
     if (!Ae || this$__data__$__data__.length < 199) {
       this$__data__$__data__.push([e, t])
       this.size = ++this$__data__.size
@@ -1014,7 +1014,7 @@ var He = function (e, t, n) {
 }
 var Ve = function (e) {
   return function (t, n, r) {
-    for (var i = -1, o = Object(t), a = r(t), a$length = a.length; a$length--;) {
+    for (var i = -1, o = Object(t), a = r(t), /* [auto-meaningful-name] */a$length = a.length; a$length--;) {
       var c = a[e ? a$length : ++i]
       if (false === n(o[c], c, o)) {
         break
@@ -1023,11 +1023,11 @@ var Ve = function (e) {
     return t
   }
 }()
-import Ge = require("./1464");
-var g$a$Uint8Array = G.a.Uint8Array
+import /* [auto-meaningful-name] */$_1464 = require("./1464")
+var /* [auto-meaningful-name] */$_325_index$a$Uint8Array = $_325_index.a.Uint8Array
 var Qe = function (e) {
   var t = new e.constructor(e.byteLength)
-  new g$a$Uint8Array(t).set(new g$a$Uint8Array(e))
+  new $_325_index$a$Uint8Array(t).set(new $_325_index$a$Uint8Array(e))
   return t
 }
 var We = function (e, t) {
@@ -1036,21 +1036,21 @@ var We = function (e, t) {
 }
 var Ke = function (e, t) {
   var n = -1
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   for (t || (t = Array(e$length)); ++n < e$length;) {
     t[n] = e[n]
   }
   return t
 }
-var object$create = Object.create
+var /* [auto-meaningful-name] */Object$create = Object.create
 var Ye = function () {
   function e() {}
   return function (t) {
     if (!ee(t)) {
       return {}
     }
-    if (object$create) {
-      return object$create(t)
+    if (Object$create) {
+      return Object$create(t)
     }
     e.prototype = t
     var n = new e()
@@ -1064,10 +1064,10 @@ var qe = function (e, t) {
   }
 }
 var $e = qe(Object.getPrototypeOf, Object)
-var _object$prototype3 = Object.prototype
+var /* [auto-meaningful-name] */_Object$prototype2 = Object.prototype
 var Ze = function (e) {
   var t = e && e.constructor
-  return e === ("function" == typeof t && t.prototype || _object$prototype3)
+  return e === ("function" == typeof t && t.prototype || _Object$prototype2)
 }
 var et = function (e) {
   return "function" != typeof e.constructor || Ze(e) ? {} : Ye($e(e))
@@ -1078,15 +1078,15 @@ var tt = function (e) {
 var nt = function (e) {
   return tt(e) && "[object Arguments]" == Z(e)
 }
-var _object$prototype4 = Object.prototype
-var _object$prototype$hasOwnProperty5 = _object$prototype4.hasOwnProperty
-var _object$prototype$propertyIsEnumerable = _object$prototype4.propertyIsEnumerable
+var /* [auto-meaningful-name] */_Object$prototype3 = Object.prototype
+var /* [auto-meaningful-name] */_Object$prototype3$hasOwnProperty = _Object$prototype3.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype3$propertyIsEnumerable = _Object$prototype3.propertyIsEnumerable
 var at = nt(function () {
   return arguments
 }()) ? nt : function (e) {
-  return tt(e) && _object$prototype$hasOwnProperty5.call(e, "callee") && !_object$prototype$propertyIsEnumerable.call(e, "callee")
+  return tt(e) && _Object$prototype3$hasOwnProperty.call(e, "callee") && !_Object$prototype3$propertyIsEnumerable.call(e, "callee")
 }
-var array$isArray = Array.isArray
+var /* [auto-meaningful-name] */Array$isArray = Array.isArray
 var ct = function (e) {
   return "number" == typeof e && e > -1 && e % 1 == 0 && e <= 9007199254740991
 }
@@ -1096,12 +1096,12 @@ var ut = function (e) {
 var lt = function (e) {
   return tt(e) && ut(e)
 }
-import ft = require("./731/index");
-var function$prototype = Function.prototype
-var object$prototype = Object.prototype
-var function$prototype$toString = function$prototype.toString
-var _object$prototype$hasOwnProperty6 = object$prototype.hasOwnProperty
-var At = function$prototype$toString.call(Object)
+import /* [auto-meaningful-name] */$_731_index = require("./731/index")
+var /* [auto-meaningful-name] */_Function$prototype = Function.prototype
+var /* [auto-meaningful-name] */_Object$prototype4 = Object.prototype
+var /* [auto-meaningful-name] */_Function$prototype$toString2 = _Function$prototype.toString
+var /* [auto-meaningful-name] */_Object$prototype4$hasOwnProperty = _Object$prototype4.hasOwnProperty
+var At = _Function$prototype$toString2.call(Object)
 var gt = function (e) {
   if (!tt(e) || "[object Object]" != Z(e)) {
     return false
@@ -1110,8 +1110,8 @@ var gt = function (e) {
   if (null === t) {
     return true
   }
-  var n = _object$prototype$hasOwnProperty6.call(t, "constructor") && t.constructor
-  return "function" == typeof n && n instanceof n && function$prototype$toString.call(n) == At
+  var n = _Object$prototype4$hasOwnProperty.call(t, "constructor") && t.constructor
+  return "function" == typeof n && n instanceof n && _Function$prototype$toString2.call(n) == At
 }
 var vt = {}
 vt["[object Float32Array]"] = vt["[object Float64Array]"] = vt["[object Int8Array]"] = vt["[object Int16Array]"] = vt["[object Int32Array]"] = vt["[object Uint8Array]"] = vt["[object Uint8ClampedArray]"] = vt["[object Uint16Array]"] = vt["[object Uint32Array]"] = true
@@ -1124,18 +1124,18 @@ var yt = function (e) {
     return e(t)
   }
 }
-import bt = require("./1173/index");
-var wt = bt.a && bt.a.isTypedArray
+import /* [auto-meaningful-name] */$_1173 = require("./1173")
+var wt = $_1173.a && $_1173.a.isTypedArray
 var Et = wt ? yt(wt) : mt
 var xt = function (e, t) {
   if (("constructor" !== t || "function" !== typeof e[t]) && "__proto__" != t) {
     return e[t]
   }
 }
-var _object$prototype$hasOwnProperty7 = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty4 = Object.prototype.hasOwnProperty
 var Ot = function (e, t, n) {
   var r = e[t]
-  if (!(_object$prototype$hasOwnProperty7.call(e, t) && B(r, n) && (undefined !== n || t in e))) {
+  if (!(_Object$prototype$hasOwnProperty4.call(e, t) && B(r, n) && (undefined !== n || t in e))) {
     Ue(e, t, n)
   }
 }
@@ -1144,7 +1144,7 @@ var kt = function (e, t, n, r) {
   if (!n) {
     n = {}
   }
-  for (var o = -1, t$length = t.length; ++o < t$length;) {
+  for (var o = -1, /* [auto-meaningful-name] */t$length = t.length; ++o < t$length;) {
     var s = t[o]
     var c = r ? r(n[s], e[s], s, n, e) : undefined
     if (undefined === c) {
@@ -1169,16 +1169,16 @@ var Bt = function (e, t) {
   var n = typeof e
   return !!(t = null == t ? 9007199254740991 : t) && ("number" == n || "symbol" != n && Tt.test(e)) && e > -1 && e % 1 == 0 && e < t
 }
-var _object$prototype$hasOwnProperty8 = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty5 = Object.prototype.hasOwnProperty
 var It = function (e, t) {
-  var n = array$isArray(e)
+  var n = Array$isArray(e)
   var r = !n && at(e)
-  var i = !n && !r && ft.a(e)
+  var i = !n && !r && $_731_index.a(e)
   var o = !n && !r && !i && Et(e)
   var a = n || r || i || o
   var s = a ? St(e.length, String) : []
-  var s$length = s.length
-  for (var u in e) if (!(!t && !_object$prototype$hasOwnProperty8.call(e, u) || a && ("length" == u || i && ("offset" == u || "parent" == u) || o && ("buffer" == u || "byteLength" == u || "byteOffset" == u) || Bt(u, s$length)))) {
+  var /* [auto-meaningful-name] */s$length = s.length
+  for (var u in e) if (!(!t && !_Object$prototype$hasOwnProperty5.call(e, u) || a && ("length" == u || i && ("offset" == u || "parent" == u) || o && ("buffer" == u || "byteLength" == u || "byteOffset" == u) || Bt(u, s$length)))) {
     s.push(u)
   }
   return s
@@ -1190,14 +1190,14 @@ var Ft = function (e) {
   }
   return t
 }
-var _object$prototype$hasOwnProperty9 = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty6 = Object.prototype.hasOwnProperty
 var Pt = function (e) {
   if (!ee(e)) {
     return Ft(e)
   }
   var t = Ze(e)
   var n = []
-  for (var r in e) if ("constructor" != r || !t && _object$prototype$hasOwnProperty9.call(e, r)) {
+  for (var r in e) if ("constructor" != r || !t && _Object$prototype$hasOwnProperty6.call(e, r)) {
     n.push(r)
   }
   return n
@@ -1218,12 +1218,12 @@ var jt = function (e, t, n, r, i, o, a) {
     var l = o ? o(s, c, n + "", e, t, a) : undefined
     var f = undefined === l
     if (f) {
-      var d = array$isArray(c)
-      var h = !d && ft.a(c)
+      var d = Array$isArray(c)
+      var h = !d && $_731_index.a(c)
       var p = !d && !h && Et(c)
       l = c
       if (d || h || p) {
-        if (array$isArray(s)) {
+        if (Array$isArray(s)) {
           l = s
         } else {
           if (lt(s)) {
@@ -1231,7 +1231,7 @@ var jt = function (e, t, n, r, i, o, a) {
           } else {
             if (h) {
               f = false
-              l = Ge.a(c, true)
+              l = $_1464.a(c, true)
             } else {
               if (p) {
                 f = false
@@ -1299,11 +1299,11 @@ var Ht = function (e, t, n) {
   }
   return e.apply(t, n)
 }
-var _math$max = Math.max
+var /* [auto-meaningful-name] */Math$max = Math.max
 var Gt = function (e, t, n) {
-  t = _math$max(undefined === t ? e.length - 1 : t, 0)
+  t = Math$max(undefined === t ? e.length - 1 : t, 0)
   return function () {
-    for (var r = arguments, i = -1, o = _math$max(r.length - t, 0), a = Array(o); ++i < o;) {
+    for (var r = arguments, i = -1, o = Math$max(r.length - t, 0), a = Array(o); ++i < o;) {
       a[i] = r[t + i]
     }
     i = -1
@@ -1327,12 +1327,12 @@ var Qt = Le ? function (e, t) {
     writable: true
   })
 } : Ut
-var date$now = Date.now
+var /* [auto-meaningful-name] */Date$now = Date.now
 var Kt = function (e) {
   var t = 0
   var n = 0
   return function () {
-    var r = date$now()
+    var r = Date$now()
     var i = 16 - (r - n)
     n = r
     if (i > 0) {
@@ -1358,7 +1358,7 @@ var Yt = function (e, t, n) {
 var qt = function (e) {
   return Xt(function (t, n) {
     var r = -1
-    var n$length = n.length
+    var /* [auto-meaningful-name] */n$length = n.length
     var o = n$length > 1 ? n[n$length - 1] : undefined
     var a = n$length > 2 ? n[2] : undefined
     for (o = e.length > 3 && "function" == typeof o ? (n$length--, o) : undefined, a && Yt(n[0], n[1], a) && (o = n$length < 3 ? undefined : o, n$length = 1), t = Object(t); ++r < n$length;) {
@@ -1373,11 +1373,11 @@ var qt = function (e) {
   Lt(e, t, n)
 })
 var $t = function (e) {
-  var e$zDepth = e.zDepth
-  var e$radius = e.radius
-  var e$background = e.background
-  var e$children = e.children
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$zDepth = e.zDepth
+  var /* [auto-meaningful-name] */e$radius = e.radius
+  var /* [auto-meaningful-name] */e$background = e.background
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var c = undefined === e$styles ? {} : e$styles
   var u = a()(qt({
     default: {
@@ -1460,11 +1460,11 @@ $t.defaultProps = {
 }
 var Jt = $t
 var Zt = function () {
-  return G.a.Date.now()
+  return $_325_index.a.Date.now()
 }
 var en = /\s/
 var tn = function (e) {
-  for (var e$length = e.length; e$length-- && en.test(e.charAt(e$length));) {
+  for (var /* [auto-meaningful-name] */e$length = e.length; e$length-- && en.test(e.charAt(e$length));) {
     ;
   }
   return e$length
@@ -1498,8 +1498,8 @@ var ln = function (e) {
   var n = sn.test(e)
   return n || cn.test(e) ? un(e.slice(2), n ? 2 : 8) : an.test(e) ? NaN : +e
 }
-var math$max = Math.max
-var math$min = Math.min
+var /* [auto-meaningful-name] */_Math$max = Math.max
+var /* [auto-meaningful-name] */Math$min = Math.min
 var hn = function (e, t, n) {
   var r
   var i
@@ -1537,7 +1537,7 @@ var hn = function (e, t, n) {
     }
     s = setTimeout(A, function (e) {
       var n = t - (e - c)
-      return f ? math$min(n, o - (e - u)) : n
+      return f ? Math$min(n, o - (e - u)) : n
     }(e))
   }
   function g(e) {
@@ -1568,7 +1568,7 @@ var hn = function (e, t, n) {
   t = ln(t) || 0
   if (ee(n)) {
     l = !!n.leading
-    o = (f = "maxWait" in n) ? math$max(ln(n.maxWait) || 0, t) : o
+    o = (f = "maxWait" in n) ? _Math$max(ln(n.maxWait) || 0, t) : o
     d = "trailing" in n ? !!n.trailing : d
   }
   v.cancel = function () {
@@ -1638,8 +1638,8 @@ var An = function (e) {
       if ("function" === typeof n.props.onChange) {
         n.throttle(n.props.onChange, function (e, t, n) {
           var r = n.getBoundingClientRect()
-          var r$width = r.width
-          var r$height = r.height
+          var /* [auto-meaningful-name] */r$width = r.width
+          var /* [auto-meaningful-name] */r$height = r.height
           var a = "number" === typeof e.pageX ? e.pageX : e.touches[0].pageX
           var s = "number" === typeof e.pageY ? e.pageY : e.touches[0].pageY
           var c = a - (n.getBoundingClientRect().left + window.pageXOffset)
@@ -1713,7 +1713,7 @@ var An = function (e) {
   }, {
     key: "getContainerRenderWindow",
     value: function () {
-      for (var this$container = this.container, t = window; !t.document.contains(this$container) && t.parent !== t;) {
+      for (var /* [auto-meaningful-name] */this$container = this.container, t = window; !t.document.contains(this$container) && t.parent !== t;) {
         t = t.parent
       }
       return t
@@ -1730,11 +1730,11 @@ var An = function (e) {
     value: function () {
       var e = this
       var t = this.props.style || {}
-      var t$color = t.color
-      var t$white = t.white
-      var t$black = t.black
-      var t$pointer = t.pointer
-      var t$circle = t.circle
+      var /* [auto-meaningful-name] */t$color = t.color
+      var /* [auto-meaningful-name] */t$white = t.white
+      var /* [auto-meaningful-name] */t$black = t.black
+      var /* [auto-meaningful-name] */t$pointer = t.pointer
+      var /* [auto-meaningful-name] */t$circle = t.circle
       var u = a()({
         default: {
           color: {
@@ -1806,13 +1806,13 @@ var gn = function (e, t) {
   return e
 }
 var vn = qe(Object.keys, Object)
-var _object$prototype$hasOwnProperty0 = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty7 = Object.prototype.hasOwnProperty
 var yn = function (e) {
   if (!Ze(e)) {
     return vn(e)
   }
   var t = []
-  for (var n in Object(e)) if (_object$prototype$hasOwnProperty0.call(e, n) && "constructor" != n) {
+  for (var n in Object(e)) if (_Object$prototype$hasOwnProperty7.call(e, n) && "constructor" != n) {
     t.push(n)
   }
   return t
@@ -1828,7 +1828,7 @@ var wn = function (e, t) {
     if (!ut(n)) {
       return e(n, r)
     }
-    for (var n$length = n.length, o = t ? n$length : -1, a = Object(n); (t ? o-- : ++o < n$length) && false !== r(a[o], o, a);) {
+    for (var /* [auto-meaningful-name] */n$length = n.length, o = t ? n$length : -1, a = Object(n); (t ? o-- : ++o < n$length) && false !== r(a[o], o, a);) {
       ;
     }
     return n
@@ -1840,9 +1840,9 @@ var En = function (e) {
   return "function" == typeof e ? e : Ut
 }
 var xn = function (e, t) {
-  return (array$isArray(e) ? gn : wn)(e, En(t))
+  return (Array$isArray(e) ? gn : wn)(e, En(t))
 }
-import Cn = require("../225");
+import /* [auto-meaningful-name] */$$_225 = require("../225")
 var On = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -1854,7 +1854,7 @@ var On = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(Cn)
+}($$_225)
 var kn = function (e) {
   var t = 0
   var n = 0
@@ -2104,7 +2104,7 @@ var Hn = function (e) {
       var t
       var n
       Mn(this, r)
-      for (var arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
+      for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = Array(arguments$length), a = 0; a < arguments$length; a++) {
         o[a] = arguments[a]
       }
       t = n = jn(this, (e = r.__proto__ || Object.getPrototypeOf(r)).call.apply(e, [this].concat(o)))
@@ -2136,16 +2136,16 @@ var Hn = function (e) {
     return r
   }(i.a.Component)
 }(function (e) {
-  var e$color = e.color
-  var e$style = e.style
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var o = undefined === e$onClick ? function () {} : e$onClick
-  var e$onHover = e.onHover
-  var e$title = e.title
+  var /* [auto-meaningful-name] */e$onHover = e.onHover
+  var /* [auto-meaningful-name] */e$title = e.title
   var u = undefined === e$title ? e$color : e$title
-  var e$children = e.children
-  var e$focus = e.focus
-  var e$focusStyle = e.focusStyle
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$focus = e.focus
+  var /* [auto-meaningful-name] */e$focusStyle = e.focusStyle
   var p = undefined === e$focusStyle ? {} : e$focusStyle
   var _ = "transparent" === e$color
   var A = a()({
@@ -2182,7 +2182,7 @@ var Hn = function (e) {
   }))
 })
 var Vn = function (e) {
-  var e$direction = e.direction
+  var /* [auto-meaningful-name] */e$direction = e.direction
   var n = a()({
     default: {
       picker: {
@@ -2216,16 +2216,16 @@ var Gn = Object.assign || function (e) {
   return e
 }
 var zn = function (e) {
-  var e$rgb = e.rgb
-  var e$hsl = e.hsl
-  var e$width = e.width
-  var e$height = e.height
-  var e$onChange = e.onChange
-  var e$direction = e.direction
-  var e$style = e.style
-  var e$renderers = e.renderers
-  var e$pointer = e.pointer
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$height = e.height
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$direction = e.direction
+  var /* [auto-meaningful-name] */e$style = e.style
+  var /* [auto-meaningful-name] */e$renderers = e.renderers
+  var /* [auto-meaningful-name] */e$pointer = e.pointer
+  var /* [auto-meaningful-name] */e$className = e.className
   var h = undefined === e$className ? "" : e$className
   var p = a()({
     default: {
@@ -2295,8 +2295,8 @@ var $n = function (e, t) {
 }
 var Jn = function (e, t, n, r, i, o) {
   var a = 1 & n
-  var e$length = e.length
-  var t$length = t.length
+  var /* [auto-meaningful-name] */e$length = e.length
+  var /* [auto-meaningful-name] */t$length = t.length
   if (e$length != t$length && !(a && t$length > e$length)) {
     return false
   }
@@ -2355,7 +2355,7 @@ var er = function (e) {
   })
   return n
 }
-var tr = g$a$Symbol ? g$a$Symbol.prototype : undefined
+var tr = $_325_index$a$Symbol ? $_325_index$a$Symbol.prototype : undefined
 var nr = tr ? tr.valueOf : undefined
 var rr = function (e, t, n, r, i, o, a) {
   switch (n) {
@@ -2366,7 +2366,7 @@ var rr = function (e, t, n, r, i, o, a) {
       e = e.buffer
       t = t.buffer
     case "[object ArrayBuffer]":
-      return !(e.byteLength != t.byteLength || !o(new g$a$Uint8Array(e), new g$a$Uint8Array(t)))
+      return !(e.byteLength != t.byteLength || !o(new $_325_index$a$Uint8Array(e), new $_325_index$a$Uint8Array(t)))
     case "[object Boolean]":
     case "[object Date]":
     case "[object Number]":
@@ -2400,14 +2400,14 @@ var rr = function (e, t, n, r, i, o, a) {
   return false
 }
 var ir = function (e, t) {
-  for (var n = -1, t$length = t.length, e$length = e.length; ++n < t$length;) {
+  for (var n = -1, /* [auto-meaningful-name] */t$length = t.length, /* [auto-meaningful-name] */e$length = e.length; ++n < t$length;) {
     e[e$length + n] = t[n]
   }
   return e
 }
 var or = function (e, t, n) {
   var r = t(e)
-  return array$isArray(e) ? r : ir(r, n(e))
+  return Array$isArray(e) ? r : ir(r, n(e))
 }
 var ar = function (e, t) {
   for (var n = -1, r = null == e ? 0 : e.length, i = 0, o = []; ++n < r;) {
@@ -2421,27 +2421,27 @@ var ar = function (e, t) {
 var sr = function () {
   return []
 }
-var object$prototype$propertyIsEnumerable = Object.prototype.propertyIsEnumerable
-var object$getOwnPropertySymbols = Object.getOwnPropertySymbols
-var lr = object$getOwnPropertySymbols ? function (e) {
-  return null == e ? [] : (e = Object(e), ar(object$getOwnPropertySymbols(e), function (t) {
-    return object$prototype$propertyIsEnumerable.call(e, t)
+var /* [auto-meaningful-name] */Object$prototype$propertyIsEnumerable = Object.prototype.propertyIsEnumerable
+var /* [auto-meaningful-name] */Object$getOwnPropertySymbols = Object.getOwnPropertySymbols
+var lr = Object$getOwnPropertySymbols ? function (e) {
+  return null == e ? [] : (e = Object(e), ar(Object$getOwnPropertySymbols(e), function (t) {
+    return Object$prototype$propertyIsEnumerable.call(e, t)
   }))
 } : sr
 var fr = function (e) {
   return or(e, bn, lr)
 }
-var _object$prototype$hasOwnProperty1 = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty8 = Object.prototype.hasOwnProperty
 var hr = function (e, t, n, r, i, o) {
   var a = 1 & n
   var s = fr(e)
-  var s$length = s.length
+  var /* [auto-meaningful-name] */s$length = s.length
   if (s$length != fr(t).length && !a) {
     return false
   }
   for (var u = s$length; u--;) {
     var l = s[u]
-    if (!(a ? l in t : _object$prototype$hasOwnProperty1.call(t, l))) {
+    if (!(a ? l in t : _Object$prototype$hasOwnProperty8.call(t, l))) {
       return false
     }
   }
@@ -2468,8 +2468,8 @@ var hr = function (e, t, n, r, i, o) {
     }
   }
   if (h && !p) {
-    var e$constructor = e.constructor
-    var t$constructor = t.constructor
+    var /* [auto-meaningful-name] */e$constructor = e.constructor
+    var /* [auto-meaningful-name] */t$constructor = t.constructor
     if (!(e$constructor == t$constructor || !("constructor" in e) || !("constructor" in t) || "function" == typeof e$constructor && e$constructor instanceof e$constructor && "function" == typeof t$constructor && t$constructor instanceof t$constructor)) {
       h = false
     }
@@ -2478,10 +2478,10 @@ var hr = function (e, t, n, r, i, o) {
   o.delete(t)
   return h
 }
-var pr = _e(G.a, "DataView")
-var _r = _e(G.a, "Promise")
-var Ar = _e(G.a, "Set")
-var gr = _e(G.a, "WeakMap")
+var pr = _e($_325_index.a, "DataView")
+var _r = _e($_325_index.a, "Promise")
+var Ar = _e($_325_index.a, "Set")
+var gr = _e($_325_index.a, "WeakMap")
 var vr = ae(pr)
 var mr = ae(Ae)
 var yr = ae(_r)
@@ -2511,17 +2511,17 @@ if (pr && "[object DataView]" != Er(new pr(new ArrayBuffer(1))) || Ae && "[objec
   }
 }
 var xr = Er
-var object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty9 = Object.prototype.hasOwnProperty
 var Or = function (e, t, n, r, i, o) {
-  var a = array$isArray(e)
-  var s = array$isArray(t)
+  var a = Array$isArray(e)
+  var s = Array$isArray(t)
   var c = a ? "[object Array]" : xr(e)
   var u = s ? "[object Array]" : xr(t)
   var l = "[object Object]" == (c = "[object Arguments]" == c ? "[object Object]" : c)
   var f = "[object Object]" == (u = "[object Arguments]" == u ? "[object Object]" : u)
   var d = c == u
-  if (d && ft.a(e)) {
-    if (!ft.a(t)) {
+  if (d && $_731_index.a(e)) {
+    if (!$_731_index.a(t)) {
       return false
     }
     a = true
@@ -2534,8 +2534,8 @@ var Or = function (e, t, n, r, i, o) {
     return a || Et(e) ? Jn(e, t, n, r, i, o) : rr(e, t, c, n, r, i, o)
   }
   if (!(1 & n)) {
-    var h = l && object$prototype$hasOwnProperty.call(e, "__wrapped__")
-    var p = f && object$prototype$hasOwnProperty.call(t, "__wrapped__")
+    var h = l && _Object$prototype$hasOwnProperty9.call(e, "__wrapped__")
+    var p = f && _Object$prototype$hasOwnProperty9.call(t, "__wrapped__")
     if (h || p) {
       var _ = h ? e.value() : e
       var A = p ? t.value() : t
@@ -2551,7 +2551,7 @@ var kr = function e(t, n, r, i, o) {
   return t === n || (null == t || null == n || !tt(t) && !tt(n) ? t !== t && n !== n : Or(t, n, r, i, e, o))
 }
 var Sr = function (e, t, n, r) {
-  var n$length = n.length
+  var /* [auto-meaningful-name] */n$length = n.length
   var o = n$length
   var a = !r
   if (null == e) {
@@ -2587,7 +2587,7 @@ var Tr = function (e) {
   return e === e && !ee(e)
 }
 var Br = function (e) {
-  for (var t = bn(e), t$length = t.length; t$length--;) {
+  for (var t = bn(e), /* [auto-meaningful-name] */t$length = t.length; t$length--;) {
     var r = t[t$length]
     var i = e[r]
     t[t$length] = [r, i, Tr(i)]
@@ -2608,7 +2608,7 @@ var Ir = function (e) {
 var Fr = /\.|\[(?:[^[\]]*|(["'])(?:(?!\1)[^\\]|\\.)*?\1)\]/
 var Rr = /^\w*$/
 var Pr = function (e, t) {
-  if (array$isArray(e)) {
+  if (Array$isArray(e)) {
     return false
   }
   var n = typeof e
@@ -2621,7 +2621,7 @@ function Nr(e, t) {
   var n = function n() {
     var r = arguments
     var i = t ? t.apply(this, r) : r[0]
-    var n$cache = n.cache
+    var /* [auto-meaningful-name] */n$cache = n.cache
     if (n$cache.has(i)) {
       return n$cache.get(i)
     }
@@ -2643,7 +2643,7 @@ var Ur = function (e) {
     }
     return e
   })
-  var t$cache = t.cache
+  var /* [auto-meaningful-name] */t$cache = t.cache
   return t
 }(function (e) {
   var t = []
@@ -2655,13 +2655,13 @@ var Ur = function (e) {
   })
   return t
 })
-var Hr = g$a$Symbol ? g$a$Symbol.prototype : undefined
+var Hr = $_325_index$a$Symbol ? $_325_index$a$Symbol.prototype : undefined
 var Vr = Hr ? Hr.toString : undefined
 var Gr = function e(t) {
   if ("string" == typeof t) {
     return t
   }
-  if (array$isArray(t)) {
+  if (Array$isArray(t)) {
     return Qn(t, e) + ""
   }
   if (on(t)) {
@@ -2674,7 +2674,7 @@ var zr = function (e) {
   return null == e ? "" : Gr(e)
 }
 var Qr = function (e, t) {
-  return array$isArray(e) ? e : Pr(e, t) ? [e] : Ur(zr(e))
+  return Array$isArray(e) ? e : Pr(e, t) ? [e] : Ur(zr(e))
 }
 var Wr = function (e) {
   if ("string" == typeof e || on(e)) {
@@ -2684,10 +2684,10 @@ var Wr = function (e) {
   return "0" == t && 1 / e == -1 / 0 ? "-0" : t
 }
 var Kr = function (e, t) {
-  for (var n = 0, tQrTE$length = (t = Qr(t, e)).length; null != e && n < tQrTE$length;) {
+  for (var n = 0, /* [auto-meaningful-name] */TQrTE$length = (t = Qr(t, e)).length; null != e && n < TQrTE$length;) {
     e = e[Wr(t[n++])]
   }
-  return n && n == tQrTE$length ? e : undefined
+  return n && n == TQrTE$length ? e : undefined
 }
 var Xr = function (e, t, n) {
   var r = null == e ? undefined : Kr(e, t)
@@ -2697,14 +2697,14 @@ var Yr = function (e, t) {
   return null != e && t in Object(e)
 }
 var qr = function (e, t, n) {
-  for (var r = -1, tQrTE$length = (t = Qr(t, e)).length, o = false; ++r < tQrTE$length;) {
+  for (var r = -1, /* [auto-meaningful-name] */TQrTE$length = (t = Qr(t, e)).length, o = false; ++r < TQrTE$length;) {
     var a = Wr(t[r])
     if (!(o = null != e && n(e, a))) {
       break
     }
     e = e[a]
   }
-  return o || ++r != tQrTE$length ? o : !!(tQrTE$length = null == e ? 0 : e.length) && ct(tQrTE$length) && Bt(a, tQrTE$length) && (array$isArray(e) || at(e))
+  return o || ++r != TQrTE$length ? o : !!(TQrTE$length = null == e ? 0 : e.length) && ct(TQrTE$length) && Bt(a, TQrTE$length) && (Array$isArray(e) || at(e))
 }
 var $r = function (e, t) {
   return null != e && qr(e, t, Yr)
@@ -2729,7 +2729,7 @@ var ti = function (e) {
   return Pr(e) ? Zr(Wr(e)) : ei(e)
 }
 var ni = function (e) {
-  return "function" == typeof e ? e : null == e ? Ut : "object" == typeof e ? array$isArray(e) ? Jr(e[0], e[1]) : Ir(e) : ti(e)
+  return "function" == typeof e ? e : null == e ? Ut : "object" == typeof e ? Array$isArray(e) ? Jr(e[0], e[1]) : Ir(e) : ti(e)
 }
 var ri = function (e, t) {
   var n = -1
@@ -2740,12 +2740,12 @@ var ri = function (e, t) {
   return r
 }
 var ii = function (e, t) {
-  return (array$isArray(e) ? Qn : ri)(e, ni(t, 3))
+  return (Array$isArray(e) ? Qn : ri)(e, ni(t, 3))
 }
 var oi = function (e) {
-  var e$colors = e.colors
-  var e$onClick = e.onClick
-  var e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
   var o = a()({
     default: {
       swatches: {
@@ -2782,15 +2782,15 @@ var oi = function (e) {
   }))
 }
 var ai = function (e) {
-  var e$onChange = e.onChange
-  var e$onSwatchHover = e.onSwatchHover
-  var e$hex = e.hex
-  var e$colors = e.colors
-  var e$width = e.width
-  var e$triangle = e.triangle
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$triangle = e.triangle
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var l = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var h = undefined === e$className ? "" : e$className
   var p = "transparent" === e$hex
   var _ = function (e, n) {
@@ -3178,13 +3178,13 @@ var xi = {
   900: "#263238"
 }
 var Ci = function (e) {
-  var e$color = e.color
-  var e$onClick = e.onClick
-  var e$onSwatchHover = e.onSwatchHover
-  var e$hover = e.hover
-  var e$active = e.active
-  var e$circleSize = e.circleSize
-  var e$circleSpacing = e.circleSpacing
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$hover = e.hover
+  var /* [auto-meaningful-name] */e$active = e.active
+  var /* [auto-meaningful-name] */e$circleSize = e.circleSize
+  var /* [auto-meaningful-name] */e$circleSpacing = e.circleSpacing
   var l = a()({
     default: {
       swatch: {
@@ -3232,18 +3232,18 @@ Ci.defaultProps = {
   circleSize: 28,
   circleSpacing: 14
 }
-var Oi = o.handleHover(Ci)
+var Oi = $_104_index.handleHover(Ci)
 var ki = function (e) {
-  var e$width = e.width
-  var e$onChange = e.onChange
-  var e$onSwatchHover = e.onSwatchHover
-  var e$colors = e.colors
-  var e$hex = e.hex
-  var e$circleSize = e.circleSize
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$circleSize = e.circleSize
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var l = undefined === e$styles ? {} : e$styles
-  var e$circleSpacing = e.circleSpacing
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$circleSpacing = e.circleSpacing
+  var /* [auto-meaningful-name] */e$className = e.className
   var h = undefined === e$className ? "" : e$className
   var p = a()(qt({
     default: {
@@ -3294,7 +3294,7 @@ Rn(ki)
 var Si = function (e) {
   return undefined === e
 }
-import Ti = require("./1465");
+import /* [auto-meaningful-name] */$_1465 = require("./1465")
 var Bi = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -3306,7 +3306,7 @@ var Bi = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(Ti)
+}($_1465)
 var Di = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -3718,19 +3718,19 @@ var Pi = function () {
   })
 }
 var Ni = function (e) {
-  var e$width = e.width
-  var e$onChange = e.onChange
-  var e$disableAlpha = e.disableAlpha
-  var e$rgb = e.rgb
-  var e$hsl = e.hsl
-  var e$hsv = e.hsv
-  var e$hex = e.hex
-  var e$renderers = e.renderers
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$disableAlpha = e.disableAlpha
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$hsv = e.hsv
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$renderers = e.renderers
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var h = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var _ = undefined === e$className ? "" : e$className
-  var e$defaultView = e.defaultView
+  var /* [auto-meaningful-name] */e$defaultView = e.defaultView
   var v = a()(qt({
     default: {
       picker: {
@@ -3877,11 +3877,11 @@ Ni.defaultProps = {
 }
 Rn(Ni)
 var Mi = function (e) {
-  var e$color = e.color
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var r = undefined === e$onClick ? function () {} : e$onClick
-  var e$onSwatchHover = e.onSwatchHover
-  var e$active = e.active
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$active = e.active
   var c = a()({
     default: {
       color: {
@@ -3937,9 +3937,9 @@ var Mi = function (e) {
   }))
 }
 var ji = function (e) {
-  var e$hex = e.hex
-  var e$rgb = e.rgb
-  var e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = a()({
     default: {
       fields: {
@@ -4059,14 +4059,14 @@ var ji = function (e) {
   }))
 }
 var Li = function (e) {
-  var e$onChange = e.onChange
-  var e$onSwatchHover = e.onSwatchHover
-  var e$colors = e.colors
-  var e$hex = e.hex
-  var e$rgb = e.rgb
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var u = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var f = undefined === e$className ? "" : e$className
   var d = a()(qt({
     default: {
@@ -4128,11 +4128,11 @@ Li.defaultProps = {
   styles: {}
 }
 Rn(Li)
-var Ui = o.handleHover(function (e) {
-  var e$hover = e.hover
-  var e$color = e.color
-  var e$onClick = e.onClick
-  var e$onSwatchHover = e.onSwatchHover
+var Ui = $_104_index.handleHover(function (e) {
+  var /* [auto-meaningful-name] */e$hover = e.hover
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
   var s = {
     position: "relative",
     zIndex: "2",
@@ -4163,14 +4163,14 @@ var Ui = o.handleHover(function (e) {
   }))
 })
 var Hi = function (e) {
-  var e$width = e.width
-  var e$colors = e.colors
-  var e$onChange = e.onChange
-  var e$onSwatchHover = e.onSwatchHover
-  var e$triangle = e.triangle
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$triangle = e.triangle
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var u = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var f = undefined === e$className ? "" : e$className
   var d = a()(qt({
     default: {
@@ -4291,7 +4291,7 @@ Hi.defaultProps = {
 }
 Rn(Hi)
 var Vi = function (e) {
-  var e$direction = e.direction
+  var /* [auto-meaningful-name] */e$direction = e.direction
   var n = a()({
     default: {
       picker: {
@@ -4325,15 +4325,15 @@ var Gi = Object.assign || function (e) {
   return e
 }
 var zi = function (e) {
-  var e$width = e.width
-  var e$height = e.height
-  var e$onChange = e.onChange
-  var e$hsl = e.hsl
-  var e$direction = e.direction
-  var e$pointer = e.pointer
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$height = e.height
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$direction = e.direction
+  var /* [auto-meaningful-name] */e$pointer = e.pointer
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var l = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var d = undefined === e$className ? "" : e$className
   var h = a()(qt({
     default: {
@@ -4376,12 +4376,12 @@ zi.defaultProps = {
 }
 Rn(zi)
 Rn(function (e) {
-  var e$onChange = e.onChange
-  var e$hex = e.hex
-  var e$rgb = e.rgb
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var s = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var u = undefined === e$className ? "" : e$className
   var l = a()(qt({
     default: {
@@ -4521,10 +4521,10 @@ Rn(function (e) {
   })))))
 })
 var Qi = function (e) {
-  var e$onChange = e.onChange
-  var e$rgb = e.rgb
-  var e$hsv = e.hsv
-  var e$hex = e.hex
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$hsv = e.hsv
+  var /* [auto-meaningful-name] */e$hex = e.hex
   var s = a()({
     default: {
       fields: {
@@ -4704,7 +4704,7 @@ var Qi = function (e) {
   }, "%")))
 }
 var Wi = function (e) {
-  var e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
   var n = a()({
     default: {
       picker: {
@@ -4778,10 +4778,10 @@ var Ki = function () {
   })))
 }
 var Xi = function (e) {
-  var e$onClick = e.onClick
-  var e$label = e.label
-  var e$children = e.children
-  var e$active = e.active
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$label = e.label
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$active = e.active
   var s = a()({
     default: {
       button: {
@@ -4812,8 +4812,8 @@ var Xi = function (e) {
   }, e$label || e$children)
 }
 var Yi = function (e) {
-  var e$rgb = e.rgb
-  var e$currentColor = e.currentColor
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$currentColor = e.currentColor
   var r = a()({
     default: {
       swatches: {
@@ -4914,10 +4914,10 @@ var $i = function (e) {
   qi(t, [{
     key: "render",
     value: function () {
-      var this$props = this.props
-      var this$props$styles = this$props.styles
+      var /* [auto-meaningful-name] */this$props = this.props
+      var /* [auto-meaningful-name] */this$props$styles = this$props.styles
       var n = undefined === this$props$styles ? {} : this$props$styles
-      var this$props$className = this$props.className
+      var /* [auto-meaningful-name] */this$props$className = this$props.className
       var o = undefined === this$props$className ? "" : this$props$className
       var s = a()(qt({
         default: {
@@ -5036,11 +5036,11 @@ $i.defaultProps = {
 }
 Rn($i)
 var Ji = function (e) {
-  var e$onChange = e.onChange
-  var e$rgb = e.rgb
-  var e$hsl = e.hsl
-  var e$hex = e.hex
-  var e$disableAlpha = e.disableAlpha
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$disableAlpha = e.disableAlpha
   var c = a()({
     default: {
       fields: {
@@ -5194,10 +5194,10 @@ var Zi = Object.assign || function (e) {
   return e
 }
 var eo = function (e) {
-  var e$colors = e.colors
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var r = undefined === e$onClick ? function () {} : e$onClick
-  var e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
   var s = a()({
     default: {
       colors: {
@@ -5270,19 +5270,19 @@ var no = Object.assign || function (e) {
   return e
 }
 var ro = function (e) {
-  var e$width = e.width
-  var e$rgb = e.rgb
-  var e$hex = e.hex
-  var e$hsv = e.hsv
-  var e$hsl = e.hsl
-  var e$onChange = e.onChange
-  var e$onSwatchHover = e.onSwatchHover
-  var e$disableAlpha = e.disableAlpha
-  var e$presetColors = e.presetColors
-  var e$renderers = e.renderers
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$hsv = e.hsv
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$disableAlpha = e.disableAlpha
+  var /* [auto-meaningful-name] */e$presetColors = e.presetColors
+  var /* [auto-meaningful-name] */e$renderers = e.renderers
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var _ = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var v = undefined === e$className ? "" : e$className
   var m = a()(qt({
     default: no({
@@ -5417,13 +5417,13 @@ ro.defaultProps = {
 }
 var io = Rn(ro)
 var oo = function (e) {
-  var e$hsl = e.hsl
-  var e$offset = e.offset
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$offset = e.offset
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var o = undefined === e$onClick ? function () {} : e$onClick
-  var e$active = e.active
-  var e$first = e.first
-  var e$last = e.last
+  var /* [auto-meaningful-name] */e$active = e.active
+  var /* [auto-meaningful-name] */e$first = e.first
+  var /* [auto-meaningful-name] */e$last = e.last
   var l = a()({
     default: {
       swatch: {
@@ -5466,8 +5466,8 @@ var oo = function (e) {
   })
 }
 var ao = function (e) {
-  var e$onClick = e.onClick
-  var e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
   var r = a()({
     default: {
       swatches: {
@@ -5545,12 +5545,12 @@ var so = function () {
   })
 }
 var co = function (e) {
-  var e$hsl = e.hsl
-  var e$onChange = e.onChange
-  var e$pointer = e.pointer
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$pointer = e.pointer
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var s = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var u = undefined === e$className ? "" : e$className
   var l = a()(qt({
     default: {
@@ -5588,7 +5588,7 @@ co.defaultProps = {
   styles: {}
 }
 Rn(co)
-import uo = require("./1466");
+import /* [auto-meaningful-name] */$_1466 = require("./1466")
 var lo = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -5600,15 +5600,15 @@ var lo = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(uo)
+}($_1466)
 var fo = function (e) {
-  var e$color = e.color
-  var e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$color = e.color
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
   var r = undefined === e$onClick ? function () {} : e$onClick
-  var e$onSwatchHover = e.onSwatchHover
-  var e$first = e.first
-  var e$last = e.last
-  var e$active = e.active
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$first = e.first
+  var /* [auto-meaningful-name] */e$last = e.last
+  var /* [auto-meaningful-name] */e$active = e.active
   var l = a()({
     default: {
       color: {
@@ -5674,10 +5674,10 @@ var fo = function (e) {
   }, i.a.createElement(lo.a, null)))
 }
 var ho = function (e) {
-  var e$onClick = e.onClick
-  var e$onSwatchHover = e.onSwatchHover
-  var e$group = e.group
-  var e$active = e.active
+  var /* [auto-meaningful-name] */e$onClick = e.onClick
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$group = e.group
+  var /* [auto-meaningful-name] */e$active = e.active
   var s = a()({
     default: {
       group: {
@@ -5703,15 +5703,15 @@ var ho = function (e) {
   }))
 }
 var po = function (e) {
-  var e$width = e.width
-  var e$height = e.height
-  var e$onChange = e.onChange
-  var e$onSwatchHover = e.onSwatchHover
-  var e$colors = e.colors
-  var e$hex = e.hex
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$height = e.height
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var l = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var d = undefined === e$className ? "" : e$className
   var h = a()(qt({
     default: {
@@ -5770,15 +5770,15 @@ po.defaultProps = {
 }
 Rn(po)
 var _o = function (e) {
-  var e$onChange = e.onChange
-  var e$onSwatchHover = e.onSwatchHover
-  var e$hex = e.hex
-  var e$colors = e.colors
-  var e$width = e.width
-  var e$triangle = e.triangle
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$colors = e.colors
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$triangle = e.triangle
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var l = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var d = undefined === e$className ? "" : e$className
   var h = a()(qt({
     default: {
@@ -6005,11 +6005,11 @@ vo.defaultProps = {
 }
 var mo = vo
 var yo = function (e) {
-  var e$onChange = e.onChange
-  var e$rgb = e.rgb
-  var e$hsl = e.hsl
-  var e$hex = e.hex
-  var e$hsv = e.hsv
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$hsv = e.hsv
   var c = function (e, n) {
     if (e.hex) {
       if (Tn(e.hex)) {
@@ -6201,16 +6201,16 @@ var yo = function (e) {
   })))))
 }
 var bo = function (e) {
-  var e$width = e.width
-  var e$onChange = e.onChange
-  var e$rgb = e.rgb
-  var e$hsl = e.hsl
-  var e$hsv = e.hsv
-  var e$hex = e.hex
-  var e$header = e.header
-  var e$styles = e.styles
+  var /* [auto-meaningful-name] */e$width = e.width
+  var /* [auto-meaningful-name] */e$onChange = e.onChange
+  var /* [auto-meaningful-name] */e$rgb = e.rgb
+  var /* [auto-meaningful-name] */e$hsl = e.hsl
+  var /* [auto-meaningful-name] */e$hsv = e.hsv
+  var /* [auto-meaningful-name] */e$hex = e.hex
+  var /* [auto-meaningful-name] */e$header = e.header
+  var /* [auto-meaningful-name] */e$styles = e.styles
   var f = undefined === e$styles ? {} : e$styles
-  var e$className = e.className
+  var /* [auto-meaningful-name] */e$className = e.className
   var h = undefined === e$className ? "" : e$className
   var p = a()(qt({
     default: {

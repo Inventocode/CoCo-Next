@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1324
@@ -73,7 +73,7 @@ var a = function (e) {
     }
   }
   t.prototype.render_edge_shape_collapsed_right = function (e, t) {
-    var t$height = t.height
+    var /* [auto-meaningful-name] */t$height = t.height
     e.push(this.theme.renderer.COLLAPSED_PATH)
     e.push("v " + (t$height - this.min_height + t.height / 2 - this.theme.renderer.CORNER_OFFSET_X))
   }
@@ -101,7 +101,7 @@ var a = function (e) {
     return r
   }
   t.prototype.select_output_group_children = function (e) {
-    for (var t, n, e$origin_block = e.origin_block, i = this.get_layered_value_descendants(e$origin_block, true), o = [], a = 1; a < i.length; a++) {
+    for (var t, n, /* [auto-meaningful-name] */e$origin_block = e.origin_block, i = this.get_layered_value_descendants(e$origin_block, true), o = [], a = 1; a < i.length; a++) {
       o = o.concat(i[a])
     }
     var s = function (e) {
@@ -155,7 +155,7 @@ var a = function (e) {
     var a = 0
     var s = e.get_field(i.BLOCK_GROUP_TAG_FIELD_NAME)
     var c = this.theme.renderer.BLOCK_EDGE_WIDTH_OUTPUT + this.theme.renderer.SEP_SPACE_X + s.get_size().width + this.theme.renderer.SEP_SPACE_X + this.theme.renderer.OUTPUT_GROUP_DECORATION_PADDING
-    var e$get_fieldI$BLOCK_GROUP_NAME_FIELD_NAME$get_size$width = e.get_field(i.BLOCK_GROUP_NAME_FIELD_NAME).get_size().width
+    var /* [auto-meaningful-name] */e$get_fieldI$BLOCK_GROUP_NAME_FIELD_NAME$get_size$width = e.get_field(i.BLOCK_GROUP_NAME_FIELD_NAME).get_size().width
     var l = e.origin_block.get_output_shape() || i.OutputShape.ROUND
     var f = this.render_decoration_block(0, c, e$get_fieldI$BLOCK_GROUP_NAME_FIELD_NAME$get_size$width, e.origin_block, l)
     if (r) {

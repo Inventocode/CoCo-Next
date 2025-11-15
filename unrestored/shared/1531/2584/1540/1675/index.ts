@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1675
@@ -7,10 +7,10 @@
 "use strict"
 
 var r = require("./947")
-var o = require("../1659/241")
-var i = require("../1735/257")
-var a = require("../1745/310")
-var s = require("./421")
+var o = require("../1541/241")
+var i = require("../1684/257")
+var a = require("../1684/310")
+var s = require("../1684/421")
 var c = require("./1077")
 var l = require("./948")
 r("match", function (e, t, n) {
@@ -28,7 +28,7 @@ r("match", function (e, t, n) {
     if (!r.global) {
       return l(r, s)
     }
-    var r$unicode = r.unicode
+    var /* [auto-meaningful-name] */r$unicode = r.unicode
     r.lastIndex = 0
     for (var p, f = [], h = 0; null !== (p = l(r, s));) {
       var m = a(p[0])

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：200
@@ -31,7 +31,7 @@ var r = {
         return t
       }
     }
-    var window$location$hostname = window.location.hostname
+    var /* [auto-meaningful-name] */window$location$hostname = window.location.hostname
     return window$location$hostname.startsWith("dev") || "localhost" === window$location$hostname ? "development" : window$location$hostname.startsWith("test") ? "test" : window$location$hostname.startsWith("staging") ? "staging" : window$location$hostname.startsWith("press") ? "press" : "production"
   }()) {
     case "press":

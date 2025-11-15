@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1992
@@ -22,7 +22,7 @@ module.exports = function (e, t, n, o) {
   if (o && "number" === typeof o.maxKeys) {
     c = o.maxKeys
   }
-  var e$length = e.length
+  var /* [auto-meaningful-name] */e$length = e.length
   if (c > 0 && e$length > c) {
     e$length = c
   }

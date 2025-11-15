@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1008
@@ -10,7 +10,7 @@ function r(e) {
   var t
   var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 166
   function r() {
-    for (var arguments$length = arguments.length, i = new Array(arguments$length), o = 0; o < arguments$length; o++) {
+    for (var /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length), o = 0; o < arguments$length; o++) {
       i[o] = arguments[o]
     }
     var a = this

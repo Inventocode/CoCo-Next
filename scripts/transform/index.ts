@@ -1,21 +1,7 @@
 import path from "path"
 import { promises as fs } from "fs"
-import { transformAsync, TransformOptions } from "@babel/core"
 import cliProgress from "cli-progress"
-
-import { useMeaningfulVarName } from "./use-meaningful-var-name"
-
-const config: TransformOptions = {
-    configFile: false,
-    parserOpts: {
-        plugins: ["jsx", "typescript"]
-    },
-    retainLines: true,
-    compact: false,
-    plugins: [
-        useMeaningfulVarName
-    ]
-}
+import workerpool from "workerpool"
 
 async function main() {
     bar.start(0, 0)
@@ -23,25 +9,16 @@ async function main() {
     bar.stop()
 }
 
+const pool = workerpool.pool(require.resolve("./worker"))
+
 async function transform(filepath: string) {
     if ((await fs.lstat(filepath)).isDirectory()) {
         await Promise.all((await fs.readdir(filepath)).map(
             name => transform(path.resolve(filepath, name))
         ))
-    } else if (filepath.endsWith(".ts")) {
+    } else if (filepath.endsWith(".ts") || filepath.endsWith(".tsx")) {
         bar.setTotal(bar.getTotal() + 1)
-        const code = String(await fs.readFile(filepath))
-        try {
-            const transformed = ((await transformAsync(code, {
-                ...config,
-                filename: path.relative(process.cwd(), filepath)
-            }))?.code ?? "error") + "\n"
-            if (code != transformed) {
-                await fs.writeFile(filepath, transformed)
-            }
-        } catch (error) {
-            console.error(error)
-        }
+        await pool.exec("transform", [filepath])
         bar.increment()
     }
 }

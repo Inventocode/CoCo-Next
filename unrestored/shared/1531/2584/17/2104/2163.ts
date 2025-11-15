@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2163
@@ -21,7 +21,7 @@ var o = function (e) {
   }
   (0, r.__extends)(t, e)
   t.prototype.get_display_text = function () {
-    var this$text_ = this.text_
+    var /* [auto-meaningful-name] */this$text_ = this.text_
     if (this$text_.length > this.max_display_length) {
       this$text_ = this$text_.substring(0, this.max_display_length - 2) + "…"
     }

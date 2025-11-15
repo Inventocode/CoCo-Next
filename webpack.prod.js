@@ -9,6 +9,10 @@ const common = require("./webpack.common.js")
 /** @type {webpack.Configuration} */
 const config = merge(common, {
     mode: "production",
+    output: {
+        filename: "static/scripts/[name].[contenthash].js"
+    },
+    devtool: "source-map",
     module: {
         rules: [
             {
@@ -27,8 +31,8 @@ const config = merge(common, {
             minSize: 200000,
             maxSize: 1000000,
             minChunks: 1,
-            maxAsyncRequests: 30,
-            maxInitialRequests: 30,
+            maxAsyncRequests: 4,
+            maxInitialRequests: 8,
         }
     },
     plugins: [

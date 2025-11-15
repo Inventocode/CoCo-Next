@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2331
@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 var r = require("../../../580")
-var i = require("../1368/index")
+var i = require("../1368")
 var o = function () {
   function e(e) {
     this._binding = e

@@ -1,17 +1,17 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1654
  */
 
-var r = require("../1623/86")
-var o = require("../1664/472")
-var i = require("../1623/439")
-var a = require("../1659/241")
-var s = require("../1738/231")
-var c = require("./575/index")
+var r = require("../1698/86/index")
+var o = require("../1541/472")
+var i = require("../1564/439")
+var a = require("../1541/241")
+var s = require("../1541/231")
+var c = require("../1541/575/index")
 var l = require("./1655")
-var u = require("../1736/167")
+var u = require("../1541/167")
 var d = o("Reflect", "construct")
 var p = u(function () {
   function e() {}
@@ -51,7 +51,7 @@ r({
       r.push.apply(r, t)
       return new (l.apply(e, r))()
     }
-    var n$prototype = n.prototype
+    var /* [auto-meaningful-name] */n$prototype = n.prototype
     var u = c(s(n$prototype) ? n$prototype : Object.prototype)
     var h = Function.apply.call(e, u, t)
     return s(h) ? h : u

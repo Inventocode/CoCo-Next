@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：349
@@ -70,7 +70,7 @@ var g = function (t) {
     var /* [auto-meaningful-name] */d$return
     var i
     var /* [auto-meaningful-name] */y$return
-    var this$decodeMiddleCounters = this.decodeMiddleCounters
+    var /* [auto-meaningful-name] */this$decodeMiddleCounters = this.decodeMiddleCounters
     this$decodeMiddleCounters[0] = 0
     this$decodeMiddleCounters[1] = 0
     this$decodeMiddleCounters[2] = 0
@@ -418,7 +418,7 @@ var I = function (t) {
     var /* [auto-meaningful-name] */s$return
     try {
       for (var s = C(this.readers), f = s.next(); !f.done; f = s.next()) {
-        var f$value = f.value
+        var /* [auto-meaningful-name] */f$value = f.value
         try {
           var l = f$value.decodeRow(t, e, r)
           var d = l.getBarcodeFormat() === n.a.EAN_13 && "0" === l.getText().charAt(0)

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2218
@@ -11,9 +11,9 @@ var i = require("../757/index")
 var o = require("../1117")
 var a = require("../1336")
 var s = require("./1337")
-var i$ucs2length = i.ucs2length
-var u = require("../1115/1116")
-var o$Validation = o.Validation
+var /* [auto-meaningful-name] */i$ucs2length = i.ucs2length
+var u = require("../757/1116")
+var /* [auto-meaningful-name] */o$Validation = o.Validation
 function f(e, t, n) {
   var r = h.call(this, e, t, n)
   return r >= 0 ? {
@@ -66,7 +66,7 @@ function v(e, t) {
 }
 module.exports = function e(t, n, h, m) {
   var y = this
-  var this$_opts = this._opts
+  var /* [auto-meaningful-name] */this$_opts = this._opts
   var w = [undefined]
   var E = {}
   var x = []
@@ -83,27 +83,27 @@ module.exports = function e(t, n, h, m) {
   var B = this._compilations[T.index]
   if (T.compiling) {
     return B.callValidate = function e() {
-      var b$validate = B.validate
-      var n = b$validate.apply(this, arguments)
-      e.errors = b$validate.errors
+      var /* [auto-meaningful-name] */B$validate = B.validate
+      var n = B$validate.apply(this, arguments)
+      e.errors = B$validate.errors
       return n
     }
   }
-  var this$_formats = this._formats
-  var this$RULES = this.RULES
+  var /* [auto-meaningful-name] */this$_formats = this._formats
+  var /* [auto-meaningful-name] */this$RULES = this.RULES
   try {
     var F = P(t, n, h, m)
     B.validate = F
-    var b$callValidate = B.callValidate
-    if (b$callValidate) {
-      b$callValidate.schema = F.schema
-      b$callValidate.errors = null
-      b$callValidate.refs = F.refs
-      b$callValidate.refVal = F.refVal
-      b$callValidate.root = F.root
-      b$callValidate.$async = F.$async
+    var /* [auto-meaningful-name] */B$callValidate = B.callValidate
+    if (B$callValidate) {
+      B$callValidate.schema = F.schema
+      B$callValidate.errors = null
+      B$callValidate.refs = F.refs
+      B$callValidate.refVal = F.refVal
+      B$callValidate.root = F.root
+      B$callValidate.$async = F.$async
       if (this$_opts.sourceCode) {
-        b$callValidate.source = F.source
+        B$callValidate.source = F.source
       }
     }
     return F
@@ -202,7 +202,7 @@ module.exports = function e(t, n, h, m) {
     }(i)
   }
   function M(e, t) {
-    var w$length = w.length
+    var /* [auto-meaningful-name] */w$length = w.length
     w[w$length] = t
     E[e] = w$length
     return "refVal" + w$length
@@ -247,13 +247,13 @@ module.exports = function e(t, n, h, m) {
   }
   function H(e, t, n, r) {
     if (false !== y._opts.validateSchema) {
-      var e$definition$dependencies = e.definition.dependencies
+      var /* [auto-meaningful-name] */e$definition$dependencies = e.definition.dependencies
       if (e$definition$dependencies && !e$definition$dependencies.every(function (e) {
         return Object.prototype.hasOwnProperty.call(n, e)
       })) {
         throw new Error("parent schema must have all required keywords: " + e$definition$dependencies.join(","))
       }
-      var e$definition$validateSchema = e.definition.validateSchema
+      var /* [auto-meaningful-name] */e$definition$validateSchema = e.definition.validateSchema
       if (e$definition$validateSchema) {
         if (!e$definition$validateSchema(t)) {
           var a = "keyword schema is invalid: " + y.errorsText(e$definition$validateSchema.errors)
@@ -265,9 +265,9 @@ module.exports = function e(t, n, h, m) {
       }
     }
     var s
-    var e$definition$compile = e.definition.compile
-    var e$definition$inline = e.definition.inline
-    var e$definition$macro = e.definition.macro
+    var /* [auto-meaningful-name] */e$definition$compile = e.definition.compile
+    var /* [auto-meaningful-name] */e$definition$inline = e.definition.inline
+    var /* [auto-meaningful-name] */e$definition$macro = e.definition.macro
     if (e$definition$compile) {
       s = e$definition$compile.call(y, t, n, r)
     } else if (e$definition$macro) {
@@ -283,10 +283,10 @@ module.exports = function e(t, n, h, m) {
     if (undefined === s) {
       throw new Error("custom keyword \"" + e.keyword + "\"failed to compile")
     }
-    var s$length = S.length
-    S[s$length] = s
+    var /* [auto-meaningful-name] */S$length = S.length
+    S[S$length] = s
     return {
-      code: "customRule" + s$length,
+      code: "customRule" + S$length,
       validate: s
     }
   }

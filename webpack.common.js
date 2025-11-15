@@ -2,23 +2,34 @@ const path = require("path")
 const webpack = require("webpack")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
+/**
+ * @typedef {Object} PageInfo
+ * @property {string} name
+ * @property {string[]} [filenames]
+ */
+
+/** @type {PageInfo[]} */
+const PAGES = [
+    { name: "home", filenames: ["index.html", "home/index.html", "work/index.html"] },
+    { name: "editor" },
+    { name: "editor-player", filenames: ["editor/editor-player.html"] },
+    { name: "player", filenames: ["editor/player/index.html"] },
+    { name: "about" }
+]
+
 /** @type {webpack.Configuration} */
 const config = {
     stats: "minimal",
     entry: {
         "proxy": path.resolve(__dirname, "helper", "proxy"),
-        "home": path.resolve(__dirname, "src", "home", "index"),
-        "editor": path.resolve(__dirname, "src", "editor", "index"),
         "editor-service-worker": {
             import: path.resolve(__dirname, "src", "editor-service-worker", "index"),
             filename: "editor/main.sw.js"
         },
-        "editor-player": path.resolve(__dirname, "src", "editor-player", "index"),
-        "player": path.resolve(__dirname, "src", "player", "index")
+        ...Object.fromEntries(PAGES.map(({ name }) => [name, path.resolve(__dirname, "src", name, "index")]))
     },
     output: {
         path: path.resolve(__dirname, "dist", "coco.codemao.cn"),
-        filename: "static/scripts/[name].js",
         clean: true
     },
     module: {
@@ -64,38 +75,22 @@ const config = {
         new webpack.ProgressPlugin(),
         new webpack.ProvidePlugin({
             process: "process/"
-        }),
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "src/home/index.html",
-            chunks: ["proxy", "home"]
-        }),
-        new HtmlWebpackPlugin({
-            filename: "home/index.html",
-            template: "src/home/index.html",
-            chunks: ["proxy", "home"]
-        }),
-        new HtmlWebpackPlugin({
-            filename: "work/index.html",
-            template: "src/home/index.html",
-            chunks: ["proxy", "home"]
-        }),
-        new HtmlWebpackPlugin({
-            filename: "editor/index.html",
-            template: "src/editor/index.html",
-            chunks: ["proxy", "editor"]
-        }),
-        new HtmlWebpackPlugin({
-            filename: "editor/editor-player.html",
-            template: "src/editor-player/index.html",
-            chunks: ["proxy", "editor-player"]
-        }),
-        new HtmlWebpackPlugin({
-            filename: "editor/player/index.html",
-            template: "src/player/index.html",
-            chunks: ["proxy", "player"]
         })
     ]
+}
+
+for (const { name, filenames = [`${name}/index.html`] } of PAGES) {
+    config.plugins ??= []
+    for (const filename of filenames) {
+        config.plugins.push(
+            new HtmlWebpackPlugin({
+                filename,
+                template: `src/${name}/index.html`,
+                chunks: ["proxy", name],
+                publicPath: "/"
+            })
+        )
+    }
 }
 
 module.exports = config

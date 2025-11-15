@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：683
@@ -8,9 +8,9 @@
 
 export { ii as a }
 var r
-import i = require("./269/index");
-import Hammerjs = require("hammerjs");
-import a = require("./34/index");
+import /* [auto-meaningful-name] */$_269_index = require("./269/index")
+import /* [auto-meaningful-name] */Hammerjs = require("hammerjs")
+import /* [auto-meaningful-name] */$_34_index = require("./34/index")
 var s = {
   App: Symbol("App"),
   Data: Symbol("Data"),
@@ -25,11 +25,11 @@ var s = {
   StageAnimation: Symbol("StageAnimation"),
   Physics: Symbol("Physics")
 }
-import c = require("./65");
-import u = require("./122");
+import c = require("./65")
+import /* [auto-meaningful-name] */$_122 = require("./122")
 var l = function (e, t, n, r) {
   var i
-  var arguments$length = arguments.length
+  var /* [auto-meaningful-name] */arguments$length = arguments.length
   var a = arguments$length < 3 ? t : null === r ? r = Object.getOwnPropertyDescriptor(t, n) : r
   if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) {
     a = Reflect.decorate(e, t, n, r)
@@ -193,7 +193,7 @@ var _ = function () {
     this.mouse_down_time = 0
     this.cancel_multi_touch = false
     this.on_stage_swipe = function (e) {
-      var t$get_app$stage = t.get_app().stage
+      var /* [auto-meaningful-name] */t$get_app$stage = t.get_app().stage
       if (t$get_app$stage.name) {
         t.events.fire("stage:swipe", {
           target_id: t$get_app$stage.name,
@@ -208,15 +208,15 @@ var _ = function () {
     if (this.app) {
       console.warn("Application cannot be reinitialized.")
     } else {
-      this.app = new a.b(e.renderer)
+      this.app = new $_34_index.b(e.renderer)
       this.app.stage.name = e.id ? e.id : "stage"
       this.cancel_multi_touch = undefined !== e.cancel_multi_touch && e.cancel_multi_touch
       this.app.stage.pivot.set(-this.app.renderer.width / 2, -this.app.renderer.height / 2)
       this.app.stage.interactive = true
-      this.app.stage.hitArea = new a.q(-this.app.renderer.width / 2, -this.app.renderer.height / 2, this.app.renderer.width, this.app.renderer.height)
+      this.app.stage.hitArea = new $_34_index.q(-this.app.renderer.width / 2, -this.app.renderer.height / 2, this.app.renderer.width, this.app.renderer.height)
       this.app.ticker.autoStart = false
       this.app.ticker.stop()
-      this.scene_container = new a.f()
+      this.scene_container = new $_34_index.f()
       this.scene_container.name = "scenes"
       this.scene_container.interactive = true
       this.app.stage.addChild(this.scene_container)
@@ -253,7 +253,7 @@ var _ = function () {
         return t.emit_mouse_event(e, "stage:rightclick")
       })
       if (e.development) {
-        u.a.set_log_enabled(true)
+        $_122.a.set_log_enabled(true)
       }
     }
   }
@@ -265,9 +265,9 @@ var _ = function () {
   }
   e.prototype.get_app_view_size = function () {
     var e = this.get_app_view_resolution()
-    var this$get_app$view = this.get_app().view
-    var this$get_app$view$width = this$get_app$view.width
-    var this$get_app$view$height = this$get_app$view.height
+    var /* [auto-meaningful-name] */this$get_app$view = this.get_app().view
+    var /* [auto-meaningful-name] */this$get_app$view$width = this$get_app$view.width
+    var /* [auto-meaningful-name] */this$get_app$view$height = this$get_app$view.height
     return {
       width: this$get_app$view$width /= e,
       height: this$get_app$view$height /= e
@@ -367,10 +367,10 @@ var _ = function () {
   }
   e.prototype.resize = function (e, t) {
     var n = this.get_app()
-    var n$stage = n.stage
-    var n$renderer = n.renderer
+    var /* [auto-meaningful-name] */n$stage = n.stage
+    var /* [auto-meaningful-name] */n$renderer = n.renderer
     n$stage.pivot.set(-e / 2, -t / 2)
-    n$stage.hitArea = new a.q(-e / 2, -t / 2, e, t)
+    n$stage.hitArea = new $_34_index.q(-e / 2, -t / 2, e, t)
     n$renderer.resize(e, t)
     if (n$stage.name) {
       this.events.fire("stage:resize", {
@@ -387,7 +387,7 @@ var _ = function () {
     this.app = undefined
   }
   e.prototype.emit_mouse_event = function (e, t) {
-    var this$get_app$stage = this.get_app().stage
+    var /* [auto-meaningful-name] */this$get_app$stage = this.get_app().stage
     var r = e.data.getLocalPosition(this$get_app$stage)
     var i = r.x
     var o = r.y
@@ -422,15 +422,15 @@ var _ = function () {
       })
     }
     if (this.cancel_multi_touch) {
-      var e$data$originalEvent = e.data.originalEvent
+      var /* [auto-meaningful-name] */e$data$originalEvent = e.data.originalEvent
       if (c.o(e$data$originalEvent) && e$data$originalEvent.touches.length > 1) {
         this.events.emit_break_event()
       }
     }
   }
-  return e = l([i.injectable(), d(0, i.inject(s.Events)), f("design:paramtypes", [Object])], e)
+  return e = l([$_269_index.injectable(), d(0, $_269_index.inject(s.Events)), f("design:paramtypes", [Object])], e)
 }()
-import A = require("./735/index");
+import /* [auto-meaningful-name] */$_735_index = require("./735/index")
 var g = function (e, t) {
   var n = "function" === typeof Symbol && e[Symbol.iterator]
   if (!n) {
@@ -471,7 +471,7 @@ function m(e, t, n, i) {
   i = i || {
     mode: "vertex"
   }
-  for (var o, s, c, u, l, f = [], d = -1, r$SKIP = r.SKIP, p = 0, e$length = e.length, A = 3; A < e$length; A++) {
+  for (var o, s, c, u, l, f = [], d = -1, /* [auto-meaningful-name] */r$SKIP = r.SKIP, p = 0, /* [auto-meaningful-name] */e$length = e.length, A = 3; A < e$length; A++) {
     if (e[A] >>> 24 > 0) {
       d = A
       break
@@ -484,21 +484,21 @@ function m(e, t, n, i) {
       switch ((l = m(o, s)) === r.MOVE_UP ? s-- : l === r.MOVE_DOWN ? s++ : l === r.MOVE_LEFT ? o-- : l === r.MOVE_RIGHT && o++, i.mode) {
         case "vertex":
           if (l !== r$SKIP) {
-            f.push(new a.m(o, s))
+            f.push(new $_34_index.m(o, s))
           }
           break
         case "step":
           if (p % i.step === 0) {
-            f.push(new a.m(o, s))
+            f.push(new $_34_index.m(o, s))
           }
           break
         case "mixed":
           if (l !== r$SKIP) {
-            f.push(new a.m(o, s))
+            f.push(new $_34_index.m(o, s))
             p = 0
           } else {
             if (p % i.step === 0) {
-              f.push(new a.m(o, s))
+              f.push(new $_34_index.m(o, s))
             }
           }
       }
@@ -525,7 +525,7 @@ function m(e, t, n, i) {
           var h = Math.floor(Math.sqrt(b(o, s)) / r)
           var p = []
           for (f = 1; f < h; f++) {
-            p.push(new a.m(o.x + (s.x - o.x) * f / h, o.y + (s.y - o.y) * f / h))
+            p.push(new $_34_index.m(o.x + (s.x - o.x) * f / h, o.y + (s.y - o.y) * f / h))
           }
           return v([o], p, [s])
         }
@@ -565,7 +565,7 @@ function y(e, t, n) {
     return 0
   }
   var i = ((e.x - t.x) * (n.x - t.x) + (e.y - t.y) * (n.y - t.y)) / r
-  return b(e, i < 0 ? t : i > 1 ? n : new a.m(t.x + i * (n.x - t.x), t.y + i * (n.y - t.y)))
+  return b(e, i < 0 ? t : i > 1 ? n : new $_34_index.m(t.x + i * (n.x - t.x), t.y + i * (n.y - t.y)))
 }
 function b(e, t) {
   var n = e.x - t.x
@@ -579,7 +579,7 @@ function b(e, t) {
   e[e.MOVE_RIGHT = 3] = "MOVE_RIGHT"
   e[e.SKIP = 4] = "SKIP"
 }(r || (r = {}))
-import w = require("./520/index");
+import /* [auto-meaningful-name] */$_520_index = require("./520/index")
 function E(e, t) {
   var n = function (e) {
     for (var t = [], n = 0, r = 0, i = 0, o = 0; o < e.length; o++) {
@@ -607,7 +607,7 @@ function E(e, t) {
     return t
   }(e)
   if (n.length) {
-    for (var n$length = n.length, i = function e(t) {
+    for (var /* [auto-meaningful-name] */n$length = n.length, i = function e(t) {
         for (var n = 0, r = 0, i = 0; i < t.length; i++) {
           var o = C(i + 1, t.length)
           var a = C(i + 2, t.length)
@@ -618,7 +618,7 @@ function E(e, t) {
           }
         }
         if (r === n) {
-          var s = w.a(t)
+          var s = $_520_index.a(t)
           s.pop()
           return e(s)
         }
@@ -737,7 +737,7 @@ function F(e, t, n, r) {
     if (0 !== f) {
       var d = (u * s - o * l) / f
       var h = (i * l - c * s) / f
-      return new a.o(d, h)
+      return new $_34_index.o(d, h)
     }
   }(e, t, n, r)
   return i ? I(i.x, e.x, t.x) && I(i.x, n.x, r.x) && I(i.y, e.y, t.y) && I(i.y, n.y, r.y) : 3 === D(e, t, n) || 3 === D(e, t, r)
@@ -780,8 +780,8 @@ var M = function () {
     this.app = e
   }
   e.prototype.get_texture = function (e) {
-    var t = a.B.TextureCache[e]
-    if (t instanceof a.y) {
+    var t = $_34_index.B.TextureCache[e]
+    if (t instanceof $_34_index.y) {
       return t
     }
   }
@@ -836,7 +836,7 @@ var M = function () {
             var d = i ? (Math.random() - .5) * i + o : o
             var h = i ? (Math.random() - .5) * i + s : s
             if (f((c = d) - 1, (u = h) - 1) && f(c, u - 1) && f(c - 1, u) && f(c, u)) {
-              l.push(new a.m(d, h))
+              l.push(new $_34_index.m(d, h))
             }
           }
         }
@@ -919,7 +919,7 @@ var M = function () {
     if (t) {
       return t
     }
-    for (var this$app$get_scene_container$children = this.app.get_scene_container().children, r = 0; r < this$app$get_scene_container$children.length; r++) {
+    for (var /* [auto-meaningful-name] */this$app$get_scene_container$children = this.app.get_scene_container().children, r = 0; r < this$app$get_scene_container$children.length; r++) {
       var i = this$app$get_scene_container$children[r]
       if (c.m(i) && i.id === e) {
         this.scenes_cache.set(e, i)
@@ -934,22 +934,22 @@ var M = function () {
     var /* [auto-meaningful-name] */p$return
     var a = this.actors_cache.get(e)
     var s = function (e) {
-      return !t || A.a(e.get_id(), t)
+      return !t || $_735_index.a(e.get_id(), t)
     }
     if (a) {
       return !t || s(a.get_parent_scene()) ? a : undefined
     }
-    var this$app$get_scene_container$children = this.app.get_scene_container().children
+    var /* [auto-meaningful-name] */this$app$get_scene_container$children = this.app.get_scene_container().children
     try {
       for (var l = N(this$app$get_scene_container$children), f = l.next(); !f.done; f = l.next()) {
-        var f$value = f.value
+        var /* [auto-meaningful-name] */f$value = f.value
         if (c.m(f$value) && s(f$value)) {
-          var f$value$get_actor_container$children = f$value.get_actor_container().children
+          var /* [auto-meaningful-name] */f$value$get_actor_container$children = f$value.get_actor_container().children
           try {
             for (i = undefined, p = N(f$value$get_actor_container$children), _ = p.next(), undefined; !_.done; _ = p.next()) {
               var p
               var _
-              var _$value = _.value
+              var /* [auto-meaningful-name] */_$value = _.value
               if (c.k(_$value) && _$value.id === e) {
                 var v = _$value.get_actor()
                 this.actors_cache.set(e, v)
@@ -1041,7 +1041,7 @@ var M = function () {
       }
       var c = r.get_texture(t)
       if (c) {
-        var u = new a.u(c, n)
+        var u = new $_34_index.u(c, n)
         u.parse(function () {
           if (u.textures) {
             var n = {
@@ -1071,8 +1071,8 @@ var M = function () {
     var r = this.sprite_sheets.values()
     try {
       for (var i = N(r), o = i.next(); !o.done; o = i.next()) {
-        var o$value = o.value
-        if (A.a(e, o$value.texture_ids)) {
+        var /* [auto-meaningful-name] */o$value = o.value
+        if ($_735_index.a(e, o$value.texture_ids)) {
           return true
         }
       }
@@ -1097,7 +1097,7 @@ var M = function () {
 }()
 var j = function (e, t, n, r) {
   var i
-  var arguments$length = arguments.length
+  var /* [auto-meaningful-name] */arguments$length = arguments.length
   var a = arguments$length < 3 ? t : null === r ? r = Object.getOwnPropertyDescriptor(t, n) : r
   if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) {
     a = Reflect.decorate(e, t, n, r)
@@ -1115,7 +1115,7 @@ var j = function (e, t, n, r) {
 }
 var L = function () {
   function e() {
-    this.event_emitter = new a.B.EventEmitter()
+    this.event_emitter = new $_34_index.B.EventEmitter()
     this.disabled = 0
     this.fire_queue = []
   }
@@ -1125,7 +1125,7 @@ var L = function () {
   e.prototype.enable = function () {
     if (this.disabled <= 0) {
       this.disabled = 0
-      return new u.a("Do not use enable more than once")
+      return new $_122.a("Do not use enable more than once")
     }
     this.disabled--
   }
@@ -1157,9 +1157,9 @@ var L = function () {
   e.prototype.emit = function (e, t) {
     this.event_emitter.emit(e, t)
   }
-  return e = j([i.injectable()], e)
+  return e = j([$_269_index.injectable()], e)
 }()
-import Axios = require("axios");
+import /* [auto-meaningful-name] */Axios = require("axios")
 var H = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -1304,10 +1304,10 @@ var G = function (e, t) {
     }
   }
 }
-var z = "Sprite sheet is being loaded."
-var Q = "Sprite sheet already exists."
-var W = "Cannot load the image of sprite sheet"
-var K = "Cannot parse sprite sheet textures."
+var /* [auto-meaningful-name] */SpriteSheetIsBeingLoaded$ = "Sprite sheet is being loaded."
+var /* [auto-meaningful-name] */SpriteSheetAlreadyExists$ = "Sprite sheet already exists."
+var /* [auto-meaningful-name] */CannotLoadTheImageOfSpriteSheet = "Cannot load the image of sprite sheet"
+var /* [auto-meaningful-name] */CannotParseSpriteSheetTextures$ = "Cannot parse sprite sheet textures."
 var X = function () {
   function e(e) {
     this.data = e
@@ -1317,7 +1317,7 @@ var X = function () {
     return V(this, undefined, undefined, function () {
       var n
       return G(this, function (r) {
-        return this.data.get_texture(e) ? [2, new u.a("Texture " + e + " already exists. Please use new texture id")] : (n = a.y.from(t), a.y.addToCache(n, e), n.valid ? [2, new u.a("This texture " + e + " is already available in pixi")] : [2, new Promise(function (e, t) {
+        return this.data.get_texture(e) ? [2, new $_122.a("Texture " + e + " already exists. Please use new texture id")] : (n = $_34_index.y.from(t), $_34_index.y.addToCache(n, e), n.valid ? [2, new $_122.a("This texture " + e + " is already available in pixi")] : [2, new Promise(function (e, t) {
           n.baseTexture.on("loaded", function () {
             e()
           })
@@ -1335,28 +1335,28 @@ var X = function () {
   e.prototype.get_texture_img_url = function (e) {
     var t = this.data.get_texture(e)
     if (!t) {
-      return u.b.error("Cannot find texture " + e)
+      return $_122.b.error("Cannot find texture " + e)
     }
     var n = t.baseTexture.getDrawableSource && t.baseTexture.getDrawableSource()
-    return n && n instanceof HTMLImageElement ? u.b.success(n.src) : u.b.error("Cannot get url because source is not ImageElement")
+    return n && n instanceof HTMLImageElement ? $_122.b.success(n.src) : $_122.b.error("Cannot get url because source is not ImageElement")
   }
   e.prototype.destroy_texture = function (e) {
     var t = this.data.get_texture(e)
-    return t ? this.data.is_texture_in_sprite_sheet(e) ? new u.a("Texture " + e + " is part of sprite sheet. Cannot destroy it alone") : (t.destroy(true), void this.data.clear_texture_points_cache(e)) : new u.a("Cannot find texture " + e)
+    return t ? this.data.is_texture_in_sprite_sheet(e) ? new $_122.a("Texture " + e + " is part of sprite sheet. Cannot destroy it alone") : (t.destroy(true), void this.data.clear_texture_points_cache(e)) : new $_122.a("Cannot find texture " + e)
   }
   e.prototype.clear_texture_cache = function (e) {
     if (!this.data.get_texture(e)) {
-      return new u.a("Cannot find texture " + e)
+      return new $_122.a("Cannot find texture " + e)
     }
-    delete a.B.TextureCache[e]
+    delete $_34_index.B.TextureCache[e]
     this.data.clear_texture_points_cache(e)
   }
   e.prototype.clear_all_textures_cache = function () {
     this.data.clear_all_textures_points_cache()
   }
   e.prototype.destroy_all_textures = function () {
-    a.B.destroyTextureCache()
-    a.B.clearTextureCache()
+    $_34_index.B.destroyTextureCache()
+    $_34_index.B.clearTextureCache()
     this.data.clear_all_textures_points_cache()
     this.data.clear_all_sprite_sheet_cache()
   }
@@ -1375,11 +1375,11 @@ var X = function () {
         switch (d.label) {
           case 0:
             if (t = this.data.get_sprite_sheet_data(e)) {
-              new u.a(Q)
+              new $_122.a(SpriteSheetAlreadyExists$)
               return [2, t.texture_ids]
             }
             if (this.loading_urls.has(e)) {
-              return [2, new u.a(z)]
+              return [2, new $_122.a(SpriteSheetIsBeingLoaded$)]
             }
             this.loading_urls.add(e)
             n = function () {
@@ -1396,9 +1396,9 @@ var X = function () {
           case 3:
             o = d.sent()
             n()
-            return [2, new u.a(o)]
+            return [2, new $_122.a(o)]
           case 4:
-            s = a.B.url.resolve(e, i$data.meta.image)
+            s = $_34_index.B.url.resolve(e, i$data.meta.image)
             c = "SPRITE_SHEET_" + e
             d.label = 5
           case 5:
@@ -1411,11 +1411,11 @@ var X = function () {
           case 7:
             d.sent()
             n()
-            return [2, new u.a(W)]
+            return [2, new $_122.a(CannotLoadTheImageOfSpriteSheet)]
           case 8:
-            return l ? [4, this.data.parse_and_cache_sprite_sheet_data(e, c, i$data)] : (n(), [2, new u.a(W)])
+            return l ? [4, this.data.parse_and_cache_sprite_sheet_data(e, c, i$data)] : (n(), [2, new $_122.a(CannotLoadTheImageOfSpriteSheet)])
           case 9:
-            return (t = d.sent()) ? (n(), [2, t.texture_ids]) : (n(), [2, new u.a(K)])
+            return (t = d.sent()) ? (n(), [2, t.texture_ids]) : (n(), [2, new $_122.a(CannotParseSpriteSheetTextures$)])
         }
       })
     })
@@ -1424,7 +1424,7 @@ var X = function () {
     var t = this
     var n = this.data.get_sprite_sheet_data(e)
     if (!n) {
-      return new u.a("Cannot find sprite sheet " + e)
+      return new $_122.a("Cannot find sprite sheet " + e)
     }
     n.texture_ids.forEach(function (e) {
       var n = t.data.get_texture(e)
@@ -1473,7 +1473,7 @@ var J = function () {
   e.prototype.update_attributes = function (e, t, n) {
     var r
     var i
-    if (!(e instanceof a.A)) {
+    if (!(e instanceof $_34_index.A)) {
       switch (n) {
         case Y.X:
           i = t - e.x
@@ -1507,11 +1507,11 @@ var J = function () {
     var /* [auto-meaningful-name] */e$to_options
     var n
     var r = this
-    var e$target = e.target
+    var /* [auto-meaningful-name] */e$target = e.target
     var o = 1e3 * e.duration
     var s = performance.now()
     var c = (null === (e$to_options = e.to_options) || undefined === e$to_options ? undefined : e$to_options.ease) || P.QUAD
-    var _e$to_options = e.to_options
+    var /* [auto-meaningful-name] */_e$to_options = e.to_options
     var l = e.delay ? 1e3 * e.delay : 0
     switch (c) {
       case P.QUAD:
@@ -1521,7 +1521,7 @@ var J = function () {
         n = $
     }
     var f = {}
-    if (!(e$target instanceof a.A)) {
+    if (!(e$target instanceof $_34_index.A)) {
       if (undefined !== _e$to_options.x && _e$to_options.x - e$target.position.x !== 0) {
         f.update_x = this.update_attributes(e$target, _e$to_options.x, Y.X)
       }
@@ -1580,7 +1580,7 @@ var J = function () {
     var i = {
       angle: e.angle
     }
-    if (!(e instanceof a.A)) {
+    if (!(e instanceof $_34_index.A)) {
       i.x = e.position.x
       i.y = e.position.x
       i.visible = e.visible
@@ -1606,7 +1606,7 @@ var J = function () {
     return this
   }
   e.prototype.set_target_initial_state = function (e, t) {
-    if (!(e instanceof a.A)) {
+    if (!(e instanceof $_34_index.A)) {
       if (undefined !== t.x) {
         e.position.x = t.x
       }
@@ -1690,9 +1690,9 @@ var Z = function () {
     }
   }
   e.prototype.set_slide_transition = function (e, t, n) {
-    var this$app$get_app$view = this.app.get_app().view
-    var this$app$get_app$view$width = this$app$get_app$view.width
-    var this$app$get_app$view$height = this$app$get_app$view.height
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
     t.visible = true
     var a = 0
     var s = 0
@@ -1726,9 +1726,9 @@ var Z = function () {
   e.prototype.set_bounce_transition = function (e, t) {
     var n = this.app.get_app()
     var r = this.app.get_scene_container()
-    var n$view = n.view
-    var n$view$width = n$view.width
-    var n$view$height = n$view.height
+    var /* [auto-meaningful-name] */n$view = n.view
+    var /* [auto-meaningful-name] */n$view$width = n$view.width
+    var /* [auto-meaningful-name] */n$view$height = n$view.height
     this.in_scene_origin_z_index = r.getChildIndex(e)
     r.setChildIndex(e, r.children.length - 1)
     e.visible = true
@@ -1766,14 +1766,14 @@ var Z = function () {
   }
   e.prototype.set_distort_transition = function (e, t) {
     var n = this.app.get_app()
-    var n$view = n.view
-    var n$view$width = n$view.width
-    var n$view$height = n$view.height
-    var s = new a.r(new a.d({
+    var /* [auto-meaningful-name] */n$view = n.view
+    var /* [auto-meaningful-name] */n$view$width = n$view.width
+    var /* [auto-meaningful-name] */n$view$height = n$view.height
+    var s = new $_34_index.r(new $_34_index.d({
       width: n$view$width,
       height: n$view$height
     }))
-    var u = new a.r(new a.d({
+    var u = new $_34_index.r(new $_34_index.d({
       width: n$view$width,
       height: n$view$height
     }))
@@ -1787,19 +1787,19 @@ var Z = function () {
     n.renderer.render(n.stage, {
       renderTexture: u
     })
-    this.out_sprite = a.t.from(s)
+    this.out_sprite = $_34_index.t.from(s)
     this.out_sprite.anchor.set(.5)
-    this.in_sprite = a.t.from(u)
+    this.in_sprite = $_34_index.t.from(u)
     this.in_sprite.anchor.set(.5)
     var l = Math.min(n$view$width, n$view$height)
-    var f = new a.o(n$view$width / 2, n$view$height / 2)
-    var d = new a.A({
+    var f = new $_34_index.o(n$view$width / 2, n$view$height / 2)
+    var d = new $_34_index.A({
       radius: l,
       angle: 0,
       padding: 10
     })
     d.offset = f
-    var h = new a.A({
+    var h = new $_34_index.A({
       radius: l,
       angle: c.b(189),
       padding: 10
@@ -1867,8 +1867,8 @@ var Z = function () {
   }
   return e
 }()
-import ee = require("../107");
-import te = require("./1002");
+import /* [auto-meaningful-name] */$$_107_index = require("../107/index")
+import /* [auto-meaningful-name] */$_1002 = require("./1002")
 var ne = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -1892,8 +1892,8 @@ var ne = function () {
 var re = function (e) {
   function t(t, n, r, i, o, a, s, c, u) {
     var l = e.call(this, t, r, i) || this
-    l.type = ee.d.Background
-    l.rotation_type = ee.e.ALL
+    l.type = $$_107_index.d.Background
+    l.rotation_type = $$_107_index.e.ALL
     l.rotation_value = 0
     l.is_horizontal_flipped = false
     l.is_vertical_flipped = false
@@ -1946,11 +1946,11 @@ var re = function (e) {
     })
   }
   t.prototype.set_position_x = function (e) {
-    var this$get_position$y = this.get_position().y
+    var /* [auto-meaningful-name] */this$get_position$y = this.get_position().y
     this.set_position(e, this$get_position$y)
   }
   t.prototype.set_position_y = function (e) {
-    var this$get_position$x = this.get_position().x
+    var /* [auto-meaningful-name] */this$get_position$x = this.get_position().x
     this.set_position(this$get_position$x, e)
   }
   t.prototype.move_forward = function (e) {
@@ -1961,7 +1961,7 @@ var re = function (e) {
     this.set_position(r, i)
   }
   t.prototype.get_position = function () {
-    var this$transform_offset$position = this.transform_offset.position
+    var /* [auto-meaningful-name] */this$transform_offset$position = this.transform_offset.position
     return {
       x: this.transform_position.x - this$transform_offset$position.x,
       y: -this.transform_position.y + this$transform_offset$position.y
@@ -1994,15 +1994,15 @@ var re = function (e) {
     this.rotation_value = t
     var n = false
     switch (this.rotation_type) {
-      case ee.e.ALL:
+      case $$_107_index.e.ALL:
         this.set_pixi_rotation(-this.rotation_value)
         n = this.is_rotation_flipped
         break
-      case ee.e.LEFT_RIGHT:
+      case $$_107_index.e.LEFT_RIGHT:
         this.set_pixi_rotation(0)
         n = (this.rotation_value >= Math.PI / 2 || this.rotation_value < -Math.PI / 2) !== this.is_rotation_flipped
         break
-      case ee.e.NONE:
+      case $$_107_index.e.NONE:
         this.set_pixi_rotation(0)
         n = this.is_rotation_flipped
     }
@@ -2067,7 +2067,7 @@ var re = function (e) {
   t.prototype.set_texture = function (e, t) {
     var n = this.data.get_texture(e)
     if (!n) {
-      return new u.a("Cannot find texture " + e + ". Please load texture first")
+      return new $_122.a("Cannot find texture " + e + ". Please load texture first")
     }
     this.texture = n
     this.texture_id = e
@@ -2084,13 +2084,13 @@ var re = function (e) {
   t.prototype.update_adaptive_scale = function () {
     if (this.adaption) {
       var e = this.app.get_app_view_size()
-      var e$width = e.width
-      var e$height = e.height
+      var /* [auto-meaningful-name] */e$width = e.width
+      var /* [auto-meaningful-name] */e$height = e.height
       var r = e$width / this.texture.width
       var i = e$height / this.texture.height
       var o = undefined
       switch (this.adaption) {
-        case ee.a.CONTAIN:
+        case $$_107_index.a.CONTAIN:
           o = Math.min(r, i)
           this.adaptive_scale = {
             x: o,
@@ -2103,7 +2103,7 @@ var re = function (e) {
             y: this.height / 2
           }
           break
-        case ee.a.COVER:
+        case $$_107_index.a.COVER:
           o = Math.max(r, i)
           this.adaptive_scale = {
             x: o,
@@ -2116,7 +2116,7 @@ var re = function (e) {
             y: e$height / 2
           }
           break
-        case ee.a.STRETCH:
+        case $$_107_index.a.STRETCH:
           this.adaptive_scale = {
             x: r,
             y: i
@@ -2147,7 +2147,7 @@ var re = function (e) {
     }
   }
   t.prototype.update_pixi_position = function (e, t) {
-    var this$transform_offset$position = this.transform_offset.position
+    var /* [auto-meaningful-name] */this$transform_offset$position = this.transform_offset.position
     this.transform_position = {
       x: e ? e + this$transform_offset$position.x : this$transform_offset$position.x,
       y: t ? -t + this$transform_offset$position.y : this$transform_offset$position.y
@@ -2159,7 +2159,7 @@ var re = function (e) {
     e.prototype.destroy.call(this)
   }
   return t
-}(a.z)
+}($_34_index.z)
 var ie = function (e) {
   function t(t, n, r, i, o, a, s, c, u) {
     var l = e.call(this, t, n, r, i, o, a, s, c, u) || this
@@ -2177,9 +2177,9 @@ var ie = function (e) {
         l.update_transform(e.data)
       }
     }
-    var a$get_app$view = a.get_app().view
-    var a$get_app$view$width = a$get_app$view.width
-    var a$get_app$view$height = a$get_app$view.height
+    var /* [auto-meaningful-name] */a$get_app$view = a.get_app().view
+    var /* [auto-meaningful-name] */a$get_app$view$width = a$get_app$view.width
+    var /* [auto-meaningful-name] */a$get_app$view$height = a$get_app$view.height
     l.update_transform({
       width: a$get_app$view$width,
       height: a$get_app$view$height
@@ -2204,9 +2204,9 @@ var ie = function (e) {
     })
   }
   t.prototype.get_pixi_scale = function () {
-    var this$tileTransform$scale = this.tileTransform.scale
-    var this$tileTransform$scale$x = this$tileTransform$scale.x
-    var this$tileTransform$scale$y = this$tileTransform$scale.y
+    var /* [auto-meaningful-name] */this$tileTransform$scale = this.tileTransform.scale
+    var /* [auto-meaningful-name] */this$tileTransform$scale$x = this$tileTransform$scale.x
+    var /* [auto-meaningful-name] */this$tileTransform$scale$y = this$tileTransform$scale.y
     return {
       x: this$tileTransform$scale$x / this.adaptive_scale.x,
       y: this$tileTransform$scale$y / this.adaptive_scale.y
@@ -2217,9 +2217,9 @@ var ie = function (e) {
     this.update_adaptive_scale()
   }
   t.prototype.update_transform_pivot = function () {
-    var this$texture = this.texture
-    var this$texture$width = this$texture.width
-    var this$texture$height = this$texture.height
+    var /* [auto-meaningful-name] */this$texture = this.texture
+    var /* [auto-meaningful-name] */this$texture$width = this$texture.width
+    var /* [auto-meaningful-name] */this$texture$height = this$texture.height
     this.transform_offset.pivot = {
       x: this$texture$width / 2 + this.custom_pivot.x,
       y: this$texture$height / 2 + this.custom_pivot.y
@@ -2261,7 +2261,7 @@ var ie = function (e) {
     })
   }
   t.prototype.get_pixi_scale = function () {
-    var this$scale = this.scale
+    var /* [auto-meaningful-name] */this$scale = this.scale
     return {
       x: this$scale.x,
       y: this$scale.y
@@ -2269,20 +2269,20 @@ var ie = function (e) {
   }
   t.prototype.on_texture_updated = function () {
     this.update_adaptive_scale()
-    var this$tileTransform$position = this.tileTransform.position
-    var this$tileTransform$position$x = this$tileTransform$position.x
-    var this$tileTransform$position$y = this$tileTransform$position.y
+    var /* [auto-meaningful-name] */this$tileTransform$position = this.tileTransform.position
+    var /* [auto-meaningful-name] */this$tileTransform$position$x = this$tileTransform$position.x
+    var /* [auto-meaningful-name] */this$tileTransform$position$y = this$tileTransform$position.y
     var r = this$tileTransform$position$x - this.transform_offset.position.x
     var i = this$tileTransform$position$y - this.transform_offset.position.y
     this.update_transform_position(r, i)
   }
   t.prototype.update_transform_position = function (e, t) {
     var n = this.app.get_app_view_size()
-    var n$width = n.width
-    var n$height = n.height
-    var this$texture = this.texture
-    var this$texture$width = this$texture.width
-    var this$texture$height = this$texture.height
+    var /* [auto-meaningful-name] */n$width = n.width
+    var /* [auto-meaningful-name] */n$height = n.height
+    var /* [auto-meaningful-name] */this$texture = this.texture
+    var /* [auto-meaningful-name] */this$texture$width = this$texture.width
+    var /* [auto-meaningful-name] */this$texture$height = this$texture.height
     var c = (this$texture$width * this.adaptive_scale.x - n$width) / -2 - this.custom_pivot.x
     var u = (this$texture$height * this.adaptive_scale.y - n$height) / -2 - this.custom_pivot.y
     this.transform_offset.position = {
@@ -2319,16 +2319,16 @@ var oe = function () {
 var ae = function (e) {
   function t(t, n, r, i, o, s) {
     var c = e.call(this) || this
-    c.type = ee.d.Scene
+    c.type = $$_107_index.d.Scene
     c.brush_canvas = document.createElement("canvas")
     c.brush_ctx = c.brush_canvas.getContext("2d")
     c.should_update_brush_texture = false
     c.mouse_down_time = 0
     c.on_resize = function (e) {
       if (e.target_id === c.app.get_app().stage.name) {
-        var c$app$get_app$view = c.app.get_app().view
-        var c$app$get_app$view$width = c$app$get_app$view.width
-        var c$app$get_app$view$height = c$app$get_app$view.height
+        var /* [auto-meaningful-name] */c$app$get_app$view = c.app.get_app().view
+        var /* [auto-meaningful-name] */c$app$get_app$view$width = c$app$get_app$view.width
+        var /* [auto-meaningful-name] */c$app$get_app$view$height = c$app$get_app$view.height
         c.brush_canvas.width = c$app$get_app$view$width
         c.brush_canvas.height = c$app$get_app$view$height
       }
@@ -2344,24 +2344,24 @@ var ae = function (e) {
     c.events = s
     c.id = t
     c.name = t
-    var c$app$get_app$view = c.app.get_app().view
-    var c$app$get_app$view$width = c$app$get_app$view.width
-    var c$app$get_app$view$height = c$app$get_app$view.height
+    var /* [auto-meaningful-name] */c$app$get_app$view = c.app.get_app().view
+    var /* [auto-meaningful-name] */c$app$get_app$view$width = c$app$get_app$view.width
+    var /* [auto-meaningful-name] */c$app$get_app$view$height = c$app$get_app$view.height
     var d = c.app.get_app_view_resolution()
     c.visible = false
     c.interactive = true
-    var h = c.app.get_renderer_type() === a.p.WEBGL
+    var h = c.app.get_renderer_type() === $_34_index.p.WEBGL
     var p = c.emit_event.bind(c)
     c.background = new ie(n, r, c$app$get_app$view$width, c$app$get_app$view$height, p, o, i, s, t)
     c.addChildAt(c.background, 0)
     c.brush_canvas.width = c$app$get_app$view$width
     c.brush_canvas.height = c$app$get_app$view$height
-    c.brush_sprite = a.t.from(c.brush_canvas)
+    c.brush_sprite = $_34_index.t.from(c.brush_canvas)
     c.brush_sprite.anchor.set(.5)
     c.brush_sprite.position.set(0, 0)
     c.brush_sprite.scale.set(1 / d)
     c.addChildAt(c.brush_sprite, 1)
-    c.actor_container = new a.f()
+    c.actor_container = new $_34_index.f()
     c.actor_container.name = "actor_container"
     c.addChildAt(c.actor_container, 2)
     c.background.addListener("mousedown", function () {
@@ -2391,7 +2391,7 @@ var ae = function (e) {
     c.events.add_listener("stage:resize", c.on_resize)
     c.app.get_app().ticker.add(c.on_tick)
     if (h) {
-      c.effects = new te.a(c.app, c)
+      c.effects = new $_1002.a(c.app, c)
     }
     return c
   }
@@ -2473,13 +2473,13 @@ var ae = function (e) {
     })
   }
   t.prototype.get_effects = function () {
-    return this.effects ? u.b.success(this.effects) : u.b.error("Effect not available. It needs support of WebGL.")
+    return this.effects ? $_122.b.success(this.effects) : $_122.b.error("Effect not available. It needs support of WebGL.")
   }
   t.prototype.set_brush_target = function (e) {
     var t = this
     var n = this.data.get_internal_actor(e, [this.get_id()])
     if (!n) {
-      return new u.a("Cannot find actor " + e + " in scene " + this.id)
+      return new $_122.a("Cannot find actor " + e + " in scene " + this.id)
     }
     n.wrapper.addChild(this.brush_sprite)
     this.brush_unset_listener = function () {
@@ -2493,7 +2493,7 @@ var ae = function (e) {
     }
   }
   t.prototype.unset_brush_target = function () {
-    var this$brush_sprite$parent = this.brush_sprite.parent
+    var /* [auto-meaningful-name] */this$brush_sprite$parent = this.brush_sprite.parent
     if (c.k(this$brush_sprite$parent)) {
       this.addChildAt(this.brush_sprite, 1)
       if (this.brush_unset_listener) {
@@ -2503,7 +2503,7 @@ var ae = function (e) {
     }
   }
   return t
-}(a.f)
+}($_34_index.f)
 var se = function () {
   function e(e, t, n, r, i) {
     this.transition_type = "none"
@@ -2515,21 +2515,21 @@ var se = function () {
   }
   e.prototype.load_scene = function (e, t) {
     if (this.data.get_internal_scene(e)) {
-      return u.b.error("Scene " + e + " already exists. Please use new scene id")
+      return $_122.b.error("Scene " + e + " already exists. Please use new scene id")
     }
-    var n = t ? this.data.get_texture(t) : a.y.EMPTY
+    var n = t ? this.data.get_texture(t) : $_34_index.y.EMPTY
     if (!n) {
-      return u.b.error("Cannot find texture " + t + ". Please load texture first")
+      return $_122.b.error("Cannot find texture " + t + ". Please load texture first")
     }
     var r = this.scene(e, n, t || "", this.data, this.app)
     this.app.get_scene_container().addChild(r)
-    return u.b.success(r)
+    return $_122.b.success(r)
   }
   e.prototype.set_current_scene = function (e, t) {
     var n = this
     var r = this.data.get_internal_scene(e)
     if (!r) {
-      return new u.a("Cannot find scene " + e)
+      return new $_122.a("Cannot find scene " + e)
     }
     if (this.current_scene !== e) {
       if (!this.current_scene) {
@@ -2539,7 +2539,7 @@ var se = function () {
       }
       var i = this.data.get_internal_scene(this.current_scene)
       if (!i) {
-        return new u.a("Cannot find out scene " + this.current_scene)
+        return new $_122.a("Cannot find out scene " + this.current_scene)
       }
       this.current_scene = e
       this.transition.set_transition(this.transition_type, i, r, function () {
@@ -2556,20 +2556,20 @@ var se = function () {
   e.prototype.destroy_scene = function (e) {
     var t = this.data.get_internal_scene(e)
     if (!t) {
-      return u.b.error("Cannot find scene " + e)
+      return $_122.b.error("Cannot find scene " + e)
     }
     t.destroy()
     if (this.current_scene === e) {
       this.current_scene = undefined
     }
-    var this$app$get_scene_container$children = this.app.get_scene_container().children
+    var /* [auto-meaningful-name] */this$app$get_scene_container$children = this.app.get_scene_container().children
     var r = []
     this$app$get_scene_container$children.forEach(function (e) {
       if (c.m(e)) {
         r.push(e.id)
       }
     })
-    return u.b.success({
+    return $_122.b.success({
       scene_ids: r
     })
   }
@@ -2577,7 +2577,7 @@ var se = function () {
     var t = this
     var n = this.data.get_internal_scene(e)
     if (!n) {
-      return new u.a("Cannot find scene " + e)
+      return new $_122.a("Cannot find scene " + e)
     }
     n.get_actor_container().removeChildren().forEach(function (e) {
       if (c.k(e)) {
@@ -2620,18 +2620,18 @@ var se = function () {
     this.events.fire("scene:current_scene_changed", e)
   }
   e.prototype.set_transition_type = function (e) {
-    if ("distort" === e && this.app.get_renderer_type() !== a.p.WEBGL) {
-      return new u.a("Only WEBGL support distort transition")
+    if ("distort" === e && this.app.get_renderer_type() !== $_34_index.p.WEBGL) {
+      return new $_122.a("Only WEBGL support distort transition")
     }
     this.transition_type = e
   }
   e.prototype.get_scene = function (e) {
     var t = this.data.get_internal_scene(e)
-    return t ? u.b.success(t) : u.b.error("Cannot find scene " + e)
+    return t ? $_122.b.success(t) : $_122.b.error("Cannot find scene " + e)
   }
   return e
 }()
-import ce = require("./517");
+import /* [auto-meaningful-name] */$_517_index = require("./517/index")
 var ue = function () {
   function e(e, t, n) {
     this.app = e
@@ -2639,20 +2639,20 @@ var ue = function () {
     this.actor = n
   }
   e.prototype.load_actor = function (e) {
-    var e$actor_id = e.actor_id
-    var e$parent_scene_id = e.parent_scene_id
-    var e$position = e.position
-    var e$scale = e.scale
-    var e$rotation_type = e.rotation_type
-    var e$rotation = e.rotation
-    var e$visible = e.visible
-    var e$group = e.group
+    var /* [auto-meaningful-name] */e$actor_id = e.actor_id
+    var /* [auto-meaningful-name] */e$parent_scene_id = e.parent_scene_id
+    var /* [auto-meaningful-name] */e$position = e.position
+    var /* [auto-meaningful-name] */e$scale = e.scale
+    var /* [auto-meaningful-name] */e$rotation_type = e.rotation_type
+    var /* [auto-meaningful-name] */e$rotation = e.rotation
+    var /* [auto-meaningful-name] */e$visible = e.visible
+    var /* [auto-meaningful-name] */e$group = e.group
     if (this.data.get_internal_actor(e$actor_id)) {
-      return u.b.error("Actor " + e$actor_id + " already exists. Please use new actor id")
+      return $_122.b.error("Actor " + e$actor_id + " already exists. Please use new actor id")
     }
     var l = this.data.get_internal_scene(e$parent_scene_id)
     if (!l) {
-      return u.b.error("Scene " + e$parent_scene_id + " should be loaded before loading actor " + e$actor_id)
+      return $_122.b.error("Scene " + e$parent_scene_id + " should be loaded before loading actor " + e$actor_id)
     }
     var f = this.actor({
       actor_id: e$actor_id,
@@ -2679,12 +2679,12 @@ var ue = function () {
     if (undefined !== e$group) {
       f.set_group(e$group)
     }
-    return u.b.success(f)
+    return $_122.b.success(f)
   }
   e.prototype.destroy_actor = function (e) {
     var t = this.data.get_internal_actor(e)
     if (!t) {
-      return new u.a("Cannot find actor " + e)
+      return new $_122.a("Cannot find actor " + e)
     }
     t.destroy()
   }
@@ -2713,14 +2713,14 @@ var ue = function () {
   }
   e.prototype.get_actor = function (e) {
     var t = this.data.get_internal_actor(e)
-    return t ? u.b.success(t) : u.b.error("Cannot find actor " + e)
+    return t ? $_122.b.success(t) : $_122.b.error("Cannot find actor " + e)
   }
   return e
 }()
-import le = require("./215/index");
+import /* [auto-meaningful-name] */$_215_index = require("./215/index")
 var fe = function (e, t, n, r) {
   var i
-  var arguments$length = arguments.length
+  var /* [auto-meaningful-name] */arguments$length = arguments.length
   var a = arguments$length < 3 ? t : null === r ? r = Object.getOwnPropertyDescriptor(t, n) : r
   if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) {
     a = Reflect.decorate(e, t, n, r)
@@ -2919,16 +2919,16 @@ var Ae = function () {
   }
   e.prototype.extract_pixels = function (e, t, n, r) {
     var i = this.get_view()
-    var i$width = i.width
-    var i$height = i.height
-    var c = new a.r(new a.d({
+    var /* [auto-meaningful-name] */i$width = i.width
+    var /* [auto-meaningful-name] */i$height = i.height
+    var c = new $_34_index.r(new $_34_index.d({
       width: i$width,
       height: i$height
     }))
     this.app.get_app().renderer.render(this.app.get_app().stage, {
       renderTexture: c
     })
-    if (this.app.get_renderer_type() === a.p.WEBGL) {
+    if (this.app.get_renderer_type() === $_34_index.p.WEBGL) {
       c.frame = this.get_render_texture_frame(e, t, n, r)
       return this.app.get_extract_module().pixels(c)
     }
@@ -2937,9 +2937,9 @@ var Ae = function () {
   }
   e.prototype.extract_canvas = function (e, t, n, r) {
     var i = this.get_view()
-    var i$width = i.width
-    var i$height = i.height
-    var c = new a.r(new a.d({
+    var /* [auto-meaningful-name] */i$width = i.width
+    var /* [auto-meaningful-name] */i$height = i.height
+    var c = new $_34_index.r(new $_34_index.d({
       width: i$width,
       height: i$height
     }))
@@ -2951,13 +2951,13 @@ var Ae = function () {
   }
   e.prototype.get_render_texture_frame = function (e, t, n, r) {
     var i = this.get_view()
-    var i$width = i.width
-    var i$height = i.height
-    e = le.a(0, i$width - 1, e)
-    n = le.a(1, i$width - e, n)
-    t = le.a(0, i$height - 1, t)
-    r = le.a(1, i$height - t, r)
-    return new a.q(e, t, n, r)
+    var /* [auto-meaningful-name] */i$width = i.width
+    var /* [auto-meaningful-name] */i$height = i.height
+    e = $_215_index.a(0, i$width - 1, e)
+    n = $_215_index.a(1, i$width - e, n)
+    t = $_215_index.a(0, i$height - 1, t)
+    r = $_215_index.a(1, i$height - t, r)
+    return new $_34_index.q(e, t, n, r)
   }
   e.prototype.resize = function (e, t) {
     this.app.resize(e, t)
@@ -2981,11 +2981,11 @@ var Ae = function () {
     this.data.clear_all_textures_points_cache()
     this.app.destroy()
   }
-  return e = fe([i.injectable(), he(0, i.inject(s.App)), he(1, i.inject(s.Data)), he(2, i.inject(s.Textures)), he(3, i.inject(s.Scenes)), he(4, i.inject(s.Actors)), he(5, i.inject(s.StageAnimation)), he(6, i.inject(s.Physics)), he(7, i.inject(s.Events)), de("design:paramtypes", [Object, Function, Function, Function, Function, Function, Function, Object])], e)
+  return e = fe([$_269_index.injectable(), he(0, $_269_index.inject(s.App)), he(1, $_269_index.inject(s.Data)), he(2, $_269_index.inject(s.Textures)), he(3, $_269_index.inject(s.Scenes)), he(4, $_269_index.inject(s.Actors)), he(5, $_269_index.inject(s.StageAnimation)), he(6, $_269_index.inject(s.Physics)), he(7, $_269_index.inject(s.Events)), de("design:paramtypes", [Object, Function, Function, Function, Function, Function, Function, Object])], e)
 }()
 var ge = function () {
   return (ge = Object.assign || function (e) {
-    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
         e[i] = t[i]
       }
@@ -3221,8 +3221,8 @@ var we = function () {
         onComplete: n$on_complete
       })
       t.forEach(function (t) {
-        var t$tween_opt = t.tween_opt
-        var t$timeline_pos = t.timeline_pos
+        var /* [auto-meaningful-name] */t$tween_opt = t.tween_opt
+        var /* [auto-meaningful-name] */t$timeline_pos = t.timeline_pos
         var o = r.compose_tween(e, t$tween_opt)
         if (o) {
           s.add(o, t$timeline_pos)
@@ -3237,15 +3237,15 @@ var we = function () {
       var r
       var i
       switch (t.variation_type) {
-        case ee.f.TO:
+        case $$_107_index.f.TO:
           i = this.manufacture_tween_vars(n, [t.tween_vars])
           r = this.cmao_gsap.TweenLite.to(i.target, i.vars[0])
           break
-        case ee.f.FROM:
+        case $$_107_index.f.FROM:
           i = this.manufacture_tween_vars(n, [t.tween_vars])
           r = this.cmao_gsap.TweenLite.from(i.target, i.vars[0])
           break
-        case ee.f.FROM_TO:
+        case $$_107_index.f.FROM_TO:
           i = this.manufacture_tween_vars(n, [t.tween_vars.from, t.tween_vars.to])
           r = this.cmao_gsap.TweenLite.fromTo(i.target, i.vars[0], i.vars[1])
       }
@@ -3261,22 +3261,22 @@ var we = function () {
     var o = []
     var a = Object.keys(e.HOOK_FACTORY)
     n.forEach(function (n) {
-      var n$on_start = n.on_start
-      var n$on_update = n.on_update
-      var n$on_complete = n.on_complete
+      var /* [auto-meaningful-name] */n$on_start = n.on_start
+      var /* [auto-meaningful-name] */n$on_update = n.on_update
+      var /* [auto-meaningful-name] */n$on_complete = n.on_complete
       var l = ye(n, ["on_start", "on_update", "on_complete"])
-      var f = w.a(l)
+      var f = $_520_index.a(l)
       var d = Math.random().toString()
       f.id = d
       var h = false
       if (r.cmao_gsap) {
-        var r$cmao_gsap = r.cmao_gsap
+        var /* [auto-meaningful-name] */r$cmao_gsap = r.cmao_gsap
         var _ = []
         var g = []
         var v = {}
         var m = Object.keys(l)
         a.forEach(function (n) {
-          if (A.a(n, m)) {
+          if ($_735_index.a(n, m)) {
             if ("undefined" === typeof i[n]) {
               i[n] = 0
             }
@@ -3332,7 +3332,7 @@ var we = function () {
       return [function () {
         t.position_x = e.position.x
       }, function () {
-        var e$position$y = e.position.y
+        var /* [auto-meaningful-name] */e$position$y = e.position.y
         e.set_pixi_position(t.position_x, e$position$y)
       }]
     },
@@ -3340,7 +3340,7 @@ var we = function () {
       return [function () {
         t.position_y = -e.position.y
       }, function () {
-        var e$position$x = e.position.x
+        var /* [auto-meaningful-name] */e$position$x = e.position.x
         e.set_pixi_position(e$position$x, -t.position_y)
       }]
     },
@@ -3348,7 +3348,7 @@ var we = function () {
       return [function () {
         t.scale_x = e.scale.x
       }, function () {
-        var e$scale$y = e.scale.y
+        var /* [auto-meaningful-name] */e$scale$y = e.scale.y
         e.set_pixi_scale(t.scale_x, e$scale$y)
       }]
     },
@@ -3356,7 +3356,7 @@ var we = function () {
       return [function () {
         t.scale_y = e.scale.y
       }, function () {
-        var e$scale$x = e.scale.x
+        var /* [auto-meaningful-name] */e$scale$x = e.scale.x
         e.set_pixi_scale(e$scale$x, t.scale_y)
       }]
     },
@@ -3388,9 +3388,9 @@ var we = function () {
   }
   return e
 }()
-import Ee = require("./466");
-import xe = require("./184");
-import Ce = require("./985");
+import /* [auto-meaningful-name] */$_466 = require("./466")
+import /* [auto-meaningful-name] */$_184 = require("./184")
+import /* [auto-meaningful-name] */$_985 = require("./985")
 var Oe = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -3419,7 +3419,7 @@ var ke = function () {
     this.scene_world = r
     this.actor = i
     this.get_strength = o
-    this.type = Ee.a.ELASTIC
+    this.type = $_466.a.ELASTIC
     this.position_cache = new this.box2d.Vec2()
     this.particle_system = this.scene_world.world.m_particleSystemList
     this.start_rotation = this.actor.rotation
@@ -3445,8 +3445,8 @@ var ke = function () {
     if (e && !this.particle_group) {
       var n = c.d(this.actor, this.actor.position)
       this.init({
-        x: xe.o(n.x),
-        y: xe.o(n.y)
+        x: $_184.o(n.x),
+        y: $_184.o(n.y)
       }, null === (this$actor$current_style = this.actor.current_style) || undefined === this$actor$current_style ? undefined : this$actor$current_style.texture_id)
     } else if (!e && this.particle_group) {
       this.clear()
@@ -3465,7 +3465,7 @@ var ke = function () {
   }
   e.prototype.set_linear_velocity = function (e, t) {
     if (this.particle_group) {
-      for (var this$particle_group$m_firstIndex = this.particle_group.m_firstIndex; this$particle_group$m_firstIndex < this.particle_group.m_lastIndex; this$particle_group$m_firstIndex++) {
+      for (var /* [auto-meaningful-name] */this$particle_group$m_firstIndex = this.particle_group.m_firstIndex; this$particle_group$m_firstIndex < this.particle_group.m_lastIndex; this$particle_group$m_firstIndex++) {
         this.particle_system.m_velocityBuffer.data[this$particle_group$m_firstIndex].Set(e, -t)
       }
     }
@@ -3489,7 +3489,7 @@ var ke = function () {
   }
   e.prototype.set_rotation = function (e) {
     if (this.particle_group) {
-      for (var t = e - this.get_rotation(), n = this.get_position(), this$particle_group$m_firstIndex = this.particle_group.m_firstIndex; this$particle_group$m_firstIndex < this.particle_group.m_lastIndex; this$particle_group$m_firstIndex++) {
+      for (var t = e - this.get_rotation(), n = this.get_position(), /* [auto-meaningful-name] */this$particle_group$m_firstIndex = this.particle_group.m_firstIndex; this$particle_group$m_firstIndex < this.particle_group.m_lastIndex; this$particle_group$m_firstIndex++) {
         var i = c.p(this.particle_system.m_positionBuffer.data[this$particle_group$m_firstIndex], n, t)
         this.particle_system.m_positionBuffer.data[this$particle_group$m_firstIndex] = new this.box2d.Vec2(i.x, i.y)
       }
@@ -3511,7 +3511,7 @@ var ke = function () {
   }
   e.prototype.set_position = function (e) {
     if (this.particle_group) {
-      for (var t = this.get_position(), n = e.x - t.x, r = e.y - t.y, this$particle_group$m_firstIndex = this.particle_group.m_firstIndex; this$particle_group$m_firstIndex < this.particle_group.m_lastIndex; this$particle_group$m_firstIndex++) {
+      for (var t = this.get_position(), n = e.x - t.x, r = e.y - t.y, /* [auto-meaningful-name] */this$particle_group$m_firstIndex = this.particle_group.m_firstIndex; this$particle_group$m_firstIndex < this.particle_group.m_lastIndex; this$particle_group$m_firstIndex++) {
         this.particle_system.m_positionBuffer.data[this$particle_group$m_firstIndex].SelfAddXY(n, r)
       }
     }
@@ -3548,8 +3548,8 @@ var ke = function () {
       var n = this.generate_position_data(t)
       if (n) {
         this.clear()
-        var n$points = n.points
-        var n$triangles = n.triangles
+        var /* [auto-meaningful-name] */n$points = n.points
+        var /* [auto-meaningful-name] */n$triangles = n.triangles
         var o = new this.box2d.ParticleGroupDef()
         o.positionData = n$points
         o.flags = this.box2d.ParticleFlag.b2_elasticParticle | this.box2d.ParticleFlag.b2_waterParticle | this.box2d.ParticleFlag.b2_particleContactListenerParticle | this.box2d.ParticleFlag.b2_particleContactFilterParticle | this.box2d.ParticleFlag.b2_fixtureContactListenerParticle | this.box2d.ParticleFlag.b2_fixtureContactFilterParticle
@@ -3569,19 +3569,19 @@ var ke = function () {
         this.box2d.Vec2.SubVV(s, a, this.particle_group_start_rotation)
         this.particle_group_start_rotation.SelfNormalize()
         var c = this.particle_group.GetParticleCount()
-        var this$particle_group$m_firstIndex = this.particle_group.m_firstIndex
+        var /* [auto-meaningful-name] */this$particle_group$m_firstIndex = this.particle_group.m_firstIndex
         if (!n$triangles.length) {
           for (var l = 0; l < this.particle_system.GetTriadCount(); l++) {
             var f = this.particle_system.GetTriads()[l]
-            var f$indexA = f.indexA
-            var f$indexB = f.indexB
-            var f$indexC = f.indexC
+            var /* [auto-meaningful-name] */f$indexA = f.indexA
+            var /* [auto-meaningful-name] */f$indexB = f.indexB
+            var /* [auto-meaningful-name] */f$indexC = f.indexC
             if (this.particle_group.ContainsParticle(f$indexA) && this.particle_group.ContainsParticle(f$indexB) && this.particle_group.ContainsParticle(f$indexC)) {
               n$triangles.push([f$indexA - this$particle_group$m_firstIndex, f$indexC - this$particle_group$m_firstIndex, f$indexB - this$particle_group$m_firstIndex])
             }
           }
         }
-        this.soft_filter = new Ce.a({
+        this.soft_filter = new $_985.a({
           max_num_anchors: c,
           triangles: n$triangles
         })
@@ -3619,9 +3619,9 @@ var ke = function () {
         var a = this.particle_system.m_positionBuffer.data[r + this.particle_group.m_firstIndex]
         t.push([this.map_physics_coord_to_pixi(o), this.map_physics_coord_to_pixi(a)])
       }
-      var this$app$get_app$view = this.app.get_app().view
-      var this$app$get_app$view$width = this$app$get_app$view.width
-      var this$app$get_app$view$height = this$app$get_app$view.height
+      var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+      var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+      var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
       this.soft_filter.set_anchors(t, this$app$get_app$view$width, this$app$get_app$view$height)
     }
   }
@@ -3638,12 +3638,12 @@ var ke = function () {
     if (i && r) {
       var o = this.actor.get_scale()
       var s = this.particle_system.GetRadius() * Math.SQRT2
-      var u = xe.o(r.width * o.x)
-      var l = xe.o(r.height * o.y)
+      var u = $_184.o(r.width * o.x)
+      var l = $_184.o(r.height * o.y)
       var f = Math.sqrt(Math.pow(u + s, 2) + Math.pow(l + s, 2)) / Math.sqrt(Math.pow(u, 2) + Math.pow(l, 2))
       var d = this.scale_points(i, f).map(function (e) {
-        var t = c.c(new a.o(e.x, e.y))
-        return new a.o(xe.o((t.x - r.width / 2) * n.actor.scale.x), xe.o((t.y - r.height / 2) * n.actor.scale.y))
+        var t = c.c(new $_34_index.o(e.x, e.y))
+        return new $_34_index.o($_184.o((t.x - r.width / 2) * n.actor.scale.x), $_184.o((t.y - r.height / 2) * n.actor.scale.y))
       })
       var h = []
       if (d) {
@@ -3660,7 +3660,7 @@ var ke = function () {
       var v = u * l
       var m = .5 * e.get_max_anchors()
       var y = Math.max(Math.ceil(Math.sqrt(v / m) / g), 1)
-      var this$box2d$Transform$IDENTITY = this.box2d.Transform.IDENTITY
+      var /* [auto-meaningful-name] */this$box2d$Transform$IDENTITY = this.box2d.Transform.IDENTITY
       var w = new this.box2d.AABB()
       for (p.ComputeAABB(w, this$box2d$Transform$IDENTITY, 0); !A.size;) {
         for (var x = 0, C = Math.floor(w.lowerBound.y / g) * g; C < w.upperBound.y; C += g) {
@@ -3673,14 +3673,14 @@ var ke = function () {
             }
             var B = T % y === 0
             var D = new this.box2d.Vec2(S, C)
-            var _$length2 = _.length
+            var /* [auto-meaningful-name] */_$length = _.length
             if (p.TestPoint(this$box2d$Transform$IDENTITY, D)) {
               if (!k) {
                 S += g / 2
                 D.Set(S, C)
               }
               if (O && B) {
-                A.add(_$length2)
+                A.add(_$length)
               }
               _.push(D)
               k = true
@@ -3701,7 +3701,7 @@ var ke = function () {
           A.clear()
         }
       }
-      for (var _$length = _.length, R = e.get_max_anchors() - m, P = Math.floor(d.length / R), N = new Set(); A.size < e.get_max_anchors();) {
+      for (var /* [auto-meaningful-name] */_$length2 = _.length, R = e.get_max_anchors() - m, P = Math.floor(d.length / R), N = new Set(); A.size < e.get_max_anchors();) {
         for (var M = function (e) {
             var t = d[e]
             if (_.every(function (e) {
@@ -3716,7 +3716,7 @@ var ke = function () {
         if (A.size + N.size <= e.get_max_anchors()) {
           break
         }
-        _.length = _$length
+        _.length = _$length2
         N.clear()
         P++
       }
@@ -3745,9 +3745,9 @@ var ke = function () {
     }
   }
   e.prototype.map_physics_coord_to_pixi = function (e) {
-    var t = xe.n(e.x)
-    var n = xe.n(e.y)
-    var this$app$get_app$view = this.app.get_app().view
+    var t = $_184.n(e.x)
+    var n = $_184.n(e.y)
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
     return {
       x: t + this$app$get_app$view.width / 2,
       y: n + this$app$get_app$view.height / 2
@@ -3798,8 +3798,8 @@ var ke = function () {
       var e = i.GetLinearVelocity()
       var n = i.GetPosition()
       a.forEach(function (r) {
-        var r$index = r.index
-        var r$offset = r.offset
+        var /* [auto-meaningful-name] */r$index = r.index
+        var /* [auto-meaningful-name] */r$offset = r.offset
         t.particle_system.GetVelocityBuffer()[r$index].Copy(e)
         var a = t.box2d.Vec2.AddVV(n, r$offset, new t.box2d.Vec2())
         t.particle_system.m_positionConstraintBuffer[r$index] = [a, a]
@@ -3823,7 +3823,7 @@ var Se = function () {
     this.box2d = t
     this.scene_world = n
     this.actor = r
-    this.type = Ee.a.NORMAL
+    this.type = $_466.a.NORMAL
     var s = new this.box2d.BodyDef()
     s.type = this.box2d.BodyType.b2_staticBody
     s.enabled = false
@@ -3831,9 +3831,9 @@ var Se = function () {
     s.id = this.actor.id
     this.body = this.scene_world.world.CreateBody(s)
     this.fixture_def = new this.box2d.FixtureDef()
-    this.fixture_def.density = i || xe.b
-    this.fixture_def.friction = o || xe.c
-    this.fixture_def.restitution = a || xe.e
+    this.fixture_def.density = i || $_184.b
+    this.fixture_def.friction = o || $_184.c
+    this.fixture_def.restitution = a || $_184.e
   }
   e.prototype.set_enabled = function (e) {
     this.body.SetEnabled(e)
@@ -3939,7 +3939,7 @@ var Se = function () {
           var o = []
           e.forEach(function (e) {
             var n = c.c(e)
-            o.push(new t.box2d.Vec2(xe.o(n.x - r.width / 2) * t.actor.scale.x, xe.o(n.y - r.height / 2) * t.actor.scale.y))
+            o.push(new t.box2d.Vec2($_184.o(n.x - r.width / 2) * t.actor.scale.x, $_184.o(n.y - r.height / 2) * t.actor.scale.y))
           })
           i.Set(o)
           t.fixture_def.shape = i
@@ -4006,7 +4006,7 @@ var Te = function () {
     }
     this.set_strength = function (e) {
       s.group_strength = e
-      var t = s.bodies_cache[Ee.a.ELASTIC]
+      var t = s.bodies_cache[$_466.a.ELASTIC]
       if (null === t || undefined === t ? undefined : t.particle_group) {
         t.particle_group.m_strength = s.group_strength
       }
@@ -4016,7 +4016,7 @@ var Te = function () {
     }
     this.physics_set_pixi_position = function (e, t) {
       if (!s.actor.is_dragging() || !s.is_enabled()) {
-        var n = s.convert_pixi_to_physics_position(new a.o(e, t))
+        var n = s.convert_pixi_to_physics_position(new $_34_index.o(e, t))
         s.bodies_cache.forEach(function (e) {
           return e.set_position(n)
         })
@@ -4055,34 +4055,34 @@ var Te = function () {
         }
         var t = e.data.getLocalPosition(s.actor.parent)
         var n = {
-          x: xe.o(t.x),
-          y: xe.o(t.y)
+          x: $_184.o(t.x),
+          y: $_184.o(t.y)
         }
         var r = s.physics_body.get_dragged_body(n)
         var i = new s.box2d.MouseJointDef()
         i.bodyA = s.mouse_joint_dummy_body
         i.bodyB = r
         i.target.Set(n.x, n.y)
-        i.maxForce = xe.i * r.m_mass
-        i.stiffness = xe.k
-        i.damping = xe.a
+        i.maxForce = $_184.i * r.m_mass
+        i.stiffness = $_184.k
+        i.damping = $_184.a
         s.mouse_joint = s.scene_world.world.CreateJoint(i)
         r.SetAwake(true)
       }
     }
     this.drag_move = c.w(function (e) {
       if ((s.collidable || s.forceable) && s.actor.is_dragging() && s.mouse_joint) {
-        var s$app$get_app$view = s.app.get_app().view
-        var s$app$get_app$view$width = s$app$get_app$view.width
-        var s$app$get_app$view$height = s$app$get_app$view.height
+        var /* [auto-meaningful-name] */s$app$get_app$view = s.app.get_app().view
+        var /* [auto-meaningful-name] */s$app$get_app$view$width = s$app$get_app$view.width
+        var /* [auto-meaningful-name] */s$app$get_app$view$height = s$app$get_app$view.height
         var i = e.data.getLocalPosition(s.actor.parent)
         if (c.n(i, {
           width: s$app$get_app$view$width,
           height: s$app$get_app$view$height
         })) {
           var o = {
-            x: xe.o(i.x),
-            y: xe.o(i.y)
+            x: $_184.o(i.x),
+            y: $_184.o(i.y)
           }
           s.mouse_joint.GetTarget().Set(o.x, o.y)
           s.mouse_joint.GetBodyB().SetAwake(true)
@@ -4104,9 +4104,9 @@ var Te = function () {
     this.forceable = i.forceable
     this.elastic = i.elastic
     this.group_strength = i.strength || 1
-    var i$density = i.density
-    var i$friction = i.friction
-    var i$restitution = i.restitution
+    var /* [auto-meaningful-name] */i$density = i.density
+    var /* [auto-meaningful-name] */i$friction = i.friction
+    var /* [auto-meaningful-name] */i$restitution = i.restitution
     this.physics_body = this.get_normal_body(i$density, i$friction, i$restitution)
     if (this.elastic) {
       this.physics_body = this.get_elastic_body()
@@ -4148,32 +4148,32 @@ var Te = function () {
     }
   }
   e.prototype.get_elastic_body = function () {
-    if (this.bodies_cache[Ee.a.ELASTIC]) {
-      return this.bodies_cache[Ee.a.ELASTIC]
+    if (this.bodies_cache[$_466.a.ELASTIC]) {
+      return this.bodies_cache[$_466.a.ELASTIC]
     }
     var e = new ke(this.app, this.data, this.box2d, this.scene_world, this.actor, this.get_strength)
-    this.bodies_cache[Ee.a.ELASTIC] = e
+    this.bodies_cache[$_466.a.ELASTIC] = e
     return e
   }
   e.prototype.get_normal_body = function (e, t, n) {
-    if (this.bodies_cache[Ee.a.NORMAL]) {
-      return this.bodies_cache[Ee.a.NORMAL]
+    if (this.bodies_cache[$_466.a.NORMAL]) {
+      return this.bodies_cache[$_466.a.NORMAL]
     }
     var r = new Se(this.data, this.box2d, this.scene_world, this.actor, e, t, n)
-    this.bodies_cache[Ee.a.NORMAL] = r
+    this.bodies_cache[$_466.a.NORMAL] = r
     return r
   }
   e.prototype.convert_pixi_to_physics_position = function (e) {
     var t = c.d(this.actor, e)
     return {
-      x: xe.o(t.x),
-      y: xe.o(t.y)
+      x: $_184.o(t.x),
+      y: $_184.o(t.y)
     }
   }
   e.prototype.convert_physics_to_pixi_position = function (e, t, n) {
     var r = {
-      x: xe.n(e),
-      y: xe.n(t)
+      x: $_184.n(e),
+      y: $_184.n(t)
     }
     var i = {
       x: r.x + this.actor.pivot.x * this.actor.scale.x,
@@ -4279,7 +4279,7 @@ var Te = function () {
       var o = this.is_enabled()
       this.physics_body.set_enabled(false)
       this.physics_body = e ? this.get_elastic_body() : this.get_normal_body()
-      if (this.physics_body.type === Ee.a.NORMAL) {
+      if (this.physics_body.type === $_466.a.NORMAL) {
         this.physics_body.init(this.convert_pixi_to_physics_position(this.actor.position), null === (t = this.actor.get_current_style()) || undefined === t ? undefined : t.texture_id)
       }
       this.physics_body.set_enabled(o)
@@ -4301,11 +4301,11 @@ var Te = function () {
   }
   e.prototype.apply_force_in_time = function (e) {
     var t = this
-    var e$time = e.time
+    var /* [auto-meaningful-name] */e$time = e.time
     var r = e.x
     var i = e.y
-    var e$on_complete = e.on_complete
-    var a = Math.round(e$time / xe.f)
+    var /* [auto-meaningful-name] */e$on_complete = e.on_complete
+    var a = Math.round(e$time / $_184.f)
     var s = 1
     this.force_handler_cache.add(function e() {
       if (s > a) {
@@ -4385,7 +4385,7 @@ var De = function () {
     this.edge_list = new Map()
     this.update_callbacks = new Set()
     this.update = function () {
-      o.world.Step(xe.f, xe.l, xe.j)
+      o.world.Step($_184.f, $_184.l, $_184.j)
       o.update_callbacks.forEach(function (e) {
         return e()
       })
@@ -4393,15 +4393,15 @@ var De = function () {
     this.on_scene_destroy = function () {
       return o.destroy()
     }
-    this.world = new r.World(new r.Vec2(0, i || xe.d))
+    this.world = new r.World(new r.Vec2(0, i || $_184.d))
     var a = new this.box2d.ParticleSystemDef()
     a.radius = 1.2
     this.world.CreateParticleSystem(a)
     var s = new r.ContactListener()
     var c = function (e, t) {
       if (e && t && e !== t) {
-        var n = xe.m(e, t)
-        var r = xe.m(t, e)
+        var n = $_184.m(e, t)
+        var r = $_184.m(t, e)
         o.collision_list.add(n)
         o.collision_list.add(r)
       }
@@ -4420,8 +4420,8 @@ var De = function () {
     }
     var u = function (e, t) {
       if (e && t && e !== t) {
-        var n = xe.m(e, t)
-        var r = xe.m(t, e)
+        var n = $_184.m(e, t)
+        var r = $_184.m(t, e)
         o.collision_list.delete(n)
         o.collision_list.delete(r)
       }
@@ -4466,10 +4466,10 @@ var De = function () {
     var t = this
     var n = this.data.get_internal_actor(e.actor_id)
     if (n) {
-      var e$density = e.density
-      var e$friction = e.friction
-      var e$restitution = e.restitution
-      var e$strength = e.strength
+      var /* [auto-meaningful-name] */e$density = e.density
+      var /* [auto-meaningful-name] */e$friction = e.friction
+      var /* [auto-meaningful-name] */e$restitution = e.restitution
+      var /* [auto-meaningful-name] */e$strength = e.strength
       var s = new Te(this.app, this.data, this.box2d, this, {
         on_destroy: function () {
           t.body_list.delete(e.actor_id)
@@ -4492,29 +4492,29 @@ var De = function () {
     var t
     var /* [auto-meaningful-name] */c$return
     if (0 !== e.length) {
-      var this$app$get_app$view = this.app.get_app().view
-      var this$app$get_app$view$width = this$app$get_app$view.width
-      var this$app$get_app$view$height = this$app$get_app$view.height
-      var a = xe.o(this$app$get_app$view$width) / 2
-      var s = xe.o(this$app$get_app$view$height) / 2
+      var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+      var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+      var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
+      var a = $_184.o(this$app$get_app$view$width) / 2
+      var s = $_184.o(this$app$get_app$view$height) / 2
       try {
         for (var c = Be(e), u = c.next(); !u.done; u = c.next()) {
-          var u$value = u.value
+          var /* [auto-meaningful-name] */u$value = u.value
           if (!this.edge_list.get(u$value)) {
             var f = 0
             var d = 0
             switch (u$value) {
-              case ee.b.TOP:
-                d = -s - xe.h
+              case $$_107_index.b.TOP:
+                d = -s - $_184.h
                 break
-              case ee.b.BOTTOM:
-                d = s + xe.h
+              case $$_107_index.b.BOTTOM:
+                d = s + $_184.h
                 break
-              case ee.b.LEFT:
-                f = -a - xe.h
+              case $$_107_index.b.LEFT:
+                f = -a - $_184.h
                 break
-              case ee.b.RIGHT:
-                f = a + xe.h
+              case $$_107_index.b.RIGHT:
+                f = a + $_184.h
                 break
               default:
                 return
@@ -4523,8 +4523,8 @@ var De = function () {
               id: u$value.toString()
             })
             var p = new this.box2d.PolygonShape()
-            p.SetAsBox(xe.h, xe.h)
-            h.CreateFixture(p, xe.g)
+            p.SetAsBox($_184.h, $_184.h)
+            h.CreateFixture(p, $_184.g)
             h.SetPositionXY(f, d)
             this.edge_list.set(u$value, h)
           }
@@ -4552,7 +4552,7 @@ var De = function () {
     if (0 !== e.length && 0 !== this.edge_list.size) {
       try {
         for (var r = Be(e), i = r.next(); !i.done; i = r.next()) {
-          var i$value = i.value
+          var /* [auto-meaningful-name] */i$value = i.value
           var a = this.edge_list.get(i$value)
           if (a) {
             a.GetWorld().DestroyBody(a)
@@ -4612,8 +4612,8 @@ var De = function () {
     if (!i || !i.is_enabled() || !o || !o.is_enabled()) {
       return false
     }
-    var a = xe.m(e, t)
-    var s = xe.m(t, e)
+    var a = $_184.m(e, t)
+    var s = $_184.m(t, e)
     return this.collision_list.has(a) || this.collision_list.has(s)
   }
   e.prototype.check_collision_with_edge = function (e, t) {
@@ -4627,15 +4627,15 @@ var De = function () {
     if (!o || !o.is_enabled()) {
       return false
     }
-    var a = t ? [t] : [ee.b.TOP, ee.b.BOTTOM, ee.b.LEFT, ee.b.RIGHT]
+    var a = t ? [t] : [$$_107_index.b.TOP, $$_107_index.b.BOTTOM, $$_107_index.b.LEFT, $$_107_index.b.RIGHT]
     try {
       for (var s = Be(a), c = s.next(); !c.done; c = s.next()) {
-        var c$value = c.value
+        var /* [auto-meaningful-name] */c$value = c.value
         var l = this.edge_list.get(c$value)
         if (l) {
           var f = l.GetId()
-          var d = xe.m(e, f)
-          var h = xe.m(f, e)
+          var d = $_184.m(e, f)
+          var h = $_184.m(f, e)
           if (this.collision_list.has(d) || this.collision_list.has(h)) {
             return true
           }
@@ -4888,7 +4888,7 @@ var Pe = function () {
     var /* [auto-meaningful-name] */this$draw_handler
     var n = this.world_list.get(e)
     if (!n) {
-      return new u.a("Can not find world with id " + e)
+      return new $_122.a("Can not find world with id " + e)
     }
     this.world_list.delete(e)
     n.destroy()
@@ -4907,7 +4907,7 @@ var Pe = function () {
     var /* [auto-meaningful-name] */n$return
     try {
       for (var n = Re(this.world_list.keys()), r = n.next(); !r.done; r = n.next()) {
-        var r$value = r.value
+        var /* [auto-meaningful-name] */r$value = r.value
         this.destroy_world(r$value)
       }
     } catch (o) {
@@ -4933,7 +4933,7 @@ var Pe = function () {
   }
   return e
 }()
-var Ne = new i.Container()
+var Ne = new $_269_index.Container()
 Ne.bind(s.Events).to(L).inSingletonScope()
 Ne.bind(s.App).to(_)
 Ne.bind(s.Data).toFactory(function () {
@@ -4981,7 +4981,7 @@ Ne.bind(s.Actor).toFactory(function (e) {
     var r = Object.assign({}, t, {
       events: n
     })
-    return new ce.a(r)
+    return new $_517_index.a(r)
   }
 })
 Ne.bind(s.Actors).toFactory(function (e) {
@@ -4994,7 +4994,7 @@ Ne.bind(s.Stage).to(Ae)
 var Me
 var je = function () {
   function e() {
-    this.loader = a.k.shared
+    this.loader = $_34_index.k.shared
     this.tasks = []
     this.is_loading = false
   }
@@ -5041,7 +5041,7 @@ var je = function () {
   }
   return e
 }()
-import Le = require("./128");
+import /* [auto-meaningful-name] */$_128 = require("./128");
 (function () {
   function e(e, t) {
     this.actor_dialogs = new Map()
@@ -5051,7 +5051,7 @@ import Le = require("./128");
     this.data = t
   }
   e.prototype.load_dialog = function (e, t) {
-    var e$parent_scene = e.parent_scene
+    var /* [auto-meaningful-name] */e$parent_scene = e.parent_scene
     var r = this.get_dialog_container(e$parent_scene)
     this.actor_dialogs.set(e.get_id(), t)
     r.addChild(t.get_graphics())
@@ -5059,7 +5059,7 @@ import Le = require("./128");
   e.prototype.destroy_actor_dialog = function (e) {
     var t = this.actor_dialogs.get(e)
     if (!t) {
-      return new u.a("Actor dialog " + e + " has not been found")
+      return new $_122.a("Actor dialog " + e + " has not been found")
     }
     var n = this.data.get_internal_actor(e)
     var r = this.actor_destroy_handlers.get(e)
@@ -5087,7 +5087,7 @@ import Le = require("./128");
     var n = e.get_id()
     var r = this.dialog_containers.get(n)
     if (!r) {
-      r = new a.f()
+      r = new $_34_index.f()
       e.addChild(r)
       this.dialog_containers.set(n, r)
       e.add_listener("destroy", function () {
@@ -5101,7 +5101,7 @@ import Le = require("./128");
   }
   e.prototype.destroy_dialog_container = function (e) {
     var t = this
-    var e$parent = e.parent
+    var /* [auto-meaningful-name] */e$parent = e.parent
     if (c.m(e$parent)) {
       this.dialog_containers.delete(e$parent.get_id())
       e.removeChildren().forEach(function (e) {
@@ -5117,8 +5117,8 @@ import Le = require("./128");
 var Ue = function () {
   function e(e, t, n) {
     var r = this
-    this.actor_dialog = new a.j()
-    this.text = new a.v("")
+    this.actor_dialog = new $_34_index.j()
+    this.text = new $_34_index.v("")
     this.content_width = 0
     this.content_height = 0
     this.on_change = function (e) {
@@ -5240,14 +5240,14 @@ var Ge = function () {
     var r = this
     var i = this.data.get_internal_actor(e)
     if (!i) {
-      return new u.a("Actor " + e + " has not been found")
+      return new $_122.a("Actor " + e + " has not been found")
     }
     var o = this.dialog_cache.get(e)
     if (!o) {
       var s = this.app.get_app_view_size()
-      var s$width = s.width
-      var s$height = s.height;
-      (o = new ze(i, n, s$width, s$height, this.app.get_renderer_type() === a.p.WEBGL)).get_graphics().setParent(i.wrapper)
+      var /* [auto-meaningful-name] */s$width = s.width
+      var /* [auto-meaningful-name] */s$height = s.height;
+      (o = new ze(i, n, s$width, s$height, this.app.get_renderer_type() === $_34_index.p.WEBGL)).get_graphics().setParent(i.wrapper)
       this.dialog_cache.set(e, o)
       i.add_listener("destroy", function () {
         r.destroy_actor_dialog(e)
@@ -5258,7 +5258,7 @@ var Ge = function () {
   e.prototype.destroy_actor_dialog = function (e) {
     var t = this.dialog_cache.get(e)
     if (!t) {
-      return new u.a("Actor dialog " + e + " has not been found")
+      return new $_122.a("Actor dialog " + e + " has not been found")
     }
     this.dialog_cache.delete(e)
     t.destroy()
@@ -5280,7 +5280,7 @@ var ze = function (e) {
     s.DIALOG_MIN_WIDTH = 108
     s.DIALOG_MAX_WIDTH = 248
     s.TEXT_PADDING = 20
-    s.bubbles = new a.j()
+    s.bubbles = new $_34_index.j()
     s.update_on_change = function (e) {
       if (e.position || e.scale || e.rotation) {
         s.update_dialog_position()
@@ -5293,7 +5293,7 @@ var ze = function (e) {
     s.actor_dialog.addChild(s.bubbles)
     s.update_dialog_style()
     if (o) {
-      s.actor_dialog.filters = [new a.h({
+      s.actor_dialog.filters = [new $_34_index.h({
         rotation: 45,
         distance: 3,
         alpha: .15,
@@ -5317,7 +5317,7 @@ var ze = function (e) {
     var t
     var n = this.text.width + 2 * this.TEXT_PADDING
     this.content_height = this.text.height + 30
-    this.content_width = le.a(this.DIALOG_MIN_WIDTH, this.DIALOG_MAX_WIDTH, n)
+    this.content_width = $_215_index.a(this.DIALOG_MIN_WIDTH, this.DIALOG_MAX_WIDTH, n)
     var r = {
       start_x: .1 * this.DIALOG_MAX_WIDTH,
       center_x: .1 * this.DIALOG_MAX_WIDTH - 5
@@ -5331,9 +5331,9 @@ var ze = function (e) {
       y: this.content_height + 40
     }
     var s = this.content_height > 80 ? 40 : this.content_height / 2
-    var c = (null === (t = null === (this$actor = this.actor) || undefined === this$actor ? undefined : this$actor.app) || undefined === t ? undefined : t.get_app().renderer.type) === a.p.CANVAS
+    var c = (null === (t = null === (this$actor = this.actor) || undefined === this$actor ? undefined : this$actor.app) || undefined === t ? undefined : t.get_app().renderer.type) === $_34_index.p.CANVAS
     switch (this.actor_dialog.clear(), this.bubbles.clear(), this.type) {
-      case Le.a.SAYING:
+      case $_128.a.SAYING:
         if (c) {
           this.actor_dialog.beginFill(0, .3)
           this.actor_dialog.drawRoundedRect(0, 0, this.content_width + 1, this.content_height + 1, 16)
@@ -5350,7 +5350,7 @@ var ze = function (e) {
         this.actor_dialog.endFill()
         this.bubbles.visible = false
         break
-      case Le.a.THINKING:
+      case $_128.a.THINKING:
         if (c) {
           this.bubbles.beginFill(0, .3)
           this.bubbles.drawEllipse(i.x + 1, i.y + 1, 13, 10)
@@ -5412,7 +5412,7 @@ var lt = {
   fontWeight: "500",
   align: "center"
 }
-var ft = "0x297EFF"
+var /* [auto-meaningful-name] */_0x297EFF = "0x297EFF"
 var dt = {
   fontFamily: ["PingFangSC", "Microsoft YaHei"],
   fontSize: 20,
@@ -5502,14 +5502,14 @@ var Bt = function (e) {
   }
   Tt(t, e)
   return t
-}(a.j)
+}($_34_index.j)
 var Dt = function (e) {
   function t(t, n, r, i) {
     if (undefined === r) {
       r = 1
     }
     var o = e.call(this, t, n) || this
-    o.icon = new a.t()
+    o.icon = new $_34_index.t()
     o.default_alpha = r
     o.active_alpha = undefined === i ? r : i
     o.icon.anchor.set(.5)
@@ -5548,8 +5548,8 @@ var Ft = function (e) {
   function t(t, n) {
     var r = e.call(this, t, n, it, ot) || this
     r.scale.set(rt)
-    if (r.app.get_renderer_type() === a.p.WEBGL) {
-      r.drop_shadow_filter = new a.h(at)
+    if (r.app.get_renderer_type() === $_34_index.p.WEBGL) {
+      r.drop_shadow_filter = new $_34_index.h(at)
       r.filters = [r.drop_shadow_filter]
     }
     return r
@@ -5588,7 +5588,7 @@ var Rt = function (e) {
       i = 1
     }
     var s = e.call(this, t, n) || this
-    s.text = new a.v("", lt)
+    s.text = new $_34_index.v("", lt)
     s.default_alpha = i
     s.active_alpha = undefined === o ? i : o
     s.type = r
@@ -5639,12 +5639,12 @@ var Pt = function () {
 }()
 var Nt = function (e) {
   function t(t) {
-    var t$gap = t.gap
-    var t$num_per_side = t.num_per_side
-    var t$width = t.width
-    var t$max_height = t.max_height
-    var t$min_height = t.min_height
-    var t$color = t.color
+    var /* [auto-meaningful-name] */t$gap = t.gap
+    var /* [auto-meaningful-name] */t$num_per_side = t.num_per_side
+    var /* [auto-meaningful-name] */t$width = t.width
+    var /* [auto-meaningful-name] */t$max_height = t.max_height
+    var /* [auto-meaningful-name] */t$min_height = t.min_height
+    var /* [auto-meaningful-name] */t$color = t.color
     var u = e.call(this) || this
     u.animation_interval = 120
     u.current_central_gap = 0
@@ -5653,7 +5653,7 @@ var Nt = function (e) {
     u.item_num_per_side = t$num_per_side
     u.item_gap = t$gap
     for (var l = t$width / 2, f = 0; f < 2 * u.item_num_per_side; f++) {
-      var d = new a.j()
+      var d = new $_34_index.j()
       d.beginFill(t$color).drawRoundedRect(0, 0, t$width, u.max_item_height, l).endFill()
       d.position.x = f * t$gap
       u.addChild(d)
@@ -5662,7 +5662,7 @@ var Nt = function (e) {
   }
   Pt(t, e)
   t.prototype.set_item_height = function (e, t) {
-    if (e instanceof a.j) {
+    if (e instanceof $_34_index.j) {
       e.height = t
       e.position.y = (this.max_item_height - t) / 2
     }
@@ -5699,12 +5699,12 @@ var Nt = function (e) {
     }
   }
   return t
-}(a.j)
+}($_34_index.j)
 var Mt = function () {
   function e(e, t) {
     this.start_time = 0
     this.volume_bar = new Nt(e)
-    this.timer = new a.v("00:00", dt)
+    this.timer = new $_34_index.v("00:00", dt)
     this.parent_graphics = t
   }
   e.prototype.set_text = function (e) {
@@ -5752,11 +5752,11 @@ var jt = function (e) {
     var o = e.call(this, _t, t) || this
     o.get_text_record = r
     o.events = i
-    var n$max_duration = n.max_duration
-    var n$thresholds = n.thresholds
+    var /* [auto-meaningful-name] */n$max_duration = n.max_duration
+    var /* [auto-meaningful-name] */n$thresholds = n.thresholds
     var c = o.get_text_record()
-    var c$countdown_prefix = c.countdown_prefix
-    var c$countdown_suffix = c.countdown_suffix
+    var /* [auto-meaningful-name] */c$countdown_prefix = c.countdown_prefix
+    var /* [auto-meaningful-name] */c$countdown_suffix = c.countdown_suffix
     o.countdown_prefix = c$countdown_prefix
     o.countdown_suffix = c$countdown_suffix
     o.countdown_opt = {
@@ -5830,7 +5830,7 @@ var Lt = function (e) {
     var u = wt
     var l = Ct
     var f = Ot
-    n.graphics = new a.j()
+    n.graphics = new $_34_index.j()
     n.graphics.lineStyle(s, c).beginFill(u).drawRoundedRect(0, 0, r, i, o).endFill()
     n.timer.position.set((r - n.timer.width) / 2, (i - n.timer.height) / 2)
     n.timer.style.fill = f
@@ -5865,7 +5865,7 @@ var Lt = function (e) {
   t.prototype.draw_point = function () {
     var e = Et
     var t = xt
-    var n = new a.j()
+    var n = new $_34_index.j()
     n.beginFill(t).drawCircle(0, 0, e).endFill()
     return n
   }
@@ -5908,14 +5908,14 @@ var Ht = function (e, t) {
 }
 var Vt = function () {
   function e(e) {
-    var e$close_btn = e.close_btn
-    var e$central_btn = e.central_btn
-    var e$confirm_btn = e.confirm_btn
-    var e$cancel_btn = e.cancel_btn
-    var e$content = e.content
-    var e$recorder_volume_panel = e.recorder_volume_panel
-    var e$get_text_record = e.get_text_record
-    var e$set_content = e.set_content
+    var /* [auto-meaningful-name] */e$close_btn = e.close_btn
+    var /* [auto-meaningful-name] */e$central_btn = e.central_btn
+    var /* [auto-meaningful-name] */e$confirm_btn = e.confirm_btn
+    var /* [auto-meaningful-name] */e$cancel_btn = e.cancel_btn
+    var /* [auto-meaningful-name] */e$content = e.content
+    var /* [auto-meaningful-name] */e$recorder_volume_panel = e.recorder_volume_panel
+    var /* [auto-meaningful-name] */e$get_text_record = e.get_text_record
+    var /* [auto-meaningful-name] */e$set_content = e.set_content
     this.close_btn = e$close_btn
     this.central_btn = e$central_btn
     this.confirm_btn = e$confirm_btn
@@ -5945,7 +5945,7 @@ var Vt = function () {
 }()
 var Gt = function (e) {
   function t(t) {
-    var t$player_volume_panel = t.player_volume_panel
+    var /* [auto-meaningful-name] */t$player_volume_panel = t.player_volume_panel
     var r = Ht(t, ["player_volume_panel"])
     var i = e.call(this, r) || this
     i.type = Me.RECORDING
@@ -5957,9 +5957,9 @@ var Gt = function (e) {
     e.prototype.mount.call(this)
     this.player_volume_panel.set_visible(false)
     var t = this.get_text_record()
-    var t$start_recording = t.start_recording
-    var t$recorder_confirm = t.recorder_confirm
-    var t$recorder_cancel = t.recorder_cancel
+    var /* [auto-meaningful-name] */t$start_recording = t.start_recording
+    var /* [auto-meaningful-name] */t$recorder_confirm = t.recorder_confirm
+    var /* [auto-meaningful-name] */t$recorder_cancel = t.recorder_cancel
     this.set_content(t$start_recording)
     this.confirm_btn.set_text(t$recorder_confirm)
     this.cancel_btn.set_text(t$recorder_cancel)
@@ -6015,9 +6015,9 @@ var Gt = function (e) {
 }(Vt)
 var zt = function (e) {
   function t(t) {
-    var t$loading_icon = t.loading_icon
-    var t$start_loading_animation = t.start_loading_animation
-    var t$stop_loading_animation = t.stop_loading_animation
+    var /* [auto-meaningful-name] */t$loading_icon = t.loading_icon
+    var /* [auto-meaningful-name] */t$start_loading_animation = t.start_loading_animation
+    var /* [auto-meaningful-name] */t$stop_loading_animation = t.stop_loading_animation
     var o = Ht(t, ["loading_icon", "start_loading_animation", "stop_loading_animation"])
     var a = e.call(this, o) || this
     a.type = Me.RECOGNITION
@@ -6031,9 +6031,9 @@ var zt = function (e) {
     e.prototype.mount.call(this)
     this.loading_icon.visible = false
     var t = this.get_text_record()
-    var t$start_speaking = t.start_speaking
-    var t$recognition_confirm = t.recognition_confirm
-    var t$recognition_cancel = t.recognition_cancel
+    var /* [auto-meaningful-name] */t$start_speaking = t.start_speaking
+    var /* [auto-meaningful-name] */t$recognition_confirm = t.recognition_confirm
+    var /* [auto-meaningful-name] */t$recognition_cancel = t.recognition_cancel
     this.set_content(t$start_speaking)
     this.confirm_btn.set_text(t$recognition_confirm)
     this.cancel_btn.set_text(t$recognition_cancel)
@@ -6098,7 +6098,7 @@ var zt = function (e) {
 }(Vt)
 var Qt = function () {
   return (Qt = Object.assign || function (e) {
-    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
         e[i] = t[i]
       }
@@ -6109,11 +6109,11 @@ var Qt = function () {
 var Wt = function () {
   function e(e, t, n, r) {
     var i = this
-    var e$url = e.url
-    var e$texture_name = e.texture_name
-    var e$text_record = e.text_record
-    var e$countdown_opt = e.countdown_opt
-    this.graphics = new a.j()
+    var /* [auto-meaningful-name] */e$url = e.url
+    var /* [auto-meaningful-name] */e$texture_name = e.texture_name
+    var /* [auto-meaningful-name] */e$text_record = e.text_record
+    var /* [auto-meaningful-name] */e$countdown_opt = e.countdown_opt
+    this.graphics = new $_34_index.j()
     this.voice_type = Me.RECOGNITION
     this.dialog_width = 0
     this.dialog_height = 0
@@ -6162,7 +6162,7 @@ var Wt = function () {
         i.update_recorder_volume_panel_position()
         i.update_player_volume_panel_position()
         i.update_loading_icon_position()
-        i.graphics.hitArea = new a.q(0, -i.stage_height + i.dialog_height, i.stage_width, i.stage_height)
+        i.graphics.hitArea = new $_34_index.q(0, -i.stage_height + i.dialog_height, i.stage_width, i.stage_height)
       }
     }
     this.app = t
@@ -6170,9 +6170,9 @@ var Wt = function () {
     this.loader = n
     this.text_record = e$text_record
     this.state = "init"
-    var this$app$get_app$view = this.app.get_app().view
-    var this$app$get_app$view$width = this$app$get_app$view.width
-    var this$app$get_app$view$height = this$app$get_app$view.height
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
     this.stage_width = this$app$get_app$view$width
     this.stage_height = this$app$get_app$view$height
     this.graphics.name = "voice_dialog"
@@ -6187,12 +6187,12 @@ var Wt = function () {
     this.graphics.addChild(this.central_btn)
     this.confirm_btn = new Rt(this.app, this.events, "confirm_btn", ct, ut)
     this.confirm_btn.set_text(e$text_record.recorder_confirm)
-    this.confirm_btn.set_text_color(ft)
+    this.confirm_btn.set_text_color(_0x297EFF)
     this.cancel_btn = new Rt(this.app, this.events, "cancel_btn", ct, ut)
     this.cancel_btn.set_text(e$text_record.recorder_cancel)
     this.update_side_btns_position()
     this.graphics.addChild(this.confirm_btn, this.cancel_btn)
-    this.content = new a.v("", dt)
+    this.content = new $_34_index.v("", dt)
     this.content.anchor.set(.5)
     this.update_content_position()
     this.graphics.addChild(this.content)
@@ -6201,14 +6201,14 @@ var Wt = function () {
     this.player_volume_panel = new Lt(this.graphics)
     this.update_player_volume_panel_position()
     this.player_volume_panel.set_visible(false)
-    this.loading_icon = new a.t()
+    this.loading_icon = new $_34_index.t()
     this.loading_icon.anchor.set(.5)
     this.loading_icon.scale.set(St)
     this.loading_icon.visible = false
     this.update_loading_icon_position()
     this.graphics.addChild(this.loading_icon)
-    if (this.app.get_renderer_type() === a.p.WEBGL) {
-      this.graphics.filters = [new a.h(tt)]
+    if (this.app.get_renderer_type() === $_34_index.p.WEBGL) {
+      this.graphics.filters = [new $_34_index.h(tt)]
     }
     var h = function () {
       i.update_loading_icon_position()
@@ -6216,15 +6216,15 @@ var Wt = function () {
     this.loader.add({
       url: e$url,
       on_success: function (e) {
-        var e$textures = e.textures
+        var /* [auto-meaningful-name] */e$textures = e.textures
         if (e$textures) {
-          var e$texture_name$close_btn = e$texture_name.close_btn
-          var e$texture_name$recorder_btn = e$texture_name.recorder_btn
-          var e$texture_name$terminate_btn = e$texture_name.terminate_btn
-          var e$texture_name$recognize_btn = e$texture_name.recognize_btn
-          var e$texture_name$play_btn = e$texture_name.play_btn
-          var e$texture_name$stop_btn = e$texture_name.stop_btn
-          var e$texture_name$loading_icon = e$texture_name.loading_icon
+          var /* [auto-meaningful-name] */e$texture_name$close_btn = e$texture_name.close_btn
+          var /* [auto-meaningful-name] */e$texture_name$recorder_btn = e$texture_name.recorder_btn
+          var /* [auto-meaningful-name] */e$texture_name$terminate_btn = e$texture_name.terminate_btn
+          var /* [auto-meaningful-name] */e$texture_name$recognize_btn = e$texture_name.recognize_btn
+          var /* [auto-meaningful-name] */e$texture_name$play_btn = e$texture_name.play_btn
+          var /* [auto-meaningful-name] */e$texture_name$stop_btn = e$texture_name.stop_btn
+          var /* [auto-meaningful-name] */e$texture_name$loading_icon = e$texture_name.loading_icon
           i.close_btn.set_icon_texture(e$textures[e$texture_name$close_btn])
           var f = {
             recorder_btn: e$textures[e$texture_name$recorder_btn],
@@ -6284,7 +6284,7 @@ var Wt = function () {
     this.graphics.drawRoundedRect(0, 0, this.dialog_width, this.dialog_height, Ye)
     this.graphics.endFill()
     this.graphics.position.set(-n + Ke, r - Xe - e - t)
-    this.graphics.hitArea = new a.q(0, -this.stage_height + this.dialog_height, this.stage_width, this.stage_height)
+    this.graphics.hitArea = new $_34_index.q(0, -this.stage_height + this.dialog_height, this.stage_width, this.stage_height)
   }
   e.prototype.show = function (e) {
     this.graphics.visible = true
@@ -6346,8 +6346,8 @@ var Wt = function () {
     if (undefined === e) {
       e = 0
     }
-    var this$central_btn = this.central_btn
-    var this$central_btn$position = this$central_btn.position
+    var /* [auto-meaningful-name] */this$central_btn = this.central_btn
+    var /* [auto-meaningful-name] */this$central_btn$position = this$central_btn.position
     var r = this$central_btn.width / 2
     this.cancel_btn.position.set(this$central_btn$position.x - r - st - this.cancel_btn.width, this$central_btn$position.y + e)
     this.confirm_btn.position.set(this$central_btn$position.x + r + st + this.confirm_btn.width, this$central_btn$position.y + e)
@@ -6538,12 +6538,12 @@ var Jt = function (e) {
     s.events = o
     s.loader = r
     s.name = "stage_dialog"
-    s.preview = new a.t()
-    s.target_name = new a.v("", Yt)
-    s.content = new a.v("", qt)
-    s.next_text = new a.v("点击继续", $t)
+    s.preview = new $_34_index.t()
+    s.target_name = new $_34_index.v("", Yt)
+    s.content = new $_34_index.v("", qt)
+    s.next_text = new $_34_index.v("点击继续", $t)
     s.next_text.name = "next_text"
-    s.next_icon = new a.t()
+    s.next_icon = new $_34_index.t()
     s.next_icon.name = "next_icon"
     s.print = new Kt(s.app)
     s.addListener("mouseup", s.on_mouse_up.bind(s))
@@ -6551,7 +6551,7 @@ var Jt = function (e) {
     s.loader.add({
       url: i.url,
       on_success: function (e) {
-        var e$textures = e.textures
+        var /* [auto-meaningful-name] */e$textures = e.textures
         if (e$textures) {
           s.next_icon.texture = e$textures[i.next_icon]
           s.app.render()
@@ -6567,15 +6567,15 @@ var Jt = function (e) {
   }
   Xt(t, e)
   t.prototype.draw_dialog_basis = function () {
-    var this$app$get_app$view = this.app.get_app().view
-    var this$app$get_app$view$width = this$app$get_app$view.width
-    var this$app$get_app$view$height = this$app$get_app$view.height
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
     var r = this$app$get_app$view$width - 24
     this.clear()
     this.lineStyle(2, 14276302, 1)
     this.beginFill(16777215, 1)
     this.drawRoundedRect(0, 0, r, 180, 4)
-    this.hitArea = new a.q(0, 0, r, 180)
+    this.hitArea = new $_34_index.q(0, 0, r, 180)
     this.y = this$app$get_app$view$height / 2 - 180 - 12
     this.x = -this$app$get_app$view$width / 2 + 12
     this.endFill()
@@ -6591,7 +6591,7 @@ var Jt = function (e) {
   }
   t.prototype.set_component_size_and_position = function (e) {
     var t = 100
-    if (e === ee.d.Scene) {
+    if (e === $$_107_index.d.Scene) {
       t = 30
       this.preview.x = 0
     } else {
@@ -6609,10 +6609,10 @@ var Jt = function (e) {
     var o = this
     var s = this.data.get_target(e)
     if (!s) {
-      return new u.a("Cannot find target " + e)
+      return new $_122.a("Cannot find target " + e)
     }
     this.visible = true
-    this.preview.texture = c.l(s) ? new a.y(s.texture.baseTexture) : a.y.EMPTY
+    this.preview.texture = c.l(s) ? new $_34_index.y(s.texture.baseTexture) : $_34_index.y.EMPTY
     this.set_component_size_and_position(s.type)
     this.target_name.text = t
     var l = r ? undefined : i
@@ -6641,7 +6641,7 @@ var Jt = function (e) {
     }
   }
   t.prototype.get_max_content_width = function (e) {
-    return e === ee.d.Actor ? this.actor_line_width : this.bg_line_width
+    return e === $$_107_index.d.Actor ? this.actor_line_width : this.bg_line_width
   }
   t.prototype.set_next_text = function (e) {
     this.next_text.text = e
@@ -6661,7 +6661,7 @@ var Jt = function (e) {
     this.events.remove_listener("stage:resize", this.on_stage_resize)
   }
   return t
-}(a.j)
+}($_34_index.j)
 var Zt = {
   width: 2,
   color: 14211288,
@@ -6692,12 +6692,12 @@ var rn = {
 var on = function () {
   function e(e, t) {
     var n = this
-    this.grid = new a.j()
-    this.axis_arrow = new a.j()
-    this.x_label = new a.v("X", nn)
-    this.y_label = new a.v("Y", nn)
-    this.x_label_shadow = new a.v("X", rn)
-    this.y_label_shadow = new a.v("Y", rn)
+    this.grid = new $_34_index.j()
+    this.axis_arrow = new $_34_index.j()
+    this.x_label = new $_34_index.v("X", nn)
+    this.y_label = new $_34_index.v("Y", nn)
+    this.x_label_shadow = new $_34_index.v("X", rn)
+    this.y_label_shadow = new $_34_index.v("Y", rn)
     this.set_parent = function (e) {
       n.grid.setParent(e)
     }
@@ -6714,9 +6714,9 @@ var on = function () {
     }
     this.app = e
     this.events = t
-    var this$app$get_app$view = this.app.get_app().view
-    var this$app$get_app$view$width = this$app$get_app$view.width
-    var this$app$get_app$view$height = this$app$get_app$view.height
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
     this.stage_width = this$app$get_app$view$width
     this.stage_height = this$app$get_app$view$height
     this.init_grid()
@@ -6766,16 +6766,16 @@ var on = function () {
     for (var t = 0, n = 0; n < this.stage_height / 2;) {
       var r = n.toString()
       var i = (-n).toString();
-      (s = new a.v(r, nn)).x = 5
+      (s = new $_34_index.v(r, nn)).x = 5
       s.y = 5 - n
       s.alpha = .8;
-      (c = new a.v(i, nn)).x = 5
+      (c = new $_34_index.v(i, nn)).x = 5
       c.y = n + 5
       c.alpha = .8;
-      (u = new a.v(r, rn)).x = 5
+      (u = new $_34_index.v(r, rn)).x = 5
       u.y = 5 - n + 1
       u.alpha = .8;
-      (l = new a.v(i, rn)).x = 5
+      (l = new $_34_index.v(i, rn)).x = 5
       l.y = n + 5 + 1
       l.alpha = .8
       this.grid.addChild(s, c, u, l)
@@ -6789,16 +6789,16 @@ var on = function () {
       var l
       var f = o.toString()
       var d = (-o).toString();
-      (s = new a.v(f, nn)).x = o + 5
+      (s = new $_34_index.v(f, nn)).x = o + 5
       s.y = 5
       s.alpha = .8;
-      (c = new a.v(d, nn)).x = 5 - o
+      (c = new $_34_index.v(d, nn)).x = 5 - o
       c.y = 5
       c.alpha = .8;
-      (u = new a.v(f, rn)).x = o + 5
+      (u = new $_34_index.v(f, rn)).x = o + 5
       u.y = 6
       u.alpha = .8;
-      (l = new a.v(d, rn)).x = 5 - o
+      (l = new $_34_index.v(d, rn)).x = 5 - o
       l.y = 6
       l.alpha = .8
       this.grid.addChild(s, c, u, l)
@@ -6831,7 +6831,7 @@ var on = function () {
     this.grid.visible = e
   }
   e.prototype.set_z_index = function (e) {
-    var this$grid$parent = this.grid.parent
+    var /* [auto-meaningful-name] */this$grid$parent = this.grid.parent
     e = Math.min(e, this$grid$parent.children.length - 1)
     e = Math.max(1, e)
     this$grid$parent.setChildIndex(this.grid, e)
@@ -6909,11 +6909,11 @@ var cn = function (e) {
     r.app = t
     r.events = n
     r.visible = false
-    r.selection_container = new a.j()
-    r.selection_header = new a.j()
-    var r$app$get_app$view = r.app.get_app().view
-    var r$app$get_app$view$width = r$app$get_app$view.width
-    var r$app$get_app$view$height = r$app$get_app$view.height
+    r.selection_container = new $_34_index.j()
+    r.selection_header = new $_34_index.j()
+    var /* [auto-meaningful-name] */r$app$get_app$view = r.app.get_app().view
+    var /* [auto-meaningful-name] */r$app$get_app$view$width = r$app$get_app$view.width
+    var /* [auto-meaningful-name] */r$app$get_app$view$height = r$app$get_app$view.height
     r.stage_width = r$app$get_app$view$width
     r.stage_height = r$app$get_app$view$height
     r.dialog_width = r.stage_width - 2 * r.MARGIN
@@ -6921,8 +6921,8 @@ var cn = function (e) {
     r.selection_height = .0888 * r.stage_height
     r.init_selections()
     r.draw_header()
-    if (r.app.get_renderer_type() === a.p.WEBGL) {
-      r.filters = [new a.h({
+    if (r.app.get_renderer_type() === $_34_index.p.WEBGL) {
+      r.filters = [new $_34_index.h({
         rotation: 45,
         distance: 3,
         alpha: .15,
@@ -6937,10 +6937,10 @@ var cn = function (e) {
   an(t, e)
   t.prototype.init_selections = function () {
     for (var e = 0; e < 4; e++) {
-      var t = new a.f()
-      var n = new a.j()
-      var r = new a.j()
-      var i = new a.v("", sn)
+      var t = new $_34_index.f()
+      var n = new $_34_index.j()
+      var r = new $_34_index.j()
+      var i = new $_34_index.v("", sn)
       i.anchor.set(.5)
       i.visible = true
       n.clear()
@@ -6975,11 +6975,11 @@ var cn = function (e) {
     this.selection_container.visible = true
     this.selections.forEach(function (t, n) {
       var r = e.selection_container.children[n]
-      if (r instanceof a.f) {
+      if (r instanceof $_34_index.f) {
         var i = r.children[0]
         var o = r.children[1]
         var s = r.children[2]
-        if (s instanceof a.v) {
+        if (s instanceof $_34_index.v) {
           s.text = t
           s.style.fill = "black"
         }
@@ -7012,22 +7012,22 @@ var cn = function (e) {
   }
   t.prototype.on_pointer_over = function (e) {
     var t = this.selection_container.children[e]
-    if (t instanceof a.f) {
+    if (t instanceof $_34_index.f) {
       t.children[0].visible = false
       t.children[1].visible = true
       var n = t.children[2]
-      if (n instanceof a.v) {
+      if (n instanceof $_34_index.v) {
         n.style.fill = "white"
       }
     }
   }
   t.prototype.on_pointer_out = function (e) {
     var t = this.selection_container.children[e]
-    if (t instanceof a.f) {
+    if (t instanceof $_34_index.f) {
       t.children[0].visible = true
       t.children[1].visible = false
       var n = t.children[2]
-      if (n instanceof a.v) {
+      if (n instanceof $_34_index.v) {
         n.style.fill = "black"
       }
     }
@@ -7036,7 +7036,7 @@ var cn = function (e) {
     this.selection_header.beginFill(16777215, 1)
     this.selection_header.drawRoundedRect(0, 0, this.dialog_width, this.selection_height, 6)
     this.selection_header.endFill()
-    var e = new a.v("", sn)
+    var e = new $_34_index.v("", sn)
     e.anchor.set(0, .5)
     e.position.x = 16
     this.selection_header.visible = false
@@ -7098,12 +7098,12 @@ var cn = function (e) {
   t.prototype.redraw_selections = function () {
     for (var e = 0; e < this.selection_container.children.length; e++) {
       var t = this.selection_container.children[e]
-      if (!(t instanceof a.f)) {
+      if (!(t instanceof $_34_index.f)) {
         return
       }
       var n = t.children[0]
       var r = t.children[1]
-      if (!(n instanceof a.j && r instanceof a.j)) {
+      if (!(n instanceof $_34_index.j && r instanceof $_34_index.j)) {
         return
       }
       n.clear()
@@ -7118,8 +7118,8 @@ var cn = function (e) {
     }
   }
   return t
-}(a.j)
-import un = require("./1003");
+}($_34_index.j)
+import /* [auto-meaningful-name] */$_1003 = require("./1003")
 var ln = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -7161,7 +7161,7 @@ var fn = function (e) {
         o.is_resizing = false
       }
     }
-    o.scale_btn = new a.j()
+    o.scale_btn = new $_34_index.j()
     o.draw_scale_btn()
     o.scale_btn.addListener("mousedown", o.drag_start_scale_btn)
     o.scale_btn.addListener("mouseup", o.drag_end_scale_btn)
@@ -7186,13 +7186,13 @@ var fn = function (e) {
     this.scale_btn.clear()
     this.scale_btn.interactive = true
     this.scale_btn.buttonMode = true
-    this.scale_btn.hitArea = new a.q(0, 0, 18, 18)
+    this.scale_btn.hitArea = new $_34_index.q(0, 0, 18, 18)
     var e = Math.sqrt(2) / 2
     this.scale_btn.beginFill(0).arcTo(12, 12, 10.8, 12, 1.2).arcTo(0, 12, 1.2 * e, 12 - 1.2 * e, 1.2).arcTo(12, 0, 12, 1.2, 1.2).endFill()
   }
   t.prototype.get_scale_btn_position = function () {
     if (undefined !== this.resizable_part) {
-      var this$resizable_part$scale$x = this.resizable_part.scale.x
+      var /* [auto-meaningful-name] */this$resizable_part$scale$x = this.resizable_part.scale.x
       return {
         x: this.resizable_part.width - 6 * this$resizable_part$scale$x,
         y: this.resizable_part.height - 6 * this$resizable_part$scale$x
@@ -7210,7 +7210,7 @@ var fn = function (e) {
   }
   t.prototype.is_mouse_out_of_stage = function (e) {
     var t = e.data.getLocalPosition(this.app.get_app().stage)
-    var this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
     var r = this$app$get_app$view.width / 2
     var i = this$app$get_app$view.height / 2
     return t.x < -r || t.x > r || t.y < -i || t.y > i
@@ -7222,7 +7222,7 @@ var fn = function (e) {
     this.addListener(e, t)
   }
   return t
-}(un.a)
+}($_1003.a)
 var dn = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -7243,7 +7243,7 @@ var dn = function () {
     t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
   }
 }()
-var hn = new a.x({
+var hn = new $_34_index.x({
   fontFamily: ["NotoSansCJKsc-Medium", "NotoSansCJKsc"],
   fill: "#6B3C3C",
   fontWeight: "900"
@@ -7252,7 +7252,7 @@ var pn = function (e) {
   function t(t, n, r) {
     var i = e.call(this, "timer", t, n, r) || this
     i.drag_move_scale_btn = function (e) {
-      var i$background$scale$x = i.background.scale.x
+      var /* [auto-meaningful-name] */i$background$scale$x = i.background.scale.x
       if (i.is_resizing && !i.is_mouse_out_of_stage(e) && 0 !== i$background$scale$x) {
         var n = e.data.getLocalPosition(i)
         var r = Math.hypot(i.background.height / i$background$scale$x, i.background.width / i$background$scale$x)
@@ -7262,15 +7262,15 @@ var pn = function (e) {
         i.app.render()
       }
     }
-    i.time = new a.v("0.00")
-    i.unit = new a.v("秒")
+    i.time = new $_34_index.v("0.00")
+    i.unit = new $_34_index.v("秒")
     i.time.style = Object.assign({}, hn, {
       fontSize: 30
     })
     i.unit.style = Object.assign({}, hn, {
       fontSize: 18
     })
-    i.background = new a.j()
+    i.background = new $_34_index.j()
     i.draw_background()
     i.set_resizable_part(i.background)
     i.set_scale_btn_position()
@@ -7287,8 +7287,8 @@ var pn = function (e) {
         }
       })
     })
-    if (i.app.get_renderer_type() === a.p.WEBGL) {
-      var o = new a.h({
+    if (i.app.get_renderer_type() === $_34_index.p.WEBGL) {
+      var o = new $_34_index.h({
         rotation: 0,
         distance: 1,
         alpha: .15,
@@ -7362,14 +7362,14 @@ var pn = function (e) {
     this.set_scale_btn_position()
   }
   t.prototype.set_unit = function (e) {
-    var this$unit$width = this.unit.width
+    var /* [auto-meaningful-name] */this$unit$width = this.unit.width
     this.unit.text = e
     if (this.unit.width !== this$unit$width) {
       this.redraw_background()
     }
   }
   t.prototype.set_time = function (e) {
-    var this$time$width = this.time.width
+    var /* [auto-meaningful-name] */this$time$width = this.time.width
     this.time.text = e.length > 500 ? e.substr(0, 500).concat("...") : e
     if (this.time.width !== this$time$width) {
       this.redraw_background()
@@ -7539,19 +7539,19 @@ var tr = function () {
 }()
 var nr = function (e) {
   function t(t, n, r, i, o, s) {
-    var s$theme_opt = s.theme_opt
-    var s$value = s.value
-    var s$variable_name = s.variable_name
-    var s$prefix = s.prefix
-    var s$position = s.position
-    var s$scale = s.scale
+    var /* [auto-meaningful-name] */s$theme_opt = s.theme_opt
+    var /* [auto-meaningful-name] */s$value = s.value
+    var /* [auto-meaningful-name] */s$variable_name = s.variable_name
+    var /* [auto-meaningful-name] */s$prefix = s.prefix
+    var /* [auto-meaningful-name] */s$position = s.position
+    var /* [auto-meaningful-name] */s$scale = s.scale
     var _ = e.call(this, t, n, r, i) || this
     _.type = We.VARIABLE
-    _.variable_name = new a.v("", gn.NAME_TEXT_STYLE)
-    _.value = new a.v("")
-    _.prefix = new a.v("", gn.PREFIX_TEXT_STYLE)
-    _.icon = new a.t()
-    _.background = new a.j()
+    _.variable_name = new $_34_index.v("", gn.NAME_TEXT_STYLE)
+    _.value = new $_34_index.v("")
+    _.prefix = new $_34_index.v("", gn.PREFIX_TEXT_STYLE)
+    _.icon = new $_34_index.t()
+    _.background = new $_34_index.j()
     _.on_position_change = function () {
       _.events.fire("variable:drag_end", {
         target_id: _.id,
@@ -7572,7 +7572,7 @@ var nr = function (e) {
       })
     }
     _.drag_move_scale_btn = function (e) {
-      var _$background$scale$x = _.background.scale.x
+      var /* [auto-meaningful-name] */_$background$scale$x = _.background.scale.x
       if (_.is_resizing && !_.is_mouse_out_of_stage(e) && 0 !== _$background$scale$x) {
         var n = e.data.getLocalPosition(_)
         var r = Math.hypot(_.background.height / _$background$scale$x, _.background.width / _$background$scale$x)
@@ -7648,7 +7648,7 @@ var nr = function (e) {
   }
   t.prototype.set_value = function (e) {
     if (this.value.text !== e) {
-      var this$value$width = this.value.width
+      var /* [auto-meaningful-name] */this$value$width = this.value.width
       this.value.text = e
       if (this.value.width !== this$value$width) {
         this.get_painter().repaint()
@@ -7663,7 +7663,7 @@ var nr = function (e) {
   }
   t.prototype.set_variable_name = function (e) {
     if (this.variable_name.text !== e) {
-      var this$variable_name$width = this.variable_name.width
+      var /* [auto-meaningful-name] */this$variable_name$width = this.variable_name.width
       this.variable_name.text = e
       if (this.variable_name.width !== this$variable_name$width) {
         this.get_painter().repaint()
@@ -7675,8 +7675,8 @@ var nr = function (e) {
   }
   t.prototype.set_prefix = function (e) {
     if (this.prefix.text !== e) {
-      var this$prefix$width = this.prefix.width
-      var this$prefix$visible = this.prefix.visible
+      var /* [auto-meaningful-name] */this$prefix$width = this.prefix.width
+      var /* [auto-meaningful-name] */this$prefix$visible = this.prefix.visible
       this.prefix.visible = !!e
       this.prefix.text = e
       if (!(this.prefix.visible === this$prefix$visible && this.prefix.width === this$prefix$width)) {
@@ -7716,9 +7716,9 @@ var nr = function (e) {
 var rr = function () {
   function e(e, t, n, r, i) {
     this.theme = Qe.DEFAULT
-    var gn$PADDING = gn.PADDING
-    var gn$VALUE_MARGIN_TOP = gn.VALUE_MARGIN_TOP
-    var gn$VALUE_TEXT_STYLE = gn.VALUE_TEXT_STYLE
+    var /* [auto-meaningful-name] */gn$PADDING = gn.PADDING
+    var /* [auto-meaningful-name] */gn$VALUE_MARGIN_TOP = gn.VALUE_MARGIN_TOP
+    var /* [auto-meaningful-name] */gn$VALUE_TEXT_STYLE = gn.VALUE_TEXT_STYLE
     this.prefix = e
     this.prefix.visible = !!this.prefix.text
     this.variable_name = t
@@ -7739,10 +7739,10 @@ var rr = function () {
     this.update_scale_btn_position()
   }
   e.prototype.draw_background = function () {
-    var gn$PADDING = gn.PADDING
-    var gn$VALUE_MARGIN = gn.VALUE_MARGIN
-    var gn$VALUE_MARGIN_TOP = gn.VALUE_MARGIN_TOP
-    var gn$BORDER_RADIUS = gn.BORDER_RADIUS
+    var /* [auto-meaningful-name] */gn$PADDING = gn.PADDING
+    var /* [auto-meaningful-name] */gn$VALUE_MARGIN = gn.VALUE_MARGIN
+    var /* [auto-meaningful-name] */gn$VALUE_MARGIN_TOP = gn.VALUE_MARGIN_TOP
+    var /* [auto-meaningful-name] */gn$BORDER_RADIUS = gn.BORDER_RADIUS
     var i = this.value.width + 2 * gn$VALUE_MARGIN
     var o = this.value.height + 2 * gn$VALUE_MARGIN_TOP
     var a = this.value.position.x + i
@@ -7750,11 +7750,11 @@ var rr = function () {
     this.background.clear().beginFill(16756040).drawRoundedRect(0, 0, a, s, gn$BORDER_RADIUS).beginFill(16777215).drawRoundedRect(this.value.position.x - gn$VALUE_MARGIN, this.value.position.y - gn$VALUE_MARGIN_TOP, i, o, gn$BORDER_RADIUS).endFill()
   }
   e.prototype.update_scale_btn_position = function () {
-    var this$background$scale = this.background.scale
-    var this$background$scale$x = this$background$scale.x
-    var this$background$scale$y = this$background$scale.y
+    var /* [auto-meaningful-name] */this$background$scale = this.background.scale
+    var /* [auto-meaningful-name] */this$background$scale$x = this$background$scale.x
+    var /* [auto-meaningful-name] */this$background$scale$y = this$background$scale.y
     if (0 !== this$background$scale$x && 0 !== this$background$scale$y) {
-      var gn$SCALE_BTN_MARGIN = gn.SCALE_BTN_MARGIN
+      var /* [auto-meaningful-name] */gn$SCALE_BTN_MARGIN = gn.SCALE_BTN_MARGIN
       this.scale_btn.position.set(this.background.width - gn$SCALE_BTN_MARGIN * this$background$scale$x, this.background.height - gn$SCALE_BTN_MARGIN * this$background$scale$y)
     }
   }
@@ -7773,11 +7773,11 @@ var ir = function (e) {
     s.theme = Qe.DEFAULT_WITH_ICON
     s.icon_area_width = 0
     s.icon = a
-    var gn$PADDING = gn.PADDING
-    var gn$ICON_SIZE = gn.ICON_SIZE
-    var gn$ICON_MARGIN_LEFT = gn.ICON_MARGIN_LEFT
-    var gn$ICON_MARGIN_TOP = gn.ICON_MARGIN_TOP
-    var gn$ICON_MARGIN_RIGHT = gn.ICON_MARGIN_RIGHT
+    var /* [auto-meaningful-name] */gn$PADDING = gn.PADDING
+    var /* [auto-meaningful-name] */gn$ICON_SIZE = gn.ICON_SIZE
+    var /* [auto-meaningful-name] */gn$ICON_MARGIN_LEFT = gn.ICON_MARGIN_LEFT
+    var /* [auto-meaningful-name] */gn$ICON_MARGIN_TOP = gn.ICON_MARGIN_TOP
+    var /* [auto-meaningful-name] */gn$ICON_MARGIN_RIGHT = gn.ICON_MARGIN_RIGHT
     s.icon.position.set(gn$ICON_MARGIN_LEFT, gn$PADDING + gn$ICON_MARGIN_TOP)
     s.icon.width = gn$ICON_SIZE
     s.icon.height = gn$ICON_SIZE
@@ -7806,9 +7806,9 @@ var ir = function (e) {
 var or = function () {
   function e(e, t, n, r) {
     this.theme = Qe.ICON
-    var vn$VALUE_MARGIN = vn.VALUE_MARGIN
-    var vn$VALUE_TEXT_STYLE = vn.VALUE_TEXT_STYLE
-    var vn$ICON_SIZE = vn.ICON_SIZE
+    var /* [auto-meaningful-name] */vn$VALUE_MARGIN = vn.VALUE_MARGIN
+    var /* [auto-meaningful-name] */vn$VALUE_TEXT_STYLE = vn.VALUE_TEXT_STYLE
+    var /* [auto-meaningful-name] */vn$ICON_SIZE = vn.ICON_SIZE
     this.value = e
     this.value.style = vn$VALUE_TEXT_STYLE
     this.value.position.set(vn$ICON_SIZE + vn$VALUE_MARGIN, (vn$ICON_SIZE - this.value.height) / 2)
@@ -7824,7 +7824,7 @@ var or = function () {
     this.update_scale_btn_position()
   }
   e.prototype.draw_background = function () {
-    var vn$ICON_SIZE = vn.ICON_SIZE
+    var /* [auto-meaningful-name] */vn$ICON_SIZE = vn.ICON_SIZE
     var t = vn$ICON_SIZE / 2
     var n = vn$ICON_SIZE / 4
     var r = t + vn$ICON_SIZE + this.value.width
@@ -7833,12 +7833,12 @@ var or = function () {
     this.background.clear().lineStyle(2, 16777215).beginFill(0, .3).moveTo(t + o, n).arcTo(r, n, r, n + o, o).arcTo(r, i, t + o, i, o).arcTo(t, i, t, n + o, o).arcTo(t, n, t + o, n, o).endFill()
   }
   e.prototype.update_scale_btn_position = function () {
-    var this$background$scale = this.background.scale
-    var this$background$scale$x = this$background$scale.x
-    var this$background$scale$y = this$background$scale.y
+    var /* [auto-meaningful-name] */this$background$scale = this.background.scale
+    var /* [auto-meaningful-name] */this$background$scale$x = this$background$scale.x
+    var /* [auto-meaningful-name] */this$background$scale$y = this$background$scale.y
     if (0 !== this$background$scale$x && 0 !== this$background$scale$y) {
-      var vn$SCALE_BTN_MARGIN_RIGHT = vn.SCALE_BTN_MARGIN_RIGHT
-      var vn$SCALE_BTN_MARGIN_BOTTOM = vn.SCALE_BTN_MARGIN_BOTTOM
+      var /* [auto-meaningful-name] */vn$SCALE_BTN_MARGIN_RIGHT = vn.SCALE_BTN_MARGIN_RIGHT
+      var /* [auto-meaningful-name] */vn$SCALE_BTN_MARGIN_BOTTOM = vn.SCALE_BTN_MARGIN_BOTTOM
       this.scale_btn.position.set(this.background.width - vn$SCALE_BTN_MARGIN_RIGHT * this$background$scale$x, this.background.height - vn$SCALE_BTN_MARGIN_BOTTOM * this$background$scale$y)
     }
   }
@@ -7858,12 +7858,12 @@ var ar = function () {
     this.update_scale_btn_position()
   }
   e.prototype.update_scale_btn_position = function () {
-    var this$background$scale = this.background.scale
-    var this$background$scale$x = this$background$scale.x
-    var this$background$scale$y = this$background$scale.y
+    var /* [auto-meaningful-name] */this$background$scale = this.background.scale
+    var /* [auto-meaningful-name] */this$background$scale$x = this$background$scale.x
+    var /* [auto-meaningful-name] */this$background$scale$y = this$background$scale.y
     if (0 !== this$background$scale$x && 0 !== this$background$scale$y) {
-      var mn$SCALE_BTN_MARGIN_RIGHT = mn.SCALE_BTN_MARGIN_RIGHT
-      var mn$SCALE_BTN_MARGIN_BOTTOM = mn.SCALE_BTN_MARGIN_BOTTOM
+      var /* [auto-meaningful-name] */mn$SCALE_BTN_MARGIN_RIGHT = mn.SCALE_BTN_MARGIN_RIGHT
+      var /* [auto-meaningful-name] */mn$SCALE_BTN_MARGIN_BOTTOM = mn.SCALE_BTN_MARGIN_BOTTOM
       this.scale_btn.position.set(this.background.width - mn$SCALE_BTN_MARGIN_RIGHT * this$background$scale$x, this.background.height - mn$SCALE_BTN_MARGIN_BOTTOM * this$background$scale$y)
     }
   }
@@ -7907,7 +7907,7 @@ var cr = function (e) {
         this.is_wrapped = false
       } else {
         this.text = "..."
-        var this$width = this.width
+        var /* [auto-meaningful-name] */this$width = this.width
         var t = ""
         this.text = ""
         for (var n = 0; n < this.content_string.length; n++) {
@@ -7925,8 +7925,8 @@ var cr = function (e) {
     }
   }
   t.prototype.update_content = function (e) {
-    var e$text = e.text
-    var e$wrap_width = e.wrap_width
+    var /* [auto-meaningful-name] */e$text = e.text
+    var /* [auto-meaningful-name] */e$wrap_width = e.wrap_width
     var r = false
     if (undefined !== e$text && e$text !== this.content_string) {
       this.content_string = e$text.toString()
@@ -7948,7 +7948,7 @@ var cr = function (e) {
     return this.content_string
   }
   return t
-}(a.v)
+}($_34_index.v)
 var ur = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -7971,7 +7971,7 @@ var ur = function () {
 }()
 var lr = function () {
   return (lr = Object.assign || function (e) {
-    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
         e[i] = t[i]
       }
@@ -7981,19 +7981,19 @@ var lr = function () {
 }
 var fr = function (e) {
   function t(t) {
-    var t$bg_texture = t.bg_texture
-    var t$width = t.width
-    var t$value = t.value
-    var t$order = t.order
-    var t$order_width = t.order_width
+    var /* [auto-meaningful-name] */t$bg_texture = t.bg_texture
+    var /* [auto-meaningful-name] */t$width = t.width
+    var /* [auto-meaningful-name] */t$value = t.value
+    var /* [auto-meaningful-name] */t$order = t.order
+    var /* [auto-meaningful-name] */t$order_width = t.order_width
     var c = e.call(this) || this
     c.background_width = 0
     c.prev_order_width = 0
     c.prev_width = 0
-    c.background = new a.t(t$bg_texture)
+    c.background = new $_34_index.t(t$bg_texture)
     c.background_width = t$width
     c.background.width = t$width
-    c.order = new a.v(t$order, lr(lr({}, Kn), {
+    c.order = new $_34_index.v(t$order, lr(lr({}, Kn), {
       fill: "#0000007f"
     }))
     c.order_width = undefined !== t$order_width ? t$order_width : c.order.width
@@ -8007,10 +8007,10 @@ var fr = function (e) {
   }
   ur(t, e)
   t.prototype.update_content = function (e) {
-    var e$order = e.order
-    var e$value = e.value
-    var e$order_width = e.order_width
-    var e$width = e.width
+    var /* [auto-meaningful-name] */e$order = e.order
+    var /* [auto-meaningful-name] */e$value = e.value
+    var /* [auto-meaningful-name] */e$order_width = e.order_width
+    var /* [auto-meaningful-name] */e$width = e.width
     if (undefined !== e$order) {
       this.order.text = e$order.toString()
     }
@@ -8072,12 +8072,12 @@ var fr = function (e) {
     e.prototype.destroy.call(this, t)
   }
   return t
-}(a.f)
+}($_34_index.f)
 function dr(e) {
   if (!Xn) {
-    Xn = new a.x(Kn)
+    Xn = new $_34_index.x(Kn)
   }
-  return a.w.measureText(e, Xn)
+  return $_34_index.w.measureText(e, Xn)
 }
 var hr
 var pr = function () {
@@ -8108,10 +8108,10 @@ var _r = function () {
   e.prototype.draw_body = function (e, t) {
     var n
     this.body.clear().beginFill(16777215).drawRoundedRect(0, 0, e, t, En).endFill()
-    if (this.body.mask instanceof a.j) {
+    if (this.body.mask instanceof $_34_index.j) {
       n = this.body.mask
     } else {
-      (n = new a.j()).setParent(this.body)
+      (n = new $_34_index.j()).setParent(this.body)
       this.body.mask = n
     }
     n.clear().beginFill(16777215).drawRoundedRect(0, 0, e, t, En).endFill()
@@ -8150,7 +8150,7 @@ var Ar = function (e) {
     this.blank_text.visible = false
   }
   t.init_blank_text = function () {
-    var e = new a.v("空", Qn)
+    var e = new $_34_index.v("空", Qn)
     e.anchor.set(.5, 0)
     e.position.y = jn
     return e
@@ -8165,7 +8165,7 @@ var gr = function (e) {
     u.value_idx = 0
     u.latest_order_width = 0
     u.value_length = 0
-    u.scrollbar = new a.j()
+    u.scrollbar = new $_34_index.j()
     u.scroll_range = 0
     u.scroll_step = 0
     u.on_scrollbar_drag_start = function (e) {
@@ -8177,12 +8177,12 @@ var gr = function (e) {
     u.on_scrollbar_drag_move = function (e) {
       if (undefined !== u.scrollbar_drag_y) {
         e.stopPropagation()
-        var e$data$getLocalPositionU$body$y = e.data.getLocalPosition(u.body).y
+        var /* [auto-meaningful-name] */e$data$getLocalPositionU$body$y = e.data.getLocalPosition(u.body).y
         var n = e$data$getLocalPositionU$body$y - u.scrollbar_drag_y
         u.scrollbar_drag_y = e$data$getLocalPositionU$body$y
-        var r = le.a(0, u.scroll_range, u.scrollbar.position.y + n)
+        var r = $_215_index.a(0, u.scroll_range, u.scrollbar.position.y + n)
         u.scrollbar.position.y = r
-        var i = le.a(0, u.value_length - 1, Math.round(r / u.scroll_step))
+        var i = $_215_index.a(0, u.value_length - 1, Math.round(r / u.scroll_step))
         if (u.value_idx !== i) {
           u.value_idx = i
           u.update_item_values(u.get_values())
@@ -8205,15 +8205,15 @@ var gr = function (e) {
     u.on_body_drag_move = function (e) {
       if (undefined !== u.body_drag_y) {
         e.stopPropagation()
-        var e$data$getLocalPositionU$body$y = e.data.getLocalPosition(u.body).y
+        var /* [auto-meaningful-name] */e$data$getLocalPositionU$body$y = e.data.getLocalPosition(u.body).y
         var n = e$data$getLocalPositionU$body$y - u.body_drag_y
         var r = n > 0 ? Math.floor(n / Fn) : Math.ceil(n / Fn)
         if (!(Math.abs(r) <= 0)) {
-          var i = le.a(0, u.value_length - 1, u.value_idx - r)
+          var i = $_215_index.a(0, u.value_length - 1, u.value_idx - r)
           if (u.value_idx !== i) {
             u.body_drag_y = e$data$getLocalPositionU$body$y
             u.value_idx = i
-            u.scrollbar.position.y = le.a(0, u.scroll_range, u.value_idx * u.scroll_step)
+            u.scrollbar.position.y = $_215_index.a(0, u.scroll_range, u.value_idx * u.scroll_step)
             u.update_item_values(u.get_values())
             u.render()
           }
@@ -8271,10 +8271,10 @@ var gr = function (e) {
       return t
     }
     var n = e === yn.LIGHT ? Pn : Rn
-    var r = new a.j()
+    var r = new $_34_index.j()
     r.beginFill(n).drawRect(0, 0, In, Fn).endFill()
-    var i = this.app.get_app().renderer.generateTexture(r, a.s.LINEAR, 1)
-    a.y.addToCache(i, e)
+    var i = this.app.get_app().renderer.generateTexture(r, $_34_index.s.LINEAR, 1)
+    $_34_index.y.addToCache(i, e)
     return i
   }
   t.prototype.update_cur_items_width = function (e) {
@@ -8302,8 +8302,8 @@ var gr = function (e) {
   }
   t.prototype.update_item_values = function (e) {
     var t = this
-    var e$length = e.length
-    var this$items_container$children$length = this.items_container.children.length
+    var /* [auto-meaningful-name] */e$length = e.length
+    var /* [auto-meaningful-name] */this$items_container$children$length = this.items_container.children.length
     var i = e$length - this.value_idx
     this.value_length = e.length
     this.scroll_step = this.scroll_range / (this.value_length - this.available_item_num)
@@ -8329,8 +8329,8 @@ var gr = function (e) {
   t.prototype.paint_items = function (e, t) {
     var n
     var r = this
-    var this$items_container$children = this.items_container.children
-    var this$items_container$children$length = this$items_container$children.length
+    var /* [auto-meaningful-name] */this$items_container$children = this.items_container.children
+    var /* [auto-meaningful-name] */this$items_container$children$length = this$items_container$children.length
     var a = this.available_item_num - this$items_container$children$length
     if (0 !== a) {
       if (a > 0) {
@@ -8444,7 +8444,7 @@ var vr = function () {
 }()
 var mr = function () {
   return (mr = Object.assign || function (e) {
-    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
         e[i] = t[i]
       }
@@ -8454,10 +8454,10 @@ var mr = function () {
 }
 var yr = function (e) {
   function t(t) {
-    var t$title = t.title
-    var t$prefix = t.prefix
-    var t$text_max_width = t.text_max_width
-    var t$icon_texture = t.icon_texture
+    var /* [auto-meaningful-name] */t$title = t.title
+    var /* [auto-meaningful-name] */t$prefix = t.prefix
+    var /* [auto-meaningful-name] */t$text_max_width = t.text_max_width
+    var /* [auto-meaningful-name] */t$icon_texture = t.icon_texture
     var a = e.call(this) || this
     a.text_offset_x = 0
     a.text_max_width = t$text_max_width
@@ -8495,8 +8495,8 @@ var yr = function (e) {
     }
   }
   t.prototype.wrap_prefix_and_title = function () {
-    var this$text_max_width = this.text_max_width
-    var this$text_offset_x = this.text_offset_x
+    var /* [auto-meaningful-name] */this$text_max_width = this.text_max_width
+    var /* [auto-meaningful-name] */this$text_offset_x = this.text_offset_x
     if (this.prefix) {
       if (this.prefix.get_full_text()) {
         this.prefix.update_content({
@@ -8535,10 +8535,10 @@ var yr = function (e) {
     })
   }
   t.prototype.set_icon_texture = function (e) {
-    return this.icon ? (this.icon.texture = e, false) : (this.icon = new a.t(e), this.icon.width = Tn, this.icon.height = Tn, this.icon.position.set(Sn, kn), this.addChild(this.icon), this.text_offset_x = Tn + kn, true)
+    return this.icon ? (this.icon.texture = e, false) : (this.icon = new $_34_index.t(e), this.icon.width = Tn, this.icon.height = Tn, this.icon.position.set(Sn, kn), this.addChild(this.icon), this.text_offset_x = Tn + kn, true)
   }
   return t
-}(a.f)
+}($_34_index.f)
 var br = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -8564,9 +8564,9 @@ var wr = function (e) {
     var u
     var l = e.call(this, t, n, r, i) || this
     l.type = We.LIST
-    l.background = new a.j()
-    l.body = new a.j()
-    l.items_container = new a.f()
+    l.background = new $_34_index.j()
+    l.body = new $_34_index.j()
+    l.items_container = new $_34_index.f()
     l.blank_text = Ar.init_blank_text()
     l.bg_color = bn
     l.body_size = {
@@ -8685,9 +8685,9 @@ var wr = function (e) {
       } else {
         this.blank_painter.dismount()
         this.non_blank_painter.mount()
-        var this$body_size = this.body_size
-        var this$body_size$width = this$body_size.width
-        var this$body_size$height = this$body_size.height
+        var /* [auto-meaningful-name] */this$body_size = this.body_size
+        var /* [auto-meaningful-name] */this$body_size$width = this$body_size.width
+        var /* [auto-meaningful-name] */this$body_size$height = this$body_size.height
         this.body_size = this.non_blank_painter.calculate_body_size(this$body_size$width - In, this$body_size$height - zn)
         this.non_blank_painter.update_item_values(t)
       }
@@ -8701,7 +8701,7 @@ var wr = function (e) {
   }
   t.prototype.set_blank_text = function (e) {
     if (this.blank_text.text !== e) {
-      var this$blank_text$width = this.blank_text.width
+      var /* [auto-meaningful-name] */this$blank_text$width = this.blank_text.width
       this.blank_text.text = e
       if (this.status === _n.BLANK && this.blank_text.width !== this$blank_text$width) {
         this.blank_painter.update_blank_text_position(this.body_size.width)
@@ -8716,7 +8716,7 @@ var wr = function (e) {
     var t = this
     var n = this.data.get_texture(e)
     if (n) {
-      return this.export_icon ? void (this.export_icon.texture = n) : (this.export_icon = new a.t(n), this.export_icon.width = Gn, this.export_icon.height = Gn, this.export_icon.position.set(this.body_size.width - Vn, On), this.export_icon.interactive = true, this.export_icon.buttonMode = true, this.addChild(this.export_icon), this.export_icon.addListener("mouseup", function () {
+      return this.export_icon ? void (this.export_icon.texture = n) : (this.export_icon = new $_34_index.t(n), this.export_icon.width = Gn, this.export_icon.height = Gn, this.export_icon.position.set(this.body_size.width - Vn, On), this.export_icon.interactive = true, this.export_icon.buttonMode = true, this.addChild(this.export_icon), this.export_icon.addListener("mouseup", function () {
         t.events.fire("list_export_icon:selected", {
           target_id: t.id
         })
@@ -8755,9 +8755,9 @@ var wr = function (e) {
     this.repaint()
   }
   t.prototype.repaint = function (e) {
-    var this$body_size = this.body_size
-    var this$body_size$width = this$body_size.width
-    var this$body_size$height = this$body_size.height
+    var /* [auto-meaningful-name] */this$body_size = this.body_size
+    var /* [auto-meaningful-name] */this$body_size$width = this$body_size.width
+    var /* [auto-meaningful-name] */this$body_size$height = this$body_size.height
     var i = this.prev_size.width !== this$body_size$width
     var o = this.prev_size.height !== this$body_size$height
     if (i || o) {
@@ -8855,8 +8855,8 @@ var Cr = function (e) {
     i.app = t
     i.events = n
     i.data = r
-    i.timer_container = new a.f()
-    i.data_widget_container = new a.f()
+    i.timer_container = new $_34_index.f()
+    i.data_widget_container = new $_34_index.f()
     i.variables = new Map()
     i.lists = new Map()
     i.addChild(i.data_widget_container, i.timer_container)
@@ -8900,7 +8900,7 @@ var Cr = function (e) {
   t.prototype.destroy_variable = function (e) {
     var t = this.get_variable(e)
     if (!t) {
-      return new u.a("Cannot find variable " + e + ".")
+      return new $_122.a("Cannot find variable " + e + ".")
     }
     t.destroy()
     this.variables.delete(e)
@@ -8930,14 +8930,14 @@ var Cr = function (e) {
     this.lists.clear()
   }
   t.prototype.set_z_index = function (e) {
-    var this$parent = this.parent
+    var /* [auto-meaningful-name] */this$parent = this.parent
     e = Math.min(e, this$parent.children.length - 1)
     e = Math.max(1, e)
     this$parent.setChildIndex(this, e)
   }
   t.prototype.load_list = function (e, t) {
     var n = this.get_list(e)
-    return n ? (new u.a("List " + e + " already exists."), n) : (n = new wr(e, this.data_widget_container, this.app, this.events, this.data, t), this.lists.set(e, n), n)
+    return n ? (new $_122.a("List " + e + " already exists."), n) : (n = new wr(e, this.data_widget_container, this.app, this.events, this.data, t), this.lists.set(e, n), n)
   }
   t.prototype.get_list = function (e) {
     var t = this.lists.get(e)
@@ -8950,7 +8950,7 @@ var Cr = function (e) {
   t.prototype.destroy_list = function (e) {
     var t = this.lists.get(e)
     if (!t) {
-      return new u.a("Cannot find list " + e + ".")
+      return new $_122.a("Cannot find list " + e + ".")
     }
     t.destroy()
     this.lists.delete(e)
@@ -8961,7 +8961,7 @@ var Cr = function (e) {
     var i = t === We.VARIABLE ? this.is_variable : this.is_list
     try {
       for (var o = xr(this.data_widget_container.children), a = o.next(); !a.done; a = o.next()) {
-        var a$value = a.value
+        var /* [auto-meaningful-name] */a$value = a.value
         if (a$value.name === e && i(a$value)) {
           return a$value
         }
@@ -8983,14 +8983,14 @@ var Cr = function (e) {
     }
   }
   t.prototype.get_latest_data_widget = function () {
-    var this$data_widget_container$children = this.data_widget_container.children
+    var /* [auto-meaningful-name] */this$data_widget_container$children = this.data_widget_container.children
     var t = this$data_widget_container$children[this$data_widget_container$children.length - 1]
     if (this.is_list(t) || this.is_variable(t)) {
       return t
     }
   }
   return t
-}(a.f)
+}($_34_index.f)
 var Or = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -9028,12 +9028,12 @@ var kr = function (e) {
     t.scroll_drag_move = function (e) {
       if (t.text_area && t.is_dragging) {
         e.stopPropagation()
-        var e$data$getLocalPositionT$y = e.data.getLocalPosition(t).y
+        var /* [auto-meaningful-name] */e$data$getLocalPositionT$y = e.data.getLocalPosition(t).y
         var r = e$data$getLocalPositionT$y - t.scrollbar_y
         t.scrollbar_y = e$data$getLocalPositionT$y
         var i = t.scrollbar_btn.position.y + r
         var o = t.max_size * (1 - t.max_size / t.text_area.height)
-        i = le.a(0, o, i)
+        i = $_215_index.a(0, o, i)
         t.scrollbar_btn.position.y = i
         t.text_area.position.y = -t.scrollbar_btn.y / (t.height - t.scrollbar_btn.height) * (t.text_area.height - t.max_size) + t.start_pos
       }
@@ -9042,7 +9042,7 @@ var kr = function (e) {
       t.is_dragging = false
     }
     t.name = "scrollbar"
-    t.scrollbar_btn = new a.j()
+    t.scrollbar_btn = new $_34_index.j()
     t.scrollbar_btn.on("mousedown", t.scroll_drag_start).on("mousemove", t.scroll_drag_move).on("mouseup", t.scroll_drag_end).on("mouseupoutside", t.scroll_drag_end).on("touchstart", t.scroll_drag_start).on("touchmove", t.scroll_drag_move).on("touchendoutside", t.scroll_drag_end).on("touchend", t.scroll_drag_end)
     t.addChild(t.scrollbar_btn)
     return t
@@ -9076,7 +9076,7 @@ var kr = function (e) {
     }
   }
   return t
-}(a.j)
+}($_34_index.j)
 var Sr = {
   fontSize: "20px",
   fontFamily: ["PingFangSC-Regular", "Microsoft YaHei"],
@@ -9150,40 +9150,40 @@ var Rr = function (e) {
     o.app = t
     o.loader = n
     o.events = r
-    o.origin_title = new a.v("", Sr)
+    o.origin_title = new $_34_index.v("", Sr)
     o.origin_title.x = o.DIALOG_PADDING
-    o.origin_text = new a.v("", Tr)
+    o.origin_text = new $_34_index.v("", Tr)
     o.origin_text.x = o.DIALOG_PADDING
-    o.origin_title_background = new a.j()
-    o.separate_line = new a.j()
-    o.translation_title = new a.v("", Sr)
+    o.origin_title_background = new $_34_index.j()
+    o.separate_line = new $_34_index.j()
+    o.translation_title = new $_34_index.v("", Sr)
     o.translation_title.x = o.DIALOG_PADDING
-    o.translation_text = new a.v("", Tr)
+    o.translation_text = new $_34_index.v("", Tr)
     o.translation_text.x = o.DIALOG_PADDING
-    o.translation_title_background = new a.j()
-    o.translation_text_mask = new a.j()
+    o.translation_title_background = new $_34_index.j()
+    o.translation_text_mask = new $_34_index.j()
     o.translation_text_mask.name = "text_mask"
     o.scrollbar = new kr()
-    o.close_icon = new a.t()
+    o.close_icon = new $_34_index.t()
     o.close_icon.scale.set(Br)
     o.close_icon.interactive = true
     o.close_icon.buttonMode = true
     o.close_icon.alpha = Dr
     o.close_icon.on("mouseup", o.close_dialog)
     o.close_icon.on("touchend", o.close_dialog)
-    o.play_idle_icon = new a.t()
+    o.play_idle_icon = new $_34_index.t()
     o.play_idle_icon.scale.set(Ir)
-    o.playing_icon = new a.t()
+    o.playing_icon = new $_34_index.t()
     o.playing_icon.scale.set(Ir)
     o.set_play_state(false)
-    o.play_container = new a.f()
+    o.play_container = new $_34_index.f()
     o.play_container.addChild(o.play_idle_icon, o.playing_icon)
     o.play_container.interactive = true
     o.play_container.buttonMode = true
     o.play_container.on("mousedown", o.play_translation)
     o.play_container.on("touchstart", o.play_translation)
-    if (o.app.get_renderer_type() === a.p.WEBGL) {
-      o.filters = [new a.h({
+    if (o.app.get_renderer_type() === $_34_index.p.WEBGL) {
+      o.filters = [new $_34_index.h({
         rotation: 45,
         distance: 3,
         alpha: .15,
@@ -9194,7 +9194,7 @@ var Rr = function (e) {
     o.loader.add({
       url: i.url,
       on_success: function (e) {
-        var e$textures = e.textures
+        var /* [auto-meaningful-name] */e$textures = e.textures
         if (e$textures) {
           o.close_icon.texture = e$textures[i.texture_name.close_icon]
           o.playing_icon.texture = e$textures[i.texture_name.playing_icon]
@@ -9217,9 +9217,9 @@ var Rr = function (e) {
   }
   Fr(t, e)
   t.prototype.draw_background = function (e, t) {
-    var this$app$get_app$view = this.app.get_app().view
-    var this$app$get_app$view$width = this$app$get_app$view.width
-    var this$app$get_app$view$height = this$app$get_app$view.height
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
     this.clear()
     this.lineStyle(2, 14276302, 1)
     this.beginFill(16777215, 1)
@@ -9234,10 +9234,10 @@ var Rr = function (e) {
   }
   t.prototype.draw_content = function (e, t, n, r, i) {
     var o = this.get_object_by_type(e)
-    var o$content_title = o.content_title
-    var o$content_text = o.content_text
-    var o$title_background = o.title_background
-    var this$app$get_app$view$height = this.app.get_app().view.height
+    var /* [auto-meaningful-name] */o$content_title = o.content_title
+    var /* [auto-meaningful-name] */o$content_text = o.content_text
+    var /* [auto-meaningful-name] */o$title_background = o.title_background
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this.app.get_app().view.height
     var l = i - 2 * (this.DIALOG_PADDING + this.TEXT_PADDING)
     o$content_title.text = t
     o$content_title.position.y = r
@@ -9259,11 +9259,11 @@ var Rr = function (e) {
     this.separate_line.lineStyle(2, 0, .1).moveTo(0, e).lineTo(t, e).endFill()
   }
   t.prototype.set_icon_position = function (e) {
-    var this$close_icon = this.close_icon
-    var this$play_container = this.play_container
-    var this$translation_title = this.translation_title
+    var /* [auto-meaningful-name] */this$close_icon = this.close_icon
+    var /* [auto-meaningful-name] */this$play_container = this.play_container
+    var /* [auto-meaningful-name] */this$translation_title = this.translation_title
     var i = e - this$close_icon.width - this.DIALOG_PADDING
-    var this$DIALOG_PADDING = this.DIALOG_PADDING
+    var /* [auto-meaningful-name] */this$DIALOG_PADDING = this.DIALOG_PADDING
     this$close_icon.position.x = i
     this$close_icon.position.y = this$DIALOG_PADDING
     var a = this$translation_title.position.x + this$translation_title.width + this.PLAY_ICON_MARGIN
@@ -9297,8 +9297,8 @@ var Rr = function (e) {
     this.on_complete_cb = r
     this.visible = true
     var i = this.app.get_app().view.width - 2 * this.DIALOG_MARGIN
-    var e$src = e.src
-    var e$dst = e.dst
+    var /* [auto-meaningful-name] */e$src = e.src
+    var /* [auto-meaningful-name] */e$dst = e.dst
     var s = this.draw_content(hr.origin, t, e$src, this.TEXT_TITLE_PADDING, i)
     var c = s + this.DIALOG_PADDING + this.FROM_TO_MARGIN / 2
     this.draw_separate_line(c, i)
@@ -9337,8 +9337,8 @@ var Rr = function (e) {
     })
   }
   return t
-}(a.j)
-import Pr = require("./467");
+}($_34_index.j)
+import /* [auto-meaningful-name] */$_467 = require("./467")
 var Nr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -9366,21 +9366,21 @@ var Mr = function (e) {
     r.on_destroy = n
     r.video = document.createElement("video")
     r.canvas = document.createElement("canvas")
-    r.camera_status = Le.d.TURN_OFF
+    r.camera_status = $_128.d.TURN_OFF
     r.set_parent = function (e) {
       r.setParent(e)
     }
     r.anchor.set(.5)
-    r.texture = a.y.from(r.video)
+    r.texture = $_34_index.y.from(r.video)
     r.visible = false
     return r
   }
   Nr(t, e)
   t.prototype.turn_on = function (e) {
     var t = this
-    return this.camera_status === Le.d.IS_TURNED_ON ? Promise.resolve() : this.camera_status === Le.d.TURNING_ON && this.turning_on_lock ? this.turning_on_lock : (this.camera_status = Le.d.TURNING_ON, this.turning_on_lock = new Promise(function (n, r) {
+    return this.camera_status === $_128.d.IS_TURNED_ON ? Promise.resolve() : this.camera_status === $_128.d.TURNING_ON && this.turning_on_lock ? this.turning_on_lock : (this.camera_status = $_128.d.TURNING_ON, this.turning_on_lock = new Promise(function (n, r) {
       navigator.mediaDevices.getUserMedia(e).then(function (e) {
-        if (t.camera_status !== Le.d.TURN_OFF) {
+        if (t.camera_status !== $_128.d.TURN_OFF) {
           t.stream = e
           try {
             t.video.srcObject = e
@@ -9388,9 +9388,9 @@ var Mr = function (e) {
             t.video.src = window.URL.createObjectURL(e)
           }
           t.video.onloadedmetadata = function (e) {
-            if (t.camera_status !== Le.d.TURN_OFF) {
+            if (t.camera_status !== $_128.d.TURN_OFF) {
               t.adjust_stage_scale()
-              t.camera_status = Le.d.IS_TURNED_ON
+              t.camera_status = $_128.d.IS_TURNED_ON
               t.turning_on_lock = undefined
               t.visible = true
               t.video.play()
@@ -9406,12 +9406,12 @@ var Mr = function (e) {
     }))
   }
   t.prototype.adjust_stage_scale = function () {
-    var this$app$get_app$view = this.app.get_app().view
-    var this$app$get_app$view$width = this$app$get_app$view.width
-    var this$app$get_app$view$height = this$app$get_app$view.height
-    var this$video = this.video
-    var this$video$videoWidth = this$video.videoWidth
-    var this$video$videoHeight = this$video.videoHeight
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
+    var /* [auto-meaningful-name] */this$video = this.video
+    var /* [auto-meaningful-name] */this$video$videoWidth = this$video.videoWidth
+    var /* [auto-meaningful-name] */this$video$videoHeight = this$video.videoHeight
     if (0 !== this$video$videoWidth && 0 !== this$video$videoHeight) {
       var a = Math.max(this$app$get_app$view$height / this$video$videoHeight, this$app$get_app$view$width / this$video$videoWidth)
       this.scale.set(-a, a)
@@ -9419,8 +9419,8 @@ var Mr = function (e) {
   }
   t.prototype.turn_off = function () {
     var /* [auto-meaningful-name] */this$stream
-    if (this.camera_status !== Le.d.TURN_OFF) {
-      this.camera_status = Le.d.TURN_OFF
+    if (this.camera_status !== $_128.d.TURN_OFF) {
+      this.camera_status = $_128.d.TURN_OFF
       if (!(null === (this$stream = this.stream) || undefined === this$stream)) {
         this$stream.getVideoTracks().forEach(function (e) {
           return e.stop()
@@ -9433,7 +9433,7 @@ var Mr = function (e) {
   }
   t.prototype.get_image_data = function (e) {
     var t = this.canvas.getContext("2d")
-    if (this.camera_status === Le.d.IS_TURNED_ON && t) {
+    if (this.camera_status === $_128.d.IS_TURNED_ON && t) {
       if (e) {
         this.canvas.width = e.width
         this.canvas.height = e.height
@@ -9460,8 +9460,8 @@ var Mr = function (e) {
     this.on_destroy()
   }
   return t
-}(a.t)
-import jr = require("./318");
+}($_34_index.t)
+import /* [auto-meaningful-name] */$_318 = require("./318")
 var Lr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -9482,7 +9482,7 @@ var Lr = function () {
     t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
   }
 }()
-var Ur = new a.x({
+var Ur = new $_34_index.x({
   fontFamily: ["sans-serif", "Microsoft YaHei"],
   fontSize: "24px",
   fill: "#ffffff"
@@ -9497,8 +9497,8 @@ var Hr = function (e) {
     i.app = t
     i.loader = n
     i.url = r
-    i.loading_icon = new a.t()
-    i.name_text = new a.v("")
+    i.loading_icon = new $_34_index.t()
+    i.name_text = new $_34_index.v("")
     return i
   }
   Lr(t, e)
@@ -9507,7 +9507,7 @@ var Hr = function (e) {
     this.loader.add({
       url: this.url,
       on_success: function (t) {
-        var t$textures = t.textures
+        var /* [auto-meaningful-name] */t$textures = t.textures
         if (t$textures) {
           e.loading_icon.texture = t$textures["wood_banner_loading.png"]
         }
@@ -9519,9 +9519,9 @@ var Hr = function (e) {
   }
   t.prototype.draw = function () {
     this.clear()
-    var this$app$get_app$view = this.app.get_app().view
-    var this$app$get_app$view$width = this$app$get_app$view.width
-    var this$app$get_app$view$height = this$app$get_app$view.height
+    var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
+    var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
+    var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
     this.name_text.visible = true
     this.loading_icon.visible = true
     this.name_text.style = Ur
@@ -9564,7 +9564,7 @@ var Hr = function (e) {
     })
   }
   return t
-}(a.j)
+}($_34_index.j)
 var Vr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -9620,7 +9620,7 @@ var Gr = function (e) {
     }
     r.app = t
     r.data = n
-    var i = new a.h({
+    var i = new $_34_index.h({
       rotation: 0,
       distance: 0,
       alpha: .3,
@@ -9635,7 +9635,7 @@ var Gr = function (e) {
   t.prototype.set_target_actor = function (e) {
     var t = this.data.get_internal_actor(e)
     if (!t) {
-      return new u.a("Cannot find actor " + e)
+      return new $_122.a("Cannot find actor " + e)
     }
     if (this.target !== t) {
       this.target = t
@@ -9671,7 +9671,7 @@ var Gr = function (e) {
     }
   }
   return t
-}(a.j)
+}($_34_index.j)
 var zr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -9844,7 +9844,7 @@ var Kr = function (e) {
     }
   }
   t.prototype.load_video_box = function (e) {
-    if (Pr.b(e)) {
+    if ($_467.b(e)) {
       return this.load_box(e)
     }
   }
@@ -9879,7 +9879,7 @@ var Kr = function (e) {
     this.cache.clear()
   }
   return t
-}(a.f)
+}($_34_index.f)
 var Xr = function (e) {
   function t(t, n, r, i) {
     var o = e.call(this) || this
@@ -9911,7 +9911,7 @@ var Xr = function (e) {
       }
     }
     o.on_video_update = function (e) {
-      if (Pr.b(o.target)) {
+      if ($_467.b(o.target)) {
         if (undefined !== e.visible) {
           o.visible = e.visible && o.box_visible
         }
@@ -9927,7 +9927,7 @@ var Xr = function (e) {
     o.target = n
     o.id = n.id
     o.visible = n.visible && o.box_visible
-    o.icon = new a.t()
+    o.icon = new $_34_index.t()
     o.icon.width = o.ICON_WIDTH
     o.icon.height = o.ICON_HEIGHT
     o.load_texture(o.theme.icon_url).then(function (e) {
@@ -9952,7 +9952,7 @@ var Xr = function (e) {
     return Qr(this, undefined, undefined, function () {
       var t
       return Wr(this, function (n) {
-        return e && a.B.TextureCache[e] ? [2, a.B.TextureCache[e]] : e && a.B.BaseTextureCache[e] ? [2, new a.y(a.B.BaseTextureCache[e])] : (t = e ? a.y.from(e) : a.y.EMPTY).valid ? [2, t] : [2, new Promise(function (e, n) {
+        return e && $_34_index.B.TextureCache[e] ? [2, $_34_index.B.TextureCache[e]] : e && $_34_index.B.BaseTextureCache[e] ? [2, new $_34_index.y($_34_index.B.BaseTextureCache[e])] : (t = e ? $_34_index.y.from(e) : $_34_index.y.EMPTY).valid ? [2, t] : [2, new Promise(function (e, n) {
           t.baseTexture.on("loaded", function () {
             e(t)
           })
@@ -10011,7 +10011,7 @@ var Xr = function (e) {
     })
   }
   return t
-}(a.j)
+}($_34_index.j)
 var Yr = function () {
   function e(e, t, n) {
     var r = this
@@ -10033,7 +10033,7 @@ var Yr = function () {
             t.remove_listener("destroy", r.on_parent_scene_destroy)
           }
         }
-        t.addChildAt(r.get_scene_children_container(), Le.h)
+        t.addChildAt(r.get_scene_children_container(), $_128.h)
         t.add_listener("destroy", r.on_parent_scene_destroy)
       }
     }
@@ -10048,43 +10048,43 @@ var Yr = function () {
     var t
     var n = this
     if (!this.editor && e.editor) {
-      this.editor = new jr.a(e.editor, this.app, this.data, this.events, this.loader)
-      this.components_z_index_array[Le.c.EDITOR] = this.editor.set_parent
+      this.editor = new $_318.a(e.editor, this.app, this.data, this.events, this.loader)
+      this.components_z_index_array[$_128.c.EDITOR] = this.editor.set_parent
     }
     if (!this.grid && e.grid) {
       this.grid = new on(this.app, this.events)
-      this.components_z_index_array[Le.c.GRID] = this.grid.set_parent
+      this.components_z_index_array[$_128.c.GRID] = this.grid.set_parent
     }
     if (!this.draggable_container && e.draggable_container) {
       this.draggable_container = new Cr(this.app, this.events, this.data)
-      this.components_z_index_array[Le.c.DRAGGABLE_CONTAINER] = this.draggable_container.set_parent
+      this.components_z_index_array[$_128.c.DRAGGABLE_CONTAINER] = this.draggable_container.set_parent
     }
     if (!this.voice_dialog && e.voice_dialog) {
       this.voice_dialog = new Wt(e.voice_dialog, this.app, this.loader, this.events)
-      this.components_z_index_array[Le.c.VOICE_DIALOG] = this.voice_dialog.set_parent
+      this.components_z_index_array[$_128.c.VOICE_DIALOG] = this.voice_dialog.set_parent
     }
     if (!this.stage_dialog && e.stage_dialog) {
       this.stage_dialog = new Jt(this.app, this.data, this.loader, e.stage_dialog, this.events)
-      this.components_z_index_array[Le.c.STAGE_DIALOG] = this.stage_dialog.set_parent
+      this.components_z_index_array[$_128.c.STAGE_DIALOG] = this.stage_dialog.set_parent
     }
     if (!this.selection_dialog && e.selection_dialog) {
       this.selection_dialog = new cn(this.app, this.events)
-      this.components_z_index_array[Le.c.SELECTION_DIALOG] = this.selection_dialog.set_parent
+      this.components_z_index_array[$_128.c.SELECTION_DIALOG] = this.selection_dialog.set_parent
     }
     if (!this.translate_dialog && e.translate_dialog) {
       this.translate_dialog = new Rr(this.app, this.loader, this.events, e.translate_dialog)
-      this.components_z_index_array[Le.c.TRANSLATE_DIALOG] = this.translate_dialog.set_parent
+      this.components_z_index_array[$_128.c.TRANSLATE_DIALOG] = this.translate_dialog.set_parent
     }
     if (!this.playable_manager && e.playable_manager) {
-      this.playable_manager = new Pr.a(this.app, this.data, this.events, this.destroy_scene_children_container)
-      this.scene_children_container_children_z_index_array[Le.g.PLAYABLE_CONTAINER] = this.playable_manager.set_video_container_parent
+      this.playable_manager = new $_467.a(this.app, this.data, this.events, this.destroy_scene_children_container)
+      this.scene_children_container_children_z_index_array[$_128.g.PLAYABLE_CONTAINER] = this.playable_manager.set_video_container_parent
       if (t = e.playable_manager.parent_scene_id) {
         this.on_parent_scene_change(t)
       }
     }
     if (!this.camera && e.camera) {
       this.camera = new Mr(this.app, this.destroy_scene_children_container)
-      this.scene_children_container_children_z_index_array[Le.g.CAMERA] = this.camera.set_parent
+      this.scene_children_container_children_z_index_array[$_128.g.CAMERA] = this.camera.set_parent
       if (t = e.camera.parent_scene_id) {
         this.on_parent_scene_change(t)
       }
@@ -10097,13 +10097,13 @@ var Yr = function () {
     }
     if (!this.border_box && e.border_box) {
       this.border_box = new Gr(this.app, this.data)
-      this.components_z_index_array[Le.c.BORDER_BOX] = this.border_box.set_parent
+      this.components_z_index_array[$_128.c.BORDER_BOX] = this.border_box.set_parent
     }
     if (!this.cooperation_box_container && e.cooperation_box_container) {
       this.cooperation_box_container = new Kr(e.cooperation_box_container, this.app, this.data)
-      this.components_z_index_array[Le.c.COOPERATION_CONTAINER] = this.cooperation_box_container.set_parent
+      this.components_z_index_array[$_128.c.COOPERATION_CONTAINER] = this.cooperation_box_container.set_parent
     }
-    var this$app$get_app$stage = this.app.get_app().stage
+    var /* [auto-meaningful-name] */this$app$get_app$stage = this.app.get_app().stage
     this.components_z_index_array.forEach(function (e) {
       if (e) {
         e(this$app$get_app$stage)
@@ -10117,13 +10117,13 @@ var Yr = function () {
   }
   e.prototype.get_scene_children_container = function () {
     if (!this.scene_children_container) {
-      this.scene_children_container = new a.f()
+      this.scene_children_container = new $_34_index.f()
       this.events.add_listener("scene:current_scene_changed", this.on_parent_scene_change)
     }
     return this.scene_children_container
   }
   e.prototype.remove_scene_container_parent_scene_listener = function () {
-    var this$get_scene_children_container$parent = this.get_scene_children_container().parent
+    var /* [auto-meaningful-name] */this$get_scene_children_container$parent = this.get_scene_children_container().parent
     if (c.m(this$get_scene_children_container$parent) && this.on_parent_scene_destroy) {
       this$get_scene_children_container$parent.remove_listener("destroy", this.on_parent_scene_destroy)
       this.on_parent_scene_destroy = undefined
@@ -10133,7 +10133,7 @@ var Yr = function () {
     if (this.editor && e.editor) {
       this.editor.destroy()
       this.editor = undefined
-      this.components_z_index_array[Le.c.EDITOR] = undefined
+      this.components_z_index_array[$_128.c.EDITOR] = undefined
     }
     if (this.actor_dialog_manager && e.actor_dialog_manager) {
       this.actor_dialog_manager.destroy()
@@ -10142,37 +10142,37 @@ var Yr = function () {
     if (this.stage_dialog && e.stage_dialog) {
       this.stage_dialog.destroy()
       this.stage_dialog = undefined
-      this.components_z_index_array[Le.c.STAGE_DIALOG] = undefined
+      this.components_z_index_array[$_128.c.STAGE_DIALOG] = undefined
     }
     if (this.grid && e.grid) {
       this.grid.destroy()
       this.grid = undefined
-      this.components_z_index_array[Le.c.GRID] = undefined
+      this.components_z_index_array[$_128.c.GRID] = undefined
     }
     if (this.selection_dialog && e.selection_dialog) {
       this.selection_dialog.destroy()
       this.selection_dialog = undefined
-      this.components_z_index_array[Le.c.SELECTION_DIALOG] = undefined
+      this.components_z_index_array[$_128.c.SELECTION_DIALOG] = undefined
     }
     if (this.translate_dialog && e.translate_dialog) {
       this.translate_dialog.destroy()
       this.translate_dialog = undefined
-      this.components_z_index_array[Le.c.TRANSLATE_DIALOG] = undefined
+      this.components_z_index_array[$_128.c.TRANSLATE_DIALOG] = undefined
     }
     if (this.draggable_container && e.draggable_container) {
       this.draggable_container.destroy()
       this.draggable_container = undefined
-      this.components_z_index_array[Le.c.DRAGGABLE_CONTAINER] = undefined
+      this.components_z_index_array[$_128.c.DRAGGABLE_CONTAINER] = undefined
     }
     if (this.camera && e.camera) {
       this.camera.destroy()
       this.camera = undefined
-      this.scene_children_container_children_z_index_array[Le.g.CAMERA] = undefined
+      this.scene_children_container_children_z_index_array[$_128.g.CAMERA] = undefined
     }
     if (this.playable_manager && e.playable_manager) {
       this.playable_manager.destroy()
       this.playable_manager = undefined
-      this.scene_children_container_children_z_index_array[Le.g.PLAYABLE_CONTAINER] = undefined
+      this.scene_children_container_children_z_index_array[$_128.g.PLAYABLE_CONTAINER] = undefined
     }
     if (this.wood_loader && e.wood_loader) {
       this.wood_loader.destroy()
@@ -10181,12 +10181,12 @@ var Yr = function () {
     if (this.voice_dialog && e.voice_dialog) {
       this.voice_dialog.destroy()
       this.voice_dialog = undefined
-      this.components_z_index_array[Le.c.VOICE_DIALOG] = undefined
+      this.components_z_index_array[$_128.c.VOICE_DIALOG] = undefined
     }
     if (this.border_box && e.border_box) {
       this.border_box.destroy()
       this.border_box = undefined
-      this.components_z_index_array[Le.c.BORDER_BOX] = undefined
+      this.components_z_index_array[$_128.c.BORDER_BOX] = undefined
     }
   }
   e.prototype.get_editor = function () {
@@ -10256,7 +10256,7 @@ var $r = function () {
 }()
 var Jr = function (e, t, n, r) {
   var i
-  var arguments$length = arguments.length
+  var /* [auto-meaningful-name] */arguments$length = arguments.length
   var a = arguments$length < 3 ? t : null === r ? r = Object.getOwnPropertyDescriptor(t, n) : r
   if ("object" === typeof Reflect && "function" === typeof Reflect.decorate) {
     a = Reflect.decorate(e, t, n, r)
@@ -10290,7 +10290,7 @@ var ti = function (e) {
     return l
   }
   $r(t, e)
-  return t = Jr([i.injectable(), ei(0, i.inject(s.App)), ei(1, i.inject(s.Events)), ei(2, i.inject(s.Data)), ei(3, i.inject(s.Textures)), ei(4, i.inject(s.Scenes)), ei(5, i.inject(s.Actors)), ei(6, i.inject(s.StageAnimation)), ei(7, i.inject(s.Physics)), ei(8, i.inject(qr.Components)), Zr("design:paramtypes", [Object, Object, Function, Function, Function, Function, Function, Function, Function])], t)
+  return t = Jr([$_269_index.injectable(), ei(0, $_269_index.inject(s.App)), ei(1, $_269_index.inject(s.Events)), ei(2, $_269_index.inject(s.Data)), ei(3, $_269_index.inject(s.Textures)), ei(4, $_269_index.inject(s.Scenes)), ei(5, $_269_index.inject(s.Actors)), ei(6, $_269_index.inject(s.StageAnimation)), ei(7, $_269_index.inject(s.Physics)), ei(8, $_269_index.inject(qr.Components)), Zr("design:paramtypes", [Object, Object, Function, Function, Function, Function, Function, Function, Function])], t)
 }(Ae)
 var ni = Ne
 ni.bind(qr.Components).toFactory(function (e) {
@@ -10300,11 +10300,11 @@ ni.bind(qr.Components).toFactory(function (e) {
   }
 })
 ni.bind(qr.KittenStage).to(ti)
-var require$2344$version = require("./2344").version
+var /* [auto-meaningful-name] */require$_2344$version = require("./2344").version
 function ii() {
   return function (e) {
     return ni.get(e)
   }(qr.KittenStage)
 }
-console.log("%cWelcome to ❤ Codemao Stage - v" + require$2344$version + " ❤ for Kitten o(*￣▽￣*)ブ", "\n  color: #BC2424;\n  text-shadow: 0 1px 0 #8D1B1B;")
+console.log("%cWelcome to ❤ Codemao Stage - v" + require$_2344$version + " ❤ for Kitten o(*￣▽￣*)ブ", "\n  color: #BC2424;\n  text-shadow: 0 1px 0 #8D1B1B;")
 export default ii

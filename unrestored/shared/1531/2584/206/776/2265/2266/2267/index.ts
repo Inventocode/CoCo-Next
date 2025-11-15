@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2267
@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../../../../../36/2668/220")
-var i = require("../../../../../36/2668/230")
+var r = require("../../../220")
+var i = require("../../../230")
 var o = require("../../1120")
 var a = require("./2268")
 function s(e, t, n, r) {
@@ -20,7 +20,7 @@ function s(e, t, n, r) {
   }
 }
 function c(e) {
-  for (var e$tryContext = e.tryContext; e$tryContext;) {
+  for (var /* [auto-meaningful-name] */e$tryContext = e.tryContext; e$tryContext;) {
     if (e$tryContext.hasFinalizer && "finally" !== e$tryContext.position) {
       return e$tryContext
     }
@@ -29,7 +29,7 @@ function c(e) {
   return e
 }
 function u(e) {
-  for (var e$tryContext = e.tryContext; e$tryContext;) {
+  for (var /* [auto-meaningful-name] */e$tryContext = e.tryContext; e$tryContext;) {
     if ("try" === e$tryContext.position || e$tryContext.hasFinalizer && "catch" === e$tryContext.position) {
       return e$tryContext
     }
@@ -95,7 +95,7 @@ var h = function () {
   }, {
     key: "parentForkContext",
     get: function () {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       return this$forkContext && this$forkContext.upper
     }
   }, {
@@ -107,7 +107,7 @@ var h = function () {
   }, {
     key: "popForkContext",
     value: function () {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       this.forkContext = this$forkContext.upper
       this.forkContext.replaceHead(this$forkContext.makeNext(0, -1))
       return this$forkContext
@@ -137,45 +137,45 @@ var h = function () {
   }, {
     key: "popChoiceContext",
     value: function () {
-      var _this$choiceContext = this.choiceContext
-      this.choiceContext = _this$choiceContext.upper
-      var this$forkContext = this.forkContext
-      var this$forkContext$head = this$forkContext.head
-      switch (_this$choiceContext.kind) {
+      var /* [auto-meaningful-name] */this$choiceContext = this.choiceContext
+      this.choiceContext = this$choiceContext.upper
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext$head = this$forkContext.head
+      switch (this$choiceContext.kind) {
         case "&&":
         case "||":
-          if (_this$choiceContext.processed || (_this$choiceContext.trueForkContext.add(this$forkContext$head), _this$choiceContext.falseForkContext.add(this$forkContext$head)), _this$choiceContext.isForkingAsResult) {
-            var this$choiceContext = this.choiceContext
-            this$choiceContext.trueForkContext.addAll(_this$choiceContext.trueForkContext)
-            this$choiceContext.falseForkContext.addAll(_this$choiceContext.falseForkContext)
-            this$choiceContext.processed = true
-            return _this$choiceContext
+          if (this$choiceContext.processed || (this$choiceContext.trueForkContext.add(this$forkContext$head), this$choiceContext.falseForkContext.add(this$forkContext$head)), this$choiceContext.isForkingAsResult) {
+            var /* [auto-meaningful-name] */_this$choiceContext = this.choiceContext
+            _this$choiceContext.trueForkContext.addAll(this$choiceContext.trueForkContext)
+            _this$choiceContext.falseForkContext.addAll(this$choiceContext.falseForkContext)
+            _this$choiceContext.processed = true
+            return this$choiceContext
           }
           break
         case "test":
-          if (_this$choiceContext.processed) {
-            _this$choiceContext.falseForkContext.clear()
-            _this$choiceContext.falseForkContext.add(this$forkContext$head)
+          if (this$choiceContext.processed) {
+            this$choiceContext.falseForkContext.clear()
+            this$choiceContext.falseForkContext.add(this$forkContext$head)
           } else {
-            _this$choiceContext.trueForkContext.clear()
-            _this$choiceContext.trueForkContext.add(this$forkContext$head)
+            this$choiceContext.trueForkContext.clear()
+            this$choiceContext.trueForkContext.add(this$forkContext$head)
           }
           break
         case "loop":
-          return _this$choiceContext
+          return this$choiceContext
         default:
           throw new Error("unreachable")
       }
-      var _this$choiceContext$trueForkContext = _this$choiceContext.trueForkContext
-      _this$choiceContext$trueForkContext.addAll(_this$choiceContext.falseForkContext)
-      this$forkContext.replaceHead(_this$choiceContext$trueForkContext.makeNext(0, -1))
-      return _this$choiceContext
+      var /* [auto-meaningful-name] */this$choiceContext$trueForkContext = this$choiceContext.trueForkContext
+      this$choiceContext$trueForkContext.addAll(this$choiceContext.falseForkContext)
+      this$forkContext.replaceHead(this$choiceContext$trueForkContext.makeNext(0, -1))
+      return this$choiceContext
     }
   }, {
     key: "makeLogicalRight",
     value: function () {
-      var this$choiceContext = this.choiceContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$choiceContext = this.choiceContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$choiceContext.processed) {
         var n = "&&" === this$choiceContext.kind ? this$choiceContext.trueForkContext : this$choiceContext.falseForkContext
         this$forkContext.replaceHead(n.makeNext(0, -1))
@@ -193,8 +193,8 @@ var h = function () {
   }, {
     key: "makeIfConsequent",
     value: function () {
-      var this$choiceContext = this.choiceContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$choiceContext = this.choiceContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (!this$choiceContext.processed) {
         this$choiceContext.trueForkContext.add(this$forkContext.head)
         this$choiceContext.falseForkContext.add(this$forkContext.head)
@@ -205,8 +205,8 @@ var h = function () {
   }, {
     key: "makeIfAlternate",
     value: function () {
-      var this$choiceContext = this.choiceContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$choiceContext = this.choiceContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       this$choiceContext.trueForkContext.clear()
       this$choiceContext.trueForkContext.add(this$forkContext.head)
       this$choiceContext.processed = true
@@ -229,15 +229,15 @@ var h = function () {
   }, {
     key: "popSwitchContext",
     value: function () {
-      var this$switchContext = this.switchContext
+      var /* [auto-meaningful-name] */this$switchContext = this.switchContext
       this.switchContext = this$switchContext.upper
-      var this$forkContext = this.forkContext
-      var this$popBreakContext$brokenForkContext = this.popBreakContext().brokenForkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$popBreakContext$brokenForkContext = this.popBreakContext().brokenForkContext
       if (0 !== this$switchContext.countForks) {
-        var _this$forkContext$head = this$forkContext.head
+        var /* [auto-meaningful-name] */this$forkContext$head = this$forkContext.head
         this.forkBypassPath()
-        var this$forkContext$head = this$forkContext.head
-        this$popBreakContext$brokenForkContext.add(_this$forkContext$head)
+        var /* [auto-meaningful-name] */_this$forkContext$head = this$forkContext.head
+        this$popBreakContext$brokenForkContext.add(this$forkContext$head)
         if (!this$switchContext.lastIsDefault) {
           if (this$switchContext.defaultBodySegments) {
             !function (e, t) {
@@ -250,9 +250,9 @@ var h = function () {
                 l(i.allPrevSegments, r)
               }
             }(this$switchContext.defaultSegments, this$switchContext.defaultBodySegments)
-            f(this, this$forkContext$head, this$switchContext.defaultBodySegments)
+            f(this, _this$forkContext$head, this$switchContext.defaultBodySegments)
           } else {
-            this$popBreakContext$brokenForkContext.add(this$forkContext$head)
+            this$popBreakContext$brokenForkContext.add(_this$forkContext$head)
           }
         }
         for (var o = 0; o < this$switchContext.countForks; ++o) {
@@ -267,9 +267,9 @@ var h = function () {
   }, {
     key: "makeSwitchCaseBody",
     value: function (e, t) {
-      var this$switchContext = this.switchContext
+      var /* [auto-meaningful-name] */this$switchContext = this.switchContext
       if (this$switchContext.hasCase) {
-        var this$forkContext = this.forkContext
+        var /* [auto-meaningful-name] */this$forkContext = this.forkContext
         var i = this.pushForkContext()
         i.add(this$forkContext.makeNext(0, -1))
         if (t) {
@@ -305,13 +305,13 @@ var h = function () {
   }, {
     key: "popTryContext",
     value: function () {
-      var this$tryContext = this.tryContext
+      var /* [auto-meaningful-name] */this$tryContext = this.tryContext
       this.tryContext = this$tryContext.upper
       if ("catch" !== this$tryContext.position) {
-        var this$tryContext$returnedForkContext = this$tryContext.returnedForkContext
-        var this$tryContext$thrownForkContext = this$tryContext.thrownForkContext
+        var /* [auto-meaningful-name] */this$tryContext$returnedForkContext = this$tryContext.returnedForkContext
+        var /* [auto-meaningful-name] */this$tryContext$thrownForkContext = this$tryContext.thrownForkContext
         if (!this$tryContext$returnedForkContext.empty || !this$tryContext$thrownForkContext.empty) {
-          var this$forkContext$head = this.forkContext.head
+          var /* [auto-meaningful-name] */this$forkContext$head = this.forkContext.head
           this.forkContext = this.forkContext.upper
           var i = this$forkContext$head.slice(0, this$forkContext$head.length / 2 | 0)
           var o = this$forkContext$head.slice(this$forkContext$head.length / 2 | 0)
@@ -333,9 +333,9 @@ var h = function () {
   }, {
     key: "makeCatchBlock",
     value: function () {
-      var this$tryContext = this.tryContext
-      var this$forkContext = this.forkContext
-      var this$tryContext$thrownForkContext = this$tryContext.thrownForkContext
+      var /* [auto-meaningful-name] */this$tryContext = this.tryContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$tryContext$thrownForkContext = this$tryContext.thrownForkContext
       this$tryContext.position = "catch"
       this$tryContext.thrownForkContext = a.newEmpty(this$forkContext)
       this$tryContext.lastOfTryIsReachable = this$forkContext.reachable
@@ -348,11 +348,11 @@ var h = function () {
   }, {
     key: "makeFinallyBlock",
     value: function () {
-      var this$tryContext = this.tryContext
-      var this$forkContext = this.forkContext
-      var this$tryContext$returnedForkContext = this$tryContext.returnedForkContext
-      var this$tryContext$thrownForkContext = this$tryContext.thrownForkContext
-      var this$forkContext$head = this$forkContext.head
+      var /* [auto-meaningful-name] */this$tryContext = this.tryContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$tryContext$returnedForkContext = this$tryContext.returnedForkContext
+      var /* [auto-meaningful-name] */this$tryContext$thrownForkContext = this$tryContext.thrownForkContext
+      var /* [auto-meaningful-name] */this$forkContext$head = this$forkContext.head
       if ("catch" === this$tryContext.position) {
         this.popForkContext()
         this$forkContext = this.forkContext
@@ -378,7 +378,7 @@ var h = function () {
   }, {
     key: "makeFirstThrowablePathInTryBlock",
     value: function () {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$forkContext.reachable) {
         var t = u(this)
         if (t !== this && "try" === t.position && t.thrownForkContext.empty) {
@@ -390,7 +390,7 @@ var h = function () {
   }, {
     key: "pushLoopContext",
     value: function (e, t) {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       var r = this.pushBreakContext(true, t)
       switch (e) {
         case "WhileStatement":
@@ -452,10 +452,10 @@ var h = function () {
   }, {
     key: "popLoopContext",
     value: function () {
-      var this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
       this.loopContext = this$loopContext.upper
-      var this$forkContext = this.forkContext
-      var this$popBreakContext$brokenForkContext = this.popBreakContext().brokenForkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$popBreakContext$brokenForkContext = this.popBreakContext().brokenForkContext
       switch (this$loopContext.type) {
         case "WhileStatement":
         case "ForStatement":
@@ -471,7 +471,7 @@ var h = function () {
           if (true !== this$loopContext.test) {
             this$popBreakContext$brokenForkContext.addAll(r.falseForkContext)
           }
-          for (var r$trueForkContext$segmentsList = r.trueForkContext.segmentsList, o = 0; o < r$trueForkContext$segmentsList.length; ++o) {
+          for (var /* [auto-meaningful-name] */r$trueForkContext$segmentsList = r.trueForkContext.segmentsList, o = 0; o < r$trueForkContext$segmentsList.length; ++o) {
             f(this, r$trueForkContext$segmentsList[o], this$loopContext.entrySegments)
           }
           break
@@ -492,8 +492,8 @@ var h = function () {
   }, {
     key: "makeWhileTest",
     value: function (e) {
-      var this$loopContext = this.loopContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       var r = this$forkContext.makeNext(0, -1)
       this$loopContext.test = e
       this$loopContext.continueDestSegments = r
@@ -502,9 +502,9 @@ var h = function () {
   }, {
     key: "makeWhileBody",
     value: function () {
-      var this$loopContext = this.loopContext
-      var this$choiceContext = this.choiceContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$choiceContext = this.choiceContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (!this$choiceContext.processed) {
         this$choiceContext.trueForkContext.add(this$forkContext.head)
         this$choiceContext.falseForkContext.add(this$forkContext.head)
@@ -517,8 +517,8 @@ var h = function () {
   }, {
     key: "makeDoWhileBody",
     value: function () {
-      var this$loopContext = this.loopContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       var n = this$forkContext.makeNext(-1, -1)
       this$loopContext.entrySegments = n
       this$forkContext.replaceHead(n)
@@ -526,8 +526,8 @@ var h = function () {
   }, {
     key: "makeDoWhileTest",
     value: function (e) {
-      var this$loopContext = this.loopContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       this$loopContext.test = e
       if (!this$loopContext.continueForkContext.empty) {
         this$loopContext.continueForkContext.add(this$forkContext.head)
@@ -538,9 +538,9 @@ var h = function () {
   }, {
     key: "makeForTest",
     value: function (e) {
-      var this$loopContext = this.loopContext
-      var this$forkContext = this.forkContext
-      var this$forkContext$head = this$forkContext.head
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext$head = this$forkContext.head
       var i = this$forkContext.makeNext(-1, -1)
       this$loopContext.test = e
       this$loopContext.endOfInitSegments = this$forkContext$head
@@ -550,9 +550,9 @@ var h = function () {
   }, {
     key: "makeForUpdate",
     value: function () {
-      var this$loopContext = this.loopContext
-      var this$choiceContext = this.choiceContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$choiceContext = this.choiceContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$loopContext.testSegments) {
         d(this$loopContext, this$choiceContext, this$forkContext.head)
       } else {
@@ -565,9 +565,9 @@ var h = function () {
   }, {
     key: "makeForBody",
     value: function () {
-      var this$loopContext = this.loopContext
-      var this$choiceContext = this.choiceContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$choiceContext = this.choiceContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$loopContext.updateSegments) {
         this$loopContext.endOfUpdateSegments = this$forkContext.head
         if (this$loopContext.testSegments) {
@@ -580,7 +580,7 @@ var h = function () {
           this$loopContext.endOfInitSegments = this$forkContext.head
         }
       }
-      var this$loopContext$endOfTestSegments = this$loopContext.endOfTestSegments
+      var /* [auto-meaningful-name] */this$loopContext$endOfTestSegments = this$loopContext.endOfTestSegments
       if (!this$loopContext$endOfTestSegments) {
         var i = a.newEmpty(this$forkContext)
         i.add(this$loopContext.endOfInitSegments)
@@ -595,8 +595,8 @@ var h = function () {
   }, {
     key: "makeForInOfLeft",
     value: function () {
-      var this$loopContext = this.loopContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       var n = this$forkContext.makeDisconnected(-1, -1)
       this$loopContext.prevSegments = this$forkContext.head
       this$loopContext.leftSegments = this$loopContext.continueDestSegments = n
@@ -605,8 +605,8 @@ var h = function () {
   }, {
     key: "makeForInOfRight",
     value: function () {
-      var this$loopContext = this.loopContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       var n = a.newEmpty(this$forkContext)
       n.add(this$loopContext.prevSegments)
       var r = n.makeNext(-1, -1)
@@ -616,8 +616,8 @@ var h = function () {
   }, {
     key: "makeForInOfBody",
     value: function () {
-      var this$loopContext = this.loopContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$loopContext = this.loopContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       var n = a.newEmpty(this$forkContext)
       n.add(this$loopContext.endOfLeftSegments)
       var r = n.makeNext(-1, -1)
@@ -639,11 +639,11 @@ var h = function () {
   }, {
     key: "popBreakContext",
     value: function () {
-      var this$breakContext = this.breakContext
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$breakContext = this.breakContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       this.breakContext = this$breakContext.upper
       if (!this$breakContext.breakable) {
-        var this$breakContext$brokenForkContext = this$breakContext.brokenForkContext
+        var /* [auto-meaningful-name] */this$breakContext$brokenForkContext = this$breakContext.brokenForkContext
         if (!this$breakContext$brokenForkContext.empty) {
           this$breakContext$brokenForkContext.add(this$forkContext.head)
           this$forkContext.replaceHead(this$breakContext$brokenForkContext.makeNext(0, -1))
@@ -654,10 +654,10 @@ var h = function () {
   }, {
     key: "makeBreak",
     value: function (e) {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$forkContext.reachable) {
         var n = function (e, t) {
-          for (var e$breakContext = e.breakContext; e$breakContext;) {
+          for (var /* [auto-meaningful-name] */e$breakContext = e.breakContext; e$breakContext;) {
             if (t ? e$breakContext.label === t : e$breakContext.breakable) {
               return e$breakContext
             }
@@ -674,13 +674,13 @@ var h = function () {
   }, {
     key: "makeContinue",
     value: function (e) {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$forkContext.reachable) {
         var n = function (e, t) {
           if (!t) {
             return e.loopContext
           }
-          for (var e$loopContext = e.loopContext; e$loopContext;) {
+          for (var /* [auto-meaningful-name] */e$loopContext = e.loopContext; e$loopContext;) {
             if (e$loopContext.label === t) {
               return e$loopContext
             }
@@ -704,7 +704,7 @@ var h = function () {
   }, {
     key: "makeReturn",
     value: function () {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$forkContext.reachable) {
         c(this).returnedForkContext.add(this$forkContext.head)
         this$forkContext.replaceHead(this$forkContext.makeUnreachable(-1, -1))
@@ -713,7 +713,7 @@ var h = function () {
   }, {
     key: "makeThrow",
     value: function () {
-      var this$forkContext = this.forkContext
+      var /* [auto-meaningful-name] */this$forkContext = this.forkContext
       if (this$forkContext.reachable) {
         u(this).thrownForkContext.add(this$forkContext.head)
         this$forkContext.replaceHead(this$forkContext.makeUnreachable(-1, -1))
@@ -722,7 +722,7 @@ var h = function () {
   }, {
     key: "makeFinal",
     value: function () {
-      var this$currentSegments = this.currentSegments
+      var /* [auto-meaningful-name] */this$currentSegments = this.currentSegments
       if (this$currentSegments.length > 0 && this$currentSegments[0].reachable) {
         this.returnedForkContext.add(this$currentSegments)
       }

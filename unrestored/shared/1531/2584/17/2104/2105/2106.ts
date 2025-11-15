@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2106
@@ -14,7 +14,7 @@ var r = require("tslib")
 var i = require("inversify")
 var o = require("../../../125/195/index")
 var a = (0, r.__importStar)(require("../../497/index"))
-var s = require("../../../4/127")
+var s = require("../../../1036/127")
 var c = function (e) {
   function t(t) {
     var n = e.call(this, t.block) || this
@@ -22,7 +22,7 @@ var c = function (e) {
     n.ids = []
     n.is_shadow = false
     n.source = t.source || "other"
-    var t$block = t.block
+    var /* [auto-meaningful-name] */t$block = t.block
     var i = t$block.get_workspace()
     if (undefined != i && i.rendered) {
       n._xml = n.xml.workspace_element_to_dom_with_xy(t$block)

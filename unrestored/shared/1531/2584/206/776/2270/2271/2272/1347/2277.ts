@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2277
@@ -7,30 +7,30 @@
 var n
 var r
 var i
-var /* [auto-meaningful-name] */math$abs
+var /* [auto-meaningful-name] */Math$abs
 var a
 var s
 var c
 var u
 var l
 var f
-var /* [auto-meaningful-name] */math$PI
+var /* [auto-meaningful-name] */Math$PI
 var h
-var /* [auto-meaningful-name] */math$exp
-var /* [auto-meaningful-name] */math$sqrt
-var /* [auto-meaningful-name] */math$log
+var /* [auto-meaningful-name] */Math$exp
+var /* [auto-meaningful-name] */Math$sqrt
+var /* [auto-meaningful-name] */Math$log
 var g
-var /* [auto-meaningful-name] */math$sin
-var /* [auto-meaningful-name] */math$tan
-var /* [auto-meaningful-name] */math$cos
-var /* [auto-meaningful-name] */math$asin
-var /* [auto-meaningful-name] */math$acos
-var /* [auto-meaningful-name] */math$atan
+var /* [auto-meaningful-name] */Math$sin
+var /* [auto-meaningful-name] */Math$tan
+var /* [auto-meaningful-name] */Math$cos
+var /* [auto-meaningful-name] */Math$asin
+var /* [auto-meaningful-name] */Math$acos
+var /* [auto-meaningful-name] */Math$atan
 var x
 var C
-var /* [auto-meaningful-name] */math$round
-var /* [auto-meaningful-name] */math$ceil
-var /* [auto-meaningful-name] */math$floor
+var /* [auto-meaningful-name] */Math$round
+var /* [auto-meaningful-name] */Math$ceil
+var /* [auto-meaningful-name] */Math$floor
 var T
 var B
 var D
@@ -55,7 +55,7 @@ r = R(function (e, t) {
 i = function (e) {
   return -e
 }
-math$abs = Math.abs
+Math$abs = Math.abs
 a = function (e) {
   return e < 0 ? -1 : e > 0 ? 1 : 0
 }
@@ -75,28 +75,28 @@ l = R(function (e, t) {
 f = function (e) {
   return 1 / e
 }
-h = 2 * (math$PI = Math.PI)
-math$exp = Math.exp
-math$sqrt = Math.sqrt
-math$log = Math.log
+h = 2 * (Math$PI = Math.PI)
+Math$exp = Math.exp
+Math$sqrt = Math.sqrt
+Math$log = Math.log
 g = R(function (e, t) {
   return Math.pow(e, t)
 })
-math$sin = Math.sin
-math$tan = Math.tan
-math$cos = Math.cos
-math$asin = Math.asin
-math$acos = Math.acos
-math$atan = Math.atan
+Math$sin = Math.sin
+Math$tan = Math.tan
+Math$cos = Math.cos
+Math$asin = Math.asin
+Math$acos = Math.acos
+Math$atan = Math.atan
 x = R(function (e, t) {
   return Math.atan2(e, t)
 })
 C = function (e) {
   return ~~e
 }
-math$round = Math.round
-math$ceil = Math.ceil
-math$floor = Math.floor
+Math$round = Math.round
+Math$ceil = Math.ceil
+Math$floor = Math.floor
 T = function (e) {
   return e !== e
 }
@@ -122,30 +122,30 @@ module.exports = {
   max: n,
   min: r,
   negate: i,
-  abs: math$abs,
+  abs: Math$abs,
   signum: a,
   quot: s,
   rem: c,
   div: u,
   mod: l,
   recip: f,
-  pi: math$PI,
+  pi: Math$PI,
   tau: h,
-  exp: math$exp,
-  sqrt: math$sqrt,
-  ln: math$log,
+  exp: Math$exp,
+  sqrt: Math$sqrt,
+  ln: Math$log,
   pow: g,
-  sin: math$sin,
-  tan: math$tan,
-  cos: math$cos,
-  acos: math$acos,
-  asin: math$asin,
-  atan: math$atan,
+  sin: Math$sin,
+  tan: Math$tan,
+  cos: Math$cos,
+  acos: Math$acos,
+  asin: Math$asin,
+  atan: Math$atan,
   atan2: x,
   truncate: C,
-  round: math$round,
-  ceiling: math$ceil,
-  floor: math$floor,
+  round: Math$round,
+  ceiling: Math$ceil,
+  floor: Math$floor,
   isItNaN: T,
   even: B,
   odd: D,

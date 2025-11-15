@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：677
@@ -21,4 +21,4 @@ var r = {
     onContactPickerSelected: "完成选择"
   }
 }
-import o = require("./476");
+import /* [auto-meaningful-name] */$_476 = require("./476")

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：588
@@ -44,7 +44,7 @@ var u = function (t) {
       throw new a.a()
     }
     for (var s = new i.a(e, n), u = new Float32Array(2 * e), c = 0; c < n; c++) {
-      for (var u$length = u.length, d = c + .5, f = 0; f < u$length; f += 2) {
+      for (var /* [auto-meaningful-name] */u$length = u.length, d = c + .5, f = 0; f < u$length; f += 2) {
         u[f] = f / 2 + .5
         u[f + 1] = d
       }

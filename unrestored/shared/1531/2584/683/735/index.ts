@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：735
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./913")
+var r = require("../517/913")
 function i(e, t) {
   return function (e, t, n) {
     var i

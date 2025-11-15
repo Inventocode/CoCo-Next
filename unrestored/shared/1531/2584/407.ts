@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：407
@@ -6,16 +6,16 @@
 
 "use strict"
 
-export { c as a }
+export { IconWidgetTableData as a }
 export { d as c }
 export { p as b }
 export { f as d }
 var r
 var o
 var i
-import a = require("./11");
-import s = require("./64");
-var c = "icon-widget-table-data"
+import a = require("./11")
+import s = require("./64")
+var /* [auto-meaningful-name] */IconWidgetTableData = "icon-widget-table-data"
 var l = s.a("COLUMN")
 var u = s.a("COLUMN")
 r = {}
@@ -52,4 +52,4 @@ function f() {
     }, a.a(n, r, ""), a.a(n, o, ""), n)]
   }
 }
-export default c
+export default IconWidgetTableData

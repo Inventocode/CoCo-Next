@@ -1,14 +1,14 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1582
  */
 
-var math$abs = Math.abs
-var math$pow = Math.pow
-var math$floor = Math.floor
-var math$log = Math.log
-var math$LN2 = Math.LN2
+var /* [auto-meaningful-name] */Math$abs = Math.abs
+var /* [auto-meaningful-name] */Math$pow = Math.pow
+var /* [auto-meaningful-name] */Math$floor = Math.floor
+var /* [auto-meaningful-name] */Math$log = Math.log
+var /* [auto-meaningful-name] */Math$LN2 = Math.LN2
 module.exports = {
   pack: function (e, t, s) {
     var c
@@ -18,10 +18,10 @@ module.exports = {
     var p = 8 * s - t - 1
     var f = (1 << p) - 1
     var h = f >> 1
-    var m = 23 === t ? math$pow(2, -24) - math$pow(2, -77) : 0
+    var m = 23 === t ? Math$pow(2, -24) - Math$pow(2, -77) : 0
     var g = e < 0 || 0 === e && 1 / e < 0 ? 1 : 0
     var _ = 0
-    for ((e = math$abs(e)) != e || e === 1 / 0 ? (l = e != e ? 1 : 0, c = f) : (c = math$floor(math$log(e) / math$LN2), e * (u = math$pow(2, -c)) < 1 && (c--, u *= 2), (e += c + h >= 1 ? m / u : m * math$pow(2, 1 - h)) * u >= 2 && (c++, u /= 2), c + h >= f ? (l = 0, c = f) : c + h >= 1 ? (l = (e * u - 1) * math$pow(2, t), c += h) : (l = e * math$pow(2, h - 1) * math$pow(2, t), c = 0)); t >= 8; d[_++] = 255 & l, l /= 256, t -= 8) {
+    for ((e = Math$abs(e)) != e || e === 1 / 0 ? (l = e != e ? 1 : 0, c = f) : (c = Math$floor(Math$log(e) / Math$LN2), e * (u = Math$pow(2, -c)) < 1 && (c--, u *= 2), (e += c + h >= 1 ? m / u : m * Math$pow(2, 1 - h)) * u >= 2 && (c++, u /= 2), c + h >= f ? (l = 0, c = f) : c + h >= 1 ? (l = (e * u - 1) * Math$pow(2, t), c += h) : (l = e * Math$pow(2, h - 1) * Math$pow(2, t), c = 0)); t >= 8; d[_++] = 255 & l, l /= 256, t -= 8) {
       ;
     }
     for (c = c << t | l, p += t; p > 0; d[_++] = 255 & c, c /= 256, p -= 8) {
@@ -32,7 +32,7 @@ module.exports = {
   },
   unpack: function (e, t) {
     var n
-    var e$length = e.length
+    var /* [auto-meaningful-name] */e$length = e.length
     var i = 8 * e$length - t - 1
     var a = (1 << i) - 1
     var s = a >> 1
@@ -52,9 +52,9 @@ module.exports = {
       if (d === a) {
         return n ? NaN : u ? -1 / 0 : 1 / 0
       }
-      n += math$pow(2, t)
+      n += Math$pow(2, t)
       d -= s
     }
-    return (u ? -1 : 1) * n * math$pow(2, d - t)
+    return (u ? -1 : 1) * n * Math$pow(2, d - t)
   }
 }

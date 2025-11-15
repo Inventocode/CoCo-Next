@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：335
@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("./191/index")
-var i = require("./274")
+var r = require("./191")
+var i = require("./274/index")
 var o = require("./408")
 var a = require("./221")
 var s = function () {
@@ -15,7 +15,7 @@ var s = function () {
     this.field = t
   }
   t.prototype.decode = function (t, e) {
-    for (var this$field = this.field, a = new i.a(this$field, t), s = new Int32Array(e), u = true, c = 0; c < e; c++) {
+    for (var /* [auto-meaningful-name] */this$field = this.field, a = new i.a(this$field, t), s = new Int32Array(e), u = true, c = 0; c < e; c++) {
       var l = a.evaluateAt(this$field.exp(c + this$field.getGeneratorBase()))
       s[s.length - 1 - c] = l
       if (0 !== l) {
@@ -44,7 +44,7 @@ var s = function () {
       t = e
       e = r
     }
-    for (var this$field = this.field, s = t, u = e, c = this$field.getZero(), l = this$field.getOne(); u.getDegree() >= (n / 2 | 0);) {
+    for (var /* [auto-meaningful-name] */this$field = this.field, s = t, u = e, c = this$field.getZero(), l = this$field.getOne(); u.getDegree() >= (n / 2 | 0);) {
       var d = s
       var f = c
       c = l
@@ -75,7 +75,7 @@ var s = function () {
     if (1 === e) {
       return Int32Array.from([t.getCoefficient(1)])
     }
-    for (var n = new Int32Array(e), r = 0, this$field = this.field, a = 1; a < this$field.getSize() && r < e; a++) {
+    for (var n = new Int32Array(e), r = 0, /* [auto-meaningful-name] */this$field = this.field, a = 1; a < this$field.getSize() && r < e; a++) {
       if (0 === t.evaluateAt(a)) {
         n[r] = this$field.inverse(a)
         r++
@@ -87,7 +87,7 @@ var s = function () {
     return n
   }
   t.prototype.findErrorMagnitudes = function (t, e) {
-    for (var e$length = e.length, r = new Int32Array(e$length), this$field = this.field, o = 0; o < e$length; o++) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, r = new Int32Array(e$length), /* [auto-meaningful-name] */this$field = this.field, o = 0; o < e$length; o++) {
       for (var a = this$field.inverse(e[o]), s = 1, u = 0; u < e$length; u++) {
         if (o !== u) {
           var c = this$field.multiply(e[u], a)

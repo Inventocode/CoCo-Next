@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：503
@@ -12,7 +12,7 @@ var o = require("./124")
 var a = require("./56")
 var s = require("./37")
 var u = require("./150")
-var c = require("./73/index")
+var c = require("./73")
 var l = require("./170")
 var d = function () {
   var t = function (e, n) {
@@ -45,7 +45,7 @@ var f = function (t) {
         o[i]++
       } else {
         if (5 === i) {
-          for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, f = -1, e$CODE_START_A = e.CODE_START_A; e$CODE_START_A <= e.CODE_START_C; e$CODE_START_A++) {
+          for (var /* [auto-meaningful-name] */e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, f = -1, /* [auto-meaningful-name] */e$CODE_START_A = e.CODE_START_A; e$CODE_START_A <= e.CODE_START_C; e$CODE_START_A++) {
             var p = l.a.patternMatchVariance(o, e.CODE_PATTERNS[e$CODE_START_A], e.MAX_INDIVIDUAL_VARIANCE)
             if (p < e$MAX_AVG_VARIANCE) {
               e$MAX_AVG_VARIANCE = p
@@ -70,7 +70,7 @@ var f = function (t) {
   }
   e.decodeCode = function (t, n, r) {
     l.a.recordPattern(t, r, n)
-    for (var e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, o = -1, a = 0; a < e.CODE_PATTERNS.length; a++) {
+    for (var /* [auto-meaningful-name] */e$MAX_AVG_VARIANCE = e.MAX_AVG_VARIANCE, o = -1, a = 0; a < e.CODE_PATTERNS.length; a++) {
       var u = e.CODE_PATTERNS[a]
       var c = this.patternMatchVariance(n, u, e.MAX_INDIVIDUAL_VARIANCE)
       if (c < e$MAX_AVG_VARIANCE) {
@@ -249,14 +249,14 @@ var f = function (t) {
     if ((A -= S * O) % 103 !== O) {
       throw new i.a()
     }
-    var _$length = _.length
+    var /* [auto-meaningful-name] */_$length = _.length
     if (0 === _$length) {
       throw new s.a()
     }
     if (_$length > 0 && I) {
       _ = d === e.CODE_CODE_C ? _.substring(0, _$length - 2) : _.substring(0, _$length - 1)
     }
-    for (var N = (h[1] + h[0]) / 2, x = y + k / 2, b$length = b.length, L = new Uint8Array(b$length), B = 0; B < b$length; B++) {
+    for (var N = (h[1] + h[0]) / 2, x = y + k / 2, /* [auto-meaningful-name] */b$length = b.length, L = new Uint8Array(b$length), B = 0; B < b$length; B++) {
       L[B] = b[B]
     }
     var P = [new c.a(N, t), new c.a(x, t)]

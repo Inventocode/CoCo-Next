@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2157
@@ -17,9 +17,9 @@ var a = require("../../125/474")
 var s = function () {
   function e(e) {
     this.scale = 1
-    var e$svg_defs = e.svg_defs
-    var e$svg_rnd = e.svg_rnd
-    var e$gridOptions = e.gridOptions
+    var /* [auto-meaningful-name] */e$svg_defs = e.svg_defs
+    var /* [auto-meaningful-name] */e$svg_rnd = e.svg_rnd
+    var /* [auto-meaningful-name] */e$gridOptions = e.gridOptions
     this.spacing = e$gridOptions.spacing
     this.step = e$gridOptions.step
     this.snap_to_grid = e$gridOptions.snap

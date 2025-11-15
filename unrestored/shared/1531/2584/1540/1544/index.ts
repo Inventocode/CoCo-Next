@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1544
@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("../1623/86")
-var o = require("../1623/272")
-var i = require("../1736/194")
-var a = require("../1745/332")
-var s = require("../1738/231")
-var require$$1623300$f = require("../1623/300").f
+var r = require("../1698/86/index")
+var o = require("../1541/272")
+var i = require("../1541/194")
+var a = require("../1541/332")
+var s = require("../1541/231")
+var /* [auto-meaningful-name] */require$$_1541_300_index$f = require("../1541/300/index").f
 var l = require("./1210")
-var i$Symbol = i.Symbol
+var /* [auto-meaningful-name] */i$Symbol = i.Symbol
 if (o && "function" == typeof i$Symbol && (!("description" in i$Symbol.prototype) || undefined !== i$Symbol().description)) {
   var d = {}
   var p = function () {
@@ -27,10 +27,10 @@ if (o && "function" == typeof i$Symbol && (!("description" in i$Symbol.prototype
   l(p, i$Symbol)
   var f = p.prototype = i$Symbol.prototype
   f.constructor = p
-  var f$toString = f.toString
+  var /* [auto-meaningful-name] */f$toString = f.toString
   var m = "Symbol(test)" == String(i$Symbol("test"))
   var g = /^Symbol\((.*)\)[^)]+$/
-  require$$1623300$f(f, "description", {
+  require$$_1541_300_index$f(f, "description", {
     configurable: true,
     get: function () {
       var e = s(this) ? this.valueOf() : this

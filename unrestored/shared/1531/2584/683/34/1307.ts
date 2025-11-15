@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1307
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
 var i = "~"
 function o() {}
 function a(e, t, n) {
@@ -56,7 +56,7 @@ u.prototype.eventNames = function () {
   if (0 === this._eventsCount) {
     return n
   }
-  for (t in this$_events = this._events) if (object$prototype$hasOwnProperty.call(this$_events, t)) {
+  for (t in this$_events = this._events) if (Object$prototype$hasOwnProperty.call(this$_events, t)) {
     n.push(i ? t.slice(1) : t)
   }
   return Object.getOwnPropertySymbols ? n.concat(Object.getOwnPropertySymbols(this$_events)) : n
@@ -70,7 +70,7 @@ u.prototype.listeners = function (e) {
   if (n.fn) {
     return [n.fn]
   }
-  for (var r = 0, n$length = n.length, a = new Array(n$length); r < n$length; r++) {
+  for (var r = 0, /* [auto-meaningful-name] */n$length = n.length, a = new Array(n$length); r < n$length; r++) {
     a[r] = n[r].fn
   }
   return a
@@ -88,7 +88,7 @@ u.prototype.emit = function (e, t, n, r, o, a) {
   var c
   var u
   var l = this._events[s]
-  var arguments$length = arguments.length
+  var /* [auto-meaningful-name] */arguments$length = arguments.length
   if (l.fn) {
     switch (l.once && this.removeListener(e, l.fn, undefined, true), arguments$length) {
       case 1:
@@ -116,7 +116,7 @@ u.prototype.emit = function (e, t, n, r, o, a) {
     l.fn.apply(l.context, c)
   } else {
     var d
-    var l$length = l.length
+    var /* [auto-meaningful-name] */l$length = l.length
     for (u = 0; u < l$length; u++) {
       switch (l[u].once && this.removeListener(e, l[u].fn, undefined, true), arguments$length) {
         case 1:
@@ -164,7 +164,7 @@ u.prototype.removeListener = function (e, t, n, r) {
       c(this, o)
     }
   } else {
-    for (var s = 0, u = [], a$length = a.length; s < a$length; s++) {
+    for (var s = 0, u = [], /* [auto-meaningful-name] */a$length = a.length; s < a$length; s++) {
       if (a[s].fn !== t || r && !a[s].once || n && a[s].context !== n) {
         u.push(a[s])
       }

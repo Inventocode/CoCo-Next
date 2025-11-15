@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1325
@@ -12,10 +12,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.BlockSvg = undefined
 var r = require("tslib")
 var i = require("@kitten-team/gl-matrix")
-var o = require("../../4/127")
+var o = require("../../1036/127")
 var a = require("../../125/195/index")
 var s = require("../../125/534")
-var c = require("../497/387")
+var c = require("../../206/725/387")
 var u = require("../../125/294")
 var l = require("../../125/index")
 var f = require("../../1001/213/index")
@@ -23,7 +23,7 @@ var d = require("../../1001/577")
 var h = require("../../125/474")
 var p = require("../497/961")
 var _ = require("../497/841")
-var A = require("./2174/755")
+var A = require("./2175/755")
 var g = function (e) {
   function t(t) {
     var /* [auto-meaningful-name] */r$svg_group
@@ -85,7 +85,7 @@ var g = function (e) {
         r.set_next_statement(true)
       }
       if (undefined != t.enableContextMenu) {
-        var t$enableContextMenu = t.enableContextMenu
+        var /* [auto-meaningful-name] */t$enableContextMenu = t.enableContextMenu
         r.enable_context_menu = !!t$enableContextMenu
       }
       if (undefined != t.helpUrl) {
@@ -105,7 +105,7 @@ var g = function (e) {
         r.extensions.apply_mutator(t.mutator, r)
       }
       if (Array.isArray(t.extensions)) {
-        for (var t$extensions = t.extensions, p = 0; p < t$extensions.length; ++p) {
+        for (var /* [auto-meaningful-name] */t$extensions = t.extensions, p = 0; p < t$extensions.length; ++p) {
           r.extensions.apply(t$extensions[p], r)
         }
       }
@@ -134,8 +134,8 @@ var g = function (e) {
     r.help_url = ""
     r.colour_ = r.theme.block_color.DEFAULT.fill
     r.border_colour = r.theme.block_color.DEFAULT.border
-    var t$workspace = t.workspace
-    var t$prototype_name = t.prototype_name
+    var /* [auto-meaningful-name] */t$workspace = t.workspace
+    var /* [auto-meaningful-name] */t$prototype_name = t.prototype_name
     if (t$prototype_name) {
       if (!(null === (r$svg_group = r.svg_group) || undefined === r$svg_group)) {
         r$svg_group.classList.add(t$prototype_name)
@@ -323,7 +323,7 @@ var g = function (e) {
       e = false
     }
     if (this.collapsed_dirty || e) {
-      var this$rendered = this.rendered
+      var /* [auto-meaningful-name] */this$rendered = this.rendered
       this.rendered = false
       for (var n = 0; n < this.inputList.length; n++) {
         this.inputList[n].set_visible(!this.collapsed_)
@@ -414,7 +414,7 @@ var g = function (e) {
   }
   t.prototype.append_block_input = function (e, t) {
     var n = this.generate_block(e)
-    var t$connection = t.connection
+    var /* [auto-meaningful-name] */t$connection = t.connection
     if (t$connection) {
       var i = n.output_connection || n.previous_connection
       if (i) {
@@ -526,12 +526,12 @@ var g = function (e) {
               case "field_image":
               case "field_button":
                 var _ = this.parse_field_image_param_from_json(d),
-                  _$src = _.src,
-                  _$width = _.width,
-                  _$height = _.height,
-                  _$alt = _.alt,
-                  _$callback = _.callback,
-                  _$circle = _.circle
+                  /* [auto-meaningful-name] */_$src = _.src,
+                  /* [auto-meaningful-name] */_$width = _.width,
+                  /* [auto-meaningful-name] */_$height = _.height,
+                  /* [auto-meaningful-name] */_$alt = _.alt,
+                  /* [auto-meaningful-name] */_$callback = _.callback,
+                  /* [auto-meaningful-name] */_$circle = _.circle
                 h = "field_image" === d.type ? this.field_image_factory({
                   src: _$src,
                   width: _$width,
@@ -616,7 +616,7 @@ var g = function (e) {
     if (t) {
       return t
     }
-    var e$type = e.type
+    var /* [auto-meaningful-name] */e$type = e.type
     if (e$type) {
       var r = e$type.split("_").map(function (e) {
         return e[0].toUpperCase() + e.slice(1)
@@ -793,7 +793,7 @@ var g = function (e) {
       }
       var n = this.get_next_block()
       if (e && n) {
-        var this$next_connection = this.next_connection
+        var /* [auto-meaningful-name] */this$next_connection = this.next_connection
         if (!this$next_connection) {
           return
         }
@@ -832,7 +832,7 @@ var g = function (e) {
     }
     var n = this.get_input(e)
     if (n && n.connection) {
-      var n$connection$target_connection = n.connection.target_connection
+      var /* [auto-meaningful-name] */n$connection$target_connection = n.connection.target_connection
       if (n$connection$target_connection) {
         return n$connection$target_connection.source_block.get_field(t)
       }
@@ -1158,7 +1158,7 @@ var g = function (e) {
   }
   Object.defineProperty(t.prototype, "use_drag_surface", {
     get: function () {
-      var this$workspace$current_gesture_ = this.workspace.current_gesture_
+      var /* [auto-meaningful-name] */this$workspace$current_gesture_ = this.workspace.current_gesture_
       return !(this$workspace$current_gesture_ && this$workspace$current_gesture_.is_start_from_flyout()) && this.workspace.degrade_translate ? this.workspace.blockDB_.size < this.workspace.degrade_translate : !!this.workspace.get_block_drag_surface()
     },
     enumerable: false,
@@ -1249,7 +1249,7 @@ var g = function (e) {
     if (this.workspace) {
       this.utils.start_text_cache()
       var i
-      var this$workspace = this.workspace
+      var /* [auto-meaningful-name] */this$workspace = this.workspace
       if (this.runtime_data.selected === this) {
         this.unselect()
         this.workspace.cancel_current_gesture()
@@ -1761,7 +1761,7 @@ var g = function (e) {
   }
   t.prototype.set_dragging = function (e) {
     if (undefined != this.svg_group) {
-      var this$svg_group = this.svg_group
+      var /* [auto-meaningful-name] */this$svg_group = this.svg_group
       if (e) {
         this$svg_group.translate_ = ""
         this$svg_group.skew_ = ""
@@ -1814,7 +1814,7 @@ var g = function (e) {
   t.prototype.set_insertion_marker = function (e) {
     this._is_insertion_marker = e
     if (this._is_insertion_marker) {
-      var this$workspace$get_options$connection_effect = this.workspace.get_options().connection_effect
+      var /* [auto-meaningful-name] */this$workspace$get_options$connection_effect = this.workspace.get_options().connection_effect
       var n = this$workspace$get_options$connection_effect ? this$workspace$get_options$connection_effect.color : this.theme.insertion_marker.COLOR
       this.set_colour(n)
       this.set_opacity(this.theme.insertion_marker.OPACITY)
@@ -1991,7 +1991,7 @@ var g = function (e) {
   }
   t.prototype.set_glow_stack = function (e) {
     this.is_glowing_stack = e
-    var this$svg_group = this.svg_group
+    var /* [auto-meaningful-name] */this$svg_group = this.svg_group
     if (undefined == this$svg_group) {
       throw new Error("Block may not been init.")
     }
@@ -2039,8 +2039,8 @@ var g = function (e) {
     }
   }
   t.prototype.get_height_width = function () {
-    var this$height = this.height
-    var this$width = this.width
+    var /* [auto-meaningful-name] */this$height = this.height
+    var /* [auto-meaningful-name] */this$width = this.width
     if (this.is_wrap_shape() && !this.is_collapsed()) {
       this.inputList.forEach(function (e) {
         if (e.type === a.InputType.STATEMENT && e.connection) {
@@ -2066,7 +2066,7 @@ var g = function (e) {
     }
   }
   t.prototype.get_blocks_svg_path_width = function () {
-    var this$svg_path_width = this.svg_path_width
+    var /* [auto-meaningful-name] */this$svg_path_width = this.svg_path_width
     var t = this.get_next_block()
     if (t) {
       this$svg_path_width = Math.max(this$svg_path_width, t.get_blocks_svg_path_width())

@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：401
@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./73/index")
+var r = require("./73")
 var i = require("./118")
 var o = require("./37")
 var a = function () {
@@ -33,7 +33,7 @@ var a = function () {
     }
   }
   t.prototype.detect = function () {
-    for (var this$leftInit = this.leftInit, this$rightInit = this.rightInit, this$upInit = this.upInit, this$downInit = this.downInit, i = false, a = true, s = false, u = false, c = false, l = false, d = false, this$width = this.width, this$height = this.height; a;) {
+    for (var /* [auto-meaningful-name] */this$leftInit = this.leftInit, /* [auto-meaningful-name] */this$rightInit = this.rightInit, /* [auto-meaningful-name] */this$upInit = this.upInit, /* [auto-meaningful-name] */this$downInit = this.downInit, i = false, a = true, s = false, u = false, c = false, l = false, d = false, /* [auto-meaningful-name] */this$width = this.width, /* [auto-meaningful-name] */this$height = this.height; a;) {
       a = false
       for (var p = true; (p || !u) && this$rightInit < this$width;) {
         if (p = this.containsBlackPoint(this$upInit, this$downInit, this$rightInit, false)) {
@@ -132,7 +132,7 @@ var a = function () {
     throw new o.a()
   }
   t.prototype.getBlackPointOnSegment = function (t, e, n, o) {
-    for (var a = i.a.round(i.a.distance(t, e, n, o)), s = (n - t) / a, u = (o - e) / a, this$image = this.image, l = 0; l < a; l++) {
+    for (var a = i.a.round(i.a.distance(t, e, n, o)), s = (n - t) / a, u = (o - e) / a, /* [auto-meaningful-name] */this$image = this.image, l = 0; l < a; l++) {
       var d = i.a.round(t + l * s)
       var f = i.a.round(e + l * u)
       if (this$image.get(d, f)) {
@@ -150,11 +150,11 @@ var a = function () {
     var d = i.getY()
     var f = o.getX()
     var h = o.getY()
-    var t$CORR = t.CORR
+    var /* [auto-meaningful-name] */t$CORR = t.CORR
     return a < this.width / 2 ? [new r.a(f - t$CORR, h + t$CORR), new r.a(u + t$CORR, c + t$CORR), new r.a(l - t$CORR, d - t$CORR), new r.a(a + t$CORR, s - t$CORR)] : [new r.a(f + t$CORR, h + t$CORR), new r.a(u + t$CORR, c - t$CORR), new r.a(l - t$CORR, d + t$CORR), new r.a(a - t$CORR, s - t$CORR)]
   }
   t.prototype.containsBlackPoint = function (t, e, n, r) {
-    var this$image = this.image
+    var /* [auto-meaningful-name] */this$image = this.image
     if (r) {
       for (var o = t; o <= e; o++) {
         if (this$image.get(o, n)) {

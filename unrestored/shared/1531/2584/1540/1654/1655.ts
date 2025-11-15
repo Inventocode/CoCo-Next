@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1655
@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../1623/439")
-var o = require("../1738/231")
-var $slice = [].slice
+var r = require("../1564/439")
+var o = require("../1541/231")
+var /* [auto-meaningful-name] */$slice = [].slice
 var a = {}
 var s = function (e, t, n) {
   if (!(t in a)) {

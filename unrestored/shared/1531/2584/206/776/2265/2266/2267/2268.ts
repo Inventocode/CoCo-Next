@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2268
@@ -6,15 +6,15 @@
 
 "use strict"
 
-var r = require("../../../../../36/2668/220")
-var i = require("../../../../../36/2668/230")
+var r = require("../../../220")
+var i = require("../../../230")
 var o = require("../../../../../1036/1363/569")
 var a = require("../../1120")
 function s(e) {
   return e.reachable
 }
 function c(e, t, n, r) {
-  for (var e$segmentsList = e.segmentsList, o = t >= 0 ? t : e$segmentsList.length + t, a = n >= 0 ? n : e$segmentsList.length + n, s = [], c = 0; c < e.count; ++c) {
+  for (var /* [auto-meaningful-name] */e$segmentsList = e.segmentsList, o = t >= 0 ? t : e$segmentsList.length + t, a = n >= 0 ? n : e$segmentsList.length + n, s = [], c = 0; c < e.count; ++c) {
     for (var u = [], l = o; l <= a; ++l) {
       u.push(e$segmentsList[l][c])
     }
@@ -42,7 +42,7 @@ var l = function () {
   i(e, [{
     key: "head",
     get: function () {
-      var this$segmentsList = this.segmentsList
+      var /* [auto-meaningful-name] */this$segmentsList = this.segmentsList
       return 0 === this$segmentsList.length ? [] : this$segmentsList[this$segmentsList.length - 1]
     }
   }, {
@@ -53,7 +53,7 @@ var l = function () {
   }, {
     key: "reachable",
     get: function () {
-      var this$head = this.head
+      var /* [auto-meaningful-name] */this$head = this.head
       return this$head.length > 0 && this$head.some(s)
     }
   }, {
@@ -87,7 +87,7 @@ var l = function () {
     key: "addAll",
     value: function (e) {
       o(e.count === this.count)
-      for (var e$segmentsList = e.segmentsList, n = 0; n < e$segmentsList.length; ++n) {
+      for (var /* [auto-meaningful-name] */e$segmentsList = e.segmentsList, n = 0; n < e$segmentsList.length; ++n) {
         this.segmentsList.push(e$segmentsList[n])
       }
     }

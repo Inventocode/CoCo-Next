@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2128
@@ -16,7 +16,7 @@ var o = require("../../../1179/1319")
 var a = require("../2143/1320")
 var s = require("./2129/index")
 var c = require("../../640/index")
-var u = require("../../../4/127")
+var u = require("../../../1036/127")
 var l = function () {
   function e() {
     this.Blocks = Object.create(null)
@@ -47,7 +47,7 @@ var l = function () {
     for (var t = 0; t < e.length; t++) {
       var n = e[t]
       if (n) {
-        var n$type = n.type
+        var /* [auto-meaningful-name] */n$type = n.type
         if (n$type) {
           if (this.Blocks[n$type]) {
             console.warn("Block definition #" + t + " in JSON array overwrites prior definition of \"" + n$type + "\".")

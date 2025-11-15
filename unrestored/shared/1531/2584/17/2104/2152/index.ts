@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2152
@@ -15,7 +15,7 @@ var i = require("inversify")
 var o = require("../../../125/294")
 var a = require("../../../1001/577")
 var s = require("../../../125/195/index")
-var c = require("../../../4/127")
+var c = require("../../../1036/127")
 var u = function (e) {
   function t() {
     var t = e.call(this) || this
@@ -58,7 +58,7 @@ var u = function (e) {
     this.color_element.setAttribute("tabindex", "-1")
     var t = document.createElement("div")
     var n = ""
-    var this$Blink$Msg = this.Blink.Msg
+    var /* [auto-meaningful-name] */this$Blink$Msg = this.Blink.Msg
     if (this.color_format === s.EColorControllerFormat.HSVA) {
       n = this.create_color_panel([["h", "H " + this$Blink$Msg.HUE], ["s", "S " + this$Blink$Msg.SATURATION], ["v", "V " + this$Blink$Msg.BRIGHTNESS], ["a", "A " + this$Blink$Msg.OPACITY]])
     } else {
@@ -188,7 +188,7 @@ var u = function (e) {
   }
   t.prototype.update_dropdown_color = function () {
     var e = this
-    var this$color = this.color
+    var /* [auto-meaningful-name] */this$color = this.color
     if (this$color) {
       if (this.color_review_element) {
         this.color_review_element.style.background = this$color.toString()

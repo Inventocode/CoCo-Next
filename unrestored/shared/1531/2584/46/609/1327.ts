@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1327
@@ -36,9 +36,9 @@ exports.load_json_js_generators_control = function (e) {
     return "destruct();\n"
   })
   e.register("controls_if", function (t, n) {
-    for (var r = Object.keys(t.blocks[n].shadows), r$filterFunctionEReturnIF09$$testE$length = r.filter(function (e) {
+    for (var r = Object.keys(t.blocks[n].shadows), /* [auto-meaningful-name] */r$filterFunctionEReturn_IF09$_$testE$length = r.filter(function (e) {
         return /^IF[0-9]+$/.test(e)
-      }).length, o = 1, a = "if (" + (e.value_to_code(t, n, "IF0", e.ORDER_FUNCTION_CALL) || "false") + ") {\n" + e.statement_to_code(t, n, "DO0") + "}"; o < r$filterFunctionEReturnIF09$$testE$length;) {
+      }).length, o = 1, a = "if (" + (e.value_to_code(t, n, "IF0", e.ORDER_FUNCTION_CALL) || "false") + ") {\n" + e.statement_to_code(t, n, "DO0") + "}"; o < r$filterFunctionEReturn_IF09$_$testE$length;) {
       a += " else if (" + (e.value_to_code(t, n, "IF" + o, e.ORDER_FUNCTION_CALL) || "false") + ") {\n" + e.statement_to_code(t, n, "DO" + o) + "}"
       o++
     }

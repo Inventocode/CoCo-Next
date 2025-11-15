@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：585
@@ -7,9 +7,9 @@
 "use strict"
 
 export { s as a }
-import * as r from "../347"
-import * as i from "../333"
-import * as o from "../63"
+import * as /* [auto-meaningful-name] */$$_347 from "../347"
+import * as /* [auto-meaningful-name] */$$_333 from "../333"
+import * as /* [auto-meaningful-name] */$$_63 from "../63"
 var a = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -44,7 +44,7 @@ var s = function (t) {
     return e.toGrayscaleBuffer(n.data, t.width, t.height)
   }
   e.toGrayscaleBuffer = function (t, e, n) {
-    for (var r = new Uint8ClampedArray(e * n), i = 0, o = 0, t$length = t.length; i < t$length; i += 4, o++) {
+    for (var r = new Uint8ClampedArray(e * n), i = 0, o = 0, /* [auto-meaningful-name] */t$length = t.length; i < t$length; i += 4, o++) {
       var s = undefined
       if (0 === t[i + 3]) {
         s = 255
@@ -57,7 +57,7 @@ var s = function (t) {
   }
   e.prototype.getRow = function (t, e) {
     if (t < 0 || t >= this.getHeight()) {
-      throw new o.a("Requested row is outside the image: " + t)
+      throw new $$_63.a("Requested row is outside the image: " + t)
     }
     var n = this.getWidth()
     var r = t * n
@@ -105,8 +105,8 @@ var s = function (t) {
     var n = this.getTempCanvasElement()
     var r = n.getContext("2d")
     var i = t * e.DEGREE_TO_RADIANS
-    var this$canvas$width = this.canvas.width
-    var this$canvas$height = this.canvas.height
+    var /* [auto-meaningful-name] */this$canvas$width = this.canvas.width
+    var /* [auto-meaningful-name] */this$canvas$height = this.canvas.height
     var s = Math.ceil(Math.abs(Math.cos(i)) * this$canvas$width + Math.abs(Math.sin(i)) * this$canvas$height)
     var u = Math.ceil(Math.abs(Math.sin(i)) * this$canvas$width + Math.abs(Math.cos(i)) * this$canvas$height)
     n.width = s
@@ -118,9 +118,9 @@ var s = function (t) {
     return this
   }
   e.prototype.invert = function () {
-    return new r.a(this)
+    return new $$_347.a(this)
   }
   e.DEGREE_TO_RADIANS = Math.PI / 180
   return e
-}(i.a)
+}($$_333.a)
 export default s

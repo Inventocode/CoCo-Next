@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：190
@@ -12,7 +12,7 @@ export { a as d }
 export { c as b }
 export { l as c }
 export { u as e }
-import Lodash = require("lodash");
+import /* [auto-meaningful-name] */Lodash = require("lodash")
 function o(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 10
   return e.substr(0, t) + (e.length > t ? "..." : "")
@@ -68,7 +68,7 @@ function s(e, t, n, o) {
   }(t, o), n)
 }
 function c(e) {
-  for (var e$length = e.length, n = 0; n < e.length; n++) {
+  for (var /* [auto-meaningful-name] */e$length = e.length, n = 0; n < e.length; n++) {
     if (e.charCodeAt(n) > 256) {
       e$length++
     }

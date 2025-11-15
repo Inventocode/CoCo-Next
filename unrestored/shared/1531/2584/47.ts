@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：47
@@ -7,10 +7,10 @@
 "use strict"
 
 export { i as a }
-import r = require("./10/768");
+import /* [auto-meaningful-name] */$_25_768 = require("./25/768")
 function i(e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {
-    if (Array.isArray(e) || (e = r.a(e))) {
+    if (Array.isArray(e) || (e = $_25_768.a(e))) {
       var t = 0
       var n = function () {}
       return {

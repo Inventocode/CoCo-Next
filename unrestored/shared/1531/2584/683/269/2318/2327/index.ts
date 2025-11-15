@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2327
@@ -9,9 +9,9 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("../../1366/444")
+var r = require("../../2342/444")
 var i = require("../../580")
-var o = require("./1365")
+var o = require("../2320/1365")
 var a = require("../../846")
 var s = require("./2328")
 var c = function (e, t, n) {
@@ -25,8 +25,8 @@ exports.resolve = function (e) {
   return function e(t) {
     return function (n) {
       n.parentContext.setCurrentRequest(n)
-      var n$bindings = n.bindings
-      var n$childRequests = n.childRequests
+      var /* [auto-meaningful-name] */n$bindings = n.bindings
+      var /* [auto-meaningful-name] */n$childRequests = n.childRequests
       var l = n.target && n.target.isArray()
       var f = !n.parentRequest || !n.parentRequest.target || !n.target || !n.parentRequest.target.matchesArray(n.target.serviceIdentifier)
       if (l && f) {

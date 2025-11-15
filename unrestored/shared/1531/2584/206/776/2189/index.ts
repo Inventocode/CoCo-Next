@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：2189
@@ -11,13 +11,13 @@ var i = require("./2192")
 var o = require("./2195/index")
 var a = require("./1110")
 var s = require("./964")
-var require$1328Index$Scope = require("./1328/index").Scope
-var require$2199$version = require("./2199").version
+var /* [auto-meaningful-name] */require$_1328$Scope = require("./1328").Scope
+var /* [auto-meaningful-name] */require$_2199$version = require("./2199").version
 module.exports = {
-  version: require$2199$version,
+  version: require$_2199$version,
   Reference: a,
   Variable: s,
-  Scope: require$1328Index$Scope,
+  Scope: require$_1328$Scope,
   ScopeManager: i,
   analyze: function (e, t) {
     var n = function e(t, n) {

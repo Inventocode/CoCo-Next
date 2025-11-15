@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：275
@@ -13,9 +13,9 @@ export { p as d }
 export { g as c }
 export { v as f }
 export { m as b }
-import React = require("react");
-import i = require("./2589/index");
-import o = require("./2589/792");
+import /* [auto-meaningful-name] */React = require("react")
+import /* [auto-meaningful-name] */$_2589_index = require("./2589/index")
+import /* [auto-meaningful-name] */$_2589_792 = require("./2589/792")
 var a = function __importDefault(module) {
   var defaultExport = module && module.__esModule ? function () {
     return module.default
@@ -27,12 +27,12 @@ var a = function __importDefault(module) {
     get: defaultExport
   })
   return defaultExport
-}(o)
-import s = require("./2588");
-import c = require("./277");
+}($_2589_792)
+import /* [auto-meaningful-name] */$_2588 = require("./2588")
+import /* [auto-meaningful-name] */$_277 = require("./277")
 var u = function () {
   return (u = Object.assign || function (e) {
-    for (var t, n = 1, arguments$length = arguments.length; n < arguments$length; n++) {
+    for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
       for (var i in t = arguments[n]) if (Object.prototype.hasOwnProperty.call(t, i)) {
         e[i] = t[i]
       }
@@ -41,13 +41,13 @@ var u = function () {
   }).apply(this, arguments)
 }
 var l = function () {
-  for (var e = 0, t = 0, arguments$length = arguments.length; t < arguments$length; t++) {
+  for (var e = 0, t = 0, /* [auto-meaningful-name] */arguments$length = arguments.length; t < arguments$length; t++) {
     e += arguments[t].length
   }
   var r = Array(e)
   var i = 0
   for (t = 0; t < arguments$length; t++) {
-    for (var o = arguments[t], a = 0, o$length = o.length; a < o$length; a++, i++) {
+    for (var o = arguments[t], a = 0, /* [auto-meaningful-name] */o$length = o.length; a < o$length; a++, i++) {
       r[i] = o[a]
     }
   }
@@ -69,7 +69,7 @@ function f(e, t, n) {
   }, {})
 }
 function d(e) {
-  s.a(e, "[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.")
+  $_2588.a(e, "[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.")
 }
 var h = {
   formats: {},
@@ -110,7 +110,7 @@ function _(e) {
     }
   }
 }
-var A = a.a || o
+var A = a.a || $_2589_792
 function g(e) {
   if (undefined === e) {
     e = {
@@ -123,32 +123,32 @@ function g(e) {
       displayNames: {}
     }
   }
-  var intl$RelativeTimeFormat = Intl.RelativeTimeFormat
-  var intl$ListFormat = Intl.ListFormat
-  var intl$DisplayNames = Intl.DisplayNames
+  var /* [auto-meaningful-name] */Intl$RelativeTimeFormat = Intl.RelativeTimeFormat
+  var /* [auto-meaningful-name] */Intl$ListFormat = Intl.ListFormat
+  var /* [auto-meaningful-name] */Intl$DisplayNames = Intl.DisplayNames
   var o = A(function () {
-    for (var /* [auto-meaningful-name] */intl$DateTimeFormat, t = [], n = 0; n < arguments.length; n++) {
+    for (var /* [auto-meaningful-name] */Intl$DateTimeFormat, t = [], n = 0; n < arguments.length; n++) {
       t[n] = arguments[n]
     }
-    return new ((intl$DateTimeFormat = Intl.DateTimeFormat).bind.apply(intl$DateTimeFormat, l([undefined], t)))()
+    return new ((Intl$DateTimeFormat = Intl.DateTimeFormat).bind.apply(Intl$DateTimeFormat, l([undefined], t)))()
   }, {
     cache: _(e.dateTime),
     strategy: A.strategies.variadic
   })
   var a = A(function () {
-    for (var /* [auto-meaningful-name] */intl$NumberFormat, t = [], n = 0; n < arguments.length; n++) {
+    for (var /* [auto-meaningful-name] */Intl$NumberFormat, t = [], n = 0; n < arguments.length; n++) {
       t[n] = arguments[n]
     }
-    return new ((intl$NumberFormat = Intl.NumberFormat).bind.apply(intl$NumberFormat, l([undefined], t)))()
+    return new ((Intl$NumberFormat = Intl.NumberFormat).bind.apply(Intl$NumberFormat, l([undefined], t)))()
   }, {
     cache: _(e.number),
     strategy: A.strategies.variadic
   })
   var s = A(function () {
-    for (var /* [auto-meaningful-name] */intl$PluralRules, t = [], n = 0; n < arguments.length; n++) {
+    for (var /* [auto-meaningful-name] */Intl$PluralRules, t = [], n = 0; n < arguments.length; n++) {
       t[n] = arguments[n]
     }
-    return new ((intl$PluralRules = Intl.PluralRules).bind.apply(intl$PluralRules, l([undefined], t)))()
+    return new ((Intl$PluralRules = Intl.PluralRules).bind.apply(Intl$PluralRules, l([undefined], t)))()
   }, {
     cache: _(e.pluralRules),
     strategy: A.strategies.variadic
@@ -157,7 +157,7 @@ function g(e) {
     getDateTimeFormat: o,
     getNumberFormat: a,
     getMessageFormat: A(function (e, t, n, r) {
-      return new i.a(e, t, n, u({
+      return new $_2589_index.a(e, t, n, u({
         formatters: {
           getNumberFormat: a,
           getDateTimeFormat: o,
@@ -172,7 +172,7 @@ function g(e) {
       for (var e = [], n = 0; n < arguments.length; n++) {
         e[n] = arguments[n]
       }
-      return new (intl$RelativeTimeFormat.bind.apply(intl$RelativeTimeFormat, l([undefined], e)))()
+      return new (Intl$RelativeTimeFormat.bind.apply(Intl$RelativeTimeFormat, l([undefined], e)))()
     }, {
       cache: _(e.relativeTime),
       strategy: A.strategies.variadic
@@ -182,7 +182,7 @@ function g(e) {
       for (var e = [], t = 0; t < arguments.length; t++) {
         e[t] = arguments[t]
       }
-      return new (intl$ListFormat.bind.apply(intl$ListFormat, l([undefined], e)))()
+      return new (Intl$ListFormat.bind.apply(Intl$ListFormat, l([undefined], e)))()
     }, {
       cache: _(e.list),
       strategy: A.strategies.variadic
@@ -191,7 +191,7 @@ function g(e) {
       for (var e = [], t = 0; t < arguments.length; t++) {
         e[t] = arguments[t]
       }
-      return new (intl$DisplayNames.bind.apply(intl$DisplayNames, l([undefined], e)))()
+      return new (Intl$DisplayNames.bind.apply(Intl$DisplayNames, l([undefined], e)))()
     }, {
       cache: _(e.displayNames),
       strategy: A.strategies.variadic
@@ -207,7 +207,7 @@ function v(e, t, n, r) {
   if (i) {
     return i
   }
-  r(new c.f("No " + t + " format named: " + n))
+  r(new $_277.f("No " + t + " format named: " + n))
 }
 function m(e) {
   return function (t) {
