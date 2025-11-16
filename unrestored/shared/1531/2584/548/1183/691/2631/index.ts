@@ -6,25 +6,14 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_$$_$$_$$_337 = require("../../../../337")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_19 = require("../../../../19")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_103 = require("../../../../103")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_430 = require("../../../../430")
-require("../../../../50/index")
-import /* [auto-meaningful-name] */React = require("react")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */$_793 = require("./793")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_337 from "../../../../337"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_19 from "../../../../19"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_103 from "../../../../103"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_430 from "../../../../430"
+import "../../../../50/index"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$_793 from "./793"
 function l(e, t) {
   var n = Object.create(null)
   if (e) {
@@ -185,14 +174,14 @@ var p = function (e) {
     delete i.appear
     delete i.enter
     delete i.exit
-    return null === this$props$component ? c.a.createElement($_793.a.Provider, {
+    return null === this$props$component ? _React.createElement($_793.a.Provider, {
       value: this$state$contextValue
-    }, a) : c.a.createElement($_793.a.Provider, {
+    }, a) : _React.createElement($_793.a.Provider, {
       value: this$state$contextValue
-    }, c.a.createElement(this$props$component, i, a))
+    }, _React.createElement(this$props$component, i, a))
   }
   return t
-}(c.a.Component)
+}(_React.Component)
 p.propTypes = {}
 p.defaultProps = {
   component: "div",

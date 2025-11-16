@@ -43,14 +43,14 @@ export { b as isOpeningBracketToken }
 export { m as isOpeningParenToken }
 export { ne as isParenthesized }
 export { g as isSemicolonToken }
-import /* [auto-meaningful-name] */$$_$$_$$_$$_11 = require("../../../../11")
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_27 = require("../../../../27")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_40 = require("../../../../40")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_36_461 = require("../../../../36/461")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_25_index = require("../../../../25/index")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_47 = require("../../../../47")
-import /* [auto-meaningful-name] */$$_$$_766_index = require("../../766/index")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_11 from "../../../../11"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_27 from "../../../../27"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_40 from "../../../../40"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_36_461 from "../../../../36/461"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_25_index from "../../../../25/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_47 from "../../../../47"
+import * as /* [auto-meaningful-name] */$$_$$_766_index from "../../766/index"
 function f(e, t) {
   var n = t.range[0]
   var r = e

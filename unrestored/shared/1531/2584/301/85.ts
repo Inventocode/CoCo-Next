@@ -11,10 +11,10 @@ export { c as b }
 export { l as e }
 export { u as d }
 export { d as a }
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language = require("../../../../../src/shared/ui/language")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_actions = require("../../../../../src/shared/events/actions")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type = require("../../../../../src/shared/widget/custom/type")
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_actions from "../../../../../src/shared/events/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
 function s(e) {
   return "".concat(e, ".__widgetName")
 }

@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$$_520_393 = require("../520/393")
-import /* [auto-meaningful-name] */$$_215_293 = require("../215/293")
+import * as /* [auto-meaningful-name] */$$_520_393 from "../520/393"
+import * as /* [auto-meaningful-name] */$$_215_293 from "../215/293"
 function o(e) {
   return function t(n, o) {
     switch (arguments.length) {

@@ -8,7 +8,7 @@
 
 export { o as b }
 export { i as a }
-import /* [auto-meaningful-name] */$_205 = require("./205")
+import * as /* [auto-meaningful-name] */$_205 from "./205"
 function o(e) {
   switch (e) {
     case $_205.a.CONTAIN:

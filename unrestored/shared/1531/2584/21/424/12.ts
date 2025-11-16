@@ -18,10 +18,10 @@ export { m as j }
 export { g as k }
 export { _ as l }
 export { v as i }
-import /* [auto-meaningful-name] */$$_$$_6 = require("../../6")
-import /* [auto-meaningful-name] */$$_$$_48_index = require("../../48/index")
-import /* [auto-meaningful-name] */$$_$$_48_72 = require("../../48/72")
-import /* [auto-meaningful-name] */$$_$$_14 = require("../../14")
+import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
+import * as /* [auto-meaningful-name] */$$_$$_48_index from "../../48/index"
+import * as /* [auto-meaningful-name] */$$_$$_48_72 from "../../48/72"
+import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
 function s(e) {
   return $$_$$_48_index.a().getState().widgetMap.get(e)
 }

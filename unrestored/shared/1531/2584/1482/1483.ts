@@ -6,46 +6,13 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_702 = require("../702")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import a = require("../8")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(a)
-import /* [auto-meaningful-name] */$_154 = require("./154")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_154)
+import * as /* [auto-meaningful-name] */$$_702 from "../702"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as a from "../8"
+import s from "../8"
+import * as /* [auto-meaningful-name] */$_154 from "./154"
+import /* [auto-meaningful-name] */_$_ from "./154"
 var _a
 _a = function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
@@ -59,21 +26,21 @@ _a = function (e) {
       e$onSelect(e$index, e)
     }
   }
-  return i.a.createElement("div", {
-    className: l.a.typeSelectionList,
+  return _React.createElement("div", {
+    className: _$_.typeSelectionList,
     style: {
       left: e$position.x,
       top: e$position.y,
       display: e$visible ? "block" : "none"
     }
-  }, i.a.createElement("div", {
+  }, _React.createElement("div", {
     onClick: d.bind(null, "number"),
-    className: s()("number" === e$type && l.a.active)
+    className: s("number" === e$type && _$_.active)
   }, $$_702$a$formatMessage({
     id: "storageItemNumber"
-  })), i.a.createElement("div", {
+  })), _React.createElement("div", {
     onClick: d.bind(null, "string"),
-    className: s()("string" === e$type && l.a.active)
+    className: s("string" === e$type && _$_.active)
   }, $$_702$a$formatMessage({
     id: "storageItemString"
   })))

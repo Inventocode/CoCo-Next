@@ -7,11 +7,11 @@
 "use strict"
 
 export { d as a }
-import r = require("./6")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language = require("../../../../src/shared/ui/language")
-import /* [auto-meaningful-name] */$_21_index = require("./21/index")
-import /* [auto-meaningful-name] */$_28_index = require("./28/index")
-import s = require("./55")
+import * as r from "./6"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */$_21_index from "./21/index"
+import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
+import * as s from "./55"
 var c = {}
 function l(e, t) {
   c[e] = t

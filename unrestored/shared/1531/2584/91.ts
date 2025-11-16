@@ -8,8 +8,8 @@
 
 export { i as a }
 export { a as b }
-import r = require("./68")
-import /* [auto-meaningful-name] */$_28_index = require("./28/index")
+import * as r from "./68"
+import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
 function i(e) {
   return ($_28_index.e() ? window.parent : window).postMessage(e, window.location.origin)
 }

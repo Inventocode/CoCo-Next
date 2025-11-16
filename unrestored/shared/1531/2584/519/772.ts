@@ -7,10 +7,10 @@
 "use strict"
 
 export { s as a }
-import /* [auto-meaningful-name] */$$_33_996 = require("../33/996")
-import /* [auto-meaningful-name] */$$_80_995 = require("../80/995")
-import /* [auto-meaningful-name] */$$_33_771 = require("../33/771")
-import /* [auto-meaningful-name] */$$_33_997 = require("../33/997")
+import * as /* [auto-meaningful-name] */$$_33_996 from "../33/996"
+import * as /* [auto-meaningful-name] */$$_80_995 from "../80/995"
+import * as /* [auto-meaningful-name] */$$_33_771 from "../33/771"
+import * as /* [auto-meaningful-name] */$$_33_997 from "../33/997"
 function s(e) {
   return $$_33_996.a(e) || $$_80_995.a(e) || $$_33_771.a(e) || $$_33_997.a()
 }

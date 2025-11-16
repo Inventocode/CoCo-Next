@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */React = require("react")
+import * as /* [auto-meaningful-name] */React from "react"
 var i = "undefined" !== typeof window ? React.useLayoutEffect : React.useEffect
 function o(e) {
   var t = React.useRef(e)

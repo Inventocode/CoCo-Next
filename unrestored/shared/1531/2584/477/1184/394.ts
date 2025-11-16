@@ -15,8 +15,8 @@ export { l as b }
 export { f as a }
 export { d as f }
 export { h as g }
-import /* [auto-meaningful-name] */$$_340_2592_904 = require("../340/2592/904")
-require("./737")
+import * as /* [auto-meaningful-name] */$$_340_2592_904 from "../340/2592/904"
+import "./737"
 var i = {}
 function o() {
   return $$_340_2592_904.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i

@@ -9,12 +9,12 @@
 export { l as c }
 export { d as b }
 export { p as a }
-import /* [auto-meaningful-name] */$$_47 = require("../47")
-import o = require("../5")
-import i = require("../9")
-import /* [auto-meaningful-name] */$$_97 = require("../97")
-import /* [auto-meaningful-name] */$$_77 = require("../77")
-import /* [auto-meaningful-name] */$$_131 = require("../131")
+import * as /* [auto-meaningful-name] */$$_47 from "../47"
+import * as o from "../5"
+import * as i from "../9"
+import * as /* [auto-meaningful-name] */$$_97 from "../97"
+import * as /* [auto-meaningful-name] */$$_77 from "../77"
+import * as /* [auto-meaningful-name] */$$_131 from "../131"
 function l(e, t) {
   for (var n in e) {
     var r = e[n]

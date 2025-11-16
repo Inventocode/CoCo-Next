@@ -4,20 +4,7 @@
  * 模块 ID：680
  */
 
-"use strict"
-
+import { "680__part-0__r" as r } from "./680__part-0"
+import "./680__part-1"
 export { r as messages }
 export { b as types } from "./539"
-var r = {
-  "zh-CN": {
-    widgetName: "计步器",
-    stepCount: "步数",
-    startStepUpdate: "开始计步",
-    stopStepUpdate: "停止计步",
-    resetStepCount: "重置计数",
-    onStepCountChange: "步数变化",
-    onPedometerNotAvailable: "检测不可用",
-    onPedometerPermissionFail: "请求权限失败"
-  }
-}
-import /* [auto-meaningful-name] */$_539 = require("./539")

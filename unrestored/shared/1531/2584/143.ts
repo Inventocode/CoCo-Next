@@ -16,8 +16,8 @@ export { d as b }
 export { p as d }
 export { ACTOR_ACTION as a }
 export { h as j }
-import r = require("./47")
-import /* [auto-meaningful-name] */$_547 = require("./547")
+import * as r from "./47"
+import * as /* [auto-meaningful-name] */$_547 from "./547"
 var /* [auto-meaningful-name] */STYLE_DEFAULT_STYLE_ID = "STYLE_DEFAULT_STYLE_ID"
 var a = {
   id: STYLE_DEFAULT_STYLE_ID,

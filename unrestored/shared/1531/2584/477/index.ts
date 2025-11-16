@@ -8,11 +8,11 @@
 
 export { c as a }
 export { l as b }
-import /* [auto-meaningful-name] */$_1184_index = require("./1184/index")
-import /* [auto-meaningful-name] */$_340_index = require("./340/index")
-import /* [auto-meaningful-name] */$_787_index = require("./787/index")
-import /* [auto-meaningful-name] */$_650 = require("./650")
-import /* [auto-meaningful-name] */$$_59_index = require("../59/index")
+import * as /* [auto-meaningful-name] */$_1184_index from "./1184/index"
+import * as /* [auto-meaningful-name] */$_340_index from "./340/index"
+import * as /* [auto-meaningful-name] */$_787_index from "./787/index"
+import * as /* [auto-meaningful-name] */$_650 from "./650"
+import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
 function c(e, t) {
   $_340_index.b({
     id: e,

@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$_108 = require("./108")
-import /* [auto-meaningful-name] */$_103 = require("./103")
+import * as /* [auto-meaningful-name] */$_108 from "./108"
+import * as /* [auto-meaningful-name] */$_103 from "./103"
 function o(e, t) {
   return !t || "object" !== $_108.a(t) && "function" !== typeof t ? $_103.a(e) : t
 }

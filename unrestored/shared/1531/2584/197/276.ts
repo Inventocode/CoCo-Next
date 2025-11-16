@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */$$_301_203 = require("../301/203")
-import /* [auto-meaningful-name] */$$_57_770 = require("../57/770")
-import /* [auto-meaningful-name] */$$_36_461 = require("../36/461")
+import * as /* [auto-meaningful-name] */$$_301_203 from "../301/203"
+import * as /* [auto-meaningful-name] */$$_57_770 from "../57/770"
+import * as /* [auto-meaningful-name] */$$_36_461 from "../36/461"
 function a(e) {
   var t = "function" === typeof Map ? new Map() : undefined
   return (a = function (e) {

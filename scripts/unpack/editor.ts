@@ -27,16 +27,9 @@ async function main(): Promise<void> {
             path.resolve(distPath, "main.59a3bab1.chunk.js")
         ],
         externals: [
-            {
-                searchPath: /^.*\/0(\/index)?$/,
-                replace: "react"
-            }, {
-                searchPath: /^.*\/134(\/index)?$/,
-                replace: "inversify"
-            }, {
-                searchPath: /^.*\/3272(\/index)?$/,
-                replace: "@babel/preset-react"
-            }
+            { key: 0, source: "react" },
+            { key: 134, source: "inversify" },
+            { key: 3272, source: "@babel/preset-react" }
         ],
         output: {
             path: path.resolve("unrestored", "editor")

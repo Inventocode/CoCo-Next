@@ -7,19 +7,19 @@
 "use strict"
 
 export { _ as a }
-import /* [auto-meaningful-name] */React = require("react")
-require("../../../50/index")
-import /* [auto-meaningful-name] */$$_$$_280 = require("../../280")
-import /* [auto-meaningful-name] */$$_100 = require("../100")
-import /* [auto-meaningful-name] */$$_$$_$$_19 = require("../../../19")
-import /* [auto-meaningful-name] */$$_691_1043 = require("../691/1043")
-import /* [auto-meaningful-name] */$$_701_index = require("../701/index")
-require("../../../95")
-require("../../../96")
-require("../../../322")
-require("../../../273")
-require("../../../120")
-import /* [auto-meaningful-name] */$$_$$_$$_549_1186_365_index = require("../../../549/1186/365/index")
+import * as /* [auto-meaningful-name] */React from "react"
+import "../../../50/index"
+import * as /* [auto-meaningful-name] */$$_$$_280 from "../../280"
+import * as /* [auto-meaningful-name] */$$_100 from "../100"
+import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
+import * as /* [auto-meaningful-name] */$$_691_1043 from "../691/1043"
+import * as /* [auto-meaningful-name] */$$_701_index from "../701/index"
+import "../../../95"
+import "../../../96"
+import "../../../322"
+import "../../../273"
+import "../../../120"
+import * as /* [auto-meaningful-name] */$$_$$_$$_549_1186_365_index from "../../../549/1186/365/index"
 var l = {
   0: [0, 40],
   1: [55, 19.6],

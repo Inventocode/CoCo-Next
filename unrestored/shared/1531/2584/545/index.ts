@@ -6,66 +6,22 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */Color = require("color")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import c = require("../8")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(c)
-import u = require("../5")
-import /* [auto-meaningful-name] */$$_90 = require("../90")
-import /* [auto-meaningful-name] */$$_131 = require("../131")
-import /* [auto-meaningful-name] */$$_15 = require("../15")
-import h = require("../9")
-import /* [auto-meaningful-name] */$$_53 = require("../53")
-import /* [auto-meaningful-name] */$$_162 = require("../162")
-import /* [auto-meaningful-name] */$_201 = require("./201")
-var v = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_201)
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as c from "../8"
+import l from "../8"
+import * as u from "../5"
+import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */$$_131 from "../131"
+import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as h from "../9"
+import * as /* [auto-meaningful-name] */$$_53 from "../53"
+import * as /* [auto-meaningful-name] */$$_162 from "../162"
+import * as /* [auto-meaningful-name] */$_201 from "./201"
+import /* [auto-meaningful-name] */_$_ from "./201"
 var _a
 _a = function (e) {
   var t = e.id
@@ -84,13 +40,13 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$backgroundOpenImage = e$attributes.backgroundOpenImage
   var /* [auto-meaningful-name] */e$attributes$backgroundCloseImage = e$attributes.backgroundCloseImage
   var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
-  var N = i.a.useRef(null)
-  var R = i.a.useRef(null)
-  var k = i.a.useRef(false)
+  var N = _React.useRef(null)
+  var R = _React.useRef(null)
+  var k = _React.useRef(false)
   var x = function () {
     var e = function (e, t) {
       var n
-      var o = s()(t).toString()
+      var o = _Color(t).toString()
       return (n = {}, $$_11.a(n, $$_162.c.DEFAULT, {
         turnOn: {
           backgroundColor: $$_15.hb(o, .3),
@@ -125,7 +81,7 @@ _a = function (e) {
   var M = $$_15.U(e$attributes$backgroundOpenImage) ? e$attributes$backgroundOpenImage : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : $$_131.b
   var L = h.hb(e$attributes$backgroundCloseImage)
   var P = $$_15.U(e$attributes$backgroundCloseImage) ? e$attributes$backgroundCloseImage : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : $$_131.a
-  var B = i.a.createElement("div", {
+  var B = _React.createElement("div", {
     ref: R,
     style: {
       backgroundSize: "contain" === e$attributes$imageResizeMode ? "contain" : "100% 100%",
@@ -147,7 +103,7 @@ _a = function (e) {
       }
     }
   }, [M, P, e$attributes$backgroundMode, e$attributes$value])
-  return i.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
     "data-role": u.M,
     "data-widget-type": u.F,
@@ -155,7 +111,7 @@ _a = function (e) {
     "data-max-width": $$_53.o,
     "data-min-height": $$_131.i,
     "data-max-height": $$_53.m,
-    className: l()(v.a.switchWidget, $$_90.b, $$_11.a({}, v.a.hide, !e$visible)),
+    className: l(_$_.switchWidget, $$_90.b, $$_11.a({}, _$_.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -176,12 +132,12 @@ _a = function (e) {
         if (e$attributes$backgroundMode === $$_162.a.TEMPLATE) {
           var /* [auto-meaningful-name] */N$current
           if (!(null === (N$current = N.current) || undefined === N$current)) {
-            N$current.classList.add(v.a.leftAnimation)
+            N$current.classList.add(_$_.leftAnimation)
           }
           setTimeout(function () {
             var /* [auto-meaningful-name] */_N$current
             if (!(null === (_N$current = N.current) || undefined === _N$current)) {
-              _N$current.classList.remove(v.a.leftAnimation)
+              _N$current.classList.remove(_$_.leftAnimation)
             }
           }, 100)
         } else {
@@ -189,14 +145,14 @@ _a = function (e) {
           if (!h.s(e.id) && e$isEditState || !R$current) {
             return
           }
-          R$current.classList.add(v.a.imageAnimationFirstHalf)
+          R$current.classList.add(_$_.imageAnimationFirstHalf)
           k.current = true
           setTimeout(function () {
-            R$current.classList.remove(v.a.imageAnimationFirstHalf)
-            R$current.classList.add(v.a.imageAnimationSecondHalf)
+            R$current.classList.remove(_$_.imageAnimationFirstHalf)
+            R$current.classList.add(_$_.imageAnimationSecondHalf)
             R$current.style.backgroundImage = "url(".concat(e$attributes$value ? P : M, ")")
             setTimeout(function () {
-              R$current.classList.remove(v.a.imageAnimationSecondHalf)
+              R$current.classList.remove(_$_.imageAnimationSecondHalf)
               k.current = false
             }, 100)
           }, 100)
@@ -207,37 +163,37 @@ _a = function (e) {
     var /* [auto-meaningful-name] */e$size$width = e$size.width
     var /* [auto-meaningful-name] */e$size$height = e$size.height
     e$size$height = (e$size$width = Math.min(e$size$width, e$size$height * $$_131.k)) / $$_131.k
-    return i.a.createElement("div", {
-      className: v.a.templateWrapper,
+    return _React.createElement("div", {
+      className: _$_.templateWrapper,
       style: {
         width: e$size$width,
         height: e$size$height
       }
-    }, e$attributes$mode === $$_162.c.DEFAULT ? i.a.createElement("div", {
-      className: v.a.default,
+    }, e$attributes$mode === $$_162.c.DEFAULT ? _React.createElement("div", {
+      className: _$_.default,
       style: {
         backgroundColor: x.backgroundColor,
         borderRadius: e$size$height / 2
       }
-    }, i.a.createElement("div", {
+    }, _React.createElement("div", {
       ref: N,
-      className: l()(v.a.handle),
+      className: l(_$_.handle),
       style: {
         height: e$size$height,
         width: e$size$height,
         backgroundColor: x.handleColor,
         left: e$attributes$value ? "calc(100% - ".concat(e$size$height, "px)") : 0
       }
-    })) : i.a.createElement("div", {
-      className: v.a.primary,
+    })) : _React.createElement("div", {
+      className: _$_.primary,
       style: {
         borderRadius: e$size$height / 2,
         backgroundColor: x.backgroundColor,
         height: e$size$height,
         width: e$size$width
       }
-    }, i.a.createElement("div", {
-      className: l()(v.a.handle),
+    }, _React.createElement("div", {
+      className: l(_$_.handle),
       style: {
         backgroundColor: x.handleColor,
         height: e$size$height,

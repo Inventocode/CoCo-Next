@@ -7,20 +7,9 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$$_$$_75_index = require("../../75/index")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($$_$$_75_index)
+import * as /* [auto-meaningful-name] */$$_$$_75_index from "../../75/index"
+import /* [auto-meaningful-name] */_$$_$$_75_index from "../../75/index"
 function o(e) {
-  return e instanceof HTMLElement ? e : i.a.findDOMNode(e)
+  return e instanceof HTMLElement ? e : _$$_$$_75_index.findDOMNode(e)
 }
 export default o

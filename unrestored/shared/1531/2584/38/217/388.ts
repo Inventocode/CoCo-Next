@@ -7,8 +7,8 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$$_$$_27 = require("../../27")
-import /* [auto-meaningful-name] */$$_$$_40 = require("../../40")
+import * as /* [auto-meaningful-name] */$$_$$_27 from "../../27"
+import * as /* [auto-meaningful-name] */$$_$$_40 from "../../40"
 var i = function () {
   function e() {
     $$_$$_27.a(this, e)

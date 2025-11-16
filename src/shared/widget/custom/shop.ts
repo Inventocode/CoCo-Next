@@ -158,9 +158,7 @@ export function reportUse(type: string, userID?: number | undefined): void {
   }
 }
 
-export async function getUsedTimes<T extends string>(
-widgetsType: T[])
-: Promise<Partial<Record<T, number>>> {
+export async function getUsedTimes<T extends string>(widgetsType: T[]): Promise<Partial<Record<T, number>>> {
   const { data } = await axiosWithCredentials.get<MyResponse<{
     totalList: Partial<Record<T, number>>
   }>>($$_$$_$$_$$_unrestored_shared_1531_2584_59_index.a.serverHost + "/data-center/widget/total", {

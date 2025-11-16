@@ -8,8 +8,8 @@
 
 export { a }
 export { s as b }
-import /* [auto-meaningful-name] */$$_19 = require("../19")
-import /* [auto-meaningful-name] */$_605 = require("./605")
+import * as /* [auto-meaningful-name] */$$_19 from "../19"
+import * as /* [auto-meaningful-name] */$_605 from "./605"
 var o = $$_19.a({}, $_605.a.Modal)
 function a(e) {
   o = e ? $$_19.a($$_19.a({}, o), e) : $$_19.a({}, $_605.a.Modal)

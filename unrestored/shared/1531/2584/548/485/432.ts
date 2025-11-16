@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */$$_484_168 = require("../484/168")
-import /* [auto-meaningful-name] */$$_484_111 = require("../484/111")
-import /* [auto-meaningful-name] */$_106 = require("./106")
+import * as /* [auto-meaningful-name] */$$_484_168 from "../484/168"
+import * as /* [auto-meaningful-name] */$$_484_111 from "../484/111"
+import * as /* [auto-meaningful-name] */$_106 from "./106"
 function a(e, t) {
   $_106.a(1, arguments)
   var n = t || {}

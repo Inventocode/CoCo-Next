@@ -7,8 +7,8 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */$$_$$_$$_$$_19 = require("../../../../19")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_108 = require("../../../../108")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_19 from "../../../../19"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_108 from "../../../../108"
 function o(e) {
   return e && "object" === $$_$$_$$_$$_108.a(e) && e.constructor === Object
 }

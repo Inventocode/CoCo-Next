@@ -9,7 +9,7 @@
 export { i as c }
 export { o as b }
 export { a }
-import /* [auto-meaningful-name] */$_316 = require("./316")
+import * as /* [auto-meaningful-name] */$_316 from "./316"
 function i(e, t) {
   if (undefined === t) {
     t = 0

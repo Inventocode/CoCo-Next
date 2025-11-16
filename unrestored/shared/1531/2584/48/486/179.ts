@@ -20,7 +20,7 @@ export { s as k }
 export { p as l }
 export { _ as m }
 export { i as n }
-import /* [auto-meaningful-name] */$_229 = require("./229")
+import * as /* [auto-meaningful-name] */$_229 from "./229"
 var i = function (e) {
   return null === e || undefined === e
 }

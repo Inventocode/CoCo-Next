@@ -6,62 +6,18 @@
 
 "use strict"
 
-import r = require("./6")
-import o = require("./11")
-import /* [auto-meaningful-name] */React = require("react")
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */Color = require("color")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import l = require("./8")
-var u = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(l)
-import d = require("./5")
-import p = require("./90")
-import /* [auto-meaningful-name] */$_240 = require("./240")
-var h = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_240)
+import * as r from "./6"
+import * as o from "./11"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as l from "./8"
+import u from "./8"
+import * as d from "./5"
+import * as p from "./90"
+import * as /* [auto-meaningful-name] */$_240 from "./240"
+import /* [auto-meaningful-name] */_$_ from "./240"
 var _a
 _a = function (e) {
   var t = e.id
@@ -78,8 +34,8 @@ _a = function (e) {
   var y = {
     minWidth: 16,
     minHeight: 16,
-    backgroundColor: c()(e$attributes$backgroundColor).toString(),
-    color: c()(e$attributes$color).toString(),
+    backgroundColor: _Color(e$attributes$backgroundColor).toString(),
+    color: _Color(e$attributes$color).toString(),
     fontFamily: e$attributes$fontFamily,
     fontSize: e$attributes$fontSize,
     justifyContent: "center",
@@ -87,11 +43,11 @@ _a = function (e) {
     padding: 0,
     overflow: "hidden"
   }
-  return a.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
     "data-widget-type": d.H,
     "data-role": d.M,
-    className: u()(p.b, h.a.textWidget, o.a({}, h.a.hide, !e$visible)),
+    className: u(p.b, _$_.textWidget, o.a({}, _$_.hide, !e$visible)),
     onClick: function () {
       if (e$onClick) {
         e$onClick()
@@ -100,8 +56,8 @@ _a = function (e) {
     style: r.a(r.a({}, y), {}, {
       position: "static"
     })
-  }, a.a.createElement("span", {
-    className: h.a.content,
+  }, _React.createElement("span", {
+    className: _$_.content,
     style: {
       display: e$attributes$lineClamp ? "-webkit-box" : undefined,
       lineClamp: e$attributes$lineClamp || undefined,

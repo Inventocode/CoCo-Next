@@ -7,9 +7,9 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$_2593 = require("./2593")
-require("react")
-import /* [auto-meaningful-name] */$_786 = require("./786")
+import * as /* [auto-meaningful-name] */$_2593 from "./2593"
+import "react"
+import * as /* [auto-meaningful-name] */$_786 from "./786"
 function o() {
   return $_2593.a() || $_786.a
 }

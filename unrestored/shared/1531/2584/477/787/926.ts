@@ -10,8 +10,8 @@ export { c as b }
 export { u as c }
 export { l as d }
 export { f as a }
-import /* [auto-meaningful-name] */$_364 = require("./364")
-import /* [auto-meaningful-name] */$_521 = require("./521")
+import * as /* [auto-meaningful-name] */$_364 from "./364"
+import * as /* [auto-meaningful-name] */$_521 from "./521"
 var o = {
   nowSeconds: function () {
     return Date.now() / 1e3

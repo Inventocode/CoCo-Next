@@ -26,9 +26,9 @@ export { w as q }
 export { C as c }
 export { T as b }
 export { S as t }
-import /* [auto-meaningful-name] */$_10_index = require("./10/index")
-import /* [auto-meaningful-name] */$_17_index = require("./17/index")
-import /* [auto-meaningful-name] */$_1036_127 = require("./1036/127")
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$_1036_127 from "./1036/127"
 function a(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1]
   return {

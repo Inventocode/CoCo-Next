@@ -29,8 +29,8 @@ export { x as e }
 export { C as a }
 export { O as w }
 export { k as n }
-import /* [auto-meaningful-name] */$_34_index = require("./34/index")
-import /* [auto-meaningful-name] */$$_107_index = require("../107/index")
+import * as /* [auto-meaningful-name] */$_34_index from "./34/index"
+import * as /* [auto-meaningful-name] */$$_107_index from "../107/index"
 function o(e) {
   return {
     width: Math.floor(.7 * e.width),

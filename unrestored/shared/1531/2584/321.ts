@@ -6,22 +6,11 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_10_index = require("./10/index")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */$_38_376 = require("./38/376")
-import s = require("./82")
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$_38_376 from "./38/376"
+import * as s from "./82"
 var _a
 _a = React.memo(function (e) {
   var t = React.useState([])
@@ -61,7 +50,7 @@ _a = React.memo(function (e) {
       })
     }
   }, [m])
-  return i.a.createElement("svg", {
+  return _React.createElement("svg", {
     viewBox: p,
     width: "1em",
     height: "1em",
@@ -69,7 +58,7 @@ _a = React.memo(function (e) {
     "aria-hidden": "true",
     focusable: "false"
   }, c.map(function (e) {
-    return i.a.createElement("path", {
+    return _React.createElement("path", {
       key: e,
       d: e
     })

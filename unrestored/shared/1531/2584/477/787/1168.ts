@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$_316 = require("./316")
+import * as /* [auto-meaningful-name] */$_316 from "./316"
 function i(e, t) {
   try {
     for (var n = e, r = [], i = 0, a = 0, /* [auto-meaningful-name] */$length = " > ".length, c = undefined; n && i++ < 5 && !("html" === (c = o(n, t)) || i > 1 && a + r.length * $length + c.length >= 80);) {

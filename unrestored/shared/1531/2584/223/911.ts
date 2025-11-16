@@ -7,8 +7,8 @@
 "use strict"
 
 export { d as a }
-import /* [auto-meaningful-name] */$$_2627_285_266 = require("../2627/285/266")
-import /* [auto-meaningful-name] */$$_2627_285_740 = require("../2627/285/740")
+import * as /* [auto-meaningful-name] */$$_2627_285_266 from "../2627/285/266"
+import * as /* [auto-meaningful-name] */$$_2627_285_740 from "../2627/285/740"
 var o = [{
   index: 7,
   opacity: .15

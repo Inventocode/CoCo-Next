@@ -8,22 +8,11 @@
 
 export { a$Provider as b }
 export { c as a }
-import /* [auto-meaningful-name] */React = require("react")
-import /* [auto-meaningful-name] */$$_16_687 = require("../16/687")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($$_16_687)
-require("./275")
-o.a
+import * as /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */$$_16_687 from "../16/687"
+import /* [auto-meaningful-name] */_$$_16_ from "../16/687"
+import "./275"
+_$$_16_
 var a = React.createContext(null)
 a.Consumer
 var /* [auto-meaningful-name] */a$Provider = a.Provider

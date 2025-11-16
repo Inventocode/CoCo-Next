@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$_25_768 = require("./25/768")
+import * as /* [auto-meaningful-name] */$_25_768 from "./25/768"
 function i(e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {
     if (Array.isArray(e) || (e = $_25_768.a(e))) {

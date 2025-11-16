@@ -6,69 +6,25 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */Color = require("color")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import c = require("../8")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(c)
-import /* [auto-meaningful-name] */$$_548_484_index = require("../548/484/index")
-import /* [auto-meaningful-name] */$$_548_485_index = require("../548/485/index")
-import /* [auto-meaningful-name] */$$_548_280 = require("../548/280")
-import /* [auto-meaningful-name] */$_1186_index = require("./1186/index")
-import /* [auto-meaningful-name] */$$_16_index = require("../16/index")
-import /* [auto-meaningful-name] */$$_90 = require("../90")
-import /* [auto-meaningful-name] */$$_236 = require("../236")
-import _ = require("../5")
-import /* [auto-meaningful-name] */$$_28_index = require("../28/index")
-import /* [auto-meaningful-name] */$$_53 = require("../53")
-import /* [auto-meaningful-name] */$_434 = require("./434")
-var E = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_434)
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as c from "../8"
+import l from "../8"
+import * as /* [auto-meaningful-name] */$$_548_484_index from "../548/484/index"
+import * as /* [auto-meaningful-name] */$$_548_485_index from "../548/485/index"
+import * as /* [auto-meaningful-name] */$$_548_280 from "../548/280"
+import * as /* [auto-meaningful-name] */$_1186_index from "./1186/index"
+import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */$$_236 from "../236"
+import * as _ from "../5"
+import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
+import * as /* [auto-meaningful-name] */$$_53 from "../53"
+import * as /* [auto-meaningful-name] */$_434 from "./434"
+import /* [auto-meaningful-name] */_$_ from "./434"
 var _a
 _a = React.memo(function (e) {
   var t = e.id
@@ -105,7 +61,7 @@ _a = React.memo(function (e) {
       }
     }
   })
-  return i.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
     "data-role": _.M,
     "data-widget-type": _.J,
@@ -113,7 +69,7 @@ _a = React.memo(function (e) {
     "data-max-width": $$_236.j,
     "data-min-height": $$_236.k,
     "data-max-height": $$_236.i,
-    className: l()($$_90.b, $$_11.a({}, E.a.hide, !e$visible), E.a.timePicker),
+    className: l($$_90.b, $$_11.a({}, _$_.hide, !e$visible), _$_.timePicker),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -121,15 +77,15 @@ _a = React.memo(function (e) {
       height: e$size.height,
       textAlign: "center",
       fontSize: e$attributes$fontSize,
-      color: s()(e$attributes$color).toString(),
-      backgroundColor: s()(e$attributes$backgroundColor).toString(),
+      color: _Color(e$attributes$color).toString(),
+      backgroundColor: _Color(e$attributes$backgroundColor).toString(),
       borderRadius: "18px"
     },
     ref: I
-  }, i.a.createElement($$_548_280.a, {
+  }, _React.createElement($$_548_280.a, {
     utils: $$_548_484_index.a,
     locale: $$_548_485_index.a
-  }, i.a.createElement($_1186_index.a, {
+  }, _React.createElement($_1186_index.a, {
     value: A,
     onChange: function (e) {
       if (e && e$onDatePickerChange) {
@@ -137,7 +93,7 @@ _a = React.memo(function (e) {
       }
     },
     TextFieldComponent: function (e) {
-      return i.a.createElement("div", {
+      return _React.createElement("div", {
         style: {
           textAlign: "center",
           fontSize: e$attributes$fontSize,
@@ -165,8 +121,8 @@ _a = React.memo(function (e) {
     onClose: function () {
       N.current = false
     }
-  })), undefined !== j && !j && i.a.createElement("div", {
-    className: l()(E.a.mask),
+  })), undefined !== j && !j && _React.createElement("div", {
+    className: l(_$_.mask),
     onClick: function () {
       var e
       var /* [auto-meaningful-name] */I$current = I.current

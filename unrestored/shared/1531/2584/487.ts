@@ -12,7 +12,7 @@ export { a as f }
 export { s as c }
 export { c as b }
 export { u as a }
-import /* [auto-meaningful-name] */$_80_index = require("./80/index")
+import * as /* [auto-meaningful-name] */$_80_index from "./80/index"
 function o(e) {
   return Array.isArray(e) ? e : undefined !== e ? [e] : []
 }

@@ -7,8 +7,8 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$_33_index = require("./33/index")
-import /* [auto-meaningful-name] */React = require("react")
+import * as /* [auto-meaningful-name] */$_33_index from "./33/index"
+import * as /* [auto-meaningful-name] */React from "react"
 function i(e, t) {
   var n = t || {}
   var /* [auto-meaningful-name] */n$defaultValue = n.defaultValue

@@ -4,18 +4,6 @@
  * 模块 ID：685
  */
 
-"use strict"
-
-function r(e) {
-  return (r = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
-    return typeof e
-  } : function (e) {
-    return e && "function" === typeof Symbol && e.constructor === Symbol && e !== Symbol.prototype ? "symbol" : typeof e
-  })(e)
-}
+import { "685__part-1__o" as o } from "./685__part-1"
 export { o as a }
-import /* [auto-meaningful-name] */$$_292 = require("../292")
-function o(e, t) {
-  return !t || "object" !== r(t) && "function" !== typeof t ? $$_292.a(e) : t
-}
 export default o

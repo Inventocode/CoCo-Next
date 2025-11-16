@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as b }
-import /* [auto-meaningful-name] */$$_$$_$$_54 = require("../../../54")
+import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
 var i = {
   easeInOut: "cubic-bezier(0.4, 0, 0.2, 1)",
   easeOut: "cubic-bezier(0.0, 0, 0.2, 1)",

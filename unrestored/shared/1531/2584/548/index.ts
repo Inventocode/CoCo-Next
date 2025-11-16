@@ -6,68 +6,24 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */Color = require("color")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import c = require("../8")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(c)
-import /* [auto-meaningful-name] */$_484_index = require("./484/index")
-import /* [auto-meaningful-name] */$_485_index = require("./485/index")
-import /* [auto-meaningful-name] */$_280 = require("./280")
-import /* [auto-meaningful-name] */$_1183_index = require("./1183/index")
-import /* [auto-meaningful-name] */$$_16_index = require("../16/index")
-import /* [auto-meaningful-name] */$$_90 = require("../90")
-import /* [auto-meaningful-name] */$$_235 = require("../235")
-import _ = require("../5")
-import /* [auto-meaningful-name] */$$_53 = require("../53")
-import /* [auto-meaningful-name] */$_433 = require("./433")
-var y = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_433)
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as c from "../8"
+import l from "../8"
+import * as /* [auto-meaningful-name] */$_484_index from "./484/index"
+import * as /* [auto-meaningful-name] */$_485_index from "./485/index"
+import * as /* [auto-meaningful-name] */$_280 from "./280"
+import * as /* [auto-meaningful-name] */$_1183_index from "./1183/index"
+import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */$$_235 from "../235"
+import * as _ from "../5"
+import * as /* [auto-meaningful-name] */$$_53 from "../53"
+import * as /* [auto-meaningful-name] */$_433 from "./433"
+import /* [auto-meaningful-name] */_$_ from "./433"
 var _a
 _a = React.memo(function (e) {
   var t = e.id
@@ -86,7 +42,7 @@ _a = React.memo(function (e) {
     var /* [auto-meaningful-name] */e$project
     return null === e || undefined === e || null === (e$project = e.project) || undefined === e$project ? undefined : e$project.playing
   })
-  return i.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
     "data-role": _.M,
     "data-widget-type": _.n,
@@ -94,7 +50,7 @@ _a = React.memo(function (e) {
     "data-max-width": $$_235.j,
     "data-min-height": $$_235.k,
     "data-max-height": $$_235.i,
-    className: l()($$_90.b, $$_11.a({}, y.a.hide, !e$visible), y.a.dataPicker),
+    className: l($$_90.b, $$_11.a({}, _$_.hide, !e$visible), _$_.dataPicker),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -102,15 +58,15 @@ _a = React.memo(function (e) {
       height: e$size.height,
       textAlign: "center",
       fontSize: e$attributes$fontSize,
-      color: s()(e$attributes$color).toString(),
-      backgroundColor: s()(e$attributes$backgroundColor).toString(),
+      color: _Color(e$attributes$color).toString(),
+      backgroundColor: _Color(e$attributes$backgroundColor).toString(),
       borderRadius: "18px"
     },
     ref: S
-  }, i.a.createElement($_280.a, {
+  }, _React.createElement($_280.a, {
     utils: $_484_index.a,
     locale: $_485_index.a
-  }, i.a.createElement($_1183_index.a, {
+  }, _React.createElement($_1183_index.a, {
     format: "yyyy年MM月dd日",
     value: I,
     onChange: function (e) {
@@ -119,7 +75,7 @@ _a = React.memo(function (e) {
       }
     },
     TextFieldComponent: function (e) {
-      return i.a.createElement("div", {
+      return _React.createElement("div", {
         style: {
           textAlign: "center",
           fontSize: e$attributes$fontSize,
@@ -141,8 +97,8 @@ _a = React.memo(function (e) {
     },
     cancelLabel: "取消",
     okLabel: "确定"
-  })), undefined !== A && !A && i.a.createElement("div", {
-    className: l()(y.a.mask),
+  })), undefined !== A && !A && _React.createElement("div", {
+    className: l(_$_.mask),
     onClick: function () {
       var e
       var /* [auto-meaningful-name] */S$current = S.current

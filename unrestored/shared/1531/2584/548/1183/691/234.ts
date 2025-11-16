@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$$_270_1506 = require("../270/1506")
+import * as /* [auto-meaningful-name] */$$_270_1506 from "../270/1506"
 function i(e) {
   if ("string" !== typeof e) {
     throw new Error($$_270_1506.a(7))

@@ -7,34 +7,12 @@
 "use strict"
 
 export { l as a }
-import /* [auto-meaningful-name] */React = require("react")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */$$_702 = require("../702")
-import /* [auto-meaningful-name] */$$_13_index = require("../13/index")
-import /* [auto-meaningful-name] */$_742 = require("./742")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_742)
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$$_702 from "../702"
+import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$_742 from "./742"
+import /* [auto-meaningful-name] */_$_ from "./742"
 function l(e) {
   var /* [auto-meaningful-name] */e$onCancel = e.onCancel
   var /* [auto-meaningful-name] */e$onOk = e.onOk
@@ -43,27 +21,27 @@ function l(e) {
   var /* [auto-meaningful-name] */e$desc = e.desc
   var u = undefined === e$desc ? "saveTipsDesc" : e$desc
   var /* [auto-meaningful-name] */$$_702$a$formatMessage = $$_702.a().formatMessage
-  return o.a.createElement("div", {
-    className: c.a.saveTipsWrapper
-  }, o.a.createElement("div", {
-    className: c.a.saveTipsMask
-  }), o.a.createElement("div", {
-    className: c.a.saveTipsContent
-  }, o.a.createElement("div", {
-    className: c.a.name
+  return _React.createElement("div", {
+    className: _$_.saveTipsWrapper
+  }, _React.createElement("div", {
+    className: _$_.saveTipsMask
+  }), _React.createElement("div", {
+    className: _$_.saveTipsContent
+  }, _React.createElement("div", {
+    className: _$_.name
   }, $$_702$a$formatMessage({
     id: s
-  })), o.a.createElement("div", {
-    className: c.a.description
+  })), _React.createElement("div", {
+    className: _$_.description
   }, $$_702$a$formatMessage({
     id: u
-  })), o.a.createElement("div", {
-    className: c.a.actions
-  }, o.a.createElement($$_13_index.d, {
+  })), _React.createElement("div", {
+    className: _$_.actions
+  }, _React.createElement($$_13_index.d, {
     onClick: e$onCancel
   }, $$_702$a$formatMessage({
     id: "notSave"
-  })), o.a.createElement($$_13_index.d, {
+  })), _React.createElement($$_13_index.d, {
     type: "primary",
     onClick: e$onOk
   }, $$_702$a$formatMessage({

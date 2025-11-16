@@ -6,25 +6,14 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_19 = require("../19")
-import /* [auto-meaningful-name] */$$_20 = require("../20")
-import /* [auto-meaningful-name] */$$_33_index = require("../33/index")
-import /* [auto-meaningful-name] */$$_54 = require("../54")
-import /* [auto-meaningful-name] */React = require("react")
-import c = require("../8")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(c)
-import /* [auto-meaningful-name] */$$_1504_788 = require("../1504/788")
+import * as /* [auto-meaningful-name] */$$_19 from "../19"
+import * as /* [auto-meaningful-name] */$$_20 from "../20"
+import * as /* [auto-meaningful-name] */$$_33_index from "../33/index"
+import * as /* [auto-meaningful-name] */$$_54 from "../54"
+import * as /* [auto-meaningful-name] */React from "react"
+import * as c from "../8"
+import l from "../8"
+import * as /* [auto-meaningful-name] */$$_1504_788 from "../1504/788"
 function d(e, t) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$invalidate = e.invalidate
@@ -67,7 +56,7 @@ function d(e, t) {
     I["aria-hidden"] = true
   }
   var A = React.createElement(E, $$_19.a({
-    className: l()(!e$invalidate && e$prefixCls, e$className),
+    className: l(!e$invalidate && e$prefixCls, e$className),
     style: $$_20.a($$_20.a({}, T), e$style)
   }, I, O, {
     ref: t
@@ -143,7 +132,7 @@ var y = function (e, t) {
     value: null
   }, React.createElement(f, $$_19.a({
     ref: t,
-    className: l()(n$className, e$className)
+    className: l(n$className, e$className)
   }, d, h)))
 }
 var E = React.forwardRef(y)
@@ -382,7 +371,7 @@ function T(e, t) {
     Ne = React.createElement(f, $$_19.a({}, Re, xe), "function" === typeof De ? De(Oe) : De)
   }
   var Me = React.createElement(N, $$_19.a({
-    className: l()(!be && c, e$className),
+    className: l(!be && c, e$className),
     style: e$style,
     ref: t
   }, x), Ee.map(ke), ye ? Ne : null, e$suffix && React.createElement(f, $$_19.a({}, Re, {

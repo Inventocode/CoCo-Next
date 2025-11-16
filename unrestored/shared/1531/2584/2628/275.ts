@@ -13,23 +13,12 @@ export { p as d }
 export { g as c }
 export { v as f }
 export { m as b }
-import /* [auto-meaningful-name] */React = require("react")
-import /* [auto-meaningful-name] */$_2589_index = require("./2589/index")
-import /* [auto-meaningful-name] */$_2589_792 = require("./2589/792")
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_2589_792)
-import /* [auto-meaningful-name] */$_2588 = require("./2588")
-import /* [auto-meaningful-name] */$_277 = require("./277")
+import * as /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */$_2589_index from "./2589/index"
+import * as /* [auto-meaningful-name] */$_2589_792 from "./2589/792"
+import /* [auto-meaningful-name] */_$_2589_ from "./2589/792"
+import * as /* [auto-meaningful-name] */$_2588 from "./2588"
+import * as /* [auto-meaningful-name] */$_277 from "./277"
 var u = function () {
   return (u = Object.assign || function (e) {
     for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {
@@ -110,7 +99,7 @@ function _(e) {
     }
   }
 }
-var A = a.a || $_2589_792
+var A = _$_2589_ || $_2589_792
 function g(e) {
   if (undefined === e) {
     e = {

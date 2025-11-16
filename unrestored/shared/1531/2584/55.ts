@@ -8,13 +8,13 @@
 
 export { EXTENSION_WIDGET_MESSAGE_TYPE as a }
 export { d as b }
-import r = require("./6")
-import o = require("./27")
-import i = require("./40")
-import a = require("./68")
-import /* [auto-meaningful-name] */$_28_index = require("./28/index")
-import /* [auto-meaningful-name] */$_21_index = require("./21/index")
-import l = require("./91")
+import * as r from "./6"
+import * as o from "./27"
+import * as i from "./40"
+import * as a from "./68"
+import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
+import * as /* [auto-meaningful-name] */$_21_index from "./21/index"
+import * as l from "./91"
 var /* [auto-meaningful-name] */EXTENSION_WIDGET_MESSAGE_TYPE = "EXTENSION_WIDGET_MESSAGE_TYPE"
 var d = new (function () {
   function e() {

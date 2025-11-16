@@ -13,35 +13,24 @@ export { j as f }
 export { N as d }
 export { R as e }
 export { k as a }
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import /* [auto-meaningful-name] */$_10_index = require("./10/index")
-import a = require("./6")
-import /* [auto-meaningful-name] */$_25_index = require("./25/index")
-import c = require("./7")
-import /* [auto-meaningful-name] */Lodash = require("lodash")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions = require("../../../../src/shared/events/actions")
-import d = require("./9")
-import /* [auto-meaningful-name] */$_26_index = require("./26/index")
-import f = require("./5")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage = require("../../../../src/shared/widget/custom/storage")
-import /* [auto-meaningful-name] */$_38_375 = require("./38/375")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as a from "./6"
+import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
+import * as c from "./7"
+import * as /* [auto-meaningful-name] */Lodash from "lodash"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions from "../../../../src/shared/events/actions"
+import * as d from "./9"
+import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
+import * as f from "./5"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */$_38_375 from "./38/375"
 function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = c.a(o.a.mark(function e(t) {
+  return (_ = c.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */r$common$userInfo
     var r
     var /* [auto-meaningful-name] */r$project
@@ -61,7 +50,7 @@ function _() {
     var j
     var N
     var R
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -196,7 +185,7 @@ function b() {
   return y.apply(this, arguments)
 }
 function y() {
-  return (y = c.a(o.a.mark(function e() {
+  return (y = c.a(_RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */n$common$userInfo
     var n
     var /* [auto-meaningful-name] */n$project
@@ -218,7 +207,7 @@ function y() {
     var k
     var x
     var D
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

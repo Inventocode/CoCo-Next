@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$_273 = require("./273")
-import /* [auto-meaningful-name] */$_322 = require("./322")
+import * as /* [auto-meaningful-name] */$_273 from "./273"
+import * as /* [auto-meaningful-name] */$_322 from "./322"
 function o(e) {
   var t = function () {
     if ("undefined" === typeof Reflect || !Reflect.construct) {

@@ -7,10 +7,10 @@
 "use strict"
 
 export { s as a }
-import /* [auto-meaningful-name] */$$_1508 = require("../1508")
-import /* [auto-meaningful-name] */$$_265 = require("../265")
-import /* [auto-meaningful-name] */$$_350 = require("../350")
-import /* [auto-meaningful-name] */$$_218 = require("../218")
+import * as /* [auto-meaningful-name] */$$_1508 from "../1508"
+import * as /* [auto-meaningful-name] */$$_265 from "../265"
+import * as /* [auto-meaningful-name] */$$_350 from "../350"
+import * as /* [auto-meaningful-name] */$$_218 from "../218"
 function s() {
   $$_1508.a({
     callback: c,

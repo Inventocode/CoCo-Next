@@ -7,14 +7,14 @@
 "use strict"
 
 export { _ as a }
-import /* [auto-meaningful-name] */$$_$$_787_39 = require("../../787/39")
-import /* [auto-meaningful-name] */$$_$$_1184_2620 = require("../../1184/2620")
-import /* [auto-meaningful-name] */$$_$$_1184_394 = require("../../1184/394")
-import /* [auto-meaningful-name] */$$_$$_1184_2587 = require("../../1184/2587")
-import /* [auto-meaningful-name] */$$_$$_1184_905 = require("../../1184/905")
-import /* [auto-meaningful-name] */$_904 = require("./904")
-import /* [auto-meaningful-name] */$$_$$_1184_1027 = require("../../1184/1027")
-import /* [auto-meaningful-name] */$$_$$_1184_561_index = require("../../1184/561/index")
+import * as /* [auto-meaningful-name] */$$_$$_787_39 from "../../787/39"
+import * as /* [auto-meaningful-name] */$$_$$_1184_2620 from "../../1184/2620"
+import * as /* [auto-meaningful-name] */$$_$$_1184_394 from "../../1184/394"
+import * as /* [auto-meaningful-name] */$$_$$_1184_2587 from "../../1184/2587"
+import * as /* [auto-meaningful-name] */$$_$$_1184_905 from "../../1184/905"
+import * as /* [auto-meaningful-name] */$_904 from "./904"
+import * as /* [auto-meaningful-name] */$$_$$_1184_1027 from "../../1184/1027"
+import * as /* [auto-meaningful-name] */$$_$$_1184_561_index from "../../1184/561/index"
 var f = function () {
   function e(e) {
     this.errors = 0

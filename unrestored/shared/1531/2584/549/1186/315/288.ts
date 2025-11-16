@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */React = require("react")
-import /* [auto-meaningful-name] */$$_$$_$$_548_1183_270_689 = require("../../../548/1183/270/689")
+import * as /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */$$_$$_$$_548_1183_270_689 from "../../../548/1183/270/689"
 function o(e, t) {
   return React.useMemo(function () {
     return null == e && null == t ? null : function (n) {

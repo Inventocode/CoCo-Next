@@ -9,21 +9,10 @@
 export { i as a }
 export { a as b }
 export { s as c }
-import /* [auto-meaningful-name] */$_28_303_index = require("./28/303/index")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_28_303_index)
+import * as /* [auto-meaningful-name] */$_28_303_index from "./28/303/index"
+import /* [auto-meaningful-name] */_$_28_303_index from "./28/303/index"
 function i(e) {
-  return e + "_" + o.a.generate()
+  return e + "_" + _$_28_303_index.generate()
 }
 function a(e) {
   var t = window.getSelection ? window.getSelection() : null
@@ -44,5 +33,5 @@ function s(e) {
     t.addRange(n)
   }
 }
-o.a.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
+_$_28_303_index.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
 export default i

@@ -8,8 +8,8 @@
 
 export { o as a }
 export { a as b }
-import /* [auto-meaningful-name] */React = require("react")
-require("../50/index")
+import * as /* [auto-meaningful-name] */React from "react"
+import "../50/index"
 var i = React.createContext(null)
 var o = function (e) {
   var /* [auto-meaningful-name] */e$utils = e.utils

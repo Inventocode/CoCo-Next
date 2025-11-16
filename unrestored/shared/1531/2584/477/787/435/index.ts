@@ -8,12 +8,12 @@
 
 export { o as b }
 export { a }
-import /* [auto-meaningful-name] */$$_39 = require("../39")
-require("../1168")
-import /* [auto-meaningful-name] */$$_316 = require("../316")
-require("./1435")
-require("./986")
-require("../736")
+import * as /* [auto-meaningful-name] */$$_39 from "../39"
+import "../1168"
+import * as /* [auto-meaningful-name] */$$_316 from "../316"
+import "./1435"
+import "./986"
+import "../736"
 function o(e, t, n) {
   if (t in e) {
     var r = e[t]

@@ -7,21 +7,10 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-var o = i.a.createContext(null)
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+var o = _React.createContext(null)
 function a() {
-  return i.a.useContext(o)
+  return _React.useContext(o)
 }
 export default a

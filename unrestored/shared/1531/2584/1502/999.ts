@@ -6,21 +6,10 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React = require("react")
-import /* [auto-meaningful-name] */$$_75_index = require("../75/index")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($$_75_index)
-import /* [auto-meaningful-name] */$_378 = require("./378")
+import * as /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */$$_75_index from "../75/index"
+import /* [auto-meaningful-name] */_$$_75_index from "../75/index"
+import * as /* [auto-meaningful-name] */$_378 from "./378"
 var s = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
@@ -48,7 +37,7 @@ var s = React.forwardRef(function (e, t) {
       }
     }
   }, [])
-  return c.current ? o.a.createPortal(e$children, c.current) : null
+  return c.current ? _$$_75_index.createPortal(e$children, c.current) : null
 })
 export { s as a }
 export default s

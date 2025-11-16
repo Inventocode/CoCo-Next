@@ -14,24 +14,13 @@ export { h as b }
 export { g as e }
 export { _ as c }
 export { v as d }
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import /* [auto-meaningful-name] */$_10_index = require("./10/index")
-import a = require("./7")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions = require("../../../../src/shared/events/actions")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper = require("../../../../src/shared/events/messages-wrapper")
-import l = require("./99")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as a from "./7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions from "../../../../src/shared/events/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as l from "./99"
 var u = function () {
   var e
   var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_actions$d$getState$project$currentScreenIndex = $$_$$_$$_$$_src_shared_events_actions.d.getState().project.currentScreenIndex
@@ -53,9 +42,9 @@ function h() {
   return m.apply(this, arguments)
 }
 function m() {
-  return (m = a.a(o.a.mark(function e() {
+  return (m = a.a(_RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

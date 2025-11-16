@@ -6,92 +6,37 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import s = require("../7")
-import /* [auto-meaningful-name] */$$_27 = require("../27")
-import /* [auto-meaningful-name] */React = require("react")
-var u = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import d = require("../8")
-var p = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(d)
-import f = require("../5")
-import /* [auto-meaningful-name] */$$_90 = require("../90")
-import /* [auto-meaningful-name] */$$_263 = require("../263")
-import /* [auto-meaningful-name] */$$_13_index = require("../13/index")
-import /* [auto-meaningful-name] */$$_76 = require("../76")
-import /* [auto-meaningful-name] */$$_28_index = require("../28/index")
-import /* [auto-meaningful-name] */$_666 = require("./666")
-var y = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_666)
-import /* [auto-meaningful-name] */$$_53 = require("../53")
-import /* [auto-meaningful-name] */$_667 = require("./667")
-import /* [auto-meaningful-name] */$_176 = require("./176")
-var C = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_176)
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as s from "../7"
+import * as /* [auto-meaningful-name] */$$_27 from "../27"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as d from "../8"
+import p from "../8"
+import * as f from "../5"
+import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */$$_263 from "../263"
+import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_76 from "../76"
+import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
+import * as /* [auto-meaningful-name] */$_666 from "./666"
+import /* [auto-meaningful-name] */_$_ from "./666"
+import * as /* [auto-meaningful-name] */$$_53 from "../53"
+import * as /* [auto-meaningful-name] */$_667 from "./667"
+import * as /* [auto-meaningful-name] */$_176 from "./176"
+import /* [auto-meaningful-name] */_$_2 from "./176"
 var T = new function e() {
   var t = this
   $$_27.a(this, e)
   this.urlStore = undefined
   this._state = undefined
   this.execute = function () {
-    var e = s.a(a.a.mark(function e(n, r) {
+    var e = s.a(_RegeneratorRuntime.mark(function e(n, r) {
       var o
-      return a.a.wrap(function (e) {
+      return _RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
@@ -199,35 +144,35 @@ function S(e) {
     }
   }, [m, g, p])
   if ("error" === w || "http-protocol-error" === w || d || f || p) {
-    h = u.a.createElement("div", {
-      className: C.a.fail
-    }, u.a.createElement("img", {
-      className: C.a.image,
-      src: y.a,
+    h = _React.createElement("div", {
+      className: _$_2.fail
+    }, _React.createElement("img", {
+      className: _$_2.image,
+      src: _$_,
       alt: "failed"
-    }), u.a.createElement("p", {
-      className: C.a.title
-    }, "加载失败"), d && u.a.createElement("span", {
-      className: C.a.label
-    }, "你输入的网址有错误，请输入正确的网址"), !d && f && u.a.createElement("span", {
-      className: C.a.label
-    }, "你输入的网址做了限制无法打开，可在手机端正常打开"), !d && !f && "error" === w && u.a.createElement("span", {
-      className: C.a.label
-    }, "请检查是否输入正确的网址，", u.a.createElement("br", null), "如果网址正确，请尝试在手机端打开"), !d && !f && "http-protocol-error" === w && u.a.createElement("span", {
-      className: C.a.label
-    }, "由于浏览器安全策略，http://开头的网址无法在浏览器预览，可在手机端正常打开"), p && u.a.createElement("span", {
-      className: C.a.label
+    }), _React.createElement("p", {
+      className: _$_2.title
+    }, "加载失败"), d && _React.createElement("span", {
+      className: _$_2.label
+    }, "你输入的网址有错误，请输入正确的网址"), !d && f && _React.createElement("span", {
+      className: _$_2.label
+    }, "你输入的网址做了限制无法打开，可在手机端正常打开"), !d && !f && "error" === w && _React.createElement("span", {
+      className: _$_2.label
+    }, "请检查是否输入正确的网址，", _React.createElement("br", null), "如果网址正确，请尝试在手机端打开"), !d && !f && "http-protocol-error" === w && _React.createElement("span", {
+      className: _$_2.label
+    }, "由于浏览器安全策略，http://开头的网址无法在浏览器预览，可在手机端正常打开"), p && _React.createElement("span", {
+      className: _$_2.label
     }, "你输入的网址无法打开"))
   } else {
     if ("loading" === w) {
-      h = u.a.createElement("div", {
-        className: C.a.loaderBox
-      }, u.a.createElement("div", {
-        className: C.a.loader
+      h = _React.createElement("div", {
+        className: _$_2.loaderBox
+      }, _React.createElement("div", {
+        className: _$_2.loader
       }))
     }
   }
-  return u.a.createElement(u.a.Fragment, null, h, !g && !d && !p && "none" === w && u.a.createElement("iframe", {
+  return _React.createElement(_React.Fragment, null, h, !g && !d && !p && "none" === w && _React.createElement("iframe", {
     ref: I,
     id: "iframe",
     title: "coco",
@@ -243,14 +188,14 @@ function S(e) {
   }))
 }
 function I() {
-  return u.a.createElement("div", {
-    className: C.a.placeholderPoster
-  }, u.a.createElement("div", {
-    className: C.a.header
-  }, u.a.createElement($$_13_index.j, {
+  return _React.createElement("div", {
+    className: _$_2.placeholderPoster
+  }, _React.createElement("div", {
+    className: _$_2.header
+  }, _React.createElement($$_13_index.j, {
     type: "icon-net"
-  }), u.a.createElement("span", null, "www.codemao.cn")), u.a.createElement("div", {
-    className: C.a.main
+  }), _React.createElement("span", null, "www.codemao.cn")), _React.createElement("div", {
+    className: _$_2.main
   }))
 }
 function A(e) {
@@ -267,7 +212,7 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes = e.attributes
   var /* [auto-meaningful-name] */e$attributes$url = e$attributes.url
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
-  return u.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
     "data-role": f.M,
     "data-widget-type": f.C,
@@ -275,7 +220,7 @@ _a = function (e) {
     "data-max-width": $$_76.e,
     "data-max-height": $$_76.d,
     "data-min-height": $$_263.b,
-    className: p()(C.a.webViewWidget, $$_90.b, $$_11.a({}, C.a.hide, !e$visible)),
+    className: p(_$_2.webViewWidget, $$_90.b, $$_11.a({}, _$_2.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -287,9 +232,9 @@ _a = function (e) {
       maxHeight: "".concat($$_76.d, "px"),
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }
-  }, (e$isEditState || e$attributes$disabled) && u.a.createElement("div", {
-    className: C.a.mask
-  }), e$attributes$url ? u.a.createElement(S, e) : u.a.createElement(I, null))
+  }, (e$isEditState || e$attributes$disabled) && _React.createElement("div", {
+    className: _$_2.mask
+  }), e$attributes$url ? _React.createElement(S, e) : _React.createElement(I, null))
 }
 export { _a as a }
 export default _a

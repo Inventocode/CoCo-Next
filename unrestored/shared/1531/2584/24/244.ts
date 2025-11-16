@@ -13,9 +13,9 @@ export { l as d }
 export { u as g }
 export { d as c }
 export { p as a }
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */$$_25_index = require("../25/index")
-import /* [auto-meaningful-name] */OtJson1 = require("ot-json1")
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
+import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 function a(e) {
   for (var t = [], n = [], i = [], a = [{
       path: [],

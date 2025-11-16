@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$_770 = require("./770")
+import * as /* [auto-meaningful-name] */$_770 from "./770"
 function i(e, t) {
   if ("function" !== typeof t && null !== t) {
     throw new TypeError("Super expression must either be null or a function")

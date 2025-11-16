@@ -7,7 +7,7 @@
 "use strict"
 
 export { o$Provider as a }
-import /* [auto-meaningful-name] */React = require("react")
+import * as /* [auto-meaningful-name] */React from "react"
 var o = React.createContext(null)
 var /* [auto-meaningful-name] */o$Provider = o.Provider
 export { o as b }

@@ -12,7 +12,7 @@ export { a as d }
 export { c as b }
 export { l as c }
 export { u as e }
-import /* [auto-meaningful-name] */Lodash = require("lodash")
+import * as /* [auto-meaningful-name] */Lodash from "lodash"
 function o(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 10
   return e.substr(0, t) + (e.length > t ? "..." : "")

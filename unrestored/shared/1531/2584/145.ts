@@ -19,8 +19,8 @@ export { h as k }
 export { m as j }
 export { g as c }
 export { _ as a }
-import r = require("./60")
-import /* [auto-meaningful-name] */$_13_342 = require("./13/342")
+import * as r from "./60"
+import * as /* [auto-meaningful-name] */$_13_342 from "./13/342"
 var /* [auto-meaningful-name] */IconWidgetText = "icon-widget-text"
 var /* [auto-meaningful-name] */_111111ff = "#111111ff"
 var s = 16

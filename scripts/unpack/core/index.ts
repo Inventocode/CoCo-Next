@@ -13,6 +13,7 @@ import { transformImports } from "./transform-imports"
 import { transformExports } from "./transform-exports"
 import { write } from "./write"
 import { removeNodePolyfill } from "./remove-node-polyfill"
+import { scopeLowering } from "./scope-lowering"
 
 export * from "./types"
 
@@ -50,6 +51,7 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     removeNodePolyfill(modules, config.nodePolyfill ?? {})
     transformImports(modules, config)
     transformExports(modules)
+    scopeLowering(modules)
     await write(config.output.path, modules)
     const { pathMap: pathMapPath } = config.output
     if (pathMapPath) {

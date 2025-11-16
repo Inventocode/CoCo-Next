@@ -6,36 +6,14 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_296 = require("./296")
-import /* [auto-meaningful-name] */Lodash = require("lodash")
-import /* [auto-meaningful-name] */React = require("react")
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import s = require("./8")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(s)
-import /* [auto-meaningful-name] */$_13_index = require("./13/index")
-require("./13/636")
+import * as /* [auto-meaningful-name] */$_296 from "./296"
+import * as /* [auto-meaningful-name] */Lodash from "lodash"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as s from "./8"
+import c from "./8"
+import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import "./13/636"
 var _a
 _a = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onStep = e.onStep
@@ -58,25 +36,25 @@ _a = React.memo(function (e) {
       e$onStep("".concat(g - 1), e, "down")
     }
   }, [m, e$onStep, g])
-  return a.a.createElement($_13_index.k, Object.assign({}, f, {
-    className: c()(f.className, "coco-number-input-wrapper"),
+  return _React.createElement($_13_index.k, Object.assign({}, f, {
+    className: c(f.className, "coco-number-input-wrapper"),
     defaultValue: e$defaultValue,
     min: e$min,
     max: e$max,
     disabled: e$disabled,
-    after: a.a.createElement(a.a.Fragment, null, a.a.createElement("div", {
-      className: c()("coco-number-input-label")
-    }, a.a.createElement("span", null, e$label)), a.a.createElement("div", {
+    after: _React.createElement(_React.Fragment, null, _React.createElement("div", {
+      className: c("coco-number-input-label")
+    }, _React.createElement("span", null, e$label)), _React.createElement("div", {
       className: "coco-number-input"
-    }, a.a.createElement("span", {
+    }, _React.createElement("span", {
       className: h || e$disabled ? "disable" : "",
       onClick: _
-    }, a.a.createElement($_13_index.j, {
+    }, _React.createElement($_13_index.j, {
       type: "icon-up"
-    })), a.a.createElement("span", {
+    })), _React.createElement("span", {
       className: m || e$disabled ? "disable" : "",
       onClick: v
-    }, a.a.createElement($_13_index.j, {
+    }, _React.createElement($_13_index.j, {
       type: "icon-down"
     }))))
   }))

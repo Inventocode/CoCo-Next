@@ -53,10 +53,10 @@ export { d as R }
 export { k as S }
 export { E as T }
 export { w as U }
-import /* [auto-meaningful-name] */$_229 = require("./229")
-import /* [auto-meaningful-name] */$$_$$_19 = require("../../19")
-import /* [auto-meaningful-name] */$_179 = require("./179")
-import /* [auto-meaningful-name] */$_982 = require("./982")
+import * as /* [auto-meaningful-name] */$_229 from "./229"
+import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
+import * as /* [auto-meaningful-name] */$_179 from "./179"
+import * as /* [auto-meaningful-name] */$_982 from "./982"
 var s = function (e) {
   return function () {
     return e

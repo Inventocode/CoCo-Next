@@ -20,25 +20,14 @@ export { N as j }
 export { k as g }
 export { D as n }
 export { L as f }
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import i = require("./7")
-import a = require("./35")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage = require("../../../../src/shared/widget/custom/storage")
-import c = require("./53")
-import /* [auto-meaningful-name] */$_59_index = require("./59/index")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials = require("../../../../src/shared/utils/network/axios-with-credentials")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as i from "./7"
+import * as a from "./35"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
+import * as c from "./53"
+import * as /* [auto-meaningful-name] */$_59_index from "./59/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
 function d(e, t, n, r, o, i, l, u, d, p, f, h) {
   var m = $$_$$_$$_$$_src_shared_widget_custom_storage.d()
   var g = $$_$$_$$_$$_src_shared_widget_custom_storage.e()
@@ -121,10 +110,10 @@ function p(e, t) {
   return f.apply(this, arguments)
 }
 function f() {
-  return (f = i.a(o.a.mark(function e(t, n) {
+  return (f = i.a(_RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -162,10 +151,10 @@ function h(e) {
   return m.apply(this, arguments)
 }
 function m() {
-  return (m = i.a(o.a.mark(function e(t) {
+  return (m = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent2
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -195,10 +184,10 @@ function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = i.a(o.a.mark(function e(t) {
+  return (_ = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent3
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -228,10 +217,10 @@ function v(e) {
   return b.apply(this, arguments)
 }
 function b() {
-  return (b = i.a(o.a.mark(function e(t) {
+  return (b = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent4
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -261,10 +250,10 @@ function y(e) {
   return E.apply(this, arguments)
 }
 function E() {
-  return (E = i.a(o.a.mark(function e(t) {
+  return (E = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent5
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -298,9 +287,9 @@ function O(e, t) {
   return w.apply(this, arguments)
 }
 function w() {
-  return (w = i.a(o.a.mark(function e(t, n) {
+  return (w = i.a(_RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -331,10 +320,10 @@ function C(e) {
   return T.apply(this, arguments)
 }
 function T() {
-  return (T = i.a(o.a.mark(function e(t) {
+  return (T = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent6
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -361,10 +350,10 @@ function S(e) {
   return I.apply(this, arguments)
 }
 function I() {
-  return (I = i.a(o.a.mark(function e(t) {
+  return (I = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent7
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -393,7 +382,7 @@ function A(e) {
   return j.apply(this, arguments)
 }
 function j() {
-  return (j = i.a(o.a.mark(function e(t) {
+  return (j = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */t$name
     var /* [auto-meaningful-name] */t$description
     var /* [auto-meaningful-name] */t$operation
@@ -402,7 +391,7 @@ function j() {
     var /* [auto-meaningful-name] */t$playerUrl
     var /* [auto-meaningful-name] */t$workId
     var /* [auto-meaningful-name] */e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -437,9 +426,9 @@ function N(e) {
   return R.apply(this, arguments)
 }
 function R() {
-  return (R = i.a(o.a.mark(function e(t) {
+  return (R = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -460,11 +449,11 @@ function k(e) {
   return x.apply(this, arguments)
 }
 function x() {
-  return (x = i.a(o.a.mark(function e(t) {
+  return (x = i.a(_RegeneratorRuntime.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     var i = arguments
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -486,9 +475,9 @@ function D(e, t) {
   return M.apply(this, arguments)
 }
 function M() {
-  return (M = i.a(o.a.mark(function e(t, n) {
+  return (M = i.a(_RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -511,9 +500,9 @@ function L(e) {
   return P.apply(this, arguments)
 }
 function P() {
-  return (P = i.a(o.a.mark(function e(t) {
+  return (P = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

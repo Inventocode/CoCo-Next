@@ -11,8 +11,8 @@ export { a as e }
 export { s as b }
 export { c }
 export { l as a }
-import /* [auto-meaningful-name] */$_16_index = require("./16/index")
-import o = require("./9")
+import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as o from "./9"
 function i() {
   return $_16_index.e(function (e) {
     var /* [auto-meaningful-name] */e$project = e.project

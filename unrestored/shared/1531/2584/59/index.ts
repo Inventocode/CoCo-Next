@@ -7,19 +7,8 @@
 "use strict"
 
 export { a as b }
-import /* [auto-meaningful-name] */$_767_index = require("./767/index")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_767_index)
+import * as /* [auto-meaningful-name] */$_767_index from "./767/index"
+import /* [auto-meaningful-name] */_$_767_index from "./767/index"
 var i = {
   openServiceHost: "https://dev-open-service.codemao.cn",
   serverHost: "https://backend-dev.codemao.cn",
@@ -40,7 +29,7 @@ function a() {
     }
   }
   var /* [auto-meaningful-name] */window$location$hostname = window.location.hostname
-  return window$location$hostname.startsWith("dev") || "localhost" === window$location$hostname || o()(window$location$hostname) ? "development" : window$location$hostname.startsWith("test") ? "test" : window$location$hostname.startsWith("staging") ? "staging" : window$location$hostname.startsWith("press") ? "press" : "production"
+  return window$location$hostname.startsWith("dev") || "localhost" === window$location$hostname || _$_767_index(window$location$hostname) ? "development" : window$location$hostname.startsWith("test") ? "test" : window$location$hostname.startsWith("staging") ? "staging" : window$location$hostname.startsWith("press") ? "press" : "production"
 }
 !function () {
   var e

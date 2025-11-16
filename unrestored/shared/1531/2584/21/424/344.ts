@@ -9,7 +9,7 @@
 export { i as getBrightness }
 export { a as setBrightness }
 export { s as setKeepScreenOn }
-import /* [auto-meaningful-name] */$$_$$_28_index = require("../../28/index")
+import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
 var o = 1
 function i() {
   if ($$_$$_28_index.d()) {

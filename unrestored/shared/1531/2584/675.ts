@@ -4,34 +4,7 @@
  * 模块 ID：675
  */
 
-"use strict"
-
+import { "675__part-0__r" as r } from "./675__part-0"
+import { "675__part-1__c" as c } from "./675__part-1"
 export { r as messages }
 export { c as types }
-var r = {
-  "zh-CN": {
-    widget: "控件",
-    widgetName: "画布",
-    backgroundColor: "背景颜色"
-  }
-}
-import o = require("./6")
-import i = require("./5")
-import a = require("./35")
-import /* [auto-meaningful-name] */$_245 = require("./245")
-var c = {
-  type: i.f,
-  icon: "icon-widget-canvas",
-  title: "widgetName",
-  platforms: ["web", "android", "ios"],
-  isGlobalWidget: false,
-  isInvisibleWidget: false,
-  properties: [{
-    key: "backgroundColor",
-    label: "backgroundColor",
-    valueType: "color",
-    defaultValue: $_245.a
-  }, o.a({}, a.i)],
-  methods: [],
-  events: []
-}

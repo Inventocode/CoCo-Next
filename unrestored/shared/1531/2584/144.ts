@@ -24,36 +24,14 @@ export { M as l }
 export { L as m }
 export { P as h }
 export { B as b }
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import i = require("./7")
-import /* [auto-meaningful-name] */Color = require("color")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import c = require("./15")
-import l = require("./64")
-import /* [auto-meaningful-name] */$_287 = require("./287")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as i from "./7"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as c from "./15"
+import * as l from "./64"
+import * as /* [auto-meaningful-name] */$_287 from "./287"
 var /* [auto-meaningful-name] */DataImage_pngBase64IVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII="
 function p(e) {
   var t = e.scenes.get_current_scene()
@@ -73,10 +51,10 @@ function f(e, t, n) {
   return h.apply(this, arguments)
 }
 function h() {
-  return (h = i.a(o.a.mark(function e(t, n, r) {
+  return (h = i.a(_RegeneratorRuntime.mark(function e(t, n, r) {
     var i
     var a
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -123,7 +101,7 @@ function g(e, t) {
     var n
     var r
     try {
-      var o = s()(t)
+      var o = _Color(t)
       n = o.rgbNumber()
       r = o.alpha()
     } catch (i) {
@@ -153,8 +131,8 @@ function b(e, t, n) {
   return y.apply(this, arguments)
 }
 function y() {
-  return (y = i.a(o.a.mark(function e(t, n, r) {
-    return o.a.wrap(function (e) {
+  return (y = i.a(_RegeneratorRuntime.mark(function e(t, n, r) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -311,12 +289,12 @@ function C(e, t, n, r) {
   return T.apply(this, arguments)
 }
 function T() {
-  return (T = i.a(o.a.mark(function e(t, n, r, i) {
+  return (T = i.a(_RegeneratorRuntime.mark(function e(t, n, r, i) {
     var a
     var s
     var /* [auto-meaningful-name] */s$is_error
     var /* [auto-meaningful-name] */s$value
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -352,12 +330,12 @@ function S(e, t, n, r, o, i, a) {
   return I.apply(this, arguments)
 }
 function I() {
-  return (I = i.a(o.a.mark(function e(t, n, r, i, a, s, c) {
+  return (I = i.a(_RegeneratorRuntime.mark(function e(t, n, r, i, a, s, c) {
     var l
     var /* [auto-meaningful-name] */l$is_error
     var /* [auto-meaningful-name] */l$value
     var f
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

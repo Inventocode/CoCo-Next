@@ -6,64 +6,20 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */Color = require("color")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import c = require("../8")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(c)
-import u = require("../5")
-import /* [auto-meaningful-name] */$$_90 = require("../90")
-import /* [auto-meaningful-name] */$$_199 = require("../199")
-import /* [auto-meaningful-name] */$_290 = require("./290")
-var h = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_290)
-import /* [auto-meaningful-name] */$$_13_index = require("../13/index")
-import /* [auto-meaningful-name] */$$_15 = require("../15")
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as c from "../8"
+import l from "../8"
+import * as u from "../5"
+import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */$$_199 from "../199"
+import * as /* [auto-meaningful-name] */$_290 from "./290"
+import /* [auto-meaningful-name] */_$_ from "./290"
+import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_15 from "../15"
 var _ = function (e) {
   var /* [auto-meaningful-name] */e$text = e.text
   var /* [auto-meaningful-name] */e$isSelected = e.isSelected
@@ -87,9 +43,9 @@ var _ = function (e) {
         }
       }
     }
-    return n ? i.a.createElement($$_13_index.j, {
+    return n ? _React.createElement($$_13_index.j, {
       type: n,
-      className: h.a.selected
+      className: _$_.selected
     }) : null
   }(e$state, e$isSelected)
   var v = function () {
@@ -136,19 +92,19 @@ var _ = function (e) {
     return e$disabled ? e.disabled : e$isSelected ? e.selected : e.default
   }()
   var b = $$_199.g[e$sizeType]
-  return i.a.createElement("div", {
+  return _React.createElement("div", {
     style: {
       color: null === v || undefined === v ? undefined : v.color,
       backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && $$_15.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
     },
-    className: l()(h.a.defaultCheckbox, "checkbox-widget-box"),
+    className: l(_$_.defaultCheckbox, "checkbox-widget-box"),
     onClick: function (e) {
       var /* [auto-meaningful-name] */f$current = f.current
       if (f$current && e$onClick) {
         e$onClick(e$index, f$current)
       }
     }
-  }, i.a.createElement("div", {
+  }, _React.createElement("div", {
     style: {
       backgroundColor: null === v || undefined === v ? undefined : v.backgroundColor,
       borderColor: null === v || undefined === v ? undefined : v.borderColor,
@@ -157,8 +113,8 @@ var _ = function (e) {
       height: b.innerSize,
       fontSize: b.innerSize - 4
     },
-    className: h.a.inner
-  }, _), i.a.createElement("p", {
+    className: _$_.inner
+  }, _), _React.createElement("p", {
     ref: f,
     style: {
       fontSize: b.optionFontSize
@@ -187,13 +143,13 @@ _a = function (e) {
     }
   }
   var T = $$_199.g[e$attributes$sizeType]
-  return i.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
     "data-role": u.M,
     "data-widget-type": u.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
-    className: l()(h.a.checkboxWidget, $$_90.b, $$_11.a({}, h.a.hide, !e$visible)),
+    className: l(_$_.checkboxWidget, $$_90.b, $$_11.a({}, _$_.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -204,8 +160,8 @@ _a = function (e) {
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     },
     "data-lock-height": true
-  }, e$attributes$headlineVisible && i.a.createElement("div", {
-    className: h.a.headline,
+  }, e$attributes$headlineVisible && _React.createElement("div", {
+    className: _$_.headline,
     onClick: function (e) {
       if (e$onHeadlineClick) {
         e$onHeadlineClick(e)
@@ -214,12 +170,12 @@ _a = function (e) {
     style: {
       fontSize: T.headlineFontSize
     }
-  }, e$attributes$headline), i.a.createElement("ul", null, e$attributes$options.map(function (e, t) {
-    return i.a.createElement("li", {
+  }, e$attributes$headline), _React.createElement("ul", null, e$attributes$options.map(function (e, t) {
+    return _React.createElement("li", {
       key: t
-    }, i.a.createElement(_, {
+    }, _React.createElement(_, {
       sizeType: e$attributes$sizeType,
-      color: s()(e$attributes$color).toString(),
+      color: _Color(e$attributes$color).toString(),
       text: e.content,
       isSelected: !!e.isSelected,
       state: e.state,

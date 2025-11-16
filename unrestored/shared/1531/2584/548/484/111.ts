@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$$_485_106 = require("../485/106")
+import * as /* [auto-meaningful-name] */$$_485_106 from "../485/106"
 function i(e) {
   $$_485_106.a(1, arguments)
   var t = Object.prototype.toString.call(e)

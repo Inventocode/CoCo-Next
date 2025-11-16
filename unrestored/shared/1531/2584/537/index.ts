@@ -6,49 +6,16 @@
 
 "use strict"
 
-import r = require("../6")
-import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
-import i = require("../8")
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(i)
-import /* [auto-meaningful-name] */React = require("react")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */$$_75_index = require("../75/index")
-var u = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($$_75_index)
-require("./856")
-import /* [auto-meaningful-name] */$$_94_index = require("../94/index")
+import * as r from "../6"
+import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
+import * as i from "../8"
+import a from "../8"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$$_75_index from "../75/index"
+import /* [auto-meaningful-name] */_$$_75_index from "../75/index"
+import "./856"
+import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 var _a
 _a = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$className = e.className
@@ -109,40 +76,40 @@ _a = React.memo(function (e) {
       I(true)
     }
   }, [e$visible])
-  var R = c.a.createElement("div", {
+  var R = _React.createElement("div", {
     "data-html2canvas-ignore": "true",
     ref: w,
     tabIndex: -1,
-    className: a()("coco-dialog", e$className),
+    className: a("coco-dialog", e$className),
     style: r.a({
       display: e$visible ? "block" : "none"
     }, e$style)
-  }, h && c.a.createElement("div", {
-    className: e$visible ? "coco-dialog-mask" : a()("coco-dialog-mask", "hidden"),
+  }, h && _React.createElement("div", {
+    className: e$visible ? "coco-dialog-mask" : a("coco-dialog-mask", "hidden"),
     onClick: N
-  }), c.a.createElement("div", {
+  }), _React.createElement("div", {
     className: "coco-dialog-scroll"
-  }, c.a.createElement("div", {
-    className: e$visible ? a()("coco-dialog-wrapper", "show") : a()("coco-dialog-wrapper", "hidden"),
+  }, _React.createElement("div", {
+    className: e$visible ? a("coco-dialog-wrapper", "show") : a("coco-dialog-wrapper", "hidden"),
     onAnimationEnd: function () {
       if (!e$visible) {
         I(false)
       }
     }
-  }, c.a.createElement("div", {
+  }, _React.createElement("div", {
     className: e$title && v ? "coco-dialog-title" : ""
-  }, e$title && c.a.createElement("div", null, e$title), v && c.a.createElement("span", {
+  }, e$title && _React.createElement("div", null, e$title), v && _React.createElement("span", {
     className: "coco-dialog-close",
     onClick: j
-  }, c.a.createElement($$_94_index.a, {
+  }, _React.createElement($$_94_index.a, {
     type: "icon-close"
-  }))), c.a.createElement("div", {
+  }))), _React.createElement("div", {
     className: "coco-dialog-content",
     ref: C
-  }, e$children), e$footer && c.a.createElement("div", {
+  }, e$children), e$footer && _React.createElement("div", {
     className: "coco-dialog-footer"
   }, e$footer))))
-  return y ? u.a.createPortal(R, A) : R
+  return y ? _$$_75_index.createPortal(R, A) : R
 })
 export { _a as a }
 export default _a

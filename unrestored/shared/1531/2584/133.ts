@@ -19,7 +19,7 @@ export { Image_jpegImage_pngImage_bmp as d }
 export { _Image_jpegImage_pngImage_bmp as e }
 export { m as k }
 export { g as j }
-import /* [auto-meaningful-name] */$_13_342 = require("./13/342")
+import * as /* [auto-meaningful-name] */$_13_342 from "./13/342"
 var /* [auto-meaningful-name] */IconWidgetImage = "icon-widget-image"
 var /* [auto-meaningful-name] */$_13_342$a = $_13_342.a
 var a = 274

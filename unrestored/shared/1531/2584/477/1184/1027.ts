@@ -8,11 +8,11 @@
 
 export { c as a }
 export { l as b }
-import /* [auto-meaningful-name] */$$_787_39 = require("../787/39")
-import /* [auto-meaningful-name] */$_306 = require("./306")
-import /* [auto-meaningful-name] */$_2587 = require("./2587")
-import /* [auto-meaningful-name] */$_915 = require("./915")
-import /* [auto-meaningful-name] */$_394 = require("./394")
+import * as /* [auto-meaningful-name] */$$_787_39 from "../787/39"
+import * as /* [auto-meaningful-name] */$_306 from "./306"
+import * as /* [auto-meaningful-name] */$_2587 from "./2587"
+import * as /* [auto-meaningful-name] */$_915 from "./915"
+import * as /* [auto-meaningful-name] */$_394 from "./394"
 var c = function () {
   function e() {
     this._notifyingListeners = false

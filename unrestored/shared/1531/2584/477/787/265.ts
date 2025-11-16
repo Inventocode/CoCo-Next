@@ -7,7 +7,7 @@
 "use strict"
 
 export { s as a }
-import /* [auto-meaningful-name] */$_364 = require("./364")
+import * as /* [auto-meaningful-name] */$_364 from "./364"
 var i = $_364.b()
 var /* [auto-meaningful-name] */SentryLogger = "Sentry Logger "
 var a = function () {

@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */$_996 = require("./996")
-import /* [auto-meaningful-name] */$_771 = require("./771")
-import /* [auto-meaningful-name] */$_997 = require("./997")
+import * as /* [auto-meaningful-name] */$_996 from "./996"
+import * as /* [auto-meaningful-name] */$_771 from "./771"
+import * as /* [auto-meaningful-name] */$_997 from "./997"
 function a(e, t) {
   return $_996.a(e) || function (e, t) {
     if ("undefined" !== typeof Symbol && Symbol.iterator in Object(e)) {

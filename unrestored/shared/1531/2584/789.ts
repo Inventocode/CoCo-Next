@@ -8,23 +8,12 @@
 
 export { g as b }
 export { g$Consumer as a }
-import r = require("./19")
-import /* [auto-meaningful-name] */React = require("react")
-import o = require("./29")
-import a = require("./8")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(a)
-import /* [auto-meaningful-name] */$_2627_686 = require("./2627/686")
+import * as r from "./19"
+import * as /* [auto-meaningful-name] */React from "react"
+import * as o from "./29"
+import * as a from "./8"
+import s from "./8"
+import * as /* [auto-meaningful-name] */$_2627_686 from "./2627/686"
 var u = function () {
   var e = (0, React.useContext(g).getPrefixCls)("empty-img-default")
   return React.createElement("svg", {
@@ -142,7 +131,7 @@ var p = function (e) {
       src: u
     }) : u
     return React.createElement("div", r.a({
-      className: s()(c, (a = {}, o.a(a, "".concat(c, "-normal"), u === h), o.a(a, "".concat(c, "-rtl"), "rtl" === v$direction), a), e$className)
+      className: s(c, (a = {}, o.a(a, "".concat(c, "-normal"), u === h), o.a(a, "".concat(c, "-rtl"), "rtl" === v$direction), a), e$className)
     }, A), React.createElement("div", {
       className: "".concat(c, "-image"),
       style: e$imageStyle

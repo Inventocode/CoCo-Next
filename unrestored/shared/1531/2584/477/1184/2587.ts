@@ -8,8 +8,8 @@
 
 export { c as a }
 export { u as b }
-import /* [auto-meaningful-name] */$_394 = require("./394")
-import /* [auto-meaningful-name] */$$_340_2592_904 = require("../340/2592/904")
+import * as /* [auto-meaningful-name] */$_394 from "./394"
+import * as /* [auto-meaningful-name] */$$_340_2592_904 from "../340/2592/904"
 var o = {
   nowSeconds: function () {
     return Date.now() / 1e3

@@ -7,16 +7,16 @@
 "use strict"
 
 export { f as a }
-import r = require("../6")
-import /* [auto-meaningful-name] */$$_27 = require("../27")
-import /* [auto-meaningful-name] */$$_40 = require("../40")
-import /* [auto-meaningful-name] */$$_57_index = require("../57/index")
-import /* [auto-meaningful-name] */$$_58_index = require("../58/index")
-import /* [auto-meaningful-name] */$$_17_index = require("../17/index")
-import /* [auto-meaningful-name] */$_727 = require("./727")
-import /* [auto-meaningful-name] */$$_18 = require("../18")
-import d = require("../9")
-import /* [auto-meaningful-name] */$$_46_index = require("../46/index")
+import * as r from "../6"
+import * as /* [auto-meaningful-name] */$$_27 from "../27"
+import * as /* [auto-meaningful-name] */$$_40 from "../40"
+import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
+import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
+import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$_727 from "./727"
+import * as /* [auto-meaningful-name] */$$_18 from "../18"
+import * as d from "../9"
+import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
 var f = function (e) {
   $$_57_index.a(n, e)
   var t = $$_58_index.a(n)

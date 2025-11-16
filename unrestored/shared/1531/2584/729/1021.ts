@@ -7,7 +7,7 @@
 "use strict"
 
 export { j as a }
-import r = require("./62")
+import * as r from "./62"
 var i = {}
 var a = i
 function o(e, t) {

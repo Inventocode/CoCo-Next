@@ -16,86 +16,37 @@ unpack({
         path.resolve(distPath, "main.59a3bab1.chunk.js")
     ],
     externals: [
-        {
-            searchPath: /^(.*\/)?0(\/index)?$/,
-            replace: "react"
-        }, {
-            searchPath: /^(.*\/)?1(\/index)?$/,
-            replace: "regenerator-runtime"
-        }, {
-            searchPath: /^(.*\/)?31(\/index)?$/,
-            replace: "lodash"
-        }, {
-            searchPath: /^(.*\/)?32(\/index)?$/,
-            replace: "ot-json1"
-        }, {
-            searchPath: /^(.*\/)?51(\/index)?$/,
-            replace: "color"
-        }, {
-            searchPath: /^(.*\/)?93(\/index)?$/,
-            replace: "tslib"
-        }, {
-            searchPath: /^(.*\/)?134(\/index)?$/,
-            replace: "inversify"
-        }, {
-            searchPath: /^(.*\/)?155(\/index)?$/,
-            replace: "redux"
-        }, {
-            searchPath: /^(.*\/)?186(\/index)?$/,
-            replace: "axios"
-        }, {
-            searchPath: /^(.*\/)?204(\/index)?$/,
-            replace: "animejs"
-        }, {
-            searchPath: /^(.*\/)?259(\/index)?$/,
-            replace: "@kitten-team/gl-matrix"
-        }, {
-            searchPath: /^(.*\/)?411(\/index)?$/,
-            replace: "html2canvas"
-        }, {
-            searchPath: /^(.*\/)?458(\/index)?$/,
-            replace: "resize-observer-polyfill"
-        }, {
-            searchPath: /^(.*\/)?481(\/index)?$/,
-            replace: "socket.io-client"
-        }, {
-            searchPath: /^(.*\/)?483(\/index)?$/,
-            replace: "antd-mobile"
-        }, {
-            searchPath: /^(.*\/)?553(\/index)?$/,
-            replace: "qrcode"
-        },
+        { key: 0, source: "react" },
+        { key: 1, source: "regenerator-runtime" },
+        { key: 31, source: "lodash" },
+        { key: 32, source: "ot-json1" },
+        { key: 51, source: "color" },
+        { key: 93, source: "tslib" },
+        { key: 134, source: "inversify" },
+        { key: 155, source: "redux" },
+        { key: 186, source: "axios" },
+        { key: 204, source: "animejs" },
+        { key: 259, source: "@kitten-team/gl-matrix" },
+        { key: 411, source: "html2canvas" },
+        { key: 458, source: "resize-observer-polyfill" },
+        { key: 481, source: "socket.io-client" },
+        { key: 483, source: "antd-mobile" },
+        { key: 553, source: "qrcode" },
         { key: 616, source: "quill" },
         { key: 774, source: "js-sha256" },
-        {
-            searchPath: /^(.*\/)?781(\/index)?$/,
-            replace: "@vikadata/vika"
-        }, {
-            searchPath: /^(.*\/)?559(\/index)?$/,
-            replace: "hammerjs"
-        }, {
-            searchPath: /^(.*\/)?1989(\/index)?$/,
-            replace: "punycode"
-        }, {
-            searchPath: /^(.*\/)?2102(\/index)?$/,
-            replace: "inversify-inject-decorators"
-        }, {
-            searchPath: /^(.*\/)?2107(\/index)?$/,
-            replace: "lodash.clonedeep"
-        }, {
-            searchPath: /^(.*\/)?2668(\/index)?$/,
-            replace: "@babel/core"
-        }, {
-            searchPath: /^(.*\/)?3272(\/index)?$/,
-            replace: "@babel/preset-react"
-        }
+        { key: 781, source: "@vikadata/vika" },
+        { key: 559, source: "hammerjs" },
+        { key: 1989, source: "punycode" },
+        { key: 2102, source: "inversify-inject-decorators" },
+        { key: 2107, source: "lodash.clonedeep" },
+        { key: 2668, source: "@babel/core" },
+        { key: 3272, source: "@babel/preset-react" }
     ],
     output: {
         path: path.resolve("unrestored", "shared"),
         pathMap: "path-map.json"
     },
     publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
-    useESImport: false,
     setPath: SetPath.BY_DEPENDENCY,
     move: {
         2: "../../src/shared/events/messages-wrapper",

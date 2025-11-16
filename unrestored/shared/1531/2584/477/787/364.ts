@@ -9,8 +9,8 @@
 export { o as b }
 export { a as c }
 export { s as a }
-import /* [auto-meaningful-name] */$_521 = require("./521")
-require("./736")
+import * as /* [auto-meaningful-name] */$_521 from "./521"
+import "./736"
 var i = {}
 function o() {
   return $_521.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i

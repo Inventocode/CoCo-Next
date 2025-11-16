@@ -6,25 +6,14 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React = require("react")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */ResizeObserverPolyfill = require("resize-observer-polyfill")
-require("./848")
-import /* [auto-meaningful-name] */$$_$$_16_index = require("../../16/index")
-import /* [auto-meaningful-name] */$$_$$_5 = require("../../5")
-import /* [auto-meaningful-name] */$$_$$_64 = require("../../64")
-import /* [auto-meaningful-name] */$$_$$_15 = require("../../15")
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
+import "./848"
+import * as /* [auto-meaningful-name] */$$_$$_16_index from "../../16/index"
+import * as /* [auto-meaningful-name] */$$_$$_5 from "../../5"
+import * as /* [auto-meaningful-name] */$$_$$_64 from "../../64"
+import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
 function u(e) {
   return e instanceof HTMLInputElement ? e.value : e.innerHTML || ""
 }
@@ -121,7 +110,7 @@ function f(t) {
       }
     }
   }, [t$callback, b, E])
-  return o.a.createElement("div", {
+  return _React.createElement("div", {
     className: "coco-widget-editor-div",
     ref: O,
     onBlur: function () {
@@ -185,7 +174,7 @@ function h(t) {
       })
     }
   }, [t$callback, d, m, t$target])
-  return o.a.createElement("input", {
+  return _React.createElement("input", {
     onKeyDown: function (e) {
       if (13 === e.keyCode) {
         e.currentTarget.blur()
@@ -214,9 +203,9 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$options = e.options
   var /* [auto-meaningful-name] */UndefinedE$optionsE$options$isMultipleRow = (undefined === e$options ? {} : e$options).isMultipleRow
   var r = undefined === UndefinedE$optionsE$options$isMultipleRow || UndefinedE$optionsE$options$isMultipleRow
-  return o.a.createElement("div", {
+  return _React.createElement("div", {
     className: "coco-widget-editor"
-  }, r ? o.a.createElement(f, e) : o.a.createElement(h, e))
+  }, r ? _React.createElement(f, e) : _React.createElement(h, e))
 }
 export { _a as a }
 export default _a

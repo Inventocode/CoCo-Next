@@ -8,15 +8,15 @@
 
 export { _ as b }
 export { A as a }
-import /* [auto-meaningful-name] */$$_39 = require("../39")
-import /* [auto-meaningful-name] */$_805 = require("./805")
-import /* [auto-meaningful-name] */$_1042 = require("./1042")
-import /* [auto-meaningful-name] */$$_265 = require("../265")
-import /* [auto-meaningful-name] */$$_521 = require("../521")
-import /* [auto-meaningful-name] */$_1436 = require("./1436")
-import /* [auto-meaningful-name] */$$_764_index = require("../764/index")
-import /* [auto-meaningful-name] */$_765 = require("./765")
-import /* [auto-meaningful-name] */$$_218 = require("../218")
+import * as /* [auto-meaningful-name] */$$_39 from "../39"
+import * as /* [auto-meaningful-name] */$_805 from "./805"
+import * as /* [auto-meaningful-name] */$_1042 from "./1042"
+import * as /* [auto-meaningful-name] */$$_265 from "../265"
+import * as /* [auto-meaningful-name] */$$_521 from "../521"
+import * as /* [auto-meaningful-name] */$_1436 from "./1436"
+import * as /* [auto-meaningful-name] */$$_764_index from "../764/index"
+import * as /* [auto-meaningful-name] */$_765 from "./765"
+import * as /* [auto-meaningful-name] */$$_218 from "../218"
 function d() {
   var e = this.getScope()
   if (e) {

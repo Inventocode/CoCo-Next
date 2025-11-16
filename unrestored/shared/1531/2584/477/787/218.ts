@@ -11,7 +11,7 @@ export { a }
 export { s as b }
 export { c as d }
 export { u as e }
-import /* [auto-meaningful-name] */$_720_805 = require("./720/805")
+import * as /* [auto-meaningful-name] */$_720_805 from "./720/805"
 var i = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$")
 function o(e) {
   var t

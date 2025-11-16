@@ -7,12 +7,12 @@
 "use strict"
 
 export { A as a }
-import r = require("./39")
-import /* [auto-meaningful-name] */$_316 = require("./316")
-import /* [auto-meaningful-name] */$_265 = require("./265")
-import /* [auto-meaningful-name] */$_364 = require("./364")
-import /* [auto-meaningful-name] */$_435_index = require("./435/index")
-import /* [auto-meaningful-name] */$_435_986 = require("./435/986")
+import * as r from "./39"
+import * as /* [auto-meaningful-name] */$_316 from "./316"
+import * as /* [auto-meaningful-name] */$_265 from "./265"
+import * as /* [auto-meaningful-name] */$_364 from "./364"
+import * as /* [auto-meaningful-name] */$_435_index from "./435/index"
+import * as /* [auto-meaningful-name] */$_435_986 from "./435/986"
 function u() {
   if (!("fetch" in $_364.b())) {
     return false

@@ -6,9 +6,9 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_425 = require("./425")
+import * as /* [auto-meaningful-name] */$_425 from "./425"
 export { a as AsyncScheduler } from "./425"
-import o = require("./84")
+import * as o from "./84"
 export { a as EEventType } from "./84"
 export { b as addEventListener } from "./84"
 export { xc as removeEventListener } from "./84"
@@ -137,7 +137,7 @@ export { bc as onCloudDictError } from "./84"
 export { W as emitCloudDictError } from "./84"
 export { rc as onTableDataChange } from "./84"
 export { Eb as emitTableDataChange } from "./84"
-import /* [auto-meaningful-name] */$_424_index = require("./424/index")
+import * as /* [auto-meaningful-name] */$_424_index from "./424/index"
 export { gd as getButtonWidgetWidth } from "./424/index"
 export { bd as getButtonWidgetPositionX } from "./424/index"
 export { cd as getButtonWidgetPositionY } from "./424/index"

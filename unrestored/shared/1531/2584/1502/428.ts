@@ -9,8 +9,8 @@
 export { o as b }
 export { a }
 export { s as c }
-import /* [auto-meaningful-name] */$$_108 = require("../108")
-import /* [auto-meaningful-name] */$$_242_index = require("../242/index")
+import * as /* [auto-meaningful-name] */$$_108 from "../108"
+import * as /* [auto-meaningful-name] */$$_242_index from "../242/index"
 function o(e, t) {
   if ("function" === typeof e) {
     e(t)

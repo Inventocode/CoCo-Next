@@ -8,12 +8,12 @@
 
 export { u as a }
 export { f as b }
-import /* [auto-meaningful-name] */$$_39 = require("../39")
-import /* [auto-meaningful-name] */$$_926 = require("../926")
-import /* [auto-meaningful-name] */$$_265 = require("../265")
-import /* [auto-meaningful-name] */$_722 = require("./722")
-import /* [auto-meaningful-name] */$$_350 = require("../350")
-import /* [auto-meaningful-name] */$$_720_765 = require("../720/765")
+import * as /* [auto-meaningful-name] */$$_39 from "../39"
+import * as /* [auto-meaningful-name] */$$_926 from "../926"
+import * as /* [auto-meaningful-name] */$$_265 from "../265"
+import * as /* [auto-meaningful-name] */$_722 from "./722"
+import * as /* [auto-meaningful-name] */$$_350 from "../350"
+import * as /* [auto-meaningful-name] */$$_720_765 from "../720/765"
 var u = 1e3
 var l = function (e) {
   function t(t, n, r, i) {

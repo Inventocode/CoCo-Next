@@ -7,12 +7,12 @@
 "use strict"
 
 export { u as a }
-import /* [auto-meaningful-name] */$$_39 = require("../39")
-import /* [auto-meaningful-name] */$_805 = require("./805")
-import /* [auto-meaningful-name] */$$_316 = require("../316")
-import /* [auto-meaningful-name] */$$_265 = require("../265")
-import /* [auto-meaningful-name] */$$_435_index = require("../435/index")
-import /* [auto-meaningful-name] */$$_764_722 = require("../764/722")
+import * as /* [auto-meaningful-name] */$$_39 from "../39"
+import * as /* [auto-meaningful-name] */$_805 from "./805"
+import * as /* [auto-meaningful-name] */$$_316 from "../316"
+import * as /* [auto-meaningful-name] */$$_265 from "../265"
+import * as /* [auto-meaningful-name] */$$_435_index from "../435/index"
+import * as /* [auto-meaningful-name] */$$_764_722 from "../764/722"
 var u = function (e) {
   function t(t, n) {
     var r = e.call(this, t) || this

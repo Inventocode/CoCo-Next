@@ -7,40 +7,18 @@
 "use strict"
 
 export { c as a }
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import i = require("../7")
-import /* [auto-meaningful-name] */Html2canvas = require("html2canvas")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Html2canvas)
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as i from "../7"
+import * as /* [auto-meaningful-name] */Html2canvas from "html2canvas"
+import /* [auto-meaningful-name] */_Html2canvas from "html2canvas"
 function c(e, t) {
   return l.apply(this, arguments)
 }
 function l() {
-  return (l = i.a(o.a.mark(function e(t, n) {
+  return (l = i.a(_RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -51,7 +29,7 @@ function l() {
             })
           case 3:
             e.next = 5
-            return s()(t, {
+            return _Html2canvas(t, {
               scale: n,
               useCORS: true,
               logging: false,

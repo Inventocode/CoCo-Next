@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$_337 = require("./337")
+import * as /* [auto-meaningful-name] */$_337 from "./337"
 function i(e, t) {
   if (null == e) {
     return {}

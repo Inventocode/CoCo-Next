@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */$_266 = require("./266")
-import /* [auto-meaningful-name] */$_912 = require("./912")
-import /* [auto-meaningful-name] */$_210 = require("./210")
+import * as /* [auto-meaningful-name] */$_266 from "./266"
+import * as /* [auto-meaningful-name] */$_912 from "./912"
+import * as /* [auto-meaningful-name] */$_210 from "./210"
 function a(e) {
   var t = {
     r: 0,

@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as press }
-import /* [auto-meaningful-name] */Animejs = require("animejs")
+import * as /* [auto-meaningful-name] */Animejs from "animejs"
 function o(e) {
   return [Animejs.default({
     targets: "#".concat(e),

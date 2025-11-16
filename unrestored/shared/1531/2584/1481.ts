@@ -6,51 +6,18 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_10_index = require("./10/index")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */$_702 = require("./702")
-import /* [auto-meaningful-name] */$_16_index = require("./16/index")
-import c = require("./8")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(c)
-import /* [auto-meaningful-name] */$_13_index = require("./13/index")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper = require("../../../../src/shared/events/messages-wrapper")
-import /* [auto-meaningful-name] */$_101 = require("./101")
-var f = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_101)
-import /* [auto-meaningful-name] */$_188 = require("./188")
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$_702 from "./702"
+import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as c from "./8"
+import l from "./8"
+import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$_101 from "./101"
+import /* [auto-meaningful-name] */_$_ from "./101"
+import * as /* [auto-meaningful-name] */$_188 from "./188"
 var _a
 _a = React.memo(function () {
   var t = $_16_index.e(function (e) {
@@ -106,25 +73,25 @@ _a = React.memo(function () {
       w($$_$$_$$_$$_src_shared_events_messagesWrapper.jh())
     }
   }
-  return i.a.createElement($_13_index.f, {
+  return _React.createElement($_13_index.f, {
     visible: t$visible,
-    className: l()(f.a.nameDialog),
+    className: l(_$_.nameDialog),
     onClose: k,
     withPortal: true
-  }, i.a.createElement($_188.a, {
+  }, _React.createElement($_188.a, {
     useCapture: true
-  }, i.a.createElement($_188.b, {
+  }, _React.createElement($_188.b, {
     keys: "enter",
     callback: x
-  })), i.a.createElement("p", {
-    className: f.a.dialogTitle
+  })), _React.createElement("p", {
+    className: _$_.dialogTitle
   }, t$title && $_702$a$formatMessage({
     id: t$title
-  }) || ""), i.a.createElement("div", {
-    className: f.a.inputWrapper
-  }, i.a.createElement("span", null, $_702$a$formatMessage({
+  }) || ""), _React.createElement("div", {
+    className: _$_.inputWrapper
+  }, _React.createElement("span", null, $_702$a$formatMessage({
     id: "name"
-  })), i.a.createElement($_13_index.k, {
+  })), _React.createElement($_13_index.k, {
     ref: O,
     warning: !!S,
     placeholder: t$placeholder && $_702$a$formatMessage({
@@ -137,17 +104,17 @@ _a = React.memo(function () {
     },
     maxLength: _,
     value: N
-  }), S && i.a.createElement("div", {
-    className: f.a.warningTips
+  }), S && _React.createElement("div", {
+    className: _$_.warningTips
   }, " ", $_702$a$formatMessage({
     id: S
-  }))), i.a.createElement("div", {
-    className: f.a.confirmBox
-  }, i.a.createElement($_13_index.d, {
+  }))), _React.createElement("div", {
+    className: _$_.confirmBox
+  }, _React.createElement($_13_index.d, {
     onClick: k
   }, $_702$a$formatMessage({
     id: "cancel"
-  })), i.a.createElement($_13_index.d, {
+  })), _React.createElement($_13_index.d, {
     onClick: x,
     type: "primary",
     disabled: !!S || !N

@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$$_$$_$$_19 = require("../../../19")
+import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
 function i() {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {}
   var /* [auto-meaningful-name] */e$baseClasses = e.baseClasses

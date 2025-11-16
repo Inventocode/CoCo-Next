@@ -8,11 +8,11 @@
 
 export { l as a }
 export { h as b }
-import /* [auto-meaningful-name] */$_34_index = require("./34/index")
-import /* [auto-meaningful-name] */$_122 = require("./122")
-import o = require("./65")
-import /* [auto-meaningful-name] */$_1003 = require("./1003")
-import /* [auto-meaningful-name] */$_128 = require("./128")
+import * as /* [auto-meaningful-name] */$_34_index from "./34/index"
+import * as /* [auto-meaningful-name] */$_122 from "./122"
+import * as o from "./65"
+import * as /* [auto-meaningful-name] */$_1003 from "./1003"
+import * as /* [auto-meaningful-name] */$_128 from "./128"
 var c = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {

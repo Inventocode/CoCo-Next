@@ -1,0 +1,159 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：13__part-8
+ */
+
+"use strict"
+
+import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */_React from "react"
+import i from "../8"
+import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
+import "./858"
+var $ = _React.createContext(null)
+var /* [auto-meaningful-name] */$$Provider = $.Provider
+var te = $
+_React.memo(function (e) {
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$onSelect = e.onSelect
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */e$style = e.style
+  var d = undefined === e$style ? {} : e$style
+  var /* [auto-meaningful-name] */e$open = e.open
+  var /* [auto-meaningful-name] */e$onBlur = e.onBlur
+  var h = _React.useState(e$value || e$defaultValue)
+  var m = $$_10_index.a(h, 2)
+  var g = m[0]
+  var _ = m[1]
+  var v = _React.useState(false)
+  var b = $$_10_index.a(v, 2)
+  var y = b[0]
+  var O = b[1]
+  _React.useEffect(function () {
+    _(e$value)
+  }, [e$value])
+  _React.useEffect(function () {
+    if (undefined !== e$open) {
+      O(e$open)
+    }
+  }, [e$open])
+  _React.useEffect(function () {
+    var /* [auto-meaningful-name] */S$current
+    if (!(null === (S$current = S.current) || undefined === S$current)) {
+      S$current.setAttribute("tabindex", "-1")
+    }
+  }, [])
+  var w = _React.useCallback(function (e) {
+    if (undefined === e$open) {
+      O(e)
+    }
+  }, [e$open])
+  var C = _React.useCallback(function (e) {
+    _(e)
+    w(false)
+    if (e$onSelect) {
+      e$onSelect(e)
+    }
+  }, [e$onSelect, w])
+  var T = _React.useCallback(function () {
+    w(!y)
+  }, [y, w])
+  var S = _React.useRef(null)
+  var I = _React.useCallback(function () {
+    w(false)
+    if (e$onBlur) {
+      e$onBlur()
+    }
+  }, [e$onBlur, w])
+  return React.createElement($$Provider, {
+    value: {
+      onSelect: C,
+      selectedValue: g
+    }
+  }, React.createElement("div", {
+    style: d,
+    className: i(e$className, "coco-tree-select"),
+    onBlur: I,
+    ref: S
+  }, React.createElement("div", {
+    className: "coco-tree-selector",
+    onClick: T
+  }, g, React.createElement("i", {
+    className: i("coco-tree-select-arrow", {
+      active: y
+    })
+  }, React.createElement($$_94_index.a, {
+    type: "icon-up"
+  }))), React.createElement("div", {
+    className: i("coco-tree-select-list", {
+      hide: !y
+    })
+  }, e$children)))
+})
+var ne = _React.memo(function (e) {
+  var /* [auto-meaningful-name] */e$title = e.title
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
+  var c = _React.useState(false)
+  var l = $$_10_index.a(c, 2)
+  var u = l[0]
+  var d = l[1]
+  var p = _React.useCallback(function () {
+    if (!e$disabled) {
+      d(true)
+    }
+  }, [d, e$disabled])
+  var f = _React.useCallback(function () {
+    if (!e$disabled) {
+      d(false)
+    }
+  }, [d, e$disabled])
+  return React.createElement("div", {
+    className: i("coco-tree-node"),
+    onMouseEnter: p,
+    onMouseLeave: f
+  }, React.createElement("div", {
+    className: i("coco-tree-group-header", {
+      disabled: e$disabled
+    })
+  }, React.createElement("span", null, e$title), React.createElement("i", {
+    className: "coco-tree-node-arrows"
+  }, React.createElement($$_94_index.a, {
+    type: "icon-right"
+  }))), React.createElement("div", {
+    className: i("coco-tree-group-main", {
+      hide: !u
+    })
+  }, e$children))
+})
+var re = _React.memo(function (e) {
+  var /* [auto-meaningful-name] */e$value = e.value
+  var /* [auto-meaningful-name] */e$title = e.title
+  var /* [auto-meaningful-name] */e$content = e.content
+  var /* [auto-meaningful-name] */e$disabled = e.disabled
+  var c = _React.useContext(te)
+  var l = _React.useCallback(function () {
+    if (null === c || undefined === c ? undefined : c.onSelect) {
+      c.onSelect(e$value)
+    }
+  }, [e$value, c])
+  return React.createElement("div", {
+    className: i("coco-tree-node-item", {
+      selected: (null === c || undefined === c ? undefined : c.selectedValue) === e$value,
+      disabled: e$disabled
+    }),
+    onClick: l,
+    key: e$value
+  }, e$content || React.createElement("span", null, e$title))
+})
+_React.memo(function (e) {
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$className = e.className
+  return React.createElement("div", {
+    className: i(e$className, "coco-tree-node")
+  }, e$children ? React.createElement(ne, e) : React.createElement(re, e))
+})

@@ -6,20 +6,9 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React = require("react")
-import o = require("./8")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(o)
+import * as /* [auto-meaningful-name] */React from "react"
+import * as o from "./8"
+import i from "./8"
 var _a
 _a = function (e) {
   var t
@@ -46,7 +35,7 @@ _a = function (e) {
     onClick: e$onClick,
     "aria-hidden": true
   }, undefined !== t ? t : React.createElement("span", {
-    className: i()(e$className.split(/\s+/).map(function (e) {
+    className: i(e$className.split(/\s+/).map(function (e) {
       return "".concat(e, "-icon")
     }))
   }, e$children))

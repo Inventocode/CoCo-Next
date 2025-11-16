@@ -9,26 +9,15 @@
 export { s as c }
 export { l as b }
 export { d as a }
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import i = require("./7")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop = require("../../../../src/shared/widget/custom/shop")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as i from "./7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../src/shared/widget/custom/shop"
 function s(e) {
   return c.apply(this, arguments)
 }
 function c() {
-  return (c = i.a(o.a.mark(function e(t) {
+  return (c = i.a(_RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */t$unsafeExtensionWidgetList
     var /* [auto-meaningful-name] */t$extensionWidgetList
     var i
@@ -39,7 +28,7 @@ function c() {
     var /* [auto-meaningful-name] */e$sent
     var p
     var /* [auto-meaningful-name] */_e$sent
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -113,10 +102,10 @@ function l() {
   return u.apply(this, arguments)
 }
 function u() {
-  return (u = i.a(o.a.mark(function e() {
+  return (u = i.a(_RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */_e$sent2
-    return o.a.wrap(function (e) {
+    return _RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

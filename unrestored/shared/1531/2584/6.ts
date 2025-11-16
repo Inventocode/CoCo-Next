@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import r = require("./11")
+import * as r from "./11"
 function i(e, t) {
   var n = Object.keys(e)
   if (Object.getOwnPropertySymbols) {

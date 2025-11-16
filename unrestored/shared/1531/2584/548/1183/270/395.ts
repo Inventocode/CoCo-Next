@@ -11,7 +11,7 @@ export { u as c }
 export { l as a }
 export { f as b }
 export { d as e }
-import /* [auto-meaningful-name] */$_1506 = require("./1506")
+import * as /* [auto-meaningful-name] */$_1506 from "./1506"
 function i(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 1

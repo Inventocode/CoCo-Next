@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */$_906 = require("./906")
-import /* [auto-meaningful-name] */$_1441 = require("./1441")
-import /* [auto-meaningful-name] */$_768 = require("./768")
+import * as /* [auto-meaningful-name] */$_906 from "./906"
+import * as /* [auto-meaningful-name] */$_1441 from "./1441"
+import * as /* [auto-meaningful-name] */$_768 from "./768"
 function a(e) {
   return function (e) {
     if (Array.isArray(e)) {

@@ -7,22 +7,11 @@
 "use strict"
 
 export { f as a }
-import /* [auto-meaningful-name] */$_183 = require("./183")
-import /* [auto-meaningful-name] */$_1166 = require("./1166")
-import /* [auto-meaningful-name] */$_792 = require("./792")
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_792)
-import /* [auto-meaningful-name] */$$_1440_index = require("../1440/index")
+import * as /* [auto-meaningful-name] */$_183 from "./183"
+import * as /* [auto-meaningful-name] */$_1166 from "./1166"
+import * as /* [auto-meaningful-name] */$_792 from "./792"
+import /* [auto-meaningful-name] */_$_ from "./792"
+import * as /* [auto-meaningful-name] */$$_1440_index from "../1440/index"
 function c(e, t) {
   return t ? Object.keys(e).reduce(function (n, i) {
     var o
@@ -51,7 +40,7 @@ function u(e) {
     }
   }
 }
-var l = a.a || $_792
+var l = _$_ || $_792
 var f = function () {
   function e(t, n, i, o) {
     var a

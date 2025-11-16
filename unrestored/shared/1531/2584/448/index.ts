@@ -8,38 +8,16 @@
 
 export { h as a }
 export { m as b }
-import /* [auto-meaningful-name] */React = require("react")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import i = require("../5")
-import /* [auto-meaningful-name] */$$_42_index = require("../42/index")
-import /* [auto-meaningful-name] */$$_64 = require("../64")
-import /* [auto-meaningful-name] */$$_205 = require("../205")
-import /* [auto-meaningful-name] */$$_35 = require("../35")
-import /* [auto-meaningful-name] */$_670 = require("./670")
-var d = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_670)
-import /* [auto-meaningful-name] */$$_76 = require("../76")
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as i from "../5"
+import * as /* [auto-meaningful-name] */$$_42_index from "../42/index"
+import * as /* [auto-meaningful-name] */$$_64 from "../64"
+import * as /* [auto-meaningful-name] */$$_205 from "../205"
+import * as /* [auto-meaningful-name] */$$_35 from "../35"
+import * as /* [auto-meaningful-name] */$_670 from "./670"
+import /* [auto-meaningful-name] */_$_ from "./670"
+import * as /* [auto-meaningful-name] */$$_76 from "../76"
 function f(e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$widgetIds = e.widgetIds
@@ -61,9 +39,9 @@ function f(e) {
   if (!(g || !e$backgroundImage.includes("://") && !e$backgroundImage.includes("data:image/"))) {
     g = e$backgroundImage
   }
-  return o.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
-    className: d.a.screenView,
+    className: _$_.screenView,
     "data-role": i.D,
     "data-widget-type": i.D,
     style: {
@@ -115,7 +93,7 @@ function m(e) {
   var /* [auto-meaningful-name] */e$backgroundColor = e.backgroundColor
   var /* [auto-meaningful-name] */e$backgroundImage = e.backgroundImage
   var /* [auto-meaningful-name] */e$backgroundImageResizeMode = e.backgroundImageResizeMode
-  return o.a.createElement(f, {
+  return _React.createElement(f, {
     id: t,
     widgetIds: e$widgetIds,
     position: e$position,

@@ -10,7 +10,7 @@ export { i as d }
 export { o as c }
 export { a as b }
 export { s as a }
-import /* [auto-meaningful-name] */$_306 = require("./306")
+import * as /* [auto-meaningful-name] */$_306 from "./306"
 function i(e, t) {
   if (undefined === t) {
     t = 0

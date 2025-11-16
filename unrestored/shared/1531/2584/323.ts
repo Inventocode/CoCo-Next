@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$_10_index = require("./10/index")
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 function o(e) {
   for (var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {
       line: 1,

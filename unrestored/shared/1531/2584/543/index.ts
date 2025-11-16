@@ -6,66 +6,22 @@
 
 "use strict"
 
-import r = require("../6")
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */React = require("react")
-var a = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */Color = require("color")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import l = require("../8")
-var u = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(l)
-import d = require("../5")
-import /* [auto-meaningful-name] */$$_15 = require("../15")
-import /* [auto-meaningful-name] */$$_35 = require("../35")
-import /* [auto-meaningful-name] */$$_90 = require("../90")
-import /* [auto-meaningful-name] */$$_321 = require("../321")
-import /* [auto-meaningful-name] */$$_83 = require("../83")
-import /* [auto-meaningful-name] */$_380 = require("./380")
-var v = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_380)
+import * as r from "../6"
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as l from "../8"
+import u from "../8"
+import * as d from "../5"
+import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_35 from "../35"
+import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */$$_321 from "../321"
+import * as /* [auto-meaningful-name] */$$_83 from "../83"
+import * as /* [auto-meaningful-name] */$_380 from "./380"
+import /* [auto-meaningful-name] */_$_ from "./380"
 var _a
 _a = function (e) {
   var /* [auto-meaningful-name] */e$position = e.position
@@ -90,7 +46,7 @@ _a = function (e) {
   var x = React.useMemo(function () {
     var e = function (e, t) {
       var n
-      var r = c()(t).toString()
+      var r = _Color(t).toString()
       return (n = {}, $$_11.a(n, $$_83.b.CONTAINED_TEXT, {
         default: {
           backgroundColor: r,
@@ -142,9 +98,9 @@ _a = function (e) {
   var /* [auto-meaningful-name] */D$fontSize = D.fontSize
   var /* [auto-meaningful-name] */D$minWidth = D.minWidth
   var /* [auto-meaningful-name] */D$maxWidth = D.maxWidth
-  return a.a.createElement("button", {
+  return _React.createElement("button", {
     id: s,
-    className: u()($$_90.b, v.a.buttonWidget, $$_11.a({}, v.a.hide, !e$visible)),
+    className: u($$_90.b, _$_.buttonWidget, $$_11.a({}, _$_.hide, !e$visible)),
     "data-role": d.M,
     "data-widget-type": d.d,
     "data-lock-height": true,
@@ -176,12 +132,12 @@ _a = function (e) {
       fontSize: D$fontSize,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }, x)
-  }, k ? a.a.createElement($$_321.a, {
+  }, k ? _React.createElement($$_321.a, {
     icon: e$iconFile || $$_35.fb(e$attributes$iconId)
-  }) : a.a.createElement("div", {
-    className: u()(v.a.inputWrapper)
-  }, a.a.createElement("div", {
-    className: v.a.text,
+  }) : _React.createElement("div", {
+    className: u(_$_.inputWrapper)
+  }, _React.createElement("div", {
+    className: _$_.text,
     ref: R
   }, e$attributes$text)))
 }

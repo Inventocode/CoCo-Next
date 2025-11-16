@@ -6,55 +6,22 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$_10_index = require("./10/index")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */$_16_index = require("./16/index")
-import s = require("./8")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(s)
-import /* [auto-meaningful-name] */$_702 = require("./702")
-import /* [auto-meaningful-name] */$_13_index = require("./13/index")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper = require("../../../../src/shared/events/messages-wrapper")
-import /* [auto-meaningful-name] */$_468 = require("./468")
-var f = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_468)
-import h = require("./5")
-import m = require("./9")
-import /* [auto-meaningful-name] */$_190 = require("./190")
-import /* [auto-meaningful-name] */$_26_index = require("./26/index")
-import /* [auto-meaningful-name] */$_239 = require("./239")
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as s from "./8"
+import c from "./8"
+import * as /* [auto-meaningful-name] */$_702 from "./702"
+import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$_468 from "./468"
+import /* [auto-meaningful-name] */_$_ from "./468"
+import * as h from "./5"
+import * as m from "./9"
+import * as /* [auto-meaningful-name] */$_190 from "./190"
+import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
+import * as /* [auto-meaningful-name] */$_239 from "./239"
 var _a
 _a = React.memo(function () {
   var t
@@ -131,48 +98,48 @@ _a = React.memo(function () {
       }
     }
   }, [y])
-  return i.a.createElement("div", {
-    className: f.a.wrapper,
+  return _React.createElement("div", {
+    className: _$_.wrapper,
     ref: s,
     style: {
       display: w$visible ? "block" : "none"
     }
-  }, i.a.createElement("div", {
-    className: c()(f.a.menuItem),
+  }, _React.createElement("div", {
+    className: c(_$_.menuItem),
     onMouseDown: function () {
       R($$_$$_$$_$$_src_shared_events_messagesWrapper.Ef(m.w(w$widgetId)))
     }
   }, $_702$a$formatMessage({
     id: "copyAndPaste"
-  })), ![h.a, h.c].includes((null === I || undefined === I ? undefined : I.type) || "") && i.a.createElement("div", {
-    className: c()(f.a.menuItem, f.a.copyTo),
+  })), ![h.a, h.c].includes((null === I || undefined === I ? undefined : I.type) || "") && _React.createElement("div", {
+    className: c(_$_.menuItem, _$_.copyTo),
     onMouseEnter: function () {
       E(true)
     },
     onMouseLeave: function () {
       E(false)
     }
-  }, i.a.createElement("span", null, $_702$a$formatMessage({
+  }, _React.createElement("span", null, $_702$a$formatMessage({
     id: "copyTo"
-  })), " ", i.a.createElement($_13_index.j, {
+  })), " ", _React.createElement($_13_index.j, {
     type: "icon-right"
-  }), i.a.createElement("ul", {
+  }), _React.createElement("ul", {
     ref: O,
-    className: f.a.screens,
+    className: _$_.screens,
     style: {
       display: y ? "block" : "none"
     }
   }, A.map(function (e, t) {
-    return i.a.createElement("li", {
+    return _React.createElement("li", {
       key: e.get("id"),
       onMouseDown: k.bind(null, e.id)
-    }, i.a.createElement("span", null, "".concat(t + 1, ".")), i.a.createElement("div", {
-      className: f.a.screenSnapshot
-    }, i.a.createElement("img", {
+    }, _React.createElement("span", null, "".concat(t + 1, ".")), _React.createElement("div", {
+      className: _$_.screenSnapshot
+    }, _React.createElement("img", {
       src: e.get("snapshot"),
       alt: ""
-    })), i.a.createElement("p", null, e.get("title")))
-  }))), i.a.createElement("div", {
+    })), _React.createElement("p", null, e.get("title")))
+  }))), _React.createElement("div", {
     onMouseDown: function () {
       var e = m.Fb(w$widgetId || "")
       var t = $_702$a$formatMessage({
@@ -200,7 +167,7 @@ _a = React.memo(function () {
         }
       }
     },
-    className: c()(f.a.menuItem, f.a.delete)
+    className: c(_$_.menuItem, _$_.delete)
   }, $_702$a$formatMessage({
     id: "delete"
   })))

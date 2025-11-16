@@ -7,9 +7,9 @@
 "use strict"
 
 export { a }
-import /* [auto-meaningful-name] */$$_301_203 = require("../301/203")
-import /* [auto-meaningful-name] */$_989 = require("./989")
-import /* [auto-meaningful-name] */$_685 = require("./685")
+import * as /* [auto-meaningful-name] */$$_301_203 from "../301/203"
+import * as /* [auto-meaningful-name] */$_989 from "./989"
+import * as /* [auto-meaningful-name] */$_685 from "./685"
 function a(e) {
   return function () {
     var t

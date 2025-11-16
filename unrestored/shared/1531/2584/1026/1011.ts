@@ -7,7 +7,7 @@
 "use strict"
 
 export { s as a }
-import /* [auto-meaningful-name] */$$_2627_462 = require("../2627/462")
+import * as /* [auto-meaningful-name] */$$_2627_462 from "../2627/462"
 function i(e) {
   return e.attachTo ? e.attachTo : document.querySelector("head") || document.body
 }

@@ -8,7 +8,7 @@
 
 export { React$isValidElement as b }
 export { o as a }
-import /* [auto-meaningful-name] */React = require("react")
+import * as /* [auto-meaningful-name] */React from "react"
 var /* [auto-meaningful-name] */React$isValidElement = React.isValidElement
 function o(e, t) {
   return function (e, t, n) {

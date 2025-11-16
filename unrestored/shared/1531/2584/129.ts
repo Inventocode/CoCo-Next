@@ -20,7 +20,7 @@ export { Https__static$codemao$cn_crcUploader_2021_12_9b6f23a1ed343087b5f7b2a5b1
 export { Https__static$codemao$cn_crcUploader_2021_12_97ff281423822cdac3fec80dfaed9b44$png as a }
 export { Https__static$codemao$cn_crcUploader_2021_12_fb398b664f503453c8bef12cd33febc3$png as f }
 export { _ as n }
-import r = require("./5")
+import * as r from "./5"
 var /* [auto-meaningful-name] */IconWidgetListViewer = "icon-widget-list-viewer"
 var i = 360
 var a = 500

@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */React = require("react")
+import * as /* [auto-meaningful-name] */React from "react"
 var i = React.createContext(undefined)
 var o = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children

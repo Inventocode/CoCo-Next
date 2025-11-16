@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import /* [auto-meaningful-name] */$_203 = require("./203")
+import * as /* [auto-meaningful-name] */$_203 from "./203"
 function i(e, t, n) {
   return (i = "undefined" !== typeof Reflect && Reflect.get ? Reflect.get : function (e, t, n) {
     var i = function (e, t) {

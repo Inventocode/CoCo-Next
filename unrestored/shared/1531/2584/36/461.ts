@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$$_57_770 = require("../57/770")
-import /* [auto-meaningful-name] */$$_58_989 = require("../58/989")
+import * as /* [auto-meaningful-name] */$$_57_770 from "../57/770"
+import * as /* [auto-meaningful-name] */$$_58_989 from "../58/989"
 function o(e, t, n) {
   return (o = $$_58_989.a() ? Reflect.construct : function (e, t, n) {
     var i = [null]

@@ -11,30 +11,19 @@ export { _ as c }
 export { v as b }
 export { E as a }
 export { O as e }
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import i = require("../7")
-import /* [auto-meaningful-name] */$$_17_index = require("../17/index")
-import /* [auto-meaningful-name] */$_724 = require("./724")
-import /* [auto-meaningful-name] */$_723 = require("./723")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_actions = require("../../../../../src/shared/events/actions")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper = require("../../../../../src/shared/events/messages-wrapper")
-import /* [auto-meaningful-name] */$$_15 = require("../15")
-import p = require("../9")
-import /* [auto-meaningful-name] */$$_141_index = require("../141/index")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox = require("../../../../../src/editor/block/toolbox")
-import /* [auto-meaningful-name] */$$_26_index = require("../26/index")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as i from "../7"
+import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$_724 from "./724"
+import * as /* [auto-meaningful-name] */$_723 from "./723"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_actions from "../../../../../src/shared/events/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as p from "../9"
+import * as /* [auto-meaningful-name] */$$_141_index from "../141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox from "../../../../../src/editor/block/toolbox"
+import * as /* [auto-meaningful-name] */$$_26_index from "../26/index"
 function g() {
   Object.keys($$_26_index.h()).forEach(function (e) {
     _(e)
@@ -53,11 +42,11 @@ function _(e) {
 function v(e) {
   var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_actions$d$dispatch = $$_$$_$$_$$_$$_src_shared_events_actions.d.dispatch
   $_723.register_procedure_blocks($$_17_index.Blink, e, function () {
-    var n = i.a(o.a.mark(function n(r) {
+    var n = i.a(_RegeneratorRuntime.mark(function n(r) {
       var i
       var a
       var /* [auto-meaningful-name] */a$name
-      return o.a.wrap(function (n) {
+      return _RegeneratorRuntime.wrap(function (n) {
         for (;;) {
           switch (n.prev = n.next) {
             case 0:
@@ -113,10 +102,10 @@ function v(e) {
       return n.apply(this, arguments)
     }
   }(), function () {
-    var n = i.a(o.a.mark(function n(r) {
+    var n = i.a(_RegeneratorRuntime.mark(function n(r) {
       var i
       var a
-      return o.a.wrap(function (n) {
+      return _RegeneratorRuntime.wrap(function (n) {
         for (;;) {
           switch (n.prev = n.next) {
             case 0:

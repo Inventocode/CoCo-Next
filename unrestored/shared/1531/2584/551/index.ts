@@ -6,66 +6,22 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_11 = require("../11")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import a = require("../8")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(a)
-import /* [auto-meaningful-name] */Color = require("color")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(Color)
-import u = require("../5")
-import /* [auto-meaningful-name] */$$_90 = require("../90")
-import /* [auto-meaningful-name] */$$_147 = require("../147")
-import /* [auto-meaningful-name] */$_246 = require("./246")
-var h = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($_246)
-import m = require("../6")
-import /* [auto-meaningful-name] */$$_15 = require("../15")
-import /* [auto-meaningful-name] */$$_13_index = require("../13/index")
-import /* [auto-meaningful-name] */$$_379 = require("../379")
+import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as a from "../8"
+import s from "../8"
+import * as /* [auto-meaningful-name] */Color from "color"
+import /* [auto-meaningful-name] */_Color from "color"
+import * as u from "../5"
+import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */$$_147 from "../147"
+import * as /* [auto-meaningful-name] */$_246 from "./246"
+import /* [auto-meaningful-name] */_$_ from "./246"
+import * as m from "../6"
+import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_379 from "../379"
 var b = function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$text = e.text
@@ -86,7 +42,7 @@ var b = function (e) {
         t = "icon-radio-incorrect"
       }
     }
-    return t ? i.a.createElement($$_13_index.j, {
+    return t ? _React.createElement($$_13_index.j, {
       type: t
     }) : null
   }(e$state)
@@ -165,30 +121,30 @@ var b = function (e) {
     }
   }
   var C = $$_147.g[e$sizeType]
-  return e$mode === $$_379.a.BUTTON ? i.a.createElement("button", {
+  return e$mode === $$_379.a.BUTTON ? _React.createElement("button", {
     style: m.a(m.a({}, O), {}, {
       padding: C.optionPadding
     }),
-    className: s()(h.a.buttonRadio, "radio-widget-button"),
+    className: s(_$_.buttonRadio, "radio-widget-button"),
     onClick: w
-  }, i.a.createElement("p", {
+  }, _React.createElement("p", {
     ref: y,
     style: {
       fontSize: C.optionFontSize
     }
-  }, e$text), i.a.createElement("div", {
-    className: h.a.buttonRadioInner,
+  }, e$text), _React.createElement("div", {
+    className: _$_.buttonRadioInner,
     style: {
       color: null === O || undefined === O ? undefined : O.color,
       fontSize: C.iconFontSize
     }
-  }, E)) : i.a.createElement("div", {
+  }, E)) : _React.createElement("div", {
     style: {
       color: null === O || undefined === O ? undefined : O.color
     },
-    className: h.a.defaultRadio,
+    className: _$_.defaultRadio,
     onClick: w
-  }, i.a.createElement("div", {
+  }, _React.createElement("div", {
     style: {
       backgroundColor: null === O || undefined === O ? undefined : O.backgroundColor,
       borderColor: null === O || undefined === O ? undefined : O.borderColor,
@@ -196,8 +152,8 @@ var b = function (e) {
       width: C.innerSize,
       height: C.innerSize
     },
-    className: s()(h.a.inner, $$_11.a({}, h.a.selected, e$isSelected))
-  }, E), i.a.createElement("p", {
+    className: s(_$_.inner, $$_11.a({}, _$_.selected, e$isSelected))
+  }, E), _React.createElement("p", {
     ref: y,
     style: {
       fontSize: C.optionFontSize
@@ -227,13 +183,13 @@ _a = function (e) {
     }
   }
   var S = $$_147.g[e$attributes$sizeType]
-  return i.a.createElement("div", {
+  return _React.createElement("div", {
     id: t,
     "data-role": u.M,
     "data-widget-type": u.C,
     "data-min-width": S.minWidth,
     "data-max-width": S.maxWidth,
-    className: s()(h.a.radioWidget, $$_90.b, $$_11.a({}, h.a.hide, !e$visible)),
+    className: s(_$_.radioWidget, $$_90.b, $$_11.a({}, _$_.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -244,8 +200,8 @@ _a = function (e) {
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     },
     "data-lock-height": true
-  }, e$attributes$headlineVisible && i.a.createElement("div", {
-    className: h.a.headline,
+  }, e$attributes$headlineVisible && _React.createElement("div", {
+    className: _$_.headline,
     onClick: function (e) {
       if (e$onHeadlineClick) {
         e$onHeadlineClick(e)
@@ -254,12 +210,12 @@ _a = function (e) {
     style: {
       fontSize: S.headlineFontSize
     }
-  }, e$attributes$headline), i.a.createElement("ul", null, e$attributes$options.map(function (e, t) {
-    return i.a.createElement("li", {
+  }, e$attributes$headline), _React.createElement("ul", null, e$attributes$options.map(function (e, t) {
+    return _React.createElement("li", {
       key: t
-    }, i.a.createElement(b, {
+    }, _React.createElement(b, {
       sizeType: e$attributes$sizeType,
-      color: l()(e$attributes$color).toString(),
+      color: _Color(e$attributes$color).toString(),
       text: e.content,
       mode: e$attributes$mode,
       isSelected: !!e.isSelected,

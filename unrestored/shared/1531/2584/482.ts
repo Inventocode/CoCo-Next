@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import r = require("./20")
+import * as r from "./20"
 function i(e, t) {
   var n = r.a({}, e)
   if (Array.isArray(t)) {

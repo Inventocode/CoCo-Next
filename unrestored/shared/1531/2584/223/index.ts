@@ -6,39 +6,17 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_20 = require("../20")
-import /* [auto-meaningful-name] */$$_33_index = require("../33/index")
-import /* [auto-meaningful-name] */$$_29 = require("../29")
-import /* [auto-meaningful-name] */$$_54 = require("../54")
-import /* [auto-meaningful-name] */React = require("react")
-var c = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import u = require("../8")
-var l = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(u)
-import /* [auto-meaningful-name] */$_780 = require("./780")
-import /* [auto-meaningful-name] */$$_108 = require("../108")
-import /* [auto-meaningful-name] */$_911 = require("./911")
+import * as /* [auto-meaningful-name] */$$_20 from "../20"
+import * as /* [auto-meaningful-name] */$$_33_index from "../33/index"
+import * as /* [auto-meaningful-name] */$$_29 from "../29"
+import * as /* [auto-meaningful-name] */$$_54 from "../54"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as u from "../8"
+import l from "../8"
+import * as /* [auto-meaningful-name] */$_780 from "./780"
+import * as /* [auto-meaningful-name] */$$_108 from "../108"
+import * as /* [auto-meaningful-name] */$_911 from "./911"
 var p = {}
 function _(e, t) {
   0
@@ -184,11 +162,11 @@ var B = function (e) {
     })
   }
   return function e(t, n, i) {
-    return i ? c.a.createElement(t.tag, $$_20.a($$_20.a({
+    return i ? _React.createElement(t.tag, $$_20.a($$_20.a({
       key: n
     }, x(t.attrs)), i), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i))
-    })) : c.a.createElement(t.tag, $$_20.a({
+    })) : _React.createElement(t.tag, $$_20.a({
       key: n
     }, x(t.attrs)), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i))
@@ -240,7 +218,7 @@ var R = React.forwardRef(function (e, t) {
   var g = $$_54.a(e, F)
   var /* [auto-meaningful-name] */React$useContext$_780$a$prefixCls = React.useContext($_780.a).prefixCls
   var m = undefined === React$useContext$_780$a$prefixCls ? "anticon" : React$useContext$_780$a$prefixCls
-  var y = l()(m, (n = {}, $$_29.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), $$_29.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
+  var y = l(m, (n = {}, $$_29.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), $$_29.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
   var b = e$tabIndex
   if (undefined === b && e$onClick) {
     b = -1

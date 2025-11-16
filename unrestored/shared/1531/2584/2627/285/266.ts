@@ -16,7 +16,7 @@ export { f as j }
 export { h as a }
 export { p as e }
 export { _ as d }
-import /* [auto-meaningful-name] */$_210 = require("./210")
+import * as /* [auto-meaningful-name] */$_210 from "./210"
 function i(e, t, n) {
   return {
     r: 255 * $_210.a(e, 255),

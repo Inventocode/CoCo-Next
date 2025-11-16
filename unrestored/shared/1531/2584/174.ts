@@ -6,22 +6,11 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */RegeneratorRuntime = require("regenerator-runtime")
-var o = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(RegeneratorRuntime)
-import i = require("./7")
-import a = require("./27")
-import s = require("./40")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import * as i from "./7"
+import * as a from "./27"
+import * as s from "./40"
 var c = function () {
   function e() {
     var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "appCraft"
@@ -73,9 +62,9 @@ var c = function () {
   }, {
     key: "_getTransaction",
     value: function () {
-      var e = i.a(o.a.mark(function e(t) {
+      var e = i.a(_RegeneratorRuntime.mark(function e(t) {
         var n
-        return o.a.wrap(function (e) {
+        return _RegeneratorRuntime.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
@@ -107,9 +96,9 @@ var c = function () {
   }, {
     key: "_getObjectStore",
     value: function () {
-      var e = i.a(o.a.mark(function e() {
+      var e = i.a(_RegeneratorRuntime.mark(function e() {
         var /* [auto-meaningful-name] */e$sent
-        return o.a.wrap(function (e) {
+        return _RegeneratorRuntime.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:

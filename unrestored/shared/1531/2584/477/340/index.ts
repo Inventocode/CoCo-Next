@@ -9,8 +9,8 @@
 export { a }
 export { s as b }
 export { c }
-import /* [auto-meaningful-name] */$$_787_39 = require("../787/39")
-import /* [auto-meaningful-name] */$_2592_index = require("./2592/index")
+import * as /* [auto-meaningful-name] */$$_787_39 from "../787/39"
+import * as /* [auto-meaningful-name] */$_2592_index from "./2592/index"
 function o(e) {
   for (var t = [], n = 1; n < arguments.length; n++) {
     t[n - 1] = arguments[n]

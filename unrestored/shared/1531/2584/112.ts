@@ -8,7 +8,7 @@
 
 export { o as a }
 export { a as b }
-import r = require("./6")
+import * as r from "./6"
 function o(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {}
   var o = r.a({

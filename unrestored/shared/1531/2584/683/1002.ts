@@ -7,10 +7,10 @@
 "use strict"
 
 export { s as a }
-import /* [auto-meaningful-name] */$_215_index = require("./215/index")
-import /* [auto-meaningful-name] */$_34_index = require("./34/index")
-import o = require("./65")
-import /* [auto-meaningful-name] */$_122 = require("./122")
+import * as /* [auto-meaningful-name] */$_215_index from "./215/index"
+import * as /* [auto-meaningful-name] */$_34_index from "./34/index"
+import * as o from "./65"
+import * as /* [auto-meaningful-name] */$_122 from "./122"
 var s = function () {
   function e(e, t) {
     var n = this

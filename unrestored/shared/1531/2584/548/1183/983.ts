@@ -7,8 +7,8 @@
 "use strict"
 
 export { o as a }
-import /* [auto-meaningful-name] */$$_$$_430 = require("../../430")
-import /* [auto-meaningful-name] */React = require("react")
+import * as /* [auto-meaningful-name] */$$_$$_430 from "../../430"
+import * as /* [auto-meaningful-name] */React from "react"
 var o = function (e) {
   function t(t) {
     var n;

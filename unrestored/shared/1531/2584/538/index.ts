@@ -6,34 +6,12 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_10_index = require("../10/index")
-import /* [auto-meaningful-name] */React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import a = require("../8")
-var s = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(a)
-require("./866")
+import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import * as a from "../8"
+import s from "../8"
+import "./866"
 var _a
 _a = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -45,16 +23,16 @@ _a = React.memo(function (e) {
   React.useEffect(function () {
     u(!!e$checked)
   }, [e$checked])
-  return i.a.createElement("div", {
-    className: s()("coco-switch", l && "coco-switch-checked"),
+  return _React.createElement("div", {
+    className: s("coco-switch", l && "coco-switch-checked"),
     onClick: function () {
       u(!l)
       if (e$onChange) {
         e$onChange(!l)
       }
     }
-  }, i.a.createElement("div", {
-    className: s()("coco-switch-handle", l && "coco-switch-handle-checked")
+  }, _React.createElement("div", {
+    className: s("coco-switch-handle", l && "coco-switch-handle-checked")
   }))
 })
 export { _a as a }

@@ -14,11 +14,11 @@ export { u as e } from "./486/92"
 export { x as f } from "./486/92"
 export { f as g }
 export { d as h }
-require("./486/229")
-require("../19")
-import /* [auto-meaningful-name] */$_486_179 = require("./486/179")
-import /* [auto-meaningful-name] */$_486_92 = require("./486/92")
-require("./486/982")
+import "./486/229"
+import "../19"
+import * as /* [auto-meaningful-name] */$_486_179 from "./486/179"
+import * as /* [auto-meaningful-name] */$_486_92 from "./486/92"
+import "./486/982"
 var o = function (e) {
   return {
     done: true,

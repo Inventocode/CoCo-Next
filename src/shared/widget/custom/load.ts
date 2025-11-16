@@ -779,7 +779,7 @@ function Z(e, t) {
 function J() {
   return (J = $$_$$_$$_$$_unrestored_shared_1531_2584_7.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n) {
     var r
-    var /* [auto-meaningful-name] */_e$sent
+    var /* [auto-meaningful-name] */_e$sent2
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$type
     return BabelRuntimeHelperRegeneratorRuntime.wrap(function (e) {
@@ -799,9 +799,9 @@ function J() {
               withCredentials: false
             })
           case 5:
-            _e$sent = e.sent
+            _e$sent2 = e.sent
             e.next = 8
-            return importCostumeWidgetFromBlob(_e$sent.data, true)
+            return importCostumeWidgetFromBlob(_e$sent2.data, true)
           case 8:
             e$sent = e.sent
             e$sent$type = e$sent.type
@@ -858,7 +858,7 @@ function ne() {
     var u
     var d
     var p
-    var /* [auto-meaningful-name] */_e$sent3
+    var /* [auto-meaningful-name] */_e$sent4
     var h
     var /* [auto-meaningful-name] */e$sent
     var g
@@ -893,7 +893,7 @@ function ne() {
             e.next = 10
             return $_shop.e(d, p)
           case 10:
-            if (_e$sent3 = e.sent, u = u.concat(_e$sent3.items), !((h = Math.ceil(_e$sent3.total / p)) > 1)) {
+            if (_e$sent4 = e.sent, u = u.concat(_e$sent4.items), !((h = Math.ceil(_e$sent4.total / p)) > 1)) {
               e.next = 23
               break
             }

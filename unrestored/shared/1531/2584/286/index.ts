@@ -7,40 +7,18 @@
 "use strict"
 
 export { g as a }
-import /* [auto-meaningful-name] */$$_95 = require("../95")
-import /* [auto-meaningful-name] */$$_96 = require("../96")
-import /* [auto-meaningful-name] */$$_103 = require("../103")
-import /* [auto-meaningful-name] */$$_120 = require("../120")
-import /* [auto-meaningful-name] */$$_322 = require("../322")
-import /* [auto-meaningful-name] */$$_273 = require("../273")
-import /* [auto-meaningful-name] */$$_29 = require("../29")
-import /* [auto-meaningful-name] */$$_232_index = require("../232/index")
-var d = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}($$_232_index)
-import /* [auto-meaningful-name] */React = require("react")
-var f = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-require("./1513")
+import * as /* [auto-meaningful-name] */$$_95 from "../95"
+import * as /* [auto-meaningful-name] */$$_96 from "../96"
+import * as /* [auto-meaningful-name] */$$_103 from "../103"
+import * as /* [auto-meaningful-name] */$$_120 from "../120"
+import * as /* [auto-meaningful-name] */$$_322 from "../322"
+import * as /* [auto-meaningful-name] */$$_273 from "../273"
+import * as /* [auto-meaningful-name] */$$_29 from "../29"
+import * as /* [auto-meaningful-name] */$$_232_index from "../232/index"
+import /* [auto-meaningful-name] */_$$_232_index from "../232/index"
+import * as /* [auto-meaningful-name] */React from "react"
+import /* [auto-meaningful-name] */_React from "react"
+import "./1513"
 var h = {
   "./style_module.css": {
     "btn-wrap": "CUI-button-btn-wrap",
@@ -155,7 +133,7 @@ var g = function (e) {
       var /* [auto-meaningful-name] */this$props$className = this$props.className
       var /* [auto-meaningful-name] */this$props$padding = this$props.padding
       var /* [auto-meaningful-name] */this$props$wrapClassName = this$props.wrapClassName
-      return f.a.createElement("div", {
+      return _React.createElement("div", {
         className: (this$props$wrapClassName ? this$props$wrapClassName + " " : "") + "CUI-button-btn-wrap",
         style: {
           width: this$props$width,
@@ -163,7 +141,7 @@ var g = function (e) {
           margin: this$props$margin,
           borderRadius: this$props$borderRadius
         }
-      }, f.a.createElement("div", {
+      }, _React.createElement("div", {
         id: this.props.id,
         style: {
           borderRadius: this$props$borderRadius || "",
@@ -175,17 +153,17 @@ var g = function (e) {
         onMouseLeave: this.preventMouseEventWhenDisable("leave"),
         onContextMenu: this.preventMouseEventWhenDisable("context"),
         "data-report-click": this$props$dataReport,
-        className: ("".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") ? "".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") + " " : "") + d()("btn ".concat(this$props$disable ? "disabled" : "", " ").concat(this.setClass()), h, {
+        className: ("".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") ? "".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") + " " : "") + _$$_232_index("btn ".concat(this$props$disable ? "disabled" : "", " ").concat(this.setClass()), h, {
           autoResolveMultipleImports: true,
           handleMissingStyleName: "throw"
         })
-      }, this.inserSpaceIfTwoText()), null != this$props$tooltip && f.a.createElement("span", {
+      }, this.inserSpaceIfTwoText()), null != this$props$tooltip && _React.createElement("span", {
         className: "CUI-button-btn-tooltip"
       }, this$props$tooltip))
     }
   }])
   return n
-}(f.a.Component)
+}(_React.Component)
 $$_29.a(g, "defaultProps", {
   type: "transparent",
   size: "md"
