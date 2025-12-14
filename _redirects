@@ -1,0 +1,4 @@
+/editor/player/[0-9]+ /editor/player/index.html 200
+/editor/player/[0-9]+/ /editor/player/index.html 200
+/editor/player/[0-9]+/index /editor/player/index.html 200
+/editor/player/[0-9]+/index.html /editor/player/index.html 200
