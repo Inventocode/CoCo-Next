@@ -1,0 +1,262 @@
+name: 部署到 GitHub Pages
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+        
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: 安装依赖
+        run: npm install --legacy-peer-deps
+        
+      - name: 修改 proxy.ts 文件
+        run: |
+          # 创建或覆盖 helper/proxy.ts 文件
+          cat > helper/proxy.ts << 'EOF'
+          interface Window {
+              SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST?: boolean
+              SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH?: boolean
+              SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET?: boolean
+          }
+
+          function proxyXMLHttpRequest(): void {
+              let originalOpen: typeof XMLHttpRequest.prototype.open = XMLHttpRequest.prototype.open
+              XMLHttpRequest.prototype.open = function open(
+                  method: string,
+                  url: string | URL,
+                  async?: boolean,
+                  username?: string | null,
+                  password?: string | null
+              ): void {
+                  if (!(url instanceof window.URL)) {
+                      url = new URL(url, location.href)
+                  }
+                  if (needsProxy(url)) {
+                      originalOpen.call(this, method, rewriteURL(url), async ?? true, username, password)
+                  } else {
+                      originalOpen.call(this, method, url, async ?? true, username, password)
+                  }
+              }
+              XMLHttpRequest.prototype.open.toString = originalOpen.toString.bind(originalOpen)
+              window.SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST = true
+          }
+
+          function proxyFetch(): void {
+              let originalFetch: typeof fetch = fetch
+              window.fetch = function fetch(
+                  input: RequestInfo | URL,
+                  init: RequestInit | undefined
+              ): Promise<Response> {
+                  if (input instanceof Request) {
+                      input = input.url
+                  }
+                  if (typeof input == "string") {
+                      input = new URL(input, location.href)
+                  }
+                  if (needsProxy(input)) {
+                      input = rewriteURL(input)
+                  }
+                  return originalFetch.call(this, input, init)
+              }
+              fetch.toString = originalFetch.toString.bind(originalFetch)
+              window.SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH = true
+          }
+
+          function proxyWebSocket(): void {
+              window.WebSocket = class WebSocket extends window.WebSocket {
+                  public constructor(url: string | URL, protocols?: string | string[]) {
+                      if (typeof url == "string") {
+                          url = new URL(url, location.href)
+                      }
+                      if (needsProxy(url)) {
+                          url = rewriteURL(url)
+                      }
+                      super(url, protocols)
+                  }
+              }
+              window.SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET = true
+          }
+
+          function needsProxy(url: URL): boolean {
+              if (
+                  url.hostname == "static.codemao.cn" ||
+                  url.hostname == "creation.codemao.cn" ||
+                  url.hostname.endsWith("bcmcdn.com")
+              ) {
+                  return false
+              }
+              return url.hostname.endsWith(".codemao.cn")
+          }
+
+          function rewriteURL(url: URL): URL {
+              // 创建新的代理 URL，使用当前域名
+              const proxyUrl = new URL(location.origin)
+              
+              // 保持原始路径不变
+              proxyUrl.pathname = url.pathname
+              
+              // 添加查询参数，包含原始目标 URL
+              proxyUrl.searchParams.set('url', url.href)
+              
+              // 保持原始查询参数
+              url.searchParams.forEach((value, key) => {
+                  proxyUrl.searchParams.append(key, value)
+              })
+              
+              return proxyUrl
+          }
+
+          function proxyOpen(): void {
+              const originalOpen: typeof open = open
+              window.open = function open(
+                  url?: string | URL,
+                  target?: string,
+                  features?: string
+              ): WindowProxy | null {
+                  if (typeof url == "string") {
+                      url = new URL(url, location.href)
+                  }
+                  if (
+                      url?.hostname.endsWith("coco.codemao.cn") ||
+                      url?.hostname == location.hostname
+                  ) {
+                      url.protocol = location.protocol
+                      url.host = location.host
+                  }
+                  return originalOpen.call(this, url, target, features)
+              }
+              window.open.toString = originalOpen.toString.bind(originalOpen)
+          }
+
+          if (!location.hostname.endsWith(".codemao.cn")) {
+              proxyXMLHttpRequest()
+              proxyFetch()
+              proxyWebSocket()
+              proxyOpen()
+          }
+          EOF
+        
+      - name: 构建项目
+        run: npm run build
+        
+      - name: 移动文件到根目录
+        run: |
+          # 进入构建目录
+          cd dist
+          # 将 coco.codemao.cn 目录下的所有文件移动到当前目录
+          mv coco.codemao.cn/* ./
+          # 删除空的 coco.codemao.cn 目录
+          rm -rf coco.codemao.cn
+          # 返回上级目录
+          cd ..
+          
+      - name: 创建自定义域名配置文件 CNAME
+        run: |
+          # 在 dist 目录中创建 CNAME 文件并写入指定内容
+          echo "coco.ccwidget.top" > dist/CNAME
+        
+      - name: 创建代理函数文件 functions/[[path]].js
+        run: |
+          # 创建 functions 目录
+          mkdir -p "dist/functions/[[path]]"
+          # 创建 [[path]].js 文件并写入内容
+          cat > "dist/functions/[[path]].js" << 'EOF'
+          // functions/[[path]].js
+          export async function onRequest(context) {
+            const { request, env } = context;
+            const url = new URL(request.url);
+            
+            // 从查询参数获取目标 URL
+            const targetUrl = url.searchParams.get('url');
+            
+            if (targetUrl) {
+              try {
+                // 解码并验证目标 URL
+                const decodedTargetUrl = decodeURIComponent(targetUrl);
+                const parsedTarget = new URL(decodedTargetUrl);
+                
+                // 允许的目标域名白名单（可选，为了安全）
+                const allowedDomains = [
+                  'api-creation.codemao.cn',
+                  'api.codemao.cn',
+                  'socketcoll.codemao.cn',
+                  'open-service.codemao.cn',
+                  'shence-data.codemao.cn',
+                  'sentry.codemao.cn',
+                  'socketcv.codemao.cn',
+                  'shequ.codemao.cn'
+                ];
+                
+                // 安全检查（可选）
+                if (!allowedDomains.includes(parsedTarget.hostname)) {
+                  return new Response('Domain not allowed', { status: 403 });
+                }
+                
+                // 构建新请求
+                const newHeaders = new Headers(request.headers);
+                newHeaders.set('Origin', 'https://coco.codemao.cn');
+                newHeaders.set('Referer', 'https://coco.codemao.cn/');
+                newHeaders.delete('host');
+                
+                // 复制原始请求的路径和查询参数到目标 URL
+                parsedTarget.pathname = url.pathname;
+                parsedTarget.search = url.search;
+                
+                const newRequest = new Request(parsedTarget, {
+                  method: request.method,
+                  headers: newHeaders,
+                  body: request.body
+                });
+                
+                const response = await fetch(newRequest);
+                const newResponse = new Response(response.body, response);
+                
+                // 处理 cookie 域名
+                const setCookie = newResponse.headers.get('set-cookie');
+                if (setCookie) {
+                  const modifiedCookie = setCookie.replace(/codemao\.cn/g, url.hostname);
+                  newResponse.headers.set('set-cookie', modifiedCookie);
+                }
+                
+                return newResponse;
+                
+              } catch (error) {
+                return new Response('Invalid target URL', { status: 400 });
+              }
+            }
+            
+            // 如果没有目标 URL 参数，返回静态资源
+            return env.ASSETS.fetch(request);
+          }
+          EOF
+
+      - name: 创建重定向文件 _redirects
+        run: |
+          # 在 dist 目录中创建 _redirects 文件并写入重定向规则
+          cat > dist/_redirects << 'EOF'
+          /editor/player/[0-9]+ /editor/player/index.html 200
+          /editor/player/[0-9]+/ /editor/player/index.html 200
+          /editor/player/[0-9]+/index /editor/player/index.html 200
+          /editor/player/[0-9]+/index.html /editor/player/index.html 200
+          EOF
+        
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
