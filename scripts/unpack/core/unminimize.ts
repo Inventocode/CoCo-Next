@@ -9,7 +9,7 @@ export function unminimize(modules: ModuleMap): void {
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
-        if (module.external != null) {
+        if (module.external != null && !module.moved) {
             bar.increment()
             continue
         }

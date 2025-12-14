@@ -1,7 +1,7 @@
 import path from "path"
 import { promises as fs } from "fs"
 
-import { UnpackConfig, ModuleMap, SetPath, ModuleKey, Module } from "./types"
+import { UnpackConfig, ModuleMap, SetPath, ModuleKey } from "./types"
 import { loadModulesFromFile } from "./load"
 import { unminimize } from "./unminimize"
 import { buildDependencies } from "./build-dependency"
@@ -22,37 +22,25 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     for (const entryItem of config.entry) {
         Object.assign(modules, await loadModulesFromFile(entryItem))
     }
-    for (const [key, movedPath] of Object.entries(config.move ?? {})) {
-        const module: Module | undefined = modules[key]
-        if (module == undefined) {
-            continue
-        }
-        module.external = movedPath
-    }
+    markExternals(config, modules)
     unminimize(modules)
+    removeNodePolyfill(modules, config.nodePolyfill ?? {})
     buildDependencies(modules)
     switch (config.setPath) {
         case SetPath.BY_IMPORT_NAME:
-            setPathsByImportName(modules)
+            setPathsByImportName(config, modules)
             break
         case SetPath.BY_DEPENDENCY:
-            setPathsByDependency(modules)
+            setPathsByDependency(config, modules)
             break
     }
     addIndexToPath(modules)
-    markExternals(modules, [
-        ...Object.entries(config.nodePolyfill ?? {}).map(([key, name]) => ({
-            key,
-            source: `webpack-polyfill:${name}`
-        })),
-        ...(config.externals ?? [])]
-    )
+    scopeLowering(config, modules)
+    markExternals(config, modules)
     shakeUnused(modules)
-    removeNodePolyfill(modules, config.nodePolyfill ?? {})
     transformImports(modules, config)
     transformExports(modules)
-    scopeLowering(modules)
-    await write(config.output.path, modules)
+    await write(config, modules)
     const { pathMap: pathMapPath } = config.output
     if (pathMapPath) {
         const pathMap: Record<ModuleKey, string> = {}
@@ -60,7 +48,7 @@ export async function unpack(config: UnpackConfig): Promise<void> {
             pathMap[module.key] = module.external ?? "/" + module.path.join("/")
         }
         await fs.writeFile(
-            path.resolve(config.output.path, pathMapPath),
+            path.resolve(config.output.basePath, config.output.unrestoredPath, pathMapPath),
             JSON.stringify(pathMap, null, 4)
         )
     }

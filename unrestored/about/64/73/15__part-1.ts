@@ -937,8 +937,8 @@ var J = function () {
           throw new Error("Number skeleton cannot be empty")
         }
         for (var t = [], n = 0, r = e.split(E).filter(function (e) {
-            return e.length > 0
-          }); n < r.length; n++) {
+          return e.length > 0
+        }); n < r.length; n++) {
           var i = r[n].split("/")
           if (0 === i.length) {
             throw new Error("Invalid number skeleton")
@@ -1001,10 +1001,12 @@ var J = function () {
       if (m.err) {
         return m
       }
-      s.push([i$value, {
-        value: h.val,
-        location: L(p, this.clonePosition())
-      }])
+      s.push([
+        i$value, {
+          value: h.val,
+          location: L(p, this.clonePosition())
+        }
+      ])
       u.add(i$value)
       this.bumpSpace()
       i$value = (o = this.parseIdentifierIfPossible()).value
@@ -1179,16 +1181,16 @@ function re(e, t) {
   }
   return n.val
 }
-export { i as "15__part-1__i" }
-export { s as "15__part-1__s" }
-export { u as "15__part-1__u" }
-export { l as "15__part-1__l" }
-export { c as "15__part-1__c" }
-export { f as "15__part-1__f" }
-export { d as "15__part-1__d" }
-export { p as "15__part-1__p" }
-export { h as "15__part-1__h" }
-export { m as "15__part-1__m" }
-export { v as "15__part-1__v" }
-export { y as "15__part-1__y" }
-export { re as "15__part-1__re" }
+export { i }
+export { s }
+export { u }
+export { l }
+export { c }
+export { f }
+export { d }
+export { p }
+export { h }
+export { m }
+export { v }
+export { y }
+export { re }

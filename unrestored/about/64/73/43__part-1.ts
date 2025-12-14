@@ -14,10 +14,12 @@ function a(e) {
 }
 function s(e, t, n, u, l, c, f) {
   if (1 === e.length && i.e(e[0])) {
-    return [{
-      type: r.literal,
-      value: e[0].value
-    }]
+    return [
+      {
+        type: r.literal,
+        value: e[0].value
+      }
+    ]
   }
   for (var d = [], p = 0, h = e; p < h.length; p++) {
     var m = h[p]
@@ -130,6 +132,7 @@ function s(e, t, n, u, l, c, f) {
   e[e.literal = 0] = "literal"
   e[e.object = 1] = "object"
 }(r || (r = {}))
-export { r as "43__part-1__r" }
-export { a as "43__part-1__a" }
-export { s as "43__part-1__s" }
+export { r }
+export { a }
+export { s }
+export default a

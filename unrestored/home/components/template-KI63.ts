@@ -4,7 +4,7 @@
  * 模块 ID：KI63
  */
 
-import { "KI63__part-1__TemplateItemView" as TemplateItemView } from "./template-KI63__part-1"
+import { TemplateItemView } from "./template-KI63__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { TemplateItemView }

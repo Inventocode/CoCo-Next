@@ -109,40 +109,42 @@ var ViewRouterComponent = function (_React$Component) {
     _classCallCheck(this, ViewRouterComponent)
     return _possibleConstructorReturn(this, (ViewRouterComponent.__proto__ || Object.getPrototypeOf(ViewRouterComponent)).call(this, props))
   }
-  _createClass(ViewRouterComponent, [{
-    key: "componentDidMount",
-    value: function componentDidMount() {
-      this.props.getTemplateListAction()
-      this.props.getCourseListAction()
+  _createClass(ViewRouterComponent, [
+    {
+      key: "componentDidMount",
+      value: function componentDidMount() {
+        this.props.getTemplateListAction()
+        this.props.getCourseListAction()
+      }
+    }, {
+      key: "render",
+      value: function render() {
+        var _props = this.props
+        var playCourseInfo = _props.playCourseInfo
+        var courseDialogVisible = _props.courseDialogVisible
+        return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+          style: {
+            minWidth: "990px"
+          }
+        }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Header__.Header, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__components_IconFont_IconFontSvg__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
+          className: playCourseInfo.visible || courseDialogVisible ? "blur" : ""
+        }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Menu__.Menu, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Switch, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Route, {
+          path: "/home",
+          exact: true,
+          component: __WEBPACK_IMPORTED_MODULE_11__Home__.default
+        }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Route, {
+          path: "/work",
+          exact: true,
+          component: Work
+        }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Route, {
+          path: "/",
+          strict: true,
+          exact: true,
+          component: __WEBPACK_IMPORTED_MODULE_11__Home__.default
+        }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_9__components_CommonToast__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_10__components_ConfirmDialog__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_SignInDialog__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_8__components_CourseDialog__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__components_PlayCourseVideo__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__components_PreviewTemplate__.default, null))
+      }
     }
-  }, {
-    key: "render",
-    value: function render() {
-      var _props = this.props
-      var playCourseInfo = _props.playCourseInfo
-      var courseDialogVisible = _props.courseDialogVisible
-      return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        style: {
-          minWidth: "990px"
-        }
-      }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_2__components_Header__.Header, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_3__components_IconFont_IconFontSvg__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {
-        className: playCourseInfo.visible || courseDialogVisible ? "blur" : ""
-      }, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_4__components_Menu__.Menu, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Switch, null, __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Route, {
-        path: "/home",
-        exact: true,
-        component: __WEBPACK_IMPORTED_MODULE_11__Home__.default
-      }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Route, {
-        path: "/work",
-        exact: true,
-        component: Work
-      }), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_1_react_router_dom__.Route, {
-        path: "/",
-        strict: true,
-        exact: true,
-        component: __WEBPACK_IMPORTED_MODULE_11__Home__.default
-      }))), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_9__components_CommonToast__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_10__components_ConfirmDialog__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_7__components_SignInDialog__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_8__components_CourseDialog__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_5__components_PlayCourseVideo__.default, null), __WEBPACK_IMPORTED_MODULE_0_react__.createElement(__WEBPACK_IMPORTED_MODULE_6__components_PreviewTemplate__.default, null))
-    }
-  }])
+  ])
   return ViewRouterComponent
 }(__WEBPACK_IMPORTED_MODULE_0_react__.Component)
 

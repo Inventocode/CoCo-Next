@@ -14,7 +14,7 @@ export function transformExports(modules: ModuleMap): void {
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
-        if (module.external != null) {
+        if (module.external != null && !module.moved) {
             bar.increment()
             continue
         }
@@ -107,26 +107,6 @@ export function transformExports(modules: ModuleMap): void {
                 }
                 const calleeObject = calleePath.get("object")
                 const calleeProperty = calleePath.get("property")
-                const args = path.get("arguments")
-                if ((
-                    calleeObject.isIdentifier({ name: module.args[2] }) &&
-                    calleeObject.scope.getBinding(calleeObject.node.name) == null &&
-                    calleeProperty.isIdentifier({ name: "r" })
-                ) || (
-                    module.AST.program.sourceType == "module" &&
-                    calleeObject.isIdentifier({ name: "Object" }) &&
-                    calleeProperty.isIdentifier({ name: "defineProperty" }) &&
-                    args[0]?.isIdentifier({ name: module.args[1] }) &&
-                    args[0].scope.getBinding(module.args[1]!) == null &&
-                    args[1]?.isStringLiteral({ value: "__esModule" })
-                )) {
-                    if (module.AST.program.sourceType == "module") {
-                        path.remove()
-                    } else {
-                        calleePath.replaceWith(DEFINE_ES_MODULE_TEMPLATE())
-                    }
-                    return
-                }
                 let exportVar, exportedName, exportedFunction
                 if (
                     calleeObject.isIdentifier({ name: module.args[2] }) &&
@@ -310,16 +290,4 @@ const DYNAMIC_EXPORT_TEMPLATE = template.expression(`
         },
         enumerable: true
     })
-`)
-const DEFINE_ES_MODULE_TEMPLATE = template.expression(`
-    ${(function __defineESModule(exports: unknown): void {
-        if (typeof Symbol != "undefined" && Symbol.toStringTag) {
-            Object.defineProperty(exports, Symbol.toStringTag, {
-                value: "Module"
-            })
-        }
-        Object.defineProperty(exports, "__esModule", {
-            value: true
-        })
-    }).toString()}
 `)

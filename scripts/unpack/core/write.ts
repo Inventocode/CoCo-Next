@@ -3,14 +3,15 @@ import { promises as fs } from "fs"
 import generate from "@babel/generator"
 import cliProgress from "cli-progress"
 
-import { ModuleMap } from "./types"
+import { ModuleMap, UnpackConfig } from "./types"
 
-export async function write(basePath: string, modules: ModuleMap): Promise<void> {
-    console.log(`writing to ${path.relative(process.cwd(), basePath)}`)
+export async function write(config: UnpackConfig, modules: ModuleMap): Promise<void> {
+    const unrestoredPath = path.resolve(config.output.basePath, config.output.unrestoredPath)
+    console.log(`writing to ${path.relative(process.cwd(), unrestoredPath)}`)
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     try {
-        await fs.rm(basePath, { recursive: true })
+        await fs.rm(unrestoredPath, { recursive: true })
     } catch (error) {
         if (!(
             error != null &&
@@ -23,12 +24,12 @@ export async function write(basePath: string, modules: ModuleMap): Promise<void>
     }
     const promises: Promise<void>[] = []
     for (const module of Object.values(modules)) {
-        if (module.external != null) {
+        if (module.external != null && !module.moved || module.external == ".") {
             bar.increment()
             continue
         }
         promises.push((async (): Promise<void> => {
-            let filePath: string = path.resolve(basePath, ...module.path)
+            let filePath: string = path.resolve(config.output.basePath, ...module.path)
             filePath += ".ts"
             await fs.mkdir(path.dirname(filePath), { recursive: true })
             await fs.writeFile(filePath, [

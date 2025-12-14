@@ -5,4 +5,4 @@
  */
 
 import "./index__part-1"
-import "./index__part-3"
+import "../../../src/about/app"

@@ -13,11 +13,11 @@ export function getModuleByKey(modules: ModuleMap, key: ModuleKey): Module {
  * 获取导入路径
  */
 export function getImportPath(context: Module, imported: Module): string {
-    if (imported.external != null && !imported.external.startsWith(".")) {
+    if (imported.external != null && !/^[\.\/]/.test(imported.external)) {
         return imported.external
     }
-    const contextPath: string[] = context.path.slice()
-    const importedPath: string[] = imported.external?.split("/") ?? imported.path.slice()
+    const contextPath: string[] = context.external?.split("/").filter(Boolean) ?? context.path.slice()
+    const importedPath: string[] = imported.external?.split("/").filter(Boolean) ?? imported.path.slice()
     let last: string | undefined = undefined
     while (contextPath.length > 0 && importedPath.length > 0 && contextPath.shift() == (last = importedPath.shift())) {}
     let rootPath: string

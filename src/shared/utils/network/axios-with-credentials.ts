@@ -1,7 +1,7 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios"
 
 import * as Language from "../../ui/language"
-import * as Event from "../../events/actions"
+import * as EventStore from "../../events/store"
 import * as Message from "../../events/messages-wrapper"
 
 export const axiosWithCredentials: AxiosInstance = axios.create({
@@ -18,8 +18,8 @@ axiosWithCredentials.interceptors.response.use(
   (response: AxiosResponse): AxiosResponse => response,
   (error: AxiosError): Promise<never> => {
     if (!error.response && (!navigator.onLine || navigator?.connection?.rtt === 0)) {
-      const language: Language.Language = Event.getLanguage()
-      Event.getStore().dispatch(Message.wrapShowCommonToastInfo({
+      const language: Language.Language = EventStore.getLanguage()
+      EventStore.getStore().dispatch(Message.wrapShowCommonToastInfo({
         message: Language.format(language, "axios.weakNetworkTips").toString(),
         type: "error"
       }))

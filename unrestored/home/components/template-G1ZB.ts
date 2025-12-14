@@ -4,7 +4,7 @@
  * 模块 ID：G1ZB
  */
 
-import { "G1ZB__part-1__HeaderView" as HeaderView } from "./template-G1ZB__part-1"
+import { HeaderView } from "./template-G1ZB__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { HeaderView }

@@ -7,7 +7,10 @@ export interface UnpackConfig {
      */
     externals?: Externals | null | undefined
     output: {
-        path: string
+        basePath: string
+        unrestoredPath: string
+        srcPath: string
+        srcUnrestoredPath: string
         /**
          * 生成模块路径映射表。
          */
@@ -24,7 +27,7 @@ export interface UnpackConfig {
     /**
      * 移动模块，标识模块被移动到了指定位置，被移动的模块不会被处理。
      */
-    move?: Record<ModuleKey, string> | null | undefined
+    moveToSrc?: Record<ModuleKey, string> | null | undefined
     /**
      * 移除 Node Polyfill
      */
@@ -50,6 +53,7 @@ export enum SetPath {
 export interface Module {
     key: ModuleKey
     path: string[]
+    moved?: boolean | null | undefined
     external?: string | null | undefined
     args: string[]
     AST: t.File

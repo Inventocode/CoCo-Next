@@ -6,18 +6,18 @@
 
 "use strict"
 
-import { "49__part-1__f" as f } from "./index__part-1"
-import { "49__part-2__w" as w } from "./index__part-2"
+import { f } from "./index__part-1"
+import { w } from "./index__part-2"
 import * as c from "./6"
 import * as l from "./12"
 import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
 import * as /* [auto-meaningful-name] */$_23_index from "./23/index"
-import * as /* [auto-meaningful-name] */$$_72_14 from "../72/14"
-import * as /* [auto-meaningful-name] */$$_72_8 from "../72/8"
+import * as a from "./14"
+import * as o from "./8"
 import * as i from "./1"
-import * as /* [auto-meaningful-name] */$$_72_25 from "../72/25"
-import * as /* [auto-meaningful-name] */$$_72_50 from "../72/50"
-import * as /* [auto-meaningful-name] */$$_72_9 from "../72/9"
+import * as j from "./25"
+import * as x from "./50"
+import * as C from "./9"
 var R = {
   traceFetch: true,
   traceXHR: true,
@@ -36,8 +36,8 @@ function P(e) {
     }
     var t = t$tracingOrigins
     s[e] = t.some(function (t) {
-      return $$_72_25.a(e, t)
-    }) && !$$_72_25.a(e, "sentry_key")
+      return j.a(e, t)
+    }) && !j.a(e, "sentry_key")
     return s[e]
   }
   var f = u
@@ -48,7 +48,7 @@ function P(e) {
   }
   var d = {}
   if (t$traceFetch) {
-    $$_72_50.a({
+    x.a({
       callback: function (e) {
         !function (e, t, n) {
           if (!c.c() || !e.fetchData || !t(e.fetchData.url)) {
@@ -71,7 +71,7 @@ function P(e) {
             var a = e.args[0] = e.args[0]
             var s = e.args[1] = e.args[1] || {}
             var /* [auto-meaningful-name] */s$headers = s.headers
-            if ($$_72_9.g(a, Request)) {
+            if (C.g(a, Request)) {
               s$headers = a.headers
             }
             if (s$headers) {
@@ -95,7 +95,7 @@ function P(e) {
     })
   }
   if (t$traceXHR) {
-    $$_72_50.a({
+    x.a({
       callback: function (e) {
         !function (e, t, n) {
           var /* [auto-meaningful-name] */e$xhr
@@ -132,7 +132,7 @@ function P(e) {
     })
   }
 }
-var N = $$_72_14.e()
+var N = a.e()
 var I = i.a({
   idleTimeout: $_28_index.a,
   markBackgroundTransactions: true,
@@ -154,7 +154,7 @@ var I = i.a({
         })
       }
       if (n) {
-        $$_72_50.a({
+        x.a({
           callback: function (t) {
             var n = t.to
             var /* [auto-meaningful-name] */t$from = t.from
@@ -164,7 +164,7 @@ var I = i.a({
               if (t$from !== n) {
                 N$location$href = undefined
                 if (r) {
-                  $$_72_8.a.log("[Tracing] Finishing current transaction with op: " + r.op)
+                  o.a.log("[Tracing] Finishing current transaction with op: " + r.op)
                   r.finish()
                 }
                 r = e({
@@ -178,7 +178,7 @@ var I = i.a({
         })
       }
     } else {
-      $$_72_8.a.warn("Could not initialize routing instrumentation due to invalid location")
+      o.a.warn("Could not initialize routing instrumentation due to invalid location")
     }
   },
   startTransactionOnLocationChange: true,
@@ -203,8 +203,8 @@ var L = function () {
     var n = this
     this._getCurrentHub = t
     if (this._emitOptionsWarning) {
-      $$_72_8.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.")
-      $$_72_8.a.warn("[Tracing] We added a reasonable default for you: " + R.tracingOrigins)
+      o.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.")
+      o.a.warn("[Tracing] We added a reasonable default for you: " + R.tracingOrigins)
     }
     var /* [auto-meaningful-name] */this$options = this.options
     var /* [auto-meaningful-name] */this$options$routingInstrumentation = this$options.routingInstrumentation
@@ -223,7 +223,7 @@ var L = function () {
         f.document.addEventListener("visibilitychange", function () {
           var e = c.b()
           if (f.document.hidden && e) {
-            $$_72_8.a.log("[Tracing] Transaction: " + l.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
+            o.a.log("[Tracing] Transaction: " + l.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
             if (!e.status) {
               e.setStatus(l.a.Cancelled)
             }
@@ -232,7 +232,7 @@ var L = function () {
           }
         })
       } else {
-        $$_72_8.a.warn("[Tracing] Could not set up background tab detection due to lack of global document")
+        o.a.warn("[Tracing] Could not set up background tab detection due to lack of global document")
       }
     }
     P({
@@ -267,13 +267,13 @@ var L = function () {
         sampled: false
       }) : h
       if (false === m.sampled) {
-        $$_72_8.a.log("[Tracing] Will not send " + m.op + " transaction because of beforeNavigate.")
+        o.a.log("[Tracing] Will not send " + m.op + " transaction because of beforeNavigate.")
       }
-      $$_72_8.a.log("[Tracing] Starting " + m.op + " transaction on scope")
+      o.a.log("[Tracing] Starting " + m.op + " transaction on scope")
       var v = this._getCurrentHub()
-      var /* [auto-meaningful-name] */$$_72_14$e$location = $$_72_14.e().location
+      var /* [auto-meaningful-name] */a$e$location = a.e().location
       var g = $_23_index.b(v, m, this$options$idleTimeout, true, {
-        location: $$_72_14$e$location
+        location: a$e$location
       })
       g.registerBeforeFinishCallback(function (e, n) {
         t._metrics.addPerformanceEntries(e);
@@ -287,7 +287,7 @@ var L = function () {
       })
       return g
     }
-    $$_72_8.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.")
+    o.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.")
   }
   e.id = "BrowserTracing"
   return e
@@ -321,7 +321,7 @@ var A = function () {
         })
       })(this._router, this._methods)
     } else {
-      $$_72_8.a.error("ExpressIntegration is missing an Express instance")
+      o.a.error("ExpressIntegration is missing an Express instance")
     }
   }
   e.id = "Express"
@@ -389,5 +389,5 @@ function M(e, t) {
     }) : e
   })
 }
-export { L as "49__part-3__L" }
-export { A as "49__part-3__A" }
+export { L }
+export { A }

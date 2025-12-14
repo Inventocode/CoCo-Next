@@ -11,10 +11,10 @@ export { a }
 export { s as d }
 export { u as e }
 export { l as c }
-import * as r from "./8"
-import * as i from "./14"
+import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
+import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
 function o() {
-  if (!("fetch" in i.e())) {
+  if (!("fetch" in $$_49_14.e())) {
     return false
   }
   try {
@@ -33,7 +33,7 @@ function s() {
   if (!o()) {
     return false
   }
-  var e = i.e()
+  var e = $$_49_14.e()
   if (a(e.fetch)) {
     return true
   }
@@ -49,7 +49,7 @@ function s() {
       }
       e$document.head.removeChild(s)
     } catch (u) {
-      r.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", u)
+      $$_49_8.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", u)
     }
   }
   return t
@@ -68,7 +68,7 @@ function u() {
   }
 }
 function l() {
-  var e = i.e()
+  var e = $$_49_14.e()
   var /* [auto-meaningful-name] */e$chrome = e.chrome
   var n = e$chrome && e$chrome.app && e$chrome.app.runtime
   var r = "history" in e && !!e.history.pushState && !!e.history.replaceState

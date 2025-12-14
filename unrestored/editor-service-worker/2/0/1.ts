@@ -195,9 +195,11 @@ var n = function (t) {
     t.completion = e
   }
   function E(t) {
-    this.tryEntries = [{
-      tryLoc: "root"
-    }]
+    this.tryEntries = [
+      {
+        tryLoc: "root"
+      }
+    ]
     t.forEach(b, this)
     this.reset(true)
   }

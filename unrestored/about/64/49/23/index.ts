@@ -9,10 +9,10 @@
 export { m as b }
 export { v as a }
 import * as r from "../1"
-import * as /* [auto-meaningful-name] */$$_$$_72_32 from "../../72/32"
+import * as /* [auto-meaningful-name] */$$_$$_16_32 from "../../16/32"
 import * as o from "./37"
-import * as /* [auto-meaningful-name] */$$_$$_72_8 from "../../72/8"
-import * as /* [auto-meaningful-name] */$$_19_index from "../19/index"
+import * as a from "../8"
+import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as u from "./46"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 import * as /* [auto-meaningful-name] */$$_28_29 from "../28/29"
@@ -50,15 +50,15 @@ function p(e, t, n) {
     }
   })), function (e) {
     if (isNaN(e) || "number" !== typeof e && "boolean" !== typeof e) {
-      $$_$$_72_8.a.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + JSON.stringify(e) + " of type " + JSON.stringify(typeof e) + ".")
+      a.a.warn("[Tracing] Given sample rate is invalid. Sample rate must be a boolean or a number between 0 and 1. Got " + JSON.stringify(e) + " of type " + JSON.stringify(typeof e) + ".")
       return false
     }
     if (e < 0 || e > 1) {
-      $$_$$_72_8.a.warn("[Tracing] Given sample rate is invalid. Sample rate must be between 0 and 1. Got " + e + ".")
+      a.a.warn("[Tracing] Given sample rate is invalid. Sample rate must be between 0 and 1. Got " + e + ".")
       return false
     }
     return true
-  }(r) ? r ? (e.sampled = Math.random() < r, e.sampled ? ($$_$$_72_8.a.log("[Tracing] starting " + e.op + " transaction - " + e.name), e) : ($$_$$_72_8.a.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(r) + ")"), e)) : ($$_$$_72_8.a.log("[Tracing] Discarding transaction because " + ("function" === typeof t.tracesSampler ? "tracesSampler returned 0 or false" : "a negative sampling decision was inherited or tracesSampleRate is set to 0")), e.sampled = false, e) : ($$_$$_72_8.a.warn("[Tracing] Discarding transaction because of invalid sample rate."), e.sampled = false, e)) : (e.sampled = false, e)
+  }(r) ? r ? (e.sampled = Math.random() < r, e.sampled ? (a.a.log("[Tracing] starting " + e.op + " transaction - " + e.name), e) : (a.a.log("[Tracing] Discarding transaction because it's not included in the random sample (sampling rate = " + Number(r) + ")"), e)) : (a.a.log("[Tracing] Discarding transaction because " + ("function" === typeof t.tracesSampler ? "tracesSampler returned 0 or false" : "a negative sampling decision was inherited or tracesSampleRate is set to 0")), e.sampled = false, e) : (a.a.warn("[Tracing] Discarding transaction because of invalid sample rate."), e.sampled = false, e)) : (e.sampled = false, e)
   var r
 }
 function h(e, t) {
@@ -89,7 +89,7 @@ function m(e, t, n, i, o) {
 }
 function v() {
   !function () {
-    var e = $$_$$_72_32.c()
+    var e = $$_$$_16_32.c()
     if (e.__SENTRY__) {
       e.__SENTRY__.extensions = e.__SENTRY__.extensions || {}
       if (!e.__SENTRY__.extensions.startTransaction) {
@@ -100,28 +100,28 @@ function v() {
       }
     }
   }()
-  if ($$_19_index.b()) {
+  if ($$_19.b()) {
     (function () {
-      var t = $$_$$_72_32.c()
+      var t = $$_$$_16_32.c()
       if (t.__SENTRY__) {
         var n = {
           mongodb: function () {
-            return new ($$_19_index.a(module, "./integrations/mongo").Mongo)()
+            return new ($$_19.a(module, "./integrations/mongo").Mongo)()
           },
           mongoose: function () {
-            return new ($$_19_index.a(module, "./integrations/mongo").Mongo)({
+            return new ($$_19.a(module, "./integrations/mongo").Mongo)({
               mongoose: true
             })
           },
           mysql: function () {
-            return new ($$_19_index.a(module, "./integrations/mysql").Mysql)()
+            return new ($$_19.a(module, "./integrations/mysql").Mysql)()
           },
           pg: function () {
-            return new ($$_19_index.a(module, "./integrations/postgres").Postgres)()
+            return new ($$_19.a(module, "./integrations/postgres").Postgres)()
           }
         }
         var o = Object.keys(n).filter(function (e) {
-          return !!$$_19_index.c(e)
+          return !!$$_19.c(e)
         }).map(function (e) {
           try {
             return n[e]()

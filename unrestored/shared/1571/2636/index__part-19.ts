@@ -1,0 +1,64 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2636__part-19
+ */
+
+"use strict"
+
+import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import N from "./8"
+import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_188 from "./188"
+import /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$_931 from "./931"
+import /* [auto-meaningful-name] */_$_ from "./931"
+var cn = _React.memo(function (e) {
+  var /* [auto-meaningful-name] */e$networkErrorVisible = e.networkErrorVisible
+  var /* [auto-meaningful-name] */e$title = e.title
+  var o = undefined === e$title ? "" : e$title
+  var /* [auto-meaningful-name] */e$showCloseButton = e.showCloseButton
+  var a = undefined !== e$showCloseButton && e$showCloseButton
+  var /* [auto-meaningful-name] */e$children = e.children
+  var /* [auto-meaningful-name] */e$onRetry = e.onRetry
+  var /* [auto-meaningful-name] */e$onCancelRetry = e.onCancelRetry
+  var /* [auto-meaningful-name] */e$className = e.className
+  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  return React.createElement($_13_index.f, {
+    title: o,
+    className: N(e$className, _$_.networkDialog),
+    visible: e$networkErrorVisible,
+    showCloseButton: a,
+    onClose: function () {
+      return e$onCancelRetry && e$onCancelRetry()
+    },
+    footer: React.createElement("div", {
+      className: _$_.networkFooterWrapper
+    }, React.createElement($_13_index.d, {
+      onClick: function () {
+        if (e$onCancelRetry) {
+          e$onCancelRetry()
+        }
+      }
+    }, $_710_index$a$formatMessage({
+      id: "cancel"
+    })), React.createElement($_13_index.d, {
+      onClick: e$onRetry,
+      type: "primary"
+    }, $_710_index$a$formatMessage({
+      id: "retry"
+    })))
+  }, e$networkErrorVisible && React.createElement($_188.a, null, React.createElement($_188.b, {
+    keys: "enter",
+    callback: e$onRetry
+  })), React.createElement("div", {
+    className: _$_.networkContent
+  }, React.createElement("img", {
+    src: require("./1191"),
+    alt: ""
+  }), React.createElement("div", {
+    className: _$_.networkText
+  }, e$children)))
+})
+export { cn }

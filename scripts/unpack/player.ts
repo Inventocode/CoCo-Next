@@ -10,28 +10,28 @@ async function main(): Promise<void> {
         String(await fs.readFile(path.resolve("unrestored", "shared", "path-map.json")))
     )
 
-    for (const [key, path] of Object.entries(SharedModulesPath)) {
-        SharedModulesPath[key] = path.startsWith("/") ? "../shared" + path : path
-    }
-
     unpack({
         entry: [
-            path.resolve(distPath, "0.dbc064e8.chunk.js"),
-            path.resolve(distPath, "1.9f1213aa.chunk.js"),
-            path.resolve(distPath, "2.590ea185.chunk.js"),
-            path.resolve(distPath, "10.adabbe91.chunk.js"),
-            path.resolve(distPath, "13.ee5dfd72.chunk.js"),
-            path.resolve(distPath, "index.fbac8067.6a5d1e07.chunk.js")
+            path.resolve(distPath, "0.3de57be9.chunk.js"),
+            path.resolve(distPath, "1.a2793f6b.chunk.js"),
+            path.resolve(distPath, "2.b50320a5.chunk.js"),
+            path.resolve(distPath, "10.aa272396.chunk.js"),
+            path.resolve(distPath, "13.60451ca9.chunk.js"),
+            path.resolve(distPath, "index.fbac8067.18b6e373.chunk.js")
         ],
-        externals: [],
+        externals: [
+            ...Object.entries(SharedModulesPath).map(([key, path]) => ({ key, source: path }))
+        ],
         output: {
-            path: path.resolve("unrestored", "player")
+            basePath: process.cwd(),
+            unrestoredPath: "unrestored/player",
+            srcPath: "src",
+            srcUnrestoredPath: "src-unrestored"
         },
         setPath: SetPath.BY_DEPENDENCY,
         publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
-        move: SharedModulesPath,
         nodePolyfill: {
-            251: "global"
+            250: "global"
         }
     })
 }

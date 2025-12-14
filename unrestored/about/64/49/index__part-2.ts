@@ -7,12 +7,12 @@
 "use strict"
 
 import * as c from "./6"
-import * as /* [auto-meaningful-name] */$$_72_14 from "../72/14"
-import * as /* [auto-meaningful-name] */$$_72_8 from "../72/8"
+import * as a from "./14"
+import * as o from "./8"
 import * as i from "./1"
-import * as /* [auto-meaningful-name] */$_19_index from "./19/index"
-import * as /* [auto-meaningful-name] */$$_72_31 from "../72/31"
-import * as /* [auto-meaningful-name] */$$_72_40 from "../72/40"
+import * as d from "./19"
+import * as p from "./31"
+import * as h from "./40"
 var m = function (e, t, n) {
   var /* [auto-meaningful-name] */t$value
   return function (i) {
@@ -80,13 +80,13 @@ var _ = function () {
   }
 }
 var E = {}
-var O = $$_72_14.e()
+var O = a.e()
 var w = function () {
   function e() {
     var e
     this._measurements = {}
     this._performanceCursor = 0
-    if (!$_19_index.b() && (null === (e = O) || undefined === e ? undefined : e.performance)) {
+    if (!d.b() && (null === (e = O) || undefined === e ? undefined : e.performance)) {
       if (O.performance.mark) {
         O.performance.mark("sentry-tracing-init")
       }
@@ -97,14 +97,14 @@ var w = function () {
   }
   e.prototype.addPerformanceEntries = function (e) {
     var t = this
-    if (O && O.performance && O.performance.getEntries && $$_72_31.a) {
-      $$_72_8.a.log("[Tracing] Adding & adjusting spans using Performance API")
+    if (O && O.performance && O.performance.getEntries && p.a) {
+      o.a.log("[Tracing] Adding & adjusting spans using Performance API")
       var /* [auto-meaningful-name] */O$document$scriptsL$src
       var r
       var i
       var a
       var s
-      var u = c.d($$_72_31.a)
+      var u = c.d(p.a)
       if (O.document && O.document.scripts) {
         for (var l = 0; l < O.document.scripts.length; l++) {
           if ("true" === O.document.scripts[l].dataset.entry) {
@@ -211,7 +211,7 @@ var w = function () {
               var h = _(),
                 m = l.startTime < h.firstHiddenTime
               if ("first-paint" === l.name && m) {
-                $$_72_8.a.log("[Measurements] Adding FP")
+                o.a.log("[Measurements] Adding FP")
                 t._measurements.fp = {
                   value: l.startTime
                 }
@@ -220,7 +220,7 @@ var w = function () {
                 }
               }
               if ("first-contentful-paint" === l.name && m) {
-                $$_72_8.a.log("[Measurements] Adding FCP")
+                o.a.log("[Measurements] Adding FCP")
                 t._measurements.fcp = {
                   value: l.startTime
                 }
@@ -273,9 +273,9 @@ var w = function () {
       this._performanceCursor = Math.max(performance.getEntries().length - 1, 0)
       this._trackNavigator(e)
       if ("pageload" === e.op) {
-        var f = c.d($$_72_31.a)
+        var f = c.d(p.a)
         if ("number" === typeof a) {
-          $$_72_8.a.log("[Measurements] Adding TTFB")
+          o.a.log("[Measurements] Adding TTFB")
           this._measurements.ttfb = {
             value: 1e3 * (a - e.startTimestamp)
           }
@@ -291,7 +291,7 @@ var w = function () {
             var i = f + c.d(t$_measurementsN$value)
             var a = Math.abs(1e3 * (i - e.startTimestamp))
             var s = a - t$_measurementsN$value
-            $$_72_8.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
+            o.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
             t._measurements[n].value = a
           }
         })
@@ -313,9 +313,9 @@ var w = function () {
   }
   e.prototype._tagMetricInfo = function (e) {
     if (this._lcpEntry) {
-      $$_72_8.a.log("[Measurements] Adding LCP Data")
+      o.a.log("[Measurements] Adding LCP Data")
       if (this._lcpEntry.element) {
-        e.setTag("lcp.element", $$_72_40.a(this._lcpEntry.element))
+        e.setTag("lcp.element", h.a(this._lcpEntry.element))
       }
       if (this._lcpEntry.id) {
         e.setTag("lcp.id", this._lcpEntry.id)
@@ -326,9 +326,9 @@ var w = function () {
       e.setTag("lcp.size", this._lcpEntry.size)
     }
     if (this._clsEntry && this._clsEntry.sources) {
-      $$_72_8.a.log("[Measurements] Adding CLS Data")
+      o.a.log("[Measurements] Adding CLS Data")
       this._clsEntry.sources.forEach(function (t, n) {
-        return e.setTag("cls.source." + (n + 1), $$_72_40.a(t.node))
+        return e.setTag("cls.source." + (n + 1), h.a(t.node))
       })
     }
   }
@@ -370,7 +370,7 @@ var w = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        $$_72_8.a.log("[Measurements] Adding CLS")
+        o.a.log("[Measurements] Adding CLS")
         e._measurements.cls = {
           value: t.value
         }
@@ -446,9 +446,9 @@ var w = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = c.d($$_72_31.a)
+        var r = c.d(p.a)
         var i = c.d(n.startTime)
-        $$_72_8.a.log("[Measurements] Adding LCP")
+        o.a.log("[Measurements] Adding LCP")
         e._measurements.lcp = {
           value: t.value
         }
@@ -483,9 +483,9 @@ var w = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = c.d($$_72_31.a)
+        var r = c.d(p.a)
         var i = c.d(n.startTime)
-        $$_72_8.a.log("[Measurements] Adding FID")
+        o.a.log("[Measurements] Adding FID")
         e._measurements.fid = {
           value: t.value
         }
@@ -528,4 +528,4 @@ function k(e, t) {
 function T(e) {
   return "number" === typeof e && isFinite(e)
 }
-export { w as "49__part-2__w" }
+export { w }

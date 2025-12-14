@@ -4,7 +4,7 @@
  * 模块 ID：kehq
  */
 
-import { "kehq__part-1__CourseDialogView" as CourseDialogView } from "./template-kehq__part-1"
+import { CourseDialogView } from "./template-kehq__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { CourseDialogView }

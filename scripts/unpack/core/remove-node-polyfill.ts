@@ -10,7 +10,7 @@ export function removeNodePolyfill(
 ): void {
     console.log("removing node polyfill")
     for (const module of Object.values(modules)) {
-        if (module.external != null) {
+        if (module.external != null && !module.moved) {
             continue
         }
         const { AST: { program } } = module

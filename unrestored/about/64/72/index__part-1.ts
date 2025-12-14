@@ -6,12 +6,12 @@
 
 "use strict"
 
-import { "72__part-0__v" as v } from "./index__part-0"
+import { v } from "./index__part-0"
 import * as /* [auto-meaningful-name] */$_36_index from "./36/index"
-import * as g from "./32"
-import * as b from "./8"
-import * as _ from "./14"
-import * as E from "./25"
+import * as /* [auto-meaningful-name] */$$_16_32 from "../16/32"
+import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
+import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
+import * as /* [auto-meaningful-name] */$$_49_25 from "../49/25"
 var O = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/]
 var w = function () {
   function e(t) {
@@ -23,7 +23,7 @@ var w = function () {
   }
   e.prototype.setupOnce = function () {
     $_36_index.b(function (t) {
-      var n = g.b()
+      var n = $$_16_32.b()
       if (!n) {
         return t
       }
@@ -38,7 +38,7 @@ var w = function () {
     })
   }
   e.prototype._shouldDropEvent = function (e, t) {
-    return this._isSentryError(e, t) ? (b.a.warn("Event dropped due to being internal Sentry Error.\nEvent: " + _.d(e)), true) : this._isIgnoredError(e, t) ? (b.a.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + _.d(e)), true) : this._isDeniedUrl(e, t) ? (b.a.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + _.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true) : !this._isAllowedUrl(e, t) && (b.a.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + _.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true)
+    return this._isSentryError(e, t) ? ($$_49_8.a.warn("Event dropped due to being internal Sentry Error.\nEvent: " + $$_49_14.d(e)), true) : this._isIgnoredError(e, t) ? ($$_49_8.a.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + $$_49_14.d(e)), true) : this._isDeniedUrl(e, t) ? ($$_49_8.a.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + $$_49_14.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true) : !this._isAllowedUrl(e, t) && ($$_49_8.a.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + $$_49_14.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true)
   }
   e.prototype._isSentryError = function (e, t) {
     if (!t.ignoreInternal) {
@@ -53,7 +53,7 @@ var w = function () {
   e.prototype._isIgnoredError = function (e, t) {
     return !(!t.ignoreErrors || !t.ignoreErrors.length) && this._getPossibleEventMessages(e).some(function (e) {
       return t.ignoreErrors.some(function (t) {
-        return E.a(e, t)
+        return $$_49_25.a(e, t)
       })
     })
   }
@@ -63,7 +63,7 @@ var w = function () {
     }
     var n = this._getEventFilterUrl(e)
     return !!n && t.denyUrls.some(function (e) {
-      return E.a(n, e)
+      return $$_49_25.a(n, e)
     })
   }
   e.prototype._isAllowedUrl = function (e, t) {
@@ -72,7 +72,7 @@ var w = function () {
     }
     var n = this._getEventFilterUrl(e)
     return !n || t.allowUrls.some(function (e) {
-      return E.a(n, e)
+      return $$_49_25.a(n, e)
     })
   }
   e.prototype._mergeOptions = function (e) {
@@ -99,7 +99,7 @@ var w = function () {
         var o = undefined === t$value ? "" : t$value
         return ["" + o, r + ": " + o]
       } catch (a) {
-        b.a.error("Cannot extract message for event " + _.d(e))
+        $$_49_8.a.error("Cannot extract message for event " + $$_49_14.d(e))
         return []
       }
     }
@@ -130,11 +130,11 @@ var w = function () {
       }
       return null
     } catch (r) {
-      b.a.error("Cannot extract url for event " + _.d(e))
+      $$_49_8.a.error("Cannot extract url for event " + $$_49_14.d(e))
       return null
     }
   }
   e.id = "InboundFilters"
   return e
 }()
-export { w as "72__part-1__w" }
+export { w }

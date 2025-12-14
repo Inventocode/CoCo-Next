@@ -10,7 +10,8 @@ export default defineConfig([
   {
     files: [
       "src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
-      "unrestored/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
+      "unrestored/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
+      "src-unrestored/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
     ],
     languageOptions: {
       globals: globals.browser,
@@ -32,7 +33,11 @@ export default defineConfig([
         },
         "multilineDetection": "brackets"
       }],
-      "@stylistic/eol-last": ["error", "always"]
+      "@stylistic/eol-last": ["warn", "always"],
+      "@stylistic/function-paren-newline": ["warn"],
+      "@stylistic/indent": ["error", 2],
+      "@stylistic/array-bracket-newline": ["warn"],
+      "@stylistic/type-annotation-spacing": ["warn"]
     }
   }
 ])

@@ -6,22 +6,22 @@
 
 "use strict"
 
-import { "49__part-0__r" as r } from "./index__part-0"
-import { "49__part-3__L" as L } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$$_72_9 from "../72/9"
-import * as /* [auto-meaningful-name] */$_19_index from "./19/index"
+import { r } from "./index__part-0"
+import { L } from "./index__part-3"
+import * as C from "./9"
+import * as d from "./19"
 import * as /* [auto-meaningful-name] */$_23_index from "./23/index"
-import * as /* [auto-meaningful-name] */$$_72_8 from "../72/8"
+import * as o from "./8"
 import * as i from "./1"
-import * as /* [auto-meaningful-name] */$$_72_17_index from "../72/17/index"
+import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
 var U = function () {
   function e() {
     this.name = e.id
   }
   e.prototype.setupOnce = function (e, t) {
-    var n = $_19_index.c("pg")
+    var n = d.c("pg")
     if (n) {
-      $$_72_17_index.c(n.Client.prototype, "query", function (e) {
+      $_17_index.c(n.Client.prototype, "query", function (e) {
         return function (n, r, i) {
           var o
           var a
@@ -49,7 +49,7 @@ var U = function () {
             })
           }
           var l = "undefined" !== typeof r ? e.call(this, n, r) : e.call(this, n)
-          return $$_72_9.m(l) ? l.then(function (e) {
+          return C.m(l) ? l.then(function (e) {
             var t
             if (!(null === (t = u) || undefined === t)) {
               t.finish()
@@ -59,7 +59,7 @@ var U = function () {
         }
       })
     } else {
-      $$_72_8.a.error("Postgres Integration was unable to require `pg` package.")
+      o.a.error("Postgres Integration was unable to require `pg` package.")
     }
   }
   e.id = "Postgres"
@@ -70,9 +70,9 @@ var z = function () {
     this.name = e.id
   }
   e.prototype.setupOnce = function (e, t) {
-    var n = $_19_index.c("mysql/lib/Connection.js")
+    var n = d.c("mysql/lib/Connection.js")
     if (n) {
-      $$_72_17_index.c(n, "createQuery", function (e) {
+      $_17_index.c(n, "createQuery", function (e) {
         return function (n, r, i) {
           var o
           var a
@@ -96,7 +96,7 @@ var z = function () {
         }
       })
     } else {
-      $$_72_8.a.error("Mysql Integration was unable to require `mysql` package.")
+      o.a.error("Mysql Integration was unable to require `mysql` package.")
     }
   }
   e.id = "Mysql"
@@ -138,11 +138,11 @@ var q = function () {
   }
   e.prototype.setupOnce = function (e, t) {
     var n = this._useMongoose ? "mongoose" : "mongodb"
-    var r = $_19_index.c(n)
+    var r = d.c(n)
     if (r) {
       this._instrumentOperations(r.Collection, this._operations, t)
     } else {
-      $$_72_8.a.error("Mongo Integration was unable to require `" + n + "` package.")
+      o.a.error("Mongo Integration was unable to require `" + n + "` package.")
     }
   }
   e.prototype._instrumentOperations = function (e, t, n) {
@@ -154,7 +154,7 @@ var q = function () {
   e.prototype._patchOperation = function (e, t, n) {
     if (t in e.prototype) {
       var r = this._getSpanContextFromOperationArguments.bind(this)
-      $$_72_17_index.c(e.prototype, t, function (e) {
+      $_17_index.c(e.prototype, t, function (e) {
         return function () {
           for (var o, a, s, u, l = [], c = 0; c < arguments.length; c++) {
             l[c] = arguments[c]
@@ -165,7 +165,7 @@ var q = function () {
           if ("function" !== typeof f || "mapReduce" === t && 2 === l.length) {
             var h = null === (a = p) || undefined === a ? undefined : a.startChild(r(this, t, l))
             var m = e.call.apply(e, i.e([this], l))
-            return $$_72_9.m(m) ? m.then(function (e) {
+            return C.m(m) ? m.then(function (e) {
               var t
               if (!(null === (t = h) || undefined === t)) {
                 t.finish()
@@ -174,13 +174,15 @@ var q = function () {
             }) : (null === (s = h) || undefined === s || s.finish(), m)
           }
           var v = null === (u = p) || undefined === u ? undefined : u.startChild(r(this, t, l.slice(0, -1)))
-          return e.call.apply(e, i.e([this], l.slice(0, -1), [function (e, t) {
-            var n
-            if (!(null === (n = v) || undefined === n)) {
-              n.finish()
+          return e.call.apply(e, i.e([this], l.slice(0, -1), [
+            function (e, t) {
+              var n
+              if (!(null === (n = v) || undefined === n)) {
+                n.finish()
+              }
+              f(e, t)
             }
-            f(e, t)
-          }]))
+          ]))
         }
       })
     }
@@ -223,7 +225,7 @@ var H = i.a(i.a({}, r), {
   BrowserTracing: L
 })
 $_23_index.a()
-export { U as "49__part-4__U" }
-export { z as "49__part-4__z" }
-export { q as "49__part-4__q" }
-export { H as "49__part-4__H" }
+export { U }
+export { z }
+export { q }
+export { H }

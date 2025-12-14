@@ -5,6 +5,6 @@
  */
 
 import "./33__part-0"
-import { "33__part-1__o" as o } from "./33__part-1"
+import { o } from "./33__part-1"
 export { o as a }
 export default o

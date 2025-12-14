@@ -4,7 +4,7 @@
  * 模块 ID：+NBU
  */
 
-import { "+NBU__part-1__PreviewTemplateView" as PreviewTemplateView } from "./template-+NBU__part-1"
+import { PreviewTemplateView } from "./template-+NBU__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { PreviewTemplateView }

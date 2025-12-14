@@ -4,7 +4,7 @@
  * 模块 ID：+DtV
  */
 
-import { "+DtV__part-1__HomeView" as HomeView } from "./template-+DtV__part-1"
+import { HomeView } from "./template-+DtV__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { HomeView }

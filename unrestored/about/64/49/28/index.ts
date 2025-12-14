@@ -9,8 +9,8 @@
 export { l as a }
 export { f as b }
 import * as r from "../1"
-import * as /* [auto-meaningful-name] */$$_$$_72_31 from "../../72/31"
-import * as /* [auto-meaningful-name] */$$_$$_72_8 from "../../72/8"
+import * as /* [auto-meaningful-name] */$$_31 from "../31"
+import * as o from "../8"
 import * as a from "./24"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as u from "./29"
@@ -31,7 +31,7 @@ var c = function (e) {
     var n = this
     if (t.spanId !== this.transactionSpanId) {
       t.finish = function (e) {
-        t.endTimestamp = "number" === typeof e ? e : $$_$$_72_31.d()
+        t.endTimestamp = "number" === typeof e ? e : $$_31.d()
         n._popActivity(t.spanId)
       }
       if (undefined === t.endTimestamp) {
@@ -61,7 +61,7 @@ var f = function (e) {
     a._beforeFinishCallbacks = []
     if (n && i) {
       d(n)
-      $$_$$_72_8.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
+      o.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
       n.configureScope(function (e) {
         return e.setSpan(a)
       })
@@ -79,12 +79,12 @@ var f = function (e) {
     var /* [auto-meaningful-name] */l$return
     var u = this
     if (undefined === t) {
-      t = $$_$$_72_31.d()
+      t = $$_31.d()
     }
     this._finished = true
     this.activities = {}
     if (this.spanRecorder) {
-      $$_$$_72_8.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
+      o.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
       try {
         for (var l = r.f(this._beforeFinishCallbacks), c = l.next(); !c.done; c = l.next()) {
           (0, c.value)(this, t)
@@ -111,17 +111,17 @@ var f = function (e) {
         if (!e.endTimestamp) {
           e.endTimestamp = t
           e.setStatus($$_12.a.Cancelled)
-          $$_$$_72_8.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
+          o.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
         }
         var n = e.startTimestamp < t
         if (!n) {
-          $$_$$_72_8.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
+          o.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
         }
         return n
       })
-      $$_$$_72_8.a.log("[Tracing] flushing IdleTransaction")
+      o.a.log("[Tracing] flushing IdleTransaction")
     } else {
-      $$_$$_72_8.a.log("[Tracing] No active IdleTransaction")
+      o.a.log("[Tracing] No active IdleTransaction")
     }
     if (this._onScope) {
       d(this._idleHub)
@@ -143,7 +143,7 @@ var f = function (e) {
           t._popActivity(e)
         }
       }, this.spanId, e)
-      $$_$$_72_8.a.log("Starting heartbeat")
+      o.a.log("Starting heartbeat")
       this._pingHeartbeat()
     }
     this.spanRecorder.add(this)
@@ -153,20 +153,20 @@ var f = function (e) {
       clearTimeout(this._initTimeout)
       this._initTimeout = undefined
     }
-    $$_$$_72_8.a.log("[Tracing] pushActivity: " + e)
+    o.a.log("[Tracing] pushActivity: " + e)
     this.activities[e] = true
-    $$_$$_72_8.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+    o.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
   }
   t.prototype._popActivity = function (e) {
     var t = this
     if (this.activities[e]) {
-      $$_$$_72_8.a.log("[Tracing] popActivity " + e)
+      o.a.log("[Tracing] popActivity " + e)
       delete this.activities[e]
-      $$_$$_72_8.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+      o.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
     }
     if (0 === Object.keys(this.activities).length) {
       var /* [auto-meaningful-name] */this$_idleTimeout = this._idleTimeout
-      var r = $$_$$_72_31.d() + this$_idleTimeout / 1e3
+      var r = $$_31.d() + this$_idleTimeout / 1e3
       setTimeout(function () {
         if (!t._finished) {
           t.finish(r)
@@ -188,7 +188,7 @@ var f = function (e) {
       }
       this._prevHeartbeatString = t
       if (this._heartbeatCounter >= 3) {
-        $$_$$_72_8.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
+        o.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
         this.setStatus($$_12.a.DeadlineExceeded)
         this.setTag("heartbeat", "failed")
         this.finish()
@@ -199,7 +199,7 @@ var f = function (e) {
   }
   t.prototype._pingHeartbeat = function () {
     var e = this
-    $$_$$_72_8.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
+    o.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
     this._heartbeatTimer = setTimeout(function () {
       e._beat()
     }, 5e3)

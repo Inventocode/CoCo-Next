@@ -4,7 +4,7 @@
  * 模块 ID：Fp3z
  */
 
-import { "Fp3z__part-1__CommonToastView" as CommonToastView } from "./template-Fp3z__part-1"
+import { CommonToastView } from "./template-Fp3z__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { CommonToastView }

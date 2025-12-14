@@ -7,7 +7,7 @@
 "use strict"
 
 var r
-import * as i from "./9"
+import * as /* [auto-meaningful-name] */$$_49_9 from "../49/9"
 !function (e) {
   e.PENDING = "PENDING"
   e.RESOLVED = "RESOLVED"
@@ -26,7 +26,7 @@ var o = function () {
     }
     this._setResult = function (e, n) {
       if (t._state === r.PENDING) {
-        if (i.m(n)) {
+        if ($$_49_9.m(n)) {
           n.then(t._resolve, t._reject)
         } else {
           t._state = e
@@ -160,4 +160,4 @@ var o = function () {
   }
   return e
 }()
-export { o as "33__part-1__o" }
+export { o }

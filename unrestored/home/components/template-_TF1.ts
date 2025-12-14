@@ -4,7 +4,7 @@
  * 模块 ID：/TF1
  */
 
-import { "/TF1__part-1__ConfirmDialogView" as ConfirmDialogView } from "./template-_TF1__part-1"
+import { ConfirmDialogView } from "./template-_TF1__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { ConfirmDialogView }

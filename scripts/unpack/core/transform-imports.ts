@@ -14,11 +14,10 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
-        if (module.external != null) {
+        if (module.external != null && !module.moved) {
             bar.increment()
             continue
         }
-        let importedModuleKey: ModuleKey | null = null
         const defaultImportIdentifiers: t.Identifier[] = []
         traverse(module.AST, {
             // 静态导入
@@ -41,11 +40,10 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                         t.isIdentifier(init.node.callee.object) &&
                         init.node.callee.object.name == module.args[2] &&
                         init.scope.getBinding(init.node.callee.object.name) == null &&
-                        t.isIdentifier(init.node.callee.property) &&
-                        init.node.callee.property.name == "n"
+                        t.isIdentifier(init.node.callee.property, { name: "n" })
                     ) {
                         if (!(config.useESImport ?? true)) {
-                            return
+                            continue
                         }
                         isDefault = true
                     } else if (!(
@@ -56,12 +54,14 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                         continue
                     }
                     path.skip()
+                    let importedModuleKey: ModuleKey | null = null
                     for (const argument of init.get("arguments")) {
                         if (!argument.isStringLiteral() && !argument.isNumericLiteral()) {
                             continue
                         }
                         importedModuleKey = argument.node.value
                     }
+                    importedModuleKey ??= path.node.extra?.["importedModuleKey"] as ModuleKey
                     if (importedModuleKey == null) {
                         continue
                     }

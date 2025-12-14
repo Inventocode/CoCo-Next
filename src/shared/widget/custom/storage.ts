@@ -1,11 +1,15 @@
-"use strict"
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：96
+ */
 
 export { addUnsafeExtension as a }
 export { getExtension as f }
 export { unsafeExtensionsToFileStorage as e }
 export { safeExtensionsToFileStorage as d }
 
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_9 = require("../../../../unrestored/shared/1531/2584/9")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
 
 import * as types from "./types"
 import * as Type from "./type"
@@ -50,15 +54,15 @@ export function getUnsafeExtension(type: string) {
 
 export function unsafeExtensionsToFileStorage(): UnsafeExtensionFileStorage[] {
   return Array.from(unsafeExtensions.values()).
-  filter(({ type }) => Type.isExtensions(type)).
-  map(({ type, code }) => ({ type, code }))
+    filter(({ type }) => Type.isExtensions(type)).
+    map(({ type, code }) => ({ type, code }))
 }
 
 export function safeExtensionsToFileStorage() {
   const safeExtensionsArray = Array.from(safeExtensions.values())
   const storage: SafeExtensionFileStorage[] = []
   safeExtensionsArray.forEach(({ id, type, cdnUrl }) => {
-    if ($$_$$_$$_$$_unrestored_shared_1531_2584_9.Mb(type)) {
+    if ($$_$$_$$_$$_unrestored_shared_1571_2636_9.Mb(type)) {
       storage.push({ id, type, cdnUrl })
     }
   })

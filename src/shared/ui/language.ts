@@ -6,22 +6,10 @@ export { f as a }
 export { format as c }
 export { g as f }
 export { _ as d }
-import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_6 = require("../../../unrestored/shared/1531/2584/6")
-import React = require("react")
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_2628_index = require("../../../unrestored/shared/1531/2584/2628/index")
-import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_10_index = require("../../../unrestored/shared/1531/2584/10/index")
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../unrestored/shared/1571/2636/6"
+import React from "react"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2681_index from "../../../unrestored/shared/1571/2636/2681/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../unrestored/shared/1571/2636/10/index"
 var c = {
   mustToBeString: "{name} 必须是字符串",
   mustToBeNumber: "{name} 必须是数值",
@@ -109,14 +97,14 @@ var c = {
 var l = function () {
   var e = {}
   Object.entries(c).forEach(function (t) {
-    var n = $$_$$_$$_unrestored_shared_1531_2584_10_index.a(t, 2)
+    var n = $$_$$_$$_unrestored_shared_1571_2636_10_index.a(t, 2)
     var r = n[0]
     var o = n[1]
     return e["player/" + r] = o
   })
   return e
 }()
-var u = $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, {
+var u = $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571_2636_6.a({}, {
   run: "运行",
   save: "保存",
   notSave: "不保存",
@@ -1024,7 +1012,7 @@ function f(e) {
     Object.assign(p[t], e[t])
   }
 }
-var h = $$_$$_$$_unrestored_shared_1531_2584_2628_index.a({
+var h = $$_$$_$$_unrestored_shared_1571_2636_2681_index.a({
   locale: zh_CN,
   messages: p[zh_CN]
 })
@@ -1048,24 +1036,24 @@ function _(e, t) {
   t = t || {}
   return h.formatMessage({
     id: e
-  }, $$_$$_$$_unrestored_shared_1531_2584_6.a($$_$$_$$_unrestored_shared_1531_2584_6.a({}, t), {}, {
+  }, $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571_2636_6.a({}, t), {}, {
     p: function () {
       for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return i.a.createElement("p", null, t)
+      return React.a.createElement("p", null, t)
     },
     span: function () {
       for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return i.a.createElement("span", null, t)
+      return React.a.createElement("span", null, t)
     },
     b: function () {
       for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return i.a.createElement("b", null, t)
+      return React.a.createElement("b", null, t)
     }
   }))
 }

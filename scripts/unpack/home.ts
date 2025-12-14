@@ -5,11 +5,9 @@ const distPath: string = path.resolve("public", "creation.codemao.cn", "coco", "
 
 unpack({
     entry: [
-        path.resolve(distPath, "commons.45126324b4177c062c0e.js"),
-        path.resolve(distPath, "coco.e05e13740860acc49eec.js"),
-        path.resolve(distPath, "work.f8567516d16b8c00ab38.js"),
-        path.resolve(distPath, "1.035cad6653e8655c2224.js"),
-        path.resolve(distPath, "2.33ab4423f02dd74059fb.js")
+        path.resolve(distPath, "commons.abcbc2e5b889aff92f60.js"),
+        path.resolve(distPath, "coco.68b628c42c02a09917c6.js"),
+        path.resolve(distPath, "work.8bf5adc29b1d512720c7.js")
     ],
     externals: [
         {
@@ -105,8 +103,17 @@ unpack({
         }
     ],
     output: {
-        path: path.resolve("unrestored", "home")
+        basePath: process.cwd(),
+        unrestoredPath: "unrestored/home",
+        srcPath: "src",
+        srcUnrestoredPath: "src-unrestored"
     },
     publicPath: "https://creation.codemao.cn/coco/home/dist/",
-    setPath: SetPath.BY_IMPORT_NAME
+    setPath: SetPath.BY_IMPORT_NAME,
+    nodePolyfill: {
+        "3IRH": "module",
+        "f1Eh": "module",
+        "DuR2": "global",
+        "W2nU": "process"
+    }
 })

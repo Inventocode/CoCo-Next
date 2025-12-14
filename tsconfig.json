@@ -23,6 +23,9 @@
         "noUnusedParameters": true,
         "types": [
             "./node_modules/network-information-types"
+        ],
+        "plugins": [
+            { "name": "typescript-plugin-css-modules" }
         ]
     },
     "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*", "src/shared/widget/custom/.ts"],

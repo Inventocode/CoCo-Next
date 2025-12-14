@@ -4,7 +4,7 @@
  * 模块 ID：ReOC
  */
 
-import { "ReOC__part-1__PlayCourseVideoView" as PlayCourseVideoView } from "./template-ReOC__part-1"
+import { PlayCourseVideoView } from "./template-ReOC__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { PlayCourseVideoView }

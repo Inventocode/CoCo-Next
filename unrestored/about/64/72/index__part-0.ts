@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { "72__part-1__w" as w } from "./index__part-1"
+import { w } from "./index__part-1"
 var r = {}
 Object.defineProperty(r, "FunctionToString", {
   get: function () {
@@ -191,12 +191,13 @@ function v() {
   }
   return e
 }
-export { r as "72__part-0__r" }
-export { _6$11$0 as "72__part-0__i" }
-export { a as "72__part-0__a" }
-export { u as "72__part-0__u" }
-export { l as "72__part-0__l" }
-export { f as "72__part-0__f" }
-export { p as "72__part-0__p" }
-export { h as "72__part-0__h" }
-export { v as "72__part-0__v" }
+export { r }
+export { _6$11$0 as i }
+export { a }
+export { u }
+export { l }
+export { f }
+export { p }
+export { h }
+export { v }
+export default a

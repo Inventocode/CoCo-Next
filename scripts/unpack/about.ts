@@ -14,8 +14,21 @@ unpack({
         { key: 48, source: "react-dom" }
     ],
     output: {
-        path: path.resolve("unrestored", "about")
+        basePath: process.cwd(),
+        unrestoredPath: "unrestored/about",
+        srcPath: "src",
+        srcUnrestoredPath: "src-unrestored"
     },
     publicPath: "https://creation.codemao.cn/appcraft-about/web/0.1.0/",
-    setPath: SetPath.BY_DEPENDENCY
+    setPath: SetPath.BY_DEPENDENCY,
+    moveToSrc: {
+        4: "/about/styles.module",
+        "64__part-2": "/about/language",
+        "64__part-3": "/about/app"
+    },
+    nodePolyfill: {
+        38: "module",
+        44: "global",
+        56: "process"
+    }
 })

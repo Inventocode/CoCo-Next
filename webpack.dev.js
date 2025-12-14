@@ -2,8 +2,8 @@ const path = require("path")
 const webpack = require("webpack")
 const { merge } = require("webpack-merge")
 
-const common = require("./webpack.common.js")
-const server = require("./webpack.server.js")
+const common = require("./webpack.common")
+const server = require("./webpack.server")
 
 /** @type {webpack.Configuration} */
 const config = merge(common, server, {
@@ -19,7 +19,8 @@ const config = merge(common, server, {
         rules: [
             {
                 test: /\.css$/,
-                use: ["style-loader", "css-loader"]
+                use: "style-loader",
+                enforce: "post"
             }
         ]
     }

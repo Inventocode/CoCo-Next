@@ -1,5 +1,6 @@
 import traverse, { NodePath } from "@babel/traverse"
 import * as t from "@babel/types"
+import * as template from "@babel/template"
 import cliProgress from "cli-progress"
 
 import { Module, ModuleKey, ModuleMap } from "./types"
@@ -13,10 +14,6 @@ export function buildDependencies(modules: ModuleMap): void {
     const bar = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic)
     bar.start(Object.keys(modules).length, 0)
     for (const module of Object.values(modules)) {
-        if (module.external != null && !module.external.startsWith(".")) {
-            bar.increment()
-            continue
-        }
         function addImports(key: ModuleKey, name: string): void {
             if (
                 /^__WEBPACK_IMPORTED_MODULE_[0-9]+_/.test(name) ||
@@ -34,6 +31,7 @@ export function buildDependencies(modules: ModuleMap): void {
             importedModule.reference.add(module)
             importedModule.isEntry = false
         }
+        let importedModuleKey: ModuleKey | null = null
         traverse(module.AST, {
             VariableDeclaration(path: NodePath<t.VariableDeclaration>): void {
                 if (path.node.declarations.length != 1) {
@@ -49,7 +47,6 @@ export function buildDependencies(modules: ModuleMap): void {
                     }
                     if (localNameNodePath.node.name.endsWith("_default")) {
                         module.AST.program.sourceType = "module"
-                        continue
                     }
                     const localName: string = localNameNodePath.node.name
                     const init: NodePath<t.Node | null | undefined> = declaration.get("init")
@@ -61,10 +58,13 @@ export function buildDependencies(modules: ModuleMap): void {
                         t.isIdentifier(init.node.callee.object) &&
                         init.node.callee.object.name == module.args[2] &&
                         init.scope.getBinding(init.node.callee.object.name) == null &&
-                        t.isIdentifier(init.node.callee.property) &&
-                        init.node.callee.property.name == "n"
+                        t.isIdentifier(init.node.callee.property, { name: "n" })
                     ) {
                         module.AST.program.sourceType = "module"
+                        path.node.extra ??= {}
+                        path.node.extra["isImport"] = true
+                        path.node.extra["isImportDefault"] = true
+                        path.node.extra["importedModuleKey"] = importedModuleKey
                     }
                     if (!(
                         t.isIdentifier(init.node.callee) &&
@@ -77,13 +77,16 @@ export function buildDependencies(modules: ModuleMap): void {
                         if (!argument.isStringLiteral() && !argument.isNumericLiteral()) {
                             continue
                         }
-                        const importedModuleKey: ModuleKey = argument.node.value
+                        importedModuleKey = argument.node.value
                         let importedModule: Module
                         try {
                             importedModule = getModuleByKey(modules, importedModuleKey)
                         } catch (error) {
                             return
                         }
+                        path.node.extra ??= {}
+                        path.node.extra["isImport"] = true
+                        path.node.extra["importedModuleKey"] = importedModuleKey
                         addImports(importedModuleKey, localName)
                         module.importsNameToModuleMap[localName] = importedModule
                     }
@@ -101,6 +104,12 @@ export function buildDependencies(modules: ModuleMap): void {
                         !importedModuleKey.isStringLiteral()
                     ) {
                         return
+                    }
+                    const { parentPath } = path
+                    if (parentPath.parentPath?.isProgram()) {
+                        const { node: parent } = parentPath
+                        parent.extra ??= {}
+                        parent.extra["isImport"] = true
                     }
                     addImports(importedModuleKey.node.value, "unnamed")
                 } else if (
@@ -154,6 +163,18 @@ export function buildDependencies(modules: ModuleMap): void {
         traverse(module.AST, {
             MemberExpression(path: NodePath<t.MemberExpression>): void {
                 const object: NodePath<t.Expression> = path.get("object")
+                const property: NodePath<t.PrivateName | t.Expression> = path.get("property")
+                if (
+                    path.isMemberExpression({ computed: false }) &&
+                    object.isIdentifier({ name: module.args[1] }) &&
+                    object.scope.getBinding(module.args[1]!) == null
+                ) {
+                    const statementPath = path.getStatementParent()
+                    if (statementPath?.parentPath?.isProgram()) {
+                        statementPath.node.extra ??= {}
+                        statementPath.node.extra["isExport"] = true
+                    }
+                }
                 if (!object.isIdentifier()) {
                     return
                 }
@@ -162,7 +183,6 @@ export function buildDependencies(modules: ModuleMap): void {
                 if (importedModule == undefined) {
                     return
                 }
-                const property: NodePath<t.PrivateName | t.Expression> = path.get("property")
                 if (!property.isStringLiteral()) {
                     return
                 }
@@ -204,6 +224,8 @@ export function buildDependencies(modules: ModuleMap): void {
                 )) {
                     return
                 }
+                path.node.extra ??= {}
+                path.node.extra["isExport"] = true
                 const exportedNameNodePath: NodePath = args[1]!
                 exportedNameNodePath.assertStringLiteral()
                 const exportedName: string = exportedNameNodePath.node.value
@@ -241,6 +263,53 @@ export function buildDependencies(modules: ModuleMap): void {
                         configurable: true,
                         enumerable: true
                     })
+                }
+            },
+            AssignmentExpression(path: NodePath<t.AssignmentExpression>): void {
+                if (path.node.operator != "=") {
+                    return
+                }
+                const memberExpression: NodePath = path.get("left")
+                if (!(
+                    memberExpression.isMemberExpression() &&
+                    t.isIdentifier(memberExpression.node.object, { name: module.args[1]! }) &&
+                    path.scope.getBinding(memberExpression.node.object.name) == null
+                )) {
+                    return
+                }
+                const statementPath = path.getStatementParent()
+                if (statementPath?.parentPath?.isProgram()) {
+                    statementPath.node.extra ??= {}
+                    statementPath.node.extra["isExport"] = true
+                }
+            }
+        })
+        traverse(module.AST, {
+            CallExpression(path: NodePath<t.CallExpression>): void {
+                const calleePath: NodePath = path.get("callee")
+                if (!calleePath.isMemberExpression({ computed: false })) {
+                    return
+                }
+                const calleeObject = calleePath.get("object")
+                const calleeProperty = calleePath.get("property")
+                const args = path.get("arguments")
+                if ((
+                    calleeObject.isIdentifier({ name: module.args[2] }) &&
+                    calleeObject.scope.getBinding(calleeObject.node.name) == null &&
+                    calleeProperty.isIdentifier({ name: "r" })
+                ) || (
+                    module.AST.program.sourceType == "module" &&
+                    calleeObject.isIdentifier({ name: "Object" }) &&
+                    calleeProperty.isIdentifier({ name: "defineProperty" }) &&
+                    args[0]?.isIdentifier({ name: module.args[1] }) &&
+                    args[0].scope.getBinding(module.args[1]!) == null &&
+                    args[1]?.isStringLiteral({ value: "__esModule" })
+                )) {
+                    if (module.AST.program.sourceType == "module") {
+                        path.remove()
+                    } else {
+                        calleePath.replaceWith(DEFINE_ES_MODULE_TEMPLATE())
+                    }
                 }
             }
         })
@@ -313,3 +382,16 @@ export function buildDependencies(modules: ModuleMap): void {
     }
     bar.stop()
 }
+
+const DEFINE_ES_MODULE_TEMPLATE = template.expression(`
+    ${(function __defineESModule(exports: unknown): void {
+        if (typeof Symbol != "undefined" && Symbol.toStringTag) {
+            Object.defineProperty(exports, Symbol.toStringTag, {
+                value: "Module"
+            })
+        }
+        Object.defineProperty(exports, "__esModule", {
+            value: true
+        })
+    }).toString()}
+`)

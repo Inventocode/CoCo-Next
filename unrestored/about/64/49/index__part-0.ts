@@ -6,8 +6,8 @@
 
 "use strict"
 
-import { "49__part-3__A" as A } from "./index__part-3"
-import { "49__part-4__U" as U, "49__part-4__z" as z, "49__part-4__q" as q } from "./index__part-4"
+import { A } from "./index__part-3"
+import { U, z, q } from "./index__part-4"
 var r = {}
 Object.defineProperty(r, "Express", {
   get: function () {
@@ -29,4 +29,4 @@ Object.defineProperty(r, "Mongo", {
     return q
   }
 })
-export { r as "49__part-0__r" }
+export { r }

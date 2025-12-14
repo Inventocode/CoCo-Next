@@ -22,52 +22,52 @@ export { Widget as a }
 export { ge as b }
 
 import BabelRuntimeHelperRegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_7 = require("../../../../unrestored/shared/1531/2584/7")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_6 = require("../../../../unrestored/shared/1531/2584/6")
-import AntdMobile = require("antd-mobile")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
+import * as AntdMobile from "antd-mobile"
 import Color from "color"
 import React, { ReactNode } from "react"
 import Lodash from "lodash"
-import /* [auto-meaningful-name] */$$_$$_utils_network_axiosWithCredentials = require("../../utils/network/axios-with-credentials")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_227_index = require("../../../../unrestored/shared/1531/2584/227/index")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_60 = require("../../../../unrestored/shared/1531/2584/60")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_9 = require("../../../../unrestored/shared/1531/2584/9")
+import { axiosWithCredentials } from "../../utils/network/axios-with-credentials"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_228_index from "../../../../unrestored/shared/1571/2636/228/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_60 from "../../../../unrestored/shared/1571/2636/60"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
 import * as Language from "../../ui/language"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_49 = require("../../../../unrestored/shared/1531/2584/49")
-import ExternalModule = require("./external-module")
-import Event = require("../../events/actions")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../unrestored/shared/1571/2636/49"
+import * as ExternalModule from "./external-module"
+import * as EventStore from "../../events/store"
 import * as Message from "../../events/messages-wrapper"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_15 = require("../../../../unrestored/shared/1531/2584/15")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_53 = require("../../../../unrestored/shared/1531/2584/53")
-import /* [auto-meaningful-name] */$_shop = require("./shop")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
+import * as Shop from "./shop"
 import * as restrict from "./restrict"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_21_index = require("../../../../unrestored/shared/1531/2584/21/index")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_55 = require("../../../../unrestored/shared/1531/2584/55")
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1531_2584_301_85 = require("../../../../unrestored/shared/1531/2584/301/85")
-import Type = require("./type")
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_index from "../../../../unrestored/shared/1571/2636/20/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_55 from "../../../../unrestored/shared/1571/2636/55"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../unrestored/shared/1571/2636/301/85"
+import * as Type from "./type"
 
-import * as /* [auto-meaningful-name] */$_types from "./types"
+import * as types from "./types"
 import * as Internal from "../internal/types"
 
-class InvisibleWidget implements $_types.InvisibleWidget {
+class InvisibleWidget implements types.InvisibleWidget {
 
   public __widgetId: string
   public __widgetType: string
 
-  public constructor(props: $_types.InvisibleWidgetProps) {
+  public constructor(props: types.InvisibleWidgetProps) {
     this.__widgetId = props.__widgetId
     this.__widgetType = props.__widgetType
   }
 
   public emit(this: this, key: string, ...args: unknown[]): void {
-    $$_$$_$$_$$_unrestored_shared_1531_2584_21_index.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args])
+    $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args])
   }
 
   public widgetLog(this: this, message: string, values?: unknown): void {
     if (!Type.isExtensions(this.__widgetType)) {
-      message = $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(this.__widgetType, message)
+      message = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(this.__widgetType, message)
     }
-    $$_$$_$$_$$_unrestored_shared_1531_2584_55.b.widgetLog({
+    $$_$$_$$_$$_unrestored_shared_1571_2636_55.b.widgetLog({
       widgetId: this.__widgetId,
       widgetType: this.__widgetType,
       message,
@@ -77,9 +77,9 @@ class InvisibleWidget implements $_types.InvisibleWidget {
 
   public widgetWarn(this: this, message: string, values?: unknown): void {
     if (!Type.isExtensions(this.__widgetType)) {
-      message = $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(this.__widgetType, message)
+      message = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(this.__widgetType, message)
     }
-    $$_$$_$$_$$_unrestored_shared_1531_2584_55.b.widgetWarn({
+    $$_$$_$$_$$_unrestored_shared_1571_2636_55.b.widgetWarn({
       widgetId: this.__widgetId,
       widgetType: this.__widgetType,
       message,
@@ -89,9 +89,9 @@ class InvisibleWidget implements $_types.InvisibleWidget {
 
   public widgetError(this: this, message: string, values?: unknown): void {
     if (!Type.isExtensions(this.__widgetType)) {
-      message = $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(this.__widgetType, message)
+      message = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(this.__widgetType, message)
     }
-    $$_$$_$$_$$_unrestored_shared_1531_2584_55.b.widgetError({
+    $$_$$_$$_$$_unrestored_shared_1571_2636_55.b.widgetError({
       widgetId: this.__widgetId,
       widgetType: this.__widgetType,
       message,
@@ -114,14 +114,14 @@ enum BlockOlder {
   GETORDER = 4e4,
 }
 
-class VisibleWidget implements $_types.VisibleWidget {
+class VisibleWidget implements types.VisibleWidget {
 
   public __widgetId: string
   public __widgetType: string
   public __width: number
   public __height: number
 
-  public constructor(props: $_types.VisibleWidgetProps) {
+  public constructor(props: types.VisibleWidgetProps) {
     this.__widgetId = props.__widgetId
     this.__widgetType = props.__widgetType
     this.__width = props.__width
@@ -129,14 +129,14 @@ class VisibleWidget implements $_types.VisibleWidget {
   }
 
   public emit(this: this, key: string, ...args: unknown[]): void {
-    $$_$$_$$_$$_unrestored_shared_1531_2584_21_index.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args])
+    $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.emitWidgetEvent.apply(undefined, [this.__widgetType, key, this.__widgetId, ...args])
   }
 
   public widgetLog(this: this, message: string, values?: unknown): void {
     if (!Type.isExtensions(this.__widgetType)) {
-      message = $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(this.__widgetType, message)
+      message = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(this.__widgetType, message)
     }
-    $$_$$_$$_$$_unrestored_shared_1531_2584_55.b.widgetLog({
+    $$_$$_$$_$$_unrestored_shared_1571_2636_55.b.widgetLog({
       widgetId: this.__widgetId,
       widgetType: this.__widgetType,
       message,
@@ -146,9 +146,9 @@ class VisibleWidget implements $_types.VisibleWidget {
 
   public widgetWarn(this: this, message: string, values?: unknown): void {
     if (!Type.isExtensions(this.__widgetType)) {
-      message = $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(this.__widgetType, message)
+      message = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(this.__widgetType, message)
     }
-    $$_$$_$$_$$_unrestored_shared_1531_2584_55.b.widgetWarn({
+    $$_$$_$$_$$_unrestored_shared_1571_2636_55.b.widgetWarn({
       widgetId: this.__widgetId,
       widgetType: this.__widgetType,
       message,
@@ -158,9 +158,9 @@ class VisibleWidget implements $_types.VisibleWidget {
 
   public widgetError(this: this, message: string, values?: unknown): void {
     if (!Type.isExtensions(this.__widgetType)) {
-      message = $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(this.__widgetType, message)
+      message = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(this.__widgetType, message)
     }
-    $$_$$_$$_$$_unrestored_shared_1531_2584_55.b.widgetError({
+    $$_$$_$$_$$_unrestored_shared_1571_2636_55.b.widgetError({
       widgetId: this.__widgetId,
       widgetType: this.__widgetType,
       message,
@@ -171,7 +171,7 @@ class VisibleWidget implements $_types.VisibleWidget {
   public setProps(this: this, props: Record<string, unknown>): void {
     try {
       for (const key in props) {
-        $$_$$_$$_$$_unrestored_shared_1531_2584_21_index.setProperty(this.__widgetId, key, props[key])
+        $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.setProperty(this.__widgetId, key, props[key])
       }
     } catch (error) {
       console.error("setProps error", error)
@@ -192,7 +192,7 @@ class VisibleWidget implements $_types.VisibleWidget {
  * @param isAnyWidget 是否是任意控件的
  * @returns 积木模板
  */
-export function getTemplate(widgetID: string | null, type: string, types: $_types.Types, isAnyWidget: boolean): string[] {
+export function getTemplate(widgetID: string | null, type: string, types: types.Types, isAnyWidget: boolean): string[] {
   const blocksOfPropertiesGetter: {xml: string,order: number}[] = []
   const blocksOfVisibleOrDisabledGetter: {xml: string,order: number}[] = []
   const blocksOfPropertiesSetter: {xml: string,order: number}[] = []
@@ -281,32 +281,33 @@ export function getTemplate(widgetID: string | null, type: string, types: $_type
     eventsBlock.push({ xml, order })
   })
   if (eventsBlock.length) {
-    eventsBlock.push({ xml: $$_$$_$$_$$_unrestored_shared_1531_2584_9.k, order: BlockOlder.EVENTORDER + 9999 })
+    eventsBlock.push({ xml: $$_$$_$$_$$_unrestored_shared_1571_2636_9.k, order: BlockOlder.EVENTORDER + 9999 })
   }
   if (methodsBlock.length) {
-    methodsBlock.push({ xml: $$_$$_$$_$$_unrestored_shared_1531_2584_9.k, order: BlockOlder.METHODORDER + 9999 })
+    methodsBlock.push({ xml: $$_$$_$$_$$_unrestored_shared_1571_2636_9.k, order: BlockOlder.METHODORDER + 9999 })
   }
   if (blocksOfVisibleOrDisabledSetter.length) {
     blocksOfPropertiesSetter.push.apply(blocksOfPropertiesSetter, blocksOfVisibleOrDisabledSetter)
   }
   if (blocksOfPropertiesSetter.length) {
-    blocksOfPropertiesSetter.push({ xml: $$_$$_$$_$$_unrestored_shared_1531_2584_9.k, order: BlockOlder.SETORDER + 9999 })
+    blocksOfPropertiesSetter.push({ xml: $$_$$_$$_$$_unrestored_shared_1571_2636_9.k, order: BlockOlder.SETORDER + 9999 })
   }
   if (blocksOfVisibleOrDisabledGetter.length) {
-    blocksOfVisibleOrDisabledGetter.unshift({ xml: $$_$$_$$_$$_unrestored_shared_1531_2584_9.k, order: BlockOlder.GETORDER + 500 })
+    blocksOfVisibleOrDisabledGetter.unshift({ xml: $$_$$_$$_$$_unrestored_shared_1571_2636_9.k, order: BlockOlder.GETORDER + 500 })
   }
-  $$_$$_$$_$$_unrestored_shared_1531_2584_9.x(lines, type)
+  $$_$$_$$_$$_unrestored_shared_1571_2636_9.x(lines, type)
   return [
-  ...eventsBlock,
-  ...methodsBlock,
-  ...blocksOfPropertiesSetter,
-  ...blocksOfPropertiesGetter,
-  ...blocksOfVisibleOrDisabledGetter].
-  sort(function (a, b): number {
-    return a.order - b.order
-  }).map(function (block): string {
-    return block.xml
-  })
+    ...eventsBlock,
+    ...methodsBlock,
+    ...blocksOfPropertiesSetter,
+    ...blocksOfPropertiesGetter,
+    ...blocksOfVisibleOrDisabledGetter
+  ].
+    sort(function (a, b): number {
+      return a.order - b.order
+    }).map(function (block): string {
+      return block.xml
+    })
 }
 
 function F() {}
@@ -318,23 +319,27 @@ function F() {}
  * @param widget 自定义控件的实体定义
  * @returns 内部控件
  */
-function toInternalWidget(types: $_types.Types, widget: $_types.Widget): Internal.Widget {
+function toInternalWidget(types: types.Types, widget: types.Widget): Internal.Widget {
   const { type, icon, properties, isGlobalWidget = true, isInvisibleWidget = true, contentTextField } = types
-  const editConfigs: (Internal.EditConfig | Internal.EditConfig[])[] = [{
-    type: "WidgetTitle",
-    hasDisableOrVisible: properties.some(function (e) {
-      return "__disabled" === e.key || "__visible" === e.key
-    })
-  }]
-  const disableAndVisibleEditConfigs: Internal.EditConfig[] = [{
-    type: "VisibleSwitch"
-  }]
+  const editConfigs: (Internal.EditConfig | Internal.EditConfig[])[] = [
+    {
+      type: "WidgetTitle",
+      hasDisableOrVisible: properties.some(function (e) {
+        return "__disabled" === e.key || "__visible" === e.key
+      })
+    }
+  ]
+  const disableAndVisibleEditConfigs: Internal.EditConfig[] = [
+    {
+      type: "VisibleSwitch"
+    }
+  ]
   if (!isInvisibleWidget) {
     editConfigs.push(disableAndVisibleEditConfigs)
   }
   const size: Internal.Size = isInvisibleWidget ? { width: 0, height: 0 } : { width: 100, height: 60 }
-  const widthRange: [number, number] = [$$_$$_$$_$$_unrestored_shared_1531_2584_53.s, $$_$$_$$_$$_unrestored_shared_1531_2584_53.o]
-  const heightRange: [number, number] = [$$_$$_$$_$$_unrestored_shared_1531_2584_53.q, $$_$$_$$_$$_unrestored_shared_1531_2584_53.m]
+  const widthRange: [number, number] = [$$_$$_$$_$$_unrestored_shared_1571_2636_53.s, $$_$$_$$_$$_unrestored_shared_1571_2636_53.o]
+  const heightRange: [number, number] = [$$_$$_$$_$$_unrestored_shared_1571_2636_53.q, $$_$$_$$_$$_unrestored_shared_1571_2636_53.m]
   const attributes: Record<string, number | string | boolean> = {}
   properties.forEach(function ({
     defaultValue,
@@ -373,8 +378,8 @@ function toInternalWidget(types: $_types.Types, widget: $_types.Widget): Interna
       }
       return
     }
-    const finalEditorType: $_types.EditorType = editorType || (dropdown ? "Select" : function (valueType, defaultValue): $_types.EditorType {
-      let editorType: $_types.EditorType
+    const finalEditorType: types.EditorType = editorType || (dropdown ? "Select" : function (valueType, defaultValue): types.EditorType {
+      let editorType: types.EditorType
       let editorValueType: string = ""
       if (Array.isArray(valueType)) {
         const defaultValueType: string = typeof defaultValue
@@ -406,7 +411,7 @@ function toInternalWidget(types: $_types.Types, widget: $_types.Widget): Interna
         if (!readonly && !hidePropertyEditor) {
           const editConfig: Internal.EditConfig = {
             type: finalEditorType,
-            label: Type.isExtensions(type) ? $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(type, key) : $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.b(type, label),
+            label: Type.isExtensions(type) ? $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(type, key) : $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.b(type, label),
             key,
             addonAfter: unit
           }
@@ -414,9 +419,9 @@ function toInternalWidget(types: $_types.Types, widget: $_types.Widget): Interna
             if (Type.isExtensions(type)) {
               editConfig.dropdown = dropdown
             } else {
-              editConfig.dropdown = dropdown.map(function (dropdownItem: $_types.DropdownItemTypes): $_types.DropdownItemTypes {
+              editConfig.dropdown = dropdown.map(function (dropdownItem: types.DropdownItemTypes): types.DropdownItemTypes {
                 return {
-                  label: $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.a(type, dropdownItem.label) || dropdownItem.label,
+                  label: $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(type, dropdownItem.label) || dropdownItem.label,
                   value: dropdownItem.value
                 }
               })
@@ -452,7 +457,7 @@ function toInternalWidget(types: $_types.Types, widget: $_types.Widget): Interna
       url
     })
   }
-  const b: string = $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.c(type)
+  const b: string = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.c(type)
   return {
     type,
     icon,
@@ -464,7 +469,7 @@ function toInternalWidget(types: $_types.Types, widget: $_types.Widget): Interna
     widget: {
       size,
       isGlobalWidget,
-      attributes: $$_$$_$$_$$_unrestored_shared_1531_2584_6.a({}, attributes)
+      attributes: $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, attributes)
     },
     editConfig: editConfigs,
     isInvisibleWidget,
@@ -508,10 +513,16 @@ function defaultRequire(id: string): unknown {
  * @returns 控件的类型定义和实体定义
  */
 export async function loadCustomWidget(
-code: string,
-isFromWidgetShop: boolean,
-widgetRequire: (id: string) => unknown = defaultRequire)
-: Promise<$_types.Exports> {
+  code: string,
+  isFromWidgetShop: boolean,
+  widgetRequire: (id: string) => unknown = defaultRequire
+): Promise<types.Exports> {
+  async function loadExternalModule(url: string): Promise<void> {
+    if (!url.startsWith(EXTERNAL_MODULE_BASE_URL) && !url.startsWith(OLD_EXTERNAL_MODULE_BASE_URL)) {
+      return
+    }
+    await $$_$$_$$_$$_unrestored_shared_1571_2636_15.cb(url)
+  }
   code = (await import("@babel/core")).transformSync(code, {
     presets: [(await import("@babel/preset-react")).default]
   })?.code || ""
@@ -525,23 +536,17 @@ widgetRequire: (id: string) => unknown = defaultRequire)
     ...restrict.objectKeys,
     code
   ).apply(undefined, [
-  ExternalModule.requireExternalModule,
-  {},
-  class {},
-  class {},
-  React,
-  ...restrict.objectValues]
-  )
-  const EXTERNAL_MODULE_BASE_URL: string = "https://static.codemao.cn/appcraft/modules/"
-  await Promise.all(ExternalModule.getExternalModules().map(
-    async (url: string): Promise<void> => {
-      if (!url.startsWith(EXTERNAL_MODULE_BASE_URL)) {
-        return
-      }
-      await $$_$$_$$_$$_unrestored_shared_1531_2584_15.cb(url)
-    }
-  ))
-  const widgetExports: Partial<$_types.Exports> = {}
+    ExternalModule.requireExternalModule,
+    {},
+    class {},
+    class {},
+    React,
+    ...restrict.objectValues
+  ])
+  const EXTERNAL_MODULE_BASE_URL: string = "https://static.bcmcdn.com/appcraft/modules/"
+  const OLD_EXTERNAL_MODULE_BASE_URL = "https://static.codemao.cn/appcraft/modules/"
+  await Promise.all(ExternalModule.getExternalModules().map(loadExternalModule))
+  const widgetExports: Partial<types.Exports> = {}
   new Function(
     "require",
     "exports",
@@ -551,32 +556,32 @@ widgetRequire: (id: string) => unknown = defaultRequire)
     ...restrict.objectKeys,
     code
   ).apply(undefined, [
-  widgetRequire,
-  widgetExports,
-  InvisibleWidget,
-  VisibleWidget,
-  React,
-  ...restrict.objectValues]
-  )
-  const widgetTypes: $_types.Types = widgetExports.types!
-  const widgetWidget: $_types.Widget = widgetExports.widget!
+    widgetRequire,
+    widgetExports,
+    InvisibleWidget,
+    VisibleWidget,
+    React,
+    ...restrict.objectValues
+  ])
+  const widgetTypes: types.Types = widgetExports.types!
+  const widgetWidget: types.Widget = widgetExports.widget!
   if (!widgetTypes.isInvisibleWidget) {
-    if (!widgetTypes.properties.some(function (property: $_types.PropertyTypes): boolean {
+    if (!widgetTypes.properties.some(function (property: types.PropertyTypes): boolean {
       return "__opacity" === property.key
     })) {
       widgetTypes.properties.push({
         key: "__opacity",
         label: "",
         valueType: "number",
-        defaultValue: $$_$$_$$_$$_unrestored_shared_1531_2584_60.j,
+        defaultValue: $$_$$_$$_$$_unrestored_shared_1571_2636_60.j,
         validators: {
-          greaterThan: $$_$$_$$_$$_unrestored_shared_1531_2584_60.r,
-          lessThan: $$_$$_$$_$$_unrestored_shared_1531_2584_60.j,
+          greaterThan: $$_$$_$$_$$_unrestored_shared_1571_2636_60.r,
+          lessThan: $$_$$_$$_$$_unrestored_shared_1571_2636_60.j,
           isInteger: true
         }
       })
     }
-    if (!widgetTypes.properties.some(function (property: $_types.PropertyTypes): boolean {
+    if (!widgetTypes.properties.some(function (property: types.PropertyTypes): boolean {
       return "__position" === property.key
     })) {
       widgetTypes.properties.push({
@@ -586,7 +591,7 @@ widgetRequire: (id: string) => unknown = defaultRequire)
         defaultValue: 100
       })
     }
-    if (!widgetTypes.properties.some(function (property: $_types.PropertyTypes): boolean {
+    if (!widgetTypes.properties.some(function (property: types.PropertyTypes): boolean {
       return "__visible" === property.key
     })) {
       widgetTypes.properties.push({
@@ -612,24 +617,24 @@ widgetRequire: (id: string) => unknown = defaultRequire)
  * @param onCancel 用户取消导入控件时回调
  */
 export function registerCustomWidget(
-exports: $_types.Exports,
-onRegistered?: () => void,
-onCancel?: () => void)
-: void {
+  exports: types.Exports,
+  onRegistered?: () => void,
+  onCancel?: () => void
+): void {
   const { widget, types } = exports
   const { title, type } = types
   function registered(): void {
-    $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.e(types)
-    const e = toInternalWidget(types, widget)
-    $$_$$_$$_$$_unrestored_shared_1531_2584_9.Nb($$_$$_$$_$$_unrestored_shared_1531_2584_9.j.EXTENSION, [e])
-    $$_$$_$$_$$_unrestored_shared_1531_2584_227_index.c(e.type)
+    $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.e(types)
+    const internalWidget = toInternalWidget(types, widget)
+    $$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION, [internalWidget])
+    $$_$$_$$_$$_unrestored_shared_1571_2636_228_index.c(internalWidget.type)
     if (onRegistered) {
       onRegistered()
     }
   }
   if (Storage.getUnsafeExtension(type)) {
     const unprefixedType: string = Type.toUnprefixed(type, false)
-    Event.a(Message.zh({
+    EventStore.dispatch(Message.zh({
       onConfirm: registered,
       onCancel,
       allowText: Language.format(Language.zh_CN, "ExtensionWidget.overwrite").toString(),
@@ -655,10 +660,10 @@ function z(e, t) {
         key: "__opacity",
         label: "",
         valueType: "number",
-        defaultValue: $$_$$_$$_$$_unrestored_shared_1531_2584_60.j,
+        defaultValue: $$_$$_$$_$$_unrestored_shared_1571_2636_60.j,
         validators: {
-          greaterThan: $$_$$_$$_$$_unrestored_shared_1531_2584_60.r,
-          lessThan: $$_$$_$$_$$_unrestored_shared_1531_2584_60.j,
+          greaterThan: $$_$$_$$_$$_unrestored_shared_1571_2636_60.r,
+          lessThan: $$_$$_$$_$$_unrestored_shared_1571_2636_60.j,
           isInteger: true
         }
       })
@@ -684,7 +689,7 @@ function z(e, t) {
       })
     }
   }
-  $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.d(e$types, e$messages)
+  $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.d(e$types, e$messages)
   var o = toInternalWidget(e$types, t)
   Storage.addUnsafeExtension({
     types: e$types,
@@ -701,7 +706,7 @@ function z(e, t) {
  * @param isFromWidgetShop 控件是否来自控件商城
  * @returns 控件的类型定义
  */
-async function importCustomWidget(code: string, isFromWidgetShop: boolean): Promise<$_types.Types> {
+async function importCustomWidget(code: string, isFromWidgetShop: boolean): Promise<types.Types> {
   const { types, widget } = await loadCustomWidget(code, isFromWidgetShop)
   return new Promise((resolve, reject): void => {
     registerCustomWidget(
@@ -710,11 +715,9 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
         const { type } = types
         if (!isFromWidgetShop) {
           Storage.addUnsafeExtension({ type, types, code })
-          $$_$$_$$_$$_unrestored_shared_1531_2584_49.oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget(
-            { type, code }
-          )
+          $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget({ type, code })
         }
-        Event.dispatch(Message.wrapUpdateExtensionWidgetList())
+        EventStore.dispatch(Message.wrapUpdateExtensionWidgetList())
         resolve(types)
       },
       (): void => {
@@ -731,7 +734,7 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
  * @param isFromWidgetShop 控件是否来自控件商城
  * @returns 控件的类型定义
  */
-export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: boolean): Promise<$_types.Types> {
+export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: boolean): Promise<types.Types> {
   const code: string = await new Promise((resolve, reject): void => {
     const fileReader = new FileReader()
     fileReader.readAsText(blob)
@@ -739,13 +742,13 @@ export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: 
       resolve(fileReader.result as string)
     }
     fileReader.onerror = reject
-  }
-  )
+  })
   if (!isFromWidgetShop) {
     checkKeyWords(code)
   }
   return await importCustomWidget(code, isFromWidgetShop)
 }
+export { importCostumeWidgetFromBlob as t }
 
 /**
  * 对控件代码进行关键词检查，如果检查不通过，则抛出异常
@@ -763,7 +766,7 @@ function checkKeyWords(code: string): void {
     }
   })
   if (includedKeyWords.length > 0) {
-    Event.dispatch(Message.wrapOpenConfirmDialog({
+    EventStore.dispatch(Message.wrapOpenConfirmDialog({
       allowText: Language.format(Language.zh_CN, "cloudDb.know").toString(),
       title: "error",
       content: "自定义控件存在问题，不支持导入",
@@ -777,9 +780,9 @@ function Z(e, t) {
   return J.apply(this, arguments)
 }
 function J() {
-  return (J = $$_$$_$$_$$_unrestored_shared_1531_2584_7.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n) {
+  return (J = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n) {
     var r
-    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */_e$sent
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$type
     return BabelRuntimeHelperRegeneratorRuntime.wrap(function (e) {
@@ -794,14 +797,14 @@ function J() {
           case 2:
             r = "".concat(t, "?t=").concat(Math.random())
             e.next = 5
-            return $$_$$_utils_network_axiosWithCredentials.a.get(r, {
+            return axiosWithCredentials.get(r, {
               responseType: "blob",
               withCredentials: false
             })
           case 5:
-            _e$sent2 = e.sent
+            _e$sent = e.sent
             e.next = 8
-            return importCostumeWidgetFromBlob(_e$sent2.data, true)
+            return importCostumeWidgetFromBlob(_e$sent.data, true)
           case 8:
             e$sent = e.sent
             e$sent$type = e$sent.type
@@ -822,21 +825,20 @@ function J() {
 }
 
 export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFileStorage[], unsafeWidgetsStorage: UnsafeExtensionFileStorage[]) {
-  async function importWidget(widgetCode: string): Promise<void> {
-    const { types, widget } = await loadCustomWidget(widgetCode, false)
+  async function importWidget(code: string): Promise<void> {
+    const { types, widget } = await loadCustomWidget(code, false)
     registerCustomWidget({ types, widget })
     const { type } = types
-    Storage.addUnsafeExtension({ type, types, code: widgetCode })
+    Storage.addUnsafeExtension({ type, types, code })
   }
-  $$_$$_$$_$$_unrestored_shared_1531_2584_9.u($$_$$_$$_$$_unrestored_shared_1531_2584_9.j.EXTENSION)
+  $$_$$_$$_$$_unrestored_shared_1571_2636_9.u($$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION)
   Storage.clear()
   if (unsafeWidgetsStorage.length) {
     await Promise.all(unsafeWidgetsStorage.map(({ code }): Promise<void> => importWidget(code)))
   }
-  Event.dispatch(Message.wrapUpdateExtensionWidgetList())
+  EventStore.dispatch(Message.wrapUpdateExtensionWidgetList())
   const onlineWidgetsStorage = safeWidgetStorage.filter((widget) =>
-  widget.cdnUrl.startsWith("https") && widget.id
-  )
+    widget.cdnUrl.startsWith("https") && widget.id)
   if (!onlineWidgetsStorage.length) {
     return
   }
@@ -844,12 +846,13 @@ export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFile
     return Z(e.cdnUrl, e.id)
   }))
 }
+export { loadWidgetFromStorage as x }
 
 function te(e, t, n) {
   return ne.apply(this, arguments)
 }
 function ne() {
-  return (ne = $$_$$_$$_$$_unrestored_shared_1531_2584_7.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n, r) {
+  return (ne = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n, r) {
     var o
     var a
     var s
@@ -858,7 +861,7 @@ function ne() {
     var u
     var d
     var p
-    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */_e$sent3
     var h
     var /* [auto-meaningful-name] */e$sent
     var g
@@ -891,9 +894,9 @@ function ne() {
             d = 1
             p = 100
             e.next = 10
-            return $_shop.e(d, p)
+            return Shop.e(d, p)
           case 10:
-            if (_e$sent4 = e.sent, u = u.concat(_e$sent4.items), !((h = Math.ceil(_e$sent4.total / p)) > 1)) {
+            if (_e$sent3 = e.sent, u = u.concat(_e$sent3.items), !((h = Math.ceil(_e$sent3.total / p)) > 1)) {
               e.next = 23
               break
             }
@@ -904,7 +907,7 @@ function ne() {
               break
             }
             e.next = 18
-            return $_shop.e(d, p)
+            return Shop.e(d, p)
           case 18:
             e$sent = e.sent
             u = u.concat(e$sent.items)
@@ -938,8 +941,10 @@ function ne() {
 
 export function getWidgetTitle(type: string) {
   var widget = Storage.getExtension(type)
-  return widget ? $$_$$_$$_$$_unrestored_shared_1531_2584_301_85.a(type, widget.types.title) : ""
+  return widget ? $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(type, widget.types.title) : ""
 }
+export { getWidgetTitle as k }
+
 function oe(e, t) {
   var n = Storage.getExtension(e)
   if (null === n || undefined === n ? undefined : n.types) {
@@ -987,7 +992,7 @@ function le(e, t) {
     return ae(n)
   }
 }
-export function getWidgetMethodTypes(type: string, key: string): $_types.MethodTypes | void {
+export function getWidgetMethodTypes(type: string, key: string): types.MethodTypes | void {
   var widget = Storage.getExtension(type)
   if (widget?.types) {
     return widget.types.methods.find((method) => method.key === key)
@@ -1002,7 +1007,7 @@ function de(e, t) {
   }
 }
 
-export function getCheckType(valueType: $_types.ValueType, checkType: $_types.CheckType | undefined) {
+export function getCheckType(valueType: types.ValueType, checkType: types.CheckType | undefined) {
   var result = new Set()
   let types = checkType || valueType
   types = Array.isArray(types) ? types : [types]
@@ -1017,6 +1022,7 @@ export function getCheckType(valueType: $_types.ValueType, checkType: $_types.Ch
   })
   return Array.from(result)
 }
+export { getCheckType as f }
 
 function fe(e) {
   var t = new Set()

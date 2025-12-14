@@ -9,7 +9,7 @@ export function shakeUnused(modules: ModuleMap): void {
     const queue: Module[] = entryModules.slice()
     let module: Module | undefined = undefined
     while ((module = queue.shift()) != null) {
-        if (visited.has(module.key) || (module.external != null && !module.external.startsWith("."))) {
+        if (visited.has(module.key) || (module.external != null && !module.moved)) {
             continue
         }
         visited.add(module.key)

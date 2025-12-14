@@ -1,0 +1,18 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1783
+ */
+
+var r = require("./1705/86/index")
+var o = require("./1686/194")
+var i = require("./1686/1093")
+r({
+  global: true,
+  bind: true,
+  enumerable: true,
+  forced: !o.setImmediate || !o.clearImmediate
+}, {
+  setImmediate: i.set,
+  clearImmediate: i.clear
+})

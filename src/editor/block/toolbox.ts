@@ -1,7 +1,7 @@
 /**
  * 由 CoCo 源代码计划解包器解包
  *
- * 模块 ID：262
+ * 模块 ID：261
  */
 
 "use strict"
@@ -12,8 +12,8 @@ export { s as c }
 export { c as f }
 export { l as e }
 export { u as d }
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1531_2584_9 from "../../../unrestored/shared/1531/2584/9"
-import * as generate from "./generate"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../unrestored/shared/1571/2636/9"
+import * as generate from "../../../unrestored/shared/1571/2636/301/index"
 var i = {
   PRIMITIVE: "PRIMITIVE",
   ARRAY: "ARRAY",
@@ -102,7 +102,7 @@ var c = {
   }
 }
 var l = function () {
-  return $$_$$_$$_unrestored_shared_1531_2584_9.O()
+  return $$_$$_$$_unrestored_shared_1571_2636_9.O()
 }
 var u = function (e) {
   var /* [auto-meaningful-name] */cN$text

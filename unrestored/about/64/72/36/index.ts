@@ -9,10 +9,10 @@
 export { u as a }
 export { c as b }
 import * as r from "./3"
-import * as i from "../9"
-import * as /* [auto-meaningful-name] */$$_31 from "../31"
+import * as /* [auto-meaningful-name] */$$_$$_49_9 from "../../49/9"
+import * as /* [auto-meaningful-name] */$$_$$_49_31 from "../../49/31"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
-import * as /* [auto-meaningful-name] */$$_14 from "../14"
+import * as /* [auto-meaningful-name] */$$_$$_49_14 from "../../49/14"
 var u = function () {
   function e() {
     this._notifyingListeners = false
@@ -172,7 +172,7 @@ var u = function () {
         this._requestSession = t._requestSession
       }
     } else {
-      if (i.h(t)) {
+      if ($$_$$_49_9.h(t)) {
         t = t
         this._tags = r.a(r.a({}, this._tags), t.tags)
         this._extra = r.a(r.a({}, this._extra), t.extra)
@@ -214,7 +214,7 @@ var u = function () {
       return this
     }
     var i = r.a({
-      timestamp: $$_31.b()
+      timestamp: $$_$$_49_31.b()
     }, e)
     this._breadcrumbs = r.b(this._breadcrumbs, [i]).slice(-n)
     this._notifyScopeListeners()
@@ -272,7 +272,7 @@ var u = function () {
         a(t)
       } else {
         var c = l(r.a({}, t), n)
-        if (i.m(c)) {
+        if ($$_$$_49_9.m(c)) {
           c.then(function (t) {
             return s._notifyEventProcessors(e, t, n, o + 1).then(a)
           }).then(null, u)
@@ -304,7 +304,7 @@ var u = function () {
   return e
 }()
 function l() {
-  var e = $$_14.e()
+  var e = $$_$$_49_14.e()
   e.__SENTRY__ = e.__SENTRY__ || {}
   e.__SENTRY__.globalEventProcessors = e.__SENTRY__.globalEventProcessors || []
   return e.__SENTRY__.globalEventProcessors

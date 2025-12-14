@@ -6,16 +6,16 @@
 
 "use strict"
 
-import { "72__part-0__i" as i, "72__part-0__a" as a, "72__part-0__u" as u, "72__part-0__f" as f } from "./index__part-0"
-import { "72__part-3__z" as z, "72__part-3__B" as B } from "./index__part-3"
-import { "72__part-4__ve" as ve } from "./index__part-4"
-import { "72__part-5__Oe" as Oe } from "./index__part-5"
-import * as k from "./50"
-import * as E from "./25"
-import * as _ from "./14"
-import * as b from "./8"
-import * as g from "./32"
-import * as we from "./40"
+import { i, a, u, f } from "./index__part-0"
+import { z, B } from "./index__part-3"
+import { ve } from "./index__part-4"
+import { Oe } from "./index__part-5"
+import * as /* [auto-meaningful-name] */$$_49_50 from "../49/50"
+import * as /* [auto-meaningful-name] */$$_49_25 from "../49/25"
+import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
+import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
+import * as /* [auto-meaningful-name] */$$_16_32 from "../16/32"
+import * as /* [auto-meaningful-name] */$$_49_40 from "../49/40"
 var Se = function () {
   function e(t) {
     this.name = e.id
@@ -30,11 +30,11 @@ var Se = function () {
   }
   e.prototype.addSentryBreadcrumb = function (e) {
     if (this._options.sentry) {
-      g.b().addBreadcrumb({
+      $$_16_32.b().addBreadcrumb({
         category: "sentry." + ("transaction" === e.type ? "transaction" : "event"),
         event_id: e.event_id,
         level: e.level,
-        message: _.d(e)
+        message: $$_49_14.d(e)
       }, {
         event: e
       })
@@ -43,7 +43,7 @@ var Se = function () {
   e.prototype.setupOnce = function () {
     var e = this
     if (this._options.console) {
-      k.a({
+      $$_49_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -54,7 +54,7 @@ var Se = function () {
       })
     }
     if (this._options.dom) {
-      k.a({
+      $$_49_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -65,7 +65,7 @@ var Se = function () {
       })
     }
     if (this._options.xhr) {
-      k.a({
+      $$_49_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -76,7 +76,7 @@ var Se = function () {
       })
     }
     if (this._options.fetch) {
-      k.a({
+      $$_49_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -87,7 +87,7 @@ var Se = function () {
       })
     }
     if (this._options.history) {
-      k.a({
+      $$_49_50.a({
         callback: function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
@@ -106,16 +106,16 @@ var Se = function () {
         logger: "console"
       },
       level: B.fromString(e.level),
-      message: E.b(e.args, " ")
+      message: $$_49_25.b(e.args, " ")
     }
     if ("assert" === e.level) {
       if (false !== e.args[0]) {
         return
       }
-      t.message = "Assertion failed: " + (E.b(e.args.slice(1), " ") || "console.assert")
+      t.message = "Assertion failed: " + ($$_49_25.b(e.args.slice(1), " ") || "console.assert")
       t.data.arguments = e.args.slice(1)
     }
-    g.b().addBreadcrumb(t, {
+    $$_16_32.b().addBreadcrumb(t, {
       input: e.args,
       level: e.level
     })
@@ -127,12 +127,12 @@ var Se = function () {
       n = [n]
     }
     try {
-      t = e.event.target ? we.a(e.event.target, n) : we.a(e.event, n)
+      t = e.event.target ? $$_49_40.a(e.event.target, n) : $$_49_40.a(e.event, n)
     } catch (r) {
       t = "<unknown>"
     }
     if (0 !== t.length) {
-      g.b().addBreadcrumb({
+      $$_16_32.b().addBreadcrumb({
         category: "ui." + e.name,
         message: t
       }, {
@@ -152,7 +152,7 @@ var Se = function () {
       var /* [auto-meaningful-name] */t$url = t.url
       var /* [auto-meaningful-name] */t$status_code = t.status_code
       var /* [auto-meaningful-name] */t$body = t.body
-      g.b().addBreadcrumb({
+      $$_16_32.b().addBreadcrumb({
         category: "xhr",
         data: {
           method: t$method,
@@ -172,7 +172,7 @@ var Se = function () {
     if (e.endTimestamp) {
       if (!(e.fetchData.url.match(/sentry_key/) && "POST" === e.fetchData.method)) {
         if (e.error) {
-          g.b().addBreadcrumb({
+          $$_16_32.b().addBreadcrumb({
             category: "fetch",
             data: e.fetchData,
             level: B.Error,
@@ -182,7 +182,7 @@ var Se = function () {
             input: e.args
           })
         } else {
-          g.b().addBreadcrumb({
+          $$_16_32.b().addBreadcrumb({
             category: "fetch",
             data: u(u({}, e.fetchData), {
               status_code: e.response.status
@@ -197,12 +197,12 @@ var Se = function () {
     }
   }
   e.prototype._historyBreadcrumb = function (e) {
-    var t = _.e()
+    var t = $$_49_14.e()
     var /* [auto-meaningful-name] */e$from = e.from
     var r = e.to
-    var i = _.h(t.location.href)
-    var o = _.h(e$from)
-    var a = _.h(r)
+    var i = $$_49_14.h(t.location.href)
+    var o = $$_49_14.h(e$from)
+    var a = $$_49_14.h(r)
     if (!o.path) {
       o = i
     }
@@ -212,7 +212,7 @@ var Se = function () {
     if (i.protocol === o.protocol && i.host === o.host) {
       e$from = o.relative
     }
-    g.b().addBreadcrumb({
+    $$_16_32.b().addBreadcrumb({
       category: "navigation",
       data: {
         from: e$from,
@@ -231,10 +231,12 @@ var ke = function (e) {
     t._metadata = t._metadata || {}
     t._metadata.sdk = t._metadata.sdk || {
       name: "sentry.javascript.browser",
-      packages: [{
-        name: "npm:@sentry/browser",
-        version: i
-      }],
+      packages: [
+        {
+          name: "npm:@sentry/browser",
+          version: i
+        }
+      ],
       version: i
     }
     return e.call(this, ve, t) || this
@@ -244,13 +246,13 @@ var ke = function (e) {
     if (undefined === e) {
       e = {}
     }
-    if (_.e().document) {
+    if ($$_49_14.e().document) {
       if (this._isEnabled()) {
         Oe(u(u({}, e), {
           dsn: e.dsn || this.getDsn()
         }))
       } else {
-        b.a.error("Trying to call showReportDialog with Sentry Client disabled")
+        $$_49_8.a.error("Trying to call showReportDialog with Sentry Client disabled")
       }
     }
   }
@@ -267,5 +269,5 @@ var ke = function (e) {
   }
   return t
 }(z)
-export { Se as "72__part-6__Se" }
-export { ke as "72__part-6__ke" }
+export { Se }
+export { ke }

@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { "64__part-0__o" as o } from "./index__part-0"
+import { o } from "./index__part-0"
 import * as /* [auto-meaningful-name] */$_49_index from "./49/index"
 import * as /* [auto-meaningful-name] */$_72_index from "./72/index"
 import * as i from "./47"

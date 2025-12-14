@@ -5,8 +5,9 @@ import workerpool from "workerpool"
 
 async function main() {
     bar.start(0, 0)
-    await Promise.all(["src", "unrestored"].map(name => transform(path.resolve(process.cwd(), name))))
+    await Promise.all(["src", "unrestored", "src-unrestored"].map(name => transform(path.resolve(process.cwd(), name))))
     bar.stop()
+    process.exit()
 }
 
 const pool = workerpool.pool(require.resolve("./worker"))

@@ -7,14 +7,18 @@
         "blockly",
         "chunkhash",
         "codemao",
+        "datawatch",
         "epeiuss",
         "eventorder",
         "fullhash",
+        "gbao",
         "getorder",
         "gitee",
         "methodorder",
+        "momo",
         "qrcode",
         "setorder",
+        "shequ",
         "slightning",
         "socketcoll",
         "socketcv",
@@ -30,4 +34,5 @@
         "tsconfig.json": "tsconfig.*.json",
         "package.json": "package-lock.json"
     },
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }

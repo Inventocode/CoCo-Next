@@ -6,14 +6,14 @@
 
 "use strict"
 
-import { "72__part-0__a" as a, "72__part-0__u" as u, "72__part-0__l" as l, "72__part-0__p" as p, "72__part-0__v" as v } from "./index__part-0"
-import { "72__part-2__C" as C, "72__part-2__N" as N } from "./index__part-2"
-import { "72__part-3__U" as U, "72__part-3__B" as B, "72__part-3__q" as q } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as I from "./9"
+import { a, u, l, p, v } from "./index__part-0"
+import { C, N } from "./index__part-2"
+import { U, B, q } from "./index__part-3"
+import * as /* [auto-meaningful-name] */$$_49_17_index from "../49/17/index"
+import * as /* [auto-meaningful-name] */$$_49_9 from "../49/9"
 import * as S from "./33"
-import * as _ from "./14"
-import * as b from "./8"
+import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
+import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
 import * as H from "./41"
 var V = "?"
 var W = /^\s*at (?:(.*?) ?\()?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/).*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i
@@ -225,15 +225,15 @@ function ie(e, t, n) {
   if (undefined === n) {
     n = {}
   }
-  if (I.e(e) && e.error) {
+  if ($$_49_9.e(e) && e.error) {
     return r = ne(J(e = e.error))
   }
-  if (I.a(e) || I.b(e)) {
+  if ($$_49_9.a(e) || $$_49_9.b(e)) {
     var i = e
-    var o = i.name || (I.a(i) ? "DOMError" : "DOMException")
+    var o = i.name || ($$_49_9.a(i) ? "DOMError" : "DOMException")
     var a = i.message ? o + ": " + i.message : o
     r = oe(a, t, n)
-    _.b(r, a)
+    $$_49_14.b(r, a)
     if ("code" in i) {
       r.tags = u(u({}, r.tags), {
         "DOMException.code": "" + i.code
@@ -241,16 +241,18 @@ function ie(e, t, n) {
     }
     return r
   }
-  return I.d(e) ? r = ne(J(e)) : I.h(e) || I.f(e) ? (r = function (e, t, n) {
+  return $$_49_9.d(e) ? r = ne(J(e)) : $$_49_9.h(e) || $$_49_9.f(e) ? (r = function (e, t, n) {
     var r = {
       exception: {
-        values: [{
-          type: I.f(e) ? e.constructor.name : n ? "UnhandledRejection" : "Error",
-          value: "Non-Error " + (n ? "promise rejection" : "exception") + " captured with keys: " + $_17_index.b(e)
-        }]
+        values: [
+          {
+            type: $$_49_9.f(e) ? e.constructor.name : n ? "UnhandledRejection" : "Error",
+            value: "Non-Error " + (n ? "promise rejection" : "exception") + " captured with keys: " + $$_49_17_index.b(e)
+          }
+        ]
       },
       extra: {
-        __serialized__: $_17_index.e(e)
+        __serialized__: $$_49_17_index.e(e)
       }
     }
     if (t) {
@@ -260,9 +262,9 @@ function ie(e, t, n) {
       }
     }
     return r
-  }(e, t, n.rejection), _.a(r, {
+  }(e, t, n.rejection), $$_49_14.a(r, {
     synthetic: true
-  }), r) : (r = oe(e, t, n), _.b(r, "" + e, undefined), _.a(r, {
+  }), r) : (r = oe(e, t, n), $$_49_14.b(r, "" + e, undefined), $$_49_14.a(r, {
     synthetic: true
   }), r)
 }
@@ -354,10 +356,12 @@ function le(e, t) {
       dsn: t.getDsn().toString()
     })) + "\n" + JSON.stringify({
       type: r,
-      sample_rates: [{
-        id: u$method,
-        rate: u$rate
-      }]
+      sample_rates: [
+        {
+          id: u$method,
+          rate: u$rate
+        }
+      ]
     }) + "\n" + f.body
     f.body = d
   }
@@ -446,7 +450,7 @@ var ce = function () {
       sentry_key: this.getDsn().publicKey,
       sentry_version: "7"
     }
-    return $_17_index.f(e)
+    return $$_49_17_index.f(e)
   }
   return e
 }()
@@ -526,7 +530,7 @@ var pe = function () {
     var /* [auto-meaningful-name] */e$reject = e.reject
     var a = U.fromHttpCode(e$response.status)
     if (this._handleRateLimit(e$headers)) {
-      b.a.warn("Too many " + e$requestType + " requests, backing off until: " + this._disabledUntil(e$requestType))
+      $$_49_8.a.warn("Too many " + e$requestType + " requests, backing off until: " + this._disabledUntil(e$requestType))
     }
     if (a !== U.Success) {
       e$reject(e$response)
@@ -597,7 +601,7 @@ var pe = function () {
       }
       return true
     }
-    return !!s && (this._rateLimits.all = new Date(o + _.g(o, s)), true)
+    return !!s && (this._rateLimits.all = new Date(o + $$_49_14.g(o, s)), true)
   }
   return e
 }()
@@ -607,7 +611,7 @@ var he = function (e) {
       n = function () {
         var e
         var /* [auto-meaningful-name] */o$contentWindow
-        var n = _.e()
+        var n = $$_49_14.e()
         if (H.a(n.fetch)) {
           return n.fetch.bind(n)
         }
@@ -623,7 +627,7 @@ var he = function (e) {
             }
             n$document.head.removeChild(o)
           } catch (a) {
-            b.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", a)
+            $$_49_8.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", a)
           }
         }
         return n$fetch.bind(n)
@@ -735,7 +739,7 @@ var ve = function (e) {
       var r = ie(t, n && n.syntheticException || undefined, {
         attachStacktrace: e.attachStacktrace
       })
-      _.a(r, {
+      $$_49_14.a(r, {
         handled: true,
         type: "generic"
       })
@@ -777,8 +781,8 @@ var ve = function (e) {
   }
   return t
 }(q)
-export { J as "72__part-4__J" }
-export { te as "72__part-4__te" }
-export { ie as "72__part-4__ie" }
-export { ce as "72__part-4__ce" }
-export { ve as "72__part-4__ve" }
+export { J }
+export { te }
+export { ie }
+export { ce }
+export { ve }

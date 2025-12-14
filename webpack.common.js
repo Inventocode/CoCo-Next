@@ -22,6 +22,7 @@ const config = {
     stats: "minimal",
     entry: {
         "proxy": path.resolve(__dirname, "helper", "proxy"),
+        "login": path.resolve(__dirname, "helper", "login", "index"),
         "editor-service-worker": {
             import: path.resolve(__dirname, "src", "editor-service-worker", "index"),
             filename: "editor/main.sw.js"
@@ -37,12 +38,12 @@ const config = {
             {
                 test: /\.tsx?$/,
                 exclude: /node_modules/,
-                use: {
-                    loader: "ts-loader",
+                use: ["thread-loader", {
+                    loader: "esbuild-loader",
                     options: {
-                        transpileOnly: true
+                        target: "esnext"
                     }
-                }
+                }]
             }, {
                 test: /\.(t|j)sx?$/,
                 exclude: /node_modules|helper|home/,
@@ -60,6 +61,17 @@ const config = {
                         ]
                     }
                 }
+            }, {
+                test: /\.css$/,
+                use: {
+                    loader: "css-loader",
+                    options: {
+                        modules: {
+                            auto: true,
+                            localIdentName: "[local]__[hash:hex:5]"
+                        }
+                    }
+                }
             }
         ]
     },
@@ -71,10 +83,18 @@ const config = {
             "assert": require.resolve("assert/")
         }
     },
+    cache: {
+        type: "filesystem"
+    },
     plugins: [
         new webpack.ProgressPlugin(),
         new webpack.ProvidePlugin({
             process: "process/"
+        }),
+        new HtmlWebpackPlugin({
+            filename: "codemao_login/index.html",
+            template: "helper/login/index.html",
+            chunks: ["proxy", "login"]
         })
     ]
 }

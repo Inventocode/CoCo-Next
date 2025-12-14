@@ -6,18 +6,18 @@
 
 "use strict"
 
-import { "72__part-0__p" as p, "72__part-0__h" as h, "72__part-0__v" as v } from "./index__part-0"
-import { "72__part-2__C" as C, "72__part-2__N" as N } from "./index__part-2"
+import { p, h, v } from "./index__part-0"
+import { C, N } from "./index__part-2"
 import * as T from "./70"
 import * as S from "./33"
-import * as E from "./25"
-import * as _ from "./14"
-import * as b from "./8"
-import * as g from "./32"
+import * as /* [auto-meaningful-name] */$$_49_25 from "../49/25"
+import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
+import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
+import * as /* [auto-meaningful-name] */$$_16_32 from "../16/32"
 import * as /* [auto-meaningful-name] */$_36_index from "./36/index"
-import * as I from "./9"
-import * as L from "./31"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_49_9 from "../49/9"
+import * as /* [auto-meaningful-name] */$$_49_31 from "../49/31"
+import * as /* [auto-meaningful-name] */$$_49_17_index from "../49/17/index"
 var D = []
 function M(e) {
   return e.reduce(function (e, t) {
@@ -59,9 +59,9 @@ function F(e) {
     t[e.name] = e;
     (function (e) {
       if (-1 === D.indexOf(e.name)) {
-        e.setupOnce($_36_index.b, g.b)
+        e.setupOnce($_36_index.b, $$_16_32.b)
         D.push(e.name)
-        b.a.log("Integration installed: " + e.name)
+        $$_49_8.a.log("Integration installed: " + e.name)
       }
     })(e)
   })
@@ -94,7 +94,7 @@ var z = function () {
   e.prototype.captureMessage = function (e, t, n, r) {
     var i = this
     var o = n && n.event_id
-    var a = I.i(e) ? this._getBackend().eventFromMessage(String(e), t, n) : this._getBackend().eventFromException(e, n)
+    var a = $$_49_9.i(e) ? this._getBackend().eventFromMessage(String(e), t, n) : this._getBackend().eventFromException(e, n)
     this._process(a.then(function (e) {
       return i._captureEvent(e, n, r)
     }).then(function (e) {
@@ -112,7 +112,7 @@ var z = function () {
   e.prototype.captureSession = function (e) {
     if (this._isEnabled()) {
       if ("string" !== typeof e.release) {
-        b.a.warn("Discarded session because of missing or non-string release")
+        $$_49_8.a.warn("Discarded session because of missing or non-string release")
       } else {
         this._sendSession(e)
         e.update({
@@ -120,7 +120,7 @@ var z = function () {
         })
       }
     } else {
-      b.a.warn("SDK not enabled, will not capture session.")
+      $$_49_8.a.warn("SDK not enabled, will not capture session.")
     }
   }
   e.prototype.getDsn = function () {
@@ -153,7 +153,7 @@ var z = function () {
     try {
       return this._integrations[e.id] || null
     } catch (t) {
-      b.a.warn("Cannot retrieve integration " + e.id + " from the current Client")
+      $$_49_8.a.warn("Cannot retrieve integration " + e.id + " from the current Client")
       return null
     }
   }
@@ -231,8 +231,8 @@ var z = function () {
     var /* [auto-meaningful-name] */this$getOptions$normalizeDepth = this.getOptions().normalizeDepth
     var o = undefined === this$getOptions$normalizeDepth ? 3 : this$getOptions$normalizeDepth
     var a = p(p({}, e), {
-      event_id: e.event_id || (n && n.event_id ? n.event_id : _.i()),
-      timestamp: e.timestamp || L.b()
+      event_id: e.event_id || (n && n.event_id ? n.event_id : $$_49_14.i()),
+      timestamp: e.timestamp || $$_49_31.b()
     })
     this._applyClientOptions(a)
     this._applyIntegrationsMetadata(a)
@@ -255,21 +255,21 @@ var z = function () {
     var n = p(p(p(p(p({}, e), e.breadcrumbs && {
       breadcrumbs: e.breadcrumbs.map(function (e) {
         return p(p({}, e), e.data && {
-          data: $_17_index.d(e.data, t)
+          data: $$_49_17_index.d(e.data, t)
         })
       })
     }), e.user && {
-      user: $_17_index.d(e.user, t)
+      user: $$_49_17_index.d(e.user, t)
     }), e.contexts && {
-      contexts: $_17_index.d(e.contexts, t)
+      contexts: $$_49_17_index.d(e.contexts, t)
     }), e.extra && {
-      extra: $_17_index.d(e.extra, t)
+      extra: $$_49_17_index.d(e.extra, t)
     })
     if (e.contexts && e.contexts.trace) {
       n.contexts.trace = e.contexts.trace
     }
     var /* [auto-meaningful-name] */this$getOptions$_experiments = this.getOptions()._experiments
-    return (undefined === this$getOptions$_experiments ? {} : this$getOptions$_experiments).ensureNoCircularStructures ? $_17_index.d(n) : n
+    return (undefined === this$getOptions$_experiments ? {} : this$getOptions$_experiments).ensureNoCircularStructures ? $$_49_17_index.d(n) : n
   }
   e.prototype._applyClientOptions = function (e) {
     var t = this.getOptions()
@@ -288,15 +288,15 @@ var z = function () {
       e.dist = t$dist
     }
     if (e.message) {
-      e.message = E.d(e.message, a)
+      e.message = $$_49_25.d(e.message, a)
     }
     var s = e.exception && e.exception.values && e.exception.values[0]
     if (s && s.value) {
-      s.value = E.d(s.value, a)
+      s.value = $$_49_25.d(s.value, a)
     }
     var /* [auto-meaningful-name] */e$request = e.request
     if (e$request && e$request.url) {
-      e$request.url = E.d(e$request.url, a)
+      e$request.url = $$_49_25.d(e$request.url, a)
     }
   }
   e.prototype._applyIntegrationsMetadata = function (e) {
@@ -313,7 +313,7 @@ var z = function () {
     return this._processEvent(e, t, n).then(function (e) {
       return e.event_id
     }, function (e) {
-      b.a.error(e)
+      $$_49_8.a.error(e)
     })
   }
   e.prototype._processEvent = function (e, t, n) {
@@ -370,9 +370,9 @@ var z = function () {
   }
   e.prototype._ensureBeforeSendRv = function (e) {
     var /* [auto-meaningful-name] */BeforeSendMethodHasToReturnNullOrAValidEvent$ = "`beforeSend` method has to return `null` or a valid event."
-    if (I.m(e)) {
+    if ($$_49_9.m(e)) {
       return e.then(function (e) {
-        if (!I.h(e) && null !== e) {
+        if (!$$_49_9.h(e) && null !== e) {
           throw new C(BeforeSendMethodHasToReturnNullOrAValidEvent$)
         }
         return e
@@ -380,7 +380,7 @@ var z = function () {
         throw new C("beforeSend rejected with " + e)
       })
     }
-    if (!I.h(e) && null !== e) {
+    if (!$$_49_9.h(e) && null !== e) {
       throw new C(BeforeSendMethodHasToReturnNullOrAValidEvent$)
     }
     return e
@@ -418,7 +418,7 @@ var q = function () {
   function e(e) {
     this._options = e
     if (!this._options.dsn) {
-      b.a.warn("No DSN provided, backend will not do anything.")
+      $$_49_8.a.warn("No DSN provided, backend will not do anything.")
     }
     this._transport = this._setupTransport()
   }
@@ -430,16 +430,16 @@ var q = function () {
   }
   e.prototype.sendEvent = function (e) {
     this._transport.sendEvent(e).then(null, function (e) {
-      b.a.error("Error while sending event: " + e)
+      $$_49_8.a.error("Error while sending event: " + e)
     })
   }
   e.prototype.sendSession = function (e) {
     if (this._transport.sendSession) {
       this._transport.sendSession(e).then(null, function (e) {
-        b.a.error("Error while sending session: " + e)
+        $$_49_8.a.error("Error while sending session: " + e)
       })
     } else {
-      b.a.warn("Dropping session because custom transport doesn't implement sendSession")
+      $$_49_8.a.warn("Dropping session because custom transport doesn't implement sendSession")
     }
   }
   e.prototype.getTransport = function () {
@@ -481,7 +481,7 @@ var q = function () {
     }
   }
 })(B || (B = {}))
-export { U as "72__part-3__U" }
-export { z as "72__part-3__z" }
-export { B as "72__part-3__B" }
-export { q as "72__part-3__q" }
+export { U }
+export { z }
+export { B }
+export { q }

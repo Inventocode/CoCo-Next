@@ -1,0 +1,19 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2108
+ */
+
+"use strict"
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+})
+exports.THEME_COLOR_MAP = undefined
+var r = require("../../../1022/579")
+exports.THEME_COLOR_MAP = {
+  RED: new r.Color("#FF604B"),
+  BLUE: new r.Color("#3882FF"),
+  GREEN: new r.Color("#26E32D"),
+  YELLOW: new r.Color("#FFD34E")
+}

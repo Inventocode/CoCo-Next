@@ -4,7 +4,7 @@
  * 模块 ID：My5k
  */
 
-import { "My5k__part-1__MenuView" as MenuView } from "./template-My5k__part-1"
+import { MenuView } from "./template-My5k__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { MenuView }

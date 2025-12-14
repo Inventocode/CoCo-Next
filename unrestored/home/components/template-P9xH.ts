@@ -4,7 +4,7 @@
  * 模块 ID：P9xH
  */
 
-import { "P9xH__part-1__WorkItemView" as WorkItemView } from "./template-P9xH__part-1"
+import { WorkItemView } from "./template-P9xH__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { WorkItemView }

@@ -4,7 +4,7 @@
  * 模块 ID：7CtK
  */
 
-import { "7CtK__part-1__WorkView" as WorkView } from "./template-7CtK__part-1"
+import { WorkView } from "./template-7CtK__part-1"
 /* harmony export (binding) */
 /* harmony import */
 export { WorkView }

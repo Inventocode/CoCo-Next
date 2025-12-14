@@ -9,7 +9,7 @@
         <title>CoCo - 让世界没有难做的APP</title>
         <link rel="icon" href="/favicon.ico"/>
         <link href="https://creation.codemao.cn/coconut/web/1.22.0-0/static/css/0.e1f592d8.chunk.css" rel="stylesheet">
-        <link href="https://creation.codemao.cn/coconut/web/1.22.0-0/static/css/main.b1e03e92.chunk.css" rel="stylesheet">
+        <link href="https://creation.codemao.cn/coconut/web/1.22.0-0/static/css/main.ce55f569.chunk.css" rel="stylesheet">
     </head>
     <body>
         <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -17,22 +17,22 @@
         <script>
             !function(e) {
                 function t(t) {
-                    for (var n, o, u = t[0], f = t[1], i = t[2], l = 0, d = []; l < u.length; l++)
+                    for (var n, o, u = t[0], i = t[1], f = t[2], l = 0, d = []; l < u.length; l++)
                         o = u[l],
                         Object.prototype.hasOwnProperty.call(a, o) && a[o] && d.push(a[o][0]),
                         a[o] = 0;
-                    for (n in f)
-                        Object.prototype.hasOwnProperty.call(f, n) && (e[n] = f[n]);
+                    for (n in i)
+                        Object.prototype.hasOwnProperty.call(i, n) && (e[n] = i[n]);
                     for (s && s(t); d.length; )
                         d.shift()();
-                    return c.push.apply(c, i || []),
+                    return c.push.apply(c, f || []),
                     r()
                 }
                 function r() {
                     for (var e, t = 0; t < c.length; t++) {
                         for (var r = c[t], n = !0, o = 1; o < r.length; o++) {
-                            var f = r[o];
-                            0 !== a[f] && (n = !1)
+                            var i = r[o];
+                            0 !== a[i] && (n = !1)
                         }
                         n && (c.splice(t--, 1),
                         e = u(u.s = r[0]))
@@ -75,18 +75,16 @@
                             16: "31d6cfe0",
                             17: "31d6cfe0",
                             18: "31d6cfe0",
-                            19: "31d6cfe0",
-                            20: "31d6cfe0",
-                            21: "31d6cfe0"
-                        }[e] + ".chunk.css", a = u.p + n, c = document.getElementsByTagName("link"), f = 0; f < c.length; f++) {
-                            var i = (s = c[f]).getAttribute("data-href") || s.getAttribute("href");
-                            if ("stylesheet" === s.rel && (i === n || i === a))
+                            19: "31d6cfe0"
+                        }[e] + ".chunk.css", a = u.p + n, c = document.getElementsByTagName("link"), i = 0; i < c.length; i++) {
+                            var f = (s = c[i]).getAttribute("data-href") || s.getAttribute("href");
+                            if ("stylesheet" === s.rel && (f === n || f === a))
                                 return t()
                         }
                         var l = document.getElementsByTagName("style");
-                        for (f = 0; f < l.length; f++) {
+                        for (i = 0; i < l.length; i++) {
                             var s;
-                            if ((i = (s = l[f]).getAttribute("data-href")) === n || i === a)
+                            if ((f = (s = l[i]).getAttribute("data-href")) === n || f === a)
                                 return t()
                         }
                         var d = document.createElement("link");
@@ -120,41 +118,39 @@
                             }
                             ));
                             t.push(r[2] = n);
-                            var c, f = document.createElement("script");
-                            f.charset = "utf-8",
-                            f.timeout = 120,
-                            u.nc && f.setAttribute("nonce", u.nc),
-                            f.src = function(e) {
+                            var c, i = document.createElement("script");
+                            i.charset = "utf-8",
+                            i.timeout = 120,
+                            u.nc && i.setAttribute("nonce", u.nc),
+                            i.src = function(e) {
                                 return u.p + "static/js/" + ({}[e] || e) + "." + {
-                                    1: "9f1213aa",
-                                    3: "9f04b903",
-                                    10: "adabbe91",
-                                    12: "d4cac207",
-                                    13: "ee5dfd72",
-                                    14: "8bc7e924",
-                                    15: "61c1e223",
-                                    16: "dbdc4ec2",
-                                    17: "9f2e40be",
-                                    18: "6ffe7aab",
-                                    19: "075377e8",
-                                    20: "7f439965",
-                                    21: "0649168c"
+                                    1: "a2793f6b",
+                                    3: "6b2a165c",
+                                    10: "aa272396",
+                                    12: "c5a89376",
+                                    13: "60451ca9",
+                                    14: "89cd2f27",
+                                    15: "77ab2f77",
+                                    16: "fb9dd61b",
+                                    17: "41a17287",
+                                    18: "e0451327",
+                                    19: "ae3553b2"
                                 }[e] + ".chunk.js"
                             }(e);
-                            var i = new Error;
+                            var f = new Error;
                             c = function(t) {
-                                f.onerror = f.onload = null,
+                                i.onerror = i.onload = null,
                                 clearTimeout(l);
                                 var r = a[e];
                                 if (0 !== r) {
                                     if (r) {
                                         var n = t && ("load" === t.type ? "missing" : t.type)
                                           , o = t && t.target && t.target.src;
-                                        i.message = "Loading chunk " + e + " failed.\n(" + n + ": " + o + ")",
-                                        i.name = "ChunkLoadError",
-                                        i.type = n,
-                                        i.request = o,
-                                        r[1](i)
+                                        f.message = "Loading chunk " + e + " failed.\n(" + n + ": " + o + ")",
+                                        f.name = "ChunkLoadError",
+                                        f.type = n,
+                                        f.request = o,
+                                        r[1](f)
                                     }
                                     a[e] = void 0
                                 }
@@ -163,12 +159,12 @@
                             var l = setTimeout((function() {
                                 c({
                                     type: "timeout",
-                                    target: f
+                                    target: i
                                 })
                             }
                             ), 12e4);
-                            f.onerror = f.onload = c,
-                            document.head.appendChild(f)
+                            i.onerror = i.onload = c,
+                            document.head.appendChild(i)
                         }
                     return Promise.all(t)
                 }
@@ -234,18 +230,18 @@
                     e
                 }
                 ;
-                var f = this.webpackJsonpappcraft = this.webpackJsonpappcraft || []
-                  , i = f.push.bind(f);
-                f.push = t,
-                f = f.slice();
-                for (var l = 0; l < f.length; l++)
-                    t(f[l]);
-                var s = i;
+                var i = this.webpackJsonpappcraft = this.webpackJsonpappcraft || []
+                  , f = i.push.bind(i);
+                i.push = t,
+                i = i.slice();
+                for (var l = 0; l < i.length; l++)
+                    t(i[l]);
+                var s = f;
                 r()
             }([])
         </script>
-        <script src="https://creation.codemao.cn/coconut/web/1.22.0-0/static/js/0.dbc064e8.chunk.js"></script>
-        <script src="https://creation.codemao.cn/coconut/web/1.22.0-0/static/js/2.590ea185.chunk.js"></script>
-        <script src="https://creation.codemao.cn/coconut/web/1.22.0-0/static/js/main.59a3bab1.chunk.js"></script>
+        <script src="https://creation.codemao.cn/coconut/web/1.22.0-0/static/js/0.3de57be9.chunk.js"></script>
+        <script src="https://creation.codemao.cn/coconut/web/1.22.0-0/static/js/2.b50320a5.chunk.js"></script>
+        <script src="https://creation.codemao.cn/coconut/web/1.22.0-0/static/js/main.eee12093.chunk.js"></script>
     </body>
 </html>

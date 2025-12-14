@@ -1,9 +1,9 @@
 import PriorityQueue from "js-priority-queue"
 
-import { ModuleMap, ModuleKey, Module } from "./types"
+import { ModuleMap, ModuleKey, Module, UnpackConfig } from "./types"
 import { getModuleByKey } from "./utils"
 
-export function setModulesPathByImportName(modules: ModuleMap): void {
+export function setModulesPathByImportName(config: UnpackConfig, modules: ModuleMap): void {
     console.log("setting paths")
     const entryModules: Module[] = Object.values(modules).filter(
         (module: Module): boolean => module.isEntry
@@ -56,6 +56,7 @@ export function setModulesPathByImportName(modules: ModuleMap): void {
     for (const [key, module] of Object.entries(modules)) {
         module.path.push(module.path.pop() + "-" + String(key).replace(/\//g, "_"))
     }
+    postProcess(config, modules)
 }
 
 function getModulePathFromImportName(importName: string): string[] {
@@ -67,7 +68,7 @@ function getModulePathFromImportName(importName: string): string[] {
         .filter(Boolean)
 }
 
-export function setModulesPathByDependency(modules: ModuleMap): void {
+export function setModulesPathByDependency(config: UnpackConfig, modules: ModuleMap): void {
     console.log("setting paths")
     const entryModules: Module[] = Object.values(modules).filter(
         (module: Module): boolean => module.isEntry
@@ -85,12 +86,27 @@ export function setModulesPathByDependency(modules: ModuleMap): void {
     while (queue.length > 0) {
         const module = queue.dequeue()
         for (const importedModule of module.dependency) {
-            if ((importedModule.external != null && !importedModule.external.startsWith(".")) || visited[importedModule.key]) {
+            if ((importedModule.external != null && !importedModule.moved) || visited[importedModule.key]) {
                 continue
             }
             visited[importedModule.key] = true
             importedModule.path = [...module.path, String(importedModule.key).replace(/\//g, "")]
             queue.queue(importedModule)
+        }
+    }
+    postProcess(config, modules)
+}
+
+function postProcess(config: UnpackConfig, modules: ModuleMap) {
+    for (const module of Object.values(modules)) {
+        if (module.external) {
+            module.path = module.external.split("/").filter(Boolean)
+        }
+        if (module.external == ".") {
+            continue
+        }
+        if (!module.moved) {
+            module.path.unshift(...config.output.unrestoredPath.split("/").filter(Boolean))
         }
     }
 }
