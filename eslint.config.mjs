@@ -37,6 +37,7 @@ export default defineConfig([
       "@stylistic/function-paren-newline": ["warn"],
       "@stylistic/indent": ["error", 2],
       "@stylistic/array-bracket-newline": ["warn"],
+      "@stylistic/array-element-newline": ["warn", "consistent"],
       "@stylistic/type-annotation-spacing": ["warn"]
     }
   }

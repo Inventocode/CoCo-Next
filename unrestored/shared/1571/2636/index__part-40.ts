@@ -10,7 +10,7 @@ import { Ap, Ip } from "./index__part-39"
 import * as Sp from "./83"
 import * as /* [auto-meaningful-name] */$_314 from "./314"
 import * as Jd from "./33"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_546_index from "./546/index"
 var Np = function (e) {

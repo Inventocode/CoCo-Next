@@ -10,7 +10,7 @@ var i
 var o
 var r
 import * as a from "./11"
-import * as s from "./5"
+import * as s from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_163 from "./163"
 var /* [auto-meaningful-name] */_5DC5FBFF = "#5DC5FBFF"
 var /* [auto-meaningful-name] */IconWidgetSwitch = "icon-widget-switch"

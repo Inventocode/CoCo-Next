@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../5"
+import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
 import * as a from "./12"
 import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
 import * as /* [auto-meaningful-name] */$_242 from "./242"

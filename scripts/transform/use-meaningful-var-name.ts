@@ -1,5 +1,6 @@
 import { NodePath, PluginObj, types } from "@babel/core"
 import { isIdentifierName } from "@babel/helper-validator-identifier"
+import globals from "globals"
 
 const MARKING_COMMENT_CONTENT = " [auto-meaningful-name] "
 
@@ -82,20 +83,23 @@ function renameIfNeeds(
         return
     }
     processedNewName = processedNewName.replace(/\./g, "$").replace(/\\|\//g, "_")
-    if (!isIdentifierName(processedNewName)) {
+    if (!isIdentifierName(processedNewName) || Object.hasOwn(globals.browser, processedNewName)) {
         processedNewName = "_" + processedNewName
     }
     if (oldName == processedNewName) {
         return
     }
     const { scope } = path
+    const tempNewName = `__auto_meaningful_name_temp_${processedNewName}`
+    scope.rename(oldName, tempNewName)
     if (scope.getBinding(processedNewName) != null) {
         processedNewName = scope.generateUid(processedNewName)
     }
     if (oldName == processedNewName) {
+        scope.rename(tempNewName, oldName)
         return
     }
-    scope.rename(oldName, processedNewName)
+    scope.rename(tempNewName, processedNewName)
     if (!hasMarkingComment) {
         path.addComment("leading", MARKING_COMMENT_CONTENT)
     }

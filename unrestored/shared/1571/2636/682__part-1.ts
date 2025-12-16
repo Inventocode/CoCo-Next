@@ -7,7 +7,7 @@
 "use strict"
 
 import * as o from "./6"
-import * as i from "./5"
+import * as i from "../../../../src/editor/widget/built-in/types"
 import * as a from "./33"
 import * as /* [auto-meaningful-name] */$_244 from "./244"
 var c = {

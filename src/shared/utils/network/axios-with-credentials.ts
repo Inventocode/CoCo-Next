@@ -2,7 +2,7 @@ import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } f
 
 import * as Language from "../../ui/language"
 import * as EventStore from "../../events/store"
-import * as Message from "../../events/messages-wrapper"
+import * as Message from "../../../editor/events/main/messages-wrapper"
 
 export const axiosWithCredentials: AxiosInstance = axios.create({
   timeout: 2e4,

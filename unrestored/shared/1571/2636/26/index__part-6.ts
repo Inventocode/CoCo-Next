@@ -9,7 +9,7 @@
 var Ue
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
 import * as H from "../6"
-import * as p from "../5"
+import * as p from "../../../../../src/editor/widget/built-in/types"
 import * as l from "../9"
 import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"

@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
 import * as a from "../6"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"

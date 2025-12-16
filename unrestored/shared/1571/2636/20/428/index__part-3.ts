@@ -7,7 +7,7 @@
 "use strict"
 
 import { z } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../5"
+import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import * as /* [auto-meaningful-name] */$$_$$_47 from "../../47"

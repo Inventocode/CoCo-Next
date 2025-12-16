@@ -9,7 +9,7 @@ import * as Language from "../ui/language"
 import { Ot } from "../../../unrestored/shared/1571/2636/37/index__part-5"
 import { qn } from "../../../unrestored/shared/1571/2636/37/index__part-9"
 import { ho } from "../../../unrestored/shared/1571/2636/37/index__part-11"
-import { Si, Ms, wc } from "./actions/editor"
+import { Si, Ms, wc } from "../../editor/events/main/actions"
 import { cl } from "../../../unrestored/shared/1571/2636/37/index__part-13"
 var ll
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../unrestored/shared/1571/2636/24/index"
@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_11 
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_48_3_index from "../../../unrestored/shared/1571/2636/48/3/index"
 import RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_100 from "../../../unrestored/shared/1571/2636/100"
-import * as /* [auto-meaningful-name] */$_messagesWrapper from "./messages-wrapper"
+import * as Message from "../../editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_48_489 from "../../../unrestored/shared/1571/2636/48/489"
 import * as /* [auto-meaningful-name] */Redux from "redux"
@@ -35,7 +35,7 @@ function gl(e) {
         case 0:
           e$payload = e.payload
           n.next = 3
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_messagesWrapper.ej(e.payload))
+          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Message.ej(e.payload))
         case 3:
           if (!e$payload) {
             n.next = 9
@@ -50,7 +50,7 @@ function gl(e) {
         case 9:
           $$_$$_$$_unrestored_shared_1571_2636_24_index.a.disconnect()
           n.next = 12
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_messagesWrapper.Gf())
+          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Message.warpAsyncCreateProject())
         case 12:
           n.next = 14
           return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($$_$$_$$_unrestored_shared_1571_2636_100.n())
@@ -75,7 +75,7 @@ function _l(e) {
         case 3:
           e$sent = e.sent
           e.next = 6
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_messagesWrapper.gi(e$sent))
+          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Message.gi(e$sent))
         case 6:
           e.next = 10
           break
@@ -101,7 +101,7 @@ function vl(e) {
         case 3:
           e$sent = e.sent
           e.next = 6
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_messagesWrapper.bj(e$sent))
+          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Message.bj(e$sent))
         case 6:
           e.next = 10
           break
@@ -116,20 +116,20 @@ function vl(e) {
   }, hl, null, [[0, 8]])
 }
 var bl
-var yl = qn((ll = {}, $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, $_messagesWrapper.wb, gl), $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, $_messagesWrapper.S, _l), $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, $_messagesWrapper.W, vl), ll))
+var yl = qn((ll = {}, $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, Message.wb, gl), $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, Message.S, _l), $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, Message.W, vl), ll))
 function El() {
   return RegeneratorRuntime.wrap(function (e) {
     for (;;) {
       switch (e.prev = e.next) {
         case 0:
           e.next = 2
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([$_messagesWrapper.wb], yl)
+          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([Message.wb], yl)
         case 2:
           e.next = 4
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([$_messagesWrapper.S], yl)
+          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([Message.S], yl)
         case 4:
           e.next = 6
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([$_messagesWrapper.W], yl)
+          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([Message.W], yl)
         case 6:
         case "end":
           return e.stop()

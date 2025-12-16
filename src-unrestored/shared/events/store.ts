@@ -9,7 +9,7 @@
 import { Ot } from "../../../unrestored/shared/1571/2636/37/index__part-5"
 import { qn } from "../../../unrestored/shared/1571/2636/37/index__part-9"
 import { ho } from "../../../unrestored/shared/1571/2636/37/index__part-11"
-import { Si, Ms, wc } from "./actions/editor"
+import { Si, Ms, wc } from "../../editor/events/main/actions"
 import { cl } from "../../../unrestored/shared/1571/2636/37/index__part-13"
 var ll
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../unrestored/shared/1571/2636/24/index"
@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_11 
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_48_3_index from "../../../unrestored/shared/1571/2636/48/3/index"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_100 from "../../../unrestored/shared/1571/2636/100"
-import * as /* [auto-meaningful-name] */$_messagesWrapper from "./messages-wrapper"
+import * as /* [auto-meaningful-name] */$_messagesWrapper from "../../editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_48_489 from "../../../unrestored/shared/1571/2636/48/489"
 import * as /* [auto-meaningful-name] */Redux from "redux"

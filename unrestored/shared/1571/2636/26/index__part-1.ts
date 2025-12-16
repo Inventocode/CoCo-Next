@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as l from "../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_301_index from "../301/index"
-import * as p from "../5"
+import * as p from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 var h = new (function () {
   function e() {

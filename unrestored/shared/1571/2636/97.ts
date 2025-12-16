@@ -23,7 +23,7 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as d from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as f from "./5"
+import * as f from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
 import * as /* [auto-meaningful-name] */$_37_375 from "./37/375"
 function g(e) {

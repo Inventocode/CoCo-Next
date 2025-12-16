@@ -9,7 +9,7 @@
 import { Df } from "./index__part-53"
 import { Pf, Ff } from "./index__part-54"
 import * as /* [auto-meaningful-name] */$_149 from "./149"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as Gf from "./77"
 var Wf = {
   icon: $_149.d,

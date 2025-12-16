@@ -9,7 +9,7 @@
 var r
 import * as o from "./11"
 import * as i from "./75"
-import * as a from "./5"
+import * as a from "../../../../src/editor/widget/built-in/types"
 var /* [auto-meaningful-name] */IconWidgetCheckbox = "icon-widget-checkbox"
 var /* [auto-meaningful-name] */Ff2f2fff = "#ff2f2fff"
 var /* [auto-meaningful-name] */_34c958ff = "#34c958ff"

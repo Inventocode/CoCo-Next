@@ -8,14 +8,14 @@ export interface Types {
   title: string
   contentTextField?: string
   icon: string
-  version?: `${number}.${number}.${number}` | string | undefined
+  version?: `${number}.${number}.${number}` | string
   docs?: {
-    url?: string | undefined
-  } | undefined
-  platforms?: Platforms | undefined
+    url?: string
+  }
+  platforms?: Platforms
   isInvisibleWidget: boolean
   isGlobalWidget: boolean
-  hasAnyWidget?: boolean | undefined
+  hasAnyWidget?: boolean
   properties: PropertyTypes[]
   methods: MethodTypes[]
   events: EventTypes[]
@@ -26,111 +26,111 @@ export type Platforms = ("web" | "android" | "ios")[]
 export interface PropertyTypes {
   key: string
   label: string
-  hidePropertyEditor?: boolean | undefined
-  blockOptions?: PropertyBlockOptionsTypes | undefined
+  hidePropertyEditor?: boolean
+  blockOptions?: PropertyBlockOptionsTypes
   validators?: {
     lessThan?: number | {
-      value?: number | undefined
-      message?: string | undefined
-    } | undefined
-    greaterThan?: number | {
-      value?: number | undefined
-      message?: string | undefined
-    } | undefined
-    lessThanOrEqualTo?: number | {
-      value?: number | undefined
-      message?: string | undefined
-    } | undefined
-    greaterThanOrEqualTo?: number | {
-      value?: number | undefined
-      message?: string | undefined
-    } | undefined
-    isInteger?: boolean | undefined
-    notEmpty?: {
-      value?: number | undefined
-      message?: string | undefined
-      maxLength?: number | undefined
-      minLength?: number | undefined
+      value?: number
+      message?: string
     }
-  } | undefined
-  readonly?: 0 | 1 | undefined
-  unit?: string | undefined
+    greaterThan?: number | {
+      value?: number
+      message?: string
+    }
+    lessThanOrEqualTo?: number | {
+      value?: number
+      message?: string
+    }
+    greaterThanOrEqualTo?: number | {
+      value?: number
+      message?: string
+    }
+    isInteger?: boolean
+    notEmpty?: {
+      value?: number
+      message?: string
+      maxLength?: number
+      minLength?: number
+    }
+  }
+  readonly?: 0 | 1
+  unit?: string
   valueType: ValueType
-  checkType?: CheckType | undefined
-  editorType?: EditorType | undefined
-  dropdown?: DropdownItemTypes[] | undefined
+  checkType?: CheckType
+  editorType?: EditorType
+  dropdown?: DropdownItemTypes[]
   defaultValue: number | string | boolean
 }
 
 export interface PropertyBlockOptionsTypes {
-  generateBlock?: boolean | undefined
-  line?: string | undefined
-  space?: number | undefined
-  order?: number | undefined
-  getter?: PropertyCalculatorBlockOptionsTypes | undefined
-  setter?: PropertyCalculatorBlockOptionsTypes | undefined
+  generateBlock?: boolean
+  line?: string
+  space?: number
+  order?: number
+  getter?: PropertyCalculatorBlockOptionsTypes
+  setter?: PropertyCalculatorBlockOptionsTypes
 }
 
 export interface PropertyCalculatorBlockOptionsTypes {
-  generateBlock?: boolean | undefined
-  line?: string | undefined
-  space?: number | undefined
-  order?: number | undefined
-  keys?: string[] | undefined
+  generateBlock?: boolean
+  line?: string
+  space?: number
+  order?: number
+  keys?: string[]
 }
 
 export interface MethodTypes {
   key: string
-  label?: string | undefined
+  label?: string
   params: MethodParamTypes[]
-  tooltip?: string | undefined
-  blockOptions?: MethodBlockOptionsTypes | undefined
-  valueType?: ValueType | undefined
+  tooltip?: string
+  blockOptions?: MethodBlockOptionsTypes
+  valueType?: ValueType
 }
 
 export interface MethodParamTypes {
   key: string
-  label?: string | undefined
-  labelAfter?: string | undefined
+  label?: string
+  labelAfter?: string
   controller?: {
-    min?: number | undefined
-    max?: number | undefined
+    min?: number
+    max?: number
   } & ({
     leftText?: undefined
     rightText?: undefined
   } | {
     leftText: string
     rightText: string
-  }) | undefined
+  })
   valueType: ValueType
-  checkType?: CheckType | undefined
+  checkType?: CheckType
   defaultValue: number | string | boolean
-  dropdown?: DropdownItemTypes[] | undefined
+  dropdown?: DropdownItemTypes[]
 }
 
 export interface MethodBlockOptionsTypes {
-  generateBlock?: boolean | undefined
-  line?: string | undefined
-  space?: number | undefined
-  order?: number | undefined
-  icon?: string | undefined
-  color?: string | undefined
-  inputsInline?: boolean | undefined
-  callMethodLabel?: boolean | string | undefined
+  generateBlock?: boolean
+  line?: string
+  space?: number
+  order?: number
+  icon?: string
+  color?: string
+  inputsInline?: boolean
+  callMethodLabel?: boolean | string
 }
 
 export interface EventTypes {
   key: string
-  subTypes?: EventSubType[] | undefined
+  subTypes?: EventSubType[]
   label: string
   params: EventParamTypes[]
-  tooltip?: string | undefined
-  blockOptions?: EventBlockOptionsTypes | undefined
+  tooltip?: string
+  blockOptions?: EventBlockOptionsTypes
 }
 
 export interface EventSubType {
   key: string
-  dropdown?: DropdownItemTypes[] | undefined
+  dropdown?: DropdownItemTypes[]
 }
 
 export interface EventParamTypes {
@@ -140,11 +140,11 @@ export interface EventParamTypes {
 }
 
 export interface EventBlockOptionsTypes {
-  generateBlock?: boolean | undefined
-  line?: string | undefined
-  space?: number | undefined
-  order?: number | undefined
-  icon?: string | undefined
+  generateBlock?: boolean
+  line?: string
+  space?: number
+  order?: number
+  icon?: string
 }
 
 export interface DropdownItemTypes {

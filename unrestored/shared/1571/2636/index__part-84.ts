@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$_131 from "./131"
 import * as /* [auto-meaningful-name] */$_262 from "./262"
 import * as /* [auto-meaningful-name] */$_200 from "./200"
 import * as Jd from "./33"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_682 from "./682"
 var M_ = {

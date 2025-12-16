@@ -13,12 +13,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_typ
 import * as Oe from "./43"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as ye from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as Q from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as cn from "./5"
+import * as cn from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_110 from "./110"
 function un(e) {
   if (nn(e.path)) {

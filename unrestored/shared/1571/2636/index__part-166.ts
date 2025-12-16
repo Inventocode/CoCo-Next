@@ -9,7 +9,7 @@
 import { fA } from "./index__part-163"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"

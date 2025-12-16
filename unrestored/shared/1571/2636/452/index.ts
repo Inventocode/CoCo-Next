@@ -10,7 +10,7 @@ export { h as a }
 export { m as b }
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */_React from "react"
-import * as i from "../5"
+import * as i from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_42_index from "../42/index"
 import * as /* [auto-meaningful-name] */$$_64 from "../64"
 import * as /* [auto-meaningful-name] */$$_206 from "../206"

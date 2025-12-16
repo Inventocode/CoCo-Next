@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../5"
+import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_546_index from "../../../546/index"

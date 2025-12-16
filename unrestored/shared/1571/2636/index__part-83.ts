@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_148 from "./148"
 import * as Jd from "./33"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_679 from "./679"
 import * as /* [auto-meaningful-name] */$_680 from "./680"

@@ -8,7 +8,7 @@
 
 import { qp, Xp, Qp } from "./index__part-43"
 import * as Jd from "./33"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as k from "./11"

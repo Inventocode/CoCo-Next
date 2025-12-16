@@ -11,7 +11,7 @@ import /* [auto-meaningful-name] */_React from "react"
 import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
 import "./860"
 import * as /* [auto-meaningful-name] */$$_$$_16_index from "../../16/index"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../5"
+import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_64 from "../../64"
 import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
 function u(e) {

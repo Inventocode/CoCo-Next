@@ -17,7 +17,7 @@ export { F7F7F7 as a }
 export { p as f }
 export { Tiled as c }
 export { r$o$IMAGE_AND_TITLE_DESC as d }
-import * as r from "./5"
+import * as r from "../../../../src/editor/widget/built-in/types"
 var /* [auto-meaningful-name] */IconWidgetListViewer = "icon-widget-list-viewer"
 var i = 360
 var a = 500

@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/inde
 import * as /* [auto-meaningful-name] */$$_242 from "../242"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../5"
+import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_554_index from "../../../554/index"
 var $ = function (e) {

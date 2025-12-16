@@ -8,10 +8,13 @@ import * as React from "react"
 import { render } from "react-dom"
 
 import { zh_CN, messages } from "./language"
-import * as ReactIntl from "../../unrestored/about/64/73/index"
+import { a as ReactIntl } from "../../unrestored/about/64/73/index"
 import * as /* [auto-meaningful-name] */$$_$$_unrestored_about_64_71_index from "../../unrestored/about/64/71/index"
 import /* [auto-meaningful-name] */$$_$$_unrestored_about_64_30 from "../../unrestored/about/64/30"
 import * as styles from "./styles.module.css"
+import Logo from "./assets/images/logo.png"
+import quotesLeft from "./assets/images/quotes/left.png"
+import quotesRight from "./assets/images/quotes/right.png"
 
 interface TeamItem {
   icon: string
@@ -84,11 +87,11 @@ function App() {
         <div className={styles.left} />
         <div className={styles.bannerContent}>
           <div className={styles.bannerLogoBox}>
-            <img className={styles.bannerLogoImg} src="https://static.codemao.cn/coco/image/about_page_logo_new.png" alt="logo" />
+            <img className={styles.bannerLogoImg} src={Logo} alt="logo" />
           </div>
           <div className={styles.bannerText}>
-            <img className={styles.quotesLeft} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAuCAMAAABOIvqXAAAArlBMVEUAAAD06P/46//37P/26f/26f/27P/16f/////57f/26//37P/26//16v/27P/26f/26v/16v/26//37P/27f/////16v/26//16f/26v//8P//7P/16P/27f/37P/16v/16v/05//26//16P/16f/27P/37f/37f/57f/16P/37f/16v/36//16//17f/16v/37v/37P/27f/37P/57v/77f/z5f/06P/16v/27P8iISitAAAANnRSTlMA0CRdmcno0wIm6GH85pH33da1OxsH7rCogRQN/N/Yy8K6op6NcFcyKvTqvXhqTUxB/MGFWUeMaG9zAAABi0lEQVRIx+3Ux3qCQBSGYYNRqnRF7F0Ta5oM939jEQfjfziYjdnFs3Dh+3w4wgyVvx5taXZ+c2WxKvs6sNf9tzTd36j02B84afrBfm03McR50nn5ZQdCzqQQblpCiCQbIWweLvpXfifyNZAgMSqGqxGyC9KNLnI8Zp9DGmq2Rdi5UugJCdlkaJCy6QNnLsIL6X0BkpnVxCXVipwcclrWpWAKT67jiSILM1+OWyiddhW3hF8oe+OtktMzlZeYbiWTlr2p/kMHi5RjpUImbJFSDeDuuaScaRU6Pin9LpBJaMM2rUBua2gjpDGAHBvZ7SIpFpATshNhYLonNkOa8j2P/ETNBUsClkbIc0JNXG9LY6kHnOiEggRsxEqth1emtiW3nqVLZI+aTbZgo9EwjPppXhXJVUydK3+ebAIkT7F8N+V/a36DzZNFzCTnaQyMnqVrMNBLOivnc1oDAxZKfh6Bsa6SlCKkbDDliCmfR/pI/306vCcF5Od1WsoybatPfFTVC2Uaq2oZq7vKPfMNyVRLK/yK2/QAAAAASUVORK5CYII=" alt="" />
-            <img className={styles.quotesRight} src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAAAuCAMAAABOIvqXAAAAwFBMVEUAAAD06P/16v/16//36v/16v/27P/26//27P/06P/16f/37P/26//27P/26//27P/26f/17f/56//////16v/26//16//06P/05v/27P/16v/36//26v/16v//7//////16P/27P/16f/37P/26//16//26//57//37P/26v/26//16v/16f/27P/37P/26//47f/67f/47v//8v/26//06P/37P/15///8///7f/y5P/z5//y5f/06f/16v/27P8NqjbUAAAAOnRSTlMAz3KIO7np5vvm0r1zGvOMU00sBu7a1NHQkIWAODIKAvzLyq2pmmI9H/fPxLSwpWZZRCQSuXhdSRUO+NM0zgAAAclJREFUSMft02lT6jAYhuHA8UCBtkBZPLLKjvt2XNOk//9fmaSJPG8j6ox+9PkG19yhUybsO2vf3H3Em/Z2r/WyrDu7XD/v4UWWxf2LMHrPYmkWnL3PM8ung6RId1IKM8X/b/20al3lpxtKB0ZsfdKcFMppABwsI7S1EDyf0WqbprcSXcYh2NBQmjoNruj7z8s3lkc7u9SWmuUqh5iWPV5OnTWsOaUHs6bPjY616WbQ0/aiplXjNbRJOOccmR7dLmnUy7HyxHCjc2DlwQhwGsakvWB0rVqq3XGvgziukfa60EYljm2T4Ja0M1bY5IwDxxOCj9y22sS42G672F5RXGK7YsXdI8+pJXx3ruh2vEfGn5UJxTme22LFrZAH1AZoQy9t4VOd7ze+8NJIszu6R22E1mfejoGP9btYVNSqarUaT3d24i5lRc8wpubfa2RSTeTXFsy+4iPHAjjl4kanGqB0Ftlbt2OStkxqvjeCaeJSyu6p1jp1J2qC1N6sP8iQlpX91WQB7cClyH4K4KXIfkrJT4Fpyj9L09/0N/1qKn40TUnKfcab45GA1Ge8r3QcUmBwESpb9euHpX8lmPp0WK+P87S8hx/YN/YK6QFo0NXHJ6QAAAAASUVORK5CYII=" alt="" />
+            <img className={styles.quotesLeft} src={quotesLeft} alt="" />
+            <img className={styles.quotesRight} src={quotesRight} alt="" />
             <p>{formatMessage({ id: "about.remarks1" })}</p>
             <p>{formatMessage({ id: "about.remarks2" })}</p>
           </div>
@@ -156,8 +159,8 @@ function App() {
 }
 
 render(
-  <ReactIntl.a locale={zh_CN} messages={messages["zh-CN"]}>
+  <ReactIntl locale={zh_CN} messages={messages["zh-CN"]}>
     <App />
-  </ReactIntl.a>,
+  </ReactIntl>,
   document.getElementById("root")
 )

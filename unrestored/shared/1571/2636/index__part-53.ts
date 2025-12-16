@@ -9,7 +9,7 @@
 import { Af } from "./index__part-51"
 import { jf, Rf } from "./index__part-52"
 import * as /* [auto-meaningful-name] */$_131 from "./131"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_163 from "./163"
 var xf = {
   icon: $_131.e,

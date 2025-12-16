@@ -27,6 +27,7 @@ const config = {
                 "https://shence-data.codemao.cn",
                 "https://sentry.codemao.cn",
                 "https://shequ.codemao.cn",
+                "https://www.codemao.cn",
                 "https://socketcoll.codemao.cn:8098",
                 "https://socketcv.codemao.cn:9096",
                 "wss://socketcoll.codemao.cn:8098",

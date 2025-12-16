@@ -11,7 +11,7 @@ import { tg } from "./index__part-75"
 var Jm
 var Zm
 var Qm
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as k from "./11"
 import * as ng from "./64"
 var rg = ng.a("COLUMN")

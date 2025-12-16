@@ -10,7 +10,7 @@ import { B } from "./index__part-4"
 var P
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$_344 from "./344"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
 import /* [auto-meaningful-name] */Color from "color"
 import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
 import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"

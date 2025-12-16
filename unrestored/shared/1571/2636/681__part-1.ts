@@ -8,7 +8,7 @@
 
 import * as o from "./6"
 import * as i from "./95"
-import * as a from "./5"
+import * as a from "../../../../src/editor/widget/built-in/types"
 import * as s from "./33"
 import * as c from "./76"
 import * as l from "./60"

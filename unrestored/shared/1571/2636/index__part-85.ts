@@ -9,7 +9,7 @@
 import * as ng from "./64"
 import * as Jd from "./33"
 import * as Qu from "./60"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as te from "./15"
 import * as D from "./6"

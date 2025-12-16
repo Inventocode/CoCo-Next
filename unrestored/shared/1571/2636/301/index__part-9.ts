@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as /* [auto-meaningful-name] */$_374 from "./374"
 import * as /* [auto-meaningful-name] */$_503 from "./503"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 var /* [auto-meaningful-name] */$_374$FieldTextInput$prototype$show_editor = $_374.FieldTextInput.prototype.show_editor
 $_374.FieldTextInput.prototype.show_editor = function () {

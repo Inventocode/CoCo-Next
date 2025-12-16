@@ -9,7 +9,7 @@
 import { r, o, i } from "./242__part-0"
 var g
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../5"
+import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
 import * as /* [auto-meaningful-name] */$$_$$_25_index from "../../25/index"
 import * as /* [auto-meaningful-name] */$$_$$_738_302 from "../../738/302"

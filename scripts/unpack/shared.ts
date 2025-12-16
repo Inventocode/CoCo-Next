@@ -51,10 +51,11 @@ unpack({
     publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
     setPath: SetPath.BY_DEPENDENCY,
     moveToSrc: {
-        2: "/shared/events/messages-wrapper",
+        2: "/editor/events/main/messages-wrapper",
+        5: "/editor/widget/built-in/types",
         23: "/shared/ui/language",
         34: "/shared/widget/custom/load",
-        "37__part-12": "/shared/events/actions/editor",
+        "37__part-12": "/editor/events/main/actions",
         "37__part-14": "/shared/events/store",
         41: "/shared/utils/network/axios-with-credentials",
         78: "/shared/widget/custom/type",
@@ -62,10 +63,17 @@ unpack({
         183: "/shared/widget/custom/shop",
         232: "/shared/widget/custom/restrict",
         261: "/editor/block/toolbox",
-        // 301: "/editor/block/generate",
+        "301__part-0": "/editor/block/generate/index",
+        "301__part-2": "/editor/block/generate/toolbox/index-1",
+        "301__part-3": "/editor/block/generate/toolbox/index-2",
+        "301__part-4": "/editor/block/generate/toolbox/index-3",
         347: "/shared/widget/custom/external-module",
         1571: ".",
-        // 2584: "/editor/index"
+        "2636__part-7": "/editor/ui/dialogs/open-project/my/index",
+        "2636__part-14": "/editor/ui/header/right/collaboration",
+        "2636__part-22": "/editor/ui/header/wrapper",
+        "2636__part-74": "/editor/widget/built-in/http-client-and-timer",
+        "2636__part-195": "/editor/ui/open-work"
     },
     nodePolyfill: {
         250: "global",

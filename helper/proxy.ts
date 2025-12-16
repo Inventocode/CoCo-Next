@@ -6,19 +6,18 @@ interface Window {
     COCO_SOURCE_CODE_PLAN_PROXY_IFRAME?: boolean
 }
 
-function proxyAll(theWindow: typeof window = window) {
-    proxyXMLHttpRequest(theWindow)
-    proxyFetch(theWindow)
-    proxyWebSocket(theWindow)
-    proxyOpen(theWindow)
-    proxyIFrame(theWindow)
+function proxyAll() {
+    proxyXMLHttpRequest()
+    proxyFetch()
+    proxyWebSocket()
+    proxyOpen()
+    proxyIFrame()
 }
 
-function proxyXMLHttpRequest(theWindow: typeof window) {
-    if (theWindow.SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST) {
+function proxyXMLHttpRequest() {
+    if (flag("SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST")) {
         return
     }
-    const { XMLHttpRequest } = theWindow
     let originalOpen: typeof XMLHttpRequest.prototype.open = XMLHttpRequest.prototype.open
     XMLHttpRequest.prototype.open = function open(
         method: string,
@@ -37,16 +36,14 @@ function proxyXMLHttpRequest(theWindow: typeof window) {
         }
     }
     XMLHttpRequest.prototype.open.toString = originalOpen.toString.bind(originalOpen)
-    defineFlag(theWindow, "SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST")
 }
 
-function proxyFetch(theWindow: typeof window) {
-    if (theWindow.SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH) {
+function proxyFetch() {
+    if (flag("SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH")) {
         return
     }
-    const { fetch } = theWindow
     let originalFetch: typeof fetch = fetch
-    theWindow.fetch = function fetch(
+    window.fetch = function fetch(
         input: RequestInfo | URL,
         init: RequestInit | undefined
     ): Promise<Response> {
@@ -62,14 +59,13 @@ function proxyFetch(theWindow: typeof window) {
         return originalFetch.call(this, input, init)
     }
     fetch.toString = originalFetch.toString.bind(originalFetch)
-    defineFlag(theWindow, "SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH")
 }
 
-function proxyWebSocket(theWindow: typeof window) {
-    if (theWindow.SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET) {
+function proxyWebSocket() {
+    if (flag("SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET")) {
         return
     }
-    theWindow.WebSocket = class WebSocket extends window.WebSocket {
+    window.WebSocket = class WebSocket extends window.WebSocket {
         public constructor(url: string | URL, protocols?: string | string[]) {
             if (typeof url == "string") {
                 url = new URL(url, location.href)
@@ -80,7 +76,6 @@ function proxyWebSocket(theWindow: typeof window) {
             super(url, protocols)
         }
     }
-    defineFlag(theWindow, "SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET")
 }
 
 function needsProxy(url: URL): boolean {
@@ -112,13 +107,12 @@ function rewriteURL(url: URL): URL {
     return url
 }
 
-function proxyOpen(theWindow: typeof window) {
-    if (theWindow.COCO_SOURCE_CODE_PLAN_PROXY_OPEN) {
+function proxyOpen() {
+    if (flag("COCO_SOURCE_CODE_PLAN_PROXY_OPEN")) {
         return
     }
-    const { open } = theWindow
     const originalOpen: typeof open = open
-    theWindow.open = function open(
+    window.open = function open(
         url?: string | URL,
         target?: string,
         features?: string
@@ -127,6 +121,14 @@ function proxyOpen(theWindow: typeof window) {
             url = new URL(url, location.href)
         }
         if (
+            url?.host == "www.codemao.cn" &&
+            (url.pathname == "/get-qq-code.html" || url.pathname == "/get-weixin-code.html")
+        ) {
+            if (location.protocol == "http:" && url.protocol == "https:") {
+                url.protocol = "http:"
+            }
+            url.host = location.host
+        } else if (
             url?.hostname.endsWith("coco.codemao.cn") ||
             url?.hostname == location.hostname
         ) {
@@ -136,37 +138,35 @@ function proxyOpen(theWindow: typeof window) {
         return originalOpen.call(this, url, target, features)
     }
     open.toString = originalOpen.toString.bind(originalOpen)
-    defineFlag(theWindow, "COCO_SOURCE_CODE_PLAN_PROXY_OPEN")
 }
 
-function proxyIFrame(theWindow: typeof window) {
-    if (theWindow.COCO_SOURCE_CODE_PLAN_PROXY_IFRAME) {
+function proxyIFrame() {
+    if (flag("COCO_SOURCE_CODE_PLAN_PROXY_IFRAME")) {
         return
     }
     const observer = new MutationObserver((mutationList) => {
         for (const mutation of mutationList) {
             for (const node of Array.from(mutation.addedNodes)) {
                 if (node instanceof HTMLIFrameElement) {
-                    changeIFrameSrc(theWindow, node)
+                    changeIFrameSrc(node)
                 } if (node instanceof HTMLElement) {
                     for (const child of Array.from(node.querySelectorAll("*"))) {
                         if (child instanceof HTMLIFrameElement) {
-                            changeIFrameSrc(theWindow, child)
+                            changeIFrameSrc(child)
                         }
                     }
                 }
             }
         }
     })
-    observer.observe(theWindow.document.documentElement, {
+    observer.observe(document.documentElement, {
         subtree: true,
         childList: true
     })
-    defineFlag(theWindow, "COCO_SOURCE_CODE_PLAN_PROXY_IFRAME")
 }
 
-function changeIFrameSrc(theWindow: typeof window, iFrame: HTMLIFrameElement) {
-    const src = new URL(iFrame.src, theWindow.location.href)
+function changeIFrameSrc(iFrame: HTMLIFrameElement) {
+    const src = new URL(iFrame.src, location.href)
     if (src.host == "shequ.codemao.cn" && src.pathname.startsWith("/codemao_login")) {
         if (location.protocol == "http:" && src.protocol == "https:") {
             src.protocol = "http:"
@@ -176,13 +176,17 @@ function changeIFrameSrc(theWindow: typeof window, iFrame: HTMLIFrameElement) {
     }
 }
 
-function defineFlag(theWindow: typeof window, key: keyof Window) {
-    Object.defineProperty(theWindow, key, {
+function flag(key: keyof Window): boolean {
+    if (window[key]) {
+        return true
+    }
+    Object.defineProperty(window, key, {
         value: true,
         enumerable: false,
         writable: true,
         configurable: true
     })
+    return false
 }
 
 if (!location.hostname.endsWith(".codemao.cn")) {

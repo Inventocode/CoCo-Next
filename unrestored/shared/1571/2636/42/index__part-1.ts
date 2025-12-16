@@ -8,7 +8,7 @@
 
 import { _ } from "./index__part-0"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
-import * as u from "../5"
+import * as u from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import s from "../8"

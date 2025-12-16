@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { r, o, i, a, s, c, l, u, d, p, f } from "./index__part-0"
+import { r, o, i, a, s, c, l, u, d, p, f } from "../../../../../src/editor/block/generate"
 import { be } from "./index__part-6"
 import { Ne } from "./index__part-7"
 var We

@@ -40,10 +40,10 @@ var x = require("./1691")
 var D = require("./758")
 var M = require("./633/index")
 var L = k("species")
-var /* [auto-meaningful-name] */Promise = "Promise"
+var /* [auto-meaningful-name] */_Promise = "Promise"
 var /* [auto-meaningful-name] */N$get = N.get
 var /* [auto-meaningful-name] */N$set = N.set
-var G = N.getterFor(Promise)
+var G = N.getterFor(_Promise)
 var W = d && d.prototype
 var U = d
 var H = W
@@ -55,7 +55,7 @@ var q = K
 var X = !!(l$document && l$document.createEvent && l.dispatchEvent)
 var Q = "function" == typeof PromiseRejectionEvent
 var Z = false
-var J = R(Promise, function () {
+var J = R(_Promise, function () {
   var e = y(U)
   var t = e !== String(U)
   if (!t && 66 === M) {
@@ -246,7 +246,7 @@ var ce = function e(t, n, r) {
   }
 }
 if (J && (H = (U = function (e) {
-  b(this, U, Promise)
+  b(this, U, _Promise)
   v(e)
   r.call(this)
   var t = N$get(this)
@@ -257,7 +257,7 @@ if (J && (H = (U = function (e) {
   }
 }).prototype, (r = function (e) {
   N$set(this, {
-    type: Promise,
+    type: _Promise,
     done: false,
     notified: false,
     parent: false,
@@ -320,11 +320,11 @@ s({
 }, {
   Promise: U
 })
-m(U, Promise, false, true)
-g(Promise)
-i = u(Promise)
+m(U, _Promise, false, true)
+g(_Promise)
+i = u(_Promise)
 s({
-  target: Promise,
+  target: _Promise,
   stat: true,
   forced: J
 }, {
@@ -335,7 +335,7 @@ s({
   }
 })
 s({
-  target: Promise,
+  target: _Promise,
   stat: true,
   forced: c || J
 }, {
@@ -344,7 +344,7 @@ s({
   }
 })
 s({
-  target: Promise,
+  target: _Promise,
   stat: true,
   forced: $
 }, {

@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_555_index from "./555/index"

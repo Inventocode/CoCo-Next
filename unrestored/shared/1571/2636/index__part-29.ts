@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as k from "./11"
 import N from "./8"

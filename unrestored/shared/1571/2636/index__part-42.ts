@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "./5"
+import * as An from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as Fp from "./76"
 var Wp = {

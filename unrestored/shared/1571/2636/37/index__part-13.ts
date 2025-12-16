@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */$$_48_3_index from "../48/3/index"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$$_295 from "../295"
 var Sc = RegeneratorRuntime.mark(Hc)
 var Ac = RegeneratorRuntime.mark(Vc)

@@ -25,27 +25,24 @@ const config = {
         "login": path.resolve(__dirname, "helper", "login", "index"),
         "editor-service-worker": {
             import: path.resolve(__dirname, "src", "editor-service-worker", "index"),
-            filename: "editor/main.sw.js"
+            filename: "editor/main.sw.js",
+            runtime: false
         },
         ...Object.fromEntries(PAGES.map(({ name }) => [name, path.resolve(__dirname, "src", name, "index")]))
     },
     output: {
         path: path.resolve(__dirname, "dist", "coco.codemao.cn"),
+        assetModuleFilename(pathData) {
+            return `static/assets/${pathData.filename?.split("/").filter(
+                name => name != "src" && name != "assets"
+            ).join("/") ?? "[file]"}`
+        },
         clean: true
     },
     module: {
         rules: [
             {
-                test: /\.tsx?$/,
-                exclude: /node_modules/,
-                use: ["thread-loader", {
-                    loader: "esbuild-loader",
-                    options: {
-                        target: "esnext"
-                    }
-                }]
-            }, {
-                test: /\.(t|j)sx?$/,
+                test: /\.(t|j)sx?$/i,
                 exclude: /node_modules|helper|home/,
                 use: {
                     loader: "string-replace-loader",
@@ -62,7 +59,7 @@ const config = {
                     }
                 }
             }, {
-                test: /\.css$/,
+                test: /\.css$/i,
                 use: {
                     loader: "css-loader",
                     options: {
@@ -72,8 +69,19 @@ const config = {
                         }
                     }
                 }
+            }, {
+                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                type: "asset",
+                parser: {
+                    dataUrlCondition: {
+                        maxSize: 1024
+                    }
+                }
             }
         ]
+    },
+    optimization: {
+        runtimeChunk: "single"
     },
     resolve: {
         extensions: [".ts", ".tsx", ".js", ".jsx"],
@@ -91,11 +99,14 @@ const config = {
         new webpack.ProvidePlugin({
             process: "process/"
         }),
-        new HtmlWebpackPlugin({
-            filename: "codemao_login/index.html",
-            template: "helper/login/index.html",
-            chunks: ["proxy", "login"]
-        })
+        ...["codemao_login/index.html", "get-qq-code.html", "get-weixin-code.html"].map(
+            filename => new HtmlWebpackPlugin({
+                filename,
+                template: "helper/login/index.html",
+                chunks: ["proxy", "login"],
+                publicPath: "/"
+            })
+        )
     ]
 }
 

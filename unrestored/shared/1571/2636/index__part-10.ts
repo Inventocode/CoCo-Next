@@ -10,7 +10,7 @@ import { Ve } from "./index__part-9"
 var Ye
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as O from "./7"

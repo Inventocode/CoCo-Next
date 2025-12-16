@@ -7,7 +7,7 @@
 "use strict"
 
 import { cn } from "./index__part-19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"

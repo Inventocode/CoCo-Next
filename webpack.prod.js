@@ -16,6 +16,13 @@ const config = merge(common, {
     module: {
         rules: [
             {
+                test: /\.tsx?$/i,
+                exclude: /node_modules/,
+                loader: "esbuild-loader",
+                options: {
+                    target: "esnext"
+                }
+            }, {
                 test: /\.css$/,
                 use: MiniCssExtractPlugin.loader,
                 enforce: "post"

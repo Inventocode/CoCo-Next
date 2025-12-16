@@ -8,7 +8,7 @@
 
 import * as o from "./6"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as a from "./5"
+import * as a from "../../../../src/editor/widget/built-in/types"
 import * as s from "./33"
 var c = {
   type: a.v,

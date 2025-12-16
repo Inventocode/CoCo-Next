@@ -10,7 +10,7 @@ export { d as c }
 export { p as a }
 export { f as b }
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../5"
+import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$$_89 from "../89"
 import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../15"

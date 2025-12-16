@@ -36,7 +36,7 @@ import * as Language from "../../ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../unrestored/shared/1571/2636/49"
 import * as ExternalModule from "./external-module"
 import * as EventStore from "../../events/store"
-import * as Message from "../../events/messages-wrapper"
+import * as Message from "../../../editor/events/main/messages-wrapper"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as Shop from "./shop"
@@ -634,7 +634,7 @@ export function registerCustomWidget(
   }
   if (Storage.getUnsafeExtension(type)) {
     const unprefixedType: string = Type.toUnprefixed(type, false)
-    EventStore.dispatch(Message.zh({
+    EventStore.dispatch(Message.wrapOpenConfirmDialog({
       onConfirm: registered,
       onCancel,
       allowText: Language.format(Language.zh_CN, "ExtensionWidget.overwrite").toString(),
@@ -748,7 +748,6 @@ export async function importCostumeWidgetFromBlob(blob: Blob, isFromWidgetShop: 
   }
   return await importCustomWidget(code, isFromWidgetShop)
 }
-export { importCostumeWidgetFromBlob as t }
 
 /**
  * 对控件代码进行关键词检查，如果检查不通过，则抛出异常

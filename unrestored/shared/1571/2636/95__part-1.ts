@@ -8,7 +8,7 @@
 
 var r
 import * as o from "./11"
-import * as i from "./5"
+import * as i from "../../../../src/editor/widget/built-in/types"
 var /* [auto-meaningful-name] */IconWidgetInput = "icon-widget-input"
 var /* [auto-meaningful-name] */_148cefff = "#148cefff"
 var /* [auto-meaningful-name] */C1c1c1 = "#c1c1c1"

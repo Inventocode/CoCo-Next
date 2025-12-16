@@ -7,6 +7,7 @@
         "blockly",
         "chunkhash",
         "codemao",
+        "colour",
         "datawatch",
         "epeiuss",
         "eventorder",
@@ -26,6 +27,7 @@
         "unminimizing",
         "vika",
         "vikadata",
+        "weixin",
         "workerpool"
     ],
     "explorer.fileNesting.enabled": true,

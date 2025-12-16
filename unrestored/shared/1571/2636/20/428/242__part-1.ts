@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$$_$$_25_index from "../../25/index"
 import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../5"
+import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */_Color from "color"

@@ -18,7 +18,7 @@ import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
 import * as /* [auto-meaningful-name] */$$_1058_125 from "../1058/125"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
 !function (e) {
   e.PNG = "dataurl+png"
   e.SVG_ASCII = "dataurl+ascii"
