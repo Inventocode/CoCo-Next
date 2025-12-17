@@ -1,0 +1,25 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：896
+ */
+
+"use strict"
+
+var n = require("./599")
+var o = require("./74")
+var i = require("./63")
+!function () {
+  function t() {}
+  t.prototype.encode = function (t, e, r, a, u) {
+    var s
+    switch (e) {
+      case o.a.QR_CODE:
+        s = new n.a()
+        break
+      default:
+        throw new i.a("No encoder available for format " + e)
+    }
+    return s.encode(t, e, r, a, u)
+  }
+}()

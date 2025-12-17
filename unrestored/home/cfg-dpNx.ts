@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：dpNx
@@ -31,19 +31,24 @@ function getEnvironment() {
 function config() {
   var env = getEnvironment()
   var prefix = undefined
+  var signPrefix = undefined
   switch (env) {
     case "test":
       prefix = "test-"
+      signPrefix = "test-api"
       break
     case "staging":
       prefix = "staging-"
+      signPrefix = "backend-test"
       break
     case "dev":
       prefix = "dev-"
+      signPrefix = "backend-dev"
       break
     case "prod":
     default:
       prefix = ""
+      signPrefix = "api"
       break
   }
   return {
@@ -54,7 +59,8 @@ function config() {
     discoverUrl: "https://shequ.codemao.cn/gallery/14700",
     backendHost: "https://" + prefix + "api-creation.codemao.cn",
     oTServerHost: "https://" + prefix + "socketcoll.codemao.cn",
-    openServiceHost: "https://" + prefix + "open-service.codemao.cn"
+    openServiceHost: "https://" + prefix + "open-service.codemao.cn",
+    signInHost: "https://" + signPrefix + ".codemao.cn"
   }
 }
 

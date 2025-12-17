@@ -26,6 +26,8 @@ const config = {
                 "https://open-service.codemao.cn",
                 "https://shence-data.codemao.cn",
                 "https://sentry.codemao.cn",
+                "https://shequ.codemao.cn",
+                "https://www.codemao.cn",
                 "https://socketcoll.codemao.cn:8098",
                 "https://socketcv.codemao.cn:9096",
                 "wss://socketcoll.codemao.cn:8098",
@@ -50,7 +52,26 @@ const config = {
                         }
                     }
                 }
-            }))
+            })), {
+                router(req) {
+                    const proxyURL = new URL(req.path
+                        .replace(/^\/http-widget-proxy\/https@SEP@/, "https://")
+                        .replace(/^\/http-widget-proxy\/http@SEP@/, "http://"))
+                    return proxyURL.origin
+                },
+                bypass(req) {
+                    if (!req.url.startsWith("/http-widget-proxy/")) {
+                        return req.url
+                    }
+                },
+                pathRewrite(path) {
+                    const proxyURL = new URL(path
+                        .replace(/^\/http-widget-proxy\/https@SEP@/, "https://")
+                        .replace(/^\/http-widget-proxy\/http@SEP@/, "http://"))
+                    return proxyURL.pathname + proxyURL.search + proxyURL.hash
+                },
+                changeOrigin: true
+            }
         ]
     }
 }

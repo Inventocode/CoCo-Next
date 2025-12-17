@@ -1,0 +1,1106 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：301__part-3
+ */
+
+var F
+var B
+var P
+var L
+var M
+var D
+var x
+import * as /* [auto-meaningful-name] */$$_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as _ from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_323 from "../../../../../unrestored/shared/1571/2636/323"
+
+function Y(e, t) {
+  e.insertBlockProfile("object_get", {
+    type: "object_get",
+    message0: "%{BKY_OBJECT_GET}",
+    args0: [
+      {
+        type: "field_coco_dropdown",
+        name: "OBJECT",
+        custom: true,
+        advancedOptions: function () {
+          return $$_46_index.c().getObjectVariableList(this)
+        }
+      }
+    ],
+    output: "Object",
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("object_create", {
+    type: "object_create",
+    message0: "",
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true,
+    output: "Object",
+    mutator: "OBJECT_CREATE_MUTATOR"
+  })
+  e.insertBlockProfile("object_set_item", {
+    type: "object_set_item",
+    message0: "%{BKY_OBJECT_SET_ITEM}",
+    args0: [
+      {
+        type: "input_value",
+        name: "OBJECT",
+        check: ["Object"]
+      }, {
+        type: "input_value",
+        name: "KEY",
+        check: ["String", "Number"]
+      }, {
+        type: "input_value",
+        name: "VALUE"
+      }
+    ],
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
+  })
+  e.insertBlockProfile("object_delete_item", {
+    type: "object_delete_item",
+    message0: "%{BKY_OBJECT_DELETE_ITEM}",
+    args0: [
+      {
+        type: "input_value",
+        name: "OBJECT",
+        check: ["Object"]
+      }, {
+        type: "input_value",
+        name: "KEY",
+        check: ["String", "Number"]
+      }
+    ],
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
+  })
+  e.insertBlockProfile("object_clear", {
+    type: "object_clear",
+    message0: "%{BKY_OBJECT_CLEAR}",
+    args0: [
+      {
+        type: "input_value",
+        name: "OBJECT",
+        check: ["Object"]
+      }
+    ],
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
+  })
+  e.insertBlockProfile("object_length", {
+    type: "object_length",
+    message0: "%{BKY_OBJECT_LENGTH}",
+    args0: [
+      {
+        type: "input_value",
+        name: "OBJECT",
+        check: ["Object"]
+      }
+    ],
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true,
+    output: "Number"
+  })
+  e.insertBlockProfile("object_get_item", {
+    type: "object_get_item",
+    message0: "%{BKY_OBJECT_GET_ITEM}",
+    args0: [
+      {
+        type: "input_value",
+        name: "OBJECT",
+        check: ["Object"]
+      }, {
+        type: "input_value",
+        name: "KEY",
+        check: ["String", "Number"]
+      }
+    ],
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true,
+    output: true
+  })
+  e.insertBlockProfile("object_include_key", {
+    type: "object_include_key",
+    message0: "%{BKY_OBJECT_INCLUDE_KEY}",
+    args0: [
+      {
+        type: "input_value",
+        name: "OBJECT",
+        check: ["Object"]
+      }, {
+        type: "input_value",
+        name: "KEY",
+        check: ["String", "Number"]
+      }
+    ],
+    colour: "%{BKY_SOUND_HUE}",
+    inputsInline: true,
+    output: "Boolean"
+  })
+}
+function K(e) {
+  e.insertBlockXML("object_get", undefined, true)
+  e.insertBlockXML("object_create", "<mutation items='1'></mutation>", true)
+  e.insertBlockXML("object_set_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" allow_text=\"true\">0</field>\n      </shadow>\n    </value>", true)
+  e.insertBlockXML("object_delete_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true)
+  e.insertBlockXML("object_clear", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true)
+  e.insertBlockXML("object_length", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>", true)
+  e.insertBlockXML("object_get_item", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true)
+  e.insertBlockXML("object_include_key", "<value name=\"OBJECT\">\n      <shadow type=\"object_get\"></shadow>\n    </value>\n    <value name=\"KEY\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">key</field>\n      </shadow>\n    </value>", true)
+}
+function q(e) {
+  var t = function (t, n) {
+    var r = $$_323.a(n)
+    var o = r.blockId && t.blocks[r.blockId]
+    var i = o && e.getFieldValue(o, "OBJECT")
+    return JSON.stringify(i)
+  }
+  e.insertBlockSnippetGenerator("object_get", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OBJECT") || ""
+    return _.s("getVariableValue", [_.o(o)])
+  })
+  e.insertBlockSnippetGenerator("object_create", function (t, n) {
+    for (var r = 0, o = "[";;) {
+      var i = e.valueToCode(t, n, "KEY".concat(r), e.ORDER_FUNCTION_CALL)
+      var a = e.valueToCode(t, n, "VALUE".concat(r), e.ORDER_FUNCTION_CALL)
+      if (!i || !a) {
+        break
+      }
+      o += "[".concat(i, ", ").concat(a, "],")
+      r++
+    }
+    o += "]"
+    var s = t.blocks[n]
+    return _.l(_.s("createTempObject", [o]), s, e, false, true)
+  })
+  e.insertBlockSnippetGenerator("object_set_item", function (n, r) {
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
+    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
+    var c = t(n, i)
+    return _.l(_.n("setObjectItem", [c, i, a, s]), o, e)
+  })
+  e.insertBlockSnippetGenerator("object_delete_item", function (n, r) {
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
+    var s = t(n, i)
+    return _.l(_.n("deleteObjectItem", [s, i, a]), o, e)
+  })
+  e.insertBlockSnippetGenerator("object_get_item", function (t, n) {
+    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
+    var i = t.blocks[n]
+    return _.l(_.s("getObjectItem", [r, o]), i, e, false, true)
+  })
+  e.insertBlockSnippetGenerator("object_clear", function (n, r) {
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    return _.l(_.n("clearObject", [a, i]), o, e)
+  })
+  e.insertBlockSnippetGenerator("object_length", function (t, n) {
+    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var o = t.blocks[n]
+    return _.l(_.s("getObjectLength", [r]), o, e, false, true)
+  })
+  e.insertBlockSnippetGenerator("object_include_key", function (t, n) {
+    var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
+    var i = t.blocks[n]
+    return _.l(_.s("checkKeyInObject", [r, o]), i, e, false, true)
+  })
+}
+function X(e) {
+  e.extensions.register_mutator("OBJECT_CREATE_MUTATOR", {
+    itemCount_: 0,
+    updateShape_: function () {
+      e.events.disable()
+      if (!this.get_input("TITLE")) {
+        this.append_dummy_input("TITLE").append_field(e.Msg.OBJECT, "TEXT")
+      }
+      if (this.get_input("MUTATE_REMOVE_BUTTON")) {
+        this.remove_input("MUTATE_REMOVE_BUTTON")
+      }
+      if (this.get_input("MUTATE_ADD_BUTTON")) {
+        this.remove_input("MUTATE_ADD_BUTTON")
+      }
+      for (var /* [auto-meaningful-name] */this$itemCount_ = this.itemCount_;; this$itemCount_++) {
+        var n = "KEY".concat(this$itemCount_)
+        if (!this.get_input(n)) {
+          break
+        }
+        this.remove_input(n)
+        var r = "VALUE".concat(this$itemCount_)
+        if (!this.get_input(r)) {
+          break
+        }
+        this.remove_input(r)
+      }
+      for (var o = 0; o < this.itemCount_; o++) {
+        var i = "KEY".concat(o)
+        if (!this.get_input(i)) {
+          var a = this.append_shadow_input(i, "<shadow type=\"text\"><field name=\"TEXT\">key".concat(o + 1, "</field></shadow>"))
+          a.set_check(["Number", "String"])
+          if (0 !== o) {
+            a.append_field(",")
+          }
+        }
+        var s = "VALUE".concat(o)
+        if (!this.get_input(s)) {
+          this.append_shadow_input(s, "<shadow type=\"math_number\"><field name=\"NUM\" allow_text=\"true\">0</field></shadow>").append_field(":")
+        }
+      }
+      if (0 === this.itemCount_) {
+        if (this.get_input("MUTATE_REMOVE_BUTTON")) {
+          this.remove_input("MUTATE_REMOVE_BUTTON")
+        }
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+      } else {
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+      }
+      e.events.enable()
+    },
+    addMutation: function (t) {
+      if (e.events.is_undoing()) {
+        if ("number" === typeof t) {
+          this.itemCount_ = t
+          this.updateShape_()
+        }
+      } else {
+        var /* [auto-meaningful-name] */this$itemCount_ = this.itemCount_
+        this.itemCount_++
+        this.updateShape_()
+        var r = _.c("mutation", {
+          block: this,
+          old_value: this$itemCount_,
+          new_value: this.itemCount_
+        })
+        e.events.fire(r)
+      }
+    },
+    removeMutation: function (t) {
+      if (e.events.is_undoing()) {
+        if ("number" === typeof t) {
+          this.itemCount_ = t
+          this.updateShape_()
+        }
+      } else {
+        var /* [auto-meaningful-name] */this$itemCount_ = this.itemCount_
+        this.itemCount_--
+        this.updateShape_()
+        var r = _.c("mutation", {
+          block: this,
+          old_value: this$itemCount_,
+          new_value: this.itemCount_
+        })
+        e.events.fire(r)
+      }
+    },
+    mutationToDom: function () {
+      var e = document.createElement("mutation")
+      e.setAttribute("items", String(this.itemCount_))
+      return e
+    },
+    domToMutation: function (e) {
+      this.itemCount_ = parseInt(e.getAttribute("items"), 10)
+      this.updateShape_()
+    }
+  })
+}
+function Q(e, t) {
+  var /* [auto-meaningful-name] */BKY_BLOCK_CLOUD_ICON = "%{BKY_BLOCK_CLOUD_ICON}"
+  e.insertBlockProfile("app_on_mount", {
+    type: "app_on_mount",
+    message0: "%{BKY_APP_ON_MOUNT}",
+    args0: [
+      _.e(BKY_BLOCK_CLOUD_ICON, true), {
+        type: "input_dummy",
+        align: "CENTRE"
+      }, {
+        type: "input_statement",
+        name: "DO"
+      }
+    ],
+    colour: "%{BKY_EVENTS_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("app_on_switch_background", {
+    type: "app_on_switch_background",
+    message0: "%{BKY_APP_ON_SWITCH}",
+    args0: [
+      _.e(BKY_BLOCK_CLOUD_ICON, true), {
+        type: "field_coco_dropdown",
+        name: "APP_STATE",
+        custom: true,
+        options: function () {
+          return [[t.Msg.APP_BACKGROUND, "background"], [t.Msg.APP_ACTIVE, "active"]]
+        }
+      }, {
+        type: "input_dummy",
+        align: "CENTRE"
+      }, {
+        type: "input_statement",
+        name: "DO"
+      }
+    ],
+    colour: "%{BKY_EVENTS_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("broadcast_input", {
+    type: "broadcast_input",
+    message0: "%1",
+    args0: [
+      {
+        type: "field_coco_dropdown",
+        name: "BROADCAST",
+        custom: true,
+        advancedOptions: function () {
+          return $$_46_index.c().getBroadcastList(this)
+        }
+      }
+    ],
+    colour: "#ffffff",
+    output: "String",
+    tooltip: "%{BKY_BROADCAST_INPUT_TOOLTIP}"
+  })
+  e.insertBlockProfile("broadcast_on_receive", {
+    type: "broadcast_on_receive",
+    message0: "%{BKY_BROADCAST_ON_RECEIVE}",
+    args0: [
+      _.e(BKY_BLOCK_CLOUD_ICON, true), {
+        type: "input_value",
+        name: "BROADCAST",
+        check: ["String", "Boolean"]
+      }, {
+        type: "input_dummy",
+        align: "CENTRE"
+      }, {
+        type: "input_statement",
+        name: "DO"
+      }
+    ],
+    colour: "%{BKY_EVENTS_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("broadcast_send", {
+    type: "broadcast_send",
+    message0: "%{BKY_BROADCAST_SEND}",
+    args0: [
+      {
+        type: "input_value",
+        name: "BROADCAST",
+        check: ["String", "Boolean"]
+      }
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    colour: "%{BKY_EVENTS_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("broadcast_send_and_wait", {
+    type: "broadcast_send_and_wait",
+    message0: "%{BKY_BROADCAST_SEND_AND_WAIT}",
+    args0: [
+      {
+        type: "input_value",
+        name: "BROADCAST",
+        check: ["String", "Boolean"]
+      }
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    colour: "%{BKY_EVENTS_HUE}",
+    inputsInline: true
+  })
+}
+function Z(e) {
+  e.insertBlockXML("app_on_mount")
+  e.insertBlockXML("app_on_switch_background")
+  e.insertBlockXML("when", "\n      <value name=\"CONDITION\">\n        <empty type=\"logic_empty\">\n          <field name=\"BOOL\"></field>\n        </empty>\n      </value>\n      ")
+  e.insertBlockXML("broadcast_input", undefined, true)
+}
+function J(e) {
+  var t = function (t, n) {
+    var r = e.valueToCode(t, n, "BROADCAST", e.ORDER_FUNCTION_CALL)
+    var o = JSON.stringify(e.getDynamicValue("__CURRENT_SCREEN_ID__"))
+    return "".concat(o, " + ").concat(r)
+  }
+  e.insertBlockSnippetGenerator("app_on_mount", function (t, n) {
+    var r = e.statementToCode(t, n, "DO")
+    return r ? _.m("onAppMount", undefined, r) : ""
+  })
+  e.insertBlockSnippetGenerator("app_on_switch_background", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.statementToCode(t, n, "DO")
+    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? _.m("onAppActive", undefined, o) : _.m("onAppBackground", undefined, o) : ""
+  })
+  e.insertBlockSnippetGenerator("broadcast_input", function (t, n) {
+    var r = t.blocks[n]
+    return JSON.stringify(e.getFieldValue(r, "BROADCAST"))
+  })
+  e.insertBlockSnippetGenerator("broadcast_on_receive", function (n, r) {
+    var o = e.statementToCode(n, r, "DO")
+    return o ? _.m("onCustomEvent", [t(n, r)], o) : ""
+  })
+  e.insertBlockSnippetGenerator("broadcast_send", function (e, n) {
+    return _.n("emitCustomEvent", [t(e, n)])
+  })
+  e.insertBlockSnippetGenerator("broadcast_send_and_wait", function (e, n) {
+    return _.j("emitCustomEventAndWait", [t(e, n)])
+  })
+}
+function $(e) {
+  e.insertBlockProfile("math_compare", {
+    type: "math_compare",
+    message0: "%1 %2 %3",
+    args0: [
+      {
+        type: "input_value",
+        name: "A",
+        check: ["Number", "String", "Boolean", "Array"]
+      }, {
+        type: "field_coco_dropdown",
+        custom: true,
+        name: "OP",
+        options: [["=", F.EQUAL], ["≠", F.UNEQUAL], ["<", F.LESS_THAN], ["≤", F.LESS_THAN_OR_EQUAL], [">", F.GREATER_THAN], ["≥", F.GREATER_THAN_OR_EQUAL]]
+      }, {
+        type: "input_value",
+        name: "B",
+        check: ["Number", "String", "Boolean", "Array"]
+      }
+    ],
+    inputsInline: true,
+    output: "Boolean",
+    colour: "%{BKY_LOGIC_HUE}"
+  })
+  e.insertBlockProfile("math_operation", {
+    type: "math_operation",
+    message0: "%1 %2 %3",
+    args0: [
+      {
+        type: "input_value",
+        name: "A",
+        check: "Number"
+      }, {
+        type: "field_coco_dropdown",
+        name: "OP",
+        custom: true,
+        options: [["%{BKY_MATH_ADDITION_SYMBOL}", D.ADD], ["%{BKY_MATH_SUBTRACTION_SYMBOL}", D.MINUS], ["%{BKY_MATH_MULTIPLICATION_SYMBOL}", D.MULTIPLY], ["%{BKY_MATH_DIVISION_SYMBOL}", D.DIVIDE], ["%{BKY_MATH_POWER_SYMBOL}", D.POWER]]
+      }, {
+        type: "input_value",
+        name: "B",
+        check: "Number"
+      }
+    ],
+    inputsInline: true,
+    output: "Number",
+    colour: "%{BKY_MATH_HUE}"
+  })
+  e.insertBlockProfile("math_random_integer", {
+    type: "math_random_integer",
+    message0: "%{BKY_RANDOM_NUM}",
+    args0: [
+      {
+        type: "input_value",
+        name: "INPUT_A",
+        check: "Number",
+        align: "CENTRE"
+      }, {
+        type: "input_value",
+        name: "INPUT_B",
+        check: "Number",
+        align: "CENTRE"
+      }
+    ],
+    output: "Number",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("math_number_property", {
+    type: "math_number_property",
+    message0: "%1 %{BKY_MATH_IS} %2",
+    args0: [
+      {
+        type: "input_value",
+        name: "NUMBER_TO_CHECK",
+        check: "Number",
+        align: "CENTRE"
+      }, {
+        type: "field_coco_dropdown",
+        name: "PROPERTY",
+        custom: true,
+        options: [["%{BKY_MATH_EVEN}", x.EVEN], ["%{BKY_MATH_ODD}", x.ODD], ["%{BKY_MATH_PRIME}", x.PRIME], ["%{BKY_MATH_WHOLE}", x.WHOLE], ["%{BKY_MATH_POSITIVE}", x.POSITIVE], ["%{BKY_MATH_NEGATIVE}", x.NEGATIVE]]
+      }
+    ],
+    inputsInline: true,
+    output: "Boolean",
+    colour: "%{BKY_MATH_HUE}"
+  })
+  e.insertBlockProfile("logic_operation", {
+    type: "logic_operation",
+    message0: "%1 %2 %3",
+    args0: [
+      {
+        type: "input_value",
+        name: "A",
+        check: "Boolean"
+      }, {
+        type: "field_coco_dropdown",
+        custom: true,
+        name: "OP",
+        options: [["%{BKY_LOGIC_OPERATION_AND}", M.AND], ["%{BKY_LOGIC_OPERATION_OR}", M.OR]]
+      }, {
+        type: "input_value",
+        name: "B",
+        check: "Boolean"
+      }
+    ],
+    inputsInline: true,
+    output: "Boolean",
+    colour: "%{BKY_LOGIC_HUE}"
+  })
+  e.insertBlockProfile("math_complex_operation", {
+    type: "math_complex_operation",
+    message0: "%1 %2",
+    args0: [
+      {
+        type: "field_coco_dropdown",
+        custom: true,
+        name: "OP",
+        options: [["%{BKY_MATH_SINGLE_OP_ROOT}", L.ROOT], ["%{BKY_MATH_SINGLE_OP_ABSOLUTE}", L.ABS], ["-", L.NEG], ["ln", L.LN], ["log10", L.LOG10], ["e^", L.EXP], ["10^", L.POW10]]
+      }, {
+        type: "input_value",
+        name: "NUM",
+        check: "Number"
+      }
+    ],
+    output: "Number",
+    colour: "%{BKY_MATH_HUE}"
+  })
+  e.insertBlockProfile("math_round", {
+    type: "math_round",
+    message0: "%1 %2",
+    args0: [
+      {
+        type: "field_coco_dropdown",
+        custom: true,
+        name: "OP",
+        options: [["%{BKY_MATH_ROUND_OPERATOR_ROUND}", B.ROUND], ["%{BKY_MATH_ROUND_OPERATOR_CEIL}", B.CEIL], ["%{BKY_MATH_ROUND_OPERATOR_FLOOR}", B.FLOOR]]
+      }, {
+        type: "input_shadow",
+        name: "NUM",
+        field_type: "math",
+        default_text: "0"
+      }
+    ],
+    output: "Number",
+    colour: "%{BKY_MATH_HUE}",
+    tooltip: "%{BKY_MATH_ROUND_TOOLTIP}"
+  })
+  e.insertBlockProfile("logic_boolean", {
+    type: "logic_boolean",
+    message0: "%1",
+    args0: [
+      {
+        type: "field_coco_dropdown",
+        custom: true,
+        name: "BOOL",
+        options: [["%{BKY_LOGIC_BOOLEAN_TRUE}", "TRUE"], ["%{BKY_LOGIC_BOOLEAN_FALSE}", "FALSE"]]
+      }
+    ],
+    output: "Boolean",
+    colour: "%{BKY_LOGIC_HUE}",
+    tooltip: "%{BKY_LOGIC_BOOLEAN_TOOLTIP}"
+  })
+  e.insertBlockProfile("math_check_divisible", {
+    type: "math_check_divisible",
+    message0: "%{BKY_DIVISIBLE_BY}",
+    args0: [
+      {
+        type: "input_value",
+        name: "NUMBER_TO_CHECK",
+        check: "Number"
+      }, {
+        type: "input_value",
+        name: "DIVISOR",
+        check: "Number"
+      }
+    ],
+    output: "Boolean",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("math_calculate_expression", {
+    type: "math_calculate_expression",
+    message0: "%{BKY_CALCULATE}",
+    args0: [
+      {
+        type: "input_value",
+        name: "INPUT",
+        check: ["String", "Number", "Boolean"]
+      }
+    ],
+    output: "Number",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("text_convert_type", {
+    type: "text_convert_type",
+    message0: "%{BKY_CONVERT_TYPE}",
+    args0: [
+      {
+        type: "input_value",
+        name: "ORIGINAL_VALUE",
+        check: ["String", "Number", "Array", "Boolean", "Object"],
+        align: "CENTRE"
+      }, {
+        type: "field_coco_dropdown",
+        name: "TYPE",
+        custom: true,
+        options: [["%{BKY_NUMBER_TYPE}", "number"], ["%{BKY_STRING_TYPE}", "string"], ["%{BKY_BOOLEAN_TYPE}", "boolean"]]
+      }
+    ],
+    output: ["String", "Number", "Boolean"],
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("text_get_length", {
+    type: "text_get_length",
+    message0: "%{BKY_TEXT_LENGTH}",
+    args0: [
+      {
+        type: "input_value",
+        name: "VALUE",
+        check: ["String", "Number", "Boolean"]
+      }
+    ],
+    output: "Number",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("text_slice", {
+    type: "text_slice",
+    message0: "%{BKY_TEXT_SLICE}",
+    args0: [
+      {
+        type: "input_value",
+        name: "STRING",
+        check: ["String", "Boolean", "Number"]
+      }, {
+        type: "input_value",
+        name: "NUM0",
+        check: ["Number"]
+      }
+    ],
+    output: "String",
+    inputsInline: true,
+    colour: "%{BKY_LOGIC_HUE}",
+    mutator: "TEXT_SLICE_MUTATOR"
+  })
+  e.insertBlockProfile("text_check_contain", {
+    type: "text_check_contain",
+    message0: "%{BKY_TEXT_CONTAIN}",
+    args0: [
+      {
+        type: "input_value",
+        name: "TEXT1",
+        check: ["String", "Number", "Boolean"]
+      }, {
+        type: "input_value",
+        name: "TEXT2",
+        check: ["String", "Number", "Boolean"]
+      }
+    ],
+    output: "Boolean",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("text_split_text", {
+    type: "text_split_text",
+    message0: "%{BKY_TEXT_SPLIT}",
+    args0: [
+      {
+        type: "input_value",
+        name: "STR_TO_SPLIT",
+        check: ["String", "Number", "Boolean"]
+      }, {
+        type: "input_value",
+        name: "SPLIT_STR",
+        check: ["String", "Number", "Boolean"]
+      }
+    ],
+    output: "Array",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("text_shadow", {
+    type: "text_shadow",
+    message0: "%1",
+    args0: [
+      {
+        type: "input_value",
+        name: "VALUE",
+        check: ["String"]
+      }
+    ],
+    output: "String",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("text_rich_text", {
+    type: "text_rich_text",
+    message0: "%1",
+    args0: [
+      {
+        type: "field_input",
+        name: "TEXT",
+        text: ""
+      }
+    ],
+    output: "String",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true,
+    extensions: ["text_quotes", "parent_tooltip_when_inline"]
+  })
+  e.insertBlockProfile("math_shadow_number", {
+    type: "math_shadow_number",
+    message0: "%1",
+    args0: [
+      {
+        type: "input_value",
+        name: "VALUE",
+        check: ["Number"]
+      }
+    ],
+    output: "Number",
+    colour: "%{BKY_LOGIC_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("text_multiline", {
+    type: "text_multiline",
+    message0: "%1",
+    args0: [
+      {
+        type: "field_multiline_input",
+        name: "TEXT",
+        text: "",
+        max_width: 310
+      }
+    ],
+    output: "String",
+    colour: "%{BKY_TEXT_HUE}",
+    extensions: ["text_quotes", "parent_tooltip_when_inline"]
+  })
+}
+function ee(e) {
+  e.insertBlockXML("math_shadow_number", "\n  <value name=\"VALUE\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_calculate_expression", "\n  <value name=\"INPUT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1+2</field>\n    </shadow>\n  </value>\n  ")
+  e.insertBlockXML("math_operation", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_random_integer", "\n  <value name=\"INPUT_A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"INPUT_B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">5</field>\n    </shadow>\n  </value>\n  ")
+  e.insertBlockXML("math_number_property", "\n  <mutation divisor_input=\"false\"></mutation>\n  <field name=\"PROPERTY\">EVEN</field>\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_check_divisible", "\n  <value name=\"NUMBER_TO_CHECK\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">9</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("logic_operation", "\n  <value name=\"A\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  <value name=\"B\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n  ")
+  e.insertBlockXML("math_complex_operation", "\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_modulo", "\n  <value name=\"DIVIDEND\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">64</field>\n    </shadow>\n  </value>\n  <value name=\"DIVISOR\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">10</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_trig", "\n  <field name=\"OP\">SIN</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">45</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("math_round", "\n  <field name=\"OP\">ROUND</field>\n  <value name=\"NUM\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">3.1</field>\n    </shadow>\n  </value>\n  ")
+  e.insertBlockXML("math_compare", "\n  <value name=\"A\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n  <value name=\"B\">\n    <shadow type=\"math_number\">\n      <field name=\"NUM\">0</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("logic_boolean")
+  e.insertBlockXML("logic_negate", "\n  <value name=\"BOOL\">\n    <empty type=\"logic_empty\">\n      <field name=\"BOOL\"></field>\n    </empty>\n  </value>\n")
+  e.insertBlockXML("text_shadow", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">Hello</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_convert_type", "\n  <value name=\"ORIGINAL_VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">123</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_join", "\n  <mutation items=\"2\"></mutation>\n  <value name=\"ADD0\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">ab</field>\n    </shadow>\n  </value>\n  <value name=\"ADD1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">c</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_get_length", "\n  <value name=\"VALUE\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_slice", "\n      <mutation items=\"1\"></mutation>\n      <value name=\"STRING\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">abc</field>\n        </shadow>\n      </value>\n      <value name=\"NUM0\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"1,,1\">1</field>\n        </shadow>\n      </value>\n    ")
+  e.insertBlockXML("text_check_contain", "\n  <value name=\"TEXT1\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n  <value name=\"TEXT2\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">abc</field>\n    </shadow>\n  </value>\n")
+  e.insertBlockXML("text_split_text", "\n  <value name=\"STR_TO_SPLIT\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">1,2,3,4</field>\n    </shadow>\n  </value>\n  <value name=\"SPLIT_STR\">\n    <shadow type=\"text\">\n      <field name=\"TEXT\">,</field>\n    </shadow>\n  </value>\n")
+}
+function te(e, t) {
+  e.Blocks.math_trig = {
+    shadow: "<shadow type=\"math_number\"><field name=\"NUM\">45</field></shadow>",
+    init: function () {
+      this.set_colour(e.theme.block_color.MATH_HUE.fill)
+      var n = new t({
+        type: "field_coco_dropdown",
+        name: "OP",
+        custom: true,
+        options: [[e.Msg.MATH_TRIG_SIN, P.SIN], [e.Msg.MATH_TRIG_COS, P.COS], [e.Msg.MATH_TRIG_TAN, P.TAN], [e.Msg.MATH_TRIG_ASIN, P.ASIN], [e.Msg.MATH_TRIG_ACOS, P.ACOS], [e.Msg.MATH_TRIG_ATAN, P.ATAN]],
+        optOnchange: function (e) {
+          var /* [auto-meaningful-name] */this$source_block
+          var n = "SIN" === e || "COS" === e || "TAN" === e
+          if (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.updateShape_) {
+            this.source_block.updateShape_(n)
+          }
+        }
+      })
+      this.append_dummy_input().append_field(n, "OP")
+      this.append_shadow_input("NUM", e.Blocks.math_trig.shadow).set_check("Number")
+      this.append_dummy_input("DEGREES").append_field(e.Msg.MATH_DEGREES)
+      this.set_inputs_inline(true)
+      this.set_output(true)
+    },
+    updateShape_: function (t) {
+      var n = this.get_input("DEGREES")
+      if (t) {
+        if (!n) {
+          this.append_dummy_input("DEGREES").append_field(e.Msg.MATH_DEGREES)
+        }
+      } else {
+        if (n) {
+          this.remove_input("DEGREES")
+        }
+      }
+    }
+  }
+  var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
+  e.extensions.register_mutator("TEXT_SLICE_MUTATOR", {
+    updateShape_: function () {
+      e.events.disable()
+      if (1 === this.itemCount_) {
+        this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
+        this.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
+      } else {
+        this.append_dummy_input("CONTENT_TO").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
+        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow)
+        this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
+        this.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
+      }
+      e.events.enable()
+    },
+    addMutation: function (t) {
+      var r = this
+      var o = "NUM".concat(this.itemCount_)
+      _.b.call(this, o, function () {
+        r.append_dummy_input("CONTENT_TO", "TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
+        var t = r.append_value_input(o, "TITLE_TAIL")
+        r.itemCount_++
+        if (r.get_input("MUTATE_BUTTON")) {
+          r.remove_input("MUTATE_BUTTON")
+        }
+        r.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
+        return t
+      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow, t)
+    },
+    removeMutation: function () {
+      var e = this
+      var t = "NUM".concat(this.itemCount_ - 1)
+      _.t.call(this, t, "NUM", function () {
+        e.remove_input("CONTENT_TO")
+        e.remove_input(t)
+        e.itemCount_--
+        if (e.get_input("MUTATE_BUTTON")) {
+          e.remove_input("MUTATE_BUTTON")
+        }
+        e.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
+      })
+    },
+    mutationToDom: function () {
+      var e = document.createElement("mutation")
+      e.setAttribute("items", String(this.itemCount_))
+      return e
+    },
+    domToMutation: function (e) {
+      this.itemCount_ = parseInt(e.getAttribute("items"), 10)
+      this.cacheId = {}
+      this.updateShape_()
+    }
+  })
+}
+function ne(e) {
+  e.insertBlockSnippetGenerator("math_shadow_number", function (t, n) {
+    return e.valueToCode(t, n, "VALUE", e.ORDER_NONE)
+  })
+  e.insertBlockSnippetGenerator("math_operation", function (t, n) {
+    var r = {
+      ADD: e.ORDER_ADDITION,
+      MINUS: e.ORDER_SUBTRACTION,
+      MULTIPLY: e.ORDER_MULTIPLICATION,
+      DIVIDE: e.ORDER_DIVISION,
+      POWER: e.ORDER_COMMA
+    }
+    var o = t.blocks[n]
+    var i = e.getFieldValue(o, "OP") || ""
+    var a = r[i]
+    var s = e.valueToCode(t, n, "A", a)
+    var c = e.valueToCode(t, n, "B", a)
+    return _.s("mathOperation", [_.o(i), s, c])
+  })
+  e.insertBlockSnippetGenerator("math_random_integer", function (t, n) {
+    var r = e.valueToCode(t, n, "INPUT_A", e.ORDER_COMMA)
+    var o = e.valueToCode(t, n, "INPUT_B", e.ORDER_COMMA)
+    return _.s("getRandomInteger", [r, o])
+  })
+  e.insertBlockSnippetGenerator("math_number_property", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
+    var i = e.getFieldValue(r, "PROPERTY") || ""
+    return _.s("determineNumberType", [_.o(i), o])
+  })
+  e.insertBlockSnippetGenerator("math_check_divisible", function (t, n) {
+    var r = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
+    var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
+    return _.s("checkDivisibility", [r, o])
+  })
+  e.insertBlockSnippetGenerator("logic_operation", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = "AND" === o ? e.ORDER_LOGICAL_AND : e.ORDER_LOGICAL_OR
+    var a = e.valueToCode(t, n, "A", i) || "false"
+    var s = e.valueToCode(t, n, "B", i) || "false"
+    return _.s("logicOperation", [_.o(o), a, s])
+  })
+  e.insertBlockSnippetGenerator("math_calculate_expression", function (t, n) {
+    var r = e.valueToCode(t, n, "INPUT", e.ORDER_MEMBER)
+    return _.s("calculateMathExpression", [r])
+  })
+  e.insertBlockSnippetGenerator("math_complex_operation", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
+    return _.s("complexMathOperation", [_.o(o), i])
+  })
+  e.insertBlockSnippetGenerator("math_modulo", function (t, n) {
+    var r = e.valueToCode(t, n, "DIVIDEND", e.ORDER_MODULUS)
+    var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
+    return _.s("remainderOperation", [r, o])
+  })
+  e.insertBlockSnippetGenerator("math_trig", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
+    return _.s("mathTrig", [_.o(o), i])
+  })
+  e.insertBlockSnippetGenerator("math_round", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
+    return _.s("mathRound", [_.o(o), i])
+  })
+  e.insertBlockSnippetGenerator("math_compare", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "OP") || ""
+    var i = "EQ" === o || "NEQ" === o ? e.ORDER_EQUALITY : e.ORDER_RELATIONAL
+    var a = e.valueToCode(t, n, "A", i)
+    var s = e.valueToCode(t, n, "B", i)
+    return _.s("compareNumbers", [_.o(o), a, s])
+  })
+  e.insertBlockSnippetGenerator("text_convert_type", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "TYPE") || ""
+    var i = e.valueToCode(t, n, "ORIGINAL_VALUE", e.ORDER_FUNCTION_CALL)
+    return i ? _.s("convertValueType", [i, _.o(o)]) : ""
+  })
+  e.insertBlockSnippetGenerator("text_slice", function (t, n) {
+    var r = e.valueToCode(t, n, "STRING", e.ORDER_MEMBER)
+    var o = e.valueToCode(t, n, "NUM0", e.ORDER_COMMA)
+    var i = e.valueToCode(t, n, "NUM1", e.ORDER_COMMA)
+    return i ? _.s("extractString", [r, o, i]) : _.s("extractString", [r, o])
+  })
+  e.insertBlockSnippetGenerator("text_join", function (t, n) {
+    for (var /* [auto-meaningful-name] */Object$keysT$connectionsN$length = Object.keys(t.connections[n]).length, o = new Array(Object$keysT$connectionsN$length), i = 0; i < Object$keysT$connectionsN$length; i++) {
+      o[i] = e.valueToCode(t, n, "ADD".concat(i), e.ORDER_COMMA) || "''"
+    }
+    return _.s("concatStrings", o)
+  })
+  e.insertBlockSnippetGenerator("text_shadow", function (t, n) {
+    return e.valueToCode(t, n, "VALUE", e.ORDER_NONE)
+  })
+  e.insertBlockSnippetGenerator("text_get_length", function (t, n) {
+    var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.s("getStringLength", [r])
+  })
+  e.insertBlockSnippetGenerator("text_check_contain", function (t, n) {
+    var r = e.valueToCode(t, n, "TEXT1", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "TEXT2", e.ORDER_COMMA)
+    return _.s("checkStringContain", [r, o])
+  })
+  e.insertBlockSnippetGenerator("text_split_text", function (t, n) {
+    var r = e.valueToCode(t, n, "STR_TO_SPLIT", e.ORDER_FUNCTION_CALL) || "''"
+    var o = e.valueToCode(t, n, "SPLIT_STR", e.ORDER_COMMA)
+    return _.s("splitString", [r, o])
+  })
+  e.insertBlockSnippetGenerator("text_multiline", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "TEXT") || ""
+    return [JSON.stringify(o), e.ORDER_ATOMIC]
+  })
+  e.insertBlockSnippetGenerator("text_rich_text", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "TEXT") || ""
+    return [JSON.stringify(o), e.ORDER_ATOMIC]
+  })
+}
+!function (e) {
+  e.EVEN = "EVEN"
+  e.ODD = "ODD"
+  e.PRIME = "PRIME"
+  e.WHOLE = "WHOLE"
+  e.POSITIVE = "POSITIVE"
+  e.NEGATIVE = "NEGATIVE"
+}(x || (x = {}));
+(function (e) {
+  e.ADD = "ADD"
+  e.MINUS = "MINUS"
+  e.MULTIPLY = "MULTIPLY"
+  e.DIVIDE = "DIVIDE"
+  e.POWER = "POWER"
+})(D || (D = {}));
+(function (e) {
+  e.AND = "AND"
+  e.OR = "OR"
+})(M || (M = {}));
+(function (e) {
+  e.ROOT = "ROOT"
+  e.ABS = "ABS"
+  e.NEG = "NEG"
+  e.LN = "LN"
+  e.LOG10 = "LOG10"
+  e.EXP = "EXP"
+  e.POW10 = "POW10"
+})(L || (L = {}));
+(function (e) {
+  e.SIN = "SIN"
+  e.COS = "COS"
+  e.TAN = "TAN"
+  e.ASIN = "ASIN"
+  e.ACOS = "ACOS"
+  e.ATAN = "ATAN"
+})(P || (P = {}));
+(function (e) {
+  e.ROUND = "ROUND"
+  e.CEIL = "CEIL"
+  e.FLOOR = "FLOOR"
+})(B || (B = {}));
+(function (e) {
+  e.EQUAL = "EQ"
+  e.UNEQUAL = "NEQ"
+  e.LESS_THAN = "LT"
+  e.LESS_THAN_OR_EQUAL = "LTE"
+  e.GREATER_THAN = "GT"
+  e.GREATER_THAN_OR_EQUAL = "GTE"
+})(F || (F = {}))
+export { Y }
+export { K }
+export { q }
+export { X }
+export { Q }
+export { Z }
+export { J }
+export { $ }
+export { ee }
+export { te }
+export { ne }

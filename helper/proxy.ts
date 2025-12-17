@@ -2,9 +2,22 @@ interface Window {
     SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST?: boolean
     SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH?: boolean
     SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET?: boolean
+    COCO_SOURCE_CODE_PLAN_PROXY_OPEN?: boolean
+    COCO_SOURCE_CODE_PLAN_PROXY_IFRAME?: boolean
 }
 
-function proxyXMLHttpRequest(): void {
+function proxyAll() {
+    proxyXMLHttpRequest()
+    proxyFetch()
+    proxyWebSocket()
+    proxyOpen()
+    proxyIFrame()
+}
+
+function proxyXMLHttpRequest() {
+    if (flag("SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST")) {
+        return
+    }
     let originalOpen: typeof XMLHttpRequest.prototype.open = XMLHttpRequest.prototype.open
     XMLHttpRequest.prototype.open = function open(
         method: string,
@@ -23,10 +36,12 @@ function proxyXMLHttpRequest(): void {
         }
     }
     XMLHttpRequest.prototype.open.toString = originalOpen.toString.bind(originalOpen)
-    window.SLIGHTNING_CODEMAO_ENVIRONMENT_XML_HTTP_REQUEST = true
 }
 
-function proxyFetch(): void {
+function proxyFetch() {
+    if (flag("SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH")) {
+        return
+    }
     let originalFetch: typeof fetch = fetch
     window.fetch = function fetch(
         input: RequestInfo | URL,
@@ -44,10 +59,12 @@ function proxyFetch(): void {
         return originalFetch.call(this, input, init)
     }
     fetch.toString = originalFetch.toString.bind(originalFetch)
-    window.SLIGHTNING_CODEMAO_ENVIRONMENT_FETCH = true
 }
 
-function proxyWebSocket(): void {
+function proxyWebSocket() {
+    if (flag("SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET")) {
+        return
+    }
     window.WebSocket = class WebSocket extends window.WebSocket {
         public constructor(url: string | URL, protocols?: string | string[]) {
             if (typeof url == "string") {
@@ -59,13 +76,13 @@ function proxyWebSocket(): void {
             super(url, protocols)
         }
     }
-    window.SLIGHTNING_CODEMAO_ENVIRONMENT_WEB_SOCKET = true
 }
 
 function needsProxy(url: URL): boolean {
     if (
         url.hostname == "static.codemao.cn" ||
         url.hostname == "creation.codemao.cn" ||
+        url.hostname == "cdn-community.codemao.cn" ||
         url.hostname.endsWith("bcmcdn.com")
     ) {
         return false
@@ -74,21 +91,35 @@ function needsProxy(url: URL): boolean {
 }
 
 function rewriteURL(url: URL): URL {
+    if (location.hostname.endsWith(".ccwidget.top")) {
+        const newURL = new URL(location.origin);
+        newURL.pathname = url.pathname,
+        newURL.searchParams.set("url", url.href)
+        url.searchParams.forEach((key, value) => {
+            newURL.searchParams.append(value, key)
+        })
+        return newURL
+    }
     url.pathname = "/proxy/" + url.origin
         .replace(/(?<=^https?:\/\/)dev-/, "")
         .replace(/(?<=^https?:\/\/)backend-dev/, "api")
         + url.pathname
-    if (url.protocol == "https:") {
-        url.protocol = "http:"
-    }
-    if (url.protocol == "wss:") {
-        url.protocol = "ws:"
+    if (location.protocol == "http:") {
+        if (url.protocol == "https:") {
+            url.protocol = "http:"
+        }
+        if (url.protocol == "wss:") {
+            url.protocol = "ws:"
+        }
     }
     url.host = location.host
     return url
 }
 
-function proxyOpen(): void {
+function proxyOpen() {
+    if (flag("COCO_SOURCE_CODE_PLAN_PROXY_OPEN")) {
+        return
+    }
     const originalOpen: typeof open = open
     window.open = function open(
         url?: string | URL,
@@ -99,6 +130,14 @@ function proxyOpen(): void {
             url = new URL(url, location.href)
         }
         if (
+            url?.host == "www.codemao.cn" &&
+            (url.pathname == "/get-qq-code.html" || url.pathname == "/get-weixin-code.html")
+        ) {
+            if (location.protocol == "http:" && url.protocol == "https:") {
+                url.protocol = "http:"
+            }
+            url.host = location.host
+        } else if (
             url?.hostname.endsWith("coco.codemao.cn") ||
             url?.hostname == location.hostname
         ) {
@@ -107,12 +146,58 @@ function proxyOpen(): void {
         }
         return originalOpen.call(this, url, target, features)
     }
-    window.open.toString = originalOpen.toString.bind(originalOpen)
+    open.toString = originalOpen.toString.bind(originalOpen)
+}
+
+function proxyIFrame() {
+    if (flag("COCO_SOURCE_CODE_PLAN_PROXY_IFRAME")) {
+        return
+    }
+    const observer = new MutationObserver((mutationList) => {
+        for (const mutation of mutationList) {
+            for (const node of Array.from(mutation.addedNodes)) {
+                if (node instanceof HTMLIFrameElement) {
+                    changeIFrameSrc(node)
+                } if (node instanceof HTMLElement) {
+                    for (const child of Array.from(node.querySelectorAll("*"))) {
+                        if (child instanceof HTMLIFrameElement) {
+                            changeIFrameSrc(child)
+                        }
+                    }
+                }
+            }
+        }
+    })
+    observer.observe(document.documentElement, {
+        subtree: true,
+        childList: true
+    })
+}
+
+function changeIFrameSrc(iFrame: HTMLIFrameElement) {
+    const src = new URL(iFrame.src, location.href)
+    if (src.host == "shequ.codemao.cn" && src.pathname.startsWith("/codemao_login")) {
+        if (location.protocol == "http:" && src.protocol == "https:") {
+            src.protocol = "http:"
+        }
+        src.host = location.host
+        iFrame.src = src.href
+    }
+}
+
+function flag(key: keyof Window): boolean {
+    if (window[key]) {
+        return true
+    }
+    Object.defineProperty(window, key, {
+        value: true,
+        enumerable: false,
+        writable: true,
+        configurable: true
+    })
+    return false
 }
 
 if (!location.hostname.endsWith(".codemao.cn")) {
-    proxyXMLHttpRequest()
-    proxyFetch()
-    proxyWebSocket()
-    proxyOpen()
+    proxyAll()
 }

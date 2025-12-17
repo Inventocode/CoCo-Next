@@ -13,7 +13,6 @@
         "strict": true,
         "allowUnreachableCode": false,
         "allowUnusedLabels": false,
-        "exactOptionalPropertyTypes": true,
         "noFallthroughCasesInSwitch": false,
         "noImplicitOverride": true,
         "noImplicitReturns": true,
@@ -23,8 +22,11 @@
         "noUnusedParameters": true,
         "types": [
             "./node_modules/network-information-types"
+        ],
+        "plugins": [
+            { "name": "typescript-plugin-css-modules" }
         ]
     },
-    "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*", "src/shared/widget/custom/.ts"],
+    "include": ["src/**/*", "unrestored/**/*", "scripts/**/*", "helper/**/*"],
     "exclude": ["node_modules", "public"]
 }

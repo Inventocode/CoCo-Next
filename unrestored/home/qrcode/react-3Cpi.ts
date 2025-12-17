@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：3Cpi
@@ -61,7 +61,7 @@ var __objRest = (source, exclude) => {
  * SPDX-License-Identifier: MIT
  */
 var qrcodegen;
-((qrcodegen2) => {
+(qrcodegen2 => {
   const _QrCode = class {
     constructor(version, errorCorrectionLevel, dataCodewords, msk) {
       this.version = version
@@ -464,7 +464,7 @@ var qrcodegen;
       return result
     }
     static reedSolomonComputeRemainder(data, divisor) {
-      let result = divisor.map((_) => 0)
+      let result = divisor.map(_ => 0)
       for (const b of data) {
         const factor = b ^ result.shift()
         result.push(0)
@@ -644,9 +644,9 @@ var qrcodegen;
   QrSegment.ALPHANUMERIC_CHARSET = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ $%*+-./:"
   qrcodegen2.QrSegment = QrSegment
 })(qrcodegen || (qrcodegen = {}));
-((qrcodegen2) => {
+(qrcodegen2 => {
   let QrCode;
-  ((QrCode2) => {
+  (QrCode2 => {
     const _Ecc = class {
       constructor(ordinal, formatBits) {
         this.ordinal = ordinal
@@ -661,9 +661,9 @@ var qrcodegen;
     QrCode2.Ecc = Ecc
   })(QrCode = qrcodegen2.QrCode || (qrcodegen2.QrCode = {}))
 })(qrcodegen || (qrcodegen = {}));
-((qrcodegen2) => {
+(qrcodegen2 => {
   let QrSegment;
-  ((QrSegment2) => {
+  (QrSegment2 => {
     const _Mode = class {
       constructor(modeBits, numBitsCharCount) {
         this.modeBits = modeBits
@@ -916,7 +916,7 @@ function QRCodeSVG(props) {
     shapeRendering: "crispEdges"
   }), image)
 }
-var QRCode = (props) => {
+var QRCode = props => {
   const _a = props
   const {
     renderAs

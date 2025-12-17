@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：q9Rd
@@ -93,27 +93,29 @@ var StoreManager = function () {
     _classCallCheck(this, StoreManager)
     this.store = create_store()
   }
-  _createClass(StoreManager, [{
-    key: "get_store",
-    value: function get_store() {
-      return this.store
+  _createClass(StoreManager, [
+    {
+      key: "get_store",
+      value: function get_store() {
+        return this.store
+      }
+    }, {
+      key: "get_state",
+      value: function get_state() {
+        return this.store.getState()
+      }
+    }, {
+      key: "subscribe",
+      value: function subscribe(listener) {
+        this.store.subscribe(listener)
+      }
+    }, {
+      key: "dispatch",
+      value: function dispatch(action) {
+        return this.store.dispatch(action)
+      }
     }
-  }, {
-    key: "get_state",
-    value: function get_state() {
-      return this.store.getState()
-    }
-  }, {
-    key: "subscribe",
-    value: function subscribe(listener) {
-      this.store.subscribe(listener)
-    }
-  }, {
-    key: "dispatch",
-    value: function dispatch(action) {
-      return this.store.dispatch(action)
-    }
-  }])
+  ])
   return StoreManager
 }()
 var store_manager = new StoreManager()

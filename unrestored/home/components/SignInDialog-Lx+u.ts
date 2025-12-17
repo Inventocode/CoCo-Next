@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：Lx+u
@@ -30,7 +30,8 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return __WEBPACK_IMPORTED_MODULE_0_redux__.bindActionCreators({
     asyncSetUserInfoAction: __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__.asyncSetUserInfoAction,
     setUserInfoFetchDoneAction: __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__.setUserInfoFetchDoneAction,
-    setSignDialogVisibleAction: __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__.setSignDialogVisibleAction
+    setSignDialogVisibleAction: __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__.setSignDialogVisibleAction,
+    setCommonToastAction: __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__.setCommonToastAction
   }, dispatch)
 }
 /* harmony default export */
