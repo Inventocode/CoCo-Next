@@ -689,7 +689,8 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     window.addEventListener("message", Q.handle)
   }, [dispatch])
   var showOpenLocalFile = oe.file.openLocalFile === K.j.Show
-  var showExportLocalFile = oe.file.exportLocalFile === K.j.Show && isAuthor
+  // [CoCo Next] 移除保存作品限制
+  var showExportLocalFile = oe.file.exportLocalFile === K.j.Show // && isAuthor
   var showSaveAs = oe.file.saveAs === K.j.Show && isAuthor
   var xe = function () {
     var e = O.a(RegeneratorRuntime.mark(function e() {
@@ -802,10 +803,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                       </$_13_index.B>
                     </$_13_index.m>
                   )}
-                  {
-                  // [CoCo Next] 移除保存作品限制
-                  // showExportLocalFile &&
-                  (
+                  {showExportLocalFile && (
                     <$_13_index.m value="EXPORT_PROJECT_AS_JSON">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.exportProjectAsJson" })}
@@ -859,8 +857,9 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   {oe.tutorial.feedback === K.j.Show && (
                     <$_13_index.m value="feedback">
                       <div className={styles.itemLinkContent}>
+                        {/* [CoCo Next] 修改问题反馈链接 */}
                         <a
-                          href="https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd"
+                          href="https://gitee.com/oldsquaw/CoCo-Next/issues/new"
                           target="_blank"
                           rel="noopener noreferrer"
                           className={styles.link}

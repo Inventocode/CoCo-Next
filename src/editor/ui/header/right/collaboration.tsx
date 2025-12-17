@@ -181,6 +181,21 @@ var Ct = React.memo(function () {
     //   }))
     //   return
     // }
+    // [CoCo Next] 添加协作安全警告
+    if (!collWorkId) {
+      const confirm = await new Promise((resolve) => {
+        dispatch(Message.wrapOpenConfirmDialog({
+          onConfirm() { resolve(true) },
+          onCancel() { resolve(false) },
+          title: "",
+          content: "进行协作可能存在安全隐患，确定要进行协作吗？",
+          isDangerous: true
+        }))
+      })
+      if (!confirm) {
+        return
+      }
+    }
     let newId = id
     y(true)
     if (!isUpdate && isProjectModified) {
@@ -439,6 +454,8 @@ var Ct = React.memo(function () {
               </div>
             )}
           </div>
+          {/* [CoCo Next] 添加协作安全警告 */}
+          <div className={$_136.text}>{formatMessage({ id: "OT.secure" })}</div>
         </div>
         {G() ? (
           <$_13_index.d

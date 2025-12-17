@@ -92,11 +92,11 @@ function needsProxy(url: URL): boolean {
 
 function rewriteURL(url: URL): URL {
     if (location.hostname.endsWith(".ccwidget.top")) {
-        const newURL = new URL(location.origin);
-        newURL.pathname = url.pathname,
+        const newURL = new URL(location.origin)
+        newURL.pathname = url.pathname
         newURL.searchParams.set("url", url.href)
-        url.searchParams.forEach((key, value) => {
-            newURL.searchParams.append(value, key)
+        url.searchParams.forEach((value, key) => {
+            newURL.searchParams.append(key, value)
         })
         return newURL
     }

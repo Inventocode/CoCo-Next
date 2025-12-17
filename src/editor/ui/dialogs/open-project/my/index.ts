@@ -180,19 +180,23 @@ var Re = _React.memo(function (e) {
                 break
               }
               // [CoCo Next] 移除打开协作作品时的自定义控件限制
-              // dispatch(Message.wrapOpenConfirmDialog({
-              //   allowText: $_710_index$a$formatMessage({
-              //     id: "know"
-              //   }),
-              //   title: "",
-              //   content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-              //     href: te.b,
-              //     target: "__blank",
-              //     rel: "noopener noreferrer"
-              //   }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
-              //   cancelBtnVisible: false
-              // }))
-              // return e.abrupt("return")
+              e.next = 9
+              return new Promise((resolve) => {
+                dispatch(Message.wrapOpenConfirmDialog({
+                  onConfirm() { resolve(true) },
+                  onCancel() { resolve(false) },
+                  title: "",
+                  content: "作品使用了未审核的自定义控件，进行协作可能存在安全隐患，确定要进行协作吗？",
+                  isDangerous: true
+                }))
+              })
+            case 9:
+              const confirm = e.sent
+              if (confirm) {
+                e.next = 12
+                break
+              }
+              return e.abrupt("return")
             case 12:
               e$importProjectJson({
                 json: e$sent$data.content,

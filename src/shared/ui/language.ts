@@ -850,6 +850,8 @@ var u = $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571
   "OT.permissionChangeToReadOnly": "创建者将你的权限改为只能查看",
   "OT.permissionChangeToEdit": "创建者将你的权限改为可以编辑",
   "OT.expiration": "邀请链接有效期为7天",
+  // [CoCo Next] 添加协作安全警告
+  "OT.secure": "⚠ 请确保只将协作链接分享给你信任的人，以免造成损失",
   "OT.editor": "编辑者",
   "OT.reader": "查看者",
   "OT.editorRules": "可对控件、代码进行编辑",

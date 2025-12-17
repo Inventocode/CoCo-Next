@@ -16,6 +16,7 @@
         "gbao",
         "getorder",
         "gitee",
+        "inventocode",
         "methodorder",
         "momo",
         "oldsquaw",
@@ -29,8 +30,7 @@
         "unminimizing",
         "vika",
         "vikadata",
-        "weixin",
-        "workerpool"
+        "weixin"
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {

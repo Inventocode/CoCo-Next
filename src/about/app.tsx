@@ -24,6 +24,10 @@ interface TeamItem {
 
 const TEAM_ITEMS: TeamItem[] = [
   {
+    icon: "https://static.codemao.cn/coco/image/about_page_pebble6.png",
+    position: "Next",
+    member: "SLIGHTNING、Inventocode、耗子"
+  }, {
     icon: "https://static.codemao.cn/coco/image/about_page_pebble1.png",
     position: "产品",
     member: "颢哥、coco鸭、momo、一凡、ss、prince、Joe、文伟、宝中健身狂"
@@ -62,6 +66,9 @@ const COURSE_UP_ITEMS: CourseItem[] = [
   }, {
     time: "2021年7月中旬",
     desc: "社区正式上线公测"
+  }, {
+    time: "2025年6月中旬",
+    desc: "CoCo 源代码计划启动"
   }
 ]
 const COURSE_DOWN_ITEMS: CourseItem[] = [
@@ -74,6 +81,9 @@ const COURSE_DOWN_ITEMS: CourseItem[] = [
   }, {
     time: "2021年7月29日",
     desc: "工具发布会上闪亮登场"
+  }, {
+    time: "2025年10月中旬",
+    desc: "CoCo Next 立项"
   }
 ]
 
@@ -89,6 +99,14 @@ function App() {
           <div className={styles.bannerLogoBox}>
             <img className={styles.bannerLogoImg} src={Logo} alt="logo" />
           </div>
+          {/* [CoCo Next] 添加 SLIGHTNING 的话语 */}
+          <div className={styles.bannerText}>
+            <img className={styles.quotesLeft} src={quotesLeft} alt="" />
+            <img className={styles.quotesRight} src={quotesRight} alt="" />
+            <p>{formatMessage({ id: "next.about.remarks1" })}</p>
+            <p>{formatMessage({ id: "next.about.remarks2" })}</p>
+          </div>
+          <div className={styles.bannerTexSpeech}>—— SLIGHTNING</div>
           <div className={styles.bannerText}>
             <img className={styles.quotesLeft} src={quotesLeft} alt="" />
             <img className={styles.quotesRight} src={quotesRight} alt="" />

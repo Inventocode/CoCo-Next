@@ -111,7 +111,8 @@ body, html, p {
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseUpList {
-    margin-left: 280px;
+    /* [CoCo Next] 调整历程样式 */
+    margin-left: 240px;
     display: flex;
     position: relative;
     top: 41px
@@ -119,7 +120,8 @@ body, html, p {
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseUpList .courseItem {
     width: 300px;
-    margin-right: 124px
+    /* [CoCo Next] 调整历程样式 */
+    margin-right: 0px
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseUpList .courseUpItem {}
@@ -132,8 +134,9 @@ body, html, p {
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseDownList .courseItem {
-    width: 300px;
-    margin-right: 118px
+    /* [CoCo Next] 调整历程样式 */
+    width: 400px;
+    margin-right: 18px
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseDownList .courseDownItem {}

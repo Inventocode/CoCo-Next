@@ -91,22 +91,19 @@ function OpenWork() {
           workInfo.content.unsafeExtensionWidgetList.length > 0
         ) {
           // [CoCo Next] 移除从 URL 打开协作作品时的自定义控件限制
-          // dispatch(Message.wrapOpenConfirmDialog({
-          //   onConfirm: () => {
-          //     dispatch(Message.warpAsyncCreateProject())
-          //   },
-          //   allowText: formatMessage({
-          //     id: "know"
-          //   }),
-          //   title: "",
-          //   content: (
-          //     <div>
-          //       作品使用了未审核的自定义控件，需将控件提交至<a href={te.b} target="__blank" rel="noopener noreferrer">Coco控件商城-投稿</a>并等待审核通过后才能进行协作。
-          //     </div>
-          //   ),
-          //   cancelBtnVisible: false
-          // }))
-          // return
+          const confirm = await new Promise((resolve) => {
+            dispatch(Message.wrapOpenConfirmDialog({
+              onConfirm() { resolve(true) },
+              onCancel() { resolve(false) },
+              title: "",
+              content: "作品使用了未审核的自定义控件，进行协作可能存在安全隐患，确定要进行协作吗？",
+              isDangerous: true
+            }))
+          })
+          if (!confirm) {
+            openNew()
+            return
+          }
         }
         dispatch(Message.warpAsyncCreateProject({
           json: workInfo.content,
