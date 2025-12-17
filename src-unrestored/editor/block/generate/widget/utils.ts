@@ -4,13 +4,11 @@
  * 模块 ID：301__part-5
  */
 
-"use strict"
-
-import * as g from "../9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_118_index from "../118/index"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
-import * as pe from "./85"
+import * as g from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as pe from "../../../../../unrestored/shared/1571/2636/301/85"
 function fe(e, t) {
   var n
   if (Array.isArray(e)) {

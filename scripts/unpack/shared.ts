@@ -67,6 +67,8 @@ unpack({
         "301__part-2": "/editor/block/generate/toolbox/index-1",
         "301__part-3": "/editor/block/generate/toolbox/index-2",
         "301__part-4": "/editor/block/generate/toolbox/index-3",
+        "301__part-5": "/editor/block/generate/widget/utils",
+        "301__part-6": "/editor/block/generate/widget/index",
         347: "/shared/widget/custom/external-module",
         1571: ".",
         "2636__part-7": "/editor/ui/dialogs/open-project/my/index",

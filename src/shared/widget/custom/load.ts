@@ -6,20 +6,13 @@ export { registerCustomWidget as v }
 export { z as s }
 export { Z as u }
 export { te as w }
-export { oe as l }
-export { ae as p }
-export { se as n }
+export { getPropertyTypes as l }
 export { ce as m }
 export { le as o }
-export { getWidgetMethodTypes as j }
-export { de as h }
-export { fe as g }
-export { he as i }
+export { getMethodTypes as j }
 export { InvisibleWidget as c }
 export { VisibleWidget as d }
 export { isExtensions as q } from "./type"
-export { Widget as a }
-export { ge as b }
 
 import BabelRuntimeHelperRegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
@@ -361,20 +354,20 @@ function toInternalWidget(types: types.Types, widget: types.Widget): Internal.Wi
     if ("__width" === key) {
       size.width = defaultValue as number
       if (validators?.greaterThan) {
-        widthRange[0] = ae(validators)
+        widthRange[0] = getValidatorsGreaterThanValue(validators)
       }
       if (validators?.lessThan) {
-        widthRange[1] = se(validators)
+        widthRange[1] = getValidatorsLessThanValue(validators)
       }
       return
     }
     if ("__height" === key) {
       size.height = defaultValue as number
       if (validators?.greaterThan) {
-        heightRange[0] = ae(validators)
+        heightRange[0] = getValidatorsGreaterThanValue(validators)
       }
       if (validators?.lessThan) {
-        heightRange[1] = se(validators)
+        heightRange[1] = getValidatorsLessThanValue(validators)
       }
       return
     }
@@ -942,16 +935,14 @@ export function getWidgetTitle(type: string) {
   var widget = Storage.getExtension(type)
   return widget ? $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(type, widget.types.title) : ""
 }
-export { getWidgetTitle as k }
 
-function oe(e, t) {
-  var n = Storage.getExtension(e)
-  if (null === n || undefined === n ? undefined : n.types) {
-    return n.types.properties.find(function (e) {
-      return e.key === t
-    })
+export function getPropertyTypes(type: string, key: string): types.PropertyTypes | void {
+  const widget = Storage.getExtension(type)
+  if (widget?.types) {
+    return widget.types.properties.find(property => property.key === key)
   }
 }
+
 function ie(e, t) {
   var n = Storage.getExtension(e)
   if (null === n || undefined === n ? undefined : n.types) {
@@ -965,49 +956,51 @@ function ie(e, t) {
     }
   }
 }
-function ae(e) {
-  var t
-  if (undefined !== e.greaterThan) {
-    t = "number" === typeof e.greaterThan ? e.greaterThan : e.greaterThan.value
+
+export function getValidatorsGreaterThanValue(validators: types.Validators) {
+  let result
+  if (validators.greaterThan !== undefined) {
+    result = typeof validators.greaterThan === "number" ? validators.greaterThan : validators.greaterThan.value
   }
-  return t
+  return result
 }
-function se(e) {
-  var t
-  if (undefined !== e.lessThan) {
-    t = "number" === typeof e.lessThan ? e.lessThan : e.lessThan.value
+
+export function getValidatorsLessThanValue(validators: types.Validators) {
+  let result
+  if (validators.lessThan !== undefined) {
+    result = typeof validators.lessThan === "number" ? validators.lessThan : validators.lessThan.value
   }
-  return t
+  return result
 }
+
 function ce(e, t) {
   var n = ie(e, t)
   if (n) {
-    return se(n)
+    return getValidatorsLessThanValue(n)
   }
 }
 function le(e, t) {
   var n = ie(e, t)
   if (n) {
-    return ae(n)
+    return getValidatorsGreaterThanValue(n)
   }
 }
-export function getWidgetMethodTypes(type: string, key: string): types.MethodTypes | void {
-  var widget = Storage.getExtension(type)
+export function getMethodTypes(type: string, key: string): types.MethodTypes | void {
+  const widget = Storage.getExtension(type)
   if (widget?.types) {
     return widget.types.methods.find((method) => method.key === key)
   }
 }
-function de(e, t) {
-  var n = Storage.getExtension(e)
-  if (null === n || undefined === n ? undefined : n.types) {
-    return n.types.events.find(function (e) {
-      return e.key === t
-    })
+
+export function getEventTypes(type: string, key: string): types.EventTypes | void {
+  const widget = Storage.getExtension(type)
+  if (widget?.types) {
+    return widget.types.events.find((event) => event.key === key)
   }
 }
 
-export function getCheckType(valueType: types.ValueType, checkType: types.CheckType | undefined) {
-  var result = new Set()
+export function processCheckType(valueType: types.ValueType, checkType: types.CheckType | undefined) {
+  const result = new Set()
   let types = checkType || valueType
   types = Array.isArray(types) ? types : [types]
   if (types.includes("string")) {
@@ -1021,21 +1014,22 @@ export function getCheckType(valueType: types.ValueType, checkType: types.CheckT
   })
   return Array.from(result)
 }
-export { getCheckType as f }
 
-function fe(e) {
-  var t = new Set()
-  var n = Array.isArray(e) ? e : [e]
-  if (n.includes("color") || n.includes("image")) {
-    n.push("string")
+export function processValueType(valueType: types.ValueType) {
+  const result = new Set()
+  const types = Array.isArray(valueType) ? valueType : [valueType]
+  if (types.includes("color") || types.includes("image")) {
+    types.push("string")
   }
-  n.forEach(function (e) {
-    t.add(Lodash.upperFirst("".concat(e)))
+  types.forEach((type) => {
+    result.add(Lodash.upperFirst(`${type}`))
   })
-  return Array.from(t)
+  return Array.from(result)
 }
-function he(e, t) {
-  return "".concat(e, "_").concat(t)
+
+export function processEventKey(type: string, key: string) {
+  return `${type}_${key}`
 }
-var /* [auto-meaningful-name] */Widget = "widget"
-var ge = "控件"
+
+export const ANY_WIDGET_KEY = "widget"
+export const ANY_WIDGET_LABEL = "控件"

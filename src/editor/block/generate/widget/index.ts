@@ -4,126 +4,109 @@
  * 模块 ID：301__part-6
  */
 
-"use strict"
-
-import { fe, he } from "./index__part-5"
-import * as pe from "./85"
-import * as /* [auto-meaningful-name] */$$_118_index from "../118/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
-import * as _ from "../4"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
-import * as /* [auto-meaningful-name] */$_544 from "./544"
-import * as /* [auto-meaningful-name] */$_658 from "./658"
-function _e(e, t) {
-  !function (e, t) {
-    var n = {
+import { getCustomWidgetBlockParamShadow, he } from "./utils"
+import * as pe from "../../../../../unrestored/shared/1571/2636/301/85"
+import * as /* [auto-meaningful-name] */$$_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
+import * as LoadCustomWidget from "../../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as _ from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_17_index from "../../../../../unrestored/shared/1571/2636/17/index"
+import * as /* [auto-meaningful-name] */$_544 from "../../../../../unrestored/shared/1571/2636/301/544"
+import * as /* [auto-meaningful-name] */$_658 from "../../../../../unrestored/shared/1571/2636/301/658"
+function setBlockGroupProfile(e, Blink) {
+  {
+    const mutator = {
       event: "event",
       widgetType: "",
-      updateShape_: function () {
-        var e = this
-        var n = $$_$$_$$_$$_$$_src_shared_widget_custom_load.h(this.widgetType, this.event)
-        if (!n) {
+      updateShape_() {
+        var this0 = this
+        const types = LoadCustomWidget.getEventTypes(this.widgetType, this.event)
+        if (!types) {
           console.error("WIDGET_EVENT_MUTATOR getWidgetEvent error", this.widgetType, this.event)
           this.append_statement_input("DO", undefined)
           this.set_disabled(true)
-          this.set_field_value(t.Msg.INVALID_BLOCK, "EVENT")
-          return void this.set_colour("#abafb6")
+          this.set_field_value(Blink.Msg.INVALID_BLOCK, "EVENT")
+          this.set_colour("#abafb6")
+          return
         }
         this.set_disabled(false)
-        var /* [auto-meaningful-name] */n$label = n.label
-        var /* [auto-meaningful-name] */n$params = n.params
-        var /* [auto-meaningful-name] */n$subTypes = n.subTypes
-        var /* [auto-meaningful-name] */n$tooltip = n.tooltip
-        var /* [auto-meaningful-name] */n$blockOptions = n.blockOptions
-        var /* [auto-meaningful-name] */n$key = n.key
-        var l = pe.a(this.widgetType, n$label)
+        const { label, params, subTypes, tooltip, blockOptions, key } = types
+        const processedLabel = pe.a(this.widgetType, label)
         if (this.isAnyWidget) {
-          var u
-          var d = "任意" + $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
-          if (!(null === (u = this.get_input("WIDGET_ID_CONTAINER")) || undefined === u)) {
-            u.append_field(d)
-          }
+          const anyWidgetLabel = "任意" + LoadCustomWidget.getWidgetTitle(this.widgetType)
+          this.get_input("WIDGET_ID_CONTAINER")?.append_field(anyWidgetLabel)
         } else {
-          var p
-          var f = new $$_118_index.a({
+          const idField = new $$_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
-            options: function () {
-              return $$_46_index.c().getWidgetListByType(e.widgetType)
+            options() {
+              return $$_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
-          if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
-            p.append_field(f, "WIDGET_ID")
-          }
+          this.get_input("WIDGET_ID_CONTAINER")?.append_field(idField, "WIDGET_ID")
         }
-        if (n$tooltip) {
-          var h = pe.a(this.widgetType, n$tooltip)
-          this.set_tooltip(h)
+        if (tooltip) {
+          const processedTooltip = pe.a(this.widgetType, tooltip)
+          this.set_tooltip(processedTooltip)
         }
-        if (null === n$blockOptions || undefined === n$blockOptions ? undefined : n$blockOptions.icon) {
-          var m = this.inputList[0].fieldRow[0]
-          if (!m || "FieldIcon" !== m.field_type) {
+        if (blockOptions?.icon) {
+          const iconField = this.inputList[0].fieldRow[0]
+          if (!iconField || iconField.field_type !== "FieldIcon") {
             return
           }
-          m.set_value(t.utils.replace_message_references(n$blockOptions.icon))
+          iconField.set_value(Blink.utils.replace_message_references(blockOptions.icon))
         }
-        var g = $$_$$_$$_$$_$$_src_shared_widget_custom_load.i(this.widgetType, n$key)
-        this.append_statement_input("DO", undefined, g)
-        if (n$subTypes) {
-          this.set_field_value(l, "EVENT")
-          n$subTypes.forEach(function (t) {
-            var /* [auto-meaningful-name] */t$key = t.key
-            var /* [auto-meaningful-name] */t$dropdown = t.dropdown
-            var o = "PARAM_".concat(t$key)
-            var i = new $$_118_index.a({
+        const processKey = LoadCustomWidget.processEventKey(this.widgetType, key)
+        this.append_statement_input("DO", undefined, processKey)
+        if (subTypes) {
+          this.set_field_value(processedLabel, "EVENT")
+          subTypes.forEach(({ key, dropdown }) => {
+            const processedKey = "PARAM_".concat(key)
+            const field = new $$_118_index.a({
               type: "field_coco_dropdown",
-              name: o,
+              name: processedKey,
               custom: true,
-              options: he(e.widgetType, t$dropdown)
+              options: he(this0.widgetType, dropdown)
             })
-            e.append_dummy_input("", "DO").append_field(i, o)
+            this0.append_dummy_input("", "DO").append_field(field, processedKey)
           })
         } else {
-          this.set_field_value(l + t.Msg.WIDGET_EVENT_SUFFIX, "EVENT")
+          this.set_field_value(processedLabel + Blink.Msg.WIDGET_EVENT_SUFFIX, "EVENT")
         }
-        n$params.forEach(function (t) {
-          var /* [auto-meaningful-name] */t$key = t.key
-          var /* [auto-meaningful-name] */t$label = t.label
-          var /* [auto-meaningful-name] */t$dropdown = t.dropdown
-          var i = "PARAM_".concat(t$key)
-          var a = pe.a(e.widgetType, t$label)
-          if (t$dropdown) {
-            var s = new $$_118_index.a({
+        params.forEach(({ key, label, dropdown }) => {
+          const processedKey = "PARAM_".concat(key)
+          const processedLabel = pe.a(this0.widgetType, label)
+          if (dropdown) {
+            const dropdownField = new $$_118_index.a({
               type: "field_coco_dropdown",
-              name: i,
+              name: processedKey,
               custom: true,
-              options: he(e.widgetType, t$dropdown)
+              options: he(this0.widgetType, dropdown)
             })
-            var c = e.append_dummy_input("", "DO")
-            if (a) {
-              c.append_field(a, "".concat(i, "_LABEL"))
+            const field = this0.append_dummy_input("", "DO")
+            if (processedLabel) {
+              field.append_field(processedLabel, "".concat(processedKey, "_LABEL"))
             }
-            c.append_field(s, i)
+            field.append_field(dropdownField, processedKey)
           } else {
-            e.append_shadow_input(i, "<shadow type=\"widget_event_param\">\n              <field name=\"PARAM_NAME\">".concat(a, "</field>\n              <mutation widget_type=\"").concat(e.widgetType, "\" event=\"").concat(e.event, "\" param=\"").concat(t$key, "\"></mutation>\n            </shadow>"), "DO")
+            this0.append_shadow_input(processedKey, "<shadow type=\"widget_event_param\">\n              <field name=\"PARAM_NAME\">".concat(processedLabel, "</field>\n              <mutation widget_type=\"").concat(this0.widgetType, "\" event=\"").concat(this0.event, "\" param=\"").concat(key, "\"></mutation>\n            </shadow>"), "DO")
           }
         })
         if (this.isAnyWidget) {
-          var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load$a = $$_$$_$$_$$_$$_src_shared_widget_custom_load.a
-          var v = "PARAM_".concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$a)
-          var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load$b = $$_$$_$$_$$_$$_src_shared_widget_custom_load.b
-          this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$a, "\"></mutation>\n        </shadow>"), "DO")
+          const ANY_WIDGET_KEY = LoadCustomWidget.ANY_WIDGET_KEY
+          const processedKey = "PARAM_".concat(ANY_WIDGET_KEY)
+          const ANY_WIDGET_LABEL = LoadCustomWidget.ANY_WIDGET_LABEL
+          this.append_shadow_input(processedKey, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat(ANY_WIDGET_LABEL, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat(ANY_WIDGET_KEY, "\"></mutation>\n        </shadow>"), "DO")
         }
       },
-      domToMutation: function (e) {
-        this.event = e.getAttribute("event") || this.event
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+      domToMutation(element) {
+        this.event = element.getAttribute("event") || this.event
+        this.widgetType = element.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === element.getAttribute("is_any_widget")
         this.updateShape_()
       },
-      mutationToDom: function () {
+      mutationToDom() {
         var e = document.createElement("mutation")
         e.setAttribute("event", this.event)
         e.setAttribute("widget_type", this.widgetType)
@@ -131,52 +114,52 @@ function _e(e, t) {
         return e
       }
     }
-    var r = {
+    const paramMutator = {
       param: "",
       event: "",
       widgetType: "",
-      domToMutation: function (e) {
-        var t = this
-        this.param = e.getAttribute("param") || this.param
-        this.event = e.getAttribute("event") || this.event
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType
-        var n = $$_$$_$$_$$_$$_src_shared_widget_custom_load.h(this.widgetType, this.event)
+      domToMutation(element) {
+        const this0 = this
+        this.param = element.getAttribute("param") || this.param
+        this.event = element.getAttribute("event") || this.event
+        this.widgetType = element.getAttribute("widget_type") || this.widgetType
+        const types = LoadCustomWidget.getEventTypes(this.widgetType, this.event)
         if (this.widgetType || this.event) {
-          if (!n) {
+          if (!types) {
             console.error("WIDGET_EVENT_PARAM_MUTATOR getWidgetEvent error", this.widgetType, this.event, this.param)
             this.set_output(true)
-            return void this.set_disabled(true)
+            this.set_disabled(true)
+            return
           }
           this.set_disabled(false)
-          var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.i(this.widgetType, this.event)
-          if (this.param === $$_$$_$$_$$_$$_src_shared_widget_custom_load.a) {
-            this.set_output(true, "string", r)
+          const processedKey = LoadCustomWidget.processEventKey(this.widgetType, this.event)
+          if (this.param === LoadCustomWidget.ANY_WIDGET_KEY) {
+            this.set_output(true, "string", processedKey)
           } else {
-            var o = n.params.find(function (e) {
-              return e.key === t.param
-            })
-            if (!o) {
-              return void console.error("WIDGET_EVENT_PARAM_MUTATOR get param error", this.widgetType, this.event, this.param)
+            const paramTypes = types.params.find((param) => param.key === this0.param)
+            if (!paramTypes) {
+              console.error("WIDGET_EVENT_PARAM_MUTATOR get param error", this.widgetType, this.event, this.param)
+              return
             }
-            var /* [auto-meaningful-name] */o$valueType = o.valueType
-            var a = $$_$$_$$_$$_$$_src_shared_widget_custom_load.g(o$valueType)
-            this.set_output(true, a, r)
+            const { valueType } = paramTypes
+            const processedValueType = LoadCustomWidget.processValueType(valueType)
+            this.set_output(true, processedValueType, processedKey)
           }
         } else {
           this.set_output(true)
         }
       },
-      mutationToDom: function () {
-        var e = document.createElement("mutation")
-        e.setAttribute("param", this.param)
-        e.setAttribute("event", this.event)
-        e.setAttribute("widget_type", this.widgetType)
-        return e
+      mutationToDom() {
+        const element = document.createElement("mutation")
+        element.setAttribute("param", this.param)
+        element.setAttribute("event", this.event)
+        element.setAttribute("widget_type", this.widgetType)
+        return element
       }
     }
-    t.extensions.register_mutator("widget_event_mutator", n)
-    t.extensions.register_mutator("widget_event_param_mutator", r)
-    t.define_blocks_with_json_array([
+    Blink.extensions.register_mutator("widget_event_mutator", mutator)
+    Blink.extensions.register_mutator("widget_event_param_mutator", paramMutator)
+    Blink.define_blocks_with_json_array([
       {
         type: "widget_event",
         message0: "%{BKY_WIDGET_EVENT_MSG}",
@@ -195,7 +178,7 @@ function _e(e, t) {
         mutator: "widget_event_mutator"
       }
     ])
-    t.define_blocks_with_json_array([
+    Blink.define_blocks_with_json_array([
       {
         type: "widget_event_param",
         message0: "%{BKY_WIDGET_EVENT_PARAM_MSG}",
@@ -212,124 +195,114 @@ function _e(e, t) {
         extensions: ["param_block"]
       }
     ])
-  }(0, t);
-  (function (e, t) {
-    var n = {
+  }
+  {
+    const mutator = {
       property: "",
       widgetType: "",
-      updateShape_: function () {
+      updateShape_() {
         var e
-        var n = this
-        var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(this.widgetType, this.property)
-        if (!r) {
+        const this0 = this
+        const types = LoadCustomWidget.getPropertyTypes(this.widgetType, this.property)
+        if (!types) {
           console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this.widgetType, this.property)
           this.set_disabled(true)
           this.set_output(true)
-          this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY")
-          return void this.set_colour("#abafb6")
+          this.set_field_value(Blink.Msg.INVALID_BLOCK, "PROPERTY")
+          this.set_colour("#abafb6")
+          return
         }
         this.set_disabled(false)
-        var /* [auto-meaningful-name] */u$getter$keys
-        var i
-        var /* [auto-meaningful-name] */r$label = r.label
-        var /* [auto-meaningful-name] */r$valueType = r.valueType
-        var /* [auto-meaningful-name] */r$tooltip = r.tooltip
-        var /* [auto-meaningful-name] */r$blockOptions = r.blockOptions
-        var u = undefined === r$blockOptions ? {} : r$blockOptions
-        var d = pe.a(this.widgetType, r$label)
-        this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
+        const { label, valueType, tooltip, blockOptions = {} } = types
+        const processedLabel = pe.a(this.widgetType, label)
+        this.set_field_value(Blink.Msg.WIDGET_OF, "PROPERTY")
         if (this.isAnyWidget) {
-          var p
-          var f = $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
-          if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
-            p.append_field(f)
-          }
-          this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
+          const title = LoadCustomWidget.getWidgetTitle(this.widgetType)
+          this.get_input("WIDGET_ID_CONTAINER")?.append_field(title)
+          this.append_shadow_input("WIDGET_ID", `<empty type="widget_any_id"></empty>`, "PROPERTY")
         } else {
-          var h
-          var m = new $$_118_index.a({
+          const field = new $$_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(n.widgetType)
+              return $$_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
-          if (!(null === (h = this.get_input("WIDGET_ID_CONTAINER")) || undefined === h)) {
-            h.append_field(m, "WIDGET_ID")
-          }
+          this.get_input("WIDGET_ID_CONTAINER")?.append_field(field, "WIDGET_ID")
         }
-        if ("object" === typeof u.getter && (null === (i = u$getter$keys = u.getter.keys) || undefined === i ? undefined : i.length)) {
-          var g = []
-          u$getter$keys.forEach(function (e) {
-            var t = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(n.widgetType, e)
-            if (t) {
-              var r = pe.a(n.widgetType, t.label)
-              g.push([r, e])
+        let keys
+        if ("object" === typeof blockOptions.getter && (keys = blockOptions.getter.keys)?.length) {
+          const options: [string, string][] = []
+          keys.forEach((key) => {
+            const types = LoadCustomWidget.getPropertyTypes(this0.widgetType, key)
+            if (types) {
+              const processedLabel = pe.a(this0.widgetType, types.label)
+              options.push([processedLabel, key])
             } else {
-              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
+              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this0.widgetType, key)
             }
           })
           this.append_dummy_input().append_field(new $$_118_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
-            options: function () {
-              return g
+            options() {
+              return options
             }
           }), "PROPERTY_KEY")
-          if (d) {
-            this.append_dummy_input().append_field("".concat(d))
+          if (processedLabel) {
+            this.append_dummy_input().append_field("".concat(processedLabel))
           }
         }
-        switch (r.key) {
+        switch (types.key) {
           case "__position":
             this.append_dummy_input().append_field(new $$_118_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
               options: function () {
-                return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]]
+                return [[Blink.Msg.POSITION_X, "positionX"], [Blink.Msg.POSITION_Y, "positionY"]]
               }
             }), "POSITION_TYPE")
             break
           case "__opacity":
-            this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY), "PROPERTY")
+            this.set_field_value("".concat(Blink.Msg.WIDGET_OF, " ").concat(Blink.Msg.WIDGET_OPACITY), "PROPERTY")
             break
           case "__visible":
-            this.set_field_value(t.Msg.WIDGET_VISIBLE, "PROPERTY")
+            this.set_field_value(Blink.Msg.WIDGET_VISIBLE, "PROPERTY")
             break
           case "__disabled":
-            this.set_field_value(t.Msg.WIDGET_DISABLED, "PROPERTY")
+            this.set_field_value(Blink.Msg.WIDGET_DISABLED, "PROPERTY")
             break
           default:
-            if (!(null === (e = u$getter$keys) || undefined === e ? undefined : e.length)) {
-              this.set_field_value("".concat("boolean" === r$valueType ? "" : t.Msg.WIDGET_OF, " ").concat(d), "PROPERTY")
+            if (!(null === (e = keys) || undefined === e ? undefined : e.length)) {
+              this.set_field_value("".concat("boolean" === valueType ? "" : Blink.Msg.WIDGET_OF, " ").concat(processedLabel), "PROPERTY")
             }
         }
-        var _ = $$_$$_$$_$$_$$_src_shared_widget_custom_load.g(r$valueType)
-        this.set_output(true, _)
-        if (r$tooltip) {
-          var v = pe.a(this.widgetType, r$tooltip)
-          this.set_tooltip(v)
+        const processedValueType = LoadCustomWidget.processValueType(valueType)
+        this.set_output(true, processedValueType)
+        if (tooltip) {
+          const processedTooltip = pe.a(this.widgetType, tooltip)
+          this.set_tooltip(processedTooltip)
         }
       },
-      domToMutation: function (e) {
-        this.property = e.getAttribute("property") || this.property
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+      domToMutation(element) {
+        this.property = element.getAttribute("property") || this.property
+        this.widgetType = element.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === element.getAttribute("is_any_widget")
         this.updateShape_()
       },
-      mutationToDom: function () {
-        var e = document.createElement("mutation")
-        e.setAttribute("property", this.property)
-        e.setAttribute("widget_type", this.widgetType)
-        e.setAttribute("is_any_widget", String(this.isAnyWidget))
-        return e
+      mutationToDom() {
+        const element = document.createElement("mutation")
+        element.setAttribute("property", this.property)
+        element.setAttribute("widget_type", this.widgetType)
+        element.setAttribute("is_any_widget", String(this.isAnyWidget))
+        return element
       }
     }
-    t.extensions.register_mutator("widget_get_mutator", n)
-    t.define_blocks_with_json_array([
+    Blink.extensions.register_mutator("widget_get_mutator", mutator)
+    Blink.define_blocks_with_json_array([
       {
         type: "widget_get",
         message0: "%{BKY_WIDGET_GET_MSG}",
@@ -349,146 +322,127 @@ function _e(e, t) {
         mutator: "widget_get_mutator"
       }
     ])
-  })(0, t);
-  (function (e, t) {
-    var n = {
+  }
+  {
+    const mutator = {
       property: "property",
       widgetType: "",
-      updateShape_: function () {
-        var e
-        var n = this
-        var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(this.widgetType, this.property)
-        if (!r) {
+      updateShape_() {
+        const this0 = this
+        const types = LoadCustomWidget.getPropertyTypes(this.widgetType, this.property)
+        if (!types) {
           console.error("WIDGET_SET_MUTATOR getWidgetProperty error", this.widgetType, this.property)
           this.set_disabled(true)
-          this.set_field_value(t.Msg.INVALID_BLOCK, "PROPERTY")
+          this.set_field_value(Blink.Msg.INVALID_BLOCK, "PROPERTY")
           return void this.set_colour("#abafb6")
         }
         this.set_disabled(false)
-        var o
-        var i
-        var a
-        var /* [auto-meaningful-name] */v$setter$keys
-        var c
-        var /* [auto-meaningful-name] */r$valueType = r.valueType
-        var /* [auto-meaningful-name] */r$defaultValue = r.defaultValue
-        var /* [auto-meaningful-name] */r$label = r.label
-        var /* [auto-meaningful-name] */r$tooltip = r.tooltip
-        var /* [auto-meaningful-name] */r$checkType = r.checkType
-        var /* [auto-meaningful-name] */r$dropdown = r.dropdown
-        var /* [auto-meaningful-name] */r$validators = r.validators
-        var /* [auto-meaningful-name] */r$blockOptions = r.blockOptions
-        var v = undefined === r$blockOptions ? {} : r$blockOptions
-        var b = pe.a(this.widgetType, r$label)
-        var y = false
-        if (r$validators && "number" === r$valueType) {
-          var E = r$validators
-          var /* [auto-meaningful-name] */E$isInteger = E.isInteger
-          y = !!E$isInteger
-          o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.p(E)
-          i = $$_$$_$$_$$_$$_src_shared_widget_custom_load.n(E)
+        let validatorsGreaterThanValue: number | undefined
+        let validatorsLessThanValue: number | undefined
+        const { valueType, defaultValue, label, tooltip, checkType, dropdown, validators, blockOptions = {} } = types
+        const processedLabel = pe.a(this.widgetType, label)
+        let validatorsIsInteger = false
+        if (validators && valueType === "number") {
+          const validators0 = validators
+          const { isInteger } = validators0
+          validatorsIsInteger = !!isInteger
+          validatorsGreaterThanValue = LoadCustomWidget.getValidatorsGreaterThanValue(validators0)
+          validatorsLessThanValue = LoadCustomWidget.getValidatorsLessThanValue(validators0)
         }
-        if (!("__position" !== r.key && "__size" !== r.key)) {
-          y = true
+        if (!("__position" !== types.key && "__size" !== types.key)) {
+          validatorsIsInteger = true
         }
-        if ("__visible" !== r.key && "__disabled" !== r.key) {
-          if (!(null === (a = this.get_input("WIDGET_ID_CONTAINER")) || undefined === a)) {
-            a.insert_field_at(0, t.Msg.WIDGET_SET)
-          }
+        if ("__visible" !== types.key && "__disabled" !== types.key) {
+          this.get_input("WIDGET_ID_CONTAINER")?.insert_field_at(0, Blink.Msg.WIDGET_SET)
         }
         if (this.isAnyWidget) {
-          var C
-          var T = $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
-          if (!(null === (C = this.get_input("WIDGET_ID_CONTAINER")) || undefined === C)) {
-            C.append_field(T)
-          }
+          const title = LoadCustomWidget.getWidgetTitle(this.widgetType)
+          this.get_input("WIDGET_ID_CONTAINER")?.append_field(title)
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
-          var S
-          var A = new $$_118_index.a({
+          const idField = new $$_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(n.widgetType)
+              return $$_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
-          if (!(null === (S = this.get_input("WIDGET_ID_CONTAINER")) || undefined === S)) {
-            S.append_field(A, "WIDGET_ID")
-          }
+          this.get_input("WIDGET_ID_CONTAINER")?.append_field(idField, "WIDGET_ID")
         }
-        if ("object" === typeof v.setter && (null === (c = v$setter$keys = v.setter.keys) || undefined === c ? undefined : c.length)) {
-          var I = []
-          v$setter$keys.forEach(function (e, t) {
-            var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(n.widgetType, e)
-            if (r) {
-              if (0 === t && "number" === r.valueType) {
-                if (r.validators) {
-                  i = $$_$$_$$_$$_$$_src_shared_widget_custom_load.n(r.validators)
-                  o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.p(r.validators)
+        let keys
+        if ("object" === typeof blockOptions.setter && (keys = blockOptions.setter.keys)?.length) {
+          const options: [string, string][] = []
+          keys.forEach((key, index) => {
+            const types = LoadCustomWidget.getPropertyTypes(this0.widgetType, key)
+            if (types) {
+              if (0 === index && "number" === types.valueType) {
+                if (types.validators) {
+                  validatorsLessThanValue = LoadCustomWidget.getValidatorsLessThanValue(types.validators)
+                  validatorsGreaterThanValue = LoadCustomWidget.getValidatorsGreaterThanValue(types.validators)
                 }
-                if (!(undefined !== o || "__width" !== r.key && "__height" !== r.key)) {
-                  o = 0
+                if (!(undefined !== validatorsGreaterThanValue || "__width" !== types.key && "__height" !== types.key)) {
+                  validatorsGreaterThanValue = 0
                 }
               }
-              var a = pe.a(n.widgetType, r.label)
-              I.push([a, e])
+              const processedLabel = pe.a(this0.widgetType, types.label)
+              options.push([processedLabel, key])
             } else {
-              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
+              console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this0.widgetType, key)
             }
           })
-          this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
+          this.set_field_value(Blink.Msg.WIDGET_OF, "PROPERTY")
           this.append_dummy_input().append_field(new $$_118_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
-            options: function () {
-              return I
+            options() {
+              return options
             },
-            optOnchange: function (e) {
-              var t = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(n.widgetType, e)
-              if (t) {
-                var /* [auto-meaningful-name] */COLOR
-                if ("color" === t.valueType) {
+            optOnchange(e) {
+              const types = LoadCustomWidget.getPropertyTypes(this0.widgetType, e)
+              if (types) {
+                let COLOR
+                if ("color" === types.valueType) {
                   COLOR = "COLOR"
                 }
-                var o
-                var i
-                var a = n.get_shadow_field("VALUE", COLOR)
-                if (a) {
-                  a.set_value(String(t.defaultValue))
-                  if ("number" === t.valueType) {
-                    if (t.validators) {
-                      o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.p(t.validators)
-                      i = $$_$$_$$_$$_$$_src_shared_widget_custom_load.n(t.validators)
+                let validatorsGreaterThanValue
+                let validatorsLessThanValue
+                const field = this0.get_shadow_field("VALUE", COLOR)
+                if (field) {
+                  field.set_value(String(types.defaultValue))
+                  if ("number" === types.valueType) {
+                    if (types.validators) {
+                      validatorsGreaterThanValue = LoadCustomWidget.getValidatorsGreaterThanValue(types.validators)
+                      validatorsLessThanValue = LoadCustomWidget.getValidatorsLessThanValue(types.validators)
                     }
-                    if (!(undefined !== o || "__width" !== t.key && "__height" !== t.key)) {
-                      o = 0
+                    if (!(undefined !== validatorsGreaterThanValue || "__width" !== types.key && "__height" !== types.key)) {
+                      validatorsGreaterThanValue = 0
                     }
-                    a.set_constraints(o, i, y ? 1 : undefined)
+                    field.set_constraints(validatorsGreaterThanValue, validatorsLessThanValue, validatorsIsInteger ? 1 : undefined)
                   }
                 }
               }
             }
           }), "PROPERTY_KEY")
-          var j = b ? "".concat(b, " ").concat(t.Msg.WIDGET_SET_TO) : t.Msg.WIDGET_SET_TO
+          const j = processedLabel ? "".concat(processedLabel, " ").concat(Blink.Msg.WIDGET_SET_TO) : Blink.Msg.WIDGET_SET_TO
           this.append_dummy_input().append_field(j)
         }
-        switch (r.key) {
+        switch (types.key) {
           case "__position":
-            this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
+            this.set_field_value(Blink.Msg.WIDGET_OF, "PROPERTY")
             this.append_dummy_input().append_field(new $$_118_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
               options: function () {
-                return [[t.Msg.POSITION_X, "positionX"], [t.Msg.POSITION_Y, "positionY"]]
+                return [[Blink.Msg.POSITION_X, "positionX"], [Blink.Msg.POSITION_Y, "positionY"]]
               }
             }), "POSITION_TYPE")
-            this.append_dummy_input().append_field(t.Msg.WIDGET_SET_TO)
+            this.append_dummy_input().append_field(Blink.Msg.WIDGET_SET_TO)
             break
           case "__opacity":
-            this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY")
+            this.set_field_value("".concat(Blink.Msg.WIDGET_OF, " ").concat(Blink.Msg.WIDGET_OPACITY, " ").concat(Blink.Msg.WIDGET_SET_TO), "PROPERTY")
             break
           case "__visible":
             this.append_dummy_input("", 0).append_field(new $$_118_index.a({
@@ -496,7 +450,7 @@ function _e(e, t) {
               name: "VALUE",
               custom: true,
               options: function () {
-                return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
+                return [[Blink.Msg.SHOW, "show"], [Blink.Msg.HIDE, "hide"]]
               }
             }), "VALUE")
             this.inputList.forEach(function (e) {
@@ -511,7 +465,7 @@ function _e(e, t) {
               name: "VALUE",
               custom: true,
               options: function () {
-                return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]]
+                return [[Blink.Msg.ABLE, "able"], [Blink.Msg.DISABLED, "disabled"]]
               }
             }), "VALUE")
             this.inputList.forEach(function (e) {
@@ -521,62 +475,62 @@ function _e(e, t) {
             })
             break
           default:
-            if (!(null === (e = v$setter$keys) || undefined === e ? undefined : e.length)) {
-              this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(b, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY")
+            if (!keys?.length) {
+              this.set_field_value("".concat(Blink.Msg.WIDGET_OF, " ").concat(processedLabel, " ").concat(Blink.Msg.WIDGET_SET_TO), "PROPERTY")
             }
         }
-        var N = $$_$$_$$_$$_$$_src_shared_widget_custom_load.f(r$valueType, r$checkType)
-        if ("__visible" !== r.key && "__disabled" !== r.key) {
-          if (r$dropdown) {
-            var R = new $$_118_index.a({
+        const processedCheckType = LoadCustomWidget.processCheckType(valueType, checkType)
+        if ("__visible" !== types.key && "__disabled" !== types.key) {
+          if (dropdown) {
+            const field = new $$_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
-              options: he(this.widgetType, r$dropdown)
+              options: he(this.widgetType, dropdown)
             })
-            R.set_value(String(r$defaultValue))
-            this.append_dummy_input().append_field(R, "VALUE")
+            field.set_value(String(defaultValue))
+            this.append_dummy_input().append_field(field, "VALUE")
           } else {
-            var k = ""
-            if ("string" === r$valueType) {
-              k = pe.a(this.widgetType, String(r$defaultValue))
+            let processedLabel = ""
+            if ("string" === valueType) {
+              processedLabel = pe.a(this.widgetType, String(defaultValue))
             }
-            var x = fe(r$valueType, k || r$defaultValue)
-            this.append_shadow_input("VALUE", x).set_check(N)
+            var x = getCustomWidgetBlockParamShadow(valueType, processedLabel || defaultValue)
+            this.append_shadow_input("VALUE", x).set_check(processedCheckType)
           }
         }
-        if ("number" === r$valueType && (r$validators || "__position" === r.key || "__size" === r.key)) {
-          var D = this.get_shadow_field("VALUE")
-          D.set_constraints(o, i, y ? 1 : undefined)
-          if ("__opacity" === r.key) {
-            D.set_controller_option({
+        if ("number" === valueType && (validators || "__position" === types.key || "__size" === types.key)) {
+          const field = this.get_shadow_field("VALUE")
+          field.set_constraints(validatorsGreaterThanValue, validatorsLessThanValue, validatorsIsInteger ? 1 : undefined)
+          if ("__opacity" === types.key) {
+            field.set_controller_option({
               type: $$_17_index.I.ControllerType.SLIDER,
-              left_text: t.Msg["opacity.invisible"],
-              right_text: t.Msg["opacity.visible"]
+              left_text: Blink.Msg["opacity.invisible"],
+              right_text: Blink.Msg["opacity.visible"]
             })
           }
         }
-        if (r$tooltip) {
-          var M = pe.a(this.widgetType, r$tooltip)
-          this.set_tooltip(M)
+        if (tooltip) {
+          const processedTooltip = pe.a(this.widgetType, tooltip)
+          this.set_tooltip(processedTooltip)
         }
       },
-      domToMutation: function (e) {
-        this.property = e.getAttribute("property") || this.property
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+      domToMutation(element) {
+        this.property = element.getAttribute("property") || this.property
+        this.widgetType = element.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === element.getAttribute("is_any_widget")
         this.updateShape_()
       },
-      mutationToDom: function () {
-        var e = document.createElement("mutation")
-        e.setAttribute("property", this.property)
-        e.setAttribute("widget_type", this.widgetType)
-        e.setAttribute("is_any_widget", String(this.isAnyWidget))
-        return e
+      mutationToDom() {
+        var element = document.createElement("mutation")
+        element.setAttribute("property", this.property)
+        element.setAttribute("widget_type", this.widgetType)
+        element.setAttribute("is_any_widget", String(this.isAnyWidget))
+        return element
       }
     }
-    t.extensions.register_mutator("widget_set_mutator", n)
-    t.define_blocks_with_json_array([
+    Blink.extensions.register_mutator("widget_set_mutator", mutator)
+    Blink.define_blocks_with_json_array([
       {
         type: "widget_set",
         message0: "%{BKY_WIDGET_SET_MSG}",
@@ -597,177 +551,154 @@ function _e(e, t) {
         mutator: "widget_set_mutator"
       }
     ])
-  })(0, t);
-  (function (e, t) {
-    var n = {
+  }
+  {
+    const n = {
       method: "method",
       widgetType: "",
       isAnyWidget: false,
-      updateShape_: function () {
-        var e = this
-        var n = $$_$$_$$_$$_$$_src_shared_widget_custom_load.j(this.widgetType, this.method)
-        if (!n) {
+      updateShape_() {
+        const this0 = this
+        const types = LoadCustomWidget.getMethodTypes(this.widgetType, this.method)
+        if (!types) {
           console.error("WIDGET_METHOD_MUTATOR getWidgetMethod error", this.widgetType, this.method)
           this.set_disabled(true)
-          this.append_dummy_input().append_field(t.Msg.INVALID_BLOCK, "METHOD")
-          return void this.set_colour("#abafb6")
+          this.append_dummy_input().append_field(Blink.Msg.INVALID_BLOCK, "METHOD")
+          this.set_colour("#abafb6")
+          return
         }
         this.set_disabled(false)
-        var r = this.get_input("WIDGET_ID_CONTAINER")
+        const field = this.get_input("WIDGET_ID_CONTAINER")
         if (this.isAnyWidget) {
-          var o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
-          if (!(null === r || undefined === r)) {
-            r.append_field(o)
-          }
+          const title = LoadCustomWidget.getWidgetTitle(this.widgetType)
+          field?.append_field(title)
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>")
-          if ("__setVisible" === n.key) {
-            var i = new $$_118_index.a({
+          if ("__setVisible" === types.key) {
+            const field = new $$_118_index.a({
               type: "field_coco_dropdown",
               name: "DISPLAY",
               custom: true,
               options: function () {
-                return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
+                return [[Blink.Msg.SHOW, "show"], [Blink.Msg.HIDE, "hide"]]
               }
             })
-            this.append_dummy_input().append_field(i, "DISPLAY")
+            this.append_dummy_input().append_field(field, "DISPLAY")
           }
-          if ("__setDisabled" === n.key) {
-            var a = new $$_118_index.a({
+          if ("__setDisabled" === types.key) {
+            const field = new $$_118_index.a({
               type: "field_coco_dropdown",
               name: "DISABLED",
               custom: true,
               options: function () {
-                return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]]
+                return [[Blink.Msg.ABLE, "able"], [Blink.Msg.DISABLED, "disabled"]]
               }
             })
-            this.append_dummy_input().append_field(a, "DISABLED")
+            this.append_dummy_input().append_field(field, "DISABLED")
           }
         } else {
-          var s = new $$_118_index.a({
+          const idField = new $$_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(e.widgetType)
+              return $$_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
-          if (!(null === r || undefined === r)) {
-            r.append_field(s, "WIDGET_ID")
-          }
+          field?.append_field(idField, "WIDGET_ID")
         }
-        var c
-        var /* [auto-meaningful-name] */n$label = n.label
-        var /* [auto-meaningful-name] */n$params = n.params
-        var /* [auto-meaningful-name] */n$tooltip = n.tooltip
-        var /* [auto-meaningful-name] */n$blockOptions = n.blockOptions
-        var f = undefined === n$blockOptions ? {} : n$blockOptions
-        var /* [auto-meaningful-name] */n$valueType = n.valueType
-        if (false !== f.callMethodLabel) {
-          var /* [auto-meaningful-name] */f$callMethodLabel
-          var _ = (null === (f$callMethodLabel = f.callMethodLabel) || undefined === f$callMethodLabel ? undefined : f$callMethodLabel.toString()) || ""
-          var v = pe.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG
-          var b = new $_658.FieldLabel({
-            text: v
+        const { label, params, tooltip, blockOptions = {}, valueType } = types
+        if (false !== blockOptions.callMethodLabel) {
+          const callMethodLabel = (blockOptions.callMethodLabel?.toString()) || ""
+          const processedCallMethodLabel = pe.a(this.widgetType, callMethodLabel) || Blink.Msg.WIDGET_METHOD_CALL_MSG
+          const textField = new $_658.FieldLabel({
+            text: processedCallMethodLabel
           })
-          if (!(null === r || undefined === r)) {
-            r.insert_field_at(0, b)
-          }
+          field?.insert_field_at(0, textField)
         }
-        if (f.icon && (t.Msg[f.icon] ? c = t.Msg[f.icon] : f.icon.startsWith("https://") && (c = f.icon), c)) {
-          var y = new $_544.FieldImage({
-            src: c
+        let icon
+        if (blockOptions.icon && (Blink.Msg[blockOptions.icon] ? icon = Blink.Msg[blockOptions.icon] : blockOptions.icon.startsWith("https://") && (icon = blockOptions.icon), icon)) {
+          const field = new $_544.FieldImage({
+            src: icon
           })
-          this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(y)
+          this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(field)
         }
-        if (f.color) {
-          this.set_colour(f.color)
+        if (blockOptions.color) {
+          this.set_colour(blockOptions.color)
         }
-        if (n$valueType) {
+        if (valueType) {
           this.set_next_statement(false)
           this.set_previous_statement(false)
-          var E = $$_$$_$$_$$_$$_src_shared_widget_custom_load.g(n$valueType)
-          this.set_output(true, E)
+          const processedValueType = LoadCustomWidget.processValueType(valueType)
+          this.set_output(true, processedValueType)
         }
-        var w = pe.a(this.widgetType, n$label)
-        if (w) {
-          this.append_dummy_input().append_field(w, "METHOD")
+        const processedLabel = pe.a(this.widgetType, label)
+        if (processedLabel) {
+          this.append_dummy_input().append_field(processedLabel, "METHOD")
         }
-        if (n$tooltip) {
-          var C = pe.a(this.widgetType, n$tooltip)
-          this.set_tooltip(C)
+        if (tooltip) {
+          const processedTooltip = pe.a(this.widgetType, tooltip)
+          this.set_tooltip(processedTooltip)
         }
-        if (false === f.inputsInline) {
-          this.set_inputs_inline(f.inputsInline)
+        if (false === blockOptions.inputsInline) {
+          this.set_inputs_inline(blockOptions.inputsInline)
         }
-        n$params.forEach(function (t) {
-          var /* [auto-meaningful-name] */t$label = t.label
-          var /* [auto-meaningful-name] */t$labelAfter = t.labelAfter
-          var /* [auto-meaningful-name] */t$valueType = t.valueType
-          var /* [auto-meaningful-name] */t$checkType = t.checkType
-          var /* [auto-meaningful-name] */t$defaultValue = t.defaultValue
-          var /* [auto-meaningful-name] */t$key = t.key
-          var /* [auto-meaningful-name] */t$dropdown = t.dropdown
-          var /* [auto-meaningful-name] */t$controller = t.controller
-          var u = pe.a(e.widgetType, t$label)
-          var d = "PARAM_".concat(t$key)
-          if (t$dropdown) {
-            var p = new $$_118_index.a({
+        params.forEach(({ label, labelAfter, valueType, checkType, defaultValue, key, dropdown, controller }) => {
+          const processedLabel = pe.a(this0.widgetType, label)
+          const processedKey = "PARAM_".concat(key)
+          if (dropdown) {
+            const field = new $$_118_index.a({
               type: "field_coco_dropdown",
-              name: d,
+              name: processedKey,
               custom: true,
-              options: he(e.widgetType, t$dropdown)
+              options: he(this0.widgetType, dropdown)
             })
-            var f = e.append_dummy_input()
-            if (u) {
-              f.append_field(u, "".concat(d, "_LABEL"))
+            const inputField = this0.append_dummy_input()
+            if (processedLabel) {
+              inputField.append_field(processedLabel, "".concat(processedKey, "_LABEL"))
             }
-            f.append_field(p, d)
+            inputField.append_field(field, processedKey)
           } else {
-            var h = fe(t$valueType, t$defaultValue)
-            var g = e.append_shadow_input(d, h)
-            var _ = $$_$$_$$_$$_$$_src_shared_widget_custom_load.f(t$valueType, t$checkType)
-            g.set_check(_)
-            if (u) {
-              g.insert_field_at(0, u, "".concat(d, "_LABEL"))
+            const shadow = getCustomWidgetBlockParamShadow(valueType, defaultValue)
+            const field = this0.append_shadow_input(processedKey, shadow)
+            const processedCheckType = LoadCustomWidget.processCheckType(valueType, checkType)
+            field.set_check(processedCheckType)
+            if (processedLabel) {
+              field.insert_field_at(0, processedLabel, "".concat(processedKey, "_LABEL"))
             }
-            if ("number" === t$valueType && t$controller) {
-              var v = e.get_shadow_field(d)
-              if (!(null === v || undefined === v)) {
-                v.set_constraints(t$controller.min, t$controller.max, 1)
-              }
-              if (t$controller.leftText && t$controller.rightText) {
-                if (!(null === v || undefined === v)) {
-                  v.set_controller_option({
-                    type: $$_17_index.I.ControllerType.SLIDER,
-                    left_text: t$controller.leftText,
-                    right_text: t$controller.rightText
-                  })
-                }
+            if ("number" === valueType && controller) {
+              const field = this0.get_shadow_field(processedKey)
+              field?.set_constraints(controller.min, controller.max, 1)
+              if (controller.leftText && controller.rightText) {
+                field?.set_controller_option({
+                  type: $$_17_index.I.ControllerType.SLIDER,
+                  left_text: controller.leftText,
+                  right_text: controller.rightText
+                })
               }
             }
           }
-          if (t$labelAfter) {
-            var b = pe.a(e.widgetType, t$labelAfter)
-            e.append_dummy_input("").append_field(b, "".concat(d, "_LABEL_AFTER"))
+          if (labelAfter) {
+            const processedLabelAfter = pe.a(this0.widgetType, labelAfter)
+            this0.append_dummy_input("").append_field(processedLabelAfter, "".concat(processedKey, "_LABEL_AFTER"))
           }
         })
       },
-      domToMutation: function (e) {
-        this.method = e.getAttribute("method") || this.method
-        this.widgetType = e.getAttribute("widget_type") || this.widgetType
-        this.isAnyWidget = "true" === e.getAttribute("is_any_widget")
+      domToMutation(element) {
+        this.method = element.getAttribute("method") || this.method
+        this.widgetType = element.getAttribute("widget_type") || this.widgetType
+        this.isAnyWidget = "true" === element.getAttribute("is_any_widget")
         this.updateShape_()
       },
-      mutationToDom: function () {
-        var e = document.createElement("mutation")
-        e.setAttribute("method", this.method)
-        e.setAttribute("widget_type", this.widgetType)
-        e.setAttribute("is_any_widget", String(this.isAnyWidget))
-        return e
+      mutationToDom() {
+        var element = document.createElement("mutation")
+        element.setAttribute("method", this.method)
+        element.setAttribute("widget_type", this.widgetType)
+        element.setAttribute("is_any_widget", String(this.isAnyWidget))
+        return element
       }
     }
-    t.extensions.register_mutator("widget_method_mutator", n)
-    t.define_blocks_with_json_array([
+    Blink.extensions.register_mutator("widget_method_mutator", n)
+    Blink.define_blocks_with_json_array([
       {
         type: "widget_method",
         message0: "%{BKY_WIDGET_METHOD_MSG}",
@@ -784,99 +715,100 @@ function _e(e, t) {
         mutator: "widget_method_mutator"
       }
     ])
-  })(0, t)
-  var n = {
-    property: "property",
-    widgetType: "",
-    updateShape_: function () {
-      var e = this
-      var t = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(this.widgetType, this.property)
-      if (t) {
-        var /* [auto-meaningful-name] */t$defaultValue = t.defaultValue
-        var /* [auto-meaningful-name] */t$dropdown = t.dropdown
-        if (t$dropdown) {
-          this.set_shadow(true)
-          var o = new $$_118_index.a({
-            type: "field_coco_dropdown",
-            name: "VALUE",
-            custom: true,
-            options: function () {
-              return he(e.widgetType, t$dropdown)
+  }
+  {
+    const mutator = {
+      property: "property",
+      widgetType: "",
+      updateShape_() {
+        const this0 = this
+        const types = LoadCustomWidget.getPropertyTypes(this.widgetType, this.property)
+        if (types) {
+          const { defaultValue, dropdown } = types
+          if (dropdown) {
+            this.set_shadow(true)
+            const field = new $$_118_index.a({
+              type: "field_coco_dropdown",
+              name: "VALUE",
+              custom: true,
+              options: function () {
+                return he(this0.widgetType, dropdown)
+              }
+            })
+            if (!this.get_field("VALUE")) {
+              this.append_dummy_input("").append_field(field, "VALUE")
+              field.set_value(String(defaultValue))
             }
-          })
-          if (!this.get_field("VALUE")) {
-            this.append_dummy_input("").append_field(o, "VALUE")
-            o.set_value(String(t$defaultValue))
+          } else {
+            console.error("WIDGET_DROPDOWN_MUTATOR dropdown is invalid", dropdown)
           }
         } else {
-          console.error("WIDGET_DROPDOWN_MUTATOR dropdown is invalid", t$dropdown)
+          console.error("WIDGET_DROPDOWN_MUTATOR getWidgetProperty error", this.widgetType, this.property)
         }
-      } else {
-        console.error("WIDGET_DROPDOWN_MUTATOR getWidgetProperty error", this.widgetType, this.property)
+      },
+      domToMutation(element) {
+        this.property = element.getAttribute("property") || this.property
+        this.widgetType = element.getAttribute("widget_type") || this.widgetType
+        this.updateShape_()
+      },
+      mutationToDom() {
+        var element = document.createElement("mutation")
+        element.setAttribute("property", this.property)
+        element.setAttribute("widget_type", this.widgetType)
+        return element
       }
-    },
-    domToMutation: function (e) {
-      this.property = e.getAttribute("property") || this.property
-      this.widgetType = e.getAttribute("widget_type") || this.widgetType
-      this.updateShape_()
-    },
-    mutationToDom: function () {
-      var e = document.createElement("mutation")
-      e.setAttribute("property", this.property)
-      e.setAttribute("widget_type", this.widgetType)
-      return e
     }
+    Blink.extensions.register_mutator("widget_dropdown_mutator", mutator)
+    Blink.define_blocks_with_json_array([
+      {
+        type: "widget_color",
+        message0: "%{BKY_WIDGET_COLOR_MSG}",
+        args0: [
+          {
+            type: "field_colour",
+            name: "COLOR",
+            colour: "#ffffff"
+          }
+        ],
+        colour: "#ffffff",
+        output: ["Color"]
+      }
+    ])
+    Blink.define_blocks_with_json_array([
+      {
+        type: "widget_boolean",
+        message0: "%{BKY_WIDGET_BOOLEAN_MSG}",
+        args0: [
+          {
+            type: "field_coco_dropdown",
+            name: "BOOL",
+            custom: true,
+            options: [["%{BKY_WIDGET_BOOLEAN_TRUE}", "TRUE"], ["%{BKY_WIDGET_BOOLEAN_FALSE}", "FALSE"]]
+          }
+        ],
+        output: "Boolean",
+        colour: "%{BKY_LOGIC_HUE}"
+      }
+    ])
+    Blink.define_blocks_with_json_array([
+      {
+        type: "widget_dropdown",
+        message0: "",
+        args0: [],
+        output: ["String", "Boolean", "Number"],
+        colour: "%{BKY_APPEARANCE_HUE}",
+        mutator: "widget_dropdown_mutator"
+      }
+    ])
+    Blink.define_blocks_with_json_array([
+      {
+        type: "widget_any_id",
+        message0: "",
+        args0: [],
+        output: "String"
+      }
+    ])
   }
-  t.extensions.register_mutator("widget_dropdown_mutator", n)
-  t.define_blocks_with_json_array([
-    {
-      type: "widget_color",
-      message0: "%{BKY_WIDGET_COLOR_MSG}",
-      args0: [
-        {
-          type: "field_colour",
-          name: "COLOR",
-          colour: "#ffffff"
-        }
-      ],
-      colour: "#ffffff",
-      output: ["Color"]
-    }
-  ])
-  t.define_blocks_with_json_array([
-    {
-      type: "widget_boolean",
-      message0: "%{BKY_WIDGET_BOOLEAN_MSG}",
-      args0: [
-        {
-          type: "field_coco_dropdown",
-          name: "BOOL",
-          custom: true,
-          options: [["%{BKY_WIDGET_BOOLEAN_TRUE}", "TRUE"], ["%{BKY_WIDGET_BOOLEAN_FALSE}", "FALSE"]]
-        }
-      ],
-      output: "Boolean",
-      colour: "%{BKY_LOGIC_HUE}"
-    }
-  ])
-  t.define_blocks_with_json_array([
-    {
-      type: "widget_dropdown",
-      message0: "",
-      args0: [],
-      output: ["String", "Boolean", "Number"],
-      colour: "%{BKY_APPEARANCE_HUE}",
-      mutator: "widget_dropdown_mutator"
-    }
-  ])
-  t.define_blocks_with_json_array([
-    {
-      type: "widget_any_id",
-      message0: "",
-      args0: [],
-      output: "String"
-    }
-  ])
 }
 function ve(e) {
   e.insertBlockSnippetGenerator("widget_get", function (t, n) {
@@ -895,7 +827,7 @@ function ve(e) {
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
-    var d = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+    var d = LoadCustomWidget.getPropertyTypes(c, s)
     if (!d) {
       return ""
     }
@@ -904,7 +836,7 @@ function ve(e) {
     var h = undefined === d$blockOptions ? {} : d$blockOptions
     if ("object" === typeof h.getter && (null === (h$getter$keys = h.getter.keys) || undefined === h$getter$keys ? undefined : h$getter$keys.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || ""
-      var g = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+      var g = LoadCustomWidget.getPropertyTypes(c, s)
       if (!g) {
         return ""
       }
@@ -928,7 +860,7 @@ function ve(e) {
       var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY"
       return _.s(y, [u])
     }
-    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(c))
+    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], LoadCustomWidget.q(c))
   })
   e.insertBlockSnippetGenerator("widget_set", function (t, n) {
     var /* [auto-meaningful-name] */h$setter
@@ -946,7 +878,7 @@ function ve(e) {
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
-    var d = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+    var d = LoadCustomWidget.getPropertyTypes(c, s)
     if (!d) {
       return ""
     }
@@ -955,7 +887,7 @@ function ve(e) {
     var h = undefined === d$blockOptions ? {} : d$blockOptions
     if ("object" === typeof h.setter && (null === (h$setter$keys = h.setter.keys) || undefined === h$setter$keys ? undefined : h$setter$keys.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || ""
-      var g = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+      var g = LoadCustomWidget.getPropertyTypes(c, s)
       if (!g) {
         return ""
       }
@@ -985,7 +917,7 @@ function ve(e) {
       var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY"
       return _.l(_.n(w, [u, v]), o, e)
     }
-    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(c)), o, e)
+    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e)
   })
   e.insertBlockSnippetGenerator("widget_event", function (t, n) {
     var r = t.blocks[n]
@@ -999,7 +931,7 @@ function ve(e) {
     if (!s || !l) {
       return ""
     }
-    var d = $$_$$_$$_$$_$$_src_shared_widget_custom_load.h(l, s)
+    var d = LoadCustomWidget.getEventTypes(l, s)
     if (!d) {
       return ""
     }
@@ -1015,10 +947,10 @@ function ve(e) {
       h.push("".concat(_.a).concat(e.key))
     })
     if (u) {
-      h.push("".concat(_.a).concat($$_$$_$$_$$_$$_src_shared_widget_custom_load.a))
+      h.push("".concat(_.a).concat(LoadCustomWidget.ANY_WIDGET_KEY))
     }
     var g = e.statementToCode(t, n, "DO")
-    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(l)) : ""
+    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, LoadCustomWidget.q(l)) : ""
   })
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
     var /* [auto-meaningful-name] */e$blocksT$mutation = e.blocks[t].mutation
@@ -1035,7 +967,7 @@ function ve(e) {
     if (!a || !s) {
       return ""
     }
-    var l = $$_$$_$$_$$_$$_src_shared_widget_custom_load.j(s, a)
+    var l = LoadCustomWidget.getMethodTypes(s, a)
     if (!l) {
       return ""
     }
@@ -1075,7 +1007,7 @@ function ve(e) {
       var v = "disabled" === e.getFieldValue(r, "DISABLED")
       return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e)
     }
-    return l$valueType ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(s)), r, e)
+    return l$valueType ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e)
   })
   e.insertBlockSnippetGenerator("widget_color", function (t, n) {
     var r = t.blocks[n]
@@ -1117,7 +1049,8 @@ function ve(e) {
     return _.o("")
   })
 }
-var be = {
+
+const MESSAGES = {
   "zh-CN": {
     PRESS: "点击",
     PRESS_IN: "按下",
@@ -1828,6 +1761,7 @@ var be = {
     CLOUD_TABLE_CLEAR_ALL_TOOLTIP: "清空云数据表所有数据，不可撤销。"
   }
 }
-export { _e }
+
+export { setBlockGroupProfile as _e }
 export { ve }
-export { be }
+export { MESSAGES as be }

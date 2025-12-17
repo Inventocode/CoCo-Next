@@ -26,33 +26,10 @@ export type Platforms = ("web" | "android" | "ios")[]
 export interface PropertyTypes {
   key: string
   label: string
+  tooltip?: string
   hidePropertyEditor?: boolean
   blockOptions?: PropertyBlockOptionsTypes
-  validators?: {
-    lessThan?: number | {
-      value?: number
-      message?: string
-    }
-    greaterThan?: number | {
-      value?: number
-      message?: string
-    }
-    lessThanOrEqualTo?: number | {
-      value?: number
-      message?: string
-    }
-    greaterThanOrEqualTo?: number | {
-      value?: number
-      message?: string
-    }
-    isInteger?: boolean
-    notEmpty?: {
-      value?: number
-      message?: string
-      maxLength?: number
-      minLength?: number
-    }
-  }
+  validators?: Validators
   readonly?: 0 | 1
   unit?: string
   valueType: ValueType
@@ -60,6 +37,32 @@ export interface PropertyTypes {
   editorType?: EditorType
   dropdown?: DropdownItemTypes[]
   defaultValue: number | string | boolean
+}
+
+export interface Validators {
+  lessThan?: number | {
+    value?: number
+    message?: string
+  }
+  greaterThan?: number | {
+    value?: number
+    message?: string
+  }
+  lessThanOrEqualTo?: number | {
+    value?: number
+    message?: string
+  }
+  greaterThanOrEqualTo?: number | {
+    value?: number
+    message?: string
+  }
+  isInteger?: boolean
+  notEmpty?: {
+    value?: number
+    message?: string
+    maxLength?: number
+    minLength?: number
+  }
 }
 
 export interface PropertyBlockOptionsTypes {
@@ -137,6 +140,7 @@ export interface EventParamTypes {
   key: string
   label: string
   valueType: ValueType
+  dropdown?: DropdownItemTypes[]
 }
 
 export interface EventBlockOptionsTypes {
