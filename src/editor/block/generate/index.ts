@@ -10,7 +10,7 @@ import { v, b, y } from "../../../../unrestored/shared/1571/2636/301/index__part
 import { w, C, T, S, A, I, j, N, R, k } from "./toolbox/index-1"
 import { Y, K, q, X, Q, Z, J, $, ee, te, ne } from "./toolbox/index-2"
 import { oe, ie, ae, se, ce } from "./toolbox/index-3"
-import { _e, ve } from "../../../../unrestored/shared/1571/2636/301/index__part-6"
+import { _e, ve } from "./widget"
 var r = {}
 Object.defineProperty(r, "setBlockGroupProfile", {
   get: function () {
