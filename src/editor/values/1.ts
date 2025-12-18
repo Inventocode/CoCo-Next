@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as g from "./60"
+import * as g from "../../../unrestored/shared/1571/2636/60"
 var _ = 20
 var v = 40
-var /* [auto-meaningful-name] */_1$21$7 = "1.21.7"
+export const RELEASE_VERSION = "1.21.7"
 var y = []
 var E = 320
 var O = .8
@@ -17,7 +17,7 @@ var /* [auto-meaningful-name] */Http__www$w3$org_2000_svg = "http://www.w3.org/2
 var C = 3
 export { _ }
 export { v }
-export { _1$21$7 as b }
+export { RELEASE_VERSION as b }
 export { y }
 export { E }
 export { O }

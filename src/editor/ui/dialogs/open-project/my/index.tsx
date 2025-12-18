@@ -4,12 +4,11 @@
  * 模块 ID：2636__part-7
  */
 
-"use strict"
+import * as React from "react"
 
 import { ne } from "../../../../../../unrestored/shared/1571/2636/index__part-4"
 import { de } from "../../../../../../unrestored/shared/1571/2636/index__part-5"
 import { we } from "../../../../../../unrestored/shared/1571/2636/index__part-6"
-var Oe
 import * as /* [auto-meaningful-name] */$_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */$_190 from "../../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */$_297 from "../../../../../../unrestored/shared/1571/2636/297"
@@ -26,18 +25,18 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from 
 import * as O from "../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "../../../../../../unrestored/shared/1571/2636/16/index"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
 import * as /* [auto-meaningful-name] */$_288 from "../../../../../../unrestored/shared/1571/2636/288"
 import * as /* [auto-meaningful-name] */$_418 from "../../../../../../unrestored/shared/1571/2636/418"
 import /* [auto-meaningful-name] */_$_ from "../../../../../../unrestored/shared/1571/2636/418"
-!function (e) {
-  e.SELF = "self"
-  e.COLL = "coll"
-  e.PUBLISHED = "published"
-  e.UNPUBLISHED = "unpublished"
-}(Oe || (Oe = {}))
-var Ae = [Oe.SELF, Oe.COLL, Oe.PUBLISHED, Oe.UNPUBLISHED]
+
+enum Type {
+  SELF = "self",
+  COLL = "coll",
+  PUBLISHED = "published",
+  UNPUBLISHED = "unpublished"
+}
+
+var Ae = [Type.SELF, Type.COLL, Type.PUBLISHED, Type.UNPUBLISHED]
 var Ie = {
   self: "MyProject.noCreateProjectTips",
   coll: "MyProject.noCollProjectTips",
@@ -53,20 +52,23 @@ function je(e) {
     text: e$title
   })) : React.createElement(React.Fragment, null)
 }
-function Ne(e) {
+function ProjectItem({
+  project, onClick, onDelete, filterType, status
+}: {
+  project: (/** TODO */any)
+  onClick(id: string, name: string, updateTime: string): void
+  onDelete(id: string, name: string, isCollWork: boolean): void
+  filterType: Type
+  status: "loading" | "loaded" | "emptyList"
+}) {
+  const { formatMessage } = $_710_index.a()
   var t
-  var /* [auto-meaningful-name] */e$project = e.project
-  var /* [auto-meaningful-name] */e$onClick = e.onClick
-  var /* [auto-meaningful-name] */e$onDelete = e.onDelete
-  var /* [auto-meaningful-name] */e$filterType = e.filterType
-  var /* [auto-meaningful-name] */e$status = e.status
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   function c() {
     var e = []
-    if (e$filterType === Oe.COLL) {
+    if (filterType === Type.COLL) {
       e.push("deleteCollProject")
     } else {
-      if (!e$project.publishedTime) {
+      if (!project.publishedTime) {
         e.push("deleteProject")
       }
     }
@@ -74,23 +76,23 @@ function Ne(e) {
   }
   return React.createElement("div", {
     className: N(_$_.item),
-    onClick: function () {
-      e$onClick(e$project.id, e$project.name, e$project.updateTime)
+    onClick() {
+      onClick(project.id, project.name, project.updateTime)
     },
-    key: e$project.id
+    key: project.id
   }, React.createElement("div", {
     className: _$_.cover
   }, React.createElement("img", {
-    src: null === (t = e$project.coverUrl || e$project.previewUrl) || undefined === t ? undefined : t.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/"),
-    alt: e$project.name
+    src: null === (t = project.coverUrl || project.previewUrl) || undefined === t ? undefined : t.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/"),
+    alt: project.name
   })), React.createElement($_13_index.a, {
     className: _$_.name,
-    text: e$project.name
+    text: project.name
   }), React.createElement("p", {
     className: _$_.time
   }, React.createElement(ne, {
-    time: e$project.updateTime,
-    currentTime: e$project.serverTime
+    time: project.updateTime,
+    currentTime: project.serverTime
   })), !!c().length && React.createElement("div", {
     className: _$_.menuContainer,
     onClick: function (e) {
@@ -106,14 +108,14 @@ function Ne(e) {
     }, React.createElement($_13_index.l, {
       onClick: function (e) {
         if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
-          e$onDelete(e$project.id, e$project.name, e$project.isCollWork || e$filterType === Oe.COLL)
+          onDelete(project.id, project.name, project.isCollWork || filterType === Type.COLL)
         }
       }
     }, c().map(function (e, t) {
       return React.createElement($_13_index.m, {
         value: e,
         key: t
-      }, React.createElement("span", null, $_710_index$a$formatMessage({
+      }, React.createElement("span", null, formatMessage({
         id: "MyProject." + e
       })))
     })))
@@ -121,126 +123,93 @@ function Ne(e) {
     type: "icon-more"
   })))), React.createElement("div", {
     className: _$_.badgeWrapper
-  }, (e$project.isCollWork || e$filterType === Oe.COLL) && "loaded" === e$status && React.createElement($_13_index.j, {
+  }, (project.isCollWork || filterType === Type.COLL) && "loaded" === status && React.createElement($_13_index.j, {
     type: "icon-collaborator"
-  }), !!e$project.publishedTime && React.createElement($_13_index.j, {
+  }), !!project.publishedTime && React.createElement($_13_index.j, {
     type: "icon-publish"
   })))
 }
-var Re = _React.memo(function (e) {
-  var /* [auto-meaningful-name] */e$visible = e.visible
-  var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
-  var r = _React.useState([])
+
+const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
+  var r = React.useState([])
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = _React.useState("loaded")
-  var c = $_10_index.a(s, 2)
-  var l = c[0]
-  var u = c[1]
-  var d = $_16_index.e(function (e) {
+  const [status, setStatus] = React.useState<"loading" | "loaded" | "emptyList">("loaded")
+  const language = $_16_index.e(function (e) {
     return e.common.language
   })
-  var p = $_16_index.e(function (e) {
+  const userInfo = $_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var m = $_16_index.e(function (e) {
+  const id = $_16_index.e(function (e) {
     return e.project.id
   })
-  var g = _React.useState(Oe.SELF)
-  var v = $_10_index.a(g, 2)
-  var b = v[0]
-  var y = v[1]
+  const [type, setType] = React.useState(Type.SELF)
   const dispatch = $_16_index.d()
-  var C = _React.useRef(0)
-  var A = _React.useRef(1)
-  var j = _React.useRef(false)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var k = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t, r, o) {
-      var /* [auto-meaningful-name] */e$sent
-      var /* [auto-meaningful-name] */e$sent$data
-      return RegeneratorRuntime.wrap(function (e) {
-        for (;;) {
-          switch (e.prev = e.next) {
-            case 0:
-              e.prev = 0
-              e.next = 3
-              return $_297.d(t)
-            case 3:
-              if (e$sent = e.sent, !(e$sent$data = e$sent.data)) {
-                e.next = 16
-                break
-              }
-              e.next = 8
-              return $_288.b()
-            case 8:
-              if (!(!e.sent.includes(Number(t)) && !e$sent$data.is_author && e$sent$data.is_coll_work && e$sent$data.content && e$sent$data.content.unsafeExtensionWidgetList && e$sent$data.content.unsafeExtensionWidgetList.length > 0)) {
-                e.next = 12
-                break
-              }
-              dispatch(Message.wrapOpenConfirmDialog({
-                allowText: $_710_index$a$formatMessage({
-                  id: "know"
-                }),
-                title: "",
-                content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: te.b,
-                  target: "__blank",
-                  rel: "noopener noreferrer"
-                }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
-                cancelBtnVisible: false
-              }))
-              return e.abrupt("return")
-            case 12:
-              e$importProjectJson({
-                json: e$sent$data.content,
-                projectId: t,
-                lastSavedTime: 1e3 * e$sent$data.updated_at,
-                isCollWork: e$sent$data.is_coll_work,
-                isAuthor: e$sent$data.is_author,
-                editPermission: e$sent$data.edit_permission,
-                jsonFrom: e$sent$data.is_coll_work ? K.d.OTHER : K.d.MY_WORK
-              })
-              $_141_index.a("OpenWork", {
-                workId: t,
-                workType: b === Oe.COLL ? 2 : 1,
-                isSuccess: true,
-                failReason: ""
-              })
-              e.next = 17
-              break
-            case 16:
-              dispatch(Message.wrapAsyncGetProjectError({
-                code: e$sent.code
-              }))
-            case 17:
-              e.next = 23
-              break
-            case 19:
-              e.prev = 19
-              e.t0 = e.catch(0)
-              console.error("getProjectJson error", e.t0)
-              $_141_index.a("OpenWork", {
-                workId: t,
-                workType: b === Oe.COLL ? 2 : 1,
-                isSuccess: false,
-                failReason: e.t0.message
-              })
-            case 23:
-              dispatch(Message.Xg())
-            case 24:
-            case "end":
-              return e.stop()
-          }
+  var C = React.useRef(0)
+  var A = React.useRef(1)
+  var j = React.useRef(false)
+  const { formatMessage } = $_710_index.a()
+  async function onClick(id, r, o) {
+    try {
+      const response = await $_297.d(id)
+      const { data } = response
+      if (data) {
+        if (
+          !(await $_288.b()).includes(Number(id)) &&
+          !data.is_author &&
+          data.is_coll_work &&
+          data.content &&
+          data.content.unsafeExtensionWidgetList &&
+          data.content.unsafeExtensionWidgetList.length > 0
+        ) {
+          dispatch(Message.wrapOpenConfirmDialog({
+            allowText: formatMessage({
+              id: "know"
+            }),
+            title: "",
+            content: (
+              <div>
+                作品使用了未审核的自定义控件，需将控件提交至<a href={te.b} target="__blank" rel="noopener noreferrer">Coco控件商城-投稿</a>并等待审核通过后才能进行协作。
+              </div>
+            ),
+            cancelBtnVisible: false
+          }))
+          return
         }
-      }, e, null, [[0, 19]])
-    }))
-    return function (t, n, r) {
-      return e.apply(this, arguments)
+        importProjectJson({
+          json: data.content,
+          projectId: id,
+          lastSavedTime: 1e3 * data.updated_at,
+          isCollWork: data.is_coll_work,
+          isAuthor: data.is_author,
+          editPermission: data.edit_permission,
+          jsonFrom: data.is_coll_work ? K.d.OTHER : K.d.MY_WORK
+        })
+        $_141_index.a("OpenWork", {
+          workId: id,
+          workType: type === Type.COLL ? 2 : 1,
+          isSuccess: true,
+          failReason: ""
+        })
+      } else {
+        dispatch(Message.wrapAsyncGetProjectError({
+          code: response.code
+        }))
+      }
+    } catch (error) {
+      console.error("getProjectJson error", error)
+      $_141_index.a("OpenWork", {
+        workId: id,
+        workType: type === Type.COLL ? 2 : 1,
+        isSuccess: false,
+        failReason: error.message
+      })
     }
-  }()
-  var D = _React.useCallback(function () {
+    dispatch(Message.wrapCloseProjectDialog())
+  }
+  var D = React.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -252,7 +221,7 @@ var Re = _React.memo(function (e) {
               }
               return e.abrupt("return")
             case 2:
-              if (j.current = true, u("loading"), b !== Oe.COLL) {
+              if (j.current = true, setStatus("loading"), type !== Type.COLL) {
                 e.next = 10
                 break
               }
@@ -263,7 +232,7 @@ var Re = _React.memo(function (e) {
               e.next = 26
               break
             case 10:
-              if (b !== Oe.SELF) {
+              if (type !== Type.SELF) {
                 e.next = 16
                 break
               }
@@ -274,7 +243,7 @@ var Re = _React.memo(function (e) {
               e.next = 26
               break
             case 16:
-              if (b !== Oe.PUBLISHED) {
+              if (type !== Type.PUBLISHED) {
                 e.next = 22
                 break
               }
@@ -285,7 +254,7 @@ var Re = _React.memo(function (e) {
               e.next = 26
               break
             case 22:
-              if (b !== Oe.UNPUBLISHED) {
+              if (type !== Type.UNPUBLISHED) {
                 e.next = 26
                 break
               }
@@ -306,7 +275,7 @@ var Re = _React.memo(function (e) {
     return function (t) {
       return e.apply(this, arguments)
     }
-  }(), [b])
+  }(), [type])
   function M(e, t) {
     return L.apply(this, arguments)
   }
@@ -369,22 +338,22 @@ var Re = _React.memo(function (e) {
       }, e)
     }))).apply(this, arguments)
   }
-  _React.useEffect(function () {
-    if (e$visible) {
+  React.useEffect(function () {
+    if (visible) {
       C.current = 0
       j.current = false
       D([])
     }
-  }, [D, e$visible])
-  if (!e$visible) {
+  }, [D, visible])
+  if (!visible) {
     return null
   }
   function F(e) {
     a(e)
     if (0 === e.length) {
-      u("emptyList")
+      setStatus("emptyList")
     } else {
-      u("loaded")
+      setStatus("loaded")
     }
   }
   var G = function () {
@@ -395,12 +364,12 @@ var Re = _React.memo(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              if (!p || b !== Oe.COLL) {
+              if (!userInfo || type !== Type.COLL) {
                 e.next = 6
                 break
               }
               e.next = 3
-              return de(t, p.id)
+              return de(t, userInfo.id)
             case 3:
               n = e.sent
               e.next = 10
@@ -411,7 +380,7 @@ var Re = _React.memo(function (e) {
             case 8:
               if (n = e.sent) {
                 dispatch(Message.wrapShowCommonToastInfo({
-                  message: $$_$$_$$_$$_src_shared_ui_language.c(d, "MyProject.deleteProjectSuccess").toString()
+                  message: $$_$$_$$_$$_src_shared_ui_language.c(language, "MyProject.deleteProjectSuccess").toString()
                 }))
               }
             case 10:
@@ -421,13 +390,13 @@ var Re = _React.memo(function (e) {
                 })) > -1) {
                   i.splice(r, 1)
                   F($_25_index.a(i))
-                  if (m === t) {
+                  if (id === t) {
                     dispatch(Message.warpAsyncCreateProject())
                   }
                 }
               } else {
                 dispatch(Message.wrapShowCommonToastInfo({
-                  message: $$_$$_$$_$$_src_shared_ui_language.c(d, "MyProject.deleteProjectError").toString(),
+                  message: $$_$$_$$_$$_src_shared_ui_language.c(language, "MyProject.deleteProjectError").toString(),
                   duration: 1e3,
                   type: "error"
                 }))
@@ -443,19 +412,19 @@ var Re = _React.memo(function (e) {
       return e.apply(this, arguments)
     }
   }()
-  function W(e, t, n) {
-    if (b === Oe.COLL) {
+  function onDelete(e, t, n) {
+    if (type === Type.COLL) {
       dispatch(Message.wrapOpenConfirmDialog({
         onConfirm: G.bind(null, e),
-        allowText: $_710_index$a$formatMessage({
+        allowText: formatMessage({
           id: "MyProject.quitCollWorkConfirmText"
         }),
-        title: $_710_index$a$formatMessage({
+        title: formatMessage({
           id: "MyProject.quitCollWorkTitle"
         }, {
           name: $_190.f(t)
         }),
-        content: $_710_index$a$formatMessage({
+        content: formatMessage({
           id: "MyProject.quitCollWorkDescription"
         }),
         isDangerous: true
@@ -465,12 +434,12 @@ var Re = _React.memo(function (e) {
     }
   }
   var U = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = O.a(RegeneratorRuntime.mark(function e(type) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              y(t)
+              setType(type)
             case 1:
             case "end":
               return e.stop()
@@ -488,17 +457,17 @@ var Re = _React.memo(function (e) {
     return React.createElement("div", {
       key: e,
       onClick: U.bind(null, e),
-      className: N(_$_.filterItem, b === e && _$_.active)
-    }, $_710_index$a$formatMessage({
+      className: N(_$_.filterItem, type === e && _$_.active)
+    }, formatMessage({
       id: "MyProject.".concat(e)
     }))
   })), React.createElement("div", {
     className: _$_.container
   }, React.createElement(je, {
-    title: $_710_index$a$formatMessage({
-      id: Ie[b]
+    title: formatMessage({
+      id: Ie[type]
     }),
-    type: l
+    type: status
   }), i.length > 0 && React.createElement("div", {
     className: _$_.main
   }, React.createElement($_13_index.v, {
@@ -508,14 +477,15 @@ var Re = _React.memo(function (e) {
       D(i)
     }
   }, i.map(function (e) {
-    return React.createElement(Ne, {
-      status: l,
+    return React.createElement(ProjectItem, {
+      status,
       key: e.id,
       project: e,
-      onClick: k,
-      onDelete: W,
-      filterType: b
+      onClick,
+      onDelete,
+      filterType: type
     })
   })))))
 })
-export { Re }
+
+export { OpenMyProject as Re }

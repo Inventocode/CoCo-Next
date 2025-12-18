@@ -65,8 +65,10 @@ const config = {
                     options: {
                         modules: {
                             auto: true,
-                            localIdentName: "[local]__[hash:hex:5]"
-                        }
+                            localIdentName: "[local]__[hash:hex:5]",
+                            exportLocalsConvention: "asIs"
+                        },
+                        esModule: false
                     }
                 }
             }, {

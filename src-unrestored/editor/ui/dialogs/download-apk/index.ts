@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as te from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_1062 from "./1062"
-import /* [auto-meaningful-name] */_$_ from "./1062"
+import * as /* [auto-meaningful-name] */$_1062 from "../../../../../unrestored/shared/1571/2636/1062"
+import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1062"
 var ML = _React.memo(function () {
   var e = $_16_index.d()
   var t = $_16_index.e(function (e) {

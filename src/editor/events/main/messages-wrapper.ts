@@ -30,7 +30,7 @@ export { N as uj }
 export { HIDE_IMPORT_FAIL_TOAST as xc }
 export { k as rh }
 export { CLOSE_PROJECT_DIALOG as Zb }
-export { D as Xg }
+export { wrapCloseProjectDialog as Xg }
 export { OPEN_PROJECT_DIALOG as Gc }
 export { L as Ah }
 export { SET_PROJECT_MODIFIED as Rd }
@@ -655,7 +655,7 @@ function k() {
 }
 
 export const CLOSE_PROJECT_DIALOG = "CLOSE_PROJECT_DIALOG"
-function D() {
+export function wrapCloseProjectDialog() {
   return {
     type: CLOSE_PROJECT_DIALOG,
     payload: undefined

@@ -6,18 +6,18 @@
 
 "use strict"
 
-import { LL, PL } from "./index__part-205"
-import * as Yr from "./53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { LL, PL } from "../download-apk"
+import * as Yr from "../../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_1532 from "./1532"
-import /* [auto-meaningful-name] */_$_ from "./1532"
-import * as /* [auto-meaningful-name] */$_626 from "./626"
-import /* [auto-meaningful-name] */_$_2 from "./626"
+import * as /* [auto-meaningful-name] */$_1532 from "../../../../../unrestored/shared/1571/2636/1532"
+import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1532"
+import * as /* [auto-meaningful-name] */$_626 from "../../../../../src/editor/ui/dialogs/release-info/626"
+import /* [auto-meaningful-name] */_$_2 from "../../../../../src/editor/ui/dialogs/release-info/626"
 var UL = _React.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.releaseInfoDialogVisible

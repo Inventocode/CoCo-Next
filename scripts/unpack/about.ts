@@ -22,7 +22,7 @@ unpack({
     publicPath: "https://creation.codemao.cn/appcraft-about/web/0.1.0/",
     setPath: SetPath.BY_DEPENDENCY,
     moveToSrc: {
-        4: "/about/styles.module",
+        4: "/about/styles.module.css",
         "64__part-2": "/about/language",
         "64__part-3": "/about/app"
     },
