@@ -6,10 +6,12 @@
 
 "use strict"
 
+import packageInfo from "../../../package.json"
+
 import * as g from "../../../unrestored/shared/1571/2636/60"
 var _ = 20
 var v = 40
-export const RELEASE_VERSION = "1.21.7"
+export const RELEASE_VERSION = packageInfo.version
 var y = []
 var E = 320
 var O = .8

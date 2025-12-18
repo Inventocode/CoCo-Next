@@ -49,7 +49,7 @@
 .logoBox .logo {
     width: 25px;
     height: 26px;
-    background-image: url(../../assets/images/header/logo.png);
+    background-image: url(../../assets/images/header/logo.svg);
     background-size: contain
 }
 

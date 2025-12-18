@@ -79,6 +79,9 @@ const config = {
                         maxSize: 1024
                     }
                 }
+            }, {
+                test: /\.(txt|md)$/i,
+                type: "asset/source"
             }
         ]
     },

@@ -32,3 +32,17 @@ declare module "*.webp" {
   const src: string
   export default src
 }
+
+declare module "*.text" {
+  const content: string
+  export default content
+}
+
+declare module "*.md" {
+  const content: string
+  export default content
+}
+
+declare module "@dragdroptouch/drag-drop-touch" {
+  export function enableDragDropTouch(): void
+}

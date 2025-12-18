@@ -6,6 +6,7 @@
 
 import * as React from "react"
 
+import changelog from "../../../../../changelog.md"
 import * as te from "../../../../../unrestored/shared/1571/2636/15"
 import * as Yr from "../../../../../unrestored/shared/1571/2636/53"
 import * as Message from "../../../events/main/messages-wrapper"
@@ -17,15 +18,23 @@ import styles from "./styles.module.css"
 
 import LeftSideImage from "../../../assets/images/release-info/left-side.png"
 
-const RELEASE_MESSAGES = [
-  "为了确保编程猫社区成员账户安全，我们将限制导入“自定义控件”的作品进行分享及协作。",
-  "为此，我们建议各作者请先将控件提交审核，再由控件商城添加及使用 ❤️ 。",
-  "这一措施旨在维护我们社区的健康与安全，感谢您的理解与支持 ❤️ ～"
-]
+const RELEASE_MESSAGES: string[] = []
+let isBefore = true
+for (const line of changelog.split("\n")) {
+  if (!isBefore) {
+    if (line.startsWith("##")) {
+      break
+    }
+    RELEASE_MESSAGES.push(line)
+  }
+  if (line == `## v${Yr.f}`) {
+    isBefore = false
+  }
+}
 const RELEASE_LINKS = [
   {
-    label: "Coco控件商城-投稿",
-    url: te.b
+    label: "CoCo Next Gitee 仓库",
+    url: "https://gitee.com/oldsquaw/CoCo-Next"
   }
 ]
 
@@ -80,7 +89,7 @@ const ReleaseInfo = React.memo(() => {
             </div>
           </div>
           <div className={styles.overViewInfo}>
-            <a href="https://codemao-guide.yuque.com/bfiekm/sbo5kh/update" target="_blank" rel="noopener noreferrer">
+            <a href="https://gitee.com/oldsquaw/CoCo-Next/blob/main/changelog.md" target="_blank" rel="noopener noreferrer">
               往期功能更新回顾
               <$_13_index.j className={styles.iconLink} type="icon-dropdown-down" />
             </a>

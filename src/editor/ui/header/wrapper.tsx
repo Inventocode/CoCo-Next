@@ -6,6 +6,7 @@
 
 import * as React from "react"
 
+import packageInfo from "../../../../package.json"
 import { B, G, H } from "../../../../unrestored/shared/1571/2636/index__part-2"
 import { Q } from "../../../../unrestored/shared/1571/2636/index__part-3"
 import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
@@ -858,9 +859,9 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   {oe.tutorial.feedback === K.j.Show && (
                     <$_13_index.m value="feedback">
                       <div className={styles.itemLinkContent}>
-                        {/* [CoCo Next] 修改问题反馈链接 */}
+                        {/* [CoCo Next] 替换问题反馈链接 */}
                         <a
-                          href="https://gitee.com/oldsquaw/CoCo-Next/issues/new"
+                          href={packageInfo.bugs.url}
                           target="_blank"
                           rel="noopener noreferrer"
                           className={styles.link}
