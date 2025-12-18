@@ -43,6 +43,20 @@ const config = merge(common, {
             minChunks: 1,
             maxAsyncRequests: 4,
             maxInitialRequests: 8,
+            cacheGroups: {
+                vendorStyles: {
+                    test: /node_modules.*\.css$/,
+                    priority: 30
+                },
+                globalStyles: {
+                    test: /(?<!\.module)\.css$/,
+                    priority: 20
+                },
+                moduleStyles: {
+                    test: /\.module\.css$/,
+                    priority: 10
+                }
+            }
         }
     },
     plugins: [

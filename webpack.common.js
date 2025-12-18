@@ -44,32 +44,28 @@ const config = {
             {
                 test: /\.(t|j)sx?$/i,
                 exclude: /node_modules|helper|home/,
-                use: {
-                    loader: "string-replace-loader",
-                    options: {
-                        multiple: [
-                            {
-                                search: /https:\/\/("[\s]*\+[\s]*(_|[0-9]|[a-z]|[A-Z])+[\s]*\+[\s]*")?coco\.codemao\.cn/g,
-                                replace: "\" + location.origin + \""
-                            }, {
-                                search: /https:\/\/"[\s]*\.concat\((_|[0-9]|[a-z]|[A-Z])+[\s]*,[\s]*"coco\.codemao\.cn"\)/g,
-                                replace: "\" + location.origin"
-                            }
-                        ]
-                    }
+                loader: "string-replace-loader",
+                options: {
+                    multiple: [
+                        {
+                            search: /https:\/\/("[\s]*\+[\s]*(_|[0-9]|[a-z]|[A-Z])+[\s]*\+[\s]*")?coco\.codemao\.cn/g,
+                            replace: "\" + location.origin + \""
+                        }, {
+                            search: /https:\/\/"[\s]*\.concat\((_|[0-9]|[a-z]|[A-Z])+[\s]*,[\s]*"coco\.codemao\.cn"\)/g,
+                            replace: "\" + location.origin"
+                        }
+                    ]
                 }
             }, {
                 test: /\.css$/i,
-                use: {
-                    loader: "css-loader",
-                    options: {
-                        modules: {
-                            auto: true,
-                            localIdentName: "[local]__[hash:hex:5]",
-                            exportLocalsConvention: "asIs"
-                        },
-                        esModule: false
-                    }
+                loader: "css-loader",
+                options: {
+                    modules: {
+                        auto: true,
+                        localIdentName: "[local]__[hash:hex:5]",
+                        exportLocalsConvention: "asIs"
+                    },
+                    esModule: false
                 }
             }, {
                 test: /\.(png|svg|jpg|jpeg|gif)$/i,
