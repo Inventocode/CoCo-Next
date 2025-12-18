@@ -19,7 +19,6 @@ import { on as ShareMenuItem } from "../../../../unrestored/shared/1571/2636/ind
 import { dn as SaveFailedDialog1, pn as SaveFailedDialog2, fn as SaveFailedDialog3 } from "../../../../unrestored/shared/1571/2636/index__part-20"
 import { gn as SaveProgress } from "../../../../unrestored/shared/1571/2636/index__part-21"
 import * as Et from "../../../../unrestored/shared/1571/2636/9"
-import styles from "../../../../unrestored/shared/1571/2636/161"
 import * as /* [auto-meaningful-name] */$_276 from "../../../../unrestored/shared/1571/2636/276"
 import * as LoadCustomWidget from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$_141_index from "../../../../unrestored/shared/1571/2636/141/index"
@@ -39,6 +38,8 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "../../../../unrestored/shared/1571/2636/16/index"
 import * as _n from "../../../../unrestored/shared/1571/2636/47"
 import * as /* [auto-meaningful-name] */$_1053 from "../../../../unrestored/shared/1571/2636/1053"
+
+import styles from "./styles.module.css"
 import cloudSpaceManagerStyles from "../../../../unrestored/shared/1571/2636/1053"
 
 function CloudSpaceManager() {

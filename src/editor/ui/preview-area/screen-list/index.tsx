@@ -8,7 +8,7 @@ import * as React from "react"
 
 import { Pn } from "../../../../../unrestored/shared/1571/2636/index__part-24"
 import { Xn, Zn, Jn, er, tr, nr, rr, or, ar, sr, cr, lr, ur, dr, pr, hr, mr, gr, wr, Nr, Rr, kr, xr, Dr, Mr, Lr, Pr, Br, Fr, Gr, Wr } from "../../../../../unrestored/shared/1571/2636/index__part-25"
-import { Cv } from "../../../../../unrestored/shared/1571/2636/index__part-87"
+import { Cv } from "../widget-list"
 import /* [auto-meaningful-name] */$_702 from "../../../../../unrestored/shared/1571/2636/702"
 import * as /* [auto-meaningful-name] */$_142 from "../../../../../unrestored/shared/1571/2636/142"
 import * as /* [auto-meaningful-name] */$_120 from "../../../../../unrestored/shared/1571/2636/120"
@@ -1319,7 +1319,7 @@ var eo = function (e) {
   }))
 })
 
-const ScreenList = React.memo(() => {
+export const ScreenList = React.memo(() => {
   var /* [auto-meaningful-name] */n$current
   const formatMessage = $_710_index.a().formatMessage
   var n = React.useRef(null)
@@ -1629,4 +1629,3 @@ const ScreenList = React.memo(() => {
 })
 
 export { Xr }
-export { ScreenList as to }

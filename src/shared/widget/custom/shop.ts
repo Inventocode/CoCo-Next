@@ -142,7 +142,6 @@ export async function remove(widgetsID: number[]): Promise<boolean> {
   }
   return data.success
 }
-export { remove as g }
 
 export function reportUse(type: string, userID?: number | undefined): void {
   var widget: Internal.Widget | null = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(type)
