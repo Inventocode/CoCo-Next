@@ -274,7 +274,7 @@ export const WidgetCategoryItem = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$configList = e.configList
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$defaultExpanded = e.defaultExpanded
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  const { formatMessage } = $_710_index.a()
   var i = $_16_index.e(function (e) {
     var /* [auto-meaningful-name] */e$common$userInfo
     return null === (e$common$userInfo = e.common.userInfo) || undefined === e$common$userInfo ? undefined : e$common$userInfo.id
@@ -305,7 +305,7 @@ export const WidgetCategoryItem = React.memo(function (e) {
       >
         <div className={$_196.categoryTitleBox}>
           <h3 className={N($_196.categoryTitle)}>
-            {$_710_index$a$formatMessage({ id: e$title })}
+            {formatMessage({ id: e$title })}
           </h3>
           {Yr.k.includes(e$title) && p && <div className={$_196.newTips}>New</div>}
         </div>
@@ -329,7 +329,7 @@ export const WidgetCategoryItem = React.memo(function (e) {
                   icon={e$icon}
                   title={
                     e$previewAreaWidgetTitle
-                      ? $_710_index$a$formatMessage({ id: e$previewAreaWidgetTitle })
+                      ? formatMessage({ id: e$previewAreaWidgetTitle })
                       : _e$title
                   }
                   type={e$type}

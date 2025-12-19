@@ -1,3 +1,9 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：41
+ */
+
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios"
 
 import * as Language from "../../ui/language"

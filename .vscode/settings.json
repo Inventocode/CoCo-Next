@@ -23,6 +23,7 @@
         "nexe",
         "oldsquaw",
         "qrcode",
+        "rspack",
         "setorder",
         "shequ",
         "slightning",
@@ -36,7 +37,7 @@
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-        "webpack.common.*": "webpack.*",
+        "rspack.common.*": "rspack.*",
         "tsconfig.json": "tsconfig.*.json",
         "package.json": "package-lock.json"
     },

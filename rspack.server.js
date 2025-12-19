@@ -1,8 +1,7 @@
 const path = require("path")
-const webpack = require("webpack")
-const webpackDevServer = require("webpack-dev-server")
+const rspack = require("@rspack/core")
 
-/** @type {webpack.Configuration} */
+/** @type {rspack.Configuration} */
 const config = {
     mode: "none",
     entry: {},
@@ -32,7 +31,7 @@ const config = {
                 "https://socketcv.codemao.cn:9096",
                 "wss://socketcoll.codemao.cn:8098",
                 "wss://socketcv.codemao.cn:9096"
-            ].map(target => /** @type {webpackDevServer.ProxyConfigArrayItem} */({
+            ].map(target => /** @type {NonNullable<rspack.DevServer["proxy"]>[number]} */({
                 context: "/proxy/" + target,
                 target,
                 ws: target.startsWith("wss:"),
@@ -54,13 +53,13 @@ const config = {
                 }
             })), {
                 router(req) {
-                    const proxyURL = new URL(req.path
+                    const proxyURL = new URL(new URL(req.url ?? "", "http://coco.localhost").pathname
                         .replace(/^\/http-widget-proxy\/https@SEP@/, "https://")
                         .replace(/^\/http-widget-proxy\/http@SEP@/, "http://"))
                     return proxyURL.origin
                 },
                 bypass(req) {
-                    if (!req.url.startsWith("/http-widget-proxy/")) {
+                    if (!req.url?.startsWith("/http-widget-proxy/")) {
                         return req.url
                     }
                 },

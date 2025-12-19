@@ -1,3 +1,6 @@
 import "./styles/0.chunk.css"
 import "./styles/index.chunk.css"
+import "reflect-metadata"
+import "../../unrestored/shared/1571/2636/48"
+import "../../unrestored/shared/1571/2636/141"
 import "../../unrestored/player/2635"
