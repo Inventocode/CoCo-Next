@@ -1,5 +1,5 @@
 const path = require("path")
-const webpack = require("webpack")
+const rspack = require("@rspack/core")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
 
 /**
@@ -17,7 +17,7 @@ const PAGES = [
     { name: "about" }
 ]
 
-/** @type {webpack.Configuration} */
+/** @type {rspack.Configuration} */
 const config = {
     stats: "minimal",
     entry: {
@@ -43,7 +43,7 @@ const config = {
         rules: [
             {
                 test: /\.(t|j)sx?$/i,
-                exclude: /node_modules|helper|home/,
+                exclude: /node_modules|helper|home|src/,
                 loader: "string-replace-loader",
                 options: {
                     multiple: [
@@ -89,12 +89,9 @@ const config = {
             "assert": require.resolve("assert/")
         }
     },
-    cache: {
-        type: "filesystem"
-    },
     plugins: [
-        new webpack.ProgressPlugin(),
-        new webpack.ProvidePlugin({
+        new rspack.ProgressPlugin(),
+        new rspack.ProvidePlugin({
             process: "process/"
         }),
         ...["codemao_login/index.html", "get-qq-code.html", "get-weixin-code.html"].map(

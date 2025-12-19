@@ -1,12 +1,10 @@
-const webpack = require("webpack")
+const rspack = require("@rspack/core")
+const SWC = require("@swc/types")
 const { merge } = require("webpack-merge")
-const CopyPlugin = require("copy-webpack-plugin")
-const MiniCssExtractPlugin = require("mini-css-extract-plugin")
-const { EsbuildPlugin } = require("esbuild-loader")
 
-const common = require("./webpack.common")
+const common = require("./rspack.common")
 
-/** @type {webpack.Configuration} */
+/** @type {rspack.Configuration} */
 const config = merge(common, {
     mode: "production",
     output: {
@@ -17,24 +15,35 @@ const config = merge(common, {
         rules: [
             {
                 test: /\.tsx?$/i,
-                exclude: /node_modules/,
-                loader: "esbuild-loader",
-                options: {
-                    target: "esnext"
-                }
+                exclude: [/node_modules/, /unrestored/],
+                loader: "builtin:swc-loader",
+                options: /** @type {SWC.Config} */({
+                    jsc: {
+                        parser: {
+                            syntax: "typescript",
+                            tsx: true
+                        },
+                        transform: {
+                            react: {
+                                runtime: "automatic",
+                                development: false,
+                                refresh: false
+                            }
+                        }
+                    }
+                })
             }, {
                 test: /\.css$/,
-                use: MiniCssExtractPlugin.loader,
-                enforce: "post"
+                use: rspack.CssExtractRspackPlugin.loader,
+                enforce: "post",
+                type: "javascript/auto"
             }
         ]
     },
     optimization: {
         minimizer: [
-            new EsbuildPlugin({
-                legalComments: "eof",
-                css: true
-            })
+            new rspack.SwcJsMinimizerRspackPlugin(),
+            new rspack.LightningCssMinimizerRspackPlugin()
         ],
         splitChunks: {
             chunks: "all",
@@ -60,12 +69,12 @@ const config = merge(common, {
         }
     },
     plugins: [
-        new CopyPlugin({
+        new rspack.CopyRspackPlugin({
             patterns: [{
                 from: "static"
             }]
         }),
-        new MiniCssExtractPlugin({
+        new rspack.CssExtractRspackPlugin({
             filename: "static/styles/[name].[contenthash].css"
         })
     ]
