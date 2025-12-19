@@ -34,6 +34,7 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import * as /* [auto-meaningful-name] */$_1514 from "../../../../../unrestored/shared/1571/2636/1514"
 import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1514"
+import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
 
 var WidgetMallButton = React.memo(function (e) {
   const { formatMessage } = $_710_index.a()
@@ -258,8 +259,14 @@ var StageToast = React.memo(function () {
     </div>
   ) : null
 })
-var Cv = window.innerWidth > 1300 ? 144 : 92
-var Tv = 92 === Cv
+
+export function useWidgetListWidth() {
+  return useInnerWidth() > 1300 ? 144 : 92
+}
+
+export function useWidgetListSingleColumn() {
+  return useWidgetListWidth() === 92
+}
 
 var PreviewArea = React.memo(() => {
   const { formatMessage } = $_710_index.a()
@@ -283,6 +290,9 @@ var PreviewArea = React.memo(() => {
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
+  const innerWidth = useInnerWidth()
+  const Cv = useWidgetListWidth()
+  const Tv = useWidgetListSingleColumn()
   React.useEffect(function () {
     var /* [auto-meaningful-name] */n$current = n.current
     var r = function (e) {
@@ -320,7 +330,7 @@ var PreviewArea = React.memo(() => {
   }, [t, n])
   React.useLayoutEffect(function () {
     if (r.current) {
-      var e = Math.max(window.innerWidth / 3, 514)
+      var e = Math.max(innerWidth / 3, 514)
       r.current.style.width = "".concat(e, "px")
       u(e + 1)
       t(Message.Zi(e - Cv))
@@ -413,5 +423,4 @@ var PreviewArea = React.memo(() => {
   )
 })
 
-export { Cv }
 export { PreviewArea as Sv }

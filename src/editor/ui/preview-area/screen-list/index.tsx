@@ -8,7 +8,7 @@ import * as React from "react"
 
 import { Pn } from "../../../../../unrestored/shared/1571/2636/index__part-24"
 import { Xn, Zn, Jn, er, tr, nr, rr, or, ar, sr, cr, lr, ur, dr, pr, hr, mr, gr, wr, Nr, Rr, kr, xr, Dr, Mr, Lr, Pr, Br, Fr, Gr, Wr } from "../../../../../unrestored/shared/1571/2636/index__part-25"
-import { Cv } from "../widget-list"
+import { useWidgetListWidth } from "../widget-list"
 import /* [auto-meaningful-name] */$_702 from "../../../../../unrestored/shared/1571/2636/702"
 import * as /* [auto-meaningful-name] */$_142 from "../../../../../unrestored/shared/1571/2636/142"
 import * as /* [auto-meaningful-name] */$_120 from "../../../../../unrestored/shared/1571/2636/120"
@@ -1377,9 +1377,10 @@ export const ScreenList = React.memo(() => {
       }, 100)
     }
   }, [R, dispatch])
+  const Cv = useWidgetListWidth()
   React.useEffect(function () {
     b(playing ? stageWidth + Cv : stageWidth)
-  }, [playing, stageWidth])
+  }, [playing, stageWidth, Cv])
   React.useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */_n$current

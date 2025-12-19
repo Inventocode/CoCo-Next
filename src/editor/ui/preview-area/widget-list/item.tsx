@@ -64,6 +64,7 @@ import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestor
 import * as /* [auto-meaningful-name] */$_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
 import * as /* [auto-meaningful-name] */WidgetShop from "../../../../shared/widget/custom/shop"
 import * as /* [auto-meaningful-name] */$_542 from "../../../../../unrestored/shared/1571/2636/542"
+import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
 var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
 
 const WidgetItem = React.memo(({
@@ -286,6 +287,7 @@ export const WidgetCategoryItem = React.memo(function (e) {
   var u = "newWidgetCategory_".concat(Yr.f, "_").concat(i)
   var d = m()
   var p = !i || !d[e$title]
+  const innerWidth = useInnerWidth()
   function m() {
     var e = localStorage.getItem(u)
     return e ? JSON.parse(e) : {}
@@ -293,7 +295,7 @@ export const WidgetCategoryItem = React.memo(function (e) {
   return e$configList.length ? (
     <div className={N($_196.categoryItem, k.a({}, $_196.expanded, c))}>
       <div
-        className={N($_196.categoryHeader, window.innerWidth <= 1300 && $_196.categoryMinHeader)}
+        className={N($_196.categoryHeader, innerWidth <= 1300 && $_196.categoryMinHeader)}
         onClick={() => {
           l(!c)
           if (Yr.k.includes(e$title) && i && !d[e$title]) {
