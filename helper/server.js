@@ -1,15 +1,15 @@
-const webpack = require("webpack")
-const WebpackDevServer = require("webpack-dev-server")
+const { rspack } = require("@rspack/core")
+const { RspackDevServer } = require("@rspack/dev-server")
 const { getPort } = require("get-port-please")
 
 const packageInfo = require("../package.json")
 
 ;(async () => {
     const port = await getPort(7090)
-    const config = require("../webpack.server.js")
-    const compiler = /** @type {webpack.Compiler} */(webpack(config))
+    const config = require("../rspack.server.js")
+    const compiler = rspack(config)
     const open = "http://coco-next.localhost:" + port
-    const server = new WebpackDevServer({
+    const server = new RspackDevServer({
         ...config.devServer,
         port,
         open
