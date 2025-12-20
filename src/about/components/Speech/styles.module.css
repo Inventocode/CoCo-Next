@@ -1,0 +1,46 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin-inline: auto;
+}
+
+.tex {
+    margin-top: 55px;
+    text-align: right;
+    color: #82778c;
+    font-size: 28px;
+}
+
+.contentWrapper {
+    display: flex;
+}
+
+.content {
+    color: #33383d;
+    font-size: 28px;
+    font-weight: 450;
+    line-height: 56px;
+}
+
+@media screen and not (min-width: 425px) {
+    .content {
+        font-size: 21px;
+        line-height: 42px;
+    }
+}
+
+.quotesLeftWrapper {
+    display: flex;
+    align-items: flex-start;
+}
+
+.quotesRightWrapper {
+    display: flex;
+    align-items: flex-end;
+}
+
+.quotes {
+    width: 29px;
+    padding-inline: 16px;
+}

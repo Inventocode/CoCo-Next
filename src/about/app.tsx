@@ -15,6 +15,7 @@ import styles from "./styles.module.css"
 import Logo from "./assets/images/logo.png"
 import quotesLeft from "./assets/images/quotes/left.png"
 import quotesRight from "./assets/images/quotes/right.png"
+import { Speech } from "./components/Speech"
 
 interface TeamItem {
   icon: string
@@ -100,48 +101,50 @@ function App() {
             <img className={styles.bannerLogoImg} src={Logo} alt="logo" />
           </div>
           {/* [CoCo Next] 添加 SLIGHTNING 的话语 */}
-          <div className={styles.bannerText}>
-            <img className={styles.quotesLeft} src={quotesLeft} alt="" />
-            <img className={styles.quotesRight} src={quotesRight} alt="" />
+          <Speech tex="SLIGHTNING">
             <p>{formatMessage({ id: "next.about.remarks1" })}</p>
             <p>{formatMessage({ id: "next.about.remarks2" })}</p>
-          </div>
-          <div className={styles.bannerTexSpeech}>—— SLIGHTNING</div>
-          <div className={styles.bannerText}>
-            <img className={styles.quotesLeft} src={quotesLeft} alt="" />
-            <img className={styles.quotesRight} src={quotesRight} alt="" />
-            <p>{formatMessage({ id: "about.remarks1" })}</p>
-            <p>{formatMessage({ id: "about.remarks2" })}</p>
-          </div>
-          <div className={styles.bannerTexSpeech}>—— prince</div>
+          </Speech>
         </div>
         <div className={styles.right} />
       </div>
 
-      <div className={$$_$$_unrestored_about_64_30(styles.flexTC, styles.courseAndFamilyBox)}>
+      {/* [CoCo Next] 把 prince 的话语挪到下面 */}
+      <div className={styles.princeSpeech}>
+        <Speech tex="prince">
+          <p>{formatMessage({ id: "about.remarks1" })}</p>
+          <p>{formatMessage({ id: "about.remarks2" })}</p>
+        </Speech>
+      </div>
+
+      <div className={styles.courseAndFamilyBox}>
         <div className={styles.left} />
         <div className={styles.courseAndFamilyContent}>
           <h3 className={styles.courseTitle}>{formatMessage({ id: "about.toolCourse" })}</h3>
-          <div className={styles.courseList}>
-            <div className={styles.courseUpList}>{COURSE_UP_ITEMS.map((item, idx) =>
-              <div key={idx} className={$$_$$_unrestored_about_64_30(styles.courseItem, styles.courseUpItem)}>
-                <img className={styles.courseUpImg} src="https://static.codemao.cn/coco/image/about_page_timeline_up.png" alt="" />
-                <div className={styles.courseText}>
-                  <p className={styles.courseItemTitle}>{item.time}</p>
-                  <p className={styles.courseItemDesc}>{item.desc}</p>
+          {/* [CoCo Next] 历程溢出时可以水平滚动 */}
+          <div className={styles.courseListWrapper}>
+            <div className={styles.courseList}>
+              <div className={styles.courseUpList}>{COURSE_UP_ITEMS.map((item, idx) =>
+                <div key={idx} className={$$_$$_unrestored_about_64_30(styles.courseItem, styles.courseUpItem)}>
+                  <img className={styles.courseUpImg} src="https://static.codemao.cn/coco/image/about_page_timeline_up.png" alt="" />
+                  <div className={styles.courseText}>
+                    <p className={styles.courseItemTitle}>{item.time}</p>
+                    <p className={styles.courseItemDesc}>{item.desc}</p>
+                  </div>
+                </div>)}</div>
+              <div className={styles.courseTimeline}>
+                <img className={styles.courseTimelineImg} src="https://static.codemao.cn/coco/image/about_page_timeline.png" alt="" />
+              </div>
+              <div className={styles.courseDownList}>{COURSE_DOWN_ITEMS.map((item, idx) =>
+                <div key={idx} className={$$_$$_unrestored_about_64_30(styles.courseItem, styles.courseDownItem)}>
+                  <img className={styles.courseDownImg} src="https://static.codemao.cn/coco/image/about_page_timeline_down.png" alt="" />
+                  <div className={styles.courseText}>
+                    <p className={styles.courseItemTitle}>{item.time}</p>
+                    <p className={styles.courseItemDesc}>{item.desc}</p>
+                  </div>
                 </div>
-              </div>)}</div>
-            <div className={styles.courseTimeline}>
-              <img className={styles.courseTimelineImg} src="https://static.codemao.cn/coco/image/about_page_timeline.png" alt="" />
+              )}</div>
             </div>
-            <div className={styles.courseDownList}>{COURSE_DOWN_ITEMS.map((item, idx) =>
-              <div key={idx} className={$$_$$_unrestored_about_64_30(styles.courseItem, styles.courseDownItem)}>
-                <img className={styles.courseDownImg} src="https://static.codemao.cn/coco/image/about_page_timeline_down.png" alt="" />
-                <div className={styles.courseText}>
-                  <p className={styles.courseItemTitle}>{item.time}</p>
-                  <p className={styles.courseItemDesc}>{item.desc}</p>
-                </div>
-              </div>)}</div>
           </div>
 
           <h3 className={styles.familyTitle}>{formatMessage({ id: "about.familyPhoto" })}</h3>
@@ -171,6 +174,11 @@ function App() {
             </div>)}
         </div>
         <div className={styles.right} />
+      </div>
+
+      {/* [CoCo Next] 添加底部 Logo */}
+      <div className={styles.footerLogoBox}>
+        <img className={styles.footerLogoImg} src={Logo} alt="logo" />
       </div>
     </div>
   )

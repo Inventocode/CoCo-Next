@@ -9,9 +9,7 @@ body, html, p {
     justify-content: center
 }
 
-.pageWrapper {
-    min-width: 1300px
-}
+.pageWrapper {}
 
 .pageWrapper::-webkit-scrollbar {
     width: 0
@@ -31,21 +29,27 @@ body, html, p {
     position: absolute;
     top: 0;
     left: 0;
-    width: 382px
+    /* [CoCo Next] Banner 背景图大小自适应 */
+    width: 50%;
+    max-width: 382px;
 }
 
 .bannerBox .bannerRightBg {
     position: absolute;
     bottom: 0;
     right: 0;
-    width: 400px
+    /* [CoCo Next] Banner 背景图大小自适应 */
+    width: 50%;
+    max-width: 400px;
 }
 
 .bannerBox .bannerContent {
     width: 1300px;
     height: 640px;
     text-align: center;
-    z-index: 3
+    z-index: 3;
+    filter: drop-shadow(0 0 4px #f6f5ff);
+    text-shadow: 0 0 4px #f6f5ff;
 }
 
 .bannerBox .bannerContent .bannerLogoBox {
@@ -87,9 +91,12 @@ body, html, p {
     font-size: 28px
 }
 
+.princeSpeech {
+    margin-top: 128px;
+}
+
 .courseAndFamilyBox .courseAndFamilyContent {
     padding-bottom: 70px;
-    width: 1300px;
     text-align: center;
     background-color: #fff
 }
@@ -100,14 +107,24 @@ body, html, p {
     font-weight: 700
 }
 
+/* [CoCo Next] 历程溢出时可以水平滚动 */
+.courseAndFamilyBox .courseAndFamilyContent .courseListWrapper {
+    width: fit-content;
+    max-width: 100%;
+    margin-inline: auto;
+    position: relative;
+    overflow: auto hidden;
+}
+
 .courseAndFamilyBox .courseAndFamilyContent .courseList {
-    position: relative
+    padding-inline: 32px;
+    width: 1300px;
 }
 
 .courseTimeline {}
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseTimelineImg {
-    width: 1270px
+    width: 1270px;
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseUpList {
@@ -136,7 +153,7 @@ body, html, p {
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseDownList .courseItem {
     /* [CoCo Next] 调整历程样式 */
     width: 400px;
-    margin-right: 18px
+    margin-right: 18px;
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .courseList .courseDownList .courseDownItem {}
@@ -179,27 +196,30 @@ body, html, p {
 .courseAndFamilyBox .courseAndFamilyContent .familyBox {
     display: flex;
     flex-direction: column;
-    width: 1072px;
-    height: 1132px;
+    /* [CoCo Next] 全家福宽度自适应 */
+    width: fit-content;
+    max-width: calc(100% - 128px);
+    padding: 32px;
     margin: 0 auto;
     border-radius: 50px;
     box-shadow: 0 10px 20px 0 rgba(0,0,0,.23)
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .familyBox .familyImgBox {
-    width: 1000px;
-    height: 993px;
-    margin: 30px auto 0;
-    background-color: #a9d2ff;
-    border-radius: 36px
+    /* [CoCo Next] 全家福宽度自适应 */
+    display: flex;
+    overflow: hidden;
+    border-radius: 36px;
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .familyBox .familyPhotoImg {
-    width: 1000px
+    /* [CoCo Next] 全家福宽度自适应 */
+    max-width: 100%;
 }
 
 .courseAndFamilyBox .courseAndFamilyContent .familyBox .familyIconBox {
-    padding: 38px 70px 0;
+    /* [CoCo Next] 调整全家福样式 */
+    padding: 32px 0 0 38px;
     text-align: left
 }
 
@@ -212,7 +232,7 @@ body, html, p {
 }
 
 .TeamBox .teamContent {
-    width: 1300px;
+    /* [CoCo Next] 调整 Thanks 样式 */
     padding-bottom: 80px
 }
 
@@ -224,7 +244,8 @@ body, html, p {
 }
 
 .TeamBox .teamContent .teamItem {
-    padding: 0 80px 40px 180px;
+    /* [CoCo Next] 调整 Thanks 样式 */
+    padding: 0 32px 40px 32px;
     display: flex;
     align-items: flex-start;
     color: #fff
@@ -246,4 +267,22 @@ body, html, p {
 .TeamBox .teamContent .teamItem .itemMember {
     margin: 0;
     font-size: 24px
+}
+
+/* [CoCo Next] 小屏设备上 Thanks 字体大小 */
+@media screen and not (min-width: 425px) {
+    .TeamBox .teamContent .teamItem .itemMember {
+        margin: 0;
+        font-size: 18px
+    }
+}
+
+/* [CoCo Next] 添加底部 Logo */
+.footerLogoBox {
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogoBox .footerLogoImg {
+    width: 283px;
 }
