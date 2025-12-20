@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：GoM7
@@ -94,28 +94,30 @@ var IntlWrapper = function (_React$Component) {
     }
     return _this
   }
-  _createClass(IntlWrapper, [{
-    key: "componentWillReceiveProps",
-    value: function componentWillReceiveProps(nextProps) {
-      if (nextProps.language == this.props.language) {
-        return
+  _createClass(IntlWrapper, [
+    {
+      key: "componentWillReceiveProps",
+      value: function componentWillReceiveProps(nextProps) {
+        if (nextProps.language == this.props.language) {
+          return
+        }
+        var locale = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].intl_lang_name
+        var messages = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].language
+        this.setState({
+          locale: locale,
+          messages: messages
+        })
       }
-      var locale = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].intl_lang_name
-      var messages = __WEBPACK_IMPORTED_MODULE_5__i18n__.language_list[nextProps.language].language
-      this.setState({
-        locale: locale,
-        messages: messages
-      })
+    }, {
+      key: "render",
+      value: function render() {
+        return __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_react_intl__.IntlProvider, {
+          locale: this.state.locale,
+          messages: this.state.messages
+        }, this.props.children)
+      }
     }
-  }, {
-    key: "render",
-    value: function render() {
-      return __WEBPACK_IMPORTED_MODULE_1_react__.createElement(__WEBPACK_IMPORTED_MODULE_4_react_intl__.IntlProvider, {
-        locale: this.state.locale,
-        messages: this.state.messages
-      }, this.props.children)
-    }
-  }])
+  ])
   return IntlWrapper
 }(__WEBPACK_IMPORTED_MODULE_1_react__.Component)
 function mapStateToProps(state) {

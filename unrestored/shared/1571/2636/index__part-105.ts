@@ -1,0 +1,132 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：2636__part-105
+ */
+
+"use strict"
+
+import { Xr } from "../../../../src/editor/ui/preview-area/screen-list"
+import { $v } from "./index__part-91"
+import { nb } from "./index__part-92"
+import qv from "./88"
+import * as /* [auto-meaningful-name] */$_238 from "./238"
+import * as Tn from "./68"
+import * as Et from "./9"
+import * as te from "./15"
+import * as /* [auto-meaningful-name] */$_1213 from "./1213"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import N from "./8"
+import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */$_747 from "./747"
+import /* [auto-meaningful-name] */_$_ from "./747"
+var wy = _React.memo(function () {
+  var e = $_16_index.d()
+  var t = $_238.b()
+  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var r = $_238.d()
+  var o = $_16_index.e(function (e) {
+    return e.project.screens
+  })
+  var i = _React.useState(false)
+  var a = $_10_index.a(i, 2)
+  var s = a[0]
+  var c = a[1]
+  if (!r) {
+    return null
+  }
+  var /* [auto-meaningful-name] */r$title = r.title
+  var /* [auto-meaningful-name] */r$backgroundColor = r.backgroundColor
+  var /* [auto-meaningful-name] */r$backgroundImage = r.backgroundImage
+  var /* [auto-meaningful-name] */r$backgroundImageResizeMode = r.backgroundImageResizeMode
+  var m = Et.hb(r$backgroundImage || "")
+  var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl)
+  return React.createElement($_13_index.h, {
+    "data-updated-at": t
+  }, React.createElement($_13_index.i, {
+    className: N(qv.formItemWrapper, qv.formWidgetTitle, "changeTitle"),
+    align: "vertical",
+    label: "名称"
+  }, React.createElement(Xr, {
+    value: r$title,
+    renameInputValue: function (t) {
+      var n = Et.Ob(r.id, t, o)
+      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "title", n))
+      return n
+    },
+    onChange: function (t) {
+      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "title", t))
+    },
+    checkValueIsRepeat: function (e) {
+      return Et.r(r.id, e)
+    }
+  })), React.createElement("div", null, React.createElement($_13_index.i, {
+    className: N(qv.formItemWrapper, "changeBackgroundColor"),
+    label: $_710_index$a$formatMessage({
+      id: "color"
+    })
+  }, React.createElement($_1213.a, {
+    placement: "rightBottom",
+    trigger: "click",
+    onVisibleChange: function (e) {
+      c(e)
+    },
+    content: s && React.createElement($_13_index.q, {
+      value: r$backgroundColor,
+      onChange: function (t) {
+        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundColor", t))
+      }
+    })
+  }, React.createElement("div", {
+    className: qv.colorBlock,
+    style: {
+      backgroundColor: te.i(r$backgroundColor) ? "#ffffff" : r$backgroundColor
+    }
+  }, te.i(r$backgroundColor) && React.createElement("div", {
+    className: qv.slash
+  })))), React.createElement($_13_index.i, {
+    className: N(qv.formItemWrapper, _$_.changeImageWrapper),
+    align: "vertical",
+    label: $_710_index$a$formatMessage({
+      id: "backgroundImage"
+    })
+  }, React.createElement(nb, {
+    onUploadFileChange: function (t) {
+      if (t) {
+        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(t, function (t) {
+          var n = t[0]
+          e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImage", n.id))
+        }))
+      }
+    },
+    onResourceLibraryClick: function () {
+      e($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (t) {
+        var n = t[0]
+        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImage", n.id))
+        e($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+      }))
+    },
+    onDelete: function () {
+      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImage", ""))
+    },
+    fileId: r$backgroundImage
+  })), g && React.createElement($_13_index.i, {
+    className: N(qv.formItemWrapper),
+    label: $_710_index$a$formatMessage({
+      id: "adapt"
+    }),
+    align: "vertical"
+  }, React.createElement($v, {
+    mode: r$backgroundImageResizeMode,
+    onModeChange: function (t) {
+      var n = t
+      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImageResizeMode", n))
+    }
+  }))))
+})
+export { wy }

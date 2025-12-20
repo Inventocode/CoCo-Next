@@ -1,0 +1,445 @@
+.wrapper {
+    width: 100%;
+    height: 100%;
+    background: #6e4ff4;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none
+}
+
+.iconButton {
+    border: none;
+    background: none;
+    color: var(--primary-color-9);
+    cursor: pointer;
+    white-space: nowrap;
+    outline: none
+}
+
+.left {
+    justify-content: center
+}
+
+.left,.logoBox {
+    display: flex;
+    align-items: center;
+    height: 100%
+}
+
+.logoBox {
+    width: 54px;
+    margin-left: 6px;
+    cursor: pointer
+}
+
+.logoBox .back {
+    margin-left: 6px;
+    margin-right: 4px;
+    color: #eddbff;
+    font-size: 8px;
+    -webkit-transform: rotate(90deg);
+    transform: rotate(90deg)
+}
+
+.logoBox .logo {
+    width: 25px;
+    height: 26px;
+    background-image: url(../../assets/images/header/logo.svg);
+    background-size: contain
+}
+
+.logoBox:hover {
+    background: #5439ce;
+    border-radius: 4px
+}
+
+.logoCutLine {
+    margin: 0 6px;
+    height: 20px;
+    width: 1px;
+    opacity: .5;
+    background-color: #fff
+}
+
+.tool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0
+}
+
+ul.tool li {
+    width: 64px;
+    padding: 16px 21px;
+    font-size: 12px;
+    color: var(--primary-color-9)
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    color: var(--primary-color-9)
+}
+
+.center .userService :global(.coco-button) {
+    width: 98px;
+    height: 32px;
+    border-radius: 16px;
+    border: 2px solid #fff;
+    color: #fff;
+    margin: 0 8px
+}
+
+.right {
+    flex: auto 0;
+    align-items: center;
+    display: flex;
+    height: 100%
+}
+
+.input {
+    width: 180px;
+    height: 32px;
+    border-radius: 6px;
+    background: var(--primary-color-m1);
+    outline: none;
+    border: none;
+    padding: 5px;
+    color: var(--primary-color-9)
+}
+
+.input::-webkit-input-placeholder {
+    color: var(--primary-color-9)
+}
+
+.input:-ms-input-placeholder {
+    color: var(--primary-color-9)
+}
+
+.input::placeholder {
+    color: var(--primary-color-9)
+}
+
+.portrait {
+    width: 31px;
+    height: 31px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    margin: 0 18px 0 20px
+}
+
+.iconWrapper {
+    color: #fff;
+    width: 44px;
+    height: 100%;
+    line-height: 20px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    cursor: pointer
+}
+
+.iconWrapper:active,.iconWrapper:hover {
+    background: #5439ce;
+    border-radius: 4px
+}
+
+.iconWrapper .databaseIcon {
+    opacity: .6
+}
+
+.iconWrapper .headerIcon {
+    display: block;
+    opacity: .6
+}
+
+.cloudIconWrapper {
+    width: 54px
+}
+
+.activeIconWrapper {
+    background: #5439ce;
+    border-radius: 4px
+}
+
+.activeIconWrapper .databaseIcon {
+    opacity: 1
+}
+
+.activeIconWrapper .headerIcon {
+    display: none
+}
+
+.otWrapper {
+    height: 100%;
+    display: flex;
+    align-items: center
+}
+
+.shareWrapper {
+    width: 44px;
+    height: 52px;
+    line-height: 52px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    border-radius: 4px;
+    z-index: 3
+}
+
+.shareWrapper:hover {
+    background: #5439ce
+}
+
+.shareWrapper .icon {
+    opacity: .6
+}
+
+.shareMenu :global(.coco-dropdown-overlay) {
+    width: 150px
+}
+
+.shareMenu :global(.coco-dropdown-down-icon) {
+    position: absolute;
+    top: 38%;
+    color: #6e4ff4
+}
+
+.shareMenu :global(.coco-menu-item) {
+    position: relative;
+    padding: 0 0 0 10px
+}
+
+.shareMenu :global(.coco-menu-item) i {
+    position: absolute;
+    font-size: 16px;
+    margin-left: 5px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    left: 26px;
+    pointer-events: none
+}
+
+.packageBtn {
+    width: 60px;
+    height: 34px;
+    border: 1px solid hsla(0,0%,100%,.5);
+    background-color: transparent;
+    margin-right: 4px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 17px;
+    z-index: 3
+}
+
+.packageBtn:not(:disabled):active,.packageBtn:not(:disabled):hover {
+    border-color: hsla(0,0%,100%,.5);
+    background: #5439ce
+}
+
+.menu .menuIcon {
+    font-size: 22px;
+    color: #fff;
+    margin-left: 10px
+}
+
+.menu .itemContent {
+    padding: 8px 20px
+}
+
+.menu .disabled {
+    color: #afb0b3
+}
+
+.menu .itemLinkContent .link {
+    color: inherit;
+    padding: 8px 20px;
+    display: inline-block;
+    width: 124px
+}
+
+.menu .fileDropdown :global(.coco-dropdown-overlay) {
+    width: 138px
+}
+
+.menu .itemUploadButton {
+    padding: 8px 0 8px 20px;
+    align-items: start
+}
+
+.menu .itemUploadButton .link {
+    color: inherit
+}
+
+.menu :global(.coco-header-menu)Icon {
+    font-size: 22px;
+    color: #fff;
+    opacity: .6
+}
+
+.menu :global(.coco-button),.menu :global(.coco-menu-item) {
+    padding: 0
+}
+
+.menu :global(.coco-dropdown-selector) {
+    width: 54px;
+    height: 52px;
+    border-radius: 5px;
+    position: relative;
+    justify-content: unset;
+    padding-left: 12px
+}
+
+.menu :global(.coco-dropdown-selector) :global(.coco-dropdown-down-icon) {
+    position: absolute;
+    top: 46%;
+    right: 8px
+}
+
+.menu :global(.coco-dropdown-active),.menu :global(.coco-dropdown-selector):hover {
+    background: #5439ce
+}
+
+.menu :global(.coco-dropdown-active) :global(.coco-header-menu)Icon {
+    opacity: 1
+}
+
+.projectTitleWrapper {
+    width: 180px;
+    height: 34px;
+    margin-left: 14px;
+    margin-right: 10px;
+    position: relative
+}
+
+.projectTitleWrapper .editIcon {
+    position: absolute;
+    right: 8px;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+    font-size: 16px
+}
+
+.projectTitleWrapper .projectTitle {
+    border-radius: 6px;
+    border: 1px solid hsla(0,0%,100%,.3);
+    transition: all .2s;
+    color: hsla(0,0%,100%,.8);
+    padding-right: 26px
+}
+
+.projectTitleWrapper .projectTitle ::-webkit-input-placeholder {
+    color: hsla(0,0%,100%,.5)
+}
+
+.projectTitleWrapper .projectTitle:hover {
+    background-color: #5439ce
+}
+
+.projectTitleWrapper :global(.coco-input-focus) {
+    border: 1px solid #fff;
+    color: #fff
+}
+
+.projectTitleWrapper :global(.coco-input) {
+    background-color: transparent
+}
+
+.cutLine {
+    margin-left: 8px;
+    margin-right: 12px;
+    height: 20px;
+    width: 1px;
+    opacity: .5;
+    background-color: #fff
+}
+
+.saveBtn {
+    width: 60px;
+    height: 34px;
+    margin-right: 12px;
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    z-index: 3
+}
+
+.saveBtn .savingIcon,.saving .saveText {
+    display: none
+}
+
+.saving .savingIcon {
+    display: block
+}
+
+.line {
+    height: 1px;
+    margin: 0 10px;
+    background: #f2f2f2
+}
+
+.saveTipsWrapper {
+    position: absolute;
+    top: 2px;
+    right: 72px;
+    width: 220px;
+    height: 60px;
+    opacity: 0;
+    color: #fff;
+    padding-top: 38px;
+    padding-left: 14px;
+    font-size: 12px;
+    background-image: url(https://creation.codemao.cn/coconut/web/1.22.0-0/static/media/save-tips.fdb338cd.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transition: all .3s ease-in;
+    overflow: hidden;
+    z-index: 1
+}
+
+.saveTipsWrapper.show {
+    top: 26px;
+    right: 72px;
+    width: 320px;
+    height: 98px;
+    padding-top: 64px;
+    font-size: 15px;
+    opacity: 1;
+    transition: all .3s ease-in
+}
+
+.saveTipsWrapper .closeSaveTips {
+    display: none;
+    position: absolute;
+    top: 65px;
+    right: 12px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    font-size: 18px;
+    text-align: center;
+    border-radius: 50%;
+    background: hsla(0,0%,100%,.5);
+    cursor: pointer
+}
+
+.saveTipsWrapper:hover .closeSaveTips {
+    display: block
+}
+
+.toolTipsBox {}

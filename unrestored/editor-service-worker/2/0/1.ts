@@ -1,4 +1,4 @@
-/** 
+/**
  * 由 CoCo 源代码计划解包器解包
  *
  * 模块 ID：1
@@ -7,8 +7,8 @@
 var n = function (t) {
   "use strict"
 
-  var object$prototype = Object.prototype
-  var object$prototype$hasOwnProperty = object$prototype.hasOwnProperty
+  var /* [auto-meaningful-name] */Object$prototype = Object.prototype
+  var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object$prototype.hasOwnProperty
   var n = "function" === typeof Symbol ? Symbol : {}
   var o = n.iterator || "@@iterator"
   var i = n.asyncIterator || "@@asyncIterator"
@@ -34,19 +34,19 @@ var n = function (t) {
     var i = Object.create(o.prototype)
     var a = new E(n || [])
     i._invoke = function (t, e, r) {
-      var n = "suspendedStart"
+      var /* [auto-meaningful-name] */SuspendedStart = "suspendedStart"
       return function (o, i) {
-        if ("executing" === n) {
+        if ("executing" === SuspendedStart) {
           throw new Error("Generator is already running")
         }
-        if ("completed" === n) {
+        if ("completed" === SuspendedStart) {
           if ("throw" === o) {
             throw i
           }
           return _()
         }
         for (r.method = o, r.arg = i;;) {
-          var r$delegate = r.delegate
+          var /* [auto-meaningful-name] */r$delegate = r.delegate
           if (r$delegate) {
             var c = x(r$delegate, r)
             if (c) {
@@ -59,18 +59,18 @@ var n = function (t) {
           if ("next" === r.method) {
             r.sent = r._sent = r.arg
           } else if ("throw" === r.method) {
-            if ("suspendedStart" === n) {
-              n = "completed"
+            if ("suspendedStart" === SuspendedStart) {
+              SuspendedStart = "completed"
               throw r.arg
             }
             r.dispatchException(r.arg)
           } else if ("return" === r.method) {
             r.abrupt("return", r.arg)
           }
-          n = "executing"
+          SuspendedStart = "executing"
           var u = s(t, e, r)
           if ("normal" === u.type) {
-            n = r.done ? "completed" : "suspendedYield"
+            SuspendedStart = r.done ? "completed" : "suspendedYield"
             if (u.arg === f) {
               continue
             }
@@ -80,7 +80,7 @@ var n = function (t) {
             }
           }
           if ("throw" === u.type) {
-            n = "completed"
+            SuspendedStart = "completed"
             r.method = "throw"
             r.arg = u.arg
           }
@@ -111,9 +111,9 @@ var n = function (t) {
   d[o] = function () {
     return this
   }
-  var object$getPrototypeOf = Object.getPrototypeOf
-  var y = object$getPrototypeOf && object$getPrototypeOf(object$getPrototypeOf(O([])))
-  if (y && y !== object$prototype && object$prototype$hasOwnProperty.call(y, o)) {
+  var /* [auto-meaningful-name] */Object$getPrototypeOf = Object.getPrototypeOf
+  var y = Object$getPrototypeOf && Object$getPrototypeOf(Object$getPrototypeOf(O([])))
+  if (y && y !== Object$prototype && Object$prototype$hasOwnProperty.call(y, o)) {
     d = y
   }
   var g = p.prototype = l.prototype = Object.create(d)
@@ -132,9 +132,9 @@ var n = function (t) {
           !function n(o, i, a, c) {
             var u = s(t[o], t, i)
             if ("throw" !== u.type) {
-              var u$arg = u.arg
-              var u$arg$value = u$arg.value
-              return u$arg$value && "object" === typeof u$arg$value && object$prototype$hasOwnProperty.call(u$arg$value, "__await") ? e.resolve(u$arg$value.__await).then(function (t) {
+              var /* [auto-meaningful-name] */u$arg = u.arg
+              var /* [auto-meaningful-name] */u$arg$value = u$arg.value
+              return u$arg$value && "object" === typeof u$arg$value && Object$prototype$hasOwnProperty.call(u$arg$value, "__await") ? e.resolve(u$arg$value.__await).then(function (t) {
                 n("next", t, a, c)
               }, function (t) {
                 n("throw", t, a, c)
@@ -172,7 +172,7 @@ var n = function (t) {
       e.delegate = null
       return f
     }
-    var n$arg = n.arg
+    var /* [auto-meaningful-name] */n$arg = n.arg
     return n$arg ? n$arg.done ? (e[t.resultName] = n$arg.value, e.next = t.nextLoc, "return" !== e.method && (e.method = "next", e.arg = undefined), e.delegate = null, f) : n$arg : (e.method = "throw", e.arg = new TypeError("iterator result is not an object"), e.delegate = null, f)
   }
   function b(t) {
@@ -195,9 +195,11 @@ var n = function (t) {
     t.completion = e
   }
   function E(t) {
-    this.tryEntries = [{
-      tryLoc: "root"
-    }]
+    this.tryEntries = [
+      {
+        tryLoc: "root"
+      }
+    ]
     t.forEach(b, this)
     this.reset(true)
   }
@@ -214,7 +216,7 @@ var n = function (t) {
         var n = -1
         var i = function e() {
           for (; ++n < t.length;) {
-            if (object$prototype$hasOwnProperty.call(t, n)) {
+            if (Object$prototype$hasOwnProperty.call(t, n)) {
               e.value = t[n]
               e.done = false
               return e
@@ -311,14 +313,14 @@ var n = function (t) {
       this.arg = undefined
       this.tryEntries.forEach(L)
       if (!t) {
-        for (var e in this) if ("t" === e.charAt(0) && object$prototype$hasOwnProperty.call(this, e) && !isNaN(+e.slice(1))) {
+        for (var e in this) if ("t" === e.charAt(0) && Object$prototype$hasOwnProperty.call(this, e) && !isNaN(+e.slice(1))) {
           this[e] = undefined
         }
       }
     },
     stop: function () {
       this.done = true
-      var this$tryEntries0$completion = this.tryEntries[0].completion
+      var /* [auto-meaningful-name] */this$tryEntries0$completion = this.tryEntries[0].completion
       if ("throw" === this$tryEntries0$completion.type) {
         throw this$tryEntries0$completion.arg
       }
@@ -341,13 +343,13 @@ var n = function (t) {
       }
       for (var o = this.tryEntries.length - 1; o >= 0; --o) {
         var i = this.tryEntries[o]
-        var i$completion = i.completion
+        var /* [auto-meaningful-name] */i$completion = i.completion
         if ("root" === i.tryLoc) {
           return n("end")
         }
         if (i.tryLoc <= this.prev) {
-          var c = object$prototype$hasOwnProperty.call(i, "catchLoc")
-          var u = object$prototype$hasOwnProperty.call(i, "finallyLoc")
+          var c = Object$prototype$hasOwnProperty.call(i, "catchLoc")
+          var u = Object$prototype$hasOwnProperty.call(i, "finallyLoc")
           if (c && u) {
             if (this.prev < i.catchLoc) {
               return n(i.catchLoc, true)
@@ -373,7 +375,7 @@ var n = function (t) {
     abrupt: function (t, e) {
       for (var n = this.tryEntries.length - 1; n >= 0; --n) {
         var o = this.tryEntries[n]
-        if (o.tryLoc <= this.prev && object$prototype$hasOwnProperty.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
+        if (o.tryLoc <= this.prev && Object$prototype$hasOwnProperty.call(o, "finallyLoc") && this.prev < o.finallyLoc) {
           var i = o
           break
         }
@@ -419,9 +421,9 @@ var n = function (t) {
       for (var e = this.tryEntries.length - 1; e >= 0; --e) {
         var r = this.tryEntries[e]
         if (r.tryLoc === t) {
-          var r$completion = r.completion
+          var /* [auto-meaningful-name] */r$completion = r.completion
           if ("throw" === r$completion.type) {
-            var r$completion$arg = r$completion.arg
+            var /* [auto-meaningful-name] */r$completion$arg = r$completion.arg
             L(r)
           }
           return r$completion$arg

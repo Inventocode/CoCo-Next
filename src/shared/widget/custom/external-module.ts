@@ -1,9 +1,14 @@
-"use strict"
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：347
+ */
 
-export { callMethod } from "../../../../unrestored/shared/1531/2584/21/index"
-export { getProperty } from "../../../../unrestored/shared/1531/2584/21/index"
-export { onWidgetEvent } from "../../../../unrestored/shared/1531/2584/21/index"
-export { setProperty } from "../../../../unrestored/shared/1531/2584/21/index"
+export { callMethod } from "../../../../unrestored/shared/1571/2636/20/index"
+export { getProperty } from "../../../../unrestored/shared/1571/2636/20/index"
+export { onWidgetEvent } from "../../../../unrestored/shared/1571/2636/20/index"
+export { setProperty } from "../../../../unrestored/shared/1571/2636/20/index"
+
 var HTTP = {}
 Object.defineProperty(HTTP, "setHeader", {
   get: function () {
@@ -47,12 +52,12 @@ Object.defineProperty(HTTP, "post", {
 })
 Object.defineProperty(HTTP, "get", {
   get: function () {
-    return I
+    return A
   }
 })
 Object.defineProperty(HTTP, "put", {
   get: function () {
-    return A
+    return I
   }
 })
 Object.defineProperty(HTTP, "patch", {
@@ -93,12 +98,12 @@ Object.defineProperty(WebSocket, "wsConnect", {
 })
 Object.defineProperty(WebSocket, "wsSend", {
   get: function () {
-    return U
+    return W
   }
 })
 Object.defineProperty(WebSocket, "wsClose", {
   get: function () {
-    return W
+    return U
   }
 })
 var Stepper = {}
@@ -128,7 +133,7 @@ import { Vika } from "@vikadata/vika"
 import Color from "color"
 import HTML2Canvas from "html2canvas"
 import * as AntdMobile from "antd-mobile"
-import * as Pedometer from "../../../../unrestored/shared/1531/2584/36/345/392"
+import * as Pedometer from "../../../../unrestored/shared/1571/2636/34/347/393"
 var _ = window.cordova && window.cordova.plugin && window.cordova.plugin.http || {}
 function v(e, t, n) {
   _.setHeader(e, t, n)
@@ -155,10 +160,10 @@ function T() {}
 function S(e, t, n, r, o) {
   return _.post(e, t, n, r || T, o || T)
 }
-function I(e, t, n, r, o) {
+function A(e, t, n, r, o) {
   return _.get(e, t || {}, n || {}, r || T, o || T)
 }
-function A(e, t, n, r, o) {
+function I(e, t, n, r, o) {
   return _.put(e, t, n, r || T, o || T)
 }
 function j(e, t, n, r, o) {
@@ -179,8 +184,8 @@ function x(e, t, n, r, o, i, a) {
 function D(e) {
   return _.abort(e)
 }
-import * as M from "../../../../unrestored/shared/1531/2584/28/index"
-if (!M.d()) {
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_28_index from "../../../../unrestored/shared/1571/2636/28/index"
+if (!$$_$$_$$_$$_unrestored_shared_1571_2636_28_index.d()) {
   var L = {}
   var P = function (e) {
     var t = L[e]
@@ -252,10 +257,10 @@ if (!M.d()) {
   }
   window.CordovaWebsocketPlugin = B
 }
-import * as F from "../../../../unrestored/shared/1531/2584/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 function G(e, t, n, r) {
   var /* [auto-meaningful-name] */e$url
-  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || F.O(e.url || ""))) {
+  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || $$_$$_$$_$$_unrestored_shared_1571_2636_15.O(e.url || ""))) {
     window.CordovaWebsocketPlugin.wsConnect(e, function (e) {
       t(e)
     }, function (e) {
@@ -265,15 +270,15 @@ function G(e, t, n, r) {
     })
   }
 }
-function U(e, t) {
+function W(e, t) {
   window.CordovaWebsocketPlugin.wsSend(e, t)
 }
-function W(e, t, n) {
+function U(e, t, n) {
   t = t || 1e3
   n = n || "bye"
   window.CordovaWebsocketPlugin.wsClose(e, t, n)
 }
-import * as Brightness from "../../../../unrestored/shared/1531/2584/36/345/344"
+import * as Brightness from "../../../../unrestored/shared/1571/2636/34/347/346"
 function V() {
   return new Promise(function (e) {
     window.stepper.isStepCountingAvailable().then(function (t) {
@@ -318,23 +323,24 @@ Axios.interceptors.request.use(function (e) {
   if (e.baseURL) {
     t = e.baseURL + t.slice(1)
   }
-  return F.Y(t) ? e : Promise.reject(new Error("auth failed"))
+  return $$_$$_$$_$$_unrestored_shared_1571_2636_15.Y(t) ? e : Promise.reject(new Error("auth failed"))
 }, function (e) {
   return Promise.reject(e)
 })
-import * as J from "../../../../unrestored/shared/1531/2584/36/345/114"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_34_347_112 from "../../../../unrestored/shared/1571/2636/34/347/112"
 var Utils = {
-  isNative: M.d,
-  filterXss: M.i,
-  getWidgetImageUrl: J.b
+  isNative: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.d,
+  filterXss: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.i,
+  getWidgetImageUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_34_347_112.b,
+  openLoginPage: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.q
 }
 export var modules: Map<string, string> = new Map()
 const MODULES_INFO: Record<string, {
-  url: string;
-  ref: string;
+  url: string
+  ref: string
 }> = {
   "crypto-js": {
-    url: "https://static.codemao.cn/appcraft/modules/crypto-js/4.1.1/crypto-js.js",
+    url: "https://static.bcmcdn.com/appcraft/modules/crypto-js/4.1.1/crypto-js.js",
     ref: "CryptoJS"
   }
 }

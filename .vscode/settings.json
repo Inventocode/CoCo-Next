@@ -1,31 +1,45 @@
 {
     "cSpell.words": [
         "animejs",
+        "appcraft",
         "aqara",
         "bcmcdn",
         "blockly",
+        "ccwidget",
         "chunkhash",
         "codemao",
+        "colour",
+        "datawatch",
+        "dragdroptouch",
+        "epeiuss",
         "eventorder",
         "fullhash",
+        "gbao",
         "getorder",
         "gitee",
+        "inventocode",
         "methodorder",
+        "momo",
+        "nexe",
         "oldsquaw",
         "qrcode",
+        "rspack",
         "setorder",
+        "shequ",
         "slightning",
         "socketcoll",
         "socketcv",
         "unminimize",
         "unminimizing",
         "vika",
-        "vikadata"
+        "vikadata",
+        "weixin"
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {
-        "webpack.common.*": "webpack.*",
+        "rspack.common.*": "rspack.*",
         "tsconfig.json": "tsconfig.*.json",
         "package.json": "package-lock.json"
     },
+    "typescript.tsdk": "node_modules\\typescript\\lib"
 }

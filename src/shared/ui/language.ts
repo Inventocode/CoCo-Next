@@ -6,22 +6,10 @@ export { f as a }
 export { format as c }
 export { g as f }
 export { _ as d }
-import r = require("../../../unrestored/shared/1531/2584/6");
-import React = require("react");
-var i = function __importDefault(module) {
-  var defaultExport = module && module.__esModule ? function () {
-    return module.default
-  } : function () {
-    return module
-  }
-  Object.defineProperty(defaultExport, "a", {
-    enumerable: true,
-    get: defaultExport
-  })
-  return defaultExport
-}(React)
-import a = require("../../../unrestored/shared/1531/2584/2628/index");
-import s = require("../../../unrestored/shared/1531/2584/10/index");
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../unrestored/shared/1571/2636/6"
+import React from "react"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2681_index from "../../../unrestored/shared/1571/2636/2681/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../unrestored/shared/1571/2636/10/index"
 var c = {
   mustToBeString: "{name} 必须是字符串",
   mustToBeNumber: "{name} 必须是数值",
@@ -109,14 +97,14 @@ var c = {
 var l = function () {
   var e = {}
   Object.entries(c).forEach(function (t) {
-    var n = s.a(t, 2)
+    var n = $$_$$_$$_unrestored_shared_1571_2636_10_index.a(t, 2)
     var r = n[0]
     var o = n[1]
     return e["player/" + r] = o
   })
   return e
 }()
-var u = r.a(r.a({}, {
+var u = $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571_2636_6.a({}, {
   run: "运行",
   save: "保存",
   notSave: "不保存",
@@ -862,6 +850,8 @@ var u = r.a(r.a({}, {
   "OT.permissionChangeToReadOnly": "创建者将你的权限改为只能查看",
   "OT.permissionChangeToEdit": "创建者将你的权限改为可以编辑",
   "OT.expiration": "邀请链接有效期为7天",
+  // [CoCo Next] 添加协作安全警告
+  "OT.secure": "⚠ 请确保只将协作链接分享给你信任的人，以免造成损失",
   "OT.editor": "编辑者",
   "OT.reader": "查看者",
   "OT.editorRules": "可对控件、代码进行编辑",
@@ -1012,7 +1002,7 @@ var u = r.a(r.a({}, {
   "RichTextEditor.editDialogTitle": "富文本编辑"
 }), l)
 
-export type Language = "zh-CN";
+export type Language = "zh-CN"
 
 export const zh_CN = "zh-CN"
 
@@ -1025,7 +1015,7 @@ function f(e) {
     Object.assign(p[t], e[t])
   }
 }
-var h = a.a({
+var h = $$_$$_$$_unrestored_shared_1571_2636_2681_index.a({
   locale: zh_CN,
   messages: p[zh_CN]
 })
@@ -1049,24 +1039,24 @@ function _(e, t) {
   t = t || {}
   return h.formatMessage({
     id: e
-  }, r.a(r.a({}, t), {}, {
+  }, $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571_2636_6.a({}, t), {}, {
     p: function () {
       for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return i.a.createElement("p", null, t)
+      return React.a.createElement("p", null, t)
     },
     span: function () {
       for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return i.a.createElement("span", null, t)
+      return React.a.createElement("span", null, t)
     },
     b: function () {
       for (var arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return i.a.createElement("b", null, t)
+      return React.a.createElement("b", null, t)
     }
   }))
 }

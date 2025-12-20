@@ -1,0 +1,574 @@
+
+import * as /* [auto-meaningful-name] */$$_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as _ from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_323 from "../../../../../unrestored/shared/1571/2636/323"
+
+var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
+export function setBlockGroupProfile(e, Blink) {
+  function n(e) {
+    if (!Blink.events.is_undoing()) {
+      var /* [auto-meaningful-name] */o$addMutation
+      var /* [auto-meaningful-name] */o$removeMutation
+      var /* [auto-meaningful-name] */this$source_block = this.source_block
+      if (this$source_block) {
+        if ("nth" === e) {
+          if (!(null === (o$addMutation = this$source_block.addMutation) || undefined === o$addMutation)) {
+            o$addMutation.call(this$source_block)
+          }
+        } else if (!(null === (o$removeMutation = this$source_block.removeMutation) || undefined === o$removeMutation)) {
+          o$removeMutation.call(this$source_block)
+        }
+      }
+    }
+  }
+  e.insertBlockProfile("array_get", {
+    type: "array_get",
+    message0: "%1",
+    args0: [
+      {
+        type: "field_coco_dropdown",
+        name: "ARRAY",
+        custom: true,
+        advancedOptions: function () {
+          return $$_46_index.c().getArrayVariableList(this)
+        }
+      }
+    ],
+    output: "Array",
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true
+  })
+  // [CoCo Next] 定义积木 [临时列表 array_create]
+  e.insertBlockProfile("array_create", {
+    type: "array_create",
+    message0: "",
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true,
+    output: "Array",
+    mutator: "ARRAY_CREATE_MUTATOR"
+  })
+  e.insertBlockProfile("lists_append", {
+    type: "lists_append",
+    message0: "%{BKY_LISTS_APPEND}",
+    args0: [
+      {
+        type: "input_value",
+        name: "VALUE"
+      }, {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
+  })
+  e.insertBlockProfile("lists_insert_value", {
+    type: "lists_insert_value",
+    message0: "%{BKY_INSERT_LISTS_ITEM_BY_INDEX}",
+    args0: [
+      {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }, {
+        type: "input_value",
+        check: "Number",
+        name: "INDEX",
+        align: "CENTRE"
+      }, {
+        type: "input_value",
+        name: "VALUE",
+        align: "CENTRE"
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
+  })
+  e.insertBlockProfile("array_copy", {
+    type: "array_copy",
+    message0: "%{BKY_COPY_ARRAY}",
+    args0: [
+      {
+        type: "input_value",
+        name: "FROM",
+        check: ["Array"]
+      }, {
+        type: "input_value",
+        name: "TO",
+        check: ["Array"]
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true
+  })
+  e.insertBlockProfile("array_get_length", {
+    type: "array_get_length",
+    message0: "%{BKY_GET_ARRAY_LENGTH}",
+    args0: [
+      {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }
+    ],
+    output: "Number",
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true
+  })
+  e.insertBlockProfile("lists_index_of", {
+    type: "lists_index_of",
+    message0: "%{BKY_GET_ARRAY_ITEM_INDEX}",
+    args0: [
+      {
+        type: "input_value",
+        name: "VALUE",
+        align: "CENTRE"
+      }, {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    output: "Number",
+    inputsInline: true
+  })
+  e.insertBlockProfile("lists_is_exist", {
+    type: "lists_is_exist",
+    message0: "%{BKY_CHECK_ITEM_IN_ARRAY}",
+    args0: [
+      {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }, {
+        type: "input_value",
+        name: "VALUE",
+        align: "CENTRE"
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    output: "Boolean",
+    inputsInline: true
+  })
+  e.insertBlockProfile("array_remove_item", {
+    type: "array_remove_item",
+    message0: "%{BKY_REMOVE_ARRAY_ITEM}",
+    args0: [
+      {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }, {
+        type: "field_coco_dropdown",
+        name: "ITEM_POS",
+        custom: true,
+        optOnchange: n,
+        options: function () {
+          return [[Blink.Msg.NTH, "nth"], [Blink.Msg.LAST_ITEM, "lastItem"], [Blink.Msg.ALL_ITEM, "allItem"]]
+        }
+      }
+    ],
+    message1: "%1",
+    args1: [
+      {
+        type: "input_value",
+        name: "INDEX",
+        check: ["Number"]
+      }
+    ],
+    message2: "%{BKY_ARRAY_ITEM} %1",
+    args2: [
+      {
+        type: "input_dummy",
+        name: "ITEM"
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    mutator: "ARRAY_ITEM_MUTATOR"
+  })
+  e.insertBlockProfile("lists_replace", {
+    type: "lists_replace",
+    message0: "%{BKY_LISTS_REPLACE}",
+    args0: [
+      {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }, {
+        type: "field_coco_dropdown",
+        name: "ITEM_POS",
+        custom: true,
+        optOnchange: n,
+        options: function () {
+          return [[Blink.Msg.NTH, "nth"], [Blink.Msg.LAST_ITEM, "lastItem"]]
+        }
+      }
+    ],
+    message1: "%1",
+    args1: [
+      {
+        type: "input_value",
+        name: "INDEX",
+        check: ["Number"]
+      }
+    ],
+    message2: "%{BKY_ARRAY_ITEM} %1",
+    args2: [
+      {
+        type: "input_dummy",
+        name: "ITEM"
+      }
+    ],
+    message3: "%{BKY_IS} %1",
+    args3: [
+      {
+        type: "input_value",
+        name: "VALUE"
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true,
+    previousStatement: true,
+    nextStatement: true,
+    mutator: "ARRAY_ITEM_MUTATOR"
+  })
+  e.insertBlockProfile("array_get_item", {
+    type: "array_get_item",
+    message0: "%1 %2",
+    args0: [
+      {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }, {
+        type: "field_coco_dropdown",
+        name: "ITEM_POS",
+        custom: true,
+        optOnchange: n,
+        options: function () {
+          return [[Blink.Msg.NTH, "nth"], [Blink.Msg.LAST_ITEM, "lastItem"]]
+        }
+      }
+    ],
+    message1: "%1",
+    args1: [
+      {
+        type: "input_value",
+        name: "INDEX",
+        check: ["Number"]
+      }
+    ],
+    message2: "%{BKY_ARRAY_ITEM} %1",
+    args2: [
+      {
+        type: "input_dummy",
+        name: "ITEM"
+      }
+    ],
+    colour: "%{BKY_LISTS_HUE}",
+    output: true,
+    inputsInline: true,
+    mutator: "ARRAY_ITEM_MUTATOR"
+  })
+  e.insertBlockProfile("array_current_item", {
+    type: "array_current_item",
+    message0: "%{BKY_ARRAY_CURRENT_ITEM}",
+    output: ["String", "Number", "Array", "Boolean"],
+    required_context: "array_foreach_DO",
+    colour: "%{BKY_PARAM_BLOCK_COLOR}",
+    extensions: ["param_block"]
+  })
+  e.insertBlockProfile("array_foreach", {
+    type: "array_foreach",
+    message0: "%{BKY_ARRAY_FOREACH}",
+    args0: [
+      {
+        type: "input_value",
+        name: "ARRAY",
+        check: ["Array"]
+      }, {
+        type: "input_value",
+        name: "ARRAY_CURRENT_ITEM",
+        default_shadow: "<shadow type=\"array_current_item\" />"
+      }, {
+        type: "input_dummy",
+        align: "CENTRE"
+      }, {
+        type: "input_statement",
+        name: "DO",
+        provided_context: "array_foreach_DO"
+      }
+    ],
+    previousStatement: true,
+    nextStatement: true,
+    colour: "%{BKY_LISTS_HUE}",
+    inputsInline: true
+  })
+}
+export function setBlockGroupXML(e) {
+  // [CoCo Next] 定义 [临时列表 array_create] 的XML
+  e.insertBlockXML("array_create", `<mutation items="1"></mutation>`, true)
+  e.insertBlockXML("lists_replace", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"1,,1\">1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n    ", true)
+  e.insertBlockXML("array_remove_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_get", undefined, true)
+  e.insertBlockXML("lists_append", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("lists_insert_value", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_copy", "\n    <value name=\"FROM\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"TO\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true)
+  e.insertBlockXML("array_get_item", "\n    <mutation pos='nth'></mutation>\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"INDEX\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints='1,,1'>1</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_get_length", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    ", true)
+  e.insertBlockXML("lists_index_of", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("lists_is_exist", "\n    <value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>\n    <value name=\"VALUE\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\">0</field>\n      </shadow>\n    </value>\n  ", true)
+  e.insertBlockXML("array_foreach", "<value name=\"ARRAY\">\n      <shadow type=\"array_get\"></shadow>\n    </value>", true)
+}
+export function setBlockGroupSnippet(e) {
+  e.insertBlockSnippetGenerator("array_get", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.getFieldValue(r, "ARRAY") || ""
+    return _.s("getVariableValue", [_.o(o)])
+  })
+  // [CoCo Next] 定义 [临时列表 array_create] 的代码生成器
+  e.insertBlockSnippetGenerator("array_create", function (t, n) {
+    for (var r = 0, o = "[";;) {
+      var i = e.valueToCode(t, n, "ITEM".concat(r), e.ORDER_FUNCTION_CALL);
+      if (!i) {
+        break;
+      }
+      o += `${i},`
+      r++;
+    }
+    o += "]"
+    var s = t.blocks[n]
+    return _.l(o, s, e, false, true)
+  })
+  var t = function (t, n) {
+    var r = $$_323.a(n)
+    var o = r.blockId && t.blocks[r.blockId]
+    return o && e.getFieldValue(o, "ARRAY") || ""
+  }
+  e.insertBlockSnippetGenerator("lists_append", function (n, r) {
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.l(_.n("pushArrayItem", [i, s, _.o(a)]), o, e)
+  })
+  e.insertBlockSnippetGenerator("lists_insert_value", function (n, r) {
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
+    var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
+    return _.l(_.n("insertArrayItemByIndex", [i, s, c + " - 1", _.o(a)]), o, e)
+  })
+  e.insertBlockSnippetGenerator("array_remove_item", function (n, r) {
+    var o = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var i = t(n, o)
+    var a = n.blocks[r]
+    var s = e.getFieldValue(a, "ITEM_POS") || ""
+    if ("nth" === s) {
+      var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
+      return _.l(_.n("removeArrayItemByIndex", [o, c + " - 1", _.o(i)]), a, e)
+    }
+    return "lastItem" === s ? _.l(_.n("removeLastArrayItem", [o, _.o(i)]), a, e) : _.l(_.n("removeAllArrayItem", [o, _.o(i)]), a, e)
+  })
+  e.insertBlockSnippetGenerator("lists_replace", function (n, r) {
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var a = t(n, i)
+    var s = e.getFieldValue(o, "ITEM_POS") || ""
+    var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
+    if ("nth" === s) {
+      var l = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
+      return _.l(_.n("setArrayItemByIndex", [i, c, l + " - 1", _.o(a)]), o, e)
+    }
+    return _.l(_.n("setArrayLastItem", [i, c, _.o(a)]), o, e)
+  })
+  e.insertBlockSnippetGenerator("array_copy", function (n, r) {
+    var o = n.blocks[r]
+    var i = e.valueToCode(n, r, "FROM", e.ORDER_FUNCTION_CALL)
+    var a = e.valueToCode(n, r, "TO", e.ORDER_FUNCTION_CALL)
+    return _.l(_.n("copyArray", [i, a, _.o(t(n, a))]), o, e)
+  })
+  e.insertBlockSnippetGenerator("array_get_item", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    if ("nth" === (e.getFieldValue(r, "ITEM_POS") || "")) {
+      var i = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL)
+      return _.l(_.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true)
+    }
+    return _.l(_.s("getArrayLastItem", [o]), r, e, false, true)
+  })
+  e.insertBlockSnippetGenerator("array_get_length", function (t, n) {
+    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    return _.s("getArrayLength", [r])
+  })
+  e.insertBlockSnippetGenerator("lists_index_of", function (t, n) {
+    var r = t.blocks[n]
+    var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.l(_.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true)
+  })
+  e.insertBlockSnippetGenerator("lists_is_exist", function (t, n) {
+    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
+    return _.s("checkItemInArray", [r, o])
+  })
+  e.insertBlockSnippetGenerator("array_current_item", function () {
+    return "arrayCurrentItem"
+  })
+  e.insertBlockSnippetGenerator("array_foreach", function (t, n) {
+    var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
+    var o = e.valueToCode(t, n, "ARRAY_CURRENT_ITEM", e.ORDER_FUNCTION_CALL)
+    var i = e.statementToCode(t, n, "DO")
+    return i ? _.l(_.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : ""
+  })
+}
+export function setBlockGroupExtra(Blink) {
+  // [CoCo Next] 定义用于 [临时列表 array_create] 积木的变形器 [ARRAY_CREATE_MUTATOR]
+  Blink.extensions.register_mutator("ARRAY_CREATE_MUTATOR", {
+    itemCount_: 0,
+    updateShape_() {
+      Blink.events.disable()
+      if (!this.get_input("TITLE")) {
+        this.append_dummy_input("TITLE").append_field(Blink.Msg.NEXT_MARK, "TEXT")
+        this.append_dummy_input("TITLE").append_field(Blink.Msg.LIST, "TEXT")
+      }
+      if (this.get_input("MUTATE_REMOVE_BUTTON")) {
+        this.remove_input("MUTATE_REMOVE_BUTTON");
+      }
+      if (this.get_input("MUTATE_ADD_BUTTON")) {
+        this.remove_input("MUTATE_ADD_BUTTON");
+      }
+      for (var t = this.itemCount_;; t++) {
+        var n = "ITEM".concat(t);
+        if (!this.get_input(n)) {
+          break;
+        }
+        this.remove_input(n);
+      }
+      for (var o = 0; o < this.itemCount_; o++) {
+        var i = "ITEM".concat(o);
+        if (!this.get_input(i)) {
+          var a = this.append_shadow_input(i, "<shadow type=\"text\"><field name=\"TEXT\">item".concat(o + 1, "</field></shadow>"));
+          a.set_check(["Number", "String", "Array", "Boolean", "Object"]);
+          if (0 !== o) {
+            a.append_field(",");
+          }
+        }
+      }
+      if (0 === this.itemCount_) {
+        if (this.get_input("MUTATE_REMOVE_BUTTON")) {
+          this.remove_input("MUTATE_REMOVE_BUTTON");
+        }
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+      } else {
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+      }
+      Blink.events.enable();
+    },
+    addMutation(t) {
+      if (Blink.events.is_undoing()) {
+        if ("number" === typeof t) {
+          this.itemCount_ = t;
+          this.updateShape_();
+        }
+      } else {
+        var n = this.itemCount_;
+        this.itemCount_++;
+        this.updateShape_();
+        var r = _.c("mutation", {
+          block: this,
+          old_value: n,
+          new_value: this.itemCount_
+        });
+        Blink.events.fire(r);
+      }
+    },
+    removeMutation(t) {
+      if (Blink.events.is_undoing()) {
+        if ("number" === typeof t) {
+          this.itemCount_ = t;
+          this.updateShape_();
+        }
+      } else {
+        var n = this.itemCount_;
+        this.itemCount_--;
+        this.updateShape_();
+        var r = _.c("mutation", {
+          block: this,
+          old_value: n,
+          new_value: this.itemCount_
+        });
+        Blink.events.fire(r);
+      }
+    },
+    mutationToDom() {
+      var e = document.createElement("mutation");
+      e.setAttribute("items", String(this.itemCount_));
+      return e;
+    },
+    domToMutation(e) {
+      this.itemCount_ = parseInt(e.getAttribute("items"), 10);
+      this.updateShape_();
+    }
+  })
+  Blink.extensions.register_mutator("ARRAY_ITEM_MUTATOR", {
+    updateShape_: function (t) {
+      var n = "add" === t
+      var r = this.get_input("INDEX")
+      if (n) {
+        if (!r) {
+          var o = this.get_input_index("VALUE")
+          var i = -1 === o ? o : 2
+          this.append_shadow_input("INDEX", ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, i).set_check("Number")
+          this.append_dummy_input("ITEM", i + 1).append_field(Blink.Msg.ARRAY_ITEM)
+        }
+      } else if (r) {
+        this.remove_input("INDEX")
+        this.remove_input("ITEM")
+      }
+    },
+    addMutation: function (t) {
+      var n = this
+      _.b.call(this, "INDEX", function () {
+        var t = n.get_input_index("VALUE")
+        var r = -1 === t ? 2 : t
+        var o = n.append_value_input("INDEX", r).set_check("Number")
+        n.append_dummy_input("ITEM", r + 1).append_field(Blink.Msg.ARRAY_ITEM)
+        return o
+      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, t)
+    },
+    removeMutation: function () {
+      var e = this
+      _.t.call(this, "INDEX", "NUM", function () {
+        e.remove_input("INDEX")
+        e.remove_input("ITEM")
+      })
+    },
+    domToMutation: function () {
+      var e
+      this.cacheId = {}
+      var t = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value()
+      this.updateShape_("nth" === t ? "add" : "remove")
+    },
+    mutationToDom: function () {
+      var e
+      var t = document.createElement("mutation")
+      var n = null === (e = this.get_field("ITEM_POS")) || undefined === e ? undefined : e.get_value()
+      t.setAttribute("pos", n || "")
+      return t
+    }
+  })
+}

@@ -1,0 +1,31 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1376
+ */
+
+"use strict"
+
+var r = require("../180")
+var i = require("../204")
+var o = function () {
+  function e(t) {
+    r(this, e)
+    this.prefix = String(t)
+    this.n = 0
+  }
+  i(e, [
+    {
+      key: "next",
+      value: function () {
+        this.n = 1 + this.n | 0
+        if (this.n < 0) {
+          this.n = 1
+        }
+        return this.prefix + this.n
+      }
+    }
+  ])
+  return e
+}()
+module.exports = o
