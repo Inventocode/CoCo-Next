@@ -1,0 +1,164 @@
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 52px;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    background: #6e4ff4;
+    z-index: 99
+}
+
+.header,.header .left {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center
+}
+
+.header .left {
+    padding-left: 18px
+}
+
+.header .left .logoImg {
+    width: 104px;
+    margin-right: 20px
+}
+
+.header .left .iconItem {
+    width: 54px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    font-size: 22px;
+    color: hsla(0,0%,100%,.6);
+    border-radius: 4px;
+    cursor: pointer
+}
+
+.header .left .iconItem:hover {
+    background: #5439ce
+}
+
+.header .left .iconItem .iconDown {
+    font-size: 10px;
+    margin-left: 4px;
+    -webkit-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8)
+}
+
+.header .userLogin {
+    width: 64px;
+    height: 52px;
+    line-height: 52px;
+    text-align: center;
+    color: hsla(0,0%,100%,.8);
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer
+}
+
+.header .userLogin:hover {
+    color: #fff;
+    background: #5439ce
+}
+
+.header .userInfo {
+    width: 64px;
+    height: 52px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    color: #fff
+}
+
+.header .userInfo .userAvatar {
+    margin-right: 6px;
+    display: inline-block;
+    cursor: pointer;
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background-position: 50%;
+    -webkit-background-size: cover;
+    background-size: cover;
+    margin-right: 7px
+}
+
+.header .userInfo .iconDown {
+    margin-right: 2px;
+    font-size: 10px;
+    color: hsla(0,0%,100%,.8);
+    -webkit-transform: scale(.8);
+    -o-transform: scale(.8);
+    transform: scale(.8)
+}
+
+.dropdown {
+    margin-top: -4px;
+    min-width: 124px;
+    padding: 10px 0;
+    color: #61626b;
+    background: #fff;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 0 10px 0 rgba(0,0,0,.15);
+    box-shadow: 0 0 10px 0 rgba(0,0,0,.15)
+}
+
+.dropdown .dropdownItem {
+    padding: 8px 20px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    cursor: pointer
+}
+
+.dropdown .dropdownItem:hover {
+    background: #f5f3fe
+}
+
+.dropdown .dropdownItem .subMenuArrow {
+    font-size: 8px;
+    margin-top: 1px;
+    -webkit-transform: rotate(270deg);
+    -o-transform: rotate(270deg);
+    transform: rotate(270deg)
+}
+
+.dropdown .disabled {
+    color: #ccc;
+    cursor: not-allowed
+}
+
+.agreementDropdown {
+    position: absolute;
+    right: 125px;
+    top: 0;
+    min-width: 180px
+}

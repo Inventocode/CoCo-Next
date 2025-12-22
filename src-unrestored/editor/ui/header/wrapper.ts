@@ -18,16 +18,16 @@ import { Gt } from "../../../../unrestored/shared/1571/2636/index__part-16"
 import { on } from "../../../../unrestored/shared/1571/2636/index__part-18"
 import { dn, pn, fn } from "../../../../unrestored/shared/1571/2636/index__part-20"
 import { gn } from "../../../../unrestored/shared/1571/2636/index__part-21"
-import * as Et from "../../../../unrestored/shared/1571/2636/9"
-import /* [auto-meaningful-name] */$_161 from "../../../../unrestored/shared/1571/2636/161"
-import * as /* [auto-meaningful-name] */$_276 from "../../../../unrestored/shared/1571/2636/276"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$_141_index from "../../../../unrestored/shared/1571/2636/141/index"
-import * as te from "../../../../unrestored/shared/1571/2636/15"
-import * as Z from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$_454_index from "../../../../unrestored/shared/1571/2636/454/index"
-import * as K from "../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_161 from "../../../../unrestored/shared/1571/2636/161"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_276 from "../../../../unrestored/shared/1571/2636/276"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_load from "../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454_index from "../../../../unrestored/shared/1571/2636/454/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_events_messagesWrapper from "../../../shared/events/messages-wrapper"
 import * as /* [auto-meaningful-name] */$_13_index from "../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$_627 from "../../../../unrestored/shared/1571/2636/627"
 import N from "../../../../unrestored/shared/1571/2636/8"
@@ -69,11 +69,11 @@ var yn = function () {
     try {
       for (t.s(); !(e = t.n()).done;) {
         var /* [auto-meaningful-name] */e$value = e.value
-        if (e$value.prod_capacity >= Et.a * Et.c) {
+        if (e$value.prod_capacity >= $$_$$_$$_$$_unrestored_shared_1571_2636_9.a * $$_$$_$$_$$_unrestored_shared_1571_2636_9.c) {
           d(true)
           break
         }
-        if (e$value.prod_capacity >= Et.b * Et.c) {
+        if (e$value.prod_capacity >= $$_$$_$$_$$_unrestored_shared_1571_2636_9.b * $$_$$_$$_$$_unrestored_shared_1571_2636_9.c) {
           s(true)
         }
       }
@@ -87,11 +87,11 @@ var yn = function () {
     try {
       for (a.s(); !(i = a.n()).done;) {
         var /* [auto-meaningful-name] */i$value = i.value
-        if (i$value.prod_capacity >= Et.a * Et.d) {
+        if (i$value.prod_capacity >= $$_$$_$$_$$_unrestored_shared_1571_2636_9.a * $$_$$_$$_$$_unrestored_shared_1571_2636_9.d) {
           d(true)
           break
         }
-        if (i$value.prod_capacity >= Et.b * Et.d) {
+        if (i$value.prod_capacity >= $$_$$_$$_$$_unrestored_shared_1571_2636_9.b * $$_$$_$$_$$_unrestored_shared_1571_2636_9.d) {
           s(true)
         }
       }
@@ -101,7 +101,7 @@ var yn = function () {
       a.f()
     }
   }, [n, r])
-  if (t.cloudSpaceManager === K.j.Hide) {
+  if (t.cloudSpaceManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide) {
     return null
   }
   var p = $_710_index$a$formatMessage(u ? {
@@ -121,7 +121,7 @@ var yn = function () {
     }
   }, React.createElement("div", {
     onClick: function () {
-      window.open("".concat(te.A(), "/"), "_blank")
+      window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.A(), "/"), "_blank")
     },
     className: N(_$_.cloudSpaceManager)
   }, p === $_710_index$a$formatMessage({
@@ -200,7 +200,7 @@ var En = React.memo(function (e) {
   var W = $_16_index.e(function (e) {
     return e.project.jsonFrom
   })
-  var U = Z.a(P)
+  var U = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(P)
   var V = _React.useRef(null)
   var X = _React.useRef(null)
   var J = _React.useRef(null)
@@ -215,7 +215,7 @@ var En = React.memo(function (e) {
   var ae = $_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
-  var le = undefined !== te.N(window.location.href).archiveId
+  var le = undefined !== $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href).archiveId
   _React.useEffect(function () {
     re(false)
   }, [P])
@@ -262,8 +262,8 @@ var En = React.memo(function (e) {
       }
       document.body.setAttribute("style", n)
     }()
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.Tf())
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.Xf())
+    n($$_$$_$$_shared_events_messagesWrapper.Tf())
+    n($$_$$_$$_shared_events_messagesWrapper.Xf())
   }, [n])
   var _e = function () {
     var e = O.a(RegeneratorRuntime.mark(function e() {
@@ -275,14 +275,14 @@ var En = React.memo(function (e) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+              n($$_$$_$$_shared_events_messagesWrapper.Ch())
               return e.abrupt("return")
             case 3:
               if (!T$isPackaging) {
                 e.next = 6
                 break
               }
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              n($$_$$_$$_shared_events_messagesWrapper.mj({
                 message: $_710_index$a$formatMessage({
                   id: "package.packagePending"
                 }),
@@ -292,7 +292,7 @@ var En = React.memo(function (e) {
             case 6:
               e.prev = 6
               e.next = 9
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(n, $$_$$_$$_$$_src_shared_events_messagesWrapper.Vf())
+              return $$_$$_$$_shared_events_messagesWrapper.Nf(n, $$_$$_$$_shared_events_messagesWrapper.Vf())
             case 9:
               e.next = 14
               break
@@ -327,7 +327,7 @@ var En = React.memo(function (e) {
               }
               p.current = null
               if (e$sent) {
-                n($$_$$_$$_$$_src_shared_events_messagesWrapper.dj(K.j.Hide))
+                n($$_$$_$$_shared_events_messagesWrapper.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
                 setTimeout(function () {
                   return Oe()
                 }, 100)
@@ -348,7 +348,7 @@ var En = React.memo(function (e) {
       p.current()
     }
     p.current = null
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.dj(K.j.Hide))
+    n($$_$$_$$_shared_events_messagesWrapper.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
     setTimeout(function () {
       return Oe()
     }, 100)
@@ -363,7 +363,7 @@ var En = React.memo(function (e) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ri({
+              n($$_$$_$$_shared_events_messagesWrapper.Ri({
                 visible: true,
                 openFrom: "backHome",
                 onSave: ve,
@@ -384,7 +384,7 @@ var En = React.memo(function (e) {
               }
               return e.abrupt("return")
             case 9:
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.dj(K.j.Hide))
+              n($$_$$_$$_shared_events_messagesWrapper.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
               setTimeout(function () {
                 return Oe()
               }, 100)
@@ -400,7 +400,7 @@ var En = React.memo(function (e) {
     }
   }()
   var Oe = function () {
-    window.location.href = te.B()
+    window.location.href = $$_$$_$$_$$_unrestored_shared_1571_2636_15.B()
   }
   var we = _React.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t, o) {
@@ -413,7 +413,7 @@ var En = React.memo(function (e) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+              n($$_$$_$$_shared_events_messagesWrapper.Ch())
               return e.abrupt("return")
             case 3:
               if (!g) {
@@ -427,21 +427,21 @@ var En = React.memo(function (e) {
               }
               if (!t) {
                 J.current = window.setTimeout(function () {
-                  n($$_$$_$$_$$_src_shared_events_messagesWrapper.Qi(true))
+                  n($$_$$_$$_shared_events_messagesWrapper.Qi(true))
                 }, 6e3)
               }
               s(false)
               i = true
               e.prev = 9
               e.next = 12
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(n, $$_$$_$$_$$_src_shared_events_messagesWrapper.tg({
+              return $$_$$_$$_shared_events_messagesWrapper.Nf(n, $$_$$_$$_shared_events_messagesWrapper.tg({
                 isUpdate: U,
                 isAutoSave: t,
                 isNeedReport: o
               }))
             case 12:
               if (!t) {
-                n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                n($$_$$_$$_shared_events_messagesWrapper.mj({
                   message: $_710_index$a$formatMessage({
                     id: "saveProject.successTips"
                   }),
@@ -454,11 +454,11 @@ var En = React.memo(function (e) {
             case 16:
               e.prev = 16
               e.t0 = e.catch(9)
-              if (e.t0.message === $_276.a.CLOUD_SPACE_DATA_ERROR) {
-                n($$_$$_$$_$$_src_shared_events_messagesWrapper.Cf(true))
+              if (e.t0.message === $$_$$_$$_$$_unrestored_shared_1571_2636_276.a.CLOUD_SPACE_DATA_ERROR) {
+                n($$_$$_$$_shared_events_messagesWrapper.Cf(true))
                 ce(true)
               } else {
-                if (e.t0.message !== $_276.a.USER_CANCEL_SAVE && e.t0.message !== $_276.a.USER_NOT_LOGIN) {
+                if (e.t0.message !== $$_$$_$$_$$_unrestored_shared_1571_2636_276.a.USER_CANCEL_SAVE && e.t0.message !== $$_$$_$$_$$_unrestored_shared_1571_2636_276.a.USER_NOT_LOGIN) {
                   if (t) {
                     fe(true)
                   } else {
@@ -466,12 +466,12 @@ var En = React.memo(function (e) {
                   }
                 }
               }
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.Si(false))
+              n($$_$$_$$_shared_events_messagesWrapper.Si(false))
               i = false
             case 21:
               if (J.current) {
                 clearTimeout(J.current)
-                n($$_$$_$$_$$_src_shared_events_messagesWrapper.Qi(false))
+                n($$_$$_$$_shared_events_messagesWrapper.Qi(false))
               }
               return e.abrupt("return", i)
             case 23:
@@ -492,7 +492,7 @@ var En = React.memo(function (e) {
         X.current = null
       }
     }
-    if (ge || oe.save === K.j.Hide || oe.save === K.j.ReadOnly) {
+    if (ge || oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide || oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly) {
       e()
     } else if (U && M) {
       if (!X.current) {
@@ -520,7 +520,7 @@ var En = React.memo(function (e) {
                     e.next = 2
                     return we(true)
                   case 2:
-                    n($$_$$_$$_$$_src_shared_events_messagesWrapper.sg(me))
+                    n($$_$$_$$_shared_events_messagesWrapper.sg(me))
                   case 3:
                   case "end":
                     return e.stop()
@@ -529,7 +529,7 @@ var En = React.memo(function (e) {
             }, e)
           }))()
         } else {
-          n($$_$$_$$_$$_src_shared_events_messagesWrapper.sg(me))
+          n($$_$$_$$_shared_events_messagesWrapper.sg(me))
         }
       }
     }
@@ -537,33 +537,33 @@ var En = React.memo(function (e) {
   _React.useEffect(function () {
     if (he && M) {
       we(true).then(function () {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.di(false))
+        n($$_$$_$$_shared_events_messagesWrapper.di(false))
       }).catch(function (e) {
         console.error(e)
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.di(false))
+        n($$_$$_$$_shared_events_messagesWrapper.di(false))
       })
     }
   }, [M, we, he, n])
   var Ce = function (e) {
     switch (e) {
       case "EXPORT_PROJECT_AS_JSON":
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.Of(true))
-        $_141_index.a("SaveToComputerClick", {
+        n($$_$$_$$_shared_events_messagesWrapper.Of(true))
+        $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("SaveToComputerClick", {
           workId: P,
           workName: F
         })
         break
       case "CREATE_NEW_PROJECT":
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ah(K.f.CREATE_PROJECT))
+        n($$_$$_$$_shared_events_messagesWrapper.Ah($$_$$_$$_$$_unrestored_shared_1571_2636_18.f.CREATE_PROJECT))
         break
       case "OPEN_MY_PROJECT":
         if (!m) {
-          return void n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+          return void n($$_$$_$$_shared_events_messagesWrapper.Ch())
         }
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ah(K.f.MY_PROJECT))
+        n($$_$$_$$_shared_events_messagesWrapper.Ah($$_$$_$$_$$_unrestored_shared_1571_2636_18.f.MY_PROJECT))
         break
       case "SAVE_AS":
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.tg({
+        n($$_$$_$$_shared_events_messagesWrapper.tg({
           isUpdate: false,
           isAutoSave: false,
           isNeedReport: true,
@@ -571,16 +571,16 @@ var En = React.memo(function (e) {
         }))
         break
       case "HISTORY":
-        return void n($$_$$_$$_$$_src_shared_events_messagesWrapper.tj(true))
+        return void n($$_$$_$$_shared_events_messagesWrapper.tj(true))
       case "IMPORT_EXTENSION_WIDGET":
         break
       case "OPEN_LOCAL_FILE":
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.Gi(false))
+        n($$_$$_$$_shared_events_messagesWrapper.Gi(false))
     }
   }
   var Te = _React.useCallback(function (e) {
     if (M) {
-      n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ri({
+      n($$_$$_$$_shared_events_messagesWrapper.Ri({
         visible: true,
         openFrom: "",
         onSave: function () {
@@ -615,13 +615,13 @@ var En = React.memo(function (e) {
         }
       }))
       p.current = function () {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf(e))
+        n($$_$$_$$_shared_events_messagesWrapper.Gf(e))
       }
     } else {
-      n($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf(e))
+      n($$_$$_$$_shared_events_messagesWrapper.Gf(e))
     }
-    var t = (null === e || undefined === e ? undefined : e.editPermission) === K.c.ReadOnly ? K.c.ReadOnly : K.c.Edit
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ci(t))
+    var t = (null === e || undefined === e ? undefined : e.editPermission) === $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly ? $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly : $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
+    n($$_$$_$$_shared_events_messagesWrapper.Ci(t))
   }, [n, we, M])
   var Se = function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
@@ -637,7 +637,7 @@ var En = React.memo(function (e) {
               }
               n = t[0]
               e.next = 4
-              return $_454_index.i(n)
+              return $$_$$_$$_$$_unrestored_shared_1571_2636_454_index.i(n)
             case 4:
               if (e$sent = e.sent) {
                 e.next = 8
@@ -649,10 +649,10 @@ var En = React.memo(function (e) {
               Te({
                 json: e$sent,
                 isAuthor: true,
-                sourceTag: K.g.LOCAL,
-                jsonFrom: K.d.LOCAL_FILE
+                sourceTag: $$_$$_$$_$$_unrestored_shared_1571_2636_18.g.LOCAL,
+                jsonFrom: $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE
               })
-              $_141_index.a("OpenComputerFileClick")
+              $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("OpenComputerFileClick")
             case 10:
             case "end":
               return e.stop()
@@ -665,7 +665,7 @@ var En = React.memo(function (e) {
     }
   }()
   var Ae = function () {
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.Gi(true))
+    n($$_$$_$$_shared_events_messagesWrapper.Gi(true))
   }
   var Ie = function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
@@ -683,11 +683,11 @@ var En = React.memo(function (e) {
               o = t[0]
               e.prev = 2
               e.next = 5
-              return $$_$$_$$_$$_src_shared_widget_custom_load.t(o, false)
+              return $$_$$_$$_shared_widget_custom_load.t(o, false)
             case 5:
               e$sent = e.sent
               e$sent$title = e$sent.title
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              n($$_$$_$$_shared_events_messagesWrapper.mj({
                 message: $_710_index$a$formatMessage({
                   id: "HeaderDropdown.importExtensionSuccess"
                 }, {
@@ -716,15 +716,15 @@ var En = React.memo(function (e) {
     if (!L) {
       switch (e) {
         case "STAGE_RULER":
-          n($$_$$_$$_$$_src_shared_events_messagesWrapper.Wi(!y))
+          n($$_$$_$$_shared_events_messagesWrapper.Wi(!y))
           break
         case "STAGE_AREA":
-          n($$_$$_$$_$$_src_shared_events_messagesWrapper.Yi(!w))
+          n($$_$$_$$_shared_events_messagesWrapper.Yi(!w))
       }
     }
   }
   _React.useEffect(function () {
-    if (oe.preventLeave === K.j.Show) {
+    if (oe.preventLeave === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) {
       window.onbeforeunload = function (e) {
         if (e) {
           e.returnValue = "你要离开网页吗？"
@@ -738,9 +738,9 @@ var En = React.memo(function (e) {
   _React.useEffect(function () {
     window.addEventListener("message", Q.handle)
   }, [n])
-  var Ne = oe.file.openLocalFile === K.j.Show
-  var Re = oe.file.exportLocalFile === K.j.Show && v
-  var ke = oe.file.saveAs === K.j.Show && v
+  var Ne = oe.file.openLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show
+  var Re = oe.file.exportLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v
+  var ke = oe.file.saveAs === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v
   var xe = function () {
     var e = O.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
@@ -751,14 +751,14 @@ var En = React.memo(function (e) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              n($$_$$_$$_shared_events_messagesWrapper.mj({
                 message: $_710_index$a$formatMessage({
                   id: "coursePlayingTips"
                 })
               }))
               return e.abrupt("return")
             case 3:
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.fi(true))
+              n($$_$$_$$_shared_events_messagesWrapper.fi(true))
             case 4:
             case "end":
               return e.stop()
@@ -771,14 +771,14 @@ var En = React.memo(function (e) {
     }
   }()
   var De = function () {
-    window.open("".concat(te.B(), "/about/"), "_blank")
+    window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.B(), "/about/"), "_blank")
   }
   return React.createElement("div", {
-    className: $_161.wrapper,
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.wrapper,
     "data-html2canvas-ignore": "true"
   }, React.createElement("div", {
-    className: $_161.left
-  }, !le && oe.logo !== K.j.Hide && React.createElement($_748_index.a, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.left
+  }, !le && oe.logo !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide && React.createElement($_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
     title: $_710_index$a$formatMessage({
@@ -789,46 +789,46 @@ var En = React.memo(function (e) {
       top: -7
     }
   }, React.createElement("div", {
-    className: $_161.logoBox,
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.logoBox,
     id: "logo",
     onClick: Ee
   }, React.createElement($_13_index.j, {
     type: "icon-dropdown-down",
-    className: $_161.back
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.back
   }), React.createElement("div", {
-    className: $_161.logo
-  }))), !le && oe.cutLine === K.j.Show && React.createElement("div", {
-    className: $_161.logoCutLine
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.logo
+  }))), !le && oe.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.logoCutLine
   }), React.createElement("div", {
-    className: $_161.menu
-  }, Object.values(oe.file).includes(K.j.Show) && !le && React.createElement($_13_index.g, {
-    className: $_161.fileDropdown,
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.menu
+  }, Object.values(oe.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($_13_index.g, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.fileDropdown,
     overlay: React.createElement($_13_index.l, {
       onClick: Ce
-    }, oe.file.newProject === K.j.Show && React.createElement($_13_index.m, {
+    }, oe.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "CREATE_NEW_PROJECT"
     }, React.createElement("div", {
-      className: $_161.itemContent
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
     }, $_710_index$a$formatMessage({
       id: "HeaderDropdown.newProject"
-    }))), oe.file.openMyProject === K.j.Show && React.createElement($_13_index.m, {
+    }))), oe.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "OPEN_MY_PROJECT"
     }, React.createElement("div", {
-      className: $_161.itemContent
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
     }, $_710_index$a$formatMessage({
       id: "HeaderDropdown.openProject"
     }))), ke && React.createElement($_13_index.m, {
       value: "SAVE_AS"
     }, React.createElement("div", {
-      className: $_161.itemContent
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
     }, $_710_index$a$formatMessage({
       id: "HeaderDropdown.saveAs"
     }))), React.createElement("div", {
-      className: $_161.line
-    }), oe.file.showHistory === K.j.Show && v && React.createElement($_13_index.m, {
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.line
+    }), oe.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($_13_index.m, {
       value: "HISTORY"
     }, React.createElement("div", {
-      className: $_161.itemContent
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
     }, $_710_index$a$formatMessage({
       id: "HeaderDropdown.history"
     }))), !ge && React.createElement($_13_index.m, {
@@ -836,24 +836,24 @@ var En = React.memo(function (e) {
     }, React.createElement($_13_index.B, {
       onChange: Ie,
       accept: ".js,.jsx",
-      className: N($_161.itemUploadButton)
+      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemUploadButton)
     }, $_710_index$a$formatMessage({
       id: "HeaderDropdown.importExtension"
     }))), (Re || Re) && React.createElement("div", {
-      className: $_161.line
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.line
     }), Ne && React.createElement($_13_index.m, {
       value: "OPEN_LOCAL_FILE"
     }, React.createElement($_13_index.B, {
       onChange: Se,
       onCancel: Ae,
       accept: ".json",
-      className: N($_161.itemUploadButton)
+      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemUploadButton)
     }, $_710_index$a$formatMessage({
       id: "HeaderDropdown.openLocalFile"
     }))), Re && React.createElement($_13_index.m, {
       value: "EXPORT_PROJECT_AS_JSON"
     }, React.createElement("div", {
-      className: $_161.itemContent
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
     }, $_710_index$a$formatMessage({
       id: "HeaderDropdown.exportProjectAsJson"
     }))))
@@ -870,62 +870,62 @@ var En = React.memo(function (e) {
       left: "5px"
     }
   }, React.createElement("div", {
-    className: $_161.toolTipsBox
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.toolTipsBox
   }, React.createElement($_13_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-file"
-  })))), Object.values(oe.tutorial).includes(K.j.Show) && !le && React.createElement($_13_index.g, {
-    overlay: React.createElement($_13_index.l, null, oe.tutorial.releaseInfo === K.j.Show && React.createElement($_13_index.m, {
+  })))), Object.values(oe.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($_13_index.g, {
+    overlay: React.createElement($_13_index.l, null, oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "courseVideo"
     }, React.createElement("div", {
-      className: $_161.itemLinkContent,
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent,
       onClick: xe
     }, React.createElement("span", {
-      className: $_161.link
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
     }, $_710_index$a$formatMessage({
       id: "courseVideo"
-    })))), oe.tutorial.tutorial === K.j.Show && React.createElement($_13_index.m, {
+    })))), oe.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "tutorial"
     }, React.createElement("div", {
-      className: $_161.itemLinkContent
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent
     }, React.createElement("a", {
       href: "https://codemao-guide.yuque.com/bfiekm/sbo5kh",
       target: "_blank",
       rel: "noopener noreferrer",
-      className: $_161.link
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
     }, $_710_index$a$formatMessage({
       id: "seeTutorial"
     })))), React.createElement("div", {
-      className: $_161.line
-    }), oe.tutorial.feedback === K.j.Show && React.createElement($_13_index.m, {
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.line
+    }), oe.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "feedback"
     }, React.createElement("div", {
-      className: $_161.itemLinkContent
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent
     }, React.createElement("a", {
       href: "https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd",
       target: "_blank",
       rel: "noopener noreferrer",
-      className: $_161.link
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
     }, $_710_index$a$formatMessage({
       id: "feedback"
-    })))), oe.tutorial.releaseInfo === K.j.Show && React.createElement($_13_index.m, {
+    })))), oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "releaseInfo"
     }, React.createElement("div", {
-      className: $_161.itemLinkContent,
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent,
       onClick: function () {
-        return n($$_$$_$$_$$_src_shared_events_messagesWrapper.vj(true))
+        return n($$_$$_$$_shared_events_messagesWrapper.vj(true))
       }
     }, React.createElement("span", {
-      className: $_161.link
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
     }, $_710_index$a$formatMessage({
       id: "releaseInfo"
-    })))), oe.tutorial.about === K.j.Show && React.createElement($_13_index.m, {
+    })))), oe.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "aboutUs"
     }, React.createElement("div", {
-      className: $_161.itemLinkContent,
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent,
       onClick: De
     }, React.createElement("span", {
-      className: $_161.link
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
     }, $_710_index$a$formatMessage({
       id: "aboutUs"
     })))))
@@ -942,25 +942,25 @@ var En = React.memo(function (e) {
       left: "5px"
     }
   }, React.createElement("div", {
-    className: $_161.toolTipsBox
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.toolTipsBox
   }, React.createElement($_13_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-help-circle-active"
-  })))), Object.values(oe.help).includes(K.j.Show) && !le && React.createElement($_13_index.g, {
+  })))), Object.values(oe.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($_13_index.g, {
     overlay: React.createElement($_13_index.l, {
       onClick: je
-    }, oe.help.ruler === K.j.Show && React.createElement($_13_index.m, {
+    }, oe.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "STAGE_RULER"
     }, React.createElement("div", {
-      className: N($_161.itemContent, L && $_161.disabled)
+      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent, L && $$_$$_$$_$$_unrestored_shared_1571_2636_161.disabled)
     }, $_710_index$a$formatMessage(y ? {
       id: "HeaderDropdown.hideRuler"
     } : {
       id: "HeaderDropdown.showRuler"
-    }))), oe.help.stage === K.j.Show && React.createElement($_13_index.m, {
+    }))), oe.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
       value: "STAGE_AREA"
     }, React.createElement("div", {
-      className: N($_161.itemContent, L && $_161.disabled)
+      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent, L && $$_$$_$$_$$_unrestored_shared_1571_2636_161.disabled)
     }, $_710_index$a$formatMessage(w ? {
       id: "HeaderDropdown.hideWidgetAndStage"
     } : {
@@ -979,11 +979,11 @@ var En = React.memo(function (e) {
       left: "5px"
     }
   }, React.createElement("div", {
-    className: $_161.toolTipsBox
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.toolTipsBox
   }, React.createElement($_13_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-settings"
-  }))))), !le && oe.cloudDBManager === K.j.Show && React.createElement($_748_index.a, {
+  }))))), !le && oe.cloudDBManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
     title: $_710_index$a$formatMessage({
@@ -995,21 +995,21 @@ var En = React.memo(function (e) {
       top: -7
     }
   }, React.createElement("div", {
-    className: N($_161.iconWrapper, $_161.cloudIconWrapper, C && $_161.activeIconWrapper),
+    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.iconWrapper, $$_$$_$$_$$_unrestored_shared_1571_2636_161.cloudIconWrapper, C && $$_$$_$$_$$_unrestored_shared_1571_2636_161.activeIconWrapper),
     onClick: function () {
-      n(m ? $$_$$_$$_$$_src_shared_events_messagesWrapper.jj(true) : $$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+      n(m ? $$_$$_$$_shared_events_messagesWrapper.jj(true) : $$_$$_$$_shared_events_messagesWrapper.Ch())
     }
   }, React.createElement($_13_index.j, {
     type: "icon-database-manage-active",
-    className: $_161.databaseIcon
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.databaseIcon
   }))), React.createElement(yn, null)), React.createElement("div", {
-    className: $_161.center
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.center
   }, e$children), React.createElement("div", {
-    className: $_161.right
-  }, !le && oe.coll === K.j.Show && React.createElement("div", {
-    className: $_161.otWrapper
-  }, React.createElement(St, null)), !le && oe.package === K.j.Show && v && React.createElement($_13_index.g, {
-    className: $_161.shareMenu,
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.right
+  }, !le && oe.coll === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.otWrapper
+  }, React.createElement(St, null)), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($_13_index.g, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.shareMenu,
     overlay: React.createElement($_13_index.l, null, React.createElement($_13_index.m, null, React.createElement(on, {
       target: "community"
     })), React.createElement($_13_index.m, null, React.createElement(on, {
@@ -1027,13 +1027,13 @@ var En = React.memo(function (e) {
       top: -4
     }
   }, React.createElement("div", {
-    className: N($_161.shareWrapper)
+    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.shareWrapper)
   }, React.createElement($_13_index.j, {
     type: "icon-share",
-    className: $_161.icon
-  })))), !le && oe.cutLine === K.j.Show && React.createElement("div", {
-    className: $_161.cutLine
-  }), !le && oe.save === K.j.Show && React.createElement($_748_index.a, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.icon
+  })))), !le && oe.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.cutLine
+  }), !le && oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_748_index.a, {
     placement: "bottom",
     title: function () {
       if (!D) {
@@ -1044,9 +1044,9 @@ var En = React.memo(function (e) {
       var e = D
       var t = Date.now()
       var n = t - e
-      var o = te.G(t, 0)
-      var i = te.G(t, -1)
-      var a = te.G(t, -2)
+      var o = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, 0)
+      var i = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, -1)
+      var a = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, -2)
       var s = new Date(e)
       var c = ""
       var l = "".concat($_710_index$a$formatMessage({
@@ -1084,12 +1084,12 @@ var En = React.memo(function (e) {
       } else if (e > i) {
         c = l + (c = $_710_index$a$formatMessage({
           id: "MyProject.yesterday"
-        }) + te.K(s))
+        }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
       } else {
         if (e > a) {
           c = l + (c = $_710_index$a$formatMessage({
             id: "MyProject.theDayBeforeYesterday"
-          }) + te.K(s))
+          }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
         } else {
           c = "".concat(s.getFullYear()).concat($_710_index$a$formatMessage({
             id: "MyProject.year"
@@ -1113,27 +1113,27 @@ var En = React.memo(function (e) {
     onClick: function () {
       we(false, true)
     },
-    className: N($_161.saveBtn, g && $_161.saving)
+    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.saveBtn, g && $$_$$_$$_$$_unrestored_shared_1571_2636_161.saving)
   }, React.createElement("span", {
-    className: $_161.saveText
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.saveText
   }, $_710_index$a$formatMessage({
     id: "save"
   })), React.createElement("span", {
-    className: $_161.savingIcon
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.savingIcon
   }, React.createElement(Ge, {
     stroke: "#6e4ff4"
-  })))), !le && oe.package === K.j.Show && v && React.createElement($_13_index.d, {
-    className: $_161.packageBtn,
+  })))), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($_13_index.d, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.packageBtn,
     onClick: _e,
     disabled: T$isPackaging
   }, $_710_index$a$formatMessage({
     id: "package"
-  })), T$packageDialogVisible && React.createElement(Dt, null), T$packageQrCodeVisible && React.createElement(Gt, null), !le && oe.userInfo === K.j.Show && React.createElement(Ze, null), React.createElement("div", {
-    className: N($_161.saveTipsWrapper, W !== K.d.OTHER && ne && !U && $_161.show)
+  })), T$packageDialogVisible && React.createElement(Dt, null), T$packageQrCodeVisible && React.createElement(Gt, null), !le && oe.userInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement(Ze, null), React.createElement("div", {
+    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.saveTipsWrapper, W !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER && ne && !U && $$_$$_$$_$$_unrestored_shared_1571_2636_161.show)
   }, $_710_index$a$formatMessage({
     id: "MyProject.newSaveTips"
   }), React.createElement("div", {
-    className: $_161.closeSaveTips,
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.closeSaveTips,
     onClick: function () {
       return re(false)
     }

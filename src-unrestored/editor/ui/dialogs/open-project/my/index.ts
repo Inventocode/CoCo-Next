@@ -10,16 +10,16 @@ import { ne } from "../../../../../../unrestored/shared/1571/2636/index__part-4"
 import { de } from "../../../../../../unrestored/shared/1571/2636/index__part-5"
 import { we } from "../../../../../../unrestored/shared/1571/2636/index__part-6"
 var Oe
-import * as /* [auto-meaningful-name] */$_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$_190 from "../../../../../../unrestored/shared/1571/2636/190"
-import * as /* [auto-meaningful-name] */$_297 from "../../../../../../unrestored/shared/1571/2636/297"
-import * as te from "../../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
-import * as K from "../../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../shared/events/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
-import N from "../../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../../../unrestored/shared/1571/2636/297"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_events_messagesWrapper from "../../../../../shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$_710_index from "../../../../../../unrestored/shared/1571/2636/710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../../shared/ui/language"
@@ -73,7 +73,7 @@ function Ne(e) {
     return e
   }
   return React.createElement("div", {
-    className: N(_$_.item),
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$_.item),
     onClick: function () {
       e$onClick(e$project.id, e$project.name, e$project.updateTime)
     },
@@ -83,7 +83,7 @@ function Ne(e) {
   }, React.createElement("img", {
     src: null === (t = e$project.coverUrl || e$project.previewUrl) || undefined === t ? undefined : t.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/"),
     alt: e$project.name
-  })), React.createElement($_13_index.a, {
+  })), React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.a, {
     className: _$_.name,
     text: e$project.name
   }), React.createElement("p", {
@@ -96,34 +96,34 @@ function Ne(e) {
     onClick: function (e) {
       e.stopPropagation()
     }
-  }, React.createElement($_1213.a, {
+  }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a, {
     placement: "rightTop",
     trigger: "click",
     overlayClassName: _$_.menuPopover,
     zIndex: 100,
     content: React.createElement("div", {
       className: _$_.menuContent
-    }, React.createElement($_13_index.l, {
+    }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
       onClick: function (e) {
         if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
           e$onDelete(e$project.id, e$project.name, e$project.isCollWork || e$filterType === Oe.COLL)
         }
       }
     }, c().map(function (e, t) {
-      return React.createElement($_13_index.m, {
+      return React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
         value: e,
         key: t
       }, React.createElement("span", null, $_710_index$a$formatMessage({
         id: "MyProject." + e
       })))
     })))
-  }, React.createElement("div", null, React.createElement($_13_index.j, {
+  }, React.createElement("div", null, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-more"
   })))), React.createElement("div", {
     className: _$_.badgeWrapper
-  }, (e$project.isCollWork || e$filterType === Oe.COLL) && "loaded" === e$status && React.createElement($_13_index.j, {
+  }, (e$project.isCollWork || e$filterType === Oe.COLL) && "loaded" === e$status && React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-collaborator"
-  }), !!e$project.publishedTime && React.createElement($_13_index.j, {
+  }), !!e$project.publishedTime && React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-publish"
   })))
 }
@@ -166,7 +166,7 @@ var Re = _React.memo(function (e) {
             case 0:
               e.prev = 0
               e.next = 3
-              return $_297.d(t)
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.d(t)
             case 3:
               if (e$sent = e.sent, !(e$sent$data = e$sent.data)) {
                 e.next = 16
@@ -179,13 +179,13 @@ var Re = _React.memo(function (e) {
                 e.next = 12
                 break
               }
-              w($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+              w($$_$$_$$_$$_$$_shared_events_messagesWrapper.zh({
                 allowText: $_710_index$a$formatMessage({
                   id: "know"
                 }),
                 title: "",
                 content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: te.b,
+                  href: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
                 }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
@@ -200,9 +200,9 @@ var Re = _React.memo(function (e) {
                 isCollWork: e$sent$data.is_coll_work,
                 isAuthor: e$sent$data.is_author,
                 editPermission: e$sent$data.edit_permission,
-                jsonFrom: e$sent$data.is_coll_work ? K.d.OTHER : K.d.MY_WORK
+                jsonFrom: e$sent$data.is_coll_work ? $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER : $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.d.MY_WORK
               })
-              $_141_index.a("OpenWork", {
+              $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("OpenWork", {
                 workId: t,
                 workType: b === Oe.COLL ? 2 : 1,
                 isSuccess: true,
@@ -211,7 +211,7 @@ var Re = _React.memo(function (e) {
               e.next = 17
               break
             case 16:
-              w($$_$$_$$_$$_src_shared_events_messagesWrapper.Uf({
+              w($$_$$_$$_$$_$$_shared_events_messagesWrapper.Uf({
                 code: e$sent.code
               }))
             case 17:
@@ -221,14 +221,14 @@ var Re = _React.memo(function (e) {
               e.prev = 19
               e.t0 = e.catch(0)
               console.error("getProjectJson error", e.t0)
-              $_141_index.a("OpenWork", {
+              $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("OpenWork", {
                 workId: t,
                 workType: b === Oe.COLL ? 2 : 1,
                 isSuccess: false,
                 failReason: e.t0.message
               })
             case 23:
-              w($$_$$_$$_$$_src_shared_events_messagesWrapper.Xg())
+              w($$_$$_$$_$$_$$_shared_events_messagesWrapper.Xg())
             case 24:
             case "end":
               return e.stop()
@@ -324,12 +324,12 @@ var Re = _React.memo(function (e) {
               return e.abrupt("return", t)
             case 2:
               e.next = 4
-              return $_297.c(C.current, 20, n)
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.c(C.current, 20, n)
             case 4:
               e$sent = e.sent
               C.current += 20
               A.current = e$sent.total
-              return e.abrupt("return", [].concat($_25_index.a(t), $_25_index.a(e$sent.list)))
+              return e.abrupt("return", [].concat($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(e$sent.list)))
             case 8:
             case "end":
               return e.stop()
@@ -356,11 +356,11 @@ var Re = _React.memo(function (e) {
             case 2:
               C.current++
               e.next = 5
-              return $_297.b(C.current, 20)
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.b(C.current, 20)
             case 5:
               e$sent = e.sent
               A.current = e$sent.total
-              return e.abrupt("return", [].concat($_25_index.a(t), $_25_index.a(e$sent.list)))
+              return e.abrupt("return", [].concat($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(e$sent.list)))
             case 8:
             case "end":
               return e.stop()
@@ -407,10 +407,10 @@ var Re = _React.memo(function (e) {
               break
             case 6:
               e.next = 8
-              return $_297.a(t)
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.a(t)
             case 8:
               if (n = e.sent) {
-                w($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                w($$_$$_$$_$$_$$_shared_events_messagesWrapper.mj({
                   message: $$_$$_$$_$$_src_shared_ui_language.c(d, "MyProject.deleteProjectSuccess").toString()
                 }))
               }
@@ -420,13 +420,13 @@ var Re = _React.memo(function (e) {
                   return e.id === t
                 })) > -1) {
                   i.splice(r, 1)
-                  F($_25_index.a(i))
+                  F($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(i))
                   if (m === t) {
-                    w($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
+                    w($$_$$_$$_$$_$$_shared_events_messagesWrapper.Gf())
                   }
                 }
               } else {
-                w($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                w($$_$$_$$_$$_$$_shared_events_messagesWrapper.mj({
                   message: $$_$$_$$_$$_src_shared_ui_language.c(d, "MyProject.deleteProjectError").toString(),
                   duration: 1e3,
                   type: "error"
@@ -445,7 +445,7 @@ var Re = _React.memo(function (e) {
   }()
   function W(e, t, n) {
     if (b === Oe.COLL) {
-      w($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+      w($$_$$_$$_$$_$$_shared_events_messagesWrapper.zh({
         onConfirm: G.bind(null, e),
         allowText: $_710_index$a$formatMessage({
           id: "MyProject.quitCollWorkConfirmText"
@@ -453,7 +453,7 @@ var Re = _React.memo(function (e) {
         title: $_710_index$a$formatMessage({
           id: "MyProject.quitCollWorkTitle"
         }, {
-          name: $_190.f(t)
+          name: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(t)
         }),
         content: $_710_index$a$formatMessage({
           id: "MyProject.quitCollWorkDescription"
@@ -488,7 +488,7 @@ var Re = _React.memo(function (e) {
     return React.createElement("div", {
       key: e,
       onClick: U.bind(null, e),
-      className: N(_$_.filterItem, b === e && _$_.active)
+      className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$_.filterItem, b === e && _$_.active)
     }, $_710_index$a$formatMessage({
       id: "MyProject.".concat(e)
     }))
@@ -501,7 +501,7 @@ var Re = _React.memo(function (e) {
     type: l
   }), i.length > 0 && React.createElement("div", {
     className: _$_.main
-  }, React.createElement($_13_index.v, {
+  }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.v, {
     offsetY: 300,
     height: 450,
     onScrollBottom: function () {

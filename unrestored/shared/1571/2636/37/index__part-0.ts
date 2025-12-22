@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_48_489 from "../48/489"
 import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
 import * as a from "../6"
 import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_18 from "../18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_77 from "../77"
@@ -294,7 +294,7 @@ var F = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : C
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.dd:
+    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Actions:
       return e.set("language", t.payload.language)
     case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Se:
       return e.set("previewAreaUpdatedAt", Date.now())

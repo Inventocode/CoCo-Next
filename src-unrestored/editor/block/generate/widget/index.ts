@@ -5,14 +5,14 @@
  */
 
 import { fe, he } from "./utils"
-import * as pe from "../../../../../unrestored/shared/1571/2636/301/85"
-import * as /* [auto-meaningful-name] */$$_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
-import * as _ from "../../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_17_index from "../../../../../unrestored/shared/1571/2636/17/index"
-import * as /* [auto-meaningful-name] */$_544 from "../../../../../unrestored/shared/1571/2636/301/544"
-import * as /* [auto-meaningful-name] */$_658 from "../../../../../unrestored/shared/1571/2636/301/658"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../../unrestored/shared/1571/2636/301/85"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index from "../../../../../unrestored/shared/1571/2636/17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_544 from "../../../../../unrestored/shared/1571/2636/301/544"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_658 from "../../../../../unrestored/shared/1571/2636/301/658"
 function _e(e, t) {
   !function (e, t) {
     var n = {
@@ -20,7 +20,7 @@ function _e(e, t) {
       widgetType: "",
       updateShape_: function () {
         var e = this
-        var n = $$_$$_$$_$$_$$_src_shared_widget_custom_load.h(this.widgetType, this.event)
+        var n = $$_$$_$$_$$_shared_widget_custom_load.h(this.widgetType, this.event)
         if (!n) {
           console.error("WIDGET_EVENT_MUTATOR getWidgetEvent error", this.widgetType, this.event)
           this.append_statement_input("DO", undefined)
@@ -35,21 +35,21 @@ function _e(e, t) {
         var /* [auto-meaningful-name] */n$tooltip = n.tooltip
         var /* [auto-meaningful-name] */n$blockOptions = n.blockOptions
         var /* [auto-meaningful-name] */n$key = n.key
-        var l = pe.a(this.widgetType, n$label)
+        var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, n$label)
         if (this.isAnyWidget) {
           var u
-          var d = "任意" + $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
+          var d = "任意" + $$_$$_$$_$$_shared_widget_custom_load.k(this.widgetType)
           if (!(null === (u = this.get_input("WIDGET_ID_CONTAINER")) || undefined === u)) {
             u.append_field(d)
           }
         } else {
           var p
-          var f = new $$_118_index.a({
+          var f = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(e.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(e.widgetType)
             }
           })
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
@@ -57,7 +57,7 @@ function _e(e, t) {
           }
         }
         if (n$tooltip) {
-          var h = pe.a(this.widgetType, n$tooltip)
+          var h = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, n$tooltip)
           this.set_tooltip(h)
         }
         if (null === n$blockOptions || undefined === n$blockOptions ? undefined : n$blockOptions.icon) {
@@ -67,7 +67,7 @@ function _e(e, t) {
           }
           m.set_value(t.utils.replace_message_references(n$blockOptions.icon))
         }
-        var g = $$_$$_$$_$$_$$_src_shared_widget_custom_load.i(this.widgetType, n$key)
+        var g = $$_$$_$$_$$_shared_widget_custom_load.i(this.widgetType, n$key)
         this.append_statement_input("DO", undefined, g)
         if (n$subTypes) {
           this.set_field_value(l, "EVENT")
@@ -75,7 +75,7 @@ function _e(e, t) {
             var /* [auto-meaningful-name] */t$key = t.key
             var /* [auto-meaningful-name] */t$dropdown = t.dropdown
             var o = "PARAM_".concat(t$key)
-            var i = new $$_118_index.a({
+            var i = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: o,
               custom: true,
@@ -91,9 +91,9 @@ function _e(e, t) {
           var /* [auto-meaningful-name] */t$label = t.label
           var /* [auto-meaningful-name] */t$dropdown = t.dropdown
           var i = "PARAM_".concat(t$key)
-          var a = pe.a(e.widgetType, t$label)
+          var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(e.widgetType, t$label)
           if (t$dropdown) {
-            var s = new $$_118_index.a({
+            var s = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: i,
               custom: true,
@@ -109,9 +109,9 @@ function _e(e, t) {
           }
         })
         if (this.isAnyWidget) {
-          var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load$a = $$_$$_$$_$$_$$_src_shared_widget_custom_load.a
+          var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load$a = $$_$$_$$_$$_shared_widget_custom_load.a
           var v = "PARAM_".concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$a)
-          var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load$b = $$_$$_$$_$$_$$_src_shared_widget_custom_load.b
+          var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load$b = $$_$$_$$_$$_shared_widget_custom_load.b
           this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$a, "\"></mutation>\n        </shadow>"), "DO")
         }
       },
@@ -138,7 +138,7 @@ function _e(e, t) {
         this.param = e.getAttribute("param") || this.param
         this.event = e.getAttribute("event") || this.event
         this.widgetType = e.getAttribute("widget_type") || this.widgetType
-        var n = $$_$$_$$_$$_$$_src_shared_widget_custom_load.h(this.widgetType, this.event)
+        var n = $$_$$_$$_$$_shared_widget_custom_load.h(this.widgetType, this.event)
         if (this.widgetType || this.event) {
           if (!n) {
             console.error("WIDGET_EVENT_PARAM_MUTATOR getWidgetEvent error", this.widgetType, this.event, this.param)
@@ -146,8 +146,8 @@ function _e(e, t) {
             return void this.set_disabled(true)
           }
           this.set_disabled(false)
-          var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.i(this.widgetType, this.event)
-          if (this.param === $$_$$_$$_$$_$$_src_shared_widget_custom_load.a) {
+          var r = $$_$$_$$_$$_shared_widget_custom_load.i(this.widgetType, this.event)
+          if (this.param === $$_$$_$$_$$_shared_widget_custom_load.a) {
             this.set_output(true, "string", r)
           } else {
             var o = n.params.find(function (e) {
@@ -157,7 +157,7 @@ function _e(e, t) {
               return void console.error("WIDGET_EVENT_PARAM_MUTATOR get param error", this.widgetType, this.event, this.param)
             }
             var /* [auto-meaningful-name] */o$valueType = o.valueType
-            var a = $$_$$_$$_$$_$$_src_shared_widget_custom_load.g(o$valueType)
+            var a = $$_$$_$$_$$_shared_widget_custom_load.g(o$valueType)
             this.set_output(true, a, r)
           }
         } else {
@@ -179,7 +179,7 @@ function _e(e, t) {
         type: "widget_event",
         message0: "%{BKY_WIDGET_EVENT_MSG}",
         args0: [
-          _.e("%{BKY_BLOCK_TAB_ICON}", true), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_TAB_ICON}", true), {
             type: "input_dummy",
             name: "WIDGET_ID_CONTAINER"
           }, {
@@ -218,7 +218,7 @@ function _e(e, t) {
       updateShape_: function () {
         var e
         var n = this
-        var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(this.widgetType, this.property)
+        var r = $$_$$_$$_$$_shared_widget_custom_load.l(this.widgetType, this.property)
         if (!r) {
           console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this.widgetType, this.property)
           this.set_disabled(true)
@@ -234,23 +234,23 @@ function _e(e, t) {
         var /* [auto-meaningful-name] */r$tooltip = r.tooltip
         var /* [auto-meaningful-name] */r$blockOptions = r.blockOptions
         var u = undefined === r$blockOptions ? {} : r$blockOptions
-        var d = pe.a(this.widgetType, r$label)
+        var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, r$label)
         this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
         if (this.isAnyWidget) {
           var p
-          var f = $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
+          var f = $$_$$_$$_$$_shared_widget_custom_load.k(this.widgetType)
           if (!(null === (p = this.get_input("WIDGET_ID_CONTAINER")) || undefined === p)) {
             p.append_field(f)
           }
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
           var h
-          var m = new $$_118_index.a({
+          var m = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(n.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(n.widgetType)
             }
           })
           if (!(null === (h = this.get_input("WIDGET_ID_CONTAINER")) || undefined === h)) {
@@ -260,15 +260,15 @@ function _e(e, t) {
         if ("object" === typeof u.getter && (null === (i = u$getter$keys = u.getter.keys) || undefined === i ? undefined : i.length)) {
           var g = []
           u$getter$keys.forEach(function (e) {
-            var t = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(n.widgetType, e)
+            var t = $$_$$_$$_$$_shared_widget_custom_load.l(n.widgetType, e)
             if (t) {
-              var r = pe.a(n.widgetType, t.label)
+              var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(n.widgetType, t.label)
               g.push([r, e])
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
             }
           })
-          this.append_dummy_input().append_field(new $$_118_index.a({
+          this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
@@ -282,7 +282,7 @@ function _e(e, t) {
         }
         switch (r.key) {
           case "__position":
-            this.append_dummy_input().append_field(new $$_118_index.a({
+            this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -305,10 +305,10 @@ function _e(e, t) {
               this.set_field_value("".concat("boolean" === r$valueType ? "" : t.Msg.WIDGET_OF, " ").concat(d), "PROPERTY")
             }
         }
-        var _ = $$_$$_$$_$$_$$_src_shared_widget_custom_load.g(r$valueType)
+        var _ = $$_$$_$$_$$_shared_widget_custom_load.g(r$valueType)
         this.set_output(true, _)
         if (r$tooltip) {
-          var v = pe.a(this.widgetType, r$tooltip)
+          var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, r$tooltip)
           this.set_tooltip(v)
         }
       },
@@ -355,7 +355,7 @@ function _e(e, t) {
       updateShape_: function () {
         var e
         var n = this
-        var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(this.widgetType, this.property)
+        var r = $$_$$_$$_$$_shared_widget_custom_load.l(this.widgetType, this.property)
         if (!r) {
           console.error("WIDGET_SET_MUTATOR getWidgetProperty error", this.widgetType, this.property)
           this.set_disabled(true)
@@ -377,14 +377,14 @@ function _e(e, t) {
         var /* [auto-meaningful-name] */r$validators = r.validators
         var /* [auto-meaningful-name] */r$blockOptions = r.blockOptions
         var v = undefined === r$blockOptions ? {} : r$blockOptions
-        var b = pe.a(this.widgetType, r$label)
+        var b = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, r$label)
         var y = false
         if (r$validators && "number" === r$valueType) {
           var E = r$validators
           var /* [auto-meaningful-name] */E$isInteger = E.isInteger
           y = !!E$isInteger
-          o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.p(E)
-          i = $$_$$_$$_$$_$$_src_shared_widget_custom_load.n(E)
+          o = $$_$$_$$_$$_shared_widget_custom_load.p(E)
+          i = $$_$$_$$_$$_shared_widget_custom_load.n(E)
         }
         if (!("__position" !== r.key && "__size" !== r.key)) {
           y = true
@@ -396,19 +396,19 @@ function _e(e, t) {
         }
         if (this.isAnyWidget) {
           var C
-          var T = $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
+          var T = $$_$$_$$_$$_shared_widget_custom_load.k(this.widgetType)
           if (!(null === (C = this.get_input("WIDGET_ID_CONTAINER")) || undefined === C)) {
             C.append_field(T)
           }
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
           var S
-          var A = new $$_118_index.a({
+          var A = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(n.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(n.widgetType)
             }
           })
           if (!(null === (S = this.get_input("WIDGET_ID_CONTAINER")) || undefined === S)) {
@@ -418,25 +418,25 @@ function _e(e, t) {
         if ("object" === typeof v.setter && (null === (c = v$setter$keys = v.setter.keys) || undefined === c ? undefined : c.length)) {
           var I = []
           v$setter$keys.forEach(function (e, t) {
-            var r = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(n.widgetType, e)
+            var r = $$_$$_$$_$$_shared_widget_custom_load.l(n.widgetType, e)
             if (r) {
               if (0 === t && "number" === r.valueType) {
                 if (r.validators) {
-                  i = $$_$$_$$_$$_$$_src_shared_widget_custom_load.n(r.validators)
-                  o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.p(r.validators)
+                  i = $$_$$_$$_$$_shared_widget_custom_load.n(r.validators)
+                  o = $$_$$_$$_$$_shared_widget_custom_load.p(r.validators)
                 }
                 if (!(undefined !== o || "__width" !== r.key && "__height" !== r.key)) {
                   o = 0
                 }
               }
-              var a = pe.a(n.widgetType, r.label)
+              var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(n.widgetType, r.label)
               I.push([a, e])
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", n.widgetType, e)
             }
           })
           this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
-          this.append_dummy_input().append_field(new $$_118_index.a({
+          this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
@@ -444,7 +444,7 @@ function _e(e, t) {
               return I
             },
             optOnchange: function (e) {
-              var t = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(n.widgetType, e)
+              var t = $$_$$_$$_$$_shared_widget_custom_load.l(n.widgetType, e)
               if (t) {
                 var /* [auto-meaningful-name] */COLOR
                 if ("color" === t.valueType) {
@@ -457,8 +457,8 @@ function _e(e, t) {
                   a.set_value(String(t.defaultValue))
                   if ("number" === t.valueType) {
                     if (t.validators) {
-                      o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.p(t.validators)
-                      i = $$_$$_$$_$$_$$_src_shared_widget_custom_load.n(t.validators)
+                      o = $$_$$_$$_$$_shared_widget_custom_load.p(t.validators)
+                      i = $$_$$_$$_$$_shared_widget_custom_load.n(t.validators)
                     }
                     if (!(undefined !== o || "__width" !== t.key && "__height" !== t.key)) {
                       o = 0
@@ -475,7 +475,7 @@ function _e(e, t) {
         switch (r.key) {
           case "__position":
             this.set_field_value(t.Msg.WIDGET_OF, "PROPERTY")
-            this.append_dummy_input().append_field(new $$_118_index.a({
+            this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -489,7 +489,7 @@ function _e(e, t) {
             this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(t.Msg.WIDGET_OPACITY, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY")
             break
           case "__visible":
-            this.append_dummy_input("", 0).append_field(new $$_118_index.a({
+            this.append_dummy_input("", 0).append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -504,7 +504,7 @@ function _e(e, t) {
             })
             break
           case "__disabled":
-            this.append_dummy_input("", 0).append_field(new $$_118_index.a({
+            this.append_dummy_input("", 0).append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -523,10 +523,10 @@ function _e(e, t) {
               this.set_field_value("".concat(t.Msg.WIDGET_OF, " ").concat(b, " ").concat(t.Msg.WIDGET_SET_TO), "PROPERTY")
             }
         }
-        var N = $$_$$_$$_$$_$$_src_shared_widget_custom_load.f(r$valueType, r$checkType)
+        var N = $$_$$_$$_$$_shared_widget_custom_load.f(r$valueType, r$checkType)
         if ("__visible" !== r.key && "__disabled" !== r.key) {
           if (r$dropdown) {
-            var R = new $$_118_index.a({
+            var R = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -537,7 +537,7 @@ function _e(e, t) {
           } else {
             var k = ""
             if ("string" === r$valueType) {
-              k = pe.a(this.widgetType, String(r$defaultValue))
+              k = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, String(r$defaultValue))
             }
             var x = fe(r$valueType, k || r$defaultValue)
             this.append_shadow_input("VALUE", x).set_check(N)
@@ -548,14 +548,14 @@ function _e(e, t) {
           D.set_constraints(o, i, y ? 1 : undefined)
           if ("__opacity" === r.key) {
             D.set_controller_option({
-              type: $$_17_index.I.ControllerType.SLIDER,
+              type: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.ControllerType.SLIDER,
               left_text: t.Msg["opacity.invisible"],
               right_text: t.Msg["opacity.visible"]
             })
           }
         }
         if (r$tooltip) {
-          var M = pe.a(this.widgetType, r$tooltip)
+          var M = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, r$tooltip)
           this.set_tooltip(M)
         }
       },
@@ -603,7 +603,7 @@ function _e(e, t) {
       isAnyWidget: false,
       updateShape_: function () {
         var e = this
-        var n = $$_$$_$$_$$_$$_src_shared_widget_custom_load.j(this.widgetType, this.method)
+        var n = $$_$$_$$_$$_shared_widget_custom_load.j(this.widgetType, this.method)
         if (!n) {
           console.error("WIDGET_METHOD_MUTATOR getWidgetMethod error", this.widgetType, this.method)
           this.set_disabled(true)
@@ -613,13 +613,13 @@ function _e(e, t) {
         this.set_disabled(false)
         var r = this.get_input("WIDGET_ID_CONTAINER")
         if (this.isAnyWidget) {
-          var o = $$_$$_$$_$$_$$_src_shared_widget_custom_load.k(this.widgetType)
+          var o = $$_$$_$$_$$_shared_widget_custom_load.k(this.widgetType)
           if (!(null === r || undefined === r)) {
             r.append_field(o)
           }
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>")
           if ("__setVisible" === n.key) {
-            var i = new $$_118_index.a({
+            var i = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "DISPLAY",
               custom: true,
@@ -630,7 +630,7 @@ function _e(e, t) {
             this.append_dummy_input().append_field(i, "DISPLAY")
           }
           if ("__setDisabled" === n.key) {
-            var a = new $$_118_index.a({
+            var a = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "DISABLED",
               custom: true,
@@ -641,12 +641,12 @@ function _e(e, t) {
             this.append_dummy_input().append_field(a, "DISABLED")
           }
         } else {
-          var s = new $$_118_index.a({
+          var s = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(e.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(e.widgetType)
             }
           })
           if (!(null === r || undefined === r)) {
@@ -663,8 +663,8 @@ function _e(e, t) {
         if (false !== f.callMethodLabel) {
           var /* [auto-meaningful-name] */f$callMethodLabel
           var _ = (null === (f$callMethodLabel = f.callMethodLabel) || undefined === f$callMethodLabel ? undefined : f$callMethodLabel.toString()) || ""
-          var v = pe.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG
-          var b = new $_658.FieldLabel({
+          var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, _) || t.Msg.WIDGET_METHOD_CALL_MSG
+          var b = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_658.FieldLabel({
             text: v
           })
           if (!(null === r || undefined === r)) {
@@ -672,7 +672,7 @@ function _e(e, t) {
           }
         }
         if (f.icon && (t.Msg[f.icon] ? c = t.Msg[f.icon] : f.icon.startsWith("https://") && (c = f.icon), c)) {
-          var y = new $_544.FieldImage({
+          var y = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_544.FieldImage({
             src: c
           })
           this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(y)
@@ -683,15 +683,15 @@ function _e(e, t) {
         if (n$valueType) {
           this.set_next_statement(false)
           this.set_previous_statement(false)
-          var E = $$_$$_$$_$$_$$_src_shared_widget_custom_load.g(n$valueType)
+          var E = $$_$$_$$_$$_shared_widget_custom_load.g(n$valueType)
           this.set_output(true, E)
         }
-        var w = pe.a(this.widgetType, n$label)
+        var w = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, n$label)
         if (w) {
           this.append_dummy_input().append_field(w, "METHOD")
         }
         if (n$tooltip) {
-          var C = pe.a(this.widgetType, n$tooltip)
+          var C = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, n$tooltip)
           this.set_tooltip(C)
         }
         if (false === f.inputsInline) {
@@ -706,10 +706,10 @@ function _e(e, t) {
           var /* [auto-meaningful-name] */t$key = t.key
           var /* [auto-meaningful-name] */t$dropdown = t.dropdown
           var /* [auto-meaningful-name] */t$controller = t.controller
-          var u = pe.a(e.widgetType, t$label)
+          var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(e.widgetType, t$label)
           var d = "PARAM_".concat(t$key)
           if (t$dropdown) {
-            var p = new $$_118_index.a({
+            var p = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: d,
               custom: true,
@@ -723,7 +723,7 @@ function _e(e, t) {
           } else {
             var h = fe(t$valueType, t$defaultValue)
             var g = e.append_shadow_input(d, h)
-            var _ = $$_$$_$$_$$_$$_src_shared_widget_custom_load.f(t$valueType, t$checkType)
+            var _ = $$_$$_$$_$$_shared_widget_custom_load.f(t$valueType, t$checkType)
             g.set_check(_)
             if (u) {
               g.insert_field_at(0, u, "".concat(d, "_LABEL"))
@@ -736,7 +736,7 @@ function _e(e, t) {
               if (t$controller.leftText && t$controller.rightText) {
                 if (!(null === v || undefined === v)) {
                   v.set_controller_option({
-                    type: $$_17_index.I.ControllerType.SLIDER,
+                    type: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.ControllerType.SLIDER,
                     left_text: t$controller.leftText,
                     right_text: t$controller.rightText
                   })
@@ -745,7 +745,7 @@ function _e(e, t) {
             }
           }
           if (t$labelAfter) {
-            var b = pe.a(e.widgetType, t$labelAfter)
+            var b = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(e.widgetType, t$labelAfter)
             e.append_dummy_input("").append_field(b, "".concat(d, "_LABEL_AFTER"))
           }
         })
@@ -788,13 +788,13 @@ function _e(e, t) {
     widgetType: "",
     updateShape_: function () {
       var e = this
-      var t = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(this.widgetType, this.property)
+      var t = $$_$$_$$_$$_shared_widget_custom_load.l(this.widgetType, this.property)
       if (t) {
         var /* [auto-meaningful-name] */t$defaultValue = t.defaultValue
         var /* [auto-meaningful-name] */t$dropdown = t.dropdown
         if (t$dropdown) {
           this.set_shadow(true)
-          var o = new $$_118_index.a({
+          var o = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "VALUE",
             custom: true,
@@ -881,7 +881,7 @@ function ve(e) {
     var /* [auto-meaningful-name] */h$getter
     var o = t.blocks[n]
     var /* [auto-meaningful-name] */o$mutation = o.mutation
-    var a = $$_17_index.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -889,11 +889,11 @@ function ve(e) {
       return ""
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || ""
-    u = _.o(u)
+    u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(u)
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
-    var d = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+    var d = $$_$$_$$_$$_shared_widget_custom_load.l(c, s)
     if (!d) {
       return ""
     }
@@ -902,7 +902,7 @@ function ve(e) {
     var h = undefined === d$blockOptions ? {} : d$blockOptions
     if ("object" === typeof h.getter && (null === (h$getter$keys = h.getter.keys) || undefined === h$getter$keys ? undefined : h$getter$keys.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || ""
-      var g = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+      var g = $$_$$_$$_$$_shared_widget_custom_load.l(c, s)
       if (!g) {
         return ""
       }
@@ -910,29 +910,29 @@ function ve(e) {
     }
     var v = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.s("getWidgetOpacity", [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getWidgetOpacity", [u])
     }
     if ("__visible" === s) {
-      return _.s("getWidgetVisible", [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getWidgetVisible", [u])
     }
     if ("__disabled" === s) {
-      return _.s("getWidgetDisabled", [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getWidgetDisabled", [u])
     }
     if ("__width" === s || "__height" === s) {
       var b = "__width" === s ? "getWidgetWidth" : "getWidgetHeight"
-      return _.s(b, [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s(b, [u])
     }
     if (v) {
       var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY"
-      return _.s(y, [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s(y, [u])
     }
-    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(c))
+    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s(h.getter.func, [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s)]) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getProperty", [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s)], $$_$$_$$_$$_shared_widget_custom_load.q(c))
   })
   e.insertBlockSnippetGenerator("widget_set", function (t, n) {
     var /* [auto-meaningful-name] */h$setter
     var o = t.blocks[n]
     var /* [auto-meaningful-name] */o$mutation = o.mutation
-    var a = $$_17_index.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -940,11 +940,11 @@ function ve(e) {
       return ""
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || ""
-    u = _.o(u)
+    u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(u)
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
-    var d = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+    var d = $$_$$_$$_$$_shared_widget_custom_load.l(c, s)
     if (!d) {
       return ""
     }
@@ -953,7 +953,7 @@ function ve(e) {
     var h = undefined === d$blockOptions ? {} : d$blockOptions
     if ("object" === typeof h.setter && (null === (h$setter$keys = h.setter.keys) || undefined === h$setter$keys ? undefined : h$setter$keys.length)) {
       s = e.getFieldValue(o, "PROPERTY_KEY") || ""
-      var g = $$_$$_$$_$$_$$_src_shared_widget_custom_load.l(c, s)
+      var g = $$_$$_$$_$$_shared_widget_custom_load.l(c, s)
       if (!g) {
         return ""
       }
@@ -961,35 +961,35 @@ function ve(e) {
     }
     var v = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     if (d.dropdown) {
-      v = _.o(e.getFieldValue(o, "VALUE") || "")
+      v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getFieldValue(o, "VALUE") || "")
     }
     var b = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.l(_.n("setWidgetOpacity", [u, v]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetOpacity", [u, v]), o, e)
     }
     if ("__visible" === s) {
       var y = "show" === e.getFieldValue(o, "VALUE")
-      return _.l(_.n("setWidgetVisible", [u, y]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetVisible", [u, y]), o, e)
     }
     if ("__disabled" === s) {
       var E = "disabled" === e.getFieldValue(o, "VALUE")
-      return _.l(_.n("setWidgetAttribute", [u, _.o("disabled"), E]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetAttribute", [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("disabled"), E]), o, e)
     }
     if ("__width" === s || "__height" === s) {
       var O = "__width" === s ? "setWidgetWidth" : "setWidgetHeight"
-      return _.l(_.n(O, [u, v]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(O, [u, v]), o, e)
     }
     if (b) {
       var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY"
-      return _.l(_.n(w, [u, v]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(w, [u, v]), o, e)
     }
-    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(c)), o, e)
+    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(h.setter.func, [u, v]), o, e) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setProperty", [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s), v], undefined, undefined, $$_$$_$$_$$_shared_widget_custom_load.q(c)), o, e)
   })
   e.insertBlockSnippetGenerator("widget_event", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "WIDGET_ID") || ""
     var /* [auto-meaningful-name] */r$mutation = r.mutation
-    var a = $$_17_index.Blink.xml.text_to_dom(r$mutation)
+    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation)
     var s = a.getAttribute("event")
     var c = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var l = a.getAttribute("widget_type")
@@ -997,7 +997,7 @@ function ve(e) {
     if (!s || !l) {
       return ""
     }
-    var d = $$_$$_$$_$$_$$_src_shared_widget_custom_load.h(l, s)
+    var d = $$_$$_$$_$$_shared_widget_custom_load.h(l, s)
     if (!d) {
       return ""
     }
@@ -1010,30 +1010,30 @@ function ve(e) {
       })
     }
     d$params.forEach(function (e) {
-      h.push("".concat(_.a).concat(e.key))
+      h.push("".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a).concat(e.key))
     })
     if (u) {
-      h.push("".concat(_.a).concat($$_$$_$$_$$_$$_src_shared_widget_custom_load.a))
+      h.push("".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a).concat($$_$$_$$_$$_shared_widget_custom_load.a))
     }
     var g = e.statementToCode(t, n, "DO")
-    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(l)) : ""
+    return g ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("onWidgetEvent", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(l), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s), u ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(c) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], g, h, $$_$$_$$_$$_shared_widget_custom_load.q(l)) : ""
   })
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
     var /* [auto-meaningful-name] */e$blocksT$mutation = e.blocks[t].mutation
-    var r = $$_17_index.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
-    return "".concat(_.a).concat(r)
+    var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
+    return "".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a).concat(r)
   })
   e.insertBlockSnippetGenerator("widget_method", function (t, n) {
     var r = t.blocks[n]
     var /* [auto-meaningful-name] */r$mutation = r.mutation
-    var i = $$_17_index.Blink.xml.text_to_dom(r$mutation)
+    var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation)
     var a = i.getAttribute("method")
     var s = i.getAttribute("widget_type")
     var c = "true" === i.getAttribute("is_any_widget")
     if (!a || !s) {
       return ""
     }
-    var l = $$_$$_$$_$$_$$_src_shared_widget_custom_load.j(s, a)
+    var l = $$_$$_$$_$$_shared_widget_custom_load.j(s, a)
     if (!l) {
       return ""
     }
@@ -1043,9 +1043,9 @@ function ve(e) {
       d = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
       u.push(d)
     } else {
-      u.push(_.o(d))
+      u.push($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(d))
     }
-    u.push(_.o(a))
+    u.push($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a))
     var /* [auto-meaningful-name] */l$params = l.params
     var /* [auto-meaningful-name] */l$valueType = l.valueType
     var h = []
@@ -1060,45 +1060,45 @@ function ve(e) {
         console.error("widget_method valueToCode error", l)
       }
       if (o$dropdown) {
-        c = _.o(e.getFieldValue(r, s) || "")
+        c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getFieldValue(r, s) || "")
       }
       u.push(c)
       h.push(c)
     })
     if ("__setVisible" === l.key) {
       var g = "show" === e.getFieldValue(r, "DISPLAY")
-      return _.l(_.n("setWidgetVisible", [d, g]), r, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetVisible", [d, g]), r, e)
     }
     if ("__setDisabled" === l.key) {
       var v = "disabled" === e.getFieldValue(r, "DISABLED")
-      return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetAttribute", [d, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("disabled"), v]), r, e)
     }
-    return l$valueType ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, $$_$$_$$_$$_$$_src_shared_widget_custom_load.q(s)), r, e)
+    return l$valueType ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.r("callMethod", u), r, e, true, true) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.j("callMethod", u, undefined, undefined, $$_$$_$$_$$_shared_widget_custom_load.q(s)), r, e)
   })
   e.insertBlockSnippetGenerator("widget_color", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "COLOR")
-    return _.o(o)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)
   })
   e.insertBlockSnippetGenerator("color_picker", function (t, n) {
     var r
     var o = t.blocks[n]
-    var i = $$_17_index.Blink.xml.text_to_dom(o.mutation)
+    var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o.mutation)
     var a = function (r) {
       return e.valueToCode(t, n, r, e.ORDER_COMMA)
     }
     switch (Number(i.getAttribute("format"))) {
-      case $$_17_index.I.EColorFormat.ColorPalette:
-        r = _.s("getColorHex", [_.o(i.getAttribute("color") || "")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.ColorPalette:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHex", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i.getAttribute("color") || "")])
         break
-      case $$_17_index.I.EColorFormat.ColorString:
-        r = _.s("getColorHex", [a("COLOR_STRING")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.ColorString:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHex", [a("COLOR_STRING")])
         break
-      case $$_17_index.I.EColorFormat.HSVA:
-        r = _.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.HSVA:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
         break
-      case $$_17_index.I.EColorFormat.RGBA:
-        r = _.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.RGBA:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
     }
     return r || ""
   })
@@ -1109,10 +1109,10 @@ function ve(e) {
   e.insertBlockSnippetGenerator("widget_dropdown", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "VALUE")
-    return _.o(o)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)
   })
   e.insertBlockSnippetGenerator("widget_any_id", function (e, t) {
-    return _.o("")
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("")
   })
 }
 var be = {

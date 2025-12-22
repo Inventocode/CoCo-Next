@@ -6,12 +6,12 @@
 
 import * as React from "react"
 
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as Yr from "../../../../../unrestored/shared/1571/2636/53"
-import * as Message from "../../../events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
+import * as Actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 
 import styles from "./styles.module.css"
 
@@ -25,41 +25,41 @@ const RELEASE_MESSAGES = [
 const RELEASE_LINKS = [
   {
     label: "Coco控件商城-投稿",
-    url: te.b
+    url: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b
   }
 ]
 
 const ReleaseInfo = React.memo(() => {
-  const releaseInfoDialogVisible = $_16_index.e(function (e) {
+  const releaseInfoDialogVisible = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.releaseInfoDialogVisible
   })
-  const userId = $_16_index.e(function (e) {
+  const userId = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo?.id
   })
-  const userInfoFetchDone = $_16_index.e(function (e) {
+  const userInfoFetchDone = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfoFetchDone
   })
   var r = React.useState(false)
-  var o = $_10_index.a(r, 2)
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = $_16_index.d()
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   React.useEffect(function () {
     if (userInfoFetchDone) {
       if (!i) {
-        if (localStorage.getItem("ReleaseVersion") !== Yr.f) {
-          s(Message.vj(true))
-          localStorage.setItem("ReleaseVersion", Yr.f)
+        if (localStorage.getItem("ReleaseVersion") !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f) {
+          s(Actions.vj(true))
+          localStorage.setItem("ReleaseVersion", $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f)
         }
         a(true)
       }
     }
   }, [i, s, userId, userInfoFetchDone])
   return (
-    <$_13_index.f
+    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
       visible={releaseInfoDialogVisible}
       className={styles.ReleaseInfoDialog}
-      onClose={() => s(Message.vj(false))}
+      onClose={() => s(Actions.vj(false))}
     >
       <div className={styles.left}>
         <img src={LeftSideImage} alt="" />
@@ -67,7 +67,7 @@ const ReleaseInfo = React.memo(() => {
       <div className={styles.right}>
         <div className={styles.content}>
           <div className={styles.updateInfo}>
-            <header>{`版本v${Yr.f}更新`}</header>
+            <header>{`版本v${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f}更新`}</header>
             {RELEASE_MESSAGES.map(e => <p key={e}>{e}</p>)}
             <div className={styles.link}>
               {RELEASE_LINKS.map(e => (
@@ -82,12 +82,12 @@ const ReleaseInfo = React.memo(() => {
           <div className={styles.overViewInfo}>
             <a href="https://codemao-guide.yuque.com/bfiekm/sbo5kh/update" target="_blank" rel="noopener noreferrer">
               往期功能更新回顾
-              <$_13_index.j className={styles.iconLink} type="icon-dropdown-down" />
+              <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className={styles.iconLink} type="icon-dropdown-down" />
             </a>
           </div>
         </div>
       </div>
-    </$_13_index.f>
+    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f>
   )
 })
 export { ReleaseInfo as UL }

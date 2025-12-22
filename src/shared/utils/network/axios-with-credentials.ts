@@ -7,8 +7,8 @@
 import axios, { AxiosError, AxiosInstance, AxiosRequestConfig, AxiosResponse } from "axios"
 
 import * as Language from "../../ui/language"
-import * as EventStore from "../../events/store"
-import * as Message from "../../../editor/events/main/messages-wrapper"
+import * as EventStore from "../../../editor/redux/store"
+import * as Actions from "../../../editor/redux/common/actions"
 
 export const axiosWithCredentials: AxiosInstance = axios.create({
   timeout: 2e4,
@@ -25,7 +25,7 @@ axiosWithCredentials.interceptors.response.use(
   (error: AxiosError): Promise<never> => {
     if (!error.response && (!navigator.onLine || navigator?.connection?.rtt === 0)) {
       const language: Language.Language = EventStore.getLanguage()
-      EventStore.getStore().dispatch(Message.wrapShowCommonToastInfo({
+      EventStore.getStore().dispatch(Actions.showCommonToastInfoAction({
         message: Language.format(language, "axios.weakNetworkTips").toString(),
         type: "error"
       }))

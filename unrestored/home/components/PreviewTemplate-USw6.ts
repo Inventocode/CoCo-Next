@@ -13,7 +13,7 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template-+NBU"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__routes_Home_model_actions__ from "../Home/model/actions-twBc"
+import * as __WEBPACK_IMPORTED_MODULE_3__routes_Home_model_actions__ from "../../../src/home/ui/routes/Home/model/actions"
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     templateList: state.home_reducer.templateList,

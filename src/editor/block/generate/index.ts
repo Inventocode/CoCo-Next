@@ -4,8 +4,6 @@
  * 模块 ID：301__part-0
  */
 
-"use strict"
-
 import { v, b, y } from "../../../../unrestored/shared/1571/2636/301/index__part-1"
 import { w, C, T, S, A, I, j, N, R, k } from "./toolbox/index-1"
 import { Y, K, q, X, Q, Z, J, $, ee, te, ne } from "./toolbox/index-2"

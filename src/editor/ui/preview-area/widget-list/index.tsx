@@ -12,18 +12,18 @@ import { ScreenList } from "../screen-list"
 import { lo as ActivePreview } from "../../../../../unrestored/shared/1571/2636/index__part-27"
 import { zd as Stage } from "../../../../../unrestored/shared/1571/2636/index__part-33"
 import { WidgetCategoryItem, BuiltInWidgetList } from "./item"
-import * as /* [auto-meaningful-name] */$_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
-import /* [auto-meaningful-name] */$_196 from "../../../../../unrestored/shared/1571/2636/196"
-import /* [auto-meaningful-name] */$_279 from "../../../../../unrestored/shared/1571/2636/279"
-import * as /* [auto-meaningful-name] */$_1512 from "../../../../../unrestored/shared/1571/2636/1512"
-import * as /* [auto-meaningful-name] */$_238 from "../../../../../unrestored/shared/1571/2636/238"
-import * as kn from "../../../../../unrestored/shared/1571/2636/75"
-import * as wn from "../../../../../unrestored/shared/1571/2636/90"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196 from "../../../../../unrestored/shared/1571/2636/196"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279 from "../../../../../unrestored/shared/1571/2636/279"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1512 from "../../../../../unrestored/shared/1571/2636/1512"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_75 from "../../../../../unrestored/shared/1571/2636/75"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_90 from "../../../../../unrestored/shared/1571/2636/90"
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../shared/widget/custom/type"
-import * as Et from "../../../../../unrestored/shared/1571/2636/9"
-import * as K from "../../../../../unrestored/shared/1571/2636/18"
-import * as Message from "../../../events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
+import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import N from "../../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
@@ -43,19 +43,19 @@ var WidgetMallButton = React.memo(function (e) {
   var r = $_16_index.d()
   return (
     <$_13_index.d
-      className={$_196.widgetMallBtn}
+      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtn}
       onClick={() => {
         const e = () => {
-          r(Message.gj(true))
+          r(Actions.gj(true))
         }
         if (n) {
           e()
         } else {
-          r(Message.Ch(e))
+          r(Actions.Ch(e))
         }
       }}
     >
-      <$_94_index.a type="icon-shop" className={$_196.shopIcon} />
+      <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a type="icon-shop" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.shopIcon} />
       {!e.singleColumn && <span>{formatMessage({ id: "Widget.widgetMall" })}</span>}
     </$_13_index.d>
   )
@@ -75,7 +75,7 @@ var WidgetScrollExtension = React.memo(function (e) {
     icon: e.icon,
     title: e.widgetName,
     previewAreaWidgetTitle: "",
-    type: $$_$$_$$_$$_src_shared_widget_custom_type.c(e.type, true),
+    type: $$_$$_$$_$$_shared_widget_custom_type.c(e.type, true),
     isInvisibleWidget: e.isInvisibleWidget,
     widgetServerId: e.id
   })
@@ -95,9 +95,9 @@ var WidgetScrollExtension = React.memo(function (e) {
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = $_238.c()
-  var y = Et.Eb(Et.j.EXTENSION).filter(function (e) {
-    return !$$_$$_$$_$$_src_shared_widget_custom_type.e(e.type)
+  var b = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.c()
+  var y = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
+    return !$$_$$_$$_$$_shared_widget_custom_type.e(e.type)
   })
   React.useEffect(() => {
     const e = (() => {
@@ -107,7 +107,7 @@ var WidgetScrollExtension = React.memo(function (e) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return Message.Nf(r, Message.eg())
+                return Actions.Nf(r, Actions.eg())
               case 2:
                 d(false)
               case 3:
@@ -125,7 +125,7 @@ var WidgetScrollExtension = React.memo(function (e) {
       d(true)
       e()
     } else {
-      r(Message.Sh([]))
+      r(Actions.Sh([]))
     }
   }, [r, n])
   React.useEffect(() => {
@@ -137,10 +137,10 @@ var WidgetScrollExtension = React.memo(function (e) {
   }, [y, o, i])
   return (
     <>
-      <div className={$_196.scrollExtension}>
+      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.scrollExtension}>
         {!u && g && (
-          <div className={$_196.noExtensionWidgets}>
-            <div className={$_196.noExtensionWidgetsWrapper}>
+          <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.noExtensionWidgets}>
+            <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.noExtensionWidgetsWrapper}>
               {!e.singleColumn && (
                 <Empty
                   type="image-text"
@@ -165,12 +165,12 @@ var WidgetScrollExtension = React.memo(function (e) {
           </>
         )}
         {u && (
-          <div className={$_196.loading} style={{ height: "100%" }}>
+          <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.loading} style={{ height: "100%" }}>
             <img src={_$_} alt="loading" />
           </div>
         )}
       </div>
-      <div className={$_196.widgetMallBtnContainer}>
+      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtnContainer}>
         {!g && <WidgetMallButton singleColumn={e.singleColumn} />}
       </div>
     </>
@@ -186,7 +186,7 @@ var WidgetTabContainer = React.memo(function (e) {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var n = $_16_index.e(function (e) {
     return e.uiConfig.widgetEditor
-  }) === K.j.ReadOnly
+  }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
   var r = $_16_index.e(function (e) {
     return !!e.oTState.collWorkId
   })
@@ -196,14 +196,14 @@ var WidgetTabContainer = React.memo(function (e) {
   var s = i[1]
   return (
     <div
-      className={N($_196.tabContainer, e.singleColumn ? $_196.singleColumn : $_196.doubleColumn, n && $_196.readonly)}
+      className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.singleColumn : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.doubleColumn, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.readonly)}
     >
-      <div className={$_196.tabNav}>
+      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabNav}>
         <div
           onClick={() => {
             s(Tab.BASIC)
           }}
-          className={N($_196.tab, a === Tab.BASIC && $_196.activeTab)}
+          className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
           <div>{$_710_index$a$formatMessage({ id: "Widget.basic" })}</div>
         </div>
@@ -211,16 +211,16 @@ var WidgetTabContainer = React.memo(function (e) {
           onClick={() => {
             s(Tab.EXTENSION)
           }}
-          className={N($_196.tab, a === Tab.EXTENSION && $_196.activeTab)}
+          className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
           <div>{$_710_index$a$formatMessage({ id: "Widget.extension" })}</div>
         </div>
       </div>
-      <div className={$_196.tabContent}>
-        <div className={N($_196.tabContentBox, a !== Tab.BASIC && $_196.hide)}>
+      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContent}>
+        <div className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
           <BuiltInWidgetList isOT={r} />
         </div>
-        <div className={N($_196.tabContentBox, a !== Tab.EXTENSION && $_196.hide)}>
+        <div className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
           <WidgetScrollExtension singleColumn={e.singleColumn} />
         </div>
       </div>
@@ -245,14 +245,14 @@ var StageToast = React.memo(function () {
     }
     if (e$visible) {
       s.current = window.setTimeout(() => {
-        a(Message.th())
+        a(Actions.th())
       }, 3000)
     }
   }, [a, e$visible, r])
   return e$visible ? (
-    <div className={$_279.toastWrapper}>
-      <span className={$_279.toast}>
-        {i && <$_13_index.j type="icon-alert-success" className={$_279.icon} />}
+    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toastWrapper}>
+      <span className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toast}>
+        {i && <$_13_index.j type="icon-alert-success" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.icon} />}
         {r}
       </span>
     </div>
@@ -290,16 +290,16 @@ var PreviewArea = React.memo(() => {
       var /* [auto-meaningful-name] */e$target = e.target
       var /* [auto-meaningful-name] */e$clientX = e.clientX
       var /* [auto-meaningful-name] */e$clientY = e.clientY
-      var a = e$target.closest("." + wn.b)
+      var a = e$target.closest("." + $$_$$_$$_$$_$$_unrestored_shared_1571_2636_90.b)
       var s = (null === a || undefined === a ? undefined : a.id) || ""
-      var c = null === a || undefined === a ? undefined : a.classList.contains(wn.a)
+      var c = null === a || undefined === a ? undefined : a.classList.contains($$_$$_$$_$$_$$_unrestored_shared_1571_2636_90.a)
       if (!c) {
         e.preventDefault()
       }
-      if (!a || c || (null === (n = Et.Bb(s)) || undefined === n ? undefined : n.parentId)) {
-        t(Message.Wg())
+      if (!a || c || (null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(s)) || undefined === n ? undefined : n.parentId)) {
+        t(Actions.Wg())
       } else {
-        t(Message.Og({
+        t(Actions.Og({
           position: {
             x: e$clientX,
             y: e$clientY
@@ -323,15 +323,15 @@ var PreviewArea = React.memo(() => {
       var e = Math.max(window.innerWidth / 3, 514)
       r.current.style.width = "".concat(e, "px")
       u(e + 1)
-      t(Message.Zi(e - Cv))
+      t(Actions.Zi(e - Cv))
       if (n.current) {
         var /* [auto-meaningful-name] */n$current$offsetWidth = n.current.offsetWidth
         var /* [auto-meaningful-name] */n$current$offsetHeight = n.current.offsetHeight
-        var a = .8 * n$current$offsetWidth / kn.e
-        var s = (n$current$offsetHeight - 80) / kn.d
+        var a = .8 * n$current$offsetWidth / $$_$$_$$_$$_$$_unrestored_shared_1571_2636_75.e
+        var s = (n$current$offsetHeight - 80) / $$_$$_$$_$$_$$_unrestored_shared_1571_2636_75.d
         var c = Math.min(a, s, 1)
         c = Math.max(c, .7)
-        t(Message.Xi(c))
+        t(Actions.Xi(c))
       }
     }
   }, [t])
@@ -350,27 +350,27 @@ var PreviewArea = React.memo(() => {
   return (
     <div
       id="previewAreaWrapper"
-      className={$_279.wrapper}
+      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.wrapper}
       ref={r}
       style={{
         marginLeft: i || o ? 0 : -l
       }}
     >
-      <section className={$_279.body}>
+      <section className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.body}>
         <>
           <aside
             style={{
               width: `${Cv}px`
             }}
-            className={$_279.side}
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.side}
           >
             <WidgetTabContainer singleColumn={Tv} />
           </aside>
           <ScreenList />
-          <main className={$_279.main} ref={n}>
+          <main className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.main} ref={n}>
             <Stage />
             <StageToast />
-            <$_1512.a />
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1512.a />
           </main>
           {!o && (
             <$_748_index.a
@@ -381,9 +381,9 @@ var PreviewArea = React.memo(() => {
               trigger={["hover", "click"]}
             >
               <div
-                className={N($_279.foldBtn, i ? $_279.hide : $_279.show, (m || a) && $_279.visible)}
+                className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.foldBtn, i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.hide : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.show, (m || a) && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.visible)}
                 onClick={() => {
-                  t(Message.Yi(!i))
+                  t(Actions.Yi(!i))
                 }}
                 onMouseEnter={() => g(true)}
                 onMouseLeave={() => g(false)}
@@ -398,14 +398,14 @@ var PreviewArea = React.memo(() => {
       {!o && (
         <ActivePreview
           onDrag={(e) => {
-            t(Message.Zi(e - Cv))
+            t(Actions.Zi(e - Cv))
           }}
           onDragEnd={(e) => {
             u(e + 1)
-            t(Message.Zi(e - Cv))
+            t(Actions.Zi(e - Cv))
           }}
-          onEnter={() => t(Message.ui(true))}
-          onLeave={() => t(Message.ui(false))}
+          onEnter={() => t(Actions.ui(true))}
+          onLeave={() => t(Actions.ui(false))}
           previewAreaRef={r}
         />
       )}

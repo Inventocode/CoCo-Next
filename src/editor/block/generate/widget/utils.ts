@@ -4,9 +4,9 @@
  * 模块 ID：301__part-5
  */
 
-import * as g from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../unrestored/shared/1571/2636/15"
-import * as pe from "../../../../../unrestored/shared/1571/2636/301/85"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../../unrestored/shared/1571/2636/301/85"
 
 import * as CustomWidgetTypes from "../../../../shared/widget/custom/types"
 
@@ -27,13 +27,13 @@ export function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.Val
       shadow = `<shadow type="widget_boolean">\n      <field name="BOOL">${defaultValue ? "TRUE" : "FALSE"}</field>\n    </shadow>`
       break
     case "color":
-      shadow = `<shadow type="color_picker">\n      <field name="COLOR_PALETTE">${$$_15.i(defaultValue) ? "#ffffff" : defaultValue}</field>\n    </shadow>`
+      shadow = `<shadow type="color_picker">\n      <field name="COLOR_PALETTE">${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.i(defaultValue) ? "#ffffff" : defaultValue}</field>\n    </shadow>`
       break
     case "image":
-      shadow = `<shadow type="image_file_list_dropdown">\n        <field name="IMAGE_FILE_ID">${g.h}</field>\n      </shadow>`
+      shadow = `<shadow type="image_file_list_dropdown">\n        <field name="IMAGE_FILE_ID">${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.h}</field>\n      </shadow>`
       break
     case "icon":
-      shadow = `<shadow type="icon_file_list_dropdown">\n          <field name="ICON_FILE_ID">${g.h}</field>\n        </shadow>`
+      shadow = `<shadow type="icon_file_list_dropdown">\n          <field name="ICON_FILE_ID">${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.h}</field>\n        </shadow>`
       break
     case "multilineString":
       shadow = `<shadow type="text_multiline">\n        <field name="TEXT">${defaultValue}</field>\n      </shadow>`
@@ -55,7 +55,7 @@ export function getCustomWidgetBlockParamShadow(valueType: CustomWidgetTypes.Val
 
 function he(e, t) {
   return t.map(function (t) {
-    var n = pe.a(e, t.label)
+    var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(e, t.label)
     if (undefined === n) {
       n = t.label
     }

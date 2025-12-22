@@ -34,12 +34,12 @@ CoCo 源代码计划并不是也不能完全还原 CoCo 的源代码，该项目
 
 | 模块 | 抓取 | 拆包 | 语法升级 | JSX 反向转换 | 反压缩 |
 | :-: | :-: | :-: | :-: | :-: | :-: |
-| CoCo Home | ✅ | 75% | ❌ | ❌ | / |
-| CoCo Editor | ✅ | 75% | ❌ | ❌ | 0% |
+| CoCo Home | ✅ | 90% | ❌ | 50% | / |
+| CoCo Editor | ✅ | 75% | ❌ | 1% | 1% |
 | CoCo Editor Player | ✅ | 75% | ❌ | ❌ | ❌ |
 | CoCo Editor ServiceWorker | ✅ | ✅ | ❌ | / | ❌ |
 | CoCo Player | ✅ | 75% | ❌ | ❌ | ❌ |
-| CoCo About | ✅ | 75% | ❌ | ❌ | ❌ |
+| CoCo About | ✅ | 75% | ❌ | ✅ | 10% |
 
 过程说明：
 

@@ -8,7 +8,7 @@
 
 import { Vt, zt } from "./49__part-7"
 import * as Oe from "./43"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as /* [auto-meaningful-name] */$_24_304 from "./24/304"

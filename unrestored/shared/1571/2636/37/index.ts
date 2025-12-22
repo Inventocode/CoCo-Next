@@ -4,7 +4,7 @@
  * 模块 ID：37
  */
 
-import { xl, Dl, Ml, Ll } from "../../../../../src/shared/events/store"
+import { xl, Dl, Ml, Ll } from "../../../../../src/editor/redux/store"
 export { xl as d }
 export { Dl as c }
 export { Ml as a }

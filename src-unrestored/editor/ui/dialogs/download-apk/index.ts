@@ -6,41 +6,41 @@
 
 "use strict"
 
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_events_main_messagesWrapper from "../../../events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_1062 from "../../../../../unrestored/shared/1571/2636/1062"
-import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1062"
-var ML = _React.memo(function () {
-  var e = $_16_index.d()
-  var t = $_16_index.e(function (e) {
+import * as /* [auto-meaningful-name] */React1 from "react"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1062 from "../../../../../unrestored/shared/1571/2636/1062"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621 from "../../../../../unrestored/shared/1571/2636/1062"
+var ML = React1.memo(function () {
+  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.blockImageDialogInfo
   })
   var /* [auto-meaningful-name] */t$visible = t.visible
   var /* [auto-meaningful-name] */t$imgSrc = t.imgSrc
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
     visible: t$visible,
-    className: _$_.blockImageDialog,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageDialog,
     onClose: function () {
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.bi(false, ""))
+      e($$_$$_$$_events_main_messagesWrapper.bi(false, ""))
     }
   }, React.createElement("div", {
-    className: _$_.blockImageWrap
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageWrap
   }, React.createElement("img", {
     src: t$imgSrc,
     alt: ""
   })), React.createElement("div", {
-    className: _$_.btnDownload,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.btnDownload,
     onClick: function () {
       var e = document.createElement("a")
       e.href = t$imgSrc
       e.download = "block.png"
       e.click()
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-download-apk"
   })))
 })
@@ -48,7 +48,7 @@ var LL = ["为了确保编程猫社区成员账户安全，我们将限制导入
 var PL = [
   {
     label: "Coco控件商城-投稿",
-    url: te.b
+    url: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b
   }
 ]
 export { ML }

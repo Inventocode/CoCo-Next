@@ -6,11 +6,11 @@
 
 "use strict"
 
-import { xl } from "../../../../../src/shared/events/store"
+import { xl } from "../../../../../src/editor/redux/store"
 import * as cn from "../../../../../src/editor/widget/built-in/types"
 import * as on from "../9"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_127 from "../127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../src/shared/widget/custom/storage"

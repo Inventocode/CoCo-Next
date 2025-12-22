@@ -8,17 +8,17 @@
 
 import { me } from "../../../unrestored/shared/1571/2636/index__part-5"
 import { AC, IC } from "../../../unrestored/shared/1571/2636/index__part-140"
-import * as /* [auto-meaningful-name] */$_37_index from "../../../unrestored/shared/1571/2636/37/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../unrestored/shared/1571/2636/37/index"
 import /* [auto-meaningful-name] */Axios from "axios"
-import * as /* [auto-meaningful-name] */$_288 from "../../../unrestored/shared/1571/2636/288"
-import * as /* [auto-meaningful-name] */$_141_index from "../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$_297 from "../../../unrestored/shared/1571/2636/297"
-import * as te from "../../../unrestored/shared/1571/2636/15"
-import * as K from "../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../shared/events/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_627 from "../../../unrestored/shared/1571/2636/627"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../unrestored/shared/1571/2636/288"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../unrestored/shared/1571/2636/297"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */$$_$$_shared_events_messagesWrapper from "../../shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../unrestored/shared/1571/2636/627"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../unrestored/shared/1571/2636/710/index"
 import * as O from "../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "../../../unrestored/shared/1571/2636/16/index"
@@ -29,7 +29,7 @@ import * as /* [auto-meaningful-name] */$_1529 from "../../../unrestored/shared/
 import * as /* [auto-meaningful-name] */$_392_index from "../../../unrestored/shared/1571/2636/392/index"
 var LM = function () {
   var e = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var n = $_16_index.e(function (e) {
     return e.common.courseList
   })
@@ -37,7 +37,7 @@ var LM = function () {
     return e.common.templateList
   })
   var o = _React.useRef(false)
-  $_288.b()
+  $$_$$_$$_unrestored_shared_1571_2636_288.b()
   _React.useEffect(function () {
     function e() {
       return (e = O.a(RegeneratorRuntime.mark(function e() {
@@ -48,7 +48,7 @@ var LM = function () {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                if (t = te.N(window.location.href), !(t$code = t.code)) {
+                if (t = $$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href), !(t$code = t.code)) {
                   e.next = 6
                   break
                 }
@@ -87,7 +87,7 @@ var LM = function () {
               n.prev = 0
               o.current = true
               n.next = 4
-              return $_297.d(r)
+              return $$_$$_$$_unrestored_shared_1571_2636_297.d(r)
             case 4:
               if (n$sent = n.sent, o.current = false, !n$sent.data) {
                 n.next = 17
@@ -95,22 +95,22 @@ var LM = function () {
               }
               n$sent$data = n$sent.data
               n.next = 10
-              return $_288.b()
+              return $$_$$_$$_unrestored_shared_1571_2636_288.b()
             case 10:
               if (!(!n.sent.includes(Number(r)) && !n$sent$data.is_author && n$sent$data.is_coll_work && n$sent$data.content && n$sent$data.content.unsafeExtensionWidgetList && n$sent$data.content.unsafeExtensionWidgetList.length > 0)) {
                 n.next = 14
                 break
               }
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+              e($$_$$_shared_events_messagesWrapper.zh({
                 onConfirm: function () {
-                  e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
+                  e($$_$$_shared_events_messagesWrapper.Gf())
                 },
                 allowText: $_710_index$a$formatMessage({
                   id: "know"
                 }),
                 title: "",
                 content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: te.b,
+                  href: $$_$$_$$_unrestored_shared_1571_2636_15.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
                 }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
@@ -118,19 +118,19 @@ var LM = function () {
               }))
               return n.abrupt("return")
             case 14:
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf({
+              e($$_$$_shared_events_messagesWrapper.Gf({
                 json: n$sent$data.content,
                 lastSavedTime: 1e3 * n$sent$data.updated_at,
                 isCollWork: n$sent$data.is_coll_work,
                 isAuthor: n$sent$data.is_author,
                 projectId: r,
                 editPermission: n$sent$data.edit_permission,
-                jsonFrom: n$sent$data.is_coll_work ? K.d.OTHER : K.d.MY_WORK
+                jsonFrom: n$sent$data.is_coll_work ? $$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER : $$_$$_$$_unrestored_shared_1571_2636_18.d.MY_WORK
               }))
               n.next = 18
               break
             case 17:
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.Uf({
+              e($$_$$_shared_events_messagesWrapper.Uf({
                 code: n$sent.code
               }))
             case 18:
@@ -163,8 +163,8 @@ var LM = function () {
               e.next = 2
               return i(n)
             case 2:
-              $_37_index$d$getState$common$userInfo = $_37_index.d.getState().common.userInfo
-              $_141_index.a("EnterCollaboration", {
+              $_37_index$d$getState$common$userInfo = $$_$$_$$_unrestored_shared_1571_2636_37_index.d.getState().common.userInfo
+              $$_$$_$$_unrestored_shared_1571_2636_141_index.a("EnterCollaboration", {
                 collaborationId: (null === $_37_index$d$getState$common$userInfo || undefined === $_37_index$d$getState$common$userInfo ? undefined : $_37_index$d$getState$common$userInfo.id) || "",
                 collaborationName: (null === $_37_index$d$getState$common$userInfo || undefined === $_37_index$d$getState$common$userInfo ? undefined : $_37_index$d$getState$common$userInfo.nickname) || ""
               })
@@ -178,14 +178,14 @@ var LM = function () {
       var /* [auto-meaningful-name] */n$response
       switch (console.error("加入协作失败,", n), null === (n$response = n.response) || undefined === n$response ? undefined : n$response.data.code) {
         case 80000001:
-          e($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch(function () {
+          e($$_$$_shared_events_messagesWrapper.Ch(function () {
             window.location.reload()
           }))
           break
         case 10000008:
-          e($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+          e($$_$$_shared_events_messagesWrapper.zh({
             onConfirm: function () {
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
+              e($$_$$_shared_events_messagesWrapper.Gf())
             },
             allowText: $_710_index$a$formatMessage({
               id: "confirm"
@@ -200,9 +200,9 @@ var LM = function () {
           }))
           break
         default:
-          e($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+          e($$_$$_shared_events_messagesWrapper.zh({
             onConfirm: function () {
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
+              e($$_$$_shared_events_messagesWrapper.Gf())
             },
             allowText: $_710_index$a$formatMessage({
               id: "confirm"
@@ -219,7 +219,7 @@ var LM = function () {
     })
   }, [e, $_710_index$a$formatMessage, i])
   var s = _React.useCallback(function () {
-    e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf("localhost" === window.location.hostname ? undefined : {
+    e($$_$$_shared_events_messagesWrapper.Gf("localhost" === window.location.hostname ? undefined : {
       json: $_1529
     }))
   }, [e])
@@ -227,7 +227,7 @@ var LM = function () {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf({
+        e($$_$$_shared_events_messagesWrapper.Gf({
           json: t
         }))
       })
@@ -241,7 +241,7 @@ var LM = function () {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Ff(t))
+        e($$_$$_shared_events_messagesWrapper.Ff(t))
       })
       o.current = false
     })
@@ -256,14 +256,14 @@ var LM = function () {
               t.prev = 0
               o.current = true
               t.next = 4
-              return $_297.e(n)
+              return $$_$$_$$_unrestored_shared_1571_2636_297.e(n)
             case 4:
               t$sent = t.sent
               o.current = false
               if (t$sent) {
-                e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf({
+                e($$_$$_shared_events_messagesWrapper.Gf({
                   json: t$sent.content,
-                  editPermission: K.c.Preview
+                  editPermission: $$_$$_$$_unrestored_shared_1571_2636_18.c.Preview
                 }))
               } else {
                 console.error("归档内容不存在，加载空作品")
@@ -300,10 +300,10 @@ var LM = function () {
                 o.current = true
                 fetch(i.bcmUrl).then(function (t) {
                   t.json().then(function (t) {
-                    e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf({
+                    e($$_$$_shared_events_messagesWrapper.Gf({
                       json: t,
-                      jsonFrom: K.d.HOME_COURSE,
-                      sourceTag: K.g.COURSE,
+                      jsonFrom: $$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE,
+                      sourceTag: $$_$$_$$_unrestored_shared_1571_2636_18.g.COURSE,
                       sourceId: r
                     }))
                     o.current = false
@@ -311,7 +311,7 @@ var LM = function () {
                 }).catch(function () {
                   o.current = false
                 })
-                $_627.a.load({
+                $$_$$_$$_unrestored_shared_1571_2636_627.a.load({
                   onPlayerInit: function () {},
                   title: React.createElement("div", null, React.createElement("span", {
                     style: {
@@ -328,13 +328,13 @@ var LM = function () {
                         for (;;) {
                           switch (t.prev = t.next) {
                             case 0:
-                              $_627.a.close({
+                              $$_$$_$$_unrestored_shared_1571_2636_627.a.close({
                                 closeAnimationPos: {
                                   x: 150,
                                   y: 30
                                 }
                               })
-                              e($$_$$_$$_$$_src_shared_events_messagesWrapper.fi(true))
+                              e($$_$$_shared_events_messagesWrapper.fi(true))
                             case 2:
                             case "end":
                               return t.stop()
@@ -342,7 +342,7 @@ var LM = function () {
                         }
                       }, t)
                     }))
-                  }, React.createElement($_13_index.j, {
+                  }, React.createElement($$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
                     type: "icon-btn-fallback",
                     className: "coco-video-back"
                   }))), i.title),
@@ -352,14 +352,14 @@ var LM = function () {
                   useConfirmMask: true,
                   confirmPercent: .9,
                   onMinimizeBtnClick: function () {
-                    $_627.a.hide()
-                    e($$_$$_$$_$$_src_shared_events_messagesWrapper.Qh($_392_index.a, {
+                    $$_$$_$$_unrestored_shared_1571_2636_627.a.hide()
+                    e($$_$$_shared_events_messagesWrapper.Qh($_392_index.a, {
                       name: $_392_index.a,
                       content: React.createElement($_392_index.b, null)
                     }))
                   },
                   onClose: function () {
-                    $_627.a.close({
+                    $$_$$_$$_unrestored_shared_1571_2636_627.a.close({
                       closeAnimationPos: {
                         x: 150,
                         y: 30
@@ -392,10 +392,10 @@ var LM = function () {
                 o.current = true
                 fetch(i.bcmUrl).then(function (t) {
                   t.json().then(function (t) {
-                    e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf({
+                    e($$_$$_shared_events_messagesWrapper.Gf({
                       json: t,
-                      jsonFrom: K.d.HOME_TEMPLATE,
-                      sourceTag: K.g.TEMPLATE,
+                      jsonFrom: $$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_TEMPLATE,
+                      sourceTag: $$_$$_$$_unrestored_shared_1571_2636_18.g.TEMPLATE,
                       sourceId: i.name
                     }))
                     o.current = false
@@ -416,7 +416,7 @@ var LM = function () {
     }
   }(), [e, r])
   _React.useEffect(function () {
-    var e = te.N(window.location.href)
+    var e = $$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href)
     var /* [auto-meaningful-name] */e$workId = e.workId
     var /* [auto-meaningful-name] */e$inviteCode = e.inviteCode
     var /* [auto-meaningful-name] */e$jsonUrl = e.jsonUrl

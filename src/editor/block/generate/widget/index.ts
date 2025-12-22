@@ -5,14 +5,14 @@
  */
 
 import { getCustomWidgetBlockParamShadow, he } from "./utils"
-import * as pe from "../../../../../unrestored/shared/1571/2636/301/85"
-import * as /* [auto-meaningful-name] */$$_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../../unrestored/shared/1571/2636/301/85"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
 import * as LoadCustomWidget from "../../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
-import * as _ from "../../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_17_index from "../../../../../unrestored/shared/1571/2636/17/index"
-import * as /* [auto-meaningful-name] */$_544 from "../../../../../unrestored/shared/1571/2636/301/544"
-import * as /* [auto-meaningful-name] */$_658 from "../../../../../unrestored/shared/1571/2636/301/658"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index from "../../../../../unrestored/shared/1571/2636/17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_544 from "../../../../../unrestored/shared/1571/2636/301/544"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_658 from "../../../../../unrestored/shared/1571/2636/301/658"
 function setBlockGroupProfile(e, Blink) {
   {
     const mutator = {
@@ -31,23 +31,23 @@ function setBlockGroupProfile(e, Blink) {
         }
         this.set_disabled(false)
         const { label, params, subTypes, tooltip, blockOptions, key } = types
-        const processedLabel = pe.a(this.widgetType, label)
+        const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, label)
         if (this.isAnyWidget) {
           const anyWidgetLabel = "任意" + LoadCustomWidget.getWidgetTitle(this.widgetType)
           this.get_input("WIDGET_ID_CONTAINER")?.append_field(anyWidgetLabel)
         } else {
-          const idField = new $$_118_index.a({
+          const idField = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options() {
-              return $$_46_index.c().getWidgetListByType(this0.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
           this.get_input("WIDGET_ID_CONTAINER")?.append_field(idField, "WIDGET_ID")
         }
         if (tooltip) {
-          const processedTooltip = pe.a(this.widgetType, tooltip)
+          const processedTooltip = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, tooltip)
           this.set_tooltip(processedTooltip)
         }
         if (blockOptions?.icon) {
@@ -63,7 +63,7 @@ function setBlockGroupProfile(e, Blink) {
           this.set_field_value(processedLabel, "EVENT")
           subTypes.forEach(({ key, dropdown }) => {
             const processedKey = "PARAM_".concat(key)
-            const field = new $$_118_index.a({
+            const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: processedKey,
               custom: true,
@@ -76,9 +76,9 @@ function setBlockGroupProfile(e, Blink) {
         }
         params.forEach(({ key, label, dropdown }) => {
           const processedKey = "PARAM_".concat(key)
-          const processedLabel = pe.a(this0.widgetType, label)
+          const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this0.widgetType, label)
           if (dropdown) {
-            const dropdownField = new $$_118_index.a({
+            const dropdownField = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: processedKey,
               custom: true,
@@ -164,7 +164,7 @@ function setBlockGroupProfile(e, Blink) {
         type: "widget_event",
         message0: "%{BKY_WIDGET_EVENT_MSG}",
         args0: [
-          _.e("%{BKY_BLOCK_TAB_ICON}", true), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_TAB_ICON}", true), {
             type: "input_dummy",
             name: "WIDGET_ID_CONTAINER"
           }, {
@@ -214,19 +214,19 @@ function setBlockGroupProfile(e, Blink) {
         }
         this.set_disabled(false)
         const { label, valueType, tooltip, blockOptions = {} } = types
-        const processedLabel = pe.a(this.widgetType, label)
+        const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, label)
         this.set_field_value(Blink.Msg.WIDGET_OF, "PROPERTY")
         if (this.isAnyWidget) {
           const title = LoadCustomWidget.getWidgetTitle(this.widgetType)
           this.get_input("WIDGET_ID_CONTAINER")?.append_field(title)
           this.append_shadow_input("WIDGET_ID", `<empty type="widget_any_id"></empty>`, "PROPERTY")
         } else {
-          const field = new $$_118_index.a({
+          const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(this0.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
           this.get_input("WIDGET_ID_CONTAINER")?.append_field(field, "WIDGET_ID")
@@ -237,13 +237,13 @@ function setBlockGroupProfile(e, Blink) {
           keys.forEach((key) => {
             const types = LoadCustomWidget.getPropertyTypes(this0.widgetType, key)
             if (types) {
-              const processedLabel = pe.a(this0.widgetType, types.label)
+              const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this0.widgetType, types.label)
               options.push([processedLabel, key])
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this0.widgetType, key)
             }
           })
-          this.append_dummy_input().append_field(new $$_118_index.a({
+          this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
@@ -257,7 +257,7 @@ function setBlockGroupProfile(e, Blink) {
         }
         switch (types.key) {
           case "__position":
-            this.append_dummy_input().append_field(new $$_118_index.a({
+            this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -283,7 +283,7 @@ function setBlockGroupProfile(e, Blink) {
         const processedValueType = LoadCustomWidget.processValueType(valueType)
         this.set_output(true, processedValueType)
         if (tooltip) {
-          const processedTooltip = pe.a(this.widgetType, tooltip)
+          const processedTooltip = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, tooltip)
           this.set_tooltip(processedTooltip)
         }
       },
@@ -340,7 +340,7 @@ function setBlockGroupProfile(e, Blink) {
         let validatorsGreaterThanValue: number | undefined
         let validatorsLessThanValue: number | undefined
         const { valueType, defaultValue, label, tooltip, checkType, dropdown, validators, blockOptions = {} } = types
-        const processedLabel = pe.a(this.widgetType, label)
+        const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, label)
         let validatorsIsInteger = false
         if (validators && valueType === "number") {
           const validators0 = validators
@@ -360,12 +360,12 @@ function setBlockGroupProfile(e, Blink) {
           this.get_input("WIDGET_ID_CONTAINER")?.append_field(title)
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>", "PROPERTY")
         } else {
-          const idField = new $$_118_index.a({
+          const idField = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(this0.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
           this.get_input("WIDGET_ID_CONTAINER")?.append_field(idField, "WIDGET_ID")
@@ -385,14 +385,14 @@ function setBlockGroupProfile(e, Blink) {
                   validatorsGreaterThanValue = 0
                 }
               }
-              const processedLabel = pe.a(this0.widgetType, types.label)
+              const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this0.widgetType, types.label)
               options.push([processedLabel, key])
             } else {
               console.error("WIDGET_GET_MUTATOR getWidgetProperty error", this0.widgetType, key)
             }
           })
           this.set_field_value(Blink.Msg.WIDGET_OF, "PROPERTY")
-          this.append_dummy_input().append_field(new $$_118_index.a({
+          this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "PROPERTY_KEY",
             custom: true,
@@ -431,7 +431,7 @@ function setBlockGroupProfile(e, Blink) {
         switch (types.key) {
           case "__position":
             this.set_field_value(Blink.Msg.WIDGET_OF, "PROPERTY")
-            this.append_dummy_input().append_field(new $$_118_index.a({
+            this.append_dummy_input().append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -445,7 +445,7 @@ function setBlockGroupProfile(e, Blink) {
             this.set_field_value("".concat(Blink.Msg.WIDGET_OF, " ").concat(Blink.Msg.WIDGET_OPACITY, " ").concat(Blink.Msg.WIDGET_SET_TO), "PROPERTY")
             break
           case "__visible":
-            this.append_dummy_input("", 0).append_field(new $$_118_index.a({
+            this.append_dummy_input("", 0).append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -460,7 +460,7 @@ function setBlockGroupProfile(e, Blink) {
             })
             break
           case "__disabled":
-            this.append_dummy_input("", 0).append_field(new $$_118_index.a({
+            this.append_dummy_input("", 0).append_field(new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -482,7 +482,7 @@ function setBlockGroupProfile(e, Blink) {
         const processedCheckType = LoadCustomWidget.processCheckType(valueType, checkType)
         if ("__visible" !== types.key && "__disabled" !== types.key) {
           if (dropdown) {
-            const field = new $$_118_index.a({
+            const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -493,7 +493,7 @@ function setBlockGroupProfile(e, Blink) {
           } else {
             let processedLabel = ""
             if ("string" === valueType) {
-              processedLabel = pe.a(this.widgetType, String(defaultValue))
+              processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, String(defaultValue))
             }
             var x = getCustomWidgetBlockParamShadow(valueType, processedLabel || defaultValue)
             this.append_shadow_input("VALUE", x).set_check(processedCheckType)
@@ -504,14 +504,14 @@ function setBlockGroupProfile(e, Blink) {
           field.set_constraints(validatorsGreaterThanValue, validatorsLessThanValue, validatorsIsInteger ? 1 : undefined)
           if ("__opacity" === types.key) {
             field.set_controller_option({
-              type: $$_17_index.I.ControllerType.SLIDER,
+              type: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.ControllerType.SLIDER,
               left_text: Blink.Msg["opacity.invisible"],
               right_text: Blink.Msg["opacity.visible"]
             })
           }
         }
         if (tooltip) {
-          const processedTooltip = pe.a(this.widgetType, tooltip)
+          const processedTooltip = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, tooltip)
           this.set_tooltip(processedTooltip)
         }
       },
@@ -574,7 +574,7 @@ function setBlockGroupProfile(e, Blink) {
           field?.append_field(title)
           this.append_shadow_input("WIDGET_ID", "<empty type=\"widget_any_id\"></empty>")
           if ("__setVisible" === types.key) {
-            const field = new $$_118_index.a({
+            const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "DISPLAY",
               custom: true,
@@ -585,7 +585,7 @@ function setBlockGroupProfile(e, Blink) {
             this.append_dummy_input().append_field(field, "DISPLAY")
           }
           if ("__setDisabled" === types.key) {
-            const field = new $$_118_index.a({
+            const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "DISABLED",
               custom: true,
@@ -596,12 +596,12 @@ function setBlockGroupProfile(e, Blink) {
             this.append_dummy_input().append_field(field, "DISABLED")
           }
         } else {
-          const idField = new $$_118_index.a({
+          const idField = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
             type: "field_coco_dropdown",
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $$_46_index.c().getWidgetListByType(this0.widgetType)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(this0.widgetType)
             }
           })
           field?.append_field(idField, "WIDGET_ID")
@@ -609,15 +609,15 @@ function setBlockGroupProfile(e, Blink) {
         const { label, params, tooltip, blockOptions = {}, valueType } = types
         if (false !== blockOptions.callMethodLabel) {
           const callMethodLabel = (blockOptions.callMethodLabel?.toString()) || ""
-          const processedCallMethodLabel = pe.a(this.widgetType, callMethodLabel) || Blink.Msg.WIDGET_METHOD_CALL_MSG
-          const textField = new $_658.FieldLabel({
+          const processedCallMethodLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, callMethodLabel) || Blink.Msg.WIDGET_METHOD_CALL_MSG
+          const textField = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_658.FieldLabel({
             text: processedCallMethodLabel
           })
           field?.insert_field_at(0, textField)
         }
         let icon
         if (blockOptions.icon && (Blink.Msg[blockOptions.icon] ? icon = Blink.Msg[blockOptions.icon] : blockOptions.icon.startsWith("https://") && (icon = blockOptions.icon), icon)) {
-          const field = new $_544.FieldImage({
+          const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_544.FieldImage({
             src: icon
           })
           this.append_dummy_input("ICON_CONTAINER", "WIDGET_ID_CONTAINER").append_field(field)
@@ -631,22 +631,22 @@ function setBlockGroupProfile(e, Blink) {
           const processedValueType = LoadCustomWidget.processValueType(valueType)
           this.set_output(true, processedValueType)
         }
-        const processedLabel = pe.a(this.widgetType, label)
+        const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, label)
         if (processedLabel) {
           this.append_dummy_input().append_field(processedLabel, "METHOD")
         }
         if (tooltip) {
-          const processedTooltip = pe.a(this.widgetType, tooltip)
+          const processedTooltip = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this.widgetType, tooltip)
           this.set_tooltip(processedTooltip)
         }
         if (false === blockOptions.inputsInline) {
           this.set_inputs_inline(blockOptions.inputsInline)
         }
         params.forEach(({ label, labelAfter, valueType, checkType, defaultValue, key, dropdown, controller }) => {
-          const processedLabel = pe.a(this0.widgetType, label)
+          const processedLabel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this0.widgetType, label)
           const processedKey = "PARAM_".concat(key)
           if (dropdown) {
-            const field = new $$_118_index.a({
+            const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: processedKey,
               custom: true,
@@ -670,7 +670,7 @@ function setBlockGroupProfile(e, Blink) {
               field?.set_constraints(controller.min, controller.max, 1)
               if (controller.leftText && controller.rightText) {
                 field?.set_controller_option({
-                  type: $$_17_index.I.ControllerType.SLIDER,
+                  type: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.ControllerType.SLIDER,
                   left_text: controller.leftText,
                   right_text: controller.rightText
                 })
@@ -678,7 +678,7 @@ function setBlockGroupProfile(e, Blink) {
             }
           }
           if (labelAfter) {
-            const processedLabelAfter = pe.a(this0.widgetType, labelAfter)
+            const processedLabelAfter = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85.a(this0.widgetType, labelAfter)
             this0.append_dummy_input("").append_field(processedLabelAfter, "".concat(processedKey, "_LABEL_AFTER"))
           }
         })
@@ -727,7 +727,7 @@ function setBlockGroupProfile(e, Blink) {
           const { defaultValue, dropdown } = types
           if (dropdown) {
             this.set_shadow(true)
-            const field = new $$_118_index.a({
+            const field = new $$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index.a({
               type: "field_coco_dropdown",
               name: "VALUE",
               custom: true,
@@ -815,7 +815,7 @@ function ve(e) {
     var /* [auto-meaningful-name] */h$getter
     var o = t.blocks[n]
     var /* [auto-meaningful-name] */o$mutation = o.mutation
-    var a = $$_17_index.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -823,7 +823,7 @@ function ve(e) {
       return ""
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || ""
-    u = _.o(u)
+    u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(u)
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
@@ -844,29 +844,29 @@ function ve(e) {
     }
     var v = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.s("getWidgetOpacity", [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getWidgetOpacity", [u])
     }
     if ("__visible" === s) {
-      return _.s("getWidgetVisible", [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getWidgetVisible", [u])
     }
     if ("__disabled" === s) {
-      return _.s("getWidgetDisabled", [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getWidgetDisabled", [u])
     }
     if ("__width" === s || "__height" === s) {
       var b = "__width" === s ? "getWidgetWidth" : "getWidgetHeight"
-      return _.s(b, [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s(b, [u])
     }
     if (v) {
       var y = "positionX" === v ? "getWidgetPositionX" : "getWidgetPositionY"
-      return _.s(y, [u])
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s(y, [u])
     }
-    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? _.s(h.getter.func, [u, _.o(s)]) : _.s("getProperty", [u, _.o(s)], LoadCustomWidget.q(c))
+    return "string" === typeof (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.func) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s(h.getter.func, [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s)]) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getProperty", [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s)], LoadCustomWidget.q(c))
   })
   e.insertBlockSnippetGenerator("widget_set", function (t, n) {
     var /* [auto-meaningful-name] */h$setter
     var o = t.blocks[n]
     var /* [auto-meaningful-name] */o$mutation = o.mutation
-    var a = $$_17_index.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -874,7 +874,7 @@ function ve(e) {
       return ""
     }
     var u = e.getFieldValue(o, "WIDGET_ID") || ""
-    u = _.o(u)
+    u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(u)
     if (l) {
       u = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
     }
@@ -895,35 +895,35 @@ function ve(e) {
     }
     var v = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     if (d.dropdown) {
-      v = _.o(e.getFieldValue(o, "VALUE") || "")
+      v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getFieldValue(o, "VALUE") || "")
     }
     var b = e.getFieldValue(o, "POSITION_TYPE") || ""
     if ("__opacity" === s) {
-      return _.l(_.n("setWidgetOpacity", [u, v]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetOpacity", [u, v]), o, e)
     }
     if ("__visible" === s) {
       var y = "show" === e.getFieldValue(o, "VALUE")
-      return _.l(_.n("setWidgetVisible", [u, y]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetVisible", [u, y]), o, e)
     }
     if ("__disabled" === s) {
       var E = "disabled" === e.getFieldValue(o, "VALUE")
-      return _.l(_.n("setWidgetAttribute", [u, _.o("disabled"), E]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetAttribute", [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("disabled"), E]), o, e)
     }
     if ("__width" === s || "__height" === s) {
       var O = "__width" === s ? "setWidgetWidth" : "setWidgetHeight"
-      return _.l(_.n(O, [u, v]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(O, [u, v]), o, e)
     }
     if (b) {
       var w = "positionX" === b ? "setWidgetPositionX" : "setWidgetPositionY"
-      return _.l(_.n(w, [u, v]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(w, [u, v]), o, e)
     }
-    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? _.l(_.n(h.setter.func, [u, v]), o, e) : _.l(_.n("setProperty", [u, _.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e)
+    return "string" === typeof (null === (h$setter = h.setter) || undefined === h$setter ? undefined : h$setter.func) ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(h.setter.func, [u, v]), o, e) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setProperty", [u, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s), v], undefined, undefined, LoadCustomWidget.q(c)), o, e)
   })
   e.insertBlockSnippetGenerator("widget_event", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "WIDGET_ID") || ""
     var /* [auto-meaningful-name] */r$mutation = r.mutation
-    var a = $$_17_index.Blink.xml.text_to_dom(r$mutation)
+    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation)
     var s = a.getAttribute("event")
     var c = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var l = a.getAttribute("widget_type")
@@ -944,23 +944,23 @@ function ve(e) {
       })
     }
     d$params.forEach(function (e) {
-      h.push("".concat(_.a).concat(e.key))
+      h.push("".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a).concat(e.key))
     })
     if (u) {
-      h.push("".concat(_.a).concat(LoadCustomWidget.ANY_WIDGET_KEY))
+      h.push("".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a).concat(LoadCustomWidget.ANY_WIDGET_KEY))
     }
     var g = e.statementToCode(t, n, "DO")
-    return g ? _.n("onWidgetEvent", [_.o(l), _.o(s), u ? _.o(c) : _.o(o)], g, h, LoadCustomWidget.q(l)) : ""
+    return g ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("onWidgetEvent", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(l), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(s), u ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(c) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], g, h, LoadCustomWidget.q(l)) : ""
   })
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
     var /* [auto-meaningful-name] */e$blocksT$mutation = e.blocks[t].mutation
-    var r = $$_17_index.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
-    return "".concat(_.a).concat(r)
+    var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
+    return "".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a).concat(r)
   })
   e.insertBlockSnippetGenerator("widget_method", function (t, n) {
     var r = t.blocks[n]
     var /* [auto-meaningful-name] */r$mutation = r.mutation
-    var i = $$_17_index.Blink.xml.text_to_dom(r$mutation)
+    var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation)
     var a = i.getAttribute("method")
     var s = i.getAttribute("widget_type")
     var c = "true" === i.getAttribute("is_any_widget")
@@ -977,9 +977,9 @@ function ve(e) {
       d = e.valueToCode(t, n, "WIDGET_ID", e.ORDER_FUNCTION_CALL)
       u.push(d)
     } else {
-      u.push(_.o(d))
+      u.push($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(d))
     }
-    u.push(_.o(a))
+    u.push($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a))
     var /* [auto-meaningful-name] */l$params = l.params
     var /* [auto-meaningful-name] */l$valueType = l.valueType
     var h = []
@@ -994,45 +994,45 @@ function ve(e) {
         console.error("widget_method valueToCode error", l)
       }
       if (o$dropdown) {
-        c = _.o(e.getFieldValue(r, s) || "")
+        c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(e.getFieldValue(r, s) || "")
       }
       u.push(c)
       h.push(c)
     })
     if ("__setVisible" === l.key) {
       var g = "show" === e.getFieldValue(r, "DISPLAY")
-      return _.l(_.n("setWidgetVisible", [d, g]), r, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetVisible", [d, g]), r, e)
     }
     if ("__setDisabled" === l.key) {
       var v = "disabled" === e.getFieldValue(r, "DISABLED")
-      return _.l(_.n("setWidgetAttribute", [d, _.o("disabled"), v]), r, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setWidgetAttribute", [d, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("disabled"), v]), r, e)
     }
-    return l$valueType ? _.l(_.r("callMethod", u), r, e, true, true) : _.l(_.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e)
+    return l$valueType ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.r("callMethod", u), r, e, true, true) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.j("callMethod", u, undefined, undefined, LoadCustomWidget.q(s)), r, e)
   })
   e.insertBlockSnippetGenerator("widget_color", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "COLOR")
-    return _.o(o)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)
   })
   e.insertBlockSnippetGenerator("color_picker", function (t, n) {
     var r
     var o = t.blocks[n]
-    var i = $$_17_index.Blink.xml.text_to_dom(o.mutation)
+    var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o.mutation)
     var a = function (r) {
       return e.valueToCode(t, n, r, e.ORDER_COMMA)
     }
     switch (Number(i.getAttribute("format"))) {
-      case $$_17_index.I.EColorFormat.ColorPalette:
-        r = _.s("getColorHex", [_.o(i.getAttribute("color") || "")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.ColorPalette:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHex", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i.getAttribute("color") || "")])
         break
-      case $$_17_index.I.EColorFormat.ColorString:
-        r = _.s("getColorHex", [a("COLOR_STRING")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.ColorString:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHex", [a("COLOR_STRING")])
         break
-      case $$_17_index.I.EColorFormat.HSVA:
-        r = _.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.HSVA:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
         break
-      case $$_17_index.I.EColorFormat.RGBA:
-        r = _.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
+      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.RGBA:
+        r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
     }
     return r || ""
   })
@@ -1043,10 +1043,10 @@ function ve(e) {
   e.insertBlockSnippetGenerator("widget_dropdown", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "VALUE")
-    return _.o(o)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)
   })
   e.insertBlockSnippetGenerator("widget_any_id", function (e, t) {
-    return _.o("")
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o("")
   })
 }
 

@@ -2,6 +2,7 @@ import globals from "globals"
 import stylistic from "@stylistic/eslint-plugin"
 import tseslint from "typescript-eslint"
 import { defineConfig } from "eslint/config"
+import { transform } from "./out/scripts/transform/eslint/index.js"
 
 export default defineConfig([
   {
@@ -39,6 +40,22 @@ export default defineConfig([
       "@stylistic/array-bracket-newline": ["warn"],
       "@stylistic/array-element-newline": ["warn", "consistent"],
       "@stylistic/type-annotation-spacing": ["warn"]
+    }
+  },
+  {
+    files: [
+      "src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
+    ],
+    languageOptions: {
+      globals: globals.browser,
+      parser: tseslint.parser
+    },
+    plugins: {
+      transform
+    },
+    rules: {
+      "transform/use-meaningful-var-name": ["warn"],
+      "transform/no-create-element": ["warn"]
     }
   }
 ])

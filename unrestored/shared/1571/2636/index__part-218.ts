@@ -9,7 +9,7 @@
 import { rA } from "./index__part-160"
 import * as /* [auto-meaningful-name] */$_417_index from "./417/index"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"

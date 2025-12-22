@@ -4,8 +4,6 @@
  * 模块 ID：5
  */
 
-"use strict"
-
 var r
 var o
 export { r as s }

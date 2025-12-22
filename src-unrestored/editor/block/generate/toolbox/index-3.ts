@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as _ from "../../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_25_index from "../../../../../unrestored/shared/1571/2636/25/index"
-import * as /* [auto-meaningful-name] */$$_1058_173 from "../../../../../unrestored/shared/1571/2636/1058/173"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../unrestored/shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173 from "../../../../../unrestored/shared/1571/2636/1058/173"
 function oe(e) {
   e.insertBlockProfile("procedures_2_param_block", {
     type: "procedures_2_param_block",
@@ -26,33 +26,33 @@ function oe(e) {
   })
 }
 function ie(e) {
-  e.insertBlockXML($$_1058_173.PROCEDURE_BLOCK_TYPES.DEF, "", true)
-  e.insertBlockXML($$_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true)
-  e.insertBlockXML($$_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true)
+  e.insertBlockXML($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.DEF, "", true)
+  e.insertBlockXML($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, "", true)
+  e.insertBlockXML($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, "", true)
 }
 function ae(e) {
   function t(t, n, r) {
     var o = n.blocks[r]
     var i = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var a = e.getFieldValue(o, "NAME") || ""
-    var s = _.f(a, i)
+    var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.f(a, i)
     var c = Object.keys(o.shadows).filter(function (e) {
       return e.startsWith("ARG")
     }).map(function (t) {
       return e.valueToCode(n, r, t, e.ORDER_ATOMIC)
     })
-    return _.l("(await Coco.tryExecute(".concat([
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l("(await Coco.tryExecute(".concat([
       "".concat(s), JSON.stringify({
         functionName: s,
         screenId: i
       })
-    ].concat($$_25_index.a(c)).join(", "), "))"), o, e, true, true)
+    ].concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(c)).join(", "), "))"), o, e, true, true)
   }
   e.insertBlockSnippetGenerator("procedures_2_param_block", function (t, n) {
     var r = t.blocks[n]
     return e.getFieldValue(r, "param") || ""
   })
-  e.insertBlockSnippetGenerator($$_1058_173.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.DEF, function (t, n) {
     var r = t.blocks[n]
     var o = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var i = e.getFieldValue(r, "NAME") || ""
@@ -64,24 +64,24 @@ function ae(e) {
     e.setDynamicValue("__DEFINING_PROCEDURE__", "true")
     var s = e.statementToCode(t, n, "STACK")
     e.deleteDynamicValue("__DEFINING_PROCEDURE__")
-    return "async function ".concat(_.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n")
+    return "async function ".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.f(i, o), "(").concat(a.join(", "), ") {\n").concat(s, "}\n")
   })
-  e.insertBlockSnippetGenerator($$_1058_173.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.RETURN, function (t, n) {
     var r = t.blocks[n]
-    return "return /* blockId=".concat(n, ";blockType=").concat($$_1058_173.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n")
+    return "return /* blockId=".concat(n, ";blockType=").concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.RETURN, " */ ").concat(Object.keys(r.shadows).length + Object.keys(r.fields).length > 2 ? e.valueToCode(t, n, "VALUE", e.ORDER_NONE) : "", ";\n")
   })
-  e.insertBlockSnippetGenerator($$_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, function (e, n) {
-    return t($$_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n"
+  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, function (e, n) {
+    return t($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_NORETURN, e, n) + ";\n"
   })
-  e.insertBlockSnippetGenerator($$_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, function (n, r) {
-    return [t($$_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL]
+  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, function (n, r) {
+    return [t($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.CALL_RETURN, n, r), e.ORDER_FUNCTION_CALL]
   })
-  e.insertBlockSnippetGenerator($$_1058_173.PROCEDURE_BLOCK_TYPES.PARAM, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.PARAM, function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "param_name")
-    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat($$_1058_173.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC]
+    return [o ? "".concat(o, " /* blockId=").concat(n, ";blockType=").concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.PARAM, " */") : "", e.ORDER_ATOMIC]
   })
-  e.insertBlockSnippetGenerator($$_1058_173.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK, function (t, n) {
+  e.insertBlockSnippetGenerator($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1058_173.PROCEDURE_BLOCK_TYPES.PARAM_ON_BLOCK, function (t, n) {
     var r = t.blocks[n]
     return [e.getFieldValue(r, "param_name") || "", e.ORDER_ATOMIC]
   })
@@ -152,23 +152,23 @@ function ce(e) {
     var r = t.blocks[n]
     switch (e.getFieldValue(r, "DATE_TYPE")) {
       case "time":
-        return _.s("getCurrentFormatDateTime")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentFormatDateTime")
       case "year":
-        return _.s("getCurrentYear")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentYear")
       case "month":
-        return _.s("getCurrentMonth")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentMonth")
       case "date":
-        return _.s("getCurrentDate")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentDate")
       case "dayName":
-        return _.s("getCurrentDayName")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentDayName")
       case "day":
-        return _.s("getCurrentDay")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentDay")
       case "hour":
-        return _.s("getCurrentHour")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentHour")
       case "minute":
-        return _.s("getCurrentMinute")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentMinute")
       case "second":
-        return _.s("getCurrentSecond")
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getCurrentSecond")
       default:
         return ""
     }
@@ -176,14 +176,14 @@ function ce(e) {
   e.insertBlockSnippetGenerator("date_check_date_is_equal", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
-    return r && o ? _.s("checkDateIsEqual", [r, o]) : ""
+    return r && o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("checkDateIsEqual", [r, o]) : ""
   })
   e.insertBlockSnippetGenerator("date_get_date_minus_operation", function (t, n) {
     var r = e.valueToCode(t, n, "DATE_A", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "DATE_B", e.ORDER_FUNCTION_CALL)
     var i = t.blocks[n]
     var a = e.getFieldValue(i, "OPERATION_TYPE")
-    return a && r && o ? _.s("getDateOperation", [r, o, _.o(a)]) : ""
+    return a && r && o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getDateOperation", [r, o, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a)]) : ""
   })
 }
 export { oe }

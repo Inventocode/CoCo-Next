@@ -1,9 +1,9 @@
 import { Yh } from "../../../../../unrestored/shared/1571/2636/index__part-68"
-import * as rp from "../../../../../unrestored/shared/1571/2636/61"
-import * as /* [auto-meaningful-name] */$_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
-import * as ep from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_61 from "../../../../../unrestored/shared/1571/2636/61"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
 import * as Types from "../types"
-import * as D from "../../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../../unrestored/shared/1571/2636/6"
 import * as Widget from "../../../../shared/widget/internal/types"
 
 const editConfig: Widget.EditConfig[] = [
@@ -36,7 +36,7 @@ const blockConfig: Widget.BlockConfig = {
     return [
       `<block type="http_on_client_success" uncache="true">${widgetIdField}</block>`,
       `<block type="http_on_client_error" uncache="true">${widgetIdField}</block>`,
-      rp.d,
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_61.d,
       `<block type="http_set_client_url" uncache="true">
         ${widgetIdField}
         <value name="VALUE">
@@ -62,9 +62,9 @@ const blockConfig: Widget.BlockConfig = {
           </shadow>
         </value>
       </block>`,
-      rp.d,
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_61.d,
       `<block type="http_get_client_url" uncache="true">${widgetIdField}</block>`,
-      rp.d,
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_61.d,
       `<block type="object_json_parse" uncache="true">
         <value name="TEXT">
           <shadow type="text">
@@ -86,7 +86,7 @@ const blockConfig: Widget.BlockConfig = {
         if (o) {
           s = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
         }
-        return ep.l(ep.n("httpClientSendRequest", [ep.o(a), ep.o(r), s]), i, e)
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("httpClientSendRequest", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r), s]), i, e)
       }
       e.insertBlockSnippetGenerator("http_on_client_success", function (t, n) {
         var r = t.blocks[n]
@@ -94,7 +94,7 @@ const blockConfig: Widget.BlockConfig = {
         var i = e.statementToCode(t, n, "DO")
         var a = e.valueToCode(t, n, "HTTP_CODE", e.ORDER_ATOMIC)
         var s = e.valueToCode(t, n, "RESPONSE", e.ORDER_ATOMIC)
-        return i && o ? ep.n("argsOnHttpClientSuccess", [ep.o(o)], i, [a, s]) : ""
+        return i && o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("argsOnHttpClientSuccess", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], i, [a, s]) : ""
       })
       e.insertBlockSnippetGenerator("http_on_client_success_code", function () {
         return "successCode"
@@ -114,7 +114,7 @@ const blockConfig: Widget.BlockConfig = {
         var i = e.statementToCode(t, n, "DO")
         var a = e.valueToCode(t, n, "HTTP_CODE", e.ORDER_ATOMIC)
         var s = e.valueToCode(t, n, "MESSAGE", e.ORDER_ATOMIC)
-        return i && o ? ep.n("argsOnHttpClientError", [ep.o(o)], i, [a, s]) : ""
+        return i && o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("argsOnHttpClientError", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], i, [a, s]) : ""
       })
       e.insertBlockSnippetGenerator("room_create_room_name", function () {
         return "room_name"
@@ -126,13 +126,13 @@ const blockConfig: Widget.BlockConfig = {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.n("setHttpClientUrl", [ep.o(o), i]) : ""
+        return o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setHttpClientUrl", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), i]) : ""
       })
       e.insertBlockSnippetGenerator("http_set_client_header", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.n("setHttpClientHeader", [ep.o(o), i]) : ""
+        return o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setHttpClientHeader", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), i]) : ""
       })
       e.insertBlockSnippetGenerator("http_send_get_request", function (e, n) {
         return t(e, n, "get", false)
@@ -152,19 +152,19 @@ const blockConfig: Widget.BlockConfig = {
       e.insertBlockSnippetGenerator("http_get_client_url", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? ep.s("getHttpClientUrl", [ep.o(o)]) : ""
+        return o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getHttpClientUrl", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("object_json_parse", function (t, n) {
         var r = e.valueToCode(t, n, "TEXT", e.ORDER_FUNCTION_CALL)
-        return ep.s("jsonParseToObject", [r])
+        return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("jsonParseToObject", [r])
       })
       e.insertBlockSnippetGenerator("object_get_value", function (t, n) {
         var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
-        if (!r || r === rp.c) {
+        if (!r || r === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_61.c) {
           return ""
         }
         var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
-        return o ? ep.s("objectGetValue", [r, o]) : ""
+        return o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("objectGetValue", [r, o]) : ""
       })
     },
     setBlockGroupProfile(e, t) {
@@ -173,14 +173,14 @@ const blockConfig: Widget.BlockConfig = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(Types.HTTP_CLIENT_WIDGET)
+          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType(Types.HTTP_CLIENT_WIDGET)
         }
       }
       e.insertBlockProfile("http_on_client_success", {
         type: "http_on_client_success",
         message0: "%{BKY_HTTP_CLIENT_ON_SUCCESS}",
         args0: [
-          ep.e("%{BKY_BLOCK_INTERNET_ICON}", true), D.a({}, n), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_INTERNET_ICON}", true), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "HTTP_CODE",
             check: "Number",
@@ -223,7 +223,7 @@ const blockConfig: Widget.BlockConfig = {
         type: "http_on_client_error",
         message0: "%{BKY_HTTP_CLIENT_ON_ERROR}",
         args0: [
-          ep.e("%{BKY_BLOCK_INTERNET_ICON}", true), D.a({}, n), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_INTERNET_ICON}", true), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "HTTP_CODE",
             check: "Number",
@@ -266,7 +266,7 @@ const blockConfig: Widget.BlockConfig = {
         type: "http_set_client_url",
         message0: "%{BKY_HTTP_CLIENT_SET_URL}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -282,7 +282,7 @@ const blockConfig: Widget.BlockConfig = {
         type: "http_set_client_header",
         message0: "%{BKY_HTTP_CLIENT_SET_HEADER}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -297,7 +297,7 @@ const blockConfig: Widget.BlockConfig = {
       e.insertBlockProfile("http_send_get_request", {
         type: "http_send_get_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_WITH_GET_REQUEST}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         inputsInline: true,
         previousStatement: true,
         nextStatement: true,
@@ -307,7 +307,7 @@ const blockConfig: Widget.BlockConfig = {
       e.insertBlockProfile("http_send_delete_request", {
         type: "http_send_delete_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_DELETE_REQUEST}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         inputsInline: true,
         previousStatement: true,
         nextStatement: true,
@@ -317,7 +317,7 @@ const blockConfig: Widget.BlockConfig = {
         type: "http_send_post_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_WITH_POST_REQUEST}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -334,7 +334,7 @@ const blockConfig: Widget.BlockConfig = {
         type: "http_send_put_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_PUT_REQUEST}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -350,7 +350,7 @@ const blockConfig: Widget.BlockConfig = {
         type: "http_send_patch_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_PATCH_REQUEST}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -365,7 +365,7 @@ const blockConfig: Widget.BlockConfig = {
       e.insertBlockProfile("http_get_client_url", {
         type: "http_get_client_url",
         message0: "%{BKY_HTTP_CLIENT_GET_URL}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         output: "String",
         colour: "%{BKY_CONTROL_HUE}",
         inputsInline: true

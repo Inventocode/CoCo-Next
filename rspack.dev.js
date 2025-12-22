@@ -35,7 +35,8 @@ const config = merge(common, server, {
                     jsc: {
                         parser: {
                             syntax: "typescript",
-                            tsx: true
+                            tsx: true,
+                            decorators: true
                         },
                         transform: {
                             react: {

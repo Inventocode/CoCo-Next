@@ -32,16 +32,16 @@ import { c_ } from "../../../../../unrestored/shared/1571/2636/index__part-80"
 import { __ } from "../../../../../unrestored/shared/1571/2636/index__part-81"
 import { tv } from "../../../../../unrestored/shared/1571/2636/index__part-85"
 var ev
-import * as /* [auto-meaningful-name] */$_682 from "../../../../../unrestored/shared/1571/2636/682"
-import * as /* [auto-meaningful-name] */$_681 from "../../../../../unrestored/shared/1571/2636/681"
-import * as /* [auto-meaningful-name] */$_680 from "../../../../../unrestored/shared/1571/2636/680"
-import * as /* [auto-meaningful-name] */$_679 from "../../../../../unrestored/shared/1571/2636/679"
-import * as /* [auto-meaningful-name] */$_688 from "../../../../../unrestored/shared/1571/2636/688"
-import * as /* [auto-meaningful-name] */$_687 from "../../../../../unrestored/shared/1571/2636/687"
-import * as /* [auto-meaningful-name] */$_678 from "../../../../../unrestored/shared/1571/2636/678"
-import * as /* [auto-meaningful-name] */$_686 from "../../../../../unrestored/shared/1571/2636/686"
-import * as /* [auto-meaningful-name] */$_685_index from "../../../../../unrestored/shared/1571/2636/685/index"
-import * as /* [auto-meaningful-name] */$_684_index from "../../../../../unrestored/shared/1571/2636/684/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_682 from "../../../../../unrestored/shared/1571/2636/682"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_681 from "../../../../../unrestored/shared/1571/2636/681"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_680 from "../../../../../unrestored/shared/1571/2636/680"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_679 from "../../../../../unrestored/shared/1571/2636/679"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_688 from "../../../../../unrestored/shared/1571/2636/688"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_687 from "../../../../../unrestored/shared/1571/2636/687"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_678 from "../../../../../unrestored/shared/1571/2636/678"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_686 from "../../../../../unrestored/shared/1571/2636/686"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index from "../../../../../unrestored/shared/1571/2636/685/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index from "../../../../../unrestored/shared/1571/2636/684/index"
 import * as /* [auto-meaningful-name] */$_683 from "../../../../../unrestored/shared/1571/2636/683"
 import /* [auto-meaningful-name] */$_196 from "../../../../../unrestored/shared/1571/2636/196"
 import * as Yr from "../../../../../unrestored/shared/1571/2636/53"
@@ -52,7 +52,7 @@ import * as Et from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */loadCustomWidget from "../../../../shared/widget/custom/load"
 import * as te from "../../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$_1213 from "../../../../../unrestored/shared/1571/2636/1213"
-import * as /* [auto-meaningful-name] */Message from "../../../events/main/messages-wrapper"
+import * as Actions from "../../../redux/common/actions"
 import * as k from "../../../../../unrestored/shared/1571/2636/11"
 import N from "../../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
@@ -131,15 +131,15 @@ const WidgetItem = React.memo(({
   const removeWidget = async () => {
     if (widgetServerId) {
       if (await WidgetShop.remove([widgetServerId])) {
-        dispatch(Message.wrapShowCommonToastInfo({
+        dispatch(Actions.showCommonToastInfoAction({
           message: formatMessage({
             id: "WidgetMall.removeSuccess"
           }),
           type: "success"
         }))
-        dispatch(Message.Kh([type]))
+        dispatch(Actions.Kh([type]))
       } else {
-        dispatch(Message.wrapShowCommonToastInfo({
+        dispatch(Actions.showCommonToastInfoAction({
           message: formatMessage({
             id: "WidgetMall.removeFailure"
           })
@@ -225,11 +225,11 @@ const WidgetItem = React.memo(({
                 widgetTitle: i
               })
             }
-            dispatch(Message.xj(t))
+            dispatch(Actions.xj(t))
             return void e.preventDefault()
           }
           if (!(type !== An.a && type !== An.c)) {
-            dispatch(Message.Yh(true))
+            dispatch(Actions.Yh(true))
           }
           var /* [auto-meaningful-name] */e$target = e.target
           var s = null === e$target || undefined === e$target ? undefined : e$target.getClientRects()[0]
@@ -245,7 +245,7 @@ const WidgetItem = React.memo(({
         }}
         onDragEnd={() => {
           if (!(type !== An.a && type !== An.c)) {
-            dispatch(Message.Yh(false))
+            dispatch(Actions.Yh(false))
           }
         }}
         data-widget-type={type}
@@ -348,10 +348,10 @@ export const WidgetCategoryItem = React.memo(function (e) {
 
 loadCustomWidget.s(r)
 loadCustomWidget.s(o)
-loadCustomWidget.s($_680)
-loadCustomWidget.s($_682)
+loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_680)
+loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_682)
 loadCustomWidget.s(a)
-loadCustomWidget.s($_681)
+loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_681)
 loadCustomWidget.s(i)
 loadCustomWidget.s(s)
 loadCustomWidget.s(c)
@@ -359,19 +359,19 @@ loadCustomWidget.s(l)
 loadCustomWidget.s(u)
 loadCustomWidget.s(d)
 loadCustomWidget.s(p)
-var cv = loadCustomWidget.s($_679, tv)
-var lv = loadCustomWidget.s($_686)
+var cv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_679, tv)
+var lv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_686)
 Et.Nb(Et.j.UI, [Cp, Lp, cv, Kp, tf, uf, _f, Tf, xf, Wf, Jf, ah, lv])
 Et.Nb(Et.j.STAGE, [wh, xh, zh])
-var uv = loadCustomWidget.s($_678)
-var dv = loadCustomWidget.s($_688)
+var uv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_678)
+var dv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_688)
 Et.Nb(Et.j.MEDIA, [Xh, nm, uv, dv])
-var pv = loadCustomWidget.s($_687)
+var pv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_687)
 Et.Nb(Et.j.SENSOR, [im, cm, pv])
 Et.Nb(Et.j.DATE, [hm, ym, wm])
 var fv = loadCustomWidget.s($_683)
-var hv = loadCustomWidget.s($_684_index)
-var mv = loadCustomWidget.s($_685_index)
+var hv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index)
+var mv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index)
 Et.Nb(Et.j.NETWORK, [Sm, Pm, fv, hv, mv])
 Et.Nb(Et.j.LOCAL_STORAGE, [qm, eg, gg])
 Et.Nb(Et.j.CLOUD_STORAGE, [Og, zm])

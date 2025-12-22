@@ -32,8 +32,8 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as Language from "../../ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../unrestored/shared/1571/2636/49"
 import * as ExternalModule from "./external-module"
-import * as EventStore from "../../events/store"
-import * as Message from "../../../editor/events/main/messages-wrapper"
+import * as EventStore from "../../../editor/redux/store"
+import * as Actions from "../../../editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as Shop from "./shop"
@@ -631,7 +631,7 @@ export function registerCustomWidget(
   }
   if (Storage.getUnsafeExtension(type)) {
     const unprefixedType: string = Type.toUnprefixed(type, false)
-    EventStore.dispatch(Message.wrapOpenConfirmDialog({
+    EventStore.dispatch(Actions.openConfirmDialogAction({
       onConfirm: registered,
       onCancel,
       allowText: Language.format(Language.zh_CN, "ExtensionWidget.overwrite").toString(),
@@ -714,7 +714,7 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
           Storage.addUnsafeExtension({ type, types, code })
           $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget({ type, code })
         }
-        EventStore.dispatch(Message.wrapUpdateExtensionWidgetList())
+        EventStore.dispatch(Actions.updateExtensionWidgetListAction())
         resolve(types)
       },
       (): void => {
@@ -762,7 +762,7 @@ function checkKeyWords(code: string): void {
     }
   })
   if (includedKeyWords.length > 0) {
-    EventStore.dispatch(Message.wrapOpenConfirmDialog({
+    EventStore.dispatch(Actions.openConfirmDialogAction({
       allowText: Language.format(Language.zh_CN, "cloudDb.know").toString(),
       title: "error",
       content: "自定义控件存在问题，不支持导入",
@@ -778,7 +778,7 @@ function Z(e, t) {
 function J() {
   return (J = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n) {
     var r
-    var /* [auto-meaningful-name] */_e$sent
+    var /* [auto-meaningful-name] */e$sent1
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$type
     return BabelRuntimeHelperRegeneratorRuntime.wrap(function (e) {
@@ -798,9 +798,9 @@ function J() {
               withCredentials: false
             })
           case 5:
-            _e$sent = e.sent
+            e$sent1 = e.sent
             e.next = 8
-            return importCostumeWidgetFromBlob(_e$sent.data, true)
+            return importCostumeWidgetFromBlob(e$sent1.data, true)
           case 8:
             e$sent = e.sent
             e$sent$type = e$sent.type
@@ -832,7 +832,7 @@ export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFile
   if (unsafeWidgetsStorage.length) {
     await Promise.all(unsafeWidgetsStorage.map(({ code }): Promise<void> => importWidget(code)))
   }
-  EventStore.dispatch(Message.wrapUpdateExtensionWidgetList())
+  EventStore.dispatch(Actions.updateExtensionWidgetListAction())
   const onlineWidgetsStorage = safeWidgetStorage.filter((widget) =>
     widget.cdnUrl.startsWith("https") && widget.id)
   if (!onlineWidgetsStorage.length) {
@@ -857,7 +857,7 @@ function ne() {
     var u
     var d
     var p
-    var /* [auto-meaningful-name] */_e$sent3
+    var /* [auto-meaningful-name] */e$sent1
     var h
     var /* [auto-meaningful-name] */e$sent
     var g
@@ -892,7 +892,7 @@ function ne() {
             e.next = 10
             return Shop.e(d, p)
           case 10:
-            if (_e$sent3 = e.sent, u = u.concat(_e$sent3.items), !((h = Math.ceil(_e$sent3.total / p)) > 1)) {
+            if (e$sent1 = e.sent, u = u.concat(e$sent1.items), !((h = Math.ceil(e$sent1.total / p)) > 1)) {
               e.next = 23
               break
             }

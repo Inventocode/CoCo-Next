@@ -13,10 +13,10 @@ var L
 var M
 var D
 var x
-import * as /* [auto-meaningful-name] */$$_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
-import * as _ from "../../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_323 from "../../../../../unrestored/shared/1571/2636/323"
-var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_323 from "../../../../../unrestored/shared/1571/2636/323"
+var /* [auto-meaningful-name] */ShadowTypeMath_numberFieldNameNUMConstraints111_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
 function U(e, t) {
   function n(e) {
     if (!t.events.is_undoing()) {
@@ -43,7 +43,7 @@ function U(e, t) {
         name: "ARRAY",
         custom: true,
         advancedOptions: function () {
-          return $$_46_index.c().getArrayVariableList(this)
+          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getArrayVariableList(this)
         }
       }
     ],
@@ -337,10 +337,10 @@ function V(e) {
   e.insertBlockSnippetGenerator("array_get", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "ARRAY") || ""
-    return _.s("getVariableValue", [_.o(o)])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getVariableValue", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)])
   })
   var t = function (t, n) {
-    var r = $$_323.a(n)
+    var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_323.a(n)
     var o = r.blockId && t.blocks[r.blockId]
     return o && e.getFieldValue(o, "ARRAY") || ""
   }
@@ -349,7 +349,7 @@ function V(e) {
     var i = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
     var a = t(n, i)
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("pushArrayItem", [i, s, _.o(a)]), o, e)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("pushArrayItem", [i, s, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a)]), o, e)
   })
   e.insertBlockSnippetGenerator("lists_insert_value", function (n, r) {
     var o = n.blocks[r]
@@ -357,7 +357,7 @@ function V(e) {
     var a = t(n, i)
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
     var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("insertArrayItemByIndex", [i, s, c + " - 1", _.o(a)]), o, e)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("insertArrayItemByIndex", [i, s, c + " - 1", $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a)]), o, e)
   })
   e.insertBlockSnippetGenerator("array_remove_item", function (n, r) {
     var o = e.valueToCode(n, r, "ARRAY", e.ORDER_FUNCTION_CALL)
@@ -366,9 +366,9 @@ function V(e) {
     var s = e.getFieldValue(a, "ITEM_POS") || ""
     if ("nth" === s) {
       var c = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
-      return _.l(_.n("removeArrayItemByIndex", [o, c + " - 1", _.o(i)]), a, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("removeArrayItemByIndex", [o, c + " - 1", $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)]), a, e)
     }
-    return "lastItem" === s ? _.l(_.n("removeLastArrayItem", [o, _.o(i)]), a, e) : _.l(_.n("removeAllArrayItem", [o, _.o(i)]), a, e)
+    return "lastItem" === s ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("removeLastArrayItem", [o, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)]), a, e) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("removeAllArrayItem", [o, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)]), a, e)
   })
   e.insertBlockSnippetGenerator("lists_replace", function (n, r) {
     var o = n.blocks[r]
@@ -378,39 +378,39 @@ function V(e) {
     var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
     if ("nth" === s) {
       var l = e.valueToCode(n, r, "INDEX", e.ORDER_FUNCTION_CALL)
-      return _.l(_.n("setArrayItemByIndex", [i, c, l + " - 1", _.o(a)]), o, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setArrayItemByIndex", [i, c, l + " - 1", $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a)]), o, e)
     }
-    return _.l(_.n("setArrayLastItem", [i, c, _.o(a)]), o, e)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setArrayLastItem", [i, c, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a)]), o, e)
   })
   e.insertBlockSnippetGenerator("array_copy", function (n, r) {
     var o = n.blocks[r]
     var i = e.valueToCode(n, r, "FROM", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(n, r, "TO", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("copyArray", [i, a, _.o(t(n, a))]), o, e)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("copyArray", [i, a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(t(n, a))]), o, e)
   })
   e.insertBlockSnippetGenerator("array_get_item", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     if ("nth" === (e.getFieldValue(r, "ITEM_POS") || "")) {
       var i = e.valueToCode(t, n, "INDEX", e.ORDER_FUNCTION_CALL)
-      return _.l(_.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getArrayItemByIndex", [o, i + " - 1"]), r, e, false, true)
     }
-    return _.l(_.s("getArrayLastItem", [o]), r, e, false, true)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getArrayLastItem", [o]), r, e, false, true)
   })
   e.insertBlockSnippetGenerator("array_get_length", function (t, n) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
-    return _.s("getArrayLength", [r])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getArrayLength", [r])
   })
   e.insertBlockSnippetGenerator("lists_index_of", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.l(_.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getArrayItemIndex", [o, i, "1"]), r, e, false, true)
   })
   e.insertBlockSnippetGenerator("lists_is_exist", function (t, n) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.s("checkItemInArray", [r, o])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("checkItemInArray", [r, o])
   })
   e.insertBlockSnippetGenerator("array_current_item", function () {
     return "arrayCurrentItem"
@@ -419,7 +419,7 @@ function V(e) {
     var r = e.valueToCode(t, n, "ARRAY", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "ARRAY_CURRENT_ITEM", e.ORDER_FUNCTION_CALL)
     var i = e.statementToCode(t, n, "DO")
-    return i ? _.l(_.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : ""
+    return i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.listForEach", i, [r], [o]), t.blocks[n], e, true) : ""
   })
 }
 function z(e) {
@@ -431,7 +431,7 @@ function z(e) {
         if (!r) {
           var o = this.get_input_index("VALUE")
           var i = -1 === o ? o : 2
-          this.append_shadow_input("INDEX", ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, i).set_check("Number")
+          this.append_shadow_input("INDEX", ShadowTypeMath_numberFieldNameNUMConstraints111_field_shadow, i).set_check("Number")
           this.append_dummy_input("ITEM", i + 1).append_field(e.Msg.ARRAY_ITEM)
         }
       } else if (r) {
@@ -441,17 +441,17 @@ function z(e) {
     },
     addMutation: function (t) {
       var n = this
-      _.b.call(this, "INDEX", function () {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.b.call(this, "INDEX", function () {
         var t = n.get_input_index("VALUE")
         var r = -1 === t ? 2 : t
         var o = n.append_value_input("INDEX", r).set_check("Number")
         n.append_dummy_input("ITEM", r + 1).append_field(e.Msg.ARRAY_ITEM)
         return o
-      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, t)
+      }, ShadowTypeMath_numberFieldNameNUMConstraints111_field_shadow, t)
     },
     removeMutation: function () {
       var e = this
-      _.t.call(this, "INDEX", "NUM", function () {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.t.call(this, "INDEX", "NUM", function () {
         e.remove_input("INDEX")
         e.remove_input("ITEM")
       })
@@ -481,7 +481,7 @@ function Y(e, t) {
         name: "OBJECT",
         custom: true,
         advancedOptions: function () {
-          return $$_46_index.c().getObjectVariableList(this)
+          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getObjectVariableList(this)
         }
       }
     ],
@@ -616,7 +616,7 @@ function K(e) {
 }
 function q(e) {
   var t = function (t, n) {
-    var r = $$_323.a(n)
+    var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_323.a(n)
     var o = r.blockId && t.blocks[r.blockId]
     var i = o && e.getFieldValue(o, "OBJECT")
     return JSON.stringify(i)
@@ -624,7 +624,7 @@ function q(e) {
   e.insertBlockSnippetGenerator("object_get", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OBJECT") || ""
-    return _.s("getVariableValue", [_.o(o)])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getVariableValue", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)])
   })
   e.insertBlockSnippetGenerator("object_create", function (t, n) {
     for (var r = 0, o = "[";;) {
@@ -638,7 +638,7 @@ function q(e) {
     }
     o += "]"
     var s = t.blocks[n]
-    return _.l(_.s("createTempObject", [o]), s, e, false, true)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("createTempObject", [o]), s, e, false, true)
   })
   e.insertBlockSnippetGenerator("object_set_item", function (n, r) {
     var o = n.blocks[r]
@@ -646,37 +646,37 @@ function q(e) {
     var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
     var s = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
     var c = t(n, i)
-    return _.l(_.n("setObjectItem", [c, i, a, s]), o, e)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setObjectItem", [c, i, a, s]), o, e)
   })
   e.insertBlockSnippetGenerator("object_delete_item", function (n, r) {
     var o = n.blocks[r]
     var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
     var a = e.valueToCode(n, r, "KEY", e.ORDER_FUNCTION_CALL)
     var s = t(n, i)
-    return _.l(_.n("deleteObjectItem", [s, i, a]), o, e)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("deleteObjectItem", [s, i, a]), o, e)
   })
   e.insertBlockSnippetGenerator("object_get_item", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
     var i = t.blocks[n]
-    return _.l(_.s("getObjectItem", [r, o]), i, e, false, true)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getObjectItem", [r, o]), i, e, false, true)
   })
   e.insertBlockSnippetGenerator("object_clear", function (n, r) {
     var o = n.blocks[r]
     var i = e.valueToCode(n, r, "OBJECT", e.ORDER_FUNCTION_CALL)
     var a = t(n, i)
-    return _.l(_.n("clearObject", [a, i]), o, e)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("clearObject", [a, i]), o, e)
   })
   e.insertBlockSnippetGenerator("object_length", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
     var o = t.blocks[n]
-    return _.l(_.s("getObjectLength", [r]), o, e, false, true)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getObjectLength", [r]), o, e, false, true)
   })
   e.insertBlockSnippetGenerator("object_include_key", function (t, n) {
     var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
     var i = t.blocks[n]
-    return _.l(_.s("checkKeyInObject", [r, o]), i, e, false, true)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("checkKeyInObject", [r, o]), i, e, false, true)
   })
 }
 function X(e) {
@@ -723,10 +723,10 @@ function X(e) {
         if (this.get_input("MUTATE_REMOVE_BUTTON")) {
           this.remove_input("MUTATE_REMOVE_BUTTON")
         }
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_ADD_BUTTON")
       } else {
-        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON")
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON")
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_REMOVE_BUTTON")
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_ADD_BUTTON")
       }
       e.events.enable()
     },
@@ -740,7 +740,7 @@ function X(e) {
         var /* [auto-meaningful-name] */this$itemCount_ = this.itemCount_
         this.itemCount_++
         this.updateShape_()
-        var r = _.c("mutation", {
+        var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.c("mutation", {
           block: this,
           old_value: this$itemCount_,
           new_value: this.itemCount_
@@ -758,7 +758,7 @@ function X(e) {
         var /* [auto-meaningful-name] */this$itemCount_ = this.itemCount_
         this.itemCount_--
         this.updateShape_()
-        var r = _.c("mutation", {
+        var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.c("mutation", {
           block: this,
           old_value: this$itemCount_,
           new_value: this.itemCount_
@@ -783,7 +783,7 @@ function Q(e, t) {
     type: "app_on_mount",
     message0: "%{BKY_APP_ON_MOUNT}",
     args0: [
-      _.e(BKY_BLOCK_CLOUD_ICON, true), {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e(BKY_BLOCK_CLOUD_ICON, true), {
         type: "input_dummy",
         align: "CENTRE"
       }, {
@@ -798,7 +798,7 @@ function Q(e, t) {
     type: "app_on_switch_background",
     message0: "%{BKY_APP_ON_SWITCH}",
     args0: [
-      _.e(BKY_BLOCK_CLOUD_ICON, true), {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e(BKY_BLOCK_CLOUD_ICON, true), {
         type: "field_coco_dropdown",
         name: "APP_STATE",
         custom: true,
@@ -825,7 +825,7 @@ function Q(e, t) {
         name: "BROADCAST",
         custom: true,
         advancedOptions: function () {
-          return $$_46_index.c().getBroadcastList(this)
+          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getBroadcastList(this)
         }
       }
     ],
@@ -837,7 +837,7 @@ function Q(e, t) {
     type: "broadcast_on_receive",
     message0: "%{BKY_BROADCAST_ON_RECEIVE}",
     args0: [
-      _.e(BKY_BLOCK_CLOUD_ICON, true), {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.e(BKY_BLOCK_CLOUD_ICON, true), {
         type: "input_value",
         name: "BROADCAST",
         check: ["String", "Boolean"]
@@ -897,12 +897,12 @@ function J(e) {
   }
   e.insertBlockSnippetGenerator("app_on_mount", function (t, n) {
     var r = e.statementToCode(t, n, "DO")
-    return r ? _.m("onAppMount", undefined, r) : ""
+    return r ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.m("onAppMount", undefined, r) : ""
   })
   e.insertBlockSnippetGenerator("app_on_switch_background", function (t, n) {
     var r = t.blocks[n]
     var o = e.statementToCode(t, n, "DO")
-    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? _.m("onAppActive", undefined, o) : _.m("onAppBackground", undefined, o) : ""
+    return o ? "active" === (e.getFieldValue(r, "APP_STATE") || "") ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.m("onAppActive", undefined, o) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.m("onAppBackground", undefined, o) : ""
   })
   e.insertBlockSnippetGenerator("broadcast_input", function (t, n) {
     var r = t.blocks[n]
@@ -910,13 +910,13 @@ function J(e) {
   })
   e.insertBlockSnippetGenerator("broadcast_on_receive", function (n, r) {
     var o = e.statementToCode(n, r, "DO")
-    return o ? _.m("onCustomEvent", [t(n, r)], o) : ""
+    return o ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.m("onCustomEvent", [t(n, r)], o) : ""
   })
   e.insertBlockSnippetGenerator("broadcast_send", function (e, n) {
-    return _.n("emitCustomEvent", [t(e, n)])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("emitCustomEvent", [t(e, n)])
   })
   e.insertBlockSnippetGenerator("broadcast_send_and_wait", function (e, n) {
-    return _.j("emitCustomEventAndWait", [t(e, n)])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.j("emitCustomEventAndWait", [t(e, n)])
   })
 }
 function $(e) {
@@ -1322,46 +1322,46 @@ function te(e, t) {
       }
     }
   }
-  var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
+  var /* [auto-meaningful-name] */ShadowTypeMath_numberFieldNameNUMConstraints112_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
   e.extensions.register_mutator("TEXT_SLICE_MUTATOR", {
     updateShape_: function () {
       e.events.disable()
       if (1 === this.itemCount_) {
         this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
-        this.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
+        this.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_BUTTON")
       } else {
         this.append_dummy_input("CONTENT_TO").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
-        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow)
+        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), ShadowTypeMath_numberFieldNameNUMConstraints112_field_shadow)
         this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
-        this.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
+        this.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_BUTTON")
       }
       e.events.enable()
     },
     addMutation: function (t) {
       var r = this
       var o = "NUM".concat(this.itemCount_)
-      _.b.call(this, o, function () {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.b.call(this, o, function () {
         r.append_dummy_input("CONTENT_TO", "TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
         var t = r.append_value_input(o, "TITLE_TAIL")
         r.itemCount_++
         if (r.get_input("MUTATE_BUTTON")) {
           r.remove_input("MUTATE_BUTTON")
         }
-        r.append_dummy_input("MUTATE_BUTTON").append_field(_.q(undefined), "MUTATE_BUTTON")
+        r.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_BUTTON")
         return t
-      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow, t)
+      }, ShadowTypeMath_numberFieldNameNUMConstraints112_field_shadow, t)
     },
     removeMutation: function () {
       var e = this
       var t = "NUM".concat(this.itemCount_ - 1)
-      _.t.call(this, t, "NUM", function () {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.t.call(this, t, "NUM", function () {
         e.remove_input("CONTENT_TO")
         e.remove_input(t)
         e.itemCount_--
         if (e.get_input("MUTATE_BUTTON")) {
           e.remove_input("MUTATE_BUTTON")
         }
-        e.append_dummy_input("MUTATE_BUTTON").append_field(_.p(), "MUTATE_BUTTON")
+        e.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_BUTTON")
       })
     },
     mutationToDom: function () {
@@ -1393,23 +1393,23 @@ function ne(e) {
     var a = r[i]
     var s = e.valueToCode(t, n, "A", a)
     var c = e.valueToCode(t, n, "B", a)
-    return _.s("mathOperation", [_.o(i), s, c])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("mathOperation", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i), s, c])
   })
   e.insertBlockSnippetGenerator("math_random_integer", function (t, n) {
     var r = e.valueToCode(t, n, "INPUT_A", e.ORDER_COMMA)
     var o = e.valueToCode(t, n, "INPUT_B", e.ORDER_COMMA)
-    return _.s("getRandomInteger", [r, o])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getRandomInteger", [r, o])
   })
   e.insertBlockSnippetGenerator("math_number_property", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
     var i = e.getFieldValue(r, "PROPERTY") || ""
-    return _.s("determineNumberType", [_.o(i), o])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("determineNumberType", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i), o])
   })
   e.insertBlockSnippetGenerator("math_check_divisible", function (t, n) {
     var r = e.valueToCode(t, n, "NUMBER_TO_CHECK", e.ORDER_MODULUS)
     var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
-    return _.s("checkDivisibility", [r, o])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("checkDivisibility", [r, o])
   })
   e.insertBlockSnippetGenerator("logic_operation", function (t, n) {
     var r = t.blocks[n]
@@ -1417,34 +1417,34 @@ function ne(e) {
     var i = "AND" === o ? e.ORDER_LOGICAL_AND : e.ORDER_LOGICAL_OR
     var a = e.valueToCode(t, n, "A", i) || "false"
     var s = e.valueToCode(t, n, "B", i) || "false"
-    return _.s("logicOperation", [_.o(o), a, s])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("logicOperation", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), a, s])
   })
   e.insertBlockSnippetGenerator("math_calculate_expression", function (t, n) {
     var r = e.valueToCode(t, n, "INPUT", e.ORDER_MEMBER)
-    return _.s("calculateMathExpression", [r])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("calculateMathExpression", [r])
   })
   e.insertBlockSnippetGenerator("math_complex_operation", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OP") || ""
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
-    return _.s("complexMathOperation", [_.o(o), i])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("complexMathOperation", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), i])
   })
   e.insertBlockSnippetGenerator("math_modulo", function (t, n) {
     var r = e.valueToCode(t, n, "DIVIDEND", e.ORDER_MODULUS)
     var o = e.valueToCode(t, n, "DIVISOR", e.ORDER_MODULUS)
-    return _.s("remainderOperation", [r, o])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("remainderOperation", [r, o])
   })
   e.insertBlockSnippetGenerator("math_trig", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OP") || ""
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
-    return _.s("mathTrig", [_.o(o), i])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("mathTrig", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), i])
   })
   e.insertBlockSnippetGenerator("math_round", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "OP") || ""
     var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
-    return _.s("mathRound", [_.o(o), i])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("mathRound", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), i])
   })
   e.insertBlockSnippetGenerator("math_compare", function (t, n) {
     var r = t.blocks[n]
@@ -1452,42 +1452,42 @@ function ne(e) {
     var i = "EQ" === o || "NEQ" === o ? e.ORDER_EQUALITY : e.ORDER_RELATIONAL
     var a = e.valueToCode(t, n, "A", i)
     var s = e.valueToCode(t, n, "B", i)
-    return _.s("compareNumbers", [_.o(o), a, s])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("compareNumbers", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), a, s])
   })
   e.insertBlockSnippetGenerator("text_convert_type", function (t, n) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "TYPE") || ""
     var i = e.valueToCode(t, n, "ORIGINAL_VALUE", e.ORDER_FUNCTION_CALL)
-    return i ? _.s("convertValueType", [i, _.o(o)]) : ""
+    return i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("convertValueType", [i, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
   })
   e.insertBlockSnippetGenerator("text_slice", function (t, n) {
     var r = e.valueToCode(t, n, "STRING", e.ORDER_MEMBER)
     var o = e.valueToCode(t, n, "NUM0", e.ORDER_COMMA)
     var i = e.valueToCode(t, n, "NUM1", e.ORDER_COMMA)
-    return i ? _.s("extractString", [r, o, i]) : _.s("extractString", [r, o])
+    return i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("extractString", [r, o, i]) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("extractString", [r, o])
   })
   e.insertBlockSnippetGenerator("text_join", function (t, n) {
     for (var /* [auto-meaningful-name] */Object$keysT$connectionsN$length = Object.keys(t.connections[n]).length, o = new Array(Object$keysT$connectionsN$length), i = 0; i < Object$keysT$connectionsN$length; i++) {
       o[i] = e.valueToCode(t, n, "ADD".concat(i), e.ORDER_COMMA) || "''"
     }
-    return _.s("concatStrings", o)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("concatStrings", o)
   })
   e.insertBlockSnippetGenerator("text_shadow", function (t, n) {
     return e.valueToCode(t, n, "VALUE", e.ORDER_NONE)
   })
   e.insertBlockSnippetGenerator("text_get_length", function (t, n) {
     var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.s("getStringLength", [r])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getStringLength", [r])
   })
   e.insertBlockSnippetGenerator("text_check_contain", function (t, n) {
     var r = e.valueToCode(t, n, "TEXT1", e.ORDER_FUNCTION_CALL)
     var o = e.valueToCode(t, n, "TEXT2", e.ORDER_COMMA)
-    return _.s("checkStringContain", [r, o])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("checkStringContain", [r, o])
   })
   e.insertBlockSnippetGenerator("text_split_text", function (t, n) {
     var r = e.valueToCode(t, n, "STR_TO_SPLIT", e.ORDER_FUNCTION_CALL) || "''"
     var o = e.valueToCode(t, n, "SPLIT_STR", e.ORDER_COMMA)
-    return _.s("splitString", [r, o])
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("splitString", [r, o])
   })
   e.insertBlockSnippetGenerator("text_multiline", function (t, n) {
     var r = t.blocks[n]

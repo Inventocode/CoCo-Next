@@ -8,17 +8,17 @@
 
 import { Yh } from "../../../../unrestored/shared/1571/2636/index__part-68"
 import { gm } from "../../../../unrestored/shared/1571/2636/index__part-73"
-import * as /* [auto-meaningful-name] */$_235 from "../../../../unrestored/shared/1571/2636/235"
-import * as rp from "../../../../unrestored/shared/1571/2636/61"
-import * as /* [auto-meaningful-name] */$_46_index from "../../../../unrestored/shared/1571/2636/46/index"
-import * as ep from "../../../../unrestored/shared/1571/2636/4"
-import * as An from "../../../../src/editor/widget/built-in/5"
-import * as D from "../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_235 from "../../../../unrestored/shared/1571/2636/235"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_61 from "../../../../unrestored/shared/1571/2636/61"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../unrestored/shared/1571/2636/46/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../unrestored/shared/1571/2636/4"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_5 from "../../../../src/editor/widget/built-in/5"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_552_index from "../../../../unrestored/shared/1571/2636/552/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_552_index from "../../../../unrestored/shared/1571/2636/552/index"
 var vm = function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  return React.createElement($_552_index.a, Object.assign({}, e, {
+  return React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_552_index.a, Object.assign({}, e, {
     onDatePickerChange: function (e) {
       if (e$onChange) {
         e$onChange("timeStamp", new Date(e).getTime())
@@ -27,14 +27,14 @@ var vm = function (e) {
   }))
 }
 var bm = {
-  type: An.J,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.J,
   category: {
-    iconId: $_235.h,
-    blocks: An.J
+    iconId: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_5.J
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    return ["<block type=\"time_picker_on_select_done\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"time_picker_open_select_dialog\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"time_picker_get_time\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"time_picker_get_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, rp.e]
+    return ["<block type=\"time_picker_on_select_done\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, "<block type=\"time_picker_open_select_dialog\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, "<block type=\"time_picker_get_time\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"time_picker_get_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, $$_$$_$$_$$_unrestored_shared_1571_2636_61.e]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -46,7 +46,7 @@ var bm = {
         var s = e.valueToCode(t, n, "PARAM_HOUR", e.ORDER_ATOMIC)
         var c = e.valueToCode(t, n, "PARAM_MINUTE", e.ORDER_ATOMIC)
         var l = e.valueToCode(t, n, "PARAM_SECOND", e.ORDER_ATOMIC)
-        return o && i ? ep.n("argsOnTimePickerSelectDone", [ep.o(o)], i, [a, s, c, l]) : ""
+        return o && i ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("argsOnTimePickerSelectDone", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], i, [a, s, c, l]) : ""
       })
       e.insertBlockSnippetGenerator("time_picker_on_select_done_time", function () {
         return "time"
@@ -63,7 +63,7 @@ var bm = {
       e.insertBlockSnippetGenerator("time_picker_open_select_dialog", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? ep.n("openTimePickerDialog", [ep.o(o)]) : ""
+        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("openTimePickerDialog", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("time_picker_get_value", function (t, n) {
         var r = t.blocks[n]
@@ -72,12 +72,12 @@ var bm = {
           return ""
         }
         var i = e.getFieldValue(r, "TYPE")
-        return i ? ep.s("getTimePickerValue", [ep.o(o), ep.o(i)]) : ""
+        return i ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getTimePickerValue", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), $$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)]) : ""
       })
       e.insertBlockSnippetGenerator("time_picker_get_time", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? ep.s("getTimePickerTime", [ep.o(o)]) : ""
+        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getTimePickerTime", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -86,14 +86,14 @@ var bm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.J)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_5.J)
         }
       }
       e.insertBlockProfile("time_picker_on_select_done", {
         type: "time_picker_on_select_done",
         message0: "%{BKY_TIME_PICKER_ON_SELECT_DONE}",
         args0: [
-          ep.e("%{BKY_BLOCK_TAB_ICON}", true), D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_TAB_ICON}", true), $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "PARAM_TIME",
             align: "CENTRE",
@@ -157,7 +157,7 @@ var bm = {
       e.insertBlockProfile("time_picker_open_select_dialog", {
         type: "time_picker_open_select_dialog",
         message0: "%{BKY_TIME_PICKER_OPEN_SELECT_DIALOG}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         previousStatement: true,
         nextStatement: true,
         colour: "%{BKY_APPEARANCE_HUE}",
@@ -166,7 +166,7 @@ var bm = {
       e.insertBlockProfile("time_picker_get_time", {
         type: "time_picker_get_time",
         message0: "%{BKY_TIME_PICKER_GET_TIME}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         output: ["String"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -175,7 +175,7 @@ var bm = {
         type: "time_picker_get_value",
         message0: "%1 %{BKY_OF} %2",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "TYPE",
             custom: true,
@@ -192,7 +192,7 @@ var bm = {
   },
   categoryClass: {
     text: "",
-    iconId: $_235.h,
+    iconId: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
     blocks: []
   },
   renameBlocksInfo: {
@@ -202,25 +202,25 @@ var bm = {
   topBlocks: ["time_picker_on_select_done"]
 }
 var ym = {
-  icon: $_235.h,
+  icon: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
   title: "TimePickerWidget.widgetName",
-  type: An.J,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.J,
   previewAreaWidgetTitle: "TimePickerWidget.widgetName",
   component: vm,
   editConfig: gm,
   blockConfig: bm,
-  isInvisibleWidget: $_235.f,
+  isInvisibleWidget: $$_$$_$$_$$_unrestored_shared_1571_2636_235.f,
   widget: {
-    isGlobalWidget: $_235.e,
+    isGlobalWidget: $$_$$_$$_$$_unrestored_shared_1571_2636_235.e,
     size: {
-      width: $_235.g,
-      height: $_235.d
+      width: $$_$$_$$_$$_unrestored_shared_1571_2636_235.g,
+      height: $$_$$_$$_$$_unrestored_shared_1571_2636_235.d
     },
     attributes: {
       timeStamp: 0,
-      fontSize: $_235.c,
-      color: $_235.b,
-      backgroundColor: $_235.a
+      fontSize: $$_$$_$$_$$_unrestored_shared_1571_2636_235.c,
+      color: $$_$$_$$_$$_unrestored_shared_1571_2636_235.b,
+      backgroundColor: $$_$$_$$_$$_unrestored_shared_1571_2636_235.a
     }
   }
 }
@@ -230,10 +230,10 @@ var Em = [
   }
 ]
 var Om = {
-  type: An.I,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.I,
   category: {
     iconId: "icon-widget-timer",
-    blocks: An.I
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_5.I
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -250,11 +250,11 @@ var Om = {
         }
         switch (o) {
           case "start":
-            return ep.n("startTiming", [ep.o(i)])
+            return $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("startTiming", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)])
           case "stop":
-            return ep.n("stopTiming", [ep.o(i)])
+            return $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("stopTiming", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)])
           case "reset":
-            return ep.n("resetTiming", [ep.o(i)])
+            return $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("resetTiming", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i)])
           default:
             return ""
         }
@@ -262,7 +262,7 @@ var Om = {
       e.insertBlockSnippetGenerator("date_get_timing_value", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? ep.s("getTimingValue", [ep.o(o)]) : ""
+        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getTimingValue", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -271,7 +271,7 @@ var Om = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.I)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_5.I)
         }
       }
       e.insertBlockProfile("date_set_timing", {
@@ -285,7 +285,7 @@ var Om = {
             options: function () {
               return [[t.Msg.START, "start"], [t.Msg.STOP, "stop"], [t.Msg.RESET, "reset"]]
             }
-          }, D.a({}, n)
+          }, $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)
         ],
         previousStatement: true,
         nextStatement: true,
@@ -295,7 +295,7 @@ var Om = {
       e.insertBlockProfile("date_get_timing_value", {
         type: "date_get_timing_value",
         message0: "%{BKY_DATE_TIMER}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         output: "Number",
         colour: "%{BKY_SOUND_HUE}",
         inputsInline: true
@@ -316,7 +316,7 @@ var Om = {
 var wm = {
   icon: "icon-widget-timer",
   title: "TimerWidget.widgetName",
-  type: An.I,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.I,
   previewAreaWidgetTitle: "TimerWidget.widgetName",
   component: Yh,
   editConfig: Em,
@@ -350,14 +350,14 @@ var Cm = [
   }
 ]
 var Tm = {
-  type: An.u,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.u,
   category: {
     iconId: "icon-widget-http-client",
-    blocks: An.u
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_5.u
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    return ["<block type=\"http_on_client_success\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_on_client_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"http_set_client_url\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_set_client_header\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_send_get_request\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_send_post_request\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), rp.d, "<block type=\"http_get_client_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"object_json_parse\" uncache=\"true\">\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"]
+    return ["<block type=\"http_on_client_success\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_on_client_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, "<block type=\"http_set_client_url\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_set_client_header\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"http_send_get_request\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"http_send_post_request\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, "<block type=\"http_get_client_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $$_$$_$$_$$_unrestored_shared_1571_2636_61.d, "<block type=\"object_json_parse\" uncache=\"true\">\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -371,7 +371,7 @@ var Tm = {
         if (o) {
           s = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
         }
-        return ep.l(ep.n("httpClientSendRequest", [ep.o(a), ep.o(r), s]), i, e)
+        return $$_$$_$$_$$_unrestored_shared_1571_2636_4.l($$_$$_$$_$$_unrestored_shared_1571_2636_4.n("httpClientSendRequest", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(a), $$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r), s]), i, e)
       }
       e.insertBlockSnippetGenerator("http_on_client_success", function (t, n) {
         var r = t.blocks[n]
@@ -379,7 +379,7 @@ var Tm = {
         var i = e.statementToCode(t, n, "DO")
         var a = e.valueToCode(t, n, "HTTP_CODE", e.ORDER_ATOMIC)
         var s = e.valueToCode(t, n, "RESPONSE", e.ORDER_ATOMIC)
-        return i && o ? ep.n("argsOnHttpClientSuccess", [ep.o(o)], i, [a, s]) : ""
+        return i && o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("argsOnHttpClientSuccess", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], i, [a, s]) : ""
       })
       e.insertBlockSnippetGenerator("http_on_client_success_code", function () {
         return "successCode"
@@ -399,7 +399,7 @@ var Tm = {
         var i = e.statementToCode(t, n, "DO")
         var a = e.valueToCode(t, n, "HTTP_CODE", e.ORDER_ATOMIC)
         var s = e.valueToCode(t, n, "MESSAGE", e.ORDER_ATOMIC)
-        return i && o ? ep.n("argsOnHttpClientError", [ep.o(o)], i, [a, s]) : ""
+        return i && o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("argsOnHttpClientError", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)], i, [a, s]) : ""
       })
       e.insertBlockSnippetGenerator("room_create_room_name", function () {
         return "room_name"
@@ -411,13 +411,13 @@ var Tm = {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.n("setHttpClientUrl", [ep.o(o), i]) : ""
+        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setHttpClientUrl", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), i]) : ""
       })
       e.insertBlockSnippetGenerator("http_set_client_header", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return o ? ep.n("setHttpClientHeader", [ep.o(o), i]) : ""
+        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.n("setHttpClientHeader", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o), i]) : ""
       })
       e.insertBlockSnippetGenerator("http_send_get_request", function (e, n) {
         return t(e, n, "get", false)
@@ -437,19 +437,19 @@ var Tm = {
       e.insertBlockSnippetGenerator("http_get_client_url", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return o ? ep.s("getHttpClientUrl", [ep.o(o)]) : ""
+        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getHttpClientUrl", [$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("object_json_parse", function (t, n) {
         var r = e.valueToCode(t, n, "TEXT", e.ORDER_FUNCTION_CALL)
-        return ep.s("jsonParseToObject", [r])
+        return $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("jsonParseToObject", [r])
       })
       e.insertBlockSnippetGenerator("object_get_value", function (t, n) {
         var r = e.valueToCode(t, n, "OBJECT", e.ORDER_FUNCTION_CALL)
-        if (!r || r === rp.c) {
+        if (!r || r === $$_$$_$$_$$_unrestored_shared_1571_2636_61.c) {
           return ""
         }
         var o = e.valueToCode(t, n, "KEY", e.ORDER_FUNCTION_CALL)
-        return o ? ep.s("objectGetValue", [r, o]) : ""
+        return o ? $$_$$_$$_$$_unrestored_shared_1571_2636_4.s("objectGetValue", [r, o]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -458,14 +458,14 @@ var Tm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.u)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_5.u)
         }
       }
       e.insertBlockProfile("http_on_client_success", {
         type: "http_on_client_success",
         message0: "%{BKY_HTTP_CLIENT_ON_SUCCESS}",
         args0: [
-          ep.e("%{BKY_BLOCK_INTERNET_ICON}", true), D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_INTERNET_ICON}", true), $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "HTTP_CODE",
             check: "Number",
@@ -508,7 +508,7 @@ var Tm = {
         type: "http_on_client_error",
         message0: "%{BKY_HTTP_CLIENT_ON_ERROR}",
         args0: [
-          ep.e("%{BKY_BLOCK_INTERNET_ICON}", true), D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_4.e("%{BKY_BLOCK_INTERNET_ICON}", true), $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "HTTP_CODE",
             check: "Number",
@@ -551,7 +551,7 @@ var Tm = {
         type: "http_set_client_url",
         message0: "%{BKY_HTTP_CLIENT_SET_URL}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -567,7 +567,7 @@ var Tm = {
         type: "http_set_client_header",
         message0: "%{BKY_HTTP_CLIENT_SET_HEADER}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -582,7 +582,7 @@ var Tm = {
       e.insertBlockProfile("http_send_get_request", {
         type: "http_send_get_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_WITH_GET_REQUEST}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         inputsInline: true,
         previousStatement: true,
         nextStatement: true,
@@ -592,7 +592,7 @@ var Tm = {
       e.insertBlockProfile("http_send_delete_request", {
         type: "http_send_delete_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_DELETE_REQUEST}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         inputsInline: true,
         previousStatement: true,
         nextStatement: true,
@@ -602,7 +602,7 @@ var Tm = {
         type: "http_send_post_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_WITH_POST_REQUEST}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -619,7 +619,7 @@ var Tm = {
         type: "http_send_put_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_PUT_REQUEST}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -635,7 +635,7 @@ var Tm = {
         type: "http_send_patch_request",
         message0: "%{BKY_HTTP_CLIENT_SEND_PATCH_REQUEST}",
         args0: [
-          D.a({}, n), {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: "String",
@@ -650,7 +650,7 @@ var Tm = {
       e.insertBlockProfile("http_get_client_url", {
         type: "http_get_client_url",
         message0: "%{BKY_HTTP_CLIENT_GET_URL}",
-        args0: [D.a({}, n)],
+        args0: [$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n)],
         output: "String",
         colour: "%{BKY_CONTROL_HUE}",
         inputsInline: true
@@ -707,7 +707,7 @@ var Tm = {
 var Sm = {
   icon: "icon-widget-http-client",
   title: "HttpClientWidget.widgetName",
-  type: An.u,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.u,
   previewAreaWidgetTitle: "HttpClientWidget.widgetName",
   component: Yh,
   editConfig: Cm,

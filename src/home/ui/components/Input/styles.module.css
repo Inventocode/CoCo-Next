@@ -1,0 +1,95 @@
+.coco-input-warning {
+    border-color: #f85b5e;
+    background-color: #fff
+}
+
+.coco-input-warning:hover {
+    border-color: #f85b5e
+}
+
+.coco-input-disabled {
+    cursor: not-allowed;
+    border-color: #f4e8ff;
+    background-color: #f4e8ff;
+    color: #b1a3bf
+}
+
+.coco-input-disabled:hover {
+    border-color: #f4e8ff
+}
+
+.coco-input-disabled input {
+    cursor: not-allowed
+}
+
+.coco-input-warning-animation {
+    -webkit-animation: warningAnimation .6s;
+    -o-animation: warningAnimation .6s;
+    animation: warningAnimation .6s
+}
+
+@-webkit-keyframes warningAnimation {
+    0% {
+        border: 1px solid #d9363e
+    }
+
+    25% {
+        border: 1px solid #f3575f
+    }
+
+    50% {
+        border: 1px solid #d9363e
+    }
+
+    75% {
+        border: 1px solid #f3575f
+    }
+
+    to {
+        border: 1px solid #d9363e
+    }
+}
+
+@-o-keyframes warningAnimation {
+    0% {
+        border: 1px solid #d9363e
+    }
+
+    25% {
+        border: 1px solid #f3575f
+    }
+
+    50% {
+        border: 1px solid #d9363e
+    }
+
+    75% {
+        border: 1px solid #f3575f
+    }
+
+    to {
+        border: 1px solid #d9363e
+    }
+}
+
+@keyframes warningAnimation {
+    0% {
+        border: 1px solid #d9363e
+    }
+
+    25% {
+        border: 1px solid #f3575f
+    }
+
+    50% {
+        border: 1px solid #d9363e
+    }
+
+    75% {
+        border: 1px solid #f3575f
+    }
+
+    to {
+        border: 1px solid #d9363e
+    }
+}

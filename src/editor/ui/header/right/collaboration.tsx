@@ -8,18 +8,18 @@ import * as React from "react"
 
 import { se, le, de, fe, ge } from "../../../../../unrestored/shared/1571/2636/index__part-5"
 import { _t, vt as InvalidUrlDialog, bt as LoadingDialog, yt as Users } from "../../../../../unrestored/shared/1571/2636/index__part-13"
-import /* [auto-meaningful-name] */$_136 from "../../../../../unrestored/shared/1571/2636/136"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136 from "../../../../../unrestored/shared/1571/2636/136"
 import * as CollaborationMessage from "../../../../../unrestored/shared/1571/2636/100"
-import * as /* [auto-meaningful-name] */$_24_index from "../../../../../unrestored/shared/1571/2636/24/index"
-import * as /* [auto-meaningful-name] */$_288 from "../../../../../unrestored/shared/1571/2636/288"
-import * as /* [auto-meaningful-name] */$_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$_1213 from "../../../../../unrestored/shared/1571/2636/1213"
-import * as Z from "../../../../../unrestored/shared/1571/2636/97"
-import * as K from "../../../../../unrestored/shared/1571/2636/18"
-import * as Message from "../../../events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import N from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../../unrestored/shared/1571/2636/24/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../unrestored/shared/1571/2636/288"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
+import * as Actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
 import * as /* [auto-meaningful-name] */$_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
@@ -45,33 +45,33 @@ var PermissionDialog = function (e) {
     }
   }, [e.parentVisible])
   return e.isAuthor ? (
-    <$_1213.a
+    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
       placement="bottom"
       content={(t = e.id, e$permission = e.permission, (
-        <div className={$_136.permissionDialog}>
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.permissionDialog}>
           <div
-            onClick={() => e.handleChangePermission(K.c.Edit, t, c)}
-            className={$_136.item}
+            onClick={() => e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit, t, c)}
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item}
           >
-            <$_13_index.j
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
               type="icon-selected"
-              className={N($_136.icon, e$permission === K.c.Edit && $_136.selected)}
+              className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
             />
             <span>{$_710_index$a$formatMessage({ id: "OT.dialogCanEdit" })}</span>
           </div>
           <div
-            onClick={() => e.handleChangePermission(K.c.ReadOnly, t, c)}
-            className={$_136.item}
+            onClick={() => e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly, t, c)}
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item}
           >
-            <$_13_index.j
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
               type="icon-selected"
-              className={N($_136.icon, e$permission === K.c.ReadOnly && $_136.selected)}
+              className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
             />
             <span>{$_710_index$a$formatMessage({ id: "OT.dialogReadOnly" })}</span>
           </div>
           <div
             onClick={() => e.handleRemovePermission(t, c)}
-            className={N($_136.item, $_136.remove)}
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.remove)}
           >
             <span>{$_710_index$a$formatMessage({ id: "OT.dialogRemove" })}</span>
           </div>
@@ -81,26 +81,26 @@ var PermissionDialog = function (e) {
       visible={i}
       onVisibleChange={(e) => a(e)}
     >
-      <div className={$_136.edit_role}>
+      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role}>
         <span>
-          {e.permission === K.c.Edit
+          {e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
             ? $_710_index$a$formatMessage({ id: "OT.edit" })
             : $_710_index$a$formatMessage({ id: "OT.readonly" })}
         </span>
-        <div className={$_136.icon}>
-          <$_13_index.j type="icon-dropdown-down" className={$_136.icon} />
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
+          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-dropdown-down" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon} />
         </div>
       </div>
-    </$_1213.a>
+    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a>
   ) : (
-    <div className={N($_136.edit_role, $_136.disabled)}>
+    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.disabled)}>
       <span>
-        {e.permission === K.c.Edit
+        {e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
           ? $_710_index$a$formatMessage({ id: "OT.edit" })
           : $_710_index$a$formatMessage({ id: "OT.readonly" })}
       </span>
-      <div className={$_136.icon}>
-        <$_13_index.j type="icon-dropdown-down" className={$_136.icon} />
+      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
+        <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-dropdown-down" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon} />
       </div>
     </div>
   )
@@ -109,7 +109,7 @@ var Ct = React.memo(function () {
   var project = $_16_index.e(function (e) {
     return e.project
   })
-  var id = project.id
+  var /* [auto-meaningful-name] */project$id = project.id
   var title = project.title
   var cooperationUserList = $_16_index.e(function (e) {
     return e.oTState.cooperationUserList
@@ -139,7 +139,7 @@ var Ct = React.memo(function () {
       edit_permission: 1
     })
   }
-  var isUpdate = Z.a(id)
+  var isUpdate = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(project$id)
   var editorInviteUrl = $_16_index.e(function (e) {
     return e.oTState.editorInviteUrl
   })
@@ -151,7 +151,7 @@ var Ct = React.memo(function () {
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = React.useState(K.c.Edit)
+  var w = React.useState($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var j = C[1]
@@ -164,35 +164,35 @@ var Ct = React.memo(function () {
     const unsafeWidgets = Et.Eb(Et.j.EXTENSION).filter((widget) => {
       return !CustomWidgetType.isSafeExtensions(widget.type)
     })
-    if (!(await $_288.b()).includes(Number(id)) && unsafeWidgets.length > 0) {
+    if (!(await $$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()).includes(Number(project$id)) && unsafeWidgets.length > 0) {
       y(false)
-      dispatch(Message.wrapOpenConfirmDialog({
+      dispatch(Actions.openConfirmDialogAction({
         allowText: formatMessage({
           id: "know"
         }),
         title: "",
         content: (
           <div>
-            作品使用了未审核的自定义控件，需将控件提交至<a href={te.b} target="__blank" rel="noopener noreferrer">Coco控件商城-投稿</a>，并等待审核通过后才能进行协作。
+            作品使用了未审核的自定义控件，需将控件提交至<a href={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b} target="__blank" rel="noopener noreferrer">Coco控件商城-投稿</a>，并等待审核通过后才能进行协作。
           </div>
         ),
         cancelBtnVisible: false
       }))
       return
     }
-    let newId = id
+    let newId = project$id
     y(true)
     if (!isUpdate && isProjectModified) {
-      newId = await Message.promisify(dispatch, Message.wrapAsyncSaveProject({
+      newId = await Actions.promisify(dispatch, Actions.asyncSaveProjectAction({
         isUpdate,
         isAutoSave: true
       }))
     } else {
-      newId = id
+      newId = project$id
     }
     if (Et.Y().length > 0) {
       y(false)
-      dispatch(Message.wrapOpenConfirmDialog({
+      dispatch(Actions.openConfirmDialogAction({
         allowText: "确定",
         title: "提示",
         content: "作品中含有云数据库控件，暂时无法协作",
@@ -205,11 +205,11 @@ var Ct = React.memo(function () {
         await se(newId)
       }
       dispatch(CollaborationMessage.o(newId))
-      const inviteCode = await fe(newId, K.c.Edit)
-      const inviteUrl = te.x(newId, inviteCode)
+      const inviteCode = await fe(newId, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
+      const inviteUrl = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.x(newId, inviteCode)
       dispatch(CollaborationMessage.p(inviteUrl))
     }
-    $_141_index.a("InviteCollaborationClick", {
+    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("InviteCollaborationClick", {
       authorId: userInfo?.id || "",
       nickName: userInfo?.nickname || ""
     })
@@ -220,9 +220,9 @@ var Ct = React.memo(function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              ge(r, id, n).then(function () {
+              ge(r, project$id, n).then(function () {
                 var /* [auto-meaningful-name] */R$current
-                le(id).then(function () {
+                le(project$id).then(function () {
                   var e = O.a(RegeneratorRuntime.mark(function e(t) {
                     return RegeneratorRuntime.wrap(function (e) {
                       for (;;) {
@@ -262,7 +262,7 @@ var Ct = React.memo(function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              de(id, n).then(function () {
+              de(project$id, n).then(function () {
                 var /* [auto-meaningful-name] */R$current
                 if (!(null === (R$current = R.current) || undefined === R$current)) {
                   R$current.hideContent()
@@ -281,19 +281,19 @@ var Ct = React.memo(function () {
     }
   }()
   var F = (
-    <div className={$_136.content}>
+    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.content}>
       {isAuthor && (
-        <div className={$_136.header}>
-          <$_13_index.d
-            className={$_136.shareButton}
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.header}>
+          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareButton}
             onClick={() => share.apply(this, arguments)}
           >
-            <$_13_index.j className={$_136.invitationIcon} type="icon-ot-invitation" />
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.invitationIcon} type="icon-ot-invitation" />
             {formatMessage({ id: "OT.inviteFriend" })}
-          </$_13_index.d>
+          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
         </div>
       )}
-      <ul className={$_136.list}>
+      <ul className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.list}>
         {cooperationUserList.map((e, t) => {
           var n = e.id
           var e$is_author = e.is_author
@@ -301,7 +301,7 @@ var Ct = React.memo(function () {
           return (
             <li key={t}>
               <div
-                className={N($_136.headerPhotoBorder)}
+                className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.headerPhotoBorder)}
                 key={e.id}
                 style={{
                   marginRight: "8px",
@@ -309,16 +309,16 @@ var Ct = React.memo(function () {
                 }}
               >
                 <div
-                  className={$_136.headPhoto}
+                  className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.headPhoto}
                   style={{ backgroundImage: `url(${e.avatar_url})` }}
                 />
               </div>
-              <div className={$_136.name}>
+              <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.name}>
                 <p>{e.nickname}</p>
                 <span>{e.id}</span>
               </div>
               {e$is_author ? (
-                <div className={$_136.role}>
+                <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.role}>
                   <div>{formatMessage({ id: "OT.creator" })}</div>
                 </div>
               ) : (
@@ -338,7 +338,7 @@ var Ct = React.memo(function () {
     </div>
   )
   var G = React.useCallback(function () {
-    return T === K.c.Edit ? editorInviteUrl : T === K.c.ReadOnly ? readOnlyInviteUrl : ""
+    return T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? editorInviteUrl : T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly ? readOnlyInviteUrl : ""
   }, [editorInviteUrl, readOnlyInviteUrl, T])
   var W = React.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(n) {
@@ -348,14 +348,14 @@ var Ct = React.memo(function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              if (n !== K.c.Edit) {
+              if (n !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit) {
                 e.next = 3
                 break
               }
               j(n)
               return e.abrupt("return")
             case 3:
-              if (n !== K.c.ReadOnly) {
+              if (n !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly) {
                 e.next = 14
                 break
               }
@@ -364,10 +364,10 @@ var Ct = React.memo(function () {
                 break
               }
               e.next = 7
-              return fe(id, K.c.ReadOnly)
+              return fe(project$id, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly)
             case 7:
               e$sent = e.sent
-              o = te.x(id, e$sent)
+              o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.x(project$id, e$sent)
               dispatch(CollaborationMessage.r(o))
               j(n)
               e.next = 14
@@ -384,12 +384,12 @@ var Ct = React.memo(function () {
     return function (t) {
       return e.apply(this, arguments)
     }
-  }(), [dispatch, id, readOnlyInviteUrl])
+  }(), [dispatch, project$id, readOnlyInviteUrl])
   return (
     <div style={{ height: "100%" }}>
-      <$_13_index.r
+      <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r
         content={F}
-        className={$_136.oTButton}
+        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.oTButton}
         onOpen={() => M(true)}
         onClose={() => M(false)}
         ref={R}
@@ -401,52 +401,52 @@ var Ct = React.memo(function () {
           trigger={["hover", "click"]}
           overlayInnerStyle={{ position: "relative", top: -4 }}
         >
-          <div className={N($_136.collIconWrapper, D && $_136.activeCollIconWrapper)}>
-            <$_13_index.j type="icon-collaborate-active" className={$_136.collIcon} />
+          <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIconWrapper, D && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.activeCollIconWrapper)}>
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-collaborate-active" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIcon} />
           </div>
         </$_748_index.a>
-      </$_13_index.r>
-      <$_13_index.f
-        className={$_136.shareOtDialog}
+      </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r>
+      <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
+        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareOtDialog}
         visible={b}
         title={formatMessage({ id: "OT.copyCollInvitationUrl" })}
         onClose={() => y(false)}
       >
-        <div className={$_136.dialogMain}>
-          <div className={$_136.text}>{formatMessage({ id: "OT.expiration" })}</div>
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.dialogMain}>
+          <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.text}>{formatMessage({ id: "OT.expiration" })}</div>
           <div
-            onClick={() => W(K.c.Edit)}
-            className={N($_136.tab, T === K.c.Edit && $_136.selected)}
+            onClick={() => W($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)}
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
           >
             {formatMessage({ id: "OT.editor" })}
             <span>{formatMessage({ id: "OT.editorRules" })}</span>
-            {T === K.c.Edit && (
-              <div className={$_136.icon}>
-                <$_13_index.j type="icon-selected" />
+            {T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && (
+              <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
+                <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-selected" />
               </div>
             )}
           </div>
           <div
-            onClick={() => W(K.c.ReadOnly)}
-            className={N($_136.tab, T === K.c.ReadOnly && $_136.selected)}
+            onClick={() => W($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly)}
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
           >
             {formatMessage({ id: "OT.reader" })}
             <span>{formatMessage({ id: "OT.readerRules" })}</span>
-            {T === K.c.ReadOnly && (
-              <div className={$_136.icon}>
-                <$_13_index.j type="icon-selected" />
+            {T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && (
+              <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
+                <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-selected" />
               </div>
             )}
           </div>
         </div>
         {G() ? (
-          <$_13_index.d
-            className={$_136.copy}
+          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.copy}
             type="primary"
             onClick={() => {
               var e = document.createElement("input")
               var t =
-                T === K.c.Edit
+                T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
                   ? `${G()} 点击链接，一起进入《${title}》的协同创作吧~`
                   : `${G()} 点击链接，查看《${title}》的作品内容吧~`
               e.setAttribute("value", t)
@@ -454,24 +454,22 @@ var Ct = React.memo(function () {
               e.select()
               document.execCommand("Copy")
               document.body.removeChild(e)
-              dispatch(
-                Message.wrapShowCommonToastInfo({
-                  type: "success",
-                  message: formatMessage({ id: "OT.copySuccess" }),
-                  showCloseIcon: false
-                })
-              )
+              dispatch(Actions.showCommonToastInfoAction({
+                type: "success",
+                message: formatMessage({ id: "OT.copySuccess" }),
+                showCloseIcon: false
+              }))
               y(false)
             }}
           >
             {formatMessage({ id: "OT.copyLink" })}
-          </$_13_index.d>
+          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
         ) : (
-          <$_13_index.d className={$_136.loadingBtn} type="primary">
-            <$_13_index.j type="icon-loading2" />
-          </$_13_index.d>
+          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.loadingBtn} type="primary">
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-loading2" />
+          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
         )}
-      </$_13_index.f>
+      </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f>
     </div>
   )
 })
@@ -506,12 +504,12 @@ export const Collaboration = React.memo(() => {
           return e.apply(this, arguments)
         }
       }())
-      $_24_index.a.init(collWorkId).then(() => {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.init(collWorkId).then(() => {
         setIsLoading(false)
       })
     } else {
       setIsLoading(false)
-      $_24_index.a.disconnect()
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.disconnect()
     }
   }, [dispatch, collWorkId])
   return (
@@ -520,7 +518,7 @@ export const Collaboration = React.memo(() => {
       <Ct />
       <InvalidUrlDialog visible={showInvalidUrlDialog} onClose={() => setShowInvalidUrlDialog(false)} />
       <LoadingDialog visible={isLoading} />
-      {Z.a(id) && <_t />}
+      {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id) && <_t />}
     </>
   )
 })
