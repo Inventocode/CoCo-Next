@@ -32,7 +32,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as Language from "../../ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../unrestored/shared/1571/2636/49"
 import * as ExternalModule from "./external-module"
-import * as EventStore from "../../../editor/redux/store"
+import * as Store from "../../../editor/redux/store"
 import * as Actions from "../../../editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
@@ -629,7 +629,7 @@ export function registerCustomWidget(
   }
   if (Storage.getUnsafeExtension(type)) {
     const unprefixedType: string = Type.toUnprefixed(type, false)
-    EventStore.dispatch(Actions.openConfirmDialogAction({
+    Store.dispatch(Actions.openConfirmDialogAction({
       onConfirm: registered,
       onCancel,
       allowText: Language.format(Language.zh_CN, "ExtensionWidget.overwrite").toString(),
@@ -714,7 +714,7 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
             { type, code }
           )
         }
-        EventStore.dispatch(Actions.updateExtensionWidgetListAction())
+        Store.dispatch(Actions.updateExtensionWidgetListAction())
         resolve(types)
       },
       (): void => {
@@ -769,7 +769,7 @@ async function checkKeyWords(code: string) {
       messages.push(`自定义控件存在危险关键词：${includedKeyWords.join("、")}，虽然 CoCo Next 允许自定义控件存在危险关键词，但是可能导致作品在 CoCo 中出现异常`)
     }
     if (messages.length > 0) {
-      EventStore.dispatch(Actions.openConfirmDialogAction({
+      Store.dispatch(Actions.openConfirmDialogAction({
         onConfirm() { resolve() },
         onCancel() { reject(new Error("User cancel import widget")) },
         allowText: "确认导入",
@@ -842,7 +842,7 @@ export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFile
   if (unsafeWidgetsStorage.length) {
     await Promise.all(unsafeWidgetsStorage.map(({ code }): Promise<void> => importWidget(code)))
   }
-  EventStore.dispatch(Actions.updateExtensionWidgetListAction())
+  Store.dispatch(Actions.updateExtensionWidgetListAction())
   const onlineWidgetsStorage = safeWidgetStorage.filter((widget) =>
     widget.cdnUrl.startsWith("https") && widget.id)
   if (!onlineWidgetsStorage.length) {
