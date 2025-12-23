@@ -1040,7 +1040,7 @@ export function processCheckType(
       break
   }
   types.forEach(type => {
-    result.add(_.upperFirst(`${type}`))
+    result.add(Lodash.upperFirst(`${type}`))
   })
   return Array.from(result)
 }

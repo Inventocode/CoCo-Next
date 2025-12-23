@@ -127,6 +127,7 @@ export class HomeView extends React.Component {
     } = this.props
     // [CoCo Next] 去除创作盒子阴影
     // const { isScrolled, showCourseAnimation } = this.state
+    const { showCourseAnimation } = this.state
     const newUserTemplateList = templateList
       .filter((item) => item.type === 2)
       .slice(0, 3)

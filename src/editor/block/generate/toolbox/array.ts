@@ -1,4 +1,3 @@
-
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_323 from "../../../../../unrestored/shared/1571/2636/323"
@@ -349,7 +348,7 @@ export function setBlockGroupSnippet(e) {
     }
     o += "]"
     var s = t.blocks[n]
-    return _.l(o, s, e, false, true)
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.l(o, s, e, false, true)
   })
   var t = function (t, n) {
     var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_323.a(n)
@@ -471,10 +470,10 @@ export function setBlockGroupExtra(Blink) {
         if (this.get_input("MUTATE_REMOVE_BUTTON")) {
           this.remove_input("MUTATE_REMOVE_BUTTON");
         }
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_ADD_BUTTON");
       } else {
-        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(_.q(undefined), "MUTATE_REMOVE_BUTTON");
-        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field(_.p(), "MUTATE_ADD_BUTTON");
+        this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_REMOVE_BUTTON");
+        this.append_dummy_input("MUTATE_ADD_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_ADD_BUTTON");
       }
       Blink.events.enable();
     },
@@ -488,7 +487,7 @@ export function setBlockGroupExtra(Blink) {
         var n = this.itemCount_;
         this.itemCount_++;
         this.updateShape_();
-        var r = _.c("mutation", {
+        var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.c("mutation", {
           block: this,
           old_value: n,
           new_value: this.itemCount_
@@ -506,7 +505,7 @@ export function setBlockGroupExtra(Blink) {
         var n = this.itemCount_;
         this.itemCount_--;
         this.updateShape_();
-        var r = _.c("mutation", {
+        var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.c("mutation", {
           block: this,
           old_value: n,
           new_value: this.itemCount_
