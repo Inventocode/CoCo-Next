@@ -12,7 +12,7 @@ var tj
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as /* [auto-meaningful-name] */$_57_index from "./57/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"

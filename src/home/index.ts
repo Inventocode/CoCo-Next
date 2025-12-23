@@ -1,3 +1,3 @@
 import "./styles/coco.css"
 import "./styles/commons.css"
-import "../../unrestored/home/index-0"
+import "./ui/app"

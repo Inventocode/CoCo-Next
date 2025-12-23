@@ -4,8 +4,6 @@
  * 模块 ID：261
  */
 
-"use strict"
-
 export { ADD as b }
 export { CATEGORIES as a }
 export { SPACE as c }

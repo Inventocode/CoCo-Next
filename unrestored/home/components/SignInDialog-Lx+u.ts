@@ -13,9 +13,9 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template-ARYd"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__ from "../redux/main/actions-_FmP"
+import * as __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__ from "../../../src/home/redux/main/actions"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__redux_store__ from "../redux/store-q9Rd"
+import * as __WEBPACK_IMPORTED_MODULE_4__redux_store__ from "../../../src/home/redux/store"
 /* unused harmony reexport store_manager */
 /* unused harmony reexport ReduxState */
 /* harmony import */

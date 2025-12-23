@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_typ
 import * as Oe from "./43"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as ye from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as Q from "./7"

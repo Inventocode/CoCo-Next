@@ -8,7 +8,7 @@
 
 import { qn } from "./index__part-9"
 import { ar } from "./index__part-10"
-import { Ms } from "../../../../../src/editor/events/main/actions"
+import { Ms } from "../../../../../src/editor/redux/common/saga"
 var gr
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
 import * as /* [auto-meaningful-name] */$$_110 from "../110"
@@ -26,7 +26,7 @@ import * as St from "../7"
 import * as /* [auto-meaningful-name] */$$_48_3_index from "../48/3/index"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
 import * as _r from "./22"
 var vr = RegeneratorRuntime.mark(Fr)

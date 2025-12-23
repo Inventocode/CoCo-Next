@@ -1,0 +1,61 @@
+.menu {
+    position: fixed;
+    top: 52px;
+    width: 240px;
+    min-width: 240px;
+    height: calc(100vh - 52px);
+    background: #fafafa;
+    border-right: 1px solid #e8e8e8
+}
+
+.menu .menuItem {
+    display: inline-block;
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 20px;
+    color: #61626b;
+    font-size: 14px;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.menu .menuItem.active {
+    color: #6e4ff4;
+    background: #f4f1ff
+}
+
+.menu .menuItem.active .menuIcon {
+    color: #6e4ff4
+}
+
+.menu .menuItem:hover {
+    background: #f4f1ff
+}
+
+.menu .menuItem .menuIcon {
+    font-size: 22px;
+    margin-right: 6px;
+    margin-top: -2px;
+    color: #847da4
+}
+
+.menu .discover {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    border-top: 1px solid #e8e8e8
+}
+
+.menu .discover .menuArrow {
+    font-size: 16px
+}

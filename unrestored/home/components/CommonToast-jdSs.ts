@@ -13,7 +13,7 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template-Fp3z"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__ from "../redux/main/actions-_FmP"
+import * as __WEBPACK_IMPORTED_MODULE_3__redux_main_actions__ from "../../../src/home/redux/main/actions"
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     commonToastInfo: state.main_reducer.commonToastInfo

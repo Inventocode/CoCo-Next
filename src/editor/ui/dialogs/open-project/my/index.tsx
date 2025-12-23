@@ -9,25 +9,25 @@ import * as React from "react"
 import { ne } from "../../../../../../unrestored/shared/1571/2636/index__part-4"
 import { de } from "../../../../../../unrestored/shared/1571/2636/index__part-5"
 import { we } from "../../../../../../unrestored/shared/1571/2636/index__part-6"
-import * as /* [auto-meaningful-name] */$_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$_190 from "../../../../../../unrestored/shared/1571/2636/190"
-import * as /* [auto-meaningful-name] */$_297 from "../../../../../../unrestored/shared/1571/2636/297"
-import * as te from "../../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
-import * as K from "../../../../../../unrestored/shared/1571/2636/18"
-import * as Message from "../../../../events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
-import N from "../../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../../shared/ui/language"
-import * as O from "../../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../../../unrestored/shared/1571/2636/297"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
+import * as Actions from "../../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_language from "../../../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$_288 from "../../../../../../unrestored/shared/1571/2636/288"
-import * as /* [auto-meaningful-name] */$_418 from "../../../../../../unrestored/shared/1571/2636/418"
-import /* [auto-meaningful-name] */_$_ from "../../../../../../unrestored/shared/1571/2636/418"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../../unrestored/shared/1571/2636/288"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181 from "../../../../../../unrestored/shared/1571/2636/418"
 
 enum Type {
   SELF = "self",
@@ -46,11 +46,13 @@ var Ie = {
 function je(e) {
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$type = e.type
-  return "loaded" === e$type ? React.createElement(React.Fragment, null) : "emptyList" === e$type ? React.createElement("div", {
-    className: _$_.emptyContainer
-  }, React.createElement(we, {
-    text: e$title
-  })) : React.createElement(React.Fragment, null)
+  return "loaded" === e$type ? <></> : "emptyList" === e$type ? <div
+    className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.emptyContainer}
+  >
+    {React.createElement(we, {
+      text: e$title
+    })}
+  </div> : <></>
 }
 function ProjectItem({
   project, onClick, onDelete, filterType, status
@@ -61,7 +63,7 @@ function ProjectItem({
   filterType: Type
   status: "loading" | "loaded" | "emptyList"
 }) {
-  const { formatMessage } = $_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
   var t
   function c() {
     var e = []
@@ -74,90 +76,115 @@ function ProjectItem({
     }
     return e
   }
-  return React.createElement("div", {
-    className: N(_$_.item),
-    onClick() {
+  return <div
+    className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.item)}
+    onClick={() => {
       onClick(project.id, project.name, project.updateTime)
-    },
-    key: project.id
-  }, React.createElement("div", {
-    className: _$_.cover
-  }, React.createElement("img", {
-    src: null === (t = project.coverUrl || project.previewUrl) || undefined === t ? undefined : t.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/"),
-    alt: project.name
-  })), React.createElement($_13_index.a, {
-    className: _$_.name,
-    text: project.name
-  }), React.createElement("p", {
-    className: _$_.time
-  }, React.createElement(ne, {
-    time: project.updateTime,
-    currentTime: project.serverTime
-  })), !!c().length && React.createElement("div", {
-    className: _$_.menuContainer,
-    onClick: function (e) {
-      e.stopPropagation()
-    }
-  }, React.createElement($_1213.a, {
-    placement: "rightTop",
-    trigger: "click",
-    overlayClassName: _$_.menuPopover,
-    zIndex: 100,
-    content: React.createElement("div", {
-      className: _$_.menuContent
-    }, React.createElement($_13_index.l, {
-      onClick: function (e) {
-        if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
-          onDelete(project.id, project.name, project.isCollWork || filterType === Type.COLL)
-        }
-      }
-    }, c().map(function (e, t) {
-      return React.createElement($_13_index.m, {
-        value: e,
-        key: t
-      }, React.createElement("span", null, formatMessage({
-        id: "MyProject." + e
-      })))
-    })))
-  }, React.createElement("div", null, React.createElement($_13_index.j, {
-    type: "icon-more"
-  })))), React.createElement("div", {
-    className: _$_.badgeWrapper
-  }, (project.isCollWork || filterType === Type.COLL) && "loaded" === status && React.createElement($_13_index.j, {
-    type: "icon-collaborator"
-  }), !!project.publishedTime && React.createElement($_13_index.j, {
-    type: "icon-publish"
-  })))
+    }}
+    key={project.id}
+  >
+    <div className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.cover}>
+      <img
+        src={(project.coverUrl || project.previewUrl)?.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/")}
+        alt={project.name}
+      />
+    </div>
+    <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.a
+      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.name}
+      text={project.name}
+    />
+    <p
+      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.time}
+    >
+      {React.createElement(ne, {
+        time: project.updateTime,
+        currentTime: project.serverTime
+      })}
+    </p>
+    {!!c().length && <div
+      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuContainer}
+      onClick={function (e) {
+        e.stopPropagation()
+      }}
+    >
+      {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
+        placement={"rightTop"}
+        trigger={"click"}
+        overlayClassName={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuPopover}
+        zIndex={100}
+        content={<div
+          className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuContent}
+        >
+          <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l
+            onClick={function (e) {
+              if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
+                onDelete(project.id, project.name, project.isCollWork || filterType === Type.COLL)
+              }
+            }}
+          >
+            {c().map(function (e, t) {
+              return <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m
+                value={e}
+                key={t}
+              >
+                {<span>
+                  {formatMessage({
+                    id: "MyProject." + e
+                  })}
+                </span>}
+              </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+            })}
+          </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+        </div>}
+      >
+        <div>
+          {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+            type={"icon-more"}
+          />}
+        </div>
+      </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a>}
+    </div>}
+    <div
+      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.badgeWrapper}
+    >
+      {(project.isCollWork || filterType === Type.COLL) && "loaded" === status && <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        type={"icon-collaborator"}
+      />}
+      {!!project.publishedTime && <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        type={"icon-publish"}
+      />}
+    </div>
+  </div>
 }
 
 const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
   var r = React.useState([])
-  var o = $_10_index.a(r, 2)
+  var o = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
   const [status, setStatus] = React.useState<"loading" | "loaded" | "emptyList">("loaded")
-  const language = $_16_index.e(function (e) {
+  const language = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.language
   })
-  const userInfo = $_16_index.e(function (e) {
+  const userInfo = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  const id = $_16_index.e(function (e) {
+  const id = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.id
   })
   const [type, setType] = React.useState(Type.SELF)
-  const dispatch = $_16_index.d()
+  const dispatch = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var C = React.useRef(0)
   var A = React.useRef(1)
   var j = React.useRef(false)
-  const { formatMessage } = $_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
   async function onClick(id, r, o) {
     try {
-      const response = await $_297.d(id)
+      const response = await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.d(id)
       const { data } = response
       if (data) {
         if (
-          !(await $_288.b()).includes(Number(id)) &&
+          !(await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()).includes(Number(id)) &&
           !data.is_author &&
           data.is_coll_work &&
           data.content &&
@@ -166,7 +193,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
         ) {
           // [CoCo Next] 移除从 URL 打开协作作品时的自定义控件限制
           const confirm = await new Promise((resolve) => {
-            dispatch(Message.wrapOpenConfirmDialog({
+            dispatch(Actions.openConfirmDialogAction({
               onConfirm() { resolve(true) },
               onCancel() { resolve(false) },
               title: "",
@@ -185,32 +212,32 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
           isCollWork: data.is_coll_work,
           isAuthor: data.is_author,
           editPermission: data.edit_permission,
-          jsonFrom: data.is_coll_work ? K.d.OTHER : K.d.MY_WORK
+          jsonFrom: data.is_coll_work ? $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER : $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.d.MY_WORK
         })
-        $_141_index.a("OpenWork", {
+        $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("OpenWork", {
           workId: id,
           workType: type === Type.COLL ? 2 : 1,
           isSuccess: true,
           failReason: ""
         })
       } else {
-        dispatch(Message.wrapAsyncGetProjectError({
+        dispatch(Actions.asyncGetProjectErrorAction({
           code: response.code
         }))
       }
     } catch (error) {
       console.error("getProjectJson error", error)
-      $_141_index.a("OpenWork", {
+      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("OpenWork", {
         workId: id,
         workType: type === Type.COLL ? 2 : 1,
         isSuccess: false,
         failReason: error.message
       })
     }
-    dispatch(Message.wrapCloseProjectDialog())
+    dispatch(Actions.closeProjectDialogAction())
   }
   var D = React.useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -280,7 +307,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     return L.apply(this, arguments)
   }
   function L() {
-    return (L = O.a(RegeneratorRuntime.mark(function e(t, n) {
+    return (L = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -293,12 +320,12 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
               return e.abrupt("return", t)
             case 2:
               e.next = 4
-              return $_297.c(C.current, 20, n)
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.c(C.current, 20, n)
             case 4:
               e$sent = e.sent
               C.current += 20
               A.current = e$sent.total
-              return e.abrupt("return", [].concat($_25_index.a(t), $_25_index.a(e$sent.list)))
+              return e.abrupt("return", [].concat($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(e$sent.list)))
             case 8:
             case "end":
               return e.stop()
@@ -311,7 +338,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     return B.apply(this, arguments)
   }
   function B() {
-    return (B = O.a(RegeneratorRuntime.mark(function e(t) {
+    return (B = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -325,11 +352,11 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
             case 2:
               C.current++
               e.next = 5
-              return $_297.b(C.current, 20)
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.b(C.current, 20)
             case 5:
               e$sent = e.sent
               A.current = e$sent.total
-              return e.abrupt("return", [].concat($_25_index.a(t), $_25_index.a(e$sent.list)))
+              return e.abrupt("return", [].concat($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(e$sent.list)))
             case 8:
             case "end":
               return e.stop()
@@ -357,7 +384,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     }
   }
   var G = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var r
       return RegeneratorRuntime.wrap(function (e) {
@@ -376,11 +403,11 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
               break
             case 6:
               e.next = 8
-              return $_297.a(t)
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.a(t)
             case 8:
               if (n = e.sent) {
-                dispatch(Message.wrapShowCommonToastInfo({
-                  message: $$_$$_$$_$$_src_shared_ui_language.c(language, "MyProject.deleteProjectSuccess").toString()
+                dispatch(Actions.showCommonToastInfoAction({
+                  message: $$_$$_$$_$$_$$_shared_ui_language.c(language, "MyProject.deleteProjectSuccess").toString()
                 }))
               }
             case 10:
@@ -389,14 +416,14 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
                   return e.id === t
                 })) > -1) {
                   i.splice(r, 1)
-                  F($_25_index.a(i))
+                  F($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(i))
                   if (id === t) {
-                    dispatch(Message.warpAsyncCreateProject())
+                    dispatch(Actions.warpAsyncCreateProject())
                   }
                 }
               } else {
-                dispatch(Message.wrapShowCommonToastInfo({
-                  message: $$_$$_$$_$$_src_shared_ui_language.c(language, "MyProject.deleteProjectError").toString(),
+                dispatch(Actions.showCommonToastInfoAction({
+                  message: $$_$$_$$_$$_$$_shared_ui_language.c(language, "MyProject.deleteProjectError").toString(),
                   duration: 1e3,
                   type: "error"
                 }))
@@ -414,7 +441,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
   }()
   function onDelete(e, t, n) {
     if (type === Type.COLL) {
-      dispatch(Message.wrapOpenConfirmDialog({
+      dispatch(Actions.openConfirmDialogAction({
         onConfirm: G.bind(null, e),
         allowText: formatMessage({
           id: "MyProject.quitCollWorkConfirmText"
@@ -422,7 +449,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
         title: formatMessage({
           id: "MyProject.quitCollWorkTitle"
         }, {
-          name: $_190.f(t)
+          name: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(t)
         }),
         content: formatMessage({
           id: "MyProject.quitCollWorkDescription"
@@ -434,7 +461,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     }
   }
   var U = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(type) {
+    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(type) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -451,41 +478,55 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
       return e.apply(this, arguments)
     }
   }()
-  return React.createElement("div", null, React.createElement("div", {
-    className: _$_.filter
-  }, Ae.map(function (e) {
-    return React.createElement("div", {
-      key: e,
-      onClick: U.bind(null, e),
-      className: N(_$_.filterItem, type === e && _$_.active)
-    }, formatMessage({
-      id: "MyProject.".concat(e)
-    }))
-  })), React.createElement("div", {
-    className: _$_.container
-  }, React.createElement(je, {
-    title: formatMessage({
-      id: Ie[type]
-    }),
-    type: status
-  }), i.length > 0 && React.createElement("div", {
-    className: _$_.main
-  }, React.createElement($_13_index.v, {
-    offsetY: 300,
-    height: 450,
-    onScrollBottom: function () {
-      D(i)
-    }
-  }, i.map(function (e) {
-    return React.createElement(ProjectItem, {
-      status,
-      key: e.id,
-      project: e,
-      onClick,
-      onDelete,
-      filterType: type
-    })
-  })))))
+  return <div>
+    {<div
+      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.filter}
+    >
+      {Ae.map(function (e) {
+        return <div
+          key={e}
+          onClick={U.bind(null, e)}
+          className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.filterItem, type === e && $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.active)}
+        >
+          {formatMessage({
+            id: "MyProject.".concat(e)
+          })}
+        </div>
+      })}
+    </div>}
+    {<div
+      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.container}
+    >
+      {React.createElement(je, {
+        title: formatMessage({
+          id: Ie[type]
+        }),
+        type: status
+      })}
+      {i.length > 0 && <div
+        className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.main}
+      >
+        {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.v
+          offsetY={300}
+          height={450}
+          onScrollBottom={function () {
+            D(i)
+          }}
+        >
+          {i.map(function (e) {
+            return <ProjectItem
+              status={status}
+              key={e.id}
+              project={e}
+              onClick={onClick}
+              onDelete={onDelete}
+              filterType={type}
+            />
+          })}
+        </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.v>}
+      </div>}
+    </div>}
+  </div>
 })
 
 export { OpenMyProject as Re }

@@ -3,6 +3,7 @@
   "version": "1.22.0",
   "private": true,
   "description": "下一代 CoCo 编辑器。",
+  "homepage": "https://gitee.com/oldsquaw/CoCo-Next#coco-next",
   "repository": {
     "type": "git",
     "url": "https://gitee.com/oldsquaw/CoCo-Next.git"
@@ -92,6 +93,7 @@
     "@types/react-dom": "^16.0.0",
     "@types/react-intl": "^2.0.0",
     "@types/react-loadable": "^5.0.0",
+    "@types/react-router-dom": "^5.0.0",
     "@types/redux-actions": "^2.0.0",
     "@types/three": "^0.136.0",
     "@types/video-react": "~0.15.0",

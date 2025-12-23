@@ -9,8 +9,8 @@ import * as React from "react"
 import { Pn } from "../../../../../unrestored/shared/1571/2636/index__part-24"
 import { Xn, Zn, Jn, er, tr, nr, rr, or, ar, sr, cr, lr, ur, dr, pr, hr, mr, gr, wr, Nr, Rr, kr, xr, Dr, Mr, Lr, Pr, Br, Fr, Gr, Wr } from "../../../../../unrestored/shared/1571/2636/index__part-25"
 import { useWidgetListWidth } from "../widget-list"
-import /* [auto-meaningful-name] */$_702 from "../../../../../unrestored/shared/1571/2636/702"
-import * as /* [auto-meaningful-name] */$_142 from "../../../../../unrestored/shared/1571/2636/142"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_702 from "../../../../../unrestored/shared/1571/2636/702"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_142 from "../../../../../unrestored/shared/1571/2636/142"
 import * as /* [auto-meaningful-name] */$_120 from "../../../../../unrestored/shared/1571/2636/120"
 import * as /* [auto-meaningful-name] */$_362 from "../../../../../unrestored/shared/1571/2636/362"
 import * as /* [auto-meaningful-name] */$_388 from "../../../../../unrestored/shared/1571/2636/388"
@@ -25,7 +25,7 @@ import * as /* [auto-meaningful-name] */$_26_index from "../../../../../unrestor
 import * as /* [auto-meaningful-name] */$_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */$_190 from "../../../../../unrestored/shared/1571/2636/190"
 import * as K from "../../../../../unrestored/shared/1571/2636/18"
-import * as Message from "../../../events/main/messages-wrapper"
+import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import * as k from "../../../../../unrestored/shared/1571/2636/11"
 import N from "../../../../../unrestored/shared/1571/2636/8"
@@ -156,7 +156,7 @@ var Xr = React.forwardRef(function (e, t) {
           e$onChange(t)
         }
       } else {
-        n(Message.wrapShowCommonToastInfo({
+        n(Actions.showCommonToastInfoAction({
           message: $_710_index$a$formatMessage({
             id: "blankInputValue"
           }),
@@ -232,7 +232,7 @@ var Zr = function (e) {
         o[i] = arguments[i]
       }
       t = $_388.a(this, (e = $_362.a(n)).call.apply(e, [this].concat(o)))
-      Ln.a($_142.a($_142.a(t)), "wrappedInstance", React.createRef())
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", React.createRef())
       return t
     }
     $_120.a(n, t)
@@ -245,7 +245,7 @@ var Zr = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          $_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call")
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call")
           return this.wrappedInstance.current
         }
       }, {
@@ -270,7 +270,7 @@ var Zr = function (e) {
   return React.createElement("div", {
     className: styles.snapshotContainer,
     onClick: function () {
-      o(Message.vg(e$index))
+      o(Actions.vg(e$index))
     }.bind(null, e$index)
   }, e$screen.snapshot && React.createElement("img", {
     src: e$screen.snapshot,
@@ -338,7 +338,7 @@ var Jr = React.memo(function (e) {
     className={styles.copy}
     onClick={(event) => {
       if (l.size > 98) {
-        dispatch(Message.wrapShowCommonToastInfo({
+        dispatch(Actions.showCommonToastInfoAction({
           showPrefixIcon: false,
           message: formatMessage({
             id: "screeMaxSize"
@@ -348,8 +348,8 @@ var Jr = React.memo(function (e) {
       // [CoCo Next] 移除屏幕数量上限
       // else {
       event.stopPropagation()
-      dispatch(Message.vg(c))
-      dispatch(Message.Df(e$screen.id))
+      dispatch(Actions.vg(c))
+      dispatch(Actions.Df(e$screen.id))
       // }
     }}
   >
@@ -367,7 +367,7 @@ var Jr = React.memo(function (e) {
     },
     onChange: function (e) {
       var n
-      dispatch(Message.Jg(e$screen.id, "title", e))
+      dispatch(Actions.Jg(e$screen.id, "title", e))
       if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
         n.refresh_selection()
       }
@@ -376,7 +376,7 @@ var Jr = React.memo(function (e) {
     renameInputValue: function (e) {
       var n
       var r = Et.Ob(e$screen.id, e, l)
-      dispatch(Message.Jg(e$screen.id, "title", r))
+      dispatch(Actions.Jg(e$screen.id, "title", r))
       if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
         n.refresh_selection()
       }
@@ -413,7 +413,7 @@ var $r = function (e) {
         o[i] = arguments[i]
       }
       t = $_388.a(this, (e = $_362.a(n)).call.apply(e, [this].concat(o)))
-      Ln.a($_142.a($_142.a(t)), "wrappedInstance", React.createRef())
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", React.createRef())
       return t
     }
     $_120.a(n, t)
@@ -473,7 +473,7 @@ var $r = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          $_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call")
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call")
           return this.wrappedInstance.current
         }
       }, {
@@ -525,8 +525,8 @@ var eo = function (e) {
       var t
       $_103.a(this, n)
       t = $_388.a(this, $_362.a(n).call(this, e))
-      Ln.a($_142.a($_142.a(t)), "state", {})
-      Ln.a($_142.a($_142.a(t)), "handleStart", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "state", {})
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleStart", function (e) {
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$distance = t$props.distance
         var /* [auto-meaningful-name] */t$props$shouldCancelStart = t$props.shouldCancelStart
@@ -566,10 +566,10 @@ var eo = function (e) {
           }
         }
       })
-      Ln.a($_142.a($_142.a(t)), "nodeIsChild", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "nodeIsChild", function (e) {
         return e.sortableInfo.manager === t.manager
       })
-      Ln.a($_142.a($_142.a(t)), "handleMove", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleMove", function (e) {
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$distance = t$props.distance
         var /* [auto-meaningful-name] */t$props$pressThreshold = t$props.pressThreshold
@@ -591,11 +591,11 @@ var eo = function (e) {
           }
         }
       })
-      Ln.a($_142.a($_142.a(t)), "handleEnd", function () {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleEnd", function () {
         t.touched = false
         t.cancel()
       })
-      Ln.a($_142.a($_142.a(t)), "cancel", function () {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "cancel", function () {
         var /* [auto-meaningful-name] */t$props$distance = t.props.distance
         if (!t.state.sorting) {
           if (!t$props$distance) {
@@ -604,7 +604,7 @@ var eo = function (e) {
           t.manager.active = null
         }
       })
-      Ln.a($_142.a($_142.a(t)), "handlePress", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handlePress", function (e) {
         try {
           var n = t.manager.getActive()
           var r = function () {
@@ -779,7 +779,7 @@ var eo = function (e) {
           return Promise.reject(o)
         }
       })
-      Ln.a($_142.a($_142.a(t)), "handleSortMove", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleSortMove", function (e) {
         var /* [auto-meaningful-name] */t$props$onSortMove = t.props.onSortMove
         if ("function" === typeof e.preventDefault && e.cancelable) {
           e.preventDefault()
@@ -791,7 +791,7 @@ var eo = function (e) {
           t$props$onSortMove(e)
         }
       })
-      Ln.a($_142.a($_142.a(t)), "handleSortEnd", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleSortEnd", function (e) {
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$hideSortableGhost = t$props.hideSortableGhost
         var /* [auto-meaningful-name] */t$props$onSortEnd = t$props.onSortEnd
@@ -847,7 +847,7 @@ var eo = function (e) {
         }
         t.touched = false
       })
-      Ln.a($_142.a($_142.a(t)), "autoscroll", function () {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "autoscroll", function () {
         var /* [auto-meaningful-name] */t$props$disableAutoscroll = t.props.disableAutoscroll
         var /* [auto-meaningful-name] */t$manager$isKeySorting = t.manager.isKeySorting
         if (t$props$disableAutoscroll) {
@@ -879,12 +879,12 @@ var eo = function (e) {
           })
         }
       })
-      Ln.a($_142.a($_142.a(t)), "onAutoScroll", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "onAutoScroll", function (e) {
         t.translate.x += e.left
         t.translate.y += e.top
         t.animateNodes()
       })
-      Ln.a($_142.a($_142.a(t)), "handleKeyDown", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleKeyDown", function (e) {
         var /* [auto-meaningful-name] */e$keyCode = e.keyCode
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$shouldCancelStart = t$props.shouldCancelStart
@@ -915,7 +915,7 @@ var eo = function (e) {
           }
         }
       })
-      Ln.a($_142.a($_142.a(t)), "keyLift", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "keyLift", function (e) {
         var /* [auto-meaningful-name] */e$target = e.target
         var /* [auto-meaningful-name] */rrE$targetFunctionEReturnNullE$sortableInfo$sortableInfo = rr(e$target, function (e) {
           return null != e.sortableInfo
@@ -930,7 +930,7 @@ var eo = function (e) {
         }
         t.handlePress(e)
       })
-      Ln.a($_142.a($_142.a(t)), "keyMove", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "keyMove", function (e) {
         var n = t.manager.getOrderedRefs()
         var /* [auto-meaningful-name] */nN$length1$node$sortableInfo$index = n[n.length - 1].node.sortableInfo.index
         var o = t.newIndex + e
@@ -961,18 +961,18 @@ var eo = function (e) {
           })
         }
       })
-      Ln.a($_142.a($_142.a(t)), "keyDrop", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "keyDrop", function (e) {
         t.handleSortEnd(e)
         if (t.initialFocusedNode) {
           t.initialFocusedNode.focus()
         }
       })
-      Ln.a($_142.a($_142.a(t)), "handleKeyEnd", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleKeyEnd", function (e) {
         if (t.manager.active) {
           t.keyDrop(e)
         }
       })
-      Ln.a($_142.a($_142.a(t)), "isValidSortingTarget", function (e) {
+      Ln.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "isValidSortingTarget", function (e) {
         var /* [auto-meaningful-name] */t$props$useDragHandle = t.props.useDragHandle
         var /* [auto-meaningful-name] */e$target = e.target
         var o = rr(e$target, function (e) {
@@ -1218,7 +1218,7 @@ var eo = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          $_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call")
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call")
           return this.wrappedInstance.current
         }
       }, {
@@ -1231,11 +1231,13 @@ var eo = function (e) {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return React.createElement(Fr.Provider, {
-            value: this.sortableContextValue
-          }, React.createElement(e, Dn.a({
-            ref: t
-          }, Zn(this.props, Lr))))
+          return <Fr.Provider
+            value={this.sortableContextValue}
+          >
+            {React.createElement(e, Dn.a({
+              ref: t
+            }, Zn(this.props, Lr)))}
+          </Fr.Provider>
         }
       }, {
         key: "helperContainer",
@@ -1305,18 +1307,20 @@ var eo = function (e) {
       }
     }
   })
-  return React.createElement("div", {
-    className: styles.list,
-    ref: o
-  }, e$screens.map(function (e, t) {
-    return React.createElement($r, Object.assign({
-      key: e.id,
-      screen: e,
-      index: t,
-      screenIndex: t,
-      screensSize: e$screens$size
-    }, n))
-  }))
+  return <div
+    className={styles.list}
+    ref={o}
+  >
+    {e$screens.map(function (e, t) {
+      return React.createElement($r, Object.assign({
+        key: e.id,
+        screen: e,
+        index: t,
+        screenIndex: t,
+        screensSize: e$screens$size
+      }, n))
+    })}
+  </div>
 })
 
 export const ScreenList = React.memo(() => {
@@ -1369,7 +1373,7 @@ export const ScreenList = React.memo(() => {
         var e = document.getElementById(R.id)
         if (e) {
           $_553.a(e, 1).then(function (e) {
-            dispatch(Message.Xj(R.id, e))
+            dispatch(Actions.Xj(R.id, e))
           }).catch(function (e) {
             return console.error(e)
           })
@@ -1450,7 +1454,7 @@ export const ScreenList = React.memo(() => {
       var i = formatMessage({
         id: "deleteScreen"
       }) + "“" + $_190.f(o, 10) + "”?"
-      dispatch(Message.wrapOpenConfirmDialog({
+      dispatch(Actions.openConfirmDialogAction({
         onClose: B,
         onConfirm: F,
         title: i,
@@ -1466,7 +1470,7 @@ export const ScreenList = React.memo(() => {
     }
   }
   var P = function (e) {
-    dispatch(Message.ng(e))
+    dispatch(Actions.ng(e))
   }
   var B = function () {
     C.current = undefined
@@ -1475,26 +1479,31 @@ export const ScreenList = React.memo(() => {
     var /* [auto-meaningful-name] */C$current
     var t = null === (C$current = C.current) || undefined === C$current ? undefined : C$current.get("id")
     if (t) {
-      dispatch(Message.ng(t))
+      dispatch(Actions.ng(t))
     }
   }
-  var G = React.createElement(React.Fragment, null, React.createElement("div", {
-    className: styles.closeIconBox,
-    onClick: function () {
+  var G = <>
+    {<div
+className={styles.closeIconBox}
+onClick={function () {
       var /* [auto-meaningful-name] */_n$current3
       if (!(null === (_n$current3 = n.current) || undefined === _n$current3)) {
         _n$current3.hideContent()
       }
-    }
-  }, React.createElement($_13_index.j, {
+    }}
+>
+{React.createElement($_13_index.j, {
     type: "icon-close"
-  })), React.createElement("section", {
-    className: styles.popoverBody,
-    style: {
+  })}
+</div>}
+    {<section
+className={styles.popoverBody}
+style={{
       width: v + 2
-    },
-    "data-html2canvas-ignore": "true"
-  }, React.createElement(eo, {
+    }}
+data-html2canvas-ignore={"true"}
+>
+{React.createElement(eo, {
     screens: screens,
     editDomIndex: s,
     currentScreenIndex: currentScreenIndex,
@@ -1516,7 +1525,7 @@ export const ScreenList = React.memo(() => {
       var /* [auto-meaningful-name] */e$oldIndex = e.oldIndex
       var /* [auto-meaningful-name] */e$newIndex = e.newIndex
       if (e$oldIndex === e$newIndex) {
-        dispatch(Message.vg(e$newIndex))
+        dispatch(Actions.vg(e$newIndex))
         return void $_141_index.a("ScreenItemClick", {
           screenId: screens.getIn([e$newIndex, "id"]),
           screenName: screens.getIn([e$newIndex, "title"])
@@ -1524,9 +1533,9 @@ export const ScreenList = React.memo(() => {
       }
       $_16_index.b(function () {
         var e
-        dispatch(Message.Fi(true))
-        dispatch(Message.yh(e$oldIndex, e$newIndex))
-        dispatch(Message.vg(e$newIndex))
+        dispatch(Actions.Fi(true))
+        dispatch(Actions.yh(e$oldIndex, e$newIndex))
+        dispatch(Actions.vg(e$newIndex))
         if (!(null === (e = $_26_index.g.getToolbox()) || undefined === e)) {
           e.refresh_selection()
         }
@@ -1535,11 +1544,12 @@ export const ScreenList = React.memo(() => {
     helperClass: styles.dragItem,
     helperContainer: document.getElementById("_cocoScreenListDragContainer") || document.body,
     useDragHandle: true
-  }), !screenPanel && React.createElement("div", {
+  })}
+{!screenPanel && React.createElement("div", {
     className: styles.addScreen,
     onClick: function () {
       if (screens.size > 98) {
-        dispatch(Message.wrapShowCommonToastInfo({
+        dispatch(Actions.showCommonToastInfoAction({
           showPrefixIcon: false,
           message: formatMessage({
             id: "screeMaxSize"
@@ -1548,36 +1558,41 @@ export const ScreenList = React.memo(() => {
       }
       // [CoCo Next] 移除屏幕数量上限
       // else {
-      dispatch(Message.Hf())
+      dispatch(Actions.Hf())
       c(screens.size)
       // }
     }
   }, React.createElement($_13_index.j, {
     type: "icon-add2",
     className: styles.addBtn
-  }))))
+  }))}
+</section>}
+  </>
   var W = function (e) {
-    dispatch(Message.vg(e))
+    dispatch(Actions.vg(e))
   }
-  return React.createElement("div", {
-    className: styles.wrapper,
-    style: {
+  return <div
+    className={styles.wrapper}
+    style={{
       left: playing ? 0 : Cv,
       width: v
-    }
-  }, React.createElement("div", {
-    className: N(styles.stageMask, O && styles.visible)
-  }), React.createElement($_13_index.r, {
-    content: G,
-    onOpen() {
+    }}
+  >
+    {<div
+className={N(styles.stageMask, O && styles.visible)}
+/>}
+    {<$_13_index.r
+content={G}
+onOpen={() => {
       w(true)
-    },
-    onHide() {
+    }}
+onHide={() => {
       w(false)
-    },
-    autoClose: false,
-    ref: n
-  }, React.createElement("div", {
+    }}
+autoClose={false}
+ref={n}
+>
+{React.createElement("div", {
     className: N(styles.screenIconBox, !playing && styles.line)
   }, React.createElement($_13_index.j, {
     type: "icon-screen-manage",
@@ -1586,9 +1601,12 @@ export const ScreenList = React.memo(() => {
     className: styles.screenText
   }, formatMessage({
     id: "screenManage"
-  })))), !playing && React.createElement("div", {
-    className: styles.screenIndexBox
-  }, React.createElement("div", {
+  })))}
+</$_13_index.r>}
+    {!playing && <div
+className={styles.screenIndexBox}
+>
+{React.createElement("div", {
     className: N(styles.prev, d <= 0 && styles.hide),
     onClick: function () {
       var /* [auto-meaningful-name] */T$current
@@ -1602,7 +1620,8 @@ export const ScreenList = React.memo(() => {
   }, React.createElement($_13_index.j, {
     type: "icon-pick-up",
     className: styles.prevIcon
-  })), React.createElement("div", {
+  }))}
+{React.createElement("div", {
     className: N(styles.next, d + v - 108 >= 38 * screens.size && styles.hide),
     onClick: function () {
       var /* [auto-meaningful-name] */T$current
@@ -1616,7 +1635,8 @@ export const ScreenList = React.memo(() => {
   }, React.createElement($_13_index.j, {
     type: "icon-pick-up",
     className: styles.nextIcon
-  })), React.createElement("div", {
+  }))}
+{React.createElement("div", {
     className: styles.screenIndexList,
     ref: T
   }, screens.map(function (e, t) {
@@ -1626,7 +1646,9 @@ export const ScreenList = React.memo(() => {
       key: t,
       onClick: W.bind(null, t)
     }, t + 1)
-  }))))
+  }))}
+</div>}
+  </div>
 })
 
 export { Xr }

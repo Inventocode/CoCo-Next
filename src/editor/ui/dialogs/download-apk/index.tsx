@@ -6,42 +6,42 @@
 
 import * as React from "react"
 
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$_1062 from "../../../../../unrestored/shared/1571/2636/1062"
-import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1062"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_events_main_messagesWrapper from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1062 from "../../../../../unrestored/shared/1571/2636/1062"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621 from "../../../../../unrestored/shared/1571/2636/1062"
 var ML = React.memo(() => {
-  var e = $_16_index.d()
-  var blockImageDialogInfo = $_16_index.e(function (e) {
+  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var blockImageDialogInfo = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.blockImageDialogInfo
   })
-  var /* [auto-meaningful-name] */t$visible = blockImageDialogInfo.visible
-  var /* [auto-meaningful-name] */t$imgSrc = blockImageDialogInfo.imgSrc
+  var /* [auto-meaningful-name] */blockImageDialogInfo$visible = blockImageDialogInfo.visible
+  var /* [auto-meaningful-name] */blockImageDialogInfo$imgSrc = blockImageDialogInfo.imgSrc
   return (
-    <$_13_index.f
-      visible={t$visible}
-      className={_$_.blockImageDialog}
+    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
+      visible={blockImageDialogInfo$visible}
+      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageDialog}
       onClose={() => {
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.bi(false, ""))
+        e($$_$$_$$_events_main_messagesWrapper.bi(false, ""))
       }}
     >
-      <div className={_$_.blockImageWrap}>
-        <img src={t$imgSrc} alt="" />
+      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageWrap}>
+        <img src={blockImageDialogInfo$imgSrc} alt="" />
       </div>
       <div
-        className={_$_.btnDownload}
+        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.btnDownload}
         onClick={() => {
           var e = document.createElement("a")
-          e.href = t$imgSrc
+          e.href = blockImageDialogInfo$imgSrc
           e.download = "block.png"
           e.click()
         }}
       >
-        <$_13_index.j type="icon-download-apk" />
+        <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-download-apk" />
       </div>
-    </$_13_index.f>
+    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f>
   )
 })
 export { ML }
