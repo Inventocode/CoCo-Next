@@ -140,28 +140,29 @@ function formatOnChangeEvent(
       }
     }
   }
-  let start = -1
-  for (var i = 0; i < value.length; i++) {
-    if (value[i] !== oldValue[i]) {
-      start = i // value 与 oldValue 差异开始的地方
-      break
-    }
-  }
-  if (start > -1) {
-    let newInputValue = oldValue
-    for (let i = start; i < value.length; i++) {
-      const str = oldValue.slice(0, start) + value.slice(start, i) + oldValue.slice(start)
-      if (maxLength !== undefined && str.length > maxLength) {
-        break
-      }
-      newInputValue = str
-    }
-    oldInputValueRef.current = newInputValue
-    return {
-      status: "success",
-      value: newInputValue
-    }
-  }
+  // [CoCo Next] 删除意义不明且问题诸多的检查
+  // let start = -1
+  // for (var i = 0; i < value.length; i++) {
+  //   if (value[i] !== oldValue[i]) {
+  //     start = i // value 与 oldValue 差异开始的地方
+  //     break
+  //   }
+  // }
+  // if (start > -1) {
+  //   let newInputValue = oldValue
+  //   for (let i = start; i < value.length; i++) {
+  //     const str = oldValue.slice(0, start) + value.slice(start, i) + oldValue.slice(start)
+  //     if (maxLength !== undefined && str.length > maxLength) {
+  //       break
+  //     }
+  //     newInputValue = str
+  //   }
+  //   oldInputValueRef.current = newInputValue
+  //   return {
+  //     status: "success",
+  //     value: newInputValue
+  //   }
+  // }
   return {
     status: "success",
     value: value

@@ -3,11 +3,35 @@
     padding-left: 240px
 }
 
+/* [CoCo Next] 小屏优化，小屏设备缩小菜单宽度 */
+@media screen and not (min-width: 768px) {
+    .work {
+        padding-left: 160px;
+    }
+}
+
+/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
+@media screen and not (min-width: 600px) {
+    .work {
+        padding-left: 60px;
+    }
+}
+
 .work .content,.work .workContent {
-    padding: 0 22px;
+    /* [CoCo Next] 移除内边距，使内容更紧凑 */
+    /* padding: 0 22px; */
     margin: 0 auto;
-    min-width: 960px;
-    max-width: 1260px
+    /* [CoCo Next] 作品内容尺寸自适应 */
+    /* min-width: 960px; */
+    /* max-width: 1260px */
+    /* [CoCo Next] 滚动转移到 workContent 上 */
+    max-height: calc(100vh - 52px);
+    overflow-y: auto;
+}
+
+/* [CoCo Next] 滚动转移到 workContent 上 */
+.work .workContent::-webkit-scrollbar {
+    width: 0
 }
 
 .work .loginBox {
@@ -62,6 +86,7 @@
     background: #5118ce
 }
 
+/* [CoCo Next] 移除我的作品页面的创作盒子
 .work .createBox {
     padding: 30px 30px 20px;
     display: -webkit-box;
@@ -111,26 +136,33 @@
 
 .work .createBox .disabled:hover {
     background: #f8f8f8
-}
+} */
 
 .work .userWorkBox {
-    margin: 30px 0 50px;
-    height: 410px
+    /* [CoCo Next] 调整边距 */
+    margin: 22px 0 50px;
+    /* [CoCo Next] 作品内容尺寸自适应 */
+    /* height: 410px */
+}
+
+/* [CoCo Next] 小屏优化，小屏设备作品类型和搜索框显示在两行上，主体界面上边距减小 */
+@media screen and not (min-width: 512px) {
+    .work .userWorkBox {
+        margin-top: 0;
+    }
 }
 
 .work .userWorkBox .workList {
-    height: calc(100vh - 240px);
+    /* [CoCo Next] 作品内容尺寸自适应 */
+    /* height: calc(100vh - 240px); */
     padding: 8px 8px 16px;
     display: grid;
     gap: 16px;
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    overflow-y: scroll
-}
-
-.work .userWorkBox .workList::-webkit-scrollbar {
-    width: 0
+    /* [CoCo Next] 滚动转移到 workContent 上 */
+    /* overflow-y: scroll */
 }
 
 .work .userWorkBox .noData {
@@ -200,7 +232,8 @@
 }
 
 .work .workCategory {
-    padding: 0 8px 12px;
+    /* [CoCo Next] 调整边距 */
+    padding: 12px 8px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -212,7 +245,26 @@
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
+    /* [CoCo Next] 作品类型不滚出屏幕 */
+    position: sticky;
+    top: 0px;
+    z-index: 10;
+    backdrop-filter: blur(4px);
+    background-color: #FFFFFFC0;
+}
+
+/* [CoCo Next] 作品类型盒子滚动阴影 */
+.work .workCategory.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .11);
+}
+
+/* [CoCo Next] 小屏优化，小屏设备作品类型和搜索框显示在两行上 */
+@media screen and not (min-width: 512px) {
+    .work .workCategory {
+        flex-direction: column;
+        height: 100px;
+    }
 }
 
 .work .workCategory .workType {
@@ -249,7 +301,8 @@
 }
 
 .work .workCategory .searchBox .searchInput {
-    width: 220px;
+    /* [CoCo Next] 小优化，搜索框宽度可压缩 */
+    /* width: 220px; */
     height: 34px;
     border-radius: 8px;
     font-size: 14px;
@@ -394,9 +447,10 @@
 }
 
 .work .recoverHeader {
-    padding: 0 8px;
-    margin-top: 35px;
-    margin-bottom: 28px;
+    /* [CoCo Next] 调整边距 */
+    padding: 8px;
+    /* margin-top: 35px; */
+    /* margin-bottom: 28px; */
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -408,7 +462,15 @@
     -webkit-box-pack: justify;
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
-    justify-content: space-between
+    justify-content: space-between;
+    /* [CoCo Next] 调高回收站头部显示层级 */
+    position: relative;
+    z-index: 10;
+}
+
+/* [CoCo Next] 回收站头部滚动阴影 */
+.work .recoverHeader.shadow {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .11);
 }
 
 .work .recoverHeader .backBox {
@@ -502,7 +564,8 @@
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    max-height: calc(100vh - 160px);
+    /* [CoCo Next] 回收站调高回收站内容区 */
+    max-height: calc(100vh - 102px);
     overflow-y: scroll
 }
 

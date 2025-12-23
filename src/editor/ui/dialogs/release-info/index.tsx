@@ -31,12 +31,7 @@ for (const line of changelog.split("\n")) {
     isBefore = false
   }
 }
-const RELEASE_LINKS = [
-  {
-    label: "CoCo Next Gitee 仓库",
-    url: "https://gitee.com/oldsquaw/CoCo-Next"
-  }
-]
+const RELEASE_LINKS = []
 
 const ReleaseInfo = React.memo(() => {
   const releaseInfoDialogVisible = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {

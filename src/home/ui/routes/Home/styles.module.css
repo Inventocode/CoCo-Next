@@ -5,16 +5,31 @@
     overflow-y: auto
 }
 
+/* [CoCo Next] 小屏优化，小屏设备缩小菜单宽度 */
+@media screen and not (min-width: 768px) {
+    .home {
+        padding-left: 160px;
+    }
+}
+
+/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
+@media screen and not (min-width: 600px) {
+    .home {
+        padding-left: 60px;
+    }
+}
+
 .home::-webkit-scrollbar {
     width: 0
 }
 
 .home .createBox {
     padding: 30px 30px 20px;
-    position: fixed;
-    top: 52px;
-    left: 240px;
-    right: 0;
+    /* [CoCo Next] 创作盒子随页面滚动 */
+    /* position: fixed; */
+    /* top: 52px; */
+    /* left: 240px; */
+    /* right: 0; */
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -62,6 +77,13 @@
     cursor: not-allowed
 }
 
+/* [CoCo Next] 小屏优化，小屏设备不显示不能用的按钮 */
+@media screen and not (min-width: 768px) {
+    .home .createBox .disabled {
+        display: none;
+    }
+}
+
 .home .createBox .disabled .tips {
     font-size: 14px;
     font-weight: 400
@@ -73,9 +95,11 @@
 
 .home .center {
     padding: 0 22px;
-    min-width: 960px;
-    max-width: 1260px;
-    margin: 132px auto 0
+    /* [CoCo Next] 小平适配 */
+    /* min-width: 960px; */
+    /* max-width: 1260px; */
+    /* [CoCo Next] 创作盒子随页面滚动 */
+    /* margin: 132px auto 0 */
 }
 
 .home .center.newUser {

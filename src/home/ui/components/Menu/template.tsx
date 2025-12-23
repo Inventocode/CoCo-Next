@@ -45,7 +45,7 @@ export class MenuView extends React.Component {
       {this.render_navLink("/work", "我的作品", "icon-work")}
       <div styleName="menuItem" onClick={this.handleOpenDiscoverUrl}>
         <div styleName="discover">
-          <div>
+          <div styleName="menuLeft">
             <IconFont type="icon-discover" styleName="menuIcon" />
             发现
           </div>

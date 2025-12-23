@@ -23,19 +23,20 @@ export class HomeView extends React.Component {
     super(props)
     this.templateColor = ["blue", "yellow", "purple"]
     this.state = {
-      isScrolled: false,
       showCourseAnimation: false
     }
-    this.handleHomeScroll = this.handleHomeScroll.bind(this)
+    // [CoCo Next] 去除创作盒子阴影
+    // this.handleHomeScroll = this.handleHomeScroll.bind(this)
     this.handleHideCourseList = this.handleHideCourseList.bind(this)
   }
 
-  handleHomeScroll(e) {
-    var scrollTop = e.currentTarget.scrollTop
-    this.setState({
-      isScrolled: scrollTop > 0
-    })
-  }
+  // [CoCo Next] 去除创作盒子阴影
+  // handleHomeScroll(e) {
+  //   var scrollTop = e.currentTarget.scrollTop
+  //   this.setState({
+  //     isScrolled: scrollTop > 0
+  //   })
+  // }
 
   componentDidMount() {
     this.props.getBannerListAction()
@@ -137,7 +138,8 @@ export class HomeView extends React.Component {
     var userInfo = _props.userInfo
     var userInfoFetchDone = _props.userInfoFetchDone
     var _state = this.state
-    var isScrolled = _state.isScrolled
+    // [CoCo Next] 去除创作盒子阴影
+    // var isScrolled = _state.isScrolled
     var showCourseAnimation = _state.showCourseAnimation
     var newUserTemplateList = templateList.filter(function (item) {
       return item.type === 2
@@ -152,13 +154,13 @@ export class HomeView extends React.Component {
     }
     return <div
       styleName={"home"}
-      onScroll={this.handleHomeScroll}
+      onScroll={/* [CoCo Next] 去除创作盒子阴影 this.handleHomeScroll */undefined}
       ref={function ref(e) {
         return _this2.homePageRef = e
       }}
     >
       {userInfo && !userInfo.isNewUser && <div
-        styleName={classnames("createBox", isScrolled && "shadow")}
+        styleName={/* [CoCo Next] 去除创作盒子阴影 classnames("createBox", isScrolled && "shadow") */"createBox"}
       >
         {<div
           styleName={"createItem"}

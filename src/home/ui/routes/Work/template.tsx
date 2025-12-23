@@ -28,8 +28,13 @@ export class WorkView extends React.Component {
     this.state = {
       workType: EWorkType.CREATE,
       recoverVisible: false,
-      keyword: ""
+      keyword: "",
+      // [CoCo Next] 作品类型盒子阴影
+      isScrolled: false
     }
+
+    // [CoCo Next] 滚动阴影
+    this.handleScroll = this.handleScroll.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleCreateScroll = this.handleCreateScroll.bind(this)
     this.handleCollScroll = this.handleCollScroll.bind(this)
@@ -66,6 +71,19 @@ export class WorkView extends React.Component {
 
   public override componentDidUpdate(prevProps, prevState) {}
 
+  // [CoCo Next] 滚动阴影
+  private handleScroll(e) {
+    const { recoverVisible, workType } = this.state
+    if (recoverVisible) {
+      this.handleDeleteScroll(e)
+    } else if (workType === EWorkType.CREATE) {
+      this.handleCreateScroll(e)
+    } else if (workType === EWorkType.COLL) {
+      this.handleCollScroll(e)
+    }
+    this.setState({ isScrolled: e.currentTarget.scrollTop > 0 })
+  }
+
   private handleLogin() {
     this.props.setSignDialogVisibleAction(true)
   }
@@ -94,7 +112,7 @@ export class WorkView extends React.Component {
       keyword: keyword
     })
     if (this.isCompositionEnd && userInfo && !userInfo.isNewUser) {
-      if (this.state.workType === __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE) {
+      if (this.state.workType === EWorkType.CREATE) {
         this.props.getCreateWorkListAction({
           name: keyword,
           offset: 0
@@ -127,9 +145,8 @@ export class WorkView extends React.Component {
         offset: 0
       })
     }
-    this.setState({
-      recoverVisible: recoverVisible
-    })
+    /* [CoCo Next] 滚动阴影 */
+    this.setState({ recoverVisible, isScrolled: false })
   }
 
   private handleNavToCocoEditor() {
@@ -258,7 +275,7 @@ export class WorkView extends React.Component {
     var _state = this.state
     var workType = _state.workType
     var keyword = _state.keyword
-    return <div styleName="workCategory">
+    return <div styleName={/* [CoCo Next] 作品类型盒子滚动阴影 */classnames("workCategory", this.state.isScrolled && "shadow")}>
       <div styleName="workType">
         <div
           onClick={() => this.handleSwitchWorkType(EWorkType.CREATE)}
@@ -340,7 +357,7 @@ export class WorkView extends React.Component {
         {this.renderWorkFilter()}
         {workType === EWorkType.CREATE && <>
           {createWorkList.length > 0 && (
-            <div styleName="workList" onScroll={this.handleCreateScroll}>
+            <div styleName="workList">
               {createWorkList.map((item) => (
                 <WorkItem
                   key={item.work_id}
@@ -370,7 +387,7 @@ export class WorkView extends React.Component {
         </>}
         {workType === EWorkType.COLL && <>
           {collWorkList.length > 0 && (
-            <div styleName="workList" onScroll={this.handleCollScroll}>
+            <div styleName="workList">
               {collWorkList.map((item) => (
                 <WorkItem
                   key={item.work_id}
@@ -406,7 +423,7 @@ export class WorkView extends React.Component {
     var keyword = _state3.keyword
     var deleteWorkList = this.props.deleteWorkList
     return <div styleName="content">
-      <div styleName="recoverHeader">
+      <div styleName={/* [CoCo Next] 回收站头部滚动阴影 */classnames("recoverHeader", this.state.isScrolled && "shadow")}>
         <div styleName="backBox">
           <div styleName="back" onClick={() => this.handleToggleRecoverVisible(false)}>
             <IconFont type="icon-next" styleName="icon" />
@@ -425,7 +442,7 @@ export class WorkView extends React.Component {
         </div>
       </div>
       {deleteWorkList.length === 0 && <div styleName="recoverNoData">空空如也～</div>}
-      {deleteWorkList.length > 0 && <div styleName="recoverList" onScroll={this.handleDeleteScroll}>
+      {deleteWorkList.length > 0 && <div styleName="recoverList" onScroll={this.handleScroll}>
         {deleteWorkList.map((item) => (
           <WorkItem
             key={item.work_id}
@@ -463,7 +480,8 @@ export class WorkView extends React.Component {
       return <div styleName="work">{this.renderRecover()}</div>
     }
     return <div styleName="work">
-      {userInfo && !userInfo.isNewUser && <div styleName="createBox">
+      {/* [CoCo Next] 移除我的作品页面的创作盒子 */}
+      {/* {userInfo && !userInfo.isNewUser && <div styleName="createBox">
         <div styleName="createItem" onClick={this.handleNavToCocoEditor}>
           <IconFont type="icon-create-app" styleName="createIcon" />
           应用创作
@@ -472,7 +490,7 @@ export class WorkView extends React.Component {
           <IconFont type="icon-create-web" styleName="createIcon" />
           网页搭建<span styleName="tips">（敬请期待）</span>
         </div>
-      </div>}
+      </div>} */}
       {!userInfo && <>
         <div styleName="loginBox">
           <img src={require("../../../../../unrestored/home/unnamed-RY6P")} styleName="image" alt="" />
@@ -481,7 +499,7 @@ export class WorkView extends React.Component {
         </div>
         {this.renderTemplate()}
       </>}
-      {userInfo && <div styleName="workContent">{this.renderUserContent()}</div>}
+      {userInfo && <div styleName="workContent" onScroll={this.handleScroll}>{this.renderUserContent()}</div>}
     </div>
   }
 }

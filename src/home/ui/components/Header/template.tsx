@@ -4,6 +4,7 @@
  * 模块 ID：G1ZB
  */
 
+import packageInfo from "../../../../../package.json"
 import { getCommunityAccountSettingUrl } from "../../../../../unrestored/home/utils/url-hVAD"
 import { sensorsCustomReport } from "../../../../../unrestored/home/sensorsData-yI2H"
 import { loginOut } from "../../../../../unrestored/home/components/api/login-yshM"
@@ -100,11 +101,18 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
   }
 
   private handleDocument() {
-    window.open("https://codemao-guide.yuque.com/bfiekm/sbo5kh", Date.now().toString())
+    // [CoCo Next] 替换帮助文档链接
+    window.open(packageInfo.document, Date.now().toString())
+  }
+
+  // [CoCo Next] 添加关于我们
+  private handleAbout() {
+    window.open(location.origin + "/about/", "_blank")
   }
 
   private handleFeedback() {
-    window.open("https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd", Date.now().toString())
+    // [CoCo Next] 替换问题反馈链接
+    window.open(packageInfo.bugs.url, Date.now().toString())
   }
 
   private renderUserInfo(userInfo) {
@@ -171,6 +179,8 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
                   onClick={this.handleShowCourse}
                 >入门教程</div>
                 <div styleName="dropdownItem" onClick={this.handleDocument}>帮助文档</div>
+                {/* [CoCo Next] 添加关于我们 */}
+                <div styleName="dropdownItem" onClick={this.handleAbout}>关于我们</div>
               </div>
             }
             onVisibleChange={this.handleHelpDropdownVisibleChange}

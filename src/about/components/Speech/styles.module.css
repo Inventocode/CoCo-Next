@@ -7,6 +7,7 @@
 
 .tex {
     margin-top: 55px;
+    margin-right: 81px;
     text-align: right;
     color: #82778c;
     font-size: 28px;
@@ -21,13 +22,6 @@
     font-size: 28px;
     font-weight: 450;
     line-height: 56px;
-}
-
-@media screen and not (min-width: 425px) {
-    .content {
-        font-size: 21px;
-        line-height: 42px;
-    }
 }
 
 .quotesLeftWrapper {

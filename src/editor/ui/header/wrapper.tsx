@@ -844,8 +844,9 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   {oe.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="tutorial">
                       <div className={styles.itemLinkContent}>
+                        {/* [CoCo Next] 替换帮助文档链接 */}
                         <a
-                          href="https://codemao-guide.yuque.com/bfiekm/sbo5kh"
+                          href={packageInfo.document}
                           target="_blank"
                           rel="noopener noreferrer"
                           className={styles.link}

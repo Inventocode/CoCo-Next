@@ -83,7 +83,8 @@
     color: #fff;
     background: #6e4ff4;
     border-radius: 0 8px 0 8px;
-    visibility: hidden
+    /* [CoCo Next] 触屏优化，彻底删除按钮始终显示 */
+    /* visibility: hidden */
 }
 
 .workItem .workName {
@@ -125,7 +126,8 @@
 }
 
 .workItem .workName .moreBtn {
-    display: none;
+    /* [CoCo Next] 触屏优化，菜单按钮始终显示 */
+    /* display: none; */
     width: 22px;
     height: 22px;
     line-height: 18px;
@@ -144,7 +146,8 @@
 }
 
 .workItem .workName .recoverBtn {
-    display: none;
+    /* [CoCo Next] 触屏优化，恢复按钮始终显示 */
+    /* display: none; */
     width: 22px;
     height: 22px;
     line-height: 20px;
@@ -174,17 +177,20 @@
     transform: scale(1.2)
 }
 
+/* [CoCo Next] 触屏优化，菜单按钮始终显示
 .workItem:hover .moreBtn {
     display: block
-}
+} */
 
+/* [CoCo Next] 触屏优化，彻底按钮始终显示
 .workItem:hover .workDelete {
     visibility: visible
-}
+} */
 
+/* [CoCo Next] 触屏优化，恢复按钮始终显示
 .workItem:hover .recoverBtn {
     display: block
-}
+} */
 
 .dropdown {
     width: 120px;

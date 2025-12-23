@@ -264,14 +264,6 @@
     font-size: 24px
 }
 
-/* [CoCo Next] 小屏设备上 Thanks 字体大小 */
-@media screen and not (min-width: 425px) {
-    .TeamBox .teamContent .teamItem .itemMember {
-        margin: 0;
-        font-size: 18px
-    }
-}
-
 /* [CoCo Next] 添加底部 Logo */
 .footerLogoBox {
     display: flex;

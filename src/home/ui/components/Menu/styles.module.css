@@ -8,6 +8,22 @@
     border-right: 1px solid #e8e8e8
 }
 
+/* [CoCo Next] 小屏优化，小屏设备缩小菜单宽度 */
+@media screen and not (min-width: 768px) {
+    .menu {
+        width: 160px;
+        min-width: 160px;
+    }
+}
+
+/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
+@media screen and not (min-width: 600px) {
+    .menu {
+        width: 60px;
+        min-width: 60px;
+    }
+}
+
 .menu .menuItem {
     display: inline-block;
     width: 100%;
@@ -58,4 +74,21 @@
 
 .menu .discover .menuArrow {
     font-size: 16px
+}
+
+/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
+@media screen and not (min-width: 600px) {
+    .menu .menuItem, .menu .discover, .menu .menuLeft {
+        height: 60px;
+        line-height: normal;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .menu .discover .menuArrow {
+        display: none;
+    }
 }

@@ -264,8 +264,8 @@ export function useWidgetListWidth() {
   return useInnerWidth() > 1300 ? 144 : 92
 }
 
-export function useWidgetListSingleColumn() {
-  return useWidgetListWidth() === 92
+export function useWidgetListSingleColumn(widgetListWidth: number) {
+  return widgetListWidth === 92
 }
 
 var PreviewArea = React.memo(() => {
@@ -292,7 +292,7 @@ var PreviewArea = React.memo(() => {
   var g = p[1]
   const innerWidth = useInnerWidth()
   const Cv = useWidgetListWidth()
-  const Tv = useWidgetListSingleColumn()
+  const Tv = useWidgetListSingleColumn(Cv)
   React.useEffect(function () {
     var /* [auto-meaningful-name] */n$current = n.current
     var r = function (e) {

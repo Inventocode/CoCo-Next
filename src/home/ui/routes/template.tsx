@@ -51,7 +51,7 @@ export class ViewRouterComponent extends React.Component<ViewRouterComponentProp
     var _props = this.props
     var playCourseInfo = _props.playCourseInfo
     var courseDialogVisible = _props.courseDialogVisible
-    return <div style={{ minWidth: "990px" }}>
+    return <div style={/* [CoCo Next] 小平适配 { minWidth: "990px" } */{}}>
       <Header />
       <IconFontSvg />
       <div className={playCourseInfo.visible || courseDialogVisible ? "blur" : ""}>

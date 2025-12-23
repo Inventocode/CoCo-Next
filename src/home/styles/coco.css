@@ -1297,9 +1297,10 @@
     outline: none
 }
 
+/* [CoCo Next] 小平适配
 html {
     min-width: 1200px
-}
+} */
 
 html::-webkit-scrollbar {
     width: 0
