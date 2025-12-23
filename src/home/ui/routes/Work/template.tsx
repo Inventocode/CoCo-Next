@@ -94,7 +94,7 @@ export class WorkView extends React.Component {
       keyword: keyword
     })
     if (this.isCompositionEnd && userInfo && !userInfo.isNewUser) {
-      if (this.state.workType === __WEBPACK_IMPORTED_MODULE_3__model_interface__.EWorkType.CREATE) {
+      if (this.state.workType === EWorkType.CREATE) {
         this.props.getCreateWorkListAction({
           name: keyword,
           offset: 0
