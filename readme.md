@@ -117,6 +117,13 @@ $ npm run start
 $ npm run build
 ```
 
+Webpack CLI 环境变量：
+
+| key | 解释 | 默认值 |
+|:-:|:-:|:-:|
+| publicPath | 加载资源文件的地址，详见 [Output \| webpack](https://webpack.js.org/configuration/output/#outputpublicpath) | `/` |
+| noHelper | 为方便调试，默认情况下会注入一些代理脚本以便于网页在非指定不注入这些文件 | / |
+
 提示：你可以使用下面这个命令在本地启动一个服务器来查看生产版本。
 
 ```sh

@@ -3,6 +3,7 @@ import { loadPage } from "./load-page"
 switch (location.pathname) {
     case "/codemao_login":
     case "/codemao_login/":
+    case "/codemao_login/index.html":
         loadPage("https://shequ.codemao.cn/codemao_login")
         break
     case "/get-qq-code.html":
