@@ -1,4 +1,4 @@
-export function loadPage(URL) {
+export function loadPage(URL: string) {
     addEventListener("load", async () => {
         const originalDocumentContent = await (await fetch(URL)).text()
         const originalDocument = new DOMParser().parseFromString(originalDocumentContent, "text/html")

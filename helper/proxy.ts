@@ -80,6 +80,7 @@ function proxyWebSocket() {
 
 function needsProxy(url: URL): boolean {
     if (
+        !url.hostname.endsWith(".codemao.cn") ||
         url.hostname == "static.codemao.cn" ||
         url.hostname == "creation.codemao.cn" ||
         url.hostname == "cdn-community.codemao.cn" ||
@@ -87,7 +88,7 @@ function needsProxy(url: URL): boolean {
     ) {
         return false
     }
-    return url.hostname.endsWith(".codemao.cn")
+    return true
 }
 
 function rewriteURL(url: URL): URL {

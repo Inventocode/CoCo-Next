@@ -114,6 +114,13 @@ $ npm run start
 $ npm run build
 ```
 
+Webpack CLI 环境变量：
+
+| key | 解释 | 默认值 |
+|:-:|:-:|:-:|
+| publicPath | 加载资源文件的地址，详见 [Output \| webpack](https://webpack.js.org/configuration/output/#outputpublicpath) | `/` |
+| noHelper | 为方便调试，默认情况下会注入一些代理脚本以便于网页在非指定不注入这些文件 | / |
+
 提示：你可以使用下面这个命令在本地启动一个服务器来查看生产版本。
 
 ```sh
@@ -180,6 +187,6 @@ $ npm run serve
 
 请安如下步骤进行：
 
-1.把目标代码移动到 `/src` 目录中恰当的位置；
+1.把目标代码移动到 `/src` 目录中恰当的位置，并将其复制一份到 `/src-unrestored` 目录对应的位置；
 2.在相应的解包程序中添加移动规则；
 3.重命名给模块名称、代码中的量的名称等重新设置一个有意义的名称。

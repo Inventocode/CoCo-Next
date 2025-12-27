@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>编程猫社区</title>
+        <style>
+            body {
+                margin: 0;
+            }
+            iframe {
+                border: none;
+                position: fixed;
+                width: 100%;
+                height: 100%;
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+    <script>
+
+        addEventListener("message", ({ origin, data }) => {
+            if (origin != "https://shequ.codemao.cn" && origin != "http://shequ.codemao.cn") {
+                return
+            }
+            if (data != null && typeof data == "object" && "content" in data) {
+                const { content } = data
+                if (
+                    content != null && typeof content == "object" &&
+                    "type" in content && content.type == "codemao-login.onEvent"
+                ) {
+                    const { payload } = content
+                    switch (payload.event) {
+                        case "IFRAME_READY":
+                            break
+                        case "PASSWORD_LOGIN_SUCCESS":
+                        case "SMS_LOGIN_SUCCESS":
+                        case "THIRD_PARTY_LOGIN_SUCCESS":
+                        case "REGISTER_SUCCESS":
+                            close()
+                            break
+                        case "REGISTER_CONFIRM":
+                        // console.log('注册确认');
+                            break
+                        case "BIND_PHONE_SUCCESS":
+                        // console.log(`绑定手机成功: ${payload.value}`);
+                            break
+                        case "CLOSE_ANIMATION_END":
+                            close()
+                            break
+                        case "REPORT":
+                            break
+                        default:
+                            console.info("未知事件:", payload)
+                    }
+                }
+            }
+        })
+
+        const searchParams = new URLSearchParams(location.search)
+        const url = searchParams.get("url") ?? "https://shequ.codemao.cn/codemao_login?onlyLogin=false&language=zh&disableThirdParty=false&ageLimit=false&pageView=login&theme=violet&env=production&pid=7KeVbBdw&productCode=appcraft"
+        const iframeElement = document.createElement("iframe")
+        iframeElement.src = url
+        document.body.appendChild(iframeElement)
+    </script>
+</html>
