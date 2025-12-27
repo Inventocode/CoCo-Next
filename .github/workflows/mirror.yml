@@ -1,0 +1,82 @@
+name: 从 Gitee 镜像主分支
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: 检出 GitHub 仓库
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.PAT }}
+        
+    - name: 设置 Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        
+    - name: 添加 Gitee 远程仓库
+      run: |
+        git remote add gitee https://gitee.com/oldsquaw/CoCo-Next.git
+        
+    - name: 从 Gitee 获取更新
+      run: |
+        git fetch gitee
+        
+    - name: 创建临时分支保存当前状态
+      run: |
+        # 创建临时分支保存当前 GitHub 状态
+        git checkout -b github-backup
+        
+    - name: 切换到主分支并重置到 Gitee
+      run: |
+        git checkout main
+        git reset --hard gitee/main
+        
+    - name: 合并 .github 目录
+      run: |
+        # 从临时分支恢复 .github 目录
+        git checkout github-backup -- .github/
+        echo "已恢复 .github 目录"
+        
+    - name: 覆盖 README 文件
+      run: |
+        cat > readme.md << 'EOF'
+        # CoCo-Next 镜像
+        
+        ## 项目简介
+        
+        这是一个从 Gitee 自动同步的 CoCo Next 镜像仓库，并使用 Cloudflare Pages 将其部署到[https://next.ccwidget.top/editor/](https://next.ccwidget.top/editor/)上。
+        
+        源仓库地址：[Gitee/Oldsquaw/CoCo-Next](https://gitee.com/oldsquaw/CoCo-Next)
+        
+        ## 同步说明
+        
+        本仓库通过 GitHub Actions 每天 00:00 (UTC) 自动从 Gitee 同步代码。
+        
+        EOF
+        echo "已覆盖 README.md 文件"
+        
+    - name: 提交更改
+      run: |
+        # 添加更改并提交
+        git add .
+        git commit -m "[自动镜像] 本次提交为 Github Action 自动操作" || echo "没有更改需要提交"
+        
+    - name: 强制推送到 GitHub
+      run: |
+        # 使用强制推送确保同步
+        git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git main --force
+        git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git --tags --force
+        
+    - name: 清理
+      run: |
+        # 删除临时分支和远程仓库
+        git branch -D github-backup
+        git remote remove gitee
