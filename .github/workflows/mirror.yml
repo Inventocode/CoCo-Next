@@ -1,0 +1,54 @@
+name: 从 Gitee 镜像编辑器和文档的主分支
+
+on:
+  schedule:
+    - cron: '0 0 * * *'
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: 检出 GitHub 仓库
+      uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+        token: ${{ secrets.PAT }}
+
+    - name: 设置 Git
+      run: |
+        git config --global user.name "github-actions[bot]"
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+    - name: 添加 Gitee 远程仓库
+      run: |
+        git remote add gitee https://gitee.com/oldsquaw/CoCo-Next.git
+        git remote add docs-gitee https://gitee.com/oldsquaw/CoCo-Next-Docs.git
+
+    - name: 从 Gitee 获取更新
+      run: |
+        git fetch gitee
+        git fetch docs-gitee
+
+    - name: 切换到编辑器分支并重置到 Gitee
+      run: |
+        git checkout editor
+        git reset --hard gitee/main
+
+    - name: 切换到文档分支并重置到 Gitee
+      run: |
+        git checkout docs
+        git reset --hard docs-gitee/main
+
+    - name: 强制推送到 GitHub
+      run: |
+        # 使用强制推送确保同步
+        git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git --all --force
+        git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git --tags --force
+
+    - name: 清理
+      run: |
+        # 删除远程仓库
+        git remote remove gitee
+        git remote remove docs-gitee

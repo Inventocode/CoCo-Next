@@ -1,0 +1,151 @@
+name: 部署到 GitHub Pages
+
+on:
+  push:
+    branches: [editor, docs]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: 检出编辑器代码
+        uses: actions/checkout@v4
+        with:
+          ref: editor
+          path: editor
+
+      - name: 检出文档源文件
+        uses: actions/checkout@v4
+        with:
+          ref: docs
+          path: docs
+
+      - name: 设置 Node.js 环境
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+          cache-dependency-path: |
+            editor/package-lock.json
+            docs/package-lock.json
+
+      - name: 安装编辑器依赖
+        run: npm install --legacy-peer-deps
+        working-directory: ./editor
+
+      - name: 构建编辑器
+        run: npm run build
+        working-directory: ./editor
+
+      - name: 移动编辑器文件到分发目录
+        run: |
+          mv ./editor/dist/coco.codemao.cn ./dist
+
+      - name: 安装文档依赖
+        run: npm install --legacy-peer-deps
+        working-directory: ./docs
+
+      - name: 构建文档
+        run: npm run build
+        working-directory: ./docs
+
+      - name: 移动文档文件到分发目录
+        run: |
+          mv ./docs/build ./dist/docs
+
+      - name: 创建自定义域名配置文件 CNAME
+        run: |
+          # 在 dist 目录中创建 CNAME 文件并写入指定内容
+          echo "coco.ccwidget.top" > dist/CNAME
+
+      - name: 创建代理函数文件 functions/[[path]].js
+        run: |
+          # 创建 functions 目录
+          mkdir -p "dist/functions/[[path]]"
+          # 创建 [[path]].js 文件并写入内容
+          cat > "dist/functions/[[path]].js" << 'EOF'
+          // functions/[[path]].js
+          export async function onRequest(context) {
+            const { request, env } = context;
+            const url = new URL(request.url);
+
+            // 从查询参数获取目标 URL
+            const targetUrl = url.searchParams.get('url');
+
+            if (targetUrl) {
+              try {
+                // 解码并验证目标 URL
+                const decodedTargetUrl = decodeURIComponent(targetUrl);
+                const parsedTarget = new URL(decodedTargetUrl);
+
+                // 允许的目标域名白名单（可选，为了安全）
+                const allowedDomains = [
+                  'api-creation.codemao.cn',
+                  'api.codemao.cn',
+                  'socketcoll.codemao.cn',
+                  'open-service.codemao.cn',
+                  'shence-data.codemao.cn',
+                  'sentry.codemao.cn',
+                  'socketcv.codemao.cn',
+                  'shequ.codemao.cn'
+                ];
+
+                // 安全检查（可选）
+                if (!allowedDomains.includes(parsedTarget.hostname)) {
+                  return new Response('Domain not allowed', { status: 403 });
+                }
+
+                // 构建新请求
+                const newHeaders = new Headers(request.headers);
+                newHeaders.set('Origin', 'https://coco.codemao.cn');
+                newHeaders.set('Referer', 'https://coco.codemao.cn/');
+                newHeaders.delete('host');
+
+                // 复制原始请求的路径和查询参数到目标 URL
+                parsedTarget.pathname = url.pathname;
+                parsedTarget.search = url.search;
+
+                const newRequest = new Request(parsedTarget, {
+                  method: request.method,
+                  headers: newHeaders,
+                  body: request.body
+                });
+
+                const response = await fetch(newRequest);
+                const newResponse = new Response(response.body, response);
+
+                // 处理 cookie 域名
+                const setCookie = newResponse.headers.get('set-cookie');
+                if (setCookie) {
+                  const modifiedCookie = setCookie.replace(/codemao\.cn/g, url.hostname);
+                  newResponse.headers.set('set-cookie', modifiedCookie);
+                }
+
+                return newResponse;
+
+              } catch (error) {
+                return new Response('Invalid target URL', { status: 400 });
+              }
+            }
+
+            // 如果没有目标 URL 参数，返回静态资源
+            return env.ASSETS.fetch(request);
+          }
+          EOF
+
+      - name: 创建重定向文件 _redirects
+        run: |
+          # 在 dist 目录中创建 _redirects 文件并写入重定向规则
+          cat > dist/_redirects << 'EOF'
+          /editor/player/[0-9]+ /editor/player/index.html 200
+          EOF
+
+      - name: 部署到 GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./dist
+          force_orphan: true
