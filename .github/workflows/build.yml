@@ -33,7 +33,7 @@ jobs:
             docs/package-lock.json
 
       - name: 安装编辑器依赖
-        run: npm ci
+        run: npm ci --legacy-peer-deps
         working-directory: ./editor
 
       - name: 构建编辑器
