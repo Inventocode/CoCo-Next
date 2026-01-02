@@ -18,6 +18,13 @@
     </body>
     <script>
 
+        function closeThisWindow() {
+            window.close()
+            setTimeout(() => {
+                alert("关闭窗口失败，请手动关闭窗口")
+            }, 0)
+        }
+
         addEventListener("message", ({ origin, data }) => {
             if (origin != "https://shequ.codemao.cn" && origin != "http://shequ.codemao.cn") {
                 return
@@ -36,7 +43,8 @@
                         case "SMS_LOGIN_SUCCESS":
                         case "THIRD_PARTY_LOGIN_SUCCESS":
                         case "REGISTER_SUCCESS":
-                            close()
+                            alert("登录成功")
+                            closeThisWindow()
                             break
                         case "REGISTER_CONFIRM":
                         // console.log('注册确认');
@@ -45,7 +53,7 @@
                         // console.log(`绑定手机成功: ${payload.value}`);
                             break
                         case "CLOSE_ANIMATION_END":
-                            close()
+                            closeThisWindow()
                             break
                         case "REPORT":
                             break

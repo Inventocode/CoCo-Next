@@ -9,8 +9,8 @@
 import { GS } from "./index__part-158"
 import { XA } from "./index__part-168"
 import * as /* [auto-meaningful-name] */$_110 from "./110"
-import * as An from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
@@ -61,10 +61,10 @@ var $A = React.memo(React.forwardRef(function (e, t) {
         return "DICT" === e.type
       }), t),
       TableDataWidgets: JA(e.filter(function (e) {
-        return e.type === An.G
+        return e.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G
       }), t),
       LocalStorageWidgets: JA(e.filter(function (e) {
-        return e.type === An.B || e.type === An.y
+        return e.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.B || e.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.y
       }), t),
       variableList: e
     }
@@ -84,11 +84,11 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     return e.project.screens
   })
   var w = function (e) {
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e.id, "selected", true))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e.id, "selected", true))
     p.current[e.id] = Date.now()
   }
   var C = function (e) {
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e.id, "selected", false))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e.id, "selected", false))
     delete p.current[e.id]
   }
   var T = function (e, t) {
@@ -170,7 +170,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
   }
   var j = function () {
     s$variableList.forEach(function (e) {
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e.id, "selected", e.isWatching))
+      r($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e.id, "selected", e.isWatching))
     })
     e$setVisible(false)
   }
@@ -297,7 +297,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     type: "primary",
     onClick: function () {
       s$variableList.forEach(function (e) {
-        r($$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e.id, "isWatching", e.selected))
+        r($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e.id, "isWatching", e.selected))
       })
       e$setVisible(false)
     }

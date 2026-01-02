@@ -15,12 +15,12 @@ export { l as k }
 export { u as j }
 export { F7F7F7 as c }
 export { Tiled as e }
-export { r$o$IMAGE_AND_TITLE_DESC as g }
+export { $$_$$_$$_$$_src_editor_widget_builtIn_types$o$IMAGE_AND_TITLE_DESC as g }
 export { Https__static$bcmcdn$com_crcUploader_2021_12_9b6f23a1ed343087b5f7b2a5b1a447b6$png as b }
 export { Https__static$bcmcdn$com_crcUploader_2021_12_97ff281423822cdac3fec80dfaed9b44$png as a }
 export { Https__static$bcmcdn$com_crcUploader_2021_12_fb398b664f503453c8bef12cd33febc3$png as f }
 export { _ as n }
-import * as r from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 var /* [auto-meaningful-name] */IconWidgetListViewer = "icon-widget-list-viewer"
 var i = 360
 var a = 500
@@ -30,14 +30,14 @@ var l = 428
 var u = 926
 var /* [auto-meaningful-name] */F7F7F7 = "#F7F7F7"
 var /* [auto-meaningful-name] */Tiled = "tiled"
-var /* [auto-meaningful-name] */r$o$IMAGE_AND_TITLE_DESC = r.o.IMAGE_AND_TITLE_DESC
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types$o$IMAGE_AND_TITLE_DESC = $$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_TITLE_DESC
 var /* [auto-meaningful-name] */Https__static$bcmcdn$com_crcUploader_2021_12_9b6f23a1ed343087b5f7b2a5b1a447b6$png = "https://static.bcmcdn.com/crc-uploader/2021/12/9b6f23a1ed343087b5f7b2a5b1a447b6.png"
 var /* [auto-meaningful-name] */Https__static$bcmcdn$com_crcUploader_2021_12_97ff281423822cdac3fec80dfaed9b44$png = "https://static.bcmcdn.com/crc-uploader/2021/12/97ff281423822cdac3fec80dfaed9b44.png"
 var /* [auto-meaningful-name] */Https__static$bcmcdn$com_crcUploader_2021_12_fb398b664f503453c8bef12cd33febc3$png = "https://static.bcmcdn.com/crc-uploader/2021/12/fb398b664f503453c8bef12cd33febc3.png"
 var _ = {
   ONLY_TITLE: {
     titleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.title",
       contentMessageId: "ListViewerWidget.title",
       attributes: {
@@ -49,7 +49,7 @@ var _ = {
   },
   TITLE_AND_SUBTITLE: {
     subTitleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.subTitle",
       contentMessageId: "ListViewerWidget.subTitle",
       attributes: {
@@ -58,7 +58,7 @@ var _ = {
       }
     },
     titleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.title",
       contentMessageId: "ListViewerWidget.title",
       attributes: {
@@ -70,7 +70,7 @@ var _ = {
   },
   IMAGE_TITLE_AND_SUBTITLE: {
     subTitleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.subTitle",
       contentMessageId: "ListViewerWidget.subTitle",
       attributes: {
@@ -79,7 +79,7 @@ var _ = {
       }
     },
     titleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.title",
       contentMessageId: "ListViewerWidget.title",
       attributes: {
@@ -89,7 +89,7 @@ var _ = {
       }
     },
     imageSlot: {
-      widgetType: r.v,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       titleMessageId: "ListViewerWidget.image",
       attributes: {
         fileId: Https__static$bcmcdn$com_crcUploader_2021_12_fb398b664f503453c8bef12cd33febc3$png
@@ -98,7 +98,7 @@ var _ = {
   },
   AVATAR_AND_TITLE_SUBTITLE: {
     subTitleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.subTitle",
       contentMessageId: "ListViewerWidget.subTitle",
       attributes: {
@@ -108,7 +108,7 @@ var _ = {
       }
     },
     titleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.title",
       contentMessageId: "ListViewerWidget.title",
       attributes: {
@@ -118,7 +118,7 @@ var _ = {
       }
     },
     avatarSlot: {
-      widgetType: r.v,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       titleMessageId: "ListViewerWidget.avatar",
       attributes: {
         fileId: Https__static$bcmcdn$com_crcUploader_2021_12_97ff281423822cdac3fec80dfaed9b44$png,
@@ -129,7 +129,7 @@ var _ = {
   },
   IMAGE_AND_TITLE_DESC: {
     descSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.tips",
       contentMessageId: "ListViewerWidget.tips",
       attributes: {
@@ -139,7 +139,7 @@ var _ = {
       }
     },
     titleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.title",
       contentMessageId: "ListViewerWidget.longTitle",
       attributes: {
@@ -149,7 +149,7 @@ var _ = {
       }
     },
     imageSlot: {
-      widgetType: r.v,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       titleMessageId: "ListViewerWidget.image",
       attributes: {
         fileId: Https__static$bcmcdn$com_crcUploader_2021_12_fb398b664f503453c8bef12cd33febc3$png
@@ -158,7 +158,7 @@ var _ = {
   },
   AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC: {
     descSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.desc",
       contentMessageId: "ListViewerWidget.longDesc",
       attributes: {
@@ -168,14 +168,14 @@ var _ = {
       }
     },
     bannerSlot: {
-      widgetType: r.v,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       titleMessageId: "ListViewerWidget.banner",
       attributes: {
         fileId: Https__static$bcmcdn$com_crcUploader_2021_12_9b6f23a1ed343087b5f7b2a5b1a447b6$png
       }
     },
     subTitleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.subTitle",
       contentMessageId: "ListViewerWidget.subTitle",
       attributes: {
@@ -185,7 +185,7 @@ var _ = {
       }
     },
     titleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.title",
       contentMessageId: "ListViewerWidget.title",
       attributes: {
@@ -195,7 +195,7 @@ var _ = {
       }
     },
     avatarSlot: {
-      widgetType: r.v,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       titleMessageId: "ListViewerWidget.avatar",
       attributes: {
         fileId: Https__static$bcmcdn$com_crcUploader_2021_12_97ff281423822cdac3fec80dfaed9b44$png,
@@ -206,7 +206,7 @@ var _ = {
   },
   IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC: {
     descSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.desc",
       contentMessageId: "ListViewerWidget.longDesc",
       attributes: {
@@ -216,7 +216,7 @@ var _ = {
       }
     },
     subTitleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.subTitle",
       contentMessageId: "ListViewerWidget.subTitle",
       attributes: {
@@ -226,7 +226,7 @@ var _ = {
       }
     },
     titleSlot: {
-      widgetType: r.H,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
       titleMessageId: "ListViewerWidget.title",
       contentMessageId: "ListViewerWidget.title",
       attributes: {
@@ -236,7 +236,7 @@ var _ = {
       }
     },
     avatarSlot: {
-      widgetType: r.v,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       titleMessageId: "ListViewerWidget.avatar",
       attributes: {
         fileId: Https__static$bcmcdn$com_crcUploader_2021_12_97ff281423822cdac3fec80dfaed9b44$png,
@@ -245,7 +245,7 @@ var _ = {
       }
     },
     bannerSlot: {
-      widgetType: r.v,
+      widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       titleMessageId: "ListViewerWidget.banner",
       attributes: {
         fileId: Https__static$bcmcdn$com_crcUploader_2021_12_9b6f23a1ed343087b5f7b2a5b1a447b6$png

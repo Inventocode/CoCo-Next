@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../src/shared/widget/custom/shop"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
@@ -117,7 +117,7 @@ var kL = _React.memo(function () {
     }
   }, [L, e])
   var P = function () {
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.gj(false))
+    n($$_$$_$$_$$_src_editor_redux_common_actions.gj(false))
   }
   var B = function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
@@ -181,7 +181,7 @@ var kL = _React.memo(function () {
               return $$_$$_$$_$$_src_shared_widget_custom_shop.b(j)
             case 3:
               if (e.sent) {
-                n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                   message: $_710_index$a$formatMessage({
                     id: "WidgetMall.addSuccess"
                   }),
@@ -203,7 +203,7 @@ var kL = _React.memo(function () {
                     })
                   }
                 })
-                n($$_$$_$$_$$_src_shared_events_messagesWrapper.ef(r.reverse()))
+                n($$_$$_$$_$$_src_editor_redux_common_actions.ef(r.reverse()))
                 P()
               }
               e.next = 10
@@ -211,7 +211,7 @@ var kL = _React.memo(function () {
             case 7:
               e.prev = 7
               e.t0 = e.catch(0)
-              n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "WidgetMall.addFailure"
                 }),

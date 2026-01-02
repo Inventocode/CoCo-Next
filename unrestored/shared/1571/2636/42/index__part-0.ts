@@ -13,10 +13,10 @@ import * as a from "../8"
 import s from "../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
-import * as u from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import "./859"
 import * as h from "../9"
 import * as /* [auto-meaningful-name] */$_676_index from "./676/index"
@@ -35,16 +35,16 @@ var _ = function (e) {
   })
   var b = v === e$widgetId
   var y = React.useCallback(function (e, t, r, o) {
-    _($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, e, t, r, o))
+    _($$_$$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, e, t, r, o))
   }, [_, e$widgetId])
   var /* [auto-meaningful-name] */CocoWidgetWrapper = "coco-widget-wrapper"
-  if (!(e$widgetType !== u.a && e$widgetType !== u.c)) {
+  if (!(e$widgetType !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a && e$widgetType !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.c)) {
     CocoWidgetWrapper = ""
   }
   var O = h.qb(e$widgetId)
-  if ((null === O || undefined === O ? undefined : O.type) && [u.x, u.A].includes(O.type)) {
+  if ((null === O || undefined === O ? undefined : O.type) && [$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(O.type)) {
     CocoWidgetWrapper += " coco-child-widget"
-    if (e$widgetType === u.v) {
+    if (e$widgetType === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
       CocoWidgetWrapper += " coco-child-widget-full"
     }
     if (e$widgetId === v) {

@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$_1214_index from "./1214/index"
 import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_235 from "../235"
-import * as _ from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$_438 from "./438"
@@ -63,8 +63,8 @@ _a = React.memo(function (e) {
   })
   return _React.createElement("div", {
     id: t,
-    "data-role": _.M,
-    "data-widget-type": _.J,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.J,
     "data-min-width": $$_235.l,
     "data-max-width": $$_235.j,
     "data-min-height": $$_235.k,

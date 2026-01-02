@@ -12,7 +12,7 @@ import "../../../50/index"
 import * as /* [auto-meaningful-name] */$$_$$_278 from "../../278"
 import * as /* [auto-meaningful-name] */$$_98 from "../98"
 import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
-import * as /* [auto-meaningful-name] */$$_699_1065 from "../699/1065"
+import * as /* [auto-meaningful-name] */$_1065 from "./1065"
 import * as /* [auto-meaningful-name] */$$_709_index from "../709/index"
 import "../../../103"
 import "../../../106"
@@ -81,7 +81,7 @@ var d = function (e) {
       transform: "translate(".concat(e[0], "px, ").concat(e[1], "px")
     }
   }, [e$index])
-  return React.createElement($$_699_1065.a, {
+  return React.createElement($_1065.a, {
     component: "span",
     className: u,
     variant: e$isInner ? "body2" : "body1",

@@ -16,21 +16,21 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_events_messagesWrapper from "../../../../../shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_redux_common_actions from "../../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../../shared/ui/language"
-import * as O from "../../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_language from "../../../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_288 from "../../../../../../unrestored/shared/1571/2636/288"
-import * as /* [auto-meaningful-name] */$_418 from "../../../../../../unrestored/shared/1571/2636/418"
-import /* [auto-meaningful-name] */_$_ from "../../../../../../unrestored/shared/1571/2636/418"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../../unrestored/shared/1571/2636/288"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
+import /* [auto-meaningful-name] */_$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../../../unrestored/shared/1571/2636/418"
 !function (e) {
   e.SELF = "self"
   e.COLL = "coll"
@@ -48,7 +48,7 @@ function je(e) {
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$type = e.type
   return "loaded" === e$type ? React.createElement(React.Fragment, null) : "emptyList" === e$type ? React.createElement("div", {
-    className: _$_.emptyContainer
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.emptyContainer
   }, React.createElement(we, {
     text: e$title
   })) : React.createElement(React.Fragment, null)
@@ -60,7 +60,7 @@ function Ne(e) {
   var /* [auto-meaningful-name] */e$onDelete = e.onDelete
   var /* [auto-meaningful-name] */e$filterType = e.filterType
   var /* [auto-meaningful-name] */e$status = e.status
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   function c() {
     var e = []
     if (e$filterType === Oe.COLL) {
@@ -73,36 +73,36 @@ function Ne(e) {
     return e
   }
   return React.createElement("div", {
-    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$_.item),
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.item),
     onClick: function () {
       e$onClick(e$project.id, e$project.name, e$project.updateTime)
     },
     key: e$project.id
   }, React.createElement("div", {
-    className: _$_.cover
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.cover
   }, React.createElement("img", {
     src: null === (t = e$project.coverUrl || e$project.previewUrl) || undefined === t ? undefined : t.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/"),
     alt: e$project.name
   })), React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.a, {
-    className: _$_.name,
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.name,
     text: e$project.name
   }), React.createElement("p", {
-    className: _$_.time
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.time
   }, React.createElement(ne, {
     time: e$project.updateTime,
     currentTime: e$project.serverTime
   })), !!c().length && React.createElement("div", {
-    className: _$_.menuContainer,
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.menuContainer,
     onClick: function (e) {
       e.stopPropagation()
     }
   }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a, {
     placement: "rightTop",
     trigger: "click",
-    overlayClassName: _$_.menuPopover,
+    overlayClassName: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.menuPopover,
     zIndex: 100,
     content: React.createElement("div", {
-      className: _$_.menuContent
+      className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.menuContent
     }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
       onClick: function (e) {
         if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
@@ -113,14 +113,14 @@ function Ne(e) {
       return React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
         value: e,
         key: t
-      }, React.createElement("span", null, $_710_index$a$formatMessage({
+      }, React.createElement("span", null, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
         id: "MyProject." + e
       })))
     })))
   }, React.createElement("div", null, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-more"
   })))), React.createElement("div", {
-    className: _$_.badgeWrapper
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.badgeWrapper
   }, (e$project.isCollWork || e$filterType === Oe.COLL) && "loaded" === e$status && React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-collaborator"
   }), !!e$project.publishedTime && React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
@@ -131,33 +131,33 @@ var Re = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
   var r = _React.useState([])
-  var o = $_10_index.a(r, 2)
+  var o = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
   var s = _React.useState("loaded")
-  var c = $_10_index.a(s, 2)
+  var c = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = $_16_index.e(function (e) {
+  var d = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.language
   })
-  var p = $_16_index.e(function (e) {
+  var p = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var m = $_16_index.e(function (e) {
+  var m = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.id
   })
   var g = _React.useState(Oe.SELF)
-  var v = $_10_index.a(g, 2)
+  var v = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = $_16_index.d()
+  var w = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var C = _React.useRef(0)
   var A = _React.useRef(1)
   var j = _React.useRef(false)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var k = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t, r, o) {
+    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, r, o) {
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent$data
       return RegeneratorRuntime.wrap(function (e) {
@@ -173,14 +173,14 @@ var Re = _React.memo(function (e) {
                 break
               }
               e.next = 8
-              return $_288.b()
+              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()
             case 8:
               if (!(!e.sent.includes(Number(t)) && !e$sent$data.is_author && e$sent$data.is_coll_work && e$sent$data.content && e$sent$data.content.unsafeExtensionWidgetList && e$sent$data.content.unsafeExtensionWidgetList.length > 0)) {
                 e.next = 12
                 break
               }
-              w($$_$$_$$_$$_$$_shared_events_messagesWrapper.zh({
-                allowText: $_710_index$a$formatMessage({
+              w($$_$$_$$_$$_redux_common_actions.zh({
+                allowText: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                   id: "know"
                 }),
                 title: "",
@@ -211,7 +211,7 @@ var Re = _React.memo(function (e) {
               e.next = 17
               break
             case 16:
-              w($$_$$_$$_$$_$$_shared_events_messagesWrapper.Uf({
+              w($$_$$_$$_$$_redux_common_actions.Uf({
                 code: e$sent.code
               }))
             case 17:
@@ -228,7 +228,7 @@ var Re = _React.memo(function (e) {
                 failReason: e.t0.message
               })
             case 23:
-              w($$_$$_$$_$$_$$_shared_events_messagesWrapper.Xg())
+              w($$_$$_$$_$$_redux_common_actions.Xg())
             case 24:
             case "end":
               return e.stop()
@@ -241,7 +241,7 @@ var Re = _React.memo(function (e) {
     }
   }()
   var D = _React.useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -311,7 +311,7 @@ var Re = _React.memo(function (e) {
     return L.apply(this, arguments)
   }
   function L() {
-    return (L = O.a(RegeneratorRuntime.mark(function e(t, n) {
+    return (L = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -342,7 +342,7 @@ var Re = _React.memo(function (e) {
     return B.apply(this, arguments)
   }
   function B() {
-    return (B = O.a(RegeneratorRuntime.mark(function e(t) {
+    return (B = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -388,7 +388,7 @@ var Re = _React.memo(function (e) {
     }
   }
   var G = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var r
       return RegeneratorRuntime.wrap(function (e) {
@@ -410,8 +410,8 @@ var Re = _React.memo(function (e) {
               return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.a(t)
             case 8:
               if (n = e.sent) {
-                w($$_$$_$$_$$_$$_shared_events_messagesWrapper.mj({
-                  message: $$_$$_$$_$$_src_shared_ui_language.c(d, "MyProject.deleteProjectSuccess").toString()
+                w($$_$$_$$_$$_redux_common_actions.mj({
+                  message: $$_$$_$$_$$_$$_shared_ui_language.c(d, "MyProject.deleteProjectSuccess").toString()
                 }))
               }
             case 10:
@@ -422,12 +422,12 @@ var Re = _React.memo(function (e) {
                   i.splice(r, 1)
                   F($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(i))
                   if (m === t) {
-                    w($$_$$_$$_$$_$$_shared_events_messagesWrapper.Gf())
+                    w($$_$$_$$_$$_redux_common_actions.Gf())
                   }
                 }
               } else {
-                w($$_$$_$$_$$_$$_shared_events_messagesWrapper.mj({
-                  message: $$_$$_$$_$$_src_shared_ui_language.c(d, "MyProject.deleteProjectError").toString(),
+                w($$_$$_$$_$$_redux_common_actions.mj({
+                  message: $$_$$_$$_$$_$$_shared_ui_language.c(d, "MyProject.deleteProjectError").toString(),
                   duration: 1e3,
                   type: "error"
                 }))
@@ -445,17 +445,17 @@ var Re = _React.memo(function (e) {
   }()
   function W(e, t, n) {
     if (b === Oe.COLL) {
-      w($$_$$_$$_$$_$$_shared_events_messagesWrapper.zh({
+      w($$_$$_$$_$$_redux_common_actions.zh({
         onConfirm: G.bind(null, e),
-        allowText: $_710_index$a$formatMessage({
+        allowText: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.quitCollWorkConfirmText"
         }),
-        title: $_710_index$a$formatMessage({
+        title: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.quitCollWorkTitle"
         }, {
           name: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(t)
         }),
-        content: $_710_index$a$formatMessage({
+        content: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.quitCollWorkDescription"
         }),
         isDangerous: true
@@ -465,7 +465,7 @@ var Re = _React.memo(function (e) {
     }
   }
   var U = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -483,24 +483,24 @@ var Re = _React.memo(function (e) {
     }
   }()
   return React.createElement("div", null, React.createElement("div", {
-    className: _$_.filter
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.filter
   }, Ae.map(function (e) {
     return React.createElement("div", {
       key: e,
       onClick: U.bind(null, e),
-      className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$_.filterItem, b === e && _$_.active)
-    }, $_710_index$a$formatMessage({
+      className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.filterItem, b === e && _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.active)
+    }, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "MyProject.".concat(e)
     }))
   })), React.createElement("div", {
-    className: _$_.container
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.container
   }, React.createElement(je, {
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: Ie[b]
     }),
     type: l
   }), i.length > 0 && React.createElement("div", {
-    className: _$_.main
+    className: _$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.main
   }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.v, {
     offsetY: 300,
     height: 450,

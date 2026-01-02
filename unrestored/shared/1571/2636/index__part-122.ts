@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -48,12 +48,12 @@ var JO = _React.memo(function (e) {
   }, React.createElement("div", {
     className: _$_.btn,
     onClick: function () {
-      if (c.type === An.y) {
+      if (c.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.y) {
         (function () {
           if (!c) {
             return
           }
-          a($$_$$_$$_$$_src_shared_events_messagesWrapper.yj({
+          a($$_$$_$$_$$_src_editor_redux_common_actions.yj({
             title: "微数据库",
             widget: c,
             dbName: c.title,
@@ -65,34 +65,34 @@ var JO = _React.memo(function (e) {
                   e.value = "number" === e.type ? Number(e.value) : e.value
                 }
               })
-              a($$_$$_$$_$$_src_shared_events_messagesWrapper.Fg(e$widgetId, $_25_index.a(e)))
+              a($$_$$_$$_$$_src_editor_redux_common_actions.Fg(e$widgetId, $_25_index.a(e)))
             }
           }))
         })()
       } else {
-        if (c.type === An.l) {
+        if (c.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
           (function () {
-            if (!c || c.type !== An.l) {
+            if (!c || c.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
               return
             }
-            a($$_$$_$$_$$_src_shared_events_messagesWrapper.yj({
+            a($$_$$_$$_$$_src_editor_redux_common_actions.yj({
               title: "云微数据库",
               dbName: c.title,
               widget: c,
               maxKeyLength: 2e3,
               data: i,
               onSave: function (e) {
-                a($$_$$_$$_$$_src_shared_events_messagesWrapper.Cg(e$widgetId, $_25_index.a(e)))
+                a($$_$$_$$_$$_src_editor_redux_common_actions.Cg(e$widgetId, $_25_index.a(e)))
               }
             }))
           })()
         } else {
-          if (c.type === An.B) {
+          if (c.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.B) {
             (function () {
               if (!c) {
                 return
               }
-              a($$_$$_$$_$$_src_shared_events_messagesWrapper.yj({
+              a($$_$$_$$_$$_src_editor_redux_common_actions.yj({
                 title: "微数据库",
                 dbName: c.title,
                 widget: c,
@@ -104,7 +104,7 @@ var JO = _React.memo(function (e) {
                       e.value = "number" === e.type ? Number(e.value) : e.value
                     }
                   })
-                  a($$_$$_$$_$$_src_shared_events_messagesWrapper.Fg(e$widgetId, $_25_index.a(e)))
+                  a($$_$$_$$_$$_src_editor_redux_common_actions.Fg(e$widgetId, $_25_index.a(e)))
                 }
               }))
             })()

@@ -8,7 +8,7 @@
 
 import * as te from "./15"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
@@ -25,22 +25,22 @@ var PS = _React.memo(function () {
   var /* [auto-meaningful-name] */t$temporaryIcons = t.temporaryIcons
   var o = $_16_index.d()
   _React.useEffect(function () {
-    o($$_$$_$$_$$_src_shared_events_messagesWrapper.cf({
+    o($$_$$_$$_$$_src_editor_redux_common_actions.cf({
       name: "debugIcon",
       icon: "icon-data",
       tooltip: "数据面板",
       visible: true,
       onClick: function () {
-        o($$_$$_$$_$$_src_shared_events_messagesWrapper.Vi(K.h.DevTools))
+        o($$_$$_$$_$$_src_editor_redux_common_actions.Vi(K.h.DevTools))
       }
     }))
-    o($$_$$_$$_$$_src_shared_events_messagesWrapper.cf({
+    o($$_$$_$$_$$_src_editor_redux_common_actions.cf({
       name: "resourceIcon",
       icon: "icon-box",
       tooltip: "项目资源",
       visible: true,
       onClick: function () {
-        o($$_$$_$$_$$_src_shared_events_messagesWrapper.Vi(K.h.ResourceLayout))
+        o($$_$$_$$_$$_src_editor_redux_common_actions.Vi(K.h.ResourceLayout))
       }
     }))
   }, [o])

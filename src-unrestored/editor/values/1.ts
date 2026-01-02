@@ -13,7 +13,7 @@ var /* [auto-meaningful-name] */_1$21$7 = "1.21.7"
 var y = []
 var E = 320
 var O = .8
-var /* [auto-meaningful-name] */http__www$w3$org_2000_svg = "http://www.w3.org/2000/svg"
+var /* [auto-meaningful-name] */Http__www$w3$org_2000_svg = "http://www.w3.org/2000/svg"
 var C = 3
 export { _ }
 export { v }
@@ -21,5 +21,5 @@ export { _1$21$7 as b }
 export { y }
 export { E }
 export { O }
-export { http__www$w3$org_2000_svg as w }
+export { Http__www$w3$org_2000_svg as w }
 export { C }

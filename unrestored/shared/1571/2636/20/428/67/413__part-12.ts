@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
 import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_127 from "../../../127"
@@ -41,7 +41,7 @@ var ve = _React.memo(function (e) {
     _e[b] = false !== (null === y || undefined === y ? undefined : y.visible)
   }
   function E(e, t) {
-    return React.createElement(React.Fragment, null, e$attributes$templateType === $$_$$_$$_5.o.ONLY_TITLE && function (e, t) {
+    return React.createElement(React.Fragment, null, e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.ONLY_TITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       return React.createElement("div", {
         onClick: function (t) {
@@ -58,7 +58,7 @@ var ve = _React.memo(function (e) {
         type: "icon-fold-left",
         className: _$$_$$_$$_.icon
       })))
-    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       return React.createElement("div", {
@@ -79,7 +79,7 @@ var ve = _React.memo(function (e) {
         type: "icon-fold-left",
         className: _$$_$$_$$_.icon
       })))
-    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -105,7 +105,7 @@ var ve = _React.memo(function (e) {
         type: "icon-fold-left",
         className: _$$_$$_$$_.icon
       })))
-    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -134,7 +134,7 @@ var ve = _React.memo(function (e) {
         type: "icon-fold-left",
         className: _$$_$$_$$_.icon
       })))
-    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_AND_TITLE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_TITLE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
@@ -161,7 +161,7 @@ var ve = _React.memo(function (e) {
         type: "icon-fold-left",
         className: _$$_$$_$$_.icon
       })))
-    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -193,7 +193,7 @@ var ve = _React.memo(function (e) {
         className: _$$_$$_$$_.desc,
         onClick: O.bind(null, "descSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
-    }(e, t), e$attributes$templateType === $$_$$_$$_5.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$bannerSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
@@ -248,8 +248,8 @@ var ve = _React.memo(function (e) {
   return React.createElement("div", {
     onClick: T.bind(null, ""),
     id: t,
-    "data-role": $$_$$_$$_5.M,
-    "data-widget-type": $$_$$_$$_5.x,
+    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x,
     "data-min-width": $$_$$_$$_127.m,
     "data-max-width": $$_$$_$$_127.k,
     "data-min-height": $$_$$_$$_127.l,

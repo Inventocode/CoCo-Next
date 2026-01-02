@@ -31,7 +31,7 @@ import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as te from "./15"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -130,7 +130,7 @@ var xT = _React.memo(function () {
         d.setAttribute("fill", "#B1A3BF")
         d.setAttribute("transform", "translate(".concat(u.width.baseVal.value - 22, ", 17) translate(-14, -12.727922)"))
         d.addEventListener("mousedown", function () {
-          t($$_$$_$$_$$_src_shared_events_messagesWrapper.ci(l.is_auto_close()))
+          t($$_$$_$$_$$_src_editor_redux_common_actions.ci(l.is_auto_close()))
         })
         o.current = function (e) {
           l.set_auto_close(!e)
@@ -148,7 +148,7 @@ var xT = _React.memo(function () {
       }
       a.addEventListener("click", function () {
         $_16_index.b(function () {
-          t($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false))
+          t($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
         })
       })
       document.addEventListener("mousedown", function (e) {
@@ -169,7 +169,7 @@ var xT = _React.memo(function () {
       })
       c.add_change_listener(function (e) {
         if (!$_17_index.I.AllUIEvents.includes(e.type)) {
-          t($$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          t($$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         }
       })
       var f = function () {
@@ -309,10 +309,10 @@ var xT = _React.memo(function () {
   _React.useEffect(function () {
     function e(e) {
       p(e)
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.ji(e))
+      t($$_$$_$$_$$_src_editor_redux_common_actions.ji(e))
     }
     function n() {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+      t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
     }
     $_26_index.z.eventBus.addEventListener($_207_index.a.FLYOUT_CHANGE, e)
     $_26_index.z.eventBus.addEventListener($_207_index.a.DELETE_BLOCK, n)
@@ -333,7 +333,7 @@ var xT = _React.memo(function () {
           })
           document.body.dispatchEvent(e)
         }, 0)
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.ki("blockly"))
+        t($$_$$_$$_$$_src_editor_redux_common_actions.ki("blockly"))
       }
       v$current.addEventListener("mousedown", n, true)
       return function () {
@@ -350,10 +350,10 @@ var xT = _React.memo(function () {
     className: N(qC.blocklyWorkspace, c && qC.readonly),
     onWheel: function () {
       if (e.getState().block.dropdown.visible) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+        t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
       }
       if (e.getState().block.slider.visible) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.ih())
+        t($$_$$_$$_$$_src_editor_redux_common_actions.ih())
       }
     },
     ref: v

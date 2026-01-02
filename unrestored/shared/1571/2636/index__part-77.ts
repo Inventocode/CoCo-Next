@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_410 from "./410"
@@ -134,7 +134,7 @@ var hg = {
     var r = e || this.get_field_value("WIDGET_ID")
     if (r) {
       var o = Jd.Cb(r)
-      if (o && o.type === An.G) {
+      if (o && o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
         var i = 1
         for (var a in o.attributes.db.header) {
           var s = o.attributes.db.header[a]
@@ -171,10 +171,10 @@ var hg = {
   }
 }
 var mg = {
-  type: An.G,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
   category: {
     iconId: $_410.a,
-    blocks: An.G
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.G
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -225,7 +225,7 @@ var mg = {
         var i = e.getFieldValue(r, "ROW_CHOICE")
         var a = Jd.Cb(o)
         var s = "{"
-        if (a && a.type === An.G) {
+        if (a && a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
           var c = 1
           for (var l in a.attributes.db.header) {
             var u = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
@@ -276,7 +276,7 @@ var mg = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.G)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.G)
         }
       }
       function r(e) {
@@ -361,7 +361,7 @@ var mg = {
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getWidgetListByType(An.G)
+              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.G)
             },
             optOnchange: function (e) {
               var /* [auto-meaningful-name] */this$source_block
@@ -507,7 +507,7 @@ var mg = {
 var gg = {
   icon: $_410.a,
   title: "TableDataWidget.widgetName",
-  type: An.G,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
   previewAreaWidgetTitle: "TableDataWidget.widgetName",
   component: Yh,
   editConfig: lg,

@@ -15,32 +15,32 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_141
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../unrestored/shared/1571/2636/297"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_shared_events_messagesWrapper from "../../shared/events/messages-wrapper"
+import * as /* [auto-meaningful-name] */$$_redux_common_actions from "../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../unrestored/shared/1571/2636/627"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../unrestored/shared/1571/2636/710/index"
-import * as O from "../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_2646_index from "../../../unrestored/shared/1571/2636/2646/index"
-import * as /* [auto-meaningful-name] */$_1529 from "../../../unrestored/shared/1571/2636/1529"
-import * as /* [auto-meaningful-name] */$_392_index from "../../../unrestored/shared/1571/2636/392/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2646_index from "../../../unrestored/shared/1571/2636/2646/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_1529 from "../../../unrestored/shared/1571/2636/1529"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../unrestored/shared/1571/2636/392/index"
 var LM = function () {
-  var e = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var n = $_16_index.e(function (e) {
+  var e = $$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var n = $$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.courseList
   })
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.templateList
   })
   var o = _React.useRef(false)
   $$_$$_$$_unrestored_shared_1571_2636_288.b()
   _React.useEffect(function () {
     function e() {
-      return (e = O.a(RegeneratorRuntime.mark(function e() {
+      return (e = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
         var t
         var /* [auto-meaningful-name] */t$code
         var /* [auto-meaningful-name] */e$sent
@@ -77,7 +77,7 @@ var LM = function () {
     }()
   }, [])
   var i = _React.useCallback(function () {
-    var n = O.a(RegeneratorRuntime.mark(function n(r) {
+    var n = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function n(r) {
       var /* [auto-meaningful-name] */n$sent
       var /* [auto-meaningful-name] */n$sent$data
       return RegeneratorRuntime.wrap(function (n) {
@@ -101,11 +101,11 @@ var LM = function () {
                 n.next = 14
                 break
               }
-              e($$_$$_shared_events_messagesWrapper.zh({
+              e($$_redux_common_actions.zh({
                 onConfirm: function () {
-                  e($$_$$_shared_events_messagesWrapper.Gf())
+                  e($$_redux_common_actions.Gf())
                 },
-                allowText: $_710_index$a$formatMessage({
+                allowText: $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                   id: "know"
                 }),
                 title: "",
@@ -118,7 +118,7 @@ var LM = function () {
               }))
               return n.abrupt("return")
             case 14:
-              e($$_$$_shared_events_messagesWrapper.Gf({
+              e($$_redux_common_actions.Gf({
                 json: n$sent$data.content,
                 lastSavedTime: 1e3 * n$sent$data.updated_at,
                 isCollWork: n$sent$data.is_coll_work,
@@ -130,7 +130,7 @@ var LM = function () {
               n.next = 18
               break
             case 17:
-              e($$_$$_shared_events_messagesWrapper.Uf({
+              e($$_redux_common_actions.Uf({
                 code: n$sent.code
               }))
             case 18:
@@ -150,12 +150,12 @@ var LM = function () {
     return function (e) {
       return n.apply(this, arguments)
     }
-  }(), [e, $_710_index$a$formatMessage])
+  }(), [e, $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage])
   var a = _React.useCallback(function (n, r) {
     (function (e, t) {
       return me.apply(this, arguments)
-    })(n, r).then(O.a(RegeneratorRuntime.mark(function e() {
-      var /* [auto-meaningful-name] */$_37_index$d$getState$common$userInfo
+    })(n, r).then($$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+      var /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -163,10 +163,10 @@ var LM = function () {
               e.next = 2
               return i(n)
             case 2:
-              $_37_index$d$getState$common$userInfo = $$_$$_$$_unrestored_shared_1571_2636_37_index.d.getState().common.userInfo
+              $$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo = $$_$$_$$_unrestored_shared_1571_2636_37_index.d.getState().common.userInfo
               $$_$$_$$_unrestored_shared_1571_2636_141_index.a("EnterCollaboration", {
-                collaborationId: (null === $_37_index$d$getState$common$userInfo || undefined === $_37_index$d$getState$common$userInfo ? undefined : $_37_index$d$getState$common$userInfo.id) || "",
-                collaborationName: (null === $_37_index$d$getState$common$userInfo || undefined === $_37_index$d$getState$common$userInfo ? undefined : $_37_index$d$getState$common$userInfo.nickname) || ""
+                collaborationId: (null === $$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo || undefined === $$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo ? undefined : $$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo.id) || "",
+                collaborationName: (null === $$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo || undefined === $$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo ? undefined : $$_$$_$$_unrestored_shared_1571_2636_37_index$d$getState$common$userInfo.nickname) || ""
               })
             case 4:
             case "end":
@@ -178,56 +178,56 @@ var LM = function () {
       var /* [auto-meaningful-name] */n$response
       switch (console.error("加入协作失败,", n), null === (n$response = n.response) || undefined === n$response ? undefined : n$response.data.code) {
         case 80000001:
-          e($$_$$_shared_events_messagesWrapper.Ch(function () {
+          e($$_redux_common_actions.Ch(function () {
             window.location.reload()
           }))
           break
         case 10000008:
-          e($$_$$_shared_events_messagesWrapper.zh({
+          e($$_redux_common_actions.zh({
             onConfirm: function () {
-              e($$_$$_shared_events_messagesWrapper.Gf())
+              e($$_redux_common_actions.Gf())
             },
-            allowText: $_710_index$a$formatMessage({
+            allowText: $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
               id: "confirm"
             }),
-            title: $_710_index$a$formatMessage({
+            title: $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
               id: "OT.canNotFindProjectTitle"
             }),
-            content: $_710_index$a$formatMessage({
+            content: $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
               id: "OT.inviteLinkOverdueDescription"
             }),
             cancelBtnVisible: false
           }))
           break
         default:
-          e($$_$$_shared_events_messagesWrapper.zh({
+          e($$_redux_common_actions.zh({
             onConfirm: function () {
-              e($$_$$_shared_events_messagesWrapper.Gf())
+              e($$_redux_common_actions.Gf())
             },
-            allowText: $_710_index$a$formatMessage({
+            allowText: $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
               id: "confirm"
             }),
-            title: $_710_index$a$formatMessage({
+            title: $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
               id: "OT.canNotFindProjectTitle"
             }),
-            content: $_710_index$a$formatMessage({
+            content: $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
               id: "OT.canNotFindProjectDescription"
             }),
             cancelBtnVisible: false
           }))
       }
     })
-  }, [e, $_710_index$a$formatMessage, i])
+  }, [e, $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage, i])
   var s = _React.useCallback(function () {
-    e($$_$$_shared_events_messagesWrapper.Gf("localhost" === window.location.hostname ? undefined : {
-      json: $_1529
+    e($$_redux_common_actions.Gf("localhost" === window.location.hostname ? undefined : {
+      json: $$_$$_$$_unrestored_shared_1571_2636_1529
     }))
   }, [e])
   var c = _React.useCallback(function (t) {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
-        e($$_$$_shared_events_messagesWrapper.Gf({
+        e($$_redux_common_actions.Gf({
           json: t
         }))
       })
@@ -241,13 +241,13 @@ var LM = function () {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
-        e($$_$$_shared_events_messagesWrapper.Ff(t))
+        e($$_redux_common_actions.Ff(t))
       })
       o.current = false
     })
   }, [e])
   var u = _React.useCallback(function () {
-    var t = O.a(RegeneratorRuntime.mark(function t(n) {
+    var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(n) {
       var /* [auto-meaningful-name] */t$sent
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
@@ -261,7 +261,7 @@ var LM = function () {
               t$sent = t.sent
               o.current = false
               if (t$sent) {
-                e($$_$$_shared_events_messagesWrapper.Gf({
+                e($$_redux_common_actions.Gf({
                   json: t$sent.content,
                   editPermission: $$_$$_$$_unrestored_shared_1571_2636_18.c.Preview
                 }))
@@ -288,7 +288,7 @@ var LM = function () {
     }
   }(), [e, s])
   var d = _React.useCallback(function () {
-    var t = O.a(RegeneratorRuntime.mark(function t(r) {
+    var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(r) {
       var i
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
@@ -300,7 +300,7 @@ var LM = function () {
                 o.current = true
                 fetch(i.bcmUrl).then(function (t) {
                   t.json().then(function (t) {
-                    e($$_$$_shared_events_messagesWrapper.Gf({
+                    e($$_redux_common_actions.Gf({
                       json: t,
                       jsonFrom: $$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE,
                       sourceTag: $$_$$_$$_unrestored_shared_1571_2636_18.g.COURSE,
@@ -318,12 +318,12 @@ var LM = function () {
                       position: "relative",
                       right: 5
                     }
-                  }, React.createElement($_2646_index.a, {
+                  }, React.createElement($$_$$_$$_unrestored_shared_1571_2636_2646_index.a, {
                     size: "esm",
                     type: "transparent-fb",
                     width: 26,
                     height: 14,
-                    onClick: O.a(RegeneratorRuntime.mark(function t() {
+                    onClick: $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t() {
                       return RegeneratorRuntime.wrap(function (t) {
                         for (;;) {
                           switch (t.prev = t.next) {
@@ -334,7 +334,7 @@ var LM = function () {
                                   y: 30
                                 }
                               })
-                              e($$_$$_shared_events_messagesWrapper.fi(true))
+                              e($$_redux_common_actions.fi(true))
                             case 2:
                             case "end":
                               return t.stop()
@@ -353,9 +353,9 @@ var LM = function () {
                   confirmPercent: .9,
                   onMinimizeBtnClick: function () {
                     $$_$$_$$_unrestored_shared_1571_2636_627.a.hide()
-                    e($$_$$_shared_events_messagesWrapper.Qh($_392_index.a, {
-                      name: $_392_index.a,
-                      content: React.createElement($_392_index.b, null)
+                    e($$_redux_common_actions.Qh($$_$$_$$_unrestored_shared_1571_2636_392_index.a, {
+                      name: $$_$$_$$_unrestored_shared_1571_2636_392_index.a,
+                      content: React.createElement($$_$$_$$_unrestored_shared_1571_2636_392_index.b, null)
                     }))
                   },
                   onClose: function () {
@@ -380,7 +380,7 @@ var LM = function () {
     }
   }(), [n, e])
   var p = _React.useCallback(function () {
-    var t = O.a(RegeneratorRuntime.mark(function t(n) {
+    var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(n) {
       var i
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
@@ -392,7 +392,7 @@ var LM = function () {
                 o.current = true
                 fetch(i.bcmUrl).then(function (t) {
                   t.json().then(function (t) {
-                    e($$_$$_shared_events_messagesWrapper.Gf({
+                    e($$_redux_common_actions.Gf({
                       json: t,
                       jsonFrom: $$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_TEMPLATE,
                       sourceTag: $$_$$_$$_unrestored_shared_1571_2636_18.g.TEMPLATE,

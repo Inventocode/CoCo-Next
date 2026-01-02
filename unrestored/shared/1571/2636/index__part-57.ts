@@ -7,10 +7,10 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_127 from "./127"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as k from "./11"
 import N from "./8"
@@ -54,12 +54,12 @@ var Xf = _React.memo(function (e) {
         if ((null === (n = Et.Bb(i.id)) || undefined === n ? undefined : n.parentId) && i.id === m) {
           e.stopPropagation()
         } else if ((null === (r = Et.Bb(m || "")) || undefined === r ? undefined : r.parentId) !== (null === (o = Et.Bb(i.id)) || undefined === o ? undefined : o.parentId)) {
-          return i.id !== t && m !== t ? (e.stopPropagation(), void f($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(t))) : undefined
+          return i.id !== t && m !== t ? (e.stopPropagation(), void f($$_$$_$$_$$_src_editor_redux_common_actions.ug(t))) : undefined
         }
       }
     },
-    "data-role": An.M,
-    "data-widget-type": An.x,
+    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
     "data-min-width": $_127.m,
     "data-max-width": $_127.k,
     "data-min-height": $_127.l,
@@ -80,7 +80,7 @@ var Xf = _React.memo(function (e) {
       height: "100%",
       overflow: "hidden"
     }
-  }, e$attributes$templateType === An.o.ONLY_TITLE && function () {
+  }, e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.ONLY_TITLE && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
       className: N(Yf.flexSC, Yf.template1, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
@@ -104,7 +104,7 @@ var Xf = _React.memo(function (e) {
         className: Yf.icon
       })))
     })))
-  }(), e$attributes$templateType === An.o.TITLE_AND_SUBTITLE && function () {
+  }(), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.TITLE_AND_SUBTITLE && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
@@ -133,7 +133,7 @@ var Xf = _React.memo(function (e) {
         className: Yf.icon
       })))
     })))
-  }(), e$attributes$templateType === An.o.IMAGE_TITLE_AND_SUBTITLE && function () {
+  }(), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_TITLE_AND_SUBTITLE && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -174,7 +174,7 @@ var Xf = _React.memo(function (e) {
         className: Yf.icon
       })))
     })))
-  }(), e$attributes$templateType === An.o.AVATAR_AND_TITLE_SUBTITLE && function () {
+  }(), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_AND_TITLE_SUBTITLE && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -221,7 +221,7 @@ var Xf = _React.memo(function (e) {
         className: Yf.icon
       })))
     })))
-  }(), e$attributes$templateType === An.o.IMAGE_AND_TITLE_DESC && function () {
+  }(), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_TITLE_DESC && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
@@ -268,7 +268,7 @@ var Xf = _React.memo(function (e) {
         className: Yf.icon
       })))
     })))
-  }(), e$attributes$templateType === An.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function () {
+  }(), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -319,7 +319,7 @@ var Xf = _React.memo(function (e) {
     }), React.createElement("div", {
       className: Yf.descSlot2
     }), " ")))
-  }(), e$attributes$templateType === An.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function () {
+  }(), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$bannerSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot

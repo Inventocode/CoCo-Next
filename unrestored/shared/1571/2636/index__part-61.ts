@@ -10,15 +10,15 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_105 from "./105"
 import * as /* [auto-meaningful-name] */$_244 from "./244"
 var lh = {
-  type: An.f,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
   category: {
     iconId: "icon-widget-canvas",
-    blocks: An.f
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.f
   },
   categoryClass: {
     text: "",
@@ -29,42 +29,42 @@ var lh = {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"canvas_on_canvas_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.cb({
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         title: "背景",
         lineId: "background"
       }), "<block type=\"canvas_set_background_image\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID\">\n        <shadow type=\"image_file_list_dropdown\">\n          <field name=\"IMAGE_FILE_ID\">").concat(rp.c, "</field>\n        </shadow>\n      </value>\n    </block>"), Jd.sb({
         property: "backgroundColor",
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         widgetId: e,
         isSetProperty: true
       }), Jd.cb({
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         title: "笔迹",
         lineId: "brush"
       }), "<block type=\"canvas_clear_all_brush\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.cb({
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         title: "通用",
         lineId: "common"
       }), Jd.sb({
         property: "__opacity",
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"canvas_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat($_244.h, ",").concat($_244.f, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"canvas_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.cb({
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         title: "返回值",
         lineId: "getter"
       }), Jd.sb({
         property: "backgroundColor",
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         widgetId: e
       }), "<block type=\"canvas_get_background_image\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         widgetId: e
       }), "<block type=\"canvas_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), "<block type=\"canvas_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"canvas_to_data_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"canvas_check_if_pressed\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__visible",
-        widgetType: An.f,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
         widgetId: e
       })
     ]

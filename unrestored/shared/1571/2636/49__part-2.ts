@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as Q from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as ye from "./9"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as Oe from "./43"
@@ -25,7 +25,7 @@ function Se(e) {
       var n = e$path[3]
       var r = e$path[1]
       if (n && r) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Mf(n, r, false))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Mf(n, r, false))
       }
     })(e)
   }
@@ -43,7 +43,7 @@ function Ae(e) {
       var n = e.path[1]
       var r = null === (t = $_24_index.a.getDoc()) || undefined === t ? undefined : t.screens[n].widgetIds
       if (r) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Bj(n, r))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Bj(n, r))
       }
     })(e)
   }
@@ -55,7 +55,7 @@ function Ae(e) {
       var n = e.op
       var r = _e$path[1]
       var o = n.i
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.jf(r, o, true))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.jf(r, o, true))
     })(e)
   }
   if (function (e) {
@@ -68,7 +68,7 @@ function Ae(e) {
       var o = _e$path2[3]
       var i = _e$path2[5]
       var a = ne(o)
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(o, i, r, Oe.g(a), Oe.g(a), false))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Lg(o, i, r, Oe.g(a), Oe.g(a), false))
     })(e)
   }
   if (function (e) {
@@ -82,12 +82,12 @@ function Ae(e) {
       var i = _e$path3[4]
       var a = ne(o)
       if ("title" === i) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Ng(o, r, false, true, false))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Ng(o, r, false, true, false))
       } else {
         if ("widgetIds" === i) {
-          Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Mg(a, o, r, true, true, false))
+          Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Mg(a, o, r, true, true, false))
         } else {
-          Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(o, i, r, Oe.g(a), Oe.g(a), false))
+          Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Lg(o, i, r, Oe.g(a), Oe.g(a), false))
         }
       }
     })(e)
@@ -126,7 +126,7 @@ function Ie() {
             }
             c$cdnUrl = c.cdnUrl
             u = c.id
-            $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+            $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
               title: $$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_src_shared_ui_language.b, "ExtensionWidget.loading").toString(),
               cancelBtnVisible: false,
               confirmBtnVisible: false
@@ -138,8 +138,8 @@ function Ie() {
               e$sent$title = e$sent.title
               e$sent$type = e$sent.type
               h = $$_$$_$$_$$_src_shared_widget_custom_type.f(e$sent$type, true)
-              $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.Vg())
-              $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+              $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Vg())
+              $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
                 title: $$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_src_shared_ui_language.b, "ExtensionWidget.finishRegistration", {
                   title: e$sent$title,
                   type: h
@@ -151,7 +151,7 @@ function Ie() {
             m = t$path[1]
             ye.Ub(i.id, i)
             if (g = null === (n = $_24_index.a.getDoc()) || undefined === n ? undefined : n.screens[m].widgetIds) {
-              Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Bj(m, g))
+              Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Bj(m, g))
             }
           case 15:
           case "end":
@@ -171,7 +171,7 @@ function Re(e, t) {
   if (1 === (e$path = e.path).length && "title" === e$path[0]) {
     (function (e) {
       var /* [auto-meaningful-name] */e$op$i = e.op.i
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Bf(e$op$i, false))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Bf(e$op$i, false))
     })(e)
   }
 }

@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
 import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
 import /* [auto-meaningful-name] */Color from "color"
@@ -40,9 +40,9 @@ var V = _React.memo(function (e) {
   return React.createElement("div", {
     id: t,
     className: $$_$$_$$_8(_$$_$$_$$_.imageWidget, $$_$$_$$_90.b),
-    "data-role": $$_$$_$$_5.M,
-    "data-type": $$_$$_$$_5.v,
-    "data-scale-mode": $$_$$_$$_5.p.PROPORTIONAL,
+    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+    "data-scale-mode": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.p.PROPORTIONAL,
     ref: b,
     onClick: function () {
       $$_$$_index.emitWidgetEvent(e$type, "onImagePress", t)

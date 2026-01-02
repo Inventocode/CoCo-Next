@@ -7,7 +7,7 @@
 "use strict"
 
 import { IA } from "./index__part-166"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -42,7 +42,7 @@ var RA = function (e) {
     onDragLeave: u,
     onDrop: function (t) {
       if (!e.isReadOnly) {
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.rf(t.dataTransfer.files))
+        c($$_$$_$$_$$_src_editor_redux_common_actions.rf(t.dataTransfer.files))
         a(false)
       }
     }
@@ -80,7 +80,7 @@ var kA = function (e) {
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       if (e) {
-        r($$_$$_$$_$$_src_shared_events_messagesWrapper.rf(e))
+        r($$_$$_$$_$$_src_editor_redux_common_actions.rf(e))
       }
     },
     multiple: true,

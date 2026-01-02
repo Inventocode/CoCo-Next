@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
@@ -159,7 +159,7 @@ var mA = function (e) {
   var n = $_16_index.d()
   var r = $_25_index.a(Et.jb()).reverse()
   function o(e) {
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.Jf(e.id))
+    n($$_$$_$$_$$_src_editor_redux_common_actions.Jf(e.id))
     var t
     var r = Et.K(e.id)
     var o = []
@@ -181,7 +181,7 @@ var mA = function (e) {
             }
           })
         })
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(t$value.id, "actionList", i))
+        n($$_$$_$$_$$_src_editor_redux_common_actions.Lg(t$value.id, "actionList", i))
       }
       for (i.s(); !(t = i.n()).done;) {
         a()
@@ -199,7 +199,7 @@ var mA = function (e) {
           var r = $_10_index.a(e.value, 2)
           var i = r[0]
           var a = r[1]
-          n($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(i, "selectedStyleId", a))
+          n($$_$$_$$_$$_src_editor_redux_common_actions.Lg(i, "selectedStyleId", a))
         }
       } catch (s) {
         t.e(s)
@@ -244,7 +244,7 @@ var mA = function (e) {
         }
       }
       if (d) {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           isDangerous: true,
           onConfirm: h,
           allowText: $_710_index$a$formatMessage({
@@ -263,7 +263,7 @@ var mA = function (e) {
       if (o === e || Et.Jb(o + r)) {
         i.target.value = e
         if (o !== e) {
-          n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+          n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
             message: $_710_index$a$formatMessage({
               id: "renameFileNameRepeatTips"
             }),
@@ -271,7 +271,7 @@ var mA = function (e) {
           }))
         }
       } else {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.zf(o + r, e + r))
+        n($$_$$_$$_$$_src_editor_redux_common_actions.zf(o + r, e + r))
       }
     } else {
       i.target.value = e
@@ -291,7 +291,7 @@ var mA = function (e) {
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       if (e) {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, undefined, true))
+        n($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, undefined, true))
       }
     },
     multiple: true,

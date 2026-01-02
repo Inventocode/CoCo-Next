@@ -14,10 +14,10 @@ import * as /* [auto-meaningful-name] */$_174 from "./174"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -71,7 +71,7 @@ var aj = _React.memo(function () {
   var V = U[1]
   _React.useEffect(function () {
     if (e$visible) {
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.ki("grid"))
+      a($$_$$_$$_$$_src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)
       T(Lodash.cloneDeep(e$grid.header))
       R(Lodash.cloneDeep(e$grid.data))
@@ -107,10 +107,10 @@ var aj = _React.memo(function () {
     }
   }
   var q = function () {
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.oi(""))
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.ri("", ""))
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.ni("", ""))
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.mi(false))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.oi(""))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.ri("", ""))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.ni("", ""))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.mi(false))
   }
   var X = function () {
     q()
@@ -121,7 +121,7 @@ var aj = _React.memo(function () {
         isCreateNewGrid: e$isCreateNewGrid
       })
     }
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.wh())
+    a($$_$$_$$_$$_src_editor_redux_common_actions.wh())
   }
   var Q = function () {
     if (!(null === m || undefined === m)) {
@@ -143,13 +143,13 @@ var aj = _React.memo(function () {
           c.push(u)
         }
       }
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$grid.id, "db", {
+      a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$grid.id, "db", {
         header: e$header,
         data: e$data
       }, false, false, true))
     }
     if (null === c || undefined === c ? undefined : c.length) {
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.rg(e$grid.id, c))
+      a($$_$$_$$_$$_src_editor_redux_common_actions.rg(e$grid.id, c))
       c.forEach(function (e) {
         $_26_index.q($_26_index.c.TABLE_DATA_COLUMN, e)
       })
@@ -172,7 +172,7 @@ var aj = _React.memo(function () {
             type: Tn.b.PLAYER_DATA_WATCH,
             data: {
               screenId: $_48_index.a().getState().currentScreenId,
-              tab: An.G,
+              tab: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
               id: e$grid.id,
               value: e
             }
@@ -183,7 +183,7 @@ var aj = _React.memo(function () {
           type: Tn.b.PLAYER_DATA_WATCH,
           data: {
             screenId: $_48_index.a().getState().currentScreenId,
-            tab: An.G,
+            tab: $$_$$_$$_$$_src_editor_widget_builtIn_types.G,
             id: e$grid.id,
             value: D.a({
               id: e$grid.id,
@@ -202,7 +202,7 @@ var aj = _React.memo(function () {
         header: e$header
       })
     }
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.wh())
+    a($$_$$_$$_$$_src_editor_redux_common_actions.wh())
   }
   var Z = React.createElement("div", {
     className: _$_.footer

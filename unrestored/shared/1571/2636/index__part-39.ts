@@ -12,16 +12,16 @@ import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
 import * as kn from "./75"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_314 from "./314"
 import * as Sp from "./83"
 var Ap = {
-  type: An.d,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
   category: {
     iconId: $_314.d,
-    blocks: An.d
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.d
   },
   categoryClass: {
     text: "",
@@ -33,20 +33,20 @@ var Ap = {
     return [
       "<block type=\"button_on_press\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), rp.d, "<block type=\"button_set_content\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat($_17_index.Blink.Msg.BUTTON_DEFAULT_TEXT, "</field>\n          </shadow>\n        </value>\n      </block>"), "<block type=\"button_set_mode\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"MODE\">").concat(Sp.b.CONTAINED_TEXT, "</field>\n      </block>"), "<block type=\"button_set_color\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"COLOR\">\n          <shadow type=\"button_field_color\"></shadow>\n        </value>\n      </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.d,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"button_set_size_type\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"SIZE_TYPE\">").concat(Sp.c.MEDIUM, "</field>\n      </block>"), "<block type=\"button_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints='").concat(-kn.a, ",").concat(kn.a, ",1'>100</field>\n          </shadow>\n        </value>\n    </block>"), rp.d, "<block type=\"button_set_visible\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"button_set_disabled\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), rp.d, "<block type=\"button_get_content\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"button_get_color\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.d,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
         widgetId: e
       }), "<block type=\"button_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.d,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.d,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
         widgetId: e
       })
     ]

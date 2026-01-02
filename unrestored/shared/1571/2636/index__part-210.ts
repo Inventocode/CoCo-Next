@@ -12,9 +12,9 @@ import { _C } from "./index__part-139"
 import { eP, nP } from "./index__part-209"
 import /* [auto-meaningful-name] */$_160 from "./160"
 import * as /* [auto-meaningful-name] */$_147 from "./147"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -99,7 +99,7 @@ var aP = _React.memo(function () {
     return e.common.isProjectFinishedOpen
   })
   var me = function () {
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.jj(false))
+    n($$_$$_$$_$$_src_editor_redux_common_actions.jj(false))
   }
   var ge = Et.Y().map(function (e) {
     return e.attributes.cloudDbId
@@ -199,7 +199,7 @@ var aP = _React.memo(function () {
               case 0:
                 try {
                   if (fe && he) {
-                    n($$_$$_$$_$$_src_shared_events_messagesWrapper.Cf(true))
+                    n($$_$$_$$_$$_src_editor_redux_common_actions.Cf(true))
                   }
                 } catch (t) {
                   console.error(t)
@@ -230,7 +230,7 @@ var aP = _React.memo(function () {
   }
   var be = function (e) {
     $_147.e(e, "dev").then(function (t) {
-      n($$_$$_$$_$$_src_shared_events_messagesWrapper.hg("", An.h, {
+      n($$_$$_$$_$$_src_editor_redux_common_actions.hg("", $$_$$_$$_$$_src_editor_widget_builtIn_types.h, {
         x: 0,
         y: 0
       }, {
@@ -244,7 +244,7 @@ var aP = _React.memo(function () {
   }
   var ye = function (e, t) {
     if (ge.includes(e)) {
-      n($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+      n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
         title: $_710_index$a$formatMessage({
           id: "cloudDBManager.deleteTitle"
         }),
@@ -281,7 +281,7 @@ var aP = _React.memo(function () {
         }))()
       }
       if (t.length > 0) {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: function () {
             r()
           },
@@ -303,12 +303,12 @@ var aP = _React.memo(function () {
       ue(performance.now())
     }
     var r = function () {
-      n($$_$$_$$_$$_src_shared_events_messagesWrapper.ij(A || "", true, e, !i, t))
+      n($$_$$_$$_$$_src_editor_redux_common_actions.ij(A || "", true, e, !i, t))
     }
     if (i) {
       r()
     } else {
-      n($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+      n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
         onConfirm: function () {
           r()
         },

@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_234 from "./234"
 import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_551_index from "./551/index"
@@ -26,10 +26,10 @@ var pm = function (e) {
   }))
 }
 var fm = {
-  type: An.n,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.n,
   category: {
     iconId: $_234.h,
-    blocks: An.n
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.n
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -85,7 +85,7 @@ var fm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.n)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.n)
         }
       }
       e.insertBlockProfile("date_picker_on_select_done", {
@@ -203,7 +203,7 @@ var fm = {
 var hm = {
   icon: $_234.h,
   title: "DatePickerWidget.widgetName",
-  type: An.n,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.n,
   previewAreaWidgetTitle: "DatePickerWidget.widgetName",
   component: pm,
   editConfig: um,

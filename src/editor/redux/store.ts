@@ -221,6 +221,7 @@ function Rl() {
     }
   }, Nl)
 }
+
 if (!window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__) {
   window.compose
 }
@@ -234,8 +235,8 @@ export function getStore() {
 
 sagaMiddleware.run(Rl)
 
-export function dispatch(e) {
-  return store.dispatch(e)
+export function dispatch(action) {
+  return store.dispatch(action)
 }
 
 export function getLanguage(): Language.Language {

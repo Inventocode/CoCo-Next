@@ -7,7 +7,7 @@
 "use strict"
 
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
@@ -144,7 +144,7 @@ var wL = function () {
           return "normal"
       }
     }(e)) ? yL : "preview" === n ? OL : EL
-    t($$_$$_$$_$$_src_shared_events_messagesWrapper.cj(r))
+    t($$_$$_$$_$$_src_editor_redux_common_actions.cj(r))
   }, [e, t])
   return React.createElement(React.Fragment, null)
 }

@@ -8,7 +8,7 @@
 
 import { Fv } from "./index__part-89"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -52,8 +52,8 @@ var Uv = _React.memo(function (e) {
     onClick: function () {
       var e
       var n
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(t))
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false))
+      a($$_$$_$$_$$_src_editor_redux_common_actions.ug(t))
+      a($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
       if (c === t && l) {
         $_26_index.g.setSelectedItem()
         if (!(null === (e = $_26_index.g.getToolbox()) || undefined === e)) {
@@ -179,10 +179,10 @@ var Yv = _React.memo(function () {
   return React.createElement("div", {
     className: _$_.wrapper,
     onMouseEnter: function () {
-      return e($$_$$_$$_$$_src_shared_events_messagesWrapper.ui(true))
+      return e($$_$$_$$_$$_src_editor_redux_common_actions.ui(true))
     },
     onMouseLeave: function () {
-      return e($$_$$_$$_$$_src_shared_events_messagesWrapper.ui(false))
+      return e($$_$$_$$_$$_src_editor_redux_common_actions.ui(false))
     }
   }, React.createElement("div", {
     className: _$_.basicBlock

@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 })
 var r = require("./1396/448")
 var i = require("./359")
-var o = require("./2375/501")
+var o = require("./1396/501")
 exports.postConstruct = function () {
   return function (e, t, n) {
     var a = new o.Metadata(i.POST_CONSTRUCT, t)

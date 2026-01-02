@@ -11,15 +11,15 @@ import * as r from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
-import * as s from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as c from "./75"
 import * as l from "./4"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 var d = {
-  type: s.D,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.D,
   category: {
     iconId: "icon-screen",
-    blocks: s.D
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.D
   },
   categoryClass: {
     text: "",

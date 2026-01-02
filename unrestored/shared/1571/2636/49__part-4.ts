@@ -8,7 +8,7 @@
 
 import * as Oe from "./43"
 import * as ye from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as Q from "./7"
@@ -84,7 +84,7 @@ function qe(e) {
       var /* [auto-meaningful-name] */e$path = e.path
       var r = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t ? undefined : t.imageFileList[e$path[1]]
       if (r) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Jf(r.id, false))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Jf(r.id, false))
       }
     })(e)
   }
@@ -98,9 +98,9 @@ function Xe(e) {
       var r = t.i
       var o = _e$path[1]
       ye.Tb(r, o)
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Zj())
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Uj())
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Qj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Zj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
     })(e)
   }
   if (3 === (e$path = e.path).length && "imageFileList" === e$path[0]) {
@@ -114,14 +114,14 @@ function Xe(e) {
       var s = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t ? undefined : t.imageFileList[o]
       if (s) {
         if ("id" === i) {
-          Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.zf(a, s.id, false))
+          Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.zf(a, s.id, false))
         }
         if ("cdnUrl" === i) {
           ye.bc(s.id, a)
         }
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Zj())
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Uj())
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Qj())
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Zj())
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
       }
     })(e)
   }

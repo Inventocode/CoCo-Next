@@ -9,7 +9,7 @@ var i = require("./2524/index")
 var o = require("./2530/index")
 var a = require("../2533/1180")
 var s = require("./1446")
-var c = require("../2479/1447")
+var c = require("./1447")
 var u = require("../2533/1001")
 module.exports = function (e, t) {
   return a(e) && s(t) ? c(u(e), t) : function (n) {

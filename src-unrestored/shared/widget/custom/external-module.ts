@@ -134,14 +134,14 @@ Object.defineProperty(i, "stopStepperUpdates", {
   }
 })
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import /* [auto-meaningful-name] */Lodash1 from "lodash"
+import /* [auto-meaningful-name] */_Lodash from "lodash"
 import * as /* [auto-meaningful-name] */Qrcode from "qrcode"
-import /* [auto-meaningful-name] */Qrcode1 from "qrcode"
+import /* [auto-meaningful-name] */_Qrcode from "qrcode"
 import * as /* [auto-meaningful-name] */Vikadata_vika from "@vikadata/vika"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
+import /* [auto-meaningful-name] */_Color from "color"
 import * as /* [auto-meaningful-name] */Html2canvas from "html2canvas"
-import /* [auto-meaningful-name] */Html2canvas1 from "html2canvas"
+import /* [auto-meaningful-name] */_Html2canvas from "html2canvas"
 import * as /* [auto-meaningful-name] */AntdMobile from "antd-mobile"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_34_347_393 from "../../../../unrestored/shared/1571/2636/34/347/393"
 var _ = window.cordova && window.cordova.plugin && window.cordova.plugin.http || {}
@@ -374,9 +374,9 @@ function ne(e) {
     case "http":
       return r
     case "lodash":
-      return Lodash1
+      return _Lodash
     case "qrcode":
-      return Qrcode1
+      return _Qrcode
     case "pedometer":
       return $$_$$_$$_$$_unrestored_shared_1571_2636_34_347_393
     case "websocket":
@@ -394,9 +394,9 @@ function ne(e) {
     case "antd-mobile":
       return AntdMobile
     case "color":
-      return Color1
+      return _Color
     case "html2canvas":
-      return Html2canvas1
+      return _Html2canvas
     default:
       return {}
   }

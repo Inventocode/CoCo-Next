@@ -23,7 +23,7 @@ import { xh } from "../../../../../unrestored/shared/1571/2636/index__part-66"
 import { zh, Xh } from "../../../../../unrestored/shared/1571/2636/index__part-68"
 import { nm, im, cm } from "../../../../../unrestored/shared/1571/2636/index__part-70"
 import { hm } from "../../../../../unrestored/shared/1571/2636/index__part-72"
-import { ym, wm, Sm } from "../../../../../src/editor/widget/built-in/http-client-and-timer"
+import { ym, wm, Sm } from "../../../widget/built-in/http-client-and-timer"
 import { Pm, zm, qm, eg } from "../../../../../unrestored/shared/1571/2636/index__part-75"
 import { cg } from "../../../../../unrestored/shared/1571/2636/index__part-76"
 import { gg } from "../../../../../unrestored/shared/1571/2636/index__part-77"
@@ -42,31 +42,31 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_686 from "../../../../../unrestored/shared/1571/2636/686"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index from "../../../../../unrestored/shared/1571/2636/685/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index from "../../../../../unrestored/shared/1571/2636/684/index"
-import * as /* [auto-meaningful-name] */$_683 from "../../../../../unrestored/shared/1571/2636/683"
-import /* [auto-meaningful-name] */$_196 from "../../../../../unrestored/shared/1571/2636/196"
-import * as Yr from "../../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */$_238 from "../../../../../unrestored/shared/1571/2636/238"
-import * as An from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
-import * as Et from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$_1213 from "../../../../../unrestored/shared/1571/2636/1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/events/main/messages-wrapper"
-import * as k from "../../../../../unrestored/shared/1571/2636/11"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_683 from "../../../../../unrestored/shared/1571/2636/683"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196 from "../../../../../unrestored/shared/1571/2636/196"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
+import * as /* [auto-meaningful-name] */$$_$$_$$_widget_builtIn_types from "../../../widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../../src/shared/widget/custom/shop"
-import * as /* [auto-meaningful-name] */$_542 from "../../../../../unrestored/shared/1571/2636/542"
-var iv = [require("./543").a, $_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_shop from "../../../../shared/widget/custom/shop"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
+var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
 var av = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$title = e.title
@@ -74,29 +74,29 @@ var av = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$isMallExtensionWidget = e.isMallExtensionWidget
   var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
   var /* [auto-meaningful-name] */e$widgetServerId = e.widgetServerId
-  var s = $_238.d()
-  var c = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
+  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var u = _React.useState(false)
-  var d = $_10_index.a(u, 2)
+  var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = _React.useState(false)
-  var v = $_10_index.a(g, 2)
+  var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
   var w = _React.useState(false)
-  var C = $_10_index.a(w, 2)
+  var C = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(w, 2)
   var A = C[0]
   var j = C[1]
   var R = _React.useState(true)
-  var x = $_10_index.a(R, 2)
+  var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
-  var L = $_16_index.e(function (e) {
+  var L = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.globalWidgetIds
   })
-  var P = $_16_index.e(function (e) {
+  var P = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.language
   })
   _React.useEffect(function () {
@@ -122,14 +122,14 @@ var av = _React.memo(function (e) {
     }
   }, [e$type, L])
   var B = true
-  if (!(e$type !== An.a && e$type !== An.c || !s)) {
+  if (!(e$type !== $$_$$_$$_widget_builtIn_types.a && e$type !== $$_$$_$$_widget_builtIn_types.c || !s)) {
     B = s.widgetIds.some(function (e) {
       var t
-      return (null === (t = Et.Bb(e)) || undefined === t ? undefined : t.type) === An.f
+      return (null === (t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)) || undefined === t ? undefined : t.type) === $$_$$_$$_widget_builtIn_types.f
     })
   }
   var F = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -139,19 +139,19 @@ var av = _React.memo(function (e) {
                 break
               }
               e.next = 3
-              return $$_$$_$$_$$_src_shared_widget_custom_shop.g([e$widgetServerId])
+              return $$_$$_$$_$$_shared_widget_custom_shop.g([e$widgetServerId])
             case 3:
               if (e.sent) {
-                c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
-                  message: $_710_index$a$formatMessage({
+                c($$_$$_$$_redux_common_actions.mj({
+                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                     id: "WidgetMall.removeSuccess"
                   }),
                   type: "success"
                 }))
-                c($$_$$_$$_$$_src_shared_events_messagesWrapper.Kh([e$type]))
+                c($$_$$_$$_redux_common_actions.Kh([e$type]))
               } else {
-                c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
-                  message: $_710_index$a$formatMessage({
+                c($$_$$_$$_redux_common_actions.mj({
+                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                     id: "WidgetMall.removeFailure"
                   })
                 }))
@@ -171,7 +171,7 @@ var av = _React.memo(function (e) {
       return e.apply(this, arguments)
     }
   }()
-  return React.createElement($_1213.a, {
+  return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a, {
     placement: "rightTop",
     trigger: "hover",
     onVisibleChange: function (e) {
@@ -183,21 +183,21 @@ var av = _React.memo(function (e) {
     visible: p || b,
     content: function () {
       return p ? React.createElement("div", {
-        className: $_196.menuWrapper,
+        className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.menuWrapper,
         onMouseDown: F
-      }, $_710_index$a$formatMessage({
+      }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
         id: "Widget.removeWidget"
       })) : b && A ? React.createElement("div", {
-        className: $_196.imgWrapper
+        className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.imgWrapper
       }, React.createElement("div", {
-        className: $_196.widgetImgBig,
+        className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetImgBig,
         style: {
           backgroundImage: "url(\"".concat(e$icon, "\")")
         }
       })) : undefined
     }
   }, React.createElement("div", {
-    className: N($_196.widgetItem, k.a({}, $_196.disabled, !B || !D)),
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.disabled, !B || !D)),
     draggable: true,
     onMouseEnter: function () {
       if (e$isMallExtensionWidget && !e$isInvisibleWidget) {
@@ -230,27 +230,27 @@ var av = _React.memo(function (e) {
       if (!B || !D) {
         var t = ""
         if (D) {
-          t = $_710_index$a$formatMessage({
+          t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "StageToast.addCanvasWidgetTips"
           })
         } else {
           var n
-          var o = Et.Db(e$type)
+          var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e$type)
           if (!o) {
             return
           }
-          var i = null === (n = $$_$$_$$_$$_src_shared_ui_language.c(P, o.title)) || undefined === n ? undefined : n.toString()
-          t = $_710_index$a$formatMessage({
+          var i = null === (n = $$_$$_$$_$$_shared_ui_language.c(P, o.title)) || undefined === n ? undefined : n.toString()
+          t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "StageToast.addLimitedWidgetTips"
           }, {
             widgetTitle: i
           })
         }
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.xj(t))
+        c($$_$$_$$_redux_common_actions.xj(t))
         return void e.preventDefault()
       }
-      if (!(e$type !== An.a && e$type !== An.c)) {
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.Yh(true))
+      if (!(e$type !== $$_$$_$$_widget_builtIn_types.a && e$type !== $$_$$_$$_widget_builtIn_types.c)) {
+        c($$_$$_$$_redux_common_actions.Yh(true))
       }
       var /* [auto-meaningful-name] */e$target = e.target
       var s = null === e$target || undefined === e$target ? undefined : e$target.getClientRects()[0]
@@ -261,47 +261,47 @@ var av = _React.memo(function (e) {
         e.dataTransfer.setData("widget/dragging-offset-y", d + "")
         e.dataTransfer.dropEffect = "copy"
         e.dataTransfer.setData("widget/type", e$target.dataset.widgetType)
-        e.dataTransfer.setData("widget/action", An.r.CREATE)
+        e.dataTransfer.setData("widget/action", $$_$$_$$_widget_builtIn_types.r.CREATE)
       }
     },
     onDragEnd: function () {
-      if (!(e$type !== An.a && e$type !== An.c)) {
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.Yh(false))
+      if (!(e$type !== $$_$$_$$_widget_builtIn_types.a && e$type !== $$_$$_$$_widget_builtIn_types.c)) {
+        c($$_$$_$$_redux_common_actions.Yh(false))
       }
     },
     "data-widget-type": e$type
-  }, te.X(e$icon) ? e$isInvisibleWidget ? React.createElement("img", {
-    className: $_196.icon,
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.X(e$icon) ? e$isInvisibleWidget ? React.createElement("img", {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.icon,
     src: e$icon,
     alt: e$title,
     draggable: false
   }) : React.createElement("div", {
-    className: $_196.widgetImgSmall,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetImgSmall,
     style: {
       backgroundImage: "url(\"".concat(e$icon, "\")")
     }
   }) : React.createElement("span", {
-    className: $_196.icon
-  }, React.createElement($_94_index.a, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.icon
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a, {
     type: e$icon
   })), React.createElement("span", {
-    className: $_196.title
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.title
   }, e$title)))
 })
 var sv = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$configList = e.configList
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$defaultExpanded = e.defaultExpanded
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var i = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     var /* [auto-meaningful-name] */e$common$userInfo
     return null === (e$common$userInfo = e.common.userInfo) || undefined === e$common$userInfo ? undefined : e$common$userInfo.id
   })
   var a = _React.useState(undefined === e$defaultExpanded || e$defaultExpanded)
-  var s = $_10_index.a(a, 2)
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = "newWidgetCategory_".concat(Yr.f, "_").concat(i)
+  var u = "newWidgetCategory_".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f, "_").concat(i)
   var d = m()
   var p = !i || !d[e$title]
   function m() {
@@ -309,31 +309,31 @@ var sv = _React.memo(function (e) {
     return e ? JSON.parse(e) : {}
   }
   return e$configList.length ? React.createElement("div", {
-    className: N($_196.categoryItem, k.a({}, $_196.expanded, c))
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.expanded, c))
   }, React.createElement("div", {
-    className: N($_196.categoryHeader, window.innerWidth <= 1300 && $_196.categoryMinHeader),
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryHeader, window.innerWidth <= 1300 && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryMinHeader),
     onClick: function () {
       l(!c)
-      if (Yr.k.includes(e$title) && i && !d[e$title]) {
+      if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(e$title) && i && !d[e$title]) {
         var e = m()
         e[e$title] = 1
         localStorage.setItem(u, JSON.stringify(e))
       }
     }
   }, React.createElement("div", {
-    className: $_196.categoryTitleBox
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryTitleBox
   }, React.createElement("h3", {
-    className: N($_196.categoryTitle)
-  }, $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryTitle)
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: e$title
-  })), Yr.k.includes(e$title) && p && React.createElement("div", {
-    className: $_196.newTips
+  })), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(e$title) && p && React.createElement("div", {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.newTips
   }, "New")), React.createElement("span", {
-    className: $_196.icon
-  }, React.createElement($_94_index.a, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.icon
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a, {
     type: "icon-fold"
   }))), c && React.createElement("div", {
-    className: $_196.categoryBody
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryBody
   }, e$configList.map(function (e) {
     var /* [auto-meaningful-name] */e$type = e.type
     var /* [auto-meaningful-name] */e$icon = e.icon
@@ -344,59 +344,59 @@ var sv = _React.memo(function (e) {
     return !e.isDiscard && React.createElement(av, {
       key: e$type,
       icon: e$icon,
-      title: e$previewAreaWidgetTitle ? $_710_index$a$formatMessage({
+      title: e$previewAreaWidgetTitle ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
         id: e$previewAreaWidgetTitle
       }) : _e$title,
       type: e$type,
       widgetServerId: e$widgetServerId,
-      isMallExtensionWidget: $$_$$_$$_$$_src_shared_widget_custom_type.e(e$type),
+      isMallExtensionWidget: $$_$$_$$_$$_shared_widget_custom_type.e(e$type),
       isInvisibleWidget: e$isInvisibleWidget
     })
   }))) : null
 })
-$$_$$_$$_$$_src_shared_widget_custom_load.s(r)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(o)
-$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_680)
-$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_682)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(a)
-$$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_681)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(i)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(s)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(c)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(l)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(u)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(d)
-$$_$$_$$_$$_src_shared_widget_custom_load.s(p)
-var cv = $$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_679, tv)
-var lv = $$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_686)
-Et.Nb(Et.j.UI, [Cp, Lp, cv, Kp, tf, uf, _f, Tf, xf, Wf, Jf, ah, lv])
-Et.Nb(Et.j.STAGE, [wh, xh, zh])
-var uv = $$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_678)
-var dv = $$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_688)
-Et.Nb(Et.j.MEDIA, [Xh, nm, uv, dv])
-var pv = $$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_687)
-Et.Nb(Et.j.SENSOR, [im, cm, pv])
-Et.Nb(Et.j.DATE, [hm, ym, wm])
-var fv = $$_$$_$$_$$_src_shared_widget_custom_load.s($_683)
-var hv = $$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index)
-var mv = $$_$$_$$_$$_src_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index)
-Et.Nb(Et.j.NETWORK, [Sm, Pm, fv, hv, mv])
-Et.Nb(Et.j.LOCAL_STORAGE, [qm, eg, gg])
-Et.Nb(Et.j.CLOUD_STORAGE, [Og, zm])
-Et.Nb(Et.j.CLOUD_SPACE, [c_, __])
-Et.Nb(Et.j.DATABASE, [cg])
+$$_$$_$$_$$_shared_widget_custom_load.s(r)
+$$_$$_$$_$$_shared_widget_custom_load.s(o)
+$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_680)
+$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_682)
+$$_$$_$$_$$_shared_widget_custom_load.s(a)
+$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_681)
+$$_$$_$$_$$_shared_widget_custom_load.s(i)
+$$_$$_$$_$$_shared_widget_custom_load.s(s)
+$$_$$_$$_$$_shared_widget_custom_load.s(c)
+$$_$$_$$_$$_shared_widget_custom_load.s(l)
+$$_$$_$$_$$_shared_widget_custom_load.s(u)
+$$_$$_$$_$$_shared_widget_custom_load.s(d)
+$$_$$_$$_$$_shared_widget_custom_load.s(p)
+var cv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_679, tv)
+var lv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_686)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.UI, [Cp, Lp, cv, Kp, tf, uf, _f, Tf, xf, Wf, Jf, ah, lv])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.STAGE, [wh, xh, zh])
+var uv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_678)
+var dv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_688)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.MEDIA, [Xh, nm, uv, dv])
+var pv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_687)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SENSOR, [im, cm, pv])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATE, [hm, ym, wm])
+var fv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_683)
+var hv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index)
+var mv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.NETWORK, [Sm, Pm, fv, hv, mv])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.LOCAL_STORAGE, [qm, eg, gg])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_STORAGE, [Og, zm])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_SPACE, [c_, __])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATABASE, [cg])
 var gv = React.memo(function (e) {
-  var t = Et.Eb(Et.j.UI)
-  var n = Et.Eb(Et.j.STAGE)
-  var r = Et.Eb(Et.j.MEDIA)
-  var o = Et.Eb(Et.j.DATE)
-  var i = Et.Eb(Et.j.SENSOR)
-  var a = Et.Eb(Et.j.LOCAL_STORAGE)
-  var s = Et.Eb(Et.j.CLOUD_SPACE)
-  var c = Et.Eb(Et.j.NETWORK)
-  var l = Et.Eb(Et.j.SOCIAL)
+  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.UI)
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.STAGE)
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.MEDIA)
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATE)
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SENSOR)
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.LOCAL_STORAGE)
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_SPACE)
+  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.NETWORK)
+  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SOCIAL)
   return React.createElement("div", {
-    className: $_196.scrollBasic
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.scrollBasic
   }, React.createElement(sv, {
     configList: t,
     title: "WidgetList.category.ui",

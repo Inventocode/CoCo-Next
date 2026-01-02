@@ -22,7 +22,7 @@ import * as Yr from "./53"
 import * as Tn from "./68"
 import * as Et from "./9"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import /* [auto-meaningful-name] */Color from "color"
 import * as D from "./6"
@@ -225,18 +225,18 @@ var jE = _React.memo(function (e) {
   }, React.createElement(nb, {
     onUploadFileChange: function (e) {
       if (e && s) {
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, function (e) {
-          c($$_$$_$$_$$_src_shared_events_messagesWrapper.Yf(e[0], s))
+        c($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
+          c($$_$$_$$_$$_src_editor_redux_common_actions.Yf(e[0], s))
         }))
       }
     },
     onResourceLibraryClick: function () {
-      c($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (e) {
+      c($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
         var t = e[0]
         if (s) {
-          c($$_$$_$$_$$_src_shared_events_messagesWrapper.Yf(t, s))
+          c($$_$$_$$_$$_src_editor_redux_common_actions.Yf(t, s))
         }
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+        c($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       }))
     },
     fileId: Et.hb(l) ? l : Pp.a,
@@ -295,18 +295,18 @@ var NE = _React.memo(function (e) {
   }, React.createElement(nb, {
     onUploadFileChange: function (e) {
       if (e && l) {
-        u($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, function (e) {
-          u($$_$$_$$_$$_src_shared_events_messagesWrapper.Yf(e[0], l))
+        u($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
+          u($$_$$_$$_$$_src_editor_redux_common_actions.Yf(e[0], l))
         }))
       }
     },
     onResourceLibraryClick: function () {
-      u($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (e) {
+      u($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
         var t = e[0]
         if (l) {
-          u($$_$$_$$_$$_src_shared_events_messagesWrapper.Yf(t, l))
+          u($$_$$_$$_$$_src_editor_redux_common_actions.Yf(t, l))
         }
-        u($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+        u($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       }))
     },
     onDelete: function () {

@@ -8,7 +8,7 @@
 
 import { Vt, zt } from "./49__part-7"
 import * as Oe from "./43"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as /* [auto-meaningful-name] */$_24_304 from "./24/304"
@@ -30,7 +30,7 @@ function Jt(e) {
           var /* [auto-meaningful-name] */e$data$id = e$data.id
           var /* [auto-meaningful-name] */e$data$name = e$data.name
           if (e$data$type === zt.ADD_DOC && e$data$id && e$data$name) {
-            Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.af(e$data$id, e$data$name))
+            Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.af(e$data$id, e$data$name))
           }
           zt.INITIAL
         })(e)

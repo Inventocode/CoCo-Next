@@ -13,8 +13,8 @@ import * as /* [auto-meaningful-name] */$_215 from "./215"
 import * as /* [auto-meaningful-name] */$_145 from "./145"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -209,7 +209,7 @@ var Vh = function (e) {
                 var a = Math.min(o, i)
                 var /* [auto-meaningful-name] */y$current = y.current
                 if (y$current) {
-                  D($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(k, "scaleAndLock", {
+                  D($$_$$_$$_$$_src_editor_redux_common_actions.Lg(k, "scaleAndLock", {
                     x: y$current.x * a,
                     y: y$current.x * a,
                     ratio: y$current.ratio
@@ -265,7 +265,7 @@ var Vh = function (e) {
         if (e$attributes$scaleAndLock) {
           $_145.j(e, k, e$attributes$scaleAndLock.x, e$attributes$scaleAndLock.y)
         } else {
-          D($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(k, "scaleAndLock", {
+          D($$_$$_$$_$$_src_editor_redux_common_actions.Lg(k, "scaleAndLock", {
             x: e$attributes$scale || 1,
             y: e$attributes$scale || 1,
             ratio: 1
@@ -457,9 +457,9 @@ var Vh = function (e) {
     onClick: function () {
       var e = !ne
       $_16_index.b(function () {
-        D($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(e))
+        D($$_$$_$$_$$_src_editor_redux_common_actions.fj(e))
         if (e) {
-          D($$_$$_$$_$$_src_shared_events_messagesWrapper.Fj(false))
+          D($$_$$_$$_$$_src_editor_redux_common_actions.Fj(false))
         }
       })
     }
@@ -474,7 +474,7 @@ var Vh = function (e) {
     trigger: ["hover", "click"]
   }, React.createElement("div", {
     onClick: function () {
-      D($$_$$_$$_$$_src_shared_events_messagesWrapper.Dh(k))
+      D($$_$$_$$_$$_src_editor_redux_common_actions.Dh(k))
     }
   }, React.createElement($_13_index.j, {
     type: "icon-edit-round",
@@ -485,7 +485,7 @@ var zh = {
   icon: "icon-widget-actor",
   title: "defaultActorWidgetTitle",
   previewAreaWidgetTitle: "actor",
-  type: An.a,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
   editConfig: Dh,
   isInvisibleWidget: $_144.g,
   widget: {
@@ -522,10 +522,10 @@ var Kh = [
   }
 ]
 var qh = {
-  type: An.e,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.e,
   category: {
     iconId: "icon-widget-camera",
-    blocks: An.e
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.e
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -668,7 +668,7 @@ var qh = {
 var Xh = {
   icon: "icon-widget-camera",
   title: "CameraWidget.widgetName",
-  type: An.e,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.e,
   previewAreaWidgetTitle: "CameraWidget.widgetName",
   component: Yh,
   editConfig: Kh,

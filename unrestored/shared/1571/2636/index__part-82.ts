@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_314 from "./314"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_146 from "./146"
 import * as Qu from "./60"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_683 from "./683"
 import * as /* [auto-meaningful-name] */$_684_index from "./684/index"
@@ -42,7 +42,7 @@ var T_ = {
   }
 }
 var S_ = {
-  type: An.H,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
   icon: $_146.b,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -269,7 +269,7 @@ var A_ = {
   }
 }
 var I_ = {
-  type: An.d,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
   icon: $_314.d,
   title: "widgetName",
   platforms: ["web", "android", "ios"],

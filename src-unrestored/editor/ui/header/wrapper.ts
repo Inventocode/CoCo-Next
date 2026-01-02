@@ -12,14 +12,14 @@ import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
 import { Ge } from "../../../../unrestored/shared/1571/2636/index__part-9"
 import { Ze } from "../../../../unrestored/shared/1571/2636/index__part-10"
 import { Xe, ot } from "../../../../unrestored/shared/1571/2636/index__part-11"
-import { St } from "./right/coll"
+import { St } from "./right/collaboration"
 import { Dt } from "../../../../unrestored/shared/1571/2636/index__part-15"
 import { Gt } from "../../../../unrestored/shared/1571/2636/index__part-16"
 import { on } from "../../../../unrestored/shared/1571/2636/index__part-18"
 import { dn, pn, fn } from "../../../../unrestored/shared/1571/2636/index__part-20"
 import { gn } from "../../../../unrestored/shared/1571/2636/index__part-21"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_161 from "../../../../unrestored/shared/1571/2636/161"
+import /* [auto-meaningful-name] */$_styles$module$css from "./styles.module.css"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_276 from "../../../../unrestored/shared/1571/2636/276"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_load from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
@@ -27,45 +27,45 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454_index from "../../../../unrestored/shared/1571/2636/454/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_events_messagesWrapper from "../../../shared/events/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_627 from "../../../../unrestored/shared/1571/2636/627"
-import N from "../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_748_index from "../../../../unrestored/shared/1571/2636/748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../unrestored/shared/1571/2636/10/index"
-import * as O from "../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_redux_common_actions from "../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../unrestored/shared/1571/2636/748/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as _n from "../../../../unrestored/shared/1571/2636/47"
-import * as /* [auto-meaningful-name] */$_1053 from "../../../../unrestored/shared/1571/2636/1053"
-import /* [auto-meaningful-name] */_$_ from "../../../../unrestored/shared/1571/2636/1053"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_1053 from "../../../../unrestored/shared/1571/2636/1053"
+import /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../unrestored/shared/1571/2636/1053"
 var yn = function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var t = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.header
   })
-  var n = $_16_index.e(function (e) {
+  var n = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.cloudSpace.cloudDictList
   })
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.cloudSpace.cloudTableList
   })
   var o = _React.useState(false)
-  var i = $_10_index.a(o, 2)
+  var i = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   var c = _React.useState(false)
-  var l = $_10_index.a(c, 2)
+  var l = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
   _React.useEffect(function () {
     s(false)
     d(false)
     var e
-    var t = _n.a(n)
+    var t = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(n)
     try {
       for (t.s(); !(e = t.n()).done;) {
         var /* [auto-meaningful-name] */e$value = e.value
@@ -83,7 +83,7 @@ var yn = function () {
       t.f()
     }
     var i
-    var a = _n.a(r)
+    var a = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(r)
     try {
       for (a.s(); !(i = a.n()).done;) {
         var /* [auto-meaningful-name] */i$value = i.value
@@ -104,14 +104,14 @@ var yn = function () {
   if (t.cloudSpaceManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide) {
     return null
   }
-  var p = $_710_index$a$formatMessage(u ? {
+  var p = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage(u ? {
     id: "cloudSpace.outMaxLimit"
   } : a ? {
     id: "cloudSpace.outWarnLimit"
   } : {
     id: "cloudSpace.cloudSpace"
   })
-  return React.createElement($_748_index.a, {
+  return React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     placement: "bottom",
     trigger: ["hover"],
     title: p,
@@ -123,81 +123,81 @@ var yn = function () {
     onClick: function () {
       window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.A(), "/"), "_blank")
     },
-    className: N(_$_.cloudSpaceManager)
-  }, p === $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_unrestored_shared_1571_2636_.cloudSpaceManager)
+  }, p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "cloudSpace.outMaxLimit"
   }) && React.createElement("div", {
-    className: _$_.cloudIconError
-  }, React.createElement($_13_index.j, {
+    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_.cloudIconError
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-cloud-manager-error"
-  })), p === $_710_index$a$formatMessage({
+  })), p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "cloudSpace.outWarnLimit"
   }) && React.createElement("div", {
-    className: _$_.cloudIconWarn
-  }, React.createElement($_13_index.j, {
+    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_.cloudIconWarn
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-cloud-manager-warn"
-  })), p === $_710_index$a$formatMessage({
+  })), p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "cloudSpace.cloudSpace"
-  }) && React.createElement("div", null, React.createElement($_13_index.j, {
+  }) && React.createElement("div", null, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-cloud-manager-normal"
   }))))
 }
 var En = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
-  var n = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var n = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var o = _React.useState(false)
-  var i = $_10_index.a(o, 2)
+  var i = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   var c = _React.useState(false)
-  var l = $_10_index.a(c, 2)
+  var l = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = _React.useRef()
-  var m = $_16_index.e(function (e) {
+  var m = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var g = $_16_index.e(function (e) {
+  var g = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.saving
   })
-  var v = $_16_index.e(function (e) {
+  var v = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.isAuthor
   })
-  var b = $_16_index.e(function (e) {
+  var b = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.cloudSpace.checkedTimeStamp
   })
-  var y = $_16_index.e(function (e) {
+  var y = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageRulerVisible
   })
-  var w = $_16_index.e(function (e) {
+  var w = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageVisible
   })
-  var C = $_16_index.e(function (e) {
+  var C = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.cloudDBManagerDialogVisible
   })
-  var T = $_16_index.e(function (e) {
+  var T = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project
   })
   var /* [auto-meaningful-name] */T$isPackaging = T.isPackaging
   var /* [auto-meaningful-name] */T$packageQrCodeVisible = T.packageQrCodeVisible
   var /* [auto-meaningful-name] */T$packageDialogVisible = T.packageDialogVisible
-  var D = $_16_index.e(function (e) {
+  var D = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.lastSavedTime
   })
-  var M = $_16_index.e(function (e) {
+  var M = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.isProjectModified
   })
-  var L = $_16_index.e(function (e) {
+  var L = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.playing
   })
-  var P = $_16_index.e(function (e) {
+  var P = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.id
   })
-  var F = $_16_index.e(function (e) {
+  var F = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.title
   })
-  var W = $_16_index.e(function (e) {
+  var W = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.jsonFrom
   })
   var U = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(P)
@@ -205,14 +205,14 @@ var En = React.memo(function (e) {
   var X = _React.useRef(null)
   var J = _React.useRef(null)
   var $ = _React.useState(false)
-  var ee = $_10_index.a($, 2)
+  var ee = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a($, 2)
   var ne = ee[0]
   var re = ee[1]
-  var oe = $_16_index.e(function (e) {
+  var oe = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.header
   })
   var ie = _React.useState(false)
-  var ae = $_10_index.a(ie, 2)
+  var ae = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
   var le = undefined !== $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href).archiveId
@@ -240,16 +240,16 @@ var En = React.memo(function (e) {
     return e
   }, [P, U])
   var ue = _React.useState(false)
-  var de = $_10_index.a(ue, 2)
+  var de = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ue, 2)
   var pe = de[0]
   var fe = de[1]
-  var he = $_16_index.e(function (e) {
+  var he = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.collAutoSave
   })
-  var me = $_16_index.e(function (e) {
+  var me = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.historyArchiveId
   })
-  var ge = $_16_index.e(function (e) {
+  var ge = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
   _React.useEffect(function () {
@@ -262,11 +262,11 @@ var En = React.memo(function (e) {
       }
       document.body.setAttribute("style", n)
     }()
-    n($$_$$_$$_shared_events_messagesWrapper.Tf())
-    n($$_$$_$$_shared_events_messagesWrapper.Xf())
+    n($$_$$_redux_common_actions.Tf())
+    n($$_$$_redux_common_actions.Xf())
   }, [n])
   var _e = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -275,15 +275,15 @@ var En = React.memo(function (e) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_shared_events_messagesWrapper.Ch())
+              n($$_$$_redux_common_actions.Ch())
               return e.abrupt("return")
             case 3:
               if (!T$isPackaging) {
                 e.next = 6
                 break
               }
-              n($$_$$_$$_shared_events_messagesWrapper.mj({
-                message: $_710_index$a$formatMessage({
+              n($$_$$_redux_common_actions.mj({
+                message: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                   id: "package.packagePending"
                 }),
                 type: "success"
@@ -292,7 +292,7 @@ var En = React.memo(function (e) {
             case 6:
               e.prev = 6
               e.next = 9
-              return $$_$$_$$_shared_events_messagesWrapper.Nf(n, $$_$$_$$_shared_events_messagesWrapper.Vf())
+              return $$_$$_redux_common_actions.Nf(n, $$_$$_redux_common_actions.Vf())
             case 9:
               e.next = 14
               break
@@ -312,7 +312,7 @@ var En = React.memo(function (e) {
     }
   }()
   var ve = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -327,7 +327,7 @@ var En = React.memo(function (e) {
               }
               p.current = null
               if (e$sent) {
-                n($$_$$_$$_shared_events_messagesWrapper.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
+                n($$_$$_redux_common_actions.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
                 setTimeout(function () {
                   return Oe()
                 }, 100)
@@ -348,13 +348,13 @@ var En = React.memo(function (e) {
       p.current()
     }
     p.current = null
-    n($$_$$_$$_shared_events_messagesWrapper.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
+    n($$_$$_redux_common_actions.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
     setTimeout(function () {
       return Oe()
     }, 100)
   }
   var Ee = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -363,7 +363,7 @@ var En = React.memo(function (e) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_shared_events_messagesWrapper.Ri({
+              n($$_$$_redux_common_actions.Ri({
                 visible: true,
                 openFrom: "backHome",
                 onSave: ve,
@@ -384,7 +384,7 @@ var En = React.memo(function (e) {
               }
               return e.abrupt("return")
             case 9:
-              n($$_$$_$$_shared_events_messagesWrapper.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
+              n($$_$$_redux_common_actions.dj($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide))
               setTimeout(function () {
                 return Oe()
               }, 100)
@@ -403,7 +403,7 @@ var En = React.memo(function (e) {
     window.location.href = $$_$$_$$_$$_unrestored_shared_1571_2636_15.B()
   }
   var we = _React.useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t, o) {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, o) {
       var i
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -413,7 +413,7 @@ var En = React.memo(function (e) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_shared_events_messagesWrapper.Ch())
+              n($$_$$_redux_common_actions.Ch())
               return e.abrupt("return")
             case 3:
               if (!g) {
@@ -427,22 +427,22 @@ var En = React.memo(function (e) {
               }
               if (!t) {
                 J.current = window.setTimeout(function () {
-                  n($$_$$_$$_shared_events_messagesWrapper.Qi(true))
+                  n($$_$$_redux_common_actions.Qi(true))
                 }, 6e3)
               }
               s(false)
               i = true
               e.prev = 9
               e.next = 12
-              return $$_$$_$$_shared_events_messagesWrapper.Nf(n, $$_$$_$$_shared_events_messagesWrapper.tg({
+              return $$_$$_redux_common_actions.Nf(n, $$_$$_redux_common_actions.tg({
                 isUpdate: U,
                 isAutoSave: t,
                 isNeedReport: o
               }))
             case 12:
               if (!t) {
-                n($$_$$_$$_shared_events_messagesWrapper.mj({
-                  message: $_710_index$a$formatMessage({
+                n($$_$$_redux_common_actions.mj({
+                  message: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                     id: "saveProject.successTips"
                   }),
                   type: "success"
@@ -455,7 +455,7 @@ var En = React.memo(function (e) {
               e.prev = 16
               e.t0 = e.catch(9)
               if (e.t0.message === $$_$$_$$_$$_unrestored_shared_1571_2636_276.a.CLOUD_SPACE_DATA_ERROR) {
-                n($$_$$_$$_shared_events_messagesWrapper.Cf(true))
+                n($$_$$_redux_common_actions.Cf(true))
                 ce(true)
               } else {
                 if (e.t0.message !== $$_$$_$$_$$_unrestored_shared_1571_2636_276.a.USER_CANCEL_SAVE && e.t0.message !== $$_$$_$$_$$_unrestored_shared_1571_2636_276.a.USER_NOT_LOGIN) {
@@ -466,12 +466,12 @@ var En = React.memo(function (e) {
                   }
                 }
               }
-              n($$_$$_$$_shared_events_messagesWrapper.Si(false))
+              n($$_$$_redux_common_actions.Si(false))
               i = false
             case 21:
               if (J.current) {
                 clearTimeout(J.current)
-                n($$_$$_$$_shared_events_messagesWrapper.Qi(false))
+                n($$_$$_redux_common_actions.Qi(false))
               }
               return e.abrupt("return", i)
             case 23:
@@ -484,7 +484,7 @@ var En = React.memo(function (e) {
     return function (t, n) {
       return e.apply(this, arguments)
     }
-  }(), [n, $_710_index$a$formatMessage, U, g, m])
+  }(), [n, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage, U, g, m])
   _React.useEffect(function () {
     function e() {
       if (X.current) {
@@ -512,7 +512,7 @@ var En = React.memo(function (e) {
     if (!g) {
       if (me) {
         if (M) {
-          O.a(RegeneratorRuntime.mark(function e() {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
             return RegeneratorRuntime.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
@@ -520,7 +520,7 @@ var En = React.memo(function (e) {
                     e.next = 2
                     return we(true)
                   case 2:
-                    n($$_$$_$$_shared_events_messagesWrapper.sg(me))
+                    n($$_$$_redux_common_actions.sg(me))
                   case 3:
                   case "end":
                     return e.stop()
@@ -529,7 +529,7 @@ var En = React.memo(function (e) {
             }, e)
           }))()
         } else {
-          n($$_$$_$$_shared_events_messagesWrapper.sg(me))
+          n($$_$$_redux_common_actions.sg(me))
         }
       }
     }
@@ -537,33 +537,33 @@ var En = React.memo(function (e) {
   _React.useEffect(function () {
     if (he && M) {
       we(true).then(function () {
-        n($$_$$_$$_shared_events_messagesWrapper.di(false))
+        n($$_$$_redux_common_actions.di(false))
       }).catch(function (e) {
         console.error(e)
-        n($$_$$_$$_shared_events_messagesWrapper.di(false))
+        n($$_$$_redux_common_actions.di(false))
       })
     }
   }, [M, we, he, n])
   var Ce = function (e) {
     switch (e) {
       case "EXPORT_PROJECT_AS_JSON":
-        n($$_$$_$$_shared_events_messagesWrapper.Of(true))
+        n($$_$$_redux_common_actions.Of(true))
         $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("SaveToComputerClick", {
           workId: P,
           workName: F
         })
         break
       case "CREATE_NEW_PROJECT":
-        n($$_$$_$$_shared_events_messagesWrapper.Ah($$_$$_$$_$$_unrestored_shared_1571_2636_18.f.CREATE_PROJECT))
+        n($$_$$_redux_common_actions.Ah($$_$$_$$_$$_unrestored_shared_1571_2636_18.f.CREATE_PROJECT))
         break
       case "OPEN_MY_PROJECT":
         if (!m) {
-          return void n($$_$$_$$_shared_events_messagesWrapper.Ch())
+          return void n($$_$$_redux_common_actions.Ch())
         }
-        n($$_$$_$$_shared_events_messagesWrapper.Ah($$_$$_$$_$$_unrestored_shared_1571_2636_18.f.MY_PROJECT))
+        n($$_$$_redux_common_actions.Ah($$_$$_$$_$$_unrestored_shared_1571_2636_18.f.MY_PROJECT))
         break
       case "SAVE_AS":
-        n($$_$$_$$_shared_events_messagesWrapper.tg({
+        n($$_$$_redux_common_actions.tg({
           isUpdate: false,
           isAutoSave: false,
           isNeedReport: true,
@@ -571,20 +571,20 @@ var En = React.memo(function (e) {
         }))
         break
       case "HISTORY":
-        return void n($$_$$_$$_shared_events_messagesWrapper.tj(true))
+        return void n($$_$$_redux_common_actions.tj(true))
       case "IMPORT_EXTENSION_WIDGET":
         break
       case "OPEN_LOCAL_FILE":
-        n($$_$$_$$_shared_events_messagesWrapper.Gi(false))
+        n($$_$$_redux_common_actions.Gi(false))
     }
   }
   var Te = _React.useCallback(function (e) {
     if (M) {
-      n($$_$$_$$_shared_events_messagesWrapper.Ri({
+      n($$_$$_redux_common_actions.Ri({
         visible: true,
         openFrom: "",
         onSave: function () {
-          var e = O.a(RegeneratorRuntime.mark(function e() {
+          var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
             return RegeneratorRuntime.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
@@ -615,16 +615,16 @@ var En = React.memo(function (e) {
         }
       }))
       p.current = function () {
-        n($$_$$_$$_shared_events_messagesWrapper.Gf(e))
+        n($$_$$_redux_common_actions.Gf(e))
       }
     } else {
-      n($$_$$_$$_shared_events_messagesWrapper.Gf(e))
+      n($$_$$_redux_common_actions.Gf(e))
     }
     var t = (null === e || undefined === e ? undefined : e.editPermission) === $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly ? $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly : $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
-    n($$_$$_$$_shared_events_messagesWrapper.Ci(t))
+    n($$_$$_redux_common_actions.Ci(t))
   }, [n, we, M])
   var Se = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
@@ -665,10 +665,10 @@ var En = React.memo(function (e) {
     }
   }()
   var Ae = function () {
-    n($$_$$_$$_shared_events_messagesWrapper.Gi(true))
+    n($$_$$_redux_common_actions.Gi(true))
   }
   var Ie = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var o
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent$title
@@ -687,8 +687,8 @@ var En = React.memo(function (e) {
             case 5:
               e$sent = e.sent
               e$sent$title = e$sent.title
-              n($$_$$_$$_shared_events_messagesWrapper.mj({
-                message: $_710_index$a$formatMessage({
+              n($$_$$_redux_common_actions.mj({
+                message: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                   id: "HeaderDropdown.importExtensionSuccess"
                 }, {
                   title: e$sent$title
@@ -716,10 +716,10 @@ var En = React.memo(function (e) {
     if (!L) {
       switch (e) {
         case "STAGE_RULER":
-          n($$_$$_$$_shared_events_messagesWrapper.Wi(!y))
+          n($$_$$_redux_common_actions.Wi(!y))
           break
         case "STAGE_AREA":
-          n($$_$$_$$_shared_events_messagesWrapper.Yi(!w))
+          n($$_$$_redux_common_actions.Yi(!w))
       }
     }
   }
@@ -742,23 +742,23 @@ var En = React.memo(function (e) {
   var Re = oe.file.exportLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v
   var ke = oe.file.saveAs === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v
   var xe = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              if (!$_627.a.isLoaded()) {
+              if (!$$_$$_$$_$$_unrestored_shared_1571_2636_627.a.isLoaded()) {
                 e.next = 3
                 break
               }
-              n($$_$$_$$_shared_events_messagesWrapper.mj({
-                message: $_710_index$a$formatMessage({
+              n($$_$$_redux_common_actions.mj({
+                message: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                   id: "coursePlayingTips"
                 })
               }))
               return e.abrupt("return")
             case 3:
-              n($$_$$_$$_shared_events_messagesWrapper.fi(true))
+              n($$_$$_redux_common_actions.fi(true))
             case 4:
             case "end":
               return e.stop()
@@ -774,14 +774,14 @@ var En = React.memo(function (e) {
     window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.B(), "/about/"), "_blank")
   }
   return React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.wrapper,
+    className: $_styles$module$css.wrapper,
     "data-html2canvas-ignore": "true"
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.left
-  }, !le && oe.logo !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide && React.createElement($_748_index.a, {
+    className: $_styles$module$css.left
+  }, !le && oe.logo !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "back"
     }),
     overlayInnerStyle: {
@@ -789,79 +789,79 @@ var En = React.memo(function (e) {
       top: -7
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.logoBox,
+    className: $_styles$module$css.logoBox,
     id: "logo",
     onClick: Ee
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-dropdown-down",
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.back
+    className: $_styles$module$css.back
   }), React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.logo
+    className: $_styles$module$css.logo
   }))), !le && oe.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.logoCutLine
+    className: $_styles$module$css.logoCutLine
   }), React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.menu
-  }, Object.values(oe.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($_13_index.g, {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.fileDropdown,
-    overlay: React.createElement($_13_index.l, {
+    className: $_styles$module$css.menu
+  }, Object.values(oe.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
+    className: $_styles$module$css.fileDropdown,
+    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
       onClick: Ce
-    }, oe.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+    }, oe.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "CREATE_NEW_PROJECT"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.itemContent
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "HeaderDropdown.newProject"
-    }))), oe.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+    }))), oe.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "OPEN_MY_PROJECT"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.itemContent
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "HeaderDropdown.openProject"
-    }))), ke && React.createElement($_13_index.m, {
+    }))), ke && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "SAVE_AS"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.itemContent
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "HeaderDropdown.saveAs"
     }))), React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.line
-    }), oe.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($_13_index.m, {
+      className: $_styles$module$css.line
+    }), oe.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "HISTORY"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.itemContent
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "HeaderDropdown.history"
-    }))), !ge && React.createElement($_13_index.m, {
+    }))), !ge && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "IMPORT_EXTENSION_WIDGET"
-    }, React.createElement($_13_index.B, {
+    }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B, {
       onChange: Ie,
       accept: ".js,.jsx",
-      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemUploadButton)
-    }, $_710_index$a$formatMessage({
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemUploadButton)
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "HeaderDropdown.importExtension"
     }))), (Re || Re) && React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.line
-    }), Ne && React.createElement($_13_index.m, {
+      className: $_styles$module$css.line
+    }), Ne && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "OPEN_LOCAL_FILE"
-    }, React.createElement($_13_index.B, {
+    }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B, {
       onChange: Se,
       onCancel: Ae,
       accept: ".json",
-      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemUploadButton)
-    }, $_710_index$a$formatMessage({
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemUploadButton)
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "HeaderDropdown.openLocalFile"
-    }))), Re && React.createElement($_13_index.m, {
+    }))), Re && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "EXPORT_PROJECT_AS_JSON"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.itemContent
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "HeaderDropdown.exportProjectAsJson"
     }))))
-  }, React.createElement($_748_index.a, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
     trigger: ["hover", "click"],
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "file"
     }),
     overlayInnerStyle: {
@@ -870,70 +870,70 @@ var En = React.memo(function (e) {
       left: "5px"
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.toolTipsBox
-  }, React.createElement($_13_index.j, {
+    className: $_styles$module$css.toolTipsBox
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-file"
-  })))), Object.values(oe.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($_13_index.g, {
-    overlay: React.createElement($_13_index.l, null, oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+  })))), Object.values(oe.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
+    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, null, oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "courseVideo"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent,
+      className: $_styles$module$css.itemLinkContent,
       onClick: xe
     }, React.createElement("span", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.link
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "courseVideo"
-    })))), oe.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+    })))), oe.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "tutorial"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent
+      className: $_styles$module$css.itemLinkContent
     }, React.createElement("a", {
       href: "https://codemao-guide.yuque.com/bfiekm/sbo5kh",
       target: "_blank",
       rel: "noopener noreferrer",
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.link
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "seeTutorial"
     })))), React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.line
-    }), oe.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+      className: $_styles$module$css.line
+    }), oe.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "feedback"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent
+      className: $_styles$module$css.itemLinkContent
     }, React.createElement("a", {
       href: "https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd",
       target: "_blank",
       rel: "noopener noreferrer",
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.link
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "feedback"
-    })))), oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+    })))), oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "releaseInfo"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent,
+      className: $_styles$module$css.itemLinkContent,
       onClick: function () {
-        return n($$_$$_$$_shared_events_messagesWrapper.vj(true))
+        return n($$_$$_redux_common_actions.vj(true))
       }
     }, React.createElement("span", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.link
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "releaseInfo"
-    })))), oe.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+    })))), oe.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "aboutUs"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.itemLinkContent,
+      className: $_styles$module$css.itemLinkContent,
       onClick: De
     }, React.createElement("span", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.link
-    }, $_710_index$a$formatMessage({
+      className: $_styles$module$css.link
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "aboutUs"
     })))))
-  }, React.createElement($_748_index.a, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
     trigger: ["hover", "click"],
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "help"
     }),
     overlayInnerStyle: {
@@ -942,35 +942,35 @@ var En = React.memo(function (e) {
       left: "5px"
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.toolTipsBox
-  }, React.createElement($_13_index.j, {
+    className: $_styles$module$css.toolTipsBox
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-help-circle-active"
-  })))), Object.values(oe.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($_13_index.g, {
-    overlay: React.createElement($_13_index.l, {
+  })))), Object.values(oe.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
+    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
       onClick: je
-    }, oe.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+    }, oe.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "STAGE_RULER"
     }, React.createElement("div", {
-      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent, L && $$_$$_$$_$$_unrestored_shared_1571_2636_161.disabled)
-    }, $_710_index$a$formatMessage(y ? {
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemContent, L && $_styles$module$css.disabled)
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage(y ? {
       id: "HeaderDropdown.hideRuler"
     } : {
       id: "HeaderDropdown.showRuler"
-    }))), oe.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_13_index.m, {
+    }))), oe.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: "STAGE_AREA"
     }, React.createElement("div", {
-      className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.itemContent, L && $$_$$_$$_$$_unrestored_shared_1571_2636_161.disabled)
-    }, $_710_index$a$formatMessage(w ? {
+      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemContent, L && $_styles$module$css.disabled)
+    }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage(w ? {
       id: "HeaderDropdown.hideWidgetAndStage"
     } : {
       id: "HeaderDropdown.showWidgetAndStage"
     }))))
-  }, React.createElement($_748_index.a, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
     trigger: ["hover", "click"],
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "setting"
     }),
     overlayInnerStyle: {
@@ -979,14 +979,14 @@ var En = React.memo(function (e) {
       left: "5px"
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.toolTipsBox
-  }, React.createElement($_13_index.j, {
+    className: $_styles$module$css.toolTipsBox
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-settings"
-  }))))), !le && oe.cloudDBManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_748_index.a, {
+  }))))), !le && oe.cloudDBManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "cloudDBManager"
     }),
     trigger: ["hover", "click"],
@@ -995,30 +995,30 @@ var En = React.memo(function (e) {
       top: -7
     }
   }, React.createElement("div", {
-    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.iconWrapper, $$_$$_$$_$$_unrestored_shared_1571_2636_161.cloudIconWrapper, C && $$_$$_$$_$$_unrestored_shared_1571_2636_161.activeIconWrapper),
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.iconWrapper, $_styles$module$css.cloudIconWrapper, C && $_styles$module$css.activeIconWrapper),
     onClick: function () {
-      n(m ? $$_$$_$$_shared_events_messagesWrapper.jj(true) : $$_$$_$$_shared_events_messagesWrapper.Ch())
+      n(m ? $$_$$_redux_common_actions.jj(true) : $$_$$_redux_common_actions.Ch())
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-database-manage-active",
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.databaseIcon
+    className: $_styles$module$css.databaseIcon
   }))), React.createElement(yn, null)), React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.center
+    className: $_styles$module$css.center
   }, e$children), React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.right
+    className: $_styles$module$css.right
   }, !le && oe.coll === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.otWrapper
-  }, React.createElement(St, null)), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($_13_index.g, {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.shareMenu,
-    overlay: React.createElement($_13_index.l, null, React.createElement($_13_index.m, null, React.createElement(on, {
+    className: $_styles$module$css.otWrapper
+  }, React.createElement(St, null)), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
+    className: $_styles$module$css.shareMenu,
+    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, null, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, null, React.createElement(on, {
       target: "community"
-    })), React.createElement($_13_index.m, null, React.createElement(on, {
+    })), React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, null, React.createElement(on, {
       target: "others"
     })))
-  }, React.createElement($_748_index.a, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "Publish.share"
     }),
     trigger: ["hover", "click"],
@@ -1027,17 +1027,17 @@ var En = React.memo(function (e) {
       top: -4
     }
   }, React.createElement("div", {
-    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.shareWrapper)
-  }, React.createElement($_13_index.j, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.shareWrapper)
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-share",
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.icon
+    className: $_styles$module$css.icon
   })))), !le && oe.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.cutLine
-  }), !le && oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($_748_index.a, {
+    className: $_styles$module$css.cutLine
+  }), !le && oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     placement: "bottom",
     title: function () {
       if (!D) {
-        return $_710_index$a$formatMessage({
+        return $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.notSaved"
         })
       }
@@ -1049,55 +1049,55 @@ var En = React.memo(function (e) {
       var a = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, -2)
       var s = new Date(e)
       var c = ""
-      var l = "".concat($_710_index$a$formatMessage({
+      var l = "".concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
         id: "MyProject.lastSaved"
       }), " ")
       if (n < 6e4) {
-        c = "".concat($_710_index$a$formatMessage({
+        c = "".concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.justSaved"
         }))
       } else if (n < 36e5) {
         var u = Math.ceil(n / 60 / 1e3)
         u = Math.max(u, 1)
         u = Math.min(u, 59)
-        c = l + (c = "".concat(u).concat($_710_index$a$formatMessage({
+        c = l + (c = "".concat(u).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.minute"
-        })).concat($_710_index$a$formatMessage({
+        })).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.ago"
         })))
       } else if (n < 216e5 || e > o) {
         var d = Math.floor(n / 36e5)
         var p = Math.floor(n % 36e5 / 6e4)
         if (d) {
-          c += "".concat(d).concat($_710_index$a$formatMessage({
+          c += "".concat(d).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "MyProject.hour"
           }))
         }
         if (p) {
-          c += "".concat(p).concat($_710_index$a$formatMessage({
+          c += "".concat(p).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "MyProject.minute"
           }))
         }
-        c = l + (c += $_710_index$a$formatMessage({
+        c = l + (c += $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.ago"
         }))
       } else if (e > i) {
-        c = l + (c = $_710_index$a$formatMessage({
+        c = l + (c = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "MyProject.yesterday"
         }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
       } else {
         if (e > a) {
-          c = l + (c = $_710_index$a$formatMessage({
+          c = l + (c = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "MyProject.theDayBeforeYesterday"
           }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
         } else {
-          c = "".concat(s.getFullYear()).concat($_710_index$a$formatMessage({
+          c = "".concat(s.getFullYear()).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "MyProject.year"
           }))
-          c += "".concat(s.getMonth() + 1).concat($_710_index$a$formatMessage({
+          c += "".concat(s.getMonth() + 1).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "MyProject.month"
           }))
-          c = l + (c += "".concat(s.getDate()).concat($_710_index$a$formatMessage({
+          c = l + (c += "".concat(s.getDate()).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "MyProject.day"
           })))
         }
@@ -1109,39 +1109,39 @@ var En = React.memo(function (e) {
       position: "relative",
       top: "8px"
     }
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     onClick: function () {
       we(false, true)
     },
-    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.saveBtn, g && $$_$$_$$_$$_unrestored_shared_1571_2636_161.saving)
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.saveBtn, g && $_styles$module$css.saving)
   }, React.createElement("span", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.saveText
-  }, $_710_index$a$formatMessage({
+    className: $_styles$module$css.saveText
+  }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "save"
   })), React.createElement("span", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.savingIcon
+    className: $_styles$module$css.savingIcon
   }, React.createElement(Ge, {
     stroke: "#6e4ff4"
-  })))), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($_13_index.d, {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.packageBtn,
+  })))), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+    className: $_styles$module$css.packageBtn,
     onClick: _e,
     disabled: T$isPackaging
-  }, $_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "package"
   })), T$packageDialogVisible && React.createElement(Dt, null), T$packageQrCodeVisible && React.createElement(Gt, null), !le && oe.userInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement(Ze, null), React.createElement("div", {
-    className: N($$_$$_$$_$$_unrestored_shared_1571_2636_161.saveTipsWrapper, W !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER && ne && !U && $$_$$_$$_$$_unrestored_shared_1571_2636_161.show)
-  }, $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.saveTipsWrapper, W !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER && ne && !U && $_styles$module$css.show)
+  }, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "MyProject.newSaveTips"
   }), React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_161.closeSaveTips,
+    className: $_styles$module$css.closeSaveTips,
     onClick: function () {
       return re(false)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-close"
   }))), pe && React.createElement(ot, {
     type: Xe.ERROR,
-    message: $_710_index$a$formatMessage({
+    message: $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "MyProject.autoSaveErrorTips"
     }),
     onClose: function () {

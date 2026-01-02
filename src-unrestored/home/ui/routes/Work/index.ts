@@ -11,11 +11,11 @@ import * as __WEBPACK_IMPORTED_MODULE_0_react_redux__ from "react-redux"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_redux__ from "redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "../../../../../unrestored/home/template-7CtK"
+import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__model_actions__ from "../../../../../unrestored/home/model/actions-HXaG"
+import * as __WEBPACK_IMPORTED_MODULE_3__model_actions__ from "./model/actions"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "../../../../../unrestored/home/redux/main/actions-_FmP"
+import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "../../../redux/actions"
 function map_state(state) {
   return {
     userInfo: state.main_reducer.userInfo,

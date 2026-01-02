@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
 import * as a from "../6"
 import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
@@ -553,115 +553,115 @@ var Ce = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : z
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Te:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Te:
       return e.set("bcmUrl", t.payload.bcmUrl)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Rb:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Rb:
       return e.set("title", t.payload.title)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Xc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Xc:
       return K(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Yc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Yc:
       return q(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ve:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ve:
       return J(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Dc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Dc:
       return ge(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ue:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ue:
       return Z(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.We:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.We:
       return Q(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.k:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.k:
       return X(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.kc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.kc:
       return $(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.j:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.j:
       return e.set("globalWidgetIds", e.globalWidgetIds.concat(t.payload.widgetId))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.l:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.l:
       return ee(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fe:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Fe:
       return e.set("globalWidgetIds", t.payload.widgetIds)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.He:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.He:
       return te(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Pc:
       return re(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Qc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Qc:
       return ne(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.bd:
       return we(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Nd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Nd:
       return e.set("currentScreenIndex", t.payload)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ie:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ie:
       return e.set("playing", true).set("playedAt", Date.now())
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Je:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Je:
       return e.set("playing", false)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.i:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.i:
       return oe(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.jc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.jc:
       return le(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ld:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ld:
       return ie(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Kd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Kd:
       return se(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.a:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.a:
       return ue(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.h:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.h:
       return de(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ic:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ic:
       return fe(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Dd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Dd:
       return ae(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Cd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Cd:
       return ce(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ec:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ec:
       return pe(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.fd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.fd:
       return he(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ed:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ed:
       return me(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.b:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.b:
       return _e(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.fc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.fc:
       return ve(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pb:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Pb:
       return be(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Xb:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Xb:
       return ye(e)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Vb:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Vb:
       return Y()
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ge:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ge:
       return e.set("screens", t.payload.screens)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Jc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Jc:
       return Ee(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.cc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.cc:
       return Oe(e)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Md:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Md:
       return e.set("apiToken", t.payload.token)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Td:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Td:
       return e.set("packageTaskLabel", t.payload.label)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Gd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Gd:
       return e.set("packageProgress", t.payload.packageProgress)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Jd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Jd:
       return e.set("isPackaging", t.payload.isPackaging).set("packageUrl", t.payload.packageUrl || null)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Hd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Hd:
       return e.set("packageProgressVisible", t.payload.packageProgressVisible)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Fd:
       return e.set("packageDialogVisible", t.payload.packageDialogVisible)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Id:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Id:
       return e.set("packageQrCodeVisible", t.payload.packageQrCodeVisible)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.jd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.jd:
       return e.set("packageCompleteVisible", t.payload.packageCompleteVisible)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ed:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ed:
       return e.update("packageInfo", function (e) {
         return a.a(a.a({}, e), t.payload)
       })
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Yd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Yd:
       return e.update("projectShareInfo", function (e) {
         return a.a(a.a({}, e), t.payload)
       })
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.qd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.qd:
       return e.set("focusedWorkspaceArea", t.payload.area)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Pd:
       return e.set("jsonFrom", t.payload)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Zd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Zd:
       return e.set("projectSource", t.payload)
     default:
       return e
@@ -738,55 +738,55 @@ var Ie = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : Se
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ke:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ke:
       return e.set("dropdown", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.lc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.lc:
       return Ae(e)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.se:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.se:
       return e.set("createVariableDialog", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.qc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.qc:
       return e.set("createVariableDialog", a.a({}, Se.createVariableDialog))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.qe:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.qe:
       return e.set("commonInputDialog", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.oc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.oc:
       return e.set("commonInputDialog", a.a({}, Se.createVariableDialog))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.we:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.we:
       return e.set("editArrayDialog", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.uc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.uc:
       return e.set("editArrayDialog", a.a({}, Se.editArrayDialog))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.xe:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.xe:
       return e.set("editObjectDialog", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.vc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.vc:
       return e.set("editObjectDialog", a.a({}, Se.editObjectDialog))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ve:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ve:
       return e.set("storageDialogInfo", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.tc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.tc:
       return e.set("storageDialogInfo", a.a({}, Te))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.le:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.le:
       return e.set("slider", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.mc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.mc:
       return e.set("slider", a.a({}, Se.slider))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Oe:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Oe:
       return e.setIn(["slider", "value"], t.payload.value)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.me:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.me:
       return e.set("palette", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.nc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.nc:
       return e.set("palette", {
         colorList: undefined,
         visible: false,
@@ -796,9 +796,9 @@ var Ie = function () {
         selectValue: function (e) {},
         setValue: function (e) {}
       })
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.pd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.pd:
       return e.set("flyoutVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.zd:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.zd:
       return e.set("isBlockDragDeleteArea", t.payload)
     default:
       return e

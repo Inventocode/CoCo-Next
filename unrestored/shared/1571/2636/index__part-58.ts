@@ -13,34 +13,34 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_228_index from "./228/index"
 var Zf = {
-  type: An.x,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
   category: {
     iconId: $_127.i,
-    blocks: An.x
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.x
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"list_viewer_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.sb({
         property: "__opacity",
-        widgetType: An.x,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"list_viewer_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat($_127.l, ",").concat($_127.j, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_set_data_source\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"DATA_SOURCE\">\n        <shadow type=\"data_source_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"list_viewer_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.sb({
         property: "__opacity",
-        widgetType: An.x,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
         widgetId: e
       }), "<block type=\"list_viewer_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"list_viewer_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), "<block type=\"list_viewer_get_data_source\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.x,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.x,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
         widgetId: e
       }), rp.d, "<block type=\"list_viewer_child_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n    </block>"), rp.d, "<block type=\"list_viewer_child_widget_bind_column\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <value name=\"COLUMN\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_child_widget_set_string_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(rp.c, "</field>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_child_widget_set_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\"><field name=\"NUM\" constraints=\"12,99,1\">16</field></shadow>\n      </value>\n    </block>"), "<block type=\"list_viewer_child_widget_set_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(rp.c, "</field>\n      <value name=\"VALUE\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">#000000</field></shadow>\n      </value>\n    </block>"), rp.d, "<block type=\"list_viewer_child_widget_get_string_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(rp.c, "</field>\n    </block>"), "<block type=\"list_viewer_child_widget_get_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n    </block>"), "<block type=\"list_viewer_child_widget_get_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(rp.c, "</field>\n    </block>")
     ]
@@ -206,7 +206,7 @@ var Zf = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.x)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.x)
         },
         optOnchange: function (e) {
           var /* [auto-meaningful-name] */this$source_block
@@ -240,7 +240,7 @@ var Zf = {
         options: function () {
           var /* [auto-meaningful-name] */this$source_block
           var t = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field_value("WIDGET_ID")) || $_228_index.a()
-          var n = $_46_index.c().getListViewerChildWidgetList(t, An.H)
+          var n = $_46_index.c().getListViewerChildWidgetList(t, $$_$$_$$_$$_src_editor_widget_builtIn_types.H)
           return n
         },
         optOnchange: u
@@ -267,10 +267,10 @@ var Zf = {
             var /* [auto-meaningful-name] */a$attributes
             var l
             var u = Jd.Cb(null === (a$attributes = a.attributes) || undefined === a$attributes || null === (l = a$attributes.templateSlotMap[o]) || undefined === l ? undefined : l.widgetId)
-            if ((null === u || undefined === u ? undefined : u.type) === An.H) {
+            if ((null === u || undefined === u ? undefined : u.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
               s = s.concat(r)
             }
-            if ((null === u || undefined === u ? undefined : u.type) === An.v) {
+            if ((null === u || undefined === u ? undefined : u.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
               s = s.concat(i)
             }
           }
@@ -293,10 +293,10 @@ var Zf = {
             var /* [auto-meaningful-name] */i$attributes
             var l
             var u = Jd.Cb(null === (i$attributes = i.attributes) || undefined === i$attributes || null === (l = i$attributes.templateSlotMap[r]) || undefined === l ? undefined : l.widgetId)
-            if ((null === u || undefined === u ? undefined : u.type) === An.H) {
+            if ((null === u || undefined === u ? undefined : u.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
               s = s.concat(o)
             }
-            if ((null === u || undefined === u ? undefined : u.type) === An.v) {
+            if ((null === u || undefined === u ? undefined : u.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
               s = s.concat(a)
             }
           }
@@ -664,7 +664,7 @@ var Zf = {
 var Jf = {
   icon: $_127.i,
   title: "ListViewerWidget.widgetName",
-  type: An.x,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
   previewAreaWidgetTitle: "ListViewerWidget.widgetName",
   component: Xf,
   editConfig: Hf,

@@ -3,7 +3,7 @@ import PriorityQueue from "js-priority-queue"
 import { ModuleMap, ModuleKey, Module, UnpackConfig } from "./types"
 import { getModuleByKey } from "./utils"
 
-export function setModulesPathByImportName(config: UnpackConfig, modules: ModuleMap): void {
+export function setPathsByImportName(config: UnpackConfig, modules: ModuleMap): void {
     console.log("setting paths")
     const entryModules: Module[] = Object.values(modules).filter(
         (module: Module): boolean => module.isEntry
@@ -20,7 +20,7 @@ export function setModulesPathByImportName(config: UnpackConfig, modules: Module
     const visited: Record<ModuleKey, number> = {}
     while (queue.length > 0) {
         const module = queue.dequeue()
-        if (module.external != null) {
+        if (module.external != null && !module.moved) {
             continue
         }
         for (const [key, name] of Object.entries(module.importsNameMap)) {
@@ -68,7 +68,7 @@ function getModulePathFromImportName(importName: string): string[] {
         .filter(Boolean)
 }
 
-export function setModulesPathByDependency(config: UnpackConfig, modules: ModuleMap): void {
+export function setPathsByDependency(config: UnpackConfig, modules: ModuleMap): void {
     console.log("setting paths")
     const entryModules: Module[] = Object.values(modules).filter(
         (module: Module): boolean => module.isEntry

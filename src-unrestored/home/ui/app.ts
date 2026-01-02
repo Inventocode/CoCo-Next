@@ -21,11 +21,11 @@ import __WEBPACK_IMPORTED_MODULE_2_react_dom___default from "react-dom"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3_react_redux__ from "react-redux"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__routes__ from "./routes"
+import * as __WEBPACK_IMPORTED_MODULE_4__routes__ from "./routes/index"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__components_IntlWrap__ from "../../../unrestored/home/components/IntlWrap-GoM7"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__redux_store__ from "../../../unrestored/home/redux/store-q9Rd"
+import * as __WEBPACK_IMPORTED_MODULE_6__redux_store__ from "../redux/store"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_7__index_scss__ from "../../../unrestored/home/index/scss-iCOP"
 /* harmony import */

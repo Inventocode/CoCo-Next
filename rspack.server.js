@@ -29,8 +29,10 @@ const config = {
                 "https://www.codemao.cn",
                 "https://socketcoll.codemao.cn:8098",
                 "https://socketcv.codemao.cn:9096",
+                "https://socket-cr.codemao.cn",
                 "wss://socketcoll.codemao.cn:8098",
-                "wss://socketcv.codemao.cn:9096"
+                "wss://socketcv.codemao.cn:9096",
+                "wss://socket-cr.codemao.cn:9090"
             ].map(target => /** @type {NonNullable<rspack.DevServer["proxy"]>[number]} */({
                 context: "/proxy/" + target,
                 target,

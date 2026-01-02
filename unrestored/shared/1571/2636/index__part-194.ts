@@ -20,7 +20,7 @@ import * as _n from "./47"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
@@ -537,7 +537,7 @@ var kM = _React.memo(function () {
       var a = setTimeout(function () {
         i(new Error("UploadFile time out."))
       }, 10 * e.length * 1e3)
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, function (e) {
+      t($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
         e[0].groupId = n
         e[0].groupImageIndex = r
         Q(e)
@@ -671,7 +671,7 @@ var kM = _React.memo(function () {
       }
     })
     Q(n)
-    t($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+    t($$_$$_$$_$$_src_editor_redux_common_actions.sh())
     J(r)
   }
   var te = function () {
@@ -688,8 +688,8 @@ var kM = _React.memo(function () {
                   n = r.id
                 }
               }
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(l, "actionList", T))
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(l, "selectedStyleId", n))
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Lg(l, "actionList", T))
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Lg(l, "selectedStyleId", n))
               if (u) {
                 u(k, F)
               }
@@ -707,7 +707,7 @@ var kM = _React.memo(function () {
     }
   }()
   var ne = function () {
-    t($$_$$_$$_$$_src_shared_events_messagesWrapper.vh())
+    t($$_$$_$$_$$_src_editor_redux_common_actions.vh())
   }
   _React.useEffect(function () {
     if (undefined === o.current) {
@@ -929,7 +929,7 @@ var kM = _React.memo(function () {
     overlay: React.createElement($_13_index.l, {
       onClick: function (e) {
         if (e === jM.OPEN_RESOURCE_LIBRARY) {
-          t($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (e) {
+          t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
             ee(e)
           }, true))
         }
@@ -955,7 +955,7 @@ var kM = _React.memo(function () {
             }
           })
           if (0 !== n.length) {
-            t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(n, function (e) {
+            t($$_$$_$$_$$_src_editor_redux_common_actions.Zf(n, function (e) {
               Q(e)
               J(r)
             }, true))

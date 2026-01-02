@@ -9,7 +9,7 @@
 var Ue
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
 import * as H from "../6"
-import * as p from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as l from "../9"
 import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
@@ -217,7 +217,7 @@ function Ke() {
 function qe(e, t, n) {
   if (e && n) {
     ze(n, e, t)
-    if (!(n !== p.a && n !== p.c)) {
+    if (!(n !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a && n !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.c)) {
       Ke()
     }
   }

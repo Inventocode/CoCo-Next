@@ -10,7 +10,7 @@ export { l as c }
 export { d as b }
 export { p as a }
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
-import * as o from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as i from "../9"
 import * as /* [auto-meaningful-name] */$$_95 from "../95"
 import * as /* [auto-meaningful-name] */$$_76 from "../76"
@@ -19,11 +19,11 @@ function l(e, t) {
   for (var n in e) {
     var r = e[n]
     if (1 === t) {
-      if (r.type === o.v && "" === r.attributes.fileId) {
+      if (r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v && "" === r.attributes.fileId) {
         r.attributes.fileId = "https://creation.codemao.cn/coconut/web/1.10.0/static/media/defaultImage.8392642c.svg"
       }
-      if (r.type !== o.H || r.parentId) {
-        if (r.type === o.w) {
+      if (r.type !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H || r.parentId) {
+        if (r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w) {
           var /* [auto-meaningful-name] */r$attributes$sizeType = r.attributes.sizeType
           if (r$attributes$sizeType) {
             var l = i.ob(r$attributes$sizeType)
@@ -42,7 +42,7 @@ function l(e, t) {
           r.attributes.backgroundMode = $$_76.a.TEMPLATE
           r.attributes.backgroundImage = $$_95.a
           r.attributes.imageResizeMode = $$_76.b.CONTAIN
-        } else if (r.type === o.F) {
+        } else if (r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.F) {
           u(r)
         }
       } else {
@@ -62,18 +62,18 @@ function l(e, t) {
         var /* [auto-meaningful-name] */r$attributes$fontSize = r$attributes.fontSize
         var m = r$attributes.content.replace(/&nbsp;/g, " ")
         r.attributes.content = m
-        if (40 === r.size.width && 40 === r.size.height && r.attributes.sizeAdaptive === o.q.AUTO_ALL) {
+        if (40 === r.size.width && 40 === r.size.height && r.attributes.sizeAdaptive === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_ALL) {
           p.style.fontSize = "".concat(r$attributes$fontSize, "px")
           p.innerText = m
           r.size.width = Math.max(40, p.clientWidth)
           r.size.height = Math.max(40, p.clientHeight)
-          r.attributes.sizeAdaptive = o.q.AUTO_HEIGHT
+          r.attributes.sizeAdaptive = $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT
           p.innerText = ""
         } else {
-          r.attributes.sizeAdaptive = o.q.FIXED
+          r.attributes.sizeAdaptive = $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED
         }
       }
-    } else if (2 === t && r.type === o.F) {
+    } else if (2 === t && r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.F) {
       u(r)
     }
   }

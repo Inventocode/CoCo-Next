@@ -20,22 +20,22 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as Et from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as CustomWidgetType from "../../../../shared/widget/custom/type"
 var PermissionDialog = function (e) {
   var t
   var /* [auto-meaningful-name] */e$permission
   var r = React.useState(false)
-  var o = $_10_index.a(r, 2)
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var c = function () {
     a(false)
   }
@@ -57,7 +57,7 @@ var PermissionDialog = function (e) {
               type="icon-selected"
               className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
             />
-            <span>{$_710_index$a$formatMessage({ id: "OT.dialogCanEdit" })}</span>
+            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.dialogCanEdit" })}</span>
           </div>
           <div
             onClick={() => e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly, t, c)}
@@ -67,13 +67,13 @@ var PermissionDialog = function (e) {
               type="icon-selected"
               className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
             />
-            <span>{$_710_index$a$formatMessage({ id: "OT.dialogReadOnly" })}</span>
+            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.dialogReadOnly" })}</span>
           </div>
           <div
             onClick={() => e.handleRemovePermission(t, c)}
             className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.remove)}
           >
-            <span>{$_710_index$a$formatMessage({ id: "OT.dialogRemove" })}</span>
+            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.dialogRemove" })}</span>
           </div>
         </div>
       ))}
@@ -84,8 +84,8 @@ var PermissionDialog = function (e) {
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role}>
         <span>
           {e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
-            ? $_710_index$a$formatMessage({ id: "OT.edit" })
-            : $_710_index$a$formatMessage({ id: "OT.readonly" })}
+            ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.edit" })
+            : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.readonly" })}
         </span>
         <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
           <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-dropdown-down" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon} />
@@ -96,8 +96,8 @@ var PermissionDialog = function (e) {
     <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.disabled)}>
       <span>
         {e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
-          ? $_710_index$a$formatMessage({ id: "OT.edit" })
-          : $_710_index$a$formatMessage({ id: "OT.readonly" })}
+          ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.edit" })
+          : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.readonly" })}
       </span>
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
         <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-dropdown-down" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon} />
@@ -106,28 +106,28 @@ var PermissionDialog = function (e) {
   )
 }
 var Ct = React.memo(function () {
-  var project = $_16_index.e(function (e) {
+  var project = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project
   })
   var /* [auto-meaningful-name] */project$id = project.id
   var title = project.title
-  var cooperationUserList = $_16_index.e(function (e) {
+  var cooperationUserList = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.cooperationUserList
   })
-  var onlineCooperationUserColorRecord = $_16_index.e(function (e) {
+  var onlineCooperationUserColorRecord = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  var userInfo = $_16_index.e(function (e) {
+  var userInfo = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var isAuthor = $_16_index.e(function (e) {
+  var isAuthor = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.isAuthor
   })
-  var collWorkId = $_16_index.e(function (e) {
+  var collWorkId = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
-  var formatMessage = $_710_index.a().formatMessage
-  var isProjectModified = $_16_index.e(function (e) {
+  var formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var isProjectModified = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.isProjectModified
   })
   if (cooperationUserList.size === 0 && userInfo) {
@@ -140,28 +140,28 @@ var Ct = React.memo(function () {
     })
   }
   var isUpdate = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(project$id)
-  var editorInviteUrl = $_16_index.e(function (e) {
+  var editorInviteUrl = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.editorInviteUrl
   })
-  var readOnlyInviteUrl = $_16_index.e(function (e) {
+  var readOnlyInviteUrl = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.readOnlyInviteUrl
   })
-  var dispatch = $_16_index.d()
+  var dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var g = React.useState(false)
-  var v = $_10_index.a(g, 2)
+  var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
   var w = React.useState($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
-  var C = $_10_index.a(w, 2)
+  var C = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(w, 2)
   var T = C[0]
   var j = C[1]
   var R = React.useRef(null)
   var k = React.useState(false)
-  var x = $_10_index.a(k, 2)
+  var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(k, 2)
   var D = x[0]
   var M = x[1]
   async function share() {
-    const unsafeWidgets = Et.Eb(Et.j.EXTENSION).filter((widget) => {
+    const unsafeWidgets = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter((widget) => {
       return !CustomWidgetType.isSafeExtensions(widget.type)
     })
     if (!(await $$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()).includes(Number(project$id)) && unsafeWidgets.length > 0) {
@@ -190,7 +190,7 @@ var Ct = React.memo(function () {
     } else {
       newId = project$id
     }
-    if (Et.Y().length > 0) {
+    if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().length > 0) {
       y(false)
       dispatch(Actions.openConfirmDialogAction({
         allowText: "确定",
@@ -215,7 +215,7 @@ var Ct = React.memo(function () {
     })
   }
   var P = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(n, r, o) {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(n, r, o) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -223,7 +223,7 @@ var Ct = React.memo(function () {
               ge(r, project$id, n).then(function () {
                 var /* [auto-meaningful-name] */R$current
                 le(project$id).then(function () {
-                  var e = O.a(RegeneratorRuntime.mark(function e(t) {
+                  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
                     return RegeneratorRuntime.wrap(function (e) {
                       for (;;) {
                         switch (e.prev = e.next) {
@@ -257,7 +257,7 @@ var Ct = React.memo(function () {
     }
   }()
   var B = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(n, r) {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(n, r) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -341,7 +341,7 @@ var Ct = React.memo(function () {
     return T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? editorInviteUrl : T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly ? readOnlyInviteUrl : ""
   }, [editorInviteUrl, readOnlyInviteUrl, T])
   var W = React.useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(n) {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(n) {
       var /* [auto-meaningful-name] */e$sent
       var o
       return RegeneratorRuntime.wrap(function (e) {
@@ -394,7 +394,7 @@ var Ct = React.memo(function () {
         onClose={() => M(false)}
         ref={R}
       >
-        <$_748_index.a
+        <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a
           mouseLeaveDelay={0}
           placement="bottom"
           title={formatMessage({ id: "OT.coll" })}
@@ -404,7 +404,7 @@ var Ct = React.memo(function () {
           <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIconWrapper, D && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.activeCollIconWrapper)}>
             <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-collaborate-active" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIcon} />
           </div>
-        </$_748_index.a>
+        </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a>
       </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r>
       <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
         className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareOtDialog}
@@ -474,20 +474,20 @@ var Ct = React.memo(function () {
   )
 })
 export const Collaboration = React.memo(() => {
-  const id = $_16_index.e(function (e) {
+  const id = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.id
   })
   const [showInvalidUrlDialog, setShowInvalidUrlDialog] = React.useState(false)
   const [isLoading, setIsLoading] = React.useState(false)
-  const dispatch = $_16_index.d()
-  const collWorkId = $_16_index.e(function (e) {
+  const dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  const collWorkId = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
   React.useEffect(function () {
     if (collWorkId) {
       setIsLoading(true)
       le(collWorkId).then(function () {
-        var e = O.a(RegeneratorRuntime.mark(function e(t) {
+        var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
           return RegeneratorRuntime.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {

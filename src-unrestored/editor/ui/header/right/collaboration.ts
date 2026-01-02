@@ -17,27 +17,27 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_events_messagesWrapper from "../../../../shared/events/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as Et from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
 var wt = function (e) {
   var t
   var /* [auto-meaningful-name] */e$permission
   var r = _React.useState(false)
-  var o = $_10_index.a(r, 2)
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var c = function () {
     a(false)
   }
@@ -55,27 +55,27 @@ var wt = function (e) {
         return e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit, t, c)
       },
       className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
       type: "icon-selected",
-      className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
-    }), React.createElement("span", null, $_710_index$a$formatMessage({
+      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+    }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "OT.dialogCanEdit"
     }))), React.createElement("div", {
       onClick: function () {
         return e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly, t, c)
       },
       className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
       type: "icon-selected",
-      className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
-    }), React.createElement("span", null, $_710_index$a$formatMessage({
+      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+    }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "OT.dialogReadOnly"
     }))), React.createElement("div", {
       onClick: function () {
         return e.handleRemovePermission(t, c)
       },
-      className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.remove)
-    }, React.createElement("span", null, $_710_index$a$formatMessage({
+      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.remove)
+    }, React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "OT.dialogRemove"
     }))))),
     trigger: "click",
@@ -85,51 +85,51 @@ var wt = function (e) {
     }
   }, React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role
-  }, React.createElement("span", null, e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? $_710_index$a$formatMessage({
+  }, React.createElement("span", null, e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.edit"
-  }) : $_710_index$a$formatMessage({
+  }) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.readonly"
   })), React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-dropdown-down",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
   })))) : React.createElement("div", {
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.disabled)
-  }, React.createElement("span", null, e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.disabled)
+  }, React.createElement("span", null, e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.edit"
-  }) : $_710_index$a$formatMessage({
+  }) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.readonly"
   })), React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-dropdown-down",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
   })))
 }
 var Ct = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project
   })
   var t = e.id
   var /* [auto-meaningful-name] */e$title = e.title
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.cooperationUserList
   })
-  var o = $_16_index.e(function (e) {
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  var i = $_16_index.e(function (e) {
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var a = $_16_index.e(function (e) {
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.isAuthor
   })
-  var s = $_16_index.e(function (e) {
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.isProjectModified
   })
   if (0 === r.size && i) {
@@ -142,28 +142,28 @@ var Ct = React.memo(function () {
     })
   }
   var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(t)
-  var d = $_16_index.e(function (e) {
+  var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.editorInviteUrl
   })
-  var p = $_16_index.e(function (e) {
+  var p = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.readOnlyInviteUrl
   })
-  var m = $_16_index.d()
+  var m = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var g = _React.useState(false)
-  var v = $_10_index.a(g, 2)
+  var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
   var w = _React.useState($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
-  var C = $_10_index.a(w, 2)
+  var C = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(w, 2)
   var T = C[0]
   var j = C[1]
   var R = _React.useRef(null)
   var k = _React.useState(false)
-  var x = $_10_index.a(k, 2)
+  var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(k, 2)
   var D = x[0]
   var M = x[1]
   function L() {
-    return (L = O.a(RegeneratorRuntime.mark(function e() {
+    return (L = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       var n
       var r
       var /* [auto-meaningful-name] */e$sent
@@ -172,8 +172,8 @@ var Ct = React.memo(function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              n = Et.Eb(Et.j.EXTENSION).filter(function (e) {
-                return !$$_$$_$$_$$_src_shared_widget_custom_type.e(e.type)
+              n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
+                return !$$_$$_$$_$$_shared_widget_custom_type.e(e.type)
               })
               e.next = 3
               return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()
@@ -183,8 +183,8 @@ var Ct = React.memo(function () {
                 break
               }
               y(false)
-              m($$_$$_$$_$$_shared_events_messagesWrapper.zh({
-                allowText: $_710_index$a$formatMessage({
+              m($$_$$_$$_redux_common_actions.zh({
+                allowText: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
                   id: "know"
                 }),
                 title: "",
@@ -206,19 +206,19 @@ var Ct = React.memo(function () {
               break
             case 14:
               e.next = 16
-              return $$_$$_$$_$$_shared_events_messagesWrapper.Nf(m, $$_$$_$$_$$_shared_events_messagesWrapper.tg({
+              return $$_$$_$$_redux_common_actions.Nf(m, $$_$$_$$_redux_common_actions.tg({
                 isUpdate: u,
                 isAutoSave: true
               }))
             case 16:
               r = e.sent
             case 17:
-              if (!(Et.Y().length > 0)) {
+              if (!($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().length > 0)) {
                 e.next = 22
                 break
               }
               y(false)
-              m($$_$$_$$_$$_shared_events_messagesWrapper.zh({
+              m($$_$$_$$_redux_common_actions.zh({
                 allowText: "确定",
                 title: "提示",
                 content: "作品中含有云数据库控件，暂时无法协作",
@@ -258,7 +258,7 @@ var Ct = React.memo(function () {
     }))).apply(this, arguments)
   }
   var P = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(n, r, o) {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(n, r, o) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -266,7 +266,7 @@ var Ct = React.memo(function () {
               ge(r, t, n).then(function () {
                 var /* [auto-meaningful-name] */R$current
                 le(t).then(function () {
-                  var e = O.a(RegeneratorRuntime.mark(function e(t) {
+                  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
                     return RegeneratorRuntime.wrap(function (e) {
                       for (;;) {
                         switch (e.prev = e.next) {
@@ -300,7 +300,7 @@ var Ct = React.memo(function () {
     }
   }()
   var B = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(n, r) {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(n, r) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -327,15 +327,15 @@ var Ct = React.memo(function () {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.content
   }, a && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.header
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareButton,
     onClick: function () {
       return L.apply(this, arguments)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.invitationIcon,
     type: "icon-ot-invitation"
-  }), $_710_index$a$formatMessage({
+  }), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.inviteFriend"
   }))), React.createElement("ul", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.list
@@ -343,7 +343,7 @@ var Ct = React.memo(function () {
     return React.createElement("li", {
       key: t
     }, React.createElement("div", {
-      className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.headerPhotoBorder),
+      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.headerPhotoBorder),
       key: e.id,
       style: {
         marginRight: "8px",
@@ -358,7 +358,7 @@ var Ct = React.memo(function () {
       className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.name
     }, React.createElement("p", null, e.nickname), React.createElement("span", null, e.id)), (n = e.id, e$is_author = e.is_author, e$edit_permission = e.edit_permission, e$is_author ? React.createElement("div", {
       className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.role
-    }, React.createElement("div", null, $_710_index$a$formatMessage({
+    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "OT.creator"
     }))) : React.createElement(wt, {
       isAuthor: a,
@@ -376,7 +376,7 @@ var Ct = React.memo(function () {
     return T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? d : T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly ? p : ""
   }, [d, p, T])
   var W = _React.useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(n) {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(n) {
       var /* [auto-meaningful-name] */e$sent
       var o
       return RegeneratorRuntime.wrap(function (e) {
@@ -424,7 +424,7 @@ var Ct = React.memo(function () {
     style: {
       height: "100%"
     }
-  }, React.createElement($_13_index.r, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r, {
     content: F,
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.oTButton,
     onOpen: function () {
@@ -434,10 +434,10 @@ var Ct = React.memo(function () {
       return M(false)
     },
     ref: R
-  }, React.createElement($_748_index.a, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     mouseLeaveDelay: 0,
     placement: "bottom",
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "OT.coll"
     }),
     trigger: ["hover", "click"],
@@ -446,14 +446,14 @@ var Ct = React.memo(function () {
       top: -4
     }
   }, React.createElement("div", {
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIconWrapper, D && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.activeCollIconWrapper)
-  }, React.createElement($_13_index.j, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIconWrapper, D && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.activeCollIconWrapper)
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-collaborate-active",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIcon
-  })))), React.createElement($_13_index.f, {
+  })))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareOtDialog,
     visible: b,
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "OT.copyCollInvitationUrl"
     }),
     onClose: function () {
@@ -463,35 +463,35 @@ var Ct = React.memo(function () {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.dialogMain
   }, React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.text
-  }, $_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.expiration"
   })), React.createElement("div", {
     onClick: function () {
       return W($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
     },
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
-  }, $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.editor"
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.editorRules"
   })), T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-selected"
   }))), React.createElement("div", {
     onClick: function () {
       return W($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly)
     },
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
-  }, $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.reader"
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.readerRules"
   })), T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-selected"
-  })))), G() ? React.createElement($_13_index.d, {
+  })))), G() ? React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.copy,
     type: "primary",
     onClick: function () {
@@ -502,45 +502,45 @@ var Ct = React.memo(function () {
       e.select()
       document.execCommand("Copy")
       document.body.removeChild(e)
-      m($$_$$_$$_$$_shared_events_messagesWrapper.mj({
+      m($$_$$_$$_redux_common_actions.mj({
         type: "success",
-        message: $_710_index$a$formatMessage({
+        message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "OT.copySuccess"
         }),
         showCloseIcon: false
       }))
       y(false)
     }
-  }, $_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "OT.copyLink"
-  })) : React.createElement($_13_index.d, {
+  })) : React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.loadingBtn,
     type: "primary"
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-loading2"
   }))))
 })
 var St = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.id
   })
   var t = _React.useState(false)
-  var n = $_10_index.a(t, 2)
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(t, 2)
   var r = n[0]
   var o = n[1]
   var i = _React.useState(false)
-  var a = $_10_index.a(i, 2)
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = $_16_index.d()
-  var u = $_16_index.e(function (e) {
+  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
   _React.useEffect(function () {
     if (u) {
       c(true)
       le(u).then(function () {
-        var e = O.a(RegeneratorRuntime.mark(function e(t) {
+        var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
           return RegeneratorRuntime.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {

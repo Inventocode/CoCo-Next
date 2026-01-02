@@ -12,10 +12,10 @@ import { hb, mb } from "./index__part-94"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as /* [auto-meaningful-name] */$_163 from "./163"
 import * as /* [auto-meaningful-name] */$_131 from "./131"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -75,7 +75,7 @@ var OO = _React.memo(function (e) {
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var i = Object.values(An.s)
+  var i = Object.values($$_$$_$$_$$_src_editor_widget_builtIn_types.s)
   var a = e$getValue(n)
   var s = e$getValue("size")
   var /* [auto-meaningful-name] */s$height = s.height
@@ -194,7 +194,7 @@ var CO = _React.memo(function (e) {
   }, React.createElement("div", {
     className: _$_.editBtn,
     onClick: function () {
-      $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.Hj({
+      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Hj({
         visible: true,
         widgetId: e$widgetId,
         imageCloseFileId: l,

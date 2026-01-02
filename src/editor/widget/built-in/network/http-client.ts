@@ -4,7 +4,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
 import * as Types from "../types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../../unrestored/shared/1571/2636/6"
-import * as Widget from "../../../../shared/widget/internal/types"
+import * as Widget from "../../internal/types"
 
 const editConfig: Widget.EditConfig[] = [
   {

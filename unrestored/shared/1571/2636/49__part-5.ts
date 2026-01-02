@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Oe from "./43"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as Q from "./7"
@@ -25,7 +25,7 @@ function rt(e) {
       var /* [auto-meaningful-name] */e$path = e.path
       var o = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t || null === (t$soundFileList = t.soundFileList) || undefined === t$soundFileList ? undefined : t$soundFileList[e$path[1]]
       if (o) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.og(o.id, false))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.og(o.id, false))
       }
     })(e)
   }
@@ -38,10 +38,10 @@ function ot(e) {
       var /* [auto-meaningful-name] */_e$path = e.path
       var r = t.i
       var o = _e$path[1]
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.kf([r], o))
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Zj())
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Uj())
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Qj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.kf([r], o))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Zj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
     })(e)
   }
   if (3 === (e$path = e.path).length && "soundFileList" === e$path[0]) {
@@ -56,15 +56,15 @@ function ot(e) {
       var c = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t || null === (t$soundFileList = t.soundFileList) || undefined === t$soundFileList ? undefined : t$soundFileList[i]
       if (c) {
         if ("cdnUrl" === a) {
-          Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Rg(c.id, s))
+          Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Rg(c.id, s))
         }
         if ("name" === a) {
           var /* [auto-meaningful-name] */c$name = c.name
-          Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Ph(c.id, s))
+          Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Ph(c.id, s))
           $_26_index.z.replaceTextValue("audio_sound_file_list_dropdown", "SOUND_FILE_ID", c$name, s)
         }
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Uj())
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Qj())
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
       }
     })(e)
   }
@@ -160,7 +160,7 @@ function pt(e) {
       var /* [auto-meaningful-name] */e$path = e.path
       var o = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t || null === (t$iconFileList = t.iconFileList) || undefined === t$iconFileList ? undefined : t$iconFileList[e$path[1]]
       if (o) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.mg(o.id, false))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.mg(o.id, false))
       }
     })(e)
   }
@@ -173,10 +173,10 @@ function ft(e) {
       var /* [auto-meaningful-name] */_e$path3 = e.path
       var r = t.i
       var o = _e$path3[1]
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.df([r], o))
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Zj())
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Uj())
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Qj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.df([r], o))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Zj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
     })(e)
   }
   if (3 === (e$path = e.path).length && "iconFileList" === e$path[0]) {
@@ -191,13 +191,13 @@ function ft(e) {
       var c = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t || null === (t$iconFileList = t.iconFileList) || undefined === t$iconFileList ? undefined : t$iconFileList[i]
       if (c) {
         if ("cdnUrl" === a) {
-          Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Pg(c.id, s))
+          Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Pg(c.id, s))
         }
         if ("name" === a) {
-          Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Oh(c.id, s))
+          Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Oh(c.id, s))
         }
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Uj())
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Qj())
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
       }
     })(e)
   }

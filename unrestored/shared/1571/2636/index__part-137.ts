@@ -8,11 +8,11 @@
 
 import { py } from "./index__part-102"
 var Mw
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -31,7 +31,7 @@ function aC() {
     return e.project.selectedWidgetId
   })
   var n = Et.Bb(t || "")
-  var r = (null === n || undefined === n ? undefined : n.type) === An.j ? "cloudDictList" : "cloudTableList"
+  var r = (null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.j ? "cloudDictList" : "cloudTableList"
   var o = $_16_index.e(function (e) {
     return e.cloudSpace[r]
   })
@@ -40,10 +40,10 @@ function aC() {
   var s = a[0]
   var c = a[1]
   var l = undefined
-  if ((null === n || undefined === n ? undefined : n.type) === An.j) {
+  if ((null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.j) {
     l = n.attributes.cloudDictId
   }
-  if ((null === n || undefined === n ? undefined : n.type) === An.k) {
+  if ((null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.k) {
     l = n.attributes.cloudTableId
   }
   if (l === Et.i) {
@@ -64,7 +64,7 @@ function aC() {
           switch (t.prev = t.next) {
             case 0:
               t.next = 2
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(e, $$_$$_$$_$$_src_shared_events_messagesWrapper.Pf(n))
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.Pf(n))
             case 2:
               if (!(null === (r = $_26_index.g.getToolbox()) || undefined === r)) {
                 r.refresh_selection()
@@ -88,7 +88,7 @@ function aC() {
           switch (t.prev = t.next) {
             case 0:
               t.next = 2
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(e, $$_$$_$$_$$_src_shared_events_messagesWrapper.Rf(n, false))
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.Rf(n, false))
             case 2:
               if (!(null === (r = $_26_index.g.getToolbox()) || undefined === r)) {
                 r.refresh_selection()
@@ -109,21 +109,21 @@ function aC() {
     cloudDataSources: o,
     bindDataSourceId: function (t) {
       var r = ""
-      if (n.type === An.j) {
+      if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.j) {
         r = "cloudDictId"
         if (t) {
           u(t)
         }
         $_26_index.r(n.id)
       }
-      if (n.type === An.k) {
+      if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.k) {
         r = "cloudTableId"
         $_26_index.s(n.id)
         if (t) {
           d(t)
         }
       }
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(n.id, r, t, true, true, true))
+      e($$_$$_$$_$$_src_editor_redux_common_actions.Lg(n.id, r, t, true, true, true))
     },
     addItemHover: s,
     onMouseOver: function () {
@@ -203,7 +203,7 @@ var uC = _React.memo(function (e) {
   }
   var T = function () {
     C(false)
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+    r($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
   }
   var j = React.createElement(py, {
     disabled: !m,

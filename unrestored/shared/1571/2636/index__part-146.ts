@@ -15,7 +15,7 @@ import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -49,7 +49,7 @@ var pT = _React.memo(function () {
       var /* [auto-meaningful-name] */r$target = r.target
       var /* [auto-meaningful-name] */e$current = e.current
       if (!("blocklyHtmlInput" === r$target.className || e$current && e$current.contains(r$target))) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.ih())
+        t($$_$$_$$_$$_src_editor_redux_common_actions.ih())
         document.body.removeEventListener("mousedown", n, {
           capture: true
         })
@@ -113,7 +113,7 @@ var fT = _React.memo(function (e) {
       if (e !== __EMPTY_VALUE__) {
         o.setValue(e)
       }
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+      r($$_$$_$$_$$_src_editor_redux_common_actions.gh())
     }
   }, e$options.map(function (e, t) {
     var r
@@ -274,7 +274,7 @@ var gT = _React.memo(function () {
       if (e !== __EMPTY_VALUE__) {
         n.setValue(e)
       }
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+      t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
     }
   }, n.options.map(function (t, o) {
     var i
@@ -372,10 +372,10 @@ var _T = _React.memo(function (e) {
     }
   }, React.createElement("li", {
     onClick: function () {
-      o($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(e$type === K.a.IMAGE_DROPDOWN ? Tn.c.ImageLibrary : Tn.c.IconLibrary, function (e) {
+      o($$_$$_$$_$$_src_editor_redux_common_actions.wj(e$type === K.a.IMAGE_DROPDOWN ? Tn.c.ImageLibrary : Tn.c.IconLibrary, function (e) {
         var t = e[0]
         n.setValue(t.id)
-        o($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+        o($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       }))
     }
   }, $_710_index$a$formatMessage({
@@ -383,11 +383,11 @@ var _T = _React.memo(function (e) {
   })), React.createElement("li", null, React.createElement($_13_index.B, {
     onChange: function (e) {
       if (e) {
-        var r = e$type === K.a.IMAGE_DROPDOWN ? $$_$$_$$_$$_src_shared_events_messagesWrapper.Zf : $$_$$_$$_$$_src_shared_events_messagesWrapper.rf
+        var r = e$type === K.a.IMAGE_DROPDOWN ? $$_$$_$$_$$_src_editor_redux_common_actions.Zf : $$_$$_$$_$$_src_editor_redux_common_actions.rf
         o(r(e, function (e) {
           var t = e[0]
           n.setValue(t.id)
-          o($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+          o($$_$$_$$_$$_src_editor_redux_common_actions.gh())
         }))
       }
     },
@@ -397,7 +397,7 @@ var _T = _React.memo(function (e) {
   }))), n.blockInfo.emptyImageVisible && React.createElement("li", {
     onClick: function () {
       n.setValue(Et.f)
-      o($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+      o($$_$$_$$_$$_src_editor_redux_common_actions.gh())
     }
   }, $_710_index$a$formatMessage({
     id: "emptyImage"
@@ -416,10 +416,10 @@ var vT = _React.memo(function () {
     }
   }, React.createElement("li", {
     onClick: function () {
-      n($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.SoundLibrary, function (t) {
+      n($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.SoundLibrary, function (t) {
         var r = t[0]
         e.setValue(r.id)
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+        n($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       }))
     }
   }, $_710_index$a$formatMessage({
@@ -427,10 +427,10 @@ var vT = _React.memo(function () {
   })), React.createElement("li", null, React.createElement($_13_index.B, {
     onChange: function (t) {
       if (t) {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.wf(t, function (t) {
+        n($$_$$_$$_$$_src_editor_redux_common_actions.wf(t, function (t) {
           var r = t[0]
           e.setValue(r.id)
-          n($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+          n($$_$$_$$_$$_src_editor_redux_common_actions.gh())
         }))
       }
     },

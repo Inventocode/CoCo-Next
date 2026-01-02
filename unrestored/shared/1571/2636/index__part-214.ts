@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -261,16 +261,16 @@ var LP = _React.memo(function () {
   }
   var Ee = function (e, t) {
     if (e) {
-      p($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, function (e) {
+      p($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
         ye(e[0], t)
       }))
     }
   }
   var Oe = function (e) {
-    p($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (t) {
+    p($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (t) {
       var n = t[0]
       ye(n, e)
-      p($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+      p($$_$$_$$_$$_src_editor_redux_common_actions.sh())
     }))
   }
   return React.createElement($_13_index.f, {
@@ -280,7 +280,7 @@ var LP = _React.memo(function () {
       id: "slider.custom"
     }),
     onClose: function () {
-      p($$_$$_$$_$$_src_shared_events_messagesWrapper.Gj({
+      p($$_$$_$$_$$_src_editor_redux_common_actions.Gj({
         visible: false
       }))
     },
@@ -288,14 +288,14 @@ var LP = _React.memo(function () {
       type: "primary",
       onClick: function () {
         $_16_index.b(function () {
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "handleImageFileId", v))
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "handleImageRatio", O))
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "handleImageDirection", A))
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "backgroundImageFileId", x))
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "backgroundImageDirection", P))
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "trackImageFileId", W))
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "trackImageDirection", K))
-          p($$_$$_$$_$$_src_shared_events_messagesWrapper.Gj({
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "handleImageFileId", v))
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "handleImageRatio", O))
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "handleImageDirection", A))
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "backgroundImageFileId", x))
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "backgroundImageDirection", P))
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "trackImageFileId", W))
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "trackImageDirection", K))
+          p($$_$$_$$_$$_src_editor_redux_common_actions.Gj({
             visible: false
           }))
         })

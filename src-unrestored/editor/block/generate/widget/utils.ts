@@ -4,6 +4,8 @@
  * 模块 ID：301__part-5
  */
 
+"use strict"
+
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index from "../../../../../unrestored/shared/1571/2636/118/index"

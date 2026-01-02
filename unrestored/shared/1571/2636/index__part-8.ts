@@ -6,11 +6,11 @@
 
 "use strict"
 
-import { Re } from "../../../../src/editor/ui/dialogs/open-project/my"
+import { Re } from "../../../../src/editor/ui/dialogs/open-project/my/index"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import /* [auto-meaningful-name] */$_525 from "./525"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as k from "./11"
 import N from "./8"
@@ -51,7 +51,7 @@ var Le = _React.memo(function (e) {
                   sourceId: o
                 })
               }
-              r($$_$$_$$_$$_src_shared_events_messagesWrapper.Xg())
+              r($$_$$_$$_$$_src_editor_redux_common_actions.Xg())
               $_141_index.a("TemplateClick", {
                 templateName: o
               })
@@ -72,7 +72,7 @@ var Le = _React.memo(function (e) {
     className: _$_.itemContainer,
     onClick: function () {
       e$importProjectJson()
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.Xg())
+      r($$_$$_$$_$$_src_editor_redux_common_actions.Xg())
     }
   }, React.createElement("div", {
     className: N(_$_.emptyItem, _$_.item)
@@ -114,13 +114,13 @@ var Pe = _React.memo(function (e) {
   var /* [auto-meaningful-name] */o$visible = o.visible
   var /* [auto-meaningful-name] */o$selected = o.selected
   var s = function (e) {
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.Ah(e))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.Ah(e))
   }
   return o$visible ? React.createElement($_13_index.f, {
     visible: o$visible,
     className: $_525.container,
     onClose: function () {
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.Xg())
+      r($$_$$_$$_$$_src_editor_redux_common_actions.Xg())
     }
   }, React.createElement("div", {
     className: $_525.wrapper

@@ -13,7 +13,7 @@ import /* [auto-meaningful-name] */Axios from "axios"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as Z from "./97"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_627 from "./627"
 import N from "./8"
@@ -54,7 +54,7 @@ var ZP = _React.memo(function () {
               }
               t.prev = 1
               t.next = 4
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(e, $$_$$_$$_$$_src_shared_events_messagesWrapper.tg({
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
                 isUpdate: a,
                 isAutoSave: true,
                 isNeedReport: false
@@ -71,7 +71,7 @@ var ZP = _React.memo(function () {
                 t.next = 12
                 break
               }
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.Ri({
+              e($$_$$_$$_$$_src_editor_redux_common_actions.Ri({
                 visible: true,
                 openFrom: "course",
                 onSave: function () {
@@ -82,7 +82,7 @@ var ZP = _React.memo(function () {
                           case 0:
                             t.prev = 0
                             t.next = 3
-                            return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(e, $$_$$_$$_$$_src_shared_events_messagesWrapper.tg({
+                            return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
                               isUpdate: a,
                               isAutoSave: true,
                               isNeedReport: false
@@ -141,7 +141,7 @@ var ZP = _React.memo(function () {
                 t.next = 5
                 break
               }
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: "未获取到教程信息"
               }))
               return t.abrupt("return")
@@ -154,7 +154,7 @@ var ZP = _React.memo(function () {
             case 8:
               if ((t$sent = t.sent).data) {
                 t$sent$data = t$sent.data
-                e($$_$$_$$_$$_src_shared_events_messagesWrapper.Gf({
+                e($$_$$_$$_$$_src_editor_redux_common_actions.Gf({
                   json: t$sent$data,
                   jsonFrom: K.d.COURSE,
                   sourceTag: K.g.COURSE,
@@ -184,7 +184,7 @@ var ZP = _React.memo(function () {
                                 y: 30
                               }
                             })
-                            e($$_$$_$$_$$_src_shared_events_messagesWrapper.fi(true))
+                            e($$_$$_$$_$$_src_editor_redux_common_actions.fi(true))
                           case 2:
                           case "end":
                             return t.stop()
@@ -203,7 +203,7 @@ var ZP = _React.memo(function () {
                 confirmPercent: .9,
                 onMinimizeBtnClick: function () {
                   $_627.a.hide()
-                  e($$_$$_$$_$$_src_shared_events_messagesWrapper.Qh($_392_index.a, {
+                  e($$_$$_$$_$$_src_editor_redux_common_actions.Qh($_392_index.a, {
                     name: $_392_index.a,
                     content: React.createElement($_392_index.b, null),
                     visible: true
@@ -233,7 +233,7 @@ var ZP = _React.memo(function () {
     }
   }()
   var l = function () {
-    e($$_$$_$$_$$_src_shared_events_messagesWrapper.fi(false))
+    e($$_$$_$$_$$_src_editor_redux_common_actions.fi(false))
   }
   return React.createElement($_13_index.f, {
     title: $_710_index$a$formatMessage({
@@ -297,7 +297,7 @@ var JP = _React.memo(function (e) {
     l()
   }
   var l = function () {
-    n($$_$$_$$_$$_src_shared_events_messagesWrapper.Ri({
+    n($$_$$_$$_$$_src_editor_redux_common_actions.Ri({
       visible: false,
       openFrom: ""
     }))

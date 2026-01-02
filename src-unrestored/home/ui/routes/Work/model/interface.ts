@@ -4,9 +4,16 @@
  * 模块 ID：hC2z
  */
 
-export enum EWorkType {
-  CREATE = "CREATE",
-  COLL = "COLL",
-  HOME = "HOME",
-  DELETE = "DELETE"
-}
+"use strict"
+
+/* harmony export (binding) */
+export { EWorkType }
+var EWorkType;
+(function (EWorkType) {
+  EWorkType["CREATE"] = "CREATE"
+  EWorkType["COLL"] = "COLL"
+  EWorkType["HOME"] = "HOME"
+  EWorkType["DELETE"] = "DELETE"
+})(EWorkType || (EWorkType = {}))
+
+/***/

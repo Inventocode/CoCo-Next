@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$_277 from "./277"
 import * as /* [auto-meaningful-name] */$_215 from "./215"
 import * as /* [auto-meaningful-name] */$_145 from "./145"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -275,7 +275,7 @@ var xh = {
   icon: "icon-widget-brush",
   title: "defaultBrushWidgetTitle",
   previewAreaWidgetTitle: "brush",
-  type: An.c,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
   editConfig: Ch,
   isInvisibleWidget: $_277.i,
   widget: {

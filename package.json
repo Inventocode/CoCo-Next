@@ -94,6 +94,7 @@
     "sa-sdk-javascript": "^1.0.0",
     "shortid": "^2.0.0",
     "socket.io-client": "^2.0.0",
+    "terser": "^5.0.0",
     "three": "~0.136.0",
     "tslib": "^2.0.0",
     "video-react": "~0.16.0"
@@ -109,6 +110,7 @@
     "@rspack/core": "^1.0.0",
     "@rspack/plugin-react-refresh": "^1.0.0",
     "@stylistic/eslint-plugin": "^4.0.0",
+    "@swc/helpers": "~0.5.0",
     "@swc/types": "^0.1.25",
     "@types/babel__core": "^7.0.0",
     "@types/babel__generator": "^7.0.0",

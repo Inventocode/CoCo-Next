@@ -4,5 +4,5 @@
  * 模块 ID：997
  */
 
-var r = require("../../../../../../../../../../797/101/2538/2539/2540/999/2518/728/index")(Object, "create")
+var r = require("../../../../../../1459/1181/1453/728/index")(Object, "create")
 module.exports = r

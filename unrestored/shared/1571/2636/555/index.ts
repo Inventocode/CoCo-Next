@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */_Color from "color"
 import * as c from "../8"
 import l from "../8"
-import * as u from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_200 from "../200"
 import * as /* [auto-meaningful-name] */$_289 from "./289"
@@ -145,8 +145,8 @@ _a = function (e) {
   var T = $$_200.g[e$attributes$sizeType]
   return _React.createElement("div", {
     id: t,
-    "data-role": u.M,
-    "data-widget-type": u.C,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
     className: l(_$_.checkboxWidget, $$_90.b, $$_11.a({}, _$_.hide, !e$visible)),

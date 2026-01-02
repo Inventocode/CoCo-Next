@@ -7,11 +7,11 @@
 "use strict"
 
 import * as o from "./6"
-import * as i from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as a from "./33"
 import * as /* [auto-meaningful-name] */$_244 from "./244"
 var c = {
-  type: i.f,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
   icon: "icon-widget-canvas",
   title: "widgetName",
   platforms: ["web", "android", "ios"],

@@ -7,13 +7,13 @@
 "use strict"
 
 var r = require("./1705/86/index")
-var /* [auto-meaningful-name] */require$_1648_761_index$trim = require("./1648/761/index").trim
+var /* [auto-meaningful-name] */require$_1648_761$trim = require("./1648/761").trim
 r({
   target: "String",
   proto: true,
   forced: require("./1726/1099")("trim")
 }, {
   trim: function () {
-    return require$_1648_761_index$trim(this)
+    return require$_1648_761$trim(this)
   }
 })

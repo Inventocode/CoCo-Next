@@ -11,7 +11,7 @@ import { axiosWithCredentials } from "../../utils/network/axios-with-credentials
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_57_index from "../../../../unrestored/shared/1571/2636/57/index"
 
 import { MyResponse, PageResponse } from "../../utils/network/response"
-import * as Internal from "../internal/types"
+import * as Internal from "../../../editor/widget/internal/types"
 
 const baseURL: string = `${$$_$$_$$_$$_unrestored_shared_1571_2636_57_index.a.serverHost}/coconut`
 

@@ -7,10 +7,10 @@
 "use strict"
 
 var r = require("./1705/86/index")
-var /* [auto-meaningful-name] */require$_1648_761_index$start = require("./1648/761/index").start
+var /* [auto-meaningful-name] */require$_1648_761$start = require("./1648/761").start
 var i = require("./1726/1099")("trimStart")
 var a = i ? function () {
-  return require$_1648_761_index$start(this)
+  return require$_1648_761$start(this)
 } : "".trimStart
 r({
   target: "String",

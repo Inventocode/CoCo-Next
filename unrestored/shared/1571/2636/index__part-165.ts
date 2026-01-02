@@ -8,7 +8,7 @@
 
 import { EA } from "./index__part-164"
 import * as /* [auto-meaningful-name] */$_135 from "./135"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -42,7 +42,7 @@ var CA = function (e) {
     className: N(_$_.SoundDragContainer, a && _$_.isDragging),
     onDrop: function (n) {
       if (!e.isReadOnly) {
-        l($$_$$_$$_$$_src_shared_events_messagesWrapper.wf(n.dataTransfer.files, e$onSuccess, true))
+        l($$_$$_$$_$$_src_editor_redux_common_actions.wf(n.dataTransfer.files, e$onSuccess, true))
         s(false)
       }
     },
@@ -93,7 +93,7 @@ var TA = function (e) {
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       if (e) {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.wf(e, undefined, true))
+        n($$_$$_$$_$$_src_editor_redux_common_actions.wf(e, undefined, true))
       }
     },
     multiple: true,

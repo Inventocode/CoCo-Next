@@ -9,11 +9,11 @@
 import { yg } from "./index__part-150"
 import * as ng from "./64"
 import * as Yr from "./53"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
 import * as O from "./7"
@@ -74,7 +74,7 @@ function jg(e, t) {
     c.widgetIds.forEach(function (n) {
       var r = Et.dc.get(n)
       if (r && r.type === e) {
-        if (r.parentId && (e === An.H || e === An.v)) {
+        if (r.parentId && (e === $$_$$_$$_$$_src_editor_widget_builtIn_types.H || e === $$_$$_$$_$$_src_editor_widget_builtIn_types.v)) {
           return
         }
         if (t && t !== r.parentId) {
@@ -247,11 +247,11 @@ function Dg(e) {
     text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addPrimitiveVariableName"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
         title: "addPrimitiveVariableName",
         placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addPrimitiveVariableNamePlaceholder"),
         onConfirm: function (t, n) {
-          $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.uf(n, ng.a("VARIABLE"), t, 0, a.id, 0, function (t) {
+          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.uf(n, ng.a("VARIABLE"), t, 0, a.id, 0, function (t) {
             e.set_value(t)
           }))
         },
@@ -327,11 +327,11 @@ function Mg(e) {
     text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addArrayVariableName"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
         title: "addArrayVariableName",
         placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addArrayVariableNamePlaceholder"),
         onConfirm: function (t, n) {
-          $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.of(n, ng.a("VARIABLE"), t, [], a.id, 0, function (t) {
+          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.of(n, ng.a("VARIABLE"), t, [], a.id, 0, function (t) {
             e.set_value(t)
           }))
         },
@@ -442,11 +442,11 @@ function Bg(e) {
     text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "object.createNewObject"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
         title: "object.createNewObject",
         placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "object.createNewObjectNamePlaceholder"),
         onConfirm: function (t, n) {
-          $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.tf({
+          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.tf({
             scopeType: n,
             id: ng.a("OBJECT"),
             name: t,
@@ -537,7 +537,7 @@ function Ug(e, t) {
     text: $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "addDocKey"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
         title: "addDocKey",
         placeholder: $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "addDocKeyPlaceholder"),
         onConfirm: function (n) {
@@ -552,11 +552,11 @@ function Ug(e, t) {
                 type: "string"
               }
             ])
-            $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e, "fields", a, false, true))
+            $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "fields", a, false, true))
             if (t) {
               t.set_value(i)
             }
-            $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.Qj())
+            $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
             if (!(null === (r = $_26_index.g.getToolbox()) || undefined === r)) {
               r.refresh_selection()
             }
@@ -621,7 +621,7 @@ function Vg(e, t) {
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
       if (n$common$userInfo) {
-        $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+        $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
           title: "addDocKey",
           placeholder: $$_$$_$$_$$_src_shared_ui_language.c(n$common$language, "addDocKeyPlaceholder"),
           onConfirm: function (t) {
@@ -636,7 +636,7 @@ function Vg(e, t) {
                   type: "string"
                 }
               ])
-              $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.Cg(e, o, a))
+              $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Cg(e, o, a))
               if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
                 n.refresh_selection()
               }
@@ -655,7 +655,7 @@ function Vg(e, t) {
           inputLength: 150
         }))
       } else {
-        $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+        $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
       }
     }
   }
@@ -695,7 +695,7 @@ function zg(e) {
     text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addBroadcast"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
         title: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addBroadcastTitle", {
           scene: i ? i.title : ""
         }),
@@ -703,7 +703,7 @@ function zg(e) {
         tips: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addBroadcastOnlyCurrentScreenTips"),
         onConfirm: function (t) {
           var n
-          $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.pf(t, i.id, 0, function (t) {
+          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.pf(t, i.id, 0, function (t) {
             e.set_value(t)
           }))
           if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
@@ -801,7 +801,7 @@ function Qg(e) {
   var i = []
   t$project$globalWidgetIds.forEach(function (e) {
     var t = Et.Bb(e)
-    if ((null === t || undefined === t ? undefined : t.type) === An.m) {
+    if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
       i.push(t)
     }
   })
@@ -821,7 +821,7 @@ function Qg(e) {
     text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addGridName"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
         title: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addGridName"),
         placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addGridNamePlaceholder"),
         onConfirm: function () {
@@ -831,7 +831,7 @@ function Qg(e) {
               for (;;) {
                 switch (t.prev = t.next) {
                   case 0:
-                    $_37_index.a($$_$$_$$_$$_src_shared_events_messagesWrapper.hg("", An.m, {
+                    $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.hg("", $$_$$_$$_$$_src_editor_widget_builtIn_types.m, {
                       x: 0,
                       y: 0
                     }, {
@@ -859,7 +859,7 @@ function Qg(e) {
               var t = []
               t$project$globalWidgetIds.forEach(function (e) {
                 var n = Et.dc.get(e)
-                if ((null === n || undefined === n ? undefined : n.type) === An.m) {
+                if ((null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
                   t.push(n)
                 }
               })
@@ -884,7 +884,7 @@ function Zg(e) {
     return [Ig]
   }
   var n = []
-  if (t.type === An.G) {
+  if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
     for (var r in t.attributes.db.header) n.push({
       type: "basic",
       text: t.attributes.db.header[r].field,
@@ -922,7 +922,7 @@ function Jg(e, t) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf($_37_index.a, $$_$$_$$_$$_src_shared_events_messagesWrapper.Pf(a, true))
+                return $$_$$_$$_$$_src_editor_redux_common_actions.Nf($_37_index.a, $$_$$_$$_$$_src_editor_redux_common_actions.Pf(a, true))
               case 2:
                 if (!(null === t || undefined === t)) {
                   t.show_editor()
@@ -991,7 +991,7 @@ function $g(e, t) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf($_37_index.a, $$_$$_$$_$$_src_shared_events_messagesWrapper.Rf(o, true))
+                return $$_$$_$$_$$_src_editor_redux_common_actions.Nf($_37_index.a, $$_$$_$$_$$_src_editor_redux_common_actions.Rf(o, true))
               case 2:
                 if (!(null === t || undefined === t)) {
                   t.show_editor()

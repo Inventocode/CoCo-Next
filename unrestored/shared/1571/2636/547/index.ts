@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */_React from "react"
 import * as d from "../8"
 import p from "../8"
-import * as f from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_262 from "../262"
 import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
@@ -214,8 +214,8 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   return _React.createElement("div", {
     id: t,
-    "data-role": f.M,
-    "data-widget-type": f.C,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
     "data-min-width": $$_262.c,
     "data-max-width": $$_75.e,
     "data-max-height": $$_75.d,

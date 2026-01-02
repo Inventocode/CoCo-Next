@@ -11,7 +11,7 @@ import { lb } from "./index__part-93"
 import * as /* [auto-meaningful-name] */$_200 from "./200"
 import * as /* [auto-meaningful-name] */$_148 from "./148"
 import * as /* [auto-meaningful-name] */$_379 from "./379"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -67,7 +67,7 @@ var gO = _React.memo(function (e) {
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var i = Object.values(An.s)
+  var i = Object.values($$_$$_$$_$$_src_editor_widget_builtIn_types.s)
   var a = e$getValue(n)
   var s = e$getValue("size")
   var /* [auto-meaningful-name] */s$height = s.height
@@ -99,7 +99,7 @@ var _O = _React.memo(function (e) {
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var i = Object.values(An.s)
+  var i = Object.values($$_$$_$$_$$_src_editor_widget_builtIn_types.s)
   var a = e$getValue(n)
   var s = e$getValue("size")
   var /* [auto-meaningful-name] */s$height = s.height

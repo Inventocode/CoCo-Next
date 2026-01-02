@@ -7,7 +7,7 @@
 "use strict"
 
 import { cn } from "./index__part-19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
@@ -36,7 +36,7 @@ var dn = _React.memo(function (e) {
     type: "button",
     className: _$_.saveBtn,
     onClick: function () {
-      i($$_$$_$$_$$_src_shared_events_messagesWrapper.Of())
+      i($$_$$_$$_$$_src_editor_redux_common_actions.Of())
       e$onClose()
     }
   }, $_710_index$a$formatMessage({
@@ -65,9 +65,9 @@ var pn = _React.memo(function (e) {
     networkErrorVisible: l,
     onRetry: function () {
       u(false)
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Ki(0))
-      $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(t, $$_$$_$$_$$_src_shared_events_messagesWrapper.jg())
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Li(true))
+      t($$_$$_$$_$$_src_editor_redux_common_actions.Ki(0))
+      $$_$$_$$_$$_src_editor_redux_common_actions.Nf(t, $$_$$_$$_$$_src_editor_redux_common_actions.jg())
+      t($$_$$_$$_$$_src_editor_redux_common_actions.Li(true))
     },
     onCancelRetry: function () {
       u(false)
@@ -113,7 +113,7 @@ var fn = _React.memo(function (e) {
     type: "button",
     className: _$_.saveBtn,
     onClick: function () {
-      i($$_$$_$$_$$_src_shared_events_messagesWrapper.Of())
+      i($$_$$_$$_$$_src_editor_redux_common_actions.Of())
     }
   }, $_710_index$a$formatMessage({
     id: "saveProject.failDialogSaveLocalTips"

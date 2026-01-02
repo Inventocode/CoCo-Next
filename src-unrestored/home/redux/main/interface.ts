@@ -13,13 +13,11 @@ export interface MainReducerState {
   commonToastInfo: CommonToastInfo
   confirmDialogInfo: ConfirmDialogInfo
 }
-
 export interface UserInfo {
   id: number
   name: string
   avatar: string
 }
-
 export interface CommonToastInfo {
   visible: boolean
   type?: "success" | "error" | "info"
@@ -28,7 +26,6 @@ export interface CommonToastInfo {
   showPrefixIcon?: boolean
   onClose?(): void
 }
-
 export interface ConfirmDialogInfo {
   visible: boolean
   title?: string

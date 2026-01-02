@@ -11,7 +11,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_548_index from "./548/index"
@@ -31,43 +31,43 @@ var Nf = {
   name: "WIDGET_ID",
   custom: true,
   options: function () {
-    return $_46_index.c().getWidgetListByType(An.F)
+    return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.F)
   }
 }
 var Rf = {
-  type: An.F,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
   category: {
     iconId: $_131.e,
-    blocks: An.F
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.F
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"switch_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"switch_set_state\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"STATE_WRAPPER\">\n        <shadow type=\"switch_state_dropdown\"></shadow>\n      </value>\n    </block>"), rp.d, Jd.sb({
         property: "__opacity",
-        widgetType: An.F,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
         widgetId: e,
         isSetProperty: true
       }), Jd.sb({
         property: "__size",
-        widgetType: An.F,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"switch_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"switch_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"switch_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"switch_get_state\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.F,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
         widgetId: e
       }), Jd.sb({
         property: "__size",
-        widgetType: An.F,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
         widgetId: e
       }), "<block type=\"switch_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.F,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.F,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
         widgetId: e
       })
     ]

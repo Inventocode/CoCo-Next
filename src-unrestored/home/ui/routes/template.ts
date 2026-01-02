@@ -15,11 +15,11 @@ import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_1_react_router_dom__ from "react-router-dom"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_2__components_Header__ from "../../../../src/home/ui/components/Header/Header-sEiI"
+import * as __WEBPACK_IMPORTED_MODULE_2__components_Header__ from "../components/Header/index"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__components_IconFont_IconFontSvg__ from "../../../../unrestored/home/components/IconFont/IconFontSvg-DYHF"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__components_Menu__ from "../components/Menu"
+import * as __WEBPACK_IMPORTED_MODULE_4__components_Menu__ from "../components/Menu/index"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__components_PlayCourseVideo__ from "../../../../unrestored/home/components/PlayCourseVideo-AvcO"
 /* harmony import */
@@ -33,7 +33,7 @@ import * as __WEBPACK_IMPORTED_MODULE_9__components_CommonToast__ from "../../..
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_10__components_ConfirmDialog__ from "../../../../unrestored/home/components/ConfirmDialog-kwR3"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_11__Home__ from "../../../../unrestored/home/Home-hCpk"
+import * as __WEBPACK_IMPORTED_MODULE_11__Home__ from "./Home/index"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_12_react_loadable__ from "react-loadable"
 /* harmony import */
@@ -93,7 +93,7 @@ function _inherits(subClass, superClass) {
 }
 var Work = __WEBPACK_IMPORTED_MODULE_12_react_loadable__({
   loader: function loader() {
-    return import("../../../../unrestored/home/unnamed-Pv6Z")
+    return import("./Work/index")
   },
   loading: function loading() {
     return __WEBPACK_IMPORTED_MODULE_0_react__.createElement("div", {

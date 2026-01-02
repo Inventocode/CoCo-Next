@@ -22,7 +22,7 @@ import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as te from "./15"
 import * as Z from "./97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -104,7 +104,7 @@ var rn = function (e) {
           case 2:
             e.prev = 2
             e.next = 5
-            return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(c, $$_$$_$$_$$_src_shared_events_messagesWrapper.Fh(r))
+            return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(c, $$_$$_$$_$$_src_editor_redux_common_actions.Fh(r))
           case 5:
             if (Z.a(o)) {
               T(te.J(o))
@@ -119,7 +119,7 @@ var rn = function (e) {
               e.next = 18
               break
             }
-            c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+            c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
               message: "分享失败，作品使用了未审核的自定义控件",
               type: "error"
             }))
@@ -127,7 +127,7 @@ var rn = function (e) {
             e$onClose()
             return e.abrupt("return")
           case 18:
-            c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+            c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
               message: $_710_index$a$formatMessage({
                 id: "Publish.shareQRError"
               }).toString(),
@@ -172,7 +172,7 @@ var rn = function (e) {
             case 11:
               _e$sent = e.sent
               _e$sent$url = _e$sent.url
-              c($$_$$_$$_$$_src_shared_events_messagesWrapper.Ti({
+              c($$_$$_$$_$$_src_editor_redux_common_actions.Ti({
                 img: _e$sent$url
               }))
             case 14:
@@ -181,7 +181,7 @@ var rn = function (e) {
             case 16:
               e.prev = 16
               e.t0 = e.catch(1)
-              c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "Publish.coverImageUploadFail"
                 }).toString(),
@@ -207,7 +207,7 @@ var rn = function (e) {
             case 0:
               if ($_190.a(C)) {
                 b(true)
-                c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                   message: $_710_index$a$formatMessage({
                     id: "Publish.copyLinkSuccess"
                   }).toString(),
@@ -215,7 +215,7 @@ var rn = function (e) {
                   type: "success"
                 }))
               } else {
-                c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                   message: $_710_index$a$formatMessage({
                     id: "Publish.copyLinkFailure"
                   }).toString(),
@@ -337,7 +337,7 @@ var rn = function (e) {
       if (e !== r.title) {
         if ("" !== e) {
           L(true)
-          c($$_$$_$$_$$_src_shared_events_messagesWrapper.Ti({
+          c($$_$$_$$_$$_src_editor_redux_common_actions.Ti({
             title: e
           }))
         } else {
@@ -360,7 +360,7 @@ var rn = function (e) {
     onBlur: function (e) {
       if (e.target.value !== r.desc) {
         L(true)
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.Ti({
+        c($$_$$_$$_$$_src_editor_redux_common_actions.Ti({
           desc: e.target.value
         }))
       }
@@ -421,7 +421,7 @@ var on = function (e) {
                 e.next = 3
                 break
               }
-              d($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+              d($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
               return e.abrupt("return")
             case 3:
               if (t = {}, u.forEach(function (e) {
@@ -446,7 +446,7 @@ var on = function (e) {
                 e.next = 11
                 break
               }
-              d($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+              d($$_$$_$$_$$_src_editor_redux_common_actions.zh({
                 allowText: $_710_index$a$formatMessage({
                   id: "cloudDb.know"
                 }),
@@ -471,7 +471,7 @@ var on = function (e) {
                 e.next = 18
                 break
               }
-              d($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+              d($$_$$_$$_$$_src_editor_redux_common_actions.zh({
                 allowText: $_710_index$a$formatMessage({
                   id: "know"
                 }),
@@ -489,10 +489,10 @@ var on = function (e) {
                 a(n.dialogType)
               }
               if (n.dialogType === Zt.SHARE_QR_DIALOG) {
-                $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(d, $$_$$_$$_$$_src_shared_events_messagesWrapper.Wf(p))
+                $$_$$_$$_$$_src_editor_redux_common_actions.Nf(d, $$_$$_$$_$$_src_editor_redux_common_actions.Wf(p))
               } else {
                 if (Et.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide")) {
-                  d($$_$$_$$_$$_src_shared_events_messagesWrapper.kj(true, "share", p))
+                  d($$_$$_$$_$$_src_editor_redux_common_actions.kj(true, "share", p))
                 } else {
                   p()
                 }
@@ -516,20 +516,20 @@ var on = function (e) {
             case 0:
               e.prev = 0
               e.next = 3
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(d, $$_$$_$$_$$_src_shared_events_messagesWrapper.tg({
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(d, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
                 isUpdate: Z.a(l),
                 isAutoSave: true
               }))
             case 3:
               e.next = 5
-              return d($$_$$_$$_$$_src_shared_events_messagesWrapper.kh())
+              return d($$_$$_$$_$$_src_editor_redux_common_actions.kh())
             case 5:
               return e.abrupt("return", true)
             case 8:
               e.prev = 8
               e.t0 = e.catch(0)
               e.next = 12
-              return d($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              return d($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "Publish.projectSaveFail"
                 }),

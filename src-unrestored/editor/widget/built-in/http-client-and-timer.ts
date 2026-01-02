@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_61 from "../../../../unrestored/shared/1571/2636/61"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../unrestored/shared/1571/2636/46/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_5 from "../../../../src/editor/widget/built-in/5"
+import * as /* [auto-meaningful-name] */$_types from "./types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_552_index from "../../../../unrestored/shared/1571/2636/552/index"
@@ -27,10 +27,10 @@ var vm = function (e) {
   }))
 }
 var bm = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.J,
+  type: $_types.J,
   category: {
     iconId: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_5.J
+    blocks: $_types.J
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -86,7 +86,7 @@ var bm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_5.J)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($_types.J)
         }
       }
       e.insertBlockProfile("time_picker_on_select_done", {
@@ -204,7 +204,7 @@ var bm = {
 var ym = {
   icon: $$_$$_$$_$$_unrestored_shared_1571_2636_235.h,
   title: "TimePickerWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.J,
+  type: $_types.J,
   previewAreaWidgetTitle: "TimePickerWidget.widgetName",
   component: vm,
   editConfig: gm,
@@ -230,10 +230,10 @@ var Em = [
   }
 ]
 var Om = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.I,
+  type: $_types.I,
   category: {
     iconId: "icon-widget-timer",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_5.I
+    blocks: $_types.I
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -271,7 +271,7 @@ var Om = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_5.I)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($_types.I)
         }
       }
       e.insertBlockProfile("date_set_timing", {
@@ -316,7 +316,7 @@ var Om = {
 var wm = {
   icon: "icon-widget-timer",
   title: "TimerWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.I,
+  type: $_types.I,
   previewAreaWidgetTitle: "TimerWidget.widgetName",
   component: Yh,
   editConfig: Em,
@@ -350,10 +350,10 @@ var Cm = [
   }
 ]
 var Tm = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.u,
+  type: $_types.u,
   category: {
     iconId: "icon-widget-http-client",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_5.u
+    blocks: $_types.u
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -458,7 +458,7 @@ var Tm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_5.u)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_46_index.c().getWidgetListByType($_types.u)
         }
       }
       e.insertBlockProfile("http_on_client_success", {
@@ -707,7 +707,7 @@ var Tm = {
 var Sm = {
   icon: "icon-widget-http-client",
   title: "HttpClientWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_5.u,
+  type: $_types.u,
   previewAreaWidgetTitle: "HttpClientWidget.widgetName",
   component: Yh,
   editConfig: Cm,

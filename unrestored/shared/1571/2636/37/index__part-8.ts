@@ -7,10 +7,10 @@
 "use strict"
 
 import { xl } from "../../../../../src/editor/redux/store"
-import * as cn from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as on from "../9"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_127 from "../127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../src/shared/widget/custom/storage"
@@ -163,7 +163,7 @@ function Fn(e) {
         }
         if (n$project$globalWidgetIds.includes(t$value.id)) {
           var E = on.Bb(t$value.id)
-          if (t$value.type === cn.B || t$value.type === cn.y) {
+          if (t$value.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B || t$value.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.y) {
             var O = $$_20_index.getLocalDocumentObject(n$project$id, t$value.id) || E.attributes.fields
             i.push($$_110.a(t$value.type, {
               id: t$value.id,
@@ -171,8 +171,8 @@ function Fn(e) {
               value: O,
               defaultValue: "no-use"
             }))
-          } else if (t$value.type === cn.G) {
-            i.push($$_110.a(cn.G, {
+          } else if (t$value.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
+            i.push($$_110.a($$_$$_$$_$$_$$_src_editor_widget_builtIn_types.G, {
               id: t$value.id,
               name: t$value.name,
               value: {
@@ -198,8 +198,8 @@ function Fn(e) {
   }
   for (var u = 0, d = i; u < d.length; u++) {
     var p = d[u]
-    xl.dispatch($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(p.id, "isWatching", true))
-    xl.dispatch($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(p.id, "selected", true))
+    xl.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(p.id, "isWatching", true))
+    xl.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(p.id, "selected", true))
   }
 }
 function Gn() {

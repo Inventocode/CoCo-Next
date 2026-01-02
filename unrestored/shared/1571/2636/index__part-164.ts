@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -38,7 +38,7 @@ var EA = _React.memo(function (e) {
   var d = u[0]
   var p = u[1]
   function m(e) {
-    c($$_$$_$$_$$_src_shared_events_messagesWrapper.og(e))
+    c($$_$$_$$_$$_src_editor_redux_common_actions.og(e))
   }
   function g(n) {
     e.setSoundPlayingId(n ? e.id : "")
@@ -79,7 +79,7 @@ var EA = _React.memo(function (e) {
     onClick: function (e) {
       var t = Et.ub("SOUND_FILE_ID", e)
       if (t.length > 0 || Et.Yb(e)) {
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        c($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           isDangerous: true,
           onConfirm: m.bind(null, e),
           allowText: $_710_index$a$formatMessage({
@@ -182,7 +182,7 @@ var EA = _React.memo(function (e) {
         }(r + n)) {
           o.target.value = e
           if (r !== e) {
-            c($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+            c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
               message: $_710_index$a$formatMessage({
                 id: "renameFileNameRepeatTips"
               })
@@ -193,7 +193,7 @@ var EA = _React.memo(function (e) {
             yA[t].stop()
           }
           g(false)
-          c($$_$$_$$_$$_src_shared_events_messagesWrapper.qg(t, e + n, r + n))
+          c($$_$$_$$_$$_src_editor_redux_common_actions.qg(t, e + n, r + n))
         }
       } else {
         o.target.value = e

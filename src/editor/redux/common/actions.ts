@@ -4,7 +4,7 @@
  * 模块 ID：2
  */
 
-export { SET_APP_LANGUAGE as Actions }
+export { SET_APP_LANGUAGE as dd }
 export { UPDATE_EDIT_AREA as Qe }
 export { a as Qj }
 export { UPDATE_PREVIEW_AREA as Se }
@@ -349,9 +349,7 @@ export { ASYNC_INITIAL_CLOUD_DB_DATA as ab }
 export { Ii as bg }
 export { ASYNC_UPDATE_CLOUD_DATABASE_FIELDS as zb }
 export { ji as Cg }
-export { PUBLISH_WORK_TO_COMMUNITY as Kc }
 export { Ri as Eh }
-export { PUBLISH_WORK_TO_H5 as Lc }
 export { xi as Fh }
 export { ASYNC_CHANGE_DATA_VIEWER_TEMPLATE as z }
 export { Mi as Af }
@@ -2291,7 +2289,7 @@ function Ri(e, t, n, r) {
     }
   }
 }
-var /* [auto-meaningful-name] */PUBLISH_WORK_TO_H5 = "PUBLISH_WORK_TO_H5"
+export const PUBLISH_WORK_TO_H5 = "PUBLISH_WORK_TO_H5"
 function xi(e) {
   return {
     type: PUBLISH_WORK_TO_H5,

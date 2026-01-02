@@ -546,16 +546,16 @@ function I(e) {
         i.push(u)
       }
     }
-    var /* [auto-meaningful-name] */consoleLog = "consoleLog"
+    var /* [auto-meaningful-name] */ConsoleLog = "consoleLog"
     if (o === E.ERROR) {
-      consoleLog = "consoleError"
+      ConsoleLog = "consoleError"
     } else {
       if (o === E.WARNING) {
-        consoleLog = "consoleWarning"
+        ConsoleLog = "consoleWarning"
       }
     }
     var p = e.getDynamicValue("__CURRENT_SCREEN_ID__")
-    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(consoleLog, [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(p), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r.id)].concat(i))
+    return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(ConsoleLog, [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(p), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r.id)].concat(i))
   })
   e.insertBlockSnippetGenerator("console_error", function (t, n) {
     for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
@@ -588,14 +588,14 @@ function I(e) {
   })
 }
 function j(e) {
-  var /* [auto-meaningful-name] */ShadowTypeTextFieldNameTEXT_field_shadow = "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>"
+  var /* [auto-meaningful-name] */ShadowType_Text_FieldName_TEXT__field_shadow = "<shadow type=\"text\"><field name=\"TEXT\"></field></shadow>"
   e.extensions.register_mutator("CONSOLE_MUTATOR", {
     updateShape_: function () {
       e.events.disable()
       for (var n = 0; n < this.itemCount_; n++) {
         var r = "VALUE".concat(n)
         if (!this.get_input(r)) {
-          this.append_shadow_input(r, ShadowTypeTextFieldNameTEXT_field_shadow)
+          this.append_shadow_input(r, ShadowType_Text_FieldName_TEXT__field_shadow)
         }
       }
       if (0 === this.itemCount_) {
@@ -625,7 +625,7 @@ function j(e) {
         var e = n.append_value_input(r, "MUTATE_REMOVE_BUTTON")
         n.itemCount_++
         return e
-      }, ShadowTypeTextFieldNameTEXT_field_shadow, e)
+      }, ShadowType_Text_FieldName_TEXT__field_shadow, e)
     },
     removeMutation: function () {
       var e = this

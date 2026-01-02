@@ -20,29 +20,29 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_75 from "../../../../../unrestored/shared/1571/2636/75"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_90 from "../../../../../unrestored/shared/1571/2636/90"
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as CustomWidgetType from "../../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$_1514 from "../../../../../unrestored/shared/1571/2636/1514"
-import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1514"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1514 from "../../../../../unrestored/shared/1571/2636/1514"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15141 from "../../../../../unrestored/shared/1571/2636/1514"
 
 var WidgetMallButton = React.memo(function (e) {
-  const { formatMessage } = $_710_index.a()
-  var n = $_16_index.e(function (e) {
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var r = $_16_index.d()
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   return (
-    <$_13_index.d
+    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
       className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtn}
       onClick={() => {
         const e = () => {
@@ -57,25 +57,25 @@ var WidgetMallButton = React.memo(function (e) {
     >
       <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a type="icon-shop" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.shopIcon} />
       {!e.singleColumn && <span>{formatMessage({ id: "Widget.widgetMall" })}</span>}
-    </$_13_index.d>
+    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
   )
 })
 
 var WidgetScrollExtension = React.memo(function (e) {
-  var t = $_16_index.e(function (e) {
+  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.myExtensionWidgets
   })
-  var n = $_16_index.e(function (e) {
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var r = $_16_index.d()
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var o = []
   var i = []
   const a = (e) => ({
     icon: e.icon,
     title: e.widgetName,
     previewAreaWidgetTitle: "",
-    type: $$_$$_$$_$$_shared_widget_custom_type.c(e.type, true),
+    type: CustomWidgetType.standardize(e.type, true),
     isInvisibleWidget: e.isInvisibleWidget,
     widgetServerId: e.id
   })
@@ -86,22 +86,22 @@ var WidgetScrollExtension = React.memo(function (e) {
       o.push(a(e))
     }
   })
-  const { formatMessage } = $_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
   var c = React.useState(false)
-  var l = $_10_index.a(c, 2)
+  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = React.useState(true)
-  var m = $_10_index.a(p, 2)
+  var m = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
   var b = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.c()
-  var y = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
-    return !$$_$$_$$_$$_shared_widget_custom_type.e(e.type)
+  const unsafeExtensions = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
+    return !CustomWidgetType.isSafeExtensions(e.type)
   })
   React.useEffect(() => {
     const e = (() => {
-      const e = O.a(RegeneratorRuntime.mark(function e() {
+      const e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
         return RegeneratorRuntime.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
@@ -129,52 +129,50 @@ var WidgetScrollExtension = React.memo(function (e) {
     }
   }, [r, n])
   React.useEffect(() => {
-    if (0 === y.length && 0 === o.length && 0 === i.length) {
+    if (0 === unsafeExtensions.length && 0 === o.length && 0 === i.length) {
       v(true)
     } else {
       v(false)
     }
-  }, [y, o, i])
-  return (
-    <>
-      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.scrollExtension}>
-        {!u && g && (
-          <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.noExtensionWidgets}>
-            <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.noExtensionWidgetsWrapper}>
-              {!e.singleColumn && (
-                <Empty
-                  type="image-text"
-                  text={
-                    <>
-                      {formatMessage({ id: "Widget.emptyTip1" })}
-                      <br />
-                      {formatMessage({ id: "Widget.emptyTip2" })}
-                    </>
-                  }
-                />
-              )}
-              <WidgetMallButton singleColumn={e.singleColumn} />
-            </div>
+  }, [unsafeExtensions, o, i])
+  return <>
+    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.scrollExtension}>
+      {!u && g && (
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.noExtensionWidgets}>
+          <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.noExtensionWidgetsWrapper}>
+            {!e.singleColumn && (
+              <Empty
+                type="image-text"
+                text={
+                  <>
+                    {formatMessage({ id: "Widget.emptyTip1" })}
+                    <br />
+                    {formatMessage({ id: "Widget.emptyTip2" })}
+                  </>
+                }
+              />
+            )}
+            <WidgetMallButton singleColumn={e.singleColumn} />
           </div>
-        )}
-        {!u && (
-          <>
-            <WidgetCategoryItem configList={i} title="ExtensionWidget.category.function" />
-            <WidgetCategoryItem configList={o} title="ExtensionWidget.category.ui" />
-            <WidgetCategoryItem key={b} configList={y} title="ExtensionWidget.category.extension" />
-          </>
-        )}
-        {u && (
-          <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.loading} style={{ height: "100%" }}>
-            <img src={_$_} alt="loading" />
-          </div>
-        )}
-      </div>
-      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtnContainer}>
-        {!g && <WidgetMallButton singleColumn={e.singleColumn} />}
-      </div>
-    </>
-  )
+        </div>
+      )}
+      {!u && (
+        <>
+          <WidgetCategoryItem configList={i} title="ExtensionWidget.category.function" />
+          <WidgetCategoryItem configList={o} title="ExtensionWidget.category.ui" />
+          <WidgetCategoryItem key={b} configList={unsafeExtensions} title="ExtensionWidget.category.extension" />
+        </>
+      )}
+      {u && (
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.loading} style={{ height: "100%" }}>
+          <img src={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15141} alt="loading" />
+        </div>
+      )}
+    </div>
+    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtnContainer}>
+      {!g && <WidgetMallButton singleColumn={e.singleColumn} />}
+    </div>
+  </>
 })
 
 enum Tab {
@@ -183,44 +181,44 @@ enum Tab {
 }
 
 var WidgetTabContainer = React.memo(function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.widgetEditor
   }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return !!e.oTState.collWorkId
   })
   var o = React.useState(Tab.BASIC)
-  var i = $_10_index.a(o, 2)
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   return (
     <div
-      className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.singleColumn : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.doubleColumn, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.readonly)}
+      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.singleColumn : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.doubleColumn, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.readonly)}
     >
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabNav}>
         <div
           onClick={() => {
             s(Tab.BASIC)
           }}
-          className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
+          className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
-          <div>{$_710_index$a$formatMessage({ id: "Widget.basic" })}</div>
+          <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "Widget.basic" })}</div>
         </div>
         <div
           onClick={() => {
             s(Tab.EXTENSION)
           }}
-          className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
+          className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
-          <div>{$_710_index$a$formatMessage({ id: "Widget.extension" })}</div>
+          <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "Widget.extension" })}</div>
         </div>
       </div>
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContent}>
-        <div className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
           <BuiltInWidgetList isOT={r} />
         </div>
-        <div className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
+        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
           <WidgetScrollExtension singleColumn={e.singleColumn} />
         </div>
       </div>
@@ -229,7 +227,7 @@ var WidgetTabContainer = React.memo(function (e) {
 })
 
 var StageToast = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageToast
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -237,7 +235,7 @@ var StageToast = React.memo(function () {
   var r = undefined === e$toast ? "" : e$toast
   var /* [auto-meaningful-name] */e$showIcon = e.showIcon
   var i = undefined !== e$showIcon && e$showIcon
-  var a = $_16_index.d()
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var s = React.useRef(null)
   React.useEffect(() => {
     if (s.current) {
@@ -252,7 +250,7 @@ var StageToast = React.memo(function () {
   return e$visible ? (
     <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toastWrapper}>
       <span className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toast}>
-        {i && <$_13_index.j type="icon-alert-success" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.icon} />}
+        {i && <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-alert-success" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.icon} />}
         {r}
       </span>
     </div>
@@ -262,25 +260,25 @@ var Cv = window.innerWidth > 1300 ? 144 : 92
 var Tv = 92 === Cv
 
 var PreviewArea = React.memo(() => {
-  const { formatMessage } = $_710_index.a()
-  var t = $_16_index.d()
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var n = React.useRef(null)
   var r = React.useRef(null)
-  var o = $_16_index.e(function (e) {
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.playing
   })
-  var i = $_16_index.e(function (e) {
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageVisible
   })
-  var a = $_16_index.e(function (e) {
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.isHoverBlockArea
   })
   var s = React.useState(0)
-  var c = $_10_index.a(s, 2)
+  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
   var d = React.useState(false)
-  var p = $_10_index.a(d, 2)
+  var p = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
   React.useEffect(function () {
@@ -373,7 +371,7 @@ var PreviewArea = React.memo(() => {
             <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1512.a />
           </main>
           {!o && (
-            <$_748_index.a
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a
               placement="bottom"
               title={formatMessage({
                 id: i ? "HeaderDropdown.hideWidgetAndStage" : "HeaderDropdown.showWidgetAndStage"
@@ -381,16 +379,16 @@ var PreviewArea = React.memo(() => {
               trigger={["hover", "click"]}
             >
               <div
-                className={N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.foldBtn, i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.hide : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.show, (m || a) && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.visible)}
+                className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.foldBtn, i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.hide : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.show, (m || a) && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.visible)}
                 onClick={() => {
                   t(Actions.Yi(!i))
                 }}
                 onMouseEnter={() => g(true)}
                 onMouseLeave={() => g(false)}
               >
-                <$_13_index.j type="icon-double-arrow" />
+                <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-double-arrow" />
               </div>
-            </$_748_index.a>
+            </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a>
           )}
         </>
       </section>

@@ -9,7 +9,7 @@
 import { r, o, i } from "./242__part-0"
 var g
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
 import * as /* [auto-meaningful-name] */$$_$$_25_index from "../../25/index"
 import * as /* [auto-meaningful-name] */$$_$$_738_302 from "../../738/302"
@@ -41,10 +41,10 @@ function b(e, t) {
   ] : []
 }
 g = {}
-$$_$$_11.a(g, $$_$$_5.w, r)
-$$_$$_11.a(g, $$_$$_5.d, $$_$$_738_302)
-$$_$$_11.a(g, $$_$$_5.C, o)
-$$_$$_11.a(g, $$_$$_5.g, i)
+$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, r)
+$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d, $$_$$_738_302)
+$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C, o)
+$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.g, i)
 var y = g
 var E = new Map()
 function O(e, t, n) {

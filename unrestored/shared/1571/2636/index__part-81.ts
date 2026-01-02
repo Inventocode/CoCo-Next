@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_263 from "./263"
 !function (e) {
@@ -236,10 +236,10 @@ var m_ = Object.assign({}, p_, {
   successDO: "QUERY_BY_COUNT"
 })
 var g_ = {
-  type: An.k,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.k,
   category: {
     iconId: "icon-widget-cloud-table",
-    blocks: An.k
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.k
   },
   getTemplate: function (e) {
     var t
@@ -252,15 +252,15 @@ var g_ = {
     var i = "<field name=\"COLUMNS\">".concat(o, "</field>")
     return [
       "<block type=\"cloudTable_on_error\" uncache=\"true\">".concat(n, "</block>"), rp.d, Jd.cb({
-        widgetType: An.k,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.k,
         title: "修改",
         lineId: "modify"
       }), "<block type=\"cloudTable_insert\" uncache=\"true\">\n      <value name=\"INSERT_ROW\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >1,2,3</field>\n        </shadow>\n      </value>\n      ".concat(n, "\n    </block>"), "<block type=\"cloudTable_delete\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudTable_update\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">123</field>\n        </shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"UPDATE_COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">456</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.k,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.k,
         title: "查询",
         lineId: "query"
       }), "<block type=\"cloudTable_query_by_column\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"INPUT_COLUMN\">\n        <shadow type=\"cloudTable_all_column_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"COLUMN_VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">123</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloudTable_query_by_count\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.cb({
-        widgetType: An.k,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.k,
         title: "清空",
         lineId: "clear"
       }), "<block type=\"cloudTable_clear_all\" uncache=\"true\">\n      ".concat(n, "\n    </block>")
@@ -379,7 +379,7 @@ var g_ = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.k)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.k)
         }
       }
       e.insertBlockProfile("cloudTable_all_column_dropdown", {
@@ -698,7 +698,7 @@ var g_ = {
 var __ = {
   icon: "icon-widget-cloud-table",
   title: "CloudSpaceDBWidget.widgetName",
-  type: An.k,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.k,
   previewAreaWidgetTitle: "CloudSpaceDBWidget.widgetName",
   component: Yh,
   editConfig: l_,

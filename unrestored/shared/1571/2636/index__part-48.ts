@@ -12,7 +12,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_200 from "./200"
 var mf = {
@@ -20,34 +20,34 @@ var mf = {
   name: "WIDGET_ID",
   custom: true,
   options: function () {
-    return $_46_index.c().getWidgetListByType(An.g)
+    return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.g)
   }
 }
 var gf = {
-  type: An.g,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.g,
   category: {
     iconId: $_200.e,
-    blocks: An.g
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.g
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"checkbox_on_select\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_on_change\" uncache=\"true\">\n    ".concat(t, "\n  </block>"), rp.d, "<block type=\"checkbox_set_headline\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"HEADLINE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), rp.d, "<block type=\"checkbox_set_option_count\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>4</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_set_option_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_set_option_state\" uncache=\"true\">\n      <field name=\"STATE\">selected</field>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_clear_selected\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"checkbox_set_option_feedback\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"STATE\">correct</field>\n    </block>"), "<block type=\"checkbox_clear_feedback\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"checkbox_delete_option\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_push_option\" uncache=\"true\">\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.g,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.g,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"checkbox_set_position\" uncache=\"true\">\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"checkbox_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"checkbox_get_selected_option_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_get_selected_option_content\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_get_option_content_by_index\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_get_headline\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"optionCount\" widget_type=\"".concat(An.g, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"__position\" widget_type=\"".concat(An.g, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), Jd.sb({
+      }), "<block type=\"checkbox_set_position\" uncache=\"true\">\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"checkbox_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"checkbox_get_selected_option_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_get_selected_option_content\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"checkbox_get_option_content_by_index\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"checkbox_get_headline\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"optionCount\" widget_type=\"".concat($$_$$_$$_$$_src_editor_widget_builtIn_types.g, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"__position\" widget_type=\"".concat($$_$$_$$_$$_src_editor_widget_builtIn_types.g, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.g,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.g,
         widgetId: e
       }), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.g,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.g,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.g,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.g,
         widgetId: e
       })
     ]
@@ -589,7 +589,7 @@ var gf = {
 var _f = {
   icon: $_200.e,
   title: "checkbox",
-  type: An.g,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.g,
   previewAreaWidgetTitle: "checkbox",
   component: ff,
   editConfig: df,
@@ -603,7 +603,7 @@ var _f = {
     },
     attributes: {
       disabled: false,
-      sizeAdaptive: An.q.AUTO_HEIGHT,
+      sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
       headlineVisible: true,
       options: [
         {
@@ -616,7 +616,7 @@ var _f = {
       ],
       headline: "%{COCO_defaultHeadlineContext}",
       color: $_200.f,
-      sizeType: An.s.MEDIUM
+      sizeType: $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM
     }
   }
 }

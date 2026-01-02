@@ -15,7 +15,7 @@ import * as __WEBPACK_IMPORTED_MODULE_2__template__ from "./template"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3__routes_Work_model_actions__ from "../../routes/Work/model/actions"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "../../../redux/main/actions"
+import * as __WEBPACK_IMPORTED_MODULE_4__redux_main_actions__ from "../../../redux/actions"
 var mapStateToProps = function mapStateToProps(state, ownProps) {
   return {
     userInfo: state.main_reducer.userInfo

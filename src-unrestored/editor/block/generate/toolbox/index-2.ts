@@ -16,7 +16,7 @@ var x
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_323 from "../../../../../unrestored/shared/1571/2636/323"
-var /* [auto-meaningful-name] */ShadowTypeMath_numberFieldNameNUMConstraints111_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
+var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">1</field></shadow>"
 function U(e, t) {
   function n(e) {
     if (!t.events.is_undoing()) {
@@ -431,7 +431,7 @@ function z(e) {
         if (!r) {
           var o = this.get_input_index("VALUE")
           var i = -1 === o ? o : 2
-          this.append_shadow_input("INDEX", ShadowTypeMath_numberFieldNameNUMConstraints111_field_shadow, i).set_check("Number")
+          this.append_shadow_input("INDEX", ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, i).set_check("Number")
           this.append_dummy_input("ITEM", i + 1).append_field(e.Msg.ARRAY_ITEM)
         }
       } else if (r) {
@@ -447,7 +447,7 @@ function z(e) {
         var o = n.append_value_input("INDEX", r).set_check("Number")
         n.append_dummy_input("ITEM", r + 1).append_field(e.Msg.ARRAY_ITEM)
         return o
-      }, ShadowTypeMath_numberFieldNameNUMConstraints111_field_shadow, t)
+      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, t)
     },
     removeMutation: function () {
       var e = this
@@ -1322,7 +1322,7 @@ function te(e, t) {
       }
     }
   }
-  var /* [auto-meaningful-name] */ShadowTypeMath_numberFieldNameNUMConstraints112_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
+  var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
   e.extensions.register_mutator("TEXT_SLICE_MUTATOR", {
     updateShape_: function () {
       e.events.disable()
@@ -1331,7 +1331,7 @@ function te(e, t) {
         this.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.p(), "MUTATE_BUTTON")
       } else {
         this.append_dummy_input("CONTENT_TO").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_TO)
-        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), ShadowTypeMath_numberFieldNameNUMConstraints112_field_shadow)
+        this.append_shadow_input("NUM".concat(this.itemCount_ - 1), ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow)
         this.append_dummy_input("TITLE_TAIL").append_field(e.Msg.OPERATORS_TEXT_SELECT_CHANGEABLE_END)
         this.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_BUTTON")
       }
@@ -1349,7 +1349,7 @@ function te(e, t) {
         }
         r.append_dummy_input("MUTATE_BUTTON").append_field($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.q(undefined), "MUTATE_BUTTON")
         return t
-      }, ShadowTypeMath_numberFieldNameNUMConstraints112_field_shadow, t)
+      }, ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow, t)
     },
     removeMutation: function () {
       var e = this

@@ -21,7 +21,7 @@ import * as __WEBPACK_IMPORTED_MODULE_3_react_router_dom__ from "react-router-do
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_4__template__ from "./template"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_5__Home_model_actions__ from "../../../../unrestored/home/Home/model/actions-twBc"
+import * as __WEBPACK_IMPORTED_MODULE_5__Home_model_actions__ from "./Home/model/actions"
 /**
  * use withRouter to listen the change of router
  * withRouter show use outside of Router

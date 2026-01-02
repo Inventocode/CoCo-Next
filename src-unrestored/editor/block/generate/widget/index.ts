@@ -4,6 +4,8 @@
  * 模块 ID：301__part-6
  */
 
+"use strict"
+
 import { fe, he } from "./utils"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../../unrestored/shared/1571/2636/301/85"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
@@ -110,9 +112,9 @@ function _e(e, t) {
         })
         if (this.isAnyWidget) {
           var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load$a = $$_$$_$$_$$_shared_widget_custom_load.a
-          var v = "PARAM_".concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$a)
+          var v = "PARAM_".concat($$_$$_$$_$$_shared_widget_custom_load$a)
           var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load$b = $$_$$_$$_$$_shared_widget_custom_load.b
-          this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat($$_$$_$$_$$_$$_src_shared_widget_custom_load$a, "\"></mutation>\n        </shadow>"), "DO")
+          this.append_shadow_input(v, "<shadow type=\"widget_event_param\">\n          <field name=\"PARAM_NAME\">".concat($$_$$_$$_$$_shared_widget_custom_load$b, "</field>\n          <mutation widget_type=\"").concat(this.widgetType, "\" event=\"").concat(this.event, "\" param=\"").concat($$_$$_$$_$$_shared_widget_custom_load$a, "\"></mutation>\n        </shadow>"), "DO")
         }
       },
       domToMutation: function (e) {

@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
+import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
 import * as s from "../7"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_390 from "../390"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_events_main_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_100 from "../100"
 import * as /* [auto-meaningful-name] */$$_18 from "../18"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
@@ -134,38 +134,38 @@ var T = function () {
   ])
   return e
 }()
-var /* [auto-meaningful-name] */set_doc = "set_doc"
-var /* [auto-meaningful-name] */set_doc_ack = "set_doc_ack"
+var /* [auto-meaningful-name] */Set_doc = "set_doc"
+var /* [auto-meaningful-name] */Set_doc_ack = "set_doc_ack"
 var I = "join"
-var /* [auto-meaningful-name] */join_ack = "join_ack"
-var /* [auto-meaningful-name] */operation = "operation"
-var /* [auto-meaningful-name] */operation_ack = "operation_ack"
-var /* [auto-meaningful-name] */operation_relay = "operation_relay"
-var /* [auto-meaningful-name] */get_online_user_list_ack = "get_online_user_list_ack"
-var /* [auto-meaningful-name] */svr_user_status_change = "svr_user_status_change"
-var /* [auto-meaningful-name] */svr_coll_user_change = "svr_coll_user_change"
-var /* [auto-meaningful-name] */svr_coll_user_eliminated = "svr_coll_user_eliminated"
-var /* [auto-meaningful-name] */svr_save_work = "svr_save_work"
-var /* [auto-meaningful-name] */svr_edit_permit_change = "svr_edit_permit_change"
-var /* [auto-meaningful-name] */set_doc_relay = "set_doc_relay"
-var /* [auto-meaningful-name] */user_focus_on_pos = "user_focus_on_pos"
-var /* [auto-meaningful-name] */user_focus_on_pos_ack = "user_focus_on_pos_ack"
-var /* [auto-meaningful-name] */user_focus_on_pos_relay = "user_focus_on_pos_relay"
+var /* [auto-meaningful-name] */Join_ack = "join_ack"
+var /* [auto-meaningful-name] */Operation = "operation"
+var /* [auto-meaningful-name] */Operation_ack = "operation_ack"
+var /* [auto-meaningful-name] */Operation_relay = "operation_relay"
+var /* [auto-meaningful-name] */Get_online_user_list_ack = "get_online_user_list_ack"
+var /* [auto-meaningful-name] */Svr_user_status_change = "svr_user_status_change"
+var /* [auto-meaningful-name] */Svr_coll_user_change = "svr_coll_user_change"
+var /* [auto-meaningful-name] */Svr_coll_user_eliminated = "svr_coll_user_eliminated"
+var /* [auto-meaningful-name] */Svr_save_work = "svr_save_work"
+var /* [auto-meaningful-name] */Svr_edit_permit_change = "svr_edit_permit_change"
+var /* [auto-meaningful-name] */Set_doc_relay = "set_doc_relay"
+var /* [auto-meaningful-name] */User_focus_on_pos = "user_focus_on_pos"
+var /* [auto-meaningful-name] */User_focus_on_pos_ack = "user_focus_on_pos_ack"
+var /* [auto-meaningful-name] */User_focus_on_pos_relay = "user_focus_on_pos_relay"
 export { T }
-export { set_doc as S }
-export { set_doc_ack as A }
+export { Set_doc as S }
+export { Set_doc_ack as A }
 export { I }
-export { join_ack as j }
-export { operation as N }
-export { operation_ack as R }
-export { operation_relay as k }
-export { get_online_user_list_ack as x }
-export { svr_user_status_change as D }
-export { svr_coll_user_change as M }
-export { svr_coll_user_eliminated as L }
-export { svr_save_work as P }
-export { svr_edit_permit_change as B }
-export { set_doc_relay as F }
-export { user_focus_on_pos as G }
-export { user_focus_on_pos_ack as W }
-export { user_focus_on_pos_relay as U }
+export { Join_ack as j }
+export { Operation as N }
+export { Operation_ack as R }
+export { Operation_relay as k }
+export { Get_online_user_list_ack as x }
+export { Svr_user_status_change as D }
+export { Svr_coll_user_change as M }
+export { Svr_coll_user_eliminated as L }
+export { Svr_save_work as P }
+export { Svr_edit_permit_change as B }
+export { Set_doc_relay as F }
+export { User_focus_on_pos as G }
+export { User_focus_on_pos_ack as W }
+export { User_focus_on_pos_relay as U }

@@ -8,7 +8,7 @@
 
 import { _ } from "./index__part-0"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
-import * as u from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import s from "../8"
@@ -53,7 +53,7 @@ function O(e) {
               opacity: l.isInvisibleWidget || undefined === e$widget.opacity ? undefined : e$widget.opacity / 100
             },
             className: s($$_90.b),
-            "data-role": u.M
+            "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M
           }, React.createElement("div", {
             style: {
               position: "absolute",
@@ -108,7 +108,7 @@ function T(e, t, n, o) {
     return null
   }
   var d = c
-  if (d.attributes.disabled && s.type === u.H) {
+  if (d.attributes.disabled && s.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
     if (["titleSlot"].includes(t)) {
       s.attributes.color = "#7C7C7C"
     } else {
@@ -124,10 +124,10 @@ function T(e, t, n, o) {
   var p = null === (i = d.attributes.templateSlotMap[t]) || undefined === i ? undefined : i.dataBindings
   if (o && p) {
     var f = o[p]
-    if (s.type === u.H) {
+    if (s.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
       s.attributes.content = f || ""
     }
-    if (s.type === u.v && f && $$_33.Fb(f)) {
+    if (s.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v && f && $$_33.Fb(f)) {
       s.attributes.fileId = f
     }
   }

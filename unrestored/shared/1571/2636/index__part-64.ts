@@ -17,9 +17,9 @@ import * as /* [auto-meaningful-name] */$_244 from "./244"
 import * as /* [auto-meaningful-name] */$_105 from "./105"
 import * as /* [auto-meaningful-name] */$_42_index from "./42/index"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import * as k from "./11"
 import N from "./8"
@@ -166,7 +166,7 @@ var Oh = _React.memo(function (e) {
       var r = e.actors.get_actor(t)
       var /* [auto-meaningful-name] */r$value = r.value
       if (!(0, r.is_error)(r$value)) {
-        $($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(t))
+        $($$_$$_$$_$$_src_editor_redux_common_actions.ug(t))
         j()
         if (!(null === (n = e.components.get_editor()) || undefined === n)) {
           n.set_target_actor(t)
@@ -178,7 +178,7 @@ var Oh = _React.memo(function (e) {
           var c = s.x + s.width / 2 + i.x * s.width / a.clientWidth
           var l = s.y + s.height / 2 - i.y * s.height / a.clientHeight
           setTimeout(function () {
-            $($$_$$_$$_$$_src_shared_events_messagesWrapper.Og({
+            $($$_$$_$$_$$_src_editor_redux_common_actions.Og({
               position: {
                 x: c,
                 y: l
@@ -202,8 +202,8 @@ var Oh = _React.memo(function (e) {
     })
     e$events.add_listener("actor:selected", function (e) {
       var /* [auto-meaningful-name] */e$target_id = e.target_id
-      $($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(e$target_id))
-      $($$_$$_$$_$$_src_shared_events_messagesWrapper.ki("screen"))
+      $($$_$$_$$_$$_src_editor_redux_common_actions.ug(e$target_id))
+      $($$_$$_$$_$$_src_editor_redux_common_actions.ki("screen"))
       j()
     })
     e$events.add_listener("actor:drag_start", function (e) {
@@ -219,7 +219,7 @@ var Oh = _React.memo(function (e) {
         x: Math.round(e$data$position$x),
         y: Math.round(e$data$position$y)
       }
-      $($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$target_id, "position", i))
+      $($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target_id, "position", i))
     })
     e$events.add_listener("actor:rightclick", function (e) {
       x.current = true
@@ -238,12 +238,12 @@ var Oh = _React.memo(function (e) {
       if (e$target_id === Z) {
         if (x.current) {
           x.current = false
-        } else if ($($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(Z)), r.current) {
+        } else if ($($$_$$_$$_$$_src_editor_redux_common_actions.ug(Z)), r.current) {
           var o = r.current.getBoundingClientRect()
           var i = (e$data.position.x + o.width) / 2 + o.left
           var a = (o.height - e$data.position.y) / 2 + o.top
           setTimeout(function () {
-            $($$_$$_$$_$$_src_shared_events_messagesWrapper.Og({
+            $($$_$$_$$_$$_src_editor_redux_common_actions.Og({
               position: {
                 x: i,
                 y: a
@@ -359,7 +359,7 @@ var Oh = _React.memo(function (e) {
             if (a) {
               var /* [auto-meaningful-name] */a$attributes$scaleAndLock = a.attributes.scaleAndLock
               var c = r$value.get_scale()
-              $($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(t$target_id, "scaleAndLock", D.a(D.a({}, a$attributes$scaleAndLock), c)))
+              $($$_$$_$$_$$_src_editor_redux_common_actions.Lg(t$target_id, "scaleAndLock", D.a(D.a({}, a$attributes$scaleAndLock), c)))
             }
           }
         })
@@ -374,7 +374,7 @@ var Oh = _React.memo(function (e) {
           var /* [auto-meaningful-name] */r$value = r.value
           if (!r$is_error(r$value)) {
             var a = r$value.get_rotation()
-            $($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(t$target_id, "rotation", a))
+            $($$_$$_$$_$$_src_editor_redux_common_actions.Lg(t$target_id, "rotation", a))
           }
         })
         e$events.add_listener("editor_menu_btn:selected", function (t) {
@@ -467,7 +467,7 @@ var Oh = _React.memo(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              if (p(false), t$dataTransfer = t.dataTransfer, (i = t$dataTransfer.getData("widget/type")) === An.a || i === An.c) {
+              if (p(false), t$dataTransfer = t.dataTransfer, (i = t$dataTransfer.getData("widget/type")) === $$_$$_$$_$$_src_editor_widget_builtIn_types.a || i === $$_$$_$$_$$_src_editor_widget_builtIn_types.c) {
                 e.next = 5
                 break
               }
@@ -485,23 +485,23 @@ var Oh = _React.memo(function (e) {
               }
               return e.abrupt("return")
             case 15:
-              if (i === An.a) {
+              if (i === $$_$$_$$_$$_src_editor_widget_builtIn_types.a) {
                 u = (c - e$size.width / 2) * q
                 d = (e$size.height / 2 - l) * q
                 f = {
                   x: u,
                   y: d
                 }
-                $($$_$$_$$_$$_src_shared_events_messagesWrapper.fg(Z, f))
+                $($$_$$_$$_$$_src_editor_redux_common_actions.fg(Z, f))
               } else {
-                if (i === An.c) {
+                if (i === $$_$$_$$_$$_src_editor_widget_builtIn_types.c) {
                   h = (c - e$size.width / 2) * q
                   m = (e$size.height / 2 - l) * q
                   g = {
                     x: h,
                     y: m
                   }
-                  $($$_$$_$$_$$_src_shared_events_messagesWrapper.gg(Z, g))
+                  $($$_$$_$$_$$_src_editor_redux_common_actions.gg(Z, g))
                 }
               }
             case 16:
@@ -535,8 +535,8 @@ var Oh = _React.memo(function (e) {
             x: Math.round(a.x - i.x),
             y: Math.round(a.y - i.y)
           }
-          $($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e, "position", s))
-          $($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e, "pivotToCenter", c))
+          $($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "position", s))
+          $($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "pivotToCenter", c))
         }
       })
     }
@@ -552,8 +552,8 @@ var Oh = _React.memo(function (e) {
   return React.createElement("div", {
     id: M,
     className: N(wn.b, (t = {}, k.a(t, $_741.highlight, d), k.a(t, $_741.outline, Z !== ee), t)),
-    "data-role": An.M,
-    "data-widget-type": An.f,
+    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
     "data-min-width": $_244.i,
     "data-min-height": $_244.h,
     "data-max-width": $_244.g,
@@ -616,7 +616,7 @@ var wh = {
   icon: "icon-widget-canvas",
   title: "defaultCanvasWidgetTitle",
   previewAreaWidgetTitle: "canvas",
-  type: An.f,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
   editConfig: uh,
   isInvisibleWidget: $_244.e,
   widget: {

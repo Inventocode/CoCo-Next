@@ -8,7 +8,7 @@
 
 import "react"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
+import /* [auto-meaningful-name] */_ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_unrestored_about_64_73_index from "../../unrestored/about/64/73/index"
 var r = "zh-CN"
 var b = {

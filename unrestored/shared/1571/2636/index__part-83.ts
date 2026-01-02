@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_148 from "./148"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_679 from "./679"
 import * as /* [auto-meaningful-name] */$_680 from "./680"
@@ -21,7 +21,7 @@ var k_ = {
   }
 }
 var x_ = {
-  type: An.C,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.C,
   icon: $_148.a,
   title: "widgetName",
   platforms: ["web", "android", "ios"],

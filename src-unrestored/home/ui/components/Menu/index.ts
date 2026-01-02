@@ -15,9 +15,9 @@ import * as __WEBPACK_IMPORTED_MODULE_1_react_redux__ from "react-redux"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_2_react_router__ from "react-router"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_3__template__ from "../../../../../unrestored/home/components/template-My5k"
+import * as __WEBPACK_IMPORTED_MODULE_3__template__ from "./template"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_4__redux_store__ from "../../../../../unrestored/home/redux/store-q9Rd"
+import * as __WEBPACK_IMPORTED_MODULE_4__redux_store__ from "../../../redux/store"
 /* unused harmony reexport store_manager */
 /* unused harmony reexport ReduxState */
 /* harmony import */

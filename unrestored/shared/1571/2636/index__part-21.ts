@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
@@ -26,7 +26,7 @@ var gn = _React.memo(function () {
     visible: n$visible,
     className: _$_.container,
     onClose: function () {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Qi(false))
+      t($$_$$_$$_$$_src_editor_redux_common_actions.Qi(false))
     }
   }, React.createElement("div", {
     className: _$_.main
@@ -54,7 +54,7 @@ var gn = _React.memo(function () {
     type: "primary",
     className: _$_.cancelBtn,
     onClick: function () {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.yf())
+      t($$_$$_$$_$$_src_editor_redux_common_actions.yf())
     }
   }, $_710_index$a$formatMessage({
     id: "ProjectSaveProgressDialog.cancelSave"

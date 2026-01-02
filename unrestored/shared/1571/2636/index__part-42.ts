@@ -11,14 +11,14 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as Fp from "./76"
 var Wp = {
-  type: An.w,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
   category: {
     iconId: Pp.b,
-    blocks: An.w
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.w
   },
   categoryClass: {
     text: "",
@@ -29,85 +29,85 @@ var Wp = {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"input_on_focus\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_blur\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_change\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<sep gap=\"50\"></sep>", Jd.cb({
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         title: "文案",
         lineId: "text"
       }), "<block type=\"input_set_content\" uncache=\"true\">\n    ".concat(t, "\n    <value name=\"CONTENT\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">").concat($_17_index.Blink.Msg.INPUT_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n  </block>"), Jd.sb({
         property: "contentColor",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
       }), Jd.sb({
         property: "fontSize",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
       }), Jd.sb({
         property: "textAlign",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
       }), Jd.cb({
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         title: "样式",
         lineId: "style"
       }), Jd.qb({
         property: "setTemplateMode",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.qb({
         property: "setBackgroundImage",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.cb({
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         title: "通用",
         lineId: "common"
       }), Jd.sb({
         property: "__opacity",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
       }), Jd.sb({
         property: "__size",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"input_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints=',,1'>100</field>\n          </shadow>\n        </value>\n    </block>"), "<block type=\"input_set_visible\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"VISIBLE\">show</field>\n      </block>"), "<block type=\"input_set_disabled\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"DISABLE\">disabled</field>\n      </block>"), "<block type=\"input_set_error_message\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"OPEN\">open</field>\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat($_17_index.Blink.Msg.INPUT_DEFAULT_ERROR_MESSAGE, "</field>\n          </shadow>\n        </value>\n      </block>"), "<sep gap=\"50\"></sep>", Jd.cb({
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         title: "返回值",
         lineId: "getter"
       }), "<block type=\"input_get_text\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), Jd.sb({
         property: "errorMessage",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.sb({
         property: "contentColor",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.sb({
         property: "fontSize",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.sb({
         property: "__opacity",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.sb({
         property: "__size",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), "<block type=\"input_get_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n      </block>"), "<sep gap=\"50\"></sep>", Jd.sb({
         property: "hasErrorMessage",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.sb({
         property: "__visible",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.w,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
         widgetId: e
       })
     ]
@@ -303,7 +303,7 @@ var Wp = {
               name: "SIZE_TYPE",
               custom: true,
               options: function () {
-                return [[t.Msg.SMALL, An.s.SMALL], [t.Msg.MEDIUM, An.s.MEDIUM], [t.Msg.LARGE, An.s.LARGE]]
+                return [[t.Msg.SMALL, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.SMALL], [t.Msg.MEDIUM, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM], [t.Msg.LARGE, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.LARGE]]
               }
             }
           ],

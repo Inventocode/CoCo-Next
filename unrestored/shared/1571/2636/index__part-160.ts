@@ -8,7 +8,7 @@
 
 import { WS } from "./index__part-158"
 import { JS } from "./index__part-159"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -56,7 +56,7 @@ var oA = _React.memo(function () {
     return e.dataWatch.dataWatchToast
   })
   var r = function () {
-    t($$_$$_$$_$$_src_shared_events_messagesWrapper.Vi(undefined))
+    t($$_$$_$$_$$_src_editor_redux_common_actions.Vi(undefined))
   }
   var o = function () {
     window.open("https://codemao-guide.yuque.com/bfiekm/sbo5kh/mhfhe11vyex2f0w4?singleDoc#", "_blank")
@@ -76,7 +76,7 @@ var oA = _React.memo(function () {
     toast: n.toast || "",
     showIcon: true,
     setVisible: function () {
-      return t($$_$$_$$_$$_src_shared_events_messagesWrapper.nh())
+      return t($$_$$_$$_$$_src_editor_redux_common_actions.nh())
     }
   })), React.createElement("span", {
     className: N(_$_.closeBtn, "DevToolCloseButton"),

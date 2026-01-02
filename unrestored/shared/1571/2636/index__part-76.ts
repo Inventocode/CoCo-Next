@@ -11,7 +11,7 @@ import { tg } from "./index__part-75"
 var Jm
 var Zm
 var Qm
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as k from "./11"
 import * as ng from "./64"
 var rg = ng.a("COLUMN")
@@ -32,10 +32,10 @@ var ag = [
   }, k.a(Jm, rg, ""), k.a(Jm, og, ""), Jm)
 ]
 var sg = {
-  type: An.m,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.m,
   category: {
     iconId: "icon-widget-local-storage",
-    blocks: An.m
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.m
   },
   getTemplate: function (e) {
     return []
@@ -58,7 +58,7 @@ var sg = {
 var cg = {
   icon: "icon-widget-local-storage",
   title: "GridWidget.widgetName",
-  type: An.m,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.m,
   previewAreaWidgetTitle: "GridWidget.widgetName",
   component: Yh,
   editConfig: tg,

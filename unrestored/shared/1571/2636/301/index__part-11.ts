@@ -6,8 +6,8 @@
 
 "use strict"
 
-import { r, o, i, a, s, c, l, u, d, p, f } from "../../../../../src/editor/block/generate"
-import { be } from "../../../../../src/editor/block/generate/widget"
+import { r, o, i, a, s, c, l, u, d, p, f } from "../../../../../src/editor/block/generate/index"
+import { be } from "../../../../../src/editor/block/generate/widget/index"
 import { Ne } from "./index__part-7"
 var We
 import * as /* [auto-meaningful-name] */$$_118_index from "../118/index"

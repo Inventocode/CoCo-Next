@@ -8,7 +8,7 @@
 
 import { we } from "../../../../../unrestored/shared/1571/2636/index__part-6"
 import { Rn } from "../../../../../unrestored/shared/1571/2636/index__part-23"
-import { to } from "../screen-list"
+import { to } from "../screen-list/index"
 import { lo } from "../../../../../unrestored/shared/1571/2636/index__part-27"
 import { zd } from "../../../../../unrestored/shared/1571/2636/index__part-33"
 import { sv, gv } from "./item"
@@ -23,53 +23,53 @@ import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_1514 from "../../../../../unrestored/shared/1571/2636/1514"
-import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1514"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1514 from "../../../../../unrestored/shared/1571/2636/1514"
+import /* [auto-meaningful-name] */_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../../unrestored/shared/1571/2636/1514"
 var bv = _React.memo(function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var r = $_16_index.d()
-  return React.createElement($_13_index.d, {
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtn,
     onClick: function () {
       var e = function () {
-        r($$_$$_$$_$$_src_shared_events_messagesWrapper.gj(true))
+        r($$_$$_$$_redux_common_actions.gj(true))
       }
       if (n) {
         e()
       } else {
-        r($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch(e))
+        r($$_$$_$$_redux_common_actions.Ch(e))
       }
     }
   }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a, {
     type: "icon-shop",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.shopIcon
-  }), !e.singleColumn && React.createElement("span", null, $_710_index$a$formatMessage({
+  }), !e.singleColumn && React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "Widget.widgetMall"
   })))
 })
 var yv
 var Ev = React.memo(function (e) {
-  var t = $_16_index.e(function (e) {
+  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.myExtensionWidgets
   })
-  var n = $_16_index.e(function (e) {
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var r = $_16_index.d()
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var o = []
   var i = []
   var a = function (e) {
@@ -89,13 +89,13 @@ var Ev = React.memo(function (e) {
       o.push(a(e))
     }
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var c = _React.useState(false)
-  var l = $_10_index.a(c, 2)
+  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
   var p = _React.useState(true)
-  var m = $_10_index.a(p, 2)
+  var m = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
   var b = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.c()
@@ -104,13 +104,13 @@ var Ev = React.memo(function (e) {
   })
   _React.useEffect(function () {
     var e = function () {
-      var e = O.a(RegeneratorRuntime.mark(function e() {
+      var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
         return RegeneratorRuntime.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(r, $$_$$_$$_$$_src_shared_events_messagesWrapper.eg())
+                return $$_$$_$$_redux_common_actions.Nf(r, $$_$$_$$_redux_common_actions.eg())
               case 2:
                 d(false)
               case 3:
@@ -128,7 +128,7 @@ var Ev = React.memo(function (e) {
       d(true)
       e()
     } else {
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.Sh([]))
+      r($$_$$_$$_redux_common_actions.Sh([]))
     }
   }, [r, n])
   _React.useEffect(function () {
@@ -146,9 +146,9 @@ var Ev = React.memo(function (e) {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.noExtensionWidgetsWrapper
   }, !e.singleColumn && React.createElement(we, {
     type: "image-text",
-    text: React.createElement(React.Fragment, null, $_710_index$a$formatMessage({
+    text: React.createElement(React.Fragment, null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "Widget.emptyTip1"
-    }), React.createElement("br", null), $_710_index$a$formatMessage({
+    }), React.createElement("br", null), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "Widget.emptyTip2"
     }))
   }), React.createElement(bv, {
@@ -169,7 +169,7 @@ var Ev = React.memo(function (e) {
       height: "100%"
     }
   }, React.createElement("img", {
-    src: _$_,
+    src: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_,
     alt: "loading"
   }))), React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtnContainer
@@ -182,49 +182,49 @@ var Ev = React.memo(function (e) {
   e.EXTENSION = "EXTENSION"
 }(yv || (yv = {}))
 var Ov = React.memo(function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.widgetEditor
   }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return !!e.oTState.collWorkId
   })
   var o = _React.useState(yv.BASIC)
-  var i = $_10_index.a(o, 2)
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   return React.createElement("div", {
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.singleColumn : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.doubleColumn, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.readonly)
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.singleColumn : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.doubleColumn, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.readonly)
   }, React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabNav
   }, React.createElement("div", {
     onClick: function () {
       s(yv.BASIC)
     },
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === yv.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)
-  }, React.createElement("div", null, $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === yv.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)
+  }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "Widget.basic"
   }))), React.createElement("div", {
     onClick: function () {
       s(yv.EXTENSION)
     },
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === yv.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)
-  }, React.createElement("div", null, $_710_index$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === yv.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)
+  }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "Widget.extension"
   })))), React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContent
   }, React.createElement("div", {
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== yv.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== yv.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)
   }, React.createElement(gv, {
     isOT: r
   })), React.createElement("div", {
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== yv.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== yv.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)
   }, React.createElement(Ev, {
     singleColumn: e.singleColumn
   }))))
 })
 var wv = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageToast
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -232,7 +232,7 @@ var wv = React.memo(function () {
   var r = undefined === e$toast ? "" : e$toast
   var /* [auto-meaningful-name] */e$showIcon = e.showIcon
   var i = undefined !== e$showIcon && e$showIcon
-  var a = $_16_index.d()
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var s = _React.useRef(null)
   _React.useEffect(function () {
     if (s.current) {
@@ -240,7 +240,7 @@ var wv = React.memo(function () {
     }
     if (e$visible) {
       s.current = window.setTimeout(function () {
-        a($$_$$_$$_$$_src_shared_events_messagesWrapper.th())
+        a($$_$$_$$_redux_common_actions.th())
       }, 3e3)
     }
   }, [a, e$visible, r])
@@ -248,7 +248,7 @@ var wv = React.memo(function () {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toastWrapper
   }, React.createElement("span", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toast
-  }, i && React.createElement($_13_index.j, {
+  }, i && React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-alert-success",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.icon
   }), r)) : null
@@ -256,25 +256,25 @@ var wv = React.memo(function () {
 var Cv = window.innerWidth > 1300 ? 144 : 92
 var Tv = 92 === Cv
 var Sv = React.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var n = _React.useRef(null)
   var r = _React.useRef(null)
-  var o = $_16_index.e(function (e) {
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.playing
   })
-  var i = $_16_index.e(function (e) {
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageVisible
   })
-  var a = $_16_index.e(function (e) {
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.isHoverBlockArea
   })
   var s = _React.useState(0)
-  var c = $_10_index.a(s, 2)
+  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
   var d = _React.useState(false)
-  var p = $_10_index.a(d, 2)
+  var p = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
   _React.useEffect(function () {
@@ -291,9 +291,9 @@ var Sv = React.memo(function () {
         e.preventDefault()
       }
       if (!a || c || (null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(s)) || undefined === n ? undefined : n.parentId)) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Wg())
+        t($$_$$_$$_redux_common_actions.Wg())
       } else {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Og({
+        t($$_$$_$$_redux_common_actions.Og({
           position: {
             x: e$clientX,
             y: e$clientY
@@ -317,7 +317,7 @@ var Sv = React.memo(function () {
       var e = Math.max(window.innerWidth / 3, 514)
       r.current.style.width = "".concat(e, "px")
       u(e + 1)
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zi(e - Cv))
+      t($$_$$_$$_redux_common_actions.Zi(e - Cv))
       if (n.current) {
         var /* [auto-meaningful-name] */n$current$offsetWidth = n.current.offsetWidth
         var /* [auto-meaningful-name] */n$current$offsetHeight = n.current.offsetHeight
@@ -325,7 +325,7 @@ var Sv = React.memo(function () {
         var s = (n$current$offsetHeight - 80) / $$_$$_$$_$$_$$_unrestored_shared_1571_2636_75.d
         var c = Math.min(a, s, 1)
         c = Math.max(c, .7)
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Xi(c))
+        t($$_$$_$$_redux_common_actions.Xi(c))
       }
     }
   }, [t])
@@ -360,16 +360,16 @@ var Sv = React.memo(function () {
   })), React.createElement(to, null), React.createElement("main", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.main,
     ref: n
-  }, React.createElement(zd, null), React.createElement(wv, null), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1512.a, null)), !o && React.createElement($_748_index.a, {
+  }, React.createElement(zd, null), React.createElement(wv, null), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1512.a, null)), !o && React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
     placement: "bottom",
-    title: $_710_index$a$formatMessage({
+    title: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: i ? "HeaderDropdown.hideWidgetAndStage" : "HeaderDropdown.showWidgetAndStage"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("div", {
-    className: N($$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.foldBtn, i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.hide : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.show, (m || a) && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.visible),
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.foldBtn, i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.hide : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.show, (m || a) && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.visible),
     onClick: function () {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Yi(!i))
+      t($$_$$_$$_redux_common_actions.Yi(!i))
     },
     onMouseEnter: function () {
       return g(true)
@@ -377,21 +377,21 @@ var Sv = React.memo(function () {
     onMouseLeave: function () {
       return g(false)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-double-arrow"
   })))), React.createElement(Rn, null)), !o && React.createElement(lo, {
     onDrag: function (e) {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zi(e - Cv))
+      t($$_$$_$$_redux_common_actions.Zi(e - Cv))
     },
     onDragEnd: function (e) {
       u(e + 1)
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zi(e - Cv))
+      t($$_$$_$$_redux_common_actions.Zi(e - Cv))
     },
     onEnter: function () {
-      return t($$_$$_$$_$$_src_shared_events_messagesWrapper.ui(true))
+      return t($$_$$_$$_redux_common_actions.ui(true))
     },
     onLeave: function () {
-      return t($$_$$_$$_$$_src_shared_events_messagesWrapper.ui(false))
+      return t($$_$$_$$_redux_common_actions.ui(false))
     },
     previewAreaRef: r
   }))

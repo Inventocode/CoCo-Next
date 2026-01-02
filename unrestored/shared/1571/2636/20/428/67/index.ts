@@ -10,7 +10,7 @@ export { d as c }
 export { p as a }
 export { f as b }
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$$_89 from "../89"
 import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../15"
@@ -36,7 +36,7 @@ function d(e, t, n, d) {
     h.attributes = $$_$$_$$_6.a($$_$$_$$_6.a({}, h.attributes), _[g])
   }
   var v = m
-  if (v.attributes.disabled && h.type === $$_$$_$$_5.H) {
+  if (v.attributes.disabled && h.type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
     if (["titleSlot"].includes(t)) {
       h.attributes.color = "#7C7C7C"
     } else {
@@ -52,10 +52,10 @@ function d(e, t, n, d) {
   var b = null === (p = v.attributes.templateSlotMap[t]) || undefined === p ? undefined : p.dataBindings
   if (d && b) {
     var y = d[b]
-    if (h.type === $$_$$_$$_5.H) {
+    if (h.type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
       h.attributes.content = y || ""
     }
-    if (h.type === $$_$$_$$_5.v && y) {
+    if (h.type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v && y) {
       if ($$_$$_$$_34_347_112.b(y)) {
         h.attributes.fileId = y
       } else {

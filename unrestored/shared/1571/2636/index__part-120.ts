@@ -10,7 +10,7 @@ import /* [auto-meaningful-name] */$_397 from "./397"
 import qv from "./88"
 import * as /* [auto-meaningful-name] */$_144 from "./144"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -45,7 +45,7 @@ var WO = _React.memo(function (e) {
   }, React.createElement("div", {
     className: $_397.btn,
     onClick: function () {
-      i($$_$$_$$_$$_src_shared_events_messagesWrapper.Dh(e$widgetId))
+      i($$_$$_$$_$$_src_editor_redux_common_actions.Dh(e$widgetId))
     }
   }, $_710_index$a$formatMessage({
     id: "edit"

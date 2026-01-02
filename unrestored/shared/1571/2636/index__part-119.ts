@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$_144 from "./144"
 import * as /* [auto-meaningful-name] */$_215 from "./215"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import * as k from "./11"
@@ -88,7 +88,7 @@ var LO = _React.memo(function (e) {
     var t = e$getValue("id")
     var i = e$getValue("parentId")
     var a = e$getValue("type")
-    if (t && i && a === An.a) {
+    if (t && i && a === $$_$$_$$_$$_src_editor_widget_builtIn_types.a) {
       setTimeout(function () {
         var e = $_215.b(i)
         var n = (null === e || undefined === e ? undefined : e.actors.get_actor(t)) || {}
@@ -174,7 +174,7 @@ var BO = _React.memo(function (e) {
       var t = e$getValue("id")
       var i = e$getValue("parentId")
       var a = e$getValue("type")
-      if (t && i && "scaleAndLock" === n && a === An.a) {
+      if (t && i && "scaleAndLock" === n && a === $$_$$_$$_$$_src_editor_widget_builtIn_types.a) {
         setTimeout(function () {
           var e = $_215.b(i)
           var n = (null === e || undefined === e ? undefined : e.actors.get_actor(t)) || {}

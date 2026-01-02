@@ -8,7 +8,7 @@
 
 import { Pn } from "../../../../../unrestored/shared/1571/2636/index__part-24"
 import { Xn, Zn, Jn, er, tr, nr, rr, or, ar, sr, cr, lr, ur, dr, pr, hr, mr, gr, wr, Nr, Rr, kr, xr, Dr, Mr, Lr, Pr, Br, Fr, Gr, Wr } from "../../../../../unrestored/shared/1571/2636/index__part-25"
-import { Cv } from "../../../../../unrestored/shared/1571/2636/index__part-87"
+import { Cv } from "../widget-list/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_702 from "../../../../../unrestored/shared/1571/2636/702"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_142 from "../../../../../unrestored/shared/1571/2636/142"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_120 from "../../../../../unrestored/shared/1571/2636/120"
@@ -19,32 +19,32 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_35 from "../../../../../unrestored/shared/1571/2636/35"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_40_index from "../../../../../unrestored/shared/1571/2636/40/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_19 from "../../../../../unrestored/shared/1571/2636/19"
-import * as /* [auto-meaningful-name] */$_295 from "../../../../../unrestored/shared/1571/2636/295"
-import * as Et from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$_26_index from "../../../../../unrestored/shared/1571/2636/26/index"
-import * as /* [auto-meaningful-name] */$_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$_190 from "../../../../../unrestored/shared/1571/2636/190"
-import * as K from "../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../events/main/messages-wrapper"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as k from "../../../../../unrestored/shared/1571/2636/11"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$_80_index from "../../../../../unrestored/shared/1571/2636/80/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_295 from "../../../../../unrestored/shared/1571/2636/295"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../../unrestored/shared/1571/2636/80/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_553 from "../../../../../unrestored/shared/1571/2636/553"
-import * as /* [auto-meaningful-name] */$_238 from "../../../../../unrestored/shared/1571/2636/238"
-import * as /* [auto-meaningful-name] */$_212 from "../../../../../unrestored/shared/1571/2636/212"
-import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/212"
-import * as Yr from "../../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */$_1511 from "../../../../../unrestored/shared/1571/2636/1511"
-import /* [auto-meaningful-name] */_$_2 from "../../../../../unrestored/shared/1571/2636/1511"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_553 from "../../../../../unrestored/shared/1571/2636/553"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_212 from "../../../../../unrestored/shared/1571/2636/212"
+import /* [auto-meaningful-name] */_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../../unrestored/shared/1571/2636/212"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1511 from "../../../../../unrestored/shared/1571/2636/1511"
+import /* [auto-meaningful-name] */_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_2 from "../../../../../unrestored/shared/1571/2636/1511"
 var Xr = React.forwardRef(function (e, t) {
-  var n = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$checkValueIsRepeat = e.checkValueIsRepeat
   var /* [auto-meaningful-name] */e$renameInputValue = e.renameInputValue
@@ -52,11 +52,11 @@ var Xr = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$value = e.value
   var l = _React.useRef(e$value)
   var u = _React.useState(e$value)
-  var d = $_10_index.a(u, 2)
+  var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = _React.useState(false)
-  var v = $_10_index.a(g, 2)
+  var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
   var E = _React.useRef(null)
@@ -94,23 +94,23 @@ var Xr = React.forwardRef(function (e, t) {
   var T = function () {
     if (w.current) {
       var /* [auto-meaningful-name] */w$current$value = w.current.value
-      var t = $_190.b(w$current$value)
-      if (t > Yr.i) {
+      var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.b(w$current$value)
+      if (t > $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i) {
         C()
       }
       if (O.current) {
-        if (!w$current$value.match(Yr.D)) {
+        if (!w$current$value.match($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.D)) {
           m(l.current)
           return void C()
         }
         y(false)
         var /* [auto-meaningful-name] */l$current = l.current
-        var r = $_190.b(l$current)
-        if (t <= Yr.i || t < r) {
+        var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.b(l$current)
+        if (t <= $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i || t < r) {
           m(w$current$value)
           return void (l.current = w$current$value)
         }
-        if (t > r && r >= Yr.i) {
+        if (t > r && r >= $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i) {
           m(l.current)
           return void C()
         }
@@ -124,7 +124,7 @@ var Xr = React.forwardRef(function (e, t) {
         if (o > -1) {
           for (var a = l$current, s = o; s < w$current$value.length; s++) {
             var c = l$current.slice(0, o) + w$current$value.slice(o, s) + l$current.slice(o)
-            if ($_190.b(c) > Yr.i) {
+            if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.b(c) > $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i) {
               break
             }
             a = c
@@ -138,7 +138,7 @@ var Xr = React.forwardRef(function (e, t) {
     }
   }
   return React.createElement("input", {
-    className: N(_$_2.input, e$className, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_2.input, e$className, {
       "coco-input-warning-animation": b
     }),
     ref: w,
@@ -158,8 +158,8 @@ var Xr = React.forwardRef(function (e, t) {
           e$onChange(t)
         }
       } else {
-        n($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
-          message: $_710_index$a$formatMessage({
+        n($$_$$_$$_redux_common_actions.mj({
+          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "blankInputValue"
           }),
           type: "error",
@@ -186,14 +186,14 @@ var Xr = React.forwardRef(function (e, t) {
 })
 var Qr = function (e) {
   var /* [auto-meaningful-name] */e$screenId = e.screenId
-  var n = $_16_index.e(function (e) {
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.onlineCooperationUserList
   })
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.userFocusOTInfoList
   })
   var o = _React.useState([])
-  var i = $_10_index.a(o, 2)
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   _React.useEffect(function () {
@@ -213,9 +213,9 @@ var Qr = function (e) {
     return e.nickname
   }).join(" ")
   return React.createElement("div", {
-    className: _$_.collaboration,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.collaboration,
     title: c
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-collaborate"
   }))
 }
@@ -242,7 +242,7 @@ var Zr = function (e) {
       {
         key: "componentDidMount",
         value: function () {
-          $_80_index.findDOMNode(this).sortableHandle = true
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this).sortableHandle = true
         }
       }, {
         key: "getWrappedInstance",
@@ -268,15 +268,15 @@ var Zr = function (e) {
   var /* [auto-meaningful-name] */e$screen = e.screen
   var /* [auto-meaningful-name] */e$index = e.index
   var /* [auto-meaningful-name] */e$title = e.title
-  var o = $_16_index.d()
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   return React.createElement("div", {
-    className: _$_.snapshotContainer,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.snapshotContainer,
     onClick: function () {
-      o($$_$$_$$_$$_src_shared_events_messagesWrapper.vg(e$index))
+      o($$_$$_$$_redux_common_actions.vg(e$index))
     }.bind(null, e$index)
   }, e$screen.snapshot && React.createElement("img", {
     src: e$screen.snapshot,
-    className: _$_.snapshot,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.snapshot,
     alt: e$title,
     draggable: false
   }))
@@ -289,16 +289,16 @@ var Jr = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$canEdit = e.canEdit
   var /* [auto-meaningful-name] */e$readonly = e.readonly
   var /* [auto-meaningful-name] */e$showDeleteIcon = e.showDeleteIcon
-  var c = $_238.e(e$screen.id)
-  var l = $_16_index.e(function (e) {
+  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.e(e$screen.id)
+  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.screens
   })
-  var u = $_16_index.e(function (e) {
+  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
   var /* [auto-meaningful-name] */e$screen$title = e$screen.title
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var m = $_16_index.d()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var m = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var g = _React.useRef(null)
   var v = _React.useRef(null)
   _React.useEffect(function () {
@@ -320,64 +320,64 @@ var Jr = React.memo(function (e) {
   }, [e$canEdit])
   return React.createElement("div", {
     ref: v,
-    className: N(_$_.item, k.a({}, _$_.selected, e$selected)),
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.selected, e$selected)),
     key: e$screen.id
   }, React.createElement("div", {
-    className: _$_.view
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.view
   }, React.createElement(Zr, {
     screen: e$screen,
     index: c,
     title: e$screen$title
   }), React.createElement(React.Fragment, null, !e$canEdit && React.createElement(React.Fragment, null, e$showDeleteIcon && !e$readonly && React.createElement("div", {
-    className: _$_.delete,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.delete,
     onClick: function (e) {
       e.stopPropagation()
       e$onDeleteIconClick(e$screen)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-delete-bold"
   })), !e$readonly && React.createElement("div", {
-    className: _$_.copy,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.copy,
     onClick: function (e) {
       if (l.size > 98) {
-        m($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+        m($$_$$_$$_redux_common_actions.mj({
           showPrefixIcon: false,
-          message: $_710_index$a$formatMessage({
+          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "screeMaxSize"
           })
         }))
       } else {
         e.stopPropagation()
-        m($$_$$_$$_$$_src_shared_events_messagesWrapper.vg(c))
-        m($$_$$_$$_$$_src_shared_events_messagesWrapper.Df(e$screen.id))
+        m($$_$$_$$_redux_common_actions.vg(c))
+        m($$_$$_$$_redux_common_actions.Df(e$screen.id))
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-copy"
   })), !!u && React.createElement(Qr, {
     screenId: e$screen.id
   })), React.createElement("div", {
-    className: _$_.index
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.index
   }, c + 1))), React.createElement("div", {
-    className: _$_.titleBox
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.titleBox
   }, e$canEdit && !e$readonly ? React.createElement(Xr, {
     value: e$screen$title,
     checkValueIsRepeat: function (e) {
-      return Et.r(e$screen.id, e)
+      return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.r(e$screen.id, e)
     },
     onChange: function (e) {
       var n
-      m($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(e$screen.id, "title", e))
-      if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
+      m($$_$$_$$_redux_common_actions.Jg(e$screen.id, "title", e))
+      if (!(null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n)) {
         n.refresh_selection()
       }
     },
     ref: g,
     renameInputValue: function (e) {
       var n
-      var r = Et.Ob(e$screen.id, e, l)
-      m($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(e$screen.id, "title", r))
-      if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
+      var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Ob(e$screen.id, e, l)
+      m($$_$$_$$_redux_common_actions.Jg(e$screen.id, "title", r))
+      if (!(null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n)) {
         n.refresh_selection()
       }
       return r
@@ -385,7 +385,7 @@ var Jr = React.memo(function (e) {
     onBlur: function () {
       e$updateCanEdit(false)
     },
-    className: _$_.editName
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.editName
   }) : React.createElement("p", {
     onClick: function (e) {
       if (!e$readonly) {
@@ -395,7 +395,7 @@ var Jr = React.memo(function (e) {
     style: {
       display: e$canEdit ? "none" : "block"
     },
-    className: _$_.canNotEdit
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.canNotEdit
   }, e$screen$title)))
 })
 var $r = function (e) {
@@ -451,7 +451,7 @@ var $r = function (e) {
           var /* [auto-meaningful-name] */this$props$collection = this$props.collection
           var /* [auto-meaningful-name] */this$props$disabled = this$props.disabled
           var /* [auto-meaningful-name] */this$props$index = this$props.index
-          var o = $_80_index.findDOMNode(this)
+          var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this)
           o.sortableInfo = {
             collection: this$props$collection,
             disabled: this$props$disabled,
@@ -502,7 +502,7 @@ var $r = function (e) {
   var /* [auto-meaningful-name] */e$updateCanEdit = e.updateCanEdit
   var /* [auto-meaningful-name] */e$editDomIndex = e.editDomIndex
   var /* [auto-meaningful-name] */e$screensSize = e.screensSize
-  var s = $_295.a(e, ["screen", "screenIndex", "currentScreenIndex", "updateCanEdit", "editDomIndex", "screensSize"])
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_295.a(e, ["screen", "screenIndex", "currentScreenIndex", "updateCanEdit", "editDomIndex", "screensSize"])
   return React.createElement(Jr, Object.assign({
     key: e$screen.id,
     screen: e$screen,
@@ -610,12 +610,12 @@ var eo = function (e) {
           var r = function () {
             if (n) {
               var r = function () {
-                var /* [auto-meaningful-name] */n$node$sortableInfo$index = n$node.sortableInfo.index
+                var /* [auto-meaningful-name] */p$sortableInfo$index = n$node.sortableInfo.index
                 var r = ar(n$node)
                 var o = gr(t.container)
                 var l = t.scrollContainer.getBoundingClientRect()
                 var m = t$props$getHelperDimensions({
-                  index: n$node$sortableInfo$index,
+                  index: p$sortableInfo$index,
                   node: n$node,
                   collection: n$collection
                 })
@@ -630,8 +630,8 @@ var eo = function (e) {
                 }
                 t.boundingClientRect = n$node.getBoundingClientRect()
                 t.containerBoundingRect = l
-                t.index = n$node$sortableInfo$index
-                t.newIndex = n$node$sortableInfo$index
+                t.index = p$sortableInfo$index
+                t.newIndex = p$sortableInfo$index
                 t.axis = {
                   x: t$props$axis.indexOf("x") >= 0,
                   y: t$props$axis.indexOf("y") >= 0
@@ -721,12 +721,12 @@ var eo = function (e) {
                 }
                 t.setState({
                   sorting: true,
-                  sortingIndex: n$node$sortableInfo$index
+                  sortingIndex: p$sortableInfo$index
                 })
                 if (t$props$onSortStart) {
                   t$props$onSortStart({
                     node: n$node,
-                    index: n$node$sortableInfo$index,
+                    index: p$sortableInfo$index,
                     collection: n$collection,
                     isKeySorting: t$manager$isKeySorting,
                     nodes: t.manager.getOrderedRefs(),
@@ -1225,7 +1225,7 @@ var eo = function (e) {
         key: "getContainer",
         value: function () {
           var /* [auto-meaningful-name] */this$props$getContainer = this.props.getContainer
-          return "function" !== typeof this$props$getContainer ? $_80_index.findDOMNode(this) : this$props$getContainer(r.withRef ? this.getWrappedInstance() : undefined)
+          return "function" !== typeof this$props$getContainer ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this) : this$props$getContainer(r.withRef ? this.getWrappedInstance() : undefined)
         }
       }, {
         key: "render",
@@ -1272,7 +1272,7 @@ var eo = function (e) {
   return n
 }(function (e) {
   var /* [auto-meaningful-name] */e$screens = e.screens
-  var n = $_295.a(e, ["screens"])
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_295.a(e, ["screens"])
   var /* [auto-meaningful-name] */e$screens$size = e$screens.size
   var o = _React.useRef(null)
   var i = _React.useRef(0)
@@ -1306,7 +1306,7 @@ var eo = function (e) {
     }
   })
   return React.createElement("div", {
-    className: _$_.list,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.list,
     ref: o
   }, e$screens.map(function (e, t) {
     return React.createElement($r, Object.assign({
@@ -1320,43 +1320,43 @@ var eo = function (e) {
 })
 var to = _React.memo(function () {
   var /* [auto-meaningful-name] */n$current
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var n = _React.useRef(null)
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.screens
   })
-  var o = $_16_index.e(function (e) {
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageWidth
   })
   var i = _React.useState(-1)
-  var a = $_10_index.a(i, 2)
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = _React.useState(0)
-  var u = $_10_index.a(l, 2)
+  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = _React.useState(0)
-  var g = $_10_index.a(m, 2)
+  var g = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
   var y = _React.useState(false)
-  var E = $_10_index.a(y, 2)
+  var E = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
   var C = _React.useRef()
   var T = _React.useRef(null)
-  var A = $_16_index.e(function (e) {
+  var A = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.currentScreenIndex
   })
-  var j = $_16_index.e(function (e) {
+  var j = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.playing
   })
-  var R = $_238.d()
-  var k = $_16_index.e(function (e) {
+  var R = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
+  var k = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.screenPanel
-  }) === K.j.ReadOnly
-  var x = $_16_index.d()
+  }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
+  var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   _React.useEffect(function () {
     var e = document.createElement("div")
     e.id = "_cocoScreenListDragContainer"
@@ -1367,8 +1367,8 @@ var to = _React.memo(function () {
       setTimeout(function () {
         var e = document.getElementById(R.id)
         if (e) {
-          $_553.a(e, 1).then(function (e) {
-            x($$_$$_$$_$$_src_shared_events_messagesWrapper.Xj(R.id, e))
+          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_553.a(e, 1).then(function (e) {
+            x($$_$$_$$_redux_common_actions.Xj(R.id, e))
           }).catch(function (e) {
             return console.error(e)
           })
@@ -1385,7 +1385,7 @@ var to = _React.memo(function () {
       var /* [auto-meaningful-name] */_n$current2
       var /* [auto-meaningful-name] */e$target = e.target
       var i = null === (_n$current = n.current) || undefined === _n$current ? undefined : _n$current.target
-      if (i && !(i.contains(e$target) || e$target.closest(".".concat(_$_.deleteScreenDialog)) || e$target.closest(".".concat(_$_.snapshotContainer)))) {
+      if (i && !(i.contains(e$target) || e$target.closest(".".concat(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.deleteScreenDialog)) || e$target.closest(".".concat(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.snapshotContainer)))) {
         if (!(null === (_n$current2 = n.current) || undefined === _n$current2)) {
           _n$current2.hideContent()
         }
@@ -1445,26 +1445,26 @@ var to = _React.memo(function () {
     if (n) {
       C.current = n
       var o = n.get("title")
-      var i = $_710_index$a$formatMessage({
+      var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
         id: "deleteScreen"
-      }) + "“" + $_190.f(o, 10) + "”?"
-      x($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+      }) + "“" + $$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(o, 10) + "”?"
+      x($$_$$_$$_redux_common_actions.zh({
         onClose: B,
         onConfirm: F,
         title: i,
         isDangerous: true,
-        content: $_710_index$a$formatMessage({
+        content: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "deleteScreenTips"
         }),
-        allowText: $_710_index$a$formatMessage({
+        allowText: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
           id: "delete"
         }),
-        className: _$_.deleteScreenDialog
+        className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.deleteScreenDialog
       }))
     }
   }
   var P = function (e) {
-    x($$_$$_$$_$$_src_shared_events_messagesWrapper.ng(e))
+    x($$_$$_$$_redux_common_actions.ng(e))
   }
   var B = function () {
     C.current = undefined
@@ -1473,21 +1473,21 @@ var to = _React.memo(function () {
     var /* [auto-meaningful-name] */C$current
     var t = null === (C$current = C.current) || undefined === C$current ? undefined : C$current.get("id")
     if (t) {
-      x($$_$$_$$_$$_src_shared_events_messagesWrapper.ng(t))
+      x($$_$$_$$_redux_common_actions.ng(t))
     }
   }
   var G = React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.closeIconBox,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.closeIconBox,
     onClick: function () {
       var /* [auto-meaningful-name] */_n$current3
       if (!(null === (_n$current3 = n.current) || undefined === _n$current3)) {
         _n$current3.hideContent()
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-close"
   })), React.createElement("section", {
-    className: _$_.popoverBody,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.popoverBody,
     style: {
       width: v + 2
     },
@@ -1502,7 +1502,7 @@ var to = _React.memo(function () {
     },
     onDeleteIconClick: function (e) {
       if (!function (e, t) {
-        return 0 === t.get("widgetIds").length && $_26_index.z.isEmptyWorkspace(e.id, t.id)
+        return 0 === t.get("widgetIds").length && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.isEmptyWorkspace(e.id, t.id)
       }(R, e)) {
         L(e.id)
       } else {
@@ -1514,56 +1514,56 @@ var to = _React.memo(function () {
       var /* [auto-meaningful-name] */e$oldIndex = e.oldIndex
       var /* [auto-meaningful-name] */e$newIndex = e.newIndex
       if (e$oldIndex === e$newIndex) {
-        x($$_$$_$$_$$_src_shared_events_messagesWrapper.vg(e$newIndex))
-        return void $_141_index.a("ScreenItemClick", {
+        x($$_$$_$$_redux_common_actions.vg(e$newIndex))
+        return void $$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("ScreenItemClick", {
           screenId: r.getIn([e$newIndex, "id"]),
           screenName: r.getIn([e$newIndex, "title"])
         })
       }
-      $_16_index.b(function () {
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.b(function () {
         var e
-        x($$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
-        x($$_$$_$$_$$_src_shared_events_messagesWrapper.yh(e$oldIndex, e$newIndex))
-        x($$_$$_$$_$$_src_shared_events_messagesWrapper.vg(e$newIndex))
-        if (!(null === (e = $_26_index.g.getToolbox()) || undefined === e)) {
+        x($$_$$_$$_redux_common_actions.Fi(true))
+        x($$_$$_$$_redux_common_actions.yh(e$oldIndex, e$newIndex))
+        x($$_$$_$$_redux_common_actions.vg(e$newIndex))
+        if (!(null === (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === e)) {
           e.refresh_selection()
         }
       })
     },
-    helperClass: _$_.dragItem,
+    helperClass: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.dragItem,
     helperContainer: document.getElementById("_cocoScreenListDragContainer") || document.body,
     useDragHandle: true
   }), !k && React.createElement("div", {
-    className: _$_.addScreen,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.addScreen,
     onClick: function () {
       if (r.size > 98) {
-        x($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+        x($$_$$_$$_redux_common_actions.mj({
           showPrefixIcon: false,
-          message: $_710_index$a$formatMessage({
+          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
             id: "screeMaxSize"
           })
         }))
       } else {
-        x($$_$$_$$_$$_src_shared_events_messagesWrapper.Hf())
+        x($$_$$_$$_redux_common_actions.Hf())
         c(r.size)
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-add2",
-    className: _$_.addBtn
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.addBtn
   }))))
   var W = function (e) {
-    x($$_$$_$$_$$_src_shared_events_messagesWrapper.vg(e))
+    x($$_$$_$$_redux_common_actions.vg(e))
   }
   return React.createElement("div", {
-    className: _$_.wrapper,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.wrapper,
     style: {
       left: j ? 0 : Cv,
       width: v
     }
   }, React.createElement("div", {
-    className: N(_$_.stageMask, O && _$_.visible)
-  }), React.createElement($_13_index.r, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.stageMask, O && _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.visible)
+  }), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r, {
     content: G,
     onOpen: function () {
       w(true)
@@ -1574,18 +1574,18 @@ var to = _React.memo(function () {
     autoClose: false,
     ref: n
   }, React.createElement("div", {
-    className: N(_$_.screenIconBox, !j && _$_.line)
-  }, React.createElement($_13_index.j, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.screenIconBox, !j && _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.line)
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-screen-manage",
-    className: _$_.screenIcon
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.screenIcon
   }), React.createElement("span", {
-    className: _$_.screenText
-  }, $_710_index$a$formatMessage({
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.screenText
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "screenManage"
   })))), !j && React.createElement("div", {
-    className: _$_.screenIndexBox
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.screenIndexBox
   }, React.createElement("div", {
-    className: N(_$_.prev, d <= 0 && _$_.hide),
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.prev, d <= 0 && _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.hide),
     onClick: function () {
       var /* [auto-meaningful-name] */T$current
       if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1595,11 +1595,11 @@ var to = _React.memo(function () {
         })
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-pick-up",
-    className: _$_.prevIcon
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.prevIcon
   })), React.createElement("div", {
-    className: N(_$_.next, d + v - 108 >= 38 * r.size && _$_.hide),
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.next, d + v - 108 >= 38 * r.size && _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.hide),
     onClick: function () {
       var /* [auto-meaningful-name] */T$current
       if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1609,16 +1609,16 @@ var to = _React.memo(function () {
         })
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-pick-up",
-    className: _$_.nextIcon
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.nextIcon
   })), React.createElement("div", {
-    className: _$_.screenIndexList,
+    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.screenIndexList,
     ref: T
   }, r.map(function (e, t) {
     return React.createElement("div", {
       id: "screen_index_".concat(t),
-      className: N(_$_.index, A === t && _$_.active),
+      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.index, A === t && _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.active),
       key: t,
       onClick: W.bind(null, t)
     }, t + 1)

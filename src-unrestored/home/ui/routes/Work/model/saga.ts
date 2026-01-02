@@ -29,7 +29,7 @@ import __WEBPACK_IMPORTED_MODULE_4_axios___default from "axios"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__actions__ from "./actions"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__redux_main_actions__ from "../../../../redux/main/actions"
+import * as __WEBPACK_IMPORTED_MODULE_6__redux_main_actions__ from "../../../../redux/actions"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_7__redux_selectors__ from "../../../../redux/selectors"
 /* harmony import */

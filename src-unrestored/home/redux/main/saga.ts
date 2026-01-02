@@ -118,7 +118,6 @@ function handleAsyncSetUserInfo(action) {
     }
   }, _marked2, this)
 }
-
 export function* mainSaga() {
   yield ReduxSaga.takeLatest(actions.GET_IS_NEW_USER_ACTION, handleIsNewUser)
   yield ReduxSaga.takeLatest(actions.ASYNC_SET_USER_INFO_ACTION, handleAsyncSetUserInfo)
