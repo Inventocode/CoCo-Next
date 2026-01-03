@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as kn from "./75"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as te from "./15"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -91,39 +91,39 @@ var Bf = {
   name: "WIDGET_ID",
   custom: true,
   options: function () {
-    return $_46_index.c().getWidgetListByType(An.E)
+    return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.E)
   }
 }
 var Ff = {
-  type: An.E,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
   category: {
     iconId: $_149.d,
-    blocks: An.E
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.E
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"slider_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_on_start_and_end\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"slider_set_range_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(kn.a, ",").concat(kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_slide_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(kn.a, ",").concat(kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), rp.d, Jd.sb({
         property: "__opacity",
-        widgetType: An.E,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
         widgetId: e,
         isSetProperty: true
       }), Jd.sb({
         property: "__size",
-        widgetType: An.E,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"slider_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"slider_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"slider_get_range_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_slide_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.E,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
         widgetId: e
       }), "<block type=\"slider_get_size\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.E,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.E,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
         widgetId: e
       })
     ]

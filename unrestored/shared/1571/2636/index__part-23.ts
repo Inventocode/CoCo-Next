@@ -10,7 +10,7 @@ import { Q } from "./index__part-3"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -23,7 +23,7 @@ import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_738_index from "./738/index"
 import * as Tn from "./68"
 import * as Sn from "./55"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_618 from "./618"
 import /* [auto-meaningful-name] */_$_ from "./618"
 var Nn = React.memo(function (e) {
@@ -96,15 +96,15 @@ var Rn = React.memo(function () {
     var /* [auto-meaningful-name] */e$data$id = e$data.id
     var /* [auto-meaningful-name] */e$data$tab = e$data.tab
     var /* [auto-meaningful-name] */e$data$value = e$data.value
-    o($$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$data$id, "value", e$data$value))
-    if (!(e$data$tab !== An.B && e$data$tab !== An.G)) {
-      o($$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$data$id, "defaultValue", e$data$value))
+    o($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$data$id, "value", e$data$value))
+    if (!(e$data$tab !== $$_$$_$$_$$_src_editor_widget_builtIn_types.B && e$data$tab !== $$_$$_$$_$$_src_editor_widget_builtIn_types.G)) {
+      o($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$data$id, "defaultValue", e$data$value))
     }
   }, [o])
   var k = _React.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data$type = e.data.type
     localStorage.removeItem("".concat(e$data$type, "DialogPermission"))
-    o($$_$$_$$_$$_src_shared_events_messagesWrapper.Ej({
+    o($$_$$_$$_$$_src_editor_redux_common_actions.Ej({
       type: e$data$type,
       visible: true,
       onConfirm: function () {
@@ -152,7 +152,7 @@ var Rn = React.memo(function () {
     if (n) {
       e$data.message = "".concat(n).concat(e$data.message)
     }
-    o($$_$$_$$_$$_src_shared_events_messagesWrapper.nf(e$data))
+    o($$_$$_$$_$$_src_editor_redux_common_actions.nf(e$data))
     if (!("error" !== e$data.type && "customError" !== e$data.type && "lintError" !== e$data.type)) {
       $_141_index.a("ConsoleDetail", {
         errorMessage: e$data.message,
@@ -175,7 +175,7 @@ var Rn = React.memo(function () {
   }, [x, R, k])
   _React.useEffect(function () {
     function e() {
-      o($$_$$_$$_$$_src_shared_events_messagesWrapper.vi(!navigator.onLine))
+      o($$_$$_$$_$$_src_editor_redux_common_actions.vi(!navigator.onLine))
     }
     window.addEventListener("online", e)
     window.addEventListener("offline", e)

@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
 import * as a from "../6"
 import * as /* [auto-meaningful-name] */$$_100 from "../100"
@@ -171,39 +171,39 @@ var et = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : He
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ce:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ce:
       return e.set("resourceLibraryDialogInfo", a.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.yc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.yc:
       return e.set("resourceLibraryDialogInfo", a.a({}, Ue))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Le:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Le:
       return e.set("resourceLibraryDialogVisible", t.payload.visible)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Xe:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Xe:
       return e.set("resourceLibraryUpdateAt", Date.now())
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.f:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.f:
       return Ve(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.hc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.hc:
       return ze(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Zc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Zc:
       return e.set("soundFileList", $$_738_66.a.List(t.payload.soundFileList))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.m:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.m:
       return Ye(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Sb:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Sb:
       return qe(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Rc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Rc:
       return Ke(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Tc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Tc:
       return Xe(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.e:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.e:
       return Qe(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Qb:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Qb:
       return Ze(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Nc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Nc:
       return Je(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Vc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Vc:
       return e.set("iconFileList", $$_738_66.a.List(t.payload.iconFileList))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Sc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Sc:
       return $e(e, t)
     default:
       return e

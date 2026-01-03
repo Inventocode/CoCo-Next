@@ -7,7 +7,7 @@
 "use strict"
 
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as k from "./11"
 import N from "./8"
@@ -44,7 +44,7 @@ var hI = _React.memo(function (e) {
   var y = b[0]
   var w = b[1]
   function C() {
-    i($$_$$_$$_$$_src_shared_events_messagesWrapper.rh())
+    i($$_$$_$$_$$_src_editor_redux_common_actions.rh())
   }
   _React.useEffect(function () {
     function e() {

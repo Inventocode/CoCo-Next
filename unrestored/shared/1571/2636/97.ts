@@ -23,7 +23,7 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as d from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as f from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
 import * as /* [auto-meaningful-name] */$_37_375 from "./37/375"
 function g(e) {
@@ -127,7 +127,7 @@ function _() {
             if (!t) {
               Object.keys(R.globalWidgets).forEach(function (e) {
                 var t = R.globalWidgets[e]
-                if (t.type === f.l) {
+                if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
                   t.attributes.fields.forEach(function (e) {
                     e.value = ""
                   })
@@ -156,7 +156,7 @@ function v() {
   e$project$screens.forEach(function (e) {
     e.widgetIds.forEach(function (e) {
       var t = d.Bb(e)
-      if ((null === t || undefined === t ? undefined : t.type) === f.H || (null === t || undefined === t ? undefined : t.type) === f.z || (null === t || undefined === t ? undefined : t.type) === f.w) {
+      if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.H || (null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.z || (null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.w) {
         var /* [auto-meaningful-name] */t$attributes$fontFamily = t.attributes.fontFamily
         if (!i[t$attributes$fontFamily]) {
           if (n[t$attributes$fontFamily].cdnUrl) {
@@ -289,7 +289,7 @@ function y() {
             D = (0, e.t0)(e.t22)
             Object.keys(D.globalWidgets).forEach(function (e) {
               var t = D.globalWidgets[e]
-              if (t.type === f.l) {
+              if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
                 t.attributes.fields.forEach(function (e) {
                   e.value = ""
                 })
@@ -312,14 +312,14 @@ function E(e, t) {
     if (o) {
       Object.keys(o).forEach(function (e) {
         var /* [auto-meaningful-name] */oE$fields$WIDGET_ID = o[e].fields.WIDGET_ID
-        if (oE$fields$WIDGET_ID && oE$fields$WIDGET_ID.startsWith(f.l) && !n.includes(oE$fields$WIDGET_ID)) {
+        if (oE$fields$WIDGET_ID && oE$fields$WIDGET_ID.startsWith($$_$$_$$_$$_src_editor_widget_builtIn_types.l) && !n.includes(oE$fields$WIDGET_ID)) {
           n.push(oE$fields$WIDGET_ID)
         }
       })
     }
   })
   return [].concat($_25_index.a(t.filter(function (e) {
-    return !e.startsWith(f.l)
+    return !e.startsWith($$_$$_$$_$$_src_editor_widget_builtIn_types.l)
   })), n)
 }
 function O(e) {

@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
 import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
@@ -116,8 +116,8 @@ var P = function (e) {
   return React.createElement("button", {
     id: r,
     className: $$_$$_$$_8($$_$$_$$_90.b, _$$_$$_$$_.buttonWidget, !e$attributes$disabled && _$$_$$_$$_.transform, $$_$$_$$_11.a({}, _$$_$$_$$_.hide, !e$visible)),
-    "data-role": $$_$$_$$_5.M,
-    "data-widget-type": $$_$$_$$_5.z,
+    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.z,
     "data-min-width": $$_$$_$$_82.p,
     "data-max-width": $$_$$_$$_82.m,
     "data-min-height": $$_$$_$$_82.n,

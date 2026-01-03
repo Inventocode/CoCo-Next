@@ -10,7 +10,7 @@ var i
 var o
 var r
 import * as a from "./11"
-import * as s from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_163 from "./163"
 var /* [auto-meaningful-name] */_5DC5FBFF = "#5DC5FBFF"
 var /* [auto-meaningful-name] */IconWidgetSwitch = "icon-widget-switch"
@@ -24,23 +24,23 @@ var _ = m / g
 var v = 26
 var b = 14
 i = {}
-a.a(i, $_163.c.DEFAULT, (r = {}, a.a(r, s.s.SMALL, {
+a.a(i, $_163.c.DEFAULT, (r = {}, a.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.SMALL, {
   width: 26,
   height: 14
-}), a.a(r, s.s.MEDIUM, {
+}), a.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM, {
   width: 36,
   height: 20
-}), a.a(r, s.s.LARGE, {
+}), a.a(r, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.LARGE, {
   width: 46,
   height: 26
 }), r))
-a.a(i, $_163.c.PRIMARY, (o = {}, a.a(o, s.s.SMALL, {
+a.a(i, $_163.c.PRIMARY, (o = {}, a.a(o, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.SMALL, {
   width: 32,
   height: 18
-}), a.a(o, s.s.MEDIUM, {
+}), a.a(o, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM, {
   width: 46,
   height: 26
-}), a.a(o, s.s.LARGE, {
+}), a.a(o, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.LARGE, {
   width: 60,
   height: 34
 }), o))

@@ -7,8 +7,8 @@
 var r = require("./2481")
 var i = require("./2482")
 var o = require("./2483")
-var a = require("./2484/index")
-var s = require("./2485")
+var a = require("./2484")
+var s = require("./2485/index")
 function c(e) {
   var t = -1
   var n = null == e ? 0 : e.length

@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */React from "react"
 import "../../../50/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_98 from "../../../551/1211/98"
 import * as /* [auto-meaningful-name] */$_1550 from "./1550"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_699_154 from "../../../551/1211/699/154"
+import * as /* [auto-meaningful-name] */$_154 from "./154"
 import * as /* [auto-meaningful-name] */$$_$$_$$_103 from "../../../103"
 import * as /* [auto-meaningful-name] */$$_$$_$$_106 from "../../../106"
 import * as /* [auto-meaningful-name] */$$_$$_$$_388 from "../../../388"
@@ -79,7 +79,7 @@ p.getDerivedStateFromProps = function (e, t) {
     previousType: e.type
   }
 }
-var _ = $$_$$_$$_551_1211_699_154.a(function (e) {
+var _ = $_154.a(function (e) {
   return $_1550.a({
     pointer: {
       width: 2,
@@ -256,7 +256,7 @@ x.defaultProps = {
   ampm: false,
   minutesStep: 1
 }
-var C = $$_$$_$$_551_1211_699_154.a(function (e) {
+var C = $_154.a(function (e) {
   return $_1550.a({
     container: {
       display: "flex",

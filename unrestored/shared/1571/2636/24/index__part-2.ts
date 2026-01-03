@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_43 from "../43"
 import * as /* [auto-meaningful-name] */$$_49 from "../49"
 import * as /* [auto-meaningful-name] */$$_18 from "../18"
 import * as /* [auto-meaningful-name] */$$_100 from "../100"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_390 from "../390"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
@@ -477,13 +477,13 @@ var Z = function () {
       value: function (e) {
         var t = $$_37_index.b()
         this.disconnect()
-        $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: function () {
-            $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
+            $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Gf())
           },
           allowText: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "confirm").toString(),
           onClose: function () {
-            $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Gf())
+            $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Gf())
           },
           title: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
           content: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
@@ -501,7 +501,7 @@ var Z = function () {
     }, {
       key: "handleSetCollAutoSave",
       value: function () {
-        $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.di(true))
+        $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.di(true))
       }
     }, {
       key: "handleUserPermissionChange",
@@ -512,12 +512,12 @@ var Z = function () {
         var o = null === ($$_37_index$d$getState$common$userInfo = $$_37_index.d.getState().common.userInfo) || undefined === $$_37_index$d$getState$common$userInfo ? undefined : $$_37_index$d$getState$common$userInfo.id
         var /* [auto-meaningful-name] */e$coll_user_id = e.coll_user_id
         if (o === e$coll_user_id) {
-          $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+          $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
             visible: true,
             message: r,
             duration: 2e3
           }))
-          $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ci(e.edit_permission === $$_18.c.ReadOnly ? $$_18.c.ReadOnly : $$_18.c.Edit))
+          $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Ci(e.edit_permission === $$_18.c.ReadOnly ? $$_18.c.ReadOnly : $$_18.c.Edit))
         }
         var a = Array.from($$_37_index.d.getState().oTState.cooperationUserList)
         var s = a.find(function (e) {
@@ -563,7 +563,7 @@ var Z = function () {
       value: function (e) {
         if (e.business_type === r.RevertProject) {
           var t = $$_37_index.b()
-          $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+          $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.zh({
             allowText: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "confirm").toString(),
             title: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "OT.tips").toString(),
             content: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "OT.revert").toString(),

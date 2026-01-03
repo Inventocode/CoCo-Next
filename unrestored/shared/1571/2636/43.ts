@@ -19,7 +19,7 @@ import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as a from "./7"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as l from "./97"
 var u = function () {
   var e
@@ -36,7 +36,7 @@ var p = function (e) {
   return $_37_index.d.dispatch(e)
 }
 function f(e) {
-  p($$_$$_$$_$$_src_shared_events_messagesWrapper.xh(e))
+  p($$_$$_$$_$$_src_editor_redux_common_actions.xh(e))
 }
 function h() {
   return m.apply(this, arguments)

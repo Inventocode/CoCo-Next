@@ -10,7 +10,7 @@ import { Ap, Ip } from "./index__part-39"
 import * as Sp from "./83"
 import * as /* [auto-meaningful-name] */$_314 from "./314"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_546_index from "./546/index"
 var Np = function (e) {
@@ -24,7 +24,7 @@ var Np = function (e) {
             e$onChange("text", e)
           }
         }, {
-          sizeAdaptive: An.q.FIXED,
+          sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED,
           maxLength: 200,
           isMultipleRow: false
         })
@@ -41,7 +41,7 @@ var Lp = {
   icon: $_314.d,
   title: "",
   previewAreaWidgetTitle: "ButtonWidget.widgetName",
-  type: An.d,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
   editConfig: Ip,
   contentTextField: "text",
   isInvisibleWidget: $_314.c,

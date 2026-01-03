@@ -4,7 +4,7 @@
  * 模块 ID：1181
  */
 
-var r = require("./1453")
+var r = require("./1453/index")
 module.exports = function (e, t, n) {
   if ("__proto__" == t && r) {
     r(e, t, {

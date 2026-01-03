@@ -5,7 +5,7 @@
  */
 
 var r = require("./1705/86/index")
-var o = require("./1657/1260")
+var o = require("./1657/1260/index")
 r({
   global: true,
   forced: parseFloat != o

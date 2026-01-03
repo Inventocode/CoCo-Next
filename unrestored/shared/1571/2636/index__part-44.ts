@@ -8,7 +8,7 @@
 
 import { qp, Xp, Qp } from "./index__part-43"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as k from "./11"
@@ -22,7 +22,7 @@ import * as /* [auto-meaningful-name] */$_206 from "./206"
 var tf = {
   icon: $_133.a,
   title: $_133.b,
-  type: An.v,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
   previewAreaWidgetTitle: "imageBox",
   component: function (e) {
     var t = e.id
@@ -41,9 +41,9 @@ var tf = {
     return React.createElement("div", {
       id: t,
       className: N(_$_.imageWidget, wn.b, k.a({}, _$_.hide, !e$visible)),
-      "data-role": An.M,
-      "data-widget-type": An.v,
-      "data-scale-mode": An.p.PROPORTIONAL,
+      "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+      "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
+      "data-scale-mode": $$_$$_$$_$$_src_editor_widget_builtIn_types.p.PROPORTIONAL,
       ref: p,
       style: {
         top: e$position.y,

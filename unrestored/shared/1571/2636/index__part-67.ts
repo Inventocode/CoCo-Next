@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_144 from "./144"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
@@ -69,10 +69,10 @@ var Gh = function (e) {
   }
 }
 var Wh = {
-  type: An.a,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
   category: {
     iconId: "icon-widget-actor",
-    blocks: An.a
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.a
   },
   categoryClass: {
     text: "",
@@ -87,62 +87,62 @@ var Wh = {
     var i = (null === o || undefined === o ? undefined : o.interval) || 200
     return [
       "<block type=\"actor_on_actor_press\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_on_actor_bump\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_on_actor_leave\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), rp.d, Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "移动",
         lineId: "move"
       }), "<block type=\"actor_move_forward\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">10</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_move_to\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_move_to_position\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_move_to_position_in_time\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">100</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), rp.d, "<block type=\"actor_set_position\" uncache=\"true\">\n    ".concat(n, "\n    <value name=\"NUM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=',,1'>100</field>\n      </shadow>\n    </value>\n    </block>"), "<block type=\"actor_change_position\" uncache=\"true\">\n    ".concat(n, "\n    <value name=\"NUM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=',,1'>100</field>\n      </shadow>\n    </value>\n    </block>"), "<block type=\"actor_change_position_type_in_time\" uncache=\"true\">\n    ".concat(n, "\n    <value name=\"NUM\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=',,1'>100</field>\n      </shadow>\n    </value>\n    <value name=\"SECONDS\">\n      <shadow type=\"math_number\">\n        <field name=\"NUM\" constraints=\"0\">1</field>\n      </shadow>\n    </value>\n    </block>"), "<block type=\"actor_move_z_index\" uncache=\"true\">\n    ".concat(n, "\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "方向",
         lineId: "rotate"
       }), "<block type=\"actor_set_rotation\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"").concat($_17_index.I.ControllerType.ANGLE_SCALE, "\" constraints=\"-180,180,,true\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_face_to\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_rotate\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_rotate_around\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "造型",
         lineId: "style"
       }), "<block type=\"actor_set_current_style_embed\" uncache=\"true\">\n      ".concat(n, "\n       <value name=\"ACTOR_ACTION_WRAPPER\">\n        <shadow type=\"actor_action_input\"></shadow>\n      </value>\n       <value name=\"ACTOR_STYLE_WRAPPER\">\n        <shadow type=\"actor_style_input\"></shadow>\n      </value>\n    </block>"), "<block type=\"actor_previous_next_style\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "动作",
         lineId: "action"
       }), "<block type=\"actor_play_action_dropdown\" uncache=\"true\">\n      <mutation pos='true'></mutation>\n      ".concat(n, "\n       <value name=\"ACTOR_ACTION_WRAPPER\">\n        <shadow type=\"actor_action_input\"></shadow>\n      </value>\n      <value name=\"ACTION_INTERVAL\">\n       <shadow type=\"action_interval\">\n           <field name=\"NUM\">").concat(i, "</field>\n        </shadow>\n      </value>\n      <value name=\"PLAY_COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_play_action_and_wait_dropdown\" uncache=\"true\">\n      ".concat(n, "\n       <value name=\"ACTOR_ACTION_WRAPPER\">\n        <shadow type=\"actor_action_input\"></shadow>\n      </value>\n      <value name=\"ACTION_INTERVAL\">\n        <shadow type=\"action_interval\">\n           <field name=\"NUM\">").concat(i, "</field>\n        </shadow>\n      </value>\n      <value name=\"PLAY_COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_stop_action\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "比例大小",
         lineId: "scale"
       }), "<block type=\"actor_set_scale_with_section\" uncache=\"true\">\n      ".concat(n, "\n        <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(100 * $_144.e, ",").concat(100 * $_144.c, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_change_scale_with_section\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "翻转",
         lineId: "flip"
       }), "<block type=\"actor_set_flipped\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "不透明度",
         lineId: "opacity"
       }), Jd.sb({
         property: "__opacity",
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"actor_change_opacity\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_show_hide_in_time\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "显隐",
         lineId: "visivle"
       }), Jd.sb({
         property: "__visible",
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         widgetId: e,
         isSetProperty: true
       }), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "对话",
         lineId: "dialog"
       }), "<block type=\"actor_show_dialog\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">Hi</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_show_dialog_in_time\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"TEXT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">Hi</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">2</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "返回值",
         lineId: "getter"
       }), "<block type=\"actor_get_scale_with_section\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_get_rotation\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         widgetId: e
       }), "<block type=\"actor_get_position\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_get_style_index\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_get_action_name\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), rp.d, "<block type=\"actor_check_if_pressed\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_check_if_bumped\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_check_if_left\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_check_if_flipped\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.sb({
         property: "__visible",
-        widgetType: An.a,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         widgetId: e
       })
     ]
@@ -596,7 +596,7 @@ var Wh = {
         custom: true,
         name: "WIDGET_ID",
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.a)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
         }
       }
       function o(e) {
@@ -1054,7 +1054,7 @@ var Wh = {
                 Ph(t), {
                   type: "group",
                   name: t.Msg.ACTOR,
-                  options: $_46_index.c().getWidgetListByType(An.a)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
                 }, {
                   type: "basic",
                   text: t.Msg.TOUCH_POINT,
@@ -1211,11 +1211,11 @@ var Wh = {
                 }, {
                   type: "group",
                   name: t.Msg.ACTOR,
-                  options: $_46_index.c().getWidgetListByType(An.a)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
                 }, {
                   type: "group",
                   name: t.Msg.BRUSH,
-                  options: $_46_index.c().getWidgetListByType(An.c)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.c)
                 }, {
                   type: "basic",
                   text: t.Msg.RANDOM,
@@ -1243,11 +1243,11 @@ var Wh = {
                 {
                   type: "group",
                   name: t.Msg.ACTOR,
-                  options: $_46_index.c().getWidgetListByType(An.a)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
                 }, {
                   type: "group",
                   name: t.Msg.BRUSH,
-                  options: $_46_index.c().getWidgetListByType(An.c)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.c)
                 }
               ]
             }
@@ -1294,11 +1294,11 @@ var Wh = {
                 [t.Msg.TOUCH_POINT, "__mouse"], {
                   type: "group",
                   name: t.Msg.ACTOR,
-                  options: $_46_index.c().getWidgetListByType(An.a)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
                 }, {
                   type: "group",
                   name: t.Msg.BRUSH,
-                  options: $_46_index.c().getWidgetListByType(An.c)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.c)
                 }, [t.Msg.RANDOM, "__random"]
               ]
             }
@@ -1763,7 +1763,7 @@ var Wh = {
             custom: true,
             name: "WIDGET_ID",
             options: function () {
-              return $_46_index.c().getWidgetListByType(An.a)
+              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
             },
             optOnchange: u
           }, {
@@ -1800,7 +1800,7 @@ var Wh = {
             custom: true,
             name: "WIDGET_ID",
             options: function () {
-              return $_46_index.c().getWidgetListByType(An.a)
+              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
             },
             optOnchange: u
           }, {
@@ -1828,7 +1828,7 @@ var Wh = {
             custom: true,
             name: "WIDGET_ID",
             options: function () {
-              return $_46_index.c().getWidgetListByType(An.a)
+              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
             },
             optOnchange: u
           }
@@ -1846,7 +1846,7 @@ var Wh = {
             custom: true,
             name: "WIDGET_ID",
             options: function () {
-              return $_46_index.c().getWidgetListByType(An.a)
+              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
             },
             optOnchange: u
           }, {
@@ -1858,7 +1858,7 @@ var Wh = {
                 Ph(t), {
                   type: "group",
                   name: t.Msg.ACTOR,
-                  options: $_46_index.c().getWidgetListByType(An.a)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
                 }, {
                   type: "basic",
                   text: t.Msg.TOUCH_POINT,
@@ -1881,7 +1881,7 @@ var Wh = {
             custom: true,
             name: "WIDGET_ID",
             options: function () {
-              return $_46_index.c().getWidgetListByType(An.a)
+              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a)
             },
             optOnchange: u
           }, {

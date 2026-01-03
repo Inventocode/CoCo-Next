@@ -9,7 +9,7 @@
 import { fA } from "./index__part-163"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
@@ -25,7 +25,7 @@ var IA = _React.memo(function (e) {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var a = $_16_index.d()
   var s = function (e) {
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.mg(e))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.mg(e))
   }
   return React.createElement("div", {
     className: _$_.iconLayoutItem
@@ -34,7 +34,7 @@ var IA = _React.memo(function (e) {
   }, React.createElement("div", {
     onClick: function () {
       if (Et.ub("ICON_FILE_ID", t).length > 0 || Et.Hb(t)) {
-        a($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           isDangerous: true,
           onConfirm: s.bind(null, t),
           allowText: $_710_index$a$formatMessage({
@@ -78,7 +78,7 @@ var IA = _React.memo(function (e) {
         }(n)) {
           r.target.value = e
           if (n !== e) {
-            a($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+            a($$_$$_$$_$$_src_editor_redux_common_actions.mj({
               message: $_710_index$a$formatMessage({
                 id: "renameFileNameRepeatTips"
               }),
@@ -86,7 +86,7 @@ var IA = _React.memo(function (e) {
             }))
           }
         } else {
-          a($$_$$_$$_$$_src_shared_events_messagesWrapper.pg(t, e, n))
+          a($$_$$_$$_$$_src_editor_redux_common_actions.pg(t, e, n))
         }
       } else {
         r.target.value = e

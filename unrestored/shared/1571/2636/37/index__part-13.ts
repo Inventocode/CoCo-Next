@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */$$_48_3_index from "../48/3/index"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_295 from "../295"
 var Sc = RegeneratorRuntime.mark(Hc)
 var Ac = RegeneratorRuntime.mark(Vc)
@@ -51,7 +51,7 @@ function Hc() {
         case 2:
           n$sent = n.sent
           n.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
             type: "error",
             message: (null === (e = $$_$$_$$_$$_$$_src_shared_ui_language.c(n$sent, "noSelectDoc")) || undefined === e ? undefined : e.toString()) || "",
             showCloseIcon: false
@@ -90,10 +90,10 @@ function Vc(e) {
           d = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           e$payload$index = e$payload.index
           h.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.gf(e$payload$variableType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.gf(e$payload$variableType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
         case 3:
           h.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bf($$_110.a("PRIMITIVE", {
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bf($$_110.a("PRIMITIVE", {
             id: e$payload$id,
             name: e$payload$name,
             type: "PRIMITIVE",
@@ -105,7 +105,7 @@ function Vc(e) {
           })))
         case 5:
           h.next = 7
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 7:
           if (d) {
             if (!(null === ($$_49$oTHelper$primitiveVariables = $$_49.oTHelper.primitiveVariables) || undefined === $$_49$oTHelper$primitiveVariables)) {
@@ -149,10 +149,10 @@ function zc(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           p = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           h.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ye(e$payload$arrayType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Ye(e$payload$arrayType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
         case 3:
           h.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bf($$_110.a("LIST", {
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bf($$_110.a("LIST", {
             id: e$payload$id,
             name: e$payload$name,
             type: "LIST",
@@ -164,7 +164,7 @@ function zc(e) {
           })))
         case 5:
           h.next = 7
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 7:
           if (p) {
             if (!(null === ($$_49$oTHelper$arrayVariables = $$_49.oTHelper.arrayVariables) || undefined === $$_49$oTHelper$arrayVariables)) {
@@ -204,10 +204,10 @@ function Yc(e) {
           o = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           i = $$_295.a(e$payload, ["setBlockValue", "isEmitOT"])
           m.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ff(i))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ff(i))
         case 3:
           m.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bf($$_110.a("DICT", {
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bf($$_110.a("DICT", {
             id: i.id,
             name: i.name,
             type: "DICT",
@@ -219,7 +219,7 @@ function Yc(e) {
           })))
         case 5:
           m.next = 7
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 7:
           if (o) {
             s = i.id
@@ -248,10 +248,10 @@ function Kc(e, t, n, r) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.zi(e, t, n, r))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.zi(e, t, n, r))
         case 2:
           o.next = 4
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(t, "name", n))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(t, "name", n))
         case 4:
           $$_26_index.m($$_26_index.c.PRIMITIVE, t, n)
         case 5:
@@ -290,23 +290,23 @@ function qc(e) {
             break
           }
           d.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.yi(e$payload$variableType, e$payload$id, e$payload$value, e$payload$screenId))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.yi(e$payload$variableType, e$payload$id, e$payload$value, e$payload$screenId))
         case 9:
           d.next = 11
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Hg(e$payload$variableType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Hg(e$payload$variableType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
         case 11:
           d.next = 13
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$payload$id, "defaultValue", e$payload$value))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
         case 13:
           if (xl.getState().project.playing) {
             d.next = 17
             break
           }
           d.next = 17
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$payload$id, "value", e$payload$value))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
         case 17:
           d.next = 19
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 19:
           if (l) {
             if (!(null === ($$_49$oTHelper$primitiveVariables = $$_49.oTHelper.primitiveVariables) || undefined === $$_49$oTHelper$primitiveVariables)) {
@@ -349,23 +349,23 @@ function Xc(e) {
             break
           }
           d.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ai(e$payload$arrayType, e$payload$id, e$payload$value, e$payload$screenId))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ai(e$payload$arrayType, e$payload$id, e$payload$value, e$payload$screenId))
         case 9:
           d.next = 11
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.yg(e$payload$arrayType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.yg(e$payload$arrayType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
         case 11:
           d.next = 13
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$payload$id, "defaultValue", e$payload$value))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
         case 13:
           if (xl.getState().project.playing) {
             d.next = 17
             break
           }
           d.next = 17
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$payload$id, "value", e$payload$value))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
         case 17:
           d.next = 19
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 19:
           if (l) {
             if (!(null === ($$_49$oTHelper$arrayVariables = $$_49.oTHelper.arrayVariables) || undefined === $$_49$oTHelper$arrayVariables)) {
@@ -385,13 +385,13 @@ function Qc(e, t, n, r) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Zh(e, t, n, r))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Zh(e, t, n, r))
         case 2:
           o.next = 4
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 4:
           o.next = 6
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(t, "name", n))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(t, "name", n))
         case 6:
           $$_26_index.m($$_26_index.c.ARRAY, t, n)
         case 7:
@@ -438,20 +438,20 @@ function Jc(e) {
             break
           }
           d.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.wi(e$payload$scopeType, e$payload$id, e$payload$value, e$payload$screenId))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.wi(e$payload$scopeType, e$payload$id, e$payload$value, e$payload$screenId))
         case 9:
           d.next = 11
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$payload$id, "defaultValue", e$payload$value))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
         case 11:
           if (xl.getState().project.playing) {
             d.next = 15
             break
           }
           d.next = 15
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(e$payload$id, "value", e$payload$value))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
         case 15:
           d.next = 17
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 17:
           if (l) {
             if (!(null === ($$_49$oTHelper$objectVariables = $$_49.oTHelper.objectVariables) || undefined === $$_49$oTHelper$objectVariables)) {
@@ -471,13 +471,13 @@ function $c(e, t, n, r) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.xi(e, t, n, r))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.xi(e, t, n, r))
         case 2:
           o.next = 4
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 4:
           o.next = 6
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pj(t, "name", n))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(t, "name", n))
         case 6:
           $$_26_index.m($$_26_index.c.OBJECT, t, n)
         case 7:
@@ -533,7 +533,7 @@ function el(e) {
             break
           }
           p.next = 12
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$payload$id, "fields", e$payload$fields, false, true, i))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$payload$id, "fields", e$payload$fields, false, true, i))
         case 12:
           l.forEach(function (e) {
             $$_26_index.m($$_26_index.c.DOC_KEYS, e.id, e.key)
@@ -568,10 +568,10 @@ function tl(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           a = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           l.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.dh(e$payload$variableType, e$payload$id, e$payload$screenId))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.dh(e$payload$variableType, e$payload$id, e$payload$screenId))
         case 3:
           l.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 5:
           $$_26_index.q($$_26_index.c.PRIMITIVE, e$payload$id)
           if (a) {
@@ -581,7 +581,7 @@ function tl(e) {
           }
           $$_26_index.m($$_26_index.c.PRIMITIVE, e$payload$id, on.g)
           l.next = 10
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bh(e$payload$id))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bh(e$payload$id))
         case 10:
         case "end":
           return l.stop()
@@ -608,10 +608,10 @@ function nl(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           a = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           l.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ah(e$payload$arrayType, e$payload$id, e$payload$screenId))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ah(e$payload$arrayType, e$payload$id, e$payload$screenId))
         case 3:
           l.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 5:
           $$_26_index.q($$_26_index.c.ARRAY, e$payload$id)
           if (a) {
@@ -621,7 +621,7 @@ function nl(e) {
           }
           $$_26_index.m($$_26_index.c.ARRAY, e$payload$id, on.g)
           l.next = 10
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bh(e$payload$id))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bh(e$payload$id))
         case 10:
         case "end":
           return l.stop()
@@ -648,10 +648,10 @@ function rl(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           a = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           l.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ch(e$payload$scopeType, e$payload$id, e$payload$screenId))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ch(e$payload$scopeType, e$payload$id, e$payload$screenId))
         case 3:
           l.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 5:
           $$_26_index.q($$_26_index.c.OBJECT, e$payload$id)
           if (a) {
@@ -660,7 +660,7 @@ function rl(e) {
             }
           }
           l.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bh(e$payload$id))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bh(e$payload$id))
         case 9:
         case "end":
           return l.stop()
@@ -689,10 +689,10 @@ function ol(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           s = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           u.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ze(e$payload$name, e$payload$screenId, e$payload$index))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Ze(e$payload$name, e$payload$screenId, e$payload$index))
         case 3:
           u.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fi(true))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         case 5:
           if (s) {
             if (!(null === ($$_49$oTHelper$broadcasts = $$_49.oTHelper.broadcasts) || undefined === $$_49$oTHelper$broadcasts)) {
@@ -760,7 +760,7 @@ function il(e) {
             })
           }
           f.next = 14
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(s.id, "columns", e$payload$columns, false, true, i))
+          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "columns", e$payload$columns, false, true, i))
         case 14:
           p.forEach(function (e) {
             $$_26_index.m($$_26_index.c.COLUMNS, e.id, e.newName)
@@ -777,19 +777,19 @@ function il(e) {
   }, Wc)
 }
 Cc = {}
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Fb, el)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ib, Hc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.u, Vc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.o, zc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.t, Yc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.L, tl)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.I, nl)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.K, rl)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.p, ol)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Hb, qc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.yb, Xc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Gb, Jc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ab, il)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Fb, el)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.ib, Hc)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.u, Vc)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.o, zc)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.t, Yc)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.L, tl)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.I, nl)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.K, rl)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.p, ol)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Hb, qc)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.yb, Xc)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Gb, Jc)
+$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ab, il)
 var al = Cc
 var sl = qn(al)
 function cl() {

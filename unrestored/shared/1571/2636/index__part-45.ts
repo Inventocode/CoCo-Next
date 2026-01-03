@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_554_index from "./554/index"
@@ -22,7 +22,7 @@ var of = function (e) {
             e$onChange("headline", e)
           }
         }, {
-          sizeAdaptive: An.q.AUTO_HEIGHT,
+          sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
           maxLength: 200
         })
       }
@@ -35,7 +35,7 @@ var of = function (e) {
             e$onChange("options", $_25_index.a(e$attributes$options))
           }
         }, {
-          sizeAdaptive: An.q.AUTO_HEIGHT,
+          sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
           maxLength: 200
         })
       }

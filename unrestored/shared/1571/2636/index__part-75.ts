@@ -12,7 +12,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_323 from "./323"
@@ -256,10 +256,10 @@ var Dm = Object.assign({}, Nm, {
 })
 var /* [auto-meaningful-name] */BKY_BLOCK_CLOUD_ICON = "%{BKY_BLOCK_CLOUD_ICON}"
 var Lm = {
-  type: An.i,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.i,
   category: {
     iconId: "icon-widget-cloud-room",
-    blocks: An.i
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.i
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -698,7 +698,7 @@ var Lm = {
 var Pm = {
   icon: "icon-widget-cloud-room",
   title: "CloudRoomWidget.widgetName",
-  type: An.i,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.i,
   previewAreaWidgetTitle: "CloudRoomWidget.widgetName",
   component: Yh,
   editConfig: Am,
@@ -946,10 +946,10 @@ var Hm = Object.assign({}, Gm, {
   successDO: "QUERY_BY_COUNT"
 })
 var Vm = {
-  type: An.h,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.h,
   category: {
     iconId: "icon-widget-cloud-db",
-    blocks: An.h
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.h
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -1061,7 +1061,7 @@ var Vm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.h)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.h)
         }
       }
       e.insertBlockProfile("cloudDB_all_column_dropdown", {
@@ -1339,7 +1339,7 @@ var Vm = {
 var zm = {
   icon: "icon-widget-cloud-db",
   title: "CloudDbWidget.widgetName",
-  type: An.h,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.h,
   previewAreaWidgetTitle: "CloudDbWidget.widgetName",
   component: Yh,
   editConfig: Bm,
@@ -1370,10 +1370,10 @@ var Ym = [
   }
 ]
 var Km = {
-  type: An.y,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.y,
   category: {
     iconId: "icon-widget-local-storage",
-    blocks: An.y
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.y
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -1457,7 +1457,7 @@ var Km = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.y)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.y)
         }
       }
       e.insertBlockProfile("local_document_all_key_field_dropdown", {
@@ -1586,7 +1586,7 @@ var Km = {
 var qm = {
   icon: "icon-widget-local-storage",
   title: "LocalStorageWidget.widgetName",
-  type: An.y,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.y,
   previewAreaWidgetTitle: "LocalStorageWidget.widgetName",
   component: Yh,
   editConfig: Ym,
@@ -1615,10 +1615,10 @@ var Xm = [
   }
 ]
 var $m = {
-  type: An.B,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.B,
   category: {
     iconId: "icon-widget-local-storage",
-    blocks: An.B
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.B
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -1702,7 +1702,7 @@ var $m = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.B)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.B)
         }
       }
       e.insertBlockProfile("new_local_document_all_key_field_dropdown", {
@@ -1831,7 +1831,7 @@ var $m = {
 var eg = {
   icon: "icon-widget-local-storage",
   title: "LocalStorageWidget.widgetName",
-  type: An.B,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.B,
   previewAreaWidgetTitle: "LocalStorageWidget.widgetName",
   component: Yh,
   editConfig: Xm,

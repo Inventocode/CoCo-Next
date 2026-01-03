@@ -10,7 +10,7 @@ import { h } from "./index__part-1"
 import { me, ge, Ee } from "./index__part-4"
 import * as /* [auto-meaningful-name] */$$_207_index from "../207/index"
 import * as /* [auto-meaningful-name] */$$_228_index from "../228/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
@@ -213,7 +213,7 @@ function Pe(e) {
   Ge(1)
 }
 function Be(e) {
-  $$_37_index.d.dispatch($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ti(false))
+  $$_37_index.d.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.ti(false))
 }
 function Fe(e) {
   var t
@@ -233,7 +233,7 @@ function Fe(e) {
               return
             }
             if (!Le) {
-              $$_37_index.d.dispatch($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ti(t))
+              $$_37_index.d.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.ti(t))
             }
             if (t) {
               je.create(e)

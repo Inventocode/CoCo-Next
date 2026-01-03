@@ -12,7 +12,7 @@ import { vp } from "./index__part-37"
 import * as /* [auto-meaningful-name] */$_545 from "./545"
 import * as /* [auto-meaningful-name] */$_146 from "./146"
 import * as Qu from "./60"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import /* [auto-meaningful-name] */Color from "color"
 import * as D from "./6"
@@ -75,7 +75,7 @@ var Op = function (e) {
       R(false)
     }
   }, [e$selected])
-  var x = e$attributes$sizeAdaptive !== An.q.FIXED
+  var x = e$attributes$sizeAdaptive !== $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED
   _React.useEffect(function () {
     if (x && O.current && e$onChange) {
       var /* [auto-meaningful-name] */O$current = O.current
@@ -102,7 +102,7 @@ var Op = function (e) {
   }, [e$attributes$justifyContent, e$onChange, e$position.y, e$size.height])
   var M = {
     width: e$size.width,
-    height: e$attributes$sizeAdaptive & An.q.AUTO_HEIGHT ? "auto" : e$size.height,
+    height: e$attributes$sizeAdaptive & $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT ? "auto" : e$size.height,
     minWidth: "".concat($_146.m, "px"),
     minHeight: "".concat($_146.l, "px"),
     backgroundColor: Color(e$attributes$backgroundColor).toString(),
@@ -117,8 +117,8 @@ var Op = function (e) {
   }
   return React.createElement(React.Fragment, null, React.createElement("div", {
     id: t,
-    "data-widget-type": An.H,
-    "data-role": An.M,
+    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     className: N(wn.b, _$_.textWidget, k.a({}, _$_.hide, !e$visible)),
     "data-min-width": $_146.m,
     "data-min-height": $_146.l,
@@ -139,7 +139,7 @@ var Op = function (e) {
   }, React.createElement("span", {
     className: _$_.content
   }, e$attributes$content + "\n"))), React.createElement("div", {
-    "data-role": An.M,
+    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     ref: O,
     className: N(wn.b, _$_.textWidget, "coco-widget-editor", k.a({}, _$_.hide, !e$visible)),
     onMouseDown: function (e) {
@@ -169,7 +169,7 @@ var wp = function (e) {
 var Cp = {
   icon: $_146.b,
   title: "",
-  type: An.H,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
   previewAreaWidgetTitle: "TextWidget.widgetName",
   component: wp,
   editConfig: Xd,
@@ -185,7 +185,7 @@ var Cp = {
       height: $_146.a
     },
     attributes: {
-      sizeAdaptive: An.q.AUTO_HEIGHT,
+      sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
       backgroundColor: $_146.d,
       color: $_146.e,
       fontFamily: $_146.f,

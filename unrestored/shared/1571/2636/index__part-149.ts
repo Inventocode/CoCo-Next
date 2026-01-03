@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as te from "./15"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
@@ -110,13 +110,13 @@ var RT = _React.memo(function (e) {
     if (q) {
       if (e$variableType === K.b.PRIMITIVE) {
         var e = ng.a("VARIABLE")
-        V($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+        V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
           title: "addPrimitiveVariableName",
           placeholder: $_710_index$a$formatMessage({
             id: "addPrimitiveVariableNamePlaceholder"
           }),
           onConfirm: function (t, n) {
-            V($$_$$_$$_$$_src_shared_events_messagesWrapper.uf(n, e, t, 0, q.id, 0))
+            V($$_$$_$$_$$_src_editor_redux_common_actions.uf(n, e, t, 0, q.id, 0))
           },
           validators: [
             {
@@ -139,13 +139,13 @@ var RT = _React.memo(function (e) {
         }))
       } else if (e$variableType === K.b.ARRAY) {
         var r = ng.a("ARRAY")
-        V($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+        V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
           title: "addArrayVariableName",
           placeholder: $_710_index$a$formatMessage({
             id: "addArrayVariableNamePlaceholder"
           }),
           onConfirm: function (e, t) {
-            V($$_$$_$$_$$_src_shared_events_messagesWrapper.of(t, r, e, [], q.id, 0))
+            V($$_$$_$$_$$_src_editor_redux_common_actions.of(t, r, e, [], q.id, 0))
           },
           validators: [
             {
@@ -168,13 +168,13 @@ var RT = _React.memo(function (e) {
         }))
       } else if (e$variableType === K.b.OBJECT) {
         var o = ng.a("OBJECT")
-        V($$_$$_$$_$$_src_shared_events_messagesWrapper.nj({
+        V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
           title: "object.createNewObject",
           placeholder: $_710_index$a$formatMessage({
             id: "object.createNewObjectNamePlaceholder"
           }),
           onConfirm: function (e, t) {
-            V($$_$$_$$_$$_src_shared_events_messagesWrapper.tf({
+            V($$_$$_$$_$$_src_editor_redux_common_actions.tf({
               scopeType: t,
               id: o,
               name: e,
@@ -217,7 +217,7 @@ var RT = _React.memo(function (e) {
       }) : B.find(function (t) {
         return t.id === e
       })) {
-        V($$_$$_$$_$$_src_shared_events_messagesWrapper.qj({
+        V($$_$$_$$_$$_src_editor_redux_common_actions.qj({
           array: r,
           arrayType: n
         }))
@@ -229,7 +229,7 @@ var RT = _React.memo(function (e) {
       }) : U.find(function (t) {
         return t.id === e
       })) {
-        V($$_$$_$$_$$_src_shared_events_messagesWrapper.rj({
+        V($$_$$_$$_$$_src_editor_redux_common_actions.rj({
           variable: o,
           scopeType: n
         }))
@@ -243,11 +243,11 @@ var RT = _React.memo(function (e) {
       if (r !== e$name) {
         if (!te.j(r)) {
           if ("" !== r && r[0].match(/[0-9_]/)) {
-            V($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+            V($$_$$_$$_$$_src_editor_redux_common_actions.mj({
               message: $$_$$_$$_$$_src_shared_ui_language.c(X, "invalidVariableFirstChar")
             }))
           }
-          return void V($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+          return void V($$_$$_$$_$$_src_editor_redux_common_actions.mj({
             message: $$_$$_$$_$$_src_shared_ui_language.c(X, "invalidVariableName")
           }))
         }
@@ -301,19 +301,19 @@ var RT = _React.memo(function (e) {
             default:
               throw Error("Unreachable branch")
           }
-          V($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+          V($$_$$_$$_$$_src_editor_redux_common_actions.mj({
             message: $$_$$_$$_$$_src_shared_ui_language.c(X, a)
           }))
           return void o.target.focus()
         }
         if (e$variableType === K.b.PRIMITIVE) {
-          $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(V, $$_$$_$$_$$_src_shared_events_messagesWrapper.Hg(n, e.id, "name", r, q.id))
+          $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.Hg(n, e.id, "name", r, q.id))
         } else {
           if (e$variableType === K.b.ARRAY) {
-            $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(V, $$_$$_$$_$$_src_shared_events_messagesWrapper.yg(n, e.id, "name", r, q.id))
+            $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.yg(n, e.id, "name", r, q.id))
           } else {
             if (e$variableType === K.b.OBJECT) {
-              V($$_$$_$$_$$_src_shared_events_messagesWrapper.Gg({
+              V($$_$$_$$_$$_src_editor_redux_common_actions.Gg({
                 scopeType: n,
                 id: e.id,
                 key: "name",
@@ -342,7 +342,7 @@ var RT = _React.memo(function (e) {
             if (r) {
               r = te.mb(r)
             }
-            V($$_$$_$$_$$_src_shared_events_messagesWrapper.Hg(n, t.id, "defaultValue", r, q.id))
+            V($$_$$_$$_$$_src_editor_redux_common_actions.Hg(n, t.id, "defaultValue", r, q.id))
           }
         }(n, e, t)
       },
@@ -368,13 +368,13 @@ var RT = _React.memo(function (e) {
   var se = function (e, n) {
     if (q) {
       if (e$variableType === K.b.PRIMITIVE) {
-        $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(V, $$_$$_$$_$$_src_shared_events_messagesWrapper.Lf(n, e.id, q.id))
+        $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.Lf(n, e.id, q.id))
       } else {
         if (e$variableType === K.b.ARRAY) {
-          $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(V, $$_$$_$$_$$_src_shared_events_messagesWrapper.If(n, e.id, q.id))
+          $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.If(n, e.id, q.id))
         } else {
           if (e$variableType === K.b.OBJECT) {
-            V($$_$$_$$_$$_src_shared_events_messagesWrapper.Kf(n, e.id, q.id))
+            V($$_$$_$$_$$_src_editor_redux_common_actions.Kf(n, e.id, q.id))
           }
         }
       }

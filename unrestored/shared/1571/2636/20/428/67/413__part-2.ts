@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_546_index from "../../../546/index"
@@ -32,7 +32,7 @@ var j = function (e) {
       if (!e$attributes$disabled) {
         $$_$$_index.emitWidgetEvent(e$type, "onButtonPressPress", t)
       }
-      $$_242.b(t, $$_$$_$$_5.d, $$_$$_$$_28_index.m("click", e$animationRecord))
+      $$_242.b(t, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d, $$_$$_$$_28_index.m("click", e$animationRecord))
       $$_$$_$$_55.b.playerWidgetLog({
         widgetId: t,
         widgetType: e$type,

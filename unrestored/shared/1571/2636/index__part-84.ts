@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$_131 from "./131"
 import * as /* [auto-meaningful-name] */$_262 from "./262"
 import * as /* [auto-meaningful-name] */$_200 from "./200"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_682 from "./682"
 var M_ = {
@@ -24,7 +24,7 @@ var M_ = {
   }
 }
 var L_ = {
-  type: An.a,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
   icon: "icon-widget-actor",
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -50,7 +50,7 @@ var P_ = {
   }
 }
 var B_ = {
-  type: An.g,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.g,
   icon: $_200.e,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -81,7 +81,7 @@ var F_ = {
   }
 }
 var G_ = {
-  type: An.L,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
   icon: $_262.a,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -132,7 +132,7 @@ var W_ = {
   }
 }
 var U_ = {
-  type: An.F,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
   icon: $_131.e,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -189,7 +189,7 @@ var H_ = {
   }
 }
 var V_ = {
-  type: An.E,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
   icon: $_149.d,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -238,7 +238,7 @@ var z_ = {
   }
 }
 var Y_ = {
-  type: An.x,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.x,
   icon: $_127.i,
   title: "widgetName",
   platforms: ["web", "android", "ios"],
@@ -255,7 +255,7 @@ var K_ = {
   }
 }
 var q_ = {
-  type: An.A,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
   icon: $_172.g,
   title: "widgetName",
   platforms: ["web", "android", "ios"],

@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_206 from "../../../206"
 import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
@@ -45,7 +45,7 @@ _a = _React.memo(function (e) {
   var _ = (null === p || undefined === p ? undefined : p.widgetIds) || []
   _.forEach(function (e) {
     var t = n.get(e)
-    if (t && t.type === $$_$$_$$_5.f) {
+    if (t && t.type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
       m++
     }
   })
@@ -60,7 +60,7 @@ _a = _React.memo(function (e) {
       $$_$$_index.emitGyroscopePhoneShake(t)
       $$_$$_$$_55.b.playerWidgetLog({
         widgetId: "",
-        widgetType: $$_$$_$$_5.t,
+        widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.t,
         message: "onGyroscopeShake"
       })
     }
@@ -74,7 +74,7 @@ _a = _React.memo(function (e) {
       v(t)
     }
   }, [m, t, g, v])
-  if (p && p.type === $$_$$_$$_5.D) {
+  if (p && p.type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D) {
     var /* [auto-meaningful-name] */p$backgroundColor = p.backgroundColor
     var /* [auto-meaningful-name] */p$backgroundImageResizeMode = p.backgroundImageResizeMode
     var /* [auto-meaningful-name] */p$backgroundImage = p.backgroundImage
@@ -96,14 +96,14 @@ _a = _React.memo(function (e) {
       className: "screen-view",
       onClick: function (e) {
         var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
           $$_313.n(t)
           $$_$$_index.emitScreenPress(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
         }
       },
       onMouseDown: function (e) {
         var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
           $$_313.k(t)
           document.addEventListener("mouseup", function () {
             return $$_313.b()
@@ -118,14 +118,14 @@ _a = _React.memo(function (e) {
       },
       onMouseUp: function (e) {
         var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
           $$_313.n(t)
           $$_$$_index.emitScreenPressOut(t, e.nativeEvent.offsetX, e.nativeEvent.offsetY)
         }
       },
       onMouseMove: function (e) {
         var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
-        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+        if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
           r.current.x = e.nativeEvent.offsetX
           r.current.y = e.nativeEvent.offsetY
         }
@@ -133,7 +133,7 @@ _a = _React.memo(function (e) {
       onTouchStart: function (e) {
         if ($$_$$_$$_15.W()) {
           var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
-          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
             $$_$$_index.emitScreenPressIn(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)
             $_index.a(function () {
               return $$_$$_index.emitScreenPressHoldAndWait(t, r.current.x || 0, r.current.y || 0)
@@ -144,7 +144,7 @@ _a = _React.memo(function (e) {
       onTouchMove: function (e) {
         if ($$_$$_$$_15.W()) {
           var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
-          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
             r.current.x = e.targetTouches[0].clientX
             r.current.y = e.targetTouches[0].clientX
           }
@@ -153,7 +153,7 @@ _a = _React.memo(function (e) {
       onTouchEnd: function (e) {
         if ($$_$$_$$_15.W()) {
           var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
-          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_5.D)) {
+          if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
             $$_$$_index.emitScreenPressOut(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)
           }
         }

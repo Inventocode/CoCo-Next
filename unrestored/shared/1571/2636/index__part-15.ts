@@ -11,7 +11,7 @@ import * as Et from "./9"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as Z from "./97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -108,7 +108,7 @@ var Dt = _React.memo(function () {
               n.prev = 2
               o = Z.a(a)
               n.next = 6
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(t, $$_$$_$$_$$_src_shared_events_messagesWrapper.tg({
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(t, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
                 isUpdate: o,
                 isAutoSave: true,
                 isNeedReport: true
@@ -119,7 +119,7 @@ var Dt = _React.memo(function () {
             case 8:
               n.prev = 8
               n.t0 = n.catch(2)
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "Publish.projectSaveFail"
                 }),
@@ -153,7 +153,7 @@ var Dt = _React.memo(function () {
             case 27:
               n.prev = 27
               n.t1 = n.catch(20)
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "package.uploadIconFailed"
                 })
@@ -187,7 +187,7 @@ var Dt = _React.memo(function () {
               n.next = 49
               break
             case 47:
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "package.checkSplashFailed"
                 })
@@ -199,14 +199,14 @@ var Dt = _React.memo(function () {
             case 51:
               n.prev = 51
               n.t2 = n.catch(35)
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "package.uploadSplashFailed"
                 })
               }))
               throw n.t2
             case 55:
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Ji({
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Ji({
                 apkIcon: i,
                 apkSplash: s
               }))
@@ -222,7 +222,7 @@ var Dt = _React.memo(function () {
                 n.next = 63
                 break
               }
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "waitForAssetUploading"
                 })
@@ -233,9 +233,9 @@ var Dt = _React.memo(function () {
               n.next = 58
               break
             case 66:
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Li(true))
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Ki(0))
-              $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(t, $$_$$_$$_$$_src_shared_events_messagesWrapper.jg())
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Li(true))
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Ki(0))
+              $$_$$_$$_$$_src_editor_redux_common_actions.Nf(t, $$_$$_$$_$$_src_editor_redux_common_actions.jg())
             case 69:
             case "end":
               return n.stop()
@@ -262,7 +262,7 @@ var Dt = _React.memo(function () {
         })) {
           v(i)
         } else {
-          t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
             showPrefixIcon: false,
             message: $_710_index$a$formatMessage({
               id: "package.iconMimeTypeNotSupport"
@@ -293,7 +293,7 @@ var Dt = _React.memo(function () {
         })) {
           C(i)
         } else {
-          t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
             showPrefixIcon: false,
             message: $_710_index$a$formatMessage({
               id: "package.splashMimeTypeNotSupport"
@@ -360,9 +360,9 @@ var Dt = _React.memo(function () {
     }(),
     onClose: function () {
       if (i$packageCompleteVisible) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Li(true))
+        t($$_$$_$$_$$_src_editor_redux_common_actions.Li(true))
       }
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Ii(false))
+      t($$_$$_$$_$$_src_editor_redux_common_actions.Ii(false))
     }
   }, React.createElement("div", {
     className: _$_.packageContent
@@ -378,7 +378,7 @@ var Dt = _React.memo(function () {
     type: "text",
     defaultValue: i$packageInfo.apkName,
     onBlur: function (e, n) {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Ji({
+      t($$_$$_$$_$$_src_editor_redux_common_actions.Ji({
         apkName: n.target.value
       }))
     },

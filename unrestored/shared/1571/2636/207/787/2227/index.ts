@@ -11,13 +11,13 @@ var i = require("./2230")
 var o = require("./2233/index")
 var a = require("./1131")
 var s = require("./978")
-var /* [auto-meaningful-name] */require$_1358_index$Scope = require("./1358/index").Scope
+var /* [auto-meaningful-name] */require$_1358$Scope = require("./1358").Scope
 var /* [auto-meaningful-name] */require$_2237$version = require("./2237").version
 module.exports = {
   version: require$_2237$version,
   Reference: a,
   Variable: s,
-  Scope: require$_1358_index$Scope,
+  Scope: require$_1358$Scope,
   ScopeManager: i,
   analyze: function (e, t) {
     var n = function e(t, n) {

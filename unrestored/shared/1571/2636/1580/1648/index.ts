@@ -20,7 +20,7 @@ var f = require("../1694/577/index")
 var /* [auto-meaningful-name] */require$$_1581_635$f = require("../1581/635").f
 var /* [auto-meaningful-name] */require$$_1705_386$f = require("../1705/386").f
 var /* [auto-meaningful-name] */require$$_1705_300_index$f = require("../1705/300/index").f
-var /* [auto-meaningful-name] */require$_761_index$trim = require("./761/index").trim
+var /* [auto-meaningful-name] */require$_761$trim = require("./761").trim
 var /* [auto-meaningful-name] */o$Number = o.Number
 var /* [auto-meaningful-name] */o$Number$prototype = o$Number.prototype
 var y = "Number" == c(f(o$Number$prototype))
@@ -38,7 +38,7 @@ var E = function (e) {
   var c
   var l = d(e, "number")
   if ("string" == typeof l && l.length > 2) {
-    if (43 === (t = (l = require$_761_index$trim(l)).charCodeAt(0)) || 45 === t) {
+    if (43 === (t = (l = require$_761$trim(l)).charCodeAt(0)) || 45 === t) {
       if (88 === (n = l.charCodeAt(2)) || 120 === n) {
         return NaN
       }

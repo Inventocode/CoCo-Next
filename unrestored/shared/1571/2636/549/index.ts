@@ -11,7 +11,7 @@ import /* [auto-meaningful-name] */$_159 from "./159"
 import * as /* [auto-meaningful-name] */$$_77 from "../77"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as p from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import d from "../8"
 import /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */React from "react"
@@ -339,8 +339,8 @@ _a = function (e) {
   }, [e$attributes$disabled, je, n, e$isEditState, e$onEndToSlid, e$onSliderChange, e$onStartToSlid, S, e$attributes$value])
   return React.createElement("div", {
     id: n,
-    "data-role": p.M,
-    "data-widget-type": p.E,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.E,
     className: d($$_90.b, $$_11.a({}, $_159.hide, !e$visible)),
     style: {
       top: e$position.y,

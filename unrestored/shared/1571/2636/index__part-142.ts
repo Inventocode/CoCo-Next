@@ -15,7 +15,7 @@ import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -61,7 +61,7 @@ var UC = _React.memo(function (e) {
                 i = false
               }
             }
-            c($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, e, n, undefined, undefined, undefined, i))
+            c($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, e, n, undefined, undefined, undefined, i))
           }(e, n, e$type)
         },
         getValue: l,
@@ -105,7 +105,7 @@ var HC = _React.memo(function () {
   }) === K.j.ReadOnly
   var c = function () {
     var t
-    if (!(e($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false)), i)) {
+    if (!(e($$_$$_$$_$$_src_editor_redux_common_actions.fj(false)), i)) {
       $_26_index.g.setSelectedItem()
       if (!(null === (t = $_26_index.g.getToolbox()) || undefined === t)) {
         t.flyout.hide()
@@ -113,7 +113,7 @@ var HC = _React.memo(function () {
     }
   }
   if (n && !a) {
-    e($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false))
+    e($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
     return null
   }
   if (null === a || undefined === a ? undefined : a.type) {

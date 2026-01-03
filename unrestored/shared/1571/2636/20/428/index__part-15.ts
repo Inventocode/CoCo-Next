@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
 import * as /* [auto-meaningful-name] */$$_$$_48_index from "../../48/index"
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
 import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
@@ -68,7 +68,7 @@ function bl(e) {
   return t
 }
 function yl(e) {
-  for (var t in e) if (e[t].type === $$_$$_5.u) {
+  for (var t in e) if (e[t].type === $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.u) {
     var /* [auto-meaningful-name] */eT$attributes = e[t].attributes
     var /* [auto-meaningful-name] */eT$attributes$body = eT$attributes.body
     var /* [auto-meaningful-name] */eT$attributes$header = eT$attributes.header

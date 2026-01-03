@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as l from "../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_301_index from "../301/index"
-import * as p from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 var h = new (function () {
   function e() {
@@ -128,7 +128,7 @@ var h = new (function () {
             return t.get_name() === e
           })
           if (!c) {
-            if (n === p.m) {
+            if (n === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
               return
             }
             var l = $$_$$_$$_$$_$$_src_editor_block_toolbox.e()[n]
@@ -173,12 +173,12 @@ var h = new (function () {
             console.error(d)
           }
           var u = []
-          this._appendTreeNode(e.id, e.title, p.D, a, o)
+          this._appendTreeNode(e.id, e.title, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D, a, o)
           e.widgetIds.forEach(function (e) {
             var t = l.dc.get(e)
             if (t) {
               var r = l.qb(e)
-              if (!((null === r || undefined === r ? undefined : r.type) && [p.x, p.A].includes(r.type))) {
+              if (!((null === r || undefined === r ? undefined : r.type) && [$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(r.type))) {
                 n._appendTreeNode(t.id, l.Fb(t.id), t.type, a, o)
                 if (-1 === u.indexOf(t.type)) {
                   u.unshift(t.type)
@@ -270,7 +270,7 @@ var h = new (function () {
           var t
           var n = e
           var r = l.qb(e)
-          if ((null === r || undefined === r ? undefined : r.type) && [p.x, p.A].includes(r.type)) {
+          if ((null === r || undefined === r ? undefined : r.type) && [$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(r.type)) {
             n = r.id
           }
           var o = null === (t = $$_17_index.Blink.mainWorkspace.get_toolbox()) || undefined === t ? undefined : t.find_node_by_name(n)

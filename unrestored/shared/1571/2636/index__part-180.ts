@@ -12,7 +12,7 @@ var tj
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as /* [auto-meaningful-name] */$_57_index from "./57/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -71,8 +71,8 @@ var mj = _React.memo(function (e) {
     if (r$visible) {
       nj = setTimeout(function () {
         l(false)
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zg())
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+        t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
+        t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
           type: "error",
           message: "登录页面加载失败，请稍后重试!"
         }))
@@ -91,7 +91,7 @@ var mj = _React.memo(function (e) {
             n = !(i.length > 0 && undefined !== i[0]) || i[0]
             r = i.length > 1 ? i[1] : undefined
             if (n) {
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zg())
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
             }
             e.prev = 3
             e.next = 6
@@ -101,18 +101,18 @@ var mj = _React.memo(function (e) {
               e.next = 17
               break
             }
-            t($$_$$_$$_$$_src_shared_events_messagesWrapper.wg(e$sent))
+            t($$_$$_$$_$$_src_editor_redux_common_actions.wg(e$sent))
             $_141_index.b(e$sent.id)
             if (r) {
               p(r, true, !n, "")
             }
-            t($$_$$_$$_$$_src_shared_events_messagesWrapper.cg())
-            t($$_$$_$$_$$_src_shared_events_messagesWrapper.dg())
+            t($$_$$_$$_$$_src_editor_redux_common_actions.cg())
+            t($$_$$_$$_$$_src_editor_redux_common_actions.dg())
             t($_162.D())
             return e.abrupt("return", true)
           case 17:
             Et.J()
-            t($$_$$_$$_$$_src_shared_events_messagesWrapper.wg(null))
+            t($$_$$_$$_$$_src_editor_redux_common_actions.wg(null))
             if (r) {
               p(r, false, !n, "")
             }
@@ -123,7 +123,7 @@ var mj = _React.memo(function (e) {
             e.prev = 22
             e.t0 = e.catch(3)
             Et.J()
-            t($$_$$_$$_$$_src_shared_events_messagesWrapper.hi())
+            t($$_$$_$$_$$_src_editor_redux_common_actions.hi())
             if (r) {
               p(r, false, !n, e.t0.message)
             }
@@ -161,11 +161,11 @@ var mj = _React.memo(function (e) {
               if (r$onSuccess) {
                 r$onSuccess()
               }
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.bg())
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.cg())
+              t($$_$$_$$_$$_src_editor_redux_common_actions.bg())
+              t($$_$$_$$_$$_src_editor_redux_common_actions.cg())
               l(false)
             case 7:
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zg())
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
             case 8:
             case "end":
               return e.stop()
@@ -222,7 +222,7 @@ var mj = _React.memo(function (e) {
             case "BIND_PHONE_SUCCESS":
               break
             case "CLOSE_ANIMATION_END":
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zg())
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
               l(false)
               break
             case "REPORT":

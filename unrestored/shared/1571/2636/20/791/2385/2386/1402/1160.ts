@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./311")
+var r = require("../1410/311/index")
 var /* [auto-meaningful-name] */r$ArrayIsArray = r.ArrayIsArray
 var /* [auto-meaningful-name] */r$ObjectSetPrototypeOf = r.ObjectSetPrototypeOf
 var /* [auto-meaningful-name] */require$_427_983$EventEmitter = require("./427/983").EventEmitter

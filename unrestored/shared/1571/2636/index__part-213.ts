@@ -14,7 +14,7 @@ import * as Yr from "./53"
 import * as _n from "./47"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -48,7 +48,7 @@ var kP = _React.memo(function () {
   var O = _React.useRef(null)
   var w = _React.useRef(null)
   var C = _React.useCallback(function () {
-    t($$_$$_$$_$$_src_shared_events_messagesWrapper.Yg())
+    t($$_$$_$$_$$_src_editor_redux_common_actions.Yg())
   }, [t])
   _React.useEffect(function () {
     if (y.current && w.current) {

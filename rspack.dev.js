@@ -35,9 +35,13 @@ module.exports = (env) => {
             rules: [
                 {
                     test: /\.tsx?$/i,
-                    exclude: [/node_modules/, /unrestored/],
+                    exclude: [
+                        /[\\\/]node_modules[\\\/]/i,
+                        /[\\\/]unrestored[\\\/]/i,
+                        /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i
+                    ],
                     loader: "builtin:swc-loader",
-                    options: /** @type {SWC.Config} */({
+                    options: /** @satisfies {SWC.Config} */({
                         jsc: {
                             parser: {
                                 syntax: "typescript",
@@ -50,7 +54,30 @@ module.exports = (env) => {
                                     development: true,
                                     refresh: true
                                 }
-                            }
+                            },
+                            target: "esnext",
+                            externalHelpers: true
+                        }
+                    })
+                }, {
+                    test: /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i,
+                    loader: "builtin:swc-loader",
+                    options: /** @satisfies {SWC.Config} */({
+                        jsc: {
+                            parser: {
+                                syntax: "typescript",
+                                tsx: true,
+                                decorators: true
+                            },
+                            transform: {
+                                react: {
+                                    runtime: "automatic",
+                                    development: true,
+                                    refresh: true
+                                }
+                            },
+                            target: "es5",
+                            externalHelpers: true
                         }
                     })
                 }, {
@@ -62,7 +89,7 @@ module.exports = (env) => {
         },
         plugins: [
             new ReactRefreshPlugin({
-                exclude: [/node_modules/, /external-module\.ts$/],
+                exclude: [/[\\\/]node_modules[\\\/]/i, /[\\\/]external-module\.ts$/i],
                 overlay: false
             })
         ]

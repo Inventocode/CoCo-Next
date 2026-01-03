@@ -10,7 +10,7 @@ import qv from "./88"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
@@ -107,8 +107,8 @@ var QE = _React.memo(function (e) {
         }
       }, e)
     })(t)()
-    if (u === An.H && d && "height" === e) {
-      e$onChange("sizeAdaptive", An.q.FIXED)
+    if (u === $$_$$_$$_$$_src_editor_widget_builtIn_types.H && d && "height" === e) {
+      e$onChange("sizeAdaptive", $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED)
     }
   }
   return React.createElement($_13_index.i, {

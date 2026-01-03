@@ -7,7 +7,7 @@
 "use strict"
 
 import { En } from "../../../../src/editor/ui/header/wrapper"
-import { Sv } from "../../../../src/editor/ui/preview-area/widget-list"
+import { Sv } from "../../../../src/editor/ui/preview-area/widget-list/index"
 import { iI, aI } from "./index__part-170"
 import { lI } from "./index__part-171"
 import { hI } from "./index__part-172"
@@ -23,8 +23,8 @@ import { bL } from "./index__part-201"
 import { wL } from "./index__part-202"
 import { AL } from "./index__part-203"
 import { kL } from "./index__part-204"
-import { ML } from "../../../../src/editor/ui/dialogs/download-apk"
-import { UL } from "../../../../src/editor/ui/dialogs/release-info"
+import { ML } from "../../../../src/editor/ui/dialogs/download-apk/index"
+import { UL } from "../../../../src/editor/ui/dialogs/release-info/index"
 import { ZL } from "./index__part-208"
 import { aP } from "./index__part-210"
 import { _P } from "./index__part-211"
@@ -38,7 +38,7 @@ import /* [auto-meaningful-name] */$_937 from "./937"
 import * as te from "./15"
 import * as Z from "./97"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
@@ -94,7 +94,7 @@ var cB = _React.memo(function () {
       if (e$onDeny) {
         e$onDeny()
       }
-      d($$_$$_$$_$$_src_shared_events_messagesWrapper.Ej({
+      d($$_$$_$$_$$_src_editor_redux_common_actions.Ej({
         type: e$type,
         visible: false
       }))
@@ -107,7 +107,7 @@ var cB = _React.memo(function () {
       if (e$onConfirm) {
         e$onConfirm()
       }
-      d($$_$$_$$_$$_src_shared_events_messagesWrapper.Ej({
+      d($$_$$_$$_$$_src_editor_redux_common_actions.Ej({
         type: e$type,
         visible: false
       }))
@@ -133,14 +133,14 @@ function dB() {
           switch (t.prev = t.next) {
             case 0:
               t.next = 2
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(e, $$_$$_$$_$$_src_shared_events_messagesWrapper.tg({
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
                 isUpdate: n,
                 isAutoSave: false,
                 isNeedReport: true
               }))
             case 2:
               if (t.sent) {
-                e($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                   message: "作品保存成功",
                   type: "success"
                 }))

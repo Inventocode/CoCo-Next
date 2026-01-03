@@ -8,7 +8,7 @@ export { getTemplate as e }
 export { loadCustomWidget as r }
 export { registerCustomWidget as v }
 export { z as s }
-export { Z as u }
+export { loadOnlineSafeWidget as u }
 export { te as w }
 export { getPropertyTypes as l }
 export { ce as m }
@@ -30,7 +30,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_60 from "../../../../unrestored/shared/1571/2636/60"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
 import * as Language from "../../ui/language"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../unrestored/shared/1571/2636/49"
+import { oTHelper } from "../../../editor/collaboration/ot-helper"
 import * as ExternalModule from "./external-module"
 import * as Store from "../../../editor/redux/store"
 import * as Actions from "../../../editor/redux/common/actions"
@@ -44,7 +44,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as Type from "./type"
 
 import * as types from "./types"
-import * as Internal from "../internal/types"
+import * as Internal from "../../../editor/widget/internal/types"
 
 class InvisibleWidget implements types.InvisibleWidget {
 
@@ -449,10 +449,7 @@ function toInternalWidget(types: types.Types, widget: types.Widget): Internal.Wi
   }
   if (types.docs?.url) {
     const { url } = types.docs
-    editConfigs.push({
-      type: "HelpUrl",
-      url
-    })
+    editConfigs.push({ type: "HelpUrl", url })
   }
   const b: string = $$_$$_$$_$$_unrestored_shared_1571_2636_301_85.c(type)
   return {
@@ -710,9 +707,7 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
         const { type } = types
         if (!isFromWidgetShop) {
           Storage.addUnsafeExtension({ type, types, code })
-          $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget(
-            { type, code }
-          )
+          oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget({ type, code })
         }
         Store.dispatch(Actions.updateExtensionWidgetListAction())
         resolve(types)
@@ -782,55 +777,25 @@ async function checkKeyWords(code: string) {
   })
 }
 
-function Z(e, t) {
-  return J.apply(this, arguments)
-}
-function J() {
-  return (J = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(BabelRuntimeHelperRegeneratorRuntime.mark(function e(t, n) {
-    var r
-    var /* [auto-meaningful-name] */e$sent1
-    var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */e$sent$type
-    return BabelRuntimeHelperRegeneratorRuntime.wrap(function (e) {
-      for (;;) {
-        switch (e.prev = e.next) {
-          case 0:
-            if (t.startsWith("https")) {
-              e.next = 2
-              break
-            }
-            return e.abrupt("return")
-          case 2:
-            r = "".concat(t, "?t=").concat(Math.random())
-            e.next = 5
-            return axiosWithCredentials.get(r, {
-              responseType: "blob",
-              withCredentials: false
-            })
-          case 5:
-            e$sent1 = e.sent
-            e.next = 8
-            return importCostumeWidgetFromBlob(e$sent1.data, true)
-          case 8:
-            e$sent = e.sent
-            e$sent$type = e$sent.type
-            Storage.addSafeExtension({
-              id: n,
-              type: e$sent$type,
-              types: e$sent,
-              cdnUrl: t
-            })
-            return e.abrupt("return", e$sent)
-          case 12:
-          case "end":
-            return e.stop()
-        }
-      }
-    }, e)
-  }))).apply(this, arguments)
+async function loadOnlineSafeWidget(cdnUrl: string, id: number): Promise<void | types.Types> {
+  if (!cdnUrl.startsWith("https")) {
+    return
+  }
+  const requestUrl = `${cdnUrl}?t=${Math.random()}`
+  const response = await axiosWithCredentials.get(requestUrl, {
+    responseType: "blob",
+    withCredentials: false
+  })
+  const types = await importCostumeWidgetFromBlob(response.data, true)
+  const { type } = types
+  Storage.addSafeExtension({ id, type, types, cdnUrl })
+  return types
 }
 
-export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFileStorage[], unsafeWidgetsStorage: UnsafeExtensionFileStorage[]) {
+export async function loadWidgetsFromFile(
+  safeWidgets: SafeExtensionFileStorage[],
+  unsafeWidgets: UnsafeExtensionFileStorage[]
+) {
   async function importWidget(code: string): Promise<void> {
     const { types, widget } = await loadCustomWidget(code, false)
     registerCustomWidget({ types, widget })
@@ -839,20 +804,17 @@ export async function loadWidgetFromStorage(safeWidgetStorage: SafeExtensionFile
   }
   $$_$$_$$_$$_unrestored_shared_1571_2636_9.u($$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION)
   Storage.clear()
-  if (unsafeWidgetsStorage.length) {
-    await Promise.all(unsafeWidgetsStorage.map(({ code }): Promise<void> => importWidget(code)))
+  if (unsafeWidgets.length) {
+    await Promise.all(unsafeWidgets.map(({ code }): Promise<void> => importWidget(code)))
   }
   Store.dispatch(Actions.updateExtensionWidgetListAction())
-  const onlineWidgetsStorage = safeWidgetStorage.filter((widget) =>
+  const onlineSafeWidgets = safeWidgets.filter((widget) =>
     widget.cdnUrl.startsWith("https") && widget.id)
-  if (!onlineWidgetsStorage.length) {
+  if (!onlineSafeWidgets.length) {
     return
   }
-  return Promise.all(onlineWidgetsStorage.map(function (e) {
-    return Z(e.cdnUrl, e.id)
-  }))
+  return Promise.all(onlineSafeWidgets.map((widget) => loadOnlineSafeWidget(widget.cdnUrl, widget.id)))
 }
-export { loadWidgetFromStorage as x }
 
 function te(e, t, n) {
   return ne.apply(this, arguments)
@@ -934,7 +896,7 @@ function ne() {
               }
             })
             return e.abrupt("return", Promise.all(g.map(function (e) {
-              return Z(e.cdnUrl, e.id)
+              return loadOnlineSafeWidget(e.cdnUrl, e.id)
             })))
           case 26:
           case "end":

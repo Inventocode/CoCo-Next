@@ -14,10 +14,10 @@ import * as s from "./8"
 import c from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_472 from "./472"
 import /* [auto-meaningful-name] */_$_ from "./472"
-import * as h from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as m from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
@@ -60,7 +60,7 @@ _a = React.memo(function () {
   React.useEffect(function () {
     var t = function t() {
       setImmediate(function () {
-        R($$_$$_$$_$$_src_shared_events_messagesWrapper.Wg())
+        R($$_$$_$$_$$_src_editor_redux_common_actions.Wg())
         document.removeEventListener("mousedown", t, true)
       })
     }
@@ -72,13 +72,13 @@ _a = React.memo(function () {
     }
   }, [R, w$visible])
   var k = function (e) {
-    R($$_$$_$$_$$_src_shared_events_messagesWrapper.Ef(m.w(w$widgetId), e))
+    R($$_$$_$$_$$_src_editor_redux_common_actions.Ef(m.w(w$widgetId), e))
   }
   var x = function () {
     var /* [auto-meaningful-name] */n$current
     var t = null === (n$current = n.current) || undefined === n$current ? undefined : n$current.id
     if (j && t) {
-      R($$_$$_$$_$$_src_shared_events_messagesWrapper.Mf(t, j))
+      R($$_$$_$$_$$_src_editor_redux_common_actions.Mf(t, j))
     }
   }
   var D = function () {
@@ -107,11 +107,11 @@ _a = React.memo(function () {
   }, _React.createElement("div", {
     className: c(_$_.menuItem),
     onMouseDown: function () {
-      R($$_$$_$$_$$_src_shared_events_messagesWrapper.Ef(m.w(w$widgetId)))
+      R($$_$$_$$_$$_src_editor_redux_common_actions.Ef(m.w(w$widgetId)))
     }
   }, $_710_index$a$formatMessage({
     id: "copyAndPaste"
-  })), ![h.a, h.c].includes((null === A || undefined === A ? undefined : A.type) || "") && _React.createElement("div", {
+  })), ![$$_$$_$$_$$_src_editor_widget_builtIn_types.a, $$_$$_$$_$$_src_editor_widget_builtIn_types.c].includes((null === A || undefined === A ? undefined : A.type) || "") && _React.createElement("div", {
     className: c(_$_.menuItem, _$_.copyTo),
     onMouseEnter: function () {
       E(true)
@@ -149,7 +149,7 @@ _a = React.memo(function () {
       var o = $_26_index.z.checkSomeFieldValueIsSelected("WIDGET_ID", m.U(w$widgetId))
       if (r || o) {
         n.current = m.Bb(w$widgetId)
-        R($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        R($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: x,
           onClose: D,
           allowText: $_710_index$a$formatMessage({
@@ -163,7 +163,7 @@ _a = React.memo(function () {
         }))
       } else {
         if (j) {
-          R($$_$$_$$_$$_src_shared_events_messagesWrapper.Mf(w$widgetId, j))
+          R($$_$$_$$_$$_src_editor_redux_common_actions.Mf(w$widgetId, j))
         }
       }
     },

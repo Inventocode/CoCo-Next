@@ -7,18 +7,18 @@
 "use strict"
 
 var r = require("process")
-var i = require("./402/index")
+var i = require("./402")
 var /* [auto-meaningful-name] */i$aggregateTwoErrors = i.aggregateTwoErrors
 var /* [auto-meaningful-name] */i$codes$ERR_MULTIPLE_CALLBACK = i.codes.ERR_MULTIPLE_CALLBACK
 var /* [auto-meaningful-name] */i$AbortError = i.AbortError
-var /* [auto-meaningful-name] */require$_311$Symbol = require("./311").Symbol
-var u = require("./583")
+var /* [auto-meaningful-name] */require$$_1410_311_index$Symbol = require("../1410/311/index").Symbol
+var u = require("../1410/583")
 var /* [auto-meaningful-name] */u$kIsDestroyed = u.kIsDestroyed
 var /* [auto-meaningful-name] */u$isDestroyed = u.isDestroyed
 var /* [auto-meaningful-name] */u$isFinished = u.isFinished
 var /* [auto-meaningful-name] */u$isServerRequest = u.isServerRequest
-var p = require$_311$Symbol("kDestroy")
-var _ = require$_311$Symbol("kConstruct")
+var p = require$$_1410_311_index$Symbol("kDestroy")
+var _ = require$$_1410_311_index$Symbol("kConstruct")
 function A(e, t, n) {
   if (e) {
     e.stack

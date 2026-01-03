@@ -21,9 +21,13 @@ module.exports = (env) => {
             rules: [
                 {
                     test: /\.tsx?$/i,
-                    exclude: [/node_modules/, /unrestored/],
+                    exclude: [
+                        /[\\\/]node_modules[\\\/]/i,
+                        /[\\\/]unrestored[\\\/]/i,
+                        /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i
+                    ],
                     loader: "builtin:swc-loader",
-                    options: /** @type {SWC.Config} */({
+                    options: /** @satisfies {SWC.Config} */({
                         jsc: {
                             parser: {
                                 syntax: "typescript",
@@ -36,7 +40,30 @@ module.exports = (env) => {
                                     development: false,
                                     refresh: false
                                 }
-                            }
+                            },
+                            target: "esnext",
+                            externalHelpers: true
+                        }
+                    })
+                }, {
+                    test: /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i,
+                    loader: "builtin:swc-loader",
+                    options: /** @satisfies {SWC.Config} */({
+                        jsc: {
+                            parser: {
+                                syntax: "typescript",
+                                tsx: true,
+                                decorators: true
+                            },
+                            transform: {
+                                react: {
+                                    runtime: "automatic",
+                                    development: false,
+                                    refresh: false
+                                }
+                            },
+                            target: "es5",
+                            externalHelpers: true
                         }
                     })
                 }, {

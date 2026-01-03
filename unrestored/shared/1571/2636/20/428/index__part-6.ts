@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as a from "./12"
 import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
 import * as /* [auto-meaningful-name] */$_242 from "./242"
@@ -99,7 +99,7 @@ function un(e, t) {
   })
   var n = a.c(e)
   if (n) {
-    $_242.b(e, $$_$$_5.w, $$_$$_28_index.m("error", n, Jt(e)))
+    $_242.b(e, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, $$_$$_28_index.m("error", n, Jt(e)))
   }
 }
 function dn(e) {

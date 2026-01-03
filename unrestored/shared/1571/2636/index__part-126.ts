@@ -8,8 +8,8 @@
 
 import /* [auto-meaningful-name] */$_186 from "./186"
 import qv from "./88"
-import * as An from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -39,7 +39,7 @@ var hw = _React.memo(function (e) {
   }
   function v(e) {
     if (e !== a) {
-      l($$_$$_$$_$$_src_shared_events_messagesWrapper.Af(e$widgetId, e, function () {
+      l($$_$$_$$_$$_src_editor_redux_common_actions.Af(e$widgetId, e, function () {
         if (e$onChange) {
           e$onChange(n, e)
         }
@@ -103,7 +103,7 @@ var hw = _React.memo(function (e) {
     type: "icon-closed"
   })), React.createElement("div", {
     className: $_186.templateListBox
-  }, Object.keys(An.o).map(function (e) {
+  }, Object.keys($$_$$_$$_$$_src_editor_widget_builtIn_types.o).map(function (e) {
     return React.createElement("div", {
       className: N($_186.templateItem, e === a && $_186.active),
       key: e,

@@ -10,7 +10,7 @@ export { h as a }
 export { m as b }
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */_React from "react"
-import * as i from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_42_index from "../42/index"
 import * as /* [auto-meaningful-name] */$$_64 from "../64"
 import * as /* [auto-meaningful-name] */$$_206 from "../206"
@@ -42,8 +42,8 @@ function f(e) {
   return _React.createElement("div", {
     id: t,
     className: _$_.screenView,
-    "data-role": i.D,
-    "data-widget-type": i.D,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -61,9 +61,9 @@ function f(e) {
 }
 function h(e) {
   return {
-    id: $$_64.a(i.D),
+    id: $$_64.a($$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D),
     title: e,
-    type: i.D,
+    type: $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
     position: {
       x: 0,
       y: 0

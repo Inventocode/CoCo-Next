@@ -8,9 +8,9 @@
 
 var r = require("../../180")
 var i = require("../../204")
-var o = require("../../../../37/611/283")
-var a = require("../../../../37/611/284/index")
-var /* [auto-meaningful-name] */require$$_1358_1130_index$Syntax = require("../1358/1130/index").Syntax
+var o = require("../../../../1058/1393/1143/283/index")
+var a = require("../../../../1058/1393/1143/284/index")
+var /* [auto-meaningful-name] */require$_1130_index$Syntax = require("./1130/index").Syntax
 var c = function (e) {
   o(n, e)
   var t = a(n)
@@ -108,7 +108,7 @@ var c = function (e) {
       key: "isPattern",
       value: function (e) {
         var /* [auto-meaningful-name] */e$type = e.type
-        return e$type === require$$_1358_1130_index$Syntax.Identifier || e$type === require$$_1358_1130_index$Syntax.ObjectPattern || e$type === require$$_1358_1130_index$Syntax.ArrayPattern || e$type === require$$_1358_1130_index$Syntax.SpreadElement || e$type === require$$_1358_1130_index$Syntax.RestElement || e$type === require$$_1358_1130_index$Syntax.AssignmentPattern
+        return e$type === require$_1130_index$Syntax.Identifier || e$type === require$_1130_index$Syntax.ObjectPattern || e$type === require$_1130_index$Syntax.ArrayPattern || e$type === require$_1130_index$Syntax.SpreadElement || e$type === require$_1130_index$Syntax.RestElement || e$type === require$_1130_index$Syntax.AssignmentPattern
       }
     }
   ])

@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as /* [auto-meaningful-name] */$_374 from "./374"
 import * as /* [auto-meaningful-name] */$_503 from "./503"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 var /* [auto-meaningful-name] */$_374$FieldTextInput$prototype$show_editor = $_374.FieldTextInput.prototype.show_editor
 $_374.FieldTextInput.prototype.show_editor = function () {
@@ -18,7 +18,7 @@ $_374.FieldTextInput.prototype.show_editor = function () {
   var t = this
   var n = $_374$FieldTextInput$prototype$show_editor.call(this)
   if ("text_rich_text" === (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.type)) {
-    $$_37_index.a($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Bh({
+    $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Bh({
       content: this.get_value(),
       onConfirm: function (e) {
         t.set_value($$_28_index.i(e))

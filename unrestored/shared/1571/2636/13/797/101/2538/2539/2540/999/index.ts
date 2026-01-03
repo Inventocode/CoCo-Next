@@ -4,7 +4,7 @@
  * 模块 ID：999
  */
 
-var r = require("./2518/index")
+var r = require("./2518")
 var i = require("./1177")
 var o = require("./2519")
 var a = require("./2520")

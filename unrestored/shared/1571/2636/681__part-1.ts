@@ -8,12 +8,12 @@
 
 import * as o from "./6"
 import * as i from "./95"
-import * as a from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as s from "./33"
 import * as c from "./76"
 import * as l from "./60"
 var u = {
-  type: a.w,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
   icon: i.b,
   title: "widgetName",
   platforms: ["web", "android", "ios"],

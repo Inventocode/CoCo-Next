@@ -9,12 +9,12 @@
 import { Df } from "./index__part-53"
 import { Pf, Ff } from "./index__part-54"
 import * as /* [auto-meaningful-name] */$_149 from "./149"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Gf from "./77"
 var Wf = {
   icon: $_149.d,
   title: "slider",
-  type: An.E,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
   previewAreaWidgetTitle: "slider",
   component: Pf,
   editConfig: Df,
@@ -31,7 +31,7 @@ var Wf = {
       minValue: 0,
       maxValue: 100,
       color: $_149.b,
-      sizeType: An.s.MEDIUM,
+      sizeType: $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM,
       direction: Gf.b.HORIZONTAL,
       sliderType: Gf.d.TEMPLATE,
       mode: Gf.c.DEFAULT,

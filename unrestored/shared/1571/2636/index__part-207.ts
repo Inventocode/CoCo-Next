@@ -7,7 +7,7 @@
 "use strict"
 
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as O from "./7"
@@ -48,7 +48,7 @@ var zL = _React.memo(function (e) {
                             r.next = 4
                             break
                           }
-                          t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                             message: $_710_index$a$formatMessage({
                               id: "cloudGrid.FileSizeLimit"
                             })
@@ -67,7 +67,7 @@ var zL = _React.memo(function (e) {
                             r.next = 13
                             break
                           }
-                          t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                             message: $_710_index$a$formatMessage({
                               id: "cloudGrid.FileColumnSizeLimit"
                             })
@@ -80,7 +80,7 @@ var zL = _React.memo(function (e) {
                             r.next = 17
                             break
                           }
-                          t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                             message: $_710_index$a$formatMessage({
                               id: "cloudGrid.FileColumnNameRepeat"
                             })
@@ -93,7 +93,7 @@ var zL = _React.memo(function (e) {
                             r.next = 21
                             break
                           }
-                          t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                             message: $_710_index$a$formatMessage({
                               id: "cloudGrid.FileRowSizeLimit"
                             })
@@ -101,7 +101,7 @@ var zL = _React.memo(function (e) {
                           return r.abrupt("return")
                         case 21:
                           e.handleSetGridInfo(r$sent.data, r$sent.header)
-                          t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                          t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                             message: $_710_index$a$formatMessage({
                               id: "cloudGrid.fileImportSuccess"
                             })
@@ -114,7 +114,7 @@ var zL = _React.memo(function (e) {
                           r.t0 = r.catch(4)
                           console.info(r.t0)
                           if ("cell length larger than 1000" === r.t0.error) {
-                            t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+                            t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                               message: $_710_index$a$formatMessage({
                                 id: "cloudGrid.FileCellSizeLimit"
                               })
@@ -134,7 +134,7 @@ var zL = _React.memo(function (e) {
               if (0 === e.getColumnInfo().length) {
                 a(i)
               } else {
-                t($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+                t($$_$$_$$_$$_src_editor_redux_common_actions.zh({
                   onConfirm: function () {
                     a(i)
                   },

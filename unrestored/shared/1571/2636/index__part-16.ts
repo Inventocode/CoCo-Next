@@ -9,7 +9,7 @@
 var Tt
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -81,8 +81,8 @@ var Gt = _React.memo(function () {
     if (Tt) {
       clearInterval(Tt)
     }
-    e($$_$$_$$_$$_src_shared_events_messagesWrapper.Mi(false))
-    e($$_$$_$$_$$_src_shared_events_messagesWrapper.Li(true))
+    e($$_$$_$$_$$_src_editor_redux_common_actions.Mi(false))
+    e($$_$$_$$_$$_src_editor_redux_common_actions.Li(true))
   }
   var k = function () {
     var n = O.a(RegeneratorRuntime.mark(function n() {
@@ -94,14 +94,14 @@ var Gt = _React.memo(function () {
                 n.next = 3
                 break
               }
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.Ch())
+              e($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
               return n.abrupt("return")
             case 3:
               if (!g$isPackaging) {
                 n.next = 6
                 break
               }
-              e($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $_710_index$a$formatMessage({
                   id: "package.packagePending"
                 }),
@@ -111,7 +111,7 @@ var Gt = _React.memo(function () {
             case 6:
               n.prev = 6
               n.next = 9
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(e, $$_$$_$$_$$_src_shared_events_messagesWrapper.Vf())
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.Vf())
             case 9:
               R()
               n.next = 14
@@ -146,7 +146,7 @@ var Gt = _React.memo(function () {
   }, g$packageInfo.apkName), React.createElement($_1508_index.CopyToClipboard, {
     text: "com.codemao.coco.apk_".concat(A),
     onCopy: function () {
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+      e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
         message: $_710_index$a$formatMessage({
           id: "package.appidCopied"
         }),

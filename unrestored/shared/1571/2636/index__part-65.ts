@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_277 from "./277"
 var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_1_0_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\",,1\">0</field></shadow>"
@@ -268,10 +268,10 @@ var jh = {
   }
 }
 var Nh = {
-  type: An.c,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
   category: {
     iconId: "icon-widget-brush",
-    blocks: An.c
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.c
   },
   categoryClass: {
     text: "",
@@ -282,31 +282,31 @@ var Nh = {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       Jd.cb({
-        widgetType: An.c,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
         title: "图形",
         lineId: "graph"
       }), "<block type=\"brush_draw_point\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_draw_line\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X1\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n      <value name=\"Y1\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>0</field>\n        </shadow>\n      </value>\n      <value name=\"X2\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>60</field>\n        </shadow>\n      </value>\n      <value name=\"Y2\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>60</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_draw_circle\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"RADIUS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>40</field>\n        </shadow>\n      </value>\n      <mutation items=\"1\"></mutation>\n    </block>"), "<block type=\"brush_draw_arc\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"RADIUS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>40</field>\n        </shadow>\n      </value>\n      <value name=\"ANGLE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">180</field>\n        </shadow>\n      </value>\n      <mutation items=\"1\"></mutation>\n    </block>"), "<block type=\"brush_draw_polygon\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"STEP\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>4</field>\n        </shadow>\n      </value>\n      <value name=\"SIDE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>40</field>\n        </shadow>\n      </value>\n      <mutation items=\"1\"></mutation>\n    </block>"), Jd.cb({
-        widgetType: An.c,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
         title: "移动",
         lineId: "move"
       }), "<block type=\"brush_set_pen_up_or_down\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_move_forward_or_backward\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_move_to\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_move_to_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_move_to_position_in_time\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"X\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      <value name=\"Y\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), rp.d, "<block type=\"brush_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_position_type_in_time\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">100</field>\n        </shadow>\n      </value>\n      <value name=\"SECONDS\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0\">1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_z_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.cb({
-        widgetType: An.c,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
         title: "方向",
         lineId: "rotate"
       }), "<block type=\"brush_set_rotation\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"ANGLE_SCALE,,\" constraints='-180,180,,true'>90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_face_to\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_rotate_left_or_right\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">90</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.c,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
         title: "颜色",
         lineId: "color"
       }), "<block type=\"brush_set_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat($_277.a, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"brush_set_color_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"SLIDER,0,360\" constraints='0,360,1'>50</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_color_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>10</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.c,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
         title: "粗细",
         lineId: "size"
       }), "<block type=\"brush_set_pen_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"SLIDER,").concat($_277.g, ",").concat($_277.e, "\" constraints=\"").concat($_277.g, ",").concat($_277.e, ",1\">3</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"brush_change_pen_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>1</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.c,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
         title: "填充",
         lineId: "fill"
       }), "<block type=\"brush_set_fill_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat($_277.a, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"brush_set_fill_path\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.cb({
-        widgetType: An.c,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
         title: "返回值",
         lineId: "getter"
       }), "<block type=\"brush_get_color_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_get_pen_size\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_get_rotation\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"brush_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>")
@@ -637,7 +637,7 @@ var Nh = {
         custom: true,
         name: "WIDGET_ID",
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.c)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.c)
         }
       }
       function r(e) {
@@ -1112,11 +1112,11 @@ var Nh = {
                 }, {
                   type: "group",
                   name: t.Msg.ACTOR,
-                  options: $_46_index.c().getWidgetListByType(An.a, o)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a, o)
                 }, {
                   type: "group",
                   name: t.Msg.BRUSH,
-                  options: $_46_index.c().getWidgetListByType(An.c, o)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.c, o)
                 }
               ]
             }
@@ -1173,11 +1173,11 @@ var Nh = {
                 }, {
                   type: "group",
                   name: t.Msg.ACTOR,
-                  options: $_46_index.c().getWidgetListByType(An.a, o)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.a, o)
                 }, {
                   type: "group",
                   name: t.Msg.BRUSH,
-                  options: $_46_index.c().getWidgetListByType(An.c, o)
+                  options: $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.c, o)
                 }
               ]
             }

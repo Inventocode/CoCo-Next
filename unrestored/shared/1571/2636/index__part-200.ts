@@ -9,9 +9,9 @@
 import { XM } from "./index__part-198"
 import { cL } from "./index__part-199"
 import * as Yr from "./53"
-import /* [auto-meaningful-name] */$_161 from "../../../../src/editor/ui/header/styles.module.css"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_header_styles$module$css from "../../../../src/editor/ui/header/styles.module.css"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -46,10 +46,10 @@ var dL = React.memo(function () {
     className: N(_$_.playButton, s.size > 1 && _$_.borderLeft),
     onClick: function () {
       if (a) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Dj())
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Wh())
+        t($$_$$_$$_$$_src_editor_redux_common_actions.Dj())
+        t($$_$$_$$_$$_src_editor_redux_common_actions.Wh())
       } else {
-        $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(t, $$_$$_$$_$$_src_shared_events_messagesWrapper.kg(o))
+        $$_$$_$$_$$_src_editor_redux_common_actions.Nf(t, $$_$$_$$_$$_src_editor_redux_common_actions.kg(o))
       }
     }
   }, a ? React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
@@ -124,13 +124,13 @@ var pL = _React.memo(function (e) {
     title: l ? m : n,
     trigger: ["hover", "click"]
   }, React.createElement("div", {
-    className: $_161.projectTitleWrapper
+    className: $$_$$_$$_$$_src_editor_ui_header_styles$module$css.projectTitleWrapper
   }, React.createElement($_13_index.k, {
     defaultValue: n,
     dependency: n,
     disabled: !r || e.readonly,
     isTrimmed: true,
-    className: $_161.projectTitle,
+    className: $$_$$_$$_$$_src_editor_ui_header_styles$module$css.projectTitle,
     placeholder: $_710_index$a$formatMessage({
       id: "projectTitlePlaceholder"
     }),
@@ -147,7 +147,7 @@ var pL = _React.memo(function (e) {
     onBlur: function (e, r) {
       if (e) {
         $_16_index.b(function () {
-          a($$_$$_$$_$$_src_shared_events_messagesWrapper.Bf(e))
+          a($$_$$_$$_$$_src_editor_redux_common_actions.Bf(e))
           if (n !== e) {
             $_141_index.a("EditWorkName", {
               workId: t,
@@ -156,7 +156,7 @@ var pL = _React.memo(function (e) {
           }
         })
       } else {
-        a($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+        a($$_$$_$$_$$_src_editor_redux_common_actions.mj({
           message: $_710_index$a$formatMessage({
             id: "isEmptyProjectTitle"
           }),
@@ -179,7 +179,7 @@ var pL = _React.memo(function (e) {
       }
     }, React.createElement($_13_index.j, {
       type: "icon-edit",
-      className: $_161.editIcon
+      className: $$_$$_$$_$$_src_editor_ui_header_styles$module$css.editIcon
     }))
   })))
 })

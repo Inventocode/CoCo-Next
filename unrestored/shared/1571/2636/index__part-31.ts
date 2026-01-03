@@ -12,9 +12,9 @@ import { ld } from "./index__part-30"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import /* [auto-meaningful-name] */$_279 from "./279"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -134,7 +134,7 @@ var fd = React.memo(function (e) {
       if (e$lastEvent) {
         var r = Math.round(e$lastEvent.left)
         var a = Math.round(e$lastEvent.top)
-        i($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$target$id, "position", {
+        i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "position", {
           x: r,
           y: a
         }, true, true))
@@ -146,12 +146,12 @@ var fd = React.memo(function (e) {
       s.current = {}
       var /* [auto-meaningful-name] */e$target$id = e.target.id
       var n = Et.Bb(e$target$id)
-      if (n && n.type === An.H) {
+      if (n && n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
         if (document.activeElement && "TEXTAREA" === document.activeElement.tagName.toUpperCase()) {
           document.activeElement.blur()
         }
-        if (n.attributes.sizeAdaptive & An.q.AUTO_HEIGHT && 0 !== e.direction[1]) {
-          i($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$target$id, "sizeAdaptive", An.q.FIXED, true, true))
+        if (n.attributes.sizeAdaptive & $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT && 0 !== e.direction[1]) {
+          i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "sizeAdaptive", $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED, true, true))
         }
       }
     },
@@ -160,7 +160,7 @@ var fd = React.memo(function (e) {
       var /* [auto-meaningful-name] */e$target$id = e.target.id
       var r = Et.Bb(e$target$id)
       if (r) {
-        var o = r.type === An.H && r.attributes.sizeAdaptive & An.q.AUTO_HEIGHT
+        var o = r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.H && r.attributes.sizeAdaptive & $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT
         var a = "true" === e$target$dataset.lockWidth
         var c = "true" === e$target$dataset.lockHeight
         var l = Number(e$target$dataset.minWidth) || Qu.u
@@ -209,14 +209,14 @@ var fd = React.memo(function (e) {
           height: h,
           translate: e.drag.beforeTranslate
         }
-        if (!(!r || (null === r || undefined === r ? undefined : r.type) !== An.z && (null === r || undefined === r ? undefined : r.type) !== An.E && (null === r || undefined === r ? undefined : r.type) !== An.w && (null === r || undefined === r ? undefined : r.type) !== An.F)) {
+        if (!(!r || (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.z && (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.E && (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.w && (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.F)) {
           Lodash.throttle(function () {
             if (undefined !== f || undefined !== h) {
               var e = {
                 width: f,
                 height: h
               }
-              i($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$target$id, "size", e, true, true))
+              i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "size", e, true, true))
             }
           }, 500)()
         }
@@ -241,14 +241,14 @@ var fd = React.memo(function (e) {
             e.target.style.left = "".concat(n$position.x, "px")
             e.target.style.top = "".concat(n$position.y, "px")
             e.target.style.transform = ""
-            i($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$target$id, "position", n$position, true, true))
+            i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "position", n$position, true, true))
           }
           if (undefined !== r$width || undefined !== r$height) {
             var u = {
               width: r$width,
               height: r$height
             }
-            i($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$target$id, "size", u, true, true))
+            i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "size", u, true, true))
           }
         })
       }
@@ -265,7 +265,7 @@ var hd = React.memo(function () {
       var r = $_710_index$a$formatMessage({
         id: "StageToast.addActorToCanvasTips"
       })
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.xj(r))
+      t($$_$$_$$_$$_src_editor_redux_common_actions.xj(r))
       var o = document.querySelectorAll("[data-widget-type=\"CANVAS_WIDGET\"][data-role=\"WIDGET\"]")
       if (o) {
         o.forEach(function (e) {
@@ -609,7 +609,7 @@ var Td = function (e) {
   var /* [auto-meaningful-name] */t$prototype = t.prototype
   t$prototype.render = function () {
     var e
-    var /* [auto-meaningful-name] */Element
+    var /* [auto-meaningful-name] */_Element
     var /* [auto-meaningful-name] */this$props = this.props
     var /* [auto-meaningful-name] */this$props$className = this$props.className
     var o = undefined === this$props$className ? "" : this$props$className
@@ -639,9 +639,9 @@ var Td = function (e) {
       }
     }
     return _React.createElement(this$tag, Cd({
-      ref: (e = this, Element = "element", function (n) {
+      ref: (e = this, _Element = "element", function (n) {
         if (n) {
-          e[Element] = n
+          e[_Element] = n
         }
       }),
       "data-styled-id": this$injector$className,

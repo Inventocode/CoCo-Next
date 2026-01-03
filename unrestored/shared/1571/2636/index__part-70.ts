@@ -14,7 +14,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as D from "./6"
 import * as em from "./14"
@@ -30,10 +30,10 @@ import * as em from "./14"
   e.DECREASE = "DECREASE"
 })($h || ($h = {}))
 var tm = {
-  type: An.b,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.b,
   category: {
     iconId: $_135.c,
-    blocks: An.b
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.b
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -104,7 +104,7 @@ var tm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.b)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.b)
         }
       }
       e.insertBlockProfile("audio_sound_file_list_dropdown", {
@@ -275,7 +275,7 @@ var tm = {
 var nm = {
   icon: $_135.c,
   title: "AudioWidget.widgetName",
-  type: An.b,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.b,
   previewAreaWidgetTitle: "AudioWidget.widgetName",
   component: Yh,
   editConfig: Qh,
@@ -300,10 +300,10 @@ var rm = [
   }
 ]
 var om = {
-  type: An.t,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.t,
   category: {
     iconId: "icon-widget-gyroscope",
-    blocks: An.t
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.t
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -384,7 +384,7 @@ var om = {
 var im = {
   icon: "icon-widget-gyroscope",
   title: "GyroscopeWidget.widgetName",
-  type: An.t,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.t,
   previewAreaWidgetTitle: "GyroscopeWidget.widgetName",
   component: Yh,
   editConfig: rm,
@@ -405,10 +405,10 @@ var am = [
   }
 ]
 var sm = {
-  type: An.K,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.K,
   category: {
     iconId: "icon-widget-volume-sensor",
-    blocks: An.K
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.K
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -474,7 +474,7 @@ var sm = {
 var cm = {
   icon: "icon-widget-volume-sensor",
   title: "VolumeSensorWidget.widgetName",
-  type: An.K,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.K,
   previewAreaWidgetTitle: "VolumeSensorWidget.widgetName",
   component: Yh,
   editConfig: am,

@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Xr } from "../../../../src/editor/ui/preview-area/screen-list"
+import { Xr } from "../../../../src/editor/ui/preview-area/screen-list/index"
 import { $v } from "./index__part-91"
 import { nb } from "./index__part-92"
 import qv from "./88"
@@ -15,7 +15,7 @@ import * as Tn from "./68"
 import * as Et from "./9"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -56,11 +56,11 @@ var wy = _React.memo(function () {
     value: r$title,
     renameInputValue: function (t) {
       var n = Et.Ob(r.id, t, o)
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "title", n))
+      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "title", n))
       return n
     },
     onChange: function (t) {
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "title", t))
+      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "title", t))
     },
     checkValueIsRepeat: function (e) {
       return Et.r(r.id, e)
@@ -79,7 +79,7 @@ var wy = _React.memo(function () {
     content: s && React.createElement($_13_index.q, {
       value: r$backgroundColor,
       onChange: function (t) {
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundColor", t))
+        e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundColor", t))
       }
     })
   }, React.createElement("div", {
@@ -98,21 +98,21 @@ var wy = _React.memo(function () {
   }, React.createElement(nb, {
     onUploadFileChange: function (t) {
       if (t) {
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(t, function (t) {
+        e($$_$$_$$_$$_src_editor_redux_common_actions.Zf(t, function (t) {
           var n = t[0]
-          e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImage", n.id))
+          e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImage", n.id))
         }))
       }
     },
     onResourceLibraryClick: function () {
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (t) {
+      e($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (t) {
         var n = t[0]
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImage", n.id))
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+        e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImage", n.id))
+        e($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       }))
     },
     onDelete: function () {
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImage", ""))
+      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImage", ""))
     },
     fileId: r$backgroundImage
   })), g && React.createElement($_13_index.i, {
@@ -125,7 +125,7 @@ var wy = _React.memo(function () {
     mode: r$backgroundImageResizeMode,
     onModeChange: function (t) {
       var n = t
-      e($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r.id, "backgroundImageResizeMode", n))
+      e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImageResizeMode", n))
     }
   }))))
 })

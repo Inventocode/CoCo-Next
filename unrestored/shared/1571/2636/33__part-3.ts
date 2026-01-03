@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { N } from "./33__part-1"
+import { N } from "../../../../src/editor/widget/internal/storage"
 import * as C from "./53"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
@@ -18,7 +18,7 @@ import * as /* [auto-meaningful-name] */$_314 from "./314"
 import * as g from "./83"
 import * as m from "./15"
 import * as h from "./64"
-import * as f from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_42_index from "./42/index"
 import * as d from "./47"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
@@ -43,7 +43,7 @@ var pe = 1
 function fe() {
   var e = []
   $_42_index.g.forEach(function (t) {
-    if (t.type === f.j) {
+    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.j) {
       e.push(t)
     }
   })
@@ -52,10 +52,10 @@ function fe() {
 function he() {
   var e = []
   $_42_index.g.forEach(function (t) {
-    if (t.type === f.k && t.attributes.cloudTableId) {
+    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.k && t.attributes.cloudTableId) {
       e.push(t.attributes.cloudTableId)
     }
-    if (t.type === f.A && "number" === typeof t.attributes.dataSource) {
+    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
       e.push(t.attributes.dataSource)
     }
   })
@@ -65,15 +65,15 @@ function me(e) {
   var t = []
   for (var n in e) {
     var r = e[n]
-    if (r.type === f.j && r.attributes.cloudDictId !== se) {
+    if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.j && r.attributes.cloudDictId !== se) {
       t.push(Lodash.cloneDeep(r))
       r.attributes.cloudDictId = se
     }
-    if (r.type === f.k && r.attributes.cloudTableId !== se) {
+    if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.k && r.attributes.cloudTableId !== se) {
       t.push(Lodash.cloneDeep(r))
       r.attributes.cloudTableId = se
     }
-    if (r.type === f.A && "number" === typeof r.attributes.dataSource) {
+    if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A && "number" === typeof r.attributes.dataSource) {
       t.push(Lodash.cloneDeep(r))
       r.attributes.dataSource = ""
     }
@@ -231,7 +231,7 @@ function Oe(e, t) {
 function we() {
   var e = false
   $_42_index.g.forEach(function (t) {
-    if ((null === t || undefined === t ? undefined : t.type) === f.A && "number" === typeof t.attributes.dataSource) {
+    if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
       e = true
     }
   })
@@ -288,7 +288,7 @@ function Ne(e, t) {
 function Re() {
   var e = []
   $_42_index.g.forEach(function (t) {
-    if (t.type === f.l) {
+    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
       e.push(t)
     }
   })
@@ -297,7 +297,7 @@ function Re() {
 function ke() {
   var e = []
   $_42_index.g.forEach(function (t) {
-    if (t.type === f.h) {
+    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h) {
       e.push(t)
     }
   })
@@ -378,7 +378,7 @@ function Pe(e) {
         p.widgetIds = [].concat($_25_index.a(p.widgetIds), [s])
       }
     }
-    if (o.type === f.f) {
+    if (o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
       var m = a
       m.widgetIds = []
       o.widgetIds.forEach(function (e) {
@@ -391,7 +391,7 @@ function Pe(e) {
         }
       })
     }
-    if (o.type === f.x || o.type === f.A) {
+    if (o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.x || o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A) {
       var g = a
       for (var _ in g.widgetIds = [], o.attributes.templateSlotMap) {
         var v = Pe(o.attributes.templateSlotMap[_].widgetId, true, s)
@@ -434,7 +434,7 @@ function Be(e, t, n) {
       if (n) {
         o.parentId = n
       }
-      if (r.type === f.f) {
+      if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
         var s = o
         s.widgetIds = []
         r.widgetIds.forEach(function (e) {
@@ -444,7 +444,7 @@ function Be(e, t, n) {
           }
         })
       }
-      if (r.type === f.x || r.type === f.A) {
+      if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.x || r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A) {
         var c = o
         for (var l in c.widgetIds = [], r.attributes.templateSlotMap) {
           var u = Be(r.attributes.templateSlotMap[l].widgetId, t, i)
@@ -501,14 +501,14 @@ var He = function (e) {
 }
 var Ve = function (e) {
   var t = $_42_index.g.get(e)
-  return t && t.type === f.d ? He(t.attributes.mode) : ""
+  return t && t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.d ? He(t.attributes.mode) : ""
 }
 var ze = function (e) {
   return v.p[e]
 }
 function Ye(e) {
   return Array.from($_42_index.g).some(function (t) {
-    return t[1].type === f.v && t[1].attributes.fileId === e || t[1].type === f.z && t[1].attributes.backgroundImage === e || t[1].type === f.w && t[1].attributes.backgroundImage === e || t[1].type === f.E && (t[1].attributes.backgroundImageFileId === e || t[1].attributes.handleImageFileId === e || t[1].attributes.trackImageFileId === e) || t[1].type === f.f && t[1].attributes.backgroundImage === e || !(t[1].type !== f.a || !t[1].attributes.actionList.some(function (t) {
+    return t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v && t[1].attributes.fileId === e || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.z && t[1].attributes.backgroundImage === e || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.w && t[1].attributes.backgroundImage === e || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.E && (t[1].attributes.backgroundImageFileId === e || t[1].attributes.handleImageFileId === e || t[1].attributes.trackImageFileId === e) || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f && t[1].attributes.backgroundImage === e || !(t[1].type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.a || !t[1].attributes.actionList.some(function (t) {
       return t.styleList.some(function (t) {
         return t.source === e
       })
@@ -521,7 +521,7 @@ function Ke(e) {
     var r = $_10_index.a(n, 2)
     r[0]
     var o = r[1]
-    if (o.type === f.a && o.attributes.actionList.some(function (t) {
+    if (o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.a && o.attributes.actionList.some(function (t) {
       return t.styleList.some(function (t) {
         return t.source === e
       })
@@ -533,12 +533,12 @@ function Ke(e) {
 }
 function qe(e) {
   return Array.from($_42_index.g).some(function (t) {
-    return t[1].type === f.b && t[1].attributes.fileId === e
+    return t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.b && t[1].attributes.fileId === e
   })
 }
 function Xe(e) {
   return Array.from($_42_index.g).some(function (t) {
-    return (t[1].type === f.d || t[1].type === f.z) && t[1].attributes.iconId === e
+    return (t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.d || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.z) && t[1].attributes.iconId === e
   })
 }
 function Qe(e) {
@@ -563,7 +563,7 @@ function Ze(e) {
 }
 function Je(e, t) {
   $_42_index.g.forEach(function (n) {
-    if (n.type === f.v) {
+    if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
       if (n.attributes.fileId === e) {
         n.attributes.fileId = t
       }
@@ -1032,10 +1032,10 @@ function Rt(e) {
   })
   !function (e) {
     $_42_index.g.forEach(function (t) {
-      if (t.type === f.v && t.attributes.fileId === e) {
+      if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v && t.attributes.fileId === e) {
         t.attributes.fileId = ""
       }
-      if (t.type === f.f && t.attributes.backgroundImage === e) {
+      if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f && t.attributes.backgroundImage === e) {
         t.attributes.backgroundImage = ""
       }
     })
@@ -1048,7 +1048,7 @@ function kt(e) {
 }
 function xt(e) {
   $_42_index.g.forEach(function (t) {
-    if (t.type === f.b && t.attributes.fileId === e) {
+    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.b && t.attributes.fileId === e) {
       t.attributes.fileId = ""
     }
   })

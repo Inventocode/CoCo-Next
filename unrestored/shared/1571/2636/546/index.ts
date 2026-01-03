@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */_Color from "color"
 import * as l from "../8"
 import u from "../8"
-import * as d from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
@@ -101,8 +101,8 @@ _a = function (e) {
   return _React.createElement("button", {
     id: s,
     className: u($$_90.b, _$_.buttonWidget, $$_11.a({}, _$_.hide, !e$visible)),
-    "data-role": d.M,
-    "data-widget-type": d.d,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d,
     "data-lock-height": true,
     "data-min-width": D$minWidth,
     "data-max-width": D$maxWidth,

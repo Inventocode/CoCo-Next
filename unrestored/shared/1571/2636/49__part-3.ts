@@ -8,7 +8,7 @@
 
 import * as Oe from "./43"
 import * as ye from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
@@ -49,7 +49,7 @@ function Fe(e) {
   if (De(e.path)) {
     (function (e) {
       var t = e.path[1]
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.ng(t, false))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.ng(t, false))
     })(e)
   }
 }
@@ -66,10 +66,10 @@ function Ge(e, t) {
         ye.Ub(n.id, n)
       })
       var r = xe.d(e$op$i)
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.if(r))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.if(r))
       var o = null === (t = $_24_index.a.getDoc()) || undefined === t ? undefined : t.screenIds
       if (o) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.xg($_25_index.a(o)))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.xg($_25_index.a(o)))
       }
     })(e)
   }
@@ -78,7 +78,7 @@ function Ge(e, t) {
       var e
       var t = null === (e = $_24_index.a.getDoc()) || undefined === e ? undefined : e.screenIds
       if (t) {
-        Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.xg($_25_index.a(t)))
+        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.xg($_25_index.a(t)))
       }
     })()
   }
@@ -91,7 +91,7 @@ function Ge(e, t) {
       var r = _e$path[1]
       var o = _e$path[2]
       var i = n.i
-      Oe.h($$_$$_$$_$$_src_shared_events_messagesWrapper.Jg(r, o, i, false))
+      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r, o, i, false))
     })(e)
   }
 }

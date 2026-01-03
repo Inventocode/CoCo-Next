@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as k from "./11"
 import N from "./8"
@@ -36,8 +36,8 @@ var $u = _React.memo(function () {
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       if (e && n) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, function (e) {
-          t($$_$$_$$_$$_src_shared_events_messagesWrapper.Yf(e[0], n))
+        t($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
+          t($$_$$_$$_$$_src_editor_redux_common_actions.Yf(e[0], n))
         }))
       }
     },
@@ -59,13 +59,13 @@ var $u = _React.memo(function () {
   }, React.createElement("div", {
     onClick: function () {
       if (n) {
-        t($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (e) {
+        t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
           $_16_index.b(function () {
             var r = Et.hb(e[0].id)
             if (r) {
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.Yf(r, n))
+              t($$_$$_$$_$$_src_editor_redux_common_actions.Yf(r, n))
             }
-            t($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+            t($$_$$_$$_$$_src_editor_redux_common_actions.sh())
           })
         }))
       }
@@ -91,9 +91,9 @@ var ed = _React.memo(function () {
     onClick: function () {
       var t = !n
       $_16_index.b(function () {
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(t))
+        e($$_$$_$$_$$_src_editor_redux_common_actions.fj(t))
         if (t) {
-          e($$_$$_$$_$$_src_shared_events_messagesWrapper.Fj(false))
+          e($$_$$_$$_$$_src_editor_redux_common_actions.Fj(false))
         }
       })
     }
@@ -116,7 +116,7 @@ var td = function () {
   var a = o[1]
   var s = Et.Bb(t || "")
   var c = $_16_index.d()
-  if (!s || s.type !== An.C && s.type !== An.g) {
+  if (!s || s.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.C && s.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.g) {
     return React.createElement(React.Fragment, null)
   }
   var /* [auto-meaningful-name] */s$attributes$options = s.attributes.options
@@ -134,7 +134,7 @@ var td = function () {
     onClick: function () {
       if (s && s$attributes$options.length > 1) {
         a(Date.now())
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(s.id, "options", s$attributes$options.slice(0, -1)))
+        c($$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options.slice(0, -1)))
       }
     },
     className: N(k.a({}, _$_.disabled, 1 === s$attributes$options.length))
@@ -153,7 +153,7 @@ var td = function () {
           content: "",
           state: "none"
         })
-        c($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(s.id, "options", s$attributes$options))
+        c($$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options))
         a(Date.now())
       }
     },
@@ -177,7 +177,7 @@ var nd = function () {
   }, React.createElement("div", {
     onClick: function () {
       if (n) {
-        e($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(n, "refreshTimestamp", Date.now(), true, false))
+        e($$_$$_$$_$$_src_editor_redux_common_actions.Lg(n, "refreshTimestamp", Date.now(), true, false))
       }
     },
     className: _$_.webViewAction
@@ -193,7 +193,7 @@ var rd = function () {
   var t = Et.Bb(e || "")
   return t ? React.createElement("div", {
     className: _$_.addonBox
-  }, React.createElement(ed, null), t.type === An.v && React.createElement($u, null), t.type === An.L && React.createElement(nd, null)) : React.createElement(React.Fragment, null)
+  }, React.createElement(ed, null), t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v && React.createElement($u, null), t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.L && React.createElement(nd, null)) : React.createElement(React.Fragment, null)
 }
 var od = {
   name: "MoveableRightAddon",

@@ -14,14 +14,14 @@ import * as /* [auto-meaningful-name] */$_452_index from "./452/index"
 import /* [auto-meaningful-name] */$_279 from "./279"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as kn from "./75"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../src/shared/widget/custom/type"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import * as k from "./11"
 import N from "./8"
@@ -56,7 +56,7 @@ var Vd = function (e) {
   if (null === (t = Et.Db(a.type)) || undefined === t ? undefined : t.isInvisibleWidget) {
     return null
   }
-  if (a.type === An.a || a.type === An.c) {
+  if (a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.a || a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.c) {
     return React.createElement("div", {
       className: _$_.container
     }, React.createElement("div", null, s), React.createElement("div", null, $_710_index$a$formatMessage({
@@ -64,7 +64,7 @@ var Vd = function (e) {
     }), " X:", e$position.x, " Y:", e$position.y))
   }
   var c = a.parentId ? Et.Bb(a.parentId) : undefined
-  return (null === c || undefined === c ? undefined : c.type) && [An.x, An.A].includes(c.type) ? React.createElement("div", {
+  return (null === c || undefined === c ? undefined : c.type) && [$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(c.type) ? React.createElement("div", {
     className: _$_.container
   }, React.createElement("div", null, s), React.createElement("div", null, "X: - Y: -")) : React.createElement("div", {
     className: _$_.container
@@ -148,24 +148,24 @@ var zd = React.memo(function () {
               if (s = t$dataTransfer.getData("widget/action"), c = t$dataTransfer.getData("widget/type"), u = t$dataTransfer.getData("widget/dragging-offset-x"), d = t$dataTransfer.getData("widget/dragging-offset-y"), p = Math.ceil((t.clientX - o.x - parseInt(u)) / l), f = Math.ceil((t.clientY - o.y - parseInt(d)) / l), h = {
                 x: p,
                 y: f
-              }, c !== An.c && c !== An.a) {
+              }, c !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && c !== $$_$$_$$_$$_src_editor_widget_builtIn_types.a) {
                 e.next = 14
                 break
               }
               return e.abrupt("return")
             case 14:
-              if (s !== An.r.CREATE) {
+              if (s !== $$_$$_$$_$$_src_editor_widget_builtIn_types.r.CREATE) {
                 e.next = 20
                 break
               }
-              if (i($$_$$_$$_$$_src_shared_events_messagesWrapper.ki("screen")), !$$_$$_$$_$$_src_shared_widget_custom_type.e(c)) {
+              if (i($$_$$_$$_$$_src_editor_redux_common_actions.ki("screen")), !$$_$$_$$_$$_src_shared_widget_custom_type.e(c)) {
                 e.next = 19
                 break
               }
               e.next = 19
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(i, $$_$$_$$_$$_src_shared_events_messagesWrapper.lg(c))
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(i, $$_$$_$$_$$_src_editor_redux_common_actions.lg(c))
             case 19:
-              i($$_$$_$$_$$_src_shared_events_messagesWrapper.hg(v.id, c, h))
+              i($$_$$_$$_$$_src_editor_redux_common_actions.hg(v.id, c, h))
             case 20:
             case "end":
               return e.stop()
@@ -183,7 +183,7 @@ var zd = React.memo(function () {
   var q = _React.useRef()
   var X = function () {
     if (a && r) {
-      i($$_$$_$$_$$_src_shared_events_messagesWrapper.Mf(a, r))
+      i($$_$$_$$_$$_src_editor_redux_common_actions.Mf(a, r))
     }
   }
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
@@ -206,7 +206,7 @@ var zd = React.memo(function () {
         var e = Et.Bb(a)
         var t = Et.Db((null === e || undefined === e ? undefined : e.type) || "")
         var n = Et.qb(a)
-        if (!(!t || t.isInvisibleWidget || (null === n || undefined === n ? undefined : n.type) && [An.x, An.A].includes(n.type))) {
+        if (!(!t || t.isInvisibleWidget || (null === n || undefined === n ? undefined : n.type) && [$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(n.type))) {
           q.current = a
         }
       }
@@ -220,7 +220,7 @@ var zd = React.memo(function () {
     callback: function () {
       if (q.current) {
         var e = undefined
-        if (q.current.startsWith(An.a) || q.current.startsWith(An.c)) {
+        if (q.current.startsWith($$_$$_$$_$$_src_editor_widget_builtIn_types.a) || q.current.startsWith($$_$$_$$_$$_src_editor_widget_builtIn_types.c)) {
           var t
           if (!a) {
             return
@@ -229,17 +229,17 @@ var zd = React.memo(function () {
           if (!n) {
             return
           }
-          if (n.type === An.f) {
+          if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
             e = n.id
           } else {
-            if (!n.parentId || (null === (t = Et.Bb(n.parentId)) || undefined === t ? undefined : t.type) !== An.f) {
+            if (!n.parentId || (null === (t = Et.Bb(n.parentId)) || undefined === t ? undefined : t.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
               return
             }
             var r
             e = null === (r = Et.Bb(n.parentId)) || undefined === r ? undefined : r.id
           }
         }
-        i($$_$$_$$_$$_src_shared_events_messagesWrapper.Ef(Et.w(q.current, true, e), null === v || undefined === v ? undefined : v.id))
+        i($$_$$_$$_$$_src_editor_redux_common_actions.Ef(Et.w(q.current, true, e), null === v || undefined === v ? undefined : v.id))
       }
     },
     disabled: "screen" !== u
@@ -248,7 +248,7 @@ var zd = React.memo(function () {
     callback: function () {
       if (a) {
         var e = Et.qb(a)
-        if ((null === e || undefined === e ? undefined : e.type) && [An.x, An.A].includes(e.type)) {
+        if ((null === e || undefined === e ? undefined : e.type) && [$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(e.type)) {
           return
         }
         var t = Et.Fb(a)
@@ -258,7 +258,7 @@ var zd = React.memo(function () {
         var o = $_26_index.z.checkFieldValueIsSelected("WIDGET_ID", a)
         var s = $_26_index.z.checkSomeFieldValueIsSelected("WIDGET_ID", Et.U(a))
         if (o || s) {
-          i($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+          i($$_$$_$$_$$_src_editor_redux_common_actions.zh({
             onConfirm: X,
             allowText: $_710_index$a$formatMessage({
               id: "delete"
@@ -271,7 +271,7 @@ var zd = React.memo(function () {
           }))
         } else {
           if (r) {
-            i($$_$$_$$_$$_src_shared_events_messagesWrapper.Mf(a, r))
+            i($$_$$_$$_$$_src_editor_redux_common_actions.Mf(a, r))
           }
         }
       }
@@ -287,20 +287,20 @@ var zd = React.memo(function () {
       var n = e$target.closest("." + wn.b)
       var r = e$target.closest(".coco-widget-editor")
       var s = e$target.closest(".select-box")
-      i($$_$$_$$_$$_src_shared_events_messagesWrapper.ki("screen"))
+      i($$_$$_$$_$$_src_editor_redux_common_actions.ki("screen"))
       if (!(s || r)) {
         setTimeout(function () {
           var /* [auto-meaningful-name] */po$oTHelper$customEvent
           var /* [auto-meaningful-name] */po$oTHelper$customEvent$emit
           if (n) {
             if (n.id !== a) {
-              i($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(n.id))
+              i($$_$$_$$_$$_src_editor_redux_common_actions.ug(n.id))
               o.current = Qu.d.DRAG
             } else {
               o.current = Qu.d.CLICK
             }
           } else {
-            i($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(undefined))
+            i($$_$$_$$_$$_src_editor_redux_common_actions.ug(undefined))
           }
           if (!(null === (po$oTHelper$customEvent = po.oTHelper.customEvent) || undefined === po$oTHelper$customEvent || null === (po$oTHelper$customEvent$emit = po$oTHelper$customEvent.emit) || undefined === po$oTHelper$customEvent$emit)) {
             po$oTHelper$customEvent$emit.focusItem("widget", null === n || undefined === n ? undefined : n.id)
@@ -448,7 +448,7 @@ var zd = React.memo(function () {
       U([])
       B([])
     },
-    hidden: !a || !(null === b || undefined === b ? undefined : b.visible) || !!(null === b || undefined === b ? undefined : b.parentId) || (null === w || undefined === w ? undefined : w.isInvisibleWidget) || c && y === An.f
+    hidden: !a || !(null === b || undefined === b ? undefined : b.visible) || !!(null === b || undefined === b ? undefined : b.parentId) || (null === w || undefined === w ? undefined : w.isInvisibleWidget) || c && y === $$_$$_$$_$$_src_editor_widget_builtIn_types.f
   }), React.createElement(React.Fragment, null, W.map(function (e, t) {
     var /* [auto-meaningful-name] */e$length = e.length
     var /* [auto-meaningful-name] */e$value = e.value

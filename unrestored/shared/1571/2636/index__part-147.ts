@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -38,7 +38,7 @@ var OT = _React.memo(function () {
   }
   function u() {
     if (s) {
-      l($$_$$_$$_$$_src_shared_events_messagesWrapper.Dh(s, function (e, t) {
+      l($$_$$_$$_$$_src_editor_redux_common_actions.Dh(s, function (e, t) {
         var n = null === a || undefined === a ? undefined : a.type
         var r = null === a || undefined === a ? undefined : a.get_parent()
         switch (n) {
@@ -90,7 +90,7 @@ var OT = _React.memo(function () {
       if ("__EMPTY_VALUE__" !== e) {
         t.setValue(e)
       }
-      l($$_$$_$$_$$_src_shared_events_messagesWrapper.gh())
+      l($$_$$_$$_$$_src_editor_redux_common_actions.gh())
     }
   }, function () {
     var e = []

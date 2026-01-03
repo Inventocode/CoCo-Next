@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_267 from "./267"
 !function (e) {
@@ -245,10 +245,10 @@ var a_ = Object.assign({}, n_, {
   successDO: "QUERY_ALL_KEYS"
 })
 var s_ = {
-  type: An.j,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
   category: {
     iconId: "icon-widget-cloud-dict",
-    blocks: An.j
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.j
   },
   getTemplate: function (e) {
     var t
@@ -261,15 +261,15 @@ var s_ = {
     var i = "<field name=\"KEYS\">".concat(o, "</field>")
     return [
       "<block type=\"cloud_space_dict_on_error\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), rp.d, Jd.cb({
-        widgetType: An.j,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
         title: "修改",
         lineId: "setter"
       }), "<block type=\"cloud_space_dict_set_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_delete_key\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: An.j,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
         title: "查询",
         lineId: "query"
       }), "<block type=\"cloud_space_dict_get_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_get_key_count\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"cloud_space_dict_get_all_keys\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.cb({
-        widgetType: An.j,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
         title: "清空",
         lineId: "clear"
       }), "<block type=\"cloud_space_dict_clear_data\" uncache=\"true\">\n      ".concat(n, "\n    </block>")
@@ -375,7 +375,7 @@ var s_ = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.j)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.j)
         }
       }
       e.insertBlockProfile("cloud_dict_all_key_dropdown", {
@@ -629,7 +629,7 @@ var s_ = {
 var c_ = {
   icon: "icon-widget-cloud-dict",
   title: "CloudSpaceDictWidget.widgetName",
-  type: An.j,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
   previewAreaWidgetTitle: "CloudSpaceDictWidget.widgetName",
   component: Yh,
   editConfig: wg,

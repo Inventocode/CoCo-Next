@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_313 from "../313"
 function ze(e) {
@@ -23,7 +23,7 @@ function ze(e) {
     var i = ""
     if (e$widget.parentId) {
       var a = $$_12.b(e$widget.parentId)
-      if ((null === a || undefined === a ? undefined : a.type) && [$$_$$_$$_5.x, $$_$$_$$_5.A].includes(a.type) && e$widget$type === $$_$$_$$_5.v) {
+      if ((null === a || undefined === a ? undefined : a.type) && [$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(a.type) && e$widget$type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
         i += "coco-child-widget-full"
       }
     }
@@ -47,7 +47,7 @@ function ze(e) {
       return h ? React.createElement("div", {
         key: e$widget.id,
         id: e$widget.id,
-        "data-role": $$_$$_$$_5.M,
+        "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
         "data-widget-type": e$widget.type,
         style: {
           position: "absolute",

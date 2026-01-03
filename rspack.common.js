@@ -56,8 +56,8 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
-                    test: /\.(t|j)sx?$/i,
-                    exclude: /node_modules|helper|home|src/,
+                    test: /[\\\/]unrestored[\\\/].*\.[tj]sx?$/i,
+                    exclude: /[\\\/]node_modules[\\\/]/,
                     loader: "string-replace-loader",
                     options: {
                         multiple: [

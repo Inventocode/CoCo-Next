@@ -7,7 +7,7 @@
 "use strict"
 
 import { z } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import * as /* [auto-meaningful-name] */$$_$$_47 from "../../47"
@@ -31,7 +31,7 @@ function re(e) {
 }
 function oe(e) {
   var t = {}
-  for (var n in e) if (!(e[n].type !== $$_$$_5.y && e[n].type !== $$_$$_5.B)) {
+  for (var n in e) if (!(e[n].type !== $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.y && e[n].type !== $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B)) {
     (function () {
       var r = []
       e[n].attributes.fields.forEach(function (e) {
@@ -70,7 +70,7 @@ function ae(e) {
       type: $$_$$_68.b.PLAYER_DATA_WATCH,
       data: {
         screenId: $$_$$_48_index.a().getState().currentScreenId,
-        tab: $$_$$_5.B,
+        tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B,
         id: t.id,
         value: n
       }
@@ -203,7 +203,7 @@ function de() {
               type: $$_$$_68.b.PLAYER_DATA_WATCH,
               data: {
                 screenId: $$_$$_48_index.a().getState().currentScreenId,
-                tab: $$_$$_5.B,
+                tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B,
                 id: n,
                 value: l ? JSON.parse(l) : ""
               }
@@ -270,7 +270,7 @@ function ge(e, t) {
         type: $$_$$_68.b.PLAYER_DATA_WATCH,
         data: {
           screenId: $$_$$_48_index.a().getState().currentScreenId,
-          tab: $$_$$_5.B,
+          tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B,
           id: t,
           value: $$_$$_37_143.a.getItem(n)
         }

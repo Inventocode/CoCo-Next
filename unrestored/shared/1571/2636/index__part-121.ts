@@ -12,7 +12,7 @@ import * as Tn from "./68"
 import * as Et from "./9"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -54,8 +54,8 @@ var KO = _React.memo(function (e) {
   var j = e$getValue(n)
   function R(e) {
     if (e && a) {
-      s($$_$$_$$_$$_src_shared_events_messagesWrapper.wf(e, function (e) {
-        s($$_$$_$$_$$_src_shared_events_messagesWrapper.ag(e[0], a))
+      s($$_$$_$$_$$_src_editor_redux_common_actions.wf(e, function (e) {
+        s($$_$$_$$_$$_src_editor_redux_common_actions.ag(e[0], a))
         if (cE) {
           cE.stop()
         }
@@ -64,10 +64,10 @@ var KO = _React.memo(function (e) {
     }
   }
   function k() {
-    s($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.SoundLibrary, function (e) {
+    s($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.SoundLibrary, function (e) {
       var t = e[0]
       e$onChange(n, t.id)
-      s($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+      s($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       if (cE) {
         cE.stop()
       }

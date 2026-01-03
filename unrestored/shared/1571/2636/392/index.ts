@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_627 from "../627"
 import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
 import * as /* [auto-meaningful-name] */$$_748_index from "../748/index"
 import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_516 from "./516"
 import /* [auto-meaningful-name] */_$_ from "./516"
 var /* [auto-meaningful-name] */COURSE_ICON_NAME = "COURSE_ICON_NAME"
@@ -32,7 +32,7 @@ _b = React.memo(function () {
     className: _$_.courseMinIcon,
     onClick: function () {
       $$_627.a.show()
-      e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ii(COURSE_ICON_NAME, false))
+      e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ii(COURSE_ICON_NAME, false))
     }
   }, _React.createElement($$_13_index.j, {
     type: "icon-video"
@@ -47,7 +47,7 @@ _b = React.memo(function () {
           y: 30
         }
       })
-      e($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Gh(COURSE_ICON_NAME))
+      e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Gh(COURSE_ICON_NAME))
     }
   }, _React.createElement($$_13_index.j, {
     type: "icon-close"

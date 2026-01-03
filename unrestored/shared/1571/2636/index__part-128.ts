@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$_557 from "./557"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -94,8 +94,8 @@ var Sw = _React.memo(function (e) {
   }
   function b() {
     if (a) {
-      o($$_$$_$$_$$_src_shared_events_messagesWrapper.Xh(""))
-      o($$_$$_$$_$$_src_shared_events_messagesWrapper.ij(e$getValue("name"), true, r, false, function () {}))
+      o($$_$$_$$_$$_src_editor_redux_common_actions.Xh(""))
+      o($$_$$_$$_$$_src_editor_redux_common_actions.ij(e$getValue("name"), true, r, false, function () {}))
     }
   }
   var y = function (e) {

@@ -10,10 +10,10 @@ import { Sg } from "./index__part-79"
 import { DI } from "./index__part-175"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as _n from "./47"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -55,7 +55,7 @@ var PI = function (e) {
         var n = []
         t.forEach(function (e) {
           var t = Et.dc.get(e)
-          if ((null === t || undefined === t ? undefined : t.type) === An.m) {
+          if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
             n.push(t)
           }
         })
@@ -166,7 +166,7 @@ var BI = _React.memo(function () {
   var R = j[1]
   _React.useEffect(function () {
     if (e$visible) {
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.ki("grid"))
+      a($$_$$_$$_$$_src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)
       T(Lodash.cloneDeep(e$grid.header))
       R(Lodash.cloneDeep(e$grid.data))
@@ -197,9 +197,9 @@ var BI = _React.memo(function () {
     }
   }
   var x = function () {
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.oi(""))
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.ri("", ""))
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.ni("", ""))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.oi(""))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.ri("", ""))
+    a($$_$$_$$_$$_src_editor_redux_common_actions.ni("", ""))
   }
   var D = function () {
     x()
@@ -210,7 +210,7 @@ var BI = _React.memo(function () {
         isCreateNewGrid: e$isCreateNewGrid
       })
     }
-    a($$_$$_$$_$$_src_shared_events_messagesWrapper.qh())
+    a($$_$$_$$_$$_src_editor_redux_common_actions.qh())
   }
   var M = function () {
     if (!(null === m || undefined === m)) {
@@ -222,7 +222,7 @@ var BI = _React.memo(function () {
     if (Lodash.isEqual(e$data, e$grid.data) && Lodash.isEqual(e$header, e$grid.header) && y === e$grid.name) {
       D()
     } else {
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+      a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
         onConfirm: function () {
           D()
         },
@@ -259,7 +259,7 @@ var BI = _React.memo(function () {
       var l = []
       if (y !== e$grid.name) {
         s = y
-        a($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$grid.id, "title", y, false, false, true))
+        a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$grid.id, "title", y, false, false, true))
       }
       if (!Lodash.isEqual(e$header, e$grid.header)) {
         c = true
@@ -271,7 +271,7 @@ var BI = _React.memo(function () {
             l.push(d)
           }
         }
-        a($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$grid.id, "db", {
+        a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$grid.id, "db", {
           header: e$header,
           data: e$data
         }, false, false, true))
@@ -283,7 +283,7 @@ var BI = _React.memo(function () {
           isCreateNewGrid: e$isCreateNewGrid
         })
       }
-      a($$_$$_$$_$$_src_shared_events_messagesWrapper.qh())
+      a($$_$$_$$_$$_src_editor_redux_common_actions.qh())
     }
   }, $_710_index$a$formatMessage({
     id: "confirm"

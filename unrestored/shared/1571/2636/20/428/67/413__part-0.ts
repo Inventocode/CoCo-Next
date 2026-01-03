@@ -11,7 +11,7 @@ import /* [auto-meaningful-name] */_Color from "color"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_206 from "../../../206"
 import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
@@ -59,8 +59,8 @@ var E = function (e) {
   }
   return _React.createElement("div", {
     id: t,
-    "data-widget-type": $$_$$_$$_5.H,
-    "data-role": $$_$$_$$_5.M,
+    "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     className: _$$_$$_$$_($$_$$_$$_90.b, _$$_$$_$$_2.textWidget, $$_$$_$$_11.a({}, _$$_$$_$$_2.hide, !e$visible)),
     onClick: function () {
       e$onClick()

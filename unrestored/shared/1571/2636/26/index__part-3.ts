@@ -18,7 +18,7 @@ import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
 import * as /* [auto-meaningful-name] */$$_1058_125 from "../1058/125"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 !function (e) {
   e.PNG = "dataurl+png"
   e.SVG_ASCII = "dataurl+ascii"
@@ -58,7 +58,7 @@ function ne() {
             s = (a.width + 10) * r
             l = (a.height + 10) * r
             ue(e$sent, s, l, "png", function (e) {
-              $$_37_index.d.dispatch($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.bi(true, e))
+              $$_37_index.d.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.bi(true, e))
             })
           case 11:
           case "end":

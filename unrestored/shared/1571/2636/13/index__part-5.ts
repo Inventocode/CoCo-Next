@@ -10,7 +10,7 @@ import { B } from "./index__part-4"
 var P
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$_344 from "./344"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import /* [auto-meaningful-name] */Color from "color"
 import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
 import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
@@ -317,7 +317,7 @@ var X = _React.memo(_React.forwardRef(function (e, t) {
         if (e$onClose) {
           e$onClose(O)
         }
-        _($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.hh())
+        _($$_$$_$$_$$_$$_src_editor_redux_common_actions.hh())
         if (H) {
           var i = q.indexOf(H)
           if (i > -1) {
@@ -393,7 +393,7 @@ var X = _React.memo(_React.forwardRef(function (e, t) {
                 e.next = 3
                 break
               }
-              _($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              _($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: $$_710_index$a$formatMessage({
                   id: "colorPicker.eyeDropperTips"
                 })

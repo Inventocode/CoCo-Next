@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as Yr from "./53"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
@@ -34,12 +34,12 @@ function Vp(e, t) {
   return Color(e).alpha(t).toString()
 }
 var /* [auto-meaningful-name] */Fp$c$OUTLINED_NORMAL = Fp.c.OUTLINED_NORMAL
-var /* [auto-meaningful-name] */An$s$MEDIUM = An.s.MEDIUM
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types$s$MEDIUM = $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM
 var Kp = {
   icon: Pp.b,
   previewAreaWidgetTitle: "InputWidget.widgetName",
   title: "",
-  type: An.w,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
   component: function (e) {
     var t = e.id
     var /* [auto-meaningful-name] */e$position = e.position
@@ -157,8 +157,8 @@ var Kp = {
     return React.createElement("div", {
       id: t,
       className: N(_$_.inputWidget, e$attributes$backgroundMode === Fp.a.TEMPLATE && e$attributes$templateMode !== Fp.c.OUTLINED_FLAT && _$_.inputWidgetUnderpainting, wn.b, k.a({}, _$_.hide, !e$visible)),
-      "data-role": An.M,
-      "data-widget-type": An.w,
+      "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+      "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
       "data-min-width": Pp.m,
       "data-min-height": Pp.l,
       ref: I,
@@ -258,7 +258,7 @@ var Kp = {
       value: "",
       placeholder: "%{COCO_defaultInputWidgetContent}",
       color: Pp.e,
-      sizeType: An$s$MEDIUM,
+      sizeType: $$_$$_$$_$$_src_editor_widget_builtIn_types$s$MEDIUM,
       mode: Fp$c$OUTLINED_NORMAL,
       textAlign: "left",
       placeholderColor: Pp.n,
@@ -306,10 +306,10 @@ var Xp = [
   }
 ]
 var Qp = {
-  type: An.v,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
   category: {
     iconId: $_133.a,
-    blocks: An.v
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.v
   },
   categoryClass: {
     text: "",
@@ -321,25 +321,25 @@ var Qp = {
     return [
       "<block type=\"image_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"image_set_file_id\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"IMAGE_FILE_ID_SHADOW\">\n        <shadow type=\"image_file_list_dropdown\"> <field name=\"IMAGE_FILE_ID\">").concat(rp.c, "</field></shadow>\n      </value>\n    </block>"), Jd.sb({
         property: "backgroundColor",
-        widgetType: An.v,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
         widgetId: e,
         isSetProperty: true
       }), rp.d, Jd.sb({
         property: "__opacity",
-        widgetType: An.v,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"image_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='0,,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"image_set_visible\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"VISIBLE\">show</field>\n    </block>"), rp.d, "<block type=\"image_get_file_id\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "backgroundColor",
-        widgetType: An.v,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
         widgetId: e
       }), Jd.sb({
         property: "__opacity",
-        widgetType: An.v,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
         widgetId: e
       }), "<block type=\"image_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"image_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.v,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
         widgetId: e
       })
     ]

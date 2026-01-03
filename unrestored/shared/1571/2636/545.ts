@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */_Color from "color"
 import * as l from "./8"
 import u from "./8"
-import * as d from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as p from "./90"
 import * as /* [auto-meaningful-name] */$_239 from "./239"
 import /* [auto-meaningful-name] */_$_ from "./239"
@@ -45,8 +45,8 @@ _a = function (e) {
   }
   return _React.createElement("div", {
     id: t,
-    "data-widget-type": d.H,
-    "data-role": d.M,
+    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     className: u(p.b, _$_.textWidget, o.a({}, _$_.hide, !e$visible)),
     onClick: function () {
       if (e$onClick) {

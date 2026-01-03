@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
 import * as a from "../6"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
@@ -87,27 +87,27 @@ var Pe = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : Ne
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Cc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Cc:
       return Re(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ad:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ad:
       return ke(e)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.c:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.c:
       return xe(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.gc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.gc:
       return De(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Pe:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Pe:
       return Me(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.Ub:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ub:
       return Le(e, t)
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.fe:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.fe:
       return e.set("tableDataDialog", a.a({}, t.payload))
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.ue:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ue:
       return e.set("dataWatchToast", {
         visible: true,
         toast: t.payload.toast,
         showIcon: t.payload.showIcon || false
       })
-    case $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.sc:
+    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.sc:
       return e.set("dataWatchToast", {
         visible: false
       })

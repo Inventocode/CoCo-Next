@@ -7,7 +7,7 @@
 "use strict"
 
 import qv from "./88"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -39,7 +39,7 @@ var Xw = _React.memo(function (e) {
   }, React.createElement("div", {
     className: _$_.btn,
     onClick: function () {
-      c($$_$$_$$_$$_src_shared_events_messagesWrapper.Bh({
+      c($$_$$_$$_$$_src_editor_redux_common_actions.Bh({
         onConfirm: function (e) {
           e$onChange(n, e)
         },

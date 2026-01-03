@@ -7,7 +7,7 @@
 import * as React from "react"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_events_main_messagesWrapper from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1062 from "../../../../../unrestored/shared/1571/2636/1062"
@@ -24,7 +24,7 @@ var ML = React.memo(() => {
       visible={blockImageDialogInfo$visible}
       className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageDialog}
       onClose={() => {
-        e($$_$$_$$_events_main_messagesWrapper.bi(false, ""))
+        e($$_$$_$$_redux_common_actions.bi(false, ""))
       }}
     >
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageWrap}>

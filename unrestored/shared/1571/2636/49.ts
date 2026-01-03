@@ -4,5 +4,5 @@
  * 模块 ID：49
  */
 
-import { An } from "./49__part-10"
+import { An } from "../../../../src/editor/collaboration/ot-helper"
 export { An as oTHelper }

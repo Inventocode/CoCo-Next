@@ -13,7 +13,7 @@ import * as a from "../8"
 import s from "../8"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */_Color from "color"
-import * as u from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_148 from "../148"
 import * as /* [auto-meaningful-name] */$_245 from "./245"
@@ -185,8 +185,8 @@ _a = function (e) {
   var S = $$_148.g[e$attributes$sizeType]
   return _React.createElement("div", {
     id: t,
-    "data-role": u.M,
-    "data-widget-type": u.C,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
     "data-min-width": S.minWidth,
     "data-max-width": S.maxWidth,
     className: s(_$_.radioWidget, $$_90.b, $$_11.a({}, _$_.hide, !e$visible)),

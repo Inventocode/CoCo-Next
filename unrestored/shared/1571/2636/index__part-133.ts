@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -57,7 +57,7 @@ var Yw = _React.memo(function (e) {
   }, React.createElement("div", {
     className: _$_.btn,
     onClick: function () {
-      c($$_$$_$$_$$_src_shared_events_messagesWrapper.zj({
+      c($$_$$_$$_$$_src_editor_redux_common_actions.zj({
         grid: D.a({
           id: e$widgetId,
           name: s

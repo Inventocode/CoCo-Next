@@ -12,7 +12,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as k from "./11"
 import * as /* [auto-meaningful-name] */$_379 from "./379"
@@ -22,34 +22,34 @@ var cf = {
   name: "WIDGET_ID",
   custom: true,
   options: function () {
-    return $_46_index.c().getWidgetListByType(An.C)
+    return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.C)
   }
 }
 var lf = {
-  type: An.C,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.C,
   category: {
     iconId: $_148.a,
-    blocks: An.C
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.C
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"radio_on_select\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"radio_set_headline\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"HEADLINE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_set_option_count\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>4</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_set_option_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_set_option_selected_or_disabled\" uncache=\"true\">\n      <field name=\"STATE\">selected</field>\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_clear_selected\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_set_option_feedback\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"STATE\">correct</field>\n    </block>"), "<block type=\"radio_clear_feedback\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_delete_option\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_push_option\" uncache=\"true\">\n      <value name=\"CONTENT\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.C,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.C,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"radio_set_position\" uncache=\"true\">\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"radio_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"radio_get_selected_option_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_get_selected_option_content\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_get_option_content_by_index\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_get_headline\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"optionCount\" widget_type=\"".concat(An.C, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"__position\" widget_type=\"".concat(An.C, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), Jd.sb({
+      }), "<block type=\"radio_set_position\" uncache=\"true\">\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"radio_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"radio_get_selected_option_index\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_get_selected_option_content\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"radio_get_option_content_by_index\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"INDEX\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='", 1, ",", 8, ",1'>1</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"radio_get_headline\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"optionCount\" widget_type=\"".concat($$_$$_$$_$$_src_editor_widget_builtIn_types.C, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), "<block type=\"widget_get\">\n      <mutation property=\"__position\" widget_type=\"".concat($$_$$_$$_$$_src_editor_widget_builtIn_types.C, "\"></mutation>\n      <field name=\"WIDGET_ID\">").concat(e, "</field>\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.C,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.C,
         widgetId: e
       }), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.C,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.C,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.C,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.C,
         widgetId: e
       })
     ]
@@ -513,7 +513,7 @@ var lf = {
 var uf = {
   icon: $_148.a,
   title: "radio",
-  type: An.C,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.C,
   previewAreaWidgetTitle: "radio",
   component: of,
   editConfig: nf,
@@ -530,7 +530,7 @@ var uf = {
     }),
     attributes: {
       disabled: false,
-      sizeAdaptive: An.q.AUTO_HEIGHT,
+      sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
       headlineVisible: true,
       options: [
         {
@@ -543,7 +543,7 @@ var uf = {
       ],
       headline: "%{COCO_defaultHeadlineContext}",
       color: $_148.b,
-      sizeType: An.s.MEDIUM,
+      sizeType: $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM,
       mode: $_379.a.DEFAULT
     }
   }

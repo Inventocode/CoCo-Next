@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -60,13 +60,13 @@ var Pj = _React.memo(function (e) {
         if (e$mode !== Tn.c.ImageLibrary) {
           if (e$mode !== Tn.c.SoundLibrary) {
             if (!(e$mode !== Tn.c.IconLibrary)) {
-              s($$_$$_$$_$$_src_shared_events_messagesWrapper.rf(e))
+              s($$_$$_$$_$$_src_editor_redux_common_actions.rf(e))
             }
           } else {
-            s($$_$$_$$_$$_src_shared_events_messagesWrapper.wf(e))
+            s($$_$$_$$_$$_src_editor_redux_common_actions.wf(e))
           }
         } else {
-          s($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, function () {
+          s($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function () {
             u()
           }, true))
         }

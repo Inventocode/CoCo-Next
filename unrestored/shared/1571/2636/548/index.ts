@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */_Color from "color"
 import * as c from "../8"
 import l from "../8"
-import * as u from "../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_131 from "../131"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
@@ -105,8 +105,8 @@ _a = function (e) {
   }, [M, P, e$attributes$backgroundMode, e$attributes$value])
   return _React.createElement("div", {
     id: t,
-    "data-role": u.M,
-    "data-widget-type": u.F,
+    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.F,
     "data-min-width": $$_131.j,
     "data-max-width": $$_53.o,
     "data-min-height": $$_131.i,

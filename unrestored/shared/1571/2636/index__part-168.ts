@@ -24,7 +24,7 @@ import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import * as Dn from "./19"
 import * as Tn from "./68"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -63,7 +63,7 @@ var LA = _React.memo(function () {
   })), React.createElement("span", {
     className: _$_.closeBtn,
     onClick: function () {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.Vi(undefined))
+      t($$_$$_$$_$$_src_editor_redux_common_actions.Vi(undefined))
     }
   }, React.createElement($_13_index.j, {
     type: "icon-close-bold"
@@ -80,7 +80,7 @@ var LA = _React.memo(function () {
   })), React.createElement("div", {
     className: _$_.openMallBtn,
     onClick: function () {
-      t($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ResourceLibrary, function () {}, false, "image" === i ? Tn.d.IMAGE : "icon" === i ? Tn.d.ICON : "sound" === i ? Tn.d.SOUND : undefined, s))
+      t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ResourceLibrary, function () {}, false, "image" === i ? Tn.d.IMAGE : "icon" === i ? Tn.d.ICON : "sound" === i ? Tn.d.SOUND : undefined, s))
     }
   }, $_710_index$a$formatMessage({
     id: "Resource.ResourceMall"

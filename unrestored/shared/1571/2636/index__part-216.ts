@@ -8,7 +8,7 @@
 
 import { nb } from "./index__part-92"
 import * as Tn from "./68"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -56,16 +56,16 @@ var qP = _React.memo(function () {
   }
   function w(e) {
     if (e) {
-      E($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(e, function (e) {
+      E($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
         O(e[0], b)
       }))
     }
   }
   function C() {
-    E($$_$$_$$_$$_src_shared_events_messagesWrapper.wj(Tn.c.ImageLibrary, function (e) {
+    E($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
       var t = e[0]
       O(t, b)
-      E($$_$$_$$_$$_src_shared_events_messagesWrapper.sh())
+      E($$_$$_$$_$$_src_editor_redux_common_actions.sh())
     }))
   }
   return React.createElement($_13_index.f, {
@@ -75,7 +75,7 @@ var qP = _React.memo(function () {
       id: "switch.custom"
     }),
     onClose: function () {
-      E($$_$$_$$_$$_src_shared_events_messagesWrapper.Hj({
+      E($$_$$_$$_$$_src_editor_redux_common_actions.Hj({
         visible: false
       }))
     },
@@ -83,9 +83,9 @@ var qP = _React.memo(function () {
       type: "primary",
       onClick: function () {
         $_16_index.b(function () {
-          E($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "backgroundOpenImage", c))
-          E($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e$widgetId, "backgroundCloseImage", p))
-          E($$_$$_$$_$$_src_shared_events_messagesWrapper.Hj({
+          E($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "backgroundOpenImage", c))
+          E($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "backgroundCloseImage", p))
+          E($$_$$_$$_$$_src_editor_redux_common_actions.Hj({
             visible: false
           }))
         })

@@ -11,7 +11,7 @@ import { B, G, H } from "../../../../unrestored/shared/1571/2636/index__part-2"
 import { Q } from "../../../../unrestored/shared/1571/2636/index__part-3"
 import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
 import { Ge } from "../../../../unrestored/shared/1571/2636/index__part-9"
-import { Ze } from "../../../../unrestored/shared/1571/2636/index__part-10"
+import { UserInfo } from "./right/user-info"
 import { Xe, ot as Notice } from "../../../../unrestored/shared/1571/2636/index__part-11"
 import { Collaboration } from "./right/collaboration"
 import { Dt } from "../../../../unrestored/shared/1571/2636/index__part-15"
@@ -31,42 +31,42 @@ import * as Actions from "../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../unrestored/shared/1571/2636/710/index"
 import { a as Tooltip } from "../../../../unrestored/shared/1571/2636/748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../unrestored/shared/1571/2636/10/index"
-import * as O from "../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../unrestored/shared/1571/2636/16/index"
-import * as _n from "../../../../unrestored/shared/1571/2636/47"
-import * as /* [auto-meaningful-name] */$_1053 from "../../../../unrestored/shared/1571/2636/1053"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_1053 from "../../../../unrestored/shared/1571/2636/1053"
 
 import styles from "./styles.module.css"
 import cloudSpaceManagerStyles from "../../../../unrestored/shared/1571/2636/1053"
 
 function CloudSpaceManager() {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var t = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.header
   })
-  var n = $_16_index.e(function (e) {
+  var n = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.cloudSpace.cloudDictList
   })
-  var r = $_16_index.e(function (e) {
+  var r = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.cloudSpace.cloudTableList
   })
   var o = React.useState(false)
-  var i = $_10_index.a(o, 2)
+  var i = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   var c = React.useState(false)
-  var l = $_10_index.a(c, 2)
+  var l = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
   React.useEffect(function () {
     s(false)
     d(false)
     var e
-    var t = _n.a(n)
+    var t = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(n)
     try {
       for (t.s(); !(e = t.n()).done;) {
         var /* [auto-meaningful-name] */e$value = e.value
@@ -84,7 +84,7 @@ function CloudSpaceManager() {
       t.f()
     }
     var i
-    var a = _n.a(r)
+    var a = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(r)
     try {
       for (a.s(); !(i = a.n()).done;) {
         var /* [auto-meaningful-name] */i$value = i.value
@@ -105,7 +105,7 @@ function CloudSpaceManager() {
   if (t.cloudSpaceManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide) {
     return null
   }
-  var p = $_710_index$a$formatMessage(u ? {
+  var p = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage(u ? {
     id: "cloudSpace.outMaxLimit"
   } : a ? {
     id: "cloudSpace.outWarnLimit"
@@ -123,17 +123,17 @@ function CloudSpaceManager() {
         onClick={() => window.open(`${$$_$$_$$_$$_unrestored_shared_1571_2636_15.A()}/`, "_blank")}
         className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(cloudSpaceManagerStyles.cloudSpaceManager)}
       >
-        {p === $_710_index$a$formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
+        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
           <div className={cloudSpaceManagerStyles.cloudIconError}>
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-error" />
           </div>
         )}
-        {p === $_710_index$a$formatMessage({ id: "cloudSpace.outWarnLimit" }) && (
+        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "cloudSpace.outWarnLimit" }) && (
           <div className={cloudSpaceManagerStyles.cloudIconWarn}>
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-warn" />
           </div>
         )}
-        {p === $_710_index$a$formatMessage({ id: "cloudSpace.cloudSpace" }) && (
+        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "cloudSpace.cloudSpace" }) && (
           <div>
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-normal" />
           </div>
@@ -143,58 +143,58 @@ function CloudSpaceManager() {
   )
 }
 const Header = React.memo(({ children }: { children: JSX.Element }) => {
-  const dispatch = $_16_index.d()
-  var formatMessage = $_710_index.a().formatMessage
+  const dispatch = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var o = React.useState(false)
-  var i = $_10_index.a(o, 2)
+  var i = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   var c = React.useState(false)
-  var l = $_10_index.a(c, 2)
+  var l = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
   var asyncCreateProjectRef = React.useRef<null | (() => void)>()
-  var userInfo = $_16_index.e(function (e) {
+  var userInfo = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var saving = $_16_index.e(function (e) {
+  var saving = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.saving
   })
-  var isAuthor = $_16_index.e(function (e) {
+  var isAuthor = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.isAuthor
   })
-  var checkedTimeStamp = $_16_index.e(function (e) {
+  var checkedTimeStamp = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.cloudSpace.checkedTimeStamp
   })
-  var stageRulerVisible = $_16_index.e(function (e) {
+  var stageRulerVisible = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageRulerVisible
   })
-  var stageVisible = $_16_index.e(function (e) {
+  var stageVisible = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.stageVisible
   })
-  var cloudDBManagerDialogVisible = $_16_index.e(function (e) {
+  var cloudDBManagerDialogVisible = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.cloudDBManagerDialogVisible
   })
-  var project = $_16_index.e(function (e) {
+  var project = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project
   })
   const { isPackaging, packageQrCodeVisible, packageDialogVisible } = project
-  var lastSavedTime = $_16_index.e(function (e) {
+  var lastSavedTime = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.lastSavedTime
   })
-  var isProjectModified = $_16_index.e(function (e) {
+  var isProjectModified = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.isProjectModified
   })
-  var playing = $_16_index.e(function (e) {
+  var playing = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.playing
   })
-  var id = $_16_index.e(function (e) {
+  var id = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.id
   })
-  var title = $_16_index.e(function (e) {
+  var title = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.title
   })
-  var jsonFrom = $_16_index.e(function (e) {
+  var jsonFrom = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.jsonFrom
   })
   var isUpdate = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id)
@@ -202,14 +202,14 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
   var X = React.useRef(null)
   var J = React.useRef(null)
   var $ = React.useState(false)
-  var ee = $_10_index.a($, 2)
+  var ee = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a($, 2)
   var ne = ee[0]
   var re = ee[1]
-  var oe = $_16_index.e(function (e) {
+  const uiConfig = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.header
   })
   var ie = React.useState(false)
-  var ae = $_10_index.a(ie, 2)
+  var ae = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
   var le = undefined !== $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href).archiveId
@@ -237,16 +237,16 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     return e
   }, [id, isUpdate])
   var ue = React.useState(false)
-  var de = $_10_index.a(ue, 2)
+  var de = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ue, 2)
   var pe = de[0]
   var fe = de[1]
-  var collAutoSave = $_16_index.e(function (e) {
+  var collAutoSave = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.collAutoSave
   })
-  var historyArchiveId = $_16_index.e(function (e) {
+  var historyArchiveId = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.historyArchiveId
   })
-  var collWorkId = $_16_index.e(function (e) {
+  var collWorkId = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
   React.useEffect(function () {
@@ -263,7 +263,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     dispatch(Actions.Xf())
   }, [dispatch])
   var _e = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -309,7 +309,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     }
   }()
   var ve = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -351,7 +351,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     }, 100)
   }
   var Ee = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -461,7 +461,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
         X.current = null
       }
     }
-    if (collWorkId || oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide || oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly) {
+    if (collWorkId || uiConfig.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide || uiConfig.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly) {
       e()
     } else if (isUpdate && isProjectModified) {
       if (!X.current) {
@@ -476,12 +476,12 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     } else {
       e()
     }
-  }, [isUpdate, isProjectModified, save, collWorkId, oe.save])
+  }, [isUpdate, isProjectModified, save, collWorkId, uiConfig.save])
   React.useEffect(function () {
     if (!saving) {
       if (historyArchiveId) {
         if (isProjectModified) {
-          O.a(RegeneratorRuntime.mark(function e() {
+          $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
             return RegeneratorRuntime.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
@@ -576,7 +576,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     dispatch(Actions.Ci(editPermission))
   }, [dispatch, save, isProjectModified])
   var Se = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
@@ -620,7 +620,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     dispatch(Actions.Gi(true))
   }
   var Ie = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var o
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent$title
@@ -676,7 +676,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     }
   }
   React.useEffect(function () {
-    if (oe.preventLeave === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) {
+    if (uiConfig.preventLeave === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) {
       window.onbeforeunload = function (e) {
         if (e) {
           e.returnValue = "你要离开网页吗？"
@@ -686,16 +686,16 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     } else {
       window.onbeforeunload = function () {}
     }
-  }, [oe.preventLeave])
+  }, [uiConfig.preventLeave])
   React.useEffect(function () {
     window.addEventListener("message", Q.handle)
   }, [dispatch])
-  var showOpenLocalFile = oe.file.openLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show
+  var showOpenLocalFile = uiConfig.file.openLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show
   // [CoCo Next] 移除保存作品限制
-  var showExportLocalFile = oe.file.exportLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show // && isAuthor
-  var showSaveAs = oe.file.saveAs === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor
+  var showExportLocalFile = uiConfig.file.exportLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show // && isAuthor
+  var showSaveAs = uiConfig.file.saveAs === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor
   var xe = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -729,7 +729,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
   return (
     <div className={styles.wrapper} data-html2canvas-ignore="true">
       <div className={styles.left}>
-        {!le && oe.logo !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide && (
+        {!le && uiConfig.logo !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide && (
           <Tooltip
             mouseLeaveDelay={0}
             placement="bottom"
@@ -742,21 +742,21 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             </div>
           </Tooltip>
         )}
-        {!le && oe.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.logoCutLine} />}
+        {!le && uiConfig.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.logoCutLine} />}
         <div className={styles.menu}>
-          {Object.values(oe.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
+          {Object.values(uiConfig.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
               className={styles.fileDropdown}
               overlay={
                 <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l onClick={Ce}>
-                  {oe.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="CREATE_NEW_PROJECT">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.newProject" })}
                       </div>
                     </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
                   )}
-                  {oe.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="OPEN_MY_PROJECT">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.openProject" })}
@@ -771,7 +771,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                     </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
                   )}
                   <div className={styles.line} />
-                  {oe.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
+                  {uiConfig.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="HISTORY">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.history" })}
@@ -828,11 +828,11 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               </Tooltip>
             </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
           )}
-          {Object.values(oe.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
+          {Object.values(uiConfig.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
               overlay={
                 <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
-                  {oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="courseVideo">
                       <div className={styles.itemLinkContent} onClick={xe}>
                         <span className={styles.link}>
@@ -841,7 +841,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                       </div>
                     </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
                   )}
-                  {oe.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="tutorial">
                       <div className={styles.itemLinkContent}>
                         {/* [CoCo Next] 替换帮助文档链接 */}
@@ -857,7 +857,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                     </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
                   )}
                   <div className={styles.line} />
-                  {oe.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="feedback">
                       <div className={styles.itemLinkContent}>
                         {/* [CoCo Next] 替换问题反馈链接 */}
@@ -872,7 +872,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                       </div>
                     </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
                   )}
-                  {oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="releaseInfo">
                       <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.vj(true))}>
                         <span className={styles.link}>
@@ -881,7 +881,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                       </div>
                     </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
                   )}
-                  {oe.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="aboutUs">
                       <div className={styles.itemLinkContent} onClick={De}>
                         <span className={styles.link}>
@@ -906,18 +906,18 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               </Tooltip>
             </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
           )}
-          {Object.values(oe.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
+          {Object.values(uiConfig.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
               overlay={
                 <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l onClick={je}>
-                  {oe.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="STAGE_RULER">
                       <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
                       </div>
                     </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
                   )}
-                  {oe.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+                  {uiConfig.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="STAGE_AREA">
                       <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
@@ -941,7 +941,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
           )}
         </div>
-        {!le && oe.cloudDBManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+        {!le && uiConfig.cloudDBManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
           <Tooltip
             mouseLeaveDelay={0}
             placement="bottom"
@@ -961,8 +961,8 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
       </div>
       <div className={styles.center}>{children}</div>
       <div className={styles.right}>
-        {!le && oe.coll === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.otWrapper}><Collaboration /></div>}
-        {!le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
+        {!le && uiConfig.coll === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.otWrapper}><Collaboration /></div>}
+        {!le && uiConfig.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
           <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
             className={styles.shareMenu}
             overlay={
@@ -989,8 +989,8 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             </Tooltip>
           </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
         )}
-        {!le && oe.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.cutLine} />}
-        {!le && oe.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
+        {!le && uiConfig.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.cutLine} />}
+        {!le && uiConfig.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
           <Tooltip
             placement="bottom"
             title={() => {
@@ -1052,7 +1052,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
           </Tooltip>
         )}
-        {!le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
+        {!le && uiConfig.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
           <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
             className={styles.packageBtn}
             onClick={_e}
@@ -1063,7 +1063,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
         )}
         {packageDialogVisible && <Dt />}
         {packageQrCodeVisible && <Gt />}
-        {!le && oe.userInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <Ze />}
+        {!le && uiConfig.userInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <UserInfo />}
         <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.saveTipsWrapper, jsonFrom !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER && ne && !isUpdate && styles.show)}>
           {formatMessage({ id: "MyProject.newSaveTips" })}
           <div className={styles.closeSaveTips} onClick={() => re(false)}>

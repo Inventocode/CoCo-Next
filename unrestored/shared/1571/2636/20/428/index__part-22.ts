@@ -19,7 +19,7 @@ import * as /* [auto-meaningful-name] */$$_$$_68 from "../../68"
 import * as /* [auto-meaningful-name] */$$_$$_91 from "../../91"
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
 import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import * as /* [auto-meaningful-name] */$$_$$_47 from "../../47"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -56,7 +56,7 @@ function Ld(e, t, n) {
 function Pd(e) {
   for (var t in e) {
     var n = e[t]
-    if (n.type === $$_$$_5.h) {
+    if (n.type === $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.h) {
       Md[n.attributes.cloudDbId] = {
         columnInfo: n.attributes.columns,
         name: n.attributes.name
@@ -393,7 +393,7 @@ function Qd(e, t) {
   $$_84.Eb(e);
   (function (e) {
     $$_$$_48_index.a().getState().widgetMap.forEach(function (t) {
-      if (t.type === $$_$$_5.A && t.attributes.dataSource === e) {
+      if (t.type === $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A && t.attributes.dataSource === e) {
         a.h(t.id, {
           dataUpdatedAt: Date.now()
         })
@@ -405,7 +405,7 @@ function Qd(e, t) {
       type: $$_$$_68.b.PLAYER_DATA_WATCH,
       data: {
         screenId: $$_$$_48_index.a().getState().currentScreenId,
-        tab: $$_$$_5.G,
+        tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.G,
         id: e,
         value: t
       }
@@ -785,7 +785,7 @@ function fp() {
               type: $$_$$_68.b.PLAYER_DATA_WATCH,
               data: {
                 screenId: $$_$$_48_index.a().getState().currentScreenId,
-                tab: $$_$$_5.G,
+                tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.G,
                 id: t,
                 value: n$attributes$db
               }

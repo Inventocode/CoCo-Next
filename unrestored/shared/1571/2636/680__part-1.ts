@@ -8,10 +8,10 @@
 
 import * as o from "./6"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as a from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as s from "./33"
 var c = {
-  type: a.v,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
   icon: $_133.a,
   title: "widgetName",
   platforms: ["web", "android", "ios"],

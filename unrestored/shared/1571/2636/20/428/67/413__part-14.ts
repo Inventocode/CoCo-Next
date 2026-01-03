@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_10_index from "../../../10/inde
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
@@ -35,7 +35,7 @@ function Ae(e, t) {
             $$_$$_index.emitActorPress(t$target_id, t.data.position)
             $$_$$_$$_55.b.playerWidgetLog({
               widgetId: t$target_id,
-              widgetType: $$_$$_$$_5.a,
+              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
               message: "onWidgetPress"
             })
           }
@@ -52,7 +52,7 @@ function Ae(e, t) {
             $$_$$_index.emitActorPressIn(n$target_id, n.data.position)
             $$_$$_$$_55.b.playerWidgetLog({
               widgetId: n$target_id,
-              widgetType: $$_$$_$$_5.a,
+              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
               message: "onWidgetPressIn"
             })
             if (t) {
@@ -66,7 +66,7 @@ function Ae(e, t) {
               })
               $$_$$_$$_55.b.playerWidgetLog({
                 widgetId: n$target_id,
-                widgetType: $$_$$_$$_5.a,
+                widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
                 message: "onWidgetPressHold"
               })
             }
@@ -79,7 +79,7 @@ function Ae(e, t) {
             $$_$$_index.emitActorPressOut(t$target_id, t.data.position)
             $$_$$_$$_55.b.playerWidgetLog({
               widgetId: t$target_id,
-              widgetType: $$_$$_$$_5.a,
+              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a,
               message: "onWidgetPressOut"
             })
           }
@@ -153,7 +153,7 @@ var Ie = _React.memo(function (e) {
             $$_$$_index.emitCanvasPress(e, n$data.position)
             $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_5.f,
+              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
               message: "onWidgetPress"
             })
           }
@@ -172,7 +172,7 @@ var Ie = _React.memo(function (e) {
             $$_$$_index.emitCanvasPressIn(e, n$data.position)
             $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_5.f,
+              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
               message: "onWidgetPressIn"
             })
             $_index.a(function () {
@@ -184,7 +184,7 @@ var Ie = _React.memo(function (e) {
             })
             $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_5.f,
+              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
               message: "onWidgetPressHold"
             })
           }
@@ -198,7 +198,7 @@ var Ie = _React.memo(function (e) {
             $$_$$_index.emitCanvasPressOut(e, n$data.position)
             $$_$$_$$_55.b.playerWidgetLog({
               widgetId: e,
-              widgetType: $$_$$_$$_5.f,
+              widgetType: $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
               message: "onWidgetPressOut"
             })
           }
@@ -308,8 +308,8 @@ var Ie = _React.memo(function (e) {
   }
   return React.createElement(React.Fragment, null, React.createElement("div", {
     id: _,
-    "data-role": $$_$$_$$_5.M,
-    "data-widget-type": $$_$$_$$_5.f,
+    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f,
     ref: t,
     style: {
       top: e$position.y,

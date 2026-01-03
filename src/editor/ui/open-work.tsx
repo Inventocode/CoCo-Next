@@ -21,17 +21,17 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_627
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../unrestored/shared/1571/2636/710/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$_2646_index from "../../../unrestored/shared/1571/2636/2646/index"
-import * as /* [auto-meaningful-name] */$_1529 from "../../../unrestored/shared/1571/2636/1529"
-import * as /* [auto-meaningful-name] */$_392_index from "../../../unrestored/shared/1571/2636/392/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2646_index from "../../../unrestored/shared/1571/2636/2646/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_1529 from "../../../unrestored/shared/1571/2636/1529"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../unrestored/shared/1571/2636/392/index"
 function OpenWork() {
-  var dispatch = $_16_index.d()
+  var dispatch = $$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var formatMessage = $$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var courseList = $_16_index.e(function (e) {
+  var courseList = $$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.courseList
   })
-  var templateList = $_16_index.e(function (e) {
+  var templateList = $$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.templateList
   })
   const hasWorkRef = React.useRef(false)
@@ -193,7 +193,7 @@ function OpenWork() {
   }, [dispatch, formatMessage, openWorkById])
   var openNew = React.useCallback(function () {
     dispatch(Actions.warpAsyncCreateProject("localhost" === window.location.hostname ? undefined : {
-      json: $_1529
+      json: $$_$$_$$_unrestored_shared_1571_2636_1529
     }))
   }, [dispatch])
   var openJsonUrl = React.useCallback(function (t) {
@@ -293,7 +293,7 @@ function OpenWork() {
                         right: 5
                       }}
                     >
-                      {<$_2646_index.a
+                      {<$$_$$_$$_unrestored_shared_1571_2636_2646_index.a
                         size={"esm"}
                         type={"transparent-fb"}
                         width={26}
@@ -322,7 +322,7 @@ function OpenWork() {
                           type={"icon-btn-fallback"}
                           className={"coco-video-back"}
                         />}
-                      </$_2646_index.a>}
+                      </$$_$$_$$_unrestored_shared_1571_2636_2646_index.a>}
                     </span>}
                     {i.title}
                   </div>,
@@ -333,9 +333,9 @@ function OpenWork() {
                   confirmPercent: .9,
                   onMinimizeBtnClick: function () {
                     $$_$$_$$_unrestored_shared_1571_2636_627.a.hide()
-                    dispatch(Actions.Qh($_392_index.a, {
-                      name: $_392_index.a,
-                      content: <$_392_index.b/>
+                    dispatch(Actions.Qh($$_$$_$$_unrestored_shared_1571_2636_392_index.a, {
+                      name: $$_$$_$$_unrestored_shared_1571_2636_392_index.a,
+                      content: <$$_$$_$$_unrestored_shared_1571_2636_392_index.b/>
                     }))
                   },
                   onClose: function () {

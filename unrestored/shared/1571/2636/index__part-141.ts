@@ -42,7 +42,7 @@ import { hC } from "./index__part-138"
 import { _C } from "./index__part-139"
 import { SC, AC, IC, jC } from "./index__part-140"
 import /* [auto-meaningful-name] */Axios from "axios"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -212,7 +212,7 @@ var BC = _React.memo(function (e) {
               if (e$onChange) {
                 e$onChange(r, "")
               }
-              t($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: "已取消授权",
                 type: "info"
               }))

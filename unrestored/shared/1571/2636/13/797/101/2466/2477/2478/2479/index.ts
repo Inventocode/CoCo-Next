@@ -6,7 +6,7 @@
 
 var r = require("./2480")
 var i = require("./2522")
-var o = require("./1447")
+var o = require("../2523/1447")
 module.exports = function (e) {
   var t = i(e)
   return 1 == t.length && t[0][2] ? o(t[0][0], t[0][1]) : function (n) {

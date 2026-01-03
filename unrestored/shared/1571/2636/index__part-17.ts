@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$_197_index from "./197/index"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as te from "./15"
 import * as Z from "./97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -152,10 +152,10 @@ var Jt = _React.memo(function (e) {
             case 19:
               e.prev = 19
               e.next = 22
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(p, $$_$$_$$_$$_src_shared_events_messagesWrapper.Eh(v.name, v.description, v.operation, a))
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(p, $$_$$_$$_$$_src_editor_redux_common_actions.Eh(v.name, v.description, v.operation, a))
             case 22:
               _e$sent = e.sent
-              p($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              p($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 type: "success",
                 message: $_710_index$a$formatMessage({
                   id: "Publish.publishSuccess"
@@ -172,7 +172,7 @@ var Jt = _React.memo(function (e) {
                 e.next = 36
                 break
               }
-              p($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              p($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 message: "分享失败，作品使用了未审核的自定义控件",
                 type: "error"
               }))
@@ -180,7 +180,7 @@ var Jt = _React.memo(function (e) {
               e$onClose()
               return e.abrupt("return")
             case 36:
-              p($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+              p($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 type: "error",
                 message: $_710_index$a$formatMessage({
                   id: "Publish.publishFail"

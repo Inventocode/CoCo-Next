@@ -18,7 +18,7 @@ import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as /* [auto-meaningful-name] */$_733 from "./733"
 import * as /* [auto-meaningful-name] */$_732 from "./732"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as p from "../9"
 import * as /* [auto-meaningful-name] */$$_141_index from "../141/index"
@@ -58,7 +58,7 @@ function v(e) {
             case 4:
               a$name = a.name
               return n.abrupt("return", new Promise(function (e) {
-                $$_37_index$d$dispatch($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.lj({
+                $$_37_index$d$dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.lj({
                   title: "procedureDialogTitle",
                   defaultValue: a$name,
                   placeholder: "procedureDialogPlaceholder",
@@ -116,7 +116,7 @@ function v(e) {
               throw Error("Trying to add param to undefined procedure")
             case 4:
               return n.abrupt("return", new Promise(function (e) {
-                $$_37_index$d$dispatch($$_$$_$$_$$_$$_src_shared_events_messagesWrapper.lj({
+                $$_37_index$d$dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.lj({
                   title: "parameterDialogTitle",
                   placeholder: "parameterDialogPlaceholder",
                   maxLength: 20,

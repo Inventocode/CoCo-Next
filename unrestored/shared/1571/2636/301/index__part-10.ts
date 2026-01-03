@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
 import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
@@ -31,7 +31,7 @@ $_735.FieldColour.prototype.show_editor = function () {
   }
   var l = n[1] + s
   var u = n[0] + c
-  var d = $$_$$_$$_$$_$$_src_shared_events_messagesWrapper.hj({
+  var d = $$_$$_$$_$$_$$_src_editor_redux_common_actions.hj({
     value: o,
     selectValue: function (e) {
       var /* [auto-meaningful-name] */t$border_rect

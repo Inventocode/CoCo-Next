@@ -9,7 +9,7 @@
 import * as ng from "./64"
 import * as Jd from "./33"
 import * as Qu from "./60"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as te from "./15"
 import * as D from "./6"
@@ -146,8 +146,8 @@ var tv = function (e) {
   return React.createElement(React.Fragment, null, React.createElement("button", {
     id: r,
     className: N(wn.b, _$_.buttonWidget, k.a({}, _$_.hide, !e$visible)),
-    "data-role": An.M,
-    "data-widget-type": An.z,
+    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.z,
     "data-min-width": Q_.p,
     "data-max-width": Q_.m,
     "data-min-height": Q_.n,

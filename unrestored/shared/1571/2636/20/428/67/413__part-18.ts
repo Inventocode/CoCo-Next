@@ -35,7 +35,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */_React from "react"
 import /* [auto-meaningful-name] */Color from "color"
@@ -62,11 +62,11 @@ var Ue = function () {
   return null
 }
 We = {}
-$$_$$_$$_11.a(We, $$_$$_$$_5.H, T)
-$$_$$_$$_11.a(We, $$_$$_$$_5.d, j)
-$$_$$_$$_11.a(We, $$_$$_$$_5.z, F)
-$$_$$_$$_11.a(We, $$_$$_$$_5.v, V)
-$$_$$_$$_11.a(We, $$_$$_$$_5.w, function (e) {
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H, T)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d, j)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.z, F)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v, V)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$position = e.position
@@ -197,8 +197,8 @@ $$_$$_$$_11.a(We, $$_$$_$$_5.w, function (e) {
   return React.createElement("div", {
     id: t,
     className: $$_$$_$$_8($$_$$_$$_290.inputWidget, e$attributes$backgroundMode === $$_$$_$$_76.a.TEMPLATE && e$attributes$templateMode !== $$_$$_$$_76.c.OUTLINED_FLAT && $$_$$_$$_290.inputWidgetUnderpainting),
-    "data-role": $$_$$_$$_5.M,
-    "data-type": $$_$$_$$_5.w,
+    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w,
     style: $$_$$_$$_6.a($$_$$_$$_6.a($$_$$_$$_6.a({
       top: e$position.y,
       left: e$position.x,
@@ -262,32 +262,32 @@ $$_$$_$$_11.a(We, $$_$$_$$_5.w, function (e) {
     className: $$_$$_$$_290.mask
   })))
 })
-$$_$$_$$_11.a(We, $$_$$_$$_5.C, $)
-$$_$$_$$_11.a(We, $$_$$_$$_5.g, te)
-$$_$$_$$_11.a(We, $$_$$_$$_5.L, re)
-$$_$$_$$_11.a(We, $$_$$_$$_5.F, ae)
-$$_$$_$$_11.a(We, $$_$$_$$_5.E, le)
-$$_$$_$$_11.a(We, $$_$$_$$_5.x, ve)
-$$_$$_$$_11.a(We, $$_$$_$$_5.A, we)
-$$_$$_$$_11.a(We, $$_$$_$$_5.f, Ie)
-$$_$$_$$_11.a(We, $$_$$_$$_5.c, xe)
-$$_$$_$$_11.a(We, $$_$$_$$_5.a, Le)
-$$_$$_$$_11.a(We, $$_$$_$$_5.b, Audio)
-$$_$$_$$_11.a(We, $$_$$_$$_5.n, Be)
-$$_$$_$$_11.a(We, $$_$$_$$_5.J, Ge)
-$$_$$_$$_11.a(We, $$_$$_$$_5.e, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.t, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.K, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.I, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.u, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.i, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.y, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.B, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.l, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.m, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.h, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.G, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.j, Ue)
-$$_$$_$$_11.a(We, $$_$$_$$_5.k, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C, $)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.g, te)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.L, re)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.F, ae)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.E, le)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, ve)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A, we)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.f, Ie)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.c, xe)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.a, Le)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.b, Audio)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.n, Be)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.J, Ge)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.e, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.t, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.K, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.I, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.u, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.i, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.y, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.l, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.m, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.h, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.G, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.j, Ue)
+$$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.k, Ue)
 var He = We
 export { He }

@@ -10,14 +10,14 @@ import { Mv } from "./index__part-88"
 import * as /* [auto-meaningful-name] */$_94_index from "./94/index"
 import * as po from "./49"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
@@ -130,7 +130,7 @@ var Bv = _React.memo(function (e) {
     className: N(_$_.item, (t = {}, k.a(t, _$_.selected, e$selected && j), k.a(t, _$_.selectedLight, e$selected && !j), k.a(t, _$_.children, e$isChildren), k.a(t, _$_.parent, !!e$children), k.a(t, _$_.expanded, D), k.a(t, _$_.notLast, !e$isLast && e$isChildren), t)),
     onContextMenu: function (e) {
       e.preventDefault()
-      if (!(w || e$type !== An.c && e$type !== An.a && e$isChildren)) {
+      if (!(w || e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.a && e$isChildren)) {
         F(true)
       }
     },
@@ -160,7 +160,7 @@ var Bv = _React.memo(function (e) {
     className: N(_$_.label, !e$visible && _$_.labelGray)
   }, e$title)), React.createElement("div", {
     className: _$_.right
-  }, !e$isInvisibleWidget && e$type !== An.c && React.createElement("div", {
+  }, !e$isInvisibleWidget && e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && React.createElement("div", {
     onClick: function (e) {
       e.stopPropagation()
       if (!e$visible) {
@@ -229,9 +229,9 @@ var Fv = _React.memo(function () {
   var L = function (e) {
     var t
     var n
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(e))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.ug(e))
     if (s === e && a) {
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false))
+      r($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
     } else {
       if (s === e && l) {
         $_26_index.g.setSelectedItem()
@@ -246,26 +246,26 @@ var Fv = _React.memo(function () {
   var P = function (e) {
     var t
     var n
-    if (!(r($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(e)), s === e && l)) {
+    if (!(r($$_$$_$$_$$_src_editor_redux_common_actions.ug(e)), s === e && l)) {
       $_26_index.g.setSelectedItem(null === (t = $_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(e))
     }
     if (s === e && a) {
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false))
+      r($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
       if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
         n.refresh_selection()
       }
     } else {
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(true))
+      r($$_$$_$$_$$_src_editor_redux_common_actions.fj(true))
     }
   }
   var B = function (e) {
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e, "visible", true, true, true))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "visible", true, true, true))
   }
   var F = function (e) {
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.Lg(e, "visible", false, true, true))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "visible", false, true, true))
   }
   var G = function (e) {
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.Ef(Et.w(e)))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.Ef(Et.w(e)))
   }
   var W = function (e) {
     var t = Et.Bb(e)
@@ -274,9 +274,9 @@ var Fv = _React.memo(function () {
       var a = $_710_index$a$formatMessage({
         id: "deleteWidget"
       }) + "“" + $_190.f(i, 10) + "”?"
-      if (t.type === An.h) {
+      if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h) {
         o.current = Et.Bb(e)
-        return void r($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        return void r($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: H,
           onClose: V,
           allowText: $_710_index$a$formatMessage({
@@ -293,7 +293,7 @@ var Fv = _React.memo(function () {
       var c = $_26_index.z.checkSomeFieldValueIsSelected("WIDGET_ID", Et.U(e))
       if (s || c) {
         o.current = Et.Bb(e)
-        r($$_$$_$$_$$_src_shared_events_messagesWrapper.zh({
+        r($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: H,
           onClose: V,
           allowText: $_710_index$a$formatMessage({
@@ -306,7 +306,7 @@ var Fv = _React.memo(function () {
           })
         }))
       } else {
-        r($$_$$_$$_$$_src_shared_events_messagesWrapper.Mf(e, u.id))
+        r($$_$$_$$_$$_src_editor_redux_common_actions.Mf(e, u.id))
         o.current = undefined
       }
     }
@@ -315,7 +315,7 @@ var Fv = _React.memo(function () {
     var t
     var n
     var o = e
-    r($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(o))
+    r($$_$$_$$_$$_src_editor_redux_common_actions.ug(o))
     if (s === o && l) {
       $_26_index.g.setSelectedItem()
       if (!(null === (t = $_26_index.g.getToolbox()) || undefined === t)) {
@@ -329,7 +329,7 @@ var Fv = _React.memo(function () {
     var /* [auto-meaningful-name] */o$current
     var t = null === (o$current = o.current) || undefined === o$current ? undefined : o$current.id
     if (t) {
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.Mf(t, u.id))
+      r($$_$$_$$_$$_src_editor_redux_common_actions.Mf(t, u.id))
     }
   }
   var V = function () {
@@ -367,7 +367,7 @@ var Fv = _React.memo(function () {
     }
   })
   J.forEach(function (e) {
-    if (!(e.widget.type !== An.f && e.widget.type !== An.x && e.widget.type !== An.A)) {
+    if (!(e.widget.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.f && e.widget.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.x && e.widget.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.A)) {
       e.widget.widgetIds.forEach(function (t) {
         var n = Et.Bb(t)
         if (n) {
@@ -400,7 +400,7 @@ var Fv = _React.memo(function () {
   var re = []
   c.forEach(function (e) {
     var t = Et.Bb(e)
-    if (t && t.type !== An.m) {
+    if (t && t.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
       ne.push({
         widget: t
       })
@@ -437,7 +437,7 @@ var Fv = _React.memo(function () {
         parentId: r$widget.id,
         isGlobalWidget: null === n || undefined === n ? undefined : n.isGlobalWidget,
         isInvisibleWidget: null === n || undefined === n ? undefined : n.isInvisibleWidget,
-        isDragAndDeleteDisabled: r$widget.type === An.x || r$widget.type === An.A
+        isDragAndDeleteDisabled: r$widget.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.x || r$widget.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A
       }))
     }))
   }
@@ -460,7 +460,7 @@ var Fv = _React.memo(function () {
                 var l = $_10_index.a(c, 1)[0]
                 var d = $_25_index.a(o$widgetIds)
                 d.splice(s, 0, l)
-                r($$_$$_$$_$$_src_shared_events_messagesWrapper.Mg(u.id, o.id, d, true, true, true))
+                r($$_$$_$$_$$_src_editor_redux_common_actions.Mg(u.id, o.id, d, true, true, true))
               } else {
                 var /* [auto-meaningful-name] */po$oTHelper$widget
                 var f = X
@@ -476,7 +476,7 @@ var Fv = _React.memo(function () {
                 }
                 u$widgetIds.splice(y, 1)
                 u$widgetIds.splice(b, 0, g)
-                r($$_$$_$$_$$_src_shared_events_messagesWrapper.Bj(u.id, $_25_index.a(u$widgetIds), null === n || undefined === n ? undefined : n.isInvisibleWidget))
+                r($$_$$_$$_$$_src_editor_redux_common_actions.Bj(u.id, $_25_index.a(u$widgetIds), null === n || undefined === n ? undefined : n.isInvisibleWidget))
                 if (!(null === (po$oTHelper$widget = po.oTHelper.widget) || undefined === po$oTHelper$widget)) {
                   po$oTHelper$widget.clientOp.moveWidget(u.id, y, b)
                 }
@@ -511,7 +511,7 @@ var Fv = _React.memo(function () {
     onClick: function () {
       var e
       var t
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(undefined))
+      r($$_$$_$$_$$_src_editor_redux_common_actions.ug(undefined))
       if (s || !a) {
         if (!s && l) {
           $_26_index.g.setSelectedItem()
@@ -522,7 +522,7 @@ var Fv = _React.memo(function () {
           $_26_index.g.setSelectedItem(null === (t = $_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(u.id))
         }
       } else {
-        r($$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false))
+        r($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
       }
     }
   }, React.createElement("div", {
@@ -538,9 +538,9 @@ var Fv = _React.memo(function () {
     onClick: function (e) {
       var t
       e.stopPropagation()
-      r($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(undefined))
+      r($$_$$_$$_$$_src_editor_redux_common_actions.ug(undefined))
       $_26_index.g.setSelectedItem(null === (t = $_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(u.id))
-      r(!s && a ? $$_$$_$$_$$_src_shared_events_messagesWrapper.fj(false) : $$_$$_$$_$$_src_shared_events_messagesWrapper.fj(true))
+      r(!s && a ? $$_$$_$$_$$_src_editor_redux_common_actions.fj(false) : $$_$$_$$_$$_src_editor_redux_common_actions.fj(true))
     },
     className: N(_$_.controlIcon, _$_.attributeIcon)
   }, React.createElement($_13_index.j, {

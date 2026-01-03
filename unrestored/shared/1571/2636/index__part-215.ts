@@ -8,9 +8,9 @@
 
 var RP
 import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as te from "./15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -74,7 +74,7 @@ var zP = _React.memo(function () {
               return e.abrupt("return")
             case 3:
               e.next = 5
-              return $$_$$_$$_$$_src_shared_events_messagesWrapper.Nf(m, $$_$$_$$_$$_src_shared_events_messagesWrapper.hg((null === g || undefined === g ? undefined : g.id) || "", An.G, {
+              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(m, $$_$$_$$_$$_src_editor_redux_common_actions.hg((null === g || undefined === g ? undefined : g.id) || "", $$_$$_$$_$$_src_editor_widget_builtIn_types.G, {
                 x: 0,
                 y: 0
               }))
@@ -83,7 +83,7 @@ var zP = _React.memo(function () {
               if (e$onConfirm) {
                 e$onConfirm(e$sent)
               }
-              m($$_$$_$$_$$_src_shared_events_messagesWrapper.mh())
+              m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
             case 8:
             case "end":
               return e.stop()
@@ -104,7 +104,7 @@ var zP = _React.memo(function () {
     visible: e$visible,
     withPortal: true,
     onClose: function () {
-      m($$_$$_$$_$$_src_shared_events_messagesWrapper.mh())
+      m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
     }
   }, d && React.createElement(React.Fragment, null, React.createElement("div", {
     className: _$_4.tableDataTitle
@@ -140,7 +140,7 @@ var zP = _React.memo(function () {
   }, React.createElement($_13_index.d, {
     onClick: function () {
       window.open("".concat(te.A(), "/dashboard/?createType=Table"), "_blank")
-      m($$_$$_$$_$$_src_shared_events_messagesWrapper.mh())
+      m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
     },
     type: "primary"
   }, $_710_index$a$formatMessage({

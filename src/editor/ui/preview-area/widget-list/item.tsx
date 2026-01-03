@@ -42,32 +42,32 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_686 from "../../../../../unrestored/shared/1571/2636/686"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index from "../../../../../unrestored/shared/1571/2636/685/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index from "../../../../../unrestored/shared/1571/2636/684/index"
-import * as /* [auto-meaningful-name] */$_683 from "../../../../../unrestored/shared/1571/2636/683"
-import /* [auto-meaningful-name] */$_196 from "../../../../../unrestored/shared/1571/2636/196"
-import * as Yr from "../../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */$_238 from "../../../../../unrestored/shared/1571/2636/238"
-import * as An from "../../../widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../shared/widget/custom/type"
-import * as Et from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */loadCustomWidget from "../../../../shared/widget/custom/load"
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$_1213 from "../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_683 from "../../../../../unrestored/shared/1571/2636/683"
+import styles from "../../../../../unrestored/shared/1571/2636/196"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
+import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
 import * as Actions from "../../../redux/common/actions"
-import * as k from "../../../../../unrestored/shared/1571/2636/11"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../shared/ui/language"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
-import * as /* [auto-meaningful-name] */WidgetShop from "../../../../shared/widget/custom/shop"
-import * as /* [auto-meaningful-name] */$_542 from "../../../../../unrestored/shared/1571/2636/542"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
+import * as WidgetShop from "../../../../shared/widget/custom/shop"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
 import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
-var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
+var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
 
-const WidgetItem = React.memo(({
+const ConfigItem = React.memo(({
   icon, title, type, isMallExtensionWidget, isInvisibleWidget, widgetServerId
 }: {
   icon: string
@@ -75,61 +75,49 @@ const WidgetItem = React.memo(({
   type: string
   isMallExtensionWidget: boolean
   isInvisibleWidget: boolean
-  widgetServerId: number
+  widgetServerId?: number
 }) => {
-  var s = $_238.d()
-  const dispatch = $_16_index.d()
-  const { formatMessage } = $_710_index.a()
-  var u = React.useState(false)
-  var d = $_10_index.a(u, 2)
-  var p = d[0]
-  var m = d[1]
-  var g = React.useState(false)
-  var v = $_10_index.a(g, 2)
-  var b = v[0]
-  var y = v[1]
-  var w = React.useState(false)
-  var C = $_10_index.a(w, 2)
-  var A = C[0]
-  var j = C[1]
+  const currentScreen = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
+  const dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  const [menuVisible, setMenuVisible] = React.useState(false)
+  const [bigImageVisible, setBigImageVisible] = React.useState(false)
+  const [isMouseIn, setIsMouseIn] = React.useState(false)
   var R = React.useState(true)
-  var x = $_10_index.a(R, 2)
+  var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
-  const globalWidgetIds = $_16_index.e(function (e) {
+  const globalWidgetIds = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.globalWidgetIds
   })
-  const language = $_16_index.e(function (e) {
+  const language = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.language
   })
   React.useEffect(function () {
-    var e = function e() {
-      m(false)
-      y(false)
-      document.removeEventListener("click", e, true)
-      document.removeEventListener("contextmenu", e, true)
-      document.removeEventListener("dragstart", e, true)
+    function listener() {
+      setMenuVisible(false)
+      setBigImageVisible(false)
+      document.removeEventListener("click", listener, true)
+      document.removeEventListener("contextmenu", listener, true)
+      document.removeEventListener("dragstart", listener, true)
     }
-    if (p || b) {
-      document.addEventListener("click", e, true)
-      document.addEventListener("contextmenu", e, true)
-      document.addEventListener("dragstart", e, true)
+    if (menuVisible || bigImageVisible) {
+      document.addEventListener("click", listener, true)
+      document.addEventListener("contextmenu", listener, true)
+      document.addEventListener("dragstart", listener, true)
     }
-  }, [p, b])
+  }, [menuVisible, bigImageVisible])
   React.useEffect(function () {
     if (iv.includes(type)) {
       var e = globalWidgetIds.some((id) => id.includes(type))
       M(!e)
     }
   }, [type, globalWidgetIds])
-  var B = true
-  if (!(type !== An.a && type !== An.c || !s)) {
-    B = s.widgetIds.some(function (e) {
-      var t
-      return (null === (t = Et.Bb(e)) || undefined === t ? undefined : t.type) === An.f
-    })
+  let hasCanvasWidget = true
+  if (!(type !== BuiltInWidgetTypes.ACTOR_WIDGET && type !== BuiltInWidgetTypes.BRUSH_WIDGET || !currentScreen)) {
+    hasCanvasWidget = currentScreen.widgetIds.some((id) => $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(id)?.type === BuiltInWidgetTypes.CANVAS_WIDGET)
   }
-  const removeWidget = async () => {
+  const removeShopWidget = async () => {
     if (widgetServerId) {
       if (await WidgetShop.remove([widgetServerId])) {
         dispatch(Actions.showCommonToastInfoAction({
@@ -151,41 +139,38 @@ const WidgetItem = React.memo(({
     }
   }
   return (
-    <$_1213.a
+    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
       placement="rightTop"
       trigger="hover"
       onVisibleChange={(e) => {
         if (e) {
-          m(false)
-          y(false)
+          setMenuVisible(false)
+          setBigImageVisible(false)
         }
       }}
-      visible={p || b}
+      visible={menuVisible || bigImageVisible}
       content={() =>
-        p ? (
-          <div className={$_196.menuWrapper} onMouseDown={removeWidget}>
+        menuVisible ? (
+          <div className={styles.menuWrapper} onMouseDown={removeShopWidget}>
             {formatMessage({ id: "Widget.removeWidget" })}
           </div>
-        ) : b && A ? (
-          <div className={$_196.imgWrapper}>
-            <div
-              className={$_196.widgetImgBig}
-              style={{ backgroundImage: `url("${icon}")` }}
-            />
+        ) : bigImageVisible && isMouseIn ? (
+          <div className={styles.imgWrapper}>
+            <div className={styles.widgetImgBig} style={{ backgroundImage: `url("${icon}")` }} />
           </div>
         ) : undefined
       }
     >
       <div
-        className={N($_196.widgetItem, k.a({}, $_196.disabled, !B || !D))}
+        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.widgetItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
         draggable
         onMouseEnter={() => {
           if (isMallExtensionWidget && !isInvisibleWidget) {
-            if (!p) {
-              j(true)
+            if (!menuVisible) {
+              setIsMouseIn(true)
               ev = window.setTimeout(() => {
-                y(true)
-              }, 2e3)
+                setBigImageVisible(true)
+              }, 2000)
             }
           }
         }}
@@ -194,20 +179,20 @@ const WidgetItem = React.memo(({
             if (ev) {
               clearTimeout(ev)
             }
-            j(false)
-            y(false)
+            setIsMouseIn(false)
+            setBigImageVisible(false)
           }
         }}
         onContextMenu={(e) => {
           e.preventDefault()
           if (isMallExtensionWidget) {
-            j(false)
-            y(false)
-            m(true)
+            setIsMouseIn(false)
+            setBigImageVisible(false)
+            setMenuVisible(true)
           }
         }}
         onDragStart={(e) => {
-          if (!B || !D) {
+          if (!hasCanvasWidget || !D) {
             var t = ""
             if (D) {
               t = formatMessage({
@@ -215,11 +200,11 @@ const WidgetItem = React.memo(({
               })
             } else {
               var n
-              var o = Et.Db(type)
+              var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(type)
               if (!o) {
                 return
               }
-              var i = null === (n = $$_$$_$$_$$_src_shared_ui_language.c(language, o.title)) || undefined === n ? undefined : n.toString()
+              var i = null === (n = $$_$$_$$_$$_shared_ui_language.c(language, o.title)) || undefined === n ? undefined : n.toString()
               t = formatMessage({
                 id: "StageToast.addLimitedWidgetTips"
               }, {
@@ -229,7 +214,7 @@ const WidgetItem = React.memo(({
             dispatch(Actions.xj(t))
             return void e.preventDefault()
           }
-          if (!(type !== An.a && type !== An.c)) {
+          if (!(type !== BuiltInWidgetTypes.a && type !== BuiltInWidgetTypes.c)) {
             dispatch(Actions.Yh(true))
           }
           var /* [auto-meaningful-name] */e$target = e.target
@@ -241,103 +226,108 @@ const WidgetItem = React.memo(({
             e.dataTransfer.setData("widget/dragging-offset-y", d + "")
             e.dataTransfer.dropEffect = "copy"
             e.dataTransfer.setData("widget/type", e$target.dataset.widgetType)
-            e.dataTransfer.setData("widget/action", An.r.CREATE)
+            e.dataTransfer.setData("widget/action", BuiltInWidgetTypes.r.CREATE)
           }
         }}
         onDragEnd={() => {
-          if (!(type !== An.a && type !== An.c)) {
+          if (!(type !== BuiltInWidgetTypes.a && type !== BuiltInWidgetTypes.c)) {
             dispatch(Actions.Yh(false))
           }
         }}
         data-widget-type={type}
       >
-        {te.X(icon) ? (
+        {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.X(icon) ? (
           isInvisibleWidget ? (
-            <img className={$_196.icon} src={icon} alt={title} draggable={false} />
+            <img className={styles.icon} src={icon} alt={title} draggable={false} />
           ) : (
             <div
-              className={$_196.widgetImgSmall}
+              className={styles.widgetImgSmall}
               style={{ backgroundImage: `url("${icon}")` }}
             />
           )
         ) : (
-          <span className={$_196.icon}>
-            <$_94_index.a type={icon} />
+          <span className={styles.icon}>
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a type={icon} />
           </span>
         )}
-        <span className={$_196.title}>{title}</span>
+        <span className={styles.title}>{title}</span>
       </div>
-    </$_1213.a>
+    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a>
   )
 })
 
-export const WidgetCategoryItem = React.memo(function (e) {
-  var /* [auto-meaningful-name] */e$configList = e.configList
-  var /* [auto-meaningful-name] */e$title = e.title
-  var /* [auto-meaningful-name] */e$defaultExpanded = e.defaultExpanded
-  const { formatMessage } = $_710_index.a()
-  var i = $_16_index.e(function (e) {
+interface ConfigItem {
+  type: string
+  icon: string
+  previewAreaWidgetTitle: string
+  title: string
+  isInvisibleWidget: boolean
+  widgetServerId?: number
+}
+
+export const WidgetCategoryItem = React.memo<{
+  configList: ConfigItem[]
+  title: string
+  defaultExpanded: boolean
+}>(({ configList, title, defaultExpanded }) => {
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     var /* [auto-meaningful-name] */e$common$userInfo
     return null === (e$common$userInfo = e.common.userInfo) || undefined === e$common$userInfo ? undefined : e$common$userInfo.id
   })
-  var a = React.useState(undefined === e$defaultExpanded || e$defaultExpanded)
-  var s = $_10_index.a(a, 2)
+  var a = React.useState(undefined === defaultExpanded || defaultExpanded)
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = "newWidgetCategory_".concat(Yr.f, "_").concat(i)
+  var u = "newWidgetCategory_".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f, "_").concat(i)
   var d = m()
-  var p = !i || !d[e$title]
+  var p = !i || !d[title]
   const innerWidth = useInnerWidth()
   function m() {
     var e = localStorage.getItem(u)
     return e ? JSON.parse(e) : {}
   }
-  return e$configList.length ? (
-    <div className={N($_196.categoryItem, k.a({}, $_196.expanded, c))}>
+  return configList.length ? (
+    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.categoryItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.expanded, c))}>
       <div
-        className={N($_196.categoryHeader, innerWidth <= 1300 && $_196.categoryMinHeader)}
+        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.categoryHeader, innerWidth <= 1300 && styles.categoryMinHeader)}
         onClick={() => {
           l(!c)
-          if (Yr.k.includes(e$title) && i && !d[e$title]) {
+          if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(title) && i && !d[title]) {
             var e = m()
-            e[e$title] = 1
+            e[title] = 1
             localStorage.setItem(u, JSON.stringify(e))
           }
         }}
       >
-        <div className={$_196.categoryTitleBox}>
-          <h3 className={N($_196.categoryTitle)}>
-            {formatMessage({ id: e$title })}
+        <div className={styles.categoryTitleBox}>
+          <h3 className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.categoryTitle)}>
+            {formatMessage({ id: title })}
           </h3>
-          {Yr.k.includes(e$title) && p && <div className={$_196.newTips}>New</div>}
+          {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(title) && p && <div className={styles.newTips}>New</div>}
         </div>
-        <span className={$_196.icon}>
-          <$_94_index.a type="icon-fold" />
+        <span className={styles.icon}>
+          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a type="icon-fold" />
         </span>
       </div>
       {c && (
-        <div className={$_196.categoryBody}>
-          {e$configList.map((e) => {
-            var /* [auto-meaningful-name] */e$type = e.type
-            var /* [auto-meaningful-name] */e$icon = e.icon
-            var /* [auto-meaningful-name] */e$previewAreaWidgetTitle = e.previewAreaWidgetTitle
-            var /* [auto-meaningful-name] */_e$title = e.title
-            var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
-            var /* [auto-meaningful-name] */e$widgetServerId = e.widgetServerId
+        <div className={styles.categoryBody}>
+          {configList.map((widget) => {
+            const { type, icon, previewAreaWidgetTitle, title, isInvisibleWidget, widgetServerId } = widget
             return (
-              !e.isDiscard && (
-                <WidgetItem
-                  key={e$type}
-                  icon={e$icon}
+              !widget.isDiscard && (
+                <ConfigItem
+                  key={type}
+                  icon={icon}
                   title={
-                    e$previewAreaWidgetTitle
-                      ? formatMessage({ id: e$previewAreaWidgetTitle })
-                      : _e$title
+                    previewAreaWidgetTitle
+                      ? formatMessage({ id: previewAreaWidgetTitle })
+                      : title
                   }
-                  type={e$type}
-                  widgetServerId={e$widgetServerId}
-                  isMallExtensionWidget={$$_$$_$$_$$_src_shared_widget_custom_type.e(e$type)}
-                  isInvisibleWidget={e$isInvisibleWidget}
+                  type={type}
+                  widgetServerId={widgetServerId}
+                  isMallExtensionWidget={$$_$$_$$_$$_shared_widget_custom_type.isSafeExtensions(type)}
+                  isInvisibleWidget={isInvisibleWidget}
                 />
               )
             )
@@ -348,49 +338,49 @@ export const WidgetCategoryItem = React.memo(function (e) {
   ) : null
 })
 
-loadCustomWidget.s(r)
-loadCustomWidget.s(o)
-loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_680)
-loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_682)
-loadCustomWidget.s(a)
-loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_681)
-loadCustomWidget.s(i)
-loadCustomWidget.s(s)
-loadCustomWidget.s(c)
-loadCustomWidget.s(l)
-loadCustomWidget.s(u)
-loadCustomWidget.s(d)
-loadCustomWidget.s(p)
-var cv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_679, tv)
-var lv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_686)
-Et.Nb(Et.j.UI, [Cp, Lp, cv, Kp, tf, uf, _f, Tf, xf, Wf, Jf, ah, lv])
-Et.Nb(Et.j.STAGE, [wh, xh, zh])
-var uv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_678)
-var dv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_688)
-Et.Nb(Et.j.MEDIA, [Xh, nm, uv, dv])
-var pv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_687)
-Et.Nb(Et.j.SENSOR, [im, cm, pv])
-Et.Nb(Et.j.DATE, [hm, ym, wm])
-var fv = loadCustomWidget.s($_683)
-var hv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index)
-var mv = loadCustomWidget.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index)
-Et.Nb(Et.j.NETWORK, [Sm, Pm, fv, hv, mv])
-Et.Nb(Et.j.LOCAL_STORAGE, [qm, eg, gg])
-Et.Nb(Et.j.CLOUD_STORAGE, [Og, zm])
-Et.Nb(Et.j.CLOUD_SPACE, [c_, __])
-Et.Nb(Et.j.DATABASE, [cg])
+$$_$$_$$_$$_shared_widget_custom_load.s(r)
+$$_$$_$$_$$_shared_widget_custom_load.s(o)
+$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_680)
+$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_682)
+$$_$$_$$_$$_shared_widget_custom_load.s(a)
+$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_681)
+$$_$$_$$_$$_shared_widget_custom_load.s(i)
+$$_$$_$$_$$_shared_widget_custom_load.s(s)
+$$_$$_$$_$$_shared_widget_custom_load.s(c)
+$$_$$_$$_$$_shared_widget_custom_load.s(l)
+$$_$$_$$_$$_shared_widget_custom_load.s(u)
+$$_$$_$$_$$_shared_widget_custom_load.s(d)
+$$_$$_$$_$$_shared_widget_custom_load.s(p)
+var cv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_679, tv)
+var lv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_686)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.UI, [Cp, Lp, cv, Kp, tf, uf, _f, Tf, xf, Wf, Jf, ah, lv])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.STAGE, [wh, xh, zh])
+var uv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_678)
+var dv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_688)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.MEDIA, [Xh, nm, uv, dv])
+var pv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_687)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SENSOR, [im, cm, pv])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATE, [hm, ym, wm])
+var fv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_683)
+var hv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index)
+var mv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index)
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.NETWORK, [Sm, Pm, fv, hv, mv])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.LOCAL_STORAGE, [qm, eg, gg])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_STORAGE, [Og, zm])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_SPACE, [c_, __])
+$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATABASE, [cg])
 export const BuiltInWidgetList = React.memo(() => {
-  var t = Et.Eb(Et.j.UI)
-  var n = Et.Eb(Et.j.STAGE)
-  var r = Et.Eb(Et.j.MEDIA)
-  var o = Et.Eb(Et.j.DATE)
-  var i = Et.Eb(Et.j.SENSOR)
-  var a = Et.Eb(Et.j.LOCAL_STORAGE)
-  var s = Et.Eb(Et.j.CLOUD_SPACE)
-  var c = Et.Eb(Et.j.NETWORK)
-  var l = Et.Eb(Et.j.SOCIAL)
+  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.UI)
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.STAGE)
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.MEDIA)
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATE)
+  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SENSOR)
+  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.LOCAL_STORAGE)
+  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_SPACE)
+  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.NETWORK)
+  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SOCIAL)
   return (
-    <div className={$_196.scrollBasic}>
+    <div className={styles.scrollBasic}>
       <WidgetCategoryItem
         configList={t}
         title="WidgetList.category.ui"

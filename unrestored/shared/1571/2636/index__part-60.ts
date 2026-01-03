@@ -14,10 +14,10 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as wn from "./90"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import * as k from "./11"
@@ -53,7 +53,7 @@ var oh = _React.memo(function (e) {
     rh[v] = false !== (null === b || undefined === b ? undefined : b.visible)
   }
   function y(e, t) {
-    return React.createElement(React.Fragment, null, e$attributes$templateType === An.o.ONLY_TITLE && function (e, t) {
+    return React.createElement(React.Fragment, null, e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.ONLY_TITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
         className: N(nh.flexSC, nh.template1, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
@@ -65,7 +65,7 @@ var oh = _React.memo(function (e) {
         type: "icon-fold-left",
         className: nh.icon
       }))))
-    }(e, t), e$attributes$templateType === An.o.TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
@@ -80,7 +80,7 @@ var oh = _React.memo(function (e) {
         type: "icon-fold-left",
         className: nh.icon
       }))))
-    }(e, t), e$attributes$templateType === An.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -98,7 +98,7 @@ var oh = _React.memo(function (e) {
         type: "icon-fold-left",
         className: nh.icon
       }))))
-    }(e, t), e$attributes$templateType === An.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -120,7 +120,7 @@ var oh = _React.memo(function (e) {
         type: "icon-fold-left",
         className: nh.icon
       }))))
-    }(e, t), e$attributes$templateType === An.o.IMAGE_AND_TITLE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_TITLE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
@@ -140,7 +140,7 @@ var oh = _React.memo(function (e) {
         type: "icon-fold-left",
         className: nh.icon
       }))))
-    }(e, t), e$attributes$templateType === An.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
@@ -163,7 +163,7 @@ var oh = _React.memo(function (e) {
       }, $_42_index.e(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), rh.descSlot && React.createElement("div", {
         className: nh.desc
       }, $_42_index.e(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t))))
-    }(e, t), e$attributes$templateType === An.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
+    }(e, t), e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$bannerSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
@@ -199,12 +199,12 @@ var oh = _React.memo(function (e) {
         if ((null === (n = Et.Bb(i.id)) || undefined === n ? undefined : n.parentId) && i.id === m) {
           e.stopPropagation()
         } else if (!m || (null === (r = Et.Bb(m)) || undefined === r ? undefined : r.parentId) !== (null === (o = Et.Bb(i.id)) || undefined === o ? undefined : o.parentId)) {
-          return i.id !== t && m !== t ? (e.stopPropagation(), void f($$_$$_$$_$$_src_shared_events_messagesWrapper.ug(t))) : undefined
+          return i.id !== t && m !== t ? (e.stopPropagation(), void f($$_$$_$$_$$_src_editor_redux_common_actions.ug(t))) : undefined
         }
       }
     },
-    "data-role": An.M,
-    "data-widget-type": An.A,
+    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
     "data-min-width": $_172.k,
     "data-max-width": $_172.i,
     "data-min-height": $_172.j,
@@ -234,7 +234,7 @@ var oh = _React.memo(function (e) {
     if (e$attributes$dataSource) {
       if ("string" === typeof e$attributes$dataSource) {
         var e = Et.Bb(e$attributes$dataSource)
-        if ((null === e || undefined === e ? undefined : e.type) === An.G && e.attributes.db.data.length > 0) {
+        if ((null === e || undefined === e ? undefined : e.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.G && e.attributes.db.data.length > 0) {
           return React.createElement(React.Fragment, null, e.attributes.db.data.map(function (e, t) {
             return React.createElement("div", {
               key: t
@@ -259,49 +259,49 @@ var oh = _React.memo(function (e) {
   }()))
 })
 var ih = {
-  type: An.A,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
   category: {
     iconId: $_172.g,
-    blocks: An.A
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.A
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"new_list_viewer_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"new_list_viewer_child_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n    </block>"), rp.d, "<block type=\"new_list_viewer_child_widget_set_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(rp.c, "</field>\n      <value name=\"VALUE\">\n      <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">#000000</field></shadow>\n      </value>\n    </block>"), rp.d, Jd.sb({
         property: "__opacity",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"new_list_viewer_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat($_172.j, ",").concat($_172.h, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), Jd.sb({
         property: "__position",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e,
         isSetProperty: true
       }), Jd.sb({
         property: "__visible",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e,
         isSetProperty: true
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e,
         isSetProperty: true
       }), rp.d, "<block type=\"new_list_viewer_child_widget_get_color_attributes\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROW\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='1,,1'>1</field>\n        </shadow>\n      </value>\n      <field name=\"SLOT_WIDGET\">").concat("titleSlot", "</field>\n      <field name=\"ATTRIBUTES\">").concat(rp.c, "</field>\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e
       }), "<block type=\"new_list_viewer_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), Jd.sb({
         property: "__position",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e
       }), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.A,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
         widgetId: e
       })
     ]
@@ -376,7 +376,7 @@ var ih = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.A)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.A)
         },
         optOnchange: function (e) {
           var /* [auto-meaningful-name] */this$source_block
@@ -424,10 +424,10 @@ var ih = {
             var /* [auto-meaningful-name] */a$attributes
             var l
             var u = Jd.Cb(null === (a$attributes = a.attributes) || undefined === a$attributes || null === (l = a$attributes.templateSlotMap[i]) || undefined === l ? undefined : l.widgetId)
-            if ((null === u || undefined === u ? undefined : u.type) === An.H) {
+            if ((null === u || undefined === u ? undefined : u.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
               s = s.concat(r)
             }
-            if ((null === u || undefined === u ? undefined : u.type) === An.v) {
+            if ((null === u || undefined === u ? undefined : u.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
               s = s.concat(o)
             }
           }
@@ -589,7 +589,7 @@ var ih = {
 var ah = {
   icon: $_172.g,
   title: "ListViewerWidget.widgetName",
-  type: An.A,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.A,
   previewAreaWidgetTitle: "ListViewerWidget.widgetName",
   component: oh,
   editConfig: eh,

@@ -12,7 +12,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_547_index from "./547/index"
@@ -27,42 +27,42 @@ var wf = {
   name: "WIDGET_ID",
   custom: true,
   options: function () {
-    return $_46_index.c().getWidgetListByType(An.L)
+    return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.L)
   }
 }
 var Cf = {
-  type: An.L,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
   category: {
     iconId: $_262.a,
-    blocks: An.L
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.L
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
       "<block type=\"webview_on_start_load\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"webview_on_load\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"webview_on_load_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"webview_set_url\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\"></field>\n        </shadow>\n      </value>\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.L,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
         widgetId: e,
         isSetProperty: true
       }), "<block type=\"webview_refresh\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"webview_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"webview_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"webview_get_url\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
         property: "__opacity",
-        widgetType: An.L,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
         widgetId: e
       }), Jd.sb({
         property: "__size",
-        widgetType: An.L,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
         widgetId: e
       }), Jd.sb({
         property: "__position",
-        widgetType: An.L,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
         widgetId: e
       }), rp.d, Jd.sb({
         property: "__visible",
-        widgetType: An.L,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
         widgetId: e
       }), Jd.sb({
         property: "__disabled",
-        widgetType: An.L,
+        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
         widgetId: e
       })
     ]
@@ -291,7 +291,7 @@ var Cf = {
 var Tf = {
   icon: $_262.a,
   title: "Webview.widgetName",
-  type: An.L,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.L,
   previewAreaWidgetTitle: "Webview.widgetName",
   component: Ef,
   editConfig: bf,

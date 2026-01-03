@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
 import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
 import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_709_index from "../../../551/1211/709/index"
 import * as /* [auto-meaningful-name] */$$_366_1550 from "../366/1550"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_699_154 from "../../../551/1211/699/154"
+import * as /* [auto-meaningful-name] */$$_366_154 from "../366/154"
 import * as /* [auto-meaningful-name] */$_2678_index from "./2678/index"
 var f = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$disableSpacing = e.disableSpacing
@@ -26,7 +26,7 @@ var f = React.forwardRef(function (e, t) {
     ref: t
   }, l))
 })
-var d = $$_$$_$$_551_1211_699_154.a({
+var d = $$_366_154.a({
   root: {
     display: "flex",
     alignItems: "center",
@@ -53,7 +53,7 @@ var h = React.forwardRef(function (e, t) {
     ref: t
   }, l))
 })
-var p = $$_$$_$$_551_1211_699_154.a(function (e) {
+var p = $$_366_154.a(function (e) {
   return {
     root: {
       flex: "1 1 auto",

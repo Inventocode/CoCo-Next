@@ -10,7 +10,7 @@ import { we } from "./index__part-6"
 import * as /* [auto-meaningful-name] */$_94_index from "./94/index"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */$_177 from "./177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -88,7 +88,7 @@ var SL = React.memo(function (e) {
       onClick: function () {
         n = t.id
         e.setSelected("")
-        return void a($$_$$_$$_$$_src_shared_events_messagesWrapper.si(n))
+        return void a($$_$$_$$_$$_src_editor_redux_common_actions.si(n))
         var n
       },
       className: _$_.button
@@ -146,7 +146,7 @@ var AL = React.memo(function () {
   }
   var R = _React.useCallback(function () {
     r("")
-    g($$_$$_$$_$$_src_shared_events_messagesWrapper.tj(false))
+    g($$_$$_$$_$$_src_editor_redux_common_actions.tj(false))
   }, [g])
   var k = function (e) {
     return e < 10 ? "0".concat(e) : String(e)
@@ -213,7 +213,7 @@ var AL = React.memo(function () {
         l([])
         m([])
         r("")
-        g($$_$$_$$_$$_src_shared_events_messagesWrapper.mj({
+        g($$_$$_$$_$$_src_editor_redux_common_actions.mj({
           message: $_710_index$a$formatMessage({
             id: "History.fetchError"
           }).toString(),

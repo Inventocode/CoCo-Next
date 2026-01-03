@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/inde
 import * as /* [auto-meaningful-name] */$$_242 from "../242"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_5 from "../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_554_index from "../../../554/index"
 var $ = function (e) {
@@ -28,7 +28,7 @@ var $ = function (e) {
       }) !== e) {
         var o = e + 1
         $$_$$_index.setRadioWidgetOptionSelectedOrDisabled(t, o, "selected")
-        $$_242.b(t, $$_$$_$$_5.C, $$_$$_$$_28_index.m("click", e$animationRecord, e$attributes$mode), e)
+        $$_242.b(t, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C, $$_$$_$$_28_index.m("click", e$animationRecord, e$attributes$mode), e)
         $$_$$_$$_55.b.playerWidgetLog({
           widgetId: t,
           widgetType: e$type,

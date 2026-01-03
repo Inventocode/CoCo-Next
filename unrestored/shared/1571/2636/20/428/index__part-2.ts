@@ -11,7 +11,7 @@ import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime
 import * as /* [auto-meaningful-name] */$$_$$_47 from "../../47"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_$$_5 from "../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_197_483_index from "../../197/483/index"
 import * as /* [auto-meaningful-name] */Axios from "axios"
 import /* [auto-meaningful-name] */_Axios from "axios"

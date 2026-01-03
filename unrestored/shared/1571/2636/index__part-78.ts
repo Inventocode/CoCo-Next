@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
-import * as An from "../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_305 from "./305"
@@ -32,10 +32,10 @@ var vg = [
 ]
 var /* [auto-meaningful-name] */BKY_BLOCK_CLOUD_VARIABLE_ICON = "%{BKY_BLOCK_CLOUD_VARIABLE_ICON}"
 var Eg = {
-  type: An.l,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.l,
   category: {
     iconId: $_305.c,
-    blocks: An.l
+    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.l
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -129,7 +129,7 @@ var Eg = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType(An.l)
+          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.l)
         }
       }
       e.insertBlockProfile("cloud_document_all_key_field_dropdown", {
@@ -335,7 +335,7 @@ var Eg = {
 var Og = {
   icon: $_305.c,
   title: "CloudStorageWidget.widgetName",
-  type: An.l,
+  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.l,
   previewAreaWidgetTitle: "CloudStorageWidget.widgetName",
   component: Yh,
   editConfig: vg,

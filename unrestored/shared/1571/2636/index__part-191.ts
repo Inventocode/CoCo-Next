@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_events_messagesWrapper from "../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
@@ -43,7 +43,7 @@ var aN = function (e) {
       var /* [auto-meaningful-name] */n$dataTransfer
       var /* [auto-meaningful-name] */n$dataTransfer$files
       if (!(e.isReadOnly || 0 === (null === n || undefined === n || null === (n$dataTransfer = n.dataTransfer) || undefined === n$dataTransfer || null === (n$dataTransfer$files = n$dataTransfer.files) || undefined === n$dataTransfer$files ? undefined : n$dataTransfer$files.length))) {
-        u($$_$$_$$_$$_src_shared_events_messagesWrapper.Zf(n.dataTransfer.files, e$onSuccess, true))
+        u($$_$$_$$_$$_src_editor_redux_common_actions.Zf(n.dataTransfer.files, e$onSuccess, true))
         c(false)
       }
     }
