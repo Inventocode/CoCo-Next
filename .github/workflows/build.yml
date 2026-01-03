@@ -37,7 +37,7 @@ jobs:
         working-directory: ./editor
 
       - name: 构建编辑器
-        run: npm run build
+        run: npm run build -- --env publicPath=https://cdn.jsdelivr.net/gh/Inventocode/CoCo-Next@gh-pages/
         working-directory: ./editor
 
       - name: 移动编辑器文件到分发目录
