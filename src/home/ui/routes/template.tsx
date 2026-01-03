@@ -6,6 +6,7 @@
 
 import * as React from "react"
 import { Switch, Route } from "react-router-dom"
+import classnames from "classnames"
 import { Header } from "../components/Header"
 import IconFontSvg from "../../../../unrestored/home/components/IconFont/IconFontSvg-DYHF"
 import { Menu } from "../components/Menu"
@@ -17,6 +18,7 @@ import CommonToast from "../../../../unrestored/home/components/CommonToast-jdSs
 import ConfirmDialog from "../../../../unrestored/home/components/ConfirmDialog-kwR3"
 import Home from "./Home"
 import ReactLoadable from "react-loadable"
+import styles from "./styles.module.css"
 
 interface ViewRouterComponentProps {
   getTemplateListAction(): void
@@ -51,10 +53,13 @@ export class ViewRouterComponent extends React.Component<ViewRouterComponentProp
     var _props = this.props
     var playCourseInfo = _props.playCourseInfo
     var courseDialogVisible = _props.courseDialogVisible
-    return <div style={/* [CoCo Next] 小平适配 { minWidth: "990px" } */{}}>
+    return <div className={styles.wrapper} style={/* [CoCo Next] 小平适配 { minWidth: "990px" } */{}}>
       <Header />
       <IconFontSvg />
-      <div className={playCourseInfo.visible || courseDialogVisible ? "blur" : ""}>
+      <div className={classnames(
+        styles.content,
+        playCourseInfo.visible || courseDialogVisible ? "blur" : ""
+      )}>
         <Menu />
         <Switch>
           <Route path="/home" exact={true} component={Home} />

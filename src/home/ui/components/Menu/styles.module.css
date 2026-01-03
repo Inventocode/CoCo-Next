@@ -1,27 +1,14 @@
 .menu {
-    position: fixed;
+    /* [CoCo Next] 调整页面结构 */
+    position: sticky;
     top: 52px;
-    width: 240px;
-    min-width: 240px;
+    /* [CoCo Next] 菜单动态宽度 */
+    flex-shrink: 0;
+    width: 16%;
+    max-width: 240px;
     height: calc(100vh - 52px);
     background: #fafafa;
     border-right: 1px solid #e8e8e8
-}
-
-/* [CoCo Next] 小屏优化，小屏设备缩小菜单宽度 */
-@media screen and not (min-width: 768px) {
-    .menu {
-        width: 160px;
-        min-width: 160px;
-    }
-}
-
-/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
-@media screen and not (min-width: 600px) {
-    .menu {
-        width: 60px;
-        min-width: 60px;
-    }
 }
 
 .menu .menuItem {
@@ -76,8 +63,13 @@
     font-size: 16px
 }
 
-/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
-@media screen and not (min-width: 600px) {
+/* [CoCo Next] 中小屏优化，中小屏设备缩小菜单宽度 */
+@media screen and not (min-width: 1024px) {
+
+    .menu {
+        width: 60px;
+    }
+
     .menu .menuItem, .menu .discover, .menu .menuLeft {
         height: 60px;
         line-height: normal;
@@ -90,5 +82,25 @@
 
     .menu .discover .menuArrow {
         display: none;
+    }
+}
+
+/* [CoCo Next] 极小屏优化，极小屏设备菜单显示在下放 */
+@media screen and not (min-width: 512px) {
+
+    .menu {
+        height: 61px;
+        width: 100%;
+        max-width: none;
+        display: flex;
+        bottom: 0px;
+        z-index: 10;
+        border-right: none;
+        border-top: 1px solid #e8e8e8
+    }
+
+
+    .menu .discover {
+        border-top: none;
     }
 }

@@ -84,7 +84,8 @@ function needsProxy(url: URL): boolean {
         url.hostname == "static.codemao.cn" ||
         url.hostname == "creation.codemao.cn" ||
         url.hostname == "cdn-community.codemao.cn" ||
-        url.hostname.endsWith("bcmcdn.com")
+        url.hostname.endsWith("bcmcdn.com") ||
+        (location.hostname != "coco-next.localhost" && url.hostname.startsWith("socket"))
     ) {
         return false
     }

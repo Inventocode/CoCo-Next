@@ -62,6 +62,8 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
     this.handleHelpDropdownVisibleChange = this.handleHelpDropdownVisibleChange.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleLoginOut = this.handleLoginOut.bind(this)
+    // [CoCo Next] 添加原始登录
+    this.handleOriginalLogin = this.handleOriginalLogin.bind(this)
   }
 
   public override componentDidMount() {}
@@ -79,6 +81,27 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
     } catch (error) {
       console.error("logout ", error)
     }
+  }
+
+  // [CoCo Next] 添加原始登录
+  private async handleOriginalLogin() {
+    function open() {
+      window.open(location.origin + "/original_login/", "_blank")
+    }
+    if (location.hostname == "coco-next.localhost") {
+      this.props.setConfirmDialogInfoAction({
+        visible: true,
+        content: "当前界面不需要进行原始登录，确定要继续吗？",
+        onConfirm: open
+      })
+    } else {
+      open()
+    }
+  }
+
+  // [CoCo Next] 添加原始账号设置
+  private async handleOriginalAccountSettings() {
+    window.open(location.origin + "/original_login/?url=https://shequ.codemao.cn/setting/", "_blank")
   }
 
   private handleHelpDropdownVisibleChange(visible: boolean) {
@@ -121,6 +144,10 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
         <Dropdown
           overlay={
             <div styleName="dropdown">
+              {/* [CoCo Next] 添加原始登录 */}
+              {!location.hostname.endsWith(".codemao.cn") && <div styleName="dropdownItem" onClick={this.handleOriginalLogin}>原始登录</div>}
+              {/* [CoCo Next] 添加原始账号管理 */}
+              {!location.hostname.endsWith(".codemao.cn") && <div styleName="dropdownItem" onClick={this.handleOriginalAccountSettings}>原始账号设置</div>}
               <div
                 styleName="dropdownItem"
                 onClick={() => {

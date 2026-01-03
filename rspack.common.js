@@ -20,7 +20,6 @@ const PAGES = [
 /**
  * @typedef {Object} CommonEnv
  * @property {string} [publicPath]
- * @property {boolean} [noHelper]
  */
 
 /**
@@ -29,17 +28,14 @@ const PAGES = [
  */
 module.exports = (env) => {
 
-    const { publicPath = "/", noHelper = false } = env
-    const injectHelper = !noHelper
+    const { publicPath = "/" } = env
 
     /** @type {rspack.Configuration} */
     const config = {
         stats: "minimal",
         entry: {
-            ...(injectHelper ? {
-                "proxy": path.resolve(__dirname, "helper", "proxy"),
-                "login": path.resolve(__dirname, "helper", "login", "index")
-            } : {}),
+            "proxy": path.resolve(__dirname, "helper", "proxy"),
+            "login": path.resolve(__dirname, "helper", "login", "index"),
             "editor-service-worker": {
                 import: path.resolve(__dirname, "src", "editor-service-worker", "index"),
                 filename: "editor/main.sw.js",
@@ -59,7 +55,7 @@ module.exports = (env) => {
         },
         module: {
             rules: [
-                injectHelper && {
+                {
                     test: /\.(t|j)sx?$/i,
                     exclude: /node_modules|helper|home|src/,
                     loader: "string-replace-loader",
@@ -116,14 +112,14 @@ module.exports = (env) => {
                 process: "process/"
             }),
             ...["codemao_login/index.html", "get-qq-code.html", "get-weixin-code.html"].map(
-                filename => injectHelper && new HtmlWebpackPlugin({
+                filename => new HtmlWebpackPlugin({
                     filename,
                     template: "helper/login/index.html",
                     chunks: ["proxy", "login"]
                 })
             ),
             // 这个界面不注入代理程序，在这个界面登录 Cookie 可以直接设置到 .codemao.cn 上
-            injectHelper && new HtmlWebpackPlugin({
+            new HtmlWebpackPlugin({
                 filename: "original_login/index.html",
                 template: "helper/login/original.html",
                 chunks: []
@@ -138,7 +134,7 @@ module.exports = (env) => {
                 new HtmlWebpackPlugin({
                     filename,
                     template: `src/${name}/index.html`,
-                    chunks: [...(injectHelper ? ["proxy"] : []), name]
+                    chunks: ["proxy", name]
                 })
             )
         }

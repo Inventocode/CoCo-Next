@@ -4,13 +4,13 @@
   "private": true,
   "description": "下一代 CoCo 编辑器。",
   "homepage": "https://gitee.com/oldsquaw/CoCo-Next#coco-next",
-  "document": "https://gitee.com/oldsquaw/CoCo-Next/wikis/%E6%AC%A2%E8%BF%8E%E6%9D%A5%E5%88%B0%20CoCo%20Next%20Wiki",
+  "document": "https://next.ccwidget.top/docs/",
   "repository": {
     "type": "git",
     "url": "https://gitee.com/oldsquaw/CoCo-Next.git"
   },
   "bugs": {
-    "url": "https://gitee.com/oldsquaw/CoCo-Next/wikis/%E5%BB%BA%E8%AE%AE%E4%B8%8E%E5%8F%8D%E9%A6%88"
+    "url": "https://next.ccwidget.top/docs/guide/feedback"
   },
   "license": "AGPL-3.0",
   "author": "Oldsquaw",

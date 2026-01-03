@@ -1,5 +1,7 @@
 .header {
-    position: fixed;
+    /* [CoCo Next] 调整页面结构 */
+    /* position: fixed; */
+    position: sticky;
     top: 0;
     width: 100%;
     height: 52px;
@@ -11,7 +13,7 @@
     z-index: 99
 }
 
-.header,.header .left {
+.header, .header .left {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;

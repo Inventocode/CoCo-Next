@@ -8,7 +8,7 @@ import * as Redux from "redux"
 import * as ReactRedux from "react-redux"
 import { HeaderView } from "./template"
 import { setCourseListVisibleAction } from "../../routes/Home/model/actions"
-import { asyncSetUserInfoAction, setSignDialogVisibleAction, setCourseDialogVisibleAction } from "../../../redux/main/actions"
+import { asyncSetUserInfoAction, setSignDialogVisibleAction, setCourseDialogVisibleAction, setConfirmDialogInfoAction } from "../../../redux/main/actions"
 
 function mapStateToProps(state, ownProps) {
   return {
@@ -23,7 +23,8 @@ function mapDispatchToProps(dispatch) {
     setCourseListVisibleAction,
     asyncSetUserInfoAction,
     setSignDialogVisibleAction,
-    setCourseDialogVisibleAction
+    setCourseDialogVisibleAction,
+    setConfirmDialogInfoAction
   }, dispatch)
 }
 

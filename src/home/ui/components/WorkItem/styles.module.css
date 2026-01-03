@@ -136,9 +136,8 @@
     text-align: center;
     color: #847da4;
     border-radius: 4px;
-    -webkit-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
-    transform: rotate(90deg)
+    /* [CoCo Next] 放大菜单按钮，便于点击 */
+    transform: rotate(90deg) scale(1.2);
 }
 
 .workItem .workName .moreBtn:hover {
@@ -154,7 +153,9 @@
     font-size: 20px;
     text-align: center;
     color: #847da4;
-    border-radius: 4px
+    border-radius: 4px;
+    /* [CoCo Next] 放大恢复按钮，便于点击 */
+    transform: scale(1.2);
 }
 
 .workItem .workName .recoverBtn:hover {

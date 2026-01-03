@@ -1,41 +1,26 @@
 .work {
-    padding-top: 52px;
-    padding-left: 240px
+    /* [CoCo Next] 调整页面结构 */
+    /* padding-top: 52px; */
+    /* padding-left: 240px */
+    display: flex;
+    flex-direction: column;
+    width: 0;
 }
 
-/* [CoCo Next] 小屏优化，小屏设备缩小菜单宽度 */
-@media screen and not (min-width: 768px) {
-    .work {
-        padding-left: 160px;
-    }
-}
-
-/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
-@media screen and not (min-width: 600px) {
-    .work {
-        padding-left: 60px;
-    }
-}
-
-.work .content,.work .workContent {
+.work .content, .work .workContent {
     /* [CoCo Next] 移除内边距，使内容更紧凑 */
     /* padding: 0 22px; */
     margin: 0 auto;
     /* [CoCo Next] 作品内容尺寸自适应 */
     /* min-width: 960px; */
     /* max-width: 1260px */
-    /* [CoCo Next] 滚动转移到 workContent 上 */
-    max-height: calc(100vh - 52px);
-    overflow-y: auto;
-}
-
-/* [CoCo Next] 滚动转移到 workContent 上 */
-.work .workContent::-webkit-scrollbar {
-    width: 0
+    width: 100%;
 }
 
 .work .loginBox {
-    height: 500px;
+    /* [CoCo Next] 小平适配，高度自适应 */
+    height: 128px;
+    flex-grow: 1;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -139,17 +124,10 @@
 } */
 
 .work .userWorkBox {
-    /* [CoCo Next] 调整边距 */
-    margin: 22px 0 50px;
+    /* [CoCo Next] 移除丑陋的上边距 */
+    /* margin: 22px 0 50px; */
     /* [CoCo Next] 作品内容尺寸自适应 */
     /* height: 410px */
-}
-
-/* [CoCo Next] 小屏优化，小屏设备作品类型和搜索框显示在两行上，主体界面上边距减小 */
-@media screen and not (min-width: 512px) {
-    .work .userWorkBox {
-        margin-top: 0;
-    }
 }
 
 .work .userWorkBox .workList {
@@ -161,8 +139,6 @@
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    /* [CoCo Next] 滚动转移到 workContent 上 */
-    /* overflow-y: scroll */
 }
 
 .work .userWorkBox .noData {
@@ -248,7 +224,7 @@
     justify-content: space-between;
     /* [CoCo Next] 作品类型不滚出屏幕 */
     position: sticky;
-    top: 0px;
+    top: 52px;
     z-index: 10;
     backdrop-filter: blur(4px);
     background-color: #FFFFFFC0;
@@ -257,14 +233,6 @@
 /* [CoCo Next] 作品类型盒子滚动阴影 */
 .work .workCategory.shadow {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .11);
-}
-
-/* [CoCo Next] 小屏优化，小屏设备作品类型和搜索框显示在两行上 */
-@media screen and not (min-width: 512px) {
-    .work .workCategory {
-        flex-direction: column;
-        height: 100px;
-    }
 }
 
 .work .workCategory .workType {
@@ -365,14 +333,18 @@
 }
 
 .work .templateBox {
-    padding: 20px 0;
+    /* [CoCo Next] 修改莫名其妙的内边距 */
+    padding: 20px 30px;
     margin: 0 auto;
-    min-width: 900px;
-    max-width: 1200px
+    /* [CoCo Next] 小平适配 */
+    /* min-width: 900px; */
+    /* max-width: 1200px */
+    width: 100%;
 }
 
 .work .templateBox.notLogin {
-    padding: 20px 30px
+    /* [CoCo Next] 移除莫名其妙的内边距 */
+    /* padding: 20px 30px */
 }
 
 .work .templateBox .titleBox {
@@ -463,9 +435,12 @@
     -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    /* [CoCo Next] 调高回收站头部显示层级 */
-    position: relative;
+    /* [CoCo Next] 调高回收站头部 */
+    position: sticky;
+    top: 52px;
     z-index: 10;
+    backdrop-filter: blur(4px);
+    background-color: #FFFFFFC0;
 }
 
 /* [CoCo Next] 回收站头部滚动阴影 */
@@ -564,11 +539,25 @@
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
-    /* [CoCo Next] 回收站调高回收站内容区 */
-    max-height: calc(100vh - 102px);
-    overflow-y: scroll
 }
 
 .work .recoverList::-webkit-scrollbar {
     display: none
+}
+
+/* [CoCo Next] 极小屏优化，极小屏设备作品类型和搜索框显示在两行上，主体界面上边距减小 */
+@media screen and not (min-width: 512px) {
+
+    .work {
+        width: 100%;
+    }
+
+    .work .userWorkBox .workList, .work .recoverList {
+        grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
+    }
+
+    .work .workCategory {
+        flex-direction: column;
+        height: 100px;
+    }
 }

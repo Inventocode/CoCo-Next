@@ -1,22 +1,9 @@
 .home {
-    padding-top: 52px;
-    padding-left: 240px;
-    height: 100vh;
+    /* [CoCo Next] 调整页面结构 */
+    /* padding-top: 52px; */
+    /* padding-left: 240px; */
+    /* height: 100vh; */
     overflow-y: auto
-}
-
-/* [CoCo Next] 小屏优化，小屏设备缩小菜单宽度 */
-@media screen and not (min-width: 768px) {
-    .home {
-        padding-left: 160px;
-    }
-}
-
-/* [CoCo Next] 小屏优化，再小屏设备进一步缩小菜单宽度 */
-@media screen and not (min-width: 600px) {
-    .home {
-        padding-left: 60px;
-    }
 }
 
 .home::-webkit-scrollbar {
@@ -94,7 +81,9 @@
 }
 
 .home .center {
-    padding: 0 22px;
+    /* [CoCo Next] 调小边距 */
+    /* padding: 0 22px; */
+    padding: 0 8px;
     /* [CoCo Next] 小平适配 */
     /* min-width: 960px; */
     /* max-width: 1260px; */
@@ -207,7 +196,8 @@
 }
 
 .home .center .courseBox {
-    height: 360px;
+    /* [CoCO Next] 新手入门高度自适应 */
+    /* height: 360px; */
     margin: 0 8px 32px;
     background: #f6f4fe;
     border-radius: 24px;
@@ -277,13 +267,16 @@
 
 .home .center .courseBox .courseList {
     width: 100%;
-    padding: 0 30px;
+    /* [CoCO Next] 调整新手入门样式 */
+    padding: 30px;
+    padding-top: 0;
     display: grid;
     -webkit-column-gap: 16px;
     -moz-column-gap: 16px;
     column-gap: 16px;
     row-gap: 32px;
-    grid-template-columns: repeat(4,minmax(220px,270px));
+    /* [CoCO Next] 调整新手入门样式 */
+    grid-template-columns: repeat(auto-fill,minmax(220px,1fr));
     -webkit-box-sizing: border-box;
     box-sizing: border-box
 }
@@ -432,7 +425,9 @@
     display: flex;
     -webkit-justify-content: space-around;
     -ms-flex-pack: distribute;
-    justify-content: space-around
+    justify-content: space-around;
+    /* [CoCo Next] 小屏适配 */
+    overflow-x: auto;
 }
 
 .home .center .newUserTemplate .templateList .templateItem {
@@ -873,5 +868,19 @@
         display: none;
         height: 0;
         margin-bottom: 0
+    }
+}
+
+/* [CoCo Next] 中小屏优化，中小屏设备新手入门最小宽度减小 */
+@media screen and not (min-width: 1024px) {
+    .home .center .courseBox .courseList {
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+}
+
+/* [CoCo Next] 极小屏优化，极小屏设备作品最小宽度减小 */
+@media screen and not (min-width: 512px) {
+    .home .center .myWork .workList {
+        grid-template-columns: repeat(auto-fill,minmax(160px,1fr));
     }
 }

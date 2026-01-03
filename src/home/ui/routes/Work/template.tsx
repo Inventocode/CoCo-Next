@@ -33,7 +33,7 @@ export class WorkView extends React.Component {
       isScrolled: false
     }
 
-    // [CoCo Next] 滚动阴影
+    // [CoCo Next] 调整动态加载
     this.handleScroll = this.handleScroll.bind(this)
     this.handleLogin = this.handleLogin.bind(this)
     this.handleCreateScroll = this.handleCreateScroll.bind(this)
@@ -67,21 +67,30 @@ export class WorkView extends React.Component {
         offset: 1
       })
     }
+    // [CoCo Next] 调整动态加载
+    addEventListener("scroll", this.handleScroll)
+    addEventListener("resize", this.handleScroll)
+  }
+
+  // [CoCo Next] 调整动态加载
+  public override componentWillUnmount(): void {
+    removeEventListener("scroll", this.handleScroll)
+    removeEventListener("resize", this.handleScroll)
   }
 
   public override componentDidUpdate(prevProps, prevState) {}
 
-  // [CoCo Next] 滚动阴影
-  private handleScroll(e) {
+  // [CoCo Next] 动态加载
+  private handleScroll() {
     const { recoverVisible, workType } = this.state
     if (recoverVisible) {
-      this.handleDeleteScroll(e)
+      this.handleDeleteScroll()
     } else if (workType === EWorkType.CREATE) {
-      this.handleCreateScroll(e)
+      this.handleCreateScroll()
     } else if (workType === EWorkType.COLL) {
-      this.handleCollScroll(e)
+      this.handleCollScroll()
     }
-    this.setState({ isScrolled: e.currentTarget.scrollTop > 0 })
+    this.setState({ isScrolled: document.documentElement.scrollTop > 0 })
   }
 
   private handleLogin() {
@@ -181,7 +190,7 @@ export class WorkView extends React.Component {
     })
   }
 
-  private handleCreateScroll(e) {
+  private handleCreateScroll() {
     var _this2 = this
     var _props = this.props
     var createWorkOffset = _props.createWorkOffset
@@ -195,7 +204,7 @@ export class WorkView extends React.Component {
     if (this.scroll_clock) {
       clearTimeout(this.scroll_clock)
     }
-    var target = e.target
+    var target = document.documentElement
     this.scroll_clock = setTimeout(function () {
       var wrap_client_height = target.clientHeight
       var wrap_scroll_height = target.scrollHeight
@@ -203,7 +212,8 @@ export class WorkView extends React.Component {
       var location = wrap_scroll_height - wrap_scroll_top
       // 倒数第二行时开始拉取分页数据
       var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false
-      if (is_scrolled_bottom && wrap_scroll_top) {
+      // [CoCo Next] 调整动态加载
+      if (is_scrolled_bottom && this.props.createWorkList.length) {
         _this2.props.getCreateWorkListAction({
           name: keyword,
           offset: createWorkOffset + 1
@@ -212,7 +222,7 @@ export class WorkView extends React.Component {
     }, 100)
   }
 
-  private handleCollScroll(e) {
+  private handleCollScroll() {
     var _this3 = this
     var _props2 = this.props
     var collWorkOffset = _props2.collWorkOffset
@@ -226,7 +236,7 @@ export class WorkView extends React.Component {
     if (this.scroll_clock) {
       clearTimeout(this.scroll_clock)
     }
-    var target = e.target
+    var target = document.documentElement
     this.scroll_clock = setTimeout(function () {
       var wrap_client_height = target.clientHeight
       var wrap_scroll_height = target.scrollHeight
@@ -234,7 +244,8 @@ export class WorkView extends React.Component {
       var location = wrap_scroll_height - wrap_scroll_top
       // 倒数第二行时开始拉取分页数据
       var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false
-      if (is_scrolled_bottom && wrap_scroll_top) {
+      // [CoCo Next] 调整动态加载
+      if (is_scrolled_bottom && this.props.collWorkList.length) {
         _this3.props.getCollWorkListAction({
           name: keyword,
           offset: collWorkOffset + 1
@@ -243,7 +254,7 @@ export class WorkView extends React.Component {
     }, 100)
   }
 
-  private handleDeleteScroll(e) {
+  private handleDeleteScroll() {
     var _this4 = this
     var _props3 = this.props
     var deleteWorkOffset = _props3.deleteWorkOffset
@@ -254,7 +265,7 @@ export class WorkView extends React.Component {
     if (this.scroll_clock) {
       clearTimeout(this.scroll_clock)
     }
-    var target = e.target
+    var target = document.documentElement
     this.scroll_clock = setTimeout(function () {
       var wrap_client_height = target.clientHeight
       var wrap_scroll_height = target.scrollHeight
@@ -262,7 +273,8 @@ export class WorkView extends React.Component {
       var location = wrap_scroll_height - wrap_scroll_top
       // 倒数第二行时开始拉取分页数据
       var is_scrolled_bottom = Math.abs(location - wrap_client_height) < 800 ? true : false
-      if (is_scrolled_bottom && wrap_scroll_top) {
+      // [CoCo Next] 调整动态加载
+      if (is_scrolled_bottom && this.props.deleteWorkList.length) {
         _this4.props.getDeleteWorkListAction({
           offset: deleteWorkOffset + 1
         })
@@ -360,6 +372,7 @@ export class WorkView extends React.Component {
             <div styleName="workList">
               {createWorkList.map((item) => (
                 <WorkItem
+                  ref={/* [CoCo Next] 调整动态加载 */this.handleScroll}
                   key={item.work_id}
                   item={item}
                   workType={EWorkType.CREATE}
@@ -390,6 +403,7 @@ export class WorkView extends React.Component {
             <div styleName="workList">
               {collWorkList.map((item) => (
                 <WorkItem
+                  ref={/* [CoCo Next] 调整动态加载 */this.handleScroll}
                   key={item.work_id}
                   item={item}
                   workType={EWorkType.COLL}
@@ -442,9 +456,10 @@ export class WorkView extends React.Component {
         </div>
       </div>
       {deleteWorkList.length === 0 && <div styleName="recoverNoData">空空如也～</div>}
-      {deleteWorkList.length > 0 && <div styleName="recoverList" onScroll={this.handleScroll}>
+      {deleteWorkList.length > 0 && <div styleName="recoverList">
         {deleteWorkList.map((item) => (
           <WorkItem
+            ref={/* [CoCo Next] 调整动态加载 */this.handleScroll}
             key={item.work_id}
             item={item}
             workType={EWorkType.DELETE}
@@ -499,7 +514,7 @@ export class WorkView extends React.Component {
         </div>
         {this.renderTemplate()}
       </>}
-      {userInfo && <div styleName="workContent" onScroll={this.handleScroll}>{this.renderUserContent()}</div>}
+      {userInfo && <div styleName="workContent">{this.renderUserContent()}</div>}
     </div>
   }
 }
