@@ -781,6 +781,9 @@ async function loadOnlineSafeWidget(cdnUrl: string, id: number): Promise<void | 
   if (!cdnUrl.startsWith("https")) {
     return
   }
+  if (cdnUrl.startsWith("https://static.codemao.cn")) {
+    cdnUrl.replace("https://static.codemao.cn", "https://static.bcmcdn.com")
+  }
   const requestUrl = `${cdnUrl}?t=${Math.random()}`
   const response = await axiosWithCredentials.get(requestUrl, {
     responseType: "blob",

@@ -12,7 +12,7 @@ import { rt, ot, it, st, lt, ut, pt, ft } from "../../../../unrestored/shared/15
 import { _t, bt, yt, Et, Ot, Tt, At, It, jt, Nt, xt, Mt, Lt, Pt, Bt, Gt, Ut, Ht } from "../../../../unrestored/shared/1571/2636/49__part-6"
 import { Kt, Xt, Qt } from "../../../../unrestored/shared/1571/2636/49__part-7"
 import { Jt, rn, an, sn } from "../../../../unrestored/shared/1571/2636/49__part-8"
-import { un, dn, fn, mn } from "./extension-widget/client"
+import { un, dn, fn, mn, removeUnsafeExtensionWidget } from "./extension-widget/client"
 import { vn, yn, En, On, wn, Cn, Tn, Sn, An } from "."
 var r = {}
 Object.defineProperty(r, "addWidgetOp", {
@@ -483,6 +483,12 @@ var B = {}
 Object.defineProperty(B, "addUnsafeExtensionWidget", {
   get: function () {
     return fn
+  }
+})
+// [CoCo Next] 添加移除自定义控件的功能
+Object.defineProperty(B, "removeUnsafeExtensionWidget", {
+  get: function () {
+    return removeUnsafeExtensionWidget
   }
 })
 Object.defineProperty(B, "addMallExtensionWidget", {

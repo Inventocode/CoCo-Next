@@ -81,6 +81,17 @@ function R(e) {
   return categoryToWidgetsMap.get(e) || []
 }
 
+// [CoCo Next] 添加移除自定义控件的功能
+export function unregister(category: WidgetCategory, type: string) {
+  const widgets = categoryToWidgetsMap.get(category)
+  if (widgets === undefined) {
+    console.error(`Component ${type} is not registered`)
+    return
+  }
+  typeToWidgetMap.delete(type)
+  categoryToWidgetsMap.set(category, widgets.filter(widget => widget.type !== type))
+}
+
 export function unregisterCategory(category: WidgetCategory) {
   categoryToWidgetsMap.get(category)?.forEach(({ type }) => {
     if (typeToWidgetMap.has(type)) {

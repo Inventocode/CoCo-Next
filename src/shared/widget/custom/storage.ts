@@ -45,6 +45,11 @@ export function addUnsafeExtension(storage: UnsafeExtensionStorage): void {
   unsafeExtensions.set(type, storage)
 }
 
+// [CoCo Next] 添加移除自定义控件的功能
+export function removeUnsafeExtension(type: string): void {
+  unsafeExtensions.delete(type)
+}
+
 export function getExtension(type: string) {
   return safeExtensions.get(type) || unsafeExtensions.get(type)
 }

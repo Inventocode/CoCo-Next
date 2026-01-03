@@ -31,7 +31,12 @@ for (const line of changelog.split("\n")) {
     isBefore = false
   }
 }
-const RELEASE_LINKS = []
+const RELEASE_LINKS = [
+  {
+    label: "原始域登录文档",
+    url: "https://next.ccwidget.top/docs/guide/introduction/login#%E4%BA%8C%E5%8E%9F%E5%A7%8B%E5%9F%9F%E7%99%BB%E5%BD%95"
+  }
+]
 
 const ReleaseInfo = React.memo(() => {
   const releaseInfoDialogVisible = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {

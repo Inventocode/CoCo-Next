@@ -195,6 +195,20 @@ function hn() {
     }, e)
   }))).apply(this, arguments)
 }
+
+export async function removeUnsafeExtensionWidget(type: string) {
+  const unsafeExtensionWidgetList: any[] = $_24_index.a.getDoc()?.unsafeExtensionWidgetList
+  if (unsafeExtensionWidgetList === undefined) {
+    return
+  }
+  const index = unsafeExtensionWidgetList.findIndex((widget) => widget.type == type)
+  if (index === -1) {
+    return -1
+  }
+  const op = OtJson1.removeOp(["unsafeExtensionWidgetList", index], true)
+  $_24_index.a.applyClient(op)
+}
+
 function mn(e) {
   return gn.apply(this, arguments)
 }

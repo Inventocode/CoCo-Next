@@ -47,7 +47,7 @@ import styles from "../../../../../unrestored/shared/1571/2636/196"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
 import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as CustomWidgetType from "../../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
@@ -65,14 +65,21 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as WidgetShop from "../../../../shared/widget/custom/shop"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
 import { useInnerWidth } from "../../../../shared/utils/ui/use-inner-width"
+import { EditConfig, Widget } from "../../../widget/internal/types"
+import * as CustomWidgetStorage from "../../../../shared/widget/custom/storage"
+import * as InternalWidgetStorage from "../../../widget/internal/storage"
+import { oTHelper } from "../../../collaboration/ot-helper"
+
 var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
 
 const ConfigItem = React.memo(({
-  icon, title, type, isMallExtensionWidget, isInvisibleWidget, widgetServerId
+  icon, title, type, docsUrl, isMallExtensionWidget, isInvisibleWidget, widgetServerId
 }: {
   icon: string
   title: string
   type: string
+  // [CoCo Next] 控件菜单添加帮助文档
+  docsUrl?: string
   isMallExtensionWidget: boolean
   isInvisibleWidget: boolean
   widgetServerId?: number
@@ -134,6 +141,12 @@ const ConfigItem = React.memo(({
           })
         }))
       }
+    } else if (CustomWidgetType.isExtensions(type)) {
+      // [CoCo Next] 添加移除自定义控件的功能
+      InternalWidgetStorage.unregister(InternalWidgetStorage.WidgetCategory.EXTENSION, type)
+      CustomWidgetStorage.removeUnsafeExtension(type)
+      oTHelper.extensionWidget?.clientOp.removeUnsafeExtensionWidget(type)
+      dispatch(Actions.updateExtensionWidgetListAction())
     } else {
       console.error("removeWidget error: widgetServerId is null")
     }
@@ -151,8 +164,18 @@ const ConfigItem = React.memo(({
       visible={menuVisible || bigImageVisible}
       content={() =>
         menuVisible ? (
-          <div className={styles.menuWrapper} onMouseDown={removeShopWidget}>
-            {formatMessage({ id: "Widget.removeWidget" })}
+          // [CoCo Next] 控件菜单添加帮助文档
+          <div style={{ boxShadow: "0 0 10px 0 rgba(0,0,0,.15)" }}>
+            {CustomWidgetType.isExtensions(type) && <div className={styles.menuWrapper} style={{ boxShadow: "none" }} onMouseDown={removeShopWidget}>
+              {formatMessage({ id: "Widget.removeWidget" })}
+            </div>}
+            {docsUrl && (
+              <a
+                className={styles.menuWrapper}
+                style={{ display: "block", boxShadow: "none" }}
+                href={docsUrl}
+              >如何使用</a>
+            )}
           </div>
         ) : bigImageVisible && isMouseIn ? (
           <div className={styles.imgWrapper}>
@@ -185,7 +208,8 @@ const ConfigItem = React.memo(({
         }}
         onContextMenu={(e) => {
           e.preventDefault()
-          if (isMallExtensionWidget) {
+          // [CoCo Next] 调整菜单
+          if (CustomWidgetType.isExtensions(type) || docsUrl !== undefined) {
             setIsMouseIn(false)
             setBigImageVisible(false)
             setMenuVisible(true)
@@ -256,14 +280,15 @@ const ConfigItem = React.memo(({
   )
 })
 
-interface ConfigItem {
+type ConfigItem = {
   type: string
   icon: string
   previewAreaWidgetTitle: string
   title: string
+  docsUrl?: string
   isInvisibleWidget: boolean
   widgetServerId?: number
-}
+} & Partial<Widget>
 
 export const WidgetCategoryItem = React.memo<{
   configList: ConfigItem[]
@@ -314,6 +339,10 @@ export const WidgetCategoryItem = React.memo<{
         <div className={styles.categoryBody}>
           {configList.map((widget) => {
             const { type, icon, previewAreaWidgetTitle, title, isInvisibleWidget, widgetServerId } = widget
+            // [CoCo Next] 控件菜单添加帮助文档
+            const docsUrl = widget.docsUrl ?? widget.editConfig?.find(
+              (config): config is EditConfig => !Array.isArray(config) && config.type === "HelpUrl"
+            )?.url
             return (
               !widget.isDiscard && (
                 <ConfigItem
@@ -325,8 +354,9 @@ export const WidgetCategoryItem = React.memo<{
                       : title
                   }
                   type={type}
+                  docsUrl={docsUrl}
                   widgetServerId={widgetServerId}
-                  isMallExtensionWidget={$$_$$_$$_$$_shared_widget_custom_type.isSafeExtensions(type)}
+                  isMallExtensionWidget={CustomWidgetType.isSafeExtensions(type)}
                   isInvisibleWidget={isInvisibleWidget}
                 />
               )
