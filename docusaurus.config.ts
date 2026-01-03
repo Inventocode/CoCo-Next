@@ -49,9 +49,12 @@ const config: Config = {
           routeBasePath: '/'
         },
         blog: false,
+        pages: {
+          editUrl: 'https://gitee.com/oldsquaw/CoCo-Next-Docs/edit/main/'
+        },
         theme: {
           customCss: './src/css/custom.css',
-        },
+        }
       } satisfies Preset.Options,
     ],
   ],
@@ -106,7 +109,7 @@ const config: Config = {
             },
             {
               label: '使用指南',
-              to: '/guide/welcome',
+              to: '/guide/introduction',
             },
             {
               label: '技术分析',

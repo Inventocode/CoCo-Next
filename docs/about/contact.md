@@ -6,8 +6,15 @@ sidebar_position: 5
 
 ## 一、QQ 交流群
 
-😎 QQ 交流群号：907170983
+😎 QQ 交流群号：907170983。
 
-## 二、Gitee 仓库
+## 二、Gitee
 
-我们的 Gitee 仓库地址：https://gitee.com/oldsquaw/CoCo-Next
+- Gitee 组织：https://gitee.com/oldsquaw
+- 编辑器的 Gitee 仓库：https://gitee.com/oldsquaw/CoCo-Next
+- 文档的 Gitee 仓库：https://gitee.com/oldsquaw/CoCo-Next-Docs
+
+## 三、开发者
+
+- SLIGHTNING：https://s-lightning.github.io/
+- Inventocode：https://inventocode.github.io/about/

@@ -65,6 +65,14 @@ HTTP 代理加载网页可以让其他域名的界面轻松使用编程猫的服
 - 耶椰椰：https://open.lihouse.xyz/ye#/archieve
 - CCWidget 控件商城：https://ccwidget.top/%E6%8E%A7%E4%BB%B6%E5%95%86%E5%9F%8E/
 
+### 4. 改包
+
+改包我没用过，不太了解。
+
+- 未来已来，Elixir 引领：https://open.lihouse.xyz/elixir
+- Omnia APK 处理服务：https://omnia-api.alcex.cn/
+- Cohooker 简介：https://ai.feishu.cn/wiki/RWQxwFOsbiuzMCkjFXCcMp8Qn1f
+
 ### 仍有问题
 
 这些解决方案确实在一定程度上缓解了 CoCo 的许多问题，但是由于不能与 CoCo 深度整合，使用体验很差，存在以下问题：

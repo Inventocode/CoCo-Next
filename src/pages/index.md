@@ -1,9 +1,9 @@
 ---
-sidebar_position: 1
-title: 🎉 欢迎来到使用指南
+title: 欢迎
+hide_table_of_contents: true
 ---
 
-# 🎉 欢迎来到 CoCo Next 使用指南
+# 🎉 欢迎来到 CoCo Next 文档
 
 :::info
 
@@ -22,7 +22,7 @@ title: 🎉 欢迎来到使用指南
 </center>
 
 :::tip
-本使用指南不包含关于 CoCo 的帮助文档，有关 CoCo 的帮助文档，请参考 [CoCo 手册](https://codemao-guide.yuque.com/bfiekm/sbo5kh)。
+本文档不包含关于 CoCo 的帮助文档，有关 CoCo 的帮助文档，请参考 [CoCo 手册](https://codemao-guide.yuque.com/bfiekm/sbo5kh)。
 :::
 
 ## 感谢

@@ -2,7 +2,7 @@
 sidebar_position: 1
 ---
 
-# ⭐ 简介
+# 📕 简介
 
 CoCo Next 基于 [CoCo 源代码计划](https://gitee.com/glacier-studio/CoCo-Source-Code-Plan) 二次开发的 CoCo，旨在通过直接修改编辑器代码的方式修复 CoCo 的缺陷、增强 CoCo 的功能。
 
