@@ -81,9 +81,6 @@ jobs:
   build:
     needs: mirror
     if: ${{ needs.mirror.outputs.has_changes == 'true' }}
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
     uses: ./.github/workflows/build.yml
     secrets:
-      github_token: ${{ secrets.GITHUB_TOKEN }}
+      token: ${{ secrets.GITHUB_TOKEN }}
