@@ -96,7 +96,7 @@ function rewriteURL(url: URL): URL {
     if (location.hostname.endsWith(".ccwidget.top")) {
         const newURL = new URL(location.origin)
         newURL.pathname = url.pathname
-        newURL.searchParams.set("url", url.href)
+        newURL.searchParams.set("__proxy_url__", url.href)
         url.searchParams.forEach((value, key) => {
             newURL.searchParams.append(key, value)
         })

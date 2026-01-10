@@ -135,7 +135,7 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
 
   private handleFeedback() {
     // [CoCo Next] 替换问题反馈链接
-    window.open(packageInfo.bugs.url, Date.now().toString())
+    window.open(packageInfo.feedback, Date.now().toString())
   }
 
   private renderUserInfo(userInfo) {
@@ -146,7 +146,7 @@ export class HeaderView extends React.Component<HeaderViewProps, HeaderViewState
             <div styleName="dropdown">
               {/* [CoCo Next] 添加原始登录 */}
               {!location.hostname.endsWith(".codemao.cn") && <div styleName="dropdownItem" onClick={this.handleOriginalLogin}>原始登录</div>}
-              {/* [CoCo Next] 添加原始账号管理 */}
+              {/* [CoCo Next] 添加原始账号设置 */}
               {!location.hostname.endsWith(".codemao.cn") && <div styleName="dropdownItem" onClick={this.handleOriginalAccountSettings}>原始账号设置</div>}
               <div
                 styleName="dropdownItem"

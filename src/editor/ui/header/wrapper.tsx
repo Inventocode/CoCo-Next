@@ -862,7 +862,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                       <div className={styles.itemLinkContent}>
                         {/* [CoCo Next] 替换问题反馈链接 */}
                         <a
-                          href={packageInfo.bugs.url}
+                          href={packageInfo.feedback}
                           target="_blank"
                           rel="noopener noreferrer"
                           className={styles.link}

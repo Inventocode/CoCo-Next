@@ -72,6 +72,10 @@ const config = {
                     return proxyURL.pathname + proxyURL.search + proxyURL.hash
                 },
                 changeOrigin: true
+            }, {
+                context: "/docs/",
+                target: "https://next.ccwidget.top/",
+                changeOrigin: true
             }
         ]
     }

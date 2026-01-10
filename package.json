@@ -4,7 +4,8 @@
   "private": true,
   "description": "下一代 CoCo 编辑器。",
   "homepage": "https://gitee.com/oldsquaw/CoCo-Next#coco-next",
-  "document": "https://next.ccwidget.top/docs/",
+  "document": "/docs/",
+  "feedback": "/docs/guide/feedback",
   "repository": {
     "type": "git",
     "url": "https://gitee.com/oldsquaw/CoCo-Next.git"

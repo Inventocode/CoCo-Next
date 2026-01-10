@@ -560,6 +560,10 @@ var u = $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571
   whetherKeepWorksTitleWhenOpenCourse: "即将打开教程作品，是否保存当前作品？",
   whetherKeepWorksDescription: "建议点击保存作品，防止作品丢失",
   iconLib: "图标库",
+  // [CoCo Next] 添加原始登录
+  originalLogin: "原始登录",
+  // [CoCo Next] 添加原始账号管理
+  originalAccountSetting: "原始账号设置",
   login: "登录",
   logout: "退出登录",
   accountSetting: "账号设置",

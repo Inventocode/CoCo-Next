@@ -18,7 +18,10 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1051 from "../../../../../unrestored/shared/1571/2636/1051"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511 from "../../../../../unrestored/shared/1571/2636/1051"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 !function (e) {
+  e.ORIGINAL_LOGIN = "ORIGINAL_LOGIN"
+  e.ORIGINAL_ACCOUNT_SETTING = "ORIGINAL_ACCOUNT_SETTING"
   e.LOGOUT = "LOGOUT"
   e.ACCOUNT_SETTING = "ACCOUNT_SETTING"
   e.USER_AGREEMENT = "USER_AGREEMENT"
@@ -47,6 +50,7 @@ const serviceAgreementList = [
 ]
 
 export const UserInfo = React.memo((__props) => {
+  const dispatch = $$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
   var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
@@ -81,6 +85,22 @@ export const UserInfo = React.memo((__props) => {
               window.open($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.D(), "_blank")
               return e.abrupt("break", 16)
             case 16:
+              // [CoCo Next] 添加原始登录、添加原始账号设置
+              if (t === Ye.ORIGINAL_LOGIN) {
+                function open() {
+                  window.open(location.origin + "/original_login/", "_blank")
+                }
+                if (location.hostname == "coco-next.localhost") {
+                  dispatch($$_$$_$$_redux_common_actions.openConfirmDialogAction({
+                    content: "当前界面不需要进行原始登录，确定要继续吗？",
+                    onConfirm: open
+                  }))
+                } else {
+                  open()
+                }
+              } else if (t === Ye.ORIGINAL_ACCOUNT_SETTING) {
+                window.open(location.origin + "/original_login/?url=https://shequ.codemao.cn/setting/", "_blank")
+              }
             case "end":
               return e.stop()
           }
@@ -102,6 +122,18 @@ export const UserInfo = React.memo((__props) => {
     <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511.wrapper}>
       <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g overlay={
         <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l onClick={o}>
+          {/* [CoCo Next] 添加原始登录 */}
+          {!location.hostname.endsWith(".codemao.cn") && (
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value={Ye.ORIGINAL_LOGIN}>
+              <div>{formatMessage({ id: "originalLogin" })}</div>
+            </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+          )}
+          {/* [CoCo Next] 添加原始账号管理 */}
+          {!location.hostname.endsWith(".codemao.cn") && (
+            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value={Ye.ORIGINAL_ACCOUNT_SETTING}>
+              <div>{formatMessage({ id: "originalAccountSetting" })}</div>
+            </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+          )}
           <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value={Ye.ACCOUNT_SETTING}>
             <div>{formatMessage({ id: "accountSetting" })}</div>
           </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
