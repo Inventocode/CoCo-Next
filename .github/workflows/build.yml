@@ -4,9 +4,6 @@ on:
   push:
     branches: [editor, docs]
   workflow_call:
-    secrets:
-      token:
-        required: true
   workflow_dispatch:
 
 jobs:
@@ -150,6 +147,6 @@ jobs:
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.token }}
+          github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./dist
           force_orphan: true
