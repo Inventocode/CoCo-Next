@@ -73,7 +73,7 @@ jobs:
             const url = new URL(request.url);
 
             // 从查询参数获取目标 URL
-            const targetUrl = url.searchParams.get('url');
+            const targetUrl = url.searchParams.get('__proxy_url__');
 
             if (targetUrl) {
               try {
