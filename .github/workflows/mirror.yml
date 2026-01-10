@@ -8,6 +8,8 @@ on:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
 
     steps:
     - name: 检出 GitHub 仓库
@@ -31,24 +33,53 @@ jobs:
         git fetch gitee
         git fetch docs-gitee
 
-    - name: 切换到编辑器分支并重置到 Gitee
+    - name: 检查编辑器分支变化
+      id: check_editor
       run: |
         git checkout editor
+        OLD_HEAD=$(git rev-parse HEAD)
         git reset --hard gitee/main
+        NEW_HEAD=$(git rev-parse HEAD)
+        if [ "$OLD_HEAD" != "$NEW_HEAD" ]; then
+          echo "editor_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "editor_changed=false" >> $GITHUB_OUTPUT
+        fi
 
-    - name: 切换到文档分支并重置到 Gitee
+    - name: 检查文档分支变化
+      id: check_docs
       run: |
         git checkout docs
+        OLD_HEAD=$(git rev-parse HEAD)
         git reset --hard docs-gitee/main
+        NEW_HEAD=$(git rev-parse HEAD)
+        if [ "$OLD_HEAD" != "$NEW_HEAD" ]; then
+          echo "docs_changed=true" >> $GITHUB_OUTPUT
+        else
+          echo "docs_changed=false" >> $GITHUB_OUTPUT
+        fi
+
+    - name: 设置整体变化标志
+      id: check_changes
+      run: |
+        if [ "${{ steps.check_editor.outputs.editor_changed }}" == "true" ] || [ "${{ steps.check_docs.outputs.docs_changed }}" == "true" ]; then
+          echo "has_changes=true" >> $GITHUB_OUTPUT
+        else
+          echo "has_changes=false" >> $GITHUB_OUTPUT
+        fi
 
     - name: 强制推送到 GitHub
       run: |
-        # 使用强制推送确保同步
         git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git --all --force
         git push https://${{ secrets.PAT }}@github.com/${{ github.repository }}.git --tags --force
 
     - name: 清理
       run: |
-        # 删除远程仓库
         git remote remove gitee
         git remote remove docs-gitee
+
+    - name: 构建
+      uses: ./.github/workflows/build.yml
+      if: ${{ steps.check_changes.outputs.has_changes == 'true' }}
+      secrets:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

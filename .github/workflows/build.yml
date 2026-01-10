@@ -3,6 +3,10 @@ name: 部署到 GitHub Pages
 on:
   push:
     branches: [editor, docs]
+  workflow_call:
+    secrets:
+      GITHUB_TOKEN:
+        required: true
   workflow_dispatch:
 
 jobs:
