@@ -1,14 +1,8 @@
-# 编程猫 CoCo 源代码计划
+# CoCo 源代码计划
 
-![QQ-编程猫非官方技术交流群（708553284）](https://img.shields.io/badge/QQ-编程猫非官方技术交流群（708553284）-blue?style=flat-square)
+![QQ-907170983](https://img.shields.io/badge/QQ-907170983-blue?style=flat-square)
 
 还原编程猫 CoCo 编辑器、CoCo Player 等的代码。
-
-> [!IMPORTANT]
->
-> 停更通知：
->
-> 该项目唯一的核心维护者 SLIGHTNING 由于学业繁忙，将无法维护该项目。预计将于 2026 年 6 月 17 日后恢复更新。
 
 ## 一、介绍
 
@@ -28,7 +22,7 @@ CoCo 源代码计划并不是也不能完全还原 CoCo 的源代码，该项目
 
 ### 4.那些项目在使用 CoCo 源代码计划
 
-- [CoCo Next](https://gitee.com/oldsquaw/CoCo-Next)：CoCo Next 基于 CoCo 源代码计划二次开发 CoCo。
+- [CoCo Next](https://gitee.com/oldsquaw-coco-next/CoCo-Next)：CoCo Next 基于 CoCo 源代码计划二次开发 CoCo。
 
 ## 二、进度
 
@@ -65,7 +59,7 @@ CoCo 源代码计划并不是也不能完全还原 CoCo 的源代码，该项目
 ```sh
 git clone https://github.com/glacier-studio/CoCo-Source-Code-Plan.git
 # 或从 Gitee 克隆：
-# git clone https://gitee.com/glacier-studio/CoCo-Source-Code-Plan.git
+# git clone https://gitee.com/oldsquaw-coco-next/CoCo-Source-Code-Plan.git
 ```
 
 #### (2)安装依赖
