@@ -89,7 +89,7 @@ const ReleaseInfo = React.memo(() => {
             </div>
           </div>
           <div className={styles.overViewInfo}>
-            <a href="https://gitee.com/oldsquaw/CoCo-Next/blob/main/changelog.md" target="_blank" rel="noopener noreferrer">
+            <a href="https://gitee.com/oldsquaw-coco-next/CoCo-Next/blob/main/changelog.md" target="_blank" rel="noopener noreferrer">
               往期功能更新回顾
               <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className={styles.iconLink} type="icon-dropdown-down" />
             </a>

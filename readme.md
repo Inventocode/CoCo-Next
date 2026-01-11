@@ -6,7 +6,7 @@
 
 ### 1.简介
 
-基于 [CoCo 源代码计划](https://gitee.com/glacier-studio/CoCo-Source-Code-Plan) 二次开发的 CoCo，旨在通过直接修改编辑器代码的方式修复 CoCo 的缺陷、增强 CoCo 的功能。
+基于 [CoCo 源代码计划](https://gitee.com/oldsquaw-coco-next/CoCo-Source-Code-Plan) 二次开发的 CoCo，旨在通过直接修改编辑器代码的方式修复 CoCo 的缺陷、增强 CoCo 的功能。
 
 ### 2.与 CoCoPro 的异同
 
@@ -67,7 +67,7 @@ CoCo Next 正处于技术探索和早期开发阶段，暂时没有完整部署�
 
 ### 1.快捷本地体验（仅限 Windows 系统）
 
-到 [Release](https://gitee.com/oldsquaw/CoCo-Next/releases) 界面下载 CoCo Next 服务，下载完成后双击程序启动。
+到 [Release](https://gitee.com/oldsquaw-coco-next/CoCo-Next/releases) 界面下载 CoCo Next 服务，下载完成后双击程序启动。
 
 ### 2.在线体验镜像仓库
 
@@ -89,7 +89,7 @@ CoCo Next 正处于技术探索和早期开发阶段，暂时没有完整部署�
 #### (1)克隆仓库到本地
 
 ```sh
-git clone https://gitee.com/oldsquaw/CoCo-Next.git
+git clone https://gitee.com/oldsquaw-coco-next/CoCo-Next.git
 cd CoCo-Next
 ```
 
@@ -137,7 +137,7 @@ $ npm run serve
 
 在修改代码时，请注意以下几点：
 
-- 尽量不要修改未还原的代码，这会导致 CoCo Next 难以和 CoCo 源代码计划同步，如果确实需要修改，建议先在 [CoCo 源代码计划](https://gitee.com/glacier-studio/CoCo-Source-Code-Plan) 中还原要修改的代码。
+- 尽量不要修改未还原的代码，这会导致 CoCo Next 难以和 CoCo 源代码计划同步，如果确实需要修改，建议先在 [CoCo 源代码计划](https://gitee.com/oldsquaw-coco-next/CoCo-Source-Code-Plan) 中还原要修改的代码。
 - 修改或添加代码时在相应代码上方添加“[CoCo Next]”注释并表明修改或添加的地方。
 - 删除 CoCo 代码时尽量使用将代码注释掉的方式。
 - 在 CoCo Next 中添加而在 CoCo 中不能使用的积木，需要在积木前加上“[N]”标记来表示这个积木只能在 CoCo Next 中使用。

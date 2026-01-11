@@ -3,12 +3,12 @@
   "version": "1.22.2",
   "private": true,
   "description": "下一代 CoCo 编辑器。",
-  "homepage": "https://gitee.com/oldsquaw/CoCo-Next#coco-next",
+  "homepage": "https://gitee.com/oldsquaw-coco-next/CoCo-Next#coco-next",
   "document": "/docs/",
   "feedback": "/docs/guide/feedback",
   "repository": {
     "type": "git",
-    "url": "https://gitee.com/oldsquaw/CoCo-Next.git"
+    "url": "https://gitee.com/oldsquaw-coco-next/CoCo-Next.git"
   },
   "bugs": {
     "url": "https://next.ccwidget.top/docs/guide/feedback"
