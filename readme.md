@@ -4,9 +4,9 @@
 
 这是一个从 Gitee 自动同步的 CoCo Next 镜像仓库，并使用 Cloudflare Pages 将其部署到[https://next.ccwidget.top/](https://next.ccwidget.top/)上。
 
-源仓库地址：[Gitee/Oldsquaw/CoCo-Next](https://gitee.com/oldsquaw/CoCo-Next)
+源仓库地址：[Gitee/oldsquaw-coco-next/CoCo-Next](https://gitee.com/oldsquaw-coco-next/CoCo-Next)
 
-源文档仓库地址：[Gitee/Oldsquaw/CoCo-Next-Docs](https://gitee.com/oldsquaw/CoCo-Next-Docs)
+源文档仓库地址：[Gitee/oldsquaw-coco-next/CoCo-Next-Docs](https://gitee.com/oldsquaw-coco-next/CoCo-Next-Docs)
 
 ## 同步说明
 

@@ -25,8 +25,8 @@ jobs:
 
     - name: 添加 Gitee 远程仓库
       run: |
-        git remote add gitee https://gitee.com/oldsquaw/CoCo-Next.git
-        git remote add docs-gitee https://gitee.com/oldsquaw/CoCo-Next-Docs.git
+        git remote add gitee https://gitee.com/oldsquaw-coco-next/CoCo-Next.git
+        git remote add docs-gitee https://gitee.com/oldsquaw-coco-next/CoCo-Next-Docs.git
 
     - name: 从 Gitee 获取更新
       run: |
