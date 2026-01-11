@@ -45,12 +45,12 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://gitee.com/oldsquaw/CoCo-Next-Docs/edit/main/',
+            'https://gitee.com/oldsquaw-coco-next/CoCo-Next-Docs/edit/main/',
           routeBasePath: '/'
         },
         blog: false,
         pages: {
-          editUrl: 'https://gitee.com/oldsquaw/CoCo-Next-Docs/edit/main/'
+          editUrl: 'https://gitee.com/oldsquaw-coco-next/CoCo-Next-Docs/edit/main/'
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -91,7 +91,7 @@ const config: Config = {
           label: '技术分析',
         },
         {
-          href: 'https://gitee.com/oldsquaw/CoCo-Next',
+          href: 'https://gitee.com/oldsquaw-coco-next/CoCo-Next',
           label: 'Gitee',
           position: 'right',
         },
@@ -135,7 +135,7 @@ const config: Config = {
             },
             {
               label: 'Gitee',
-              href: 'https://gitee.com/oldsquaw/CoCo-Next',
+              href: 'https://gitee.com/oldsquaw-coco-next/CoCo-Next',
             },
           ],
         },

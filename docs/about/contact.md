@@ -11,8 +11,8 @@ sidebar_position: 5
 ## 二、Gitee
 
 - Gitee 组织：https://gitee.com/oldsquaw
-- 编辑器的 Gitee 仓库：https://gitee.com/oldsquaw/CoCo-Next
-- 文档的 Gitee 仓库：https://gitee.com/oldsquaw/CoCo-Next-Docs
+- 编辑器的 Gitee 仓库：https://gitee.com/oldsquaw-coco-next/CoCo-Next
+- 文档的 Gitee 仓库：https://gitee.com/oldsquaw-coco-next/CoCo-Next-Docs
 
 ## 三、开发者
 

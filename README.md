@@ -1,6 +1,6 @@
 # CoCo Next 文档
 
-[CoCo Next](https://gitee.com/oldsquaw/CoCo-Next) 的文档。
+[CoCo Next](https://gitee.com/oldsquaw-coco-next/CoCo-Next) 的文档。
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
