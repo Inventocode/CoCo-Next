@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$$_710_273_index from "../710/273/index"
 import * as /* [auto-meaningful-name] */$$_710_1009 from "../710/1009"
 import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_1196 from "./1196"
-import /* [auto-meaningful-name] */_$_ from "./1196"
+import /* [auto-meaningful-name] */$_11961 from "./1196"
 var M = ["localeMatcher", "type", "style"]
 var L = Date.now()
 function j(e, t, n, r) {
@@ -105,7 +105,7 @@ var G = function () {
     return e
   }).apply(this, arguments)
 }
-var z = _$_ || $_1196
+var z = $_11961 || $_1196
 function Q(e) {
   return {
     locale: e.locale,

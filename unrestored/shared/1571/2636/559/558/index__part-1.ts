@@ -10,7 +10,7 @@ var r
 import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
 import * as /* [auto-meaningful-name] */$$_$$_107 from "../../107"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_1543_432 from "../../1543/432"
 import * as /* [auto-meaningful-name] */$_1497 from "./1497"
 function l(e) {
@@ -504,7 +504,7 @@ function Y(e) {
   }
   return null
 }
-var /* [auto-meaningful-name] */_K$getParent = K.getParent
+var /* [auto-meaningful-name] */K$getParent1 = K.getParent
 function $(e, t) {
   for (var n = {
       left: 0,
@@ -556,7 +556,7 @@ function $(e, t) {
     }
     var /* [auto-meaningful-name] */K$getDocumentE$body = K.getDocument(e).body
     var n = null
-    for (n = _K$getParent(e); n && n !== K$getDocumentE$body; n = _K$getParent(n)) {
+    for (n = K$getParent1(e); n && n !== K$getDocumentE$body; n = K$getParent1(n)) {
       if ("fixed" === K.css(n, "position")) {
         return true
       }

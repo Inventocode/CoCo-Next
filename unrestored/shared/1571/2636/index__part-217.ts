@@ -23,10 +23,10 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_475 from "./475"
-import /* [auto-meaningful-name] */_$_ from "./475"
-var ZP = _React.memo(function () {
+import /* [auto-meaningful-name] */$_4751 from "./475"
+var ZP = React1.memo(function () {
   var e = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var n = $_16_index.e(function (e) {
@@ -241,46 +241,46 @@ var ZP = _React.memo(function () {
     }),
     withPortal: true,
     visible: r,
-    className: _$_.courseDialog,
+    className: $_4751.courseDialog,
     onClose: l
   }, React.createElement("div", {
-    className: _$_.courseList
+    className: $_4751.courseList
   }, n.map(function (e) {
     return React.createElement("div", {
-      className: _$_.courseItem,
+      className: $_4751.courseItem,
       key: e.id,
       onClick: function () {
         return s(e.id)
       }
     }, React.createElement("div", {
-      className: _$_.courseImage
+      className: $_4751.courseImage
     }, React.createElement("div", {
-      className: _$_.image,
+      className: $_4751.image,
       style: {
         backgroundImage: "url(".concat(e.preview, ")")
       }
     }), React.createElement("div", {
-      className: _$_.mask
+      className: $_4751.mask
     }, React.createElement("div", {
-      className: _$_.playBox
+      className: $_4751.playBox
     }, React.createElement($_13_index.j, {
       type: "icon-sound-play"
     })))), React.createElement("div", {
-      className: _$_.courseName
+      className: $_4751.courseName
     }, e.title), React.createElement("div", {
-      className: _$_.courseDesc
+      className: $_4751.courseDesc
     }, e.courseIntro))
   }), React.createElement("div", {
-    className: _$_.courseMore
+    className: $_4751.courseMore
   }, React.createElement("div", {
-    className: _$_.moreImage
+    className: $_4751.moreImage
   }), React.createElement("div", {
-    className: _$_.moreTips
+    className: $_4751.moreTips
   }, $_710_index$a$formatMessage({
     id: "moreCourseTips"
   })))))
 })
-var JP = _React.memo(function (e) {
+var JP = React1.memo(function (e) {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var n = $_16_index.d()
   var r = $_16_index.e(function (e) {

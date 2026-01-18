@@ -7,34 +7,34 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$_13_226 from "./13/226"
-import /* [auto-meaningful-name] */_$_13_ from "./13/226"
+import /* [auto-meaningful-name] */$_13_2261 from "./13/226"
 var /* [auto-meaningful-name] */B3B3B3 = "#B3B3B3"
 var _ = function (e) {
   return "#00000000" === e || "rgba(0,0,0,0)" === e || "transparent" === e
 }
 var v = function (e, t) {
-  return _Color(e).fade(1 - t).string()
+  return Color1(e).fade(1 - t).string()
 }
 var b = function (e) {
-  return "#ffffff" === _Color(e).hex().toLowerCase()
+  return "#ffffff" === Color1(e).hex().toLowerCase()
 }
 var y = function (e, t) {
-  window.Color = _Color
-  return _Color(e).darken(t).hex()
+  window.Color = Color1
+  return Color1(e).darken(t).hex()
 }
 var E = function (e) {
   try {
-    return _Color(e).toString()
+    return Color1(e).toString()
   } catch (t) {
     console.error("formatColor error", e)
   }
   return e
 }
 var O = function (e) {
-  return _Color(e).hsl().lightness() > 85.7
+  return Color1(e).hsl().lightness() > 85.7
 }
 var w = function (e) {
   if ("string" !== typeof e) {
@@ -42,7 +42,7 @@ var w = function (e) {
   }
   var t = true
   try {
-    _Color(e).toString()
+    Color1(e).toString()
   } catch (n) {
     t = false
   }
@@ -57,7 +57,7 @@ var C = function (e) {
 }
 function T(e) {
   try {
-    return C(_Color(e))
+    return C(Color1(e))
   } catch (t) {
     return ""
   }
@@ -75,7 +75,7 @@ var S = function (e) {
   return t === n && e
 }
 var A = function (e, t) {
-  var n = e.HEX ? _$_13_(e.HEX) : _$_13_(e)
+  var n = e.HEX ? $_13_2261(e.HEX) : $_13_2261(e)
   var r = n.toHsl()
   var o = n.toHsv()
   var i = n.toRgb()

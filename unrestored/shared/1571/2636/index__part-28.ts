@@ -6863,10 +6863,10 @@ var Rl = {
   },
   dragAfter: function (e, t) {
     var /* [auto-meaningful-name] */t$datas = t.datas
-    var /* [auto-meaningful-name] */_t$datas = t.datas
-    var /* [auto-meaningful-name] */_t$datas$deltaOffset = _t$datas.deltaOffset
-    var /* [auto-meaningful-name] */_t$datas$distOffset = _t$datas.distOffset
-    return !(!_t$datas$deltaOffset[0] && !_t$datas$deltaOffset[1]) && (t$datas.deltaOffset = [0, 0], _t$datas$distOffset[0] += _t$datas$deltaOffset[0], _t$datas$distOffset[1] += _t$datas$deltaOffset[1], this.drag(e, t))
+    var /* [auto-meaningful-name] */t$datas1 = t.datas
+    var /* [auto-meaningful-name] */t$datas1$deltaOffset = t$datas1.deltaOffset
+    var /* [auto-meaningful-name] */t$datas1$distOffset = t$datas1.distOffset
+    return !(!t$datas1$deltaOffset[0] && !t$datas1$deltaOffset[1]) && (t$datas.deltaOffset = [0, 0], t$datas1$distOffset[0] += t$datas1$deltaOffset[0], t$datas1$distOffset[1] += t$datas1$deltaOffset[1], this.drag(e, t))
   },
   dragEnd: function (e, t) {
     var /* [auto-meaningful-name] */t$parentEvent = t.parentEvent
@@ -7056,15 +7056,15 @@ function Bl(e, t, n, r, o, i, a, s) {
       --n.loop
     }
   }
-  var /* [auto-meaningful-name] */_n$loop = n.loop
+  var /* [auto-meaningful-name] */n$loop1 = n.loop
   var f = 360 * n$loop + n$prevSnapDeg - n$startDeg + i
-  var h = 360 * _n$loop + r - n$startDeg + i
-  n.prevDeg = h - 360 * _n$loop + n$startDeg - i
+  var h = 360 * n$loop1 + r - n$startDeg + i
+  n.prevDeg = h - 360 * n$loop1 + n$startDeg - i
   var m = o * ((h = oi(h, a)) - i)
   if (s) {
     h = (m = Sl(e, t, n.origin, m)) / o + i
   }
-  n.prevSnapDeg = h - 360 * _n$loop + n$startDeg - i
+  n.prevSnapDeg = h - 360 * n$loop1 + n$startDeg - i
   return [o * (h - f), m, i + m]
 }
 function Fl(e, t, n, r, o, i, a, s) {
@@ -7368,11 +7368,11 @@ var Wl = {
     }
     s.set(t$datas.beforeDirection * e.rotation)
     var c = cc(e, this, "dragControlStart", t, function (e, t) {
-      var /* [auto-meaningful-name] */_e$state = e.state
-      var /* [auto-meaningful-name] */_e$state$left = _e$state.left
-      var /* [auto-meaningful-name] */_e$state$top = _e$state.top
-      var /* [auto-meaningful-name] */_e$state$beforeOrigin = _e$state.beforeOrigin
-      var l = Pi(Bi([_e$state$left, _e$state$top], [e$state$left, e$state$top]), Bi(_e$state$beforeOrigin, e$state$beforeOrigin))
+      var /* [auto-meaningful-name] */e$state1 = e.state
+      var /* [auto-meaningful-name] */e$state1$left = e$state1.left
+      var /* [auto-meaningful-name] */e$state1$top = e$state1.top
+      var /* [auto-meaningful-name] */e$state1$beforeOrigin = e$state1.beforeOrigin
+      var l = Pi(Bi([e$state1$left, e$state1$top], [e$state$left, e$state$top]), Bi(e$state1$beforeOrigin, e$state$beforeOrigin))
       t.datas.groupClient = l
       return Xa(Xa({}, t), {
         parentRotate: 0
@@ -9876,10 +9876,10 @@ var Eu = {
     var /* [auto-meaningful-name] */t$datas$isClipStart = t$datas.isClipStart
     var /* [auto-meaningful-name] */t$datas$isControl = t$datas.isControl
     return !!t$datas$isClipStart && (Us(e, "onClipEnd", Ws(e, t, {})), t$isDouble && (t$datas$isControl ? function (e, t) {
-      var /* [auto-meaningful-name] */_t$datas2 = t.datas
-      var /* [auto-meaningful-name] */_t$datas2$clipPath = _t$datas2.clipPath
-      var /* [auto-meaningful-name] */_t$datas2$index = _t$datas2.index
-      var i = _t$datas2$clipPath
+      var /* [auto-meaningful-name] */t$datas1 = t.datas
+      var /* [auto-meaningful-name] */t$datas1$clipPath = t$datas1.clipPath
+      var /* [auto-meaningful-name] */t$datas1$index = t$datas1.index
+      var i = t$datas1$clipPath
       var /* [auto-meaningful-name] */i$type = i.type
       var /* [auto-meaningful-name] */i$poses = i.poses
       var /* [auto-meaningful-name] */i$splitter = i.splitter
@@ -9888,21 +9888,21 @@ var Eu = {
       })
       var /* [auto-meaningful-name] */l$length = l.length
       if ("polygon" === i$type) {
-        i$poses.splice(_t$datas2$index, 1)
-        l.splice(_t$datas2$index, 1)
+        i$poses.splice(t$datas1$index, 1)
+        l.splice(t$datas1$index, 1)
       } else {
         if ("inset" !== i$type) {
           return
         }
-        if (_t$datas2$index < 8) {
+        if (t$datas1$index < 8) {
           return
         }
-        fu(i$poses, l, _t$datas2$index, 8, l$length)
+        fu(i$poses, l, t$datas1$index, 8, l$length)
         if (l$length === i$poses.length) {
           return
         }
       }
-      var d = vu(e, _t$datas2$clipPath, l)
+      var d = vu(e, t$datas1$clipPath, l)
       Us(e, "onClip", Gs(e, t, {
         clipEventType: "removed",
         clipType: i$type,
@@ -9916,10 +9916,10 @@ var Eu = {
       var n = lc(e, t)
       var r = n[0]
       var o = n[1]
-      var /* [auto-meaningful-name] */_t$datas3 = t.datas
-      var /* [auto-meaningful-name] */_t$datas3$clipPath = _t$datas3.clipPath
-      var /* [auto-meaningful-name] */_t$datas3$index = _t$datas3.index
-      var c = _t$datas3$clipPath
+      var /* [auto-meaningful-name] */t$datas1 = t.datas
+      var /* [auto-meaningful-name] */t$datas1$clipPath = t$datas1.clipPath
+      var /* [auto-meaningful-name] */t$datas1$index = t$datas1.index
+      var c = t$datas1$clipPath
       var /* [auto-meaningful-name] */c$type = c.type
       var /* [auto-meaningful-name] */c$poses = c.poses
       var /* [auto-meaningful-name] */c$splitter = c.splitter
@@ -9927,20 +9927,20 @@ var Eu = {
         return e.pos
       })
       if ("polygon" === c$type) {
-        p.splice(_t$datas3$index, 0, [r, o])
+        p.splice(t$datas1$index, 0, [r, o])
       } else {
         if ("inset" !== c$type) {
           return
         }
-        var f = au.indexOf(_t$datas3$index)
-        var h = su.indexOf(_t$datas3$index)
+        var f = au.indexOf(t$datas1$index)
+        var h = su.indexOf(t$datas1$index)
         var /* [auto-meaningful-name] */c$poses$length = c$poses.length
         hu(c$poses, p, 8, f, h, r, o, p[4][0], p[4][1], p[0][0], p[0][1])
         if (c$poses$length === c$poses.length) {
           return
         }
       }
-      var g = vu(e, _t$datas3$clipPath, p)
+      var g = vu(e, t$datas1$clipPath, p)
       Us(e, "onClip", Gs(e, t, {
         clipEventType: "added",
         clipType: c$type,
@@ -10603,7 +10603,7 @@ function Iu(e, t, n, r, o, i, a) {
   if (p && i$inputEvent) {
     b = document.elementFromPoint(i.clientX, i.clientY) || i$inputEvent.target
   }
-  var /* [auto-meaningful-name] */_$filterFunctionTVarNT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length = _.filter(function (t) {
+  var /* [auto-meaningful-name] */_$filterFunctionTVar_AutoMeaningfulName_nT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length = _.filter(function (t) {
     var /* [auto-meaningful-name] */t$name = t.name
     var r = i$datas[t$name] || (i$datas[t$name] = {})
     if (s) {
@@ -10615,7 +10615,7 @@ function Iu(e, t, n, r, o, i, a) {
       inputTarget: b
     }))
   }).length
-  var O = s && _.length && !_$filterFunctionTVarNT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length
+  var O = s && _.length && !_$filterFunctionTVar_AutoMeaningfulName_nT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length
   if (p || O) {
     e.state.gesto = null
     if (e.moveables) {
@@ -10631,7 +10631,7 @@ function Iu(e, t, n, r, o, i, a) {
       }
     })
   }
-  return !e.isUnmounted && !O && ((!s && _$filterFunctionTVarNT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length && !a || p) && (e.updateRect(o, true, false), e.forceUpdate()), s || p || f || !_$filterFunctionTVarNT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length || a || Iu(e, t, n, r, o + "After", i), true)
+  return !e.isUnmounted && !O && ((!s && _$filterFunctionTVar_AutoMeaningfulName_nT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length && !a || p) && (e.updateRect(o, true, false), e.forceUpdate()), s || p || f || !_$filterFunctionTVar_AutoMeaningfulName_nT$nameVarRI$datasNI$datasNIfSR$isEventStartTDTDEIReturnR$isEventStartTUEXaXaIDatasROriginalDatasI$datasInputTargetB$length || a || Iu(e, t, n, r, o + "After", i), true)
 }
 function ju(e, t, n) {
   var r = e.controlBox.getElement()

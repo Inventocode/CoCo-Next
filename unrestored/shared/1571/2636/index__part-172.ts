@@ -17,12 +17,12 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_623 from "./623"
-import /* [auto-meaningful-name] */_$_ from "./623"
+import /* [auto-meaningful-name] */$_6231 from "./623"
 import * as /* [auto-meaningful-name] */$_1527 from "./1527"
-import /* [auto-meaningful-name] */_$_2 from "./1527"
-var hI = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_15271 from "./1527"
+var hI = React1.memo(function (e) {
   var t = $_16_index.e(function (e) {
     return e.common.importFailToastInfo
   })
@@ -30,23 +30,23 @@ var hI = _React.memo(function (e) {
   var /* [auto-meaningful-name] */t$importFailResults = t.importFailResults
   var /* [auto-meaningful-name] */t$fileType = t.fileType
   var i = $_16_index.d()
-  var a = _React.useState([])
+  var a = React1.useState([])
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var d = _React.useState(false)
+  var d = React1.useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState("importImageFailTitle")
+  var v = React1.useState("importImageFailTitle")
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
   function C() {
     i($$_$$_$$_$$_src_editor_redux_common_actions.rh())
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e() {
       return (e = O.a(RegeneratorRuntime.mark(function e() {
         var t
@@ -73,7 +73,7 @@ var hI = _React.memo(function (e) {
                 return te.c(i.file)
               case 8:
                 if (!e.sent) {
-                  a = _$_2
+                  a = $_15271
                 }
                 t.push({
                   url: a,
@@ -99,7 +99,7 @@ var hI = _React.memo(function (e) {
       e.apply(this, arguments)
     })()
   }, [t$importFailResults, t$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if ("sound" === t$fileType) {
       w("importSoundFailTitle")
     } else {
@@ -109,12 +109,12 @@ var hI = _React.memo(function (e) {
     }
   }, [t$fileType])
   return React.createElement("div", {
-    className: N(_$_.importFailToast, k.a({}, _$_.extensional, m)),
+    className: N($_6231.importFailToast, k.a({}, $_6231.extensional, m)),
     style: {
       display: t$visible ? "block" : "none"
     }
   }, React.createElement("div", {
-    className: _$_.title
+    className: $_6231.title
   }, React.createElement($_13_index.j, {
     type: "icon-warning"
   }), React.createElement("p", null, t$importFailResults.length, " ", $_710_index$a$formatMessage({
@@ -131,23 +131,23 @@ var hI = _React.memo(function (e) {
   }, $_710_index$a$formatMessage({
     id: "close"
   }))), m && React.createElement(React.Fragment, null, React.createElement("ul", {
-    className: _$_.main
+    className: $_6231.main
   }, c.map(function (e) {
     return React.createElement("li", {
       key: e.name
     }, React.createElement("div", {
-      className: _$_.left
+      className: $_6231.left
     }, React.createElement("div", {
-      className: _$_.imgBox
+      className: $_6231.imgBox
     }, React.createElement("img", {
       src: e.url,
       alt: ""
     })), React.createElement("span", null, e.name)), React.createElement("div", {
-      className: _$_.errorMessage
+      className: $_6231.errorMessage
     }, e.message))
   })), React.createElement($_13_index.d, {
     type: "primary",
-    className: _$_.confirmButton,
+    className: $_6231.confirmButton,
     onClick: C
   }, $_710_index$a$formatMessage({
     id: "know"

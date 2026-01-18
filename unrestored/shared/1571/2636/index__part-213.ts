@@ -20,10 +20,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_707 from "./707"
-import /* [auto-meaningful-name] */_$_ from "./707"
-var kP = _React.memo(function () {
+import /* [auto-meaningful-name] */$_7071 from "./707"
+var kP = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
@@ -33,24 +33,24 @@ var kP = _React.memo(function () {
   var /* [auto-meaningful-name] */n$onConfirm = n.onConfirm
   var /* [auto-meaningful-name] */n$content = n.content
   var a = undefined === n$content ? "" : n$content
-  var s = _React.useState(false)
+  var s = React1.useState(false)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState(null)
+  var d = React1.useState(null)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useRef(null)
-  var b = _React.useRef(null)
-  var y = _React.useRef(null)
-  var E = _React.useRef(null)
-  var O = _React.useRef(null)
-  var w = _React.useRef(null)
-  var C = _React.useCallback(function () {
+  var v = React1.useRef(null)
+  var b = React1.useRef(null)
+  var y = React1.useRef(null)
+  var E = React1.useRef(null)
+  var O = React1.useRef(null)
+  var w = React1.useRef(null)
+  var C = React1.useCallback(function () {
     t($$_$$_$$_$$_src_editor_redux_common_actions.Yg())
   }, [t])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (y.current && w.current) {
       var t = {
         placeholder: $_710_index$a$formatMessage({
@@ -129,12 +129,12 @@ var kP = _React.memo(function () {
       }
     }
   }, [$_710_index$a$formatMessage])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (n$visible && E.current) {
       E.current.root.innerHTML = $_28_index.i(a)
     }
   }, [a, n$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (n$visible) {
       !function () {
         if (!CP) {
@@ -179,10 +179,10 @@ var kP = _React.memo(function () {
     }
     g(null)
   }, [n$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     v.current = m
   }, [m])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */E$current = E.current
     if (E$current && n$visible) {
       if (l) {
@@ -207,7 +207,7 @@ var kP = _React.memo(function () {
       }
     }
   }, [l, n$visible])
-  var T = _React.useCallback(function () {
+  var T = React1.useCallback(function () {
     if (E.current) {
       var /* [auto-meaningful-name] */E$current$root$innerHTML = E.current.root.innerHTML
       if (n$onConfirm) {
@@ -216,13 +216,13 @@ var kP = _React.memo(function () {
     }
     C()
   }, [C, n$onConfirm])
-  var A = _React.useCallback(function (e) {
+  var A = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$target = e.target
     if ((e$target instanceof Element ? e$target.closest("button.ql-clean") : null) && E.current && w.current) {
       IP(E.current, w.current)
     }
   }, [])
-  var j = _React.useCallback(function (e, t) {
+  var j = React1.useCallback(function (e, t) {
     var /* [auto-meaningful-name] */document$activeElement
     if ("INPUT" !== (null === (document$activeElement = document.activeElement) || undefined === document$activeElement ? undefined : document$activeElement.nodeName) && !t) {
       var /* [auto-meaningful-name] */v$current = v.current
@@ -251,21 +251,21 @@ var kP = _React.memo(function () {
     title: $_710_index$a$formatMessage({
       id: "RichTextEditor.editDialogTitle"
     }),
-    className: _$_.container
+    className: $_7071.container
   }, React.createElement("div", {
-    className: _$_.header
+    className: $_7071.header
   }), React.createElement("div", {
-    className: _$_.content,
+    className: $_7071.content,
     ref: w,
     onClick: A
   }, React.createElement("div", {
-    className: _$_.editor
+    className: $_7071.editor
   }, React.createElement("div", {
     ref: y
   }))), React.createElement("div", {
-    className: _$_.footer
+    className: $_7071.footer
   }, React.createElement($_13_index.d, {
-    className: _$_.save,
+    className: $_7071.save,
     type: "primary",
     onClick: T
   }, $_710_index$a$formatMessage({
@@ -278,7 +278,7 @@ var kP = _React.memo(function () {
       onChange: j
     })
   }, React.createElement("span", {
-    className: _$_.paletteTrigger,
+    className: $_7071.paletteTrigger,
     style: {
       top: null === N || undefined === N ? undefined : N.top,
       left: null === N || undefined === N ? undefined : N.left

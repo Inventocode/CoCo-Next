@@ -10,10 +10,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1204 from "./1204"
-import /* [auto-meaningful-name] */_$_ from "./1204"
-var Jw = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_12041 from "./1204"
+var Jw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "penSize" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -27,7 +27,7 @@ var Jw = _React.memo(function (e) {
   var d = e$getValue(n)
   return React.createElement($_13_index.i, {
     align: "vertical",
-    className: N(_$_.formItemWrapper, _$_.numberSlider),
+    className: N($_12041.formItemWrapper, $_12041.numberSlider),
     label: $_710_index$a$formatMessage({
       id: s
     })

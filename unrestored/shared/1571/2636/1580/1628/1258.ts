@@ -6,7 +6,7 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */require$$_1705_300_index$f = require("../1705/300/index").f
+var /* [auto-meaningful-name] */require$$_1705_300$f = require("../1705/300").f
 var o = require("../1694/577/index")
 var i = require("../1686/760")
 var a = require("../1282/636")
@@ -16,7 +16,7 @@ var l = require("../949/1087")
 var u = require("../1686/759")
 var d = require("../1699/271")
 var /* [auto-meaningful-name] */require$$_1778_718$fastKey = require("../1778/718").fastKey
-var f = require("../1686/426/index")
+var f = require("../1686/426")
 var /* [auto-meaningful-name] */f$set = f.set
 var /* [auto-meaningful-name] */f$getterFor = f.getterFor
 module.exports = {
@@ -157,7 +157,7 @@ module.exports = {
       }
     })
     if (d) {
-      require$$_1705_300_index$f(u.prototype, "size", {
+      require$$_1705_300$f(u.prototype, "size", {
         get: function () {
           return f(this).size
         }

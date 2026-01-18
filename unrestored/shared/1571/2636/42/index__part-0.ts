@@ -8,7 +8,7 @@
 
 import * as r from "../6"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
 import s from "../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
@@ -51,9 +51,9 @@ var _ = function (e) {
       CocoWidgetWrapper += " coco-child-widget-selected"
     }
   }
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     className: CocoWidgetWrapper
-  }, c && _React.createElement($_676_index.a, c), e$render(y, function (e, t, r) {
+  }, c && React1.createElement($_676_index.a, c), e$render(y, function (e, t, r) {
     if ($$_33.r(e$widgetId)) {
       l({
         target: e,

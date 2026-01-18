@@ -13,10 +13,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_813 from "./813"
-import /* [auto-meaningful-name] */_$_ from "./813"
-var PS = _React.memo(function () {
+import /* [auto-meaningful-name] */$_8131 from "./813"
+var PS = React1.memo(function () {
   var e = undefined !== te.N(window.location.href).archiveId
   var t = $_16_index.e(function (e) {
     return e.common.floatMiniIcons
@@ -24,7 +24,7 @@ var PS = _React.memo(function () {
   var /* [auto-meaningful-name] */t$fixedIcons = t.fixedIcons
   var /* [auto-meaningful-name] */t$temporaryIcons = t.temporaryIcons
   var o = $_16_index.d()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     o($$_$$_$$_$$_src_editor_redux_common_actions.cf({
       name: "debugIcon",
       icon: "icon-data",
@@ -52,7 +52,7 @@ var PS = _React.memo(function () {
       var t = React.createElement("div", null, e.icon ? React.createElement($_13_index.j, {
         type: e.icon
       }) : "", e.withClose ? React.createElement("div", {
-        className: _$_.close,
+        className: $_8131.close,
         onClick: e.onClose
       }, React.createElement($_13_index.j, {
         type: "icon-close"
@@ -65,20 +65,20 @@ var PS = _React.memo(function () {
         }, n)
       }
       return React.createElement("div", {
-        className: _$_.floatIcon,
+        className: $_8131.floatIcon,
         onClick: e.onClick,
         key: e.name
       }, n)
     }
   }
   return React.createElement("div", {
-    className: _$_.floatPanel
+    className: $_8131.floatPanel
   }, React.createElement("div", {
-    className: _$_.fixedBox
+    className: $_8131.fixedBox
   }, t$fixedIcons.map(function (e) {
     return i(e)
   })), React.createElement("div", {
-    className: _$_.temporaryBox
+    className: $_8131.temporaryBox
   }, t$temporaryIcons.map(function (e) {
     return i(e)
   })))

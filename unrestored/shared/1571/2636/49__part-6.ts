@@ -128,38 +128,38 @@ function Ot(e) {
   var /* [auto-meaningful-name] */e$path
   if (gt(e.path)) {
     (function (e) {
-      var /* [auto-meaningful-name] */_e$path = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var /* [auto-meaningful-name] */e$op$i = e.op.i
       var /* [auto-meaningful-name] */e$op$i$id = e$op$i.id
       var /* [auto-meaningful-name] */e$op$i$name = e$op$i.name
       var /* [auto-meaningful-name] */e$op$i$defaultValue = e$op$i.defaultValue
-      if ("globalVariableList" === _e$path[0]) {
-        var a = _e$path[1]
+      if ("globalVariableList" === e$path1[0]) {
+        var a = e$path1[1]
         return void Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.uf(ht.i.GLOBAL, e$op$i$id, e$op$i$name, e$op$i$defaultValue, "", a, undefined, false))
       }
-      var s = _e$path[3]
-      var c = _e$path[1]
+      var s = e$path1[3]
+      var c = e$path1[1]
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.uf(ht.i.SCREEN, e$op$i$id, e$op$i$name, e$op$i$defaultValue, c, s, undefined, false))
     })(e)
   }
   if (5 === (e$path = e.path).length && "primitiveVariables" === e$path[2] || 3 === e$path.length && "globalVariableList" === e$path[0]) {
     (function (e) {
       var t
-      var /* [auto-meaningful-name] */_e$path2 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = e.op
-      if ("globalVariableList" === _e$path2[0]) {
+      if ("globalVariableList" === e$path1[0]) {
         var o
-        var i = _e$path2[1]
+        var i = e$path1[1]
         var a = r.i
-        var s = _e$path2[2]
+        var s = e$path1[2]
         var c = null === (o = $_24_index.a.getPreviousDoc()) || undefined === o ? undefined : o.globalVariableList[i]
         var l = null === c || undefined === c ? undefined : c.id
         return void (l && Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Hg(ht.i.GLOBAL, l, s, a, "", false)))
       }
-      var u = _e$path2[1]
-      var d = _e$path2[3]
+      var u = e$path1[1]
+      var d = e$path1[3]
       var p = r.i
-      var f = _e$path2[4]
+      var f = e$path1[4]
       var h = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t ? undefined : t.screens[u].primitiveVariables[d]
       var m = null === h || undefined === h ? undefined : h.id
       if (m) {
@@ -282,38 +282,38 @@ function Nt(e) {
   var /* [auto-meaningful-name] */e$path
   if (Ct(e.path)) {
     (function (e) {
-      var /* [auto-meaningful-name] */_e$path3 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var /* [auto-meaningful-name] */e$op$i = e.op.i
       var /* [auto-meaningful-name] */e$op$i$id = e$op$i.id
       var /* [auto-meaningful-name] */e$op$i$name = e$op$i.name
       var /* [auto-meaningful-name] */e$op$i$defaultValue = e$op$i.defaultValue
-      if ("globalArrayList" === _e$path3[0]) {
-        var a = _e$path3[1]
+      if ("globalArrayList" === e$path1[0]) {
+        var a = e$path1[1]
         return void Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.of(ht.i.GLOBAL, e$op$i$id, e$op$i$name, e$op$i$defaultValue, "", a, undefined, false))
       }
-      var s = _e$path3[3]
-      var c = _e$path3[1]
+      var s = e$path1[3]
+      var c = e$path1[1]
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.of(ht.i.SCREEN, e$op$i$id, e$op$i$name, e$op$i$defaultValue, c, s, undefined, false))
     })(e)
   }
   if (5 === (e$path = e.path).length && "arrayVariables" === e$path[2] || 3 === e$path.length && "globalArrayList" === e$path[0]) {
     (function (e) {
       var t
-      var /* [auto-meaningful-name] */_e$path4 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = e.op
-      if ("globalArrayList" === _e$path4[0]) {
+      if ("globalArrayList" === e$path1[0]) {
         var o
-        var i = _e$path4[1]
+        var i = e$path1[1]
         var a = r.i
-        var s = _e$path4[2]
+        var s = e$path1[2]
         var c = null === (o = $_24_index.a.getPreviousDoc()) || undefined === o ? undefined : o.globalArrayList[i]
         var l = null === c || undefined === c ? undefined : c.id
         return void (l && Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.yg(ht.i.GLOBAL, l, s, a, "", false)))
       }
-      var u = _e$path4[1]
-      var d = _e$path4[3]
+      var u = e$path1[1]
+      var d = e$path1[3]
       var p = r.i
-      var f = _e$path4[4]
+      var f = e$path1[4]
       var h = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t ? undefined : t.screens[u].arrayVariables[d]
       var m = null === h || undefined === h ? undefined : h.id
       if (m) {
@@ -436,13 +436,13 @@ function Bt(e) {
   var /* [auto-meaningful-name] */e$path
   if (kt(e.path)) {
     (function (e) {
-      var /* [auto-meaningful-name] */_e$path5 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var /* [auto-meaningful-name] */e$op$i = e.op.i
       var /* [auto-meaningful-name] */e$op$i$id = e$op$i.id
       var /* [auto-meaningful-name] */e$op$i$name = e$op$i.name
       var /* [auto-meaningful-name] */e$op$i$defaultValue = e$op$i.defaultValue
-      if ("globalObjectList" === _e$path5[0]) {
-        var a = _e$path5[1]
+      if ("globalObjectList" === e$path1[0]) {
+        var a = e$path1[1]
         return void $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.tf({
           scopeType: ht.i.GLOBAL,
           id: e$op$i$id,
@@ -453,8 +453,8 @@ function Bt(e) {
           isEmitOT: false
         }))
       }
-      var s = _e$path5[3]
-      var c = _e$path5[1]
+      var s = e$path1[3]
+      var c = e$path1[1]
       $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.tf({
         scopeType: ht.i.SCREEN,
         id: e$op$i$id,
@@ -469,13 +469,13 @@ function Bt(e) {
   if (5 === (e$path = e.path).length && "objectVariables" === e$path[2] || 3 === e$path.length && "globalObjectList" === e$path[0]) {
     (function (e) {
       var t
-      var /* [auto-meaningful-name] */_e$path6 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = e.op
-      if ("globalObjectList" === _e$path6[0]) {
+      if ("globalObjectList" === e$path1[0]) {
         var o
-        var i = _e$path6[1]
+        var i = e$path1[1]
         var a = r.i
-        var s = _e$path6[2]
+        var s = e$path1[2]
         var c = null === (o = $_24_index.a.getPreviousDoc()) || undefined === o ? undefined : o.globalObjectList[i]
         var l = null === c || undefined === c ? undefined : c.id
         return void (l && $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Gg({
@@ -487,10 +487,10 @@ function Bt(e) {
           isEmitOT: false
         })))
       }
-      var u = _e$path6[1]
-      var d = _e$path6[3]
+      var u = e$path1[1]
+      var d = e$path1[3]
       var p = r.i
-      var f = _e$path6[4]
+      var f = e$path1[4]
       var h = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t ? undefined : t.screens[u].objectVariables[d]
       var m = null === h || undefined === h ? undefined : h.id
       if (m) {
@@ -537,10 +537,10 @@ function Ht(e) {
   var /* [auto-meaningful-name] */e$path
   if (4 === (e$path = e.path).length && "broadcasts" === e$path[2]) {
     (function (e) {
-      var /* [auto-meaningful-name] */_e$path7 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var /* [auto-meaningful-name] */e$op$i = e.op.i
-      var r = _e$path7[3]
-      var o = _e$path7[1]
+      var r = e$path1[3]
+      var o = e$path1[1]
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.pf(e$op$i, o, r, undefined, false))
     })(e)
   }

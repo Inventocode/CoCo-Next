@@ -51,9 +51,9 @@ function Ae(e) {
     return "screens" === e[0] && "invisibleWidgetIds" === e[2]
   }(e.path)) {
     (function (e) {
-      var /* [auto-meaningful-name] */_e$path = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var n = e.op
-      var r = _e$path[1]
+      var r = e$path1[1]
       var o = n.i
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.jf(r, o, true))
     })(e)
@@ -63,10 +63,10 @@ function Ae(e) {
   }(e.path)) {
     (function (e) {
       var t = e.op
-      var /* [auto-meaningful-name] */_e$path2 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = t.i
-      var o = _e$path2[3]
-      var i = _e$path2[5]
+      var o = e$path1[3]
+      var i = e$path1[5]
       var a = ne(o)
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Lg(o, i, r, Oe.g(a), Oe.g(a), false))
     })(e)
@@ -76,10 +76,10 @@ function Ae(e) {
   }(e.path)) {
     (function (e) {
       var t = e.op
-      var /* [auto-meaningful-name] */_e$path3 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = t.i
-      var o = _e$path3[3]
-      var i = _e$path3[4]
+      var o = e$path1[3]
+      var i = e$path1[4]
       var a = ne(o)
       if ("title" === i) {
         Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Ng(o, r, false, true, false))

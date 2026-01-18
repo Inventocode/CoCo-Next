@@ -10,9 +10,9 @@ export { i as a }
 export { a as b }
 export { s as c }
 import * as /* [auto-meaningful-name] */$_28_303_index from "./28/303/index"
-import /* [auto-meaningful-name] */_$_28_303_index from "./28/303/index"
+import /* [auto-meaningful-name] */$_28_303_index1 from "./28/303/index"
 function i(e) {
-  return e + "_" + _$_28_303_index.generate()
+  return e + "_" + $_28_303_index1.generate()
 }
 function a(e) {
   var t = window.getSelection ? window.getSelection() : null
@@ -33,5 +33,5 @@ function s(e) {
     t.addRange(n)
   }
 }
-_$_28_303_index.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
+$_28_303_index1.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
 export default i

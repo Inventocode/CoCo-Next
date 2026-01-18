@@ -14,13 +14,13 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_494 from "./494"
-import /* [auto-meaningful-name] */_$_ from "./494"
+import /* [auto-meaningful-name] */$_4941 from "./494"
 var RA = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$isEmpty = e.isEmpty
-  var r = _React.useState(false)
+  var r = React1.useState(false)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -37,7 +37,7 @@ var RA = function (e) {
     }
   }
   return React.createElement("div", {
-    className: N(_$_.IconDragContainer, i && _$_.isDragging),
+    className: N($_4941.IconDragContainer, i && $_4941.isDragging),
     onDragEnter: l,
     onDragLeave: u,
     onDrop: function (t) {
@@ -47,13 +47,13 @@ var RA = function (e) {
       }
     }
   }, e$children, e$isEmpty && React.createElement("div", {
-    className: _$_.IconLayoutEmpty,
+    className: $_4941.IconLayoutEmpty,
     onDragEnter: l,
     onDragLeave: u
   }, React.createElement("h5", null, $_710_index$a$formatMessage({
     id: "emptyIconLibraryTitle"
   })), React.createElement("div", {
-    className: _$_.emptyContent
+    className: $_4941.emptyContent
   }, $_710_index$a$formatMessage({
     id: "emptyIconLibraryTips1"
   }), React.createElement("br", null), $_710_index$a$formatMessage({
@@ -69,14 +69,14 @@ var kA = function (e) {
   })
   var r = $_16_index.d()
   return React.createElement("div", {
-    className: _$_.iconLayout
+    className: $_4941.iconLayout
   }, React.createElement(RA, {
     isReadOnly: e.readOnly,
     isEmpty: 0 === n.size
   }, React.createElement("div", {
-    className: _$_.iconLayoutMain
+    className: $_4941.iconLayoutMain
   }, React.createElement("div", {
-    className: _$_.uploadItem
+    className: $_4941.uploadItem
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       if (e) {
@@ -86,12 +86,12 @@ var kA = function (e) {
     multiple: true,
     accept: "image/svg+xml"
   }, React.createElement("div", {
-    className: _$_.content
+    className: $_4941.content
   }, React.createElement($_13_index.j, {
     type: "icon-add2",
-    className: _$_.icon
+    className: $_4941.icon
   }), React.createElement("div", {
-    className: _$_.name
+    className: $_4941.name
   }, $_710_index$a$formatMessage({
     id: "Resource.upload"
   }))))), n.map(function (e) {

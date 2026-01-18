@@ -12,7 +12,7 @@ export { v as b }
 export { E as a }
 export { O as e }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "../7"
 import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as /* [auto-meaningful-name] */$_733 from "./733"
@@ -42,11 +42,11 @@ function _(e) {
 function v(e) {
   var /* [auto-meaningful-name] */$$_37_index$d$dispatch = $$_37_index.d.dispatch
   $_732.register_procedure_blocks($$_17_index.Blink, e, function () {
-    var n = i.a(_RegeneratorRuntime.mark(function n(r) {
+    var n = i.a(RegeneratorRuntime1.mark(function n(r) {
       var i
       var a
       var /* [auto-meaningful-name] */a$name
-      return _RegeneratorRuntime.wrap(function (n) {
+      return RegeneratorRuntime1.wrap(function (n) {
         for (;;) {
           switch (n.prev = n.next) {
             case 0:
@@ -102,10 +102,10 @@ function v(e) {
       return n.apply(this, arguments)
     }
   }(), function () {
-    var n = i.a(_RegeneratorRuntime.mark(function n(r) {
+    var n = i.a(RegeneratorRuntime1.mark(function n(r) {
       var i
       var a
-      return _RegeneratorRuntime.wrap(function (n) {
+      return RegeneratorRuntime1.wrap(function (n) {
         for (;;) {
           switch (n.prev = n.next) {
             case 0:

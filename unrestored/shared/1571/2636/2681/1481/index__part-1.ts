@@ -70,10 +70,10 @@ function s(e, t, n, r, c, u, l) {
       } else {
         if ($_252.k(p)) {
           var /* [auto-meaningful-name] */p$children = p.children
-          var /* [auto-meaningful-name] */_p$value = p.value
-          var y = c[_p$value]
+          var /* [auto-meaningful-name] */p$value1 = p.value
+          var y = c[p$value1]
           if (!a(y)) {
-            throw new $$_808.c(_p$value, "function", l)
+            throw new $$_808.c(p$value1, "function", l)
           }
           var b = y(s(p$children, t, n, r, c, u).map(function (e) {
             return e.value

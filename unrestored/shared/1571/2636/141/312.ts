@@ -34,7 +34,7 @@ export { W as y }
 export { H as r }
 export { V as m }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "../7"
 import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
 import * as /* [auto-meaningful-name] */$$_133 from "../133"
@@ -77,10 +77,10 @@ function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = i.a(_RegeneratorRuntime.mark(function e(t) {
+  return (_ = i.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent
-    return _RegeneratorRuntime.wrap(function (e) {
+    var /* [auto-meaningful-name] */e$sent1
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -91,8 +91,8 @@ function _() {
             e.next = 5
             return e$sent.blob()
           case 5:
-            _e$sent = e.sent
-            return e.abrupt("return", _e$sent)
+            e$sent1 = e.sent
+            return e.abrupt("return", e$sent1)
           case 7:
           case "end":
             return e.stop()
@@ -105,11 +105,11 @@ function v(e, t) {
   return b.apply(this, arguments)
 }
 function b() {
-  return (b = i.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (b = i.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */e$sent1
     var a
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -123,8 +123,8 @@ function b() {
             e.next = 6
             return e$sent.text()
           case 6:
-            _e$sent2 = e.sent
-            a = y(_e$sent2)
+            e$sent1 = e.sent
+            a = y(e$sent1)
             return e.abrupt("return", new File([a], n, {
               type: e$sent.type
             }))
@@ -163,11 +163,11 @@ function E(e, t) {
   return O.apply(this, arguments)
 }
 function O() {
-  return (O = i.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (O = i.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent3
+    var /* [auto-meaningful-name] */e$sent1
     var a
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -178,8 +178,8 @@ function O() {
             e.next = 5
             return e$sent.text()
           case 5:
-            _e$sent3 = e.sent
-            a = y(_e$sent3)
+            e$sent1 = e.sent
+            a = y(e$sent1)
             return e.abrupt("return", new File([a], n, {
               type: e$sent.type
             }))
@@ -195,8 +195,8 @@ function w(e) {
   return C.apply(this, arguments)
 }
 function C() {
-  return (C = i.a(_RegeneratorRuntime.mark(function e(t) {
-    return _RegeneratorRuntime.wrap(function (e) {
+  return (C = i.a(RegeneratorRuntime1.mark(function e(t) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -223,9 +223,9 @@ function T(e) {
   return S.apply(this, arguments)
 }
 function S() {
-  return (S = i.a(_RegeneratorRuntime.mark(function e(t) {
+  return (S = i.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

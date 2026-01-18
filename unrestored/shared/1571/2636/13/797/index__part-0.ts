@@ -7,9 +7,9 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_101_index from "./101/index"
-import /* [auto-meaningful-name] */_$_101_index from "./101/index"
+import /* [auto-meaningful-name] */$_101_index1 from "./101/index"
 var s = function (e, t, n, r, i) {
   var /* [auto-meaningful-name] */i$clientWidth = i.clientWidth
   var /* [auto-meaningful-name] */i$clientHeight = i.clientHeight
@@ -79,7 +79,7 @@ var f = function (e) {
   var /* [auto-meaningful-name] */e$borderRadius = e.borderRadius
   var /* [auto-meaningful-name] */e$boxShadow = e.boxShadow
   var /* [auto-meaningful-name] */e$children = e.children
-  var h = _$_101_index({
+  var h = $_101_index1({
     default: {
       grid: {
         borderRadius: e$borderRadius,
@@ -89,9 +89,9 @@ var f = function (e) {
       }
     }
   })
-  return React.isValidElement(e$children) ? _React.cloneElement(e$children, l({}, e$children.props, {
+  return React.isValidElement(e$children) ? React1.cloneElement(e$children, l({}, e$children.props, {
     style: l({}, e$children.props.style, h.grid)
-  })) : _React.createElement("div", {
+  })) : React1.createElement("div", {
     style: h.grid
   })
 }
@@ -205,7 +205,7 @@ var g = function (e) {
       value: function () {
         var e = this
         var /* [auto-meaningful-name] */this$props$rgb = this.props.rgb
-        var n = _$_101_index({
+        var n = $_101_index1({
           default: {
             alpha: {
               absolute: "0px 0px 0px 0px",
@@ -255,15 +255,15 @@ var g = function (e) {
           vertical: "vertical" === this.props.direction,
           overwrite: true
         })
-        return _React.createElement("div", {
+        return React1.createElement("div", {
           style: n.alpha
-        }, _React.createElement("div", {
+        }, React1.createElement("div", {
           style: n.checkboard
-        }, _React.createElement(d, {
+        }, React1.createElement(d, {
           renderers: this.props.renderers
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           style: n.gradient
-        }), _React.createElement("div", {
+        }), React1.createElement("div", {
           style: n.container,
           ref: function (t) {
             return e.container = t
@@ -271,9 +271,9 @@ var g = function (e) {
           onMouseDown: this.handleMouseDown,
           onTouchMove: this.handleChange,
           onTouchStart: this.handleChange
-        }, _React.createElement("div", {
+        }, React1.createElement("div", {
           style: n.pointer
-        }, this.props.pointer ? _React.createElement(this.props.pointer, this.props) : _React.createElement("div", {
+        }, this.props.pointer ? React1.createElement(this.props.pointer, this.props) : React1.createElement("div", {
           style: n.slider
         }))))
       }
@@ -449,7 +449,7 @@ var b = function (e) {
       key: "render",
       value: function () {
         var e = this
-        var t = _$_101_index({
+        var t = $_101_index1({
           default: {
             wrap: {
               position: "relative"
@@ -468,9 +468,9 @@ var b = function (e) {
         }, {
           "user-override": true
         }, this.props)
-        return _React.createElement("div", {
+        return React1.createElement("div", {
           style: t.wrap
-        }, _React.createElement("input", {
+        }, React1.createElement("input", {
           id: this.inputId,
           style: t.input,
           ref: function (t) {
@@ -482,7 +482,7 @@ var b = function (e) {
           onBlur: this.handleBlur,
           placeholder: this.props.placeholder,
           spellCheck: "false"
-        }), this.props.label && !this.props.hideLabel ? _React.createElement("label", {
+        }), this.props.label && !this.props.hideLabel ? React1.createElement("label", {
           htmlFor: this.inputId,
           style: t.label,
           onMouseDown: this.handleMouseDown
@@ -635,7 +635,7 @@ var O = function (e) {
         var e = this
         var /* [auto-meaningful-name] */this$props$direction = this.props.direction
         var n = undefined === this$props$direction ? "horizontal" : this$props$direction
-        var r = _$_101_index({
+        var r = $_101_index1({
           default: {
             hue: {
               absolute: "0px 0px 0px 0px",
@@ -671,9 +671,9 @@ var O = function (e) {
         }, {
           vertical: "vertical" === n
         })
-        return _React.createElement("div", {
+        return React1.createElement("div", {
           style: r.hue
-        }, _React.createElement("div", {
+        }, React1.createElement("div", {
           className: "hue-" + n,
           style: r.container,
           ref: function (t) {
@@ -682,9 +682,9 @@ var O = function (e) {
           onMouseDown: this.handleMouseDown,
           onTouchMove: this.handleChange,
           onTouchStart: this.handleChange
-        }, _React.createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), _React.createElement("div", {
+        }, React1.createElement("style", null, "\n            .hue-horizontal {\n              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0\n                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to right, #f00 0%, #ff0\n                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n\n            .hue-vertical {\n              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,\n                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,\n                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);\n            }\n          "), React1.createElement("div", {
           style: r.pointer
-        }, this.props.pointer ? _React.createElement(this.props.pointer, this.props) : _React.createElement("div", {
+        }, this.props.pointer ? React1.createElement(this.props.pointer, this.props) : React1.createElement("div", {
           style: r.slider
         }))))
       }

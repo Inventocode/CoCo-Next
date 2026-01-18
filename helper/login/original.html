@@ -15,59 +15,60 @@
         </style>
     </head>
     <body>
-    </body>
-    <script>
+        <script>
 
-        function closeThisWindow() {
-            window.close()
-            setTimeout(() => {
-                alert("关闭窗口失败，请手动关闭窗口")
-            }, 0)
-        }
-
-        addEventListener("message", ({ origin, data }) => {
-            if (origin != "https://shequ.codemao.cn" && origin != "http://shequ.codemao.cn") {
-                return
+            function closeThisWindow() {
+                window.close()
+                setTimeout(() => {
+                    alert("关闭窗口失败，请手动关闭窗口")
+                }, 0)
             }
-            if (data != null && typeof data == "object" && "content" in data) {
-                const { content } = data
-                if (
-                    content != null && typeof content == "object" &&
-                    "type" in content && content.type == "codemao-login.onEvent"
-                ) {
-                    const { payload } = content
-                    switch (payload.event) {
-                        case "IFRAME_READY":
-                            break
-                        case "PASSWORD_LOGIN_SUCCESS":
-                        case "SMS_LOGIN_SUCCESS":
-                        case "THIRD_PARTY_LOGIN_SUCCESS":
-                        case "REGISTER_SUCCESS":
-                            alert("登录成功")
-                            closeThisWindow()
-                            break
-                        case "REGISTER_CONFIRM":
-                        // console.log('注册确认');
-                            break
-                        case "BIND_PHONE_SUCCESS":
-                        // console.log(`绑定手机成功: ${payload.value}`);
-                            break
-                        case "CLOSE_ANIMATION_END":
-                            closeThisWindow()
-                            break
-                        case "REPORT":
-                            break
-                        default:
-                            console.info("未知事件:", payload)
+
+            addEventListener("message", ({ origin, data }) => {
+                if (origin != "https://shequ.codemao.cn" && origin != "http://shequ.codemao.cn") {
+                    return
+                }
+                if (data != null && typeof data == "object" && "content" in data) {
+                    const { content } = data
+                    if (
+                        content != null && typeof content == "object" &&
+                        "type" in content && content.type == "codemao-login.onEvent"
+                    ) {
+                        const { payload } = content
+                        switch (payload.event) {
+                            case "IFRAME_READY":
+                                break
+                            case "PASSWORD_LOGIN_SUCCESS":
+                            case "SMS_LOGIN_SUCCESS":
+                            case "THIRD_PARTY_LOGIN_SUCCESS":
+                            case "REGISTER_SUCCESS":
+                                alert("登录成功")
+                                closeThisWindow()
+                                break
+                            case "REGISTER_CONFIRM":
+                            // console.log('注册确认');
+                                break
+                            case "BIND_PHONE_SUCCESS":
+                            // console.log(`绑定手机成功: ${payload.value}`);
+                                break
+                            case "CLOSE_ANIMATION_END":
+                                closeThisWindow()
+                                break
+                            case "REPORT":
+                                break
+                            default:
+                                console.info("未知事件:", payload)
+                        }
                     }
                 }
-            }
-        })
+            })
 
-        const searchParams = new URLSearchParams(location.search)
-        const url = searchParams.get("url") ?? "https://shequ.codemao.cn/codemao_login?onlyLogin=false&language=zh&disableThirdParty=false&ageLimit=false&pageView=login&theme=violet&env=production&pid=7KeVbBdw&productCode=appcraft"
-        const iframeElement = document.createElement("iframe")
-        iframeElement.src = url
-        document.body.appendChild(iframeElement)
-    </script>
+            const searchParams = new URLSearchParams(location.search)
+            const url = searchParams.get("url") ?? "https://shequ.codemao.cn/codemao_login?onlyLogin=false&language=zh&disableThirdParty=false&ageLimit=false&pageView=login&theme=violet&env=production&pid=7KeVbBdw&productCode=appcraft"
+            const iframeElement = document.createElement("iframe")
+            iframeElement.src = url
+            document.body.appendChild(iframeElement)
+
+        </script>
+    </body>
 </html>

@@ -204,7 +204,7 @@ var g = function () {
     return n
   }
   t.decodeTextCompaction = function (e, n, i, o) {
-    for (var /* [auto-meaningful-name] */r$ALPHA = r.ALPHA, /* [auto-meaningful-name] */_r$ALPHA = r.ALPHA, u = 0; u < i;) {
+    for (var /* [auto-meaningful-name] */r$ALPHA = r.ALPHA, /* [auto-meaningful-name] */r$ALPHA1 = r.ALPHA, u = 0; u < i;) {
       var c = e[u]
       var l = ""
       switch (r$ALPHA) {
@@ -223,7 +223,7 @@ var g = function () {
                 r$ALPHA = r.MIXED
                 break
               case t.PS:
-                _r$ALPHA = r$ALPHA
+                r$ALPHA1 = r$ALPHA
                 r$ALPHA = r.PUNCT_SHIFT
                 break
               case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
@@ -243,14 +243,14 @@ var g = function () {
                 l = " "
                 break
               case t.AS:
-                _r$ALPHA = r$ALPHA
+                r$ALPHA1 = r$ALPHA
                 r$ALPHA = r.ALPHA_SHIFT
                 break
               case t.ML:
                 r$ALPHA = r.MIXED
                 break
               case t.PS:
-                _r$ALPHA = r$ALPHA
+                r$ALPHA1 = r$ALPHA
                 r$ALPHA = r.PUNCT_SHIFT
                 break
               case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
@@ -279,7 +279,7 @@ var g = function () {
                 r$ALPHA = r.ALPHA
                 break
               case t.PS:
-                _r$ALPHA = r$ALPHA
+                r$ALPHA1 = r$ALPHA
                 r$ALPHA = r.PUNCT_SHIFT
                 break
               case t.MODE_SHIFT_TO_BYTE_COMPACTION_MODE:
@@ -307,7 +307,7 @@ var g = function () {
           }
           break
         case r.ALPHA_SHIFT:
-          if (r$ALPHA = _r$ALPHA, c < 26) {
+          if (r$ALPHA = r$ALPHA1, c < 26) {
             l = String.fromCharCode(65 + c)
           } else {
             switch (c) {
@@ -320,7 +320,7 @@ var g = function () {
           }
           break
         case r.PUNCT_SHIFT:
-          if (r$ALPHA = _r$ALPHA, c < t.PAL) {
+          if (r$ALPHA = r$ALPHA1, c < t.PAL) {
             l = t.PUNCT_CHARS[c]
           } else {
             switch (c) {

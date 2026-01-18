@@ -22,9 +22,9 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_368 from "./368"
-import /* [auto-meaningful-name] */_$_ from "./368"
+import /* [auto-meaningful-name] */$_3681 from "./368"
 function aC() {
   var e = $_16_index.d()
   var t = $_16_index.e(function (e) {
@@ -35,7 +35,7 @@ function aC() {
   var o = $_16_index.e(function (e) {
     return e.cloudSpace[r]
   })
-  var i = _React.useState(false)
+  var i = React1.useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -174,12 +174,12 @@ function cC() {
   e.Table = "Table"
 }(Mw || (Mw = {}))
 var /* [auto-meaningful-name] */py$Option = py.Option
-var uC = _React.memo(function (e) {
+var uC = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var r = $_16_index.d()
   var o = Et.Bb(e$widgetId)
-  var i = _React.useRef(null)
+  var i = React1.useRef(null)
   var a = aC()
   var /* [auto-meaningful-name] */a$dataSourceId = a.dataSourceId
   var /* [auto-meaningful-name] */a$cloudDataSources = a.cloudDataSources
@@ -194,7 +194,7 @@ var uC = _React.memo(function (e) {
   var y = $_16_index.e(function (e) {
     return e.common.userInfo
   })
-  var E = _React.useState(false)
+  var E = React1.useState(false)
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
@@ -220,7 +220,7 @@ var uC = _React.memo(function (e) {
       var t = React.createElement(React.Fragment, null, React.createElement("div", {
         onMouseOut: a$onMouseOut,
         onMouseOver: a$onMouseOver,
-        className: N(_$_.addDict),
+        className: N($_3681.addDict),
         onClick: function () {
           var /* [auto-meaningful-name] */i$current
           if (!(null === i || undefined === i || null === (i$current = i.current) || undefined === i$current)) {
@@ -231,15 +231,15 @@ var uC = _React.memo(function (e) {
       }, React.createElement($_13_index.j, {
         type: "icon-add"
       }), React.createElement("div", {
-        className: _$_.newText
+        className: $_3681.newText
       }, $_710_index$a$formatMessage({
         id: "cloudSpace.newDict"
       })), React.createElement("div", {
-        className: _$_.suffixIcon
+        className: $_3681.suffixIcon
       }, React.createElement($_13_index.j, {
         type: "icon-return-arrow"
       }))), a$cloudDataSources.length > 0 ? React.createElement("div", {
-        className: N(_$_.line, a$addItemHover ? _$_.hideLine : "")
+        className: N($_3681.line, a$addItemHover ? $_3681.hideLine : "")
       }) : "", a$cloudDataSources.length > 0 ? React.createElement("div", null, e) : "")
       var r = React.createElement($_13_index.d, {
         type: "primary",
@@ -248,7 +248,7 @@ var uC = _React.memo(function (e) {
         id: "cloudSpace.needLogin"
       }))
       return React.createElement("div", {
-        className: N("cloudDictDropdown", y ? "" : _$_.unLoginDropdown, a$addItemHover ? "addBtnActive" : "")
+        className: N("cloudDictDropdown", y ? "" : $_3681.unLoginDropdown, a$addItemHover ? "addBtnActive" : "")
       }, y ? t : r)
     },
     value: a$dataSourceId,
@@ -257,7 +257,7 @@ var uC = _React.memo(function (e) {
       C(false)
       a$bindDataSourceId(e || Et.i)
     },
-    dropdownClassName: _$_.cloudSpaceAntSelectDropdown,
+    dropdownClassName: $_3681.cloudSpaceAntSelectDropdown,
     placeholder: $_710_index$a$formatMessage({
       id: "cloudSpace.ChooseDataSource"
     })
@@ -267,17 +267,17 @@ var uC = _React.memo(function (e) {
       value: e.id,
       key: e.id
     }, React.createElement("div", {
-      className: N(_$_.optionRenderBox)
+      className: N($_3681.optionRenderBox)
     }, React.createElement("div", {
-      className: N(_$_.prefixIcon, "spaceCloud-select-icon")
+      className: N($_3681.prefixIcon, "spaceCloud-select-icon")
     }, React.createElement($_13_index.j, {
       type: "icon-widget-cloud-dict"
     })), React.createElement("div", {
-      className: N(_$_.dictName, a$dataSourceId === e.id ? _$_.optionSelected : "")
+      className: N($_3681.dictName, a$dataSourceId === e.id ? $_3681.optionSelected : "")
     }, React.createElement("div", {
-      className: _$_.nameText
+      className: $_3681.nameText
     }, e.name)), React.createElement("div", {
-      className: _$_.suffixIcon,
+      className: $_3681.suffixIcon,
       onClick: function (t) {
         g$handleVisitDataSource("dict", e.id)
       }
@@ -286,13 +286,13 @@ var uC = _React.memo(function (e) {
     }))))
   }))
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.dictFields)
+    className: N($_3681.formItemWrapper, $_3681.dictFields)
   }, React.createElement("div", {
-    className: _$_.title
+    className: $_3681.title
   }, React.createElement("div", null, $_710_index$a$formatMessage({
     id: "cloudSpace.DataSource"
   }))), React.createElement("div", {
-    className: _$_.bindSource
+    className: $_3681.bindSource
   }, m ? j : React.createElement($_748_index.a, {
     placement: "bottom",
     title: $_710_index$a$formatMessage({

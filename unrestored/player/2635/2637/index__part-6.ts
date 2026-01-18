@@ -21,10 +21,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_15 from "../..
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_28_index from "../../../shared/1571/2636/28/index"
 import /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_80_index from "../../../shared/1571/2636/80/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_328 from "../../../shared/1571/2636/328"
 import * as /* [auto-meaningful-name] */$_1063 from "./1063"
-import /* [auto-meaningful-name] */_$_ from "./1063"
+import /* [auto-meaningful-name] */$_10631 from "./1063"
 function K(t, e, n) {
   return X.apply(this, arguments)
 }
@@ -88,23 +88,23 @@ function X() {
   }))).apply(this, arguments)
 }
 var q = React.memo(function () {
-  var t = _React.useState()
+  var t = React1.useState()
   var e = $$_$$_$$_shared_1571_2636_10_index.a(t, 2)
   var n = e[0]
   var o = e[1]
-  var a = _React.useState(true)
+  var a = React1.useState(true)
   var s = $$_$$_$$_shared_1571_2636_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var m = _React.useState(true)
+  var m = React1.useState(true)
   var b = $$_$$_$$_shared_1571_2636_10_index.a(m, 2)
   var _ = b[0]
   var y = b[1]
-  var w = _React.useState("")
+  var w = React1.useState("")
   var E = $$_$$_$$_shared_1571_2636_10_index.a(w, 2)
   var O = E[0]
   var T = E[1]
-  var A = _React.useRef()
+  var A = React1.useRef()
   function S() {
     return (S = $$_$$_$$_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t() {
       var e
@@ -165,7 +165,7 @@ var q = React.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     !function () {
       S.apply(this, arguments)
     }()
@@ -180,7 +180,7 @@ var q = React.memo(function () {
       }
     }, false)
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!_ && A.current) {
       if (A.current.blockCode) {
         A.current.blockCode = O
@@ -189,17 +189,17 @@ var q = React.memo(function () {
     }
   }, [O, _])
   return n ? React.createElement("div", {
-    className: _$_.community
+    className: $_10631.community
   }, c && React.createElement("img", {
     src: "https://static.bcmcdn.com/crc-uploader/2021/12/35f947eec3186875243a6ffb6efd5cf5.gif",
     alt: "loading",
-    className: _$_.loading
+    className: $_10631.loading
   }), React.createElement("input", {
     type: "file",
     accept: "image/*",
     capture: "camera",
     id: "appcraft-camera-input",
-    className: _$_.camera
+    className: $_10631.camera
   }), React.createElement($_514_index.a, n)) : React.createElement(React.Fragment, null)
 })
 var Z = function (t) {

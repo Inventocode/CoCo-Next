@@ -4,7 +4,7 @@
  * 模块 ID：946
  */
 
-var r = require("./945")
+var r = require("./945/index")
 var o = require("./826")
 var i = r("keys")
 module.exports = function (e) {

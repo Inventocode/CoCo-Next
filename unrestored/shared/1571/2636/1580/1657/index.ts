@@ -5,7 +5,7 @@
  */
 
 var r = require("../1705/86/index")
-var o = require("./1260/index")
+var o = require("./1260")
 r({
   target: "Number",
   stat: true,

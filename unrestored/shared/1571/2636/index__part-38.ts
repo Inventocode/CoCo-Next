@@ -20,9 +20,9 @@ import * as k from "./11"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_239 from "./239"
-import /* [auto-meaningful-name] */_$_ from "./239"
+import /* [auto-meaningful-name] */$_2391 from "./239"
 function Ep(e, t, n) {
   var r = e
   if ("center" === n) {
@@ -54,15 +54,15 @@ var Op = function (e) {
   var /* [auto-meaningful-name] */e$attributes$textAlign = e$attributes.textAlign
   var /* [auto-meaningful-name] */e$attributes$overflow = e$attributes.overflow
   var E = undefined === e$attributes$overflow ? "hidden" : e$attributes$overflow
-  var O = _React.useRef(null)
-  var w = _React.useRef(null)
-  var C = _React.useRef(null)
-  var T = _React.useRef(Ep(e$position.y, e$size.height, e$attributes$justifyContent))
-  var A = _React.useState(false)
+  var O = React1.useRef(null)
+  var w = React1.useRef(null)
+  var C = React1.useRef(null)
+  var T = React1.useRef(Ep(e$position.y, e$size.height, e$attributes$justifyContent))
+  var A = React1.useState(false)
   var I = $_10_index.a(A, 2)
   var j = I[0]
   var R = I[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (j && e$selected && w.current) {
       var /* [auto-meaningful-name] */w$current = w.current
       w$current.focus()
@@ -70,13 +70,13 @@ var Op = function (e) {
       w$current.setSelectionRange(w$current$value$length, w$current$value$length)
     }
   }, [j, e$selected])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!e$selected) {
       R(false)
     }
   }, [e$selected])
   var x = e$attributes$sizeAdaptive !== $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (x && O.current && e$onChange) {
       var /* [auto-meaningful-name] */O$current = O.current
       var t = Math.floor(O$current.clientHeight)
@@ -96,7 +96,7 @@ var Op = function (e) {
       }
     }
   }, [e$attributes$fontSize, e$attributes$fontFamily, x, e$attributes$content, e$onChange, e$size.height])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = Ep(e$position.y, e$size.height, e$attributes$justifyContent)
     T.current = e
   }, [e$attributes$justifyContent, e$onChange, e$position.y, e$size.height])
@@ -119,7 +119,7 @@ var Op = function (e) {
     id: t,
     "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
     "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: N(wn.b, _$_.textWidget, k.a({}, _$_.hide, !e$visible)),
+    className: N(wn.b, $_2391.textWidget, k.a({}, $_2391.hide, !e$visible)),
     "data-min-width": $_146.m,
     "data-min-height": $_146.l,
     ref: C,
@@ -137,11 +137,11 @@ var Op = function (e) {
       overflow: E
     }
   }, React.createElement("span", {
-    className: _$_.content
+    className: $_2391.content
   }, e$attributes$content + "\n"))), React.createElement("div", {
     "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     ref: O,
-    className: N(wn.b, _$_.textWidget, "coco-widget-editor", k.a({}, _$_.hide, !e$visible)),
+    className: N(wn.b, $_2391.textWidget, "coco-widget-editor", k.a({}, $_2391.hide, !e$visible)),
     onMouseDown: function (e) {
       e.stopPropagation()
     },
@@ -150,7 +150,7 @@ var Op = function (e) {
       zIndex: 2
     })
   }, React.createElement(vp, {
-    className: _$_.content,
+    className: $_2391.content,
     onBlur: function () {
       R(false)
     },

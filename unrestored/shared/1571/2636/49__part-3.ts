@@ -86,10 +86,10 @@ function Ge(e, t) {
     return 3 === e.length && "screens" === e[0]
   }(e.path)) {
     (function (e) {
-      var /* [auto-meaningful-name] */_e$path = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var n = e.op
-      var r = _e$path[1]
-      var o = _e$path[2]
+      var r = e$path1[1]
+      var o = e$path1[2]
       var i = n.i
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r, o, i, false))
     })(e)

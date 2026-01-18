@@ -14,7 +14,7 @@ export { g as f }
 export { _ as d }
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2681_index from "../../../unrestored/shared/1571/2636/2681/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../unrestored/shared/1571/2636/10/index"
 var c = {
@@ -1043,19 +1043,19 @@ function _(e, t) {
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return _React.createElement("p", null, t)
+      return React1.createElement("p", null, t)
     },
     span: function () {
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return _React.createElement("span", null, t)
+      return React1.createElement("span", null, t)
     },
     b: function () {
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
       }
-      return _React.createElement("b", null, t)
+      return React1.createElement("b", null, t)
     }
   }))
 }

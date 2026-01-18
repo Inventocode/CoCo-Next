@@ -11,10 +11,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_931 from "./931"
-import /* [auto-meaningful-name] */_$_ from "./931"
-var cn = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_9311 from "./931"
+var cn = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$networkErrorVisible = e.networkErrorVisible
   var /* [auto-meaningful-name] */e$title = e.title
   var o = undefined === e$title ? "" : e$title
@@ -27,14 +27,14 @@ var cn = _React.memo(function (e) {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement($_13_index.f, {
     title: o,
-    className: N(e$className, _$_.networkDialog),
+    className: N(e$className, $_9311.networkDialog),
     visible: e$networkErrorVisible,
     showCloseButton: a,
     onClose: function () {
       return e$onCancelRetry && e$onCancelRetry()
     },
     footer: React.createElement("div", {
-      className: _$_.networkFooterWrapper
+      className: $_9311.networkFooterWrapper
     }, React.createElement($_13_index.d, {
       onClick: function () {
         if (e$onCancelRetry) {
@@ -53,12 +53,12 @@ var cn = _React.memo(function (e) {
     keys: "enter",
     callback: e$onRetry
   })), React.createElement("div", {
-    className: _$_.networkContent
+    className: $_9311.networkContent
   }, React.createElement("img", {
     src: require("./1191"),
     alt: ""
   }), React.createElement("div", {
-    className: _$_.networkText
+    className: $_9311.networkText
   }, e$children)))
 })
 export { cn }

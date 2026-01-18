@@ -11,10 +11,10 @@ import { qt, Jt, An } from "./index__part-5"
 import { Tn, Bn, Fn, Hn, ii, Si } from "./index__part-6"
 import /* [auto-meaningful-name] */$$_$$_50_index from "../../50/index"
 import /* [auto-meaningful-name] */$_101_index from "./101/index"
-import * as /* [auto-meaningful-name] */_$_101_index from "./101/index"
+import * as /* [auto-meaningful-name] */$_101_index1 from "./101/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_1506 from "./1506"
-import /* [auto-meaningful-name] */_$_ from "./1506"
+import /* [auto-meaningful-name] */$_15061 from "./1506"
 var Di = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -372,7 +372,7 @@ var Ii = function (e) {
           ref: function (t) {
             return e.icon = t
           }
-        }, React.createElement(_$_, {
+        }, React.createElement($_15061, {
           style: t.svg,
           onMouseOver: this.showHighlight,
           onMouseEnter: this.showHighlight,
@@ -840,7 +840,7 @@ ji.defaultProps = {
   styles: {}
 }
 Fn(ji)
-var Ui = _$_101_index.handleHover(function (e) {
+var Ui = $_101_index1.handleHover(function (e) {
   var /* [auto-meaningful-name] */e$hover = e.hover
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$onClick = e.onClick

@@ -5,7 +5,7 @@
  */
 
 var r = require("../1705/168")
-var o = require("../1657/1260/954")
+var o = require("../1648/761/954")
 module.exports = function (e) {
   return r(function () {
     return !!o[e]() || "​᠎" != "​᠎"[e]() || o[e].name !== e

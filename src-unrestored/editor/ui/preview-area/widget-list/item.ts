@@ -62,12 +62,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_shop from "../../../../shared/widget/custom/shop"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
 var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
-var av = _React.memo(function (e) {
+var av = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$type = e.type
@@ -77,19 +77,19 @@ var av = _React.memo(function (e) {
   var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
   var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var u = _React.useState(false)
+  var u = React1.useState(false)
   var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useState(false)
+  var g = React1.useState(false)
   var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = _React.useState(false)
+  var w = React1.useState(false)
   var C = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(w, 2)
   var A = C[0]
   var j = C[1]
-  var R = _React.useState(true)
+  var R = React1.useState(true)
   var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
@@ -99,7 +99,7 @@ var av = _React.memo(function (e) {
   var P = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.language
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = function e() {
       m(false)
       y(false)
@@ -113,7 +113,7 @@ var av = _React.memo(function (e) {
       document.addEventListener("dragstart", e, true)
     }
   }, [p, b])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (iv.includes(e$type)) {
       var e = L.some(function (e) {
         return e.includes(e$type)
@@ -288,7 +288,7 @@ var av = _React.memo(function (e) {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.title
   }, e$title)))
 })
-var sv = _React.memo(function (e) {
+var sv = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$configList = e.configList
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$defaultExpanded = e.defaultExpanded
@@ -297,7 +297,7 @@ var sv = _React.memo(function (e) {
     var /* [auto-meaningful-name] */e$common$userInfo
     return null === (e$common$userInfo = e.common.userInfo) || undefined === e$common$userInfo ? undefined : e$common$userInfo.id
   })
-  var a = _React.useState(undefined === e$defaultExpanded || e$defaultExpanded)
+  var a = React1.useState(undefined === e$defaultExpanded || e$defaultExpanded)
   var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
@@ -338,7 +338,7 @@ var sv = _React.memo(function (e) {
     var /* [auto-meaningful-name] */e$type = e.type
     var /* [auto-meaningful-name] */e$icon = e.icon
     var /* [auto-meaningful-name] */e$previewAreaWidgetTitle = e.previewAreaWidgetTitle
-    var /* [auto-meaningful-name] */_e$title = e.title
+    var /* [auto-meaningful-name] */e$title1 = e.title
     var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
     var /* [auto-meaningful-name] */e$widgetServerId = e.widgetServerId
     return !e.isDiscard && React.createElement(av, {
@@ -346,7 +346,7 @@ var sv = _React.memo(function (e) {
       icon: e$icon,
       title: e$previewAreaWidgetTitle ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
         id: e$previewAreaWidgetTitle
-      }) : _e$title,
+      }) : e$title1,
       type: e$type,
       widgetServerId: e$widgetServerId,
       isMallExtensionWidget: $$_$$_$$_$$_shared_widget_custom_type.e(e$type),

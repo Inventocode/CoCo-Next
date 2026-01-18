@@ -220,7 +220,7 @@ var u = function () {
   }
   e.prototype.on_mousedown_handle = function (e) {
     var /* [auto-meaningful-name] */this$workspace_
-    var /* [auto-meaningful-name] */_this$workspace_
+    var /* [auto-meaningful-name] */this$workspace_1
     if (!(null === (this$workspace_ = this.workspace_) || undefined === this$workspace_)) {
       this$workspace_.mark_focused()
     }
@@ -229,8 +229,8 @@ var u = function () {
       e.stopPropagation()
     } else {
       this.start_drag_handle = this.handle_position_
-      if (!(null === (_this$workspace_ = this.workspace_) || undefined === _this$workspace_)) {
-        _this$workspace_.setup_drag_surface()
+      if (!(null === (this$workspace_1 = this.workspace_) || undefined === this$workspace_1)) {
+        this$workspace_1.setup_drag_surface()
       }
       this.start_drag_mouse = this.horizontal_ ? e.clientX : e.clientY
       t.on_mouse_up_wrapper_ = this.events.bind_event_with_checks(document, "mouseup", this, this.on_mouse_up_handle)

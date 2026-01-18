@@ -159,7 +159,7 @@ function T(e, t, n, r) {
     }
     if (this.cacheId[e]) {
       var /* [auto-meaningful-name] */a$connection
-      var /* [auto-meaningful-name] */_a$connection
+      var /* [auto-meaningful-name] */a$connection1
       var l = $_17_index.Blink.utils.string_to_dom(n)
       l.setAttribute("id", this.cacheId[e])
       if (undefined !== r && l.firstElementChild) {
@@ -168,8 +168,8 @@ function T(e, t, n, r) {
       if (!(null === (a$connection = a.connection) || undefined === a$connection)) {
         a$connection.set_shadow_dom(l)
       }
-      if (!(null === (_a$connection = a.connection) || undefined === _a$connection)) {
-        _a$connection.respawn_shadow()
+      if (!(null === (a$connection1 = a.connection) || undefined === a$connection1)) {
+        a$connection1.respawn_shadow()
       }
       if ($_17_index.Blink.events.is_enabled()) {
         var u = C("mutation", {
@@ -193,9 +193,9 @@ function S(e, t, n) {
       this.cacheId[e] = s.id
       a = s.get_field_value(t) || "1"
     } else {
-      var /* [auto-meaningful-name] */_i$connection
+      var /* [auto-meaningful-name] */i$connection1
       var l
-      var u = null === (_i$connection = i.connection) || undefined === _i$connection ? undefined : _i$connection.get_shadow_dom()
+      var u = null === (i$connection1 = i.connection) || undefined === i$connection1 ? undefined : i$connection1.get_shadow_dom()
       this.cacheId[e] = (null === u || undefined === u ? undefined : u.getAttribute("id")) || $_17_index.Blink.utils.gen_uid()
       a = (null === u || undefined === u || null === (l = u.querySelector("field[name=\"".concat(t, "\"]"))) || undefined === l ? undefined : l.textContent) || "1"
     }

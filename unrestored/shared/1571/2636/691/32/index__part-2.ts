@@ -26,9 +26,9 @@ var Y
 var X
 var K
 import * as /* [auto-meaningful-name] */$_1337 from "./1337"
-import /* [auto-meaningful-name] */_$_ from "./1337"
+import /* [auto-meaningful-name] */$_13371 from "./1337"
 import * as /* [auto-meaningful-name] */$_1338 from "./1338"
-import /* [auto-meaningful-name] */_$_2 from "./1338"
+import /* [auto-meaningful-name] */$_13381 from "./1338"
 import * as /* [auto-meaningful-name] */$_1050_index from "./1050/index"
 !function (e) {
   e[e.WEBGL_LEGACY = 0] = "WEBGL_LEGACY"
@@ -2485,7 +2485,7 @@ var It = function (e) {
     configurable: true
   })
   return t
-}(_$_)
+}($_13371)
 var Rt = function (e) {
   function t() {
     var t = null !== e && e.apply(this, arguments) || this
@@ -3730,7 +3730,7 @@ var Gt = function (e) {
     this.search = null
   }
   return t
-}(_$_)
+}($_13371)
 var zt = function () {
   function e(e) {
     this.items = []
@@ -4215,7 +4215,7 @@ var Jt = function (e) {
   }
   t._globalBatch = 0
   return t
-}(_$_)
+}($_13371)
 var Zt = function (e) {
   function t(t, n) {
     var r = this
@@ -5429,7 +5429,7 @@ var An = function (e) {
     return this.baseTexture
   }
   return t
-}(_$_)
+}($_13371)
 function gn(e) {
   e.destroy = function () {}
   e.on = function () {}
@@ -8861,7 +8861,7 @@ var Hr = function (e) {
     configurable: true
   })
   return t
-}(_$_)
+}($_13371)
 var Vr = function (e) {
   function t(n) {
     var r = e.call(this, X.WEBGL, n) || this

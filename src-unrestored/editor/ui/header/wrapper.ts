@@ -10,7 +10,7 @@ import { B, G, H } from "../../../../unrestored/shared/1571/2636/index__part-2"
 import { Q } from "../../../../unrestored/shared/1571/2636/index__part-3"
 import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
 import { Ge } from "../../../../unrestored/shared/1571/2636/index__part-9"
-import { Ze } from "../../../../unrestored/shared/1571/2636/index__part-10"
+import { Ze } from "./right/user-info"
 import { Xe, ot } from "../../../../unrestored/shared/1571/2636/index__part-11"
 import { St } from "./right/collaboration"
 import { Dt } from "../../../../unrestored/shared/1571/2636/index__part-15"
@@ -25,7 +25,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_load from 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454_index from "../../../../unrestored/shared/1571/2636/454/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454 from "../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_$$_redux_common_actions from "../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
@@ -38,10 +38,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_1053 from "../../../../unrestored/shared/1571/2636/1053"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../unrestored/shared/1571/2636/1053"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10531 from "../../../../unrestored/shared/1571/2636/1053"
 var yn = function () {
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var t = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
@@ -53,15 +53,15 @@ var yn = function () {
   var r = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.cloudSpace.cloudTableList
   })
-  var o = _React.useState(false)
+  var o = React1.useState(false)
   var i = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     s(false)
     d(false)
     var e
@@ -123,17 +123,17 @@ var yn = function () {
     onClick: function () {
       window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.A(), "/"), "_blank")
     },
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8(_$$_$$_$$_$$_unrestored_shared_1571_2636_.cloudSpaceManager)
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_unrestored_shared_1571_2636_10531.cloudSpaceManager)
   }, p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "cloudSpace.outMaxLimit"
   }) && React.createElement("div", {
-    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_.cloudIconError
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_10531.cloudIconError
   }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-cloud-manager-error"
   })), p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "cloudSpace.outWarnLimit"
   }) && React.createElement("div", {
-    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_.cloudIconWarn
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_10531.cloudIconWarn
   }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
     type: "icon-cloud-manager-warn"
   })), p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
@@ -146,15 +146,15 @@ var En = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var n = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var o = _React.useState(false)
+  var o = React1.useState(false)
   var i = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useRef()
+  var p = React1.useRef()
   var m = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
@@ -201,30 +201,30 @@ var En = React.memo(function (e) {
     return e.project.jsonFrom
   })
   var U = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(P)
-  var V = _React.useRef(null)
-  var X = _React.useRef(null)
-  var J = _React.useRef(null)
-  var $ = _React.useState(false)
+  var V = React1.useRef(null)
+  var X = React1.useRef(null)
+  var J = React1.useRef(null)
+  var $ = React1.useState(false)
   var ee = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a($, 2)
   var ne = ee[0]
   var re = ee[1]
   var oe = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.uiConfig.header
   })
-  var ie = _React.useState(false)
+  var ie = React1.useState(false)
   var ae = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
   var le = undefined !== $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href).archiveId
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     re(false)
   }, [P])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (se) {
       we(false, true)
     }
   }, [b])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e() {
       if (V.current) {
         clearTimeout(V.current)
@@ -239,7 +239,7 @@ var En = React.memo(function (e) {
     }
     return e
   }, [P, U])
-  var ue = _React.useState(false)
+  var ue = React1.useState(false)
   var de = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ue, 2)
   var pe = de[0]
   var fe = de[1]
@@ -252,7 +252,7 @@ var En = React.memo(function (e) {
   var ge = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     !function () {
       var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : H.PURPLE
       var t = G(e)
@@ -402,7 +402,7 @@ var En = React.memo(function (e) {
   var Oe = function () {
     window.location.href = $$_$$_$$_$$_unrestored_shared_1571_2636_15.B()
   }
-  var we = _React.useCallback(function () {
+  var we = React1.useCallback(function () {
     var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, o) {
       var i
       return RegeneratorRuntime.wrap(function (e) {
@@ -485,7 +485,7 @@ var En = React.memo(function (e) {
       return e.apply(this, arguments)
     }
   }(), [n, $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage, U, g, m])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e() {
       if (X.current) {
         clearTimeout(X.current)
@@ -508,7 +508,7 @@ var En = React.memo(function (e) {
       e()
     }
   }, [U, M, we, ge, oe.save])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!g) {
       if (me) {
         if (M) {
@@ -534,7 +534,7 @@ var En = React.memo(function (e) {
       }
     }
   }, [M, me, we, n, g])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (he && M) {
       we(true).then(function () {
         n($$_$$_redux_common_actions.di(false))
@@ -578,7 +578,7 @@ var En = React.memo(function (e) {
         n($$_$$_redux_common_actions.Gi(false))
     }
   }
-  var Te = _React.useCallback(function (e) {
+  var Te = React1.useCallback(function (e) {
     if (M) {
       n($$_$$_redux_common_actions.Ri({
         visible: true,
@@ -637,7 +637,7 @@ var En = React.memo(function (e) {
               }
               n = t[0]
               e.next = 4
-              return $$_$$_$$_$$_unrestored_shared_1571_2636_454_index.i(n)
+              return $$_$$_$$_$$_unrestored_shared_1571_2636_454.i(n)
             case 4:
               if (e$sent = e.sent) {
                 e.next = 8
@@ -723,7 +723,7 @@ var En = React.memo(function (e) {
       }
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (oe.preventLeave === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) {
       window.onbeforeunload = function (e) {
         if (e) {
@@ -735,7 +735,7 @@ var En = React.memo(function (e) {
       window.onbeforeunload = function () {}
     }
   }, [oe.preventLeave])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     window.addEventListener("message", Q.handle)
   }, [n])
   var Ne = oe.file.openLocalFile === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show

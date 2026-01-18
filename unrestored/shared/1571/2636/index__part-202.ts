@@ -10,7 +10,7 @@ import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import "./2628"
 import "./2629"
 var yL = {
@@ -132,7 +132,7 @@ var wL = function () {
     return e.common.editPermission
   })
   var t = $_16_index.d()
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     var n
     var r = "readonly" === (n = function (e) {
       switch (e) {

@@ -18,10 +18,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1519 from "./1519"
-import /* [auto-meaningful-name] */_$_ from "./1519"
-var HE = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_15191 from "./1519"
+var HE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
@@ -35,7 +35,7 @@ var HE = _React.memo(function (e) {
   var l = e$getValue(a)
   var u = e$getValue(c)
   return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, _$_.content, "changeHorizontalAlign"),
+    className: N(qv.formItemWrapper, $_15191.content, "changeHorizontalAlign"),
     label: o,
     align: "vertical"
   }, React.createElement("div", null, React.createElement("div", {

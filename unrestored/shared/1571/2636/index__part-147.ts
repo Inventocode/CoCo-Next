@@ -15,11 +15,11 @@ import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_550 from "./550"
 import * as /* [auto-meaningful-name] */$_423 from "./423"
-import /* [auto-meaningful-name] */_$_ from "./423"
-var OT = _React.memo(function () {
+import /* [auto-meaningful-name] */$_4231 from "./423"
+var OT = React1.memo(function () {
   var e
   var t = $_16_index.e(function (e) {
     return e.block.dropdown
@@ -83,7 +83,7 @@ var OT = _React.memo(function () {
     }
   }
   return React.createElement($_13_index.w, {
-    className: _$_.container,
+    className: $_4231.container,
     open: t.visible,
     value: t.value,
     onChange: function (e) {
@@ -106,7 +106,7 @@ var OT = _React.memo(function () {
                   value: "__EMPTY_VALUE__",
                   key: e$value
                 }, React.createElement("div", {
-                  className: _$_.addOption,
+                  className: $_4231.addOption,
                   onClick: u
                 }, React.createElement($_13_index.j, {
                   type: "icon-add"
@@ -136,19 +136,19 @@ var OT = _React.memo(function () {
                 value: e$value,
                 key: e$value
               }, React.createElement("span", {
-                className: _$_.itemIndex
+                className: $_4231.itemIndex
               }, t + 1, "."), React.createElement("div", {
-                className: _$_.styleItem
+                className: $_4231.styleItem
               }, React.createElement("div", {
-                className: _$_.imgContainer
+                className: $_4231.imgContainer
               }, o ? React.createElement("img", {
-                className: _$_.styleImg,
+                className: $_4231.styleImg,
                 src: o,
                 alt: e$text
               }) : React.createElement("span", {
-                className: _$_.styleEmptyImg
+                className: $_4231.styleEmptyImg
               })), React.createElement("span", {
-                className: _$_.styleName
+                className: $_4231.styleName
               }, e$text)))
             }
           }
@@ -178,7 +178,7 @@ var OT = _React.memo(function () {
               value: "__EMPTY_VALUE__",
               key: e$value
             }, React.createElement("div", {
-              className: _$_.addOption,
+              className: $_4231.addOption,
               onClick: u
             }, React.createElement($_13_index.j, {
               type: "icon-add"
@@ -188,20 +188,20 @@ var OT = _React.memo(function () {
               value: e$value,
               key: e$value
             }, React.createElement("div", {
-              className: _$_.actionItem
+              className: $_4231.actionItem
             }, React.createElement("div", {
-              className: _$_.imgContainer
+              className: $_4231.imgContainer
             }, r ? React.createElement("img", {
-              className: _$_.actionImg,
+              className: $_4231.actionImg,
               src: r,
               alt: e$text
             }) : React.createElement("span", {
-              className: _$_.actionEmptyImg,
+              className: $_4231.actionEmptyImg,
               style: {
                 backgroundImage: "url(".concat($_550.a, ")")
               }
             })), React.createElement("span", {
-              className: _$_.actionName
+              className: $_4231.actionName
             }, e$text)))
           }
         })

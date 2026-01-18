@@ -28,21 +28,21 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import "./768"
-var yh = _React.memo(function (e) {
+var yh = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$stage = e.stage
   var /* [auto-meaningful-name] */e$updateTimes = e.updateTimes
   var /* [auto-meaningful-name] */e$coordinateRatio = e.coordinateRatio
-  var i = _React.useState()
+  var i = React1.useState()
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = $_16_index.e(function (e) {
     return e.project.selectedWidgetId
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (l === t && e$stage && t) {
       var e = Jd.Cb(t)
       c(D.a({}, e))
@@ -100,24 +100,24 @@ var yh = _React.memo(function (e) {
   }))
 })
 var Eh = 0
-var Oh = _React.memo(function (e) {
+var Oh = React1.memo(function (e) {
   var t
-  var n = _React.useRef(null)
-  var r = _React.useRef(null)
-  var o = _React.useRef(null)
-  var i = _React.useState(false)
+  var n = React1.useRef(null)
+  var r = React1.useRef(null)
+  var o = React1.useRef(null)
+  var i = React1.useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = _React.useState(false)
+  var l = React1.useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = _React.useState("")
+  var m = React1.useState("")
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = _React.useState({
+  var y = React1.useState({
     x: 0,
     y: 0
   })
@@ -127,14 +127,14 @@ var Oh = _React.memo(function (e) {
   var A = $_16_index.e(function (e) {
     return e.common.stageState.isActorDragging
   })
-  var I = _React.useMemo(function () {
+  var I = React1.useMemo(function () {
     return new Set()
   }, [])
-  var j = _React.useCallback(function () {
+  var j = React1.useCallback(function () {
     return b("")
   }, [])
-  var R = _React.useRef(true)
-  var x = _React.useRef(false)
+  var R = React1.useRef(true)
+  var x = React1.useRef(false)
   var M = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -159,7 +159,7 @@ var Oh = _React.memo(function (e) {
   var te = $_16_index.e(function (e) {
     return e.common.stageScale
   })
-  var ne = _React.useCallback(function (e) {
+  var ne = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$events = e.events
     var n = function (t) {
       var n
@@ -256,7 +256,7 @@ var Oh = _React.memo(function (e) {
       }
     })
   }, [I, j, $, Z])
-  var re = _React.useCallback(function () {
+  var re = React1.useCallback(function () {
     if (n.current) {
       n.current.addEventListener("mousedown", function (e) {
         var /* [auto-meaningful-name] */o$current
@@ -311,7 +311,7 @@ var Oh = _React.memo(function (e) {
       }
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (null === r || undefined === r ? undefined : r.current) {
       var e = $_691_index.a()
       e.init({
@@ -405,13 +405,13 @@ var Oh = _React.memo(function (e) {
       }
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */o$current = o.current
     if (o$current) {
       $_145.q(o$current, e$size$width * q, e$size$height * q)
     }
   }, [q, e$size$width, e$size$height])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */o$current = o.current
     if (o$current) {
       $_145.n(o$current, e$attributes$backgroundColor)
@@ -428,19 +428,19 @@ var Oh = _React.memo(function (e) {
       }
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */o$current = o.current
     if (o$current) {
       $_145.o(o$current, oe, e$attributes$resizeMode)
     }
   }, [oe, e$attributes$resizeMode])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */o$current = o.current
     if (o$current) {
       $_145.p(o$current, e$attributes$resizeMode)
     }
   }, [e$attributes$resizeMode])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!ee || !e$widgetIds.includes(ee)) {
       var e = null === o || undefined === o ? undefined : o.current
       var t = null === e || undefined === e ? undefined : e.components.get_editor()
@@ -449,7 +449,7 @@ var Oh = _React.memo(function (e) {
       }
     }
   }, [ee, e$widgetIds])
-  var ae = _React.useCallback(function () {
+  var ae = React1.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */t$dataTransfer
       var i
@@ -515,7 +515,7 @@ var Oh = _React.memo(function (e) {
       return e.apply(this, arguments)
     }
   }(), [q, $, e$size.height, e$size.width, te, Z])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = function () {
       var e = Array.from(I.values())
       I.clear()

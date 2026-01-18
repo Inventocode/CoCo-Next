@@ -35,9 +35,9 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1528 from "./1528"
-import /* [auto-meaningful-name] */_$_ from "./1528"
+import /* [auto-meaningful-name] */$_15281 from "./1528"
 var Jj = ["staging", "press", "production"].includes($_57_index.b()) ? {
   icon: ["https://creation.codemao.cn/884/l4zcboqu.json", "https://creation.codemao.cn/884/l4zcbf62.json", "https://creation.codemao.cn/884/l4zcb9gi.json"],
   sound: ["https://creation.codemao.cn/884/l4zcb0p4.json", "https://creation.codemao.cn/884/l4zcb365.json"],
@@ -123,7 +123,7 @@ var eN = new (function () {
                       return {
                         id: "".concat(e$data.name, "/").concat(e.name),
                         name: e.name,
-                        md5: e.md5 || _$_("".concat(e$data.name, "/").concat(e.name)),
+                        md5: e.md5 || $_15281("".concat(e$data.name, "/").concat(e.name)),
                         subtitle: e$data.name,
                         cdnUrl: e.urls[0],
                         duration: e.duration,
@@ -187,7 +187,7 @@ var tN = [
     type: Tn.d.SOUND
   }
 ]
-var nN = _React.memo(function (e) {
+var nN = React1.memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$selectedIds = e.selectedIds
@@ -208,32 +208,32 @@ var nN = _React.memo(function (e) {
   var p = $_710_index$a$formatMessage({
     id: "Resource.Sound"
   })
-  var m = _React.useState(e.sidebarType || Z(e.mode))
+  var m = React1.useState(e.sidebarType || Z(e.mode))
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = _React.useState("")
+  var y = React1.useState("")
   var w = $_10_index.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = _React.useState(l)
+  var A = React1.useState(l)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var x = j[1]
-  var D = _React.useState(6)
+  var D = React1.useState(6)
   var M = $_10_index.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = _React.useState(1)
+  var B = React1.useState(1)
   var F = $_10_index.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = _React.useState(false)
+  var U = React1.useState(false)
   var H = $_10_index.a(U, 2)
   var V = H[0]
   var Y = H[1]
-  var K = _React.useRef(null)
-  var q = _React.useRef(null)
+  var K = React1.useRef(null)
+  var q = React1.useRef(null)
   var X = $_16_index.e(function (e) {
     return e.resource.soundFileList
   })
@@ -250,7 +250,7 @@ var nN = _React.memo(function (e) {
         return Tn.d.IMAGE
     }
   }
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     var e = true
     if (e$visible && !V) {
       (function () {
@@ -281,12 +281,12 @@ var nN = _React.memo(function (e) {
       e = false
     }
   }, [V, e$visible])
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     var t = e.sidebarType || Z(e.mode)
     b(t)
     W(1)
   }, [e.mode, e.sidebarType])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     x(l)
     W(1)
   }, [l, e$searchName])
@@ -340,7 +340,7 @@ var nN = _React.memo(function (e) {
   k.a(t, Tn.d.ICON, [eN.materialResources.icon, Q, te])
   k.a(t, Tn.d.SOUND, [eN.materialResources.sound, X, ne])
   var re = t
-  var oe = _React.useMemo(function () {
+  var oe = React1.useMemo(function () {
     if (e$searchName) {
       return eN.getSearchMaterialList(e$searchName)
     }
@@ -406,13 +406,13 @@ var nN = _React.memo(function (e) {
       K$current.style.paddingLeft = n + "px"
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     window.addEventListener("resize", se)
     return function () {
       window.removeEventListener("resize", se)
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     se()
   })
   return React.createElement(React.Fragment, null, e.mode !== Tn.c.ResourceLibrary ? null : React.createElement("div", {
@@ -495,7 +495,7 @@ var nN = _React.memo(function (e) {
   e[e.Library = 0] = "Library"
   e[e.Mall = 1] = "Mall"
 }(Nj || (Nj = {}))
-var rN = _React.memo(function () {
+var rN = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.resource.resourceLibraryDialogInfo
   })
@@ -511,34 +511,34 @@ var rN = _React.memo(function () {
     Q()
     c($$_$$_$$_$$_src_editor_redux_common_actions.sh())
   }
-  var u = _React.useState(false)
+  var u = React1.useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useState("")
+  var g = React1.useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = _React.useState(Nj.Mall)
+  var E = React1.useState(Nj.Mall)
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
-  var T = _React.useState([])
+  var T = React1.useState([])
   var A = $_10_index.a(T, 2)
   var j = A[0]
   var R = A[1]
-  var k = _React.useState(false)
+  var k = React1.useState(false)
   var D = $_10_index.a(k, 2)
   var M = D[0]
   var L = D[1]
-  var P = _React.useState(false)
+  var P = React1.useState(false)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = _React.useRef(null)
-  var U = _React.useRef(null)
-  var H = _React.useRef(true)
-  _React.useLayoutEffect(function () {
+  var W = React1.useRef(null)
+  var U = React1.useRef(null)
+  var H = React1.useRef(true)
+  React1.useLayoutEffect(function () {
     if (e$mode === Tn.c.ResourceLibrary) {
       m(false)
       C(Nj.Mall)
@@ -547,12 +547,12 @@ var rN = _React.memo(function () {
       C(Nj.Library)
     }
   }, [e$mode])
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     if (!e$visible) {
       R([])
     }
   }, [e$visible])
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     var /* [auto-meaningful-name] */W$current = W.current
     if (W$current) {
       var /* [auto-meaningful-name] */W$current$scrollWidth = W$current.scrollWidth

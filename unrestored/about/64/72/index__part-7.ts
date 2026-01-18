@@ -447,7 +447,7 @@ var Ie = function () {
     $_36_index.b(function (t) {
       var /* [auto-meaningful-name] */t$request
       var /* [auto-meaningful-name] */Ne$location
-      var /* [auto-meaningful-name] */_t$request
+      var /* [auto-meaningful-name] */t$request1
       if ($$_16_32.b().getIntegration(e)) {
         if (!Ne.navigator && !Ne.location && !Ne.document) {
           return t
@@ -455,7 +455,7 @@ var Ie = function () {
         var o = (null === (t$request = t.request) || undefined === t$request ? undefined : t$request.url) || (null === (Ne$location = Ne.location) || undefined === Ne$location ? undefined : Ne$location.href)
         var /* [auto-meaningful-name] */Ne$document$referrer = (Ne.document || {}).referrer
         var /* [auto-meaningful-name] */Ne$navigator$userAgent = (Ne.navigator || {}).userAgent
-        var l = u(u(u({}, null === (_t$request = t.request) || undefined === _t$request ? undefined : _t$request.headers), Ne$document$referrer && {
+        var l = u(u(u({}, null === (t$request1 = t.request) || undefined === t$request1 ? undefined : t$request1.headers), Ne$document$referrer && {
           Referer: Ne$document$referrer
         }), Ne$navigator$userAgent && {
           "User-Agent": Ne$navigator$userAgent

@@ -14,10 +14,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_708 from "./708"
-import /* [auto-meaningful-name] */_$_ from "./708"
-var qP = _React.memo(function () {
+import /* [auto-meaningful-name] */$_7081 from "./708"
+var qP = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.switchImageDialogInfo
   })
@@ -26,19 +26,19 @@ var qP = _React.memo(function () {
   var /* [auto-meaningful-name] */e$imageOpenFileId = e.imageOpenFileId
   var /* [auto-meaningful-name] */e$imageCloseFileId = e.imageCloseFileId
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = _React.useState("")
+  var a = React1.useState("")
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useState("")
+  var u = React1.useState("")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useState("")
+  var g = React1.useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       l(e$imageOpenFileId)
       m(e$imageCloseFileId)
@@ -70,7 +70,7 @@ var qP = _React.memo(function () {
   }
   return React.createElement($_13_index.f, {
     visible: e$visible,
-    className: _$_.sliderImageDialog,
+    className: $_7081.sliderImageDialog,
     title: $_710_index$a$formatMessage({
       id: "switch.custom"
     }),
@@ -94,17 +94,17 @@ var qP = _React.memo(function () {
       id: "confirm"
     }))
   }, React.createElement("div", {
-    className: _$_.sliderImage
+    className: $_7081.sliderImage
   }, React.createElement("div", {
-    className: _$_.imageInfo
+    className: $_7081.imageInfo
   }, React.createElement("span", {
-    className: _$_.title
+    className: $_7081.title
   }, $_710_index$a$formatMessage({
     id: "switch.replaceImage"
   })), React.createElement("div", {
-    className: _$_.imageList
+    className: $_7081.imageList
   }, React.createElement("div", {
-    className: _$_.imageItem,
+    className: $_7081.imageItem,
     onClick: function () {
       y("close")
     }
@@ -121,7 +121,7 @@ var qP = _React.memo(function () {
   }), React.createElement("span", null, $_710_index$a$formatMessage({
     id: "switch.close"
   }))), React.createElement("div", {
-    className: _$_.imageItem,
+    className: $_7081.imageItem,
     onClick: function () {
       y("open")
     }

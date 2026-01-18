@@ -8,7 +8,7 @@
 
 export { p as a }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "../7"
 import * as /* [auto-meaningful-name] */JsSha256 from "js-sha256"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../src/shared/utils/network/axios-with-credentials"
@@ -20,10 +20,10 @@ function p(e) {
   return f.apply(this, arguments)
 }
 function f() {
-  return (f = i.a(_RegeneratorRuntime.mark(function e(t) {
+  return (f = i.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -53,11 +53,11 @@ function h() {
   return m.apply(this, arguments)
 }
 function m() {
-  return (m = i.a(_RegeneratorRuntime.mark(function e() {
+  return (m = i.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
     var r
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

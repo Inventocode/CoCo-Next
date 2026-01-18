@@ -9,7 +9,7 @@ var o = require("../1686/194")
 var i = require("../1686/829")
 var a = require("../1648/952")
 var s = require("../1581/425")
-var /* [auto-meaningful-name] */require$$_1705_300_index$f = require("../1705/300/index").f
+var /* [auto-meaningful-name] */require$$_1705_300$f = require("../1705/300").f
 var /* [auto-meaningful-name] */require$$_1581_635$f = require("../1581/635").f
 var u = require("../1723/1094")
 var d = require("../1581/310")
@@ -18,9 +18,9 @@ var f = require("../1723/1095")
 var h = require("../1692/400")
 var m = require("../1705/168")
 var g = require("../1581/334")
-var /* [auto-meaningful-name] */require$$_1686_426_index$enforce = require("../1686/426/index").enforce
+var /* [auto-meaningful-name] */require$$_1686_426$enforce = require("../1686/426").enforce
 var v = require("../1686/759")
-var b = require("../1686/246/index")
+var b = require("../1686/246")
 var y = require("./1271")
 var E = require("./1272")
 var O = b("match")
@@ -110,7 +110,7 @@ if (i("RegExp", N)) {
       }
       c = a(o$RegExp(e, t), f ? this : o$RegExp$prototype, R)
       if (r || o || v.length) {
-        l = require$$_1686_426_index$enforce(c)
+        l = require$$_1686_426$enforce(c)
         if (r) {
           l.dotAll = true
           l.raw = R(function (e) {
@@ -150,7 +150,7 @@ if (i("RegExp", N)) {
       return c
     }, k = function (e) {
       if (!(e in R)) {
-        require$$_1705_300_index$f(R, e, {
+        require$$_1705_300$f(R, e, {
           configurable: true,
           get: function () {
             return o$RegExp[e]

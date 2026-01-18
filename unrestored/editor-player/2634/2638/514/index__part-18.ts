@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_inde
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_externalModule from "../../../../../src/shared/widget/custom/external-module"
 import "./1187"
@@ -61,16 +61,16 @@ var ge = [
     letter: ""
   }
 ]
-var ve = _React.memo(function () {
+var ve = React1.memo(function () {
   var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
   var e = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  var n = _React.useState("")
+  var n = React1.useState("")
   var r = $$_$$_$$_$$_shared_1571_2636_10_index.a(n, 2)
   var i = r[0]
   var o = r[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     o(e.phoneNumber)
   }, [e.phoneNumber])
   var a = function (t) {

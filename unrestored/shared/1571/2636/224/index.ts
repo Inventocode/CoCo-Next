@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as u from "../8"
 import l from "../8"
 import * as /* [auto-meaningful-name] */$_792 from "./792"
@@ -42,10 +42,10 @@ function y(e) {
   if (!v()) {
     return null
   }
-  var /* [auto-meaningful-name] */_n$csp
+  var /* [auto-meaningful-name] */n$csp1
   var i = document.createElement("style")
   if (null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) {
-    i.nonce = null === (_n$csp = n.csp) || undefined === _n$csp ? undefined : _n$csp.nonce
+    i.nonce = null === (n$csp1 = n.csp) || undefined === n$csp1 ? undefined : n$csp1.nonce
   }
   i.innerHTML = e
   var o = m(n)
@@ -76,10 +76,10 @@ function w(e, t) {
   })
   if (a) {
     var /* [auto-meaningful-name] */n$csp
-    var /* [auto-meaningful-name] */_n$csp2
-    var /* [auto-meaningful-name] */_n$csp3
-    if ((null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) && a.nonce !== (null === (_n$csp2 = n.csp) || undefined === _n$csp2 ? undefined : _n$csp2.nonce)) {
-      a.nonce = null === (_n$csp3 = n.csp) || undefined === _n$csp3 ? undefined : _n$csp3.nonce
+    var /* [auto-meaningful-name] */n$csp1
+    var /* [auto-meaningful-name] */n$csp2
+    if ((null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) && a.nonce !== (null === (n$csp1 = n.csp) || undefined === n$csp1 ? undefined : n$csp1.nonce)) {
+      a.nonce = null === (n$csp2 = n.csp) || undefined === n$csp2 ? undefined : n$csp2.nonce
     }
     if (a.innerHTML !== e) {
       a.innerHTML = e
@@ -162,11 +162,11 @@ var B = function (e) {
     })
   }
   return function e(t, n, i) {
-    return i ? _React.createElement(t.tag, $$_21.a($$_21.a({
+    return i ? React1.createElement(t.tag, $$_21.a($$_21.a({
       key: n
     }, x(t.attrs)), i), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i))
-    })) : _React.createElement(t.tag, $$_21.a({
+    })) : React1.createElement(t.tag, $$_21.a({
       key: n
     }, x(t.attrs)), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i))

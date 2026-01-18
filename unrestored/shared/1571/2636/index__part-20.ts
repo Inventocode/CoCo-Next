@@ -12,17 +12,17 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_806 from "./806"
-import /* [auto-meaningful-name] */_$_ from "./806"
-var dn = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_8061 from "./806"
+var dn = React1.memo(function (e) {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$save = e.save
   var i = $_16_index.d()
   return React.createElement(cn, {
-    className: _$_.container,
+    className: $_8061.container,
     networkErrorVisible: e$visible,
     onRetry: e$save,
     onCancelRetry: e$onClose
@@ -34,7 +34,7 @@ var dn = _React.memo(function (e) {
     id: "saveProject.failDialogTips2"
   }), React.createElement("button", {
     type: "button",
-    className: _$_.saveBtn,
+    className: $_8061.saveBtn,
     onClick: function () {
       i($$_$$_$$_$$_src_editor_redux_common_actions.Of())
       e$onClose()
@@ -45,7 +45,7 @@ var dn = _React.memo(function (e) {
     id: "saveProject.failDialogTips3"
   })))))
 })
-var pn = _React.memo(function (e) {
+var pn = React1.memo(function (e) {
   var t = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var r = $_16_index.e(function (e) {
@@ -54,11 +54,11 @@ var pn = _React.memo(function (e) {
   var /* [auto-meaningful-name] */r$packageProgress = r.packageProgress
   var /* [auto-meaningful-name] */r$packageTaskLabel = r.packageTaskLabel
   var /* [auto-meaningful-name] */r$isPackaging = r.isPackaging
-  var s = _React.useState(false)
+  var s = React1.useState(false)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     u(!(!r$packageTaskLabel || -1 !== r$packageProgress || r$isPackaging))
   }, [r$isPackaging, r$packageProgress, r$packageTaskLabel])
   return React.createElement(cn, {
@@ -92,14 +92,14 @@ var pn = _React.memo(function (e) {
     id: "package.buildFailedTips42"
   })))))
 })
-var fn = _React.memo(function (e) {
+var fn = React1.memo(function (e) {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$save = e.save
   var i = $_16_index.d()
   return React.createElement(cn, {
-    className: _$_.container,
+    className: $_8061.container,
     networkErrorVisible: e$visible,
     onRetry: e$save,
     onCancelRetry: e$onClose
@@ -111,7 +111,7 @@ var fn = _React.memo(function (e) {
     id: "package.networkErrorTips2"
   }), React.createElement("button", {
     type: "button",
-    className: _$_.saveBtn,
+    className: $_8061.saveBtn,
     onClick: function () {
       i($$_$$_$$_$$_src_editor_redux_common_actions.Of())
     }

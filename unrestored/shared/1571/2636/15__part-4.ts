@@ -8,16 +8,16 @@
 
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as P from "./7"
 var B = {}
 function F(e, t) {
   return G.apply(this, arguments)
 }
 function G() {
-  return (G = P.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (G = P.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

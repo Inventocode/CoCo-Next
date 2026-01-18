@@ -230,12 +230,12 @@ var l = function () {
   }
   e.prototype.parse_context_menu_options = function (e) {
     var /* [auto-meaningful-name] */e$context_menu
-    var /* [auto-meaningful-name] */_e$context_menu
+    var /* [auto-meaningful-name] */e$context_menu1
     var r = [u.WorkspaceOptionType.PASTE, u.WorkspaceOptionType.CLEAN_UP, u.WorkspaceOptionType.DELETE_ALL, u.WorkspaceOptionType.COPY_ALL, u.WorkspaceOptionType.GLOBAL_COMMENT]
     var i = [u.BlockOptionType.COPY_AND_PASTE, u.BlockOptionType.COPY, u.BlockOptionType.ADD_COMMENT, u.BlockOptionType.COLLAPSE, u.BlockOptionType.DELETE, u.BlockOptionType.SET_GROUP]
     return {
       workspace: (null === (e$context_menu = e.context_menu) || undefined === e$context_menu ? undefined : e$context_menu.workspace) || r,
-      block: (null === (_e$context_menu = e.context_menu) || undefined === _e$context_menu ? undefined : _e$context_menu.block) || i
+      block: (null === (e$context_menu1 = e.context_menu) || undefined === e$context_menu1 ? undefined : e$context_menu1.block) || i
     }
   }
   return e = (0, r.__decorate)([(0, i.injectable)()], e)

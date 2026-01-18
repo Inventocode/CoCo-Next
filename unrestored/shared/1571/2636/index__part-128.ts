@@ -16,38 +16,38 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_147 from "./147"
 import * as /* [auto-meaningful-name] */$_1520 from "./1520"
-import /* [auto-meaningful-name] */_$_ from "./1520"
+import /* [auto-meaningful-name] */$_15201 from "./1520"
 import * as /* [auto-meaningful-name] */$_421 from "./421"
-import /* [auto-meaningful-name] */_$_2 from "./421"
+import /* [auto-meaningful-name] */$_4211 from "./421"
 var Tw = {
   columns: [],
   rows: []
 }
-var Sw = _React.memo(function (e) {
+var Sw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var r = e$getValue("cloudDbId")
   var o = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var a = Et.Bb(e$widgetId)
-  var s = _React.useState(Tw)
+  var s = React1.useState(Tw)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState(true)
+  var d = React1.useState(true)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useRef(false)
-  _React.useEffect(function () {
+  var v = React1.useRef(false)
+  React1.useEffect(function () {
     return function () {
       v.current = true
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (a && r) {
       u(Tw)
       g(true)
@@ -104,21 +104,21 @@ var Sw = _React.memo(function (e) {
     var r = l.rows[e$index - 1]
     var /* [auto-meaningful-name] */l$columns = l.columns
     return 0 === e$index ? React.createElement("div", {
-      className: _$_2.listItem,
+      className: $_4211.listItem,
       key: e$index,
       style: e$style
     }, l$columns.map(function (e, t) {
       return React.createElement("div", {
-        className: _$_2.column,
+        className: $_4211.column,
         key: "".concat(e, "-").concat(t)
       }, e)
     })) : React.createElement("div", {
-      className: _$_2.listItem,
+      className: $_4211.listItem,
       key: e$index,
       style: e$style
     }, r.value.map(function (e, t) {
       return React.createElement("div", {
-        className: _$_2.row,
+        className: $_4211.row,
         key: "".concat(r.id, "-").concat(e, "-").concat(t)
       }, React.createElement("span", {
         title: String(e)
@@ -126,39 +126,39 @@ var Sw = _React.memo(function (e) {
     }))
   }
   return React.createElement("div", {
-    className: N(_$_2.formItemWrapper, _$_2.cloudDBList)
+    className: N($_4211.formItemWrapper, $_4211.cloudDBList)
   }, m ? React.createElement("div", {
-    className: _$_2.loadingArea
+    className: $_4211.loadingArea
   }, React.createElement("img", {
-    src: _$_,
+    src: $_15201,
     alt: "loading"
   }), React.createElement("span", null, $_710_index$a$formatMessage({
     id: "cloudDBWidget.loading"
   }))) : React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_2.title
+    className: $_4211.title
   }, React.createElement("div", null, $_710_index$a$formatMessage({
     id: "cloudDBWidget.data"
   }), React.createElement($_1213.a, {
     content: React.createElement("div", {
-      className: _$_2.btnContent
+      className: $_4211.btnContent
     }, React.createElement("div", null, " ", $_710_index$a$formatMessage({
       id: "cloudDBWidget.tipsContent"
     }))),
     placement: "rightTop",
     trigger: "click"
   }, React.createElement("div", {
-    className: _$_2.btn
+    className: $_4211.btn
   }, "?"))), React.createElement("div", {
-    className: _$_2.editBtnBox
+    className: $_4211.editBtnBox
   }, React.createElement($_13_index.d, {
-    className: _$_2.editBtn,
+    className: $_4211.editBtn,
     onClick: b
   }, React.createElement($_13_index.j, {
     type: "icon-storage-edit"
   })))), React.createElement("div", {
-    className: _$_2.list
+    className: $_4211.list
   }, React.createElement("div", {
-    className: _$_2.itemWrapper
+    className: $_4211.itemWrapper
   }, l.columns && l.columns.length > 0 && React.createElement($_557.a, {
     width: l.columns.length >= 5 ? 100 * l.columns.length : "auto",
     height: 32 * (l.rows.length > 15 ? 14.5 : l.rows.length + 1),

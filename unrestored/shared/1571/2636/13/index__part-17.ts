@@ -7,10 +7,10 @@
 "use strict"
 
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import "./876"
-var Re = _React.memo(function (e) {
+var Re = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$label = e.label

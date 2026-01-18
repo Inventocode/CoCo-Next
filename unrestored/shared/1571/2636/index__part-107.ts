@@ -22,7 +22,7 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_315 from "./315"
 var dE = function (e, t) {
   var n = {}
@@ -39,12 +39,12 @@ var dE = function (e, t) {
   }
   return n
 }
-var pE = _React.forwardRef(function (e, t) {
+var pE = React1.forwardRef(function (e, t) {
   var n
-  var r = _React.useContext($_801_index.b)
+  var r = React1.useContext($_801_index.b)
   var /* [auto-meaningful-name] */r$getPrefixCls = r.getPrefixCls
   var /* [auto-meaningful-name] */r$direction = r.direction
-  var a = _React.useContext($_517.b)
+  var a = React1.useContext($_517.b)
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$size = e.size
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
@@ -55,15 +55,15 @@ var pE = _React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$readOnly = e.readOnly
   var g = dE(e, ["className", "size", "prefixCls", "addonBefore", "addonAfter", "bordered", "readOnly"])
   var _ = r$getPrefixCls("input-number", e$prefixCls)
-  var v = _React.createElement(lE, {
+  var v = React1.createElement(lE, {
     className: "".concat(_, "-handler-up-inner")
   })
-  var b = _React.createElement(Zb, {
+  var b = React1.createElement(Zb, {
     className: "".concat(_, "-handler-down-inner")
   })
   var y = e$size || a
   var E = N((n = {}, Ln.a(n, "".concat(_, "-lg"), "large" === y), Ln.a(n, "".concat(_, "-sm"), "small" === y), Ln.a(n, "".concat(_, "-rtl"), "rtl" === r$direction), Ln.a(n, "".concat(_, "-readonly"), e$readOnly), Ln.a(n, "".concat(_, "-borderless"), !h), n), e$className)
-  var O = _React.createElement(oE, Dn.a({
+  var O = React1.createElement(oE, Dn.a({
     ref: t,
     className: E,
     upHandler: v,
@@ -75,18 +75,18 @@ var pE = _React.forwardRef(function (e, t) {
     var w
     var C = "".concat(_, "-group")
     var T = "".concat(C, "-addon")
-    var S = e$addonBefore ? _React.createElement("div", {
+    var S = e$addonBefore ? React1.createElement("div", {
       className: T
     }, e$addonBefore) : null
-    var A = e$addonAfter ? _React.createElement("div", {
+    var A = e$addonAfter ? React1.createElement("div", {
       className: T
     }, e$addonAfter) : null
     var I = N("".concat(_, "-wrapper"), C, Ln.a({}, "".concat(C, "-rtl"), "rtl" === r$direction))
     var j = N("".concat(_, "-group-wrapper"), (w = {}, Ln.a(w, "".concat(_, "-group-wrapper-sm"), "small" === a), Ln.a(w, "".concat(_, "-group-wrapper-lg"), "large" === a), Ln.a(w, "".concat(_, "-group-wrapper-rtl"), "rtl" === r$direction), w), e$className)
-    return _React.createElement("div", {
+    return React1.createElement("div", {
       className: j,
       style: e.style
-    }, _React.createElement("div", {
+    }, React1.createElement("div", {
       className: I
     }, S, $_315.a(O, {
       style: null
@@ -94,7 +94,7 @@ var pE = _React.forwardRef(function (e, t) {
   }
   return O
 })
-var fE = _React.memo(function (e) {
+var fE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "number" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -127,7 +127,7 @@ var fE = _React.memo(function (e) {
     }
   }))
 })
-var hE = _React.memo(function (e) {
+var hE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "visible" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -155,7 +155,7 @@ var hE = _React.memo(function (e) {
     className: qv.formItemWrapper
   }, c)
 })
-var mE = _React.memo(function (e) {
+var mE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "disabled" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -183,7 +183,7 @@ var mE = _React.memo(function (e) {
     className: qv.formItemWrapper
   }, c)
 })
-var gE = _React.memo(function (e) {
+var gE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "color" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -209,7 +209,7 @@ var gE = _React.memo(function (e) {
     className: qv.formItemWrapper
   }, u)
 })
-var _E = _React.memo(function (e) {
+var _E = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "backgroundColor" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -222,7 +222,7 @@ var _E = _React.memo(function (e) {
   var u = $_710_index$a$formatMessage({
     id: undefined === e$formConfig$label ? "backgroundColor" : e$formConfig$label
   })
-  var d = _React.useState(false)
+  var d = React1.useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]

@@ -19,20 +19,20 @@ import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import /* [auto-meaningful-name] */_Lodash from "lodash"
+import /* [auto-meaningful-name] */Lodash1 from "lodash"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */$_381 from "./381"
-import /* [auto-meaningful-name] */_$_ from "./381"
-var $u = _React.memo(function () {
+import /* [auto-meaningful-name] */$_3811 from "./381"
+var $u = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
     return e.project.selectedWidgetId
   })
   return React.createElement("div", {
-    className: _$_.imageAddon
+    className: $_3811.imageAddon
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       if (e && n) {
@@ -47,9 +47,9 @@ var $u = _React.memo(function () {
     })
   }, React.createElement($_13_index.j, {
     type: "icon-upload-image",
-    className: N(_$_.item)
+    className: N($_3811.item)
   })), React.createElement("div", {
-    className: _$_.gap
+    className: $_3811.gap
   }), React.createElement($_748_index.a, {
     placement: "right",
     title: $_710_index$a$formatMessage({
@@ -72,10 +72,10 @@ var $u = _React.memo(function () {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-image-library",
-    className: N(_$_.item)
+    className: N($_3811.item)
   }))))
 })
-var ed = _React.memo(function () {
+var ed = React1.memo(function () {
   var e = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var n = $_16_index.e(function (e) {
@@ -99,7 +99,7 @@ var ed = _React.memo(function () {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-attribute",
-    className: N(_$_.iconButton, _$_.editIcon)
+    className: N($_3811.iconButton, $_3811.editIcon)
   })))
 })
 var td = function () {
@@ -110,7 +110,7 @@ var td = function () {
   var n = $_16_index.e(function (e) {
     return e.common.previewAreaUpdatedAt
   })
-  var r = _React.useState(0)
+  var r = React1.useState(0)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -122,7 +122,7 @@ var td = function () {
   var /* [auto-meaningful-name] */s$attributes$options = s.attributes.options
   return React.createElement("div", {
     "data-should-update": n,
-    className: _$_.radioActions,
+    className: $_3811.radioActions,
     "data-should-update-area": i
   }, React.createElement($_748_index.a, {
     placement: "bottom",
@@ -137,7 +137,7 @@ var td = function () {
         c($$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options.slice(0, -1)))
       }
     },
-    className: N(k.a({}, _$_.disabled, 1 === s$attributes$options.length))
+    className: N(k.a({}, $_3811.disabled, 1 === s$attributes$options.length))
   }, React.createElement($_13_index.j, {
     type: "icon-minus"
   }))), React.createElement($_748_index.a, {
@@ -157,7 +157,7 @@ var td = function () {
         a(Date.now())
       }
     },
-    className: N(k.a({}, _$_.disabled, 8 === s$attributes$options.length))
+    className: N(k.a({}, $_3811.disabled, 8 === s$attributes$options.length))
   }, React.createElement($_13_index.j, {
     type: "icon-add"
   }))))
@@ -180,10 +180,10 @@ var nd = function () {
         e($$_$$_$$_$$_src_editor_redux_common_actions.Lg(n, "refreshTimestamp", Date.now(), true, false))
       }
     },
-    className: _$_.webViewAction
+    className: $_3811.webViewAction
   }, React.createElement($_13_index.j, {
     type: "icon-refresh",
-    className: N(_$_.iconButton)
+    className: N($_3811.iconButton)
   })))
 }
 var rd = function () {
@@ -192,7 +192,7 @@ var rd = function () {
   })
   var t = Et.Bb(e || "")
   return t ? React.createElement("div", {
-    className: _$_.addonBox
+    className: $_3811.addonBox
   }, React.createElement(ed, null), t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v && React.createElement($u, null), t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.L && React.createElement(nd, null)) : React.createElement(React.Fragment, null)
 }
 var od = {
@@ -223,7 +223,7 @@ var id = {
     }, React.createElement(td, null))
   }
 }
-var ad = _React.memo(rd)
+var ad = React1.memo(rd)
 export { od }
 export { id }
 export { ad }

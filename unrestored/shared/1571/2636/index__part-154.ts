@@ -19,9 +19,9 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_812 from "./812"
-import /* [auto-meaningful-name] */_$_ from "./812"
+import /* [auto-meaningful-name] */$_8121 from "./812"
 var $T = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onToggle = e.onToggle
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
@@ -31,7 +31,7 @@ var $T = React.memo(function (e) {
   var o = $_16_index.e(function (e) {
     return e.common.consoleHeight
   })
-  var i = _React.useMemo(function () {
+  var i = React1.useMemo(function () {
     return {
       errorCount: r.filter(function (e) {
         return "error" === e.get("type") || "lintError" === e.get("type") || "customError" === e.get("type")
@@ -45,21 +45,21 @@ var $T = React.memo(function (e) {
   var /* [auto-meaningful-name] */i$warningCount = i.warningCount
   return React.createElement("div", {
     onClick: e$onToggle,
-    className: N(_$_.wrapper, (i$errorCount > 0 || i$warningCount > 0) && _$_.errorWarning),
+    className: N($_8121.wrapper, (i$errorCount > 0 || i$warningCount > 0) && $_8121.errorWarning),
     style: {
       bottom: o + 18
     }
   }, i$errorCount > 0 || i$warningCount > 0 ? React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.errorBox
+    className: $_8121.errorBox
   }, React.createElement($_13_index.j, {
     type: "icon-console-error"
   }), i$errorCount), React.createElement("div", {
-    className: _$_.warningBox
+    className: $_8121.warningBox
   }, React.createElement($_13_index.j, {
     type: "icon-warning"
   }), i$warningCount)) : React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
     type: "icon-console",
-    className: _$_.iconConsole
+    className: $_8121.iconConsole
   }), $_710_index$a$formatMessage({
     id: "consolePanel"
   })))
@@ -79,7 +79,7 @@ var eS = function (e, t) {
   }
   return n
 }
-var tS = _React.createContext({
+var tS = React1.createContext({
   siderHook: {
     addSider: function () {
       return null
@@ -95,10 +95,10 @@ function nS(e) {
   var /* [auto-meaningful-name] */e$displayName = e.displayName
   return function (e) {
     var o = function (r) {
-      var /* [auto-meaningful-name] */_React$useContext$_801_index$b$getPrefixCls = _React.useContext($_801_index.b).getPrefixCls
+      var /* [auto-meaningful-name] */React1$useContext$_801_index$b$getPrefixCls = React1.useContext($_801_index.b).getPrefixCls
       var /* [auto-meaningful-name] */r$prefixCls = r.prefixCls
-      var a = _React$useContext$_801_index$b$getPrefixCls(e$suffixCls, r$prefixCls)
-      return _React.createElement(e, Dn.a({
+      var a = React1$useContext$_801_index$b$getPrefixCls(e$suffixCls, r$prefixCls)
+      return React1.createElement(e, Dn.a({
         prefixCls: a,
         tagName: e$tagName
       }, r))
@@ -114,7 +114,7 @@ var rS = function (e) {
   var /* [auto-meaningful-name] */e$tagName = e.tagName
   var i = eS(e, ["prefixCls", "className", "children", "tagName"])
   var a = N(e$prefixCls, e$className)
-  return _React.createElement(e$tagName, Dn.a({
+  return React1.createElement(e$tagName, Dn.a({
     className: a
   }, i), e$children)
 }
@@ -124,8 +124,8 @@ var oS = nS({
   displayName: "Layout"
 })(function (e) {
   var t
-  var /* [auto-meaningful-name] */_React$useContext$_801_index$b$direction = _React.useContext($_801_index.b).direction
-  var r = _React.useState([])
+  var /* [auto-meaningful-name] */React1$useContext$_801_index$b$direction = React1.useContext($_801_index.b).direction
+  var r = React1.useState([])
   var o = $_40_index.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -135,8 +135,8 @@ var oS = nS({
   var /* [auto-meaningful-name] */e$hasSider = e.hasSider
   var /* [auto-meaningful-name] */e$tagName = e.tagName
   var p = eS(e, ["prefixCls", "className", "children", "hasSider", "tagName"])
-  var h = N(e$prefixCls, (t = {}, Ln.a(t, "".concat(e$prefixCls, "-has-sider"), "boolean" === typeof e$hasSider ? e$hasSider : i.length > 0), Ln.a(t, "".concat(e$prefixCls, "-rtl"), "rtl" === _React$useContext$_801_index$b$direction), t), e$className)
-  var m = _React.useMemo(function () {
+  var h = N(e$prefixCls, (t = {}, Ln.a(t, "".concat(e$prefixCls, "-has-sider"), "boolean" === typeof e$hasSider ? e$hasSider : i.length > 0), Ln.a(t, "".concat(e$prefixCls, "-rtl"), "rtl" === React1$useContext$_801_index$b$direction), t), e$className)
+  var m = React1.useMemo(function () {
     return {
       siderHook: {
         addSider: function (e) {
@@ -154,9 +154,9 @@ var oS = nS({
       }
     }
   }, [])
-  return _React.createElement(tS.Provider, {
+  return React1.createElement(tS.Provider, {
     value: m
-  }, _React.createElement(e$tagName, Dn.a({
+  }, React1.createElement(e$tagName, Dn.a({
     className: h
   }, p), e$children))
 })
@@ -196,13 +196,13 @@ var lS = {
   theme: "outlined"
 }
 var uS = function (e, t) {
-  return _React.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return React1.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: lS
   }))
 }
 uS.displayName = "BarsOutlined"
-var dS = _React.forwardRef(uS)
+var dS = React1.forwardRef(uS)
 var pS = {
   icon: {
     tag: "svg",
@@ -223,13 +223,13 @@ var pS = {
   theme: "outlined"
 }
 var fS = function (e, t) {
-  return _React.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return React1.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: pS
   }))
 }
 fS.displayName = "RightOutlined"
-var hS = _React.forwardRef(fS)
+var hS = React1.forwardRef(fS)
 var mS = {
   icon: {
     tag: "svg",
@@ -250,13 +250,13 @@ var mS = {
   theme: "outlined"
 }
 var gS = function (e, t) {
-  return _React.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return React1.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: mS
   }))
 }
 gS.displayName = "LeftOutlined"
-var _S = _React.forwardRef(gS)
+var _S = React1.forwardRef(gS)
 var vS = function (e) {
   return !isNaN(parseFloat(e)) && isFinite(e)
 }
@@ -283,7 +283,7 @@ var yS = {
   xl: "1199.98px",
   xxl: "1599.98px"
 }
-var ES = _React.createContext({})
+var ES = React1.createContext({})
 var OS = function () {
   var e = 0
   return function () {
@@ -292,7 +292,7 @@ var OS = function () {
     return "".concat(t).concat(e)
   }
 }()
-var wS = _React.forwardRef(function (e, t) {
+var wS = React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$trigger = e.trigger
@@ -316,16 +316,16 @@ var wS = _React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onCollapse = e.onCollapse
   var /* [auto-meaningful-name] */e$onBreakpoint = e.onBreakpoint
   var T = bS(e, ["prefixCls", "className", "trigger", "children", "defaultCollapsed", "theme", "style", "collapsible", "reverseArrow", "width", "collapsedWidth", "zeroWidthTriggerStyle", "breakpoint", "onCollapse", "onBreakpoint"])
-  var /* [auto-meaningful-name] */_React$useContextTS$siderHook = _React.useContext(tS).siderHook
-  var A = _React.useState("collapsed" in T ? T.collapsed : s)
+  var /* [auto-meaningful-name] */React1$useContextTS$siderHook = React1.useContext(tS).siderHook
+  var A = React1.useState("collapsed" in T ? T.collapsed : s)
   var I = $_40_index.a(A, 2)
   var j = I[0]
   var R = I[1]
-  var k = _React.useState(false)
+  var k = React1.useState(false)
   var x = $_40_index.a(k, 2)
   var D = x[0]
   var M = x[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if ("collapsed" in T) {
       R(T.collapsed)
     }
@@ -338,7 +338,7 @@ var wS = _React.forwardRef(function (e, t) {
       e$onCollapse(e, t)
     }
   }
-  var P = _React.useRef()
+  var P = React1.useRef()
   P.current = function (e) {
     M(e.matches)
     if (!(null === e$onBreakpoint || undefined === e$onBreakpoint)) {
@@ -348,7 +348,7 @@ var wS = _React.forwardRef(function (e, t) {
       L(e.matches, "responsive")
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e(e) {
       return P.current(e)
     }
@@ -377,40 +377,40 @@ var wS = _React.forwardRef(function (e, t) {
       }
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = OS("ant-sider-")
-    _React$useContextTS$siderHook.addSider(e)
+    React1$useContextTS$siderHook.addSider(e)
     return function () {
-      return _React$useContextTS$siderHook.removeSider(e)
+      return React1$useContextTS$siderHook.removeSider(e)
     }
   }, [])
   var B = function () {
     L(!j, "clickTrigger")
   }
-  var /* [auto-meaningful-name] */_React$useContext$_801_index$b$getPrefixCls = _React.useContext($_801_index.b).getPrefixCls
-  var G = _React.useMemo(function () {
+  var /* [auto-meaningful-name] */React1$useContext$_801_index$b$getPrefixCls = React1.useContext($_801_index.b).getPrefixCls
+  var G = React1.useMemo(function () {
     return {
       siderCollapsed: j
     }
   }, [j])
-  return _React.createElement(ES.Provider, {
+  return React1.createElement(ES.Provider, {
     value: G
   }, function () {
     var e
-    var a = _React$useContext$_801_index$b$getPrefixCls("layout-sider", e$prefixCls)
+    var a = React1$useContext$_801_index$b$getPrefixCls("layout-sider", e$prefixCls)
     var s = $_486.a(T, ["collapsed"])
     var c = j ? y : v
     var u = vS(c) ? "".concat(c, "px") : String(c)
-    var p = 0 === parseFloat(String(y || 0)) ? _React.createElement("span", {
+    var p = 0 === parseFloat(String(y || 0)) ? React1.createElement("span", {
       onClick: B,
       className: N("".concat(a, "-zero-width-trigger"), "".concat(a, "-zero-width-trigger-").concat(g ? "right" : "left")),
       style: e$zeroWidthTriggerStyle
-    }, e$trigger || _React.createElement(dS, null)) : null
+    }, e$trigger || React1.createElement(dS, null)) : null
     var m = {
-      expanded: g ? _React.createElement(hS, null) : _React.createElement(_S, null),
-      collapsed: g ? _React.createElement(_S, null) : _React.createElement(hS, null)
+      expanded: g ? React1.createElement(hS, null) : React1.createElement(_S, null),
+      collapsed: g ? React1.createElement(_S, null) : React1.createElement(hS, null)
     }[j ? "collapsed" : "expanded"]
-    var _ = null !== e$trigger ? p || _React.createElement("div", {
+    var _ = null !== e$trigger ? p || React1.createElement("div", {
       className: "".concat(a, "-trigger"),
       onClick: B,
       style: {
@@ -424,12 +424,12 @@ var wS = _React.forwardRef(function (e, t) {
       width: u
     })
     var O = N(a, "".concat(a, "-").concat(l), (e = {}, Ln.a(e, "".concat(a, "-collapsed"), !!j), Ln.a(e, "".concat(a, "-has-trigger"), h && null !== e$trigger && !p), Ln.a(e, "".concat(a, "-below"), !!D), Ln.a(e, "".concat(a, "-zero-width"), 0 === parseFloat(u)), e), e$className)
-    return _React.createElement("aside", Dn.a({
+    return React1.createElement("aside", Dn.a({
       className: O
     }, s, {
       style: b,
       ref: t
-    }), _React.createElement("div", {
+    }), React1.createElement("div", {
       className: "".concat(a, "-children")
     }, e$children), h || D && p ? _ : null)
   }())

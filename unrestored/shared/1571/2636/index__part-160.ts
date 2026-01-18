@@ -14,11 +14,11 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_569 from "./569"
-import /* [auto-meaningful-name] */_$_ from "./569"
+import /* [auto-meaningful-name] */$_5691 from "./569"
 import * as /* [auto-meaningful-name] */$_936 from "./936"
-import /* [auto-meaningful-name] */_$_2 from "./936"
+import /* [auto-meaningful-name] */$_9361 from "./936"
 var rA = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$toast = e.toast
@@ -27,8 +27,8 @@ var rA = React.memo(function (e) {
   var i = undefined !== e$showIcon && e$showIcon
   var /* [auto-meaningful-name] */e$setVisible = e.setVisible
   var s = $_16_index.d()
-  var c = _React.useRef(null)
-  _React.useEffect(function () {
+  var c = React1.useRef(null)
+  React1.useEffect(function () {
     if (c.current) {
       clearTimeout(c.current)
     }
@@ -39,17 +39,17 @@ var rA = React.memo(function (e) {
     }
   }, [s, e$visible, r, e$setVisible])
   return e$visible ? React.createElement("div", {
-    className: _$_2.toastWrapper
+    className: $_9361.toastWrapper
   }, React.createElement("div", {
-    className: _$_2.toast
+    className: $_9361.toast
   }, i && React.createElement($_13_index.j, {
     type: "icon-alert-success",
-    className: _$_2.icon
+    className: $_9361.icon
   }), React.createElement("div", {
-    className: _$_2.textWrapper
+    className: $_9361.textWrapper
   }, "已重置为初始数据"))) : null
 })
-var oA = _React.memo(function () {
+var oA = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
@@ -62,15 +62,15 @@ var oA = _React.memo(function () {
     window.open("https://codemao-guide.yuque.com/bfiekm/sbo5kh/mhfhe11vyex2f0w4?singleDoc#", "_blank")
   }
   return React.createElement("div", {
-    className: N(_$_.wrapper)
+    className: N($_5691.wrapper)
   }, React.createElement("div", {
-    className: N(_$_.flexSc, _$_.header)
+    className: N($_5691.flexSc, $_5691.header)
   }, React.createElement("h3", {
-    className: _$_.title
+    className: $_5691.title
   }, $_710_index$a$formatMessage({
     id: "dataWatch"
   })), React.createElement("div", {
-    className: _$_.toast
+    className: $_5691.toast
   }, React.createElement(rA, {
     visible: n.visible,
     toast: n.toast || "",
@@ -79,16 +79,16 @@ var oA = _React.memo(function () {
       return t($$_$$_$$_$$_src_editor_redux_common_actions.nh())
     }
   })), React.createElement("span", {
-    className: N(_$_.closeBtn, "DevToolCloseButton"),
+    className: N($_5691.closeBtn, "DevToolCloseButton"),
     onClick: r
   }, React.createElement($_13_index.j, {
     type: "icon-close-bold"
   }))), React.createElement("div", {
-    className: N(_$_.content)
+    className: N($_5691.content)
   }, React.createElement("div", {
-    className: _$_.shadowContent
+    className: $_5691.shadowContent
   }, React.createElement(WS, null), React.createElement(JS, null), React.createElement("div", {
-    className: N(_$_.help),
+    className: N($_5691.help),
     onClick: o
   }, "看看怎么用？"))))
 })

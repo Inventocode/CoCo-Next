@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_7 from "../../../7"
 import * as /* [auto-meaningful-name] */$$_$$_$$_286 from "../../../286"
 var xe = function (e) {
@@ -36,9 +36,9 @@ var xe = function (e) {
   var _ = $$_$$_$$_10_index.a(g, 2)
   var v = _[0]
   var b = _[1]
-  var y = React.useCallback($$_$$_$$_7.a(_RegeneratorRuntime.mark(function e() {
+  var y = React.useCallback($$_$$_$$_7.a(RegeneratorRuntime1.mark(function e() {
     var n
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -68,12 +68,12 @@ var xe = function (e) {
   React.useEffect(function () {
     y()
   }, [y])
-  var E = React.useCallback($$_$$_$$_7.a(_RegeneratorRuntime.mark(function e() {
+  var E = React.useCallback($$_$$_$$_7.a(RegeneratorRuntime1.mark(function e() {
     var t
     var /* [auto-meaningful-name] */t$attributes$coordinateRatio
     var o
     var i
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

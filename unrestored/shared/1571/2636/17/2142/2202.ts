@@ -30,7 +30,7 @@ var a = function (e) {
   }
   t.prototype.render_ = function () {
     var /* [auto-meaningful-name] */this$border_rect
-    var /* [auto-meaningful-name] */_this$border_rect
+    var /* [auto-meaningful-name] */this$border_rect1
     var n = this
     if (this.visible_ && this.text_element && this.source_block) {
       (0, o.remove_children)(this.text_element)
@@ -74,8 +74,8 @@ var a = function (e) {
       if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
         this$border_rect.setAttribute("width", String(this.size_.width))
       }
-      if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
-        _this$border_rect.setAttribute("height", String(this.size_.height))
+      if (!(null === (this$border_rect1 = this.border_rect) || undefined === this$border_rect1)) {
+        this$border_rect1.setAttribute("height", String(this.size_.height))
       }
     } else {
       this.size_.width = 0

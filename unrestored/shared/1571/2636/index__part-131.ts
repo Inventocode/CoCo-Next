@@ -11,10 +11,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1203 from "./1203"
-import /* [auto-meaningful-name] */_$_ from "./1203"
-var Gw = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_12031 from "./1203"
+var Gw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "opacity" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -23,7 +23,7 @@ var Gw = _React.memo(function (e) {
   var a = e$getValue(n)
   return React.createElement($_13_index.i, {
     align: "vertical",
-    className: N(_$_.formItemWrapper, _$_.changeOpacity),
+    className: N($_12031.formItemWrapper, $_12031.changeOpacity),
     label: $_710_index$a$formatMessage({
       id: "WidgetForm.opacity"
     })

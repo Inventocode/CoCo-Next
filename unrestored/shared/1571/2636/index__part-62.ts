@@ -11,25 +11,25 @@ import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_691_index from "./691/index"
 import * as /* [auto-meaningful-name] */$_145 from "./145"
 import * as /* [auto-meaningful-name] */$_215 from "./215"
 import * as /* [auto-meaningful-name] */$_741 from "./741"
-import /* [auto-meaningful-name] */_$_ from "./741"
-var gh = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_7411 from "./741"
+var gh = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$stage = e.stage
   var /* [auto-meaningful-name] */e$updateTimes = e.updateTimes
   var /* [auto-meaningful-name] */e$coordinateRatio = e.coordinateRatio
-  var i = _React.useState()
+  var i = React1.useState()
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = $_16_index.e(function (e) {
     return e.project.selectedWidgetId
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (l === t && e$stage && t) {
       var e = Jd.Cb(t)
       c(D.a({}, e))
@@ -61,7 +61,7 @@ var gh = _React.memo(function (e) {
   var k = g.get_rotation()
   var x = Math.round(-180 * k / Math.PI)
   return React.createElement("div", {
-    className: _$_.actorSelectedBox,
+    className: $_7411.actorSelectedBox,
     style: {
       display: s.visible ? undefined : "none",
       position: "absolute",

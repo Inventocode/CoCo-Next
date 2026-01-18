@@ -21,10 +21,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_164 from "./164"
-import /* [auto-meaningful-name] */_$_ from "./164"
-var Pj = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_1641 from "./164"
+var Pj = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$searchName = e.searchName
   var /* [auto-meaningful-name] */e$selectedIds = e.selectedIds
@@ -37,7 +37,7 @@ var Pj = _React.memo(function (e) {
   var u = React.useCallback(function () {
     return l({})
   }, [])
-  var d = _React.useState("")
+  var d = React1.useState("")
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
@@ -52,9 +52,9 @@ var Pj = _React.memo(function (e) {
     g(e)
   }
   return React.createElement("div", {
-    className: _$_.LibraryMain
+    className: $_1641.LibraryMain
   }, React.createElement($_13_index.B, {
-    className: _$_.uploadBtn,
+    className: $_1641.uploadBtn,
     onChange: function (e) {
       if (e) {
         if (e$mode !== Tn.c.ImageLibrary) {

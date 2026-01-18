@@ -19,11 +19,11 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1206_index from "./1206/index"
 import * as /* [auto-meaningful-name] */$_162 from "./162"
 import * as /* [auto-meaningful-name] */$_1207 from "./1207"
-import /* [auto-meaningful-name] */_$_ from "./1207"
+import /* [auto-meaningful-name] */$_12071 from "./1207"
 function dj(e) {
   switch (e) {
     case "zh":
@@ -52,7 +52,7 @@ function pj(e) {
       return "development"
   }
 }
-var mj = _React.memo(function (e) {
+var mj = React1.memo(function (e) {
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
     return e.common.language
@@ -62,12 +62,12 @@ var mj = _React.memo(function (e) {
   })
   var /* [auto-meaningful-name] */r$visible = r.visible
   var /* [auto-meaningful-name] */r$onSuccess = r.onSuccess
-  var a = _React.useState(false)
+  var a = React1.useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useRef(null)
-  _React.useEffect(function () {
+  var u = React1.useRef(null)
+  React1.useEffect(function () {
     if (r$visible) {
       nj = setTimeout(function () {
         l(false)
@@ -79,7 +79,7 @@ var mj = _React.memo(function (e) {
       }, 5e3)
     }
   }, [r$visible, t])
-  var d = _React.useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var d = React1.useCallback(O.a(RegeneratorRuntime.mark(function e() {
     var n
     var r
     var /* [auto-meaningful-name] */e$sent
@@ -142,10 +142,10 @@ var mj = _React.memo(function (e) {
       failReason: r
     })
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     d(false, "")
   }, [d])
-  var m = _React.useCallback(function () {
+  var m = React1.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(n) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -177,13 +177,13 @@ var mj = _React.memo(function (e) {
       return e.apply(this, arguments)
     }
   }(), [t, r$onSuccess, d])
-  var g = _React.useCallback(function (e) {
+  var g = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$error
-    var /* [auto-meaningful-name] */_e$error
-    var /* [auto-meaningful-name] */_e$error$error_body
-    p((null === e || undefined === e ? undefined : e.source) || "", false, "register" === (null === e || undefined === e ? undefined : e.source), (null === e || undefined === e || null === (e$error = e.error) || undefined === e$error ? undefined : e$error.msg) || (null === e || undefined === e || null === (_e$error = e.error) || undefined === _e$error || null === (_e$error$error_body = _e$error.error_body) || undefined === _e$error$error_body ? undefined : _e$error$error_body.catastrophe))
+    var /* [auto-meaningful-name] */e$error1
+    var /* [auto-meaningful-name] */e$error1$error_body
+    p((null === e || undefined === e ? undefined : e.source) || "", false, "register" === (null === e || undefined === e ? undefined : e.source), (null === e || undefined === e || null === (e$error = e.error) || undefined === e$error ? undefined : e$error.msg) || (null === e || undefined === e || null === (e$error1 = e.error) || undefined === e$error1 || null === (e$error1$error_body = e$error1.error_body) || undefined === e$error1$error_body ? undefined : e$error1$error_body.catastrophe))
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     tj = $_1206_index.createCodemaoLoginIframeApi({
       onEvent: function (e) {
         !function (e) {
@@ -257,7 +257,7 @@ var mj = _React.memo(function (e) {
     productCode: $_57_index.a.productCode
   })
   return r$visible ? React.createElement("div", {
-    className: N(_$_.wrapper, c && _$_.ready)
+    className: N($_12071.wrapper, c && $_12071.ready)
   }, React.createElement("iframe", {
     allow: "autoplay; fullscreen; clipboard-read; clipboard-write; encrypted-media; microphone; geolocation; camera",
     ref: u,

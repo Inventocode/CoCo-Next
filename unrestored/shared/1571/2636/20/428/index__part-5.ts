@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
 import * as a from "./12"
 import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */$$_$$_60 from "../../60"
 import * as /* [auto-meaningful-name] */$$_$$_146 from "../../146"
 function mt(e) {
@@ -115,7 +115,7 @@ function Dt(e, t) {
 }
 function Mt(e, t) {
   if ($$_$$_15.pb(t)) {
-    t = $$_$$_15.l(_Color(t))
+    t = $$_$$_15.l(Color1(t))
     a.h(e, {
       color: t
     })
@@ -154,7 +154,7 @@ function Lt(e, t) {
 }
 function Pt(e, t) {
   if ($$_$$_15.pb(t)) {
-    t = $$_$$_15.l(_Color(t))
+    t = $$_$$_15.l(Color1(t))
     a.h(e, {
       backgroundColor: t
     })

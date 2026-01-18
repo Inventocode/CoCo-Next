@@ -75,7 +75,7 @@ var _ = function () {
           }
         }
       } else {
-        for (var c = 0, /* [auto-meaningful-name] */_i$body$length = i.body.length; c < _i$body$length; ++c) {
+        for (var c = 0, /* [auto-meaningful-name] */i$body$length1 = i.body.length; c < i$body$length1; ++c) {
           var f = i.body[c]
           if (f.type !== require$_2233_1130_index$Syntax.ExpressionStatement) {
             break

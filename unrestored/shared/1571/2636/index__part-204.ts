@@ -19,44 +19,44 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1191 from "./1191"
-import /* [auto-meaningful-name] */_$_ from "./1191"
+import /* [auto-meaningful-name] */$_11911 from "./1191"
 import * as /* [auto-meaningful-name] */$_270 from "./270"
-import /* [auto-meaningful-name] */_$_2 from "./270"
-var kL = _React.memo(function () {
+import /* [auto-meaningful-name] */$_2701 from "./270"
+var kL = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.widgetMallVisible
   })
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var n = $_16_index.d()
-  var r = _React.useState(false)
+  var r = React1.useState(false)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = _React.useState([])
+  var s = React1.useState([])
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState(undefined)
+  var d = React1.useState(undefined)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState([])
+  var v = React1.useState([])
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
-  var C = _React.useState([])
+  var C = React1.useState([])
   var T = $_10_index.a(C, 2)
   var j = T[0]
   var R = T[1]
-  var k = _React.useRef(1)
-  var D = _React.useRef(1)
-  var M = _React.useRef(false)
-  var L = _React.useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var k = React1.useRef(1)
+  var D = React1.useRef(1)
+  var M = React1.useRef(false)
+  var L = React1.useCallback(O.a(RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent
-    var /* [auto-meaningful-name] */_e$sent$items
+    var /* [auto-meaningful-name] */e$sent1
+    var /* [auto-meaningful-name] */e$sent1$items
     var o
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -70,10 +70,10 @@ var kL = _React.memo(function () {
             e.next = 6
             return $$_$$_$$_$$_src_shared_widget_custom_shop.e(k.current, 100)
           case 6:
-            _e$sent = e.sent
-            _e$sent$items = _e$sent.items
-            D.current = _e$sent.total
-            if (e$sent && _e$sent$items) {
+            e$sent1 = e.sent
+            e$sent1$items = e$sent1.items
+            D.current = e$sent1.total
+            if (e$sent && e$sent1$items) {
               e$sent.sort(function (e, t) {
                 return t.sort - e.sort
               })
@@ -84,12 +84,12 @@ var kL = _React.memo(function () {
               })
               u(e$sent)
               g(-1)
-              _e$sent$items.sort(function (e, t) {
+              e$sent1$items.sort(function (e, t) {
                 return t.sort - e.sort
               })
-              w(_e$sent$items)
+              w(e$sent1$items)
               a(false)
-              o = _e$sent$items.map(function (e) {
+              o = e$sent1$items.map(function (e) {
                 return e.widget_code
               })
               $$_$$_$$_$$_src_shared_widget_custom_shop.f(o.concat(Et.Q()))
@@ -107,7 +107,7 @@ var kL = _React.memo(function () {
       }
     }, e, null, [[0, 12]])
   })), [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e) {
       k.current = 1
       L()
@@ -241,7 +241,7 @@ var kL = _React.memo(function () {
   }, $_710_index$a$formatMessage({
     id: "WidgetMall.add"
   }), "(", j.length, ")"))
-  var U = _React.useCallback(function () {
+  var U = React1.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
@@ -296,11 +296,11 @@ var kL = _React.memo(function () {
     }),
     footer: W,
     onClose: P,
-    className: N(_$_2.widgetMallDialog, 0 !== j.length && _$_2.DialogFooter)
+    className: N($_2701.widgetMallDialog, 0 !== j.length && $_2701.DialogFooter)
   }, i && React.createElement("div", {
-    className: _$_2.networkError
+    className: $_2701.networkError
   }, React.createElement("img", {
-    src: _$_,
+    src: $_11911,
     alt: "networkError"
   }), React.createElement("h3", null, $_710_index$a$formatMessage({
     id: "WidgetMall.networkError"
@@ -314,11 +314,11 @@ var kL = _React.memo(function () {
   }))), !i && l.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: N(_$_2.widgetLabel, m === e.id && _$_2.active),
+      className: N($_2701.widgetLabel, m === e.id && $_2701.active),
       onClick: B.bind(null, e.id)
     }, e.name)
   }), !i && React.createElement("div", {
-    className: _$_2.cardContainer,
+    className: $_2701.cardContainer,
     onScroll: function (e) {
       var /* [auto-meaningful-name] */e$currentTarget = e.currentTarget
       if (e$currentTarget.scrollTop + e$currentTarget.clientHeight > e$currentTarget.scrollHeight - 220) {
@@ -328,47 +328,47 @@ var kL = _React.memo(function () {
   }, y.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: N(_$_2.widgetCard, j.indexOf(e.id) >= 0 && _$_2.selectedWidgetCard)
+      className: N($_2701.widgetCard, j.indexOf(e.id) >= 0 && $_2701.selectedWidgetCard)
     }, 2 === e.widget_type ? React.createElement("div", {
-      className: _$_2.invisibleWidget
+      className: $_2701.invisibleWidget
     }, React.createElement("div", {
-      className: _$_2.invisibleWidgetHeader
+      className: $_2701.invisibleWidgetHeader
     }, React.createElement("img", {
       src: e.icon,
       alt: "icon",
-      className: _$_2.widgetIcon
+      className: $_2701.widgetIcon
     }), React.createElement("div", {
-      className: _$_2.widgetInfo
+      className: $_2701.widgetInfo
     }, React.createElement("p", {
-      className: _$_2.widgetName
+      className: $_2701.widgetName
     }, e.widget_name), React.createElement("p", {
-      className: _$_2.authorName
+      className: $_2701.authorName
     }, e.author_name))), React.createElement("div", {
-      className: _$_2.widgetIntroContainer
+      className: $_2701.widgetIntroContainer
     }, React.createElement("p", {
-      className: _$_2.widgetIntro
+      className: $_2701.widgetIntro
     }, e.intro))) : React.createElement("div", {
-      className: _$_2.visibleWidget
+      className: $_2701.visibleWidget
     }, React.createElement("div", {
-      className: _$_2.widgetImgContainer,
+      className: $_2701.widgetImgContainer,
       style: {
         backgroundImage: "url(\"".concat(e.icon, "\")")
       }
     })), React.createElement("div", {
-      className: _$_2.widgetCardFooter
+      className: $_2701.widgetCardFooter
     }, 1 === e.widget_type ? React.createElement("div", {
-      className: _$_2.widgetInfo
+      className: $_2701.widgetInfo
     }, React.createElement("p", {
-      className: _$_2.widgetName
+      className: $_2701.widgetName
     }, e.widget_name), React.createElement("p", {
-      className: _$_2.authorName
+      className: $_2701.authorName
     }, e.author_name)) : React.createElement("div", null), 1 === e.if_have ? React.createElement("div", {
-      className: _$_2.added
+      className: $_2701.added
     }, React.createElement("span", null, $_710_index$a$formatMessage({
       id: "WidgetMall.added"
     }))) : j.includes(e.id) ? React.createElement("div", {
       onClick: F.bind(null, e.id),
-      className: N(_$_2.icon, _$_2.selectedIcon)
+      className: N($_2701.icon, $_2701.selectedIcon)
     }, React.createElement($_13_index.j, {
       type: "icon-selected"
     })) : React.createElement($_748_index.a, {
@@ -379,7 +379,7 @@ var kL = _React.memo(function () {
       })
     }, React.createElement("div", {
       onClick: F.bind(null, e.id),
-      className: N(_$_2.icon, _$_2.addIcon)
+      className: N($_2701.icon, $_2701.addIcon)
     }, React.createElement($_13_index.j, {
       type: "icon-add"
     })))))

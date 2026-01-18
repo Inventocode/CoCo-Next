@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
 var r
-import * as /* [auto-meaningful-name] */$_744 from "./744"
+import * as /* [auto-meaningful-name] */$_744_index from "./744/index"
 var g = function (e, t) {
   var n = "function" === typeof Symbol && e[Symbol.iterator]
   if (!n) {

@@ -8,11 +8,11 @@
 
 import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
 import s from "../8"
 import * as /* [auto-meaningful-name] */$_155 from "./155"
-import /* [auto-meaningful-name] */_$_ from "./155"
+import /* [auto-meaningful-name] */$_1551 from "./155"
 var _a
 _a = function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
@@ -26,21 +26,21 @@ _a = function (e) {
       e$onSelect(e$index, e)
     }
   }
-  return _React.createElement("div", {
-    className: _$_.typeSelectionList,
+  return React1.createElement("div", {
+    className: $_1551.typeSelectionList,
     style: {
       left: e$position.x,
       top: e$position.y,
       display: e$visible ? "block" : "none"
     }
-  }, _React.createElement("div", {
+  }, React1.createElement("div", {
     onClick: d.bind(null, "number"),
-    className: s("number" === e$type && _$_.active)
+    className: s("number" === e$type && $_1551.active)
   }, $$_710_index$a$formatMessage({
     id: "storageItemNumber"
-  })), _React.createElement("div", {
+  })), React1.createElement("div", {
     onClick: d.bind(null, "string"),
-    className: s("string" === e$type && _$_.active)
+    className: s("string" === e$type && $_1551.active)
   }, $$_710_index$a$formatMessage({
     id: "storageItemString"
   })))

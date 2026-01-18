@@ -79,7 +79,7 @@ var d = function () {
   }
   e.prototype.move_to = function (e) {
     var /* [auto-meaningful-name] */this$db_
-    var /* [auto-meaningful-name] */_this$db_
+    var /* [auto-meaningful-name] */this$db_1
     if (this.in_db) {
       if (!(null === (this$db_ = this.db_) || undefined === this$db_)) {
         this$db_.remove_connection(this)
@@ -87,8 +87,8 @@ var d = function () {
     }
     this.x_ = e[0]
     this.y_ = e[1]
-    if (!(this.hidden_ || null === (_this$db_ = this.db_) || undefined === _this$db_)) {
-      _this$db_.add_connection(this)
+    if (!(this.hidden_ || null === (this$db_1 = this.db_) || undefined === this$db_1)) {
+      this$db_1.add_connection(this)
     }
   }
   e.prototype.move_by = function (e) {

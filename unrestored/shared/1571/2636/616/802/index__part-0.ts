@@ -11,9 +11,9 @@ import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"
 import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
 import * as /* [auto-meaningful-name] */$$_$$_107 from "../../107"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_8 from "../../8"
-import /* [auto-meaningful-name] */_$$_$$_ from "../../8"
+import /* [auto-meaningful-name] */$$_$$_81 from "../../8"
 import * as /* [auto-meaningful-name] */$$_$$_486 from "../../486"
 import * as /* [auto-meaningful-name] */$$_$$_801_index from "../../801/index"
 import * as /* [auto-meaningful-name] */$$_$$_103 from "../../103"
@@ -60,7 +60,7 @@ var A = function (e) {
       default:
         console.warn(new p(e$size).error)
     }
-    var g = _$$_$$_(h, (n = {}, $$_$$_35.a(n, "".concat(h, "-").concat(A), A), $$_$$_35.a(n, "".concat(h, "-rtl"), "rtl" === t$direction), n), e$className)
+    var g = $$_$$_81(h, (n = {}, $$_$$_35.a(n, "".concat(h, "-").concat(A), A), $$_$$_35.a(n, "".concat(h, "-rtl"), "rtl" === t$direction), n), e$className)
     return React.createElement("div", $$_$$_19.a({}, d, {
       className: g
     }))

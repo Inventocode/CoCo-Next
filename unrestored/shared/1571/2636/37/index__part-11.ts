@@ -108,14 +108,14 @@ function Gr(e) {
   var s
   var l
   var u
-  var /* [auto-meaningful-name] */_y$sent
+  var /* [auto-meaningful-name] */y$sent1
   var p
   var f
-  var /* [auto-meaningful-name] */_y$sent2
+  var /* [auto-meaningful-name] */y$sent2
   var m
   var g
   var /* [auto-meaningful-name] */g$value
-  var /* [auto-meaningful-name] */_y$sent3
+  var /* [auto-meaningful-name] */y$sent3
   var /* [auto-meaningful-name] */$$_49$oTHelper$imageFileList
   return RegeneratorRuntime.wrap(function (y) {
     for (;;) {
@@ -136,21 +136,21 @@ function Gr(e) {
           y.next = 10
           return $$_48_3_index.b(Wr, u)
         case 10:
-          _y$sent = y.sent
+          y$sent1 = y.sent
           p = 0
         case 12:
-          if (!(p < _y$sent.length)) {
+          if (!(p < y$sent1.length)) {
             y.next = 21
             break
           }
-          f = _y$sent[p]
+          f = y$sent1[p]
           y.next = 16
           return $$_48_3_index.b($$_15.qb, f, y$sent)
         case 16:
-          if ("success" === (_y$sent2 = y.sent).status) {
-            s.push(_y$sent2)
+          if ("success" === (y$sent2 = y.sent).status) {
+            s.push(y$sent2)
           } else {
-            a.push(_y$sent2)
+            a.push(y$sent2)
           }
         case 18:
           p++
@@ -212,10 +212,10 @@ function Gr(e) {
           y.next = 44
           return $$_48_3_index.b(on.y, g$value.file)
         case 44:
-          if (_y$sent3 = y.sent) {
-            l.push(_y$sent3)
+          if (y$sent3 = y.sent) {
+            l.push(y$sent3)
             if (!(null === ($$_49$oTHelper$imageFileList = $$_49.oTHelper.imageFileList) || undefined === $$_49$oTHelper$imageFileList)) {
-              $$_49$oTHelper$imageFileList.clientOp.add(_y$sent3)
+              $$_49$oTHelper$imageFileList.clientOp.add(y$sent3)
             }
           }
         case 46:
@@ -549,7 +549,7 @@ function qr(e) {
   var u
   var d
   var p
-  var /* [auto-meaningful-name] */_$sent2
+  var /* [auto-meaningful-name] */_$sent1
   var h
   var m
   var g
@@ -579,10 +579,10 @@ function qr(e) {
           _.next = 13
           return $$_48_3_index.b($$_15.rb, p, _$sent)
         case 13:
-          if ("success" === (_$sent2 = _.sent).status) {
-            s.push(_$sent2)
+          if ("success" === (_$sent1 = _.sent).status) {
+            s.push(_$sent1)
           } else {
-            a.push(_$sent2)
+            a.push(_$sent1)
           }
         case 15:
           d++
@@ -722,7 +722,7 @@ function Xr(e, t) {
 function Qr() {
   return (Qr = St.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent
+    var /* [auto-meaningful-name] */e$sent1
     var i
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -738,13 +738,13 @@ function Qr() {
             e.next = 6
             return $$_15.y(e$sent)
           case 6:
-            _e$sent = e.sent
+            e$sent1 = e.sent
             i = {
               cdnUrl: "",
               id: n,
               name: n,
               source: e$sent,
-              duration: _e$sent < 1 ? 1 : _e$sent
+              duration: e$sent1 < 1 ? 1 : e$sent1
             }
             return e.abrupt("return", i)
           case 9:
@@ -759,7 +759,7 @@ function Qr() {
 }
 function Zr() {
   var /* [auto-meaningful-name] */n$sent
-  var /* [auto-meaningful-name] */_n$sent
+  var /* [auto-meaningful-name] */n$sent1
   return RegeneratorRuntime.wrap(function (n) {
     for (;;) {
       switch (n.prev = n.next) {
@@ -771,12 +771,12 @@ function Zr() {
           n.next = 5
           return $$_48_3_index.f(_r.I)
         case 5:
-          if (_n$sent = n.sent, !n$sent) {
+          if (n$sent1 = n.sent, !n$sent) {
             n.next = 9
             break
           }
           n.next = 9
-          return $$_48_3_index.b($$_197_index.d, _n$sent, function (e) {
+          return $$_48_3_index.b($$_197_index.d, n$sent1, function (e) {
             var /* [auto-meaningful-name] */$$_49$oTHelper$soundFileList
             Jr(e)
             if (!(null === ($$_49$oTHelper$soundFileList = $$_49.oTHelper.soundFileList) || undefined === $$_49$oTHelper$soundFileList)) {
@@ -951,7 +951,7 @@ function ro(e) {
   var l
   var u
   var d
-  var /* [auto-meaningful-name] */_g$sent
+  var /* [auto-meaningful-name] */g$sent1
   var f
   var h
   var m
@@ -980,10 +980,10 @@ function ro(e) {
           g.next = 13
           return $$_48_3_index.b($$_15.qb, d, g$sent, [".svg"])
         case 13:
-          if ("success" === (_g$sent = g.sent).status) {
-            a.push(_g$sent)
+          if ("success" === (g$sent1 = g.sent).status) {
+            a.push(g$sent1)
           } else {
-            i.push(_g$sent)
+            i.push(g$sent1)
           }
         case 15:
           u++
@@ -1137,7 +1137,7 @@ function io() {
 }
 function ao() {
   var /* [auto-meaningful-name] */n$sent
-  var /* [auto-meaningful-name] */_n$sent2
+  var /* [auto-meaningful-name] */n$sent1
   return RegeneratorRuntime.wrap(function (n) {
     for (;;) {
       switch (n.prev = n.next) {
@@ -1149,12 +1149,12 @@ function ao() {
           n.next = 5
           return $$_48_3_index.f(_r.o)
         case 5:
-          if (_n$sent2 = n.sent, n.prev = 6, !n$sent) {
+          if (n$sent1 = n.sent, n.prev = 6, !n$sent) {
             n.next = 10
             break
           }
           n.next = 10
-          return $$_48_3_index.b($$_197_index.b, _n$sent2, function (e) {
+          return $$_48_3_index.b($$_197_index.b, n$sent1, function (e) {
             var /* [auto-meaningful-name] */$$_49$oTHelper$iconFileList
             so(e)
             if (!(null === ($$_49$oTHelper$iconFileList = $$_49.oTHelper.iconFileList) || undefined === $$_49$oTHelper$iconFileList)) {
@@ -1329,11 +1329,11 @@ function ho() {
 var mo = RegeneratorRuntime.mark(go)
 function go() {
   var /* [auto-meaningful-name] */O$sent
-  var /* [auto-meaningful-name] */_O$sent
-  var /* [auto-meaningful-name] */_O$sent2
-  var /* [auto-meaningful-name] */_O$sent3
-  var /* [auto-meaningful-name] */_O$sent4
-  var /* [auto-meaningful-name] */_O$sent5
+  var /* [auto-meaningful-name] */O$sent1
+  var /* [auto-meaningful-name] */O$sent2
+  var /* [auto-meaningful-name] */O$sent3
+  var /* [auto-meaningful-name] */O$sent4
+  var /* [auto-meaningful-name] */O$sent5
   var s
   var l
   var u
@@ -1363,37 +1363,37 @@ function go() {
             return e.project.globalArrayList
           })
         case 5:
-          _O$sent = O.sent
+          O$sent1 = O.sent
           O.next = 8
           return $$_48_3_index.f(function (e) {
             return e.project.globalObjectList
           })
         case 8:
-          _O$sent2 = O.sent
+          O$sent2 = O.sent
           O.next = 11
           return $$_48_3_index.f(function (e) {
             return e.project.globalWidgetIds
           })
         case 11:
-          _O$sent3 = O.sent
+          O$sent3 = O.sent
           O.next = 14
           return $$_48_3_index.f(function (e) {
             return e.project.id
           })
         case 14:
-          _O$sent4 = O.sent
+          O$sent4 = O.sent
           O.next = 17
           return $$_48_3_index.f(function (e) {
             return e.project.screens
           })
         case 17:
-          _O$sent5 = O.sent
+          O$sent5 = O.sent
           s = []
           l = []
           u = []
           d = []
           p = []
-          _O$sent3.forEach(function (e) {
+          O$sent3.forEach(function (e) {
             var t = on.dc.get(e)
             if (t) {
               if (!(t.type !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B && t.type !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.y)) {
@@ -1405,8 +1405,8 @@ function go() {
             }
           })
           Array.prototype.push.apply(s, O$sent)
-          Array.prototype.push.apply(l, _O$sent)
-          Array.prototype.push.apply(u, _O$sent2)
+          Array.prototype.push.apply(l, O$sent1)
+          Array.prototype.push.apply(u, O$sent2)
           f = s.map(function (e) {
             return $$_110.a("PRIMITIVE", e, {
               isWatching: false
@@ -1423,7 +1423,7 @@ function go() {
             })
           })
           g = d.map(function (e) {
-            var t = $$_20_index.getLocalDocumentObject(_O$sent4, e.id) || e.attributes.fields
+            var t = $$_20_index.getLocalDocumentObject(O$sent4, e.id) || e.attributes.fields
             return $$_110.a(e.type, {
               id: e.id,
               defaultValue: "no-use",
@@ -1441,7 +1441,7 @@ function go() {
               isWatching: false
             })
           })
-          _O$sent5.forEach(function (e) {
+          O$sent5.forEach(function (e) {
             var /* [auto-meaningful-name] */e$primitiveVariables = e.primitiveVariables
             var /* [auto-meaningful-name] */e$arrayVariables = e.arrayVariables
             var /* [auto-meaningful-name] */e$objectVariables = e.objectVariables

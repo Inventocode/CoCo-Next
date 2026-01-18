@@ -32,7 +32,7 @@ export { Widget as a }
 export { ge as b }
 var r
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_27 from "../../../../unrestored/shared/1571/2636/27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_34_465 from "../../../../unrestored/shared/1571/2636/34/465"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../unrestored/shared/1571/2636/25/index"
@@ -40,9 +40,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */AntdMobile from "antd-mobile"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_utils_network_axiosWithCredentials from "../../utils/network/axios-with-credentials"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_228_index from "../../../../unrestored/shared/1571/2636/228/index"
@@ -259,16 +259,16 @@ var B = function (e, t, n, o) {
   })
   n.properties.forEach(function (n) {
     var /* [auto-meaningful-name] */h$getter
-    var /* [auto-meaningful-name] */_h$getter
-    var /* [auto-meaningful-name] */_h$getter2
-    var /* [auto-meaningful-name] */_h$getter3
+    var /* [auto-meaningful-name] */h$getter1
+    var /* [auto-meaningful-name] */h$getter2
+    var /* [auto-meaningful-name] */h$getter3
     var /* [auto-meaningful-name] */n$key = n.key
     var /* [auto-meaningful-name] */n$blockOptions = n.blockOptions
     var h = undefined === n$blockOptions ? {} : n$blockOptions
     if (false !== h.generateBlock && false !== (null === (h$getter = h.getter) || undefined === h$getter ? undefined : h$getter.generateBlock)) {
-      var m = (null === (_h$getter = h.getter) || undefined === _h$getter ? undefined : _h$getter.order) || r.GETORDER + i.length + 1
+      var m = (null === (h$getter1 = h.getter) || undefined === h$getter1 ? undefined : h$getter1.order) || r.GETORDER + i.length + 1
       var g = ""
-      if (null === (_h$getter2 = h.getter) || undefined === _h$getter2 ? undefined : _h$getter2.line) {
+      if (null === (h$getter2 = h.getter) || undefined === h$getter2 ? undefined : h$getter2.line) {
         var _ = "flyout-line-".concat(t, "-property-").concat(n$key, "-getter")
         d.push({
           lineLabel: _,
@@ -277,7 +277,7 @@ var B = function (e, t, n, o) {
         g = "<label type=\"".concat(_, "\"></label>")
       }
       g += "\n      <block type=\"widget_get\" uncache=\"true\">\n        <mutation\n          widget_type=\"".concat(t, "\"\n          is_any_widget=\"").concat(o, "\"\n          property=\"").concat(n$key, "\">\n        </mutation>\n        <field name=\"WIDGET_ID\">").concat(e, "</field>\n      </block>")
-      if (null === (_h$getter3 = h.getter) || undefined === _h$getter3 ? undefined : _h$getter3.space) {
+      if (null === (h$getter3 = h.getter) || undefined === h$getter3 ? undefined : h$getter3.space) {
         g += "<sep gap=\"".concat(h.getter.space, "\"></sep>")
       }
       if ("__visible" === n$key || "__disabled" === n$key) {
@@ -295,9 +295,9 @@ var B = function (e, t, n, o) {
   })
   n.properties.forEach(function (n) {
     var /* [auto-meaningful-name] */m$setter
-    var /* [auto-meaningful-name] */_m$setter
-    var /* [auto-meaningful-name] */_m$setter2
-    var /* [auto-meaningful-name] */_m$setter3
+    var /* [auto-meaningful-name] */m$setter1
+    var /* [auto-meaningful-name] */m$setter2
+    var /* [auto-meaningful-name] */m$setter3
     var /* [auto-meaningful-name] */n$key = n.key
     var /* [auto-meaningful-name] */n$readonly = n.readonly
     var /* [auto-meaningful-name] */n$blockOptions = n.blockOptions
@@ -316,9 +316,9 @@ var B = function (e, t, n, o) {
       g = false
     }
     if (g) {
-      var _ = (null === (_m$setter = m.setter) || undefined === _m$setter ? undefined : _m$setter.order) || r.SETORDER + s.length + 1
+      var _ = (null === (m$setter1 = m.setter) || undefined === m$setter1 ? undefined : m$setter1.order) || r.SETORDER + s.length + 1
       var v = ""
-      if (null === (_m$setter2 = m.setter) || undefined === _m$setter2 ? undefined : _m$setter2.line) {
+      if (null === (m$setter2 = m.setter) || undefined === m$setter2 ? undefined : m$setter2.line) {
         var b = "flyout-line-".concat(t, "-property-").concat(n$key, "-setter")
         d.push({
           lineLabel: b,
@@ -327,7 +327,7 @@ var B = function (e, t, n, o) {
         v = "<label type=\"".concat(b, "\"></label>")
       }
       v += "\n      <block type=\"widget_set\" uncache=\"true\">\n        <mutation\n          widget_type=\"".concat(t, "\"\n          is_any_widget=\"").concat(o, "\"\n          property=\"").concat(n$key, "\">\n        </mutation>\n        <field name=\"WIDGET_ID\">").concat(e, "</field>\n      </block>")
-      if (null === (_m$setter3 = m.setter) || undefined === _m$setter3 ? undefined : _m$setter3.space) {
+      if (null === (m$setter3 = m.setter) || undefined === m$setter3 ? undefined : m$setter3.space) {
         v += "<sep gap=\"".concat(m.setter.space, "\"></sep>")
       }
       if ("__visible" === n$key || "__disabled" === n$key) {
@@ -588,20 +588,20 @@ function G(e, t) {
   }
 }
 function W(e) {
-  return "antd-mobile" === e ? AntdMobile : "color" === e ? _Color : undefined
+  return "antd-mobile" === e ? AntdMobile : "color" === e ? Color1 : undefined
 }
 function U(e, t) {
   return H.apply(this, arguments)
 }
 function H() {
-  return (H = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t, r) {
+  return (H = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, r) {
     var o
     var u
     var d
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$default
-    var /* [auto-meaningful-name] */_e$sent
-    var /* [auto-meaningful-name] */_e$sent$transformSync
+    var /* [auto-meaningful-name] */e$sent1
+    var /* [auto-meaningful-name] */e$sent1$transformSync
     var /* [auto-meaningful-name] */Https__static$bcmcdn$com_appcraft_modules_
     var /* [auto-meaningful-name] */Https__static$codemao$cn_appcraft_modules_
     var y
@@ -611,13 +611,13 @@ function H() {
     var /* [auto-meaningful-name] */CD$types
     var /* [auto-meaningful-name] */C$widget
     var I = arguments
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             O = function () {
-              return (O = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t) {
-                return _RegeneratorRuntime.wrap(function (e) {
+              return (O = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
+                return RegeneratorRuntime1.wrap(function (e) {
                   for (;;) {
                     switch (e.prev = e.next) {
                       case 0:
@@ -649,9 +649,9 @@ function H() {
             e.next = 10
             return import("@babel/core")
           case 10:
-            _e$sent = e.sent
-            _e$sent$transformSync = _e$sent.transformSync
-            t = (null === (o = _e$sent$transformSync(t, {
+            e$sent1 = e.sent
+            e$sent1$transformSync = e$sent1.transformSync
+            t = (null === (o = e$sent1$transformSync(t, {
               presets: [e$sent$default]
             })) || undefined === o ? undefined : o.code) || ""
             $_externalModule.clearExternalModules()
@@ -664,7 +664,7 @@ function H() {
                 return function e() {
                   $$_$$_$$_$$_unrestored_shared_1571_2636_27.a(this, e)
                 }
-              }(), _React
+              }(), React1
             ].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($_restrict.c)))
             Https__static$bcmcdn$com_appcraft_modules_ = "https://static.bcmcdn.com/appcraft/modules/"
             Https__static$codemao$cn_appcraft_modules_ = "https://static.codemao.cn/appcraft/modules/"
@@ -674,7 +674,7 @@ function H() {
               return E(e)
             }))
           case 21:
-            $$_$$_$$_$$_unrestored_shared_1571_2636_34_465.a(Function, ["require", "exports", "InvisibleWidget", "VisibleWidget", "React"].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($_restrict.b), [t])).apply(undefined, [u, d, M, P, _React].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($_restrict.c)))
+            $$_$$_$$_$$_unrestored_shared_1571_2636_34_465.a(Function, ["require", "exports", "InvisibleWidget", "VisibleWidget", "React"].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($_restrict.b), [t])).apply(undefined, [u, d, M, P, React1].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a($_restrict.c)))
             CD$types = (C = d).types
             C$widget = C.widget
             if (!CD$types.isInvisibleWidget) {
@@ -810,11 +810,11 @@ function Y(e, t) {
   return K.apply(this, arguments)
 }
 function K() {
-  return (K = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (K = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$types
     var /* [auto-meaningful-name] */e$sent$widget
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -863,10 +863,10 @@ function q(e, t) {
   return X.apply(this, arguments)
 }
 function X() {
-  return (X = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (X = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent2
-    return _RegeneratorRuntime.wrap(function (e) {
+    var /* [auto-meaningful-name] */e$sent1
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -887,8 +887,8 @@ function X() {
             e.next = 6
             return Y(e$sent, n)
           case 6:
-            _e$sent2 = e.sent
-            return e.abrupt("return", _e$sent2)
+            e$sent1 = e.sent
+            return e.abrupt("return", e$sent1)
           case 8:
           case "end":
             return e.stop()
@@ -921,12 +921,12 @@ function Z(e, t) {
   return J.apply(this, arguments)
 }
 function J() {
-  return (J = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (J = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent3
-    var /* [auto-meaningful-name] */_e$sent3$type
-    return _RegeneratorRuntime.wrap(function (e) {
+    var /* [auto-meaningful-name] */e$sent1
+    var /* [auto-meaningful-name] */e$sent1$type
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -947,15 +947,15 @@ function J() {
             e.next = 8
             return q(e$sent.data, true)
           case 8:
-            _e$sent3 = e.sent
-            _e$sent3$type = _e$sent3.type
+            e$sent1 = e.sent
+            e$sent1$type = e$sent1.type
             $_storage.b({
               id: n,
-              type: _e$sent3$type,
-              types: _e$sent3,
+              type: e$sent1$type,
+              types: e$sent1,
               cdnUrl: t
             })
-            return e.abrupt("return", _e$sent3)
+            return e.abrupt("return", e$sent1)
           case 12:
           case "end":
             return e.stop()
@@ -968,21 +968,21 @@ function $(e, t) {
   return ee.apply(this, arguments)
 }
 function ee() {
-  return (ee = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (ee = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var o
     var a
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             if (o = function () {
-              return (o = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t) {
+              return (o = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
                 var /* [auto-meaningful-name] */e$sent
                 var /* [auto-meaningful-name] */e$sent$types
                 var /* [auto-meaningful-name] */e$sent$widget
                 var /* [auto-meaningful-name] */e$sent$types$type
-                return _RegeneratorRuntime.wrap(function (e) {
+                return RegeneratorRuntime1.wrap(function (e) {
                   for (;;) {
                     switch (e.prev = e.next) {
                       case 0:
@@ -1042,7 +1042,7 @@ function te(e, t, n) {
   return ne.apply(this, arguments)
 }
 function ne() {
-  return (ne = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function e(t, n, r) {
+  return (ne = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n, r) {
     var o
     var a
     var s
@@ -1053,9 +1053,9 @@ function ne() {
     var p
     var /* [auto-meaningful-name] */e$sent
     var h
-    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */e$sent1
     var g
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -1097,8 +1097,8 @@ function ne() {
             e.next = 18
             return $_shop.e(d, p)
           case 18:
-            _e$sent4 = e.sent
-            u = u.concat(_e$sent4.items)
+            e$sent1 = e.sent
+            u = u.concat(e$sent1.items)
           case 20:
             d++
             e.next = 15

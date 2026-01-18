@@ -5,7 +5,7 @@
  */
 
 var r = require("../../1686/194")
-var /* [auto-meaningful-name] */require$$_386$f = require("../386").f
+var /* [auto-meaningful-name] */require$$_386_index$f = require("../386/index").f
 var i = require("../../1581/425")
 var a = require("../../1692/400")
 var s = require("./1077")
@@ -23,7 +23,7 @@ module.exports = function (e, t) {
   if (n = e$global ? r : e$stat ? r[e$target] || s(e$target, {}) : (r[e$target] || {}).prototype) {
     for (u in t) {
       p = t[u]
-      d = e.noTargetGet ? (f = require$$_386$f(n, u)) && f.value : n[u]
+      d = e.noTargetGet ? (f = require$$_386_index$f(n, u)) && f.value : n[u]
       if (!l(e$global ? u : e$target + (e$stat ? "." : "#") + u, e.forced) && undefined !== d) {
         if (typeof p === typeof d) {
           continue

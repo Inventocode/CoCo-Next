@@ -31,11 +31,11 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1052 from "./1052"
-import /* [auto-meaningful-name] */_$_ from "./1052"
+import /* [auto-meaningful-name] */$_10521 from "./1052"
 import * as /* [auto-meaningful-name] */$_281 from "./281"
-import /* [auto-meaningful-name] */_$_2 from "./281"
+import /* [auto-meaningful-name] */$_2811 from "./281"
 var rn = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
@@ -53,32 +53,32 @@ var rn = function (e) {
   })
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var c = $_16_index.d()
-  var l = _React.useState(false)
+  var l = React1.useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = _React.useState(false)
+  var m = React1.useState(false)
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = _React.useState("")
+  var y = React1.useState("")
   var w = $_10_index.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = _React.useState(false)
+  var A = React1.useState(false)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var k = j[1]
-  var x = _React.useState(false)
+  var x = React1.useState(false)
   var D = $_10_index.a(x, 2)
   var M = D[0]
   var L = D[1]
-  var P = _React.useState(false)
+  var P = React1.useState(false)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = _React.useRef(false)
-  var U = _React.useCallback(function (e, t) {
+  var W = React1.useRef(false)
+  var U = React1.useCallback(function (e, t) {
     $_141_index.a("WorkShare", {
       workId: o,
       workName: r.title,
@@ -91,7 +91,7 @@ var rn = function (e) {
       failReason: t
     })
   }, [o, a, r.title, i])
-  var H = _React.useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var H = React1.useCallback(O.a(RegeneratorRuntime.mark(function e() {
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -146,8 +146,8 @@ var rn = function (e) {
     return (V = O.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var /* [auto-meaningful-name] */e$sent
-      var /* [auto-meaningful-name] */_e$sent
-      var /* [auto-meaningful-name] */_e$sent$url
+      var /* [auto-meaningful-name] */e$sent1
+      var /* [auto-meaningful-name] */e$sent1$url
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -170,10 +170,10 @@ var rn = function (e) {
               e.next = 11
               return $_197_index.e(e$sent)
             case 11:
-              _e$sent = e.sent
-              _e$sent$url = _e$sent.url
+              e$sent1 = e.sent
+              e$sent1$url = e$sent1.url
               c($$_$$_$$_$$_src_editor_redux_common_actions.Ti({
-                img: _e$sent$url
+                img: e$sent1$url
               }))
             case 14:
               e.next = 19
@@ -231,7 +231,7 @@ var rn = function (e) {
       }, e)
     }))).apply(this, arguments)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       if (!W.current) {
         k(true)
@@ -247,18 +247,18 @@ var rn = function (e) {
   }, [H, e$visible])
   return React.createElement($_13_index.f, {
     onClose: e$onClose,
-    className: _$_2.shareToOthers,
+    className: $_2811.shareToOthers,
     title: $_710_index$a$formatMessage({
       id: "Publish.shareToOthers"
     }),
     withPortal: true,
     visible: e$visible
   }, React.createElement("div", {
-    className: _$_2.qrWrapper
+    className: $_2811.qrWrapper
   }, (R || M || F) && React.createElement("div", {
-    className: _$_2.blocking
+    className: $_2811.blocking
   }, React.createElement("div", {
-    className: _$_2.iconWrapper
+    className: $_2811.iconWrapper
   }, M ? React.createElement("div", {
     onClick: function () {
       W.current = false
@@ -268,13 +268,13 @@ var rn = function (e) {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-refresh",
-    className: _$_2.refreshIcon
+    className: $_2811.refreshIcon
   })) : React.createElement(Ge, null)), React.createElement("span", null, $_710_index$a$formatMessage(M ? {
     id: "Publish.refreshQrCode"
   } : {
     id: "Publish.creatingQrCode"
   }))), React.createElement("div", {
-    className: _$_2.qrCode
+    className: $_2811.qrCode
   }, React.createElement($_1036_index, {
     value: C,
     size: 168,
@@ -285,15 +285,15 @@ var rn = function (e) {
       src: "https://static.bcmcdn.com/coco/image/share-dialog/qrlogo.png"
     }
   })), React.createElement("div", {
-    className: _$_2.message
+    className: $_2811.message
   }, R || M ? "" : $_710_index$a$formatMessage({
     id: "Publish.shareQrCode"
   })), React.createElement("div", {
-    className: _$_2.shareLinkWrapper
+    className: $_2811.shareLinkWrapper
   }, React.createElement("div", {
-    className: _$_2.link
+    className: $_2811.link
   }, C), React.createElement("div", {
-    className: N(_$_2.copyBtn, v && _$_2.copied, (R || M || F) && _$_2.disabled),
+    className: N($_2811.copyBtn, v && $_2811.copied, (R || M || F) && $_2811.disabled),
     onClick: function () {
       return K.apply(this, arguments)
     }
@@ -302,11 +302,11 @@ var rn = function (e) {
   } : {
     id: "Publish.copyShareLink"
   })))), React.createElement("div", {
-    className: _$_2.lineWrapper
+    className: $_2811.lineWrapper
   }, React.createElement("div", {
-    className: _$_2.line
+    className: $_2811.line
   }), React.createElement("div", {
-    className: _$_2.settings,
+    className: $_2811.settings,
     onClick: function () {
       return p(!d)
     }
@@ -314,19 +314,19 @@ var rn = function (e) {
     id: "Publish.moreSettings"
   })), React.createElement($_13_index.j, {
     type: "icon-dropdown-down",
-    className: N(_$_2.settingsIcon, d && _$_2.rotateSettingsIcon)
+    className: N($_2811.settingsIcon, d && $_2811.rotateSettingsIcon)
   })), React.createElement("div", {
-    className: _$_2.line
+    className: $_2811.line
   })), React.createElement("div", {
-    className: N(_$_2.settingWrapper, !d && _$_2.invisible)
+    className: N($_2811.settingWrapper, !d && $_2811.invisible)
   }, React.createElement("div", {
-    className: _$_2.workInfo
+    className: $_2811.workInfo
   }, React.createElement("ul", null, React.createElement("li", null, React.createElement("p", {
-    className: _$_2.title
+    className: $_2811.title
   }, $_710_index$a$formatMessage({
     id: "Publish.shareTitle"
   }), React.createElement("span", {
-    className: _$_2.required
+    className: $_2811.required
   }, "*")), React.createElement($_13_index.k, {
     defaultValue: r.title,
     maxLength: 20,
@@ -347,7 +347,7 @@ var rn = function (e) {
     },
     isTrimmed: true
   })), React.createElement("li", null, React.createElement("p", {
-    className: _$_2.title
+    className: $_2811.title
   }, $_710_index$a$formatMessage({
     id: "Publish.shareDescription"
   })), React.createElement($_13_index.A, {
@@ -366,7 +366,7 @@ var rn = function (e) {
       }
     }
   })))), React.createElement("div", null, React.createElement("p", {
-    className: _$_2.title
+    className: $_2811.title
   }, $_710_index$a$formatMessage({
     id: "Publish.workCover"
   })), React.createElement($_13_index.c, {
@@ -374,7 +374,7 @@ var rn = function (e) {
     height: 138,
     sourceImage: r.img
   }), React.createElement("div", {
-    className: _$_2.changePoster
+    className: $_2811.changePoster
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       return V.apply(this, arguments)
@@ -391,7 +391,7 @@ var on = function (e) {
     message: "community" === e$target ? "Publish.shareToCommunity" : "Publish.shareToOthers",
     dialogType: "community" === e$target ? Zt.SHARE_COMMUNITY_DIALOG : Zt.SHARE_QR_DIALOG
   }
-  var r = _React.useState(Zt.NONE)
+  var r = React1.useState(Zt.NONE)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -552,13 +552,13 @@ var on = function (e) {
     onClick: function () {
       return p.apply(this, arguments)
     },
-    className: _$_.shareBtn
+    className: $_10521.shareBtn
   }, React.createElement("img", {
     src: n.icon,
     alt: e$target,
-    className: _$_.shareIcon
+    className: $_10521.shareIcon
   }), React.createElement("span", {
-    className: _$_.shareMessage
+    className: $_10521.shareMessage
   }, $_710_index$a$formatMessage({
     id: n.message
   }))), React.createElement(Jt, {

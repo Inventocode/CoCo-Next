@@ -9,7 +9,7 @@
 var Tt
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$_248 from "./248"
-import /* [auto-meaningful-name] */_$_ from "./248"
+import /* [auto-meaningful-name] */$_2481 from "./248"
 function kt(t) {
   switch (t) {
     case Tt.UNEXPECTED_ERROR:

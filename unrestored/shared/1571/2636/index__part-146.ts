@@ -22,29 +22,29 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1522 from "./1522"
 import * as /* [auto-meaningful-name] */$_207_index from "./207/index"
 import * as /* [auto-meaningful-name] */$_1523_index from "./1523/index"
 import * as lT from "./43"
 import * as /* [auto-meaningful-name] */$_1059 from "./1059"
-import /* [auto-meaningful-name] */_$_ from "./1059"
-var pT = _React.memo(function () {
-  var e = _React.useRef(null)
+import /* [auto-meaningful-name] */$_10591 from "./1059"
+var pT = React1.memo(function () {
+  var e = React1.useRef(null)
   var t = $_16_index.d()
-  var n = _React.useState(100)
+  var n = React1.useState(100)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
   var a = $_16_index.e(function (e) {
     return e.block.slider
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = parseInt(a.value)
     e = (e = e > a.max ? a.max : e) < a.min ? a.min : e
     i(e)
   }, [a])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function n(r) {
       var /* [auto-meaningful-name] */r$target = r.target
       var /* [auto-meaningful-name] */e$current = e.current
@@ -68,7 +68,7 @@ var pT = _React.memo(function () {
   }, [t, a])
   return React.createElement("div", {
     ref: e,
-    className: _$_.sliderWrapper,
+    className: $_10591.sliderWrapper,
     style: {
       position: "fixed",
       top: a.top + 4,
@@ -76,7 +76,7 @@ var pT = _React.memo(function () {
       zIndex: 2
     }
   }, React.createElement("span", {
-    className: _$_.leftSliderText
+    className: $_10591.leftSliderText
   }, a.minText), React.createElement($_13_index.x, {
     value: o,
     min: a.min,
@@ -88,17 +88,17 @@ var pT = _React.memo(function () {
       }, 0)
     }
   }), React.createElement("span", {
-    className: _$_.rightSliderText
+    className: $_10591.rightSliderText
   }, a.maxText))
 })
-var fT = _React.memo(function (e) {
+var fT = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$options = e.options
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var r = $_16_index.d()
   var o = $_16_index.e(function (e) {
     return e.block.dropdown
   })
-  var i = _React.useMemo(function () {
+  var i = React1.useMemo(function () {
     return e$options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -143,7 +143,7 @@ var fT = _React.memo(function (e) {
     }
     if ("basic" === e.type) {
       var /* [auto-meaningful-name] */e$icon
-      var /* [auto-meaningful-name] */_e$icon
+      var /* [auto-meaningful-name] */e$icon1
       if (e.value === Et.h && e.text === Et.g) {
         return
       }
@@ -165,7 +165,7 @@ var fT = _React.memo(function (e) {
         src: e.icon.src,
         className: qC.image,
         alt: ""
-      })), "object" === typeof (null === (_e$icon = e.icon) || undefined === _e$icon ? undefined : _e$icon.src) && React.createElement("div", {
+      })), "object" === typeof (null === (e$icon1 = e.icon) || undefined === e$icon1 ? undefined : e$icon1.src) && React.createElement("div", {
         className: qC.dropdownIconBox
       }, React.createElement($_13_index.j, {
         type: "icon-screen-variable"
@@ -173,26 +173,26 @@ var fT = _React.memo(function (e) {
     }
   }))
 })
-var hT = _React.memo(function (e) {
+var hT = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$group = e.group
   var /* [auto-meaningful-name] */e$group$name = e$group.name
   var /* [auto-meaningful-name] */e$group$options = e$group.options
-  var o = _React.useRef(null)
+  var o = React1.useRef(null)
   var i = $_16_index.e(function (e) {
     return e.block.dropdown
   })
-  var a = _React.useState("right")
+  var a = React1.useState("right")
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useState(false)
+  var u = React1.useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = e$group$options.some(function (e) {
     return "value" in e && e.value === i.value || Array.isArray(e) && e[1] === i.value
   })
-  var v = _React.useMemo(function () {
+  var v = React1.useMemo(function () {
     return Lodash.debounce(m, 100)
   }, [])
   return React.createElement("div", {
@@ -250,7 +250,7 @@ var hT = _React.memo(function (e) {
   }))))
 })
 var /* [auto-meaningful-name] */__EMPTY_VALUE__ = "__EMPTY_VALUE__"
-var gT = _React.memo(function () {
+var gT = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
@@ -259,7 +259,7 @@ var gT = _React.memo(function () {
   var r = $_16_index.e(function (e) {
     return e.project.currentScreenIndex
   })
-  var o = _React.useMemo(function () {
+  var o = React1.useMemo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -309,7 +309,7 @@ var gT = _React.memo(function () {
     }
     if ("basic" === t.type) {
       var /* [auto-meaningful-name] */t$icon
-      var /* [auto-meaningful-name] */_t$icon
+      var /* [auto-meaningful-name] */t$icon1
       if (t.value === Et.h && t.text === Et.g) {
         return
       }
@@ -345,7 +345,7 @@ var gT = _React.memo(function () {
         src: t.icon.src,
         className: qC.image,
         alt: ""
-      })), "object" === typeof (null === (_t$icon = t.icon) || undefined === _t$icon ? undefined : _t$icon.src) && React.createElement("div", {
+      })), "object" === typeof (null === (t$icon1 = t.icon) || undefined === t$icon1 ? undefined : t$icon1.src) && React.createElement("div", {
         className: N(qC.dropdownIconBox, n.showCurrentScreenIndex && qC.showCurrentScreenBg)
       }, React.createElement($_13_index.j, {
         className: "coco-iconfont-screen-bg",
@@ -358,7 +358,7 @@ var gT = _React.memo(function () {
     }
   }))
 })
-var _T = _React.memo(function (e) {
+var _T = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var n = $_16_index.e(function (e) {
     return e.block.dropdown
@@ -403,7 +403,7 @@ var _T = _React.memo(function (e) {
     id: "emptyImage"
   })))
 })
-var vT = _React.memo(function () {
+var vT = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.block.dropdown
   })

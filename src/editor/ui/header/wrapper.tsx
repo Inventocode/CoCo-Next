@@ -24,7 +24,7 @@ import * as LoadCustomWidget from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454_index from "../../../../unrestored/shared/1571/2636/454/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454 from "../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
@@ -588,7 +588,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               }
               n = t[0]
               e.next = 4
-              return $$_$$_$$_$$_unrestored_shared_1571_2636_454_index.i(n)
+              return $$_$$_$$_$$_unrestored_shared_1571_2636_454.i(n)
             case 4:
               if (e$sent = e.sent) {
                 e.next = 8

@@ -10,18 +10,18 @@ import * as Dn from "./19"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */$_80_index from "./80/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_434 from "./434"
 import * as /* [auto-meaningful-name] */Redux from "redux"
 function lN(e, t) {
-  var n = _React.useState(function () {
+  var n = React1.useState(function () {
     return {
       inputs: t,
       result: e()
     }
   })[0]
-  var r = _React.useRef(true)
-  var o = _React.useRef(n)
+  var r = React1.useRef(true)
+  var o = React1.useRef(n)
   var i = r.current || Boolean(t && o.current.inputs && function (e, t) {
     if (e.length !== t.length) {
       return false
@@ -36,7 +36,7 @@ function lN(e, t) {
       inputs: t,
       result: e()
     }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     r.current = false
     o.current = i
   }, [i])
@@ -806,18 +806,18 @@ var IR = function (e) {
   }
   if ("REORDER" === e$previousImpact$at.type) {
     var d = function (e) {
-      var /* [auto-meaningful-name] */_e$isMovingForward = e.isMovingForward
-      var /* [auto-meaningful-name] */_e$isInHomeList = e.isInHomeList
-      var /* [auto-meaningful-name] */_e$insideDestination = e.insideDestination
+      var /* [auto-meaningful-name] */e$isMovingForward1 = e.isMovingForward
+      var /* [auto-meaningful-name] */e$isInHomeList1 = e.isInHomeList
+      var /* [auto-meaningful-name] */e$insideDestination1 = e.insideDestination
       var /* [auto-meaningful-name] */e$location = e.location
-      if (!_e$insideDestination.length) {
+      if (!e$insideDestination1.length) {
         return null
       }
       var /* [auto-meaningful-name] */e$location$index = e$location.index
-      var a = _e$isMovingForward ? e$location$index + 1 : e$location$index - 1
-      var /* [auto-meaningful-name] */_e$insideDestination0$descriptor$index = _e$insideDestination[0].descriptor.index
-      var /* [auto-meaningful-name] */_e$insideDestination_e$insideDestination$length1$descriptor$index = _e$insideDestination[_e$insideDestination.length - 1].descriptor.index
-      return a < _e$insideDestination0$descriptor$index || a > (_e$isInHomeList ? _e$insideDestination_e$insideDestination$length1$descriptor$index : _e$insideDestination_e$insideDestination$length1$descriptor$index + 1) ? null : a
+      var a = e$isMovingForward1 ? e$location$index + 1 : e$location$index - 1
+      var /* [auto-meaningful-name] */e$insideDestination10$descriptor$index = e$insideDestination1[0].descriptor.index
+      var /* [auto-meaningful-name] */e$insideDestination1E$insideDestination1$length1$descriptor$index = e$insideDestination1[e$insideDestination1.length - 1].descriptor.index
+      return a < e$insideDestination10$descriptor$index || a > (e$isInHomeList1 ? e$insideDestination1E$insideDestination1$length1$descriptor$index : e$insideDestination1E$insideDestination1$length1$descriptor$index + 1) ? null : a
     }({
       isMovingForward: e$isMovingForward,
       isInHomeList: e$isInHomeList,
@@ -835,17 +835,17 @@ var IR = function (e) {
     })
   }
   var p = function (e) {
-    var /* [auto-meaningful-name] */_e$isMovingForward2 = e.isMovingForward
-    var /* [auto-meaningful-name] */_e$destination = e.destination
-    var /* [auto-meaningful-name] */_e$draggables = e.draggables
+    var /* [auto-meaningful-name] */e$isMovingForward1 = e.isMovingForward
+    var /* [auto-meaningful-name] */e$destination1 = e.destination
+    var /* [auto-meaningful-name] */e$draggables1 = e.draggables
     var /* [auto-meaningful-name] */e$combine = e.combine
-    var /* [auto-meaningful-name] */_e$afterCritical = e.afterCritical
-    if (!_e$destination.isCombineEnabled) {
+    var /* [auto-meaningful-name] */e$afterCritical1 = e.afterCritical
+    if (!e$destination1.isCombineEnabled) {
       return null
     }
     var /* [auto-meaningful-name] */e$combine$draggableId = e$combine.draggableId
-    var /* [auto-meaningful-name] */_e$draggablesE$combine$draggableId$descriptor$index = _e$draggables[e$combine$draggableId].descriptor.index
-    return AR(e$combine$draggableId, _e$afterCritical) ? _e$isMovingForward2 ? _e$draggablesE$combine$draggableId$descriptor$index : _e$draggablesE$combine$draggableId$descriptor$index - 1 : _e$isMovingForward2 ? _e$draggablesE$combine$draggableId$descriptor$index + 1 : _e$draggablesE$combine$draggableId$descriptor$index
+    var /* [auto-meaningful-name] */e$draggables1E$combine$draggableId$descriptor$index = e$draggables1[e$combine$draggableId].descriptor.index
+    return AR(e$combine$draggableId, e$afterCritical1) ? e$isMovingForward1 ? e$draggables1E$combine$draggableId$descriptor$index : e$draggables1E$combine$draggableId$descriptor$index - 1 : e$isMovingForward1 ? e$draggables1E$combine$draggableId$descriptor$index + 1 : e$draggables1E$combine$draggableId$descriptor$index
   }({
     isMovingForward: e$isMovingForward,
     destination: e$destination,
@@ -876,11 +876,11 @@ var jR = function (e) {
   var /* [auto-meaningful-name] */e$draggablesO$draggableId$page$borderBox$center = e$draggables[o$draggableId].page.borderBox.center
   var s = function (e) {
     var /* [auto-meaningful-name] */e$displaced = e.displaced
-    var /* [auto-meaningful-name] */_e$afterCritical2 = e.afterCritical
+    var /* [auto-meaningful-name] */e$afterCritical1 = e.afterCritical
     var /* [auto-meaningful-name] */e$combineWith = e.combineWith
     var /* [auto-meaningful-name] */e$displacedBy = e.displacedBy
     var i = Boolean(e$displaced.visible[e$combineWith] || e$displaced.invisible[e$combineWith])
-    return AR(e$combineWith, _e$afterCritical2) ? i ? GN : VN(e$displacedBy.point) : i ? e$displacedBy.point : GN
+    return AR(e$combineWith, e$afterCritical1) ? i ? GN : VN(e$displacedBy.point) : i ? e$displacedBy.point : GN
   }({
     displaced: e$impact.displaced,
     afterCritical: e$afterCritical,
@@ -1074,15 +1074,15 @@ var WR = function (e) {
   var u = cR(e$destination.descriptor.id, e$draggables)
   var d = pR(e$draggable, e$destination)
   var p = function (e) {
-    var /* [auto-meaningful-name] */_e$isMovingForward3 = e.isMovingForward
-    var /* [auto-meaningful-name] */_e$draggable = e.draggable
-    var /* [auto-meaningful-name] */_e$destination2 = e.destination
+    var /* [auto-meaningful-name] */e$isMovingForward1 = e.isMovingForward
+    var /* [auto-meaningful-name] */e$draggable1 = e.draggable
+    var /* [auto-meaningful-name] */e$destination1 = e.destination
     var /* [auto-meaningful-name] */e$insideDestination = e.insideDestination
-    var /* [auto-meaningful-name] */_e$previousImpact = e.previousImpact
-    if (!_e$destination2.isCombineEnabled) {
+    var /* [auto-meaningful-name] */e$previousImpact1 = e.previousImpact
+    if (!e$destination1.isCombineEnabled) {
       return null
     }
-    if (!lR(_e$previousImpact)) {
+    if (!lR(e$previousImpact1)) {
       return null
     }
     function a(e) {
@@ -1090,19 +1090,19 @@ var WR = function (e) {
         type: "COMBINE",
         combine: {
           draggableId: e,
-          droppableId: _e$destination2.descriptor.id
+          droppableId: e$destination1.descriptor.id
         }
       }
-      return Dn.a({}, _e$previousImpact, {
+      return Dn.a({}, e$previousImpact1, {
         at: t
       })
     }
-    var /* [auto-meaningful-name] */_e$previousImpact$displaced$all = _e$previousImpact.displaced.all
-    var c = _e$previousImpact$displaced$all.length ? _e$previousImpact$displaced$all[0] : null
-    if (_e$isMovingForward3) {
+    var /* [auto-meaningful-name] */e$previousImpact1$displaced$all = e$previousImpact1.displaced.all
+    var c = e$previousImpact1$displaced$all.length ? e$previousImpact1$displaced$all[0] : null
+    if (e$isMovingForward1) {
       return c ? a(c) : null
     }
-    var l = dR(_e$draggable, e$insideDestination)
+    var l = dR(e$draggable1, e$insideDestination)
     if (!c) {
       return l.length ? a(l[l.length - 1].descriptor.id) : null
     }
@@ -1164,26 +1164,26 @@ var WR = function (e) {
     clientSelection: e$previousClientSelection,
     impact: function (e) {
       var /* [auto-meaningful-name] */e$impact = e.impact
-      var /* [auto-meaningful-name] */_e$viewport = e.viewport
-      var /* [auto-meaningful-name] */_e$destination3 = e.destination
-      var /* [auto-meaningful-name] */_e$draggables2 = e.draggables
+      var /* [auto-meaningful-name] */e$viewport1 = e.viewport
+      var /* [auto-meaningful-name] */e$destination1 = e.destination
+      var /* [auto-meaningful-name] */e$draggables1 = e.draggables
       var /* [auto-meaningful-name] */e$maxScrollChange = e.maxScrollChange
-      var a = PR(_e$viewport, WN(_e$viewport.scroll.current, e$maxScrollChange))
-      var s = _e$destination3.frame ? $N(_e$destination3, WN(_e$destination3.frame.scroll.current, e$maxScrollChange)) : _e$destination3
+      var a = PR(e$viewport1, WN(e$viewport1.scroll.current, e$maxScrollChange))
+      var s = e$destination1.frame ? $N(e$destination1, WN(e$destination1.frame.scroll.current, e$maxScrollChange)) : e$destination1
       var /* [auto-meaningful-name] */e$impact$displaced = e$impact.displaced
       var l = CR({
-        afterDragging: BR(e$impact$displaced.all, _e$draggables2),
-        destination: _e$destination3,
+        afterDragging: BR(e$impact$displaced.all, e$draggables1),
+        destination: e$destination1,
         displacedBy: e$impact.displacedBy,
         viewport: a.frame,
         last: e$impact$displaced,
         forceShouldAnimate: false
       })
       var u = CR({
-        afterDragging: BR(e$impact$displaced.all, _e$draggables2),
+        afterDragging: BR(e$impact$displaced.all, e$draggables1),
         destination: s,
         displacedBy: e$impact.displacedBy,
-        viewport: _e$viewport.frame,
+        viewport: e$viewport1.frame,
         last: e$impact$displaced,
         forceShouldAnimate: false
       })
@@ -1311,28 +1311,28 @@ var qR = function (e) {
   var /* [auto-meaningful-name] */e$viewport = e.viewport
   var /* [auto-meaningful-name] */e$afterCritical = e.afterCritical
   var l = function (e) {
-    var /* [auto-meaningful-name] */_e$isMovingForward4 = e.isMovingForward
+    var /* [auto-meaningful-name] */e$isMovingForward1 = e.isMovingForward
     var /* [auto-meaningful-name] */e$pageBorderBoxCenter = e.pageBorderBoxCenter
     var /* [auto-meaningful-name] */e$source = e.source
-    var /* [auto-meaningful-name] */_e$droppables = e.droppables
-    var /* [auto-meaningful-name] */_e$viewport2 = e.viewport
+    var /* [auto-meaningful-name] */e$droppables1 = e.droppables
+    var /* [auto-meaningful-name] */e$viewport1 = e.viewport
     var /* [auto-meaningful-name] */e$source$subject$active = e$source.subject.active
     if (!e$source$subject$active) {
       return null
     }
     var /* [auto-meaningful-name] */e$source$axis = e$source.axis
     var c = gR(e$source$subject$active[e$source$axis.start], e$source$subject$active[e$source$axis.end])
-    var l = aR(_e$droppables).filter(function (e) {
+    var l = aR(e$droppables1).filter(function (e) {
       return e !== e$source
     }).filter(function (e) {
       return e.isEnabled
     }).filter(function (e) {
       return Boolean(e.subject.active)
     }).filter(function (e) {
-      return _R(_e$viewport2.frame)(UR(e))
+      return _R(e$viewport1.frame)(UR(e))
     }).filter(function (e) {
       var n = UR(e)
-      return _e$isMovingForward4 ? e$source$subject$active[e$source$axis.crossAxisEnd] < n[e$source$axis.crossAxisEnd] : n[e$source$axis.crossAxisStart] < e$source$subject$active[e$source$axis.crossAxisStart]
+      return e$isMovingForward1 ? e$source$subject$active[e$source$axis.crossAxisEnd] < n[e$source$axis.crossAxisEnd] : n[e$source$axis.crossAxisStart] < e$source$subject$active[e$source$axis.crossAxisStart]
     }).filter(function (e) {
       var t = UR(e)
       var n = gR(t[e$source$axis.start], t[e$source$axis.end])
@@ -1340,7 +1340,7 @@ var qR = function (e) {
     }).sort(function (e, n) {
       var r = UR(e)[e$source$axis.crossAxisStart]
       var o = UR(n)[e$source$axis.crossAxisStart]
-      return _e$isMovingForward4 ? r - o : o - r
+      return e$isMovingForward1 ? r - o : o - r
     }).filter(function (e, t, n) {
       return UR(e)[e$source$axis.crossAxisStart] === UR(n[0])[e$source$axis.crossAxisStart]
     })
@@ -1372,14 +1372,14 @@ var qR = function (e) {
   }
   var u = cR(l.descriptor.id, e$draggables)
   var d = function (e) {
-    var /* [auto-meaningful-name] */_e$previousPageBorderBoxCenter = e.previousPageBorderBoxCenter
+    var /* [auto-meaningful-name] */e$previousPageBorderBoxCenter1 = e.previousPageBorderBoxCenter
     var /* [auto-meaningful-name] */e$moveRelativeTo = e.moveRelativeTo
     var /* [auto-meaningful-name] */e$insideDestination = e.insideDestination
-    var /* [auto-meaningful-name] */_e$draggable2 = e.draggable
-    var /* [auto-meaningful-name] */_e$draggables3 = e.draggables
+    var /* [auto-meaningful-name] */e$draggable1 = e.draggable
+    var /* [auto-meaningful-name] */e$draggables1 = e.draggables
     var /* [auto-meaningful-name] */e$destination = e.destination
-    var /* [auto-meaningful-name] */_e$viewport3 = e.viewport
-    var /* [auto-meaningful-name] */_e$afterCritical3 = e.afterCritical
+    var /* [auto-meaningful-name] */e$viewport1 = e.viewport
+    var /* [auto-meaningful-name] */e$afterCritical1 = e.afterCritical
     if (!e$moveRelativeTo) {
       if (e$insideDestination.length) {
         return null
@@ -1397,32 +1397,32 @@ var qR = function (e) {
       }
       var u = LR({
         impact: l,
-        draggable: _e$draggable2,
+        draggable: e$draggable1,
         droppable: e$destination,
-        draggables: _e$draggables3,
-        afterCritical: _e$afterCritical3
+        draggables: e$draggables1,
+        afterCritical: e$afterCritical1
       })
-      var d = pR(_e$draggable2, e$destination) ? e$destination : KR(e$destination, _e$draggable2, _e$draggables3)
+      var d = pR(e$draggable1, e$destination) ? e$destination : KR(e$destination, e$draggable1, e$draggables1)
       return GR({
-        draggable: _e$draggable2,
+        draggable: e$draggable1,
         destination: d,
         newPageBorderBoxCenter: u,
-        viewport: _e$viewport3.frame,
+        viewport: e$viewport1.frame,
         withDroppableDisplacement: false,
         onlyOnMainAxis: true
       }) ? l : null
     }
-    var p = Boolean(_e$previousPageBorderBoxCenter[e$destination.axis.line] <= e$moveRelativeTo.page.borderBox.center[e$destination.axis.line])
+    var p = Boolean(e$previousPageBorderBoxCenter1[e$destination.axis.line] <= e$moveRelativeTo.page.borderBox.center[e$destination.axis.line])
     var f = function () {
       var /* [auto-meaningful-name] */e$moveRelativeTo$descriptor$index = e$moveRelativeTo.descriptor.index
-      return e$moveRelativeTo.descriptor.id === _e$draggable2.descriptor.id || p ? e$moveRelativeTo$descriptor$index : e$moveRelativeTo$descriptor$index + 1
+      return e$moveRelativeTo.descriptor.id === e$draggable1.descriptor.id || p ? e$moveRelativeTo$descriptor$index : e$moveRelativeTo$descriptor$index + 1
     }()
-    var h = zR(e$destination.axis, _e$draggable2.displaceBy)
+    var h = zR(e$destination.axis, e$draggable1.displaceBy)
     return SR({
-      draggable: _e$draggable2,
+      draggable: e$draggable1,
       insideDestination: e$insideDestination,
       destination: e$destination,
-      viewport: _e$viewport3,
+      viewport: e$viewport1,
       displacedBy: h,
       last: hR,
       index: f
@@ -1434,20 +1434,20 @@ var qR = function (e) {
     draggables: e$draggables,
     moveRelativeTo: function (e) {
       var /* [auto-meaningful-name] */e$pageBorderBoxCenter = e.pageBorderBoxCenter
-      var /* [auto-meaningful-name] */_e$viewport4 = e.viewport
+      var /* [auto-meaningful-name] */e$viewport1 = e.viewport
       var /* [auto-meaningful-name] */e$destination = e.destination
       var /* [auto-meaningful-name] */e$insideDestination = e.insideDestination
-      var /* [auto-meaningful-name] */_e$afterCritical4 = e.afterCritical
+      var /* [auto-meaningful-name] */e$afterCritical1 = e.afterCritical
       return e$insideDestination.filter(function (e) {
         return wR({
-          target: VR(e, _e$afterCritical4),
+          target: VR(e, e$afterCritical1),
           destination: e$destination,
-          viewport: _e$viewport4.frame,
+          viewport: e$viewport1.frame,
           withDroppableDisplacement: true
         })
       }).sort(function (e, n) {
-        var o = YN(e$pageBorderBoxCenter, MR(e$destination, HR(e, _e$afterCritical4)))
-        var a = YN(e$pageBorderBoxCenter, MR(e$destination, HR(n, _e$afterCritical4)))
+        var o = YN(e$pageBorderBoxCenter, MR(e$destination, HR(e, e$afterCritical1)))
+        var a = YN(e$pageBorderBoxCenter, MR(e$destination, HR(n, e$afterCritical1)))
         return o < a ? -1 : a < o ? 1 : e.descriptor.index - n.descriptor.index
       })[0] || null
     }({
@@ -1568,16 +1568,16 @@ function $R(e) {
     return !u && !d || (u ? s < a : c > a)
   })
   return o.length ? 1 === o.length ? o[0].descriptor.id : function (e) {
-    var /* [auto-meaningful-name] */_e$pageBorderBox = e.pageBorderBox
-    var /* [auto-meaningful-name] */_e$draggable3 = e.draggable
+    var /* [auto-meaningful-name] */e$pageBorderBox1 = e.pageBorderBox
+    var /* [auto-meaningful-name] */e$draggable1 = e.draggable
     var /* [auto-meaningful-name] */e$candidates = e.candidates
-    var /* [auto-meaningful-name] */_e$draggable3$page$borderBox$center = _e$draggable3.page.borderBox.center
+    var /* [auto-meaningful-name] */e$draggable1$page$borderBox$center = e$draggable1.page.borderBox.center
     var i = e$candidates.map(function (e) {
       var /* [auto-meaningful-name] */e$axis = e.axis
-      var r = zN(e.axis.line, _e$pageBorderBox.center[e$axis.line], e.page.borderBox.center[e$axis.crossAxisLine])
+      var r = zN(e.axis.line, e$pageBorderBox1.center[e$axis.line], e.page.borderBox.center[e$axis.crossAxisLine])
       return {
         id: e.descriptor.id,
-        distance: YN(_e$draggable3$page$borderBox$center, r)
+        distance: YN(e$draggable1$page$borderBox$center, r)
       }
     }).sort(function (e, t) {
       return t.distance - e.distance
@@ -1621,34 +1621,34 @@ var nk = function (e) {
     return e$frame ? ek(t, e$frame.scroll.diff.value) : t
   }(u, c)
   return function (e) {
-    var /* [auto-meaningful-name] */_e$draggable4 = e.draggable
+    var /* [auto-meaningful-name] */e$draggable1 = e.draggable
     var /* [auto-meaningful-name] */e$pageBorderBoxWithDroppableScroll = e.pageBorderBoxWithDroppableScroll
-    var /* [auto-meaningful-name] */_e$previousImpact2 = e.previousImpact
+    var /* [auto-meaningful-name] */e$previousImpact1 = e.previousImpact
     var /* [auto-meaningful-name] */e$destination = e.destination
     var /* [auto-meaningful-name] */e$insideDestination = e.insideDestination
-    var /* [auto-meaningful-name] */_e$afterCritical5 = e.afterCritical
+    var /* [auto-meaningful-name] */e$afterCritical1 = e.afterCritical
     if (!e$destination.isCombineEnabled) {
       return null
     }
     var /* [auto-meaningful-name] */e$destination$axis = e$destination.axis
-    var c = zR(e$destination.axis, _e$draggable4.displaceBy)
+    var c = zR(e$destination.axis, e$draggable1.displaceBy)
     var /* [auto-meaningful-name] */c$value = c.value
     var u = e$pageBorderBoxWithDroppableScroll[e$destination$axis.start]
     var d = e$pageBorderBoxWithDroppableScroll[e$destination$axis.end]
-    var p = nR(dR(_e$draggable4, e$insideDestination), function (e) {
+    var p = nR(dR(e$draggable1, e$insideDestination), function (e) {
       var /* [auto-meaningful-name] */e$descriptor$id = e.descriptor.id
       var /* [auto-meaningful-name] */e$page$borderBox = e.page.borderBox
       var o = e$page$borderBox[e$destination$axis.size] / 4
-      var i = AR(e$descriptor$id, _e$afterCritical5)
+      var i = AR(e$descriptor$id, e$afterCritical1)
       var c = tk({
-        displaced: _e$previousImpact2.displaced,
+        displaced: e$previousImpact1.displaced,
         id: e$descriptor$id
       })
       return i ? c ? d > e$page$borderBox[e$destination$axis.start] + o && d < e$page$borderBox[e$destination$axis.end] - o : u > e$page$borderBox[e$destination$axis.start] - c$value + o && u < e$page$borderBox[e$destination$axis.end] - c$value - o : c ? d > e$page$borderBox[e$destination$axis.start] + c$value + o && d < e$page$borderBox[e$destination$axis.end] + c$value - o : u > e$page$borderBox[e$destination$axis.start] + o && u < e$page$borderBox[e$destination$axis.end] - o
     })
     return p ? {
       displacedBy: c,
-      displaced: _e$previousImpact2.displaced,
+      displaced: e$previousImpact1.displaced,
       at: {
         type: "COMBINE",
         combine: {
@@ -1666,41 +1666,41 @@ var nk = function (e) {
     afterCritical: e$afterCritical
   }) || function (e) {
     var /* [auto-meaningful-name] */e$pageBorderBoxWithDroppableScroll = e.pageBorderBoxWithDroppableScroll
-    var /* [auto-meaningful-name] */_e$draggable5 = e.draggable
+    var /* [auto-meaningful-name] */e$draggable1 = e.draggable
     var /* [auto-meaningful-name] */e$destination = e.destination
     var /* [auto-meaningful-name] */e$insideDestination = e.insideDestination
     var /* [auto-meaningful-name] */e$last = e.last
-    var /* [auto-meaningful-name] */_e$viewport5 = e.viewport
-    var /* [auto-meaningful-name] */_e$afterCritical6 = e.afterCritical
+    var /* [auto-meaningful-name] */e$viewport1 = e.viewport
+    var /* [auto-meaningful-name] */e$afterCritical1 = e.afterCritical
     var /* [auto-meaningful-name] */e$destination$axis = e$destination.axis
-    var l = zR(e$destination.axis, _e$draggable5.displaceBy)
+    var l = zR(e$destination.axis, e$draggable1.displaceBy)
     var /* [auto-meaningful-name] */l$value = l.value
     var d = e$pageBorderBoxWithDroppableScroll[e$destination$axis.start]
     var p = e$pageBorderBoxWithDroppableScroll[e$destination$axis.end]
     var f = function (e) {
-      var /* [auto-meaningful-name] */_e$draggable6 = e.draggable
+      var /* [auto-meaningful-name] */e$draggable2 = e.draggable
       var /* [auto-meaningful-name] */e$closest = e.closest
       var /* [auto-meaningful-name] */e$inHomeList = e.inHomeList
-      return e$closest ? e$inHomeList && e$closest.descriptor.index > _e$draggable6.descriptor.index ? e$closest.descriptor.index - 1 : e$closest.descriptor.index : null
+      return e$closest ? e$inHomeList && e$closest.descriptor.index > e$draggable2.descriptor.index ? e$closest.descriptor.index - 1 : e$closest.descriptor.index : null
     }({
-      draggable: _e$draggable5,
-      closest: nR(dR(_e$draggable5, e$insideDestination), function (e) {
+      draggable: e$draggable1,
+      closest: nR(dR(e$draggable1, e$insideDestination), function (e) {
         var /* [auto-meaningful-name] */e$descriptor$id = e.descriptor.id
         var n = e.page.borderBox.center[e$destination$axis.line]
-        var r = AR(e$descriptor$id, _e$afterCritical6)
+        var r = AR(e$descriptor$id, e$afterCritical1)
         var o = tk({
           displaced: e$last,
           id: e$descriptor$id
         })
         return r ? o ? p <= n : d < n - l$value : o ? p <= n + l$value : d < n
       }),
-      inHomeList: pR(_e$draggable5, e$destination)
+      inHomeList: pR(e$draggable1, e$destination)
     })
     return SR({
-      draggable: _e$draggable5,
+      draggable: e$draggable1,
       insideDestination: e$insideDestination,
       destination: e$destination,
-      viewport: _e$viewport5,
+      viewport: e$viewport1,
       last: e$last,
       displacedBy: l,
       index: f
@@ -1819,13 +1819,13 @@ var ik = function (e) {
     var /* [auto-meaningful-name] */e$draggables = e.draggables
     var /* [auto-meaningful-name] */e$droppables = e.droppables
     var /* [auto-meaningful-name] */e$previousImpact = e.previousImpact
-    var /* [auto-meaningful-name] */_e$impact = e.impact
+    var /* [auto-meaningful-name] */e$impact1 = e.impact
     var a = ok({
       previousImpact: e$previousImpact,
-      impact: _e$impact,
+      impact: e$impact1,
       droppables: e$droppables
     })
-    var s = XR(_e$impact)
+    var s = XR(e$impact1)
     if (!s) {
       return a
     }
@@ -1997,7 +1997,7 @@ var pk = function (e) {
   var /* [auto-meaningful-name] */e$viewport$scroll$diff$value = e$viewport.scroll.diff.value
   return e$additions.map(function (e) {
     var /* [auto-meaningful-name] */e$descriptor$droppableId = e.descriptor.droppableId
-    var /* [auto-meaningful-name] */functionEVarTE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value = function (e) {
+    var /* [auto-meaningful-name] */functionEVar_AutoMeaningfulName_tE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value = function (e) {
       var /* [auto-meaningful-name] */e$frame = e.frame
       if (!e$frame) {
         NN(false)
@@ -2019,7 +2019,7 @@ var pk = function (e) {
       })
     }({
       draggable: e,
-      offset: WN(e$viewport$scroll$diff$value, functionEVarTE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value),
+      offset: WN(e$viewport$scroll$diff$value, functionEVar_AutoMeaningfulName_tE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value),
       initialWindowScroll: e$viewport.scroll.initial
     })
   })
@@ -2217,14 +2217,14 @@ var _k = function (e, t) {
     if (!ZR(e)) {
       NN(false)
     }
-    var /* [auto-meaningful-name] */_t$payload = t.payload
-    var /* [auto-meaningful-name] */_t$payload$id = _t$payload.id
-    var /* [auto-meaningful-name] */_t$payload$newScroll = _t$payload.newScroll
-    var b = e.dimensions.droppables[_t$payload$id]
+    var /* [auto-meaningful-name] */t$payload1 = t.payload
+    var /* [auto-meaningful-name] */t$payload1$id = t$payload1.id
+    var /* [auto-meaningful-name] */t$payload1$newScroll = t$payload1.newScroll
+    var b = e.dimensions.droppables[t$payload1$id]
     if (!b) {
       return e
     }
-    var y = $N(b, _t$payload$newScroll)
+    var y = $N(b, t$payload1$newScroll)
     return hk(e, y, false)
   }
   if ("UPDATE_DROPPABLE_IS_ENABLED" === t.type) {
@@ -2234,18 +2234,18 @@ var _k = function (e, t) {
     if (!ZR(e)) {
       NN(false)
     }
-    var /* [auto-meaningful-name] */_t$payload2 = t.payload
-    var /* [auto-meaningful-name] */_t$payload2$id = _t$payload2.id
-    var /* [auto-meaningful-name] */_t$payload2$isEnabled = _t$payload2.isEnabled
-    var C = e.dimensions.droppables[_t$payload2$id]
+    var /* [auto-meaningful-name] */t$payload2 = t.payload
+    var /* [auto-meaningful-name] */t$payload2$id = t$payload2.id
+    var /* [auto-meaningful-name] */t$payload2$isEnabled = t$payload2.isEnabled
+    var C = e.dimensions.droppables[t$payload2$id]
     if (!C) {
       NN(false)
     }
-    if (C.isEnabled === _t$payload2$isEnabled) {
+    if (C.isEnabled === t$payload2$isEnabled) {
       NN(false)
     }
     var T = Dn.a({}, C, {
-      isEnabled: _t$payload2$isEnabled
+      isEnabled: t$payload2$isEnabled
     })
     return hk(e, T, true)
   }
@@ -2256,18 +2256,18 @@ var _k = function (e, t) {
     if (!ZR(e)) {
       NN(false)
     }
-    var /* [auto-meaningful-name] */_t$payload3 = t.payload
-    var /* [auto-meaningful-name] */_t$payload3$id = _t$payload3.id
-    var /* [auto-meaningful-name] */_t$payload3$isCombineEnabled = _t$payload3.isCombineEnabled
-    var j = e.dimensions.droppables[_t$payload3$id]
+    var /* [auto-meaningful-name] */t$payload3 = t.payload
+    var /* [auto-meaningful-name] */t$payload3$id = t$payload3.id
+    var /* [auto-meaningful-name] */t$payload3$isCombineEnabled = t$payload3.isCombineEnabled
+    var j = e.dimensions.droppables[t$payload3$id]
     if (!j) {
       NN(false)
     }
-    if (j.isCombineEnabled === _t$payload3$isCombineEnabled) {
+    if (j.isCombineEnabled === t$payload3$isCombineEnabled) {
       NN(false)
     }
     var N = Dn.a({}, j, {
-      isCombineEnabled: _t$payload3$isCombineEnabled
+      isCombineEnabled: t$payload3$isCombineEnabled
     })
     return hk(e, N, true)
   }
@@ -2345,18 +2345,18 @@ var _k = function (e, t) {
     })
   }
   if ("DROP_ANIMATE" === t.type) {
-    var /* [auto-meaningful-name] */_t$payload4 = t.payload
-    var /* [auto-meaningful-name] */_t$payload4$completed = _t$payload4.completed
-    var /* [auto-meaningful-name] */_t$payload4$dropDuration = _t$payload4.dropDuration
-    var /* [auto-meaningful-name] */_t$payload4$newHomeClientOffset = _t$payload4.newHomeClientOffset
+    var /* [auto-meaningful-name] */t$payload4 = t.payload
+    var /* [auto-meaningful-name] */t$payload4$completed = t$payload4.completed
+    var /* [auto-meaningful-name] */t$payload4$dropDuration = t$payload4.dropDuration
+    var /* [auto-meaningful-name] */t$payload4$newHomeClientOffset = t$payload4.newHomeClientOffset
     if ("DRAGGING" !== e.phase && "DROP_PENDING" !== e.phase) {
       NN(false)
     }
     return {
       phase: "DROP_ANIMATING",
-      completed: _t$payload4$completed,
-      dropDuration: _t$payload4$dropDuration,
-      newHomeClientOffset: _t$payload4$newHomeClientOffset,
+      completed: t$payload4$completed,
+      dropDuration: t$payload4$dropDuration,
+      newHomeClientOffset: t$payload4$newHomeClientOffset,
       dimensions: e.dimensions
     }
   }
@@ -3558,11 +3558,11 @@ var wx = function (e) {
     return null
   }
   var u = function (e) {
-    var /* [auto-meaningful-name] */_e$container = e.container
-    var /* [auto-meaningful-name] */_e$subject = e.subject
+    var /* [auto-meaningful-name] */e$container1 = e.container
+    var /* [auto-meaningful-name] */e$subject1 = e.subject
     var /* [auto-meaningful-name] */e$proposedScroll = e.proposedScroll
-    var o = _e$subject.height > _e$container.height
-    var i = _e$subject.width > _e$container.width
+    var o = e$subject1.height > e$container1.height
+    var i = e$subject1.width > e$container1.width
     return i || o ? i && o ? null : {
       x: i ? 0 : e$proposedScroll.x,
       y: o ? 0 : e$proposedScroll.y
@@ -3637,14 +3637,14 @@ var jx = function (e) {
       var /* [auto-meaningful-name] */e$viewport = e.viewport
       var /* [auto-meaningful-name] */e$subject = e.subject
       var /* [auto-meaningful-name] */e$center = e.center
-      var /* [auto-meaningful-name] */_e$dragStartTime = e.dragStartTime
-      var /* [auto-meaningful-name] */_e$shouldUseTimeDampening = e.shouldUseTimeDampening
+      var /* [auto-meaningful-name] */e$dragStartTime1 = e.dragStartTime
+      var /* [auto-meaningful-name] */e$shouldUseTimeDampening1 = e.shouldUseTimeDampening
       var a = wx({
-        dragStartTime: _e$dragStartTime,
+        dragStartTime: e$dragStartTime1,
         container: e$viewport.frame,
         subject: e$subject,
         center: e$center,
-        shouldUseTimeDampening: _e$shouldUseTimeDampening
+        shouldUseTimeDampening: e$shouldUseTimeDampening1
       })
       return a && Ax(e$viewport, a) ? a : null
     }({
@@ -3668,18 +3668,18 @@ var jx = function (e) {
       var /* [auto-meaningful-name] */e$droppable = e.droppable
       var /* [auto-meaningful-name] */e$subject = e.subject
       var /* [auto-meaningful-name] */e$center = e.center
-      var /* [auto-meaningful-name] */_e$dragStartTime2 = e.dragStartTime
-      var /* [auto-meaningful-name] */_e$shouldUseTimeDampening2 = e.shouldUseTimeDampening
+      var /* [auto-meaningful-name] */e$dragStartTime1 = e.dragStartTime
+      var /* [auto-meaningful-name] */e$shouldUseTimeDampening1 = e.shouldUseTimeDampening
       var /* [auto-meaningful-name] */e$droppable$frame = e$droppable.frame
       if (!e$droppable$frame) {
         return null
       }
       var s = wx({
-        dragStartTime: _e$dragStartTime2,
+        dragStartTime: e$dragStartTime1,
         container: e$droppable$frame.pageMarginBox,
         subject: e$subject,
         center: e$center,
-        shouldUseTimeDampening: _e$shouldUseTimeDampening2
+        shouldUseTimeDampening: e$shouldUseTimeDampening1
       })
       return s && Ix(e$droppable, s) ? s : null
     }({
@@ -3773,10 +3773,10 @@ var Rx = function (e) {
   var /* [auto-meaningful-name] */e$scrollWindow = e.scrollWindow
   var /* [auto-meaningful-name] */e$move = e.move
   var o = function (e) {
-    var /* [auto-meaningful-name] */_e$scrollWindow = e.scrollWindow
-    var /* [auto-meaningful-name] */_e$scrollDroppable = e.scrollDroppable
-    var r = TN(_e$scrollWindow)
-    var o = TN(_e$scrollDroppable)
+    var /* [auto-meaningful-name] */e$scrollWindow1 = e.scrollWindow
+    var /* [auto-meaningful-name] */e$scrollDroppable1 = e.scrollDroppable
+    var r = TN(e$scrollWindow1)
+    var o = TN(e$scrollDroppable1)
     var i = null
     var a = function (e) {
       if (!i) {
@@ -3887,7 +3887,7 @@ var Lx = function (e, t) {
     return n ? e.selector + " { " + n + " }" : ""
   }).join(" ")
 }
-var Px = "undefined" !== typeof window && "undefined" !== typeof window.document && "undefined" !== typeof window.document.createElement ? _React.useLayoutEffect : _React.useEffect
+var Px = "undefined" !== typeof window && "undefined" !== typeof window.document && "undefined" !== typeof window.document.createElement ? React1.useLayoutEffect : React1.useEffect
 var Bx = function () {
   var e = document.querySelector("head")
   if (!e) {
@@ -3955,8 +3955,8 @@ function Gx(e, t) {
       }
     }(e)
   }, [e])
-  var r = _React.useRef(null)
-  var o = _React.useRef(null)
+  var r = React1.useRef(null)
+  var o = React1.useRef(null)
   var i = dN(CN(function (e) {
     var /* [auto-meaningful-name] */o$current = o.current
     if (!o$current) {
@@ -4182,8 +4182,8 @@ function eD() {
   $x()
 }
 function tD(e) {
-  var t = _React.useRef(e)
-  _React.useEffect(function () {
+  var t = React1.useRef(e)
+  React1.useEffect(function () {
     t.current = e
   })
   return t
@@ -4607,8 +4607,8 @@ function OD(e) {
 }
 var wD = [
   function (e) {
-    var t = _React.useRef(sD)
-    var n = _React.useRef(AN)
+    var t = React1.useRef(sD)
+    var n = React1.useRef(AN)
     var r = uN(function () {
       return {
         eventName: "mousedown",
@@ -4712,7 +4712,7 @@ var wD = [
       }
     }, [i])
   }, function (e) {
-    var t = _React.useRef(lD)
+    var t = React1.useRef(lD)
     var n = uN(function () {
       return {
         eventName: "keydown",
@@ -4759,8 +4759,8 @@ var wD = [
       }
     }, [r])
   }, function (e) {
-    var t = _React.useRef(pD)
-    var n = _React.useRef(AN)
+    var t = React1.useRef(pD)
+    var n = React1.useRef(AN)
     var r = dN(function () {
       return t.current
     }, [])
@@ -4998,7 +4998,7 @@ function CD(e) {
   var /* [auto-meaningful-name] */e$customSensors = e.customSensors
   var /* [auto-meaningful-name] */e$enableDefaultSensors = e.enableDefaultSensors
   var a = [].concat(e$enableDefaultSensors ? wD : [], e$customSensors || [])
-  var s = _React.useState(function () {
+  var s = React1.useState(function () {
     return function () {
       var e = null
       function t() {
@@ -5118,7 +5118,7 @@ function SD(e) {
   var /* [auto-meaningful-name] */e$sensors = e.sensors
   var /* [auto-meaningful-name] */e$nonce = e.nonce
   var /* [auto-meaningful-name] */e$dragHandleUsageInstructions = e.dragHandleUsageInstructions
-  var a = _React.useRef(null)
+  var a = React1.useRef(null)
   eD()
   var s = tD(e)
   var c = dN(function () {
@@ -5138,8 +5138,8 @@ function SD(e) {
         return "rbd-announcement-" + e
       }(e)
     }, [e])
-    var n = _React.useRef(null)
-    _React.useEffect(function () {
+    var n = React1.useRef(null)
+    React1.useEffect(function () {
       var e = document.createElement("div")
       n.current = e
       e.id = t
@@ -5167,19 +5167,19 @@ function SD(e) {
     }, [])
   }(e$contextId)
   var u = function (e) {
-    var /* [auto-meaningful-name] */_e$contextId = e.contextId
+    var /* [auto-meaningful-name] */e$contextId1 = e.contextId
     var /* [auto-meaningful-name] */e$text = e.text
     var r = Qx("hidden-text", {
       separator: "-"
     })
     var o = uN(function () {
       return "rbd-hidden-text-" + (e = {
-        contextId: _e$contextId,
+        contextId: e$contextId1,
         uniqueId: r
       }).contextId + "-" + e.uniqueId
       var e
-    }, [r, _e$contextId])
-    _React.useEffect(function () {
+    }, [r, e$contextId1])
+    React1.useEffect(function () {
       var e = document.createElement("div")
       e.id = o
       e.textContent = e$text
@@ -5212,7 +5212,7 @@ function SD(e) {
   }, [p])
   var g = function () {
     var e = uN(Vx, [])
-    _React.useEffect(function () {
+    React1.useEffect(function () {
       return function () {
         requestAnimationFrame(e.clean)
       }
@@ -5231,10 +5231,10 @@ function SD(e) {
     }, p)))
   }, [v.scrollDroppable, p])
   var y = function (e) {
-    var t = _React.useRef({})
-    var n = _React.useRef(null)
-    var r = _React.useRef(null)
-    var o = _React.useRef(false)
+    var t = React1.useRef({})
+    var n = React1.useRef(null)
+    var r = React1.useRef(null)
+    var o = React1.useRef(false)
     var i = dN(function (e, n) {
       var r = {
         id: e,
@@ -5352,7 +5352,7 @@ function SD(e) {
     customSensors: e$sensors,
     enableDefaultSensors: false !== e.enableDefaultSensors
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     return O
   }, [O])
   return React.createElement(Zx.Provider, {
@@ -5474,11 +5474,11 @@ var PD = function (e) {
     }
   }()
   return function (e) {
-    var /* [auto-meaningful-name] */_e$descriptor = e.descriptor
+    var /* [auto-meaningful-name] */e$descriptor1 = e.descriptor
     var /* [auto-meaningful-name] */e$isEnabled = e.isEnabled
-    var /* [auto-meaningful-name] */_e$isCombineEnabled = e.isCombineEnabled
+    var /* [auto-meaningful-name] */e$isCombineEnabled1 = e.isCombineEnabled
     var /* [auto-meaningful-name] */e$isFixedOnPage = e.isFixedOnPage
-    var /* [auto-meaningful-name] */_e$direction = e.direction
+    var /* [auto-meaningful-name] */e$direction1 = e.direction
     var /* [auto-meaningful-name] */e$client = e.client
     var /* [auto-meaningful-name] */e$page = e.page
     var /* [auto-meaningful-name] */e$closest = e.closest
@@ -5510,10 +5510,10 @@ var PD = function (e) {
         }
       }
     }()
-    var u = "vertical" === _e$direction ? bR : yR
+    var u = "vertical" === e$direction1 ? bR : yR
     return {
-      descriptor: _e$descriptor,
-      isCombineEnabled: _e$isCombineEnabled,
+      descriptor: e$descriptor1,
+      isCombineEnabled: e$isCombineEnabled1,
       isFixedOnPage: e$isFixedOnPage,
       axis: u,
       isEnabled: e$isEnabled,
@@ -5548,7 +5548,7 @@ var GD = function (e) {
   return e.shouldPublishImmediately ? BD : FD
 }
 function WD(e) {
-  var t = _React.useContext(e)
+  var t = React1.useContext(e)
   if (!t) {
     NN(false)
   }
@@ -5573,13 +5573,13 @@ var zD = function (e) {
   var /* [auto-meaningful-name] */e$placeholder = e.placeholder
   var /* [auto-meaningful-name] */e$animate = e.animate
   var o = function (e) {
-    var /* [auto-meaningful-name] */_e$isAnimatingOpenOnMount = e.isAnimatingOpenOnMount
-    var /* [auto-meaningful-name] */_e$placeholder = e.placeholder
-    var /* [auto-meaningful-name] */_e$animate = e.animate
-    return _e$isAnimatingOpenOnMount || "close" === _e$animate ? VD : {
-      height: _e$placeholder.client.borderBox.height,
-      width: _e$placeholder.client.borderBox.width,
-      margin: _e$placeholder.client.margin
+    var /* [auto-meaningful-name] */e$isAnimatingOpenOnMount1 = e.isAnimatingOpenOnMount
+    var /* [auto-meaningful-name] */e$placeholder1 = e.placeholder
+    var /* [auto-meaningful-name] */e$animate1 = e.animate
+    return e$isAnimatingOpenOnMount1 || "close" === e$animate1 ? VD : {
+      height: e$placeholder1.client.borderBox.height,
+      width: e$placeholder1.client.borderBox.width,
+      margin: e$placeholder1.client.margin
     }
   }({
     isAnimatingOpenOnMount: e$isAnimatingOpenOnMount,
@@ -5602,7 +5602,7 @@ var zD = function (e) {
   }
 }
 var YD = React.memo(function (e) {
-  var t = _React.useRef(null)
+  var t = React1.useRef(null)
   var n = dN(function () {
     if (t.current) {
       clearTimeout(t.current)
@@ -5613,10 +5613,10 @@ var YD = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onTransitionEnd = e.onTransitionEnd
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$contextId = e.contextId
-  var s = _React.useState("open" === e.animate)
+  var s = React1.useState("open" === e.animate)
   var c = s[0]
   var l = s[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     return c ? "open" !== e$animate ? (n(), l(false), HD) : t.current ? HD : (t.current = setTimeout(function () {
       t.current = null
       l(false)
@@ -5786,8 +5786,8 @@ function eM(e) {
       getDimension: l
     }
   }, [e$descriptor, l, c, t])
-  var d = _React.useRef(u)
-  var p = _React.useRef(true)
+  var d = React1.useRef(u)
+  var p = React1.useRef(true)
   Px(function () {
     e$registry.draggable.register(d.current)
     return function () {
@@ -5994,7 +5994,7 @@ var cM = $_16_index.c(function () {
   pure: true,
   areStatePropsEqual: rM
 })(function (e) {
-  var t = _React.useRef(null)
+  var t = React1.useRef(null)
   var n = dN(function (e) {
     t.current = e
   }, [])
@@ -6210,13 +6210,13 @@ var mM = $_16_index.c(function () {
       return r(o$droppableId, s, oM(n$completed.result) === o$droppableId, XR(n$completed.impact) === o$droppableId, f, o$renderClone)
     }
     if ("IDLE" === n.phase && n.completed && !n.shouldFlush) {
-      var /* [auto-meaningful-name] */_n$completed = n.completed
-      if (!dM(o$type, _n$completed.critical)) {
+      var /* [auto-meaningful-name] */n$completed1 = n.completed
+      if (!dM(o$type, n$completed1.critical)) {
         return t
       }
-      var m = XR(_n$completed.impact) === o$droppableId
-      var g = Boolean(_n$completed.impact.at && "COMBINE" === _n$completed.impact.at.type)
-      var _ = _n$completed.critical.droppable.id === o$droppableId
+      var m = XR(n$completed1.impact) === o$droppableId
+      var g = Boolean(n$completed1.impact.at && "COMBINE" === n$completed1.impact.at.type)
+      var _ = n$completed1.critical.droppable.id === o$droppableId
       return m ? g ? e : t : _ ? e : t
     }
     return t
@@ -6226,14 +6226,14 @@ var mM = $_16_index.c(function () {
   pure: true,
   areStatePropsEqual: rM
 })(function (e) {
-  var t = _React.useContext(Zx)
+  var t = React1.useContext(Zx)
   if (!t) {
     NN(false)
   }
   var /* [auto-meaningful-name] */t$contextId = t.contextId
   var /* [auto-meaningful-name] */t$isMovementAllowed = t.isMovementAllowed
-  var o = _React.useRef(null)
-  var i = _React.useRef(null)
+  var o = React1.useRef(null)
+  var i = React1.useRef(null)
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$droppableId = e.droppableId
   var /* [auto-meaningful-name] */e$type = e.type
@@ -6267,7 +6267,7 @@ var mM = $_16_index.c(function () {
     }
   }, [t$isMovementAllowed, e$updateViewportMaxScroll])
   !function (e) {
-    var t = _React.useRef(null)
+    var t = React1.useRef(null)
     var n = WD(Zx)
     var r = Qx("droppable")
     var /* [auto-meaningful-name] */n$registry = n.registry
@@ -6280,7 +6280,7 @@ var mM = $_16_index.c(function () {
         mode: e.mode
       }
     }, [e.droppableId, e.mode, e.type])
-    var c = _React.useRef(s)
+    var c = React1.useRef(s)
     var l = uN(function () {
       return CN(function (e, n) {
         if (!t.current) {

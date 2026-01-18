@@ -9,7 +9,7 @@
 var r = require("./1686/194")
 var o = require("./1768/257/index")
 var i = require("./949/index")
-var a = require("./1686/246/index")("iterator")
+var a = require("./1686/246")("iterator")
 var /* [auto-meaningful-name] */r$Uint8Array = r.Uint8Array
 var /* [auto-meaningful-name] */i$values = i.values
 var /* [auto-meaningful-name] */i$keys = i.keys

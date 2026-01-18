@@ -8,7 +8,7 @@
 
 import * as a from "../6"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_48_3_index from "../48/3/index"
 import * as St from "../7"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
@@ -24,11 +24,11 @@ function Lt(e) {
   return Pt.apply(this, arguments)
 }
 function Pt() {
-  return (Pt = St.a(_RegeneratorRuntime.mark(function e(t) {
+  return (Pt = St.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
     var /* [auto-meaningful-name] */e$sent$data$data
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -64,10 +64,10 @@ function Bt(e) {
   return Ft.apply(this, arguments)
 }
 function Ft() {
-  return (Ft = St.a(_RegeneratorRuntime.mark(function e(t) {
+  return (Ft = St.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -108,11 +108,11 @@ function Gt(e, t, n) {
   return Wt.apply(this, arguments)
 }
 function Wt() {
-  return (Wt = St.a(_RegeneratorRuntime.mark(function e(t, n, r) {
+  return (Wt = St.a(RegeneratorRuntime1.mark(function e(t, n, r) {
     var o
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -150,10 +150,10 @@ function Ut(e, t) {
   return Ht.apply(this, arguments)
 }
 function Ht() {
-  return (Ht = St.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (Ht = St.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -188,10 +188,10 @@ function Vt(e, t, n, r) {
   return zt.apply(this, arguments)
 }
 function zt() {
-  return (zt = St.a(_RegeneratorRuntime.mark(function e(t, n, r, o) {
+  return (zt = St.a(RegeneratorRuntime1.mark(function e(t, n, r, o) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -242,11 +242,11 @@ function Yt(e, t, n) {
   return Kt.apply(this, arguments)
 }
 function Kt() {
-  return (Kt = St.a(_RegeneratorRuntime.mark(function e(t, n, r) {
+  return (Kt = St.a(RegeneratorRuntime1.mark(function e(t, n, r) {
     var o
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -290,10 +290,10 @@ function qt(e, t, n, r) {
   return Xt.apply(this, arguments)
 }
 function Xt() {
-  return (Xt = St.a(_RegeneratorRuntime.mark(function e(t, n, r, o) {
+  return (Xt = St.a(RegeneratorRuntime1.mark(function e(t, n, r, o) {
     var i
     var a
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

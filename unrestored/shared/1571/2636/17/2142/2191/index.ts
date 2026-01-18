@@ -280,7 +280,7 @@ var h = function (e) {
   }
   t.prototype.set_selected_item = function (e) {
     var /* [auto-meaningful-name] */this$workspace_
-    var /* [auto-meaningful-name] */_this$workspace_
+    var /* [auto-meaningful-name] */this$workspace_1
     var /* [auto-meaningful-name] */this$selected_node = this.selected_node
     if (e !== this$selected_node) {
       if (this.events.is_enabled()) {
@@ -321,7 +321,7 @@ var h = function (e) {
       if (this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: a.UIEventType.CATEGORY,
-          workspace_id: (null === (_this$workspace_ = this.workspace_) || undefined === _this$workspace_ ? undefined : _this$workspace_.id) || "",
+          workspace_id: (null === (this$workspace_1 = this.workspace_) || undefined === this$workspace_1 ? undefined : this$workspace_1.id) || "",
           old_value: this$selected_node,
           new_value: e
         }))

@@ -31,7 +31,7 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1208_index from "./1208/index"
 function OM(e) {
   return wM.apply(this, arguments)
@@ -51,7 +51,7 @@ function wM() {
               var i
               var a
               var /* [auto-meaningful-name] */e$sent
-              var /* [auto-meaningful-name] */_e$sent
+              var /* [auto-meaningful-name] */e$sent1
               var l
               var u
               var d
@@ -75,8 +75,8 @@ function wM() {
                       e.next = 10
                       return e$sent.arrayBuffer()
                     case 10:
-                      _e$sent = e.sent
-                      l = $_1208_index.parseGIF(_e$sent)
+                      e$sent1 = e.sent
+                      l = $_1208_index.parseGIF(e$sent1)
                       u = $_1208_index.decompressFrames(l, true)
                       i.width = u[0].dims.width
                       i.height = u[0].dims.height
@@ -164,7 +164,7 @@ function TM(e) {
   }
   return n
 }
-var SM = _React.memo(function (e) {
+var SM = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$actionId = e.actionId
   var /* [auto-meaningful-name] */e$editingStyleId = e.editingStyleId
   var /* [auto-meaningful-name] */e$styleList = e.styleList
@@ -172,19 +172,19 @@ var SM = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onIntervalChange = e.onIntervalChange
   var /* [auto-meaningful-name] */e$setEditingStyleId = e.setEditingStyleId
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = _React.useState(e$actionInterval.toString() || "200")
+  var c = React1.useState(e$actionInterval.toString() || "200")
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useRef(200)
-  var m = _React.useState(false)
+  var p = React1.useRef(200)
+  var m = React1.useState(false)
   var g = $_10_index.a(m, 2)
   var _ = g[0]
   var v = g[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     d(e$actionInterval.toFixed())
   }, [e$actionId])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (u !== e$actionInterval.toFixed()) {
       e$onIntervalChange(e$actionId, Number(u))
     }
@@ -274,8 +274,8 @@ function IM(e) {
   var /* [auto-meaningful-name] */e$deleteStyle = e.deleteStyle
   var /* [auto-meaningful-name] */e$copyStyle = e.copyStyle
   var /* [auto-meaningful-name] */e$onStyleListChange = e.onStyleListChange
-  var s = _React.useRef(AM)
-  var c = _React.useCallback(function () {
+  var s = React1.useRef(AM)
+  var c = React1.useCallback(function () {
     var e
     var t
     var n = null === (e = document.getElementById("THE_STYLE_LIST")) || undefined === e ? undefined : e.closest(".coco-dialog-wrapper.show")
@@ -285,13 +285,13 @@ function IM(e) {
       y: r.y
     } : AM
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     window.addEventListener("scroll", c)
     return function () {
       return window.removeEventListener("scroll", c)
     }
   }, [c])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = document.getElementById("THE_STYLE_LIST")
     if (e instanceof HTMLUListElement) {
       var t = e.querySelector("." + $_137.selected)
@@ -421,7 +421,7 @@ function IM(e) {
   }))
 }
 var jM
-_React.memo(IM)
+React1.memo(IM)
 function NM(e) {
   var t
   e.some(function (e) {
@@ -437,13 +437,13 @@ function RM(e) {
   e.UPLOAD_FILE = "UPLOAD_FILE"
   e.OPEN_RESOURCE_LIBRARY = "OPEN_RESOURCE_LIBRARY"
 }(jM || (jM = {}))
-var kM = _React.memo(function () {
+var kM = React1.memo(function () {
   var e
   var t = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = _React.useRef(true)
-  var o = _React.useRef(undefined)
-  var i = _React.useState(false)
+  var r = React1.useRef(true)
+  var o = React1.useRef(undefined)
+  var i = React1.useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -456,31 +456,31 @@ var kM = _React.memo(function () {
   var /* [auto-meaningful-name] */Et$BbL$attributes = Et.Bb(l).attributes
   var /* [auto-meaningful-name] */Et$BbL$attributes$selectedStyleId = Et$BbL$attributes.selectedStyleId
   var /* [auto-meaningful-name] */Et$BbL$attributes$actionList = Et$BbL$attributes.actionList
-  var g = _React.useState(Et$BbL$attributes$selectedStyleId)
+  var g = React1.useState(Et$BbL$attributes$selectedStyleId)
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = _React.useState(Lodash.cloneDeep(Et$BbL$attributes$actionList))
+  var w = React1.useState(Lodash.cloneDeep(Et$BbL$attributes$actionList))
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
   var j = null === (e = T[0]) || undefined === e ? undefined : e.id
-  var N = _React.useState(j)
+  var N = React1.useState(j)
   var R = $_10_index.a(N, 2)
   var k = R[0]
   var M = R[1]
   var L = T.find(function (e) {
     return e.id === k
   })
-  var P = _React.useState(undefined)
+  var P = React1.useState(undefined)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
   var W = (null === L || undefined === L ? undefined : L.styleList) || []
   var U = (null === L || undefined === L ? undefined : L.interval) || 200
-  var H = _React.useRef()
-  var V = _React.useRef(null)
-  _React.useEffect(function () {
+  var H = React1.useRef()
+  var V = React1.useRef(null)
+  React1.useEffect(function () {
     var e
     if (!W.some(function (e) {
       return e.id === F
@@ -489,7 +489,7 @@ var kM = _React.memo(function () {
       G(t)
     }
   }, [F, W])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (H.current) {
       var /* [auto-meaningful-name] */H$current = H.current
       var t = document.getElementById(H$current)
@@ -562,7 +562,7 @@ var kM = _React.memo(function () {
       var d
       var p
       var f
-      var /* [auto-meaningful-name] */_e$sent2
+      var /* [auto-meaningful-name] */e$sent1
       var m
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -601,8 +601,8 @@ var kM = _React.memo(function () {
               e.next = 20
               return Z(f, o$value.name, p)
             case 20:
-              _e$sent2 = e.sent
-              c.push(_e$sent2[0].cdnUrl || _e$sent2[0].source || "")
+              e$sent1 = e.sent
+              c.push(e$sent1[0].cdnUrl || e$sent1[0].source || "")
               m = {
                 cdnUrl: c[0],
                 id: o$value.name,
@@ -709,14 +709,14 @@ var kM = _React.memo(function () {
   var ne = function () {
     t($$_$$_$$_$$_src_editor_redux_common_actions.vh())
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (undefined === o.current) {
       o.current = false
     } else {
       o.current = true
     }
   }, [b, T])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     r.current = true
     return function () {
       r.current = false

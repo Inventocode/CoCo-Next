@@ -20,10 +20,10 @@ var f = require("./1622")
 var h = require("../../1705/497")
 var m = require("../../1686/638")
 var /* [auto-meaningful-name] */require$$_$$_1581_635$f = require("../../1581/635").f
-var /* [auto-meaningful-name] */require$$_$$_1705_300_index$f = require("../../1705/300/index").f
+var /* [auto-meaningful-name] */require$$_$$_1705_300$f = require("../../1705/300").f
 var v = require("../../1599/1084")
 var b = require("../../1686/534")
-var y = require("../../1686/426/index")
+var y = require("../../1686/426")
 var /* [auto-meaningful-name] */y$get = y.get
 var /* [auto-meaningful-name] */y$set = y.set
 var /* [auto-meaningful-name] */r$ArrayBuffer = r.ArrayBuffer
@@ -53,7 +53,7 @@ var L = function (e) {
   return f$pack(e, 52, 8)
 }
 var P = function (e, t) {
-  require$$_$$_1705_300_index$f(e.prototype, t, {
+  require$$_$$_1705_300$f(e.prototype, t, {
     get: function () {
       return y$get(this)[t]
     }

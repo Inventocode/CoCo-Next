@@ -12,7 +12,7 @@ import { h, m } from "./800__part-2"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_241_index from "../241/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_103 from "../103"
 import * as /* [auto-meaningful-name] */$$_106 from "../106"
@@ -34,28 +34,28 @@ var y = function (e) {
     }
   ])
   return n
-}(_React.Component)
-var E = _React.createContext(null)
+}(React1.Component)
+var E = React1.createContext(null)
 function O(e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var r = _React.useRef(null)
-  var i = _React.useRef(null)
-  var c = _React.useContext(E)
-  var u = _React.useRef({
+  var r = React1.useRef(null)
+  var i = React1.useRef(null)
+  var c = React1.useContext(E)
+  var u = React1.useRef({
     width: 0,
     height: 0,
     offsetWidth: 0,
     offsetHeight: 0
   })
-  var d = _React.isValidElement(e$children) && function (e) {
+  var d = React1.isValidElement(e$children) && function (e) {
     var /* [auto-meaningful-name] */r$prototype
     var /* [auto-meaningful-name] */e$prototype
     var r = $$_241_index.isMemo(e) ? e.type.type : e.type
     return !("function" === typeof r && !(null === (r$prototype = r.prototype) || undefined === r$prototype ? undefined : r$prototype.render)) && !("function" === typeof e && !(null === (e$prototype = e.prototype) || undefined === e$prototype ? undefined : e$prototype.render))
   }(e$children)
   var f = d ? e$children.ref : null
-  var g = _React.useMemo(function () {
+  var g = React1.useMemo(function () {
     return function () {
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
@@ -67,9 +67,9 @@ function O(e) {
       }
     }(f, r)
   }, [f, r])
-  var _ = _React.useRef(e)
+  var _ = React1.useRef(e)
   _.current = e
-  var v = _React.useCallback(function (e) {
+  var v = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */_$current = _.current
     var /* [auto-meaningful-name] */_$current$onResize = _$current.onResize
     var /* [auto-meaningful-name] */_$current$data = _$current.data
@@ -104,7 +104,7 @@ function O(e) {
       }
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     var t
     var o = p(r.current) || p(i.current)
@@ -129,9 +129,9 @@ function O(e) {
       }(o, v)
     }
   }, [r.current, e$disabled])
-  return _React.createElement(y, {
+  return React1.createElement(y, {
     ref: i
-  }, d ? _React.cloneElement(e$children, {
+  }, d ? React1.cloneElement(e$children, {
     ref: g
   }) : e$children)
 }
@@ -155,7 +155,7 @@ function w(e) {
     return r
   }(e.children).map(function (t, n) {
     var i = (null === t || undefined === t ? undefined : t.key) || "".concat("rc-observer-key", "-").concat(n)
-    return _React.createElement(O, $$_19.a({}, e, {
+    return React1.createElement(O, $$_19.a({}, e, {
       key: i
     }), t)
   })
@@ -163,10 +163,10 @@ function w(e) {
 w.Collection = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onBatchResize = e.onBatchResize
-  var r = _React.useRef(0)
-  var i = _React.useRef([])
-  var a = _React.useContext(E)
-  var s = _React.useCallback(function (e, t, o) {
+  var r = React1.useRef(0)
+  var i = React1.useRef([])
+  var a = React1.useContext(E)
+  var s = React1.useCallback(function (e, t, o) {
     r.current += 1
     var /* [auto-meaningful-name] */r$current = r.current
     i.current.push({
@@ -186,7 +186,7 @@ w.Collection = function (e) {
       a(e, t, o)
     }
   }, [e$onBatchResize, a])
-  return _React.createElement(E.Provider, {
+  return React1.createElement(E.Provider, {
     value: s
   }, e$children)
 }

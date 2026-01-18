@@ -6,7 +6,7 @@
 
 var r = require("./1705/86/index")
 var o = require("./1686/194")
-var i = require("./1686/1093")
+var i = require("./1686/1093/index")
 r({
   global: true,
   bind: true,

@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1205_index from "./1205/index"
 import * as /* [auto-meaningful-name] */$_1058_index from "./1058/index"
 import * as /* [auto-meaningful-name] */$_1022_index from "./1022/index"
@@ -24,7 +24,7 @@ import * as KC from "./99"
 import qC from "./99"
 import * as /* [auto-meaningful-name] */$_301_index from "./301/index"
 var QC = ["addPrimitiveVariableName", "addArrayVariableName", "object.createNewObject", "addDocKey"]
-var ZC = _React.memo(function () {
+var ZC = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.block.get("createVariableDialog")
   })
@@ -35,30 +35,30 @@ var ZC = _React.memo(function () {
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
   var /* [auto-meaningful-name] */e$tips = e.tips
   var /* [auto-meaningful-name] */e$placeholder = e.placeholder
-  var c = _React.useState("")
+  var c = React1.useState("")
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState("")
+  var p = React1.useState("")
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = _React.useState(false)
+  var b = React1.useState(false)
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = _React.useState(K.i.GLOBAL)
+  var w = React1.useState(K.i.GLOBAL)
   var T = $_10_index.a(w, 2)
   var A = T[0]
   var j = T[1]
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var k = _React.useRef(null)
-  var x = _React.useRef(true)
+  var k = React1.useRef(null)
+  var x = React1.useRef(true)
   var D = $_16_index.e(function (e) {
     return e.project.currentScreenIndex
   })
   var M = $_16_index.d()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       setTimeout(function () {
         var /* [auto-meaningful-name] */k$current
@@ -68,7 +68,7 @@ var ZC = _React.memo(function () {
       }, 0)
     }
   }, [e$visible])
-  var L = _React.useCallback(function (e) {
+  var L = React1.useCallback(function (e) {
     var t = ""
     if (e) {
       if (e$validators && x.current) {
@@ -94,7 +94,7 @@ var ZC = _React.memo(function () {
     }
     v(e)
   }, [e$validators, A])
-  var P = _React.useCallback(function () {
+  var P = React1.useCallback(function () {
     v("")
     d("")
     j(K.i.GLOBAL)
@@ -103,14 +103,14 @@ var ZC = _React.memo(function () {
       e$onClose()
     }
   }, [M, e$onClose])
-  var B = _React.useCallback(function (e) {
+  var B = React1.useCallback(function (e) {
     if (E && !e) {
       d($_710_index$a$formatMessage({
         id: "invalidVariableName"
       }))
     }
   }, [$_710_index$a$formatMessage, E])
-  var F = _React.useCallback(function () {
+  var F = React1.useCallback(function () {
     if (!u && g) {
       if (e$onConfirm) {
         e$onConfirm(g, A)
@@ -124,10 +124,10 @@ var ZC = _React.memo(function () {
   var W = function () {
     O(false)
   }
-  var U = _React.useCallback(function () {
+  var U = React1.useCallback(function () {
     x.current = false
   }, [])
-  var H = _React.useCallback(function (e) {
+  var H = React1.useCallback(function (e) {
     x.current = true
     var /* [auto-meaningful-name] */e$target$value = e.target.value
     L(e$target$value)

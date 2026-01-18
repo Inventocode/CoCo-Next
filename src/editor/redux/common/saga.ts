@@ -79,7 +79,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_266 from "../../../../unrestored/shared/1571/2636/266"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_2 from "../../../../unrestored/shared/1571/2636/266"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2661 from "../../../../unrestored/shared/1571/2636/266"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_188 from "../../../../unrestored/shared/1571/2636/188"
 var No = function (e) {
   var /* [auto-meaningful-name] */e$title = e.title
@@ -109,12 +109,12 @@ var No = function (e) {
     withPortal: true,
     maskClosable: false,
     mask: g,
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81(_$$_$$_$$_$$_unrestored_shared_1571_2636_2.dialog, e$className, e$denyText && _$$_$$_$$_$$_unrestored_shared_1571_2636_2.dialogSecondary)
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialog, e$className, e$denyText && $$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogSecondary)
   }, React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.a, null, React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.b, {
     keys: "enter",
     callback: _
   })), React1.createElement("h3", null, e$title), React1.createElement("span", null, e$content), React1.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81(_$$_$$_$$_$$_unrestored_shared_1571_2636_2.dialogButtons)
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogButtons)
   }, p && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     type: "light",
     onClick: function () {
@@ -128,7 +128,7 @@ var No = function (e) {
         e$onDeny()
       }
     },
-    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_2.denyButton
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_2661.denyButton
   }, e$denyText), h && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     type: "primary",
     danger: e$isDangerous,
@@ -4623,12 +4623,12 @@ function* handlePublishWorkToCommunity(action) {
 }
 
 function handlePublishWorkToH5(action) {
-  var /* [auto-meaningful-name] */f$sent
+  var /* [auto-meaningful-name] */regeneratorContext$sent
   var n
   var /* [auto-meaningful-name] */_f$sent4
-  var /* [auto-meaningful-name] */e$payload$info
+  var /* [auto-meaningful-name] */action$payload$info
   var /* [auto-meaningful-name] */_f$sent5
-  var /* [auto-meaningful-name] */f$sent1
+  var /* [auto-meaningful-name] */regeneratorContext$sent1
   var l
   var u
   var /* [auto-meaningful-name] */_f$sent7
@@ -4640,8 +4640,8 @@ function handlePublishWorkToH5(action) {
           regeneratorContext.next = 2
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 2:
-          f$sent = regeneratorContext.sent
-          n = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(f$sent)
+          regeneratorContext$sent = regeneratorContext.sent
+          n = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(regeneratorContext$sent)
           regeneratorContext.next = 6
           return ReduxSagaEffects.b(Ws, Actions.asyncSaveProjectAction({
             isUpdate: n,
@@ -4649,7 +4649,7 @@ function handlePublishWorkToH5(action) {
           }))
         case 6:
           _f$sent4 = regeneratorContext.sent
-          e$payload$info = action.payload.info
+          action$payload$info = action.payload.info
           regeneratorContext.next = 10
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 10:
@@ -4659,7 +4659,7 @@ function handlePublishWorkToH5(action) {
             return generatePlayerData(false)
           })
         case 13:
-          if (f$sent1 = regeneratorContext.sent) {
+          if (regeneratorContext$sent1 = regeneratorContext.sent) {
             regeneratorContext.next = 16
             break
           }
@@ -4672,14 +4672,14 @@ function handlePublishWorkToH5(action) {
           throw new Error("user not login")
         case 18:
           l = new Blob([
-            JSON.stringify($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, f$sent1), {}, {
+            JSON.stringify($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, regeneratorContext$sent1), {}, {
               userInfo: {
                 name: _f$sent5.nickname,
                 avatarUrl: _f$sent5.avatar_url
               },
-              title: e$payload$info.title,
-              description: e$payload$info.desc,
-              coverUrl: e$payload$info.img
+              title: action$payload$info.title,
+              description: action$payload$info.desc,
+              coverUrl: action$payload$info.img
             }))
           ], {
             type: "application/json,charset=utf-8;"

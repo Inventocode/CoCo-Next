@@ -18,13 +18,13 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_341 from "./341"
-import /* [auto-meaningful-name] */_$_ from "./341"
+import /* [auto-meaningful-name] */$_3411 from "./341"
 var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
 var bA = {}
 var yA = {}
-var EA = _React.memo(function (e) {
+var EA = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
   var /* [auto-meaningful-name] */e$name = e.name
@@ -33,7 +33,7 @@ var EA = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var c = $_16_index.d()
-  var l = _React.useState(0)
+  var l = React1.useState(0)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
@@ -50,7 +50,7 @@ var EA = _React.memo(function (e) {
     var t = te.I(e)
     return [e.slice(0, e.lastIndexOf(t)), t]
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     return function () {
       if (e$isPlaying && bA[t]) {
         if (yA[t]) {
@@ -71,11 +71,11 @@ var EA = _React.memo(function (e) {
   }, [e$isPlaying, t])
   return React.createElement("li", {
     key: t,
-    className: _$_.SoundLayoutItem
+    className: $_3411.SoundLayoutItem
   }, React.createElement("div", {
-    className: _$_.soundBoxWrapper
+    className: $_3411.soundBoxWrapper
   }, React.createElement("div", {
-    className: _$_.delete,
+    className: $_3411.delete,
     onClick: function (e) {
       var t = Et.ub("SOUND_FILE_ID", e)
       if (t.length > 0 || Et.Yb(e)) {
@@ -103,7 +103,7 @@ var EA = _React.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: "icon-delete"
   })), React.createElement("div", {
-    className: _$_.soundBox,
+    className: $_3411.soundBox,
     onClick: function (e) {
       e.stopPropagation()
       if (e$isPlaying) {
@@ -137,38 +137,38 @@ var EA = _React.memo(function (e) {
     src: e$cdnUrl || e$source,
     preload: "none"
   }), e$isPlaying ? React.createElement("div", {
-    className: _$_.soundPauseIconBox
+    className: $_3411.soundPauseIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-sound-pause",
-    className: _$_.soundDefaultIcon
+    className: $_3411.soundDefaultIcon
   }), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.rightWrapper)
+    className: N($_3411.progressWrapper, $_3411.rightWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.rightCircle),
+    className: N($_3411.circleProgress, $_3411.rightCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   })), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.leftWrapper)
+    className: N($_3411.progressWrapper, $_3411.leftWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.leftCircle),
+    className: N($_3411.circleProgress, $_3411.leftCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   }))) : React.createElement("div", {
-    className: _$_.soundIconBox
+    className: $_3411.soundIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-music",
-    className: _$_.soundDefaultIcon
+    className: $_3411.soundDefaultIcon
   }), React.createElement("div", {
-    className: _$_.soundPlayIconBox
+    className: $_3411.soundPlayIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-sound-play",
-    className: _$_.soundPlayIcon
+    className: $_3411.soundPlayIcon
   })))), React.createElement("div", {
-    className: _$_.soundDuration
+    className: $_3411.soundDuration
   }, te.w(e$isPlaying ? d : e$duration))), React.createElement("div", {
-    className: _$_.fileItemName
+    className: $_3411.fileItemName
   }, React.createElement(fA, {
     suffix: v(e$name)[1],
     isTrimmed: true,

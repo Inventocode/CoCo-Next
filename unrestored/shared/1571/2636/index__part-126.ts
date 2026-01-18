@@ -16,9 +16,9 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_2680_index from "./2680/index"
-var hw = _React.memo(function (e) {
+var hw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "templateType" : e$keyName
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
@@ -28,7 +28,7 @@ var hw = _React.memo(function (e) {
   var s = e$getValue("templateRenderType")
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var l = $_16_index.d()
-  var u = _React.useState(false)
+  var u = React1.useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
@@ -119,7 +119,7 @@ var hw = _React.memo(function (e) {
     }))
   }))))
 })
-var mw = _React.memo(function (e) {
+var mw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -128,7 +128,7 @@ var mw = _React.memo(function (e) {
   var a = e$getValue(n)
   var s = e$formConfig.dropdown || []
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = _React.useState(a)
+  var l = React1.useState(a)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]

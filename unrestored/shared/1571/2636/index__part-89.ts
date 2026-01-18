@@ -26,10 +26,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_150 from "./150"
-import /* [auto-meaningful-name] */_$_ from "./150"
-var Bv = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_1501 from "./150"
+var Bv = React1.memo(function (e) {
   var t
   var n = e.id
   var /* [auto-meaningful-name] */e$type = e.type
@@ -52,19 +52,19 @@ var Bv = _React.memo(function (e) {
   var w = undefined !== e$readonly && e$readonly
   var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var A = _React.useRef(null)
+  var A = React1.useRef(null)
   var j = $_16_index.e(function (e) {
     return e.block.flyoutVisible
   })
-  var R = _React.useState(true)
+  var R = React1.useState(true)
   var x = $_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
-  var L = _React.useState(false)
+  var L = React1.useState(false)
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = function e() {
       F(false)
       document.removeEventListener("click", e, true)
@@ -79,7 +79,7 @@ var Bv = _React.memo(function (e) {
       document.removeEventListener("contextmenu", e, true)
     }
   }, [B])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$selected && A.current) {
       A.current.scrollIntoView({
         behavior: "smooth",
@@ -95,7 +95,7 @@ var Bv = _React.memo(function (e) {
     e$onCopyToCurrentScreen(n)
   }
   return React.createElement("div", {
-    className: N(_$_.itemWrapper, E)
+    className: N($_1501.itemWrapper, E)
   }, React.createElement($_1213.a, {
     placement: "bottomLeft",
     trigger: "hover",
@@ -109,17 +109,17 @@ var Bv = _React.memo(function (e) {
     overlayClassName: "popoverOverlay",
     content: function () {
       return React.createElement("div", {
-        className: _$_.popoverWrapper,
+        className: $_1501.popoverWrapper,
         onContextMenu: function (e) {
           return e.preventDefault()
         }
       }, !e$isInvisibleWidget && React.createElement("div", {
-        className: _$_.menuItem,
+        className: $_1501.menuItem,
         onMouseDown: W
       }, $_710_index$a$formatMessage({
         id: "copyAndPaste"
       })), React.createElement("div", {
-        className: N(_$_.menuItem, _$_.delete),
+        className: N($_1501.menuItem, $_1501.delete),
         onMouseDown: G
       }, $_710_index$a$formatMessage({
         id: "delete"
@@ -127,7 +127,7 @@ var Bv = _React.memo(function (e) {
     }
   }, React.createElement("div", {
     ref: A,
-    className: N(_$_.item, (t = {}, k.a(t, _$_.selected, e$selected && j), k.a(t, _$_.selectedLight, e$selected && !j), k.a(t, _$_.children, e$isChildren), k.a(t, _$_.parent, !!e$children), k.a(t, _$_.expanded, D), k.a(t, _$_.notLast, !e$isLast && e$isChildren), t)),
+    className: N($_1501.item, (t = {}, k.a(t, $_1501.selected, e$selected && j), k.a(t, $_1501.selectedLight, e$selected && !j), k.a(t, $_1501.children, e$isChildren), k.a(t, $_1501.parent, !!e$children), k.a(t, $_1501.expanded, D), k.a(t, $_1501.notLast, !e$isLast && e$isChildren), t)),
     onContextMenu: function (e) {
       e.preventDefault()
       if (!(w || e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.a && e$isChildren)) {
@@ -138,28 +138,28 @@ var Bv = _React.memo(function (e) {
       e$onSelect(n)
     }
   }, React.createElement("div", {
-    className: _$_.left
+    className: $_1501.left
   }, React.createElement("span", {
-    className: _$_.foldIconContainer,
+    className: $_1501.foldIconContainer,
     onClick: function (e) {
       M(!D)
       e.stopPropagation()
     }
   }, React.createElement($_94_index.a, {
     type: "icon-fold-left",
-    className: _$_.foldIcon
+    className: $_1501.foldIcon
   })), te.X(e$icon) ? React.createElement("img", {
-    className: N(_$_.widgetIcon, _$_.widgetUrlIcon),
+    className: N($_1501.widgetIcon, $_1501.widgetUrlIcon),
     src: e$icon,
     alt: e$title,
     draggable: false
   }) : React.createElement($_94_index.a, {
     type: e$icon,
-    className: _$_.widgetIcon
+    className: $_1501.widgetIcon
   }), React.createElement("span", {
-    className: N(_$_.label, !e$visible && _$_.labelGray)
+    className: N($_1501.label, !e$visible && $_1501.labelGray)
   }, e$title)), React.createElement("div", {
-    className: _$_.right
+    className: $_1501.right
   }, !e$isInvisibleWidget && e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && React.createElement("div", {
     onClick: function (e) {
       e.stopPropagation()
@@ -169,7 +169,7 @@ var Bv = _React.memo(function (e) {
         e$onHide(n)
       }
     },
-    className: N(_$_.controlIcon, _$_.seeIcon)
+    className: N($_1501.controlIcon, $_1501.seeIcon)
   }, React.createElement($_94_index.a, {
     type: e$visible ? "icon-see" : "icon-see-disable"
   })), React.createElement("div", {
@@ -177,17 +177,17 @@ var Bv = _React.memo(function (e) {
       e.stopPropagation()
       e$toggleAttributeVisible(n)
     },
-    className: _$_.controlIcon
+    className: $_1501.controlIcon
   }, React.createElement($_94_index.a, {
     type: "icon-attribute"
   }))))), D && e$children)
 })
-var Fv = _React.memo(function () {
+var Fv = React1.memo(function () {
   var /* [auto-meaningful-name] */u$invisibleWidgetIds
   var t
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var r = $_16_index.d()
-  var o = _React.useRef()
+  var o = React1.useRef()
   var i = $_16_index.e(function (e) {
     return e.common.editAreaUpdatedAt
   })
@@ -204,19 +204,19 @@ var Fv = _React.memo(function () {
     return e.block.flyoutVisible
   })
   var u = $_238.d()
-  var d = _React.useState(false)
+  var d = React1.useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState(false)
+  var v = React1.useState(false)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = _React.useState(false)
+  var O = React1.useState(false)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = _React.useState(false)
+  var A = React1.useState(false)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var D = j[1]
@@ -485,16 +485,16 @@ var Fv = _React.memo(function () {
           })(e, n, t)
         }
       },
-      lineClassName: _$_.dragLine
+      lineClassName: $_1501.dragLine
     }, ie(e, n, t))
   }
   return React.createElement("div", {
-    className: _$_.wrapper
+    className: $_1501.wrapper
   }, React.createElement("div", {
-    className: _$_.list,
+    className: $_1501.list,
     "data-updated-at": i
   }, React.createElement("div", {
-    className: _$_.widgetCategory,
+    className: $_1501.widgetCategory,
     onClick: function () {
       g(!m)
     }
@@ -502,9 +502,9 @@ var Fv = _React.memo(function () {
     id: "components"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",
-    className: m ? _$_.fold : _$_.unFold
+    className: m ? $_1501.fold : $_1501.unFold
   })), !m && ae(q), !m && React.createElement("div", {
-    className: N(_$_.item, _$_.screenItem, (t = {}, k.a(t, _$_.selected, !s && l), k.a(t, _$_.selectedLight, !s && !l), t)),
+    className: N($_1501.item, $_1501.screenItem, (t = {}, k.a(t, $_1501.selected, !s && l), k.a(t, $_1501.selectedLight, !s && !l), t)),
     onContextMenu: function (e) {
       return e.preventDefault()
     },
@@ -526,14 +526,14 @@ var Fv = _React.memo(function () {
       }
     }
   }, React.createElement("div", {
-    className: _$_.left
+    className: $_1501.left
   }, React.createElement($_13_index.j, {
     type: "icon-screen",
-    className: _$_.widgetIcon
+    className: $_1501.widgetIcon
   }), React.createElement("span", {
-    className: _$_.label
+    className: $_1501.label
   }, u.title)), React.createElement("div", {
-    className: _$_.right
+    className: $_1501.right
   }, React.createElement("div", {
     onClick: function (e) {
       var t
@@ -542,15 +542,15 @@ var Fv = _React.memo(function () {
       $_26_index.g.setSelectedItem(null === (t = $_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(u.id))
       r(!s && a ? $$_$$_$$_$$_src_editor_redux_common_actions.fj(false) : $$_$$_$$_$$_src_editor_redux_common_actions.fj(true))
     },
-    className: N(_$_.controlIcon, _$_.attributeIcon)
+    className: N($_1501.controlIcon, $_1501.attributeIcon)
   }, React.createElement($_13_index.j, {
     type: "icon-attribute"
   })), React.createElement("div", {
-    className: _$_.screenBottomIcon
+    className: $_1501.screenBottomIcon
   }, React.createElement($_13_index.j, {
     type: "icon-screen-bottom"
   })))), ee.length > 0 && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.widgetCategory,
+    className: $_1501.widgetCategory,
     onClick: function () {
       E(!y)
     }
@@ -558,11 +558,11 @@ var Fv = _React.memo(function () {
     id: "invisibleWidgetList"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",
-    className: y ? _$_.fold : _$_.unFold
+    className: y ? $_1501.fold : $_1501.unFold
   })), !y && ae($, {
     isInvisibleWidget: true
   })), re.length > 0 && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.widgetCategory,
+    className: $_1501.widgetCategory,
     onClick: function () {
       T(!C)
     }
@@ -570,12 +570,12 @@ var Fv = _React.memo(function () {
     id: "globalWidgetList"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",
-    className: C ? _$_.fold : _$_.unFold
+    className: C ? $_1501.fold : $_1501.unFold
   })), !C && ae(ne, {
     isGlobalWidget: true,
     isInvisibleWidget: true
   })), Q.length > 0 && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.widgetCategory,
+    className: $_1501.widgetCategory,
     onClick: function () {
       D(!R)
     }
@@ -583,7 +583,7 @@ var Fv = _React.memo(function () {
     id: "anyWidgetList"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",
-    className: R ? _$_.fold : _$_.unFold
+    className: R ? $_1501.fold : $_1501.unFold
   })), !R && (oe = Q, React.createElement("div", {
     onContextMenu: function (e) {
       return e.preventDefault()
@@ -596,19 +596,19 @@ var Fv = _React.memo(function () {
     return React.createElement("div", {
       onClick: U.bind(null, e$type),
       key: e$type,
-      className: N(_$_.item, (t = {}, k.a(t, _$_.selected, s === e$type && l), k.a(t, _$_.selectedLight, s === e$type && !l), k.a(t, _$_.parent, false), t))
+      className: N($_1501.item, (t = {}, k.a(t, $_1501.selected, s === e$type && l), k.a(t, $_1501.selectedLight, s === e$type && !l), k.a(t, $_1501.parent, false), t))
     }, React.createElement("div", {
-      className: N(_$_.left, _$_.anyWidget)
+      className: N($_1501.left, $_1501.anyWidget)
     }, te.X(e$icon) ? React.createElement("img", {
-      className: N(_$_.widgetIcon, _$_.widgetUrlIcon),
+      className: N($_1501.widgetIcon, $_1501.widgetUrlIcon),
       src: e$icon,
       alt: e$title,
       draggable: false
     }) : React.createElement($_13_index.j, {
       type: e$icon,
-      className: _$_.widgetIcon
+      className: $_1501.widgetIcon
     }), React.createElement("span", {
-      className: N(_$_.label)
+      className: N($_1501.label)
     }, e$title)))
   }))))))
 })

@@ -146,10 +146,10 @@ var h = function () {
           case "&&":
           case "||":
             if (this$choiceContext.processed || (this$choiceContext.trueForkContext.add(this$forkContext$head), this$choiceContext.falseForkContext.add(this$forkContext$head)), this$choiceContext.isForkingAsResult) {
-              var /* [auto-meaningful-name] */_this$choiceContext = this.choiceContext
-              _this$choiceContext.trueForkContext.addAll(this$choiceContext.trueForkContext)
-              _this$choiceContext.falseForkContext.addAll(this$choiceContext.falseForkContext)
-              _this$choiceContext.processed = true
+              var /* [auto-meaningful-name] */this$choiceContext1 = this.choiceContext
+              this$choiceContext1.trueForkContext.addAll(this$choiceContext.trueForkContext)
+              this$choiceContext1.falseForkContext.addAll(this$choiceContext.falseForkContext)
+              this$choiceContext1.processed = true
               return this$choiceContext
             }
             break
@@ -237,7 +237,7 @@ var h = function () {
         if (0 !== this$switchContext.countForks) {
           var /* [auto-meaningful-name] */this$forkContext$head = this$forkContext.head
           this.forkBypassPath()
-          var /* [auto-meaningful-name] */_this$forkContext$head = this$forkContext.head
+          var /* [auto-meaningful-name] */this$forkContext$head1 = this$forkContext.head
           this$popBreakContext$brokenForkContext.add(this$forkContext$head)
           if (!this$switchContext.lastIsDefault) {
             if (this$switchContext.defaultBodySegments) {
@@ -251,9 +251,9 @@ var h = function () {
                   l(i.allPrevSegments, r)
                 }
               }(this$switchContext.defaultSegments, this$switchContext.defaultBodySegments)
-              f(this, _this$forkContext$head, this$switchContext.defaultBodySegments)
+              f(this, this$forkContext$head1, this$switchContext.defaultBodySegments)
             } else {
-              this$popBreakContext$brokenForkContext.add(_this$forkContext$head)
+              this$popBreakContext$brokenForkContext.add(this$forkContext$head1)
             }
           }
           for (var o = 0; o < this$switchContext.countForks; ++o) {

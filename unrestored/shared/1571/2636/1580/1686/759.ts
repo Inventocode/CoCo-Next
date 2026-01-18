@@ -7,8 +7,8 @@
 "use strict"
 
 var r = require("../1704/476")
-var o = require("../1705/300/index")
-var i = require("./246/index")
+var o = require("../1705/300")
+var i = require("./246")
 var a = require("../1699/271")
 var s = i("species")
 module.exports = function (e) {

@@ -9,26 +9,26 @@
 import { Se } from "../../../../unrestored/shared/1571/2636/33__part-3"
 var r
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
-import * as a from "../../../../unrestored/shared/1571/2636/7"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../unrestored/shared/1571/2636/10/index"
-import * as c from "../../../../unrestored/shared/1571/2636/11"
-import * as l from "../../../../unrestored/shared/1571/2636/6"
-import * as /* [auto-meaningful-name] */$_25_index from "../../../../unrestored/shared/1571/2636/25/index"
-import * as d from "../../../../unrestored/shared/1571/2636/47"
-import * as /* [auto-meaningful-name] */$_42_index from "../../../../unrestored/shared/1571/2636/42/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../built-in/types"
-import * as h from "../../../../unrestored/shared/1571/2636/64"
-import * as m from "../../../../unrestored/shared/1571/2636/15"
-import * as g from "../../../../unrestored/shared/1571/2636/83"
-import * as /* [auto-meaningful-name] */$_314 from "../../../../unrestored/shared/1571/2636/314"
-import * as v from "../../../../unrestored/shared/1571/2636/95"
-import * as /* [auto-meaningful-name] */$_190 from "../../../../unrestored/shared/1571/2636/190"
-import * as /* [auto-meaningful-name] */$_133 from "../../../../unrestored/shared/1571/2636/133"
-import * as E from "../../../../unrestored/shared/1571/2636/75"
-import * as /* [auto-meaningful-name] */$_37_index from "../../../../unrestored/shared/1571/2636/37/index"
-import * as /* [auto-meaningful-name] */$_26_index from "../../../../unrestored/shared/1571/2636/26/index"
-import * as C from "../../../../unrestored/shared/1571/2636/53"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../unrestored/shared/1571/2636/11"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../unrestored/shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_42_index from "../../../../unrestored/shared/1571/2636/42/index"
+import * as /* [auto-meaningful-name] */$$_builtIn_types from "../built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_83 from "../../../../unrestored/shared/1571/2636/83"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_314 from "../../../../unrestored/shared/1571/2636/314"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_95 from "../../../../unrestored/shared/1571/2636/95"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_133 from "../../../../unrestored/shared/1571/2636/133"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_75 from "../../../../unrestored/shared/1571/2636/75"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../../unrestored/shared/1571/2636/37/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 !function (e) {
   e[e.UI = 0] = "UI"
   e[e.STAGE = 1] = "STAGE"
@@ -99,8 +99,8 @@ function k(e) {
 }
 function x() {
   var e = []
-  $_42_index.g.forEach(function (t) {
-    if (!(t.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.y && t.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.B)) {
+  $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (t) {
+    if (!(t.type !== $$_builtIn_types.y && t.type !== $$_builtIn_types.B)) {
       e.push({
         id: t.id,
         title: t.title
@@ -111,8 +111,8 @@ function x() {
 }
 function D() {
   var e = []
-  $_42_index.g.forEach(function (t) {
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
+  $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (t) {
+    if (t.type === $$_builtIn_types.l) {
       e.push({
         id: t.id,
         title: t.title
@@ -123,8 +123,8 @@ function D() {
 }
 function M() {
   var e = []
-  $_42_index.g.forEach(function (t) {
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h) {
+  $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (t) {
+    if (t.type === $$_builtIn_types.h) {
       e.push({
         id: t.id,
         title: t.title
@@ -135,7 +135,7 @@ function M() {
 }
 function L(e) {
   var t = Se(e)
-  if (t && (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.y || t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.B || t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l)) {
+  if (t && (t.type === $$_builtIn_types.y || t.type === $$_builtIn_types.B || t.type === $$_builtIn_types.l)) {
     var /* [auto-meaningful-name] */t$attributes$fields = t.attributes.fields
     return undefined === t$attributes$fields ? [] : t$attributes$fields
   }
@@ -143,23 +143,23 @@ function L(e) {
 }
 function P(e) {
   var t = Se(e)
-  return t && t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l ? t.attributes.cloudDbId : null
+  return t && t.type === $$_builtIn_types.l ? t.attributes.cloudDbId : null
 }
 function B(e) {
   var t = Se(e)
-  return t && t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h ? t.attributes.columns : []
+  return t && t.type === $$_builtIn_types.h ? t.attributes.columns : []
 }
 function F(e) {
   var t = Se(e)
-  return t && t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h ? t.attributes.cloudDbId : null
+  return t && t.type === $$_builtIn_types.h ? t.attributes.cloudDbId : null
 }
 function G(e) {
   var t = Se(e)
-  return t && t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.k ? t.attributes.cloudTableId : null
+  return t && t.type === $$_builtIn_types.k ? t.attributes.cloudTableId : null
 }
 function W(e) {
   var t = Se(e)
-  return t && t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.j ? t.attributes.cloudDictId : null
+  return t && t.type === $$_builtIn_types.j ? t.attributes.cloudDictId : null
 }
 export { r }
 export { A }

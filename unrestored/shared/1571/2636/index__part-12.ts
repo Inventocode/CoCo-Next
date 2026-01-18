@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */$_100 from "./100"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
@@ -75,7 +75,7 @@ var ft = React.memo(function (e) {
   var n = $_16_index.e(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$list) {
       document.querySelectorAll(".".concat("focusSvgClassName")).forEach(function (e) {
         return e.style.removeProperty("filter")

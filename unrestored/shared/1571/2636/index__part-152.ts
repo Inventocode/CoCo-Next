@@ -14,32 +14,32 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_622 from "./622"
-import /* [auto-meaningful-name] */_$_ from "./622"
-var KT = _React.memo(function () {
+import /* [auto-meaningful-name] */$_6221 from "./622"
+var KT = React1.memo(function () {
   var e = $_16_index.d()
   var t = $_16_index.e(function (e) {
     return e.project
   })
   var /* [auto-meaningful-name] */t$packageProgress = t.packageProgress
   var /* [auto-meaningful-name] */t$isPackaging = t.isPackaging
-  var o = _React.useState(false)
+  var o = React1.useState(false)
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = _React.useRef(false)
+  var l = React1.useRef(false)
   var u = function () {
     e($$_$$_$$_$$_src_editor_redux_common_actions.xf())
   }
-  var d = _React.useCallback(function () {
+  var d = React1.useCallback(function () {
     e($$_$$_$$_$$_src_editor_redux_common_actions.Vg())
     if (100 === t$packageProgress) {
       e($$_$$_$$_$$_src_editor_redux_common_actions.Hi(false))
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (100 === t$packageProgress) {
       var e = setTimeout(function () {
         s(true)
@@ -50,9 +50,9 @@ var KT = _React.memo(function () {
     }
     s(false)
   }, [t$packageProgress])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var t = React.createElement("div", {
-      className: N(_$_.completePackage),
+      className: N($_6221.completePackage),
       onClick: function (t) {
         if (!l.current) {
           e($$_$$_$$_$$_src_editor_redux_common_actions.Mi(true))
@@ -62,7 +62,7 @@ var KT = _React.memo(function () {
     }, React.createElement($_13_index.j, {
       type: "icon-apk"
     }), React.createElement("p", {
-      className: _$_.close,
+      className: $_6221.close,
       onClick: function (t) {
         e($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: function () {
@@ -96,19 +96,19 @@ var KT = _React.memo(function () {
     }
   }, [e, $_710_index$a$formatMessage, d, a])
   return React.createElement(React.Fragment, null, React.createElement("div", null, !a && t$isPackaging && React.createElement("div", {
-    className: _$_.packageProgress
+    className: $_6221.packageProgress
   }, React.createElement("div", {
-    className: _$_.circle
+    className: $_6221.circle
   }, React.createElement(VT, {
     percent: t$packageProgress,
     strokeWidth: 4,
     strokeColor: "#6E4FF4"
   }), React.createElement("p", {
-    className: _$_.percentText
+    className: $_6221.percentText
   }, t$packageProgress, React.createElement("span", {
-    className: _$_.symbol
+    className: $_6221.symbol
   }, "%")), React.createElement("p", {
-    className: _$_.progressType
+    className: $_6221.progressType
   }, 0 === t$packageProgress && $_710_index$a$formatMessage({
     id: "package.packagePendingText"
   }), $_710_index$a$formatMessage(100 === t$packageProgress ? {
@@ -116,7 +116,7 @@ var KT = _React.memo(function () {
   } : {
     id: "package.isPackaging"
   }))), React.createElement("p", {
-    className: _$_.close,
+    className: $_6221.close,
     onClick: function () {
       if (100 !== t$packageProgress) {
         e($$_$$_$$_$$_src_editor_redux_common_actions.zh({

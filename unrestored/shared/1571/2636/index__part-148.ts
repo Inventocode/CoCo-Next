@@ -19,16 +19,16 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_935 from "./935"
-import /* [auto-meaningful-name] */_$_ from "./935"
-var TT = _React.memo(function () {
+import /* [auto-meaningful-name] */$_9351 from "./935"
+var TT = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
     return e.block.dropdown
   })
-  var r = _React.useMemo(function () {
+  var r = React1.useMemo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -72,7 +72,7 @@ var TT = _React.memo(function () {
     }
     if ("basic" === t.type) {
       var /* [auto-meaningful-name] */t$icon
-      var /* [auto-meaningful-name] */_t$icon
+      var /* [auto-meaningful-name] */t$icon1
       if (t.value === Et.h && t.text === Et.g) {
         return
       }
@@ -81,22 +81,22 @@ var TT = _React.memo(function () {
         key: n,
         className: qC.dropdownOption
       }, "nextScreen" !== t.value && "prevScreen" !== t.value && React.createElement("div", {
-        className: _$_.screenIndex
+        className: $_9351.screenIndex
       }, n + 1, "."), ("nextScreen" === t.value || "prevScreen" === t.value) && React.createElement("div", {
-        className: _$_.screenIndex
+        className: $_9351.screenIndex
       }, ""), "string" === typeof (null === (t$icon = t.icon) || undefined === t$icon ? undefined : t$icon.src) && React.createElement("div", {
         className: qC.dropdownImageBox
       }, "nextScreen" === t.value && React.createElement($_13_index.j, {
-        className: _$_.dropdownImageScreen,
+        className: $_9351.dropdownImageScreen,
         type: "icon-prev-screen"
       }), "prevScreen" === t.value && React.createElement($_13_index.j, {
-        className: _$_.dropdownImageScreen,
+        className: $_9351.dropdownImageScreen,
         type: "icon-next-screen"
       }), React.createElement("img", {
         src: t.icon.src,
         className: qC.image,
         alt: ""
-      })), "object" === typeof (null === (_t$icon = t.icon) || undefined === _t$icon ? undefined : _t$icon.src) && React.createElement("div", {
+      })), "object" === typeof (null === (t$icon1 = t.icon) || undefined === t$icon1 ? undefined : t$icon1.src) && React.createElement("div", {
         className: qC.dropdownIconBox
       }, React.createElement($_13_index.j, {
         type: "icon-screen-variable"
@@ -104,23 +104,23 @@ var TT = _React.memo(function () {
     }
   }))
 })
-var ST = _React.memo(function () {
-  var e = _React.useRef(null)
+var ST = React1.memo(function () {
+  var e = React1.useRef(null)
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
     return e.block.dropdown
   })
   var /* [auto-meaningful-name] */n$position = n.position
   var /* [auto-meaningful-name] */n$blockInfo = n.blockInfo
-  var i = _React.useState(0)
+  var i = React1.useState(0)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = _React.useState(-1e3)
+  var l = React1.useState(-1e3)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (n.visible) {
       if (n$position.top > window.innerHeight / 2 && e.current) {
         var /* [auto-meaningful-name] */e$current$clientHeight = e.current.clientHeight
@@ -140,7 +140,7 @@ var ST = _React.memo(function () {
       }
     }
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function r(n) {
       var /* [auto-meaningful-name] */n$target = n.target
       var /* [auto-meaningful-name] */e$current = e.current

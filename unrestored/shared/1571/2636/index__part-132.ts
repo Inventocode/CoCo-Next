@@ -17,10 +17,10 @@ import * as D from "./6"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_704 from "./704"
-import /* [auto-meaningful-name] */_$_ from "./704"
-var Hw = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_7041 from "./704"
+var Hw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("content")
@@ -29,9 +29,9 @@ var Hw = _React.memo(function (e) {
     e$onChange("content", e)
   }, 60)
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.wrapper, "coco-form-item", "coco-form-item-vertical")
+    className: N($_7041.formItemWrapper, $_7041.wrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
-    className: _$_.labelWrapper
+    className: $_7041.labelWrapper
   }, $_710_index$a$formatMessage({
     id: "content"
   })), React.createElement(React.Fragment, null, React.createElement("div", null, React.createElement($_13_index.A, {
@@ -41,15 +41,15 @@ var Hw = _React.memo(function (e) {
       i(e.target.value)
     }
   })), React.createElement("div", {
-    className: _$_.fontWrapper
+    className: $_7041.fontWrapper
   }, React.createElement("div", {
-    className: _$_.fontFamily
+    className: $_7041.fontFamily
   }, React.createElement(fy, {
     keyName: "fontFamily",
     onChange: e$onChange,
     fontFamily: e$getValue("fontFamily")
   })), React.createElement("div", {
-    className: _$_.fontSize
+    className: $_7041.fontSize
   }, React.createElement(TE, {
     keyName: "fontSize",
     onChange: e$onChange,
@@ -67,7 +67,7 @@ var Hw = _React.memo(function (e) {
     ],
     value: e$getValue("fontSize")
   })), React.createElement("div", {
-    className: _$_.colorPicker
+    className: $_7041.colorPicker
   }, React.createElement(mb, {
     width: 43,
     keyName: "color",

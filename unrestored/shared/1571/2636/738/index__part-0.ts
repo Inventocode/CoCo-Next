@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
 import "../719"
 import * as /* [auto-meaningful-name] */Redux from "redux"

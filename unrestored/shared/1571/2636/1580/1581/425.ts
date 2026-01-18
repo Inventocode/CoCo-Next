@@ -5,7 +5,7 @@
  */
 
 var r = require("../1699/271")
-var o = require("../1705/300/index")
+var o = require("../1705/300")
 var i = require("../1705/631")
 module.exports = r ? function (e, t, n) {
   return o.f(e, t, i(1, n))

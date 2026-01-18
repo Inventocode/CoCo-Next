@@ -13,13 +13,13 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_332 from "./332"
-import /* [auto-meaningful-name] */_$_ from "./332"
+import /* [auto-meaningful-name] */$_3321 from "./332"
 var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
 var wj = {}
 var Cj = {}
-var Tj = _React.memo(function (e) {
+var Tj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$name = e.name
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
@@ -27,7 +27,7 @@ var Tj = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$duration = e.duration
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
-  var c = _React.useState(0)
+  var c = React1.useState(0)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
@@ -66,7 +66,7 @@ var Tj = _React.memo(function (e) {
       clearInterval(wj[t])
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     return function () {
       if (e$isPlaying && wj[t]) {
         if (Cj[t]) {
@@ -87,7 +87,7 @@ var Tj = _React.memo(function (e) {
   }, [t, e$isPlaying])
   return React.createElement("div", {
     key: t,
-    className: N(_$_.soundLibraryItem, e$isSelect && _$_.selected),
+    className: N($_3321.soundLibraryItem, e$isSelect && $_3321.selected),
     onClick: function () {
       e.selectHandler({
         id: t,
@@ -99,50 +99,50 @@ var Tj = _React.memo(function (e) {
       })
     }
   }, React.createElement("div", {
-    className: _$_.icon
+    className: $_3321.icon
   }, React.createElement($_13_index.j, {
     type: "icon-style-selected"
   })), React.createElement("audio", {
     src: e$cdnUrl || e$source,
     preload: "none"
   }), React.createElement("div", {
-    className: _$_.content
+    className: $_3321.content
   }, React.createElement("div", {
-    className: _$_.soundBox,
+    className: $_3321.soundBox,
     onClick: p
   }, e$isPlaying ? React.createElement("div", {
-    className: _$_.soundPauseIconBox
+    className: $_3321.soundPauseIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-sound-pause",
-    className: _$_.soundDefaultIcon
+    className: $_3321.soundDefaultIcon
   }), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.rightWrapper)
+    className: N($_3321.progressWrapper, $_3321.rightWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.rightCircle),
+    className: N($_3321.circleProgress, $_3321.rightCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   })), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.leftWrapper)
+    className: N($_3321.progressWrapper, $_3321.leftWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.leftCircle),
+    className: N($_3321.circleProgress, $_3321.leftCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   }))) : React.createElement("div", {
-    className: _$_.soundIconBox
+    className: $_3321.soundIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-music",
-    className: _$_.soundDefaultIcon
+    className: $_3321.soundDefaultIcon
   }), React.createElement("div", {
-    className: _$_.soundPlayIconBox
+    className: $_3321.soundPlayIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-sound-play",
-    className: _$_.soundPlayIcon
+    className: $_3321.soundPlayIcon
   })))), React.createElement("div", {
-    className: _$_.soundDuration
+    className: $_3321.soundDuration
   }, te.w(e$isPlaying ? u : e$duration))), React.createElement("div", {
-    className: _$_.footer
+    className: $_3321.footer
   }, e$name))
 })
 export { Tj }

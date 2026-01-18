@@ -31,15 +31,15 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_175 from "./175"
-import /* [auto-meaningful-name] */_$_ from "./175"
+import /* [auto-meaningful-name] */$_1751 from "./175"
 var $E = [
   {
     value: Sp.b.CONTAINED_TEXT,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: N(_$_.contentButton, _$_.typeItem),
+        className: N($_1751.contentButton, $_1751.typeItem),
         style: {
           backgroundColor: e,
           color: te.Z(e) ? te.a : "#ffffff"
@@ -50,7 +50,7 @@ var $E = [
     value: Sp.b.OUTLINED_TEXT,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: N(_$_.outlinedButton, _$_.typeItem),
+        className: N($_1751.outlinedButton, $_1751.typeItem),
         style: {
           color: e,
           background: te.Z(e) ? te.a : "#ffffff"
@@ -68,7 +68,7 @@ var $E = [
           backgroundColor: e,
           color: te.Z(e) ? te.a : "#ffffff"
         },
-        className: N(_$_.IconButton, _$_.contentButton, _$_.typeItem)
+        className: N($_1751.IconButton, $_1751.contentButton, $_1751.typeItem)
       }, React.createElement($_13_index.z, {
         icon: t
       }))
@@ -84,7 +84,7 @@ var $E = [
           color: e,
           background: te.Z(e) ? te.a : "#ffffff"
         },
-        className: N(_$_.IconButton, _$_.outlinedButton, _$_.typeItem)
+        className: N($_1751.IconButton, $_1751.outlinedButton, $_1751.typeItem)
       }, React.createElement($_13_index.z, {
         icon: t
       }))
@@ -95,7 +95,7 @@ sE = {}
 k.a(sE, Sp.a.TEXT, [Sp.c.SMALL, Sp.c.MEDIUM, Sp.c.LARGE])
 k.a(sE, Sp.a.ICON, [Sp.c.TINY, Sp.c.SMALL, Sp.c.MEDIUM, Sp.c.LARGE, Sp.c.HUGE])
 var eO = sE
-var tO = _React.memo(function (e) {
+var tO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -108,11 +108,11 @@ var tO = _React.memo(function (e) {
   var u = e$getValue("text")
   var d = Jd.O(a)
   var p = $_16_index.d()
-  var m = _React.useState()
+  var m = React1.useState()
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = Et.fb(l)
     b(e)
   }, [l])
@@ -133,7 +133,7 @@ var tO = _React.memo(function (e) {
     E(e)
   }
   return React.createElement(React.Fragment, null, React.createElement($_13_index.i, {
-    className: N(_$_.formItemWrapper, _$_.typeSelector, _$_.buttonModeSelector, "changeButtonMode"),
+    className: N($_1751.formItemWrapper, $_1751.typeSelector, $_1751.buttonModeSelector, "changeButtonMode"),
     label: $_710_index$a$formatMessage({
       id: "mode"
     })
@@ -158,7 +158,7 @@ var tO = _React.memo(function (e) {
       value: e.value
     }, e.renderContent(c, v))
   }))), d === Sp.a.TEXT ? React.createElement($_13_index.i, {
-    className: N(_$_.formItemWrapper, _$_.cocoInputTitleContent),
+    className: N($_1751.formItemWrapper, $_1751.cocoInputTitleContent),
     label: $_710_index$a$formatMessage({
       id: "content"
     })
@@ -169,13 +169,13 @@ var tO = _React.memo(function (e) {
     isTrimmed: true,
     defaultValue: u
   })) : React.createElement($_13_index.i, {
-    className: N(_$_.formItemWrapper, _$_.typeSelector, "changeIcon"),
+    className: N($_1751.formItemWrapper, $_1751.typeSelector, "changeIcon"),
     label: $_710_index$a$formatMessage({
       id: "icon"
     })
   }, React.createElement("div", {
     onClick: y,
-    className: _$_.buttonTypeIconBox
+    className: $_1751.buttonTypeIconBox
   }, React.createElement($_13_index.z, {
     icon: v
   }), React.createElement($_13_index.j, {
@@ -183,7 +183,7 @@ var tO = _React.memo(function (e) {
     className: N("coco-select-arrow")
   }))))
 })
-var nO = _React.memo(function (e) {
+var nO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -219,24 +219,24 @@ var nO = _React.memo(function (e) {
     }
   })
 })
-var rO = _React.memo(function (e) {
+var rO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var o = e$getValue("textVisible")
   return React.createElement(React.Fragment, null, React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: N($_1751.formItemWrapper, $_1751.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
-    className: _$_.labelWrapper
+    className: $_1751.labelWrapper
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "text"
   })), React.createElement("div", {
-    className: _$_.actionWrapper,
+    className: $_1751.actionWrapper,
     onClick: function () {
       e$onChange("textVisible", !o)
     }
   }, e$getValue("textVisible") ? React.createElement("div", {
-    className: _$_.actionButton
+    className: $_1751.actionButton
   }) : React.createElement($_13_index.j, {
     type: "icon-add"
   }))), o && React.createElement(React.Fragment, null, React.createElement(_y, Object.assign({}, e, {
@@ -245,15 +245,15 @@ var rO = _React.memo(function (e) {
       emitOnChange: true
     })
   })), React.createElement("div", {
-    className: _$_.fontWrapper
+    className: $_1751.fontWrapper
   }, React.createElement("div", {
-    className: _$_.fontFamily
+    className: $_1751.fontFamily
   }, React.createElement(fy, {
     keyName: "fontFamily",
     onChange: e$onChange,
     fontFamily: e$getValue("fontFamily")
   })), React.createElement("div", {
-    className: _$_.maxFontSize
+    className: $_1751.maxFontSize
   }, React.createElement(TE, {
     keyName: "maxFontSize",
     onChange: e$onChange,
@@ -269,42 +269,42 @@ var rO = _React.memo(function (e) {
     }),
     value: e$getValue("maxFontSize")
   })), React.createElement("div", {
-    className: _$_.ColorPicker
+    className: $_1751.ColorPicker
   }, React.createElement(mb, {
     width: 43,
     keyName: "textColor",
     onChange: e$onChange,
     color: e$getValue("textColor")
   }))), React.createElement("div", {
-    className: _$_.alignWrapper
+    className: $_1751.alignWrapper
   }, React.createElement(gy, {
     keyName: "textAlign",
     onChange: e$onChange,
     textAlign: e$getValue("textAlign")
   })))))
 })
-var oO = _React.memo(function (e) {
+var oO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var o = e$getValue("iconVisible")
   return React.createElement(React.Fragment, null, React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: N($_1751.formItemWrapper, $_1751.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
-    className: _$_.labelWrapper
+    className: $_1751.labelWrapper
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "icon"
   })), React.createElement("div", {
-    className: _$_.actionWrapper,
+    className: $_1751.actionWrapper,
     onClick: function () {
       e$onChange("iconVisible", !o)
     }
   }, e$getValue("iconVisible") ? React.createElement("div", {
-    className: _$_.actionButton
+    className: $_1751.actionButton
   }) : React.createElement($_13_index.j, {
     type: "icon-add"
   }))), o && React.createElement("div", {
-    className: _$_.iconWrapper
+    className: $_1751.iconWrapper
   }, React.createElement(yy, {
     onChange: e$onChange,
     iconId: e$getValue("iconId"),
@@ -318,7 +318,7 @@ var oO = _React.memo(function (e) {
 })
 var iO = function (e) {
   return React.createElement("div", {
-    className: _$_.backgroundTypeItem,
+    className: $_1751.backgroundTypeItem,
     style: e
   }, "Text")
 }
@@ -361,7 +361,7 @@ var aO = [
     }
   }
 ]
-var sO = _React.memo(function (e) {
+var sO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
@@ -373,31 +373,31 @@ var sO = _React.memo(function (e) {
   var s = $_16_index.d()
   var c = e$getValue("backgroundImage")
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: N($_1751.formItemWrapper, $_1751.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
-    className: _$_.labelWrapper
+    className: $_1751.labelWrapper
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "background"
   })), React.createElement("div", {
-    className: _$_.modeActionWrapper
+    className: $_1751.modeActionWrapper
   }, React.createElement("div", {
-    className: N(_$_.modeTemplate, i === $_114.a.TEMPLATE && _$_.backgroundSelected),
+    className: N($_1751.modeTemplate, i === $_114.a.TEMPLATE && $_1751.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_114.a.TEMPLATE)
     }
   }, $_710_index$a$formatMessage({
     id: "template"
   })), React.createElement("div", {
-    className: N(_$_.modeImage, i === $_114.a.IMAGE && _$_.backgroundSelected),
+    className: N($_1751.modeImage, i === $_114.a.IMAGE && $_1751.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_114.a.IMAGE)
     }
   }, $_710_index$a$formatMessage({
     id: "image"
   })))), i === $_114.a.TEMPLATE && React.createElement("div", {
-    className: _$_.backgroundWrapper
+    className: $_1751.backgroundWrapper
   }, React.createElement("div", {
-    className: _$_.templateMode
+    className: $_1751.templateMode
   }, React.createElement(hb, {
     modeList: aO,
     value: e$getValue("templateMode"),
@@ -411,7 +411,7 @@ var sO = _React.memo(function (e) {
       value: e.value
     }, e.renderContent(o))
   }))), React.createElement("div", {
-    className: _$_.templateColor
+    className: $_1751.templateColor
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "templateColor"
   })), React.createElement(mb, {
@@ -420,7 +420,7 @@ var sO = _React.memo(function (e) {
     onChange: e$onChange,
     color: e$getValue("backgroundColor")
   }))), i === $_114.a.IMAGE && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.backgroundWrapper
+    className: $_1751.backgroundWrapper
   }, React.createElement(nb, {
     onUploadFileChange: function (e) {
       if (e && a) {
@@ -448,7 +448,7 @@ var sO = _React.memo(function (e) {
       marginTop: 8
     }
   }, React.createElement($_13_index.s, {
-    className: N(_$_.radioWrapper, _$_.sizeRadioBox),
+    className: N($_1751.radioWrapper, $_1751.sizeRadioBox),
     value: e$getValue("imageResizeMode"),
     onChange: function (e) {
       e$onChange("imageResizeMode", e)

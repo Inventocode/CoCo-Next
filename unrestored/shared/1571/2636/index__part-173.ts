@@ -13,12 +13,12 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_937 from "./937"
-import /* [auto-meaningful-name] */_$_ from "./937"
+import /* [auto-meaningful-name] */$_9371 from "./937"
 import * as /* [auto-meaningful-name] */$_266 from "./266"
-import /* [auto-meaningful-name] */_$_2 from "./266"
-var bI = _React.memo(function () {
+import /* [auto-meaningful-name] */$_2661 from "./266"
+var bI = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.e(function (e) {
     return e.common.confirmDialogInfo
@@ -64,12 +64,12 @@ var bI = _React.memo(function () {
     onClose: T,
     withPortal: true,
     maskClosable: false,
-    className: N(_$_2.dialog, t$className, t$denyText && _$_2.dialogSecondary)
+    className: N($_2661.dialog, t$className, t$denyText && $_2661.dialogSecondary)
   }, React.createElement($_188.a, null, React.createElement($_188.b, {
     keys: "enter",
     callback: w
   })), React.createElement("h3", null, t$title), React.createElement("span", null, t$content), React.createElement("div", {
-    className: N(_$_2.dialogButtons)
+    className: N($_2661.dialogButtons)
   }, b && React.createElement($_13_index.d, {
     type: "light",
     onClick: function () {
@@ -85,7 +85,7 @@ var bI = _React.memo(function () {
       }
       T()
     },
-    className: _$_2.denyButton
+    className: $_2661.denyButton
   }, t$denyText), E && React.createElement($_13_index.d, {
     type: "primary",
     danger: t$isDangerous,

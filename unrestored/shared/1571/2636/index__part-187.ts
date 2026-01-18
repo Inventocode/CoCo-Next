@@ -14,13 +14,13 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_308 from "./308"
-import /* [auto-meaningful-name] */_$_ from "./308"
+import /* [auto-meaningful-name] */$_3081 from "./308"
 var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
 var Wj = {}
 var Uj = {}
-var Hj = _React.memo(function (e) {
+var Hj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$md5 = e.md5
   var /* [auto-meaningful-name] */e$name = e.name
@@ -30,7 +30,7 @@ var Hj = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
   var /* [auto-meaningful-name] */e$isAdded = e.isAdded
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var u = _React.useState(0)
+  var u = React1.useState(0)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
@@ -69,7 +69,7 @@ var Hj = _React.memo(function (e) {
       clearInterval(Wj[t])
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     return function () {
       if (e$isPlaying && Wj[t]) {
         if (Uj[t]) {
@@ -90,7 +90,7 @@ var Hj = _React.memo(function (e) {
   }, [e$isPlaying, t])
   return React.createElement("li", {
     key: t,
-    className: N(_$_.soundMallItem, e$isSelect && _$_.selected),
+    className: N($_3081.soundMallItem, e$isSelect && $_3081.selected),
     onClick: function (a) {
       if (!e$isAdded) {
         e.selectHandler({
@@ -105,50 +105,50 @@ var Hj = _React.memo(function (e) {
       }
     }
   }, React.createElement("div", {
-    className: _$_.playArea
+    className: $_3081.playArea
   }, e$isPlaying ? React.createElement("div", {
-    className: _$_.soundPauseIconBox,
+    className: $_3081.soundPauseIconBox,
     onClick: g
   }, React.createElement($_13_index.j, {
     type: "icon-sound-pause",
-    className: _$_.soundPauseIcon
+    className: $_3081.soundPauseIcon
   }), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.rightWrapper)
+    className: N($_3081.progressWrapper, $_3081.rightWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.rightCircle),
+    className: N($_3081.circleProgress, $_3081.rightCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   })), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.leftWrapper)
+    className: N($_3081.progressWrapper, $_3081.leftWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.leftCircle),
+    className: N($_3081.circleProgress, $_3081.leftCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   }))) : React.createElement("div", {
-    className: _$_.soundIconBox
+    className: $_3081.soundIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-music",
-    className: _$_.soundDefaultIcon
+    className: $_3081.soundDefaultIcon
   }), React.createElement("div", {
-    className: _$_.soundPlayIconBox,
+    className: $_3081.soundPlayIconBox,
     onClick: g
   }, React.createElement($_13_index.j, {
     type: "icon-sound-play",
-    className: _$_.soundPlayIcon
+    className: $_3081.soundPlayIcon
   }))), React.createElement("div", {
-    className: _$_.duration
+    className: $_3081.duration
   }, te.w(e$isPlaying ? p : e$duration))), React.createElement("div", {
-    className: _$_.infoArea
+    className: $_3081.infoArea
   }, React.createElement("div", {
-    className: _$_.nameArea
+    className: $_3081.nameArea
   }, e$name), e$isAdded ? React.createElement("div", {
-    className: _$_.add
+    className: $_3081.add
   }, $_710_index$a$formatMessage({
     id: "Resource.Added"
   })) : React.createElement("div", {
-    className: N(_$_.btn, _$_.unselect)
+    className: N($_3081.btn, $_3081.unselect)
   }, React.createElement($_13_index.j, {
     type: "icon-style-selected"
   }))))

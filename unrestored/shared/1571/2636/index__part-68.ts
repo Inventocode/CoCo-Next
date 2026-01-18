@@ -24,9 +24,9 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_810 from "./810"
-import /* [auto-meaningful-name] */_$_ from "./810"
+import /* [auto-meaningful-name] */$_8101 from "./810"
 var Vh = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$opacity = e.opacity
@@ -43,9 +43,9 @@ var Vh = function (e) {
   var /* [auto-meaningful-name] */e$attributes$rotation = e$attributes.rotation
   var /* [auto-meaningful-name] */e$attributes$selectedStyleId = e$attributes.selectedStyleId
   var /* [auto-meaningful-name] */e$attributes$pivotToCenter = e$attributes.pivotToCenter
-  var b = _React.useRef(false)
-  var y = _React.useRef(e$attributes$scaleAndLock)
-  var w = _React.useState(true)
+  var b = React1.useRef(false)
+  var y = React1.useRef(e$attributes$scaleAndLock)
+  var w = React1.useState(true)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var j = C[1]
@@ -56,18 +56,18 @@ var Vh = function (e) {
   })
   var D = $_16_index.d()
   var M = x === t
-  var L = _React.useState(2)
+  var L = React1.useState(2)
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = _React.useState({
+  var G = React1.useState({
     x: 0,
     y: 0
   })
   var W = $_10_index.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = _React.useState({
+  var V = React1.useState({
     width: 0,
     height: 0,
     translateX: 0,
@@ -77,11 +77,11 @@ var Vh = function (e) {
   var K = $_10_index.a(V, 2)
   var q = K[0]
   var X = K[1]
-  var Q = _React.useState(false)
+  var Q = React1.useState(false)
   var Z = $_10_index.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
-  var ee = _React.useCallback(function () {
+  var ee = React1.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t, n) {
       var r
       var o
@@ -122,7 +122,7 @@ var Vh = function (e) {
       return e.apply(this, arguments)
     }
   }(), [e$attributes$actionList])
-  var te = _React.useCallback(function () {
+  var te = React1.useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var o
@@ -179,16 +179,16 @@ var Vh = function (e) {
       return e.apply(this, arguments)
     }
   }(), [e$parentId, k, ee])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     y.current = e$attributes$scaleAndLock
   }, [e$attributes$scaleAndLock])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = $_215.b(k)
     if (e) {
       te(e)
     }
   }, [k, te])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -226,7 +226,7 @@ var Vh = function (e) {
       }
     }
   }, [D, k, T, e$attributes$selectedStyleId, B])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -234,7 +234,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -242,7 +242,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$rotation])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -250,7 +250,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$position])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -258,7 +258,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$pivotToCenter])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -274,7 +274,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$scaleAndLock])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -282,7 +282,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$opacity])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e && e$attributes$flipped) {
@@ -290,7 +290,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$flipped])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
       var e = $_215.b(k)
       if (e) {
@@ -304,7 +304,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, s])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (x === t) {
       var e = $_215.b(t)
       var n = null === e || undefined === e ? undefined : e.components.get_editor()
@@ -316,7 +316,7 @@ var Vh = function (e) {
       }
     }
   }, [t, x, T])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = $_215.b(k)
     if (e) {
       var t = function (e) {
@@ -366,7 +366,7 @@ var Vh = function (e) {
       }
     }
   }, [k, D])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$parentId) {
       var e = Jd.Cb(e$parentId)
       if (e) {
@@ -411,7 +411,7 @@ var Vh = function (e) {
       }
     }
   }, [e$position, e$attributes$pivotToCenter, e$attributes$rotation, e$attributes$scale, e$attributes$selectedStyleId, T, e$parentId, k])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = document.querySelector("#".concat(e$parentId, "[data-role=\"WIDGET\"]"))
     if (e instanceof HTMLDivElement) {
       if (J) {
@@ -441,7 +441,7 @@ var Vh = function (e) {
       top: q.translateY
     }
   }, React.createElement("div", {
-    className: _$_.iconWrapper,
+    className: $_8101.iconWrapper,
     style: {
       position: "absolute",
       left: q.width / 2 + 28 / B,
@@ -465,7 +465,7 @@ var Vh = function (e) {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-attribute",
-    className: N(_$_.iconButton, _$_.editIcon)
+    className: N($_8101.iconButton, $_8101.editIcon)
   }))), React.createElement($_748_index.a, {
     placement: "right",
     title: $_710_index$a$formatMessage({
@@ -478,7 +478,7 @@ var Vh = function (e) {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-edit-round",
-    className: N(_$_.iconButton, _$_.editStyleIcon)
+    className: N($_8101.iconButton, $_8101.editStyleIcon)
   })))))) : null
 }
 var zh = {

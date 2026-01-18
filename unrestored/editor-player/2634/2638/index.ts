@@ -7,28 +7,28 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import "../../../shared/1571/2636/719"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_80_index from "../../../shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */_$$_$$_$$_shared_1571_2636_80_index from "../../../shared/1571/2636/80/index"
+import /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_80_index1 from "../../../shared/1571/2636/80/index"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_6 from "../../../shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_7 from "../../../shared/1571/2636/7"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_10_index from "../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$_514_index from "./514/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_177 from "../../../shared/1571/2636/177"
-var p = _React.memo(function () {
+var p = React1.memo(function () {
   var t = React.useState()
   var e = $$_$$_$$_shared_1571_2636_10_index.a(t, 2)
   var n = e[0]
   var o = e[1]
   function a() {
-    return (a = $$_$$_$$_shared_1571_2636_7.a(_RegeneratorRuntime.mark(function t() {
+    return (a = $$_$$_$$_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function t() {
       var e
       var n
       var r
-      return _RegeneratorRuntime.wrap(function (t) {
+      return RegeneratorRuntime1.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
@@ -60,6 +60,6 @@ var p = _React.memo(function () {
       a.apply(this, arguments)
     }()
   }, [])
-  return n ? _React.createElement($_514_index.a, n) : _React.createElement(_React.Fragment, null)
+  return n ? React1.createElement($_514_index.a, n) : React1.createElement(React1.Fragment, null)
 })
-_$$_$$_$$_shared_1571_2636_80_index.render(_React.createElement(p, null), document.getElementById("root"))
+$$_$$_$$_shared_1571_2636_80_index1.render(React1.createElement(p, null), document.getElementById("root"))

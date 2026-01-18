@@ -9,11 +9,11 @@
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as s from "../7"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as d from "../8"
 import p from "../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
@@ -23,20 +23,20 @@ import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
 import * as /* [auto-meaningful-name] */$$_75 from "../75"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 import * as /* [auto-meaningful-name] */$_672 from "./672"
-import /* [auto-meaningful-name] */_$_ from "./672"
+import /* [auto-meaningful-name] */$_6721 from "./672"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$_673 from "./673"
 import * as /* [auto-meaningful-name] */$_176 from "./176"
-import /* [auto-meaningful-name] */_$_2 from "./176"
+import /* [auto-meaningful-name] */$_1761 from "./176"
 var T = new function e() {
   var t = this
   $$_27.a(this, e)
   this.urlStore = undefined
   this._state = undefined
   this.execute = function () {
-    var e = s.a(_RegeneratorRuntime.mark(function e(n, r) {
+    var e = s.a(RegeneratorRuntime1.mark(function e(n, r) {
       var o
-      return _RegeneratorRuntime.wrap(function (e) {
+      return RegeneratorRuntime1.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
@@ -144,35 +144,35 @@ function S(e) {
     }
   }, [m, g, p])
   if ("error" === w || "http-protocol-error" === w || d || f || p) {
-    h = _React.createElement("div", {
-      className: _$_2.fail
-    }, _React.createElement("img", {
-      className: _$_2.image,
-      src: _$_,
+    h = React1.createElement("div", {
+      className: $_1761.fail
+    }, React1.createElement("img", {
+      className: $_1761.image,
+      src: $_6721,
       alt: "failed"
-    }), _React.createElement("p", {
-      className: _$_2.title
-    }, "加载失败"), d && _React.createElement("span", {
-      className: _$_2.label
-    }, "你输入的网址有错误，请输入正确的网址"), !d && f && _React.createElement("span", {
-      className: _$_2.label
-    }, "你输入的网址做了限制无法打开，可在手机端正常打开"), !d && !f && "error" === w && _React.createElement("span", {
-      className: _$_2.label
-    }, "请检查是否输入正确的网址，", _React.createElement("br", null), "如果网址正确，请尝试在手机端打开"), !d && !f && "http-protocol-error" === w && _React.createElement("span", {
-      className: _$_2.label
-    }, "由于浏览器安全策略，http://开头的网址无法在浏览器预览，可在手机端正常打开"), p && _React.createElement("span", {
-      className: _$_2.label
+    }), React1.createElement("p", {
+      className: $_1761.title
+    }, "加载失败"), d && React1.createElement("span", {
+      className: $_1761.label
+    }, "你输入的网址有错误，请输入正确的网址"), !d && f && React1.createElement("span", {
+      className: $_1761.label
+    }, "你输入的网址做了限制无法打开，可在手机端正常打开"), !d && !f && "error" === w && React1.createElement("span", {
+      className: $_1761.label
+    }, "请检查是否输入正确的网址，", React1.createElement("br", null), "如果网址正确，请尝试在手机端打开"), !d && !f && "http-protocol-error" === w && React1.createElement("span", {
+      className: $_1761.label
+    }, "由于浏览器安全策略，http://开头的网址无法在浏览器预览，可在手机端正常打开"), p && React1.createElement("span", {
+      className: $_1761.label
     }, "你输入的网址无法打开"))
   } else {
     if ("loading" === w) {
-      h = _React.createElement("div", {
-        className: _$_2.loaderBox
-      }, _React.createElement("div", {
-        className: _$_2.loader
+      h = React1.createElement("div", {
+        className: $_1761.loaderBox
+      }, React1.createElement("div", {
+        className: $_1761.loader
       }))
     }
   }
-  return _React.createElement(_React.Fragment, null, h, !g && !d && !p && "none" === w && _React.createElement("iframe", {
+  return React1.createElement(React1.Fragment, null, h, !g && !d && !p && "none" === w && React1.createElement("iframe", {
     ref: A,
     id: "iframe",
     title: "coco",
@@ -188,14 +188,14 @@ function S(e) {
   }))
 }
 function A() {
-  return _React.createElement("div", {
-    className: _$_2.placeholderPoster
-  }, _React.createElement("div", {
-    className: _$_2.header
-  }, _React.createElement($$_13_index.j, {
+  return React1.createElement("div", {
+    className: $_1761.placeholderPoster
+  }, React1.createElement("div", {
+    className: $_1761.header
+  }, React1.createElement($$_13_index.j, {
     type: "icon-net"
-  }), _React.createElement("span", null, "www.codemao.cn")), _React.createElement("div", {
-    className: _$_2.main
+  }), React1.createElement("span", null, "www.codemao.cn")), React1.createElement("div", {
+    className: $_1761.main
   }))
 }
 function I(e) {
@@ -212,7 +212,7 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes = e.attributes
   var /* [auto-meaningful-name] */e$attributes$url = e$attributes.url
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     id: t,
     "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
@@ -220,7 +220,7 @@ _a = function (e) {
     "data-max-width": $$_75.e,
     "data-max-height": $$_75.d,
     "data-min-height": $$_262.b,
-    className: p(_$_2.webViewWidget, $$_90.b, $$_11.a({}, _$_2.hide, !e$visible)),
+    className: p($_1761.webViewWidget, $$_90.b, $$_11.a({}, $_1761.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -232,9 +232,9 @@ _a = function (e) {
       maxHeight: "".concat($$_75.d, "px"),
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }
-  }, (e$isEditState || e$attributes$disabled) && _React.createElement("div", {
-    className: _$_2.mask
-  }), e$attributes$url ? _React.createElement(S, e) : _React.createElement(A, null))
+  }, (e$isEditState || e$attributes$disabled) && React1.createElement("div", {
+    className: $_1761.mask
+  }), e$attributes$url ? React1.createElement(S, e) : React1.createElement(A, null))
 }
 export { _a as a }
 export default _a

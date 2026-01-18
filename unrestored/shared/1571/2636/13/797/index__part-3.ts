@@ -63,13 +63,13 @@ var tt = function (e) {
 var nt = function (e) {
   return tt(e) && "[object Arguments]" == Z(e)
 }
-var /* [auto-meaningful-name] */_Object$prototype = Object.prototype
-var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty = _Object$prototype.hasOwnProperty
-var /* [auto-meaningful-name] */_Object$prototype$propertyIsEnumerable = _Object$prototype.propertyIsEnumerable
+var /* [auto-meaningful-name] */Object$prototype1 = Object.prototype
+var /* [auto-meaningful-name] */Object$prototype1$hasOwnProperty = Object$prototype1.hasOwnProperty
+var /* [auto-meaningful-name] */Object$prototype1$propertyIsEnumerable = Object$prototype1.propertyIsEnumerable
 var at = nt(function () {
   return arguments
 }()) ? nt : function (e) {
-    return tt(e) && _Object$prototype$hasOwnProperty.call(e, "callee") && !_Object$prototype$propertyIsEnumerable.call(e, "callee")
+    return tt(e) && Object$prototype1$hasOwnProperty.call(e, "callee") && !Object$prototype1$propertyIsEnumerable.call(e, "callee")
   }
 var /* [auto-meaningful-name] */Array$isArray = Array.isArray
 var ct = function (e) {

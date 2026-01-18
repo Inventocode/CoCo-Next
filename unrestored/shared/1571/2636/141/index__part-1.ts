@@ -8,13 +8,13 @@
 
 var /* [auto-meaningful-name] */window$location
 import * as /* [auto-meaningful-name] */$_367 from "./367"
-import /* [auto-meaningful-name] */_$_ from "./367"
+import /* [auto-meaningful-name] */$_3671 from "./367"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 import * as /* [auto-meaningful-name] */$_312 from "./312"
 import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
 var l = $$_57_index.b()
 function u(e, t) {
-  _$_.track(e, function (e) {
+  $_3671.track(e, function (e) {
     if (!e) {
       return {}
     }
@@ -24,9 +24,9 @@ function u(e, t) {
   }(t))
 }
 function d(e) {
-  _$_.login(e + "")
+  $_3671.login(e + "")
 }
-_$_.init({
+$_3671.init({
   server_url: "development" === l || "test" === l ? "https://shence-data.codemao.cn/sa?project=default" : "https://shence-data.codemao.cn/sa?project=production",
   is_track_single_page: true,
   use_client_time: true,
@@ -45,12 +45,12 @@ if ($$_28_index.d()) {
 if (null === (window$location = window.location) || undefined === window$location ? undefined : window$location.pathname.includes("/player/")) {
   Editor = "h5-player"
 }
-_$_.registerPage({
+$_3671.registerPage({
   $app_id: window.location.host,
   $app_name: "APP工匠",
   product_name: "APP工匠",
   page: Editor
 })
-_$_.quick("autoTrack")
+$_3671.quick("autoTrack")
 export { u }
 export { d }

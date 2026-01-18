@@ -11,9 +11,9 @@ import * as D from "./6"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_705 from "./705"
-import /* [auto-meaningful-name] */_$_ from "./705"
+import /* [auto-meaningful-name] */$_7051 from "./705"
 var jS = function (e) {
   return e > 0 ? 1 : -1
 }
@@ -22,26 +22,26 @@ var NS = function (e, t, n) {
     return e - t
   })[1]
 }
-var RS = _React.memo(function (e) {
+var RS = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$resizable = e.resizable
   var /* [auto-meaningful-name] */e$placements = e.placements
   var /* [auto-meaningful-name] */e$onResize = e.onResize
   var i = e.width && NS(e.width, e.minWidth, e.maxWidth)
   var a = e.height && NS(e.height, e.minHeight, e.maxHeight)
-  var s = _React.useState(i)
+  var s = React1.useState(i)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState(a)
+  var d = React1.useState(a)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var _ = _React.useState(false)
+  var _ = React1.useState(false)
   var v = $_10_index.a(_, 2)
   var b = v[0]
   var y = v[1]
-  var E = _React.useState()
+  var E = React1.useState()
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
@@ -95,13 +95,13 @@ var RS = _React.memo(function (e) {
     }
   }
   return React.createElement(SS, {
-    className: N(e.className, _$_.layout, e$resizable ? _$_.resizable : undefined, T ? _$_.resizing : undefined),
+    className: N(e.className, $_7051.layout, e$resizable ? $_7051.resizable : undefined, T ? $_7051.resizing : undefined),
     style: D.a(D.a({}, e.style), {}, {
       width: l,
       height: m
     })
   }, e$children, e$resizable && e$placements && e$placements.length ? React.createElement("div", {
-    className: N(_$_.resizer, b ? _$_.row : _$_.col),
+    className: N($_7051.resizer, b ? $_7051.row : $_7051.col),
     onMouseDown: function (e) {
       var t = I(e)
       if (t) {
@@ -117,7 +117,7 @@ var RS = _React.memo(function (e) {
   }, e$placements.map(function (e) {
     return React.createElement("div", {
       key: e,
-      className: _$_[e.toLowerCase()]
+      className: $_7051[e.toLowerCase()]
     })
   })) : null)
 })

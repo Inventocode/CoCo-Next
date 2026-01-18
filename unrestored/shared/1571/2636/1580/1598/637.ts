@@ -4,9 +4,9 @@
  * 模块 ID：637
  */
 
-var r = require("../1686/246/index")
+var r = require("../1686/246")
 var o = require("../1694/577/index")
-var i = require("../1705/300/index")
+var i = require("../1705/300")
 var a = r("unscopables")
 var /* [auto-meaningful-name] */Array$prototype = Array.prototype
 if (undefined == Array$prototype[a]) {

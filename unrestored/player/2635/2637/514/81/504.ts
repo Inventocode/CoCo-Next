@@ -39,8 +39,8 @@ var d = function () {
     return this.getEncodedData(t)
   }
   t.getEncodedData = function (e) {
-    for (var /* [auto-meaningful-name] */e$length = e.length, /* [auto-meaningful-name] */r$UPPER = r.UPPER, /* [auto-meaningful-name] */_r$UPPER = r.UPPER, a = "", s = 0; s < e$length;) {
-      if (_r$UPPER === r.BINARY) {
+    for (var /* [auto-meaningful-name] */e$length = e.length, /* [auto-meaningful-name] */r$UPPER = r.UPPER, /* [auto-meaningful-name] */r$UPPER1 = r.UPPER, a = "", s = 0; s < e$length;) {
+      if (r$UPPER1 === r.BINARY) {
         if (e$length - s < 5) {
           break
         }
@@ -62,24 +62,24 @@ var d = function () {
           a += c.a.castAsNonUtf8Char(d)
           s += 8
         }
-        _r$UPPER = r$UPPER
+        r$UPPER1 = r$UPPER
       } else {
-        var f = _r$UPPER === r.DIGIT ? 4 : 5
+        var f = r$UPPER1 === r.DIGIT ? 4 : 5
         if (e$length - s < f) {
           break
         }
         d = t.readCode(e, s, f)
         s += f
-        var h = t.getCharacter(_r$UPPER, d)
+        var h = t.getCharacter(r$UPPER1, d)
         if (h.startsWith("CTRL_")) {
-          r$UPPER = _r$UPPER
-          _r$UPPER = t.getTable(h.charAt(5))
+          r$UPPER = r$UPPER1
+          r$UPPER1 = t.getTable(h.charAt(5))
           if ("L" === h.charAt(6)) {
-            r$UPPER = _r$UPPER
+            r$UPPER = r$UPPER1
           }
         } else {
           a += h
-          _r$UPPER = r$UPPER
+          r$UPPER1 = r$UPPER
         }
       }
     }

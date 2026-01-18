@@ -10,14 +10,14 @@ export { s as c }
 export { u as b }
 export { p as a }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "./7"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../src/shared/widget/custom/shop"
 function s(e) {
   return c.apply(this, arguments)
 }
 function c() {
-  return (c = i.a(_RegeneratorRuntime.mark(function e(t) {
+  return (c = i.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */t$unsafeExtensionWidgetList
     var /* [auto-meaningful-name] */t$extensionWidgetList
     var i
@@ -27,8 +27,8 @@ function c() {
     var u
     var /* [auto-meaningful-name] */e$sent
     var p
-    var /* [auto-meaningful-name] */_e$sent
-    return _RegeneratorRuntime.wrap(function (e) {
+    var /* [auto-meaningful-name] */e$sent1
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -66,8 +66,8 @@ function c() {
             e.next = 21
             return $$_$$_$$_$$_src_shared_widget_custom_shop.e(l, u)
           case 21:
-            _e$sent = e.sent
-            c = c.concat(_e$sent.items.map(function (e) {
+            e$sent1 = e.sent
+            c = c.concat(e$sent1.items.map(function (e) {
               return e.resource_url
             }))
           case 23:
@@ -103,10 +103,10 @@ function u() {
   return d.apply(this, arguments)
 }
 function d() {
-  return (d = i.a(_RegeneratorRuntime.mark(function e() {
+  return (d = i.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent2
-    return _RegeneratorRuntime.wrap(function (e) {
+    var /* [auto-meaningful-name] */e$sent1
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -123,9 +123,9 @@ function d() {
             e.next = 7
             return e$sent.json()
           case 7:
-            _e$sent2 = e.sent
-            l = _e$sent2
-            return e.abrupt("return", _e$sent2)
+            e$sent1 = e.sent
+            l = e$sent1
+            return e.abrupt("return", e$sent1)
           case 10:
           case "end":
             return e.stop()

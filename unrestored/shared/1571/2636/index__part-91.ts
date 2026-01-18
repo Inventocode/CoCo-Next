@@ -11,12 +11,12 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as Kv from "./88"
 import qv from "./88"
 import * as /* [auto-meaningful-name] */$_1201 from "./1201"
-import /* [auto-meaningful-name] */_$_ from "./1201"
-var Zv = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_12011 from "./1201"
+var Zv = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$hasIcon = e.hasIcon
@@ -25,12 +25,12 @@ var Zv = _React.memo(function (e) {
     style: {
       width: "133px"
     },
-    className: "".concat(_$_.flatButton, " coco-button-flat ").concat(e$hasIcon && _$_.hasIcon, " ").concat(e$className),
+    className: "".concat($_12011.flatButton, " coco-button-flat ").concat(e$hasIcon && $_12011.hasIcon, " ").concat(e$className),
     onClick: e$onClick
   }, e$children)
 })
 var Jv = Object.values($_206.a)
-var $v = _React.memo(function (e) {
+var $v = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$onModeChange = e.onModeChange
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage

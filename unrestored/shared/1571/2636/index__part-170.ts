@@ -24,28 +24,28 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_706 from "./706"
-import /* [auto-meaningful-name] */_$_ from "./706"
+import /* [auto-meaningful-name] */$_7061 from "./706"
 var nI = React.createContext({
   bulkSelectVisible: false,
   setBulkSelectVisible: function (e) {}
 })
-var oI = _React.memo(function () {
+var oI = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.rightSideActiveMenu
   })
   var t = $_16_index.e(function (e) {
     return e.common.consoleHeight
   })
-  var n = _React.useState(false)
+  var n = React1.useState(false)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = _React.useRef(null)
-  var s = _React.useRef(null)
+  var a = React1.useRef(null)
+  var s = React1.useRef(null)
   var c = t + 66
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (s.current) {
       tT(s.current, function (e, t) {
         var /* [auto-meaningful-name] */a$current
@@ -59,12 +59,12 @@ var oI = _React.memo(function () {
       })
     }
   }, [i])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!e) {
       i(false)
     }
   }, [e])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = function () {
       i(false)
     }
@@ -73,7 +73,7 @@ var oI = _React.memo(function () {
       window.removeEventListener("drag", e)
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     i(false)
   }, [t])
   return React.createElement(nI.Provider, {
@@ -82,16 +82,16 @@ var oI = _React.memo(function () {
       setBulkSelectVisible: i
     }
   }, React.createElement("div", null, React.createElement("div", {
-    className: N(_$_.content, e && _$_.showContent),
+    className: N($_7061.content, e && $_7061.showContent),
     style: {
       bottom: "".concat(c, "px")
     }
   }, React.createElement("div", {
-    className: N(_$_.hideComponent, e === K.h.DevTools && _$_.showComponent)
+    className: N($_7061.hideComponent, e === K.h.DevTools && $_7061.showComponent)
   }, React.createElement(cA, null)), React.createElement("div", {
-    className: N(_$_.hideComponent, e === K.h.ResourceLayout && _$_.showComponent)
+    className: N($_7061.hideComponent, e === K.h.ResourceLayout && $_7061.showComponent)
   }, React.createElement(LA, null))), React.createElement("div", {
-    className: N(_$_.searchInput, "search-outside"),
+    className: N($_7061.searchInput, "search-outside"),
     ref: s
   }, React.createElement($A, {
     visible: o,
@@ -112,20 +112,20 @@ var iI = React.memo(function () {
   var r = $_16_index.e(function (e) {
     return e.common.consoleMessages
   })
-  var o = _React.useState(false)
+  var o = React1.useState(false)
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (n) {
       d(true)
     }
   }, [n])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */r$filterFunctionEReturnLogE$getType$size = r.filter(function (e) {
       return "log" !== e.get("type")
     }).size

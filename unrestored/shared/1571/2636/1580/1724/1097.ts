@@ -4,7 +4,7 @@
  * 模块 ID：1097
  */
 
-var r = require("../1686/246/index")("match")
+var r = require("../1686/246")("match")
 module.exports = function (e) {
   var t = /./
   try {

@@ -8,18 +8,18 @@
 
 import { Ve } from "../../../../../unrestored/shared/1571/2636/index__part-9"
 var Ye
-import * as /* [auto-meaningful-name] */$_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
-import * as /* [auto-meaningful-name] */$_1051 from "../../../../../unrestored/shared/1571/2636/1051"
-import /* [auto-meaningful-name] */_$_ from "../../../../../unrestored/shared/1571/2636/1051"
+import * as /* [auto-meaningful-name] */React1 from "react"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1051 from "../../../../../unrestored/shared/1571/2636/1051"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511 from "../../../../../unrestored/shared/1571/2636/1051"
 !function (e) {
   e.LOGOUT = "LOGOUT"
   e.ACCOUNT_SETTING = "ACCOUNT_SETTING"
@@ -46,14 +46,14 @@ var Qe = [
     link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationSharingList.html"
   }
 ]
-var Ze = _React.memo(function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.d()
-  var r = $_16_index.e(function (e) {
+var Ze = React1.memo(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
   })
   var o = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -67,7 +67,7 @@ var Ze = _React.memo(function (e) {
               return Ve()
             case 6:
               e.next = 8
-              return n($$_$$_$$_$$_src_editor_redux_common_actions.wg(null))
+              return n($$_$$_$$_redux_common_actions.wg(null))
             case 8:
               e.next = 13
               break
@@ -78,7 +78,7 @@ var Ze = _React.memo(function (e) {
             case 13:
               return e.abrupt("break", 16)
             case 14:
-              window.open(te.D(), "_blank")
+              window.open($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.D(), "_blank")
               return e.abrupt("break", 16)
             case 16:
             case "end":
@@ -91,8 +91,8 @@ var Ze = _React.memo(function (e) {
       return e.apply(this, arguments)
     }
   }()
-  var i = React.createElement($_13_index.l, null, Qe.map(function (e, t) {
-    return React.createElement($_13_index.m, {
+  var i = React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, null, Qe.map(function (e, t) {
+    return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       key: t
     }, React.createElement("div", {
       onClick: function () {
@@ -101,35 +101,35 @@ var Ze = _React.memo(function (e) {
     }, e.label))
   }))
   return r ? React.createElement("div", {
-    className: _$_.wrapper
-  }, React.createElement($_13_index.g, {
-    overlay: React.createElement($_13_index.l, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511.wrapper
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
+    overlay: React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
       onClick: o
-    }, React.createElement($_13_index.m, {
+    }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: Ye.ACCOUNT_SETTING
-    }, React.createElement("div", null, $_710_index$a$formatMessage({
+    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "accountSetting"
-    }))), React.createElement($_13_index.y, {
+    }))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.y, {
       subMenu: i
-    }, React.createElement("div", null, $_710_index$a$formatMessage({
+    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "serviceAgreement"
-    }))), React.createElement($_13_index.m, {
+    }))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: Ye.LOGOUT
-    }, React.createElement("div", null, $_710_index$a$formatMessage({
+    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
       id: "logout"
     }))))
   }, React.createElement("div", {
-    className: _$_.image,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511.image,
     style: {
       backgroundImage: "url(".concat(r.avatar_url, ")")
     }
   }))) : React.createElement("div", {
-    className: _$_.loginButton,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511.loginButton,
     onClick: function () {
-      n($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
-      $_141_index.a("LoginButtonClick")
+      n($$_$$_$$_redux_common_actions.Ch())
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("LoginButtonClick")
     }
-  }, $_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
     id: "login"
   }))
 })

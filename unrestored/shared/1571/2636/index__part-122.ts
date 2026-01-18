@@ -14,10 +14,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_621 from "./621"
-import /* [auto-meaningful-name] */_$_ from "./621"
-var JO = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_6211 from "./621"
+var JO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fields" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -30,23 +30,23 @@ var JO = _React.memo(function (e) {
     return React.createElement(React.Fragment, null)
   }
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.storageFields)
+    className: N($_6211.formItemWrapper, $_6211.storageFields)
   }, React.createElement("div", {
-    className: _$_.title
+    className: $_6211.title
   }, React.createElement("div", null, $_710_index$a$formatMessage({
     id: "initialData"
   })), React.createElement("span", {
-    className: _$_.fieldsLength
+    className: $_6211.fieldsLength
   }, "键值对:", i.length)), React.createElement("div", {
-    className: _$_.imageBox
+    className: $_6211.imageBox
   }, React.createElement("img", {
-    className: _$_.image,
+    className: $_6211.image,
     src: "https://static.bcmcdn.com/coco/image/edit_localstorage_data_image.png",
     alt: "微数据库"
   }), React.createElement("div", {
-    className: _$_.edit
+    className: $_6211.edit
   }, React.createElement("div", {
-    className: _$_.btn,
+    className: $_6211.btn,
     onClick: function () {
       if (c.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.y) {
         (function () {

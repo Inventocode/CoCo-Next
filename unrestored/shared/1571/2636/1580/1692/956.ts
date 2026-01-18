@@ -6,7 +6,7 @@
 
 var r = require("../1705/240")
 var o = require("../1694/443")
-var i = require("../1686/246/index")("species")
+var i = require("../1686/246")("species")
 module.exports = function (e, t) {
   var n
   var /* [auto-meaningful-name] */rE$constructor = r(e).constructor

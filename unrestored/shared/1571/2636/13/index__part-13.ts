@@ -9,32 +9,32 @@
 import { Q } from "./index__part-6"
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./873"
-var be = _React.memo(function (e) {
+var be = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$showDropdownIcon = e.showDropdownIcon
   var o = undefined === e$showDropdownIcon || e$showDropdownIcon
   var /* [auto-meaningful-name] */e$overlay = e.overlay
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$onClick = e.onClick
-  var d = _React.useState(false)
+  var d = React1.useState(false)
   var p = $$_10_index.a(d, 2)
   var f = p[0]
   var h = p[1]
-  var m = _React.useRef(null)
+  var m = React1.useRef(null)
   function g(e) {
     var /* [auto-meaningful-name] */m$current
-    var /* [auto-meaningful-name] */_m$current
+    var /* [auto-meaningful-name] */m$current1
     if (e) {
       if (!(null === (m$current = m.current) || undefined === m$current)) {
         m$current.showContent()
       }
     } else {
-      if (!(null === (_m$current = m.current) || undefined === _m$current)) {
-        _m$current.hideContent()
+      if (!(null === (m$current1 = m.current) || undefined === m$current1)) {
+        m$current1.hideContent()
       }
     }
   }
@@ -70,10 +70,10 @@ var be = _React.memo(function (e) {
     }),
     onClick: function () {
       var /* [auto-meaningful-name] */m$current
-      var /* [auto-meaningful-name] */_m$current2
+      var /* [auto-meaningful-name] */m$current1
       if (null === (m$current = m.current) || undefined === m$current ? undefined : m$current.visible) {
-        if (!(null === (_m$current2 = m.current) || undefined === _m$current2)) {
-          _m$current2.hideContent()
+        if (!(null === (m$current1 = m.current) || undefined === m$current1)) {
+          m$current1.hideContent()
         }
       }
     }
@@ -82,7 +82,7 @@ var be = _React.memo(function (e) {
     className: i("coco-dropdown-down-icon")
   }))))
 })
-var ye = _React.createContext(null)
+var ye = React1.createContext(null)
 var /* [auto-meaningful-name] */ye$Provider = ye.Provider
 var Oe = ye
 export { be }

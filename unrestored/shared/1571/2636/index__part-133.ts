@@ -12,10 +12,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_526 from "./526"
-import /* [auto-meaningful-name] */_$_ from "./526"
-var Yw = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_5261 from "./526"
+var Yw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "db" : e$keyName
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
@@ -29,33 +29,33 @@ var Yw = _React.memo(function (e) {
     e$onChange("updatedAt", Date.now())
   }
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.tableData)
+    className: N($_5261.formItemWrapper, $_5261.tableData)
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
   }, React.createElement("div", {
-    className: _$_.label
+    className: $_5261.label
   }, $_710_index$a$formatMessage({
     id: "TableDataWidget.data"
   })), React.createElement("div", {
-    className: _$_.data
+    className: $_5261.data
   }, React.createElement("span", {
-    className: _$_.length
+    className: $_5261.length
   }, $_710_index$a$formatMessage({
     id: "column"
   }), ":", Object.keys(a.header).length), React.createElement("span", {
-    className: _$_.length
+    className: $_5261.length
   }, $_710_index$a$formatMessage({
     id: "row"
   }), ":", a.data.length))), React.createElement("div", {
-    className: _$_.imageBox
+    className: $_5261.imageBox
   }, React.createElement("img", {
-    className: _$_.image,
+    className: $_5261.image,
     src: "https://static.bcmcdn.com/coco/image/edit_grid_data_image.png",
     alt: ""
   }), React.createElement("div", {
-    className: _$_.edit
+    className: $_5261.edit
   }, React.createElement("div", {
-    className: _$_.btn,
+    className: $_5261.btn,
     onClick: function () {
       c($$_$$_$$_$$_src_editor_redux_common_actions.zj({
         grid: D.a({

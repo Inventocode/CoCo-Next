@@ -7,7 +7,7 @@
 "use strict"
 
 import { rA } from "./index__part-160"
-import * as /* [auto-meaningful-name] */$_417_index from "./417/index"
+import * as /* [auto-meaningful-name] */AgGridReact from "ag-grid-react"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
@@ -19,13 +19,13 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1220_index from "./1220/index"
-import /* [auto-meaningful-name] */_$_1220_index from "./1220/index"
+import /* [auto-meaningful-name] */$_1220_index1 from "./1220/index"
 import * as /* [auto-meaningful-name] */$_1221 from "./1221"
 import * as /* [auto-meaningful-name] */$_529 from "./529"
-import /* [auto-meaningful-name] */_$_ from "./529"
-var oB = _React.memo(function () {
+import /* [auto-meaningful-name] */$_5291 from "./529"
+var oB = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var /* [auto-meaningful-name] */$_16_index$eFunctionEReturnE$dataWatch$tableDataDialog$id = $_16_index.e(function (e) {
     return e.dataWatch.tableDataDialog
@@ -33,7 +33,7 @@ var oB = _React.memo(function () {
   var n = $_16_index.e(function (e) {
     return e.dataWatch.variableList
   })
-  var r = _React.useState()
+  var r = React1.useState()
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -72,7 +72,7 @@ var oB = _React.memo(function () {
     frameworkComponents: {
       agColumnHeader: function (e) {
         return React.createElement("div", {
-          className: _$_.gridHeaderCell
+          className: $_5291.gridHeaderCell
         }, e.displayName)
       },
       indexCellRenderer: function (e) {
@@ -80,7 +80,7 @@ var oB = _React.memo(function () {
       },
       baseCellRenderer: function (e) {
         return React.createElement("div", {
-          className: _$_.baseCell
+          className: $_5291.baseCell
         }, e.value)
       }
     },
@@ -90,9 +90,9 @@ var oB = _React.memo(function () {
   }
   return React.createElement("div", {
     className: "ag-theme-alpine"
-  }, React.createElement($_417_index.AgGridReact, {
+  }, React.createElement(AgGridReact.AgGridReact, {
     gridOptions: d
-  }, React.createElement($_417_index.AgGridColumn, {
+  }, React.createElement(AgGridReact.AgGridColumn, {
     colId: "indexColumn",
     headerName: "",
     field: "indexColumn",
@@ -106,7 +106,7 @@ var oB = _React.memo(function () {
     var t = $_10_index.a(e, 2)
     var n = t[0]
     var r = t[1]
-    return React.createElement($_417_index.AgGridColumn, {
+    return React.createElement(AgGridReact.AgGridColumn, {
       colId: n,
       headerName: r.field,
       field: n,
@@ -122,39 +122,39 @@ var oB = _React.memo(function () {
 var iB = function () {
   var e = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = _React.useState({
+  var n = React1.useState({
     x: document.body.clientWidth - 886,
     y: 100
   })
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = _React.useState(0)
+  var a = React1.useState(0)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useState(0)
+  var u = React1.useState(0)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useState(0)
+  var g = React1.useState(0)
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = _React.useState(0)
+  var w = React1.useState(0)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var j = C[1]
-  var R = _React.useState(876)
+  var R = React1.useState(876)
   var k = $_10_index.a(R, 2)
   var x = k[0]
   var D = k[1]
-  var M = _React.useState(540)
+  var M = React1.useState(540)
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = _React.useRef(x)
-  var G = _React.useRef(P)
+  var F = React1.useRef(x)
+  var G = React1.useRef(P)
   var W = $_16_index.e(function (e) {
     return e.project.playing
   })
@@ -168,7 +168,7 @@ var iB = function () {
   }).find(function (e) {
     return e.id === H
   })
-  var q = _React.useState(false)
+  var q = React1.useState(false)
   var X = $_10_index.a(q, 2)
   var Q = X[0]
   var Z = X[1]
@@ -204,8 +204,8 @@ var iB = function () {
     }
   }()
   return React.createElement("div", {
-    className: _$_.container
-  }, React.createElement(_$_1220_index, {
+    className: $_5291.container
+  }, React.createElement($_1220_index1, {
     allowAnyClick: true,
     position: o,
     onDrag: function (e, t) {
@@ -266,26 +266,26 @@ var iB = function () {
       G.current = P
     }
   }, React.createElement("div", {
-    className: _$_.wrapper,
+    className: $_5291.wrapper,
     style: {
       width: x,
       height: P
     }
   }, React.createElement("div", {
-    className: N(_$_.header, "handle")
+    className: N($_5291.header, "handle")
   }, React.createElement("div", {
-    className: _$_.toast
+    className: $_5291.toast
   }, React.createElement(rA, {
     visible: Q,
     toast: "".concat(K.name),
     showIcon: true,
     setVisible: Z
   })), React.createElement("div", {
-    className: _$_.name
+    className: $_5291.name
   }, React.createElement($_13_index.j, {
     type: "icon-widget-table-data"
   }), React.createElement("span", null, K.name)), React.createElement("div", {
-    className: _$_.actions
+    className: $_5291.actions
   }, W ? "" : React.createElement($_748_index.a, {
     placement: "bottom",
     trigger: ["hover"],
@@ -293,12 +293,12 @@ var iB = function () {
       id: "resetData"
     })
   }, React.createElement("div", {
-    className: _$_.closeIconBox,
+    className: $_5291.closeIconBox,
     onClick: J
   }, React.createElement($_13_index.j, {
     type: "icon-resetData"
   }))), React.createElement("div", {
-    className: _$_.closeIconBox,
+    className: $_5291.closeIconBox,
     onClick: function () {
       e($$_$$_$$_$$_src_editor_redux_common_actions.aj(false))
     }

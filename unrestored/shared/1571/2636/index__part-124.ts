@@ -12,26 +12,26 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_557 from "./557"
 import * as /* [auto-meaningful-name] */$_807 from "./807"
-var ow = _React.memo(function (e) {
+var ow = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "header" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = _React.useRef(-1)
-  var c = _React.useState([])
+  var s = React1.useRef(-1)
+  var c = React1.useState([])
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(-1)
+  var p = React1.useState(-1)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = _React.useState(0)
+  var v = React1.useState(0)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
@@ -56,10 +56,10 @@ var ow = _React.memo(function (e) {
     u.splice(e, 1)
     e$onChange(n, u)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     d(i || [])
   }, [i])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = 2 * g
     var t = document.querySelector(".".concat("HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + e, " input"))
     if (t instanceof HTMLInputElement) {
@@ -183,23 +183,23 @@ var ow = _React.memo(function (e) {
     type: "icon-add"
   }))))
 })
-var iw = _React.memo(function (e) {
+var iw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "params" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = _React.useRef(-1)
-  var c = _React.useState([])
+  var s = React1.useRef(-1)
+  var c = React1.useState([])
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(-1)
+  var p = React1.useState(-1)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = _React.useState(0)
+  var v = React1.useState(0)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
@@ -224,10 +224,10 @@ var iw = _React.memo(function (e) {
     u.splice(e, 1)
     e$onChange(n, u)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     d(i || [])
   }, [i])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = 2 * g
     var t = document.querySelector(".".concat("HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + e, " input"))
     if (t instanceof HTMLInputElement) {

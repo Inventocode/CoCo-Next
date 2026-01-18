@@ -19,31 +19,31 @@ import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_340 from "./340"
-import /* [auto-meaningful-name] */_$_ from "./340"
-var DS = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_3401 from "./340"
+var DS = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$consoleVisible = e.consoleVisible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var r = $_16_index.e(function (e) {
     return e.common.consoleMessages
   })
-  var o = _React.useState(["error", "lintError", "warning", "print", "log", "customError", "customWarning"])
+  var o = React1.useState(["error", "lintError", "warning", "print", "log", "customError", "customWarning"])
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = _React.useState(-1)
+  var c = React1.useState(-1)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useRef(null)
-  var m = _React.useRef(.18 * document.body.clientHeight)
+  var p = React1.useRef(null)
+  var m = React1.useRef(.18 * document.body.clientHeight)
   var g = $_16_index.e(function (e) {
     return e.project.playing
   })
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var b = $_16_index.d()
-  var y = _React.useMemo(function () {
+  var y = React1.useMemo(function () {
     return {
       errorCount: r.filter(function (e) {
         return "error" === e.get("type") || "lintError" === e.get("type") || "customError" === e.get("type")
@@ -102,13 +102,13 @@ var DS = _React.memo(function (e) {
       isClear: t
     })
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     d(-1)
   }, [g])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     b($$_$$_$$_$$_src_editor_redux_common_actions.ei(e$consoleVisible ? m.current : 0))
   }, [b, e$consoleVisible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */p$current = p.current
     if (p$current) {
       p$current.scrollTop = p$current.scrollHeight
@@ -119,35 +119,35 @@ var DS = _React.memo(function (e) {
       b($$_$$_$$_$$_src_editor_redux_common_actions.ei(e))
       m.current = e
     },
-    className: N(_$_.container, !e$consoleVisible && _$_.hide),
+    className: N($_3401.container, !e$consoleVisible && $_3401.hide),
     resizable: true,
     placements: ["top"],
     height: .18 * document.body.clientHeight,
     minHeight: 110,
     maxHeight: (document.body.clientHeight - 52) / 2
   }, React.createElement("div", {
-    className: _$_.header
+    className: $_3401.header
   }, React.createElement("div", {
-    className: _$_.title
+    className: $_3401.title
   }, React.createElement("span", {
-    className: _$_.errorCount
+    className: $_3401.errorCount
   }, React.createElement($_13_index.j, {
     type: "icon-console-error"
   }), y$errorCount), React.createElement("span", null, React.createElement($_13_index.j, {
     type: "icon-warning"
   }), y$warningCount)), React.createElement("div", {
-    className: _$_.right
+    className: $_3401.right
   }, React.createElement($_1213.a, {
     trigger: "click",
     placement: "bottom",
     overlayClassName: "consoleFilterPopover",
     content: React.createElement("div", {
-      className: _$_.filterCategory
+      className: $_3401.filterCategory
     }, React.createElement("div", {
-      className: _$_.filterItem,
+      className: $_3401.filterItem,
       onClick: C.bind(null, "error")
     }, React.createElement("div", {
-      className: _$_.iconBox
+      className: $_3401.iconBox
     }, a.includes("error") && React.createElement($_13_index.j, {
       type: "icon-selected"
     })), $_710_index$a$formatMessage({
@@ -155,10 +155,10 @@ var DS = _React.memo(function (e) {
     }), $_710_index$a$formatMessage({
       id: "consoleError"
     })), React.createElement("div", {
-      className: _$_.filterItem,
+      className: $_3401.filterItem,
       onClick: C.bind(null, "warning")
     }, React.createElement("div", {
-      className: _$_.iconBox
+      className: $_3401.iconBox
     }, a.includes("warning") && React.createElement($_13_index.j, {
       type: "icon-selected"
     })), $_710_index$a$formatMessage({
@@ -166,10 +166,10 @@ var DS = _React.memo(function (e) {
     }), $_710_index$a$formatMessage({
       id: "consoleWarning"
     })), React.createElement("div", {
-      className: _$_.filterItem,
+      className: $_3401.filterItem,
       onClick: C.bind(null, "print")
     }, React.createElement("div", {
-      className: _$_.iconBox
+      className: $_3401.iconBox
     }, a.includes("print") && React.createElement($_13_index.j, {
       type: "icon-selected"
     })), $_710_index$a$formatMessage({
@@ -177,10 +177,10 @@ var DS = _React.memo(function (e) {
     }), $_710_index$a$formatMessage({
       id: "consolePrint"
     })), React.createElement("div", {
-      className: _$_.filterItem,
+      className: $_3401.filterItem,
       onClick: C.bind(null, "log")
     }, React.createElement("div", {
-      className: _$_.iconBox
+      className: $_3401.iconBox
     }, a.includes("log") && React.createElement($_13_index.j, {
       type: "icon-selected"
     })), $_710_index$a$formatMessage({
@@ -195,7 +195,7 @@ var DS = _React.memo(function (e) {
     }),
     trigger: "hover"
   }, React.createElement("span", {
-    className: _$_.filterIcon,
+    className: $_3401.filterIcon,
     onClick: function () {
       T(true, false)
     }
@@ -208,7 +208,7 @@ var DS = _React.memo(function (e) {
     }),
     trigger: "hover"
   }, React.createElement("div", {
-    className: _$_.clearIcon,
+    className: $_3401.clearIcon,
     onClick: function () {
       $_26_index.z.stopWarningAnimation()
       b($$_$$_$$_$$_src_editor_redux_common_actions.Sg())
@@ -217,17 +217,17 @@ var DS = _React.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: "icon-clear"
   }))), React.createElement("div", {
-    className: _$_.closeIcon,
+    className: $_3401.closeIcon,
     onClick: e$onClose
   }, React.createElement($_13_index.j, {
     type: "icon-close-bold"
   })))), React.createElement("div", {
-    className: _$_.main,
+    className: $_3401.main,
     ref: p
   }, React.createElement("ul", null, r.map(function (e, t) {
     return a.includes(e.get("type")) ? React.createElement("li", {
       key: t,
-      className: N(u === t && _$_.active),
+      className: N(u === t && $_3401.active),
       onClick: w.bind(null, e.toJSON(), t),
       "data-console-type": e.get("type")
     }, React.createElement("p", null, (n = e.get("message"), ("print" === (r = e.get("type")) || "customError" === r || "customWarning" === r ? "<".concat($_710_index$a$formatMessage({

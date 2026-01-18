@@ -50,9 +50,9 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_567 from "./567"
-import /* [auto-meaningful-name] */_$_ from "./567"
+import /* [auto-meaningful-name] */$_5671 from "./567"
 function kC() {
   return localStorage.getItem("lvmi_access_token")
 }
@@ -147,13 +147,13 @@ function PC() {
     }, e)
   }))).apply(this, arguments)
 }
-var BC = _React.memo(function (e) {
+var BC = React1.memo(function (e) {
   var t = $_16_index.d()
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var r = undefined === e$keyName ? "token" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var a = _React.useState(false)
+  var a = React1.useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
@@ -226,26 +226,26 @@ var BC = _React.memo(function (e) {
   }
   return React.createElement($_13_index.i, {
     align: "vertical",
-    className: N(_$_.formItemWrapper, _$_.aqaraAuth, u && _$_.connected),
+    className: N($_5671.formItemWrapper, $_5671.aqaraAuth, u && $_5671.connected),
     label: u ? "已授权 绿米" : "未授权 绿米"
   }, u ? React.createElement("div", {
-    className: _$_.connect,
+    className: $_5671.connect,
     onClick: function () {
       return p.apply(this, arguments)
     }
   }, React.createElement("span", {
-    className: _$_.text
+    className: $_5671.text
   }, "取消授权")) : React.createElement("div", {
-    className: N(_$_.connect, c && _$_.connecting),
+    className: N($_5671.connect, c && $_5671.connecting),
     onClick: function () {
       return d.apply(this, arguments)
     }
   }, React.createElement("span", {
-    className: _$_.icon
+    className: $_5671.icon
   }, React.createElement(Ge, {
     stroke: "#847da4"
   })), React.createElement("span", {
-    className: _$_.text
+    className: $_5671.text
   }, "开始授权")))
 })
 var FC = {

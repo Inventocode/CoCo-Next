@@ -13,9 +13,9 @@ import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$_276 from "./276"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_header_styles$module$css from "../../../../src/editor/ui/header/styles.module.css"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_src_editor_ui_header_styles$module$css from "../../../../src/editor/ui/header/styles.module.css"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_header_styles$module$css1 from "../../../../src/editor/ui/header/styles.module.css"
 import * as /* [auto-meaningful-name] */$_750 from "./750"
-import /* [auto-meaningful-name] */_$_ from "./750"
+import /* [auto-meaningful-name] */$_7501 from "./750"
 !function (e) {
   e[e.ERROR = 0] = "ERROR"
   e[e.WARN = 1] = "WARN"
@@ -24,17 +24,17 @@ var ot = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$message = e.message
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var o = e$type === Xe.ERROR ? _$_.error : _$_.warn
+  var o = e$type === Xe.ERROR ? $_7501.error : $_7501.warn
   return React.createElement("div", {
-    className: N(o, _$_.container)
+    className: N(o, $_7501.container)
   }, React.createElement("span", {
-    className: _$_.message
+    className: $_7501.message
   }, e$message), React.createElement("span", {
-    className: _$_.close,
+    className: $_7501.close,
     onClick: e$onClose
   }, React.createElement($_13_index.j, {
     type: "icon-close",
-    className: _$_.icon
+    className: $_7501.icon
   })))
 })
 export { Xe }

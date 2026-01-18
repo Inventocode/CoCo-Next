@@ -8,9 +8,9 @@
 
 import { a } from "./index__part-3"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import "../50/index"
-var o = _React.createContext(null)
+var o = React1.createContext(null)
 var s = {
   notify: function () {}
 }
@@ -135,7 +135,7 @@ var l = function (e) {
     }
   }, [s, c])
   var l = e$context || o
-  return _React.createElement(l.Provider, {
+  return React1.createElement(l.Provider, {
     value: s
   }, e$children)
 }

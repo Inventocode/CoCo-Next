@@ -15,9 +15,9 @@ import * as /* [auto-meaningful-name] */$$_388 from "../388"
 import * as /* [auto-meaningful-name] */$$_362 from "../362"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
 import * as /* [auto-meaningful-name] */$_1219_index from "./1219/index"
-import /* [auto-meaningful-name] */_$_1219_index from "./1219/index"
+import /* [auto-meaningful-name] */$_1219_index1 from "./1219/index"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import "./1554"
 var h = {
   "./style_module.css": {
@@ -134,7 +134,7 @@ var g = function (e) {
         var /* [auto-meaningful-name] */this$props$className = this$props.className
         var /* [auto-meaningful-name] */this$props$padding = this$props.padding
         var /* [auto-meaningful-name] */this$props$wrapClassName = this$props.wrapClassName
-        return _React.createElement("div", {
+        return React1.createElement("div", {
           className: (this$props$wrapClassName ? this$props$wrapClassName + " " : "") + "CUI-button-btn-wrap",
           style: {
             width: this$props$width,
@@ -142,7 +142,7 @@ var g = function (e) {
             margin: this$props$margin,
             borderRadius: this$props$borderRadius
           }
-        }, _React.createElement("div", {
+        }, React1.createElement("div", {
           id: this.props.id,
           style: {
             borderRadius: this$props$borderRadius || "",
@@ -154,18 +154,18 @@ var g = function (e) {
           onMouseLeave: this.preventMouseEventWhenDisable("leave"),
           onContextMenu: this.preventMouseEventWhenDisable("context"),
           "data-report-click": this$props$dataReport,
-          className: ("".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") ? "".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") + " " : "") + _$_1219_index("btn ".concat(this$props$disable ? "disabled" : "", " ").concat(this.setClass()), h, {
+          className: ("".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") ? "".concat(this$props$isSelected ? "selected" : "", " ").concat(null !== this$props$className && undefined !== this$props$className ? this$props$className : "") + " " : "") + $_1219_index1("btn ".concat(this$props$disable ? "disabled" : "", " ").concat(this.setClass()), h, {
             autoResolveMultipleImports: true,
             handleMissingStyleName: "throw"
           })
-        }, this.inserSpaceIfTwoText()), null != this$props$tooltip && _React.createElement("span", {
+        }, this.inserSpaceIfTwoText()), null != this$props$tooltip && React1.createElement("span", {
           className: "CUI-button-btn-tooltip"
         }, this$props$tooltip))
       }
     }
   ])
   return n
-}(_React.Component)
+}(React1.Component)
 $$_35.a(g, "defaultProps", {
   type: "transparent",
   size: "md"

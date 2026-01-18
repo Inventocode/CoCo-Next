@@ -361,33 +361,33 @@ var g = function (e) {
           var /* [auto-meaningful-name] */this$props$lockAspectRatioExtraHeight = this$props.lockAspectRatioExtraHeight
           var /* [auto-meaningful-name] */this$props$lockAspectRatioExtraWidth = this$props.lockAspectRatioExtraWidth
           var g = this.props.scale || 1
-          var /* [auto-meaningful-name] */_this$props = this.props
-          var /* [auto-meaningful-name] */_this$props$maxWidth = _this$props.maxWidth
-          var /* [auto-meaningful-name] */_this$props$maxHeight = _this$props.maxHeight
-          var /* [auto-meaningful-name] */_this$props$minWidth = _this$props.minWidth
-          var /* [auto-meaningful-name] */_this$props$minHeight = _this$props.minHeight
+          var /* [auto-meaningful-name] */this$props1 = this.props
+          var /* [auto-meaningful-name] */this$props1$maxWidth = this$props1.maxWidth
+          var /* [auto-meaningful-name] */this$props1$maxHeight = this$props1.maxHeight
+          var /* [auto-meaningful-name] */this$props1$minWidth = this$props1.minWidth
+          var /* [auto-meaningful-name] */this$props1$minHeight = this$props1.minHeight
           var O = this.props.resizeRatio || 1
           var w = this.getParentSize()
-          if (_this$props$maxWidth && "string" === typeof _this$props$maxWidth && f(_this$props$maxWidth, "%")) {
-            var C = Number(_this$props$maxWidth.replace("%", "")) / 100
-            _this$props$maxWidth = w.width * C
+          if (this$props1$maxWidth && "string" === typeof this$props1$maxWidth && f(this$props1$maxWidth, "%")) {
+            var C = Number(this$props1$maxWidth.replace("%", "")) / 100
+            this$props1$maxWidth = w.width * C
           }
-          if (_this$props$maxHeight && "string" === typeof _this$props$maxHeight && f(_this$props$maxHeight, "%")) {
-            var T = Number(_this$props$maxHeight.replace("%", "")) / 100
-            _this$props$maxHeight = w.height * T
+          if (this$props1$maxHeight && "string" === typeof this$props1$maxHeight && f(this$props1$maxHeight, "%")) {
+            var T = Number(this$props1$maxHeight.replace("%", "")) / 100
+            this$props1$maxHeight = w.height * T
           }
-          if (_this$props$minWidth && "string" === typeof _this$props$minWidth && f(_this$props$minWidth, "%")) {
-            var S = Number(_this$props$minWidth.replace("%", "")) / 100
-            _this$props$minWidth = w.width * S
+          if (this$props1$minWidth && "string" === typeof this$props1$minWidth && f(this$props1$minWidth, "%")) {
+            var S = Number(this$props1$minWidth.replace("%", "")) / 100
+            this$props1$minWidth = w.width * S
           }
-          if (_this$props$minHeight && "string" === typeof _this$props$minHeight && f(_this$props$minHeight, "%")) {
-            var A = Number(_this$props$minHeight.replace("%", "")) / 100
-            _this$props$minHeight = w.height * A
+          if (this$props1$minHeight && "string" === typeof this$props1$minHeight && f(this$props1$minHeight, "%")) {
+            var A = Number(this$props1$minHeight.replace("%", "")) / 100
+            this$props1$minHeight = w.height * A
           }
-          _this$props$maxWidth = "undefined" === typeof _this$props$maxWidth ? undefined : Number(_this$props$maxWidth)
-          _this$props$maxHeight = "undefined" === typeof _this$props$maxHeight ? undefined : Number(_this$props$maxHeight)
-          _this$props$minWidth = "undefined" === typeof _this$props$minWidth ? undefined : Number(_this$props$minWidth)
-          _this$props$minHeight = "undefined" === typeof _this$props$minHeight ? undefined : Number(_this$props$minHeight)
+          this$props1$maxWidth = "undefined" === typeof this$props1$maxWidth ? undefined : Number(this$props1$maxWidth)
+          this$props1$maxHeight = "undefined" === typeof this$props1$maxHeight ? undefined : Number(this$props1$maxHeight)
+          this$props1$minWidth = "undefined" === typeof this$props1$minWidth ? undefined : Number(this$props1$minWidth)
+          this$props1$minHeight = "undefined" === typeof this$props1$minHeight ? undefined : Number(this$props1$minHeight)
           var I = "number" === typeof this$props$lockAspectRatio ? this$props$lockAspectRatio : this$state$original.width / this$state$original.height
           var /* [auto-meaningful-name] */this$state$original$width = this$state$original.width
           var /* [auto-meaningful-name] */this$state$original$height = this$state$original.height
@@ -426,8 +426,8 @@ var g = function (e) {
               var /* [auto-meaningful-name] */M$top = M.top
               var B = this$parentNode.offsetWidth + (k$left - M$left)
               var F = this$parentNode.offsetHeight + (k$top - M$top)
-              _this$props$maxWidth = _this$props$maxWidth && _this$props$maxWidth < B ? _this$props$maxWidth : B
-              _this$props$maxHeight = _this$props$maxHeight && _this$props$maxHeight < F ? _this$props$maxHeight : F
+              this$props1$maxWidth = this$props1$maxWidth && this$props1$maxWidth < B ? this$props1$maxWidth : B
+              this$props1$maxHeight = this$props1$maxHeight && this$props1$maxHeight < F ? this$props1$maxHeight : F
             }
           } else if ("window" === this.props.bounds) {
             if ("undefined" !== typeof window) {
@@ -436,8 +436,8 @@ var g = function (e) {
               var /* [auto-meaningful-name] */G$top = G.top
               var H = window.innerWidth - G$left
               var V = window.innerHeight - G$top
-              _this$props$maxWidth = _this$props$maxWidth && _this$props$maxWidth < H ? _this$props$maxWidth : H
-              _this$props$maxHeight = _this$props$maxHeight && _this$props$maxHeight < V ? _this$props$maxHeight : V
+              this$props1$maxWidth = this$props1$maxWidth && this$props1$maxWidth < H ? this$props1$maxWidth : H
+              this$props1$maxHeight = this$props1$maxHeight && this$props1$maxHeight < V ? this$props1$maxHeight : V
             }
           } else if (this.props.bounds instanceof HTMLElement) {
             var z = this.props.bounds.getBoundingClientRect()
@@ -451,13 +451,13 @@ var g = function (e) {
             }
             var Z = this.props.bounds.offsetWidth + (z$left - q$left)
             var J = this.props.bounds.offsetHeight + (z$top - q$top)
-            _this$props$maxWidth = _this$props$maxWidth && _this$props$maxWidth < Z ? _this$props$maxWidth : Z
-            _this$props$maxHeight = _this$props$maxHeight && _this$props$maxHeight < J ? _this$props$maxHeight : J
+            this$props1$maxWidth = this$props1$maxWidth && this$props1$maxWidth < Z ? this$props1$maxWidth : Z
+            this$props1$maxHeight = this$props1$maxHeight && this$props1$maxHeight < J ? this$props1$maxHeight : J
           }
-          var $ = "undefined" === typeof _this$props$minWidth ? 10 : _this$props$minWidth
-          var ee = "undefined" === typeof _this$props$maxWidth || _this$props$maxWidth < 0 ? this$state$original$width : _this$props$maxWidth
-          var te = "undefined" === typeof _this$props$minHeight ? 10 : _this$props$minHeight
-          var ne = "undefined" === typeof _this$props$maxHeight || _this$props$maxHeight < 0 ? this$state$original$height : _this$props$maxHeight
+          var $ = "undefined" === typeof this$props1$minWidth ? 10 : this$props1$minWidth
+          var ee = "undefined" === typeof this$props1$maxWidth || this$props1$maxWidth < 0 ? this$state$original$width : this$props1$maxWidth
+          var te = "undefined" === typeof this$props1$minHeight ? 10 : this$props1$minHeight
+          var ne = "undefined" === typeof this$props1$maxHeight || this$props1$maxHeight < 0 ? this$state$original$height : this$props1$maxHeight
           if (this$props$lockAspectRatio) {
             var re = (te - this$props$lockAspectRatioExtraHeight) * I + this$props$lockAspectRatioExtraWidth
             var oe = (ne - this$props$lockAspectRatioExtraHeight) * I + this$props$lockAspectRatioExtraWidth

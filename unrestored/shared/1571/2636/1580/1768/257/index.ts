@@ -17,10 +17,10 @@ var u = require("../../1581/334")
 var d = require("../../1282/836")
 var p = require("../../1581/425")
 var f = require("../../1692/400")
-var /* [auto-meaningful-name] */require$$_$$_1705_300_index$f = require("../../1705/300/index").f
+var /* [auto-meaningful-name] */require$$_$$_1705_300$f = require("../../1705/300").f
 var m = require("../../1705/497")
 var g = require("../../1686/638")
-var _ = require("../../1686/246/index")
+var _ = require("../../1686/246")
 var v = require("../../1581/826")
 var /* [auto-meaningful-name] */c$Int8Array = c.Int8Array
 var y = c$Int8Array && c$Int8Array.prototype
@@ -81,7 +81,7 @@ if (N && m(O) !== C) {
   g(O, C)
 }
 if (s && !u(C, A)) {
-  for (r in R = true, require$$_$$_1705_300_index$f(C, A, {
+  for (r in R = true, require$$_$$_1705_300$f(C, A, {
     get: function () {
       return l(this) ? this[I] : undefined
     }

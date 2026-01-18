@@ -13,10 +13,10 @@ import * as D from "./6"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_137 from "./137"
-import /* [auto-meaningful-name] */_$_ from "./137"
-var vM = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_1371 from "./137"
+var vM = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$action = e.action
   var /* [auto-meaningful-name] */e$selected = e.selected
   var /* [auto-meaningful-name] */e$dragging = e.dragging
@@ -37,26 +37,26 @@ var vM = _React.memo(function (e) {
       return Et.mb(t$source)
     }
   }(e$action)
-  var _ = _React.useRef(null)
-  var v = _React.useState(false)
+  var _ = React1.useRef(null)
+  var v = React1.useState(false)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = _React.useCallback(function (e) {
+  var O = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */_$current = _.current
     if (_$current && e.target !== _$current) {
       _$current.blur()
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */_$current
-    var /* [auto-meaningful-name] */_$current2
+    var /* [auto-meaningful-name] */_$current1
     if (y) {
       if (!(null === (_$current = _.current) || undefined === _$current)) {
         _$current.focus()
       }
-      if (!(null === (_$current2 = _.current) || undefined === _$current2)) {
-        _$current2.setSelectionRange(e$action$name.length, e$action$name.length)
+      if (!(null === (_$current1 = _.current) || undefined === _$current1)) {
+        _$current1.setSelectionRange(e$action$name.length, e$action$name.length)
       }
     }
   }, [e$action$name.length, y])
@@ -64,17 +64,17 @@ var vM = _React.memo(function (e) {
     ref: e$innerRef
   }, e$draggableProps, e$dragHandleProps, {
     id: c,
-    className: N(_$_.actionItem, e$dragging && _$_.dragging, e$selected && _$_.selected),
+    className: N($_1371.actionItem, e$dragging && $_1371.dragging, e$selected && $_1371.selected),
     onClick: e$onClick
   }), React.createElement("div", {
-    className: _$_.actionImg
+    className: $_1371.actionImg
   }, g ? React.createElement("img", {
     src: g,
     alt: e$action$name
   }) : React.createElement("div", {
-    className: _$_.emptyImg
+    className: $_1371.emptyImg
   })), React.createElement("div", {
-    className: _$_.actionName
+    className: $_1371.actionName
   }, y ? React.createElement("input", {
     type: "text",
     maxLength: 20,
@@ -105,34 +105,34 @@ var vM = _React.memo(function (e) {
       }
     },
     ref: _,
-    className: _$_.nameInput
+    className: $_1371.nameInput
   }) : React.createElement("div", {
-    className: _$_.nameText,
+    className: $_1371.nameText,
     onClick: function () {
       if (e$selected) {
         E(true)
       }
     }
   }, e$action$name)), !y && React.createElement("div", {
-    className: _$_.deleteContainer
+    className: $_1371.deleteContainer
   }, React.createElement("div", {
-    className: _$_.copyButton,
+    className: $_1371.copyButton,
     onClick: function (e) {
       e.stopPropagation()
       e$onCopy()
     }
   }, React.createElement($_13_index.j, {
     type: "icon-copy-slight",
-    className: _$_.copyIcon
+    className: $_1371.copyIcon
   })), React.createElement("div", {
-    className: _$_.deleteButton,
+    className: $_1371.deleteButton,
     onClick: function (e) {
       e.stopPropagation()
       e$onDelete()
     }
   }, React.createElement($_13_index.j, {
     type: "icon-close",
-    className: _$_.deleteIcon
+    className: $_1371.deleteIcon
   }))))
 })
 var bM = {
@@ -148,12 +148,12 @@ function yM(e) {
   var /* [auto-meaningful-name] */e$handleActionCopy = e.handleActionCopy
   var /* [auto-meaningful-name] */e$getActionDomId = e.getActionDomId
   var /* [auto-meaningful-name] */e$onActionListChange = e.onActionListChange
-  var l = _React.useRef(bM)
-  var u = _React.useState("")
+  var l = React1.useRef(bM)
+  var u = React1.useState("")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useCallback(function () {
+  var g = React1.useCallback(function () {
     var e
     var t
     var n = null === (e = document.getElementById("ACTION_LIST")) || undefined === e ? undefined : e.closest(".coco-dialog-wrapper.show")
@@ -163,7 +163,7 @@ function yM(e) {
       y: r.y
     } : bM
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     window.addEventListener("scroll", g)
     return function () {
       return window.removeEventListener("scroll", g)
@@ -195,7 +195,7 @@ function yM(e) {
   }, function (e) {
     return React.createElement("ul", Object.assign({
       id: "ACTION_LIST",
-      className: _$_.actionList,
+      className: $_1371.actionList,
       ref: e.innerRef
     }, e.droppableProps), e$actionList.map(function (e, c) {
       return React.createElement(uM, {
@@ -242,5 +242,5 @@ function yM(e) {
     }), e.placeholder)
   }))
 }
-_React.memo(yM)
+React1.memo(yM)
 export { yM }

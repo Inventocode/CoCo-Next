@@ -620,9 +620,9 @@ var Wh = {
       var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints_11_2_field_shadow = "<shadow type=\"math_number\"><field name=\"NUM\" constraints=\"1,,1\">2</field></shadow>"
       function c() {
         var /* [auto-meaningful-name] */this$source_block
-        var /* [auto-meaningful-name] */_this$source_block
+        var /* [auto-meaningful-name] */this$source_block1
         var n
-        var r = i || (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field_value("WIDGET_ID")) || (null === (_this$source_block = this.source_block) || undefined === _this$source_block || null === (n = _this$source_block.get_parent()) || undefined === n ? undefined : n.get_field_value("WIDGET_ID")) || $_228_index.a()
+        var r = i || (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field_value("WIDGET_ID")) || (null === (this$source_block1 = this.source_block) || undefined === this$source_block1 || null === (n = this$source_block1.get_parent()) || undefined === n ? undefined : n.get_field_value("WIDGET_ID")) || $_228_index.a()
         return $_46_index.c().getActorActionList(r)
       }
       function l(e) {
@@ -1732,12 +1732,12 @@ var Wh = {
             options: function () {
               var /* [auto-meaningful-name] */this$source_block
               var t
-              var /* [auto-meaningful-name] */_this$source_block2
+              var /* [auto-meaningful-name] */this$source_block1
               var r = i || (null === (this$source_block = this.source_block) || undefined === this$source_block || null === (t = this$source_block.get_parent()) || undefined === t ? undefined : t.get_field_value("WIDGET_ID")) || $_228_index.a()
-              var o = a || (null === (_this$source_block2 = this.source_block) || undefined === _this$source_block2 ? undefined : _this$source_block2.get_field_value("ACTOR_ACTION_ID"))
+              var o = a || (null === (this$source_block1 = this.source_block) || undefined === this$source_block1 ? undefined : this$source_block1.get_field_value("ACTOR_ACTION_ID"))
               if (!o) {
-                var /* [auto-meaningful-name] */_this$source_block3
-                var c = null === (_this$source_block3 = this.source_block) || undefined === _this$source_block3 ? undefined : _this$source_block3.get_parent()
+                var /* [auto-meaningful-name] */this$source_block2
+                var c = null === (this$source_block2 = this.source_block) || undefined === this$source_block2 ? undefined : this$source_block2.get_parent()
                 var l = ((null === c || undefined === c ? undefined : c.get_children()) || []).find(function (e) {
                   return "actor_action_input" === e.type
                 })
@@ -1778,9 +1778,9 @@ var Wh = {
             name: "ACTOR_STYLE_ID",
             options: function () {
               var /* [auto-meaningful-name] */this$source_block
-              var /* [auto-meaningful-name] */_this$source_block4
+              var /* [auto-meaningful-name] */this$source_block1
               var n = i || (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field_value("WIDGET_ID")) || $_228_index.a()
-              var r = a || (null === (_this$source_block4 = this.source_block) || undefined === _this$source_block4 ? undefined : _this$source_block4.get_field_value("ACTOR_ACTION_ID"))
+              var r = a || (null === (this$source_block1 = this.source_block) || undefined === this$source_block1 ? undefined : this$source_block1.get_field_value("ACTOR_ACTION_ID"))
               var o = $_46_index.c().getActorStyleList(n, r)
               return n && Jd.Cb(n) ? o : o.slice(0, 1)
             }

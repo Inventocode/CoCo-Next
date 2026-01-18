@@ -17,12 +17,12 @@ import * as k from "./11"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_322 from "./322"
 import * as Q_ from "./82"
 import * as /* [auto-meaningful-name] */$_114 from "./114"
 import * as /* [auto-meaningful-name] */$_218 from "./218"
-import /* [auto-meaningful-name] */_$_ from "./218"
+import /* [auto-meaningful-name] */$_2181 from "./218"
 var tv = function (e) {
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$size = e.size
@@ -48,24 +48,24 @@ var tv = function (e) {
   var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var A = e$attributes$textVisible ? e$attributes$textAlign : Qu.a.CENTER
-  var I = _React.useState(false)
+  var I = React1.useState(false)
   var j = $_10_index.a(I, 2)
   var R = j[0]
   var x = j[1]
-  var M = _React.useState(false)
+  var M = React1.useState(false)
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = _React.useRef(null)
-  var G = _React.useRef(null)
-  _React.useEffect(function () {
+  var F = React1.useRef(null)
+  var G = React1.useRef(null)
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */F$current = F.current
     if (F$current && R) {
       F$current.innerText = e$attributes$text
       ng.b(F$current)
     }
   }, [R])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!e$selected) {
       x(false)
     }
@@ -87,7 +87,7 @@ var tv = function (e) {
   Y = Math.floor(Y)
   var K = Jd.hb(e$attributes$backgroundImage)
   var q = te.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : K ? (null === K || undefined === K ? undefined : K.source) || (null === K || undefined === K ? undefined : K.cdnUrl) : Q_.f
-  var X = _React.useMemo(function () {
+  var X = React1.useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}
@@ -145,7 +145,7 @@ var tv = function (e) {
   }, Q)
   return React.createElement(React.Fragment, null, React.createElement("button", {
     id: r,
-    className: N(wn.b, _$_.buttonWidget, k.a({}, _$_.hide, !e$visible)),
+    className: N(wn.b, $_2181.buttonWidget, k.a({}, $_2181.hide, !e$visible)),
     "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.z,
     "data-min-width": Q_.p,
@@ -177,21 +177,21 @@ var tv = function (e) {
       flexDirection: A === Qu.a.RIGHT ? "row-reverse" : "row"
     })
   }, e$attributes$iconVisible && React.createElement("div", {
-    className: _$_.iconWrapper,
+    className: $_2181.iconWrapper,
     style: {
       color: e$attributes$disabled ? e$attributes$backgroundMode === $_114.a.TEMPLATE ? Q.color : "#7E7E7E" : e$attributes$iconColor
     }
   }, React.createElement($_322.a, {
     icon: Jd.fb(e$attributes$iconId)
   })), e$attributes$textVisible && React.createElement("div", {
-    className: N(_$_.textWrapper, e$attributes$iconVisible && (e$attributes$text || R) && (A === Qu.a.RIGHT ? _$_.iconToTextRightSpacing : _$_.iconToTextLeftSpacing))
+    className: N($_2181.textWrapper, e$attributes$iconVisible && (e$attributes$text || R) && (A === Qu.a.RIGHT ? $_2181.iconToTextRightSpacing : $_2181.iconToTextLeftSpacing))
   }, React.createElement("div", {
-    className: _$_.input,
+    className: $_2181.input,
     style: {
       display: R ? "flex" : "none"
     }
   }, React.createElement("span", {
-    className: _$_.contentEditable,
+    className: $_2181.contentEditable,
     contentEditable: true,
     ref: F,
     onBlur: function (e) {
@@ -225,7 +225,7 @@ var tv = function (e) {
       }
     }
   })), React.createElement("div", {
-    className: _$_.text,
+    className: $_2181.text,
     style: {
       display: R ? "none" : "flex",
       textAlign: A

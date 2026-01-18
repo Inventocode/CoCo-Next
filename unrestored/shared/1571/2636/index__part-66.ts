@@ -19,7 +19,7 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_286 from "./286"
 var kh = function (e) {
   var t = e.id
@@ -34,18 +34,18 @@ var kh = function (e) {
   var /* [auto-meaningful-name] */e$attributes$rotation = e$attributes.rotation
   var /* [auto-meaningful-name] */e$attributes$cursorShape = e$attributes.cursorShape
   var p = undefined === e$attributes$cursorShape ? $_286.a.NONE : e$attributes$cursorShape
-  var m = _React.useState(true)
+  var m = React1.useState(true)
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = _React.useState({
+  var y = React1.useState({
     x: 0,
     y: 0
   })
   var w = $_10_index.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = _React.useState({
+  var A = React1.useState({
     translateX: 0,
     translateY: 0,
     angle: 0
@@ -53,7 +53,7 @@ var kh = function (e) {
   var I = $_10_index.a(A, 2)
   var j = I[0]
   var N = I[1]
-  var R = _React.useState(false)
+  var R = React1.useState(false)
   var k = $_10_index.a(R, 2)
   var x = k[0]
   var D = k[1]
@@ -62,7 +62,7 @@ var kh = function (e) {
   })
   var L = t
   var P = M === L
-  var B = _React.useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var B = React1.useCallback(O.a(RegeneratorRuntime.mark(function e() {
     var t
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -86,10 +86,10 @@ var kh = function (e) {
       }
     }, e)
   })), [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     B()
   }, [B])
-  var F = _React.useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var F = React1.useCallback(O.a(RegeneratorRuntime.mark(function e() {
     var t
     var /* [auto-meaningful-name] */t$attributes$coordinateRatio
     var r
@@ -126,7 +126,7 @@ var kh = function (e) {
       }
     }, e)
   })), [L, e$attributes$color, p, e$parentId, e$attributes$penSize])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = $_215.b(L)
     if (e) {
       var t = function (e) {
@@ -148,7 +148,7 @@ var kh = function (e) {
       }
     }
   }, [L, e$parentId, e$position.x])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$parentId) {
       var e = Jd.Cb(e$parentId)
       if (e) {
@@ -166,7 +166,7 @@ var kh = function (e) {
       }
     }
   }, [e$position, e$parentId])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
       var e = $_215.b(L)
       if (e) {
@@ -180,7 +180,7 @@ var kh = function (e) {
       }
     }
   }, [L, v, a])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
       var e = $_215.b(L)
       if (e) {
@@ -207,12 +207,12 @@ var kh = function (e) {
       }
     }
   }, [v, L, e$attributes$rotation])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
       F()
     }
   }, [v, F])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
       var e = $_215.b(L)
       if (e) {
@@ -222,7 +222,7 @@ var kh = function (e) {
       }
     }
   }, [e$position, L, v])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
       var e = $_215.b(L)
       if (e) {
@@ -232,7 +232,7 @@ var kh = function (e) {
       }
     }
   }, [e$visible, L, v])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (M === t) {
       var e = $_215.b(t)
       var n = null === e || undefined === e ? undefined : e.components.get_editor()
@@ -244,7 +244,7 @@ var kh = function (e) {
       }
     }
   }, [t, M, v])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = document.querySelector("#".concat(e$parentId, "[data-role=\"WIDGET\"]"))
     if (e instanceof HTMLDivElement) {
       if (x) {

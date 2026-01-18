@@ -22,10 +22,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_747 from "./747"
-import /* [auto-meaningful-name] */_$_ from "./747"
-var wy = _React.memo(function () {
+import /* [auto-meaningful-name] */$_7471 from "./747"
+var wy = React1.memo(function () {
   var e = $_16_index.d()
   var t = $_238.b()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
@@ -33,7 +33,7 @@ var wy = _React.memo(function () {
   var o = $_16_index.e(function (e) {
     return e.project.screens
   })
-  var i = _React.useState(false)
+  var i = React1.useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -90,7 +90,7 @@ var wy = _React.memo(function () {
   }, te.i(r$backgroundColor) && React.createElement("div", {
     className: qv.slash
   })))), React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, _$_.changeImageWrapper),
+    className: N(qv.formItemWrapper, $_7471.changeImageWrapper),
     align: "vertical",
     label: $_710_index$a$formatMessage({
       id: "backgroundImage"

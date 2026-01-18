@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("process")
-var i = require("../1410/311/index")
+var i = require("./311")
 var /* [auto-meaningful-name] */i$ArrayPrototypeSlice = i.ArrayPrototypeSlice
 var /* [auto-meaningful-name] */i$Error = i.Error
 var /* [auto-meaningful-name] */i$FunctionPrototypeSymbolHasInstance = i.FunctionPrototypeSymbolHasInstance
@@ -19,28 +19,28 @@ var /* [auto-meaningful-name] */i$Symbol = i.Symbol
 var /* [auto-meaningful-name] */i$SymbolHasInstance = i.SymbolHasInstance
 module.exports = M
 M.WritableState = P
-var /* [auto-meaningful-name] */require$_427_983$EventEmitter = require("./427/983").EventEmitter
-var /* [auto-meaningful-name] */require$_1160$Stream = require("./1160").Stream
+var /* [auto-meaningful-name] */require$_1160_983$EventEmitter = require("./1160/983").EventEmitter
+var /* [auto-meaningful-name] */require$_1160_index$Stream = require("./1160/index").Stream
 var /* [auto-meaningful-name] */require$_333_index$Buffer = require("./333/index").Buffer
 var g = require("./769")
 var /* [auto-meaningful-name] */require$_987$addAbortSignal = require("./987").addAbortSignal
 var m = require("./988")
 var /* [auto-meaningful-name] */m$getHighWaterMark = m.getHighWaterMark
 var /* [auto-meaningful-name] */m$getDefaultHighWaterMark = m.getDefaultHighWaterMark
-var /* [auto-meaningful-name] */require$_402$codes = require("./402").codes
-var /* [auto-meaningful-name] */require$_402$codes$ERR_INVALID_ARG_TYPE = require$_402$codes.ERR_INVALID_ARG_TYPE
-var /* [auto-meaningful-name] */require$_402$codes$ERR_METHOD_NOT_IMPLEMENTED = require$_402$codes.ERR_METHOD_NOT_IMPLEMENTED
-var /* [auto-meaningful-name] */require$_402$codes$ERR_MULTIPLE_CALLBACK = require$_402$codes.ERR_MULTIPLE_CALLBACK
-var /* [auto-meaningful-name] */require$_402$codes$ERR_STREAM_CANNOT_PIPE = require$_402$codes.ERR_STREAM_CANNOT_PIPE
-var /* [auto-meaningful-name] */require$_402$codes$ERR_STREAM_DESTROYED = require$_402$codes.ERR_STREAM_DESTROYED
-var /* [auto-meaningful-name] */require$_402$codes$ERR_STREAM_ALREADY_FINISHED = require$_402$codes.ERR_STREAM_ALREADY_FINISHED
-var /* [auto-meaningful-name] */require$_402$codes$ERR_STREAM_NULL_VALUES = require$_402$codes.ERR_STREAM_NULL_VALUES
-var /* [auto-meaningful-name] */require$_402$codes$ERR_STREAM_WRITE_AFTER_END = require$_402$codes.ERR_STREAM_WRITE_AFTER_END
-var /* [auto-meaningful-name] */require$_402$codes$ERR_UNKNOWN_ENCODING = require$_402$codes.ERR_UNKNOWN_ENCODING
+var /* [auto-meaningful-name] */require$_402_index$codes = require("./402/index").codes
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_INVALID_ARG_TYPE = require$_402_index$codes.ERR_INVALID_ARG_TYPE
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_METHOD_NOT_IMPLEMENTED = require$_402_index$codes.ERR_METHOD_NOT_IMPLEMENTED
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_MULTIPLE_CALLBACK = require$_402_index$codes.ERR_MULTIPLE_CALLBACK
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_STREAM_CANNOT_PIPE = require$_402_index$codes.ERR_STREAM_CANNOT_PIPE
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_STREAM_DESTROYED = require$_402_index$codes.ERR_STREAM_DESTROYED
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_STREAM_ALREADY_FINISHED = require$_402_index$codes.ERR_STREAM_ALREADY_FINISHED
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_STREAM_NULL_VALUES = require$_402_index$codes.ERR_STREAM_NULL_VALUES
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_STREAM_WRITE_AFTER_END = require$_402_index$codes.ERR_STREAM_WRITE_AFTER_END
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_UNKNOWN_ENCODING = require$_402_index$codes.ERR_UNKNOWN_ENCODING
 var /* [auto-meaningful-name] */g$errorOrDestroy = g.errorOrDestroy
 function R() {}
-i$ObjectSetPrototypeOf(M.prototype, require$_1160$Stream.prototype)
-i$ObjectSetPrototypeOf(M, require$_1160$Stream)
+i$ObjectSetPrototypeOf(M.prototype, require$_1160_index$Stream.prototype)
+i$ObjectSetPrototypeOf(M, require$_1160_index$Stream)
 var F = i$Symbol("kOnFinished")
 function P(e, t, r) {
   if ("boolean" !== typeof r) {
@@ -114,7 +114,7 @@ function M(e) {
       require$_987$addAbortSignal(e.signal, this)
     }
   }
-  require$_1160$Stream.call(this, e)
+  require$_1160_index$Stream.call(this, e)
   g.construct(this, function () {
     var /* [auto-meaningful-name] */t$_writableState = t._writableState
     if (!t$_writableState.writing) {
@@ -132,7 +132,7 @@ function L(e, t, n, i) {
   } else {
     if (n) {
       if ("buffer" !== n && !require$_333_index$Buffer.isEncoding(n)) {
-        throw new require$_402$codes$ERR_UNKNOWN_ENCODING(n)
+        throw new require$_402_index$codes$ERR_UNKNOWN_ENCODING(n)
       }
     } else {
       n = e$_writableState.defaultEncoding
@@ -142,7 +142,7 @@ function L(e, t, n, i) {
     }
   }
   if (null === t) {
-    throw new require$_402$codes$ERR_STREAM_NULL_VALUES()
+    throw new require$_402_index$codes$ERR_STREAM_NULL_VALUES()
   }
   if (!e$_writableState.objectMode) {
     if ("string" === typeof t) {
@@ -153,18 +153,18 @@ function L(e, t, n, i) {
     } else if (t instanceof require$_333_index$Buffer) {
       n = "buffer"
     } else {
-      if (!require$_1160$Stream._isUint8Array(t)) {
-        throw new require$_402$codes$ERR_INVALID_ARG_TYPE("chunk", ["string", "Buffer", "Uint8Array"], t)
+      if (!require$_1160_index$Stream._isUint8Array(t)) {
+        throw new require$_402_index$codes$ERR_INVALID_ARG_TYPE("chunk", ["string", "Buffer", "Uint8Array"], t)
       }
-      t = require$_1160$Stream._uint8ArrayToBuffer(t)
+      t = require$_1160_index$Stream._uint8ArrayToBuffer(t)
       n = "buffer"
     }
   }
   if (e$_writableState.ending) {
-    o = new require$_402$codes$ERR_STREAM_WRITE_AFTER_END()
+    o = new require$_402_index$codes$ERR_STREAM_WRITE_AFTER_END()
   } else {
     if (e$_writableState.destroyed) {
-      o = new require$_402$codes$ERR_STREAM_DESTROYED("write")
+      o = new require$_402_index$codes$ERR_STREAM_DESTROYED("write")
     }
   }
   return o ? (r.nextTick(i, o), g$errorOrDestroy(e, o, true), o) : (e$_writableState.pendingcb++, function (e, t, n, r, i) {
@@ -203,7 +203,7 @@ function j(e, t, n, r, i, o, a) {
   t.writing = true
   t.sync = true
   if (t.destroyed) {
-    t.onwrite(new require$_402$codes$ERR_STREAM_DESTROYED("write"))
+    t.onwrite(new require$_402_index$codes$ERR_STREAM_DESTROYED("write"))
   } else {
     if (n) {
       e._writev(i, t.onwrite)
@@ -262,7 +262,7 @@ function H(e, t) {
       }
     }
   } else {
-    g$errorOrDestroy(e, new require$_402$codes$ERR_MULTIPLE_CALLBACK())
+    g$errorOrDestroy(e, new require$_402_index$codes$ERR_MULTIPLE_CALLBACK())
   }
 }
 function V(e) {
@@ -292,11 +292,11 @@ function z(e) {
       var /* [auto-meaningful-name] */r$callback = r.callback
       var a = e.objectMode ? 1 : r$chunk.length
       e.length -= a
-      r$callback(null !== (e$errored = e.errored) && undefined !== e$errored ? e$errored : new require$_402$codes$ERR_STREAM_DESTROYED("write"))
+      r$callback(null !== (e$errored = e.errored) && undefined !== e$errored ? e$errored : new require$_402_index$codes$ERR_STREAM_DESTROYED("write"))
     }
     for (var s = e[F].splice(0), c = 0; c < s.length; c++) {
-      var /* [auto-meaningful-name] */_e$errored
-      s[c](null !== (_e$errored = e.errored) && undefined !== _e$errored ? _e$errored : new require$_402$codes$ERR_STREAM_DESTROYED("end"))
+      var /* [auto-meaningful-name] */e$errored1
+      s[c](null !== (e$errored1 = e.errored) && undefined !== e$errored1 ? e$errored1 : new require$_402_index$codes$ERR_STREAM_DESTROYED("end"))
     }
     N(e)
   }
@@ -359,7 +359,7 @@ function K(e, t) {
         var n = false
         function i(i) {
           if (n) {
-            g$errorOrDestroy(e, null !== i && undefined !== i ? i : require$_402$codes$ERR_MULTIPLE_CALLBACK())
+            g$errorOrDestroy(e, null !== i && undefined !== i ? i : require$_402_index$codes$ERR_MULTIPLE_CALLBACK())
           } else if (n = true, t.pendingcb--, i) {
             for (var o = t[F].splice(0), a = 0; a < o.length; a++) {
               o[a](i)
@@ -436,7 +436,7 @@ i$ObjectDefineProperty(M, i$SymbolHasInstance, {
   }
 })
 M.prototype.pipe = function () {
-  g$errorOrDestroy(this, new require$_402$codes$ERR_STREAM_CANNOT_PIPE())
+  g$errorOrDestroy(this, new require$_402_index$codes$ERR_STREAM_CANNOT_PIPE())
 }
 M.prototype.write = function (e, t, n) {
   return true === L(this, e, t, n)
@@ -458,14 +458,14 @@ M.prototype.setDefaultEncoding = function (e) {
     e = i$StringPrototypeToLowerCase(e)
   }
   if (!require$_333_index$Buffer.isEncoding(e)) {
-    throw new require$_402$codes$ERR_UNKNOWN_ENCODING(e)
+    throw new require$_402_index$codes$ERR_UNKNOWN_ENCODING(e)
   }
   this._writableState.defaultEncoding = e
   return this
 }
 M.prototype._write = function (e, t, n) {
   if (!this._writev) {
-    throw new require$_402$codes$ERR_METHOD_NOT_IMPLEMENTED("_write()")
+    throw new require$_402_index$codes$ERR_METHOD_NOT_IMPLEMENTED("_write()")
   }
   this._writev([
     {
@@ -501,10 +501,10 @@ M.prototype.end = function (e, t, n) {
   if (!i) {
     if (this$_writableState.errored || this$_writableState.ending) {
       if (this$_writableState.finished) {
-        i = new require$_402$codes$ERR_STREAM_ALREADY_FINISHED("end")
+        i = new require$_402_index$codes$ERR_STREAM_ALREADY_FINISHED("end")
       } else {
         if (this$_writableState.destroyed) {
-          i = new require$_402$codes$ERR_STREAM_DESTROYED("end")
+          i = new require$_402_index$codes$ERR_STREAM_DESTROYED("end")
         }
       }
     } else {
@@ -636,7 +636,7 @@ M.prototype._undestroy = g.undestroy
 M.prototype._destroy = function (e, t) {
   t(e)
 }
-M.prototype[require$_427_983$EventEmitter.captureRejectionSymbol] = function (e) {
+M.prototype[require$_1160_983$EventEmitter.captureRejectionSymbol] = function (e) {
   this.destroy(e)
 }
 M.fromWeb = function (e, t) {

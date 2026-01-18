@@ -8,7 +8,7 @@
 
 var /* [auto-meaningful-name] */require$_1785_959$charAt = require("./1785/959").charAt
 var o = require("./1581/310")
-var i = require("./1686/426/index")
+var i = require("./1686/426")
 var a = require("./949/1087")
 var /* [auto-meaningful-name] */i$set = i.set
 var c = i.getterFor("String Iterator")

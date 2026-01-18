@@ -49,7 +49,7 @@ var l = function (e) {
       var /* [auto-meaningful-name] */n$nested_blocks_with_comment0$comment
       var /* [auto-meaningful-name] */n$comment
       var /* [auto-meaningful-name] */n$origin_block$comment
-      var /* [auto-meaningful-name] */_n$comment
+      var /* [auto-meaningful-name] */n$comment1
       n.events.disable()
       var o = n.origin_xy || n.origin_block.get_relative_to_surface_xy()
       n.move_by(o)
@@ -88,8 +88,8 @@ var l = function (e) {
           }
         } else {
           n.set_comment_text(null === (n$origin_block$comment = n.origin_block.comment) || undefined === n$origin_block$comment ? undefined : n$origin_block$comment.get_text())
-          if (!(null === (_n$comment = n.comment) || undefined === _n$comment)) {
-            _n$comment.init_svg(true)
+          if (!(null === (n$comment1 = n.comment) || undefined === n$comment1)) {
+            n$comment1.init_svg(true)
           }
         }
         n.origin_block.set_connectable(false)
@@ -205,22 +205,22 @@ var l = function (e) {
   }
   t.prototype.release = function () {
     var /* [auto-meaningful-name] */this$previous_connection
-    var /* [auto-meaningful-name] */_this$previous_connection
+    var /* [auto-meaningful-name] */this$previous_connection1
     var /* [auto-meaningful-name] */this$next_connection
-    var /* [auto-meaningful-name] */_this$next_connection
+    var /* [auto-meaningful-name] */this$next_connection1
     var /* [auto-meaningful-name] */this$output_connection
-    var /* [auto-meaningful-name] */_this$output_connection
+    var /* [auto-meaningful-name] */this$output_connection1
     var /* [auto-meaningful-name] */this$origin_block$comment
     var /* [auto-meaningful-name] */this$on_release
     switch (this.events.disable(), this.group_name = this.get_field_value(a.BLOCK_GROUP_NAME_FIELD_NAME), this.origin_block.move_by(o.vec2.sub(o.vec2.create(), this.get_relative_to_surface_xy(), this.origin_block.get_relative_to_surface_xy())), this.origin_block.get_svg_root().style.display = this.origin_block_display, this.origin_block.set_connectable(true), this.origin_block.set_chunk_visibility(this.get_visibility()), this.origin_block.update_chunk_visibility(), this.group_type) {
       case a.BlockGroupType.EXECUTION:
         (0, s.assert)(this.origin_block.previous_connection, "Statement block must have prev conn. ")
         var d = null === (this$previous_connection = this.previous_connection) || undefined === this$previous_connection ? undefined : this$previous_connection.target_connection
-        if (!(null === (_this$previous_connection = this.previous_connection) || undefined === _this$previous_connection)) {
-          _this$previous_connection.disconnect()
+        if (!(null === (this$previous_connection1 = this.previous_connection) || undefined === this$previous_connection1)) {
+          this$previous_connection1.disconnect()
         }
         var h = null === (this$next_connection = this.next_connection) || undefined === this$next_connection ? undefined : this$next_connection.target_connection
-        if (this.group_stop_at = null === h || undefined === h ? undefined : h.source_block.id, null === (_this$next_connection = this.next_connection) || undefined === _this$next_connection || _this$next_connection.disconnect(), h) {
+        if (this.group_stop_at = null === h || undefined === h ? undefined : h.source_block.id, null === (this$next_connection1 = this.next_connection) || undefined === this$next_connection1 || this$next_connection1.disconnect(), h) {
           var p = this.origin_block.last_connection_in_stack();
           (0, s.assert)(p)
           p.connect(h)
@@ -234,8 +234,8 @@ var l = function (e) {
       case a.BlockGroupType.OUTPUT:
         (0, s.assert)(this.origin_block.output_connection, "Output block must have output conn. ")
         var _ = null === (this$output_connection = this.output_connection) || undefined === this$output_connection ? undefined : this$output_connection.target_connection
-        if (!(null === (_this$output_connection = this.output_connection) || undefined === _this$output_connection)) {
-          _this$output_connection.disconnect()
+        if (!(null === (this$output_connection1 = this.output_connection) || undefined === this$output_connection1)) {
+          this$output_connection1.disconnect()
         }
         if (!(null === _ || undefined === _)) {
           _.connect(this.origin_block.output_connection)

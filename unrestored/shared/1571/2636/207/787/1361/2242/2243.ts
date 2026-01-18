@@ -6,13 +6,13 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */Boolean = "Boolean"
+var /* [auto-meaningful-name] */_Boolean = "Boolean"
 var /* [auto-meaningful-name] */Identifier = "Identifier"
 var /* [auto-meaningful-name] */Keyword = "Keyword"
 var a = "Null"
 var /* [auto-meaningful-name] */Numeric = "Numeric"
 var /* [auto-meaningful-name] */Punctuator = "Punctuator"
-var /* [auto-meaningful-name] */String = "String"
+var /* [auto-meaningful-name] */_String = "String"
 var /* [auto-meaningful-name] */RegularExpression = "RegularExpression"
 var /* [auto-meaningful-name] */Template = "Template"
 var /* [auto-meaningful-name] */JSXIdentifier = "JSXIdentifier"
@@ -45,7 +45,7 @@ p.prototype = {
       e.type = JSXText
     } else if (e$type.keyword) {
       if ("true" === e$type.keyword || "false" === e$type.keyword) {
-        e.type = Boolean
+        e.type = _Boolean
       } else {
         if ("null" === e$type.keyword) {
           e.type = a
@@ -61,7 +61,7 @@ p.prototype = {
         t.jsxAttrValueToken = false
         e.type = JSXText
       } else {
-        e.type = String
+        e.type = _String
       }
       e.value = this._code.slice(e.start, e.end)
     } else if (e$type === this$_acornTokTypes.regexp) {

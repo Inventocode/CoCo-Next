@@ -11,10 +11,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../.
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1062 from "../../../../../unrestored/shared/1571/2636/1062"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../../unrestored/shared/1571/2636/1062"
-var ML = _React.memo(function () {
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621 from "../../../../../unrestored/shared/1571/2636/1062"
+var ML = React1.memo(function () {
   var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
   var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.blockImageDialogInfo
@@ -23,17 +23,17 @@ var ML = _React.memo(function () {
   var /* [auto-meaningful-name] */t$imgSrc = t.imgSrc
   return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
     visible: t$visible,
-    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.blockImageDialog,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageDialog,
     onClose: function () {
       e($$_$$_$$_redux_common_actions.bi(false, ""))
     }
   }, React.createElement("div", {
-    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.blockImageWrap
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageWrap
   }, React.createElement("img", {
     src: t$imgSrc,
     alt: ""
   })), React.createElement("div", {
-    className: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_.btnDownload,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.btnDownload,
     onClick: function () {
       var e = document.createElement("a")
       e.href = t$imgSrc

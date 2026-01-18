@@ -98,7 +98,7 @@ export const useMeaningfulVarNameRule: Rule.RuleModule = {
                     }
                 }
             },
-            TSImportEqualsDeclaration(node) {
+            TSImportEqualsDeclaration(node: any) {
                 if (node.moduleReference.type !== "TSExternalModuleReference") {
                     return
                 }

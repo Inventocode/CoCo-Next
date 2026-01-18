@@ -365,10 +365,10 @@ var mg = {
             },
             optOnchange: function (e) {
               var /* [auto-meaningful-name] */this$source_block
-              var /* [auto-meaningful-name] */_this$source_block
+              var /* [auto-meaningful-name] */this$source_block1
               if (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.updateShape_) {
-                if (!(null === (_this$source_block = this.source_block) || undefined === _this$source_block)) {
-                  _this$source_block.updateShape_(e)
+                if (!(null === (this$source_block1 = this.source_block) || undefined === this$source_block1)) {
+                  this$source_block1.updateShape_(e)
                 }
               }
             }

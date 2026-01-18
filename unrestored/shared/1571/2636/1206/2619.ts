@@ -268,7 +268,7 @@ exports.autoCreateWxJsIframeApi = function (e, t) {
               var o
               var /* [auto-meaningful-name] */n$sent
               var l
-              var /* [auto-meaningful-name] */_n$sent
+              var /* [auto-meaningful-name] */n$sent1
               return r.wrap(function (n) {
                 for (;;) {
                   switch (n.prev = n.next) {
@@ -300,8 +300,8 @@ exports.autoCreateWxJsIframeApi = function (e, t) {
                       n.next = 11
                       return (0, c.blobToJson)(n$sent.data)
                     case 11:
-                      _n$sent = n.sent
-                      l = null === _n$sent || undefined === _n$sent ? undefined : _n$sent.errmsg
+                      n$sent1 = n.sent
+                      l = null === n$sent1 || undefined === n$sent1 ? undefined : n$sent1.errmsg
                       n.next = 18
                       break
                     case 15:

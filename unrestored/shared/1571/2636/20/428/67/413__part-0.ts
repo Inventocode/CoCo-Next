@@ -7,10 +7,10 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_206 from "../../../206"
@@ -19,11 +19,11 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_c
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
-import /* [auto-meaningful-name] */_$$_$$_$$_ from "../../../8"
+import /* [auto-meaningful-name] */$$_$$_$$_81 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
 import * as /* [auto-meaningful-name] */$$_$$_$$_146 from "../../../146"
 import * as /* [auto-meaningful-name] */$$_$$_$$_239 from "../../../239"
-import /* [auto-meaningful-name] */_$$_$$_$$_2 from "../../../239"
+import /* [auto-meaningful-name] */$$_$$_$$_2391 from "../../../239"
 var E = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
@@ -46,8 +46,8 @@ var E = function (e) {
     height: e$size.height,
     minWidth: "".concat($$_$$_$$_146.m, "px"),
     minHeight: "".concat($$_$$_$$_146.l, "px"),
-    backgroundColor: _Color(e$attributes$backgroundColor).toString(),
-    color: _Color(e$attributes$color).toString(),
+    backgroundColor: Color1(e$attributes$backgroundColor).toString(),
+    color: Color1(e$attributes$color).toString(),
     fontFamily: e$attributes$fontFamily,
     fontSize: e$attributes$fontSize,
     justifyContent: e$attributes$justifyContent,
@@ -57,17 +57,17 @@ var E = function (e) {
     opacity: undefined === e$opacity ? undefined : e$opacity / 100,
     overflow: C
   }
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     id: t,
     "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H,
     "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: _$$_$$_$$_($$_$$_$$_90.b, _$$_$$_$$_2.textWidget, $$_$$_$$_11.a({}, _$$_$$_$$_2.hide, !e$visible)),
+    className: $$_$$_$$_81($$_$$_$$_90.b, $$_$$_$$_2391.textWidget, $$_$$_$$_11.a({}, $$_$$_$$_2391.hide, !e$visible)),
     onClick: function () {
       e$onClick()
     },
     style: T
-  }, _React.createElement("span", {
-    className: _$$_$$_$$_2.content
+  }, React1.createElement("span", {
+    className: $$_$$_$$_2391.content
   }, e$attributes$content))
 }
 export { E }

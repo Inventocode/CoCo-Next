@@ -163,8 +163,8 @@ var h = new (function () {
           var a = o.remove_children()
           var s = i.remove_children()
           try {
-            var /* [auto-meaningful-name] */_e$invisibleWidgetIds
-            if ((null === (_e$invisibleWidgetIds = e.invisibleWidgetIds) || undefined === _e$invisibleWidgetIds ? undefined : _e$invisibleWidgetIds.length) > 0) {
+            var /* [auto-meaningful-name] */e$invisibleWidgetIds1
+            if ((null === (e$invisibleWidgetIds1 = e.invisibleWidgetIds) || undefined === e$invisibleWidgetIds1 ? undefined : e$invisibleWidgetIds1.length) > 0) {
               i.html_div.style.display = "block"
             } else {
               i.html_div.style.display = "none"

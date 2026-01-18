@@ -44,22 +44,22 @@ var f = function (e) {
         if ("SCREEN_ID" === this.name) {
           for (var i in n) {
             var /* [auto-meaningful-name] */f$snapshot
-            var /* [auto-meaningful-name] */_f$snapshot
-            var /* [auto-meaningful-name] */_f$snapshot2
+            var /* [auto-meaningful-name] */f$snapshot1
+            var /* [auto-meaningful-name] */f$snapshot2
             var f = n[i]
             var h = r.a(r.a({}, f), {}, {
               icon: {
                 width: (null === (f$snapshot = f.snapshot) || undefined === f$snapshot ? undefined : f$snapshot.width) || 40,
-                height: (null === (_f$snapshot = f.snapshot) || undefined === _f$snapshot ? undefined : _f$snapshot.height) || 40,
-                src: (null === (_f$snapshot2 = f.snapshot) || undefined === _f$snapshot2 ? undefined : _f$snapshot2.src) || ""
+                height: (null === (f$snapshot1 = f.snapshot) || undefined === f$snapshot1 ? undefined : f$snapshot1.height) || 40,
+                src: (null === (f$snapshot2 = f.snapshot) || undefined === f$snapshot2 ? undefined : f$snapshot2.src) || ""
               }
             })
             o.push(h)
           }
         }
-        var /* [auto-meaningful-name] */_this$source_block = this.source_block
+        var /* [auto-meaningful-name] */this$source_block1 = this.source_block
         var g = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.is_shadow()) && this.source_block.parent_block || this.source_block
-        if (!_this$source_block || !g) {
+        if (!this$source_block1 || !g) {
           throw Error("field is not attached to any block.")
         }
         var _ = g.get_field_value("WIDGET_ID")
@@ -70,21 +70,21 @@ var f = function (e) {
           }
           $$_46_index.c().dispatchAction(v)
         } else {
-          var /* [auto-meaningful-name] */_this$source_block2
-          var /* [auto-meaningful-name] */_this$source_block$parent_block
+          var /* [auto-meaningful-name] */this$source_block2
+          var /* [auto-meaningful-name] */this$source_block1$parent_block
           var E
           var O
           var w
           var C
           var T = g.workspace.get_scale()
           var S = ($$_17_index.Blink.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * T + 1
-          if (_this$source_block.is_shadow()) {
-            var /* [auto-meaningful-name] */_this$source_block$svg_group = _this$source_block.svg_group
-            E = $$_17_index.BU.dom.get_page_offset(_this$source_block$svg_group)
-            var I = _this$source_block.get_height_width()
+          if (this$source_block1.is_shadow()) {
+            var /* [auto-meaningful-name] */this$source_block1$svg_group = this$source_block1.svg_group
+            E = $$_17_index.BU.dom.get_page_offset(this$source_block1$svg_group)
+            var I = this$source_block1.get_height_width()
             O = I.width * T
             w = I.height * T + 2 * S
-            C = E[1] + _this$source_block.height * T + S
+            C = E[1] + this$source_block1.height * T + S
           } else {
             E = this.get_absolute_xy()
             var j = this.get_scaled_bbox()
@@ -110,9 +110,9 @@ var f = function (e) {
                 scale: T < 1 ? 1 : T,
                 fieldWidth: O,
                 blockHeight: w,
-                sourceBlockId: (null === (_this$source_block2 = this.source_block) || undefined === _this$source_block2 ? undefined : _this$source_block2.id) || "",
+                sourceBlockId: (null === (this$source_block2 = this.source_block) || undefined === this$source_block2 ? undefined : this$source_block2.id) || "",
                 fieldName: this.name || "",
-                emptyImageVisible: "image_set_file_id" === (null === (_this$source_block$parent_block = _this$source_block.parent_block) || undefined === _this$source_block$parent_block ? undefined : _this$source_block$parent_block.type)
+                emptyImageVisible: "image_set_file_id" === (null === (this$source_block1$parent_block = this$source_block1.parent_block) || undefined === this$source_block1$parent_block ? undefined : this$source_block1$parent_block.type)
               },
               onHide: function () {
                 if (t.source_block) {

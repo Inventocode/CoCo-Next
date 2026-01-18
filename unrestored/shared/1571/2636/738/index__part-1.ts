@@ -10,7 +10,7 @@ import { f, m } from "./index__part-0"
 import * as l from "./62"
 import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as j from "../8"
 import N from "../8"
 import * as /* [auto-meaningful-name] */$$_2681_index from "../2681/index"
@@ -23,10 +23,10 @@ var M = function (e) {
 }
 var L = new l.g("#f6f4fd")
 function P() {
-  var e = _React.useRef()
-  var t = _React.useRef(0)
-  var n = _React.useRef()
-  var a = _React.useState(false)
+  var e = React1.useRef()
+  var t = React1.useRef(0)
+  var n = React1.useRef()
+  var a = React1.useState(false)
   var s = $$_10_index.a(a, 2)
   var c = s[0]
   var u = s[1]
@@ -35,7 +35,7 @@ function P() {
     return e
   })
   n.current = p
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var t
     var n = {
       width: (null === (t = document.getElementById("emulatorCanvasWrapper")) || undefined === t ? undefined : t.clientWidth) || 340,
@@ -80,7 +80,7 @@ function P() {
   !function (e, t) {
     var n = React.useRef()
     var i = React.useRef()
-    var a = _React.useCallback(function (t) {
+    var a = React1.useCallback(function (t) {
       if (undefined !== i.current) {
         var r = t - i.current
         e(r / 1e3)
@@ -171,7 +171,7 @@ function P() {
       }
     }
   })
-  var _ = _React.useCallback(function (t) {
+  var _ = React1.useCallback(function (t) {
     if (t && e.current) {
       t.appendChild(e.current.renderer.domElement)
     }

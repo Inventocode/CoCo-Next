@@ -10,7 +10,7 @@ require("../1273")
 var r = require("../1692/400")
 var o = require("../1723/958")
 var i = require("../1705/168")
-var a = require("../1686/246/index")
+var a = require("../1686/246")
 var s = require("../1581/425")
 var c = a("species")
 var /* [auto-meaningful-name] */RegExp$prototype = RegExp.prototype

@@ -127,10 +127,10 @@ var I = function (e) {
     prefixCls: "".concat(q, "-overflow"),
     data: e$values,
     renderItem: function (e) {
-      var /* [auto-meaningful-name] */_e$disabled = e.disabled
+      var /* [auto-meaningful-name] */e$disabled1 = e.disabled
       var /* [auto-meaningful-name] */e$label = e.label
       var /* [auto-meaningful-name] */e$value = e.value
-      var o = !e$disabled && !_e$disabled
+      var o = !e$disabled && !e$disabled1
       var a = e$label
       if ("number" === typeof e$maxTagTextLength && ("string" === typeof e$label || "number" === typeof e$label)) {
         var s = String(a)
@@ -159,7 +159,7 @@ var I = function (e) {
           closable: r,
           onClose: o
         }))
-      }(e$value, a, _e$disabled, o, c) : Z(e$label, a, _e$disabled, o, c)
+      }(e$value, a, e$disabled1, o, c) : Z(e$label, a, e$disabled1, o, c)
     },
     renderRest: function (e) {
       var t = "function" === typeof j ? j(e) : j

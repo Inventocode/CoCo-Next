@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as o from "../8"
 import i from "../8"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import "./839"
 var c = React.createContext(null)
 var /* [auto-meaningful-name] */c$Provider = c.Provider
@@ -27,7 +27,7 @@ var d = React.memo(function (e) {
       c.onChange(e$value)
     }
   }, [c, e$value])
-  return _React.createElement("button", {
+  return React1.createElement("button", {
     disabled: e$disabled,
     onClick: l,
     className: i("coco-radio-item", e$className, {
@@ -63,12 +63,12 @@ var p = React.memo(function (e) {
       }
     }
   }, [m, e$onChange])
-  return _React.createElement(c$Provider, {
+  return React1.createElement(c$Provider, {
     value: {
       value: f,
       onChange: g
     }
-  }, _React.createElement("div", {
+  }, React1.createElement("div", {
     className: i("coco-radio", e.className, {
       "disabled-all": false
     }),

@@ -31,7 +31,7 @@ var c = function (e) {
   (0, r.__extends)(t, e)
   t.prototype.render_ = function () {
     var /* [auto-meaningful-name] */this$border_rect
-    var /* [auto-meaningful-name] */_this$border_rect
+    var /* [auto-meaningful-name] */this$border_rect1
     this.size_.width = 0
     if (this.visible_ && this.field_group && this.source_block) {
       this.size_.width = this.padding_x
@@ -41,8 +41,8 @@ var c = function (e) {
       if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
         this$border_rect.setAttribute("width", String(this.size_.width))
       }
-      if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
-        _this$border_rect.setAttribute("height", String(this.size_.height))
+      if (!(null === (this$border_rect1 = this.border_rect) || undefined === this$border_rect1)) {
+        this$border_rect1.setAttribute("height", String(this.size_.height))
       }
     }
   }

@@ -23,7 +23,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 f
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2646_index from "../../../unrestored/shared/1571/2636/2646/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_1529 from "../../../unrestored/shared/1571/2636/1529"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../unrestored/shared/1571/2636/392/index"
@@ -36,9 +36,9 @@ var LM = function () {
   var r = $$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.templateList
   })
-  var o = _React.useRef(false)
+  var o = React1.useRef(false)
   $$_$$_$$_unrestored_shared_1571_2636_288.b()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e() {
       return (e = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
         var t
@@ -76,7 +76,7 @@ var LM = function () {
       e.apply(this, arguments)
     }()
   }, [])
-  var i = _React.useCallback(function () {
+  var i = React1.useCallback(function () {
     var n = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function n(r) {
       var /* [auto-meaningful-name] */n$sent
       var /* [auto-meaningful-name] */n$sent$data
@@ -151,7 +151,7 @@ var LM = function () {
       return n.apply(this, arguments)
     }
   }(), [e, $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage])
-  var a = _React.useCallback(function (n, r) {
+  var a = React1.useCallback(function (n, r) {
     (function (e, t) {
       return me.apply(this, arguments)
     })(n, r).then($$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
@@ -218,12 +218,12 @@ var LM = function () {
       }
     })
   }, [e, $$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage, i])
-  var s = _React.useCallback(function () {
+  var s = React1.useCallback(function () {
     e($$_redux_common_actions.Gf("localhost" === window.location.hostname ? undefined : {
       json: $$_$$_$$_unrestored_shared_1571_2636_1529
     }))
   }, [e])
-  var c = _React.useCallback(function (t) {
+  var c = React1.useCallback(function (t) {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
@@ -237,7 +237,7 @@ var LM = function () {
       o.current = false
     })
   }, [e, s])
-  var l = _React.useCallback(function (t) {
+  var l = React1.useCallback(function (t) {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
@@ -246,7 +246,7 @@ var LM = function () {
       o.current = false
     })
   }, [e])
-  var u = _React.useCallback(function () {
+  var u = React1.useCallback(function () {
     var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(n) {
       var /* [auto-meaningful-name] */t$sent
       return RegeneratorRuntime.wrap(function (t) {
@@ -287,7 +287,7 @@ var LM = function () {
       return t.apply(this, arguments)
     }
   }(), [e, s])
-  var d = _React.useCallback(function () {
+  var d = React1.useCallback(function () {
     var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(r) {
       var i
       return RegeneratorRuntime.wrap(function (t) {
@@ -379,7 +379,7 @@ var LM = function () {
       return t.apply(this, arguments)
     }
   }(), [n, e])
-  var p = _React.useCallback(function () {
+  var p = React1.useCallback(function () {
     var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(n) {
       var i
       return RegeneratorRuntime.wrap(function (t) {
@@ -415,7 +415,7 @@ var LM = function () {
       return t.apply(this, arguments)
     }
   }(), [e, r])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = $$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href)
     var /* [auto-meaningful-name] */e$workId = e.workId
     var /* [auto-meaningful-name] */e$inviteCode = e.inviteCode

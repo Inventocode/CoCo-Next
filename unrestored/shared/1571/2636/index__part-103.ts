@@ -10,17 +10,17 @@ import * as Qu from "./60"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1037 from "./1037"
-import /* [auto-meaningful-name] */_$_ from "./1037"
-var gy = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_10371 from "./1037"
+var gy = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "textAlign" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$textAlign = e.textAlign
   return React.createElement($_13_index.s, {
     value: e$textAlign,
-    className: _$_.alignRadio,
+    className: $_10371.alignRadio,
     onChange: function (e) {
       e$onChange(n, e)
     }
@@ -38,7 +38,7 @@ var gy = _React.memo(function (e) {
     type: "icon-align-right"
   })))
 })
-var _y = _React.memo(function (e) {
+var _y = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "text" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue

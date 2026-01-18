@@ -24,15 +24,15 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_568 from "./568"
-import /* [auto-meaningful-name] */_$_ from "./568"
+import /* [auto-meaningful-name] */$_5681 from "./568"
 import * as /* [auto-meaningful-name] */$_110 from "./110"
 import * as /* [auto-meaningful-name] */$_174 from "./174"
 import * as /* [auto-meaningful-name] */$_496 from "./496"
-import /* [auto-meaningful-name] */_$_2 from "./496"
+import /* [auto-meaningful-name] */$_4961 from "./496"
 import * as /* [auto-meaningful-name] */$_384 from "./384"
-import /* [auto-meaningful-name] */_$_3 from "./384"
+import /* [auto-meaningful-name] */$_3841 from "./384"
 var QS = function (e) {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var /* [auto-meaningful-name] */e$watchItem = e.watchItem
@@ -131,7 +131,7 @@ var QS = function (e) {
     })
   }
   return React.createElement("div", {
-    className: _$_3.container
+    className: $_3841.container
   }, function () {
     var e = null
     if (!(e$watchItem.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.B && e$watchItem.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.y)) {
@@ -142,55 +142,55 @@ var QS = function (e) {
           id: "resetData"
         })
       }, React.createElement("div", {
-        className: _$_3.resetAction,
+        className: $_3841.resetAction,
         onClick: l
       }, React.createElement($_13_index.j, {
         type: "icon-resetData"
       })))
     }
     return React.createElement("div", {
-      className: N(_$_3.flexSc, _$_3.header)
+      className: N($_3841.flexSc, $_3841.header)
     }, React.createElement("div", {
-      className: _$_3.name
+      className: $_3841.name
     }, React.createElement("div", {
-      className: _$_3.screenIcon
+      className: $_3841.screenIcon
     }, a ? GS(i, a) : ""), React.createElement("div", {
-      className: _$_3.title
+      className: $_3841.title
     }, e$watchItem.name)), React.createElement("div", {
-      className: _$_3.action
+      className: $_3841.action
     }, r ? "" : e, React.createElement("div", {
-      className: _$_3.closeAction,
+      className: $_3841.closeAction,
       onClick: s
     }, React.createElement($_13_index.j, {
       type: "icon-close-datawatch"
     })), React.createElement("div", {
-      className: _$_3.unFoldAction,
+      className: $_3841.unFoldAction,
       onClick: c
     }, React.createElement($_13_index.j, {
       type: "icon-open"
     }))))
   }(), React.createElement("div", {
-    className: _$_3.content
+    className: $_3841.content
   }, u.map(function (e) {
     return React.createElement("div", {
-      className: _$_3.line,
+      className: $_3841.line,
       key: e.key
     }, React.createElement("div", {
-      className: _$_3.lineKey
+      className: $_3841.lineKey
     }, React.createElement($_748_index.a, {
       placement: "bottom",
       trigger: ["hover"],
       title: e.key
     }, React.createElement("div", {
-      className: _$_3.lineKeyText
+      className: $_3841.lineKeyText
     }, e.key))), React.createElement("div", {
-      className: _$_3.lineValue
+      className: $_3841.lineValue
     }, React.createElement($_748_index.a, {
       placement: "bottom",
       trigger: ["hover"],
       title: e.value
     }, React.createElement("div", {
-      className: _$_3.text
+      className: $_3841.text
     }, $_190.e(e.value)))))
   })))
 }
@@ -224,7 +224,7 @@ var ZS = function (e) {
     n($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$watchItem.id, "isWatching", false))
     n($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$watchItem.id, "selected", false))
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$watchItem.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
       $_174.a.get(e$watchItem.id).then(function (e) {
         if (e) {
@@ -267,7 +267,7 @@ var ZS = function (e) {
         id: "resetData"
       })
     }, React.createElement("div", {
-      className: _$_2.resetAction,
+      className: $_4961.resetAction,
       onClick: p
     }, React.createElement($_13_index.j, {
       type: "icon-resetData"
@@ -332,41 +332,41 @@ var ZS = function (e) {
       return s
     }(e$watchItem, i)
     return React.createElement("div", {
-      className: _$_2.itemBox
+      className: $_4961.itemBox
     }, React.createElement("div", {
-      className: _$_2.name
+      className: $_4961.name
     }, React.createElement("div", {
-      className: _$_2.screenIcon
+      className: $_4961.screenIcon
     }, s ? GS(a, s) : ""), React.createElement($_748_index.a, {
       placement: "bottom",
       trigger: ["hover"],
       title: e$watchItem.name
     }, React.createElement("div", {
-      className: _$_2.nameText
+      className: $_4961.nameText
     }, e$watchItem.name))), React.createElement("div", {
-      className: _$_2.value
+      className: $_4961.value
     }, React.createElement("div", {
-      className: _$_2.valueText
+      className: $_4961.valueText
     }, React.createElement($_748_index.a, {
       placement: "bottom",
       trigger: ["hover"],
       title: e
     }, e))), React.createElement("div", {
-      className: _$_2.action
+      className: $_4961.action
     }, i ? "" : m, React.createElement("div", {
-      className: _$_2.closeAction,
+      className: $_4961.closeAction,
       onClick: d
     }, React.createElement($_13_index.j, {
       type: "icon-close-datawatch"
     })), l ? React.createElement("div", {
-      className: _$_2.foldAction,
+      className: $_4961.foldAction,
       onClick: u
     }, React.createElement($_13_index.j, {
       type: c.foldIcon
     })) : ""))
   }
   return React.createElement("div", {
-    className: _$_2.container
+    className: $_4961.container
   }, e$watchItem.isFold ? g() : "", e$watchItem.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.G || e$watchItem.isFold ? "" : g(), React.createElement(QS, {
     watchItem: e$watchItem
   }))
@@ -415,11 +415,11 @@ var JS = function () {
     var i = [].concat($_25_index.a(r), $_25_index.a(o))
     var a = $_110.b(t)
     return React.createElement("div", {
-      className: _$_.watchBox
+      className: $_5681.watchBox
     }, React.createElement("div", {
-      className: _$_.category
+      className: $_5681.category
     }, React.createElement("div", {
-      className: _$_.categoryIcon,
+      className: $_5681.categoryIcon,
       style: {
         color: a.color,
         fontSize: a.fontSize
@@ -427,7 +427,7 @@ var JS = function () {
     }, React.createElement($_13_index.j, {
       type: a.class
     })), React.createElement("div", {
-      className: _$_.categoryText
+      className: $_5681.categoryText
     }, $_710_index$a$formatMessage({
       id: a.text
     }))), i.map(function (e) {
@@ -438,27 +438,27 @@ var JS = function () {
     }))
   }
   return 0 === t.size ? React.createElement("div", {
-    className: N(_$_.noData),
+    className: N($_5681.noData),
     style: {
       visibility: "hidden"
     }
   }, React.createElement(we, null), React.createElement("span", {
-    className: _$_.emptyText
+    className: $_5681.emptyText
   }, $_710_index$a$formatMessage({
     id: "DataWatch.unable"
   }))) : 0 === t.filter(function (e) {
     return e.isWatching
   }).size ? React.createElement("div", {
-      className: N(_$_.noData),
+      className: N($_5681.noData),
       style: {
         visibility: "hidden"
       }
     }, React.createElement(we, null), React.createElement("span", {
-      className: _$_.emptyText
+      className: $_5681.emptyText
     }, $_710_index$a$formatMessage({
       id: "DataWatch.empty"
     }))) : React.createElement("div", {
-      className: N(_$_.list)
+      className: N($_5681.list)
     }, c("PRIMITIVE", n$PRIMITIVE), c("LIST", n$LIST), c("DICT", n$DICT), c("LOCAL_STORAGE_WIDGET", n$LOCAL_STORAGE), c("TABLE_DATA_WIDGET", n$TABLE_DATA_WIDGET))
 }
 export { JS }

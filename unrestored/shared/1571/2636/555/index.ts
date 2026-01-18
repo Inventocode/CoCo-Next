@@ -8,16 +8,16 @@
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as c from "../8"
 import l from "../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_200 from "../200"
 import * as /* [auto-meaningful-name] */$_289 from "./289"
-import /* [auto-meaningful-name] */_$_ from "./289"
+import /* [auto-meaningful-name] */$_2891 from "./289"
 import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 var _ = function (e) {
@@ -43,9 +43,9 @@ var _ = function (e) {
         }
       }
     }
-    return n ? _React.createElement($$_13_index.j, {
+    return n ? React1.createElement($$_13_index.j, {
       type: n,
-      className: _$_.selected
+      className: $_2891.selected
     }) : null
   }(e$state, e$isSelected)
   var v = function () {
@@ -92,19 +92,19 @@ var _ = function (e) {
     return e$disabled ? e.disabled : e$isSelected ? e.selected : e.default
   }()
   var b = $$_200.g[e$sizeType]
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     style: {
       color: null === v || undefined === v ? undefined : v.color,
       backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && $$_15.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
     },
-    className: l(_$_.defaultCheckbox, "checkbox-widget-box"),
+    className: l($_2891.defaultCheckbox, "checkbox-widget-box"),
     onClick: function (e) {
       var /* [auto-meaningful-name] */f$current = f.current
       if (f$current && e$onClick) {
         e$onClick(e$index, f$current)
       }
     }
-  }, _React.createElement("div", {
+  }, React1.createElement("div", {
     style: {
       backgroundColor: null === v || undefined === v ? undefined : v.backgroundColor,
       borderColor: null === v || undefined === v ? undefined : v.borderColor,
@@ -113,8 +113,8 @@ var _ = function (e) {
       height: b.innerSize,
       fontSize: b.innerSize - 4
     },
-    className: _$_.inner
-  }, _), _React.createElement("p", {
+    className: $_2891.inner
+  }, _), React1.createElement("p", {
     ref: f,
     style: {
       fontSize: b.optionFontSize
@@ -143,13 +143,13 @@ _a = function (e) {
     }
   }
   var T = $$_200.g[e$attributes$sizeType]
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     id: t,
     "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
-    className: l(_$_.checkboxWidget, $$_90.b, $$_11.a({}, _$_.hide, !e$visible)),
+    className: l($_2891.checkboxWidget, $$_90.b, $$_11.a({}, $_2891.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -160,8 +160,8 @@ _a = function (e) {
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     },
     "data-lock-height": true
-  }, e$attributes$headlineVisible && _React.createElement("div", {
-    className: _$_.headline,
+  }, e$attributes$headlineVisible && React1.createElement("div", {
+    className: $_2891.headline,
     onClick: function (e) {
       if (e$onHeadlineClick) {
         e$onHeadlineClick(e)
@@ -170,12 +170,12 @@ _a = function (e) {
     style: {
       fontSize: T.headlineFontSize
     }
-  }, e$attributes$headline), _React.createElement("ul", null, e$attributes$options.map(function (e, t) {
-    return _React.createElement("li", {
+  }, e$attributes$headline), React1.createElement("ul", null, e$attributes$options.map(function (e, t) {
+    return React1.createElement("li", {
       key: t
-    }, _React.createElement(_, {
+    }, React1.createElement(_, {
       sizeType: e$attributes$sizeType,
-      color: _Color(e$attributes$color).toString(),
+      color: Color1(e$attributes$color).toString(),
       text: e.content,
       isSelected: !!e.isSelected,
       state: e.state,

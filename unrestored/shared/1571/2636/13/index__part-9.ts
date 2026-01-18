@@ -8,11 +8,11 @@
 
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./871"
-var oe = _React.memo(function (e) {
+var oe = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var n = undefined === e$type ? "info" : e$type
   var /* [auto-meaningful-name] */e$message = e.message
@@ -24,21 +24,21 @@ var oe = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$className = e.className
-  var g = _React.useState(true)
+  var g = React1.useState(true)
   var _ = $$_10_index.a(g, 2)
   var v = _[0]
   var b = _[1]
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     if (undefined !== e$visible) {
       b(e$visible)
     }
   }, [e$visible])
-  var y = _React.useCallback(function (e) {
+  var y = React1.useCallback(function (e) {
     if (undefined === e$visible) {
       b(e)
     }
   }, [e$visible])
-  var O = _React.useMemo(function () {
+  var O = React1.useMemo(function () {
     var e = ""
     var t = ""
     switch (n) {
@@ -61,7 +61,7 @@ var oe = _React.memo(function (e) {
       className: t
     }
   }, [n])
-  var w = _React.useCallback(function () {
+  var w = React1.useCallback(function () {
     y(false)
     if (e$onClose) {
       e$onClose()

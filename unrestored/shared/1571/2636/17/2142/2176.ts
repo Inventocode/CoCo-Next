@@ -91,7 +91,7 @@ var h = function () {
     var a = {}
     e.inputList.map(function (c) {
       var /* [auto-meaningful-name] */c$connection
-      var /* [auto-meaningful-name] */_c$connection
+      var /* [auto-meaningful-name] */c$connection1
       c.fieldRow.forEach(function (e) {
         if (e.editable && "string" === typeof e.name) {
           if ((0, l.is_field_number)(e)) {
@@ -135,7 +135,7 @@ var h = function () {
         var h = null === (c$connection = c.connection) || undefined === c$connection ? undefined : c$connection.get_shadow_string()
         a[c.name] = h || ""
       }
-      var p = null === (_c$connection = c.connection) || undefined === _c$connection ? undefined : _c$connection.targetBlock()
+      var p = null === (c$connection1 = c.connection) || undefined === c$connection1 ? undefined : c$connection1.targetBlock()
       if (p) {
         var _ = t.block_to_json(p)
         t.merge_workspace_data(n, _)

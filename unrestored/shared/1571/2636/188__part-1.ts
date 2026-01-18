@@ -10,7 +10,7 @@ var r
 import * as o from "./27"
 import * as i from "./39"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 if (navigator.platform.match("Mac")) {
   r = "osx"
 } else {
@@ -56,7 +56,7 @@ var c = function () {
   ])
   return e
 }()
-var l = _React.createContext(new c())
+var l = React1.createContext(new c())
 var u = function e(t, n) {
   if ("string" === typeof n) {
     return t === n
@@ -131,7 +131,7 @@ function p(e) {
       return t.removeEventListener("keydown", e, e$useCapture)
     }
   }, [e$useCapture, e$emitter])
-  return _React.createElement(l.Provider, {
+  return React1.createElement(l.Provider, {
     value: o.current
   }, e$children)
 }

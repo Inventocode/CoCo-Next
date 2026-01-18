@@ -93,7 +93,7 @@ var d = function () {
   }
   e.prototype.block_to_dom = function (e, t) {
     var /* [auto-meaningful-name] */e$next_connection
-    var /* [auto-meaningful-name] */_e$next_connection
+    var /* [auto-meaningful-name] */e$next_connection1
     var i
     var o
     if ((0, c.is_block_group)(e)) {
@@ -199,7 +199,7 @@ var d = function () {
     if (!e.editable_) {
       i.setAttribute("editable", String(false))
     }
-    var E = null === (_e$next_connection = e.next_connection) || undefined === _e$next_connection ? undefined : _e$next_connection.targetBlock()
+    var E = null === (e$next_connection1 = e.next_connection) || undefined === e$next_connection1 ? undefined : e$next_connection1.targetBlock()
     if (E) {
       var x = f.create_dom("next", undefined, this.block_to_dom(E, t))
       i.appendChild(x)

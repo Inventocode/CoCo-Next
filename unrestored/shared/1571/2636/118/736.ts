@@ -66,7 +66,7 @@ var _ = function (e) {
   }
   t.prototype.render_ = function () {
     var /* [auto-meaningful-name] */this$border_rect
-    var /* [auto-meaningful-name] */_this$border_rect
+    var /* [auto-meaningful-name] */this$border_rect1
     if (this.visible_ && this.source_block) {
       if (this.field_group && this.arrow_) {
         (0, s.remove_children)(this.field_group)
@@ -92,8 +92,8 @@ var _ = function (e) {
         if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
           this$border_rect.setAttribute("height", String(this.size_.height))
         }
-        if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
-          _this$border_rect.setAttribute("width", String(this.size_.width))
+        if (!(null === (this$border_rect1 = this.border_rect) || undefined === this$border_rect1)) {
+          this$border_rect1.setAttribute("width", String(this.size_.width))
         }
       }
     } else {

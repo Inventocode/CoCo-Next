@@ -11,32 +11,32 @@ import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$_318 from "./318"
-import /* [auto-meaningful-name] */_$_ from "./318"
-var Ae = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_3181 from "./318"
+var Ae = React1.memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$subMenu = e.subMenu
   var /* [auto-meaningful-name] */e$onClick = e.onClick
-  var u = _React.useRef(null)
-  var d = _React.useState("right")
+  var u = React1.useRef(null)
+  var d = React1.useState("right")
   var p = $$_10_index.a(d, 2)
   var f = p[0]
   var h = p[1]
-  var m = _React.useState(false)
+  var m = React1.useState(false)
   var g = $$_10_index.a(m, 2)
   var _ = g[0]
   var v = g[1]
-  var b = _React.useMemo(function () {
+  var b = React1.useMemo(function () {
     return $$_15.p(v, 100)
   }, [])
   return React.createElement("div", {
     ref: u,
-    className: _$_.subMenuItemWrapper,
+    className: $_3181.subMenuItemWrapper,
     onMouseEnter: function () {
       if (e$subMenu) {
         b(function () {
@@ -68,11 +68,11 @@ var Ae = _React.memo(function (e) {
   }, React.createElement(Ce, {
     value: e$value
   }, React.createElement("div", null, e$children, e$subMenu && React.createElement("span", {
-    className: _$_.subMenuArrow
+    className: $_3181.subMenuArrow
   }, React.createElement($$_94_index.a, {
     type: "icon-arrow-down"
   })))), e$subMenu && React.createElement("div", {
-    className: i(_$_.subMenuOverlay, (t = {}, $$_11.a(t, _$_.visible, _), $$_11.a(t, _$_.placementLeft, "left" === f), $$_11.a(t, _$_.placementRight, "right" === f), t))
+    className: i($_3181.subMenuOverlay, (t = {}, $$_11.a(t, $_3181.visible, _), $$_11.a(t, $_3181.placementLeft, "left" === f), $$_11.a(t, $_3181.placementRight, "right" === f), t))
   }, e$subMenu))
 })
 export { Ae }

@@ -72,16 +72,16 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../unrestored/shared/1571/2636/25/index"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_27 from "../../../../unrestored/shared/1571/2636/27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_39 from "../../../../unrestored/shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../unrestored/shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../unrestored/shared/1571/2636/80/index"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index1 from "../../../../unrestored/shared/1571/2636/80/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_266 from "../../../../unrestored/shared/1571/2636/266"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_2 from "../../../../unrestored/shared/1571/2636/266"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2661 from "../../../../unrestored/shared/1571/2636/266"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_188 from "../../../../unrestored/shared/1571/2636/188"
 var No = function (e) {
   var /* [auto-meaningful-name] */e$title = e.title
@@ -105,33 +105,33 @@ var No = function (e) {
       e$onConfirm()
     }
   }
-  return _React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
+  return React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
     visible: true,
     showCloseButton: false,
     withPortal: true,
     maskClosable: false,
     mask: g,
-    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_(_$$_$$_$$_$$_unrestored_shared_1571_2636_2.dialog, e$className, e$denyText && _$$_$$_$$_$$_unrestored_shared_1571_2636_2.dialogSecondary)
-  }, _React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.a, null, _React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.b, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialog, e$className, e$denyText && $$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogSecondary)
+  }, React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.a, null, React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.b, {
     keys: "enter",
     callback: _
-  })), _React.createElement("h3", null, e$title), _React.createElement("span", null, e$content), _React.createElement("div", {
-    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_(_$$_$$_$$_$$_unrestored_shared_1571_2636_2.dialogButtons)
-  }, p && _React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  })), React1.createElement("h3", null, e$title), React1.createElement("span", null, e$content), React1.createElement("div", {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogButtons)
+  }, p && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     type: "light",
     onClick: function () {
       if (e$onCancel) {
         e$onCancel()
       }
     }
-  }, e$cancelText), e$denyText && _React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  }, e$cancelText), e$denyText && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     onClick: function () {
       if (e$onDeny) {
         e$onDeny()
       }
     },
-    className: _$$_$$_$$_$$_unrestored_shared_1571_2636_2.denyButton
-  }, e$denyText), h && _React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+    className: $$_$$_$$_$$_unrestored_shared_1571_2636_2661.denyButton
+  }, e$denyText), h && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
     type: "primary",
     danger: e$isDangerous,
     onClick: _
@@ -250,7 +250,7 @@ var Ro = new (function () {
         this.destroyCurrentBox()
         var e = this.boxQueue.shift()
         if (e) {
-          _$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.render(_React.createElement(No, e.config), e.element)
+          $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.render(React1.createElement(No, e.config), e.element)
           document.body.appendChild(e.element)
           this.currentBox = e
         }
@@ -286,7 +286,7 @@ var Ro = new (function () {
     }, {
       key: "destroyBox",
       value: function (e) {
-        _$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.unmountComponentAtNode(e)
+        $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.unmountComponentAtNode(e)
         document.body.removeChild(e)
       }
     }
@@ -356,17 +356,17 @@ function ni(e) {
         case 2:
           o$sent = o.sent
           n = e.map(function (e) {
-            return _React.createElement("div", {
+            return React1.createElement("div", {
               className: "removedCloudDB",
               key: e.id,
-              children: _React.createElement("li", {
+              children: React1.createElement("li", {
                 children: e.title,
                 className: "removedDBName",
                 key: e.id
               })
             })
           })
-          r = _React.createElement("div", {
+          r = React1.createElement("div", {
             className: "removedCloudDBWrapper",
             children: [n]
           })
@@ -402,17 +402,17 @@ function ri(e, t) {
           a$sent = a.sent
           r = $$_$$_$$_shared_ui_language.c(a$sent, t) ? $$_$$_$$_shared_ui_language.c(a$sent, t) : t
           o = e.map(function (e) {
-            return _React.createElement("div", {
+            return React1.createElement("div", {
               className: "removedCloudDB",
               key: e.id,
-              children: _React.createElement("li", {
+              children: React1.createElement("li", {
                 children: e.title,
                 className: "removedDBName",
                 key: e.id
               })
             })
           })
-          i = _React.createElement("div", {
+          i = React1.createElement("div", {
             className: "removedCloudDBWrapper",
             children: [o]
           })
@@ -444,17 +444,17 @@ function oi(e, t) {
           a$sent = a.sent
           r = $$_$$_$$_shared_ui_language.c(a$sent, t)
           o = e.map(function (e) {
-            return _React.createElement("div", {
+            return React1.createElement("div", {
               className: "removedCloudDB",
               key: e.id,
-              children: _React.createElement("li", {
+              children: React1.createElement("li", {
                 children: e.title,
                 className: "removedDBName",
                 key: e.id
               })
             })
           })
-          i = _React.createElement("div", {
+          i = React1.createElement("div", {
             className: "removedCloudDBWrapper",
             children: [o]
           })
@@ -525,9 +525,9 @@ function ii() {
 }
 function ai() {
   var /* [auto-meaningful-name] */o$sent
-  var /* [auto-meaningful-name] */_o$sent
-  var /* [auto-meaningful-name] */_o$sent$dicts
-  var /* [auto-meaningful-name] */_o$sent$tables
+  var /* [auto-meaningful-name] */o$sent1
+  var /* [auto-meaningful-name] */o$sent1$dicts
+  var /* [auto-meaningful-name] */o$sent1$tables
   return RegeneratorRuntime.wrap(function (o) {
     for (;;) {
       switch (o.prev = o.next) {
@@ -543,14 +543,14 @@ function ai() {
             tables: $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.j, o$sent)
           })
         case 6:
-          _o$sent = o.sent
-          _o$sent$dicts = _o$sent.dicts
-          _o$sent$tables = _o$sent.tables
+          o$sent1 = o.sent
+          o$sent1$dicts = o$sent1.dicts
+          o$sent1$tables = o$sent1.tables
           o.next = 11
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Bg(_o$sent$dicts, true))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Bg(o$sent1$dicts, true))
         case 11:
           o.next = 13
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Eg(_o$sent$tables, true))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Eg(o$sent1$tables, true))
         case 13:
           o.next = 18
           break
@@ -567,8 +567,8 @@ function ai() {
 }
 function si() {
   var /* [auto-meaningful-name] */_$sent
+  var /* [auto-meaningful-name] */_$sent1
   var /* [auto-meaningful-name] */_$sent2
-  var /* [auto-meaningful-name] */_$sent3
   var r
   var o
   var i
@@ -593,11 +593,11 @@ function si() {
           _.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.b)
         case 5:
-          _$sent2 = _.sent
+          _$sent1 = _.sent
           _.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.d)
         case 8:
-          for (_$sent3 = _.sent, r = [], o = [], i = [], _$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE && $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.forEach(function (e) {
+          for (_$sent2 = _.sent, r = [], o = [], i = [], _$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE && $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.forEach(function (e) {
             if (e.type === $$_$$_widget_builtIn_types.j && e.attributes.cloudDictId !== $$_$$_$$_$$_unrestored_shared_1571_2636_9.i) {
               r.push(e)
             }
@@ -619,7 +619,7 @@ function si() {
             }
           }), a = [], s = function () {
             var e = u[c]
-            if (_$sent2.findIndex(function (t) {
+            if (_$sent1.findIndex(function (t) {
               return t.id === e.attributes.cloudDictId
             }) < 0) {
               a.push(e)
@@ -629,7 +629,7 @@ function si() {
           }
           for (d = function () {
             var e = f[p]
-            if (_$sent3.findIndex(function (t) {
+            if (_$sent2.findIndex(function (t) {
               return t.id === e.attributes.cloudTableId
             }) < 0) {
               a.push(e)
@@ -639,7 +639,7 @@ function si() {
           }
           for (h = function () {
             var e = g[m]
-            if (_$sent3.findIndex(function (t) {
+            if (_$sent2.findIndex(function (t) {
               return t.id === e.attributes.dataSource
             }) < 0) {
               a.push(e)
@@ -784,11 +784,11 @@ function ui() {
   var a
   var s
   var l
-  var /* [auto-meaningful-name] */_N$sent
+  var /* [auto-meaningful-name] */N$sent1
   var d
   var /* [auto-meaningful-name] */d$code
   var /* [auto-meaningful-name] */d$msg
-  var /* [auto-meaningful-name] */_N$sent2
+  var /* [auto-meaningful-name] */N$sent2
   var m
   var /* [auto-meaningful-name] */m$code
   var /* [auto-meaningful-name] */m$msg
@@ -846,18 +846,18 @@ function ui() {
           N.next = 24
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.b, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t))
         case 24:
-          _N$sent = N.sent
+          N$sent1 = N.sent
           N$sent.forEach(function (e) {
             if (e.type === $$_$$_widget_builtIn_types.j) {
               var t = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(e.id)
               if (t) {
-                var n = _N$sent[e.attributes.cloudDictId]
+                var n = N$sent1[e.attributes.cloudDictId]
                 if (n === $$_$$_$$_$$_unrestored_shared_1571_2636_9.e) {
                   r.push(e)
                   t.attributes.cloudDictId = $$_$$_$$_$$_unrestored_shared_1571_2636_9.i
                 } else {
                   if (n) {
-                    t.attributes.cloudDictId = parseInt(_N$sent[e.attributes.cloudDictId])
+                    t.attributes.cloudDictId = parseInt(N$sent1[e.attributes.cloudDictId])
                   }
                 }
               }
@@ -894,10 +894,10 @@ function ui() {
           N.next = 43
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.c, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(n))
         case 43:
-          _N$sent2 = N.sent
+          N$sent2 = N.sent
           N$sent.forEach(function (e) {
             if (e.type === $$_$$_widget_builtIn_types.k) {
-              var t = _N$sent2[e.attributes.cloudTableId]
+              var t = N$sent2[e.attributes.cloudTableId]
               var n = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(e.id)
               if (n) {
                 if (t === $$_$$_$$_$$_unrestored_shared_1571_2636_9.e) {
@@ -905,13 +905,13 @@ function ui() {
                   n.attributes.cloudTableId = $$_$$_$$_$$_unrestored_shared_1571_2636_9.i
                 } else {
                   if (t) {
-                    n.attributes.cloudTableId = parseInt(_N$sent2[e.attributes.cloudTableId])
+                    n.attributes.cloudTableId = parseInt(N$sent2[e.attributes.cloudTableId])
                   }
                 }
               }
             }
             if (e.type === $$_$$_widget_builtIn_types.A) {
-              var r = _N$sent2[e.attributes.dataSource]
+              var r = N$sent2[e.attributes.dataSource]
               var i = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(e.id)
               if (i) {
                 if (r === $$_$$_$$_$$_unrestored_shared_1571_2636_9.e) {
@@ -919,7 +919,7 @@ function ui() {
                   i.attributes.dataSource = ""
                 } else {
                   if (r) {
-                    i.attributes.dataSource = parseInt(_N$sent2[e.attributes.dataSource])
+                    i.attributes.dataSource = parseInt(N$sent2[e.attributes.dataSource])
                   }
                 }
               }
@@ -1244,7 +1244,7 @@ function hi(e) {
   var /* [auto-meaningful-name] */e$payload$id
   var /* [auto-meaningful-name] */e$payload$showToast
   var /* [auto-meaningful-name] */s$sent
-  var /* [auto-meaningful-name] */_s$sent
+  var /* [auto-meaningful-name] */s$sent1
   var a
   return RegeneratorRuntime.wrap(function (s) {
     for (;;) {
@@ -1261,7 +1261,7 @@ function hi(e) {
           s.next = 7
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
         case 7:
-          if (_s$sent = s.sent, a = [], !s$sent || _s$sent) {
+          if (s$sent1 = s.sent, a = [], !s$sent || s$sent1) {
             s.next = 15
             break
           }
@@ -1408,7 +1408,7 @@ function _i(e) {
   var /* [auto-meaningful-name] */e$payload$id
   var /* [auto-meaningful-name] */e$payload$showToast
   var /* [auto-meaningful-name] */s$sent
-  var /* [auto-meaningful-name] */_s$sent2
+  var /* [auto-meaningful-name] */s$sent1
   var a
   return RegeneratorRuntime.wrap(function (s) {
     for (;;) {
@@ -1425,7 +1425,7 @@ function _i(e) {
           s.next = 7
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
         case 7:
-          if (_s$sent2 = s.sent, !s$sent || _s$sent2) {
+          if (s$sent1 = s.sent, !s$sent || s$sent1) {
             s.next = 14
             break
           }
@@ -1584,7 +1584,7 @@ function yi(e) {
   var /* [auto-meaningful-name] */e$payload$id
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$cloudSpace
   var /* [auto-meaningful-name] */a$sent
-  var /* [auto-meaningful-name] */_a$sent
+  var /* [auto-meaningful-name] */a$sent1
   var i
   return RegeneratorRuntime.wrap(function (a) {
     for (;;) {
@@ -1599,7 +1599,7 @@ function yi(e) {
           a.next = 7
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
         case 7:
-          if (_a$sent = a.sent, i = [], !a$sent || _a$sent) {
+          if (a$sent1 = a.sent, i = [], !a$sent || a$sent1) {
             a.next = 15
             break
           }
@@ -1797,7 +1797,7 @@ function Xa(e) {
   var /* [auto-meaningful-name] */e$payload$shouldSaveCurrentData
   var i
   var /* [auto-meaningful-name] */p$sent
-  var /* [auto-meaningful-name] */_p$sent
+  var /* [auto-meaningful-name] */p$sent1
   var l
   var u
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$customEvent
@@ -1816,7 +1816,7 @@ function Xa(e) {
           p.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 6:
-          if (_p$sent = p.sent, l = _p$sent.get(e$payload$index), u = -1 === p$sent ? "__EMPTY_ID__" : (null === (t = _p$sent.get(p$sent)) || undefined === t ? undefined : t.id) || "__EMPTY_ID__", !(null === l || undefined === l ? undefined : l.id) || l.id === u) {
+          if (p$sent1 = p.sent, l = p$sent1.get(e$payload$index), u = -1 === p$sent ? "__EMPTY_ID__" : (null === (t = p$sent1.get(p$sent)) || undefined === t ? undefined : t.id) || "__EMPTY_ID__", !(null === l || undefined === l ? undefined : l.id) || l.id === u) {
             p.next = 17
             break
           }
@@ -1843,10 +1843,10 @@ function Qa(e) {
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$blink
   var /* [auto-meaningful-name] */e$payload$index
   var /* [auto-meaningful-name] */p$sent
-  var /* [auto-meaningful-name] */_p$sent2
+  var /* [auto-meaningful-name] */p$sent1
   var a
   var s
-  var /* [auto-meaningful-name] */_p$sent2$size
+  var /* [auto-meaningful-name] */p$sent1$size
   var u
   var d
   return RegeneratorRuntime.wrap(function (p) {
@@ -1861,14 +1861,14 @@ function Qa(e) {
           p.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 6:
-          _p$sent2 = p.sent
-          a = $$_$$_$$_$$_unrestored_shared_1571_2636_9.B($$_$$_$$_shared_ui_language.c(p$sent, "defaultScreenTitle").toString(), _p$sent2)
+          p$sent1 = p.sent
+          a = $$_$$_$$_$$_unrestored_shared_1571_2636_9.B($$_$$_$$_shared_ui_language.c(p$sent, "defaultScreenTitle").toString(), p$sent1)
           s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.A(a)
-          _p$sent2$size = _p$sent2.size
+          p$sent1$size = p$sent1.size
           u = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.addWorkspaceData({
             screenId: s.id
           })
-          d = undefined !== e$payload$index ? e$payload$index : _p$sent2$size
+          d = undefined !== e$payload$index ? e$payload$index : p$sent1$size
           p.next = 14
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.if(s, d))
         case 14:
@@ -2237,7 +2237,7 @@ function es(e) {
 }
 function ts(e, t) {
   var /* [auto-meaningful-name] */o$sent
-  var /* [auto-meaningful-name] */_o$sent2
+  var /* [auto-meaningful-name] */o$sent1
   return RegeneratorRuntime.wrap(function (o) {
     for (;;) {
       switch (o.prev = o.next) {
@@ -2249,13 +2249,13 @@ function ts(e, t) {
           o.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
         case 5:
-          _o$sent2 = o.sent
+          o$sent1 = o.sent
           $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkCreate", {
             sourceTag: e,
             sourceId: t,
             workId: o$sent,
             workType: "APP工匠",
-            workName: _o$sent2,
+            workName: o$sent1,
             isSuccess: true,
             failReason: ""
           })
@@ -2319,7 +2319,7 @@ function rs(e) {
   var I
   var /* [auto-meaningful-name] */$$sent
   var N
-  var /* [auto-meaningful-name] */_$$sent
+  var /* [auto-meaningful-name] */$$sent1
   var k
   var x
   var D
@@ -2328,7 +2328,7 @@ function rs(e) {
   var P
   var B
   var /* [auto-meaningful-name] */B$value
-  var /* [auto-meaningful-name] */_$$sent2
+  var /* [auto-meaningful-name] */$$sent2
   var W
   var U
   var H
@@ -2397,7 +2397,7 @@ function rs(e) {
           $.next = 17
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 17:
-          if (_$$sent = $.sent, $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.clearLocalDocuments(_$$sent, f), $$_$$_$$_$$_unrestored_shared_1571_2636_174.a.clear(), $$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE) {
+          if ($$sent1 = $.sent, $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.clearLocalDocuments($$sent1, f), $$_$$_$$_$$_unrestored_shared_1571_2636_174.a.clear(), $$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE) {
             k = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Zb(m)
             x = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(k)
             try {
@@ -2448,7 +2448,7 @@ function rs(e) {
           $.next = 39
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.j)
         case 39:
-          for (U in _$$sent2 = $.sent, W = {}, _$$sent2.forEach(function (e) {
+          for (U in $$sent2 = $.sent, W = {}, $$sent2.forEach(function (e) {
             if (e.cdnUrl) {
               W[e.id] = e.cdnUrl
             }
@@ -2562,10 +2562,10 @@ function os(e) {
   var /* [auto-meaningful-name] */m$sent
   var a
   var s
-  var /* [auto-meaningful-name] */_m$sent
-  var /* [auto-meaningful-name] */_m$sent2
+  var /* [auto-meaningful-name] */m$sent1
+  var /* [auto-meaningful-name] */m$sent2
   var d
-  var /* [auto-meaningful-name] */_m$sent3
+  var /* [auto-meaningful-name] */m$sent3
   var f
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$screen
   return RegeneratorRuntime.wrap(function (m) {
@@ -2587,11 +2587,11 @@ function os(e) {
           m.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
         case 8:
-          _m$sent = m.sent
+          m$sent1 = m.sent
           m.next = 11
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
         case 11:
-          if (_m$sent2 = m.sent, !(a > -1 && s && _m$sent2)) {
+          if (m$sent2 = m.sent, !(a > -1 && s && m$sent2)) {
             m.next = 29
             break
           }
@@ -2600,7 +2600,7 @@ function os(e) {
           s.get("widgetIds").forEach(function (e) {
             return $$_$$_$$_$$_unrestored_shared_1571_2636_9.F(e)
           })
-          d = a < _m$sent ? Math.max(_m$sent - 1, 0) : Math.min(_m$sent, m$sent.size - 2)
+          d = a < m$sent1 ? Math.max(m$sent1 - 1, 0) : Math.min(m$sent1, m$sent.size - 2)
           m.next = 19
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.eh(e$payload$screenId))
         case 19:
@@ -2613,8 +2613,8 @@ function os(e) {
           m.next = 25
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 25:
-          _m$sent3 = m.sent
-          if ((f = _m$sent3.get(d)) && f.id !== _m$sent2.id) {
+          m$sent3 = m.sent
+          if ((f = m$sent3.get(d)) && f.id !== m$sent2.id) {
             $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.selectWorkspaceByScreenId(f.id, false)
           }
           if (o) {
@@ -2634,7 +2634,7 @@ function is(e) {
   var /* [auto-meaningful-name] */T$sent
   var r
   var o
-  var /* [auto-meaningful-name] */_T$sent
+  var /* [auto-meaningful-name] */T$sent1
   var s
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$screen
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$blink
@@ -2668,7 +2668,7 @@ function is(e) {
           T.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
         case 8:
-          if (_T$sent = T.sent, s = r + 1, !o || !_T$sent) {
+          if (T$sent1 = T.sent, s = r + 1, !o || !T$sent1) {
             T.next = 48
             break
           }
@@ -2829,8 +2829,8 @@ function cs(e, t, n) {
   var E
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget
   var w
-  var /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget
-  var /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2
   return RegeneratorRuntime.wrap(function (S) {
     for (;;) {
       switch (S.prev = S.next) {
@@ -2930,12 +2930,12 @@ function cs(e, t, n) {
         case 53:
           if (n) {
             if (null === a || undefined === a ? undefined : a.isInvisibleWidget) {
-              if (!(null === (_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
-                _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.deleteInvisibleWidgetOp(t, o)
+              if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1 = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1)) {
+                $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1.clientOp.deleteInvisibleWidgetOp(t, o)
               }
             } else {
-              if (!(null === (_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2 = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2)) {
-                _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2.clientOp.deleteWidgetOp(t, o)
+              if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2 = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2)) {
+                $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget2.clientOp.deleteWidgetOp(t, o)
               }
             }
           }
@@ -2952,7 +2952,7 @@ function cs(e, t, n) {
 }
 function ls(e) {
   var /* [auto-meaningful-name] */o$sent
-  var /* [auto-meaningful-name] */_o$sent3
+  var /* [auto-meaningful-name] */o$sent1
   var r
   return RegeneratorRuntime.wrap(function (o) {
     for (;;) {
@@ -2965,7 +2965,7 @@ function ls(e) {
           o.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
         case 5:
-          if (_o$sent3 = o.sent, r = true, e.type !== $$_$$_widget_builtIn_types.l || _o$sent3) {
+          if (o$sent1 = o.sent, r = true, e.type !== $$_$$_widget_builtIn_types.l || o$sent1) {
             o.next = 11
             break
           }
@@ -2987,7 +2987,7 @@ function ls(e) {
 }
 function us(e) {
   var /* [auto-meaningful-name] */o$sent
-  var /* [auto-meaningful-name] */_o$sent4
+  var /* [auto-meaningful-name] */o$sent1
   var r
   return RegeneratorRuntime.wrap(function (o) {
     for (;;) {
@@ -3000,7 +3000,7 @@ function us(e) {
           o.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
         case 5:
-          if (_o$sent4 = o.sent, r = true, e.type !== $$_$$_widget_builtIn_types.l) {
+          if (o$sent1 = o.sent, r = true, e.type !== $$_$$_widget_builtIn_types.l) {
             o.next = 18
             break
           }
@@ -3018,7 +3018,7 @@ function us(e) {
           o.next = 18
           break
         case 14:
-          if (_o$sent4) {
+          if (o$sent1) {
             o.next = 18
             break
           }
@@ -3046,7 +3046,7 @@ function ds(e) {
   var i
   var a
   var /* [auto-meaningful-name] */v$sent
-  var /* [auto-meaningful-name] */_v$sent
+  var /* [auto-meaningful-name] */v$sent1
   var /* [auto-meaningful-name] */a$attributes$cloudDbId
   var d
   var p
@@ -3094,13 +3094,13 @@ function ds(e) {
           v.next = 16
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 16:
-          if (_v$sent = v.sent, !$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_v$sent)) {
+          if (v$sent1 = v.sent, !$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(v$sent1)) {
             v.next = 21
             break
           }
           a$attributes$cloudDbId = a.attributes.cloudDbId
           v.next = 21
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.d, a$attributes$cloudDbId, _v$sent)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.d, a$attributes$cloudDbId, v$sent1)
         case 21:
           if (a.id === v$sent && e$payload$screenId && $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItemByWidgetId(e$payload$screenId), !a.isGlobalWidget) {
             v.next = 27
@@ -3171,13 +3171,13 @@ function ds(e) {
 }
 function ps(e, t, n) {
   var /* [auto-meaningful-name] */b$sent
-  var /* [auto-meaningful-name] */_b$sent
+  var /* [auto-meaningful-name] */b$sent1
   var s
   var c
   var /* [auto-meaningful-name] */c$attributes
   var u
   var d
-  var /* [auto-meaningful-name] */_b$sent2
+  var /* [auto-meaningful-name] */b$sent2
   var f
   var h
   var /* [auto-meaningful-name] */s$contentTextField
@@ -3203,7 +3203,7 @@ function ps(e, t, n) {
           b.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
         case 6:
-          if (_b$sent = b.sent, s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e)) {
+          if (b$sent1 = b.sent, s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e)) {
             b.next = 10
             break
           }
@@ -3213,7 +3213,7 @@ function ps(e, t, n) {
             b.next = 19
             break
           }
-          d = _b$sent
+          d = b$sent1
           b.next = 24
           break
         case 19:
@@ -3224,8 +3224,8 @@ function ps(e, t, n) {
           b.next = 22
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.H, n)
         case 22:
-          if (_b$sent2 = b.sent) {
-            d = [].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(_b$sent2.widgetIds), $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(_b$sent2.invisibleWidgetIds))
+          if (b$sent2 = b.sent) {
+            d = [].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b$sent2.widgetIds), $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b$sent2.invisibleWidgetIds))
           }
         case 24:
           f = s.title
@@ -3357,14 +3357,14 @@ function ms(e) {
   var /* [auto-meaningful-name] */e$payload$setBlockValue
   var s
   var /* [auto-meaningful-name] */v$sent
-  var /* [auto-meaningful-name] */_v$sent2
-  var /* [auto-meaningful-name] */_v$sent3
-  var /* [auto-meaningful-name] */_v$sent4
-  var /* [auto-meaningful-name] */_v$sent5
-  var /* [auto-meaningful-name] */_v$sent6
+  var /* [auto-meaningful-name] */v$sent1
+  var /* [auto-meaningful-name] */v$sent2
+  var /* [auto-meaningful-name] */v$sent3
+  var /* [auto-meaningful-name] */v$sent4
+  var /* [auto-meaningful-name] */v$sent5
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget
-  var /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget3
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1
   return RegeneratorRuntime.wrap(function (v) {
     for (;;) {
       switch (v.prev = v.next) {
@@ -3398,7 +3398,7 @@ function ms(e) {
           v.next = 15
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 15:
-          if (_v$sent2 = v.sent, v$sent.type !== $$_$$_widget_builtIn_types.n && v$sent.type !== $$_$$_widget_builtIn_types.J) {
+          if (v$sent1 = v.sent, v$sent.type !== $$_$$_widget_builtIn_types.n && v$sent.type !== $$_$$_widget_builtIn_types.J) {
             v.next = 20
             break
           }
@@ -3410,7 +3410,7 @@ function ms(e) {
             v.next = 30
             break
           }
-          if (_v$sent2) {
+          if (v$sent1) {
             v.next = 25
             break
           }
@@ -3433,9 +3433,9 @@ function ms(e) {
           v.next = 33
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(_s, e$payload$screenId, v$sent.id, v$sent.attributes.templateType)
         case 33:
-          _v$sent3 = v.sent
-          v$sent.widgetIds = _v$sent3.widgetIds
-          v$sent.attributes.templateSlotMap = _v$sent3.templateSlotMap
+          v$sent2 = v.sent
+          v$sent.widgetIds = v$sent2.widgetIds
+          v$sent.attributes.templateSlotMap = v$sent2.templateSlotMap
           v.next = 68
           break
         case 38:
@@ -3464,7 +3464,7 @@ function ms(e) {
           v.next = 45
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 45:
-          if (_v$sent4 = v.sent, _v$sent2) {
+          if (v$sent3 = v.sent, v$sent1) {
             v.next = 50
             break
           }
@@ -3480,24 +3480,24 @@ function ms(e) {
           v.next = 54
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
         case 54:
-          _v$sent5 = v.sent
+          v$sent4 = v.sent
           v.next = 57
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.b, $$_$$_$$_shared_ui_language.c(_v$sent5, "cloudDb.defaultName").toString(), $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_v$sent4) ? _v$sent4 : "")
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.b, $$_$$_$$_shared_ui_language.c(v$sent4, "cloudDb.defaultName").toString(), $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(v$sent3) ? v$sent3 : "")
         case 57:
-          if ((_v$sent6 = v.sent).id) {
+          if ((v$sent5 = v.sent).id) {
             v.next = 62
             break
           }
           v.next = 61
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.mj({
             type: "error",
-            message: $$_$$_$$_shared_ui_language.c(_v$sent5, "cloudDBWidget.generateError").toString()
+            message: $$_$$_$$_shared_ui_language.c(v$sent4, "cloudDBWidget.generateError").toString()
           }))
         case 61:
           return v.abrupt("return")
         case 62:
-          v$sent.attributes.cloudDbId = _v$sent6.id
-          v$sent.attributes.name = _v$sent6.name
+          v$sent.attributes.cloudDbId = v$sent5.id
+          v$sent.attributes.name = v$sent5.name
         case 64:
           v$sent.title = v$sent.attributes.name
           v.next = 68
@@ -3524,8 +3524,8 @@ function ms(e) {
                   $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addInvisibleWidgetOp(e$payload$screenId, v$sent)
                 }
               } else {
-                if (!(null === (_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget3 = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget3)) {
-                  _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget3.clientOp.addWidgetOp(e$payload$screenId, v$sent)
+                if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1 = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1)) {
+                  $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1.clientOp.addWidgetOp(e$payload$screenId, v$sent)
                 }
               }
             }
@@ -3546,7 +3546,7 @@ function ms(e) {
           v.next = 81
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(bs, e$payload$screenId, v$sent)
         case 81:
-          $$_$$_$$_shared_widget_custom_shop.a(v$sent.type, null === _v$sent2 || undefined === _v$sent2 ? undefined : _v$sent2.id)
+          $$_$$_$$_shared_widget_custom_shop.a(v$sent.type, null === v$sent1 || undefined === v$sent1 ? undefined : v$sent1.id)
           return v.abrupt("return", v$sent)
         case 83:
         case "end":
@@ -3559,7 +3559,7 @@ function gs(e) {
   var /* [auto-meaningful-name] */e$payload$widgetType
   var /* [auto-meaningful-name] */l$sent
   var r
-  var /* [auto-meaningful-name] */_l$sent
+  var /* [auto-meaningful-name] */l$sent1
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$extensionWidget
   var a
   var s
@@ -3589,11 +3589,11 @@ function gs(e) {
           l.next = 13
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
         case 13:
-          _l$sent = l.sent
+          l$sent1 = l.sent
           l.next = 16
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.mj({
             type: "error",
-            message: $$_$$_$$_shared_ui_language.c(_l$sent, "WidgetList.addFailureToast").toString()
+            message: $$_$$_$$_shared_ui_language.c(l$sent1, "WidgetList.addFailureToast").toString()
           }))
         case 16:
           if ($$_$$_$$_shared_widget_custom_type.e(e$payload$widgetType)) {
@@ -3623,7 +3623,7 @@ function _s(e, t, n) {
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget
   var u
   var d
-  var /* [auto-meaningful-name] */_f$sent
+  var /* [auto-meaningful-name] */f$sent1
   return RegeneratorRuntime.wrap(function (f) {
     for (;;) {
       switch (f.prev = f.next) {
@@ -3650,31 +3650,31 @@ function _s(e, t, n) {
             y: 0
           }, e)
         case 13:
-          if ((_f$sent = f.sent) && d) {
+          if ((f$sent1 = f.sent) && d) {
             f.next = 17
             break
           }
           console.error("can not create widget")
           return f.abrupt("return")
         case 17:
-          _f$sent.parentId = t
-          _f$sent.title = $$_$$_$$_shared_ui_language.c(f$sent, u.titleMessageId).toString()
-          _f$sent.attributes = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, _f$sent.attributes), u.attributes)
-          if (_f$sent.type === $$_$$_widget_builtIn_types.H) {
-            _f$sent.attributes.content = $$_$$_$$_shared_ui_language.c(f$sent, u.contentMessageId || "").toString()
-            _f$sent.attributes.textAlign = "left"
+          f$sent1.parentId = t
+          f$sent1.title = $$_$$_$$_shared_ui_language.c(f$sent, u.titleMessageId).toString()
+          f$sent1.attributes = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, f$sent1.attributes), u.attributes)
+          if (f$sent1.type === $$_$$_widget_builtIn_types.H) {
+            f$sent1.attributes.content = $$_$$_$$_shared_ui_language.c(f$sent, u.contentMessageId || "").toString()
+            f$sent1.attributes.textAlign = "left"
           }
           f.next = 23
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(hs, _f$sent, e)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(hs, f$sent1, e)
         case 23:
           s[f$t1$value] = {
-            label: _f$sent.title,
-            widgetId: _f$sent.id,
+            label: f$sent1.title,
+            widgetId: f$sent1.id,
             dataBindings: ""
           }
-          i.push(_f$sent.id)
+          i.push(f$sent1.id)
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addWidgetOp(e, _f$sent)
+            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addWidgetOp(e, f$sent1)
           }
           f.next = 7
           break
@@ -3730,8 +3730,8 @@ function bs(e, t) {
   var n
   var /* [auto-meaningful-name] */c$sent
   var o
-  var /* [auto-meaningful-name] */_c$sent
-  var /* [auto-meaningful-name] */_c$sent2
+  var /* [auto-meaningful-name] */c$sent1
+  var /* [auto-meaningful-name] */c$sent2
   var s
   return RegeneratorRuntime.wrap(function (c) {
     for (;;) {
@@ -3749,16 +3749,16 @@ function bs(e, t) {
           c.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
         case 8:
-          _c$sent = c.sent
+          c$sent1 = c.sent
           c.next = 11
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.u)
         case 11:
-          _c$sent2 = c.sent
+          c$sent2 = c.sent
           s = null === (n = $$_$$_$$_shared_ui_language.c(c$sent, o.previewAreaWidgetTitle)) || undefined === n ? undefined : n.toString()
           $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("AddWidgetToStage", {
             screenId: e,
-            screenName: (null === _c$sent || undefined === _c$sent ? undefined : _c$sent.title) || "",
-            isCooperation: !!_c$sent2,
+            screenName: (null === c$sent1 || undefined === c$sent1 ? undefined : c$sent1.title) || "",
+            isCooperation: !!c$sent2,
             widgetName: s
           })
         case 14:
@@ -3770,7 +3770,7 @@ function bs(e, t) {
 }
 function ys(e) {
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget
-  var /* [auto-meaningful-name] */_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget4
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1
   var /* [auto-meaningful-name] */e$payload
   var /* [auto-meaningful-name] */e$payload$widgetId
   var /* [auto-meaningful-name] */e$payload$templateType
@@ -3780,7 +3780,7 @@ function ys(e) {
   var u
   var d
   var /* [auto-meaningful-name] */d$value
-  var /* [auto-meaningful-name] */_h$sent
+  var /* [auto-meaningful-name] */h$sent1
   return RegeneratorRuntime.wrap(function (h) {
     for (;;) {
       switch (h.prev = h.next) {
@@ -3835,16 +3835,16 @@ function ys(e) {
           h.next = 29
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(_s, h$sent, e$payload$widgetId, e$payload$templateType)
         case 29:
-          _h$sent = h.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Wb(e$payload$widgetId, _h$sent.widgetIds)
+          h$sent1 = h.sent
+          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Wb(e$payload$widgetId, h$sent1.widgetIds)
           h.next = 33
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Kg(e$payload$widgetId, "templateSlotMap", _h$sent.templateSlotMap))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Kg(e$payload$widgetId, "templateSlotMap", h$sent1.templateSlotMap))
         case 33:
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.replaceWidgetAttributeOp(h$sent, e$payload$widgetId, "widgetIds", _h$sent.widgetIds)
+            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.replaceWidgetAttributeOp(h$sent, e$payload$widgetId, "widgetIds", h$sent1.widgetIds)
           }
-          if (!(null === (_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget4 = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget4)) {
-            _$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget4.clientOp.replaceWidgetAttributeOp(h$sent, e$payload$widgetId, "templateSlotMap", _h$sent.templateSlotMap)
+          if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1 = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1)) {
+            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget1.clientOp.replaceWidgetAttributeOp(h$sent, e$payload$widgetId, "templateSlotMap", h$sent1.templateSlotMap)
           }
           e$payload$onSuccess()
         case 36:
@@ -3971,11 +3971,11 @@ function ws() {
 }
 function Cs() {
   var /* [auto-meaningful-name] */a$sent
-  var /* [auto-meaningful-name] */_a$sent2
-  var /* [auto-meaningful-name] */_a$sent3
+  var /* [auto-meaningful-name] */a$sent1
+  var /* [auto-meaningful-name] */a$sent2
   var r
-  var /* [auto-meaningful-name] */_a$sent4
-  var /* [auto-meaningful-name] */_a$sent5
+  var /* [auto-meaningful-name] */a$sent3
+  var /* [auto-meaningful-name] */a$sent4
   return RegeneratorRuntime.wrap(function (a) {
     for (;;) {
       switch (a.prev = a.next) {
@@ -3989,17 +3989,17 @@ function Cs() {
             return Ts(false)
           })
         case 5:
-          _a$sent2 = a.sent
+          a$sent1 = a.sent
           a.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 8:
-          if (_a$sent3 = a.sent, _a$sent2) {
+          if (a$sent2 = a.sent, a$sent1) {
             a.next = 11
             break
           }
           return a.abrupt("return")
         case 11:
-          if (_a$sent3) {
+          if (a$sent2) {
             a.next = 15
             break
           }
@@ -4013,13 +4013,13 @@ function Cs() {
           a.next = 19
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.A)
         case 19:
-          _a$sent4 = a.sent
+          a$sent3 = a.sent
           a.next = 22
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.l, _a$sent4, _a$sent2)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.l, a$sent3, a$sent1)
         case 22:
-          _a$sent5 = a.sent
+          a$sent4 = a.sent
           a.next = 25
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ni(_a$sent5.pack_label))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ni(a$sent4.pack_label))
         case 25:
           a.next = 27
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ig())
@@ -4050,12 +4050,12 @@ function Cs() {
 function Ts(e, t) {
   var n
   var /* [auto-meaningful-name] */C$sent
-  var /* [auto-meaningful-name] */_C$sent
-  var /* [auto-meaningful-name] */_C$sent2
-  var /* [auto-meaningful-name] */_C$sent3
-  var /* [auto-meaningful-name] */_C$sent4
-  var /* [auto-meaningful-name] */_C$sent5
-  var /* [auto-meaningful-name] */_C$sent6
+  var /* [auto-meaningful-name] */C$sent1
+  var /* [auto-meaningful-name] */C$sent2
+  var /* [auto-meaningful-name] */C$sent3
+  var /* [auto-meaningful-name] */C$sent4
+  var /* [auto-meaningful-name] */C$sent5
+  var /* [auto-meaningful-name] */C$sent6
   var d
   var p
   var f
@@ -4064,9 +4064,9 @@ function Ts(e, t) {
   var g
   var _
   var v
-  var /* [auto-meaningful-name] */_C$sent7
-  var /* [auto-meaningful-name] */_C$sent8
-  var /* [auto-meaningful-name] */_C$sent9
+  var /* [auto-meaningful-name] */C$sent7
+  var /* [auto-meaningful-name] */C$sent8
+  var /* [auto-meaningful-name] */C$sent9
   var O
   var w
   return RegeneratorRuntime.wrap(function (C) {
@@ -4084,31 +4084,31 @@ function Ts(e, t) {
           C.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 8:
-          _C$sent = C.sent
+          C$sent1 = C.sent
           C.next = 11
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.m)
         case 11:
-          _C$sent2 = C.sent
+          C$sent2 = C.sent
           C.next = 14
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.k)
         case 14:
-          _C$sent3 = C.sent
+          C$sent3 = C.sent
           C.next = 17
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.l)
         case 17:
-          _C$sent4 = C.sent
+          C$sent4 = C.sent
           C.next = 20
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
         case 20:
-          _C$sent5 = C.sent
+          C$sent5 = C.sent
           C.next = 23
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
         case 23:
-          _C$sent6 = C.sent
+          C$sent6 = C.sent
           C.next = 26
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
         case 26:
-          if (d = C.sent, _C$sent6) {
+          if (d = C.sent, C$sent6) {
             C.next = 29
             break
           }
@@ -4149,20 +4149,20 @@ function Ts(e, t) {
         case 48:
           d = C.sent
         case 49:
-          v = e ? _C$sent6.id : _C$sent.toArray()[0].id
+          v = e ? C$sent6.id : C$sent1.toArray()[0].id
           C.next = 52
           return Bs()
         case 52:
-          _C$sent7 = C.sent
+          C$sent7 = C.sent
           C.next = 55
           return Fs()
         case 55:
-          _C$sent8 = C.sent
+          C$sent8 = C.sent
           C.next = 58
           return Gs()
         case 58:
-          _C$sent9 = C.sent;
-          (O = $$_$$_$$_$$_unrestored_shared_1571_2636_177.c(n, $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z, _C$sent.toArray(), _C$sent2, _C$sent3, $$_$$_$$_$$_unrestored_shared_1571_2636_9.kb(), _C$sent7, _C$sent8, v, d, _C$sent5, _C$sent4)).fontFileMap = _C$sent9
+          C$sent9 = C.sent;
+          (O = $$_$$_$$_$$_unrestored_shared_1571_2636_177.c(n, $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z, C$sent1.toArray(), C$sent2, C$sent3, $$_$$_$$_$$_unrestored_shared_1571_2636_9.kb(), C$sent7, C$sent8, v, d, C$sent5, C$sent4)).fontFileMap = C$sent9
           O.blockCode = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.generateAllWorkspaceCodes(O.screenList, t)
           if (undefined !== (w = Terser.minify(O.blockCode, {
             keep_fnames: true
@@ -4180,11 +4180,11 @@ function Ts(e, t) {
 function Ss() {
   var /* [auto-meaningful-name] */l$sent
   var t
-  var /* [auto-meaningful-name] */_l$sent2
-  var /* [auto-meaningful-name] */_l$sent3
-  var /* [auto-meaningful-name] */_l$sent3$url
-  var /* [auto-meaningful-name] */_l$sent3$version
-  var /* [auto-meaningful-name] */_l$sent3$expireTime
+  var /* [auto-meaningful-name] */l$sent1
+  var /* [auto-meaningful-name] */l$sent2
+  var /* [auto-meaningful-name] */l$sent2$url
+  var /* [auto-meaningful-name] */l$sent2$version
+  var /* [auto-meaningful-name] */l$sent2$expireTime
   var s
   return RegeneratorRuntime.wrap(function (l) {
     for (;;) {
@@ -4213,8 +4213,8 @@ function Ss() {
           l.next = 14
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.a, l$sent)
         case 14:
-          _l$sent2 = l.sent
-          t = _l$sent2.progress
+          l$sent1 = l.sent
+          t = l$sent1.progress
           l.next = 18
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ki(t))
         case 18:
@@ -4251,17 +4251,17 @@ function Ss() {
           l.next = 35
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.i, l$sent)
         case 35:
-          _l$sent3 = l.sent
-          _l$sent3$url = _l$sent3.url
-          _l$sent3$version = _l$sent3.version
-          _l$sent3$expireTime = _l$sent3.expireTime
+          l$sent2 = l.sent
+          l$sent2$url = l$sent2.url
+          l$sent2$version = l$sent2.version
+          l$sent2$expireTime = l$sent2.expireTime
           l.next = 41
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Oi(false, _l$sent3$url))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Oi(false, l$sent2$url))
         case 41:
           l.next = 43
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ji({
-            version: _l$sent3$version,
-            expireTime: _l$sent3$expireTime,
+            version: l$sent2$version,
+            expireTime: l$sent2$expireTime,
             startTimeTamp: Date.now()
           }))
         case 43:
@@ -4298,9 +4298,9 @@ function Ss() {
 }
 function As(e) {
   var /* [auto-meaningful-name] */a$sent
-  var /* [auto-meaningful-name] */_a$sent6
-  var /* [auto-meaningful-name] */_a$sent7
-  var /* [auto-meaningful-name] */_a$sent8
+  var /* [auto-meaningful-name] */a$sent1
+  var /* [auto-meaningful-name] */a$sent2
+  var /* [auto-meaningful-name] */a$sent3
   var i
   return RegeneratorRuntime.wrap(function (a) {
     for (;;) {
@@ -4313,26 +4313,26 @@ function As(e) {
           a.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.F)
         case 5:
-          _a$sent6 = a.sent
+          a$sent1 = a.sent
           a.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.A)
         case 8:
-          _a$sent7 = a.sent
+          a$sent2 = a.sent
           a.next = 11
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.w)
         case 11:
-          _a$sent8 = a.sent
-          i = _a$sent7.apkSplash.match(/splash0(\d)\.png/)
+          a$sent3 = a.sent
+          i = a$sent2.apkSplash.match(/splash0(\d)\.png/)
           $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkPack", {
             workId: a$sent,
-            sourceTag: _a$sent6.tag,
-            sourceId: _a$sent6.id,
+            sourceTag: a$sent1.tag,
+            sourceId: a$sent1.id,
             launchScreenId: i ? i[1] : "0",
-            apkName: _a$sent7.apkName,
+            apkName: a$sent2.apkName,
             isSuccess: !e,
             failReason: e || "",
-            bcmUrl: e ? _a$sent8 : "",
-            packLabel: e && _a$sent7.packLabel ? _a$sent7.packLabel : ""
+            bcmUrl: e ? a$sent3 : "",
+            packLabel: e && a$sent2.packLabel ? a$sent2.packLabel : ""
           })
         case 14:
         case "end":
@@ -4344,13 +4344,13 @@ function As(e) {
 function Is(e) {
   var /* [auto-meaningful-name] */e$payload$isPlayCurrentScreen
   var /* [auto-meaningful-name] */f$sent
-  var /* [auto-meaningful-name] */_f$sent2
-  var /* [auto-meaningful-name] */_f$sent2$widgetMap
+  var /* [auto-meaningful-name] */f$sent1
+  var /* [auto-meaningful-name] */f$sent1$widgetMap
   var i
   var a
   var s
   var l
-  var /* [auto-meaningful-name] */_f$sent3
+  var /* [auto-meaningful-name] */f$sent2
   var p
   return RegeneratorRuntime.wrap(function (f) {
     for (;;) {
@@ -4370,13 +4370,13 @@ function Is(e) {
             return Ts(e$payload$isPlayCurrentScreen, true)
           })
         case 9:
-          if (_f$sent2 = f.sent) {
+          if (f$sent1 = f.sent) {
             f.next = 12
             break
           }
           return f.abrupt("return")
         case 12:
-          if (_f$sent2$widgetMap = _f$sent2.widgetMap, i = new Set(), a = new Set(), s = new Set(), l = true, Object.values(_f$sent2$widgetMap).forEach(function (e) {
+          if (f$sent1$widgetMap = f$sent1.widgetMap, i = new Set(), a = new Set(), s = new Set(), l = true, Object.values(f$sent1$widgetMap).forEach(function (e) {
             var /* [auto-meaningful-name] */o$types
             var /* [auto-meaningful-name] */e$type = e.type
             var o = $$_$$_$$_shared_widget_custom_storage.f(e$type)
@@ -4438,16 +4438,16 @@ function Is(e) {
           f.next = 27
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 27:
-          _f$sent3 = f.sent
+          f$sent2 = f.sent
           $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.stopWarningAnimation()
           f.next = 31
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.b, _f$sent3, _f$sent2)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.b, f$sent2, f$sent1)
         case 31:
           f.next = 33
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Cj())
         case 33:
           f.next = 35
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(js, _f$sent2$widgetMap)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(js, f$sent1$widgetMap)
         case 35:
           $$_$$_$$_$$_unrestored_shared_1571_2636_37_219_index.b({
             playing: true
@@ -4556,7 +4556,7 @@ function js(e) {
 }
 function Ns(e) {
   var /* [auto-meaningful-name] */r$sent
-  var /* [auto-meaningful-name] */_r$sent
+  var /* [auto-meaningful-name] */r$sent1
   return RegeneratorRuntime.wrap(function (r) {
     for (;;) {
       switch (r.prev = r.next) {
@@ -4568,10 +4568,10 @@ function Ns(e) {
           r.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
         case 5:
-          _r$sent = r.sent
+          r$sent1 = r.sent
           $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkRun", {
             workId: r$sent,
-            workName: _r$sent,
+            workName: r$sent1,
             workType: "APP工匠",
             isSuccess: !e,
             failReason: e || ""
@@ -4618,17 +4618,17 @@ function Rs(e) {
 }
 function ks(e) {
   var /* [auto-meaningful-name] */h$sent
-  var /* [auto-meaningful-name] */_h$sent2
+  var /* [auto-meaningful-name] */h$sent1
   var r
   var o
-  var /* [auto-meaningful-name] */_h$sent3
+  var /* [auto-meaningful-name] */h$sent2
   var /* [auto-meaningful-name] */e$payload
   var /* [auto-meaningful-name] */e$payload$name
   var /* [auto-meaningful-name] */e$payload$description
   var /* [auto-meaningful-name] */e$payload$operation
   var /* [auto-meaningful-name] */e$payload$coverUrl
   var p
-  var /* [auto-meaningful-name] */_h$sent4
+  var /* [auto-meaningful-name] */h$sent3
   return RegeneratorRuntime.wrap(function (h) {
     for (;;) {
       switch (h.prev = h.next) {
@@ -4647,7 +4647,7 @@ function ks(e) {
           h.next = 7
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 7:
-          _h$sent2 = h.sent
+          h$sent1 = h.sent
           h.next = 10
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($_actions.Bf, e.payload.name)
         case 10:
@@ -4660,7 +4660,7 @@ function ks(e) {
           h.next = 14
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e, o, "JSON")
         case 14:
-          _h$sent3 = h.sent
+          h$sent2 = h.sent
           e$payload = e.payload
           e$payload$name = e$payload.name
           e$payload$description = e$payload.description
@@ -4671,26 +4671,26 @@ function ks(e) {
             description: e$payload$description || $$_$$_$$_$$_unrestored_shared_1571_2636_328.a,
             operation: e$payload$operation || $$_$$_$$_$$_unrestored_shared_1571_2636_328.b,
             coverUrl: e$payload$coverUrl,
-            workId: _h$sent2,
-            bcmcUrl: _h$sent3.url,
-            playerUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_15.E(_h$sent2)
+            workId: h$sent1,
+            bcmcUrl: h$sent2.url,
+            playerUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_15.E(h$sent1)
           }
           h.next = 19
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.m, p)
         case 19:
-          if (200 === (_h$sent4 = h.sent).code) {
+          if (200 === (h$sent3 = h.sent).code) {
             h.next = 22
             break
           }
-          throw Error("".concat(_h$sent4.code))
+          throw Error("".concat(h$sent3.code))
         case 22:
           qt($$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().map(function (e) {
             return e.attributes.cloudDbId
-          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_h$sent2) ? _h$sent2 : undefined)
+          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(h$sent1) ? h$sent1 : undefined)
           h.next = 26
           return Os()
         case 26:
-          return h.abrupt("return", _h$sent2)
+          return h.abrupt("return", h$sent1)
         case 27:
         case "end":
           return h.stop()
@@ -4701,14 +4701,14 @@ function ks(e) {
 function xs(e) {
   var /* [auto-meaningful-name] */f$sent
   var n
-  var /* [auto-meaningful-name] */_f$sent4
+  var /* [auto-meaningful-name] */f$sent1
   var /* [auto-meaningful-name] */e$payload$info
-  var /* [auto-meaningful-name] */_f$sent5
-  var /* [auto-meaningful-name] */_f$sent6
+  var /* [auto-meaningful-name] */f$sent2
+  var /* [auto-meaningful-name] */f$sent3
   var l
   var u
-  var /* [auto-meaningful-name] */_f$sent7
-  var /* [auto-meaningful-name] */_f$sent8
+  var /* [auto-meaningful-name] */f$sent4
+  var /* [auto-meaningful-name] */f$sent5
   return RegeneratorRuntime.wrap(function (f) {
     for (;;) {
       switch (f.prev = f.next) {
@@ -4724,34 +4724,34 @@ function xs(e) {
             isAutoSave: true
           }))
         case 6:
-          _f$sent4 = f.sent
+          f$sent1 = f.sent
           e$payload$info = e.payload.info
           f.next = 10
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 10:
-          _f$sent5 = f.sent
+          f$sent2 = f.sent
           f.next = 13
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(function () {
             return Ts(false)
           })
         case 13:
-          if (_f$sent6 = f.sent) {
+          if (f$sent3 = f.sent) {
             f.next = 16
             break
           }
           throw new Error("can not generate player data")
         case 16:
-          if (_f$sent5) {
+          if (f$sent2) {
             f.next = 18
             break
           }
           throw new Error("user not login")
         case 18:
           l = new Blob([
-            JSON.stringify($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, _f$sent6), {}, {
+            JSON.stringify($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, f$sent3), {}, {
               userInfo: {
-                name: _f$sent5.nickname,
-                avatarUrl: _f$sent5.avatar_url
+                name: f$sent2.nickname,
+                avatarUrl: f$sent2.avatar_url
               },
               title: e$payload$info.title,
               description: e$payload$info.desc,
@@ -4766,23 +4766,23 @@ function xs(e) {
           f.next = 22
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e, u, "JSON")
         case 22:
-          _f$sent7 = f.sent
+          f$sent4 = f.sent
           qt($$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().map(function (e) {
             return e.attributes.cloudDbId
-          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_f$sent4) ? _f$sent4 : undefined)
+          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(f$sent1) ? f$sent1 : undefined)
           f.next = 27
           return Os()
         case 27:
           f.next = 29
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.n, _f$sent4, _f$sent7.url)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.n, f$sent1, f$sent4.url)
         case 29:
-          if (200 === (_f$sent8 = f.sent).code) {
+          if (200 === (f$sent5 = f.sent).code) {
             f.next = 32
             break
           }
-          throw Error("".concat(_f$sent8.code))
+          throw Error("".concat(f$sent5.code))
         case 32:
-          return f.abrupt("return", _f$sent4)
+          return f.abrupt("return", f$sent1)
         case 33:
         case "end":
           return f.stop()
@@ -4793,8 +4793,8 @@ function xs(e) {
 function Ds(e) {
   var /* [auto-meaningful-name] */e$payload$shouldCloneCloud
   var /* [auto-meaningful-name] */a$sent
-  var /* [auto-meaningful-name] */_a$sent9
-  var /* [auto-meaningful-name] */_a$sent0
+  var /* [auto-meaningful-name] */a$sent1
+  var /* [auto-meaningful-name] */a$sent2
   var i
   return RegeneratorRuntime.wrap(function (a) {
     for (;;) {
@@ -4808,18 +4808,18 @@ function Ds(e) {
           a.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
         case 6:
-          if (_a$sent9 = a.sent, !a$sent) {
+          if (a$sent1 = a.sent, !a$sent) {
             a.next = 13
             break
           }
           a.next = 10
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_97.b, e$payload$shouldCloneCloud)
         case 10:
-          _a$sent0 = a.sent
-          i = new Blob([JSON.stringify(_a$sent0)], {
+          a$sent2 = a.sent
+          i = new Blob([JSON.stringify(a$sent2)], {
             type: "application/json,charset=utf-8;"
           })
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.s(URL.createObjectURL(i), _a$sent9)
+          $$_$$_$$_$$_unrestored_shared_1571_2636_15.s(URL.createObjectURL(i), a$sent1)
         case 13:
         case "end":
           return a.stop()
@@ -4981,7 +4981,7 @@ function Fs() {
 function Gs() {
   var /* [auto-meaningful-name] */o$sent
   var t
-  var /* [auto-meaningful-name] */_o$sent5
+  var /* [auto-meaningful-name] */o$sent1
   var r
   return RegeneratorRuntime.wrap(function (o) {
     for (;;) {
@@ -4995,12 +4995,12 @@ function Gs() {
           o.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 6:
-          _o$sent5 = o.sent
+          o$sent1 = o.sent
           r = {}
           o$sent.forEach(function (e) {
             t[e.id] = e
           })
-          _o$sent5.forEach(function (e) {
+          o$sent1.forEach(function (e) {
             e.widgetIds.forEach(function (e) {
               var n = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
               if ((null === n || undefined === n ? undefined : n.type) === $$_$$_widget_builtIn_types.H || (null === n || undefined === n ? undefined : n.type) === $$_$$_widget_builtIn_types.z || (null === n || undefined === n ? undefined : n.type) === $$_$$_widget_builtIn_types.w) {
@@ -5037,10 +5037,10 @@ function Ws(e) {
   var /* [auto-meaningful-name] */e$payload$isAutoSave
   var /* [auto-meaningful-name] */e$payload$isSaveAs
   var /* [auto-meaningful-name] */A$sent
-  var /* [auto-meaningful-name] */_A$sent
+  var /* [auto-meaningful-name] */A$sent1
   var l
-  var /* [auto-meaningful-name] */_A$sent2
-  var /* [auto-meaningful-name] */_A$sent3
+  var /* [auto-meaningful-name] */A$sent2
+  var /* [auto-meaningful-name] */A$sent3
   var p
   var f
   var h
@@ -5051,11 +5051,11 @@ function Ws(e) {
   var b
   var /* [auto-meaningful-name] */b$value
   var /* [auto-meaningful-name] */b$value$snapshot
-  var /* [auto-meaningful-name] */_A$sent4
-  var /* [auto-meaningful-name] */_A$sent5
+  var /* [auto-meaningful-name] */A$sent4
+  var /* [auto-meaningful-name] */A$sent5
   var C
   var T
-  var /* [auto-meaningful-name] */_A$sent6
+  var /* [auto-meaningful-name] */A$sent6
   return RegeneratorRuntime.wrap(function (A) {
     for (;;) {
       switch (A.prev = A.next) {
@@ -5072,21 +5072,21 @@ function Ws(e) {
           A.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 6:
-          _A$sent = A.sent
+          A$sent1 = A.sent
           l = Math.ceil(10 * Math.random()) + 10
           A.next = 10
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 10:
-          _A$sent2 = A.sent
+          A$sent2 = A.sent
           A.next = 13
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.F)
         case 13:
-          _A$sent3 = A.sent
+          A$sent3 = A.sent
           p = 20
           A.next = 17
           break
         case 17:
-          if (_A$sent2) {
+          if (A$sent2) {
             A.next = 21
             break
           }
@@ -5169,13 +5169,13 @@ function Ws(e) {
           A.next = 67
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_97.b)
         case 67:
-          _A$sent4 = A.sent
+          A$sent4 = A.sent
           A.next = 70
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.h, JSON.stringify(_A$sent4))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.h, JSON.stringify(A$sent4))
         case 70:
-          _A$sent5 = A.sent
+          A$sent5 = A.sent
           A.next = 73
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Vj(_A$sent5))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Vj(A$sent5))
         case 73:
           A.next = 75
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Pi(50))
@@ -5186,9 +5186,9 @@ function Ws(e) {
           }
           C = {
             name: f.substring(0, p),
-            bcmUrl: _A$sent5,
+            bcmUrl: A$sent5,
             coverUrl: _,
-            id: _A$sent,
+            id: A$sent1,
             saveType: e$payload$isAutoSave ? $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.AutoSave : $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.ByUser
           }
           A.prev = 77
@@ -5232,22 +5232,22 @@ function Ws(e) {
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ei(Date.now()))
         case 101:
           A.next = 103
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(vc, _A$sent)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(vc, A$sent1)
         case 103:
-          return A.abrupt("return", _A$sent)
+          return A.abrupt("return", A$sent1)
         case 106:
           T = {
             name: f.substring(0, p),
-            bcmUrl: _A$sent5,
+            bcmUrl: A$sent5,
             coverUrl: _,
             saveType: e$payload$isAutoSave ? $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.AutoSave : $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.ByUser,
-            sourceTag: _A$sent3.tag
+            sourceTag: A$sent3.tag
           }
           A.prev = 107
           A.next = 110
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.f, T)
         case 110:
-          if (_A$sent6 = A.sent, !e$payload$isNeedReport) {
+          if (A$sent6 = A.sent, !e$payload$isNeedReport) {
             A.next = 114
             break
           }
@@ -5271,7 +5271,7 @@ function Ws(e) {
         case 123:
           throw A.t2
         case 124:
-          if (!_A$sent6) {
+          if (!A$sent6) {
             A.next = 141
             break
           }
@@ -5282,7 +5282,7 @@ function Ws(e) {
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Fi(false))
         case 129:
           A.next = 131
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Uh(_A$sent6))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Uh(A$sent6))
         case 131:
           A.next = 133
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ei(Date.now()))
@@ -5290,13 +5290,13 @@ function Ws(e) {
           A.next = 135
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Si(false))
         case 135:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.setCurrentProjectId(_A$sent6)
+          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.setCurrentProjectId(A$sent6)
           A.next = 138
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vs)
         case 138:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.jb(_A$sent6)
+          $$_$$_$$_$$_unrestored_shared_1571_2636_15.jb(A$sent6)
           A.next = 141
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(vc, _A$sent6)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(vc, A$sent6)
         case 141:
           if (!e$payload$isSaveAs) {
             A.next = 144
@@ -5307,7 +5307,7 @@ function Ws(e) {
         case 144:
           $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["courseId", "templateId"])
           Pn()
-          return A.abrupt("return", _A$sent6)
+          return A.abrupt("return", A$sent6)
         case 147:
         case "end":
           return A.stop()
@@ -5317,8 +5317,8 @@ function Ws(e) {
 }
 function Us(e, t) {
   var /* [auto-meaningful-name] */i$sent
-  var /* [auto-meaningful-name] */_i$sent
-  var /* [auto-meaningful-name] */_i$sent2
+  var /* [auto-meaningful-name] */i$sent1
+  var /* [auto-meaningful-name] */i$sent2
   return RegeneratorRuntime.wrap(function (i) {
     for (;;) {
       switch (i.prev = i.next) {
@@ -5330,17 +5330,17 @@ function Us(e, t) {
           i.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
         case 5:
-          _i$sent = i.sent
+          i$sent1 = i.sent
           i.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.F)
         case 8:
-          _i$sent2 = i.sent
+          i$sent2 = i.sent
           $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkSave", {
             workId: i$sent,
-            workName: _i$sent,
+            workName: i$sent1,
             workType: "APP工匠",
-            sourceTag: _i$sent2.tag,
-            sourceId: _i$sent2.id,
+            sourceTag: i$sent2.tag,
+            sourceId: i$sent2.id,
             isSuccess: e,
             failReason: t || ""
           })
@@ -5370,7 +5370,7 @@ function Hs() {
 }
 function Vs() {
   var /* [auto-meaningful-name] */n$sent
-  var /* [auto-meaningful-name] */_n$sent
+  var /* [auto-meaningful-name] */n$sent1
   return RegeneratorRuntime.wrap(function (n) {
     for (;;) {
       switch (n.prev = n.next) {
@@ -5382,9 +5382,9 @@ function Vs() {
           n.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.k, n$sent)
         case 5:
-          _n$sent = n.sent
+          n$sent1 = n.sent
           n.next = 8
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ai(_n$sent))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ai(n$sent1))
         case 8:
         case "end":
           return n.stop()
@@ -5644,7 +5644,7 @@ function Qs(e, t) {
   var /* [auto-meaningful-name] */a$sent
   var r
   var /* [auto-meaningful-name] */r$attributes$cloudDbId
-  var /* [auto-meaningful-name] */_a$sent1
+  var /* [auto-meaningful-name] */a$sent1
   return RegeneratorRuntime.wrap(function (a) {
     for (;;) {
       switch (a.prev = a.next) {
@@ -5662,8 +5662,8 @@ function Qs(e, t) {
           a.next = 9
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.p, r$attributes$cloudDbId, t, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(a$sent) ? a$sent : undefined)
         case 9:
-          _a$sent1 = a.sent
-          return a.abrupt("return", _a$sent1 || t)
+          a$sent1 = a.sent
+          return a.abrupt("return", a$sent1 || t)
         case 11:
         case "end":
           return a.stop()
@@ -5683,7 +5683,7 @@ function Zs(e) {
   var /* [auto-meaningful-name] */g$sent
   var d
   var /* [auto-meaningful-name] */l$type
-  var /* [auto-meaningful-name] */_g$sent
+  var /* [auto-meaningful-name] */g$sent1
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget
   return RegeneratorRuntime.wrap(function (g) {
@@ -5708,11 +5708,11 @@ function Zs(e) {
           g.next = 13
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Qs, e$payload$widgetId, e$payload$title)
         case 13:
-          _g$sent = g.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Xb(e$payload$widgetId, _g$sent)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Vb(e$payload$widgetId, "name", _g$sent)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateToolBoxWidgetTitle(e$payload$widgetId, _g$sent)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.y(e$payload$widgetId, _g$sent, l$type)
+          g$sent1 = g.sent
+          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Xb(e$payload$widgetId, g$sent1)
+          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Vb(e$payload$widgetId, "name", g$sent1)
+          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateToolBoxWidgetTitle(e$payload$widgetId, g$sent1)
+          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.y(e$payload$widgetId, g$sent1, l$type)
           g.next = 20
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Fi(true))
         case 20:
@@ -5731,17 +5731,17 @@ function Zs(e) {
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Qj())
         case 26:
           g.next = 28
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Pj(l.id, "name", _g$sent))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Pj(l.id, "name", g$sent1))
         case 28:
           if (s) {
             if (l.isGlobalWidget) {
               if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.globalWidget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget)) {
-                $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget.clientOp.replaceWidgetAttributeOp(e$payload$widgetId, "title", _g$sent)
+                $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget.clientOp.replaceWidgetAttributeOp(e$payload$widgetId, "title", g$sent1)
               }
             } else {
               if (d) {
                 if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
-                  $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.replaceWidgetAttributeOp(d, e$payload$widgetId, "title", _g$sent)
+                  $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.replaceWidgetAttributeOp(d, e$payload$widgetId, "title", g$sent1)
                 }
               }
             }
@@ -5761,8 +5761,8 @@ function Js() {
   var /* [auto-meaningful-name] */d$sent$list
   var /* [auto-meaningful-name] */d$sent$total
   var a
-  var /* [auto-meaningful-name] */_d$sent
-  var /* [auto-meaningful-name] */_d$sent$list
+  var /* [auto-meaningful-name] */d$sent1
+  var /* [auto-meaningful-name] */d$sent1$list
   var /* [auto-meaningful-name] */d$t0$response
   return RegeneratorRuntime.wrap(function (d) {
     for (;;) {
@@ -5788,9 +5788,9 @@ function Js() {
           d.next = 16
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_shared_widget_custom_shop.c, t, n)
         case 16:
-          _d$sent = d.sent
-          _d$sent$list = _d$sent.list
-          e = e.concat(_d$sent$list)
+          d$sent1 = d.sent
+          d$sent1$list = d$sent1.list
+          e = e.concat(d$sent1$list)
         case 19:
           t++
           d.next = 13
@@ -5850,7 +5850,7 @@ function $s(e) {
 }
 function ec(e, t) {
   var /* [auto-meaningful-name] */f$sent
-  var /* [auto-meaningful-name] */_f$sent9
+  var /* [auto-meaningful-name] */f$sent1
   var o
   var i
   var a
@@ -5870,7 +5870,7 @@ function ec(e, t) {
           f.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 5:
-          if (_f$sent9 = f.sent, o = f$sent.findIndex(function (e) {
+          if (f$sent1 = f.sent, o = f$sent.findIndex(function (e) {
             return e.id === t
           }), !(i = f$sent.get(o))) {
             f.next = 36
@@ -5896,7 +5896,7 @@ function ec(e, t) {
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.jf(i.id, l$value.id))
         case 18:
           if (!l$value.parentId) {
-            $$_$$_$$_shared_widget_custom_shop.a(l$value.type, null === _f$sent9 || undefined === _f$sent9 ? undefined : _f$sent9.id)
+            $$_$$_$$_shared_widget_custom_shop.a(l$value.type, null === f$sent1 || undefined === f$sent1 ? undefined : f$sent1.id)
           }
         case 19:
           f.next = 13
@@ -5931,8 +5931,8 @@ function ec(e, t) {
 }
 function tc(e) {
   var /* [auto-meaningful-name] */_$sent
-  var /* [auto-meaningful-name] */_$sent4
-  var /* [auto-meaningful-name] */_$sent5
+  var /* [auto-meaningful-name] */_$sent1
+  var /* [auto-meaningful-name] */_$sent2
   var o
   var a
   var s
@@ -5955,11 +5955,11 @@ function tc(e) {
           _.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 5:
-          _$sent4 = _.sent
+          _$sent1 = _.sent
           _.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 8:
-          if (_$sent5 = _.sent, o = _$sent4.get(_$sent), !e.length || !o) {
+          if (_$sent2 = _.sent, o = _$sent1.get(_$sent), !e.length || !o) {
             _.next = 50
             break
           }
@@ -6001,7 +6001,7 @@ function tc(e) {
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.jf(s, u$value.id))
         case 34:
           if (!u$value.parentId) {
-            $$_$$_$$_shared_widget_custom_shop.a(u$value.type, null === _$sent5 || undefined === _$sent5 ? undefined : _$sent5.id)
+            $$_$$_$$_shared_widget_custom_shop.a(u$value.type, null === _$sent2 || undefined === _$sent2 ? undefined : _$sent2.id)
           }
         case 35:
           _.next = 15
@@ -6038,10 +6038,10 @@ function nc(e) {
   var /* [auto-meaningful-name] */$$_$$_widget_builtIn_types$c
   var s
   var /* [auto-meaningful-name] */E$sent
-  var /* [auto-meaningful-name] */_E$sent
-  var /* [auto-meaningful-name] */_E$sent2
+  var /* [auto-meaningful-name] */E$sent1
+  var /* [auto-meaningful-name] */E$sent2
   var p
-  var /* [auto-meaningful-name] */_E$sent3
+  var /* [auto-meaningful-name] */E$sent3
   var /* [auto-meaningful-name] */s$widget$attributes
   var /* [auto-meaningful-name] */s$widget$isGlobalWidget
   var g
@@ -6065,11 +6065,11 @@ function nc(e) {
           E.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
         case 8:
-          _E$sent = E.sent
+          E$sent1 = E.sent
           E.next = 11
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 11:
-          if (_E$sent2 = E.sent, (p = _E$sent > -1 ? _E$sent2.get(_E$sent) : undefined) && s) {
+          if (E$sent2 = E.sent, (p = E$sent1 > -1 ? E$sent2.get(E$sent1) : undefined) && s) {
             E.next = 15
             break
           }
@@ -6078,7 +6078,7 @@ function nc(e) {
           E.next = 17
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 17:
-          if (_E$sent3 = E.sent, s$widget$attributes = s.widget.attributes, s$widget$isGlobalWidget = s.widget.isGlobalWidget, g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$c, p.widgetIds, $$_$$_$$_shared_ui_language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$c), v = {
+          if (E$sent3 = E.sent, s$widget$attributes = s.widget.attributes, s$widget$isGlobalWidget = s.widget.isGlobalWidget, g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$c, p.widgetIds, $$_$$_$$_shared_ui_language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$c), v = {
             id: _,
             title: g,
             type: $$_$$_widget_builtIn_types.c,
@@ -6112,7 +6112,7 @@ function nc(e) {
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
             $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b.widgetIds))
           }
-          $$_$$_$$_shared_widget_custom_shop.a(v.type, null === _E$sent3 || undefined === _E$sent3 ? undefined : _E$sent3.id)
+          $$_$$_$$_shared_widget_custom_shop.a(v.type, null === E$sent3 || undefined === E$sent3 ? undefined : E$sent3.id)
         case 39:
         case "end":
           return E.stop()
@@ -6128,10 +6128,10 @@ function rc(e) {
   var /* [auto-meaningful-name] */$$_$$_widget_builtIn_types$a
   var s
   var /* [auto-meaningful-name] */E$sent
-  var /* [auto-meaningful-name] */_E$sent4
-  var /* [auto-meaningful-name] */_E$sent5
+  var /* [auto-meaningful-name] */E$sent1
+  var /* [auto-meaningful-name] */E$sent2
   var p
-  var /* [auto-meaningful-name] */_E$sent6
+  var /* [auto-meaningful-name] */E$sent3
   var h
   var /* [auto-meaningful-name] */s$widget$isGlobalWidget
   var g
@@ -6156,11 +6156,11 @@ function rc(e) {
           E.next = 9
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
         case 9:
-          _E$sent4 = E.sent
+          E$sent1 = E.sent
           E.next = 12
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 12:
-          if (_E$sent5 = E.sent, p = _E$sent4 > -1 ? _E$sent5.get(_E$sent4) : undefined) {
+          if (E$sent2 = E.sent, p = E$sent1 > -1 ? E$sent2.get(E$sent1) : undefined) {
             E.next = 16
             break
           }
@@ -6175,7 +6175,7 @@ function rc(e) {
           E.next = 20
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 20:
-          if (_E$sent6 = E.sent, h = Lodash.cloneDeep(s.widget.attributes), s$widget$isGlobalWidget = s.widget.isGlobalWidget, h.actionList.push({
+          if (E$sent3 = E.sent, h = Lodash.cloneDeep(s.widget.attributes), s$widget$isGlobalWidget = s.widget.isGlobalWidget, h.actionList.push({
             id: $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_$$_$$_unrestored_shared_1571_2636_144.a),
             name: $$_$$_$$_shared_ui_language.c(E$sent, "ActorStyleDialog.defaultActionName").toString(),
             styleList: [],
@@ -6217,7 +6217,7 @@ function rc(e) {
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = $$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
             $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b.widgetIds))
           }
-          $$_$$_$$_shared_widget_custom_shop.a(v.type, null === _E$sent6 || undefined === _E$sent6 ? undefined : _E$sent6.id)
+          $$_$$_$$_shared_widget_custom_shop.a(v.type, null === E$sent3 || undefined === E$sent3 ? undefined : E$sent3.id)
         case 43:
         case "end":
           return E.stop()
@@ -6230,8 +6230,8 @@ function oc(e) {
   var /* [auto-meaningful-name] */e$payload$screenId
   var /* [auto-meaningful-name] */e$payload$blockId
   var /* [auto-meaningful-name] */l$sent
-  var /* [auto-meaningful-name] */_l$sent4
-  var /* [auto-meaningful-name] */_l$sent5
+  var /* [auto-meaningful-name] */l$sent1
+  var /* [auto-meaningful-name] */l$sent2
   var s
   return RegeneratorRuntime.wrap(function (l) {
     for (;;) {
@@ -6247,13 +6247,13 @@ function oc(e) {
           l.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
         case 6:
-          _l$sent4 = l.sent
+          l$sent1 = l.sent
           l.next = 9
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 9:
-          if (_l$sent5 = l.sent, s = _l$sent5.findIndex(function (e) {
+          if (l$sent2 = l.sent, s = l$sent2.findIndex(function (e) {
             return e.id === e$payload$screenId
-          }), (null === _l$sent4 || undefined === _l$sent4 ? undefined : _l$sent4.id) !== e$payload$screenId) {
+          }), (null === l$sent1 || undefined === l$sent1 ? undefined : l$sent1.id) !== e$payload$screenId) {
             l.next = 16
             break
           }
@@ -6298,7 +6298,7 @@ function ic(e) {
   var /* [auto-meaningful-name] */e$payload$screenIds
   var /* [auto-meaningful-name] */l$sent
   var r
-  var /* [auto-meaningful-name] */_l$sent6
+  var /* [auto-meaningful-name] */l$sent1
   var i
   var a
   return RegeneratorRuntime.wrap(function (l) {
@@ -6316,7 +6316,7 @@ function ic(e) {
           l.next = 7
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
         case 7:
-          if (_l$sent6 = l.sent, Lodash.isEqual(r, e$payload$screenIds)) {
+          if (l$sent1 = l.sent, Lodash.isEqual(r, e$payload$screenIds)) {
             l.next = 16
             break
           }
@@ -6332,7 +6332,7 @@ function ic(e) {
           l.next = 13
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Aj($$_$$_$$_$$_unrestored_shared_1571_2636_738_66.a.List(i)))
         case 13:
-          a = e$payload$screenIds.indexOf(_l$sent6.id)
+          a = e$payload$screenIds.indexOf(l$sent1.id)
           l.next = 16
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Bi(a))
         case 16:
@@ -6389,7 +6389,7 @@ function sc(e) {
   var r
   var /* [auto-meaningful-name] */e$payload$widgetId
   var /* [auto-meaningful-name] */u$sent
-  var /* [auto-meaningful-name] */_u$sent
+  var /* [auto-meaningful-name] */u$sent1
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$customEvent
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$customEvent$emit
   return RegeneratorRuntime.wrap(function (u) {
@@ -6407,11 +6407,11 @@ function sc(e) {
           u.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.i)
         case 6:
-          _u$sent = u.sent
+          u$sent1 = u.sent
           u.next = 9
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Xh(e$payload$widgetId))
         case 9:
-          if (_u$sent) {
+          if (u$sent1) {
             setTimeout(function () {
               return $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItemByWidgetId(e$payload$widgetId || u$sent.id)
             }, 10)
@@ -6505,8 +6505,8 @@ function lc(e) {
 }
 function uc() {
   var /* [auto-meaningful-name] */o$sent
-  var /* [auto-meaningful-name] */_o$sent6
-  var /* [auto-meaningful-name] */_o$sent7
+  var /* [auto-meaningful-name] */o$sent1
+  var /* [auto-meaningful-name] */o$sent2
   var r
   return RegeneratorRuntime.wrap(function (o) {
     for (;;) {
@@ -6519,20 +6519,20 @@ function uc() {
           o.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
         case 5:
-          _o$sent6 = o.sent
+          o$sent1 = o.sent
           o.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.e, o$sent)
         case 8:
-          if (!(_o$sent7 = o.sent) || !_o$sent7.pack_label) {
+          if (!(o$sent2 = o.sent) || !o$sent2.pack_label) {
             o.next = 14
             break
           }
           o.next = 12
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ji({
-            apkIcon: _o$sent7.apk_icon,
-            apkName: _o$sent7.apk_name,
-            packLabel: _o$sent7.pack_label,
-            apkSplash: _o$sent7.app_splash || ""
+            apkIcon: o$sent2.apk_icon,
+            apkName: o$sent2.apk_name,
+            packLabel: o$sent2.pack_label,
+            apkSplash: o$sent2.app_splash || ""
           }))
         case 12:
           o.next = 16
@@ -6540,7 +6540,7 @@ function uc() {
         case 14:
           o.next = 16
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ji({
-            apkName: _o$sent6
+            apkName: o$sent1
           }))
         case 16:
           if (!($$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide"))) {
@@ -6567,8 +6567,8 @@ function uc() {
 }
 function dc() {
   var /* [auto-meaningful-name] */r$sent
-  var /* [auto-meaningful-name] */_r$sent2
-  var /* [auto-meaningful-name] */_r$sent3
+  var /* [auto-meaningful-name] */r$sent1
+  var /* [auto-meaningful-name] */r$sent2
   return RegeneratorRuntime.wrap(function (r) {
     for (;;) {
       switch (r.prev = r.next) {
@@ -6586,14 +6586,14 @@ function dc() {
           r.next = 9
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 9:
-          _r$sent2 = r.sent
+          r$sent1 = r.sent
           r.next = 12
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.A)
         case 12:
-          _r$sent3 = r.sent
+          r$sent2 = r.sent
           $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("CancelWorkPack", {
-            workId: _r$sent2,
-            apkName: _r$sent3.apkName
+            workId: r$sent1,
+            apkName: r$sent2.apkName
           })
         case 14:
         case "end":
@@ -6644,12 +6644,12 @@ function fc() {
   var f
   var h
   var m
-  var /* [auto-meaningful-name] */_k$sent
+  var /* [auto-meaningful-name] */k$sent1
   var _
   var v
   var b
   var /* [auto-meaningful-name] */b$value
-  var /* [auto-meaningful-name] */_k$sent2
+  var /* [auto-meaningful-name] */k$sent2
   var O
   var w
   var /* [auto-meaningful-name] */w$value
@@ -6659,7 +6659,7 @@ function fc() {
   var I
   var j
   var N
-  var /* [auto-meaningful-name] */_k$sent3
+  var /* [auto-meaningful-name] */k$sent3
   return RegeneratorRuntime.wrap(function (k) {
     for (;;) {
       switch (k.prev = k.next) {
@@ -6748,16 +6748,16 @@ function fc() {
             y: 0
           })
         case 45:
-          if (!(_k$sent = k.sent)) {
+          if (!(k$sent1 = k.sent)) {
             k.next = 53
             break
           }
-          _k$sent.title = m.name
-          _k$sent.attributes.cloudDbId = m.id
-          _k$sent.attributes.fields = m.fields
-          a.push(_k$sent)
+          k$sent1.title = m.name
+          k$sent1.attributes.cloudDbId = m.id
+          k$sent1.attributes.fields = m.fields
+          a.push(k$sent1)
           k.next = 53
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(hs, _k$sent)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(hs, k$sent1)
         case 53:
           f++
           k.next = 41
@@ -6787,16 +6787,16 @@ function fc() {
           k.next = 66
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Bt, b$value.title)
         case 66:
-          _k$sent2 = k.sent
-          b$value.attributes.cloudDbId = _k$sent2
+          k$sent2 = k.sent
+          b$value.attributes.cloudDbId = k$sent2
           k.next = 70
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Yt, _k$sent2, {
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Yt, k$sent2, {
             addItems: $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b$value.attributes.fields),
             editItems: [],
             deleteItems: []
           }, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
         case 70:
-          qt([_k$sent2], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
+          qt([k$sent2], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
         case 71:
           k.next = 61
           break
@@ -6884,8 +6884,8 @@ function fc() {
           k.next = 111
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
         case 111:
-          _k$sent3 = k.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateGlobalWidget(_k$sent3)
+          k$sent3 = k.sent
+          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateGlobalWidget(k$sent3)
         case 113:
         case "end":
           return k.stop()
@@ -6896,8 +6896,8 @@ function fc() {
 function hc() {
   var /* [auto-meaningful-name] */a$sent
   var t
-  var /* [auto-meaningful-name] */_a$sent10
-  var /* [auto-meaningful-name] */_a$sent11
+  var /* [auto-meaningful-name] */a$sent1
+  var /* [auto-meaningful-name] */a$sent2
   var o
   var i
   return RegeneratorRuntime.wrap(function (a) {
@@ -6912,7 +6912,7 @@ function hc() {
           a.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 6:
-          _a$sent10 = a.sent
+          a$sent1 = a.sent
           a.next = 9
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.K)
         case 9:
@@ -6931,7 +6931,7 @@ function hc() {
           }
           return a.abrupt("return")
         case 16:
-          if (_a$sent10) {
+          if (a$sent1) {
             a.next = 23
             break
           }
@@ -6952,7 +6952,7 @@ function hc() {
           a.next = 25
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.g, "dev")
         case 25:
-          if (_a$sent11 = a.sent) {
+          if (a$sent2 = a.sent) {
             a.next = 28
             break
           }
@@ -6961,7 +6961,7 @@ function hc() {
           if (o = false, i = false, t.forEach(function (e) {
             var /* [auto-meaningful-name] */e$attributes$cloudDbId = e.attributes.cloudDbId
             var n = e.id
-            var a = _a$sent11.find(function (e) {
+            var a = a$sent2.find(function (e) {
               return e.id === e$attributes$cloudDbId
             })
             if (a) {
@@ -7035,7 +7035,7 @@ function mc(e) {
   var d
   var /* [auto-meaningful-name] */m$sent
   var f
-  var /* [auto-meaningful-name] */_m$sent4
+  var /* [auto-meaningful-name] */m$sent1
   return RegeneratorRuntime.wrap(function (m) {
     for (;;) {
       switch (m.prev = m.next) {
@@ -7091,8 +7091,8 @@ function mc(e) {
             deleteItems: d
           }, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(m$sent) ? m$sent : undefined)
         case 18:
-          if ((_m$sent4 = m.sent).addItems) {
-            _m$sent4.addItems.forEach(function (e) {
+          if ((m$sent1 = m.sent).addItems) {
+            m$sent1.addItems.forEach(function (e) {
               e.id = e.id + ""
               e$payload$fields.forEach(function (t) {
                 if (e.key === t.key) {
@@ -7104,8 +7104,8 @@ function mc(e) {
           m.next = 22
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(zs, $_actions.Lg(e$payload$widgetId, "fields", e$payload$fields, false, true))
         case 22:
-          if (e$payload$setBlockValue && 1 === _m$sent4.addItems.length) {
-            e$payload$setBlockValue(_m$sent4.addItems[0].key)
+          if (e$payload$setBlockValue && 1 === m$sent1.addItems.length) {
+            e$payload$setBlockValue(m$sent1.addItems[0].key)
           }
           u.forEach(function (e) {
             var t = i$attributes$fields.find(function (t) {
@@ -7115,8 +7115,8 @@ function mc(e) {
               $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.n(e$payload$widgetId, t.key, e.key)
             }
           })
-          if (_m$sent4.deleteItems) {
-            _m$sent4.deleteItems.forEach(function (e) {
+          if (m$sent1.deleteItems) {
+            m$sent1.deleteItems.forEach(function (e) {
               var t = i$attributes$fields.find(function (t) {
                 return t.id === e.toString()
               })
@@ -7138,9 +7138,9 @@ function gc(e) {
   var n
   var r
   var o
-  var /* [auto-meaningful-name] */_c$sent3
+  var /* [auto-meaningful-name] */c$sent1
   var a
-  var /* [auto-meaningful-name] */_c$sent4
+  var /* [auto-meaningful-name] */c$sent2
   return RegeneratorRuntime.wrap(function (c) {
     for (;;) {
       switch (c.prev = c.next) {
@@ -7155,7 +7155,7 @@ function gc(e) {
           c.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(c$sent) ? c$sent : undefined)
         case 8:
-          if (_c$sent3 = c.sent, n = n.concat(_c$sent3.items), !((a = Math.ceil(_c$sent3.total / o)) > 1)) {
+          if (c$sent1 = c.sent, n = n.concat(c$sent1.items), !((a = Math.ceil(c$sent1.total / o)) > 1)) {
             c.next = 21
             break
           }
@@ -7168,8 +7168,8 @@ function gc(e) {
           c.next = 16
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(c$sent) ? c$sent : undefined)
         case 16:
-          _c$sent4 = c.sent
-          n = n.concat(_c$sent4.items)
+          c$sent2 = c.sent
+          n = n.concat(c$sent2.items)
         case 18:
           r++
           c.next = 13
@@ -7186,9 +7186,9 @@ function gc(e) {
 function _c(e) {
   var /* [auto-meaningful-name] */s$sent
   var /* [auto-meaningful-name] */e$payload$archiveId
-  var /* [auto-meaningful-name] */_s$sent3
-  var /* [auto-meaningful-name] */_s$sent3$content
-  var /* [auto-meaningful-name] */_s$sent4
+  var /* [auto-meaningful-name] */s$sent1
+  var /* [auto-meaningful-name] */s$sent1$content
+  var /* [auto-meaningful-name] */s$sent2
   var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_24_index$a$client
   return RegeneratorRuntime.wrap(function (s) {
     for (;;) {
@@ -7211,7 +7211,7 @@ function _c(e) {
           s.next = 9
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.e, e$payload$archiveId)
         case 9:
-          if (_s$sent3 = s.sent, !(_s$sent3$content = _s$sent3.content)) {
+          if (s$sent1 = s.sent, !(s$sent1$content = s$sent1.content)) {
             s.next = 32
             break
           }
@@ -7222,7 +7222,7 @@ function _c(e) {
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.cg())
         case 16:
           s.next = 18
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(rs, _s$sent3$content)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(rs, s$sent1$content)
         case 18:
           s.next = 20
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.dg())
@@ -7239,10 +7239,10 @@ function _c(e) {
           s.next = 28
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
         case 28:
-          _s$sent4 = s.sent
+          s$sent2 = s.sent
           s.next = 31
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.mj({
-            message: $$_$$_$$_shared_ui_language.c(_s$sent4, "History.revertSuccess").toString(),
+            message: $$_$$_$$_shared_ui_language.c(s$sent2, "History.revertSuccess").toString(),
             type: "success"
           }))
         case 31:
@@ -7264,9 +7264,9 @@ function vc(e) {
   var t
   var n
   var /* [auto-meaningful-name] */s$sent
-  var /* [auto-meaningful-name] */_s$sent5
-  var /* [auto-meaningful-name] */_s$sent6
-  var /* [auto-meaningful-name] */_s$sent7
+  var /* [auto-meaningful-name] */s$sent1
+  var /* [auto-meaningful-name] */s$sent2
+  var /* [auto-meaningful-name] */s$sent3
   return RegeneratorRuntime.wrap(function (s) {
     for (;;) {
       switch (s.prev = s.next) {
@@ -7283,15 +7283,15 @@ function vc(e) {
           s.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_9.sb)
         case 8:
-          _s$sent5 = s.sent
+          s$sent1 = s.sent
           s.next = 11
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_9.S)
         case 11:
-          _s$sent6 = s.sent
+          s$sent2 = s.sent
           s.next = 14
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_9.tb)
         case 14:
-          if (_s$sent7 = s.sent, !(t.length > 0)) {
+          if (s$sent3 = s.sent, !(t.length > 0)) {
             s.next = 18
             break
           }
@@ -7315,15 +7315,15 @@ function vc(e) {
           s.t0 = s.catch(18)
           console.error(s.t0)
         case 29:
-          if (s.prev = 29, !(_s$sent5.length > 0)) {
+          if (s.prev = 29, !(s$sent1.length > 0)) {
             s.next = 35
             break
           }
           s.next = 33
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.v, e, _s$sent5)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.v, e, s$sent1)
         case 33:
           s.next = 35
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ih(_s$sent5))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ih(s$sent1))
         case 35:
           s.next = 40
           break
@@ -7332,15 +7332,15 @@ function vc(e) {
           s.t1 = s.catch(29)
           console.error(s.t1)
         case 40:
-          if (s.prev = 40, !(_s$sent6.length > 0)) {
+          if (s.prev = 40, !(s$sent2.length > 0)) {
             s.next = 46
             break
           }
           s.next = 44
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.e, e, _s$sent6)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.e, e, s$sent2)
         case 44:
           s.next = 46
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.mf(_s$sent6))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.mf(s$sent2))
         case 46:
           s.next = 51
           break
@@ -7349,15 +7349,15 @@ function vc(e) {
           s.t2 = s.catch(40)
           console.error(s.t2)
         case 51:
-          if (s.prev = 51, !(_s$sent7.length > 0)) {
+          if (s.prev = 51, !(s$sent3.length > 0)) {
             s.next = 57
             break
           }
           s.next = 55
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.w, e, _s$sent7)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.w, e, s$sent3)
         case 55:
           s.next = 57
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Jh(_s$sent7))
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Jh(s$sent3))
         case 57:
           s.next = 62
           break
@@ -7394,12 +7394,12 @@ function bc(e) {
 function yc(e) {
   var /* [auto-meaningful-name] */e$payload$callback
   var /* [auto-meaningful-name] */u$sent
-  var /* [auto-meaningful-name] */_u$sent2
+  var /* [auto-meaningful-name] */u$sent1
   var o
-  var /* [auto-meaningful-name] */_u$sent3
-  var /* [auto-meaningful-name] */_u$sent4
-  var /* [auto-meaningful-name] */_u$sent5
-  var /* [auto-meaningful-name] */_u$sent6
+  var /* [auto-meaningful-name] */u$sent2
+  var /* [auto-meaningful-name] */u$sent3
+  var /* [auto-meaningful-name] */u$sent4
+  var /* [auto-meaningful-name] */u$sent5
   return RegeneratorRuntime.wrap(function (u) {
     for (;;) {
       switch (u.prev = u.next) {
@@ -7412,7 +7412,7 @@ function yc(e) {
           u.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 6:
-          if (_u$sent2 = u.sent, o = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_u$sent2), u$sent.title) {
+          if (u$sent1 = u.sent, o = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(u$sent1), u$sent.title) {
             u.next = 29
             break
           }
@@ -7421,25 +7421,25 @@ function yc(e) {
             break
           }
           u.next = 12
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.g, _u$sent2, 0)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.g, u$sent1, 0)
         case 12:
-          if (!(_u$sent3 = u.sent) || !_u$sent3.data) {
+          if (!(u$sent2 = u.sent) || !u$sent2.data) {
             u.next = 22
             break
           }
           u.next = 16
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(fetch, _u$sent3.data.bcmc_url)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(fetch, u$sent2.data.bcmc_url)
         case 16:
-          _u$sent4 = u.sent
+          u$sent3 = u.sent
           u.next = 19
-          return _u$sent4.json()
+          return u$sent3.json()
         case 19:
-          _u$sent5 = u.sent
+          u$sent4 = u.sent
           u.next = 22
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ti({
-            title: _u$sent5.title,
-            desc: _u$sent5.description || $$_$$_$$_$$_unrestored_shared_1571_2636_328.c,
-            img: _u$sent5.coverUrl || $$_$$_$$_$$_unrestored_shared_1571_2636_37_515
+            title: u$sent4.title,
+            desc: u$sent4.description || $$_$$_$$_$$_unrestored_shared_1571_2636_328.c,
+            img: u$sent4.coverUrl || $$_$$_$$_$$_unrestored_shared_1571_2636_37_515
           }))
         case 22:
           u.next = 29
@@ -7448,10 +7448,10 @@ function yc(e) {
           u.next = 26
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
         case 26:
-          _u$sent6 = u.sent
+          u$sent5 = u.sent
           u.next = 29
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Ti({
-            title: _u$sent6,
+            title: u$sent5,
             desc: $$_$$_$$_$$_unrestored_shared_1571_2636_328.c,
             img: $$_$$_$$_$$_unrestored_shared_1571_2636_37_515
           }))

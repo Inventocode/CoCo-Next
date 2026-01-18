@@ -11,17 +11,17 @@ var r
 import * as o from "./19"
 import * as /* [auto-meaningful-name] */$_559_326 from "./559/326"
 import * as /* [auto-meaningful-name] */$_559_216 from "./559/216"
-import /* [auto-meaningful-name] */_$_559_ from "./559/216"
+import /* [auto-meaningful-name] */$_559_2161 from "./559/216"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_80_index from "./80/index"
-import /* [auto-meaningful-name] */_$_80_index from "./80/index"
+import /* [auto-meaningful-name] */$_80_index1 from "./80/index"
 var h = false
 var p = {
   load: function () {
-    var e = $_559_326.a(_$_559_.mark(function e(t) {
+    var e = $_559_326.a($_559_2161.mark(function e(t) {
       var a
-      return _$_559_.wrap(function (e) {
+      return $_559_2161.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
@@ -31,7 +31,7 @@ var p = {
               }
               return e.abrupt("return")
             case 2:
-              a = _React.lazy(function () {
+              a = React1.lazy(function () {
                 return Promise.reject(new Error("module (key: 2647) not found!")).then(function (e) {
                   return {
                     default: e.KittenVideoPlayer
@@ -40,9 +40,9 @@ var p = {
               });
               (r = document.createElement("div")).id = "CUI-kitten-video-player-container"
               document.body.appendChild(r)
-              _$_80_index.render(_React.createElement(_React.Suspense, {
+              $_80_index1.render(React1.createElement(React1.Suspense, {
                 fallback: null
-              }, _React.createElement(a, o.a({
+              }, React1.createElement(a, o.a({
                 getPlayerRef: function (e) {
                   return i = e
                 }
@@ -84,7 +84,7 @@ var p = {
         a.style.transform = f.transform
         a.addEventListener("transitionend", function () {
           if (r) {
-            _$_80_index.unmountComponentAtNode(r)
+            $_80_index1.unmountComponentAtNode(r)
             document.body.removeChild(r)
             r = undefined
             t(undefined)

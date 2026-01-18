@@ -1,6 +1,7 @@
 const path = require("path")
 const rspack = require("@rspack/core")
-const HtmlWebpackPlugin = require("html-webpack-plugin")
+const { merge } = require("webpack-merge")
+const SWC = require("@swc/types")
 
 /**
  * @typedef {Object} PageInfo
@@ -21,25 +22,61 @@ const PAGES = [
  * @typedef {Object} CommonEnv
  * @property {string} [publicPath]
  * @property {boolean} [noHelper]
+ * @property {boolean} [analyze]
  */
 
 /**
+ * @param {rspack.Configuration} moreConfig
  * @param {CommonEnv} env
  * @returns {rspack.Configuration}
  */
-module.exports = (env) => {
+module.exports = (moreConfig, env) => {
+
+    const { noHelper = false, analyze } = env
+    const injectHelper = !noHelper
+
+    return merge(
+        injectHelper ? helperConfig() : {},
+        analyze ? analyzeConfig() : {},
+        commonConfig(moreConfig.mode == "development", env),
+        moreConfig
+    )
+}
+
+/**
+ * @param {boolean} development
+ * @param {CommonEnv} env
+ * @returns {rspack.Configuration}
+ */
+function commonConfig(development, env) {
 
     const { publicPath = "/", noHelper = false } = env
     const injectHelper = !noHelper
 
+    /** @type {SWC.Config} */
+    const commonSwcConfig = {
+        jsc: {
+            parser: {
+                syntax: "typescript",
+                tsx: true,
+                decorators: true
+            },
+            transform: {
+                react: {
+                    runtime: "automatic",
+                    development,
+                    refresh: development
+                }
+            },
+            target: "esnext",
+            externalHelpers: true
+        }
+    }
+
     /** @type {rspack.Configuration} */
-    const config = {
+    const commonConfig = {
         stats: "minimal",
         entry: {
-            ...(injectHelper ? {
-                "proxy": path.resolve(__dirname, "helper", "proxy"),
-                "login": path.resolve(__dirname, "helper", "login", "index")
-            } : {}),
             "editor-service-worker": {
                 import: path.resolve(__dirname, "src", "editor-service-worker", "index"),
                 filename: "editor/main.sw.js",
@@ -59,21 +96,23 @@ module.exports = (env) => {
         },
         module: {
             rules: [
-                injectHelper && {
-                    test: /[\\\/]unrestored[\\\/].*\.[tj]sx?$/i,
-                    exclude: /[\\\/]node_modules[\\\/]/,
-                    loader: "string-replace-loader",
-                    options: {
-                        multiple: [
-                            {
-                                search: /https:\/\/("[\s]*\+[\s]*(_|[0-9]|[a-z]|[A-Z])+[\s]*\+[\s]*")?coco\.codemao\.cn/g,
-                                replace: "\" + location.origin + \""
-                            }, {
-                                search: /https:\/\/"[\s]*\.concat\((_|[0-9]|[a-z]|[A-Z])+[\s]*,[\s]*"coco\.codemao\.cn"\)/g,
-                                replace: "\" + location.origin"
-                            }
-                        ]
-                    }
+                {
+                    test: /\.tsx?$/i,
+                    exclude: [
+                        /[\\\/]node_modules[\\\/]/i,
+                        /[\\\/]unrestored[\\\/]/i,
+                        /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i
+                    ],
+                    loader: "builtin:swc-loader",
+                    options: commonSwcConfig
+                }, {
+                    test: /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i,
+                    loader: "builtin:swc-loader",
+                    options: merge(commonSwcConfig, {
+                        jsc: {
+                            target: "es5"
+                        }
+                    })
                 }, {
                     test: /\.css$/i,
                     loader: "css-loader",
@@ -101,6 +140,21 @@ module.exports = (env) => {
         },
         resolve: {
             extensions: [".ts", ".tsx", ".js", ".jsx"],
+            alias: {
+                "lodash-es": require.resolve("lodash"),
+                "lodash._arrayeach": require.resolve("lodash/_arrayeach"),
+                "lodash._baseeach": require.resolve("lodash/_baseeach"),
+                "lodash._getnative": require.resolve("lodash/_getnative"),
+                "lodash.camelcase": require.resolve("lodash/camelcase"),
+                "lodash.clonedeep": require.resolve("lodash/clonedeep"),
+                "lodash.foreach": require.resolve("lodash/foreach"),
+                "lodash.isarguments": require.resolve("lodash/isarguments"),
+                "lodash.isarray": require.resolve("lodash/isarray"),
+                "lodash.isequal": require.resolve("lodash/isequal"),
+                "lodash.keys": require.resolve("lodash/keys"),
+                "lodash.merge": require.resolve("lodash/merge"),
+                "lodash.throttle": require.resolve("lodash/throttle")
+            },
             fallback: {
                 "fs": false,
                 "path": require.resolve("path/"),
@@ -111,28 +165,15 @@ module.exports = (env) => {
             new rspack.ProgressPlugin(),
             new rspack.ProvidePlugin({
                 process: "process/"
-            }),
-            ...["codemao_login/index.html", "get-qq-code.html", "get-weixin-code.html"].map(
-                filename => injectHelper && new HtmlWebpackPlugin({
-                    filename,
-                    template: "helper/login/index.html",
-                    chunks: ["proxy", "login"]
-                })
-            ),
-            // 这个界面不注入代理程序，在这个界面登录 Cookie 可以直接设置到 .codemao.cn 上
-            injectHelper && new HtmlWebpackPlugin({
-                filename: "original_login/index.html",
-                template: "helper/login/original.html",
-                chunks: []
             })
         ]
     }
 
     for (const { name, filenames = [`${name}/index.html`] } of PAGES) {
-        config.plugins ??= []
+        commonConfig.plugins ??= []
         for (const filename of filenames) {
-            config.plugins.push(
-                new HtmlWebpackPlugin({
+            commonConfig.plugins.push(
+                new rspack.HtmlRspackPlugin({
                     filename,
                     template: `src/${name}/index.html`,
                     chunks: [...(injectHelper ? ["proxy"] : []), name]
@@ -141,5 +182,89 @@ module.exports = (env) => {
         }
     }
 
-    return config
+    return commonConfig
+}
+
+/**
+ * @returns {rspack.Configuration}
+ */
+function helperConfig() {
+
+    /** @type {rspack.Configuration} */
+    const helperConfig = {
+        entry: {
+            "proxy": path.resolve(__dirname, "helper", "proxy"),
+            "login": path.resolve(__dirname, "helper", "login", "index")
+        },
+        module: {
+            rules: [
+                {
+                    test: /[\\\/]unrestored[\\\/].*\.[tj]sx?$/i,
+                    exclude: /[\\\/]node_modules[\\\/]/,
+                    loader: "string-replace-loader",
+                    options: {
+                        multiple: [
+                            {
+                                search: /https:\/\/("[\s]*\+[\s]*(_|[0-9]|[a-z]|[A-Z])+[\s]*\+[\s]*")?coco\.codemao\.cn/g,
+                                replace: "\" + location.origin + \""
+                            }, {
+                                search: /https:\/\/"[\s]*\.concat\((_|[0-9]|[a-z]|[A-Z])+[\s]*,[\s]*"coco\.codemao\.cn"\)/g,
+                                replace: "\" + location.origin"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        plugins: [
+            ...["codemao_login/index.html", "get-qq-code.html", "get-weixin-code.html"].map(
+                filename => new rspack.HtmlRspackPlugin({
+                    filename,
+                    template: "helper/login/index.html",
+                    chunks: ["proxy", "login"]
+                })
+            ),
+            // 这个界面不注入代理程序，在这个界面登录 Cookie 可以直接设置到 .codemao.cn 上
+            new rspack.HtmlRspackPlugin({
+                filename: "original_login/index.html",
+                template: "helper/login/original.html",
+                chunks: []
+            })
+        ]
+    }
+
+    return helperConfig
+}
+
+/**
+ * @returns {rspack.Configuration}
+ */
+function analyzeConfig() {
+
+    const VisualizerPlugin2 = require("webpack-visualizer-plugin2")
+    const { BundleAnalyzerPlugin } = require("webpack-bundle-analyzer")
+    const { RsdoctorRspackPlugin } = require("@rsdoctor/rspack-plugin")
+
+    /** @type {rspack.Configuration} */
+    const analyzeConfig = {
+        plugins: [
+            new VisualizerPlugin2({
+                filename: "../.build-info/analyze/pie-chart.html"
+            }),
+            new BundleAnalyzerPlugin({
+                analyzerMode: "static",
+                reportFilename: "../.build-info/analyze/block-chart.html",
+                openAnalyzer: false
+            }),
+            new RsdoctorRspackPlugin({
+                disableClientServer: true,
+                output: {
+                    mode: "brief",
+                    reportDir: path.resolve(__dirname, "dist", ".build-info", "analyze")
+                }
+            })
+        ]
+    }
+
+    return analyzeConfig
 }

@@ -8,17 +8,17 @@
 
 export { c as a }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "./7"
 import * as /* [auto-meaningful-name] */Html2canvas from "html2canvas"
-import /* [auto-meaningful-name] */_Html2canvas from "html2canvas"
+import /* [auto-meaningful-name] */Html2canvas1 from "html2canvas"
 function c(e, t) {
   return l.apply(this, arguments)
 }
 function l() {
-  return (l = i.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (l = i.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -29,7 +29,7 @@ function l() {
             })
           case 3:
             e.next = 5
-            return _Html2canvas(t, {
+            return Html2canvas1(t, {
               scale: n,
               useCORS: true,
               logging: false,

@@ -228,7 +228,7 @@ var f = function () {
   }
   e.prototype.render_ = function () {
     var /* [auto-meaningful-name] */this$border_rect
-    var /* [auto-meaningful-name] */_this$border_rect
+    var /* [auto-meaningful-name] */this$border_rect1
     if (this.visible_) {
       if (this.image_element) {
         this.size_.width = parseFloat(this.image_element.getAttribute("width") || "0") || 0
@@ -241,8 +241,8 @@ var f = function () {
           if (!(null === (this$border_rect = this.border_rect) || undefined === this$border_rect)) {
             this$border_rect.setAttribute("width", "" + this.size_.width)
           }
-          if (!(null === (_this$border_rect = this.border_rect) || undefined === _this$border_rect)) {
-            _this$border_rect.setAttribute("height", "" + this.size_.height)
+          if (!(null === (this$border_rect1 = this.border_rect) || undefined === this$border_rect1)) {
+            this$border_rect1.setAttribute("height", "" + this.size_.height)
           }
         } else {
           this.size_.width = 0
@@ -320,8 +320,8 @@ var f = function () {
         this.value_before_editing = undefined
         this.runtime_data.editing = undefined
       }
-      var /* [auto-meaningful-name] */_this$runtime_data$editing = this.runtime_data.editing
-      if (this$runtime_data$editing && this$runtime_data$editing !== _this$runtime_data$editing && this.events.is_enabled()) {
+      var /* [auto-meaningful-name] */this$runtime_data$editing1 = this.runtime_data.editing
+      if (this$runtime_data$editing && this$runtime_data$editing !== this$runtime_data$editing1 && this.events.is_enabled()) {
         if (this$runtime_data$editing.value_before_editing) {
           this$runtime_data$editing.value_before_editing = undefined
         }
@@ -333,7 +333,7 @@ var f = function () {
           block_id: this.source_block.id
         }))
       }
-      if (_this$runtime_data$editing && _this$runtime_data$editing !== this$runtime_data$editing && this.events.is_enabled()) {
+      if (this$runtime_data$editing1 && this$runtime_data$editing1 !== this$runtime_data$editing && this.events.is_enabled()) {
         this.events.fire(this.ui_event_factory({
           type: s.UIEventType.FIELD_FOCUS_CHANGE,
           workspace_id: this.source_block.workspace.id,

@@ -16,10 +16,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1039 from "./1039"
-import /* [auto-meaningful-name] */_$_ from "./1039"
-var WO = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_10391 from "./1039"
+var WO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -39,7 +39,7 @@ var WO = _React.memo(function (e) {
     className: $_397.imageBox
   }, React.createElement("img", {
     alt: "actor style",
-    src: Et.mb(c.source) || c.source || _$_
+    src: Et.mb(c.source) || c.source || $_10391
   }), React.createElement("div", {
     className: $_397.edit
   }, React.createElement("div", {

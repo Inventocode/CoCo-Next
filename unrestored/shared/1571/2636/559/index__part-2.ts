@@ -9,7 +9,7 @@
 import { j } from "./index__part-1"
 import p from "../8"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
 import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
@@ -33,7 +33,7 @@ function J(e, t) {
     })
     return r
   }(e).map(function (e, n) {
-    if (_React.isValidElement(e)) {
+    if (React1.isValidElement(e)) {
       var r
       var /* [auto-meaningful-name] */e$props
       var /* [auto-meaningful-name] */e$key = e.key
@@ -45,15 +45,15 @@ function J(e, t) {
         key: s,
         eventKey: s
       }
-      return _React.cloneElement(e, c)
+      return React1.cloneElement(e, c)
     }
     return e
   })
 }
 function $(e) {
-  var t = _React.useRef(e)
+  var t = React1.useRef(e)
   t.current = e
-  var n = _React.useCallback(function () {
+  var n = React1.useCallback(function () {
     for (var /* [auto-meaningful-name] */t$current, /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length), o = 0; o < arguments$length; o++) {
       r[o] = arguments[o]
     }
@@ -66,18 +66,18 @@ var te = function (e, t) {
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$children = e.children
   var i = $$_54.a(e, ee)
-  var a = _React.useContext(j)
+  var a = React1.useContext(j)
   var /* [auto-meaningful-name] */a$prefixCls = a.prefixCls
   var /* [auto-meaningful-name] */a$mode = a.mode
   var /* [auto-meaningful-name] */a$rtl = a.rtl
-  return _React.createElement("ul", $$_19.a({
+  return React1.createElement("ul", $$_19.a({
     className: p(a$prefixCls, a$rtl && "".concat(a$prefixCls, "-rtl"), "".concat(a$prefixCls, "-sub"), "".concat(a$prefixCls, "-").concat("inline" === a$mode ? "inline" : "vertical"), e$className)
   }, i, {
     "data-menu-list": true,
     ref: t
   }), e$children)
 }
-var ne = _React.forwardRef(te)
+var ne = React1.forwardRef(te)
 ne.displayName = "SubMenuList"
 var re = ne
 export { J }

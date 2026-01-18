@@ -15,10 +15,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_528 from "./528"
-import /* [auto-meaningful-name] */_$_ from "./528"
-var Yj = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_5281 from "./528"
+var Yj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$md5 = e.md5
   var /* [auto-meaningful-name] */e$name = e.name
@@ -29,17 +29,17 @@ var Yj = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$urls = e.urls
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var d = _React.useState(false)
+  var d = React1.useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
   var _ = e$urls && e$urls.length > 1
-  var v = _React.useRef(null)
+  var v = React1.useRef(null)
   var b = e$cdnUrl
   if (e$frameMap && e$frameMap[e$cdnUrl]) {
     b = e$frameMap[e$cdnUrl].frames[0]
   }
-  var y = _React.useState(b)
+  var y = React1.useState(b)
   var E = $_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
@@ -106,9 +106,9 @@ var Yj = _React.memo(function (e) {
       }
     },
     key: t,
-    className: N(_$_.imageMallItem, e$isSelect && _$_.selected)
+    className: N($_5281.imageMallItem, e$isSelect && $_5281.selected)
   }, React.createElement("div", {
-    className: _$_.playArea,
+    className: $_5281.playArea,
     onMouseOver: function () {
       if (_) {
         T()
@@ -128,23 +128,23 @@ var Yj = _React.memo(function (e) {
     alt: e$name,
     src: "".concat(O, "?imageMogr2/thumbnail/!200x200r/blur/1x0/quality/100|imageslim")
   })), React.createElement("div", {
-    className: _$_.infoArea
+    className: $_5281.infoArea
   }, React.createElement("div", {
-    className: _$_.nameArea
+    className: $_5281.nameArea
   }, e$name), _ && React.createElement("div", {
-    className: _$_.groupIcon
+    className: $_5281.groupIcon
   }, React.createElement($_13_index.j, {
     type: "icon-group"
   })), e$isAdded ? React.createElement("div", {
-    className: _$_.add
+    className: $_5281.add
   }, $_710_index$a$formatMessage({
     id: "Resource.Added"
   })) : React.createElement("div", {
-    className: N(_$_.btn, _$_.unselect)
+    className: N($_5281.btn, $_5281.unselect)
   }, React.createElement($_13_index.j, {
     type: "icon-style-selected"
   })), React.createElement("div", {
-    className: _$_.materialTypeIcon
+    className: $_5281.materialTypeIcon
   }, React.createElement($_13_index.j, {
     type: "icon-material-".concat(j.substr(1))
   })))))

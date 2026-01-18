@@ -23,11 +23,11 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_294_index from "./294/index"
 import "./2612"
-var fA = _React.memo(function (e) {
-  var t = _React.useState(false)
+var fA = React1.memo(function (e) {
+  var t = React1.useState(false)
   var n = $_10_index.a(t, 2)
   var r = n[0]
   var o = n[1]
@@ -37,8 +37,8 @@ var fA = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$onBlur = e.onBlur
   var /* [auto-meaningful-name] */e$suffix = e.suffix
-  var d = _React.useRef(null)
-  _React.useEffect(function () {
+  var d = React1.useRef(null)
+  React1.useEffect(function () {
     if (r) {
       var /* [auto-meaningful-name] */d$current = d.current
       if (!(null === d$current || undefined === d$current)) {
@@ -82,7 +82,7 @@ var hA = function (e) {
   var /* [auto-meaningful-name] */e$item$cdnUrl = e$item.cdnUrl
   var /* [auto-meaningful-name] */e$item$urls = e$item.urls
   var /* [auto-meaningful-name] */e$item$id = e$item.id
-  var s = _React.useState(e$item$urls && e$item$urls.length > 1 ? e$item$urls[0] : e$item$cdnUrl)
+  var s = React1.useState(e$item$urls && e$item$urls.length > 1 ? e$item$urls[0] : e$item$cdnUrl)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]

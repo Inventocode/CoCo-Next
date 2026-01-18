@@ -25,10 +25,10 @@ export { L as m }
 export { P as h }
 export { B as b }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "./7"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as c from "./15"
 import * as l from "./64"
 import * as /* [auto-meaningful-name] */$_286 from "./286"
@@ -51,10 +51,10 @@ function f(e, t, n) {
   return h.apply(this, arguments)
 }
 function h() {
-  return (h = i.a(_RegeneratorRuntime.mark(function e(t, n, r) {
+  return (h = i.a(RegeneratorRuntime1.mark(function e(t, n, r) {
     var i
     var a
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -101,7 +101,7 @@ function g(e, t) {
     var n
     var r
     try {
-      var o = _Color(t)
+      var o = Color1(t)
       n = o.rgbNumber()
       r = o.alpha()
     } catch (i) {
@@ -131,8 +131,8 @@ function b(e, t, n) {
   return y.apply(this, arguments)
 }
 function y() {
-  return (y = i.a(_RegeneratorRuntime.mark(function e(t, n, r) {
-    return _RegeneratorRuntime.wrap(function (e) {
+  return (y = i.a(RegeneratorRuntime1.mark(function e(t, n, r) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -289,12 +289,12 @@ function C(e, t, n, r) {
   return T.apply(this, arguments)
 }
 function T() {
-  return (T = i.a(_RegeneratorRuntime.mark(function e(t, n, r, i) {
+  return (T = i.a(RegeneratorRuntime1.mark(function e(t, n, r, i) {
     var a
     var s
     var /* [auto-meaningful-name] */s$is_error
     var /* [auto-meaningful-name] */s$value
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -330,12 +330,12 @@ function S(e, t, n, r, o, i, a) {
   return A.apply(this, arguments)
 }
 function A() {
-  return (A = i.a(_RegeneratorRuntime.mark(function e(t, n, r, i, a, s, c) {
+  return (A = i.a(RegeneratorRuntime1.mark(function e(t, n, r, i, a, s, c) {
     var l
     var /* [auto-meaningful-name] */l$is_error
     var /* [auto-meaningful-name] */l$value
     var f
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

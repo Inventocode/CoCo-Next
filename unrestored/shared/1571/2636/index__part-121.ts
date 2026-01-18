@@ -19,13 +19,13 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
 import * as /* [auto-meaningful-name] */$_213 from "./213"
-import /* [auto-meaningful-name] */_$_ from "./213"
+import /* [auto-meaningful-name] */$_2131 from "./213"
 var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
 var YO = ""
-var KO = _React.memo(function (e) {
+var KO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fileId" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -35,19 +35,19 @@ var KO = _React.memo(function (e) {
     return e.project.selectedWidgetId
   })
   var s = $_16_index.d()
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(false)
+  var p = React1.useState(false)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = _React.useState(undefined)
+  var b = React1.useState(undefined)
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = _React.useState(false)
+  var w = React1.useState(false)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
@@ -99,7 +99,7 @@ var KO = _React.memo(function (e) {
       })
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     return function () {
       if (cE) {
         cE.stop()
@@ -115,7 +115,7 @@ var KO = _React.memo(function (e) {
       }
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (cE) {
       cE.stop()
     }
@@ -136,10 +136,10 @@ var KO = _React.memo(function (e) {
   var L = function () {
     return React.createElement($_1213.a, {
       content: React.createElement("div", {
-        className: _$_.soundPopover,
+        className: $_2131.soundPopover,
         onClick: M
       }, React.createElement($_13_index.B, {
-        className: _$_.content,
+        className: $_2131.content,
         onChange: R,
         accept: $_135.h
       }, React.createElement($_13_index.j, {
@@ -147,7 +147,7 @@ var KO = _React.memo(function (e) {
       }), React.createElement("span", null, $_710_index$a$formatMessage({
         id: "Resource.upload"
       }))), React.createElement("div", {
-        className: _$_.content,
+        className: $_2131.content,
         onClick: k
       }, React.createElement($_13_index.j, {
         type: "icon-open-resource-library"
@@ -159,22 +159,22 @@ var KO = _React.memo(function (e) {
       visible: T,
       onVisibleChange: D
     }, React.createElement("div", {
-      className: _$_.soundBtn
+      className: $_2131.soundBtn
     }, $_710_index$a$formatMessage({
       id: "Resource.Replace"
     })))
   }
   return React.createElement($_13_index.i, {
-    className: N(_$_.formItemWrapper, _$_.changeSoundFile)
+    className: N($_2131.formItemWrapper, $_2131.changeSoundFile)
   }, React.createElement("div", {
-    className: _$_.title
+    className: $_2131.title
   }, $_710_index$a$formatMessage({
     id: "AudioWidget.source"
   })), React.createElement("div", {
-    className: _$_.soundBox
+    className: $_2131.soundBox
   }, React.createElement("div", {
     tabIndex: -1,
-    className: N(_$_.soundInfo, (null === E || undefined === E ? undefined : E.id) && _$_.soundBgGround),
+    className: N($_2131.soundInfo, (null === E || undefined === E ? undefined : E.id) && $_2131.soundBgGround),
     onMouseEnter: function () {
       v(true)
     },
@@ -189,15 +189,15 @@ var KO = _React.memo(function (e) {
     }
   }, (null === E || undefined === E ? undefined : E.id) ? React.createElement(React.Fragment, null, React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
     type: "icon-sound",
-    className: _$_.iconSound
+    className: $_2131.iconSound
   }), React.createElement("div", {
-    className: _$_.soundName
+    className: $_2131.soundName
   }, null === E || undefined === E ? undefined : E.name), React.createElement("div", {
-    className: _$_.soundDuration
+    className: $_2131.soundDuration
   }, te.w(null === E || undefined === E ? undefined : E.duration))), React.createElement("div", {
-    className: N(_$_.playCover, (g || u) && _$_.visible)
+    className: N($_2131.playCover, (g || u) && $_2131.visible)
   }, React.createElement("div", {
-    className: _$_.soundDelate,
+    className: $_2131.soundDelate,
     onClick: function () {
       if (cE) {
         cE.stop()
@@ -208,57 +208,57 @@ var KO = _React.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: "icon-delete"
   })), React.createElement("div", {
-    className: _$_.soundPlayBox,
+    className: $_2131.soundPlayBox,
     onClick: x
   }, u ? React.createElement("div", {
-    className: _$_.soundPauseIconBox
+    className: $_2131.soundPauseIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-sound-pause",
-    className: _$_.soundDefaultIcon
+    className: $_2131.soundDefaultIcon
   }), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.rightWrapper)
+    className: N($_2131.progressWrapper, $_2131.rightWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.rightCircle),
+    className: N($_2131.circleProgress, $_2131.rightCircle),
     style: {
       animationDuration: "".concat(null === E || undefined === E ? undefined : E.duration, "s")
     }
   })), React.createElement("div", {
-    className: N(_$_.progressWrapper, _$_.leftWrapper)
+    className: N($_2131.progressWrapper, $_2131.leftWrapper)
   }, React.createElement("div", {
-    className: N(_$_.circleProgress, _$_.leftCircle),
+    className: N($_2131.circleProgress, $_2131.leftCircle),
     style: {
       animationDuration: "".concat(null === E || undefined === E ? undefined : E.duration, "s")
     }
   }))) : React.createElement("div", {
-    className: _$_.soundIconBox
+    className: $_2131.soundIconBox
   }, React.createElement("div", {
-    className: _$_.soundPlayIconBox
+    className: $_2131.soundPlayIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-sound-play",
-    className: _$_.soundPlayIcon
+    className: $_2131.soundPlayIcon
   })))), React.createElement("div", {
-    className: _$_.soundName
+    className: $_2131.soundName
   }, null === E || undefined === E ? undefined : E.name), L())) : React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
     type: "icon-sound",
-    className: _$_.iconDefaultSound
+    className: $_2131.iconDefaultSound
   }), React.createElement("div", {
-    className: N(_$_.cover, g && _$_.visible)
+    className: N($_2131.cover, g && $_2131.visible)
   }, L())))))
 })
-var qO = _React.memo(function (e) {
+var qO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "audioVolume" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, "changeAudioVolume")
+    className: N($_2131.formItemWrapper, "changeAudioVolume")
   }, React.createElement("div", {
     className: "coco-form-item-label"
   }, $_710_index$a$formatMessage({
     id: "AudioWidget.volume"
   })), React.createElement($_13_index.x, {
-    className: _$_.volumeSlider,
+    className: $_2131.volumeSlider,
     value: o,
     min: $_135.g,
     max: $_135.f,
@@ -270,20 +270,20 @@ var qO = _React.memo(function (e) {
     isShowRightInput: true
   }))
 })
-var XO = _React.memo(function (e) {
+var XO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "audioRate" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, "changeAudioVolume")
+    className: N($_2131.formItemWrapper, "changeAudioVolume")
   }, React.createElement("div", {
     className: "coco-form-item-label"
   }, $_710_index$a$formatMessage({
     id: "AudioWidget.rate"
   })), React.createElement($_13_index.x, {
-    className: _$_.volumeSlider,
+    className: $_2131.volumeSlider,
     value: o,
     min: $_135.e,
     max: $_135.d,

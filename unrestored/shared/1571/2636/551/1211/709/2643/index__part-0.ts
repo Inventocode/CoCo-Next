@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_54 from "../../../../54"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_19 from "../../../../19"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 var s = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
   return typeof e
 } : function (e) {

@@ -101,14 +101,14 @@ var s = function () {
     })), t.source_block = this.source_block, undefined != n && (t.name = n), undefined != this.source_block && this.source_block.rendered && t.init(), (0, a.is_field_dropdown)(t) && t.prefix_field && (e = this.insert_field_at(e, t.prefix_field)), this.fieldRow.splice(e, 0, t), ++e, (0, a.is_field_dropdown)(t) && t.suffix_field && (e = this.insert_field_at(e, t.suffix_field)), undefined != this.source_block && this.source_block.rendered && this.source_block.render(), e) : 0
   }
   e.prototype.remove_field = function (e) {
-    for (var /* [auto-meaningful-name] */this$source_block, /* [auto-meaningful-name] */_this$source_block, r = 0, /* [auto-meaningful-name] */this$fieldRow$length = this.fieldRow.length; r < this$fieldRow$length; r++) {
+    for (var /* [auto-meaningful-name] */this$source_block, /* [auto-meaningful-name] */this$source_block1, r = 0, /* [auto-meaningful-name] */this$fieldRow$length = this.fieldRow.length; r < this$fieldRow$length; r++) {
       var o = this.fieldRow[r]
       if (o.name === e) {
         o.dispose()
         this.fieldRow.splice(r, 1)
         if (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.rendered) {
-          if (!(null === (_this$source_block = this.source_block) || undefined === _this$source_block)) {
-            _this$source_block.render()
+          if (!(null === (this$source_block1 = this.source_block) || undefined === this$source_block1)) {
+            this$source_block1.render()
           }
         }
         return true

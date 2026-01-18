@@ -27,13 +27,13 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
 var wt = function (e) {
   var t
   var /* [auto-meaningful-name] */e$permission
-  var r = _React.useState(false)
+  var r = React1.useState(false)
   var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -41,7 +41,7 @@ var wt = function (e) {
   var c = function () {
     a(false)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!e.parentVisible) {
       a(false)
     }
@@ -149,16 +149,16 @@ var Ct = React.memo(function () {
     return e.oTState.readOnlyInviteUrl
   })
   var m = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var g = _React.useState(false)
+  var g = React1.useState(false)
   var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = _React.useState($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
+  var w = React1.useState($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
   var C = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(w, 2)
   var T = C[0]
   var j = C[1]
-  var R = _React.useRef(null)
-  var k = _React.useState(false)
+  var R = React1.useRef(null)
+  var k = React1.useState(false)
   var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(k, 2)
   var D = x[0]
   var M = x[1]
@@ -372,10 +372,10 @@ var Ct = React.memo(function () {
     var /* [auto-meaningful-name] */e$is_author
     var /* [auto-meaningful-name] */e$edit_permission
   })))
-  var G = _React.useCallback(function () {
+  var G = React1.useCallback(function () {
     return T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? d : T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly ? p : ""
   }, [d, p, T])
-  var W = _React.useCallback(function () {
+  var W = React1.useCallback(function () {
     var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(n) {
       var /* [auto-meaningful-name] */e$sent
       var o
@@ -524,11 +524,11 @@ var St = React.memo(function () {
   var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.id
   })
-  var t = _React.useState(false)
+  var t = React1.useState(false)
   var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(t, 2)
   var r = n[0]
   var o = n[1]
-  var i = _React.useState(false)
+  var i = React1.useState(false)
   var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -536,7 +536,7 @@ var St = React.memo(function () {
   var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.oTState.collWorkId
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (u) {
       c(true)
       le(u).then(function () {

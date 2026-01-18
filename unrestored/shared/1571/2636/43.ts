@@ -15,7 +15,7 @@ export { g as e }
 export { _ as c }
 export { v as d }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as a from "./7"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
@@ -42,9 +42,9 @@ function h() {
   return m.apply(this, arguments)
 }
 function m() {
-  return (m = a.a(_RegeneratorRuntime.mark(function e() {
+  return (m = a.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

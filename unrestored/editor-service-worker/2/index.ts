@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_0_index from "./0/index"
-import /* [auto-meaningful-name] */_$_0_index from "./0/index"
+import /* [auto-meaningful-name] */$_0_index1 from "./0/index"
 function i(t, e, r, n, o, i, a) {
   try {
     var c = t[i](a)
@@ -40,12 +40,12 @@ function a(t) {
 var c
 var u = new Map()
 function s() {
-  return (s = a(_$_0_index.mark(function t(e) {
+  return (s = a($_0_index1.mark(function t(e) {
     var /* [auto-meaningful-name] */t$sent
     var /* [auto-meaningful-name] */t$sent$id
     var /* [auto-meaningful-name] */t$sent$data
     var a
-    return _$_0_index.wrap(function (t) {
+    return $_0_index1.wrap(function (t) {
       for (;;) {
         switch (t.prev = t.next) {
           case 0:

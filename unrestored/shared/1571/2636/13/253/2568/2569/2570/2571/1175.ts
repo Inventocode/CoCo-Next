@@ -4,7 +4,7 @@
  * 模块 ID：1175
  */
 
-var r = require("../../../../../797/101/2466/2467/727/index")
+var r = require("../../../../../797/101/2466/1436/727/index")
 var i = require("../../../../2583/2584/479")
 module.exports = function (e) {
   if (!i(e)) {

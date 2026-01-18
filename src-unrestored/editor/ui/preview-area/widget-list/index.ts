@@ -33,10 +33,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1514 from "../../../../../unrestored/shared/1571/2636/1514"
-import /* [auto-meaningful-name] */_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_ from "../../../../../unrestored/shared/1571/2636/1514"
-var bv = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15141 from "../../../../../unrestored/shared/1571/2636/1514"
+var bv = React1.memo(function (e) {
   var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.userInfo
@@ -90,11 +90,11 @@ var Ev = React.memo(function (e) {
     }
   })
   var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(true)
+  var p = React1.useState(true)
   var m = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
@@ -102,7 +102,7 @@ var Ev = React.memo(function (e) {
   var y = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
     return !$$_$$_$$_$$_shared_widget_custom_type.e(e.type)
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = function () {
       var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
         return RegeneratorRuntime.wrap(function (e) {
@@ -131,7 +131,7 @@ var Ev = React.memo(function (e) {
       r($$_$$_$$_redux_common_actions.Sh([]))
     }
   }, [r, n])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (0 === y.length && 0 === o.length && 0 === i.length) {
       v(true)
     } else {
@@ -169,7 +169,7 @@ var Ev = React.memo(function (e) {
       height: "100%"
     }
   }, React.createElement("img", {
-    src: _$$_$$_$$_$$_$$_unrestored_shared_1571_2636_,
+    src: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15141,
     alt: "loading"
   }))), React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtnContainer
@@ -189,7 +189,7 @@ var Ov = React.memo(function (e) {
   var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return !!e.oTState.collWorkId
   })
-  var o = _React.useState(yv.BASIC)
+  var o = React1.useState(yv.BASIC)
   var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
@@ -233,8 +233,8 @@ var wv = React.memo(function () {
   var /* [auto-meaningful-name] */e$showIcon = e.showIcon
   var i = undefined !== e$showIcon && e$showIcon
   var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var s = _React.useRef(null)
-  _React.useEffect(function () {
+  var s = React1.useRef(null)
+  React1.useEffect(function () {
     if (s.current) {
       clearTimeout(s.current)
     }
@@ -258,8 +258,8 @@ var Tv = 92 === Cv
 var Sv = React.memo(function () {
   var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
   var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var n = _React.useRef(null)
-  var r = _React.useRef(null)
+  var n = React1.useRef(null)
+  var r = React1.useRef(null)
   var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.project.playing
   })
@@ -269,15 +269,15 @@ var Sv = React.memo(function () {
   var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
     return e.common.isHoverBlockArea
   })
-  var s = _React.useState(0)
+  var s = React1.useState(0)
   var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState(false)
+  var d = React1.useState(false)
   var p = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */n$current = n.current
     var r = function (e) {
       var n
@@ -312,7 +312,7 @@ var Sv = React.memo(function () {
       }
     }
   }, [t, n])
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     if (r.current) {
       var e = Math.max(window.innerWidth / 3, 514)
       r.current.style.width = "".concat(e, "px")
@@ -329,7 +329,7 @@ var Sv = React.memo(function () {
       }
     }
   }, [t])
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     if (r.current && n.current) {
       var e = n.current.offsetWidth + Cv
       e = Math.max(e, 514)

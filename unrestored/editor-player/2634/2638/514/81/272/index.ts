@@ -57,9 +57,9 @@ var a = function () {
       return e
     }
     e = this$coefficients[0]
-    var /* [auto-meaningful-name] */_this$coefficients$length = this$coefficients.length
+    var /* [auto-meaningful-name] */this$coefficients$length1 = this$coefficients.length
     var /* [auto-meaningful-name] */this$field = this.field
-    for (o = 1; o < _this$coefficients$length; o++) {
+    for (o = 1; o < this$coefficients$length1; o++) {
       e = n.a.addOrSubtract(this$field.multiply(t, e), this$coefficients[o])
     }
     return e

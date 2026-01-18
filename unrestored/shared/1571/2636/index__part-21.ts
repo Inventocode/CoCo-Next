@@ -11,10 +11,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_566 from "./566"
-import /* [auto-meaningful-name] */_$_ from "./566"
-var gn = _React.memo(function () {
+import /* [auto-meaningful-name] */$_5661 from "./566"
+var gn = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
@@ -24,35 +24,35 @@ var gn = _React.memo(function () {
   var /* [auto-meaningful-name] */n$progress = n.progress
   return React.createElement($_13_index.f, {
     visible: n$visible,
-    className: _$_.container,
+    className: $_5661.container,
     onClose: function () {
       t($$_$$_$$_$$_src_editor_redux_common_actions.Qi(false))
     }
   }, React.createElement("div", {
-    className: _$_.main
+    className: $_5661.main
   }, React.createElement("div", {
-    className: _$_.progress
+    className: $_5661.progress
   }, React.createElement("div", {
-    className: _$_.progressText,
+    className: $_5661.progressText,
     style: {
       width: "".concat(n$progress, "%")
     }
   }, "".concat(n$progress, "%")), React.createElement("div", {
-    className: _$_.progressBg
+    className: $_5661.progressBg
   }, React.createElement("div", {
-    className: _$_.progressInner,
+    className: $_5661.progressInner,
     style: {
       width: "".concat(n$progress, "%")
     }
   }))), React.createElement("div", null, React.createElement("p", {
-    className: _$_.text
+    className: $_5661.text
   }, $_710_index$a$formatMessage({
     id: "ProjectSaveProgressDialog.content"
   }))), React.createElement("div", {
-    className: _$_.footer
+    className: $_5661.footer
   }, React.createElement($_13_index.d, {
     type: "primary",
-    className: _$_.cancelBtn,
+    className: $_5661.cancelBtn,
     onClick: function () {
       t($$_$$_$$_$$_src_editor_redux_common_actions.yf())
     }

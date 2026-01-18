@@ -11,7 +11,7 @@ var o = require("../1699/271")
 var i = require("../1686/194")
 var a = require("../1581/334")
 var s = require("../1705/231")
-var /* [auto-meaningful-name] */require$$_1705_300_index$f = require("../1705/300/index").f
+var /* [auto-meaningful-name] */require$$_1705_300$f = require("../1705/300").f
 var l = require("./1239")
 var /* [auto-meaningful-name] */i$Symbol = i.Symbol
 if (o && "function" == typeof i$Symbol && (!("description" in i$Symbol.prototype) || undefined !== i$Symbol().description)) {
@@ -30,7 +30,7 @@ if (o && "function" == typeof i$Symbol && (!("description" in i$Symbol.prototype
   var /* [auto-meaningful-name] */f$toString = f.toString
   var m = "Symbol(test)" == String(i$Symbol("test"))
   var g = /^Symbol\((.*)\)[^)]+$/
-  require$$_1705_300_index$f(f, "description", {
+  require$$_1705_300$f(f, "description", {
     configurable: true,
     get: function () {
       var e = s(this) ? this.valueOf() : this

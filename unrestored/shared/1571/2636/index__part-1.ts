@@ -7,9 +7,9 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_80_index from "./80/index"
-import /* [auto-meaningful-name] */_$_80_index from "./80/index"
+import /* [auto-meaningful-name] */$_80_index1 from "./80/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import "./481/index";
 (function () {

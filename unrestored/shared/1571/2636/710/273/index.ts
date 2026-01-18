@@ -16,7 +16,7 @@ export { m as b }
 import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_2681_2641_index from "../../2681/2641/index"
 import * as /* [auto-meaningful-name] */$_804 from "./804"
-import /* [auto-meaningful-name] */_$_ from "./804"
+import /* [auto-meaningful-name] */$_8041 from "./804"
 import * as /* [auto-meaningful-name] */$$_$$_2681_2640 from "../../2681/2640"
 import * as /* [auto-meaningful-name] */$$_$$_2681_275 from "../../2681/275"
 var u = function () {
@@ -99,7 +99,7 @@ function _(e) {
     }
   }
 }
-var A = _$_ || $_804
+var A = $_8041 || $_804
 function g(e) {
   if (undefined === e) {
     e = {

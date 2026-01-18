@@ -8,11 +8,11 @@
 
 var ve
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import "../541/index"
 import * as /* [auto-meaningful-name] */$$_28_303_index from "../28/303/index"
-import /* [auto-meaningful-name] */_$$_28_303_index from "../28/303/index"
+import /* [auto-meaningful-name] */$$_28_303_index1 from "../28/303/index"
 import "./879"
 var /* [auto-meaningful-name] */__EMPTY_ADVANCE_TEXT_TIP_ID__ = "@__EMPTY_ADVANCE_TEXT_TIP_ID__@"
 var Le = function () {
@@ -26,8 +26,8 @@ var Pe = function (e) {
   var /* [auto-meaningful-name] */e$duration = e.duration
   var r = undefined === e$duration ? 500 : e$duration
   var /* [auto-meaningful-name] */e$className = e.className
-  var c = _React.useRef(null)
-  _React.useEffect(function () {
+  var c = React1.useRef(null)
+  React1.useEffect(function () {
     return function () {
       Le()
     }
@@ -52,7 +52,7 @@ var Pe = function (e) {
       ve = setTimeout(function () {
         !function (e, t, n) {
           Le()
-          __EMPTY_ADVANCE_TEXT_TIP_ID__ = "coco-advanced-text-tip—" + _$$_28_303_index()
+          __EMPTY_ADVANCE_TEXT_TIP_ID__ = "coco-advanced-text-tip—" + $$_28_303_index1()
           var r = document.createElement("div")
           r.innerHTML = e
           r.className = "coco-advanced-text-tip"

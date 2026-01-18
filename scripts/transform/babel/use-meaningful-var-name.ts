@@ -112,6 +112,7 @@ function renameIfNeeds(
     if (!hasMarkingComment) {
         path.addComment("leading", MARKING_COMMENT_CONTENT)
     }
+    scope.rename(oldName, processedNewName)
 }
 
 function upperFirst(text: string) {

@@ -15,7 +15,7 @@ var c = require("./256")
 var l = require("./716")
 var u = require("./832/index")
 var d = require("./833")
-var p = require("../1686/246/index")
+var p = require("../1686/246")
 var f = require("../1686/633/index")
 var h = p("isConcatSpreadable")
 var m = f >= 51 || !o(function () {

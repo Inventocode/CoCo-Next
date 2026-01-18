@@ -8,9 +8,9 @@
 
 export { a }
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
-var o = _React.createContext(null)
+import /* [auto-meaningful-name] */React1 from "react"
+var o = React1.createContext(null)
 function a() {
-  return _React.useContext(o)
+  return React1.useContext(o)
 }
 export default a
