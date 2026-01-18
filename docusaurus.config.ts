@@ -88,7 +88,7 @@ const config: Config = {
           type: 'docSidebar',
           sidebarId: 'techSidebar',
           position: 'left',
-          label: '技术分析',
+          label: '技术信息',
         },
         {
           href: 'https://gitee.com/oldsquaw-coco-next/CoCo-Next',
@@ -112,7 +112,7 @@ const config: Config = {
               to: '/guide/introduction',
             },
             {
-              label: '技术分析',
+              label: '技术信息',
               to: '/tech/fork',
             },
           ],
@@ -121,8 +121,8 @@ const config: Config = {
           title: '社区',
           items: [
             {
-              label: 'QQ：907170983',
-              href: 'https://wpa.qq.com/msgrd?uin=907170983',
+              label: 'QQ：1065215133',
+              href: 'https://wpa.qq.com/msgrd?uin=1065215133',
             },
           ],
         },

@@ -1,8 +1,8 @@
 ---
-sidebar_position: 6
+sidebar_position: 7
 ---
 
-# ⚖ 许可
+# ⚖️ 许可
 
 CoCo Next 代码遵循 [GNU Affero 通用共公许可证 (AGPL) 3.0](https://www.gnu.org/licenses/agpl-3.0.html#license-text)。
 
