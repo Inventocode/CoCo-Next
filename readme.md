@@ -1,6 +1,6 @@
 # CoCo 源代码计划
 
-![QQ-907170983](https://img.shields.io/badge/QQ-907170983-blue?style=flat-square)
+![QQ-1065215133](https://img.shields.io/badge/QQ-1065215133-blue?style=flat-square)
 
 还原编程猫 CoCo 编辑器、CoCo Player 等的代码。
 
