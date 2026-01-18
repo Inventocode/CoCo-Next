@@ -18,66 +18,66 @@ import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_193 from "./193"
-import /* [auto-meaningful-name] */_$_ from "./193"
+import /* [auto-meaningful-name] */$_1931 from "./193"
 var SL = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$item$data
-  var n = _React.useState(false)
+  var n = React1.useState(false)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
   var a = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement("div", {
-    className: _$_.item
+    className: $_1931.item
   }, React.createElement("div", {
     onClick: function () {
       i(!o)
     },
-    className: _$_.date
+    className: $_1931.date
   }, React.createElement("div", {
-    className: _$_.text
+    className: $_1931.text
   }, " ", e.item.date), React.createElement("div", {
-    className: N(_$_.icon, o && _$_.fold)
+    className: N($_1931.icon, o && $_1931.fold)
   }, React.createElement($_13_index.j, {
     type: "icon-dropdown-down"
   }))), !o && (e$item$data = e.item.data, React.createElement("ul", null, e$item$data.map(function (t) {
     return React.createElement("li", {
-      className: N(_$_.data, e.selectedId === t.id && _$_.selected),
+      className: N($_1931.data, e.selectedId === t.id && $_1931.selected),
       key: t.id
     }, React.createElement("div", {
-      className: _$_.icon
+      className: $_1931.icon
     }, React.createElement("div", {
-      className: _$_.dot_area
+      className: $_1931.dot_area
     }, React.createElement("div", {
-      className: _$_.dot
+      className: $_1931.dot
     })), React.createElement("div", {
-      className: _$_.line_area
+      className: $_1931.line_area
     }, React.createElement("div", {
-      className: N(_$_.line, e.selectedId === t.id && _$_.selected)
+      className: N($_1931.line, e.selectedId === t.id && $_1931.selected)
     }))), React.createElement("div", {
-      className: _$_.details
+      className: $_1931.details
     }, React.createElement("div", {
-      className: N(_$_.time, e.selectedId === t.id && _$_.selected)
+      className: N($_1931.time, e.selectedId === t.id && $_1931.selected)
     }, t.time), React.createElement("div", {
-      className: _$_.type
+      className: $_1931.type
     }, t.saveInfo.saveType === Qu.b.ByUser ? React.createElement(React.Fragment, null, React.createElement("img", {
       src: t.saveInfo.avatarUrl,
-      className: _$_.avatar,
+      className: $_1931.avatar,
       alt: ""
     }), React.createElement("div", {
-      className: N(_$_.text, _$_.name)
+      className: N($_1931.text, $_1931.name)
     }, t.saveInfo.name), React.createElement("div", {
-      className: N(_$_.save_text, _$_.save_type)
+      className: N($_1931.save_text, $_1931.save_type)
     }, $_710_index$a$formatMessage({
       id: "History.save"
     }))) : React.createElement("div", {
-      className: N(_$_.save_text, _$_.save_type)
+      className: N($_1931.save_text, $_1931.save_type)
     }, $_710_index$a$formatMessage({
       id: "History.autoSave"
     })))), React.createElement("div", {
-      className: _$_.button_area
+      className: $_1931.button_area
     }, React.createElement($_748_index.a, {
       placement: "bottom",
       title: $_710_index$a$formatMessage({
@@ -91,10 +91,10 @@ var SL = React.memo(function (e) {
         return void a($$_$$_$$_$$_src_editor_redux_common_actions.si(n))
         var n
       },
-      className: _$_.button
+      className: $_1931.button
     }, React.createElement($_13_index.j, {
       type: "icon-btn-fallback",
-      className: _$_.icon
+      className: $_1931.icon
     }))), React.createElement($_748_index.a, {
       placement: "bottom",
       title: $_710_index$a$formatMessage({
@@ -102,18 +102,18 @@ var SL = React.memo(function (e) {
       }),
       trigger: ["hover", "click"]
     }, React.createElement("div", {
-      className: N(_$_.button, t.id === e.selectedId && _$_.selected),
+      className: N($_1931.button, t.id === e.selectedId && $_1931.selected),
       onClick: function () {
         e.setSelected(t.id)
       }
     }, React.createElement($_13_index.j, {
       type: "icon-btn-overview",
-      className: _$_.icon
+      className: $_1931.icon
     })))))
   }))))
 })
 var AL = React.memo(function () {
-  var e = _React.useState("")
+  var e = React1.useState("")
   var t = $_10_index.a(e, 2)
   var n = t[0]
   var r = t[1]
@@ -123,42 +123,42 @@ var AL = React.memo(function () {
   var i = $_16_index.e(function (e) {
     return e.project.id
   })
-  var a = _React.useState([])
+  var a = React1.useState([])
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useState([])
+  var u = React1.useState([])
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var b = _React.useState(undefined)
+  var b = React1.useState(undefined)
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = _React.useState(false)
+  var w = React1.useState(false)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
   var j = function (e) {
     r(e)
   }
-  var R = _React.useCallback(function () {
+  var R = React1.useCallback(function () {
     r("")
     g($$_$$_$$_$$_src_editor_redux_common_actions.tj(false))
   }, [g])
   var k = function (e) {
     return e < 10 ? "0".concat(e) : String(e)
   }
-  var x = _React.useCallback(function (e) {
+  var x = React1.useCallback(function (e) {
     var t = new Date(e)
     return {
       date: "".concat(t.getFullYear(), "年").concat(t.getMonth() + 1, "月").concat(t.getDate(), "日"),
       time: "".concat(k(t.getHours()), ":").concat(k(t.getMinutes()), ":").concat(k(t.getSeconds()))
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (i !== E) {
       l([])
       m([])
@@ -167,10 +167,10 @@ var AL = React.memo(function () {
       R()
     }
   }, [i, E, R])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     A(false)
   }, [n])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (E && o) {
       if (E.includes(Qu.v)) {
         l([])
@@ -224,20 +224,20 @@ var AL = React.memo(function () {
   }, [o, E, x, g, $_710_index$a$formatMessage])
   var D = function () {
     return React.createElement("div", {
-      className: N(_$_.historyBar, "" === n && _$_.fixedBar)
+      className: N($_1931.historyBar, "" === n && $_1931.fixedBar)
     }, React.createElement("div", {
-      className: _$_.header
+      className: $_1931.header
     }, $_710_index$a$formatMessage({
       id: "History.historyVersion"
     }), React.createElement("div", {
       onClick: R
     }, React.createElement($_94_index.a, {
-      className: _$_.icon,
+      className: $_1931.icon,
       type: "icon-close"
     }))), React.createElement("div", {
-      className: _$_.content
+      className: $_1931.content
     }, 0 === p.length ? React.createElement("div", {
-      className: _$_.empty
+      className: $_1931.empty
     }, React.createElement(we, {
       type: "image-text",
       text: $_710_index$a$formatMessage({
@@ -256,22 +256,22 @@ var AL = React.memo(function () {
     var e = "?archiveId=".concat(n)
     var t = origin + "/editor" + e
     return React.createElement("div", {
-      className: _$_.historyDialog
+      className: $_1931.historyDialog
     }, React.createElement("div", {
-      className: _$_.historyPreview
+      className: $_1931.historyPreview
     }, React.createElement("div", {
-      className: _$_.previewDialog
+      className: $_1931.previewDialog
     }, T && React.createElement(React.Fragment, null, React.createElement("div", {
-      className: _$_.previewHeader
+      className: $_1931.previewHeader
     }, React.createElement("p", {
-      className: _$_.projectName
+      className: $_1931.projectName
     }, function () {
       var e
       return (null === (e = c.find(function (e) {
         return e.id === n
       })) || undefined === e ? undefined : e.work_name) || ""
     }()), React.createElement("p", {
-      className: _$_.projectTime
+      className: $_1931.projectTime
     }, function () {
       var e
       var t = null === (e = c.find(function (e) {
@@ -286,12 +286,12 @@ var AL = React.memo(function () {
       onClick: function () {
         return r("")
       },
-      className: _$_.close
+      className: $_1931.close
     }, React.createElement($_94_index.a, {
       type: "icon-close",
-      className: _$_.icon
+      className: $_1931.icon
     }))), React.createElement("div", {
-      className: _$_.previewIframe
+      className: $_1931.previewIframe
     }, React.createElement("iframe", {
       title: "previewAppCraft",
       height: "100%",

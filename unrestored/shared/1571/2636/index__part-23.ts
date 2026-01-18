@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_738_index from "./738/index"
@@ -25,22 +25,22 @@ import * as Tn from "./68"
 import * as Sn from "./55"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_618 from "./618"
-import /* [auto-meaningful-name] */_$_ from "./618"
+import /* [auto-meaningful-name] */$_6181 from "./618"
 var Nn = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$vibrating = e.vibrating
   var /* [auto-meaningful-name] */e$scale = e.scale
   return React.createElement("div", {
-    className: N(_$_.deviceFrameContainer, _$_.galaxy5),
+    className: N($_6181.deviceFrameContainer, $_6181.galaxy5),
     style: {
       transform: "scale(".concat(e$scale, ")")
     }
   }, React.createElement("div", {
-    className: N(_$_.deviceFrame, {
+    className: N($_6181.deviceFrame, {
       vibrate: e$vibrating
     })
   }, e$children, React.createElement("div", {
-    className: _$_.mask
+    className: $_6181.mask
   })))
 })
 var Rn = React.memo(function () {
@@ -58,20 +58,20 @@ var Rn = React.memo(function () {
   })
   var o = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = _React.useState(false)
+  var a = React1.useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useRef()
-  var d = _React.useRef()
-  var p = _React.useRef(null)
-  var m = _React.useRef(null)
-  var g = _React.useRef(null)
-  var v = _React.useState(null)
+  var u = React1.useRef()
+  var d = React1.useRef()
+  var p = React1.useRef(null)
+  var m = React1.useRef(null)
+  var g = React1.useRef(null)
+  var v = React1.useState(null)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = _React.useState(1)
+  var O = React1.useState(1)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var A = w[1]
@@ -91,7 +91,7 @@ var Rn = React.memo(function () {
     d.current = 0
     l(false)
   }
-  var R = _React.useCallback(function (e) {
+  var R = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data = e.data
     var /* [auto-meaningful-name] */e$data$id = e$data.id
     var /* [auto-meaningful-name] */e$data$tab = e$data.tab
@@ -101,7 +101,7 @@ var Rn = React.memo(function () {
       o($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$data$id, "defaultValue", e$data$value))
     }
   }, [o])
-  var k = _React.useCallback(function (e) {
+  var k = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data$type = e.data.type
     localStorage.removeItem("".concat(e$data$type, "DialogPermission"))
     o($$_$$_$$_$$_src_editor_redux_common_actions.Ej({
@@ -115,7 +115,7 @@ var Rn = React.memo(function () {
       }
     }))
   }, [o])
-  var x = _React.useCallback(function (e) {
+  var x = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data = e.data
     var n = ""
     var /* [auto-meaningful-name] */e$data$widgetType = e$data.widgetType
@@ -166,14 +166,14 @@ var Rn = React.memo(function () {
       })
     }
   }, [o, $_710_index$a$formatMessage, r])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     Q.add(Tn.b.DEVICE_VIBRATE, j)
     Q.add(Tn.b.DEVICE_NOT_VIBRATE, N)
     Q.add(Tn.b.PLAYER_DATA_WATCH, R)
     Q.add(Tn.b.RUNTIME_LOG, x)
     Q.add(Tn.b.PLAYER_PERMISSION, k)
   }, [x, R, k])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e() {
       o($$_$$_$$_$$_src_editor_redux_common_actions.vi(!navigator.onLine))
     }
@@ -184,7 +184,7 @@ var Rn = React.memo(function () {
       window.removeEventListener("offline", e)
     }
   }, [o])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!e) {
       if (u.current) {
         window.clearTimeout(u.current)
@@ -193,7 +193,7 @@ var Rn = React.memo(function () {
       l(false)
     }
   }, [e, o])
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     if (e && p.current && m.current) {
       var /* [auto-meaningful-name] */p$current$clientWidth = p.current.clientWidth
       var /* [auto-meaningful-name] */p$current$clientHeight = p.current.clientHeight
@@ -214,10 +214,10 @@ var Rn = React.memo(function () {
     style: {
       display: e ? undefined : "none"
     },
-    className: _$_.wrapper,
+    className: $_6181.wrapper,
     ref: p
   }, React.createElement("div", {
-    className: _$_.deviceFrameWrapper
+    className: $_6181.deviceFrameWrapper
   }, React.createElement(Nn, {
     vibrating: c && e,
     scale: C
@@ -230,7 +230,7 @@ var Rn = React.memo(function () {
     sandbox: "allow-forms allow-modals allow-popups allow-same-origin allow-scripts",
     src: "".concat("/editor/editor-player.html").concat(L).concat(P)
   }))), React.createElement("div", {
-    className: _$_.emulatorWrapper,
+    className: $_6181.emulatorWrapper,
     ref: g
   }, React.createElement($_738_index.a, {
     messageWindow: y

@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../1705/86/index")
-var /* [auto-meaningful-name] */require$$_1705_386$f = require("../1705/386").f
+var /* [auto-meaningful-name] */require$$_1705_386_index$f = require("../1705/386/index").f
 var i = require("../1597/256")
 var a = require("../1581/310")
 var s = require("./1096")
@@ -21,7 +21,7 @@ r({
   target: "String",
   proto: true,
   forced: !(!u && !f && !!function () {
-    var e = require$$_1705_386$f(String.prototype, "startsWith")
+    var e = require$$_1705_386_index$f(String.prototype, "startsWith")
     return e && !e.writable
   }()) && !f
 }, {

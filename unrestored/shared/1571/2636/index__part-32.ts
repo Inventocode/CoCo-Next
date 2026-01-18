@@ -11,21 +11,21 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as kn from "./75"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
 import * as /* [auto-meaningful-name] */$_1054 from "./1054"
-import /* [auto-meaningful-name] */_$_ from "./1054"
+import /* [auto-meaningful-name] */$_10541 from "./1054"
 var Wd = React.memo(function () {
-  var e = _React.useRef(null)
-  var t = _React.useRef(null)
-  var n = _React.useRef(null)
+  var e = React1.useRef(null)
+  var t = React1.useRef(null)
+  var n = React1.useRef(null)
   var r = $_16_index.e(function (e) {
     return e.common.stageRulerVisible
   })
   var o = $_16_index.e(function (e) {
     return e.common.stageScale
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (n.current && r) {
       var i = Lodash.throttle(function () {
         if (n.current && t.current && e.current) {
@@ -55,9 +55,9 @@ var Wd = React.memo(function () {
   }, [r, o])
   return r ? React.createElement("div", {
     ref: n,
-    className: _$_.container
+    className: $_10541.container
   }, React.createElement("div", {
-    className: _$_.vRuler
+    className: $_10541.vRuler
   }, React.createElement(Pd, {
     ref: function (e) {
       t.current = e
@@ -73,7 +73,7 @@ var Wd = React.memo(function () {
     longLineSize: 8,
     shortLineSize: 4
   })), React.createElement("div", {
-    className: _$_.hRuler
+    className: $_10541.hRuler
   }, React.createElement(Pd, {
     ref: function (t) {
       e.current = t

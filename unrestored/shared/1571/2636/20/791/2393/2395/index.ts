@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.fromBuffer = exports.fromStream = exports.EndOfStreamError = undefined
-var r = require("./2396")
-var i = require("./2399/index")
+var r = require("./2396/index")
+var i = require("./2399")
 var o = require("./989/index")
 Object.defineProperty(exports, "EndOfStreamError", {
   enumerable: true,

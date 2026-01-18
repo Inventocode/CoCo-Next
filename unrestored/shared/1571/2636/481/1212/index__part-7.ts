@@ -702,7 +702,7 @@ var Pe = function () {
     $_1049.b(function (t) {
       var /* [auto-meaningful-name] */t$request
       var /* [auto-meaningful-name] */Fe$location
-      var /* [auto-meaningful-name] */_t$request
+      var /* [auto-meaningful-name] */t$request1
       if ($_2644.a().getIntegration(e)) {
         if (!Fe.navigator && !Fe.location && !Fe.document) {
           return t
@@ -710,7 +710,7 @@ var Pe = function () {
         var a = (null === (t$request = t.request) || undefined === t$request ? undefined : t$request.url) || (null === (Fe$location = Fe.location) || undefined === Fe$location ? undefined : Fe$location.href)
         var /* [auto-meaningful-name] */Fe$document$referrer = (Fe.document || {}).referrer
         var /* [auto-meaningful-name] */Fe$navigator$userAgent = (Fe.navigator || {}).userAgent
-        var l = o.a(o.a(o.a({}, null === (_t$request = t.request) || undefined === _t$request ? undefined : _t$request.headers), Fe$document$referrer && {
+        var l = o.a(o.a(o.a({}, null === (t$request1 = t.request) || undefined === t$request1 ? undefined : t$request1.headers), Fe$document$referrer && {
           Referer: Fe$document$referrer
         }), Fe$navigator$userAgent && {
           "User-Agent": Fe$navigator$userAgent

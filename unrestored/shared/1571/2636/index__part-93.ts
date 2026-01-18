@@ -13,13 +13,13 @@ import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_361 from "./361"
 import * as /* [auto-meaningful-name] */$_1515 from "./1515"
-import /* [auto-meaningful-name] */_$_ from "./1515"
+import /* [auto-meaningful-name] */$_15151 from "./1515"
 var sb = []
 var cb = {}
-var lb = _React.memo(function (e) {
+var lb = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$value = e.value
@@ -31,27 +31,27 @@ var lb = _React.memo(function (e) {
   var l = undefined === e$params ? sb : e$params
   var /* [auto-meaningful-name] */e$placement = e.placement
   var d = undefined === e$placement ? "rightTop" : e$placement
-  var p = _React.useState(e$value || e$defaultValue)
+  var p = React1.useState(e$value || e$defaultValue)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = _React.useRef(null)
-  var b = _React.useState(cb)
+  var v = React1.useRef(null)
+  var b = React1.useState(cb)
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = _React.useState(null)
+  var w = React1.useState(null)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
-  var I = _React.useMemo(function () {
+  var I = React1.useMemo(function () {
     var e = e$modeList.filter(function (e) {
       return e.value === e$value
     })[0]
     O((null === e || undefined === e ? undefined : e.style) || cb)
     return null === e || undefined === e ? undefined : e.renderContent
   }, [e$value, e$modeList])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (undefined !== e$value) {
       _(e$value)
     }
@@ -59,15 +59,15 @@ var lb = _React.memo(function (e) {
       A(I.apply(undefined, $_25_index.a(l)))
     }
   }, [e$value, T, e$modeList, l, I])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     A(I.apply(undefined, $_25_index.a(l)))
   }, [I, l])
-  var j = _React.useCallback(function (e) {
+  var j = React1.useCallback(function (e) {
     if (undefined === e$value) {
       _(e)
     }
   }, [e$value])
-  var R = _React.useCallback(function (e) {
+  var R = React1.useCallback(function (e) {
     if (e) {
       A(e)
     }
@@ -91,7 +91,7 @@ var lb = _React.memo(function (e) {
     placement: d,
     trigger: "click",
     content: React.createElement("div", {
-      className: _$_.option
+      className: $_15151.option
     }, e$children)
   }, React.createElement("div", {
     className: N("coco-select-selector")

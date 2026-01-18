@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_37_376 from "./37/376"
 import * as s from "./82"
 var _a
@@ -50,7 +50,7 @@ _a = React.memo(function (e) {
       })
     }
   }, [m])
-  return _React.createElement("svg", {
+  return React1.createElement("svg", {
     viewBox: p,
     width: "1em",
     height: "1em",
@@ -58,7 +58,7 @@ _a = React.memo(function (e) {
     "aria-hidden": "true",
     focusable: "false"
   }, c.map(function (e) {
-    return _React.createElement("path", {
+    return React1.createElement("path", {
       key: e,
       d: e
     })

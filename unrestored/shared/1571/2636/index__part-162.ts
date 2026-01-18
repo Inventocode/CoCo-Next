@@ -12,22 +12,22 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_355 from "./355"
-import /* [auto-meaningful-name] */_$_ from "./355"
+import /* [auto-meaningful-name] */$_3551 from "./355"
 var dA = function (e) {
   var /* [auto-meaningful-name] */e$onSuccess = e.onSuccess
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$isEmpty = e.isEmpty
-  var i = _React.useState(false)
+  var i = React1.useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var u = $_16_index.d()
   return React.createElement("div", {
-    className: N(_$_.ImageDragContainer, s && _$_.isDragging),
+    className: N($_3551.ImageDragContainer, s && $_3551.isDragging),
     onDragEnter: function (t) {
       if (!e.isReadOnly) {
         c(true)
@@ -45,11 +45,11 @@ var dA = function (e) {
       }
     }
   }, e$children, e$isEmpty && React.createElement("div", {
-    className: N(_$_.ImageLayoutEmpty, e$className)
+    className: N($_3551.ImageLayoutEmpty, e$className)
   }, React.createElement("h5", null, $_710_index$a$formatMessage({
     id: "emptyImageLibraryTitle"
   })), React.createElement("div", {
-    className: _$_.emptyContent
+    className: $_3551.emptyContent
   }, $_710_index$a$formatMessage({
     id: "emptyImageLibraryTips1"
   }), " ", React.createElement("br", null), $_710_index$a$formatMessage({

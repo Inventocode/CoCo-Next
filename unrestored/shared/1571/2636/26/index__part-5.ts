@@ -102,7 +102,7 @@ function Ne() {
   var /* [auto-meaningful-name] */$$_17_index$Blink$widget_div$DIV = $$_17_index.Blink.widget_div.DIV
   document.addEventListener("focusout", function (e) {
     var /* [auto-meaningful-name] */e$relatedTarget
-    var /* [auto-meaningful-name] */_e$relatedTarget
+    var /* [auto-meaningful-name] */e$relatedTarget1
     var r = document.querySelector(".slider-controller")
     var o = $$_123_index.is_parent(r, e.relatedTarget)
     var i = document.querySelector(".angle-controller")
@@ -110,7 +110,7 @@ function Ne() {
     var s = document.querySelector(".color-controller")
     var l = $$_123_index.is_parent(s, e.relatedTarget)
     var u = "menu-item" === (null === (e$relatedTarget = e.relatedTarget) || undefined === e$relatedTarget ? undefined : e$relatedTarget.className)
-    var d = "blocklyHtmlInput" === (null === (_e$relatedTarget = e.relatedTarget) || undefined === _e$relatedTarget ? undefined : _e$relatedTarget.className)
+    var d = "blocklyHtmlInput" === (null === (e$relatedTarget1 = e.relatedTarget) || undefined === e$relatedTarget1 ? undefined : e$relatedTarget1.className)
     if (!(o || a || l || d || u)) {
       $$_17_index.Blink.widget_div.hide()
     }

@@ -94,9 +94,9 @@ function Xe(e) {
   if (Ke(e.path)) {
     (function (e) {
       var t = e.op
-      var /* [auto-meaningful-name] */_e$path = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = t.i
-      var o = _e$path[1]
+      var o = e$path1[1]
       ye.Tb(r, o)
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Zj())
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
@@ -106,10 +106,10 @@ function Xe(e) {
   if (3 === (e$path = e.path).length && "imageFileList" === e$path[0]) {
     (function (e) {
       var t
-      var /* [auto-meaningful-name] */_e$path2 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = e.op
-      var o = _e$path2[1]
-      var i = _e$path2[2]
+      var o = e$path1[1]
+      var i = e$path1[2]
       var a = r.i
       var s = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t ? undefined : t.imageFileList[o]
       if (s) {

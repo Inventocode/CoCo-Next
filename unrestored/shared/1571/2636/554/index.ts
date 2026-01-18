@@ -8,16 +8,16 @@
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
 import s from "../8"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_148 from "../148"
 import * as /* [auto-meaningful-name] */$_245 from "./245"
-import /* [auto-meaningful-name] */_$_ from "./245"
+import /* [auto-meaningful-name] */$_2451 from "./245"
 import * as m from "../6"
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
@@ -42,7 +42,7 @@ var b = function (e) {
         t = "icon-radio-incorrect"
       }
     }
-    return t ? _React.createElement($$_13_index.j, {
+    return t ? React1.createElement($$_13_index.j, {
       type: t
     }) : null
   }(e$state)
@@ -121,30 +121,30 @@ var b = function (e) {
     }
   }
   var C = $$_148.g[e$sizeType]
-  return e$mode === $$_379.a.BUTTON ? _React.createElement("button", {
+  return e$mode === $$_379.a.BUTTON ? React1.createElement("button", {
     style: m.a(m.a({}, O), {}, {
       padding: C.optionPadding
     }),
-    className: s(_$_.buttonRadio, "radio-widget-button"),
+    className: s($_2451.buttonRadio, "radio-widget-button"),
     onClick: w
-  }, _React.createElement("p", {
+  }, React1.createElement("p", {
     ref: y,
     style: {
       fontSize: C.optionFontSize
     }
-  }, e$text), _React.createElement("div", {
-    className: _$_.buttonRadioInner,
+  }, e$text), React1.createElement("div", {
+    className: $_2451.buttonRadioInner,
     style: {
       color: null === O || undefined === O ? undefined : O.color,
       fontSize: C.iconFontSize
     }
-  }, E)) : _React.createElement("div", {
+  }, E)) : React1.createElement("div", {
     style: {
       color: null === O || undefined === O ? undefined : O.color
     },
-    className: _$_.defaultRadio,
+    className: $_2451.defaultRadio,
     onClick: w
-  }, _React.createElement("div", {
+  }, React1.createElement("div", {
     style: {
       backgroundColor: null === O || undefined === O ? undefined : O.backgroundColor,
       borderColor: null === O || undefined === O ? undefined : O.borderColor,
@@ -152,8 +152,8 @@ var b = function (e) {
       width: C.innerSize,
       height: C.innerSize
     },
-    className: s(_$_.inner, $$_11.a({}, _$_.selected, e$isSelected))
-  }, E), _React.createElement("p", {
+    className: s($_2451.inner, $$_11.a({}, $_2451.selected, e$isSelected))
+  }, E), React1.createElement("p", {
     ref: y,
     style: {
       fontSize: C.optionFontSize
@@ -183,13 +183,13 @@ _a = function (e) {
     }
   }
   var S = $$_148.g[e$attributes$sizeType]
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     id: t,
     "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
     "data-min-width": S.minWidth,
     "data-max-width": S.maxWidth,
-    className: s(_$_.radioWidget, $$_90.b, $$_11.a({}, _$_.hide, !e$visible)),
+    className: s($_2451.radioWidget, $$_90.b, $$_11.a({}, $_2451.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -200,8 +200,8 @@ _a = function (e) {
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     },
     "data-lock-height": true
-  }, e$attributes$headlineVisible && _React.createElement("div", {
-    className: _$_.headline,
+  }, e$attributes$headlineVisible && React1.createElement("div", {
+    className: $_2451.headline,
     onClick: function (e) {
       if (e$onHeadlineClick) {
         e$onHeadlineClick(e)
@@ -210,12 +210,12 @@ _a = function (e) {
     style: {
       fontSize: S.headlineFontSize
     }
-  }, e$attributes$headline), _React.createElement("ul", null, e$attributes$options.map(function (e, t) {
-    return _React.createElement("li", {
+  }, e$attributes$headline), React1.createElement("ul", null, e$attributes$options.map(function (e, t) {
+    return React1.createElement("li", {
       key: t
-    }, _React.createElement(b, {
+    }, React1.createElement(b, {
       sizeType: e$attributes$sizeType,
-      color: _Color(e$attributes$color).toString(),
+      color: Color1(e$attributes$color).toString(),
       text: e.content,
       mode: e$attributes$mode,
       isSelected: !!e.isSelected,

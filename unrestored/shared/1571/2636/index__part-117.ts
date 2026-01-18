@@ -20,38 +20,38 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_254 from "./254"
-import /* [auto-meaningful-name] */_$_ from "./254"
+import /* [auto-meaningful-name] */$_2541 from "./254"
 var yO = [
   {
     value: $_163.c.DEFAULT,
     renderContent: function () {
       return React.createElement("div", {
-        className: _$_.default
+        className: $_2541.default
       }, React.createElement("div", {
-        className: _$_.handle
+        className: $_2541.handle
       }))
     }
   }, {
     value: $_163.c.PRIMARY,
     renderContent: function () {
       return React.createElement("div", {
-        className: _$_.primary
+        className: $_2541.primary
       }, React.createElement("div", {
-        className: _$_.handle
+        className: $_2541.handle
       }))
     }
   }
 ]
-var EO = _React.memo(function (e) {
+var EO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement($_13_index.i, {
-    className: N(_$_.formItemWrapper, _$_.typeSelector, _$_.switchType, "changeSwitchMode"),
+    className: N($_2541.formItemWrapper, $_2541.typeSelector, $_2541.switchType, "changeSwitchMode"),
     label: $_710_index$a$formatMessage({
       id: "style"
     })
@@ -70,7 +70,7 @@ var EO = _React.memo(function (e) {
     }, e.renderContent())
   })))
 })
-var OO = _React.memo(function (e) {
+var OO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -95,12 +95,12 @@ var wO = [
     value: $_163.c.DEFAULT,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: N(_$_.default, "switch-default"),
+        className: N($_2541.default, "switch-default"),
         style: {
           backgroundColor: te.hb(e, .3)
         }
       }, React.createElement("div", {
-        className: _$_.handle,
+        className: $_2541.handle,
         style: {
           backgroundColor: e
         }
@@ -110,17 +110,17 @@ var wO = [
     value: $_163.c.PRIMARY,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: N(_$_.primary, "switch-primary"),
+        className: N($_2541.primary, "switch-primary"),
         style: {
           backgroundColor: e
         }
       }, React.createElement("div", {
-        className: _$_.handle
+        className: $_2541.handle
       }))
     }
   }
 ]
-var CO = _React.memo(function (e) {
+var CO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
@@ -136,31 +136,31 @@ var CO = _React.memo(function (e) {
     u = (null === d || undefined === d ? undefined : d.source) || (null === d || undefined === d ? undefined : d.cdnUrl)
   }
   return React.createElement("div", {
-    className: N(_$_.formItemWrapper, _$_.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: N($_2541.formItemWrapper, $_2541.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
-    className: _$_.backgroundLabel
+    className: $_2541.backgroundLabel
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "background"
   })), React.createElement("div", {
-    className: _$_.modeActionWrapper
+    className: $_2541.modeActionWrapper
   }, React.createElement("div", {
-    className: N(_$_.modeTemplate, a === $_163.a.TEMPLATE && _$_.backgroundSelected),
+    className: N($_2541.modeTemplate, a === $_163.a.TEMPLATE && $_2541.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_163.a.TEMPLATE)
     }
   }, $_710_index$a$formatMessage({
     id: "template"
   })), React.createElement("div", {
-    className: N(_$_.modeImage, a === $_163.a.IMAGE && _$_.backgroundSelected),
+    className: N($_2541.modeImage, a === $_163.a.IMAGE && $_2541.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_163.a.IMAGE)
     }
   }, $_710_index$a$formatMessage({
     id: "image"
   })))), a === $_163.a.TEMPLATE && React.createElement("div", {
-    className: _$_.backgroundWrapper
+    className: $_2541.backgroundWrapper
   }, React.createElement("div", {
-    className: _$_.templateMode
+    className: $_2541.templateMode
   }, React.createElement(hb, {
     modeList: wO,
     value: s,
@@ -174,7 +174,7 @@ var CO = _React.memo(function (e) {
       value: e.value
     }, e.renderContent(i))
   }))), React.createElement("div", {
-    className: _$_.templateColor
+    className: $_2541.templateColor
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "templateColor"
   })), React.createElement(mb, {
@@ -183,16 +183,16 @@ var CO = _React.memo(function (e) {
     onChange: e$onChange,
     color: i
   }))), a === $_163.a.IMAGE && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.backgroundWrapper
+    className: $_2541.backgroundWrapper
   }, React.createElement("div", {
-    className: _$_.backgroundImage
+    className: $_2541.backgroundImage
   }, React.createElement("img", {
     src: u,
     alt: ""
   })), React.createElement("div", {
-    className: _$_.cover
+    className: $_2541.cover
   }, React.createElement("div", {
-    className: _$_.editBtn,
+    className: $_2541.editBtn,
     onClick: function () {
       $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Hj({
         visible: true,
@@ -209,7 +209,7 @@ var CO = _React.memo(function (e) {
       marginBottom: 3
     }
   }, React.createElement($_13_index.s, {
-    className: N(_$_.radioWrapper, _$_.sizeRadioBox),
+    className: N($_2541.radioWrapper, $_2541.sizeRadioBox),
     value: e$getValue("imageResizeMode") || $_163.b.CONTAIN,
     onChange: function (e) {
       e$onChange("imageResizeMode", e)

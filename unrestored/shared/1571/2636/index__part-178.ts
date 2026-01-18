@@ -7,7 +7,7 @@
 "use strict"
 
 import { UI, HI, VI, zI, YI } from "./index__part-177"
-import * as /* [auto-meaningful-name] */$_417_index from "./417/index"
+import * as /* [auto-meaningful-name] */AgGridReact from "ag-grid-react"
 import * as ng from "./64"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
@@ -24,33 +24,33 @@ import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_132 from "./132"
-import /* [auto-meaningful-name] */_$_ from "./132"
-var ZI = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_1321 from "./132"
+var ZI = React1.memo(function (e) {
   var t = $_16_index.e(function (e) {
     return e.common.gridStatus
   })
   var n = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var o = _React.useRef(null)
-  var i = _React.useState(false)
+  var o = React1.useRef(null)
+  var i = React1.useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = _React.useState(false)
+  var l = React1.useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = _React.useState(false)
+  var m = React1.useState(false)
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = _React.useState(false)
+  var y = React1.useState(false)
   var E = $_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (s) {
       document.addEventListener("mousedown", function e() {
         c(false)
@@ -58,23 +58,23 @@ var ZI = _React.memo(function (e) {
       }, true)
     }
   }, [s])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */e$column
-    var /* [auto-meaningful-name] */_e$column
-    var /* [auto-meaningful-name] */_e$column2
+    var /* [auto-meaningful-name] */e$column1
+    var /* [auto-meaningful-name] */e$column2
     if (t.copiedContent.rowId || t.copiedContent.columnId !== (null === (e$column = e.column) || undefined === e$column ? undefined : e$column.getId())) {
       p(false)
     } else {
       p(true)
     }
-    if (t.selectedContent.columnId !== (null === (_e$column = e.column) || undefined === _e$column ? undefined : _e$column.getId()) || t.selectedContent.rowId) {
+    if (t.selectedContent.columnId !== (null === (e$column1 = e.column) || undefined === e$column1 ? undefined : e$column1.getId()) || t.selectedContent.rowId) {
       b(false)
     } else {
       b(true)
       e.setSelectedContent(D.a({}, t.selectedContent))
     }
     if (e.allowEditHeader) {
-      if (t.editingHeader === (null === (_e$column2 = e.column) || undefined === _e$column2 ? undefined : _e$column2.getId())) {
+      if (t.editingHeader === (null === (e$column2 = e.column) || undefined === e$column2 ? undefined : e$column2.getId())) {
         w(true)
       } else {
         w(false)
@@ -83,7 +83,7 @@ var ZI = _React.memo(function (e) {
       w(false)
     }
   }, [t, e])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (o.current) {
       o.current.focus()
       o.current.select()
@@ -173,13 +173,13 @@ var ZI = _React.memo(function (e) {
           e.api.ensureColumnVisible(i)
         }
       },
-      className: _$_.addColumn
+      className: $_1321.addColumn
     }, React.createElement($_13_index.j, {
       type: "icon-add"
     }))
   }
   return React.createElement("div", null, O ? React.createElement("div", {
-    className: _$_.headerEditor
+    className: $_1321.headerEditor
   }, React.createElement("input", {
     maxLength: 40,
     ref: o,
@@ -235,7 +235,7 @@ var ZI = _React.memo(function (e) {
     },
     visible: e.allowEditHeader && s,
     content: React.createElement("div", {
-      className: _$_.menuWrapper,
+      className: $_1321.menuWrapper,
       style: {
         marginTop: 13
       }
@@ -251,7 +251,7 @@ var ZI = _React.memo(function (e) {
           })
         }))
       },
-      className: _$_.menuItem
+      className: $_1321.menuItem
     }, $_710_index$a$formatMessage({
       id: "copyGridData"
     })), React.createElement("div", {
@@ -281,7 +281,7 @@ var ZI = _React.memo(function (e) {
           n($$_$$_$$_$$_src_editor_redux_common_actions.ni("", ""))
         })
       },
-      className: _$_.menuItem
+      className: $_1321.menuItem
     }, $_710_index$a$formatMessage({
       id: "pasteGridData"
     })), e.api.getColumnDefs().length > 3 ? React.createElement("div", {
@@ -312,7 +312,7 @@ var ZI = _React.memo(function (e) {
           delete e.data[r]
         })
       },
-      className: N(_$_.menuItem, _$_.deleteOption)
+      className: N($_1321.menuItem, $_1321.deleteOption)
     }, $_710_index$a$formatMessage({
       id: "deleteGridData"
     })) : React.createElement("div", {
@@ -326,7 +326,7 @@ var ZI = _React.memo(function (e) {
           }
         }
       },
-      className: N(_$_.menuItem, _$_.deleteOption)
+      className: N($_1321.menuItem, $_1321.deleteOption)
     }, $_710_index$a$formatMessage({
       id: "clearGridData"
     })))
@@ -358,54 +358,54 @@ var ZI = _React.memo(function (e) {
       C()
       c(true)
     },
-    className: N(_$_.header, (d || v) && _$_.selectedColumnHeader, t.errorHeaders.includes(e.column.getColId()) && _$_.errorColumn, t.animationHeaders.includes(e.column.getColId()) && _$_.errorAnimation)
+    className: N($_1321.header, (d || v) && $_1321.selectedColumnHeader, t.errorHeaders.includes(e.column.getColId()) && $_1321.errorColumn, t.animationHeaders.includes(e.column.getColId()) && $_1321.errorAnimation)
   }, React.createElement("div", {
-    className: _$_.area
+    className: $_1321.area
   }, function () {
     var t
     switch (null === (t = e.column.getUserProvidedColDef()) || undefined === t ? undefined : t.type) {
       case "boolean":
         return React.createElement($_13_index.j, {
           type: "icon-grid-boolean",
-          className: _$_.columnIcon
+          className: $_1321.columnIcon
         })
       case "string":
         return React.createElement($_13_index.j, {
           type: "icon-grid-string",
-          className: _$_.columnIcon
+          className: $_1321.columnIcon
         })
       case "number":
         return React.createElement($_13_index.j, {
           type: "icon-grid-number",
-          className: _$_.columnIcon
+          className: $_1321.columnIcon
         })
       default:
         return
     }
   }(), React.createElement("div", {
-    className: _$_.text,
+    className: $_1321.text,
     title: e.displayName
   }, e.displayName)))))
 })
-var JI = _React.memo(function (e) {
+var JI = React1.memo(function (e) {
   var t = $_16_index.e(function (e) {
     return e.common.gridStatus
   })
   var n = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var o = _React.useState(false)
+  var o = React1.useState(false)
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(false)
+  var p = React1.useState(false)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (g) {
       document.addEventListener("mousedown", function e() {
         v(false)
@@ -413,7 +413,7 @@ var JI = _React.memo(function (e) {
       }, true)
     }
   }, [g])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (t.copiedContent.rowId !== e.node.id || t.copiedContent.columnId) {
       d(false)
     } else {
@@ -478,7 +478,7 @@ var JI = _React.memo(function (e) {
     },
     visible: g,
     content: React.createElement("div", {
-      className: _$_.rowMenuWrapper,
+      className: $_1321.rowMenuWrapper,
       style: {
         marginTop: 37
       }
@@ -496,7 +496,7 @@ var JI = _React.memo(function (e) {
           }))
         }
       },
-      className: _$_.menuItem
+      className: $_1321.menuItem
     }, $_710_index$a$formatMessage({
       id: "copyGridData"
     })), React.createElement("div", {
@@ -523,17 +523,17 @@ var JI = _React.memo(function (e) {
           n($$_$$_$$_$$_src_editor_redux_common_actions.ni("", ""))
         })
       },
-      className: _$_.menuItem
+      className: $_1321.menuItem
     }, $_710_index$a$formatMessage({
       id: "pasteGridData"
     })), React.createElement("div", {
       onMouseDown: y.bind(null, "prev"),
-      className: N(_$_.menuItem, _$_.borderTop)
+      className: N($_1321.menuItem, $_1321.borderTop)
     }, $_710_index$a$formatMessage({
       id: "insertPrevRow"
     })), React.createElement("div", {
       onMouseDown: y.bind(null, "next"),
-      className: N(_$_.menuItem, _$_.borderBottom)
+      className: N($_1321.menuItem, $_1321.borderBottom)
     }, $_710_index$a$formatMessage({
       id: "insertNextRow"
     })), React.createElement("div", {
@@ -553,7 +553,7 @@ var JI = _React.memo(function (e) {
           e.api.applyTransaction(o)
         }
       },
-      className: N(_$_.menuItem, _$_.deleteOption)
+      className: N($_1321.menuItem, $_1321.deleteOption)
     }, $_710_index$a$formatMessage({
       id: "deleteGridData"
     })))
@@ -568,10 +568,10 @@ var JI = _React.memo(function (e) {
       b()
       v(true)
     },
-    className: N(u || a ? _$_.selectedRowIndex : _$_.rowIndex)
+    className: N(u || a ? $_1321.selectedRowIndex : $_1321.rowIndex)
   }, e.value))
 })
-var $I = _React.memo(function (e) {
+var $I = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$column
   var n = !!(null === (e$column = e.column) || undefined === e$column ? undefined : e$column.isPinnedLeft())
   var r = $_16_index.e(function (e) {
@@ -579,23 +579,23 @@ var $I = _React.memo(function (e) {
   })
   var o = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = _React.useState(false)
+  var a = React1.useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useState(false)
+  var u = React1.useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  _React.useEffect(function () {
-    var /* [auto-meaningful-name] */_e$column3
-    var /* [auto-meaningful-name] */_e$column4
-    if ("" === r.copiedContent.rowId && r.copiedContent.columnId === (null === (_e$column3 = e.column) || undefined === _e$column3 ? undefined : _e$column3.getId())) {
+  React1.useEffect(function () {
+    var /* [auto-meaningful-name] */e$column1
+    var /* [auto-meaningful-name] */e$column2
+    if ("" === r.copiedContent.rowId && r.copiedContent.columnId === (null === (e$column1 = e.column) || undefined === e$column1 ? undefined : e$column1.getId())) {
       l(true)
     } else {
       l(false)
     }
-    if (r.selectedContent.columnId === (null === (_e$column4 = e.column) || undefined === _e$column4 ? undefined : _e$column4.getId()) && "" === r.selectedContent.rowId) {
+    if (r.selectedContent.columnId === (null === (e$column2 = e.column) || undefined === e$column2 ? undefined : e$column2.getId()) && "" === r.selectedContent.rowId) {
       m(true)
     } else {
       m(false)
@@ -634,56 +634,56 @@ var $I = _React.memo(function (e) {
   }
   return n ? React.createElement("div", {
     onClick: g,
-    className: _$_.addRow
+    className: $_1321.addRow
   }, React.createElement($_13_index.j, {
     type: "icon-add"
   })) : React.createElement("div", {
     onClick: g,
-    className: N(_$_.addRow, c && _$_.copiedColumnPinnedRow, p && _$_.selectedColumnPinnedRow)
+    className: N($_1321.addRow, c && $_1321.copiedColumnPinnedRow, p && $_1321.selectedColumnPinnedRow)
   })
 })
-var ej = _React.memo(function (e) {
+var ej = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$column
-  var /* [auto-meaningful-name] */_e$column5
-  var /* [auto-meaningful-name] */_e$column6
-  var /* [auto-meaningful-name] */_e$column7
-  var /* [auto-meaningful-name] */_e$column8
-  var /* [auto-meaningful-name] */_e$column9
-  var /* [auto-meaningful-name] */_e$column0
+  var /* [auto-meaningful-name] */e$column1
+  var /* [auto-meaningful-name] */e$column2
+  var /* [auto-meaningful-name] */e$column3
+  var /* [auto-meaningful-name] */e$column4
+  var /* [auto-meaningful-name] */e$column5
+  var /* [auto-meaningful-name] */e$column6
   var c = $_16_index.e(function (e) {
     return e.common.gridStatus
   })
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var u = $_16_index.d()
-  var d = _React.useState(false)
+  var d = React1.useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState(false)
+  var v = React1.useState(false)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = _React.useState(false)
+  var O = React1.useState(false)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = _React.useState(false)
+  var A = React1.useState(false)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var k = j[1]
-  var x = _React.useState(false)
+  var x = React1.useState(false)
   var D = $_10_index.a(x, 2)
   var M = D[0]
   var L = D[1]
-  var P = _React.useState(false)
+  var P = React1.useState(false)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = _React.useState(false)
+  var W = React1.useState(false)
   var U = $_10_index.a(W, 2)
   var H = U[0]
   var V = U[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (F) {
       document.addEventListener("mousedown", function e() {
         G(false)
@@ -691,23 +691,23 @@ var ej = _React.memo(function (e) {
       }, true)
     }
   }, [F])
-  _React.useEffect(function () {
-    var /* [auto-meaningful-name] */_e$column1
-    var /* [auto-meaningful-name] */_e$column10
+  React1.useEffect(function () {
+    var /* [auto-meaningful-name] */e$column7
+    var /* [auto-meaningful-name] */e$column8
     if (!e.node.isRowPinned()) {
-      var /* [auto-meaningful-name] */_e$column11
+      var /* [auto-meaningful-name] */e$column9
       g(false)
       T(false)
       E(false)
       if (c.copiedContent.rowId === e.node.id) {
-        if (c.copiedContent.columnId === (null === (_e$column11 = e.column) || undefined === _e$column11 ? undefined : _e$column11.getId())) {
+        if (c.copiedContent.columnId === (null === (e$column9 = e.column) || undefined === e$column9 ? undefined : e$column9.getId())) {
           g(true)
         } else {
           if ("" === c.copiedContent.columnId) {
             T(true)
           }
         }
-      } else if (!(c.copiedContent.rowId || c.copiedContent.columnId !== (null === (_e$column1 = e.column) || undefined === _e$column1 ? undefined : _e$column1.getId()))) {
+      } else if (!(c.copiedContent.rowId || c.copiedContent.columnId !== (null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getId()))) {
         E(true)
       }
       L(false)
@@ -717,7 +717,7 @@ var ej = _React.memo(function (e) {
           L(true)
         }
       } else {
-        if (!(c.selectedContent.rowId || c.selectedContent.columnId !== (null === (_e$column10 = e.column) || undefined === _e$column10 ? undefined : _e$column10.getId()))) {
+        if (!(c.selectedContent.rowId || c.selectedContent.columnId !== (null === (e$column8 = e.column) || undefined === e$column8 ? undefined : e$column8.getId()))) {
           k(true)
         }
       }
@@ -763,9 +763,9 @@ var ej = _React.memo(function (e) {
     u($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (t) {
       var n = t[0]
       if (null === n || undefined === n ? undefined : n.id) {
-        var /* [auto-meaningful-name] */_e$column12
+        var /* [auto-meaningful-name] */e$column7
         var o = e.api.getModel().getRow(e.rowIndex)
-        var i = null === (_e$column12 = e.column) || undefined === _e$column12 ? undefined : _e$column12.getId()
+        var i = null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getId()
         if (o && i) {
           o.setDataValue(i, n.id)
         }
@@ -777,9 +777,9 @@ var ej = _React.memo(function (e) {
     u($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.IconLibrary, function (t) {
       var n = t[0]
       if (null === n || undefined === n ? undefined : n.name) {
-        var /* [auto-meaningful-name] */_e$column13
+        var /* [auto-meaningful-name] */e$column7
         var o = e.api.getModel().getRow(e.rowIndex)
-        var i = null === (_e$column13 = e.column) || undefined === _e$column13 ? undefined : _e$column13.getId()
+        var i = null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getId()
         if (o && i) {
           o.setDataValue(i, n.name + ".svg")
         }
@@ -791,9 +791,9 @@ var ej = _React.memo(function (e) {
     u($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.SoundLibrary, function (t) {
       var n = t[0]
       if (null === n || undefined === n ? undefined : n.name) {
-        var /* [auto-meaningful-name] */_e$column14
+        var /* [auto-meaningful-name] */e$column7
         var o = e.api.getModel().getRow(e.rowIndex)
-        var i = null === (_e$column14 = e.column) || undefined === _e$column14 ? undefined : _e$column14.getId()
+        var i = null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getId()
         if (o && i) {
           o.setDataValue(i, n.name)
         }
@@ -810,14 +810,14 @@ var ej = _React.memo(function (e) {
     },
     visible: F,
     content: React.createElement("div", {
-      className: _$_.rowMenuWrapper,
+      className: $_1321.rowMenuWrapper,
       style: {
         marginTop: 13
       }
     }, React.createElement("div", {
       onMouseDown: function () {
-        var /* [auto-meaningful-name] */_e$column15
-        var n = null === (_e$column15 = e.column) || undefined === _e$column15 ? undefined : _e$column15.getColId()
+        var /* [auto-meaningful-name] */e$column7
+        var n = null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getColId()
         var /* [auto-meaningful-name] */e$node$id = e.node.id
         if (e$node$id && n) {
           UI(e.api, e.rowIndex, n)
@@ -831,14 +831,14 @@ var ej = _React.memo(function (e) {
           }))
         }
       },
-      className: _$_.menuItem
+      className: $_1321.menuItem
     }, $_710_index$a$formatMessage({
       id: "copyGridData"
     })), React.createElement("div", {
       onMouseDown: function () {
         navigator.clipboard.readText().then(function (t) {
-          var /* [auto-meaningful-name] */_e$column16
-          var r = null === (_e$column16 = e.column) || undefined === _e$column16 ? undefined : _e$column16.getId()
+          var /* [auto-meaningful-name] */e$column7
+          var r = null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getId()
           if (r) {
             var o = zI(e.api, t, r, e.rowIndex)
             if (null === o || undefined === o ? undefined : o.columnOutOfRange) {
@@ -861,17 +861,17 @@ var ej = _React.memo(function (e) {
           u($$_$$_$$_$$_src_editor_redux_common_actions.ni("", ""))
         })
       },
-      className: _$_.menuItem
+      className: $_1321.menuItem
     }, $_710_index$a$formatMessage({
       id: "pasteGridData"
     })), React.createElement("div", {
       onMouseDown: K.bind(null, "prev"),
-      className: N(_$_.menuItem, _$_.borderTop)
+      className: N($_1321.menuItem, $_1321.borderTop)
     }, $_710_index$a$formatMessage({
       id: "insertPrevRow"
     })), React.createElement("div", {
       onMouseDown: K.bind(null, "next"),
-      className: N(_$_.menuItem, _$_.borderBottom)
+      className: N($_1321.menuItem, $_1321.borderBottom)
     }, $_710_index$a$formatMessage({
       id: "insertNextRow"
     })), React.createElement("div", {
@@ -881,23 +881,23 @@ var ej = _React.memo(function (e) {
           e.api.removeItems([t])
         }
       },
-      className: N(_$_.menuItem, _$_.deleteOption)
+      className: N($_1321.menuItem, $_1321.deleteOption)
     }, $_710_index$a$formatMessage({
       id: "deleteRowData"
     })))
   }, React.createElement("div", {
-    className: N("coco-table-data-cell", _$_.gridCell, m && _$_.copiedCell, y && _$_.copiedColumnCell, y && 0 === e.node.rowIndex && _$_.copiedColumnFirstRow, C && "right" !== (null === (e$column = e.column) || undefined === e$column ? undefined : e$column.getPinned()) && _$_.copiedRowCell, C && "right" !== (null === (_e$column5 = e.column) || undefined === _e$column5 ? undefined : _e$column5.getPinned()) && "coco-grid-copied-row-cell", C && "right" === (null === (_e$column6 = e.column) || undefined === _e$column6 ? undefined : _e$column6.getPinned()) && _$_.copiedRowPinnedColumn, R && _$_.selectedColumnCell, R && 0 === e.node.rowIndex && _$_.selectedColumnFirstRow, M && "right" !== (null === (_e$column7 = e.column) || undefined === _e$column7 ? undefined : _e$column7.getPinned()) && _$_.selectedRowCell, M && "right" !== (null === (_e$column8 = e.column) || undefined === _e$column8 ? undefined : _e$column8.getPinned()) && "coco-grid-selected-row-cell", M && "right" === (null === (_e$column9 = e.column) || undefined === _e$column9 ? undefined : _e$column9.getPinned()) && _$_.selectedRowPinnedColumn, function () {
-      var /* [auto-meaningful-name] */_e$column17
+    className: N("coco-table-data-cell", $_1321.gridCell, m && $_1321.copiedCell, y && $_1321.copiedColumnCell, y && 0 === e.node.rowIndex && $_1321.copiedColumnFirstRow, C && "right" !== (null === (e$column = e.column) || undefined === e$column ? undefined : e$column.getPinned()) && $_1321.copiedRowCell, C && "right" !== (null === (e$column1 = e.column) || undefined === e$column1 ? undefined : e$column1.getPinned()) && "coco-grid-copied-row-cell", C && "right" === (null === (e$column2 = e.column) || undefined === e$column2 ? undefined : e$column2.getPinned()) && $_1321.copiedRowPinnedColumn, R && $_1321.selectedColumnCell, R && 0 === e.node.rowIndex && $_1321.selectedColumnFirstRow, M && "right" !== (null === (e$column3 = e.column) || undefined === e$column3 ? undefined : e$column3.getPinned()) && $_1321.selectedRowCell, M && "right" !== (null === (e$column4 = e.column) || undefined === e$column4 ? undefined : e$column4.getPinned()) && "coco-grid-selected-row-cell", M && "right" === (null === (e$column5 = e.column) || undefined === e$column5 ? undefined : e$column5.getPinned()) && $_1321.selectedRowPinnedColumn, function () {
+      var /* [auto-meaningful-name] */e$column7
       var /* [auto-meaningful-name] */c$errorCells = c.errorCells
       var /* [auto-meaningful-name] */e$node$id = e.node.id
-      var o = null === (_e$column17 = e.column) || undefined === _e$column17 ? undefined : _e$column17.getId()
+      var o = null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getId()
       return !!(o && c$errorCells[o] && e$node$id) && c$errorCells[o].includes(e$node$id)
-    }() && _$_.errorColumn),
+    }() && $_1321.errorColumn),
     onContextMenu: function (t) {
-      var /* [auto-meaningful-name] */_e$column18
+      var /* [auto-meaningful-name] */e$column7
       t.preventDefault()
       var /* [auto-meaningful-name] */e$node$id = e.node.id
-      var o = null === (_e$column18 = e.column) || undefined === _e$column18 ? undefined : _e$column18.getId()
+      var o = null === (e$column7 = e.column) || undefined === e$column7 ? undefined : e$column7.getId()
       if (e$node$id && o) {
         u($$_$$_$$_$$_src_editor_redux_common_actions.oi(""))
         u($$_$$_$$_$$_src_editor_redux_common_actions.ri(e$node$id, o))
@@ -905,80 +905,80 @@ var ej = _React.memo(function (e) {
       }
     }
   }, React.createElement("div", {
-    className: _$_.cellValue
-  }, e.value), "right" !== (null === (_e$column0 = e.column) || undefined === _e$column0 ? undefined : _e$column0.getPinned()) && React.createElement($_1213.a, {
+    className: $_1321.cellValue
+  }, e.value), "right" !== (null === (e$column6 = e.column) || undefined === e$column6 ? undefined : e$column6.getPinned()) && React.createElement($_1213.a, {
     placement: "rightTop",
     onVisibleChange: function (e) {
       V(e)
     },
     visible: H,
     content: React.createElement("div", {
-      className: _$_.menuWrapper,
+      className: $_1321.menuWrapper,
       style: {
         marginTop: 13
       }
     }, React.createElement("div", {
       onMouseDown: q,
-      className: _$_.resourceMenuItem
+      className: $_1321.resourceMenuItem
     }, React.createElement($_13_index.j, {
       type: "icon-Image",
-      className: _$_.resourceMenuIcon
+      className: $_1321.resourceMenuIcon
     }), $_710_index$a$formatMessage({
       id: "Resource.ImageLibrary"
     })), React.createElement("div", {
       onMouseDown: X,
-      className: _$_.resourceMenuItem
+      className: $_1321.resourceMenuItem
     }, React.createElement($_13_index.j, {
       type: "icon-Icon",
-      className: _$_.resourceMenuIcon
+      className: $_1321.resourceMenuIcon
     }), $_710_index$a$formatMessage({
       id: "Resource.IconLibrary"
     })), React.createElement("div", {
       onMouseDown: Q,
-      className: _$_.resourceMenuItem
+      className: $_1321.resourceMenuItem
     }, React.createElement($_13_index.j, {
       type: "icon-Sound",
-      className: _$_.resourceMenuIcon
+      className: $_1321.resourceMenuIcon
     }), $_710_index$a$formatMessage({
       id: "Resource.SoundLibrary"
     })))
   }, React.createElement("div", {
-    className: _$_.addBox
+    className: $_1321.addBox
   }, React.createElement($_13_index.j, {
     type: "icon-add"
   })))))
 })
-var rj = _React.memo(function (e) {
+var rj = React1.memo(function (e) {
   var t = $_16_index.e(function (e) {
     return e.project.focusedWorkspaceArea
   })
   var n = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var o = _React.useRef(null)
-  var i = _React.useRef({
+  var o = React1.useRef(null)
+  var i = React1.useRef({
     rowId: "",
     columnId: ""
   })
-  var a = _React.useState()
+  var a = React1.useState()
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e.visible && c) {
       c.setRowData(Lodash.cloneDeep(e.data))
     }
   }, [e.data, c, e.visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (c && o.current) {
       if (e.data.length < e.resizeColumnNumber) {
         o.current.style.removeProperty("width")
         o.current.style.removeProperty("height")
-        o.current.classList.remove(_$_.showBottomShadow)
+        o.current.classList.remove($_1321.showBottomShadow)
         c.setDomLayout("autoHeight")
       } else {
         o.current.style.width = "100%"
         o.current.style.height = "100%"
-        o.current.classList.add(_$_.showBottomShadow)
+        o.current.classList.add($_1321.showBottomShadow)
         c.setDomLayout("normal")
       }
     }
@@ -1112,7 +1112,7 @@ var rj = _React.memo(function (e) {
         }
         var n = t.api.getModel().getRowCount()
         var /* [auto-meaningful-name] */o$current$style$width = o.current.style.width
-        return n > e.resizeColumnNumber && !o$current$style$width ? (o.current.style.width = "100%", o.current.style.height = "100%", t.api.setDomLayout("normal"), o.current.classList.add(_$_.showBottomShadow), void (-1 !== d.context.scrollToRowIndex && t.api.ensureIndexVisible(d.context.scrollToRowIndex))) : n <= e.resizeColumnNumber && o$current$style$width ? (o.current.style.removeProperty("width"), o.current.style.removeProperty("height"), t.api.setDomLayout("autoHeight"), o.current.classList.remove(_$_.showBottomShadow), void (-1 !== d.context.scrollToRowIndex && t.api.ensureIndexVisible(d.context.scrollToRowIndex))) : void (-1 !== d.context.scrollToRowIndex && t.api.ensureIndexVisible(d.context.scrollToRowIndex))
+        return n > e.resizeColumnNumber && !o$current$style$width ? (o.current.style.width = "100%", o.current.style.height = "100%", t.api.setDomLayout("normal"), o.current.classList.add($_1321.showBottomShadow), void (-1 !== d.context.scrollToRowIndex && t.api.ensureIndexVisible(d.context.scrollToRowIndex))) : n <= e.resizeColumnNumber && o$current$style$width ? (o.current.style.removeProperty("width"), o.current.style.removeProperty("height"), t.api.setDomLayout("autoHeight"), o.current.classList.remove($_1321.showBottomShadow), void (-1 !== d.context.scrollToRowIndex && t.api.ensureIndexVisible(d.context.scrollToRowIndex))) : void (-1 !== d.context.scrollToRowIndex && t.api.ensureIndexVisible(d.context.scrollToRowIndex))
       }
     },
     onDragStopped: function (e) {
@@ -1169,7 +1169,7 @@ var rj = _React.memo(function (e) {
       }
     }
   }
-  var p = _React.useMemo(function () {
+  var p = React1.useMemo(function () {
     var t = Object.keys(e.header).length || 1
     var n = 164
     if (t <= 5) {
@@ -1183,7 +1183,7 @@ var rj = _React.memo(function (e) {
   var /* [auto-meaningful-name] */p$headerLength = p.headerLength
   var /* [auto-meaningful-name] */p$columnWidth = p.columnWidth
   return React.createElement("div", {
-    className: _$_.tableDataGrid
+    className: $_1321.tableDataGrid
   }, React.createElement($_188.a, {
     useCapture: true
   }, React.createElement($_188.b, {
@@ -1362,9 +1362,9 @@ var rj = _React.memo(function (e) {
   })), React.createElement("div", {
     ref: o,
     className: "ag-theme-alpine"
-  }, React.createElement($_417_index.AgGridReact, {
+  }, React.createElement(AgGridReact.AgGridReact, {
     gridOptions: d
-  }, React.createElement($_417_index.AgGridColumn, {
+  }, React.createElement(AgGridReact.AgGridColumn, {
     colId: "indexColumn",
     headerName: "",
     field: "indexColumn",
@@ -1379,7 +1379,7 @@ var rj = _React.memo(function (e) {
     },
     cellRenderer: "indexCellRenderer",
     pinnedRowCellRenderer: "pinnedRow"
-  }), React.createElement($_417_index.AgGridColumn, {
+  }), React.createElement(AgGridReact.AgGridColumn, {
     colId: "addColumn",
     headerName: "",
     field: "addColumn",
@@ -1394,7 +1394,7 @@ var rj = _React.memo(function (e) {
     var t = $_10_index.a(e, 2)
     var n = t[0]
     var r = t[1]
-    return React.createElement($_417_index.AgGridColumn, {
+    return React.createElement(AgGridReact.AgGridColumn, {
       colId: n,
       headerName: r.field,
       field: n,

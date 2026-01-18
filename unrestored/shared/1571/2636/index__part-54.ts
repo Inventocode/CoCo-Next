@@ -17,7 +17,7 @@ import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_149 from "./149"
 import * as /* [auto-meaningful-name] */$_549_index from "./549/index"
 var Pf = function (e) {
@@ -32,19 +32,19 @@ var Pf = function (e) {
   var l = $_16_index.e(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  var u = _React.useState("")
+  var u = React1.useState("")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useState("")
+  var g = React1.useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = _React.useState("")
+  var E = React1.useState("")
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (te.U(o)) {
       e = o
@@ -54,7 +54,7 @@ var Pf = function (e) {
     }
     m(e || $_149.c)
   }, [o, l])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (te.U(a)) {
       e = a
@@ -64,7 +64,7 @@ var Pf = function (e) {
     }
     y(e || $_149.a)
   }, [a, l])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (te.U(c)) {
       e = c

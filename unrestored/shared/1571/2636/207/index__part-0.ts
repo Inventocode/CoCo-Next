@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "../7"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"

@@ -24,9 +24,9 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1533 from "./1533"
-import /* [auto-meaningful-name] */_$_ from "./1533"
+import /* [auto-meaningful-name] */$_15331 from "./1533"
 var qL = undefined
 function XL(e, t) {
   if (qL) {
@@ -51,7 +51,7 @@ function XL(e, t) {
   }
 }
 var /* [auto-meaningful-name] */py$Option = py.Option
-var ZL = _React.memo(function () {
+var ZL = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.cloudDBGridDialogInfo
   })
@@ -61,62 +61,62 @@ var ZL = _React.memo(function () {
   var /* [auto-meaningful-name] */e$isProd = e.isProd
   var /* [auto-meaningful-name] */e$callback = e.callback
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = _React.useState()
+  var s = React1.useState()
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState({})
+  var d = React1.useState({})
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState([])
+  var v = React1.useState([])
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
-  var C = _React.useState({})
+  var C = React1.useState({})
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = _React.useState("")
+  var R = React1.useState("")
   var k = $_10_index.a(R, 2)
   var D = k[0]
   var M = k[1]
-  var L = _React.useState([])
+  var L = React1.useState([])
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = _React.useState(false)
+  var G = React1.useState(false)
   var W = $_10_index.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = _React.useState(false)
+  var V = React1.useState(false)
   var K = $_10_index.a(V, 2)
   var q = K[0]
   var X = K[1]
-  var Q = _React.useState(false)
+  var Q = React1.useState(false)
   var Z = $_10_index.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
-  var te = _React.useState(false)
+  var te = React1.useState(false)
   var ne = $_10_index.a(te, 2)
   var re = ne[0]
   var oe = ne[1]
-  var ie = _React.useState(true)
+  var ie = React1.useState(true)
   var ae = $_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
-  var le = _React.useState(false)
+  var le = React1.useState(false)
   var ue = $_10_index.a(le, 2)
   var de = ue[0]
   var pe = ue[1]
-  var fe = _React.useState(false)
+  var fe = React1.useState(false)
   var he = $_10_index.a(fe, 2)
   var me = he[0]
   var ge = he[1]
-  var _e = _React.useRef("")
-  var ve = _React.useRef(false)
+  var _e = React1.useRef("")
+  var ve = React1.useRef(false)
   var be = $_16_index.d()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!e$visible) {
       F([])
       M("")
@@ -126,7 +126,7 @@ var ZL = _React.memo(function () {
       pe(false)
     }
   }, [e$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$cloudDBId) {
       ce(true)
       Promise.all([$_147.e(e$cloudDBId, e$isProd ? "prod" : "dev"), $_147.f(e$cloudDBId, e$isProd ? "prod" : "dev", 0, 500)]).then(function (e) {
@@ -161,7 +161,7 @@ var ZL = _React.memo(function () {
       })
     }
   }, [e$cloudDBId, e$isProd])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (D) {
       if (!B.find(function (e) {
         return e.id === D
@@ -171,10 +171,10 @@ var ZL = _React.memo(function () {
       }
     }
   }, [B, D])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     $(!(!U && !q))
   }, [U, q])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     return function () {
       ve.current = true
     }
@@ -465,8 +465,8 @@ var ZL = _React.memo(function () {
                   l++
                   c++
                 } else {
-                  var /* [auto-meaningful-name] */_e$rowId = e.rowId
-                  s.delete.push(_e$rowId)
+                  var /* [auto-meaningful-name] */e$rowId1 = e.rowId
+                  s.delete.push(e$rowId1)
                   c++
                 }
               }; c < y.length && l < t.length;) {
@@ -712,7 +712,7 @@ var ZL = _React.memo(function () {
   }, se ? React.createElement("div", {
     className: $_348.loadingArea
   }, React.createElement("img", {
-    src: _$_,
+    src: $_15331,
     alt: "loading"
   }), React.createElement("span", null, $_710_index$a$formatMessage({
     id: "cloudGrid.loading"

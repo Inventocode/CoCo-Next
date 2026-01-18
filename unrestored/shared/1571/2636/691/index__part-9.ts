@@ -13,7 +13,7 @@ import { X, Z } from "./index__part-5"
 import { ae, se } from "./index__part-6"
 import { ue } from "./index__part-7"
 import { Ae, we } from "./index__part-8"
-import * as /* [auto-meaningful-name] */$_520_index from "./520/index"
+import * as /* [auto-meaningful-name] */$_520 from "./520"
 import * as /* [auto-meaningful-name] */$$_105 from "../105"
 import * as /* [auto-meaningful-name] */$_119 from "./119"
 import * as c from "./65"
@@ -332,7 +332,7 @@ var ke = function () {
           A.clear()
         }
       }
-      for (var /* [auto-meaningful-name] */_$length2 = _.length, F = e.get_max_anchors() - m, P = Math.floor(d.length / F), N = new Set(); A.size < e.get_max_anchors();) {
+      for (var /* [auto-meaningful-name] */_$length1 = _.length, F = e.get_max_anchors() - m, P = Math.floor(d.length / F), N = new Set(); A.size < e.get_max_anchors();) {
         for (var M = function (e) {
             var t = d[e]
             if (_.every(function (e) {
@@ -347,7 +347,7 @@ var ke = function () {
         if (A.size + N.size <= e.get_max_anchors()) {
           break
         }
-        _.length = _$length2
+        _.length = _$length1
         N.clear()
         P++
       }
@@ -1612,7 +1612,7 @@ Ne.bind(s.Actor).toFactory(function (e) {
     var r = Object.assign({}, t, {
       events: n
     })
-    return new $_520_index.a(r)
+    return new $_520.a(r)
   }
 })
 Ne.bind(s.Actors).toFactory(function (e) {

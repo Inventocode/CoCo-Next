@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "..
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_678 from "../../../../shared/1571/2636/678"
 import * as /* [auto-meaningful-name] */Qrcode from "qrcode"
-import /* [auto-meaningful-name] */_Qrcode from "qrcode"
+import /* [auto-meaningful-name] */Qrcode1 from "qrcode"
 var pt = {
   "7%": "L",
   "15%": "M",
@@ -45,7 +45,7 @@ var mt = function (t) {
         var /* [auto-meaningful-name] */this$errorCorrectionLevel
         var n = this
         if (t) {
-          _Qrcode.toDataURL(t, {
+          Qrcode1.toDataURL(t, {
             width: this.width,
             color: {
               dark: this.dark,

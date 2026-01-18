@@ -16,20 +16,20 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_inde
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index from "../../../../shared/1571/2636/710/index"
-var ye = _React.memo(function () {
+var ye = React1.memo(function () {
   var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
   var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710_index.a().formatMessage
   var n = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = _React.useState(0)
+  var r = React1.useState(0)
   var i = $$_$$_$$_$$_shared_1571_2636_10_index.a(r, 2)
   var o = i[0]
   var a = i[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (ce) {
       clearInterval(ce)
     }

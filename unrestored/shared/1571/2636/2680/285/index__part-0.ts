@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_224_792 from "../../224/792"
 import * as /* [auto-meaningful-name] */$$_$$_54 from "../../54"
 import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"

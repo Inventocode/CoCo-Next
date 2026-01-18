@@ -37,9 +37,9 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import "./2611"
-var xT = _React.memo(function () {
+var xT = React1.memo(function () {
   var e = $_16_index.f()
   var t = $_16_index.d()
   var n = $_16_index.e(function (e) {
@@ -48,8 +48,8 @@ var xT = _React.memo(function () {
   var r = $_16_index.e(function (e) {
     return e.project.globalWidgetIds
   })
-  var o = _React.useRef()
-  var i = _React.useRef(null)
+  var o = React1.useRef()
+  var i = React1.useRef(null)
   var a = $_16_index.e(function (e) {
     return e.common.blockyToolboxPinned
   })
@@ -59,12 +59,12 @@ var xT = _React.memo(function () {
   var c = $_16_index.e(function (e) {
     return e.uiConfig.workspace
   }) === K.j.ReadOnly
-  var l = _React.useState(false)
+  var l = React1.useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = $_238.d()
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     var /* [auto-meaningful-name] */e$getState
     var /* [auto-meaningful-name] */$_17_index$Blink
     e$getState = e.getState
@@ -271,7 +271,7 @@ var xT = _React.memo(function () {
       }
     }
   }, [t, e.getState])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = document.getElementById("flyoutPinTitle")
     if (e) {
       e.textContent = a ? "取消固定" : "固定积木盒"
@@ -285,7 +285,7 @@ var xT = _React.memo(function () {
     }
   }, [a])
   var g = $_238.a()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = te.p(function () {
       $_26_index.z.resizeWorkspace()
     }, 500)
@@ -294,19 +294,19 @@ var xT = _React.memo(function () {
       window.removeEventListener("resize", e)
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     $_26_index.g.update(m)
   }, [m])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     $_26_index.g.updateGlobalWidget(r)
   }, [r])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     $_26_index.g.updateAnyWidget(g)
   }, [g])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     $_26_index.g.changeSelectWidgetCategoryStyle(n || (null === m || undefined === m ? undefined : m.id))
   }, [n, m])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e(e) {
       p(e)
       t($$_$$_$$_$$_src_editor_redux_common_actions.ji(e))
@@ -321,8 +321,8 @@ var xT = _React.memo(function () {
       $_26_index.z.eventBus.removeEventListener($_207_index.a.DELETE_BLOCK, n)
     }
   }, [t])
-  var v = _React.useRef(null)
-  _React.useEffect(function () {
+  var v = React1.useRef(null)
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */v$current = v.current
     if (v$current) {
       var n = function () {

@@ -11,10 +11,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_625 from "./625"
-import /* [auto-meaningful-name] */_$_ from "./625"
-var Xj = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_6251 from "./625"
+var Xj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$md5 = e.md5
   var /* [auto-meaningful-name] */e$name = e.name
@@ -36,22 +36,22 @@ var Xj = _React.memo(function (e) {
       }
     },
     key: t,
-    className: N(_$_.iconMallItem, e$isSelect && _$_.selected)
+    className: N($_6251.iconMallItem, e$isSelect && $_6251.selected)
   }, React.createElement("div", {
-    className: _$_.playArea
+    className: $_6251.playArea
   }, React.createElement("img", {
     alt: e$name,
     src: e$cdnUrl
   })), React.createElement("div", {
-    className: _$_.infoArea
+    className: $_6251.infoArea
   }, React.createElement("div", {
-    className: _$_.nameArea
+    className: $_6251.nameArea
   }, e$name), e$isAdded ? React.createElement("div", {
-    className: _$_.add
+    className: $_6251.add
   }, $_710_index$a$formatMessage({
     id: "Resource.Added"
   })) : React.createElement("div", {
-    className: N(_$_.btn, _$_.unselect)
+    className: N($_6251.btn, $_6251.unselect)
   }, React.createElement($_13_index.j, {
     type: "icon-style-selected"
   }))))

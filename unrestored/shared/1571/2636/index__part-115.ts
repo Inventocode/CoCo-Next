@@ -15,27 +15,27 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_703 from "./703"
-import /* [auto-meaningful-name] */_$_ from "./703"
+import /* [auto-meaningful-name] */$_7031 from "./703"
 var uO = te.p(function () {
-  var e = document.querySelector(".".concat(_$_.optionsFormItem, " ul li:last-child input"))
+  var e = document.querySelector(".".concat($_7031.optionsFormItem, " ul li:last-child input"))
   if (e && e instanceof HTMLInputElement) {
     e.focus()
   }
 }, 60)
-var dO = _React.memo(function (e) {
+var dO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = _React.useRef({})
+  var s = React1.useRef({})
   var c = $_16_index.e(function (e) {
     return e.common.widgetAttributeVisible
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */s$current = s.current
     if (s$current && c) {
       Object.entries(s$current).forEach(function (e) {
@@ -59,20 +59,20 @@ var dO = _React.memo(function (e) {
   }
   return React.createElement($_13_index.i, {
     align: "vertical",
-    className: N("changeOptions", _$_.optionsFormItem, _$_.formItemWrapper)
+    className: N("changeOptions", $_7031.optionsFormItem, $_7031.formItemWrapper)
   }, React.createElement("div", {
-    className: _$_.formTitle
+    className: $_7031.formTitle
   }, React.createElement("p", null, $_710_index$a$formatMessage({
     id: "radioOptionsContent"
   })), React.createElement("div", {
-    className: _$_.count
+    className: $_7031.count
   }, React.createElement("span", {
     onClick: function () {
       if (i.length > 1) {
         e$onChange("options", i.slice(0, -1))
       }
     },
-    className: N(k.a({}, _$_.disabled, 1 === i.length))
+    className: N(k.a({}, $_7031.disabled, 1 === i.length))
   }, React.createElement($_13_index.j, {
     type: "icon-minus"
   })), React.createElement("p", null, i.length, $_710_index$a$formatMessage({
@@ -87,7 +87,7 @@ var dO = _React.memo(function (e) {
         uO()
       }
     },
-    className: N(k.a({}, _$_.disabled, 8 === i.length))
+    className: N(k.a({}, $_7031.disabled, 8 === i.length))
   }, React.createElement($_13_index.j, {
     type: "icon-add"
   })))), React.createElement("ul", null, i.map(function (e, t) {

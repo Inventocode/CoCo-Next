@@ -12,9 +12,9 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_189 from "./189"
-var _w = _React.memo(function (e) {
+var _w = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("style") || $_189.b.styleA
@@ -72,7 +72,7 @@ var _w = _React.memo(function (e) {
     }
   }, "BUTTON")))))
 })
-var vw = _React.memo(function (e) {
+var vw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -107,7 +107,7 @@ var vw = _React.memo(function (e) {
     }, e.label)
   })))
 })
-var bw = _React.memo(function (e) {
+var bw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$url = e.formConfig.url
   return e$formConfig$url ? React.createElement("div", {
     style: {

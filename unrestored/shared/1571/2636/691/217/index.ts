@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("./394")
-var i = require("./521")
+var i = require("../744/521")
 var o = require("./292")
 function a(e) {
   return function t(n, a, s) {

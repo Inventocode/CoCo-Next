@@ -19,13 +19,13 @@ import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_570 from "./570"
-import /* [auto-meaningful-name] */_$_ from "./570"
+import /* [auto-meaningful-name] */$_5701 from "./570"
 var dL = React.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.d()
-  var n = _React.useState(true)
+  var n = React1.useState(true)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
@@ -35,15 +35,15 @@ var dL = React.memo(function () {
   var s = $_16_index.e(function (e) {
     return e.project.screens
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (1 === s.size) {
       i(true)
     }
   }, [s])
   return React.createElement("div", {
-    className: _$_.playBox
+    className: $_5701.playBox
   }, React.createElement("button", {
-    className: N(_$_.playButton, s.size > 1 && _$_.borderLeft),
+    className: N($_5701.playButton, s.size > 1 && $_5701.borderLeft),
     onClick: function () {
       if (a) {
         t($$_$$_$$_$$_src_editor_redux_common_actions.Dj())
@@ -61,7 +61,7 @@ var dL = React.memo(function () {
   }), $_710_index$a$formatMessage({
     id: "play"
   }))), s.size > 1 && React.createElement(XM, {
-    overlayClassName: _$_.playMenu,
+    overlayClassName: $_5701.playMenu,
     placement: "bottomLeft",
     overlay: React.createElement(cL, {
       onClick: function (e) {
@@ -77,28 +77,28 @@ var dL = React.memo(function () {
       key: "START_CURRENT_SCREEN"
     }, React.createElement($_13_index.j, {
       type: "icon-start",
-      className: _$_.menuIcon
+      className: $_5701.menuIcon
     }), React.createElement("span", {
-      className: _$_.menuText
+      className: $_5701.menuText
     }, $_710_index$a$formatMessage({
       id: "playCurrentScreen"
     }))), React.createElement(cL.Item, {
       key: "START_FIRST_SCREEN"
     }, React.createElement($_13_index.j, {
       type: "icon-start-first-screen",
-      className: _$_.menuIcon
+      className: $_5701.menuIcon
     }), React.createElement("span", {
-      className: _$_.menuText
+      className: $_5701.menuText
     }, $_710_index$a$formatMessage({
       id: "playFirstScreen"
     }))))
   }, React.createElement("div", {
-    className: _$_.playType
+    className: $_5701.playType
   }, React.createElement($_13_index.j, {
     type: "icon-dropdown-down"
   }))))
 })
-var pL = _React.memo(function (e) {
+var pL = React1.memo(function (e) {
   var t = $_16_index.e(function (e) {
     return e.project.id
   })
@@ -108,14 +108,14 @@ var pL = _React.memo(function (e) {
   var r = $_16_index.e(function (e) {
     return e.oTState.isAuthor
   })
-  var o = _React.useRef(null)
+  var o = React1.useRef(null)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var a = $_16_index.d()
-  var s = _React.useState(false)
+  var s = React1.useState(false)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState(n)
+  var d = React1.useState(n)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]

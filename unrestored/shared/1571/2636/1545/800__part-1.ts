@@ -7,8 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */_$$_80_index from "../80/index"
+import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
 function p(e) {
-  return e instanceof HTMLElement ? e : _$$_80_index.findDOMNode(e)
+  return e instanceof HTMLElement ? e : $$_80_index1.findDOMNode(e)
 }
 export { p }

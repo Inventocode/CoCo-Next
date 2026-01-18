@@ -18,9 +18,9 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_237 from "./237"
-import /* [auto-meaningful-name] */_$_ from "./237"
+import /* [auto-meaningful-name] */$_2371 from "./237"
 function JA(e, t) {
   var n = e.filter(function (e) {
     return "GLOBAL" !== e.screenId
@@ -42,7 +42,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
   var r = $_16_index.d()
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$setVisible = e.setVisible
-  var a = _React.useRef(null)
+  var a = React1.useRef(null)
   var s = function () {
     var e = $_16_index.e(function (e) {
       return e.dataWatch.variableList
@@ -69,11 +69,11 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       variableList: e
     }
   }()
-  var c = _React.useState("")
+  var c = React1.useState("")
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useRef({})
+  var p = React1.useRef({})
   var /* [auto-meaningful-name] */s$Primitives = s.Primitives
   var /* [auto-meaningful-name] */s$Lists = s.Lists
   var /* [auto-meaningful-name] */s$Dictionaries = s.Dictionaries
@@ -102,11 +102,11 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       return e
     })
     return 0 !== o.length ? React.createElement("div", {
-      className: _$_.type
+      className: $_2371.type
     }, React.createElement("div", {
-      className: _$_.icon
+      className: $_2371.icon
     }, React.createElement("div", {
-      className: _$_.categoryIcon,
+      className: $_2371.categoryIcon,
       style: {
         color: r.color,
         fontSize: r.fontSize
@@ -114,7 +114,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     }, React.createElement($_13_index.j, {
       type: r.class
     })), React.createElement("span", {
-      className: _$_.text
+      className: $_2371.text
     }, $_710_index$a$formatMessage({
       id: r.text
     }))), o) : undefined
@@ -130,17 +130,17 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     var r = null
     if (n >= 0) {
       r = React.createElement("div", {
-        className: _$_.screenInfoBox
+        className: $_2371.screenInfoBox
       }, React.createElement("div", {
-        className: _$_.screenTitle
+        className: $_2371.screenTitle
       }, React.createElement("div", {
-        className: _$_.screenTitleText
+        className: $_2371.screenTitleText
       }, null === (t = O.get(n)) || undefined === t ? undefined : t.title)), React.createElement("div", {
-        className: _$_.screenIconBox
+        className: $_2371.screenIconBox
       }, GS(n)))
     }
     return React.createElement("div", {
-      className: _$_.option,
+      className: $_2371.option,
       key: e.id,
       onClick: function () {
         if (e.selected) {
@@ -150,7 +150,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
         }
       }
     }, React.createElement("div", {
-      className: _$_.checkbox
+      className: $_2371.checkbox
     }, React.createElement(XA, {
       checked: e.selected,
       onChange: function (t) {
@@ -163,9 +163,9 @@ var $A = React.memo(React.forwardRef(function (e, t) {
         }
       }
     })), React.createElement("div", {
-      className: _$_.name
+      className: $_2371.name
     }, React.createElement("div", {
-      className: _$_.nameText
+      className: $_2371.nameText
     }, e.name)), r)
   }
   var j = function () {
@@ -174,7 +174,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     })
     e$setVisible(false)
   }
-  _React.useImperativeHandle(t, function () {
+  React1.useImperativeHandle(t, function () {
     return {
       cancel: j
     }
@@ -183,15 +183,15 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     return null
   }
   return React.createElement("div", {
-    className: _$_.container,
+    className: $_2371.container,
     ref: a
   }, React.createElement("div", {
-    className: _$_.leftSelect
+    className: $_2371.leftSelect
   }, React.createElement("div", {
-    className: _$_.searchInputBox
+    className: $_2371.searchInputBox
   }, React.createElement($_13_index.k, {
     value: u,
-    className: N(_$_.searchInput),
+    className: N($_2371.searchInput),
     onClearCallback: function () {
       d("")
     },
@@ -208,7 +208,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
   })), function () {
     if (0 === s$variableList.size) {
       return React.createElement("div", {
-        className: _$_.empty
+        className: $_2371.empty
       }, $_710_index$a$formatMessage({
         id: "DataWatch.noData"
       }))
@@ -221,18 +221,18 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     return s$variableList.find(function (e) {
       return e.name.toLowerCase().includes(u.toLowerCase())
     }) ? React.createElement("div", {
-        className: _$_.renderSelectBox
+        className: $_2371.renderSelectBox
       }, e, t, r, o, i) : React.createElement("div", {
-        className: _$_.empty
+        className: $_2371.empty
       }, $_710_index$a$formatMessage({
         id: "DataWatch.searchEmpty"
       }))
   }()), React.createElement("div", {
-    className: _$_.rightSelected
+    className: $_2371.rightSelected
   }, React.createElement("div", {
-    className: _$_.addedTitle
+    className: $_2371.addedTitle
   }, "已添加数据"), React.createElement("div", {
-    className: _$_.selectedItems
+    className: $_2371.selectedItems
   }, s$variableList.filter(function (e) {
     return e.selected
   }).sort(function (e, t) {
@@ -247,20 +247,20 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       var o = null
       if (r >= 0) {
         o = React.createElement("div", {
-          className: _$_.screenInfoBox
+          className: $_2371.screenInfoBox
         }, React.createElement("div", {
-          className: _$_.screenTitle
+          className: $_2371.screenTitle
         }, React.createElement("div", {
-          className: _$_.screenTitleText
+          className: $_2371.screenTitleText
         }, null === (t = O.get(r)) || undefined === t ? undefined : t.title)), React.createElement("div", {
-          className: _$_.screenIconBox
+          className: $_2371.screenIconBox
         }, GS(r)))
       }
       return React.createElement("div", {
-        className: N(_$_.option, _$_.selectedBox),
+        className: N($_2371.option, $_2371.selectedBox),
         key: e.id
       }, React.createElement("div", {
-        className: _$_.categoryIcon,
+        className: $_2371.categoryIcon,
         style: {
           color: n.color,
           fontSize: n.fontSize
@@ -268,20 +268,20 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       }, React.createElement($_13_index.j, {
         type: n.class
       })), React.createElement("div", {
-        className: _$_.name
+        className: $_2371.name
       }, React.createElement("div", {
-        className: _$_.nameText
+        className: $_2371.nameText
       }, e.name)), o, React.createElement("div", {
         onClick: function () {
           return C(e)
         },
-        className: N(_$_.closeIcon, "watchItemCloseIcon")
+        className: N($_2371.closeIcon, "watchItemCloseIcon")
       }, React.createElement($_13_index.j, {
         type: "icon-close"
       })))
     }(e)
   })), React.createElement("div", {
-    className: _$_.actions
+    className: $_2371.actions
   }, React.createElement($_13_index.d, {
     style: {
       width: "84px",

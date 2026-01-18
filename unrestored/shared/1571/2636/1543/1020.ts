@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */_$$_80_index from "../80/index"
+import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
 import * as /* [auto-meaningful-name] */$_378 from "./378"
 var s = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
@@ -37,7 +37,7 @@ var s = React.forwardRef(function (e, t) {
       }
     }
   }, [])
-  return c.current ? _$$_80_index.createPortal(e$children, c.current) : null
+  return c.current ? $$_80_index1.createPortal(e$children, c.current) : null
 })
 export { s as a }
 export default s

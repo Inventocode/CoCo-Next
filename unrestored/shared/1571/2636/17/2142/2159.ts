@@ -152,9 +152,9 @@ var c = function () {
     var /* [auto-meaningful-name] */this$target_workspace
     var /* [auto-meaningful-name] */this$workspace_
     var r
-    var /* [auto-meaningful-name] */_this$workspace_
+    var /* [auto-meaningful-name] */this$workspace_1
     var o
-    var /* [auto-meaningful-name] */_this$workspace_2
+    var /* [auto-meaningful-name] */this$workspace_2
     var c
     var u = this
     var l = function () {
@@ -200,7 +200,7 @@ var c = function () {
         this.svg_group = (0, s.create_svg_element)("g", {
           class: "blocklyLine"
         })
-        if (!(null === (o = null === (_this$workspace_ = this.workspace_) || undefined === _this$workspace_ ? undefined : _this$workspace_.svg_block_canvas_) || undefined === o)) {
+        if (!(null === (o = null === (this$workspace_1 = this.workspace_) || undefined === this$workspace_1 ? undefined : this$workspace_1.svg_block_canvas_) || undefined === o)) {
           o.appendChild(this.svg_group)
         }
         var _ = (0, s.create_svg_element)("rect", {
@@ -224,7 +224,7 @@ var c = function () {
         this.svg_group = (0, s.create_svg_element)("g", {
           class: this.css_class
         })
-        if (!(null === (c = null === (_this$workspace_2 = this.workspace_) || undefined === _this$workspace_2 ? undefined : _this$workspace_2.svg_block_canvas_) || undefined === c)) {
+        if (!(null === (c = null === (this$workspace_2 = this.workspace_) || undefined === this$workspace_2 ? undefined : this$workspace_2.svg_block_canvas_) || undefined === c)) {
           c.appendChild(this.svg_group)
         }
         var v = (0, s.create_svg_element)("rect", {

@@ -9,7 +9,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("./1396/448")
+var r = require("./2373/448")
 function i(e) {
   return "function" === typeof e ? e.name : "symbol" === typeof e ? e.toString() : e
 }
@@ -28,11 +28,11 @@ exports.listRegisteredBindingsForServiceIdentifier = function (e, t, n) {
   if (0 !== i.length) {
     r = "\nRegistered bindings:"
     i.forEach(function (e) {
-      var /* [auto-meaningful-name] */Object = "Object"
+      var /* [auto-meaningful-name] */_Object = "Object"
       if (null !== e.implementationType) {
-        Object = o(e.implementationType)
+        _Object = o(e.implementationType)
       }
-      r = r + "\n " + Object
+      r = r + "\n " + _Object
       if (e.constraint.metaData) {
         r = r + " - " + e.constraint.metaData
       }

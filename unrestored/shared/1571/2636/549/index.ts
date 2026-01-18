@@ -15,12 +15,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn
 import d from "../8"
 import /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 var _a
 _a = function (e) {
-  var t = _React.useRef(null)
+  var t = React1.useRef(null)
   var n = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -54,40 +54,40 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var /* [auto-meaningful-name] */e$attributes$value = e$attributes.value
-  var q = _React.useRef(null)
-  var X = _React.useRef(null)
-  var Q = _React.useRef(r.UP)
-  var Z = _React.useState(false)
+  var q = React1.useRef(null)
+  var X = React1.useRef(null)
+  var Q = React1.useRef(r.UP)
+  var Z = React1.useState(false)
   var J = $$_10_index.a(Z, 2)
   var $ = J[0]
   var ee = J[1]
-  var te = _React.useState(0)
+  var te = React1.useState(0)
   var ne = $$_10_index.a(te, 2)
   var re = ne[0]
   var oe = ne[1]
-  var ie = _React.useState(0)
+  var ie = React1.useState(0)
   var ae = $$_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
-  var le = _React.useState(0)
+  var le = React1.useState(0)
   var ue = $$_10_index.a(le, 2)
   var de = ue[0]
   var pe = ue[1]
-  var fe = _React.useState(0)
+  var fe = React1.useState(0)
   var he = $$_10_index.a(fe, 2)
   var me = he[0]
   var ge = he[1]
-  var _e = _React.useState("")
+  var _e = React1.useState("")
   var ve = $$_10_index.a(_e, 2)
   var be = ve[0]
   var ye = ve[1]
-  var Ee = _React.useState("")
+  var Ee = React1.useState("")
   var Oe = $$_10_index.a(Ee, 2)
   var we = Oe[0]
   var Ce = Oe[1]
-  var Te = _React.useRef(1)
-  var Se = _React.useRef(1)
-  _React.useEffect(function () {
+  var Te = React1.useRef(1)
+  var Se = React1.useRef(1)
+  React1.useEffect(function () {
     if (e$trackImageUrl) {
       Te.current = Te.current + 1
       var /* [auto-meaningful-name] */Te$current = Te.current
@@ -100,7 +100,7 @@ _a = function (e) {
       })
     }
   }, [e$trackImageUrl, U])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$backgroundImageUrl) {
       Se.current = Se.current + 1
       var /* [auto-meaningful-name] */Se$current = Se.current
@@ -113,14 +113,14 @@ _a = function (e) {
       })
     }
   }, [e$backgroundImageUrl, G])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (L === $$_77.d.IMAGE) {
       ee(true)
     } else {
       ee(false)
     }
   }, [L])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */e$size$height = e$size.height
     if (D === $$_77.b.VERTICAL) {
       e$size$height = e$size.width
@@ -171,45 +171,45 @@ _a = function (e) {
   function Ie(e, t) {
     return t / e * 100 + "%"
   }
-  var je = _React.useCallback(function (e, n) {
+  var je = React1.useCallback(function (e, n) {
     var /* [auto-meaningful-name] */t$current
     var /* [auto-meaningful-name] */q$current = q.current
     var /* [auto-meaningful-name] */X$current = X.current
-    var /* [auto-meaningful-name] */_t$current = t.current
+    var /* [auto-meaningful-name] */t$current1 = t.current
     var s = null === (t$current = t.current) || undefined === t$current ? undefined : t$current.getClientRects()[0]
     if (!s) {
       return e$attributes$value
     }
     var c = Math.max(e$attributes$maxValue - e$attributes$minValue, 1)
-    if (q$current && X$current && _t$current) {
+    if (q$current && X$current && t$current1) {
       if (D === $$_77.b.HORIZONTAL) {
-        var /* [auto-meaningful-name] */_t$current$getClientRects0$width = _t$current.getClientRects()[0].width
+        var /* [auto-meaningful-name] */t$current1$getClientRects0$width = t$current1.getClientRects()[0].width
         var /* [auto-meaningful-name] */q$current$offsetWidth = q$current.offsetWidth
-        var d = _t$current$getClientRects0$width / (c / e$attributes$step)
-        var p = Math.max(Math.min(e - s.left, _t$current$getClientRects0$width), 0)
+        var d = t$current1$getClientRects0$width / (c / e$attributes$step)
+        var p = Math.max(Math.min(e - s.left, t$current1$getClientRects0$width), 0)
         var f = p / d >= c / e$attributes$step ? Math.ceil(p / d) : Math.round(p / d)
         p = f * d
         var h = Math.min(e$attributes$step * f + e$attributes$minValue, e$attributes$maxValue)
-        var m = Ie(_t$current$getClientRects0$width, p = Math.min(p, _t$current$getClientRects0$width))
+        var m = Ie(t$current1$getClientRects0$width, p = Math.min(p, t$current1$getClientRects0$width))
         q$current.style.left = "calc(".concat(m, " - ").concat(q$current$offsetWidth / 2, "px)")
         X$current.style.width = m
         return h
       }
-      var /* [auto-meaningful-name] */_t$current$getClientRects0$height = _t$current.getClientRects()[0].height
+      var /* [auto-meaningful-name] */t$current1$getClientRects0$height = t$current1.getClientRects()[0].height
       var /* [auto-meaningful-name] */q$current$offsetHeight = q$current.offsetHeight
-      var b = _t$current$getClientRects0$height / (c / e$attributes$step)
-      var y = Math.max(Math.min(s.bottom - n, _t$current$getClientRects0$height), 0)
+      var b = t$current1$getClientRects0$height / (c / e$attributes$step)
+      var y = Math.max(Math.min(s.bottom - n, t$current1$getClientRects0$height), 0)
       var E = y / b >= c / e$attributes$step ? Math.ceil(y / b) : Math.round(y / b)
       y = E * b
       var O = Math.min(e$attributes$step * E + e$attributes$minValue, e$attributes$maxValue)
-      var w = Ie(_t$current$getClientRects0$height, y = Math.min(y, _t$current$getClientRects0$height))
+      var w = Ie(t$current1$getClientRects0$height, y = Math.min(y, t$current1$getClientRects0$height))
       q$current.style.bottom = "calc(".concat(w, " - ").concat(q$current$offsetHeight / 2, "px)")
       X$current.style.height = w
       return O
     }
     return e$attributes$value
   }, [D, e$attributes$maxValue, e$attributes$minValue, e$attributes$step, e$attributes$value])
-  var Ne = _React.useCallback(function (e) {
+  var Ne = React1.useCallback(function (e) {
     if ($$_15.W()) {
       b = true
       if (!e$attributes$disabled) {
@@ -219,7 +219,7 @@ _a = function (e) {
       }
     }
   }, [e$attributes$disabled, e$onStartToSlid, e$attributes$value])
-  var Re = _React.useCallback(function (e) {
+  var Re = React1.useCallback(function (e) {
     if ($$_15.W() && !e$attributes$disabled) {
       b = true
       var t = je(e.changedTouches[0].clientX, e.changedTouches[0].clientY)
@@ -228,7 +228,7 @@ _a = function (e) {
       }
     }
   }, [e$attributes$disabled, je, e$onSliderChange])
-  var ke = _React.useCallback(function () {
+  var ke = React1.useCallback(function () {
     b = false
     if (!e$attributes$disabled) {
       if (e$onEndToSlid) {
@@ -236,7 +236,7 @@ _a = function (e) {
       }
     }
   }, [e$attributes$disabled, e$onEndToSlid, e$attributes$value])
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     var /* [auto-meaningful-name] */X$current = X.current
     var /* [auto-meaningful-name] */q$current = q.current
     var /* [auto-meaningful-name] */t$current = t.current
@@ -269,7 +269,7 @@ _a = function (e) {
       }
     }
   }, [re, se, e$attributes$maxValue, e$attributes$minValue, e$attributes$value, D, $, e$size])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!$$_15.W()) {
       var e = e$attributes$value
       var t = e$attributes$value

@@ -5,25 +5,25 @@
  */
 
 import { tn, nn } from "../../../../../unrestored/shared/1571/2636/49__part-8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../shared/widget/custom/type"
-import * as Oe from "../../../../../unrestored/shared/1571/2636/43"
-import * as /* [auto-meaningful-name] */$_37_index from "../../../../../unrestored/shared/1571/2636/37/index"
-import * as ye from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$_24_index from "../../../../../unrestored/shared/1571/2636/24/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_43 from "../../../../../unrestored/shared/1571/2636/43"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../../../unrestored/shared/1571/2636/37/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../../unrestored/shared/1571/2636/24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
-import * as Q from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_110 from "../../../../../unrestored/shared/1571/2636/110"
+import * as /* [auto-meaningful-name] */$$_$$_$$_widget_builtIn_types from "../../../widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_110 from "../../../../../unrestored/shared/1571/2636/110"
 function un(e) {
   if (nn(e.path)) {
     (function (e) {
       var t = e.path[1]
       if (t) {
-        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Mf(t, undefined, false))
+        $$_$$_$$_$$_$$_unrestored_shared_1571_2636_43.h($$_$$_$$_redux_common_actions.Mf(t, undefined, false))
       }
     })(e)
   }
@@ -45,11 +45,11 @@ function dn(e) {
   }(e.path)) {
     (function (e) {
       var t = e.op
-      var /* [auto-meaningful-name] */_e$path = e.path
+      var /* [auto-meaningful-name] */e$path = e.path
       var r = t.i
-      var o = _e$path[1]
-      var i = _e$path[3]
-      Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Lg(o, i, r, false, true, false))
+      var o = e$path[1]
+      var i = e$path[3]
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_43.h($$_$$_$$_redux_common_actions.Lg(o, i, r, false, true, false))
     })(e)
   }
   if (function (e) {
@@ -57,20 +57,20 @@ function dn(e) {
   }(e.path)) {
     (function (e) {
       var t = e.op
-      var /* [auto-meaningful-name] */_e$path2 = e.path
+      var /* [auto-meaningful-name] */e$path = e.path
       var r = t.i
-      var o = _e$path2[1]
-      var i = _e$path2[2]
+      var o = e$path[1]
+      var i = e$path[2]
       if ("title" === i) {
-        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Ng(o, r, false, true, false))
+        $$_$$_$$_$$_$$_unrestored_shared_1571_2636_43.h($$_$$_$$_redux_common_actions.Ng(o, r, false, true, false))
       } else {
-        Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Lg(o, i, r, false, true, false))
+        $$_$$_$$_$$_$$_unrestored_shared_1571_2636_43.h($$_$$_$$_redux_common_actions.Lg(o, i, r, false, true, false))
       }
     })(e)
   }
 }
 function pn() {
-  return (pn = Q.a(RegeneratorRuntime.mark(function e(t) {
+  return (pn = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
     var n
     var r
     var o
@@ -87,11 +87,11 @@ function pn() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (n = t.op, r = n.i, !$$_$$_$$_$$_src_shared_widget_custom_type.e(r.type) || ye.Db(r.type)) {
+            if (n = t.op, r = n.i, !$$_$$_$$_$$_shared_widget_custom_type.e(r.type) || $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(r.type)) {
               e.next = 11
               break
             }
-            if (!(a = null === (o = $_24_index.a.getDoc()) || undefined === o || null === (o$extensionWidgetList = o.extensionWidgetList) || undefined === o$extensionWidgetList ? undefined : o$extensionWidgetList.find(function (e) {
+            if (!(a = null === (o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === o || null === (o$extensionWidgetList = o.extensionWidgetList) || undefined === o$extensionWidgetList ? undefined : o$extensionWidgetList.find(function (e) {
               return e.type === r.type
             }))) {
               e.next = 11
@@ -99,21 +99,21 @@ function pn() {
             }
             a$cdnUrl = a.cdnUrl
             c = a.id
-            $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-              title: $$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_src_shared_ui_language.b, "ExtensionWidget.loading").toString(),
+            $$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index.a($$_$$_$$_redux_common_actions.zh({
+              title: $$_$$_$$_$$_shared_ui_language.c($$_$$_$$_$$_shared_ui_language.b, "ExtensionWidget.loading").toString(),
               cancelBtnVisible: false,
               confirmBtnVisible: false
             }))
             e.next = 9
-            return $$_$$_$$_$$_src_shared_widget_custom_load.u(a$cdnUrl, c)
+            return $$_$$_$$_$$_shared_widget_custom_load.u(a$cdnUrl, c)
           case 9:
             if (e$sent = e.sent) {
               e$sent$title = e$sent.title
               e$sent$type = e$sent.type
-              p = $$_$$_$$_$$_src_shared_widget_custom_type.f(e$sent$type, true)
-              $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Vg())
-              $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-                title: $$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_src_shared_ui_language.b, "ExtensionWidget.finishRegistration", {
+              p = $$_$$_$$_$$_shared_widget_custom_type.f(e$sent$type, true)
+              $$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index.a($$_$$_$$_redux_common_actions.Vg())
+              $$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index.a($$_$$_$$_redux_common_actions.zh({
+                title: $$_$$_$$_$$_shared_ui_language.c($$_$$_$$_$$_shared_ui_language.b, "ExtensionWidget.finishRegistration", {
                   title: e$sent$title,
                   type: p
                 }).toString(),
@@ -121,11 +121,11 @@ function pn() {
               }))
             }
           case 11:
-            ye.Ub(r.id, r)
-            Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.hf(r.id))
-            if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.B || r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.y) {
+            $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Ub(r.id, r)
+            $$_$$_$$_$$_$$_unrestored_shared_1571_2636_43.h($$_$$_$$_redux_common_actions.hf(r.id))
+            if (r.type === $$_$$_$$_widget_builtIn_types.B || r.type === $$_$$_$$_widget_builtIn_types.y) {
               r$attributes$fields = r.attributes.fields
-              $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.bf($_110.a(r.type, {
+              $$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index.a($$_$$_$$_redux_common_actions.bf($$_$$_$$_$$_$$_unrestored_shared_1571_2636_110.a(r.type, {
                 id: r.id,
                 name: r.title,
                 value: r$attributes$fields,
@@ -134,8 +134,8 @@ function pn() {
                 isWatching: false
               })))
             } else {
-              if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
-                $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.bf($_110.a($$_$$_$$_$$_src_editor_widget_builtIn_types.G, {
+              if (r.type === $$_$$_$$_widget_builtIn_types.G) {
+                $$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index.a($$_$$_$$_redux_common_actions.bf($$_$$_$$_$$_$$_unrestored_shared_1571_2636_110.a($$_$$_$$_widget_builtIn_types.G, {
                   id: r.id,
                   name: r.title,
                   value: r.attributes.db,
@@ -157,7 +157,7 @@ function fn(e) {
   return hn.apply(this, arguments)
 }
 function hn() {
-  return (hn = Q.a(RegeneratorRuntime.mark(function e(t) {
+  return (hn = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
     var n
     var r
     var o
@@ -167,7 +167,7 @@ function hn() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (undefined !== (r = null === (n = $_24_index.a.getDoc()) || undefined === n ? undefined : n.unsafeExtensionWidgetList)) {
+            if (undefined !== (r = null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === n ? undefined : n.unsafeExtensionWidgetList)) {
               e.next = 3
               break
             }
@@ -182,10 +182,10 @@ function hn() {
               return -1
             }())) {
               i = OtJson1.replaceOp(["unsafeExtensionWidgetList", o], true, t)
-              $_24_index.a.applyClient(i)
+              $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(i)
             } else {
               a = OtJson1.insertOp(["unsafeExtensionWidgetList", r.length], t)
-              $_24_index.a.applyClient(a)
+              $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(a)
             }
           case 6:
           case "end":
@@ -213,7 +213,7 @@ function mn(e) {
   return gn.apply(this, arguments)
 }
 function gn() {
-  return (gn = Q.a(RegeneratorRuntime.mark(function e(t) {
+  return (gn = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
     var n
     var r
     var o
@@ -223,7 +223,7 @@ function gn() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (undefined !== (r = null === (n = $_24_index.a.getDoc()) || undefined === n ? undefined : n.extensionWidgetList)) {
+            if (undefined !== (r = null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === n ? undefined : n.extensionWidgetList)) {
               e.next = 3
               break
             }
@@ -245,7 +245,7 @@ function gn() {
             }
             if (-1 === o) {
               a = OtJson1.insertOp(["extensionWidgetList", r.length], i)
-              $_24_index.a.applyClient(a)
+              $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(a)
             }
           case 7:
           case "end":

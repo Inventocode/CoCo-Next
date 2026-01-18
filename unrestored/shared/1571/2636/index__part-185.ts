@@ -14,10 +14,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_753 from "./753"
-import /* [auto-meaningful-name] */_$_ from "./753"
-var Dj = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_7531 from "./753"
+var Dj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
@@ -25,15 +25,15 @@ var Dj = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$urls = e.urls
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
   var /* [auto-meaningful-name] */e$selectHandler = e.selectHandler
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(e$urls && e$urls.length > 1 ? e$urls[0] : e$cdnUrl)
+  var p = React1.useState(e$urls && e$urls.length > 1 ? e$urls[0] : e$cdnUrl)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = _React.useRef(null)
+  var v = React1.useRef(null)
   var b = e$urls && e$urls.length > 1
   var y = "image" + t
   return React.createElement(Rj, {
@@ -63,7 +63,7 @@ var Dj = _React.memo(function (e) {
     }
   }, React.createElement("div", {
     ref: v,
-    className: N(_$_.ImageLibraryItem, e$isSelect && _$_.selected),
+    className: N($_7531.ImageLibraryItem, e$isSelect && $_7531.selected),
     onClick: function () {
       if (!(b && !e$canShowMultiply)) {
         e$selectHandler({
@@ -77,15 +77,15 @@ var Dj = _React.memo(function (e) {
       }
     }
   }, b && React.createElement("div", {
-    className: _$_.groupIcon
+    className: $_7531.groupIcon
   }, React.createElement($_13_index.j, {
     type: "icon-group"
   })), React.createElement("div", {
-    className: _$_.icon
+    className: $_7531.icon
   }, React.createElement($_13_index.j, {
     type: "icon-style-selected"
   })), React.createElement("div", {
-    className: _$_.content,
+    className: $_7531.content,
     onMouseOver: function () {
       if (b) {
         (function () {
@@ -127,7 +127,7 @@ var Dj = _React.memo(function (e) {
     alt: "",
     src: g || e$source
   })), React.createElement("div", {
-    className: _$_.footer
+    className: $_7531.footer
   }, t)))
 })
 export { Dj }

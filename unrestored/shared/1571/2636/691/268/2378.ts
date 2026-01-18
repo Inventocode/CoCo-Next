@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 var r = require("./359")
-var i = require("./1396/501")
+var i = require("./2375/501")
 var o = require("./649")
 exports.multiInject = function (e) {
   return function (t, n, a) {

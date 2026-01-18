@@ -72,18 +72,18 @@ var c = function () {
   }
   e.prototype.unregister_finger_events = function () {
     var /* [auto-meaningful-name] */this$hammer_manager
-    var /* [auto-meaningful-name] */_this$hammer_manager
-    var /* [auto-meaningful-name] */_this$hammer_manager2
+    var /* [auto-meaningful-name] */this$hammer_manager1
+    var /* [auto-meaningful-name] */this$hammer_manager2
     if (this.pinch_recognizer) {
       if (!(null === (this$hammer_manager = this.hammer_manager) || undefined === this$hammer_manager)) {
         this$hammer_manager.remove(this.pinch_recognizer)
       }
     }
-    if (!(null === (_this$hammer_manager = this.hammer_manager) || undefined === _this$hammer_manager)) {
-      _this$hammer_manager.off("pinch", this.pinch_listener)
+    if (!(null === (this$hammer_manager1 = this.hammer_manager) || undefined === this$hammer_manager1)) {
+      this$hammer_manager1.off("pinch", this.pinch_listener)
     }
-    if (!(null === (_this$hammer_manager2 = this.hammer_manager) || undefined === _this$hammer_manager2)) {
-      _this$hammer_manager2.off("pinchend", this.pinchend_listener)
+    if (!(null === (this$hammer_manager2 = this.hammer_manager) || undefined === this$hammer_manager2)) {
+      this$hammer_manager2.off("pinchend", this.pinchend_listener)
     }
   }
   e.prototype.cancel_gesture_when_multi_touch = function () {

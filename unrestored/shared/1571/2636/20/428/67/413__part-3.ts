@@ -11,14 +11,14 @@ import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_322 from "../../../322"
 import * as /* [auto-meaningful-name] */$$_$$_$$_82 from "../../../82"
 import * as /* [auto-meaningful-name] */$$_$$_$$_60 from "../../../60"
 import * as /* [auto-meaningful-name] */$$_$$_$$_114 from "../../../114"
 import * as /* [auto-meaningful-name] */$$_$$_$$_218 from "../../../218"
-import /* [auto-meaningful-name] */_$$_$$_$$_ from "../../../218"
+import /* [auto-meaningful-name] */$$_$$_$$_2181 from "../../../218"
 var P = function (e) {
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$size = e.size
@@ -62,7 +62,7 @@ var P = function (e) {
   var z = Math.min(H, V, G)
   z = Math.max(z, $$_$$_$$_82.o)
   z = Math.floor(z)
-  var Y = _React.useMemo(function () {
+  var Y = React1.useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}
@@ -115,7 +115,7 @@ var P = function (e) {
   }, K)
   return React.createElement("button", {
     id: r,
-    className: $$_$$_$$_8($$_$$_$$_90.b, _$$_$$_$$_.buttonWidget, !e$attributes$disabled && _$$_$$_$$_.transform, $$_$$_$$_11.a({}, _$$_$$_$$_.hide, !e$visible)),
+    className: $$_$$_$$_8($$_$$_$$_90.b, $$_$$_$$_2181.buttonWidget, !e$attributes$disabled && $$_$$_$$_2181.transform, $$_$$_$$_11.a({}, $$_$$_$$_2181.hide, !e$visible)),
     "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.z,
     "data-min-width": $$_$$_$$_82.p,
@@ -141,7 +141,7 @@ var P = function (e) {
       flexDirection: F === $$_$$_$$_60.a.RIGHT ? "row-reverse" : "row"
     })
   }, B && React.createElement("div", {
-    className: _$$_$$_$$_.iconWrapper,
+    className: $$_$$_$$_2181.iconWrapper,
     style: {
       color: e$attributes$disabled ? e$attributes$backgroundMode === $$_$$_$$_114.a.TEMPLATE ? K.color : "#7E7E7E" : e$attributes$iconColor
     }
@@ -155,9 +155,9 @@ var P = function (e) {
   }) : e$iconFileOrUrl && React.createElement($$_$$_$$_322.a, {
     icon: e$iconFileOrUrl
   })), P && React.createElement("div", {
-    className: $$_$$_$$_8(_$$_$$_$$_.textWrapper, B && e$attributes$text && (F === $$_$$_$$_60.a.RIGHT ? _$$_$$_$$_.iconToTextRightSpacing : _$$_$$_$$_.iconToTextLeftSpacing))
+    className: $$_$$_$$_8($$_$$_$$_2181.textWrapper, B && e$attributes$text && (F === $$_$$_$$_60.a.RIGHT ? $$_$$_$$_2181.iconToTextRightSpacing : $$_$$_$$_2181.iconToTextLeftSpacing))
   }, React.createElement("div", {
-    className: _$$_$$_$$_.text,
+    className: $$_$$_$$_2181.text,
     style: {
       display: "flex",
       textAlign: F

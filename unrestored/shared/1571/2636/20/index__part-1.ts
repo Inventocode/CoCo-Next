@@ -12,10 +12,10 @@ import * as /* [auto-meaningful-name] */$_429 from "./429"
 import * as a from "./84"
 import * as /* [auto-meaningful-name] */$_428_index from "./428/index"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as u from "../7"
 import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */_Axios from "axios"
+import /* [auto-meaningful-name] */Axios1 from "axios"
 import * as /* [auto-meaningful-name] */$_791_index from "./791/index"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 import * as /* [auto-meaningful-name] */$$_28_128 from "../28/128"
@@ -23,17 +23,17 @@ function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = u.a(_RegeneratorRuntime.mark(function e(t) {
+  return (_ = u.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     var o = arguments
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             n = !(o.length > 1 && undefined !== o[1]) || o[1]
             e.next = 3
-            return _Axios.get("".concat($$_28_128.a.openServiceHost, "/cdn/qi-niu/tokens/uploading"), {
+            return Axios1.get("".concat($$_28_128.a.openServiceHost, "/cdn/qi-niu/tokens/uploading"), {
               withCredentials: true,
               params: {
                 cdnName: "qiniu",
@@ -57,7 +57,7 @@ function v(e, t, n) {
   return b.apply(this, arguments)
 }
 function b() {
-  return (b = u.a(_RegeneratorRuntime.mark(function e(t, n, r) {
+  return (b = u.a(RegeneratorRuntime1.mark(function e(t, n, r) {
     var o
     var i
     var /* [auto-meaningful-name] */e$sent
@@ -65,7 +65,7 @@ function b() {
     var /* [auto-meaningful-name] */u$response$data
     var u
     var d = arguments
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -75,7 +75,7 @@ function b() {
             i.append("token", r)
             e.prev = 5
             e.next = 8
-            return _Axios.post(o, i, {
+            return Axios1.post(o, i, {
               headers: {
                 "Content-Type": "multipart/form-data"
               },
@@ -111,15 +111,15 @@ function E(e) {
   return O.apply(this, arguments)
 }
 function O() {
-  return (O = u.a(_RegeneratorRuntime.mark(function e(t) {
+  return (O = u.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
     var /* [auto-meaningful-name] */e$sent
-    var /* [auto-meaningful-name] */_e$sent
+    var /* [auto-meaningful-name] */e$sent1
     var a
-    var /* [auto-meaningful-name] */_e$sent2
+    var /* [auto-meaningful-name] */e$sent2
     var c
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -128,7 +128,7 @@ function O() {
               break
             }
             e.next = 4
-            return _Axios.get(r, {
+            return Axios1.get(r, {
               responseType: "blob"
             })
           case 4:
@@ -146,16 +146,16 @@ function O() {
             e.next = 10
             return $_791_index.fromBlob(r)
           case 10:
-            _e$sent = e.sent
-            r = (null === _e$sent || undefined === _e$sent ? undefined : _e$sent.mime) ? new Blob([r], {
-              type: _e$sent.mime
+            e$sent1 = e.sent
+            r = (null === e$sent1 || undefined === e$sent1 ? undefined : e$sent1.mime) ? new Blob([r], {
+              type: e$sent1.mime
             }) : r
           case 12:
             a = y()
             e.next = 15
             return g([a])
           case 15:
-            if (_e$sent2 = e.sent, !(c = null === (n = _e$sent2.tokens.find(function (e) {
+            if (e$sent2 = e.sent, !(c = null === (n = e$sent2.tokens.find(function (e) {
               return e.file_path
             })) || undefined === n ? undefined : n.token)) {
               e.next = 21
@@ -164,7 +164,7 @@ function O() {
             e.next = 20
             return v(a, r, c)
           case 20:
-            return e.abrupt("return", _e$sent2.bucket_url + a)
+            return e.abrupt("return", e$sent2.bucket_url + a)
           case 21:
             throw new Error("Upload token not found!")
           case 22:

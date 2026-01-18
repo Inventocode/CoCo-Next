@@ -13,7 +13,7 @@ import /* [auto-meaningful-name] */$$_$$_50_index from "../../50/index"
 import /* [auto-meaningful-name] */$_101_index from "./101/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_1507 from "./1507"
-import /* [auto-meaningful-name] */_$_ from "./1507"
+import /* [auto-meaningful-name] */$_15071 from "./1507"
 var fo = function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$onClick = e.onClick
@@ -84,7 +84,7 @@ var fo = function (e) {
     }
   }, React.createElement("div", {
     style: l.check
-  }, React.createElement(_$_, null)))
+  }, React.createElement($_15071, null)))
 }
 var ho = function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick

@@ -7,14 +7,14 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_47 from "../../47"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_197_483_index from "../../197/483/index"
 import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */_Axios from "axios"
+import /* [auto-meaningful-name] */Axios1 from "axios"
 import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
 import * as /* [auto-meaningful-name] */$$_$$_28_128 from "../../28/128"
 new $$_$$_197_483_index.a({
@@ -29,19 +29,19 @@ function F(e) {
   return G.apply(this, arguments)
 }
 function G() {
-  return (G = $$_$$_7.a(_RegeneratorRuntime.mark(function e(t) {
+  return (G = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     var o
     var /* [auto-meaningful-name] */o$filename
     var /* [auto-meaningful-name] */o$token
     var s
-    var /* [auto-meaningful-name] */_e$sent
-    var /* [auto-meaningful-name] */_e$sent$data
-    var /* [auto-meaningful-name] */_e$sent$data$hash
-    var /* [auto-meaningful-name] */_e$sent$data$key
+    var /* [auto-meaningful-name] */e$sent1
+    var /* [auto-meaningful-name] */e$sent1$data
+    var /* [auto-meaningful-name] */e$sent1$data$hash
+    var /* [auto-meaningful-name] */e$sent1$data$key
     var p = arguments
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -57,13 +57,13 @@ function G() {
             s.append("file", t)
             s.append("key", o$filename)
             e.next = 11
-            return _Axios.post($$_$$_28_128.a.apiQiniuHost, s)
+            return Axios1.post($$_$$_28_128.a.apiQiniuHost, s)
           case 11:
-            _e$sent = e.sent
-            _e$sent$data = _e$sent.data
-            _e$sent$data$hash = _e$sent$data.hash
-            _e$sent$data$key = _e$sent$data.key
-            return e.abrupt("return", "https://static.bcmcdn.com/" + _e$sent$data$key + "?hash=" + _e$sent$data$hash)
+            e$sent1 = e.sent
+            e$sent1$data = e$sent1.data
+            e$sent1$data$hash = e$sent1$data.hash
+            e$sent1$data$key = e$sent1$data.key
+            return e.abrupt("return", "https://static.bcmcdn.com/" + e$sent1$data$key + "?hash=" + e$sent1$data$hash)
           case 14:
           case "end":
             return e.stop()
@@ -76,17 +76,17 @@ function W(e, t) {
   return U.apply(this, arguments)
 }
 function U() {
-  return (U = $$_$$_7.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (U = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */e$sent
     var i = arguments
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             r = i.length > 2 && undefined !== i[2] ? i[2] : 1
             e.next = 3
-            return _Axios.get($$_$$_28_128.a.apiOverseaServiceHost + "/tiger/kitten/cdn/token/".concat(r), {
+            return Axios1.get($$_$$_28_128.a.apiOverseaServiceHost + "/tiger/kitten/cdn/token/".concat(r), {
               params: {
                 type: t,
                 prefix: n,
@@ -108,8 +108,8 @@ function H(e) {
   return V.apply(this, arguments)
 }
 function V() {
-  return (V = $$_$$_7.a(_RegeneratorRuntime.mark(function e(t) {
-    return _RegeneratorRuntime.wrap(function (e) {
+  return (V = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -127,9 +127,9 @@ function V() {
                 if ($$_$$_15.S(t)) {
                   window.resolveLocalFileSystemURL(t, function (t) {
                     t.file(function () {
-                      var t = $$_$$_7.a(_RegeneratorRuntime.mark(function t(n) {
+                      var t = $$_$$_7.a(RegeneratorRuntime1.mark(function t(n) {
                         var r
-                        return _RegeneratorRuntime.wrap(function (t) {
+                        return RegeneratorRuntime1.wrap(function (t) {
                           for (;;) {
                             switch (t.prev = t.next) {
                               case 0:
@@ -175,9 +175,9 @@ function z(e) {
   return Y.apply(this, arguments)
 }
 function Y() {
-  return (Y = $$_$$_7.a(_RegeneratorRuntime.mark(function e(t) {
+  return (Y = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

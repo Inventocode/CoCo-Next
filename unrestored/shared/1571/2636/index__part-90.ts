@@ -15,10 +15,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_329 from "./329"
-import /* [auto-meaningful-name] */_$_ from "./329"
-var Uv = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_3291 from "./329"
+var Uv = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$label = e.label
@@ -32,20 +32,20 @@ var Uv = _React.memo(function (e) {
   var l = $_16_index.e(function (e) {
     return e.block.flyoutVisible
   })
-  var u = _React.useState(false)
+  var u = React1.useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useState("")
+  var g = React1.useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     y(c === t && l ? e$color : p || c === t && !l ? e$bgColor : "")
   }, [c, t, l, p, e$color, e$bgColor])
   return React.createElement("div", {
     key: t,
-    className: N(_$_.itemBlock, c === t && l && _$_.itemSelected),
+    className: N($_3291.itemBlock, c === t && l && $_3291.itemSelected),
     style: {
       backgroundColor: b
     },
@@ -70,7 +70,7 @@ var Uv = _React.memo(function (e) {
       m(false)
     }
   }, React.createElement("div", {
-    className: _$_.itemBlockIcon,
+    className: $_3291.itemBlockIcon,
     style: {
       color: e$color
     }
@@ -131,53 +131,53 @@ var Hv = [
     bgColor: "rgba(247,135,103,0.2)"
   }
 ]
-var Vv = _React.memo(function () {
+var Vv = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement("div", {
-    className: _$_.basicBlockBox
+    className: $_3291.basicBlockBox
   }, React.createElement("div", {
-    className: _$_.categoryTitle
+    className: $_3291.categoryTitle
   }, $_710_index$a$formatMessage({
     id: "basicBlock"
   })), React.createElement("div", {
-    className: _$_.blockList
+    className: $_3291.blockList
   }, Hv.map(function (e) {
     return React.createElement(Uv, Object.assign({
       key: e.id
     }, e))
   })), React.createElement("div", {
-    className: _$_.spaceLine
+    className: $_3291.spaceLine
   }))
 })
-var zv = _React.memo(function () {
+var zv = React1.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var t = $_16_index.e(function (e) {
     return e.block.isBlockDragDeleteArea
   })
   return React.createElement("div", {
-    className: _$_.deleteBlockBox
+    className: $_3291.deleteBlockBox
   }, React.createElement("div", {
-    className: N(_$_.deleteTopIconBox, t && _$_.deleteTopIconBoxOff)
+    className: N($_3291.deleteTopIconBox, t && $_3291.deleteTopIconBoxOff)
   }, React.createElement($_13_index.j, {
     type: "icon-delete-top",
-    className: _$_.deleteBlockTopIcon
+    className: $_3291.deleteBlockTopIcon
   })), React.createElement("div", {
-    className: _$_.deleteBottomIconBox
+    className: $_3291.deleteBottomIconBox
   }, React.createElement($_13_index.j, {
     type: "icon-delete-bottom",
-    className: _$_.deleteBlockBottomIcon
+    className: $_3291.deleteBlockBottomIcon
   })), React.createElement("div", null, $_710_index$a$formatMessage({
     id: "Workspace.blockDragDeleteAreaTips"
   })))
 })
-var Yv = _React.memo(function () {
+var Yv = React1.memo(function () {
   var e = $_16_index.d()
-  var t = _React.useRef(null)
+  var t = React1.useRef(null)
   var n = $_16_index.e(function (e) {
     return e.block.isBlockDragDeleteArea
   })
   return React.createElement("div", {
-    className: _$_.wrapper,
+    className: $_3291.wrapper,
     onMouseEnter: function () {
       return e($$_$$_$$_$$_src_editor_redux_common_actions.ui(true))
     },
@@ -185,12 +185,12 @@ var Yv = _React.memo(function () {
       return e($$_$$_$$_$$_src_editor_redux_common_actions.ui(false))
     }
   }, React.createElement("div", {
-    className: _$_.basicBlock
+    className: $_3291.basicBlock
   }, React.createElement(Vv, null)), React.createElement("div", {
-    className: _$_.widgetTree,
+    className: $_3291.widgetTree,
     ref: t
   }, React.createElement(Fv, null)), React.createElement("div", {
-    className: N(_$_.deleteBlockPanel, n && _$_.deleteBlockPanelShow)
+    className: N($_3291.deleteBlockPanel, n && $_3291.deleteBlockPanelShow)
   }, React.createElement(zv, null)))
 })
 export { Yv }

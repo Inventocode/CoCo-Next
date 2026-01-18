@@ -21,7 +21,7 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import "./2602"
 var ud = ["n", "nw", "ne", "s", "se", "sw", "e", "w"]
 var dd = ["e", "w"]
@@ -33,12 +33,12 @@ var fd = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onMoveEnd = e.onMoveEnd
   var i = $_16_index.d()
   var a = React.useRef(null)
-  var s = _React.useRef({})
-  var c = _React.useState(false)
+  var s = React1.useRef({})
+  var c = React1.useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(ud)
+  var p = React1.useState(ud)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
@@ -52,13 +52,13 @@ var fd = React.memo(function (e) {
   var C = $_16_index.e(function (e) {
     return e.common.previewAreaUpdatedAt
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     setTimeout(function () {
       var /* [auto-meaningful-name] */a$current
       return null === (a$current = a.current) || undefined === a$current ? undefined : a$current.moveable.updateRect()
     }, 0)
   }, [C])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e() {
       var /* [auto-meaningful-name] */a$current
       if (!(null === (a$current = a.current) || undefined === a$current)) {
@@ -70,7 +70,7 @@ var fd = React.memo(function (e) {
       window.removeEventListener("resize", e)
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     setTimeout(function () {
       var e
       if (w) {
@@ -82,7 +82,7 @@ var fd = React.memo(function (e) {
       O(e)
     })
   }, [w])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (E) {
       var e = "true" === E.dataset.lockHeight
       var t = "true" === E.dataset.lockWidth
@@ -431,7 +431,7 @@ var bd = function (e) {
   }(t, e)
   var /* [auto-meaningful-name] */t$prototype = t.prototype
   t$prototype.render = function () {
-    return _React.createElement("canvas", {
+    return React1.createElement("canvas", {
       ref: ko(this, "canvasElement"),
       style: this.props.style
     })
@@ -567,7 +567,7 @@ var bd = function (e) {
     lineColor: "#777777"
   }
   return t
-}(_React.PureComponent)
+}(React1.PureComponent)
 var yd = ["type", "width", "height", "unit", "zoom", "style", "backgroundColor", "lineColor", "textColor", "direction", "textFormat", "scrollPos", "textAlign", "mainLineSize", "longLineSize", "shortLineSize", "negativeRuler"]
 var Ed = bd
 var Od = function (e, t) {
@@ -633,12 +633,12 @@ var Td = function (e) {
     var /* [auto-meaningful-name] */this$injector$className = this.injector.className
     var /* [auto-meaningful-name] */this$tag = this.tag
     var l = {}
-    if ((_React.version || "").indexOf("simple") > -1 && this$props$portalContainer) {
+    if ((React1.version || "").indexOf("simple") > -1 && this$props$portalContainer) {
       l = {
         portalContainer: this$props$portalContainer
       }
     }
-    return _React.createElement(this$tag, Cd({
+    return React1.createElement(this$tag, Cd({
       ref: (e = this, _Element = "element", function (n) {
         if (n) {
           e[_Element] = n
@@ -661,7 +661,7 @@ var Td = function (e) {
     return this.element
   }
   return t
-}(_React.Component)
+}(React1.Component)
 var Sd = function (e, t) {
   var n = Wa(t)
   return function (t) {
@@ -798,11 +798,11 @@ var Pd = function (e) {
         t.setState({
           guides: t$state$guides
         }, function () {
-          var /* [auto-meaningful-name] */_t$state$guides = t.state.guides
+          var /* [auto-meaningful-name] */t$state$guides1 = t.state.guides
           t$props$onChangeGuides({
             distX: e$distX,
             distY: e$distY,
-            guides: _t$state$guides,
+            guides: t$state$guides1,
             isAdd: false,
             isChange: _,
             isRemove: g
@@ -831,37 +831,37 @@ var Pd = function (e) {
     var /* [auto-meaningful-name] */this$props$cspNonce = this$props.cspNonce
     var /* [auto-meaningful-name] */this$props$dragGuideStyle = this$props.dragGuideStyle
     var /* [auto-meaningful-name] */this$props$portalContainer = this$props.portalContainer
-    var /* [auto-meaningful-name] */_this$props = this.props
+    var /* [auto-meaningful-name] */this$props1 = this.props
     var d = this.getTranslateName()
     var p = {}
     yd.forEach(function (e) {
       if ("style" !== e) {
-        p[e] = _this$props[e]
+        p[e] = this$props1[e]
       }
     })
-    return _React.createElement(Ld, {
+    return React1.createElement(Ld, {
       ref: ko(this, "manager"),
       cspNonce: this$props$cspNonce,
       className: jd("manager", this$props$type) + " " + this$props$className,
       portalContainer: this$props$portalContainer,
       style: this$props$style
-    }, _React.createElement("div", {
+    }, React1.createElement("div", {
       className: jd("guide-origin"),
       ref: ko(this, "originElement")
-    }), _React.createElement(Ed, Id({
+    }), React1.createElement(Ed, Id({
       ref: ko(this, "ruler"),
       style: this$props$rulerStyle
-    }, p)), _React.createElement("div", {
+    }, p)), React1.createElement("div", {
       className: Rd,
       ref: ko(this, "guidesElement"),
       style: {
         transform: d + "(" + -this.scrollPos * this$props$zoom + "px)"
       }
-    }, this$props$displayDragPos && _React.createElement("div", {
+    }, this$props$displayDragPos && React1.createElement("div", {
       className: Dd,
       ref: ko(this, "displayElement"),
       style: this$props$dragGuideStyle
-    }), _React.createElement("div", {
+    }), React1.createElement("div", {
       className: Nd,
       ref: ko(this, "adderElement")
     }), this.renderGuides()))
@@ -878,7 +878,7 @@ var Pd = function (e) {
     this.guideElements = []
     if (this$props$showGuides) {
       return this$state$guides.map(function (t, o) {
-        return _React.createElement("div", {
+        return React1.createElement("div", {
           className: jd("guide", this$props$type),
           ref: xo(e, "guideElements", o),
           key: o,
@@ -1061,7 +1061,7 @@ var Pd = function (e) {
     portalContainer: null
   }
   return t
-}(_React.PureComponent)
+}(React1.PureComponent)
 export { fd }
 export { hd }
 export { md }

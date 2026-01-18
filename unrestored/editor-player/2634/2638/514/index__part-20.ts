@@ -13,7 +13,7 @@ import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../..
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_684_480 from "../../../../shared/1571/2636/684/480"
 var we = [
   {
@@ -38,7 +38,7 @@ var we = [
     number: "123 4567 8905"
   }
 ]
-var Ee = _React.memo(function () {
+var Ee = React1.memo(function () {
   var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
   var e = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
     return t.emulatorPhoneInfo

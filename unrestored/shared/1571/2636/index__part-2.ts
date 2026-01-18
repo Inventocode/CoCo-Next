@@ -8,7 +8,7 @@
 
 var b
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as O from "./7"
 import "./1580/index"
 import * as /* [auto-meaningful-name] */$_2681_index from "./2681/index"
@@ -25,7 +25,7 @@ import * as k from "./11"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 !function (e) {
   e[e.COMMON = 0] = "COMMON"
   e[e.GREEN = 1] = "GREEN"
@@ -235,7 +235,7 @@ function W(e, t) {
       n[2] += i
     }
   }
-  return _Color.hsv(n).hex()
+  return Color1.hsv(n).hex()
 }
 var U = function (e) {
   var t = {}

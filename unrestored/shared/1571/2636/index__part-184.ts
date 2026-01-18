@@ -10,10 +10,10 @@ import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_624 from "./624"
-import /* [auto-meaningful-name] */_$_ from "./624"
-var Rj = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_6241 from "./624"
+var Rj = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$urls = e.urls
@@ -22,25 +22,25 @@ var Rj = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$isGroupItemSelected = e.isGroupItemSelected
   var /* [auto-meaningful-name] */e$getTooltipContainer = e.getTooltipContainer
   var c = React.createElement("ul", {
-    className: _$_.groupPopoverContent
+    className: $_6241.groupPopoverContent
   }, null === e$urls || undefined === e$urls ? undefined : e$urls.map(function (e, t) {
     return React.createElement("li", {
       onClick: function (t) {
         return e$handleGroupItemClick(t, e)
       },
-      className: N(e$isGroupItemSelected(e) && _$_.selected),
+      className: N(e$isGroupItemSelected(e) && $_6241.selected),
       key: t
     }, React.createElement("div", {
-      className: _$_.playArea
+      className: $_6241.playArea
     }, React.createElement("img", {
       alt: t.toString(),
       src: e
     })), React.createElement("div", {
-      className: _$_.infoArea
+      className: $_6241.infoArea
     }, React.createElement("div", {
-      className: _$_.nameArea
+      className: $_6241.nameArea
     }, t + 1), e$isGroupItemSelected(e) && React.createElement("div", {
-      className: N(_$_.btn, _$_.selectedIconWrap)
+      className: N($_6241.btn, $_6241.selectedIconWrap)
     }, React.createElement($_13_index.j, {
       type: "icon-style-selected"
     }))))
@@ -60,7 +60,7 @@ var Rj = _React.memo(function (e) {
       },
       offset: [-5, 0]
     },
-    overlayClassName: _$_.groupPopover,
+    overlayClassName: $_6241.groupPopover,
     onVisibleChange: e$onVisibleChange
   }, e$children)
 })

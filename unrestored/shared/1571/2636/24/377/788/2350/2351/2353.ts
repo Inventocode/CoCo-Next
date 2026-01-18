@@ -123,7 +123,7 @@ var u = function (e) {
   }
   t.prototype.interrupt_gesture = function (e) {
     var /* [auto-meaningful-name] */e$block_dragger
-    var /* [auto-meaningful-name] */_e$block_dragger
+    var /* [auto-meaningful-name] */e$block_dragger1
     var r = this.Blink.events.get_group()
     this.Blink.events.fire(this.group_event_factory({
       type: s.GroupEventType.GroupCancel,
@@ -132,7 +132,7 @@ var u = function (e) {
     try {
       this.Blink.events.disable_listener()
       var i = null === (e$block_dragger = e.block_dragger) || undefined === e$block_dragger ? undefined : e$block_dragger.redo_stack_before_drag.slice()
-      var o = null === (_e$block_dragger = e.block_dragger) || undefined === _e$block_dragger ? undefined : _e$block_dragger.undo_stack_before_drag.slice()
+      var o = null === (e$block_dragger1 = e.block_dragger) || undefined === e$block_dragger1 ? undefined : e$block_dragger1.undo_stack_before_drag.slice()
       if (undefined === i || undefined === o) {
         return void console.error("Confilct resolver: cannot get redo stack before drag.")
       }

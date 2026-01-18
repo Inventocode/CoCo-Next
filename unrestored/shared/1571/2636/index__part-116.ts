@@ -16,34 +16,34 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_811 from "./811"
-import /* [auto-meaningful-name] */_$_ from "./811"
+import /* [auto-meaningful-name] */$_8111 from "./811"
 var hO = [
   {
     value: $_379.a.DEFAULT,
     renderContent: function () {
       return React.createElement("div", {
-        className: _$_.defaultRadio
+        className: $_8111.defaultRadio
       }, React.createElement("span", null, "Text"))
     }
   }, {
     value: $_379.a.BUTTON,
     renderContent: function () {
       return React.createElement("div", {
-        className: _$_.buttonRadio
+        className: $_8111.buttonRadio
       }, React.createElement("span", null, "Text"))
     }
   }
 ]
-var mO = _React.memo(function (e) {
+var mO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement($_13_index.i, {
-    className: N(_$_.formItemWrapper, _$_.typeSelector, _$_.radioTypeSelector, "changeRadioResizeMode"),
+    className: N($_8111.formItemWrapper, $_8111.typeSelector, $_8111.radioTypeSelector, "changeRadioResizeMode"),
     label: $_710_index$a$formatMessage({
       id: "style"
     })
@@ -62,7 +62,7 @@ var mO = _React.memo(function (e) {
     }, e.renderContent())
   })))
 })
-var gO = _React.memo(function (e) {
+var gO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -94,7 +94,7 @@ var gO = _React.memo(function (e) {
     }
   })
 })
-var _O = _React.memo(function (e) {
+var _O = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange

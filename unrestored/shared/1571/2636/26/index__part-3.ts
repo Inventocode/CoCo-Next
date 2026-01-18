@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 var r
 import * as H from "../6"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as Y from "../7"
 import * as /* [auto-meaningful-name] */$$_207_209_index from "../207/209/index"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
@@ -31,7 +31,7 @@ function te(e) {
   return ne.apply(this, arguments)
 }
 function ne() {
-  return (ne = Y.a(_RegeneratorRuntime.mark(function e(t) {
+  return (ne = Y.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
     var o
@@ -40,7 +40,7 @@ function ne() {
     var s
     var l
     var u = arguments
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -72,14 +72,14 @@ function re(e, t) {
   return oe.apply(this, arguments)
 }
 function oe() {
-  return (oe = Y.a(_RegeneratorRuntime.mark(function e(t, n) {
+  return (oe = Y.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */t$type
     var /* [auto-meaningful-name] */e$sent
     var a
     var s
     var c
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -95,27 +95,27 @@ function oe() {
             return e.abrupt("return", new Promise(function (e) {
               ue(e$sent, s, c, "png", function (n) {
                 var r = t
-                var /* [auto-meaningful-name] */_t$type = t.type
+                var /* [auto-meaningful-name] */t$type1 = t.type
                 var a = t.widgetType || ""
                 a = a.toLowerCase()
                 if ("widget_event" === t$type) {
                   var /* [auto-meaningful-name] */r$event = r.event
-                  _t$type = "".concat(a, "_event_").concat(r$event)
+                  t$type1 = "".concat(a, "_event_").concat(r$event)
                 } else if ("widget_get" === t$type) {
                   var /* [auto-meaningful-name] */r$property = r.property
-                  _t$type = "".concat(a, "_get_").concat(r$property)
+                  t$type1 = "".concat(a, "_get_").concat(r$property)
                 } else if ("widget_set" === t$type) {
-                  var /* [auto-meaningful-name] */_r$property = r.property
-                  _t$type = "".concat(a, "_set_").concat(_r$property)
+                  var /* [auto-meaningful-name] */r$property1 = r.property
+                  t$type1 = "".concat(a, "_set_").concat(r$property1)
                 } else if ("widget_method" === t$type) {
                   var /* [auto-meaningful-name] */r$method = r.method
-                  _t$type = "".concat(a, "_method_").concat(r$method)
+                  t$type1 = "".concat(a, "_method_").concat(r$method)
                 }
                 var d = document.createElement("a")
                 d.href = n
-                d.download = "".concat(_t$type, ".png")
+                d.download = "".concat(t$type1, ".png")
                 d.click()
-                e(_t$type)
+                e(t$type1)
               })
             }))
           case 9:
@@ -130,7 +130,7 @@ function ie() {
   return ae.apply(this, arguments)
 }
 function ae() {
-  return (ae = Y.a(_RegeneratorRuntime.mark(function e() {
+  return (ae = Y.a(RegeneratorRuntime1.mark(function e() {
     var t
     var n
     var r
@@ -139,7 +139,7 @@ function ae() {
     var a
     var /* [auto-meaningful-name] */i$value
     var l
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -196,7 +196,7 @@ function ce(e) {
   return le.apply(this, arguments)
 }
 function le() {
-  return (le = Y.a(_RegeneratorRuntime.mark(function e(t) {
+  return (le = Y.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
     var o
@@ -208,7 +208,7 @@ function le() {
     var d
     var p
     var f
-    return _RegeneratorRuntime.wrap(function (e) {
+    return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -216,9 +216,9 @@ function le() {
             n.removeAttribute("height")
             n.removeAttribute("transform")
             r = n.querySelectorAll("image")
-            o = _RegeneratorRuntime.mark(function e(t) {
+            o = RegeneratorRuntime1.mark(function e(t) {
               var n
-              return _RegeneratorRuntime.wrap(function (e) {
+              return RegeneratorRuntime1.wrap(function (e) {
                 for (;;) {
                   switch (e.prev = e.next) {
                     case 0:

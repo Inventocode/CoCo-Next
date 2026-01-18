@@ -8,11 +8,11 @@
 
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./877"
-var ke = _React.memo(React.forwardRef(function (e, t) {
+var ke = React1.memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$className = e.className
@@ -30,27 +30,27 @@ var ke = _React.memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onBlur = e.onBlur
   var /* [auto-meaningful-name] */e$dependency = e.dependency
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var w = _React.useRef(null)
-  var C = _React.useRef(null)
-  var T = _React.useRef(null)
-  var S = _React.useState(false)
+  var w = React1.useRef(null)
+  var C = React1.useRef(null)
+  var T = React1.useRef(null)
+  var S = React1.useState(false)
   var A = $$_10_index.a(S, 2)
   var I = A[0]
   var j = A[1]
-  var N = _React.useCallback(function (e) {
+  var N = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */C$current = C.current
     if (C$current) {
       C$current.innerHTML = e + "/" + e$maxLength
     }
   }, [e$maxLength])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */w$current = w.current
     if (w$current && undefined === e$value) {
       w$current.value = undefined === e$defaultValue ? "" : e$defaultValue.toString()
       N(w$current.value.length)
     }
   }, [w, N, e$dependency, e$value, e$defaultValue])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */w$current = w.current
     if (undefined !== e$value && w$current) {
       w$current.value = e$value
@@ -76,7 +76,7 @@ var ke = _React.memo(React.forwardRef(function (e, t) {
     }
     return 1
   }
-  _React.useImperativeHandle(t, function () {
+  React1.useImperativeHandle(t, function () {
     return {
       getRowCount: function () {
         return R()

@@ -17,44 +17,44 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_6 from "../../
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_68 from "../../../shared/1571/2636/68"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_13_index from "../../../shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$_1042 from "./1042"
-import /* [auto-meaningful-name] */_$_ from "./1042"
+import /* [auto-meaningful-name] */$_10421 from "./1042"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_288 from "../../../shared/1571/2636/288"
 import * as /* [auto-meaningful-name] */$_530 from "./530"
-import /* [auto-meaningful-name] */_$_2 from "./530"
+import /* [auto-meaningful-name] */$_5301 from "./530"
 function k(t) {
   return "translate(-50%, -50%) " + "scale(".concat(t, ")")
 }
 var R = React.memo(function () {
-  var t = _React.useState()
+  var t = React1.useState()
   var e = $$_$$_$$_shared_1571_2636_10_index.a(t, 2)
   var n = e[0]
   var o = e[1]
-  var a = _React.useState(1)
+  var a = React1.useState(1)
   var s = $$_$$_$$_shared_1571_2636_10_index.a(a, 2)
   var u = s[0]
   var l = s[1]
-  var m = _React.useState(false)
+  var m = React1.useState(false)
   var S = $$_$$_$$_shared_1571_2636_10_index.a(m, 2)
   var j = S[0]
   var R = S[1]
-  var N = _React.useState(false)
+  var N = React1.useState(false)
   var x = $$_$$_$$_shared_1571_2636_10_index.a(N, 2)
   var D = x[0]
   var L = x[1]
-  var B = _React.useState(true)
+  var B = React1.useState(true)
   var P = $$_$$_$$_shared_1571_2636_10_index.a(B, 2)
   var U = P[0]
   var F = P[1]
-  var W = _React.useState("")
+  var W = React1.useState("")
   var H = $$_$$_$$_shared_1571_2636_10_index.a(W, 2)
   var V = H[0]
   var G = H[1]
-  var z = _React.useRef()
-  var Y = _React.useRef()
-  var K = _React.useRef()
+  var z = React1.useRef()
+  var Y = React1.useRef()
+  var K = React1.useRef()
   function X() {
     return (X = $$_$$_$$_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t() {
       var e
@@ -108,7 +108,7 @@ var R = React.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     y();
     (function () {
       X.apply(this, arguments)
@@ -128,7 +128,7 @@ var R = React.memo(function () {
       }
     }, false)
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!U && K.current) {
       if (K.current.blockCode) {
         K.current.blockCode = V
@@ -140,7 +140,7 @@ var R = React.memo(function () {
       O()
     }
   }, [V, U])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function t() {
       var /* [auto-meaningful-name] */window$innerWidth = window.innerWidth
       l(window$innerWidth > 1366 ? 1 : window$innerWidth > 992 ? .9 : window$innerWidth > 700 ? .83 : .57)
@@ -172,41 +172,41 @@ var R = React.memo(function () {
       }
     }
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     window.addEventListener("message", q)
     return function () {
       window.removeEventListener("message", q)
     }
   }, [])
   return React.createElement("div", {
-    className: _$_2.community
+    className: $_5301.community
   }, React.createElement("div", {
     id: "webPlayer",
-    className: $$_$$_$$_shared_1571_2636_8(_$_2.main),
+    className: $$_$$_$$_shared_1571_2636_8($_5301.main),
     style: {
       transform: k(u),
       left: D ? "35%" : "50%"
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_shared_1571_2636_8(j && _$_2.vibrate, _$_2.playerWrapper)
+    className: $$_$$_$$_shared_1571_2636_8(j && $_5301.vibrate, $_5301.playerWrapper)
   }, n && React.createElement($_514_index.a, n)), React.createElement("div", {
-    className: $$_$$_$$_shared_1571_2636_8(j && _$_2.vibrate, _$_2.deviceFrame)
+    className: $$_$$_$$_shared_1571_2636_8(j && $_5301.vibrate, $_5301.deviceFrame)
   }), React.createElement("div", {
-    className: _$_2.emulatorWrapper
+    className: $_5301.emulatorWrapper
   }, React.createElement($$_$$_$$_shared_1571_2636_738_index.a, {
     messageWindow: window
   }))), React.createElement("div", {
-    className: _$_2.appUrlBtn,
+    className: $_5301.appUrlBtn,
     onClick: function () {
       window.open(window.location.origin.replace(/\d+/g, ""), "_blank")
     }
   }, React.createElement("img", {
-    src: _$_,
-    className: _$_2.appUrlBtnImg,
+    src: $_10421,
+    className: $_5301.appUrlBtnImg,
     alt: ""
   }), React.createElement("span", null, "去CoCo制作"), React.createElement($$_$$_$$_shared_1571_2636_13_index.j, {
     type: "icon-fold-left",
-    className: _$_2.appUrlBtnIcon
+    className: $_5301.appUrlBtnIcon
   })))
 })
 export { R }

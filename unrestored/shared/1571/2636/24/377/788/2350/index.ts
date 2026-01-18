@@ -198,9 +198,9 @@ var h = function () {
             if (!l.is_path_4(e$normalized_path)) {
               return
             }
-            _e$normalized_path$target_id = e$normalized_path.target_id
-            if (!(v = this.Blink.mainWorkspace.get_block_by_id(_e$normalized_path$target_id))) {
-              return void a("remove shadow input: cannot find target block " + _e$normalized_path$target_id)
+            e$normalized_path$property = e$normalized_path.target_id
+            if (!(v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$property))) {
+              return void a("remove shadow input: cannot find target block " + e$normalized_path$property)
             }
             for (var s = undefined, c = 0; c < t.length; c++) {
               var u = t[c]
@@ -211,7 +211,7 @@ var h = function () {
             }
             if (!s) {
               if (!v.removeMutation) {
-                return void a("Block " + _e$normalized_path$target_id + " should have function: removeMutation.")
+                return void a("Block " + e$normalized_path$property + " should have function: removeMutation.")
               }
               this.Blink.events.disable()
               try {
@@ -232,8 +232,8 @@ var h = function () {
           if (!d) {
             return
           }
-          if (_e$normalized_path$target_id2 = this.Blink.json.comment_to_json(d).parent_id) {
-            var h = this.Blink.mainWorkspace.get_element_from_db(_e$normalized_path$target_id2)
+          if (e$normalized_path$target_id1 = this.Blink.json.comment_to_json(d).parent_id) {
+            var h = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1)
             if (!h) {
               return void a("cannot find block connected to this comment " + e$normalized_path$target_id)
             }
@@ -268,13 +268,13 @@ var h = function () {
         if (!l.is_path_2(e$normalized_path)) {
           return
         }
-        var /* [auto-meaningful-name] */_e$normalized_path$target_id = e$normalized_path.target_id
-        if (!(v = this.Blink.mainWorkspace.get_block_by_id(_e$normalized_path$target_id)) || v.is_shadow()) {
+        var /* [auto-meaningful-name] */e$normalized_path$property = e$normalized_path.target_id
+        if (!(v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$property)) || v.is_shadow()) {
           return
         }
         if (m = v.get_parent()) {
           y = {
-            id: _e$normalized_path$target_id,
+            id: e$normalized_path$property,
             group: "",
             old_parent_id: m.id
           }
@@ -307,17 +307,17 @@ var h = function () {
       if (!l.is_path_3(e$normalized_path)) {
         return
       }
-      var _e$normalized_path$target_id = e$normalized_path.property
-      var /* [auto-meaningful-name] */_e$normalized_path$target_id2 = e$normalized_path.target_id
-      var v = this.Blink.mainWorkspace.get_block_by_id(_e$normalized_path$target_id)
-      var m = this.Blink.mainWorkspace.get_block_by_id(_e$normalized_path$target_id2)
+      var /* [auto-meaningful-name] */e$normalized_path$property = e$normalized_path.property
+      var /* [auto-meaningful-name] */e$normalized_path$target_id1 = e$normalized_path.target_id
+      var v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$property)
+      var m = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id1)
       if (!v || !m || v.is_shadow()) {
         return
       }
       var y = {
-        id: _e$normalized_path$target_id,
+        id: e$normalized_path$property,
         group: "",
-        old_parent_id: _e$normalized_path$target_id2
+        old_parent_id: e$normalized_path$target_id1
       }
       var b = this.move_event_factory({
         block: v
@@ -387,19 +387,19 @@ var h = function () {
         return void ((null === w || undefined === w ? undefined : w.is_collapsed()) && this.redo_collapse_ids.push(e$normalized_path$target_id))
       }
       if (e$event_type === l.EventType.CREATE_COMMENT) {
-        var /* [auto-meaningful-name] */_e$normalized_path$target_id3 = e$normalized_path.target_id
+        var /* [auto-meaningful-name] */e$normalized_path$target_id1 = e$normalized_path.target_id
         if (!e$operation.i || !(0, s.is_comment_json)(e$operation.i)) {
           return void A("Invalid op. ")
         }
         var /* [auto-meaningful-name] */e$operation$i = e$operation.i
         if (e$operation$i.parent_id) {
           if (!(q = this.Blink.mainWorkspace.get_element_from_db(e$operation$i.parent_id))) {
-            return void A("cannot find block connected to this comment " + _e$normalized_path$target_id3)
+            return void A("cannot find block connected to this comment " + e$normalized_path$target_id1)
           }
           var C = this.change_event_factory("comment", {
             block: q,
             old_value: undefined,
-            new_value: _e$normalized_path$target_id3
+            new_value: e$normalized_path$target_id1
           })
           this.Blink.events.disable()
           try {
@@ -409,8 +409,8 @@ var h = function () {
           } finally {
             this.Blink.events.enable()
           }
-          if (!(K = this.Blink.mainWorkspace.get_element_from_db(_e$normalized_path$target_id3)) || !(0, u.is_workspace_comment)(K)) {
-            return void A("create: cannot find target comment " + _e$normalized_path$target_id3)
+          if (!(K = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1)) || !(0, u.is_workspace_comment)(K)) {
+            return void A("create: cannot find target comment " + e$normalized_path$target_id1)
           }
           var /* [auto-meaningful-name] */e$operation$i$location = e$operation$i.location
           if (!Array.isArray(e$operation$i$location) || "number" !== typeof e$operation$i$location[0] || "number" !== typeof e$operation$i$location[1]) {
@@ -522,11 +522,11 @@ var h = function () {
         if ("boolean" !== typeof e$operation.i) {
           return void A("Invalid op. ")
         }
-        var /* [auto-meaningful-name] */_e$operation$i = e$operation.i
+        var /* [auto-meaningful-name] */e$operation$i1 = e$operation.i
         C = this.change_event_factory("collapsed", {
           block: F,
-          old_value: !_e$operation$i,
-          new_value: _e$operation$i
+          old_value: !e$operation$i1,
+          new_value: e$operation$i1
         })
         this.Blink.events.disable()
         try {
@@ -543,14 +543,14 @@ var h = function () {
         if (!(U = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id))) {
           return void A("Invalid block " + e$normalized_path$target_id + ". ")
         }
-        var /* [auto-meaningful-name] */_e$operation$i2 = e$operation.i
-        if ("boolean" !== typeof _e$operation$i2) {
+        var /* [auto-meaningful-name] */e$operation$i2 = e$operation.i
+        if ("boolean" !== typeof e$operation$i2) {
           return void A("Invalid op. ")
         }
         C = this.change_event_factory("disabled", {
           block: U,
-          old_value: !_e$operation$i2,
-          new_value: _e$operation$i2
+          old_value: !e$operation$i2,
+          new_value: e$operation$i2
         })
         this.Blink.events.disable()
         try {
@@ -567,11 +567,11 @@ var h = function () {
         if (!(U = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id))) {
           return void A("Invalid block " + e$normalized_path$target_id + ". ")
         }
-        var /* [auto-meaningful-name] */_e$operation$i3 = e$operation.i
-        if ("string" !== typeof _e$operation$i3) {
+        var /* [auto-meaningful-name] */e$operation$i3 = e$operation.i
+        if ("string" !== typeof e$operation$i3) {
           return void A("Invalid op. ")
         }
-        var L = (0, i.parse_visibility)(_e$operation$i3)
+        var L = (0, i.parse_visibility)(e$operation$i3)
         if (!L) {
           return void A("Invalid op. ")
         }
@@ -592,31 +592,31 @@ var h = function () {
       }
       if (e$event_type === l.EventType.CONNECT) {
         e$normalized_path$target_id = e$normalized_path.property
-        var /* [auto-meaningful-name] */_e$normalized_path$target_id4 = e$normalized_path.target_id
+        var /* [auto-meaningful-name] */e$normalized_path$target_id2 = e$normalized_path.target_id
         var U = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id)
-        var H = this.Blink.mainWorkspace.get_block_by_id(_e$normalized_path$target_id4)
+        var H = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id2)
         if (!U) {
           return void A("Invalid block " + e$normalized_path$target_id + ". ")
         }
         if (!e$operation.i || !(0, s.is_connection_json)(e$operation.i)) {
           return void A("Invalid op. ")
         }
-        var /* [auto-meaningful-name] */_e$operation$i4 = e$operation.i
+        var /* [auto-meaningful-name] */e$operation$i4 = e$operation.i
         S = {
           id: e$normalized_path$target_id,
           group: ""
         }
-        if ("next" === _e$operation$i4.type) {
-          S.new_parent_id = _e$normalized_path$target_id4
+        if ("next" === e$operation$i4.type) {
+          S.new_parent_id = e$normalized_path$target_id2
         }
-        if ("input" === _e$operation$i4.type) {
-          S.new_parent_id = _e$normalized_path$target_id4
-          S.new_input_name = _e$operation$i4.input_name
+        if ("input" === e$operation$i4.type) {
+          S.new_parent_id = e$normalized_path$target_id2
+          S.new_input_name = e$operation$i4.input_name
           if (!H) {
             return void A("Invalid block " + e$normalized_path$target_id + ". ")
           }
-          if (!(z = H.get_input(_e$operation$i4.input_name))) {
-            return void A("Cannot find target input " + _e$operation$i4.input_name + " on block " + _e$normalized_path$target_id4)
+          if (!(z = H.get_input(e$operation$i4.input_name))) {
+            return void A("Cannot find target input " + e$operation$i4.input_name + " on block " + e$normalized_path$target_id2)
           }
         }
         T = this.move_event_factory({
@@ -649,15 +649,15 @@ var h = function () {
       }
       if (e$event_type === l.EventType.MOVE_COMMENT) {
         var K
-        _e$normalized_path$target_id3 = e$normalized_path.target_id
-        if (!(K = this.Blink.mainWorkspace.get_element_from_db(_e$normalized_path$target_id3))) {
-          return void A("Invalid comment " + _e$normalized_path$target_id3)
+        e$normalized_path$target_id1 = e$normalized_path.target_id
+        if (!(K = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1))) {
+          return void A("Invalid comment " + e$normalized_path$target_id1)
         }
         if (!Array.isArray(e$operation.i) || "number" !== typeof e$operation.i[0] || "number" !== typeof e$operation.i[1]) {
           return void A("Invalid op. ")
         }
         S = {
-          id: _e$normalized_path$target_id3,
+          id: e$normalized_path$target_id1,
           group: "",
           new_coordinate: k = [e$operation.i[0], e$operation.i[1]]
         }
@@ -676,9 +676,9 @@ var h = function () {
         return
       }
       if (e$event_type === l.EventType.EDIT_COMMENT) {
-        _e$normalized_path$target_id3 = e$normalized_path.target_id
-        if (!(q = this.Blink.mainWorkspace.get_element_from_db(_e$normalized_path$target_id3))) {
-          return void A("Invalid comment " + _e$normalized_path$target_id3)
+        e$normalized_path$target_id1 = e$normalized_path.target_id
+        if (!(q = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1))) {
+          return void A("Invalid comment " + e$normalized_path$target_id1)
         }
         if ("string" !== typeof e$operation.i) {
           return void A("Invalid op. ")
@@ -699,18 +699,18 @@ var h = function () {
         return
       }
       if (e$event_type === l.EventType.COLLAPSE_COMMENT) {
-        _e$normalized_path$target_id3 = e$normalized_path.target_id
-        if (!(q = this.Blink.mainWorkspace.get_element_from_db(_e$normalized_path$target_id3))) {
-          return void A("Invalid comment " + _e$normalized_path$target_id3)
+        e$normalized_path$target_id1 = e$normalized_path.target_id
+        if (!(q = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1))) {
+          return void A("Invalid comment " + e$normalized_path$target_id1)
         }
         if ("boolean" !== typeof e$operation.i) {
           return void A("Invalid op. ")
         }
-        var /* [auto-meaningful-name] */_e$operation$i5 = e$operation.i
+        var /* [auto-meaningful-name] */e$operation$i5 = e$operation.i
         var Y = this.change_event_factory("comment_expand", {
           block: q,
-          old_value: !_e$operation$i5,
-          new_value: _e$operation$i5
+          old_value: !e$operation$i5,
+          new_value: e$operation$i5
         })
         this.Blink.events.disable()
         try {
@@ -723,10 +723,10 @@ var h = function () {
         return
       }
       if (e$event_type === l.EventType.CHANGE_COMMENT_COLOR) {
-        _e$normalized_path$target_id3 = e$normalized_path.target_id
-        var q = this.Blink.mainWorkspace.get_element_from_db(_e$normalized_path$target_id3)
+        e$normalized_path$target_id1 = e$normalized_path.target_id
+        var q = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1)
         if (!(0, u.is_workspace_comment)(q)) {
-          return void A("Invalid comment " + _e$normalized_path$target_id3)
+          return void A("Invalid comment " + e$normalized_path$target_id1)
         }
         if (!(0, u.is_comment_theme)(e$operation.i)) {
           return void A("Invalid op. ")
@@ -748,9 +748,9 @@ var h = function () {
         return
       }
       if (e$event_type === l.EventType.RESIZE_COMMENT) {
-        _e$normalized_path$target_id3 = e$normalized_path.target_id
-        if (!(q = this.Blink.mainWorkspace.get_element_from_db(_e$normalized_path$target_id3))) {
-          return void A("Invalid comment " + _e$normalized_path$target_id3)
+        e$normalized_path$target_id1 = e$normalized_path.target_id
+        if (!(q = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1))) {
+          return void A("Invalid comment " + e$normalized_path$target_id1)
         }
         if (!Array.isArray(e$operation.i) || "number" !== typeof e$operation.i[0] || "number" !== typeof e$operation.i[1]) {
           return void A("Invalid op. ")
@@ -818,11 +818,11 @@ var h = function () {
           return void A("Invalid op. ")
         }
         e$normalized_path$target_id = e$normalized_path.target_id
-        var /* [auto-meaningful-name] */_e$normalized_path$property_name = e$normalized_path.property_name
+        var /* [auto-meaningful-name] */e$normalized_path$property_name1 = e$normalized_path.property_name
         if (!(U = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id))) {
           return void A("Invalid block " + e$normalized_path$target_id)
         }
-        if (z = U.get_input(_e$normalized_path$property_name)) {
+        if (z = U.get_input(e$normalized_path$property_name1)) {
           if (!(null === (z$connection = z.connection) || undefined === z$connection)) {
             z$connection.set_shadow_from_string(e$operation.i)
           }
@@ -832,7 +832,7 @@ var h = function () {
             if (!(null === (U$addMutation = U.addMutation) || undefined === U$addMutation)) {
               U$addMutation.call(U)
             }
-            if (!(null === (p = null === (h = null === (d = U.get_input(_e$normalized_path$property_name)) || undefined === d ? undefined : d.connection) || undefined === h ? undefined : h.targetBlock()) || undefined === p)) {
+            if (!(null === (p = null === (h = null === (d = U.get_input(e$normalized_path$property_name1)) || undefined === d ? undefined : d.connection) || undefined === h ? undefined : h.targetBlock()) || undefined === p)) {
               p.dispose()
             }
           } catch (ie) {

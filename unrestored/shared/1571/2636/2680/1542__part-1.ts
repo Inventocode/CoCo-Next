@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */_$$_80_index from "../80/index"
+import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
 function m() {
   return !("undefined" === typeof window || !window.document || !window.document.createElement)
 }
@@ -40,7 +40,7 @@ var b = React.forwardRef(function (e, t) {
       }
     }
   }, [])
-  return a.current ? _$$_80_index.createPortal(e$children, a.current) : null
+  return a.current ? $$_80_index1.createPortal(e$children, a.current) : null
 })
 function w(e) {
   if ("undefined" === typeof document) {
@@ -64,12 +64,12 @@ function w(e) {
     document.body.appendChild(n)
     var /* [auto-meaningful-name] */t$offsetWidth = t.offsetWidth
     n.style.overflow = "scroll"
-    var /* [auto-meaningful-name] */_t$offsetWidth = t.offsetWidth
-    if (t$offsetWidth === _t$offsetWidth) {
-      _t$offsetWidth = n.clientWidth
+    var /* [auto-meaningful-name] */t$offsetWidth1 = t.offsetWidth
+    if (t$offsetWidth === t$offsetWidth1) {
+      t$offsetWidth1 = n.clientWidth
     }
     document.body.removeChild(n)
-    y = t$offsetWidth - _t$offsetWidth
+    y = t$offsetWidth - t$offsetWidth1
   }
   return y
 }

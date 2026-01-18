@@ -16,7 +16,7 @@ var Ne
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$_786_index from "./786/index"
-import /* [auto-meaningful-name] */_$_786_index from "./786/index"
+import /* [auto-meaningful-name] */$_786_index1 from "./786/index"
 import * as /* [auto-meaningful-name] */$_612 from "./612"
 function Ge(e, t) {
   var n = Math.pow(10, t)
@@ -164,7 +164,7 @@ function Qe(e, t, n) {
   }
 }
 function Ze(e) {
-  return _$_786_index.lex(e).toPostfix().postfixEval()
+  return $_786_index1.lex(e).toPostfix().postfixEval()
 }
 function Je(e, t) {
   return "number" === t ? "NaN" === e || "number" === typeof e && isNaN(e) ? NaN : isNaN(Number(e)) ? String(e) : Number(e) : "string" === t ? Lodash.isPlainObject(e) ? e = JSON.stringify(e) : String(e) : Boolean(e)

@@ -11,12 +11,12 @@ import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 function p(e, t) {
   return [
     Animejs.default({
       targets: "#".concat(e),
-      borderColor: _Color(t).darken(.3).hex(),
+      borderColor: Color1(t).darken(.3).hex(),
       duration: 2e3
     })
   ]
@@ -25,7 +25,7 @@ function f(e, t) {
   return [
     Animejs.default({
       targets: "#".concat(e),
-      backgroundColor: _Color(t).darken(.3).alpha(.1).rgb().string(),
+      backgroundColor: Color1(t).darken(.3).alpha(.1).rgb().string(),
       duration: 2e3
     })
   ]

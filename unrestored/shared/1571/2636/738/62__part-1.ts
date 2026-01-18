@@ -6422,7 +6422,7 @@ Object.assign(at.prototype, {
         this.setXY(t, it.x, it.y)
       }
     } else if (3 === this.itemSize) {
-      for (var r = 0, /* [auto-meaningful-name] */_this$count = this.count; r < _this$count; r++) {
+      for (var r = 0, /* [auto-meaningful-name] */this$count1 = this.count; r < this$count1; r++) {
         rt.fromBufferAttribute(this, r)
         rt.applyMatrix3(e)
         this.setXYZ(r, rt.x, rt.y, rt.z)
@@ -7063,7 +7063,7 @@ St.prototype = Object.assign(Object.create(v.prototype), {
         o = Math.max(o, this$boundingSphere$center.distanceToSquared(Mt))
       }
       if (this$morphAttributes$position) {
-        for (var c = 0, /* [auto-meaningful-name] */_this$morphAttributes$position$length = this$morphAttributes$position.length; c < _this$morphAttributes$position$length; c++) {
+        for (var c = 0, /* [auto-meaningful-name] */this$morphAttributes$position$length1 = this$morphAttributes$position.length; c < this$morphAttributes$position$length1; c++) {
           for (var h = this$morphAttributes$position[c], /* [auto-meaningful-name] */this$morphTargetsRelative = this.morphTargetsRelative, p = 0, /* [auto-meaningful-name] */h$count = h.count; p < h$count; p++) {
             Mt.fromBufferAttribute(h, p)
             if (this$morphTargetsRelative) {
@@ -7500,7 +7500,7 @@ Gt.prototype = Object.assign(Object.create(Pe.prototype), {
           }
         } else if (undefined !== this$geometry$attributes$position) {
           if (Array.isArray(this$material)) {
-            for (var R = 0, /* [auto-meaningful-name] */_this$geometry$groups$length = this$geometry$groups.length; R < _this$geometry$groups$length; R++) {
+            for (var R = 0, /* [auto-meaningful-name] */this$geometry$groups$length1 = this$geometry$groups.length; R < this$geometry$groups$length1; R++) {
               for (var C = this$geometry$groups[R], I = this$material[C.materialIndex], O = Math.max(C.start, this$geometry$drawRange.start), k = Math.min(C.start + C.count, this$geometry$drawRange.start + this$geometry$drawRange.count); O < k; O += 3) {
                 if (n = Vt(this, I, e, Et, this$geometry$attributes$position, this$geometry$morphAttributes$position, this$geometry$morphTargetsRelative, this$geometry$attributes$uv, this$geometry$attributes$uv2, O, O + 1, O + 2)) {
                   n.faceIndex = Math.floor(O / 3)
@@ -11312,12 +11312,12 @@ function Qr(e, t) {
           N.penumbraCos = Math.cos(E.angle * (1 - E.penumbra))
           N.decay = E.decay
           if (E.castShadow) {
-            var /* [auto-meaningful-name] */_E$shadow = E.shadow
+            var /* [auto-meaningful-name] */E$shadow1 = E.shadow
             var U = r.get(E)
-            U.shadowBias = _E$shadow.bias
-            U.shadowNormalBias = _E$shadow.normalBias
-            U.shadowRadius = _E$shadow.radius
-            U.shadowMapSize = _E$shadow.mapSize
+            U.shadowBias = E$shadow1.bias
+            U.shadowNormalBias = E$shadow1.normalBias
+            U.shadowRadius = E$shadow1.radius
+            U.shadowMapSize = E$shadow1.mapSize
             i.spotShadow[g] = U
             i.spotShadowMap[g] = P
             i.spotShadowMatrix[g] = E.shadow.matrix
@@ -11348,14 +11348,14 @@ function Qr(e, t) {
           z.distance = E.distance
           z.decay = E.decay
           if (E.castShadow) {
-            var /* [auto-meaningful-name] */_E$shadow2 = E.shadow
+            var /* [auto-meaningful-name] */E$shadow2 = E.shadow
             var H = r.get(E)
-            H.shadowBias = _E$shadow2.bias
-            H.shadowNormalBias = _E$shadow2.normalBias
-            H.shadowRadius = _E$shadow2.radius
-            H.shadowMapSize = _E$shadow2.mapSize
-            H.shadowCameraNear = _E$shadow2.camera.near
-            H.shadowCameraFar = _E$shadow2.camera.far
+            H.shadowBias = E$shadow2.bias
+            H.shadowNormalBias = E$shadow2.normalBias
+            H.shadowRadius = E$shadow2.radius
+            H.shadowMapSize = E$shadow2.mapSize
+            H.shadowCameraNear = E$shadow2.camera.near
+            H.shadowCameraFar = E$shadow2.camera.far
             i.pointShadow[v] = H
             i.pointShadowMap[v] = P
             i.pointShadowMatrix[v] = E.shadow.matrix
@@ -12684,7 +12684,7 @@ function ai(e, t, n, r, i, a, s) {
         t.__maxMipLevel = 0
       }
     } else if (r.isCompressedTexture) {
-      for (var b = 0, /* [auto-meaningful-name] */_r$mipmaps$length = r$mipmaps.length; b < _r$mipmaps$length; b++) {
+      for (var b = 0, /* [auto-meaningful-name] */r$mipmaps$length1 = r$mipmaps.length; b < r$mipmaps$length1; b++) {
         s = r$mipmaps[b]
         if (1023 !== r.format && 1022 !== r.format) {
           if (null !== d) {
@@ -12704,7 +12704,7 @@ function ai(e, t, n, r, i, a, s) {
       n.texImage3D(32879, 0, m, c.width, c.height, c.depth, 0, d, p, c.data)
       t.__maxMipLevel = 0
     } else if (r$mipmaps.length > 0 && u) {
-      for (var A = 0, /* [auto-meaningful-name] */_r$mipmaps$length2 = r$mipmaps.length; A < _r$mipmaps$length2; A++) {
+      for (var A = 0, /* [auto-meaningful-name] */r$mipmaps$length2 = r$mipmaps.length; A < r$mipmaps$length2; A++) {
         s = r$mipmaps[A]
         n.texImage2D(3553, A, m, d, p, s)
       }
@@ -14339,17 +14339,17 @@ function di(e) {
             G.setFromMatrixPosition(e.matrixWorld).applyMatrix4(H)
           }
           var o = ee.update(e)
-          var /* [auto-meaningful-name] */_e$material = e.material
-          if (Array.isArray(_e$material)) {
+          var /* [auto-meaningful-name] */e$material1 = e.material
+          if (Array.isArray(e$material1)) {
             for (var /* [auto-meaningful-name] */o$groups = o.groups, c = 0, /* [auto-meaningful-name] */o$groups$length = o$groups.length; c < o$groups$length; c++) {
               var p = o$groups[c]
-              var f = _e$material[p.materialIndex]
+              var f = e$material1[p.materialIndex]
               if (f && f.visible) {
                 h.push(e, o, f, n, G.z, p)
               }
             }
-          } else if (_e$material.visible) {
-            h.push(e, o, _e$material, n, G.z, null)
+          } else if (e$material1.visible) {
+            h.push(e, o, e$material1, n, G.z, null)
           }
         }
       }
@@ -15618,7 +15618,7 @@ Object.assign(Fi.prototype, {
         n.matrixWorld.getInverse(this.boneInverses[e])
       }
     }
-    for (var r = 0, /* [auto-meaningful-name] */_this$bones$length = this.bones.length; r < _this$bones$length; r++) {
+    for (var r = 0, /* [auto-meaningful-name] */this$bones$length1 = this.bones.length; r < this$bones$length1; r++) {
       var a = this.bones[r]
       if (a) {
         if (a.parent && a.parent.isBone) {
@@ -16335,17 +16335,17 @@ xa.prototype = Object.assign(Object.create(v.prototype), {
       }
     } else {
       this.computeFaceNormals()
-      for (var d = 0, /* [auto-meaningful-name] */_this$faces$length = this.faces.length; d < _this$faces$length; d++) {
+      for (var d = 0, /* [auto-meaningful-name] */this$faces$length1 = this.faces.length; d < this$faces$length1; d++) {
         var f = this.faces[d]
         t[f.a].add(f.normal)
         t[f.b].add(f.normal)
         t[f.c].add(f.normal)
       }
     }
-    for (var m = 0, /* [auto-meaningful-name] */_this$vertices$length = this.vertices.length; m < _this$vertices$length; m++) {
+    for (var m = 0, /* [auto-meaningful-name] */this$vertices$length1 = this.vertices.length; m < this$vertices$length1; m++) {
       t[m].normalize()
     }
-    for (var g = 0, /* [auto-meaningful-name] */_this$faces$length2 = this.faces.length; g < _this$faces$length2; g++) {
+    for (var g = 0, /* [auto-meaningful-name] */this$faces$length2 = this.faces.length; g < this$faces$length2; g++) {
       var x = this.faces[g]
       var /* [auto-meaningful-name] */x$vertexNormals = x.vertexNormals
       if (3 === x$vertexNormals.length) {
@@ -16407,7 +16407,7 @@ xa.prototype = Object.assign(Object.create(v.prototype), {
         this.morphNormals[o] = {}
         this.morphNormals[o].faceNormals = []
         this.morphNormals[o].vertexNormals = []
-        for (var /* [auto-meaningful-name] */this$morphNormalsO$faceNormals = this.morphNormals[o].faceNormals, /* [auto-meaningful-name] */this$morphNormalsO$vertexNormals = this.morphNormals[o].vertexNormals, u = 0, /* [auto-meaningful-name] */_this$faces$length3 = this.faces.length; u < _this$faces$length3; u++) {
+        for (var /* [auto-meaningful-name] */this$morphNormalsO$faceNormals = this.morphNormals[o].faceNormals, /* [auto-meaningful-name] */this$morphNormalsO$vertexNormals = this.morphNormals[o].vertexNormals, u = 0, /* [auto-meaningful-name] */this$faces$length1 = this.faces.length; u < this$faces$length1; u++) {
           var d = new C()
           var p = {
             a: new C(),
@@ -16422,7 +16422,7 @@ xa.prototype = Object.assign(Object.create(v.prototype), {
       a.vertices = this.morphTargets[o].vertices
       a.computeFaceNormals()
       a.computeVertexNormals()
-      for (var m = 0, /* [auto-meaningful-name] */_this$faces$length4 = this.faces.length; m < _this$faces$length4; m++) {
+      for (var m = 0, /* [auto-meaningful-name] */this$faces$length2 = this.faces.length; m < this$faces$length2; m++) {
         var g = this.faces[m]
         var y = f.faceNormals[m]
         var x = f.vertexNormals[m]
@@ -16432,7 +16432,7 @@ xa.prototype = Object.assign(Object.create(v.prototype), {
         x.c.copy(g.vertexNormals[2])
       }
     }
-    for (var b = 0, /* [auto-meaningful-name] */_this$faces$length5 = this.faces.length; b < _this$faces$length5; b++) {
+    for (var b = 0, /* [auto-meaningful-name] */this$faces$length3 = this.faces.length; b < this$faces$length3; b++) {
       var w = this.faces[b]
       w.normal = w.__originalFaceNormal
       w.vertexNormals = w.__originalVertexNormals
@@ -17364,7 +17364,7 @@ var Ya = function (e) {
           }
         }
       }
-      for (var R = Wa.triangulateShape(M$shape, M$holes), P = M$shape, I = 0, /* [auto-meaningful-name] */_M$holes$length = M$holes.length; I < _M$holes$length; I++) {
+      for (var R = Wa.triangulateShape(M$shape, M$holes), P = M$shape, I = 0, /* [auto-meaningful-name] */M$holes$length1 = M$holes.length; I < M$holes$length1; I++) {
         var k = M$holes[I]
         M$shape = M$shape.concat(k)
       }
@@ -17435,7 +17435,7 @@ var Ya = function (e) {
         }
         z[F] = B(P[F], P[G], P[j])
       }
-      for (var V, W = [], q = z.concat(), X = 0, /* [auto-meaningful-name] */_M$holes$length2 = M$holes.length; X < _M$holes$length2; X++) {
+      for (var V, W = [], q = z.concat(), X = 0, /* [auto-meaningful-name] */M$holes$length2 = M$holes.length; X < M$holes$length2; X++) {
         var Z = M$holes[X]
         V = []
         for (var J = 0, /* [auto-meaningful-name] */Z$length = Z.length, Q = Z$length - 1, $ = J + 1; J < Z$length; J++, Q++, $++) {
@@ -17451,11 +17451,11 @@ var Ya = function (e) {
         q = q.concat(V)
       }
       for (var ee = 0; ee < p; ee++) {
-        for (var te = ee / p, ne = u * Math.cos(te * Math.PI / 2), re = h * Math.sin(te * Math.PI / 2) + d, ie = 0, /* [auto-meaningful-name] */_P$length = P.length; ie < _P$length; ie++) {
+        for (var te = ee / p, ne = u * Math.cos(te * Math.PI / 2), re = h * Math.sin(te * Math.PI / 2) + d, ie = 0, /* [auto-meaningful-name] */P$length1 = P.length; ie < P$length1; ie++) {
           var oe = N(P[ie], z[ie], re)
           Oe(oe.x, oe.y, -ne)
         }
-        for (var se = 0, /* [auto-meaningful-name] */_M$holes$length3 = M$holes.length; se < _M$holes$length3; se++) {
+        for (var se = 0, /* [auto-meaningful-name] */M$holes$length3 = M$holes.length; se < M$holes$length3; se++) {
           var ce = M$holes[se]
           V = W[se]
           for (var ue = 0, /* [auto-meaningful-name] */ce$length = ce.length; ue < ce$length; ue++) {
@@ -17489,11 +17489,11 @@ var Ya = function (e) {
         }
       }
       for (var xe = p - 1; xe >= 0; xe--) {
-        for (var be = xe / p, _e = u * Math.cos(be * Math.PI / 2), we = h * Math.sin(be * Math.PI / 2) + d, Me = 0, /* [auto-meaningful-name] */_P$length2 = P.length; Me < _P$length2; Me++) {
+        for (var be = xe / p, _e = u * Math.cos(be * Math.PI / 2), we = h * Math.sin(be * Math.PI / 2) + d, Me = 0, /* [auto-meaningful-name] */P$length2 = P.length; Me < P$length2; Me++) {
           var Te = N(P[Me], z[Me], we)
           Oe(Te.x, Te.y, s + _e)
         }
-        for (var Ee = 0, /* [auto-meaningful-name] */_M$holes$length4 = M$holes.length; Ee < _M$holes$length4; Ee++) {
+        for (var Ee = 0, /* [auto-meaningful-name] */M$holes$length4 = M$holes.length; Ee < M$holes$length4; Ee++) {
           var Le = M$holes[Ee]
           V = W[Ee]
           for (var Re = 0, /* [auto-meaningful-name] */Le$length = Le.length; Re < Le$length; Re++) {
@@ -17507,9 +17507,9 @@ var Ya = function (e) {
         }
       }
       function Ie(e, t) {
-        for (var /* [auto-meaningful-name] */_e$length = e.length; --_e$length >= 0;) {
-          var r = _e$length
-          var a = _e$length - 1
+        for (var /* [auto-meaningful-name] */e$length1 = e.length; --e$length1 >= 0;) {
+          var r = e$length1
+          var a = e$length1 - 1
           if (a < 0) {
             a = e.length - 1
           }
@@ -17589,7 +17589,7 @@ var Ya = function (e) {
         var t = 0
         Ie(P, t)
         t += P.length
-        for (var n = 0, /* [auto-meaningful-name] */_M$holes$length5 = M$holes.length; n < _M$holes$length5; n++) {
+        for (var n = 0, /* [auto-meaningful-name] */M$holes$length5 = M$holes.length; n < M$holes$length5; n++) {
           var i = M$holes[n]
           Ie(i, t)
           t += i.length
@@ -17810,7 +17810,7 @@ var $a = function (e) {
           n$holes[u] = p.reverse()
         }
       }
-      for (var f = Wa.triangulateShape(n$shape, n$holes), m = 0, /* [auto-meaningful-name] */_n$holes$length = n$holes.length; m < _n$holes$length; m++) {
+      for (var f = Wa.triangulateShape(n$shape, n$holes), m = 0, /* [auto-meaningful-name] */n$holes$length1 = n$holes.length; m < n$holes$length1; m++) {
         var g = n$holes[m]
         n$shape = n$shape.concat(g)
       }
@@ -19493,7 +19493,7 @@ Oo.prototype = Object.assign(Object.create(Co.prototype), {
             }
             i.manager.itemEnd(e)
           } else {
-            for (var l = 0, /* [auto-meaningful-name] */_r$length = r.length; l < _r$length; l++) {
+            for (var l = 0, /* [auto-meaningful-name] */r$length1 = r.length; l < r$length1; l++) {
               var u = r[l]
               if (u.onError) {
                 u.onError(t)
@@ -22102,7 +22102,7 @@ Object.assign(Cs.prototype, {
       for (var x = false, b = [], _ = 0, /* [auto-meaningful-name] */f$length = f.length; _ < f$length; _++) {
         p[_] = []
       }
-      for (var M = 0, /* [auto-meaningful-name] */_f$length = f.length; M < _f$length; M++) {
+      for (var M = 0, /* [auto-meaningful-name] */f$length1 = f.length; M < f$length1; M++) {
         for (var T = m[M], E = 0; E < T.length; E++) {
           for (var A = T[E], L = true, R = 0; R < f.length; R++) {
             if (r(A.p, f[R].p)) {
@@ -22132,7 +22132,7 @@ Object.assign(Cs.prototype, {
         }
       }
     }
-    for (var P = 0, /* [auto-meaningful-name] */_f$length2 = f.length; P < _f$length2; P++) {
+    for (var P = 0, /* [auto-meaningful-name] */f$length2 = f.length; P < f$length2; P++) {
       o = f[P].s
       c.push(o)
       for (var I = 0, /* [auto-meaningful-name] */DMP$length = (d = m[P]).length; I < DMP$length; I++) {
@@ -23215,7 +23215,7 @@ Object.assign(function () {
     this$_paths.push(e)
     this$_parsedPaths.push(t)
     this$_bindings.push(u)
-    for (var h = this$nCachedObjects_, /* [auto-meaningful-name] */_this$_objects$length = this$_objects.length; h !== _this$_objects$length; ++h) {
+    for (var h = this$nCachedObjects_, /* [auto-meaningful-name] */this$_objects$length1 = this$_objects.length; h !== this$_objects$length1; ++h) {
       var p = this$_objects[h]
       u[h] = new $s(p, e, t)
     }
@@ -23477,7 +23477,7 @@ var el = function () {
                 break
               case 2500:
               default:
-                for (var d = 0, /* [auto-meaningful-name] */_this$_interpolants$length = this$_interpolants.length; d !== _this$_interpolants$length; ++d) {
+                for (var d = 0, /* [auto-meaningful-name] */this$_interpolants$length1 = this$_interpolants.length; d !== this$_interpolants$length1; ++d) {
                   this$_interpolants[d].evaluate(o)
                   this$_propertyBindings[d].accumulate(r, s)
                 }

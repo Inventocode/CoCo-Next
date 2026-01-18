@@ -199,9 +199,9 @@ function ve(e) {
     leavedClassName: "".concat(e$prefixCls, "-mask-hidden")
   }, function (e) {
     var /* [auto-meaningful-name] */e$className = e.className
-    var /* [auto-meaningful-name] */_e$style = e.style
+    var /* [auto-meaningful-name] */e$style1 = e.style
     return React.createElement("div", $$_19.a({
-      style: $$_21.a($$_21.a({}, _e$style), e$style),
+      style: $$_21.a($$_21.a({}, e$style1), e$style),
       className: j("".concat(e$prefixCls, "-mask"), e$className)
     }, e$maskProps))
   })
@@ -354,14 +354,14 @@ var xe = React.forwardRef(function (e, t) {
     removeOnLeave: e$destroyOnClose,
     ref: B
   }, function (e, t) {
-    var /* [auto-meaningful-name] */_e$className = e.className
-    var /* [auto-meaningful-name] */_e$style2 = e.style
+    var /* [auto-meaningful-name] */e$className1 = e.className
+    var /* [auto-meaningful-name] */e$style1 = e.style
     return React.createElement("div", {
       key: "dialog-element",
       role: "document",
       ref: t,
-      style: $$_21.a($$_21.a($$_21.a({}, _e$style2), e$style), U),
-      className: j(e$prefixCls, e$className, _e$className),
+      style: $$_21.a($$_21.a($$_21.a({}, e$style1), e$style), U),
+      className: j(e$prefixCls, e$className, e$className1),
       onMouseDown: e$onMouseDown,
       onMouseUp: e$onMouseUp
     }, React.createElement("div", {

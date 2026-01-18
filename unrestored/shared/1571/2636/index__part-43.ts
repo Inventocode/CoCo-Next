@@ -27,9 +27,9 @@ import * as k from "./11"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_290 from "./290"
-import /* [auto-meaningful-name] */_$_ from "./290"
+import /* [auto-meaningful-name] */$_2901 from "./290"
 function Vp(e, t) {
   return Color(e).alpha(t).toString()
 }
@@ -65,36 +65,36 @@ var Kp = {
     var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
     var /* [auto-meaningful-name] */e$size$width = e$size.width
     var /* [auto-meaningful-name] */e$size$height = e$size.height
-    var I = _React.useRef(null)
-    var j = _React.useState(false)
+    var I = React1.useRef(null)
+    var j = React1.useState(false)
     var R = $_10_index.a(j, 2)
     var x = R[0]
     var M = R[1]
-    var L = _React.useState(e$attributes$placeholder)
+    var L = React1.useState(e$attributes$placeholder)
     var P = $_10_index.a(L, 2)
     var B = P[0]
     var F = P[1]
-    var G = _React.useRef(null)
-    _React.useEffect(function () {
+    var G = React1.useRef(null)
+    React1.useEffect(function () {
       var /* [auto-meaningful-name] */G$current = G.current
       if (G$current) {
         G$current.value = e$attributes$value
       }
     })
-    _React.useEffect(function () {
+    React1.useEffect(function () {
       var /* [auto-meaningful-name] */G$current = G.current
       if (x && G$current) {
         G$current.focus()
         G$current.selectionStart = G$current.selectionEnd = G$current.value.length
       }
     }, [x])
-    _React.useEffect(function () {
+    React1.useEffect(function () {
       F(e$attributes$placeholder)
     }, [e$attributes$placeholder])
     var W = Et.hb(e$attributes$backgroundImage)
     var U = te.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : W ? (null === W || undefined === W ? undefined : W.source) || (null === W || undefined === W ? undefined : W.cdnUrl) : Pp.a
     var H = undefined
-    var V = _React.useMemo(function () {
+    var V = React1.useMemo(function () {
       return function (e, t, n) {
         var r
         return (r = {}, k.a(r, Fp.c.OUTLINED_NORMAL, {
@@ -127,7 +127,7 @@ var Kp = {
         padding: "6px ".concat(14, "px")
       })
     }
-    var z = _React.useMemo(function () {
+    var z = React1.useMemo(function () {
       if (e$attributes$disabled) {
         return function (e) {
           var t
@@ -147,7 +147,7 @@ var Kp = {
         }(e$attributes$templateMode)
       }
     }, [e$attributes$templateMode, e$attributes$disabled])
-    _React.useEffect(function () {
+    React1.useEffect(function () {
       var e
       var n = z ? z.color : e$attributes$placeholderColor
       if (!(null === (e = document.getElementById(t)) || undefined === e)) {
@@ -156,7 +156,7 @@ var Kp = {
     }, [t, e$attributes$placeholderColor, z])
     return React.createElement("div", {
       id: t,
-      className: N(_$_.inputWidget, e$attributes$backgroundMode === Fp.a.TEMPLATE && e$attributes$templateMode !== Fp.c.OUTLINED_FLAT && _$_.inputWidgetUnderpainting, wn.b, k.a({}, _$_.hide, !e$visible)),
+      className: N($_2901.inputWidget, e$attributes$backgroundMode === Fp.a.TEMPLATE && e$attributes$templateMode !== Fp.c.OUTLINED_FLAT && $_2901.inputWidgetUnderpainting, wn.b, k.a({}, $_2901.hide, !e$visible)),
       "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
       "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
       "data-min-width": Pp.m,
@@ -176,7 +176,7 @@ var Kp = {
         filter: e$attributes$disabled && e$attributes$backgroundMode === Fp.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
       }, H), z)
     }, React.createElement("div", {
-      className: N(_$_.inputWidgetInputWrapper, {}),
+      className: N($_2901.inputWidgetInputWrapper, {}),
       onDoubleClick: function () {
         var /* [auto-meaningful-name] */G$current = G.current
         if (G$current) {
@@ -187,9 +187,9 @@ var Kp = {
       },
       onClick: function () {
         var /* [auto-meaningful-name] */I$current
-        var /* [auto-meaningful-name] */_I$current = I.current
+        var /* [auto-meaningful-name] */I$current1 = I.current
         var /* [auto-meaningful-name] */G$current = G.current
-        if (_I$current && G$current && e$selected && (null === (I$current = I.current) || undefined === I$current ? undefined : I$current.dataset.clickType) === Yr.h.CLICK) {
+        if (I$current1 && G$current && e$selected && (null === (I$current = I.current) || undefined === I$current ? undefined : I$current.dataset.clickType) === Yr.h.CLICK) {
           M(true)
         }
       }
@@ -227,7 +227,7 @@ var Kp = {
         color: e$attributes$disabled ? Pp.o : e$attributes$valueColor
       }
     }), !x && React.createElement("div", {
-      className: N(_$_.mask)
+      className: N($_2901.mask)
     })))
   },
   editConfig: Bp,

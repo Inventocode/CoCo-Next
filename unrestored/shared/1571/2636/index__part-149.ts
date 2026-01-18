@@ -24,43 +24,43 @@ import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1525 from "./1525"
-import /* [auto-meaningful-name] */_$_ from "./1525"
+import /* [auto-meaningful-name] */$_15251 from "./1525"
 import * as /* [auto-meaningful-name] */$_236 from "./236"
-import /* [auto-meaningful-name] */_$_2 from "./236"
-var RT = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_2361 from "./236"
+var RT = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$variableType = e.variableType
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = _React.useState(true)
+  var r = React1.useState(true)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = _React.useState("")
+  var s = React1.useState("")
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState("")
+  var d = React1.useState("")
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState("")
+  var v = React1.useState("")
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = _React.useState(false)
+  var O = React1.useState(false)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var j = w[1]
-  var R = _React.useState([])
+  var R = React1.useState([])
   var k = $_10_index.a(R, 2)
   var D = k[0]
   var M = k[1]
-  var L = _React.useState([])
+  var L = React1.useState([])
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = _React.useState([])
+  var G = React1.useState([])
   var W = $_10_index.a(G, 2)
   var U = W[0]
   var H = W[1]
@@ -81,7 +81,7 @@ var RT = _React.memo(function (e) {
   var $ = $_16_index.e(function (e) {
     return e.project.screens
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (q) {
       M(q.primitiveVariables)
       F(q.arrayVariables)
@@ -93,7 +93,7 @@ var RT = _React.memo(function (e) {
       }
     }
   }, [q, e$variableType, Q, Z, J])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = $_17_index.Blink.mainWorkspace && $_26_index.g.getToolbox()
     if (e) {
       var t
@@ -329,7 +329,7 @@ var RT = _React.memo(function (e) {
   var oe = function (e, t) {
     return React.createElement($_13_index.k, {
       type: "text",
-      className: _$_2.valueInput,
+      className: $_2361.valueInput,
       maxLength: 20,
       defaultValue: e.defaultValue,
       onFocus: function (e) {
@@ -357,7 +357,7 @@ var RT = _React.memo(function (e) {
   var ae = function (e) {
     g(e)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (m) {
       var e = document.querySelector(".".concat("VARIABLE_ID_" + m, " input"))
       if (e && e instanceof HTMLInputElement) {
@@ -387,7 +387,7 @@ var RT = _React.memo(function (e) {
       return React.createElement("div", null)
     }
     return React.createElement("div", {
-      className: N(_$_2.itemWrap, y === e$item.id && _$_2.select),
+      className: N($_2361.itemWrap, y === e$item.id && $_2361.select),
       id: e$item.id,
       key: e$item.id,
       onClick: function () {
@@ -399,23 +399,23 @@ var RT = _React.memo(function (e) {
         }
       }
     }, React.createElement("div", {
-      className: _$_2.item
+      className: $_2361.item
     }, React.createElement("div", {
-      className: N(_$_2.name)
+      className: N($_2361.name)
     }, m === e$item.id ? React.createElement($_13_index.k, {
       type: "text",
-      className: N(_$_2.nameInput, "".concat("VARIABLE_ID_" + e$item.id)),
+      className: N($_2361.nameInput, "".concat("VARIABLE_ID_" + e$item.id)),
       maxLength: 20,
       defaultValue: e$item.name,
       onBlur: re.bind(null, e$item, e$type),
       onKeyDown: ie
     }) : React.createElement("div", {
-      className: N(_$_2.nameInputWrapper)
+      className: N($_2361.nameInputWrapper)
     }, React.createElement("div", {
       onClick: ae.bind(null, e$item.id),
-      className: N(_$_2.noEditing)
+      className: N($_2361.noEditing)
     }, e$item.name), React.createElement("div", {
-      className: N(_$_2.itemBtn, _$_2.delete),
+      className: N($_2361.itemBtn, $_2361.delete),
       onClick: se.bind(null, e$item, e$type)
     }, React.createElement($_13_index.j, {
       type: "icon-close"
@@ -426,24 +426,24 @@ var RT = _React.memo(function (e) {
         id: e$variableType === K.b.PRIMITIVE ? "editDefaultValue" : "edit"
       })
     }, React.createElement("div", {
-      className: _$_2.itemBtn,
+      className: $_2361.itemBtn,
       onClick: ne.bind(null, e$item.id, e$type)
     }, e$variableType === K.b.PRIMITIVE && React.createElement($_13_index.j, {
       type: "icon-fold-left",
-      className: N(_$_2.itemExpand, l === e$item.id && _$_2.active)
+      className: N($_2361.itemExpand, l === e$item.id && $_2361.active)
     }), e$variableType === K.b.ARRAY && React.createElement($_13_index.j, {
       type: "icon-list"
     }), e$variableType === K.b.OBJECT && React.createElement($_13_index.j, {
       type: "icon-list"
     })))))), e$variableType === K.b.PRIMITIVE && y === e$item.id && l === e$item.id && React.createElement("div", {
-      className: _$_2.detail
+      className: $_2361.detail
     }, $_710_index$a$formatMessage({
       id: "initValue"
     }), oe(e$item, e$type)))
   }
   return React.createElement("div", {
     id: e.labelType,
-    className: _$_2.wrapper
+    className: $_2361.wrapper
   }, function () {
     var e
     switch (e$variableType) {
@@ -457,20 +457,20 @@ var RT = _React.memo(function (e) {
         e = "list"
     }
     return React.createElement("div", {
-      className: _$_2.addBtn,
+      className: $_2361.addBtn,
       onClick: ee
     }, React.createElement($_13_index.j, {
       type: "icon-add",
-      className: _$_2.addIcon
+      className: $_2361.addIcon
     }), $_710_index$a$formatMessage({
       id: e
     }))
   }(), !i && React.createElement("div", {
-    className: _$_2.line
+    className: $_2361.line
   }), !C && (e$variableType === K.b.PRIMITIVE ? React.createElement("div", {
-    className: _$_2.content
+    className: $_2361.content
   }, Q.length ? React.createElement("div", {
-    className: _$_2.variableTitle
+    className: $_2361.variableTitle
   }, $_710_index$a$formatMessage({
     id: "globalVariable"
   })) : null, Q.map(function (e) {
@@ -480,7 +480,7 @@ var RT = _React.memo(function (e) {
       type: K.i.GLOBAL
     })
   }), D.length > 0 ? React.createElement("div", {
-    className: _$_2.variableTitle
+    className: $_2361.variableTitle
   }, $_710_index$a$formatMessage({
     id: "screenVariable"
   })) : null, D.map(function (e) {
@@ -490,9 +490,9 @@ var RT = _React.memo(function (e) {
       type: K.i.SCREEN
     })
   })) : e$variableType === K.b.ARRAY ? React.createElement("div", {
-    className: _$_2.content
+    className: $_2361.content
   }, Z.length > 0 ? React.createElement("div", {
-    className: _$_2.variableTitle
+    className: $_2361.variableTitle
   }, $_710_index$a$formatMessage({
     id: "globalArray"
   })) : null, Z.map(function (e) {
@@ -502,7 +502,7 @@ var RT = _React.memo(function (e) {
       type: K.i.GLOBAL
     })
   }), B.length > 0 ? React.createElement("div", {
-    className: _$_2.variableTitle
+    className: $_2361.variableTitle
   }, $_710_index$a$formatMessage({
     id: "screenArray"
   })) : null, B.map(function (e) {
@@ -512,9 +512,9 @@ var RT = _React.memo(function (e) {
       type: K.i.SCREEN
     })
   })) : e$variableType === K.b.OBJECT ? React.createElement("div", {
-    className: _$_2.content
+    className: $_2361.content
   }, J.length > 0 ? React.createElement("div", {
-    className: _$_2.variableTitle
+    className: $_2361.variableTitle
   }, $_710_index$a$formatMessage({
     id: "object.globalObject"
   })) : null, J.map(function (e) {
@@ -524,7 +524,7 @@ var RT = _React.memo(function (e) {
       type: K.i.GLOBAL
     })
   }), U.length > 0 ? React.createElement("div", {
-    className: _$_2.variableTitle
+    className: $_2361.variableTitle
   }, $_710_index$a$formatMessage({
     id: "object.screenObject"
   })) : null, U.map(function (e) {
@@ -534,24 +534,24 @@ var RT = _React.memo(function (e) {
       type: K.i.SCREEN
     })
   })) : undefined), i && React.createElement("div", {
-    className: _$_2.footer
+    className: $_2361.footer
   }, C && React.createElement("div", {
-    className: _$_2.ellipse
+    className: $_2361.ellipse
   }, "..."), React.createElement("div", {
-    className: _$_2.expand
+    className: $_2361.expand
   }, React.createElement("div", {
-    className: _$_2.foldBtn,
+    className: $_2361.foldBtn,
     onClick: function () {
       return j(!C)
     }
   }, React.createElement($_13_index.j, {
     type: "icon-fold",
-    className: C ? _$_2.expandIcon : _$_2.foldIcon
+    className: C ? $_2361.expandIcon : $_2361.foldIcon
   })))))
 })
-var kT = _React.memo(function () {
+var kT = React1.memo(function () {
   return React.createElement("div", {
-    className: _$_.wrapper
+    className: $_15251.wrapper
   }, React.createElement(RT, {
     variableType: K.b.PRIMITIVE,
     labelType: $_26_index.b.PRIMITIVE

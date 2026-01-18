@@ -136,7 +136,7 @@ var E = React.forwardRef(function (e, t) {
       var i = undefined === e$horizontalArrowShift ? 16 : e$horizontalArrowShift
       var /* [auto-meaningful-name] */e$verticalArrowShift = e.verticalArrowShift
       var s = undefined === e$verticalArrowShift ? 8 : e$verticalArrowShift
-      var /* [auto-meaningful-name] */_e$autoAdjustOverflow = e.autoAdjustOverflow
+      var /* [auto-meaningful-name] */e$autoAdjustOverflow1 = e.autoAdjustOverflow
       var u = {
         left: {
           points: ["cr", "cl"],
@@ -189,10 +189,10 @@ var E = React.forwardRef(function (e, t) {
       }
       Object.keys(u).forEach(function (t) {
         u[t] = e.arrowPointAtCenter ? $$_19.a($$_19.a({}, u[t]), {
-          overflow: p(_e$autoAdjustOverflow),
+          overflow: p(e$autoAdjustOverflow1),
           targetOffset: h
         }) : $$_19.a($$_19.a({}, $_1031.a[t]), {
-          overflow: p(_e$autoAdjustOverflow)
+          overflow: p(e$autoAdjustOverflow1)
         })
         u[t].ignoreShake = true
       })

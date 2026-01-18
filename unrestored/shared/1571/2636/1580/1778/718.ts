@@ -8,7 +8,7 @@ var r = require("../1705/86/index")
 var o = require("../1581/827")
 var i = require("../1705/231")
 var a = require("../1581/334")
-var /* [auto-meaningful-name] */require$$_1705_300_index$f = require("../1705/300/index").f
+var /* [auto-meaningful-name] */require$$_1705_300$f = require("../1705/300").f
 var c = require("../1581/635")
 var l = require("../1581/1083")
 var u = require("../1581/826")
@@ -20,7 +20,7 @@ var m = Object.isExtensible || function () {
   return true
 }
 var g = function (e) {
-  require$$_1705_300_index$f(e, f, {
+  require$$_1705_300$f(e, f, {
     value: {
       objectID: "O" + h++,
       weakData: {}

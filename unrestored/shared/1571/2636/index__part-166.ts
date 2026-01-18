@@ -14,10 +14,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_752 from "./752"
-import /* [auto-meaningful-name] */_$_ from "./752"
-var IA = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_7521 from "./752"
+var IA = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
   var /* [auto-meaningful-name] */e$name = e.name
@@ -28,9 +28,9 @@ var IA = _React.memo(function (e) {
     a($$_$$_$$_$$_src_editor_redux_common_actions.mg(e))
   }
   return React.createElement("div", {
-    className: _$_.iconLayoutItem
+    className: $_7521.iconLayoutItem
   }, React.createElement("div", {
-    className: _$_.iconBox
+    className: $_7521.iconBox
   }, React.createElement("div", {
     onClick: function () {
       if (Et.ub("ICON_FILE_ID", t).length > 0 || Et.Hb(t)) {
@@ -53,18 +53,18 @@ var IA = _React.memo(function (e) {
         s(t)
       }
     },
-    className: _$_.delete
+    className: $_7521.delete
   }, React.createElement($_13_index.j, {
     type: "icon-delete",
-    className: _$_.iconDelete
+    className: $_7521.iconDelete
   })), React.createElement("div", {
-    className: _$_.content
+    className: $_7521.content
   }, React.createElement("img", {
     draggable: "false",
     alt: e$name,
     src: e$cdnUrl || e$source
   }))), React.createElement("div", {
-    className: _$_.fileItemName
+    className: $_7521.fileItemName
   }, React.createElement(fA, {
     suffix: ".svg",
     isTrimmed: true,

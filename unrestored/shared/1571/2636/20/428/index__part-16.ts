@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$$_$$_48_87 from "../../48/87"
 import * as /* [auto-meaningful-name] */$$_$$_27 from "../../27"
 import * as /* [auto-meaningful-name] */$$_$$_39 from "../../39"
 import * as /* [auto-meaningful-name] */Socket$ioClient from "socket.io-client"
-import /* [auto-meaningful-name] */_Socket$ioClient from "socket.io-client"
+import /* [auto-meaningful-name] */Socket$ioClient1 from "socket.io-client"
 import * as /* [auto-meaningful-name] */$$_index from "../index"
 import * as /* [auto-meaningful-name] */$$_$$_57_index from "../../57/index"
 var Bl = "".concat($$_$$_57_index.a.socketHost, ":9090")
@@ -81,7 +81,7 @@ var Fl = function () {
                 case 5:
                   this.username = t
                   return e.abrupt("return", new Promise(function (e, r) {
-                    var o = _Socket$ioClient(Bl, {
+                    var o = Socket$ioClient1(Bl, {
                       path: "/coconut",
                       query: $$_$$_48_87.a(),
                       transports: ["websocket"]
@@ -120,47 +120,47 @@ var Fl = function () {
       key: "subscribe",
       value: function () {
         var /* [auto-meaningful-name] */this$socket
-        var /* [auto-meaningful-name] */_this$socket
-        var /* [auto-meaningful-name] */_this$socket2
-        var /* [auto-meaningful-name] */_this$socket3
+        var /* [auto-meaningful-name] */this$socket1
+        var /* [auto-meaningful-name] */this$socket2
+        var /* [auto-meaningful-name] */this$socket3
         if (!(null === (this$socket = this.socket) || undefined === this$socket)) {
           this$socket.on("join", this.onMemberJoin)
         }
-        if (!(null === (_this$socket = this.socket) || undefined === _this$socket)) {
-          _this$socket.on("leave", this.onMemberLeave)
+        if (!(null === (this$socket1 = this.socket) || undefined === this$socket1)) {
+          this$socket1.on("leave", this.onMemberLeave)
         }
-        if (!(null === (_this$socket2 = this.socket) || undefined === _this$socket2)) {
-          _this$socket2.on("broadcast", this.onReceiveData)
+        if (!(null === (this$socket2 = this.socket) || undefined === this$socket2)) {
+          this$socket2.on("broadcast", this.onReceiveData)
         }
-        if (!(null === (_this$socket3 = this.socket) || undefined === _this$socket3)) {
-          _this$socket3.on("error", this.error)
+        if (!(null === (this$socket3 = this.socket) || undefined === this$socket3)) {
+          this$socket3.on("error", this.error)
         }
       }
     }, {
       key: "unsubscribe",
       value: function () {
         var /* [auto-meaningful-name] */this$socket
-        var /* [auto-meaningful-name] */_this$socket4
-        var /* [auto-meaningful-name] */_this$socket5
-        var /* [auto-meaningful-name] */_this$socket6
+        var /* [auto-meaningful-name] */this$socket1
+        var /* [auto-meaningful-name] */this$socket2
+        var /* [auto-meaningful-name] */this$socket3
         if (!(null === (this$socket = this.socket) || undefined === this$socket)) {
           this$socket.off("join", this.onMemberJoin)
         }
-        if (!(null === (_this$socket4 = this.socket) || undefined === _this$socket4)) {
-          _this$socket4.off("leave", this.onMemberLeave)
+        if (!(null === (this$socket1 = this.socket) || undefined === this$socket1)) {
+          this$socket1.off("leave", this.onMemberLeave)
         }
-        if (!(null === (_this$socket5 = this.socket) || undefined === _this$socket5)) {
-          _this$socket5.off("broadcast", this.onReceiveData)
+        if (!(null === (this$socket2 = this.socket) || undefined === this$socket2)) {
+          this$socket2.off("broadcast", this.onReceiveData)
         }
-        if (!(null === (_this$socket6 = this.socket) || undefined === _this$socket6)) {
-          _this$socket6.off("error", this.error)
+        if (!(null === (this$socket3 = this.socket) || undefined === this$socket3)) {
+          this$socket3.off("error", this.error)
         }
       }
     }, {
       key: "leave",
       value: function () {
         var /* [auto-meaningful-name] */this$socket
-        var /* [auto-meaningful-name] */_this$socket7
+        var /* [auto-meaningful-name] */this$socket1
         this.unsubscribe()
         if (!(null === (this$socket = this.socket) || undefined === this$socket)) {
           this$socket.emit("leave", {
@@ -170,8 +170,8 @@ var Fl = function () {
             username: this.username
           })
         }
-        if (!(null === (_this$socket7 = this.socket) || undefined === _this$socket7)) {
-          _this$socket7.close()
+        if (!(null === (this$socket1 = this.socket) || undefined === this$socket1)) {
+          this$socket1.close()
         }
       }
     }, {
@@ -388,7 +388,7 @@ function Xl() {
               var o
               var /* [auto-meaningful-name] */e$sent
               var a
-              var /* [auto-meaningful-name] */_e$sent
+              var /* [auto-meaningful-name] */e$sent1
               return RegeneratorRuntime.wrap(function (e) {
                 for (;;) {
                   switch (e.prev = e.next) {
@@ -427,8 +427,8 @@ function Xl() {
                       e.next = 18
                       return Gl.session.join(Gl$username)
                     case 18:
-                      _e$sent = e.sent
-                      Gl.session.members = _e$sent.username_list
+                      e$sent1 = e.sent
+                      Gl.session.members = e$sent1.username_list
                       return e.abrupt("return", [t, Gl.session.members.length])
                     case 21:
                     case "end":

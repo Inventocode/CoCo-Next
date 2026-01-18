@@ -4,7 +4,7 @@
  * 模块 ID：2505
  */
 
-var r = require("./2502/998/index")
+var r = require("./2506/998/index")
 module.exports = function (e) {
   return r(this, e).has(e)
 }

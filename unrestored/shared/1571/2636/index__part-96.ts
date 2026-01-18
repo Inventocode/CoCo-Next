@@ -9,7 +9,7 @@
 import * as yb from "./21"
 import * as vb from "./54"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_241_index from "./241/index"
 function Db(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
@@ -46,7 +46,7 @@ function Pb(e) {
 function Bb(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1]
   return Db(e).map(function (e, n) {
-    if (!_React.isValidElement(e) || !e.type) {
+    if (!React1.isValidElement(e) || !e.type) {
       return null
     }
     var /* [auto-meaningful-name] */e$type$isSelectOptGroup = e.type.isSelectOptGroup

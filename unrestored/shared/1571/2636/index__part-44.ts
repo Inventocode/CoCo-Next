@@ -14,9 +14,9 @@ import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as k from "./11"
 import N from "./8"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_513 from "./513"
-import /* [auto-meaningful-name] */_$_ from "./513"
+import /* [auto-meaningful-name] */$_5131 from "./513"
 import * as /* [auto-meaningful-name] */$_433 from "./433"
 import * as /* [auto-meaningful-name] */$_206 from "./206"
 var tf = {
@@ -36,11 +36,11 @@ var tf = {
     var /* [auto-meaningful-name] */e$attributes$borderRadius = e$attributes.borderRadius
     var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
     var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
-    var p = _React.useRef(null)
+    var p = React1.useRef(null)
     var m = Jd.Fb(e$attributes$fileId) || $_133.m
     return React.createElement("div", {
       id: t,
-      className: N(_$_.imageWidget, wn.b, k.a({}, _$_.hide, !e$visible)),
+      className: N($_5131.imageWidget, wn.b, k.a({}, $_5131.hide, !e$visible)),
       "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
       "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       "data-scale-mode": $$_$$_$$_$$_src_editor_widget_builtIn_types.p.PROPORTIONAL,

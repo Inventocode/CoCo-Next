@@ -32,9 +32,9 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_932 from "./932"
-import /* [auto-meaningful-name] */_$_ from "./932"
+import /* [auto-meaningful-name] */$_9321 from "./932"
 var Vd = function (e) {
   var t
   var /* [auto-meaningful-name] */e$position = e.position
@@ -45,7 +45,7 @@ var Vd = function (e) {
   var i = $_238.d()
   if (!o) {
     return i ? React.createElement("div", {
-      className: _$_.container
+      className: $_9321.container
     }, React.createElement("div", null, i.get("title"))) : null
   }
   var a = Et.Bb(o)
@@ -58,24 +58,24 @@ var Vd = function (e) {
   }
   if (a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.a || a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.c) {
     return React.createElement("div", {
-      className: _$_.container
+      className: $_9321.container
     }, React.createElement("div", null, s), React.createElement("div", null, $_710_index$a$formatMessage({
       id: "relativeCoordinate"
     }), " X:", e$position.x, " Y:", e$position.y))
   }
   var c = a.parentId ? Et.Bb(a.parentId) : undefined
   return (null === c || undefined === c ? undefined : c.type) && [$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(c.type) ? React.createElement("div", {
-    className: _$_.container
+    className: $_9321.container
   }, React.createElement("div", null, s), React.createElement("div", null, "X: - Y: -")) : React.createElement("div", {
-    className: _$_.container
+    className: $_9321.container
   }, React.createElement("div", null, s), React.createElement("div", null, "X:", e$position.x, " Y:", e$position.y))
 }
 var zd = React.memo(function () {
   var e
-  var t = _React.useRef(null)
-  var n = _React.useRef(null)
+  var t = React1.useRef(null)
+  var n = React1.useRef(null)
   var r = null === (e = $_238.d()) || undefined === e ? undefined : e.id
-  var o = _React.useRef(Qu.d.NONE)
+  var o = React1.useRef(Qu.d.NONE)
   var i = $_16_index.d()
   var a = $_16_index.e(function (e) {
     return e.project.selectedWidgetId
@@ -92,7 +92,7 @@ var zd = React.memo(function () {
   var u = $_16_index.e(function (e) {
     return e.project.focusedWorkspaceArea
   })
-  var d = _React.useState({
+  var d = React1.useState({
     x: 0,
     y: 0
   })
@@ -104,24 +104,24 @@ var zd = React.memo(function () {
   var y = null === b || undefined === b ? undefined : b.type
   var w = y ? Et.Db(y) : null
   var T = null === b || undefined === b ? undefined : b.position
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (T) {
       g(T)
     }
   }, [T])
-  var A = _React.useState(undefined)
+  var A = React1.useState(undefined)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var x = j[1]
-  var M = _React.useState([])
+  var M = React1.useState([])
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = _React.useState([])
+  var F = React1.useState([])
   var G = $_10_index.a(F, 2)
   var W = G[0]
   var U = G[1]
-  var H = _React.useRef([])
+  var H = React1.useRef([])
   var V = $_16_index.e(function (e) {
     return e.uiConfig.stage
   }) === K.j.ReadOnly
@@ -177,10 +177,10 @@ var zd = React.memo(function () {
       return e.apply(this, arguments)
     }
   }()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     x(v ? $_452_index.b(v.toJSON()) : undefined)
   }, [v, s])
-  var q = _React.useRef()
+  var q = React1.useRef()
   var X = function () {
     if (a && r) {
       i($$_$$_$$_$$_src_editor_redux_common_actions.Mf(a, r))

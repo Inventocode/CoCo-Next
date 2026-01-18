@@ -18,10 +18,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_419 from "./419"
-import /* [auto-meaningful-name] */_$_ from "./419"
-var nb = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_4191 from "./419"
+var nb = React1.memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$onUploadFileChange = e.onUploadFileChange
   var /* [auto-meaningful-name] */e$onResourceLibraryClick = e.onResourceLibraryClick
@@ -29,11 +29,11 @@ var nb = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$fileId = e.fileId
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState(false)
+  var p = React1.useState(false)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
@@ -52,25 +52,25 @@ var nb = _React.memo(function (e) {
   var E = function () {
     return React.createElement($_1213.a, {
       content: React.createElement("div", {
-        className: _$_.imagePopover,
+        className: $_4191.imagePopover,
         onClick: y
       }, React.createElement($_13_index.B, {
-        className: _$_.content,
+        className: $_4191.content,
         onChange: e$onUploadFileChange,
         accept: $_133.f
       }, React.createElement($_13_index.j, {
         type: "icon-upload"
       }), React.createElement("span", {
-        className: _$_.contentTitle
+        className: $_4191.contentTitle
       }, $_710_index$a$formatMessage({
         id: "Resource.upload"
       }))), React.createElement("div", {
-        className: _$_.content,
+        className: $_4191.content,
         onClick: e$onResourceLibraryClick
       }, React.createElement($_13_index.j, {
         type: "icon-open-resource-library"
       }), React.createElement("span", {
-        className: _$_.contentTitle
+        className: $_4191.contentTitle
       }, $_710_index$a$formatMessage({
         id: "Resource.ImageLibrary"
       })))),
@@ -79,16 +79,16 @@ var nb = _React.memo(function (e) {
       visible: g,
       onVisibleChange: b
     }, React.createElement("div", {
-      className: _$_.imageBtn
+      className: $_4191.imageBtn
     }, $_710_index$a$formatMessage({
       id: "Resource.Replace"
     })))
   }
   return React.createElement("div", {
-    className: _$_.imageWrapper
+    className: $_4191.imageWrapper
   }, React.createElement("div", {
     tabIndex: -1,
-    className: N(_$_.imageBox),
+    className: N($_4191.imageBox),
     style: e$style,
     onMouseEnter: function () {
       d(true)
@@ -106,21 +106,21 @@ var nb = _React.memo(function (e) {
     alt: e$fileId,
     src: t
   }), React.createElement("div", {
-    className: N(_$_.cover, u && _$_.visible)
+    className: N($_4191.cover, u && $_4191.visible)
   }, e$onDelete && React.createElement("div", {
-    className: _$_.imageDelete,
+    className: $_4191.imageDelete,
     onClick: e$onDelete
   }, React.createElement($_13_index.j, {
     type: "icon-delete"
   })), E())), !t && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: _$_.picDefault
+    className: $_4191.picDefault
   }, React.createElement($_13_index.j, {
     type: "icon-pic-default"
   })), React.createElement("div", {
-    className: N(_$_.cover, u && _$_.visible)
+    className: N($_4191.cover, u && $_4191.visible)
   }, E()))))
 })
-var rb = _React.memo(function (e) {
+var rb = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$sizeType = e.sizeType
   var /* [auto-meaningful-name] */e$sizeTypeList = e.sizeTypeList
   var /* [auto-meaningful-name] */e$width = e.width

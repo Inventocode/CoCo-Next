@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
 import * as o from "../6"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_557 from "../557"
 import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
 import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
 import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
 import * as /* [auto-meaningful-name] */$_155 from "./155"
-import /* [auto-meaningful-name] */_$_ from "./155"
+import /* [auto-meaningful-name] */$_1551 from "./155"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_64 from "../64"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
@@ -208,7 +208,7 @@ _a = React.memo(function () {
   React.useEffect(function () {
     function e(t) {
       var /* [auto-meaningful-name] */t$target = t.target
-      if (!(t$target.closest("." + _$_.typeSelectionList) || t$target.closest("." + _$_.typeFlag))) {
+      if (!(t$target.closest("." + $_1551.typeSelectionList) || t$target.closest("." + $_1551.typeFlag))) {
         be(o.a({}, T))
         document.removeEventListener("mousemove", e)
       }
@@ -357,8 +357,8 @@ _a = React.memo(function () {
       }, true)
     }
   }, [ae, ue])
-  return _React.createElement($$_13_index.f, {
-    className: _$_.editListDialog,
+  return React1.createElement($$_13_index.f, {
+    className: $_1551.editListDialog,
     visible: e$visible,
     withPortal: true,
     onClose: function () {
@@ -368,34 +368,34 @@ _a = React.memo(function () {
         me(true)
       }
     }
-  }, _React.createElement("div", {
-    className: _$_.dialogTitle
-  }, e$dbName, _React.createElement("span", {
-    className: _$_.defaultData
+  }, React1.createElement("div", {
+    className: $_1551.dialogTitle
+  }, e$dbName, React1.createElement("span", {
+    className: $_1551.defaultData
   }, "— ", $$_710_index$a$formatMessage({
     id: "StorageDialog.defaultData"
-  }))), _React.createElement($_1524.a, ve), _React.createElement("div", {
-    className: _$_.list
-  }, _React.createElement("div", {
-    className: _$_.summary
-  }, _React.createElement("div", {
-    className: _$_.count
-  }, _React.createElement("span", null, $$_710_index$a$formatMessage({
+  }))), React1.createElement($_1524.a, ve), React1.createElement("div", {
+    className: $_1551.list
+  }, React1.createElement("div", {
+    className: $_1551.summary
+  }, React1.createElement("div", {
+    className: $_1551.count
+  }, React1.createElement("span", null, $$_710_index$a$formatMessage({
     id: "keyValueTotal"
-  }), "："), G.length || "0")), _React.createElement("div", {
-    className: _$_.listHeader
-  }, _React.createElement("div", {
-    className: _$_.column1
+  }), "："), G.length || "0")), React1.createElement("div", {
+    className: $_1551.listHeader
+  }, React1.createElement("div", {
+    className: $_1551.column1
   }, $$_710_index$a$formatMessage({
     id: "key"
-  })), _React.createElement("div", {
-    className: _$_.column2
+  })), React1.createElement("div", {
+    className: $_1551.column2
   }, $$_710_index$a$formatMessage({
     id: "value"
-  })), _React.createElement("div", {
-    className: _$_.column3
-  })), _React.createElement("div", {
-    className: _$_.dataList,
+  })), React1.createElement("div", {
+    className: $_1551.column3
+  })), React1.createElement("div", {
+    className: $_1551.dataList,
     onKeyDown: function (e) {
       var /* [auto-meaningful-name] */e$target = e.target
       var /* [auto-meaningful-name] */R$current = R.current
@@ -428,61 +428,61 @@ _a = React.memo(function () {
         }
       }
     }
-  }, G.length > 0 && _React.createElement($$_557.a, {
+  }, G.length > 0 && React1.createElement($$_557.a, {
     width: "auto",
     height: 36 * Math.min(G.length, 12),
     itemCount: G.length,
     renderItem: function (e) {
       var /* [auto-meaningful-name] */e$index = e.index
       var /* [auto-meaningful-name] */e$style = e.style
-      return _React.createElement("div", {
-        className: _$_.listItem,
+      return React1.createElement("div", {
+        className: $_1551.listItem,
         key: e$index,
         style: e$style,
         onMouseEnter: je.bind(null, e$index)
-      }, _React.createElement($$_1213.a, {
+      }, React1.createElement($$_1213.a, {
         placement: "rightTop",
         trigger: "click",
         onVisibleChange: Pe,
         visible: ae && k.current === e$index,
-        content: _React.createElement("div", {
-          className: _$_.rowMenuWrapper,
+        content: React1.createElement("div", {
+          className: $_1551.rowMenuWrapper,
           style: {
             marginTop: 13
           }
-        }, _React.createElement("div", {
+        }, React1.createElement("div", {
           onMouseDown: Ge.bind(null, "key"),
-          className: _$_.menuItem
+          className: $_1551.menuItem
         }, $$_710_index$a$formatMessage({
           id: "copyGridData"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: We.bind(null, "key"),
-          className: _$_.menuItem
+          className: $_1551.menuItem
         }, $$_710_index$a$formatMessage({
           id: "pasteGridData"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "prev"),
-          className: p(_$_.menuItem, _$_.borderTop)
+          className: p($_1551.menuItem, $_1551.borderTop)
         }, $$_710_index$a$formatMessage({
           id: "insertPrevRow"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "next"),
-          className: p(_$_.menuItem, _$_.borderBottom)
+          className: p($_1551.menuItem, $_1551.borderBottom)
         }, $$_710_index$a$formatMessage({
           id: "insertNextRow"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: He.bind(null, "key"),
-          className: p(_$_.menuItem, _$_.deleteOption)
+          className: p($_1551.menuItem, $_1551.deleteOption)
         }, $$_710_index$a$formatMessage({
           id: "clearData"
         })))
-      }, _React.createElement("div", {
-        className: _$_.column1,
+      }, React1.createElement("div", {
+        className: $_1551.column1,
         onContextMenu: Be
-      }, _React.createElement($$_13_index.k, {
+      }, React1.createElement($$_13_index.k, {
         type: "text",
         isTrimmed: true,
-        className: p(_$_.listInput, "STORAGE_KEY_VALUE_INPUT_SERIAL_" + 2 * e$index, L.includes(e$index) && _$_.error),
+        className: p($_1551.listInput, "STORAGE_KEY_VALUE_INPUT_SERIAL_" + 2 * e$index, L.includes(e$index) && $_1551.error),
         maxLength: 150,
         onClick: Re,
         defaultValue: G[e$index].key,
@@ -490,113 +490,113 @@ _a = React.memo(function () {
         onBlur: we.bind(null, e$index),
         onChange: Ce.bind(null, e$index),
         dependency: G[e$index].key
-      }))), _React.createElement($$_1213.a, {
+      }))), React1.createElement($$_1213.a, {
         placement: "rightTop",
         trigger: "click",
         onVisibleChange: Pe,
         visible: ue && k.current === e$index,
-        content: _React.createElement("div", {
-          className: _$_.rowMenuWrapper,
+        content: React1.createElement("div", {
+          className: $_1551.rowMenuWrapper,
           style: {
             marginTop: 13
           }
-        }, _React.createElement("div", {
+        }, React1.createElement("div", {
           onMouseDown: Ge.bind(null, "value"),
-          className: _$_.menuItem
+          className: $_1551.menuItem
         }, $$_710_index$a$formatMessage({
           id: "copyGridData"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: We.bind(null, "value"),
-          className: _$_.menuItem
+          className: $_1551.menuItem
         }, $$_710_index$a$formatMessage({
           id: "pasteGridData"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "prev"),
-          className: p(_$_.menuItem, _$_.borderTop)
+          className: p($_1551.menuItem, $_1551.borderTop)
         }, $$_710_index$a$formatMessage({
           id: "insertPrevRow"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "next"),
-          className: p(_$_.menuItem, _$_.borderBottom)
+          className: p($_1551.menuItem, $_1551.borderBottom)
         }, $$_710_index$a$formatMessage({
           id: "insertNextRow"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: He.bind(null, "value"),
-          className: p(_$_.menuItem, _$_.deleteOption)
+          className: p($_1551.menuItem, $_1551.deleteOption)
         }, $$_710_index$a$formatMessage({
           id: "clearData"
         })))
-      }, _React.createElement("div", {
-        className: _$_.column2,
+      }, React1.createElement("div", {
+        className: $_1551.column2,
         onContextMenu: Fe
       }, function (e) {
-        return j && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B ? "" : Ae(G[e].value) && _React.createElement("div", {
-          className: _$_.typeFlag,
+        return j && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B ? "" : Ae(G[e].value) && React1.createElement("div", {
+          className: $_1551.typeFlag,
           onMouseEnter: ke.bind(null, e)
-        }, _React.createElement($$_13_index.j, {
+        }, React1.createElement($$_13_index.j, {
           type: "icon-corner-right-top"
         }))
-      }(e$index), _React.createElement($$_13_index.k, {
+      }(e$index), React1.createElement($$_13_index.k, {
         type: "text",
         onFocus: Ie.bind(null, e$index, 1),
-        className: p(_$_.listInput, "STORAGE_KEY_VALUE_INPUT_SERIAL_" + (2 * e$index + 1)),
+        className: p($_1551.listInput, "STORAGE_KEY_VALUE_INPUT_SERIAL_" + (2 * e$index + 1)),
         maxLength: 8e3,
         isTrimmed: true,
         defaultValue: G[e$index].value,
         onBlur: Te.bind(null, e$index),
         onClick: Re,
         dependency: G[e$index].value
-      }), q === e$index && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B && _React.createElement($$_1213.a, {
+      }), q === e$index && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B && React1.createElement($$_1213.a, {
         key: e$index,
         placement: "rightTop",
         onVisibleChange: xe,
         visible: ne,
-        content: _React.createElement("div", {
-          className: _$_.menuWrapper,
+        content: React1.createElement("div", {
+          className: $_1551.menuWrapper,
           style: {
             marginTop: 4
           }
-        }, _React.createElement("div", {
+        }, React1.createElement("div", {
           onMouseDown: De,
-          className: _$_.resourceMenuItem
-        }, _React.createElement($$_13_index.j, {
+          className: $_1551.resourceMenuItem
+        }, React1.createElement($$_13_index.j, {
           type: "icon-Image",
-          className: _$_.resourceMenuIcon
+          className: $_1551.resourceMenuIcon
         }), $$_710_index$a$formatMessage({
           id: "Resource.ImageLibrary"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: Me,
-          className: _$_.resourceMenuItem
-        }, _React.createElement($$_13_index.j, {
+          className: $_1551.resourceMenuItem
+        }, React1.createElement($$_13_index.j, {
           type: "icon-Icon",
-          className: _$_.resourceMenuIcon
+          className: $_1551.resourceMenuIcon
         }), $$_710_index$a$formatMessage({
           id: "Resource.IconLibrary"
-        })), _React.createElement("div", {
+        })), React1.createElement("div", {
           onMouseDown: Le,
-          className: _$_.resourceMenuItem
-        }, _React.createElement($$_13_index.j, {
+          className: $_1551.resourceMenuItem
+        }, React1.createElement($$_13_index.j, {
           type: "icon-Sound",
-          className: _$_.resourceMenuIcon
+          className: $_1551.resourceMenuIcon
         }), $$_710_index$a$formatMessage({
           id: "Resource.SoundLibrary"
         })))
-      }, _React.createElement("div", {
-        className: _$_.addBox
-      }, _React.createElement($$_13_index.j, {
+      }, React1.createElement("div", {
+        className: $_1551.addBox
+      }, React1.createElement($$_13_index.j, {
         type: "icon-add"
-      }))))), _React.createElement("div", {
-        className: p(_$_.inputClose, _$_.column3),
+      }))))), React1.createElement("div", {
+        className: p($_1551.inputClose, $_1551.column3),
         onClick: Oe.bind(null, e$index)
-      }, _React.createElement($$_13_index.j, {
+      }, React1.createElement($$_13_index.j, {
         type: "icon-close"
       })))
     },
     itemSize: 36,
     scrollToIndex: J,
     className: "VirtualList"
-  })), _React.createElement("div", {
-    className: p(_$_.addRow, G.length > 12 && _$_.shadow),
+  })), React1.createElement("div", {
+    className: p($_1551.addRow, G.length > 12 && $_1551.shadow),
     onClick: function () {
       if (e$maxKeyLength && G.length >= e$maxKeyLength) {
         x($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
@@ -611,21 +611,21 @@ _a = React.memo(function () {
         $(G.length - 1)
       }
     }
-  }, _React.createElement($$_13_index.j, {
+  }, React1.createElement($$_13_index.j, {
     type: "icon-add"
-  }))), he && _React.createElement($$_796_index.b, {
+  }))), he && React1.createElement($$_796_index.b, {
     onCancel: function () {
       x($$_$$_$$_$$_$$_src_editor_redux_common_actions.uh())
     },
     onOk: Se
-  }), _React.createElement("div", {
-    className: _$_.footer
-  }, j && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B ? _React.createElement("span", null, $$_710_index$a$formatMessage({
+  }), React1.createElement("div", {
+    className: $_1551.footer
+  }, j && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B ? React1.createElement("span", null, $$_710_index$a$formatMessage({
     id: "storageDialogTips"
-  })) : _React.createElement("span", null, $$_710_index$a$formatMessage({
+  })) : React1.createElement("span", null, $$_710_index$a$formatMessage({
     id: "deprecatedStorageDialogTips"
-  })), _React.createElement($$_13_index.d, {
-    className: p(_$_.save, false),
+  })), React1.createElement($$_13_index.d, {
+    className: p($_1551.save, false),
     type: "primary",
     onClick: Se
   }, $$_710_index$a$formatMessage({

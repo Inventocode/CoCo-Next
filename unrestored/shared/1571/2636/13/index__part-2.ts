@@ -8,15 +8,15 @@
 
 import * as /* [auto-meaningful-name] */$$_294_index from "../294/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_539 from "../539"
 import "./1101"
 import * as /* [auto-meaningful-name] */$_780_index from "./780/index"
-import /* [auto-meaningful-name] */_$_780_index from "./780/index"
+import /* [auto-meaningful-name] */$_780_index1 from "./780/index"
 import "./842"
-var y = _React.memo(function (e) {
+var y = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$step = e.step
   var n = undefined === e$step ? 1 : e$step
   var /* [auto-meaningful-name] */e$max = e.max
@@ -29,18 +29,18 @@ var y = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$isShowLeftInput = e.isShowLeftInput
   var /* [auto-meaningful-name] */e$isShowRightInput = e.isShowRightInput
   var /* [auto-meaningful-name] */e$inputAfter = e.inputAfter
-  var v = _React.useRef(null)
-  var y = _React.useState(e$value || u)
+  var v = React1.useRef(null)
+  var y = React1.useState(e$value || u)
   var E = $$_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (undefined !== e$value) {
       T(e$value.toString())
       w(e$value)
     }
   }, [e$value])
-  var C = _React.useCallback(function (e) {
+  var C = React1.useCallback(function (e) {
     T(e.toString())
     w(e)
     if (e$onChange) {
@@ -71,7 +71,7 @@ var y = _React.memo(function (e) {
     onChange: S,
     ref: v,
     after: e$inputAfter
-  }), React.createElement(_$_780_index, {
+  }), React.createElement($_780_index1, {
     value: O,
     step: n,
     min: u,

@@ -11,13 +11,13 @@ import * as X from "./27"
 import * as k from "./11"
 import N from "./8"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1512 from "./1512"
 import * as ro from "./39"
 import * as /* [auto-meaningful-name] */$_58_index from "./58/index"
 import * as /* [auto-meaningful-name] */$_59_index from "./59/index"
 import * as /* [auto-meaningful-name] */$_279 from "./279"
-import /* [auto-meaningful-name] */_$_ from "./279"
+import /* [auto-meaningful-name] */$_2791 from "./279"
 var co = function (e) {
   $_58_index.a(n, e)
   var t = $_59_index.a(n)
@@ -65,7 +65,7 @@ var co = function (e) {
       value: function () {
         var /* [auto-meaningful-name] */this$state$isDragging = this.state.isDragging
         return React.createElement("div", {
-          className: N(_$_.dragBar, k.a({}, _$_.active, this$state$isDragging)),
+          className: N($_2791.dragBar, k.a({}, $_2791.active, this$state$isDragging)),
           onMouseEnter: this.props.onEnter,
           onMouseLeave: this.props.onLeave,
           onMouseDown: this.handleMouseDown
@@ -75,5 +75,5 @@ var co = function (e) {
   ])
   return n
 }(React.PureComponent)
-var lo = _React.memo(co)
+var lo = React1.memo(co)
 export { lo }

@@ -72,10 +72,10 @@ function s(e, t, n, u, l, c, f) {
       } else {
         if (i.k(m)) {
           var /* [auto-meaningful-name] */m$children = m.children
-          var /* [auto-meaningful-name] */_m$value = m.value
-          var E = l[_m$value]
+          var /* [auto-meaningful-name] */m$value1 = m.value
+          var E = l[m$value1]
           if (!a(E)) {
-            throw new o.d(_m$value, "function", f)
+            throw new o.d(m$value1, "function", f)
           }
           var O = E(s(m$children, t, n, u, l, c).map(function (e) {
             return e.value

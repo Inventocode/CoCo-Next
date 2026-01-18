@@ -11,9 +11,9 @@ require("../../../50/index")
 var i = require("../98")
 var o = require("../../../19")
 var a = require("../../../54")
-var s = require("../789/1065")
+var s = require("../269/1065")
 var c = require("../709/index")
-var u = require("./2642")
+var u = require("../269/2642")
 var l = c.a(function (e) {
   return {
     day: {

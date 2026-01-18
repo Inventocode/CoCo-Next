@@ -210,9 +210,9 @@ var Zf = {
         },
         optOnchange: function (e) {
           var /* [auto-meaningful-name] */this$source_block
-          var /* [auto-meaningful-name] */_this$source_block
+          var /* [auto-meaningful-name] */this$source_block1
           var r = null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field("SLOT_WIDGET")
-          var o = null === (_this$source_block = this.source_block) || undefined === _this$source_block ? undefined : _this$source_block.get_field("ATTRIBUTE")
+          var o = null === (this$source_block1 = this.source_block) || undefined === this$source_block1 ? undefined : this$source_block1.get_field("ATTRIBUTE")
           if (!(null === r || undefined === r)) {
             r.set_value(rp.c)
           }
@@ -258,9 +258,9 @@ var Zf = {
         custom: true,
         options: function () {
           var /* [auto-meaningful-name] */this$source_block
-          var /* [auto-meaningful-name] */_this$source_block2
+          var /* [auto-meaningful-name] */this$source_block1
           var n = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field_value("WIDGET_ID")) || $_228_index.a()
-          var o = null === (_this$source_block2 = this.source_block) || undefined === _this$source_block2 ? undefined : _this$source_block2.get_field_value("SLOT_WIDGET")
+          var o = null === (this$source_block1 = this.source_block) || undefined === this$source_block1 ? undefined : this$source_block1.get_field_value("SLOT_WIDGET")
           var a = Jd.Cb(n)
           var s = []
           if (a && o) {
@@ -284,9 +284,9 @@ var Zf = {
         custom: true,
         options: function () {
           var /* [auto-meaningful-name] */this$source_block
-          var /* [auto-meaningful-name] */_this$source_block3
+          var /* [auto-meaningful-name] */this$source_block1
           var n = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field_value("WIDGET_ID")) || $_228_index.a()
-          var r = null === (_this$source_block3 = this.source_block) || undefined === _this$source_block3 ? undefined : _this$source_block3.get_field_value("SLOT_WIDGET")
+          var r = null === (this$source_block1 = this.source_block) || undefined === this$source_block1 ? undefined : this$source_block1.get_field_value("SLOT_WIDGET")
           var i = Jd.Cb(n)
           var s = []
           if (i && r) {

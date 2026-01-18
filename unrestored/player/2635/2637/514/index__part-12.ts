@@ -23,17 +23,17 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_7 from "../../../../shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_911 from "./911"
-import /* [auto-meaningful-name] */_$_ from "./911"
+import /* [auto-meaningful-name] */$_9111 from "./911"
 import * as /* [auto-meaningful-name] */$_912 from "./912"
-import /* [auto-meaningful-name] */_$_2 from "./912"
+import /* [auto-meaningful-name] */$_9121 from "./912"
 import * as /* [auto-meaningful-name] */$_913 from "./913"
-import /* [auto-meaningful-name] */_$_3 from "./913"
+import /* [auto-meaningful-name] */$_9131 from "./913"
 import * as /* [auto-meaningful-name] */$_617 from "./617"
-import /* [auto-meaningful-name] */_$_4 from "./617"
+import /* [auto-meaningful-name] */$_6171 from "./617"
 import * as /* [auto-meaningful-name] */$_914 from "./914"
-import /* [auto-meaningful-name] */_$_5 from "./914"
+import /* [auto-meaningful-name] */$_9141 from "./914"
 import * as /* [auto-meaningful-name] */$_915 from "./915"
-import /* [auto-meaningful-name] */_$_6 from "./915"
+import /* [auto-meaningful-name] */$_9151 from "./915"
 var Wt = function (t) {
   $$_$$_$$_$$_shared_1571_2636_58_index.a(n, t)
   var e = $$_$$_$$_$$_shared_1571_2636_59_index.a(n)
@@ -94,7 +94,7 @@ var Wt = function (t) {
           t.style.display = "block"
           this.previewPage.children[1].style.display = "block"
           this.previewPage.children[2].style.display = "none"
-          this.previewPage.children[5].src = _$_4
+          this.previewPage.children[5].src = $_6171
         }
       }
     }, {
@@ -142,7 +142,7 @@ var Wt = function (t) {
               return e.apply(this, arguments)
             }
           }()
-          var n = "\n        <img class=".concat($_248.scanning, " src=").concat(_$_, " />\n        <p class=").concat($_248.text, ">\n          ").concat($$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat($_248.error, " style=\"display:none;\">\n          <div>\n            <img src=").concat(_$_3, " />\n            <p>网络不佳，二维码识别失败</p>\n          </div>\n        </div>\n        <div class=\"").concat($_248.largeBtn, " ").concat($_248.photoBtn, "\">\n          <img src=").concat(_$_6, " />\n        </div>\n        <div class=\"").concat($_248.smallBtn, " ").concat($_248.returnBtn, "\">\n          <img src=").concat(_$_2, " />\n        </div>\n        <div class=\"").concat($_248.largeBtn, " ").concat($_248.lightBtn, "\">\n          <img src=").concat(_$_4, " />\n        </div>\n      ")
+          var n = "\n        <img class=".concat($_248.scanning, " src=").concat($_9111, " />\n        <p class=").concat($_248.text, ">\n          ").concat($$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "ScanQrCode.tip"), "\n        </p>\n        <div class=").concat($_248.error, " style=\"display:none;\">\n          <div>\n            <img src=").concat($_9131, " />\n            <p>网络不佳，二维码识别失败</p>\n          </div>\n        </div>\n        <div class=\"").concat($_248.largeBtn, " ").concat($_248.photoBtn, "\">\n          <img src=").concat($_9151, " />\n        </div>\n        <div class=\"").concat($_248.smallBtn, " ").concat($_248.returnBtn, "\">\n          <img src=").concat($_9121, " />\n        </div>\n        <div class=\"").concat($_248.largeBtn, " ").concat($_248.lightBtn, "\">\n          <img src=").concat($_6171, " />\n        </div>\n      ")
           var r = document.createElement("div")
           r.id = "SCANNER_PREVIEW_CONTAINER_ID"
           r.className = $_248.container
@@ -163,7 +163,7 @@ var Wt = function (t) {
                   } else {
                     var n = document.getElementsByClassName($_248.lightBtn)[0]
                     if (n) {
-                      n.innerHTML = "<img src=".concat(_$_4, " />")
+                      n.innerHTML = "<img src=".concat($_6171, " />")
                     }
                   }
                 })
@@ -174,7 +174,7 @@ var Wt = function (t) {
                   } else {
                     var n = document.getElementsByClassName($_248.lightBtn)[0]
                     if (n) {
-                      n.innerHTML = "<img src=".concat(_$_5, " />")
+                      n.innerHTML = "<img src=".concat($_9141, " />")
                     }
                   }
                 })

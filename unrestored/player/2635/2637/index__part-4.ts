@@ -15,23 +15,23 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_7 from "../../
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_6 from "../../../shared/1571/2636/6"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1210 from "./1210"
-import /* [auto-meaningful-name] */_$_ from "./1210"
+import /* [auto-meaningful-name] */$_12101 from "./1210"
 var F = React.memo(function () {
-  var t = _React.useState()
+  var t = React1.useState()
   var e = $$_$$_$$_shared_1571_2636_10_index.a(t, 2)
   var n = e[0]
   var o = e[1]
-  var a = _React.useState(true)
+  var a = React1.useState(true)
   var s = $$_$$_$$_shared_1571_2636_10_index.a(a, 2)
   var u = s[0]
   var c = s[1]
-  var l = _React.useState("")
+  var l = React1.useState("")
   var m = $$_$$_$$_shared_1571_2636_10_index.a(l, 2)
   var b = m[0]
   var _ = m[1]
-  var A = _React.useRef()
+  var A = React1.useRef()
   function S() {
     return I.apply(this, arguments)
   }
@@ -88,7 +88,7 @@ var F = React.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     y()
     S()
     T(S)
@@ -103,7 +103,7 @@ var F = React.memo(function () {
       }
     }, false)
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (!u && A.current) {
       if (A.current.blockCode) {
         A.current.blockCode = b
@@ -114,13 +114,13 @@ var F = React.memo(function () {
     }
   }, [b, u])
   return n ? React.createElement("div", {
-    className: _$_.community
+    className: $_12101.community
   }, React.createElement("input", {
     type: "file",
     accept: "image/*",
     capture: "camera",
     id: "appcraft-camera-input",
-    className: _$_.camera
+    className: $_12101.camera
   }), React.createElement($_514_index.a, n)) : React.createElement(React.Fragment, null)
 })
 export { F }

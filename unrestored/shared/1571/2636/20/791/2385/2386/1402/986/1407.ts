@@ -10,14 +10,14 @@ var r = require("regenerator-runtime")
 var i = require("../../../../449")
 var o = require("../../../../../../207/787/500")
 var a = require("process")
-var s = require("../../1410/311/index")
+var s = require("../311")
 var /* [auto-meaningful-name] */s$PromisePrototypeThen = s.PromisePrototypeThen
 var /* [auto-meaningful-name] */s$SymbolAsyncIterator = s.SymbolAsyncIterator
 var /* [auto-meaningful-name] */s$SymbolIterator = s.SymbolIterator
 var /* [auto-meaningful-name] */require$$_333_index$Buffer = require("../333/index").Buffer
-var /* [auto-meaningful-name] */require$$_402$codes = require("../402").codes
-var /* [auto-meaningful-name] */require$$_402$codes$ERR_INVALID_ARG_TYPE = require$$_402$codes.ERR_INVALID_ARG_TYPE
-var /* [auto-meaningful-name] */require$$_402$codes$ERR_STREAM_NULL_VALUES = require$$_402$codes.ERR_STREAM_NULL_VALUES
+var /* [auto-meaningful-name] */require$$_402_index$codes = require("../402/index").codes
+var /* [auto-meaningful-name] */require$$_402_index$codes$ERR_INVALID_ARG_TYPE = require$$_402_index$codes.ERR_INVALID_ARG_TYPE
+var /* [auto-meaningful-name] */require$$_402_index$codes$ERR_STREAM_NULL_VALUES = require$$_402_index$codes.ERR_STREAM_NULL_VALUES
 module.exports = function (e, t, n) {
   var s
   var d
@@ -36,7 +36,7 @@ module.exports = function (e, t, n) {
     s = t[s$SymbolAsyncIterator]()
   } else {
     if (!t || !t[s$SymbolIterator]) {
-      throw new require$$_402$codes$ERR_INVALID_ARG_TYPE("iterable", ["Iterable"], t)
+      throw new require$$_402_index$codes$ERR_INVALID_ARG_TYPE("iterable", ["Iterable"], t)
     }
     d = false
     s = t[s$SymbolIterator]()
@@ -53,8 +53,8 @@ module.exports = function (e, t, n) {
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent$value
       var /* [auto-meaningful-name] */e$sent$done
-      var /* [auto-meaningful-name] */_e$sent
-      var /* [auto-meaningful-name] */_e$sent$value
+      var /* [auto-meaningful-name] */e$sent1
+      var /* [auto-meaningful-name] */e$sent1$value
       return r.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -85,10 +85,10 @@ module.exports = function (e, t, n) {
               e.next = 15
               return s.return()
             case 15:
-              _e$sent = e.sent
-              _e$sent$value = _e$sent.value
+              e$sent1 = e.sent
+              e$sent1$value = e$sent1.value
               e.next = 19
-              return _e$sent$value
+              return e$sent1$value
             case 19:
             case "end":
               return e.stop()
@@ -145,7 +145,7 @@ module.exports = function (e, t, n) {
                 break
               }
               A = false
-              throw new require$$_402$codes$ERR_STREAM_NULL_VALUES()
+              throw new require$$_402_index$codes$ERR_STREAM_NULL_VALUES()
             case 28:
               if (!_.push(i)) {
                 e.next = 32

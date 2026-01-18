@@ -47,9 +47,9 @@ var D = function e(t) {
       return e.target === n.lockTarget
     })) {
       if (k.some(function (e) {
-        var /* [auto-meaningful-name] */_n$options
+        var /* [auto-meaningful-name] */n$options1
         var /* [auto-meaningful-name] */e$options = e.options
-        return (null === e$options || undefined === e$options ? undefined : e$options.container) === (null === (_n$options = n.options) || undefined === _n$options ? undefined : _n$options.container)
+        return (null === e$options || undefined === e$options ? undefined : e$options.container) === (null === (n$options1 = n.options) || undefined === n$options1 ? undefined : n$options1.container)
       })) {
         k = [].concat($$_79_index.a(k), [
           {
@@ -65,9 +65,9 @@ var D = function e(t) {
         }
         var /* [auto-meaningful-name] */r$className = r.className
         if (0 === k.filter(function (e) {
-          var /* [auto-meaningful-name] */_n$options2
+          var /* [auto-meaningful-name] */n$options1
           var /* [auto-meaningful-name] */e$options = e.options
-          return (null === e$options || undefined === e$options ? undefined : e$options.container) === (null === (_n$options2 = n.options) || undefined === _n$options2 ? undefined : _n$options2.container)
+          return (null === e$options || undefined === e$options ? undefined : e$options.container) === (null === (n$options1 = n.options) || undefined === n$options1 ? undefined : n$options1.container)
         }).length) {
           B.set(r, E({
             width: 0 !== t ? "calc(100% - ".concat(t, "px)") : undefined,

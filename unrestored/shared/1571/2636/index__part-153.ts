@@ -18,12 +18,12 @@ import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_320 from "./320"
-import /* [auto-meaningful-name] */_$_ from "./320"
+import /* [auto-meaningful-name] */$_3201 from "./320"
 var QT = React.memo(function () {
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = _React.useState($_26_index.f)
+  var t = React1.useState($_26_index.f)
   var n = $_10_index.a(t, 2)
   var r = n[0]
   var o = n[1]
@@ -33,7 +33,7 @@ var QT = React.memo(function () {
   var a = $_16_index.e(function (e) {
     return e.common.consoleHeight
   })
-  var s = _React.useState({
+  var s = React1.useState({
     undo: true,
     redo: true,
     zoomOut: false,
@@ -43,7 +43,7 @@ var QT = React.memo(function () {
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e(e) {
       o(e)
       u({
@@ -73,7 +73,7 @@ var QT = React.memo(function () {
       $_26_index.z.eventBus.removeEventListener($_207_index.a.WORKSPACE_SCALE_CHANGE, e)
     }
   }, [l.redo, l.undo, l.zoomIn, l.zoomOut, i])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     u({
       undo: i,
       redo: i,
@@ -83,7 +83,7 @@ var QT = React.memo(function () {
     })
     $_17_index.Blink.context_menu.set_disabled(i)
   }, [i, l.zoomIn, l.zoomOut])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */$_17_index$Blink$mainWorkspace$clean_up = $_17_index.Blink.mainWorkspace.clean_up
     $_17_index.Blink.mainWorkspace.clean_up = function () {
       $_17_index$Blink$mainWorkspace$clean_up.call(this, $_17_index.vec2.fromValues(100, 50))
@@ -113,12 +113,12 @@ var QT = React.memo(function () {
     }
   }
   return React.createElement("div", {
-    className: _$_.wrapper,
+    className: $_3201.wrapper,
     style: {
       bottom: a + 18
     }
   }, React.createElement("div", {
-    className: _$_.undoRedoWrapper
+    className: $_3201.undoRedoWrapper
   }, React.createElement($_748_index.a, {
     placement: "top",
     title: $_710_index$a$formatMessage({
@@ -126,13 +126,13 @@ var QT = React.memo(function () {
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: _$_.iconWrapper,
+    className: $_3201.iconWrapper,
     onClick: function () {
       d("undo")
     }
   }, React.createElement($_13_index.j, {
     type: "icon-undo",
-    className: N(_$_.icon, _$_.undo, l.undo && _$_.disable)
+    className: N($_3201.icon, $_3201.undo, l.undo && $_3201.disable)
   }))), React.createElement($_748_index.a, {
     placement: "top",
     title: $_710_index$a$formatMessage({
@@ -140,7 +140,7 @@ var QT = React.memo(function () {
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: _$_.iconWrapper,
+    className: $_3201.iconWrapper,
     onClick: function () {
       if (!l.redo) {
         d("redo")
@@ -148,9 +148,9 @@ var QT = React.memo(function () {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-undo",
-    className: N(_$_.icon, _$_.redo, l.redo && _$_.disable)
+    className: N($_3201.icon, $_3201.redo, l.redo && $_3201.disable)
   })))), React.createElement("div", {
-    className: _$_.zoomWrapper
+    className: $_3201.zoomWrapper
   }, React.createElement($_748_index.a, {
     placement: "top",
     title: $_710_index$a$formatMessage({
@@ -158,7 +158,7 @@ var QT = React.memo(function () {
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: _$_.iconWrapper,
+    className: $_3201.iconWrapper,
     onClick: function () {
       if (!l.zoomOut) {
         m("dec")
@@ -166,7 +166,7 @@ var QT = React.memo(function () {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-zoom-out",
-    className: N(_$_.icon, l.zoomOut && _$_.disable)
+    className: N($_3201.icon, l.zoomOut && $_3201.disable)
   }))), React.createElement($_748_index.a, {
     placement: "top",
     title: $_710_index$a$formatMessage({
@@ -174,7 +174,7 @@ var QT = React.memo(function () {
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: _$_.percent,
+    className: $_3201.percent,
     onClick: function () {
       if ($_17_index.Blink.mainWorkspace.get_scale() !== $_26_index.f) {
         $_17_index.Blink.mainWorkspace.set_scale($_26_index.f)
@@ -187,7 +187,7 @@ var QT = React.memo(function () {
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: _$_.iconWrapper,
+    className: $_3201.iconWrapper,
     onClick: function () {
       if (!l.zoomIn) {
         m("inc")
@@ -195,9 +195,9 @@ var QT = React.memo(function () {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-zoom-in",
-    className: N(_$_.icon, l.zoomIn && _$_.disable)
+    className: N($_3201.icon, l.zoomIn && $_3201.disable)
   })))), React.createElement("div", {
-    className: _$_.cleanUpWrapper,
+    className: $_3201.cleanUpWrapper,
     onClick: function () {
       if (!l.cleanUp) {
         $_17_index.Blink.mainWorkspace.clean_up($_17_index.vec2.fromValues(100, 50))
@@ -210,10 +210,10 @@ var QT = React.memo(function () {
     }),
     trigger: ["hover", "click"]
   }, React.createElement("span", {
-    className: _$_.iconWrapper
+    className: $_3201.iconWrapper
   }, React.createElement($_13_index.j, {
     type: "icon-clean-up",
-    className: N(_$_.icon, l.cleanUp && _$_.disable)
+    className: N($_3201.icon, l.cleanUp && $_3201.disable)
   })))))
 })
 export { QT }

@@ -11,7 +11,7 @@ var o = require("./1699/271")
 var i = require("./1662/955")
 var a = require("./1581/309")
 var s = require("./1694/443")
-var c = require("./1705/300/index")
+var c = require("./1705/300")
 if (o) {
   r({
     target: "Object",

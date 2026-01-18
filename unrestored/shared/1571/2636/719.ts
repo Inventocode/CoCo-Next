@@ -468,9 +468,9 @@ var n
               }
             }
             var i
-            var /* [auto-meaningful-name] */_e$toString = e.toString
-            if (k(_e$toString)) {
-              if (!E(i = _e$toString.call(e))) {
+            var /* [auto-meaningful-name] */e$toString1 = e.toString
+            if (k(e$toString1)) {
+              if (!E(i = e$toString1.call(e))) {
                 return i
               }
             }

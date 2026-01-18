@@ -14,10 +14,10 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_348 from "./348"
-import /* [auto-meaningful-name] */_$_ from "./348"
-var zL = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_3481 from "./348"
+var zL = React1.memo(function (e) {
   var t = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var r = function () {
@@ -163,7 +163,7 @@ var zL = _React.memo(function (e) {
   return React.createElement($_13_index.B, {
     onChange: r,
     accept: ".xlsx, .xls, .csv",
-    className: _$_.uploadButton
+    className: $_3481.uploadButton
   }, React.createElement($_13_index.j, {
     type: "icon-add"
   }), React.createElement("span", null, $_710_index$a$formatMessage({

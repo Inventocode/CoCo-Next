@@ -35,9 +35,9 @@ function ot(e) {
   if (nt(e.path)) {
     (function (e) {
       var t = e.op
-      var /* [auto-meaningful-name] */_e$path = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = t.i
-      var o = _e$path[1]
+      var o = e$path1[1]
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.kf([r], o))
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Zj())
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
@@ -48,10 +48,10 @@ function ot(e) {
     (function (e) {
       var t
       var /* [auto-meaningful-name] */t$soundFileList
-      var /* [auto-meaningful-name] */_e$path2 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var o = e.op
-      var i = _e$path2[1]
-      var a = _e$path2[2]
+      var i = e$path1[1]
+      var a = e$path1[2]
       var s = o.i
       var c = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t || null === (t$soundFileList = t.soundFileList) || undefined === t$soundFileList ? undefined : t$soundFileList[i]
       if (c) {
@@ -170,9 +170,9 @@ function ft(e) {
   if (dt(e.path)) {
     (function (e) {
       var t = e.op
-      var /* [auto-meaningful-name] */_e$path3 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var r = t.i
-      var o = _e$path3[1]
+      var o = e$path1[1]
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.df([r], o))
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Zj())
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.Uj())
@@ -183,10 +183,10 @@ function ft(e) {
     (function (e) {
       var t
       var /* [auto-meaningful-name] */t$iconFileList
-      var /* [auto-meaningful-name] */_e$path4 = e.path
+      var /* [auto-meaningful-name] */e$path1 = e.path
       var o = e.op
-      var i = _e$path4[1]
-      var a = _e$path4[2]
+      var i = e$path1[1]
+      var a = e$path1[2]
       var s = o.i
       var c = null === (t = $_24_index.a.getPreviousDoc()) || undefined === t || null === (t$iconFileList = t.iconFileList) || undefined === t$iconFileList ? undefined : t$iconFileList[i]
       if (c) {

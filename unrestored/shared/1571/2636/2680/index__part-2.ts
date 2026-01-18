@@ -65,12 +65,12 @@ var T = function (e) {
             return void e$close()
           }
           !function (n) {
-            var /* [auto-meaningful-name] */_e$close = e.close
+            var /* [auto-meaningful-name] */e$close1 = e.close
             if (S(n)) {
               c(true)
               n.then(function () {
                 c(false)
-                _e$close.apply(undefined, arguments)
+                e$close1.apply(undefined, arguments)
                 t.current = false
               }, function (e) {
                 console.error(e)

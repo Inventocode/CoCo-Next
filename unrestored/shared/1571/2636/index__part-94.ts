@@ -16,12 +16,12 @@ import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1516 from "./1516"
-import /* [auto-meaningful-name] */_$_ from "./1516"
+import /* [auto-meaningful-name] */$_15161 from "./1516"
 var pb = []
 var fb = {}
-var hb = _React.memo(function (e) {
+var hb = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$value = e.value
@@ -31,27 +31,27 @@ var hb = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$modeList = e.modeList
   var /* [auto-meaningful-name] */e$params = e.params
   var l = undefined === e$params ? pb : e$params
-  var u = _React.useState(e$value || e$defaultValue)
+  var u = React1.useState(e$value || e$defaultValue)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = _React.useRef(null)
-  var _ = _React.useState(fb)
+  var g = React1.useRef(null)
+  var _ = React1.useState(fb)
   var v = $_10_index.a(_, 2)
   var b = v[0]
   var y = v[1]
-  var E = _React.useState(null)
+  var E = React1.useState(null)
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
-  var T = _React.useMemo(function () {
+  var T = React1.useMemo(function () {
     var e = e$modeList.filter(function (e) {
       return e.value === e$value
     })[0]
     y((null === e || undefined === e ? undefined : e.style) || fb)
     return null === e || undefined === e ? undefined : e.renderContent
   }, [e$value, e$modeList])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (undefined !== e$value) {
       m(e$value)
     }
@@ -59,15 +59,15 @@ var hb = _React.memo(function (e) {
       C(T.apply(undefined, $_25_index.a(l)))
     }
   }, [e$value, w, e$modeList, l, T])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     C(T.apply(undefined, $_25_index.a(l)))
   }, [T, l])
-  var A = _React.useCallback(function (e) {
+  var A = React1.useCallback(function (e) {
     if (undefined === e$value) {
       m(e)
     }
   }, [e$value])
-  var I = _React.useCallback(function (e) {
+  var I = React1.useCallback(function (e) {
     if (e) {
       C(e)
     }
@@ -91,7 +91,7 @@ var hb = _React.memo(function (e) {
     placement: "rightTop",
     trigger: "click",
     content: React.createElement("div", {
-      className: _$_.option
+      className: $_15161.option
     }, e$children)
   }, React.createElement("div", {
     className: N("coco-select-selector")
@@ -99,12 +99,12 @@ var hb = _React.memo(function (e) {
     className: N("coco-select-label")
   }, w)))))
 })
-var mb = _React.memo(function (e) {
+var mb = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$width = e.width
-  var i = _React.useState(false)
+  var i = React1.useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]

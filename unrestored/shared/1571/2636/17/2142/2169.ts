@@ -116,12 +116,12 @@ var l = function () {
   e.prototype.toolbox_click_effect = function () {}
   e.prototype.block_flash_effect = function (e, t) {
     var /* [auto-meaningful-name] */e$svg_path
-    var /* [auto-meaningful-name] */_e$svg_path
-    var /* [auto-meaningful-name] */_e$svg_path2
-    var /* [auto-meaningful-name] */_e$svg_path3
-    var /* [auto-meaningful-name] */_e$svg_path4
-    var /* [auto-meaningful-name] */_e$svg_path5
-    var /* [auto-meaningful-name] */_e$svg_path6
+    var /* [auto-meaningful-name] */e$svg_path1
+    var /* [auto-meaningful-name] */e$svg_path2
+    var /* [auto-meaningful-name] */e$svg_path3
+    var /* [auto-meaningful-name] */e$svg_path4
+    var /* [auto-meaningful-name] */e$svg_path5
+    var /* [auto-meaningful-name] */e$svg_path6
     if (t) {
       var d = e.get_colour()
       var h = (0, c.rgb_to_hsv)(d.r, d.g, d.b)
@@ -158,11 +158,11 @@ var l = function () {
         }
       }
       if (e.is_output_block() && e.parent_block) {
-        if (!(null === (_e$svg_path = e.svg_path) || undefined === _e$svg_path)) {
-          _e$svg_path.setAttribute("stroke", "#FFFFFF")
+        if (!(null === (e$svg_path1 = e.svg_path) || undefined === e$svg_path1)) {
+          e$svg_path1.setAttribute("stroke", "#FFFFFF")
         }
-        if (!(null === (_e$svg_path2 = e.svg_path) || undefined === _e$svg_path2)) {
-          _e$svg_path2.setAttribute("stroke-width", "2px")
+        if (!(null === (e$svg_path2 = e.svg_path) || undefined === e$svg_path2)) {
+          e$svg_path2.setAttribute("stroke-width", "2px")
         }
       } else {
         e.get_svg_root().setAttribute("filter", "url(#" + u.FILTER.FOCUSED + ")")
@@ -173,13 +173,13 @@ var l = function () {
     if (m) {
       e.svg_group.removeChild(m)
     }
-    if (!(null === (_e$svg_path3 = e.svg_path) || undefined === _e$svg_path3)) {
-      _e$svg_path3.removeAttribute("filter")
+    if (!(null === (e$svg_path3 = e.svg_path) || undefined === e$svg_path3)) {
+      e$svg_path3.removeAttribute("filter")
     }
     var y
     var b = e.get_colour().toString()
-    if (!(null === (_e$svg_path4 = e.svg_path) || undefined === _e$svg_path4)) {
-      _e$svg_path4.setAttribute("fill", b)
+    if (!(null === (e$svg_path4 = e.svg_path) || undefined === e$svg_path4)) {
+      e$svg_path4.setAttribute("fill", b)
     }
     if (e.is_starting_block()) {
       if (y = e.get_svg_root().querySelector(".blockly_head_icon_wrapper")) {
@@ -187,11 +187,11 @@ var l = function () {
         y.removeAttribute("filter")
       }
     }
-    if (!(null === (_e$svg_path5 = e.svg_path) || undefined === _e$svg_path5)) {
-      _e$svg_path5.setAttribute("stroke", e.get_border_colour().toString())
+    if (!(null === (e$svg_path5 = e.svg_path) || undefined === e$svg_path5)) {
+      e$svg_path5.setAttribute("stroke", e.get_border_colour().toString())
     }
-    if (!(null === (_e$svg_path6 = e.svg_path) || undefined === _e$svg_path6)) {
-      _e$svg_path6.setAttribute("stroke-width", e.get_stroke_width())
+    if (!(null === (e$svg_path6 = e.svg_path) || undefined === e$svg_path6)) {
+      e$svg_path6.setAttribute("stroke-width", e.get_stroke_width())
     }
   };
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.utils)], e.prototype, "utils", undefined);

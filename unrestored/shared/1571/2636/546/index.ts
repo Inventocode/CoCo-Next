@@ -9,9 +9,9 @@
 import * as r from "../6"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as l from "../8"
 import u from "../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
@@ -21,7 +21,7 @@ import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_322 from "../322"
 import * as /* [auto-meaningful-name] */$$_83 from "../83"
 import * as /* [auto-meaningful-name] */$_380 from "./380"
-import /* [auto-meaningful-name] */_$_ from "./380"
+import /* [auto-meaningful-name] */$_3801 from "./380"
 var _a
 _a = function (e) {
   var /* [auto-meaningful-name] */e$position = e.position
@@ -46,7 +46,7 @@ _a = function (e) {
   var x = React.useMemo(function () {
     var e = function (e, t) {
       var n
-      var r = _Color(t).toString()
+      var r = Color1(t).toString()
       return (n = {}, $$_11.a(n, $$_83.b.CONTAINED_TEXT, {
         default: {
           backgroundColor: r,
@@ -98,9 +98,9 @@ _a = function (e) {
   var /* [auto-meaningful-name] */D$fontSize = D.fontSize
   var /* [auto-meaningful-name] */D$minWidth = D.minWidth
   var /* [auto-meaningful-name] */D$maxWidth = D.maxWidth
-  return _React.createElement("button", {
+  return React1.createElement("button", {
     id: s,
-    className: u($$_90.b, _$_.buttonWidget, $$_11.a({}, _$_.hide, !e$visible)),
+    className: u($$_90.b, $_3801.buttonWidget, $$_11.a({}, $_3801.hide, !e$visible)),
     "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d,
     "data-lock-height": true,
@@ -132,12 +132,12 @@ _a = function (e) {
       fontSize: D$fontSize,
       opacity: undefined === e$opacity ? undefined : e$opacity / 100
     }, x)
-  }, k ? _React.createElement($$_322.a, {
+  }, k ? React1.createElement($$_322.a, {
     icon: e$iconFile || $$_33.fb(e$attributes$iconId)
-  }) : _React.createElement("div", {
-    className: u(_$_.inputWrapper)
-  }, _React.createElement("div", {
-    className: _$_.text,
+  }) : React1.createElement("div", {
+    className: u($_3801.inputWrapper)
+  }, React1.createElement("div", {
+    className: $_3801.text,
     ref: R
   }, e$attributes$text)))
 }

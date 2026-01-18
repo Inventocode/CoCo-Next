@@ -246,8 +246,8 @@ var _ = function () {
     for (I = T; I < p; I++) {
       h[I].codewords[A] = e[S++]
     }
-    var /* [auto-meaningful-name] */_h0$codewords$length = h[0].codewords.length
-    for (y = A; y < _h0$codewords$length; y++) {
+    var /* [auto-meaningful-name] */h0$codewords$length1 = h[0].codewords.length
+    for (y = A; y < h0$codewords$length1; y++) {
       for (I = 0; I < p; I++) {
         var j = I < T ? y : y + 1
         h[I].codewords[j] = e[S++]

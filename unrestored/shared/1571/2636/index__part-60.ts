@@ -24,11 +24,11 @@ import * as k from "./11"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as th from "./45"
 import nh from "./45"
 var rh = {}
-var oh = _React.memo(function (e) {
+var oh = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -380,9 +380,9 @@ var ih = {
         },
         optOnchange: function (e) {
           var /* [auto-meaningful-name] */this$source_block
-          var /* [auto-meaningful-name] */_this$source_block
+          var /* [auto-meaningful-name] */this$source_block1
           var r = null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field("SLOT_WIDGET")
-          var o = null === (_this$source_block = this.source_block) || undefined === _this$source_block ? undefined : _this$source_block.get_field("ATTRIBUTE")
+          var o = null === (this$source_block1 = this.source_block) || undefined === this$source_block1 ? undefined : this$source_block1.get_field("ATTRIBUTE")
           if (!(null === r || undefined === r)) {
             r.set_value(rp.c)
           }
@@ -415,9 +415,9 @@ var ih = {
         custom: true,
         options: function () {
           var /* [auto-meaningful-name] */this$source_block
-          var /* [auto-meaningful-name] */_this$source_block2
+          var /* [auto-meaningful-name] */this$source_block1
           var n = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.get_field_value("WIDGET_ID")) || $_228_index.a()
-          var i = null === (_this$source_block2 = this.source_block) || undefined === _this$source_block2 ? undefined : _this$source_block2.get_field_value("SLOT_WIDGET")
+          var i = null === (this$source_block1 = this.source_block) || undefined === this$source_block1 ? undefined : this$source_block1.get_field_value("SLOT_WIDGET")
           var a = Jd.Cb(n)
           var s = []
           if (a && i) {

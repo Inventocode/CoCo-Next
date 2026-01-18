@@ -15,11 +15,11 @@ import * as /* [auto-meaningful-name] */$_740_index from "./740/index"
 import * as /* [auto-meaningful-name] */$_325 from "./325"
 import /* [auto-meaningful-name] */$$_$$_50_index from "../../50/index"
 import /* [auto-meaningful-name] */$_101_index from "./101/index"
-import * as /* [auto-meaningful-name] */_$_101_index from "./101/index"
+import * as /* [auto-meaningful-name] */$_101_index1 from "./101/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_226 from "../226"
-import /* [auto-meaningful-name] */_$$_ from "../226"
+import /* [auto-meaningful-name] */$$_2261 from "../226"
 var kn = function (e) {
   var t = 0
   var n = 0
@@ -33,7 +33,7 @@ var kn = function (e) {
   return t === n && e
 }
 var Sn = function (e, t) {
-  var n = e.hex ? _$$_(e.hex) : _$$_(e)
+  var n = e.hex ? $$_2261(e.hex) : $$_2261(e)
   var r = n.toHsl()
   var i = n.toHsv()
   var o = n.toRgb()
@@ -56,7 +56,7 @@ var Tn = function (e) {
     return true
   }
   var t = "#" === String(e).charAt(0) ? 1 : 0
-  return e.length !== 4 + t && e.length < 7 + t && _$$_(e).isValid()
+  return e.length !== 4 + t && e.length < 7 + t && $$_2261(e).isValid()
 }
 var Bn = function (e) {
   if (!e) {
@@ -67,7 +67,7 @@ var Bn = function (e) {
 }
 var Dn = function (e, t) {
   var n = e.replace("°", "")
-  return _$$_(t + " (" + n + ")")._ok
+  return $$_2261(t + " (" + n + ")")._ok
 }
 var In = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
@@ -182,7 +182,7 @@ var Fn = function (e) {
       }
     ])
     return n
-  }(_React.PureComponent || _React.Component)
+  }(React1.PureComponent || React1.Component)
   t.propTypes = In({}, e.propTypes)
   t.defaultProps = In({}, e.defaultProps, {
     color: {
@@ -682,7 +682,7 @@ if (pr && "[object DataView]" != Er(new pr(new ArrayBuffer(1))) || Ae && "[objec
   }
 }
 var xr = Er
-var /* [auto-meaningful-name] */_Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
+var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty1 = Object.prototype.hasOwnProperty
 var Or = function (e, t, n, r, i, o) {
   var a = st(e)
   var s = st(t)
@@ -705,8 +705,8 @@ var Or = function (e, t, n, r, i, o) {
     return a || Et(e) ? Jn(e, t, n, r, i, o) : rr(e, t, c, n, r, i, o)
   }
   if (!(1 & n)) {
-    var h = l && _Object$prototype$hasOwnProperty.call(e, "__wrapped__")
-    var p = f && _Object$prototype$hasOwnProperty.call(t, "__wrapped__")
+    var h = l && Object$prototype$hasOwnProperty1.call(e, "__wrapped__")
+    var p = f && Object$prototype$hasOwnProperty1.call(t, "__wrapped__")
     if (h || p) {
       var _ = h ? e.value() : e
       var A = p ? t.value() : t
@@ -1403,7 +1403,7 @@ Ci.defaultProps = {
   circleSize: 28,
   circleSpacing: 14
 }
-var Oi = _$_101_index.handleHover(Ci)
+var Oi = $_101_index1.handleHover(Ci)
 var ki = function (e) {
   var /* [auto-meaningful-name] */e$width = e.width
   var /* [auto-meaningful-name] */e$onChange = e.onChange

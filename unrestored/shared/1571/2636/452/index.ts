@@ -9,14 +9,14 @@
 export { h as a }
 export { m as b }
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_42_index from "../42/index"
 import * as /* [auto-meaningful-name] */$$_64 from "../64"
 import * as /* [auto-meaningful-name] */$$_206 from "../206"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
 import * as /* [auto-meaningful-name] */$_677 from "./677"
-import /* [auto-meaningful-name] */_$_ from "./677"
+import /* [auto-meaningful-name] */$_6771 from "./677"
 import * as /* [auto-meaningful-name] */$$_75 from "../75"
 function f(e) {
   var t = e.id
@@ -39,9 +39,9 @@ function f(e) {
   if (!(g || !e$backgroundImage.includes("://") && !e$backgroundImage.includes("data:image/"))) {
     g = e$backgroundImage
   }
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     id: t,
-    className: _$_.screenView,
+    className: $_6771.screenView,
     "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
     style: {
@@ -93,7 +93,7 @@ function m(e) {
   var /* [auto-meaningful-name] */e$backgroundColor = e.backgroundColor
   var /* [auto-meaningful-name] */e$backgroundImage = e.backgroundImage
   var /* [auto-meaningful-name] */e$backgroundImageResizeMode = e.backgroundImageResizeMode
-  return _React.createElement(f, {
+  return React1.createElement(f, {
     id: t,
     widgetIds: e$widgetIds,
     position: e$position,

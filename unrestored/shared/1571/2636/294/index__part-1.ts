@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_47 from "../47"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as c from "../8"
 import l from "../8"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"

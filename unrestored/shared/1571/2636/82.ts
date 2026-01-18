@@ -21,7 +21,7 @@ export { h as j }
 export { m as i }
 export { SansSerif as b }
 export { _32383E as e }
-export { _32383E2 as d }
+export { _32383E1 as d }
 export { Https__static$bcmcdn$com_coco_image_defaultButtonBackground$png as f }
 export { y as c }
 var /* [auto-meaningful-name] */IconWidgetButton = "icon-widget-button"
@@ -39,7 +39,7 @@ var h = 20
 var m = 12
 var /* [auto-meaningful-name] */SansSerif = "sans-serif"
 var /* [auto-meaningful-name] */_32383E = "#32383E"
-var /* [auto-meaningful-name] */_32383E2 = "#32383E"
+var /* [auto-meaningful-name] */_32383E1 = "#32383E"
 var /* [auto-meaningful-name] */Https__static$bcmcdn$com_coco_image_defaultButtonBackground$png = "https://static.bcmcdn.com/coco/image/default-button-background.png"
 var y = {
   id: "button_widget_default_icon",

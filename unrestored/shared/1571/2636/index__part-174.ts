@@ -7,7 +7,7 @@
 "use strict"
 
 import * as ng from "./64"
-import * as /* [auto-meaningful-name] */$_417_index from "./417/index"
+import * as /* [auto-meaningful-name] */AgGridReact from "ag-grid-react"
 import "./653"
 import "./654"
 var EI = function (e, t, n) {

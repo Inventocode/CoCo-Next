@@ -19,9 +19,9 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1040 from "./1040"
-import /* [auto-meaningful-name] */_$_ from "./1040"
+import /* [auto-meaningful-name] */$_10401 from "./1040"
 var eT = new Map()
 function tT(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] && arguments[2]
@@ -43,34 +43,34 @@ function tT(e, t) {
     }
   }
 }
-var nT = _React.memo(function () {
+var nT = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.block.get("editArrayDialog")
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$array = e.array
   var /* [auto-meaningful-name] */e$arrayType = e.arrayType
-  var o = _React.useState([])
+  var o = React1.useState([])
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = _React.useState(0)
+  var c = React1.useState(0)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useRef(1)
+  var p = React1.useRef(1)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var g = _React.useRef(null)
-  var v = _React.useRef(null)
+  var g = React1.useRef(null)
+  var v = React1.useRef(null)
   var b = $_16_index.d()
   var y = $_238.d()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$array) {
       s($_25_index.a(e$array.defaultValue))
       d(e$array.defaultValue.length)
     }
   }, [e$array])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (v.current) {
       e = tT(v.current.button, function (e, t) {
@@ -82,7 +82,7 @@ var nT = _React.memo(function () {
     }
     return e && e()
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */g$current
     if (e$visible) {
       if (!(null === (g$current = g.current) || undefined === g$current)) {
@@ -94,7 +94,7 @@ var nT = _React.memo(function () {
   var E = function (e) {
     d(e)
   }
-  var O = _React.useCallback(function (e) {
+  var O = React1.useCallback(function (e) {
     var t = Number(e) - a.length
     if (t > 0) {
       for (var n = 0; n < t; n++) {
@@ -121,7 +121,7 @@ var nT = _React.memo(function () {
       }, 0)
     }
   }
-  _React.useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     if (p.current) {
       var e = document.querySelectorAll(".".concat(qC.list, " input"))[u - 1]
       if (!(null === e || undefined === e)) {
@@ -129,20 +129,20 @@ var nT = _React.memo(function () {
       }
     }
   }, [u])
-  var C = _React.useCallback(function (e) {
+  var C = React1.useCallback(function (e) {
     a.splice(e, 1)
     s($_25_index.a(a))
     d(a.length)
     p.current = 0
   }, [a])
-  var T = _React.useCallback(function (e, t) {
+  var T = React1.useCallback(function (e, t) {
     a.splice(e, 1, t)
     s($_25_index.a(a))
   }, [a])
-  var A = _React.useCallback(function () {
+  var A = React1.useCallback(function () {
     b($$_$$_$$_$$_src_editor_redux_common_actions.oh())
   }, [b])
-  var j = _React.useCallback(function () {
+  var j = React1.useCallback(function () {
     p.current = 0
     if (e$array && y) {
       var e = []
@@ -158,7 +158,7 @@ var nT = _React.memo(function () {
     }
     A()
   }, [e$array, y, A, a, b, e$arrayType])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     function e(e) {
       var /* [auto-meaningful-name] */e$clipboardData
       var n = null === (e$clipboardData = e.clipboardData) || undefined === e$clipboardData ? undefined : e$clipboardData.getData("text")
@@ -249,7 +249,7 @@ var nT = _React.memo(function () {
     className: qC.emptyContent
   }, React.createElement("img", {
     className: qC.image,
-    src: _$_,
+    src: $_10401,
     alt: ""
   }), React.createElement("div", {
     className: qC.label

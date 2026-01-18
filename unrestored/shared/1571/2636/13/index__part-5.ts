@@ -20,13 +20,13 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$_797_index from "./797/index"
 import * as /* [auto-meaningful-name] */$_253_index from "./253/index"
 import * as /* [auto-meaningful-name] */$_226 from "./226"
-import /* [auto-meaningful-name] */_$_ from "./226"
+import /* [auto-meaningful-name] */$_2261 from "./226"
 !function (e) {
   e.HEX = "HEX"
   e.HSVA = "HSVA"
@@ -34,20 +34,20 @@ import /* [auto-meaningful-name] */_$_ from "./226"
 }(P || (P = {}))
 var H
 var V = [P.HEX, P.HSVA, P.RGBA]
-var z = _React.memo(function (e) {
+var z = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var o = _React.useState(P.HEX)
+  var o = React1.useState(P.HEX)
   var i = $$_10_index.a(o, 2)
   var c = i[0]
   var l = i[1]
-  var u = _React.useMemo(function () {
-    var e = _$_(e$color).toHex8()
-    var n = _$_(e$color).toHsv()
+  var u = React1.useMemo(function () {
+    var e = $_2261(e$color).toHex8()
+    var n = $_2261(e$color).toHsv()
     n.a = Math.round(100 * n.a)
-    var r = _$_(e$color).toHsl()
+    var r = $_2261(e$color).toHsl()
     r.a = Math.round(100 * r.a)
-    var o = _$_(e$color).toRgb()
+    var o = $_2261(e$color).toRgb()
     o.a = Math.round(100 * o.a)
     return {
       hex: "#".concat(e),
@@ -63,9 +63,9 @@ var z = _React.memo(function (e) {
   var g = function (e) {
     var t
     if (e.HEX) {
-      if (_$_(e.HEX).isValid()) {
+      if ($_2261(e.HEX).isValid()) {
         return void e$onChange({
-          hex: _$_(e.HEX).toHexString(),
+          hex: $_2261(e.HEX).toHexString(),
           hsl: u$hsl,
           rgb: u$rgb
         })
@@ -244,7 +244,7 @@ var Y = {
     }
   }
 }
-var K = _React.memo(function (e) {
+var K = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$handleColorChange = e.handleColorChange
   var r = function (e) {
@@ -270,7 +270,7 @@ var K = _React.memo(function (e) {
   }))
 })
 var q = []
-var X = _React.memo(_React.forwardRef(function (e, t) {
+var X = React1.memo(React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$onClose = e.onClose
@@ -278,16 +278,16 @@ var X = _React.memo(_React.forwardRef(function (e, t) {
   var d = undefined === e$defaultValue ? "#000000ff" : e$defaultValue
   var /* [auto-meaningful-name] */e$style = e.style
   var f = undefined === e$style ? {} : e$style
-  var h = _React.useRef(null)
-  var m = _React.useRef(null)
-  var g = _React.useRef(false)
+  var h = React1.useRef(null)
+  var m = React1.useRef(null)
+  var g = React1.useRef(false)
   var _ = $$_16_index.d()
   var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
-  var b = _React.useState(e$value || d)
+  var b = React1.useState(e$value || d)
   var y = $$_10_index.a(b, 2)
   var O = y[0]
   var w = y[1]
-  var C = _React.useRef(O)
+  var C = React1.useRef(O)
   if (0 === q.length) {
     q.push(O)
   }
@@ -303,12 +303,12 @@ var X = _React.memo(_React.forwardRef(function (e, t) {
   var R = function (e) {
     T(e)
   }
-  _React.useImperativeHandle(t, function () {
+  React1.useImperativeHandle(t, function () {
     return {
       setRGBA: w
     }
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */e$target = e.target
       var /* [auto-meaningful-name] */h$current = h.current
@@ -353,10 +353,10 @@ var X = _React.memo(_React.forwardRef(function (e, t) {
     })
     return t
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     C.current = O
   }, [O])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = function () {
       g.current = true
       document.addEventListener("mouseup", function () {
@@ -370,12 +370,12 @@ var X = _React.memo(_React.forwardRef(function (e, t) {
       return document.removeEventListener("mousedown", e)
     }
   })
-  var L = _React.useCallback(function () {
+  var L = React1.useCallback(function () {
     if (e$onChange) {
       e$onChange(C.current, g.current)
     }
   }, [e$onChange])
-  var P = _React.useCallback(function (e) {
+  var P = React1.useCallback(function (e) {
     if (false === e && e$onChange) {
       e$onChange(C.current, g.current)
     }

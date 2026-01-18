@@ -16,7 +16,7 @@ export { DefaultImageWidgetTitle as b }
 export { Image_jpegImage_pngImage_svgXmlImage_gifImage_bmp as f }
 export { Image_svgXml as c }
 export { Image_jpegImage_pngImage_bmp as d }
-export { _Image_jpegImage_pngImage_bmp as e }
+export { Image_jpegImage_pngImage_bmp1 as e }
 export { m as k }
 export { g as j }
 import * as /* [auto-meaningful-name] */$_13_344 from "./13/344"
@@ -30,7 +30,7 @@ var /* [auto-meaningful-name] */DefaultImageWidgetTitle = "defaultImageWidgetTit
 var /* [auto-meaningful-name] */Image_jpegImage_pngImage_svgXmlImage_gifImage_bmp = "image/jpeg, image/png, image/svg+xml, image/gif, image/bmp"
 var /* [auto-meaningful-name] */Image_svgXml = "image/svg+xml"
 var /* [auto-meaningful-name] */Image_jpegImage_pngImage_bmp = "image/jpeg, image/png, image/bmp"
-var /* [auto-meaningful-name] */_Image_jpegImage_pngImage_bmp = "image/jpeg, image/png, image/bmp"
+var /* [auto-meaningful-name] */Image_jpegImage_pngImage_bmp1 = "image/jpeg, image/png, image/bmp"
 var m = false
 var g = false
 export default IconWidgetImage

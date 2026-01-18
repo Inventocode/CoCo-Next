@@ -478,9 +478,9 @@ var fe = function e(t) {
         n.updateValue(e$namePath, e$value)
         break
       case "validateField":
-        var /* [auto-meaningful-name] */_e$namePath = e.namePath,
+        var /* [auto-meaningful-name] */e$namePath1 = e.namePath,
           /* [auto-meaningful-name] */e$triggerName = e.triggerName
-        n.validateFields([_e$namePath], {
+        n.validateFields([e$namePath1], {
           triggerName: e$triggerName
         })
     }

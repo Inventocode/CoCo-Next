@@ -147,7 +147,7 @@ function _fromTokenizer3() {
     var /* [auto-meaningful-name] */e$sent
     var a
     var s
-    var /* [auto-meaningful-name] */_e$sent
+    var /* [auto-meaningful-name] */e$sent1
     var u
     var l
     var f
@@ -155,15 +155,15 @@ function _fromTokenizer3() {
     var h
     var p
     var _
-    var /* [auto-meaningful-name] */_e$sent2
-    var /* [auto-meaningful-name] */_e$sent3
+    var /* [auto-meaningful-name] */e$sent2
+    var /* [auto-meaningful-name] */e$sent3
     var v
-    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */e$sent4
     var y
-    var /* [auto-meaningful-name] */_e$sent5
+    var /* [auto-meaningful-name] */e$sent5
     var w
     var E
-    var /* [auto-meaningful-name] */_e$sent6
+    var /* [auto-meaningful-name] */e$sent6
     var C
     var O
     return _regeneratorRuntime.wrap(function (e) {
@@ -497,8 +497,8 @@ function _fromTokenizer3() {
             e.next = 90
             return t.readToken(new Token.StringType(a.compressedSize, "utf-8"))
           case 90:
-            _e$sent = e.sent
-            e.t1 = _e$sent
+            e$sent1 = e.sent
+            e.t1 = e$sent1
             e.next = "application/epub+zip" === e.t1 ? 94 : "application/vnd.oasis.opendocument.text" === e.t1 ? 95 : "application/vnd.oasis.opendocument.spreadsheet" === e.t1 ? 96 : "application/vnd.oasis.opendocument.presentation" === e.t1 ? 97 : 98
             break
           case 94:
@@ -972,7 +972,7 @@ function _fromTokenizer3() {
             }
             h = function () {
               var e = _asyncToGenerator(_regeneratorRuntime.mark(function e() {
-                var /* [auto-meaningful-name] */_e$sent7
+                var /* [auto-meaningful-name] */e$sent7
                 var r
                 var i
                 var o
@@ -983,7 +983,7 @@ function _fromTokenizer3() {
                         e.next = 2
                         return t.peekNumber(Token.UINT8)
                       case 2:
-                        for (_e$sent7 = e.sent, r = 128, i = 0; 0 === (_e$sent7 & r) && 0 !== r;) {
+                        for (e$sent7 = e.sent, r = 128, i = 0; 0 === (e$sent7 & r) && 0 !== r;) {
                           ++i
                           r >>= 1
                         }
@@ -1005,8 +1005,8 @@ function _fromTokenizer3() {
             }()
             p = function () {
               var e = _asyncToGenerator(_regeneratorRuntime.mark(function e() {
-                var /* [auto-meaningful-name] */_e$sent8
-                var /* [auto-meaningful-name] */_e$sent9
+                var /* [auto-meaningful-name] */e$sent7
+                var /* [auto-meaningful-name] */e$sent8
                 var r
                 return _regeneratorRuntime.wrap(function (e) {
                   for (;;) {
@@ -1015,15 +1015,15 @@ function _fromTokenizer3() {
                         e.next = 2
                         return h()
                       case 2:
-                        _e$sent8 = e.sent
+                        e$sent7 = e.sent
                         e.next = 5
                         return h()
                       case 5:
-                        (_e$sent9 = e.sent)[0] ^= 128 >> _e$sent9.length - 1
-                        r = Math.min(6, _e$sent9.length)
+                        (e$sent8 = e.sent)[0] ^= 128 >> e$sent8.length - 1
+                        r = Math.min(6, e$sent8.length)
                         return e.abrupt("return", {
-                          id: _e$sent8.readUIntBE(0, _e$sent8.length),
-                          len: _e$sent9.readUIntBE(_e$sent9.length - r, r)
+                          id: e$sent7.readUIntBE(0, e$sent7.length),
+                          len: e$sent8.readUIntBE(e$sent8.length - r, r)
                         })
                       case 9:
                       case "end":
@@ -1038,7 +1038,7 @@ function _fromTokenizer3() {
             }()
             _ = function () {
               var e = _asyncToGenerator(_regeneratorRuntime.mark(function e(n, r) {
-                var /* [auto-meaningful-name] */_e$sent0
+                var /* [auto-meaningful-name] */e$sent7
                 return _regeneratorRuntime.wrap(function (e) {
                   for (;;) {
                     switch (e.prev = e.next) {
@@ -1050,14 +1050,14 @@ function _fromTokenizer3() {
                         e.next = 3
                         return p()
                       case 3:
-                        if (17026 !== (_e$sent0 = e.sent).id) {
+                        if (17026 !== (e$sent7 = e.sent).id) {
                           e.next = 6
                           break
                         }
-                        return e.abrupt("return", t.readToken(new Token.StringType(_e$sent0.len, "utf-8")))
+                        return e.abrupt("return", t.readToken(new Token.StringType(e$sent7.len, "utf-8")))
                       case 6:
                         e.next = 8
-                        return t.ignore(_e$sent0.len)
+                        return t.ignore(e$sent7.len)
                       case 8:
                         --r
                         e.next = 0
@@ -1076,12 +1076,12 @@ function _fromTokenizer3() {
             e.next = 220
             return p()
           case 220:
-            _e$sent2 = e.sent
+            e$sent2 = e.sent
             e.next = 223
-            return _(1, _e$sent2.len)
+            return _(1, e$sent2.len)
           case 223:
-            _e$sent3 = e.sent
-            e.t4 = _e$sent3
+            e$sent3 = e.sent
+            e.t4 = e$sent3
             e.next = "webm" === e.t4 ? 227 : "matroska" === e.t4 ? 228 : 229
             break
           case 227:
@@ -1429,13 +1429,13 @@ function _fromTokenizer3() {
             e.next = 297
             return v()
           case 297:
-            if (!((_e$sent4 = e.sent).length < 0)) {
+            if (!((e$sent4 = e.sent).length < 0)) {
               e.next = 300
               break
             }
             return e.abrupt("return")
           case 300:
-            e.t5 = _e$sent4.type
+            e.t5 = e$sent4.type
             e.next = "IDAT" === e.t5 ? 303 : "acTL" === e.t5 ? 304 : 305
             break
           case 303:
@@ -1450,7 +1450,7 @@ function _fromTokenizer3() {
             })
           case 305:
             e.next = 307
-            return t.ignore(_e$sent4.length + 4)
+            return t.ignore(e$sent4.length + 4)
           case 307:
             if (t.position + 8 < t.fileInfo.size) {
               e.next = 295
@@ -1571,7 +1571,7 @@ function _fromTokenizer3() {
             e.next = 328
             return y()
           case 328:
-            if (_e$sent5 = e.sent, w = _e$sent5.size - 24, !_check(_e$sent5.id, [145, 7, 220, 183, 183, 169, 207, 17, 142, 230, 0, 192, 12, 32, 83, 101])) {
+            if (e$sent5 = e.sent, w = e$sent5.size - 24, !_check(e$sent5.id, [145, 7, 220, 183, 183, 169, 207, 17, 142, 230, 0, 192, 12, 32, 83, 101])) {
               e.next = 341
               break
             }
@@ -1652,8 +1652,8 @@ function _fromTokenizer3() {
             e.next = 357
             return t.readToken(new Token.StringType(4, "ascii"))
           case 357:
-            _e$sent6 = e.sent
-            e.t7 = _e$sent6
+            e$sent6 = e.sent
+            e.t7 = e$sent6
             e.next = "jp2 " === e.t7 ? 361 : "jpx " === e.t7 ? 362 : "jpm " === e.t7 ? 363 : "mjp2" === e.t7 ? 364 : 365
             break
           case 361:

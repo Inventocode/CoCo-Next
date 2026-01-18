@@ -21,34 +21,34 @@ import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../..
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_685_360 from "../../../../shared/1571/2636/685/360"
-var Ae = _React.memo(function () {
+var Ae = React1.memo(function () {
   var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
   var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710_index.a().formatMessage
   var n = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = _React.useState(n.sendSmsNumber)
+  var r = React1.useState(n.sendSmsNumber)
   var i = $$_$$_$$_$$_shared_1571_2636_10_index.a(r, 2)
   var o = i[0]
   var a = i[1]
-  var s = _React.useState(n.sendSmsContent)
+  var s = React1.useState(n.sendSmsContent)
   var u = $$_$$_$$_$$_shared_1571_2636_10_index.a(s, 2)
   var l = u[0]
   var d = u[1]
-  var m = _React.useState([])
+  var m = React1.useState([])
   var b = $$_$$_$$_$$_shared_1571_2636_10_index.a(m, 2)
   var g = b[0]
   var v = b[1]
-  var _ = _React.useState(1)
+  var _ = React1.useState(1)
   var y = $$_$$_$$_$$_shared_1571_2636_10_index.a(_, 2)
   var w = y[0]
   var E = y[1]
-  var O = _React.useRef(null)
-  var T = _React.useRef(null)
-  _React.useEffect(function () {
+  var O = React1.useRef(null)
+  var T = React1.useRef(null)
+  React1.useEffect(function () {
     if (n.sendSmsPageVisible) {
       a(n.sendSmsNumber)
       d(n.sendSmsContent)
@@ -142,13 +142,13 @@ var Ae = _React.memo(function () {
     type: "icon-phone-send-sms"
   }))))
 })
-var Se = _React.memo(function () {
+var Se = React1.memo(function () {
   var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
   var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710_index.a().formatMessage
   var n = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
     return t.emulatorPhoneInfo
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (de) {
       clearTimeout(de)
     }
@@ -185,13 +185,13 @@ var Se = _React.memo(function () {
     className: be.smsContent
   }, n.receiveSmsContent))
 })
-var Ie = _React.memo(function () {
+var Ie = React1.memo(function () {
   return React.createElement("div", {
     className: be.screenMask,
     id: "cocoScreenMask"
   })
 })
-var Ce = _React.memo(function () {
+var Ce = React1.memo(function () {
   var t = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
     return t.language
   })

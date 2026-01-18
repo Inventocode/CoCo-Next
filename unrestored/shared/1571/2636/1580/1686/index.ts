@@ -27,15 +27,15 @@ var y = require("./1079")
 var E = require("./838/index")
 var O = require("./948")
 var w = require("../1692/956")
-var /* [auto-meaningful-name] */require$_1093$set = require("./1093").set
+var /* [auto-meaningful-name] */require$_1093_index$set = require("./1093/index").set
 var T = require("./1267/index")
 var S = require("../1692/1268")
 var A = require("./1689")
 var I = require("./1269")
 var j = require("./1690")
-var N = require("./426/index")
+var N = require("./426")
 var R = require("./829")
-var k = require("./246/index")
+var k = require("./246")
 var x = require("./1691")
 var D = require("./758")
 var M = require("./633/index")
@@ -167,7 +167,7 @@ var ne = function (e, t, n) {
   }
 }
 var re = function (e) {
-  require$_1093$set.call(l, function () {
+  require$_1093_index$set.call(l, function () {
     var t
     var /* [auto-meaningful-name] */e$facade = e.facade
     var /* [auto-meaningful-name] */e$value = e.value
@@ -186,7 +186,7 @@ var oe = function (e) {
   return 1 !== e.rejection && !e.parent
 }
 var ie = function (e) {
-  require$_1093$set.call(l, function () {
+  require$_1093_index$set.call(l, function () {
     var /* [auto-meaningful-name] */e$facade = e.facade
     if (D) {
       l$process.emit("rejectionHandled", e$facade)

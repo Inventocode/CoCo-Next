@@ -21,10 +21,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_440 from "./440"
-import /* [auto-meaningful-name] */_$_ from "./440"
-var iT = _React.memo(function () {
+import /* [auto-meaningful-name] */$_4401 from "./440"
+var iT = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.block.get("editObjectDialog")
   })
@@ -36,28 +36,28 @@ var iT = _React.memo(function () {
     return e.project.globalObjectList
   })
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = _React.useRef(null)
+  var s = React1.useRef(null)
   var c = $_238.d()
-  var l = _React.useState(false)
+  var l = React1.useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = _React.useState(0)
+  var m = React1.useState(0)
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = _React.useState(0)
+  var y = React1.useState(0)
   var E = $_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
-  var C = _React.useState([])
+  var C = React1.useState([])
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = _React.useRef(false)
-  var D = _React.useRef(0)
-  var M = _React.useRef(null)
-  _React.useEffect(function () {
+  var R = React1.useRef(false)
+  var D = React1.useRef(0)
+  var M = React1.useRef(null)
+  React1.useEffect(function () {
     if (c && e$visible) {
       var e = c.objectVariables.concat(i).find(function (e) {
         return e.id === o
@@ -84,7 +84,7 @@ var iT = _React.memo(function () {
       }
     })
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       p(false)
       b(0)
@@ -92,7 +92,7 @@ var iT = _React.memo(function () {
       D.current = 0
     }
   }, [e$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (M.current) {
       return tT(M.current.button, function (e, t) {
         var /* [auto-meaningful-name] */M$current
@@ -105,7 +105,7 @@ var iT = _React.memo(function () {
     }
   }, [M.current])
   var P = $_16_index.d()
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       $_26_index.z.unselectCurrentBlock()
     }
@@ -141,10 +141,10 @@ var iT = _React.memo(function () {
       }, 0)
     }
   }
-  var F = _React.useCallback(function () {
+  var F = React1.useCallback(function () {
     P($$_$$_$$_$$_src_editor_redux_common_actions.ph())
   }, [P])
-  var G = _React.useCallback(function () {
+  var G = React1.useCallback(function () {
     if (e$scopeType && o && c) {
       var e = {}
       A.forEach(function (t) {
@@ -177,7 +177,7 @@ var iT = _React.memo(function () {
     }
   }
   return e$variable ? React.createElement($_13_index.f, {
-    className: N(qC.editDialog, _$_.container),
+    className: N(qC.editDialog, $_4401.container),
     visible: e$visible,
     withPortal: true,
     onClose: F
@@ -196,21 +196,21 @@ var iT = _React.memo(function () {
   }, React.createElement($_13_index.j, {
     type: "icon-add"
   })))), React.createElement("div", {
-    className: N(qC.list, _$_.list),
+    className: N(qC.list, $_4401.list),
     ref: s
   }, A.length > 0 ? React.createElement("ul", null, A.map(function (e, t) {
     var n = $_10_index.a(e, 2)
     var r = n[0]
     var o = n[1]
     return React.createElement("li", {
-      className: N(_$_.row, k.a({}, _$_.focus, t === v)),
+      className: N($_4401.row, k.a({}, $_4401.focus, t === v)),
       key: r
     }, React.createElement("div", {
-      className: _$_.keyItem
+      className: $_4401.keyItem
     }, React.createElement("input", {
       type: "text",
       defaultValue: r,
-      className: N(_$_.input, k.a({}, _$_.error, d && v === t)),
+      className: N($_4401.input, k.a({}, $_4401.error, d && v === t)),
       onClick: function () {
         D.current = 1
         b(t)
@@ -244,11 +244,11 @@ var iT = _React.memo(function () {
         W(e, t)
       }
     })), React.createElement("div", {
-      className: _$_.valueItem
+      className: $_4401.valueItem
     }, React.createElement("input", {
       type: "text",
       value: o,
-      className: N(_$_.input),
+      className: N($_4401.input),
       onBlur: function (e) {
         !function (e, t) {
           var /* [auto-meaningful-name] */e$target$value = e.target.value
@@ -276,7 +276,7 @@ var iT = _React.memo(function () {
         j($_25_index.a(A))
       }
     })), React.createElement("span", {
-      className: _$_.close,
+      className: $_4401.close,
       onClick: function () {
         !function (e) {
           A.splice(e, 1)
@@ -297,13 +297,13 @@ var iT = _React.memo(function () {
   }, $_710_index$a$formatMessage({
     id: "variableListEmptyContentLabel"
   })))), React.createElement("div", {
-    className: _$_.footer
+    className: $_4401.footer
   }, React.createElement("p", {
-    className: _$_.tips
+    className: $_4401.tips
   }, d ? $_710_index$a$formatMessage({
     id: "object.keyRepeat"
   }) : ""), React.createElement($_13_index.d, {
-    className: _$_.save,
+    className: $_4401.save,
     type: "primary",
     onClick: G,
     disabled: d

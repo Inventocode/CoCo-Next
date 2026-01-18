@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as i from "../8"
 import a from "../8"
 import "./841"
@@ -18,7 +18,7 @@ var s = function (e) {
   var /* [auto-meaningful-name] */e$subColor = e.subColor
   var /* [auto-meaningful-name] */e$subClassName = e.subClassName
   var /* [auto-meaningful-name] */e$twoTone = e.twoTone
-  var l = _React.createElement("use", {
+  var l = React1.createElement("use", {
     xlinkHref: "#".concat(e$type)
   })
   if (e$twoTone) {
@@ -28,10 +28,10 @@ var s = function (e) {
       d.querySelectorAll("path").forEach(function (e) {
         return u.push(e)
       })
-      l = _React.createElement("svg", {
+      l = React1.createElement("svg", {
         viewBox: d.getAttribute("viewBox") || undefined
       }, u.map(function (e, t) {
-        return _React.createElement("path", {
+        return React1.createElement("path", {
           fill: 0 === t && e$subColor ? e$subColor : undefined,
           className: 0 === t && e$subClassName ? e$subClassName : undefined,
           key: t,
@@ -40,9 +40,9 @@ var s = function (e) {
       }))
     }
   }
-  return _React.createElement("i", {
+  return React1.createElement("i", {
     className: a("coco-iconfont", e$className, e$spinning && "coco-iconfont-spin")
-  }, _React.createElement("svg", {
+  }, React1.createElement("svg", {
     width: "1em",
     height: "1em",
     fill: "currentColor",

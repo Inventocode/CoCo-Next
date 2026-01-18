@@ -16,13 +16,13 @@ import * as k from "./11"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_42_index from "./42/index"
 import * as zf from "./29"
 import Yf from "./29"
 var Kf = [1, 2, 3]
 var qf = {}
-var Xf = _React.memo(function (e) {
+var Xf = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible

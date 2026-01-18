@@ -1,6 +1,4 @@
 const rspack = require("@rspack/core")
-const SWC = require("@swc/types")
-const { merge } = require("webpack-merge")
 
 const common = require("./rspack.common")
 
@@ -11,7 +9,7 @@ const common = require("./rspack.common")
 module.exports = (env) => {
 
     /** @type {rspack.Configuration} */
-    const config = merge(common(env), {
+    const config = common({
         mode: "production",
         output: {
             filename: "static/scripts/[name].[contenthash].js"
@@ -20,53 +18,6 @@ module.exports = (env) => {
         module: {
             rules: [
                 {
-                    test: /\.tsx?$/i,
-                    exclude: [
-                        /[\\\/]node_modules[\\\/]/i,
-                        /[\\\/]unrestored[\\\/]/i,
-                        /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i
-                    ],
-                    loader: "builtin:swc-loader",
-                    options: /** @satisfies {SWC.Config} */({
-                        jsc: {
-                            parser: {
-                                syntax: "typescript",
-                                tsx: true,
-                                decorators: true
-                            },
-                            transform: {
-                                react: {
-                                    runtime: "automatic",
-                                    development: false,
-                                    refresh: false
-                                }
-                            },
-                            target: "esnext",
-                            externalHelpers: true
-                        }
-                    })
-                }, {
-                    test: /[\\\/]src[\\\/]home[\\\/]ui[\\\/].*\.tsx?$/i,
-                    loader: "builtin:swc-loader",
-                    options: /** @satisfies {SWC.Config} */({
-                        jsc: {
-                            parser: {
-                                syntax: "typescript",
-                                tsx: true,
-                                decorators: true
-                            },
-                            transform: {
-                                react: {
-                                    runtime: "automatic",
-                                    development: false,
-                                    refresh: false
-                                }
-                            },
-                            target: "es5",
-                            externalHelpers: true
-                        }
-                    })
-                }, {
                     test: /\.css$/,
                     use: rspack.CssExtractRspackPlugin.loader,
                     enforce: "post",
@@ -112,7 +63,7 @@ module.exports = (env) => {
                 filename: "static/styles/[name].[contenthash].css"
             })
         ]
-    })
+    }, env)
 
     return config
 }

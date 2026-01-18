@@ -20,31 +20,31 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_619 from "./619"
-import /* [auto-meaningful-name] */_$_ from "./619"
+import /* [auto-meaningful-name] */$_6191 from "./619"
 var PI = function (e) {
   var t = $_16_index.e(function (e) {
     return e.project.globalWidgetIds
   })
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = _React.useRef(null)
-  var o = _React.useState(e.gridName)
+  var r = React1.useRef(null)
+  var o = React1.useState(e.gridName)
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useState("")
+  var p = React1.useState("")
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     s(e.gridName)
   }, [e.gridName])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (u && r.current) {
       r.current.focus()
     }
@@ -69,9 +69,9 @@ var PI = function (e) {
     }
   ].concat($_25_index.a(Sg($_710_index$a$formatMessage)))
   return React.createElement("div", null, u ? React.createElement("div", {
-    className: _$_.gridNameEditorContainer
+    className: $_6191.gridNameEditorContainer
   }, React.createElement("input", {
-    className: _$_.gridNameEditor,
+    className: $_6191.gridNameEditor,
     maxLength: Yr.j,
     ref: r,
     defaultValue: a,
@@ -101,9 +101,9 @@ var PI = function (e) {
       e.setDisabled(i)
       if (r.current) {
         if (o) {
-          r.current.classList.add(_$_.invalidGridName)
+          r.current.classList.add($_6191.invalidGridName)
         } else {
-          r.current.classList.remove(_$_.invalidGridName)
+          r.current.classList.remove($_6191.invalidGridName)
         }
       }
     },
@@ -123,9 +123,9 @@ var PI = function (e) {
       }
     }
   }), React.createElement("div", {
-    className: _$_.warningMessage
+    className: $_6191.warningMessage
   }, g)) : React.createElement("div", {
-    className: _$_.gridName
+    className: $_6191.gridName
   }, React.createElement("span", null, a), React.createElement("span", {
     onClick: function () {
       d(true)
@@ -134,7 +134,7 @@ var PI = function (e) {
     type: "icon-edit"
   }))))
 }
-var BI = _React.memo(function () {
+var BI = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.gridDialog
   })
@@ -144,27 +144,27 @@ var BI = _React.memo(function () {
   var /* [auto-meaningful-name] */e$isCreateNewGrid = e.isCreateNewGrid
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var a = $_16_index.d()
-  var s = _React.useState(false)
+  var s = React1.useState(false)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState()
+  var d = React1.useState()
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState("")
+  var v = React1.useState("")
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = _React.useState({})
+  var O = React1.useState({})
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = _React.useState([])
+  var A = React1.useState([])
   var j = $_10_index.a(A, 2)
   var N = j[0]
   var R = j[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       a($$_$$_$$_$$_src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)
@@ -290,7 +290,7 @@ var BI = _React.memo(function () {
   })))
   return React.createElement($_13_index.f, {
     visible: e$visible,
-    className: _$_.dataViewerGrid,
+    className: $_6191.dataViewerGrid,
     title: React.createElement(PI, {
       gridName: y,
       setDisabled: function (e) {

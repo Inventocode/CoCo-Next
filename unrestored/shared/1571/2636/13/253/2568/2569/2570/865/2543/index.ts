@@ -5,7 +5,7 @@
  */
 
 var r = require("../../../../../2583/2584/479")
-var i = require("../../../../../../797/101/2538/2539/2540/1458/1174")
+var i = require("./1174")
 var o = require("./2544")
 var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
 module.exports = function (e) {

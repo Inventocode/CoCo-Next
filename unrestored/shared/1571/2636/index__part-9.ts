@@ -11,17 +11,17 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axi
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1200 from "./1200"
-import /* [auto-meaningful-name] */_$_ from "./1200"
-var Ge = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_12001 from "./1200"
+var Ge = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$stroke = e.stroke
   var n = undefined === e$stroke ? "white" : e$stroke
   return React.createElement("svg", {
-    className: _$_.spinner,
+    className: $_12001.spinner,
     viewBox: "0 0 50 50"
   }, React.createElement("circle", {
-    className: _$_.spinnerPath,
+    className: $_12001.spinnerPath,
     cx: "25",
     cy: "25",
     r: "20",

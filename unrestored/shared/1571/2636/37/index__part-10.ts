@@ -12,7 +12,7 @@ import * as St from "../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
 import * as /* [auto-meaningful-name] */$_674_index from "./674/index"
-import /* [auto-meaningful-name] */_$_674_index from "./674/index"
+import /* [auto-meaningful-name] */$_674_index1 from "./674/index"
 import * as /* [auto-meaningful-name] */$_1412_index from "./1412/index"
 var tr = []
 var nr = false
@@ -93,7 +93,7 @@ function sr() {
 }
 function cr() {
   if (0 !== tr.length) {
-    if (Xn = new _$_674_index()) {
+    if (Xn = new $_674_index1()) {
       Xn.addEventListener("error", function () {
         rr = true
         tr.shift()
@@ -128,8 +128,8 @@ function lr() {
 function ur() {
   return (ur = St.a(RegeneratorRuntime.mark(function e() {
     var t
-    var /* [auto-meaningful-name] */_e$sent
-    var /* [auto-meaningful-name] */_e$sent$image_data
+    var /* [auto-meaningful-name] */e$sent1
+    var /* [auto-meaningful-name] */e$sent1$image_data
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -156,24 +156,24 @@ function ur() {
             e.next = 11
             return e$sent.get_file_img_info(t.file)
           case 11:
-            if (!(_e$sent = e.sent)) {
+            if (!(e$sent1 = e.sent)) {
               e.next = 23
               break
             }
-            if (_e$sent$image_data = _e$sent.image_data, "image/jpeg" !== _e$sent.type && "image/png" !== _e$sent.type) {
+            if (e$sent1$image_data = e$sent1.image_data, "image/jpeg" !== e$sent1.type && "image/png" !== e$sent1.type) {
               e.next = 22
               break
             }
-            if (!_e$sent.transparent) {
+            if (!e$sent1.transparent) {
               e.next = 20
               break
             }
-            dr(_e$sent$image_data, t, "transparent_png").catch(function (e) {
+            dr(e$sent1$image_data, t, "transparent_png").catch(function (e) {
               console.error(e)
             })
             return e.abrupt("return")
           case 20:
-            dr(_e$sent$image_data, t, "mozjpeg").catch(function (e) {
+            dr(e$sent1$image_data, t, "mozjpeg").catch(function (e) {
               console.error(e)
             })
             return e.abrupt("return")
@@ -234,8 +234,8 @@ function pr() {
 }
 function fr() {
   return (fr = St.a(RegeneratorRuntime.mark(function e(t, n) {
-    var /* [auto-meaningful-name] */_e$sent2
-    var /* [auto-meaningful-name] */_e$sent3
+    var /* [auto-meaningful-name] */e$sent1
+    var /* [auto-meaningful-name] */e$sent2
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -250,18 +250,18 @@ function fr() {
             e.next = 5
             return e$sent.imagedata_to_blob(t, "image/png")
           case 5:
-            _e$sent2 = e.sent
+            e$sent1 = e.sent
             e.next = 8
-            return e$sent.blob_to_arrayBuffer(_e$sent2)
+            return e$sent.blob_to_arrayBuffer(e$sent1)
           case 8:
-            if (_e$sent3 = e.sent, !Xn || rr) {
+            if (e$sent2 = e.sent, !Xn || rr) {
               e.next = 12
               break
             }
             Xn.postMessage({
               type: "optipng",
               id: n,
-              buffer: _e$sent3
+              buffer: e$sent2
             })
             return e.abrupt("return")
           case 12:
@@ -278,7 +278,7 @@ function hr() {
   return (hr = St.a(RegeneratorRuntime.mark(function e(t, n) {
     var r
     var o
-    var /* [auto-meaningful-name] */_e$sent4
+    var /* [auto-meaningful-name] */e$sent1
     var /* [auto-meaningful-name] */r$file$name
     var s
     return RegeneratorRuntime.wrap(function (e) {
@@ -311,9 +311,9 @@ function hr() {
             e.next = 10
             return e$sent.imagedata_to_blob(t, r.file.type)
           case 10:
-            _e$sent4 = e.sent
+            e$sent1 = e.sent
             e.next = 13
-            return e$sent.blob_to_arrayBuffer(_e$sent4)
+            return e$sent.blob_to_arrayBuffer(e$sent1)
           case 13:
             o = e.sent
             e.next = 17

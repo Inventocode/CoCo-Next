@@ -13,16 +13,16 @@ import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_127 from "../../../127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_29 from "../../../29"
-import /* [auto-meaningful-name] */_$$_$$_$$_ from "../../../29"
+import /* [auto-meaningful-name] */$$_$$_$$_291 from "../../../29"
 import * as /* [auto-meaningful-name] */$$_$$_$$_13_index from "../../../13/index"
 import * as /* [auto-meaningful-name] */$$_89 from "../89"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$_index from "./index"
 var _e = {}
-var ve = _React.memo(function (e) {
+var ve = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$position = e.position
@@ -48,15 +48,15 @@ var ve = _React.memo(function (e) {
           t.stopPropagation()
           T(e + 1)
         },
-        className: $$_$$_$$_8(_$$_$$_$$_.flexSC, _$$_$$_$$_.template1, "tiled" === e$attributes$templateRenderType ? _$$_$$_$$_.itemTiled : _$$_$$_$$_.itemCard)
+        className: $$_$$_$$_8($$_$$_$$_291.flexSC, $$_$$_$$_291.template1, "tiled" === e$attributes$templateRenderType ? $$_$$_$$_291.itemTiled : $$_$$_$$_291.itemCard)
       }, _e.titleSlot ? React.createElement("div", {
-        className: _$$_$$_$$_.title,
+        className: $$_$$_$$_291.title,
         onClick: O.bind(null, "titleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : React.createElement("div", null), React.createElement("div", {
-        className: _$$_$$_$$_.iconBox
+        className: $$_$$_$$_291.iconBox
       }, React.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
-        className: _$$_$$_$$_.icon
+        className: $$_$$_$$_291.icon
       })))
     }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
@@ -66,18 +66,18 @@ var ve = _React.memo(function (e) {
           t.stopPropagation()
           T(e + 1)
         },
-        className: $$_$$_$$_8(_$$_$$_$$_.flexSC, _$$_$$_$$_.template2, "tiled" === e$attributes$templateRenderType ? _$$_$$_$$_.itemTiled : _$$_$$_$$_.itemCard)
+        className: $$_$$_$$_8($$_$$_$$_291.flexSC, $$_$$_$$_291.template2, "tiled" === e$attributes$templateRenderType ? $$_$$_$$_291.itemTiled : $$_$$_$$_291.itemCard)
       }, _e.titleSlot ? React.createElement("div", {
-        className: _$$_$$_$$_.title,
+        className: $$_$$_$$_291.title,
         onClick: O.bind(null, "titleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : React.createElement("div", null), React.createElement("div", {
-        className: $$_$$_$$_8(_$$_$$_$$_.flexSC, _$$_$$_$$_.subTitleBox)
+        className: $$_$$_$$_8($$_$$_$$_291.flexSC, $$_$$_$$_291.subTitleBox)
       }, _e.subTitleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.subTitle,
+        className: $$_$$_$$_291.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), React.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
-        className: _$$_$$_$$_.icon
+        className: $$_$$_$$_291.icon
       })))
     }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_TITLE_AND_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
@@ -88,22 +88,22 @@ var ve = _React.memo(function (e) {
           t.stopPropagation()
           T(e + 1)
         },
-        className: $$_$$_$$_8(_$$_$$_$$_.flexSC, _$$_$$_$$_.template3, "tiled" === e$attributes$templateRenderType ? _$$_$$_$$_.itemTiled : _$$_$$_$$_.itemCard)
+        className: $$_$$_$$_8($$_$$_$$_291.flexSC, $$_$$_$$_291.template3, "tiled" === e$attributes$templateRenderType ? $$_$$_$$_291.itemTiled : $$_$$_$$_291.itemCard)
       }, React.createElement("div", {
-        className: _$$_$$_$$_.title
+        className: $$_$$_$$_291.title
       }, _e.imageSlot && React.createElement("div", {
-        className: _$$_$$_$$_.smallImgBox,
+        className: $$_$$_$$_291.smallImgBox,
         onClick: O.bind(null, "imageSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), _e.titleSlot && React.createElement("div", {
         onClick: O.bind(null, "titleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t))), React.createElement("div", {
-        className: $$_$$_$$_8(_$$_$$_$$_.flexSC, _$$_$$_$$_.subTitleBox)
+        className: $$_$$_$$_8($$_$$_$$_291.flexSC, $$_$$_$$_291.subTitleBox)
       }, _e.subTitleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.subTitle,
+        className: $$_$$_$$_291.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), React.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
-        className: _$$_$$_$$_.icon
+        className: $$_$$_$$_291.icon
       })))
     }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_AND_TITLE_SUBTITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
@@ -114,25 +114,25 @@ var ve = _React.memo(function (e) {
           t.stopPropagation()
           T(e + 1)
         },
-        className: $$_$$_$$_8(_$$_$$_$$_.flexSC, _$$_$$_$$_.template4, "tiled" === e$attributes$templateRenderType ? _$$_$$_$$_.itemTiled : _$$_$$_$$_.itemCard)
+        className: $$_$$_$$_8($$_$$_$$_291.flexSC, $$_$$_$$_291.template4, "tiled" === e$attributes$templateRenderType ? $$_$$_$$_291.itemTiled : $$_$$_$$_291.itemCard)
       }, React.createElement("div", {
-        className: _$$_$$_$$_.avatarAndTitle
+        className: $$_$$_$$_291.avatarAndTitle
       }, _e.avatarSlot && React.createElement("div", {
-        className: _$$_$$_$$_.avatarImgBox,
+        className: $$_$$_$$_291.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), React.createElement("div", {
-        className: _$$_$$_$$_.titleBox
+        className: $$_$$_$$_291.titleBox
       }, _e.titleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.title,
+        className: $$_$$_$$_291.title,
         onClick: O.bind(null, "titleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.subTitle,
+        className: $$_$$_$$_291.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), React.createElement("div", {
-        className: _$$_$$_$$_.iconBox
+        className: $$_$$_$$_291.iconBox
       }, React.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
-        className: _$$_$$_$$_.icon
+        className: $$_$$_$$_291.icon
       })))
     }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_TITLE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$imageSlot
@@ -143,23 +143,23 @@ var ve = _React.memo(function (e) {
           t.stopPropagation()
           T(e + 1)
         },
-        className: $$_$$_$$_8(_$$_$$_$$_.flexSC, _$$_$$_$$_.template5, "tiled" === e$attributes$templateRenderType ? _$$_$$_$$_.itemTiled : _$$_$$_$$_.itemCard)
+        className: $$_$$_$$_8($$_$$_$$_291.flexSC, $$_$$_$$_291.template5, "tiled" === e$attributes$templateRenderType ? $$_$$_$$_291.itemTiled : $$_$$_$$_291.itemCard)
       }, React.createElement("div", {
-        className: _$$_$$_$$_.imgAndTitleBox
+        className: $$_$$_$$_291.imgAndTitleBox
       }, _e.imageSlot && React.createElement("div", {
-        className: _$$_$$_$$_.smallImgBox,
+        className: $$_$$_$$_291.smallImgBox,
         onClick: O.bind(null, "imageSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), React.createElement("div", null, _e.titleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.title,
+        className: $$_$$_$$_291.title,
         onClick: O.bind(null, "titleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.descSlot && React.createElement("div", {
-        className: _$$_$$_$$_.desc,
+        className: $$_$$_$$_291.desc,
         onClick: O.bind(null, "descSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))), React.createElement("div", {
-        className: _$$_$$_$$_.iconBox
+        className: $$_$$_$$_291.iconBox
       }, React.createElement($$_$$_$$_13_index.j, {
         type: "icon-fold-left",
-        className: _$$_$$_$$_.icon
+        className: $$_$$_$$_291.icon
       })))
     }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.AVATAR_TITLE_SUBTITLE_AND_IMAGE_DESC && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$avatarSlot
@@ -172,25 +172,25 @@ var ve = _React.memo(function (e) {
           t.stopPropagation()
           T(e + 1)
         },
-        className: $$_$$_$$_8(_$$_$$_$$_.template6, "tiled" === e$attributes$templateRenderType ? _$$_$$_$$_.itemTiled : _$$_$$_$$_.itemCard)
+        className: $$_$$_$$_8($$_$$_$$_291.template6, "tiled" === e$attributes$templateRenderType ? $$_$$_$$_291.itemTiled : $$_$$_$$_291.itemCard)
       }, React.createElement("div", {
-        className: _$$_$$_$$_.avatarAndTitle
+        className: $$_$$_$$_291.avatarAndTitle
       }, _e.avatarSlot && React.createElement("div", {
-        className: _$$_$$_$$_.avatarImgBox,
+        className: $$_$$_$$_291.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), React.createElement("div", {
-        className: _$$_$$_$$_.titleBox
+        className: $$_$$_$$_291.titleBox
       }, _e.titleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.title,
+        className: $$_$$_$$_291.title,
         onClick: O.bind(null, "titleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.subTitle,
+        className: $$_$$_$$_291.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), _e.bannerSlot && React.createElement("div", {
-        className: _$$_$$_$$_.bannerImgBox,
+        className: $$_$$_$$_291.bannerImgBox,
         onClick: O.bind(null, "bannerSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), _e.descSlot && React.createElement("div", {
-        className: _$$_$$_$$_.desc,
+        className: $$_$$_$$_291.desc,
         onClick: O.bind(null, "descSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
     }(e, t), e$attributes$templateType === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.o.IMAGE_AND_AVATAR_TITLE_SUBTITLE_AND_DESC && function (e, t) {
@@ -204,25 +204,25 @@ var ve = _React.memo(function (e) {
           t.stopPropagation()
           T(e + 1)
         },
-        className: $$_$$_$$_8(_$$_$$_$$_.template6, "tiled" === e$attributes$templateRenderType ? _$$_$$_$$_.itemTiled : _$$_$$_$$_.itemCard)
+        className: $$_$$_$$_8($$_$$_$$_291.template6, "tiled" === e$attributes$templateRenderType ? $$_$$_$$_291.itemTiled : $$_$$_$$_291.itemCard)
       }, _e.bannerSlot && React.createElement("div", {
-        className: _$$_$$_$$_.bannerImgBox,
+        className: $$_$$_$$_291.bannerImgBox,
         onClick: O.bind(null, "bannerSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), React.createElement("div", {
-        className: _$$_$$_$$_.avatarAndTitle
+        className: $$_$$_$$_291.avatarAndTitle
       }, _e.avatarSlot && React.createElement("div", {
-        className: _$$_$$_$$_.avatarImgBox,
+        className: $$_$$_$$_291.avatarImgBox,
         onClick: O.bind(null, "avatarSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$avatarSlot = e$attributes$templateSlotMap.avatarSlot) || undefined === e$attributes$templateSlotMap$avatarSlot ? undefined : e$attributes$templateSlotMap$avatarSlot.widgetId, "avatarSlot", e, t)), React.createElement("div", {
-        className: _$$_$$_$$_.titleBox
+        className: $$_$$_$$_291.titleBox
       }, _e.titleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.title,
+        className: $$_$$_$$_291.title,
         onClick: O.bind(null, "titleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), _e.subTitleSlot && React.createElement("div", {
-        className: _$$_$$_$$_.subTitle,
+        className: $$_$$_$$_291.subTitle,
         onClick: O.bind(null, "subTitleSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), _e.descSlot && React.createElement("div", {
-        className: _$$_$$_$$_.desc,
+        className: $$_$$_$$_291.desc,
         onClick: O.bind(null, "descSlot", e)
       }, $_index.c(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))
     }(e, t))
@@ -254,7 +254,7 @@ var ve = _React.memo(function (e) {
     "data-max-width": $$_$$_$$_127.k,
     "data-min-height": $$_$$_$$_127.l,
     "data-max-height": $$_$$_$$_127.j,
-    className: $$_$$_$$_8($$_$$_$$_90.b, _$$_$$_$$_.listViewerBox, $$_$$_$$_11.a({}, _$$_$$_$$_.hide, !e$visible)),
+    className: $$_$$_$$_8($$_$$_$$_90.b, $$_$$_$$_291.listViewerBox, $$_$$_$$_11.a({}, $$_$$_$$_291.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,

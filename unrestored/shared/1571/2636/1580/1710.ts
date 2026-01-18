@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1778/951")
+var r = require("./1628/951")
 var o = require("./1628/1258")
 module.exports = r("Set", function (e) {
   return function () {

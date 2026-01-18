@@ -32,6 +32,8 @@
     "@kitten-team/gl-matrix": "^2.8.5",
     "@react-three/fiber": "^7.0.0",
     "@vikadata/vika": "^1.0.0",
+    "ag-grid-community": "^25.0.0",
+    "ag-grid-react": "^25.0.0",
     "animejs": "^3.0.0",
     "antd": "^5.0.0",
     "antd-mobile": "^5.0.0",
@@ -77,9 +79,11 @@
     "terser": "^5.0.0",
     "three": "~0.136.0",
     "tslib": "^2.0.0",
-    "video-react": "~0.16.0"
+    "video-react": "~0.16.0",
+    "xlsx": "~0.17.0"
   },
   "devDependencies": {
+    "@rsdoctor/rspack-plugin": "^1.0.0",
     "@rspack/cli": "^1.0.0",
     "@rspack/core": "^1.0.0",
     "@rspack/plugin-react-refresh": "^1.0.0",
@@ -103,13 +107,16 @@
     "@types/video-react": "~0.15.0",
     "css-loader": "^7.0.0",
     "get-port-please": "^3.0.0",
-    "html-webpack-plugin": "^5.0.0",
     "network-information-types": "~0.1.0",
     "nexe": "^5.0.0-beta.4",
     "react-refresh": "~0.18.0",
     "string-replace-loader": "^3.0.0",
     "style-loader": "^4.0.0",
     "typescript": "^5.0.0",
-    "typescript-plugin-css-modules": "^5.0.0"
+    "typescript-eslint": "^8.0.0",
+    "typescript-plugin-css-modules": "^5.0.0",
+    "webpack-bundle-analyzer": "^5.0.0",
+    "webpack-merge": "^6.0.0",
+    "webpack-visualizer-plugin2": "^2.0.0"
   }
 }

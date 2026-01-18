@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
 import "./860"
 import * as /* [auto-meaningful-name] */$$_$$_16_index from "../../16/index"
@@ -110,7 +110,7 @@ function f(t) {
       }
     }
   }, [t$callback, b, E])
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     className: "coco-widget-editor-div",
     ref: O,
     onBlur: function () {
@@ -174,7 +174,7 @@ function h(t) {
       })
     }
   }, [t$callback, d, m, t$target])
-  return _React.createElement("input", {
+  return React1.createElement("input", {
     onKeyDown: function (e) {
       if (13 === e.keyCode) {
         e.currentTarget.blur()
@@ -203,9 +203,9 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$options = e.options
   var /* [auto-meaningful-name] */UndefinedE$optionsE$options$isMultipleRow = (undefined === e$options ? {} : e$options).isMultipleRow
   var r = undefined === UndefinedE$optionsE$options$isMultipleRow || UndefinedE$optionsE$options$isMultipleRow
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     className: "coco-widget-editor"
-  }, r ? _React.createElement(f, e) : _React.createElement(h, e))
+  }, r ? React1.createElement(f, e) : React1.createElement(h, e))
 }
 export { _a as a }
 export default _a

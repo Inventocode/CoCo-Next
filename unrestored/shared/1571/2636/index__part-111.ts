@@ -14,10 +14,10 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1038 from "./1038"
-import /* [auto-meaningful-name] */_$_ from "./1038"
-var BE = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_10381 from "./1038"
+var BE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "textAlign" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -28,7 +28,7 @@ var BE = _React.memo(function (e) {
     id: e$formConfig.label || "horizontalAlignment"
   })
   return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, _$_.content, "changeHorizontalAlign"),
+    className: N(qv.formItemWrapper, $_10381.content, "changeHorizontalAlign"),
     label: s,
     align: "vertical"
   }, React.createElement(gy, {
@@ -37,7 +37,7 @@ var BE = _React.memo(function (e) {
     textAlign: a
   }))
 })
-var FE = _React.memo(function (e) {
+var FE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "justifyContent" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -62,7 +62,7 @@ var FE = _React.memo(function (e) {
     type: "icon-vertical-bottom"
   })))
 })
-var GE = _React.memo(function (e) {
+var GE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "justifyContent" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -70,7 +70,7 @@ var GE = _React.memo(function (e) {
   var i = e$getValue(n)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, _$_.content, "changeVerticalAlign"),
+    className: N(qv.formItemWrapper, $_10381.content, "changeVerticalAlign"),
     label: $_710_index$a$formatMessage({
       id: "verticalAlignment"
     }),

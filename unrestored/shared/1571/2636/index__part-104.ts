@@ -13,22 +13,22 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1055 from "./1055"
-import /* [auto-meaningful-name] */_$_ from "./1055"
-var yy = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_10551 from "./1055"
+var yy = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$iconId = e.iconId
   var /* [auto-meaningful-name] */e$color = e.color
   var o = $_16_index.d()
-  var i = _React.useState()
+  var i = React1.useState()
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = $_16_index.e(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e = Et.fb(e$iconId)
     c(e)
   }, [e$iconId, l])
@@ -40,9 +40,9 @@ var yy = _React.memo(function (e) {
         }
       }))
     },
-    className: _$_.buttonTypeIconBox
+    className: $_10551.buttonTypeIconBox
   }, React.createElement("div", {
-    className: _$_.svgIcon,
+    className: $_10551.svgIcon,
     style: {
       color: e$color
     }
@@ -50,7 +50,7 @@ var yy = _React.memo(function (e) {
     icon: s
   })), React.createElement($_13_index.j, {
     type: "icon-dropdown-down",
-    className: _$_.iconDropdown
+    className: $_10551.iconDropdown
   })))
 })
 export { yy }

@@ -16,7 +16,7 @@ var l = require("../1715/424")
 var u = require("../1715/1098")
 var d = require("./1721")
 var p = require("../1715/961")
-var f = require("../1686/246/index")("replace")
+var f = require("../1686/246")("replace")
 var /* [auto-meaningful-name] */Math$max = Math.max
 var /* [auto-meaningful-name] */Math$min = Math.min
 var g = "$0" === "a".replace(/./, "$0")

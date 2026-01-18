@@ -8,14 +8,14 @@
 
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./870"
-var $ = _React.createContext(null)
+var $ = React1.createContext(null)
 var /* [auto-meaningful-name] */$$Provider = $.Provider
 var te = $
-_React.memo(function (e) {
+React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onSelect = e.onSelect
   var /* [auto-meaningful-name] */e$value = e.value
@@ -25,45 +25,45 @@ _React.memo(function (e) {
   var d = undefined === e$style ? {} : e$style
   var /* [auto-meaningful-name] */e$open = e.open
   var /* [auto-meaningful-name] */e$onBlur = e.onBlur
-  var h = _React.useState(e$value || e$defaultValue)
+  var h = React1.useState(e$value || e$defaultValue)
   var m = $$_10_index.a(h, 2)
   var g = m[0]
   var _ = m[1]
-  var v = _React.useState(false)
+  var v = React1.useState(false)
   var b = $$_10_index.a(v, 2)
   var y = b[0]
   var O = b[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     _(e$value)
   }, [e$value])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (undefined !== e$open) {
       O(e$open)
     }
   }, [e$open])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */S$current
     if (!(null === (S$current = S.current) || undefined === S$current)) {
       S$current.setAttribute("tabindex", "-1")
     }
   }, [])
-  var w = _React.useCallback(function (e) {
+  var w = React1.useCallback(function (e) {
     if (undefined === e$open) {
       O(e)
     }
   }, [e$open])
-  var C = _React.useCallback(function (e) {
+  var C = React1.useCallback(function (e) {
     _(e)
     w(false)
     if (e$onSelect) {
       e$onSelect(e)
     }
   }, [e$onSelect, w])
-  var T = _React.useCallback(function () {
+  var T = React1.useCallback(function () {
     w(!y)
   }, [y, w])
-  var S = _React.useRef(null)
-  var A = _React.useCallback(function () {
+  var S = React1.useRef(null)
+  var A = React1.useCallback(function () {
     w(false)
     if (e$onBlur) {
       e$onBlur()
@@ -94,20 +94,20 @@ _React.memo(function (e) {
     })
   }, e$children)))
 })
-var ne = _React.memo(function (e) {
+var ne = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var c = _React.useState(false)
+  var c = React1.useState(false)
   var l = $$_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = _React.useCallback(function () {
+  var p = React1.useCallback(function () {
     if (!e$disabled) {
       d(true)
     }
   }, [d, e$disabled])
-  var f = _React.useCallback(function () {
+  var f = React1.useCallback(function () {
     if (!e$disabled) {
       d(false)
     }
@@ -130,13 +130,13 @@ var ne = _React.memo(function (e) {
     })
   }, e$children))
 })
-var re = _React.memo(function (e) {
+var re = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$content = e.content
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var c = _React.useContext(te)
-  var l = _React.useCallback(function () {
+  var c = React1.useContext(te)
+  var l = React1.useCallback(function () {
     if (null === c || undefined === c ? undefined : c.onSelect) {
       c.onSelect(e$value)
     }
@@ -150,7 +150,7 @@ var re = _React.memo(function (e) {
     key: e$value
   }, e$content || React.createElement("span", null, e$title))
 })
-_React.memo(function (e) {
+React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
   return React.createElement("div", {

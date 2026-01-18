@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import * as c from "./8"
@@ -51,9 +51,9 @@ _a = React.memo(function () {
         O$current.focus()
       }
       setImmediate(function () {
-        var /* [auto-meaningful-name] */_O$current
-        if (!(null === (_O$current = O.current) || undefined === _O$current)) {
-          _O$current.select()
+        var /* [auto-meaningful-name] */O$current1
+        if (!(null === (O$current1 = O.current) || undefined === O$current1)) {
+          O$current1.select()
         }
       })
       A("")
@@ -73,25 +73,25 @@ _a = React.memo(function () {
       w($$_$$_$$_$$_src_editor_redux_common_actions.jh())
     }
   }
-  return _React.createElement($_13_index.f, {
+  return React1.createElement($_13_index.f, {
     visible: t$visible,
     className: l(f.nameDialog),
     onClose: k,
     withPortal: true
-  }, _React.createElement($_188.a, {
+  }, React1.createElement($_188.a, {
     useCapture: true
-  }, _React.createElement($_188.b, {
+  }, React1.createElement($_188.b, {
     keys: "enter",
     callback: x
-  })), _React.createElement("p", {
+  })), React1.createElement("p", {
     className: f.dialogTitle
   }, t$title && $_710_index$a$formatMessage({
     id: t$title
-  }) || ""), _React.createElement("div", {
+  }) || ""), React1.createElement("div", {
     className: f.inputWrapper
-  }, _React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React1.createElement("span", null, $_710_index$a$formatMessage({
     id: "name"
-  })), _React.createElement($_13_index.k, {
+  })), React1.createElement($_13_index.k, {
     ref: O,
     warning: !!S,
     placeholder: t$placeholder && $_710_index$a$formatMessage({
@@ -104,17 +104,17 @@ _a = React.memo(function () {
     },
     maxLength: _,
     value: N
-  }), S && _React.createElement("div", {
+  }), S && React1.createElement("div", {
     className: f.warningTips
   }, " ", $_710_index$a$formatMessage({
     id: S
-  }))), _React.createElement("div", {
+  }))), React1.createElement("div", {
     className: f.confirmBox
-  }, _React.createElement($_13_index.d, {
+  }, React1.createElement($_13_index.d, {
     onClick: k
   }, $_710_index$a$formatMessage({
     id: "cancel"
-  })), _React.createElement($_13_index.d, {
+  })), React1.createElement($_13_index.d, {
     onClick: x,
     type: "primary",
     disabled: !!S || !N

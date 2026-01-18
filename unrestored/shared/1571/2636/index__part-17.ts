@@ -21,19 +21,19 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1509 from "./1509"
-import /* [auto-meaningful-name] */_$_ from "./1509"
+import /* [auto-meaningful-name] */$_15091 from "./1509"
 import * as /* [auto-meaningful-name] */$_1510 from "./1510"
-import /* [auto-meaningful-name] */_$_2 from "./1510"
+import /* [auto-meaningful-name] */$_15101 from "./1510"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_restrict from "../../../../src/shared/widget/custom/restrict"
 import * as /* [auto-meaningful-name] */$_177 from "./177"
 import * as /* [auto-meaningful-name] */$_328 from "./328"
 import * as /* [auto-meaningful-name] */$_930 from "./930"
-import /* [auto-meaningful-name] */_$_3 from "./930"
+import /* [auto-meaningful-name] */$_9301 from "./930"
 var Zt
-var Jt = _React.memo(function (e) {
+var Jt = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
@@ -43,14 +43,14 @@ var Jt = _React.memo(function (e) {
   var i = $_16_index.e(function (e) {
     return e.project.title
   })
-  var a = _React.useState(false)
+  var a = React1.useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useRef(null)
+  var u = React1.useRef(null)
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var p = $_16_index.d()
-  var m = _React.useState({
+  var m = React1.useState({
     name: i,
     description: "",
     operation: ""
@@ -65,7 +65,7 @@ var Jt = _React.memo(function (e) {
   var w = $_16_index.e(function (e) {
     return e.project.projectSource
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */u$current
     if (e$visible) {
       if (!(null === (u$current = u.current) || undefined === u$current)) {
@@ -73,18 +73,18 @@ var Jt = _React.memo(function (e) {
       }
     }
   }, [e$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     b({
       description: "",
       operation: "",
       name: i
     })
   }, [i])
-  var C = _React.useState("")
+  var C = React1.useState("")
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var N = _React.useState(y || "")
+  var N = React1.useState(y || "")
   var R = $_10_index.a(N, 2)
   var k = R[0]
   var x = R[1]
@@ -114,7 +114,7 @@ var Jt = _React.memo(function (e) {
       var s
       var f
       var /* [auto-meaningful-name] */e$sent
-      var /* [auto-meaningful-name] */_e$sent
+      var /* [auto-meaningful-name] */e$sent1
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -154,7 +154,7 @@ var Jt = _React.memo(function (e) {
               e.next = 22
               return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(p, $$_$$_$$_$$_src_editor_redux_common_actions.Eh(v.name, v.description, v.operation, a))
             case 22:
-              _e$sent = e.sent
+              e$sent1 = e.sent
               p($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 type: "success",
                 message: $_710_index$a$formatMessage({
@@ -162,7 +162,7 @@ var Jt = _React.memo(function (e) {
                 }),
                 showCloseIcon: false
               }))
-              window.open(te.F(_e$sent))
+              window.open(te.F(e$sent1))
               e$onClose()
               P(v, true, "")
               e.next = 38
@@ -210,7 +210,7 @@ var Jt = _React.memo(function (e) {
       failReason: n
     })
   }
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       if (Z.a(o)) {
         $_177.j(o).then(function (e) {
@@ -235,7 +235,7 @@ var Jt = _React.memo(function (e) {
   }, [e$visible])
   return React.createElement($_13_index.f, {
     onClose: e$onClose,
-    className: _$_3.publishDialog,
+    className: $_9301.publishDialog,
     visible: e$visible,
     withPortal: true,
     title: $_710_index$a$formatMessage({
@@ -247,7 +247,7 @@ var Jt = _React.memo(function (e) {
     height: 340,
     sourceImage: A || k
   }), React.createElement("div", {
-    className: _$_3.changePoster
+    className: $_9301.changePoster
   }, React.createElement($_13_index.B, {
     onChange: function (e) {
       return M.apply(this, arguments)
@@ -258,11 +258,11 @@ var Jt = _React.memo(function (e) {
   }), $_710_index$a$formatMessage({
     id: "Publish.changeWorkCover"
   })))), React.createElement("div", {
-    className: _$_3.right
+    className: $_9301.right
   }, React.createElement("ul", null, React.createElement("li", null, React.createElement("p", null, $_710_index$a$formatMessage({
     id: "Publish.publishName"
   }), React.createElement("span", {
-    className: _$_3.required
+    className: $_9301.required
   }, "*")), React.createElement($_13_index.k, {
     defaultValue: v.name,
     maxLength: 20,

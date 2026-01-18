@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_119 from "./119"
 import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_520_index from "./520/index"
+import * as /* [auto-meaningful-name] */$_520 from "./520"
 var ue = function () {
   function e(e, t, n) {
     this.app = e

@@ -18,24 +18,24 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1036_index from "./1036/index"
-import /* [auto-meaningful-name] */_$_1036_index from "./1036/index"
+import /* [auto-meaningful-name] */$_1036_index1 from "./1036/index"
 import * as /* [auto-meaningful-name] */$_1508_index from "./1508/index"
 import * as /* [auto-meaningful-name] */$_356 from "./356"
-import /* [auto-meaningful-name] */_$_ from "./356"
-var Gt = _React.memo(function () {
+import /* [auto-meaningful-name] */$_3561 from "./356"
+var Gt = React1.memo(function () {
   var e = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = _React.useState(false)
+  var n = React1.useState(false)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = _React.useState("")
+  var a = React1.useState("")
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useState(false)
+  var u = React1.useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
@@ -54,7 +54,7 @@ var Gt = _React.memo(function () {
   var j = $_16_index.e(function (e) {
     return e.common.userInfo
   })
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (g$packageUrl && g$packageInfo) {
       var e = te.B()
       var t = "".concat(e, "/download/?url=").concat(encodeURIComponent(g$packageUrl || ""), "&icon=").concat(encodeURIComponent(g$packageInfo.apkIcon || ""), "&name=").concat(g$packageInfo.apkName || "", "&projectId=").concat(A, "&version=").concat(g$packageInfo.version, "&expireTime=").concat(g$packageInfo.expireTime, "&startTimeTamp=").concat(g$packageInfo.startTimeTamp)
@@ -62,7 +62,7 @@ var Gt = _React.memo(function () {
       m(false)
     }
   }, [g$packageUrl, g$packageInfo, A])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (Tt) {
       clearInterval(Tt)
     }
@@ -132,17 +132,17 @@ var Gt = _React.memo(function () {
   }()
   return React.createElement($_13_index.f, {
     visible: g$packageQrCodeVisible,
-    className: _$_.packageQrCodeDialog,
+    className: $_3561.packageQrCodeDialog,
     withPortal: true,
     onClose: R
   }, React.createElement("div", {
-    className: _$_.packageInfo
+    className: $_3561.packageInfo
   }, React.createElement("img", {
     src: g$packageInfo.apkIcon,
-    className: _$_.packageIcon,
+    className: $_3561.packageIcon,
     alt: ""
   }), React.createElement("div", null, React.createElement("div", {
-    className: _$_.packageTitle
+    className: $_3561.packageTitle
   }, g$packageInfo.apkName), React.createElement($_1508_index.CopyToClipboard, {
     text: "com.codemao.coco.apk_".concat(A),
     onCopy: function () {
@@ -154,17 +154,17 @@ var Gt = _React.memo(function () {
       }))
     }
   }, React.createElement("div", {
-    className: N(_$_.packageInfoItem, _$_.packageAppId)
+    className: N($_3561.packageInfoItem, $_3561.packageAppId)
   }, "APP ID：com.codemao.coco.apk_", A, React.createElement($_13_index.j, {
     type: "icon-copy",
-    className: _$_.copyIcon
+    className: $_3561.copyIcon
   }))), React.createElement("div", {
-    className: _$_.packageInfoItem
+    className: $_3561.packageInfoItem
   }, "Version Code：", g$packageInfo.version))), React.createElement("div", {
-    className: _$_.qrCodeWrapper
+    className: $_3561.qrCodeWrapper
   }, g$packageUrl && React.createElement("div", {
-    className: _$_.qrcode
-  }, React.createElement(_$_1036_index, {
+    className: $_3561.qrcode
+  }, React.createElement($_1036_index1, {
     value: c,
     size: 200,
     imageSettings: {
@@ -173,26 +173,26 @@ var Gt = _React.memo(function () {
       src: "https://static.bcmcdn.com/coco/image/share-dialog/qrlogo.png"
     }
   }), p && React.createElement("div", {
-    className: _$_.mask,
+    className: $_3561.mask,
     onClick: k
   }, "二维码已过期", React.createElement("br", null), "若需扫码，请重新打包")), React.createElement("p", {
-    className: _$_.apkText
+    className: $_3561.apkText
   }, " ", $_710_index$a$formatMessage({
     id: "package.apkText"
   })), g$packageInfo.expireTime && React.createElement("p", {
-    className: _$_.apkText
+    className: $_3561.apkText
   }, "（二维码仅", Math.round(g$packageInfo.expireTime / 60), "分钟内有效）")), React.createElement("div", {
-    className: _$_.footerWrapper
+    className: $_3561.footerWrapper
   }, React.createElement("div", {
-    className: _$_.footerBtn,
+    className: $_3561.footerBtn,
     onClick: function () {
       if (g$packageUrl) {
-        document.body.querySelectorAll(".".concat(_$_.iframeDownloader)).forEach(function (e) {
+        document.body.querySelectorAll(".".concat($_3561.iframeDownloader)).forEach(function (e) {
           return e.remove()
         })
         var e = document.createElement("iframe")
         e.src = g$packageUrl
-        e.classList.add(_$_.iframeDownloader)
+        e.classList.add($_3561.iframeDownloader)
         document.body.appendChild(e)
         i(true)
         Download = "download"
@@ -208,7 +208,7 @@ var Gt = _React.memo(function () {
     }
   }, React.createElement($_13_index.j, {
     type: "icon-package-download",
-    className: _$_.qrBtn
+    className: $_3561.qrBtn
   }), React.createElement("p", null, $_710_index$a$formatMessage(o ? {
     id: "package.downloaded"
   } : {

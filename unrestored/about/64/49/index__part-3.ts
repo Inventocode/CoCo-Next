@@ -99,8 +99,8 @@ function P(e) {
       callback: function (e) {
         !function (e, t, n) {
           var /* [auto-meaningful-name] */e$xhr
-          var /* [auto-meaningful-name] */_e$xhr
-          if (!c.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (_e$xhr = e.xhr) || undefined === _e$xhr ? undefined : _e$xhr.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
+          var /* [auto-meaningful-name] */e$xhr1
+          if (!c.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (e$xhr1 = e.xhr) || undefined === e$xhr1 ? undefined : e$xhr1.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
             return
           }
           var /* [auto-meaningful-name] */e$xhr$__sentry_xhr__ = e.xhr.__sentry_xhr__

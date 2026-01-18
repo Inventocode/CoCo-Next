@@ -20,10 +20,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_397 from "./397"
-import /* [auto-meaningful-name] */_$_ from "./397"
-var MO = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_3971 from "./397"
+var MO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "rotation" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -39,7 +39,7 @@ var MO = _React.memo(function (e) {
     c += 360
   }
   c = Math.round(c)
-  var l = _React.useState(true)
+  var l = React1.useState(true)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
@@ -49,18 +49,18 @@ var MO = _React.memo(function (e) {
       id: e$formConfig$label
     })
   }, React.createElement($_13_index.k, {
-    className: _$_.inputRow,
+    className: $_3971.inputRow,
     type: "number",
     defaultValue: c,
     style: {
       width: 60
     },
     after: d && React.createElement("span", {
-      className: _$_.mask
+      className: $_3971.mask
     }, React.createElement("span", {
-      className: _$_.text
+      className: $_3971.text
     }, c), React.createElement("span", {
-      className: _$_.symbol
+      className: $_3971.symbol
     }, "°")),
     onBlur: function (e, t) {
       var r = Number(e)
@@ -74,7 +74,7 @@ var MO = _React.memo(function (e) {
     dependency: s
   }))
 })
-var LO = _React.memo(function (e) {
+var LO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "flipped" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -138,7 +138,7 @@ var LO = _React.memo(function (e) {
   })))))
 })
 var PO = [[$_144.e, $_144.c], [$_144.e, $_144.c]]
-var BO = _React.memo(function (e) {
+var BO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "scaleAndLock" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -165,8 +165,8 @@ var BO = _React.memo(function (e) {
   var v = g.y
   var b = g.ratio || false
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var E = _React.useRef({})
-  var O = _React.useCallback(function () {
+  var E = React1.useRef({})
+  var O = React1.useCallback(function () {
     var /* [auto-meaningful-name] */E$current = E.current
     if (E$current && (undefined !== E$current.x || undefined !== E$current.y)) {
       e$onChange(n, E$current)
@@ -193,10 +193,10 @@ var BO = _React.memo(function (e) {
       }
     }
   }, [e$getValue, e$onChange, n])
-  var w = _React.useMemo(function () {
+  var w = React1.useMemo(function () {
     return Lodash.debounce(O, 50)
   }, [O])
-  var C = _React.useCallback(function (e, t, n) {
+  var C = React1.useCallback(function (e, t, n) {
     var r = k.a({}, t, parseInt(n || "1") / d)
     if (b) {
       if ("x" === t) {
@@ -226,13 +226,13 @@ var BO = _React.memo(function (e) {
     E.current = D.a(D.a(D.a({}, g), E$current), r)
     e()
   }, [d, b, g])
-  var T = _React.useMemo(function () {
+  var T = React1.useMemo(function () {
     return C.bind(undefined, w, "x")
   }, [C, w])
-  var S = _React.useMemo(function () {
+  var S = React1.useMemo(function () {
     return C.bind(undefined, w, "y")
   }, [C, w])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (undefined === e$getValue(n)) {
       e$onChange(n, p)
     }
@@ -247,7 +247,7 @@ var BO = _React.memo(function (e) {
   })), React.createElement("div", {
     className: qv.formInputNumberRow
   }, React.createElement($_13_index.i, {
-    className: N("changeWidth", _$_.formItem)
+    className: N("changeWidth", $_3971.formItem)
   }, React.createElement($_13_index.o, {
     label: $_710_index$a$formatMessage({
       id: "width"
@@ -267,9 +267,9 @@ var BO = _React.memo(function (e) {
     onChange: T,
     onStep: C.bind(undefined, O, "x")
   }), React.createElement("span", {
-    className: _$_.placeholder
+    className: $_3971.placeholder
   }, Math.round(_ * d), "%")), React.createElement("div", {
-    className: _$_.lockWrapper,
+    className: $_3971.lockWrapper,
     onClick: function () {
       e$onChange(n, D.a(D.a({}, g), {}, {
         ratio: !b && g.x / g.y
@@ -278,7 +278,7 @@ var BO = _React.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: false === b ? "icon-unlocked" : "icon-locked"
   })), React.createElement($_13_index.i, {
-    className: N("changeHeight", _$_.formItem)
+    className: N("changeHeight", $_3971.formItem)
   }, React.createElement($_13_index.o, {
     label: $_710_index$a$formatMessage({
       id: "height"
@@ -298,7 +298,7 @@ var BO = _React.memo(function (e) {
     onChange: S,
     onStep: C.bind(undefined, O, "y")
   }), React.createElement("span", {
-    className: _$_.placeholder
+    className: $_3971.placeholder
   }, Math.round(v * d), "%"))))
 })
 export { MO }

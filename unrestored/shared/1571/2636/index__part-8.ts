@@ -19,12 +19,12 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */_Axios from "axios"
+import /* [auto-meaningful-name] */Axios1 from "axios"
 import * as /* [auto-meaningful-name] */$_495 from "./495"
-import /* [auto-meaningful-name] */_$_ from "./495"
-var Le = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_4951 from "./495"
+var Le = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
   var r = $_16_index.d()
@@ -40,7 +40,7 @@ var Le = _React.memo(function (e) {
           switch (e.prev = e.next) {
             case 0:
               e.next = 2
-              return _Axios.get(t)
+              return Axios1.get(t)
             case 2:
               if ((e$sent = e.sent).data) {
                 e$sent$data = e$sent.data
@@ -67,44 +67,44 @@ var Le = _React.memo(function (e) {
     }
   }()
   return e$visible ? React.createElement("div", {
-    className: _$_.container
+    className: $_4951.container
   }, React.createElement("div", {
-    className: _$_.itemContainer,
+    className: $_4951.itemContainer,
     onClick: function () {
       e$importProjectJson()
       r($$_$$_$$_$$_src_editor_redux_common_actions.Xg())
     }
   }, React.createElement("div", {
-    className: N(_$_.emptyItem, _$_.item)
+    className: N($_4951.emptyItem, $_4951.item)
   }, React.createElement("div", {
-    className: _$_.emptyContent
+    className: $_4951.emptyContent
   }, React.createElement("span", {
-    className: _$_.iconContainer
+    className: $_4951.iconContainer
   }, React.createElement($_13_index.j, {
     type: "icon-add",
-    className: _$_.icon
+    className: $_4951.icon
   })), React.createElement("p", {
-    className: _$_.text
+    className: $_4951.text
   }, "创建空白作品")))), o.length > 0 && o.map(function (e) {
     return React.createElement("div", {
-      className: _$_.itemContainer,
+      className: $_4951.itemContainer,
       key: e.id,
       onClick: function () {
         i(e.bcmUrl, e.name)
       }
     }, React.createElement("div", {
-      className: N(_$_.item),
+      className: N($_4951.item),
       style: {
         backgroundImage: "url(".concat(e.image, ")")
       }
     }, React.createElement("img", {
       src: e.gif,
       alt: e.name,
-      className: _$_.gif
+      className: $_4951.gif
     })))
   })) : null
 })
-var Pe = _React.memo(function (e) {
+var Pe = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var r = $_16_index.d()

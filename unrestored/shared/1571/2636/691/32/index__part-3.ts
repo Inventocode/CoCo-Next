@@ -10,9 +10,9 @@ import { fe } from "./index__part-1"
 import { X, q, $, ne, re, ge, be, xe, Ce, Oe, ke, Te, De, Ie, He, Ge, Qe, $e, Je, rt, it, ot, st, ct, ut, lt, ft, dt, ht, pt, _t, Et, xt, Ct, kt, Tt, It, Pt, Jt, nn, hn, An, vn, Bn, In, Mn, gr, vr, mr, br, Hr, Vr, Gr, zr, Xr } from "./index__part-2"
 import /* [auto-meaningful-name] */$_1338 from "./1338"
 import * as /* [auto-meaningful-name] */$_1198 from "./1198"
-import /* [auto-meaningful-name] */_$_ from "./1198"
+import /* [auto-meaningful-name] */$_11981 from "./1198"
 import * as /* [auto-meaningful-name] */$_565 from "./565"
-import /* [auto-meaningful-name] */_$_2 from "./565"
+import /* [auto-meaningful-name] */$_5651 from "./565"
 function fi() {}
 function di(e, t, n, r) {
   var i = 0
@@ -207,10 +207,10 @@ var bi = function () {
     this._boundXhrOnTimeout = this._xhrOnTimeout.bind(this)
     this._boundXhrOnAbort = this._xhrOnAbort.bind(this)
     this._boundXhrOnLoad = this._xhrOnLoad.bind(this)
-    this.onStart = new _$_2()
-    this.onProgress = new _$_2()
-    this.onComplete = new _$_2()
-    this.onAfterMiddleware = new _$_2()
+    this.onStart = new $_5651()
+    this.onProgress = new $_5651()
+    this.onComplete = new $_5651()
+    this.onAfterMiddleware = new $_5651()
   }
   e.setExtensionLoadType = function (t, n) {
     wi(e._loadTypeMap, t, n)
@@ -359,8 +359,8 @@ var bi = function () {
             this.data.appendChild(this._createSource(e, this.url[n], Array.isArray(this$metadata$mimeType) ? this$metadata$mimeType[n] : this$metadata$mimeType))
           }
         } else {
-          var /* [auto-meaningful-name] */_this$metadata$mimeType = this.metadata.mimeType
-          this.data.appendChild(this._createSource(e, this.url, Array.isArray(_this$metadata$mimeType) ? _this$metadata$mimeType[0] : _this$metadata$mimeType))
+          var /* [auto-meaningful-name] */this$metadata$mimeType1 = this.metadata.mimeType
+          this.data.appendChild(this._createSource(e, this.url, Array.isArray(this$metadata$mimeType1) ? this$metadata$mimeType1[0] : this$metadata$mimeType1))
         }
       }
       this.data.addEventListener("error", this._boundOnError, false)
@@ -500,7 +500,7 @@ var bi = function () {
       mi = document.createElement("a")
     }
     mi.href = e
-    var n = !(e = _$_(mi.href, {
+    var n = !(e = $_11981(mi.href, {
       strictMode: true
     })).port && "" === t.port || e.port === t.port
     var r = e.protocol ? e.protocol + ":" : ""
@@ -738,11 +738,11 @@ var ki = function () {
     this._queue = pi(this._boundLoadResource, n)
     this._queue.pause()
     this.resources = {}
-    this.onProgress = new _$_2()
-    this.onError = new _$_2()
-    this.onLoad = new _$_2()
-    this.onStart = new _$_2()
-    this.onComplete = new _$_2()
+    this.onProgress = new $_5651()
+    this.onError = new $_5651()
+    this.onLoad = new $_5651()
+    this.onStart = new $_5651()
+    this.onComplete = new $_5651()
     for (var i = 0; i < e._defaultBeforeMiddleware.length; ++i) {
       this.pre(e._defaultBeforeMiddleware[i])
     }
@@ -846,7 +846,7 @@ var ki = function () {
   }
   e$prototype._prepareUrl = function (e) {
     var t
-    var n = _$_(e, {
+    var n = $_11981(e, {
       strictMode: true
     })
     t = n.protocol || !n.path || 0 === e.indexOf("//") ? e : this.baseUrl.length && this.baseUrl.lastIndexOf("/") !== this.baseUrl.length - 1 && "/" !== e.charAt(0) ? this.baseUrl + "/" + e : this.baseUrl + e
@@ -2194,10 +2194,10 @@ var Zi = function (e) {
           }
         }
       }
-      var /* [auto-meaningful-name] */_this$context = this.context
+      var /* [auto-meaningful-name] */this$context1 = this.context
       this.context = this$context
       e.renderCanvas(this)
-      this.context = _this$context
+      this.context = this$context1
       this$context.restore()
       this.resolution = this$resolution
       this._projTransform = null
@@ -2528,9 +2528,9 @@ var uo = {
       t = e$shape.radius
       n = e$shape.radius
     } else {
-      var /* [auto-meaningful-name] */_e$shape = e.shape
-      t = _e$shape.width
-      n = _e$shape.height
+      var /* [auto-meaningful-name] */e$shape1 = e.shape
+      t = e$shape1.width
+      n = e$shape1.height
     }
     if (0 !== t && 0 !== n) {
       var c = Math.floor(30 * Math.sqrt(e$shape.radius)) || Math.floor(15 * Math.sqrt(t + n))
@@ -3260,10 +3260,10 @@ var Bo = function (e) {
             }
           }
         }
-        var /* [auto-meaningful-name] */_this$indices$length = this.indices.length
+        var /* [auto-meaningful-name] */this$indices$length1 = this.indices.length
         var A = this.points.length / 2
         if (r) {
-          r.end(_this$indices$length, A)
+          r.end(this$indices$length1, A)
         }
         if (0 !== this.batches.length) {
           if (this.indicesUint16 && this.indices.length === this.indicesUint16.length) {

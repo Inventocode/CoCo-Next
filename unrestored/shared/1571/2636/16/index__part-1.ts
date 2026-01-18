@@ -8,13 +8,13 @@
 
 import { o, u } from "./index__part-0"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_339 from "../339"
 import * as /* [auto-meaningful-name] */$_695 from "./695"
-import /* [auto-meaningful-name] */_$_ from "./695"
+import /* [auto-meaningful-name] */$_6951 from "./695"
 import * as /* [auto-meaningful-name] */$$_241_index from "../241/index"
-var A = "undefined" !== typeof window && "undefined" !== typeof window.document && "undefined" !== typeof window.document.createElement ? _React.useLayoutEffect : _React.useEffect
+var A = "undefined" !== typeof window && "undefined" !== typeof window.document && "undefined" !== typeof window.document.createElement ? React1.useLayoutEffect : React1.useEffect
 var g = []
 var v = [null, null]
 function m(e, t) {
@@ -124,11 +124,11 @@ function x(e, t) {
       WrappedComponent: t
     })
     var /* [auto-meaningful-name] */I$pure = I.pure
-    var h = I$pure ? _React.useMemo : function (e) {
+    var h = I$pure ? React1.useMemo : function (e) {
       return e()
     }
     function x(n) {
-      var o = _React.useMemo(function () {
+      var o = React1.useMemo(function () {
         var /* [auto-meaningful-name] */n$reactReduxForwardedRef = n.reactReduxForwardedRef
         var t = $$_339.a(n, ["reactReduxForwardedRef"])
         return [n.context, n$reactReduxForwardedRef, t]
@@ -136,21 +136,21 @@ function x(e, t) {
       var s = o[0]
       var c = o[1]
       var l = o[2]
-      var p = _React.useMemo(function () {
+      var p = React1.useMemo(function () {
         return s && s.Consumer && $$_241_index.isContextConsumer(React.createElement(s.Consumer, null)) ? s : R
       }, [s, R])
-      var A = _React.useContext(p)
+      var A = React1.useContext(p)
       var x = Boolean(n.store) && Boolean(n.store.getState) && Boolean(n.store.dispatch)
       if (Boolean(A)) {
         Boolean(A.store)
       }
       var O = x ? n.store : A.store
-      var k = _React.useMemo(function () {
+      var k = React1.useMemo(function () {
         return function (t) {
           return e(t.dispatch, a)
         }(O)
       }, [O])
-      var S = _React.useMemo(function () {
+      var S = React1.useMemo(function () {
         if (!C) {
           return v
         }
@@ -160,32 +160,32 @@ function x(e, t) {
       }, [O, x, A])
       var T = S[0]
       var B = S[1]
-      var D = _React.useMemo(function () {
+      var D = React1.useMemo(function () {
         return x ? A : $$_19.a({}, A, {
           subscription: T
         })
       }, [x, A, T])
-      var I = _React.useReducer(m, g, E)
+      var I = React1.useReducer(m, g, E)
       var F = I[0][0]
       var P = I[1]
       if (F && F.error) {
         throw F.error
       }
-      var N = _React.useRef()
-      var M = _React.useRef(l)
-      var L = _React.useRef()
-      var j = _React.useRef(false)
+      var N = React1.useRef()
+      var M = React1.useRef(l)
+      var L = React1.useRef()
+      var j = React1.useRef(false)
       var U = h(function () {
         return L.current && l === M.current ? L.current : k(O.getState(), l)
       }, [O, F, l])
       y(b, [M, N, j, l, U, L, B])
       y(w, [C, O, T, k, M, N, j, L, B, P], [O, T, k])
-      var H = _React.useMemo(function () {
+      var H = React1.useMemo(function () {
         return React.createElement(t, $$_19.a({}, U, {
           ref: c
         }))
       }, [c, t, U])
-      return _React.useMemo(function () {
+      return React1.useMemo(function () {
         return C ? React.createElement(p.Provider, {
           value: D
         }, H) : H
@@ -202,9 +202,9 @@ function x(e, t) {
       })
       S.displayName = o
       S.WrappedComponent = t
-      return _$_(S, t)
+      return $_6951(S, t)
     }
-    return _$_(O, t)
+    return $_6951(O, t)
   }
 }
 function C(e, t) {

@@ -12,7 +12,7 @@ function r() {
   }
   return t.reduce(function (e, t) {
     return null == t ? e : function () {
-      for (var /* [auto-meaningful-name] */_arguments$length = arguments.length, r = new Array(_arguments$length), i = 0; i < _arguments$length; i++) {
+      for (var /* [auto-meaningful-name] */arguments$length1 = arguments.length, r = new Array(arguments$length1), i = 0; i < arguments$length1; i++) {
         r[i] = arguments[i]
       }
       e.apply(this, r)

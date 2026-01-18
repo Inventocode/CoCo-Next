@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$_295 from "./295"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as s from "./8"
 import c from "./8"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
@@ -36,25 +36,25 @@ _a = React.memo(function (e) {
       e$onStep("".concat(g - 1), e, "down")
     }
   }, [m, e$onStep, g])
-  return _React.createElement($_13_index.k, Object.assign({}, f, {
+  return React1.createElement($_13_index.k, Object.assign({}, f, {
     className: c(f.className, "coco-number-input-wrapper"),
     defaultValue: e$defaultValue,
     min: e$min,
     max: e$max,
     disabled: e$disabled,
-    after: _React.createElement(_React.Fragment, null, _React.createElement("div", {
+    after: React1.createElement(React1.Fragment, null, React1.createElement("div", {
       className: c("coco-number-input-label")
-    }, _React.createElement("span", null, e$label)), _React.createElement("div", {
+    }, React1.createElement("span", null, e$label)), React1.createElement("div", {
       className: "coco-number-input"
-    }, _React.createElement("span", {
+    }, React1.createElement("span", {
       className: h || e$disabled ? "disable" : "",
       onClick: _
-    }, _React.createElement($_13_index.j, {
+    }, React1.createElement($_13_index.j, {
       type: "icon-up"
-    })), _React.createElement("span", {
+    })), React1.createElement("span", {
       className: m || e$disabled ? "disable" : "",
       onClick: v
-    }, _React.createElement($_13_index.j, {
+    }, React1.createElement($_13_index.j, {
       type: "icon-down"
     }))))
   }))

@@ -13,10 +13,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_933 from "./933"
-import /* [auto-meaningful-name] */_$_ from "./933"
-var Xw = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_9331 from "./933"
+var Xw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "text" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -29,15 +29,15 @@ var Xw = _React.memo(function (e) {
     id: e$formConfig.label || "text"
   })
   return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, _$_.form),
+    className: N(qv.formItemWrapper, $_9331.form),
     label: l,
     align: "vertical"
   }, React.createElement("div", {
-    className: _$_.imageBox
+    className: $_9331.imageBox
   }, React.createElement("div", {
-    className: _$_.edit
+    className: $_9331.edit
   }, React.createElement("div", {
-    className: _$_.btn,
+    className: $_9331.btn,
     onClick: function () {
       c($$_$$_$$_$$_src_editor_redux_common_actions.Bh({
         onConfirm: function (e) {

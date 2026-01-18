@@ -20,24 +20,24 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_249 from "./249"
-import /* [auto-meaningful-name] */_$_ from "./249"
-var MP = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_2491 from "./249"
+var MP = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onUploadFileChange = e.onUploadFileChange
   var /* [auto-meaningful-name] */e$onResourceLibraryClick = e.onResourceLibraryClick
   var /* [auto-meaningful-name] */e$fileId = e.fileId
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = _React.useState(false)
+  var a = React1.useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = _React.useState("")
+  var u = React1.useState("")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (te.U(e$fileId)) {
       e = e$fileId
@@ -72,34 +72,34 @@ var MP = _React.memo(function (e) {
     e$onResourceLibraryClick(e$type)
   }
   return React.createElement("div", {
-    className: _$_.imageItemBox
+    className: $_2491.imageItemBox
   }, React.createElement("img", {
     alt: e$fileId,
     src: p,
-    className: e$type === Gf.a.HANDLE ? _$_.handleImage : _$_.image
+    className: e$type === Gf.a.HANDLE ? $_2491.handleImage : $_2491.image
   }), React.createElement("div", {
-    className: _$_.cover
+    className: $_2491.cover
   }, React.createElement($_1213.a, {
     content: React.createElement("div", {
-      className: _$_.imagePopover,
+      className: $_2491.imagePopover,
       onClick: g
     }, React.createElement($_13_index.B, {
-      className: _$_.content,
+      className: $_2491.content,
       onChange: _,
       accept: $_133.f
     }, React.createElement($_13_index.j, {
       type: "icon-upload"
     }), React.createElement("span", {
-      className: _$_.contentTitle
+      className: $_2491.contentTitle
     }, $_710_index$a$formatMessage({
       id: "Resource.upload"
     }))), React.createElement("div", {
-      className: _$_.content,
+      className: $_2491.content,
       onClick: v
     }, React.createElement($_13_index.j, {
       type: "icon-open-resource-library"
     }), React.createElement("span", {
-      className: _$_.contentTitle
+      className: $_2491.contentTitle
     }, $_710_index$a$formatMessage({
       id: "Resource.ImageLibrary"
     })))),
@@ -110,12 +110,12 @@ var MP = _React.memo(function (e) {
       l(e)
     }
   }, React.createElement("div", {
-    className: _$_.replaceBtn
+    className: $_2491.replaceBtn
   }, $_710_index$a$formatMessage({
     id: "Resource.Replace"
   })))))
 })
-var LP = _React.memo(function () {
+var LP = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.sliderImageDialogInfo
   })
@@ -131,59 +131,59 @@ var LP = _React.memo(function () {
   var /* [auto-meaningful-name] */e$trackImageDirection = e.trackImageDirection
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var p = $_16_index.d()
-  var m = _React.useState("")
+  var m = React1.useState("")
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = _React.useState(e$handleImageRatio)
+  var y = React1.useState(e$handleImageRatio)
   var E = $_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
-  var C = _React.useState(e$handleImageDirection)
+  var C = React1.useState(e$handleImageDirection)
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = _React.useState("")
+  var R = React1.useState("")
   var k = $_10_index.a(R, 2)
   var x = k[0]
   var D = k[1]
-  var M = _React.useState(e$backgroundImageDirection)
+  var M = React1.useState(e$backgroundImageDirection)
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = _React.useState("")
+  var F = React1.useState("")
   var G = $_10_index.a(F, 2)
   var W = G[0]
   var U = G[1]
-  var H = _React.useState(e$trackImageDirection)
+  var H = React1.useState(e$trackImageDirection)
   var V = $_10_index.a(H, 2)
   var K = V[0]
   var q = V[1]
-  var X = _React.useState(true)
+  var X = React1.useState(true)
   var Q = $_10_index.a(X, 2)
   var Z = Q[0]
   var J = Q[1]
-  var $ = _React.useState("")
+  var $ = React1.useState("")
   var ee = $_10_index.a($, 2)
   var ne = ee[0]
   var re = ee[1]
-  var oe = _React.useState("")
+  var oe = React1.useState("")
   var ie = $_10_index.a(oe, 2)
   var ae = ie[0]
   var se = ie[1]
-  var ce = _React.useState("")
+  var ce = React1.useState("")
   var le = $_10_index.a(ce, 2)
   var ue = le[0]
   var de = le[1]
-  var pe = _React.useState("")
+  var pe = React1.useState("")
   var fe = $_10_index.a(pe, 2)
   var he = fe[0]
   var me = fe[1]
-  var ge = _React.useState("")
+  var ge = React1.useState("")
   var _e = $_10_index.a(ge, 2)
   var ve = _e[0]
   var be = _e[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (te.U(v)) {
       e = v
@@ -193,7 +193,7 @@ var LP = _React.memo(function () {
     }
     de(e || $_149.c)
   }, [v])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (te.U(x)) {
       e = x
@@ -208,7 +208,7 @@ var LP = _React.memo(function () {
       return se("")
     })
   }, [x, e$backgroundImageDirection])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var e
     if (te.U(W)) {
       e = W
@@ -223,21 +223,21 @@ var LP = _React.memo(function () {
       return re("")
     })
   }, [K, W])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       w(e$handleImageRatio)
       B(e$backgroundImageDirection)
       q(e$trackImageDirection)
     }
   }, [e$backgroundImageDirection, e$handleImageRatio, e$trackImageDirection, e$visible])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$direction === Gf.b.HORIZONTAL) {
       J(true)
     } else {
       J(false)
     }
   }, [e$direction])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       b(e$handleImageFileId)
       U(e$trackImageFileId)
@@ -275,7 +275,7 @@ var LP = _React.memo(function () {
   }
   return React.createElement($_13_index.f, {
     visible: e$visible,
-    className: _$_.sliderImageDialog,
+    className: $_2491.sliderImageDialog,
     title: $_710_index$a$formatMessage({
       id: "slider.custom"
     }),
@@ -304,52 +304,52 @@ var LP = _React.memo(function () {
       id: "confirm"
     }))
   }, React.createElement("div", {
-    className: _$_.sliderImage
+    className: $_2491.sliderImage
   }, React.createElement("div", {
-    className: _$_.sliderPreview
+    className: $_2491.sliderPreview
   }, React.createElement("span", {
-    className: _$_.title
+    className: $_2491.title
   }, $_710_index$a$formatMessage({
     id: "slider.preview"
   })), React.createElement("div", {
-    className: _$_.previewBox
+    className: $_2491.previewBox
   }, React.createElement("div", {
-    className: _$_.backgroundImage,
+    className: $_2491.backgroundImage,
     style: {
       width: Z ? 176 : 20,
       height: Z ? 20 : 176,
       backgroundImage: "url(".concat(P === e$direction ? he : ae, ")")
     }
   }, React.createElement("div", {
-    className: _$_.trackImageBox,
+    className: $_2491.trackImageBox,
     style: {
       width: Z ? 88 : 20,
       height: Z ? 20 : 88
     }
   }, React.createElement("div", {
-    className: _$_.trackImage,
+    className: $_2491.trackImage,
     style: {
       width: Z ? 176 : 20,
       height: Z ? 20 : 176,
       backgroundImage: "url(".concat(K === e$direction ? ve : ne, ")")
     }
   }))), React.createElement("div", {
-    className: N(_$_.handleImage, A !== e$direction && _$_.vertical),
+    className: N($_2491.handleImage, A !== e$direction && $_2491.vertical),
     style: {
       width: 20 * O,
       height: 20 * O,
       backgroundImage: "url(".concat(ue, ")")
     }
   }))), React.createElement("div", {
-    className: _$_.imageInfo
+    className: $_2491.imageInfo
   }, React.createElement("span", {
-    className: _$_.title
+    className: $_2491.title
   }, $_710_index$a$formatMessage({
     id: "slider.replaceImage"
   })), React.createElement("div", {
-    className: _$_.imageList
+    className: $_2491.imageList
   }, React.createElement("div", {
-    className: _$_.imageItem
+    className: $_2491.imageItem
   }, React.createElement(MP, {
     onUploadFileChange: Ee,
     onResourceLibraryClick: Oe,
@@ -358,7 +358,7 @@ var LP = _React.memo(function () {
   }), React.createElement("span", null, $_710_index$a$formatMessage({
     id: "slider.backgroundImage"
   }))), React.createElement("div", {
-    className: _$_.imageItem
+    className: $_2491.imageItem
   }, React.createElement(MP, {
     onUploadFileChange: Ee,
     onResourceLibraryClick: Oe,
@@ -367,7 +367,7 @@ var LP = _React.memo(function () {
   }), React.createElement("span", null, $_710_index$a$formatMessage({
     id: "slider.trackImage"
   }))), React.createElement("div", {
-    className: _$_.imageItem
+    className: $_2491.imageItem
   }, React.createElement(MP, {
     onUploadFileChange: Ee,
     onResourceLibraryClick: Oe,
@@ -376,11 +376,11 @@ var LP = _React.memo(function () {
   }), React.createElement("span", null, $_710_index$a$formatMessage({
     id: "slider.handleImage"
   })))), React.createElement("span", {
-    className: _$_.title
+    className: $_2491.title
   }, $_710_index$a$formatMessage({
     id: "slider.handleSize"
   })), React.createElement("div", {
-    className: _$_.handleSize
+    className: $_2491.handleSize
   }, React.createElement($_13_index.x, {
     value: Math.round(100 * O),
     min: 10,
@@ -391,7 +391,7 @@ var LP = _React.memo(function () {
     isShowRightInput: true,
     inputAfter: "%"
   }), React.createElement("div", {
-    className: _$_.sizeLabel
+    className: $_2491.sizeLabel
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "smallSize"
   })), React.createElement("span", null, $_710_index$a$formatMessage({

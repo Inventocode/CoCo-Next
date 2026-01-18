@@ -10,10 +10,10 @@ import { fj, hj } from "./index__part-181"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_815 from "./815"
-import /* [auto-meaningful-name] */_$_ from "./815"
-var bj = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_8151 from "./815"
+var bj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
@@ -22,7 +22,7 @@ var bj = _React.memo(function (e) {
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
   var /* [auto-meaningful-name] */e$selectHandler = e.selectHandler
   return React.createElement("div", {
-    className: N(_$_.IconLibraryItem, e$isSelect && _$_.selected),
+    className: N($_8151.IconLibraryItem, e$isSelect && $_8151.selected),
     onClick: function () {
       e$selectHandler({
         id: t,
@@ -34,16 +34,16 @@ var bj = _React.memo(function (e) {
       })
     }
   }, React.createElement("div", {
-    className: _$_.icon
+    className: $_8151.icon
   }, React.createElement($_13_index.j, {
     type: "icon-style-selected"
   })), React.createElement("div", {
-    className: _$_.content
+    className: $_8151.content
   }, React.createElement("img", {
     alt: e$name,
     src: e$cdnUrl || e$source
   })), React.createElement("div", {
-    className: _$_.footer
+    className: $_8151.footer
   }, e$name, ".svg"))
 })
 export { bj }

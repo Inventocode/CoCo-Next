@@ -24,10 +24,10 @@ import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_814 from "./814"
-import /* [auto-meaningful-name] */_$_ from "./814"
-var aj = _React.memo(function () {
+import /* [auto-meaningful-name] */$_8141 from "./814"
+var aj = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.tableDataDialog
   })
@@ -37,39 +37,39 @@ var aj = _React.memo(function () {
   var /* [auto-meaningful-name] */e$isCreateNewGrid = e.isCreateNewGrid
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var a = $_16_index.d()
-  var s = _React.useState(false)
+  var s = React1.useState(false)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = _React.useState()
+  var d = React1.useState()
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = _React.useState("")
+  var v = React1.useState("")
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = _React.useState({})
+  var O = React1.useState({})
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = _React.useState([])
+  var A = React1.useState([])
   var j = $_10_index.a(A, 2)
   var N = j[0]
   var R = j[1]
-  var k = _React.useState(false)
+  var k = React1.useState(false)
   var x = $_10_index.a(k, 2)
   var M = x[0]
   var L = x[1]
-  var P = _React.useState(2)
+  var P = React1.useState(2)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = _React.useState(2)
+  var W = React1.useState(2)
   var U = $_10_index.a(W, 2)
   var H = U[0]
   var V = U[1]
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (e$visible) {
       a($$_$$_$$_$$_src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)
@@ -205,7 +205,7 @@ var aj = _React.memo(function () {
     a($$_$$_$$_$$_src_editor_redux_common_actions.wh())
   }
   var Z = React.createElement("div", {
-    className: _$_.footer
+    className: $_8141.footer
   }, React.createElement("span", null, $_710_index$a$formatMessage({
     id: "gridSupportTypeTips"
   })), React.createElement($_13_index.d, {
@@ -217,9 +217,9 @@ var aj = _React.memo(function () {
   })))
   return React.createElement($_13_index.f, {
     visible: e$visible,
-    className: _$_.tableDataDialog,
+    className: $_8141.tableDataDialog,
     title: React.createElement("div", null, y, React.createElement("span", {
-      className: _$_.defaultData
+      className: $_8141.defaultData
     }, "— ", $_710_index$a$formatMessage({
       id: "TableDataWidget.data"
     }))),
@@ -238,9 +238,9 @@ var aj = _React.memo(function () {
       }
     }
   }, React.createElement("div", {
-    className: _$_.rowAndColumnCount
+    className: $_8141.rowAndColumnCount
   }, React.createElement("span", {
-    className: _$_.itemCount
+    className: $_8141.itemCount
   }, $_710_index$a$formatMessage({
     id: "column"
   }), ": ", H), React.createElement("span", null, $_710_index$a$formatMessage({

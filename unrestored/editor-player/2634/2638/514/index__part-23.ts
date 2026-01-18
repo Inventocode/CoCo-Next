@@ -204,7 +204,7 @@ function He() {
             t.next = 2
             return Promise.all(e.map(function () {
               var t = $$_$$_$$_$$_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(e) {
-                var /* [auto-meaningful-name] */_t$sent
+                var /* [auto-meaningful-name] */t$sent1
                 return RegeneratorRuntime.wrap(function (t) {
                   for (;;) {
                     switch (t.prev = t.next) {
@@ -212,9 +212,9 @@ function He() {
                         t.next = 2
                         return Axios.get("".concat(e.cdnUrl, "?t=").concat(Math.random()))
                       case 2:
-                        _t$sent = t.sent
+                        t$sent1 = t.sent
                         return t.abrupt("return", $$_$$_$$_$$_shared_1571_2636_6.a($$_$$_$$_$$_shared_1571_2636_6.a({}, e), {}, {
-                          code: _t$sent.data
+                          code: t$sent1.data
                         }))
                       case 4:
                       case "end":

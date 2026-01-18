@@ -23,10 +23,10 @@ import * as Dn from "./19"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_559_index from "./559/index"
 import * as /* [auto-meaningful-name] */$_1034 from "./1034"
-var JM = _React.createContext({
+var JM = React1.createContext({
   prefixCls: "",
   firstLevel: true,
   inlineCollapsed: false
@@ -37,33 +37,33 @@ var $M = function (e) {
   var /* [auto-meaningful-name] */e$popupClassName = e.popupClassName
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$title = e.title
-  var a = _React.useContext(JM)
+  var a = React1.useContext(JM)
   var /* [auto-meaningful-name] */a$prefixCls = a.prefixCls
   var /* [auto-meaningful-name] */a$inlineCollapsed = a.inlineCollapsed
   var /* [auto-meaningful-name] */a$antdMenuTheme = a.antdMenuTheme
   var u = $_559_index.f()
   if (e$icon) {
     var d = $_315.b(e$title) && "span" === e$title.type
-    n = _React.createElement(_React.Fragment, null, $_315.a(e$icon, {
+    n = React1.createElement(React1.Fragment, null, $_315.a(e$icon, {
       className: N($_315.b(e$icon) ? null === (o$props = e$icon.props) || undefined === o$props ? undefined : o$props.className : "", "".concat(a$prefixCls, "-item-icon"))
-    }), d ? e$title : _React.createElement("span", {
+    }), d ? e$title : React1.createElement("span", {
       className: "".concat(a$prefixCls, "-title-content")
     }, e$title))
   } else {
-    n = a$inlineCollapsed && !u.length && e$title && "string" === typeof e$title ? _React.createElement("div", {
+    n = a$inlineCollapsed && !u.length && e$title && "string" === typeof e$title ? React1.createElement("div", {
       className: "".concat(a$prefixCls, "-inline-collapsed-noicon")
-    }, e$title.charAt(0)) : _React.createElement("span", {
+    }, e$title.charAt(0)) : React1.createElement("span", {
       className: "".concat(a$prefixCls, "-title-content")
     }, e$title)
   }
-  var p = _React.useMemo(function () {
+  var p = React1.useMemo(function () {
     return Dn.a(Dn.a({}, a), {
       firstLevel: false
     })
   }, [a])
-  return _React.createElement(JM.Provider, {
+  return React1.createElement(JM.Provider, {
     value: p
-  }, _React.createElement($_559_index.d, Dn.a({}, $_486.a(e, ["icon"]), {
+  }, React1.createElement($_559_index.d, Dn.a({}, $_486.a(e, ["icon"]), {
     title: n,
     popupClassName: N(a$prefixCls, "".concat(a$prefixCls, "-").concat(a$antdMenuTheme), e$popupClassName)
   })))
@@ -119,16 +119,16 @@ var nL = function (e) {
       var /* [auto-meaningful-name] */e$props = e.props
       var /* [auto-meaningful-name] */e$props$className = e$props.className
       var /* [auto-meaningful-name] */e$props$children = e$props.children
-      var /* [auto-meaningful-name] */_e$props = e.props
-      var /* [auto-meaningful-name] */_e$props$title = _e$props.title
-      var /* [auto-meaningful-name] */_e$props$icon = _e$props.icon
-      var /* [auto-meaningful-name] */_e$props$danger = _e$props.danger
-      var v = tL(_e$props, ["title", "icon", "danger"])
-      var b = _e$props$title
-      if ("undefined" === typeof _e$props$title) {
+      var /* [auto-meaningful-name] */e$props1 = e.props
+      var /* [auto-meaningful-name] */e$props1$title = e$props1.title
+      var /* [auto-meaningful-name] */e$props1$icon = e$props1.icon
+      var /* [auto-meaningful-name] */e$props1$danger = e$props1.danger
+      var v = tL(e$props1, ["title", "icon", "danger"])
+      var b = e$props1$title
+      if ("undefined" === typeof e$props1$title) {
         b = e$context$firstLevel ? e$props$children : ""
       } else {
-        if (false === _e$props$title) {
+        if (false === e$props1$title) {
           b = ""
         }
       }
@@ -140,14 +140,14 @@ var nL = function (e) {
         y.visible = false
       }
       var /* [auto-meaningful-name] */eLE$props$children$length = eL(e$props$children).length
-      return _React.createElement($_748_index.a, Dn.a({}, y, {
+      return React1.createElement($_748_index.a, Dn.a({}, y, {
         placement: "rtl" === e$context$direction ? "left" : "right",
         overlayClassName: "".concat(e$context$prefixCls, "-inline-collapsed-tooltip")
-      }), _React.createElement($_559_index.b, Dn.a({}, v, {
-        className: N((n = {}, Ln.a(n, "".concat(e$context$prefixCls, "-item-danger"), _e$props$danger), Ln.a(n, "".concat(e$context$prefixCls, "-item-only-child"), 1 === (_e$props$icon ? eLE$props$children$length + 1 : eLE$props$children$length)), n), e$props$className),
-        title: "string" === typeof _e$props$title ? _e$props$title : undefined
-      }), $_315.a(_e$props$icon, {
-        className: N($_315.b(_e$props$icon) ? null === (g$props = _e$props$icon.props) || undefined === g$props ? undefined : g$props.className : "", "".concat(e$context$prefixCls, "-item-icon"))
+      }), React1.createElement($_559_index.b, Dn.a({}, v, {
+        className: N((n = {}, Ln.a(n, "".concat(e$context$prefixCls, "-item-danger"), e$props1$danger), Ln.a(n, "".concat(e$context$prefixCls, "-item-only-child"), 1 === (e$props1$icon ? eLE$props$children$length + 1 : eLE$props$children$length)), n), e$props$className),
+        title: "string" === typeof e$props1$title ? e$props1$title : undefined
+      }), $_315.a(e$props1$icon, {
+        className: N($_315.b(e$props1$icon) ? null === (g$props = e$props1$icon.props) || undefined === g$props ? undefined : g$props.className : "", "".concat(e$context$prefixCls, "-item-icon"))
       }), e.renderItemChildren(e$context$inlineCollapsed)))
     }
     return e
@@ -162,22 +162,22 @@ var nL = function (e) {
         var /* [auto-meaningful-name] */this$props = this.props
         var /* [auto-meaningful-name] */this$props$icon = this$props.icon
         var /* [auto-meaningful-name] */this$props$children = this$props.children
-        var s = _React.createElement("span", {
+        var s = React1.createElement("span", {
           className: "".concat(this$context$prefixCls, "-title-content")
         }, this$props$children)
-        return (!this$props$icon || $_315.b(this$props$children) && "span" === this$props$children.type) && this$props$children && e && this$context$firstLevel && "string" === typeof this$props$children ? _React.createElement("div", {
+        return (!this$props$icon || $_315.b(this$props$children) && "span" === this$props$children.type) && this$props$children && e && this$context$firstLevel && "string" === typeof this$props$children ? React1.createElement("div", {
           className: "".concat(this$context$prefixCls, "-inline-collapsed-noicon")
         }, this$props$children.charAt(0)) : s
       }
     }, {
       key: "render",
       value: function () {
-        return _React.createElement(ES.Consumer, null, this.renderItem)
+        return React1.createElement(ES.Consumer, null, this.renderItem)
       }
     }
   ])
   return n
-}(_React.Component)
+}(React1.Component)
 nL.contextType = JM
 var rL = function (e, t) {
   var n = {}
@@ -199,9 +199,9 @@ var oL = function (e) {
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$dashed = e.dashed
   var o = rL(e, ["prefixCls", "className", "dashed"])
-  var i = (0, _React.useContext($_801_index.b).getPrefixCls)("menu", e$prefixCls)
+  var i = (0, React1.useContext($_801_index.b).getPrefixCls)("menu", e$prefixCls)
   var a = N(Ln.a({}, "".concat(i, "-item-divider-dashed"), !!e$dashed), e$className)
-  return _React.createElement($_559_index.a, Dn.a({
+  return React1.createElement($_559_index.a, Dn.a({
     className: a
   }, o))
 }
@@ -259,11 +259,11 @@ var aL = function (e) {
           firstLevel: true
         }
       })(g, h, r$props$theme, e$direction)
-      return _React.createElement(JM.Provider, {
+      return React1.createElement(JM.Provider, {
         value: v
-      }, _React.createElement($_559_index.e, Dn.a({
+      }, React1.createElement($_559_index.e, Dn.a({
         getPopupContainer: e$getPopupContainer,
-        overflowedIndicator: _React.createElement(GM, null),
+        overflowedIndicator: React1.createElement(GM, null),
         overflowedIndicatorPopupClassName: "".concat(g, "-").concat(r$props$theme)
       }, p, {
         inlineCollapsed: h,
@@ -292,12 +292,12 @@ var aL = function (e) {
     }, {
       key: "render",
       value: function () {
-        return _React.createElement($_801_index.a, null, this.renderMenu)
+        return React1.createElement($_801_index.a, null, this.renderMenu)
       }
     }
   ])
   return n
-}(_React.Component)
+}(React1.Component)
 aL.defaultProps = {
   theme: "light"
 }
@@ -313,14 +313,14 @@ var sL = function (e) {
       key: "render",
       value: function () {
         var e = this
-        return _React.createElement(ES.Consumer, null, function (t) {
-          return _React.createElement(aL, Dn.a({}, e.props, t))
+        return React1.createElement(ES.Consumer, null, function (t) {
+          return React1.createElement(aL, Dn.a({}, e.props, t))
         })
       }
     }
   ])
   return n
-}(_React.Component)
+}(React1.Component)
 sL.Divider = oL
 sL.Item = nL
 sL.SubMenu = $M

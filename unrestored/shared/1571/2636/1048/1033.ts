@@ -17,10 +17,10 @@ function o(e) {
   if (!$$_2680_466.a()) {
     return null
   }
-  var /* [auto-meaningful-name] */_n$csp
+  var /* [auto-meaningful-name] */n$csp1
   var a = document.createElement("style")
   if (null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) {
-    a.nonce = null === (_n$csp = n.csp) || undefined === _n$csp ? undefined : _n$csp.nonce
+    a.nonce = null === (n$csp1 = n.csp) || undefined === n$csp1 ? undefined : n$csp1.nonce
   }
   a.innerHTML = e
   var s = i(n)
@@ -51,10 +51,10 @@ function s(e, t) {
   })
   if (u) {
     var /* [auto-meaningful-name] */n$csp
-    var /* [auto-meaningful-name] */_n$csp2
-    var /* [auto-meaningful-name] */_n$csp3
-    if ((null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) && u.nonce !== (null === (_n$csp2 = n.csp) || undefined === _n$csp2 ? undefined : _n$csp2.nonce)) {
-      u.nonce = null === (_n$csp3 = n.csp) || undefined === _n$csp3 ? undefined : _n$csp3.nonce
+    var /* [auto-meaningful-name] */n$csp1
+    var /* [auto-meaningful-name] */n$csp2
+    if ((null === (n$csp = n.csp) || undefined === n$csp ? undefined : n$csp.nonce) && u.nonce !== (null === (n$csp1 = n.csp) || undefined === n$csp1 ? undefined : n$csp1.nonce)) {
+      u.nonce = null === (n$csp2 = n.csp) || undefined === n$csp2 ? undefined : n$csp2.nonce
     }
     if (u.innerHTML !== e) {
       u.innerHTML = e

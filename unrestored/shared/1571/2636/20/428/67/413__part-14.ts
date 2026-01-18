@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_691_index from "../../../691/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_145 from "../../../145"
@@ -25,7 +25,7 @@ function Se(e, t) {
   return (null === (n = $$_12.b(t)) || undefined === n ? undefined : n.parentId) === e
 }
 function Ae(e, t) {
-  var n = _React.useMemo(function () {
+  var n = React1.useMemo(function () {
     return function (e, t) {
       return {
         handleActorClick: function (t) {
@@ -90,7 +90,7 @@ function Ae(e, t) {
   var /* [auto-meaningful-name] */n$handleActorClick = n.handleActorClick
   var /* [auto-meaningful-name] */n$handleActorMouseDown = n.handleActorMouseDown
   var /* [auto-meaningful-name] */n$handleActorMouseUp = n.handleActorMouseUp
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (t) {
       var /* [auto-meaningful-name] */t$events = t.events
       t$events.add_listener("actor:click", n$handleActorClick)
@@ -108,15 +108,15 @@ function Ae(e, t) {
     }
   }, [t, n$handleActorClick, n$handleActorMouseDown, n$handleActorMouseUp])
 }
-var Ie = _React.memo(function (e) {
-  var t = _React.useRef(null)
-  var n = _React.useRef(null)
-  var r = _React.useRef(null)
-  var o = _React.useState(false)
+var Ie = React1.memo(function (e) {
+  var t = React1.useRef(null)
+  var n = React1.useRef(null)
+  var r = React1.useRef(null)
+  var o = React1.useState(false)
   var l = $$_$$_$$_10_index.a(o, 2)
   var u = l[0]
   var p = l[1]
-  var f = _React.useState()
+  var f = React1.useState()
   var h = $$_$$_$$_10_index.a(f, 2)
   var m = h[0]
   var g = h[1]
@@ -142,7 +142,7 @@ var Ie = _React.memo(function (e) {
     return e.imageFileMap
   })
   !function (e, t) {
-    _React.useEffect(function () {
+    React1.useEffect(function () {
       if (t) {
         var n = function (n) {
           var /* [auto-meaningful-name] */n$target_id = n.target_id
@@ -234,7 +234,7 @@ var Ie = _React.memo(function (e) {
     }, [t, e])
   }(M, m)
   Ae(M, m)
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (null === n || undefined === n ? undefined : n.current) {
       var e = $$_$$_$$_691_index.a()
       r.current = e
@@ -265,19 +265,19 @@ var Ie = _React.memo(function (e) {
       }
     }
   }, [])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
       $$_$$_$$_145.q(r$current, e$size$width * k, e$size$height * k)
     }
   }, [k, e$size$width, e$size$height])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
       $$_$$_$$_145.n(r$current, e$attributes$backgroundColor)
     }
   }, [e$attributes$backgroundColor])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */r$current = r.current
     if (r$current) {
       var t
@@ -296,7 +296,7 @@ var Ie = _React.memo(function (e) {
   }, [e$attributes$backgroundImage, P, e$attributes$resizeMode])
   var /* [auto-meaningful-name] */e$widgetIds$length = e$widgetIds.length
   var F = 0
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (0 === e$widgetIds$length && e$onload) {
       e$onload(M)
     }

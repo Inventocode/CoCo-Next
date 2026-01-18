@@ -4,5 +4,5 @@
  * 模块 ID：1243
  */
 
-var r = require("../1686/246/index")
+var r = require("../1686/246")
 exports.f = r

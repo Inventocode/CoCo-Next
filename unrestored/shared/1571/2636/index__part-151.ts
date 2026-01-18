@@ -12,7 +12,7 @@ import * as Dn from "./19"
 import N from "./8"
 import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_1060 from "./1060"
-import /* [auto-meaningful-name] */_$_ from "./1060"
+import /* [auto-meaningful-name] */$_10601 from "./1060"
 var LT = {
   className: "",
   percent: 0,

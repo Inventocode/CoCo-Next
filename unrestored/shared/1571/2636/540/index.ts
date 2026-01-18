@@ -11,9 +11,9 @@ import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as i from "../8"
 import a from "../8"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */_$$_80_index from "../80/index"
+import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
 import "./868"
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 var _a
@@ -76,7 +76,7 @@ _a = React.memo(function (e) {
       A(true)
     }
   }, [e$visible])
-  var R = _React.createElement("div", {
+  var R = React1.createElement("div", {
     "data-html2canvas-ignore": "true",
     ref: w,
     tabIndex: -1,
@@ -84,32 +84,32 @@ _a = React.memo(function (e) {
     style: r.a({
       display: e$visible ? "block" : "none"
     }, e$style)
-  }, h && _React.createElement("div", {
+  }, h && React1.createElement("div", {
     className: e$visible ? "coco-dialog-mask" : a("coco-dialog-mask", "hidden"),
     onClick: N
-  }), _React.createElement("div", {
+  }), React1.createElement("div", {
     className: "coco-dialog-scroll"
-  }, _React.createElement("div", {
+  }, React1.createElement("div", {
     className: e$visible ? a("coco-dialog-wrapper", "show") : a("coco-dialog-wrapper", "hidden"),
     onAnimationEnd: function () {
       if (!e$visible) {
         A(false)
       }
     }
-  }, _React.createElement("div", {
+  }, React1.createElement("div", {
     className: e$title && v ? "coco-dialog-title" : ""
-  }, e$title && _React.createElement("div", null, e$title), v && _React.createElement("span", {
+  }, e$title && React1.createElement("div", null, e$title), v && React1.createElement("span", {
     className: "coco-dialog-close",
     onClick: j
-  }, _React.createElement($$_94_index.a, {
+  }, React1.createElement($$_94_index.a, {
     type: "icon-close"
-  }))), _React.createElement("div", {
+  }))), React1.createElement("div", {
     className: "coco-dialog-content",
     ref: C
-  }, e$children), e$footer && _React.createElement("div", {
+  }, e$children), e$footer && React1.createElement("div", {
     className: "coco-dialog-footer"
   }, e$footer))))
-  return y ? _$$_80_index.createPortal(R, I) : R
+  return y ? $$_80_index1.createPortal(R, I) : R
 })
 export { _a as a }
 export default _a

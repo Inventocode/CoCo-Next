@@ -6,13 +6,13 @@
 
 var r = require("./1705/86/index")
 var o = require("./1705/240")
-var /* [auto-meaningful-name] */require$_1705_386$f = require("./1705/386").f
+var /* [auto-meaningful-name] */require$_1705_386_index$f = require("./1705/386/index").f
 r({
   target: "Reflect",
   stat: true
 }, {
   deleteProperty: function (e, t) {
-    var n = require$_1705_386$f(o(e), t)
+    var n = require$_1705_386_index$f(o(e), t)
     return !(n && !n.configurable) && delete e[t]
   }
 })

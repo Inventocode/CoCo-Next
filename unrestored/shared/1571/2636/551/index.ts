@@ -8,13 +8,13 @@
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */_React from "react"
+import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */_Color from "color"
+import /* [auto-meaningful-name] */Color1 from "color"
 import * as c from "../8"
 import l from "../8"
 import * as /* [auto-meaningful-name] */$_487_index from "./487/index"
-import * as /* [auto-meaningful-name] */$_488 from "./488"
+import * as /* [auto-meaningful-name] */$_488_index from "./488/index"
 import * as /* [auto-meaningful-name] */$_278 from "./278"
 import * as /* [auto-meaningful-name] */$_1211_index from "./1211/index"
 import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
@@ -23,7 +23,7 @@ import * as /* [auto-meaningful-name] */$$_234 from "../234"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$_437 from "./437"
-import /* [auto-meaningful-name] */_$_ from "./437"
+import /* [auto-meaningful-name] */$_4371 from "./437"
 var _a
 _a = React.memo(function (e) {
   var t = e.id
@@ -42,7 +42,7 @@ _a = React.memo(function (e) {
     var /* [auto-meaningful-name] */e$project
     return null === e || undefined === e || null === (e$project = e.project) || undefined === e$project ? undefined : e$project.playing
   })
-  return _React.createElement("div", {
+  return React1.createElement("div", {
     id: t,
     "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.n,
@@ -50,7 +50,7 @@ _a = React.memo(function (e) {
     "data-max-width": $$_234.j,
     "data-min-height": $$_234.k,
     "data-max-height": $$_234.i,
-    className: l($$_90.b, $$_11.a({}, _$_.hide, !e$visible), _$_.dataPicker),
+    className: l($$_90.b, $$_11.a({}, $_4371.hide, !e$visible), $_4371.dataPicker),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -58,15 +58,15 @@ _a = React.memo(function (e) {
       height: e$size.height,
       textAlign: "center",
       fontSize: e$attributes$fontSize,
-      color: _Color(e$attributes$color).toString(),
-      backgroundColor: _Color(e$attributes$backgroundColor).toString(),
+      color: Color1(e$attributes$color).toString(),
+      backgroundColor: Color1(e$attributes$backgroundColor).toString(),
       borderRadius: "18px"
     },
     ref: S
-  }, _React.createElement($_278.a, {
+  }, React1.createElement($_278.a, {
     utils: $_487_index.a,
-    locale: $_488.a
-  }, _React.createElement($_1211_index.a, {
+    locale: $_488_index.a
+  }, React1.createElement($_1211_index.a, {
     format: "yyyy年MM月dd日",
     value: A,
     onChange: function (e) {
@@ -75,7 +75,7 @@ _a = React.memo(function (e) {
       }
     },
     TextFieldComponent: function (e) {
-      return _React.createElement("div", {
+      return React1.createElement("div", {
         style: {
           textAlign: "center",
           fontSize: e$attributes$fontSize,
@@ -97,8 +97,8 @@ _a = React.memo(function (e) {
     },
     cancelLabel: "取消",
     okLabel: "确定"
-  })), undefined !== I && !I && _React.createElement("div", {
-    className: l(_$_.mask),
+  })), undefined !== I && !I && React1.createElement("div", {
+    className: l($_4371.mask),
     onClick: function () {
       var e
       var /* [auto-meaningful-name] */S$current = S.current

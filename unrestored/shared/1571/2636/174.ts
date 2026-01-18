@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */_RegeneratorRuntime from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "./7"
 import * as a from "./27"
 import * as s from "./39"
@@ -63,9 +63,9 @@ var c = function () {
     }, {
       key: "_getTransaction",
       value: function () {
-        var e = i.a(_RegeneratorRuntime.mark(function e(t) {
+        var e = i.a(RegeneratorRuntime1.mark(function e(t) {
           var n
-          return _RegeneratorRuntime.wrap(function (e) {
+          return RegeneratorRuntime1.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
                 case 0:
@@ -97,9 +97,9 @@ var c = function () {
     }, {
       key: "_getObjectStore",
       value: function () {
-        var e = i.a(_RegeneratorRuntime.mark(function e() {
+        var e = i.a(RegeneratorRuntime1.mark(function e() {
           var /* [auto-meaningful-name] */e$sent
-          return _RegeneratorRuntime.wrap(function (e) {
+          return RegeneratorRuntime1.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
                 case 0:

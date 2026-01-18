@@ -48,10 +48,10 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_816 from "./816"
-import /* [auto-meaningful-name] */_$_ from "./816"
-var cB = _React.memo(function () {
+import /* [auto-meaningful-name] */$_8161 from "./816"
+var cB = React1.memo(function () {
   var e = $_16_index.e(function (e) {
     return e.common.permissionDialogInfo
   })
@@ -80,15 +80,15 @@ var cB = _React.memo(function () {
     showCloseButton: false,
     withPortal: true,
     maskClosable: false,
-    className: N(_$_.dialog, e$className)
+    className: N($_8161.dialog, e$className)
   }, React.createElement("img", {
-    className: _$_.permissionImage,
+    className: $_8161.permissionImage,
     src: Https__static$bcmcdn$com_coco_image_permission_camera$png,
     alt: ""
   }), React.createElement("div", {
-    className: _$_.content
+    className: $_8161.content
   }, React.createElement("h3", null, "授权提示"), React.createElement("span", null, f), React.createElement("div", {
-    className: N(_$_.dialogButtons)
+    className: N($_8161.dialogButtons)
   }, React.createElement($_13_index.d, {
     onClick: function () {
       if (e$onDeny) {
@@ -99,7 +99,7 @@ var cB = _React.memo(function () {
         visible: false
       }))
     },
-    className: _$_.denyButton
+    className: $_8161.denyButton
   }, c), React.createElement($_13_index.d, {
     type: "primary",
     danger: e$isDangerous,

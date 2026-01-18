@@ -14,18 +14,18 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_206 from "../../../206"
 import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
 import /* [auto-meaningful-name] */Color from "color"
 export { ze as c }
 export { Ye as b }
 var _a
-_a = _React.memo(function (e) {
+_a = React1.memo(function (e) {
   var t = e.id
   var n = $$_$$_$$_16_index.e(function (e) {
     return e.widgetMap
   })
-  var r = _React.useRef({
+  var r = React1.useRef({
     x: 0,
     y: 0
   })
@@ -49,10 +49,10 @@ _a = _React.memo(function (e) {
       m++
     }
   })
-  var v = _React.useCallback(function (e) {
+  var v = React1.useCallback(function (e) {
     $$_$$_index.emitScreenOpen(e, h)
   }, [h])
-  _React.useEffect(function () {
+  React1.useEffect(function () {
     if (0 === m) {
       v(t)
     }
@@ -69,7 +69,7 @@ _a = _React.memo(function (e) {
       $$_$$_index.offDeviceShake(e)
     }
   }, [m, t, v])
-  var b = _React.useCallback(function (e) {
+  var b = React1.useCallback(function (e) {
     if (++g >= m) {
       v(t)
     }

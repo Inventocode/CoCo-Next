@@ -21,10 +21,10 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */_React from "react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1057 from "./1057"
-import /* [auto-meaningful-name] */_$_ from "./1057"
-var UC = _React.memo(function (e) {
+import /* [auto-meaningful-name] */$_10571 from "./1057"
+var UC = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$editConfig = e.editConfig
   var /* [auto-meaningful-name] */e$widgetIcon = e.widgetIcon
@@ -71,20 +71,20 @@ var UC = _React.memo(function (e) {
     }
   }
   return React.createElement($_13_index.h, {
-    className: N(_$_.formGroup, a && _$_.formGroupHasHelpUrl),
+    className: N($_10571.formGroup, a && $_10571.formGroupHasHelpUrl),
     "data-updated-at": s
   }, React.createElement("div", null, function e(n, r) {
     return n.map(function (n, o) {
       return Array.isArray(n) ? React.createElement($_13_index.u, {
         key: "".concat(e$widgetId, "-").concat(o),
-        className: _$_.formItemWrapper,
+        className: $_10571.formItemWrapper,
         align: "middle",
         justify: "space-between"
       }, e(n, true)) : u(n, r)
     })
   }(e$editConfig, false)))
 })
-var HC = _React.memo(function () {
+var HC = React1.memo(function () {
   var e = $_16_index.d()
   var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
   var n = $_16_index.e(function (e) {

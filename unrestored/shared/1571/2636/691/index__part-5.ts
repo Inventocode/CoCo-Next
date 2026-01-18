@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$_119 from "./119"
 import * as c from "./65"
 import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
 import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */_Axios from "axios"
+import /* [auto-meaningful-name] */Axios1 from "axios"
 var V = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
@@ -230,7 +230,7 @@ var X = function () {
             d.label = 1
           case 1:
             d.trys.push([1, 3,, 4])
-            return [4, _Axios.get(e)]
+            return [4, Axios1.get(e)]
           case 2:
             i = d.sent()
             i$data = i.data
@@ -353,7 +353,7 @@ var J = function () {
     var o = 1e3 * e.duration
     var s = performance.now()
     var c = (null === (e$to_options = e.to_options) || undefined === e$to_options ? undefined : e$to_options.ease) || P.QUAD
-    var /* [auto-meaningful-name] */_e$to_options = e.to_options
+    var /* [auto-meaningful-name] */e$to_options1 = e.to_options
     var l = e.delay ? 1e3 * e.delay : 0
     switch (c) {
       case P.QUAD:
@@ -364,21 +364,21 @@ var J = function () {
     }
     var f = {}
     if (!(e$target instanceof $_32_index.A)) {
-      if (undefined !== _e$to_options.x && _e$to_options.x - e$target.position.x !== 0) {
-        f.update_x = this.update_attributes(e$target, _e$to_options.x, Y.X)
+      if (undefined !== e$to_options1.x && e$to_options1.x - e$target.position.x !== 0) {
+        f.update_x = this.update_attributes(e$target, e$to_options1.x, Y.X)
       }
-      if (undefined !== _e$to_options.y && _e$to_options.y - e$target.position.y !== 0) {
-        f.update_y = this.update_attributes(e$target, _e$to_options.y, Y.Y)
+      if (undefined !== e$to_options1.y && e$to_options1.y - e$target.position.y !== 0) {
+        f.update_y = this.update_attributes(e$target, e$to_options1.y, Y.Y)
       }
-      if (undefined !== _e$to_options.visible) {
-        e$target.visible = _e$to_options.visible
+      if (undefined !== e$to_options1.visible) {
+        e$target.visible = e$to_options1.visible
       }
-      if (undefined !== _e$to_options.alpha) {
-        f.update_alpha = this.update_attributes(e$target, _e$to_options.alpha, Y.ALPHA)
+      if (undefined !== e$to_options1.alpha) {
+        f.update_alpha = this.update_attributes(e$target, e$to_options1.alpha, Y.ALPHA)
       }
     }
-    if (undefined !== _e$to_options.angle) {
-      f.update_angle = this.update_attributes(e$target, _e$to_options.angle, Y.ANGLE)
+    if (undefined !== e$to_options1.angle) {
+      f.update_angle = this.update_attributes(e$target, e$to_options1.angle, Y.ANGLE)
     }
     var d = function e() {
       var t = performance.now()

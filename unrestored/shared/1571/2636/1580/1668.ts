@@ -8,7 +8,7 @@ var r = require("./1705/86/index")
 var o = require("./1699/271")
 var i = require("./1703/1080")
 var a = require("./1581/441")
-var s = require("./1705/386")
+var s = require("./1705/386/index")
 var c = require("./1597/716")
 r({
   target: "Object",
