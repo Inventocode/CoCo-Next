@@ -196,17 +196,18 @@ function hn() {
   }))).apply(this, arguments)
 }
 
+/** [CoCo Next] 添加移除自定义控件的功能 */
 export async function removeUnsafeExtensionWidget(type: string) {
-  const unsafeExtensionWidgetList: any[] = $_24_index.a.getDoc()?.unsafeExtensionWidgetList
+  const unsafeExtensionWidgetList: any[] = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()?.unsafeExtensionWidgetList
   if (unsafeExtensionWidgetList === undefined) {
     return
   }
   const index = unsafeExtensionWidgetList.findIndex((widget) => widget.type == type)
   if (index === -1) {
-    return -1
+    return
   }
   const op = OtJson1.removeOp(["unsafeExtensionWidgetList", index], true)
-  $_24_index.a.applyClient(op)
+  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(op)
 }
 
 function mn(e) {

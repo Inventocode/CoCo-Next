@@ -95,7 +95,7 @@ function OpenWork() {
             dispatch(Actions.openConfirmDialogAction({
               onConfirm() { resolve(true) },
               onCancel() { resolve(false) },
-              title: "",
+              title: "协作安全提醒",
               content: "作品使用了未审核的自定义控件，进行协作可能存在安全隐患，确定要进行协作吗？",
               isDangerous: true
             }))

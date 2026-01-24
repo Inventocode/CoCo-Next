@@ -92,6 +92,7 @@ export const UserInfo = React.memo((__props) => {
                 }
                 if (location.hostname == "coco-next.localhost") {
                   dispatch($$_$$_$$_redux_common_actions.openConfirmDialogAction({
+                    title: "提示",
                     content: "当前界面不需要进行原始登录，确定要继续吗？",
                     onConfirm: open
                   }))

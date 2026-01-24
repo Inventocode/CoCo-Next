@@ -2,6 +2,8 @@ const path = require("path")
 const rspack = require("@rspack/core")
 const { merge } = require("webpack-merge")
 const SWC = require("@swc/types")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
+const WebpackCdnPlugin = require("webpack-cdn-plugin")
 
 /**
  * @typedef {Object} PageInfo
@@ -141,7 +143,6 @@ function commonConfig(development, env) {
         resolve: {
             extensions: [".ts", ".tsx", ".js", ".jsx"],
             alias: {
-                "lodash-es": require.resolve("lodash"),
                 "lodash._arrayeach": require.resolve("lodash/_arrayEach"),
                 "lodash._baseeach": require.resolve("lodash/_baseEach"),
                 "lodash._getnative": require.resolve("lodash/_getNative"),
@@ -165,6 +166,87 @@ function commonConfig(development, env) {
             new rspack.ProgressPlugin(),
             new rspack.ProvidePlugin({
                 process: "process/"
+            }),
+            // @ts-ignore
+            new WebpackCdnPlugin({
+                modules: [
+                    {
+                        name: "react",
+                        var: "React",
+                        path: development ? "umd/react.development.js" : "umd/react.production.min.js"
+                    }, {
+                        name: "react-dom",
+                        var: "ReactDOM",
+                        path: development ? "umd/react-dom.development.js" : "umd/react-dom.production.min.js"
+                    }, {
+                        name: "terser",
+                        var: "Terser",
+                        path: "dist/bundle.min.js"
+                    }, {
+                        name: "lodash",
+                        var: "_",
+                        path: "lodash.min.js"
+                    }, {
+                        name: "ag-grid-community",
+                        var: "agGrid",
+                        path: "dist/ag-grid-community.min.noStyle.js"
+                    }, {
+                        name: "xlsx",
+                        var: "XLSX",
+                        path: "dist/xlsx.full.min.js"
+                    }, {
+                        name: "dayjs",
+                        var: "dayjs",
+                        path: "dayjs.min.js"
+                    }, {
+                        name: "antd",
+                        var: "antd",
+                        path: "dist/antd.min.js"
+                    }, {
+                        name: "antd-mobile",
+                        var: "antdMobile",
+                        path: development ? "bundle/antd-mobile.umd.development.js" : "bundle/antd-mobile.umd.js",
+                        style: "bundle/style.css"
+                    }, {
+                        name: "html2canvas",
+                        var: "html2canvas",
+                        path: "dist/html2canvas.min.js"
+                    }, {
+                        name: "quill",
+                        var: "Quill",
+                        path: "dist/quill.js"
+                    }, {
+                        name: "intl",
+                        var: "IntlPolyfill",
+                        path: "dist/Intl.min.js"
+                    }, {
+                        name: "prop-types",
+                        var: "PropTypes",
+                        path: "prop-types.min.js"
+                    }, {
+                        name: "react-intl",
+                        var: "ReactIntl",
+                        path: "dist/react-intl.min.js"
+                    }, {
+                        name: "axios",
+                        var: "axios",
+                        path: "dist/axios.min.js"
+                    }, {
+                        name: "redux-saga",
+                        var: "ReduxSaga",
+                        path: "dist/redux-saga.min.js"
+                    }, {
+                        name: "react-router",
+                        var: "ReactRouter",
+                        path: "umd/react-router.min.js"
+                    }, {
+                        name: "react-redux",
+                        var: "ReactRedux",
+                        path: "dist/react-redux.min.js"
+                    }
+                ],
+                prodUrl: "https://cdn.jsdmirror.com/npm/:name@:version/:path",
+                crossOrigin: true
             })
         ]
     }
@@ -173,7 +255,7 @@ function commonConfig(development, env) {
         commonConfig.plugins ??= []
         for (const filename of filenames) {
             commonConfig.plugins.push(
-                new rspack.HtmlRspackPlugin({
+                new HtmlWebpackPlugin({
                     filename,
                     template: `src/${name}/index.html`,
                     chunks: ["proxy", name]
