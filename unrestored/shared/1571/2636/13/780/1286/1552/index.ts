@@ -4,9 +4,9 @@
  * 模块 ID：1552
  */
 
-var r = require("./1801")
+var r = require("./1801/index")
 var i = require("./1802")
-var o = require("./1803/index")
+var o = require("./1803")
 var a = require("./1804")
 module.exports = function (e) {
   return r(e) || i(e) || o(e) || a()

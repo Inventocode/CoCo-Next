@@ -1997,7 +1997,7 @@ var pk = function (e) {
   var /* [auto-meaningful-name] */e$viewport$scroll$diff$value = e$viewport.scroll.diff.value
   return e$additions.map(function (e) {
     var /* [auto-meaningful-name] */e$descriptor$droppableId = e.descriptor.droppableId
-    var /* [auto-meaningful-name] */functionEVar_AutoMeaningfulName_tE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value = function (e) {
+    var /* [auto-meaningful-name] */functionEVarTE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value = function (e) {
       var /* [auto-meaningful-name] */e$frame = e.frame
       if (!e$frame) {
         NN(false)
@@ -2019,7 +2019,7 @@ var pk = function (e) {
       })
     }({
       draggable: e,
-      offset: WN(e$viewport$scroll$diff$value, functionEVar_AutoMeaningfulName_tE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value),
+      offset: WN(e$viewport$scroll$diff$value, functionEVarTE$frameIfTNNFalseReturnTE$updatedDroppablesE$descriptor$droppableId$scroll$diff$value),
       initialWindowScroll: e$viewport.scroll.initial
     })
   })

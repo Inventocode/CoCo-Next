@@ -4,8 +4,8 @@
  * 模块 ID：1697
  */
 
-var r = require("./1705/86/index")
-var o = require("./1705/240")
+var r = require("./1706/86/index")
+var o = require("./1706/240")
 var /* [auto-meaningful-name] */require$_1705_386_index$f = require("./1705/386/index").f
 r({
   target: "Reflect",

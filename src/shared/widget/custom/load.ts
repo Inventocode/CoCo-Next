@@ -33,11 +33,11 @@ import * as Language from "../../ui/language"
 import { oTHelper } from "../../../editor/collaboration/ot-helper"
 import * as ExternalModule from "./external-module"
 import * as Store from "../../../editor/redux/store"
-import * as Actions from "../../../editor/redux/common/actions"
+import * as CommonActions from "../../../editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as Shop from "./shop"
-import * as restrict from "./restrict"
+import * as Restrict from "./restrict"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_index from "../../../../unrestored/shared/1571/2636/20/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_55 from "../../../../unrestored/shared/1571/2636/55"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../unrestored/shared/1571/2636/301/85"
@@ -527,7 +527,7 @@ export async function loadCustomWidget(
     "InvisibleWidget",
     "VisibleWidget",
     "React",
-    ...restrict.objectKeys,
+    ...Restrict.objectKeys,
     code
   ).apply(undefined, [
     ExternalModule.requireExternalModule,
@@ -535,7 +535,7 @@ export async function loadCustomWidget(
     class {},
     class {},
     React,
-    ...restrict.objectValues
+    ...Restrict.objectValues
   ])
   const EXTERNAL_MODULE_BASE_URL: string = "https://static.bcmcdn.com/appcraft/modules/"
   const OLD_EXTERNAL_MODULE_BASE_URL = "https://static.codemao.cn/appcraft/modules/"
@@ -547,7 +547,7 @@ export async function loadCustomWidget(
     "InvisibleWidget",
     "VisibleWidget",
     "React",
-    ...restrict.objectKeys,
+    ...Restrict.objectKeys,
     code
   ).apply(undefined, [
     widgetRequire,
@@ -555,7 +555,7 @@ export async function loadCustomWidget(
     InvisibleWidget,
     VisibleWidget,
     React,
-    ...restrict.objectValues
+    ...Restrict.objectValues
   ])
   const widgetTypes: types.Types = widgetExports.types!
   const widgetWidget: types.Widget = widgetExports.widget!
@@ -628,7 +628,7 @@ export function registerCustomWidget(
   }
   if (Storage.getUnsafeExtension(type)) {
     const unprefixedType: string = Type.toUnprefixed(type, false)
-    Store.dispatch(Actions.openConfirmDialogAction({
+    Store.dispatch(CommonActions.openConfirmDialogAction({
       onConfirm: registered,
       onCancel,
       allowText: Language.format(Language.zh_CN, "ExtensionWidget.overwrite").toString(),
@@ -711,7 +711,7 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
           Storage.addUnsafeExtension({ type, types, code })
           oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget({ type, code })
         }
-        Store.dispatch(Actions.updateExtensionWidgetListAction())
+        Store.dispatch(CommonActions.updateExtensionWidgetListAction())
         resolve(types)
       },
       (): void => {
@@ -753,13 +753,13 @@ function checkKeyWords(code: string): void {
     throw new Error("file getElementsByClassName(*readonly*) not allow")
   }
   const includedKeyWords: string[] = []
-  restrict.keyWords.forEach((keyWord): void => {
+  Restrict.keyWords.forEach((keyWord): void => {
     if (code.includes(keyWord)) {
       includedKeyWords.push(keyWord)
     }
   })
   if (includedKeyWords.length > 0) {
-    Store.dispatch(Actions.openConfirmDialogAction({
+    Store.dispatch(CommonActions.openConfirmDialogAction({
       allowText: Language.format(Language.zh_CN, "cloudDb.know").toString(),
       title: "error",
       content: "自定义控件存在问题，不支持导入",
@@ -799,7 +799,7 @@ export async function loadWidgetsFromFile(
   if (unsafeWidgets.length) {
     await Promise.all(unsafeWidgets.map(({ code }): Promise<void> => importWidget(code)))
   }
-  Store.dispatch(Actions.updateExtensionWidgetListAction())
+  Store.dispatch(CommonActions.updateExtensionWidgetListAction())
   const onlineSafeWidgets = safeWidgets.filter((widget) =>
     widget.cdnUrl.startsWith("https") && widget.id)
   if (!onlineSafeWidgets.length) {

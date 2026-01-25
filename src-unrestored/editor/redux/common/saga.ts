@@ -53,7 +53,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../unrestored/shared/1571/2636/26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../unrestored/shared/1571/2636/297"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627_index from "../../../../unrestored/shared/1571/2636/627/index"
 import * as /* [auto-meaningful-name] */Terser from "terser"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2680_index from "../../../../unrestored/shared/1571/2636/2680/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../unrestored/shared/1571/2636/11"
@@ -2144,9 +2144,9 @@ function $a(e) {
             y.next = 81
             break
           }
-          if ($$_$$_$$_$$_unrestored_shared_1571_2636_627.a.isLoaded()) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.show()
-            $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.close({
+          if ($$_$$_$$_$$_unrestored_shared_1571_2636_627_index.a.isLoaded()) {
+            $$_$$_$$_$$_unrestored_shared_1571_2636_627_index.a.show()
+            $$_$$_$$_$$_unrestored_shared_1571_2636_627_index.a.close({
               closeAnimationPos: {
                 x: 150,
                 y: 30

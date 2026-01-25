@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_15 
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_redux_common_actions from "../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../unrestored/shared/1571/2636/627"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_627_index from "../../../unrestored/shared/1571/2636/627/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../unrestored/shared/1571/2636/710/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -311,7 +311,7 @@ var LM = function () {
                 }).catch(function () {
                   o.current = false
                 })
-                $$_$$_$$_unrestored_shared_1571_2636_627.a.load({
+                $$_$$_$$_unrestored_shared_1571_2636_627_index.a.load({
                   onPlayerInit: function () {},
                   title: React.createElement("div", null, React.createElement("span", {
                     style: {
@@ -328,7 +328,7 @@ var LM = function () {
                         for (;;) {
                           switch (t.prev = t.next) {
                             case 0:
-                              $$_$$_$$_unrestored_shared_1571_2636_627.a.close({
+                              $$_$$_$$_unrestored_shared_1571_2636_627_index.a.close({
                                 closeAnimationPos: {
                                   x: 150,
                                   y: 30
@@ -352,14 +352,14 @@ var LM = function () {
                   useConfirmMask: true,
                   confirmPercent: .9,
                   onMinimizeBtnClick: function () {
-                    $$_$$_$$_unrestored_shared_1571_2636_627.a.hide()
+                    $$_$$_$$_unrestored_shared_1571_2636_627_index.a.hide()
                     e($$_redux_common_actions.Qh($$_$$_$$_unrestored_shared_1571_2636_392_index.a, {
                       name: $$_$$_$$_unrestored_shared_1571_2636_392_index.a,
                       content: React.createElement($$_$$_$$_unrestored_shared_1571_2636_392_index.b, null)
                     }))
                   },
                   onClose: function () {
-                    $$_$$_$$_unrestored_shared_1571_2636_627.a.close({
+                    $$_$$_$$_unrestored_shared_1571_2636_627_index.a.close({
                       closeAnimationPos: {
                         x: 150,
                         y: 30

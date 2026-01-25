@@ -1464,12 +1464,12 @@ var Pe = function () {
       return Re(this, function (l) {
         switch (l.label) {
           case 0:
-            return this.box2d ? [3, 2] : (r = this, [4, Promise.reject(new Error("module (key: 3323) not found!"))])
+            return this.box2d ? [3, 2] : (r = this, [4, import("./3323")])
           case 1:
             r.box2d = l.sent()
             l.label = 2
           case 2:
-            return !e || this.debug_draw ? [3, 4] : (this$app$get_app$view = this.app.get_app().view).parentElement ? ((o = document.createElement("canvas")).width = this$app$get_app$view.width, o.height = this$app$get_app$view.height, o.style.width = this$app$get_app$view.style.width, o.style.height = this$app$get_app$view.style.height, o.style.position = "absolute", o.style.top = "0", o.style.left = "0", o.style.pointerEvents = "none", this$app$get_app$view.parentElement.appendChild(o), [4, Promise.reject(new Error("module (key: 3325) not found!"))]) : [2]
+            return !e || this.debug_draw ? [3, 4] : (this$app$get_app$view = this.app.get_app().view).parentElement ? ((o = document.createElement("canvas")).width = this$app$get_app$view.width, o.height = this$app$get_app$view.height, o.style.width = this$app$get_app$view.style.width, o.style.height = this$app$get_app$view.style.height, o.style.position = "absolute", o.style.top = "0", o.style.left = "0", o.style.pointerEvents = "none", this$app$get_app$view.parentElement.appendChild(o), [4, import("./3325")]) : [2]
           case 3:
             l$sent$DebugDraw = l.sent().DebugDraw
             this.debug_draw = new l$sent$DebugDraw(o)

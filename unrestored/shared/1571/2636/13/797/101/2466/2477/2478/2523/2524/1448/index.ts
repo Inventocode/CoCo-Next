@@ -5,7 +5,7 @@
  */
 
 var r = require("./1449/index")
-var i = require("../../1001")
+var i = require("../../../2533/1001")
 module.exports = function (e, t) {
   for (var n = 0, /* [auto-meaningful-name] */TRTE$length = (t = r(t, e)).length; null != e && n < TRTE$length;) {
     e = e[i(t[n++])]

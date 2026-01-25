@@ -7,7 +7,7 @@
 "use strict"
 
 import { qn } from "./index__part-9"
-import { ar } from "./index__part-10"
+import { ar } from "../../../../../src/shared/utils/image/index"
 import { Ms } from "../../../../../src/editor/redux/common/saga"
 var gr
 import * as /* [auto-meaningful-name] */$$_33 from "../33"

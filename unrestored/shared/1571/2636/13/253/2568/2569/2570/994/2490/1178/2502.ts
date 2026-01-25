@@ -4,7 +4,7 @@
  * 模块 ID：2502
  */
 
-var r = require("./2506/998/index")
+var r = require("./2504/998/index")
 module.exports = function (e) {
   var t = r(this, e).delete(e)
   this.size -= t ? 1 : 0

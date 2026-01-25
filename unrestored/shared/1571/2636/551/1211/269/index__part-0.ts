@@ -19,7 +19,7 @@ import * as /* [auto-meaningful-name] */$$_709_index from "../709/index"
 import * as /* [auto-meaningful-name] */$_396 from "./396"
 import * as /* [auto-meaningful-name] */$_1550 from "./1550"
 import * as /* [auto-meaningful-name] */$_154_index from "./154/index"
-import * as /* [auto-meaningful-name] */$_2678_index from "./2678/index"
+import * as /* [auto-meaningful-name] */$_2678 from "./2678"
 var A = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className

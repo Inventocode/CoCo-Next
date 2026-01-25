@@ -4,7 +4,7 @@
  * 模块 ID：1665
  */
 
-var r = require("./1705/86/index")
+var r = require("./1706/86/index")
 var o = require("./1704/837")
 var i = require("./1705/168")
 var a = require("./1705/231")

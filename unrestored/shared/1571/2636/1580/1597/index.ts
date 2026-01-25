@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1705/86/index")
+var r = require("../1706/86/index")
 var o = require("../1705/168")
 var i = require("../1581/830")
 var a = require("../1705/231")
@@ -15,7 +15,7 @@ var c = require("./256")
 var l = require("./716")
 var u = require("./832/index")
 var d = require("./833")
-var p = require("../1686/246")
+var p = require("../1686/246/index")
 var f = require("../1686/633/index")
 var h = p("isConcatSpreadable")
 var m = f >= 51 || !o(function () {

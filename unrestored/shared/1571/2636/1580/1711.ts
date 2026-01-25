@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1705/86/index")
+var r = require("./1706/86/index")
 var /* [auto-meaningful-name] */require$_1785_959$codeAt = require("./1785/959").codeAt
 r({
   target: "String",

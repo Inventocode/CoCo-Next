@@ -4,7 +4,7 @@
  * 模块 ID：1657
  */
 
-var r = require("../1705/86/index")
+var r = require("../1706/86/index")
 var o = require("./1260")
 r({
   target: "Number",

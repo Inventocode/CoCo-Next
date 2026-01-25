@@ -29,7 +29,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_$$_redux_common_actions from "../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627_index from "../../../../unrestored/shared/1571/2636/627/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../unrestored/shared/1571/2636/710/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../unrestored/shared/1571/2636/748/index"
@@ -747,7 +747,7 @@ var En = React.memo(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              if (!$$_$$_$$_$$_unrestored_shared_1571_2636_627.a.isLoaded()) {
+              if (!$$_$$_$$_$$_unrestored_shared_1571_2636_627_index.a.isLoaded()) {
                 e.next = 3
                 break
               }

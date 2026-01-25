@@ -9,7 +9,7 @@
 var r = require("./1705/231")
 var o = require("./1705/300")
 var i = require("./1705/497")
-var a = require("./1686/246")("hasInstance")
+var a = require("./1686/246/index")("hasInstance")
 var /* [auto-meaningful-name] */Function$prototype = Function.prototype
 if (!(a in Function$prototype)) {
   o.f(Function$prototype, a, {

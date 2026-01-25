@@ -69,8 +69,8 @@ export const noCreateElement: Rule.RuleModule = {
                   if (!propName || !/^([a-z]|[A-Z]|-|_|$)([a-z]|[A-Z]|[0-9]|-|_|$)*$/.test(propName)) {
                     return null
                   }
-                  const value = sourceCode.getText(prop.value)
-                  propsStr += `\n${propName}=${prop.value.type === "Literal" && typeof prop.value === "string" ? value : `{${value}}`}`
+                  const valueCode = sourceCode.getText(prop.value)
+                  propsStr += `\n${propName}=${prop.value.type === "Literal" && typeof prop.value.value === "string" ? valueCode : `{${valueCode}}`}`
                 }
                 propsStr && (propsStr += "\n")
               } else if (propsArg?.type == "Literal" && propsArg.value === null) {

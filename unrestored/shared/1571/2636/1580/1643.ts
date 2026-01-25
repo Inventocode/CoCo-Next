@@ -4,7 +4,7 @@
  * 模块 ID：1643
  */
 
-require("./1705/86/index")({
+require("./1706/86/index")({
   target: "Math",
   stat: true
 }, {

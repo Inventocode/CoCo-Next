@@ -5,7 +5,7 @@
  */
 
 var r = require("../1705/231")
-var o = require("../1686/638")
+var o = require("../1706/638")
 module.exports = function (e, t, n) {
   var /* [auto-meaningful-name] */t$constructor
   var /* [auto-meaningful-name] */t$constructor$prototype

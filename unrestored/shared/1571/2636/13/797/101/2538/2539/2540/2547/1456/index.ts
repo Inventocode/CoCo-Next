@@ -6,7 +6,7 @@
 
 var r = require("./1444")
 var i = require("../../../../../2466/1436/1176/index")
-var o = require("../../1442/1179/index")
+var o = require("../../2545/1179/index")
 var a = require("./1445")
 var s = Object.getOwnPropertySymbols ? function (e) {
   for (var t = []; e;) {

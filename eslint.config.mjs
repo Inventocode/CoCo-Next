@@ -54,21 +54,7 @@ export default defineConfig([
       transform
     },
     rules: {
-      "transform/use-meaningful-var-name": ["warn"]
-    }
-  },
-  {
-    files: [
-      "src/**/*.{jsx,tsx}",
-    ],
-    languageOptions: {
-      globals: globals.browser,
-      parser: tseslint.parser
-    },
-    plugins: {
-      transform
-    },
-    rules: {
+      "transform/use-meaningful-var-name": ["warn"],
       "transform/no-create-element": ["warn"]
     }
   }

@@ -12,9 +12,9 @@ var o = require("../../../../../1058/1393/1143/283/index")
 var a = require("../../../../../1058/1393/1143/284/index")
 var s = require("regenerator-runtime")
 var c = require("../../../449")
-var u = require("./1159/1404")
-var l = require("./986/984/index")
-var f = require("./986/985/index")
+var u = require("../1410/1159/1404")
+var l = require("../1410/1159/984/index")
+var f = require("../1410/1159/985/index")
 function d(e) {
   var t
   var n
@@ -68,28 +68,28 @@ function h(e) {
   }
   return new h(e)
 }
-var p = globalThis.AbortController || require("./1159/857").AbortController
-var _ = require("./402/index")
+var p = globalThis.AbortController || require("../1410/1159/857").AbortController
+var _ = require("./402")
 var /* [auto-meaningful-name] */_$codes = _.codes
 var /* [auto-meaningful-name] */_$codes$ERR_INVALID_ARG_VALUE = _$codes.ERR_INVALID_ARG_VALUE
 var /* [auto-meaningful-name] */_$codes$ERR_INVALID_ARG_TYPE = _$codes.ERR_INVALID_ARG_TYPE
 var /* [auto-meaningful-name] */_$codes$ERR_MISSING_ARGS = _$codes.ERR_MISSING_ARGS
 var /* [auto-meaningful-name] */_$codes$ERR_OUT_OF_RANGE = _$codes.ERR_OUT_OF_RANGE
 var /* [auto-meaningful-name] */_$AbortError = _.AbortError
-var w = require("./986/858")
+var w = require("../1410/650/858")
 var /* [auto-meaningful-name] */w$validateAbortSignal = w.validateAbortSignal
 var /* [auto-meaningful-name] */w$validateInteger = w.validateInteger
 var /* [auto-meaningful-name] */w$validateObject = w.validateObject
-var O = require("./311").Symbol("kWeak")
-var k = require("./311").Symbol("kResistStopPropagation")
-var /* [auto-meaningful-name] */require$_650$finished = require("./650").finished
+var O = require("../1410/311/index").Symbol("kWeak")
+var k = require("../1410/311/index").Symbol("kResistStopPropagation")
+var /* [auto-meaningful-name] */require$$_1410_650_index$finished = require("../1410/650/index").finished
 var T = require("./1406")
 var /* [auto-meaningful-name] */require$_987$addAbortSignalNoValidate = require("./987").addAbortSignalNoValidate
-var D = require("./583")
+var D = require("../1410/583")
 var /* [auto-meaningful-name] */D$isWritable = D.isWritable
 var /* [auto-meaningful-name] */D$isNodeStream = D.isNodeStream
-var /* [auto-meaningful-name] */require$_427$deprecate = require("./427").deprecate
-var P = require("./311")
+var /* [auto-meaningful-name] */require$_427_index$deprecate = require("./427/index").deprecate
+var P = require("../1410/311/index")
 var /* [auto-meaningful-name] */P$ArrayPrototypePush = P.ArrayPrototypePush
 var /* [auto-meaningful-name] */P$Boolean = P.Boolean
 var /* [auto-meaningful-name] */P$MathFloor = P.MathFloor
@@ -281,7 +281,7 @@ function X(e, t) {
                 A = true
                 m()
               }
-              a = require("./427").AbortSignalAny([null === t || undefined === t ? undefined : t.signal].filter(P$Boolean))
+              a = require("./427/index").AbortSignalAny([null === t || undefined === t ? undefined : t.signal].filter(P$Boolean))
               u = this
               f = []
               h = {
@@ -716,7 +716,7 @@ function ne() {
             })
             this.once("error", function () {})
             e.next = 10
-            return require$_650$finished(this.destroy(c))
+            return require$$_1410_650_index$finished(this.destroy(c))
           case 10:
             throw c
           case 11:
@@ -919,7 +919,7 @@ function ie(e) {
   return e
 }
 module.exports.streamReturningOperators = {
-  asIndexedPairs: require$_427$deprecate(function () {
+  asIndexedPairs: require$_427_index$deprecate(function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : undefined
     if (null != e) {
       w$validateObject(e, "options")

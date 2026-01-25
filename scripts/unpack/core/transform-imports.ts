@@ -196,11 +196,13 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                             [t.stringLiteral(getImportPath(module, importedModule))]
                         ))
                     } catch (error) {
+                        const errorString = error instanceof Error ? error.message : JSON.stringify(error)
+                        console.warn(errorString)
                         path.replaceWith(t.callExpression(
                             t.memberExpression(t.identifier("Promise"), t.identifier("reject")),
                             [t.newExpression(
                                 t.identifier("Error"),
-                                [t.stringLiteral(error instanceof Error ? error.message : JSON.stringify(error))]
+                                [t.stringLiteral(errorString)]
                             )]
                         ))
                     }

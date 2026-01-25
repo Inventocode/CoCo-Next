@@ -5,7 +5,7 @@
  */
 
 var r = require("../1705/168")
-var o = require("../1686/246")
+var o = require("../1686/246/index")
 var i = require("../1686/633/index")
 var a = o("species")
 module.exports = function (e) {

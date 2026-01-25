@@ -4,7 +4,7 @@
  * 模块 ID：1632
  */
 
-var r = require("../1705/86/index")
+var r = require("../1706/86/index")
 var o = require("./1090")
 var /* [auto-meaningful-name] */Math$abs = Math.abs
 var /* [auto-meaningful-name] */Math$pow = Math.pow

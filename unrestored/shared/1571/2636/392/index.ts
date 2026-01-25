@@ -10,7 +10,7 @@ export { COURSE_ICON_NAME as a }
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
-import * as /* [auto-meaningful-name] */$$_627 from "../627"
+import * as /* [auto-meaningful-name] */$$_627_index from "../627/index"
 import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
 import * as /* [auto-meaningful-name] */$$_748_index from "../748/index"
 import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
@@ -31,7 +31,7 @@ _b = React.memo(function () {
   }, React1.createElement("div", {
     className: $_5161.courseMinIcon,
     onClick: function () {
-      $$_627.a.show()
+      $$_627_index.a.show()
       e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ii(COURSE_ICON_NAME, false))
     }
   }, React1.createElement($$_13_index.j, {
@@ -40,8 +40,8 @@ _b = React.memo(function () {
     className: $_5161.close,
     onClick: function (t) {
       t.stopPropagation()
-      $$_627.a.show()
-      $$_627.a.close({
+      $$_627_index.a.show()
+      $$_627_index.a.close({
         closeAnimationPos: {
           x: 150,
           y: 30

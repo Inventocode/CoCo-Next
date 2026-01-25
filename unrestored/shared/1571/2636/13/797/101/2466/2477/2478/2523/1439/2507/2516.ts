@@ -4,7 +4,7 @@
  * 模块 ID：2516
  */
 
-var r = require("../../../../../../2538/2539/2540/1442/index")
+var r = require("../../../../../../2538/2539/2540/1442")
 var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
 module.exports = function (e, t, n, o, a, s) {
   var c = 1 & n

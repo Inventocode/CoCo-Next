@@ -6,7 +6,7 @@
 
 var r = require("../1699/271")
 var o = require("./386/1237")
-var i = require("./240")
+var i = require("../1706/240")
 var a = require("../1696/632")
 var /* [auto-meaningful-name] */Object$defineProperty = Object.defineProperty
 exports.f = r ? Object$defineProperty : function (e, t, n) {
