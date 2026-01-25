@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1705/86/index")
+var r = require("./1706/86/index")
 var /* [auto-meaningful-name] */require$_1648_761_index$trim = require("./1648/761/index").trim
 r({
   target: "String",

@@ -4,7 +4,7 @@
  * 模块 ID：309
  */
 
-var r = require("../1715/424")
+var r = require("../1722/424")
 module.exports = function (e) {
   return Object(r(e))
 }

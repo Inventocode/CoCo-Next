@@ -4,7 +4,7 @@
  * 模块 ID：1640
  */
 
-var r = require("./1705/86/index")
+var r = require("./1706/86/index")
 var /* [auto-meaningful-name] */Math$log = Math.log
 var /* [auto-meaningful-name] */Math$LOG10E = Math.LOG10E
 r({

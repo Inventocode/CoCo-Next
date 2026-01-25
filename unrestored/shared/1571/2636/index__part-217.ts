@@ -15,7 +15,7 @@ import * as Z from "./97"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_627 from "./627"
+import * as /* [auto-meaningful-name] */$_627_index from "./627/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
@@ -161,7 +161,7 @@ var ZP = React1.memo(function () {
                   sourceId: r.toString()
                 }))
               }
-              $_627.a.load({
+              $_627_index.a.load({
                 onPlayerInit: function () {},
                 title: React.createElement("div", null, React.createElement("span", {
                   style: {
@@ -178,7 +178,7 @@ var ZP = React1.memo(function () {
                       for (;;) {
                         switch (t.prev = t.next) {
                           case 0:
-                            $_627.a.close({
+                            $_627_index.a.close({
                               closeAnimationPos: {
                                 x: 150,
                                 y: 30
@@ -202,7 +202,7 @@ var ZP = React1.memo(function () {
                 useConfirmMask: true,
                 confirmPercent: .9,
                 onMinimizeBtnClick: function () {
-                  $_627.a.hide()
+                  $_627_index.a.hide()
                   e($$_$$_$$_$$_src_editor_redux_common_actions.Qh($_392_index.a, {
                     name: $_392_index.a,
                     content: React.createElement($_392_index.b, null),
@@ -210,7 +210,7 @@ var ZP = React1.memo(function () {
                   }))
                 },
                 onClose: function () {
-                  $_627.a.close({
+                  $_627_index.a.close({
                     closeAnimationPos: {
                       x: 150,
                       y: 30

@@ -58,9 +58,7 @@ import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { d as useDispatch, e as useSelector } from "../../../../../unrestored/shared/1571/2636/16/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
 import * as WidgetShop from "../../../../shared/widget/custom/shop"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
@@ -85,7 +83,7 @@ const ConfigItem = React.memo(({
   widgetServerId?: number
 }) => {
   const currentScreen = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
-  const dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  const dispatch = useDispatch()
   const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
   const [menuVisible, setMenuVisible] = React.useState(false)
   const [bigImageVisible, setBigImageVisible] = React.useState(false)
@@ -94,12 +92,8 @@ const ConfigItem = React.memo(({
   var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
-  const globalWidgetIds = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
-    return e.project.globalWidgetIds
-  })
-  const language = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
-    return e.common.language
-  })
+  const globalWidgetIds = useSelector((state) => state.project.globalWidgetIds)
+  const language = useSelector((state) => state.common.language)
   React.useEffect(function () {
     function listener() {
       setMenuVisible(false)
@@ -296,10 +290,7 @@ export const WidgetCategoryItem = React.memo<{
   defaultExpanded: boolean
 }>(({ configList, title, defaultExpanded }) => {
   const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
-  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
-    var /* [auto-meaningful-name] */e$common$userInfo
-    return null === (e$common$userInfo = e.common.userInfo) || undefined === e$common$userInfo ? undefined : e$common$userInfo.id
-  })
+  var i = useSelector((state) => state.common.userInfo?.id)
   var a = React.useState(undefined === defaultExpanded || defaultExpanded)
   var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(a, 2)
   var c = s[0]

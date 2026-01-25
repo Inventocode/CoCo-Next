@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1705/86/index")
+var r = require("../1706/86/index")
 var o = require("./444")
 r({
   target: "String",

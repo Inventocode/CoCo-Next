@@ -12,8 +12,9 @@ import { rt, ot, it, st, lt, ut, pt, ft } from "../../../../unrestored/shared/15
 import { _t, bt, yt, Et, Ot, Tt, At, It, jt, Nt, xt, Mt, Lt, Pt, Bt, Gt, Ut, Ht } from "../../../../unrestored/shared/1571/2636/49__part-6"
 import { Kt, Xt, Qt } from "../../../../unrestored/shared/1571/2636/49__part-7"
 import { Jt, rn, an, sn } from "../../../../unrestored/shared/1571/2636/49__part-8"
-import { un, dn, fn, mn, removeUnsafeExtensionWidget } from "./extension-widget/client"
-import { vn, yn, En, On, wn, Cn, Tn, Sn, An } from "."
+import * as GlobalWidgetServerOp from "./global-widget/server-op"
+export * as extensionWidget from "./extension-widget"
+import { yn, En, On, wn, Cn, Tn, Sn, oTHelper } from "."
 var r = {}
 Object.defineProperty(r, "addWidgetOp", {
   get: function () {
@@ -61,13 +62,13 @@ Object.defineProperty(o, "drop", {
     return Ae
   }
 })
-var i = {}
-Object.defineProperty(i, "clientOp", {
+export var widget = {}
+Object.defineProperty(widget, "clientOp", {
   get: function () {
     return r
   }
 })
-Object.defineProperty(i, "serverOp", {
+Object.defineProperty(widget, "serverOp", {
   get: function () {
     return o
   }
@@ -89,13 +90,13 @@ Object.defineProperty(s, "drop", {
     return Re
   }
 })
-var c = {}
-Object.defineProperty(c, "clientOp", {
+export var projectOt = {}
+Object.defineProperty(projectOt, "clientOp", {
   get: function () {
     return a
   }
 })
-Object.defineProperty(c, "serverOp", {
+Object.defineProperty(projectOt, "serverOp", {
   get: function () {
     return s
   }
@@ -132,13 +133,13 @@ Object.defineProperty(u, "drop", {
     return Ge
   }
 })
-var d = {}
-Object.defineProperty(d, "clientOp", {
+export var screen = {}
+Object.defineProperty(screen, "clientOp", {
   get: function () {
     return l
   }
 })
-Object.defineProperty(d, "serverOp", {
+Object.defineProperty(screen, "serverOp", {
   get: function () {
     return u
   }
@@ -175,13 +176,13 @@ Object.defineProperty(f, "drop", {
     return Xe
   }
 })
-var h = {}
-Object.defineProperty(h, "clientOp", {
+export var imageFileList = {}
+Object.defineProperty(imageFileList, "clientOp", {
   get: function () {
     return p
   }
 })
-Object.defineProperty(h, "serverOp", {
+Object.defineProperty(imageFileList, "serverOp", {
   get: function () {
     return f
   }
@@ -218,13 +219,13 @@ Object.defineProperty(g, "drop", {
     return ot
   }
 })
-var _ = {}
-Object.defineProperty(_, "clientOp", {
+export var soundFileList = {}
+Object.defineProperty(soundFileList, "clientOp", {
   get: function () {
     return m
   }
 })
-Object.defineProperty(_, "serverOp", {
+Object.defineProperty(soundFileList, "serverOp", {
   get: function () {
     return g
   }
@@ -261,13 +262,13 @@ Object.defineProperty(b, "drop", {
     return ft
   }
 })
-var y = {}
-Object.defineProperty(y, "clientOp", {
+export var iconFileList = {}
+Object.defineProperty(iconFileList, "clientOp", {
   get: function () {
     return v
   }
 })
-Object.defineProperty(y, "serverOp", {
+Object.defineProperty(iconFileList, "serverOp", {
   get: function () {
     return b
   }
@@ -299,13 +300,13 @@ Object.defineProperty(O, "drop", {
     return Ot
   }
 })
-var w = {}
-Object.defineProperty(w, "clientOp", {
+export var primitiveVariables = {}
+Object.defineProperty(primitiveVariables, "clientOp", {
   get: function () {
     return E
   }
 })
-Object.defineProperty(w, "serverOp", {
+Object.defineProperty(primitiveVariables, "serverOp", {
   get: function () {
     return O
   }
@@ -337,13 +338,13 @@ Object.defineProperty(T, "drop", {
     return Nt
   }
 })
-var S = {}
-Object.defineProperty(S, "clientOp", {
+export var arrayVariables = {}
+Object.defineProperty(arrayVariables, "clientOp", {
   get: function () {
     return C
   }
 })
-Object.defineProperty(S, "serverOp", {
+Object.defineProperty(arrayVariables, "serverOp", {
   get: function () {
     return T
   }
@@ -375,13 +376,13 @@ Object.defineProperty(I, "drop", {
     return Bt
   }
 })
-var j = {}
-Object.defineProperty(j, "clientOp", {
+export var objectVariables = {}
+Object.defineProperty(objectVariables, "clientOp", {
   get: function () {
     return A
   }
 })
-Object.defineProperty(j, "serverOp", {
+Object.defineProperty(objectVariables, "serverOp", {
   get: function () {
     return I
   }
@@ -403,13 +404,13 @@ Object.defineProperty(R, "drop", {
     return Ht
   }
 })
-var k = {}
-Object.defineProperty(k, "clientOp", {
+export var broadcasts = {}
+Object.defineProperty(broadcasts, "clientOp", {
   get: function () {
     return N
   }
 })
-Object.defineProperty(k, "serverOp", {
+Object.defineProperty(broadcasts, "serverOp", {
   get: function () {
     return R
   }
@@ -430,13 +431,13 @@ Object.defineProperty(x, "cloudDb", {
     return Qt
   }
 })
-var D = {}
-Object.defineProperty(D, "emit", {
+export var customEvent = {}
+Object.defineProperty(customEvent, "emit", {
   get: function () {
     return x
   }
 })
-Object.defineProperty(D, "accept", {
+Object.defineProperty(customEvent, "accept", {
   get: function () {
     return Jt
   }
@@ -457,60 +458,15 @@ Object.defineProperty(M, "replaceWidgetAttributeOp", {
     return sn
   }
 })
-var L = {}
-Object.defineProperty(L, "pick", {
-  get: function () {
-    return un
-  }
-})
-Object.defineProperty(L, "drop", {
-  get: function () {
-    return dn
-  }
-})
-var P = {}
-Object.defineProperty(P, "clientOp", {
+export var globalWidget = {}
+Object.defineProperty(globalWidget, "clientOp", {
   get: function () {
     return M
   }
 })
-Object.defineProperty(P, "serverOp", {
+Object.defineProperty(globalWidget, "serverOp", {
   get: function () {
-    return L
-  }
-})
-var B = {}
-Object.defineProperty(B, "addUnsafeExtensionWidget", {
-  get: function () {
-    return fn
-  }
-})
-// [CoCo Next] 添加移除自定义控件的功能
-Object.defineProperty(B, "removeUnsafeExtensionWidget", {
-  get: function () {
-    return removeUnsafeExtensionWidget
-  }
-})
-Object.defineProperty(B, "addMallExtensionWidget", {
-  get: function () {
-    return mn
-  }
-})
-var F = {}
-Object.defineProperty(F, "drop", {
-  get: function () {
-    return vn
-  }
-})
-var G = {}
-Object.defineProperty(G, "clientOp", {
-  get: function () {
-    return B
-  }
-})
-Object.defineProperty(G, "serverOp", {
-  get: function () {
-    return F
+    return GlobalWidgetServerOp
   }
 })
 var W = {}
@@ -550,35 +506,20 @@ Object.defineProperty(U, "drop", {
     return Sn
   }
 })
-var H = {}
-Object.defineProperty(H, "clientOp", {
+export var cloudSpace = {}
+Object.defineProperty(cloudSpace, "clientOp", {
   get: function () {
     return W
   }
 })
-Object.defineProperty(H, "serverOp", {
+Object.defineProperty(cloudSpace, "serverOp", {
   get: function () {
     return U
   }
 })
-var V = {}
-Object.defineProperty(V, "oTHelper", {
+export var focus = {}
+Object.defineProperty(focus, "oTHelper", {
   get: function () {
-    return An
+    return oTHelper
   }
 })
-export { i }
-export { c }
-export { d }
-export { h }
-export { _ }
-export { y }
-export { w }
-export { S }
-export { j }
-export { k }
-export { D }
-export { P }
-export { G }
-export { H }
-export { V }

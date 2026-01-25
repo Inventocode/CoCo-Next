@@ -33,11 +33,11 @@ import * as Language from "../../ui/language"
 import { oTHelper } from "../../../editor/collaboration/ot-helper"
 import * as ExternalModule from "./external-module"
 import * as Store from "../../../editor/redux/store"
-import * as Actions from "../../../editor/redux/common/actions"
+import * as CommonActions from "../../../editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as Shop from "./shop"
-import * as restrict from "./restrict"
+import * as Restrict from "./restrict"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_index from "../../../../unrestored/shared/1571/2636/20/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_55 from "../../../../unrestored/shared/1571/2636/55"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../unrestored/shared/1571/2636/301/85"
@@ -548,13 +548,13 @@ export async function loadCustomWidget(
     "React",
     code
   ).apply(undefined, [
-  widgetRequire,
-  widgetExports,
-  InvisibleWidget,
-  VisibleWidget,
-  React,
-  ...restrict.objectValues]
-  )
+    widgetRequire,
+    widgetExports,
+    InvisibleWidget,
+    VisibleWidget,
+    React
+    // [CoCo Next] 移除自定义控件的全局变量访问限制
+  ])
   const widgetTypes: types.Types = widgetExports.types!
   const widgetWidget: types.Widget = widgetExports.widget!
   if (!widgetTypes.isInvisibleWidget) {
@@ -626,7 +626,7 @@ export function registerCustomWidget(
   }
   if (Storage.getUnsafeExtension(type)) {
     const unprefixedType: string = Type.toUnprefixed(type, false)
-    Store.dispatch(Actions.openConfirmDialogAction({
+    Store.dispatch(CommonActions.openConfirmDialogAction({
       onConfirm: registered,
       onCancel,
       allowText: Language.format(Language.zh_CN, "ExtensionWidget.overwrite").toString(),
@@ -709,7 +709,7 @@ async function importCustomWidget(code: string, isFromWidgetShop: boolean): Prom
           Storage.addUnsafeExtension({ type, types, code })
           oTHelper.extensionWidget?.clientOp.addUnsafeExtensionWidget({ type, code })
         }
-        Store.dispatch(Actions.updateExtensionWidgetListAction())
+        Store.dispatch(CommonActions.updateExtensionWidgetListAction())
         resolve(types)
       },
       (): void => {
@@ -755,7 +755,7 @@ async function checkKeyWords(code: string) {
       messages.push("CoCo 不允许 getElementsByClassName(*readonly*)，虽然 CoCo Next 允许它，但是可能导致作品在 CoCo 中出现异常")
     }
     const includedKeyWords: string[] = []
-    restrict.keyWords.forEach((keyWord): void => {
+    Restrict.keyWords.forEach((keyWord): void => {
       if (code.includes(keyWord)) {
         includedKeyWords.push(keyWord)
       }
@@ -764,7 +764,7 @@ async function checkKeyWords(code: string) {
       messages.push(`自定义控件存在危险关键词：${includedKeyWords.join("、")}，虽然 CoCo Next 允许自定义控件存在危险关键词，但是可能导致作品在 CoCo 中出现异常`)
     }
     if (messages.length > 0) {
-      Store.dispatch(Actions.openConfirmDialogAction({
+      Store.dispatch(CommonActions.openConfirmDialogAction({
         onConfirm() { resolve() },
         onCancel() { reject(new Error("User cancel import widget")) },
         allowText: "确认导入",
@@ -810,7 +810,7 @@ export async function loadWidgetsFromFile(
   if (unsafeWidgets.length) {
     await Promise.all(unsafeWidgets.map(({ code }): Promise<void> => importWidget(code)))
   }
-  Store.dispatch(Actions.updateExtensionWidgetListAction())
+  Store.dispatch(CommonActions.updateExtensionWidgetListAction())
   const onlineSafeWidgets = safeWidgets.filter((widget) =>
     widget.cdnUrl.startsWith("https") && widget.id)
   if (!onlineSafeWidgets.length) {

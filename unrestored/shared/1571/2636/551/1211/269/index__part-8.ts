@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
 import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
 import * as /* [auto-meaningful-name] */$$_98 from "../98"
 import * as /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_2642 from "./2642"
+import * as /* [auto-meaningful-name] */$_2642_index from "./2642/index"
 var je = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$classes = e.classes

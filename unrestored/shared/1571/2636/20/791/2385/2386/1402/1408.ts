@@ -6,7 +6,7 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */require$_311$ObjectSetPrototypeOf = require("./311").ObjectSetPrototypeOf
+var /* [auto-meaningful-name] */require$$_1410_311_index$ObjectSetPrototypeOf = require("../1410/311/index").ObjectSetPrototypeOf
 module.exports = o
 var i = require("./1409")
 function o(e) {
@@ -15,8 +15,8 @@ function o(e) {
   }
   i.call(this, e)
 }
-require$_311$ObjectSetPrototypeOf(o.prototype, i.prototype)
-require$_311$ObjectSetPrototypeOf(o, i)
+require$$_1410_311_index$ObjectSetPrototypeOf(o.prototype, i.prototype)
+require$$_1410_311_index$ObjectSetPrototypeOf(o, i)
 o.prototype._transform = function (e, t, n) {
   n(null, e)
 }

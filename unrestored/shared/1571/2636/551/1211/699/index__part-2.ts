@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_388 from "../../../388"
 import * as /* [auto-meaningful-name] */$$_$$_$$_106 from "../../../106"
 import * as /* [auto-meaningful-name] */$$_$$_$$_103 from "../../../103"
 import * as /* [auto-meaningful-name] */$$_269_2679 from "../269/2679"
-import * as /* [auto-meaningful-name] */$$_269_2642 from "../269/2642"
+import * as /* [auto-meaningful-name] */$$_269_2642_index from "../269/2642/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_552_1214_316_index from "../../../552/1214/316/index"
 import * as /* [auto-meaningful-name] */$$_269_154_index from "../269/154/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_552_1214_690_index from "../../../552/1214/690/index"
@@ -299,7 +299,7 @@ var U = function (e) {
   var v = "rtl" === $$_$$_$$_552_1214_690_index.a().direction
   return React1.createElement("div", null, React1.createElement("div", {
     className: g.switchHeader
-  }, React1.createElement($$_269_2642.a, $$_$$_$$_19.a({}, e$leftArrowButtonProps, {
+  }, React1.createElement($$_269_2642_index.a, $$_$$_$$_19.a({}, e$leftArrowButtonProps, {
     disabled: e$disablePrevMonth,
     onClick: function () {
       return e$onMonthChange(A.getPreviousMonth(e$currentMonth), "right")
@@ -312,7 +312,7 @@ var U = function (e) {
   }, React1.createElement($$_269_1065.a, {
     align: "center",
     variant: "body1"
-  }, A.getCalendarHeaderText(e$currentMonth))), React1.createElement($$_269_2642.a, $$_$$_$$_19.a({}, e$rightArrowButtonProps, {
+  }, A.getCalendarHeaderText(e$currentMonth))), React1.createElement($$_269_2642_index.a, $$_$$_$$_19.a({}, e$rightArrowButtonProps, {
     disabled: e$disableNextMonth,
     onClick: function () {
       return e$onMonthChange(A.getNextMonth(e$currentMonth), "left")

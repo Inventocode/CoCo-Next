@@ -4,7 +4,7 @@
  * 模块 ID：948
  */
 
-var r = require("./246")("iterator")
+var r = require("./246/index")("iterator")
 var o = false
 try {
   var i = 0

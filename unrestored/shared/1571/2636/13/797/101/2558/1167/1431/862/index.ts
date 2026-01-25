@@ -6,7 +6,7 @@
 
 var r = require("../../../../../../253/2568/2569/2570/865/1433/index")
 var i = require("./2475/index")
-var o = require("../../../../2466/2477/2536/771/index")
+var o = require("../../../../../../253/2568/2569/2570/865/771/index")
 module.exports = function (e) {
   return o(e) ? r(e) : i(e)
 }

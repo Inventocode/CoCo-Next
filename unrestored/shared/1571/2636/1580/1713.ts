@@ -4,7 +4,7 @@
  * 模块 ID：1713
  */
 
-var r = require("./1705/86/index")
+var r = require("./1706/86/index")
 var o = require("./1615/715")
 var /* [auto-meaningful-name] */String$fromCharCode = String.fromCharCode
 var /* [auto-meaningful-name] */String$fromCodePoint = String.fromCodePoint

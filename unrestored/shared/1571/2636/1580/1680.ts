@@ -4,9 +4,9 @@
  * 模块 ID：1680
  */
 
-require("./1705/86/index")({
+require("./1706/86/index")({
   target: "Object",
   stat: true
 }, {
-  setPrototypeOf: require("./1686/638")
+  setPrototypeOf: require("./1706/638")
 })

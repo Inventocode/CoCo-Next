@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./521")
+var r = require("../217/521")
 function i(e) {
   for (var t, n = []; !(t = e.next()).done;) {
     n.push(t.value)

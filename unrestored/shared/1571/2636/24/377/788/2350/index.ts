@@ -198,9 +198,9 @@ var h = function () {
             if (!l.is_path_4(e$normalized_path)) {
               return
             }
-            e$normalized_path$property = e$normalized_path.target_id
-            if (!(v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$property))) {
-              return void a("remove shadow input: cannot find target block " + e$normalized_path$property)
+            e$normalized_path$target_id1 = e$normalized_path.target_id
+            if (!(v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id1))) {
+              return void a("remove shadow input: cannot find target block " + e$normalized_path$target_id1)
             }
             for (var s = undefined, c = 0; c < t.length; c++) {
               var u = t[c]
@@ -211,7 +211,7 @@ var h = function () {
             }
             if (!s) {
               if (!v.removeMutation) {
-                return void a("Block " + e$normalized_path$property + " should have function: removeMutation.")
+                return void a("Block " + e$normalized_path$target_id1 + " should have function: removeMutation.")
               }
               this.Blink.events.disable()
               try {
@@ -232,8 +232,8 @@ var h = function () {
           if (!d) {
             return
           }
-          if (e$normalized_path$target_id1 = this.Blink.json.comment_to_json(d).parent_id) {
-            var h = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id1)
+          if (e$normalized_path$target_id2 = this.Blink.json.comment_to_json(d).parent_id) {
+            var h = this.Blink.mainWorkspace.get_element_from_db(e$normalized_path$target_id2)
             if (!h) {
               return void a("cannot find block connected to this comment " + e$normalized_path$target_id)
             }
@@ -268,13 +268,13 @@ var h = function () {
         if (!l.is_path_2(e$normalized_path)) {
           return
         }
-        var /* [auto-meaningful-name] */e$normalized_path$property = e$normalized_path.target_id
-        if (!(v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$property)) || v.is_shadow()) {
+        var /* [auto-meaningful-name] */e$normalized_path$target_id1 = e$normalized_path.target_id
+        if (!(v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id1)) || v.is_shadow()) {
           return
         }
         if (m = v.get_parent()) {
           y = {
-            id: e$normalized_path$property,
+            id: e$normalized_path$target_id1,
             group: "",
             old_parent_id: m.id
           }
@@ -307,17 +307,17 @@ var h = function () {
       if (!l.is_path_3(e$normalized_path)) {
         return
       }
-      var /* [auto-meaningful-name] */e$normalized_path$property = e$normalized_path.property
-      var /* [auto-meaningful-name] */e$normalized_path$target_id1 = e$normalized_path.target_id
-      var v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$property)
-      var m = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id1)
+      var e$normalized_path$target_id1 = e$normalized_path.property
+      var /* [auto-meaningful-name] */e$normalized_path$target_id2 = e$normalized_path.target_id
+      var v = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id1)
+      var m = this.Blink.mainWorkspace.get_block_by_id(e$normalized_path$target_id2)
       if (!v || !m || v.is_shadow()) {
         return
       }
       var y = {
-        id: e$normalized_path$property,
+        id: e$normalized_path$target_id1,
         group: "",
-        old_parent_id: e$normalized_path$target_id1
+        old_parent_id: e$normalized_path$target_id2
       }
       var b = this.move_event_factory({
         block: v

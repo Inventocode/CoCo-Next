@@ -4,7 +4,7 @@
  * 模块 ID：1605
  */
 
-var r = require("../1705/86/index")
+var r = require("../1706/86/index")
 var o = require("./1246/index")
 r({
   target: "Array",

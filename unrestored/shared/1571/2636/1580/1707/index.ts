@@ -18,9 +18,9 @@ var f = require("../1723/1095")
 var h = require("../1692/400")
 var m = require("../1705/168")
 var g = require("../1581/334")
-var /* [auto-meaningful-name] */require$$_1686_426$enforce = require("../1686/426").enforce
+var /* [auto-meaningful-name] */require$$_1686_426_index$enforce = require("../1686/426/index").enforce
 var v = require("../1686/759")
-var b = require("../1686/246")
+var b = require("../1686/246/index")
 var y = require("./1271")
 var E = require("./1272")
 var O = b("match")
@@ -110,7 +110,7 @@ if (i("RegExp", N)) {
       }
       c = a(o$RegExp(e, t), f ? this : o$RegExp$prototype, R)
       if (r || o || v.length) {
-        l = require$$_1686_426$enforce(c)
+        l = require$$_1686_426_index$enforce(c)
         if (r) {
           l.dotAll = true
           l.raw = R(function (e) {

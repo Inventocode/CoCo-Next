@@ -6,7 +6,7 @@
 
 var /* [auto-meaningful-name] */require$$_1705_300$f = require("../1705/300").f
 var o = require("../1581/334")
-var i = require("./246")("toStringTag")
+var i = require("./246/index")("toStringTag")
 module.exports = function (e, t, n) {
   if (e && !o(e = n ? e : e.prototype, i)) {
     require$$_1705_300$f(e, i, {

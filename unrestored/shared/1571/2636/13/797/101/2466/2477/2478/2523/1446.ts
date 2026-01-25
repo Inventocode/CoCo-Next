@@ -4,7 +4,7 @@
  * 模块 ID：1446
  */
 
-var r = require("../../../../../../253/2583/2584/479")
+var r = require("../../../../../../253/2588/1461/479")
 module.exports = function (e) {
   return e === e && !r(e)
 }

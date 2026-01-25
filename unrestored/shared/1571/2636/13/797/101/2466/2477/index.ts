@@ -6,7 +6,7 @@
 
 var r = require("./1437")
 var i = require("./2478/index")
-var o = require("./2536/index")
+var o = require("./2536")
 var a = require("./451")
 module.exports = function (e, t) {
   return (a(e) ? r : o)(e, i(t, 3))

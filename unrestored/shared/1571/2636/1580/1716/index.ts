@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1705/86/index")
+var r = require("../1706/86/index")
 var /* [auto-meaningful-name] */require$_1275$end = require("./1275").end
 r({
   target: "String",

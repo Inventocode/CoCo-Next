@@ -9,7 +9,7 @@
 import { I } from "./index__part-2"
 import { Ae } from "./index__part-5"
 import * as /* [auto-meaningful-name] */$$_$$_$$_80_index from "../../../80/index"
-import * as /* [auto-meaningful-name] */$_2684 from "./2684"
+import * as /* [auto-meaningful-name] */$_2684_index from "./2684/index"
 import * as /* [auto-meaningful-name] */$_391 from "./391"
 import * as /* [auto-meaningful-name] */$$_$$_$$_107 from "../../../107"
 import * as /* [auto-meaningful-name] */$$_$$_$$_40_index from "../../../40/index"
@@ -76,7 +76,7 @@ var ye = React.forwardRef(function (e, t) {
       }
     }) : e
   })
-  return React.createElement($_2684.a, $$_$$_$$_19.a({
+  return React.createElement($_2684_index.a, $$_$$_$$_19.a({
     getContentAnchorEl: function () {
       return D.current
     },

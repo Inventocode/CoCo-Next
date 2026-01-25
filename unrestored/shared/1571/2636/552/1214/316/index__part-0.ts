@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
 import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_709_index from "../../../551/1211/709/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_1550 from "../../../551/1211/269/1550"
 import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_154_index from "../../../551/1211/269/154/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_2678_index from "../../../551/1211/269/2678/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_2678 from "../../../551/1211/269/2678"
 var f = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$disableSpacing = e.disableSpacing
   var s = undefined !== e$disableSpacing && e$disableSpacing

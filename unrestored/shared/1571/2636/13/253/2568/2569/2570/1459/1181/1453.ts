@@ -4,7 +4,7 @@
  * 模块 ID：1453
  */
 
-var r = require("../../994/2490/1177/728/index")
+var r = require("../../../../../../797/101/2538/2539/2540/999/2521/728/index")
 var i = function () {
   try {
     var e = r(Object, "defineProperty")

@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_40_index from "../../../40/inde
 import * as /* [auto-meaningful-name] */$$_$$_$$_107 from "../../../107"
 import "../../../241/index"
 import * as /* [auto-meaningful-name] */$_391 from "./391"
-import * as /* [auto-meaningful-name] */$_2684 from "./2684"
+import * as /* [auto-meaningful-name] */$_2684_index from "./2684/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_80_index from "../../../80/index"
 var se = React.createContext({})
 var ce = React.forwardRef(function (e, t) {

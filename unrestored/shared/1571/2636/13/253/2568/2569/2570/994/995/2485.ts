@@ -4,7 +4,7 @@
  * 模块 ID：2485
  */
 
-var r = require("./2483/996")
+var r = require("./2484/996")
 module.exports = function (e, t) {
   var /* [auto-meaningful-name] */this$__data__ = this.__data__
   var i = r(this$__data__, e)

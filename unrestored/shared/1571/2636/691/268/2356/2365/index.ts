@@ -9,7 +9,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("../../2373/448")
+var r = require("../448")
 var i = require("../../582")
 var o = require("./1395")
 var a = require("../../856")

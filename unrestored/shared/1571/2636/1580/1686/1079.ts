@@ -4,7 +4,7 @@
  * 模块 ID：1079
  */
 
-var r = require("../1581/945/1076")
+var r = require("./426/1076")
 var /* [auto-meaningful-name] */Function$toString = Function.toString
 if ("function" != typeof r.inspectSource) {
   r.inspectSource = function (e) {

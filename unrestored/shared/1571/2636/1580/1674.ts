@@ -4,7 +4,7 @@
  * 模块 ID：1674
  */
 
-var r = require("./1705/86/index")
+var r = require("./1706/86/index")
 var o = require("./1705/168")
 var i = require("./1705/231")
 var /* [auto-meaningful-name] */Object$isSealed = Object.isSealed

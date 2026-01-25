@@ -4,7 +4,7 @@
  * 模块 ID：1678
  */
 
-var r = require("./1705/86/index")
+var r = require("./1706/86/index")
 var o = require("./1705/231")
 var /* [auto-meaningful-name] */require$_1778_718$onFreeze = require("./1778/718").onFreeze
 var a = require("./1704/837")

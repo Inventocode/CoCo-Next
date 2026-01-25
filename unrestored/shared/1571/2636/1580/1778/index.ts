@@ -10,10 +10,10 @@ var r
 var o = require("../1686/194")
 var i = require("../1686/760")
 var a = require("./718")
-var s = require("../1628/951")
+var s = require("./951")
 var c = require("./1279")
 var l = require("../1705/231")
-var /* [auto-meaningful-name] */require$$_1686_426$enforce = require("../1686/426").enforce
+var /* [auto-meaningful-name] */require$$_1686_426_index$enforce = require("../1686/426/index").enforce
 var d = require("./1238")
 var p = !o.ActiveXObject && "ActiveXObject" in o
 var /* [auto-meaningful-name] */Object$isExtensible = Object.isExtensible
@@ -34,7 +34,7 @@ if (d && p) {
   i(m$prototype, {
     delete: function (e) {
       if (l(e) && !Object$isExtensible(e)) {
-        var t = require$$_1686_426$enforce(this)
+        var t = require$$_1686_426_index$enforce(this)
         if (!t.frozen) {
           t.frozen = new r()
         }
@@ -44,7 +44,7 @@ if (d && p) {
     },
     has: function (e) {
       if (l(e) && !Object$isExtensible(e)) {
-        var t = require$$_1686_426$enforce(this)
+        var t = require$$_1686_426_index$enforce(this)
         if (!t.frozen) {
           t.frozen = new r()
         }
@@ -54,7 +54,7 @@ if (d && p) {
     },
     get: function (e) {
       if (l(e) && !Object$isExtensible(e)) {
-        var t = require$$_1686_426$enforce(this)
+        var t = require$$_1686_426_index$enforce(this)
         if (!t.frozen) {
           t.frozen = new r()
         }
@@ -64,7 +64,7 @@ if (d && p) {
     },
     set: function (e, t) {
       if (l(e) && !Object$isExtensible(e)) {
-        var n = require$$_1686_426$enforce(this)
+        var n = require$$_1686_426_index$enforce(this)
         if (!n.frozen) {
           n.frozen = new r()
         }
