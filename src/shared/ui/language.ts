@@ -151,6 +151,8 @@ var u = $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571
   "ExtensionWidget.overwrite": "覆盖",
   "ExtensionWidget.loading": "正在加载控件...",
   "ExtensionWidget.finishRegistration": "控件 {title}（{type}） 加载完成",
+  /** [CoCo Next] 移除自定义控件 */
+  "ExtensionWidget.finishRemove": "已移除控件 {title}（{type}）",
   "ExtensionWidget.category.ui": "界面控件",
   "ExtensionWidget.category.function": "功能控件",
   "ExtensionWidget.category.extension": "自定义控件",
@@ -167,6 +169,10 @@ var u = $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571
   "WidgetList.category.social": "社交",
   "WidgetList.addSuccessToast": "已添加「{widgetTitle}」控件",
   "WidgetList.addFailureToast": "控件添加失败，请稍后再试",
+  /** [CoCo Next] 移除自定义控件 */
+  "WidgetList.widgetIsUsedTitle": "控件正在使用",
+  "WidgetList.widgetIsUsedContent": "控件「{title}」正在使用，移除控件可能导致作品异常。\n确定要移除该控件吗？",
+  "WidgetList.removeSuccess": "已移除「{title}」控件",
   "TextWidget.widgetName": "文本",
   "ButtonWidget.widgetName": "按钮",
   "InputWidget.widgetName": "输入框",

@@ -1,11 +1,39 @@
+import { a as OT } from "../../../../../unrestored/shared/1571/2636/24/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../../../unrestored/shared/1571/2636/37/index"
+import dispatch, * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../../../unrestored/shared/1571/2636/37/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_storage from "../../../../shared/widget/custom/storage"
+import { getWidgetTitle } from "../../../../shared/widget/custom/load"
+import * as CustomWidgetStorage from "../../../../shared/widget/custom/storage"
+import * as InternalWidgetStorage from "../../../widget/internal/storage"
+import * as CommonActions from "../../../redux/common/actions"
+import * as Language from "../../../../shared/ui/language"
+
+export function pick(data) {
+  const { path, op } = data
+  if (path.length !== 2 || path[0] !== "unsafeExtensionWidgetList" || !op.r) {
+    return
+  }
+  const index = path[1]
+  const unsafeExtensionWidgetList: any[] = OT.getPreviousDoc()?.unsafeExtensionWidgetList
+  if (unsafeExtensionWidgetList === undefined) {
+    return
+  }
+  const widget = unsafeExtensionWidgetList[index]
+  const { type } = widget
+  const title = getWidgetTitle(type)
+  InternalWidgetStorage.unregister(InternalWidgetStorage.WidgetCategory.EXTENSION, type)
+  CustomWidgetStorage.removeUnsafeExtension(type)
+  dispatch(CommonActions.updateExtensionWidgetListAction())
+  dispatch(CommonActions.openConfirmDialogAction({
+    title: Language.format(Language.zh_CN, "ExtensionWidget.finishRemove", { title, type }),
+    cancelBtnVisible: false
+  }))
+}
 
 export function drop(e) {
   var /* [auto-meaningful-name] */e$path

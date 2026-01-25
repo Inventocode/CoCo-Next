@@ -92,6 +92,7 @@ const ConfigItem = React.memo(({
   var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
+  const screens = useSelector((state) => state.project.screens)
   const globalWidgetIds = useSelector((state) => state.project.globalWidgetIds)
   const language = useSelector((state) => state.common.language)
   React.useEffect(function () {
@@ -137,10 +138,31 @@ const ConfigItem = React.memo(({
       }
     } else if (CustomWidgetType.isExtensions(type)) {
       // [CoCo Next] 添加移除自定义控件的功能
+      if (
+        globalWidgetIds.some((id) => id.includes(type)) ||
+        screens.some((screen) => screen.widgetIds.some((id) => id.includes(type)))
+      ) {
+        const confirm = await new Promise<boolean>((resolve) => {
+          dispatch(Actions.openConfirmDialogAction({
+            title: formatMessage({ id: "WidgetList.widgetIsUsedTitle" }, { title }),
+            content: formatMessage({ id: "WidgetList.widgetIsUsedContent" }, { title }),
+            onConfirm() { resolve(true) },
+            onCancel() { resolve(false) },
+            isDangerous: true
+          }))
+        })
+        if (!confirm) {
+          return
+        }
+      }
       InternalWidgetStorage.unregister(InternalWidgetStorage.WidgetCategory.EXTENSION, type)
       CustomWidgetStorage.removeUnsafeExtension(type)
       oTHelper.extensionWidget?.clientOp.removeUnsafeExtensionWidget(type)
       dispatch(Actions.updateExtensionWidgetListAction())
+      dispatch(Actions.showCommonToastInfoAction({
+        message: formatMessage({ id: "WidgetList.removeSuccess" }, { title }),
+        type: "success"
+      }))
     } else {
       console.error("removeWidget error: widgetServerId is null")
     }
