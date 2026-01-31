@@ -55,10 +55,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
-import { d as useDispatch, e as useSelector } from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
 import * as WidgetShop from "../../../../shared/widget/custom/shop"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
@@ -76,7 +76,7 @@ const ConfigItem = React.memo(({
 }) => {
   const currentScreen = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
   const dispatch = useDispatch()
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
   const [menuVisible, setMenuVisible] = React.useState(false)
   const [bigImageVisible, setBigImageVisible] = React.useState(false)
   const [isMouseIn, setIsMouseIn] = React.useState(false)
@@ -263,7 +263,7 @@ export const WidgetCategoryItem = React.memo<{
   title: string
   defaultExpanded: boolean
 }>(({ configList, title, defaultExpanded }) => {
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
   var i = useSelector((state) => state.common.userInfo?.id)
   var a = React.useState(undefined === defaultExpanded || defaultExpanded)
   var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(a, 2)

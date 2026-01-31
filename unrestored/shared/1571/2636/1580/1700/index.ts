@@ -4,9 +4,9 @@
  * 模块 ID：1700
  */
 
-var r = require("../1706/86/index")
-var o = require("../1706/240")
-var i = require("../1705/497")
+var r = require("../1661/86/index")
+var o = require("../1282/240")
+var i = require("../1625/497")
 r({
   target: "Reflect",
   stat: true,

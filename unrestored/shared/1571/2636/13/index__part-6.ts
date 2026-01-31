@@ -7,11 +7,12 @@
 "use strict"
 
 import /* [auto-meaningful-name] */React from "react"
+import { memo, forwardRef, useState, useRef, useEffect, useLayoutEffect, useImperativeHandle } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./867"
-var Q = React1.memo(React1.forwardRef(function (e, t) {
+var Q = memo(forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$defaultVisible = e.defaultVisible
   var /* [auto-meaningful-name] */e$className = e.className
@@ -25,17 +26,17 @@ var Q = React1.memo(React1.forwardRef(function (e, t) {
   var g = undefined === e$autoClose || e$autoClose
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var v = undefined !== e$disabled && e$disabled
-  var b = React1.useState(!!e$defaultVisible)
+  var b = useState(!!e$defaultVisible)
   var y = $$_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = React1.useRef(null)
-  React1.useEffect(function () {
+  var w = useRef(null)
+  useEffect(function () {
     if (E && e$onOpen) {
       e$onOpen()
     }
   }, [E])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var e = function e(t) {
       var /* [auto-meaningful-name] */t$target = t.target
       if (w.current && !w.current.contains(t$target)) {
@@ -54,7 +55,7 @@ var Q = React1.memo(React1.forwardRef(function (e, t) {
       document.body.removeEventListener("click", e)
     }
   }, [E, e$onClose, g])
-  React1.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       target: w.current,
       visible: E,

@@ -12,16 +12,17 @@ import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_550 from "./550"
 import * as /* [auto-meaningful-name] */$_423 from "./423"
 import /* [auto-meaningful-name] */$_4231 from "./423"
-var OT = React1.memo(function () {
+var OT = memo(function () {
   var e
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.block.dropdown
   })
   var /* [auto-meaningful-name] */t$blockInfo = t.blockInfo
@@ -30,8 +31,8 @@ var OT = React1.memo(function () {
   var /* [auto-meaningful-name] */t$options = t.options
   var a = $_17_index.Blink.mainWorkspace.get_block_by_id(t$blockInfo$sourceBlockId)
   var s = (null === a || undefined === a ? undefined : a.get_field_value("WIDGET_ID")) || (null === a || undefined === a || null === (e = a.get_parent()) || undefined === e ? undefined : e.get_field_value("WIDGET_ID"))
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var l = useDispatch()
   if (!s) {
     console.error("actorId is null")
     return null
@@ -110,7 +111,7 @@ var OT = React1.memo(function () {
                   onClick: u
                 }, React.createElement($_13_index.j, {
                   type: "icon-add"
-                }), $_710_index$a$formatMessage({
+                }), $_710$a$formatMessage({
                   id: "actorAddStyle"
                 })))
               }
@@ -182,7 +183,7 @@ var OT = React1.memo(function () {
               onClick: u
             }, React.createElement($_13_index.j, {
               type: "icon-add"
-            }), $_710_index$a$formatMessage({
+            }), $_710$a$formatMessage({
               id: "ActorStyleDialog.addAction"
             }))) : React.createElement($_13_index.p, {
               value: e$value,

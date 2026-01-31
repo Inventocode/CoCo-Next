@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./325")
+var r = require("./325/index")
 var i = "object" == typeof exports && exports && !exports.nodeType && exports
 var o = i && "object" == typeof module && module && !module.nodeType && module
 var a = o && o.exports === i ? r.a.Buffer : undefined

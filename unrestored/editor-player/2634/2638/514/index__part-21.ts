@@ -9,7 +9,7 @@
 import { ve } from "./index__part-18"
 import { ye } from "./index__part-19"
 import { Ee } from "./index__part-20"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index from "../../../../shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710 from "../../../../shared/1571/2636/710"
 import be from "./71"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_2681_index from "../../../../shared/1571/2636/2681/index"
@@ -19,36 +19,37 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language fr
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_685_360 from "../../../../shared/1571/2636/685/360"
-var je = React1.memo(function () {
-  var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710_index.a().formatMessage
-  var n = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
+var je = memo(function () {
+  var t = useDispatch()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710.a().formatMessage
+  var n = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = React1.useState(n.sendSmsNumber)
+  var r = useState(n.sendSmsNumber)
   var i = $$_$$_$$_$$_shared_1571_2636_10_index.a(r, 2)
   var o = i[0]
   var a = i[1]
-  var s = React1.useState(n.sendSmsContent)
+  var s = useState(n.sendSmsContent)
   var u = $$_$$_$$_$$_shared_1571_2636_10_index.a(s, 2)
   var l = u[0]
   var d = u[1]
-  var m = React1.useState([])
+  var m = useState([])
   var b = $$_$$_$$_$$_shared_1571_2636_10_index.a(m, 2)
   var g = b[0]
   var v = b[1]
-  var _ = React1.useState(1)
+  var _ = useState(1)
   var y = $$_$$_$$_$$_shared_1571_2636_10_index.a(_, 2)
   var O = y[0]
   var w = y[1]
-  var E = React1.useRef(null)
-  var T = React1.useRef(null)
-  React1.useEffect(function () {
+  var E = useRef(null)
+  var T = useRef(null)
+  useEffect(function () {
     if (n.sendSmsPageVisible) {
       a(n.sendSmsNumber)
       d(n.sendSmsContent)
@@ -69,14 +70,14 @@ var je = React1.memo(function () {
     type: "icon-phone-nav-back"
   })), React.createElement("span", {
     className: be.receiveUser
-  }, $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.smsReceiver"
   }))), React.createElement("div", {
     className: be.numberBox
   }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.k, {
     className: be.inputNumber,
     defaultValue: o,
-    placeholder: $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+    placeholder: $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
       id: "emulator.smsSendNumberPlaceHolder"
     }),
     onChange: function (t) {
@@ -101,7 +102,7 @@ var je = React1.memo(function () {
     maxLength: 200,
     className: be.contentTextArea,
     defaultValue: l,
-    placeholder: $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+    placeholder: $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
       id: "emulator.smsContentPlaceHolder"
     }),
     onChange: function (t) {
@@ -142,13 +143,13 @@ var je = React1.memo(function () {
     type: "icon-phone-send-sms"
   }))))
 })
-var Se = React1.memo(function () {
-  var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710_index.a().formatMessage
-  var n = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
+var Se = memo(function () {
+  var t = useDispatch()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710.a().formatMessage
+  var n = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (de) {
       clearTimeout(de)
     }
@@ -173,11 +174,11 @@ var Se = React1.memo(function () {
     className: be.smsIcon
   }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
     type: "icon-widget-sms-service"
-  })), React.createElement("span", null, $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  })), React.createElement("span", null, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.sms"
   }))), React.createElement("div", {
     className: be.smsTime
-  }, $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.now"
   }))), React.createElement("div", {
     className: be.smsNumber
@@ -185,14 +186,14 @@ var Se = React1.memo(function () {
     className: be.smsContent
   }, n.receiveSmsContent))
 })
-var Ae = React1.memo(function () {
+var Ae = memo(function () {
   return React.createElement("div", {
     className: be.screenMask,
     id: "cocoScreenMask"
   })
 })
-var ke = React1.memo(function () {
-  var t = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
+var ke = memo(function () {
+  var t = useSelector(function (t) {
     return t.language
   })
   return React.createElement($$_$$_$$_$$_shared_1571_2636_2681_index.b, {

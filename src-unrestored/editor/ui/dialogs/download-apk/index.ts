@@ -9,14 +9,15 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1062 from "../../../../../unrestored/shared/1571/2636/1062"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621 from "../../../../../unrestored/shared/1571/2636/1062"
-var ML = React1.memo(function () {
-  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+var ML = memo(function () {
+  var e = useDispatch()
+  var t = useSelector(function (e) {
     return e.common.blockImageDialogInfo
   })
   var /* [auto-meaningful-name] */t$visible = t.visible

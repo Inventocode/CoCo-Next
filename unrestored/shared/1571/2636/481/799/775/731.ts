@@ -8,7 +8,7 @@
 
 export { c as b }
 export { u as a }
-import * as /* [auto-meaningful-name] */$$_$$_1212_38 from "../../1212/38"
+import * as /* [auto-meaningful-name] */$$_38 from "../38"
 import * as /* [auto-meaningful-name] */$$_365 from "../365"
 import * as /* [auto-meaningful-name] */$$_939 from "../939"
 import * as /* [auto-meaningful-name] */$$_439_index from "../439/index"
@@ -78,7 +78,7 @@ var u = function () {
     return this.startChild(e)
   }
   e.prototype.startChild = function (t) {
-    var n = new e($$_$$_1212_38.a($$_$$_1212_38.a({}, t), {
+    var n = new e($$_38.a($$_38.a({}, t), {
       parentSpanId: this.spanId,
       sampled: this.sampled,
       traceId: this.traceId
@@ -92,12 +92,12 @@ var u = function () {
   }
   e.prototype.setTag = function (e, t) {
     var n
-    this.tags = $$_$$_1212_38.a($$_$$_1212_38.a({}, this.tags), ((n = {})[e] = t, n))
+    this.tags = $$_38.a($$_38.a({}, this.tags), ((n = {})[e] = t, n))
     return this
   }
   e.prototype.setData = function (e, t) {
     var n
-    this.data = $$_$$_1212_38.a($$_$$_1212_38.a({}, this.data), ((n = {})[e] = t, n))
+    this.data = $$_38.a($$_38.a({}, this.data), ((n = {})[e] = t, n))
     return this
   }
   e.prototype.setStatus = function (e) {

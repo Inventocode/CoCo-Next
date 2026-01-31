@@ -13,6 +13,7 @@ export { m as c }
 export { g as f }
 export { _ as d }
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../unrestored/shared/1571/2636/6"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2681_index from "../../../unrestored/shared/1571/2636/2681/index"

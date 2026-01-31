@@ -12,48 +12,49 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_acti
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1191 from "./1191"
 import /* [auto-meaningful-name] */$_11911 from "./1191"
 import * as /* [auto-meaningful-name] */$_270 from "./270"
 import /* [auto-meaningful-name] */$_2701 from "./270"
-var kL = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var kL = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.widgetMallVisible
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.d()
-  var r = React1.useState(false)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var n = useDispatch()
+  var r = useState(false)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = React1.useState([])
+  var s = useState([])
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(undefined)
+  var d = useState(undefined)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState([])
+  var v = useState([])
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
-  var C = React1.useState([])
+  var C = useState([])
   var T = $_10_index.a(C, 2)
   var j = T[0]
   var R = T[1]
-  var k = React1.useRef(1)
-  var D = React1.useRef(1)
-  var M = React1.useRef(false)
-  var L = React1.useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var k = useRef(1)
+  var D = useRef(1)
+  var M = useRef(false)
+  var L = useCallback(O.a(RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var /* [auto-meaningful-name] */e$sent1$items
@@ -107,7 +108,7 @@ var kL = React1.memo(function () {
       }
     }, e, null, [[0, 12]])
   })), [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e) {
       k.current = 1
       L()
@@ -182,7 +183,7 @@ var kL = React1.memo(function () {
             case 3:
               if (e.sent) {
                 n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                  message: $_710_index$a$formatMessage({
+                  message: $_710$a$formatMessage({
                     id: "WidgetMall.addSuccess"
                   }),
                   type: "success"
@@ -212,7 +213,7 @@ var kL = React1.memo(function () {
               e.prev = 7
               e.t0 = e.catch(0)
               n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "WidgetMall.addFailure"
                 }),
                 type: "error"
@@ -233,15 +234,15 @@ var kL = React1.memo(function () {
     onClick: function () {
       R([])
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "WidgetMall.clear"
   })), React.createElement($_13_index.d, {
     type: "primary",
     onClick: G
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "WidgetMall.add"
   }), "(", j.length, ")"))
-  var U = React1.useCallback(function () {
+  var U = useCallback(function () {
     var e = O.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
@@ -291,7 +292,7 @@ var kL = React1.memo(function () {
   return React.createElement($_13_index.f, {
     withPortal: true,
     visible: e,
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "Widget.widgetMall"
     }),
     footer: W,
@@ -302,14 +303,14 @@ var kL = React1.memo(function () {
   }, React.createElement("img", {
     src: $_11911,
     alt: "networkError"
-  }), React.createElement("h3", null, $_710_index$a$formatMessage({
+  }), React.createElement("h3", null, $_710$a$formatMessage({
     id: "WidgetMall.networkError"
   })), React.createElement($_13_index.d, {
     onClick: function () {
       L()
     },
     type: "primary"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "WidgetMall.retry"
   }))), !i && l.map(function (e) {
     return React.createElement("div", {
@@ -364,7 +365,7 @@ var kL = React1.memo(function () {
       className: $_2701.authorName
     }, e.author_name)) : React.createElement("div", null), 1 === e.if_have ? React.createElement("div", {
       className: $_2701.added
-    }, React.createElement("span", null, $_710_index$a$formatMessage({
+    }, React.createElement("span", null, $_710$a$formatMessage({
       id: "WidgetMall.added"
     }))) : j.includes(e.id) ? React.createElement("div", {
       onClick: F.bind(null, e.id),
@@ -374,7 +375,7 @@ var kL = React1.memo(function () {
     })) : React.createElement($_748_index.a, {
       placement: "bottom",
       trigger: ["hover", "click"],
-      title: $_710_index$a$formatMessage({
+      title: $_710$a$formatMessage({
         id: "WidgetMall.add"
       })
     }, React.createElement("div", {

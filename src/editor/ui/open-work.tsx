@@ -18,20 +18,20 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_18 
 import * as Actions from "../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../unrestored/shared/1571/2636/627"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2646_index from "../../../unrestored/shared/1571/2636/2646/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_1529 from "../../../unrestored/shared/1571/2636/1529"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../unrestored/shared/1571/2636/392/index"
 function OpenWork() {
-  var dispatch = $$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var formatMessage = $$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var courseList = $$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var dispatch = useDispatch()
+  var formatMessage = $$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var courseList = useSelector(function (e) {
     return e.common.courseList
   })
-  var templateList = $$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var templateList = useSelector(function (e) {
     return e.common.templateList
   })
   const hasWorkRef = React.useRef(false)

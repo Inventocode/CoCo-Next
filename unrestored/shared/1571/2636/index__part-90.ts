@@ -11,36 +11,37 @@ import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect, useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_329 from "./329"
 import /* [auto-meaningful-name] */$_3291 from "./329"
-var Uv = React1.memo(function (e) {
+var Uv = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$label = e.label
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$bgColor = e.bgColor
-  var a = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = $_16_index.e(function (e) {
+  var a = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var l = $_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.block.flyoutVisible
   })
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState("")
+  var g = useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     y(c === t && l ? e$color : p || c === t && !l ? e$bgColor : "")
   }, [c, t, l, p, e$color, e$bgColor])
   return React.createElement("div", {
@@ -76,7 +77,7 @@ var Uv = React1.memo(function (e) {
     }
   }, React.createElement($_13_index.j, {
     type: e$icon
-  })), React.createElement("span", null, $_710_index$a$formatMessage({
+  })), React.createElement("span", null, $_710$a$formatMessage({
     id: e$label
   })))
 })
@@ -131,13 +132,13 @@ var Hv = [
     bgColor: "rgba(247,135,103,0.2)"
   }
 ]
-var Vv = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+var Vv = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
     className: $_3291.basicBlockBox
   }, React.createElement("div", {
     className: $_3291.categoryTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "basicBlock"
   })), React.createElement("div", {
     className: $_3291.blockList
@@ -149,9 +150,9 @@ var Vv = React1.memo(function () {
     className: $_3291.spaceLine
   }))
 })
-var zv = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.e(function (e) {
+var zv = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useSelector(function (e) {
     return e.block.isBlockDragDeleteArea
   })
   return React.createElement("div", {
@@ -166,14 +167,14 @@ var zv = React1.memo(function () {
   }, React.createElement($_13_index.j, {
     type: "icon-delete-bottom",
     className: $_3291.deleteBlockBottomIcon
-  })), React.createElement("div", null, $_710_index$a$formatMessage({
+  })), React.createElement("div", null, $_710$a$formatMessage({
     id: "Workspace.blockDragDeleteAreaTips"
   })))
 })
-var Yv = React1.memo(function () {
-  var e = $_16_index.d()
-  var t = React1.useRef(null)
-  var n = $_16_index.e(function (e) {
+var Yv = memo(function () {
+  var e = useDispatch()
+  var t = useRef(null)
+  var n = useSelector(function (e) {
     return e.block.isBlockDragDeleteArea
   })
   return React.createElement("div", {

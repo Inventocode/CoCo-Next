@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../unrestored/shared/1571/2636/11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../unrestored/shared/1571/2636/25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47_index from "../../../../unrestored/shared/1571/2636/47/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_42_index from "../../../../unrestored/shared/1571/2636/42/index"
 import * as /* [auto-meaningful-name] */$$_builtIn_types from "../built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"

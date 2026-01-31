@@ -16,7 +16,7 @@ export { d as b }
 export { p as d }
 export { ACTOR_ACTION as a }
 export { h as j }
-import * as r from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as /* [auto-meaningful-name] */$_550 from "./550"
 var /* [auto-meaningful-name] */STYLE_DEFAULT_STYLE_ID = "STYLE_DEFAULT_STYLE_ID"
 var a = {
@@ -33,12 +33,12 @@ var /* [auto-meaningful-name] */ACTOR_ACTION = "ACTOR_ACTION"
 function h(e, t) {
   var n
   var o
-  var i = r.a(e)
+  var i = $_47_index.a(e)
   try {
     for (i.s(); !(o = i.n()).done;) {
       var s
       var /* [auto-meaningful-name] */o$value = o.value
-      var l = r.a(o$value.styleList)
+      var l = $_47_index.a(o$value.styleList)
       try {
         for (l.s(); !(s = l.n()).done;) {
           var /* [auto-meaningful-name] */s$value = s.value

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var a = require("../../../13/780/1068")
+var a = require("../../../13/780/1068/index")
 var r = require("../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -20,9 +20,9 @@ var s = r(require("../../../13/780/1070/1551"))
 var d = r(require("../../../13/780/1069/index"))
 var c = r(require("../../../50/index"))
 var f = a(require("react"))
-var h = require("../../../80/index")
+var h = require("react-dom")
 var p = r(require("../../../8"))
-var v = a(require("./2918/2751"))
+var v = a(require("./2916/2751"))
 var m = {
   className: c.default.string,
   onMouseDown: c.default.func,

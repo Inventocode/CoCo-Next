@@ -48,8 +48,9 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_567 from "./567"
 import /* [auto-meaningful-name] */$_5671 from "./567"
@@ -147,13 +148,13 @@ function PC() {
     }, e)
   }))).apply(this, arguments)
 }
-var BC = React1.memo(function (e) {
-  var t = $_16_index.d()
+var BC = memo(function (e) {
+  var t = useDispatch()
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var r = undefined === e$keyName ? "token" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var a = React1.useState(false)
+  var a = useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]

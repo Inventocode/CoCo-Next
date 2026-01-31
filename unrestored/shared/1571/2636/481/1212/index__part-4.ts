@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as o from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$_2673 from "./2673"
 var N = Object.setPrototypeOf || ({
   __proto__: []
@@ -28,7 +28,7 @@ var M = function (e) {
     N(r, this$constructor.prototype)
     return r
   }
-  o.c(t, e)
+  $$_799_38.c(t, e)
   return t
 }(Error)
 var L = /^(?:(\w+):)\/\/(?:(\w+)(?::(\w+))?@)([\w.-]+)(?::(\d+))?\/(.+)/
@@ -58,7 +58,7 @@ var j = function () {
     if (!t) {
       throw new M("Invalid Dsn")
     }
-    var n = o.d(t.slice(1), 6)
+    var n = $$_799_38.d(t.slice(1), 6)
     var r = n[0]
     var i = n[1]
     var a = n[2]

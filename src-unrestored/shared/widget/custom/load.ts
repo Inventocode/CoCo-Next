@@ -41,6 +41,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */AntdMobile from "antd-mobile"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"

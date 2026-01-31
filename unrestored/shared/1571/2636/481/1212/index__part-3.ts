@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_395 from "./395"
 import * as /* [auto-meaningful-name] */$_918 from "./918"
-import * as o from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$_928 from "./928"
 import * as /* [auto-meaningful-name] */$_306 from "./306"
 import * as /* [auto-meaningful-name] */$_564_index from "./564/index"
@@ -253,15 +253,15 @@ function C(e) {
                 },
                 startTimestamp: Date.now()
               }
-              k("fetch", o.a({}, r))
+              k("fetch", $$_799_38.a({}, r))
               return e.apply(w, t).then(function (e) {
-                k("fetch", o.a(o.a({}, r), {
+                k("fetch", $$_799_38.a($$_799_38.a({}, r), {
                   endTimestamp: Date.now(),
                   response: e
                 }))
                 return e
               }, function (e) {
-                k("fetch", o.a(o.a({}, r), {
+                k("fetch", $$_799_38.a($$_799_38.a({}, r), {
                   endTimestamp: Date.now(),
                   error: e
                 }))
@@ -359,7 +359,7 @@ function k(e, t) {
   var /* [auto-meaningful-name] */i$return
   if (e && E[e]) {
     try {
-      for (var i = o.g(E[e] || []), a = i.next(); !a.done; a = i.next()) {
+      for (var i = $$_799_38.g(E[e] || []), a = i.next(); !a.done; a = i.next()) {
         var /* [auto-meaningful-name] */a$value = a.value
         try {
           a$value(t)

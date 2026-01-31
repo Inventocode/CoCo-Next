@@ -7,6 +7,7 @@
 "use strict"
 
 export { a }
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 var o = React1.createContext(null)

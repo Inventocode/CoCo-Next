@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$_317 from "./317"
 import * as /* [auto-meaningful-name] */$_524 from "./524"
 import * as /* [auto-meaningful-name] */$_729_index from "./729/index"
 import * as /* [auto-meaningful-name] */$_264 from "./264"
-import * as /* [auto-meaningful-name] */$$_1212_38 from "../1212/38"
+import * as i from "./38"
 import * as /* [auto-meaningful-name] */$_439_index from "./439/index"
 var j = function () {
   function e(t) {
@@ -174,7 +174,7 @@ var G = function () {
           var h = null === (o = d) || undefined === o ? undefined : o.getSpan()
           if ("function" !== typeof f || "mapReduce" === t && 2 === u.length) {
             var p = null === (a = h) || undefined === a ? undefined : a.startChild(r(this, t, u))
-            var _ = e.call.apply(e, $$_1212_38.f([this], u))
+            var _ = e.call.apply(e, i.f([this], u))
             return $_317.j(_) ? _.then(function (e) {
               var t
               if (!(null === (t = p) || undefined === t)) {
@@ -184,7 +184,7 @@ var G = function () {
             }) : (null === (s = p) || undefined === s || s.finish(), _)
           }
           var A = null === (c = h) || undefined === c ? undefined : c.startChild(r(this, t, u.slice(0, -1)))
-          return e.call.apply(e, $$_1212_38.f([this], u.slice(0, -1), [
+          return e.call.apply(e, i.f([this], u.slice(0, -1), [
             function (e, t) {
               var n
               if (!(null === (n = A) || undefined === n)) {
@@ -215,7 +215,7 @@ var G = function () {
     }
     try {
       if ("mapReduce" === t) {
-        var c = $$_1212_38.d(n, 2)
+        var c = i.d(n, 2)
         var u = c[0]
         var l = c[1]
         r[a[0]] = "string" === typeof u ? u : u.name || "<anonymous>"
@@ -231,7 +231,7 @@ var G = function () {
   e.id = "Mongo"
   return e
 }()
-var z = $$_1212_38.a($$_1212_38.a({}, r), {
+var z = i.a(i.a({}, r), {
   BrowserTracing: F
 })
 $_729_index.a()

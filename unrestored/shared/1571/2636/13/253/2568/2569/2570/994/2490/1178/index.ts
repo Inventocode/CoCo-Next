@@ -6,8 +6,8 @@
 
 var r = require("./2495/index")
 var i = require("./2502")
-var o = require("./2504/index")
-var a = require("./2505")
+var o = require("./2504")
+var a = require("./2505/index")
 var s = require("./2506")
 function c(e) {
   var t = -1

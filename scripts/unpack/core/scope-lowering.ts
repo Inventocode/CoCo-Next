@@ -65,7 +65,8 @@ export function scopeLowering(config: UnpackConfig, modules: ModuleMap) {
                     exportsNameMap: {},
                     importsMap: new Map(),
                     exports: new Set(),
-                    count: moduleParts.length
+                    count: moduleParts.length,
+                    namedImport: module.namedImport
                 })
             }
             addStatementToModulePart(moduleParts.slice(-1)[0]!, statement)

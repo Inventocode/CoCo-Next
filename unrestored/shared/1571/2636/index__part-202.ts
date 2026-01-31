@@ -8,8 +8,9 @@
 
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useLayoutEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import "./2628"
 import "./2629"
@@ -128,11 +129,11 @@ var OL = {
   resourceLibrary: K.j.ReadOnly
 }
 var wL = function () {
-  var e = $_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.common.editPermission
   })
-  var t = $_16_index.d()
-  React1.useLayoutEffect(function () {
+  var t = useDispatch()
+  useLayoutEffect(function () {
     var n
     var r = "readonly" === (n = function (e) {
       switch (e) {

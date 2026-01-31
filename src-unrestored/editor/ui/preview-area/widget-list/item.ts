@@ -55,19 +55,20 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_shop from "../../../../shared/widget/custom/shop"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
 var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
-var av = React1.memo(function (e) {
+var av = memo(function (e) {
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$type = e.type
@@ -75,31 +76,31 @@ var av = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
   var /* [auto-meaningful-name] */e$widgetServerId = e.widgetServerId
   var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
-  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var u = React1.useState(false)
+  var c = useDispatch()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var u = useState(false)
   var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState(false)
+  var g = useState(false)
   var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = React1.useState(false)
+  var w = useState(false)
   var C = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(w, 2)
   var A = C[0]
   var j = C[1]
-  var R = React1.useState(true)
+  var R = useState(true)
   var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
-  var L = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var L = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
-  var P = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var P = useSelector(function (e) {
     return e.common.language
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function e() {
       m(false)
       y(false)
@@ -113,7 +114,7 @@ var av = React1.memo(function (e) {
       document.addEventListener("dragstart", e, true)
     }
   }, [p, b])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (iv.includes(e$type)) {
       var e = L.some(function (e) {
         return e.includes(e$type)
@@ -143,7 +144,7 @@ var av = React1.memo(function (e) {
             case 3:
               if (e.sent) {
                 c($$_$$_$$_redux_common_actions.mj({
-                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                     id: "WidgetMall.removeSuccess"
                   }),
                   type: "success"
@@ -151,7 +152,7 @@ var av = React1.memo(function (e) {
                 c($$_$$_$$_redux_common_actions.Kh([e$type]))
               } else {
                 c($$_$$_$$_redux_common_actions.mj({
-                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                     id: "WidgetMall.removeFailure"
                   })
                 }))
@@ -185,7 +186,7 @@ var av = React1.memo(function (e) {
       return p ? React.createElement("div", {
         className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.menuWrapper,
         onMouseDown: F
-      }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+      }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
         id: "Widget.removeWidget"
       })) : b && A ? React.createElement("div", {
         className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.imgWrapper
@@ -230,7 +231,7 @@ var av = React1.memo(function (e) {
       if (!B || !D) {
         var t = ""
         if (D) {
-          t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+          t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "StageToast.addCanvasWidgetTips"
           })
         } else {
@@ -240,7 +241,7 @@ var av = React1.memo(function (e) {
             return
           }
           var i = null === (n = $$_$$_$$_$$_shared_ui_language.c(P, o.title)) || undefined === n ? undefined : n.toString()
-          t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+          t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "StageToast.addLimitedWidgetTips"
           }, {
             widgetTitle: i
@@ -288,16 +289,16 @@ var av = React1.memo(function (e) {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.title
   }, e$title)))
 })
-var sv = React1.memo(function (e) {
+var sv = memo(function (e) {
   var /* [auto-meaningful-name] */e$configList = e.configList
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$defaultExpanded = e.defaultExpanded
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var i = useSelector(function (e) {
     var /* [auto-meaningful-name] */e$common$userInfo
     return null === (e$common$userInfo = e.common.userInfo) || undefined === e$common$userInfo ? undefined : e$common$userInfo.id
   })
-  var a = React1.useState(undefined === e$defaultExpanded || e$defaultExpanded)
+  var a = useState(undefined === e$defaultExpanded || e$defaultExpanded)
   var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
@@ -324,7 +325,7 @@ var sv = React1.memo(function (e) {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryTitleBox
   }, React.createElement("h3", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.categoryTitle)
-  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: e$title
   })), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(e$title) && p && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.newTips
@@ -344,7 +345,7 @@ var sv = React1.memo(function (e) {
     return !e.isDiscard && React.createElement(av, {
       key: e$type,
       icon: e$icon,
-      title: e$previewAreaWidgetTitle ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+      title: e$previewAreaWidgetTitle ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
         id: e$previewAreaWidgetTitle
       }) : e$title1,
       type: e$type,

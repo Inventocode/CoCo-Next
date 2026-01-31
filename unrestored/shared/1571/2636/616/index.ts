@@ -6,5 +6,5 @@
 
 "use strict"
 
-var r = require("./802/index")
+var r = require("./802")
 exports.a = r.b

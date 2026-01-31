@@ -11,49 +11,50 @@ var CP = false
 import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
 import /* [auto-meaningful-name] */Quill from "quill"
 import * as Yr from "./53"
-import * as _n from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_707 from "./707"
 import /* [auto-meaningful-name] */$_7071 from "./707"
-var kP = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.d()
-  var n = $_16_index.e(function (e) {
+var kP = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useDispatch()
+  var n = useSelector(function (e) {
     return e.common.richTextEditorDialogInfo
   })
   var /* [auto-meaningful-name] */n$visible = n.visible
   var /* [auto-meaningful-name] */n$onConfirm = n.onConfirm
   var /* [auto-meaningful-name] */n$content = n.content
   var a = undefined === n$content ? "" : n$content
-  var s = React1.useState(false)
+  var s = useState(false)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(null)
+  var d = useState(null)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useRef(null)
-  var b = React1.useRef(null)
-  var y = React1.useRef(null)
-  var E = React1.useRef(null)
-  var O = React1.useRef(null)
-  var w = React1.useRef(null)
-  var C = React1.useCallback(function () {
+  var v = useRef(null)
+  var b = useRef(null)
+  var y = useRef(null)
+  var E = useRef(null)
+  var O = useRef(null)
+  var w = useRef(null)
+  var C = useCallback(function () {
     t($$_$$_$$_$$_src_editor_redux_common_actions.Yg())
   }, [t])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (y.current && w.current) {
       var t = {
-        placeholder: $_710_index$a$formatMessage({
+        placeholder: $_710$a$formatMessage({
           id: "RichTextEditor.inputPlaceholder"
         }),
         theme: "snow",
@@ -128,19 +129,19 @@ var kP = React1.memo(function () {
         console.error("quill link error")
       }
     }
-  }, [$_710_index$a$formatMessage])
-  React1.useEffect(function () {
+  }, [$_710$a$formatMessage])
+  useEffect(function () {
     if (n$visible && E.current) {
       E.current.root.innerHTML = $_28_index.i(a)
     }
   }, [a, n$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n$visible) {
       !function () {
         if (!CP) {
           CP = true
           var e
-          var t = _n.a(Yr.a)
+          var t = $_47_index.a(Yr.a)
           try {
             for (t.s(); !(e = t.n()).done;) {
               var /* [auto-meaningful-name] */e$value = e.value
@@ -179,10 +180,10 @@ var kP = React1.memo(function () {
     }
     g(null)
   }, [n$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     v.current = m
   }, [m])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */E$current = E.current
     if (E$current && n$visible) {
       if (l) {
@@ -207,7 +208,7 @@ var kP = React1.memo(function () {
       }
     }
   }, [l, n$visible])
-  var T = React1.useCallback(function () {
+  var T = useCallback(function () {
     if (E.current) {
       var /* [auto-meaningful-name] */E$current$root$innerHTML = E.current.root.innerHTML
       if (n$onConfirm) {
@@ -216,13 +217,13 @@ var kP = React1.memo(function () {
     }
     C()
   }, [C, n$onConfirm])
-  var A = React1.useCallback(function (e) {
+  var A = useCallback(function (e) {
     var /* [auto-meaningful-name] */e$target = e.target
     if ((e$target instanceof Element ? e$target.closest("button.ql-clean") : null) && E.current && w.current) {
       IP(E.current, w.current)
     }
   }, [])
-  var j = React1.useCallback(function (e, t) {
+  var j = useCallback(function (e, t) {
     var /* [auto-meaningful-name] */document$activeElement
     if ("INPUT" !== (null === (document$activeElement = document.activeElement) || undefined === document$activeElement ? undefined : document$activeElement.nodeName) && !t) {
       var /* [auto-meaningful-name] */v$current = v.current
@@ -248,7 +249,7 @@ var kP = React1.memo(function () {
     visible: n$visible,
     withPortal: true,
     onClose: C,
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "RichTextEditor.editDialogTitle"
     }),
     className: $_7071.container
@@ -268,7 +269,7 @@ var kP = React1.memo(function () {
     className: $_7071.save,
     type: "primary",
     onClick: T
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "save"
   }))), React.createElement($_1213.a, {
     placement: "rightBottom",

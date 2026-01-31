@@ -13,22 +13,23 @@ import * as /* [auto-meaningful-name] */$_177 from "./177"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_193 from "./193"
 import /* [auto-meaningful-name] */$_1931 from "./193"
 var SL = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$item$data
-  var n = React1.useState(false)
+  var n = useState(false)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var a = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
     className: $_1931.item
   }, React.createElement("div", {
@@ -70,17 +71,17 @@ var SL = React.memo(function (e) {
       className: N($_1931.text, $_1931.name)
     }, t.saveInfo.name), React.createElement("div", {
       className: N($_1931.save_text, $_1931.save_type)
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "History.save"
     }))) : React.createElement("div", {
       className: N($_1931.save_text, $_1931.save_type)
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "History.autoSave"
     })))), React.createElement("div", {
       className: $_1931.button_area
     }, React.createElement($_748_index.a, {
       placement: "bottom",
-      title: $_710_index$a$formatMessage({
+      title: $_710$a$formatMessage({
         id: "History.fallback"
       }),
       trigger: ["hover", "click"]
@@ -97,7 +98,7 @@ var SL = React.memo(function (e) {
       className: $_1931.icon
     }))), React.createElement($_748_index.a, {
       placement: "bottom",
-      title: $_710_index$a$formatMessage({
+      title: $_710$a$formatMessage({
         id: "History.overview"
       }),
       trigger: ["hover", "click"]
@@ -113,52 +114,52 @@ var SL = React.memo(function (e) {
   }))))
 })
 var AL = React.memo(function () {
-  var e = React1.useState("")
+  var e = useState("")
   var t = $_10_index.a(e, 2)
   var n = t[0]
   var r = t[1]
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.common.historyDialogVisible
   })
-  var i = $_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.project.id
   })
-  var a = React1.useState([])
+  var a = useState([])
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState([])
+  var u = useState([])
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var b = React1.useState(undefined)
+  var g = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var b = useState(undefined)
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = React1.useState(false)
+  var w = useState(false)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
   var j = function (e) {
     r(e)
   }
-  var R = React1.useCallback(function () {
+  var R = useCallback(function () {
     r("")
     g($$_$$_$$_$$_src_editor_redux_common_actions.tj(false))
   }, [g])
   var k = function (e) {
     return e < 10 ? "0".concat(e) : String(e)
   }
-  var x = React1.useCallback(function (e) {
+  var x = useCallback(function (e) {
     var t = new Date(e)
     return {
       date: "".concat(t.getFullYear(), "年").concat(t.getMonth() + 1, "月").concat(t.getDate(), "日"),
       time: "".concat(k(t.getHours()), ":").concat(k(t.getMinutes()), ":").concat(k(t.getSeconds()))
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (i !== E) {
       l([])
       m([])
@@ -167,10 +168,10 @@ var AL = React.memo(function () {
       R()
     }
   }, [i, E, R])
-  React1.useEffect(function () {
+  useEffect(function () {
     A(false)
   }, [n])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (E && o) {
       if (E.includes(Qu.v)) {
         l([])
@@ -214,20 +215,20 @@ var AL = React.memo(function () {
         m([])
         r("")
         g($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-          message: $_710_index$a$formatMessage({
+          message: $_710$a$formatMessage({
             id: "History.fetchError"
           }).toString(),
           type: "error"
         }))
       })
     }
-  }, [o, E, x, g, $_710_index$a$formatMessage])
+  }, [o, E, x, g, $_710$a$formatMessage])
   var D = function () {
     return React.createElement("div", {
       className: N($_1931.historyBar, "" === n && $_1931.fixedBar)
     }, React.createElement("div", {
       className: $_1931.header
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "History.historyVersion"
     }), React.createElement("div", {
       onClick: R
@@ -240,7 +241,7 @@ var AL = React.memo(function () {
       className: $_1931.empty
     }, React.createElement(we, {
       type: "image-text",
-      text: $_710_index$a$formatMessage({
+      text: $_710$a$formatMessage({
         id: "History.noVersion"
       })
     })) : React.createElement("ul", null, p.map(function (e) {

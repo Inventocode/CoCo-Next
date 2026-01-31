@@ -4,7 +4,7 @@
  * 模块 ID：2506
  */
 
-var r = require("./2504/998/index")
+var r = require("./2505/998/index")
 module.exports = function (e, t) {
   var n = r(this, e)
   var /* [auto-meaningful-name] */n$size = n.size

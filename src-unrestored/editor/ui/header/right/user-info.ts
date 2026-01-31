@@ -12,11 +12,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1051 from "../../../../../unrestored/shared/1571/2636/1051"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511 from "../../../../../unrestored/shared/1571/2636/1051"
@@ -46,10 +47,10 @@ var Qe = [
     link: "https://static-platform.codemao.cn/926/protocols/7KeVbBdw_informationSharingList.html"
   }
 ]
-var Ze = React1.memo(function (e) {
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+var Ze = memo(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var n = useDispatch()
+  var r = useSelector(function (e) {
     return e.common.userInfo
   })
   var o = function () {
@@ -107,15 +108,15 @@ var Ze = React1.memo(function (e) {
       onClick: o
     }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: Ye.ACCOUNT_SETTING
-    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "accountSetting"
     }))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.y, {
       subMenu: i
-    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "serviceAgreement"
     }))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
       value: Ye.LOGOUT
-    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+    }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "logout"
     }))))
   }, React.createElement("div", {
@@ -129,7 +130,7 @@ var Ze = React1.memo(function (e) {
       n($$_$$_$$_redux_common_actions.Ch())
       $$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("LoginButtonClick")
     }
-  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "login"
   }))
 })

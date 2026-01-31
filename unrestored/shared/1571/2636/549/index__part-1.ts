@@ -10,6 +10,7 @@ import { b } from "./index"
 var r
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"

@@ -11,24 +11,25 @@ import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1055 from "./1055"
 import /* [auto-meaningful-name] */$_10551 from "./1055"
-var yy = React1.memo(function (e) {
+var yy = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$iconId = e.iconId
   var /* [auto-meaningful-name] */e$color = e.color
-  var o = $_16_index.d()
-  var i = React1.useState()
+  var o = useDispatch()
+  var i = useState()
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = $_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Et.fb(e$iconId)
     c(e)
   }, [e$iconId, l])

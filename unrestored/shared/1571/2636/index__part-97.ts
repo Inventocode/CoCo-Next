@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$_120 from "./120"
 import * as /* [auto-meaningful-name] */$_106 from "./106"
 import * as /* [auto-meaningful-name] */$_103 from "./103"
 import * as Dn from "./19"
-import * as /* [auto-meaningful-name] */React from "react"
+import { isValidElement, createRef, createElement, Component } from "react"
 import * as /* [auto-meaningful-name] */$_1541_index from "./1541/index"
 import * as /* [auto-meaningful-name] */$_107 from "./107"
 import * as /* [auto-meaningful-name] */$_398 from "./398"
@@ -67,12 +67,12 @@ var Hb = function (e) {
   if (e$children) {
     var O = null
     Db(e$children).some(function (e) {
-      if (!React.isValidElement(e) || !e.type) {
+      if (!isValidElement(e) || !e.type) {
         return false
       }
       var /* [auto-meaningful-name] */e$type = e.type
       return !e$type.isSelectOption && (e$type.isSelectOptGroup ? !Db(e.props.children).every(function (t) {
-        return !(React.isValidElement(t) && e.type && !t.type.isSelectOption) || (O = t.type, false)
+        return !(isValidElement(t) && e.type && !t.type.isSelectOption) || (O = t.type, false)
       }) : (O = e$type, true))
     })
     if (O) {
@@ -104,7 +104,7 @@ var zb = function (e) {
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
       o[i] = arguments[i]
     }
-    (e = t.call.apply(t, [this].concat(o))).selectRef = React.createRef()
+    (e = t.call.apply(t, [this].concat(o))).selectRef = createRef()
     e.focus = function () {
       e.selectRef.current.focus()
     }
@@ -117,14 +117,14 @@ var zb = function (e) {
     {
       key: "render",
       value: function () {
-        return React.createElement(Vb, Dn.a({
+        return createElement(Vb, Dn.a({
           ref: this.selectRef
         }, this.props))
       }
     }
   ])
   return n
-}(React.Component)
+}(Component)
 zb.Option = Nb
 zb.OptGroup = kb
 var Yb = zb

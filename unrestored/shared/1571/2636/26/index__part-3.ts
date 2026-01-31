@@ -16,7 +16,7 @@ import * as Y from "../7"
 import * as /* [auto-meaningful-name] */$$_207_209_index from "../207/209/index"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
-import * as /* [auto-meaningful-name] */$$_47 from "../47"
+import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
 import * as /* [auto-meaningful-name] */$$_1058_125 from "../1058/125"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 !function (e) {
@@ -150,7 +150,7 @@ function ae() {
             return e.abrupt("return")
           case 3:
             r = n.get_top_blocks(false)
-            o = $$_47.a(r)
+            o = $$_47_index.a(r)
             e.prev = 5
             o.s()
           case 7:

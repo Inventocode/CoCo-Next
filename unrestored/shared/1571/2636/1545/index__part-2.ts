@@ -10,7 +10,7 @@ import { d } from "./index__part-0"
 import { O, w } from "./index__part-1"
 import * as /* [auto-meaningful-name] */$$_1543_229 from "../1543/229"
 import i from "../8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useState, useEffect, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle, createElement, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$$_1543_482 from "../1543/482"
 function T(e, t) {
   for (var n = 0; n < t.length; n++) {
@@ -193,13 +193,13 @@ function R(e, t) {
   return r
 }
 function k(e, t, n) {
-  var o = N(React.useState(e), 2)
+  var o = N(useState(e), 2)
   var i = o[0]
   var a = o[1]
-  var s = N(React.useState(null), 2)
+  var s = N(useState(null), 2)
   var c = s[0]
   var l = s[1]
-  React.useEffect(function () {
+  useEffect(function () {
     var r = function (e, t, n) {
       var r
       var o
@@ -253,8 +253,8 @@ function x(e) {
 }
 var D = "object" === ("undefined" === typeof navigator ? "undefined" : x(navigator)) && /Firefox/i.test(navigator.userAgent)
 var M = function (e, t) {
-  var n = React.useRef(false)
-  var o = React.useRef(null)
+  var n = useRef(false)
+  var o = useRef(null)
   function i() {
     clearTimeout(o.current)
     n.current = true
@@ -262,7 +262,7 @@ var M = function (e, t) {
       n.current = false
     }, 50)
   }
-  var a = React.useRef({
+  var a = useRef({
     top: e,
     bottom: t
   })
@@ -463,18 +463,18 @@ function Y(e, t) {
   var T = H(e, L)
   var I = !(false === e$virtual || !e$height || !e$itemHeight)
   var N = I && e$data && e$itemHeight * e$data.length > e$height
-  var R = W(React.useState(0), 2)
+  var R = W(useState(0), 2)
   var x = R[0]
   var B = R[1]
-  var U = W(React.useState(false), 2)
+  var U = W(useState(false), 2)
   var Y = U[0]
   var K = U[1]
   var q = i(o, e$className)
   var X = e$data || V
-  var Q = React.useRef()
-  var Z = React.useRef()
-  var J = React.useRef()
-  var $ = React.useCallback(function (e) {
+  var Q = useRef()
+  var Z = useRef()
+  var J = useRef()
+  var $ = useCallback(function (e) {
     return "function" === typeof e$itemKey ? e$itemKey(e) : null === e || undefined === e ? undefined : e[e$itemKey]
   }, [e$itemKey])
   var ee = {
@@ -493,20 +493,20 @@ function Y(e, t) {
       return n
     })
   }
-  var ne = React.useRef({
+  var ne = useRef({
     start: 0,
     end: X.length
   })
-  var re = React.useRef()
+  var re = useRef()
   var oe = W(k(X, $), 1)[0]
   re.current = oe
   var ie = W(function (e, t, n) {
-    var o = A(React.useState(0), 2)
+    var o = A(useState(0), 2)
     var i = o[0]
     var a = o[1]
-    var s = React.useRef(new Map())
-    var c = React.useRef(new S())
-    var l = React.useRef(0)
+    var s = useRef(new Map())
+    var c = useRef(new S())
+    var l = useRef(0)
     function u() {
       l.current += 1
       var /* [auto-meaningful-name] */l$current = l.current
@@ -555,7 +555,7 @@ function Y(e, t) {
   var se = ie[1]
   var ce = ie[2]
   var le = ie[3]
-  var ue = React.useMemo(function () {
+  var ue = useMemo(function () {
     if (!I) {
       return {
         scrollHeight: undefined,
@@ -608,16 +608,16 @@ function Y(e, t) {
   ne.current.start = ue$start
   ne.current.end = ue$end
   var me = ue$scrollHeight - e$height
-  var ge = React.useRef(me)
+  var ge = useRef(me)
   ge.current = me
   var _e = x <= 0
   var ve = x >= me
   var be = M(_e, ve)
   var ye = W(function (e, t, n, o) {
-    var i = React.useRef(0)
-    var a = React.useRef(null)
-    var s = React.useRef(null)
-    var c = React.useRef(false)
+    var i = useRef(0)
+    var a = useRef(null)
+    var s = useRef(null)
+    var c = useRef(false)
     var l = M(t, n)
     return [
       function (t) {
@@ -652,10 +652,10 @@ function Y(e, t) {
   var Oe = ye[1]
   !function (e, t, n) {
     var o
-    var i = React.useRef(false)
-    var a = React.useRef(0)
-    var s = React.useRef(null)
-    var c = React.useRef(null)
+    var i = useRef(false)
+    var a = useRef(0)
+    var s = useRef(null)
+    var c = useRef(null)
     var l = function (e) {
       if (i.current) {
         var t = Math.ceil(e.touches[0].pageY)
@@ -692,7 +692,7 @@ function Y(e, t) {
         s.current.removeEventListener("touchend", u)
       }
     }
-    React.useLayoutEffect(function () {
+    useLayoutEffect(function () {
       if (e) {
         t.current.addEventListener("touchstart", d)
       }
@@ -708,7 +708,7 @@ function Y(e, t) {
       deltaY: e
     }), true)
   })
-  React.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     function e(e) {
       if (I) {
         e.preventDefault()
@@ -724,7 +724,7 @@ function Y(e, t) {
     }
   }, [I])
   var we = function (e, t, n, o, i, a, s, c) {
-    var l = React.useRef()
+    var l = useRef()
     return function (r) {
       if (null !== r && undefined !== r) {
         $$_1543_229.a.cancel(l.current)
@@ -794,12 +794,12 @@ function Y(e, t) {
       J$current.delayHidden()
     }
   })
-  React.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       scrollTo: we
     }
   })
-  React.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (e$onVisibleChange) {
       var e = X.slice(ue$start, ue$end + 1)
       e$onVisibleChange(e, X)
@@ -810,7 +810,7 @@ function Y(e, t) {
     return e.slice(t, n + 1).map(function (e, n) {
       var a = i(e, t + n, {})
       var c = a$getKey(e)
-      return React.createElement(w, {
+      return createElement(w, {
         key: c,
         setRef: function (t) {
           return o(e, t)
@@ -828,12 +828,12 @@ function Y(e, t) {
       }
     }
   }
-  return React.createElement("div", P({
+  return createElement("div", P({
     style: F(F({}, e$style), {}, {
       position: "relative"
     }),
     className: q
-  }, T), React.createElement(b, {
+  }, T), createElement(b, {
     className: "".concat(o, "-holder"),
     style: Te,
     ref: Q,
@@ -846,13 +846,13 @@ function Y(e, t) {
         e$onScroll(e)
       }
     }
-  }, React.createElement(d, {
+  }, createElement(d, {
     prefixCls: o,
     height: ue$scrollHeight,
     offset: ue$offset,
     onInnerResize: se,
     ref: Z
-  }, Ce)), I && React.createElement(O, {
+  }, Ce)), I && createElement(O, {
     ref: J,
     prefixCls: o,
     scrollTop: x,
@@ -870,7 +870,7 @@ function Y(e, t) {
     }
   }))
 }
-var K = React.forwardRef(Y)
+var K = forwardRef(Y)
 K.displayName = "List"
 var q = K
 export { q }

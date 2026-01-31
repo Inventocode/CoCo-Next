@@ -11,42 +11,43 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_acti
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_623 from "./623"
 import /* [auto-meaningful-name] */$_6231 from "./623"
 import * as /* [auto-meaningful-name] */$_1527 from "./1527"
 import /* [auto-meaningful-name] */$_15271 from "./1527"
-var hI = React1.memo(function (e) {
-  var t = $_16_index.e(function (e) {
+var hI = memo(function (e) {
+  var t = useSelector(function (e) {
     return e.common.importFailToastInfo
   })
   var /* [auto-meaningful-name] */t$visible = t.visible
   var /* [auto-meaningful-name] */t$importFailResults = t.importFailResults
   var /* [auto-meaningful-name] */t$fileType = t.fileType
-  var i = $_16_index.d()
-  var a = React1.useState([])
+  var i = useDispatch()
+  var a = useState([])
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var d = React1.useState(false)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var d = useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState("importImageFailTitle")
+  var v = useState("importImageFailTitle")
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
   function C() {
     i($$_$$_$$_$$_src_editor_redux_common_actions.rh())
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     function e() {
       return (e = O.a(RegeneratorRuntime.mark(function e() {
         var t
@@ -99,7 +100,7 @@ var hI = React1.memo(function (e) {
       e.apply(this, arguments)
     })()
   }, [t$importFailResults, t$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if ("sound" === t$fileType) {
       w("importSoundFailTitle")
     } else {
@@ -117,18 +118,18 @@ var hI = React1.memo(function (e) {
     className: $_6231.title
   }, React.createElement($_13_index.j, {
     type: "icon-warning"
-  }), React.createElement("p", null, t$importFailResults.length, " ", $_710_index$a$formatMessage({
+  }), React.createElement("p", null, t$importFailResults.length, " ", $_710$a$formatMessage({
     id: y
   })), React.createElement("span", {
     className: "showImportFailDetail",
     onClick: function () {
       g(true)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "importFailDetail"
   })), React.createElement("span", {
     onClick: C
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "close"
   }))), m && React.createElement(React.Fragment, null, React.createElement("ul", {
     className: $_6231.main
@@ -149,7 +150,7 @@ var hI = React1.memo(function (e) {
     type: "primary",
     className: $_6231.confirmButton,
     onClick: C
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "know"
   }))))
 })

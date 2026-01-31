@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 function p(e) {
-  return e instanceof HTMLElement ? e : $$_80_index1.findDOMNode(e)
+  return e instanceof HTMLElement ? e : ReactDom1.findDOMNode(e)
 }
 export { p }

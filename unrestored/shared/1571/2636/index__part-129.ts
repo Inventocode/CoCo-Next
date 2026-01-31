@@ -10,10 +10,10 @@ import * as vb from "./54"
 import * as Ln from "./35"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { forwardRef, createElement } from "react"
 import * as /* [auto-meaningful-name] */$_1521 from "./1521"
 import * as /* [auto-meaningful-name] */$_1202 from "./1202"
-var jw = React.forwardRef(function (e, t) {
+var jw = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var o = undefined === e$prefixCls ? "rc-switch" : e$prefixCls
@@ -46,7 +46,7 @@ var jw = React.forwardRef(function (e, t) {
     return n
   }
   var O = N(o, e$className, (n = {}, Ln.a(n, "".concat(o, "-checked"), b), Ln.a(n, "".concat(o, "-disabled"), e$disabled), n))
-  return React.createElement("button", Object.assign({}, g, {
+  return createElement("button", Object.assign({}, g, {
     type: "button",
     role: "switch",
     "aria-checked": b,
@@ -71,7 +71,7 @@ var jw = React.forwardRef(function (e, t) {
         e$onClick(t, e)
       }
     }
-  }), e$loadingIcon, React.createElement("span", {
+  }), e$loadingIcon, createElement("span", {
     className: "".concat(o, "-inner")
   }, b ? e$checkedChildren : e$unCheckedChildren))
 })

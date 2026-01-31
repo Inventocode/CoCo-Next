@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./1686/194")
-var o = require("./1768/257/index")
-var i = require("./1705/168")
+var r = require("./1782/194")
+var o = require("./1754/257/index")
+var i = require("./1659/168")
 var /* [auto-meaningful-name] */r$Int8Array = r.Int8Array
 var /* [auto-meaningful-name] */o$aTypedArray = o.aTypedArray
 var /* [auto-meaningful-name] */o$exportTypedArrayMethod = o.exportTypedArrayMethod

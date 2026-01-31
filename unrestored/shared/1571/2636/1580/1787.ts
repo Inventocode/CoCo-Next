@@ -6,7 +6,7 @@
 
 "use strict"
 
-require("./1706/86/index")({
+require("./1661/86/index")({
   target: "URL",
   proto: true,
   enumerable: true

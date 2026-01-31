@@ -9,13 +9,14 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_526 from "./526"
 import /* [auto-meaningful-name] */$_5261 from "./526"
-var Yw = React1.memo(function (e) {
+var Yw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "db" : e$keyName
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
@@ -23,8 +24,8 @@ var Yw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var a = e$getValue(n)
   var s = e$getValue("title")
-  var c = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var c = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   function u() {
     e$onChange("updatedAt", Date.now())
   }
@@ -34,17 +35,17 @@ var Yw = React1.memo(function (e) {
     className: "coco-form-item coco-form-item-horizontal"
   }, React.createElement("div", {
     className: $_5261.label
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "TableDataWidget.data"
   })), React.createElement("div", {
     className: $_5261.data
   }, React.createElement("span", {
     className: $_5261.length
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "column"
   }), ":", Object.keys(a.header).length), React.createElement("span", {
     className: $_5261.length
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "row"
   }), ":", a.data.length))), React.createElement("div", {
     className: $_5261.imageBox
@@ -65,7 +66,7 @@ var Yw = React1.memo(function (e) {
         onClose: u
       }))
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "edit"
   })))))
 })

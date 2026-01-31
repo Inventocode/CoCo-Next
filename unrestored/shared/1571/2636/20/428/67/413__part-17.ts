@@ -10,12 +10,13 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/inde
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import /* [auto-meaningful-name] */React from "react"
+import { useCallback } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_551_index from "../../../551/index"
 var Be = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
-  var r = React1.useCallback(function (e) {
+  var r = useCallback(function (e) {
     var r = $$_$$_$$_28_index.k(e)
     $$_$$_index.emitDatePickerSelectDone(t, r.date, r.y, r.m, r.d)
     $$_$$_index.setWidgetAttribute(t, "timeStamp", new Date(e).getTime())

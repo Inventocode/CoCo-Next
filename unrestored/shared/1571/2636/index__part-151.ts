@@ -10,7 +10,7 @@ import * as vb from "./54"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import * as Dn from "./19"
 import N from "./8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useRef, useEffect, createElement, useMemo } from "react"
 import * as /* [auto-meaningful-name] */$_1060 from "./1060"
 import /* [auto-meaningful-name] */$_10601 from "./1060"
 var LT = {
@@ -26,10 +26,10 @@ var LT = {
 }
 var PT = function (e) {
   var t = e.map(function () {
-    return React.useRef()
+    return useRef()
   })
-  var n = React.useRef(null)
-  React.useEffect(function () {
+  var n = useRef(null)
+  useEffect(function () {
     var e = Date.now()
     var r = false
     Object.keys(t).forEach(function (o) {
@@ -71,12 +71,12 @@ var BT = function (e) {
   var b = "M ".concat("round" === e$strokeLinecap ? _ : 0, ",").concat(_, "\n         L ").concat("round" === e$strokeLinecap ? v : 100, ",").concat(_)
   var y = "0 0 100 ".concat(e$strokeWidth)
   var E = 0
-  return React.createElement("svg", Dn.a({
+  return createElement("svg", Dn.a({
     className: N("".concat(e$prefixCls, "-line"), e$className),
     viewBox: y,
     preserveAspectRatio: "none",
     style: e$style
-  }, d), React.createElement("path", {
+  }, d), createElement("path", {
     className: "".concat(e$prefixCls, "-line-trail"),
     d: b,
     strokeLinecap: e$strokeLinecap,
@@ -102,7 +102,7 @@ var BT = function (e) {
     }
     var s = h[t] || h[h.length - 1]
     E += e
-    return React.createElement("path", {
+    return createElement("path", {
       key: t,
       className: "".concat(e$prefixCls, "-line-path"),
       d: b,
@@ -175,7 +175,7 @@ var HT = function (e) {
   var /* [auto-meaningful-name] */e$strokeColor = e.strokeColor
   var /* [auto-meaningful-name] */e$percent = e.percent
   var p = vb.a(e, ["prefixCls", "strokeWidth", "trailWidth", "gapDegree", "gapPosition", "trailColor", "strokeLinecap", "style", "className", "strokeColor", "percent"])
-  var h = React.useMemo(function () {
+  var h = useMemo(function () {
     return FT += 1
   }, [])
   var m = UT(0, 100, e$trailColor, e$strokeWidth, e$gapDegree, e$gapPosition)
@@ -188,11 +188,11 @@ var HT = function (e) {
   })
   var E = PT(v)
   var O = $_40_index.a(E, 1)[0]
-  return React.createElement("svg", Dn.a({
+  return createElement("svg", Dn.a({
     className: N("".concat(e$prefixCls, "-circle"), e$className),
     viewBox: "0 0 100 100",
     style: e$style
-  }, p), y && React.createElement("defs", null, React.createElement("linearGradient", {
+  }, p), y && createElement("defs", null, createElement("linearGradient", {
     id: "".concat(e$prefixCls, "-gradient-").concat(h),
     x1: "100%",
     y1: "0%",
@@ -201,12 +201,12 @@ var HT = function (e) {
   }, Object.keys(y).sort(function (e, t) {
     return GT(e) - GT(t)
   }).map(function (e, t) {
-    return React.createElement("stop", {
+    return createElement("stop", {
       key: t,
       offset: e,
       stopColor: y[e]
     })
-  }))), React.createElement("path", {
+  }))), createElement("path", {
     className: "".concat(e$prefixCls, "-circle-trail"),
     d: m$pathString,
     stroke: e$trailColor,
@@ -221,7 +221,7 @@ var HT = function (e) {
       var l = "[object Object]" === Object.prototype.toString.call(c) ? "url(#".concat(e$prefixCls, "-gradient-").concat(h, ")") : ""
       var u = UT(e, r, c, e$strokeWidth, e$gapDegree, e$gapPosition)
       e += r
-      return React.createElement("path", {
+      return createElement("path", {
         key: a,
         className: "".concat(e$prefixCls, "-circle-path"),
         d: u.pathString,

@@ -8,7 +8,7 @@
 
 import * as Ln from "./35"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createContext } from "react"
 import * as /* [auto-meaningful-name] */$_103 from "./103"
 import * as /* [auto-meaningful-name] */$_106 from "./106"
 import * as /* [auto-meaningful-name] */$_388 from "./388"
@@ -433,7 +433,7 @@ function Br(e, t) {
   }
   return n && n.then ? n.then(t.bind(null, false), t.bind(null, true)) : t(false, value)
 }
-var Fr = React.createContext({
+var Fr = createContext({
   manager: {}
 })
 var Gr = {

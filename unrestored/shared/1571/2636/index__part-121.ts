@@ -15,39 +15,40 @@ import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
 import * as /* [auto-meaningful-name] */$_213 from "./213"
 import /* [auto-meaningful-name] */$_2131 from "./213"
 var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
 var YO = ""
-var KO = React1.memo(function (e) {
+var KO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fileId" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var a = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var s = $_16_index.d()
-  var c = React1.useState(false)
+  var s = useDispatch()
+  var c = useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(false)
+  var p = useState(false)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = React1.useState(undefined)
+  var b = useState(undefined)
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = React1.useState(false)
+  var w = useState(false)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
@@ -99,7 +100,7 @@ var KO = React1.memo(function (e) {
       })
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     return function () {
       if (cE) {
         cE.stop()
@@ -115,7 +116,7 @@ var KO = React1.memo(function (e) {
       }
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (cE) {
       cE.stop()
     }
@@ -144,14 +145,14 @@ var KO = React1.memo(function (e) {
         accept: $_135.h
       }, React.createElement($_13_index.j, {
         type: "icon-upload"
-      }), React.createElement("span", null, $_710_index$a$formatMessage({
+      }), React.createElement("span", null, $_710$a$formatMessage({
         id: "Resource.upload"
       }))), React.createElement("div", {
         className: $_2131.content,
         onClick: k
       }, React.createElement($_13_index.j, {
         type: "icon-open-resource-library"
-      }), React.createElement("span", null, $_710_index$a$formatMessage({
+      }), React.createElement("span", null, $_710$a$formatMessage({
         id: "Resource.SoundLibrary"
       })))),
       placement: "bottomLeft",
@@ -160,7 +161,7 @@ var KO = React1.memo(function (e) {
       onVisibleChange: D
     }, React.createElement("div", {
       className: $_2131.soundBtn
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "Resource.Replace"
     })))
   }
@@ -168,7 +169,7 @@ var KO = React1.memo(function (e) {
     className: N($_2131.formItemWrapper, $_2131.changeSoundFile)
   }, React.createElement("div", {
     className: $_2131.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "AudioWidget.source"
   })), React.createElement("div", {
     className: $_2131.soundBox
@@ -245,17 +246,17 @@ var KO = React1.memo(function (e) {
     className: N($_2131.cover, g && $_2131.visible)
   }, L())))))
 })
-var qO = React1.memo(function (e) {
+var qO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "audioVolume" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
     className: N($_2131.formItemWrapper, "changeAudioVolume")
   }, React.createElement("div", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "AudioWidget.volume"
   })), React.createElement($_13_index.x, {
     className: $_2131.volumeSlider,
@@ -270,17 +271,17 @@ var qO = React1.memo(function (e) {
     isShowRightInput: true
   }))
 })
-var XO = React1.memo(function (e) {
+var XO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "audioRate" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
     className: N($_2131.formItemWrapper, "changeAudioVolume")
   }, React.createElement("div", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "AudioWidget.rate"
   })), React.createElement($_13_index.x, {
     className: $_2131.volumeSlider,

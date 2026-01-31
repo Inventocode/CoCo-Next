@@ -17,6 +17,7 @@ import * as k from "./11"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useRef, useEffect, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_322 from "./322"
 import * as Q_ from "./82"
@@ -48,24 +49,24 @@ var tv = function (e) {
   var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var A = e$attributes$textVisible ? e$attributes$textAlign : Qu.a.CENTER
-  var I = React1.useState(false)
+  var I = useState(false)
   var j = $_10_index.a(I, 2)
   var R = j[0]
   var x = j[1]
-  var M = React1.useState(false)
+  var M = useState(false)
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React1.useRef(null)
-  var G = React1.useRef(null)
-  React1.useEffect(function () {
+  var F = useRef(null)
+  var G = useRef(null)
+  useEffect(function () {
     var /* [auto-meaningful-name] */F$current = F.current
     if (F$current && R) {
       F$current.innerText = e$attributes$text
       ng.b(F$current)
     }
   }, [R])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!e$selected) {
       x(false)
     }
@@ -87,7 +88,7 @@ var tv = function (e) {
   Y = Math.floor(Y)
   var K = Jd.hb(e$attributes$backgroundImage)
   var q = te.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : K ? (null === K || undefined === K ? undefined : K.source) || (null === K || undefined === K ? undefined : K.cdnUrl) : Q_.f
-  var X = React1.useMemo(function () {
+  var X = useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}

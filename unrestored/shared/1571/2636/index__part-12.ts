@@ -6,8 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */$_100 from "./100"
@@ -72,10 +73,10 @@ function dt(e) {
 }
 var ft = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$list = e.list
-  var n = $_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$list) {
       document.querySelectorAll(".".concat("focusSvgClassName")).forEach(function (e) {
         return e.style.removeProperty("filter")

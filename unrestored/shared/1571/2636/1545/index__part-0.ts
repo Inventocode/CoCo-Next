@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from "react"
+import { forwardRef, createElement } from "react"
 import * as o from "../8"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$_800 from "./800"
@@ -55,7 +55,7 @@ function l(e, t, n) {
   }
   return e
 }
-var u = React.forwardRef(function (e, t) {
+var u = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$height = e.height
   var /* [auto-meaningful-name] */e$offset = e.offset
   var /* [auto-meaningful-name] */e$children = e.children
@@ -80,15 +80,15 @@ var u = React.forwardRef(function (e, t) {
       top: 0
     })
   }
-  return React.createElement("div", {
+  return createElement("div", {
     style: p
-  }, React.createElement($_800.a, {
+  }, createElement($_800.a, {
     onResize: function (e) {
       if (e.offsetHeight && e$onInnerResize) {
         e$onInnerResize()
       }
     }
-  }, React.createElement("div", {
+  }, createElement("div", {
     style: f,
     className: i(l({}, "".concat(e$prefixCls, "-holder-inner"), e$prefixCls)),
     ref: t

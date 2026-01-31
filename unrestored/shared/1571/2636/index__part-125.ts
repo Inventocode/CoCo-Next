@@ -13,42 +13,43 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_454 from "./454"
+import * as /* [auto-meaningful-name] */$_454_index from "./454/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState, useEffect, useCallback, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_186 from "./186"
 import /* [auto-meaningful-name] */$_1861 from "./186"
 var /* [auto-meaningful-name] */py$Option = py.Option
-var lw = React1.memo(function (e) {
+var lw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "dataSource" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var i = e$getValue(n)
   var a = e$getValue("templateSlotMap")
-  var s = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = React1.useRef(null)
-  var u = React1.useState(false)
+  var s = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var l = useRef(null)
+  var u = useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState([])
+  var g = useState([])
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = $_16_index.e(function (e) {
+  var w = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
   function C() {
@@ -98,23 +99,23 @@ var lw = React1.memo(function (e) {
                 e.next = 19
                 break
               }
-              if (n = t[0], $_454.l(n)) {
+              if (n = t[0], $_454_index.l(n)) {
                 e.next = 6
                 break
               }
               s($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "maximumGridSourceSize"
                 })
               }))
               return e.abrupt("return")
             case 6:
-              r = Sg($_710_index$a$formatMessage)
+              r = Sg($_710$a$formatMessage)
               o = C().map(function (e) {
                 return e.title
               })
               e.next = 10
-              return $_454.h(n, n.name, r, o)
+              return $_454_index.h(n, n.name, r, o)
             case 10:
               if (e$sent = e.sent) {
                 e.next = 14
@@ -135,7 +136,7 @@ var lw = React1.memo(function (e) {
             case 16:
               e$sent1 = e.sent
               s($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "uploadGridSuccess"
                 })
               }))
@@ -161,7 +162,7 @@ var lw = React1.memo(function (e) {
       e$onChange("templateSlotMap", a)
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = $_42_index.g.get(i)
     if ((null === e || undefined === e ? undefined : e.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
       var /* [auto-meaningful-name] */e$attributes$db = e.attributes.db
@@ -180,7 +181,7 @@ var lw = React1.memo(function (e) {
     className: "coco-form-item coco-form-item-horizontal"
   }, React.createElement("div", {
     className: $_1861.label
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.dataSource"
   })), React.createElement(py, {
     ref: l,
@@ -194,7 +195,7 @@ var lw = React1.memo(function (e) {
       }
     },
     value: i || undefined,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "ListViewerWidget.dataSourcePlaceholder"
     }),
     optionLabelProp: "label",
@@ -250,10 +251,10 @@ var lw = React1.memo(function (e) {
         switch (e) {
           case "CREATE_NEW_DATA_SOURCE":
             s($$_$$_$$_$$_src_editor_redux_common_actions.nj({
-              title: $_710_index$a$formatMessage({
+              title: $_710$a$formatMessage({
                 id: "addGridName"
               }),
-              placeholder: $_710_index$a$formatMessage({
+              placeholder: $_710$a$formatMessage({
                 id: "addGridNamePlaceholder"
               }),
               onConfirm: function () {
@@ -298,11 +299,11 @@ var lw = React1.memo(function (e) {
                       return t.title === e
                     })
                   },
-                  message: $_710_index$a$formatMessage({
+                  message: $_710$a$formatMessage({
                     id: "gridNameRepeat"
                   })
                 }
-              ].concat($_25_index.a(Sg($_710_index$a$formatMessage)))
+              ].concat($_25_index.a(Sg($_710$a$formatMessage)))
             }))
         }
         m(false)
@@ -311,7 +312,7 @@ var lw = React1.memo(function (e) {
       value: "CREATE_NEW_DATA_SOURCE"
     }, React.createElement("div", {
       className: $_1861.itemContent
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "addGridName"
     }))), React.createElement($_13_index.m, {
       value: "IMPORT_DATA_SOURCE"
@@ -321,7 +322,7 @@ var lw = React1.memo(function (e) {
       },
       accept: ".xlsx, .xls, .csv",
       className: $_1861.itemContent
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "ListViewerWidget.importNewSource"
     })))))
   }, React.createElement("div", {
@@ -332,7 +333,7 @@ var lw = React1.memo(function (e) {
     className: N($_1861.formItemWrapper, "dataBindings")
   }, React.createElement("div", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.dataBindings"
   })), Object.keys(a).reverse().map(function (e) {
     return React.createElement("div", {
@@ -342,7 +343,7 @@ var lw = React1.memo(function (e) {
       className: $_1861.label
     }, a[e].label), React.createElement(py, {
       allowClear: true,
-      placeholder: $_710_index$a$formatMessage({
+      placeholder: $_710$a$formatMessage({
         id: "ListViewerWidget.dataBindingsPlaceholder"
       }),
       onChange: R.bind(null, e),
@@ -362,7 +363,7 @@ var lw = React1.memo(function (e) {
 })
 var /* [auto-meaningful-name] */py$Option1 = py.Option
 var /* [auto-meaningful-name] */py$OptGroup = py.OptGroup
-var pw = React1.memo(function (e) {
+var pw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "dataSource" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -370,34 +371,34 @@ var pw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var a = e$getValue(n)
   var s = e$getValue("templateSlotMap")
-  var c = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var u = React1.useRef(null)
-  var d = React1.useState([])
+  var c = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var u = useRef(null)
+  var d = useState([])
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState(false)
+  var v = useState(false)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState(false)
+  var O = useState(false)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var j = $_16_index.e(function (e) {
+  var j = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
-  var R = $_16_index.e(function (e) {
+  var R = useSelector(function (e) {
     return e.common.userInfo
   })
-  var k = $_16_index.e(function (e) {
+  var k = useSelector(function (e) {
     return e.cloudSpace.cloudTableList
   })
-  var x = $_16_index.e(function (e) {
+  var x = useSelector(function (e) {
     return e.oTState.isAuthor
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (a) {
       if ("string" === typeof a) {
         var e = $_42_index.g.get(a)
@@ -429,10 +430,10 @@ var pw = React1.memo(function (e) {
       g([])
     }
   }, [k, a, j])
-  var M = React1.useCallback(function () {
+  var M = useCallback(function () {
     c($$_$$_$$_$$_src_editor_redux_common_actions.ug(e$widgetId))
   }, [c, e$widgetId])
-  var L = React1.useCallback(function (e, t) {
+  var L = useCallback(function (e, t) {
     var /* [auto-meaningful-name] */u$current
     e.stopPropagation()
     if ("string" === typeof t) {
@@ -454,7 +455,7 @@ var pw = React1.memo(function (e) {
       u$current.blur()
     }
   }, [c, M])
-  var P = React1.useMemo(function () {
+  var P = useMemo(function () {
     var e = []
     j.forEach(function (t) {
       var n = $_42_index.g.get(t)
@@ -545,7 +546,7 @@ var pw = React1.memo(function (e) {
     className: N($_1861.formItemWrapper, $_1861.dataSource)
   }, React.createElement("div", {
     className: $_1861.itemLabel
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.dataSource"
   })), React.createElement(py, {
     ref: u,
@@ -583,20 +584,20 @@ var pw = React1.memo(function (e) {
       }, React.createElement("div", null, React.createElement($_13_index.j, {
         type: "icon-add",
         className: $_1861.addIcon
-      }), $_710_index$a$formatMessage({
+      }), $_710$a$formatMessage({
         id: "ListViewerWidget.createDataSource"
       }))), e, (P$localOptions.length > 0 || k.length > 0) && React.createElement("div", {
         className: N($_1861.cloudTable, P$localOptions.length > 0 && $_1861.showShadow),
         onMouseEnter: K,
         onMouseLeave: q
-      }, React.createElement("div", null, $_710_index$a$formatMessage({
+      }, React.createElement("div", null, $_710$a$formatMessage({
         id: "CloudSpaceDBWidget.widgetName"
       })), x ? React.createElement($_13_index.j, {
         type: "icon-arrow-down",
         className: $_1861.arrowIcon
       }) : React.createElement($_748_index.a, {
         placement: "bottom",
-        title: $_710_index$a$formatMessage({
+        title: $_710$a$formatMessage({
           id: "ListViewerWidget.cloudTableOtTips"
         })
       }, React.createElement("div", null, React.createElement($_13_index.j, {
@@ -611,7 +612,7 @@ var pw = React1.memo(function (e) {
       }, React.createElement($_13_index.d, {
         type: "primary",
         onClick: X
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "cloudSpace.needLogin"
       }))), R && 0 === k.length && React.createElement("div", {
         className: $_1861.noData
@@ -639,7 +640,7 @@ var pw = React1.memo(function (e) {
       }))))
     },
     value: a || undefined,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "ListViewerWidget.dataSourcePlaceholder"
     }),
     optionLabelProp: "label",
@@ -651,14 +652,14 @@ var pw = React1.memo(function (e) {
     })
   }, P$localOptions.length > 0 && React.createElement(py$OptGroup, {
     key: "localTableData",
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "ListViewerWidget.localTableData"
     })
   }), P$localOptions, P$cloudOptions)), a ? React.createElement("div", {
     className: N($_1861.formItemWrapper, "dataBindings")
   }, React.createElement("div", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.dataBindings"
   })), Object.keys(s).reverse().map(function (e) {
     return React.createElement("div", {
@@ -668,7 +669,7 @@ var pw = React1.memo(function (e) {
       className: $_1861.label
     }, s[e].label), React.createElement(py, {
       allowClear: true,
-      placeholder: $_710_index$a$formatMessage({
+      placeholder: $_710$a$formatMessage({
         id: "ListViewerWidget.dataBindingsPlaceholder"
       }),
       onChange: U.bind(null, e),

@@ -13,13 +13,14 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1538 from "./1538"
 import /* [auto-meaningful-name] */$_15381 from "./1538"
@@ -33,27 +34,27 @@ import /* [auto-meaningful-name] */$_2821 from "./282"
   e.TABLE_DATA = "TABLE_DATA"
   e.CLOUD_SPACE_TABLE = "CLOUD_SPACE_TABLE"
 }(RP || (RP = {}))
-var zP = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var zP = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.createTableDataDialog
   })
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.oTState.isAuthor
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var i = React1.useState(RP.TABLE_DATA)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var i = useState(RP.TABLE_DATA)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = $_16_index.d()
+  var m = useDispatch()
   var g = $_238.d()
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       p(false)
       c(RP.TABLE_DATA)
@@ -115,7 +116,7 @@ var zP = React1.memo(function () {
   }, React.createElement($_13_index.j, {
     type: "icon-arrow-down",
     className: $_2821.backIcon
-  })), $_710_index$a$formatMessage({
+  })), $_710$a$formatMessage({
     id: "ListViewerWidget.createCloudTable"
   })), React.createElement("div", {
     className: $_2821.cloudSpaceTipsContent
@@ -133,7 +134,7 @@ var zP = React1.memo(function () {
     className: $_2821.logoImage,
     src: $_15401,
     alt: ""
-  })), React.createElement("div", null, $_710_index$a$formatMessage({
+  })), React.createElement("div", null, $_710$a$formatMessage({
     id: "ListViewerWidget.toCloudSpaceDomainTips"
   }))), React.createElement("div", {
     className: N($_2821.confirmBox, $_2821.cloudSpaceConfirm)
@@ -143,11 +144,11 @@ var zP = React1.memo(function () {
       m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
     },
     type: "primary"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.toCloudSpaceDomain"
   })))), !d && React.createElement(React.Fragment, null, React.createElement("p", {
     className: $_2821.tableDataTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.createDataSource"
   })), React.createElement("div", {
     className: $_2821.tableDataList
@@ -159,11 +160,11 @@ var zP = React1.memo(function () {
     className: $_2821.icon
   }), React.createElement("div", {
     className: $_2821.name
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.tableData"
   })), React.createElement("div", {
     className: $_2821.desc
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.tableDataDesc"
   }))), React.createElement("div", {
     onClick: b.bind(null, RP.CLOUD_SPACE_TABLE),
@@ -173,29 +174,29 @@ var zP = React1.memo(function () {
     className: $_2821.icon
   }), t ? React.createElement("div", {
     className: $_2821.name
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.cloudTable"
   })) : React.createElement($_748_index.a, {
     placement: "bottom",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "ListViewerWidget.cloudTableOtTips"
     })
   }, React.createElement("div", {
     className: $_2821.name
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.cloudTable"
   }), React.createElement($_13_index.j, {
     type: "icon-locked"
   }))), React.createElement("div", {
     className: $_2821.desc
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.cloudTableDesc"
   })))), React.createElement("div", {
     className: $_2821.confirmBox
   }, React.createElement($_13_index.d, {
     onClick: v,
     type: "primary"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "confirm"
   })))))
 })

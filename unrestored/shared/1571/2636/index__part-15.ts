@@ -14,12 +14,13 @@ import * as Z from "./97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_197_index from "./197/index"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
@@ -28,13 +29,13 @@ import * as /* [auto-meaningful-name] */$_199 from "./199"
 import /* [auto-meaningful-name] */$_1991 from "./199"
 var kt = ["https://static.bcmcdn.com/appcraft/package/icon01.png", "https://static.bcmcdn.com/appcraft/package/icon02.png", "https://static.bcmcdn.com/appcraft/package/icon03.png", "https://static.bcmcdn.com/appcraft/package/icon04.png", "https://static.bcmcdn.com/appcraft/package/icon05.png", "https://static.bcmcdn.com/appcraft/package/icon06.png", "https://static.bcmcdn.com/appcraft/package/icon07.png", "https://static.bcmcdn.com/appcraft/package/icon08.png"]
 var xt = ["https://static.bcmcdn.com/appcraft/package/splash01.png", "https://static.bcmcdn.com/appcraft/package/splash02.png", "https://static.bcmcdn.com/appcraft/package/splash03.png", "https://static.bcmcdn.com/appcraft/package/splash04.png", "https://static.bcmcdn.com/appcraft/package/splash05.png"]
-var Dt = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.d()
-  var n = React1.useRef(null)
-  var r = React1.useRef(null)
-  var o = React1.useRef(null)
-  var i = $_16_index.e(function (e) {
+var Dt = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useDispatch()
+  var n = useRef(null)
+  var r = useRef(null)
+  var o = useRef(null)
+  var i = useSelector(function (e) {
     return e.project
   })
   var a = i.id
@@ -42,42 +43,42 @@ var Dt = React1.memo(function () {
   var /* [auto-meaningful-name] */i$packageInfo = i.packageInfo
   var /* [auto-meaningful-name] */i$packageCompleteVisible = i.packageCompleteVisible
   var /* [auto-meaningful-name] */i$isPackaging = i.isPackaging
-  var d = $_16_index.e(function (e) {
+  var d = useSelector(function (e) {
     return e.common.saving
   })
-  var p = React1.useState(i$packageInfo.apkIcon || "https://static.bcmcdn.com/appcraft/package/icon00.png")
+  var p = useState(i$packageInfo.apkIcon || "https://static.bcmcdn.com/appcraft/package/icon00.png")
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = React1.useState(i$packageInfo.apkSplash || "https://static.bcmcdn.com/appcraft/package/splash01.png")
+  var b = useState(i$packageInfo.apkSplash || "https://static.bcmcdn.com/appcraft/package/splash01.png")
   var y = $_10_index.a(b, 2)
   var w = y[0]
   var C = y[1]
-  var T = React1.useState(40)
+  var T = useState(40)
   var A = $_10_index.a(T, 2)
   var j = A[0]
   var R = A[1]
-  var k = React1.useState("")
+  var k = useState("")
   var x = $_10_index.a(k, 2)
   var D = x[0]
   var M = x[1]
-  var L = React1.useState(false)
+  var L = useState(false)
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = React1.useState(false)
+  var G = useState(false)
   var W = $_10_index.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = React1.useState(false)
+  var V = useState(false)
   var K = $_10_index.a(V, 2)
   var q = K[0]
   var X = K[1]
-  var Q = React1.useState(false)
+  var Q = useState(false)
   var J = $_10_index.a(Q, 2)
   var $ = J[0]
   var ne = J[1]
-  var re = React1.useState(true)
+  var re = useState(true)
   var oe = $_10_index.a(re, 2)
   var ie = oe[0]
   var ae = oe[1]
@@ -120,7 +121,7 @@ var Dt = React1.memo(function () {
               n.prev = 8
               n.t0 = n.catch(2)
               t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "Publish.projectSaveFail"
                 }),
                 type: "error"
@@ -154,7 +155,7 @@ var Dt = React1.memo(function () {
               n.prev = 27
               n.t1 = n.catch(20)
               t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "package.uploadIconFailed"
                 })
               }))
@@ -188,7 +189,7 @@ var Dt = React1.memo(function () {
               break
             case 47:
               t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "package.checkSplashFailed"
                 })
               }))
@@ -200,7 +201,7 @@ var Dt = React1.memo(function () {
               n.prev = 51
               n.t2 = n.catch(35)
               t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "package.uploadSplashFailed"
                 })
               }))
@@ -223,7 +224,7 @@ var Dt = React1.memo(function () {
                 break
               }
               t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "waitForAssetUploading"
                 })
               }))
@@ -264,7 +265,7 @@ var Dt = React1.memo(function () {
         } else {
           t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
             showPrefixIcon: false,
-            message: $_710_index$a$formatMessage({
+            message: $_710$a$formatMessage({
               id: "package.iconMimeTypeNotSupport"
             }),
             duration: 4e3
@@ -295,7 +296,7 @@ var Dt = React1.memo(function () {
         } else {
           t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
             showPrefixIcon: false,
-            message: $_710_index$a$formatMessage({
+            message: $_710$a$formatMessage({
               id: "package.splashMimeTypeNotSupport"
             }),
             duration: 4e3
@@ -337,7 +338,7 @@ var Dt = React1.memo(function () {
     visible: i$packageDialogVisible,
     withPortal: true,
     className: $_1991.packageEditorContainer,
-    title: React.createElement("h3", null, $_710_index$a$formatMessage({
+    title: React.createElement("h3", null, $_710$a$formatMessage({
       id: "package.packageProjectDialogTitle"
     })),
     footer: function () {
@@ -346,7 +347,7 @@ var Dt = React1.memo(function () {
         className: $_1991.plateFormTips
       }, React.createElement($_13_index.j, {
         type: "icon-android-fill"
-      }), $_710_index$a$formatMessage({
+      }), $_710$a$formatMessage({
         id: "package.plateFormTips"
       })), React.createElement("div", {
         className: $_1991.footer
@@ -354,7 +355,7 @@ var Dt = React1.memo(function () {
         type: "primary",
         disabled: (!(null === (i$packageInfo$apkName = i$packageInfo.apkName) || undefined === i$packageInfo$apkName ? undefined : i$packageInfo$apkName.trim()) || !g || !!D) && !i$isPackaging && !d,
         onClick: se
-      }, d || i$isPackaging ? React.createElement(Ge, null) : React.createElement("span", null, $_710_index$a$formatMessage({
+      }, d || i$isPackaging ? React.createElement(Ge, null) : React.createElement("span", null, $_710$a$formatMessage({
         id: "package"
       })))))
     }(),
@@ -372,7 +373,7 @@ var Dt = React1.memo(function () {
     className: $_1991.packageProjectTitle
   }, React.createElement("div", {
     className: $_1991.packageItemLabel
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "package.projectTitle"
   })), React.createElement($_13_index.k, {
     type: "text",
@@ -395,11 +396,11 @@ var Dt = React1.memo(function () {
     warning: !!D
   }), React.createElement("div", {
     className: $_1991.warningTips
-  }, D ? $_710_index$a$formatMessage({
+  }, D ? $_710$a$formatMessage({
     id: D
   }) : "")), React.createElement("div", {
     className: $_1991.packageItemLabel
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "package.projectIcon"
   })), React.createElement("div", {
     className: $_1991.packageIconBox,
@@ -421,7 +422,7 @@ var Dt = React1.memo(function () {
   }), React.createElement($_1213.a, {
     content: React.createElement("div", {
       className: $_1991.iconPopover
-    }, React.createElement("div", null, $_710_index$a$formatMessage({
+    }, React.createElement("div", null, $_710$a$formatMessage({
       id: "package.recommendProjectIcon"
     })), React.createElement("div", {
       className: $_1991.packageIconWrapper
@@ -453,11 +454,11 @@ var Dt = React1.memo(function () {
       }
     }, React.createElement($_13_index.j, {
       type: "icon-upload-image"
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "uploadFileByLocal"
     })), React.createElement("div", {
       className: $_1991.iconSizeTips
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "package.projectIconSizeTips"
     }))),
     placement: "rightTop",
@@ -474,13 +475,13 @@ var Dt = React1.memo(function () {
     className: N($_1991.cover, B && $_1991.visible)
   }, React.createElement("div", {
     className: $_1991.replaceBtn
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "package.replace"
   })))))), React.createElement("div", {
     className: $_1991.rightContent
   }, React.createElement("div", {
     className: $_1991.packageItemLabel
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "package.projectSplashImage"
   })), React.createElement("div", {
     className: $_1991.splashImageBox,
@@ -508,7 +509,7 @@ var Dt = React1.memo(function () {
       className: $_1991.splashPopover
     }, React.createElement("div", {
       className: $_1991.splashTitle
-    }, React.createElement("span", null, $_710_index$a$formatMessage({
+    }, React.createElement("span", null, $_710$a$formatMessage({
       id: "package.recommendSplashImage"
     })), React.createElement("div", {
       className: $_1991.pageBtnBox
@@ -553,11 +554,11 @@ var Dt = React1.memo(function () {
       }
     }, React.createElement($_13_index.j, {
       type: "icon-upload-image"
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "uploadFileByLocal"
     })), React.createElement("div", {
       className: $_1991.iconSizeTips
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "package.projectSplashSizeTips"
     }))),
     placement: "rightTop",
@@ -574,7 +575,7 @@ var Dt = React1.memo(function () {
     className: N($_1991.cover, q && $_1991.visible)
   }, React.createElement("div", {
     className: $_1991.replaceBtn
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "package.replace"
   }))))))))
 })

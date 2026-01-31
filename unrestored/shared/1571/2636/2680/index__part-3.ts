@@ -13,11 +13,11 @@ import * as /* [auto-meaningful-name] */$_927 from "./927"
 import * as /* [auto-meaningful-name] */$_1047 from "./1047"
 import * as /* [auto-meaningful-name] */$_1045 from "./1045"
 import * as /* [auto-meaningful-name] */$_1046 from "./1046"
-import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_435 from "../435"
 import * as /* [auto-meaningful-name] */$_615 from "./615"
 import c from "../8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement } from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
 import * as /* [auto-meaningful-name] */$$_364_index from "../364/index"
@@ -58,18 +58,18 @@ var I = function (e) {
   var U = undefined !== e.maskClosable && e.maskClosable
   var H = null !== e.autoFocusButton && (e.autoFocusButton || "ok")
   var V = c(P, "".concat(P, "-").concat(e.type), $$_35.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
-  var G = N && React.createElement(T, {
+  var G = N && createElement(T, {
     actionFn: e$onCancel,
     close: e$close,
     autoFocus: "cancel" === H,
     buttonProps: e$cancelButtonProps,
     prefixCls: "".concat(e$rootPrefixCls, "-btn")
   }, e$cancelText)
-  return React.createElement($_285_index.a, {
+  return createElement($_285_index.a, {
     prefixCls: e$rootPrefixCls,
     iconPrefixCls: e$iconPrefixCls,
     direction: e$direction
-  }, React.createElement(b, {
+  }, createElement(b, {
     prefixCls: e$prefixCls,
     className: V,
     wrapClassName: c($$_35.a({}, "".concat(P, "-centered"), !!e.centered)),
@@ -98,17 +98,17 @@ var I = function (e) {
     closeIcon: e$closeIcon,
     modalRender: e$modalRender,
     focusTriggerAfterClose: e$focusTriggerAfterClose
-  }, React.createElement("div", {
+  }, createElement("div", {
     className: "".concat(P, "-body-wrapper")
-  }, React.createElement("div", {
+  }, createElement("div", {
     className: "".concat(P, "-body")
-  }, e$icon, undefined === e.title ? null : React.createElement("span", {
+  }, e$icon, undefined === e.title ? null : createElement("span", {
     className: "".concat(P, "-title")
-  }, e.title), React.createElement("div", {
+  }, e.title), createElement("div", {
     className: "".concat(P, "-content")
-  }, e.content)), React.createElement("div", {
+  }, e.content)), createElement("div", {
     className: "".concat(P, "-btns")
-  }, G, React.createElement(T, {
+  }, G, createElement(T, {
     type: F,
     actionFn: e$onOk,
     close: e$close,
@@ -140,7 +140,7 @@ function N(e) {
     visible: true
   })
   function r() {
-    $$_80_index.unmountComponentAtNode(t)
+    ReactDom.unmountComponentAtNode(t)
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length), i = 0; i < arguments$length; i++) {
       r[i] = arguments[i]
     }
@@ -171,7 +171,7 @@ function N(e) {
       var d = c$getPrefixCls(undefined, P)
       var h = e$prefixCls || "".concat(d, "-modal")
       var p = c$getIconPrefixCls()
-      $$_80_index.render(React.createElement(I, $$_19.a({}, s, {
+      ReactDom.render(createElement(I, $$_19.a({}, s, {
         prefixCls: h,
         rootPrefixCls: d,
         iconPrefixCls: p,
@@ -205,7 +205,7 @@ function N(e) {
 }
 function M(e) {
   return $$_19.a($$_19.a({
-    icon: React.createElement($_927.a, null),
+    icon: createElement($_927.a, null),
     okCancel: false
   }, e), {
     type: "warning"
@@ -213,7 +213,7 @@ function M(e) {
 }
 function L(e) {
   return $$_19.a($$_19.a({
-    icon: React.createElement($_1046.a, null),
+    icon: createElement($_1046.a, null),
     okCancel: false
   }, e), {
     type: "info"
@@ -221,7 +221,7 @@ function L(e) {
 }
 function j(e) {
   return $$_19.a($$_19.a({
-    icon: React.createElement($_1045.a, null),
+    icon: createElement($_1045.a, null),
     okCancel: false
   }, e), {
     type: "success"
@@ -229,7 +229,7 @@ function j(e) {
 }
 function U(e) {
   return $$_19.a($$_19.a({
-    icon: React.createElement($_1047.a, null),
+    icon: createElement($_1047.a, null),
     okCancel: false
   }, e), {
     type: "error"
@@ -237,7 +237,7 @@ function U(e) {
 }
 function H(e) {
   return $$_19.a($$_19.a({
-    icon: React.createElement($_927.a, null),
+    icon: createElement($_927.a, null),
     okCancel: true
   }, e), {
     type: "confirm"

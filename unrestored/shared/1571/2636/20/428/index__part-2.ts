@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_47 from "../../47"
+import * as /* [auto-meaningful-name] */$$_$$_47_index from "../../47/index"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
@@ -16,13 +16,13 @@ import * as /* [auto-meaningful-name] */$$_$$_197_483_index from "../../197/483/
 import * as /* [auto-meaningful-name] */Axios from "axios"
 import /* [auto-meaningful-name] */Axios1 from "axios"
 import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
-import * as /* [auto-meaningful-name] */$$_$$_28_128 from "../../28/128"
+import * as /* [auto-meaningful-name] */$$_128 from "../128"
 new $$_$$_197_483_index.a({
-  env: $$_$$_28_128.a.env,
-  projectName: $$_$$_28_128.a.productCode,
+  env: $$_128.a.env,
+  projectName: $$_128.a.productCode,
   config: {
-    pid: $$_$$_28_128.a.pid,
-    api: $$_$$_28_128.a.openServiceHost
+    pid: $$_128.a.pid,
+    api: $$_128.a.openServiceHost
   }
 })
 function F(e) {
@@ -45,7 +45,7 @@ function G() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = p.length > 1 && undefined !== p[1] ? p[1] : $$_$$_28_128.a.cdnPath.root
+            n = p.length > 1 && undefined !== p[1] ? p[1] : $$_128.a.cdnPath.root
             e.next = 3
             return W(t.type, n)
           case 3:
@@ -57,7 +57,7 @@ function G() {
             s.append("file", t)
             s.append("key", o$filename)
             e.next = 11
-            return Axios1.post($$_$$_28_128.a.apiQiniuHost, s)
+            return Axios1.post($$_128.a.apiQiniuHost, s)
           case 11:
             e$sent1 = e.sent
             e$sent1$data = e$sent1.data
@@ -86,7 +86,7 @@ function U() {
           case 0:
             r = i.length > 2 && undefined !== i[2] ? i[2] : 1
             e.next = 3
-            return Axios1.get($$_$$_28_128.a.apiOverseaServiceHost + "/tiger/kitten/cdn/token/".concat(r), {
+            return Axios1.get($$_128.a.apiOverseaServiceHost + "/tiger/kitten/cdn/token/".concat(r), {
               params: {
                 type: t,
                 prefix: n,
@@ -190,7 +190,7 @@ function Y() {
             }
             e.prev = 4
             e.next = 7
-            return F(e$sent, $$_$$_28_128.a.cdnPath.playerUnstable)
+            return F(e$sent, $$_128.a.cdnPath.playerUnstable)
           case 7:
             return e.abrupt("return", e.sent)
           case 10:

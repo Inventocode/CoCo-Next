@@ -12,34 +12,35 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1036_index from "./1036/index"
 import /* [auto-meaningful-name] */$_1036_index1 from "./1036/index"
 import * as /* [auto-meaningful-name] */$_1508_index from "./1508/index"
 import * as /* [auto-meaningful-name] */$_356 from "./356"
 import /* [auto-meaningful-name] */$_3561 from "./356"
-var Gt = React1.memo(function () {
-  var e = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = React1.useState(false)
+var Gt = memo(function () {
+  var e = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var n = useState(false)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = React1.useState("")
+  var a = useState("")
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = $_16_index.e(function (e) {
+  var g = useSelector(function (e) {
     return e.project
   })
   var /* [auto-meaningful-name] */g$isPackaging = g.isPackaging
@@ -48,13 +49,13 @@ var Gt = React1.memo(function () {
   var /* [auto-meaningful-name] */g$packageInfo = g.packageInfo
   var /* [auto-meaningful-name] */g$packageInfo$startTimeTamp = g$packageInfo.startTimeTamp
   var /* [auto-meaningful-name] */g$packageInfo$expireTime = g$packageInfo.expireTime
-  var A = $_16_index.e(function (e) {
+  var A = useSelector(function (e) {
     return e.project.id
   })
-  var j = $_16_index.e(function (e) {
+  var j = useSelector(function (e) {
     return e.common.userInfo
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (g$packageUrl && g$packageInfo) {
       var e = te.B()
       var t = "".concat(e, "/download/?url=").concat(encodeURIComponent(g$packageUrl || ""), "&icon=").concat(encodeURIComponent(g$packageInfo.apkIcon || ""), "&name=").concat(g$packageInfo.apkName || "", "&projectId=").concat(A, "&version=").concat(g$packageInfo.version, "&expireTime=").concat(g$packageInfo.expireTime, "&startTimeTamp=").concat(g$packageInfo.startTimeTamp)
@@ -62,7 +63,7 @@ var Gt = React1.memo(function () {
       m(false)
     }
   }, [g$packageUrl, g$packageInfo, A])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (Tt) {
       clearInterval(Tt)
     }
@@ -102,7 +103,7 @@ var Gt = React1.memo(function () {
                 break
               }
               e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "package.packagePending"
                 }),
                 type: "success"
@@ -147,7 +148,7 @@ var Gt = React1.memo(function () {
     text: "com.codemao.coco.apk_".concat(A),
     onCopy: function () {
       e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-        message: $_710_index$a$formatMessage({
+        message: $_710$a$formatMessage({
           id: "package.appidCopied"
         }),
         showPrefixIcon: false
@@ -177,7 +178,7 @@ var Gt = React1.memo(function () {
     onClick: k
   }, "二维码已过期", React.createElement("br", null), "若需扫码，请重新打包")), React.createElement("p", {
     className: $_3561.apkText
-  }, " ", $_710_index$a$formatMessage({
+  }, " ", $_710$a$formatMessage({
     id: "package.apkText"
   })), g$packageInfo.expireTime && React.createElement("p", {
     className: $_3561.apkText
@@ -209,7 +210,7 @@ var Gt = React1.memo(function () {
   }, React.createElement($_13_index.j, {
     type: "icon-package-download",
     className: $_3561.qrBtn
-  }), React.createElement("p", null, $_710_index$a$formatMessage(o ? {
+  }), React.createElement("p", null, $_710$a$formatMessage(o ? {
     id: "package.downloaded"
   } : {
     id: "package.download"

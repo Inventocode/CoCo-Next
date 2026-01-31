@@ -97,6 +97,7 @@ export function loadModuleFromModuleFunctionExpression(key: ModuleKey, node: t.F
         reference: new Set(),
         importsNameMap: {},
         importsNameToModuleMap: {},
-        exportsNameMap: {}
+        exportsNameMap: {},
+        namedImport: false
     }
 }

@@ -9,27 +9,28 @@
 import * as Jd from "./33"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_691_index from "./691/index"
 import * as /* [auto-meaningful-name] */$_145 from "./145"
 import * as /* [auto-meaningful-name] */$_215 from "./215"
 import * as /* [auto-meaningful-name] */$_741 from "./741"
 import /* [auto-meaningful-name] */$_7411 from "./741"
-var gh = React1.memo(function (e) {
+var gh = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$stage = e.stage
   var /* [auto-meaningful-name] */e$updateTimes = e.updateTimes
   var /* [auto-meaningful-name] */e$coordinateRatio = e.coordinateRatio
-  var i = React1.useState()
+  var i = useState()
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = $_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (l === t && e$stage && t) {
       var e = Jd.Cb(t)
       c(D.a({}, e))

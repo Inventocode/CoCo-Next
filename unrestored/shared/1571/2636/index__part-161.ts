@@ -8,10 +8,11 @@
 
 import { oA } from "./index__part-160"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1061 from "./1061"
 import /* [auto-meaningful-name] */$_10611 from "./1061"
-var cA = React1.memo(function () {
+var cA = memo(function () {
   return React.createElement("div", {
     className: $_10611.toolContent
   }, React.createElement("div", {

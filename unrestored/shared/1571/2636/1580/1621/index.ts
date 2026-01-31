@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../1706/86/index")
-var o = require("../1686/194")
+var r = require("../1661/86/index")
+var o = require("../1782/194")
 var i = require("./1255/index")
-var a = require("../1686/759")
+var a = require("../1617/759")
 var /* [auto-meaningful-name] */i$ArrayBuffer = i.ArrayBuffer
 r({
   global: true,

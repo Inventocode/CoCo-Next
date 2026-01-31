@@ -18,70 +18,71 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_acti
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1525 from "./1525"
 import /* [auto-meaningful-name] */$_15251 from "./1525"
 import * as /* [auto-meaningful-name] */$_236 from "./236"
 import /* [auto-meaningful-name] */$_2361 from "./236"
-var RT = React1.memo(function (e) {
+var RT = memo(function (e) {
   var /* [auto-meaningful-name] */e$variableType = e.variableType
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = React1.useState(true)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useState(true)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = React1.useState("")
+  var s = useState("")
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState("")
+  var d = useState("")
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState("")
+  var v = useState("")
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState(false)
+  var O = useState(false)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var j = w[1]
-  var R = React1.useState([])
+  var R = useState([])
   var k = $_10_index.a(R, 2)
   var D = k[0]
   var M = k[1]
-  var L = React1.useState([])
+  var L = useState([])
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = React1.useState([])
+  var G = useState([])
   var W = $_10_index.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = $_16_index.d()
+  var V = useDispatch()
   var q = $_238.d()
-  var X = $_16_index.e(function (e) {
+  var X = useSelector(function (e) {
     return e.common.language
   })
-  var Q = $_16_index.e(function (e) {
+  var Q = useSelector(function (e) {
     return e.project.globalVariableList
   })
-  var Z = $_16_index.e(function (e) {
+  var Z = useSelector(function (e) {
     return e.project.globalArrayList
   })
-  var J = $_16_index.e(function (e) {
+  var J = useSelector(function (e) {
     return e.project.globalObjectList
   })
-  var $ = $_16_index.e(function (e) {
+  var $ = useSelector(function (e) {
     return e.project.screens
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (q) {
       M(q.primitiveVariables)
       F(q.arrayVariables)
@@ -93,7 +94,7 @@ var RT = React1.memo(function (e) {
       }
     }
   }, [q, e$variableType, Q, Z, J])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = $_17_index.Blink.mainWorkspace && $_26_index.g.getToolbox()
     if (e) {
       var t
@@ -112,7 +113,7 @@ var RT = React1.memo(function (e) {
         var e = ng.a("VARIABLE")
         V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
           title: "addPrimitiveVariableName",
-          placeholder: $_710_index$a$formatMessage({
+          placeholder: $_710$a$formatMessage({
             id: "addPrimitiveVariableNamePlaceholder"
           }),
           onConfirm: function (t, n) {
@@ -131,17 +132,17 @@ var RT = React1.memo(function (e) {
                   return t.name === e
                 })
               },
-              message: $_710_index$a$formatMessage({
+              message: $_710$a$formatMessage({
                 id: "primitiveVariableNameRepeat"
               })
             }
-          ].concat($_25_index.a(Sg($_710_index$a$formatMessage)))
+          ].concat($_25_index.a(Sg($_710$a$formatMessage)))
         }))
       } else if (e$variableType === K.b.ARRAY) {
         var r = ng.a("ARRAY")
         V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
           title: "addArrayVariableName",
-          placeholder: $_710_index$a$formatMessage({
+          placeholder: $_710$a$formatMessage({
             id: "addArrayVariableNamePlaceholder"
           }),
           onConfirm: function (e, t) {
@@ -160,17 +161,17 @@ var RT = React1.memo(function (e) {
                   return t.name === e
                 })
               },
-              message: $_710_index$a$formatMessage({
+              message: $_710$a$formatMessage({
                 id: "arrayVariableNameRepeat"
               })
             }
-          ].concat($_25_index.a(Sg($_710_index$a$formatMessage)))
+          ].concat($_25_index.a(Sg($_710$a$formatMessage)))
         }))
       } else if (e$variableType === K.b.OBJECT) {
         var o = ng.a("OBJECT")
         V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
           title: "object.createNewObject",
-          placeholder: $_710_index$a$formatMessage({
+          placeholder: $_710$a$formatMessage({
             id: "object.createNewObjectNamePlaceholder"
           }),
           onConfirm: function (e, t) {
@@ -196,11 +197,11 @@ var RT = React1.memo(function (e) {
                   return t.name === e
                 })
               },
-              message: $_710_index$a$formatMessage({
+              message: $_710$a$formatMessage({
                 id: "object.nameRepeat"
               })
             }
-          ].concat($_25_index.a(Sg($_710_index$a$formatMessage)))
+          ].concat($_25_index.a(Sg($_710$a$formatMessage)))
         }))
       }
     }
@@ -357,7 +358,7 @@ var RT = React1.memo(function (e) {
   var ae = function (e) {
     g(e)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (m) {
       var e = document.querySelector(".".concat("VARIABLE_ID_" + m, " input"))
       if (e && e instanceof HTMLInputElement) {
@@ -422,7 +423,7 @@ var RT = React1.memo(function (e) {
     })), React.createElement($_748_index.a, {
       placement: "bottom",
       trigger: ["hover", "click"],
-      title: $_710_index$a$formatMessage({
+      title: $_710$a$formatMessage({
         id: e$variableType === K.b.PRIMITIVE ? "editDefaultValue" : "edit"
       })
     }, React.createElement("div", {
@@ -437,7 +438,7 @@ var RT = React1.memo(function (e) {
       type: "icon-list"
     })))))), e$variableType === K.b.PRIMITIVE && y === e$item.id && l === e$item.id && React.createElement("div", {
       className: $_2361.detail
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "initValue"
     }), oe(e$item, e$type)))
   }
@@ -462,7 +463,7 @@ var RT = React1.memo(function (e) {
     }, React.createElement($_13_index.j, {
       type: "icon-add",
       className: $_2361.addIcon
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: e
     }))
   }(), !i && React.createElement("div", {
@@ -471,7 +472,7 @@ var RT = React1.memo(function (e) {
     className: $_2361.content
   }, Q.length ? React.createElement("div", {
     className: $_2361.variableTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "globalVariable"
   })) : null, Q.map(function (e) {
     return React.createElement(ce, {
@@ -481,7 +482,7 @@ var RT = React1.memo(function (e) {
     })
   }), D.length > 0 ? React.createElement("div", {
     className: $_2361.variableTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "screenVariable"
   })) : null, D.map(function (e) {
     return React.createElement(ce, {
@@ -493,7 +494,7 @@ var RT = React1.memo(function (e) {
     className: $_2361.content
   }, Z.length > 0 ? React.createElement("div", {
     className: $_2361.variableTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "globalArray"
   })) : null, Z.map(function (e) {
     return React.createElement(ce, {
@@ -503,7 +504,7 @@ var RT = React1.memo(function (e) {
     })
   }), B.length > 0 ? React.createElement("div", {
     className: $_2361.variableTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "screenArray"
   })) : null, B.map(function (e) {
     return React.createElement(ce, {
@@ -515,7 +516,7 @@ var RT = React1.memo(function (e) {
     className: $_2361.content
   }, J.length > 0 ? React.createElement("div", {
     className: $_2361.variableTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "object.globalObject"
   })) : null, J.map(function (e) {
     return React.createElement(ce, {
@@ -525,7 +526,7 @@ var RT = React1.memo(function (e) {
     })
   }), U.length > 0 ? React.createElement("div", {
     className: $_2361.variableTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "object.screenObject"
   })) : null, U.map(function (e) {
     return React.createElement(ce, {
@@ -549,7 +550,7 @@ var RT = React1.memo(function (e) {
     className: C ? $_2361.expandIcon : $_2361.foldIcon
   })))))
 })
-var kT = React1.memo(function () {
+var kT = memo(function () {
   return React.createElement("div", {
     className: $_15251.wrapper
   }, React.createElement(RT, {

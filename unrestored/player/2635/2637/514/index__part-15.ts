@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index fr
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "../../../../shared/1571/2636/27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_34_347_112 from "../../../../shared/1571/2636/34/347/112"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_428_112 from "../../../../shared/1571/2636/20/428/112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_14 from "../../../../shared/1571/2636/14"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_114 from "../../../../shared/1571/2636/114"
 var qt = function (t) {
@@ -37,7 +37,7 @@ var qt = function (t) {
     }, {
       key: "setBackgroundImage",
       value: function (t) {
-        var e = $$_$$_$$_$$_shared_1571_2636_34_347_112.b(t)
+        var e = $$_$$_$$_$$_shared_1571_2636_20_428_112.b(t)
         if (e) {
           this.setProps({
             backgroundMode: $$_$$_$$_$$_shared_1571_2636_114.a.IMAGE,

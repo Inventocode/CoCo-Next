@@ -4,7 +4,7 @@
  * 模块 ID：2497
  */
 
-var r = require("./2500/997")
+var r = require("./2501/997")
 module.exports = function () {
   this.__data__ = r ? r(null) : {}
   this.size = 0

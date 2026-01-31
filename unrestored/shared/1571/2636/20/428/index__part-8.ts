@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
 import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
 import * as a from "./12"
-import * as /* [auto-meaningful-name] */$$_$$_34_347_112 from "../../34/347/112"
+import * as /* [auto-meaningful-name] */$_112 from "./112"
 function Gr(e) {
   return encodeURI(e.cdnUrl)
 }
@@ -98,7 +98,7 @@ function oo(e, t) {
   })
 }
 function io(e, t) {
-  if ($$_$$_34_347_112.d(t)) {
+  if ($_112.d(t)) {
     a.h(e, {
       fileId: t
     })

@@ -9,19 +9,20 @@
 var i
 var r
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_559_326 from "../559/326"
-import * as /* [auto-meaningful-name] */$$_559_216 from "../559/216"
-import /* [auto-meaningful-name] */$$_559_2161 from "../559/216"
+import * as /* [auto-meaningful-name] */$$_1543_326 from "../1543/326"
+import * as /* [auto-meaningful-name] */$$_1543_216 from "../1543/216"
+import /* [auto-meaningful-name] */$$_1543_2161 from "../1543/216"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 var h = false
 var p = {
   load: function () {
-    var e = $$_559_326.a($$_559_2161.mark(function e(t) {
+    var e = $$_1543_326.a($$_1543_2161.mark(function e(t) {
       var a
-      return $$_559_2161.wrap(function (e) {
+      return $$_1543_2161.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
@@ -40,7 +41,7 @@ var p = {
               });
               (r = document.createElement("div")).id = "CUI-kitten-video-player-container"
               document.body.appendChild(r)
-              $$_80_index1.render(React1.createElement(React1.Suspense, {
+              ReactDom1.render(React1.createElement(React1.Suspense, {
                 fallback: null
               }, React1.createElement(a, $$_19.a({
                 getPlayerRef: function (e) {
@@ -84,7 +85,7 @@ var p = {
         a.style.transform = f.transform
         a.addEventListener("transitionend", function () {
           if (r) {
-            $$_80_index1.unmountComponentAtNode(r)
+            ReactDom1.unmountComponentAtNode(r)
             document.body.removeChild(r)
             r = undefined
             t(undefined)

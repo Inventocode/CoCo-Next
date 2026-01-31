@@ -6,6 +6,7 @@
 
 "use strict"
 
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as i from "../8"

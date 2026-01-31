@@ -14,7 +14,7 @@ exports.default = s
 var r = a(require("../../../50/index"))
 var o = a(require("react"))
 var i = a(require("../../../8"))
-var l = require("./2922/2701")
+var l = require("./2929/2701")
 var u = {
   currentTime: r.default.number,
   duration: r.default.number,

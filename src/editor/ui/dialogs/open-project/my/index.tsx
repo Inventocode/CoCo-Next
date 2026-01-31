@@ -19,12 +19,12 @@ import * as Actions from "../../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_language from "../../../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../../unrestored/shared/1571/2636/288"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181 from "../../../../../../unrestored/shared/1571/2636/418"
@@ -63,7 +63,7 @@ function ProjectItem({
   filterType: Type
   status: "loading" | "loaded" | "emptyList"
 }) {
-  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
   var t
   function c() {
     var e = []
@@ -163,21 +163,21 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
   var i = o[0]
   var a = o[1]
   const [status, setStatus] = React.useState<"loading" | "loaded" | "emptyList">("loaded")
-  const language = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const language = useSelector(function (e) {
     return e.common.language
   })
-  const userInfo = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const userInfo = useSelector(function (e) {
     return e.common.userInfo
   })
-  const id = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const id = useSelector(function (e) {
     return e.project.id
   })
   const [type, setType] = React.useState(Type.SELF)
-  const dispatch = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  const dispatch = useDispatch()
   var C = React.useRef(0)
   var A = React.useRef(1)
   var j = React.useRef(false)
-  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
   async function onClick(id, r, o) {
     try {
       const response = await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.d(id)

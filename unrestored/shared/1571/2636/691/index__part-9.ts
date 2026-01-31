@@ -13,7 +13,7 @@ import { X, Z } from "./index__part-5"
 import { ae, se } from "./index__part-6"
 import { ue } from "./index__part-7"
 import { Ae, we } from "./index__part-8"
-import * as /* [auto-meaningful-name] */$_520 from "./520"
+import * as /* [auto-meaningful-name] */$_520_index from "./520/index"
 import * as /* [auto-meaningful-name] */$$_105 from "../105"
 import * as /* [auto-meaningful-name] */$_119 from "./119"
 import * as c from "./65"
@@ -1612,7 +1612,7 @@ Ne.bind(s.Actor).toFactory(function (e) {
     var r = Object.assign({}, t, {
       events: n
     })
-    return new $_520.a(r)
+    return new $_520_index.a(r)
   }
 })
 Ne.bind(s.Actors).toFactory(function (e) {

@@ -9,12 +9,12 @@ import * as React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1062 from "../../../../../unrestored/shared/1571/2636/1062"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621 from "../../../../../unrestored/shared/1571/2636/1062"
 var ML = React.memo(() => {
-  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var blockImageDialogInfo = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var e = useDispatch()
+  var blockImageDialogInfo = useSelector(function (e) {
     return e.common.blockImageDialogInfo
   })
   var /* [auto-meaningful-name] */blockImageDialogInfo$visible = blockImageDialogInfo.visible

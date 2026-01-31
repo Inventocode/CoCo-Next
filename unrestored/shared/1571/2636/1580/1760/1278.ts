@@ -4,13 +4,13 @@
  * 模块 ID：1278
  */
 
-var r = require("../1581/309")
-var o = require("../1597/256")
+var r = require("../1771/309")
+var o = require("../1775/256")
 var i = require("../1282/947")
 var a = require("../1282/835")
-var s = require("../1605/1246/1085")
+var s = require("../1785/1246/1085")
 var c = require("../1282/636")
-var /* [auto-meaningful-name] */require$$_1768_257_index$aTypedArrayConstructor = require("../1768/257/index").aTypedArrayConstructor
+var /* [auto-meaningful-name] */require$$_1754_257_index$aTypedArrayConstructor = require("../1754/257/index").aTypedArrayConstructor
 module.exports = function (e) {
   var t
   var n
@@ -28,7 +28,7 @@ module.exports = function (e) {
       h.push(d.value)
     }
   }
-  for (_ && arguments$length > 2 && (g = c(g, arguments[2], 2)), n = o(h.length), u = new (require$$_1768_257_index$aTypedArrayConstructor(this))(n), t = 0; n > t; t++) {
+  for (_ && arguments$length > 2 && (g = c(g, arguments[2], 2)), n = o(h.length), u = new (require$$_1754_257_index$aTypedArrayConstructor(this))(n), t = 0; n > t; t++) {
     u[t] = _ ? g(h[t], t) : h[t]
   }
   return u

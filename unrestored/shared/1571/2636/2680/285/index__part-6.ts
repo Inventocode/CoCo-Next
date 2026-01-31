@@ -8,14 +8,14 @@
 
 import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
 import * as /* [auto-meaningful-name] */$$_$$_107 from "../../107"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useEffect, useLayoutEffect } from "react"
 import * as /* [auto-meaningful-name] */$$_$$_801_694_index from "../../801/694/index"
 import * as /* [auto-meaningful-name] */$$_$$_801_index from "../../801/index"
 import * as /* [auto-meaningful-name] */$$_$$_517 from "../../517"
 import * as /* [auto-meaningful-name] */$$_$$_8 from "../../8"
 import /* [auto-meaningful-name] */$$_$$_81 from "../../8"
-import * as /* [auto-meaningful-name] */$$_$$_80_index from "../../80/index"
-import /* [auto-meaningful-name] */$$_$$_80_index1 from "../../80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_1543_482 from "../../1543/482"
 import * as /* [auto-meaningful-name] */$$_$$_1543_432 from "../../1543/432"
 import * as /* [auto-meaningful-name] */$$_$$_1543_378 from "../../1543/378"
@@ -76,12 +76,12 @@ function Qe(e, t) {
   })] : "".concat(e, "-").concat(t) : null
 }
 function We(e) {
-  var t = React.useRef(false)
-  var n = React.useState(e)
+  var t = useRef(false)
+  var n = useState(e)
   var r = $$_$$_40_index.a(n, 2)
   var o = r[0]
   var a = r[1]
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       t.current = true
     }
@@ -94,7 +94,7 @@ function We(e) {
     }
   ]
 }
-var Ke = $$_$$_1543_378.a() ? React.useLayoutEffect : React.useEffect
+var Ke = $$_$$_1543_378.a() ? useLayoutEffect : useEffect
 export { Ve }
 export { Ge }
 export { ze }

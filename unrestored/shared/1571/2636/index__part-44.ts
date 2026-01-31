@@ -14,6 +14,7 @@ import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as k from "./11"
 import N from "./8"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_513 from "./513"
 import /* [auto-meaningful-name] */$_5131 from "./513"
@@ -36,7 +37,7 @@ var tf = {
     var /* [auto-meaningful-name] */e$attributes$borderRadius = e$attributes.borderRadius
     var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
     var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
-    var p = React1.useRef(null)
+    var p = useRef(null)
     var m = Jd.Fb(e$attributes$fileId) || $_133.m
     return React.createElement("div", {
       id: t,

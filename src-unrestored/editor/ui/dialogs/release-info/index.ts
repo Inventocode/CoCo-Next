@@ -11,30 +11,31 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$ from "../../../../../."
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$1 from "../../../../../."
 import * as /* [auto-meaningful-name] */$_styles$module$css from "./styles.module.css"
 import /* [auto-meaningful-name] */$_styles$module$css1 from "./styles.module.css"
-var UL = React1.memo(function () {
-  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+var UL = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.releaseInfoDialogVisible
   })
-  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     var /* [auto-meaningful-name] */e$common$userInfo
     return null === (e$common$userInfo = e.common.userInfo) || undefined === e$common$userInfo ? undefined : e$common$userInfo.id
   })
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.common.userInfoFetchDone
   })
-  var r = React1.useState(false)
+  var r = useState(false)
   var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  React1.useEffect(function () {
+  var s = useDispatch()
+  useEffect(function () {
     if (n) {
       if (!i) {
         if (localStorage.getItem("ReleaseVersion") !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f) {

@@ -13,41 +13,42 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_136 from "./136"
 import /* [auto-meaningful-name] */$_1361 from "./136"
 var gt = function () {
-  var e = $_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.oTState.userFocusOTInfoList
   })
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.oTState.cooperationUserList
   })
-  var n = $_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var o = React1.useState([])
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var o = useState([])
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState({
+  var c = useState({
     left: 0,
     top: 0
   })
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(false)
+  var p = useState(false)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var n = function (n) {
       v(false)
       if (pt) {
@@ -112,7 +113,7 @@ var gt = function () {
     })
   }), React.createElement("span", {
     className: $_1361.nickname
-  }, a.length, " ", $_710_index$a$formatMessage({
+  }, a.length, " ", $_710$a$formatMessage({
     id: "OT.collPeopleCount"
   }))) : React.createElement("div", {
     key: a[0].id,
@@ -128,16 +129,16 @@ var gt = function () {
   }, a[0].nickname)))
 }
 var _t = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.oTState.userFocusOTInfoList
   })
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
   var n = e.filter(function (e) {
     return "block" === e.path.type
   }).toJSON()
-  React1.useEffect(function () {
+  useEffect(function () {
     var n = e.filter(function (e) {
       return "dynamicData" === e.path.type || "widget" === e.path.type
     }).toJSON()
@@ -170,25 +171,25 @@ var _t = React.memo(function () {
 var vt = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement($_13_index.f, {
     className: $_1361.invalidUrlDialog,
     visible: e$visible,
     onClose: e$onClose
-  }, React.createElement("h3", null, $_710_index$a$formatMessage({
+  }, React.createElement("h3", null, $_710$a$formatMessage({
     id: "OT.urlIsInvalid"
-  })), React.createElement("p", null, $_710_index$a$formatMessage({
+  })), React.createElement("p", null, $_710$a$formatMessage({
     id: "OT.urlIsInvalidDetail"
   })), React.createElement($_13_index.d, {
     type: "primary",
     onClick: e$onClose
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "know"
   })))
 }
 var bt = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement($_13_index.f, {
     className: $_1361.loadingDialog,
     visible: e$visible,
@@ -197,15 +198,15 @@ var bt = function (e) {
     className: $_1361.icon
   }, React.createElement($_13_index.j, {
     type: "icon-loading2"
-  })), React.createElement("p", null, $_710_index$a$formatMessage({
+  })), React.createElement("p", null, $_710$a$formatMessage({
     id: "OT.isBuildingCollWork"
   })))
 }
 var yt = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.oTState.onlineCooperationUserList
   }).toJSON()
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
   var n = te.q(e).reverse()

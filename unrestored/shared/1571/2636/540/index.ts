@@ -10,14 +10,15 @@ import * as r from "../6"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as i from "../8"
 import a from "../8"
+import { memo, useRef, useState, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import "./868"
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 var _a
-_a = React.memo(function (e) {
+_a = memo(function (e) {
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -33,9 +34,9 @@ _a = React.memo(function (e) {
   var y = undefined !== e$withPortal && e$withPortal
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$footer = e.footer
-  var w = React.useRef(null)
-  var C = React.useRef(null)
-  var T = React.useState(false)
+  var w = useRef(null)
+  var C = useRef(null)
+  var T = useState(false)
   var S = $$_10_index.a(T, 2)
   S[0]
   var A = S[1]
@@ -44,17 +45,17 @@ _a = React.memo(function (e) {
     (I = document.createElement("div")).id = "_cocoDialogContainer"
     document.body.appendChild(I)
   }
-  var j = React.useCallback(function () {
+  var j = useCallback(function () {
     if (e$onClose) {
       e$onClose()
     }
   }, [e$onClose])
-  var N = React.useCallback(function () {
+  var N = useCallback(function () {
     if (p) {
       j()
     }
   }, [j, p])
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */w$current = w.current
     var t = function (e) {
       var /* [auto-meaningful-name] */C$current
@@ -71,7 +72,7 @@ _a = React.memo(function (e) {
       }
     }
   }, [])
-  React.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       A(true)
     }
@@ -109,7 +110,7 @@ _a = React.memo(function (e) {
   }, e$children), e$footer && React1.createElement("div", {
     className: "coco-dialog-footer"
   }, e$footer))))
-  return y ? $$_80_index1.createPortal(R, I) : R
+  return y ? ReactDom1.createPortal(R, I) : R
 })
 export { _a as a }
 export default _a

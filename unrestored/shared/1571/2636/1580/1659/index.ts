@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../1706/86/index")
-var o = require("../1603/477")
+var r = require("../1661/86/index")
+var o = require("./477")
 var i = require("./1660")
 var a = require("./1092")
-var s = require("../1705/168")
+var s = require("./168")
 var /* [auto-meaningful-name] */_1$$toFixed = 1..toFixed
 var /* [auto-meaningful-name] */Math$floor = Math.floor
 var u = function e(t, n, r) {

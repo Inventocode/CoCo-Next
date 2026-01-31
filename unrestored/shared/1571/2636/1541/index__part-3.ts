@@ -8,7 +8,7 @@
 
 import { m } from "./index__part-1"
 import _ from "../8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement, cloneElement, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_795 from "../795"
 import * as /* [auto-meaningful-name] */$$_559_560 from "../559/560"
@@ -35,7 +35,7 @@ var O = function (e, t) {
   var /* [auto-meaningful-name] */e$onCompositionEnd = e.onCompositionEnd
   var /* [auto-meaningful-name] */e$open = e.open
   var /* [auto-meaningful-name] */e$attrs = e.attrs
-  var A = e$inputElement || React.createElement("input", null)
+  var A = e$inputElement || createElement("input", null)
   var I = A
   var /* [auto-meaningful-name] */I$ref = I.ref
   var /* [auto-meaningful-name] */I$props = I.props
@@ -45,7 +45,7 @@ var O = function (e, t) {
   var /* [auto-meaningful-name] */I$props$onCompositionStart = I$props.onCompositionStart
   var /* [auto-meaningful-name] */I$props$onCompositionEnd = I$props.onCompositionEnd
   var /* [auto-meaningful-name] */I$props$style = I$props.style
-  return A = React.cloneElement(A, $$_21.a($$_21.a({
+  return A = cloneElement(A, $$_21.a($$_21.a({
     id: a,
     ref: m(t, I$ref),
     disabled: e$disabled,
@@ -102,7 +102,7 @@ var O = function (e, t) {
     onPaste: e$onPaste
   }))
 }
-var w = React.forwardRef(O)
+var w = forwardRef(O)
 w.displayName = "Input"
 var C = w
 export { C }

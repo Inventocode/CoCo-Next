@@ -16,22 +16,23 @@ import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import * as Dn from "./19"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useMemo, createContext, useContext, createElement, useState, forwardRef, useEffect, useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_812 from "./812"
 import /* [auto-meaningful-name] */$_8121 from "./812"
 var $T = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onToggle = e.onToggle
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useSelector(function (e) {
     return e.common.consoleMessages
   })
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.common.consoleHeight
   })
-  var i = React1.useMemo(function () {
+  var i = useMemo(function () {
     return {
       errorCount: r.filter(function (e) {
         return "error" === e.get("type") || "lintError" === e.get("type") || "customError" === e.get("type")
@@ -60,7 +61,7 @@ var $T = React.memo(function (e) {
   }), i$warningCount)) : React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
     type: "icon-console",
     className: $_8121.iconConsole
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "consolePanel"
   })))
 })
@@ -79,7 +80,7 @@ var eS = function (e, t) {
   }
   return n
 }
-var tS = React1.createContext({
+var tS = createContext({
   siderHook: {
     addSider: function () {
       return null
@@ -95,10 +96,10 @@ function nS(e) {
   var /* [auto-meaningful-name] */e$displayName = e.displayName
   return function (e) {
     var o = function (r) {
-      var /* [auto-meaningful-name] */React1$useContext$_801_index$b$getPrefixCls = React1.useContext($_801_index.b).getPrefixCls
+      var /* [auto-meaningful-name] */useContext$_801_index$b$getPrefixCls = useContext($_801_index.b).getPrefixCls
       var /* [auto-meaningful-name] */r$prefixCls = r.prefixCls
-      var a = React1$useContext$_801_index$b$getPrefixCls(e$suffixCls, r$prefixCls)
-      return React1.createElement(e, Dn.a({
+      var a = useContext$_801_index$b$getPrefixCls(e$suffixCls, r$prefixCls)
+      return createElement(e, Dn.a({
         prefixCls: a,
         tagName: e$tagName
       }, r))
@@ -114,7 +115,7 @@ var rS = function (e) {
   var /* [auto-meaningful-name] */e$tagName = e.tagName
   var i = eS(e, ["prefixCls", "className", "children", "tagName"])
   var a = N(e$prefixCls, e$className)
-  return React1.createElement(e$tagName, Dn.a({
+  return createElement(e$tagName, Dn.a({
     className: a
   }, i), e$children)
 }
@@ -124,8 +125,8 @@ var oS = nS({
   displayName: "Layout"
 })(function (e) {
   var t
-  var /* [auto-meaningful-name] */React1$useContext$_801_index$b$direction = React1.useContext($_801_index.b).direction
-  var r = React1.useState([])
+  var /* [auto-meaningful-name] */useContext$_801_index$b$direction = useContext($_801_index.b).direction
+  var r = useState([])
   var o = $_40_index.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -135,8 +136,8 @@ var oS = nS({
   var /* [auto-meaningful-name] */e$hasSider = e.hasSider
   var /* [auto-meaningful-name] */e$tagName = e.tagName
   var p = eS(e, ["prefixCls", "className", "children", "hasSider", "tagName"])
-  var h = N(e$prefixCls, (t = {}, Ln.a(t, "".concat(e$prefixCls, "-has-sider"), "boolean" === typeof e$hasSider ? e$hasSider : i.length > 0), Ln.a(t, "".concat(e$prefixCls, "-rtl"), "rtl" === React1$useContext$_801_index$b$direction), t), e$className)
-  var m = React1.useMemo(function () {
+  var h = N(e$prefixCls, (t = {}, Ln.a(t, "".concat(e$prefixCls, "-has-sider"), "boolean" === typeof e$hasSider ? e$hasSider : i.length > 0), Ln.a(t, "".concat(e$prefixCls, "-rtl"), "rtl" === useContext$_801_index$b$direction), t), e$className)
+  var m = useMemo(function () {
     return {
       siderHook: {
         addSider: function (e) {
@@ -154,9 +155,9 @@ var oS = nS({
       }
     }
   }, [])
-  return React1.createElement(tS.Provider, {
+  return createElement(tS.Provider, {
     value: m
-  }, React1.createElement(e$tagName, Dn.a({
+  }, createElement(e$tagName, Dn.a({
     className: h
   }, p), e$children))
 })
@@ -196,13 +197,13 @@ var lS = {
   theme: "outlined"
 }
 var uS = function (e, t) {
-  return React1.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: lS
   }))
 }
 uS.displayName = "BarsOutlined"
-var dS = React1.forwardRef(uS)
+var dS = forwardRef(uS)
 var pS = {
   icon: {
     tag: "svg",
@@ -223,13 +224,13 @@ var pS = {
   theme: "outlined"
 }
 var fS = function (e, t) {
-  return React1.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: pS
   }))
 }
 fS.displayName = "RightOutlined"
-var hS = React1.forwardRef(fS)
+var hS = forwardRef(fS)
 var mS = {
   icon: {
     tag: "svg",
@@ -250,13 +251,13 @@ var mS = {
   theme: "outlined"
 }
 var gS = function (e, t) {
-  return React1.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: mS
   }))
 }
 gS.displayName = "LeftOutlined"
-var _S = React1.forwardRef(gS)
+var _S = forwardRef(gS)
 var vS = function (e) {
   return !isNaN(parseFloat(e)) && isFinite(e)
 }
@@ -283,7 +284,7 @@ var yS = {
   xl: "1199.98px",
   xxl: "1599.98px"
 }
-var ES = React1.createContext({})
+var ES = createContext({})
 var OS = function () {
   var e = 0
   return function () {
@@ -292,7 +293,7 @@ var OS = function () {
     return "".concat(t).concat(e)
   }
 }()
-var wS = React1.forwardRef(function (e, t) {
+var wS = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$trigger = e.trigger
@@ -316,16 +317,16 @@ var wS = React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onCollapse = e.onCollapse
   var /* [auto-meaningful-name] */e$onBreakpoint = e.onBreakpoint
   var T = bS(e, ["prefixCls", "className", "trigger", "children", "defaultCollapsed", "theme", "style", "collapsible", "reverseArrow", "width", "collapsedWidth", "zeroWidthTriggerStyle", "breakpoint", "onCollapse", "onBreakpoint"])
-  var /* [auto-meaningful-name] */React1$useContextTS$siderHook = React1.useContext(tS).siderHook
-  var A = React1.useState("collapsed" in T ? T.collapsed : s)
+  var /* [auto-meaningful-name] */useContextTS$siderHook = useContext(tS).siderHook
+  var A = useState("collapsed" in T ? T.collapsed : s)
   var I = $_40_index.a(A, 2)
   var j = I[0]
   var R = I[1]
-  var k = React1.useState(false)
+  var k = useState(false)
   var x = $_40_index.a(k, 2)
   var D = x[0]
   var M = x[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if ("collapsed" in T) {
       R(T.collapsed)
     }
@@ -338,7 +339,7 @@ var wS = React1.forwardRef(function (e, t) {
       e$onCollapse(e, t)
     }
   }
-  var P = React1.useRef()
+  var P = useRef()
   P.current = function (e) {
     M(e.matches)
     if (!(null === e$onBreakpoint || undefined === e$onBreakpoint)) {
@@ -348,7 +349,7 @@ var wS = React1.forwardRef(function (e, t) {
       L(e.matches, "responsive")
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     function e(e) {
       return P.current(e)
     }
@@ -377,40 +378,40 @@ var wS = React1.forwardRef(function (e, t) {
       }
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = OS("ant-sider-")
-    React1$useContextTS$siderHook.addSider(e)
+    useContextTS$siderHook.addSider(e)
     return function () {
-      return React1$useContextTS$siderHook.removeSider(e)
+      return useContextTS$siderHook.removeSider(e)
     }
   }, [])
   var B = function () {
     L(!j, "clickTrigger")
   }
-  var /* [auto-meaningful-name] */React1$useContext$_801_index$b$getPrefixCls = React1.useContext($_801_index.b).getPrefixCls
-  var G = React1.useMemo(function () {
+  var /* [auto-meaningful-name] */useContext$_801_index$b$getPrefixCls = useContext($_801_index.b).getPrefixCls
+  var G = useMemo(function () {
     return {
       siderCollapsed: j
     }
   }, [j])
-  return React1.createElement(ES.Provider, {
+  return createElement(ES.Provider, {
     value: G
   }, function () {
     var e
-    var a = React1$useContext$_801_index$b$getPrefixCls("layout-sider", e$prefixCls)
+    var a = useContext$_801_index$b$getPrefixCls("layout-sider", e$prefixCls)
     var s = $_486.a(T, ["collapsed"])
     var c = j ? y : v
     var u = vS(c) ? "".concat(c, "px") : String(c)
-    var p = 0 === parseFloat(String(y || 0)) ? React1.createElement("span", {
+    var p = 0 === parseFloat(String(y || 0)) ? createElement("span", {
       onClick: B,
       className: N("".concat(a, "-zero-width-trigger"), "".concat(a, "-zero-width-trigger-").concat(g ? "right" : "left")),
       style: e$zeroWidthTriggerStyle
-    }, e$trigger || React1.createElement(dS, null)) : null
+    }, e$trigger || createElement(dS, null)) : null
     var m = {
-      expanded: g ? React1.createElement(hS, null) : React1.createElement(_S, null),
-      collapsed: g ? React1.createElement(_S, null) : React1.createElement(hS, null)
+      expanded: g ? createElement(hS, null) : createElement(_S, null),
+      collapsed: g ? createElement(_S, null) : createElement(hS, null)
     }[j ? "collapsed" : "expanded"]
-    var _ = null !== e$trigger ? p || React1.createElement("div", {
+    var _ = null !== e$trigger ? p || createElement("div", {
       className: "".concat(a, "-trigger"),
       onClick: B,
       style: {
@@ -424,12 +425,12 @@ var wS = React1.forwardRef(function (e, t) {
       width: u
     })
     var O = N(a, "".concat(a, "-").concat(l), (e = {}, Ln.a(e, "".concat(a, "-collapsed"), !!j), Ln.a(e, "".concat(a, "-has-trigger"), h && null !== e$trigger && !p), Ln.a(e, "".concat(a, "-below"), !!D), Ln.a(e, "".concat(a, "-zero-width"), 0 === parseFloat(u)), e), e$className)
-    return React1.createElement("aside", Dn.a({
+    return createElement("aside", Dn.a({
       className: O
     }, s, {
       style: b,
       ref: t
-    }), React1.createElement("div", {
+    }), createElement("div", {
       className: "".concat(a, "-children")
     }, e$children), h || D && p ? _ : null)
   }())

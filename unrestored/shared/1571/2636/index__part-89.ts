@@ -22,14 +22,15 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_150 from "./150"
 import /* [auto-meaningful-name] */$_1501 from "./150"
-var Bv = React1.memo(function (e) {
+var Bv = memo(function (e) {
   var t
   var n = e.id
   var /* [auto-meaningful-name] */e$type = e.type
@@ -51,20 +52,20 @@ var Bv = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$readonly = e.readonly
   var w = undefined !== e$readonly && e$readonly
   var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var A = React1.useRef(null)
-  var j = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var A = useRef(null)
+  var j = useSelector(function (e) {
     return e.block.flyoutVisible
   })
-  var R = React1.useState(true)
+  var R = useState(true)
   var x = $_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
-  var L = React1.useState(false)
+  var L = useState(false)
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function e() {
       F(false)
       document.removeEventListener("click", e, true)
@@ -79,7 +80,7 @@ var Bv = React1.memo(function (e) {
       document.removeEventListener("contextmenu", e, true)
     }
   }, [B])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$selected && A.current) {
       A.current.scrollIntoView({
         behavior: "smooth",
@@ -116,12 +117,12 @@ var Bv = React1.memo(function (e) {
       }, !e$isInvisibleWidget && React.createElement("div", {
         className: $_1501.menuItem,
         onMouseDown: W
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "copyAndPaste"
       })), React.createElement("div", {
         className: N($_1501.menuItem, $_1501.delete),
         onMouseDown: G
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "delete"
       })))
     }
@@ -182,45 +183,45 @@ var Bv = React1.memo(function (e) {
     type: "icon-attribute"
   }))))), D && e$children)
 })
-var Fv = React1.memo(function () {
+var Fv = memo(function () {
   var /* [auto-meaningful-name] */u$invisibleWidgetIds
   var t
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = $_16_index.d()
-  var o = React1.useRef()
-  var i = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useDispatch()
+  var o = useRef()
+  var i = useSelector(function (e) {
     return e.common.editAreaUpdatedAt
   })
-  var a = $_16_index.e(function (e) {
+  var a = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  var s = $_16_index.e(function (e) {
+  var s = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var c = $_16_index.e(function (e) {
+  var c = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
-  var l = $_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.block.flyoutVisible
   })
   var u = $_238.d()
-  var d = React1.useState(false)
+  var d = useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState(false)
+  var v = useState(false)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState(false)
+  var O = useState(false)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState(false)
+  var A = useState(false)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var D = j[1]
-  var M = $_16_index.e(function (e) {
+  var M = useSelector(function (e) {
     return e.uiConfig.widgetEditor
   }) === K.j.ReadOnly
   if (!u) {
@@ -271,7 +272,7 @@ var Fv = React1.memo(function () {
     var t = Et.Bb(e)
     if (t) {
       var i = Et.Fb(t.id || "")
-      var a = $_710_index$a$formatMessage({
+      var a = $_710$a$formatMessage({
         id: "deleteWidget"
       }) + "“" + $_190.f(i, 10) + "”?"
       if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h) {
@@ -279,12 +280,12 @@ var Fv = React1.memo(function () {
         return void r($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: H,
           onClose: V,
-          allowText: $_710_index$a$formatMessage({
+          allowText: $_710$a$formatMessage({
             id: "delete"
           }),
           isDangerous: true,
           title: a,
-          content: $_710_index$a$formatMessage({
+          content: $_710$a$formatMessage({
             id: "cloudDB.DeleteWidgetsTips"
           })
         }))
@@ -296,12 +297,12 @@ var Fv = React1.memo(function () {
         r($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           onConfirm: H,
           onClose: V,
-          allowText: $_710_index$a$formatMessage({
+          allowText: $_710$a$formatMessage({
             id: "delete"
           }),
           isDangerous: true,
           title: a,
-          content: $_710_index$a$formatMessage({
+          content: $_710$a$formatMessage({
             id: c ? "deleteParentWidgetTips" : "deleteWidgetTips"
           })
         }))
@@ -356,9 +357,9 @@ var Fv = React1.memo(function () {
           Q.push({
             type: "ANY_".concat(t$type),
             icon: o.icon,
-            title: $_710_index$a$formatMessage({
+            title: $_710$a$formatMessage({
               id: "anyWidgetAny"
-            }) + $_710_index$a$formatMessage({
+            }) + $_710$a$formatMessage({
               id: o.title || o.previewAreaWidgetTitle
             })
           })
@@ -498,7 +499,7 @@ var Fv = React1.memo(function () {
     onClick: function () {
       g(!m)
     }
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "components"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",
@@ -554,7 +555,7 @@ var Fv = React1.memo(function () {
     onClick: function () {
       E(!y)
     }
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "invisibleWidgetList"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",
@@ -566,7 +567,7 @@ var Fv = React1.memo(function () {
     onClick: function () {
       T(!C)
     }
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "globalWidgetList"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",
@@ -579,7 +580,7 @@ var Fv = React1.memo(function () {
     onClick: function () {
       D(!R)
     }
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "anyWidgetList"
   })), React.createElement($_13_index.j, {
     type: "icon-fold",

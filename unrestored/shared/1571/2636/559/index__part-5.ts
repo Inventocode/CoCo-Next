@@ -11,7 +11,7 @@ import { S, A, j, N, R, x, D, M, P, B, F, G, W, U, H, V, Q } from "./index__part
 import { J, $, re } from "./index__part-2"
 import { pe, fe, he } from "./index__part-3"
 import { ge, _e, be, ye, ze, Ye, Ke } from "./index__part-4"
-import /* [auto-meaningful-name] */$$_80_index from "../80/index"
+import /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_142 from "../142"
 import * as /* [auto-meaningful-name] */$$_241_index from "../241/index"
 import * as /* [auto-meaningful-name] */$$_140 from "../140"
@@ -21,19 +21,19 @@ import * as /* [auto-meaningful-name] */$$_103 from "../103"
 import * as /* [auto-meaningful-name] */$_560 from "./560"
 import /* [auto-meaningful-name] */$_1041 from "./1041"
 import p from "../8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { forwardRef, useRef, useState, useMemo, useEffect, useImperativeHandle, Children, createElement, createContext, createRef, cloneElement, Component, useContext, useCallback } from "react"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$_558_index from "./558/index"
-import * as /* [auto-meaningful-name] */$_216 from "./216"
-import /* [auto-meaningful-name] */$_2161 from "./216"
-import * as /* [auto-meaningful-name] */$_326 from "./326"
+import * as /* [auto-meaningful-name] */$$_1543_558_index from "../1543/558/index"
+import * as /* [auto-meaningful-name] */$$_1543_216 from "../1543/216"
+import /* [auto-meaningful-name] */$$_1543_2161 from "../1543/216"
+import * as /* [auto-meaningful-name] */$$_1543_326 from "../1543/326"
 var Je = ["measure", "align", null, "motion"]
-var $e = React.forwardRef(function (e, t) {
+var $e = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$className = e.className
@@ -52,14 +52,14 @@ var $e = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onMouseLeave = e.onMouseLeave
   var /* [auto-meaningful-name] */e$onMouseDown = e.onMouseDown
   var /* [auto-meaningful-name] */e$onTouchStart = e.onTouchStart
-  var T = React.useRef()
-  var S = React.useRef()
-  var A = React.useState()
+  var T = useRef()
+  var S = useRef()
+  var A = useState()
   var I = $$_40_index.a(A, 2)
   var j = I[0]
   var N = I[1]
   var R = function (e) {
-    var t = React.useState({
+    var t = useState({
       width: 0,
       height: 0
     })
@@ -67,7 +67,7 @@ var $e = React.forwardRef(function (e, t) {
     var r = n[0]
     var o = n[1]
     return [
-      React.useMemo(function () {
+      useMemo(function () {
         var t = {}
         if (e) {
           var /* [auto-meaningful-name] */r$width = r.width
@@ -100,12 +100,12 @@ var $e = React.forwardRef(function (e, t) {
   var x = k[0]
   var D = k[1]
   var M = function (e, t) {
-    var n = React.useState(null)
+    var n = useState(null)
     var r = $$_40_index.a(n, 2)
     var o = r[0]
     var i = r[1]
-    var a = React.useRef()
-    var c = React.useRef(false)
+    var a = useRef()
+    var c = useRef(false)
     function u(e) {
       if (!c.current) {
         i(e)
@@ -114,19 +114,19 @@ var $e = React.forwardRef(function (e, t) {
     function d() {
       pe.cancel(a.current)
     }
-    React.useEffect(function () {
+    useEffect(function () {
       u("measure")
     }, [e])
-    React.useEffect(function () {
+    useEffect(function () {
       switch (o) {
         case "measure":
           t()
       }
       if (o) {
-        a.current = pe($_326.a($_2161.mark(function e() {
+        a.current = pe($$_1543_326.a($$_1543_2161.mark(function e() {
           var t
           var n
-          return $_2161.wrap(function (e) {
+          return $$_1543_2161.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
                 case 0:
@@ -143,7 +143,7 @@ var $e = React.forwardRef(function (e, t) {
         })))
       }
     }, [o])
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         c.current = true
         d()
@@ -176,7 +176,7 @@ var $e = React.forwardRef(function (e, t) {
   var L = $$_40_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React.useRef()
+  var F = useRef()
   function G() {
     var /* [auto-meaningful-name] */T$current
     if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -219,12 +219,12 @@ var $e = React.forwardRef(function (e, t) {
       return null === t || undefined === t ? undefined : t(e, n)
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     if (!(U.motionName || "motion" !== P)) {
       B()
     }
   }, [U.motionName, P])
-  React.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       forceAlign: G,
       getElement: function () {
@@ -242,12 +242,12 @@ var $e = React.forwardRef(function (e, t) {
     z = false
   }
   var Y = e$children
-  if (React.Children.count(e$children) > 1) {
-    Y = React.createElement("div", {
+  if (Children.count(e$children) > 1) {
+    Y = createElement("div", {
       className: "".concat(e$prefixCls, "-content")
     }, e$children)
   }
-  return React.createElement(ze, $$_19.a({
+  return createElement(ze, $$_19.a({
     visible: e$visible,
     ref: S,
     leavedClassName: "".concat(e$prefixCls, "-hidden")
@@ -260,7 +260,7 @@ var $e = React.forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */e$className1 = e.className
     var /* [auto-meaningful-name] */e$style1 = e.style
     var s = p(e$prefixCls, e$className, j, e$className1)
-    return React.createElement($_558_index.a, {
+    return createElement($$_1543_558_index.a, {
       target: e$point || e$getRootDomNode,
       key: "popup",
       ref: T,
@@ -268,7 +268,7 @@ var $e = React.forwardRef(function (e, t) {
       disabled: z,
       align: e$align,
       onAlign: W
-    }, React.createElement("div", {
+    }, createElement("div", {
       ref: t,
       className: s,
       onMouseEnter: e$onMouseEnter,
@@ -281,7 +281,7 @@ var $e = React.forwardRef(function (e, t) {
 })
 $e.displayName = "PopupInner"
 var et = $e
-var tt = React.forwardRef(function (e, t) {
+var tt = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$zIndex = e.zIndex
@@ -292,8 +292,8 @@ var tt = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$mobile$popupMotion = e$mobile.popupMotion
   var h = undefined === e$mobile$popupMotion ? {} : e$mobile$popupMotion
   var /* [auto-meaningful-name] */e$mobile$popupRender = e$mobile.popupRender
-  var g = React.useRef()
-  React.useImperativeHandle(t, function () {
+  var g = useRef()
+  useImperativeHandle(t, function () {
     return {
       forceAlign: function () {},
       getElement: function () {
@@ -305,15 +305,15 @@ var tt = React.forwardRef(function (e, t) {
     zIndex: e$zIndex
   }, e$mobile$popupStyle)
   var v = e$children
-  if (React.Children.count(e$children) > 1) {
-    v = React.createElement("div", {
+  if (Children.count(e$children) > 1) {
+    v = createElement("div", {
       className: "".concat(e$prefixCls, "-content")
     }, e$children)
   }
   if (e$mobile$popupRender) {
     v = e$mobile$popupRender(v)
   }
-  return React.createElement(ze, $$_19.a({
+  return createElement(ze, $$_19.a({
     visible: e$visible,
     ref: g,
     removeOnLeave: true
@@ -321,7 +321,7 @@ var tt = React.forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */e$className = e.className
     var /* [auto-meaningful-name] */e$style = e.style
     var a = p(e$prefixCls, E$mobileUndefinedE$mobileE$mobile$popupClassName, e$className)
-    return React.createElement("div", {
+    return createElement("div", {
       ref: t,
       className: a,
       style: $$_21.a($$_21.a({}, e$style), _)
@@ -331,22 +331,22 @@ var tt = React.forwardRef(function (e, t) {
 tt.displayName = "MobilePopupInner"
 var nt = tt
 var rt = ["visible", "mobile"]
-var ot = React.forwardRef(function (e, t) {
+var ot = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$mobile = e.mobile
   var a = $$_54.a(e, rt)
-  var u = React.useState(e$visible)
+  var u = useState(e$visible)
   var d = $$_40_index.a(u, 2)
   var p = d[0]
   var f = d[1]
-  var h = React.useState(false)
+  var h = useState(false)
   var m = $$_40_index.a(h, 2)
   var g = m[0]
   var _ = m[1]
   var v = $$_21.a($$_21.a({}, a), {}, {
     visible: p
   })
-  React.useEffect(function () {
+  useEffect(function () {
     f(e$visible)
     if (e$visible && e$mobile) {
       _(function () {
@@ -358,17 +358,17 @@ var ot = React.forwardRef(function (e, t) {
       }())
     }
   }, [e$visible, e$mobile])
-  var b = g ? React.createElement(nt, $$_19.a({}, v, {
+  var b = g ? createElement(nt, $$_19.a({}, v, {
     mobile: e$mobile,
     ref: t
-  })) : React.createElement(et, $$_19.a({}, v, {
+  })) : createElement(et, $$_19.a({}, v, {
     ref: t
   }))
-  return React.createElement("div", null, React.createElement(Ke, v), b)
+  return createElement("div", null, createElement(Ke, v), b)
 })
 ot.displayName = "Popup"
 var it = ot
-var at = React.createContext(null)
+var at = createContext(null)
 function st() {}
 function ct() {
   return ""
@@ -385,8 +385,8 @@ var dt = function (e) {
       var t
       var i
       $$_103.a(this, o);
-      (t = n.call(this, e)).popupRef = React.createRef()
-      t.triggerRef = React.createRef()
+      (t = n.call(this, e)).popupRef = createRef()
+      t.triggerRef = createRef()
       t.attachId = undefined
       t.clickOutsideHandler = undefined
       t.touchOutsideHandler = undefined
@@ -515,7 +515,7 @@ var dt = function (e) {
             return n
           }
         } catch (r) {}
-        return $$_80_index.findDOMNode($$_142.a(t))
+        return ReactDom.findDOMNode($$_142.a(t))
       }
       t.getPopupClassNameFromAlign = function (e) {
         var n = []
@@ -574,7 +574,7 @@ var dt = function (e) {
         }
         S.onMouseDown = t.onPopupMouseDown
         S.onTouchStart = t.onPopupMouseDown
-        return React.createElement(it, $$_19.a({
+        return createElement(it, $$_19.a({
           prefixCls: t$props$prefixCls,
           destroyPopupOnHide: t$props$destroyPopupOnHide,
           visible: t$state$popupVisible,
@@ -887,7 +887,7 @@ var dt = function (e) {
           var /* [auto-meaningful-name] */this$props$alignPoint = this$props.alignPoint
           var /* [auto-meaningful-name] */this$props$className = this$props.className
           var /* [auto-meaningful-name] */this$props$autoDestroy = this$props.autoDestroy
-          var u = React.Children.only(this$props$children)
+          var u = Children.only(this$props$children)
           var d = {
             key: "trigger"
           }
@@ -948,9 +948,9 @@ var dt = function (e) {
             }(this.triggerRef, u.ref)
           }
           var m
-          var g = React.cloneElement(u, h)
+          var g = cloneElement(u, h)
           if (this$state$popupVisible || this.popupRef.current || this$props$forceRender) {
-            m = React.createElement(e, {
+            m = createElement(e, {
               key: "portal",
               getContainer: this.getContainer,
               didUpdate: this.handlePortalUpdate
@@ -959,7 +959,7 @@ var dt = function (e) {
           if (!this$state$popupVisible && this$props$autoDestroy) {
             m = null
           }
-          return React.createElement(at.Provider, {
+          return createElement(at.Provider, {
             value: this.triggerContextValue
           }, g, m)
         }
@@ -979,7 +979,7 @@ var dt = function (e) {
       }
     ])
     return o
-  }(React.Component)
+  }(Component)
   t.contextType = at
   t.defaultProps = {
     prefixCls: "rc-trigger-popup",
@@ -1073,7 +1073,7 @@ function _t(e) {
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$onVisibleChange = e.onVisibleChange
-  var m = React.useContext(j)
+  var m = useContext(j)
   var /* [auto-meaningful-name] */m$getPopupContainer = m.getPopupContainer
   var /* [auto-meaningful-name] */m$rtl = m.rtl
   var /* [auto-meaningful-name] */m$subMenuOpenDelay = m.subMenuOpenDelay
@@ -1083,7 +1083,7 @@ function _t(e) {
   var /* [auto-meaningful-name] */m$forceSubMenuRender = m.forceSubMenuRender
   var /* [auto-meaningful-name] */m$motion = m.motion
   var /* [auto-meaningful-name] */m$defaultMotions = m.defaultMotions
-  var T = React.useState(false)
+  var T = useState(false)
   var S = $$_40_index.a(T, 2)
   var A = S[0]
   var I = S[1]
@@ -1095,8 +1095,8 @@ function _t(e) {
     removeOnLeave: false,
     motionAppear: true
   })
-  var D = React.useRef()
-  React.useEffect(function () {
+  var D = useRef()
+  useEffect(function () {
     D.current = pe(function () {
       I(e$visible)
     })
@@ -1104,7 +1104,7 @@ function _t(e) {
       pe.cancel(D.current)
     }
   }, [e$visible])
-  return React.createElement(dt, {
+  return createElement(dt, {
     prefixCls: e$prefixCls,
     popupClassName: p("".concat(e$prefixCls, "-popup"), $$_35.a({}, "".concat(e$prefixCls, "-rtl"), m$rtl), e$popupClassName),
     stretch: "horizontal" === e$mode ? "minWidth" : null,
@@ -1129,20 +1129,20 @@ function vt(e) {
   var /* [auto-meaningful-name] */e$open = e.open
   var /* [auto-meaningful-name] */e$keyPath = e.keyPath
   var /* [auto-meaningful-name] */e$children = e.children
-  var c = React.useContext(j)
+  var c = useContext(j)
   var /* [auto-meaningful-name] */c$prefixCls = c.prefixCls
   var /* [auto-meaningful-name] */c$forceSubMenuRender = c.forceSubMenuRender
   var /* [auto-meaningful-name] */c$motion = c.motion
   var /* [auto-meaningful-name] */c$defaultMotions = c.defaultMotions
   var /* [auto-meaningful-name] */c$mode = c.mode
-  var m = React.useRef(false)
+  var m = useRef(false)
   m.current = "inline" === c$mode
-  var g = React.useState(!m.current)
+  var g = useState(!m.current)
   var _ = $$_40_index.a(g, 2)
   var v = _[0]
   var b = _[1]
   var y = !!m.current && e$open
-  React.useEffect(function () {
+  useEffect(function () {
     if (m.current) {
       b(false)
     }
@@ -1158,10 +1158,10 @@ function vt(e) {
     }
     return null === E$onVisibleChanged || undefined === E$onVisibleChanged ? undefined : E$onVisibleChanged(e)
   }
-  return v ? null : React.createElement(N, {
+  return v ? null : createElement(N, {
     mode: "inline",
     locked: !m.current
-  }, React.createElement(ze, $$_19.a({
+  }, createElement(ze, $$_19.a({
     visible: y
   }, E, {
     forceRender: c$forceSubMenuRender,
@@ -1170,7 +1170,7 @@ function vt(e) {
   }), function (e) {
     var /* [auto-meaningful-name] */e$className = e.className
     var /* [auto-meaningful-name] */e$style = e.style
-    return React.createElement(re, {
+    return createElement(re, {
       id: t,
       className: e$className,
       style: e$style
@@ -1201,7 +1201,7 @@ var Et = function (e) {
   var /* [auto-meaningful-name] */e$onTitleMouseLeave = e.onTitleMouseLeave
   var A = $$_54.a(e, bt)
   var I = V(e$eventKey)
-  var k = React.useContext(j)
+  var k = useContext(j)
   var /* [auto-meaningful-name] */k$prefixCls = k.prefixCls
   var /* [auto-meaningful-name] */k$mode = k.mode
   var /* [auto-meaningful-name] */k$openKeys = k.openKeys
@@ -1214,21 +1214,21 @@ var Et = function (e) {
   var /* [auto-meaningful-name] */k$onItemClick = k.onItemClick
   var /* [auto-meaningful-name] */k$onOpenChange = k.onOpenChange
   var /* [auto-meaningful-name] */k$onActive = k.onActive
-  var /* [auto-meaningful-name] */React$useContextW$isSubPathKey = React.useContext(W).isSubPathKey
+  var /* [auto-meaningful-name] */useContextW$isSubPathKey = useContext(W).isSubPathKey
   var J = G()
   var ee = "".concat(k$prefixCls, "-submenu")
   var te = k$disabled || e$disabled
-  var ne = React.useRef()
-  var oe = React.useRef()
+  var ne = useRef()
+  var oe = useRef()
   var ie = e$itemIcon || k$itemIcon
   var ae = e$expandIcon || k$expandIcon
   var se = k$openKeys.includes(e$eventKey)
   var ce = !k$overflowDisabled && se
-  var le = React$useContextW$isSubPathKey(k$selectedKeys, e$eventKey)
+  var le = useContextW$isSubPathKey(k$selectedKeys, e$eventKey)
   var ue = R(e$eventKey, te, e$onTitleMouseEnter, e$onTitleMouseLeave)
   var /* [auto-meaningful-name] */ue$active = ue.active
   var pe = $$_54.a(ue, yt)
-  var fe = React.useState(false)
+  var fe = useState(false)
   var he = $$_40_index.a(fe, 2)
   var me = he[0]
   var ge = he[1]
@@ -1237,9 +1237,9 @@ var Et = function (e) {
       ge(e)
     }
   }
-  var ve = React.useMemo(function () {
-    return ue$active || "inline" !== k$mode && (me || React$useContextW$isSubPathKey([k$activeKey], e$eventKey))
-  }, [k$mode, ue$active, k$activeKey, me, e$eventKey, React$useContextW$isSubPathKey])
+  var ve = useMemo(function () {
+    return ue$active || "inline" !== k$mode && (me || useContextW$isSubPathKey([k$activeKey], e$eventKey))
+  }, [k$mode, ue$active, k$activeKey, me, e$eventKey, useContextW$isSubPathKey])
   var be = M(J.length)
   var ye = $(function (e) {
     if (!(null === e$onClick || undefined === e$onClick)) {
@@ -1248,7 +1248,7 @@ var Et = function (e) {
     k$onItemClick(e)
   })
   var Ee = I && "".concat(I, "-popup")
-  var Oe = React.createElement("div", $$_19.a({
+  var Oe = createElement("div", $$_19.a({
     role: "menuitem",
     style: be,
     className: "".concat(ee, "-title"),
@@ -1276,30 +1276,30 @@ var Et = function (e) {
     onFocus: function () {
       k$onActive(e$eventKey)
     }
-  }, pe), e$title, React.createElement(D, {
+  }, pe), e$title, createElement(D, {
     icon: "horizontal" !== k$mode ? ae : null,
     props: $$_21.a($$_21.a({}, e), {}, {
       isOpen: ce,
       isSubMenu: true
     })
-  }, React.createElement("i", {
+  }, createElement("i", {
     className: "".concat(ee, "-arrow")
   })))
-  var we = React.useRef(k$mode)
+  var we = useRef(k$mode)
   if ("inline" !== k$mode) {
     we.current = J.length > 1 ? "vertical" : k$mode
   }
   if (!k$overflowDisabled) {
     var /* [auto-meaningful-name] */we$current = we.current
-    Oe = React.createElement(_t, {
+    Oe = createElement(_t, {
       mode: we$current,
       prefixCls: ee,
       visible: !e$internalPopupClose && ce && "inline" !== k$mode,
       popupClassName: e$popupClassName,
       popupOffset: e$popupOffset,
-      popup: React.createElement(N, {
+      popup: createElement(N, {
         mode: "horizontal" === we$current ? "vertical" : we$current
-      }, React.createElement(re, {
+      }, createElement(re, {
         id: Ee,
         ref: oe
       }, e$children)),
@@ -1311,12 +1311,12 @@ var Et = function (e) {
       }
     }, Oe)
   }
-  return React.createElement(N, {
+  return createElement(N, {
     onItemClick: ye,
     mode: "horizontal" === k$mode ? "vertical" : k$mode,
     itemIcon: ie,
     expandIcon: ae
-  }, React.createElement($_560.a.Item, $$_19.a({
+  }, createElement($_560.a.Item, $$_19.a({
     role: "none"
   }, A, {
     component: "li",
@@ -1340,7 +1340,7 @@ var Et = function (e) {
         })
       }
     }
-  }), Oe, !k$overflowDisabled && React.createElement(vt, {
+  }), Oe, !k$overflowDisabled && createElement(vt, {
     id: Ee,
     open: ce,
     keyPath: J
@@ -1353,7 +1353,7 @@ function Ot(e) {
   var o = G(e$eventKey)
   var i = J(e$children, o)
   var a = B()
-  React.useEffect(function () {
+  useEffect(function () {
     if (a) {
       a.registerPath(e$eventKey, o)
       return function () {
@@ -1361,8 +1361,8 @@ function Ot(e) {
       }
     }
   }, [o])
-  t = a ? i : React.createElement(Et, e, i)
-  return React.createElement(F.Provider, {
+  t = a ? i : createElement(Et, e, i)
+  return createElement(F.Provider, {
     value: o
   }, t)
 }
@@ -1455,13 +1455,13 @@ function Dt(e, t, n) {
   return o[a = (a + o$length) % o$length]
 }
 function Mt(e, t, n, r, i, a, s, c, u, d) {
-  var p = React.useRef()
-  var f = React.useRef()
+  var p = useRef()
+  var f = useRef()
   f.current = t
   var h = function () {
     pe.cancel(p.current)
   }
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       h()
     }
@@ -1622,17 +1622,17 @@ var Ft = function (e) {
   return e.join(__RC_UTIL_PATH_SPLIT__)
 }
 function Gt() {
-  var e = React.useState({})
+  var e = useState({})
   var t = $$_40_index.a(e, 2)[1]
-  var n = React.useRef(new Map())
-  var r = React.useRef(new Map())
-  var o = React.useState([])
+  var n = useRef(new Map())
+  var r = useRef(new Map())
+  var o = useState([])
   var i = $$_40_index.a(o, 2)
   var c = i[0]
   var u = i[1]
-  var d = React.useRef(0)
-  var p = React.useRef(false)
-  var f = React.useCallback(function (e, o) {
+  var d = useRef(0)
+  var p = useRef(false)
+  var f = useCallback(function (e, o) {
     var i = Ft(o)
     r.current.set(i, e)
     n.current.set(e, i)
@@ -1648,15 +1648,15 @@ function Gt() {
     }
     Promise.resolve().then(a)
   }, [])
-  var h = React.useCallback(function (e, t) {
+  var h = useCallback(function (e, t) {
     var o = Ft(t)
     r.current.delete(o)
     n.current.delete(e)
   }, [])
-  var m = React.useCallback(function (e) {
+  var m = useCallback(function (e) {
     u(e)
   }, [])
-  var g = React.useCallback(function (e, t) {
+  var g = useCallback(function (e, t) {
     var r = n.current.get(e) || ""
     var o = r.split(__RC_UTIL_PATH_SPLIT__)
     if (t && c.includes(o[0])) {
@@ -1664,12 +1664,12 @@ function Gt() {
     }
     return o
   }, [c])
-  var _ = React.useCallback(function (e, t) {
+  var _ = useCallback(function (e, t) {
     return e.some(function (e) {
       return g(e, true).includes(t)
     })
   }, [g])
-  var v = React.useCallback(function (e) {
+  var v = useCallback(function (e) {
     var t = "".concat(n.current.get(e)).concat(__RC_UTIL_PATH_SPLIT__)
     var o = new Set()
     $$_79_index.a(r.current.keys()).forEach(function (e) {
@@ -1679,7 +1679,7 @@ function Gt() {
     })
     return o
   }, [])
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       p.current = true
     }
@@ -1710,17 +1710,17 @@ var zt = function (e) {
   e.eventKey
   var /* [auto-meaningful-name] */e$children = e.children
   var i = $$_54.a(e, Ht)
-  var /* [auto-meaningful-name] */React$useContextJ$prefixCls = React.useContext(j).prefixCls
-  var s = "".concat(React$useContextJ$prefixCls, "-item-group")
-  return React.createElement("li", $$_19.a({}, i, {
+  var /* [auto-meaningful-name] */useContextJ$prefixCls = useContext(j).prefixCls
+  var s = "".concat(useContextJ$prefixCls, "-item-group")
+  return createElement("li", $$_19.a({}, i, {
     onClick: function (e) {
       return e.stopPropagation()
     },
     className: p(s, e$className)
-  }), React.createElement("div", {
+  }), createElement("div", {
     className: "".concat(s, "-title"),
     title: "string" === typeof e$title ? e$title : undefined
-  }, e$title), React.createElement("ul", {
+  }, e$title), createElement("ul", {
     className: "".concat(s, "-list")
   }, e$children))
 }
@@ -1728,14 +1728,14 @@ function Yt(e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var n = $$_54.a(e, Vt)
   var r = J(e$children, G(n.eventKey))
-  return B() ? r : React.createElement(zt, A(n, ["warnKey"]), r)
+  return B() ? r : createElement(zt, A(n, ["warnKey"]), r)
 }
 function Kt(e) {
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$style = e.style
-  var /* [auto-meaningful-name] */React$useContextJ$prefixCls = React.useContext(j).prefixCls
-  return B() ? null : React.createElement("li", {
-    className: p("".concat(React$useContextJ$prefixCls, "-item-divider"), e$className),
+  var /* [auto-meaningful-name] */useContextJ$prefixCls = useContext(j).prefixCls
+  return B() ? null : createElement("li", {
+    className: p("".concat(useContextJ$prefixCls, "-item-divider"), e$className),
     style: e$style
   })
 }
@@ -1794,11 +1794,11 @@ var Xt = function (e) {
   e.openTransitionName
   var me = $$_54.a(e, Wt)
   var ge = J(e$children, Ut)
-  var _e = React.useState(false)
+  var _e = useState(false)
   var ve = $$_40_index.a(_e, 2)
   var be = ve[0]
   var ye = ve[1]
-  var Ee = React.useRef()
+  var Ee = useRef()
   var Oe = function (e) {
     var t = m(e, {
       value: e
@@ -1806,7 +1806,7 @@ var Xt = function (e) {
     var n = $$_40_index.a(t, 2)
     var r = n[0]
     var o = n[1]
-    React.useEffect(function () {
+    useEffect(function () {
       Pt += 1
       var e = "".concat(Lt, "-").concat(Pt)
       o("rc-menu-uuid-".concat(e))
@@ -1814,13 +1814,13 @@ var Xt = function (e) {
     return r
   }(O)
   var we = "rtl" === e$direction
-  var Ce = React.useMemo(function () {
+  var Ce = useMemo(function () {
     return "inline" !== C && "vertical" !== C || !e$inlineCollapsed ? [C, false] : ["vertical", e$inlineCollapsed]
   }, [C, e$inlineCollapsed])
   var Te = $$_40_index.a(Ce, 2)
   var Se = Te[0]
   var Ae = Te[1]
-  var Ie = React.useState(0)
+  var Ie = useState(0)
   var je = $$_40_index.a(Ie, 2)
   var Ne = je[0]
   var Re = je[1]
@@ -1840,18 +1840,18 @@ var Xt = function (e) {
       e$onOpenChange(e)
     }
   }
-  var Be = React.useState(Me)
+  var Be = useState(Me)
   var Fe = $$_40_index.a(Be, 2)
   var Ge = Fe[0]
   var We = Fe[1]
   var Ue = "inline" === Se
-  var He = React.useRef(false)
-  React.useEffect(function () {
+  var He = useRef(false)
+  useEffect(function () {
     if (Ue) {
       We(Me)
     }
   }, [Me])
-  React.useEffect(function () {
+  useEffect(function () {
     if (He.current) {
       if (Ue) {
         Le(Ge)
@@ -1870,18 +1870,18 @@ var Xt = function (e) {
   var /* [auto-meaningful-name] */Ve$getKeyPath = Ve.getKeyPath
   var /* [auto-meaningful-name] */Ve$getKeys = Ve.getKeys
   var /* [auto-meaningful-name] */Ve$getSubPathKeys = Ve.getSubPathKeys
-  var Je = React.useMemo(function () {
+  var Je = useMemo(function () {
     return {
       registerPath: Ve$registerPath,
       unregisterPath: Ve$unregisterPath
     }
   }, [Ve$registerPath, Ve$unregisterPath])
-  var $e = React.useMemo(function () {
+  var $e = useMemo(function () {
     return {
       isSubPathKey: Ve$isSubPathKey
     }
   }, [Ve$isSubPathKey])
-  React.useEffect(function () {
+  useEffect(function () {
     Ve$refreshOverflowKeys(ke ? Ut : ge.slice(Ne + 1).map(function (e) {
       return e.key
     }))
@@ -1959,16 +1959,16 @@ var Xt = function (e) {
     var n = null !== t && undefined !== t ? t : !Me.includes(e)
     dt(e, n)
   }, e$onKeyDown)
-  React.useEffect(function () {
+  useEffect(function () {
     ye(true)
   }, [])
   var ht = "horizontal" !== Se || e$disabledOverflow ? ge : ge.map(function (e, t) {
-    return React.createElement(N, {
+    return createElement(N, {
       key: e.key,
       overflowDisabled: t > Ne
     }, e)
   })
-  var mt = React.createElement($_560.a, $$_19.a({
+  var mt = createElement($_560.a, $$_19.a({
     id: O,
     ref: Ee,
     prefixCls: "".concat(d, "-overflow"),
@@ -1986,7 +1986,7 @@ var Xt = function (e) {
     renderRawRest: function (e) {
       var /* [auto-meaningful-name] */e$length = e.length
       var n = e$length ? ge.slice(-e$length) : null
-      return React.createElement(Ot, {
+      return createElement(Ot, {
         eventKey: "rc-menu-more",
         title: le,
         disabled: ke,
@@ -2002,9 +2002,9 @@ var Xt = function (e) {
     },
     onKeyDown: ft
   }, me))
-  return React.createElement(U.Provider, {
+  return createElement(U.Provider, {
     value: Oe
-  }, React.createElement(N, {
+  }, createElement(N, {
     prefixCls: d,
     mode: Se,
     openKeys: Me,
@@ -2027,14 +2027,14 @@ var Xt = function (e) {
     expandIcon: e$expandIcon,
     onItemClick: ut,
     onOpenChange: dt
-  }, React.createElement(W.Provider, {
+  }, createElement(W.Provider, {
     value: $e
-  }, mt), React.createElement("div", {
+  }, mt), createElement("div", {
     style: {
       display: "none"
     },
     "aria-hidden": true
-  }, React.createElement(P.Provider, {
+  }, createElement(P.Provider, {
     value: Je
   }, ge))))
 }

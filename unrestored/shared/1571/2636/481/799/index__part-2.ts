@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$_220_index from "./220/index"
 import * as /* [auto-meaningful-name] */$_365 from "./365"
 import * as /* [auto-meaningful-name] */$_264 from "./264"
-import * as /* [auto-meaningful-name] */$$_1212_38 from "../1212/38"
+import * as i from "./38"
 import * as /* [auto-meaningful-name] */$_524 from "./524"
 import * as /* [auto-meaningful-name] */$_939 from "./939"
 import * as /* [auto-meaningful-name] */$_1194 from "./1194"
@@ -518,11 +518,11 @@ function x(e) {
 }
 function C(e, t) {
   var /* [auto-meaningful-name] */t$startTimestamp = t.startTimestamp
-  var r = $$_1212_38.e(t, ["startTimestamp"])
+  var r = i.e(t, ["startTimestamp"])
   if (t$startTimestamp && e.startTimestamp > t$startTimestamp) {
     e.startTimestamp = t$startTimestamp
   }
-  return e.startChild($$_1212_38.a({
+  return e.startChild(i.a({
     startTimestamp: t$startTimestamp
   }, r))
 }

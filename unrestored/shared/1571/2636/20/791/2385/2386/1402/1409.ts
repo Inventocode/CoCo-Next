@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../../../../../207/787/500")
-var i = require("../1410/311/index")
+var i = require("./311/index")
 var /* [auto-meaningful-name] */i$ObjectSetPrototypeOf = i.ObjectSetPrototypeOf
 var /* [auto-meaningful-name] */i$Symbol = i.Symbol
 module.exports = f

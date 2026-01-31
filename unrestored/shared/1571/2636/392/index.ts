@@ -7,11 +7,12 @@
 "use strict"
 
 export { COURSE_ICON_NAME as a }
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import { useDispatch } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_627_index from "../627/index"
-import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
+import * as /* [auto-meaningful-name] */$$_710 from "../710"
 import * as /* [auto-meaningful-name] */$$_748_index from "../748/index"
 import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
@@ -19,12 +20,12 @@ import * as /* [auto-meaningful-name] */$_516 from "./516"
 import /* [auto-meaningful-name] */$_5161 from "./516"
 var /* [auto-meaningful-name] */COURSE_ICON_NAME = "COURSE_ICON_NAME"
 var _b
-_b = React.memo(function () {
-  var e = $$_16_index.d()
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
+_b = memo(function () {
+  var e = useDispatch()
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
   return React1.createElement($$_748_index.a, {
     placement: "left",
-    title: $$_710_index$a$formatMessage({
+    title: $$_710$a$formatMessage({
       id: "studyCourseVideo"
     }),
     trigger: ["hover"]

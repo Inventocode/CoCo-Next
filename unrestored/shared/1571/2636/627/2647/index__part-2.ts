@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_2646_index from "../../2646/index"
 import * as /* [auto-meaningful-name] */$_3308_index from "./3308/index"
 import /* [auto-meaningful-name] */$$_$$_1220_index from "../../1220/index"
 import * as /* [auto-meaningful-name] */$$_$$_1221 from "../../1221"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement, Component } from "react"
 import /* [auto-meaningful-name] */$$_$$_2646_1219_index from "../../2646/1219/index"
 import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"
 import * as /* [auto-meaningful-name] */$$_$$_362 from "../../362"
@@ -382,7 +382,7 @@ var M = function (e) {
         var /* [auto-meaningful-name] */this$props$reportMiniClick = this$props.reportMiniClick
         var /* [auto-meaningful-name] */this$props$reportCloseClick = this$props.reportCloseClick
         var /* [auto-meaningful-name] */this$props$reportReplayClick = this$props.reportReplayClick
-        return React.createElement("div", {
+        return createElement("div", {
           className: "CUI-kitten-video-player-video_container",
           style: {
             zIndex: null != this.props.zIndex ? this.props.zIndex : 1
@@ -390,14 +390,14 @@ var M = function (e) {
           ref: function (t) {
             return t && (e.videoContainerElem = t)
           }
-        }, React.createElement($$_$$_1220_index, {
+        }, createElement($$_$$_1220_index, {
           allowAnyClick: true,
           defaultClassName: "CUI-kitten-video-player-draggable",
           handle: ".CUI-kitten-video-handler",
           bounds: "#".concat(CUIKittenVideoPlayerBound),
           position: this.state.videoPosition,
           onDrag: this.setDraggablePosition.bind(this)
-        }, React.createElement($$_$$_1221.a, {
+        }, createElement($$_$$_1221.a, {
           className: "box",
           defaultSize: {
             width: this.state.width,
@@ -411,26 +411,26 @@ var M = function (e) {
           minWidth: (S() - 40) * (16 / 9),
           maxHeight: this.state.boundHeight,
           maxWidth: this.state.boundWidth
-        }, React.createElement("div", {
+        }, createElement("div", {
           className: "CUI-kitten-video-player-video_wrap",
           style: {
             width: "100%"
           }
-        }, React.createElement("div", {
+        }, createElement("div", {
           className: "CUI-kitten-video-handler CUI-kitten-video-player-video_header"
-        }, React.createElement("div", {
+        }, createElement("div", {
           className: "CUI-kitten-video-player-title"
-        }, this.props.title), React.createElement("div", {
+        }, this.props.title), createElement("div", {
           className: "CUI-kitten-video-player-mini_btn",
           onClick: this.handleMiniPlayer,
           onTouchStart: this.handleMiniPlayer,
           "data-report-click": this$props$reportMiniClick
-        }), React.createElement("div", {
+        }), createElement("div", {
           className: "CUI-kitten-video-player-close_btn",
           onClick: this.handleClosePlayer,
           onTouchStart: this.handleClosePlayer,
           "data-report-click": this$props$reportCloseClick
-        })), React.createElement($_3308_index.Player, {
+        })), createElement($_3308_index.Player, {
           playsInline: true,
           src: this.props.videoSrc,
           ref: function (t) {
@@ -439,44 +439,44 @@ var M = function (e) {
             }
           },
           autoPlay: this.props.autoPlay
-        }, React.createElement($_3308_index.ControlBar, {
+        }, createElement($_3308_index.ControlBar, {
           autoHide: this.state.autoHide
-        }, React.createElement($_3308_index.ProgressControl, {
+        }, createElement($_3308_index.ProgressControl, {
           order: 3
-        }), React.createElement($_3308_index.CurrentTimeDisplay, {
+        }), createElement($_3308_index.CurrentTimeDisplay, {
           order: 4
-        }), React.createElement($_3308_index.TimeDivider, {
+        }), createElement($_3308_index.TimeDivider, {
           order: 4.1
-        }), React.createElement($_3308_index.DurationDisplay, {
+        }), createElement($_3308_index.DurationDisplay, {
           order: 4.2
-        }), React.createElement($_3308_index.VolumeMenuButton, {
+        }), createElement($_3308_index.VolumeMenuButton, {
           order: 7
-        })), this.state.showEndedMask ? React.createElement("div", {
+        })), this.state.showEndedMask ? createElement("div", {
           className: "CUI-video-finish-mask"
-        }, React.createElement("div", {
+        }, createElement("div", {
           className: "CUI-video-finish-mask-title"
-        }, "恭喜你看完了本节课程"), React.createElement("div", {
+        }, "恭喜你看完了本节课程"), createElement("div", {
           className: "CUI-video-finish-mask-text"
-        }, "快去创作属于自己的作品吧！"), React.createElement("div", {
+        }, "快去创作属于自己的作品吧！"), createElement("div", {
           className: "CUI-video-finish-mask-text"
-        }, "点击网页右上角的【保存】按钮，储存云端不丢失哦！"), React.createElement("div", {
+        }, "点击网页右上角的【保存】按钮，储存云端不丢失哦！"), createElement("div", {
           className: "CUI-finish-mask-btn CUI-replay-icon",
           onClick: this.onReplayClick,
           "data-report-click": this$props$reportReplayClick
-        }, React.createElement("span", null, "再看一遍"))) : this.state.closingConfirm ? React.createElement("div", {
+        }, createElement("span", null, "再看一遍"))) : this.state.closingConfirm ? createElement("div", {
           className: "CUI-kitten-video-player-video-react-pause-mask CUI-kitten-video-player-paused CUI-kitten-video-player-closing"
-        }, React.createElement("img", {
+        }, createElement("img", {
           className: "CUI-kitten-video-player-end-mask-img",
           src: require("./3322")
-        }), React.createElement("div", {
+        }), createElement("div", {
           className: "CUI-kitten-video-player-end-mask-title"
-        }, "真的不再坚持一下么？"), React.createElement("div", {
+        }, "真的不再坚持一下么？"), createElement("div", {
           className: "CUI-kitten-video-player-end-mask-text"
-        }, "还剩下", this.getRemainPercent(), "%就完成了"), React.createElement("div", null, " ", React.createElement($$_$$_2646_index.a, {
+        }, "还剩下", this.getRemainPercent(), "%就完成了"), createElement("div", null, " ", createElement($$_$$_2646_index.a, {
           type: "secondary",
           margin: "0 18px 0 0",
           onClick: this.closeSelf
-        }, "坚持退出"), React.createElement($$_$$_2646_index.a, {
+        }, "坚持退出"), createElement($$_$$_2646_index.a, {
           type: "primary",
           onClick: function () {
             var /* [auto-meaningful-name] */e$player
@@ -490,13 +490,13 @@ var M = function (e) {
               e$player.play()
             }
           }
-        }, "继续学习"))) : React.createElement("div", {
+        }, "继续学习"))) : createElement("div", {
           onClick: this.clickMask.bind(this),
           className: $$_$$_2646_1219_index("video-react-pause-mask ".concat(this.state.paused ? "paused" : "playing"), P, {
             autoResolveMultipleImports: true,
             handleMissingStyleName: "throw"
           })
-        }, React.createElement("div", {
+        }, createElement("div", {
           className: $$_$$_2646_1219_index("mask-icon", P, {
             autoResolveMultipleImports: true,
             handleMissingStyleName: "throw"
@@ -506,5 +506,5 @@ var M = function (e) {
     }
   ])
   return a
-}(React.Component)
+}(Component)
 export { M }

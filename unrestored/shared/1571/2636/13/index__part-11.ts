@@ -6,12 +6,12 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from "react"
+import { createContext } from "react"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
 import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
 import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
-var pe = React.createContext({
+var pe = createContext({
   draggedItemIndex: -1
 })
 var /* [auto-meaningful-name] */pe$Consumer = pe.Consumer

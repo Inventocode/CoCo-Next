@@ -10,7 +10,7 @@ import { z } from "./index__part-2"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import * as /* [auto-meaningful-name] */$$_$$_47 from "../../47"
+import * as /* [auto-meaningful-name] */$$_$$_47_index from "../../47/index"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
 import * as /* [auto-meaningful-name] */$$_$$_91 from "../../91"
@@ -280,7 +280,7 @@ function ge(e, t) {
 }
 function _e(e, t) {
   var n
-  var r = $$_$$_47.a(t)
+  var r = $$_$$_47_index.a(t)
   try {
     for (r.s(); !(n = r.n()).done;) {
       var o = ne(e, n.value)

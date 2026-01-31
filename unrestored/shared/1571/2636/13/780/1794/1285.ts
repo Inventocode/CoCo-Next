@@ -25,4 +25,4 @@ exports.default = function (e, t, n, r) {
     }
   }
 }
-var i = r(require("../../../80/index"))
+var i = r(require("react-dom"))

@@ -4,7 +4,7 @@
  * 模块 ID：1747
  */
 
-require("./1746/578")("Uint8", function (e) {
+require("./1748/578/index")("Uint8", function (e) {
   return function (t, n, r) {
     return e(this, t, n, r)
   }

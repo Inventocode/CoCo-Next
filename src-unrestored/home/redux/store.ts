@@ -23,7 +23,7 @@ import * as __WEBPACK_IMPORTED_MODULE_4__routes_Home_model_reducer__ from "../ui
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__routes_Work_model_reducer__ from "../ui/routes/Work/model/reducer"
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_6__main_reducer__ from "./reducer"
+import * as __WEBPACK_IMPORTED_MODULE_6__main_reducer__ from "./main/reducer"
 var _createClass = function () {
   function defineProperties(target, props) {
     for (var i = 0; i < props.length; i++) {

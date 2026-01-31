@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$$_524 from "../524"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
 import * as /* [auto-meaningful-name] */$$_939 from "../939"
 import * as /* [auto-meaningful-name] */$$_365 from "../365"
-import * as /* [auto-meaningful-name] */$$_$$_1212_38 from "../../1212/38"
+import * as /* [auto-meaningful-name] */$$_38 from "../38"
 import * as /* [auto-meaningful-name] */$$_439_index from "../439/index"
 var A = function () {
   function e(e) {
@@ -189,7 +189,7 @@ var g = function () {
         syntheticException: i
       }
     }
-    this._invokeClient("captureException", e, $$_$$_1212_38.a($$_$$_1212_38.a({}, r), {
+    this._invokeClient("captureException", e, $$_38.a($$_38.a({}, r), {
       event_id: n
     }))
     return n
@@ -209,14 +209,14 @@ var g = function () {
         syntheticException: a
       }
     }
-    this._invokeClient("captureMessage", e, t, $$_$$_1212_38.a($$_$$_1212_38.a({}, i), {
+    this._invokeClient("captureMessage", e, t, $$_38.a($$_38.a({}, i), {
       event_id: r
     }))
     return r
   }
   e.prototype.captureEvent = function (e, t) {
     var n = this._lastEventId = $$_365.c()
-    this._invokeClient("captureEvent", e, $$_$$_1212_38.a($$_$$_1212_38.a({}, t), {
+    this._invokeClient("captureEvent", e, $$_38.a($$_38.a({}, t), {
       event_id: n
     }))
     return n
@@ -236,7 +236,7 @@ var g = function () {
       var d = undefined === a$maxBreadcrumbs ? 100 : a$maxBreadcrumbs
       if (!(d <= 0)) {
         var h = $$_939.b()
-        var p = $$_$$_1212_38.a({
+        var p = $$_38.a({
           timestamp: h
         }, e)
         var _ = l ? $$_365.a(function () {
@@ -352,7 +352,7 @@ var g = function () {
     var /* [auto-meaningful-name] */a$release = a.release
     var /* [auto-meaningful-name] */a$environment = a.environment
     var /* [auto-meaningful-name] */$$_365$b$navigator$userAgent = ($$_365.b().navigator || {}).userAgent
-    var f = new A($$_$$_1212_38.a($$_$$_1212_38.a($$_$$_1212_38.a({
+    var f = new A($$_38.a($$_38.a($$_38.a({
       release: a$release,
       environment: a$environment
     }, t$scope && {
@@ -391,7 +391,7 @@ var g = function () {
     var /* [auto-meaningful-name] */i$scope = i.scope
     var /* [auto-meaningful-name] */i$client = i.client
     if (i$client && i$client[e]) {
-      (t = i$client)[e].apply(t, $$_$$_1212_38.f(n, [i$scope]))
+      (t = i$client)[e].apply(t, $$_38.f(n, [i$scope]))
     }
   }
   e.prototype._callExtensionMethod = function (e) {

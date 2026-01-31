@@ -7,7 +7,7 @@
 "use strict"
 
 import { m } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$_744_index from "./744/index"
+import * as /* [auto-meaningful-name] */$_744 from "./744"
 import * as /* [auto-meaningful-name] */$_119 from "./119"
 import * as c from "./65"
 import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
@@ -366,7 +366,7 @@ var M = function () {
     var /* [auto-meaningful-name] */p$return
     var a = this.actors_cache.get(e)
     var s = function (e) {
-      return !t || $_744_index.a(e.get_id(), t)
+      return !t || $_744.a(e.get_id(), t)
     }
     if (a) {
       return !t || s(a.get_parent_scene()) ? a : undefined
@@ -504,7 +504,7 @@ var M = function () {
     try {
       for (var i = N(r), o = i.next(); !o.done; o = i.next()) {
         var /* [auto-meaningful-name] */o$value = o.value
-        if ($_744_index.a(e, o$value.texture_ids)) {
+        if ($_744.a(e, o$value.texture_ids)) {
           return true
         }
       }

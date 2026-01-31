@@ -7,9 +7,10 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_754 from "./754"
 import /* [auto-meaningful-name] */$_7541 from "./754"
@@ -17,9 +18,9 @@ import * as /* [auto-meaningful-name] */$_1530 from "./1530"
 import /* [auto-meaningful-name] */$_15301 from "./1530"
 import * as /* [auto-meaningful-name] */$_1531 from "./1531"
 import /* [auto-meaningful-name] */$_15311 from "./1531"
-var bL = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = React1.useState(!function () {
+var bL = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useState(!function () {
     var e = navigator.userAgent.toLowerCase()
     return e.includes("chrome") && !e.includes("qqbrowser") && !e.includes("opr") && !e.includes("se") && !e.includes("metasr") && /Google Inc/.test(navigator.vendor)
   }())
@@ -36,7 +37,7 @@ var bL = React1.memo(function () {
     alt: "codemao"
   }), React.createElement("span", {
     className: $_7541.compatibility
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ChromeTips.compatibility"
   })), React.createElement("img", {
     src: $_15311,
@@ -47,7 +48,7 @@ var bL = React1.memo(function () {
     target: "_blank",
     rel: "noopener noreferrer",
     className: "coco-button coco-button-primary"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ChromeTips.download"
   })), React.createElement("span", {
     className: $_7541.close,

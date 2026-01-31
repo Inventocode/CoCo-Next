@@ -7,6 +7,7 @@
 "use strict"
 
 import * as r from "../6"
+import { useState, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
@@ -15,7 +16,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_
 import * as /* [auto-meaningful-name] */$$_15 from "../15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import "./859"
 import * as h from "../9"
@@ -25,16 +26,16 @@ var _ = function (e) {
   var /* [auto-meaningful-name] */e$render = e.render
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$widgetType = e.widgetType
-  var a = React.useState()
+  var a = useState()
   var s = $$_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var _ = $$_16_index.d()
-  var v = $$_16_index.e(function (e) {
+  var _ = useDispatch()
+  var v = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
   var b = v === e$widgetId
-  var y = React.useCallback(function (e, t, r, o) {
+  var y = useCallback(function (e, t, r, o) {
     _($$_$$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, e, t, r, o))
   }, [_, e$widgetId])
   var /* [auto-meaningful-name] */CocoWidgetWrapper = "coco-widget-wrapper"

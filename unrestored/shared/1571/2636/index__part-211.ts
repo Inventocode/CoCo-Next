@@ -10,10 +10,11 @@ var tP
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_385 from "./385"
 import /* [auto-meaningful-name] */$_3851 from "./385"
@@ -31,21 +32,21 @@ import /* [auto-meaningful-name] */$_15371 from "./1537"
   e[e.STEP2 = 2] = "STEP2"
   e[e.STEP3 = 3] = "STEP3"
 }(tP || (tP = {}))
-var _P = React1.memo(function () {
-  var e = React1.useState(tP.STEP0)
+var _P = memo(function () {
+  var e = useState(tP.STEP0)
   var t = $_10_index.a(e, 2)
   var n = t[0]
   var r = t[1]
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.common.cloudDBPublishDialogInfo
   })
   var /* [auto-meaningful-name] */o$visible = o.visible
   var /* [auto-meaningful-name] */o$type = o.type
   var /* [auto-meaningful-name] */o$callback = o.callback
   var c = "share" === o$type ? "分享" : "打包"
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var u = $_16_index.d()
-  React1.useEffect(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var u = useDispatch()
+  useEffect(function () {
     if (o$visible) {
       localStorage.setItem("cloudDBPublishGuide", "true")
     }
@@ -68,7 +69,7 @@ var _P = React1.memo(function () {
       }
       d()
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cloudDBPublishDialog.jump"
   })), React.createElement("div", {
     className: $_3851.imgArea
@@ -154,12 +155,12 @@ var _P = React1.memo(function () {
   }, function () {
     switch (n) {
       case tP.STEP0:
-        return React.createElement("span", null, $_710_index$a$formatMessage({
+        return React.createElement("span", null, $_710$a$formatMessage({
           id: "cloudDBPublishDialog.know"
         }))
       case tP.STEP1:
       case tP.STEP2:
-        return React.createElement("span", null, $_710_index$a$formatMessage({
+        return React.createElement("span", null, $_710$a$formatMessage({
           id: "cloudDBPublishDialog.then"
         }))
       case tP.STEP3:

@@ -46,13 +46,14 @@ import * as /* [auto-meaningful-name] */$_188 from "./188"
 import * as /* [auto-meaningful-name] */$_2681_index from "./2681/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_816 from "./816"
 import /* [auto-meaningful-name] */$_8161 from "./816"
-var cB = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var cB = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.permissionDialogInfo
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -65,7 +66,7 @@ var cB = React1.memo(function () {
   var c = undefined === e$denyText ? "拒绝" : e$denyText
   var /* [auto-meaningful-name] */e$allowText = e.allowText
   var u = undefined === e$allowText ? "同意" : e$allowText
-  var d = $_16_index.d()
+  var d = useDispatch()
   var /* [auto-meaningful-name] */Https__static$bcmcdn$com_coco_image_permission_camera$png = "https://static.bcmcdn.com/coco/image/permission_camera.png"
   var f = "需要开启相机权限才能进行拍照或摄像哦"
   switch (e$type) {
@@ -121,8 +122,8 @@ function uB(e) {
   e.preventDefault()
 }
 function dB() {
-  var e = $_16_index.d()
-  var t = $_16_index.e(function (e) {
+  var e = useDispatch()
+  var t = useSelector(function (e) {
     return e.project.id
   })
   var n = Z.a(t)
@@ -165,13 +166,13 @@ function dB() {
   }))
 }
 var pB = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.common.language
   })
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.project.styleDialog.visible
   })
-  var n = $_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.uiConfig.header
   })
   var r = undefined !== te.N(window.location.href).archiveId

@@ -4,8 +4,8 @@
  * 模块 ID：1669
  */
 
-var r = require("./1706/86/index")
-var o = require("./1705/168")
+var r = require("./1661/86/index")
+var o = require("./1659/168")
 var /* [auto-meaningful-name] */require$_1581_1083$f = require("./1581/1083").f
 r({
   target: "Object",

@@ -16,28 +16,29 @@ import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch, batch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_249 from "./249"
 import /* [auto-meaningful-name] */$_2491 from "./249"
-var MP = React1.memo(function (e) {
+var MP = memo(function (e) {
   var /* [auto-meaningful-name] */e$onUploadFileChange = e.onUploadFileChange
   var /* [auto-meaningful-name] */e$onResourceLibraryClick = e.onResourceLibraryClick
   var /* [auto-meaningful-name] */e$fileId = e.fileId
   var /* [auto-meaningful-name] */e$type = e.type
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = React1.useState(false)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var a = useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState("")
+  var u = useState("")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(e$fileId)) {
       e = e$fileId
@@ -91,7 +92,7 @@ var MP = React1.memo(function (e) {
       type: "icon-upload"
     }), React.createElement("span", {
       className: $_2491.contentTitle
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "Resource.upload"
     }))), React.createElement("div", {
       className: $_2491.content,
@@ -100,7 +101,7 @@ var MP = React1.memo(function (e) {
       type: "icon-open-resource-library"
     }), React.createElement("span", {
       className: $_2491.contentTitle
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "Resource.ImageLibrary"
     })))),
     placement: "bottomLeft",
@@ -111,12 +112,12 @@ var MP = React1.memo(function (e) {
     }
   }, React.createElement("div", {
     className: $_2491.replaceBtn
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.Replace"
   })))))
 })
-var LP = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var LP = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.sliderImageDialogInfo
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -129,61 +130,61 @@ var LP = React1.memo(function () {
   var /* [auto-meaningful-name] */e$backgroundImageDirection = e.backgroundImageDirection
   var /* [auto-meaningful-name] */e$trackImageFileId = e.trackImageFileId
   var /* [auto-meaningful-name] */e$trackImageDirection = e.trackImageDirection
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var p = $_16_index.d()
-  var m = React1.useState("")
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var p = useDispatch()
+  var m = useState("")
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState(e$handleImageRatio)
+  var y = useState(e$handleImageRatio)
   var E = $_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
-  var C = React1.useState(e$handleImageDirection)
+  var C = useState(e$handleImageDirection)
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = React1.useState("")
+  var R = useState("")
   var k = $_10_index.a(R, 2)
   var x = k[0]
   var D = k[1]
-  var M = React1.useState(e$backgroundImageDirection)
+  var M = useState(e$backgroundImageDirection)
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React1.useState("")
+  var F = useState("")
   var G = $_10_index.a(F, 2)
   var W = G[0]
   var U = G[1]
-  var H = React1.useState(e$trackImageDirection)
+  var H = useState(e$trackImageDirection)
   var V = $_10_index.a(H, 2)
   var K = V[0]
   var q = V[1]
-  var X = React1.useState(true)
+  var X = useState(true)
   var Q = $_10_index.a(X, 2)
   var Z = Q[0]
   var J = Q[1]
-  var $ = React1.useState("")
+  var $ = useState("")
   var ee = $_10_index.a($, 2)
   var ne = ee[0]
   var re = ee[1]
-  var oe = React1.useState("")
+  var oe = useState("")
   var ie = $_10_index.a(oe, 2)
   var ae = ie[0]
   var se = ie[1]
-  var ce = React1.useState("")
+  var ce = useState("")
   var le = $_10_index.a(ce, 2)
   var ue = le[0]
   var de = le[1]
-  var pe = React1.useState("")
+  var pe = useState("")
   var fe = $_10_index.a(pe, 2)
   var he = fe[0]
   var me = fe[1]
-  var ge = React1.useState("")
+  var ge = useState("")
   var _e = $_10_index.a(ge, 2)
   var ve = _e[0]
   var be = _e[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(v)) {
       e = v
@@ -193,7 +194,7 @@ var LP = React1.memo(function () {
     }
     de(e || $_149.c)
   }, [v])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(x)) {
       e = x
@@ -208,7 +209,7 @@ var LP = React1.memo(function () {
       return se("")
     })
   }, [x, e$backgroundImageDirection])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(W)) {
       e = W
@@ -223,21 +224,21 @@ var LP = React1.memo(function () {
       return re("")
     })
   }, [K, W])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       w(e$handleImageRatio)
       B(e$backgroundImageDirection)
       q(e$trackImageDirection)
     }
   }, [e$backgroundImageDirection, e$handleImageRatio, e$trackImageDirection, e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$direction === Gf.b.HORIZONTAL) {
       J(true)
     } else {
       J(false)
     }
   }, [e$direction])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       b(e$handleImageFileId)
       U(e$trackImageFileId)
@@ -276,7 +277,7 @@ var LP = React1.memo(function () {
   return React.createElement($_13_index.f, {
     visible: e$visible,
     className: $_2491.sliderImageDialog,
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "slider.custom"
     }),
     onClose: function () {
@@ -287,7 +288,7 @@ var LP = React1.memo(function () {
     footer: React.createElement($_13_index.d, {
       type: "primary",
       onClick: function () {
-        $_16_index.b(function () {
+        batch(function () {
           p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "handleImageFileId", v))
           p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "handleImageRatio", O))
           p($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "handleImageDirection", A))
@@ -300,7 +301,7 @@ var LP = React1.memo(function () {
           }))
         })
       }
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "confirm"
     }))
   }, React.createElement("div", {
@@ -309,7 +310,7 @@ var LP = React1.memo(function () {
     className: $_2491.sliderPreview
   }, React.createElement("span", {
     className: $_2491.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "slider.preview"
   })), React.createElement("div", {
     className: $_2491.previewBox
@@ -344,7 +345,7 @@ var LP = React1.memo(function () {
     className: $_2491.imageInfo
   }, React.createElement("span", {
     className: $_2491.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "slider.replaceImage"
   })), React.createElement("div", {
     className: $_2491.imageList
@@ -355,7 +356,7 @@ var LP = React1.memo(function () {
     onResourceLibraryClick: Oe,
     fileId: x,
     type: Gf.a.BACKGROUND
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "slider.backgroundImage"
   }))), React.createElement("div", {
     className: $_2491.imageItem
@@ -364,7 +365,7 @@ var LP = React1.memo(function () {
     onResourceLibraryClick: Oe,
     fileId: W,
     type: Gf.a.TRACK
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "slider.trackImage"
   }))), React.createElement("div", {
     className: $_2491.imageItem
@@ -373,11 +374,11 @@ var LP = React1.memo(function () {
     onResourceLibraryClick: Oe,
     fileId: v,
     type: Gf.a.HANDLE
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "slider.handleImage"
   })))), React.createElement("span", {
     className: $_2491.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "slider.handleSize"
   })), React.createElement("div", {
     className: $_2491.handleSize
@@ -392,9 +393,9 @@ var LP = React1.memo(function () {
     inputAfter: "%"
   }), React.createElement("div", {
     className: $_2491.sizeLabel
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "smallSize"
-  })), React.createElement("span", null, $_710_index$a$formatMessage({
+  })), React.createElement("span", null, $_710$a$formatMessage({
     id: "largeSize"
   })))))))
 })

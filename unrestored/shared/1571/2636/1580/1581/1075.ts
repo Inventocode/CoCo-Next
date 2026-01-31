@@ -4,8 +4,8 @@
  * 模块 ID：1075
  */
 
-var r = require("../1686/633/index")
-var o = require("../1705/168")
+var r = require("../1774/633")
+var o = require("../1659/168")
 module.exports = !!Object.getOwnPropertySymbols && !o(function () {
   var e = Symbol()
   return !String(e) || !(Object(e) instanceof Symbol) || !Symbol.sham && r && r < 41

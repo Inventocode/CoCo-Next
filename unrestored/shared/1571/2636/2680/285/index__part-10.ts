@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$$_$$_801_index from "../../801/index"
 import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
 import * as /* [auto-meaningful-name] */$$_$$_21 from "../../21"
 import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement, forwardRef, useRef } from "react"
 import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
 import * as /* [auto-meaningful-name] */$$_$$_1044 from "../../1044"
 var mt = {
@@ -40,14 +40,14 @@ var mt = {
   theme: "filled"
 }
 var yt = function (e, t) {
-  return React.createElement($$_$$_224_index.a, $$_$$_21.a($$_$$_21.a({}, e), {}, {
+  return createElement($$_$$_224_index.a, $$_$$_21.a($$_$$_21.a({}, e), {}, {
     ref: t,
     icon: mt
   }))
 }
 yt.displayName = "CheckCircleFilled"
 var bt
-var wt = React.forwardRef(yt)
+var wt = forwardRef(yt)
 var Et = {
   icon: {
     tag: "svg",
@@ -68,7 +68,7 @@ var Et = {
   theme: "filled"
 }
 var xt = function (e, t) {
-  return React.createElement($$_$$_224_index.a, $$_$$_21.a($$_$$_21.a({}, e), {}, {
+  return createElement($$_$$_224_index.a, $$_$$_21.a($$_$$_21.a({}, e), {}, {
     ref: t,
     icon: Et
   }))
@@ -134,7 +134,7 @@ function Pt(e, t) {
   }
 }
 var Nt = {
-  info: React.forwardRef(xt),
+  info: forwardRef(xt),
   success: wt,
   error: $$_$$_1044.a,
   warning: gt,
@@ -150,11 +150,11 @@ function Mt(e, t, n) {
     duration: o,
     style: e.style || {},
     className: e.className,
-    content: React.createElement(Sn, {
+    content: createElement(Sn, {
       iconPrefixCls: n
-    }, React.createElement("div", {
+    }, createElement("div", {
       className: s
-    }, e.icon || a && React.createElement(a, null), React.createElement("span", null, e.content))),
+    }, e.icon || a && createElement(a, null), createElement("span", null, e.content))),
     onClose: e.onClose,
     onClick: e.onClick
   }
@@ -262,7 +262,7 @@ Ut.useMessage = (Lt = Pt, jt = Mt, function () {
   var a = $$_$$_40_index.a(o, 2)
   var s = a[0]
   var c = a[1]
-  var u = React.useRef({})
+  var u = useRef({})
   u.current.open = function (i) {
     var /* [auto-meaningful-name] */i$prefixCls = i.prefixCls
     var a = n$getPrefixCls("message", i$prefixCls)
@@ -304,7 +304,7 @@ Ut.useMessage = (Lt = Pt, jt = Mt, function () {
     return Ht(u.current, e)
   })
   return [
-    u.current, React.createElement($$_$$_801_index.a, {
+    u.current, createElement($$_$$_801_index.a, {
       key: "holder"
     }, function (n) {
       n$getPrefixCls = n.getPrefixCls

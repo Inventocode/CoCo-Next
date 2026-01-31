@@ -62,7 +62,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index from "../../../../unrestored/shared/1571/2636/48/3/index"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_100 from "../../../../unrestored/shared/1571/2636/100"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47_index from "../../../../unrestored/shared/1571/2636/47/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_type from "../../../shared/widget/custom/type"
@@ -71,12 +71,13 @@ import * as /* [auto-meaningful-name] */$_actions from "./actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_738_66 from "../../../../unrestored/shared/1571/2636/738/66"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../unrestored/shared/1571/2636/25/index"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_27 from "../../../../unrestored/shared/1571/2636/27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_39 from "../../../../unrestored/shared/1571/2636/39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../unrestored/shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index1 from "../../../../unrestored/shared/1571/2636/80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
@@ -250,7 +251,7 @@ var Ro = new (function () {
         this.destroyCurrentBox()
         var e = this.boxQueue.shift()
         if (e) {
-          $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.render(React1.createElement(No, e.config), e.element)
+          ReactDom1.render(React1.createElement(No, e.config), e.element)
           document.body.appendChild(e.element)
           this.currentBox = e
         }
@@ -286,7 +287,7 @@ var Ro = new (function () {
     }, {
       key: "destroyBox",
       value: function (e) {
-        $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.unmountComponentAtNode(e)
+        ReactDom1.unmountComponentAtNode(e)
         document.body.removeChild(e)
       }
     }
@@ -715,7 +716,7 @@ function li(e) {
           }
           return i.abrupt("return", [])
         case 8:
-          n = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(i$sent)
+          n = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(i$sent)
           i.prev = 9
           n.s()
         case 11:
@@ -2399,7 +2400,7 @@ function rs(e) {
         case 17:
           if ($$sent1 = $.sent, $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.clearLocalDocuments($$sent1, f), $$_$$_$$_$$_unrestored_shared_1571_2636_174.a.clear(), $$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE) {
             k = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Zb(m)
-            x = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(k)
+            x = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(k)
             try {
               for (x.s(); !(D = x.n()).done;) {
                 D$value = D.value
@@ -2411,7 +2412,7 @@ function rs(e) {
               x.f()
             }
             L = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Zb(I)
-            P = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(L)
+            P = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(L)
             try {
               for (P.s(); !(B = P.n()).done;) {
                 B$value = B.value
@@ -2841,7 +2842,7 @@ function cs(e, t, n) {
           }
           s = e
           l = $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(s.widgetIds)
-          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(l)
+          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(l)
           S.prev = 7
           u.s()
         case 9:
@@ -2876,7 +2877,7 @@ function cs(e, t, n) {
           }
           f = e
           h = $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(f.widgetIds)
-          m = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(h)
+          m = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(h)
           S.prev = 29
           m.s()
         case 31:
@@ -3124,7 +3125,7 @@ function ds(e) {
             break
           }
           d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.L($$_$$_widget_builtIn_types.A)
-          p = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(d)
+          p = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(d)
           v.prev = 33
           p.s()
         case 35:
@@ -3805,7 +3806,7 @@ function ys(e) {
           }
           return h.abrupt("return")
         case 9:
-          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(s.widgetIds)
+          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(s.widgetIds)
           h.prev = 10
           u.s()
         case 12:
@@ -3885,7 +3886,7 @@ function Es(e) {
           return m.abrupt("return")
         case 6:
           m$sent$id = m$sent.id
-          a = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(m$sent.widgetIds)
+          a = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(m$sent.widgetIds)
           m.prev = 8
           a.s()
         case 10:
@@ -5134,7 +5135,7 @@ function Ws(e) {
         case 43:
           g = h[0]
           _ = g.snapshot
-          v = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(h)
+          v = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(h)
           A.prev = 46
           v.s()
         case 48:
@@ -5880,7 +5881,7 @@ function ec(e, t) {
             f.next = 36
             break
           }
-          s = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(e)
+          s = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(e)
           f.prev = 11
           s.s()
         case 13:
@@ -5964,7 +5965,7 @@ function tc(e) {
             break
           }
           s = o.get("id")
-          l = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(e)
+          l = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(e)
           _.prev = 13
           l.s()
         case 15:
@@ -6695,7 +6696,7 @@ function fc() {
               return t.id === e.attributes.cloudDbId
             })
           })
-          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(n)
+          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(n)
           k.prev = 22
           u.s()
         case 24:
@@ -6770,7 +6771,7 @@ function fc() {
           _ = a.map(function (e) {
             return e.title
           })
-          v = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(l)
+          v = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(l)
           k.prev = 59
           v.s()
         case 61:
@@ -6815,7 +6816,7 @@ function fc() {
           k.next = 106
           break
         case 83:
-          O = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(l)
+          O = $$_$$_$$_$$_unrestored_shared_1571_2636_47_index.a(l)
           k.prev = 84
           O.s()
         case 86:

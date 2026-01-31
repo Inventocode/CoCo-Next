@@ -29,12 +29,13 @@ import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useLayoutEffect, useEffect, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1528 from "./1528"
 import /* [auto-meaningful-name] */$_15281 from "./1528"
@@ -187,7 +188,7 @@ var tN = [
     type: Tn.d.SOUND
   }
 ]
-var nN = React1.memo(function (e) {
+var nN = memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$selectedIds = e.selectedIds
@@ -195,49 +196,49 @@ var nN = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$searchName = e.searchName
   var /* [auto-meaningful-name] */e$clearSearchHandler = e.clearSearchHandler
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = $_710_index$a$formatMessage({
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var l = $_710$a$formatMessage({
     id: "allType"
   })
-  var u = $_710_index$a$formatMessage({
+  var u = $_710$a$formatMessage({
     id: "Resource.Image"
   })
-  var d = $_710_index$a$formatMessage({
+  var d = $_710$a$formatMessage({
     id: "Resource.Icon"
   })
-  var p = $_710_index$a$formatMessage({
+  var p = $_710$a$formatMessage({
     id: "Resource.Sound"
   })
-  var m = React1.useState(e.sidebarType || Z(e.mode))
+  var m = useState(e.sidebarType || Z(e.mode))
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState("")
+  var y = useState("")
   var w = $_10_index.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState(l)
+  var A = useState(l)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var x = j[1]
-  var D = React1.useState(6)
+  var D = useState(6)
   var M = $_10_index.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = React1.useState(1)
+  var B = useState(1)
   var F = $_10_index.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = React1.useState(false)
+  var U = useState(false)
   var H = $_10_index.a(U, 2)
   var V = H[0]
   var Y = H[1]
-  var K = React1.useRef(null)
-  var q = React1.useRef(null)
-  var X = $_16_index.e(function (e) {
+  var K = useRef(null)
+  var q = useRef(null)
+  var X = useSelector(function (e) {
     return e.resource.soundFileList
   })
-  var Q = $_16_index.e(function (e) {
+  var Q = useSelector(function (e) {
     return e.resource.iconFileList
   })
   function Z(e) {
@@ -250,7 +251,7 @@ var nN = React1.memo(function (e) {
         return Tn.d.IMAGE
     }
   }
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var e = true
     if (e$visible && !V) {
       (function () {
@@ -281,12 +282,12 @@ var nN = React1.memo(function (e) {
       e = false
     }
   }, [V, e$visible])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var t = e.sidebarType || Z(e.mode)
     b(t)
     W(1)
   }, [e.mode, e.sidebarType])
-  React1.useEffect(function () {
+  useEffect(function () {
     x(l)
     W(1)
   }, [l, e$searchName])
@@ -340,7 +341,7 @@ var nN = React1.memo(function (e) {
   k.a(t, Tn.d.ICON, [eN.materialResources.icon, Q, te])
   k.a(t, Tn.d.SOUND, [eN.materialResources.sound, X, ne])
   var re = t
-  var oe = React1.useMemo(function () {
+  var oe = useMemo(function () {
     if (e$searchName) {
       return eN.getSearchMaterialList(e$searchName)
     }
@@ -406,13 +407,13 @@ var nN = React1.memo(function (e) {
       K$current.style.paddingLeft = n + "px"
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("resize", se)
     return function () {
       window.removeEventListener("resize", se)
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     se()
   })
   return React.createElement(React.Fragment, null, e.mode !== Tn.c.ResourceLibrary ? null : React.createElement("div", {
@@ -436,7 +437,7 @@ var nN = React1.memo(function (e) {
     }, React.createElement($_13_index.j, {
       type: "icon-".concat(e.name),
       className: $_164.icon
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "Resource.".concat(e.name)
     }))
   }), React.createElement("a", {
@@ -444,7 +445,7 @@ var nN = React1.memo(function (e) {
     href: "https://codemao-guide.yuque.com/bfiekm/sbo5kh/xgm6rd",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.HowFindMaterial"
   }))), React.createElement("div", {
     className: N($_164.itemContent, e.mode === Tn.c.ResourceLibrary && $_164.sidebarShow)
@@ -485,7 +486,7 @@ var nN = React1.memo(function (e) {
       marginTop: 224
     }
   }, React.createElement(we, {
-    text: $_710_index$a$formatMessage({
+    text: $_710$a$formatMessage({
       id: "material.materialNotFound"
     }),
     type: "image-text"
@@ -495,8 +496,8 @@ var nN = React1.memo(function (e) {
   e[e.Library = 0] = "Library"
   e[e.Mall = 1] = "Mall"
 }(Nj || (Nj = {}))
-var rN = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var rN = memo(function () {
+  var e = useSelector(function (e) {
     return e.resource.resourceLibraryDialogInfo
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -505,40 +506,40 @@ var rN = React1.memo(function () {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$sidebarType = e.sidebarType
   var /* [auto-meaningful-name] */e$setTab = e.setTab
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useDispatch()
   var l = function () {
     Q()
     c($$_$$_$$_$$_src_editor_redux_common_actions.sh())
   }
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState("")
+  var g = useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = React1.useState(Nj.Mall)
+  var E = useState(Nj.Mall)
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
-  var T = React1.useState([])
+  var T = useState([])
   var A = $_10_index.a(T, 2)
   var j = A[0]
   var R = A[1]
-  var k = React1.useState(false)
+  var k = useState(false)
   var D = $_10_index.a(k, 2)
   var M = D[0]
   var L = D[1]
-  var P = React1.useState(false)
+  var P = useState(false)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = React1.useRef(null)
-  var U = React1.useRef(null)
-  var H = React1.useRef(true)
-  React1.useLayoutEffect(function () {
+  var W = useRef(null)
+  var U = useRef(null)
+  var H = useRef(true)
+  useLayoutEffect(function () {
     if (e$mode === Tn.c.ResourceLibrary) {
       m(false)
       C(Nj.Mall)
@@ -547,12 +548,12 @@ var rN = React1.memo(function () {
       C(Nj.Library)
     }
   }, [e$mode])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (!e$visible) {
       R([])
     }
   }, [e$visible])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var /* [auto-meaningful-name] */W$current = W.current
     if (W$current) {
       var /* [auto-meaningful-name] */W$current$scrollWidth = W$current.scrollWidth
@@ -756,13 +757,13 @@ var rN = React1.memo(function () {
     className: $_164.LibraryHeader
   }, React.createElement("div", {
     className: $_164.title
-  }, e$mode === Tn.c.ResourceLibrary ? $_710_index$a$formatMessage({
+  }, e$mode === Tn.c.ResourceLibrary ? $_710$a$formatMessage({
     id: "Resource.ResourceMall"
-  }) : e$mode === Tn.c.ImageLibrary ? $_710_index$a$formatMessage({
+  }) : e$mode === Tn.c.ImageLibrary ? $_710$a$formatMessage({
     id: "Resource.ImageLibrary"
-  }) : e$mode === Tn.c.SoundLibrary ? $_710_index$a$formatMessage({
+  }) : e$mode === Tn.c.SoundLibrary ? $_710$a$formatMessage({
     id: "Resource.SoundLibrary"
-  }) : e$mode === Tn.c.IconLibrary ? $_710_index$a$formatMessage({
+  }) : e$mode === Tn.c.IconLibrary ? $_710$a$formatMessage({
     id: "Resource.IconLibrary"
   }) : ""), p && React.createElement("div", {
     className: $_164.tab
@@ -775,7 +776,7 @@ var rN = React1.memo(function () {
   }, React.createElement($_13_index.j, {
     type: "icon-project-resources",
     className: $_164.icon
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "Resource.ProjectLibrary"
   })), React.createElement("div", {
     className: N($_164.tabItem, w === Nj.Mall && $_164.selected),
@@ -786,13 +787,13 @@ var rN = React1.memo(function () {
   }, React.createElement($_13_index.j, {
     type: "icon-material-store",
     className: $_164.icon
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "Resource.ResourceMall"
   }))), React.createElement($_13_index.k, {
     ref: U,
     onClearCallback: Q,
     className: $_164.searchInput,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "Resource.search"
     }),
     onKeyDown: X,
@@ -878,12 +879,12 @@ var rN = React1.memo(function () {
     onClick: function () {
       return re(false)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.Clear"
   })), React.createElement("div", {
     className: N($_164.btn, $_164.btnConfirm),
     onClick: oe
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.Add"
   }), "(", j.length, ")"))) : React.createElement("div", {
     className: $_164.footer
@@ -894,12 +895,12 @@ var rN = React1.memo(function () {
     onClick: function () {
       return re(true)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.Cancel"
   })), React.createElement("div", {
     className: N($_164.btn, $_164.btnConfirm),
     onClick: oe
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.Apply"
   })))))
 })

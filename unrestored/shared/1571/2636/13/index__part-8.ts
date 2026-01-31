@@ -8,14 +8,15 @@
 
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import /* [auto-meaningful-name] */React from "react"
+import { createContext, memo, useState, useEffect, useCallback, useRef, useContext } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./870"
-var $ = React1.createContext(null)
+var $ = createContext(null)
 var /* [auto-meaningful-name] */$$Provider = $.Provider
 var te = $
-React1.memo(function (e) {
+memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onSelect = e.onSelect
   var /* [auto-meaningful-name] */e$value = e.value
@@ -25,45 +26,45 @@ React1.memo(function (e) {
   var d = undefined === e$style ? {} : e$style
   var /* [auto-meaningful-name] */e$open = e.open
   var /* [auto-meaningful-name] */e$onBlur = e.onBlur
-  var h = React1.useState(e$value || e$defaultValue)
+  var h = useState(e$value || e$defaultValue)
   var m = $$_10_index.a(h, 2)
   var g = m[0]
   var _ = m[1]
-  var v = React1.useState(false)
+  var v = useState(false)
   var b = $$_10_index.a(v, 2)
   var y = b[0]
   var O = b[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     _(e$value)
   }, [e$value])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (undefined !== e$open) {
       O(e$open)
     }
   }, [e$open])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */S$current
     if (!(null === (S$current = S.current) || undefined === S$current)) {
       S$current.setAttribute("tabindex", "-1")
     }
   }, [])
-  var w = React1.useCallback(function (e) {
+  var w = useCallback(function (e) {
     if (undefined === e$open) {
       O(e)
     }
   }, [e$open])
-  var C = React1.useCallback(function (e) {
+  var C = useCallback(function (e) {
     _(e)
     w(false)
     if (e$onSelect) {
       e$onSelect(e)
     }
   }, [e$onSelect, w])
-  var T = React1.useCallback(function () {
+  var T = useCallback(function () {
     w(!y)
   }, [y, w])
-  var S = React1.useRef(null)
-  var A = React1.useCallback(function () {
+  var S = useRef(null)
+  var A = useCallback(function () {
     w(false)
     if (e$onBlur) {
       e$onBlur()
@@ -94,20 +95,20 @@ React1.memo(function (e) {
     })
   }, e$children)))
 })
-var ne = React1.memo(function (e) {
+var ne = memo(function (e) {
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = $$_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useCallback(function () {
+  var p = useCallback(function () {
     if (!e$disabled) {
       d(true)
     }
   }, [d, e$disabled])
-  var f = React1.useCallback(function () {
+  var f = useCallback(function () {
     if (!e$disabled) {
       d(false)
     }
@@ -130,13 +131,13 @@ var ne = React1.memo(function (e) {
     })
   }, e$children))
 })
-var re = React1.memo(function (e) {
+var re = memo(function (e) {
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$content = e.content
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var c = React1.useContext(te)
-  var l = React1.useCallback(function () {
+  var c = useContext(te)
+  var l = useCallback(function () {
     if (null === c || undefined === c ? undefined : c.onSelect) {
       c.onSelect(e$value)
     }
@@ -150,7 +151,7 @@ var re = React1.memo(function (e) {
     key: e$value
   }, e$content || React.createElement("span", null, e$title))
 })
-React1.memo(function (e) {
+memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
   return React.createElement("div", {

@@ -11,8 +11,8 @@ import { pB, fB, hB, mB } from "./index__part-219"
 var /* [auto-meaningful-name] */navigator$serviceWorker
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as /* [auto-meaningful-name] */$_57_index from "./57/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
-import /* [auto-meaningful-name] */$_80_index from "./80/index"
+import { Provider } from "react-redux"
+import /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */React from "react"
 import "./1186"
 import "./2632"
@@ -20,7 +20,7 @@ import "./2633"
 if (["staging", "production", "prod"].includes($_57_index.b())) {
   setInterval(function () {}, 100)
 }
-$_80_index.render(React.createElement($_16_index.a, {
+ReactDom.render(React.createElement(Provider, {
   store: $_37_index.d
 }, React.createElement(pB, null)), document.getElementById("root"));
 (function (e) {

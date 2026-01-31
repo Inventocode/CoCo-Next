@@ -29,11 +29,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../.
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../../unrestored/shared/1571/2636/80/index"
+import { useDispatch, useSelector, batch } from "react-redux"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useImperativeHandle, useEffect, createRef, createElement, Component, useLayoutEffect, memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_553 from "../../../../../unrestored/shared/1571/2636/553"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
@@ -43,26 +44,26 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1511 from "../../../../../unrestored/shared/1571/2636/1511"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111 from "../../../../../unrestored/shared/1571/2636/1511"
 var Xr = React.forwardRef(function (e, t) {
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var n = useDispatch()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$checkValueIsRepeat = e.checkValueIsRepeat
   var /* [auto-meaningful-name] */e$renameInputValue = e.renameInputValue
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$value = e.value
-  var l = React1.useRef(e$value)
-  var u = React1.useState(e$value)
+  var l = useRef(e$value)
+  var u = useState(e$value)
   var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState(false)
+  var g = useState(false)
   var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = React1.useRef(null)
-  var O = React1.useRef(true)
-  var w = React1.useRef(null)
-  React1.useImperativeHandle(t, function () {
+  var E = useRef(null)
+  var O = useRef(true)
+  var w = useRef(null)
+  useImperativeHandle(t, function () {
     return {
       focus: function () {
         var /* [auto-meaningful-name] */w$current
@@ -78,7 +79,7 @@ var Xr = React.forwardRef(function (e, t) {
       }
     }
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     m(e$value)
   }, [e$value])
   var C = function () {
@@ -159,7 +160,7 @@ var Xr = React.forwardRef(function (e, t) {
         }
       } else {
         n($$_$$_$$_redux_common_actions.mj({
-          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "blankInputValue"
           }),
           type: "error",
@@ -186,17 +187,17 @@ var Xr = React.forwardRef(function (e, t) {
 })
 var Qr = function (e) {
   var /* [auto-meaningful-name] */e$screenId = e.screenId
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.oTState.onlineCooperationUserList
   })
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.oTState.userFocusOTInfoList
   })
-  var o = React1.useState([])
+  var o = useState([])
   var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = r.filter(function (e) {
       return e.path.screenId === e$screenId
     })
@@ -234,7 +235,7 @@ var Zr = function (e) {
         o[i] = arguments[i]
       }
       t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_388.a(this, (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_362.a(n)).call.apply(e, [this].concat(o)))
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", React1.createRef())
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", createRef())
       return t
     }
     $$_$$_$$_$$_$$_unrestored_shared_1571_2636_120.a(n, t)
@@ -242,7 +243,7 @@ var Zr = function (e) {
       {
         key: "componentDidMount",
         value: function () {
-          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this).sortableHandle = true
+          ReactDom.findDOMNode(this).sortableHandle = true
         }
       }, {
         key: "getWrappedInstance",
@@ -254,21 +255,21 @@ var Zr = function (e) {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return React1.createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
+          return createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
             ref: t
           }, this.props))
         }
       }
     ])
     return n
-  }(React1.Component)
+  }(Component)
   $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "displayName", sr("sortableHandle", e))
   return n
 }(function (e) {
   var /* [auto-meaningful-name] */e$screen = e.screen
   var /* [auto-meaningful-name] */e$index = e.index
   var /* [auto-meaningful-name] */e$title = e.title
-  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var o = useDispatch()
   return React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.snapshotContainer,
     onClick: function () {
@@ -290,23 +291,23 @@ var Jr = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$readonly = e.readonly
   var /* [auto-meaningful-name] */e$showDeleteIcon = e.showDeleteIcon
   var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.e(e$screen.id)
-  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.project.screens
   })
-  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var u = useSelector(function (e) {
     return e.oTState.collWorkId
   })
   var /* [auto-meaningful-name] */e$screen$title = e$screen.title
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var m = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var g = React1.useRef(null)
-  var v = React1.useRef(null)
-  React1.useEffect(function () {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var m = useDispatch()
+  var g = useRef(null)
+  var v = useRef(null)
+  useEffect(function () {
     if (e$selected && v.current) {
       v.current.scrollIntoView()
     }
   }, [e$selected])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */g$current
     var /* [auto-meaningful-name] */g$current1
     if (e$canEdit) {
@@ -342,7 +343,7 @@ var Jr = React.memo(function (e) {
       if (l.size > 98) {
         m($$_$$_$$_redux_common_actions.mj({
           showPrefixIcon: false,
-          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "screeMaxSize"
           })
         }))
@@ -413,7 +414,7 @@ var $r = function (e) {
         o[i] = arguments[i]
       }
       t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_388.a(this, (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_362.a(n)).call.apply(e, [this].concat(o)))
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", React1.createRef())
+      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", createRef())
       return t
     }
     $$_$$_$$_$$_$$_unrestored_shared_1571_2636_120.a(n, t)
@@ -451,7 +452,7 @@ var $r = function (e) {
           var /* [auto-meaningful-name] */this$props$collection = this$props.collection
           var /* [auto-meaningful-name] */this$props$disabled = this$props.disabled
           var /* [auto-meaningful-name] */this$props$index = this$props.index
-          var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this)
+          var o = ReactDom.findDOMNode(this)
           o.sortableInfo = {
             collection: this$props$collection,
             disabled: this$props$disabled,
@@ -480,14 +481,14 @@ var $r = function (e) {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return React1.createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
+          return createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
             ref: t
           }, Zn(this.props, Wr)))
         }
       }
     ])
     return n
-  }(React1.Component)
+  }(Component)
   $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "displayName", sr("sortableElement", e))
   $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "contextType", Fr)
   $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "propTypes", Gr)
@@ -983,7 +984,7 @@ var eo = function (e) {
       var r = new Xn()
       Pr(e)
       t.manager = r
-      t.wrappedInstance = React1.createRef()
+      t.wrappedInstance = createRef()
       t.sortableContextValue = {
         manager: r
       }
@@ -1225,15 +1226,15 @@ var eo = function (e) {
         key: "getContainer",
         value: function () {
           var /* [auto-meaningful-name] */this$props$getContainer = this.props.getContainer
-          return "function" !== typeof this$props$getContainer ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this) : this$props$getContainer(r.withRef ? this.getWrappedInstance() : undefined)
+          return "function" !== typeof this$props$getContainer ? ReactDom.findDOMNode(this) : this$props$getContainer(r.withRef ? this.getWrappedInstance() : undefined)
         }
       }, {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return React1.createElement(Fr.Provider, {
+          return createElement(Fr.Provider, {
             value: this.sortableContextValue
-          }, React1.createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
+          }, createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
             ref: t
           }, Zn(this.props, Lr))))
         }
@@ -1265,7 +1266,7 @@ var eo = function (e) {
       }
     ])
     return n
-  }(React1.Component)
+  }(Component)
   $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "displayName", sr("sortableList", e))
   $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "defaultProps", Mr)
   $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "propTypes", xr)
@@ -1274,8 +1275,8 @@ var eo = function (e) {
   var /* [auto-meaningful-name] */e$screens = e.screens
   var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_295.a(e, ["screens"])
   var /* [auto-meaningful-name] */e$screens$size = e$screens.size
-  var o = React1.useRef(null)
-  var i = React1.useRef(0)
+  var o = useRef(null)
+  var i = useRef(0)
   var a = function () {
     if (o.current) {
       i.current = o.current.scrollLeft
@@ -1293,7 +1294,7 @@ var eo = function (e) {
       }
     }
   }
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (o.current) {
       var /* [auto-meaningful-name] */o$current = o.current
       o.current.scrollLeft = i.current
@@ -1318,51 +1319,51 @@ var eo = function (e) {
     }, n))
   }))
 })
-var to = React1.memo(function () {
+var to = memo(function () {
   var /* [auto-meaningful-name] */n$current
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var n = React1.useRef(null)
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var n = useRef(null)
+  var r = useSelector(function (e) {
     return e.project.screens
   })
-  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.common.stageWidth
   })
-  var i = React1.useState(-1)
+  var i = useState(-1)
   var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(0)
+  var l = useState(0)
   var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = React1.useState(0)
+  var m = useState(0)
   var g = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState(false)
+  var y = useState(false)
   var E = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
-  var C = React1.useRef()
-  var T = React1.useRef(null)
-  var A = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var C = useRef()
+  var T = useRef(null)
+  var A = useSelector(function (e) {
     return e.project.currentScreenIndex
   })
-  var j = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var j = useSelector(function (e) {
     return e.project.playing
   })
   var R = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
-  var k = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var k = useSelector(function (e) {
     return e.uiConfig.screenPanel
   }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
-  var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  React1.useEffect(function () {
+  var x = useDispatch()
+  useEffect(function () {
     var e = document.createElement("div")
     e.id = "_cocoScreenListDragContainer"
     document.body.appendChild(e)
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (null === R || undefined === R ? undefined : R.id) {
       setTimeout(function () {
         var e = document.getElementById(R.id)
@@ -1376,10 +1377,10 @@ var to = React1.memo(function () {
       }, 100)
     }
   }, [R, x])
-  React1.useEffect(function () {
+  useEffect(function () {
     b(j ? o + Cv : o)
   }, [j, o])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */n$current1
       var /* [auto-meaningful-name] */n$current2
@@ -1398,7 +1399,7 @@ var to = React1.memo(function () {
       document.body.removeEventListener("mousedown", e)
     }
   }, [null === (n$current = n.current) || undefined === n$current ? undefined : n$current.visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = document.getElementById("screen_index_".concat(A))
     if (e) {
       e.scrollIntoView({
@@ -1424,7 +1425,7 @@ var to = React1.memo(function () {
       }
     }
   }
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (T.current) {
       var /* [auto-meaningful-name] */T$current = T.current
       T.current.addEventListener("scroll", D)
@@ -1445,7 +1446,7 @@ var to = React1.memo(function () {
     if (n) {
       C.current = n
       var o = n.get("title")
-      var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+      var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
         id: "deleteScreen"
       }) + "“" + $$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(o, 10) + "”?"
       x($$_$$_$$_redux_common_actions.zh({
@@ -1453,10 +1454,10 @@ var to = React1.memo(function () {
         onConfirm: F,
         title: i,
         isDangerous: true,
-        content: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+        content: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
           id: "deleteScreenTips"
         }),
-        allowText: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+        allowText: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
           id: "delete"
         }),
         className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.deleteScreenDialog
@@ -1520,7 +1521,7 @@ var to = React1.memo(function () {
           screenName: r.getIn([e$newIndex, "title"])
         })
       }
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.b(function () {
+      batch(function () {
         var e
         x($$_$$_$$_redux_common_actions.Fi(true))
         x($$_$$_$$_redux_common_actions.yh(e$oldIndex, e$newIndex))
@@ -1539,7 +1540,7 @@ var to = React1.memo(function () {
       if (r.size > 98) {
         x($$_$$_$$_redux_common_actions.mj({
           showPrefixIcon: false,
-          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "screeMaxSize"
           })
         }))
@@ -1580,7 +1581,7 @@ var to = React1.memo(function () {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.screenIcon
   }), React.createElement("span", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.screenText
-  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "screenManage"
   })))), !j && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.screenIndexBox

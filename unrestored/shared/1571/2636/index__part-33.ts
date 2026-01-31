@@ -25,21 +25,22 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_acti
 import * as D from "./6"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_932 from "./932"
 import /* [auto-meaningful-name] */$_9321 from "./932"
 var Vd = function (e) {
   var t
   var /* [auto-meaningful-name] */e$position = e.position
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var o = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var o = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
   var i = $_238.d()
@@ -59,7 +60,7 @@ var Vd = function (e) {
   if (a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.a || a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.c) {
     return React.createElement("div", {
       className: $_9321.container
-    }, React.createElement("div", null, s), React.createElement("div", null, $_710_index$a$formatMessage({
+    }, React.createElement("div", null, s), React.createElement("div", null, $_710$a$formatMessage({
       id: "relativeCoordinate"
     }), " X:", e$position.x, " Y:", e$position.y))
   }
@@ -72,27 +73,27 @@ var Vd = function (e) {
 }
 var zd = React.memo(function () {
   var e
-  var t = React1.useRef(null)
-  var n = React1.useRef(null)
+  var t = useRef(null)
+  var n = useRef(null)
   var r = null === (e = $_238.d()) || undefined === e ? undefined : e.id
-  var o = React1.useRef(Qu.d.NONE)
-  var i = $_16_index.d()
-  var a = $_16_index.e(function (e) {
+  var o = useRef(Qu.d.NONE)
+  var i = useDispatch()
+  var a = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var s = $_16_index.e(function (e) {
+  var s = useSelector(function (e) {
     return e.common.previewAreaUpdatedAt
   })
-  var c = $_16_index.e(function (e) {
+  var c = useSelector(function (e) {
     return e.common.stageState.isActorDragging
   })
-  var l = $_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.common.stageScale
   })
-  var u = $_16_index.e(function (e) {
+  var u = useSelector(function (e) {
     return e.project.focusedWorkspaceArea
   })
-  var d = React1.useState({
+  var d = useState({
     x: 0,
     y: 0
   })
@@ -104,25 +105,25 @@ var zd = React.memo(function () {
   var y = null === b || undefined === b ? undefined : b.type
   var w = y ? Et.Db(y) : null
   var T = null === b || undefined === b ? undefined : b.position
-  React1.useEffect(function () {
+  useEffect(function () {
     if (T) {
       g(T)
     }
   }, [T])
-  var A = React1.useState(undefined)
+  var A = useState(undefined)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var x = j[1]
-  var M = React1.useState([])
+  var M = useState([])
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React1.useState([])
+  var F = useState([])
   var G = $_10_index.a(F, 2)
   var W = G[0]
   var U = G[1]
-  var H = React1.useRef([])
-  var V = $_16_index.e(function (e) {
+  var H = useRef([])
+  var V = useSelector(function (e) {
     return e.uiConfig.stage
   }) === K.j.ReadOnly
   var z = function () {
@@ -177,16 +178,16 @@ var zd = React.memo(function () {
       return e.apply(this, arguments)
     }
   }()
-  React1.useEffect(function () {
+  useEffect(function () {
     x(v ? $_452_index.b(v.toJSON()) : undefined)
   }, [v, s])
-  var q = React1.useRef()
+  var q = useRef()
   var X = function () {
     if (a && r) {
       i($$_$$_$$_$$_src_editor_redux_common_actions.Mf(a, r))
     }
   }
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
     ref: t,
     className: N($_279.stage, k.a({}, $_279.isActorDragging, c)),
@@ -252,7 +253,7 @@ var zd = React.memo(function () {
           return
         }
         var t = Et.Fb(a)
-        var n = $_710_index$a$formatMessage({
+        var n = $_710$a$formatMessage({
           id: "deleteWidget"
         }) + "“" + $_190.f(t, 10) + "”?"
         var o = $_26_index.z.checkFieldValueIsSelected("WIDGET_ID", a)
@@ -260,12 +261,12 @@ var zd = React.memo(function () {
         if (o || s) {
           i($$_$$_$$_$$_src_editor_redux_common_actions.zh({
             onConfirm: X,
-            allowText: $_710_index$a$formatMessage({
+            allowText: $_710$a$formatMessage({
               id: "delete"
             }),
             title: n,
             isDangerous: true,
-            content: $_710_index$a$formatMessage({
+            content: $_710$a$formatMessage({
               id: s ? "deleteParentWidgetTips" : "deleteWidgetTips"
             })
           }))

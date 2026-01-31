@@ -73,8 +73,8 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_27 from "../../../../unrestored/shared/1571/2636/27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_39 from "../../../../unrestored/shared/1571/2636/39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../unrestored/shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index1 from "../../../../unrestored/shared/1571/2636/80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
@@ -265,7 +265,7 @@ var Ro = new (function () {
         this.destroyCurrentBox()
         var e = this.boxQueue.shift()
         if (e) {
-          $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.render(React1.createElement(No, e.config), e.element)
+          ReactDom1.render(React1.createElement(No, e.config), e.element)
           document.body.appendChild(e.element)
           this.currentBox = e
         }
@@ -301,7 +301,7 @@ var Ro = new (function () {
     }, {
       key: "destroyBox",
       value: function (e) {
-        $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.unmountComponentAtNode(e)
+        ReactDom1.unmountComponentAtNode(e)
         document.body.removeChild(e)
       }
     }

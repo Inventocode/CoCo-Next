@@ -27,6 +27,7 @@ import * as k from "./11"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useEffect, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_290 from "./290"
 import /* [auto-meaningful-name] */$_2901 from "./290"
@@ -65,36 +66,36 @@ var Kp = {
     var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
     var /* [auto-meaningful-name] */e$size$width = e$size.width
     var /* [auto-meaningful-name] */e$size$height = e$size.height
-    var I = React1.useRef(null)
-    var j = React1.useState(false)
+    var I = useRef(null)
+    var j = useState(false)
     var R = $_10_index.a(j, 2)
     var x = R[0]
     var M = R[1]
-    var L = React1.useState(e$attributes$placeholder)
+    var L = useState(e$attributes$placeholder)
     var P = $_10_index.a(L, 2)
     var B = P[0]
     var F = P[1]
-    var G = React1.useRef(null)
-    React1.useEffect(function () {
+    var G = useRef(null)
+    useEffect(function () {
       var /* [auto-meaningful-name] */G$current = G.current
       if (G$current) {
         G$current.value = e$attributes$value
       }
     })
-    React1.useEffect(function () {
+    useEffect(function () {
       var /* [auto-meaningful-name] */G$current = G.current
       if (x && G$current) {
         G$current.focus()
         G$current.selectionStart = G$current.selectionEnd = G$current.value.length
       }
     }, [x])
-    React1.useEffect(function () {
+    useEffect(function () {
       F(e$attributes$placeholder)
     }, [e$attributes$placeholder])
     var W = Et.hb(e$attributes$backgroundImage)
     var U = te.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : W ? (null === W || undefined === W ? undefined : W.source) || (null === W || undefined === W ? undefined : W.cdnUrl) : Pp.a
     var H = undefined
-    var V = React1.useMemo(function () {
+    var V = useMemo(function () {
       return function (e, t, n) {
         var r
         return (r = {}, k.a(r, Fp.c.OUTLINED_NORMAL, {
@@ -127,7 +128,7 @@ var Kp = {
         padding: "6px ".concat(14, "px")
       })
     }
-    var z = React1.useMemo(function () {
+    var z = useMemo(function () {
       if (e$attributes$disabled) {
         return function (e) {
           var t
@@ -147,7 +148,7 @@ var Kp = {
         }(e$attributes$templateMode)
       }
     }, [e$attributes$templateMode, e$attributes$disabled])
-    React1.useEffect(function () {
+    useEffect(function () {
       var e
       var n = z ? z.color : e$attributes$placeholderColor
       if (!(null === (e = document.getElementById(t)) || undefined === e)) {

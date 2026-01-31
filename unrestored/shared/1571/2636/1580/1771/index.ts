@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../1768/257/index")
-var o = require("../1597/256")
+var r = require("../1754/257/index")
+var o = require("../1775/256")
 var i = require("./1277/index")
-var a = require("../1581/309")
-var s = require("../1705/168")
+var a = require("./309")
+var s = require("../1659/168")
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("set", function (e) {
   r$aTypedArray(this)

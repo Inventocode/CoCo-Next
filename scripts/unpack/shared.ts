@@ -21,11 +21,20 @@ unpack({
         path.resolve(distPath, "main.eee12093.chunk.js")
     ],
     externals: [
-        { key: 0, source: "react" },
+        { key: 0, source: "react", namedImport: true },
         { key: 1, source: "regenerator-runtime" },
+        { key: 16, source: "react-redux", exportsNameMap: {
+            a: "Provider",
+            b: "batch",
+            c: "connect",
+            d: "useDispatch",
+            e: "useSelector",
+            f: "useStore"
+        }, namedImport: true },
         { key: 30, source: "lodash" },
         { key: 31, source: "ot-json1" },
         { key: 51, source: "color" },
+        { key: 80, source: "react-dom" },
         { key: 93, source: "tslib" },
         { key: 129, source: "axios" },
         { key: 134, source: "inversify" },
@@ -56,7 +65,7 @@ unpack({
         unrestoredPath: "unrestored/shared",
         srcPath: "src",
         srcUnrestoredPath: "src-unrestored",
-        pathMap: "path-map.json"
+        modulesInfo: "modules-info.json"
     },
     publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
     setPath: SetPath.BY_DEPENDENCY,

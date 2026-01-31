@@ -4,21 +4,24 @@
  * 模块 ID：ePvC
  */
 
+"use strict"
+
 /* harmony export (immutable) */
 /* harmony import */
+export { mainSaga }
 import * as __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator__ from "@babel/runtime/regenerator"
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator"
 /* harmony import */
-import * as ReduxSaga from "redux-saga"
+import * as __WEBPACK_IMPORTED_MODULE_1_redux_saga__ from "redux-saga"
 /* harmony import */
-import { put } from "redux-saga/effects"
+import * as __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__ from "redux-saga/effects"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_3_axios__ from "axios"
 /* harmony import */
 import __WEBPACK_IMPORTED_MODULE_3_axios___default from "axios"
 /* harmony import */
-import * as actions from "./actions"
+import * as __WEBPACK_IMPORTED_MODULE_4__actions__ from "./actions"
 /* harmony import */
 import * as __WEBPACK_IMPORTED_MODULE_5__utils__ from "../../../../unrestored/home/components/utils-jnIn"
 /* harmony import */
@@ -27,6 +30,7 @@ import * as __WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__ from "../..
 import * as __WEBPACK_IMPORTED_MODULE_7__routes_Home_model_actions__ from "../../ui/routes/Home/model/actions"
 var _marked = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleIsNewUser)
 var _marked2 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(handleAsyncSetUserInfo)
+var _marked3 = /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.mark(mainSaga)
 function handleIsNewUser() {
   var url
   var result
@@ -50,7 +54,7 @@ function handleIsNewUser() {
         case 4:
           result = _context.sent
           _context.next = 7
-          return put(actions.setIsNewUserAction(result === 0 ? false : true))
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setIsNewUserAction(result === 0 ? false : true))
         case 7:
           _context.next = 12
           break
@@ -73,44 +77,44 @@ function handleAsyncSetUserInfo(action) {
       switch (_context2.prev = _context2.next) {
         case 0:
           _context2.next = 2
-          return put(actions.setUserInfoAction(action.payload))
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setUserInfoAction(action.payload))
         case 2:
           if (!action.payload) {
             _context2.next = 13
             break
           }
           _context2.next = 5
-          return put(actions.getIsNewUserAction())
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.getIsNewUserAction())
         case 5:
           _context2.next = 7
-          return put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.getCreateWorkListAction({
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.getCreateWorkListAction({
             name: "",
             offset: 0
           }))
         case 7:
           _context2.next = 9
-          return put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.getCollWorkListAction({
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.getCollWorkListAction({
             name: "",
             offset: 1
           }))
         case 9:
           _context2.next = 11
-          return put(__WEBPACK_IMPORTED_MODULE_7__routes_Home_model_actions__.getWorkListAction())
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_7__routes_Home_model_actions__.getWorkListAction())
         case 11:
           _context2.next = 19
           break
         case 13:
           _context2.next = 15
-          return put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.setCreateWorkListAction([]))
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.setCreateWorkListAction([]))
         case 15:
           _context2.next = 17
-          return put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.setCollWorkListAction([]))
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_6__routes_Work_model_actions__.setCollWorkListAction([]))
         case 17:
           _context2.next = 19
-          return put(__WEBPACK_IMPORTED_MODULE_7__routes_Home_model_actions__.setWorkListAction([]))
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_7__routes_Home_model_actions__.setWorkListAction([]))
         case 19:
           _context2.next = 21
-          return put(actions.setUserInfoFetchDoneAction())
+          return __WEBPACK_IMPORTED_MODULE_2_redux_saga_effects__.put(__WEBPACK_IMPORTED_MODULE_4__actions__.setUserInfoFetchDoneAction())
         case 21:
         case "end":
           return _context2.stop()
@@ -118,7 +122,22 @@ function handleAsyncSetUserInfo(action) {
     }
   }, _marked2, this)
 }
-export function* mainSaga() {
-  yield ReduxSaga.takeLatest(actions.GET_IS_NEW_USER_ACTION, handleIsNewUser)
-  yield ReduxSaga.takeLatest(actions.ASYNC_SET_USER_INFO_ACTION, handleAsyncSetUserInfo)
+function mainSaga() {
+  return __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default.wrap(function mainSaga$(_context3) {
+    while (1) {
+      switch (_context3.prev = _context3.next) {
+        case 0:
+          _context3.next = 2
+          return __WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_4__actions__.GET_IS_NEW_USER_ACTION, handleIsNewUser)
+        case 2:
+          _context3.next = 4
+          return __WEBPACK_IMPORTED_MODULE_1_redux_saga__.takeLatest(__WEBPACK_IMPORTED_MODULE_4__actions__.ASYNC_SET_USER_INFO_ACTION, handleAsyncSetUserInfo)
+        case 4:
+        case "end":
+          return _context3.stop()
+      }
+    }
+  }, _marked3, this)
 }
+
+/***/

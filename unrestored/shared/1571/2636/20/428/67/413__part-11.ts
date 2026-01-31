@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
+import * as /* [auto-meaningful-name] */$$_112 from "../112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import /* [auto-meaningful-name] */React from "react"
@@ -22,9 +22,9 @@ var le = function (e) {
   var c = undefined === e$attributes$backgroundImageFileId ? $$_$$_$$_149.a : e$attributes$backgroundImageFileId
   var /* [auto-meaningful-name] */e$attributes$trackImageFileId = e$attributes.trackImageFileId
   var u = undefined === e$attributes$trackImageFileId ? $$_$$_$$_149.g : e$attributes$trackImageFileId
-  var d = $$_$$_$$_34_347_112.b(c) || $$_$$_$$_149.a
-  var p = $$_$$_$$_34_347_112.b(i) || $$_$$_$$_149.c
-  var f = $$_$$_$$_34_347_112.b(u) || $$_$$_$$_149.g
+  var d = $$_112.b(c) || $$_$$_$$_149.a
+  var p = $$_112.b(i) || $$_$$_$$_149.c
+  var f = $$_112.b(u) || $$_$$_$$_149.g
   return React.createElement($$_$$_$$_549_index.a, Object.assign({}, e, {
     onSliderChange: function (e) {
       $$_$$_index.setSliderWidgetValue(t, e, false)

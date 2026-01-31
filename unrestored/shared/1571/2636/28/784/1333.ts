@@ -6,7 +6,7 @@
 
 var /* [auto-meaningful-name] */require$_2020_1121_index$FilterCSS = require("./2020/1121/index").FilterCSS
 var /* [auto-meaningful-name] */require$_2020_1121_index$getDefaultWhiteList = require("./2020/1121/index").getDefaultWhiteList
-var o = require("./1336/1122")
+var o = require("./2020/1122")
 function a() {
   return {
     a: ["target", "href", "title"],

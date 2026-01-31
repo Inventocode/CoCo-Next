@@ -12,9 +12,9 @@ export interface UnpackConfig {
         srcPath: string
         srcUnrestoredPath: string
         /**
-         * 生成模块路径映射表。
+         * 生成模块信息表。
          */
-        pathMap?: false | string | null | undefined
+        modulesInfo?: false | string | null | undefined
     }
     setPath: SetPath,
     publicPath?: string | null | undefined
@@ -34,12 +34,15 @@ export interface UnpackConfig {
     nodePolyfill?: Record<ModuleKey, string | null | undefined> | null | undefined
 }
 
-export type External = {
+export type External = ({
     searchPath: RegExp
     replace: string
 } | {
     key: ModuleKey
     source: string
+}) & {
+    namedImport?: boolean
+    exportsNameMap?: Record<string, string> | null | undefined
 }
 
 export type Externals = External[]
@@ -63,6 +66,7 @@ export interface Module {
     importsNameMap: Record<ModuleKey, string>
     importsNameToModuleMap: Record<string, Module>
     exportsNameMap: Record<string, string>
+    namedImport: boolean | undefined
 }
 
 export type ModuleKey = string | number

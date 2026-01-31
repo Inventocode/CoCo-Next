@@ -7,6 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import { useRef } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
@@ -32,7 +33,7 @@ var b = function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$sizeType = e.sizeType
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var y = React.useRef(null)
+  var y = useRef(null)
   var E = function (e) {
     var t = ""
     if ("correct" === e) {

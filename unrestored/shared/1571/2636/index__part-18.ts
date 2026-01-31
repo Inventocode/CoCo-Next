@@ -25,12 +25,13 @@ import * as Z from "./97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useRef, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1052 from "./1052"
 import /* [auto-meaningful-name] */$_10521 from "./1052"
@@ -39,46 +40,46 @@ import /* [auto-meaningful-name] */$_2811 from "./281"
 var rn = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.project.projectShareInfo
   })
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.project.id
   })
-  var i = $_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.common.userInfo
   })
-  var a = $_16_index.e(function (e) {
+  var a = useSelector(function (e) {
     return e.project.projectSource
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = $_16_index.d()
-  var l = React1.useState(false)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useDispatch()
+  var l = useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = React1.useState(false)
+  var m = useState(false)
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState("")
+  var y = useState("")
   var w = $_10_index.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState(false)
+  var A = useState(false)
   var j = $_10_index.a(A, 2)
   var R = j[0]
   var k = j[1]
-  var x = React1.useState(false)
+  var x = useState(false)
   var D = $_10_index.a(x, 2)
   var M = D[0]
   var L = D[1]
-  var P = React1.useState(false)
+  var P = useState(false)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = React1.useRef(false)
-  var U = React1.useCallback(function (e, t) {
+  var W = useRef(false)
+  var U = useCallback(function (e, t) {
     $_141_index.a("WorkShare", {
       workId: o,
       workName: r.title,
@@ -91,7 +92,7 @@ var rn = function (e) {
       failReason: t
     })
   }, [o, a, r.title, i])
-  var H = React1.useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var H = useCallback(O.a(RegeneratorRuntime.mark(function e() {
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -128,7 +129,7 @@ var rn = function (e) {
             return e.abrupt("return")
           case 18:
             c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-              message: $_710_index$a$formatMessage({
+              message: $_710$a$formatMessage({
                 id: "Publish.shareQRError"
               }).toString(),
               type: "error"
@@ -141,7 +142,7 @@ var rn = function (e) {
         }
       }
     }, e, null, [[2, 11]])
-  })), [c, $_710_index$a$formatMessage, R, e$onClose, o, r, U, F])
+  })), [c, $_710$a$formatMessage, R, e$onClose, o, r, U, F])
   function V() {
     return (V = O.a(RegeneratorRuntime.mark(function e(t) {
       var n
@@ -182,7 +183,7 @@ var rn = function (e) {
               e.prev = 16
               e.t0 = e.catch(1)
               c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "Publish.coverImageUploadFail"
                 }).toString(),
                 type: "error"
@@ -208,7 +209,7 @@ var rn = function (e) {
               if ($_190.a(C)) {
                 b(true)
                 c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                  message: $_710_index$a$formatMessage({
+                  message: $_710$a$formatMessage({
                     id: "Publish.copyLinkSuccess"
                   }).toString(),
                   duration: 1e3,
@@ -216,7 +217,7 @@ var rn = function (e) {
                 }))
               } else {
                 c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                  message: $_710_index$a$formatMessage({
+                  message: $_710$a$formatMessage({
                     id: "Publish.copyLinkFailure"
                   }).toString(),
                   duration: 1e3,
@@ -231,7 +232,7 @@ var rn = function (e) {
       }, e)
     }))).apply(this, arguments)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       if (!W.current) {
         k(true)
@@ -248,7 +249,7 @@ var rn = function (e) {
   return React.createElement($_13_index.f, {
     onClose: e$onClose,
     className: $_2811.shareToOthers,
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "Publish.shareToOthers"
     }),
     withPortal: true,
@@ -269,7 +270,7 @@ var rn = function (e) {
   }, React.createElement($_13_index.j, {
     type: "icon-refresh",
     className: $_2811.refreshIcon
-  })) : React.createElement(Ge, null)), React.createElement("span", null, $_710_index$a$formatMessage(M ? {
+  })) : React.createElement(Ge, null)), React.createElement("span", null, $_710$a$formatMessage(M ? {
     id: "Publish.refreshQrCode"
   } : {
     id: "Publish.creatingQrCode"
@@ -286,7 +287,7 @@ var rn = function (e) {
     }
   })), React.createElement("div", {
     className: $_2811.message
-  }, R || M ? "" : $_710_index$a$formatMessage({
+  }, R || M ? "" : $_710$a$formatMessage({
     id: "Publish.shareQrCode"
   })), React.createElement("div", {
     className: $_2811.shareLinkWrapper
@@ -297,7 +298,7 @@ var rn = function (e) {
     onClick: function () {
       return K.apply(this, arguments)
     }
-  }, $_710_index$a$formatMessage(v ? {
+  }, $_710$a$formatMessage(v ? {
     id: "Publish.shareLinkCopied"
   } : {
     id: "Publish.copyShareLink"
@@ -310,7 +311,7 @@ var rn = function (e) {
     onClick: function () {
       return p(!d)
     }
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "Publish.moreSettings"
   })), React.createElement($_13_index.j, {
     type: "icon-dropdown-down",
@@ -323,14 +324,14 @@ var rn = function (e) {
     className: $_2811.workInfo
   }, React.createElement("ul", null, React.createElement("li", null, React.createElement("p", {
     className: $_2811.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Publish.shareTitle"
   }), React.createElement("span", {
     className: $_2811.required
   }, "*")), React.createElement($_13_index.k, {
     defaultValue: r.title,
     maxLength: 20,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "Publish.inputPublishName"
     }),
     onBlur: function (e, t) {
@@ -348,12 +349,12 @@ var rn = function (e) {
     isTrimmed: true
   })), React.createElement("li", null, React.createElement("p", {
     className: $_2811.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Publish.shareDescription"
   })), React.createElement($_13_index.A, {
     defaultValue: r.desc,
     maxLength: 25,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "Publish.inputShareDescription"
     }),
     rows: 3,
@@ -367,7 +368,7 @@ var rn = function (e) {
     }
   })))), React.createElement("div", null, React.createElement("p", {
     className: $_2811.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Publish.workCover"
   })), React.createElement($_13_index.c, {
     width: 140,
@@ -380,7 +381,7 @@ var rn = function (e) {
       return V.apply(this, arguments)
     },
     accept: $_133.f
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Publish.changeWorkCover"
   }))))))
 }
@@ -391,21 +392,21 @@ var on = function (e) {
     message: "community" === e$target ? "Publish.shareToCommunity" : "Publish.shareToOthers",
     dialogType: "community" === e$target ? Zt.SHARE_COMMUNITY_DIALOG : Zt.SHARE_QR_DIALOG
   }
-  var r = React1.useState(Zt.NONE)
+  var r = useState(Zt.NONE)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = $_16_index.e(function (e) {
+  var s = useSelector(function (e) {
     return e.common.userInfo
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var l = useSelector(function (e) {
     return e.project.id
   })
-  var u = $_16_index.e(function (e) {
+  var u = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
-  var d = $_16_index.d()
+  var d = useDispatch()
   function p() {
     return (p = O.a(RegeneratorRuntime.mark(function e() {
       var t
@@ -447,11 +448,11 @@ var on = function (e) {
                 break
               }
               d($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-                allowText: $_710_index$a$formatMessage({
+                allowText: $_710$a$formatMessage({
                   id: "cloudDb.know"
                 }),
                 title: "error",
-                content: $_710_index$a$formatMessage({
+                content: $_710$a$formatMessage({
                   id: "Play.widgetNotSupportsForbiddenKeywords"
                 }, {
                   widgetTypeNames: Array.from(r).join("、"),
@@ -472,7 +473,7 @@ var on = function (e) {
                 break
               }
               d($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-                allowText: $_710_index$a$formatMessage({
+                allowText: $_710$a$formatMessage({
                   id: "know"
                 }),
                 title: "",
@@ -530,7 +531,7 @@ var on = function (e) {
               e.t0 = e.catch(0)
               e.next = 12
               return d($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "Publish.projectSaveFail"
                 }),
                 type: "error"
@@ -559,7 +560,7 @@ var on = function (e) {
     className: $_10521.shareIcon
   }), React.createElement("span", {
     className: $_10521.shareMessage
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: n.message
   }))), React.createElement(Jt, {
     onClose: v,

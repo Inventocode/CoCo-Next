@@ -7,6 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import { memo, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
@@ -14,10 +15,10 @@ import /* [auto-meaningful-name] */Color1 from "color"
 import * as c from "../8"
 import l from "../8"
 import * as /* [auto-meaningful-name] */$$_551_487_index from "../551/487/index"
-import * as /* [auto-meaningful-name] */$$_551_488_index from "../551/488/index"
+import * as /* [auto-meaningful-name] */$$_551_488 from "../551/488"
 import * as /* [auto-meaningful-name] */$$_551_278 from "../551/278"
 import * as /* [auto-meaningful-name] */$_1214_index from "./1214/index"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import { useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_235 from "../235"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
@@ -26,7 +27,7 @@ import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$_438 from "./438"
 import /* [auto-meaningful-name] */$_4381 from "./438"
 var _a
-_a = React.memo(function (e) {
+_a = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -37,19 +38,19 @@ _a = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
   var /* [auto-meaningful-name] */e$attributes$fontSize = e$attributes.fontSize
   var /* [auto-meaningful-name] */e$attributes$timeStamp = e$attributes.timeStamp
-  var A = React.useRef(null)
+  var A = useRef(null)
   var I = new Date(e$attributes$timeStamp)
-  var j = $$_16_index.e(function (e) {
+  var j = useSelector(function (e) {
     var /* [auto-meaningful-name] */e$project
     return null === e || undefined === e || null === (e$project = e.project) || undefined === e$project ? undefined : e$project.playing
   })
-  var N = React.useRef(false)
+  var N = useRef(false)
   var R = function (e) {
     if (N.current) {
       e.preventDefault()
     }
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if ($$_28_index.b() && $$_28_index.h()) {
       document.body.addEventListener("touchmove", R, {
         passive: false
@@ -84,7 +85,7 @@ _a = React.memo(function (e) {
     ref: A
   }, React1.createElement($$_551_278.a, {
     utils: $$_551_487_index.a,
-    locale: $$_551_488_index.a
+    locale: $$_551_488.a
   }, React1.createElement($_1214_index.a, {
     value: I,
     onChange: function (e) {

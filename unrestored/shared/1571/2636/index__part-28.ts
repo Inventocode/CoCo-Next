@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from "react"
+import { version, createElement, Component, PureComponent } from "react"
 import * as /* [auto-meaningful-name] */$_452_index from "./452/index"
 import * as po from "./49"
 function fo(e, t) {
@@ -2642,12 +2642,12 @@ var za = function (e) {
     var /* [auto-meaningful-name] */this$injector$className = this.injector.className
     var /* [auto-meaningful-name] */this$tag = this.tag
     var s = {}
-    if ((React.version || "").indexOf("simple") > -1 && this$props$portalContainer) {
+    if ((version || "").indexOf("simple") > -1 && this$props$portalContainer) {
       s = {
         portalContainer: this$props$portalContainer
       }
     }
-    return React.createElement(this$tag, Va({
+    return createElement(this$tag, Va({
       ref: ko(this, "element"),
       "data-styled-id": this$injector$className,
       className: n + " " + this$injector$className
@@ -2666,7 +2666,7 @@ var za = function (e) {
     return this.element
   }
   return t
-}(React.Component)
+}(Component)
 var Ya = function (e, t) {
   var n = Wa(t)
   return function (t) {
@@ -10766,7 +10766,7 @@ var ku = function (e) {
     this.getEnabledAbles().forEach(function (e) {
       E["data-able-" + e.name.toLowerCase()] = true
     })
-    return React.createElement(this$props$cssStyled, Xa({
+    return createElement(this$props$cssStyled, Xa({
       cspNonce: this$props$cspNonce,
       ref: ko(this, "controlBox"),
       className: us("control-box", -1 === this$state$direction ? "reverse" : "", y ? "dragging" : "") + " " + this$props$className
@@ -11157,7 +11157,7 @@ var ku = function (e) {
     var t = this
     var /* [auto-meaningful-name] */this$props$triggerAblesSimultaneously = this.props.triggerAblesSimultaneously
     var r = {
-      createElement: React.createElement
+      createElement: createElement
     }
     return function (e, t) {
       var n = []
@@ -11199,7 +11199,7 @@ var ku = function (e) {
     }
     var /* [auto-meaningful-name] */this$state$renderPoses = this.state.renderPoses
     var o = {
-      createElement: React.createElement
+      createElement: createElement
     }
     return [xl(o, this$props$edge ? "n" : "", this$state$renderPoses[0], this$state$renderPoses[1], this$props$zoom, 0), xl(o, this$props$edge ? "e" : "", this$state$renderPoses[1], this$state$renderPoses[3], this$props$zoom, 1), xl(o, this$props$edge ? "w" : "", this$state$renderPoses[0], this$state$renderPoses[2], this$props$zoom, 2), xl(o, this$props$edge ? "s" : "", this$state$renderPoses[2], this$state$renderPoses[3], this$props$zoom, 3)]
   }
@@ -11234,7 +11234,7 @@ var ku = function (e) {
     props: {}
   }
   return t
-}(React.PureComponent)
+}(PureComponent)
 var xu = {
   name: "groupable",
   props: {
@@ -11621,12 +11621,12 @@ var zu = function (e) {
     var /* [auto-meaningful-name] */this$props$cspNonce = this$props.cspNonce
     var /* [auto-meaningful-name] */this$props$cssStyled = this$props.cssStyled
     var /* [auto-meaningful-name] */this$props$targets = this$props.targets
-    return React.createElement(this$props$cssStyled, {
+    return createElement(this$props$cssStyled, {
       cspNonce: this$props$cspNonce,
       ref: ko(this, "controlBox"),
       className: us("control-box")
     }, this$props$targets.map(function (t, n) {
-      return React.createElement(ku, Xa({
+      return createElement(ku, Xa({
         key: "moveable" + n,
         ref: xo(e, "moveables", n)
       }, e.props, {
@@ -11754,19 +11754,19 @@ var Yu = function (e) {
       cssStyled: this$constructor.defaultStyled,
       customStyledMap: this$constructor.customStyledMap
     })
-    return s ? o.individualGroupable ? React.createElement(zu, Xa({
+    return s ? o.individualGroupable ? createElement(zu, Xa({
       key: "individual-group",
       ref: ko(this, "moveable")
     }, l, {
       target: null,
       targets: a
-    })) : React.createElement(Vu, Xa({
+    })) : createElement(Vu, Xa({
       key: "group",
       ref: ko(this, "moveable")
     }, l, {
       target: null,
       targets: a
-    })) : React.createElement(ku, Xa({
+    })) : createElement(ku, Xa({
       key: "single",
       ref: ko(this, "moveable")
     }, l, {
@@ -11841,7 +11841,7 @@ var Yu = function (e) {
     })
   ], t.prototype, "moveable", undefined)
   return t
-}(React.PureComponent)
+}(PureComponent)
 var Ku = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this

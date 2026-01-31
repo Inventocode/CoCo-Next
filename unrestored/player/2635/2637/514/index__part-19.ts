@@ -14,22 +14,23 @@ import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../..
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_738_70 from "../../../../shared/1571/2636/738/70"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_index from "../../../../shared/1571/2636/37/219/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_10_index from "../../../../shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index from "../../../../shared/1571/2636/710/index"
-var ye = React1.memo(function () {
-  var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710_index.a().formatMessage
-  var n = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710 from "../../../../shared/1571/2636/710"
+var ye = memo(function () {
+  var t = useDispatch()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_shared_1571_2636_710.a().formatMessage
+  var n = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = React1.useState(0)
+  var r = useState(0)
   var i = $$_$$_$$_$$_shared_1571_2636_10_index.a(r, 2)
   var o = i[0]
   var a = i[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (ce) {
       clearInterval(ce)
     }
@@ -94,7 +95,7 @@ var ye = React1.memo(function () {
     className: be.phoneNumber
   }, n.phoneNumber), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING && React.createElement("div", {
     className: be.phoneStatus
-  }, $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.onRinging"
   })), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK && React.createElement("div", {
     className: be.phoneStatus
@@ -109,13 +110,13 @@ var ye = React1.memo(function () {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: be.callBtnText
-  }, $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.callEnd"
   }))))), "incomingCall" === n.callType && React.createElement(React.Fragment, null, React.createElement("div", {
     className: be.phoneNumber
   }, n.phoneNumber), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING && React.createElement("div", {
     className: be.phoneStatus
-  }, $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.phoneNumber"
   })), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK && React.createElement("div", {
     className: be.phoneStatus
@@ -130,9 +131,9 @@ var ye = React1.memo(function () {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: be.callBtnText
-  }, n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING ? $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }, n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING ? $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.callRefuse"
-  }) : $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }) : $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.callEnd"
   }))), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING && React.createElement("div", {
     className: be.callBtnItemBox,
@@ -143,7 +144,7 @@ var ye = React1.memo(function () {
     type: "icon-phone-call-dial"
   })), React.createElement("span", {
     className: be.callBtnText
-  }, $$_$$_$$_$$_shared_1571_2636_710_index$a$formatMessage({
+  }, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.callConnect"
   }))))))
 })

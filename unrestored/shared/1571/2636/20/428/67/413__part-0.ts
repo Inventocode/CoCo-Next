@@ -8,7 +8,8 @@
 
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
+import "react-redux"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"

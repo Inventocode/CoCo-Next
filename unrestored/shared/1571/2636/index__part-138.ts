@@ -12,22 +12,23 @@ import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_357 from "./357"
 import /* [auto-meaningful-name] */$_3571 from "./357"
 var /* [auto-meaningful-name] */py$Option = py.Option
-var hC = React1.memo(function (e) {
+var hC = memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var r = Et.Bb(e$widgetId)
-  var o = React1.useRef(null)
-  var i = $_16_index.d()
-  var a = $_16_index.e(function (e) {
+  var o = useRef(null)
+  var i = useDispatch()
+  var a = useSelector(function (e) {
     return e.common.userInfo
   })
   var s = aC()
@@ -41,7 +42,7 @@ var hC = React1.memo(function (e) {
   var v = cC()
   var /* [auto-meaningful-name] */v$handleVisitCloudSpace = v.handleVisitCloudSpace
   var /* [auto-meaningful-name] */v$handleVisitDataSource = v.handleVisitDataSource
-  var E = React1.useState(false)
+  var E = useState(false)
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
@@ -79,7 +80,7 @@ var hC = React1.memo(function (e) {
         type: "icon-add"
       }), React.createElement("div", {
         className: $_3571.newText
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "cloudSpace.newTable"
       })), React.createElement("div", {
         className: $_3571.suffixIcon
@@ -91,7 +92,7 @@ var hC = React1.memo(function (e) {
       var r = React.createElement($_13_index.d, {
         type: "primary",
         onClick: T
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "cloudSpace.needLogin"
       }))
       return React.createElement("div", {
@@ -105,7 +106,7 @@ var hC = React1.memo(function (e) {
       s$bindDataSourceId(e || Et.i)
     },
     dropdownClassName: $_3571.cloudSpaceAntSelectDropdown,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "cloudSpace.ChooseDataSource"
     })
   }, s$cloudDataSources.map(function (e) {
@@ -136,13 +137,13 @@ var hC = React1.memo(function (e) {
     className: N($_3571.formItemWrapper, $_3571.tableFields)
   }, React.createElement("div", {
     className: $_3571.title
-  }, React.createElement("div", null, $_710_index$a$formatMessage({
+  }, React.createElement("div", null, $_710$a$formatMessage({
     id: "cloudSpace.DataSource"
   }))), React.createElement("div", {
     className: $_3571.bindSource
   }, g ? j : React.createElement($_748_index.a, {
     placement: "bottom",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "cloudSpace.onlyAuthorCanEdit"
     })
   }, j)))

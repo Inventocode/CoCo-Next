@@ -7,7 +7,7 @@
 var r = require("./2471")
 var i = require("../../2571/1168/index")
 var o = require("../../../../../../797/101/2466/2477/451")
-var a = require("../../../../../../797/101/2538/2539/2540/992/index")
+var a = require("../../2571/992/index")
 var s = require("../../../2574/2582/1169")
 var c = require("../../2571/1170/index")
 var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty

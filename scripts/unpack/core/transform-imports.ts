@@ -68,6 +68,26 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                     try {
                         const importedModule: Module = getModuleByKey(modules, importedModuleKey)
                         const importPath: string = getImportPath(module, importedModule)
+                        if (!isDefault) {
+                            const { scope } = localNameNodePath
+                            const { referencePaths } = scope.getBinding(localNameNodePath.node.name) ?? {}
+                            for (const referencePath of referencePaths ?? []) {
+                                const { parentPath } = referencePath
+                                if (!parentPath?.isMemberExpression({ computed: false })) {
+                                    continue
+                                }
+                                const propertyPath = parentPath.get("property")
+                                if (!propertyPath.isIdentifier()) {
+                                    continue
+                                }
+                                const propertyName = propertyPath.node.name
+                                const newName = importedModule.exportsNameMap[propertyName]
+                                if (newName == undefined) {
+                                    continue
+                                }
+                                propertyPath.replaceWith(t.identifier(newName))
+                            }
+                        }
                         if (isDefault) {
                             path.replaceWith(t.importDeclaration(
                                 [t.importDefaultSpecifier(localNameNodePath.node)],
@@ -76,10 +96,46 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                             defaultImportIdentifiers.push(localNameNodePath.node)
                         } else if (module.AST.program.sourceType == "module") {
                             if (config.useESImport ?? true) {
-                                path.replaceWith(t.importDeclaration(
-                                    [t.importNamespaceSpecifier(localNameNodePath.node)],
-                                    t.stringLiteral(importPath)
-                                ))
+                                if (importedModule.namedImport) {
+                                    let needsNamespaceImport = false
+                                    const importsName = new Set<string>()
+                                    const { scope } = localNameNodePath
+                                    const { referencePaths } = scope.getBinding(localNameNodePath.node.name) ?? {}
+                                    for (const referencePath of referencePaths ?? []) {
+                                        if (referencePath.node == localNameNodePath.node) {
+                                            continue
+                                        }
+                                        const { parentPath } = referencePath
+                                        if (!parentPath?.isMemberExpression({ computed: false })) {
+                                            needsNamespaceImport = true
+                                            continue
+                                        }
+                                        const propertyPath = parentPath.get("property")
+                                        if (!propertyPath.isIdentifier()) {
+                                            needsNamespaceImport = true
+                                            continue
+                                        }
+                                        importsName.add(propertyPath.node.name)
+                                        parentPath.replaceWith(propertyPath)
+                                    }
+                                    path.replaceWith(t.importDeclaration(
+                                        Array.from(importsName).map((name) => t.importSpecifier(
+                                            t.identifier(name), t.identifier(name)
+                                        )),
+                                        t.stringLiteral(importPath)
+                                    ))
+                                    if (needsNamespaceImport) {
+                                        path.insertAfter(t.importDeclaration(
+                                            [t.importNamespaceSpecifier(localNameNodePath.node)],
+                                            t.stringLiteral(importPath)
+                                        ))
+                                    }
+                                } else {
+                                    path.replaceWith(t.importDeclaration(
+                                        [t.importNamespaceSpecifier(localNameNodePath.node)],
+                                        t.stringLiteral(importPath)
+                                    ))
+                                }
                             } else {
                                 path.replaceWith(t.tsImportEqualsDeclaration(
                                     localNameNodePath.node,

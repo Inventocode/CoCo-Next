@@ -26,21 +26,21 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1514 from "../../../../../unrestored/shared/1571/2636/1514"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15141 from "../../../../../unrestored/shared/1571/2636/1514"
 
 var WidgetMallButton = React.memo(function (e) {
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  var n = useSelector(function (e) {
     return e.common.userInfo
   })
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var r = useDispatch()
   return (
     <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
       className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtn}
@@ -62,13 +62,13 @@ var WidgetMallButton = React.memo(function (e) {
 })
 
 var WidgetScrollExtension = React.memo(function (e) {
-  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.common.myExtensionWidgets
   })
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.common.userInfo
   })
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var r = useDispatch()
   var o = []
   var i = []
   const a = (e) => ({
@@ -86,7 +86,7 @@ var WidgetScrollExtension = React.memo(function (e) {
       o.push(a(e))
     }
   })
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
   var c = React.useState(false)
   var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 2)
   var u = l[0]
@@ -181,11 +181,11 @@ enum Tab {
 }
 
 var WidgetTabContainer = React.memo(function (e) {
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var n = useSelector(function (e) {
     return e.uiConfig.widgetEditor
   }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return !!e.oTState.collWorkId
   })
   var o = React.useState(Tab.BASIC)
@@ -203,7 +203,7 @@ var WidgetTabContainer = React.memo(function (e) {
           }}
           className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
-          <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "Widget.basic" })}</div>
+          <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "Widget.basic" })}</div>
         </div>
         <div
           onClick={() => {
@@ -211,7 +211,7 @@ var WidgetTabContainer = React.memo(function (e) {
           }}
           className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
-          <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "Widget.extension" })}</div>
+          <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "Widget.extension" })}</div>
         </div>
       </div>
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContent}>
@@ -227,7 +227,7 @@ var WidgetTabContainer = React.memo(function (e) {
 })
 
 var StageToast = React.memo(function () {
-  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.common.stageToast
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -235,7 +235,7 @@ var StageToast = React.memo(function () {
   var r = undefined === e$toast ? "" : e$toast
   var /* [auto-meaningful-name] */e$showIcon = e.showIcon
   var i = undefined !== e$showIcon && e$showIcon
-  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var a = useDispatch()
   var s = React.useRef(null)
   React.useEffect(() => {
     if (s.current) {
@@ -260,17 +260,17 @@ var Cv = window.innerWidth > 1300 ? 144 : 92
 var Tv = 92 === Cv
 
 var PreviewArea = React.memo(() => {
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a()
-  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  var t = useDispatch()
   var n = React.useRef(null)
   var r = React.useRef(null)
-  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.project.playing
   })
-  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.common.stageVisible
   })
-  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var a = useSelector(function (e) {
     return e.common.isHoverBlockArea
   })
   var s = React.useState(0)

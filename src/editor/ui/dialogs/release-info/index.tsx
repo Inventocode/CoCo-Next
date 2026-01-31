@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 
 import styles from "./styles.module.css"
 
@@ -30,20 +30,20 @@ const RELEASE_LINKS = [
 ]
 
 const ReleaseInfo = React.memo(() => {
-  const releaseInfoDialogVisible = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const releaseInfoDialogVisible = useSelector(function (e) {
     return e.common.releaseInfoDialogVisible
   })
-  const userId = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const userId = useSelector(function (e) {
     return e.common.userInfo?.id
   })
-  const userInfoFetchDone = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const userInfoFetchDone = useSelector(function (e) {
     return e.common.userInfoFetchDone
   })
   var r = React.useState(false)
   var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var s = useDispatch()
   React.useEffect(function () {
     if (userInfoFetchDone) {
       if (!i) {

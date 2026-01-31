@@ -6,11 +6,12 @@
 
 "use strict"
 
+import { useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import "../../../shared/1571/2636/719"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_80_index from "../../../shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_80_index1 from "../../../shared/1571/2636/80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_6 from "../../../shared/1571/2636/6"
@@ -19,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_10_index from 
 import * as /* [auto-meaningful-name] */$_514_index from "./514/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_177 from "../../../shared/1571/2636/177"
 var p = React1.memo(function () {
-  var t = React.useState()
+  var t = useState()
   var e = $$_$$_$$_shared_1571_2636_10_index.a(t, 2)
   var n = e[0]
   var o = e[1]
@@ -55,11 +56,11 @@ var p = React1.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  React.useEffect(function () {
+  useEffect(function () {
     !function () {
       a.apply(this, arguments)
     }()
   }, [])
   return n ? React1.createElement($_514_index.a, n) : React1.createElement(React1.Fragment, null)
 })
-$$_$$_$$_shared_1571_2636_80_index1.render(React1.createElement(p, null), document.getElementById("root"))
+ReactDom1.render(React1.createElement(p, null), document.getElementById("root"))

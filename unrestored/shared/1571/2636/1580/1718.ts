@@ -4,10 +4,10 @@
  * 模块 ID：1718
  */
 
-var r = require("./1706/86/index")
+var r = require("./1661/86/index")
 var o = require("./1581/441")
-var i = require("./1597/256")
-var a = require("./1581/310")
+var i = require("./1775/256")
+var a = require("./1785/310")
 r({
   target: "String",
   stat: true

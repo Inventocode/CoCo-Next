@@ -7,6 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_241_index from "../241/index"

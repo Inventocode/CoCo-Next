@@ -12,18 +12,19 @@ import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
 import /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as _n from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_568 from "./568"
 import /* [auto-meaningful-name] */$_5681 from "./568"
@@ -34,12 +35,12 @@ import /* [auto-meaningful-name] */$_4961 from "./496"
 import * as /* [auto-meaningful-name] */$_384 from "./384"
 import /* [auto-meaningful-name] */$_3841 from "./384"
 var QS = function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var /* [auto-meaningful-name] */e$watchItem = e.watchItem
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.project.playing
   })
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.project.screens
   })
   var i = o.findIndex(function (e) {
@@ -103,7 +104,7 @@ var QS = function (e) {
   if (e$watchItem.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.B || e$watchItem.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.y) {
     if (Array.isArray(e$watchItem.value)) {
       var m
-      var g = _n.a(e$watchItem.value)
+      var g = $_47_index.a(e$watchItem.value)
       try {
         for (g.s(); !(m = g.n()).done;) {
           var /* [auto-meaningful-name] */m$value = m.value
@@ -138,7 +139,7 @@ var QS = function (e) {
       e = React.createElement($_748_index.a, {
         placement: "bottom",
         trigger: ["hover"],
-        title: $_710_index$a$formatMessage({
+        title: $_710$a$formatMessage({
           id: "resetData"
         })
       }, React.createElement("div", {
@@ -196,12 +197,12 @@ var QS = function (e) {
 }
 var ZS = function (e) {
   var /* [auto-meaningful-name] */e$watchItem = e.watchItem
-  var n = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var o = $_16_index.e(function (e) {
+  var n = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var o = useSelector(function (e) {
     return e.project.screens
   })
-  var i = $_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.project.playing
   })
   var a = o.findIndex(function (e) {
@@ -224,7 +225,7 @@ var ZS = function (e) {
     n($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$watchItem.id, "isWatching", false))
     n($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$watchItem.id, "selected", false))
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$watchItem.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
       $_174.a.get(e$watchItem.id).then(function (e) {
         if (e) {
@@ -263,7 +264,7 @@ var ZS = function (e) {
     m = React.createElement($_748_index.a, {
       placement: "bottom",
       trigger: ["hover"],
-      title: $_710_index$a$formatMessage({
+      title: $_710$a$formatMessage({
         id: "resetData"
       })
     }, React.createElement("div", {
@@ -310,7 +311,7 @@ var ZS = function (e) {
         case $$_$$_$$_$$_src_editor_widget_builtIn_types.y:
           if (Array.isArray(r)) {
             var u
-            var d = _n.a(r)
+            var d = $_47_index.a(r)
             try {
               for (d.s(); !(u = d.n()).done;) {
                 var /* [auto-meaningful-name] */u$value = u.value
@@ -372,8 +373,8 @@ var ZS = function (e) {
   }))
 }
 var JS = function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useSelector(function (e) {
     return e.dataWatch.variableList
   })
   var n = function (e) {
@@ -428,7 +429,7 @@ var JS = function () {
       type: a.class
     })), React.createElement("div", {
       className: $_5681.categoryText
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: a.text
     }))), i.map(function (e) {
       return React.createElement(ZS, {
@@ -444,7 +445,7 @@ var JS = function () {
     }
   }, React.createElement(we, null), React.createElement("span", {
     className: $_5681.emptyText
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "DataWatch.unable"
   }))) : 0 === t.filter(function (e) {
     return e.isWatching
@@ -455,7 +456,7 @@ var JS = function () {
       }
     }, React.createElement(we, null), React.createElement("span", {
       className: $_5681.emptyText
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "DataWatch.empty"
     }))) : React.createElement("div", {
       className: N($_5681.list)

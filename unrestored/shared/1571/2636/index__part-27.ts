@@ -11,6 +11,7 @@ import * as X from "./27"
 import * as k from "./11"
 import N from "./8"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1512 from "./1512"
 import * as ro from "./39"
@@ -75,5 +76,5 @@ var co = function (e) {
   ])
   return n
 }(React.PureComponent)
-var lo = React1.memo(co)
+var lo = memo(co)
 export { lo }

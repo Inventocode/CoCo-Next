@@ -9,8 +9,8 @@
 export { o as a }
 import * as /* [auto-meaningful-name] */$_2645 from "./2645"
 import "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_709_798 from "../../../551/1211/709/798"
+import * as /* [auto-meaningful-name] */$$_709_798_index from "../709/798/index"
 function o() {
-  return $_2645.a() || $$_$$_$$_551_1211_709_798.a
+  return $_2645.a() || $$_709_798_index.a
 }
 export default o

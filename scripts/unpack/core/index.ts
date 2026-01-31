@@ -1,7 +1,7 @@
 import path from "path"
 import { promises as fs } from "fs"
 
-import { UnpackConfig, ModuleMap, SetPath, ModuleKey } from "./types"
+import { UnpackConfig, ModuleMap, SetPath, Externals } from "./types"
 import { loadModulesFromFile } from "./load"
 import { unminimize } from "./unminimize"
 import { buildDependencies } from "./build-dependency"
@@ -41,15 +41,20 @@ export async function unpack(config: UnpackConfig): Promise<void> {
     transformImports(modules, config)
     transformExports(modules)
     await write(config, modules)
-    const { pathMap: pathMapPath } = config.output
-    if (pathMapPath) {
-        const pathMap: Record<ModuleKey, string> = {}
+    const { modulesInfo: modulesInfoPath } = config.output
+    if (modulesInfoPath) {
+        const modulesInfo: Externals = []
         for (const module of Object.values(modules)) {
-            pathMap[module.key] = module.external ?? "/" + module.path.join("/")
+            modulesInfo.push({
+                key: module.key,
+                source: module.external ?? "/" + module.path.join("/"),
+                exportsNameMap: module.exportsNameMap,
+                namedImport: module.namedImport
+            })
         }
         await fs.writeFile(
-            path.resolve(config.output.basePath, config.output.unrestoredPath, pathMapPath),
-            JSON.stringify(pathMap, null, 4)
+            path.resolve(config.output.basePath, config.output.unrestoredPath, modulesInfoPath),
+            JSON.stringify(modulesInfo, null, 4)
         )
     }
 }

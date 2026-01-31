@@ -6,7 +6,7 @@
 
 var r = require("./836")
 var o = require("../949/834")
-var i = require("../1686/246/index")("iterator")
+var i = require("../1782/246/index")("iterator")
 module.exports = function (e) {
   if (undefined != e) {
     return e[i] || e["@@iterator"] || o[r(e)]

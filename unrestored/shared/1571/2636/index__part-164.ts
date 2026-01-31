@@ -14,26 +14,27 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_341 from "./341"
 import /* [auto-meaningful-name] */$_3411 from "./341"
 var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
 var bA = {}
 var yA = {}
-var EA = React1.memo(function (e) {
+var EA = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
   var /* [auto-meaningful-name] */e$name = e.name
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$duration = e.duration
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = $_16_index.d()
-  var l = React1.useState(0)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useDispatch()
+  var l = useState(0)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
@@ -50,7 +51,7 @@ var EA = React1.memo(function (e) {
     var t = te.I(e)
     return [e.slice(0, e.lastIndexOf(t)), t]
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     return function () {
       if (e$isPlaying && bA[t]) {
         if (yA[t]) {
@@ -82,15 +83,15 @@ var EA = React1.memo(function (e) {
         c($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           isDangerous: true,
           onConfirm: m.bind(null, e),
-          allowText: $_710_index$a$formatMessage({
+          allowText: $_710$a$formatMessage({
             id: "delete"
           }),
-          title: $_710_index$a$formatMessage({
+          title: $_710$a$formatMessage({
             id: "deleteSoundFileTitle"
           }, {
             name: $_190.f(e$name || "", 10)
           }),
-          content: $_710_index$a$formatMessage({
+          content: $_710$a$formatMessage({
             id: "deleteSoundFileTips"
           }, {
             name: t.join("、")
@@ -183,7 +184,7 @@ var EA = React1.memo(function (e) {
           o.target.value = e
           if (r !== e) {
             c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-              message: $_710_index$a$formatMessage({
+              message: $_710$a$formatMessage({
                 id: "renameFileNameRepeatTips"
               })
             }))

@@ -18,22 +18,23 @@ import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_747 from "./747"
 import /* [auto-meaningful-name] */$_7471 from "./747"
-var wy = React1.memo(function () {
-  var e = $_16_index.d()
+var wy = memo(function () {
+  var e = useDispatch()
   var t = $_238.b()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var r = $_238.d()
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.project.screens
   })
-  var i = React1.useState(false)
+  var i = useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -67,7 +68,7 @@ var wy = React1.memo(function () {
     }
   })), React.createElement("div", null, React.createElement($_13_index.i, {
     className: N(qv.formItemWrapper, "changeBackgroundColor"),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "color"
     })
   }, React.createElement($_1213.a, {
@@ -92,7 +93,7 @@ var wy = React1.memo(function () {
   })))), React.createElement($_13_index.i, {
     className: N(qv.formItemWrapper, $_7471.changeImageWrapper),
     align: "vertical",
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "backgroundImage"
     })
   }, React.createElement(nb, {
@@ -117,7 +118,7 @@ var wy = React1.memo(function () {
     fileId: r$backgroundImage
   })), g && React.createElement($_13_index.i, {
     className: N(qv.formItemWrapper),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "adapt"
     }),
     align: "vertical"

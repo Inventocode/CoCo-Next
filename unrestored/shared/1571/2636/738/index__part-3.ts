@@ -9,9 +9,9 @@
 import { d, p, h, g } from "./index__part-0"
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import N from "../8"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
+import * as /* [auto-meaningful-name] */$$_710 from "../710"
 var Y = [
   {
     type: "SHAKE",
@@ -51,7 +51,7 @@ var K = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$selected = e.selected
   var /* [auto-meaningful-name] */e$name = e.name
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
   return React.createElement("div", {
     className: N("emulator-channel-item", e$selected && "selected")
   }, React.createElement("div", {
@@ -60,13 +60,13 @@ var K = React.memo(function (e) {
     type: e$icon
   })), React.createElement("div", {
     className: "emulator-text"
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: e$name
   })))
 })
 var q = React.memo(function () {
-  var e = $$_16_index.d()
-  var t = $$_16_index.e(function (e) {
+  var e = useDispatch()
+  var t = useSelector(function (e) {
     return e
   })
   return React.createElement("div", {

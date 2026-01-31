@@ -46,7 +46,7 @@ var r = function (e) {
   return n
 }(require("react"))
 var o = p(require("../../50/index"))
-var i = p(require("../../80/index"))
+var i = p(require("react-dom"))
 var a = p(require("../../8"))
 var s = require("./1071/index")
 var c = require("./1217")

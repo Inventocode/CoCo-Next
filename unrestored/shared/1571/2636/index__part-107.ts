@@ -19,9 +19,10 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { forwardRef, useContext, createElement, memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_315 from "./315"
 var dE = function (e, t) {
@@ -39,12 +40,12 @@ var dE = function (e, t) {
   }
   return n
 }
-var pE = React1.forwardRef(function (e, t) {
+var pE = forwardRef(function (e, t) {
   var n
-  var r = React1.useContext($_801_index.b)
+  var r = useContext($_801_index.b)
   var /* [auto-meaningful-name] */r$getPrefixCls = r.getPrefixCls
   var /* [auto-meaningful-name] */r$direction = r.direction
-  var a = React1.useContext($_517.b)
+  var a = useContext($_517.b)
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$size = e.size
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
@@ -55,15 +56,15 @@ var pE = React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$readOnly = e.readOnly
   var g = dE(e, ["className", "size", "prefixCls", "addonBefore", "addonAfter", "bordered", "readOnly"])
   var _ = r$getPrefixCls("input-number", e$prefixCls)
-  var v = React1.createElement(lE, {
+  var v = createElement(lE, {
     className: "".concat(_, "-handler-up-inner")
   })
-  var b = React1.createElement(Zb, {
+  var b = createElement(Zb, {
     className: "".concat(_, "-handler-down-inner")
   })
   var y = e$size || a
   var E = N((n = {}, Ln.a(n, "".concat(_, "-lg"), "large" === y), Ln.a(n, "".concat(_, "-sm"), "small" === y), Ln.a(n, "".concat(_, "-rtl"), "rtl" === r$direction), Ln.a(n, "".concat(_, "-readonly"), e$readOnly), Ln.a(n, "".concat(_, "-borderless"), !h), n), e$className)
-  var O = React1.createElement(oE, Dn.a({
+  var O = createElement(oE, Dn.a({
     ref: t,
     className: E,
     upHandler: v,
@@ -75,18 +76,18 @@ var pE = React1.forwardRef(function (e, t) {
     var w
     var C = "".concat(_, "-group")
     var T = "".concat(C, "-addon")
-    var S = e$addonBefore ? React1.createElement("div", {
+    var S = e$addonBefore ? createElement("div", {
       className: T
     }, e$addonBefore) : null
-    var A = e$addonAfter ? React1.createElement("div", {
+    var A = e$addonAfter ? createElement("div", {
       className: T
     }, e$addonAfter) : null
     var I = N("".concat(_, "-wrapper"), C, Ln.a({}, "".concat(C, "-rtl"), "rtl" === r$direction))
     var j = N("".concat(_, "-group-wrapper"), (w = {}, Ln.a(w, "".concat(_, "-group-wrapper-sm"), "small" === a), Ln.a(w, "".concat(_, "-group-wrapper-lg"), "large" === a), Ln.a(w, "".concat(_, "-group-wrapper-rtl"), "rtl" === r$direction), w), e$className)
-    return React1.createElement("div", {
+    return createElement("div", {
       className: j,
       style: e.style
-    }, React1.createElement("div", {
+    }, createElement("div", {
       className: I
     }, S, $_315.a(O, {
       style: null
@@ -94,13 +95,13 @@ var pE = React1.forwardRef(function (e, t) {
   }
   return O
 })
-var fE = React1.memo(function (e) {
+var fE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "number" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
-  var a = (0, $_710_index.a().formatMessage)({
+  var a = (0, $_710.a().formatMessage)({
     id: e$formConfig.label || "content"
   })
   var /* [auto-meaningful-name] */e$formConfig$max = e$formConfig.max
@@ -127,13 +128,13 @@ var fE = React1.memo(function (e) {
     }
   }))
 })
-var hE = React1.memo(function (e) {
+var hE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "visible" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$renderInline = e.renderInline
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var s = e$getValue(n)
   var c = React.createElement($_13_index.i, {
     className: "coco-visible-switch changeVisible"
@@ -146,7 +147,7 @@ var hE = React1.memo(function (e) {
     className: qv.btnIcon
   }, React.createElement($_13_index.j, {
     type: s ? "icon-see" : "icon-see-disable"
-  })), $_710_index$a$formatMessage(s ? {
+  })), $_710$a$formatMessage(s ? {
     id: "show"
   } : {
     id: "hide"
@@ -155,13 +156,13 @@ var hE = React1.memo(function (e) {
     className: qv.formItemWrapper
   }, c)
 })
-var mE = React1.memo(function (e) {
+var mE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "disabled" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$renderInline = e.renderInline
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var s = e$getValue(n)
   var c = React.createElement($_13_index.i, {
     className: "changeDisabled"
@@ -174,7 +175,7 @@ var mE = React1.memo(function (e) {
     className: qv.btnIcon
   }, React.createElement($_13_index.j, {
     type: s ? "icon-use_disable" : "icon-use"
-  })), $_710_index$a$formatMessage(s ? {
+  })), $_710$a$formatMessage(s ? {
     id: "disabled"
   } : {
     id: "able"
@@ -183,7 +184,7 @@ var mE = React1.memo(function (e) {
     className: qv.formItemWrapper
   }, c)
 })
-var gE = React1.memo(function (e) {
+var gE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "color" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -192,7 +193,7 @@ var gE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$label = e.formConfig.label
   var s = undefined === e$formConfig$label ? "color" : e$formConfig$label
   var c = e$getValue(n)
-  var l = (0, $_710_index.a().formatMessage)({
+  var l = (0, $_710.a().formatMessage)({
     id: s
   })
   var u = React.createElement($_13_index.i, {
@@ -209,7 +210,7 @@ var gE = React1.memo(function (e) {
     className: qv.formItemWrapper
   }, u)
 })
-var _E = React1.memo(function (e) {
+var _E = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "backgroundColor" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -217,12 +218,12 @@ var _E = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$renderInline = e.renderInline
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var s = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var /* [auto-meaningful-name] */e$formConfig$label = e$formConfig.label
-  var u = $_710_index$a$formatMessage({
+  var u = $_710$a$formatMessage({
     id: undefined === e$formConfig$label ? "backgroundColor" : e$formConfig$label
   })
-  var d = React1.useState(false)
+  var d = useState(false)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]

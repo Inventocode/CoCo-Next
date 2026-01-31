@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$_454 from "./454"
+import * as /* [auto-meaningful-name] */$_454_index from "./454/index"
 import * as X from "./27"
 var Q = new function e() {
   var t = this

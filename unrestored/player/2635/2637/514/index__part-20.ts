@@ -11,8 +11,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index fr
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_684_480 from "../../../../shared/1571/2636/684/480"
 var Ee = [
@@ -38,9 +39,9 @@ var Ee = [
     number: "123 4567 8905"
   }
 ]
-var Oe = React1.memo(function () {
-  var t = $$_$$_$$_$$_shared_1571_2636_16_index.d()
-  var e = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
+var Oe = memo(function () {
+  var t = useDispatch()
+  var e = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
   var n = function (n, r, i) {

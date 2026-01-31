@@ -9,23 +9,24 @@
 import { Pd } from "./index__part-31"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as kn from "./75"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
 import * as /* [auto-meaningful-name] */$_1054 from "./1054"
 import /* [auto-meaningful-name] */$_10541 from "./1054"
 var Wd = React.memo(function () {
-  var e = React1.useRef(null)
-  var t = React1.useRef(null)
-  var n = React1.useRef(null)
-  var r = $_16_index.e(function (e) {
+  var e = useRef(null)
+  var t = useRef(null)
+  var n = useRef(null)
+  var r = useSelector(function (e) {
     return e.common.stageRulerVisible
   })
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.common.stageScale
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n.current && r) {
       var i = Lodash.throttle(function () {
         if (n.current && t.current && e.current) {

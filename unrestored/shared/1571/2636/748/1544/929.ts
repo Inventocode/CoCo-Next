@@ -7,11 +7,11 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */$$_$$_80_index from "../../80/index"
-import /* [auto-meaningful-name] */$$_$$_80_index1 from "../../80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 function o(e, t, n, r) {
-  var o = $$_$$_80_index1.unstable_batchedUpdates ? function (e) {
-    $$_$$_80_index1.unstable_batchedUpdates(n, e)
+  var o = ReactDom1.unstable_batchedUpdates ? function (e) {
+    ReactDom1.unstable_batchedUpdates(n, e)
   } : n
   if (e.addEventListener) {
     e.addEventListener(t, o, r)

@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
+import { useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_546_index from "../../../546/index"
 import * as /* [auto-meaningful-name] */$$_242 from "../242"
 import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/index"
@@ -20,7 +20,7 @@ var j = function (e) {
   var /* [auto-meaningful-name] */e$attributes = e.attributes
   var /* [auto-meaningful-name] */e$animationRecord = e.animationRecord
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
-  var l = $$_$$_$$_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.iconFileMap
   }).get(e$attributes.iconId)
   return React.createElement($$_$$_$$_546_index.a, Object.assign({}, e, {

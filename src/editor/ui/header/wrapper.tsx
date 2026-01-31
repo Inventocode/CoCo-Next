@@ -30,12 +30,12 @@ import * as Actions from "../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../unrestored/shared/1571/2636/710"
 import { a as Tooltip } from "../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_1053 from "../../../../unrestored/shared/1571/2636/1053"
 
@@ -43,14 +43,14 @@ import styles from "./styles.module.css"
 import cloudSpaceManagerStyles from "../../../../unrestored/shared/1571/2636/1053"
 
 function CloudSpaceManager() {
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var t = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var t = useSelector(function (e) {
     return e.uiConfig.header
   })
-  var n = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.cloudSpace.cloudDictList
   })
-  var r = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.cloudSpace.cloudTableList
   })
   var o = React.useState(false)
@@ -104,7 +104,7 @@ function CloudSpaceManager() {
   if (t.cloudSpaceManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide) {
     return null
   }
-  var p = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage(u ? {
+  var p = $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage(u ? {
     id: "cloudSpace.outMaxLimit"
   } : a ? {
     id: "cloudSpace.outWarnLimit"
@@ -122,17 +122,17 @@ function CloudSpaceManager() {
         onClick={() => window.open(`${$$_$$_$$_$$_unrestored_shared_1571_2636_15.A()}/`, "_blank")}
         className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(cloudSpaceManagerStyles.cloudSpaceManager)}
       >
-        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
+        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
           <div className={cloudSpaceManagerStyles.cloudIconError}>
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-error" />
           </div>
         )}
-        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "cloudSpace.outWarnLimit" }) && (
+        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "cloudSpace.outWarnLimit" }) && (
           <div className={cloudSpaceManagerStyles.cloudIconWarn}>
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-warn" />
           </div>
         )}
-        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "cloudSpace.cloudSpace" }) && (
+        {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "cloudSpace.cloudSpace" }) && (
           <div>
             <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-normal" />
           </div>
@@ -142,8 +142,8 @@ function CloudSpaceManager() {
   )
 }
 const Header = React.memo(({ children }: { children: JSX.Element }) => {
-  const dispatch = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  const dispatch = useDispatch()
+  var formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var o = React.useState(false)
   var i = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
   var a = i[0]
@@ -153,47 +153,47 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
   var u = l[0]
   var d = l[1]
   var asyncCreateProjectRef = React.useRef<null | (() => void)>()
-  var userInfo = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var userInfo = useSelector(function (e) {
     return e.common.userInfo
   })
-  var saving = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var saving = useSelector(function (e) {
     return e.common.saving
   })
-  var isAuthor = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var isAuthor = useSelector(function (e) {
     return e.oTState.isAuthor
   })
-  var checkedTimeStamp = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var checkedTimeStamp = useSelector(function (e) {
     return e.cloudSpace.checkedTimeStamp
   })
-  var stageRulerVisible = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var stageRulerVisible = useSelector(function (e) {
     return e.common.stageRulerVisible
   })
-  var stageVisible = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var stageVisible = useSelector(function (e) {
     return e.common.stageVisible
   })
-  var cloudDBManagerDialogVisible = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var cloudDBManagerDialogVisible = useSelector(function (e) {
     return e.common.cloudDBManagerDialogVisible
   })
-  var project = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var project = useSelector(function (e) {
     return e.project
   })
   const { isPackaging, packageQrCodeVisible, packageDialogVisible } = project
-  var lastSavedTime = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var lastSavedTime = useSelector(function (e) {
     return e.common.lastSavedTime
   })
-  var isProjectModified = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var isProjectModified = useSelector(function (e) {
     return e.common.isProjectModified
   })
-  var playing = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var playing = useSelector(function (e) {
     return e.project.playing
   })
-  var id = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var id = useSelector(function (e) {
     return e.project.id
   })
-  var title = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var title = useSelector(function (e) {
     return e.project.title
   })
-  var jsonFrom = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var jsonFrom = useSelector(function (e) {
     return e.project.jsonFrom
   })
   var isUpdate = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id)
@@ -204,7 +204,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
   var ee = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a($, 2)
   var ne = ee[0]
   var re = ee[1]
-  const uiConfig = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const uiConfig = useSelector(function (e) {
     return e.uiConfig.header
   })
   var ie = React.useState(false)
@@ -239,13 +239,13 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
   var de = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ue, 2)
   var pe = de[0]
   var fe = de[1]
-  var collAutoSave = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var collAutoSave = useSelector(function (e) {
     return e.common.collAutoSave
   })
-  var historyArchiveId = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var historyArchiveId = useSelector(function (e) {
     return e.common.historyArchiveId
   })
-  var collWorkId = $$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var collWorkId = useSelector(function (e) {
     return e.oTState.collWorkId
   })
   React.useEffect(function () {

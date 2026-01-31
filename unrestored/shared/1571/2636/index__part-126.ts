@@ -12,13 +12,14 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_2680_index from "./2680/index"
-var hw = React1.memo(function (e) {
+var hw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "templateType" : e$keyName
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
@@ -26,9 +27,9 @@ var hw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var a = e$getValue(n)
   var s = e$getValue("templateRenderType")
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = $_16_index.d()
-  var u = React1.useState(false)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var l = useDispatch()
+  var u = useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
@@ -53,19 +54,19 @@ var hw = React1.memo(function (e) {
     className: N($_186.formItemWrapper, "templateType")
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.templateType"
   }), React.createElement("div", {
     className: $_186.cardBox
   }, React.createElement("div", {
     onClick: g.bind(null, "tiled"),
     className: N($_186.cardItem, "tiled" === s && $_186.active)
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.tiled"
   })), React.createElement("div", {
     onClick: g.bind(null, "card"),
     className: N($_186.cardItem, "card" === s && $_186.active)
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.card"
   })))), React.createElement("div", {
     className: $_186.templateBox,
@@ -97,7 +98,7 @@ var hw = React1.memo(function (e) {
     className: $_186.templateListTitle
   }, React.createElement("div", {
     className: $_186.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ListViewerWidget.templateType"
   })), React.createElement($_13_index.j, {
     type: "icon-closed"
@@ -119,7 +120,7 @@ var hw = React1.memo(function (e) {
     }))
   }))))
 })
-var mw = React1.memo(function (e) {
+var mw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -127,12 +128,12 @@ var mw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var a = e$getValue(n)
   var s = e$formConfig.dropdown || []
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var l = React1.useState(a)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var l = useState(a)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = $_710_index$a$formatMessage({
+  var m = $_710$a$formatMessage({
     id: e$formConfig.label || "options"
   })
   var g = function (e) {

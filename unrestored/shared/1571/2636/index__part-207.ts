@@ -9,17 +9,18 @@
 import * as te from "./15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_348 from "./348"
 import /* [auto-meaningful-name] */$_3481 from "./348"
-var zL = React1.memo(function (e) {
-  var t = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+var zL = memo(function (e) {
+  var t = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var r = function () {
     var r = O.a(RegeneratorRuntime.mark(function r(o) {
       var i
@@ -49,7 +50,7 @@ var zL = React1.memo(function (e) {
                             break
                           }
                           t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710_index$a$formatMessage({
+                            message: $_710$a$formatMessage({
                               id: "cloudGrid.FileSizeLimit"
                             })
                           }))
@@ -68,7 +69,7 @@ var zL = React1.memo(function (e) {
                             break
                           }
                           t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710_index$a$formatMessage({
+                            message: $_710$a$formatMessage({
                               id: "cloudGrid.FileColumnSizeLimit"
                             })
                           }))
@@ -81,7 +82,7 @@ var zL = React1.memo(function (e) {
                             break
                           }
                           t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710_index$a$formatMessage({
+                            message: $_710$a$formatMessage({
                               id: "cloudGrid.FileColumnNameRepeat"
                             })
                           }))
@@ -94,7 +95,7 @@ var zL = React1.memo(function (e) {
                             break
                           }
                           t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710_index$a$formatMessage({
+                            message: $_710$a$formatMessage({
                               id: "cloudGrid.FileRowSizeLimit"
                             })
                           }))
@@ -102,7 +103,7 @@ var zL = React1.memo(function (e) {
                         case 21:
                           e.handleSetGridInfo(r$sent.data, r$sent.header)
                           t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                            message: $_710_index$a$formatMessage({
+                            message: $_710$a$formatMessage({
                               id: "cloudGrid.fileImportSuccess"
                             })
                           }))
@@ -115,7 +116,7 @@ var zL = React1.memo(function (e) {
                           console.info(r.t0)
                           if ("cell length larger than 1000" === r.t0.error) {
                             t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                              message: $_710_index$a$formatMessage({
+                              message: $_710$a$formatMessage({
                                 id: "cloudGrid.FileCellSizeLimit"
                               })
                             }))
@@ -138,13 +139,13 @@ var zL = React1.memo(function (e) {
                   onConfirm: function () {
                     a(i)
                   },
-                  allowText: $_710_index$a$formatMessage({
+                  allowText: $_710$a$formatMessage({
                     id: "confirm"
                   }),
-                  title: $_710_index$a$formatMessage({
+                  title: $_710$a$formatMessage({
                     id: "cloudGrid.importCoverTitle"
                   }),
-                  content: $_710_index$a$formatMessage({
+                  content: $_710$a$formatMessage({
                     id: "cloudGrid.importCoverTitleContent"
                   })
                 }))
@@ -166,7 +167,7 @@ var zL = React1.memo(function (e) {
     className: $_3481.uploadButton
   }, React.createElement($_13_index.j, {
     type: "icon-add"
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "cloudGrid.FileImport"
   })))
 })

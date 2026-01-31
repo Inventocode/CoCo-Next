@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./257/index")
-var /* [auto-meaningful-name] */require$$_1613_950$left = require("../1613/950").left
+var r = require("../1754/257/index")
+var /* [auto-meaningful-name] */require$_950$left = require("./950").left
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("reduce", function (e) {
-  return require$$_1613_950$left(r$aTypedArray(this), e, arguments.length, arguments.length > 1 ? arguments[1] : undefined)
+  return require$_950$left(r$aTypedArray(this), e, arguments.length, arguments.length > 1 ? arguments[1] : undefined)
 })

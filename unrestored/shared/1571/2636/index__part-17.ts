@@ -15,12 +15,13 @@ import * as Z from "./97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1509 from "./1509"
 import /* [auto-meaningful-name] */$_15091 from "./1509"
@@ -33,24 +34,24 @@ import * as /* [auto-meaningful-name] */$_328 from "./328"
 import * as /* [auto-meaningful-name] */$_930 from "./930"
 import /* [auto-meaningful-name] */$_9301 from "./930"
 var Zt
-var Jt = React1.memo(function (e) {
+var Jt = memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.project.id
   })
-  var i = $_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.project.title
   })
-  var a = React1.useState(false)
+  var a = useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useRef(null)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var p = $_16_index.d()
-  var m = React1.useState({
+  var u = useRef(null)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var p = useDispatch()
+  var m = useState({
     name: i,
     description: "",
     operation: ""
@@ -58,14 +59,14 @@ var Jt = React1.memo(function (e) {
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = $_16_index.e(function (e) {
+  var y = useSelector(function (e) {
     var t
     return null === (t = e.project.screens.get(0)) || undefined === t ? undefined : t.snapshot
   })
-  var w = $_16_index.e(function (e) {
+  var w = useSelector(function (e) {
     return e.project.projectSource
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */u$current
     if (e$visible) {
       if (!(null === (u$current = u.current) || undefined === u$current)) {
@@ -73,18 +74,18 @@ var Jt = React1.memo(function (e) {
       }
     }
   }, [e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     b({
       description: "",
       operation: "",
       name: i
     })
   }, [i])
-  var C = React1.useState("")
+  var C = useState("")
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var N = React1.useState(y || "")
+  var N = useState(y || "")
   var R = $_10_index.a(N, 2)
   var k = R[0]
   var x = R[1]
@@ -157,7 +158,7 @@ var Jt = React1.memo(function (e) {
               e$sent1 = e.sent
               p($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 type: "success",
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "Publish.publishSuccess"
                 }),
                 showCloseIcon: false
@@ -182,7 +183,7 @@ var Jt = React1.memo(function (e) {
             case 36:
               p($$_$$_$$_$$_src_editor_redux_common_actions.mj({
                 type: "error",
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "Publish.publishFail"
                 }),
                 showCloseIcon: false
@@ -210,7 +211,7 @@ var Jt = React1.memo(function (e) {
       failReason: n
     })
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       if (Z.a(o)) {
         $_177.j(o).then(function (e) {
@@ -238,7 +239,7 @@ var Jt = React1.memo(function (e) {
     className: $_9301.publishDialog,
     visible: e$visible,
     withPortal: true,
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "Publish.publish"
     })
   }, React.createElement("main", null, React.createElement("div", null, React.createElement($_13_index.c, {
@@ -255,18 +256,18 @@ var Jt = React1.memo(function (e) {
     accept: $_133.f
   }, React.createElement($_13_index.j, {
     type: "icon-player-upload-file"
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "Publish.changeWorkCover"
   })))), React.createElement("div", {
     className: $_9301.right
-  }, React.createElement("ul", null, React.createElement("li", null, React.createElement("p", null, $_710_index$a$formatMessage({
+  }, React.createElement("ul", null, React.createElement("li", null, React.createElement("p", null, $_710$a$formatMessage({
     id: "Publish.publishName"
   }), React.createElement("span", {
     className: $_9301.required
   }, "*")), React.createElement($_13_index.k, {
     defaultValue: v.name,
     maxLength: 20,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "Publish.inputPublishName"
     }),
     onChange: function (e, t) {
@@ -275,12 +276,12 @@ var Jt = React1.memo(function (e) {
       }))
     },
     isTrimmed: true
-  })), React.createElement("li", null, React.createElement("p", null, $_710_index$a$formatMessage({
+  })), React.createElement("li", null, React.createElement("p", null, $_710$a$formatMessage({
     id: "Publish.publishDescription"
   })), React.createElement($_13_index.A, {
     defaultValue: v.description,
     maxLength: 200,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "Publish.inputPublishDescription"
     }),
     rows: 5,
@@ -289,12 +290,12 @@ var Jt = React1.memo(function (e) {
         description: e.target.value
       }))
     }
-  })), React.createElement("li", null, React.createElement("p", null, $_710_index$a$formatMessage({
+  })), React.createElement("li", null, React.createElement("p", null, $_710$a$formatMessage({
     id: "Publish.publishOperation"
   })), React.createElement($_13_index.A, {
     defaultValue: v.operation,
     maxLength: 200,
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "Publish.inputPublishOperation"
     }),
     rows: 5,
@@ -309,7 +310,7 @@ var Jt = React1.memo(function (e) {
       return L.apply(this, arguments)
     },
     disabled: !v.name
-  }, c ? React.createElement(Ge, null) : $_710_index$a$formatMessage({
+  }, c ? React.createElement(Ge, null) : $_710$a$formatMessage({
     id: "Publish.publish"
   }))))
 })

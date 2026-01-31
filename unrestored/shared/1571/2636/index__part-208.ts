@@ -18,12 +18,13 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_acti
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1533 from "./1533"
 import /* [auto-meaningful-name] */$_15331 from "./1533"
@@ -51,8 +52,8 @@ function XL(e, t) {
   }
 }
 var /* [auto-meaningful-name] */py$Option = py.Option
-var ZL = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var ZL = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.cloudDBGridDialogInfo
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -60,63 +61,63 @@ var ZL = React1.memo(function () {
   var /* [auto-meaningful-name] */e$cloudDBId = e.cloudDBId
   var /* [auto-meaningful-name] */e$isProd = e.isProd
   var /* [auto-meaningful-name] */e$callback = e.callback
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = React1.useState()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var s = useState()
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState({})
+  var d = useState({})
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState([])
+  var v = useState([])
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
-  var C = React1.useState({})
+  var C = useState({})
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = React1.useState("")
+  var R = useState("")
   var k = $_10_index.a(R, 2)
   var D = k[0]
   var M = k[1]
-  var L = React1.useState([])
+  var L = useState([])
   var P = $_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = React1.useState(false)
+  var G = useState(false)
   var W = $_10_index.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = React1.useState(false)
+  var V = useState(false)
   var K = $_10_index.a(V, 2)
   var q = K[0]
   var X = K[1]
-  var Q = React1.useState(false)
+  var Q = useState(false)
   var Z = $_10_index.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
-  var te = React1.useState(false)
+  var te = useState(false)
   var ne = $_10_index.a(te, 2)
   var re = ne[0]
   var oe = ne[1]
-  var ie = React1.useState(true)
+  var ie = useState(true)
   var ae = $_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
-  var le = React1.useState(false)
+  var le = useState(false)
   var ue = $_10_index.a(le, 2)
   var de = ue[0]
   var pe = ue[1]
-  var fe = React1.useState(false)
+  var fe = useState(false)
   var he = $_10_index.a(fe, 2)
   var me = he[0]
   var ge = he[1]
-  var _e = React1.useRef("")
-  var ve = React1.useRef(false)
-  var be = $_16_index.d()
-  React1.useEffect(function () {
+  var _e = useRef("")
+  var ve = useRef(false)
+  var be = useDispatch()
+  useEffect(function () {
     if (!e$visible) {
       F([])
       M("")
@@ -126,7 +127,7 @@ var ZL = React1.memo(function () {
       pe(false)
     }
   }, [e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$cloudDBId) {
       ce(true)
       Promise.all([$_147.e(e$cloudDBId, e$isProd ? "prod" : "dev"), $_147.f(e$cloudDBId, e$isProd ? "prod" : "dev", 0, 500)]).then(function (e) {
@@ -161,7 +162,7 @@ var ZL = React1.memo(function () {
       })
     }
   }, [e$cloudDBId, e$isProd])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (D) {
       if (!B.find(function (e) {
         return e.id === D
@@ -171,10 +172,10 @@ var ZL = React1.memo(function () {
       }
     }
   }, [B, D])
-  React1.useEffect(function () {
+  useEffect(function () {
     $(!(!U && !q))
   }, [U, q])
-  React1.useEffect(function () {
+  useEffect(function () {
     return function () {
       ve.current = true
     }
@@ -229,9 +230,9 @@ var ZL = React1.memo(function () {
           if (!(null === l || undefined === l)) {
             l.setDataValue(e$colDef$colId, "")
           }
-          XL($_710_index$a$formatMessage({
+          XL($_710$a$formatMessage({
             id: "cloudGrid.booleanCheckNotice"
-          }), $_710_index$a$formatMessage({
+          }), $_710$a$formatMessage({
             id: "cloudGrid.commonCheckNotice"
           }))
         }
@@ -243,9 +244,9 @@ var ZL = React1.memo(function () {
               if (!(null === d || undefined === d)) {
                 d.setDataValue(e$colDef$colId, "")
               }
-              XL($_710_index$a$formatMessage({
+              XL($_710$a$formatMessage({
                 id: "cloudGrid.numberCheckNotice"
-              }), $_710_index$a$formatMessage({
+              }), $_710$a$formatMessage({
                 id: "cloudGrid.commonCheckNotice"
               }))
             }
@@ -356,7 +357,7 @@ var ZL = React1.memo(function () {
                 break
               }
               be($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-                allowText: $_710_index$a$formatMessage({
+                allowText: $_710$a$formatMessage({
                   id: "cloudGrid.confirm"
                 }),
                 title: "错误",
@@ -516,7 +517,7 @@ var ZL = React1.memo(function () {
   var je = React.createElement("div", null, React.createElement($_13_index.d, {
     type: "default",
     onClick: Ee
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cloudGrid.cancel"
   })), React.createElement($_13_index.d, {
     type: "primary",
@@ -557,13 +558,13 @@ var ZL = React1.memo(function () {
       }
       if (t) {
         be($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-          allowText: $_710_index$a$formatMessage({
+          allowText: $_710$a$formatMessage({
             id: "cloudGrid.confirm"
           }),
-          title: $_710_index$a$formatMessage({
+          title: $_710$a$formatMessage({
             id: "cloudGrid.uniqueColumnEmptyTitle"
           }),
-          content: $_710_index$a$formatMessage({
+          content: $_710$a$formatMessage({
             id: "cloudGrid.uniqueColumnEmptyContent"
           }),
           cancelBtnVisible: false
@@ -574,16 +575,16 @@ var ZL = React1.memo(function () {
             onCancel: function () {
               Se(e, n)
             },
-            cancelText: $_710_index$a$formatMessage({
+            cancelText: $_710$a$formatMessage({
               id: "cloudGrid.continueSave"
             }),
-            allowText: $_710_index$a$formatMessage({
+            allowText: $_710$a$formatMessage({
               id: "cloudGrid.returnEdit"
             }),
-            title: $_710_index$a$formatMessage({
+            title: $_710$a$formatMessage({
               id: "cloudGrid.EmptyColumnTitle"
             }),
-            content: $_710_index$a$formatMessage({
+            content: $_710$a$formatMessage({
               id: "cloudGrid.EmptyColumnContent"
             })
           }))
@@ -592,7 +593,7 @@ var ZL = React1.memo(function () {
         }
       }
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cloudGrid.save"
   })))
   var Ne = function (e) {
@@ -636,7 +637,7 @@ var ZL = React1.memo(function () {
       X(false)
     } else {
       be($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-        message: $_710_index$a$formatMessage({
+        message: $_710$a$formatMessage({
           id: "cloudGrid.uniqueColumnError"
         }),
         type: "error"
@@ -680,7 +681,7 @@ var ZL = React1.memo(function () {
       className: $_348.title
     }, e$widgetName), React.createElement("div", {
       className: N($_348.titleBtn, e$isProd ? $_348.prod : $_348.dev)
-    }, $_710_index$a$formatMessage(e$isProd ? {
+    }, $_710$a$formatMessage(e$isProd ? {
       id: "cloudGrid.prodData"
     } : {
       id: "cloudGrid.testData"
@@ -694,13 +695,13 @@ var ZL = React1.memo(function () {
           onConfirm: function () {
             Ee()
           },
-          allowText: $_710_index$a$formatMessage({
+          allowText: $_710$a$formatMessage({
             id: "cloudGrid.confirm"
           }),
-          title: $_710_index$a$formatMessage({
+          title: $_710$a$formatMessage({
             id: "cloudGrid.tips"
           }),
-          content: $_710_index$a$formatMessage({
+          content: $_710$a$formatMessage({
             id: "cloudGrid.unSaveNotice"
           })
         }))
@@ -714,7 +715,7 @@ var ZL = React1.memo(function () {
   }, React.createElement("img", {
     src: $_15331,
     alt: "loading"
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "cloudGrid.loading"
   }))) : function () {
     if (e$visible) {
@@ -722,12 +723,12 @@ var ZL = React1.memo(function () {
         className: $_348.gridInfo
       }, React.createElement("span", {
         className: $_348.uniqueText
-      }, React.createElement("span", null, $_710_index$a$formatMessage({
+      }, React.createElement("span", null, $_710$a$formatMessage({
         id: "cloudGrid.uniqueColumn"
       })), React.createElement($_1213.a, {
         content: React.createElement("div", {
           className: $_348.btnContent
-        }, React.createElement("div", null, $_710_index$a$formatMessage({
+        }, React.createElement("div", null, $_710$a$formatMessage({
           id: "cloudGrid.uniqueColumnTipsContent"
         }))),
         placement: "rightTop",
@@ -739,7 +740,7 @@ var ZL = React1.memo(function () {
       }, React.createElement(py, {
         disabled: e$isProd,
         allowClear: true,
-        placeholder: $_710_index$a$formatMessage({
+        placeholder: $_710$a$formatMessage({
           id: "cloudGrid.selectPlaceholder"
         }),
         onChange: Ne,
@@ -764,11 +765,11 @@ var ZL = React1.memo(function () {
       }, React.createElement($_1213.a, {
         content: React.createElement("div", {
           className: $_348.importContent
-        }, React.createElement("div", null, $_710_index$a$formatMessage({
+        }, React.createElement("div", null, $_710$a$formatMessage({
           id: "cloudGrid.importTipsContent1"
-        })), React.createElement("div", null, $_710_index$a$formatMessage({
+        })), React.createElement("div", null, $_710$a$formatMessage({
           id: "cloudGrid.importTipsContent2"
-        })), React.createElement("div", null, $_710_index$a$formatMessage({
+        })), React.createElement("div", null, $_710$a$formatMessage({
           id: "cloudGrid.importTipsContent3"
         }))),
         placement: "leftTop",

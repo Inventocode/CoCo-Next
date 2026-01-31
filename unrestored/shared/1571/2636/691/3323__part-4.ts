@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
 import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_47 from "../47"
+import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
 var Jn = function () {
   function t() {
     $$_27.a(this, t)
@@ -294,7 +294,7 @@ var Wn = function () {
       key: "DestroyProxies",
       value: function () {
         var t
-        var e = $$_47.a(this.m_proxies)
+        var e = $$_47_index.a(this.m_proxies)
         try {
           for (e.s(); !(t = e.n()).done;) {
             t.value.Reset()
@@ -310,7 +310,7 @@ var Wn = function () {
       key: "TouchProxies",
       value: function () {
         var t
-        var e = $$_47.a(this.m_proxies)
+        var e = $$_47_index.a(this.m_proxies)
         try {
           for (e.s(); !(t = e.n()).done;) {
             t.value.Touch()
@@ -325,7 +325,7 @@ var Wn = function () {
       key: "SynchronizeProxies",
       value: function (t, e) {
         var i
-        var n = $$_47.a(this.m_proxies)
+        var n = $$_47_index.a(this.m_proxies)
         try {
           for (n.s(); !(i = n.n()).done;) {
             i.value.Synchronize(t, e)

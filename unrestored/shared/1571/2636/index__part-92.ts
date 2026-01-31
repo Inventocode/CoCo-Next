@@ -15,25 +15,26 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_419 from "./419"
 import /* [auto-meaningful-name] */$_4191 from "./419"
-var nb = React1.memo(function (e) {
+var nb = memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$onUploadFileChange = e.onUploadFileChange
   var /* [auto-meaningful-name] */e$onResourceLibraryClick = e.onResourceLibraryClick
   var /* [auto-meaningful-name] */e$onDelete = e.onDelete
   var /* [auto-meaningful-name] */e$fileId = e.fileId
   var /* [auto-meaningful-name] */e$style = e.style
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = React1.useState(false)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(false)
+  var p = useState(false)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
@@ -62,7 +63,7 @@ var nb = React1.memo(function (e) {
         type: "icon-upload"
       }), React.createElement("span", {
         className: $_4191.contentTitle
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "Resource.upload"
       }))), React.createElement("div", {
         className: $_4191.content,
@@ -71,7 +72,7 @@ var nb = React1.memo(function (e) {
         type: "icon-open-resource-library"
       }), React.createElement("span", {
         className: $_4191.contentTitle
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "Resource.ImageLibrary"
       })))),
       placement: "bottomLeft",
@@ -80,7 +81,7 @@ var nb = React1.memo(function (e) {
       onVisibleChange: b
     }, React.createElement("div", {
       className: $_4191.imageBtn
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "Resource.Replace"
     })))
   }
@@ -120,7 +121,7 @@ var nb = React1.memo(function (e) {
     className: N($_4191.cover, u && $_4191.visible)
   }, E()))))
 })
-var rb = React1.memo(function (e) {
+var rb = memo(function (e) {
   var /* [auto-meaningful-name] */e$sizeType = e.sizeType
   var /* [auto-meaningful-name] */e$sizeTypeList = e.sizeTypeList
   var /* [auto-meaningful-name] */e$width = e.width
@@ -129,7 +130,7 @@ var rb = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$maxWidth = e.maxWidth
   var /* [auto-meaningful-name] */e$onWidthChange = e.onWidthChange
   var /* [auto-meaningful-name] */e$onSizeTypeChange = e.onSizeTypeChange
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var u = !Lodash.isFunction(e$onWidthChange)
   var d = function (e) {
     return te.p(function (e) {
@@ -146,7 +147,7 @@ var rb = React1.memo(function (e) {
     className: qv.formInputNumberRow
   }, React.createElement("p", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "size"
   })), React.createElement($_13_index.i, {
     className: "changeWidth"
@@ -168,7 +169,7 @@ var rb = React1.memo(function (e) {
       style: {
         color: "var(--dark-text-color-t5)"
       }
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "width"
     }))
   })), React.createElement($_13_index.i, null, React.createElement($_13_index.n, {
@@ -176,7 +177,7 @@ var rb = React1.memo(function (e) {
     type: "number",
     value: e$height,
     className: qv.justifyInputContent,
-    before: React.createElement("span", null, $_710_index$a$formatMessage({
+    before: React.createElement("span", null, $_710$a$formatMessage({
       id: "height"
     }))
   }))), React.createElement("div", {
@@ -191,7 +192,7 @@ var rb = React1.memo(function (e) {
     return React.createElement($_13_index.t, {
       value: e,
       key: e
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: e.toLocaleLowerCase() + "Size"
     }))
   }))))

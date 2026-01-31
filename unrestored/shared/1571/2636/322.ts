@@ -7,23 +7,24 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_37_376 from "./37/376"
 import * as s from "./82"
 var _a
-_a = React.memo(function (e) {
-  var t = React.useState([])
+_a = memo(function (e) {
+  var t = useState([])
   var n = $_10_index.a(t, 2)
   var c = n[0]
   var l = n[1]
-  var u = React.useState("0 0 1024 1024")
+  var u = useState("0 0 1024 1024")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var f = d[1]
   var /* [auto-meaningful-name] */e$icon = e.icon
   var m = undefined === e$icon ? s.c : e$icon
-  React.useEffect(function () {
+  useEffect(function () {
     var e = $_37_376.a(m.id)
     if (e) {
       l(e.path)

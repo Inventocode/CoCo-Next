@@ -20,7 +20,7 @@ import * as m from "./15"
 import * as h from "./64"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$_42_index from "./42/index"
-import * as d from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as l from "./6"
 import * as c from "./11"
@@ -263,7 +263,7 @@ function Ie(e) {
   var t
   var n = []
   var r = $_42_index.g.keys()
-  var o = d.a(r)
+  var o = $_47_index.a(r)
   try {
     for (o.s(); !(t = o.n()).done;) {
       var i
@@ -811,7 +811,7 @@ function wt() {
 function Ct(e) {
   $_42_index.a.length = 0
   var t
-  var n = d.a(e)
+  var n = $_47_index.a(e)
   try {
     for (n.s(); !(t = n.n()).done;) {
       var /* [auto-meaningful-name] */t$value = t.value
@@ -844,7 +844,7 @@ function St() {
         switch (e.prev = e.next) {
           case 0:
             t = []
-            n = d.a($_42_index.a)
+            n = $_47_index.a($_42_index.a)
             e.prev = 2
             n.s()
           case 4:
@@ -911,7 +911,7 @@ function It() {
           case 0:
             t = $_37_index.d.getState().resource.soundFileList.toJS()
             n = []
-            r = d.a(t)
+            r = $_47_index.a(t)
             e.prev = 3
             r.s()
           case 5:
@@ -978,7 +978,7 @@ function Nt() {
           case 0:
             t = $_37_index.d.getState().resource.iconFileList.toJS()
             n = []
-            r = d.a(t)
+            r = $_47_index.a(t)
             e.prev = 3
             r.s()
           case 5:
@@ -1077,7 +1077,7 @@ function Mt(e, t) {
 function Lt(e) {
   var t
   var /* [auto-meaningful-name] */$_37_index$d$getState$project$screens = $_37_index.d.getState().project.screens
-  var r = d.a($_37_index$d$getState$project$screens)
+  var r = $_47_index.a($_37_index$d$getState$project$screens)
   try {
     for (r.s(); !(t = r.n()).done;) {
       if (t.value.backgroundImage === e) {

@@ -49,7 +49,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_27 from "../../../../27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_39 from "../../../../39"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_34_465 from "../../../../34/465"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_25_index from "../../../../25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_47 from "../../../../47"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_47_index from "../../../../47/index"
 import * as /* [auto-meaningful-name] */$$_$$_777_index from "../../777/index"
 function f(e, t) {
   var n = t.range[0]
@@ -58,7 +58,7 @@ function f(e, t) {
   do {
     i = false
     var o
-    var a = $$_$$_$$_$$_47.a(r.childScopes)
+    var a = $$_$$_$$_$$_47_index.a(r.childScopes)
     try {
       for (a.s(); !(o = a.n()).done;) {
         var /* [auto-meaningful-name] */o$value = o.value
@@ -417,7 +417,7 @@ var Q = Object.freeze({
   ObjectExpression: function (e, t) {
     var n
     var r = {}
-    var i = $$_$$_$$_$$_47.a(e.properties)
+    var i = $$_$$_$$_$$_47_index.a(e.properties)
     try {
       for (i.s(); !(n = i.n()).done;) {
         var /* [auto-meaningful-name] */n$value = n.value
@@ -609,13 +609,13 @@ var Z = Object.freeze(Object.assign(Object.create(null), {
   $visitChildren: function (e, t, n) {
     var r
     var /* [auto-meaningful-name] */e$type = e.type
-    var o = $$_$$_$$_$$_47.a(n[e$type] || $$_$$_777_index.getKeys(e))
+    var o = $$_$$_$$_$$_47_index.a(n[e$type] || $$_$$_777_index.getKeys(e))
     try {
       for (o.s(); !(r = o.n()).done;) {
         var a = e[r.value]
         if (Array.isArray(a)) {
           var s
-          var c = $$_$$_$$_$$_47.a(a)
+          var c = $$_$$_$$_$$_47_index.a(a)
           try {
             for (c.s(); !(s = c.n()).done;) {
               var /* [auto-meaningful-name] */s$value = s.value
@@ -821,7 +821,7 @@ var ae = function () {
           var r
           var i = []
           var o = 0
-          var a = $$_$$_$$_$$_47.a(e.execAll(t))
+          var a = $$_$$_$$_$$_47_index.a(e.execAll(t))
           try {
             for (a.s(); !(r = a.n()).done;) {
               var /* [auto-meaningful-name] */r$value = r.value
@@ -856,7 +856,7 @@ var ae = function () {
             }
           }
           var s
-          var c = $$_$$_$$_$$_47.a(e.execAll(t))
+          var c = $$_$$_$$_$$_47_index.a(e.execAll(t))
           try {
             for (c.s(); !(s = c.n()).done;) {
               o = s.value
@@ -955,7 +955,7 @@ var Ae = function () {
                 e.next = 1
                 break
               case 12:
-                l = $$_$$_$$_$$_47.a(this.globalObjectNames)
+                l = $$_$$_$$_$$_47_index.a(this.globalObjectNames)
                 e.prev = 13
                 l.s()
               case 15:
@@ -1004,7 +1004,7 @@ var Ae = function () {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
-                n = $$_$$_$$_$$_47.a(this.iterateGlobalReferences(he))
+                n = $$_$$_$$_$$_47_index.a(this.iterateGlobalReferences(he))
                 e.prev = 1
                 n.s()
               case 3:
@@ -1079,7 +1079,7 @@ var Ae = function () {
             switch (e.prev = e.next) {
               case 0:
                 this$globalScope$block = this.globalScope.block
-                r = $$_$$_$$_$$_47.a(this$globalScope$block.body)
+                r = $$_$$_$$_$$_47_index.a(this$globalScope$block.body)
                 e.prev = 2
                 r.s()
               case 4:
@@ -1141,7 +1141,7 @@ var Ae = function () {
                 e.next = 69
                 break
               case 29:
-                _ = $$_$$_$$_$$_47.a(o$value.specifiers)
+                _ = $$_$$_$$_$$_47_index.a(o$value.specifiers)
                 e.prev = 30
                 _.s()
               case 32:
@@ -1162,7 +1162,7 @@ var Ae = function () {
                 e.next = 59
                 break
               case 40:
-                y = $$_$$_$$_$$_47.a(m)
+                y = $$_$$_$$_$$_47_index.a(m)
                 e.prev = 41
                 y.s()
               case 43:
@@ -1244,7 +1244,7 @@ var Ae = function () {
               case 2:
                 this.variableStack.push(t)
                 e.prev = 3
-                a = $$_$$_$$_$$_47.a(t.references)
+                a = $$_$$_$$_$$_47_index.a(t.references)
                 e.prev = 5
                 a.s()
               case 7:
@@ -1448,7 +1448,7 @@ var Ae = function () {
                   e.next = 31
                   break
                 }
-                a = $$_$$_$$_$$_47.a(t.properties)
+                a = $$_$$_$$_$$_47_index.a(t.properties)
                 e.prev = 7
                 a.s()
               case 9:

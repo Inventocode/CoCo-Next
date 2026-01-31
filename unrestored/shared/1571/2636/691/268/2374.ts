@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 var r = require("./1399/501")
-var i = require("./649")
+var i = require("./649/index")
 exports.tagged = function (e, t) {
   return function (n, o, a) {
     var s = new r.Metadata(e, t)

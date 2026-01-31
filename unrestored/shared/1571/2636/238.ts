@@ -11,10 +11,10 @@ export { a as e }
 export { s as b }
 export { c }
 export { l as a }
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import * as o from "./9"
 function i() {
-  return $_16_index.e(function (e) {
+  return useSelector(function (e) {
     var /* [auto-meaningful-name] */e$project = e.project
     var /* [auto-meaningful-name] */e$project$screens = e$project.screens
     var /* [auto-meaningful-name] */e$project$currentScreenIndex = e$project.currentScreenIndex
@@ -25,19 +25,19 @@ function i() {
   })
 }
 function a(e) {
-  return $_16_index.e(function (t) {
+  return useSelector(function (t) {
     return t.project.screens.findIndex(function (t) {
       return t.id === e
     })
   })
 }
 function s() {
-  return $_16_index.e(function (e) {
+  return useSelector(function (e) {
     return e.common.editAreaUpdatedAt
   })
 }
 function c() {
-  return $_16_index.e(function (e) {
+  return useSelector(function (e) {
     return e.common.extensionListUpdateAt
   })
 }

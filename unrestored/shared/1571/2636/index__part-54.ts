@@ -15,8 +15,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as te from "./15"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_149 from "./149"
 import * as /* [auto-meaningful-name] */$_549_index from "./549/index"
@@ -29,22 +30,22 @@ var Pf = function (e) {
   var a = undefined === e$attributes$backgroundImageFileId ? $_149.a : e$attributes$backgroundImageFileId
   var /* [auto-meaningful-name] */e$attributes$trackImageFileId = e$attributes.trackImageFileId
   var c = undefined === e$attributes$trackImageFileId ? $_149.g : e$attributes$trackImageFileId
-  var l = $_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  var u = React1.useState("")
+  var u = useState("")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState("")
+  var g = useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = React1.useState("")
+  var E = useState("")
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(o)) {
       e = o
@@ -54,7 +55,7 @@ var Pf = function (e) {
     }
     m(e || $_149.c)
   }, [o, l])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(a)) {
       e = a
@@ -64,7 +65,7 @@ var Pf = function (e) {
     }
     y(e || $_149.a)
   }, [a, l])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(c)) {
       e = c

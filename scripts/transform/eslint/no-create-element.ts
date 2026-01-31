@@ -13,17 +13,22 @@ export const noCreateElement: Rule.RuleModule = {
   create(context) {
     return {
       CallExpression(node) {
-        if (
-          node.callee.type === "MemberExpression" &&
-          node.callee.object.type === "Identifier" &&
-          /React\d*/.test(node.callee.object.name) &&
-          !node.callee.computed &&
-          node.callee.property.type === "Identifier" &&
-          node.callee.property.name === "createElement" &&
-          node.arguments.length >= 1
+        if ((
+          (
+            node.callee.type === "MemberExpression" &&
+            node.callee.object.type === "Identifier" &&
+            /React\d*/.test(node.callee.object.name) &&
+            !node.callee.computed &&
+            node.callee.property.type === "Identifier" &&
+            node.callee.property.name === "createElement"
+          ) || (
+            node.callee.type === "Identifier" &&
+            node.callee.name === "createElement"
+
+          )) && node.arguments.length >= 1
         ) {
-          const [typeArg, propsArg, ...childrenArgs] = node.arguments
-          if (typeArg === undefined) {
+          const [tagArg, propsArg, ...childrenArgs] = node.arguments
+          if (tagArg === undefined) {
             return
           }
           const { sourceCode } = context
@@ -31,25 +36,25 @@ export const noCreateElement: Rule.RuleModule = {
             node,
             message: "Do not use React.createElement, use JSX instead.",
             fix(fixer) {
-              let type
-              if (typeArg.type === "Literal" && typeof typeArg.value === "string") {
-                type = typeArg.value
-              } else if (typeArg.type === "Identifier") {
-                if (typeArg.name.charAt(0) !== typeArg.name.charAt(0).toUpperCase()) {
+              let tagName
+              if (tagArg.type === "Literal" && typeof tagArg.value === "string") {
+                tagName = tagArg.value
+              } else if (tagArg.type === "Identifier") {
+                if (tagArg.name.charAt(0) !== tagArg.name.charAt(0).toUpperCase()) {
                   return null
                 }
-                type = typeArg.name
-              } else if (typeArg.type === "MemberExpression") {
+                tagName = tagArg.name
+              } else if (tagArg.type === "MemberExpression") {
                 if (
-                  !typeArg.computed &&
-                  typeArg.object.type === "Identifier" &&
-                  /React\d*/.test(typeArg.object.name) &&
-                  typeArg.property.type === "Identifier" &&
-                  typeArg.property.name === "Fragment"
+                  !tagArg.computed &&
+                  tagArg.object.type === "Identifier" &&
+                  /React\d*/.test(tagArg.object.name) &&
+                  tagArg.property.type === "Identifier" &&
+                  tagArg.property.name === "Fragment"
                 ) {
-                  type = ""
+                  tagName = ""
                 } else {
-                  type = sourceCode.getText(typeArg)
+                  tagName = sourceCode.getText(tagArg)
                 }
               } else {
                 return null
@@ -85,7 +90,7 @@ export const noCreateElement: Rule.RuleModule = {
                 return `{${sourceCode.getText(child)}}`
               }).join("\n")
               childrenStr && (childrenStr = `\n${childrenStr}\n`)
-              const jsx = type != "" && childrenStr == "" ? `<${type}${propsStr}/>` : `<${type}${propsStr}>${childrenStr}</${type}>`
+              const jsx = tagName != "" && childrenStr == "" ? `<${tagName}${propsStr}/>` : `<${tagName}${propsStr}>${childrenStr}</${tagName}>`
               return fixer.replaceText(node, jsx)
             }
           })

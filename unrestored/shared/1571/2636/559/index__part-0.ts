@@ -12,6 +12,7 @@ import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
+import { useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as d from "../8"
@@ -24,7 +25,7 @@ function m(e, t) {
   var /* [auto-meaningful-name] */n$value = n.value
   var /* [auto-meaningful-name] */n$onChange = n.onChange
   var /* [auto-meaningful-name] */n$postState = n.postState
-  var c = React.useState(function () {
+  var c = useState(function () {
     return undefined !== n$value ? n$value : undefined !== n$defaultValue ? "function" === typeof n$defaultValue ? n$defaultValue() : n$defaultValue : "function" === typeof e ? e() : e
   })
   var u = $$_40_index.a(c, 2)
@@ -34,8 +35,8 @@ function m(e, t) {
   if (n$postState) {
     f = n$postState(f)
   }
-  var h = React.useRef(true)
-  React.useEffect(function () {
+  var h = useRef(true)
+  useEffect(function () {
     if (h.current) {
       h.current = false
     } else {

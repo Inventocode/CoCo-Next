@@ -8,7 +8,7 @@
 
 var r = require("./691/32/index")
 var o = require("./691/319")
-var i = require("./691/520")
+var i = require("./691/520/index")
 var a = require("./691/65")
 i.a.prototype.set_flipped = function (e) {
   switch (e) {

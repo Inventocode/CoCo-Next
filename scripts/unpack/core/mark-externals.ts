@@ -1,4 +1,4 @@
-import { ModuleMap, UnpackConfig } from "./types"
+import { External, ModuleMap, UnpackConfig } from "./types"
 
 /**
  * 标记第三方模块
@@ -15,7 +15,7 @@ export function markExternals(config: UnpackConfig, modules: ModuleMap): void {
         module.moved = true
     }
     const externals = [
-        ...Object.entries(config.nodePolyfill ?? {}).map(([key, name]) => ({
+        ...Object.entries(config.nodePolyfill ?? {}).map(([key, name]): External => ({
             key,
             source: `webpack-polyfill:${name}`
         })),
@@ -24,12 +24,15 @@ export function markExternals(config: UnpackConfig, modules: ModuleMap): void {
     for (const external of externals) {
         for (const module of Object.values(modules)) {
             if ("key" in external) {
-                const { key, source } = external
-                if (module.key == key) {
-                    module.external = source
+                const { key, source, exportsNameMap, namedImport } = external
+                if (module.key != key) {
+                    continue
                 }
+                module.external = source
+                Object.assign(module.exportsNameMap, exportsNameMap)
+                module.namedImport ||= namedImport
             } else {
-                const { searchPath, replace } = external
+                const { searchPath, replace, exportsNameMap, namedImport } = external
                 let path: string =  module.path.join("/")
                 if (path.endsWith("-" + String(module.key).replace(/\//g, "_"))) {
                     path = path.slice(0, -String(module.key).length - 1)
@@ -39,6 +42,8 @@ export function markExternals(config: UnpackConfig, modules: ModuleMap): void {
                 }
                 if (searchPath.test(path)) {
                     module.external = path.replace(searchPath, replace)
+                    Object.assign(module.exportsNameMap, exportsNameMap)
+                    module.namedImport ||= namedImport
                 }
             }
         }

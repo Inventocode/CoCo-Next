@@ -20,12 +20,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as CustomWidgetType from "../../../../shared/widget/custom/type"
 var PermissionDialog = function (e) {
@@ -35,7 +35,7 @@ var PermissionDialog = function (e) {
   var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var c = function () {
     a(false)
   }
@@ -57,7 +57,7 @@ var PermissionDialog = function (e) {
               type="icon-selected"
               className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
             />
-            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.dialogCanEdit" })}</span>
+            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "OT.dialogCanEdit" })}</span>
           </div>
           <div
             onClick={() => e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly, t, c)}
@@ -67,13 +67,13 @@ var PermissionDialog = function (e) {
               type="icon-selected"
               className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)}
             />
-            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.dialogReadOnly" })}</span>
+            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "OT.dialogReadOnly" })}</span>
           </div>
           <div
             onClick={() => e.handleRemovePermission(t, c)}
             className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.remove)}
           >
-            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.dialogRemove" })}</span>
+            <span>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "OT.dialogRemove" })}</span>
           </div>
         </div>
       ))}
@@ -84,8 +84,8 @@ var PermissionDialog = function (e) {
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role}>
         <span>
           {e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
-            ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.edit" })
-            : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.readonly" })}
+            ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "OT.edit" })
+            : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "OT.readonly" })}
         </span>
         <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
           <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-dropdown-down" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon} />
@@ -96,8 +96,8 @@ var PermissionDialog = function (e) {
     <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.disabled)}>
       <span>
         {e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit
-          ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.edit" })
-          : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({ id: "OT.readonly" })}
+          ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "OT.edit" })
+          : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "OT.readonly" })}
       </span>
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon}>
         <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-dropdown-down" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon} />
@@ -106,28 +106,28 @@ var PermissionDialog = function (e) {
   )
 }
 var Ct = React.memo(function () {
-  var project = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var project = useSelector(function (e) {
     return e.project
   })
   var /* [auto-meaningful-name] */project$id = project.id
   var title = project.title
-  var cooperationUserList = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var cooperationUserList = useSelector(function (e) {
     return e.oTState.cooperationUserList
   })
-  var onlineCooperationUserColorRecord = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var onlineCooperationUserColorRecord = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  var userInfo = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var userInfo = useSelector(function (e) {
     return e.common.userInfo
   })
-  var isAuthor = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var isAuthor = useSelector(function (e) {
     return e.oTState.isAuthor
   })
-  var collWorkId = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var collWorkId = useSelector(function (e) {
     return e.oTState.collWorkId
   })
-  var formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  var isProjectModified = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var isProjectModified = useSelector(function (e) {
     return e.common.isProjectModified
   })
   if (cooperationUserList.size === 0 && userInfo) {
@@ -140,13 +140,13 @@ var Ct = React.memo(function () {
     })
   }
   var isUpdate = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(project$id)
-  var editorInviteUrl = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var editorInviteUrl = useSelector(function (e) {
     return e.oTState.editorInviteUrl
   })
-  var readOnlyInviteUrl = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var readOnlyInviteUrl = useSelector(function (e) {
     return e.oTState.readOnlyInviteUrl
   })
-  var dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var dispatch = useDispatch()
   var g = React.useState(false)
   var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
@@ -474,13 +474,13 @@ var Ct = React.memo(function () {
   )
 })
 export const Collaboration = React.memo(() => {
-  const id = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const id = useSelector(function (e) {
     return e.project.id
   })
   const [showInvalidUrlDialog, setShowInvalidUrlDialog] = React.useState(false)
   const [isLoading, setIsLoading] = React.useState(false)
-  const dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  const collWorkId = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  const dispatch = useDispatch()
+  const collWorkId = useSelector(function (e) {
     return e.oTState.collWorkId
   })
   React.useEffect(function () {

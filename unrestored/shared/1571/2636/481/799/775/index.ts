@@ -8,7 +8,7 @@
 
 export { u as a }
 export { f as b }
-import * as /* [auto-meaningful-name] */$$_$$_1212_38 from "../../1212/38"
+import * as /* [auto-meaningful-name] */$$_38 from "../38"
 import * as /* [auto-meaningful-name] */$$_939 from "../939"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
 import * as /* [auto-meaningful-name] */$_731 from "./731"
@@ -26,7 +26,7 @@ var l = function (e) {
     o.transactionSpanId = r
     return o
   }
-  $$_$$_1212_38.c(t, e)
+  $$_38.c(t, e)
   t.prototype.add = function (t) {
     var n = this
     if (t.spanId !== this.transactionSpanId) {
@@ -73,7 +73,7 @@ var f = function (e) {
     }, a._idleTimeout)
     return a
   }
-  $$_$$_1212_38.c(t, e)
+  $$_38.c(t, e)
   t.prototype.finish = function (t) {
     var n
     var /* [auto-meaningful-name] */u$return
@@ -86,7 +86,7 @@ var f = function (e) {
     if (this.spanRecorder) {
       $$_264.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
       try {
-        for (var u = $$_$$_1212_38.g(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
+        for (var u = $$_38.g(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
           (0, l.value)(this, t)
         }
       } catch (f) {

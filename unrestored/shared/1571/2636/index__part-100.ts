@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_224_index from "./224/index"
 import * as yb from "./21"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$_610 from "./610"
 var $b = {
   icon: {
@@ -30,11 +30,11 @@ var $b = {
   theme: "outlined"
 }
 var ey = function (e, t) {
-  return React.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: $b
   }))
 }
 ey.displayName = "CheckOutlined"
-var ty = React.forwardRef(ey)
+var ty = forwardRef(ey)
 export { ty }

@@ -6,13 +6,13 @@
 
 "use strict"
 
-export { React$isValidElement as b }
+export { i as b }
 export { o as a }
-import * as /* [auto-meaningful-name] */React from "react"
-var /* [auto-meaningful-name] */React$isValidElement = React.isValidElement
+import { isValidElement, cloneElement } from "react"
+var i = isValidElement
 function o(e, t) {
   return function (e, t, n) {
-    return React$isValidElement(e) ? React.cloneElement(e, "function" === typeof n ? n(e.props || {}) : n) : t
+    return i(e) ? cloneElement(e, "function" === typeof n ? n(e.props || {}) : n) : t
   }(e, e, t)
 }
 export default o

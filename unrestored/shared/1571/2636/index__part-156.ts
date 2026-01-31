@@ -14,36 +14,37 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_acti
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useMemo, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_340 from "./340"
 import /* [auto-meaningful-name] */$_3401 from "./340"
-var DS = React1.memo(function (e) {
+var DS = memo(function (e) {
   var /* [auto-meaningful-name] */e$consoleVisible = e.consoleVisible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.common.consoleMessages
   })
-  var o = React1.useState(["error", "lintError", "warning", "print", "log", "customError", "customWarning"])
+  var o = useState(["error", "lintError", "warning", "print", "log", "customError", "customWarning"])
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(-1)
+  var c = useState(-1)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef(null)
-  var m = React1.useRef(.18 * document.body.clientHeight)
-  var g = $_16_index.e(function (e) {
+  var p = useRef(null)
+  var m = useRef(.18 * document.body.clientHeight)
+  var g = useSelector(function (e) {
     return e.project.playing
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var b = $_16_index.d()
-  var y = React1.useMemo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var b = useDispatch()
+  var y = useMemo(function () {
     return {
       errorCount: r.filter(function (e) {
         return "error" === e.get("type") || "lintError" === e.get("type") || "customError" === e.get("type")
@@ -102,13 +103,13 @@ var DS = React1.memo(function (e) {
       isClear: t
     })
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     d(-1)
   }, [g])
-  React1.useEffect(function () {
+  useEffect(function () {
     b($$_$$_$$_$$_src_editor_redux_common_actions.ei(e$consoleVisible ? m.current : 0))
   }, [b, e$consoleVisible])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */p$current = p.current
     if (p$current) {
       p$current.scrollTop = p$current.scrollHeight
@@ -150,9 +151,9 @@ var DS = React1.memo(function (e) {
       className: $_3401.iconBox
     }, a.includes("error") && React.createElement($_13_index.j, {
       type: "icon-selected"
-    })), $_710_index$a$formatMessage({
+    })), $_710$a$formatMessage({
       id: "show"
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "consoleError"
     })), React.createElement("div", {
       className: $_3401.filterItem,
@@ -161,9 +162,9 @@ var DS = React1.memo(function (e) {
       className: $_3401.iconBox
     }, a.includes("warning") && React.createElement($_13_index.j, {
       type: "icon-selected"
-    })), $_710_index$a$formatMessage({
+    })), $_710$a$formatMessage({
       id: "show"
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "consoleWarning"
     })), React.createElement("div", {
       className: $_3401.filterItem,
@@ -172,9 +173,9 @@ var DS = React1.memo(function (e) {
       className: $_3401.iconBox
     }, a.includes("print") && React.createElement($_13_index.j, {
       type: "icon-selected"
-    })), $_710_index$a$formatMessage({
+    })), $_710$a$formatMessage({
       id: "show"
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "consolePrint"
     })), React.createElement("div", {
       className: $_3401.filterItem,
@@ -183,14 +184,14 @@ var DS = React1.memo(function (e) {
       className: $_3401.iconBox
     }, a.includes("log") && React.createElement($_13_index.j, {
       type: "icon-selected"
-    })), $_710_index$a$formatMessage({
+    })), $_710$a$formatMessage({
       id: "show"
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "consoleLog"
     })))
   }, React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "consoleFilter"
     }),
     trigger: "hover"
@@ -203,7 +204,7 @@ var DS = React1.memo(function (e) {
     type: "icon-filter"
   })))), React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "consolClear"
     }),
     trigger: "hover"
@@ -230,7 +231,7 @@ var DS = React1.memo(function (e) {
       className: N(u === t && $_3401.active),
       onClick: w.bind(null, e.toJSON(), t),
       "data-console-type": e.get("type")
-    }, React.createElement("p", null, (n = e.get("message"), ("print" === (r = e.get("type")) || "customError" === r || "customWarning" === r ? "<".concat($_710_index$a$formatMessage({
+    }, React.createElement("p", null, (n = e.get("message"), ("print" === (r = e.get("type")) || "customError" === r || "customWarning" === r ? "<".concat($_710$a$formatMessage({
       id: r
     }), ">") : "") + n))) : null
     var n

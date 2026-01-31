@@ -7,13 +7,14 @@
 "use strict"
 
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect, useCallback, useContext } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
 import "./641"
 import * as /* [auto-meaningful-name] */$$_361 from "../361"
-var w = React1.memo(function (e) {
+var w = memo(function (e) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$value = e.value
@@ -23,41 +24,41 @@ var w = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$open = e.open
   var /* [auto-meaningful-name] */e$autoCloseWhenChanged = e.autoCloseWhenChanged
   var f = undefined === e$autoCloseWhenChanged || e$autoCloseWhenChanged
-  var h = React1.useState(e$value || e$defaultValue)
+  var h = useState(e$value || e$defaultValue)
   var m = $$_10_index.a(h, 2)
   var g = m[0]
   var _ = m[1]
-  var v = React1.useState(e$open)
+  var v = useState(e$open)
   var b = $$_10_index.a(v, 2)
   var y = b[0]
   var w = b[1]
-  var C = React1.useRef(null)
-  var T = React1.useState(null)
+  var C = useRef(null)
+  var T = useState(null)
   var S = $$_10_index.a(T, 2)
   var A = S[0]
   var I = S[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (undefined !== e$value) {
       _(e$value)
     }
   }, [e$value])
-  React1.useEffect(function () {
+  useEffect(function () {
     w(e$open)
   }, [e$open])
-  var j = React1.useCallback(function (e) {
+  var j = useCallback(function (e) {
     if (undefined === e$value) {
       _(e)
     }
   }, [e$value])
-  var N = React1.useCallback(function (e) {
+  var N = useCallback(function (e) {
     if (e) {
       I(e)
     }
   }, [])
-  var R = React1.useCallback(function () {
+  var R = useCallback(function () {
     w(!y)
   }, [y])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function e(t) {
       var /* [auto-meaningful-name] */t$target = t.target
       if (C.current && !C.current.contains(t$target)) {
@@ -105,13 +106,13 @@ var w = React1.memo(function (e) {
     className: i("coco-select-options", [y ? "show" : "hide"])
   }, e$children)))
 })
-var C = React1.memo(function (e) {
+var C = memo(function (e) {
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$suffix = e.suffix
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
-  var c = React1.useContext($$_361.b)
-  React1.useEffect(function () {
+  var c = useContext($$_361.b)
+  useEffect(function () {
     if ((null === c || undefined === c ? undefined : c.value) === e$value) {
       c.onChangeSelectorContent(e$children || e$value)
     }

@@ -4,13 +4,48 @@
  * 模块 ID：KBfb
  */
 
-import { handleActions, Action } from "redux-actions"
-import { update_state } from "../../../../unrestored/home/components/utils-jnIn"
-import * as actions from "./actions"
-import type { CommonToastInfo, ConfirmDialogInfo, MainReducerState, UserInfo } from "./interface"
-export { MainReducerState }
+"use strict"
+
+/* unused harmony export handleChangeLanguage */
+/* unused harmony export handleSetUserInfo */
+/* unused harmony export handleSetIsNewUser */
+/* unused harmony export handleSetUserInfoFetchDone */
+/* unused harmony export handleSetSignDialogVisible */
+/* unused harmony export handleSetCourseDialogVisible */
+/* unused harmony export handleSetCommonToast */
+/* unused harmony export handleSetConfirmDialogVisible */
+/* harmony export (binding) */
+/* harmony import */
+export { main_reducer }
+import * as __WEBPACK_IMPORTED_MODULE_0_redux_actions__ from "redux-actions"
+/* harmony import */
+import * as __WEBPACK_IMPORTED_MODULE_1__utils__ from "../../../../unrestored/home/components/utils-jnIn"
+/* harmony import */
+import * as __WEBPACK_IMPORTED_MODULE_2__actions__ from "./actions"
+/* harmony import */
+import * as __WEBPACK_IMPORTED_MODULE_3__interface__ from "./interface"
+/* harmony import */
+import __WEBPACK_IMPORTED_MODULE_3__interface___default from "./interface"
+/* unused harmony reexport MainReducerState */
+/* harmony import */
+import * as __WEBPACK_IMPORTED_MODULE_4__saga__ from "./saga"
+/* harmony reexport (binding) */
 export { mainSaga } from "./saga"
-const initial_state: MainReducerState = {
+var _handleActions
+function _defineProperty(obj, key, value) {
+  if (key in obj) {
+    Object.defineProperty(obj, key, {
+      value: value,
+      enumerable: true,
+      configurable: true,
+      writable: true
+    })
+  } else {
+    obj[key] = value
+  }
+  return obj
+}
+var initial_state = {
   language: "zh",
   signDialogVisible: false,
   courseDialogVisible: false,
@@ -23,64 +58,55 @@ const initial_state: MainReducerState = {
     visible: false
   }
 }
-export function handleChangeLanguage(state: MainReducerState, action: Action<{
-  language: string
-}>) {
-  return update_state(state, {
+var handleChangeLanguage = function handleChangeLanguage(state, action) {
+  return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
     language: action.payload.language
   })
 }
-export function handleSetUserInfo(state: MainReducerState, action: Action<null | UserInfo>) {
+var handleSetUserInfo = function handleSetUserInfo(state, action) {
   if (action.payload) {
-    return update_state(state, {
+    return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
       userInfo: Object.assign({}, state.userInfo, action.payload)
     })
   }
-  return update_state(state, {
+  return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
     userInfo: null
   })
 }
-export function handleSetIsNewUser(state: MainReducerState, action: Action<boolean>) {
+var handleSetIsNewUser = function handleSetIsNewUser(state, action) {
   if (state.userInfo) {
-    return update_state(state, {
+    return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
       userInfo: Object.assign({}, state.userInfo, {
         isNewUser: action.payload
       })
     })
   }
 }
-export function handleSetUserInfoFetchDone(state: MainReducerState, action: Action<void>) {
-  return update_state(state, {
+var handleSetUserInfoFetchDone = function handleSetUserInfoFetchDone(state, action) {
+  return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
     userInfoFetchDone: true
   })
 }
-export function handleSetSignDialogVisible(state: MainReducerState, action: Action<boolean>) {
-  return update_state(state, {
+var handleSetSignDialogVisible = function handleSetSignDialogVisible(state, action) {
+  return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
     signDialogVisible: action.payload
   })
 }
-export function handleSetCourseDialogVisible(state: MainReducerState, action: Action<boolean>) {
-  return update_state(state, {
+var handleSetCourseDialogVisible = function handleSetCourseDialogVisible(state, action) {
+  return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
     courseDialogVisible: action.payload
   })
 }
-export function handleSetCommonToast(state: MainReducerState, action: Action<CommonToastInfo>) {
-  return update_state(state, {
+var handleSetCommonToast = function handleSetCommonToast(state, action) {
+  return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
     commonToastInfo: action.payload
   })
 }
-export function handleSetConfirmDialogVisible(state: MainReducerState, action: Action<ConfirmDialogInfo>) {
-  return update_state(state, {
+var handleSetConfirmDialogVisible = function handleSetConfirmDialogVisible(state, action) {
+  return __WEBPACK_IMPORTED_MODULE_1__utils__.update_state(state, {
     confirmDialogInfo: action.payload
   })
 }
-export const main_reducer = handleActions<MainReducerState, any>({
-  [actions.ACTION_CHANGE_LANGUAGE]: handleChangeLanguage,
-  [actions.SET_USER_INFO_ACTION]: handleSetUserInfo,
-  [actions.SET_USER_INFO_FETCH_DONE_ACTION]: handleSetUserInfoFetchDone,
-  [actions.SET_IS_NEW_USER_ACTION]: handleSetIsNewUser,
-  [actions.SET_SIGN_DIALOG_VISIBLE_ACTION]: handleSetSignDialogVisible,
-  [actions.SET_COURSE_DIALOG_VISIBLE_ACTION]: handleSetCourseDialogVisible,
-  [actions.SET_COMMON_TOAST_ACTION]: handleSetCommonToast,
-  [actions.SET_CONFIRM_DIALOG_INFO_ACTION]: handleSetConfirmDialogVisible
-}, initial_state)
+var main_reducer = __WEBPACK_IMPORTED_MODULE_0_redux_actions__.handleActions((_handleActions = {}, _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.ACTION_CHANGE_LANGUAGE, handleChangeLanguage), _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.SET_USER_INFO_ACTION, handleSetUserInfo), _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.SET_USER_INFO_FETCH_DONE_ACTION, handleSetUserInfoFetchDone), _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.SET_IS_NEW_USER_ACTION, handleSetIsNewUser), _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.SET_SIGN_DIALOG_VISIBLE_ACTION, handleSetSignDialogVisible), _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.SET_COURSE_DIALOG_VISIBLE_ACTION, handleSetCourseDialogVisible), _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.SET_COMMON_TOAST_ACTION, handleSetCommonToast), _defineProperty(_handleActions, __WEBPACK_IMPORTED_MODULE_2__actions__.SET_CONFIRM_DIALOG_INFO_ACTION, handleSetConfirmDialogVisible), _handleActions), initial_state)
+
+/***/

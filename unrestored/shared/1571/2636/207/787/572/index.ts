@@ -6,7 +6,7 @@
 
 var r = require("./2001")
 var i = require("./2002")
-var o = require("./1119")
+var o = require("../711/1119/index")
 var a = require("./2003")
 module.exports = function (e, t) {
   return r(e) || i(e, t) || o(e, t) || a()

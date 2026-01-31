@@ -7,7 +7,7 @@
 "use strict"
 
 var a
-import * as /* [auto-meaningful-name] */$$_$$_1212_38 from "../../1212/38"
+import * as /* [auto-meaningful-name] */$$_38 from "../38"
 import * as /* [auto-meaningful-name] */$$_365 from "../365"
 import * as /* [auto-meaningful-name] */$$_939 from "../939"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
@@ -179,17 +179,17 @@ var h = function () {
   e.clone = function (t) {
     var n = new e()
     if (t) {
-      n._breadcrumbs = $$_$$_1212_38.f(t._breadcrumbs)
-      n._tags = $$_$$_1212_38.a({}, t._tags)
-      n._extra = $$_$$_1212_38.a({}, t._extra)
-      n._contexts = $$_$$_1212_38.a({}, t._contexts)
+      n._breadcrumbs = $$_38.f(t._breadcrumbs)
+      n._tags = $$_38.a({}, t._tags)
+      n._extra = $$_38.a({}, t._extra)
+      n._contexts = $$_38.a({}, t._contexts)
       n._user = t._user
       n._level = t._level
       n._span = t._span
       n._session = t._session
       n._transactionName = t._transactionName
       n._fingerprint = t._fingerprint
-      n._eventProcessors = $$_$$_1212_38.f(t._eventProcessors)
+      n._eventProcessors = $$_38.f(t._eventProcessors)
       n._requestSession = t._requestSession
     }
     return n
@@ -222,24 +222,24 @@ var h = function () {
     return this
   }
   e.prototype.setTags = function (e) {
-    this._tags = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._tags), e)
+    this._tags = $$_38.a($$_38.a({}, this._tags), e)
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setTag = function (e, t) {
     var n
-    this._tags = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._tags), ((n = {})[e] = t, n))
+    this._tags = $$_38.a($$_38.a({}, this._tags), ((n = {})[e] = t, n))
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setExtras = function (e) {
-    this._extra = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._extra), e)
+    this._extra = $$_38.a($$_38.a({}, this._extra), e)
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setExtra = function (e, t) {
     var n
-    this._extra = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._extra), ((n = {})[e] = t, n))
+    this._extra = $$_38.a($$_38.a({}, this._extra), ((n = {})[e] = t, n))
     this._notifyScopeListeners()
     return this
   }
@@ -266,7 +266,7 @@ var h = function () {
     if (null === t) {
       delete this._contexts[e]
     } else {
-      this._contexts = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._contexts), ((n = {})[e] = t, n))
+      this._contexts = $$_38.a($$_38.a({}, this._contexts), ((n = {})[e] = t, n))
     }
     this._notifyScopeListeners()
     return this
@@ -308,9 +308,9 @@ var h = function () {
       return n instanceof e ? n : this
     }
     if (t instanceof e) {
-      this._tags = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._tags), t._tags)
-      this._extra = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._extra), t._extra)
-      this._contexts = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._contexts), t._contexts)
+      this._tags = $$_38.a($$_38.a({}, this._tags), t._tags)
+      this._extra = $$_38.a($$_38.a({}, this._extra), t._extra)
+      this._contexts = $$_38.a($$_38.a({}, this._contexts), t._contexts)
       if (t._user && Object.keys(t._user).length) {
         this._user = t._user
       }
@@ -326,9 +326,9 @@ var h = function () {
     } else {
       if ($$_317.e(t)) {
         t = t
-        this._tags = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._tags), t.tags)
-        this._extra = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._extra), t.extra)
-        this._contexts = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._contexts), t.contexts)
+        this._tags = $$_38.a($$_38.a({}, this._tags), t.tags)
+        this._extra = $$_38.a($$_38.a({}, this._extra), t.extra)
+        this._contexts = $$_38.a($$_38.a({}, this._contexts), t.contexts)
         if (t.user) {
           this._user = t.user
         }
@@ -365,10 +365,10 @@ var h = function () {
     if (n <= 0) {
       return this
     }
-    var r = $$_$$_1212_38.a({
+    var r = $$_38.a({
       timestamp: $$_939.b()
     }, e)
-    this._breadcrumbs = $$_$$_1212_38.f(this._breadcrumbs, [r]).slice(-n)
+    this._breadcrumbs = $$_38.f(this._breadcrumbs, [r]).slice(-n)
     this._notifyScopeListeners()
     return this
   }
@@ -380,16 +380,16 @@ var h = function () {
   e.prototype.applyToEvent = function (e, t) {
     var /* [auto-meaningful-name] */this$_span$transaction
     if (this._extra && Object.keys(this._extra).length) {
-      e.extra = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._extra), e.extra)
+      e.extra = $$_38.a($$_38.a({}, this._extra), e.extra)
     }
     if (this._tags && Object.keys(this._tags).length) {
-      e.tags = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._tags), e.tags)
+      e.tags = $$_38.a($$_38.a({}, this._tags), e.tags)
     }
     if (this._user && Object.keys(this._user).length) {
-      e.user = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._user), e.user)
+      e.user = $$_38.a($$_38.a({}, this._user), e.user)
     }
     if (this._contexts && Object.keys(this._contexts).length) {
-      e.contexts = $$_$$_1212_38.a($$_$$_1212_38.a({}, this._contexts), e.contexts)
+      e.contexts = $$_38.a($$_38.a({}, this._contexts), e.contexts)
     }
     if (this._level) {
       e.level = this._level
@@ -398,20 +398,20 @@ var h = function () {
       e.transaction = this._transactionName
     }
     if (this._span) {
-      e.contexts = $$_$$_1212_38.a({
+      e.contexts = $$_38.a({
         trace: this._span.getTraceContext()
       }, e.contexts)
       var r = null === (this$_span$transaction = this._span.transaction) || undefined === this$_span$transaction ? undefined : this$_span$transaction.name
       if (r) {
-        e.tags = $$_$$_1212_38.a({
+        e.tags = $$_38.a({
           transaction: r
         }, e.tags)
       }
     }
     this._applyFingerprint(e)
-    e.breadcrumbs = $$_$$_1212_38.f(e.breadcrumbs || [], this._breadcrumbs)
+    e.breadcrumbs = $$_38.f(e.breadcrumbs || [], this._breadcrumbs)
     e.breadcrumbs = e.breadcrumbs.length > 0 ? e.breadcrumbs : undefined
-    return this._notifyEventProcessors($$_$$_1212_38.f(p(), this._eventProcessors), e, t)
+    return this._notifyEventProcessors($$_38.f(p(), this._eventProcessors), e, t)
   }
   e.prototype._notifyEventProcessors = function (e, t, n, r) {
     var i = this
@@ -423,7 +423,7 @@ var h = function () {
       if (null === t || "function" !== typeof c) {
         a(t)
       } else {
-        var u = c($$_$$_1212_38.a({}, t), n)
+        var u = c($$_38.a({}, t), n)
         if ($$_317.j(u)) {
           u.then(function (t) {
             return i._notifyEventProcessors(e, t, n, r + 1).then(a)

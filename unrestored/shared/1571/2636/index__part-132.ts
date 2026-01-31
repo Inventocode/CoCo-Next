@@ -15,16 +15,17 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_704 from "./704"
 import /* [auto-meaningful-name] */$_7041 from "./704"
-var Hw = React1.memo(function (e) {
+var Hw = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("content")
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var i = te.p(function (e) {
     e$onChange("content", e)
   }, 60)
@@ -32,7 +33,7 @@ var Hw = React1.memo(function (e) {
     className: N($_7041.formItemWrapper, $_7041.wrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_7041.labelWrapper
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "content"
   })), React.createElement(React.Fragment, null, React.createElement("div", null, React.createElement($_13_index.A, {
     defaultValue: r,

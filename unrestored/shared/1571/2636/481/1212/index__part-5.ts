@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$_395 from "./395"
 import * as /* [auto-meaningful-name] */$_918 from "./918"
 import * as /* [auto-meaningful-name] */$_2644 from "./2644"
 import * as /* [auto-meaningful-name] */$_1049 from "./1049"
-import * as o from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$_2639_index from "./2639/index"
 var H = []
 function V(e) {
@@ -33,11 +33,11 @@ function V(e) {
 function G(e) {
   var t = {};
   (function (e) {
-    var t = e.defaultIntegrations && o.f(e.defaultIntegrations) || []
+    var t = e.defaultIntegrations && $$_799_38.f(e.defaultIntegrations) || []
     var /* [auto-meaningful-name] */e$integrations = e.integrations
-    var r = o.f(V(t))
+    var r = $$_799_38.f(V(t))
     if (Array.isArray(e$integrations)) {
-      r = o.f(r.filter(function (e) {
+      r = $$_799_38.f(r.filter(function (e) {
         return e$integrations.every(function (t) {
           return t.name !== e.name
         })
@@ -52,7 +52,7 @@ function G(e) {
       return e.name
     })
     if (-1 !== i.indexOf("Debug")) {
-      r.push.apply(r, o.f(r.splice(i.indexOf("Debug"), 1)))
+      r.push.apply(r, $$_799_38.f(r.splice(i.indexOf("Debug"), 1)))
     }
     return r
   })(e).forEach(function (e) {
@@ -166,7 +166,7 @@ var Q = function () {
     if (s) {
       a = true
       try {
-        for (var c = o.g(s), u = c.next(); !u.done; u = c.next()) {
+        for (var c = $$_799_38.g(s), u = c.next(); !u.done; u = c.next()) {
           var /* [auto-meaningful-name] */u$value$mechanism = u.value.mechanism
           if (u$value$mechanism && false === u$value$mechanism.handled) {
             i = true
@@ -191,7 +191,7 @@ var Q = function () {
     }
     var f = e.status === $_2673.a.Ok
     if (f && 0 === e.errors || f && i) {
-      e.update(o.a(o.a({}, i && {
+      e.update($$_799_38.a($$_799_38.a({}, i && {
         status: $_2673.a.Crashed
       }), {
         errors: e.errors || Number(a || i)
@@ -230,7 +230,7 @@ var Q = function () {
     var r = this
     var /* [auto-meaningful-name] */this$getOptions$normalizeDepth = this.getOptions().normalizeDepth
     var a = undefined === this$getOptions$normalizeDepth ? 3 : this$getOptions$normalizeDepth
-    var c = o.a(o.a({}, e), {
+    var c = $$_799_38.a($$_799_38.a({}, e), {
       event_id: e.event_id || (n && n.event_id ? n.event_id : $_395.i()),
       timestamp: e.timestamp || $_2639_index.a()
     })
@@ -252,9 +252,9 @@ var Q = function () {
     if (!e) {
       return null
     }
-    var n = o.a(o.a(o.a(o.a(o.a({}, e), e.breadcrumbs && {
+    var n = $$_799_38.a($$_799_38.a($$_799_38.a($$_799_38.a($$_799_38.a({}, e), e.breadcrumbs && {
       breadcrumbs: e.breadcrumbs.map(function (e) {
-        return o.a(o.a({}, e), e.data && {
+        return $$_799_38.a($$_799_38.a({}, e), e.data && {
           data: $_564_index.d(e.data, t)
         })
       })
@@ -303,7 +303,7 @@ var Q = function () {
     var t = Object.keys(this._integrations)
     if (t.length > 0) {
       e.sdk = e.sdk || {}
-      e.sdk.integrations = o.f(e.sdk.integrations || [], t)
+      e.sdk.integrations = $$_799_38.f(e.sdk.integrations || [], t)
     }
   }
   e.prototype._sendEvent = function (e) {
@@ -628,7 +628,7 @@ function te(e) {
 }
 function ne(e, t) {
   try {
-    return o.a(o.a({}, e), {
+    return $$_799_38.a($$_799_38.a({}, e), {
       stack: e.stack.slice(t)
     })
   } catch (n) {
@@ -700,7 +700,7 @@ function se(e, t, n) {
     r = ce(s, t, n)
     $_395.b(r, s)
     if ("code" in i) {
-      r.tags = o.a(o.a({}, r.tags), {
+      r.tags = $$_799_38.a($$_799_38.a({}, r.tags), {
         "DOMException.code": "" + i.code
       })
     }
@@ -758,13 +758,13 @@ function ue(e) {
   }
 }
 function le(e, t) {
-  return t ? (e.sdk = e.sdk || {}, e.sdk.name = e.sdk.name || t.name, e.sdk.version = e.sdk.version || t.version, e.sdk.integrations = o.f(e.sdk.integrations || [], t.integrations || []), e.sdk.packages = o.f(e.sdk.packages || [], t.packages || []), e) : e
+  return t ? (e.sdk = e.sdk || {}, e.sdk.name = e.sdk.name || t.name, e.sdk.version = e.sdk.version || t.version, e.sdk.integrations = $$_799_38.f(e.sdk.integrations || [], t.integrations || []), e.sdk.packages = $$_799_38.f(e.sdk.packages || [], t.packages || []), e) : e
 }
 function fe(e, t) {
   var n = ue(t)
   var r = "aggregates" in e ? "sessions" : "session"
   return {
-    body: JSON.stringify(o.a(o.a({
+    body: JSON.stringify($$_799_38.a($$_799_38.a({
       sent_at: new Date().toISOString()
     }, n && {
       sdk: n
@@ -783,7 +783,7 @@ function de(e, t) {
   var i = "transaction" === r || t.forceEnvelope()
   var a = e.debug_meta || {}
   var /* [auto-meaningful-name] */a$transactionSampling = a.transactionSampling
-  var c = o.e(a, ["transactionSampling"])
+  var c = $$_799_38.e(a, ["transactionSampling"])
   var u = a$transactionSampling || {}
   var /* [auto-meaningful-name] */u$method = u.method
   var /* [auto-meaningful-name] */u$rate = u.rate
@@ -798,7 +798,7 @@ function de(e, t) {
     url: i ? t.getEnvelopeEndpointWithUrlEncodedAuth() : t.getStoreEndpointWithUrlEncodedAuth()
   }
   if (i) {
-    var h = JSON.stringify(o.a(o.a({
+    var h = JSON.stringify($$_799_38.a($$_799_38.a({
       event_id: e.event_id,
       sent_at: new Date().toISOString()
     }, n && {
@@ -1008,12 +1008,12 @@ var Ae = function () {
     var c = e["retry-after"]
     if (s) {
       try {
-        for (var u = o.g(s.trim().split(",")), f = u.next(); !f.done; f = u.next()) {
+        for (var u = $$_799_38.g(s.trim().split(",")), f = u.next(); !f.done; f = u.next()) {
           var d = f.value.split(":", 2)
           var h = parseInt(d[0], 10)
           var p = 1e3 * (isNaN(h) ? 60 : h)
           try {
-            for (r = undefined, _ = o.g(d[1].split(";")), A = _.next(), undefined; !A.done; A = _.next()) {
+            for (r = undefined, _ = $$_799_38.g(d[1].split(";")), A = _.next(), undefined; !A.done; A = _.next()) {
               var _
               var A
               var /* [auto-meaningful-name] */A$value = A.value
@@ -1088,7 +1088,7 @@ var ge = function (e) {
     r._fetch = n
     return r
   }
-  o.c(t, e)
+  $$_799_38.c(t, e)
   t.prototype.sendEvent = function (e) {
     return this._sendRequest(de(e, this._api), e)
   }
@@ -1140,7 +1140,7 @@ var ve = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this
   }
-  o.c(t, e)
+  $$_799_38.c(t, e)
   t.prototype.sendEvent = function (e) {
     return this._sendRequest(de(e, this._api), e)
   }
@@ -1184,7 +1184,7 @@ var me = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this
   }
-  o.c(t, e)
+  $$_799_38.c(t, e)
   t.prototype.eventFromException = function (e, t) {
     return function (e, t, n) {
       var r = se(t, n && n.syntheticException || undefined, {
@@ -1223,7 +1223,7 @@ var me = function (e) {
     if (!this._options.dsn) {
       return e.prototype._setupTransport.call(this)
     }
-    var t = o.a(o.a({}, this._options.transportOptions), {
+    var t = $$_799_38.a($$_799_38.a({}, this._options.transportOptions), {
       dsn: this._options.dsn,
       tunnel: this._options.tunnel,
       _metadata: this._options._metadata

@@ -15,31 +15,32 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import * as D from "./6"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_541_index from "./541/index"
 import * as /* [auto-meaningful-name] */$_1056 from "./1056"
 import /* [auto-meaningful-name] */$_10561 from "./1056"
-var qE = React1.memo(function (e) {
+var qE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "headline" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
   var a = e$getValue("headlineVisible")
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = React1.useState(1)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useState(1)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef(null)
-  var m = $_16_index.e(function (e) {
+  var p = useRef(null)
+  var m = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */p$current = p.current
     if (m && p$current) {
       p$current.setRows(Math.min(p$current.getRowCount(), 3))
@@ -52,7 +53,7 @@ var qE = React1.memo(function (e) {
     className: N($_10561.headline, $_10561.formItemWrapper, "changeHeadline")
   }, React.createElement("div", {
     className: $_10561.formTitle
-  }, React.createElement("p", null, $_710_index$a$formatMessage({
+  }, React.createElement("p", null, $_710$a$formatMessage({
     id: "headline"
   })), React.createElement($_541_index.a, {
     checked: a,
@@ -76,7 +77,7 @@ var qE = React1.memo(function (e) {
   }))
 })
 var XE = [[Qu.t, Qu.l], [Qu.o, Qu.g]]
-var QE = React1.memo(function (e) {
+var QE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "size" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -91,8 +92,8 @@ var QE = React1.memo(function (e) {
   var l = null === s || undefined === s ? undefined : s.height
   var u = e$getValue("type")
   var d = e$getValue("id")
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var m = React1.useRef({})
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var m = useRef({})
   var g = function (e, t, r) {
     var i = {}
     i[e] = parseInt(r)
@@ -116,14 +117,14 @@ var QE = React1.memo(function (e) {
     className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
   }, React.createElement("p", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "size"
   })), React.createElement("div", {
     className: qv.formInputNumberRow
   }, React.createElement($_13_index.i, {
     className: "changeWidth"
   }, React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "width"
     }),
     defaultValue: c,
@@ -143,7 +144,7 @@ var QE = React1.memo(function (e) {
   })), React.createElement($_13_index.i, {
     className: "changeHeight"
   }, React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "height"
     }),
     defaultValue: l,

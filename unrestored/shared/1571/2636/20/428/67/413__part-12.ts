@@ -13,6 +13,7 @@ import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_127 from "../../../127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_29 from "../../../29"
@@ -22,7 +23,7 @@ import * as /* [auto-meaningful-name] */$$_89 from "../89"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$_index from "./index"
 var _e = {}
-var ve = React1.memo(function (e) {
+var ve = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$position = e.position

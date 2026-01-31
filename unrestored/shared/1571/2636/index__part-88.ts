@@ -11,6 +11,7 @@ import * as /* [auto-meaningful-name] */$_58_index from "./58/index"
 import * as ro from "./39"
 import * as X from "./27"
 import /* [auto-meaningful-name] */React from "react"
+import { Component } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_291 from "./291"
 if ("undefined" !== typeof Element && !Element.prototype.matches) {
@@ -303,7 +304,7 @@ var Dv = function (e) {
     }
   ])
   return n
-}(React1.Component)
+}(Component)
 Dv.defaultProps = {
   nodeSelector: "tr",
   ignoreSelector: "",

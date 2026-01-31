@@ -9,29 +9,30 @@
 import /* [auto-meaningful-name] */$_208 from "./208"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_557 from "./557"
 import * as /* [auto-meaningful-name] */$_807 from "./807"
-var ow = React1.memo(function (e) {
+var ow = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "header" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = React1.useRef(-1)
-  var c = React1.useState([])
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var s = useRef(-1)
+  var c = useState([])
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(-1)
+  var p = useState(-1)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = React1.useState(0)
+  var v = useState(0)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
@@ -56,10 +57,10 @@ var ow = React1.memo(function (e) {
     u.splice(e, 1)
     e$onChange(n, u)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     d(i || [])
   }, [i])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = 2 * g
     var t = document.querySelector(".".concat("HTTP_HEADER_KEY_VALUE_INPUT_SERIAL_" + e, " input"))
     if (t instanceof HTMLInputElement) {
@@ -71,7 +72,7 @@ var ow = React1.memo(function (e) {
     className: N($_208.formItemWrapper, $_208.httpHeader)
   }, React.createElement("div", {
     className: $_208.title
-  }, React.createElement("div", null, $_710_index$a$formatMessage({
+  }, React.createElement("div", null, $_710$a$formatMessage({
     id: "HttpClientWidget.header"
   }))), React.createElement("div", {
     className: $_208.list
@@ -79,11 +80,11 @@ var ow = React1.memo(function (e) {
     className: $_208.listHeader
   }, React.createElement("div", {
     className: $_208.column1
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "key"
   })), React.createElement("div", {
     className: $_208.column2
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "value"
   })), React.createElement("div", {
     className: $_208.column3
@@ -183,23 +184,23 @@ var ow = React1.memo(function (e) {
     type: "icon-add"
   }))))
 })
-var iw = React1.memo(function (e) {
+var iw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "params" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = React1.useRef(-1)
-  var c = React1.useState([])
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var s = useRef(-1)
+  var c = useState([])
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(-1)
+  var p = useState(-1)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = React1.useState(0)
+  var v = useState(0)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
@@ -224,10 +225,10 @@ var iw = React1.memo(function (e) {
     u.splice(e, 1)
     e$onChange(n, u)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     d(i || [])
   }, [i])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = 2 * g
     var t = document.querySelector(".".concat("HTTP_PARAM_KEY_VALUE_INPUT_SERIAL_" + e, " input"))
     if (t instanceof HTMLInputElement) {
@@ -239,7 +240,7 @@ var iw = React1.memo(function (e) {
     className: N($_208.formItemWrapper, $_208.httpParams)
   }, React.createElement("div", {
     className: $_208.title
-  }, React.createElement("div", null, $_710_index$a$formatMessage({
+  }, React.createElement("div", null, $_710$a$formatMessage({
     id: "HttpClientWidget.params"
   }))), React.createElement("div", {
     className: $_208.list
@@ -247,11 +248,11 @@ var iw = React1.memo(function (e) {
     className: $_208.listHeader
   }, React.createElement("div", {
     className: $_208.column1
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "key"
   })), React.createElement("div", {
     className: $_208.column2
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "value"
   })), React.createElement("div", {
     className: $_208.column3

@@ -4,7 +4,7 @@
  * 模块 ID：2482
  */
 
-var r = require("./2484/996")
+var r = require("./2485/996")
 var /* [auto-meaningful-name] */Array$prototype$splice = Array.prototype.splice
 module.exports = function (e) {
   var /* [auto-meaningful-name] */this$__data__ = this.__data__

@@ -9,9 +9,10 @@
 import { nI } from "./index__part-170"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_474 from "./474"
 import /* [auto-meaningful-name] */$_4741 from "./474"
@@ -34,8 +35,8 @@ var GS = function (e, t) {
   }, n) : n
 }
 var WS = React.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = React1.useRef(null)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useRef(null)
   var /* [auto-meaningful-name] */React$useContextNI$setBulkSelectVisible = React.useContext(nI).setBulkSelectVisible
   return React.createElement("div", {
     className: N($_4741.wrapper)
@@ -55,7 +56,7 @@ var WS = React.memo(function () {
     type: "icon-add"
   })), React.createElement("div", {
     className: N($_4741.addText)
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "DataWatch.addData"
   }))))))
 })

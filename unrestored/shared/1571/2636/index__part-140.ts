@@ -13,8 +13,9 @@ import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_422 from "./422"
 import /* [auto-meaningful-name] */$_4221 from "./422"
@@ -153,34 +154,34 @@ function TC() {
     }, e)
   }))).apply(this, arguments)
 }
-var SC = React1.memo(function (e) {
+var SC = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "device" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var i = React1.useState(false)
+  var i = useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = React1.useState(0)
+  var m = useState(0)
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState(0)
+  var y = useState(0)
   var w = $_10_index.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState(0)
+  var A = useState(0)
   var I = $_10_index.a(A, 2)
   var j = I[0]
   var R = I[1]
-  var k = React1.useRef()
-  var x = React1.useRef()
-  var D = $_16_index.e(function (e) {
+  var k = useRef()
+  var x = useRef()
+  var D = useSelector(function (e) {
     return e.project.playing
   })
   var M = e$getValue(n)
@@ -279,7 +280,7 @@ var SC = React1.memo(function (e) {
       }, e, null, [[2, 18]])
     }))).apply(this, arguments)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     O.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */k$current
       var /* [auto-meaningful-name] */x$current

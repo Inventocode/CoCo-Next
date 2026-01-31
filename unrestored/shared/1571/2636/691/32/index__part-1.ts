@@ -7,13 +7,13 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_1500_index from "./1500/index"
-import * as /* [auto-meaningful-name] */$$_$$_80_1573_774 from "../../80/1573/774"
-import /* [auto-meaningful-name] */$$_$$_80_1573_7741 from "../../80/1573/774"
+import * as /* [auto-meaningful-name] */$_774 from "./774"
+import /* [auto-meaningful-name] */$_7741 from "./774"
 if (!self.Promise) {
   self.Promise = $_1500_index.a
 }
 if (!Object.assign) {
-  Object.assign = $$_$$_80_1573_7741
+  Object.assign = $_7741
 }
 if (!(Date.now && Date.prototype.getTime)) {
   Date.now = function () {

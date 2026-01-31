@@ -23,12 +23,13 @@ import * as te from "./15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useContext, useMemo, createElement, forwardRef, memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_517 from "./517"
 import * as /* [auto-meaningful-name] */$_435 from "./435"
@@ -63,17 +64,17 @@ var uy = function (e, t) {
   var /* [auto-meaningful-name] */e$size = e.size
   var /* [auto-meaningful-name] */e$notFoundContent = e.notFoundContent
   var _ = ly(e, ["prefixCls", "bordered", "className", "getPopupContainer", "dropdownClassName", "listHeight", "listItemHeight", "size", "notFoundContent"])
-  var v = React1.useContext($_801_index.b)
+  var v = useContext($_801_index.b)
   var /* [auto-meaningful-name] */v$getPopupContainer = v.getPopupContainer
   var /* [auto-meaningful-name] */v$getPrefixCls = v.getPrefixCls
   var /* [auto-meaningful-name] */v$renderEmpty = v.renderEmpty
   var /* [auto-meaningful-name] */v$direction = v.direction
   var /* [auto-meaningful-name] */v$virtual = v.virtual
   var /* [auto-meaningful-name] */v$dropdownMatchSelectWidth = v.dropdownMatchSelectWidth
-  var T = React1.useContext($_517.b)
+  var T = useContext($_517.b)
   var S = v$getPrefixCls("select", e$prefixCls)
   var A = v$getPrefixCls()
-  var I = React1.useMemo(function () {
+  var I = useMemo(function () {
     var /* [auto-meaningful-name] */_$mode = _.mode
     if ("combobox" !== _$mode) {
       return "SECRET_COMBOBOX_MODE_DO_NOT_USE" === _$mode ? "combobox" : _$mode
@@ -91,13 +92,13 @@ var uy = function (e, t) {
     var /* [auto-meaningful-name] */e$prefixCls1 = e.prefixCls
     var c = e$clearIcon
     if (!e$clearIcon) {
-      c = React1.createElement($_1044.a, null)
+      c = createElement($_1044.a, null)
     }
     var l = null
     if (undefined !== e$suffixIcon) {
       l = e$suffixIcon
     } else if (e$loading) {
-      l = React1.createElement($_610.a, {
+      l = createElement($_610.a, {
         spin: true
       })
     } else {
@@ -105,9 +106,9 @@ var uy = function (e, t) {
       l = function (e) {
         var /* [auto-meaningful-name] */e$open = e.open
         var /* [auto-meaningful-name] */e$showSearch = e.showSearch
-        return e$open && e$showSearch ? React1.createElement(ay, {
+        return e$open && e$showSearch ? createElement(ay, {
           className: u
-        }) : React1.createElement(Zb, {
+        }) : createElement(Zb, {
           className: u
         })
       }
@@ -115,8 +116,8 @@ var uy = function (e, t) {
     return {
       clearIcon: c,
       suffixIcon: l,
-      itemIcon: undefined !== e$menuItemSelectedIcon ? e$menuItemSelectedIcon : e$multiple ? React1.createElement(ty, null) : null,
-      removeIcon: undefined !== e$removeIcon ? e$removeIcon : React1.createElement($_803.a, null)
+      itemIcon: undefined !== e$menuItemSelectedIcon ? e$menuItemSelectedIcon : e$multiple ? createElement(ty, null) : null,
+      removeIcon: undefined !== e$removeIcon ? e$removeIcon : createElement($_803.a, null)
     }
   }(Dn.a(Dn.a({}, _), {
     multiple: j,
@@ -130,7 +131,7 @@ var uy = function (e, t) {
   var P = N(e$dropdownClassName, Ln.a({}, "".concat(S, "-dropdown-").concat(v$direction), "rtl" === v$direction))
   var B = e$size || T
   var F = N((n = {}, Ln.a(n, "".concat(S, "-lg"), "large" === B), Ln.a(n, "".concat(S, "-sm"), "small" === B), Ln.a(n, "".concat(S, "-rtl"), "rtl" === v$direction), Ln.a(n, "".concat(S, "-borderless"), !a), n), e$className)
-  return React1.createElement(Yb, Dn.a({
+  return createElement(Yb, Dn.a({
     ref: t,
     virtual: v$virtual,
     dropdownMatchSelectWidth: v$dropdownMatchSelectWidth
@@ -151,28 +152,28 @@ var uy = function (e, t) {
     dropdownClassName: P
   }))
 }
-var dy = React1.forwardRef(uy)
+var dy = forwardRef(uy)
 dy.SECRET_COMBOBOX_MODE_DO_NOT_USE = "SECRET_COMBOBOX_MODE_DO_NOT_USE"
 dy.Option = Nb
 dy.OptGroup = kb
 var py = dy
-var fy = React1.memo(function (e) {
+var fy = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var /* [auto-meaningful-name] */e$fontFamily = e.fontFamily
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var i = $_16_index.d()
-  var a = React1.useState(te.db)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var i = useDispatch()
+  var a = useState(te.db)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = $_16_index.e(function (e) {
+  var u = useSelector(function (e) {
     return e.common.isOffLine
   })
-  var d = $_16_index.e(function (e) {
+  var d = useSelector(function (e) {
     return e.resource.fontFileList
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     d.forEach(function () {
       var e = O.a(RegeneratorRuntime.mark(function e(t) {
         return RegeneratorRuntime.wrap(function (e) {
@@ -214,7 +215,7 @@ var fy = React1.memo(function (e) {
                 break
               }
               i($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "download.offline"
                 }),
                 type: "error"
@@ -231,7 +232,7 @@ var fy = React1.memo(function (e) {
               te.db[n] = true
               l(te.db)
               i($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710_index$a$formatMessage({
+                message: $_710$a$formatMessage({
                   id: "download.success"
                 }),
                 type: "success"

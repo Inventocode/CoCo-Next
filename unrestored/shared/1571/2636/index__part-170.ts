@@ -22,8 +22,9 @@ import /* [auto-meaningful-name] */$_1060 from "./1060"
 import * as K from "./18"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_706 from "./706"
 import /* [auto-meaningful-name] */$_7061 from "./706"
@@ -31,21 +32,21 @@ var nI = React.createContext({
   bulkSelectVisible: false,
   setBulkSelectVisible: function (e) {}
 })
-var oI = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var oI = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.rightSideActiveMenu
   })
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.common.consoleHeight
   })
-  var n = React1.useState(false)
+  var n = useState(false)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = React1.useRef(null)
-  var s = React1.useRef(null)
+  var a = useRef(null)
+  var s = useRef(null)
   var c = t + 66
-  React1.useEffect(function () {
+  useEffect(function () {
     if (s.current) {
       tT(s.current, function (e, t) {
         var /* [auto-meaningful-name] */a$current
@@ -59,12 +60,12 @@ var oI = React1.memo(function () {
       })
     }
   }, [i])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!e) {
       i(false)
     }
   }, [e])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function () {
       i(false)
     }
@@ -73,7 +74,7 @@ var oI = React1.memo(function () {
       window.removeEventListener("drag", e)
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     i(false)
   }, [t])
   return React.createElement(nI.Provider, {
@@ -100,32 +101,32 @@ var oI = React1.memo(function () {
   }))))
 })
 var iI = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.project.packageProgressVisible
   })
-  var n = $_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.project.playing
   })
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.common.consoleMessages
   })
-  var o = React1.useState(false)
+  var o = useState(false)
   var i = $_10_index.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n) {
       d(true)
     }
   }, [n])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */r$filterFunctionEReturnLogE$getType$size = r.filter(function (e) {
       return "log" !== e.get("type")
     }).size

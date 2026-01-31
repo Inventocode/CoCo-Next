@@ -14,9 +14,9 @@ import * as /* [auto-meaningful-name] */$_775_index from "./775/index"
 import * as /* [auto-meaningful-name] */$_729_index from "./729/index"
 import * as /* [auto-meaningful-name] */$_365 from "./365"
 import * as /* [auto-meaningful-name] */$_264 from "./264"
-import * as /* [auto-meaningful-name] */$$_1212_38 from "../1212/38"
+import * as i from "./38"
 import * as /* [auto-meaningful-name] */$_745 from "./745"
-import * as /* [auto-meaningful-name] */$_1549_index from "./1549/index"
+import * as /* [auto-meaningful-name] */$_1549 from "./1549"
 import * as /* [auto-meaningful-name] */$_317 from "./317"
 var B = {
   traceFetch: true,
@@ -24,7 +24,7 @@ var B = {
   tracingOrigins: ["localhost", /^\//]
 }
 function D(e) {
-  var t = $$_1212_38.a($$_1212_38.a({}, B), e)
+  var t = i.a(i.a({}, B), e)
   var /* [auto-meaningful-name] */t$traceFetch = t.traceFetch
   var /* [auto-meaningful-name] */t$traceXHR = t.traceXHR
   var /* [auto-meaningful-name] */t$tracingOrigins = t.tracingOrigins
@@ -48,7 +48,7 @@ function D(e) {
   }
   var d = {}
   if (t$traceFetch) {
-    $_1549_index.a({
+    $_1549.a({
       callback: function (e) {
         !function (e, t, n) {
           if (!$_220_index.c() || !e.fetchData || !t(e.fetchData.url)) {
@@ -60,7 +60,7 @@ function D(e) {
           var r = $_220_index.b()
           if (r) {
             var o = r.startChild({
-              data: $$_1212_38.a($$_1212_38.a({}, e.fetchData), {
+              data: i.a(i.a({}, e.fetchData), {
                 type: "fetch"
               }),
               description: e.fetchData.method + " " + e.fetchData.url,
@@ -78,7 +78,7 @@ function D(e) {
               if ("function" === typeof s$headers.append) {
                 s$headers.append("sentry-trace", o.toTraceparent())
               } else {
-                s$headers = Array.isArray(s$headers) ? $$_1212_38.f(s$headers, [["sentry-trace", o.toTraceparent()]]) : $$_1212_38.a($$_1212_38.a({}, s$headers), {
+                s$headers = Array.isArray(s$headers) ? i.f(s$headers, [["sentry-trace", o.toTraceparent()]]) : i.a(i.a({}, s$headers), {
                   "sentry-trace": o.toTraceparent()
                 })
               }
@@ -95,7 +95,7 @@ function D(e) {
     })
   }
   if (t$traceXHR) {
-    $_1549_index.a({
+    $_1549.a({
       callback: function (e) {
         !function (e, t, n) {
           var /* [auto-meaningful-name] */e$xhr
@@ -110,7 +110,7 @@ function D(e) {
           var s = $_220_index.b()
           if (s) {
             var c = s.startChild({
-              data: $$_1212_38.a($$_1212_38.a({}, e$xhr$__sentry_xhr__.data), {
+              data: i.a(i.a({}, e$xhr$__sentry_xhr__.data), {
                 type: "xhr",
                 method: e$xhr$__sentry_xhr__.method,
                 url: e$xhr$__sentry_xhr__.url
@@ -133,7 +133,7 @@ function D(e) {
   }
 }
 var I = $_365.b()
-var R = $$_1212_38.a({
+var R = i.a({
   idleTimeout: $_775_index.a,
   markBackgroundTransactions: true,
   maxTransactionDuration: 600,
@@ -154,7 +154,7 @@ var R = $$_1212_38.a({
         })
       }
       if (n) {
-        $_1549_index.a({
+        $_1549.a({
           callback: function (t) {
             var n = t.to
             var /* [auto-meaningful-name] */t$from = t.from
@@ -195,7 +195,7 @@ var F = function () {
     } else {
       this._emitOptionsWarning = true
     }
-    this.options = $$_1212_38.a($$_1212_38.a($$_1212_38.a({}, R), t), {
+    this.options = i.a(i.a(i.a({}, R), t), {
       tracingOrigins: B$tracingOrigins
     })
   }
@@ -259,11 +259,11 @@ var F = function () {
         }
         return
       }() : undefined
-      var h = $$_1212_38.a($$_1212_38.a($$_1212_38.a({}, e), d), {
+      var h = i.a(i.a(i.a({}, e), d), {
         trimEnd: true
       })
       var p = "function" === typeof this$options$beforeNavigate ? this$options$beforeNavigate(h) : h
-      var _ = undefined === p ? $$_1212_38.a($$_1212_38.a({}, h), {
+      var _ = undefined === p ? i.a(i.a({}, h), {
         sampled: false
       }) : p
       if (false === _.sampled) {
@@ -314,7 +314,7 @@ var P = function () {
               for (var e = [], r = 0; r < arguments.length; r++) {
                 e[r] = arguments[r]
               }
-              return n.call.apply(n, $$_1212_38.f([this], M(e, t)))
+              return n.call.apply(n, i.f([this], M(e, t)))
             }
             return e
           }(e, t)
@@ -358,7 +358,7 @@ function N(e, t) {
           if (!(null === (e = s) || undefined === e)) {
             e.finish()
           }
-          o.call.apply(o, $$_1212_38.f([this], t))
+          o.call.apply(o, i.f([this], t))
         })
       }
     case 4:
@@ -375,7 +375,7 @@ function N(e, t) {
           if (!(null === (e = c) || undefined === e)) {
             e.finish()
           }
-          a.call.apply(a, $$_1212_38.f([this], t))
+          a.call.apply(a, i.f([this], t))
         })
       }
     default:

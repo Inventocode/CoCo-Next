@@ -12,6 +12,7 @@ import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-run
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as s from "../7"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
+import { useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as d from "../8"
@@ -111,12 +112,12 @@ function S(e) {
   var h
   var m = e$attributes$url
   var g = m.startsWith("http://") && !$$_28_index.d()
-  var _ = React.useState("loading")
+  var _ = useState("loading")
   var b = $$_10_index.a(_, 2)
   var w = b[0]
   var S = b[1]
-  var A = React.useRef(null)
-  React.useEffect(function () {
+  var A = useRef(null)
+  useEffect(function () {
     if (g) {
       S("http-protocol-error")
     } else {

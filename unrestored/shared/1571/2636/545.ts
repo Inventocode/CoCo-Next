@@ -8,6 +8,7 @@
 
 import * as r from "./6"
 import * as o from "./11"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"

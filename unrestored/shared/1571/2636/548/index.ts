@@ -7,6 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import { useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
@@ -91,7 +92,7 @@ _a = function (e) {
       width: e$size.width
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     if (e$attributes$backgroundMode === $$_163.a.IMAGE && !k.current) {
       var /* [auto-meaningful-name] */R$current = R.current
       if (!R$current) {

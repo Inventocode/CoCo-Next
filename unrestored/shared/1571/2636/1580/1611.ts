@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("./1706/86/index")
-var /* [auto-meaningful-name] */require$_1581_401$map = require("./1581/401").map
+var r = require("./1661/86/index")
+var /* [auto-meaningful-name] */require$_1754_401$map = require("./1754/401").map
 r({
   target: "Array",
   proto: true,
   forced: !require("./1597/833")("map")
 }, {
   map: function (e) {
-    return require$_1581_401$map(this, e, arguments.length > 1 ? arguments[1] : undefined)
+    return require$_1754_401$map(this, e, arguments.length > 1 ? arguments[1] : undefined)
   }
 })
