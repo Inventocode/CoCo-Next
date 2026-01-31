@@ -66,9 +66,12 @@ export async function onRequest(context) {
 
             return newResponse
         } else if (url.pathname.startsWith("/http-widget-proxy/")) { // 处理 CoCo HTTP 客户端控件代理
-            return fetch(url.pathname
-                .replace(/^\/http-widget-proxy\/https@SEP@/, "https://")
-                .replace(/^\/http-widget-proxy\/http@SEP@/, "http://"))
+            return fetch(
+                url.pathname
+                    .replace(/^\/http-widget-proxy\/https@SEP@/, "https://")
+                    .replace(/^\/http-widget-proxy\/http@SEP@/, "http://")
+                + url.search + url.hash
+            )
         }
 
         // 如果没有目标 URL 参数，返回静态资源
