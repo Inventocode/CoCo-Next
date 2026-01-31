@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><meta name="description" content="CoCo Next"/><meta name="keywords" content="App 工匠，App Craft, AppCraft, codemao, 编程猫, CoCo, CoCo Next"/><meta name="environment" content="production"/><title>CoCo Next - 下一代 CoCo 编辑器</title><link rel="icon" href="/favicon.svg"/><script defer="defer" src="https://cdn.jsdmirror.com/npm/react@16.14.0/umd/react.production.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/react-dom@16.14.0/umd/react-dom.production.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/terser@5.44.0/dist/bundle.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/lodash@4.17.21/lodash.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/ag-grid-community@25.3.0/dist/ag-grid-community.min.noStyle.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/xlsx@0.17.5/dist/xlsx.full.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/dayjs@1.11.18/dayjs.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/antd@5.27.5/dist/antd.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/antd-mobile@5.41.1/bundle/antd-mobile.umd.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/quill@2.0.3/dist/quill.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/intl@1.2.5/dist/Intl.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/prop-types@15.8.1/prop-types.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/react-intl@2.9.0/dist/react-intl.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/axios@0.21.1/dist/axios.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/redux-saga@0.16.2/dist/redux-saga.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/react-router@5.3.4/umd/react-router.min.js" crossorigin></script><script defer="defer" src="https://cdn.jsdmirror.com/npm/react-redux@4.4.10/dist/react-redux.min.js" crossorigin></script><script defer="defer" src="/static/scripts/runtime.c99ed6b5e3aa6d38.js"></script><script defer="defer" src="/static/scripts/proxy.02c4844bb7bce9dc.js"></script><script defer="defer" src="/static/scripts/542.15e7850100df047a.js"></script><script defer="defer" src="/static/scripts/111.7a04fe08cfe40c5e.js"></script><script defer="defer" src="/static/scripts/795.7119a0bfee16c148.js"></script><script defer="defer" src="/static/scripts/928.0d73b7bbcf4e4b6b.js"></script><script defer="defer" src="/static/scripts/841.2f98fd7f6b8d7b56.js"></script><script defer="defer" src="/static/scripts/78.8e87aaa4bfdbf37c.js"></script><script defer="defer" src="/static/scripts/442.3dc8dcf7fd8271b5.js"></script><script defer="defer" src="/static/scripts/610.bdc6367482fb1b4d.js"></script><script defer="defer" src="/static/scripts/185.8f0fb25624cb56d2.js"></script><script defer="defer" src="/static/scripts/304.a0ffba16be3fde37.js"></script><script defer="defer" src="/static/scripts/778.fde56f552758916e.js"></script><script defer="defer" src="/static/scripts/215.e3480d37bcd08279.js"></script><script defer="defer" src="/static/scripts/488.5e8248804460c57d.js"></script><script defer="defer" src="/static/scripts/546.1670cb92f8cb02f0.js"></script><script defer="defer" src="/static/scripts/958.7f9ebf3891595b6b.js"></script><script defer="defer" src="/static/scripts/924.6e44d6efbdf74fcf.js"></script><script defer="defer" src="/static/scripts/editor~0.76639a61c65df333.js"></script><script defer="defer" src="/static/scripts/editor~2.34b043ac14e1a806.js"></script><script defer="defer" src="/static/scripts/editor~3.b9f5fc6a0aba43c7.js"></script><script defer="defer" src="/static/scripts/editor~4.b494304fb6e147bb.js"></script><script defer="defer" src="/static/scripts/editor~5.21a552c64e98c242.js"></script><script defer="defer" src="/static/scripts/editor~6.085bf0f6c86b04b3.js"></script><script defer="defer" src="/static/scripts/editor~7.c3f42606f12bffb3.js"></script><script defer="defer" src="/static/scripts/editor~8.9050f2e2c3561500.js"></script><link href="https://cdn.jsdmirror.com/npm/antd-mobile@5.41.1/bundle/style.css" rel="stylesheet" crossorigin><link href="/static/styles/916.176033e89e25a30b.css" rel="stylesheet"><link href="/static/styles/313.265f62b46035c096.css" rel="stylesheet"><link href="/static/styles/editor~1.8dbadbe44225753d.css" rel="stylesheet"></head><body><noscript>You need to enable JavaScript to run this app.</noscript><div id="loading"><style>#loading {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -100;
+                }
+                #loading .logo {
+                    width: 128px;
+                }
+                #loading .process-bar--wrapper {
+                    border: 4px solid #6e4ff4;
+                    border-radius: 100px;
+                }
+                #loading .process-bar--fill--wrapper {
+                    width: 256px;
+                    margin: 4px;
+                }
+                #loading .process--fill {
+                    width: 0%;
+                    height: 8px;
+                    border-radius: 4px;
+                    background-color: #6e4ff4;
+                    transition: width 100ms;
+                }
+                #loading .text {
+                    margin: 4px;
+                }
+                #loading .percentage {
+                    float: right;
+                }</style><img class="logo" src="/favicon.svg" alt="logo.svg"><div class="info"><div class="process-bar--wrapper"><div class="process-bar--fill--wrapper"><div class="process--fill"></div></div></div><div class="text"><span class="prompt">努力加载中……</span>(<span class="ratio">0/0</span>)<span class="percentage">0%</span></div></div><script>const processFillElement = document.querySelector("#loading .process--fill")
+                const promptElement = document.querySelector("#loading .prompt")
+                const ratioElement = document.querySelector("#loading .ratio")
+                const percentageElement = document.querySelector("#loading .percentage")
+
+                let total = 0, loaded = 0, hasError = false
+
+                function increaseProcess() {
+                    loaded++
+                    updateProcessBar()
+                }
+
+                function updateProcessBar() {
+                    const process = loaded / total * 100
+                    processFillElement.style.width = `${process}%`
+                    ratioElement.innerText = `${loaded}/${total}`
+                    percentageElement.innerText = `${Math.round(process)}%`
+                }
+
+                function handleError() {
+                    if (!hasError) {
+                        promptElement.innerText = "❌ 加载失败"
+                        hasError = true
+                    }
+                }
+
+                for (const element of document.querySelectorAll("script[src], link[rel=stylesheet]")) {
+                    total++
+                    element.addEventListener("load", increaseProcess)
+                    element.addEventListener("error", handleError)
+                }
+
+                updateProcessBar()
+
+                addEventListener("load", () => {
+                    if (!hasError) {
+                        document.getElementById("loading").remove()
+                    }
+                })</script></div><div id="root"></div></body></html>
