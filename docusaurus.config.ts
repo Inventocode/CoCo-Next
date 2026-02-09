@@ -113,7 +113,7 @@ const config: Config = {
             },
             {
               label: '技术信息',
-              to: '/tech/fork',
+              to: '/tech/develop',
             },
           ],
         },
@@ -122,7 +122,7 @@ const config: Config = {
           items: [
             {
               label: 'QQ：1065215133',
-              href: 'https://wpa.qq.com/msgrd?uin=1065215133',
+              href: 'https://qm.qq.com/q/wMJv0PEDJe',
             },
           ],
         },

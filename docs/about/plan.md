@@ -6,9 +6,13 @@ sidebar_position: 4
 
 ## 第零阶段：保障 CoCo 功能
 
+对应里程碑：https://gitee.com/oldsquaw-coco-next/CoCo-Next/milestones/221656
+
 保证 CoCo 功能能够正常使用，使用户可以从 CoCo 无缝迁移。
 
 ## 第一阶段：补全基础功能
+
+对应里程碑：https://gitee.com/oldsquaw-coco-next/CoCo-Next/milestones/221607
 
 在该阶段，我们会致力于 CoCo 的一些基础问题，如：Undefined 修复、移除自定义控件。这些功能虽然大多已有其他解决方案，但是用起来太麻烦了。同时，这也是社区工具的基础功能。
 
