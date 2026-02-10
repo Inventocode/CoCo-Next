@@ -8,7 +8,7 @@
 
 import { B } from "./index__part-4"
 var P
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$_344 from "./344"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import /* [auto-meaningful-name] */Color from "color"
@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */$$_710 from "../710"
 import { useDispatch } from "react-redux"
 import * as A from "../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useMemo, forwardRef, useRef, useImperativeHandle, useEffect, useCallback } from "react"

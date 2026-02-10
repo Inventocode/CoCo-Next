@@ -1,0 +1,22 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：841
+ */
+
+.coco-iconfont {
+    display: inline-block;
+    color: inherit;
+    font-style: normal;
+    line-height: 0;
+    text-align: center;
+    text-transform: none;
+    vertical-align: -.125em;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased
+}
+
+.coco-iconfont-spin {
+    display: inline-block;
+    animation: loadingCircle 1s linear infinite
+}

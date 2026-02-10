@@ -1,0 +1,32 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：279
+ */
+
+module.exports = {
+  wrapper: "PreviewArea_wrapper__2g99u",
+  side: "PreviewArea_side__3XTRT",
+  mask: "PreviewArea_mask__nhSUu",
+  header: "PreviewArea_header__3tGAU",
+  body: "PreviewArea_body__1s54V",
+  main: "PreviewArea_main__240n6",
+  stage: "PreviewArea_stage__38aST",
+  viewZone: "PreviewArea_viewZone__3iEdy",
+  appZone: "PreviewArea_appZone__2q22j",
+  dragBar: "PreviewArea_dragBar__KyFSw",
+  active: "PreviewArea_active__1ph5s",
+  toastWrapper: "PreviewArea_toastWrapper__2ppGT",
+  toast: "PreviewArea_toast__HctvC",
+  icon: "PreviewArea_icon__x4x_k",
+  stageMask: "PreviewArea_stageMask__3GQZD",
+  isActorDragging: "PreviewArea_isActorDragging__3W4To",
+  foldBtn: "PreviewArea_foldBtn__29ByC",
+  hide: "PreviewArea_hide__2HaDd",
+  show: "PreviewArea_show__j9QuI",
+  visible: "PreviewArea_visible__1Sj5F",
+  canvasFlash: "PreviewArea_canvasFlash__1e0IE",
+  canvasFlashAnimation: "PreviewArea_canvasFlashAnimation__3hYe-",
+  guideLine: "PreviewArea_guideLine__1OIpg",
+  stageReadOnlyMask: "PreviewArea_stageReadOnlyMask__SYAlA"
+}

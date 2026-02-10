@@ -15,7 +15,7 @@ import * as l from "../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_301_index from "../301/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 var h = new (function () {
   function e() {
     $$_27.a(this, e)

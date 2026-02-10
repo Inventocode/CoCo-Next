@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_59_index fr
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index from "../../../../shared/1571/2636/58/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "../../../../shared/1571/2636/27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_9 from "../../../../shared/1571/2636/9"

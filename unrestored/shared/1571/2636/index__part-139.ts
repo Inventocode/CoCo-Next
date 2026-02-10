@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_934 from "./934"
 import /* [auto-meaningful-name] */$_9341 from "./934"

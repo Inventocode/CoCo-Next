@@ -13,7 +13,7 @@ var gr
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
 import * as /* [auto-meaningful-name] */$$_110 from "../110"
 import * as /* [auto-meaningful-name] */$$_20_index from "../20/index"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_49 from "../49"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_64 from "../64"

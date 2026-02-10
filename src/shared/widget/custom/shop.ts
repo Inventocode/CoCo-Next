@@ -8,7 +8,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"
 import * as Type from "./type"
 import { axiosWithCredentials } from "../../utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_57_index from "../../../../unrestored/shared/1571/2636/57/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_57_index from "../../env"
 
 import { MyResponse, PageResponse } from "../../utils/network/response"
 import * as Internal from "../../../editor/widget/internal/types"

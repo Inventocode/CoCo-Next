@@ -31,7 +31,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language fr
 import * as /* [auto-meaningful-name] */$$_64 from "../64"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as f from "../9"
-import * as /* [auto-meaningful-name] */$_312 from "./312"
+import * as /* [auto-meaningful-name] */$_312 from "../../../../../src/shared/tools/url"
 function m(e, t) {
   var n = document.createElement("a")
   document.body.appendChild(n)

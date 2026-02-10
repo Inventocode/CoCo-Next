@@ -26,7 +26,7 @@ import * as i from "./7"
 import * as a from "./33"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
 import * as c from "./53"
-import * as /* [auto-meaningful-name] */$_57_index from "./57/index"
+import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
 function d(e, t, n, r, o, i, l, u, d, p, f, h) {
   var m = $$_$$_$$_$$_src_shared_widget_custom_storage.d()

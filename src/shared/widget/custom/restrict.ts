@@ -39,6 +39,5 @@ var object = {
 }
 
 export const keyWords: string[] = ["parent.location", "top.location", "WebSocket", "XMLHttpRequest", ".fetch", "socketcv.codemao.cn"]
-export { keyWords as a }
 export const objectKeys: string[] = Object.keys(object)
 export const objectValues: unknown[] = Object.values(object)

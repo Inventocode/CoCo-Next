@@ -32,6 +32,15 @@ async function main(): Promise<void> {
         publicPath: "https://creation.codemao.cn/coconut/web/1.22.0-0/",
         nodePolyfill: {
             250: "global"
+        },
+        moveToSrc: {
+            2635: ".",
+            2637: ".",
+            "2637__part-1": "/player/wrappers/web/community",
+            "2637__part-2": "/player/wrappers/web/h5",
+            "2637__part-3": "/player/wrappers/web/index",
+            "2637__part-4": "/player/wrappers/mobile/community",
+            "2637__part-6": "/player/app"
         }
     })
 }

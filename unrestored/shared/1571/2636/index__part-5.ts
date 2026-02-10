@@ -10,7 +10,7 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_297 from "./297"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$_57_index from "./57/index"
+import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
 var /* [auto-meaningful-name] */$_57_index$a$oTServerHost = $_57_index.a.oTServerHost
 $_57_index.a.oTSocketHost
 $_57_index.a.serverHost

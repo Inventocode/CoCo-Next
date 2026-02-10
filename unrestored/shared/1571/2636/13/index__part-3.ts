@@ -11,7 +11,7 @@ import { memo, useState, useRef, useEffect, useCallback, useContext } from "reac
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import "./641"
 import * as /* [auto-meaningful-name] */$$_361 from "../361"
 var w = memo(function (e) {

@@ -6,11 +6,11 @@
 
 import * as React from "react"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as Tools from "../../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import { IconFont } from "../../../../shared/ui/components"
+import { CoCoDialog } from "../../../../shared/ui/components"
 import { useDispatch, useSelector } from "react-redux"
 
 import styles from "./styles.module.css"
@@ -25,41 +25,34 @@ const RELEASE_MESSAGES = [
 const RELEASE_LINKS = [
   {
     label: "Coco控件商城-投稿",
-    url: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b
+    url: Tools.WIDGET_POST_FORM_URL
   }
 ]
 
-const ReleaseInfo = React.memo(() => {
-  const releaseInfoDialogVisible = useSelector(function (e) {
-    return e.common.releaseInfoDialogVisible
-  })
-  const userId = useSelector(function (e) {
-    return e.common.userInfo?.id
-  })
-  const userInfoFetchDone = useSelector(function (e) {
-    return e.common.userInfoFetchDone
-  })
-  var r = React.useState(false)
-  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
-  var i = o[0]
-  var a = o[1]
-  var s = useDispatch()
+export const ReleaseInfo = React.memo(() => {
+  const releaseInfoDialogVisible = useSelector((state) => state.common.releaseInfoDialogVisible)
+  const userId = useSelector((state) => state.common.userInfo?.id)
+  const userInfoFetchDone = useSelector((state) => state.common.userInfoFetchDone)
+  const [hasShown, setHasShown] = React.useState(false)
+  const dispatch = useDispatch()
+
   React.useEffect(function () {
     if (userInfoFetchDone) {
-      if (!i) {
+      if (!hasShown) {
         if (localStorage.getItem("ReleaseVersion") !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f) {
-          s(Actions.vj(true))
+          dispatch(Actions.showReleaseInfoDialog(true))
           localStorage.setItem("ReleaseVersion", $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f)
         }
-        a(true)
+        setHasShown(true)
       }
     }
-  }, [i, s, userId, userInfoFetchDone])
+  }, [hasShown, dispatch, userId, userInfoFetchDone])
+
   return (
-    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
+    <CoCoDialog
       visible={releaseInfoDialogVisible}
       className={styles.ReleaseInfoDialog}
-      onClose={() => s(Actions.vj(false))}
+      onClose={() => dispatch(Actions.showReleaseInfoDialog(false))}
     >
       <div className={styles.left}>
         <img src={LeftSideImage} alt="" />
@@ -82,12 +75,11 @@ const ReleaseInfo = React.memo(() => {
           <div className={styles.overViewInfo}>
             <a href="https://codemao-guide.yuque.com/bfiekm/sbo5kh/update" target="_blank" rel="noopener noreferrer">
               往期功能更新回顾
-              <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className={styles.iconLink} type="icon-dropdown-down" />
+              <IconFont className={styles.iconLink} type="icon-dropdown-down" />
             </a>
           </div>
         </div>
       </div>
-    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f>
+    </CoCoDialog>
   )
 })
-export { ReleaseInfo as UL }

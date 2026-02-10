@@ -12,7 +12,7 @@ import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime
 import * as a from "../6"
 import * as s from "../7"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../src/shared/utils/network/axios-with-credentials"
-var /* [auto-meaningful-name] */require$$_57_index$a$socketHost = require("../57/index").a.socketHost
+var /* [auto-meaningful-name] */require$$_57_index$a$socketHost = require("../../../../../src/shared/env").a.socketHost
 function u() {
   var e = {}
   if (r && (r.authorization && (e["x-coconut-authorization"] = r.authorization), r.device)) {

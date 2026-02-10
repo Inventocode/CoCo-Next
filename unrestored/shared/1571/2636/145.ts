@@ -29,7 +29,7 @@ import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime
 import * as i from "./7"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
-import * as c from "./15"
+import * as c from "../../../../src/shared/tools"
 import * as l from "./64"
 import * as /* [auto-meaningful-name] */$_286 from "./286"
 var /* [auto-meaningful-name] */DataImage_pngBase64IVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII="

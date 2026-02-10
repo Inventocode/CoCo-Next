@@ -11,8 +11,8 @@ import * as s from "../6"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 var W = {
   rotation: [
     {

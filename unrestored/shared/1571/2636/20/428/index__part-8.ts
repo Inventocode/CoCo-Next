@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
+import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
 import * as a from "./12"
 import * as /* [auto-meaningful-name] */$_112 from "./112"
 function Gr(e) {

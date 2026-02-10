@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
 import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
+import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"

@@ -12,7 +12,7 @@ import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime
 import * as i from "../7"
 import * as /* [auto-meaningful-name] */JsSha256 from "js-sha256"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
+import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
 var l = "".concat($$_57_index.a.serverHost, "/coconut")
 var u = false
 var d = 0

@@ -19,8 +19,8 @@ import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_200 from "../200"
 import * as /* [auto-meaningful-name] */$_289 from "./289"
 import /* [auto-meaningful-name] */$_2891 from "./289"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 var _ = function (e) {
   var /* [auto-meaningful-name] */e$text = e.text
   var /* [auto-meaningful-name] */e$isSelected = e.isSelected

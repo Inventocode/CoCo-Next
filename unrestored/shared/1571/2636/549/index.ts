@@ -9,7 +9,7 @@ import { r } from "./index__part-1"
 var b = false
 import /* [auto-meaningful-name] */$_159 from "./159"
 import * as /* [auto-meaningful-name] */$$_77 from "../77"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import d from "../8"

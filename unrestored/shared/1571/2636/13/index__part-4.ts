@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -21,7 +21,7 @@ import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_344 from "./344"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import "./651"
 function L(e) {
   return "#ffffff" === Color1(e).hex().toLocaleLowerCase()

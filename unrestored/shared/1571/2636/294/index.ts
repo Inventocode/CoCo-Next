@@ -6,7 +6,7 @@
 
 import "./index__part-0"
 import "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import l from "../8"
 import /* [auto-meaningful-name] */React from "react"

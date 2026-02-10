@@ -7,8 +7,8 @@
 "use strict"
 
 import * as Qu from "./60"
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"

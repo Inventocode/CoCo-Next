@@ -19,7 +19,7 @@ import * as /* [auto-meaningful-name] */$$_$$_39 from "../../39"
 import * as /* [auto-meaningful-name] */Socket$ioClient from "socket.io-client"
 import /* [auto-meaningful-name] */Socket$ioClient1 from "socket.io-client"
 import * as /* [auto-meaningful-name] */$$_index from "../index"
-import * as /* [auto-meaningful-name] */$$_$$_57_index from "../../57/index"
+import * as /* [auto-meaningful-name] */$$_$$_57_index from "../../../../../../src/shared/env"
 var Bl = "".concat($$_$$_57_index.a.socketHost, ":9090")
 var Fl = function () {
   function e(t, n, r) {

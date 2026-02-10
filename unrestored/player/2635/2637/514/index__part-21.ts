@@ -11,7 +11,7 @@ import { ye } from "./index__part-19"
 import { Oe } from "./index__part-20"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710 from "../../../../shared/1571/2636/710"
 import be from "./71"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_2681_index from "../../../../shared/1571/2636/2681/index"
 var de
 var le

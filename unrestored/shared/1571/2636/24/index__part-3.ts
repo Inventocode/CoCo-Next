@@ -8,7 +8,7 @@
 
 import { Z } from "./index__part-2"
 import * as /* [auto-meaningful-name] */$$_49 from "../49"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"

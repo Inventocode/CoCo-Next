@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_189 from ".
 import /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
 import /* [auto-meaningful-name] */ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_1412_index from "../../../../shared/1571/2636/37/1412/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_232_324 from "../../../../shared/1571/2636/232/324"

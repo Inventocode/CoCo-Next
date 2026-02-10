@@ -50,7 +50,7 @@ import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
@@ -59,7 +59,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
 import { useDispatch, useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
+import { IconFont } from "../../../../shared/ui/components/iconfont"
 import * as WidgetShop from "../../../../shared/widget/custom/shop"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
 var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
@@ -86,6 +86,7 @@ const ConfigItem = React.memo(({
   var M = x[1]
   const globalWidgetIds = useSelector((state) => state.project.globalWidgetIds)
   const language = useSelector((state) => state.common.language)
+
   React.useEffect(function () {
     function listener() {
       setMenuVisible(false)
@@ -100,16 +101,19 @@ const ConfigItem = React.memo(({
       document.addEventListener("dragstart", listener, true)
     }
   }, [menuVisible, bigImageVisible])
+
   React.useEffect(function () {
     if (iv.includes(type)) {
       var e = globalWidgetIds.some((id) => id.includes(type))
       M(!e)
     }
   }, [type, globalWidgetIds])
+
   let hasCanvasWidget = true
   if (!(type !== BuiltInWidgetTypes.ACTOR_WIDGET && type !== BuiltInWidgetTypes.BRUSH_WIDGET || !currentScreen)) {
     hasCanvasWidget = currentScreen.widgetIds.some((id) => $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(id)?.type === BuiltInWidgetTypes.CANVAS_WIDGET)
   }
+
   const removeShopWidget = async () => {
     if (widgetServerId) {
       if (await WidgetShop.remove([widgetServerId])) {
@@ -131,12 +135,13 @@ const ConfigItem = React.memo(({
       console.error("removeWidget error: widgetServerId is null")
     }
   }
+
   return (
     <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
       placement="rightTop"
       trigger="hover"
-      onVisibleChange={(e) => {
-        if (e) {
+      onVisibleChange={(event) => {
+        if (event) {
           setMenuVisible(false)
           setBigImageVisible(false)
         }
@@ -176,15 +181,15 @@ const ConfigItem = React.memo(({
             setBigImageVisible(false)
           }
         }}
-        onContextMenu={(e) => {
-          e.preventDefault()
+        onContextMenu={(event) => {
+          event.preventDefault()
           if (isMallExtensionWidget) {
             setIsMouseIn(false)
             setBigImageVisible(false)
             setMenuVisible(true)
           }
         }}
-        onDragStart={(e) => {
+        onDragStart={(event) => {
           if (!hasCanvasWidget || !D) {
             var t = ""
             if (D) {
@@ -205,25 +210,25 @@ const ConfigItem = React.memo(({
               })
             }
             dispatch(Actions.xj(t))
-            return void e.preventDefault()
+            return void event.preventDefault()
           }
           if (!(type !== BuiltInWidgetTypes.a && type !== BuiltInWidgetTypes.c)) {
             dispatch(Actions.Yh(true))
           }
-          var /* [auto-meaningful-name] */e$target = e.target
+          var /* [auto-meaningful-name] */e$target = event.target
           var s = null === e$target || undefined === e$target ? undefined : e$target.getClientRects()[0]
           if (e$target && e$target.dataset.widgetType && s) {
-            var u = e.clientX - s.x
-            var d = e.clientY - s.y
-            e.dataTransfer.setData("widget/dragging-offset-x", u + "")
-            e.dataTransfer.setData("widget/dragging-offset-y", d + "")
-            e.dataTransfer.dropEffect = "copy"
-            e.dataTransfer.setData("widget/type", e$target.dataset.widgetType)
-            e.dataTransfer.setData("widget/action", BuiltInWidgetTypes.r.CREATE)
+            var u = event.clientX - s.x
+            var d = event.clientY - s.y
+            event.dataTransfer.setData("widget/dragging-offset-x", u + "")
+            event.dataTransfer.setData("widget/dragging-offset-y", d + "")
+            event.dataTransfer.dropEffect = "copy"
+            event.dataTransfer.setData("widget/type", e$target.dataset.widgetType)
+            event.dataTransfer.setData("widget/action", BuiltInWidgetTypes.r.CREATE)
           }
         }}
         onDragEnd={() => {
-          if (!(type !== BuiltInWidgetTypes.a && type !== BuiltInWidgetTypes.c)) {
+          if (!(type !== BuiltInWidgetTypes.ACTOR_WIDGET && type !== BuiltInWidgetTypes.BRUSH_WIDGET)) {
             dispatch(Actions.Yh(false))
           }
         }}
@@ -240,7 +245,7 @@ const ConfigItem = React.memo(({
           )
         ) : (
           <span className={styles.icon}>
-            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a type={icon} />
+            <IconFont type={icon} />
           </span>
         )}
         <span className={styles.title}>{title}</span>
@@ -296,7 +301,7 @@ export const WidgetCategoryItem = React.memo<{
           {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(title) && p && <div className={styles.newTips}>New</div>}
         </div>
         <span className={styles.icon}>
-          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a type="icon-fold" />
+          <IconFont type="icon-fold" />
         </span>
       </div>
       {c && (

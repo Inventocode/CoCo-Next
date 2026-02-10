@@ -9,8 +9,8 @@
 import { fj, hj } from "./index__part-181"
 import { Rj } from "./index__part-184"
 var Ij
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"

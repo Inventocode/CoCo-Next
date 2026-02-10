@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Yv } from "./index__part-90"
+import { Yv } from "../../../../src/editor/ui/edit-area/widget-panel"
 import { HC } from "./index__part-142"
 import { tT } from "./index__part-144"
 import { xT } from "./index__part-150"

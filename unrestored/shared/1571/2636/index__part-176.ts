@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"

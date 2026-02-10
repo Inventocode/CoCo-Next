@@ -6,12 +6,12 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useImperativeHandle } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
-import * as /* [auto-meaningful-name] */$$_540_index from "../540/index"
+import * as /* [auto-meaningful-name] */$$_540_index from "../../../../../src/shared/ui/components/dialog/index"
 import "./869"
 var J = memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$type = e.type

@@ -26,7 +26,8 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../shared/ui/components"
+import { IconFont } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
@@ -40,6 +41,7 @@ import styles from "../../../../../unrestored/shared/1571/2636/212"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1511 from "../../../../../unrestored/shared/1571/2636/1511"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111 from "../../../../../unrestored/shared/1571/2636/1511"
+
 var Xr = React.forwardRef(function (e, t) {
   var n = useDispatch()
   var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
@@ -214,9 +216,7 @@ var Qr = function (e) {
     className={styles.collaboration}
     title={c}
   >
-    {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
-      type={"icon-collaborate"}
-    />}
+    <IconFont type="icon-collaborate" />
   </div>
 }
 var Zr = function (e) {
@@ -342,7 +342,7 @@ var Jr = React.memo(function (e) {
               e$onDeleteIconClick(e$screen)
             }}
           >
-            {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+            {<IconFont
               type={"icon-delete-bold"}
             />}
           </div>}
@@ -363,7 +363,7 @@ var Jr = React.memo(function (e) {
               }
             }}
           >
-            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-copy"></$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j>
+            <IconFont type="icon-copy"></IconFont>
           </div>}
           {!!u && <Qr
             screenId={e$screen.id}
@@ -1514,7 +1514,7 @@ export const ScreenList = React.memo(() => {
         }
       }}
     >
-      {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+      {<IconFont
         type={"icon-close"}
       />}
     </div>}
@@ -1583,7 +1583,7 @@ export const ScreenList = React.memo(() => {
           }
         }}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-add2"}
           className={styles.addBtn}
         />}
@@ -1617,7 +1617,7 @@ export const ScreenList = React.memo(() => {
       {<div
         className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.screenIconBox, !playing && styles.line)}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-screen-manage"}
           className={styles.screenIcon}
         />}
@@ -1645,7 +1645,7 @@ export const ScreenList = React.memo(() => {
           }
         }}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-pick-up"}
           className={styles.prevIcon}
         />}
@@ -1662,7 +1662,7 @@ export const ScreenList = React.memo(() => {
           }
         }}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-pick-up"}
           className={styles.nextIcon}
         />}

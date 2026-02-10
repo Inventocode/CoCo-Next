@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import /* [auto-meaningful-name] */Color from "color"
 import * as D from "./6"
 import * as k from "./11"

@@ -10,24 +10,25 @@ import { B, G, H } from "../../../../unrestored/shared/1571/2636/index__part-2"
 import { Q } from "../../../../unrestored/shared/1571/2636/index__part-3"
 import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
 import { Ge } from "../../../../unrestored/shared/1571/2636/index__part-9"
-import { UserInfo } from "./right/user-info"
+import { UserInfo } from "./user-info"
 import { Xe, ot as Notice } from "../../../../unrestored/shared/1571/2636/index__part-11"
-import { Collaboration } from "./right/collaboration"
+import { Collaboration } from "./collaboration"
 import { Dt } from "../../../../unrestored/shared/1571/2636/index__part-15"
 import { Gt } from "../../../../unrestored/shared/1571/2636/index__part-16"
-import { on as ShareMenuItem } from "../../../../unrestored/shared/1571/2636/index__part-18"
+import { ShareMenuItem } from "./share/menu-item"
 import { dn as SaveFailedDialog1, pn as SaveFailedDialog2, fn as SaveFailedDialog3 } from "../../../../unrestored/shared/1571/2636/index__part-20"
 import { gn as SaveProgress } from "../../../../unrestored/shared/1571/2636/index__part-21"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_276 from "../../../../unrestored/shared/1571/2636/276"
 import * as LoadCustomWidget from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454 from "../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../shared/ui/components"
+import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../unrestored/shared/1571/2636/710"
@@ -124,17 +125,17 @@ function CloudSpaceManager() {
       >
         {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
           <div className={cloudSpaceManagerStyles.cloudIconError}>
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-error" />
+            <IconFont type="icon-cloud-manager-error" />
           </div>
         )}
         {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "cloudSpace.outWarnLimit" }) && (
           <div className={cloudSpaceManagerStyles.cloudIconWarn}>
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-warn" />
+            <IconFont type="icon-cloud-manager-warn" />
           </div>
         )}
         {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "cloudSpace.cloudSpace" }) && (
           <div>
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-cloud-manager-normal" />
+            <IconFont type="icon-cloud-manager-normal" />
           </div>
         )}
       </div>
@@ -735,7 +736,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             overlayInnerStyle={{ position: "relative", top: -7 }}
           >
             <div className={styles.logoBox} id="logo" onClick={Ee}>
-              <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-dropdown-down" className={styles.back} />
+              <IconFont type="icon-dropdown-down" className={styles.back} />
               <div className={styles.logo} />
             </div>
           </Tooltip>
@@ -818,7 +819,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
               >
                 <div className={styles.toolTipsBox}>
-                  <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className="coco-header-menuIcon" type="icon-file" />
+                  <IconFont className="coco-header-menuIcon" type="icon-file" />
                 </div>
               </Tooltip>
             </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
@@ -867,7 +868,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   )}
                   {uiConfig.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
                     <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="releaseInfo">
-                      <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.vj(true))}>
+                      <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.showReleaseInfoDialog(true))}>
                         <span className={styles.link}>
                           {formatMessage({ id: "releaseInfo" })}
                         </span>
@@ -894,7 +895,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
               >
                 <div className={styles.toolTipsBox}>
-                  <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className="coco-header-menuIcon" type="icon-help-circle-active" />
+                  <IconFont className="coco-header-menuIcon" type="icon-help-circle-active" />
                 </div>
               </Tooltip>
             </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
@@ -928,7 +929,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
               >
                 <div className={styles.toolTipsBox}>
-                  <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className="coco-header-menuIcon" type="icon-settings" />
+                  <IconFont className="coco-header-menuIcon" type="icon-settings" />
                 </div>
               </Tooltip>
             </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
@@ -946,7 +947,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
               onClick={() => dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())}
             >
-              <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-database-manage-active" className={styles.databaseIcon} />
+              <IconFont type="icon-database-manage-active" className={styles.databaseIcon} />
             </div>
           </Tooltip>
         )}
@@ -977,7 +978,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               overlayInnerStyle={{ position: "relative", top: -4 }}
             >
               <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.shareWrapper)}>
-                <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-share" className={styles.icon} />
+                <IconFont type="icon-share" className={styles.icon} />
               </div>
             </Tooltip>
           </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
@@ -1060,7 +1061,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
         <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.saveTipsWrapper, jsonFrom !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER && ne && !isUpdate && styles.show)}>
           {formatMessage({ id: "MyProject.newSaveTips" })}
           <div className={styles.closeSaveTips} onClick={() => re(false)}>
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-close" />
+            <IconFont type="icon-close" />
           </div>
         </div>
         {pe && (

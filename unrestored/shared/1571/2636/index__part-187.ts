@@ -8,8 +8,8 @@
 
 import { fj, hj } from "./index__part-181"
 import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"

@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
+import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
 import * as i from "../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as E from "../6"

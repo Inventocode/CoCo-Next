@@ -7,11 +7,11 @@
 "use strict"
 
 import { we } from "./index__part-6"
-import * as /* [auto-meaningful-name] */$_94_index from "./94/index"
+import * as /* [auto-meaningful-name] */$_94_index from "../../../../src/shared/ui/components/iconfont/index"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */$_177 from "./177"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"

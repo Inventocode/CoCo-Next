@@ -35,7 +35,7 @@ export default defineConfig([
         "multilineDetection": "brackets"
       }],
       "@stylistic/eol-last": ["warn", "always"],
-      "@stylistic/function-paren-newline": ["warn"],
+      "@stylistic/function-paren-newline": ["warn", "consistent"],
       "@stylistic/indent": ["error", 2],
       "@stylistic/array-bracket-newline": ["warn"],
       "@stylistic/array-element-newline": ["warn", "consistent"],

@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as s from "./8"
 import c from "./8"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import "./13/640"
 var _a
 _a = memo(function (e) {

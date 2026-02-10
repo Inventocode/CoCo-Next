@@ -23,8 +23,8 @@ import * as /* [auto-meaningful-name] */$_274 from "./274"
 import * as /* [auto-meaningful-name] */$_483_index from "./483/index"
 import * as p from "../9"
 import * as /* [auto-meaningful-name] */$$_64 from "../64"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
-import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
 var g = new $_483_index.a({
   env: $$_57_index.a.env,
   projectName: $$_57_index.a.productCode,

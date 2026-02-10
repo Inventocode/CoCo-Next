@@ -8,7 +8,7 @@
 
 import { Ge } from "./index__part-9"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"

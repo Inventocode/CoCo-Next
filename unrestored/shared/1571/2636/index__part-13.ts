@@ -9,9 +9,9 @@
 import { lt, ft } from "./index__part-12"
 var pt
 import * as /* [auto-meaningful-name] */$_390 from "./390"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"

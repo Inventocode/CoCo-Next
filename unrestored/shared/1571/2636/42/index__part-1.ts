@@ -9,7 +9,7 @@
 import { _ } from "./index__part-0"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
 import s from "../8"
 import /* [auto-meaningful-name] */React from "react"

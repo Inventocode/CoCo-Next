@@ -26,7 +26,7 @@ var r
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
 import * as /* [auto-meaningful-name] */Socket$ioClient from "socket.io-client"
 import /* [auto-meaningful-name] */Socket$ioClient1 from "socket.io-client"
-var /* [auto-meaningful-name] */require$$_57_index$a$oTSocketHost = require("../57/index").a.oTSocketHost
+var /* [auto-meaningful-name] */require$$_57_index$a$oTSocketHost = require("../../../../../src/shared/env").a.oTSocketHost
 var K = function () {
   function e(t, n) {
     $$_27.a(this, e)

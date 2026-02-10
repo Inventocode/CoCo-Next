@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
 import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
 import * as /* [auto-meaningful-name] */$_735 from "./735"

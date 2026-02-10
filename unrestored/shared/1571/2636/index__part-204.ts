@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../src/shared/widget/custom/shop"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_710 from "./710"

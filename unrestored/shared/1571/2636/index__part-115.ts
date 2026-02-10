@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
 import N from "./8"

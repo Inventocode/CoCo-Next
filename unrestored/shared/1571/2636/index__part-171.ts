@@ -8,7 +8,7 @@
 
 var rI
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useCallback, useEffect } from "react"

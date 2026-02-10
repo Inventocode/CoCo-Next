@@ -176,7 +176,11 @@ function commonConfig(development, env) {
                 new rspack.HtmlRspackPlugin({
                     filename,
                     template: `src/${name}/index.html`,
-                    chunks: [...(injectHelper ? ["proxy"] : []), name]
+                    chunks: [...(injectHelper ? ["proxy"] : []), name],
+                    minify: !development,
+                    meta: {
+                        environment: development ? "development" : "production"
+                    }
                 })
             )
         }

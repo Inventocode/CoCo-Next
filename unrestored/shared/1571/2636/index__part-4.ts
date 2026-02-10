@@ -13,7 +13,7 @@ import * as Z from "./97"
 import * as /* [auto-meaningful-name] */$_525 from "./525"
 import /* [auto-meaningful-name] */$_5251 from "./525"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 !function (e) {
   e[e.SAVE_BTN = 0] = "SAVE_BTN"
   e[e.MY_PROJECT = 1] = "MY_PROJECT"

@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$_index from "./index"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$$_89 from "../89"
-import * as /* [auto-meaningful-name] */$$_$$_$$_13_index from "../../../13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_13_index from "../../../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"

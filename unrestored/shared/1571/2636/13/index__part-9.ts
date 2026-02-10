@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useLayoutEffect, useCallback, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"

@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_buil
 import * as /* [auto-meaningful-name] */$$_$$_197_483_index from "../../197/483/index"
 import * as /* [auto-meaningful-name] */Axios from "axios"
 import /* [auto-meaningful-name] */Axios1 from "axios"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
+import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_128 from "../128"
 new $$_$$_197_483_index.a({
   env: $$_128.a.env,

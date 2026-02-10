@@ -20,8 +20,8 @@ import * as /* [auto-meaningful-name] */$$_148 from "../148"
 import * as /* [auto-meaningful-name] */$_245 from "./245"
 import /* [auto-meaningful-name] */$_2451 from "./245"
 import * as m from "../6"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_379 from "../379"
 var b = function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode

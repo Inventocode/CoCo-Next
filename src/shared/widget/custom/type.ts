@@ -7,7 +7,6 @@
 export const SAFE_EXTENSION_PREFIX = "EXTENSION_"
 export { SAFE_EXTENSION_PREFIX as a }
 export const UNSAFE_EXTENSION_PREFIX = "UNSAFE_EXTENSION_"
-export { UNSAFE_EXTENSION_PREFIX as b }
 
 export function isSafeExtensions(type: string): boolean {
   return type.startsWith(SAFE_EXTENSION_PREFIX)

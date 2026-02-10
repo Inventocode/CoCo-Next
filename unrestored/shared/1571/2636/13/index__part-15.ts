@@ -8,8 +8,8 @@
 
 import { Ce } from "./index__part-14"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useState, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"

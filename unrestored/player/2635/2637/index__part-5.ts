@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_7 from "../../../shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_57_index from "../../../shared/1571/2636/57/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_57_index from "../../../../src/shared/env"
 function V() {
   var t = $$_$$_$$_shared_1571_2636_57_index.b()
   var e = "https://".concat({

@@ -12,11 +12,12 @@ import { we } from "../../../../../../unrestored/shared/1571/2636/index__part-6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../../../unrestored/shared/1571/2636/297"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../../unrestored/shared/1571/2636/15"
+import * as Tools from "../../../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../shared/ui/components"
+import { IconFont } from "../../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../../unrestored/shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
@@ -25,7 +26,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_language from "
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../../unrestored/shared/1571/2636/288"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../shared/player/audit"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181 from "../../../../../../unrestored/shared/1571/2636/418"
 
@@ -138,7 +139,7 @@ function ProjectItem({
         </div>}
       >
         <div>
-          {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+          {<IconFont
             type={"icon-more"}
           />}
         </div>
@@ -147,10 +148,10 @@ function ProjectItem({
     <div
       className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.badgeWrapper}
     >
-      {(project.isCollWork || filterType === Type.COLL) && "loaded" === status && <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+      {(project.isCollWork || filterType === Type.COLL) && "loaded" === status && <IconFont
         type={"icon-collaborator"}
       />}
-      {!!project.publishedTime && <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+      {!!project.publishedTime && <IconFont
         type={"icon-publish"}
       />}
     </div>
@@ -184,7 +185,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
       const { data } = response
       if (data) {
         if (
-          !(await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()).includes(Number(id)) &&
+          !(await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.getWhitelist()).includes(Number(id)) &&
           !data.is_author &&
           data.is_coll_work &&
           data.content &&
@@ -198,7 +199,9 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
             title: "",
             content: (
               <div>
-                作品使用了未审核的自定义控件，需将控件提交至<a href={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b} target="__blank" rel="noopener noreferrer">Coco控件商城-投稿</a>并等待审核通过后才能进行协作。
+                作品使用了未审核的自定义控件，需将控件提交至
+                <a href={Tools.WIDGET_POST_FORM_URL} target="__blank" rel="noopener noreferrer">Coco控件商城-投稿</a>
+                并等待审核通过后才能进行协作。
               </div>
             ),
             cancelBtnVisible: false

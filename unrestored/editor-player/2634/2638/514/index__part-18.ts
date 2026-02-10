@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_
 import "./1187"
 import "./1188"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_2681_index from "../../../../shared/1571/2636/2681/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../../src/shared/ui/components/index"
 import * as me from "./71"
 import be from "./71"
 var ge = [

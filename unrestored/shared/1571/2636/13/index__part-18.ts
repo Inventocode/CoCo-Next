@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useState, useCallback, useEffect, useImperativeHandle } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"

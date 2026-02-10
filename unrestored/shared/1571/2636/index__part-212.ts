@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */Quill from "quill"
 import /* [auto-meaningful-name] */Quill1 from "quill"
 import "./2630"

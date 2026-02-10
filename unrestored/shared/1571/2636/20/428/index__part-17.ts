@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_57_index from "../../57/index"
+import * as /* [auto-meaningful-name] */$$_$$_57_index from "../../../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$$_$$_48_87 from "../../48/87"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../../src/shared/utils/network/axios-with-credentials"
 import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"

@@ -5,4 +5,4 @@
  */
 
 import "./index__part-69"
-import "./index__part-220"
+import "../../../../src/editor/ui"

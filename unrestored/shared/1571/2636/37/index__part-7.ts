@@ -22,7 +22,7 @@ import * as /* [auto-meaningful-name] */$$_64 from "../64"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_24_index from "../24/index"
 import * as /* [auto-meaningful-name] */$$_49 from "../49"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_97 from "../97"
 import * as /* [auto-meaningful-name] */$$_145 from "../145"
 function gn(e) {
