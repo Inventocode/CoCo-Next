@@ -11,20 +11,21 @@ import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_621 from "./621"
 import /* [auto-meaningful-name] */$_6211 from "./621"
-var JO = React1.memo(function (e) {
+var JO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fields" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var i = e$getValue(n)
-  var a = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var a = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var c = Et.Bb(e$widgetId)
   if (!c) {
     return React.createElement(React.Fragment, null)
@@ -33,7 +34,7 @@ var JO = React1.memo(function (e) {
     className: N($_6211.formItemWrapper, $_6211.storageFields)
   }, React.createElement("div", {
     className: $_6211.title
-  }, React.createElement("div", null, $_710_index$a$formatMessage({
+  }, React.createElement("div", null, $_710$a$formatMessage({
     id: "initialData"
   })), React.createElement("span", {
     className: $_6211.fieldsLength
@@ -112,7 +113,7 @@ var JO = React1.memo(function (e) {
         }
       }
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "edit"
   })))))
 })

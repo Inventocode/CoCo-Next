@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("./1768/257/index")
-var /* [auto-meaningful-name] */require$_1581_401$map = require("./1581/401").map
+var r = require("./1754/257/index")
+var /* [auto-meaningful-name] */require$_1754_401$map = require("./1754/401").map
 var i = require("./1775/962")
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("map", function (e) {
-  return require$_1581_401$map(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined, function (e, t) {
+  return require$_1754_401$map(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined, function (e, t) {
     return new (i(e))(t)
   })
 })

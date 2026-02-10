@@ -4,7 +4,7 @@
  * 模块 ID：1745
  */
 
-require("./1746/578")("Int16", function (e) {
+require("./1748/578/index")("Int16", function (e) {
   return function (t, n, r) {
     return e(this, t, n, r)
   }

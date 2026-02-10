@@ -9,7 +9,7 @@
 import { xl } from "../../../../../src/editor/redux/store"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as on from "../9"
-import * as /* [auto-meaningful-name] */$$_47 from "../47"
+import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_127 from "../127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
@@ -42,7 +42,7 @@ function Pn() {
   var t = []
   try {
     var n
-    var r = $$_47.a(xl$getState$dataWatch$variableList)
+    var r = $$_47_index.a(xl$getState$dataWatch$variableList)
     try {
       for (r.s(); !(n = r.n()).done;) {
         var /* [auto-meaningful-name] */n$value = n.value
@@ -84,7 +84,7 @@ function Fn(e) {
   var /* [auto-meaningful-name] */n$project$screens = n.project.screens
   var /* [auto-meaningful-name] */n$project$id = n.project.id
   var i = []
-  var a = $$_47.a(e)
+  var a = $$_47_index.a(e)
   try {
     var s = function () {
       var /* [auto-meaningful-name] */t$value = t.value

@@ -4,7 +4,7 @@
  * 模块 ID：1683
  */
 
-var r = require("../1706/86/index")
+var r = require("../1661/86/index")
 var /* [auto-meaningful-name] */require$_1263$values = require("./1263").values
 r({
   target: "Object",

@@ -13,10 +13,11 @@ import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
 import qv from "./88"
 import * as Ln from "./35"
 import * as Dn from "./19"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
+import { forwardRef, useContext, createElement, memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1048_index from "./1048/index"
 import * as /* [auto-meaningful-name] */$_364_index from "./364/index"
@@ -35,7 +36,7 @@ var xw = function (e, t) {
   }
   return n
 }
-var Dw = React1.forwardRef(function (e, t) {
+var Dw = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$size = e.size
@@ -45,20 +46,20 @@ var Dw = React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var l = xw(e, ["prefixCls", "size", "loading", "className", "disabled"])
   $_364_index.a("checked" in l || !("value" in l), "Switch", "`value` is not a valid prop, do you mean `checked`?")
-  var u = React1.useContext($_801_index.b)
+  var u = useContext($_801_index.b)
   var /* [auto-meaningful-name] */u$getPrefixCls = u.getPrefixCls
   var /* [auto-meaningful-name] */u$direction = u.direction
-  var h = React1.useContext($_517.b)
+  var h = useContext($_517.b)
   var m = u$getPrefixCls("switch", e$prefixCls)
-  var g = React1.createElement("div", {
+  var g = createElement("div", {
     className: "".concat(m, "-handle")
-  }, e$loading && React1.createElement($_610.a, {
+  }, e$loading && createElement($_610.a, {
     className: "".concat(m, "-loading-icon")
   }))
   var _ = N((n = {}, Ln.a(n, "".concat(m, "-small"), "small" === (e$size || h)), Ln.a(n, "".concat(m, "-loading"), e$loading), Ln.a(n, "".concat(m, "-rtl"), "rtl" === u$direction), n), s)
-  return React1.createElement($_1048_index.a, {
+  return createElement($_1048_index.a, {
     insertExtraNode: true
-  }, React1.createElement(Nw, Dn.a({}, l, {
+  }, createElement(Nw, Dn.a({}, l, {
     prefixCls: m,
     className: _,
     disabled: e$disabled || e$loading,
@@ -69,7 +70,7 @@ var Dw = React1.forwardRef(function (e, t) {
 Dw.__ANT_SWITCH = true
 Dw.displayName = "Switch"
 var Lw = Dw
-var Pw = React1.memo(function (e) {
+var Pw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "switch" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -81,14 +82,14 @@ var Pw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$unCheckedLabel = e$formConfig.unCheckedLabel
   var /* [auto-meaningful-name] */e$formConfig$convert = e$formConfig.convert
   var /* [auto-meaningful-name] */e$formConfig$reverse = e$formConfig.reverse
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var f = $_710_index$a$formatMessage({
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var f = $_710$a$formatMessage({
     id: s
   })
-  var m = e$formConfig$checkedLabel ? $_710_index$a$formatMessage({
+  var m = e$formConfig$checkedLabel ? $_710$a$formatMessage({
     id: e$formConfig$checkedLabel
   }) : ""
-  var g = e$formConfig$unCheckedLabel ? $_710_index$a$formatMessage({
+  var g = e$formConfig$unCheckedLabel ? $_710$a$formatMessage({
     id: e$formConfig$unCheckedLabel
   }) : ""
   var _ = e$getValue(n)

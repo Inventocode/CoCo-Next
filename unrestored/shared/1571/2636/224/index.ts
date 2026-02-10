@@ -10,6 +10,7 @@ import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
+import { useContext, useEffect, forwardRef, createElement } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as u from "../8"
@@ -140,9 +141,9 @@ var B = function (e) {
   }
   (function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : _n$anticon_nDisplayInlineBlock_nColorInherit_nFontStyleNormal_nLineHeight0_nTextAlignCenter_nTextTransformNone_nVerticalAlign0$125em_nTextRenderingOptimizeLegibility_nWebkitFontSmoothingAntialiased_nMozOsxFontSmoothingGrayscale_n_n_n$anticon_nLineHeight1_n_n_n$anticonSvg_nDisplayInlineBlock_n_n_n$anticonBefore_nDisplayNone_n_n_n$anticon$anticonIcon_nDisplayBlock_n_n_n$anticonTabindex_nCursorPointer_n_n_n$anticonSpinBefore_n$anticonSpin_nDisplayInlineBlock_nWebkitAnimationLoadingCircle1sInfiniteLinear_nAnimationLoadingCircle1sInfiniteLinear_n_n_nWebkitKeyframesLoadingCircle_n100_nWebkitTransformRotate360deg_nTransformRotate360deg_n_n_n_nKeyframesLoadingCircle_n100_nWebkitTransformRotate360deg_nTransformRotate360deg_n_n_n
-    var t = React.useContext($_792.a)
+    var t = useContext($_792.a)
     var /* [auto-meaningful-name] */t$csp = t.csp
-    React.useEffect(function () {
+    useEffect(function () {
       w(e, "@ant-design-icons", {
         prepend: true,
         csp: t$csp
@@ -206,7 +207,7 @@ function I(e) {
 }
 var R = ["className", "icon", "spin", "rotate", "tabIndex", "onClick", "twoToneColor"]
 I("#1890ff")
-var F = React.forwardRef(function (e, t) {
+var F = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$icon = e.icon
@@ -216,8 +217,8 @@ var F = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$twoToneColor = e.twoToneColor
   var g = $$_54.a(e, R)
-  var /* [auto-meaningful-name] */React$useContext$_792$a$prefixCls = React.useContext($_792.a).prefixCls
-  var m = undefined === React$useContext$_792$a$prefixCls ? "anticon" : React$useContext$_792$a$prefixCls
+  var /* [auto-meaningful-name] */useContext$_792$a$prefixCls = useContext($_792.a).prefixCls
+  var m = undefined === useContext$_792$a$prefixCls ? "anticon" : useContext$_792$a$prefixCls
   var y = l(m, (n = {}, $$_35.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), $$_35.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
   var b = e$tabIndex
   if (undefined === b && e$onClick) {
@@ -231,7 +232,7 @@ var F = React.forwardRef(function (e, t) {
   var x = $$_40_index.a(E, 2)
   var C = x[0]
   var k = x[1]
-  return React.createElement("span", $$_21.a($$_21.a({
+  return createElement("span", $$_21.a($$_21.a({
     role: "img",
     "aria-label": e$icon.name
   }, g), {}, {
@@ -239,7 +240,7 @@ var F = React.forwardRef(function (e, t) {
     tabIndex: b,
     onClick: e$onClick,
     className: y
-  }), React.createElement(D, {
+  }), createElement(D, {
     icon: e$icon,
     primaryColor: C,
     secondaryColor: k,

@@ -10,8 +10,8 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_145 from "../../../145"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$$_$$_$$_10_index from "../../../10/index"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
+import { useState, useCallback, useEffect, useLayoutEffect } from "react"
+import { useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_7 from "../../../7"
@@ -20,7 +20,7 @@ var xe = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$parentId = e.parentId
   var /* [auto-meaningful-name] */e$onload = e.onload
-  var o = $$_$$_$$_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.widgetMap
   }).get(t)
   var /* [auto-meaningful-name] */o$position = o.position
@@ -32,11 +32,11 @@ var xe = function (e) {
   var /* [auto-meaningful-name] */o$attributes$cursorShape = o$attributes.cursorShape
   var h = undefined === o$attributes$cursorShape ? $$_$$_$$_286.a.NONE : o$attributes$cursorShape
   var m = t
-  var g = React.useState(true)
+  var g = useState(true)
   var _ = $$_$$_$$_10_index.a(g, 2)
   var v = _[0]
   var b = _[1]
-  var y = React.useCallback($$_$$_$$_7.a(RegeneratorRuntime1.mark(function e() {
+  var y = useCallback($$_$$_$$_7.a(RegeneratorRuntime1.mark(function e() {
     var n
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
@@ -65,10 +65,10 @@ var xe = function (e) {
       }
     }, e)
   })), [])
-  React.useEffect(function () {
+  useEffect(function () {
     y()
   }, [y])
-  var E = React.useCallback($$_$$_$$_7.a(RegeneratorRuntime1.mark(function e() {
+  var E = useCallback($$_$$_$$_7.a(RegeneratorRuntime1.mark(function e() {
     var t
     var /* [auto-meaningful-name] */t$attributes$coordinateRatio
     var o
@@ -105,12 +105,12 @@ var xe = function (e) {
       }
     }, e)
   })), [m, o$attributes$color, h, e$parentId, o$attributes$penSize])
-  React.useEffect(function () {
+  useEffect(function () {
     if (!v) {
       E()
     }
   }, [v, E])
-  React.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (!v) {
       var e = $$_$$_index.getActor(t)
       if (e) {
@@ -118,7 +118,7 @@ var xe = function (e) {
       }
     }
   }, [t, v, p])
-  React.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (!v) {
       var e = $$_$$_index.getActor(t)
       if (e) {

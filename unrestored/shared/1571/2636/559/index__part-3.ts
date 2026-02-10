@@ -7,8 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_142 from "../142"
-import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 var se = function (e) {
   return +setTimeout(e, 16)
 }
@@ -49,7 +49,7 @@ function fe(e, t) {
   return !!e && e.contains(t)
 }
 function he(e) {
-  return e instanceof HTMLElement ? e : $$_80_index1.findDOMNode(e)
+  return e instanceof HTMLElement ? e : ReactDom1.findDOMNode(e)
 }
 pe.cancel = function (e) {
   var t = ue.get(e)

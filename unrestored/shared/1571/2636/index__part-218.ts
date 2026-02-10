@@ -10,35 +10,36 @@ import { rA } from "./index__part-160"
 import * as /* [auto-meaningful-name] */AgGridReact from "ag-grid-react"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1220_index from "./1220/index"
 import /* [auto-meaningful-name] */$_1220_index1 from "./1220/index"
 import * as /* [auto-meaningful-name] */$_1221 from "./1221"
 import * as /* [auto-meaningful-name] */$_529 from "./529"
 import /* [auto-meaningful-name] */$_5291 from "./529"
-var oB = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var /* [auto-meaningful-name] */$_16_index$eFunctionEReturnE$dataWatch$tableDataDialog$id = $_16_index.e(function (e) {
+var oB = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */useSelectorFunctionEReturnE$dataWatch$tableDataDialog$id = useSelector(function (e) {
     return e.dataWatch.tableDataDialog
   }).id
-  var n = $_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.dataWatch.variableList
   })
-  var r = React1.useState()
+  var r = useState()
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
   var s = n.find(function (e) {
-    return e.id === $_16_index$eFunctionEReturnE$dataWatch$tableDataDialog$id
+    return e.id === useSelectorFunctionEReturnE$dataWatch$tableDataDialog$id
   })
   if (!s) {
     return null
@@ -84,7 +85,7 @@ var oB = React1.memo(function () {
         }, e.value)
       }
     },
-    overlayNoRowsTemplate: $_710_index$a$formatMessage({
+    overlayNoRowsTemplate: $_710$a$formatMessage({
       id: "noData"
     })
   }
@@ -120,55 +121,55 @@ var oB = React1.memo(function () {
   })))
 })
 var iB = function () {
-  var e = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = React1.useState({
+  var e = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var n = useState({
     x: document.body.clientWidth - 886,
     y: 100
   })
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = React1.useState(0)
+  var a = useState(0)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState(0)
+  var u = useState(0)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState(0)
+  var g = useState(0)
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = React1.useState(0)
+  var w = useState(0)
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var j = C[1]
-  var R = React1.useState(876)
+  var R = useState(876)
   var k = $_10_index.a(R, 2)
   var x = k[0]
   var D = k[1]
-  var M = React1.useState(540)
+  var M = useState(540)
   var L = $_10_index.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React1.useRef(x)
-  var G = React1.useRef(P)
-  var W = $_16_index.e(function (e) {
+  var F = useRef(x)
+  var G = useRef(P)
+  var W = useSelector(function (e) {
     return e.project.playing
   })
-  var U = $_16_index.e(function (e) {
+  var U = useSelector(function (e) {
     return e.dataWatch.tableDataDialog
   })
   var H = U.id
   var /* [auto-meaningful-name] */U$visible = U.visible
-  var K = $_16_index.e(function (e) {
+  var K = useSelector(function (e) {
     return e.dataWatch.variableList
   }).find(function (e) {
     return e.id === H
   })
-  var q = React1.useState(false)
+  var q = useState(false)
   var X = $_10_index.a(q, 2)
   var Q = X[0]
   var Z = X[1]
@@ -289,7 +290,7 @@ var iB = function () {
   }, W ? "" : React.createElement($_748_index.a, {
     placement: "bottom",
     trigger: ["hover"],
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "resetData"
     })
   }, React.createElement("div", {

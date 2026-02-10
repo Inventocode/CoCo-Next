@@ -11,24 +11,25 @@ import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import /* [auto-meaningful-name] */$_525 from "./525"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Axios from "axios"
 import /* [auto-meaningful-name] */Axios1 from "axios"
 import * as /* [auto-meaningful-name] */$_495 from "./495"
 import /* [auto-meaningful-name] */$_4951 from "./495"
-var Le = React1.memo(function (e) {
+var Le = memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
-  var r = $_16_index.d()
-  var o = $_16_index.e(function (e) {
+  var r = useDispatch()
+  var o = useSelector(function (e) {
     return e.common.templateList
   })
   var i = function () {
@@ -104,11 +105,11 @@ var Le = React1.memo(function (e) {
     })))
   })) : null
 })
-var Pe = React1.memo(function (e) {
+var Pe = memo(function (e) {
   var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = $_16_index.d()
-  var o = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useDispatch()
+  var o = useSelector(function (e) {
     return e.common.projectDialog
   })
   var /* [auto-meaningful-name] */o$visible = o.visible
@@ -134,7 +135,7 @@ var Pe = React1.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: "icon-new-project",
     className: $_525.icon
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "projectDialog.newProject"
   })), React.createElement("div", {
     className: N($_525.tabItem, k.a({}, $_525.selected, o$selected === K.f.MY_PROJECT)),
@@ -144,7 +145,7 @@ var Pe = React1.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: "icon-my-project",
     className: $_525.icon
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "projectDialog.myProject"
   }))), React.createElement("div", {
     className: $_525.content

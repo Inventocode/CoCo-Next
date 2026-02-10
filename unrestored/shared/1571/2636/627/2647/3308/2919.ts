@@ -6,7 +6,7 @@
 
 "use strict"
 
-var a = require("../../../13/780/1068")
+var a = require("../../../13/780/1068/index")
 var r = require("../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -24,8 +24,8 @@ var h = r(require("../../../8"))
 var p = r(require("./2781"))
 var v = r(require("./2920"))
 var m = r(require("./2921"))
-var y = r(require("./2922/index"))
-var g = require("./2922/2701")
+var y = r(require("./2922"))
+var g = require("./2929/2701")
 var b = {
   player: c.default.object,
   mouseTime: c.default.object,

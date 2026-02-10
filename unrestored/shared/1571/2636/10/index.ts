@@ -8,7 +8,7 @@
 
 export { a }
 import * as /* [auto-meaningful-name] */$_1479 from "./1479"
-import * as /* [auto-meaningful-name] */$$_25_779 from "../25/779"
+import * as /* [auto-meaningful-name] */$$_47_779 from "../47/779"
 import * as /* [auto-meaningful-name] */$_1480 from "./1480"
 function a(e, t) {
   return $_1479.a(e) || function (e, t) {
@@ -37,6 +37,6 @@ function a(e, t) {
       }
       return n
     }
-  }(e, t) || $$_25_779.a(e, t) || $_1480.a()
+  }(e, t) || $$_47_779.a(e, t) || $_1480.a()
 }
 export default a

@@ -18,12 +18,12 @@ import * as /* [auto-meaningful-name] */$_395 from "./395"
 import * as /* [auto-meaningful-name] */$_918 from "./918"
 import * as /* [auto-meaningful-name] */$_2644 from "./2644"
 import * as /* [auto-meaningful-name] */$_1049 from "./1049"
-import * as o from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$_1195 from "./1195"
 var ke = function () {
   function e(t) {
     this.name = e.id
-    this._options = o.a({
+    this._options = $$_799_38.a({
       console: true,
       dom: true,
       fetch: true,
@@ -52,7 +52,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._consoleBreadcrumb.apply(e, o.f(t))
+          e._consoleBreadcrumb.apply(e, $$_799_38.f(t))
         },
         type: "console"
       })
@@ -63,7 +63,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._domBreadcrumb.apply(e, o.f(t))
+          e._domBreadcrumb.apply(e, $$_799_38.f(t))
         },
         type: "dom"
       })
@@ -74,7 +74,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._xhrBreadcrumb.apply(e, o.f(t))
+          e._xhrBreadcrumb.apply(e, $$_799_38.f(t))
         },
         type: "xhr"
       })
@@ -85,7 +85,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._fetchBreadcrumb.apply(e, o.f(t))
+          e._fetchBreadcrumb.apply(e, $$_799_38.f(t))
         },
         type: "fetch"
       })
@@ -96,7 +96,7 @@ var ke = function () {
           for (var t = [], n = 0; n < arguments.length; n++) {
             t[n] = arguments[n]
           }
-          e._historyBreadcrumb.apply(e, o.f(t))
+          e._historyBreadcrumb.apply(e, $$_799_38.f(t))
         },
         type: "history"
       })
@@ -188,7 +188,7 @@ var ke = function () {
         } else {
           $_2644.a().addBreadcrumb({
             category: "fetch",
-            data: o.a(o.a({}, e.fetchData), {
+            data: $$_799_38.a($$_799_38.a({}, e.fetchData), {
               status_code: e.response.status
             }),
             type: "http"
@@ -245,14 +245,14 @@ var Se = function (e) {
     }
     return e.call(this, me, t) || this
   }
-  o.c(t, e)
+  $$_799_38.c(t, e)
   t.prototype.showReportDialog = function (e) {
     if (undefined === e) {
       e = {}
     }
     if ($_395.e().document) {
       if (this._isEnabled()) {
-        Ce(o.a(o.a({}, e), {
+        Ce($$_799_38.a($$_799_38.a({}, e), {
           dsn: e.dsn || this.getDsn()
         }))
       } else {
@@ -277,7 +277,7 @@ var Te = ["EventTarget", "Window", "Node", "ApplicationCache", "AudioTrackList",
 var Be = function () {
   function e(t) {
     this.name = e.id
-    this._options = o.a({
+    this._options = $$_799_38.a({
       XMLHttpRequest: true,
       eventTarget: true,
       requestAnimationFrame: true,
@@ -422,7 +422,7 @@ var De = function () {
     this.name = e.id
     this._onErrorHandlerInstalled = false
     this._onUnhandledRejectionHandlerInstalled = false
-    this._options = o.a({
+    this._options = $$_799_38.a({
       onerror: true,
       onunhandledrejection: true
     }, t)
@@ -586,7 +586,7 @@ var Ie = function () {
       return e
     }
     var n = this._walkErrorTree(t.originalException, this._key)
-    e.exception.values = o.f(n, e.exception.values)
+    e.exception.values = $$_799_38.f(n, e.exception.values)
     return e
   }
   e.prototype._walkErrorTree = function (e, t, n) {
@@ -597,7 +597,7 @@ var Ie = function () {
       return n
     }
     var r = ie(te(e[t]))
-    return this._walkErrorTree(e[t], t, o.f([r], n))
+    return this._walkErrorTree(e[t], t, $$_799_38.f([r], n))
   }
   e.id = "LinkedErrors"
   return e
@@ -710,17 +710,17 @@ var Pe = function () {
         var a = (null === (t$request = t.request) || undefined === t$request ? undefined : t$request.url) || (null === (Fe$location = Fe.location) || undefined === Fe$location ? undefined : Fe$location.href)
         var /* [auto-meaningful-name] */Fe$document$referrer = (Fe.document || {}).referrer
         var /* [auto-meaningful-name] */Fe$navigator$userAgent = (Fe.navigator || {}).userAgent
-        var l = o.a(o.a(o.a({}, null === (t$request1 = t.request) || undefined === t$request1 ? undefined : t$request1.headers), Fe$document$referrer && {
+        var l = $$_799_38.a($$_799_38.a($$_799_38.a({}, null === (t$request1 = t.request) || undefined === t$request1 ? undefined : t$request1.headers), Fe$document$referrer && {
           Referer: Fe$document$referrer
         }), Fe$navigator$userAgent && {
           "User-Agent": Fe$navigator$userAgent
         })
-        var f = o.a(o.a({}, a && {
+        var f = $$_799_38.a($$_799_38.a({}, a && {
           url: a
         }), {
           headers: l
         })
-        return o.a(o.a({}, t), {
+        return $$_799_38.a($$_799_38.a({}, t), {
           request: f
         })
       }

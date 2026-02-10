@@ -7,8 +7,8 @@
 "use strict"
 
 var r = require("../../../180")
-var i = require("../../../../../1058/1393/1143/283/index")
-var o = require("../../../../../1058/1393/1143/284/index")
+var i = require("../../../../../20/791/2385/283/index")
+var o = require("../../../../../20/791/2385/284/index")
 var a = require("./1140/index")
 module.exports = function (e) {
   i(n, e)

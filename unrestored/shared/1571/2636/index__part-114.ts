@@ -21,16 +21,17 @@ import * as Jd from "./33"
 import * as Yr from "./53"
 import * as Tn from "./68"
 import * as Et from "./9"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_175 from "./175"
 import /* [auto-meaningful-name] */$_1751 from "./175"
@@ -95,24 +96,24 @@ sE = {}
 k.a(sE, Sp.a.TEXT, [Sp.c.SMALL, Sp.c.MEDIUM, Sp.c.LARGE])
 k.a(sE, Sp.a.ICON, [Sp.c.TINY, Sp.c.SMALL, Sp.c.MEDIUM, Sp.c.LARGE, Sp.c.HUGE])
 var eO = sE
-var tO = React1.memo(function (e) {
+var tO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var a = e$getValue(n)
   var s = e$getValue("sizeType")
   var c = e$getValue("color")
   var l = e$getValue("iconId")
   var u = e$getValue("text")
   var d = Jd.O(a)
-  var p = $_16_index.d()
-  var m = React1.useState()
+  var p = useDispatch()
+  var m = useState()
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Et.fb(l)
     b(e)
   }, [l])
@@ -134,7 +135,7 @@ var tO = React1.memo(function (e) {
   }
   return React.createElement(React.Fragment, null, React.createElement($_13_index.i, {
     className: N($_1751.formItemWrapper, $_1751.typeSelector, $_1751.buttonModeSelector, "changeButtonMode"),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "mode"
     })
   }, React.createElement(lb, {
@@ -159,7 +160,7 @@ var tO = React1.memo(function (e) {
     }, e.renderContent(c, v))
   }))), d === Sp.a.TEXT ? React.createElement($_13_index.i, {
     className: N($_1751.formItemWrapper, $_1751.cocoInputTitleContent),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "content"
     })
   }, React.createElement($_13_index.k, {
@@ -170,7 +171,7 @@ var tO = React1.memo(function (e) {
     defaultValue: u
   })) : React.createElement($_13_index.i, {
     className: N($_1751.formItemWrapper, $_1751.typeSelector, "changeIcon"),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "icon"
     })
   }, React.createElement("div", {
@@ -183,7 +184,7 @@ var tO = React1.memo(function (e) {
     className: N("coco-select-arrow")
   }))))
 })
-var nO = React1.memo(function (e) {
+var nO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -219,16 +220,16 @@ var nO = React1.memo(function (e) {
     }
   })
 })
-var rO = React1.memo(function (e) {
+var rO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var o = e$getValue("textVisible")
   return React.createElement(React.Fragment, null, React.createElement("div", {
     className: N($_1751.formItemWrapper, $_1751.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_1751.labelWrapper
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "text"
   })), React.createElement("div", {
     className: $_1751.actionWrapper,
@@ -283,16 +284,16 @@ var rO = React1.memo(function (e) {
     textAlign: e$getValue("textAlign")
   })))))
 })
-var oO = React1.memo(function (e) {
+var oO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var o = e$getValue("iconVisible")
   return React.createElement(React.Fragment, null, React.createElement("div", {
     className: N($_1751.formItemWrapper, $_1751.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_1751.labelWrapper
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "icon"
   })), React.createElement("div", {
     className: $_1751.actionWrapper,
@@ -361,22 +362,22 @@ var aO = [
     }
   }
 ]
-var sO = React1.memo(function (e) {
+var sO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var o = e$getValue("backgroundColor")
   var i = e$getValue("backgroundMode")
-  var a = $_16_index.e(function (e) {
+  var a = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var s = $_16_index.d()
+  var s = useDispatch()
   var c = e$getValue("backgroundImage")
   return React.createElement("div", {
     className: N($_1751.formItemWrapper, $_1751.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_1751.labelWrapper
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "background"
   })), React.createElement("div", {
     className: $_1751.modeActionWrapper
@@ -385,14 +386,14 @@ var sO = React1.memo(function (e) {
     onClick: function () {
       e$onChange("backgroundMode", $_114.a.TEMPLATE)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "template"
   })), React.createElement("div", {
     className: N($_1751.modeImage, i === $_114.a.IMAGE && $_1751.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_114.a.IMAGE)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "image"
   })))), i === $_114.a.TEMPLATE && React.createElement("div", {
     className: $_1751.backgroundWrapper
@@ -412,7 +413,7 @@ var sO = React1.memo(function (e) {
     }, e.renderContent(o))
   }))), React.createElement("div", {
     className: $_1751.templateColor
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "templateColor"
   })), React.createElement(mb, {
     width: 43,
@@ -457,13 +458,13 @@ var sO = React1.memo(function (e) {
     value: $_114.c.CONTAIN
   }, React.createElement($_13_index.j, {
     type: "icon-contain"
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "".concat($_114.c.CONTAIN)
   })), React.createElement($_13_index.t, {
     value: $_114.c.STRETCH
   }, React.createElement($_13_index.j, {
     type: "icon-stretch"
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "".concat($_114.c.STRETCH)
   }))))))
 })

@@ -6,15 +6,16 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_931 from "./931"
 import /* [auto-meaningful-name] */$_9311 from "./931"
-var cn = React1.memo(function (e) {
+var cn = memo(function (e) {
   var /* [auto-meaningful-name] */e$networkErrorVisible = e.networkErrorVisible
   var /* [auto-meaningful-name] */e$title = e.title
   var o = undefined === e$title ? "" : e$title
@@ -24,7 +25,7 @@ var cn = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onRetry = e.onRetry
   var /* [auto-meaningful-name] */e$onCancelRetry = e.onCancelRetry
   var /* [auto-meaningful-name] */e$className = e.className
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement($_13_index.f, {
     title: o,
     className: N(e$className, $_9311.networkDialog),
@@ -41,12 +42,12 @@ var cn = React1.memo(function (e) {
           e$onCancelRetry()
         }
       }
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "cancel"
     })), React.createElement($_13_index.d, {
       onClick: e$onRetry,
       type: "primary"
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "retry"
     })))
   }, e$networkErrorVisible && React.createElement($_188.a, null, React.createElement($_188.b, {

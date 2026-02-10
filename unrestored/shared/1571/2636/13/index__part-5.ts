@@ -8,18 +8,19 @@
 
 import { B } from "./index__part-4"
 var P
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$_344 from "./344"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import /* [auto-meaningful-name] */Color from "color"
 import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
-import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import * as /* [auto-meaningful-name] */$$_710 from "../710"
+import { useDispatch } from "react-redux"
 import * as A from "../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useMemo, forwardRef, useRef, useImperativeHandle, useEffect, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
@@ -34,14 +35,14 @@ import /* [auto-meaningful-name] */$_2261 from "./226"
 }(P || (P = {}))
 var H
 var V = [P.HEX, P.HSVA, P.RGBA]
-var z = React1.memo(function (e) {
+var z = memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var o = React1.useState(P.HEX)
+  var o = useState(P.HEX)
   var i = $$_10_index.a(o, 2)
   var c = i[0]
   var l = i[1]
-  var u = React1.useMemo(function () {
+  var u = useMemo(function () {
     var e = $_2261(e$color).toHex8()
     var n = $_2261(e$color).toHsv()
     n.a = Math.round(100 * n.a)
@@ -244,7 +245,7 @@ var Y = {
     }
   }
 }
-var K = React1.memo(function (e) {
+var K = memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$handleColorChange = e.handleColorChange
   var r = function (e) {
@@ -270,7 +271,7 @@ var K = React1.memo(function (e) {
   }))
 })
 var q = []
-var X = React1.memo(React1.forwardRef(function (e, t) {
+var X = memo(forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$onClose = e.onClose
@@ -278,16 +279,16 @@ var X = React1.memo(React1.forwardRef(function (e, t) {
   var d = undefined === e$defaultValue ? "#000000ff" : e$defaultValue
   var /* [auto-meaningful-name] */e$style = e.style
   var f = undefined === e$style ? {} : e$style
-  var h = React1.useRef(null)
-  var m = React1.useRef(null)
-  var g = React1.useRef(false)
-  var _ = $$_16_index.d()
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
-  var b = React1.useState(e$value || d)
+  var h = useRef(null)
+  var m = useRef(null)
+  var g = useRef(false)
+  var _ = useDispatch()
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
+  var b = useState(e$value || d)
   var y = $$_10_index.a(b, 2)
   var O = y[0]
   var w = y[1]
-  var C = React1.useRef(O)
+  var C = useRef(O)
   if (0 === q.length) {
     q.push(O)
   }
@@ -303,12 +304,12 @@ var X = React1.memo(React1.forwardRef(function (e, t) {
   var R = function (e) {
     T(e)
   }
-  React1.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       setRGBA: w
     }
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */e$target = e.target
       var /* [auto-meaningful-name] */h$current = h.current
@@ -353,10 +354,10 @@ var X = React1.memo(React1.forwardRef(function (e, t) {
     })
     return t
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     C.current = O
   }, [O])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function () {
       g.current = true
       document.addEventListener("mouseup", function () {
@@ -370,12 +371,12 @@ var X = React1.memo(React1.forwardRef(function (e, t) {
       return document.removeEventListener("mousedown", e)
     }
   })
-  var L = React1.useCallback(function () {
+  var L = useCallback(function () {
     if (e$onChange) {
       e$onChange(C.current, g.current)
     }
   }, [e$onChange])
-  var P = React1.useCallback(function (e) {
+  var P = useCallback(function (e) {
     if (false === e && e$onChange) {
       e$onChange(C.current, g.current)
     }
@@ -394,7 +395,7 @@ var X = React1.memo(React1.forwardRef(function (e, t) {
                 break
               }
               _($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $$_710_index$a$formatMessage({
+                message: $$_710$a$formatMessage({
                   id: "colorPicker.eyeDropperTips"
                 })
               }))
@@ -446,7 +447,7 @@ var X = React1.memo(React1.forwardRef(function (e, t) {
     className: "coco-palette-history-color"
   }, React.createElement("span", {
     className: "coco-palette-history-title"
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "colorPicker.history"
   })), React.createElement("div", {
     className: "coco-palette-history-color-list"
@@ -486,7 +487,7 @@ var X = React1.memo(React1.forwardRef(function (e, t) {
     src: require("./866")
   }), React.createElement("span", {
     className: "coco-palette-more-title"
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "colorPicker.more"
   }))), React.createElement($$_94_index.a, {
     className: "coco-palette-more-arrow",

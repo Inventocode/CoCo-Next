@@ -7,12 +7,11 @@
 import * as React from "react"
 
 import changelog from "../../../../../changelog.md"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
+import { IconFont } from "../../../../shared/ui/components"
+import { CoCoDialog } from "../../../../shared/ui/components"
+import { useDispatch, useSelector } from "react-redux"
 
 import styles from "./styles.module.css"
 
@@ -38,37 +37,30 @@ const RELEASE_LINKS = [
   }
 ]
 
-const ReleaseInfo = React.memo(() => {
-  const releaseInfoDialogVisible = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
-    return e.common.releaseInfoDialogVisible
-  })
-  const userId = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
-    return e.common.userInfo?.id
-  })
-  const userInfoFetchDone = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
-    return e.common.userInfoFetchDone
-  })
-  var r = React.useState(false)
-  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
-  var i = o[0]
-  var a = o[1]
-  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+export const ReleaseInfo = React.memo(() => {
+  const releaseInfoDialogVisible = useSelector((state) => state.common.releaseInfoDialogVisible)
+  const userId = useSelector((state) => state.common.userInfo?.id)
+  const userInfoFetchDone = useSelector((state) => state.common.userInfoFetchDone)
+  const [hasShown, setHasShown] = React.useState(false)
+  const dispatch = useDispatch()
+
   React.useEffect(function () {
     if (userInfoFetchDone) {
-      if (!i) {
+      if (!hasShown) {
         if (localStorage.getItem("ReleaseVersion") !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f) {
-          s(Actions.vj(true))
+          dispatch(Actions.showReleaseInfoDialog(true))
           localStorage.setItem("ReleaseVersion", $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f)
         }
-        a(true)
+        setHasShown(true)
       }
     }
-  }, [i, s, userId, userInfoFetchDone])
+  }, [hasShown, dispatch, userId, userInfoFetchDone])
+
   return (
-    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
+    <CoCoDialog
       visible={releaseInfoDialogVisible}
       className={styles.ReleaseInfoDialog}
-      onClose={() => s(Actions.vj(false))}
+      onClose={() => dispatch(Actions.showReleaseInfoDialog(false))}
     >
       <div className={styles.left}>
         <img src={LeftSideImage} alt="" />
@@ -91,12 +83,11 @@ const ReleaseInfo = React.memo(() => {
           <div className={styles.overViewInfo}>
             <a href="https://gitee.com/oldsquaw-coco-next/CoCo-Next/blob/main/changelog.md" target="_blank" rel="noopener noreferrer">
               往期功能更新回顾
-              <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j className={styles.iconLink} type="icon-dropdown-down" />
+              <IconFont className={styles.iconLink} type="icon-dropdown-down" />
             </a>
           </div>
         </div>
       </div>
-    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f>
+    </CoCoDialog>
   )
 })
-export { ReleaseInfo as UL }

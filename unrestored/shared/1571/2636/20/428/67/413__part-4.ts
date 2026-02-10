@@ -15,9 +15,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
+import { useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Color from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
+import * as /* [auto-meaningful-name] */$$_112 from "../112"
 var F = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
@@ -29,9 +30,9 @@ var F = function (e) {
   var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
   var /* [auto-meaningful-name] */e$attributes$iconId = e$attributes.iconId
   var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
-  var m = $$_$$_$$_34_347_112.a(e$attributes$iconId) || $$_$$_$$_82.c
-  var g = $$_$$_$$_34_347_112.b(e$attributes$backgroundImage) || $$_$$_$$_82.f
-  var _ = React1.useMemo(function () {
+  var m = $$_112.a(e$attributes$iconId) || $$_$$_$$_82.c
+  var g = $$_112.b(e$attributes$backgroundImage) || $$_$$_$$_82.f
+  var _ = useMemo(function () {
     try {
       return Color(e$attributes$textColor.toString()).toString()
     } catch (e) {
@@ -43,7 +44,7 @@ var F = function (e) {
       return e$attributes$textColor
     }
   }, [t, e$attributes$textColor, e$type])
-  var v = React1.useMemo(function () {
+  var v = useMemo(function () {
     try {
       return Color(e$attributes$iconColor.toString()).toString()
     } catch (e) {
@@ -55,7 +56,7 @@ var F = function (e) {
       return e$attributes$iconColor
     }
   }, [t, e$attributes$iconColor, e$type])
-  var b = React1.useMemo(function () {
+  var b = useMemo(function () {
     try {
       return Color(e$attributes$backgroundColor.toString()).toString()
     } catch (e) {

@@ -4,9 +4,9 @@
  * 模块 ID：1241
  */
 
-var r = require("../1699/271")
-var o = require("../1705/300")
-var i = require("../1706/240")
+var r = require("./271")
+var o = require("../1648/300")
+var i = require("../1282/240")
 var a = require("../1581/831/index")
 module.exports = r ? Object.defineProperties : function (e, t) {
   i(e)

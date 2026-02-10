@@ -4,7 +4,7 @@
  * 模块 ID：1630
  */
 
-var r = require("./1706/86/index")
+var r = require("./1661/86/index")
 var /* [auto-meaningful-name] */Math$asinh = Math.asinh
 var /* [auto-meaningful-name] */Math$log = Math.log
 var /* [auto-meaningful-name] */Math$sqrt = Math.sqrt

@@ -14,12 +14,13 @@ import * as /* [auto-meaningful-name] */$_163 from "./163"
 import * as /* [auto-meaningful-name] */$_131 from "./131"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_254 from "./254"
 import /* [auto-meaningful-name] */$_2541 from "./254"
@@ -44,15 +45,15 @@ var yO = [
     }
   }
 ]
-var EO = React1.memo(function (e) {
+var EO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement($_13_index.i, {
     className: N($_2541.formItemWrapper, $_2541.typeSelector, $_2541.switchType, "changeSwitchMode"),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "style"
     })
   }, React.createElement(lb, {
@@ -70,7 +71,7 @@ var EO = React1.memo(function (e) {
     }, e.renderContent())
   })))
 })
-var OO = React1.memo(function (e) {
+var OO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -120,11 +121,11 @@ var wO = [
     }
   }
 ]
-var CO = React1.memo(function (e) {
+var CO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var i = e$getValue("color")
   var a = e$getValue("backgroundMode") || $_163.a.TEMPLATE
   var s = e$getValue("mode") || $_163.c.DEFAULT
@@ -139,7 +140,7 @@ var CO = React1.memo(function (e) {
     className: N($_2541.formItemWrapper, $_2541.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_2541.backgroundLabel
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "background"
   })), React.createElement("div", {
     className: $_2541.modeActionWrapper
@@ -148,14 +149,14 @@ var CO = React1.memo(function (e) {
     onClick: function () {
       e$onChange("backgroundMode", $_163.a.TEMPLATE)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "template"
   })), React.createElement("div", {
     className: N($_2541.modeImage, a === $_163.a.IMAGE && $_2541.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_163.a.IMAGE)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "image"
   })))), a === $_163.a.TEMPLATE && React.createElement("div", {
     className: $_2541.backgroundWrapper
@@ -175,7 +176,7 @@ var CO = React1.memo(function (e) {
     }, e.renderContent(i))
   }))), React.createElement("div", {
     className: $_2541.templateColor
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "templateColor"
   })), React.createElement(mb, {
     width: 43,
@@ -201,7 +202,7 @@ var CO = React1.memo(function (e) {
         imageOpenFileId: c
       }))
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "edit"
   })))), React.createElement("div", {
     style: {
@@ -218,13 +219,13 @@ var CO = React1.memo(function (e) {
     value: $_163.b.CONTAIN
   }, React.createElement($_13_index.j, {
     type: "icon-contain"
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "".concat($_163.b.CONTAIN)
   })), React.createElement($_13_index.t, {
     value: $_163.b.STRETCH
   }, React.createElement($_13_index.j, {
     type: "icon-stretch"
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "".concat($_163.b.STRETCH)
   }))))))
 })

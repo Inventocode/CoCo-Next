@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */$_432 from "./432"
 import * as /* [auto-meaningful-name] */$_482 from "./482"
 import * as /* [auto-meaningful-name] */$_561 from "./561"
 import * as /* [auto-meaningful-name] */$_229 from "./229"
-import /* [auto-meaningful-name] */$$_80_index from "../80/index"
+import /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_140 from "../140"
 import * as /* [auto-meaningful-name] */$$_120 from "../120"
 import * as /* [auto-meaningful-name] */$$_142 from "../142"
@@ -24,16 +24,16 @@ import * as /* [auto-meaningful-name] */$$_106 from "../106"
 import * as /* [auto-meaningful-name] */$$_103 from "../103"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
-import * as /* [auto-meaningful-name] */React from "react"
+import { forwardRef, useRef, useState, useMemo, useEffect, useImperativeHandle, Children, createElement, createContext, createRef, cloneElement, Component, Fragment } from "react"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_559_558_index from "../559/558/index"
-import * as /* [auto-meaningful-name] */$$_559_216 from "../559/216"
-import /* [auto-meaningful-name] */$$_559_2161 from "../559/216"
-import * as /* [auto-meaningful-name] */$$_559_326 from "../559/326"
+import * as /* [auto-meaningful-name] */$_558_index from "./558/index"
+import * as /* [auto-meaningful-name] */$_216 from "./216"
+import /* [auto-meaningful-name] */$_2161 from "./216"
+import * as /* [auto-meaningful-name] */$_326 from "./326"
 var ie = ["measure", "align", null, "motion"]
-var ae = React.forwardRef(function (e, t) {
+var ae = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$className = e.className
@@ -52,14 +52,14 @@ var ae = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onMouseLeave = e.onMouseLeave
   var /* [auto-meaningful-name] */e$onMouseDown = e.onMouseDown
   var /* [auto-meaningful-name] */e$onTouchStart = e.onTouchStart
-  var S = React.useRef()
-  var A = React.useRef()
-  var I = React.useState()
+  var S = useRef()
+  var A = useRef()
+  var I = useState()
   var j = $$_40_index.a(I, 2)
   var N = j[0]
   var R = j[1]
   var k = function (e) {
-    var t = React.useState({
+    var t = useState({
       width: 0,
       height: 0
     })
@@ -67,7 +67,7 @@ var ae = React.forwardRef(function (e, t) {
     var r = n[0]
     var i = n[1]
     return [
-      React.useMemo(function () {
+      useMemo(function () {
         var t = {}
         if (e) {
           var /* [auto-meaningful-name] */r$width = r.width
@@ -100,12 +100,12 @@ var ae = React.forwardRef(function (e, t) {
   var D = x[0]
   var M = x[1]
   var L = function (e, t) {
-    var n = React.useState(null)
+    var n = useState(null)
     var r = $$_40_index.a(n, 2)
     var i = r[0]
     var s = r[1]
-    var c = React.useRef()
-    var l = React.useRef(false)
+    var c = useRef()
+    var l = useRef(false)
     function u(e) {
       if (!l.current) {
         s(e)
@@ -114,19 +114,19 @@ var ae = React.forwardRef(function (e, t) {
     function d() {
       $_229.a.cancel(c.current)
     }
-    React.useEffect(function () {
+    useEffect(function () {
       u("measure")
     }, [e])
-    React.useEffect(function () {
+    useEffect(function () {
       switch (i) {
         case "measure":
           t()
       }
       if (i) {
-        c.current = $_229.a($$_559_326.a($$_559_2161.mark(function e() {
+        c.current = $_229.a($_326.a($_2161.mark(function e() {
           var t
           var n
-          return $$_559_2161.wrap(function (e) {
+          return $_2161.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
                 case 0:
@@ -143,7 +143,7 @@ var ae = React.forwardRef(function (e, t) {
         })))
       }
     }, [i])
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         l.current = true
         d()
@@ -176,7 +176,7 @@ var ae = React.forwardRef(function (e, t) {
   var P = $$_40_index.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = React.useRef()
+  var G = useRef()
   function W() {
     var /* [auto-meaningful-name] */S$current
     if (!(null === (S$current = S.current) || undefined === S$current)) {
@@ -219,12 +219,12 @@ var ae = React.forwardRef(function (e, t) {
       return null === t || undefined === t ? undefined : t(e, n)
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     if (!(H.motionName || "motion" !== B)) {
       F()
     }
   }, [H.motionName, B])
-  React.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       forceAlign: W,
       getElement: function () {
@@ -242,12 +242,12 @@ var ae = React.forwardRef(function (e, t) {
     Y = false
   }
   var K = e$children
-  if (React.Children.count(e$children) > 1) {
-    K = React.createElement("div", {
+  if (Children.count(e$children) > 1) {
+    K = createElement("div", {
       className: "".concat(e$prefixCls, "-content")
     }, e$children)
   }
-  return React.createElement(J, $$_19.a({
+  return createElement(J, $$_19.a({
     visible: e$visible,
     ref: A,
     leavedClassName: "".concat(e$prefixCls, "-hidden")
@@ -260,7 +260,7 @@ var ae = React.forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */e$className1 = e.className
     var /* [auto-meaningful-name] */e$style1 = e.style
     var c = w(e$prefixCls, e$className, N, e$className1)
-    return React.createElement($$_559_558_index.a, {
+    return createElement($_558_index.a, {
       target: e$point || e$getRootDomNode,
       key: "popup",
       ref: S,
@@ -268,7 +268,7 @@ var ae = React.forwardRef(function (e, t) {
       disabled: Y,
       align: e$align,
       onAlign: U
-    }, React.createElement("div", {
+    }, createElement("div", {
       ref: t,
       className: c,
       onMouseEnter: e$onMouseEnter,
@@ -281,7 +281,7 @@ var ae = React.forwardRef(function (e, t) {
 })
 ae.displayName = "PopupInner"
 var se = ae
-var ce = React.forwardRef(function (e, t) {
+var ce = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$zIndex = e.zIndex
@@ -292,8 +292,8 @@ var ce = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$mobile$popupMotion = e$mobile.popupMotion
   var f = undefined === e$mobile$popupMotion ? {} : e$mobile$popupMotion
   var /* [auto-meaningful-name] */e$mobile$popupRender = e$mobile.popupRender
-  var m = React.useRef()
-  React.useImperativeHandle(t, function () {
+  var m = useRef()
+  useImperativeHandle(t, function () {
     return {
       forceAlign: function () {},
       getElement: function () {
@@ -305,15 +305,15 @@ var ce = React.forwardRef(function (e, t) {
     zIndex: e$zIndex
   }, e$mobile$popupStyle)
   var _ = e$children
-  if (React.Children.count(e$children) > 1) {
-    _ = React.createElement("div", {
+  if (Children.count(e$children) > 1) {
+    _ = createElement("div", {
       className: "".concat(e$prefixCls, "-content")
     }, e$children)
   }
   if (e$mobile$popupRender) {
     _ = e$mobile$popupRender(_)
   }
-  return React.createElement(J, $$_19.a({
+  return createElement(J, $$_19.a({
     visible: e$visible,
     ref: m,
     removeOnLeave: true
@@ -321,7 +321,7 @@ var ce = React.forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */e$className = e.className
     var /* [auto-meaningful-name] */e$style = e.style
     var i = w(e$prefixCls, E$mobileUndefinedE$mobileE$mobile$popupClassName, e$className)
-    return React.createElement("div", {
+    return createElement("div", {
       ref: t,
       className: i,
       style: $$_21.a($$_21.a({}, e$style), g)
@@ -331,38 +331,38 @@ var ce = React.forwardRef(function (e, t) {
 ce.displayName = "MobilePopupInner"
 var le = ce
 var ue = ["visible", "mobile"]
-var de = React.forwardRef(function (e, t) {
+var de = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$mobile = e.mobile
   var l = $$_54.a(e, ue)
-  var u = React.useState(e$visible)
+  var u = useState(e$visible)
   var d = $$_40_index.a(u, 2)
   var p = d[0]
   var f = d[1]
-  var h = React.useState(false)
+  var h = useState(false)
   var m = $$_40_index.a(h, 2)
   var g = m[0]
   var _ = m[1]
   var v = $$_21.a($$_21.a({}, l), {}, {
     visible: p
   })
-  React.useEffect(function () {
+  useEffect(function () {
     f(e$visible)
     if (e$visible && e$mobile) {
       _($_1021.a())
     }
   }, [e$visible, e$mobile])
-  var b = g ? React.createElement(le, $$_19.a({}, v, {
+  var b = g ? createElement(le, $$_19.a({}, v, {
     mobile: e$mobile,
     ref: t
-  })) : React.createElement(se, $$_19.a({}, v, {
+  })) : createElement(se, $$_19.a({}, v, {
     ref: t
   }))
-  return React.createElement("div", null, React.createElement(ee, v), b)
+  return createElement("div", null, createElement(ee, v), b)
 })
 de.displayName = "Popup"
 var pe = de
-var fe = React.createContext(null)
+var fe = createContext(null)
 function he() {}
 function me() {
   return ""
@@ -379,8 +379,8 @@ var ve = function (e) {
       var t
       var o
       $$_103.a(this, r);
-      (t = n.call(this, e)).popupRef = React.createRef()
-      t.triggerRef = React.createRef()
+      (t = n.call(this, e)).popupRef = createRef()
+      t.triggerRef = createRef()
       t.attachId = undefined
       t.clickOutsideHandler = undefined
       t.touchOutsideHandler = undefined
@@ -509,7 +509,7 @@ var ve = function (e) {
             return n
           }
         } catch (r) {}
-        return $$_80_index.findDOMNode($$_142.a(t))
+        return ReactDom.findDOMNode($$_142.a(t))
       }
       t.getPopupClassNameFromAlign = function (e) {
         var n = []
@@ -568,7 +568,7 @@ var ve = function (e) {
         }
         S.onMouseDown = t.onPopupMouseDown
         S.onTouchStart = t.onPopupMouseDown
-        return React.createElement(pe, $$_19.a({
+        return createElement(pe, $$_19.a({
           prefixCls: t$props$prefixCls,
           destroyPopupOnHide: t$props$destroyPopupOnHide,
           visible: t$state$popupVisible,
@@ -881,7 +881,7 @@ var ve = function (e) {
           var /* [auto-meaningful-name] */this$props$alignPoint = this$props.alignPoint
           var /* [auto-meaningful-name] */this$props$className = this$props.className
           var /* [auto-meaningful-name] */this$props$autoDestroy = this$props.autoDestroy
-          var u = React.Children.only(this$props$children)
+          var u = Children.only(this$props$children)
           var d = {
             key: "trigger"
           }
@@ -928,9 +928,9 @@ var ve = function (e) {
             f.ref = $_432.a(this.triggerRef, u.ref)
           }
           var h
-          var m = React.cloneElement(u, f)
+          var m = cloneElement(u, f)
           if (this$state$popupVisible || this.popupRef.current || this$props$forceRender) {
-            h = React.createElement(e, {
+            h = createElement(e, {
               key: "portal",
               getContainer: this.getContainer,
               didUpdate: this.handlePortalUpdate
@@ -939,7 +939,7 @@ var ve = function (e) {
           if (!this$state$popupVisible && this$props$autoDestroy) {
             h = null
           }
-          return React.createElement(fe.Provider, {
+          return createElement(fe.Provider, {
             value: this.triggerContextValue
           }, m, h)
         }
@@ -959,7 +959,7 @@ var ve = function (e) {
       }
     ])
     return r
-  }(React.Component)
+  }(Component)
   t.contextType = fe
   t.defaultProps = {
     prefixCls: "rc-trigger-popup",
@@ -1029,7 +1029,7 @@ var Ee = {
     targetOffset: ye
   }
 }
-var Oe = React.forwardRef(function (e, t) {
+var Oe = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$arrow = e.arrow
   var s = undefined !== e$arrow && e$arrow
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
@@ -1050,13 +1050,13 @@ var Oe = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$trigger = e.trigger
   var T = undefined === e$trigger ? ["hover"] : e$trigger
   var S = $$_54.a(e, ["arrow", "prefixCls", "transitionName", "animation", "align", "placement", "placements", "getPopupContainer", "showAction", "hideAction", "overlayClassName", "overlayStyle", "visible", "trigger"])
-  var A = React.useState()
+  var A = useState()
   var I = $$_40_index.a(A, 2)
   var j = I[0]
   var N = I[1]
   var R = "visible" in e ? e$visible : j
-  var k = React.useRef(null)
-  React.useImperativeHandle(t, function () {
+  var k = useRef(null)
+  useImperativeHandle(t, function () {
     return k.current
   })
   var x = function () {
@@ -1083,15 +1083,15 @@ var Oe = React.forwardRef(function (e, t) {
     if ("string" === typeof e.type) {
       delete t.prefixCls
     }
-    return React.createElement(React.Fragment, null, s && React.createElement("div", {
+    return createElement(Fragment, null, s && createElement("div", {
       className: "".concat(l, "-arrow")
-    }), React.cloneElement(e, t))
+    }), cloneElement(e, t))
   }
   var L = e$hideAction
   if (!(L || -1 === T.indexOf("contextMenu"))) {
     L = ["click"]
   }
-  return React.createElement(ve, Object.assign({}, S, {
+  return createElement(ve, Object.assign({}, S, {
     prefixCls: l,
     ref: k,
     popupClassName: w(e$overlayClassName, $$_35.a({}, "".concat(l, "-show-arrow"), s)),
@@ -1126,7 +1126,7 @@ var Oe = React.forwardRef(function (e, t) {
       var /* [auto-meaningful-name] */e$openClassName = e.openClassName
       return undefined !== e$openClassName ? e$openClassName : "".concat(l, "-open")
     }())
-    return j && e$children ? React.cloneElement(e$children, {
+    return j && e$children ? cloneElement(e$children, {
       className: r
     }) : e$children
   }())

@@ -26,13 +26,14 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../shared/ui/components"
+import { IconFont } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index from "../../../../../unrestored/shared/1571/2636/710/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../../unrestored/shared/1571/2636/80/index"
+import { batch, useDispatch, useSelector } from "react-redux"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_553 from "../../../../../unrestored/shared/1571/2636/553"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_212 from "../../../../../unrestored/shared/1571/2636/212"
@@ -40,9 +41,10 @@ import styles from "../../../../../unrestored/shared/1571/2636/212"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1511 from "../../../../../unrestored/shared/1571/2636/1511"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111 from "../../../../../unrestored/shared/1571/2636/1511"
+
 var Xr = React.forwardRef(function (e, t) {
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  var n = useDispatch()
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$checkValueIsRepeat = e.checkValueIsRepeat
   var /* [auto-meaningful-name] */e$renameInputValue = e.renameInputValue
@@ -157,7 +159,7 @@ var Xr = React.forwardRef(function (e, t) {
         }
       } else {
         n(Actions.showCommonToastInfoAction({
-          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index$a$formatMessage({
+          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "blankInputValue"
           }),
           type: "error",
@@ -184,10 +186,10 @@ var Xr = React.forwardRef(function (e, t) {
 })
 var Qr = function (e) {
   var /* [auto-meaningful-name] */e$screenId = e.screenId
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.oTState.onlineCooperationUserList
   })
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.oTState.userFocusOTInfoList
   })
   var o = React.useState([])
@@ -214,9 +216,7 @@ var Qr = function (e) {
     className={styles.collaboration}
     title={c}
   >
-    {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
-      type={"icon-collaborate"}
-    />}
+    <IconFont type="icon-collaborate" />
   </div>
 }
 var Zr = function (e) {
@@ -242,7 +242,7 @@ var Zr = function (e) {
       {
         key: "componentDidMount",
         value: function () {
-          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this).sortableHandle = true
+          ReactDom.findDOMNode(this).sortableHandle = true
         }
       }, {
         key: "getWrappedInstance",
@@ -268,7 +268,7 @@ var Zr = function (e) {
   var /* [auto-meaningful-name] */e$screen = e.screen
   var /* [auto-meaningful-name] */e$index = e.index
   var /* [auto-meaningful-name] */e$title = e.title
-  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  var o = useDispatch()
   return <div
     className={styles.snapshotContainer}
     onClick={function () {
@@ -292,15 +292,15 @@ var Jr = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$readonly = e.readonly
   var /* [auto-meaningful-name] */e$showDeleteIcon = e.showDeleteIcon
   var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.e(e$screen.id)
-  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.project.screens
   })
-  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var u = useSelector(function (e) {
     return e.oTState.collWorkId
   })
   var /* [auto-meaningful-name] */e$screen$title = e$screen.title
-  const formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
-  const dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  const formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  const dispatch = useDispatch()
   var g = React.useRef(null)
   var v = React.useRef(null)
   React.useEffect(function () {
@@ -342,7 +342,7 @@ var Jr = React.memo(function (e) {
               e$onDeleteIconClick(e$screen)
             }}
           >
-            {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+            {<IconFont
               type={"icon-delete-bold"}
             />}
           </div>}
@@ -365,7 +365,7 @@ var Jr = React.memo(function (e) {
               // }
             }}
           >
-            <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-copy"></$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j>
+            <IconFont type="icon-copy"></IconFont>
           </div>}
           {!!u && <Qr
             screenId={e$screen.id}
@@ -476,7 +476,7 @@ var $r = function (e) {
           var /* [auto-meaningful-name] */this$props$collection = this$props.collection
           var /* [auto-meaningful-name] */this$props$disabled = this$props.disabled
           var /* [auto-meaningful-name] */this$props$index = this$props.index
-          var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this)
+          var o = ReactDom.findDOMNode(this)
           o.sortableInfo = {
             collection: this$props$collection,
             disabled: this$props$disabled,
@@ -1250,7 +1250,7 @@ var eo = function (e) {
         key: "getContainer",
         value: function () {
           var /* [auto-meaningful-name] */this$props$getContainer = this.props.getContainer
-          return "function" !== typeof this$props$getContainer ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_80_index.findDOMNode(this) : this$props$getContainer(r.withRef ? this.getWrappedInstance() : undefined)
+          return "function" !== typeof this$props$getContainer ? ReactDom.findDOMNode(this) : this$props$getContainer(r.withRef ? this.getWrappedInstance() : undefined)
         }
       }, {
         key: "render",
@@ -1350,12 +1350,12 @@ var eo = function (e) {
 
 export const ScreenList = React.memo(() => {
   var /* [auto-meaningful-name] */n$current
-  const formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710_index.a().formatMessage
+  const formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var n = React.useRef(null)
-  var screens = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var screens = useSelector(function (e) {
     return e.project.screens
   })
-  var stageWidth = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var stageWidth = useSelector(function (e) {
     return e.common.stageWidth
   })
   var i = React.useState(-1)
@@ -1376,17 +1376,17 @@ export const ScreenList = React.memo(() => {
   var w = E[1]
   var C = React.useRef()
   var T = React.useRef(null)
-  var currentScreenIndex = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var currentScreenIndex = useSelector(function (e) {
     return e.project.currentScreenIndex
   })
-  var playing = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var playing = useSelector(function (e) {
     return e.project.playing
   })
   var R = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
-  var screenPanel = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var screenPanel = useSelector(function (e) {
     return e.uiConfig.screenPanel
   }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
-  const dispatch = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
+  const dispatch = useDispatch()
   React.useEffect(function () {
     var e = document.createElement("div")
     e.id = "_cocoScreenListDragContainer"
@@ -1517,7 +1517,7 @@ export const ScreenList = React.memo(() => {
         }
       }}
     >
-      {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+      {<IconFont
         type={"icon-close"}
       />}
     </div>}
@@ -1556,7 +1556,7 @@ export const ScreenList = React.memo(() => {
               screenName: screens.getIn([e$newIndex, "title"])
             })
           }
-          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.b(function () {
+          batch(function () {
             var e
             dispatch(Actions.Fi(true))
             dispatch(Actions.yh(e$oldIndex, e$newIndex))
@@ -1588,7 +1588,7 @@ export const ScreenList = React.memo(() => {
           // }
         }}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-add2"}
           className={styles.addBtn}
         />}
@@ -1622,7 +1622,7 @@ export const ScreenList = React.memo(() => {
       {<div
         className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.screenIconBox, !playing && styles.line)}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-screen-manage"}
           className={styles.screenIcon}
         />}
@@ -1650,7 +1650,7 @@ export const ScreenList = React.memo(() => {
           }
         }}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-pick-up"}
           className={styles.prevIcon}
         />}
@@ -1667,7 +1667,7 @@ export const ScreenList = React.memo(() => {
           }
         }}
       >
-        {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j
+        {<IconFont
           type={"icon-pick-up"}
           className={styles.nextIcon}
         />}

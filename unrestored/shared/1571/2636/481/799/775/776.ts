@@ -7,7 +7,7 @@
 "use strict"
 
 export { u as a }
-import * as /* [auto-meaningful-name] */$$_$$_1212_38 from "../../1212/38"
+import * as /* [auto-meaningful-name] */$$_38 from "../38"
 import * as /* [auto-meaningful-name] */$$_220_817 from "../220/817"
 import * as /* [auto-meaningful-name] */$$_317 from "../317"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
@@ -27,7 +27,7 @@ var u = function (e) {
     r.transaction = r
     return r
   }
-  $$_$$_1212_38.c(t, e)
+  $$_38.c(t, e)
   t.prototype.setName = function (e) {
     this.name = e
   }
@@ -41,10 +41,10 @@ var u = function (e) {
     this.spanRecorder.add(this)
   }
   t.prototype.setMeasurements = function (e) {
-    this._measurements = $$_$$_1212_38.a({}, e)
+    this._measurements = $$_38.a({}, e)
   }
   t.prototype.setMetadata = function (e) {
-    this.metadata = $$_$$_1212_38.a($$_$$_1212_38.a({}, this.metadata), e)
+    this.metadata = $$_38.a($$_38.a({}, this.metadata), e)
   }
   t.prototype.finish = function (t) {
     var n = this
@@ -87,7 +87,7 @@ var u = function (e) {
   }
   t.prototype.toContext = function () {
     var t = e.prototype.toContext.call(this)
-    return $$_439_index.a($$_$$_1212_38.a($$_$$_1212_38.a({}, t), {
+    return $$_439_index.a($$_38.a($$_38.a({}, t), {
       name: this.name,
       trimEnd: this._trimEnd
     }))

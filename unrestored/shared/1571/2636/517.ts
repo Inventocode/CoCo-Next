@@ -7,13 +7,13 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */React from "react"
-var i = React.createContext(undefined)
+import { createContext, createElement } from "react"
+var i = createContext(undefined)
 var o = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$size = e.size
-  return React.createElement(i.Consumer, null, function (e) {
-    return React.createElement(i.Provider, {
+  return createElement(i.Consumer, null, function (e) {
+    return createElement(i.Provider, {
       value: e$size || e
     }, e$children)
   })

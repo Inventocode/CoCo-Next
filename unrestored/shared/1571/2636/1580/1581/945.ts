@@ -4,8 +4,8 @@
  * 模块 ID：945
  */
 
-var r = require("../1692/533")
-var o = require("../1686/426/1076");
+var r = require("./533")
+var o = require("../1785/426/1076");
 (module.exports = function (e, t) {
   return o[e] || (o[e] = undefined !== t ? t : {})
 })("versions", []).push({

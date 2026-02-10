@@ -8,24 +8,25 @@
 
 import { IA } from "./index__part-166"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_494 from "./494"
 import /* [auto-meaningful-name] */$_4941 from "./494"
 var RA = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$isEmpty = e.isEmpty
-  var r = React1.useState(false)
+  var r = useState(false)
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useDispatch()
   function l(t) {
     if (!e.isReadOnly) {
       a(true)
@@ -50,24 +51,24 @@ var RA = function (e) {
     className: $_4941.IconLayoutEmpty,
     onDragEnter: l,
     onDragLeave: u
-  }, React.createElement("h5", null, $_710_index$a$formatMessage({
+  }, React.createElement("h5", null, $_710$a$formatMessage({
     id: "emptyIconLibraryTitle"
   })), React.createElement("div", {
     className: $_4941.emptyContent
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "emptyIconLibraryTips1"
-  }), React.createElement("br", null), $_710_index$a$formatMessage({
+  }), React.createElement("br", null), $_710$a$formatMessage({
     id: "emptyIconLibraryTips2"
-  }), React.createElement("br", null), $_710_index$a$formatMessage({
+  }), React.createElement("br", null), $_710$a$formatMessage({
     id: "emptyIconLibraryTips3"
   }), React.createElement("br", null))))
 }
 var kA = function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var n = useSelector(function (e) {
     return e.resource.iconFileList.reverse()
   })
-  var r = $_16_index.d()
+  var r = useDispatch()
   return React.createElement("div", {
     className: $_4941.iconLayout
   }, React.createElement(RA, {
@@ -92,7 +93,7 @@ var kA = function (e) {
     className: $_4941.icon
   }), React.createElement("div", {
     className: $_4941.name
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.upload"
   }))))), n.map(function (e) {
     return React.createElement(IA, {

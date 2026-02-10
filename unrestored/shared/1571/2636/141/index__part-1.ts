@@ -10,8 +10,8 @@ var /* [auto-meaningful-name] */window$location
 import * as /* [auto-meaningful-name] */$_367 from "./367"
 import /* [auto-meaningful-name] */$_3671 from "./367"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
-import * as /* [auto-meaningful-name] */$_312 from "./312"
-import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
+import * as /* [auto-meaningful-name] */$$_454_312 from "../../../../../src/shared/tools/url"
+import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
 var l = $$_57_index.b()
 function u(e, t) {
   $_3671.track(e, function (e) {
@@ -30,7 +30,7 @@ $_3671.init({
   server_url: "development" === l || "test" === l ? "https://shence-data.codemao.cn/sa?project=default" : "https://shence-data.codemao.cn/sa?project=production",
   is_track_single_page: true,
   use_client_time: true,
-  show_log: !!$_312.q(window.location.href).showSensorsLog,
+  show_log: !!$$_454_312.q(window.location.href).showSensorsLog,
   send_type: $$_28_index.d() ? "ajax" : "beacon",
   max_string_length: 5e3,
   heatmap: {

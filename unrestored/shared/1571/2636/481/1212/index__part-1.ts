@@ -7,7 +7,7 @@
 "use strict"
 
 var /* [auto-meaningful-name] */Function$prototype$toString
-import * as o from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 var a = function () {
   function e() {
     this.name = e.id

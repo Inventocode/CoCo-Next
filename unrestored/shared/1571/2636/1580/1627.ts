@@ -4,5 +4,5 @@
  * 模块 ID：1627
  */
 
-var r = require("./1686/194")
-require("./1686/534")(r.JSON, "JSON", true)
+var r = require("./1782/194")
+require("./1785/534")(r.JSON, "JSON", true)

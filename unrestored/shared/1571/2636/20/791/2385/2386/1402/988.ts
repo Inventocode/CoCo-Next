@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../1410/311/index")
+var r = require("./311/index")
 var /* [auto-meaningful-name] */r$MathFloor = r.MathFloor
 var /* [auto-meaningful-name] */r$NumberIsInteger = r.NumberIsInteger
-var /* [auto-meaningful-name] */require$$_1410_650_858$validateInteger = require("../1410/650/858").validateInteger
+var /* [auto-meaningful-name] */require$_2387_858$validateInteger = require("./2387/858").validateInteger
 var /* [auto-meaningful-name] */require$_402$codes$ERR_INVALID_ARG_VALUE = require("./402").codes.ERR_INVALID_ARG_VALUE
 var c = 16384
 var u = 16
@@ -32,7 +32,7 @@ module.exports = {
   },
   getDefaultHighWaterMark: l,
   setDefaultHighWaterMark: function (e, t) {
-    require$$_1410_650_858$validateInteger(t, "value", 0)
+    require$_2387_858$validateInteger(t, "value", 0)
     if (e) {
       u = t
     } else {

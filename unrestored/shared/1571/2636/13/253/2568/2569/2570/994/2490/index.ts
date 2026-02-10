@@ -5,7 +5,7 @@
  */
 
 var r = require("../995/index")
-var i = require("../../../../../../797/101/2538/2539/2540/999/1177")
+var i = require("./1177")
 var o = require("./1178/index")
 module.exports = function (e, t) {
   var /* [auto-meaningful-name] */this$__data__ = this.__data__

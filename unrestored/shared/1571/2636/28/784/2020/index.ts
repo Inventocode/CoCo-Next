@@ -6,10 +6,10 @@
 
 var /* [auto-meaningful-name] */require$_1121_index$FilterCSS = require("./1121/index").FilterCSS
 var i = require("../1333")
-var o = require("../1336/index")
+var o = require("../1336")
 var /* [auto-meaningful-name] */o$parseTag = o.parseTag
 var /* [auto-meaningful-name] */o$parseAttr = o.parseAttr
-var c = require("../1336/1122")
+var c = require("./1122")
 function u(e) {
   return undefined === e || null === e
 }

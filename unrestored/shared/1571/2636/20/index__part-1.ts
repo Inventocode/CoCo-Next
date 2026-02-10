@@ -18,7 +18,7 @@ import * as /* [auto-meaningful-name] */Axios from "axios"
 import /* [auto-meaningful-name] */Axios1 from "axios"
 import * as /* [auto-meaningful-name] */$_791_index from "./791/index"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
-import * as /* [auto-meaningful-name] */$$_28_128 from "../28/128"
+import * as /* [auto-meaningful-name] */$_128 from "./128"
 function g(e) {
   return _.apply(this, arguments)
 }
@@ -33,13 +33,13 @@ function _() {
           case 0:
             n = !(o.length > 1 && undefined !== o[1]) || o[1]
             e.next = 3
-            return Axios1.get("".concat($$_28_128.a.openServiceHost, "/cdn/qi-niu/tokens/uploading"), {
+            return Axios1.get("".concat($_128.a.openServiceHost, "/cdn/qi-niu/tokens/uploading"), {
               withCredentials: true,
               params: {
                 cdnName: "qiniu",
                 insertOnly: n,
                 filePaths: t.join(","),
-                projectName: $$_28_128.a.productCode
+                projectName: $_128.a.productCode
               }
             })
           case 3:
@@ -105,7 +105,7 @@ function b() {
   }))).apply(this, arguments)
 }
 function y(e) {
-  return ["prod" === $$_28_128.a.env ? "".concat(716) : "dev/".concat(716), "user_files", window.__cm_user_id || "unknown", window.__cm_work_id || "unknown", $$_28_index.j(Date.now() + "")].join("/")
+  return ["prod" === $_128.a.env ? "".concat(716) : "dev/".concat(716), "user_files", window.__cm_user_id || "unknown", window.__cm_work_id || "unknown", $$_28_index.j(Date.now() + "")].join("/")
 }
 function E(e) {
   return O.apply(this, arguments)

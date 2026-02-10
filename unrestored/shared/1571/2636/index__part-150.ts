@@ -29,42 +29,43 @@ import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useStore, useDispatch, useSelector, batch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState, useLayoutEffect, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import "./2611"
-var xT = React1.memo(function () {
-  var e = $_16_index.f()
-  var t = $_16_index.d()
-  var n = $_16_index.e(function (e) {
+var xT = memo(function () {
+  var e = useStore()
+  var t = useDispatch()
+  var n = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
-  var o = React1.useRef()
-  var i = React1.useRef(null)
-  var a = $_16_index.e(function (e) {
+  var o = useRef()
+  var i = useRef(null)
+  var a = useSelector(function (e) {
     return e.common.blockyToolboxPinned
   })
-  var s = $_16_index.e(function (e) {
+  var s = useSelector(function (e) {
     return e.block.palette
   })
-  var c = $_16_index.e(function (e) {
+  var c = useSelector(function (e) {
     return e.uiConfig.workspace
   }) === K.j.ReadOnly
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = $_238.d()
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var /* [auto-meaningful-name] */e$getState
     var /* [auto-meaningful-name] */$_17_index$Blink
     e$getState = e.getState
@@ -147,7 +148,7 @@ var xT = React1.memo(function () {
         u.appendChild(d)
       }
       a.addEventListener("click", function () {
-        $_16_index.b(function () {
+        batch(function () {
           t($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
         })
       })
@@ -271,7 +272,7 @@ var xT = React1.memo(function () {
       }
     }
   }, [t, e.getState])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = document.getElementById("flyoutPinTitle")
     if (e) {
       e.textContent = a ? "取消固定" : "固定积木盒"
@@ -285,7 +286,7 @@ var xT = React1.memo(function () {
     }
   }, [a])
   var g = $_238.a()
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = te.p(function () {
       $_26_index.z.resizeWorkspace()
     }, 500)
@@ -294,19 +295,19 @@ var xT = React1.memo(function () {
       window.removeEventListener("resize", e)
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     $_26_index.g.update(m)
   }, [m])
-  React1.useEffect(function () {
+  useEffect(function () {
     $_26_index.g.updateGlobalWidget(r)
   }, [r])
-  React1.useEffect(function () {
+  useEffect(function () {
     $_26_index.g.updateAnyWidget(g)
   }, [g])
-  React1.useEffect(function () {
+  useEffect(function () {
     $_26_index.g.changeSelectWidgetCategoryStyle(n || (null === m || undefined === m ? undefined : m.id))
   }, [n, m])
-  React1.useEffect(function () {
+  useEffect(function () {
     function e(e) {
       p(e)
       t($$_$$_$$_$$_src_editor_redux_common_actions.ji(e))
@@ -321,8 +322,8 @@ var xT = React1.memo(function () {
       $_26_index.z.eventBus.removeEventListener($_207_index.a.DELETE_BLOCK, n)
     }
   }, [t])
-  var v = React1.useRef(null)
-  React1.useEffect(function () {
+  var v = useRef(null)
+  useEffect(function () {
     var /* [auto-meaningful-name] */v$current = v.current
     if (v$current) {
       var n = function () {

@@ -25,30 +25,31 @@ import * as Dn from "./19"
 import * as Tn from "./68"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, Component, createContext, useContext, useEffect, createElement, forwardRef, useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_527 from "./527"
 import /* [auto-meaningful-name] */$_5271 from "./527"
 var MA = ["image", "icon", "sound"]
-var LA = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var LA = memo(function () {
+  var e = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  var t = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = React1.useState("image")
+  var t = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useState("image")
   var o = $_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
   var s = function (e) {
     a(e)
   }
-  var c = $_16_index.e(function (e) {
+  var c = useSelector(function (e) {
     return e.uiConfig.resourceLibrary === K.j.ReadOnly
   })
   return React.createElement("div", {
@@ -58,7 +59,7 @@ var LA = React1.memo(function () {
     className: $_5271.header
   }, React.createElement("span", {
     className: $_5271.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.ProjectLibrary"
   })), React.createElement("span", {
     className: $_5271.closeBtn,
@@ -74,7 +75,7 @@ var LA = React1.memo(function () {
       key: e,
       className: i === e ? $_5271.selected : "",
       onClick: s.bind(null, e)
-    }, React.createElement("span", null, $_710_index$a$formatMessage({
+    }, React.createElement("span", null, $_710$a$formatMessage({
       id: e
     })))
   })), React.createElement("div", {
@@ -82,7 +83,7 @@ var LA = React1.memo(function () {
     onClick: function () {
       t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ResourceLibrary, function () {}, false, "image" === i ? Tn.d.IMAGE : "icon" === i ? Tn.d.ICON : "sound" === i ? Tn.d.SOUND : undefined, s))
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.ResourceMall"
   }), React.createElement($_13_index.j, {
     type: "icon-dropdown-down",
@@ -220,7 +221,7 @@ var PA = function (e) {
     }
   ])
   return n
-}(React1.Component)
+}(Component)
 PA.defaultProps = {
   prefixCls: "rc-checkbox",
   className: "",
@@ -250,7 +251,7 @@ var FA = function (e, t) {
   }
   return n
 }
-var GA = React1.createContext(null)
+var GA = createContext(null)
 var WA = function (e, t) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$children = e.children
@@ -261,18 +262,18 @@ var WA = function (e, t) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var u = FA(e, ["defaultValue", "children", "options", "prefixCls", "className", "style", "onChange"])
-  var d = React1.useContext($_801_index.b)
+  var d = useContext($_801_index.b)
   var /* [auto-meaningful-name] */d$getPrefixCls = d.getPrefixCls
   var /* [auto-meaningful-name] */d$direction = d.direction
-  var m = React1.useState(u.value || e$defaultValue || [])
+  var m = useState(u.value || e$defaultValue || [])
   var g = $_40_index.a(m, 2)
   var _ = g[0]
   var v = g[1]
-  var b = React1.useState([])
+  var b = useState([])
   var y = $_40_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if ("value" in u) {
       v(u.value || [])
     }
@@ -290,7 +291,7 @@ var WA = function (e, t) {
   var S = $_486.a(u, ["value", "disabled"])
   if (i && i.length > 0) {
     e$children = w().map(function (e) {
-      return React1.createElement(KA, {
+      return createElement(KA, {
         prefixCls: C,
         key: e.value.toString(),
         disabled: "disabled" in e ? e.disabled : u.disabled,
@@ -344,17 +345,17 @@ var WA = function (e, t) {
     }
   }
   var I = N(T, Ln.a({}, "".concat(T, "-rtl"), "rtl" === d$direction), e$className)
-  return React1.createElement("div", Dn.a({
+  return createElement("div", Dn.a({
     className: I,
     style: e$style
   }, S, {
     ref: t
-  }), React1.createElement(GA.Provider, {
+  }), createElement(GA.Provider, {
     value: A
   }, e$children))
 }
-var UA = React1.forwardRef(WA)
-var HA = React1.memo(UA)
+var UA = forwardRef(WA)
+var HA = memo(UA)
 var VA = function (e, t) {
   var n = {}
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -383,18 +384,18 @@ var zA = function (e, t) {
   var /* [auto-meaningful-name] */e$skipGroup = e.skipGroup
   var p = undefined !== e$skipGroup && e$skipGroup
   var h = VA(e, ["prefixCls", "className", "children", "indeterminate", "style", "onMouseEnter", "onMouseLeave", "skipGroup"])
-  var m = React1.useContext($_801_index.b)
+  var m = useContext($_801_index.b)
   var /* [auto-meaningful-name] */m$getPrefixCls = m.getPrefixCls
   var /* [auto-meaningful-name] */m$direction = m.direction
-  var v = React1.useContext(GA)
-  var b = React1.useRef(h.value)
-  React1.useEffect(function () {
+  var v = useContext(GA)
+  var b = useRef(h.value)
+  useEffect(function () {
     if (!(null === v || undefined === v)) {
       v.registerValue(h.value)
     }
     $_364_index.a("checked" in h || !!v || !("value" in h), "Checkbox", "`value` is not a valid prop, do you mean `checked`?")
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!p) {
       if (h.value !== b.current) {
         if (!(null === v || undefined === v)) {
@@ -429,18 +430,18 @@ var zA = function (e, t) {
   }
   var O = N((n = {}, Ln.a(n, "".concat(y, "-wrapper"), true), Ln.a(n, "".concat(y, "-rtl"), "rtl" === m$direction), Ln.a(n, "".concat(y, "-wrapper-checked"), E.checked), Ln.a(n, "".concat(y, "-wrapper-disabled"), E.disabled), n), e$className)
   var w = N(Ln.a({}, "".concat(y, "-indeterminate"), s))
-  return React1.createElement("label", {
+  return createElement("label", {
     className: O,
     style: e$style,
     onMouseEnter: e$onMouseEnter,
     onMouseLeave: e$onMouseLeave
-  }, React1.createElement(BA, Dn.a({}, E, {
+  }, createElement(BA, Dn.a({}, E, {
     prefixCls: y,
     className: w,
     ref: t
-  })), undefined !== e$children && React1.createElement("span", null, e$children))
+  })), undefined !== e$children && createElement("span", null, e$children))
 }
-var YA = React1.forwardRef(zA)
+var YA = forwardRef(zA)
 YA.displayName = "Checkbox"
 var KA = YA
 var qA = KA

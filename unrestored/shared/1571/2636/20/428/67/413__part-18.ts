@@ -27,7 +27,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_95 from "../../../95"
 import /* [auto-meaningful-name] */$$_$$_$$_290 from "../../../290"
 import * as /* [auto-meaningful-name] */$$_$$_$$_76 from "../../../76"
 import * as /* [auto-meaningful-name] */$$_$$_$$_10_index from "../../../10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
+import * as /* [auto-meaningful-name] */$$_112 from "../112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/index"
 import * as /* [auto-meaningful-name] */$$_242 from "../242"
@@ -37,13 +37,14 @@ import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
+import { useCallback, useState, useMemo, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Color from "color"
 import * as /* [auto-meaningful-name] */$$_$$_$$_552_index from "../../../552/index"
 var Ge = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
-  var r = React1.useCallback(function (e) {
+  var r = useCallback(function (e) {
     var r = $$_$$_$$_28_index.k(e)
     $$_$$_index.emitTimePickerSelectDone(t, r.time, r.h, r.min, r.s)
     $$_$$_index.setWidgetAttribute(t, "timeStamp", new Date(e).getTime())
@@ -91,15 +92,15 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
   var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
   var /* [auto-meaningful-name] */e$size$width = e$size.width
   var /* [auto-meaningful-name] */e$size$height = e$size.height
-  var M = React1.useState(e$attributes$placeholder)
+  var M = useState(e$attributes$placeholder)
   var L = $$_$$_$$_10_index.a(M, 2)
   var P = L[0]
   var F = L[1]
-  var G = React1.useState(false)
+  var G = useState(false)
   var W = $$_$$_$$_10_index.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = React1.useMemo(function () {
+  var V = useMemo(function () {
     var e = e$attributes$errorMessage ? $$_$$_$$_95.d : e$attributes$backgroundColor
     try {
       return Color(e.toString()).toString()
@@ -112,8 +113,8 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
       return ""
     }
   }, [e$attributes$backgroundColor, e$attributes$errorMessage, t, e$type])
-  var K = $$_$$_$$_34_347_112.b(e$attributes$backgroundImage) || $$_$$_$$_95.a
-  var J = React1.useMemo(function () {
+  var K = $$_112.b(e$attributes$backgroundImage) || $$_$$_$$_95.a
+  var J = useMemo(function () {
     if (!U || e$attributes$backgroundMode === $$_$$_$$_76.a.IMAGE) {
       return {}
     }
@@ -132,7 +133,7 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
     }(e$attributes$templateMode, e)
   }, [U, e$attributes$backgroundMode, e$attributes$errorMessage, V, e$attributes$templateMode])
   var $ = undefined
-  var ee = React1.useMemo(function () {
+  var ee = useMemo(function () {
     return function (e, t, n) {
       var r
       return (r = {}, $$_$$_$$_11.a(r, $$_$$_$$_76.c.OUTLINED_NORMAL, {
@@ -165,7 +166,7 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
       padding: "6px ".concat(14, "px")
     })
   }
-  var te = React1.useMemo(function () {
+  var te = useMemo(function () {
     if (e$attributes$disabled) {
       return function (e) {
         var t
@@ -185,10 +186,10 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
       }(e$attributes$templateMode)
     }
   }, [e$attributes$templateMode, e$attributes$disabled])
-  React1.useEffect(function () {
+  useEffect(function () {
     F(e$attributes$placeholder)
   }, [e$attributes$placeholder])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (!(null === (e = document.getElementById(t)) || undefined === e)) {
       e.style.setProperty("--input-placeholder-color", e$attributes$placeholderColor)

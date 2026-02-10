@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_710_1009 from "../710/1009"
-import * as /* [auto-meaningful-name] */$$_710_273_index from "../710/273/index"
+import "react"
+import * as /* [auto-meaningful-name] */$_1009_index from "./1009/index"
+import * as /* [auto-meaningful-name] */$_273 from "./273"
 import * as /* [auto-meaningful-name] */$_275 from "./275"
 var s = ["localeMatcher", "style", "currency", "currencyDisplay", "unit", "unitDisplay", "useGrouping", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "compactDisplay", "currencyDisplay", "currencySign", "notation", "signDisplay", "unit", "unitDisplay"]
 function c(e, t, n) {
@@ -19,8 +19,8 @@ function c(e, t, n) {
     n = {}
   }
   var /* [auto-meaningful-name] */n$format = n.format
-  var u = n$format && $$_710_273_index.f(e$formats, "number", n$format, e$onError) || {}
-  return t(e$locale, $$_710_273_index.e(n, s, u))
+  var u = n$format && $_273.f(e$formats, "number", n$format, e$onError) || {}
+  return t(e$locale, $_273.e(n, s, u))
 }
 function u(e, t, n, r) {
   if (undefined === r) {

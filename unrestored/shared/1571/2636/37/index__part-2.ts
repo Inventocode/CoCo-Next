@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
 import * as a from "../6"
-import * as /* [auto-meaningful-name] */$$_47 from "../47"
+import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
 var Ne = $$_738_66.a.Record({
   configs: {},
   variableList: $$_738_66.a.List([]),
@@ -71,7 +71,7 @@ function Le(e, t) {
   }
   var n
   var r = e.get("variableList")
-  var o = $$_47.a(r)
+  var o = $$_47_index.a(r)
   try {
     for (o.s(); !(n = o.n()).done;) {
       n.value.isWatching = false

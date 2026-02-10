@@ -7,7 +7,7 @@
 "use strict"
 
 export { _ as a }
-import * as r from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$_2673 from "./2673"
 import * as /* [auto-meaningful-name] */$_395 from "./395"
 import * as /* [auto-meaningful-name] */$_2639_index from "./2639/index"
@@ -190,7 +190,7 @@ var d = function () {
         syntheticException: a
       }
     }
-    this._invokeClient("captureException", e, r.a(r.a({}, i), {
+    this._invokeClient("captureException", e, $$_799_38.a($$_799_38.a({}, i), {
       event_id: n
     }))
     return n
@@ -210,14 +210,14 @@ var d = function () {
         syntheticException: s
       }
     }
-    this._invokeClient("captureMessage", e, t, r.a(r.a({}, a), {
+    this._invokeClient("captureMessage", e, t, $$_799_38.a($$_799_38.a({}, a), {
       event_id: i
     }))
     return i
   }
   e.prototype.captureEvent = function (e, t) {
     var n = this._lastEventId = $_395.i()
-    this._invokeClient("captureEvent", e, r.a(r.a({}, t), {
+    this._invokeClient("captureEvent", e, $$_799_38.a($$_799_38.a({}, t), {
       event_id: n
     }))
     return n
@@ -237,7 +237,7 @@ var d = function () {
       var d = undefined === c$maxBreadcrumbs ? 100 : c$maxBreadcrumbs
       if (!(d <= 0)) {
         var h = $_2639_index.a()
-        var p = r.a({
+        var p = $$_799_38.a({
           timestamp: h
         }, e)
         var _ = l ? $_395.c(function () {
@@ -353,7 +353,7 @@ var d = function () {
     var /* [auto-meaningful-name] */s$release = s.release
     var /* [auto-meaningful-name] */s$environment = s.environment
     var /* [auto-meaningful-name] */$_395$e$navigator$userAgent = ($_395.e().navigator || {}).userAgent
-    var d = new f(r.a(r.a(r.a({
+    var d = new f($$_799_38.a($$_799_38.a($$_799_38.a({
       release: s$release,
       environment: s$environment
     }, t$scope && {
@@ -392,7 +392,7 @@ var d = function () {
     var /* [auto-meaningful-name] */o$scope = o.scope
     var /* [auto-meaningful-name] */o$client = o.client
     if (o$client && o$client[e]) {
-      (t = o$client)[e].apply(t, r.f(n, [o$scope]))
+      (t = o$client)[e].apply(t, $$_799_38.f(n, [o$scope]))
     }
   }
   e.prototype._callExtensionMethod = function (e) {

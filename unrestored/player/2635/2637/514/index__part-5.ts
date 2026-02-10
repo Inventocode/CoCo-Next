@@ -7,8 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_686 from "../../../../shared/1571/2636/686"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_80_index from "../../../../shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_80_index1 from "../../../../shared/1571/2636/80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_81 from "../../../../shared/1571/2636/8"
 import * as /* [auto-meaningful-name] */Color from "color"

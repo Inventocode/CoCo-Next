@@ -12,11 +12,12 @@ import { z, Z, ee, ae, _e, Ae, Pe, Le } from "./index__part-2"
 import { ze, tt, at, st, ct, ut } from "./index__part-3"
 import { Et, Bt, Ut, qt, on, hn, bn, wn, xn } from "./index__part-5"
 import * as /* [auto-meaningful-name] */$_740_index from "./740/index"
-import * as /* [auto-meaningful-name] */$_325 from "./325"
+import * as /* [auto-meaningful-name] */$_325_index from "./325/index"
 import /* [auto-meaningful-name] */$$_$$_50_index from "../../50/index"
 import /* [auto-meaningful-name] */$_101_index from "./101/index"
 import * as /* [auto-meaningful-name] */$_101_index1 from "./101/index"
 import /* [auto-meaningful-name] */React from "react"
+import { PureComponent, Component } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_226 from "../226"
 import /* [auto-meaningful-name] */$$_2261 from "../226"
@@ -182,7 +183,7 @@ var Fn = function (e) {
       }
     ])
     return n
-  }(React1.PureComponent || React1.Component)
+  }(PureComponent || Component)
   t.propTypes = In({}, e.propTypes)
   t.defaultProps = In({}, e.defaultProps, {
     color: {
@@ -649,10 +650,10 @@ var hr = function (e, t, n, r, i, o) {
   o.delete(t)
   return h
 }
-var pr = _e($_325.a, "DataView")
-var _r = _e($_325.a, "Promise")
-var Ar = _e($_325.a, "Set")
-var gr = _e($_325.a, "WeakMap")
+var pr = _e($_325_index.a, "DataView")
+var _r = _e($_325_index.a, "Promise")
+var Ar = _e($_325_index.a, "Set")
+var gr = _e($_325_index.a, "WeakMap")
 var vr = ae(pr)
 var mr = ae(Ae)
 var yr = ae(_r)

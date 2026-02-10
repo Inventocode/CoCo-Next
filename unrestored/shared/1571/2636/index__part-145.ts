@@ -13,51 +13,52 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState, useEffect, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_440 from "./440"
 import /* [auto-meaningful-name] */$_4401 from "./440"
-var iT = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var iT = memo(function () {
+  var e = useSelector(function (e) {
     return e.block.get("editObjectDialog")
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$variable = e.variable
   var /* [auto-meaningful-name] */e$scopeType = e.scopeType
   var o = null === e$variable || undefined === e$variable ? undefined : e$variable.id
-  var i = $_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.project.globalObjectList
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = React1.useRef(null)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var s = useRef(null)
   var c = $_238.d()
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = React1.useState(0)
+  var m = useState(0)
   var g = $_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState(0)
+  var y = useState(0)
   var E = $_10_index.a(y, 2)
   var O = E[0]
   var w = E[1]
-  var C = React1.useState([])
+  var C = useState([])
   var T = $_10_index.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = React1.useRef(false)
-  var D = React1.useRef(0)
-  var M = React1.useRef(null)
-  React1.useEffect(function () {
+  var R = useRef(false)
+  var D = useRef(0)
+  var M = useRef(null)
+  useEffect(function () {
     if (c && e$visible) {
       var e = c.objectVariables.concat(i).find(function (e) {
         return e.id === o
@@ -84,7 +85,7 @@ var iT = React1.memo(function () {
       }
     })
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       p(false)
       b(0)
@@ -92,7 +93,7 @@ var iT = React1.memo(function () {
       D.current = 0
     }
   }, [e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (M.current) {
       return tT(M.current.button, function (e, t) {
         var /* [auto-meaningful-name] */M$current
@@ -104,8 +105,8 @@ var iT = React1.memo(function () {
       }, true)
     }
   }, [M.current])
-  var P = $_16_index.d()
-  React1.useEffect(function () {
+  var P = useDispatch()
+  useEffect(function () {
     if (e$visible) {
       $_26_index.z.unselectCurrentBlock()
     }
@@ -141,10 +142,10 @@ var iT = React1.memo(function () {
       }, 0)
     }
   }
-  var F = React1.useCallback(function () {
+  var F = useCallback(function () {
     P($$_$$_$$_$$_src_editor_redux_common_actions.ph())
   }, [P])
-  var G = React1.useCallback(function () {
+  var G = useCallback(function () {
     if (e$scopeType && o && c) {
       var e = {}
       A.forEach(function (t) {
@@ -183,7 +184,7 @@ var iT = React1.memo(function () {
     onClose: F
   }, React.createElement("p", {
     className: qC.dialogTitle
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "object.editObjectList"
   })), React.createElement("div", {
     className: qC.summary
@@ -294,20 +295,20 @@ var iT = React1.memo(function () {
     alt: ""
   }), React.createElement("div", {
     className: qC.label
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "variableListEmptyContentLabel"
   })))), React.createElement("div", {
     className: $_4401.footer
   }, React.createElement("p", {
     className: $_4401.tips
-  }, d ? $_710_index$a$formatMessage({
+  }, d ? $_710$a$formatMessage({
     id: "object.keyRepeat"
   }) : ""), React.createElement($_13_index.d, {
     className: $_4401.save,
     type: "primary",
     onClick: G,
     disabled: d
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "save"
   })))) : null
 })

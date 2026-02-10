@@ -8,18 +8,19 @@
 
 import { py } from "./index__part-102"
 import qv from "./88"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_189 from "./189"
-var _w = React1.memo(function (e) {
+var _w = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("style") || $_189.b.styleA
   var o = e$getValue("themeColor")
-  var i = (0, $_710_index.a().formatMessage)({
+  var i = (0, $_710.a().formatMessage)({
     id: e$formConfig.label || "previewImage"
   })
   var a = {
@@ -72,7 +73,7 @@ var _w = React1.memo(function (e) {
     }
   }, "BUTTON")))))
 })
-var vw = React1.memo(function (e) {
+var vw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -80,7 +81,7 @@ var vw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var a = e$getValue(n)
   var s = e$formConfig.dropdown || []
-  var c = (0, $_710_index.a().formatMessage)({
+  var c = (0, $_710.a().formatMessage)({
     id: e$formConfig.label || "options"
   })
   return React.createElement($_13_index.i, {
@@ -107,7 +108,7 @@ var vw = React1.memo(function (e) {
     }, e.label)
   })))
 })
-var bw = React1.memo(function (e) {
+var bw = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$url = e.formConfig.url
   return e$formConfig$url ? React.createElement("div", {
     style: {

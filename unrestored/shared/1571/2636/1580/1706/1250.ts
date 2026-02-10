@@ -4,7 +4,7 @@
  * 模块 ID：1250
  */
 
-var r = require("../1705/231")
+var r = require("../1282/231")
 module.exports = function (e) {
   if (!r(e) && null !== e) {
     throw TypeError("Can't set " + String(e) + " as a prototype")

@@ -10,7 +10,7 @@ import { p } from "./index__part-0"
 var _
 import * as /* [auto-meaningful-name] */$_698 from "./698"
 import * as /* [auto-meaningful-name] */$_1033 from "./1033"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createRef, isValidElement, createElement, Component } from "react"
 import * as /* [auto-meaningful-name] */$$_140 from "../140"
 import * as /* [auto-meaningful-name] */$$_120 from "../120"
 import * as /* [auto-meaningful-name] */$$_142 from "../142"
@@ -31,7 +31,7 @@ var y = function (e) {
   function n() {
     var e
     $$_103.a(this, n);
-    (e = t.apply(this, arguments)).containerRef = React.createRef()
+    (e = t.apply(this, arguments)).containerRef = createRef()
     e.animationStart = false
     e.destroyed = false
     e.onClick = function (t, n) {
@@ -105,7 +105,7 @@ var y = function (e) {
       var /* [auto-meaningful-name] */t$csp = t.csp
       var /* [auto-meaningful-name] */e$props$children = e.props.children
       e.csp = t$csp
-      if (!React.isValidElement(e$props$children)) {
+      if (!isValidElement(e$props$children)) {
         return e$props$children
       }
       var /* [auto-meaningful-name] */e$containerRef = e.containerRef
@@ -168,11 +168,11 @@ var y = function (e) {
     }, {
       key: "render",
       value: function () {
-        return React.createElement($$_801_index.a, null, this.renderWave)
+        return createElement($$_801_index.a, null, this.renderWave)
       }
     }
   ])
   return n
-}(React.Component)
+}(Component)
 y.contextType = $$_801_index.b
 export { y }

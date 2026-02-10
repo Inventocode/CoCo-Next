@@ -18,17 +18,18 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as wn from "./90"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as th from "./45"
 import nh from "./45"
 var rh = {}
-var oh = React1.memo(function (e) {
+var oh = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -41,11 +42,11 @@ var oh = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$attributes$templateSlotMap = e$attributes.templateSlotMap
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var /* [auto-meaningful-name] */e$attributes$dataSource = e$attributes.dataSource
-  var f = $_16_index.d()
-  var m = $_16_index.e(function (e) {
+  var f = useDispatch()
+  var m = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var g = $_16_index.e(function (e) {
+  var g = useSelector(function (e) {
     return e.cloudSpace.cloudTableDataList
   })
   for (var v in e$attributes$templateSlotMap) {

@@ -14,7 +14,7 @@ exports.default = undefined
 var r = a(require("../../../50/index"))
 var o = a(require("react"))
 var i = a(require("../../../8"))
-var l = require("./2922/2701")
+var l = require("./2929/2701")
 var u = {
   player: r.default.object,
   className: r.default.string

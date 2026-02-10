@@ -7,13 +7,14 @@
 "use strict"
 
 import { fj, hj } from "./index__part-181"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_815 from "./815"
 import /* [auto-meaningful-name] */$_8151 from "./815"
-var bj = React1.memo(function (e) {
+var bj = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl

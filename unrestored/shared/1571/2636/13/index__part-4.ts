@@ -6,26 +6,27 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as A from "../7"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
-import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
+import "react-redux"
+import * as /* [auto-meaningful-name] */$$_710 from "../710"
 import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_344 from "./344"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import "./651"
 function L(e) {
   return "#ffffff" === Color1(e).hex().toLocaleLowerCase()
 }
-var B = React1.memo(function (e) {
+var B = memo(function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$selected = e.selected

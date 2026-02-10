@@ -6,32 +6,31 @@
 
 import * as React from "react"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index from "../../../../../unrestored/shared/1571/2636/16/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1062 from "../../../../../unrestored/shared/1571/2636/1062"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621 from "../../../../../unrestored/shared/1571/2636/1062"
+import { CoCoDialog, IconFont } from "../../../../shared/ui/components"
+import { useDispatch, useSelector } from "react-redux"
+import styles from "../../../../../unrestored/shared/1571/2636/1062"
+
 var ML = React.memo(() => {
-  var e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.d()
-  var blockImageDialogInfo = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_16_index.e(function (e) {
+  var e = useDispatch()
+  var blockImageDialogInfo = useSelector(function (e) {
     return e.common.blockImageDialogInfo
   })
   var /* [auto-meaningful-name] */blockImageDialogInfo$visible = blockImageDialogInfo.visible
   var /* [auto-meaningful-name] */blockImageDialogInfo$imgSrc = blockImageDialogInfo.imgSrc
   return (
-    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
+    <CoCoDialog
       visible={blockImageDialogInfo$visible}
-      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageDialog}
+      className={styles.blockImageDialog}
       onClose={() => {
         e($$_$$_$$_redux_common_actions.bi(false, ""))
       }}
     >
-      <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageWrap}>
+      <div className={styles.blockImageWrap}>
         <img src={blockImageDialogInfo$imgSrc} alt="" />
       </div>
       <div
-        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.btnDownload}
+        className={styles.btnDownload}
         onClick={() => {
           var e = document.createElement("a")
           e.href = blockImageDialogInfo$imgSrc
@@ -39,9 +38,9 @@ var ML = React.memo(() => {
           e.click()
         }}
       >
-        <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-download-apk" />
+        <IconFont type="icon-download-apk" />
       </div>
-    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f>
+    </CoCoDialog>
   )
 })
 export { ML }

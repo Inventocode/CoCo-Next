@@ -9,8 +9,8 @@
 var r = require("../1581/441")
 var o = require("../1598/637")
 var i = require("./834")
-var a = require("../1686/426/index")
-var s = require("./1087/index")
+var a = require("../1785/426/index")
+var s = require("./1087")
 var /* [auto-meaningful-name] */a$set = a.set
 var l = a.getterFor("Array Iterator")
 module.exports = s(Array, "Array", function (e, t) {

@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
+import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
 import * as a from "./12"
 import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
 import * as /* [auto-meaningful-name] */Color from "color"

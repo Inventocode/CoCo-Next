@@ -9,11 +9,12 @@
 import { WS } from "./index__part-158"
 import { JS } from "./index__part-159"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useEffect, memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_569 from "./569"
 import /* [auto-meaningful-name] */$_5691 from "./569"
@@ -26,9 +27,9 @@ var rA = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$showIcon = e.showIcon
   var i = undefined !== e$showIcon && e$showIcon
   var /* [auto-meaningful-name] */e$setVisible = e.setVisible
-  var s = $_16_index.d()
-  var c = React1.useRef(null)
-  React1.useEffect(function () {
+  var s = useDispatch()
+  var c = useRef(null)
+  useEffect(function () {
     if (c.current) {
       clearTimeout(c.current)
     }
@@ -49,10 +50,10 @@ var rA = React.memo(function (e) {
     className: $_9361.textWrapper
   }, "已重置为初始数据"))) : null
 })
-var oA = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.d()
-  var n = $_16_index.e(function (e) {
+var oA = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useDispatch()
+  var n = useSelector(function (e) {
     return e.dataWatch.dataWatchToast
   })
   var r = function () {
@@ -67,7 +68,7 @@ var oA = React1.memo(function () {
     className: N($_5691.flexSc, $_5691.header)
   }, React.createElement("h3", {
     className: $_5691.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "dataWatch"
   })), React.createElement("div", {
     className: $_5691.toast

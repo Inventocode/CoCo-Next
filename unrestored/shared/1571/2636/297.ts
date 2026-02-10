@@ -21,7 +21,7 @@ import * as a from "./7"
 import * as s from "./60"
 import * as /* [auto-meaningful-name] */$_197_index from "./197/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$_57_index from "./57/index"
+import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$_276 from "./276"
 var /* [auto-meaningful-name] */$_57_index$a$serverHost = $_57_index.a.serverHost
 var /* [auto-meaningful-name] */$_57_index$a$oTServerHost = $_57_index.a.oTServerHost

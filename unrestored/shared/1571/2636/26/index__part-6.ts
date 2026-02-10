@@ -7,7 +7,7 @@
 "use strict"
 
 var Ue
-import * as /* [auto-meaningful-name] */$$_47 from "../47"
+import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
 import * as H from "../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as l from "../9"
@@ -278,7 +278,7 @@ function Je(e, t) {
       if (r$parent_block && r$parent_block.get_field_value("WIDGET_ID") === e) {
         var i
         var a = r.get_field("DOC_KEYS")
-        var s = $$_47.a(t)
+        var s = $$_47_index.a(t)
         try {
           for (s.s(); !(i = s.n()).done;) {
             var /* [auto-meaningful-name] */i$value = i.value

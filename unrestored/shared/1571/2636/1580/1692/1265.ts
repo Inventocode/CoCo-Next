@@ -4,5 +4,5 @@
  * 模块 ID：1265
  */
 
-var r = require("../1686/194")
+var r = require("../1782/194")
 module.exports = r.Promise

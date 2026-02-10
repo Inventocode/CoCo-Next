@@ -258,7 +258,11 @@ function commonConfig(development, env) {
                 new HtmlWebpackPlugin({
                     filename,
                     template: `src/${name}/index.html`,
-                    chunks: ["proxy", name]
+                    chunks: ["proxy", name],
+                    minify: !development,
+                    meta: {
+                        environment: development ? "development" : "production"
+                    }
                 })
             )
         }

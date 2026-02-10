@@ -4,8 +4,8 @@
  * 模块 ID：962
  */
 
-var r = require("../1768/257/index")
-var o = require("../1692/956")
+var r = require("../1754/257/index")
+var o = require("../1723/956")
 var /* [auto-meaningful-name] */r$TYPED_ARRAY_CONSTRUCTOR = r.TYPED_ARRAY_CONSTRUCTOR
 var /* [auto-meaningful-name] */r$aTypedArrayConstructor = r.aTypedArrayConstructor
 module.exports = function (e) {

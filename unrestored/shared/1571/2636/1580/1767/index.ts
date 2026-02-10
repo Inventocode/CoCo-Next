@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1768/257/index")
+var r = require("../1754/257/index")
 var o = require("./1100")
 var /* [auto-meaningful-name] */r$aTypedArrayConstructor = r.aTypedArrayConstructor;
 (0, r.exportTypedArrayStaticMethod)("of", function () {

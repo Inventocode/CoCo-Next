@@ -5,7 +5,7 @@
  */
 
 var r = require("./1431/index")
-var i = require("./1435/index")
+var i = require("./1435")
 module.exports = function (e, t) {
   return e && r(e, i(t))
 }

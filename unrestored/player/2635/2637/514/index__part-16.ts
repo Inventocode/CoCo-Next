@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_14 from "../../../../shared/1571/2636/14"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_34_347_112 from "../../../../shared/1571/2636/34/347/112"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_428_112 from "../../../../shared/1571/2636/20/428/112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_59_index from "../../../../shared/1571/2636/59/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index from "../../../../shared/1571/2636/58/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
@@ -37,7 +37,7 @@ var Jt = function (t) {
     }, {
       key: "setBackgroundImage",
       value: function (t) {
-        var e = $$_$$_$$_$$_shared_1571_2636_34_347_112.b(t)
+        var e = $$_$$_$$_$$_shared_1571_2636_20_428_112.b(t)
         if (e) {
           this.setProps({
             backgroundMode: $$_$$_$$_$$_shared_1571_2636_76.a.IMAGE,

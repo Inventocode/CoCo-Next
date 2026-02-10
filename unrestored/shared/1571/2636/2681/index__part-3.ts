@@ -11,9 +11,9 @@ import { h, g, v, m, y, w } from "./index__part-1"
 import { F } from "./index__part-2"
 import * as /* [auto-meaningful-name] */$_808 from "./808"
 import * as /* [auto-meaningful-name] */$_275 from "./275"
-import * as /* [auto-meaningful-name] */$$_710_273_index from "../710/273/index"
-import * as /* [auto-meaningful-name] */$$_710_1009 from "../710/1009"
-import * as /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */$_273 from "./273"
+import * as /* [auto-meaningful-name] */$_1009_index from "./1009/index"
+import { createElement, PureComponent } from "react"
 import * as /* [auto-meaningful-name] */$_1196 from "./1196"
 import /* [auto-meaningful-name] */$_11961 from "./1196"
 var M = ["localeMatcher", "type", "style"]
@@ -27,7 +27,7 @@ function j(e, t, n, r) {
   if (!Intl.ListFormat) {
     e$onError(new $_808.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"))
   }
-  var c = $$_710_273_index.e(r, M)
+  var c = $_273.e(r, M)
   try {
     var u = {}
     var l = n.map(function (e, t) {
@@ -68,7 +68,7 @@ function H(e, t, n, r) {
   if (!Intl.DisplayNames) {
     e$onError(new $_808.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"))
   }
-  var c = $$_710_273_index.e(r, U)
+  var c = $_273.e(r, U)
   try {
     return t(e$locale, c).of(n)
   } catch (u) {
@@ -120,8 +120,8 @@ function Q(e) {
   }
 }
 function W(e, t) {
-  var n = $$_710_273_index.c(t)
-  var r = G(G({}, $$_710_273_index.a), e)
+  var n = $_273.c(t)
+  var r = G(G({}, $_273.a), e)
   var /* [auto-meaningful-name] */r$locale = r.locale
   var /* [auto-meaningful-name] */r$defaultLocale = r.defaultLocale
   var /* [auto-meaningful-name] */r$onError = r.onError
@@ -157,7 +157,7 @@ function W(e, t) {
 var K = function (e) {
   function t() {
     var t = null !== e && e.apply(this, arguments) || this
-    t.cache = $$_710_273_index.d()
+    t.cache = $_273.d()
     t.state = {
       cache: t.cache,
       intl: W(Q(t.props), t.cache),
@@ -176,14 +176,14 @@ var K = function (e) {
     }
   }
   t.prototype.render = function () {
-    $$_710_273_index.g(this.state.intl)
-    return React.createElement($$_710_1009.b, {
+    $_273.g(this.state.intl)
+    return createElement($_1009_index.b, {
       value: this.state.intl
     }, this.props.children)
   }
   t.displayName = "IntlProvider"
-  t.defaultProps = $$_710_273_index.a
+  t.defaultProps = $_273.a
   return t
-}(React.PureComponent)
+}(PureComponent)
 export { W }
 export { K }

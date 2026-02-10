@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../1696/632")
-var o = require("../1705/300")
-var i = require("../1705/631")
+var r = require("../1581/632")
+var o = require("../1648/300")
+var i = require("../1282/631")
 module.exports = function (e, t, n) {
   var a = r(t)
   if (a in e) {

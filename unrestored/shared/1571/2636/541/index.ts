@@ -7,20 +7,21 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
 import s from "../8"
 import "./878"
 var _a
-_a = React.memo(function (e) {
+_a = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$checked = e.checked
-  var a = React.useState(e$checked)
+  var a = useState(e$checked)
   var c = $$_10_index.a(a, 2)
   var l = c[0]
   var u = c[1]
-  React.useEffect(function () {
+  useEffect(function () {
     u(!!e$checked)
   }, [e$checked])
   return React1.createElement("div", {

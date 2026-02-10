@@ -5,7 +5,7 @@
  */
 
 var r = require("./1086")
-var o = require("../1692/400")
+var o = require("../1785/400")
 var i = require("./1682")
 if (!r) {
   o(Object.prototype, "toString", i, {

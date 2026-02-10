@@ -13,22 +13,22 @@ import * as /* [auto-meaningful-name] */$$_364_index from "../364/index"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
 import * as /* [auto-meaningful-name] */$$_801_694_index from "../801/694/index"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useState, useContext, useImperativeHandle, createElement, forwardRef, memo, useCallback, Fragment, useRef, useEffect, createRef, useMemo } from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
 import * as /* [auto-meaningful-name] */$_609 from "./609"
 var z = function (e, t) {
   var /* [auto-meaningful-name] */e$afterClose = e.afterClose
   var /* [auto-meaningful-name] */e$config = e.config
-  var a = React.useState(true)
+  var a = useState(true)
   var s = $$_40_index.a(a, 2)
   var c = s[0]
   var u = s[1]
-  var l = React.useState(e$config)
+  var l = useState(e$config)
   var f = $$_40_index.a(l, 2)
   var d = f[0]
   var _ = f[1]
-  var A = React.useContext($$_801_index.b)
+  var A = useContext($$_801_index.b)
   var /* [auto-meaningful-name] */A$direction = A.direction
   var /* [auto-meaningful-name] */A$getPrefixCls = A.getPrefixCls
   var m = A$getPrefixCls("modal")
@@ -45,7 +45,7 @@ var z = function (e, t) {
       d.onCancel()
     }
   }
-  React.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       destroy: b,
       update: function (e) {
@@ -55,11 +55,11 @@ var z = function (e, t) {
       }
     }
   })
-  return React.createElement($$_801_694_index.a, {
+  return createElement($$_801_694_index.a, {
     componentName: "Modal",
     defaultLocale: $_609.a.Modal
   }, function (e) {
-    return React.createElement(I, $$_19.a({
+    return createElement(I, $$_19.a({
       prefixCls: m,
       rootPrefixCls: y
     }, d, {
@@ -72,16 +72,16 @@ var z = function (e, t) {
     }))
   })
 }
-var Q = React.forwardRef(z)
+var Q = forwardRef(z)
 var W = 0
-var K = React.memo(React.forwardRef(function (e, t) {
+var K = memo(forwardRef(function (e, t) {
   var n = function () {
-    var e = React.useState([])
+    var e = useState([])
     var t = $$_40_index.a(e, 2)
     var n = t[0]
     var r = t[1]
     return [
-      n, React.useCallback(function (e) {
+      n, useCallback(function (e) {
         r(function (t) {
           return [].concat($$_79_index.a(t), [e])
         })
@@ -98,24 +98,24 @@ var K = React.memo(React.forwardRef(function (e, t) {
   var r = $$_40_index.a(n, 2)
   var i = r[0]
   var a = r[1]
-  React.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       patchElement: a
     }
   }, [])
-  return React.createElement(React.Fragment, null, i)
+  return createElement(Fragment, null, i)
 }))
 function X(e) {
   return N(M(e))
 }
 var Y = b
 Y.useModal = function () {
-  var e = React.useRef(null)
-  var t = React.useState([])
+  var e = useRef(null)
+  var t = useState([])
   var n = $$_40_index.a(t, 2)
   var r = n[0]
   var i = n[1]
-  React.useEffect(function () {
+  useEffect(function () {
     if (r.length) {
       $$_79_index.a(r).forEach(function (e) {
         e()
@@ -123,13 +123,13 @@ Y.useModal = function () {
       i([])
     }
   }, [r])
-  var a = React.useCallback(function (t) {
+  var a = useCallback(function (t) {
     return function (n) {
       var /* [auto-meaningful-name] */e$current
       W += 1
       var a
-      var s = React.createRef()
-      var c = React.createElement(Q, {
+      var s = createRef()
+      var c = createElement(Q, {
         key: "modal-".concat(W),
         config: t(n),
         ref: s,
@@ -173,7 +173,7 @@ Y.useModal = function () {
     }
   }, [])
   return [
-    React.useMemo(function () {
+    useMemo(function () {
       return {
         info: a(L),
         success: a(j),
@@ -181,7 +181,7 @@ Y.useModal = function () {
         warning: a(M),
         confirm: a(H)
       }
-    }, []), React.createElement(K, {
+    }, []), createElement(K, {
       ref: e
     })
   ]

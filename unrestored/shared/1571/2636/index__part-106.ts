@@ -17,16 +17,17 @@ import * as /* [auto-meaningful-name] */$_103 from "./103"
 import * as Ln from "./35"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import * as Dn from "./19"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useEffect, createElement, useLayoutEffect, forwardRef, useState, useCallback, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_420 from "./420"
 import /* [auto-meaningful-name] */$_4201 from "./420"
-var Sy = React1.memo(function (e) {
+var Sy = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
-  var n = (0, $_710_index.a().formatMessage)({
+  var n = (0, $_710.a().formatMessage)({
     id: e$formConfig.label || "content"
   })
   return React.createElement($_13_index.i, {
@@ -519,8 +520,8 @@ function Wy(e) {
   var /* [auto-meaningful-name] */e$upDisabled = e.upDisabled
   var /* [auto-meaningful-name] */e$downDisabled = e.downDisabled
   var /* [auto-meaningful-name] */e$onStep = e.onStep
-  var s = React1.useRef()
-  var c = React1.useRef()
+  var s = useRef()
+  var c = useRef()
   c.current = e$onStep
   var l = function (e, t) {
     e.preventDefault()
@@ -533,7 +534,7 @@ function Wy(e) {
   var u = function () {
     clearTimeout(s.current)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     return u
   }, [])
   if (function () {
@@ -554,26 +555,26 @@ function Wy(e) {
     onMouseUp: u,
     onMouseLeave: u
   }
-  return React1.createElement("div", {
+  return createElement("div", {
     className: "".concat(d, "-wrap")
-  }, React1.createElement("span", Dn.a({}, m, {
+  }, createElement("span", Dn.a({}, m, {
     onMouseDown: function (e) {
       l(e, true)
     },
     "aria-label": "Increase Value",
     "aria-disabled": e$upDisabled,
     className: p
-  }), e$upNode || React1.createElement("span", {
+  }), e$upNode || createElement("span", {
     unselectable: "on",
     className: "".concat(e$prefixCls, "-handler-up-inner")
-  })), React1.createElement("span", Dn.a({}, m, {
+  })), createElement("span", Dn.a({}, m, {
     onMouseDown: function (e) {
       l(e, false)
     },
     "aria-label": "Decrease Value",
     "aria-disabled": e$downDisabled,
     className: h
-  }), e$downNode || React1.createElement("span", {
+  }), e$downNode || createElement("span", {
     unselectable: "on",
     className: "".concat(e$prefixCls, "-handler-down-inner")
   })))
@@ -591,9 +592,9 @@ function Vy(e, t, n) {
 var zy = function (e, t) {
   Vy(Hy, e, t)
 }
-var Yy = "undefined" !== typeof window && window.document && window.document.createElement ? React1.useLayoutEffect : React1.useEffect
+var Yy = "undefined" !== typeof window && window.document && window.document.createElement ? useLayoutEffect : useEffect
 function Ky(e, t) {
-  var n = React1.useRef(false)
+  var n = useRef(false)
   Yy(function () {
     if (n.current) {
       return e()
@@ -650,7 +651,7 @@ var nE = function (e) {
   var t = Fy(e)
   return t.isInvalidate() ? null : t
 }
-var rE = React1.forwardRef(function (e, t) {
+var rE = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var o = undefined === e$prefixCls ? "rc-input-number" : e$prefixCls
@@ -680,25 +681,25 @@ var rE = React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onStep = e.onStep
   var R = vb.a(e, eE)
   var k = "".concat(o, "-input")
-  var x = React1.useRef(null)
-  var D = React1.useState(false)
+  var x = useRef(null)
+  var D = useState(false)
   var M = $_40_index.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = React1.useRef(false)
-  var F = React1.useRef(false)
-  var G = React1.useState(function () {
+  var B = useRef(false)
+  var F = useRef(false)
+  var G = useState(function () {
     return Fy(null !== e$value && undefined !== e$value ? e$value : e$defaultValue)
   })
   var W = $_40_index.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = React1.useCallback(function (e, t) {
+  var V = useCallback(function (e, t) {
     if (!t) {
       return e$precision >= 0 ? e$precision : Math.max(Dy(e), Dy(u))
     }
   }, [e$precision, u])
-  var z = React1.useCallback(function (e) {
+  var z = useCallback(function (e) {
     var t = String(e)
     if (e$parser) {
       return e$parser(t)
@@ -709,8 +710,8 @@ var rE = React1.forwardRef(function (e, t) {
     }
     return n.replace(/[^\w.-]+/g, "")
   }, [e$parser, e$decimalSeparator])
-  var Y = React1.useRef("")
-  var K = React1.useCallback(function (e, t) {
+  var Y = useRef("")
+  var K = useCallback(function (e, t) {
     if (e$formatter) {
       return e$formatter(e, {
         userTyping: t,
@@ -726,7 +727,7 @@ var rE = React1.forwardRef(function (e, t) {
     }
     return n
   }, [e$formatter, V, e$decimalSeparator])
-  var q = React1.useState(function () {
+  var q = useState(function () {
     var e = null !== e$defaultValue && undefined !== e$defaultValue ? e$defaultValue : e$value
     return U.isInvalidate() && ["string", "number"].includes($_107.a(e)) ? Number.isNaN(e) ? "" : e : K(U.toString(), false)
   })
@@ -737,20 +738,20 @@ var rE = React1.forwardRef(function (e, t) {
     Z(K(e.isInvalidate() ? e.toString(false) : e.toString(!t), t))
   }
   Y.current = Q
-  var $ = React1.useMemo(function () {
+  var $ = useMemo(function () {
     return nE(e$max)
   }, [e$max])
-  var ee = React1.useMemo(function () {
+  var ee = useMemo(function () {
     return nE(e$min)
   }, [e$min])
-  var te = React1.useMemo(function () {
+  var te = useMemo(function () {
     return !(!$ || !U || U.isInvalidate()) && $.lessEquals(U)
   }, [$, U])
-  var ne = React1.useMemo(function () {
+  var ne = useMemo(function () {
     return !(!ee || !U || U.isInvalidate()) && U.lessEquals(ee)
   }, [ee, U])
   var re = function (e, t) {
-    var n = React1.useRef(null)
+    var n = useRef(null)
     return [
       function () {
         try {
@@ -835,11 +836,11 @@ var rE = React1.forwardRef(function (e, t) {
     return U
   }
   var ue = function () {
-    var e = React1.useRef(0)
+    var e = useRef(0)
     var t = function () {
       $y.cancel(e.current)
     }
-    React1.useEffect(function () {
+    useEffect(function () {
       return t
     }, [])
     return function (n) {
@@ -922,7 +923,7 @@ var rE = React1.forwardRef(function (e, t) {
       ae()
     }
   }, [Q])
-  return React1.createElement("div", {
+  return createElement("div", {
     className: N(o, e$className, (n = {}, Ln.a(n, "".concat(o, "-focused"), L), Ln.a(n, "".concat(o, "-disabled"), e$disabled), Ln.a(n, "".concat(o, "-readonly"), e$readOnly), Ln.a(n, "".concat(o, "-not-a-number"), U.isNaN()), Ln.a(n, "".concat(o, "-out-of-range"), !U.isInvalidate() && !ce(U)), n)),
     style: e$style,
     onFocus: function () {
@@ -960,16 +961,16 @@ var rE = React1.forwardRef(function (e, t) {
       F.current = false
       de(x.current.value)
     }
-  }, y && React1.createElement(Wy, {
+  }, y && createElement(Wy, {
     prefixCls: o,
     upNode: e$upHandler,
     downNode: e$downHandler,
     upDisabled: te,
     downDisabled: ne,
     onStep: pe
-  }), React1.createElement("div", {
+  }), createElement("div", {
     className: "".concat(k, "-wrap")
-  }, React1.createElement("input", Dn.a({
+  }, createElement("input", Dn.a({
     autoComplete: "off",
     role: "spinbutton",
     "aria-valuemin": e$min,
@@ -1009,13 +1010,13 @@ var iE = {
   theme: "outlined"
 }
 var aE = function (e, t) {
-  return React1.createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
     ref: t,
     icon: iE
   }))
 }
 aE.displayName = "UpOutlined"
-var lE = React1.forwardRef(aE)
+var lE = forwardRef(aE)
 export { Sy }
 export { oE }
 export { lE }

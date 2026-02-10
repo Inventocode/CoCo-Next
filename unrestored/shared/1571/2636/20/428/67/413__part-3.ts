@@ -11,6 +11,7 @@ import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
+import { useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_322 from "../../../322"
@@ -62,7 +63,7 @@ var P = function (e) {
   var z = Math.min(H, V, G)
   z = Math.max(z, $$_$$_$$_82.o)
   z = Math.floor(z)
-  var Y = React1.useMemo(function () {
+  var Y = useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}

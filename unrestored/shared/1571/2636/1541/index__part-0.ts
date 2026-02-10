@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
-import * as /* [auto-meaningful-name] */React from "react"
+import "react"
 import * as /* [auto-meaningful-name] */$$_331 from "../331"
 var d = function () {
   if ("undefined" === typeof navigator || "undefined" === typeof window) {

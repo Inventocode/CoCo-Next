@@ -10,20 +10,21 @@ import { fA } from "./index__part-163"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_752 from "./752"
 import /* [auto-meaningful-name] */$_7521 from "./752"
-var IA = React1.memo(function (e) {
+var IA = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
   var /* [auto-meaningful-name] */e$name = e.name
   var /* [auto-meaningful-name] */e$source = e.source
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var a = useDispatch()
   var s = function (e) {
     a($$_$$_$$_$$_src_editor_redux_common_actions.mg(e))
   }
@@ -37,15 +38,15 @@ var IA = React1.memo(function (e) {
         a($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           isDangerous: true,
           onConfirm: s.bind(null, t),
-          allowText: $_710_index$a$formatMessage({
+          allowText: $_710$a$formatMessage({
             id: "delete"
           }),
-          title: $_710_index$a$formatMessage({
+          title: $_710$a$formatMessage({
             id: "deleteIconFileTitle"
           }, {
             name: $_190.f(e$name || "", 10)
           }),
-          content: $_710_index$a$formatMessage({
+          content: $_710$a$formatMessage({
             id: "deleteIconFileTips"
           })
         }))
@@ -79,7 +80,7 @@ var IA = React1.memo(function (e) {
           r.target.value = e
           if (n !== e) {
             a($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-              message: $_710_index$a$formatMessage({
+              message: $_710$a$formatMessage({
                 id: "renameFileNameRepeatTips"
               }),
               duration: 2e3

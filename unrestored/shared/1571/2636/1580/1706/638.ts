@@ -4,7 +4,7 @@
  * 模块 ID：638
  */
 
-var r = require("./240")
+var r = require("../1282/240")
 var o = require("./1250")
 module.exports = Object.setPrototypeOf || ("__proto__" in {} ? function () {
   var /* [auto-meaningful-name] */Object$getOwnPropertyDescriptorObject$prototype__proto__$set

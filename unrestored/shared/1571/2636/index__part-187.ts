@@ -8,19 +8,20 @@
 
 import { fj, hj } from "./index__part-181"
 import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_308 from "./308"
 import /* [auto-meaningful-name] */$_3081 from "./308"
 var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
 var Wj = {}
 var Uj = {}
-var Hj = React1.memo(function (e) {
+var Hj = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$md5 = e.md5
   var /* [auto-meaningful-name] */e$name = e.name
@@ -29,8 +30,8 @@ var Hj = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
   var /* [auto-meaningful-name] */e$isAdded = e.isAdded
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var u = React1.useState(0)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var u = useState(0)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
@@ -69,7 +70,7 @@ var Hj = React1.memo(function (e) {
       clearInterval(Wj[t])
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     return function () {
       if (e$isPlaying && Wj[t]) {
         if (Uj[t]) {
@@ -145,7 +146,7 @@ var Hj = React1.memo(function (e) {
     className: $_3081.nameArea
   }, e$name), e$isAdded ? React.createElement("div", {
     className: $_3081.add
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.Added"
   })) : React.createElement("div", {
     className: N($_3081.btn, $_3081.unselect)

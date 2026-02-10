@@ -13,22 +13,23 @@ import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
 import * as Et from "./9"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useMemo, useRef, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_935 from "./935"
 import /* [auto-meaningful-name] */$_9351 from "./935"
-var TT = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.d()
-  var n = $_16_index.e(function (e) {
+var TT = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useDispatch()
+  var n = useSelector(function (e) {
     return e.block.dropdown
   })
-  var r = React1.useMemo(function () {
+  var r = useMemo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -50,7 +51,7 @@ var TT = React1.memo(function () {
     if ($_17_index.BU.base.is_old_dropdown_option(t)) {
       return t[1] === Et.h && t[0] === Et.g ? React.createElement("div", {
         className: qC.nullItem
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "closeHeadline"
       })) : React.createElement($_13_index.p, {
         value: t[1],
@@ -104,23 +105,23 @@ var TT = React1.memo(function () {
     }
   }))
 })
-var ST = React1.memo(function () {
-  var e = React1.useRef(null)
-  var t = $_16_index.d()
-  var n = $_16_index.e(function (e) {
+var ST = memo(function () {
+  var e = useRef(null)
+  var t = useDispatch()
+  var n = useSelector(function (e) {
     return e.block.dropdown
   })
   var /* [auto-meaningful-name] */n$position = n.position
   var /* [auto-meaningful-name] */n$blockInfo = n.blockInfo
-  var i = React1.useState(0)
+  var i = useState(0)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(-1e3)
+  var l = useState(-1e3)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n.visible) {
       if (n$position.top > window.innerHeight / 2 && e.current) {
         var /* [auto-meaningful-name] */e$current$clientHeight = e.current.clientHeight
@@ -140,7 +141,7 @@ var ST = React1.memo(function () {
       }
     }
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     function r(n) {
       var /* [auto-meaningful-name] */n$target = n.target
       var /* [auto-meaningful-name] */e$current = e.current

@@ -8,14 +8,15 @@
 
 import * as /* [auto-meaningful-name] */$_295 from "./295"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
+import { memo, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as s from "./8"
 import c from "./8"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import "./13/640"
 var _a
-_a = React.memo(function (e) {
+_a = memo(function (e) {
   var /* [auto-meaningful-name] */e$onStep = e.onStep
   var /* [auto-meaningful-name] */e$max = e.max
   var /* [auto-meaningful-name] */e$min = e.min
@@ -26,12 +27,12 @@ _a = React.memo(function (e) {
   var h = Number(e$max) <= Number(e$defaultValue)
   var m = Number(e$min) >= Number(e$defaultValue)
   var g = Number(e$defaultValue)
-  var _ = React.useCallback(function (e) {
+  var _ = useCallback(function (e) {
     if (!h && Lodash.isFunction(e$onStep)) {
       e$onStep("".concat(g + 1), e, "up")
     }
   }, [h, e$onStep, g])
-  var v = React.useCallback(function (e) {
+  var v = useCallback(function (e) {
     if (!m && Lodash.isFunction(e$onStep)) {
       e$onStep("".concat(g - 1), e, "down")
     }

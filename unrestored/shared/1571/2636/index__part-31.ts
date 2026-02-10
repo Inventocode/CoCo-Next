@@ -11,16 +11,17 @@ import { od, id } from "./index__part-29"
 import { ld } from "./index__part-30"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import /* [auto-meaningful-name] */$_279 from "./279"
+import /* [auto-meaningful-name] */$_279 from "../../../../src/editor/ui/preview-area/stage/style.css"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector, batch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useEffect, createElement, PureComponent, version, Component } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import "./2602"
 var ud = ["n", "nw", "ne", "s", "se", "sw", "e", "w"]
@@ -31,14 +32,14 @@ var fd = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onMoveStart = e.onMoveStart
   var /* [auto-meaningful-name] */e$onMouseMove = e.onMouseMove
   var /* [auto-meaningful-name] */e$onMoveEnd = e.onMoveEnd
-  var i = $_16_index.d()
+  var i = useDispatch()
   var a = React.useRef(null)
-  var s = React1.useRef({})
-  var c = React1.useState(false)
+  var s = useRef({})
+  var c = useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(ud)
+  var p = useState(ud)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
@@ -46,19 +47,19 @@ var fd = React.memo(function (e) {
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = $_16_index.e(function (e) {
+  var w = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var C = $_16_index.e(function (e) {
+  var C = useSelector(function (e) {
     return e.common.previewAreaUpdatedAt
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     setTimeout(function () {
       var /* [auto-meaningful-name] */a$current
       return null === (a$current = a.current) || undefined === a$current ? undefined : a$current.moveable.updateRect()
     }, 0)
   }, [C])
-  React1.useEffect(function () {
+  useEffect(function () {
     function e() {
       var /* [auto-meaningful-name] */a$current
       if (!(null === (a$current = a.current) || undefined === a$current)) {
@@ -70,7 +71,7 @@ var fd = React.memo(function (e) {
       window.removeEventListener("resize", e)
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     setTimeout(function () {
       var e
       if (w) {
@@ -82,7 +83,7 @@ var fd = React.memo(function (e) {
       O(e)
     })
   }, [w])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (E) {
       var e = "true" === E.dataset.lockHeight
       var t = "true" === E.dataset.lockWidth
@@ -231,7 +232,7 @@ var fd = React.memo(function (e) {
         var /* [auto-meaningful-name] */r$width = r.width
         var /* [auto-meaningful-name] */r$height = r.height
         var /* [auto-meaningful-name] */r$translate = r.translate
-        $_16_index.b(function () {
+        batch(function () {
           if (r$translate) {
             var /* [auto-meaningful-name] */n$position = n.position
             var s = Math.round(r$translate[0])
@@ -256,13 +257,13 @@ var fd = React.memo(function (e) {
   })
 })
 var hd = React.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useDispatch()
   return React.createElement("div", {
     className: $_279.stageMask,
     onDrop: function () {
       var /* [auto-meaningful-name] */$_279$canvasFlash = $_279.canvasFlash
-      var r = $_710_index$a$formatMessage({
+      var r = $_710$a$formatMessage({
         id: "StageToast.addActorToCanvasTips"
       })
       t($$_$$_$$_$$_src_editor_redux_common_actions.xj(r))
@@ -431,7 +432,7 @@ var bd = function (e) {
   }(t, e)
   var /* [auto-meaningful-name] */t$prototype = t.prototype
   t$prototype.render = function () {
-    return React1.createElement("canvas", {
+    return createElement("canvas", {
       ref: ko(this, "canvasElement"),
       style: this.props.style
     })
@@ -567,7 +568,7 @@ var bd = function (e) {
     lineColor: "#777777"
   }
   return t
-}(React1.PureComponent)
+}(PureComponent)
 var yd = ["type", "width", "height", "unit", "zoom", "style", "backgroundColor", "lineColor", "textColor", "direction", "textFormat", "scrollPos", "textAlign", "mainLineSize", "longLineSize", "shortLineSize", "negativeRuler"]
 var Ed = bd
 var Od = function (e, t) {
@@ -633,12 +634,12 @@ var Td = function (e) {
     var /* [auto-meaningful-name] */this$injector$className = this.injector.className
     var /* [auto-meaningful-name] */this$tag = this.tag
     var l = {}
-    if ((React1.version || "").indexOf("simple") > -1 && this$props$portalContainer) {
+    if ((version || "").indexOf("simple") > -1 && this$props$portalContainer) {
       l = {
         portalContainer: this$props$portalContainer
       }
     }
-    return React1.createElement(this$tag, Cd({
+    return createElement(this$tag, Cd({
       ref: (e = this, _Element = "element", function (n) {
         if (n) {
           e[_Element] = n
@@ -661,7 +662,7 @@ var Td = function (e) {
     return this.element
   }
   return t
-}(React1.Component)
+}(Component)
 var Sd = function (e, t) {
   var n = Wa(t)
   return function (t) {
@@ -839,29 +840,29 @@ var Pd = function (e) {
         p[e] = this$props1[e]
       }
     })
-    return React1.createElement(Ld, {
+    return createElement(Ld, {
       ref: ko(this, "manager"),
       cspNonce: this$props$cspNonce,
       className: jd("manager", this$props$type) + " " + this$props$className,
       portalContainer: this$props$portalContainer,
       style: this$props$style
-    }, React1.createElement("div", {
+    }, createElement("div", {
       className: jd("guide-origin"),
       ref: ko(this, "originElement")
-    }), React1.createElement(Ed, Id({
+    }), createElement(Ed, Id({
       ref: ko(this, "ruler"),
       style: this$props$rulerStyle
-    }, p)), React1.createElement("div", {
+    }, p)), createElement("div", {
       className: Rd,
       ref: ko(this, "guidesElement"),
       style: {
         transform: d + "(" + -this.scrollPos * this$props$zoom + "px)"
       }
-    }, this$props$displayDragPos && React1.createElement("div", {
+    }, this$props$displayDragPos && createElement("div", {
       className: Dd,
       ref: ko(this, "displayElement"),
       style: this$props$dragGuideStyle
-    }), React1.createElement("div", {
+    }), createElement("div", {
       className: Nd,
       ref: ko(this, "adderElement")
     }), this.renderGuides()))
@@ -878,7 +879,7 @@ var Pd = function (e) {
     this.guideElements = []
     if (this$props$showGuides) {
       return this$state$guides.map(function (t, o) {
-        return React1.createElement("div", {
+        return createElement("div", {
           className: jd("guide", this$props$type),
           ref: xo(e, "guideElements", o),
           key: o,
@@ -1061,7 +1062,7 @@ var Pd = function (e) {
     portalContainer: null
   }
   return t
-}(React1.PureComponent)
+}(PureComponent)
 export { fd }
 export { hd }
 export { md }

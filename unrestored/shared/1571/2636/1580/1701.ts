@@ -4,7 +4,7 @@
  * 模块 ID：1701
  */
 
-require("./1706/86/index")({
+require("./1661/86/index")({
   target: "Reflect",
   stat: true
 }, {

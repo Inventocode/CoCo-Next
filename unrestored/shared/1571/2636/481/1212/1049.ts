@@ -8,7 +8,7 @@
 
 export { c as a }
 export { l as b }
-import * as r from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$_306 from "./306"
 import * as /* [auto-meaningful-name] */$_2639_index from "./2639/index"
 import * as /* [auto-meaningful-name] */$_928 from "./928"
@@ -27,17 +27,17 @@ var c = function () {
   e.clone = function (t) {
     var n = new e()
     if (t) {
-      n._breadcrumbs = r.f(t._breadcrumbs)
-      n._tags = r.a({}, t._tags)
-      n._extra = r.a({}, t._extra)
-      n._contexts = r.a({}, t._contexts)
+      n._breadcrumbs = $$_799_38.f(t._breadcrumbs)
+      n._tags = $$_799_38.a({}, t._tags)
+      n._extra = $$_799_38.a({}, t._extra)
+      n._contexts = $$_799_38.a({}, t._contexts)
       n._user = t._user
       n._level = t._level
       n._span = t._span
       n._session = t._session
       n._transactionName = t._transactionName
       n._fingerprint = t._fingerprint
-      n._eventProcessors = r.f(t._eventProcessors)
+      n._eventProcessors = $$_799_38.f(t._eventProcessors)
       n._requestSession = t._requestSession
     }
     return n
@@ -70,24 +70,24 @@ var c = function () {
     return this
   }
   e.prototype.setTags = function (e) {
-    this._tags = r.a(r.a({}, this._tags), e)
+    this._tags = $$_799_38.a($$_799_38.a({}, this._tags), e)
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setTag = function (e, t) {
     var n
-    this._tags = r.a(r.a({}, this._tags), ((n = {})[e] = t, n))
+    this._tags = $$_799_38.a($$_799_38.a({}, this._tags), ((n = {})[e] = t, n))
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setExtras = function (e) {
-    this._extra = r.a(r.a({}, this._extra), e)
+    this._extra = $$_799_38.a($$_799_38.a({}, this._extra), e)
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setExtra = function (e, t) {
     var n
-    this._extra = r.a(r.a({}, this._extra), ((n = {})[e] = t, n))
+    this._extra = $$_799_38.a($$_799_38.a({}, this._extra), ((n = {})[e] = t, n))
     this._notifyScopeListeners()
     return this
   }
@@ -114,7 +114,7 @@ var c = function () {
     if (null === t) {
       delete this._contexts[e]
     } else {
-      this._contexts = r.a(r.a({}, this._contexts), ((n = {})[e] = t, n))
+      this._contexts = $$_799_38.a($$_799_38.a({}, this._contexts), ((n = {})[e] = t, n))
     }
     this._notifyScopeListeners()
     return this
@@ -156,9 +156,9 @@ var c = function () {
       return n instanceof e ? n : this
     }
     if (t instanceof e) {
-      this._tags = r.a(r.a({}, this._tags), t._tags)
-      this._extra = r.a(r.a({}, this._extra), t._extra)
-      this._contexts = r.a(r.a({}, this._contexts), t._contexts)
+      this._tags = $$_799_38.a($$_799_38.a({}, this._tags), t._tags)
+      this._extra = $$_799_38.a($$_799_38.a({}, this._extra), t._extra)
+      this._contexts = $$_799_38.a($$_799_38.a({}, this._contexts), t._contexts)
       if (t._user && Object.keys(t._user).length) {
         this._user = t._user
       }
@@ -174,9 +174,9 @@ var c = function () {
     } else {
       if ($_306.h(t)) {
         t = t
-        this._tags = r.a(r.a({}, this._tags), t.tags)
-        this._extra = r.a(r.a({}, this._extra), t.extra)
-        this._contexts = r.a(r.a({}, this._contexts), t.contexts)
+        this._tags = $$_799_38.a($$_799_38.a({}, this._tags), t.tags)
+        this._extra = $$_799_38.a($$_799_38.a({}, this._extra), t.extra)
+        this._contexts = $$_799_38.a($$_799_38.a({}, this._contexts), t.contexts)
         if (t.user) {
           this._user = t.user
         }
@@ -213,10 +213,10 @@ var c = function () {
     if (n <= 0) {
       return this
     }
-    var i = r.a({
+    var i = $$_799_38.a({
       timestamp: $_2639_index.a()
     }, e)
-    this._breadcrumbs = r.f(this._breadcrumbs, [i]).slice(-n)
+    this._breadcrumbs = $$_799_38.f(this._breadcrumbs, [i]).slice(-n)
     this._notifyScopeListeners()
     return this
   }
@@ -228,16 +228,16 @@ var c = function () {
   e.prototype.applyToEvent = function (e, t) {
     var /* [auto-meaningful-name] */this$_span$transaction
     if (this._extra && Object.keys(this._extra).length) {
-      e.extra = r.a(r.a({}, this._extra), e.extra)
+      e.extra = $$_799_38.a($$_799_38.a({}, this._extra), e.extra)
     }
     if (this._tags && Object.keys(this._tags).length) {
-      e.tags = r.a(r.a({}, this._tags), e.tags)
+      e.tags = $$_799_38.a($$_799_38.a({}, this._tags), e.tags)
     }
     if (this._user && Object.keys(this._user).length) {
-      e.user = r.a(r.a({}, this._user), e.user)
+      e.user = $$_799_38.a($$_799_38.a({}, this._user), e.user)
     }
     if (this._contexts && Object.keys(this._contexts).length) {
-      e.contexts = r.a(r.a({}, this._contexts), e.contexts)
+      e.contexts = $$_799_38.a($$_799_38.a({}, this._contexts), e.contexts)
     }
     if (this._level) {
       e.level = this._level
@@ -246,20 +246,20 @@ var c = function () {
       e.transaction = this._transactionName
     }
     if (this._span) {
-      e.contexts = r.a({
+      e.contexts = $$_799_38.a({
         trace: this._span.getTraceContext()
       }, e.contexts)
       var i = null === (this$_span$transaction = this._span.transaction) || undefined === this$_span$transaction ? undefined : this$_span$transaction.name
       if (i) {
-        e.tags = r.a({
+        e.tags = $$_799_38.a({
           transaction: i
         }, e.tags)
       }
     }
     this._applyFingerprint(e)
-    e.breadcrumbs = r.f(e.breadcrumbs || [], this._breadcrumbs)
+    e.breadcrumbs = $$_799_38.f(e.breadcrumbs || [], this._breadcrumbs)
     e.breadcrumbs = e.breadcrumbs.length > 0 ? e.breadcrumbs : undefined
-    return this._notifyEventProcessors(r.f(u(), this._eventProcessors), e, t)
+    return this._notifyEventProcessors($$_799_38.f(u(), this._eventProcessors), e, t)
   }
   e.prototype._notifyEventProcessors = function (e, t, n, o) {
     var s = this
@@ -271,7 +271,7 @@ var c = function () {
       if (null === t || "function" !== typeof u) {
         a(t)
       } else {
-        var l = u(r.a({}, t), n)
+        var l = u($$_799_38.a({}, t), n)
         if ($_306.m(l)) {
           l.then(function (t) {
             return s._notifyEventProcessors(e, t, n, o + 1).then(a)

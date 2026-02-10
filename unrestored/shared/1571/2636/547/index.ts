@@ -12,6 +12,7 @@ import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-run
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as s from "../7"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
+import { useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as d from "../8"
@@ -19,7 +20,7 @@ import p from "../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_262 from "../262"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_75 from "../75"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 import * as /* [auto-meaningful-name] */$_672 from "./672"
@@ -111,12 +112,12 @@ function S(e) {
   var h
   var m = e$attributes$url
   var g = m.startsWith("http://") && !$$_28_index.d()
-  var _ = React.useState("loading")
+  var _ = useState("loading")
   var b = $$_10_index.a(_, 2)
   var w = b[0]
   var S = b[1]
-  var A = React.useRef(null)
-  React.useEffect(function () {
+  var A = useRef(null)
+  useEffect(function () {
     if (g) {
       S("http-protocol-error")
     } else {

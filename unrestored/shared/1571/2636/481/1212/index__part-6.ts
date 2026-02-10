@@ -9,7 +9,7 @@
 import { he } from "./index__part-5"
 import * as /* [auto-meaningful-name] */$_395 from "./395"
 import * as /* [auto-meaningful-name] */$_918 from "./918"
-import * as o from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$$_342 from "../342"
 var be = 0
 function we() {
@@ -52,12 +52,12 @@ function xe(e, t, n) {
       Ee()
       $$_342.c(function (e) {
         e.addEventProcessor(function (e) {
-          var n = o.a({}, e)
+          var n = $$_799_38.a({}, e)
           if (t.mechanism) {
             $_395.b(n, undefined, undefined)
             $_395.a(n, t.mechanism)
           }
-          n.extra = o.a(o.a({}, n.extra), {
+          n.extra = $$_799_38.a($$_799_38.a({}, n.extra), {
             arguments: r
           })
           return n

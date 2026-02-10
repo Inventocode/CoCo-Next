@@ -11,6 +11,7 @@ import * as D from "./6"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_705 from "./705"
 import /* [auto-meaningful-name] */$_7051 from "./705"
@@ -22,26 +23,26 @@ var NS = function (e, t, n) {
     return e - t
   })[1]
 }
-var RS = React1.memo(function (e) {
+var RS = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$resizable = e.resizable
   var /* [auto-meaningful-name] */e$placements = e.placements
   var /* [auto-meaningful-name] */e$onResize = e.onResize
   var i = e.width && NS(e.width, e.minWidth, e.maxWidth)
   var a = e.height && NS(e.height, e.minHeight, e.maxHeight)
-  var s = React1.useState(i)
+  var s = useState(i)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(a)
+  var d = useState(a)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var _ = React1.useState(false)
+  var _ = useState(false)
   var v = $_10_index.a(_, 2)
   var b = v[0]
   var y = v[1]
-  var E = React1.useState()
+  var E = useState()
   var O = $_10_index.a(E, 2)
   var w = O[0]
   var C = O[1]

@@ -9,31 +9,32 @@
 import * as /* [auto-meaningful-name] */$_207_index from "./207/index"
 import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as K from "./18"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_320 from "./320"
 import /* [auto-meaningful-name] */$_3201 from "./320"
 var QT = React.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = React1.useState($_26_index.f)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useState($_26_index.f)
   var n = $_10_index.a(t, 2)
   var r = n[0]
   var o = n[1]
-  var i = $_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.uiConfig.workspace
   }) === K.j.ReadOnly
-  var a = $_16_index.e(function (e) {
+  var a = useSelector(function (e) {
     return e.common.consoleHeight
   })
-  var s = React1.useState({
+  var s = useState({
     undo: true,
     redo: true,
     zoomOut: false,
@@ -43,7 +44,7 @@ var QT = React.memo(function () {
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     function e(e) {
       o(e)
       u({
@@ -73,7 +74,7 @@ var QT = React.memo(function () {
       $_26_index.z.eventBus.removeEventListener($_207_index.a.WORKSPACE_SCALE_CHANGE, e)
     }
   }, [l.redo, l.undo, l.zoomIn, l.zoomOut, i])
-  React1.useEffect(function () {
+  useEffect(function () {
     u({
       undo: i,
       redo: i,
@@ -83,7 +84,7 @@ var QT = React.memo(function () {
     })
     $_17_index.Blink.context_menu.set_disabled(i)
   }, [i, l.zoomIn, l.zoomOut])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */$_17_index$Blink$mainWorkspace$clean_up = $_17_index.Blink.mainWorkspace.clean_up
     $_17_index.Blink.mainWorkspace.clean_up = function () {
       $_17_index$Blink$mainWorkspace$clean_up.call(this, $_17_index.vec2.fromValues(100, 50))
@@ -121,7 +122,7 @@ var QT = React.memo(function () {
     className: $_3201.undoRedoWrapper
   }, React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "BlockEditor.undo"
     }),
     trigger: ["hover", "click"]
@@ -135,7 +136,7 @@ var QT = React.memo(function () {
     className: N($_3201.icon, $_3201.undo, l.undo && $_3201.disable)
   }))), React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "BlockEditor.redo"
     }),
     trigger: ["hover", "click"]
@@ -153,7 +154,7 @@ var QT = React.memo(function () {
     className: $_3201.zoomWrapper
   }, React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "BlockEditor.dec"
     }),
     trigger: ["hover", "click"]
@@ -169,7 +170,7 @@ var QT = React.memo(function () {
     className: N($_3201.icon, l.zoomOut && $_3201.disable)
   }))), React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "BlockEditor.percent"
     }),
     trigger: ["hover", "click"]
@@ -182,7 +183,7 @@ var QT = React.memo(function () {
     }
   }, "".concat(te.eb(r, $_26_index.f, 0), "%"))), React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "BlockEditor.inc"
     }),
     trigger: ["hover", "click"]
@@ -205,7 +206,7 @@ var QT = React.memo(function () {
     }
   }, React.createElement($_748_index.a, {
     placement: "top",
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "BlockEditor.cleanup"
     }),
     trigger: ["hover", "click"]

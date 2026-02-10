@@ -12,8 +12,8 @@ import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_189 from "../../../../shared/1571/2636/189"
 import /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_80_index from "../../../../shared/1571/2636/80/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../shared/1571/2636/15"
+import /* [auto-meaningful-name] */ReactDom from "react-dom"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_1412_index from "../../../../shared/1571/2636/37/1412/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_232_324 from "../../../../shared/1571/2636/232/324"
@@ -119,7 +119,7 @@ var at = {
     var n = at.getContainer()
     if (this.dialogArr.length) {
       tt(COCO_PLAYER_DIALOG, function () {
-        $$_$$_$$_$$_shared_1571_2636_80_index.unmountComponentAtNode(n)
+        ReactDom.unmountComponentAtNode(n)
         var e = t.dialogArr[0]
         t.showDialog(e)
       })
@@ -142,7 +142,7 @@ var at = {
             }
           }
         })
-        $$_$$_$$_$$_shared_1571_2636_80_index.unmountComponentAtNode(n)
+        ReactDom.unmountComponentAtNode(n)
       })
     }
   },
@@ -222,7 +222,7 @@ var at = {
       id: COCO_PLAYER_DIALOG,
       className: $$_$$_$$_$$_shared_1571_2636_8($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
     }, u, c)
-    $$_$$_$$_$$_shared_1571_2636_80_index.render(l, s)
+    ReactDom.render(l, s)
   },
   select: function (t, e, n) {
     at.addDialog({
@@ -263,7 +263,7 @@ var at = {
       className: $$_$$_$$_$$_shared_1571_2636_8($_1381.button, $_1381.cancelButton),
       onClick: this.cancel.bind(null, "")
     }, React.createElement("span", null, "取消"))))
-    $$_$$_$$_$$_shared_1571_2636_80_index.render(c, s)
+    ReactDom.render(c, s)
   },
   prompt: function (t, e, n) {
     this.addDialog({
@@ -286,7 +286,7 @@ var at = {
       id: COCO_PLAYER_DIALOG,
       className: $$_$$_$$_$$_shared_1571_2636_8($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
     }, s, u)
-    $$_$$_$$_$$_shared_1571_2636_80_index.render(c, a)
+    ReactDom.render(c, a)
   }
 }
 var st = at

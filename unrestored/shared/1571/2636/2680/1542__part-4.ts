@@ -10,13 +10,13 @@ import { A } from "./1542__part-0"
 import { m } from "./1542__part-1"
 import j from "../8"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
-import /* [auto-meaningful-name] */$$_80_index from "../80/index"
+import /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_107 from "../107"
 import * as /* [auto-meaningful-name] */$$_140 from "../140"
 import * as /* [auto-meaningful-name] */$$_120 from "../120"
 import * as /* [auto-meaningful-name] */$$_106 from "../106"
 import * as /* [auto-meaningful-name] */$$_103 from "../103"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useEffect, useLayoutEffect, useCallback, useMemo, Component, forwardRef, createElement } from "react"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
 import "../241/index"
@@ -86,12 +86,12 @@ function re(e, t) {
   })] : "".concat(e, "-").concat(t) : null
 }
 function ie(e) {
-  var t = React.useRef(false)
-  var n = React.useState(e)
+  var t = useRef(false)
+  var n = useState(e)
   var r = $$_40_index.a(n, 2)
   var a = r[0]
   var s = r[1]
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       t.current = true
     }
@@ -104,22 +104,22 @@ function ie(e) {
     }
   ]
 }
-var oe = m() ? React.useLayoutEffect : React.useEffect
+var oe = m() ? useLayoutEffect : useEffect
 var ae = ["prepare", "start", "active", "end"]
 function se(e) {
   return "active" === e || "end" === e
 }
 var ce = function (e, t) {
-  var n = React.useState("none")
+  var n = useState("none")
   var r = $$_40_index.a(n, 2)
   var a = r[0]
   var s = r[1]
   var c = function () {
-    var e = React.useRef(null)
+    var e = useRef(null)
     function t() {
       A.cancel(e.current)
     }
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         t()
       }
@@ -169,7 +169,7 @@ var ce = function (e, t) {
       }
     }
   }, [e, a])
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       f()
     }
@@ -214,14 +214,14 @@ function ue(e, t, n, r) {
   var N = $$_40_index.a(P, 2)
   var L = N[0]
   var j = N[1]
-  var U = React.useRef(false)
-  var H = React.useRef(null)
-  var V = React.useRef(false)
-  var G = React.useRef(null)
+  var U = useRef(false)
+  var H = useRef(null)
+  var V = useRef(false)
+  var G = useRef(null)
   function Q() {
     return n() || G.current
   }
-  var W = React.useRef(false)
+  var W = useRef(false)
   function K(e) {
     var t
     var n = Q()
@@ -244,10 +244,10 @@ function ue(e, t, n, r) {
     }
   }
   var X = function (e) {
-    var t = React.useRef()
-    var n = React.useRef(e)
+    var t = useRef()
+    var n = useRef(e)
     n.current = e
-    var r = React.useCallback(function (e) {
+    var r = useCallback(function (e) {
       n.current(e)
     }, [])
     function i(e) {
@@ -256,7 +256,7 @@ function ue(e, t, n, r) {
         e.removeEventListener(te, r)
       }
     }
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         i(t.current)
       }
@@ -275,7 +275,7 @@ function ue(e, t, n, r) {
     ]
   }(K)
   var Y = $$_40_index.a(X, 1)[0]
-  var q = React.useMemo(function () {
+  var q = useMemo(function () {
     var e
     var t
     var n
@@ -350,18 +350,18 @@ function ue(e, t, n, r) {
       }
     }
   }, [t])
-  React.useEffect(function () {
+  useEffect(function () {
     if ("appear" === R && !u || "enter" === R && !s || "leave" === R && !f) {
       F("none")
     }
   }, [u, s, f])
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       clearTimeout(H.current)
       V.current = true
     }
   }, [])
-  React.useEffect(function () {
+  useEffect(function () {
     if (undefined !== T && "none" === R) {
       if (!(null === r$onVisibleChanged || undefined === r$onVisibleChanged)) {
         r$onVisibleChanged(T)
@@ -392,7 +392,7 @@ var le = function (e) {
     }
   ])
   return n
-}(React.Component)
+}(Component)
 var fe = function (e) {
   var t = e
   function n(e) {
@@ -401,7 +401,7 @@ var fe = function (e) {
   if ("object" === $$_107.a(e)) {
     t = e.transitionSupport
   }
-  var r = React.forwardRef(function (e, t) {
+  var r = forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */e$visible = e.visible
     var a = undefined === e$visible || e$visible
     var /* [auto-meaningful-name] */e$removeOnLeave = e.removeOnLeave
@@ -412,11 +412,11 @@ var fe = function (e) {
     var /* [auto-meaningful-name] */e$leavedClassName = e.leavedClassName
     var /* [auto-meaningful-name] */e$eventProps = e.eventProps
     var p = n(e)
-    var _ = React.useRef()
-    var A = React.useRef()
+    var _ = useRef()
+    var A = useRef()
     var g = ue(p, a, function () {
       try {
-        return (e = _.current || A.current) instanceof HTMLElement ? e : $$_80_index.findDOMNode(e)
+        return (e = _.current || A.current) instanceof HTMLElement ? e : ReactDom.findDOMNode(e)
       } catch (t) {
         return null
       }
@@ -427,14 +427,14 @@ var fe = function (e) {
     var b = m[1]
     var w = m[2]
     var E = m[3]
-    var x = React.useRef(E)
+    var x = useRef(E)
     if (E) {
       x.current = true
     }
-    var C = React.useRef(t)
+    var C = useRef(t)
     C.current = t
     var O
-    var k = React.useCallback(function (e) {
+    var k = useCallback(function (e) {
       _.current = e
       Q(C.current, e)
     }, [])
@@ -472,7 +472,7 @@ var fe = function (e) {
     } else {
       O = null
     }
-    return React.createElement(le, {
+    return createElement(le, {
       ref: A
     }, O)
   })

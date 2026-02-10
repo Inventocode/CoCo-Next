@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../1706/240")
+var r = require("../../1282/240")
 var o = require("./1236")
 module.exports = function (e) {
   r(this)

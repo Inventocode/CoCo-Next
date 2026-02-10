@@ -4,12 +4,12 @@
  * 模块 ID：1605
  */
 
-var r = require("../1706/86/index")
-var o = require("./1246/index")
+var r = require("../1661/86/index")
+var o = require("../1785/1246/index")
 r({
   target: "Array",
   stat: true,
-  forced: !require("../1686/948")(function (e) {
+  forced: !require("./948")(function (e) {
     Array.from(e)
   })
 }, {

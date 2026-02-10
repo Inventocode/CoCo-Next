@@ -99,7 +99,7 @@ exports.getKeyboardValueMutator = function (e, t, n) {
   }
 }
 var i = r(require("./1552/index"))
-var o = require("../../../80/index")
+var o = require("react-dom")
 var a = r(require("./1805"))
 function s(e, t) {
   var /* [auto-meaningful-name] */t$marks = t.marks

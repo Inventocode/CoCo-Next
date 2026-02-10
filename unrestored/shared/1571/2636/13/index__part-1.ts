@@ -6,14 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_294_index from "../294/index"
 import * as /* [auto-meaningful-name] */$$_295 from "../295"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import "./640"
-var g = React1.memo(function (e) {
+var g = memo(function (e) {
   var /* [auto-meaningful-name] */e$onStep = e.onStep
   var /* [auto-meaningful-name] */e$max = e.max
   var /* [auto-meaningful-name] */e$min = e.min
@@ -23,12 +24,12 @@ var g = React1.memo(function (e) {
   var l = Number(e$max) <= Number(e$defaultValue)
   var u = Number(e$min) >= Number(e$defaultValue)
   var d = Number(e$defaultValue)
-  var p = React1.useCallback(function (e) {
+  var p = useCallback(function (e) {
     if (!l && Lodash.isFunction(e$onStep)) {
       e$onStep("".concat(d + 1), e, "up")
     }
   }, [l, e$onStep, d])
-  var g = React1.useCallback(function (e) {
+  var g = useCallback(function (e) {
     if (!u && Lodash.isFunction(e$onStep)) {
       e$onStep("".concat(d - 1), e, "down")
     }

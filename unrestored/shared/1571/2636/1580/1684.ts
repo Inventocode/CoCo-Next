@@ -4,7 +4,7 @@
  * 模块 ID：1684
  */
 
-var r = require("./1706/86/index")
+var r = require("./1661/86/index")
 var o = require("./1657/1260")
 r({
   global: true,

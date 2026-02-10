@@ -9,18 +9,19 @@ import { r } from "./index__part-1"
 var b = false
 import /* [auto-meaningful-name] */$_159 from "./159"
 import * as /* [auto-meaningful-name] */$$_77 from "../77"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import d from "../8"
 import /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useEffect, useCallback, useLayoutEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 var _a
 _a = function (e) {
-  var t = React1.useRef(null)
+  var t = useRef(null)
   var n = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -54,40 +55,40 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var /* [auto-meaningful-name] */e$attributes$value = e$attributes.value
-  var q = React1.useRef(null)
-  var X = React1.useRef(null)
-  var Q = React1.useRef(r.UP)
-  var Z = React1.useState(false)
+  var q = useRef(null)
+  var X = useRef(null)
+  var Q = useRef(r.UP)
+  var Z = useState(false)
   var J = $$_10_index.a(Z, 2)
   var $ = J[0]
   var ee = J[1]
-  var te = React1.useState(0)
+  var te = useState(0)
   var ne = $$_10_index.a(te, 2)
   var re = ne[0]
   var oe = ne[1]
-  var ie = React1.useState(0)
+  var ie = useState(0)
   var ae = $$_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
-  var le = React1.useState(0)
+  var le = useState(0)
   var ue = $$_10_index.a(le, 2)
   var de = ue[0]
   var pe = ue[1]
-  var fe = React1.useState(0)
+  var fe = useState(0)
   var he = $$_10_index.a(fe, 2)
   var me = he[0]
   var ge = he[1]
-  var _e = React1.useState("")
+  var _e = useState("")
   var ve = $$_10_index.a(_e, 2)
   var be = ve[0]
   var ye = ve[1]
-  var Ee = React1.useState("")
+  var Ee = useState("")
   var Oe = $$_10_index.a(Ee, 2)
   var we = Oe[0]
   var Ce = Oe[1]
-  var Te = React1.useRef(1)
-  var Se = React1.useRef(1)
-  React1.useEffect(function () {
+  var Te = useRef(1)
+  var Se = useRef(1)
+  useEffect(function () {
     if (e$trackImageUrl) {
       Te.current = Te.current + 1
       var /* [auto-meaningful-name] */Te$current = Te.current
@@ -100,7 +101,7 @@ _a = function (e) {
       })
     }
   }, [e$trackImageUrl, U])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$backgroundImageUrl) {
       Se.current = Se.current + 1
       var /* [auto-meaningful-name] */Se$current = Se.current
@@ -113,14 +114,14 @@ _a = function (e) {
       })
     }
   }, [e$backgroundImageUrl, G])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (L === $$_77.d.IMAGE) {
       ee(true)
     } else {
       ee(false)
     }
   }, [L])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */e$size$height = e$size.height
     if (D === $$_77.b.VERTICAL) {
       e$size$height = e$size.width
@@ -171,7 +172,7 @@ _a = function (e) {
   function Ie(e, t) {
     return t / e * 100 + "%"
   }
-  var je = React1.useCallback(function (e, n) {
+  var je = useCallback(function (e, n) {
     var /* [auto-meaningful-name] */t$current
     var /* [auto-meaningful-name] */q$current = q.current
     var /* [auto-meaningful-name] */X$current = X.current
@@ -209,7 +210,7 @@ _a = function (e) {
     }
     return e$attributes$value
   }, [D, e$attributes$maxValue, e$attributes$minValue, e$attributes$step, e$attributes$value])
-  var Ne = React1.useCallback(function (e) {
+  var Ne = useCallback(function (e) {
     if ($$_15.W()) {
       b = true
       if (!e$attributes$disabled) {
@@ -219,7 +220,7 @@ _a = function (e) {
       }
     }
   }, [e$attributes$disabled, e$onStartToSlid, e$attributes$value])
-  var Re = React1.useCallback(function (e) {
+  var Re = useCallback(function (e) {
     if ($$_15.W() && !e$attributes$disabled) {
       b = true
       var t = je(e.changedTouches[0].clientX, e.changedTouches[0].clientY)
@@ -228,7 +229,7 @@ _a = function (e) {
       }
     }
   }, [e$attributes$disabled, je, e$onSliderChange])
-  var ke = React1.useCallback(function () {
+  var ke = useCallback(function () {
     b = false
     if (!e$attributes$disabled) {
       if (e$onEndToSlid) {
@@ -236,7 +237,7 @@ _a = function (e) {
       }
     }
   }, [e$attributes$disabled, e$onEndToSlid, e$attributes$value])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var /* [auto-meaningful-name] */X$current = X.current
     var /* [auto-meaningful-name] */q$current = q.current
     var /* [auto-meaningful-name] */t$current = t.current
@@ -269,7 +270,7 @@ _a = function (e) {
       }
     }
   }, [re, se, e$attributes$maxValue, e$attributes$minValue, e$attributes$value, D, $, e$size])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!$$_15.W()) {
       var e = e$attributes$value
       var t = e$attributes$value

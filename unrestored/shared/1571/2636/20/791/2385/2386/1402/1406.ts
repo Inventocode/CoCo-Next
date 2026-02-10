@@ -8,10 +8,10 @@
 
 var r = require("regenerator-runtime")
 var i = require("../../../449")
-var /* [auto-meaningful-name] */require$$_1410_1159_index$pipeline = require("../1410/1159/index").pipeline
+var /* [auto-meaningful-name] */require$_1159$pipeline = require("./1159").pipeline
 var a = require("./584/index")
 var /* [auto-meaningful-name] */require$_769$destroyer = require("./769").destroyer
-var c = require("../1410/583")
+var c = require("./583")
 var /* [auto-meaningful-name] */c$isNodeStream = c.isNodeStream
 var /* [auto-meaningful-name] */c$isReadable = c.isReadable
 var /* [auto-meaningful-name] */c$isWritable = c.isWritable
@@ -24,7 +24,7 @@ var /* [auto-meaningful-name] */A$AbortError = A.AbortError
 var /* [auto-meaningful-name] */A$codes = A.codes
 var /* [auto-meaningful-name] */A$codes$ERR_INVALID_ARG_VALUE = A$codes.ERR_INVALID_ARG_VALUE
 var /* [auto-meaningful-name] */A$codes$ERR_MISSING_ARGS = A$codes.ERR_MISSING_ARGS
-var b = require("../1410/650/index")
+var b = require("./650")
 module.exports = function () {
   for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
     t[n] = arguments[n]
@@ -74,7 +74,7 @@ module.exports = function () {
     }
   }
   var S = t[0]
-  var T = require$$_1410_1159_index$pipeline(t, k)
+  var T = require$_1159$pipeline(t, k)
   var B = !!(c$isWritable(S) || c$isWritableStream(S) || c$isTransformStream(S))
   var D = !!(c$isReadable(T) || c$isReadableStream(T) || c$isTransformStream(T))
   E = new a({

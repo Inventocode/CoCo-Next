@@ -4,7 +4,7 @@
  * 模块 ID：1635
  */
 
-var r = require("./1706/86/index")
+var r = require("./1661/86/index")
 var o = require("./1634/953")
 r({
   target: "Math",

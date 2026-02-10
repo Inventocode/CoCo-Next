@@ -16,12 +16,13 @@ import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useState, useEffect, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1522 from "./1522"
 import * as /* [auto-meaningful-name] */$_207_index from "./207/index"
@@ -29,22 +30,22 @@ import * as /* [auto-meaningful-name] */$_1523_index from "./1523/index"
 import * as lT from "./43"
 import * as /* [auto-meaningful-name] */$_1059 from "./1059"
 import /* [auto-meaningful-name] */$_10591 from "./1059"
-var pT = React1.memo(function () {
-  var e = React1.useRef(null)
-  var t = $_16_index.d()
-  var n = React1.useState(100)
+var pT = memo(function () {
+  var e = useRef(null)
+  var t = useDispatch()
+  var n = useState(100)
   var r = $_10_index.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = $_16_index.e(function (e) {
+  var a = useSelector(function (e) {
     return e.block.slider
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = parseInt(a.value)
     e = (e = e > a.max ? a.max : e) < a.min ? a.min : e
     i(e)
   }, [a])
-  React1.useEffect(function () {
+  useEffect(function () {
     function n(r) {
       var /* [auto-meaningful-name] */r$target = r.target
       var /* [auto-meaningful-name] */e$current = e.current
@@ -91,14 +92,14 @@ var pT = React1.memo(function () {
     className: $_10591.rightSliderText
   }, a.maxText))
 })
-var fT = React1.memo(function (e) {
+var fT = memo(function (e) {
   var /* [auto-meaningful-name] */e$options = e.options
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = $_16_index.d()
-  var o = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useDispatch()
+  var o = useSelector(function (e) {
     return e.block.dropdown
   })
-  var i = React1.useMemo(function () {
+  var i = useMemo(function () {
     return e$options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -121,7 +122,7 @@ var fT = React1.memo(function (e) {
       return e[1] === Et.h && e[0] === Et.g ? React.createElement("div", {
         className: qC.nullItem,
         key: t
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "closeHeadline"
       })) : React.createElement($_13_index.p, {
         value: e[1],
@@ -173,26 +174,26 @@ var fT = React1.memo(function (e) {
     }
   }))
 })
-var hT = React1.memo(function (e) {
+var hT = memo(function (e) {
   var /* [auto-meaningful-name] */e$group = e.group
   var /* [auto-meaningful-name] */e$group$name = e$group.name
   var /* [auto-meaningful-name] */e$group$options = e$group.options
-  var o = React1.useRef(null)
-  var i = $_16_index.e(function (e) {
+  var o = useRef(null)
+  var i = useSelector(function (e) {
     return e.block.dropdown
   })
-  var a = React1.useState("right")
+  var a = useState("right")
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = e$group$options.some(function (e) {
     return "value" in e && e.value === i.value || Array.isArray(e) && e[1] === i.value
   })
-  var v = React1.useMemo(function () {
+  var v = useMemo(function () {
     return Lodash.debounce(m, 100)
   }, [])
   return React.createElement("div", {
@@ -250,16 +251,16 @@ var hT = React1.memo(function (e) {
   }))))
 })
 var /* [auto-meaningful-name] */__EMPTY_VALUE__ = "__EMPTY_VALUE__"
-var gT = React1.memo(function () {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var t = $_16_index.d()
-  var n = $_16_index.e(function (e) {
+var gT = memo(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var t = useDispatch()
+  var n = useSelector(function (e) {
     return e.block.dropdown
   })
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.project.currentScreenIndex
   })
-  var o = React1.useMemo(function () {
+  var o = useMemo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -281,7 +282,7 @@ var gT = React1.memo(function () {
     if ($_17_index.BU.base.is_old_dropdown_option(t)) {
       return t[1] === Et.h && t[0] === Et.g ? React.createElement("div", {
         className: qC.nullItem
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "closeHeadline"
       })) : React.createElement($_13_index.p, {
         value: t[1],
@@ -333,7 +334,7 @@ var gT = React1.memo(function () {
       }, React.createElement("span", null, t.text), React.createElement("div", {
         className: qC.btn,
         onClick: t.callback
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "retry"
       }))) : React.createElement($_13_index.p, {
         value: t.value,
@@ -358,13 +359,13 @@ var gT = React1.memo(function () {
     }
   }))
 })
-var _T = React1.memo(function (e) {
+var _T = memo(function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
-  var n = $_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.block.dropdown
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var o = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var o = useDispatch()
   return React.createElement("ul", {
     className: qC.imageEntryList,
     style: {
@@ -378,7 +379,7 @@ var _T = React1.memo(function (e) {
         o($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       }))
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: e$type === K.a.IMAGE_DROPDOWN ? "selectByLibrary" : "selectByIconLibrary"
   })), React.createElement("li", null, React.createElement($_13_index.B, {
     onChange: function (e) {
@@ -392,23 +393,23 @@ var _T = React1.memo(function (e) {
       }
     },
     accept: e$type === K.a.IMAGE_DROPDOWN ? $_133.f : $_133.c
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "uploadFileByLocal"
   }))), n.blockInfo.emptyImageVisible && React.createElement("li", {
     onClick: function () {
       n.setValue(Et.f)
       o($$_$$_$$_$$_src_editor_redux_common_actions.gh())
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "emptyImage"
   })))
 })
-var vT = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var vT = memo(function () {
+  var e = useSelector(function (e) {
     return e.block.dropdown
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var n = useDispatch()
   return React.createElement("ul", {
     className: qC.imageEntryList,
     style: {
@@ -422,7 +423,7 @@ var vT = React1.memo(function () {
         n($$_$$_$$_$$_src_editor_redux_common_actions.sh())
       }))
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "selectByLibrary"
   })), React.createElement("li", null, React.createElement($_13_index.B, {
     onChange: function (t) {
@@ -435,7 +436,7 @@ var vT = React1.memo(function () {
       }
     },
     accept: $_135.h
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "uploadFileByLocal"
   }))))
 })

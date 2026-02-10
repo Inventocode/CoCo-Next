@@ -18,58 +18,59 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_814 from "./814"
 import /* [auto-meaningful-name] */$_8141 from "./814"
-var aj = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var aj = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.tableDataDialog
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$grid = e.grid
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$isCreateNewGrid = e.isCreateNewGrid
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = $_16_index.d()
-  var s = React1.useState(false)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var a = useDispatch()
+  var s = useState(false)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState()
+  var d = useState()
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState("")
+  var v = useState("")
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState({})
+  var O = useState({})
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState([])
+  var A = useState([])
   var j = $_10_index.a(A, 2)
   var N = j[0]
   var R = j[1]
-  var k = React1.useState(false)
+  var k = useState(false)
   var x = $_10_index.a(k, 2)
   var M = x[0]
   var L = x[1]
-  var P = React1.useState(2)
+  var P = useState(2)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = React1.useState(2)
+  var W = useState(2)
   var U = $_10_index.a(W, 2)
   var H = U[0]
   var V = U[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       a($$_$$_$$_$$_src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)
@@ -206,13 +207,13 @@ var aj = React1.memo(function () {
   }
   var Z = React.createElement("div", {
     className: $_8141.footer
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "gridSupportTypeTips"
   })), React.createElement($_13_index.d, {
     type: "primary",
     disabled: l,
     onClick: Q
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "save"
   })))
   return React.createElement($_13_index.f, {
@@ -220,7 +221,7 @@ var aj = React1.memo(function () {
     className: $_8141.tableDataDialog,
     title: React.createElement("div", null, y, React.createElement("span", {
       className: $_8141.defaultData
-    }, "— ", $_710_index$a$formatMessage({
+    }, "— ", $_710$a$formatMessage({
       id: "TableDataWidget.data"
     }))),
     footer: Z,
@@ -241,9 +242,9 @@ var aj = React1.memo(function () {
     className: $_8141.rowAndColumnCount
   }, React.createElement("span", {
     className: $_8141.itemCount
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "column"
-  }), ": ", H), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), ": ", H), React.createElement("span", null, $_710$a$formatMessage({
     id: "row"
   }), ": ", F)), e$visible && React.createElement(rj, {
     id: e$grid.id,

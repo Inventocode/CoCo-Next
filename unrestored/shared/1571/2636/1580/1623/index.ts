@@ -4,9 +4,9 @@
  * 模块 ID：1623
  */
 
-var r = require("../1581/425")
+var r = require("../1782/425")
 var o = require("./1624/index")
-var i = require("../1686/246/index")("toPrimitive")
+var i = require("../1782/246/index")("toPrimitive")
 var /* [auto-meaningful-name] */Date$prototype = Date.prototype
 if (!(i in Date$prototype)) {
   r(Date$prototype, i, o)

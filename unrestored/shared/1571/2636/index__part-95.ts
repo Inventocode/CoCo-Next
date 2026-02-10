@@ -10,7 +10,7 @@ import * as Ln from "./35"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import * as Dn from "./19"
 import N from "./8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useEffect, useImperativeHandle, createElement, Fragment, isValidElement, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$_486 from "./486"
 import * as /* [auto-meaningful-name] */$_140 from "./140"
 import * as vb from "./54"
@@ -44,7 +44,7 @@ var Sb = function (e, t) {
   var /* [auto-meaningful-name] */e$onMouseEnter = e.onMouseEnter
   var w = "".concat(e$prefixCls, "-item")
   var C = function (e, t, n) {
-    var r = React.useRef({})
+    var r = useRef({})
     if (!("value" in r.current && !n(r.current.condition, t))) {
       r.current.value = e()
       r.current.condition = t
@@ -55,7 +55,7 @@ var Sb = function (e, t) {
   }, [e$open, e$flattenOptions], function (e, t) {
     return t[0] && e[1] !== t[1]
   })
-  var T = React.useRef(null)
+  var T = useRef(null)
   var S = function (e) {
     e.preventDefault()
   }
@@ -78,7 +78,7 @@ var Sb = function (e, t) {
     }
     return -1
   }
-  var j = React.useState(function () {
+  var j = useState(function () {
     return I(0)
   })
   var R = $_40_index.a(j, 2)
@@ -97,10 +97,10 @@ var Sb = function (e, t) {
       e$onActiveValue(null, -1, n)
     }
   }
-  React.useEffect(function () {
+  useEffect(function () {
     D(false !== e$defaultActiveFirstOption ? I(0) : -1)
   }, [C.length, e$searchValue])
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */T$current
     var t = setTimeout(function () {
       if (!e$multiple && e$open && 1 === e$values.size) {
@@ -133,7 +133,7 @@ var Sb = function (e, t) {
       e$onToggleOpen(false)
     }
   }
-  React.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       onKeyDown: function (e) {
         var /* [auto-meaningful-name] */e$which = e.which
@@ -175,7 +175,7 @@ var Sb = function (e, t) {
     }
   })
   if (0 === C.length) {
-    return React.createElement("div", {
+    return createElement("div", {
       role: "listbox",
       id: "".concat(r, "_list"),
       className: "".concat(w, "-empty"),
@@ -194,7 +194,7 @@ var Sb = function (e, t) {
     var /* [auto-meaningful-name] */n$children = n.children
     var l = $_795.a(n, true)
     var u = e$childrenAsData ? n$children : n$label
-    return t ? React.createElement("div", Dn.a({
+    return t ? createElement("div", Dn.a({
       "aria-label": "string" === typeof u ? u : null
     }, l, {
       key: e,
@@ -203,7 +203,7 @@ var Sb = function (e, t) {
       "aria-selected": e$values.has(n$value)
     }), n$value) : null
   }
-  return React.createElement(React.Fragment, null, React.createElement("div", {
+  return createElement(Fragment, null, createElement("div", {
     role: "listbox",
     id: "".concat(r, "_list"),
     style: {
@@ -211,7 +211,7 @@ var Sb = function (e, t) {
       width: 0,
       overflow: "hidden"
     }
-  }, P(k - 1), P(k), P(k + 1)), React.createElement($_1545_index.a, {
+  }, P(k - 1), P(k), P(k + 1)), createElement($_1545_index.a, {
     itemKey: "key",
     ref: T,
     data: C,
@@ -231,7 +231,7 @@ var Sb = function (e, t) {
     var /* [auto-meaningful-name] */e$value = e.value
     var /* [auto-meaningful-name] */e$data$key = e$data.key
     if (e$group) {
-      return React.createElement("div", {
+      return createElement("div", {
         className: N(w, "".concat(w, "-group"))
       }, undefined !== e$label ? e$label : e$data$key)
     }
@@ -258,7 +258,7 @@ var Sb = function (e, t) {
     if (undefined !== e$data$title) {
       T = e$data$title
     }
-    return React.createElement("div", Dn.a({}, v, {
+    return createElement("div", Dn.a({}, v, {
       "aria-selected": b,
       className: E,
       title: T,
@@ -273,9 +273,9 @@ var Sb = function (e, t) {
         }
       },
       style: e$data$style
-    }), React.createElement("div", {
+    }), createElement("div", {
       className: "".concat(y, "-content")
-    }, C), React.isValidElement(e$menuItemSelectedIcon) || b, O && React.createElement($_742.a, {
+    }, C), isValidElement(e$menuItemSelectedIcon) || b, O && createElement($_742.a, {
       className: "".concat(w, "-option-state"),
       customizeIcon: e$menuItemSelectedIcon,
       customizeIconProps: {
@@ -284,7 +284,7 @@ var Sb = function (e, t) {
     }, b ? "✓" : null))
   }))
 }
-var Ab = React.forwardRef(Sb)
+var Ab = forwardRef(Sb)
 Ab.displayName = "OptionList"
 var Ib = Ab
 var jb = function () {

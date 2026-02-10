@@ -6,14 +6,15 @@
 
 "use strict"
 
+import { useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
 import "./860"
-import * as /* [auto-meaningful-name] */$$_$$_16_index from "../../16/index"
+import { useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_64 from "../../64"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../15"
+import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
 function u(e) {
   return e instanceof HTMLInputElement ? e.value : e.innerHTML || ""
 }
@@ -73,12 +74,12 @@ function f(t) {
   var b = undefined === m$maxLength ? 1 / 0 : m$maxLength
   var /* [auto-meaningful-name] */m$isMultipleRow = m.isMultipleRow
   var E = undefined === m$isMultipleRow || m$isMultipleRow
-  var O = React.useRef(null)
-  var w = React.useRef()
-  var C = $$_$$_16_index.e(function (e) {
+  var O = useRef(null)
+  var w = useRef()
+  var C = useSelector(function (e) {
     return e.common.stageScale
   })
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */O$current = O.current
     if (O$current && t$target) {
       w.current = t$target
@@ -91,7 +92,7 @@ function f(t) {
       })
     }
   }, [t$callback, _, C, t$target])
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */O$current = O.current
     if (E && O$current) {
       var t = $$_$$_15.p(function (e) {
@@ -153,12 +154,12 @@ function h(t) {
   var /* [auto-meaningful-name] */t$options = t.options
   var /* [auto-meaningful-name] */UndefinedT$optionsT$options$sizeAdaptive = (undefined === t$options ? {} : t$options).sizeAdaptive
   var d = undefined === UndefinedT$optionsT$options$sizeAdaptive ? $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED : UndefinedT$optionsT$options$sizeAdaptive
-  var f = React.useRef(null)
-  var h = React.useRef()
-  var m = $$_$$_16_index.e(function (e) {
+  var f = useRef(null)
+  var h = useRef()
+  var m = useSelector(function (e) {
     return e.common.stageScale
   })
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */f$current = f.current
     if (f$current && t$target) {
       var r = u(t$target)

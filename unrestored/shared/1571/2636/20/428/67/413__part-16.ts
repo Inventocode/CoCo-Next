@@ -11,8 +11,8 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_145 from "../../../145"
 import * as /* [auto-meaningful-name] */$$_$$_$$_10_index from "../../../10/index"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_16_index from "../../../16/index"
+import { useState, useEffect, useCallback } from "react"
+import { useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_144 from "../../../144"
 var Me = function () {
   var e = $$_$$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r) {
@@ -37,7 +37,7 @@ var Me = function () {
 var Le = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$onload = e.onload
-  var r = $$_$$_$$_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.widgetMap
   }).get(t)
   var /* [auto-meaningful-name] */r$opacity = r.opacity
@@ -52,15 +52,15 @@ var Le = function (e) {
   var /* [auto-meaningful-name] */r$attributes$rotation = r$attributes.rotation
   var /* [auto-meaningful-name] */r$attributes$actionList = r$attributes.actionList
   var /* [auto-meaningful-name] */r$attributes$pivotToCenter = r$attributes.pivotToCenter
-  var v = React.useState(false)
+  var v = useState(false)
   var b = $$_$$_$$_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
   var O = t
-  var C = $$_$$_$$_16_index.e(function (e) {
+  var C = useSelector(function (e) {
     return e.imageFileMap
   })
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = $$_$$_index.getActor(t)
       if (!e) {
@@ -69,7 +69,7 @@ var Le = function (e) {
       e.set_position(r$position.x, r$position.y)
     }
   }, [t, y, r$position.x, r$position.y])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = $$_$$_index.getActor(t)
       if (!e) {
@@ -81,7 +81,7 @@ var Le = function (e) {
       e.set_scale(r$attributes$scaleAndLock.x, r$attributes$scaleAndLock.y)
     }
   }, [t, y, r$attributes$scaleAndLock])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = $$_$$_index.getActor(t)
       if (!e) {
@@ -90,7 +90,7 @@ var Le = function (e) {
       e.set_visible(r$visible)
     }
   }, [t, y, r$visible])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = $$_$$_index.getActor(t)
       if (e) {
@@ -98,7 +98,7 @@ var Le = function (e) {
       }
     }
   }, [O, t, y, r$attributes$selectedStyleId])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = $$_$$_index.getActor(t)
       if (!e) {
@@ -107,7 +107,7 @@ var Le = function (e) {
       e.set_rotation(r$attributes$rotation)
     }
   }, [t, y, r$attributes$rotation])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = $$_$$_index.getActor(t)
       if (!e) {
@@ -116,7 +116,7 @@ var Le = function (e) {
       e.set_alpha((undefined === r$opacity ? 100 : r$opacity) / 100)
     }
   }, [t, y, r$opacity])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = $$_$$_index.getActor(t)
       if (!e || !r$attributes$flipped) {
@@ -130,7 +130,7 @@ var Le = function (e) {
       }
     }
   }, [t, y, r$attributes$flipped])
-  var T = React.useCallback(function () {
+  var T = useCallback(function () {
     var e = $$_$$_$$_7.a(RegeneratorRuntime.mark(function e(t) {
       var r
       var /* [auto-meaningful-name] */RR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x
@@ -224,7 +224,7 @@ var Le = function (e) {
       return e.apply(this, arguments)
     }
   }(), [])
-  React.useEffect(function () {
+  useEffect(function () {
     var e = $$_$$_index.getStage(O)
     if (e) {
       T(e)

@@ -8,11 +8,11 @@
 
 import { d, p, h } from "./index__part-0"
 import * as s from "../6"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 var W = {
   rotation: [
     {
@@ -72,8 +72,8 @@ var W = {
 var U = function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$style = e.style
-  var r = $$_16_index.d()
-  var a = $$_16_index.e(function (e) {
+  var r = useDispatch()
+  var a = useSelector(function (e) {
     return e[e$type]
   })
   var c = function (e) {
@@ -125,7 +125,7 @@ var U = function (e) {
 }
 var H = function (e) {
   var /* [auto-meaningful-name] */e$style = e.style
-  var n = $$_16_index.d()
+  var n = useDispatch()
   return React.createElement("div", {
     className: "emulator-sensors",
     style: e$style
@@ -172,7 +172,7 @@ var H = function (e) {
   }, "摇一摇"))))
 }
 var V = function () {
-  var e = $$_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.visiblePanel
   })
   var t = function (t) {

@@ -6,6 +6,7 @@
 
 "use strict"
 
+import { isValidElement, PureComponent, Component } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_101_index from "./101/index"
@@ -89,7 +90,7 @@ var f = function (e) {
       }
     }
   })
-  return React.isValidElement(e$children) ? React1.cloneElement(e$children, l({}, e$children.props, {
+  return isValidElement(e$children) ? React1.cloneElement(e$children, l({}, e$children.props, {
     style: l({}, e$children.props.style, h.grid)
   })) : React1.createElement("div", {
     style: h.grid
@@ -280,7 +281,7 @@ var g = function (e) {
     }
   ])
   return t
-}(React.PureComponent || React.Component)
+}(PureComponent || Component)
 var v = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -491,7 +492,7 @@ var b = function (e) {
     }
   ])
   return t
-}(React.PureComponent || React.Component)
+}(PureComponent || Component)
 var w = function (e, t, n, r) {
   var /* [auto-meaningful-name] */r$clientWidth = r.clientWidth
   var /* [auto-meaningful-name] */r$clientHeight = r.clientHeight
@@ -691,7 +692,7 @@ var O = function (e) {
     }
   ])
   return t
-}(React.PureComponent || React.Component)
+}(PureComponent || Component)
 export { d }
 export { g }
 export { b }

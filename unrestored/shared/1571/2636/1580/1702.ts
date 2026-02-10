@@ -4,8 +4,8 @@
  * 模块 ID：1702
  */
 
-var r = require("./1706/86/index")
-var o = require("./1706/240")
+var r = require("./1661/86/index")
+var o = require("./1282/240")
 var /* [auto-meaningful-name] */Object$isExtensible = Object.isExtensible
 r({
   target: "Reflect",

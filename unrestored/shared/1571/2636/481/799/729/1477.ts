@@ -7,16 +7,16 @@
 "use strict"
 
 export { s as a }
-import * as /* [auto-meaningful-name] */$$_1549_index from "../1549/index"
+import * as /* [auto-meaningful-name] */$$_1549 from "../1549"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
 import * as /* [auto-meaningful-name] */$$_352 from "../352"
 import * as /* [auto-meaningful-name] */$$_220_index from "../220/index"
 function s() {
-  $$_1549_index.a({
+  $$_1549.a({
     callback: c,
     type: "error"
   })
-  $$_1549_index.a({
+  $$_1549.a({
     callback: c,
     type: "unhandledrejection"
   })

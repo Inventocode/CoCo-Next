@@ -7,21 +7,22 @@
 "use strict"
 
 import * as Dn from "./19"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
-import /* [auto-meaningful-name] */$_80_index from "./80/index"
+import { Provider, connect } from "react-redux"
+import /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useRef, useEffect, useLayoutEffect, useContext } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_434 from "./434"
 import * as /* [auto-meaningful-name] */Redux from "redux"
 function lN(e, t) {
-  var n = React1.useState(function () {
+  var n = useState(function () {
     return {
       inputs: t,
       result: e()
     }
   })[0]
-  var r = React1.useRef(true)
-  var o = React1.useRef(n)
+  var r = useRef(true)
+  var o = useRef(n)
   var i = r.current || Boolean(t && o.current.inputs && function (e, t) {
     if (e.length !== t.length) {
       return false
@@ -36,7 +37,7 @@ function lN(e, t) {
       inputs: t,
       result: e()
     }
-  React1.useEffect(function () {
+  useEffect(function () {
     r.current = false
     o.current = i
   }, [i])
@@ -3887,7 +3888,7 @@ var Lx = function (e, t) {
     return n ? e.selector + " { " + n + " }" : ""
   }).join(" ")
 }
-var Px = "undefined" !== typeof window && "undefined" !== typeof window.document && "undefined" !== typeof window.document.createElement ? React1.useLayoutEffect : React1.useEffect
+var Px = "undefined" !== typeof window && "undefined" !== typeof window.document && "undefined" !== typeof window.document.createElement ? useLayoutEffect : useEffect
 var Bx = function () {
   var e = document.querySelector("head")
   if (!e) {
@@ -3955,8 +3956,8 @@ function Gx(e, t) {
       }
     }(e)
   }, [e])
-  var r = React1.useRef(null)
-  var o = React1.useRef(null)
+  var r = useRef(null)
+  var o = useRef(null)
   var i = dN(CN(function (e) {
     var /* [auto-meaningful-name] */o$current = o.current
     if (!o$current) {
@@ -4182,8 +4183,8 @@ function eD() {
   $x()
 }
 function tD(e) {
-  var t = React1.useRef(e)
-  React1.useEffect(function () {
+  var t = useRef(e)
+  useEffect(function () {
     t.current = e
   })
   return t
@@ -4607,8 +4608,8 @@ function OD(e) {
 }
 var wD = [
   function (e) {
-    var t = React1.useRef(sD)
-    var n = React1.useRef(AN)
+    var t = useRef(sD)
+    var n = useRef(AN)
     var r = uN(function () {
       return {
         eventName: "mousedown",
@@ -4712,7 +4713,7 @@ var wD = [
       }
     }, [i])
   }, function (e) {
-    var t = React1.useRef(lD)
+    var t = useRef(lD)
     var n = uN(function () {
       return {
         eventName: "keydown",
@@ -4759,8 +4760,8 @@ var wD = [
       }
     }, [r])
   }, function (e) {
-    var t = React1.useRef(pD)
-    var n = React1.useRef(AN)
+    var t = useRef(pD)
+    var n = useRef(AN)
     var r = dN(function () {
       return t.current
     }, [])
@@ -4998,7 +4999,7 @@ function CD(e) {
   var /* [auto-meaningful-name] */e$customSensors = e.customSensors
   var /* [auto-meaningful-name] */e$enableDefaultSensors = e.enableDefaultSensors
   var a = [].concat(e$enableDefaultSensors ? wD : [], e$customSensors || [])
-  var s = React1.useState(function () {
+  var s = useState(function () {
     return function () {
       var e = null
       function t() {
@@ -5118,7 +5119,7 @@ function SD(e) {
   var /* [auto-meaningful-name] */e$sensors = e.sensors
   var /* [auto-meaningful-name] */e$nonce = e.nonce
   var /* [auto-meaningful-name] */e$dragHandleUsageInstructions = e.dragHandleUsageInstructions
-  var a = React1.useRef(null)
+  var a = useRef(null)
   eD()
   var s = tD(e)
   var c = dN(function () {
@@ -5138,8 +5139,8 @@ function SD(e) {
         return "rbd-announcement-" + e
       }(e)
     }, [e])
-    var n = React1.useRef(null)
-    React1.useEffect(function () {
+    var n = useRef(null)
+    useEffect(function () {
       var e = document.createElement("div")
       n.current = e
       e.id = t
@@ -5179,7 +5180,7 @@ function SD(e) {
       }).contextId + "-" + e.uniqueId
       var e
     }, [r, e$contextId1])
-    React1.useEffect(function () {
+    useEffect(function () {
       var e = document.createElement("div")
       e.id = o
       e.textContent = e$text
@@ -5212,7 +5213,7 @@ function SD(e) {
   }, [p])
   var g = function () {
     var e = uN(Vx, [])
-    React1.useEffect(function () {
+    useEffect(function () {
       return function () {
         requestAnimationFrame(e.clean)
       }
@@ -5231,10 +5232,10 @@ function SD(e) {
     }, p)))
   }, [v.scrollDroppable, p])
   var y = function (e) {
-    var t = React1.useRef({})
-    var n = React1.useRef(null)
-    var r = React1.useRef(null)
-    var o = React1.useRef(false)
+    var t = useRef({})
+    var n = useRef(null)
+    var r = useRef(null)
+    var o = useRef(false)
     var i = dN(function (e, n) {
       var r = {
         id: e,
@@ -5352,12 +5353,12 @@ function SD(e) {
     customSensors: e$sensors,
     enableDefaultSensors: false !== e.enableDefaultSensors
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     return O
   }, [O])
   return React.createElement(Zx.Provider, {
     value: S
-  }, React.createElement($_16_index.a, {
+  }, React.createElement(Provider, {
     context: zx,
     store: E
   }, e.children))
@@ -5548,7 +5549,7 @@ var GD = function (e) {
   return e.shouldPublishImmediately ? BD : FD
 }
 function WD(e) {
-  var t = React1.useContext(e)
+  var t = useContext(e)
   if (!t) {
     NN(false)
   }
@@ -5602,7 +5603,7 @@ var zD = function (e) {
   }
 }
 var YD = React.memo(function (e) {
-  var t = React1.useRef(null)
+  var t = useRef(null)
   var n = dN(function () {
     if (t.current) {
       clearTimeout(t.current)
@@ -5613,10 +5614,10 @@ var YD = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onTransitionEnd = e.onTransitionEnd
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$contextId = e.contextId
-  var s = React1.useState("open" === e.animate)
+  var s = useState("open" === e.animate)
   var c = s[0]
   var l = s[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     return c ? "open" !== e$animate ? (n(), l(false), HD) : t.current ? HD : (t.current = setTimeout(function () {
       t.current = null
       l(false)
@@ -5786,8 +5787,8 @@ function eM(e) {
       getDimension: l
     }
   }, [e$descriptor, l, c, t])
-  var d = React1.useRef(u)
-  var p = React1.useRef(true)
+  var d = useRef(u)
+  var p = useRef(true)
   Px(function () {
     e$registry.draggable.register(d.current)
     return function () {
@@ -5842,7 +5843,7 @@ var aM = {
 var sM = {
   dropAnimationFinished: Nk
 }
-var cM = $_16_index.c(function () {
+var cM = connect(function () {
   var e = function () {
     var e = CN(function (e, t) {
       return {
@@ -5994,7 +5995,7 @@ var cM = $_16_index.c(function () {
   pure: true,
   areStatePropsEqual: rM
 })(function (e) {
-  var t = React1.useRef(null)
+  var t = useRef(null)
   var n = dN(function (e) {
     t.current = e
   }, [])
@@ -6123,7 +6124,7 @@ var hM = {
     return document.body
   }
 }
-var mM = $_16_index.c(function () {
+var mM = connect(function () {
   var e = {
     placeholder: null,
     shouldAnimatePlaceholder: true,
@@ -6226,14 +6227,14 @@ var mM = $_16_index.c(function () {
   pure: true,
   areStatePropsEqual: rM
 })(function (e) {
-  var t = React1.useContext(Zx)
+  var t = useContext(Zx)
   if (!t) {
     NN(false)
   }
   var /* [auto-meaningful-name] */t$contextId = t.contextId
   var /* [auto-meaningful-name] */t$isMovementAllowed = t.isMovementAllowed
-  var o = React1.useRef(null)
-  var i = React1.useRef(null)
+  var o = useRef(null)
+  var i = useRef(null)
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$droppableId = e.droppableId
   var /* [auto-meaningful-name] */e$type = e.type
@@ -6267,7 +6268,7 @@ var mM = $_16_index.c(function () {
     }
   }, [t$isMovementAllowed, e$updateViewportMaxScroll])
   !function (e) {
-    var t = React1.useRef(null)
+    var t = useRef(null)
     var n = WD(Zx)
     var r = Qx("droppable")
     var /* [auto-meaningful-name] */n$registry = n.registry
@@ -6280,7 +6281,7 @@ var mM = $_16_index.c(function () {
         mode: e.mode
       }
     }, [e.droppableId, e.mode, e.type])
-    var c = React1.useRef(s)
+    var c = useRef(s)
     var l = uN(function () {
       return CN(function (e, n) {
         if (!t.current) {
@@ -6480,7 +6481,7 @@ var mM = $_16_index.c(function () {
     }, function (n, r) {
       return e$useClone$render(n, r, e$useClone$dragging)
     })
-    return $_80_index.createPortal(n, e$getContainerForClone())
+    return ReactDom.createPortal(n, e$getContainerForClone())
   }())
 })
 mM.defaultProps = hM

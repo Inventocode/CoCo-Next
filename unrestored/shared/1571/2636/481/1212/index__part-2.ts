@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as o from "./38"
+import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
 import * as /* [auto-meaningful-name] */$_1049 from "./1049"
 import * as /* [auto-meaningful-name] */$_2644 from "./2644"
 import * as /* [auto-meaningful-name] */$_918 from "./918"
@@ -80,9 +80,9 @@ var h = function () {
       e = {}
     }
     return {
-      allowUrls: o.f(this._options.whitelistUrls || [], this._options.allowUrls || [], e.whitelistUrls || [], e.allowUrls || []),
-      denyUrls: o.f(this._options.blacklistUrls || [], this._options.denyUrls || [], e.blacklistUrls || [], e.denyUrls || []),
-      ignoreErrors: o.f(this._options.ignoreErrors || [], e.ignoreErrors || [], d),
+      allowUrls: $$_799_38.f(this._options.whitelistUrls || [], this._options.allowUrls || [], e.whitelistUrls || [], e.allowUrls || []),
+      denyUrls: $$_799_38.f(this._options.blacklistUrls || [], this._options.denyUrls || [], e.blacklistUrls || [], e.denyUrls || []),
+      ignoreErrors: $$_799_38.f(this._options.ignoreErrors || [], e.ignoreErrors || [], d),
       ignoreInternal: "undefined" === typeof this._options.ignoreInternal || this._options.ignoreInternal
     }
   }

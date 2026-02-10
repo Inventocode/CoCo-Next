@@ -4,8 +4,8 @@
  * 模块 ID：2547
  */
 
-var r = require("./1443")
-var i = require("./1456/index")
+var r = require("./1443/index")
+var i = require("./1456")
 var o = require("../../../../../../253/2568/2569/2570/865/index")
 module.exports = function (e) {
   return r(e, o, i)

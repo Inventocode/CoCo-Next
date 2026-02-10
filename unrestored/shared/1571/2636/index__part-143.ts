@@ -6,16 +6,17 @@
 
 "use strict"
 
-import * as _n from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1205_index from "./1205/index"
 import * as /* [auto-meaningful-name] */$_1058_index from "./1058/index"
@@ -24,8 +25,8 @@ import * as KC from "./99"
 import qC from "./99"
 import * as /* [auto-meaningful-name] */$_301_index from "./301/index"
 var QC = ["addPrimitiveVariableName", "addArrayVariableName", "object.createNewObject", "addDocKey"]
-var ZC = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var ZC = memo(function () {
+  var e = useSelector(function (e) {
     return e.block.get("createVariableDialog")
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -35,30 +36,30 @@ var ZC = React1.memo(function () {
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
   var /* [auto-meaningful-name] */e$tips = e.tips
   var /* [auto-meaningful-name] */e$placeholder = e.placeholder
-  var c = React1.useState("")
+  var c = useState("")
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState("")
+  var p = useState("")
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = React1.useState(false)
+  var b = useState(false)
   var y = $_10_index.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = React1.useState(K.i.GLOBAL)
+  var w = useState(K.i.GLOBAL)
   var T = $_10_index.a(w, 2)
   var A = T[0]
   var j = T[1]
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var k = React1.useRef(null)
-  var x = React1.useRef(true)
-  var D = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var k = useRef(null)
+  var x = useRef(true)
+  var D = useSelector(function (e) {
     return e.project.currentScreenIndex
   })
-  var M = $_16_index.d()
-  React1.useEffect(function () {
+  var M = useDispatch()
+  useEffect(function () {
     if (e$visible) {
       setTimeout(function () {
         var /* [auto-meaningful-name] */k$current
@@ -68,12 +69,12 @@ var ZC = React1.memo(function () {
       }, 0)
     }
   }, [e$visible])
-  var L = React1.useCallback(function (e) {
+  var L = useCallback(function (e) {
     var t = ""
     if (e) {
       if (e$validators && x.current) {
         var n
-        var r = _n.a(e$validators)
+        var r = $_47_index.a(e$validators)
         try {
           for (r.s(); !(n = r.n()).done;) {
             var /* [auto-meaningful-name] */n$value = n.value
@@ -94,7 +95,7 @@ var ZC = React1.memo(function () {
     }
     v(e)
   }, [e$validators, A])
-  var P = React1.useCallback(function () {
+  var P = useCallback(function () {
     v("")
     d("")
     j(K.i.GLOBAL)
@@ -103,14 +104,14 @@ var ZC = React1.memo(function () {
       e$onClose()
     }
   }, [M, e$onClose])
-  var B = React1.useCallback(function (e) {
+  var B = useCallback(function (e) {
     if (E && !e) {
-      d($_710_index$a$formatMessage({
+      d($_710$a$formatMessage({
         id: "invalidVariableName"
       }))
     }
-  }, [$_710_index$a$formatMessage, E])
-  var F = React1.useCallback(function () {
+  }, [$_710$a$formatMessage, E])
+  var F = useCallback(function () {
     if (!u && g) {
       if (e$onConfirm) {
         e$onConfirm(g, A)
@@ -124,10 +125,10 @@ var ZC = React1.memo(function () {
   var W = function () {
     O(false)
   }
-  var U = React1.useCallback(function () {
+  var U = useCallback(function () {
     x.current = false
   }, [])
-  var H = React1.useCallback(function (e) {
+  var H = useCallback(function (e) {
     x.current = true
     var /* [auto-meaningful-name] */e$target$value = e.target.value
     L(e$target$value)
@@ -137,7 +138,7 @@ var ZC = React1.memo(function () {
     var t = ""
     if (g && e$validators) {
       var n
-      var r = _n.a(e$validators)
+      var r = $_47_index.a(e$validators)
       try {
         for (r.s(); !(n = r.n()).done;) {
           var /* [auto-meaningful-name] */n$value = n.value
@@ -158,26 +159,26 @@ var ZC = React1.memo(function () {
   var X = ""
   switch (e$title) {
     case "addPrimitiveVariableName":
-      q = $_710_index$a$formatMessage({
+      q = $_710$a$formatMessage({
         id: "screenVariable"
       })
-      X = $_710_index$a$formatMessage({
+      X = $_710$a$formatMessage({
         id: "globalVariable"
       })
       break
     case "addArrayVariableName":
-      q = $_710_index$a$formatMessage({
+      q = $_710$a$formatMessage({
         id: "screenArray"
       })
-      X = $_710_index$a$formatMessage({
+      X = $_710$a$formatMessage({
         id: "globalArray"
       })
       break
     case "object.createNewObject":
-      q = $_710_index$a$formatMessage({
+      q = $_710$a$formatMessage({
         id: "object.screenObject"
       })
-      X = $_710_index$a$formatMessage({
+      X = $_710$a$formatMessage({
         id: "object.globalObject"
       })
   }
@@ -193,15 +194,15 @@ var ZC = React1.memo(function () {
     callback: F
   })), React.createElement("p", {
     className: qC.dialogTitle
-  }, QC.includes(e$title) ? $_710_index$a$formatMessage({
+  }, QC.includes(e$title) ? $_710$a$formatMessage({
     id: e$title
-  }) : $_710_index$a$formatMessage({
+  }) : $_710$a$formatMessage({
     id: "addCurrentScreenIndexTitle"
   }, {
     currentScreenIndex: D + 1
   })), React.createElement("div", {
     className: N(qC.inputWrapper, u && qC.inputWaringWrapper)
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "name"
   })), React.createElement($_13_index.k, {
     ref: k,
@@ -217,7 +218,7 @@ var ZC = React1.memo(function () {
     className: qC.warningTips
   }, " ", u)), ("addPrimitiveVariableName" === e$title || "addArrayVariableName" === e$title || "object.createNewObject" === e$title) && React.createElement("div", {
     className: qC.inputWrapper
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "property"
   })), React.createElement("div", {
     className: qC.propertyBox,
@@ -261,13 +262,13 @@ var ZC = React1.memo(function () {
     onMouseDown: W
   }, React.createElement($_13_index.d, {
     onClick: P
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cancel"
   })), React.createElement($_13_index.d, {
     onClick: F,
     type: "primary",
     disabled: !!u || !g
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "confirm"
   }))), e$tips && React.createElement("span", {
     className: qC.bottomTips

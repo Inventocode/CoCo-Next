@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as o from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 function i(e, t, n) {
   return (e / t * 100).toFixed(n)
 }
@@ -32,7 +32,7 @@ function l(e, t) {
   var r = new Set(e)
   var i = new Set(t)
   var a = []
-  var s = o.a(r)
+  var s = $_47_index.a(r)
   try {
     for (s.s(); !(n = s.n()).done;) {
       var /* [auto-meaningful-name] */n$value = n.value

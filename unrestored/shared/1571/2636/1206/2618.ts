@@ -20,7 +20,7 @@ exports.getWoodIframeUrl = function (e) {
 }
 var r = require("./772")
 var o = require("./773/index")
-var i = require("./2624/885")
+var i = require("./2619/885")
 var a = new r.ApiSpec("wood", {
   setCurrentWoodProjectById: new r.MethodType(),
   setCurrentWoodProjectByUrl: new r.MethodType(),

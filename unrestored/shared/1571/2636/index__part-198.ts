@@ -15,12 +15,12 @@ import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
 import * as Ln from "./35"
 import * as Dn from "./19"
 import N from "./8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useContext, Children, createElement, isValidElement } from "react"
 import * as /* [auto-meaningful-name] */$_614 from "./614"
 $_614.a("topLeft", "topCenter", "topRight", "bottomLeft", "bottomCenter", "bottomRight")
 var KM = function (e) {
   var t
-  var n = React.useContext($_801_index.b)
+  var n = useContext($_801_index.b)
   var /* [auto-meaningful-name] */n$getPopupContainer = n.getPopupContainer
   var /* [auto-meaningful-name] */n$getPrefixCls = n.getPrefixCls
   var /* [auto-meaningful-name] */n$direction = n.direction
@@ -32,7 +32,7 @@ var KM = function (e) {
   var /* [auto-meaningful-name] */e$getPopupContainer = e.getPopupContainer
   var /* [auto-meaningful-name] */e$overlayClassName = e.overlayClassName
   var h = n$getPrefixCls("dropdown", e$prefixCls)
-  var m = React.Children.only(e$children)
+  var m = Children.only(e$children)
   var g = $_315.a(m, {
     className: N("".concat(h, "-trigger"), Ln.a({}, "".concat(h, "-rtl"), "rtl" === n$direction), m.props.className),
     disabled: e$disabled
@@ -42,7 +42,7 @@ var KM = function (e) {
   if (v && -1 !== v.indexOf("contextMenu")) {
     t = true
   }
-  return React.createElement($_1543_index.a, Dn.a({
+  return createElement($_1543_index.a, Dn.a({
     arrow: e$arrow,
     alignPoint: t
   }, e, {
@@ -62,14 +62,14 @@ var KM = function (e) {
         var n
         var /* [auto-meaningful-name] */e$overlay = e.overlay
         n = "function" === typeof e$overlay ? e$overlay() : e$overlay
-        var /* [auto-meaningful-name] */NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props = (n = React.Children.only("string" === typeof n ? React.createElement("span", null, n) : n)).props
-        $_364_index.a(!NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.mode || "vertical" === NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.mode, "Dropdown", "mode=\"".concat(NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.mode, "\" is not supported for Dropdown's Menu."))
-        var /* [auto-meaningful-name] */NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$selectable = NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.selectable
-        var a = undefined !== NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$selectable && NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$selectable
-        var /* [auto-meaningful-name] */NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon = NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.expandIcon
-        var c = "undefined" !== typeof NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon && React.isValidElement(NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon) ? NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon : React.createElement("span", {
+        var /* [auto-meaningful-name] */NChildren$onlyStringTypeofNCreateElementSpanNullNN$props = (n = Children.only("string" === typeof n ? createElement("span", null, n) : n)).props
+        $_364_index.a(!NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.mode || "vertical" === NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.mode, "Dropdown", "mode=\"".concat(NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.mode, "\" is not supported for Dropdown's Menu."))
+        var /* [auto-meaningful-name] */NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$selectable = NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.selectable
+        var a = undefined !== NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$selectable && NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$selectable
+        var /* [auto-meaningful-name] */NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon = NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.expandIcon
+        var c = "undefined" !== typeof NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon && isValidElement(NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon) ? NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon : createElement("span", {
           className: "".concat(t, "-menu-submenu-arrow")
-        }, React.createElement(hS, {
+        }, createElement(hS, {
           className: "".concat(t, "-menu-submenu-arrow-icon")
         }))
         return "string" === typeof n.type ? n : $_315.a(n, {

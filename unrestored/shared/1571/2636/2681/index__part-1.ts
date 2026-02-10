@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_275 from "./275"
-import * as /* [auto-meaningful-name] */$$_710_273_index from "../710/273/index"
+import * as /* [auto-meaningful-name] */$_273 from "./273"
 import * as /* [auto-meaningful-name] */$_808 from "./808"
 var d = ["numeric", "style"]
 function h(e, t, n, r, i) {
@@ -29,8 +29,8 @@ function h(e, t, n, r, i) {
         n = {}
       }
       var /* [auto-meaningful-name] */n$format = n.format
-      var c = !!n$format && $$_710_273_index.f(e$formats, "relative", n$format, e$onError) || {}
-      return t(e$locale, $$_710_273_index.e(n, d, c))
+      var c = !!n$format && $_273.f(e$formats, "relative", n$format, e$onError) || {}
+      return t(e$locale, $_273.e(n, d, c))
     }(e, t, i).format(n, r)
   } catch (s) {
     e.onError(new $_275.b("Error formatting relative time.", s))
@@ -59,8 +59,8 @@ function A(e, t, n, r) {
   var /* [auto-meaningful-name] */r$format = r.format
   var l = p(p({}, e$timeZone && {
     timeZone: e$timeZone
-  }), r$format && $$_710_273_index.f(e$formats, t, r$format, e$onError))
-  var f = $$_710_273_index.e(r, _, l)
+  }), r$format && $_273.f(e$formats, t, r$format, e$onError))
+  var f = $_273.e(r, _, l)
   if (!("time" !== t || f.hour || f.minute || f.second)) {
     f = p(p({}, f), {
       hour: "numeric",
@@ -127,7 +127,7 @@ function w(e, t, n, r) {
   if (!Intl.PluralRules) {
     e$onError(new $_808.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"))
   }
-  var c = $$_710_273_index.e(r, b)
+  var c = $_273.e(r, b)
   try {
     return t(e$locale, c).select(n)
   } catch (u) {

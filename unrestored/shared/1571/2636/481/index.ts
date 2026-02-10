@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$_1212_index from "./1212/index"
 import * as /* [auto-meaningful-name] */$_342 from "./342"
 import * as /* [auto-meaningful-name] */$_799_index from "./799/index"
 import * as /* [auto-meaningful-name] */$_656 from "./656"
-import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
+import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
 function c(e, t) {
   $_342.b({
     id: e,

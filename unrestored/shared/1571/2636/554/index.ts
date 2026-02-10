@@ -7,6 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import { useRef } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
@@ -19,8 +20,8 @@ import * as /* [auto-meaningful-name] */$$_148 from "../148"
 import * as /* [auto-meaningful-name] */$_245 from "./245"
 import /* [auto-meaningful-name] */$_2451 from "./245"
 import * as m from "../6"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_379 from "../379"
 var b = function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
@@ -32,7 +33,7 @@ var b = function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$sizeType = e.sizeType
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var y = React.useRef(null)
+  var y = useRef(null)
   var E = function (e) {
     var t = ""
     if ("correct" === e) {

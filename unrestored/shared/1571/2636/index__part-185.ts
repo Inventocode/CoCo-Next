@@ -9,15 +9,16 @@
 import { fj, hj } from "./index__part-181"
 import { Rj } from "./index__part-184"
 var Ij
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_753 from "./753"
 import /* [auto-meaningful-name] */$_7531 from "./753"
-var Dj = React1.memo(function (e) {
+var Dj = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
@@ -25,15 +26,15 @@ var Dj = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$urls = e.urls
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
   var /* [auto-meaningful-name] */e$selectHandler = e.selectHandler
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(e$urls && e$urls.length > 1 ? e$urls[0] : e$cdnUrl)
+  var p = useState(e$urls && e$urls.length > 1 ? e$urls[0] : e$cdnUrl)
   var m = $_10_index.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = React1.useRef(null)
+  var v = useRef(null)
   var b = e$urls && e$urls.length > 1
   var y = "image" + t
   return React.createElement(Rj, {

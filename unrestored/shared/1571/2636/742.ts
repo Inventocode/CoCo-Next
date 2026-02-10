@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement } from "react"
 import * as o from "./8"
 import i from "./8"
 var _a
@@ -19,7 +19,7 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$children = e.children
   t = "function" === typeof e$customizeIcon ? e$customizeIcon(e$customizeIconProps) : e$customizeIcon
-  return React.createElement("span", {
+  return createElement("span", {
     className: e$className,
     onMouseDown: function (e) {
       e.preventDefault()
@@ -34,7 +34,7 @@ _a = function (e) {
     unselectable: "on",
     onClick: e$onClick,
     "aria-hidden": true
-  }, undefined !== t ? t : React.createElement("span", {
+  }, undefined !== t ? t : createElement("span", {
     className: i(e$className.split(/\s+/).map(function (e) {
       return "".concat(e, "-icon")
     }))

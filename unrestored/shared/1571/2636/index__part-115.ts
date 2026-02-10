@@ -6,15 +6,16 @@
 
 "use strict"
 
-import * as te from "./15"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_703 from "./703"
 import /* [auto-meaningful-name] */$_7031 from "./703"
@@ -24,18 +25,18 @@ var uO = te.p(function () {
     e.focus()
   }
 }, 60)
-var dO = React1.memo(function (e) {
+var dO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = React1.useRef({})
-  var c = $_16_index.e(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var s = useRef({})
+  var c = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */s$current = s.current
     if (s$current && c) {
       Object.entries(s$current).forEach(function (e) {
@@ -62,7 +63,7 @@ var dO = React1.memo(function (e) {
     className: N("changeOptions", $_7031.optionsFormItem, $_7031.formItemWrapper)
   }, React.createElement("div", {
     className: $_7031.formTitle
-  }, React.createElement("p", null, $_710_index$a$formatMessage({
+  }, React.createElement("p", null, $_710$a$formatMessage({
     id: "radioOptionsContent"
   })), React.createElement("div", {
     className: $_7031.count
@@ -75,7 +76,7 @@ var dO = React1.memo(function (e) {
     className: N(k.a({}, $_7031.disabled, 1 === i.length))
   }, React.createElement($_13_index.j, {
     type: "icon-minus"
-  })), React.createElement("p", null, i.length, $_710_index$a$formatMessage({
+  })), React.createElement("p", null, i.length, $_710$a$formatMessage({
     id: "option"
   })), React.createElement("span", {
     onClick: function () {

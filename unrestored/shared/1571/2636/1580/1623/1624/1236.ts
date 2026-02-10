@@ -4,7 +4,7 @@
  * 模块 ID：1236
  */
 
-var r = require("../../1705/231")
+var r = require("../../1282/231")
 module.exports = function (e, t) {
   var n
   var o

@@ -6,20 +6,21 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_472 from "./472"
 import /* [auto-meaningful-name] */$_4721 from "./472"
-var bh = React1.memo(function (e) {
+var bh = memo(function (e) {
   var /* [auto-meaningful-name] */e$actorId = e.actorId
   var /* [auto-meaningful-name] */e$top = e.top
   var /* [auto-meaningful-name] */e$left = e.left
   var /* [auto-meaningful-name] */e$stage = e.stage
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var a = React1.useRef(null)
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  React1.useEffect(function () {
+  var a = useRef(null)
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  useEffect(function () {
     var /* [auto-meaningful-name] */a$current = a.current
     var t = function (t) {
       if (!(t.target instanceof Element && (null === a$current || undefined === a$current ? undefined : a$current.contains(t.target)))) {
@@ -57,7 +58,7 @@ var bh = React1.memo(function (e) {
       }
       e$onClose()
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "actor.setPivot"
   })), React.createElement("div", {
     className: $_4721.menuItem,
@@ -73,7 +74,7 @@ var bh = React1.memo(function (e) {
         e$onClose()
       }
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "actor.resetPivot"
   })))
 })

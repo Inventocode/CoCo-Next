@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_$$_517 from "../../517"
 import * as /* [auto-meaningful-name] */$$_$$_801_index from "../../801/index"
 import * as /* [auto-meaningful-name] */$$_$$_801_694_index from "../../801/694/index"
 import * as /* [auto-meaningful-name] */$$_$$_224_792 from "../../224/792"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useCallback, useRef, useMemo, createElement, useEffect } from "react"
 import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
 import * as /* [auto-meaningful-name] */$$_609 from "../609"
 var wn = ["getTargetContainer", "getPopupContainer", "renderEmpty", "pageHeader", "input", "form"]
@@ -57,7 +57,7 @@ var On = function (e) {
   var /* [auto-meaningful-name] */e$legacyLocale = e.legacyLocale
   var /* [auto-meaningful-name] */e$parentContext = e.parentContext
   var /* [auto-meaningful-name] */e$iconPrefixCls = e.iconPrefixCls
-  var m = React.useCallback(function (t, n) {
+  var m = useCallback(function (t, n) {
     var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
     if (n) {
       return n
@@ -82,7 +82,7 @@ var On = function (e) {
     }
   })
   var b = function (e, t, n) {
-    var r = React.useRef({})
+    var r = useRef({})
     if (!("value" in r.current && !n(r.current.condition, t))) {
       r.current.value = e()
       r.current.condition = t
@@ -97,7 +97,7 @@ var On = function (e) {
       return e[n] !== t[n]
     })
   })
-  var w = React.useMemo(function () {
+  var w = useMemo(function () {
     return {
       prefixCls: e$iconPrefixCls,
       csp: e$csp
@@ -112,32 +112,32 @@ var On = function (e) {
     x = $$_$$_19.a($$_$$_19.a({}, x), e$form.validateMessages)
   }
   if (Object.keys(x).length > 0) {
-    E = React.createElement(pe, {
+    E = createElement(pe, {
       validateMessages: x
     }, e$children)
   }
   if (e$locale) {
-    E = React.createElement(Ee, {
+    E = createElement(Ee, {
       locale: e$locale,
       _ANT_MARK__: "internalMark"
     }, E)
   }
   if (e$iconPrefixCls) {
-    E = React.createElement($$_$$_224_792.a.Provider, {
+    E = createElement($$_$$_224_792.a.Provider, {
       value: w
     }, E)
   }
   if (e$componentSize) {
-    E = React.createElement($$_$$_517.a, {
+    E = createElement($$_$$_517.a, {
       size: e$componentSize
     }, E)
   }
-  return React.createElement($$_$$_801_index.b.Provider, {
+  return createElement($$_$$_801_index.b.Provider, {
     value: b
   }, E)
 }
 var kn = function (e) {
-  React.useEffect(function () {
+  useEffect(function () {
     if (e.direction) {
       Vt.config({
         rtl: "rtl" === e.direction
@@ -147,9 +147,9 @@ var kn = function (e) {
       })
     }
   }, [e.direction])
-  return React.createElement($$_$$_801_694_index.a, null, function (t, n, o) {
-    return React.createElement($$_$$_801_index.a, null, function (t) {
-      return React.createElement(On, $$_$$_19.a({
+  return createElement($$_$$_801_694_index.a, null, function (t, n, o) {
+    return createElement($$_$$_801_index.a, null, function (t) {
+      return createElement(On, $$_$$_19.a({
         parentContext: t,
         legacyLocale: o
       }, e))

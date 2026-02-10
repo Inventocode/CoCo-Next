@@ -7,11 +7,11 @@
 "use strict"
 
 import /* [auto-meaningful-name] */$$_$$_8 from "../../8"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement } from "react"
 import * as /* [auto-meaningful-name] */$$_$$_21 from "../../21"
 import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
 import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
-import * as /* [auto-meaningful-name] */$$_$$_616_802_692 from "../../616/802/692"
+import * as /* [auto-meaningful-name] */$_692 from "./692"
 function k(e) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$motion = e.motion
@@ -45,12 +45,12 @@ function S(e) {
       animation: e$maskAnimation
     }))
   }
-  return React.createElement($$_$$_616_802_692.a, $$_$$_19.a({}, f, {
+  return createElement($_692.a, $$_$$_19.a({}, f, {
     visible: e$visible,
     removeOnLeave: true
   }), function (e) {
     var /* [auto-meaningful-name] */e$className = e.className
-    return React.createElement("div", {
+    return createElement("div", {
       style: {
         zIndex: e$zIndex
       },

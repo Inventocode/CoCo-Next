@@ -6,15 +6,16 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_57_index from "./57/index"
+import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1200 from "./1200"
 import /* [auto-meaningful-name] */$_12001 from "./1200"
-var Ge = React1.memo(function (e) {
+var Ge = memo(function (e) {
   var /* [auto-meaningful-name] */e$stroke = e.stroke
   var n = undefined === e$stroke ? "white" : e$stroke
   return React.createElement("svg", {

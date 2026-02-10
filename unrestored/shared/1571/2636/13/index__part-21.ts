@@ -7,13 +7,14 @@
 "use strict"
 
 import /* [auto-meaningful-name] */React from "react"
+import { memo, forwardRef, useRef, useState, useImperativeHandle } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$_794 from "./794"
 import /* [auto-meaningful-name] */$_7941 from "./794"
 import "./881"
-var Ue = React1.memo(React1.forwardRef(function (e, t) {
+var Ue = memo(forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$sourceImage = e.sourceImage
   var /* [auto-meaningful-name] */e$defaultScale = e.defaultScale
   var l = undefined === e$defaultScale ? 1 : e$defaultScale
@@ -29,8 +30,8 @@ var Ue = React1.memo(React1.forwardRef(function (e, t) {
   var b = undefined === e$minScale ? 1 : e$minScale
   var /* [auto-meaningful-name] */e$maxScale = e.maxScale
   var E = undefined === e$maxScale ? 2 : e$maxScale
-  var O = React1.useRef(null)
-  var w = React1.useState(l)
+  var O = useRef(null)
+  var w = useState(l)
   var C = $$_10_index.a(w, 2)
   var T = C[0]
   var S = C[1]
@@ -44,7 +45,7 @@ var Ue = React1.memo(React1.forwardRef(function (e, t) {
     }
     S(t)
   }
-  React1.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       target: O.current,
       setScale: function (e) {

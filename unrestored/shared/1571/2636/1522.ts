@@ -7,20 +7,21 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
+import { memo, useRef, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useSelector, useDispatch } from "react-redux"
 import * as c from "./8"
 import l from "./8"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as p from "./99"
 import f from "./99"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 var _a
-_a = React.memo(function () {
-  var t = $_16_index.e(function (e) {
+_a = memo(function () {
+  var t = useSelector(function (e) {
     return e.block.get("commonInputDialog")
   })
   var /* [auto-meaningful-name] */t$visible = t.visible
@@ -32,18 +33,18 @@ _a = React.memo(function () {
   var /* [auto-meaningful-name] */t$validator = t.validator
   var /* [auto-meaningful-name] */t$confirmCallback = t.confirmCallback
   var /* [auto-meaningful-name] */t$cancelCallback = t.cancelCallback
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var O = React.useRef(null)
-  var w = $_16_index.d()
-  var C = React.useState("")
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var O = useRef(null)
+  var w = useDispatch()
+  var C = useState("")
   var T = $_10_index.a(C, 2)
   var S = T[0]
   var A = T[1]
-  var I = React.useState(t$defaultValue || "")
+  var I = useState(t$defaultValue || "")
   var j = $_10_index.a(I, 2)
   var N = j[0]
   var R = j[1]
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */O$current
     R(t$defaultValue || "")
     if (t$visible) {
@@ -85,16 +86,16 @@ _a = React.memo(function () {
     callback: x
   })), React1.createElement("p", {
     className: f.dialogTitle
-  }, t$title && $_710_index$a$formatMessage({
+  }, t$title && $_710$a$formatMessage({
     id: t$title
   }) || ""), React1.createElement("div", {
     className: f.inputWrapper
-  }, React1.createElement("span", null, $_710_index$a$formatMessage({
+  }, React1.createElement("span", null, $_710$a$formatMessage({
     id: "name"
   })), React1.createElement($_13_index.k, {
     ref: O,
     warning: !!S,
-    placeholder: t$placeholder && $_710_index$a$formatMessage({
+    placeholder: t$placeholder && $_710$a$formatMessage({
       id: t$placeholder
     }),
     onChange: function (e) {
@@ -106,19 +107,19 @@ _a = React.memo(function () {
     value: N
   }), S && React1.createElement("div", {
     className: f.warningTips
-  }, " ", $_710_index$a$formatMessage({
+  }, " ", $_710$a$formatMessage({
     id: S
   }))), React1.createElement("div", {
     className: f.confirmBox
   }, React1.createElement($_13_index.d, {
     onClick: k
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cancel"
   })), React1.createElement($_13_index.d, {
     onClick: x,
     type: "primary",
     disabled: !!S || !N
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "confirm"
   }))))
 })

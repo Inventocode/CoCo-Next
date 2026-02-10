@@ -14,12 +14,12 @@ var s = require("./1403")
 var /* [auto-meaningful-name] */s$format = s.format
 var /* [auto-meaningful-name] */s$inspect = s.inspect
 var /* [auto-meaningful-name] */require$$_402$codes$ERR_INVALID_ARG_TYPE = require("../402").codes.ERR_INVALID_ARG_TYPE
-var f = require("../../1410/311/index")
+var f = require("../311/index")
 var /* [auto-meaningful-name] */f$kResistStopPropagation = f.kResistStopPropagation
 var /* [auto-meaningful-name] */f$AggregateError = f.AggregateError
 var /* [auto-meaningful-name] */f$SymbolDispose = f.SymbolDispose
-var _ = globalThis.AbortSignal || require("../../1410/1159/857").AbortSignal
-var A = globalThis.AbortController || require("../../1410/1159/857").AbortController
+var _ = globalThis.AbortSignal || require("./857").AbortSignal
+var A = globalThis.AbortController || require("./857").AbortController
 var /* [auto-meaningful-name] */Object$getPrototypeOfOI$markFunctionEReturnI$wrapFunctionEForSwitchE$prevE$nextCase0CaseEndReturnE$stopE$constructor = Object.getPrototypeOf(o(i.mark(function e() {
   return i.wrap(function (e) {
     for (;;) {
@@ -99,7 +99,7 @@ module.exports = {
   deprecate: function (e, t) {
     return e
   },
-  addAbortListener: require("../1161/983").addAbortListener || function (e, t) {
+  addAbortListener: require("./983").addAbortListener || function (e, t) {
     if (undefined === e) {
       throw new require$$_402$codes$ERR_INVALID_ARG_TYPE("signal", "AbortSignal", e)
     }

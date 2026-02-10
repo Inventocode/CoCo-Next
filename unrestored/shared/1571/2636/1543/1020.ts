@@ -6,29 +6,29 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_80_index from "../80/index"
-import /* [auto-meaningful-name] */$$_80_index1 from "../80/index"
+import { forwardRef, useRef, useImperativeHandle, useEffect } from "react"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */$_378 from "./378"
-var s = React.forwardRef(function (e, t) {
+var s = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
   var /* [auto-meaningful-name] */e$children = e.children
-  var c = React.useRef()
-  React.useImperativeHandle(t, function () {
+  var c = useRef()
+  useImperativeHandle(t, function () {
     return {}
   })
-  var u = React.useRef(false)
+  var u = useRef(false)
   if (!u.current && $_378.a()) {
     c.current = e$getContainer()
     u.current = true
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if (!(null === e$didUpdate || undefined === e$didUpdate)) {
       e$didUpdate(e)
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       var /* [auto-meaningful-name] */c$current
       var /* [auto-meaningful-name] */c$current$parentNode
@@ -37,7 +37,7 @@ var s = React.forwardRef(function (e, t) {
       }
     }
   }, [])
-  return c.current ? $$_80_index1.createPortal(e$children, c.current) : null
+  return c.current ? ReactDom1.createPortal(e$children, c.current) : null
 })
 export { s as a }
 export default s

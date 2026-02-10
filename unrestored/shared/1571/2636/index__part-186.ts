@@ -15,37 +15,38 @@ import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_164 from "./164"
 import /* [auto-meaningful-name] */$_1641 from "./164"
-var Pj = React1.memo(function (e) {
+var Pj = memo(function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$searchName = e.searchName
   var /* [auto-meaningful-name] */e$selectedIds = e.selectedIds
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
   var /* [auto-meaningful-name] */e$selectHandler = e.selectHandler
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var s = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var s = useDispatch()
   var c = React.useState({})
   var l = $_10_index.a(c, 2)[1]
   var u = React.useCallback(function () {
     return l({})
   }, [])
-  var d = React1.useState("")
+  var d = useState("")
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
   var v = $_25_index.a(Et.jb()).reverse()
-  var b = $_16_index.e(function (e) {
+  var b = useSelector(function (e) {
     return e.resource.iconFileList.reverse()
   })
-  var y = $_16_index.e(function (e) {
+  var y = useSelector(function (e) {
     return e.resource.soundFileList.reverse()
   })
   var E = function (e) {
@@ -76,7 +77,7 @@ var Pj = React1.memo(function (e) {
     accept: e$mode === Tn.c.ImageLibrary ? $_133.f : e$mode === Tn.c.SoundLibrary ? $_135.h : e$mode === Tn.c.IconLibrary ? "image/svg+xml" : ""
   }, React.createElement($_13_index.j, {
     type: "icon-add2"
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "Resource.upload"
   }))), function () {
     if (e$mode === Tn.c.ImageLibrary) {

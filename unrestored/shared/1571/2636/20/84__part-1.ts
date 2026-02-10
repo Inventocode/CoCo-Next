@@ -10,7 +10,7 @@ var r
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as a from "../7"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_48_index from "../48/index"
 var l = new Map()
 var /* [auto-meaningful-name] */_APP_ = "!@_APP_@!"

@@ -5,7 +5,7 @@
  */
 
 var r = require("./1333")
-var i = require("./1336/index")
+var i = require("./1336")
 var o = require("./2020/index")
 function a(e, t) {
   return new o(t).process(e)

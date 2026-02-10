@@ -13,23 +13,24 @@ import * as /* [auto-meaningful-name] */$_215 from "./215"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useCallback, useMemo, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_397 from "./397"
 import /* [auto-meaningful-name] */$_3971 from "./397"
-var MO = React1.memo(function (e) {
+var MO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "rotation" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig$label = e.formConfig.label
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var s = e$getValue(n)
   var c = 180 * s / Math.PI % 360
   if (c > 180) {
@@ -39,13 +40,13 @@ var MO = React1.memo(function (e) {
     c += 360
   }
   c = Math.round(c)
-  var l = React1.useState(true)
+  var l = useState(true)
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
   return React.createElement($_13_index.i, {
     className: N(qv.formItemWrapper),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: e$formConfig$label
     })
   }, React.createElement($_13_index.k, {
@@ -74,14 +75,14 @@ var MO = React1.memo(function (e) {
     dependency: s
   }))
 })
-var LO = React1.memo(function (e) {
+var LO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "flipped" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig$label = e.formConfig.label
   var a = undefined === e$formConfig$label ? "flip" : e$formConfig$label
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var c = e$getValue(n) || {}
   var l = function (e) {
     e$onChange(n, D.a(D.a({}, c), {}, k.a({}, e, !c[e])))
@@ -111,7 +112,7 @@ var LO = React1.memo(function (e) {
     className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
   }, React.createElement("p", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: a
   })), React.createElement("div", {
     className: qv.formInputNumberRow
@@ -123,7 +124,7 @@ var LO = React1.memo(function (e) {
     className: qv.btnIcon
   }, React.createElement($_13_index.j, {
     type: "icon-actor-horizontal"
-  })), $_710_index$a$formatMessage({
+  })), $_710$a$formatMessage({
     id: "horizontal"
   }))), React.createElement($_13_index.i, null, React.createElement(Zv, {
     hasIcon: true,
@@ -133,12 +134,12 @@ var LO = React1.memo(function (e) {
     className: qv.btnIcon
   }, React.createElement($_13_index.j, {
     type: "icon-actor-vertical"
-  })), $_710_index$a$formatMessage({
+  })), $_710$a$formatMessage({
     id: "vertical"
   })))))
 })
 var PO = [[$_144.e, $_144.c], [$_144.e, $_144.c]]
-var BO = React1.memo(function (e) {
+var BO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "scaleAndLock" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -164,9 +165,9 @@ var BO = React1.memo(function (e) {
   var _ = g.x
   var v = g.y
   var b = g.ratio || false
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var E = React1.useRef({})
-  var O = React1.useCallback(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var E = useRef({})
+  var O = useCallback(function () {
     var /* [auto-meaningful-name] */E$current = E.current
     if (E$current && (undefined !== E$current.x || undefined !== E$current.y)) {
       e$onChange(n, E$current)
@@ -193,10 +194,10 @@ var BO = React1.memo(function (e) {
       }
     }
   }, [e$getValue, e$onChange, n])
-  var w = React1.useMemo(function () {
+  var w = useMemo(function () {
     return Lodash.debounce(O, 50)
   }, [O])
-  var C = React1.useCallback(function (e, t, n) {
+  var C = useCallback(function (e, t, n) {
     var r = k.a({}, t, parseInt(n || "1") / d)
     if (b) {
       if ("x" === t) {
@@ -226,13 +227,13 @@ var BO = React1.memo(function (e) {
     E.current = D.a(D.a(D.a({}, g), E$current), r)
     e()
   }, [d, b, g])
-  var T = React1.useMemo(function () {
+  var T = useMemo(function () {
     return C.bind(undefined, w, "x")
   }, [C, w])
-  var S = React1.useMemo(function () {
+  var S = useMemo(function () {
     return C.bind(undefined, w, "y")
   }, [C, w])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (undefined === e$getValue(n)) {
       e$onChange(n, p)
     }
@@ -242,14 +243,14 @@ var BO = React1.memo(function (e) {
     className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
   }, React.createElement("p", {
     className: "coco-form-item-label"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: l
   })), React.createElement("div", {
     className: qv.formInputNumberRow
   }, React.createElement($_13_index.i, {
     className: N("changeWidth", $_3971.formItem)
   }, React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "width"
     }),
     defaultValue: Math.round(_ * d),
@@ -280,7 +281,7 @@ var BO = React1.memo(function (e) {
   })), React.createElement($_13_index.i, {
     className: N("changeHeight", $_3971.formItem)
   }, React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "height"
     }),
     defaultValue: Math.round(v * d),

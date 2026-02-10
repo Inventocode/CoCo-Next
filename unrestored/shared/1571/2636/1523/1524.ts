@@ -6,7 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
+import * as /* [auto-meaningful-name] */$$_710 from "../710"
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as a from "../8"
@@ -20,7 +21,7 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$onSelect = e.onSelect
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
   function d(e) {
     if (e$onSelect) {
       e$onSelect(e$index, e)
@@ -36,12 +37,12 @@ _a = function (e) {
   }, React1.createElement("div", {
     onClick: d.bind(null, "number"),
     className: s("number" === e$type && $_1551.active)
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "storageItemNumber"
   })), React1.createElement("div", {
     onClick: d.bind(null, "string"),
     className: s("string" === e$type && $_1551.active)
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "storageItemString"
   })))
 }

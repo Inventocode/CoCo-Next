@@ -7,17 +7,17 @@
 "use strict"
 
 var r = require("../../../../../207/787/399")
-var i = require("../1410/311/974/index")
+var i = require("./311/974/index")
 var o = require("../../../../../207/787/180")
 var a = require("../../../../../207/787/204")
-var s = require("../../../../../1058/1393/1143/283/index")
-var c = require("../../../../../1058/1393/1143/284/index")
+var s = require("../../283/index")
+var c = require("../../284/index")
 var u = require("../../../../../207/787/711/index")
 var l = require("./427/1403")
 var /* [auto-meaningful-name] */l$format = l.format
 var /* [auto-meaningful-name] */l$inspect = l.inspect
-var /* [auto-meaningful-name] */require$$_1410_311_index$AggregateError = require("../1410/311/index").AggregateError
-var p = globalThis.AggregateError || require$$_1410_311_index$AggregateError
+var /* [auto-meaningful-name] */require$_311_index$AggregateError = require("./311/index").AggregateError
+var p = globalThis.AggregateError || require$_311_index$AggregateError
 var _ = Symbol("kIsNodeError")
 var A = ["string", "function", "number", "object", "Function", "Object", "boolean", "bigint", "symbol"]
 var g = /^([A-Z][a-z0-9]*)+$/

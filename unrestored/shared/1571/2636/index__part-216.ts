@@ -9,42 +9,43 @@
 import { nb } from "./index__part-92"
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch, batch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_708 from "./708"
 import /* [auto-meaningful-name] */$_7081 from "./708"
-var qP = React1.memo(function () {
-  var e = $_16_index.e(function (e) {
+var qP = memo(function () {
+  var e = useSelector(function (e) {
     return e.common.switchImageDialogInfo
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$imageOpenFileId = e.imageOpenFileId
   var /* [auto-meaningful-name] */e$imageCloseFileId = e.imageCloseFileId
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = React1.useState("")
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var a = useState("")
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState("")
+  var u = useState("")
   var d = $_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState("")
+  var g = useState("")
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       l(e$imageOpenFileId)
       m(e$imageCloseFileId)
     }
   }, [e$imageCloseFileId, e$imageOpenFileId, e$visible])
-  var E = $_16_index.d()
+  var E = useDispatch()
   var O = function (e, t) {
     switch (t) {
       case "open":
@@ -71,7 +72,7 @@ var qP = React1.memo(function () {
   return React.createElement($_13_index.f, {
     visible: e$visible,
     className: $_7081.sliderImageDialog,
-    title: $_710_index$a$formatMessage({
+    title: $_710$a$formatMessage({
       id: "switch.custom"
     }),
     onClose: function () {
@@ -82,7 +83,7 @@ var qP = React1.memo(function () {
     footer: React.createElement($_13_index.d, {
       type: "primary",
       onClick: function () {
-        $_16_index.b(function () {
+        batch(function () {
           E($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "backgroundOpenImage", c))
           E($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$widgetId, "backgroundCloseImage", p))
           E($$_$$_$$_$$_src_editor_redux_common_actions.Hj({
@@ -90,7 +91,7 @@ var qP = React1.memo(function () {
           }))
         })
       }
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: "confirm"
     }))
   }, React.createElement("div", {
@@ -99,7 +100,7 @@ var qP = React1.memo(function () {
     className: $_7081.imageInfo
   }, React.createElement("span", {
     className: $_7081.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "switch.replaceImage"
   })), React.createElement("div", {
     className: $_7081.imageList
@@ -118,7 +119,7 @@ var qP = React1.memo(function () {
       padding: "12px",
       marginBottom: "8px"
     }
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "switch.close"
   }))), React.createElement("div", {
     className: $_7081.imageItem,
@@ -135,7 +136,7 @@ var qP = React1.memo(function () {
       padding: "12px",
       marginBottom: "8px"
     }
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "switch.open"
   })))))))
 })

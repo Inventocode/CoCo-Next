@@ -8,7 +8,7 @@
 
 import { Ce } from "./index__part-21"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_232_324 from "../../../../shared/1571/2636/232/324"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_16_index from "../../../../shared/1571/2636/16/index"
+import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_428_67_413 from "../../../../shared/1571/2636/20/428/67/413"
 var Me = function () {
@@ -72,7 +72,7 @@ var Me = function () {
   }), " "))
 }
 var ke = React.memo(function () {
-  var t = $$_$$_$$_$$_shared_1571_2636_16_index.e(function (t) {
+  var t = useSelector(function (t) {
     return t.currentScreenId
   })
   if (!t) {

@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../1706/86/index")
-var /* [auto-meaningful-name] */require$$_1607_828$indexOf = require("../1607/828").indexOf
+var r = require("../1661/86/index")
+var /* [auto-meaningful-name] */require$$_1761_828$indexOf = require("../1761/828").indexOf
 var i = require("./717")
 var /* [auto-meaningful-name] */$indexOf = [].indexOf
 var s = !!$indexOf && 1 / [1].indexOf(1, -0) < 0
@@ -18,6 +18,6 @@ r({
   forced: s || !c
 }, {
   indexOf: function (e) {
-    return s ? $indexOf.apply(this, arguments) || 0 : require$$_1607_828$indexOf(this, e, arguments.length > 1 ? arguments[1] : undefined)
+    return s ? $indexOf.apply(this, arguments) || 0 : require$$_1761_828$indexOf(this, e, arguments.length > 1 ? arguments[1] : undefined)
   }
 })

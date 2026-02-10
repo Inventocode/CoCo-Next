@@ -4,7 +4,7 @@
  * 模块 ID：28
  */
 
-import { v, b, y, E, O, w, C, T, S, A, I, j, N, R, k, x, P } from "./index__part-1"
+import { v, b, y, E, O, w, C, T, S, A, I, j, N, R, k, x, P } from "../../../../../src/shared/player/utils"
 export { v as j }
 export { b as n }
 export { y as a }

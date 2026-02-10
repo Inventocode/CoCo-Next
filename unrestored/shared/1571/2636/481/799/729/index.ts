@@ -8,7 +8,7 @@
 
 export { _ as b }
 export { A as a }
-import * as /* [auto-meaningful-name] */$$_$$_1212_38 from "../../1212/38"
+import * as /* [auto-meaningful-name] */$$_38 from "../38"
 import * as /* [auto-meaningful-name] */$$_220_817 from "../220/817"
 import * as /* [auto-meaningful-name] */$_1064 from "./1064"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
@@ -66,7 +66,7 @@ function p(e, t) {
   var /* [auto-meaningful-name] */o$_experiments
   var o = (null === (n = this.getClient()) || undefined === n ? undefined : n.getOptions()) || {}
   var a = new $$_775_776.a(e, this)
-  if ((a = h(a, o, $$_$$_1212_38.a({
+  if ((a = h(a, o, $$_38.a({
     parentSampled: e.parentSampled,
     transactionContext: e
   }, t))).sampled) {
@@ -79,7 +79,7 @@ function _(e, t, n, i, o) {
   var /* [auto-meaningful-name] */c$_experiments
   var c = (null === (a = e.getClient()) || undefined === a ? undefined : a.getOptions()) || {}
   var l = new $$_775_index.b(t, e, n, i)
-  if ((l = h(l, c, $$_$$_1212_38.a({
+  if ((l = h(l, c, $$_38.a({
     parentSampled: t.parentSampled,
     transactionContext: t
   }, o))).sampled) {
@@ -132,7 +132,7 @@ function A() {
           return e
         })
         if (o.length > 0) {
-          t.__SENTRY__.integrations = $$_$$_1212_38.f(t.__SENTRY__.integrations || [], o)
+          t.__SENTRY__.integrations = $$_38.f(t.__SENTRY__.integrations || [], o)
         }
       }
     })()

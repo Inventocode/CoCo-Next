@@ -35,7 +35,7 @@ function d(e, t) {
       throw new Error(t)
     }
   } else {
-    require("./573/index")(e, t)
+    require("./573")(e, t)
   }
 }
 var h = false

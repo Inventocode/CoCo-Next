@@ -6,13 +6,14 @@
 
 "use strict"
 
+import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import "../../../shared/1571/2636/719"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_80_index from "../../../shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_80_index1 from "../../../shared/1571/2636/80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_28_index from "../../../shared/1571/2636/28/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_15 from "../../../shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_15 from "../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_68 from "../../../shared/1571/2636/68"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"

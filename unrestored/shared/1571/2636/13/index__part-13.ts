@@ -7,24 +7,25 @@
 "use strict"
 
 import { Q } from "./index__part-6"
-import * as /* [auto-meaningful-name] */$$_94_index from "../94/index"
+import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, createContext } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import i from "../8"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./873"
-var be = React1.memo(function (e) {
+var be = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$showDropdownIcon = e.showDropdownIcon
   var o = undefined === e$showDropdownIcon || e$showDropdownIcon
   var /* [auto-meaningful-name] */e$overlay = e.overlay
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$onClick = e.onClick
-  var d = React1.useState(false)
+  var d = useState(false)
   var p = $$_10_index.a(d, 2)
   var f = p[0]
   var h = p[1]
-  var m = React1.useRef(null)
+  var m = useRef(null)
   function g(e) {
     var /* [auto-meaningful-name] */m$current
     var /* [auto-meaningful-name] */m$current1
@@ -82,7 +83,7 @@ var be = React1.memo(function (e) {
     className: i("coco-dropdown-down-icon")
   }))))
 })
-var ye = React1.createContext(null)
+var ye = createContext(null)
 var /* [auto-meaningful-name] */ye$Provider = ye.Provider
 var Oe = ye
 export { be }

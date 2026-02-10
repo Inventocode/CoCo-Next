@@ -7,6 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import { useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
@@ -16,7 +17,7 @@ import l from "../8"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_131 from "../131"
-import * as /* [auto-meaningful-name] */$$_15 from "../15"
+import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import * as h from "../9"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$$_163 from "../163"
@@ -91,7 +92,7 @@ _a = function (e) {
       width: e$size.width
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     if (e$attributes$backgroundMode === $$_163.a.IMAGE && !k.current) {
       var /* [auto-meaningful-name] */R$current = R.current
       if (!R$current) {

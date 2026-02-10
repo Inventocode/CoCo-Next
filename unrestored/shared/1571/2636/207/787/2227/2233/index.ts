@@ -8,15 +8,15 @@
 
 var r = require("../../180")
 var i = require("../../204")
-var o = require("../../../../1058/1393/1143/283/index")
-var a = require("../../../../1058/1393/1143/284/index")
-var /* [auto-meaningful-name] */require$_1130_index$Syntax = require("./1130/index").Syntax
+var o = require("../../../../20/791/2385/283/index")
+var a = require("../../../../20/791/2385/284/index")
+var /* [auto-meaningful-name] */require$$_1358_1130_index$Syntax = require("../1358/1130/index").Syntax
 var c = require("./1360/index")
 var u = require("../1131")
 var l = require("../978")
 var f = require("./2236")
-var d = require("./1359")
-var h = require("../../../../1058/1393/573/index")
+var d = require("../1358/1359")
+var h = require("../../../../1058/1393/573")
 var /* [auto-meaningful-name] */d$ParameterDefinition = d.ParameterDefinition
 var /* [auto-meaningful-name] */d$Definition = d.Definition
 var A = function (e) {
@@ -136,10 +136,10 @@ var g = function (e) {
         var t
         var /* [auto-meaningful-name] */e$params$length
         var r = this
-        if (e.type === require$_1130_index$Syntax.FunctionDeclaration) {
+        if (e.type === require$$_1358_1130_index$Syntax.FunctionDeclaration) {
           this.currentScope().__define(e.id, new d$Definition(l.FunctionName, e.id, e, null, null, null))
         }
-        if (e.type === require$_1130_index$Syntax.FunctionExpression && e.id) {
+        if (e.type === require$$_1358_1130_index$Syntax.FunctionExpression && e.id) {
           this.scopeManager.__nestFunctionExpressionNameScope(e)
         }
         this.scopeManager.__nestFunctionScope(e, this.isInnerMethodDefinition)
@@ -162,7 +162,7 @@ var g = function (e) {
           })
         }
         if (e.body) {
-          if (e.body.type === require$_1130_index$Syntax.BlockStatement) {
+          if (e.body.type === require$$_1358_1130_index$Syntax.BlockStatement) {
             this.visitChildren(e.body)
           } else {
             this.visit(e.body)
@@ -173,7 +173,7 @@ var g = function (e) {
     }, {
       key: "visitClass",
       value: function (e) {
-        if (e.type === require$_1130_index$Syntax.ClassDeclaration) {
+        if (e.type === require$$_1358_1130_index$Syntax.ClassDeclaration) {
           this.currentScope().__define(e.id, new d$Definition(l.ClassName, e.id, e, null, null, null))
         }
         this.visit(e.superClass)
@@ -191,7 +191,7 @@ var g = function (e) {
         if (e.computed) {
           this.visit(e.key)
         }
-        var n = e.type === require$_1130_index$Syntax.MethodDefinition
+        var n = e.type === require$$_1358_1130_index$Syntax.MethodDefinition
         if (n) {
           t = this.pushInnerMethodDefinition(true)
         }
@@ -204,10 +204,10 @@ var g = function (e) {
       key: "visitForIn",
       value: function (e) {
         var t = this
-        if (e.left.type === require$_1130_index$Syntax.VariableDeclaration && "var" !== e.left.kind) {
+        if (e.left.type === require$$_1358_1130_index$Syntax.VariableDeclaration && "var" !== e.left.kind) {
           this.scopeManager.__nestForScope(e)
         }
-        if (e.left.type === require$_1130_index$Syntax.VariableDeclaration) {
+        if (e.left.type === require$$_1358_1130_index$Syntax.VariableDeclaration) {
           this.visit(e.left)
           this.visitPattern(e.left.declarations[0].id, function (n) {
             t.currentScope().__referencing(n, u.WRITE, e.right, null, true, true)
@@ -351,7 +351,7 @@ var g = function (e) {
     }, {
       key: "ForStatement",
       value: function (e) {
-        if (e.init && e.init.type === require$_1130_index$Syntax.VariableDeclaration && "var" !== e.init.kind) {
+        if (e.init && e.init.type === require$$_1358_1130_index$Syntax.VariableDeclaration && "var" !== e.init.kind) {
           this.scopeManager.__nestForScope(e)
         }
         this.visitChildren(e)
@@ -370,7 +370,7 @@ var g = function (e) {
     }, {
       key: "CallExpression",
       value: function (e) {
-        if (!(this.scopeManager.__ignoreEval() || e.callee.type !== require$_1130_index$Syntax.Identifier || "eval" !== e.callee.name)) {
+        if (!(this.scopeManager.__ignoreEval() || e.callee.type !== require$$_1358_1130_index$Syntax.Identifier || "eval" !== e.callee.name)) {
           this.currentScope().variableScope.__detectEval()
         }
         this.visitChildren(e)

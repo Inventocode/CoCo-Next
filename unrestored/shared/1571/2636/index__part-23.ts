@@ -12,11 +12,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_loa
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useRef, useCallback, useEffect, useLayoutEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as wn from "./90"
@@ -44,34 +45,34 @@ var Nn = React.memo(function (e) {
   })))
 })
 var Rn = React.memo(function () {
-  var e = $_16_index.e(function (e) {
+  var e = useSelector(function (e) {
     return e.project.playing
   })
-  var t = $_16_index.e(function (e) {
+  var t = useSelector(function (e) {
     return e.project.playedAt
   })
-  var n = $_16_index.e(function (e) {
+  var n = useSelector(function (e) {
     return e.project.id
   })
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.common.language
   })
-  var o = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var a = React1.useState(false)
+  var o = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var a = useState(false)
   var s = $_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useRef()
-  var d = React1.useRef()
-  var p = React1.useRef(null)
-  var m = React1.useRef(null)
-  var g = React1.useRef(null)
-  var v = React1.useState(null)
+  var u = useRef()
+  var d = useRef()
+  var p = useRef(null)
+  var m = useRef(null)
+  var g = useRef(null)
+  var v = useState(null)
   var b = $_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState(1)
+  var O = useState(1)
   var w = $_10_index.a(O, 2)
   var C = w[0]
   var A = w[1]
@@ -91,7 +92,7 @@ var Rn = React.memo(function () {
     d.current = 0
     l(false)
   }
-  var R = React1.useCallback(function (e) {
+  var R = useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data = e.data
     var /* [auto-meaningful-name] */e$data$id = e$data.id
     var /* [auto-meaningful-name] */e$data$tab = e$data.tab
@@ -101,7 +102,7 @@ var Rn = React.memo(function () {
       o($$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$data$id, "defaultValue", e$data$value))
     }
   }, [o])
-  var k = React1.useCallback(function (e) {
+  var k = useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data$type = e.data.type
     localStorage.removeItem("".concat(e$data$type, "DialogPermission"))
     o($$_$$_$$_$$_src_editor_redux_common_actions.Ej({
@@ -115,7 +116,7 @@ var Rn = React.memo(function () {
       }
     }))
   }, [o])
-  var x = React1.useCallback(function (e) {
+  var x = useCallback(function (e) {
     var /* [auto-meaningful-name] */e$data = e.data
     var n = ""
     var /* [auto-meaningful-name] */e$data$widgetType = e$data.widgetType
@@ -129,7 +130,7 @@ var Rn = React.memo(function () {
     }
     if (e$data$widgetType) {
       var l = Et.Db(e$data$widgetType)
-      var u = $_710_index$a$formatMessage({
+      var u = $_710$a$formatMessage({
         id: (null === l || undefined === l ? undefined : l.title) || (null === l || undefined === l ? undefined : l.previewAreaWidgetTitle)
       })
       if (u) {
@@ -165,15 +166,15 @@ var Rn = React.memo(function () {
         warningMessage: e$data.message
       })
     }
-  }, [o, $_710_index$a$formatMessage, r])
-  React1.useEffect(function () {
+  }, [o, $_710$a$formatMessage, r])
+  useEffect(function () {
     Q.add(Tn.b.DEVICE_VIBRATE, j)
     Q.add(Tn.b.DEVICE_NOT_VIBRATE, N)
     Q.add(Tn.b.PLAYER_DATA_WATCH, R)
     Q.add(Tn.b.RUNTIME_LOG, x)
     Q.add(Tn.b.PLAYER_PERMISSION, k)
   }, [x, R, k])
-  React1.useEffect(function () {
+  useEffect(function () {
     function e() {
       o($$_$$_$$_$$_src_editor_redux_common_actions.vi(!navigator.onLine))
     }
@@ -184,7 +185,7 @@ var Rn = React.memo(function () {
       window.removeEventListener("offline", e)
     }
   }, [o])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!e) {
       if (u.current) {
         window.clearTimeout(u.current)
@@ -193,7 +194,7 @@ var Rn = React.memo(function () {
       l(false)
     }
   }, [e, o])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (e && p.current && m.current) {
       var /* [auto-meaningful-name] */p$current$clientWidth = p.current.clientWidth
       var /* [auto-meaningful-name] */p$current$clientHeight = p.current.clientHeight

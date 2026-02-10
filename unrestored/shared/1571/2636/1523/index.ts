@@ -9,16 +9,17 @@
 import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
 import * as o from "../6"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
+import { memo, useRef, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_557 from "../557"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
-import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
+import { useSelector, useDispatch } from "react-redux"
+import * as /* [auto-meaningful-name] */$$_710 from "../710"
 import * as d from "../8"
 import p from "../8"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_155 from "./155"
 import /* [auto-meaningful-name] */$_1551 from "./155"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
@@ -44,8 +45,8 @@ function S(t, n) {
   })
 }
 var _a
-_a = React.memo(function () {
-  var e = $$_16_index.e(function (e) {
+_a = memo(function () {
+  var e = useSelector(function (e) {
     return e.block.storageDialogInfo
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -55,47 +56,47 @@ _a = React.memo(function () {
   var /* [auto-meaningful-name] */e$data = e.data
   var /* [auto-meaningful-name] */e$onSave = e.onSave
   var j = null === e$widget || undefined === e$widget ? undefined : e$widget.type
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
-  var R = React.useRef(-1)
-  var k = React.useRef(-1)
-  var x = $$_16_index.d()
-  var D = React.useState([])
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
+  var R = useRef(-1)
+  var k = useRef(-1)
+  var x = useDispatch()
+  var D = useState([])
   var M = $$_10_index.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = React.useState([])
+  var B = useState([])
   var F = $$_10_index.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = React.useState(-1)
+  var U = useState(-1)
   var H = $$_10_index.a(U, 2)
   var V = H[0]
   var z = H[1]
-  var Y = React.useState(-1)
+  var Y = useState(-1)
   var K = $$_10_index.a(Y, 2)
   var q = K[0]
   var X = K[1]
-  var Q = React.useState(0)
+  var Q = useState(0)
   var Z = $$_10_index.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
-  var ee = React.useState(false)
+  var ee = useState(false)
   var te = $$_10_index.a(ee, 2)
   var ne = te[0]
   var re = te[1]
-  var oe = React.useState(false)
+  var oe = useState(false)
   var ie = $$_10_index.a(oe, 2)
   var ae = ie[0]
   var se = ie[1]
-  var ce = React.useState(false)
+  var ce = useState(false)
   var le = $$_10_index.a(ce, 2)
   var ue = le[0]
   var de = le[1]
-  var pe = React.useState(false)
+  var pe = useState(false)
   var fe = $$_10_index.a(pe, 2)
   var he = fe[0]
   var me = fe[1]
-  var ge = React.useState(T)
+  var ge = useState(T)
   var _e = $$_10_index.a(ge, 2)
   var ve = _e[0]
   var be = _e[1]
@@ -138,7 +139,7 @@ _a = React.memo(function () {
       P([e])
       x($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
         showPrefixIcon: false,
-        message: $$_710_index$a$formatMessage({
+        message: $$_710$a$formatMessage({
           id: "repeatKeyToastMsg"
         })
       }))
@@ -199,13 +200,13 @@ _a = React.memo(function () {
       })
     }
   }
-  React.useEffect(function () {
+  useEffect(function () {
     W(Lodash.cloneDeep(e$data))
   }, [e$data])
-  React.useEffect(function () {
+  useEffect(function () {
     me(false)
   }, [e$visible])
-  React.useEffect(function () {
+  useEffect(function () {
     function e(t) {
       var /* [auto-meaningful-name] */t$target = t.target
       if (!(t$target.closest("." + $_1551.typeSelectionList) || t$target.closest("." + $_1551.typeFlag))) {
@@ -220,7 +221,7 @@ _a = React.memo(function () {
       document.removeEventListener("mousemove", e)
     }
   }, [ve])
-  React.useEffect(function () {
+  useEffect(function () {
     var e = {}
     G.forEach(function (t, n) {
       G.slice(n + 1, G.length).forEach(function (r, o) {
@@ -234,7 +235,7 @@ _a = React.memo(function () {
       return Number(e)
     }))
   }, [G])
-  React.useEffect(function () {
+  useEffect(function () {
     ye(V)
   }, [V])
   var xe = function (e) {
@@ -304,7 +305,7 @@ _a = React.memo(function () {
       })) {
         x($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
           showPrefixIcon: false,
-          message: $$_710_index$a$formatMessage({
+          message: $$_710$a$formatMessage({
             id: "repeatKeyToastMsg"
           })
         }))
@@ -317,7 +318,7 @@ _a = React.memo(function () {
   function Ue(e) {
     if (e$maxKeyLength && G.length >= e$maxKeyLength) {
       x($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
-        message: $$_710_index$a$formatMessage({
+        message: $$_710$a$formatMessage({
           id: "cloudDbOverTheMaxKeyTips"
         })
       }))
@@ -339,7 +340,7 @@ _a = React.memo(function () {
     })) {
       x($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
         showPrefixIcon: false,
-        message: $$_710_index$a$formatMessage({
+        message: $$_710$a$formatMessage({
           id: "repeatKeyToastMsg"
         })
       }))
@@ -348,7 +349,7 @@ _a = React.memo(function () {
       W($$_25_index.a(G))
     }
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if (ae || ue) {
       document.addEventListener("mousedown", function e() {
         se(false)
@@ -372,7 +373,7 @@ _a = React.memo(function () {
     className: $_1551.dialogTitle
   }, e$dbName, React1.createElement("span", {
     className: $_1551.defaultData
-  }, "— ", $$_710_index$a$formatMessage({
+  }, "— ", $$_710$a$formatMessage({
     id: "StorageDialog.defaultData"
   }))), React1.createElement($_1524.a, ve), React1.createElement("div", {
     className: $_1551.list
@@ -380,17 +381,17 @@ _a = React.memo(function () {
     className: $_1551.summary
   }, React1.createElement("div", {
     className: $_1551.count
-  }, React1.createElement("span", null, $$_710_index$a$formatMessage({
+  }, React1.createElement("span", null, $$_710$a$formatMessage({
     id: "keyValueTotal"
   }), "："), G.length || "0")), React1.createElement("div", {
     className: $_1551.listHeader
   }, React1.createElement("div", {
     className: $_1551.column1
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "key"
   })), React1.createElement("div", {
     className: $_1551.column2
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "value"
   })), React1.createElement("div", {
     className: $_1551.column3
@@ -453,27 +454,27 @@ _a = React.memo(function () {
         }, React1.createElement("div", {
           onMouseDown: Ge.bind(null, "key"),
           className: $_1551.menuItem
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "copyGridData"
         })), React1.createElement("div", {
           onMouseDown: We.bind(null, "key"),
           className: $_1551.menuItem
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "pasteGridData"
         })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "prev"),
           className: p($_1551.menuItem, $_1551.borderTop)
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "insertPrevRow"
         })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "next"),
           className: p($_1551.menuItem, $_1551.borderBottom)
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "insertNextRow"
         })), React1.createElement("div", {
           onMouseDown: He.bind(null, "key"),
           className: p($_1551.menuItem, $_1551.deleteOption)
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "clearData"
         })))
       }, React1.createElement("div", {
@@ -503,27 +504,27 @@ _a = React.memo(function () {
         }, React1.createElement("div", {
           onMouseDown: Ge.bind(null, "value"),
           className: $_1551.menuItem
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "copyGridData"
         })), React1.createElement("div", {
           onMouseDown: We.bind(null, "value"),
           className: $_1551.menuItem
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "pasteGridData"
         })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "prev"),
           className: p($_1551.menuItem, $_1551.borderTop)
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "insertPrevRow"
         })), React1.createElement("div", {
           onMouseDown: Ue.bind(null, "next"),
           className: p($_1551.menuItem, $_1551.borderBottom)
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "insertNextRow"
         })), React1.createElement("div", {
           onMouseDown: He.bind(null, "value"),
           className: p($_1551.menuItem, $_1551.deleteOption)
-        }, $$_710_index$a$formatMessage({
+        }, $$_710$a$formatMessage({
           id: "clearData"
         })))
       }, React1.createElement("div", {
@@ -562,7 +563,7 @@ _a = React.memo(function () {
         }, React1.createElement($$_13_index.j, {
           type: "icon-Image",
           className: $_1551.resourceMenuIcon
-        }), $$_710_index$a$formatMessage({
+        }), $$_710$a$formatMessage({
           id: "Resource.ImageLibrary"
         })), React1.createElement("div", {
           onMouseDown: Me,
@@ -570,7 +571,7 @@ _a = React.memo(function () {
         }, React1.createElement($$_13_index.j, {
           type: "icon-Icon",
           className: $_1551.resourceMenuIcon
-        }), $$_710_index$a$formatMessage({
+        }), $$_710$a$formatMessage({
           id: "Resource.IconLibrary"
         })), React1.createElement("div", {
           onMouseDown: Le,
@@ -578,7 +579,7 @@ _a = React.memo(function () {
         }, React1.createElement($$_13_index.j, {
           type: "icon-Sound",
           className: $_1551.resourceMenuIcon
-        }), $$_710_index$a$formatMessage({
+        }), $$_710$a$formatMessage({
           id: "Resource.SoundLibrary"
         })))
       }, React1.createElement("div", {
@@ -600,7 +601,7 @@ _a = React.memo(function () {
     onClick: function () {
       if (e$maxKeyLength && G.length >= e$maxKeyLength) {
         x($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
-          message: $$_710_index$a$formatMessage({
+          message: $$_710$a$formatMessage({
             id: "cloudDbOverTheMaxKeyTips"
           })
         }))
@@ -620,15 +621,15 @@ _a = React.memo(function () {
     onOk: Se
   }), React1.createElement("div", {
     className: $_1551.footer
-  }, j && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B ? React1.createElement("span", null, $$_710_index$a$formatMessage({
+  }, j && j === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B ? React1.createElement("span", null, $$_710$a$formatMessage({
     id: "storageDialogTips"
-  })) : React1.createElement("span", null, $$_710_index$a$formatMessage({
+  })) : React1.createElement("span", null, $$_710$a$formatMessage({
     id: "deprecatedStorageDialogTips"
   })), React1.createElement($$_13_index.d, {
     className: p($_1551.save, false),
     type: "primary",
     onClick: Se
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "save"
   }), false)))
 })

@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../../../../../../207/787/500")
-var i = require("../../1410/311/index")
+var i = require("../311/index")
 var /* [auto-meaningful-name] */i$ObjectDefineProperties = i.ObjectDefineProperties
 var /* [auto-meaningful-name] */i$ObjectGetOwnPropertyDescriptor = i.ObjectGetOwnPropertyDescriptor
 var /* [auto-meaningful-name] */i$ObjectKeys = i.ObjectKeys
@@ -16,7 +16,7 @@ module.exports = A
 var u
 var l
 var f = require("../986/index")
-var d = require("../1161/index")
+var d = require("../1161")
 i$ObjectSetPrototypeOf(A.prototype, f.prototype)
 i$ObjectSetPrototypeOf(A, f)
 for (var h = i$ObjectKeys(d.prototype), p = 0; p < h.length; p++) {

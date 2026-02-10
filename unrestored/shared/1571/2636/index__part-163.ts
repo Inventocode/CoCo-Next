@@ -10,24 +10,25 @@ import { dA } from "./index__part-162"
 import /* [auto-meaningful-name] */$_355 from "./355"
 var sA
 import * as ng from "./64"
-import * as _n from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_294_index from "./294/index"
 import "./2612"
-var fA = React1.memo(function (e) {
-  var t = React1.useState(false)
+var fA = memo(function (e) {
+  var t = useState(false)
   var n = $_10_index.a(t, 2)
   var r = n[0]
   var o = n[1]
@@ -37,8 +38,8 @@ var fA = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$onBlur = e.onBlur
   var /* [auto-meaningful-name] */e$suffix = e.suffix
-  var d = React1.useRef(null)
-  React1.useEffect(function () {
+  var d = useRef(null)
+  useEffect(function () {
     if (r) {
       var /* [auto-meaningful-name] */d$current = d.current
       if (!(null === d$current || undefined === d$current)) {
@@ -82,7 +83,7 @@ var hA = function (e) {
   var /* [auto-meaningful-name] */e$item$cdnUrl = e$item.cdnUrl
   var /* [auto-meaningful-name] */e$item$urls = e$item.urls
   var /* [auto-meaningful-name] */e$item$id = e$item.id
-  var s = React1.useState(e$item$urls && e$item$urls.length > 1 ? e$item$urls[0] : e$item$cdnUrl)
+  var s = useState(e$item$urls && e$item$urls.length > 1 ? e$item$urls[0] : e$item$cdnUrl)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
@@ -155,15 +156,15 @@ var hA = function (e) {
   })))
 }
 var mA = function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var n = useDispatch()
   var r = $_25_index.a(Et.jb()).reverse()
   function o(e) {
     n($$_$$_$$_$$_src_editor_redux_common_actions.Jf(e.id))
     var t
     var r = Et.K(e.id)
     var o = []
-    var i = _n.a(r)
+    var i = $_47_index.a(r)
     try {
       var a = function () {
         var /* [auto-meaningful-name] */t$value = t.value
@@ -193,7 +194,7 @@ var mA = function (e) {
     }
     setTimeout(function () {
       var e
-      var t = _n.a(o)
+      var t = $_47_index.a(o)
       try {
         for (t.s(); !(e = t.n()).done;) {
           var r = $_10_index.a(e.value, 2)
@@ -224,12 +225,12 @@ var mA = function (e) {
         }
       }
       var d = Et.ub("IMAGE_FILE_ID", s.id).length > 0 || Et.Ib(s.id) || Et.Lb(s.id)
-      var p = $_710_index$a$formatMessage({
+      var p = $_710$a$formatMessage({
         id: c ? "deleteImageGroupFileTitle" : "deleteImageFileTitle"
       }, {
         name: $_190.f((c ? null === (i = s) || undefined === i ? undefined : i.groupId : null === (a = s) || undefined === a ? undefined : a.id) || "", 10)
       })
-      var f = $_710_index$a$formatMessage({
+      var f = $_710$a$formatMessage({
         id: c ? "deleteImageGroupFileTips" : "deleteImageFileTips"
       })
       var h = function () {
@@ -247,7 +248,7 @@ var mA = function (e) {
         n($$_$$_$$_$$_src_editor_redux_common_actions.zh({
           isDangerous: true,
           onConfirm: h,
-          allowText: $_710_index$a$formatMessage({
+          allowText: $_710$a$formatMessage({
             id: "delete"
           }),
           title: p,
@@ -264,7 +265,7 @@ var mA = function (e) {
         i.target.value = e
         if (o !== e) {
           n($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-            message: $_710_index$a$formatMessage({
+            message: $_710$a$formatMessage({
               id: "renameFileNameRepeatTips"
             }),
             duration: 2e3
@@ -303,7 +304,7 @@ var mA = function (e) {
     className: $_355.icon
   }), React.createElement("div", {
     className: $_355.name
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "Resource.upload"
   }))))), r.filter(function (e) {
     return !e.groupId

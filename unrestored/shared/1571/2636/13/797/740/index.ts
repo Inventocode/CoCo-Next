@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../325")
+var r = require("../325/index")
 var i = require("./1504")
 var o = "object" == typeof exports && exports && !exports.nodeType && exports
 var a = o && "object" == typeof module && module && !module.nodeType && module

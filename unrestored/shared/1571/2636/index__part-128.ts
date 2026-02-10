@@ -10,12 +10,13 @@ import * as /* [auto-meaningful-name] */$_557 from "./557"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_147 from "./147"
 import * as /* [auto-meaningful-name] */$_1520 from "./1520"
@@ -26,28 +27,28 @@ var Tw = {
   columns: [],
   rows: []
 }
-var Sw = React1.memo(function (e) {
+var Sw = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var r = e$getValue("cloudDbId")
-  var o = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var o = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var a = Et.Bb(e$widgetId)
-  var s = React1.useState(Tw)
+  var s = useState(Tw)
   var c = $_10_index.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(true)
+  var d = useState(true)
   var p = $_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useRef(false)
-  React1.useEffect(function () {
+  var v = useRef(false)
+  useEffect(function () {
     return function () {
       v.current = true
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (a && r) {
       u(Tw)
       g(true)
@@ -132,16 +133,16 @@ var Sw = React1.memo(function (e) {
   }, React.createElement("img", {
     src: $_15201,
     alt: "loading"
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "cloudDBWidget.loading"
   }))) : React.createElement(React.Fragment, null, React.createElement("div", {
     className: $_4211.title
-  }, React.createElement("div", null, $_710_index$a$formatMessage({
+  }, React.createElement("div", null, $_710$a$formatMessage({
     id: "cloudDBWidget.data"
   }), React.createElement($_1213.a, {
     content: React.createElement("div", {
       className: $_4211.btnContent
-    }, React.createElement("div", null, " ", $_710_index$a$formatMessage({
+    }, React.createElement("div", null, " ", $_710$a$formatMessage({
       id: "cloudDBWidget.tipsContent"
     }))),
     placement: "rightTop",

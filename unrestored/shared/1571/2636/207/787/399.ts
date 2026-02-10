@@ -4,7 +4,7 @@
  * 模块 ID：399
  */
 
-var r = require("./572/1119")
+var r = require("./711/1119/index")
 module.exports = function (e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {
     if (Array.isArray(e) || (e = r(e))) {

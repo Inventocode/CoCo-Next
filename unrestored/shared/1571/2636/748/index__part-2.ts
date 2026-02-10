@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_315 from "../315"
 import * as /* [auto-meaningful-name] */$_1031 from "./1031"
 import u from "../8"
 import * as /* [auto-meaningful-name] */$_1544_index from "./1544/index"
-import * as /* [auto-meaningful-name] */React from "react"
+import { createElement, forwardRef, useContext, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
@@ -66,16 +66,16 @@ function w(e, t) {
       style: l,
       className: null
     })
-    return React.createElement("span", {
+    return createElement("span", {
       style: c,
       className: u(e.props.className, "".concat(t, "-disabled-compatible-wrapper"))
     }, f)
   }
   return e
 }
-var E = React.forwardRef(function (e, t) {
+var E = forwardRef(function (e, t) {
   var n
-  var c = React.useContext($$_801_index.b)
+  var c = useContext($$_801_index.b)
   var /* [auto-meaningful-name] */c$getPopupContainer = c.getPopupContainer
   var /* [auto-meaningful-name] */c$getPrefixCls = c.getPrefixCls
   var /* [auto-meaningful-name] */c$direction = c.direction
@@ -85,7 +85,7 @@ var E = React.forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */n$value = n.value
     var /* [auto-meaningful-name] */n$onChange = n.onChange
     var /* [auto-meaningful-name] */n$postState = n.postState
-    var u = React.useState(function () {
+    var u = useState(function () {
       return undefined !== n$value ? n$value : undefined !== n$defaultValue ? "function" === typeof n$defaultValue ? n$defaultValue() : n$defaultValue : "function" === typeof e ? e() : e
     })
     var l = $$_40_index.a(u, 2)
@@ -95,8 +95,8 @@ var E = React.forwardRef(function (e, t) {
     if (n$postState) {
       h = n$postState(h)
     }
-    var p = React.useRef(true)
-    React.useEffect(function () {
+    var p = useRef(true)
+    useEffect(function () {
       if (p.current) {
         p.current = false
       } else {
@@ -218,7 +218,7 @@ var E = React.forwardRef(function (e, t) {
     j = false
   }
   var U
-  var H = w($$_315.b(e$children) ? e$children : React.createElement("span", null, e$children), M)
+  var H = w($$_315.b(e$children) ? e$children : createElement("span", null, e$children), M)
   var /* [auto-meaningful-name] */H$props = H.props
   var G = u(H$props.className, $$_35.a({}, e$openClassName || "".concat(M, "-open"), true))
   var z = u(e$overlayClassName, (n = {}, $$_35.a(n, "".concat(M, "-rtl"), "rtl" === c$direction), $$_35.a(n, "".concat(M, "-").concat(e$color), e$color && b.test(e$color)), n))
@@ -231,7 +231,7 @@ var E = React.forwardRef(function (e, t) {
       background: e$color
     }
   }
-  return React.createElement($_1544_index.a, $$_19.a({}, T, {
+  return createElement($_1544_index.a, $$_19.a({}, T, {
     prefixCls: M,
     overlayClassName: z,
     getTooltipContainer: e$getPopupContainer || e$getTooltipContainer || c$getPopupContainer,
@@ -279,7 +279,7 @@ var E = React.forwardRef(function (e, t) {
       }
     },
     overlayInnerStyle: Q,
-    arrowContent: React.createElement("span", {
+    arrowContent: createElement("span", {
       className: "".concat(M, "-arrow-content"),
       style: U
     }),

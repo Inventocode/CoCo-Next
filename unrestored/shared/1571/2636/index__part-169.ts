@@ -11,13 +11,14 @@ import { XA } from "./index__part-168"
 import * as /* [auto-meaningful-name] */$_110 from "./110"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useRef, useState, useImperativeHandle } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_237 from "./237"
 import /* [auto-meaningful-name] */$_2371 from "./237"
@@ -38,16 +39,16 @@ function JA(e, t) {
   return [].concat($_25_index.a(r), $_25_index.a(o))
 }
 var $A = React.memo(React.forwardRef(function (e, t) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useDispatch()
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$setVisible = e.setVisible
-  var a = React1.useRef(null)
+  var a = useRef(null)
   var s = function () {
-    var e = $_16_index.e(function (e) {
+    var e = useSelector(function (e) {
       return e.dataWatch.variableList
     })
-    var t = $_16_index.e(function (e) {
+    var t = useSelector(function (e) {
       return e.project.screens
     })
     return {
@@ -69,18 +70,18 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       variableList: e
     }
   }()
-  var c = React1.useState("")
+  var c = useState("")
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef({})
+  var p = useRef({})
   var /* [auto-meaningful-name] */s$Primitives = s.Primitives
   var /* [auto-meaningful-name] */s$Lists = s.Lists
   var /* [auto-meaningful-name] */s$Dictionaries = s.Dictionaries
   var /* [auto-meaningful-name] */s$LocalStorageWidgets = s.LocalStorageWidgets
   var /* [auto-meaningful-name] */s$TableDataWidgets = s.TableDataWidgets
   var /* [auto-meaningful-name] */s$variableList = s.variableList
-  var O = $_16_index.e(function (e) {
+  var O = useSelector(function (e) {
     return e.project.screens
   })
   var w = function (e) {
@@ -115,7 +116,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       type: r.class
     })), React.createElement("span", {
       className: $_2371.text
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: r.text
     }))), o) : undefined
   }
@@ -174,7 +175,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     })
     e$setVisible(false)
   }
-  React1.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       cancel: j
     }
@@ -195,7 +196,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     onClearCallback: function () {
       d("")
     },
-    placeholder: $_710_index$a$formatMessage({
+    placeholder: $_710$a$formatMessage({
       id: "DataWatch.search"
     }),
     onChange: function (e) {
@@ -209,7 +210,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     if (0 === s$variableList.size) {
       return React.createElement("div", {
         className: $_2371.empty
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "DataWatch.noData"
       }))
     }
@@ -224,7 +225,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
         className: $_2371.renderSelectBox
       }, e, t, r, o, i) : React.createElement("div", {
         className: $_2371.empty
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "DataWatch.searchEmpty"
       }))
   }()), React.createElement("div", {
@@ -288,7 +289,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       marginRight: "14px"
     },
     onClick: j
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "DataWatch.cancel"
   })), React.createElement($_13_index.d, {
     style: {
@@ -301,7 +302,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       })
       e$setVisible(false)
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "DataWatch.confirm"
   })))))
 }))

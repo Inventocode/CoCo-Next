@@ -10,23 +10,24 @@ import { h, g, _ } from "./index__part-0"
 import { P } from "./index__part-1"
 import { V } from "./index__part-2"
 import { q } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$$_710_index from "../710/index"
-import * as /* [auto-meaningful-name] */$$_13_index from "../13/index"
+import * as /* [auto-meaningful-name] */$$_710 from "../710"
+import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_2681_index from "../2681/index"
 import N from "../8"
 import * as u from "./70"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_302 from "./302"
 import * as /* [auto-meaningful-name] */$_113 from "./113"
 import /* [auto-meaningful-name] */$_1131 from "./113"
 var J = function () {
-  var e = $$_16_index.d()
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
-  var n = $$_16_index.e(function (e) {
+  var e = useDispatch()
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
+  var n = useSelector(function (e) {
     return e.phoneCallInfo
   })
   return React.createElement("div", {
@@ -38,15 +39,15 @@ var J = function () {
   }, React.createElement($$_13_index.j, {
     type: "icon-phone-call-idle",
     className: $_1131.noCallIcon
-  }), React.createElement("div", null, $$_710_index$a$formatMessage({
+  }), React.createElement("div", null, $$_710$a$formatMessage({
     id: "emulator.noCall"
   }))), n.callStatus !== u.b.IDEL && React.createElement("div", {
     className: $_1131.callStatus
   }, React.createElement("div", {
     className: $_1131.phoneNumber
-  }, n.dialOutPhoneNumber), n.callStatus === u.b.RINGING && React.createElement("div", null, $$_710_index$a$formatMessage({
+  }, n.dialOutPhoneNumber), n.callStatus === u.b.RINGING && React.createElement("div", null, $$_710$a$formatMessage({
     id: "emulator.incomingNumber"
-  })), n.callStatus === u.b.OFFHOOK && React.createElement("div", null, $$_710_index$a$formatMessage({
+  })), n.callStatus === u.b.OFFHOOK && React.createElement("div", null, $$_710$a$formatMessage({
     id: "emulator.onCalling"
   })))), React.createElement("div", {
     className: N($_1131.callBtnBox, $_1131.flexSC)
@@ -74,7 +75,7 @@ var J = function () {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: $_1131.callBtnText
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.callEndByOtherSide"
   }))), React.createElement("div", {
     className: "dialOutCall" === n.callType && n.callStatus === u.b.RINGING ? $_1131.active : ""
@@ -99,17 +100,17 @@ var J = function () {
     type: "icon-phone-call-dial"
   })), React.createElement("span", {
     className: $_1131.callBtnText
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.callConnectByOtherSide"
   })))))
 }
 var $ = function () {
-  var e = $$_16_index.d()
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
-  var n = $$_16_index.e(function (e) {
+  var e = useDispatch()
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
+  var n = useSelector(function (e) {
     return e.phoneCallInfo
   })
-  var a = React1.useState(n.incomingPhoneNumber)
+  var a = useState(n.incomingPhoneNumber)
   var s = $$_10_index.a(a, 2)
   var c = s[0]
   var l = s[1]
@@ -121,22 +122,22 @@ var $ = function () {
     className: $_1131.callStatus
   }, React.createElement("div", {
     className: $_1131.phoneNumber
-  }, c), n.callStatus === u.b.IDEL && React.createElement("div", null, $$_710_index$a$formatMessage({
+  }, c), n.callStatus === u.b.IDEL && React.createElement("div", null, $$_710$a$formatMessage({
     id: "emulator.callNumber"
-  })), n.callStatus === u.b.RINGING && React.createElement("div", null, $$_710_index$a$formatMessage({
+  })), n.callStatus === u.b.RINGING && React.createElement("div", null, $$_710$a$formatMessage({
     id: "emulator.onRinging"
-  })), n.callStatus === u.b.OFFHOOK && React.createElement("div", null, $$_710_index$a$formatMessage({
+  })), n.callStatus === u.b.OFFHOOK && React.createElement("div", null, $$_710$a$formatMessage({
     id: "emulator.onCalling"
   })))), React.createElement("div", {
     className: $_1131.phoneNumberBox
   }, React.createElement("div", {
     className: $_1131.phoneNumber
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.incomingNumber"
   })), React.createElement($$_13_index.k, {
     warning: !c,
     defaultValue: c,
-    placeholder: $$_710_index$a$formatMessage({
+    placeholder: $$_710$a$formatMessage({
       id: "emulator.incomingNumberPlaceHolder"
     }),
     onChange: function (e) {
@@ -144,7 +145,7 @@ var $ = function () {
     }
   }), React.createElement("div", {
     className: $_1131.warning
-  }, !c && React.createElement("span", null, $$_710_index$a$formatMessage({
+  }, !c && React.createElement("span", null, $$_710$a$formatMessage({
     id: "emulator.incomingNumberPlaceHolder"
   })))), React.createElement("div", {
     className: N($_1131.callBtnBox, $_1131.flexSC)
@@ -172,7 +173,7 @@ var $ = function () {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: $_1131.callBtnText
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.callEndByOtherSide"
   }))), React.createElement("div", {
     className: n.callStatus === u.b.IDEL && c ? $_1131.active : ""
@@ -201,18 +202,18 @@ var $ = function () {
     type: "icon-phone-call-dial"
   })), React.createElement("span", {
     className: $_1131.callBtnText
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.callByOtherSide"
   })))))
 }
 var ee = function () {
-  var e = $$_16_index.d()
-  var /* [auto-meaningful-name] */$$_710_index$a$formatMessage = $$_710_index.a().formatMessage
-  var n = React1.useState("123 4567 8901")
+  var e = useDispatch()
+  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
+  var n = useState("123 4567 8901")
   var a = $$_10_index.a(n, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState($$_710_index$a$formatMessage({
+  var l = useState($$_710$a$formatMessage({
     id: "emulator.smsContentDefault"
   }))
   var u = $$_10_index.a(l, 2)
@@ -224,12 +225,12 @@ var ee = function () {
     className: $_1131.phoneNumberBox
   }, React.createElement("div", {
     className: $_1131.phoneNumber
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.smsNumber"
   })), React.createElement($$_13_index.k, {
     defaultValue: s,
     warning: !s,
-    placeholder: $$_710_index$a$formatMessage({
+    placeholder: $$_710$a$formatMessage({
       id: "emulator.smsNumberPlaceHolder"
     }),
     onChange: function (e) {
@@ -238,19 +239,19 @@ var ee = function () {
     maxLength: 20
   }), React.createElement("div", {
     className: $_1131.warning
-  }, !s && React.createElement("span", null, $$_710_index$a$formatMessage({
+  }, !s && React.createElement("span", null, $$_710$a$formatMessage({
     id: "emulator.smsNumberPlaceHolder"
   })))), React.createElement("div", {
     className: $_1131.phoneNumberBox
   }, React.createElement("div", {
     className: $_1131.phoneNumber
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.smsContent"
   })), React.createElement($$_13_index.A, {
     defaultValue: d,
     rows: 10,
     maxLength: 200,
-    placeholder: $$_710_index$a$formatMessage({
+    placeholder: $$_710$a$formatMessage({
       id: "emulator.smsContentPlaceHolder"
     }),
     onChange: function (e) {
@@ -258,7 +259,7 @@ var ee = function () {
     }
   }), React.createElement("div", {
     className: $_1131.textAreaWarning
-  }, !d && React.createElement("span", null, $$_710_index$a$formatMessage({
+  }, !d && React.createElement("span", null, $$_710$a$formatMessage({
     id: "emulator.smsContentPlaceHolder"
   })))), React.createElement("div", {
     id: "emulatorReceiveSms",
@@ -275,22 +276,22 @@ var ee = function () {
       }
     },
     className: N($_1131.receiveSmsBtn, (!s || !d) && $_1131.disabled)
-  }, $$_710_index$a$formatMessage({
+  }, $$_710$a$formatMessage({
     id: "emulator.receiveSms"
   })))
 }
 var te = ["SHAKE", "ROTATION", "POSITION"]
 var ne = function (e) {
   var /* [auto-meaningful-name] */e$messageWindow = e.messageWindow
-  var n = $$_16_index.d()
-  var a = $$_16_index.e(function (e) {
+  var n = useDispatch()
+  var a = useSelector(function (e) {
     return e.visiblePanel
   })
-  var s = $$_16_index.e(function (e) {
+  var s = useSelector(function (e) {
     return e.language
   })
-  var c = React1.useRef(null)
-  React1.useEffect(function () {
+  var c = useRef(null)
+  useEffect(function () {
     if (e$messageWindow) {
       n(function (e) {
         return {
@@ -300,7 +301,7 @@ var ne = function (e) {
       }(e$messageWindow))
     }
   }, [n, e$messageWindow])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */e$data = e.data
       var /* [auto-meaningful-name] */e$data$type = e$data.type

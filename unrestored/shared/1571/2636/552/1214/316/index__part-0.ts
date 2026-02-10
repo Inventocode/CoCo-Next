@@ -6,27 +6,27 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from "react"
+import { forwardRef, createElement } from "react"
 import "../../../50/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_98 from "../../../551/1211/98"
+import * as /* [auto-meaningful-name] */$$_98 from "../98"
 import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
 import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_709_index from "../../../551/1211/709/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_1550 from "../../../551/1211/269/1550"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_154_index from "../../../551/1211/269/154/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_2678 from "../../../551/1211/269/2678"
-var f = React.forwardRef(function (e, t) {
+import * as /* [auto-meaningful-name] */$$_709_index from "../709/index"
+import * as /* [auto-meaningful-name] */$$_366_1550 from "../366/1550"
+import * as /* [auto-meaningful-name] */$$_366_154 from "../366/154"
+import * as /* [auto-meaningful-name] */$_2678_index from "./2678/index"
+var f = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$disableSpacing = e.disableSpacing
   var s = undefined !== e$disableSpacing && e$disableSpacing
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
   var l = $$_$$_$$_54.a(e, ["disableSpacing", "classes", "className"])
-  return React.createElement("div", $$_$$_$$_19.a({
-    className: $$_$$_$$_551_1211_98.a(e$classes.root, e$className, !s && e$classes.spacing),
+  return createElement("div", $$_$$_$$_19.a({
+    className: $$_98.a(e$classes.root, e$className, !s && e$classes.spacing),
     ref: t
   }, l))
 })
-var d = $$_$$_$$_551_1211_269_154_index.a({
+var d = $$_366_154.a({
   root: {
     display: "flex",
     alignItems: "center",
@@ -42,18 +42,18 @@ var d = $$_$$_$$_551_1211_269_154_index.a({
 }, {
   name: "MuiDialogActions"
 })(f)
-var h = React.forwardRef(function (e, t) {
+var h = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$dividers = e.dividers
   var u = undefined !== e$dividers && e$dividers
   var l = $$_$$_$$_54.a(e, ["classes", "className", "dividers"])
-  return React.createElement("div", $$_$$_$$_19.a({
-    className: $$_$$_$$_551_1211_98.a(e$classes.root, e$className, u && e$classes.dividers),
+  return createElement("div", $$_$$_$$_19.a({
+    className: $$_98.a(e$classes.root, e$className, u && e$classes.dividers),
     ref: t
   }, l))
 })
-var p = $$_$$_$$_551_1211_269_154_index.a(function (e) {
+var p = $$_366_154.a(function (e) {
   return {
     root: {
       flex: "1 1 auto",

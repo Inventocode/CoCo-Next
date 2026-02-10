@@ -12,20 +12,21 @@ import { FE } from "./index__part-111"
 import qv from "./88"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as k from "./11"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1519 from "./1519"
 import /* [auto-meaningful-name] */$_15191 from "./1519"
-var HE = React1.memo(function (e) {
+var HE = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
-  var o = (0, $_710_index.a().formatMessage)({
+  var o = (0, $_710.a().formatMessage)({
     id: e$formConfig.label || "alignment"
   })
   var /* [auto-meaningful-name] */e$formConfig$horizontalKey = e$formConfig.horizontalKey
@@ -55,11 +56,11 @@ var HE = React1.memo(function (e) {
 var VE = function (e) {
   var /* [auto-meaningful-name] */e$formConfig$hasDisableOrVisible = e.formConfig.hasDisableOrVisible
   var n = undefined !== e$formConfig$hasDisableOrVisible && e$formConfig$hasDisableOrVisible
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var i = $_16_index.d()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var i = useDispatch()
   var a = Et.Bb(r || "")
   var s = a ? Et.Fb(a.id) : ""
   if (!a) {
@@ -69,7 +70,7 @@ var VE = function (e) {
   var /* [auto-meaningful-name] */a$type = a.type
   return React.createElement($_13_index.i, {
     className: N(qv.formItemWrapper, qv.formWidgetTitle, "changeTitle", k.a({}, qv.formWidgetTitleWithDisableOrVisible, n)),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "WidgetForm.title"
     }),
     align: "vertical"

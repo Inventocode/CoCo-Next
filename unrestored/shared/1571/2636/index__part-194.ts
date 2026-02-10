@@ -16,21 +16,22 @@ import * as ng from "./64"
 import * as /* [auto-meaningful-name] */$_144 from "./144"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Tn from "./68"
-import * as _n from "./47"
+import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useRef, useEffect, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1208_index from "./1208/index"
 function OM(e) {
@@ -80,7 +81,7 @@ function wM() {
                       u = $_1208_index.decompressFrames(l, true)
                       i.width = u[0].dims.width
                       i.height = u[0].dims.height
-                      p = _n.a(u)
+                      p = $_47_index.a(u)
                       try {
                         for (p.s(); !(f = p.n()).done;) {
                           if ((f$value = f.value).disposalType >= 2) {
@@ -164,27 +165,27 @@ function TM(e) {
   }
   return n
 }
-var SM = React1.memo(function (e) {
+var SM = memo(function (e) {
   var /* [auto-meaningful-name] */e$actionId = e.actionId
   var /* [auto-meaningful-name] */e$editingStyleId = e.editingStyleId
   var /* [auto-meaningful-name] */e$styleList = e.styleList
   var /* [auto-meaningful-name] */e$actionInterval = e.actionInterval
   var /* [auto-meaningful-name] */e$onIntervalChange = e.onIntervalChange
   var /* [auto-meaningful-name] */e$setEditingStyleId = e.setEditingStyleId
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var c = React1.useState(e$actionInterval.toString() || "200")
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var c = useState(e$actionInterval.toString() || "200")
   var l = $_10_index.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef(200)
-  var m = React1.useState(false)
+  var p = useRef(200)
+  var m = useState(false)
   var g = $_10_index.a(m, 2)
   var _ = g[0]
   var v = g[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     d(e$actionInterval.toFixed())
   }, [e$actionId])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (u !== e$actionInterval.toFixed()) {
       e$onIntervalChange(e$actionId, Number(u))
     }
@@ -223,7 +224,7 @@ var SM = React1.memo(function (e) {
     type: _ ? "icon-pause" : "icon-play"
   })), React.createElement("div", {
     className: $_137.intervalContainer
-  }, React.createElement("label", null, $_710_index$a$formatMessage({
+  }, React.createElement("label", null, $_710$a$formatMessage({
     id: "actor.interval"
   })), React.createElement("input", {
     type: "number",
@@ -274,8 +275,8 @@ function IM(e) {
   var /* [auto-meaningful-name] */e$deleteStyle = e.deleteStyle
   var /* [auto-meaningful-name] */e$copyStyle = e.copyStyle
   var /* [auto-meaningful-name] */e$onStyleListChange = e.onStyleListChange
-  var s = React1.useRef(AM)
-  var c = React1.useCallback(function () {
+  var s = useRef(AM)
+  var c = useCallback(function () {
     var e
     var t
     var n = null === (e = document.getElementById("THE_STYLE_LIST")) || undefined === e ? undefined : e.closest(".coco-dialog-wrapper.show")
@@ -285,13 +286,13 @@ function IM(e) {
       y: r.y
     } : AM
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("scroll", c)
     return function () {
       return window.removeEventListener("scroll", c)
     }
   }, [c])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = document.getElementById("THE_STYLE_LIST")
     if (e instanceof HTMLUListElement) {
       var t = e.querySelector("." + $_137.selected)
@@ -421,7 +422,7 @@ function IM(e) {
   }))
 }
 var jM
-React1.memo(IM)
+memo(IM)
 function NM(e) {
   var t
   e.some(function (e) {
@@ -437,50 +438,50 @@ function RM(e) {
   e.UPLOAD_FILE = "UPLOAD_FILE"
   e.OPEN_RESOURCE_LIBRARY = "OPEN_RESOURCE_LIBRARY"
 }(jM || (jM = {}))
-var kM = React1.memo(function () {
+var kM = memo(function () {
   var e
-  var t = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var r = React1.useRef(true)
-  var o = React1.useRef(undefined)
-  var i = React1.useState(false)
+  var t = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var r = useRef(true)
+  var o = useRef(undefined)
+  var i = useState(false)
   var a = $_10_index.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = $_16_index.e(function (e) {
+  var l = useSelector(function (e) {
     return e.project.styleDialog.actorId
   })
-  var u = $_16_index.e(function (e) {
+  var u = useSelector(function (e) {
     return e.project.styleDialog.onSelect
   })
   var /* [auto-meaningful-name] */Et$BbL$attributes = Et.Bb(l).attributes
   var /* [auto-meaningful-name] */Et$BbL$attributes$selectedStyleId = Et$BbL$attributes.selectedStyleId
   var /* [auto-meaningful-name] */Et$BbL$attributes$actionList = Et$BbL$attributes.actionList
-  var g = React1.useState(Et$BbL$attributes$selectedStyleId)
+  var g = useState(Et$BbL$attributes$selectedStyleId)
   var v = $_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = React1.useState(Lodash.cloneDeep(Et$BbL$attributes$actionList))
+  var w = useState(Lodash.cloneDeep(Et$BbL$attributes$actionList))
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
   var j = null === (e = T[0]) || undefined === e ? undefined : e.id
-  var N = React1.useState(j)
+  var N = useState(j)
   var R = $_10_index.a(N, 2)
   var k = R[0]
   var M = R[1]
   var L = T.find(function (e) {
     return e.id === k
   })
-  var P = React1.useState(undefined)
+  var P = useState(undefined)
   var B = $_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
   var W = (null === L || undefined === L ? undefined : L.styleList) || []
   var U = (null === L || undefined === L ? undefined : L.interval) || 200
-  var H = React1.useRef()
-  var V = React1.useRef(null)
-  React1.useEffect(function () {
+  var H = useRef()
+  var V = useRef(null)
+  useEffect(function () {
     var e
     if (!W.some(function (e) {
       return e.id === F
@@ -489,7 +490,7 @@ var kM = React1.memo(function () {
       G(t)
     }
   }, [F, W])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (H.current) {
       var /* [auto-meaningful-name] */H$current = H.current
       var t = document.getElementById(H$current)
@@ -568,7 +569,7 @@ var kM = React1.memo(function () {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              n = _n.a(t)
+              n = $_47_index.a(t)
               e.prev = 1
               n.s()
             case 3:
@@ -583,7 +584,7 @@ var kM = React1.memo(function () {
               e$sent = e.sent
               s = CM(e$sent, o$value.name)
               c = []
-              l = _n.a(TM(s, 1).entries())
+              l = $_47_index.a(TM(s, 1).entries())
               e.prev = 11
               l.s()
             case 13:
@@ -709,14 +710,14 @@ var kM = React1.memo(function () {
   var ne = function () {
     t($$_$$_$$_$$_src_editor_redux_common_actions.vh())
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (undefined === o.current) {
       o.current = false
     } else {
       o.current = true
     }
   }, [b, T])
-  React1.useEffect(function () {
+  useEffect(function () {
     r.current = true
     return function () {
       r.current = false
@@ -736,7 +737,7 @@ var kM = React1.memo(function () {
     }
   }, React.createElement("h3", {
     className: $_137.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "ActorStyleDialog.dialogTitle"
   })), React.createElement("div", {
     className: $_137.content
@@ -797,7 +798,7 @@ var kM = React1.memo(function () {
     className: $_137.addAction,
     onClick: function () {
       var e = ng.a($_144.a)
-      var t = $_710_index$a$formatMessage({
+      var t = $_710$a$formatMessage({
         id: "ActorStyleDialog.actionName"
       })
       var r = T.map(function (e) {
@@ -817,7 +818,7 @@ var kM = React1.memo(function () {
     className: $_137.addActionIcon
   }, React.createElement($_13_index.j, {
     type: "icon-add"
-  })), React.createElement("span", null, $_710_index$a$formatMessage({
+  })), React.createElement("span", null, $_710$a$formatMessage({
     id: "ActorStyleDialog.addAction"
   })))), React.createElement("div", {
     className: $_137.main
@@ -847,7 +848,7 @@ var kM = React1.memo(function () {
   }, React.createElement($_13_index.j, {
     type: "icon-style-selected",
     className: $_137.selectedIcon
-  })), $_710_index$a$formatMessage({
+  })), $_710$a$formatMessage({
     id: "ActorStyleDialog.defaultStyle"
   })) : React.createElement("button", {
     onClick: function () {
@@ -855,7 +856,7 @@ var kM = React1.memo(function () {
     }
   }, React.createElement("div", {
     className: $_137.checkbox
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "ActorStyleDialog.defaultStyle"
   })) : null))))), React.createElement("div", {
     className: $_137.styleContainer
@@ -970,14 +971,14 @@ var kM = React1.memo(function () {
     }, React.createElement($_13_index.j, {
       type: "icon-upload-image",
       className: $_137.btnIcon
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "uploadImageFile"
     }))), React.createElement($_13_index.m, {
       value: jM.OPEN_RESOURCE_LIBRARY
     }, React.createElement($_13_index.j, {
       type: "icon-image-library",
       className: $_137.btnIcon
-    }), $_710_index$a$formatMessage({
+    }), $_710$a$formatMessage({
       id: "resourceLibrary"
     })))
   }, React.createElement("div", {
@@ -985,14 +986,14 @@ var kM = React1.memo(function () {
   }, React.createElement($_13_index.j, {
     className: $_137.addIcon,
     type: "icon-add"
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "ActorStyleDialog.addStyle"
   })))))))), React.createElement("footer", {
     className: $_137.footer
   }, React.createElement($_13_index.d, {
     type: "primary",
     onClick: te
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "save"
   }))), s && React.createElement($_796_index.a, {
     onCancel: ne,

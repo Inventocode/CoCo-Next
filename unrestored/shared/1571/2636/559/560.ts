@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
-import * as /* [auto-meaningful-name] */React from "react"
+import { useEffect, createElement, forwardRef, useContext, createContext, useState, useRef, useMemo, useCallback, useLayoutEffect } from "react"
 import * as c from "../8"
 import l from "../8"
 import * as /* [auto-meaningful-name] */$$_1545_800 from "../1545/800"
@@ -34,7 +34,7 @@ function d(e, t) {
   function C(e) {
     e$registerSize(e$itemKey, e)
   }
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       C(null)
     }
@@ -55,14 +55,14 @@ function d(e, t) {
   if (w) {
     A["aria-hidden"] = true
   }
-  var I = React.createElement(E, $$_19.a({
+  var I = createElement(E, $$_19.a({
     className: l(!e$invalidate && e$prefixCls, e$className),
     style: $$_21.a($$_21.a({}, T), e$style)
   }, A, O, {
     ref: t
   }), S)
   if (e$responsive) {
-    I = React.createElement($$_1545_800.a, {
+    I = createElement($$_1545_800.a, {
       onResize: function (e) {
         C(e.offsetWidth)
       }
@@ -70,7 +70,7 @@ function d(e, t) {
   }
   return I
 }
-var p = React.forwardRef(d)
+var p = forwardRef(d)
 p.displayName = "Item"
 var f = p
 var h = function (e) {
@@ -115,12 +115,12 @@ b.cancel = function (e) {
   return m(t)
 }
 var y = function (e, t) {
-  var n = React.useContext(w)
+  var n = useContext(w)
   if (!n) {
     var /* [auto-meaningful-name] */e$component = e.component
     var i = undefined === e$component ? "div" : e$component
     var c = $$_54.a(e, ["component"])
-    return React.createElement(i, $$_19.a({}, c, {
+    return createElement(i, $$_19.a({}, c, {
       ref: t
     }))
   }
@@ -128,17 +128,17 @@ var y = function (e, t) {
   var d = $$_54.a(n, ["className"])
   var /* [auto-meaningful-name] */e$className = e.className
   var h = $$_54.a(e, ["className"])
-  return React.createElement(w.Provider, {
+  return createElement(w.Provider, {
     value: null
-  }, React.createElement(f, $$_19.a({
+  }, createElement(f, $$_19.a({
     ref: t,
     className: l(n$className, e$className)
   }, d, h)))
 }
-var E = React.forwardRef(y)
+var E = forwardRef(y)
 E.displayName = "RawItem"
 var O = E
-var w = React.createContext(null)
+var w = createContext(null)
 function C(e) {
   return "+ ".concat(e.length, " ...")
 }
@@ -165,13 +165,13 @@ function T(e, t) {
   var /* [auto-meaningful-name] */e$onVisibleChange = e.onVisibleChange
   var x = $$_54.a(e, ["prefixCls", "data", "renderItem", "renderRawItem", "itemKey", "itemWidth", "ssr", "style", "className", "maxCount", "renderRest", "renderRawRest", "suffix", "component", "itemComponent", "onVisibleChange"])
   var D = function () {
-    var e = React.useState({})
+    var e = useState({})
     var t = $$_40_index.a(e, 2)[1]
-    var n = React.useRef([])
-    var r = React.useRef(false)
+    var n = useRef([])
+    var r = useRef(false)
     var o = 0
     var a = 0
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         r.current = true
       }
@@ -217,18 +217,18 @@ function T(e, t) {
   var ee = $$_40_index.a($, 2)
   var te = ee[0]
   var ne = ee[1]
-  var re = React.useState(null)
+  var re = useState(null)
   var oe = $$_40_index.a(re, 2)
   var ie = oe[0]
   var ae = oe[1]
-  var se = React.useState(null)
+  var se = useState(null)
   var ce = $$_40_index.a(se, 2)
   var le = ce[0]
   var ue = ce[1]
-  var de = React.useMemo(function () {
+  var de = useMemo(function () {
     return null === le && M ? Number.MAX_SAFE_INTEGER : le || 0
   }, [le, B])
-  var pe = React.useState(false)
+  var pe = useState(false)
   var fe = $$_40_index.a(pe, 2)
   var he = fe[0]
   var me = fe[1]
@@ -237,7 +237,7 @@ function T(e, t) {
   var ve = p.length && "responsive" === e$maxCount
   var be = "invalidate" === e$maxCount
   var ye = ve || "number" === typeof e$maxCount && p.length > e$maxCount
-  var Ee = React.useMemo(function () {
+  var Ee = useMemo(function () {
     var e = p
     if (ve) {
       e = null === B && M ? p : p.slice(0, Math.min(p.length, G / v))
@@ -248,14 +248,14 @@ function T(e, t) {
     }
     return e
   }, [p, v, B, e$maxCount, ve])
-  var Oe = React.useMemo(function () {
+  var Oe = useMemo(function () {
     return ve ? p.slice(de + 1) : p.slice(Ee.length)
   }, [p, Ee, ve, de])
-  var we = React.useCallback(function (e, t) {
+  var we = useCallback(function (e, t) {
     var n
     return "function" === typeof e$itemKey ? e$itemKey(e) : null !== (n = e$itemKey && (null === e || undefined === e ? undefined : e[e$itemKey])) && undefined !== n ? n : t
   }, [e$itemKey])
-  var Ce = React.useCallback(e$renderItem || function (e) {
+  var Ce = useCallback(e$renderItem || function (e) {
     return e
   }, [e$renderItem])
   function Te(e, t) {
@@ -281,7 +281,7 @@ function T(e, t) {
   function Ae(e) {
     return H.get(we(Ee[e], e))
   }
-  React.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (G && _e && Ee) {
       var e = te
       var /* [auto-meaningful-name] */Ee$length = Ee.length
@@ -331,7 +331,7 @@ function T(e, t) {
   }
   var ke = e$renderRawItem ? function (e, t) {
     var n = we(e, t)
-    return React.createElement(w.Provider, {
+    return createElement(w.Provider, {
       key: n,
       value: $$_21.a($$_21.a({}, Re), {}, {
         order: t,
@@ -343,7 +343,7 @@ function T(e, t) {
     }, e$renderRawItem(e, t))
   } : function (e, t) {
     var n = we(e, t)
-    return React.createElement(f, $$_19.a({}, Re, {
+    return createElement(f, $$_19.a({}, Re, {
       order: t,
       key: n,
       item: e,
@@ -364,19 +364,19 @@ function T(e, t) {
   }
   if (e$renderRawRest) {
     if (e$renderRawRest) {
-      Ne = React.createElement(w.Provider, {
+      Ne = createElement(w.Provider, {
         value: $$_21.a($$_21.a({}, Re), xe)
       }, e$renderRawRest(Oe))
     }
   } else {
     var De = e$renderRest || C
-    Ne = React.createElement(f, $$_19.a({}, Re, xe), "function" === typeof De ? De(Oe) : De)
+    Ne = createElement(f, $$_19.a({}, Re, xe), "function" === typeof De ? De(Oe) : De)
   }
-  var Me = React.createElement(N, $$_19.a({
+  var Me = createElement(N, $$_19.a({
     className: l(!be && c, e$className),
     style: e$style,
     ref: t
-  }, x), Ee.map(ke), ye ? Ne : null, e$suffix && React.createElement(f, $$_19.a({}, Re, {
+  }, x), Ee.map(ke), ye ? Ne : null, e$suffix && createElement(f, $$_19.a({}, Re, {
     order: de,
     className: "".concat(ge, "-suffix"),
     registerSize: function (e, t) {
@@ -386,7 +386,7 @@ function T(e, t) {
     style: je
   }), e$suffix))
   if (ve) {
-    Me = React.createElement($$_1545_800.a, {
+    Me = createElement($$_1545_800.a, {
       onResize: function (e, t) {
         F(t.clientWidth)
       }
@@ -394,7 +394,7 @@ function T(e, t) {
   }
   return Me
 }
-var S = React.forwardRef(T)
+var S = forwardRef(T)
 S.displayName = "Overflow"
 S.Item = O
 S.RESPONSIVE = "responsive"

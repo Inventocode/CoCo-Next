@@ -12,14 +12,15 @@ import * as Gf from "./77"
 import * as /* [auto-meaningful-name] */$_149 from "./149"
 import * as Yr from "./53"
 import * as Et from "./9"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_223 from "./223"
 import /* [auto-meaningful-name] */$_2231 from "./223"
@@ -66,13 +67,13 @@ var IO = [
     }
   }
 ]
-var jO = React1.memo(function (e) {
+var jO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sliderType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
-  var a = $_16_index.e(function (e) {
+  var a = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
   var s = e$getValue(n) || Gf.d.TEMPLATE
@@ -86,25 +87,25 @@ var jO = React1.memo(function (e) {
   var v = e$getValue("trackImageFileId") || $_149.g
   var b = e$getValue("backgroundImageDirection") || Gf.b.HORIZONTAL
   var y = e$getValue("trackImageDirection") || Gf.b.HORIZONTAL
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var O = $_16_index.d()
-  var w = React1.useState("")
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var O = useDispatch()
+  var w = useState("")
   var C = $_10_index.a(w, 2)
   var T = C[0]
   var A = C[1]
-  var j = React1.useState("")
+  var j = useState("")
   var R = $_10_index.a(j, 2)
   var k = R[0]
   var x = R[1]
-  var D = React1.useState("")
+  var D = useState("")
   var M = $_10_index.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = React1.useState("")
+  var B = useState("")
   var F = $_10_index.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = React1.useState("")
+  var U = useState("")
   var H = $_10_index.a(U, 2)
   var V = H[0]
   var K = H[1]
@@ -113,7 +114,7 @@ var jO = React1.memo(function (e) {
       e$onChange(n, e)
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(u)) {
       e = u
@@ -123,7 +124,7 @@ var jO = React1.memo(function (e) {
     }
     P(e || $_149.c)
   }, [u, a])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(g)) {
       e = g
@@ -140,7 +141,7 @@ var jO = React1.memo(function (e) {
       })
     }
   }, [b, g, a])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (te.U(v)) {
       e = v
@@ -161,7 +162,7 @@ var jO = React1.memo(function (e) {
     className: N($_2231.formItemWrapper, $_2231.sliderMode, "changeSliderType")
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "slider.background"
   }), React.createElement("div", {
     className: $_2231.sliderType
@@ -170,7 +171,7 @@ var jO = React1.memo(function (e) {
       key: e.value,
       onClick: q.bind(null, e.value),
       className: N($_2231.typeItem, s === e.value && $_2231.active)
-    }, $_710_index$a$formatMessage({
+    }, $_710$a$formatMessage({
       id: e.label
     }))
   }))), s === Gf.d.TEMPLATE && React.createElement("div", {
@@ -193,7 +194,7 @@ var jO = React1.memo(function (e) {
     }, e.renderContent(l))
   }))), React.createElement("div", {
     className: $_2231.templateColor
-  }, React.createElement("span", null, $_710_index$a$formatMessage({
+  }, React.createElement("span", null, $_710$a$formatMessage({
     id: "templateColor"
   })), React.createElement(mb, {
     width: 42,
@@ -245,18 +246,18 @@ var jO = React1.memo(function (e) {
         trackImageDirection: y
       }))
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "edit"
   })))))
 })
-var NO = React1.memo(function (e) {
+var NO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("maxValue")
   var o = e$getValue("minValue")
   var i = e$getValue("step")
   var a = e$getValue("value")
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   function c(e) {
     e$onChange("minValue", Number(e))
   }
@@ -272,13 +273,13 @@ var NO = React1.memo(function (e) {
   return React.createElement($_13_index.i, {
     className: N($_2231.formItemWrapper, $_2231.sliderRangeFormItem, $_2231.typeSelector, "changeSliderMode"),
     align: "vertical",
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "numberValue"
     })
   }, React.createElement("div", {
     className: N($_2231.firstRow, $_2231.row)
   }, React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "minValue"
     }),
     type: "number",
@@ -295,7 +296,7 @@ var NO = React1.memo(function (e) {
   }), React.createElement("div", {
     className: $_2231.space
   }), React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "maxValue"
     }),
     type: "number",
@@ -318,7 +319,7 @@ var NO = React1.memo(function (e) {
   })), React.createElement("div", {
     className: $_2231.row
   }, React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "gap"
     }),
     type: "number",
@@ -337,7 +338,7 @@ var NO = React1.memo(function (e) {
   }), React.createElement("div", {
     className: $_2231.space
   }), React.createElement($_13_index.o, {
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "initialValue"
     }),
     type: "number",
@@ -359,18 +360,18 @@ var NO = React1.memo(function (e) {
     ]
   })))
 })
-var RO = React1.memo(function (e) {
+var RO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "direction" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var i = e$getValue(n) || Gf.b.HORIZONTAL
   var a = e$getValue("size")
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement($_13_index.i, {
     align: "vertical",
     className: N($_2231.formItemWrapper, $_2231.sliderDirection, "changeSliderDirection"),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: "direction"
     })
   }, React.createElement($_13_index.s, {
@@ -407,7 +408,7 @@ var RO = React1.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: i === Gf.b.HORIZONTAL ? "icon-horizontal-active" : "icon-horizontal",
     className: $_2231.alignIcon
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "horizontal"
   }))), React.createElement($_13_index.t, {
     value: Gf.b.VERTICAL,
@@ -415,11 +416,11 @@ var RO = React1.memo(function (e) {
   }, React.createElement($_13_index.j, {
     type: i === Gf.b.VERTICAL ? "icon-vertical-active" : "icon-vertical",
     className: $_2231.alignIcon
-  }), React.createElement("span", null, $_710_index$a$formatMessage({
+  }), React.createElement("span", null, $_710$a$formatMessage({
     id: "vertical"
   })))))
 })
-var kO = React1.memo(function (e) {
+var kO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fontSize" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -430,7 +431,7 @@ var kO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$label = e$formConfig.label
   var /* [auto-meaningful-name] */e$formConfig$min = e$formConfig.min
   var /* [auto-meaningful-name] */e$formConfig$max = e$formConfig.max
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var p = e$getValue(n)
   p = Math.ceil(p * s)
   var f = function (e) {
@@ -441,7 +442,7 @@ var kO = React1.memo(function (e) {
   }
   return React.createElement($_13_index.i, {
     className: N(qv.formItemWrapper, "changeFontSize"),
-    label: $_710_index$a$formatMessage({
+    label: $_710$a$formatMessage({
       id: e$formConfig$label || "fontSize"
     })
   }, React.createElement($_13_index.n, {

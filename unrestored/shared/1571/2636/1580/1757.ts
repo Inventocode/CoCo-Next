@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./1768/257/index")
-var /* [auto-meaningful-name] */require$_1581_401$find = require("./1581/401").find
+var r = require("./1754/257/index")
+var /* [auto-meaningful-name] */require$_1754_401$find = require("./1754/401").find
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("find", function (e) {
-  return require$_1581_401$find(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
+  return require$_1754_401$find(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
 })

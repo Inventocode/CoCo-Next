@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_index from "../../../../unrestored/shared/1571/2636/20/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../../unrestored/shared/1571/2636/392/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_144 from "../../../../unrestored/shared/1571/2636/144"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_restrict from "../../../shared/widget/custom/restrict"
+import * as CustomWidgetRestrict from "../../../shared/widget/custom/restrict"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_375 from "../../../../unrestored/shared/1571/2636/37/375"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_48_345 from "../../../../unrestored/shared/1571/2636/48/345"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_410 from "../../../../unrestored/shared/1571/2636/410"
@@ -28,16 +28,16 @@ import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_51
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_147 from "../../../../unrestored/shared/1571/2636/147"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_219_index from "../../../../unrestored/shared/1571/2636/37/219/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_376 from "../../../../unrestored/shared/1571/2636/37/376"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_shop from "../../../shared/widget/custom/shop"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_storage from "../../../shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_load from "../../../shared/widget/custom/load"
+import * as CustomWidgetShop from "../../../shared/widget/custom/shop"
+import * as CustomWidgetStorage from "../../../shared/widget/custom/storage"
+import * as LoadCustomWidget from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_127 from "../../../../unrestored/shared/1571/2636/127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_145 from "../../../../unrestored/shared/1571/2636/145"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../shared/tools"
 import { oTHelper } from "../../../../unrestored/shared/1571/2636/49"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../unrestored/shared/1571/2636/24/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_ui_language from "../../../shared/ui/language"
+import * as Language from "../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"
 import * as /* [auto-meaningful-name] */$$_$$_widget_builtIn_types from "../../widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_305 from "../../../../unrestored/shared/1571/2636/305"
@@ -63,7 +63,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_type from "../../../shared/widget/custom/type"
+import * as CustomWidgetType from "../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "./actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_738_66 from "../../../../unrestored/shared/1571/2636/738/66"
@@ -73,11 +73,12 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_27 from "../../../../unrestored/shared/1571/2636/27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_39 from "../../../../unrestored/shared/1571/2636/39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index from "../../../../unrestored/shared/1571/2636/80/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_80_index1 from "../../../../unrestored/shared/1571/2636/80/index"
+import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../shared/ui/components"
+import { CoCoDialog } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_266 from "../../../../unrestored/shared/1571/2636/266"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2661 from "../../../../unrestored/shared/1571/2636/266"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_188 from "../../../../unrestored/shared/1571/2636/188"
@@ -103,7 +104,7 @@ var No = function (e) {
       e$onConfirm()
     }
   }
-  return <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f
+  return <CoCoDialog
     visible={true}
     showCloseButton={false}
     withPortal={true}
@@ -150,7 +151,7 @@ var No = function (e) {
         {e$allowText}
       </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>}
     </div>
-  </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f>
+  </CoCoDialog>
 }
 var Ro = new (function () {
   function e() {
@@ -265,7 +266,7 @@ var Ro = new (function () {
         this.destroyCurrentBox()
         var e = this.boxQueue.shift()
         if (e) {
-          $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.render(React1.createElement(No, e.config), e.element)
+          ReactDom1.render(React1.createElement(No, e.config), e.element)
           document.body.appendChild(e.element)
           this.currentBox = e
         }
@@ -301,7 +302,7 @@ var Ro = new (function () {
     }, {
       key: "destroyBox",
       value: function (e) {
-        $$_$$_$$_$$_unrestored_shared_1571_2636_80_index1.unmountComponentAtNode(e)
+        ReactDom1.unmountComponentAtNode(e)
         document.body.removeChild(e)
       }
     }
@@ -346,10 +347,10 @@ function ti() {
             onConfirm: function () {
               store.dispatch(Actions.openSignInDialogAction())
             },
-            allowText: $$_$$_$$_shared_ui_language.c(t$sent, "cloudSpace.login").toString(),
-            cancelText: $$_$$_$$_shared_ui_language.c(t$sent, "cloudSpace.cancelLogin").toString(),
-            title: $$_$$_$$_shared_ui_language.c(t$sent, "cloudSpace.NotLoginTitle").toString(),
-            content: $$_$$_$$_shared_ui_language.c(t$sent, "cloudSpace.notLoginDescription").toString()
+            allowText: Language.c(t$sent, "cloudSpace.login").toString(),
+            cancelText: Language.c(t$sent, "cloudSpace.cancelLogin").toString(),
+            title: Language.c(t$sent, "cloudSpace.NotLoginTitle").toString(),
+            content: Language.c(t$sent, "cloudSpace.notLoginDescription").toString()
           }))
         case 5:
         case "end":
@@ -387,8 +388,8 @@ function ni(e) {
           />
           o.next = 7
           return ReduxSagaEffects.e(Actions.openConfirmDialogAction({
-            allowText: $$_$$_$$_shared_ui_language.c(o$sent, "know").toString(),
-            title: $$_$$_$$_shared_ui_language.c(o$sent, "cloudSpace.dataSourceNotExistDesc").toString(),
+            allowText: Language.c(o$sent, "know").toString(),
+            title: Language.c(o$sent, "cloudSpace.dataSourceNotExistDesc").toString(),
             content: r,
             cancelBtnVisible: false,
             onConfirm: function () {
@@ -415,7 +416,7 @@ function ri(e, t) {
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
         case 2:
           a$sent = a.sent
-          r = $$_$$_$$_shared_ui_language.c(a$sent, t) ? $$_$$_$$_shared_ui_language.c(a$sent, t) : t
+          r = Language.c(a$sent, t) ? Language.c(a$sent, t) : t
           o = e.map(function (e) {
             return <div
               className={"removedCloudDB"}
@@ -432,7 +433,7 @@ function ri(e, t) {
             children={[o]}
           />
           Ro.appendDialog({
-            allowText: $$_$$_$$_shared_ui_language.c(a$sent, "know").toString(),
+            allowText: Language.c(a$sent, "know").toString(),
             title: "以下控件绑定的云数据源发生异常(".concat(r, ")，请重新绑定"),
             content: i,
             cancelBtnVisible: false
@@ -457,7 +458,7 @@ function oi(e, t) {
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
         case 2:
           a$sent = a.sent
-          r = $$_$$_$$_shared_ui_language.c(a$sent, t)
+          r = Language.c(a$sent, t)
           o = e.map(function (e) {
             return <div
               className={"removedCloudDB"}
@@ -474,8 +475,8 @@ function oi(e, t) {
             children={[o]}
           />
           Ro.appendDialog({
-            allowText: $$_$$_$$_shared_ui_language.c(a$sent, "know").toString(),
-            title: $$_$$_$$_shared_ui_language.c(a$sent, "cloudSpace.dataSourceExceedLimitError", {
+            allowText: Language.c(a$sent, "know").toString(),
+            title: Language.c(a$sent, "cloudSpace.dataSourceExceedLimitError", {
               type: r
             }).toString(),
             content: i,
@@ -1875,7 +1876,7 @@ function Qa(e) {
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
         case 6:
           p$sent1 = p.sent
-          a = $$_$$_$$_$$_unrestored_shared_1571_2636_9.B($$_$$_$$_shared_ui_language.c(p$sent, "defaultScreenTitle").toString(), p$sent1)
+          a = $$_$$_$$_$$_unrestored_shared_1571_2636_9.B(Language.c(p$sent, "defaultScreenTitle").toString(), p$sent1)
           s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.A(a)
           p$sent1$size = p$sent1.size
           u = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.addWorkspaceData({
@@ -1909,9 +1910,9 @@ function Qa(e) {
   }, Ii)
 }
 function Za(e) {
-  var t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.A($$_$$_$$_shared_ui_language.c(e, "defaultScreenTitle").toString())
+  var t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.A(Language.c(e, "defaultScreenTitle").toString())
   return {
-    title: $$_$$_$$_shared_ui_language.c(e, "newProjectTitle").toString(),
+    title: Language.c(e, "newProjectTitle").toString(),
     version: $$_$$_$$_$$_unrestored_shared_1571_2636_53.e,
     blockly: $$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, t.id, {
       screenId: t.id,
@@ -1957,7 +1958,7 @@ function Ja(e) {
           r.next = 9
           return ReduxSagaEffects.e(Actions.openConfirmDialogAction({
             title: "error",
-            content: $$_$$_$$_shared_ui_language.c(r$sent, "MyProject.projectHasDeleted").toString(),
+            content: Language.c(r$sent, "MyProject.projectHasDeleted").toString(),
             cancelBtnVisible: false
           }))
         case 9:
@@ -1971,7 +1972,7 @@ function Ja(e) {
           r.next = 14
           return ReduxSagaEffects.e(Actions.openConfirmDialogAction({
             title: "error",
-            content: $$_$$_$$_shared_ui_language.c(r$sent, "MyProject.projectHasNoRermission").toString(),
+            content: Language.c(r$sent, "MyProject.projectHasNoRermission").toString(),
             cancelBtnVisible: false
           }))
         case 14:
@@ -1984,8 +1985,8 @@ function Ja(e) {
           }
           r.next = 19
           return ReduxSagaEffects.e(Actions.openConfirmDialogAction({
-            title: $$_$$_$$_shared_ui_language.c(r$sent, "OT.editPermissionLostTitle").toString(),
-            content: $$_$$_$$_shared_ui_language.c(r$sent, "OT.editPermissionLostDescription").toString(),
+            title: Language.c(r$sent, "OT.editPermissionLostTitle").toString(),
+            content: Language.c(r$sent, "OT.editPermissionLostDescription").toString(),
             cancelBtnVisible: false
           }))
         case 19:
@@ -2384,11 +2385,11 @@ function loadWorkFromJSON(workJSON) {
             cloudTableList
           } = workJSON)
           regeneratorContext.next = 5
-          return ReduxSagaEffects.b($$_$$_$$_shared_widget_custom_load.loadWidgetsFromFile, extensionWidgetList, unsafeExtensionWidgetList)
+          return ReduxSagaEffects.b(LoadCustomWidget.loadWidgetsFromFile, extensionWidgetList, unsafeExtensionWidgetList)
         case 5:
           I = $$_$$_$$_$$_unrestored_shared_1571_2636_97.f(workJSON.screens)
           regeneratorContext.next = 8
-          return ReduxSagaEffects.b($$_$$_$$_shared_widget_custom_load.w, extensionWidgetList, I, globalWidgets)
+          return ReduxSagaEffects.b(LoadCustomWidget.w, extensionWidgetList, I, globalWidgets)
         case 8:
           regeneratorContext.next = 10
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.z)
@@ -3003,7 +3004,7 @@ function ls(e) {
           o.next = 10
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
             type: "error",
-            message: $$_$$_$$_shared_ui_language.c(o$sent, "notHavePermissionToDeleteCloudDb").toString()
+            message: Language.c(o$sent, "notHavePermissionToDeleteCloudDb").toString()
           }))
         case 10:
           r = false
@@ -3042,7 +3043,7 @@ function us(e) {
           o.next = 11
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
             type: "error",
-            message: $$_$$_$$_shared_ui_language.c(o$sent, "cloudDbCountOverflowTitle").toString()
+            message: Language.c(o$sent, "cloudDbCountOverflowTitle").toString()
           }))
         case 11:
           r = false
@@ -3056,7 +3057,7 @@ function us(e) {
           o.next = 17
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
             type: "error",
-            message: $$_$$_$$_shared_ui_language.c(o$sent, "notHavePermissionToAddCloudDb").toString()
+            message: Language.c(o$sent, "notHavePermissionToAddCloudDb").toString()
           }))
         case 17:
           r = false
@@ -3220,7 +3221,7 @@ function ps(e, t, n) {
       switch (regeneratorContext.prev = regeneratorContext.next) {
         case 0:
           u = function (e) {
-            return "string" === typeof e ? $$_$$_$$_shared_ui_language.f(regeneratorContext$sent, e) : (e.constructor !== Array && e.constructor !== Object || Object.entries(e).forEach(function (t) {
+            return "string" === typeof e ? Language.f(regeneratorContext$sent, e) : (e.constructor !== Array && e.constructor !== Object || Object.entries(e).forEach(function (t) {
               var n = $$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, 2)
               var r = n[0]
               var o = n[1]
@@ -3265,7 +3266,7 @@ function ps(e, t, n) {
             h = c$attributes[s$contentTextField]
             h = $$_$$_$$_$$_unrestored_shared_1571_2636_9.D(e, d, h)
           } else {
-            f = null === (g = $$_$$_$$_shared_ui_language.c(regeneratorContext$sent, s.title)) || undefined === g ? undefined : g.toString()
+            f = null === (g = Language.c(regeneratorContext$sent, s.title)) || undefined === g ? undefined : g.toString()
             f = $$_$$_$$_$$_unrestored_shared_1571_2636_9.D(e, d, f)
           }
           _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a(e)
@@ -3513,7 +3514,7 @@ function ms(e) {
         case 54:
           _v$sent5 = v.sent
           v.next = 57
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.b, $$_$$_$$_shared_ui_language.c(_v$sent5, "cloudDb.defaultName").toString(), $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_v$sent4) ? _v$sent4 : "")
+          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.b, Language.c(_v$sent5, "cloudDb.defaultName").toString(), $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_v$sent4) ? _v$sent4 : "")
         case 57:
           if ((v$sent2 = v.sent).id) {
             v.next = 62
@@ -3522,7 +3523,7 @@ function ms(e) {
           v.next = 61
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
             type: "error",
-            message: $$_$$_$$_shared_ui_language.c(_v$sent5, "cloudDBWidget.generateError").toString()
+            message: Language.c(_v$sent5, "cloudDBWidget.generateError").toString()
           }))
         case 61:
           return v.abrupt("return")
@@ -3575,7 +3576,7 @@ function ms(e) {
           v.next = 81
           return ReduxSagaEffects.b(bs, e$payload$screenId, v$sent)
         case 81:
-          $$_$$_$$_shared_widget_custom_shop.a(v$sent.type, null === _v$sent2 || undefined === _v$sent2 ? undefined : _v$sent2.id)
+          CustomWidgetShop.a(v$sent.type, null === _v$sent2 || undefined === _v$sent2 ? undefined : _v$sent2.id)
           return v.abrupt("return", v$sent)
         case 83:
         case "end":
@@ -3604,13 +3605,13 @@ function gs(e) {
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.t)
         case 4:
           if (l$sent = l.sent, !(r = l$sent.find(function (e) {
-            return $$_$$_$$_shared_widget_custom_type.c(e.type, true) === e$payload$widgetType
+            return CustomWidgetType.c(e.type, true) === e$payload$widgetType
           }))) {
             l.next = 11
             break
           }
           l.next = 9
-          return ReduxSagaEffects.b($$_$$_$$_shared_widget_custom_load.u, r.cdnUrl, r.id)
+          return ReduxSagaEffects.b(LoadCustomWidget.u, r.cdnUrl, r.id)
         case 9:
           l.next = 16
           break
@@ -3622,11 +3623,11 @@ function gs(e) {
           l.next = 16
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
             type: "error",
-            message: $$_$$_$$_shared_ui_language.c(_l$sent, "WidgetList.addFailureToast").toString()
+            message: Language.c(_l$sent, "WidgetList.addFailureToast").toString()
           }))
         case 16:
-          if ($$_$$_$$_shared_widget_custom_type.isSafeExtensions(e$payload$widgetType)) {
-            a = $$_$$_$$_shared_widget_custom_storage.f(e$payload$widgetType)
+          if (CustomWidgetType.isSafeExtensions(e$payload$widgetType)) {
+            a = CustomWidgetStorage.f(e$payload$widgetType)
             s = {
               id: a.id,
               cdnUrl: a.cdnUrl,
@@ -3687,10 +3688,10 @@ function _s(e, t, n) {
           return f.abrupt("return")
         case 17:
           _f$sent.parentId = t
-          _f$sent.title = $$_$$_$$_shared_ui_language.c(f$sent, u.titleMessageId).toString()
+          _f$sent.title = Language.c(f$sent, u.titleMessageId).toString()
           _f$sent.attributes = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, _f$sent.attributes), u.attributes)
           if (_f$sent.type === $$_$$_widget_builtIn_types.H) {
-            _f$sent.attributes.content = $$_$$_$$_shared_ui_language.c(f$sent, u.contentMessageId || "").toString()
+            _f$sent.attributes.content = Language.c(f$sent, u.contentMessageId || "").toString()
             _f$sent.attributes.textAlign = "left"
           }
           f.next = 23
@@ -3742,8 +3743,8 @@ function vs(e) {
             a.next = 11
             break
           }
-          o = null === (r = $$_$$_$$_shared_ui_language.c(a$sent, n.title)) || undefined === r ? undefined : r.toString()
-          i = $$_$$_$$_shared_ui_language.c(a$sent, "WidgetList.addSuccessToast", {
+          o = null === (r = Language.c(a$sent, n.title)) || undefined === r ? undefined : r.toString()
+          i = Language.c(a$sent, "WidgetList.addSuccessToast", {
             widgetTitle: o
           }).toString()
           a.next = 11
@@ -3783,7 +3784,7 @@ function bs(e, t) {
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.u)
         case 11:
           _c$sent2 = c.sent
-          s = null === (n = $$_$$_$$_shared_ui_language.c(c$sent, o.previewAreaWidgetTitle)) || undefined === n ? undefined : n.toString()
+          s = null === (n = Language.c(c$sent, o.previewAreaWidgetTitle)) || undefined === n ? undefined : n.toString()
           $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("AddWidgetToStage", {
             screenId: e,
             screenName: (null === _c$sent || undefined === _c$sent ? undefined : _c$sent.title) || "",
@@ -3987,7 +3988,7 @@ function ws() {
               store.dispatch(Actions.showCommonToastInfoAction({
                 type: "error",
                 duration: 4e3,
-                message: $$_$$_$$_shared_ui_language.c(store$getState$common$language, e$sent).toString()
+                message: Language.c(store$getState$common$language, e$sent).toString()
               }))
             }
           case 6:
@@ -4081,47 +4082,29 @@ function Cs() {
  * 生成用于 Player 运行的数据
  *
  * @param isPlayCurrentScreen 是否从当前屏幕开始运行
- * @param t
+ * @param debug [存疑] 是否是调试模式
  * @returns 用于 Player 运行的数据
  */
-function* generatePlayerData(isPlayCurrentScreen: boolean, t) {
-  var /* [auto-meaningful-name] */screens
-  var /* [auto-meaningful-name] */globalVariableList
-  var /* [auto-meaningful-name] */globalArrayList
-  var /* [auto-meaningful-name] */globalObjectList
-  var /* [auto-meaningful-name] */globalWidgetIds
-  var /* [auto-meaningful-name] */currentScreen
-  var apiToken
-  var hasCloudRoomBlock
-  var hasCloudStorageBlock
-  var hasCloudDbBlock
-  var hasCloudDictBlock
-  var hasBlockTableBlock
+function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
   var _
-  var initialScreenId
-  var /* [auto-meaningful-name] */soundFileMap
-  var /* [auto-meaningful-name] */iconFileMap
-  var /* [auto-meaningful-name] */fontFileMap
-  var result
-  var minifyResult
   let id = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
   const language = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
-  screens = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
-  globalVariableList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.m)
-  globalArrayList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.k)
-  globalObjectList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.l)
-  globalWidgetIds = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
-  currentScreen = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
-  apiToken = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
+  const screens = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+  const globalVariableList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.m)
+  const globalArrayList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.k)
+  const globalObjectList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.l)
+  const globalWidgetIds = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
+  const currentScreen = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+  const apiToken = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
   if (!currentScreen) {
     return
   }
   $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.updateCurrentWorkspaceData()
-  hasCloudRoomBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudRoom")
-  hasCloudStorageBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudStorage")
-  hasCloudDbBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudDB")
-  hasCloudDictBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudDict")
-  hasBlockTableBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudTable")
+  const hasCloudRoomBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudRoom")
+  const hasCloudStorageBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudStorage")
+  const hasCloudDbBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudDB")
+  const hasCloudDictBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudDict")
+  const hasBlockTableBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudTable")
   _ = $$_$$_$$_$$_unrestored_shared_1571_2636_9.q()
   if (
     hasCloudRoomBlock ||
@@ -4133,9 +4116,9 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, t) {
   ) {
     if (!$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id)) {
       yield ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
-        duration: 4e3,
+        duration: 4000,
         showPrefixIcon: false,
-        message: $$_$$_$$_shared_ui_language.c(language, "project.saving").toString()
+        message: Language.c(language, "project.saving").toString()
       }))
       id = yield ReduxSagaEffects.b(Ws, Actions.asyncSaveProjectAction({
         isUpdate: false,
@@ -4147,11 +4130,11 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, t) {
       apiToken = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
     }
   }
-  initialScreenId = isPlayCurrentScreen ? currentScreen.id : screens.toArray()[0].id
-  soundFileMap = yield getSoundFileMap()
-  iconFileMap = yield getIconFileMap()
-  fontFileMap = yield getFontFileMap()
-  result = $$_$$_$$_$$_unrestored_shared_1571_2636_177.c(
+  const initialScreenId = isPlayCurrentScreen ? currentScreen.id : screens.toArray()[0].id
+  const soundFileMap = yield getSoundFileMap()
+  const iconFileMap = yield getIconFileMap()
+  const fontFileMap = yield getFontFileMap()
+  const result = $$_$$_$$_$$_unrestored_shared_1571_2636_177.c(
     id,
     $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z,
     screens.toArray(),
@@ -4166,10 +4149,8 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, t) {
     globalObjectList
   )
   result.fontFileMap = fontFileMap
-  result.blockCode = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.generateAllWorkspaceCodes(result.screenList, t)
-  minifyResult = Terser.minify(result.blockCode, {
-    keep_fnames: true
-  })
+  result.blockCode = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.generateAllWorkspaceCodes(result.screenList, debug)
+  const minifyResult = Terser.minify(result.blockCode, { keep_fnames: true })
   if (minifyResult.code !== undefined) {
     result.blockCode = minifyResult.code
   }
@@ -4378,11 +4359,11 @@ function Is(e) {
           if (_f$sent2$widgetMap = _f$sent2.widgetMap, i = new Set(), a = new Set(), s = new Set(), l = true, Object.values(_f$sent2$widgetMap).forEach(function (e) {
             var /* [auto-meaningful-name] */o$types
             var /* [auto-meaningful-name] */e$type = e.type
-            var o = $$_$$_$$_shared_widget_custom_storage.f(e$type)
-            if (e$type.includes($$_$$_$$_shared_widget_custom_type.b) && o) {
+            var o = CustomWidgetStorage.f(e$type)
+            if (e$type.includes(CustomWidgetType.UNSAFE_EXTENSION_PREFIX) && o) {
               var c = o
               // [CoCo Next] 移除运行作品时的控件关键词检查
-              // $$_$$_$$_shared_widget_custom_restrict.a.forEach(function (e) {
+              // CustomWidgetRestrict.keyWords.forEach(function (e) {
               //   var /* [auto-meaningful-name] */c$code
               //   if (null === (c$code = c.code) || undefined === c$code ? undefined : c$code.includes(e)) {
               //     a.add(e)
@@ -4393,12 +4374,12 @@ function Is(e) {
             if (null === o || undefined === o || null === (o$types = o.types) || undefined === o$types ? undefined : o$types.platforms) {
               var d = o.types.platforms.includes("web")
               if (!d) {
-                if ($$_$$_$$_shared_widget_custom_load.q(e$type)) {
+                if (LoadCustomWidget.q(e$type)) {
                   s.add(o.types.title)
                 } else {
                   var p = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e$type)
                   if (p) {
-                    var f = $$_$$_$$_shared_ui_language.c(f$sent, p.title)
+                    var f = Language.c(f$sent, p.title)
                     s.add(f)
                   }
                 }
@@ -4411,9 +4392,9 @@ function Is(e) {
           }
           f.next = 21
           return ReduxSagaEffects.e(Actions.openConfirmDialogAction({
-            allowText: $$_$$_$$_shared_ui_language.c(f$sent, "cloudDb.know").toString(),
+            allowText: Language.c(f$sent, "cloudDb.know").toString(),
             title: "error",
-            content: $$_$$_$$_shared_ui_language.c(f$sent, "Play.widgetNotSupportsForbiddenKeywords", {
+            content: Language.c(f$sent, "Play.widgetNotSupportsForbiddenKeywords", {
               widgetTypeNames: Array.from(i).join("、"),
               keywords: Array.from(a).join("、")
             }).toString(),
@@ -4430,7 +4411,7 @@ function Is(e) {
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
             type: "info",
             duration: 4e3,
-            message: $$_$$_$$_shared_ui_language.c(f$sent, "Play.widgetNotSupportsWebPlatform", {
+            message: Language.c(f$sent, "Play.widgetNotSupportsWebPlatform", {
               widgetTypeNames: Array.from(s).join("、")
             }).toString()
           }))
@@ -4466,7 +4447,7 @@ function Is(e) {
             type: "lintError",
             screenId: f.t0.screenId,
             blockId: f.t0.blockId,
-            message: $$_$$_$$_shared_ui_language.c(f$sent, f.t0.message, f.t0.data) + ""
+            message: Language.c(f$sent, f.t0.message, f.t0.data) + ""
           }
           f.next = 46
           return ReduxSagaEffects.e(Actions.nf(p))
@@ -4522,7 +4503,7 @@ function js(e) {
             type: "warning",
             screenId: "",
             blockId: "",
-            message: $$_$$_$$_shared_ui_language.c(p$sent, "slider.maxValueEqualMinValue", {
+            message: Language.c(p$sent, "slider.maxValueEqualMinValue", {
               title: o.title
             }).toString()
           }
@@ -4537,7 +4518,7 @@ function js(e) {
             type: "warning",
             screenId: "",
             blockId: "",
-            message: $$_$$_$$_shared_ui_language.c(p$sent, "slider.stepGreaterThanRange", {
+            message: Language.c(p$sent, "slider.stepGreaterThanRange", {
               title: o.title
             }).toString()
           }
@@ -4624,12 +4605,8 @@ function* handlePublishWorkToCommunity(action) {
   }
   const workId = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
   yield ReduxSagaEffects.b(Actions.Bf, action.payload.name)
-  const blob = new Blob([JSON.stringify(playerData)], {
-    type: "application/json,charset=utf-8;"
-  })
-  const file = new File([blob], "test.json", {
-    type: blob.type
-  })
+  const blob = new Blob([JSON.stringify(playerData)], { type: "application/json,charset=utf-8;" })
+  const file = new File([blob], "test.json", { type: blob.type })
   const uploadPlayerDataResult = yield ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e, file, "JSON")
   const { payload } = action
   const { name, description, operation, coverUrl } = payload
@@ -4640,7 +4617,7 @@ function* handlePublishWorkToCommunity(action) {
     coverUrl,
     workId,
     bcmcUrl: uploadPlayerDataResult.url,
-    playerUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_15.E(workId)
+    playerUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_15.getPlayerCommunityUrl(workId)
   }
   const publishResponse = yield ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.m, publishInfo)
   if (publishResponse.code !== 200) {
@@ -4748,6 +4725,7 @@ function handlePublishWorkToH5(action) {
     }
   }, ca)
 }
+
 function Ds(e) {
   var /* [auto-meaningful-name] */e$payload$shouldCloneCloud
   var /* [auto-meaningful-name] */a$sent
@@ -5511,7 +5489,7 @@ function Ys(e) {
               d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.C(e$payload$widgetId, s.type, d)
             } else {
               p = l.previewAreaWidgetTitle
-              p = $$_$$_$$_shared_ui_language.d(p)
+              p = Language.d(p)
               d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.C(e$payload$widgetId, s.type, p)
             }
             if (s$contentTitle !== d) {
@@ -5731,7 +5709,7 @@ function Js() {
           t = 1
           n = 100
           d.next = 6
-          return ReduxSagaEffects.b($$_$$_$$_shared_widget_custom_shop.c, t, n)
+          return ReduxSagaEffects.b(CustomWidgetShop.c, t, n)
         case 6:
           if (d$sent = d.sent, d$sent$list = d$sent.list, d$sent$total = d$sent.total, a = Math.ceil(d$sent$total / n), e = e.concat(d$sent$list), !(a > 1)) {
             d.next = 22
@@ -5744,7 +5722,7 @@ function Js() {
             break
           }
           d.next = 16
-          return ReduxSagaEffects.b($$_$$_$$_shared_widget_custom_shop.c, t, n)
+          return ReduxSagaEffects.b(CustomWidgetShop.c, t, n)
         case 16:
           d$sent1 = d.sent
           d$sent1$list = d$sent1.list
@@ -5854,7 +5832,7 @@ function ec(e, t) {
           return ReduxSagaEffects.e(Actions.jf(i.id, l$value.id))
         case 18:
           if (!l$value.parentId) {
-            $$_$$_$$_shared_widget_custom_shop.a(l$value.type, null === _f$sent9 || undefined === _f$sent9 ? undefined : _f$sent9.id)
+            CustomWidgetShop.a(l$value.type, null === _f$sent9 || undefined === _f$sent9 ? undefined : _f$sent9.id)
           }
         case 19:
           f.next = 13
@@ -5959,7 +5937,7 @@ function tc(e) {
           return ReduxSagaEffects.e(Actions.jf(s, u$value.id))
         case 34:
           if (!u$value.parentId) {
-            $$_$$_$$_shared_widget_custom_shop.a(u$value.type, null === _$sent5 || undefined === _$sent5 ? undefined : _$sent5.id)
+            CustomWidgetShop.a(u$value.type, null === _$sent5 || undefined === _$sent5 ? undefined : _$sent5.id)
           }
         case 35:
           _.next = 15
@@ -6036,7 +6014,7 @@ function nc(e) {
           E.next = 17
           return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
         case 17:
-          if (_E$sent3 = E.sent, s$widget$attributes = s.widget.attributes, s$widget$isGlobalWidget = s.widget.isGlobalWidget, g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$c, p.widgetIds, $$_$$_$$_shared_ui_language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$c), v = {
+          if (_E$sent3 = E.sent, s$widget$attributes = s.widget.attributes, s$widget$isGlobalWidget = s.widget.isGlobalWidget, g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$c, p.widgetIds, Language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$c), v = {
             id: _,
             title: g,
             type: $$_$$_widget_builtIn_types.c,
@@ -6070,7 +6048,7 @@ function nc(e) {
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
             $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b.widgetIds))
           }
-          $$_$$_$$_shared_widget_custom_shop.a(v.type, null === _E$sent3 || undefined === _E$sent3 ? undefined : _E$sent3.id)
+          CustomWidgetShop.a(v.type, null === _E$sent3 || undefined === _E$sent3 ? undefined : _E$sent3.id)
         case 39:
         case "end":
           return E.stop()
@@ -6135,10 +6113,10 @@ function rc(e) {
         case 20:
           if (_E$sent6 = E.sent, h = Lodash.cloneDeep(s.widget.attributes), s$widget$isGlobalWidget = s.widget.isGlobalWidget, h.actionList.push({
             id: $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_$$_$$_unrestored_shared_1571_2636_144.a),
-            name: $$_$$_$$_shared_ui_language.c(E$sent, "ActorStyleDialog.defaultActionName").toString(),
+            name: Language.c(E$sent, "ActorStyleDialog.defaultActionName").toString(),
             styleList: [],
             interval: 200
-          }), g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$a, p.widgetIds, $$_$$_$$_shared_ui_language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$a), v = {
+          }), g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$a, p.widgetIds, Language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$a), v = {
             id: _,
             title: g,
             type: $$_$$_widget_builtIn_types.a,
@@ -6175,7 +6153,7 @@ function rc(e) {
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
             $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b.widgetIds))
           }
-          $$_$$_$$_shared_widget_custom_shop.a(v.type, null === _E$sent6 || undefined === _E$sent6 ? undefined : _E$sent6.id)
+          CustomWidgetShop.a(v.type, null === _E$sent6 || undefined === _E$sent6 ? undefined : _E$sent6.id)
         case 43:
         case "end":
           return E.stop()
@@ -6240,7 +6218,7 @@ function oc(e) {
         case 25:
           l.next = 27
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
-            message: $$_$$_$$_shared_ui_language.c(l$sent, "theBlockHasBeRemoved").toString(),
+            message: Language.c(l$sent, "theBlockHasBeRemoved").toString(),
             showCloseIcon: false,
             showPrefixIcon: false,
             type: "error"
@@ -6575,10 +6553,10 @@ function pc() {
             onConfirm: function () {
               store.dispatch(Actions.openSignInDialogAction())
             },
-            allowText: $$_$$_$$_shared_ui_language.c(t$sent, "cloudDbUserLogin").toString(),
-            cancelText: $$_$$_$$_shared_ui_language.c(t$sent, "cloudDbUserCancelLogin").toString(),
-            title: $$_$$_$$_shared_ui_language.c(t$sent, "cloudDbUserNotLoginTitle").toString(),
-            content: $$_$$_$$_shared_ui_language.c(t$sent, "cloudDbUserNotLoginDescription").toString()
+            allowText: Language.c(t$sent, "cloudDbUserLogin").toString(),
+            cancelText: Language.c(t$sent, "cloudDbUserCancelLogin").toString(),
+            title: Language.c(t$sent, "cloudDbUserNotLoginTitle").toString(),
+            content: Language.c(t$sent, "cloudDbUserNotLoginDescription").toString()
           }))
         case 5:
         case "end":
@@ -6803,8 +6781,8 @@ function fc() {
           O.f()
           return k.finish(100)
         case 103:
-          A = $$_$$_$$_shared_ui_language.d("cloudDbCountOverflowTitle")
-          I = $$_$$_$$_shared_ui_language.d("cloudDbCountOverflowDescription", {
+          A = Language.d("cloudDbCountOverflowTitle")
+          I = Language.d("cloudDbCountOverflowDescription", {
             workDbCount: l.length.toString(),
             selfDbCount: a.length.toString(),
             maxCount: $$_$$_$$_$$_unrestored_shared_1571_2636_305.f.toString()
@@ -6822,8 +6800,8 @@ function fc() {
           })
         case 106:
           if (o) {
-            j = $$_$$_$$_shared_ui_language.d("cloudDbNameConflictTitle")
-            N = $$_$$_$$_shared_ui_language.d("cloudDbNameConflictDescription")
+            j = Language.d("cloudDbNameConflictTitle")
+            N = Language.d("cloudDbNameConflictDescription")
             $$_$$_$$_$$_unrestored_shared_1571_2636_2680_index.a.info({
               title: j,
               icon: null,
@@ -6898,7 +6876,7 @@ function hc() {
           })
           a.next = 20
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
-            message: $$_$$_$$_shared_ui_language.c(a$sent, "cloudDb.noLoginError").toString(),
+            message: Language.c(a$sent, "cloudDb.noLoginError").toString(),
             type: "info"
           }))
         case 20:
@@ -6952,9 +6930,9 @@ function hc() {
           }
           a.next = 34
           return ReduxSagaEffects.e(Actions.openConfirmDialogAction({
-            allowText: $$_$$_$$_shared_ui_language.c(a$sent, "cloudDb.know").toString(),
-            title: $$_$$_$$_shared_ui_language.c(a$sent, "cloudDb.dataRemoveTitle").toString(),
-            content: $$_$$_$$_shared_ui_language.c(a$sent, "cloudDb.dataRemoveContent").toString(),
+            allowText: Language.c(a$sent, "cloudDb.know").toString(),
+            title: Language.c(a$sent, "cloudDb.dataRemoveTitle").toString(),
+            content: Language.c(a$sent, "cloudDb.dataRemoveContent").toString(),
             cancelBtnVisible: false
           }))
         case 34:
@@ -6967,7 +6945,7 @@ function hc() {
           }
           a.next = 39
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
-            message: $$_$$_$$_shared_ui_language.c(a$sent, "cloudDb.dataChangeNotice").toString(),
+            message: Language.c(a$sent, "cloudDb.dataChangeNotice").toString(),
             type: "error"
           }))
         case 39:
@@ -7200,7 +7178,7 @@ function _c(e) {
           _s$sent4 = s.sent
           s.next = 31
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
-            message: $$_$$_$$_shared_ui_language.c(_s$sent4, "History.revertSuccess").toString(),
+            message: Language.c(_s$sent4, "History.revertSuccess").toString(),
             type: "success"
           }))
         case 31:

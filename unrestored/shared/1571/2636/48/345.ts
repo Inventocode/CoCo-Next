@@ -9,7 +9,7 @@
 export { l as c }
 export { d as b }
 export { p as a }
-import * as /* [auto-meaningful-name] */$$_47 from "../47"
+import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as i from "../9"
 import * as /* [auto-meaningful-name] */$$_95 from "../95"
@@ -147,7 +147,7 @@ function p(e) {
 function f(e, t, n) {
   var o
   var i = {}
-  var a = $$_47.a(e)
+  var a = $$_47_index.a(e)
   try {
     for (a.s(); !(o = a.n()).done;) {
       var /* [auto-meaningful-name] */o$value = o.value

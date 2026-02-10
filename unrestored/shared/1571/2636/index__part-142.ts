@@ -16,15 +16,16 @@ import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
-import * as /* [auto-meaningful-name] */$_16_index from "./16/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
+import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
+import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1057 from "./1057"
 import /* [auto-meaningful-name] */$_10571 from "./1057"
-var UC = React1.memo(function (e) {
+var UC = memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$editConfig = e.editConfig
   var /* [auto-meaningful-name] */e$widgetIcon = e.widgetIcon
@@ -34,7 +35,7 @@ var UC = React1.memo(function (e) {
     return !Array.isArray(e) && "HelpUrl" === e.type
   })
   var s = $_238.b()
-  var c = $_16_index.d()
+  var c = useDispatch()
   if (!i || !i.type) {
     return null
   }
@@ -84,23 +85,23 @@ var UC = React1.memo(function (e) {
     })
   }(e$editConfig, false)))
 })
-var HC = React1.memo(function () {
-  var e = $_16_index.d()
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  var n = $_16_index.e(function (e) {
+var HC = memo(function () {
+  var e = useDispatch()
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var n = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var r = $_16_index.e(function (e) {
+  var r = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  var o = $_16_index.e(function (e) {
+  var o = useSelector(function (e) {
     return e.common.consoleHeight
   })
-  var i = $_16_index.e(function (e) {
+  var i = useSelector(function (e) {
     return e.common.blockyToolboxPinned
   })
   var a = n ? Et.Bb(n) : undefined
-  var s = $_16_index.e(function (e) {
+  var s = useSelector(function (e) {
     return e.uiConfig.widgetEditor
   }) === K.j.ReadOnly
   var c = function () {
@@ -133,7 +134,7 @@ var HC = React1.memo(function () {
         className: $_420.header
       }, React.createElement("h3", {
         className: $_420.title
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "property"
       })), React.createElement("div", {
         onClick: c,
@@ -159,7 +160,7 @@ var HC = React1.memo(function () {
     className: $_420.header
   }, React.createElement("h3", {
     className: $_420.title
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "property"
   })), React.createElement("div", {
     onClick: c,

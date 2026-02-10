@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../1705/168")
+var r = require("../1659/168")
 module.exports = function (e, t) {
   var n = [][e]
   return !!n && r(function () {

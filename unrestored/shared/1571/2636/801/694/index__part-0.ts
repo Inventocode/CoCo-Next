@@ -11,6 +11,6 @@ import * as /* [auto-meaningful-name] */$$_$$_103 from "../../103"
 import * as /* [auto-meaningful-name] */$$_$$_106 from "../../106"
 import * as /* [auto-meaningful-name] */$$_$$_120 from "../../120"
 import * as /* [auto-meaningful-name] */$$_$$_140 from "../../140"
-import * as /* [auto-meaningful-name] */React from "react"
+import "react"
 var /* [auto-meaningful-name] */require$$_$$_2680_609$a = require("../../2680/609").a
 export { require$$_$$_2680_609$a as u }

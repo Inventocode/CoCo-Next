@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../1603/477")
-var o = require("../1581/310")
-var i = require("../1722/424")
+var r = require("./477")
+var o = require("../1785/310")
+var i = require("../1723/424")
 module.exports = function (e) {
   var t = o(i(this))
   var n = ""

@@ -13,9 +13,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_12 from "../12"
 import * as /* [auto-meaningful-name] */$$_89 from "../89"
-import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../../../../../src/shared/tools"
 import * as /* [auto-meaningful-name] */$_413 from "./413"
-import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
+import * as /* [auto-meaningful-name] */$$_112 from "../112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 function d(e, t, n, d) {
   var p
@@ -56,7 +56,7 @@ function d(e, t, n, d) {
       h.attributes.content = y || ""
     }
     if (h.type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v && y) {
-      if ($$_$$_$$_34_347_112.b(y)) {
+      if ($$_112.b(y)) {
         h.attributes.fileId = y
       } else {
         $$_$$_$$_55.b.widgetError({

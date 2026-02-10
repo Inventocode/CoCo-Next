@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("./1706/86/index")
+var r = require("./1661/86/index")
 var o = require("./1603/1245")
-var i = require("./1581/309")
-var a = require("./1597/256")
-var s = require("./1694/443")
+var i = require("./1771/309")
+var a = require("./1775/256")
+var s = require("./1774/443")
 var c = require("./1597/832/index")
 r({
   target: "Array",

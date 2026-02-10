@@ -4,10 +4,10 @@
  * 模块 ID：1780
  */
 
-var r = require("../1686/194")
-var o = require("./1280")
+var r = require("../1782/194")
+var o = require("../1782/1280")
 var i = require("./1781")
-var a = require("../1581/425")
+var a = require("../1782/425")
 for (var s in o) {
   var c = r[s]
   var l = c && c.prototype

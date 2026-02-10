@@ -7,6 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
+import { memo, useRef } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
@@ -14,10 +15,10 @@ import /* [auto-meaningful-name] */Color1 from "color"
 import * as c from "../8"
 import l from "../8"
 import * as /* [auto-meaningful-name] */$_487_index from "./487/index"
-import * as /* [auto-meaningful-name] */$_488_index from "./488/index"
+import * as /* [auto-meaningful-name] */$_488 from "./488"
 import * as /* [auto-meaningful-name] */$_278 from "./278"
 import * as /* [auto-meaningful-name] */$_1211_index from "./1211/index"
-import * as /* [auto-meaningful-name] */$$_16_index from "../16/index"
+import { useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_234 from "../234"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
@@ -25,7 +26,7 @@ import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$_437 from "./437"
 import /* [auto-meaningful-name] */$_4371 from "./437"
 var _a
-_a = React.memo(function (e) {
+_a = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -36,9 +37,9 @@ _a = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
   var /* [auto-meaningful-name] */e$attributes$fontSize = e$attributes.fontSize
   var /* [auto-meaningful-name] */e$attributes$timeStamp = e$attributes.timeStamp
-  var S = React.useRef(null)
+  var S = useRef(null)
   var A = new Date(e$attributes$timeStamp)
-  var I = $$_16_index.e(function (e) {
+  var I = useSelector(function (e) {
     var /* [auto-meaningful-name] */e$project
     return null === e || undefined === e || null === (e$project = e.project) || undefined === e$project ? undefined : e$project.playing
   })
@@ -65,7 +66,7 @@ _a = React.memo(function (e) {
     ref: S
   }, React1.createElement($_278.a, {
     utils: $_487_index.a,
-    locale: $_488_index.a
+    locale: $_488.a
   }, React1.createElement($_1211_index.a, {
     format: "yyyy年MM月dd日",
     value: A,

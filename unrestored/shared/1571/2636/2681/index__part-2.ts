@@ -9,7 +9,8 @@
 var x
 var E
 import * as /* [auto-meaningful-name] */$_275 from "./275"
-import * as /* [auto-meaningful-name] */$$_710_273_index from "../710/273/index"
+import * as /* [auto-meaningful-name] */$_273 from "./273"
+import { createElement, Fragment } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$_2640 from "./2640"
 import * as /* [auto-meaningful-name] */$_2641_index from "./2641/index"
@@ -77,7 +78,7 @@ function I(e, t) {
   })
 }
 function R(e, t) {
-  return Array.isArray(e) && t ? React.createElement.apply(React, T([React.Fragment, null], e)) : e
+  return Array.isArray(e) && t ? createElement.apply(React, T([Fragment, null], e)) : e
 }
 function F(e, t, n, r) {
   var /* [auto-meaningful-name] */e$locale = e.locale
@@ -107,7 +108,7 @@ function F(e, t, n, r) {
   var v = r && function (e) {
     return Object.keys(e).reduce(function (t, n) {
       var r = e[n]
-      t[n] = $_1481_index.b(r) ? $$_710_273_index.b(r) : r
+      t[n] = $_1481_index.b(r) ? $_273.b(r) : r
       return t
     }, {})
   }(r)

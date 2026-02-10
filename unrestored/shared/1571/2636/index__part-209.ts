@@ -9,21 +9,22 @@
 import { we } from "./index__part-6"
 import * as /* [auto-meaningful-name] */$_557 from "./557"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "./13/index"
+import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
 import N from "./8"
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
+import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_160 from "./160"
 import /* [auto-meaningful-name] */$_1601 from "./160"
-var eP = React1.memo(function (e) {
-  var t = React1.useState(false)
+var eP = memo(function (e) {
+  var t = useState(false)
   var n = $_10_index.a(t, 2)
   var r = n[0]
   var o = n[1]
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
-  React1.useEffect(function () {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  useEffect(function () {
     var e = function e() {
       o(false)
       document.removeEventListener("click", e, true)
@@ -61,7 +62,7 @@ var eP = React1.memo(function (e) {
       }, React.createElement("div", {
         className: N($_1601.menuItem, $_1601.delete),
         onMouseDown: a
-      }, $_710_index$a$formatMessage({
+      }, $_710$a$formatMessage({
         id: "cloudDBManager.delete"
       })))
     }
@@ -81,16 +82,16 @@ var eP = React1.memo(function (e) {
       t.stopPropagation()
     },
     className: $_1601.import
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cloudDBManager.import"
   })), !e.canImport && React.createElement("span", {
     className: $_1601.hasImport
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cloudDBManager.hasImport"
   }))))
 })
-var nP = React1.memo(function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+var nP = memo(function (e) {
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var /* [auto-meaningful-name] */e$renderColumns = e.renderColumns
   var /* [auto-meaningful-name] */e$renderRows = e.renderRows
   var o = function (e) {
@@ -155,7 +156,7 @@ var nP = React1.memo(function (e) {
     style: {
       marginRight: "8px"
     }
-  }, $_710_index$a$formatMessage({
+  }, $_710$a$formatMessage({
     id: "cloudDBManager.usedCapacity"
   }), ":"), React.createElement("span", {
     style: {
@@ -173,12 +174,12 @@ var nP = React1.memo(function (e) {
   }, React.createElement($_13_index.j, {
     className: $_1601.icon,
     type: "icon-edit"
-  }), $_710_index$a$formatMessage({
+  }), $_710$a$formatMessage({
     id: "cloudDBManager.editData"
   }))), e.isNoData ? function () {
-    var n = e.devMode ? $_710_index$a$formatMessage({
+    var n = e.devMode ? $_710$a$formatMessage({
       id: "cloudDBManager.noDataDev"
-    }) : $_710_index$a$formatMessage({
+    }) : $_710$a$formatMessage({
       id: "cloudDBManager.noDataProd"
     })
     return React.createElement("div", {

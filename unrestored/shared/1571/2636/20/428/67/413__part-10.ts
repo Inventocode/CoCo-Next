@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
+import * as /* [auto-meaningful-name] */$$_112 from "../112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
@@ -19,8 +19,8 @@ var ae = function (e) {
   var r = undefined === e$attributes$backgroundOpenImage ? $$_$$_$$_131.b : e$attributes$backgroundOpenImage
   var /* [auto-meaningful-name] */e$attributes$backgroundCloseImage = e$attributes.backgroundCloseImage
   var i = undefined === e$attributes$backgroundCloseImage ? $$_$$_$$_131.a : e$attributes$backgroundCloseImage
-  var a = $$_$$_$$_34_347_112.b(r) || $$_$$_$$_131.b
-  var c = $$_$$_$$_34_347_112.b(i) || $$_$$_$$_131.a
+  var a = $$_112.b(r) || $$_$$_$$_131.b
+  var c = $$_112.b(i) || $$_$$_$$_131.a
   return React.createElement($$_$$_$$_548_index.a, Object.assign({}, e, {
     attributes: $$_$$_$$_6.a($$_$$_$$_6.a({}, e.attributes), {}, {
       backgroundCloseImage: c,

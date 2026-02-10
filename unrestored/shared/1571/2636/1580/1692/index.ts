@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("../1706/86/index")
-var o = require("./533")
+var r = require("../1661/86/index")
+var o = require("../1581/533")
 var i = require("./1265")
-var a = require("../1705/168")
-var s = require("../1704/476")
-var c = require("./956")
+var a = require("../1659/168")
+var s = require("../1282/476")
+var c = require("../1723/956")
 var l = require("./1268")
-var u = require("./400")
+var u = require("../1785/400")
 r({
   target: "Promise",
   proto: true,

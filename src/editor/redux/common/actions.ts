@@ -120,7 +120,6 @@ export { ct as Kh }
 export { SET_BLOCK_IMAGE_DIALOG_INFO as hd }
 export { ut as bi }
 export { SHOW_RELEASE_INFO_DIALOG as Be }
-export { pt as vj }
 export { ft as ne }
 export { ht as ij }
 export { SHOW_CLOUD_DB_MANAGER_DIALOG as oe }
@@ -349,8 +348,6 @@ export { ASYNC_INITIAL_CLOUD_DB_DATA as ab }
 export { Ii as bg }
 export { ASYNC_UPDATE_CLOUD_DATABASE_FIELDS as zb }
 export { ji as Cg }
-export { Ri as Eh }
-export { xi as Fh }
 export { ASYNC_CHANGE_DATA_VIEWER_TEMPLATE as z }
 export { Mi as Af }
 export { ASYNC_RESET_DATA_VIEWER_BINDINGS as rb }
@@ -555,6 +552,7 @@ export function showCommonToastInfoAction(payload: {
   type?: "success" | "info" | "error"
   message: string
   showCloseIcon?: boolean
+  duration?: number
 }) {
   return {
     payload,
@@ -1031,12 +1029,13 @@ function ut(e, t) {
 }
 
 export const SHOW_RELEASE_INFO_DIALOG = "SHOW_RELEASE_INFO_DIALOG"
-function pt(e) {
+export function showReleaseInfoDialog(visible: boolean) {
   return {
     type: SHOW_RELEASE_INFO_DIALOG,
-    payload: e
+    payload: visible
   }
 }
+
 var ft = ""
 function ht(e, t, n, r, o) {
   return {
@@ -1060,13 +1059,13 @@ function gt(e) {
 }
 
 export const SHOW_CLOUD_DB_PUBLISH_DIALOG = "SHOW_CLOUD_DB_PUBLISH_DIALOG"
-function vt(e, t, n) {
+function vt(e, t, callback) {
   return {
     type: SHOW_CLOUD_DB_PUBLISH_DIALOG,
     payload: {
       visible: e,
       type: t,
-      callback: n
+      callback
     }
   }
 }
@@ -1241,7 +1240,10 @@ function an(e) {
   }
 }
 
-export function promisify(func: (payload: {}) => Promise<unknown>, payload: {}) {
+export function promisify<T = unknown>(
+  func: (payload: {}) => void,
+  payload: {}
+): Promise<T> {
   return new Promise((resolve, reject) => {
     const newPayload = {
       ...payload,
@@ -1536,15 +1538,15 @@ function ir(e, t, n, r, o) {
 }
 
 export const ASYNC_UPDATE_PROJECT_WIDGET_IDS = "ASYNC_UPDATE_PROJECT_WIDGET_IDS"
-function sr(e, t, n, r, o, i) {
+function sr(screenId, widgetId, widgetIds, shouldUpdatePreviewArea, shouldUpdateEditArea, isEmitOT) {
   return {
     payload: {
-      screenId: e,
-      widgetId: t,
-      widgetIds: n,
-      shouldUpdatePreviewArea: r,
-      shouldUpdateEditArea: o,
-      isEmitOT: i
+      screenId,
+      widgetId,
+      widgetIds,
+      shouldUpdatePreviewArea,
+      shouldUpdateEditArea,
+      isEmitOT
     },
     type: ASYNC_UPDATE_PROJECT_WIDGET_IDS
   }
@@ -2278,24 +2280,23 @@ function ji(e, t, n) {
 }
 
 export const PUBLISH_WORK_TO_COMMUNITY = "PUBLISH_WORK_TO_COMMUNITY"
-function Ri(e, t, n, r) {
+export function publishWorkToCommunityAction(
+  name: string,
+  description: string,
+  operation: string,
+  coverUrl: string
+) {
   return {
     type: PUBLISH_WORK_TO_COMMUNITY,
-    payload: {
-      name: e,
-      description: t,
-      operation: n,
-      coverUrl: r
-    }
+    payload: { name, description, operation, coverUrl }
   }
 }
+
 export const PUBLISH_WORK_TO_H5 = "PUBLISH_WORK_TO_H5"
-function xi(e) {
+export function publishWorkToH5Action(info) {
   return {
     type: PUBLISH_WORK_TO_H5,
-    payload: {
-      info: e
-    }
+    payload: { info }
   }
 }
 

@@ -18,7 +18,7 @@ import * as /* [auto-meaningful-name] */Terser from "terser"
 import * as /* [auto-meaningful-name] */$$_627_index from "../627/index"
 import * as /* [auto-meaningful-name] */$$_14 from "../14"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_57_index from "../57/index"
+import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
 var Mt = "".concat($$_57_index.a.serverHost, "/coconut")
 function Lt(e) {
   return Pt.apply(this, arguments)

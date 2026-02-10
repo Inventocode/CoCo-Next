@@ -7,24 +7,24 @@
 "use strict"
 
 var V
-import * as /* [auto-meaningful-name] */$_710_index from "./710/index"
+import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import * as Z from "./97"
 import * as /* [auto-meaningful-name] */$_525 from "./525"
 import /* [auto-meaningful-name] */$_5251 from "./525"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as te from "./15"
+import * as te from "../../../../src/shared/tools"
 !function (e) {
   e[e.SAVE_BTN = 0] = "SAVE_BTN"
   e[e.MY_PROJECT = 1] = "MY_PROJECT"
 }(V || (V = {}))
 var ne = React.memo(function (e) {
-  var /* [auto-meaningful-name] */$_710_index$a$formatMessage = $_710_index.a().formatMessage
+  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var /* [auto-meaningful-name] */e$time = e.time
   var /* [auto-meaningful-name] */e$currentTime = e.currentTime
   var /* [auto-meaningful-name] */e$renderType = e.renderType
   var i = function (e) {
-    return $_710_index$a$formatMessage({
+    return $_710$a$formatMessage({
       id: e
     })
   }
