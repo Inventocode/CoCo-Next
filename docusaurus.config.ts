@@ -135,7 +135,7 @@ const config: Config = {
             },
             {
               label: 'Gitee',
-              href: 'https://gitee.com/oldsquaw-coco-next/CoCo-Next',
+              href: 'https://gitee.com/oldsquaw-coco-next/',
             },
           ],
         },
