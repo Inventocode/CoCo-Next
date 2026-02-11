@@ -2,7 +2,7 @@ name: 部署到 GitHub Pages
 
 on:
   push:
-    branches: [main, editor, docs]
+    branches: [editor, docs]
   workflow_call:
   workflow_dispatch:
 
@@ -66,10 +66,6 @@ jobs:
       - name: 移动静态文件到分发目录
         run: |
           mv ./main/static/* ./dist/
-
-      - name: 防止 Cloudflare Pages HTML 文件重定向
-        run: |
-          node ./main/scripts/duplicate-html-suffix.js
 
       - name: 部署到 GitHub Pages
         uses: peaceiris/actions-gh-pages@v3

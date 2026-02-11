@@ -41,10 +41,6 @@ export async function onRequest(context) {
             newHeaders.set('Referer', 'https://coco.codemao.cn/')
             newHeaders.delete('host')
 
-            // 复制原始请求的路径和查询参数到目标 URL
-            parsedTarget.pathname = url.pathname
-            parsedTarget.search = url.search
-
             const newRequest = new Request(parsedTarget, {
                 method: request.method,
                 headers: newHeaders,
