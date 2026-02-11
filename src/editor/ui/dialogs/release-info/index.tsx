@@ -17,7 +17,7 @@ import styles from "./styles.module.css"
 
 import LeftSideImage from "../../../assets/images/release-info/left-side.png"
 
-const RELEASE_MESSAGES: string[] = []
+let RELEASE_MESSAGES: string[] = []
 let isBefore = true
 for (const line of changelog.split("\n")) {
   if (!isBefore) {

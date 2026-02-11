@@ -10,11 +10,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
 import classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_68 from "../../../../unrestored/shared/1571/2636/68"
+import * as Tools from "../../../shared/tools"
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
 import { IconFont } from "../../../shared/ui/components"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1042 from "../../../../unrestored/player/2635/2637/1042"
-import { addEditorIframe, checkUnsafeExtension, getWhitelist } from "../../../shared/player/audit"
+import { loadRealWork } from "../../../shared/player/audit"
 import styles from "../../../../unrestored/player/2635/2637/530"
 
 function gatTransform(scale: number) {
@@ -34,15 +35,23 @@ export const WebCommunityWrapper = React.memo(() => {
   const bcmcRef = useRef()
 
   async function load() {
-    const workId = window.location.pathname.match(/\/player\/([^/]*)/)?.[1]
+    let workId = window.location.pathname.match(/\/player\/([^/]*)/)?.[1]
+    // [CoCo Next] 从 URL 参数获取 workId
+    const searchParams = Tools.N(window.location.href)
+    if (searchParams.workId) {
+      workId = searchParams.workId
+    }
     if (workId) {
       const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId)).data.bcmc_url
-      addEditorIframe(bcmcUrl)
+      // [CoCo Next] 提升加载速度
+      // addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
-      if (!(await getWhitelist()).includes(Number(workId))) {
-        bcmc = await checkUnsafeExtension(bcmc)
-        bcmcRef.current = bcmc
-      }
+      // [CoCo Next] 绕审核
+      bcmc = await loadRealWork(bcmc)
+      bcmcRef.current = bcmc
+      // [CoCo Next] 提升加载速度
+      setBlockCode(bcmcRef.current.blockCode)
+      setIsLoading(false)
     }
     else {
       E()
@@ -50,20 +59,21 @@ export const WebCommunityWrapper = React.memo(() => {
   }
 
   useEffect(() => {
+    // [CoCo Next] 提升加载速度
     y()
     load()
     T(() => { window.location.reload() })
-    document.body.click()
-    window.addEventListener("message", (event) => {
-      if ("PLAYER_BLOCK_CODE" === event.data.type) {
-        setBlockCode(event.data.payload)
-        setIsLoading(false)
-        const editorIframe = document.getElementById("editor-iframe")
-        if (editorIframe) {
-          document.body.removeChild(editorIframe)
-        }
-      }
-    }, false)
+    // document.body.click()
+    // window.addEventListener("message", (event) => {
+    //   if ("PLAYER_BLOCK_CODE" === event.data.type) {
+    //     setBlockCode(event.data.payload)
+    //     setIsLoading(false)
+    //     const editorIframe = document.getElementById("editor-iframe")
+    //     if (editorIframe) {
+    //       document.body.removeChild(editorIframe)
+    //     }
+    //   }
+    // }, false)
   }, [])
 
   useEffect(() => {
@@ -144,7 +154,8 @@ export const WebCommunityWrapper = React.memo(() => {
       }}
     >
       <img src={$$_$$_$$_$$_unrestored_player_2635_2637_1042} className={styles.appUrlBtnImg} alt="" />
-      <span>去CoCo制作</span>
+      {/* [CoCo Next] 添加 CoCo Next */}
+      <span>去 CoCo Next 制作</span>
       <IconFont type="icon-fold-left" className={styles.appUrlBtnIcon} />
     </div>
   </div>

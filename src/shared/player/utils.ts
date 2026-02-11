@@ -37,7 +37,9 @@ function getPlatform() {
   return navigator$userAgent.indexOf("Android") > -1 || navigator$userAgent.indexOf("Linux") > -1 ? "Android" : navigator$userAgent.indexOf("iPhone") > -1 ? "ios" : "web"
 }
 function C() {
-  return window.location.pathname.includes("/editor-player.html")
+  // [CoCo Next] FUCK Cloudflare Pages
+  // return window.location.pathname.includes("/editor-player.html")
+  return window.location.pathname.includes("/editor-player")
 }
 function T() {
   var /* [auto-meaningful-name] */navigator$userAgent = navigator.userAgent

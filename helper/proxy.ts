@@ -94,12 +94,8 @@ function needsProxy(url: URL): boolean {
 
 function rewriteURL(url: URL): URL {
     if (location.hostname.endsWith(".ccwidget.top")) {
-        const newURL = new URL(location.origin)
-        newURL.pathname = url.pathname
+        const newURL = new URL(url.protocol + "//next.ccwidget.top/proxy/")
         newURL.searchParams.set("__proxy_url__", url.href)
-        url.searchParams.forEach((value, key) => {
-            newURL.searchParams.append(key, value)
-        })
         return newURL
     }
     url.pathname = "/proxy/" + url.origin
@@ -182,7 +178,7 @@ function changeIFrameSrc(iFrame: HTMLIFrameElement) {
         if (location.protocol == "http:" && src.protocol == "https:") {
             src.protocol = "http:"
         }
-        src.host = location.host
+        src.host = location.hostname.endsWith(".ccwidget.top") ? "next.ccwidget.top" : location.host
         iFrame.src = src.href
     }
 }

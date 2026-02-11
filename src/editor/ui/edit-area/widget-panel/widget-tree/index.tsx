@@ -92,7 +92,52 @@ const WidgetListItem = memo(function (e) {
   var W = function () {
     e$onCopyToCurrentScreen(n)
   }
-  return <div className={classnames(styles.itemWrapper, E)}>
+  return <div
+    // [CoCo Next] 注入移动端拖拽调整控件顺序补丁
+    ref={(element) => {
+      if (element === null || element.getAttribute("data-drag-hook") === "true") {
+        return
+      }
+      let originalListener: ((event: DragEvent) => {}) | null = null
+      function wrapperListener(event: DragEvent) {
+        const { dataTransfer } = event
+        // 触摸屏屏蔽掉原有的拖拽事件，只接受来自 Polyfill 的事件
+        if (
+          dataTransfer === null ||
+          navigator.maxTouchPoints === 0 ||
+          "_dragDropTouch" in dataTransfer
+        ) {
+          element!.style.transform = ""
+          originalListener?.(event)
+        }
+      }
+      element.addEventListener("dragstart", () => {
+        if (navigator.maxTouchPoints === 0) {
+          return
+        }
+        element!.style.transform = "scale(1.2)"
+      })
+      element.addEventListener("touchmove", () => {
+        F(false)
+      })
+      element.addEventListener("dragend", wrapperListener)
+      element.setAttribute("data-drag-hook", "true")
+      Object.defineProperty(element, "ondragend", {
+        get() { return null },
+        set(value) { originalListener = value }
+      })
+      // 强制允许拖拽
+      element.draggable = true
+      const originalRemoveAttribute = element.removeAttribute
+      element.removeAttribute = function removeAttribute(qualifiedName: string) {
+        if (qualifiedName === "draggable") {
+          return
+        }
+        originalRemoveAttribute.call(this, qualifiedName)
+      }
+    }}
+    className={classnames(styles.itemWrapper, E)}
+  >
     {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
       placement="bottomLeft"
       trigger="hover"

@@ -7,7 +7,7 @@
 "use strict"
 
 import { V } from "../../../../unrestored/player/2635/2637/index__part-5"
-import { addEditorIframe, checkUnsafeExtension, getWhitelist } from "../../../shared/player/audit"
+import { addEditorIframe, loadRealWork, getWhitelist } from "../../../shared/player/audit"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
@@ -100,13 +100,17 @@ export const MobileH5Wrapper = React.memo(() => {
     }
     if (workId) {
       const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId, 0)).data.bcmc_url
-      addEditorIframe(bcmcUrl)
+      // [CoCo Next] 提升加载速度
+      // addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
-      if (!(await getWhitelist()).includes(Number(workId))) {
-        bcmc = await checkUnsafeExtension(bcmc)
-      }
+      // [CoCo Next] 绕审核
+      bcmc = await loadRealWork(bcmc)
       bcmcRef.current = bcmc
-      title = bcmc.title || "CoCo"
+      // [CoCo Next] 提升加载速度
+      setBlockCode(bcmcRef.current.blockCode)
+      setIsLoading(false)
+      // [CoCo Next] 改为 CoCo Next
+      title = bcmc.title || "CoCo Next"
       description = bcmc.description || $$_$$_$$_$$_unrestored_shared_1571_2636_328.c
       coverUrl = bcmc.coverUrl || ""
       document.title ||= title
@@ -118,17 +122,18 @@ export const MobileH5Wrapper = React.memo(() => {
   }
 
   useEffect(() => {
+    // [CoCo Next] 提升加载速度
     load()
-    window.addEventListener("message", (event) => {
-      if ("PLAYER_BLOCK_CODE" === event.data.type) {
-        setBlockCode(event.data.payload)
-        setIsLoading(false)
-        const editorIframe = document.getElementById("editor-iframe")
-        if (editorIframe) {
-          document.body.removeChild(editorIframe)
-        }
-      }
-    }, false)
+    // window.addEventListener("message", (event) => {
+    //   if ("PLAYER_BLOCK_CODE" === event.data.type) {
+    //     setBlockCode(event.data.payload)
+    //     setIsLoading(false)
+    //     const editorIframe = document.getElementById("editor-iframe")
+    //     if (editorIframe) {
+    //       document.body.removeChild(editorIframe)
+    //     }
+    //   }
+    // }, false)
   }, [])
 
   useEffect(function () {

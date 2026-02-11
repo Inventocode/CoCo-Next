@@ -85,26 +85,27 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
       }))
       return
     }
-    const unsafeExtensions = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
-      return !CustomWidgetType.isSafeExtensions(e.type)
-    })
-    if (!(await getWhitelist()).includes(Number(id)) && unsafeExtensions.length > 0) {
-      dispatch(CommonActions.openConfirmDialogAction({
-        allowText: formatMessage({ id: "know" }),
-        title: "",
-        content: (
-          <div>
-            作品使用了未审核的自定义控件，需将控件提交至
-            <a href={Tools.WIDGET_POST_FORM_URL} target="__blank" rel="noopener noreferrer">
-              Coco控件商城-投稿
-            </a>
-            ，并等待审核通过后才能进行分享。
-          </div>
-        ),
-        cancelBtnVisible: false
-      }))
-      return
-    }
+    // [CoCo Next] 绕审核
+    // const unsafeExtensions = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
+    //   return !CustomWidgetType.isSafeExtensions(e.type)
+    // })
+    // if (!(await getWhitelist()).includes(Number(id)) && unsafeExtensions.length > 0) {
+    //   dispatch(CommonActions.openConfirmDialogAction({
+    //     allowText: formatMessage({ id: "know" }),
+    //     title: "",
+    //     content: (
+    //       <div>
+    //         作品使用了未审核的自定义控件，需将控件提交至
+    //         <a href={Tools.WIDGET_POST_FORM_URL} target="__blank" rel="noopener noreferrer">
+    //           Coco控件商城-投稿
+    //         </a>
+    //         ，并等待审核通过后才能进行分享。
+    //       </div>
+    //     ),
+    //     cancelBtnVisible: false
+    //   }))
+    //   return
+    // }
     const boundSetDialogType = () => { setDialogType(dialogInfo.dialogType) }
     if (dialogInfo.dialogType === EShareDialogType.SHARE_QR_DIALOG) {
       CommonActions.promisify(dispatch, CommonActions.Wf(boundSetDialogType))

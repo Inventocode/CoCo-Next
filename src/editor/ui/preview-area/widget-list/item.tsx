@@ -67,6 +67,7 @@ import { EditConfig, Widget } from "../../../widget/internal/types"
 import * as CustomWidgetStorage from "../../../../shared/widget/custom/storage"
 import * as InternalWidgetStorage from "../../../widget/internal/storage"
 import { oTHelper } from "../../../collaboration/ot-helper"
+import stageStyles from "../stage/style.css"
 
 var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
 
@@ -92,6 +93,7 @@ const ConfigItem = React.memo(({
   var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
+  const [isDragging, setIsDragging] = React.useState(false)
   const screens = useSelector((state) => state.project.screens)
   const globalWidgetIds = useSelector((state) => state.project.globalWidgetIds)
   const language = useSelector((state) => state.common.language)
@@ -207,6 +209,80 @@ const ConfigItem = React.memo(({
     >
       <div
         className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.widgetItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
+        // [CoCo Next] 触发拖拽时放大控件
+        style={{
+          transform: isDragging && navigator.maxTouchPoints !== 0 ? "scale(1.2)" : undefined
+        }}
+        // [CoCo Next] 手指移动时隐藏菜单
+        onTouchMove={() => {
+          setMenuVisible(false)
+        }}
+        // [CoCo Next] 点击添加控件，部分代码参考了 CoCoClick
+        onClick={() => {
+          if (!hasCanvasWidget || !D) {
+            var t = ""
+            if (D) {
+              t = formatMessage({
+                id: "StageToast.addCanvasWidgetTips"
+              })
+            } else {
+              var n
+              var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(type)
+              if (!o) {
+                return
+              }
+              var i = null === (n = $$_$$_$$_$$_shared_ui_language.c(language, o.title)) || undefined === n ? undefined : n.toString()
+              t = formatMessage({
+                id: "StageToast.addLimitedWidgetTips"
+              }, {
+                widgetTitle: i
+              })
+            }
+            dispatch(Actions.xj(t))
+            return
+          }
+          const stageElement = document.querySelector(`.${stageStyles.stage}`)
+          const appZoneElement = document.querySelector(`.${stageStyles.appZone}`)
+          if (stageElement === null || appZoneElement === null) {
+            return
+          }
+          const clientRects = appZoneElement.getClientRects()[0]!
+          const dataTransfer = new DataTransfer()
+          dataTransfer.setData("widget/dragging-offset-x", `${-clientRects.x}`)
+          dataTransfer.setData("widget/dragging-offset-y", `${-clientRects.y}`)
+          Object.defineProperty(dataTransfer, "dropEffect", { value: "copy" })
+          dataTransfer.setData("widget/type", type)
+          dataTransfer.setData("widget/action", BuiltInWidgetTypes.r.CREATE)
+          const key = Object.keys(stageElement).find(key => key.startsWith("__reactEventHandlers")) as keyof Element
+          const handlers = stageElement[key] as any
+          const newEvent = new DragEvent("drop", { dataTransfer })
+          Object.defineProperty(newEvent, "persist", {
+            value: function persist() { return true }
+          })
+          if (type === BuiltInWidgetTypes.ACTOR_WIDGET || type === BuiltInWidgetTypes.BRUSH_WIDGET) {
+            dispatch(Actions.Yh(true))
+            const canvasWidgets = Array.from(document.querySelectorAll<HTMLElement>(`*[data-widget-type="CANVAS_WIDGET"][id*="CANVAS_WIDGET"]`))!
+            const removers: (() => void)[] = []
+            for (const canvasWidget of canvasWidgets) {
+              const key = Object.keys(canvasWidget).find(key => key.startsWith("__reactEventHandlers")) as keyof Element
+              const handlers = canvasWidget[key] as any
+              function click(event: MouseEvent) {
+                  for (const key of ["clientX", "clientY", "x", "y"] satisfies (keyof MouseEvent)[]) {
+                    Object.defineProperty(newEvent, key, { value: event[key] })
+                  }
+                  handlers.onDrop(newEvent)
+              }
+              canvasWidget.addEventListener("click", click)
+              removers.push(() => { canvasWidget.removeEventListener("click", click) })
+            }
+            document.addEventListener("click", () => {
+              dispatch(Actions.Yh(false))
+              for (const remover of removers) { remover() }
+            }, { once: true })
+            return
+          }
+          handlers.onDrop(newEvent)
+        }}
         draggable
         onMouseEnter={() => {
           if (isMallExtensionWidget && !isInvisibleWidget) {
@@ -259,6 +335,8 @@ const ConfigItem = React.memo(({
             dispatch(Actions.xj(t))
             return void event.preventDefault()
           }
+          // [CoCo Next] 触发拖拽时放大控件
+          setIsDragging(true)
           if (!(type !== BuiltInWidgetTypes.a && type !== BuiltInWidgetTypes.c)) {
             dispatch(Actions.Yh(true))
           }
@@ -274,7 +352,18 @@ const ConfigItem = React.memo(({
             event.dataTransfer.setData("widget/action", BuiltInWidgetTypes.r.CREATE)
           }
         }}
-        onDragEnd={() => {
+        onDragEnd={(event) => {
+          // 触摸屏屏蔽掉原有的拖拽事件，只接受来自 Polyfill 的事件
+          const { dataTransfer } = event
+          if (
+            dataTransfer !== null &&
+            navigator.maxTouchPoints !== 0 &&
+            !("_dragDropTouch" in dataTransfer)
+          ) {
+            return
+          }
+          // [CoCo Next] 触发拖拽时放大控件
+          setIsDragging(false)
           if (!(type !== BuiltInWidgetTypes.ACTOR_WIDGET && type !== BuiltInWidgetTypes.BRUSH_WIDGET)) {
             dispatch(Actions.Yh(false))
           }

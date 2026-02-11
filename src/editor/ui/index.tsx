@@ -13,9 +13,16 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_57_
 import { Provider } from "react-redux"
 import ReactDom from "react-dom"
 import React from "react"
+import { enableDragDropTouch } from "@dragdroptouch/drag-drop-touch"
 import "../../../unrestored/shared/1571/2636/1186"
 import "../../../unrestored/shared/1571/2636/2632"
 import "../../../unrestored/shared/1571/2636/2633"
+
+enableDragDropTouch(document, document, {
+  isPressHoldMode: true,
+  pressHoldDelayMS: 200,
+  forceListen: true
+})
 
 if (["staging", "production", "prod"].includes($$_$$_$$_unrestored_shared_1571_2636_57_index.b())) {
   setInterval(() => {}, 100)

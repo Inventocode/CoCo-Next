@@ -7,17 +7,13 @@
 import React from "react"
 import ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_$$_unrestored_shared_1571_2636_15 from "../shared/tools"
-import { isOnMobileDevice } from "../shared/player/utils"
-import { MobileWrapper } from "./wrappers/mobile"
-import { WebWrapper } from "./wrappers/web"
+import { SafeLoad } from "./safe-load"
 
 var App = React.memo(function () {
   const channel = ($$_$$_unrestored_shared_1571_2636_15.N(window.location.href).channel || "").toUpperCase()
   window.history.pushState = function () {}
   window.history.replaceState = function () {}
-  return isOnMobileDevice() ?
-    <MobileWrapper channel={channel} /> :
-    <WebWrapper channel={channel} />
+  return <SafeLoad channel={channel} />
 })
 
 ReactDom.render(<App />, document.getElementById("root"))

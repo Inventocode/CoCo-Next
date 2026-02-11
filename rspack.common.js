@@ -245,7 +245,7 @@ function commonConfig(development, env) {
                         path: "dist/react-redux.min.js"
                     }
                 ],
-                prodUrl: "https://cdn.jsdmirror.com/npm/:name@:version/:path",
+                prodUrl: "https://use.sevencdn.com/npm/:name@:version/:path",
                 crossOrigin: true
             })
         ]

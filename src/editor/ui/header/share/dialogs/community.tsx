@@ -107,8 +107,9 @@ export const ShareCommunityDialog = memo(({
       track(publishInfo, true, "")
     } catch (error) {
       if (error.message === "40500104") {
+        // [CoCo Next] 绕审核
         dispatch(CommonActions.showCommonToastInfoAction({
-          message: "分享失败，作品使用了未审核的自定义控件",
+          message: "分享失败，绕审核失败",
           type: "error"
         }))
         setIsPublishing(false)
@@ -121,8 +122,8 @@ export const ShareCommunityDialog = memo(({
         showCloseIcon: false
       }))
       track(publishInfo, false, error.message)
-      setIsPublishing(false)
     }
+    setIsPublishing(false)
   }
 
   function track(publishInfo: IPublishInfo, isSuccess: boolean, failReason: string) {

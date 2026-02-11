@@ -294,15 +294,18 @@ function x(e, t) {
 }
 
 function getBaseUrl() {
-  return getEnvironment() === "production" ? "https://coco.codemao.cn" : window.location.origin
+  // [CoCo Next] 修改 Player 地址
+  return getEnvironment() === "production" ? "https://next.ccwidget.top" : window.location.origin
 }
 
 export function getPlayerCommunityUrl(workId: string) {
-  return getBaseUrl() + `/editor/player/${workId}?channel=community`
+  // [CoCo Next] 修改 Player 地址
+  return getBaseUrl() + `/editor/player/?workId=${workId}&channel=community`
 }
 
 export function getPlayerH5Url(workId: string) {
-  return getBaseUrl() + `/editor/player/${workId}?channel=h5`
+  // [CoCo Next] 修改 Player 地址
+  return getBaseUrl() + `/editor/player/?workId=${workId}&channel=h5`
 }
 
 export function getCommunityWorkUrl(workId: string) {
@@ -332,7 +335,9 @@ function B() {
       }
     }
   }
-  return "https://".concat(t, "coco.codemao.cn")
+  // [CoCo Next] 修改编辑器界面地址
+  // return "https://".concat(t, "coco.codemao.cn")
+  return location.origin
 }
 
 function F() {

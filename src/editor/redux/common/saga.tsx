@@ -4095,7 +4095,7 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
   const globalObjectList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.l)
   const globalWidgetIds = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
   const currentScreen = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
-  const apiToken = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
+  let apiToken = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
   if (!currentScreen) {
     return
   }
@@ -4148,6 +4148,13 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
     globalWidgetIds,
     globalObjectList
   )
+  // [CoCo Next] 绕审核
+  if (result.unsafeExtensionWidgetList?.length) {
+    result.bypassAudit = {
+      unsafeExtensionWidgetList: result.unsafeExtensionWidgetList
+    }
+    result.unsafeExtensionWidgetList = []
+  }
   result.fontFileMap = fontFileMap
   result.blockCode = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.generateAllWorkspaceCodes(result.screenList, debug)
   const minifyResult = Terser.minify(result.blockCode, { keep_fnames: true })

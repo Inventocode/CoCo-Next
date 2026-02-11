@@ -6,44 +6,16 @@
 
 export { getWhitelist as b }
 
-import * as CustomWidgetShop from "../widget/custom/shop"
-
-export async function checkUnsafeExtension(bcmc) {
-  let hasUnsafeExtension
-  const bcmcString = JSON.stringify(bcmc)
-  hasUnsafeExtension = true
-  if (bcmcString.includes("UNSAFE_EXTENSION_") || bcmc?.unsafeExtensionWidgetList?.length) {
-    console.info("当前作品包含自定义控件")
-    hasUnsafeExtension = false
-  } else if (bcmc?.extensionWidgetList?.length > 0) {
-    let shopWidgetsUrl: string[] = []
-    let currentPage = 1
-    const pageSize = 100
-    const response = await CustomWidgetShop.getList(currentPage, pageSize)
-    shopWidgetsUrl = shopWidgetsUrl.concat(response.items.map((widget) => widget.resource_url))
-    const total = Math.ceil(response.total / pageSize)
-    if (total > 1) {
-      currentPage += 1
-      while (currentPage <= total) {
-        shopWidgetsUrl = shopWidgetsUrl.concat(
-          (await CustomWidgetShop.getList(currentPage, pageSize)).items.map(
-            (widget) => widget.resource_url
-          )
-        )
-        currentPage++
-      }
-    }
-    if (bcmc.extensionWidgetList.filter((widget) => !shopWidgetsUrl.includes(widget.cdnUrl)).length > 0) {
-      console.info("当前作品包含自定义控件")
-      hasUnsafeExtension = false
-    }
+/**
+ * [CoCo Next] 绕审核
+ */
+export async function loadRealWork(bcmc) {
+  if ("realWork" in bcmc) {
+    return bcmc.realWork
   }
-  if (!hasUnsafeExtension) {
-    document.body.classList.add("intercepting")
-    bcmc.widgetMap = {}
-    bcmc.extensionWidgetList = []
-    bcmc.unsafeExtensionWidgetList = []
-    bcmc.blockCode = ""
+  if ("bypassAudit" in bcmc) {
+    Object.assign(bcmc, bcmc.bypassAudit)
+    delete bcmc.bypassAudit
   }
   return bcmc
 }

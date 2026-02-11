@@ -6,7 +6,7 @@
 
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
-import { addEditorIframe, checkUnsafeExtension, getWhitelist } from "../../../shared/player/audit"
+import { loadRealWork } from "../../../shared/player/audit"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1042 from "../../../../unrestored/player/2635/2637/1042"
 import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_738_index from "../../../../unrestored/shared/1571/2636/738/index"
@@ -41,12 +41,15 @@ export const WebH5Wrapper = React.memo(() => {
     }
     if (workId) {
       const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId, 0)).data.bcmc_url
-      addEditorIframe(bcmcUrl)
+      // [CoCo Next] 提升加载速度
+      // addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
-      if (!(await getWhitelist()).includes(Number(workId))) {
-        bcmc = await checkUnsafeExtension(bcmc)
-      }
+      // [CoCo Next] 绕审核
+      bcmc = await loadRealWork(bcmc)
       bcmcRef.current = bcmc
+      // [CoCo Next] 提升加载速度
+      setBlockCode(bcmcRef.current.blockCode)
+      setIsLoading(false)
     }
   }
 
@@ -75,18 +78,19 @@ export const WebH5Wrapper = React.memo(() => {
   }
 
   useEffect(() => {
+    // [CoCo Next] 提升加载速度
     load()
-    document.body.click()
-    window.addEventListener("message", (event) => {
-      if (event.data.type === "PLAYER_BLOCK_CODE") {
-        setBlockCode(event.data.payload)
-        setIsLoading(false)
-        const editorIframe = document.getElementById("editor-iframe")
-        if (editorIframe) {
-          document.body.removeChild(editorIframe)
-        }
-      }
-    }, false)
+    // document.body.click()
+    // window.addEventListener("message", (event) => {
+    //   if (event.data.type === "PLAYER_BLOCK_CODE") {
+    //     setBlockCode(event.data.payload)
+    //     setIsLoading(false)
+    //     const editorIframe = document.getElementById("editor-iframe")
+    //     if (editorIframe) {
+    //       document.body.removeChild(editorIframe)
+    //     }
+    //   }
+    // }, false)
   }, [])
 
   useEffect(() => {
@@ -141,7 +145,8 @@ export const WebH5Wrapper = React.memo(() => {
       }}
     >
       <img src={$$_$$_$$_$$_unrestored_player_2635_2637_1042} className={styles.appUrlBtnImg} alt="" />
-      <span>去CoCo制作</span>
+      {/* [CoCo Next] 添加 CoCo Next */}
+      <span>去 CoCo Next 制作</span>
       <IconFont type="icon-fold-left" className={styles.appUrlBtnIcon} />
     </div>
   </div>

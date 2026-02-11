@@ -84464,7 +84464,8 @@ ol,ul {
 }
 
 body,html {
-    overflow: auto
+    /* [CoCo Next] 禁止主界面滚动 */
+    /* overflow: auto */
 }
 
 body {
