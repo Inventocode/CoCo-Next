@@ -106,6 +106,16 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
     //   }))
     //   return
     // }
+    // 禁用把作品发布到编程猫社区的功能
+    if (target === "community") {
+      dispatch(CommonActions.openConfirmDialogAction({
+        allowText: formatMessage({ id: "know" }),
+        title: "该功能已禁用",
+        content: "编程猫禁止将含有自定义控件的作品发布到社区，若强制这么做，会导致相关作品被彻底删除！为保护你的作品，CoCo Next 已禁用把作品发布到编程猫社区的功能。",
+        cancelBtnVisible: false
+      }))
+      return
+    }
     const boundSetDialogType = () => { setDialogType(dialogInfo.dialogType) }
     if (dialogInfo.dialogType === EShareDialogType.SHARE_QR_DIALOG) {
       CommonActions.promisify(dispatch, CommonActions.Wf(boundSetDialogType))

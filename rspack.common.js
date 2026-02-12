@@ -132,8 +132,11 @@ function commonConfig(development, env) {
                         }
                     }
                 }, {
-                    test: /\.(txt|md)$/i,
+                    test: /\.txt$/i,
                     type: "asset/source"
+                }, {
+                    test: /\.md$/i,
+                    use: ["html-loader", "markdown-loader"]
                 }
             ]
         },

@@ -4149,7 +4149,7 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
     globalObjectList
   )
   // [CoCo Next] 绕审核
-  if (result.unsafeExtensionWidgetList?.length) {
+  if (!debug && result.unsafeExtensionWidgetList?.length) {
     result.bypassAudit = {
       unsafeExtensionWidgetList: result.unsafeExtensionWidgetList
     }

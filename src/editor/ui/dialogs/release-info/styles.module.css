@@ -63,6 +63,14 @@
     margin: 0
 }
 
+.ReleaseInfoDialog .right .content .updateInfo ul {
+    padding-inline-start: 20px;
+}
+
+.ReleaseInfoDialog .right .content .updateInfo li {
+    list-style-type: disc;
+}
+
 .ReleaseInfoDialog .right .content .updateInfo .link {
     margin-top: 14px;
     font-size: 12px;

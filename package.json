@@ -1,6 +1,6 @@
 {
   "name": "coco-next",
-  "version": "1.22.3",
+  "version": "1.23.1",
   "private": true,
   "description": "下一代 CoCo 编辑器。",
   "homepage": "https://gitee.com/oldsquaw-coco-next/CoCo-Next#coco-next",
@@ -107,7 +107,9 @@
     "@types/video-react": "~0.15.0",
     "css-loader": "^7.0.0",
     "get-port-please": "^3.0.0",
+    "html-loader": "^5.1.0",
     "html-webpack-plugin": "^5.0.0",
+    "markdown-loader": "^8.0.0",
     "network-information-types": "~0.1.0",
     "react-refresh": "~0.18.0",
     "string-replace-loader": "^3.0.0",

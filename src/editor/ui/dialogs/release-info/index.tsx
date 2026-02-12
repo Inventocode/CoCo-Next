@@ -5,46 +5,47 @@
  */
 
 import * as React from "react"
+import { useEffect, useState } from "react"
+import { useDispatch, useSelector } from "react-redux"
 
-import changelog from "../../../../../changelog.md"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as Actions from "../../../redux/common/actions"
 import { IconFont } from "../../../../shared/ui/components"
 import { CoCoDialog } from "../../../../shared/ui/components"
-import { useDispatch, useSelector } from "react-redux"
 
 import styles from "./styles.module.css"
-
+import changelog from "../../../../../changelog.md"
 import LeftSideImage from "../../../assets/images/release-info/left-side.png"
 
-let RELEASE_MESSAGES: string[] = []
-let isBefore = true
-for (const line of changelog.split("\n")) {
-  if (!isBefore) {
-    if (line.startsWith("##")) {
-      break
+function getReleaseMessage(): string {
+  let result = ""
+  let isBefore = true
+  const changelogDocument = (new DOMParser()).parseFromString(changelog, "text/html")
+  for (const line of Array.from(changelogDocument.body.children)) {
+    if (!isBefore) {
+      if (line.tagName === "H2") {
+        break
+      }
+      result += line.outerHTML
     }
-    RELEASE_MESSAGES.push(line)
+    if (line.textContent === `v${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f}`) {
+      isBefore = false
+    }
   }
-  if (line == `## v${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f}`) {
-    isBefore = false
-  }
+  return result
 }
-const RELEASE_LINKS = [
-  {
-    label: "原始域登录文档",
-    url: "https://next.ccwidget.top/docs/guide/introduction/login#%E4%BA%8C%E5%8E%9F%E5%A7%8B%E5%9F%9F%E7%99%BB%E5%BD%95"
-  }
-]
+
+const releaseMessages = getReleaseMessage()
 
 export const ReleaseInfo = React.memo(() => {
+
   const releaseInfoDialogVisible = useSelector((state) => state.common.releaseInfoDialogVisible)
   const userId = useSelector((state) => state.common.userInfo?.id)
   const userInfoFetchDone = useSelector((state) => state.common.userInfoFetchDone)
-  const [hasShown, setHasShown] = React.useState(false)
+  const [hasShown, setHasShown] = useState(false)
   const dispatch = useDispatch()
 
-  React.useEffect(function () {
+  useEffect(function () {
     if (userInfoFetchDone) {
       if (!hasShown) {
         if (localStorage.getItem("ReleaseVersion") !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f) {
@@ -69,16 +70,7 @@ export const ReleaseInfo = React.memo(() => {
         <div className={styles.content}>
           <div className={styles.updateInfo}>
             <header>{`版本v${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f}更新`}</header>
-            {RELEASE_MESSAGES.map(e => <p key={e}>{e}</p>)}
-            <div className={styles.link}>
-              {RELEASE_LINKS.map(e => (
-                <div key={e.label}>
-                  <a href={e.url} target="_blank" rel="noopener noreferrer">
-                    {e.label}
-                  </a>
-                </div>
-              ))}
-            </div>
+            <div dangerouslySetInnerHTML={{ __html: releaseMessages }}></div>
           </div>
           <div className={styles.overViewInfo}>
             <a href="https://gitee.com/oldsquaw-coco-next/CoCo-Next/blob/main/changelog.md" target="_blank" rel="noopener noreferrer">
