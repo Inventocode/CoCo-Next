@@ -8,7 +8,7 @@
 
 var r
 import * as /* [auto-meaningful-name] */$_252 from "./252"
-import * as /* [auto-meaningful-name] */$$_808 from "../808"
+import * as /* [auto-meaningful-name] */$$_808_index from "../808/index"
 function a(e) {
   return "function" === typeof e
 }
@@ -38,7 +38,7 @@ function s(e, t, n, r, c, u, l) {
     } else {
       var /* [auto-meaningful-name] */p$value = p.value
       if (!c || !(p$value in c)) {
-        throw new $$_808.d(p$value, l)
+        throw new $$_808_index.d(p$value, l)
       }
       var A = c[p$value]
       if ($_252.b(p)) {
@@ -73,7 +73,7 @@ function s(e, t, n, r, c, u, l) {
           var /* [auto-meaningful-name] */p$value1 = p.value
           var y = c[p$value1]
           if (!a(y)) {
-            throw new $$_808.c(p$value1, "function", l)
+            throw new $$_808_index.c(p$value1, "function", l)
           }
           var b = y(s(p$children, t, n, r, c, u).map(function (e) {
             return e.value
@@ -90,14 +90,14 @@ function s(e, t, n, r, c, u, l) {
         }
         if ($_252.j(p)) {
           if (!(w = p.options[A] || p.options.other)) {
-            throw new $$_808.b(p.value, A, Object.keys(p.options), l)
+            throw new $$_808_index.b(p.value, A, Object.keys(p.options), l)
           }
           f.push.apply(f, s(w.value, t, n, r, c))
         } else if ($_252.h(p)) {
           var w
           if (!(w = p.options["=" + A])) {
             if (!Intl.PluralRules) {
-              throw new $$_808.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API", l)
+              throw new $$_808_index.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API", l)
             }
             var E = n.getPluralRules(t, {
               type: p.pluralType
@@ -105,7 +105,7 @@ function s(e, t, n, r, c, u, l) {
             w = p.options[E] || p.options.other
           }
           if (!w) {
-            throw new $$_808.b(p.value, A, Object.keys(p.options), l)
+            throw new $$_808_index.b(p.value, A, Object.keys(p.options), l)
           }
           f.push.apply(f, s(w.value, t, n, r, c, A - (p.offset || 0)))
         } else {

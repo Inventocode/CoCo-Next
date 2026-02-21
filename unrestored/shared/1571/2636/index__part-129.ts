@@ -9,7 +9,7 @@
 import * as vb from "./54"
 import * as Ln from "./35"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { forwardRef, createElement } from "react"
 import * as /* [auto-meaningful-name] */$_1521 from "./1521"
 import * as /* [auto-meaningful-name] */$_1202 from "./1202"
@@ -45,7 +45,7 @@ var jw = forwardRef(function (e, t) {
     }
     return n
   }
-  var O = N(o, e$className, (n = {}, Ln.a(n, "".concat(o, "-checked"), b), Ln.a(n, "".concat(o, "-disabled"), e$disabled), n))
+  var O = Classnames(o, e$className, (n = {}, Ln.a(n, "".concat(o, "-checked"), b), Ln.a(n, "".concat(o, "-disabled"), e$disabled), n))
   return createElement("button", Object.assign({}, g, {
     type: "button",
     role: "switch",

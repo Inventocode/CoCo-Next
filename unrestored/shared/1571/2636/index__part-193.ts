@@ -8,9 +8,9 @@
 
 import { ID, uM, mM } from "./index__part-192"
 import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useState, useCallback, useEffect } from "react"
@@ -65,7 +65,7 @@ var vM = memo(function (e) {
     ref: e$innerRef
   }, e$draggableProps, e$dragHandleProps, {
     id: c,
-    className: N($_1371.actionItem, e$dragging && $_1371.dragging, e$selected && $_1371.selected),
+    className: Classnames($_1371.actionItem, e$dragging && $_1371.dragging, e$selected && $_1371.selected),
     onClick: e$onClick
   }), React.createElement("div", {
     className: $_1371.actionImg
@@ -122,7 +122,7 @@ var vM = memo(function (e) {
       e.stopPropagation()
       e$onCopy()
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-copy-slight",
     className: $_1371.copyIcon
   })), React.createElement("div", {
@@ -131,7 +131,7 @@ var vM = memo(function (e) {
       e.stopPropagation()
       e$onDelete()
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close",
     className: $_1371.deleteIcon
   }))))

@@ -11,7 +11,7 @@ import { qM } from "./index__part-198"
 import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import * as Dn from "./19"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { useContext, createElement } from "react"
 import * as /* [auto-meaningful-name] */$_616_index from "./616/index"
 var UM = function (e, t) {
@@ -97,7 +97,7 @@ var VM = function (e) {
   var P = L[0]
   var B = L[1]
   return createElement($_616_index$a$Group, Dn.a({}, k, {
-    className: N(x, e$className)
+    className: Classnames(x, e$className)
   }), P, createElement(qM, D, B))
 }
 VM.__ANT_BUTTON = true

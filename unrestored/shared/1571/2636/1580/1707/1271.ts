@@ -5,8 +5,8 @@
  */
 
 var r = require("../1659/168")
-var /* [auto-meaningful-name] */require$$_1782_194$RegExp = require("../1782/194").RegExp
+var /* [auto-meaningful-name] */require$$_1785_194$RegExp = require("../1785/194").RegExp
 module.exports = r(function () {
-  var e = require$$_1782_194$RegExp(".", "s")
+  var e = require$$_1785_194$RegExp(".", "s")
   return !(e.dotAll && e.exec("\n") && "s" === e.flags)
 })

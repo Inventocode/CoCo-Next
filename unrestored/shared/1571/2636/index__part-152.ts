@@ -8,8 +8,8 @@
 
 import { VT } from "./index__part-151"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch, useSelector } from "react-redux"
@@ -53,14 +53,14 @@ var KT = memo(function () {
   }, [t$packageProgress])
   useEffect(function () {
     var t = React.createElement("div", {
-      className: N($_6221.completePackage),
+      className: Classnames($_6221.completePackage),
       onClick: function (t) {
         if (!l.current) {
           e($$_$$_$$_$$_src_editor_redux_common_actions.Mi(true))
           t.stopPropagation()
         }
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-apk"
     }), React.createElement("p", {
       className: $_6221.close,
@@ -82,7 +82,7 @@ var KT = memo(function () {
         }))
         t.stopPropagation()
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-close"
     })))
     if (a) {
@@ -137,7 +137,7 @@ var KT = memo(function () {
         e($$_$$_$$_$$_src_editor_redux_common_actions.Li(false))
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close"
   })))))
 })

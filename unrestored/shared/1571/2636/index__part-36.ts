@@ -8,7 +8,7 @@
 
 import { $d } from "./index__part-35"
 import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$_146 from "./146"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
@@ -31,7 +31,7 @@ var op = {
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"text_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, "<block type=\"text_widget_set_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"CONTENT\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\">").concat($_17_index.Blink.Msg.TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat($_146.e, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(Qu.n, ",,1'>16</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_align\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, Jd.sb({
+      "<block type=\"text_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, "<block type=\"text_widget_set_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"CONTENT\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat($_146.e, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(Qu.n, ",,1'>16</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_align\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, Jd.sb({
         property: "__opacity",
         widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
         widgetId: e,

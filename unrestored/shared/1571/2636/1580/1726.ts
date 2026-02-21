@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
+var r = require("./1662/86")
 var /* [auto-meaningful-name] */require$_1648_761$end = require("./1648/761").end
-var i = require("./1725/1099/index")("trimEnd")
+var i = require("./1725/1099")("trimEnd")
 var a = i ? function () {
   return require$_1648_761$end(this)
 } : "".trimEnd

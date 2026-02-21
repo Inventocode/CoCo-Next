@@ -11,16 +11,16 @@ import { _t, vt as InvalidUrlDialog, bt as LoadingDialog, yt as Users } from "..
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136 from "../../../../../unrestored/shared/1571/2636/136"
 import * as CollaborationMessage from "../../../../../unrestored/shared/1571/2636/100"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../../unrestored/shared/1571/2636/24/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../shared/player/audit"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_player_audit from "../../../../shared/player/audit"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
 import * as Tools from "../../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components from "../../../../shared/ui/components"
 import { CoCoDialog, IconFont } from "../../../../shared/ui/components"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
@@ -166,7 +166,7 @@ var Ct = React.memo(function () {
     // const unsafeWidgets = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter((widget) => {
     //   return !CustomWidgetType.isSafeExtensions(widget.type)
     // })
-    // if (!(await $$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.getWhitelist()).includes(Number(id)) && unsafeWidgets.length > 0) {
+    // if (!(await $$_$$_$$_$$_shared_player_audit.getWhitelist()).includes(Number(id)) && unsafeWidgets.length > 0) {
     //   y(false)
     //   dispatch(Actions.openConfirmDialogAction({
     //     allowText: formatMessage({
@@ -301,13 +301,13 @@ var Ct = React.memo(function () {
     <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.content}>
       {isAuthor && (
         <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.header}>
-          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+          <$$_$$_$$_$$_shared_ui_components.d
             className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareButton}
             onClick={() => share.apply(this, arguments)}
           >
             <IconFont className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.invitationIcon} type="icon-ot-invitation" />
             {formatMessage({ id: "OT.inviteFriend" })}
-          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
+          </$$_$$_$$_$$_shared_ui_components.d>
         </div>
       )}
       <ul className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.list}>
@@ -404,7 +404,7 @@ var Ct = React.memo(function () {
   }(), [dispatch, project$id, readOnlyInviteUrl])
   return (
     <div style={{ height: "100%" }}>
-      <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r
+      <$$_$$_$$_$$_shared_ui_components.r
         content={F}
         className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.oTButton}
         onOpen={() => M(true)}
@@ -422,7 +422,7 @@ var Ct = React.memo(function () {
             <IconFont type="icon-collaborate-active" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIcon} />
           </div>
         </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a>
-      </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r>
+      </$$_$$_$$_$$_shared_ui_components.r>
       <CoCoDialog
         className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareOtDialog}
         visible={b}
@@ -459,7 +459,7 @@ var Ct = React.memo(function () {
           <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.text}>{formatMessage({ id: "OT.secure" })}</div>
         </div>
         {G() ? (
-          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+          <$$_$$_$$_$$_shared_ui_components.d
             className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.copy}
             type="primary"
             onClick={() => {
@@ -482,11 +482,11 @@ var Ct = React.memo(function () {
             }}
           >
             {formatMessage({ id: "OT.copyLink" })}
-          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
+          </$$_$$_$$_$$_shared_ui_components.d>
         ) : (
-          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.loadingBtn} type="primary">
+          <$$_$$_$$_$$_shared_ui_components.d className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.loadingBtn} type="primary">
             <IconFont type="icon-loading2" />
-          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
+          </$$_$$_$$_$$_shared_ui_components.d>
         )}
       </CoCoDialog>
     </div>

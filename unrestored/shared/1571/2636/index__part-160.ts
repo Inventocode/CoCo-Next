@@ -9,8 +9,8 @@
 import { WS } from "./index__part-158"
 import { JS } from "./index__part-159"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -43,7 +43,7 @@ var rA = React.memo(function (e) {
     className: $_9361.toastWrapper
   }, React.createElement("div", {
     className: $_9361.toast
-  }, i && React.createElement($_13_index.j, {
+  }, i && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-alert-success",
     className: $_9361.icon
   }), React.createElement("div", {
@@ -63,9 +63,9 @@ var oA = memo(function () {
     window.open("https://codemao-guide.yuque.com/bfiekm/sbo5kh/mhfhe11vyex2f0w4?singleDoc#", "_blank")
   }
   return React.createElement("div", {
-    className: N($_5691.wrapper)
+    className: Classnames($_5691.wrapper)
   }, React.createElement("div", {
-    className: N($_5691.flexSc, $_5691.header)
+    className: Classnames($_5691.flexSc, $_5691.header)
   }, React.createElement("h3", {
     className: $_5691.title
   }, $_710$a$formatMessage({
@@ -80,16 +80,16 @@ var oA = memo(function () {
       return t($$_$$_$$_$$_src_editor_redux_common_actions.nh())
     }
   })), React.createElement("span", {
-    className: N($_5691.closeBtn, "DevToolCloseButton"),
+    className: Classnames($_5691.closeBtn, "DevToolCloseButton"),
     onClick: r
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close-bold"
   }))), React.createElement("div", {
-    className: N($_5691.content)
+    className: Classnames($_5691.content)
   }, React.createElement("div", {
     className: $_5691.shadowContent
   }, React.createElement(WS, null), React.createElement(JS, null), React.createElement("div", {
-    className: N($_5691.help),
+    className: Classnames($_5691.help),
     onClick: o
   }, "看看怎么用？"))))
 })

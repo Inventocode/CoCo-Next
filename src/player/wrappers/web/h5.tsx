@@ -12,9 +12,9 @@ import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_738_index from "../../../../unrestored/shared/1571/2636/738/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
+import classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_68 from "../../../../unrestored/shared/1571/2636/68"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools from "../../../shared/tools"
 import styles from "../../../../unrestored/player/2635/2637/531"
 
 function gatTransform(scale: number) {
@@ -35,7 +35,7 @@ export const WebH5Wrapper = React.memo(() => {
 
   async function load() {
     let workId = window.location.pathname.match(/\/player\/([^/]*)/)?.[1]
-    const searchParams = $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href)
+    const searchParams = $$_$$_$$_shared_tools.N(window.location.href)
     if (searchParams.workId) {
       workId = searchParams.workId
     }
@@ -124,16 +124,16 @@ export const WebH5Wrapper = React.memo(() => {
   return <div className={styles.community}>
     <div
       id="webPlayer"
-      className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.main)}
+      className={classnames(styles.main)}
       style={{
         transform: gatTransform(scale),
         left: panelIsVisible ? "35%" : "50%"
       }}
     >
-      <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(E && styles.vibrate, styles.playerWrapper)}>
+      <div className={classnames(E && styles.vibrate, styles.playerWrapper)}>
         {playerProps && React.createElement($$_$$_$$_$$_unrestored_player_2635_2637_514_index.a, playerProps)}
       </div>
-      <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(E && styles.vibrate, styles.deviceFrame)} />
+      <div className={classnames(E && styles.vibrate, styles.deviceFrame)} />
       <div className={styles.emulatorWrapper}>
         <$$_$$_$$_$$_unrestored_shared_1571_2636_738_index.a messageWindow={window} />
       </div>

@@ -8,12 +8,12 @@
 
 import * as /* [auto-meaningful-name] */$_327 from "./327"
 import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_135 from "../135"
 var /* [auto-meaningful-name] */$_327$FieldNumber$prototype$show_editor = $_327.FieldNumber.prototype.show_editor
 $_327.FieldNumber.prototype.show_editor = function () {
   var e = this
-  var t = $$_17_index.BU.dom.create_dom("input", "blocklyHtmlInput")
+  var t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.dom.create_dom("input", "blocklyHtmlInput")
   if (!this.source_block) {
     return t
   }

@@ -19,7 +19,7 @@ var c = r(require("../1069/index"))
 var u = r(require("../1070/index"))
 var l = r(require("../940"))
 var f = r(require("react"))
-var d = r(require("../../../8"))
+var d = r(require("classnames"))
 var h = r(require("./1285"))
 function p(e, t) {
   var n = Object.keys(e)

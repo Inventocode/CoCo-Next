@@ -7,8 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_206 from "./206"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -35,15 +35,15 @@ var $v = memo(function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$onModeChange = e.onModeChange
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($_13_index.s, {
-    className: N(qv.radioWrapper, qv.sizeRadioBox),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
+    className: Classnames(qv.radioWrapper, qv.sizeRadioBox),
     value: e$mode,
     onChange: e$onModeChange
   }, Jv.map(function (e) {
-    return React.createElement($_13_index.t, {
+    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
       value: e,
       key: e
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-".concat(e).concat(e$mode === e ? "-active" : "")
     }), $_710$a$formatMessage({
       id: "".concat(e)

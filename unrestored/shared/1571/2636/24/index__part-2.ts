@@ -26,13 +26,13 @@ var r
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
 import * as /* [auto-meaningful-name] */Socket$ioClient from "socket.io-client"
 import /* [auto-meaningful-name] */Socket$ioClient1 from "socket.io-client"
-var /* [auto-meaningful-name] */require$$_57_index$a$oTSocketHost = require("../../../../../src/shared/env").a.oTSocketHost
+var /* [auto-meaningful-name] */require$$_$$_$$_$$_$$_src_shared_env$a$oTSocketHost = require("../../../../../src/shared/env").a.oTSocketHost
 var K = function () {
   function e(t, n) {
     $$_27.a(this, e)
     this.subject = undefined
     this.client = undefined
-    this.subject = Socket$ioClient1(require$$_57_index$a$oTSocketHost, {
+    this.subject = Socket$ioClient1(require$$_$$_$$_$$_$$_src_shared_env$a$oTSocketHost, {
       path: "/collaborate/",
       query: {
         work_id: n,

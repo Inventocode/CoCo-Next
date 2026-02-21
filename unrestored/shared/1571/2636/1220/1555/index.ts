@@ -47,7 +47,7 @@ var r = function (e) {
 }(require("react"))
 var o = p(require("../../50/index"))
 var i = p(require("react-dom"))
-var a = p(require("../../8"))
+var a = p(require("classnames"))
 var s = require("./1071/index")
 var c = require("./1217")
 var l = require("./941")

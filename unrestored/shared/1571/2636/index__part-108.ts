@@ -14,10 +14,10 @@ import * as Fp from "./76"
 import * as Pp from "./95"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as te from "../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -29,7 +29,7 @@ var yE = [
     value: Fp.c.OUTLINED_NORMAL,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: N($_2021.outlineNormal, $_2021.modeItem),
+        className: Classnames($_2021.outlineNormal, $_2021.modeItem),
         style: {
           borderColor: e
         }
@@ -39,9 +39,9 @@ var yE = [
     value: Fp.c.CONTAINED_NORMAL,
     renderContent: function (e, t) {
       return React.createElement("div", {
-        className: N($_2021.containedNormal, $_2021.modeItem),
+        className: Classnames($_2021.containedNormal, $_2021.modeItem),
         style: {
-          backgroundColor: t ? e : te.hb(e, .1)
+          backgroundColor: t ? e : $$_$$_$$_$$_src_shared_tools_index.hb(e, .1)
         }
       })
     }
@@ -49,9 +49,9 @@ var yE = [
     value: Fp.c.CONTAINED_ROUND,
     renderContent: function (e, t) {
       return React.createElement("div", {
-        className: N($_2021.containedRound, $_2021.modeItem),
+        className: Classnames($_2021.containedRound, $_2021.modeItem),
         style: {
-          background: t ? e : te.hb(e, .1)
+          background: t ? e : $$_$$_$$_$$_src_shared_tools_index.hb(e, .1)
         }
       })
     }
@@ -59,7 +59,7 @@ var yE = [
     value: Fp.c.OUTLINED_FLAT,
     renderContent: function (e, t) {
       return React.createElement("div", {
-        className: N($_2021.outlineFlat, $_2021.modeItem),
+        className: Classnames($_2021.outlineFlat, $_2021.modeItem),
         style: {
           borderColor: e
         }
@@ -75,10 +75,10 @@ var EE = memo(function (e) {
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var a = e$getValue(n)
   var s = e$getValue("color")
-  var c = te.Z(s)
+  var c = $$_$$_$$_$$_src_shared_tools_index.Z(s)
   var l = c ? "coco-option-white" : ""
-  return React.createElement($_13_index.i, {
-    className: N($_2021.formItemWrapper, $_2021.typeSelector, $_2021.inputModeSelector, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_2021.formItemWrapper, $_2021.typeSelector, $_2021.inputModeSelector, {
       "coco-input-option-white": c
     }, "changeInputMode"),
     label: $_710$a$formatMessage({
@@ -92,7 +92,7 @@ var EE = memo(function (e) {
       e$onChange(n, e)
     }
   }, yE.map(function (e) {
-    return React.createElement($_13_index.p, {
+    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
       key: e.value,
       value: e.value,
       className: l
@@ -140,7 +140,7 @@ var wE = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
-    className: N($_2021.formItemWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: Classnames($_2021.formItemWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_2021.tipsWrapper
   }, React.createElement("div", {

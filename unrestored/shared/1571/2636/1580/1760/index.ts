@@ -6,5 +6,5 @@
 
 "use strict"
 
-var r = require("../1767/1100");
-(0, require("../1754/257/index").exportTypedArrayStaticMethod)("from", require("./1278"), r)
+var r = require("./1100");
+(0, require("../1758/257/index").exportTypedArrayStaticMethod)("from", require("./1278"), r)

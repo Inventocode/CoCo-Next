@@ -8,11 +8,11 @@
 
 var r = require("../../../../../../207/787/500")
 var i = require("regenerator-runtime")
-var o = require("../../../../../../207/787/399")
-var a = require("../2387/984/index")
-var s = require("../2387/985/index")
+var o = require("../../../../../../207/787/399/index")
+var a = require("../../1410/1159/984/index")
+var s = require("../../1410/1159/985/index")
 var c = require("process")
-var u = require("../311/index")
+var u = require("../../1410/311")
 var /* [auto-meaningful-name] */u$ArrayPrototypeIndexOf = u.ArrayPrototypeIndexOf
 var /* [auto-meaningful-name] */u$NumberIsInteger = u.NumberIsInteger
 var /* [auto-meaningful-name] */u$NumberIsNaN = u.NumberIsNaN
@@ -27,14 +27,14 @@ var /* [auto-meaningful-name] */u$SymbolAsyncIterator = u.SymbolAsyncIterator
 var /* [auto-meaningful-name] */u$Symbol = u.Symbol
 module.exports = J
 J.ReadableState = $
-var /* [auto-meaningful-name] */require$$_427_983$EventEmitter = require("../427/983").EventEmitter
-var E = require("../1160")
+var /* [auto-meaningful-name] */require$$_1160_983$EventEmitter = require("../1160/983").EventEmitter
+var E = require("../1160/index")
 var /* [auto-meaningful-name] */E$Stream = E.Stream
 var /* [auto-meaningful-name] */E$prependListener = E.prependListener
 var /* [auto-meaningful-name] */require$$_333_index$Buffer = require("../333/index").Buffer
 var /* [auto-meaningful-name] */require$$_987$addAbortSignal = require("../987").addAbortSignal
-var S = require("../650")
-var T = require("../427/index").debuglog("stream", function (e) {
+var S = require("../../1410/650")
+var T = require("../427").debuglog("stream", function (e) {
   T = e
 })
 var B = require("./2389")
@@ -42,7 +42,7 @@ var D = require("../769")
 var I = require("../988")
 var /* [auto-meaningful-name] */I$getHighWaterMark = I.getHighWaterMark
 var /* [auto-meaningful-name] */I$getDefaultHighWaterMark = I.getDefaultHighWaterMark
-var P = require("../402")
+var P = require("../402/index")
 var /* [auto-meaningful-name] */P$aggregateTwoErrors = P.aggregateTwoErrors
 var /* [auto-meaningful-name] */P$codes = P.codes
 var /* [auto-meaningful-name] */P$codes$ERR_INVALID_ARG_TYPE = P$codes.ERR_INVALID_ARG_TYPE
@@ -51,7 +51,7 @@ var /* [auto-meaningful-name] */P$codes$ERR_OUT_OF_RANGE = P$codes.ERR_OUT_OF_RA
 var /* [auto-meaningful-name] */P$codes$ERR_STREAM_PUSH_AFTER_EOF = P$codes.ERR_STREAM_PUSH_AFTER_EOF
 var /* [auto-meaningful-name] */P$codes$ERR_STREAM_UNSHIFT_AFTER_END_EVENT = P$codes.ERR_STREAM_UNSHIFT_AFTER_END_EVENT
 var /* [auto-meaningful-name] */P$AbortError = P.AbortError
-var /* [auto-meaningful-name] */require$$_2387_858$validateObject = require("../2387/858").validateObject
+var /* [auto-meaningful-name] */require$$_$$_1410_1159_858$validateObject = require("../../1410/1159/858").validateObject
 var Q = u$Symbol("kPaused")
 var /* [auto-meaningful-name] */require$_2390_index$StringDecoder = require("./2390/index").StringDecoder
 var K = require("./1407")
@@ -272,7 +272,7 @@ J.prototype._undestroy = D.undestroy
 J.prototype._destroy = function (e, t) {
   t(e)
 }
-J.prototype[require$$_427_983$EventEmitter.captureRejectionSymbol] = function (e) {
+J.prototype[require$$_1160_983$EventEmitter.captureRejectionSymbol] = function (e) {
   this.destroy(e)
 }
 J.prototype[u$SymbolAsyncDispose] = function () {
@@ -894,7 +894,7 @@ J.prototype[u$SymbolAsyncIterator] = function () {
 }
 J.prototype.iterator = function (e) {
   if (undefined !== e) {
-    require$$_2387_858$validateObject(e, "options")
+    require$$_$$_1410_1159_858$validateObject(e, "options")
   }
   return fe(this, e)
 }

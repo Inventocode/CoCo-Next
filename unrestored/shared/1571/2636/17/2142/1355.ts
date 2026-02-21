@@ -23,7 +23,7 @@ var d = require("../../1022/579")
 var h = require("../../123/478")
 var p = require("../499/975")
 var _ = require("../499/852")
-var A = require("./977/763")
+var A = require("./2169/763")
 var g = function (e) {
   function t(t) {
     var /* [auto-meaningful-name] */r$svg_group
@@ -2422,5 +2422,5 @@ var g = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.WorkspaceComment)], t.prototype, "workspace_comment_factory", undefined);
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.BlockGroup)], t.prototype, "block_group_factory", undefined)
   return t
-}(require("./977/index").WorkspaceElement)
+}(require("./977").WorkspaceElement)
 exports.BlockSvg = g

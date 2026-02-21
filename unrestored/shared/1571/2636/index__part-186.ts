@@ -15,7 +15,7 @@ import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -54,7 +54,7 @@ var Pj = memo(function (e) {
   }
   return React.createElement("div", {
     className: $_1641.LibraryMain
-  }, React.createElement($_13_index.B, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
     className: $_1641.uploadBtn,
     onChange: function (e) {
       if (e) {
@@ -75,7 +75,7 @@ var Pj = memo(function (e) {
     },
     multiple: true,
     accept: e$mode === Tn.c.ImageLibrary ? $_133.f : e$mode === Tn.c.SoundLibrary ? $_135.h : e$mode === Tn.c.IconLibrary ? "image/svg+xml" : ""
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add2"
   }), React.createElement("span", null, $_710$a$formatMessage({
     id: "Resource.upload"

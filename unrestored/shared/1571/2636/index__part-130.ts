@@ -13,8 +13,8 @@ import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
 import qv from "./88"
 import * as Ln from "./35"
 import * as Dn from "./19"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { forwardRef, useContext, createElement, memo } from "react"
@@ -56,7 +56,7 @@ var Dw = forwardRef(function (e, t) {
   }, e$loading && createElement($_610.a, {
     className: "".concat(m, "-loading-icon")
   }))
-  var _ = N((n = {}, Ln.a(n, "".concat(m, "-small"), "small" === (e$size || h)), Ln.a(n, "".concat(m, "-loading"), e$loading), Ln.a(n, "".concat(m, "-rtl"), "rtl" === u$direction), n), s)
+  var _ = Classnames((n = {}, Ln.a(n, "".concat(m, "-small"), "small" === (e$size || h)), Ln.a(n, "".concat(m, "-loading"), e$loading), Ln.a(n, "".concat(m, "-rtl"), "rtl" === u$direction), n), s)
   return createElement($_1048_index.a, {
     insertExtraNode: true
   }, createElement(Nw, Dn.a({}, l, {
@@ -96,8 +96,8 @@ var Pw = memo(function (e) {
   if (e$formConfig$convert) {
     _ = e$formConfig$convert(_)
   }
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper),
     label: f
   }, React.createElement(Lw, {
     checkedChildren: m,

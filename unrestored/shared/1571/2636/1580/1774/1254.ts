@@ -4,5 +4,5 @@
  * 模块 ID：1254
  */
 
-var r = require("../1717/1276/634")
+var r = require("./1253/634")
 module.exports = /MSIE|Trident/.test(r)

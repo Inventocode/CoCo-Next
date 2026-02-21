@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -23,7 +23,7 @@ var gn = memo(function () {
   })
   var /* [auto-meaningful-name] */n$visible = n.visible
   var /* [auto-meaningful-name] */n$progress = n.progress
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: n$visible,
     className: $_5661.container,
     onClose: function () {
@@ -51,7 +51,7 @@ var gn = memo(function () {
     id: "ProjectSaveProgressDialog.content"
   }))), React.createElement("div", {
     className: $_5661.footer
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     className: $_5661.cancelBtn,
     onClick: function () {

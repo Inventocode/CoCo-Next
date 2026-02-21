@@ -11,12 +11,12 @@ import * as /* [auto-meaningful-name] */$_2646_index from "./2646/index"
 import /* [auto-meaningful-name] */$_266 from "./266"
 import /* [auto-meaningful-name] */Axios from "axios"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as Z from "./97"
+import * as /* [auto-meaningful-name] */$_97_index from "./97/index"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_627_index from "./627/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import * as O from "./7"
@@ -42,7 +42,7 @@ var ZP = memo(function () {
   var i = useSelector(function (e) {
     return e.project.id
   })
-  var a = Z.a(i)
+  var a = $_97_index.a(i)
   var s = function () {
     var t = O.a(RegeneratorRuntime.mark(function t(n) {
       return RegeneratorRuntime.wrap(function (t) {
@@ -193,7 +193,7 @@ var ZP = memo(function () {
                       }
                     }, t)
                   }))
-                }, React.createElement($_13_index.j, {
+                }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
                   type: "icon-btn-fallback",
                   className: "coco-video-back"
                 }))), o$title),
@@ -236,7 +236,7 @@ var ZP = memo(function () {
   var l = function () {
     e($$_$$_$$_$$_src_editor_redux_common_actions.fi(false))
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     title: $_710$a$formatMessage({
       id: "courseVideo"
     }),
@@ -264,7 +264,7 @@ var ZP = memo(function () {
       className: $_4751.mask
     }, React.createElement("div", {
       className: $_4751.playBox
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-sound-play"
     })))), React.createElement("div", {
       className: $_4751.courseName
@@ -311,12 +311,12 @@ var JP = memo(function (e) {
       WhetherKeepWorksTitle = "whetherKeepWorksTitleWhenOpenCourse"
     }
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: r$visible,
     showCloseButton: false,
     onClose: l,
     maskClosable: false,
-    className: N($_266.dialog, $_266.dialogSecondary)
+    className: Classnames($_266.dialog, $_266.dialogSecondary)
   }, React.createElement("h3", null, $_710$a$formatMessage({
     id: WhetherKeepWorksTitle
   })), React.createElement("span", null, $_710$a$formatMessage({
@@ -325,13 +325,13 @@ var JP = memo(function (e) {
     keys: "enter",
     callback: c
   })), React.createElement("div", {
-    className: N($_266.dialogButtons)
-  }, React.createElement($_13_index.d, {
+    className: Classnames($_266.dialogButtons)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: l,
     className: $_266.cancel
   }, $_710$a$formatMessage({
     id: "cancel"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: function () {
       if (r$onImport) {
         r$onImport()
@@ -341,7 +341,7 @@ var JP = memo(function (e) {
     className: $_266.denyButton
   }, $_710$a$formatMessage({
     id: "notSave"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     onClick: c
   }, $_710$a$formatMessage({

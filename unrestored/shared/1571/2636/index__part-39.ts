@@ -10,7 +10,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as kn from "./75"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
@@ -31,7 +31,7 @@ var Ap = {
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"button_on_press\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), rp.d, "<block type=\"button_set_content\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat($_17_index.Blink.Msg.BUTTON_DEFAULT_TEXT, "</field>\n          </shadow>\n        </value>\n      </block>"), "<block type=\"button_set_mode\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"MODE\">").concat(Sp.b.CONTAINED_TEXT, "</field>\n      </block>"), "<block type=\"button_set_color\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"COLOR\">\n          <shadow type=\"button_field_color\"></shadow>\n        </value>\n      </block>"), Jd.sb({
+      "<block type=\"button_on_press\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), rp.d, "<block type=\"button_set_content\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.BUTTON_DEFAULT_TEXT, "</field>\n          </shadow>\n        </value>\n      </block>"), "<block type=\"button_set_mode\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"MODE\">").concat(Sp.b.CONTAINED_TEXT, "</field>\n      </block>"), "<block type=\"button_set_color\" uncache=\"true\">\n        ".concat(t, "\n        <value name=\"COLOR\">\n          <shadow type=\"button_field_color\"></shadow>\n        </value>\n      </block>"), Jd.sb({
         property: "__opacity",
         widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.d,
         widgetId: e,

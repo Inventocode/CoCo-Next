@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -58,7 +58,7 @@ var zL = memo(function (e) {
                         case 4:
                           r.prev = 4
                           r.next = 7
-                          return te.fb(o)
+                          return $$_$$_$$_$$_src_shared_tools_index.fb(o)
                         case 7:
                           if (!(r$sent = r.sent)) {
                             r.next = 23
@@ -161,11 +161,11 @@ var zL = memo(function (e) {
       return r.apply(this, arguments)
     }
   }()
-  return React.createElement($_13_index.B, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
     onChange: r,
     accept: ".xlsx, .xls, .csv",
     className: $_3481.uploadButton
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add"
   }), React.createElement("span", null, $_710$a$formatMessage({
     id: "cloudGrid.FileImport"

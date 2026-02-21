@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as te from "../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector } from "react-redux"
@@ -19,7 +19,7 @@ import { memo, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_703 from "./703"
 import /* [auto-meaningful-name] */$_7031 from "./703"
-var uO = te.p(function () {
+var uO = $$_$$_$$_$$_src_shared_tools_index.p(function () {
   var e = document.querySelector(".".concat($_7031.optionsFormItem, " ul li:last-child input"))
   if (e && e instanceof HTMLInputElement) {
     e.focus()
@@ -45,7 +45,7 @@ var dO = memo(function (e) {
       })
     }
   }, [c])
-  var l = te.p(function (e) {
+  var l = $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
     e$onChange("options", $_25_index.a(e))
   }, 100)
   function u(e, t) {
@@ -58,9 +58,9 @@ var dO = memo(function (e) {
   function p(e, t) {
     t.target.rows = 3
   }
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
-    className: N("changeOptions", $_7031.optionsFormItem, $_7031.formItemWrapper)
+    className: Classnames("changeOptions", $_7031.optionsFormItem, $_7031.formItemWrapper)
   }, React.createElement("div", {
     className: $_7031.formTitle
   }, React.createElement("p", null, $_710$a$formatMessage({
@@ -73,8 +73,8 @@ var dO = memo(function (e) {
         e$onChange("options", i.slice(0, -1))
       }
     },
-    className: N(k.a({}, $_7031.disabled, 1 === i.length))
-  }, React.createElement($_13_index.j, {
+    className: Classnames(k.a({}, $_7031.disabled, 1 === i.length))
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-minus"
   })), React.createElement("p", null, i.length, $_710$a$formatMessage({
     id: "option"
@@ -88,13 +88,13 @@ var dO = memo(function (e) {
         uO()
       }
     },
-    className: N(k.a({}, $_7031.disabled, 8 === i.length))
-  }, React.createElement($_13_index.j, {
+    className: Classnames(k.a({}, $_7031.disabled, 8 === i.length))
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add"
   })))), React.createElement("ul", null, i.map(function (e, t) {
     return React.createElement("li", {
       key: t
-    }, React.createElement("span", null, t + 1, "."), React.createElement($_13_index.A, {
+    }, React.createElement("span", null, t + 1, "."), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.A, {
       ref: function (e) {
         return e && (s.current[t] = e)
       },

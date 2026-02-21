@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = undefined
 var i = r(require("../755"))
 var o = r(require("react"))
-var a = r(require("../../../8"))
+var a = r(require("classnames"))
 var s = r(require("../963"))
 function c(e, t) {
   var n = Object.keys(e)

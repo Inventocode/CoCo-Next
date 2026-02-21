@@ -4,7 +4,7 @@
  * 模块 ID：1633
  */
 
-var r = require("./1661/86/index")
+var r = require("./1662/86")
 var /* [auto-meaningful-name] */Math$floor = Math.floor
 var /* [auto-meaningful-name] */Math$log = Math.log
 var /* [auto-meaningful-name] */Math$LOG2E = Math.LOG2E

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../../../399")
+var r = require("../../../../399/index")
 var i = require("./2251/index")
 var o = require("../../../../1361/index")
 var a = require("lodash")

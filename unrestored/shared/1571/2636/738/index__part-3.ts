@@ -7,8 +7,8 @@
 "use strict"
 
 import { d, p, h, g } from "./index__part-0"
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
-import N from "../8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_iconfont_index from "../../../../../src/shared/ui/components/iconfont/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_710 from "../710"
@@ -53,10 +53,10 @@ var K = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$name = e.name
   var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
   return React.createElement("div", {
-    className: N("emulator-channel-item", e$selected && "selected")
+    className: Classnames("emulator-channel-item", e$selected && "selected")
   }, React.createElement("div", {
     className: "emulator-icon"
-  }, e$icon && React.createElement($$_94_index.a, {
+  }, e$icon && React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_iconfont_index.a, {
     type: e$icon
   })), React.createElement("div", {
     className: "emulator-text"
@@ -108,7 +108,7 @@ var q = React.memo(function () {
           }
         }(n$type)
       },
-      className: N("emulator-channel-item-wrapper", n$type === t.visiblePanel && "selected")
+      className: Classnames("emulator-channel-item-wrapper", n$type === t.visiblePanel && "selected")
     }, React.createElement(K, {
       key: n$type,
       icon: n$type === t.visiblePanel ? n$iconSelected : n$icon,

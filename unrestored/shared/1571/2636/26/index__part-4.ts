@@ -16,7 +16,7 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as H from "../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as l from "../9"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox from "../../../../../src/editor/block/toolbox"
 import * as /* [auto-meaningful-name] */$$_228_index from "../228/index"
 import * as /* [auto-meaningful-name] */$$_207_index from "../207/index"
@@ -60,9 +60,9 @@ var _e = {
     flyout: true
   },
   context_menu: {
-    workspace: [$$_17_index.I.WorkspaceOptionType.PASTE, $$_17_index.I.WorkspaceOptionType.CLEAN_UP, $$_17_index.I.WorkspaceOptionType.DELETE_ALL, $$_17_index.I.WorkspaceOptionType.COPY_ALL, $$_17_index.I.WorkspaceOptionType.GLOBAL_COMMENT],
+    workspace: [$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.PASTE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.CLEAN_UP, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.DELETE_ALL, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.COPY_ALL, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.WorkspaceOptionType.GLOBAL_COMMENT],
     block: [
-      $$_17_index.I.BlockOptionType.COPY_AND_PASTE, $$_17_index.I.BlockOptionType.COPY, $$_17_index.I.BlockOptionType.ADD_COMMENT, $$_17_index.I.BlockOptionType.COLLAPSE, $$_17_index.I.BlockOptionType.DELETE, function (e) {
+      $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COPY_AND_PASTE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COPY, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.ADD_COMMENT, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.COLLAPSE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockOptionType.DELETE, function (e) {
         return {
           text: $$_$$_$$_$$_$$_src_shared_ui_language.c($$_37_index.b(), "Workspace.ContextMenu.blockToImage"),
           name: "blockToImage",
@@ -110,9 +110,9 @@ var _e = {
           callback: function () {
             if (t) {
               var /* [auto-meaningful-name] */t$def_id = t.def_id
-              var n = $$_17_index.Blink.mainWorkspace.get_block_by_id(t$def_id)
+              var n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t$def_id)
               if (n) {
-                $$_17_index.Blink.mainWorkspace.center_on_block(t$def_id)
+                $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.center_on_block(t$def_id)
                 n.select()
                 Ee.setDebuggingBlock(n)
                 n.set_glow_stack(true)
@@ -126,8 +126,8 @@ var _e = {
 }
 function ve(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "zh"
-  Object.assign($$_17_index.Blink.Msg, e)
-  $$_17_index.Blink.utils.set_language(t)
+  Object.assign($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg, e)
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.utils.set_language(t)
 }
 function be() {
   var e = Ee.getWorkspaceDataByScreenId(Ee.getCurrentScreenId())
@@ -137,7 +137,7 @@ function be() {
   return e.getProcedureManager()
 }
 function ye(e, t) {
-  var n = $$_17_index.Blink.inject(e, H.a(H.a(H.a({}, _e), t), {}, {
+  var n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.inject(e, H.a(H.a(H.a({}, _e), t), {}, {
     custom_svg_defs: $$_207_430.a,
     auto_resize: true
   }))
@@ -151,7 +151,7 @@ function ye(e, t) {
   }
   n.get_parent_svg().setAttribute("enable-animation", "true")
   Object.values($$_$$_$$_$$_$$_src_editor_block_toolbox.b).forEach(function (e, t) {
-    $$_17_index.Blink.mainWorkspace.register_flyout_button(e, function () {
+    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_flyout_button(e, function () {
       var t = document.createElementNS($$_53.c, "foreignObject")
       t.style.overflow = "visible"
       var n = document.getElementById(e)

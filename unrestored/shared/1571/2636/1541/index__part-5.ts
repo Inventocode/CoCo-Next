@@ -7,7 +7,7 @@
 "use strict"
 
 import { h } from "./index__part-1"
-import _ from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_107 from "../107"
 import { forwardRef, useRef, useImperativeHandle, useEffect, useState, useLayoutEffect, useCallback, useMemo, Component, createElement, Fragment } from "react"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
@@ -546,7 +546,7 @@ var ve = function (e) {
           }
         }
         j = e$children($$_21.a($$_21.a({}, R), {}, {
-          className: _(ue(e$motionName, w), (k = {}, $$_35.a(k, ue(e$motionName, "".concat(w, "-").concat(x)), x), $$_35.a(k, e$motionName, "string" === typeof e$motionName), k)),
+          className: Classnames(ue(e$motionName, w), (k = {}, $$_35.a(k, ue(e$motionName, "".concat(w, "-").concat(x)), x), $$_35.a(k, e$motionName, "string" === typeof e$motionName), k)),
           style: T
         }), N)
       } else {
@@ -776,7 +776,7 @@ function Te(e) {
       style: {
         zIndex: e$zIndex
       },
-      className: _("".concat(e$prefixCls, "-mask"), e$className)
+      className: Classnames("".concat(e$prefixCls, "-mask"), e$className)
     })
   })
 }

@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$_374 from "./374"
 import * as /* [auto-meaningful-name] */$_503 from "./503"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
@@ -24,7 +24,7 @@ $_374.FieldTextInput.prototype.show_editor = function () {
         t.set_value($$_28_index.i(e))
       }
     }))
-    $$_17_index.Blink.widget_div.hide()
+    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.widget_div.hide()
   }
   return n
 }

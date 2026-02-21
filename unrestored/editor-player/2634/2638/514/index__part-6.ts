@@ -11,9 +11,9 @@ var et
 import * as /* [auto-meaningful-name] */Animejs from "animejs"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_189 from "../../../../shared/1571/2636/189"
 import /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_1412_index from "../../../../shared/1571/2636/37/1412/index"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_232_324 from "../../../../shared/1571/2636/232/324"
@@ -62,9 +62,9 @@ var at = {
     at.style = t
   },
   setThemeColor: function (t) {
-    var e = $$_$$_$$_$$_shared_1571_2636_15.hb(t, .4)
-    var n = $$_$$_$$_$$_shared_1571_2636_15.hb(t, .04)
-    var r = $$_$$_$$_$$_shared_1571_2636_15.ib(t, .3)
+    var e = $$_$$_$$_$$_$$_src_shared_tools_index.hb(t, .4)
+    var n = $$_$$_$$_$$_$$_src_shared_tools_index.hb(t, .04)
+    var r = $$_$$_$$_$$_$$_src_shared_tools_index.ib(t, .3)
     var i = Color(t).toString()
     document.documentElement.style.setProperty("--dialog-theme-color", i)
     document.documentElement.style.setProperty("--dialog-theme-color-medium", e)
@@ -163,7 +163,7 @@ var at = {
         maxHeight: u,
         padding: c
       },
-      className: $$_$$_$$_$$_shared_1571_2636_8(a && $_1381.singleElementContentBox, !a && $_1381.contentBox)
+      className: Classnames(a && $_1381.singleElementContentBox, !a && $_1381.contentBox)
     }, e && React.createElement("div", {
       style: {
         background: "url(".concat(e, ") no-repeat"),
@@ -172,7 +172,7 @@ var at = {
       },
       className: $_1381.imageBox
     }), n && React.createElement("p", {
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.title)
+      className: Classnames($_1381.title)
     }, n), r && React.createElement("p", {
       className: $_1381.textBox
     }, React.createElement("span", {
@@ -190,10 +190,10 @@ var at = {
     return React.createElement("div", {
       className: $_1381.buttonBox
     }, e && React.createElement("button", {
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.button, $_1381.cancelButton),
+      className: Classnames($_1381.button, $_1381.cancelButton),
       onClick: this.cancel.bind(null, "取消")
     }, React.createElement("span", null, "取消")), React.createElement("button", {
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.button, $_1381.mainButton),
+      className: Classnames($_1381.button, $_1381.mainButton),
       style: {
         width: this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? e ? "133px" : "100%" : "fit-content"
       },
@@ -220,7 +220,7 @@ var at = {
     var c = this.getButtonBox(et.MESSAGE, t$params$showCancelButton, t$params$confirmButtonText)
     var l = React.createElement("div", {
       id: COCO_PLAYER_DIALOG,
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
+      className: Classnames($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
     }, u, c)
     ReactDom.render(l, s)
   },
@@ -243,7 +243,7 @@ var at = {
     var u = this.getContentBox(et.SELECT, "", t$params$title, t$params$text, t$params$showCancelButton)
     var c = React.createElement("div", {
       id: COCO_PLAYER_DIALOG,
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
+      className: Classnames($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
     }, u, React.createElement("div", {
       className: $_1381.optionButtonBox,
       style: {
@@ -251,16 +251,16 @@ var at = {
         justifyContent: this.style !== $$_$$_$$_$$_shared_1571_2636_189.b.styleB || t$params$showCancelButton ? undefined : "flex-end"
       }
     }, t$params$showCancelButton && this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleB && React.createElement("button", {
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.button, $_1381.cancelButton),
+      className: Classnames($_1381.button, $_1381.cancelButton),
       onClick: this.cancel.bind(null, "")
     }, React.createElement("span", null, "取消")), React.createElement("div", null, React.createElement("button", {
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.button, $_1381.mainButton),
+      className: Classnames($_1381.button, $_1381.mainButton),
       onClick: this.confirm.bind(null, t$params$option1)
     }, React.createElement("span", null, t$params$option1)), React.createElement("button", {
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.button, $_1381.mainButton),
+      className: Classnames($_1381.button, $_1381.mainButton),
       onClick: this.confirm.bind(null, t$params$option2)
     }, React.createElement("span", null, t$params$option2))), t$params$showCancelButton && this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA && React.createElement("button", {
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.button, $_1381.cancelButton),
+      className: Classnames($_1381.button, $_1381.cancelButton),
       onClick: this.cancel.bind(null, "")
     }, React.createElement("span", null, "取消"))))
     ReactDom.render(c, s)
@@ -284,7 +284,7 @@ var at = {
     var u = this.getButtonBox(et.PROMPT, t$params$showCancelButton)
     var c = React.createElement("div", {
       id: COCO_PLAYER_DIALOG,
-      className: $$_$$_$$_$$_shared_1571_2636_8($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
+      className: Classnames($_1381.dialog, this.style === $$_$$_$$_$$_shared_1571_2636_189.b.styleA ? $_1381.styleA : $_1381.styleB)
     }, s, u)
     ReactDom.render(c, a)
   }

@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_738_70 from "../../../../shared/1571/2636/738/70"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_index from "../../../../shared/1571/2636/37/219/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_
 import "./1187"
 import "./1188"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_2681_index from "../../../../shared/1571/2636/2681/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as me from "./71"
 import be from "./71"
 var ge = [
@@ -78,7 +78,7 @@ var ve = memo(function () {
     o(i + "" + t)
   }
   return React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.dialerBox, !e.dialPageVisible && be.dialerBoxHide)
+    className: Classnames(be.dialerBox, !e.dialPageVisible && be.dialerBoxHide)
   }, React.createElement("div", {
     className: be.backBox,
     onClick: function () {
@@ -86,7 +86,7 @@ var ve = memo(function () {
         dialPageVisible: false
       }))
     }
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-nav-back"
   })), React.createElement("div", {
     className: be.dialNumber
@@ -95,7 +95,7 @@ var ve = memo(function () {
   }, ge.map(function (t) {
     return React.createElement("div", {
       key: t.number,
-      className: $$_$$_$$_$$_shared_1571_2636_8(be.keyItem, be.numberKey),
+      className: Classnames(be.keyItem, be.numberKey),
       onClick: a.bind(null, t.number)
     }, React.createElement("div", {
       className: be.number
@@ -103,9 +103,9 @@ var ve = memo(function () {
       className: be.letter
     }, t.letter))
   }), React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.keyItem, be.white)
+    className: Classnames(be.keyItem, be.white)
   }), React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.keyItem, be.callBtn),
+    className: Classnames(be.keyItem, be.callBtn),
     onClick: function () {
       if (i) {
         t($$_$$_$$_$$_shared_1571_2636_48_72.s({
@@ -125,10 +125,10 @@ var ve = memo(function () {
         })
       }
     }
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-dial"
   })), React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.keyItem, be.white)
+    className: Classnames(be.keyItem, be.white)
   }, React.createElement("div", {
     className: be.deleteBtn,
     onClick: function () {

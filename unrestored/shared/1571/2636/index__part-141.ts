@@ -43,8 +43,8 @@ import { _C } from "./index__part-139"
 import { SC, AC, IC, jC } from "./index__part-140"
 import /* [auto-meaningful-name] */Axios from "axios"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -225,9 +225,9 @@ var BC = memo(function (e) {
       }, e)
     }))).apply(this, arguments)
   }
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
-    className: N($_5671.formItemWrapper, $_5671.aqaraAuth, u && $_5671.connected),
+    className: Classnames($_5671.formItemWrapper, $_5671.aqaraAuth, u && $_5671.connected),
     label: u ? "已授权 绿米" : "未授权 绿米"
   }, u ? React.createElement("div", {
     className: $_5671.connect,
@@ -237,7 +237,7 @@ var BC = memo(function (e) {
   }, React.createElement("span", {
     className: $_5671.text
   }, "取消授权")) : React.createElement("div", {
-    className: N($_5671.connect, c && $_5671.connecting),
+    className: Classnames($_5671.connect, c && $_5671.connecting),
     onClick: function () {
       return d.apply(this, arguments)
     }

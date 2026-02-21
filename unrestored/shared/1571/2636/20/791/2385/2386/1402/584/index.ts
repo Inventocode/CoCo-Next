@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../../../../../../207/787/500")
-var i = require("../311/index")
+var i = require("../../1410/311")
 var /* [auto-meaningful-name] */i$ObjectDefineProperties = i.ObjectDefineProperties
 var /* [auto-meaningful-name] */i$ObjectGetOwnPropertyDescriptor = i.ObjectGetOwnPropertyDescriptor
 var /* [auto-meaningful-name] */i$ObjectKeys = i.ObjectKeys

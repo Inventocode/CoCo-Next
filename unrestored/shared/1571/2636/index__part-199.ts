@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$_106 from "./106"
 import * as /* [auto-meaningful-name] */$_103 from "./103"
 import * as Ln from "./35"
 import * as Dn from "./19"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import /* [auto-meaningful-name] */React from "react"
 import { createContext, useContext, createElement, Fragment, useMemo, Component } from "react"
@@ -46,7 +46,7 @@ var $M = function (e) {
   if (e$icon) {
     var d = $_315.b(e$title) && "span" === e$title.type
     n = createElement(Fragment, null, $_315.a(e$icon, {
-      className: N($_315.b(e$icon) ? null === (o$props = e$icon.props) || undefined === o$props ? undefined : o$props.className : "", "".concat(a$prefixCls, "-item-icon"))
+      className: Classnames($_315.b(e$icon) ? null === (o$props = e$icon.props) || undefined === o$props ? undefined : o$props.className : "", "".concat(a$prefixCls, "-item-icon"))
     }), d ? e$title : createElement("span", {
       className: "".concat(a$prefixCls, "-title-content")
     }, e$title))
@@ -66,7 +66,7 @@ var $M = function (e) {
     value: p
   }, createElement($_559_index.d, Dn.a({}, $_486.a(e, ["icon"]), {
     title: n,
-    popupClassName: N(a$prefixCls, "".concat(a$prefixCls, "-").concat(a$antdMenuTheme), e$popupClassName)
+    popupClassName: Classnames(a$prefixCls, "".concat(a$prefixCls, "-").concat(a$antdMenuTheme), e$popupClassName)
   })))
 }
 function eL(e) {
@@ -145,10 +145,10 @@ var nL = function (e) {
         placement: "rtl" === e$context$direction ? "left" : "right",
         overlayClassName: "".concat(e$context$prefixCls, "-inline-collapsed-tooltip")
       }), createElement($_559_index.b, Dn.a({}, v, {
-        className: N((n = {}, Ln.a(n, "".concat(e$context$prefixCls, "-item-danger"), e$props1$danger), Ln.a(n, "".concat(e$context$prefixCls, "-item-only-child"), 1 === (e$props1$icon ? eLE$props$children$length + 1 : eLE$props$children$length)), n), e$props$className),
+        className: Classnames((n = {}, Ln.a(n, "".concat(e$context$prefixCls, "-item-danger"), e$props1$danger), Ln.a(n, "".concat(e$context$prefixCls, "-item-only-child"), 1 === (e$props1$icon ? eLE$props$children$length + 1 : eLE$props$children$length)), n), e$props$className),
         title: "string" === typeof e$props1$title ? e$props1$title : undefined
       }), $_315.a(e$props1$icon, {
-        className: N($_315.b(e$props1$icon) ? null === (g$props = e$props1$icon.props) || undefined === g$props ? undefined : g$props.className : "", "".concat(e$context$prefixCls, "-item-icon"))
+        className: Classnames($_315.b(e$props1$icon) ? null === (g$props = e$props1$icon.props) || undefined === g$props ? undefined : g$props.className : "", "".concat(e$context$prefixCls, "-item-icon"))
       }), e.renderItemChildren(e$context$inlineCollapsed)))
     }
     return e
@@ -201,7 +201,7 @@ var oL = function (e) {
   var /* [auto-meaningful-name] */e$dashed = e.dashed
   var o = rL(e, ["prefixCls", "className", "dashed"])
   var i = (0, useContext($_801_index.b).getPrefixCls)("menu", e$prefixCls)
-  var a = N(Ln.a({}, "".concat(i, "-item-divider-dashed"), !!e$dashed), e$className)
+  var a = Classnames(Ln.a({}, "".concat(i, "-item-divider-dashed"), !!e$dashed), e$className)
   return createElement($_559_index.a, Dn.a({
     className: a
   }, o))
@@ -250,7 +250,7 @@ var aL = function (e) {
         }
       }
       var g = e$getPrefixCls("menu", r$props$prefixCls)
-      var _ = N("".concat(g, "-").concat(r$props$theme), r$props$className)
+      var _ = Classnames("".concat(g, "-").concat(r$props$theme), r$props$className)
       var v = $_1034.a(function (e, t, n, r) {
         return {
           prefixCls: e,

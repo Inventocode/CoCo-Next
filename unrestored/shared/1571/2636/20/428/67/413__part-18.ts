@@ -27,13 +27,13 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_95 from "../../../95"
 import /* [auto-meaningful-name] */$$_$$_$$_290 from "../../../290"
 import * as /* [auto-meaningful-name] */$$_$$_$$_76 from "../../../76"
 import * as /* [auto-meaningful-name] */$$_$$_$$_10_index from "../../../10/index"
-import * as /* [auto-meaningful-name] */$$_112 from "../112"
+import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_28_index from "../../../28/index"
 import * as /* [auto-meaningful-name] */$$_242 from "../242"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
@@ -113,7 +113,7 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
       return ""
     }
   }, [e$attributes$backgroundColor, e$attributes$errorMessage, t, e$type])
-  var K = $$_112.b(e$attributes$backgroundImage) || $$_$$_$$_95.a
+  var K = $$_$$_$$_34_347_112.b(e$attributes$backgroundImage) || $$_$$_$$_95.a
   var J = useMemo(function () {
     if (!U || e$attributes$backgroundMode === $$_$$_$$_76.a.IMAGE) {
       return {}
@@ -197,7 +197,7 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
   }, [t, e$attributes$placeholderColor])
   return React.createElement("div", {
     id: t,
-    className: $$_$$_$$_8($$_$$_$$_290.inputWidget, e$attributes$backgroundMode === $$_$$_$$_76.a.TEMPLATE && e$attributes$templateMode !== $$_$$_$$_76.c.OUTLINED_FLAT && $$_$$_$$_290.inputWidgetUnderpainting),
+    className: Classnames($$_$$_$$_290.inputWidget, e$attributes$backgroundMode === $$_$$_$$_76.a.TEMPLATE && e$attributes$templateMode !== $$_$$_$$_76.c.OUTLINED_FLAT && $$_$$_$$_290.inputWidgetUnderpainting),
     "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w,
     style: $$_$$_$$_6.a($$_$$_$$_6.a($$_$$_$$_6.a({
@@ -214,7 +214,7 @@ $$_$$_$$_11.a(We, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, functi
       color: e$attributes$valueColor
     }, $), J), te)
   }, React.createElement("div", {
-    className: $$_$$_$$_8($$_$$_$$_290.inputWidgetInputWrapper)
+    className: Classnames($$_$$_$$_290.inputWidgetInputWrapper)
   }, React.createElement("input", {
     placeholder: P,
     value: e$attributes$value,

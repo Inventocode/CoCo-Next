@@ -11,7 +11,7 @@ import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
@@ -32,12 +32,12 @@ var Nn = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$vibrating = e.vibrating
   var /* [auto-meaningful-name] */e$scale = e.scale
   return React.createElement("div", {
-    className: N($_6181.deviceFrameContainer, $_6181.galaxy5),
+    className: Classnames($_6181.deviceFrameContainer, $_6181.galaxy5),
     style: {
       transform: "scale(".concat(e$scale, ")")
     }
   }, React.createElement("div", {
-    className: N($_6181.deviceFrame, {
+    className: Classnames($_6181.deviceFrame, {
       vibrate: e$vibrating
     })
   }, e$children, React.createElement("div", {

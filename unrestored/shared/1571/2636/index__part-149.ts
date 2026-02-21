@@ -8,16 +8,16 @@
 
 import { Sg } from "./index__part-79"
 import * as ng from "./64"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as po from "./49"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -95,7 +95,7 @@ var RT = memo(function (e) {
     }
   }, [q, e$variableType, Q, Z, J])
   useEffect(function () {
-    var e = $_17_index.Blink.mainWorkspace && $_26_index.g.getToolbox()
+    var e = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace && $_26_index.g.getToolbox()
     if (e) {
       var t
       var n
@@ -242,7 +242,7 @@ var RT = memo(function (e) {
       var /* [auto-meaningful-name] */e$name = e.name
       g("")
       if (r !== e$name) {
-        if (!te.j(r)) {
+        if (!$$_$$_$$_$$_src_shared_tools_index.j(r)) {
           if ("" !== r && r[0].match(/[0-9_]/)) {
             V($$_$$_$$_$$_src_editor_redux_common_actions.mj({
               message: $$_$$_$$_$$_src_shared_ui_language.c(X, "invalidVariableFirstChar")
@@ -328,7 +328,7 @@ var RT = memo(function (e) {
     }
   }
   var oe = function (e, t) {
-    return React.createElement($_13_index.k, {
+    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
       type: "text",
       className: $_2361.valueInput,
       maxLength: 20,
@@ -341,7 +341,7 @@ var RT = memo(function (e) {
           if (q) {
             var r = e
             if (r) {
-              r = te.mb(r)
+              r = $$_$$_$$_$$_src_shared_tools_index.mb(r)
             }
             V($$_$$_$$_$$_src_editor_redux_common_actions.Hg(n, t.id, "defaultValue", r, q.id))
           }
@@ -388,7 +388,7 @@ var RT = memo(function (e) {
       return React.createElement("div", null)
     }
     return React.createElement("div", {
-      className: N($_2361.itemWrap, y === e$item.id && $_2361.select),
+      className: Classnames($_2361.itemWrap, y === e$item.id && $_2361.select),
       id: e$item.id,
       key: e$item.id,
       onClick: function () {
@@ -402,23 +402,23 @@ var RT = memo(function (e) {
     }, React.createElement("div", {
       className: $_2361.item
     }, React.createElement("div", {
-      className: N($_2361.name)
-    }, m === e$item.id ? React.createElement($_13_index.k, {
+      className: Classnames($_2361.name)
+    }, m === e$item.id ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
       type: "text",
-      className: N($_2361.nameInput, "".concat("VARIABLE_ID_" + e$item.id)),
+      className: Classnames($_2361.nameInput, "".concat("VARIABLE_ID_" + e$item.id)),
       maxLength: 20,
       defaultValue: e$item.name,
       onBlur: re.bind(null, e$item, e$type),
       onKeyDown: ie
     }) : React.createElement("div", {
-      className: N($_2361.nameInputWrapper)
+      className: Classnames($_2361.nameInputWrapper)
     }, React.createElement("div", {
       onClick: ae.bind(null, e$item.id),
-      className: N($_2361.noEditing)
+      className: Classnames($_2361.noEditing)
     }, e$item.name), React.createElement("div", {
-      className: N($_2361.itemBtn, $_2361.delete),
+      className: Classnames($_2361.itemBtn, $_2361.delete),
       onClick: se.bind(null, e$item, e$type)
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-close"
     })), React.createElement($_748_index.a, {
       placement: "bottom",
@@ -429,12 +429,12 @@ var RT = memo(function (e) {
     }, React.createElement("div", {
       className: $_2361.itemBtn,
       onClick: ne.bind(null, e$item.id, e$type)
-    }, e$variableType === K.b.PRIMITIVE && React.createElement($_13_index.j, {
+    }, e$variableType === K.b.PRIMITIVE && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-fold-left",
-      className: N($_2361.itemExpand, l === e$item.id && $_2361.active)
-    }), e$variableType === K.b.ARRAY && React.createElement($_13_index.j, {
+      className: Classnames($_2361.itemExpand, l === e$item.id && $_2361.active)
+    }), e$variableType === K.b.ARRAY && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-list"
-    }), e$variableType === K.b.OBJECT && React.createElement($_13_index.j, {
+    }), e$variableType === K.b.OBJECT && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-list"
     })))))), e$variableType === K.b.PRIMITIVE && y === e$item.id && l === e$item.id && React.createElement("div", {
       className: $_2361.detail
@@ -460,7 +460,7 @@ var RT = memo(function (e) {
     return React.createElement("div", {
       className: $_2361.addBtn,
       onClick: ee
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-add",
       className: $_2361.addIcon
     }), $_710$a$formatMessage({
@@ -545,7 +545,7 @@ var RT = memo(function (e) {
     onClick: function () {
       return j(!C)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-fold",
     className: C ? $_2361.expandIcon : $_2361.foldIcon
   })))))

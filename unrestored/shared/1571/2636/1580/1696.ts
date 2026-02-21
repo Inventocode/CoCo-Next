@@ -4,11 +4,11 @@
  * 模块 ID：1696
  */
 
-var r = require("./1661/86/index")
-var o = require("./1785/271")
+var r = require("./1662/86")
+var o = require("./1662/271")
 var i = require("./1282/240")
 var a = require("./1581/632")
-var s = require("./1648/300")
+var s = require("./1662/300/index")
 r({
   target: "Reflect",
   stat: true,

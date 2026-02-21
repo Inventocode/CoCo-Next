@@ -12,8 +12,8 @@ import * as Yr from "./53"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_header_styles$module$css from "../../../../src/editor/ui/header/styles.module.css"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -44,7 +44,7 @@ var dL = React.memo(function () {
   return React.createElement("div", {
     className: $_5701.playBox
   }, React.createElement("button", {
-    className: N($_5701.playButton, s.size > 1 && $_5701.borderLeft),
+    className: Classnames($_5701.playButton, s.size > 1 && $_5701.borderLeft),
     onClick: function () {
       if (a) {
         t($$_$$_$$_$$_src_editor_redux_common_actions.Dj())
@@ -53,11 +53,11 @@ var dL = React.memo(function () {
         $$_$$_$$_$$_src_editor_redux_common_actions.Nf(t, $$_$$_$$_$$_src_editor_redux_common_actions.kg(o))
       }
     }
-  }, a ? React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
+  }, a ? React.createElement(React.Fragment, null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-stop"
   }), " ", $_710$a$formatMessage({
     id: "stop"
-  })) : React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
+  })) : React.createElement(React.Fragment, null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: o ? "icon-start" : "icon-start-first-screen"
   }), $_710$a$formatMessage({
     id: "play"
@@ -76,7 +76,7 @@ var dL = React.memo(function () {
       }
     }, React.createElement(cL.Item, {
       key: "START_CURRENT_SCREEN"
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-start",
       className: $_5701.menuIcon
     }), React.createElement("span", {
@@ -85,7 +85,7 @@ var dL = React.memo(function () {
       id: "playCurrentScreen"
     }))), React.createElement(cL.Item, {
       key: "START_FIRST_SCREEN"
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-start-first-screen",
       className: $_5701.menuIcon
     }), React.createElement("span", {
@@ -95,7 +95,7 @@ var dL = React.memo(function () {
     }))))
   }, React.createElement("div", {
     className: $_5701.playType
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-dropdown-down"
   }))))
 })
@@ -126,7 +126,7 @@ var pL = memo(function (e) {
     trigger: ["hover", "click"]
   }, React.createElement("div", {
     className: $$_$$_$$_$$_src_editor_ui_header_styles$module$css.projectTitleWrapper
-  }, React.createElement($_13_index.k, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     defaultValue: n,
     dependency: n,
     disabled: !r || e.readonly,
@@ -178,7 +178,7 @@ var pL = memo(function (e) {
           o.current.focus()
         }
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-edit",
       className: $$_$$_$$_$$_src_editor_ui_header_styles$module$css.editIcon
     }))

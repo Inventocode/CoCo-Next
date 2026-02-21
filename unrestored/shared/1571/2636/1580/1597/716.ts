@@ -7,7 +7,7 @@
 "use strict"
 
 var r = require("../1581/632")
-var o = require("../1648/300")
+var o = require("../1662/300/index")
 var i = require("../1282/631")
 module.exports = function (e, t, n) {
   var a = r(t)

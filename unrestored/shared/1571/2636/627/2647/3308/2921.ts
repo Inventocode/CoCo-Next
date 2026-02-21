@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = u
 var r = a(require("../../../50/index"))
 var o = a(require("react"))
-var i = a(require("../../../8"))
+var i = a(require("classnames"))
 var l = {
   duration: r.default.number,
   buffered: r.default.object,

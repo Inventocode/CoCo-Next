@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/sha
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useImperativeHandle } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "../8"
+import i from "classnames"
 import * as /* [auto-meaningful-name] */$$_540_index from "../../../../../src/shared/ui/components/dialog/index"
 import "./869"
 var J = memo(React.forwardRef(function (e, t) {

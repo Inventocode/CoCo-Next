@@ -13,10 +13,10 @@ import * as /* [auto-meaningful-name] */$_215 from "./215"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
@@ -44,12 +44,12 @@ var MO = memo(function (e) {
   var u = $_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper),
     label: $_710$a$formatMessage({
       id: e$formConfig$label
     })
-  }, React.createElement($_13_index.k, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     className: $_3971.inputRow,
     type: "number",
     defaultValue: c,
@@ -107,7 +107,7 @@ var LO = memo(function (e) {
       }, 60)
     }
   }
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
     className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
   }, React.createElement("p", {
@@ -116,23 +116,23 @@ var LO = memo(function (e) {
     id: a
   })), React.createElement("div", {
     className: qv.formInputNumberRow
-  }, React.createElement($_13_index.i, null, React.createElement(Zv, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, null, React.createElement(Zv, {
     hasIcon: true,
     className: c.horizontal ? qv.selected : "",
     onClick: l.bind(undefined, "horizontal")
   }, React.createElement("span", {
     className: qv.btnIcon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-actor-horizontal"
   })), $_710$a$formatMessage({
     id: "horizontal"
-  }))), React.createElement($_13_index.i, null, React.createElement(Zv, {
+  }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, null, React.createElement(Zv, {
     hasIcon: true,
     className: c.vertical ? qv.selected : "",
     onClick: l.bind(undefined, "vertical")
   }, React.createElement("span", {
     className: qv.btnIcon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-actor-vertical"
   })), $_710$a$formatMessage({
     id: "vertical"
@@ -238,7 +238,7 @@ var BO = memo(function (e) {
       e$onChange(n, p)
     }
   }, [])
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
     className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
   }, React.createElement("p", {
@@ -247,9 +247,9 @@ var BO = memo(function (e) {
     id: l
   })), React.createElement("div", {
     className: qv.formInputNumberRow
-  }, React.createElement($_13_index.i, {
-    className: N("changeWidth", $_3971.formItem)
-  }, React.createElement($_13_index.o, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames("changeWidth", $_3971.formItem)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "width"
     }),
@@ -276,11 +276,11 @@ var BO = memo(function (e) {
         ratio: !b && g.x / g.y
       }))
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: false === b ? "icon-unlocked" : "icon-locked"
-  })), React.createElement($_13_index.i, {
-    className: N("changeHeight", $_3971.formItem)
-  }, React.createElement($_13_index.o, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames("changeHeight", $_3971.formItem)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "height"
     }),

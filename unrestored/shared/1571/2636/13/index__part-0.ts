@@ -7,8 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as o from "../8"
-import i from "../8"
+import * as o from "classnames"
+import i from "classnames"
 import { createContext, memo, useContext, useCallback, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"

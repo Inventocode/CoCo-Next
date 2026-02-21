@@ -9,9 +9,9 @@
 import { _ } from "./index__part-0"
 import * as /* [auto-meaningful-name] */$$_33 from "../33"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import s from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import * as r from "../6"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
@@ -52,7 +52,7 @@ function O(e) {
               height: e$widget.size.height,
               opacity: l.isInvisibleWidget || undefined === e$widget.opacity ? undefined : e$widget.opacity / 100
             },
-            className: s($$_90.b),
+            className: Classnames($$_90.b),
             "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M
           }, React.createElement("div", {
             style: {
@@ -101,7 +101,7 @@ function T(e, t, n, o) {
   if (!a) {
     return null
   }
-  var s = $$_15.q(a)
+  var s = $$_$$_$$_$$_$$_src_shared_tools_index.q(a)
   var c = $$_33.Cb(s.parentId || "")
   if (!c) {
     console.error("getParentWidget error")

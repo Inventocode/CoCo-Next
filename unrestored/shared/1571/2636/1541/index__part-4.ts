@@ -10,7 +10,7 @@ import { C } from "./index__part-3"
 import * as /* [auto-meaningful-name] */$$_742 from "../742"
 import * as /* [auto-meaningful-name] */$$_559_560 from "../559/560"
 import * as /* [auto-meaningful-name] */$$_795 from "../795"
-import _ from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_331 from "../331"
 import { useLayoutEffect, useEffect, useRef, useState, createElement, Fragment, useImperativeHandle, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
@@ -73,7 +73,7 @@ var I = function (e) {
   var Q = "tags" === e$mode || e$showSearch && (e$open || Y)
   function Z(e, t, n, r, i) {
     return createElement("span", {
-      className: _("".concat(q, "-item"), $$_35.a({}, "".concat(q, "-item-disabled"), n)),
+      className: Classnames("".concat(q, "-item"), $$_35.a({}, "".concat(q, "-item-disabled"), n)),
       title: "string" === typeof e || "number" === typeof e ? e.toString() : undefined
     }, createElement("span", {
       className: "".concat(q, "-item-content")

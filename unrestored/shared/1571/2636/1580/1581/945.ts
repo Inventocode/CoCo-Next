@@ -5,7 +5,7 @@
  */
 
 var r = require("./533")
-var o = require("../1785/426/1076");
+var o = require("../1282/426/1076");
 (module.exports = function (e, t) {
   return o[e] || (o[e] = undefined !== t ? t : {})
 })("versions", []).push({

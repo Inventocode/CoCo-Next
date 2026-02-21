@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$$_106 from "../106"
 import * as /* [auto-meaningful-name] */$$_103 from "../103"
 import * as /* [auto-meaningful-name] */$_560 from "./560"
 import /* [auto-meaningful-name] */$_1041 from "./1041"
-import p from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { forwardRef, useRef, useState, useMemo, useEffect, useImperativeHandle, Children, createElement, createContext, createRef, cloneElement, Component, useContext, useCallback } from "react"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
@@ -259,7 +259,7 @@ var $e = forwardRef(function (e, t) {
   }), function (e, t) {
     var /* [auto-meaningful-name] */e$className1 = e.className
     var /* [auto-meaningful-name] */e$style1 = e.style
-    var s = p(e$prefixCls, e$className, j, e$className1)
+    var s = Classnames(e$prefixCls, e$className, j, e$className1)
     return createElement($$_1543_558_index.a, {
       target: e$point || e$getRootDomNode,
       key: "popup",
@@ -320,7 +320,7 @@ var tt = forwardRef(function (e, t) {
   }, h), function (e, t) {
     var /* [auto-meaningful-name] */e$className = e.className
     var /* [auto-meaningful-name] */e$style = e.style
-    var a = p(e$prefixCls, E$mobileUndefinedE$mobileE$mobile$popupClassName, e$className)
+    var a = Classnames(e$prefixCls, E$mobileUndefinedE$mobileE$mobile$popupClassName, e$className)
     return createElement("div", {
       ref: t,
       className: a,
@@ -925,7 +925,7 @@ var dt = function (e) {
             d.onFocus = this.createTwoChains("onFocus")
             d.onBlur = this.createTwoChains("onBlur")
           }
-          var f = p(u && u.props && u.props.className, this$props$className)
+          var f = Classnames(u && u.props && u.props.className, this$props$className)
           if (f) {
             d.className = f
           }
@@ -1106,7 +1106,7 @@ function _t(e) {
   }, [e$visible])
   return createElement(dt, {
     prefixCls: e$prefixCls,
-    popupClassName: p("".concat(e$prefixCls, "-popup"), $$_35.a({}, "".concat(e$prefixCls, "-rtl"), m$rtl), e$popupClassName),
+    popupClassName: Classnames("".concat(e$prefixCls, "-popup"), $$_35.a({}, "".concat(e$prefixCls, "-rtl"), m$rtl), e$popupClassName),
     stretch: "horizontal" === e$mode ? "minWidth" : null,
     getPopupContainer: m$getPopupContainer,
     builtinPlacements: N,
@@ -1321,7 +1321,7 @@ var Et = function (e) {
   }, A, {
     component: "li",
     style: e$style,
-    className: p(ee, "".concat(ee, "-").concat(k$mode), e$className, (t = {}, $$_35.a(t, "".concat(ee, "-open"), ce), $$_35.a(t, "".concat(ee, "-active"), ve), $$_35.a(t, "".concat(ee, "-selected"), le), $$_35.a(t, "".concat(ee, "-disabled"), te), t)),
+    className: Classnames(ee, "".concat(ee, "-").concat(k$mode), e$className, (t = {}, $$_35.a(t, "".concat(ee, "-open"), ce), $$_35.a(t, "".concat(ee, "-active"), ve), $$_35.a(t, "".concat(ee, "-selected"), le), $$_35.a(t, "".concat(ee, "-disabled"), te), t)),
     onMouseEnter: function (e) {
       _e(true)
       if (!(null === e$onMouseEnter || undefined === e$onMouseEnter)) {
@@ -1716,7 +1716,7 @@ var zt = function (e) {
     onClick: function (e) {
       return e.stopPropagation()
     },
-    className: p(s, e$className)
+    className: Classnames(s, e$className)
   }), createElement("div", {
     className: "".concat(s, "-title"),
     title: "string" === typeof e$title ? e$title : undefined
@@ -1735,7 +1735,7 @@ function Kt(e) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */useContextJ$prefixCls = useContext(j).prefixCls
   return B() ? null : createElement("li", {
-    className: p("".concat(useContextJ$prefixCls, "-item-divider"), e$className),
+    className: Classnames("".concat(useContextJ$prefixCls, "-item-divider"), e$className),
     style: e$style
   })
 }
@@ -1974,7 +1974,7 @@ var Xt = function (e) {
     prefixCls: "".concat(d, "-overflow"),
     component: "ul",
     itemComponent: Q,
-    className: p(d, "".concat(d, "-root"), "".concat(d, "-").concat(Se), e$className, (n = {}, $$_35.a(n, "".concat(d, "-inline-collapsed"), Ae), $$_35.a(n, "".concat(d, "-rtl"), we), n)),
+    className: Classnames(d, "".concat(d, "-root"), "".concat(d, "-").concat(Se), e$className, (n = {}, $$_35.a(n, "".concat(d, "-inline-collapsed"), Ae), $$_35.a(n, "".concat(d, "-rtl"), we), n)),
     dir: e$direction,
     style: e$style,
     role: "menu",

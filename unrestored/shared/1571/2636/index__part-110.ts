@@ -7,8 +7,8 @@
 "use strict"
 
 import { fy } from "./index__part-102"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -22,9 +22,9 @@ var ME = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var a = e$getValue(n)
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
-    className: N($_15181.formItemWrapper, "changeFontFamily"),
+    className: Classnames($_15181.formItemWrapper, "changeFontFamily"),
     label: $_710$a$formatMessage({
       id: "fontFamily"
     })

@@ -9,7 +9,7 @@
 import * as vb from "./54"
 import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
 import * as Dn from "./19"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { useRef, useEffect, createElement, useMemo } from "react"
 import * as /* [auto-meaningful-name] */$_1060 from "./1060"
 import /* [auto-meaningful-name] */$_10601 from "./1060"
@@ -72,7 +72,7 @@ var BT = function (e) {
   var y = "0 0 100 ".concat(e$strokeWidth)
   var E = 0
   return createElement("svg", Dn.a({
-    className: N("".concat(e$prefixCls, "-line"), e$className),
+    className: Classnames("".concat(e$prefixCls, "-line"), e$className),
     viewBox: y,
     preserveAspectRatio: "none",
     style: e$style
@@ -189,7 +189,7 @@ var HT = function (e) {
   var E = PT(v)
   var O = $_40_index.a(E, 1)[0]
   return createElement("svg", Dn.a({
-    className: N("".concat(e$prefixCls, "-circle"), e$className),
+    className: Classnames("".concat(e$prefixCls, "-circle"), e$className),
     viewBox: "0 0 100 100",
     style: e$style
   }, p), y && createElement("defs", null, createElement("linearGradient", {

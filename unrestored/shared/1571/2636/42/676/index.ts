@@ -14,7 +14,7 @@ import "./860"
 import { useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_64 from "../../64"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
 function u(e) {
   return e instanceof HTMLInputElement ? e.value : e.innerHTML || ""
 }
@@ -95,7 +95,7 @@ function f(t) {
   useEffect(function () {
     var /* [auto-meaningful-name] */O$current = O.current
     if (E && O$current) {
-      var t = $$_$$_15.p(function (e) {
+      var t = $$_$$_$$_$$_$$_$$_src_shared_tools_index.p(function (e) {
         t$callback(e)
       }, 60)
       var n = new ResizeObserverPolyfill.default(function () {

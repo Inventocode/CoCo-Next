@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_57_index from "../../../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_env from "../../../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$$_$$_48_87 from "../../48/87"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../../src/shared/utils/network/axios-with-credentials"
 import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_431_index from "../../431/index"
-var /* [auto-meaningful-name] */$$_$$_57_index$a$serverHost = $$_$$_57_index.a.serverHost
+var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_env$a$serverHost = $$_$$_$$_$$_$$_$$_src_shared_env.a.serverHost
 function cu(e) {
   return lu.apply(this, arguments)
 }
@@ -26,7 +26,7 @@ function lu() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_57_index$a$serverHost + "/public-api/baidu-openapi/text2audio", $$_$$_6.a({}, t), {
+            return $$_$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_$$_$$_src_shared_env$a$serverHost + "/public-api/baidu-openapi/text2audio", $$_$$_6.a({}, t), {
               headers: $$_$$_48_87.a()
             })
           case 3:

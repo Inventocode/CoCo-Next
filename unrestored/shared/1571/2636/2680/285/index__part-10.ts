@@ -12,7 +12,7 @@ import { Cn } from "./index__part-14"
 import { Sn } from "./index"
 import * as /* [auto-meaningful-name] */$$_$$_224_index from "../../224/index"
 import * as /* [auto-meaningful-name] */$$_$$_610 from "../../610"
-import /* [auto-meaningful-name] */$$_$$_8 from "../../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_801_index from "../../801/index"
 import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
 import * as /* [auto-meaningful-name] */$$_$$_21 from "../../21"
@@ -144,7 +144,7 @@ function Mt(e, t, n) {
   var r
   var o = undefined !== e.duration ? e.duration : St
   var a = Nt[e.type]
-  var s = $$_$$_8("".concat(t, "-custom-content"), (r = {}, $$_$$_35.a(r, "".concat(t, "-").concat(e.type), e.type), $$_$$_35.a(r, "".concat(t, "-rtl"), true === Rt), r))
+  var s = Classnames("".concat(t, "-custom-content"), (r = {}, $$_$$_35.a(r, "".concat(t, "-").concat(e.type), e.type), $$_$$_35.a(r, "".concat(t, "-rtl"), true === Rt), r))
   return {
     key: e.key,
     duration: o,

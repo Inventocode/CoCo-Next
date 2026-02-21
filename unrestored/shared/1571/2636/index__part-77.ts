@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$_118_index from "./118/index"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as D from "./6"
@@ -24,7 +24,7 @@ var pg = {
     var t = this
     ep.b.call(this, "INDEX", function () {
       var e = t.append_value_input("INDEX", 2).set_check("Number")
-      t.append_dummy_input("ITEM", 3).append_field($_17_index.Blink.Msg.ROW)
+      t.append_dummy_input("ITEM", 3).append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW)
       return e
     }, ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, e)
   },
@@ -40,7 +40,7 @@ var pg = {
     if ("nth" === this.rowChoice) {
       if (!e) {
         this.append_shadow_input("INDEX", ShadowType_Math_number_FieldName_NUM_Constraints_11_1_field_shadow, 2).set_check("Number")
-        this.append_dummy_input("ITEM", 3).append_field($_17_index.Blink.Msg.ROW)
+        this.append_dummy_input("ITEM", 3).append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW)
       }
     } else {
       if (e) {
@@ -70,10 +70,10 @@ function fg() {
     name: "ROW_CHOICE",
     custom: true,
     options: function () {
-      return [[$_17_index.Blink.Msg.LAST_ROW, "lastRow"], [$_17_index.Blink.Msg.NTH, "nth"]]
+      return [[$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.LAST_ROW, "lastRow"], [$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.NTH, "nth"]]
     },
     optOnchange: function (e) {
-      if (!$_17_index.Blink.events.is_undoing()) {
+      if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
         var /* [auto-meaningful-name] */r$addMutation
         var /* [auto-meaningful-name] */r$removeMutation
         var /* [auto-meaningful-name] */this$source_block = this.source_block
@@ -97,14 +97,14 @@ var hg = {
     var t = fg()
     t.set_value("nth")
     e.append_field(t, "ROW_CHOICE")
-    e.insert_field_at(0, "".concat($_17_index.Blink.Msg.ROW, ":"))
-    if ($_17_index.Blink.events.is_enabled()) {
+    e.insert_field_at(0, "".concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
       var n = ep.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: "nth"
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   removeMutation: function () {
@@ -113,14 +113,14 @@ var hg = {
     var t = fg()
     t.set_value("lastRow")
     e.append_field(t, "ROW_CHOICE")
-    e.insert_field_at(0, "".concat($_17_index.Blink.Msg.ROW, ":"))
-    if ($_17_index.Blink.events.is_enabled()) {
+    e.insert_field_at(0, "".concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
       var n = ep.c("mutation", {
         block: this,
         old_value: "lastRow",
         new_value: undefined
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   updateShape_: function (e) {
@@ -129,7 +129,7 @@ var hg = {
       var n = fg()
       n.set_value("lastRow")
       t.append_field(n, "ROW_CHOICE")
-      t.insert_field_at(0, "".concat($_17_index.Blink.Msg.ROW, ":"))
+      t.insert_field_at(0, "".concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROW, ":"))
     }
     var r = e || this.get_field_value("WIDGET_ID")
     if (r) {

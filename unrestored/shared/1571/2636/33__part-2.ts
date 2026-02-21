@@ -7,7 +7,7 @@
 "use strict"
 
 import * as C from "./53"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as H from "./60"
 import * as /* [auto-meaningful-name] */$_301_85 from "./301/85"
 var z = ["Size", "Coordinate", "VisibleSwitch", "WidgetOpacity"]
@@ -91,7 +91,7 @@ function J(e, t) {
       if (!(null === (n = r) || undefined === n)) {
         n.appendChild(a)
       }
-      $_17_index.Blink.mainWorkspace.register_flyout_button(e$lineLabel, function () {
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_flyout_button(e$lineLabel, function () {
         var e = document.createElementNS(C.c, "foreignObject")
         e.style.overflow = "visible"
         var t = document.getElementById(e$lineLabel)

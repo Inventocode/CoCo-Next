@@ -12,13 +12,13 @@ import * as GI from "./91"
 import * as /* [auto-meaningful-name] */$_796_index from "./796/index"
 import * as /* [auto-meaningful-name] */$_174 from "./174"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -157,7 +157,7 @@ var aj = memo(function () {
     }
     if (s) {
       for (var d in e$header) $_26_index.m($_26_index.c.TABLE_DATA_COLUMN, d, e$header[d].field)
-      $_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
         if ("table_data_insert_row_data" === e.type && e.get_field_value("WIDGET_ID") === e$grid.id && e.updateShape_) {
           e.updateShape_(e$grid.id)
         }
@@ -209,14 +209,14 @@ var aj = memo(function () {
     className: $_8141.footer
   }, React.createElement("span", null, $_710$a$formatMessage({
     id: "gridSupportTypeTips"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     disabled: l,
     onClick: Q
   }, $_710$a$formatMessage({
     id: "save"
   })))
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: e$visible,
     className: $_8141.tableDataDialog,
     title: React.createElement("div", null, y, React.createElement("span", {

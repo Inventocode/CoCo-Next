@@ -12,9 +12,9 @@ import { ScreenList } from "../screen-list"
 import { lo as ActivePreview } from "../../../../../unrestored/shared/1571/2636/index__part-27"
 import { zd as Stage } from "../../../../../unrestored/shared/1571/2636/index__part-33"
 import { WidgetCategoryItem, BuiltInWidgetList } from "./item"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index from "../../../../shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_iconfont_index from "../../../../shared/ui/components/iconfont/index"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196 from "../../../../../unrestored/shared/1571/2636/196"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279 from "../stage/style.css"
+import /* [auto-meaningful-name] */$$_stage_style$css from "../stage/style.css"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1512 from "../../../../../unrestored/shared/1571/2636/1512"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_75 from "../../../../../unrestored/shared/1571/2636/75"
@@ -24,8 +24,8 @@ import * as CustomWidgetType from "../../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../shared/ui/components"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components from "../../../../shared/ui/components"
+import classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
@@ -43,7 +43,7 @@ var WidgetMallButton = React.memo(function (e) {
   })
   var r = useDispatch()
   return (
-    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+    <$$_$$_$$_$$_shared_ui_components.d
       className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.widgetMallBtn}
       onClick={() => {
         const e = () => {
@@ -56,9 +56,9 @@ var WidgetMallButton = React.memo(function (e) {
         }
       }}
     >
-      <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_94_index.a type="icon-shop" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.shopIcon} />
+      <$$_$$_$$_$$_shared_ui_components_iconfont_index.a type="icon-shop" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.shopIcon} />
       {!e.singleColumn && <span>{formatMessage({ id: "Widget.widgetMall" })}</span>}
-    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
+    </$$_$$_$$_$$_shared_ui_components.d>
   )
 })
 
@@ -195,14 +195,14 @@ var WidgetTabContainer = React.memo(function (e) {
   var s = i[1]
   return (
     <div
-      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.singleColumn : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.doubleColumn, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.readonly)}
+      className={classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContainer, e.singleColumn ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.singleColumn : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.doubleColumn, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.readonly)}
     >
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabNav}>
         <div
           onClick={() => {
             s(Tab.BASIC)
           }}
-          className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
+          className={classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
           <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "Widget.basic" })}</div>
         </div>
@@ -210,16 +210,16 @@ var WidgetTabContainer = React.memo(function (e) {
           onClick={() => {
             s(Tab.EXTENSION)
           }}
-          className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
+          className={classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tab, a === Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.activeTab)}
         >
           <div>{$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "Widget.extension" })}</div>
         </div>
       </div>
       <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContent}>
-        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
+        <div className={classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.BASIC && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
           <BuiltInWidgetList isOT={r} />
         </div>
-        <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
+        <div className={classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.tabContentBox, a !== Tab.EXTENSION && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_196.hide)}>
           <WidgetScrollExtension singleColumn={e.singleColumn} />
         </div>
       </div>
@@ -249,9 +249,9 @@ var StageToast = React.memo(function () {
     }
   }, [a, e$visible, r])
   return e$visible ? (
-    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toastWrapper}>
-      <span className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.toast}>
-        {i && <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-alert-success" className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.icon} />}
+    <div className={$$_stage_style$css.toastWrapper}>
+      <span className={$$_stage_style$css.toast}>
+        {i && <$$_$$_$$_$$_shared_ui_components.j type="icon-alert-success" className={$$_stage_style$css.icon} />}
         {r}
       </span>
     </div>
@@ -358,24 +358,24 @@ var PreviewArea = React.memo(() => {
   return (
     <div
       id="previewAreaWrapper"
-      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.wrapper}
+      className={$$_stage_style$css.wrapper}
       ref={r}
       style={{
         marginLeft: i || o ? 0 : -l
       }}
     >
-      <section className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.body}>
+      <section className={$$_stage_style$css.body}>
         <>
           <aside
             style={{
               width: `${Cv}px`
             }}
-            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.side}
+            className={$$_stage_style$css.side}
           >
             <WidgetTabContainer singleColumn={Tv} />
           </aside>
           <ScreenList />
-          <main className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.main} ref={n}>
+          <main className={$$_stage_style$css.main} ref={n}>
             <Stage />
             <StageToast />
             <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1512.a />
@@ -389,14 +389,14 @@ var PreviewArea = React.memo(() => {
               trigger={["hover", "click"]}
             >
               <div
-                className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.foldBtn, i ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.hide : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.show, (m || a) && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_279.visible)}
+                className={classnames($$_stage_style$css.foldBtn, i ? $$_stage_style$css.hide : $$_stage_style$css.show, (m || a) && $$_stage_style$css.visible)}
                 onClick={() => {
                   t(Actions.Yi(!i))
                 }}
                 onMouseEnter={() => g(true)}
                 onMouseLeave={() => g(false)}
               >
-                <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j type="icon-double-arrow" />
+                <$$_$$_$$_$$_shared_ui_components.j type="icon-double-arrow" />
               </div>
             </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a>
           )}

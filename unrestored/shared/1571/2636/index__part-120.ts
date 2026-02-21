@@ -11,8 +11,8 @@ import qv from "./88"
 import * as /* [auto-meaningful-name] */$_144 from "./144"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -32,8 +32,8 @@ var WO = memo(function (e) {
   var l = $_710$a$formatMessage({
     id: e$formConfig.label || "styleAction"
   })
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, $_397.form),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, $_397.form),
     label: l,
     align: "vertical"
   }, React.createElement("div", {

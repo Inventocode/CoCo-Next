@@ -13,8 +13,8 @@ import * as /* [auto-meaningful-name] */$$_54 from "../54"
 import { useContext, useEffect, forwardRef, createElement } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as u from "../8"
-import l from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$_792 from "./792"
 import * as /* [auto-meaningful-name] */$$_107 from "../107"
 import * as /* [auto-meaningful-name] */$_924_index from "./924/index"
@@ -219,7 +219,7 @@ var F = forwardRef(function (e, t) {
   var g = $$_54.a(e, R)
   var /* [auto-meaningful-name] */useContext$_792$a$prefixCls = useContext($_792.a).prefixCls
   var m = undefined === useContext$_792$a$prefixCls ? "anticon" : useContext$_792$a$prefixCls
-  var y = l(m, (n = {}, $$_35.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), $$_35.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
+  var y = Classnames1(m, (n = {}, $$_35.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), $$_35.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
   var b = e$tabIndex
   if (undefined === b && e$onClick) {
     b = -1

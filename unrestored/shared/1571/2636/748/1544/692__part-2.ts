@@ -8,7 +8,7 @@
 
 import { b, x } from "./692__part-0"
 import { T, D } from "./692__part-1"
-import /* [auto-meaningful-name] */$$_$$_8 from "../../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_1048_698 from "../../1048/698"
 import * as /* [auto-meaningful-name] */$_1030 from "./1030"
 import { Component, forwardRef, useRef, useCallback, createElement } from "react"
@@ -100,7 +100,7 @@ var M = function (e) {
           }
         }
         R = e$children($$_$$_21.a($$_$$_21.a({}, P), {}, {
-          className: $$_$$_8(x(e$motionName, C), (M = {}, $$_$$_35.a(M, x(e$motionName, "".concat(C, "-").concat(L)), L), $$_$$_35.a(M, e$motionName, "string" === typeof e$motionName), M)),
+          className: Classnames(x(e$motionName, C), (M = {}, $$_$$_35.a(M, x(e$motionName, "".concat(C, "-").concat(L)), L), $$_$$_35.a(M, e$motionName, "string" === typeof e$motionName), M)),
           style: k
         }), F)
       } else {

@@ -10,8 +10,8 @@ import { gy } from "./index__part-103"
 import /* [auto-meaningful-name] */$_1037 from "./1037"
 import qv from "./88"
 import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -28,8 +28,8 @@ var BE = memo(function (e) {
   var s = (0, $_710.a().formatMessage)({
     id: e$formConfig.label || "horizontalAlignment"
   })
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, $_10381.content, "changeHorizontalAlign"),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, $_10381.content, "changeHorizontalAlign"),
     label: s,
     align: "vertical"
   }, React.createElement(gy, {
@@ -43,23 +43,23 @@ var FE = memo(function (e) {
   var n = undefined === e$keyName ? "justifyContent" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$textAlign = e.textAlign
-  return React.createElement($_13_index.s, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
     value: e$textAlign,
     className: $_1037.alignRadio,
     onChange: function (e) {
       e$onChange(n, e)
     }
-  }, React.createElement($_13_index.t, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Qu.c.FLEX_START
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-vertical-top"
-  })), React.createElement($_13_index.t, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Qu.c.CENTER
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-vertical-center"
-  })), React.createElement($_13_index.t, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Qu.c.FLEX_END
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-vertical-bottom"
   })))
 })
@@ -70,8 +70,8 @@ var GE = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, $_10381.content, "changeVerticalAlign"),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, $_10381.content, "changeVerticalAlign"),
     label: $_710$a$formatMessage({
       id: "verticalAlignment"
     }),

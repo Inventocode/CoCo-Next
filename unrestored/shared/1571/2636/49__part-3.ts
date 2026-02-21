@@ -14,12 +14,12 @@ import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_24_377_index from "./24/377/index"
-import * as xe from "./97"
+import * as /* [auto-meaningful-name] */$_97_index from "./97/index"
 function De(e) {
   return 2 === e.length && "screens" === e[0]
 }
 function Me(e, t) {
-  e = xe.g(e)
+  e = $_97_index.g(e)
   var n = OtJson1.insertOp(["screens", e.id], e)
   var r = OtJson1.insertOp(["screenIds", t], e.id)
   var o = OtJson1.type.compose(n, r)
@@ -65,7 +65,7 @@ function Ge(e, t) {
         var n = t[1]
         ye.Ub(n.id, n)
       })
-      var r = xe.d(e$op$i)
+      var r = $_97_index.d(e$op$i)
       Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.if(r))
       var o = null === (t = $_24_index.a.getDoc()) || undefined === t ? undefined : t.screenIds
       if (o) {

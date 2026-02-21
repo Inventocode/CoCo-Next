@@ -13,8 +13,8 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
-import * as l from "./8"
-import u from "./8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as p from "./90"
 import * as /* [auto-meaningful-name] */$_239 from "./239"
@@ -48,7 +48,7 @@ _a = function (e) {
     id: t,
     "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
     "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: u(p.b, $_2391.textWidget, o.a({}, $_2391.hide, !e$visible)),
+    className: Classnames1(p.b, $_2391.textWidget, o.a({}, $_2391.hide, !e$visible)),
     onClick: function () {
       if (e$onClick) {
         e$onClick()

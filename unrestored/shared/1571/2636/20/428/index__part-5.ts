@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
 import * as a from "./12"
 import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
 import * as /* [auto-meaningful-name] */Color from "color"
@@ -114,8 +114,8 @@ function Dt(e, t) {
   })
 }
 function Mt(e, t) {
-  if ($$_$$_15.pb(t)) {
-    t = $$_$$_15.l(Color1(t))
+  if ($$_$$_$$_$$_$$_$$_src_shared_tools_index.pb(t)) {
+    t = $$_$$_$$_$$_$$_$$_src_shared_tools_index.l(Color1(t))
     a.h(e, {
       color: t
     })
@@ -153,8 +153,8 @@ function Lt(e, t) {
   }
 }
 function Pt(e, t) {
-  if ($$_$$_15.pb(t)) {
-    t = $$_$$_15.l(Color1(t))
+  if ($$_$$_$$_$$_$$_$$_src_shared_tools_index.pb(t)) {
+    t = $$_$$_$$_$$_$$_$$_src_shared_tools_index.l(Color1(t))
     a.h(e, {
       backgroundColor: t
     })

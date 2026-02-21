@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$_659 from "./659"
 import /* [auto-meaningful-name] */$_6591 from "./659"
 import * as /* [auto-meaningful-name] */$_660 from "./660"
@@ -49,6 +49,6 @@ var W = {
   BLOCK_CLOUD_TABLE_ICON: $_6711
 }
 var U = function () {
-  for (var e in W) $$_17_index.Blink.Msg[e] = W[e]
+  for (var e in W) $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg[e] = W[e]
 }
 export { U }

@@ -20,11 +20,11 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import /* [auto-meaningful-name] */Color from "color"
 import * as D from "./6"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
 import { useRef, useState, useEffect, useMemo } from "react"
@@ -93,7 +93,7 @@ var Kp = {
       F(e$attributes$placeholder)
     }, [e$attributes$placeholder])
     var W = Et.hb(e$attributes$backgroundImage)
-    var U = te.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : W ? (null === W || undefined === W ? undefined : W.source) || (null === W || undefined === W ? undefined : W.cdnUrl) : Pp.a
+    var U = $$_$$_$$_$$_src_shared_tools_index.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : W ? (null === W || undefined === W ? undefined : W.source) || (null === W || undefined === W ? undefined : W.cdnUrl) : Pp.a
     var H = undefined
     var V = useMemo(function () {
       return function (e, t, n) {
@@ -157,7 +157,7 @@ var Kp = {
     }, [t, e$attributes$placeholderColor, z])
     return React.createElement("div", {
       id: t,
-      className: N($_2901.inputWidget, e$attributes$backgroundMode === Fp.a.TEMPLATE && e$attributes$templateMode !== Fp.c.OUTLINED_FLAT && $_2901.inputWidgetUnderpainting, wn.b, k.a({}, $_2901.hide, !e$visible)),
+      className: Classnames($_2901.inputWidget, e$attributes$backgroundMode === Fp.a.TEMPLATE && e$attributes$templateMode !== Fp.c.OUTLINED_FLAT && $_2901.inputWidgetUnderpainting, wn.b, k.a({}, $_2901.hide, !e$visible)),
       "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
       "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
       "data-min-width": Pp.m,
@@ -177,7 +177,7 @@ var Kp = {
         filter: e$attributes$disabled && e$attributes$backgroundMode === Fp.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined
       }, H), z)
     }, React.createElement("div", {
-      className: N($_2901.inputWidgetInputWrapper, {}),
+      className: Classnames($_2901.inputWidgetInputWrapper, {}),
       onDoubleClick: function () {
         var /* [auto-meaningful-name] */G$current = G.current
         if (G$current) {
@@ -228,7 +228,7 @@ var Kp = {
         color: e$attributes$disabled ? Pp.o : e$attributes$valueColor
       }
     }), !x && React.createElement("div", {
-      className: N($_2901.mask)
+      className: Classnames($_2901.mask)
     })))
   },
   editConfig: Bp,

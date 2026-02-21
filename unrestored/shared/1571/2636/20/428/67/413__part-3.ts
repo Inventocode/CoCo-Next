@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
-import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
@@ -116,7 +116,7 @@ var P = function (e) {
   }, K)
   return React.createElement("button", {
     id: r,
-    className: $$_$$_$$_8($$_$$_$$_90.b, $$_$$_$$_2181.buttonWidget, !e$attributes$disabled && $$_$$_$$_2181.transform, $$_$$_$$_11.a({}, $$_$$_$$_2181.hide, !e$visible)),
+    className: Classnames($$_$$_$$_90.b, $$_$$_$$_2181.buttonWidget, !e$attributes$disabled && $$_$$_$$_2181.transform, $$_$$_$$_11.a({}, $$_$$_$$_2181.hide, !e$visible)),
     "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.z,
     "data-min-width": $$_$$_$$_82.p,
@@ -156,7 +156,7 @@ var P = function (e) {
   }) : e$iconFileOrUrl && React.createElement($$_$$_$$_322.a, {
     icon: e$iconFileOrUrl
   })), P && React.createElement("div", {
-    className: $$_$$_$$_8($$_$$_$$_2181.textWrapper, B && e$attributes$text && (F === $$_$$_$$_60.a.RIGHT ? $$_$$_$$_2181.iconToTextRightSpacing : $$_$$_$$_2181.iconToTextLeftSpacing))
+    className: Classnames($$_$$_$$_2181.textWrapper, B && e$attributes$text && (F === $$_$$_$$_60.a.RIGHT ? $$_$$_$$_2181.iconToTextRightSpacing : $$_$$_$$_2181.iconToTextLeftSpacing))
   }, React.createElement("div", {
     className: $$_$$_$$_2181.text,
     style: {

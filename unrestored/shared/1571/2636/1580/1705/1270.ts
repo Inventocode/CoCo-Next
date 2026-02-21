@@ -4,7 +4,7 @@
  * 模块 ID：1270
  */
 
-var r = require("../1785/334")
+var r = require("../1282/334")
 module.exports = function (e) {
   return undefined !== e && (r(e, "value") || r(e, "writable"))
 }

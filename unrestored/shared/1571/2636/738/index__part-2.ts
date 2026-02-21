@@ -11,8 +11,8 @@ import * as s from "../6"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_iconfont_index from "../../../../../src/shared/ui/components/iconfont/index"
 var W = {
   rotation: [
     {
@@ -92,7 +92,7 @@ var U = function (e) {
   return React.createElement("div", {
     className: "emulator-sensors",
     style: e$style
-  }, React.createElement($$_13_index.h, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.h, {
     className: "emulator-sensor-form"
   }, l.map(function (e) {
     var /* [auto-meaningful-name] */e$title = e.title
@@ -105,14 +105,14 @@ var U = function (e) {
       key: e$prop
     }, React.createElement("div", {
       className: "emulator-sensor-item-title"
-    }, React.createElement($$_94_index.a, {
+    }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_iconfont_index.a, {
       className: "emulator-icon",
       type: e$icon
     }), React.createElement("span", {
       className: "emulator-sensor-direction"
     }, e$title)), React.createElement("div", {
       className: "emulator-form-slider-wrapper"
-    }, React.createElement($$_13_index.x, {
+    }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.x, {
       className: "emulator-formControl",
       min: e$min,
       max: e$max,
@@ -165,7 +165,7 @@ var H = function (e) {
     }
   }, React.createElement("div", {
     className: "emulator-shakeBtn"
-  }, React.createElement($$_94_index.a, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_iconfont_index.a, {
     type: "icon-phone-shake-selected"
   }), React.createElement("p", {
     className: "emulator-shakeBtnName"

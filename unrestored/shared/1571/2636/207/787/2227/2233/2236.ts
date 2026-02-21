@@ -8,8 +8,8 @@
 
 var r = require("../../180")
 var i = require("../../204")
-var o = require("../../../../20/791/2385/283/index")
-var a = require("../../../../20/791/2385/284/index")
+var o = require("../../../../1058/1393/1143/283/index")
+var a = require("../../../../1058/1393/1143/284/index")
 var /* [auto-meaningful-name] */require$$_1358_1130_index$Syntax = require("../1358/1130/index").Syntax
 var c = function (e) {
   o(n, e)

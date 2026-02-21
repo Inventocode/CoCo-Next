@@ -7,8 +7,8 @@
 "use strict"
 
 import { createElement } from "react"
-import * as o from "./8"
-import i from "./8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 var _a
 _a = function (e) {
   var t
@@ -35,7 +35,7 @@ _a = function (e) {
     onClick: e$onClick,
     "aria-hidden": true
   }, undefined !== t ? t : createElement("span", {
-    className: i(e$className.split(/\s+/).map(function (e) {
+    className: Classnames1(e$className.split(/\s+/).map(function (e) {
       return "".concat(e, "-icon")
     }))
   }, e$children))

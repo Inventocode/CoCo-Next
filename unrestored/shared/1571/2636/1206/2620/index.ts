@@ -31,7 +31,7 @@ exports.getNekoIframeUrl = function (e) {
 }
 var r = require("../772")
 var o = require("../773/index")
-var i = require("../2619/885")
+var i = require("../2618/885")
 var a = require("./2621")
 var s = new r.ApiSpec("neko", {
   loadWork: new r.MethodType(),

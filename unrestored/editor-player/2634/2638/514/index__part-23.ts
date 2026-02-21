@@ -37,7 +37,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index fr
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "../../../../shared/1571/2636/27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_683 from "../../../../shared/1571/2636/683"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../src/shared/widget/custom/storage"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
@@ -404,7 +404,7 @@ function Ke() {
               break
             }
             t.next = 30
-            return $$_$$_$$_$$_shared_1571_2636_15.ab("https://static.bcmcdn.com/appcraft/modules/quilljs/1.3.7/quill.snow.css")
+            return $$_$$_$$_$$_$$_src_shared_tools_index.ab("https://static.bcmcdn.com/appcraft/modules/quilljs/1.3.7/quill.snow.css")
           case 30:
             window.eval = function () {}
             g = $$_$$_$$_$$_shared_1571_2636_20_index.generateAsyncScheduler()

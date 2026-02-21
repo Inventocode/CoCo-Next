@@ -8,10 +8,10 @@
 
 var Tt
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -57,7 +57,7 @@ var Gt = memo(function () {
   })
   useEffect(function () {
     if (g$packageUrl && g$packageInfo) {
-      var e = te.B()
+      var e = $$_$$_$$_$$_src_shared_tools_index.B()
       var t = "".concat(e, "/download/?url=").concat(encodeURIComponent(g$packageUrl || ""), "&icon=").concat(encodeURIComponent(g$packageInfo.apkIcon || ""), "&name=").concat(g$packageInfo.apkName || "", "&projectId=").concat(A, "&version=").concat(g$packageInfo.version, "&expireTime=").concat(g$packageInfo.expireTime, "&startTimeTamp=").concat(g$packageInfo.startTimeTamp)
       l(t)
       m(false)
@@ -131,7 +131,7 @@ var Gt = memo(function () {
       return n.apply(this, arguments)
     }
   }()
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: g$packageQrCodeVisible,
     className: $_3561.packageQrCodeDialog,
     withPortal: true,
@@ -155,8 +155,8 @@ var Gt = memo(function () {
       }))
     }
   }, React.createElement("div", {
-    className: N($_3561.packageInfoItem, $_3561.packageAppId)
-  }, "APP ID：com.codemao.coco.apk_", A, React.createElement($_13_index.j, {
+    className: Classnames($_3561.packageInfoItem, $_3561.packageAppId)
+  }, "APP ID：com.codemao.coco.apk_", A, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-copy",
     className: $_3561.copyIcon
   }))), React.createElement("div", {
@@ -207,7 +207,7 @@ var Gt = memo(function () {
       }
       var /* [auto-meaningful-name] */Download
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-package-download",
     className: $_3561.qrBtn
   }), React.createElement("p", null, $_710$a$formatMessage(o ? {

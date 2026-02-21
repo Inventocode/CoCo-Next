@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -31,7 +31,7 @@ var Ge = memo(function (e) {
     stroke: n || "white"
   }))
 })
-var /* [auto-meaningful-name] */$_57_index$a$backendHost = $_57_index.a.backendHost
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$backendHost = $$_$$_$$_$$_src_shared_env.a.backendHost
 function Ue() {
   return He.apply(this, arguments)
 }
@@ -43,7 +43,7 @@ function He() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index$a$backendHost + "/tiger/v3/web/accounts/profile")
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$backendHost + "/tiger/v3/web/accounts/profile")
           case 2:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data)
@@ -65,7 +65,7 @@ function ze() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($_57_index$a$backendHost + "/tiger/v3/web/accounts/logout")
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_src_shared_env$a$backendHost + "/tiger/v3/web/accounts/logout")
           case 2:
           case "end":
             return e.stop()

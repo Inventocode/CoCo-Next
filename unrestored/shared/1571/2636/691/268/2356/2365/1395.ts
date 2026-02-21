@@ -9,7 +9,7 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("../../649/448")
+var r = require("../../856/448")
 exports.isStackOverflowExeption = function (e) {
   return e instanceof RangeError || e.message === r.STACK_OVERFLOW
 }

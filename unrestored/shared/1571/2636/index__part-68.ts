@@ -15,8 +15,8 @@ import * as ep from "./4"
 import * as Jd from "./33"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -464,9 +464,9 @@ var Vh = function (e) {
         }
       })
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-attribute",
-    className: N($_8101.iconButton, $_8101.editIcon)
+    className: Classnames($_8101.iconButton, $_8101.editIcon)
   }))), React.createElement($_748_index.a, {
     placement: "right",
     title: $_710$a$formatMessage({
@@ -477,9 +477,9 @@ var Vh = function (e) {
     onClick: function () {
       D($$_$$_$$_$$_src_editor_redux_common_actions.Dh(k))
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-edit-round",
-    className: N($_8101.iconButton, $_8101.editStyleIcon)
+    className: Classnames($_8101.iconButton, $_8101.editStyleIcon)
   })))))) : null
 }
 var zh = {

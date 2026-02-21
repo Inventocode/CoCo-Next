@@ -7,8 +7,8 @@
 "use strict"
 
 import { nI } from "./index__part-170"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import /* [auto-meaningful-name] */React from "react"
@@ -19,11 +19,11 @@ import /* [auto-meaningful-name] */$_4741 from "./474"
 var GS = function (e, t) {
   var n = React.createElement("div", {
     className: $_4741.screenIcon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     className: "coco-iconfont-screen-bg",
     type: e >= 9 ? "icon-screen-variable-plus" : "icon-screen-variable"
   }), React.createElement("span", {
-    className: N($_4741.iconNumber, e >= 9 ? $_4741.iconFat : $_4741.iconThin, e > 0 && e < 9 ? $_4741.iconMiddle : "")
+    className: Classnames($_4741.iconNumber, e >= 9 ? $_4741.iconFat : $_4741.iconThin, e > 0 && e < 9 ? $_4741.iconMiddle : "")
   }, e + 1))
   var r = React.createElement("div", {
     className: $_4741.tips
@@ -39,23 +39,23 @@ var WS = React.memo(function () {
   var t = useRef(null)
   var /* [auto-meaningful-name] */React$useContextNI$setBulkSelectVisible = React.useContext(nI).setBulkSelectVisible
   return React.createElement("div", {
-    className: N($_4741.wrapper)
+    className: Classnames($_4741.wrapper)
   }, React.createElement("div", {
-    className: N($_4741.header)
+    className: Classnames($_4741.header)
   }, React.createElement("div", {
-    className: N($_4741.addButton),
+    className: Classnames($_4741.addButton),
     ref: t
   }, React.createElement("div", {
-    className: N($_4741.AddIcon),
+    className: Classnames($_4741.AddIcon),
     onClick: function () {
       React$useContextNI$setBulkSelectVisible(true)
     }
   }, React.createElement("div", {
     className: $_4741.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add"
   })), React.createElement("div", {
-    className: N($_4741.addText)
+    className: Classnames($_4741.addText)
   }, $_710$a$formatMessage({
     id: "DataWatch.addData"
   }))))))

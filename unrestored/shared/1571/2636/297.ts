@@ -21,10 +21,10 @@ import * as a from "./7"
 import * as s from "./60"
 import * as /* [auto-meaningful-name] */$_197_index from "./197/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$_276 from "./276"
-var /* [auto-meaningful-name] */$_57_index$a$serverHost = $_57_index.a.serverHost
-var /* [auto-meaningful-name] */$_57_index$a$oTServerHost = $_57_index.a.oTServerHost
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$serverHost = $$_$$_$$_$$_src_shared_env.a.serverHost
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$oTServerHost = $$_$$_$$_$$_src_shared_env.a.oTServerHost
 function h(e) {
   return m.apply(this, arguments)
 }
@@ -79,7 +79,7 @@ function _() {
             t$sourceTag = t.sourceTag
             e.prev = 1
             e.next = 4
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($_57_index$a$serverHost + "/coconut/web/work", {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_src_shared_env$a$serverHost + "/coconut/web/work", {
               name: t$name,
               preview_url: t$coverUrl,
               bcm_url: t$bcmUrl,
@@ -135,7 +135,7 @@ function b() {
             a = t.id
             e.prev = 1
             e.next = 4
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($_57_index$a$serverHost + "/coconut/web/work", {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($$_$$_$$_$$_src_shared_env$a$serverHost + "/coconut/web/work", {
               id: a,
               name: t$name,
               preview_url: t$coverUrl,
@@ -185,7 +185,7 @@ function E() {
         switch (e.prev = e.next) {
           case 0:
             o = "?offset=".concat(t, "&limit=").concat(n) + (undefined !== r ? "&published=".concat(r) : "")
-            a = "".concat($_57_index$a$serverHost, "/coconut/web/work/list").concat(o)
+            a = "".concat($$_$$_$$_$$_src_shared_env$a$serverHost, "/coconut/web/work/list").concat(o)
             e.next = 4
             return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(a)
           case 4:
@@ -248,7 +248,7 @@ function w() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get("".concat($_57_index$a$oTServerHost, "/coll/coco/coll_works"), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get("".concat($$_$$_$$_$$_src_shared_env$a$oTServerHost, "/coll/coco/coll_works"), {
               params: {
                 current_page: t,
                 page_size: n
@@ -312,7 +312,7 @@ function T() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = "".concat($_57_index$a$serverHost, "/coconut/web/work/").concat(t, "/content")
+            n = "".concat($$_$$_$$_$$_src_shared_env$a$serverHost, "/coconut/web/work/").concat(t, "/content")
             e.next = 3
             return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(n)
           case 3:
@@ -366,7 +366,7 @@ function A() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = "".concat($_57_index$a$serverHost, "/coconut/web/work/archive/").concat(t)
+            n = "".concat($$_$$_$$_$$_src_shared_env$a$serverHost, "/coconut/web/work/archive/").concat(t)
             e.next = 3
             return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(n)
           case 3:
@@ -403,7 +403,7 @@ function j() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = "".concat($_57_index$a$serverHost, "/coconut/web/work/").concat(t)
+            n = "".concat($$_$$_$$_$$_src_shared_env$a$serverHost, "/coconut/web/work/").concat(t)
             e.next = 3
             return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.delete(n)
           case 3:

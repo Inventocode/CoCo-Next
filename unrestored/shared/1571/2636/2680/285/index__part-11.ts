@@ -9,7 +9,7 @@
 import { st, dt } from "./index__part-7"
 import { Cn } from "./index__part-14"
 import { Sn } from "./index"
-import /* [auto-meaningful-name] */$$_$$_8 from "../../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_801_index from "../../801/index"
 import * as /* [auto-meaningful-name] */$$_$$_40_index from "../../40/index"
 import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"
@@ -89,7 +89,7 @@ function an(e, t) {
       })
     })
   } else {
-    var g = $$_$$_8("".concat(h, "-").concat(r), $$_$$_35.a({}, "".concat(h, "-rtl"), true === rn))
+    var g = Classnames("".concat(h, "-").concat(r), $$_$$_35.a({}, "".concat(h, "-rtl"), true === rn))
     $t[_] = new Promise(function (e) {
       dt.newInstance({
         prefixCls: h,
@@ -169,7 +169,7 @@ function cn(e, t, n) {
     onClick: e$onClick,
     key: e$key,
     style: e$style || {},
-    className: $$_$$_8(e$className, $$_$$_35.a({}, "".concat(t, "-").concat(e$type), !!e$type))
+    className: Classnames(e$className, $$_$$_35.a({}, "".concat(t, "-").concat(e$type), !!e$type))
   }
 }
 var un = {

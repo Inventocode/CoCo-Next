@@ -18,7 +18,7 @@ import * as /* [auto-meaningful-name] */$$_$$_48_index from "../../48/index"
 import * as /* [auto-meaningful-name] */$$_$$_68 from "../../68"
 import * as /* [auto-meaningful-name] */$$_$$_91 from "../../91"
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import * as /* [auto-meaningful-name] */$$_$$_47_index from "../../47/index"
@@ -384,7 +384,7 @@ function Xd(e) {
     for (var t in e) {
       var n = e[t]
       if (null === n || undefined === n ? undefined : n.cdnUrl) {
-        $$_$$_15.bb(t, null === n || undefined === n ? undefined : n.cdnUrl)
+        $$_$$_$$_$$_$$_$$_src_shared_tools_index.bb(t, null === n || undefined === n ? undefined : n.cdnUrl)
       }
     }
   }

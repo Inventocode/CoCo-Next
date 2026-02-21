@@ -5,8 +5,8 @@
  */
 
 var r = require("../1782/425")
-var o = require("./1624/index")
-var i = require("../1782/246/index")("toPrimitive")
+var o = require("./1624")
+var i = require("../1282/246/index")("toPrimitive")
 var /* [auto-meaningful-name] */Date$prototype = Date.prototype
 if (!(i in Date$prototype)) {
   r(Date$prototype, i, o)

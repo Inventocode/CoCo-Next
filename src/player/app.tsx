@@ -6,11 +6,11 @@
 
 import React from "react"
 import ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_unrestored_shared_1571_2636_15 from "../shared/tools"
+import * as /* [auto-meaningful-name] */$$_shared_tools from "../shared/tools"
 import { SafeLoad } from "./safe-load"
 
 var App = React.memo(function () {
-  const channel = ($$_$$_unrestored_shared_1571_2636_15.N(window.location.href).channel || "").toUpperCase()
+  const channel = ($$_shared_tools.N(window.location.href).channel || "").toUpperCase()
   window.history.pushState = function () {}
   window.history.replaceState = function () {}
   return <SafeLoad channel={channel} />

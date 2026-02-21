@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */$_1046 from "./1046"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_435 from "../435"
 import * as /* [auto-meaningful-name] */$_615 from "./615"
-import c from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { createElement } from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
@@ -57,7 +57,7 @@ var I = function (e) {
   var j = undefined === e.mask || e.mask
   var U = undefined !== e.maskClosable && e.maskClosable
   var H = null !== e.autoFocusButton && (e.autoFocusButton || "ok")
-  var V = c(P, "".concat(P, "-").concat(e.type), $$_35.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
+  var V = Classnames(P, "".concat(P, "-").concat(e.type), $$_35.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
   var G = N && createElement(T, {
     actionFn: e$onCancel,
     close: e$close,
@@ -72,7 +72,7 @@ var I = function (e) {
   }, createElement(b, {
     prefixCls: e$prefixCls,
     className: V,
-    wrapClassName: c($$_35.a({}, "".concat(P, "-centered"), !!e.centered)),
+    wrapClassName: Classnames($$_35.a({}, "".concat(P, "-centered"), !!e.centered)),
     onCancel: function () {
       return e$close({
         triggerCancel: true

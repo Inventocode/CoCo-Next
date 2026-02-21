@@ -11,13 +11,13 @@ import { ye } from "./index__part-19"
 import { Ee } from "./index__part-20"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_710 from "../../../../shared/1571/2636/710"
 import be from "./71"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_2681_index from "../../../../shared/1571/2636/2681/index"
 var de
 var le
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -57,7 +57,7 @@ var je = memo(function () {
     }
   }, [n.sendSmsPageVisible, n.sendSmsNumber, n.sendSmsContent])
   return React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.sendSmsBox, !n.sendSmsPageVisible && be.sendSmsBoxHide)
+    className: Classnames(be.sendSmsBox, !n.sendSmsPageVisible && be.sendSmsBoxHide)
   }, React.createElement("div", {
     className: be.backBox
   }, React.createElement("div", {
@@ -66,7 +66,7 @@ var je = memo(function () {
         sendSmsPageVisible: false
       }))
     }
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-nav-back"
   })), React.createElement("span", {
     className: be.receiveUser
@@ -74,7 +74,7 @@ var je = memo(function () {
     id: "emulator.smsReceiver"
   }))), React.createElement("div", {
     className: be.numberBox
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.k, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.k, {
     className: be.inputNumber,
     defaultValue: o,
     placeholder: $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
@@ -96,7 +96,7 @@ var je = memo(function () {
     ref: T
   })), React.createElement("div", {
     className: be.contentBox
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.A, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.A, {
     ref: E,
     rows: O,
     maxLength: 200,
@@ -138,8 +138,8 @@ var je = memo(function () {
         }, 10)
       }
     },
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.sendSmsBtn, (!o || !l) && be.disable)
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+    className: Classnames(be.sendSmsBtn, (!o || !l) && be.disable)
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-send-sms"
   }))))
 })
@@ -165,14 +165,14 @@ var Se = memo(function () {
     }
   }, [n.receiveSmsPageVisible, n.receiveSmsNumber, n.receiveSmsContent, t])
   return React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.receiveSms, !n.receiveSmsPageVisible && be.receiveSmsHide)
+    className: Classnames(be.receiveSms, !n.receiveSmsPageVisible && be.receiveSmsHide)
   }, React.createElement("div", {
     className: be.flexSC
   }, React.createElement("div", {
     className: be.smsIconBox
   }, React.createElement("div", {
     className: be.smsIcon
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-widget-sms-service"
   })), React.createElement("span", null, $$_$$_$$_$$_shared_1571_2636_710$a$formatMessage({
     id: "emulator.sms"

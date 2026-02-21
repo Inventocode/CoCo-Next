@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../../1058/1393/573")
+var r = require("../../../1058/1393/573/index")
 var i = require("./2230")
 var o = require("./2233/index")
 var a = require("./1131")

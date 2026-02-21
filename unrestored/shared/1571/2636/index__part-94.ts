@@ -8,12 +8,12 @@
 
 import * as /* [auto-meaningful-name] */$_361 from "./361"
 import qv from "./88"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useRef, useMemo, useEffect, useCallback } from "react"
@@ -85,7 +85,7 @@ var hb = memo(function (e) {
       onChangeSelectorContent: I
     }
   }, React.createElement("div", {
-    className: N("coco-select", e$className),
+    className: Classnames("coco-select", e$className),
     style: D.a(D.a({}, e$style), b),
     ref: g
   }, React.createElement($_1213.a, {
@@ -95,9 +95,9 @@ var hb = memo(function (e) {
       className: $_15161.option
     }, e$children)
   }, React.createElement("div", {
-    className: N("coco-select-selector")
+    className: Classnames("coco-select-selector")
   }, React.createElement("div", {
-    className: N("coco-select-label")
+    className: Classnames("coco-select-label")
   }, w)))))
 })
 var mb = memo(function (e) {
@@ -115,7 +115,7 @@ var mb = memo(function (e) {
     onVisibleChange: function (e) {
       c(e)
     },
-    content: s && React.createElement($_13_index.q, {
+    content: s && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.q, {
       value: e$color,
       onChange: function (e) {
         e$onChange(e$keyName, e)
@@ -124,10 +124,10 @@ var mb = memo(function (e) {
   }, React.createElement("div", {
     className: qv.colorBlock,
     style: {
-      backgroundColor: te.i(e$color) ? "#ffffff" : e$color,
+      backgroundColor: $$_$$_$$_$$_src_shared_tools_index.i(e$color) ? "#ffffff" : e$color,
       width: e$width
     }
-  }, te.i(e$color) && React.createElement("div", {
+  }, $$_$$_$$_$$_src_shared_tools_index.i(e$color) && React.createElement("div", {
     className: qv.slash
   })))
 })

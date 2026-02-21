@@ -11,10 +11,10 @@ import { fy } from "./index__part-102"
 import { TE } from "./index__part-109"
 import * as Qu from "./60"
 import * as Yr from "./53"
-import * as te from "../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -26,16 +26,16 @@ var Hw = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("content")
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var i = te.p(function (e) {
+  var i = $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
     e$onChange("content", e)
   }, 60)
   return React.createElement("div", {
-    className: N($_7041.formItemWrapper, $_7041.wrapper, "coco-form-item", "coco-form-item-vertical")
+    className: Classnames($_7041.formItemWrapper, $_7041.wrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_7041.labelWrapper
   }, $_710$a$formatMessage({
     id: "content"
-  })), React.createElement(React.Fragment, null, React.createElement("div", null, React.createElement($_13_index.A, {
+  })), React.createElement(React.Fragment, null, React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.A, {
     defaultValue: r,
     rows: 3,
     onChange: function (e) {

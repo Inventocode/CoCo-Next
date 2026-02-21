@@ -10,7 +10,7 @@ var r
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as a from "../7"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_48_index from "../48/index"
 var l = new Map()
 var /* [auto-meaningful-name] */_APP_ = "!@_APP_@!"
@@ -140,7 +140,7 @@ function S() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_15.lb(10)
+            return $$_$$_$$_$$_$$_src_shared_tools_index.lb(10)
           case 2:
             for (c$length = c.length, o = new Array(c$length > 1 ? c$length - 1 : 0), a = 1; a < c$length; a++) {
               o[a - 1] = c[a]

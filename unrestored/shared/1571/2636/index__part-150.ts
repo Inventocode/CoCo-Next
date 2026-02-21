@@ -23,17 +23,17 @@ import * as /* [auto-meaningful-name] */$_1022_index from "./1022/index"
 import * as /* [auto-meaningful-name] */$_1058_index from "./1058/index"
 import * as /* [auto-meaningful-name] */$_1205_index from "./1205/index"
 var yg
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useStore, useDispatch, useSelector, batch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -67,7 +67,7 @@ var xT = memo(function () {
   var m = $_238.d()
   useLayoutEffect(function () {
     var /* [auto-meaningful-name] */e$getState
-    var /* [auto-meaningful-name] */$_17_index$Blink
+    var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink
     e$getState = e.getState
     yg = e$getState
     $_301_index.e({
@@ -100,15 +100,15 @@ var xT = memo(function () {
       getCloudTableColumnList: $g
     })
     $_26_index.j($_301_index.b())
-    $_17_index$Blink = $_17_index.Blink
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink
     $_1022_index.DEFAULT_THEME_CONFIG.block_color.PARAM_BLOCK_COLOR = {
       fill: "#3ca9ff",
       border: "rgba(0, 0, 0, 0.15)"
     }
-    $_17_index$Blink.theme.register("cocoBlinkTheme", $_1022_index.DEFAULT_THEME_CONFIG)
-    $_17_index$Blink.theme.apply("cocoBlinkTheme")
-    $_1205_index.init_extensions($_17_index.Blink)
-    $_1205_index.init_basic_blocks($_17_index.Blink)
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink.theme.register("cocoBlinkTheme", $_1022_index.DEFAULT_THEME_CONFIG)
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink.theme.apply("cocoBlinkTheme")
+    $_1205_index.init_extensions($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink)
+    $_1205_index.init_basic_blocks($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink)
     $_301_index.d()
     $_26_index.u()
     var a = document.getElementById("coco_workspace")
@@ -169,7 +169,7 @@ var xT = memo(function () {
         }
       })
       c.add_change_listener(function (e) {
-        if (!$_17_index.I.AllUIEvents.includes(e.type)) {
+        if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.AllUIEvents.includes(e.type)) {
           t($$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
         }
       })
@@ -287,7 +287,7 @@ var xT = memo(function () {
   }, [a])
   var g = $_238.a()
   useEffect(function () {
-    var e = te.p(function () {
+    var e = $$_$$_$$_$$_src_shared_tools_index.p(function () {
       $_26_index.z.resizeWorkspace()
     }, 500)
     window.addEventListener("resize", e)
@@ -345,10 +345,10 @@ var xT = memo(function () {
   return React.createElement("div", {
     className: qC.wrapper
   }, React.createElement("div", {
-    className: N(!d && qC.upper)
+    className: Classnames(!d && qC.upper)
   }), React.createElement("div", {
     id: "coco_workspace",
-    className: N(qC.blocklyWorkspace, c && qC.readonly),
+    className: Classnames(qC.blocklyWorkspace, c && qC.readonly),
     onWheel: function () {
       if (e.getState().block.dropdown.visible) {
         t($$_$$_$$_$$_src_editor_redux_common_actions.gh())
@@ -358,7 +358,7 @@ var xT = memo(function () {
       }
     },
     ref: v
-  }), s.visible && React.createElement($_13_index.q, {
+  }), s.visible && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.q, {
     value: s.value,
     onClose: s.setValue,
     onChange: s.selectValue,

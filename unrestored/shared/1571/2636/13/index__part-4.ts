@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/sha
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "../8"
+import i from "classnames"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as A from "../7"

@@ -7,14 +7,14 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$_735 from "./735"
 $_735.FieldColour.prototype.show_editor = function () {
   var /* [auto-meaningful-name] */this$source_block
   var t = this
-  $$_17_index.Blink.widget_div.hide()
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.widget_div.hide()
   this.widget_div.show(this, this.widget_dispose.bind(this))
   var n = this.get_absolute_xy()
   var r = (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.workspace.get_scale()) || 1
@@ -40,7 +40,7 @@ $_735.FieldColour.prototype.show_editor = function () {
       }
     },
     setValue: function (e) {
-      t.set_value($$_15.nb(e))
+      t.set_value($$_$$_$$_$$_$$_src_shared_tools_index.nb(e))
     },
     top: l,
     left: u

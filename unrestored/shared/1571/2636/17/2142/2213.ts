@@ -19,7 +19,7 @@ var c = require("../../123/index")
 var u = require("../../1022/214")
 var l = require("../../123/293")
 var f = require("../../1205/2609/648")
-var d = require("./977/763")
+var d = require("./2169/763")
 var h = function (e) {
   function t(t, n, r, i) {
     var a = e.call(this, t) || this
@@ -340,5 +340,5 @@ var h = function (e) {
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.ChangeEvent)], t.prototype, "change_event_factory", undefined);
   (0, r.__decorate)([(0, a.lazy_inject)(a.BINDING.SimplifiedCommentBubble)], t.prototype, "comment_bubble", undefined)
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./977/index").WorkspaceElement)
+}(require("./977").WorkspaceElement)
 exports.SimplifiedWorkspaceComment = h

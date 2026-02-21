@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$_1212_index from "./1212/index"
 import * as /* [auto-meaningful-name] */$_342 from "./342"
 import * as /* [auto-meaningful-name] */$_799_index from "./799/index"
 import * as /* [auto-meaningful-name] */$_656 from "./656"
-import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_env from "../../../../../src/shared/env"
 function c(e, t) {
   $_342.b({
     id: e,
@@ -27,7 +27,7 @@ try {
     release: $_656.a,
     dsn: "https://7c6478536deb43e98fe63267ae5c8c7d@sentry.codemao.cn/73",
     integrations: [new $_799_index.a.BrowserTracing()],
-    environment: $$_57_index.b(),
+    environment: $$_$$_$$_$$_$$_src_shared_env.b(),
     tracesSampleRate: 1
   })
 } catch (u) {

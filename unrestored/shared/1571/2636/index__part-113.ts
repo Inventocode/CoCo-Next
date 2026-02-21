@@ -11,10 +11,10 @@ import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as te from "../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector } from "react-redux"
@@ -46,11 +46,11 @@ var qE = memo(function (e) {
       p$current.setRows(Math.min(p$current.getRowCount(), 3))
     }
   }, [m])
-  var g = te.p(function (e) {
+  var g = $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
     e$onChange("headline", e)
   }, 100)
-  return React.createElement($_13_index.i, {
-    className: N($_10561.headline, $_10561.formItemWrapper, "changeHeadline")
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_10561.headline, $_10561.formItemWrapper, "changeHeadline")
   }, React.createElement("div", {
     className: $_10561.formTitle
   }, React.createElement("p", null, $_710$a$formatMessage({
@@ -60,7 +60,7 @@ var qE = memo(function (e) {
     onChange: function (e) {
       e$onChange("headlineVisible", e)
     }
-  })), a && React.createElement($_13_index.A, {
+  })), a && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.A, {
     ref: p,
     maxLength: 200,
     defaultValue: i,
@@ -112,7 +112,7 @@ var QE = memo(function (e) {
       e$onChange("sizeAdaptive", $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED)
     }
   }
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
     className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
   }, React.createElement("p", {
@@ -121,9 +121,9 @@ var QE = memo(function (e) {
     id: "size"
   })), React.createElement("div", {
     className: qv.formInputNumberRow
-  }, React.createElement($_13_index.i, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     className: "changeWidth"
-  }, React.createElement($_13_index.o, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "width"
     }),
@@ -141,9 +141,9 @@ var QE = memo(function (e) {
     className: "".concat(qv.justifyInputContent, " coco-number-inputRow"),
     onChange: g.bind(undefined, "width", 50),
     onStep: g.bind(undefined, "width", 0)
-  })), React.createElement($_13_index.i, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     className: "changeHeight"
-  }, React.createElement($_13_index.o, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "height"
     }),

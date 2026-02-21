@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_434 from "../../../434"
 import * as /* [auto-meaningful-name] */$$_$$_$$_339 from "../../../339"
 import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
 import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_552_1214_316_1546 from "../../../552/1214/316/1546"
+import * as /* [auto-meaningful-name] */$_1546 from "./1546"
 var k = function (e, t) {
   return e && t && t.split(" ").forEach(function (t) {
     r = t
@@ -145,7 +145,7 @@ var S = function (e) {
     var /* [auto-meaningful-name] */this$props = this.props
     this$props.classNames
     var t = $$_$$_$$_339.a(this$props, ["classNames"])
-    return React.createElement($$_$$_$$_552_1214_316_1546.a, $$_$$_$$_19.a({}, t, {
+    return React.createElement($_1546.a, $$_$$_$$_19.a({}, t, {
       onEnter: this.onEnter,
       onEntered: this.onEntered,
       onEntering: this.onEntering,

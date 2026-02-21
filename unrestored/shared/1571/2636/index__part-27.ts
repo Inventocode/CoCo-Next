@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as X from "./27"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -17,8 +17,8 @@ import * as /* [auto-meaningful-name] */$_1512 from "./1512"
 import * as ro from "./39"
 import * as /* [auto-meaningful-name] */$_58_index from "./58/index"
 import * as /* [auto-meaningful-name] */$_59_index from "./59/index"
-import * as /* [auto-meaningful-name] */$_279 from "../../../../src/editor/ui/preview-area/stage/style.css"
-import /* [auto-meaningful-name] */$_2791 from "../../../../src/editor/ui/preview-area/stage/style.css"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css from "../../../../src/editor/ui/preview-area/stage/style.css"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css1 from "../../../../src/editor/ui/preview-area/stage/style.css"
 var co = function (e) {
   $_58_index.a(n, e)
   var t = $_59_index.a(n)
@@ -66,7 +66,7 @@ var co = function (e) {
       value: function () {
         var /* [auto-meaningful-name] */this$state$isDragging = this.state.isDragging
         return React.createElement("div", {
-          className: N($_2791.dragBar, k.a({}, $_2791.active, this$state$isDragging)),
+          className: Classnames($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css1.dragBar, k.a({}, $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css1.active, this$state$isDragging)),
           onMouseEnter: this.props.onEnter,
           onMouseLeave: this.props.onLeave,
           onMouseDown: this.handleMouseDown

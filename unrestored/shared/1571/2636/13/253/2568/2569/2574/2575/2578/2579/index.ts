@@ -5,7 +5,7 @@
  */
 
 var r = require("./2580")
-var i = require("../../../../2570/1459/1181/1453/index")
+var i = require("../../../../2570/1459/1181/1453")
 var o = require("../../993")
 var a = i ? function (e, t) {
   return i(e, "toString", {

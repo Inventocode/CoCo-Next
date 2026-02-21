@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import /* [auto-meaningful-name] */React from "react"
@@ -26,9 +26,9 @@ var cn = memo(function (e) {
   var /* [auto-meaningful-name] */e$onCancelRetry = e.onCancelRetry
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     title: o,
-    className: N(e$className, $_9311.networkDialog),
+    className: Classnames(e$className, $_9311.networkDialog),
     visible: e$networkErrorVisible,
     showCloseButton: a,
     onClose: function () {
@@ -36,7 +36,7 @@ var cn = memo(function (e) {
     },
     footer: React.createElement("div", {
       className: $_9311.networkFooterWrapper
-    }, React.createElement($_13_index.d, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
       onClick: function () {
         if (e$onCancelRetry) {
           e$onCancelRetry()
@@ -44,7 +44,7 @@ var cn = memo(function (e) {
       }
     }, $_710$a$formatMessage({
       id: "cancel"
-    })), React.createElement($_13_index.d, {
+    })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
       onClick: e$onRetry,
       type: "primary"
     }, $_710$a$formatMessage({

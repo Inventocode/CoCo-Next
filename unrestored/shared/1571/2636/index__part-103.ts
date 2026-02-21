@@ -7,8 +7,8 @@
 "use strict"
 
 import * as Qu from "./60"
-import * as te from "../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -19,23 +19,23 @@ var gy = memo(function (e) {
   var n = undefined === e$keyName ? "textAlign" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$textAlign = e.textAlign
-  return React.createElement($_13_index.s, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
     value: e$textAlign,
     className: $_10371.alignRadio,
     onChange: function (e) {
       e$onChange(n, e)
     }
-  }, React.createElement($_13_index.t, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Qu.a.LEFT
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-align-left"
-  })), React.createElement($_13_index.t, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Qu.a.CENTER
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-align-center"
-  })), React.createElement($_13_index.t, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Qu.a.RIGHT
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-align-right"
   })))
 })
@@ -48,10 +48,10 @@ var _y = memo(function (e) {
   var a = e$getValue(n)
   var /* [auto-meaningful-name] */e$formConfig$clearButtonVisible = e$formConfig.clearButtonVisible
   var /* [auto-meaningful-name] */e$formConfig$emitOnChange = e$formConfig.emitOnChange
-  var l = te.p(function (e) {
+  var l = $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
     e$onChange(n, e)
   }, 200)
-  return React.createElement($_13_index.k, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     onBlur: function (e) {
       l(e)
     },

@@ -8,7 +8,7 @@
 
 import { A } from "./1542__part-0"
 import { m } from "./1542__part-1"
-import j from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import /* [auto-meaningful-name] */ReactDom from "react-dom"
 import * as /* [auto-meaningful-name] */$$_107 from "../107"
@@ -457,7 +457,7 @@ var fe = function (e) {
           }
         }
         O = e$children($$_21.a($$_21.a({}, S), {}, {
-          className: j(re(e$motionName, y), (T = {}, $$_35.a(T, re(e$motionName, "".concat(y, "-").concat(B)), B), $$_35.a(T, e$motionName, "string" === typeof e$motionName), T)),
+          className: Classnames(re(e$motionName, y), (T = {}, $$_35.a(T, re(e$motionName, "".concat(y, "-").concat(B)), B), $$_35.a(T, e$motionName, "string" === typeof e$motionName), T)),
           style: w
         }), k)
       } else {

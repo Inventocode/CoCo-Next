@@ -6,6 +6,7 @@
         "arrayeach",
         "baseeach",
         "bcmc",
+        "bcmc",
         "bcmcdn",
         "blockly",
         "ccwidget",
@@ -28,6 +29,7 @@
         "isarguments",
         "methodorder",
         "micromessenger",
+        "micromessenger",
         "momo",
         "nexe",
         "npmmirror",
@@ -46,7 +48,8 @@
         "vika",
         "vikadata",
         "webdb",
-        "weixin"
+        "weixin",
+        "xmlserializer"
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {

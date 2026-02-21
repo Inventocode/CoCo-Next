@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/sha
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useLayoutEffect, useCallback, useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "../8"
+import i from "classnames"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./871"
 var oe = memo(function (e) {

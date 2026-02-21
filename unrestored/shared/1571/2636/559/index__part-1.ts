@@ -8,7 +8,7 @@
 
 import { b } from "./index__part-0"
 import /* [auto-meaningful-name] */$_1041 from "./1041"
-import p from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { createContext, useContext, useRef, createElement, useMemo, Component, useEffect } from "react"
 import * as /* [auto-meaningful-name] */$$_54 from "../54"
 import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
@@ -409,7 +409,7 @@ var X = function (e) {
     component: "li",
     "aria-disabled": e$disabled,
     style: $$_21.a($$_21.a({}, $), e$style),
-    className: p(P, (t = {}, $$_35.a(t, "".concat(P, "-active"), X$active), $$_35.a(t, "".concat(P, "-selected"), J), $$_35.a(t, "".concat(P, "-disabled"), W), t), e$className),
+    className: Classnames(P, (t = {}, $$_35.a(t, "".concat(P, "-active"), X$active), $$_35.a(t, "".concat(P, "-selected"), J), $$_35.a(t, "".concat(P, "-disabled"), W), t), e$className),
     onClick: function (e) {
       if (!W) {
         var t = H(e)

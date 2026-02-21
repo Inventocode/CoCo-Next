@@ -16,8 +16,8 @@ import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -71,12 +71,12 @@ var UC = memo(function (e) {
       })
     }
   }
-  return React.createElement($_13_index.h, {
-    className: N($_10571.formGroup, a && $_10571.formGroupHasHelpUrl),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.h, {
+    className: Classnames($_10571.formGroup, a && $_10571.formGroupHasHelpUrl),
     "data-updated-at": s
   }, React.createElement("div", null, function e(n, r) {
     return n.map(function (n, o) {
-      return Array.isArray(n) ? React.createElement($_13_index.u, {
+      return Array.isArray(n) ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.u, {
         key: "".concat(e$widgetId, "-").concat(o),
         className: $_10571.formItemWrapper,
         align: "middle",
@@ -126,7 +126,7 @@ var HC = memo(function () {
       var /* [auto-meaningful-name] */u$childWidgetEditConfig = u.childWidgetEditConfig
       var m = a.parentId && u$childWidgetEditConfig ? u$childWidgetEditConfig : u$editConfig
       return React.createElement("div", {
-        className: N($_420.wrapper, !r && $_420.hide),
+        className: Classnames($_420.wrapper, !r && $_420.hide),
         style: {
           bottom: o + 8
         }
@@ -139,10 +139,10 @@ var HC = memo(function () {
       })), React.createElement("div", {
         onClick: c,
         className: $_420.close
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-close-bold"
       }))), React.createElement("div", {
-        className: N($_420.content, s && $_420.readonly)
+        className: Classnames($_420.content, s && $_420.readonly)
       }, React.createElement(UC, {
         widgetId: a.id,
         widgetType: a.type,
@@ -152,7 +152,7 @@ var HC = memo(function () {
     }
   }
   return React.createElement("div", {
-    className: N($_420.wrapper, !r && $_420.hide),
+    className: Classnames($_420.wrapper, !r && $_420.hide),
     style: {
       bottom: o + 8
     }
@@ -165,10 +165,10 @@ var HC = memo(function () {
   })), React.createElement("div", {
     onClick: c,
     className: $_420.close
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close-bold"
   }))), React.createElement("div", {
-    className: N($_420.content, s && $_420.readonly)
+    className: Classnames($_420.content, s && $_420.readonly)
   }, React.createElement(wy, null)))
 })
 export { HC }

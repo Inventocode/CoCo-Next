@@ -11,9 +11,9 @@ var nj
 var tj
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -247,18 +247,18 @@ var mj = memo(function (e) {
     }
   }, [d, t, g, m])
   var v = $_1206_index.getCodemaoLoginIframeUrl({
-    env: pj($_57_index.a.env),
+    env: pj($$_$$_$$_$$_src_shared_env.a.env),
     language: dj(n),
     onlyLogin: false,
     disableThirdParty: false,
     ageLimit: false,
     theme: "violet",
     pageView: "login",
-    pid: $_57_index.a.pid,
-    productCode: $_57_index.a.productCode
+    pid: $$_$$_$$_$$_src_shared_env.a.pid,
+    productCode: $$_$$_$$_$$_src_shared_env.a.productCode
   })
   return r$visible ? React.createElement("div", {
-    className: N($_12071.wrapper, c && $_12071.ready)
+    className: Classnames($_12071.wrapper, c && $_12071.ready)
   }, React.createElement("iframe", {
     allow: "autoplay; fullscreen; clipboard-read; clipboard-write; encrypted-media; microphone; geolocation; camera",
     ref: u,

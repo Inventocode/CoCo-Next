@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_454_index from "./454/index"
+import * as /* [auto-meaningful-name] */$_454_index from "./454"
 function j() {
   var /* [auto-meaningful-name] */navigator$userAgent = navigator.userAgent
   return !!["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"].find(function (t) {

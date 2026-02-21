@@ -4,7 +4,7 @@
  * 模块 ID：1661
  */
 
-var r = require("./86/index")
+var r = require("../1662/86")
 var o = require("./1262")
 r({
   target: "Object",

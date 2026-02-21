@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 var r = require("../../1396")
-var i = require("../../649/448")
+var i = require("../../856/448")
 var o = require("../../582")
 var a = require("../../359")
-var s = require("../../856")
+var s = require("../../856/index")
 exports.getFunctionName = s.getFunctionName
 var c = require("./1397/index")
 function u(e, t, n, r) {

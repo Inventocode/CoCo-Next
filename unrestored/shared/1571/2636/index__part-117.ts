@@ -14,10 +14,10 @@ import * as /* [auto-meaningful-name] */$_163 from "./163"
 import * as /* [auto-meaningful-name] */$_131 from "./131"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -51,8 +51,8 @@ var EO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var o = (0, e.getValue)(n)
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($_13_index.i, {
-    className: N($_2541.formItemWrapper, $_2541.typeSelector, $_2541.switchType, "changeSwitchMode"),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_2541.formItemWrapper, $_2541.typeSelector, $_2541.switchType, "changeSwitchMode"),
     label: $_710$a$formatMessage({
       id: "style"
     })
@@ -65,7 +65,7 @@ var EO = memo(function (e) {
       }
     }
   }, yO.map(function (e) {
-    return React.createElement($_13_index.p, {
+    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
       value: e.value,
       key: e.value
     }, e.renderContent())
@@ -96,9 +96,9 @@ var wO = [
     value: $_163.c.DEFAULT,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: N($_2541.default, "switch-default"),
+        className: Classnames($_2541.default, "switch-default"),
         style: {
-          backgroundColor: te.hb(e, .3)
+          backgroundColor: $$_$$_$$_$$_src_shared_tools_index.hb(e, .3)
         }
       }, React.createElement("div", {
         className: $_2541.handle,
@@ -111,7 +111,7 @@ var wO = [
     value: $_163.c.PRIMARY,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: N($_2541.primary, "switch-primary"),
+        className: Classnames($_2541.primary, "switch-primary"),
         style: {
           backgroundColor: e
         }
@@ -133,11 +133,11 @@ var CO = memo(function (e) {
   var l = e$getValue("backgroundCloseImage") || $_131.a
   var u = c
   var d = Et.hb(c)
-  if (!te.U(c) && d) {
+  if (!$$_$$_$$_$$_src_shared_tools_index.U(c) && d) {
     u = (null === d || undefined === d ? undefined : d.source) || (null === d || undefined === d ? undefined : d.cdnUrl)
   }
   return React.createElement("div", {
-    className: N($_2541.formItemWrapper, $_2541.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: Classnames($_2541.formItemWrapper, $_2541.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_2541.backgroundLabel
   }, React.createElement("span", null, $_710$a$formatMessage({
@@ -145,14 +145,14 @@ var CO = memo(function (e) {
   })), React.createElement("div", {
     className: $_2541.modeActionWrapper
   }, React.createElement("div", {
-    className: N($_2541.modeTemplate, a === $_163.a.TEMPLATE && $_2541.backgroundSelected),
+    className: Classnames($_2541.modeTemplate, a === $_163.a.TEMPLATE && $_2541.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_163.a.TEMPLATE)
     }
   }, $_710$a$formatMessage({
     id: "template"
   })), React.createElement("div", {
-    className: N($_2541.modeImage, a === $_163.a.IMAGE && $_2541.backgroundSelected),
+    className: Classnames($_2541.modeImage, a === $_163.a.IMAGE && $_2541.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", $_163.a.IMAGE)
     }
@@ -170,7 +170,7 @@ var CO = memo(function (e) {
     },
     params: [i]
   }, wO.map(function (e) {
-    return React.createElement($_13_index.p, {
+    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
       key: e.value,
       value: e.value
     }, e.renderContent(i))
@@ -209,21 +209,21 @@ var CO = memo(function (e) {
       marginTop: 10,
       marginBottom: 3
     }
-  }, React.createElement($_13_index.s, {
-    className: N($_2541.radioWrapper, $_2541.sizeRadioBox),
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
+    className: Classnames($_2541.radioWrapper, $_2541.sizeRadioBox),
     value: e$getValue("imageResizeMode") || $_163.b.CONTAIN,
     onChange: function (e) {
       e$onChange("imageResizeMode", e)
     }
-  }, React.createElement($_13_index.t, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: $_163.b.CONTAIN
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-contain"
   }), $_710$a$formatMessage({
     id: "".concat($_163.b.CONTAIN)
-  })), React.createElement($_13_index.t, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: $_163.b.STRETCH
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-stretch"
   }), $_710$a$formatMessage({
     id: "".concat($_163.b.STRETCH)

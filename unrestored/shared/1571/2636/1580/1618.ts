@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
+var r = require("./1662/86")
 var o = require("./1775/715")
 var i = require("./1659/477")
-var a = require("./1775/256")
-var s = require("./1771/309")
+var a = require("./1771/256")
+var s = require("./1662/309")
 var c = require("./1597/832/index")
 var l = require("./1597/716")
 var u = require("./1597/833")("splice")

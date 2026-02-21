@@ -6,7 +6,7 @@
 
 "use strict"
 
-var a = require("../../../../../13/780/1068/index")
+var a = require("../../../../../13/780/1068")
 var r = require("../../../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true

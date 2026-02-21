@@ -12,9 +12,9 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useSelector, useDispatch } from "react-redux"
-import * as c from "./8"
-import l from "./8"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as p from "./99"
 import f from "./99"
@@ -74,9 +74,9 @@ _a = memo(function () {
       w($$_$$_$$_$$_src_editor_redux_common_actions.jh())
     }
   }
-  return React1.createElement($_13_index.f, {
+  return React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: t$visible,
-    className: l(f.nameDialog),
+    className: Classnames1(f.nameDialog),
     onClose: k,
     withPortal: true
   }, React1.createElement($_188.a, {
@@ -92,7 +92,7 @@ _a = memo(function () {
     className: f.inputWrapper
   }, React1.createElement("span", null, $_710$a$formatMessage({
     id: "name"
-  })), React1.createElement($_13_index.k, {
+  })), React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     ref: O,
     warning: !!S,
     placeholder: t$placeholder && $_710$a$formatMessage({
@@ -111,11 +111,11 @@ _a = memo(function () {
     id: S
   }))), React1.createElement("div", {
     className: f.confirmBox
-  }, React1.createElement($_13_index.d, {
+  }, React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: k
   }, $_710$a$formatMessage({
     id: "cancel"
-  })), React1.createElement($_13_index.d, {
+  })), React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: x,
     type: "primary",
     disabled: !!S || !N

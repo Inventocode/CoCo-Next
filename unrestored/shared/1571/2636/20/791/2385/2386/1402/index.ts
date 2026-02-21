@@ -6,27 +6,27 @@
 
 "use strict"
 
-var r = require("../../../../../207/787/399")
+var r = require("../../../../../207/787/399/index")
 var /* [auto-meaningful-name] */require$_333_index$Buffer = require("./333/index").Buffer
-var o = require("./311/index")
+var o = require("../1410/311")
 var /* [auto-meaningful-name] */o$ObjectDefineProperty = o.ObjectDefineProperty
 var /* [auto-meaningful-name] */o$ObjectKeys = o.ObjectKeys
 var /* [auto-meaningful-name] */o$ReflectApply = o.ReflectApply
-var /* [auto-meaningful-name] */require$_427_index$promisify$custom = require("./427/index").promisify.custom
-var l = require("./2387/index")
+var /* [auto-meaningful-name] */require$_427$promisify$custom = require("./427").promisify.custom
+var l = require("./2387")
 var /* [auto-meaningful-name] */l$streamReturningOperators = l.streamReturningOperators
 var /* [auto-meaningful-name] */l$promiseReturningOperators = l.promiseReturningOperators
-var /* [auto-meaningful-name] */require$_402$codes$ERR_ILLEGAL_CONSTRUCTOR = require("./402").codes.ERR_ILLEGAL_CONSTRUCTOR
+var /* [auto-meaningful-name] */require$_402_index$codes$ERR_ILLEGAL_CONSTRUCTOR = require("./402/index").codes.ERR_ILLEGAL_CONSTRUCTOR
 var p = require("./1406")
 var _ = require("./988")
 var /* [auto-meaningful-name] */_$setDefaultHighWaterMark = _.setDefaultHighWaterMark
 var /* [auto-meaningful-name] */_$getDefaultHighWaterMark = _.getDefaultHighWaterMark
-var /* [auto-meaningful-name] */require$_1159$pipeline = require("./1159").pipeline
+var /* [auto-meaningful-name] */require$$_1410_1159_index$pipeline = require("../1410/1159/index").pipeline
 var /* [auto-meaningful-name] */require$_769$destroyer = require("./769").destroyer
-var y = require("./650")
-var b = require("../1410")
-var w = require("./583")
-var E = module.exports = require("./1160").Stream
+var y = require("../1410/650")
+var b = require("../1410/index")
+var w = require("../1410/583")
+var E = module.exports = require("./1160/index").Stream
 E.isDestroyed = w.isDestroyed
 E.isDisturbed = w.isDisturbed
 E.isErrored = w.isErrored
@@ -41,7 +41,7 @@ try {
     var t = l$streamReturningOperators[x$value]
     function n() {
       if (this instanceof n ? this.constructor : undefined) {
-        throw require$_402$codes$ERR_ILLEGAL_CONSTRUCTOR()
+        throw require$_402_index$codes$ERR_ILLEGAL_CONSTRUCTOR()
       }
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length), i = 0; i < arguments$length; i++) {
         r[i] = arguments[i]
@@ -80,7 +80,7 @@ try {
     var t = l$promiseReturningOperators[k$value]
     function n() {
       if (this instanceof n ? this.constructor : undefined) {
-        throw require$_402$codes$ERR_ILLEGAL_CONSTRUCTOR()
+        throw require$_402_index$codes$ERR_ILLEGAL_CONSTRUCTOR()
       }
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length), i = 0; i < arguments$length; i++) {
         r[i] = arguments[i]
@@ -115,7 +115,7 @@ E.Writable = require("./1161")
 E.Duplex = require("./584/index")
 E.Transform = require("./1409")
 E.PassThrough = require("./1408")
-E.pipeline = require$_1159$pipeline
+E.pipeline = require$$_1410_1159_index$pipeline
 var /* [auto-meaningful-name] */require$_987$addAbortSignal = require("./987").addAbortSignal
 E.addAbortSignal = require$_987$addAbortSignal
 E.finished = y
@@ -131,14 +131,14 @@ o$ObjectDefineProperty(E, "promises", {
     return b
   }
 })
-o$ObjectDefineProperty(require$_1159$pipeline, require$_427_index$promisify$custom, {
+o$ObjectDefineProperty(require$$_1410_1159_index$pipeline, require$_427$promisify$custom, {
   __proto__: null,
   enumerable: true,
   get: function () {
     return b.pipeline
   }
 })
-o$ObjectDefineProperty(y, require$_427_index$promisify$custom, {
+o$ObjectDefineProperty(y, require$_427$promisify$custom, {
   __proto__: null,
   enumerable: true,
   get: function () {

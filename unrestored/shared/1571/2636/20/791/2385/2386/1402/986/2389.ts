@@ -10,13 +10,13 @@ var r = require("../../../../../../207/787/500")
 var i = require("regenerator-runtime")
 var o = require("../../../../../../207/787/180")
 var a = require("../../../../../../207/787/204")
-var s = require("../311/index")
+var s = require("../../1410/311")
 var /* [auto-meaningful-name] */s$StringPrototypeSlice = s.StringPrototypeSlice
 var /* [auto-meaningful-name] */s$SymbolIterator = s.SymbolIterator
 var /* [auto-meaningful-name] */s$TypedArrayPrototypeSet = s.TypedArrayPrototypeSet
 var /* [auto-meaningful-name] */s$Uint8Array = s.Uint8Array
 var /* [auto-meaningful-name] */require$$_333_index$Buffer = require("../333/index").Buffer
-var /* [auto-meaningful-name] */require$$_427_index$inspect = require("../427/index").inspect
+var /* [auto-meaningful-name] */require$$_427$inspect = require("../427").inspect
 module.exports = function () {
   function e() {
     o(this, e)
@@ -206,7 +206,7 @@ module.exports = function () {
     }, {
       key: Symbol.for("nodejs.util.inspect.custom"),
       value: function (e, t) {
-        return require$$_427_index$inspect(this, r(r({}, t), {}, {
+        return require$$_427$inspect(this, r(r({}, t), {}, {
           depth: 0,
           customInspect: false
         }))

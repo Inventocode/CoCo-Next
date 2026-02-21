@@ -14,12 +14,12 @@ export { O as e }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "../7"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
-import * as /* [auto-meaningful-name] */$_733 from "./733"
-import * as /* [auto-meaningful-name] */$_732 from "./732"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */$_733_index from "./733/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_procedure_blocks from "../../../../../src/shared/packages/@crc/blink/src/procedure/blocks"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as p from "../9"
 import * as /* [auto-meaningful-name] */$$_141_index from "../141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox from "../../../../../src/editor/block/toolbox"
@@ -30,18 +30,18 @@ function g() {
   })
 }
 function _(e) {
-  $$_17_index.Blink.mainWorkspace.register_toolbox_category_callback(e, function () {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback(e, function () {
     var t = $$_26_index.g.getToolbox()
     var n = E()
     return t && n ? b(e, n, false) : []
   })
-  $$_17_index.Blink.mainWorkspace.register_toolbox_category_callback("ANY_" + e, function () {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback("ANY_" + e, function () {
     return $$_26_index.g.getToolbox() ? b(e, "", true) : []
   })
 }
 function v(e) {
   var /* [auto-meaningful-name] */$$_37_index$d$dispatch = $$_37_index.d.dispatch
-  $_732.register_procedure_blocks($$_17_index.Blink, e, function () {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_procedure_blocks.register_procedure_blocks($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink, e, function () {
     var n = i.a(RegeneratorRuntime1.mark(function n(r) {
       var i
       var a
@@ -75,7 +75,7 @@ function v(e) {
                     if (e[0].match(/[0-9_]/)) {
                       return "invalidVariableFirstChar"
                     }
-                    if (!$$_15.j(e)) {
+                    if (!$$_$$_$$_$$_$$_src_shared_tools_index.j(e)) {
                       return "invalidVariableName"
                     }
                     return ["函数", "函數", "function"].includes(e) ? "preservedProcedureName" : undefined
@@ -123,7 +123,7 @@ function v(e) {
                   validator: function (e) {
                     return "" === e ? "emptyParameterName" : a.params.find(function (t) {
                       return t.param_name === e
-                    }) ? "parameterExists" : e[0].match(/[0-9_]/) ? "invalidVariableFirstChar" : $$_15.j(e) ? undefined : "invalidVariableName"
+                    }) ? "parameterExists" : e[0].match(/[0-9_]/) ? "invalidVariableFirstChar" : $$_$$_$$_$$_$$_src_shared_tools_index.j(e) ? undefined : "invalidVariableName"
                   },
                   confirmCallback: function (t) {
                     return e({
@@ -147,10 +147,10 @@ function v(e) {
       return n.apply(this, arguments)
     }
   }())
-  $$_17_index.Blink.mainWorkspace.register_toolbox_category_callback("PROCEDURE", function () {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.register_toolbox_category_callback("PROCEDURE", function () {
     return e().get_all_procedures_xml()
   })
-  $_733.register_default_procedure_events($$_17_index.Blink.mainWorkspace, e)
+  $_733_index.register_default_procedure_events($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace, e)
 }
 function b(e, t, n) {
   var r = function (e, t, n) {
@@ -161,7 +161,7 @@ function b(e, t, n) {
     o += e
   })
   o += "</xml>"
-  return Array.from($$_17_index.Blink.xml.text_to_dom(o).children)
+  return Array.from($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(o).children)
 }
 var y = ""
 function E() {

@@ -11,10 +11,10 @@ var Mw
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -142,24 +142,24 @@ function sC() {
 }
 function cC() {
   var e = function (e) {
-    window.open("".concat(te.A(), "/dashboard/dict/").concat(e), "_blank")
+    window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/dict/").concat(e), "_blank")
   }
   var t = function (e) {
-    window.open("".concat(te.A(), "/dashboard/table/").concat(e), "_blank")
+    window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/table/").concat(e), "_blank")
   }
   return {
     handleVisitCloudSpace: function (e) {
       if (e) {
-        window.open("".concat(te.A(), "/dashboard/?createType=").concat(e), "_blank")
+        window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/?createType=").concat(e), "_blank")
       } else {
-        window.open("".concat(te.A(), "/"), "_blank")
+        window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/"), "_blank")
       }
     },
     handleVisitDataSource: function () {
       var n = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "dict"
       var r = arguments.length > 1 ? arguments[1] : undefined
       if (!r) {
-        return window.open("".concat(te.A()), "_blank")
+        return window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A()), "_blank")
       }
       if ("dict" === n) {
         e(r)
@@ -221,7 +221,7 @@ var uC = memo(function (e) {
       var t = React.createElement(React.Fragment, null, React.createElement("div", {
         onMouseOut: a$onMouseOut,
         onMouseOver: a$onMouseOver,
-        className: N($_3681.addDict),
+        className: Classnames($_3681.addDict),
         onClick: function () {
           var /* [auto-meaningful-name] */i$current
           if (!(null === i || undefined === i || null === (i$current = i.current) || undefined === i$current)) {
@@ -229,7 +229,7 @@ var uC = memo(function (e) {
           }
           g$handleVisitCloudSpace(Mw.Dict)
         }
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-add"
       }), React.createElement("div", {
         className: $_3681.newText
@@ -237,19 +237,19 @@ var uC = memo(function (e) {
         id: "cloudSpace.newDict"
       })), React.createElement("div", {
         className: $_3681.suffixIcon
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-return-arrow"
       }))), a$cloudDataSources.length > 0 ? React.createElement("div", {
-        className: N($_3681.line, a$addItemHover ? $_3681.hideLine : "")
+        className: Classnames($_3681.line, a$addItemHover ? $_3681.hideLine : "")
       }) : "", a$cloudDataSources.length > 0 ? React.createElement("div", null, e) : "")
-      var r = React.createElement($_13_index.d, {
+      var r = React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
         type: "primary",
         onClick: T
       }, $_710$a$formatMessage({
         id: "cloudSpace.needLogin"
       }))
       return React.createElement("div", {
-        className: N("cloudDictDropdown", y ? "" : $_3681.unLoginDropdown, a$addItemHover ? "addBtnActive" : "")
+        className: Classnames("cloudDictDropdown", y ? "" : $_3681.unLoginDropdown, a$addItemHover ? "addBtnActive" : "")
       }, y ? t : r)
     },
     value: a$dataSourceId,
@@ -268,13 +268,13 @@ var uC = memo(function (e) {
       value: e.id,
       key: e.id
     }, React.createElement("div", {
-      className: N($_3681.optionRenderBox)
+      className: Classnames($_3681.optionRenderBox)
     }, React.createElement("div", {
-      className: N($_3681.prefixIcon, "spaceCloud-select-icon")
-    }, React.createElement($_13_index.j, {
+      className: Classnames($_3681.prefixIcon, "spaceCloud-select-icon")
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-widget-cloud-dict"
     })), React.createElement("div", {
-      className: N($_3681.dictName, a$dataSourceId === e.id ? $_3681.optionSelected : "")
+      className: Classnames($_3681.dictName, a$dataSourceId === e.id ? $_3681.optionSelected : "")
     }, React.createElement("div", {
       className: $_3681.nameText
     }, e.name)), React.createElement("div", {
@@ -282,12 +282,12 @@ var uC = memo(function (e) {
       onClick: function (t) {
         g$handleVisitDataSource("dict", e.id)
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-return-arrow"
     }))))
   }))
   return React.createElement("div", {
-    className: N($_3681.formItemWrapper, $_3681.dictFields)
+    className: Classnames($_3681.formItemWrapper, $_3681.dictFields)
   }, React.createElement("div", {
     className: $_3681.title
   }, React.createElement("div", null, $_710$a$formatMessage({

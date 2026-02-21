@@ -9,11 +9,11 @@
 var V
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
-import * as Z from "./97"
+import * as /* [auto-meaningful-name] */$_97_index from "./97/index"
 import * as /* [auto-meaningful-name] */$_525 from "./525"
 import /* [auto-meaningful-name] */$_5251 from "./525"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 !function (e) {
   e[e.SAVE_BTN = 0] = "SAVE_BTN"
   e[e.MY_PROJECT = 1] = "MY_PROJECT"
@@ -31,9 +31,9 @@ var ne = React.memo(function (e) {
   var a = e$time
   var s = e$currentTime
   var c = s - a
-  var l = te.G(s, 0)
-  var u = te.G(s, -1)
-  var d = te.G(s, -2)
+  var l = $$_$$_$$_$$_src_shared_tools_index.G(s, 0)
+  var u = $$_$$_$$_$$_src_shared_tools_index.G(s, -1)
+  var d = $$_$$_$$_$$_src_shared_tools_index.G(s, -2)
   var p = new Date(a)
   var f = ""
   var m = "".concat(i("MyProject.lastSaved"), " ")
@@ -64,13 +64,13 @@ var ne = React.memo(function (e) {
       f = m + f
     }
   } else if (a > u) {
-    f = i("MyProject.yesterday") + te.K(p)
+    f = i("MyProject.yesterday") + $$_$$_$$_$$_src_shared_tools_index.K(p)
     if (e$renderType === V.SAVE_BTN) {
       f = m + f
     }
   } else {
     if (a > d) {
-      f = i("MyProject.theDayBeforeYesterday") + te.K(p)
+      f = i("MyProject.theDayBeforeYesterday") + $$_$$_$$_$$_src_shared_tools_index.K(p)
       if (e$renderType === V.SAVE_BTN) {
         f = m + f
       }

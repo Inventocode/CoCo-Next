@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
 import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
 import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$_736 from "./736"
 import * as /* [auto-meaningful-name] */$$_18 from "../18"
 import * as d from "../9"
@@ -77,10 +77,10 @@ var f = function (e) {
           var w
           var C
           var T = g.workspace.get_scale()
-          var S = ($$_17_index.Blink.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * T + 1
+          var S = ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.theme.renderer.STATEMENT_ROW_PADDING_Y_TO_FIELD + 1) * T + 1
           if (this$source_block1.is_shadow()) {
             var /* [auto-meaningful-name] */this$source_block1$svg_group = this$source_block1.svg_group
-            E = $$_17_index.BU.dom.get_page_offset(this$source_block1$svg_group)
+            E = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.dom.get_page_offset(this$source_block1$svg_group)
             var I = this$source_block1.get_height_width()
             O = I.width * T
             w = I.height * T + 2 * S

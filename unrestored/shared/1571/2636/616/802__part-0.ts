@@ -13,8 +13,8 @@ import * as /* [auto-meaningful-name] */$$_107 from "../107"
 import { createElement } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as u from "../8"
-import l from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$$_486 from "../486"
 import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
 import * as /* [auto-meaningful-name] */$$_103 from "../103"
@@ -61,7 +61,7 @@ var A = function (e) {
       default:
         console.warn(new p(e$size).error)
     }
-    var g = l(h, (n = {}, $$_35.a(n, "".concat(h, "-").concat(A), A), $$_35.a(n, "".concat(h, "-rtl"), "rtl" === t$direction), n), e$className)
+    var g = Classnames1(h, (n = {}, $$_35.a(n, "".concat(h, "-").concat(A), A), $$_35.a(n, "".concat(h, "-rtl"), "rtl" === t$direction), n), e$className)
     return createElement("div", $$_19.a({}, d, {
       className: g
     }))

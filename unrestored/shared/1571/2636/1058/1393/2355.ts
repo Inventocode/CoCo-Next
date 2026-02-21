@@ -8,7 +8,7 @@
 
 function r() {
   if (!r.quiet) {
-    for (var e = require("../../207/787/2248/1129/index"), /* [auto-meaningful-name] */e$inspect = e.inspect, i = function (e) {
+    for (var e = require("./573/1129/index"), /* [auto-meaningful-name] */e$inspect = e.inspect, i = function (e) {
         return "string" === typeof e ? e : e$inspect(e, {
           depth: 10,
           colors: true

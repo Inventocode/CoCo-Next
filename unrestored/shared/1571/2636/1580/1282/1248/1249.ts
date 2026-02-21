@@ -12,8 +12,8 @@ var i
 var a = require("../../1659/168")
 var s = require("../../1625/497")
 var c = require("../../1782/425")
-var l = require("../../1785/334")
-var u = require("../../1782/246/index")
+var l = require("../334")
+var u = require("../246/index")
 var d = require("../../1581/533")
 var p = u("iterator")
 var f = false

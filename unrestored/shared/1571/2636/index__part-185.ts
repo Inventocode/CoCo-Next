@@ -9,9 +9,9 @@
 import { fj, hj } from "./index__part-181"
 import { Rj } from "./index__part-184"
 var Ij
-import * as te from "../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useRef } from "react"
@@ -64,7 +64,7 @@ var Dj = memo(function (e) {
     }
   }, React.createElement("div", {
     ref: v,
-    className: N($_7531.ImageLibraryItem, e$isSelect && $_7531.selected),
+    className: Classnames($_7531.ImageLibraryItem, e$isSelect && $_7531.selected),
     onClick: function () {
       if (!(b && !e$canShowMultiply)) {
         e$selectHandler({
@@ -79,11 +79,11 @@ var Dj = memo(function (e) {
     }
   }, b && React.createElement("div", {
     className: $_7531.groupIcon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-group"
   })), React.createElement("div", {
     className: $_7531.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-style-selected"
   })), React.createElement("div", {
     className: $_7531.content,
@@ -98,7 +98,7 @@ var Dj = memo(function (e) {
               }) ? 1 : 0
               Ij = setInterval(function () {
                 var n = e$urls[t % e$urls.length]
-                e.setAttribute("src", "".concat(n).concat(te.X(n) ? "?imageMogr2/thumbnail/!200x200r/blur/1x0/quality/100|imageslim" : "", " "))
+                e.setAttribute("src", "".concat(n).concat($$_$$_$$_$$_src_shared_tools_index.X(n) ? "?imageMogr2/thumbnail/!200x200r/blur/1x0/quality/100|imageslim" : "", " "))
                 t++
               }, 200)
             }

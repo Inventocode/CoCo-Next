@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_220_index from "./220/index"
+import * as /* [auto-meaningful-name] */$_220 from "./220"
 import * as /* [auto-meaningful-name] */$_365 from "./365"
 import * as /* [auto-meaningful-name] */$_264 from "./264"
 import * as i from "./38"
@@ -105,7 +105,7 @@ var E = function () {
       var i
       var a
       var s
-      var c = $_220_index.d($_939.a)
+      var c = $_220.d($_939.a)
       if (w.document && w.document.scripts) {
         for (var u = 0; u < w.document.scripts.length; u++) {
           if ("true" === w.document.scripts[u].dataset.entry) {
@@ -115,8 +115,8 @@ var E = function () {
         }
       }
       w.performance.getEntries().slice(this._performanceCursor).forEach(function (u) {
-        var f = $_220_index.d(u.startTime)
-        var d = $_220_index.d(u.duration)
+        var f = $_220.d(u.startTime)
+        var d = $_220.d(u.duration)
         if (!("navigation" === e.op && c + f < e.startTimestamp)) {
           switch (u.entryType) {
             case "navigation":
@@ -178,19 +178,19 @@ var E = function () {
                   C(e, {
                     op: "browser",
                     description: "request",
-                    startTimestamp: n + $_220_index.d(t.requestStart),
-                    endTimestamp: n + $_220_index.d(t.responseEnd)
+                    startTimestamp: n + $_220.d(t.requestStart),
+                    endTimestamp: n + $_220.d(t.responseEnd)
                   })
                   C(e, {
                     op: "browser",
                     description: "response",
-                    startTimestamp: n + $_220_index.d(t.responseStart),
-                    endTimestamp: n + $_220_index.d(t.responseEnd)
+                    startTimestamp: n + $_220.d(t.responseStart),
+                    endTimestamp: n + $_220.d(t.responseEnd)
                   })
                 })(e, t, n)
               }(e, u, c)
-              a = c + $_220_index.d(u.responseStart)
-              s = c + $_220_index.d(u.requestStart)
+              a = c + $_220.d(u.responseStart)
+              s = c + $_220.d(u.requestStart)
               break
             case "mark":
             case "paint":
@@ -274,7 +274,7 @@ var E = function () {
       this._performanceCursor = Math.max(performance.getEntries().length - 1, 0)
       this._trackNavigator(e)
       if ("pageload" === e.op) {
-        var f = $_220_index.d($_939.a)
+        var f = $_220.d($_939.a)
         if ("number" === typeof a) {
           $_264.a.log("[Measurements] Adding TTFB")
           this._measurements.ttfb = {
@@ -289,7 +289,7 @@ var E = function () {
         ["fcp", "fp", "lcp"].forEach(function (n) {
           if (t._measurements[n] && !(f >= e.startTimestamp)) {
             var /* [auto-meaningful-name] */t$_measurementsN$value = t._measurements[n].value
-            var i = f + $_220_index.d(t$_measurementsN$value)
+            var i = f + $_220.d(t$_measurementsN$value)
             var a = Math.abs(1e3 * (i - e.startTimestamp))
             var s = a - t$_measurementsN$value
             $_264.a.log("[Measurements] Normalized " + n + " from " + t$_measurementsN$value + " to " + a + " (" + s + ")")
@@ -299,7 +299,7 @@ var E = function () {
         if (this._measurements["mark.fid"] && this._measurements.fid) {
           C(e, {
             description: "first input delay",
-            endTimestamp: this._measurements["mark.fid"].value + $_220_index.d(this._measurements.fid.value),
+            endTimestamp: this._measurements["mark.fid"].value + $_220.d(this._measurements.fid.value),
             op: "web.vitals",
             startTimestamp: this._measurements["mark.fid"].value
           })
@@ -447,8 +447,8 @@ var E = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = $_220_index.d($_939.a)
-        var i = $_220_index.d(n.startTime)
+        var r = $_220.d($_939.a)
+        var i = $_220.d(n.startTime)
         $_264.a.log("[Measurements] Adding LCP")
         e._measurements.lcp = {
           value: t.value
@@ -484,8 +484,8 @@ var E = function () {
     }(function (t) {
       var n = t.entries.pop()
       if (n) {
-        var r = $_220_index.d($_939.a)
-        var i = $_220_index.d(n.startTime)
+        var r = $_220.d($_939.a)
+        var i = $_220.d(n.startTime)
         $_264.a.log("[Measurements] Adding FID")
         e._measurements.fid = {
           value: t.value
@@ -511,8 +511,8 @@ function x(e) {
     C(e$transaction, {
       op: "browser",
       description: null !== e$description && undefined !== e$description ? e$description : e$event,
-      startTimestamp: e$timeOrigin + $_220_index.d(c),
-      endTimestamp: e$timeOrigin + $_220_index.d(s)
+      startTimestamp: e$timeOrigin + $_220.d(c),
+      endTimestamp: e$timeOrigin + $_220.d(s)
     })
   }
 }

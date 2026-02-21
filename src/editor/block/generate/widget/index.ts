@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as LoadCustomWidget from "../../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index from "../../../../../unrestored/shared/1571/2636/17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_packages_Crc_blink_src_index from "../../../../shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_544 from "../../../../../unrestored/shared/1571/2636/301/544"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_658 from "../../../../../unrestored/shared/1571/2636/301/658"
 function setBlockGroupProfile(e, Blink) {
@@ -504,7 +504,7 @@ function setBlockGroupProfile(e, Blink) {
           field.set_constraints(validatorsGreaterThanValue, validatorsLessThanValue, validatorsIsInteger ? 1 : undefined)
           if ("__opacity" === types.key) {
             field.set_controller_option({
-              type: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.ControllerType.SLIDER,
+              type: $$_$$_$$_$$_shared_packages_Crc_blink_src_index.I.ControllerType.SLIDER,
               left_text: Blink.Msg["opacity.invisible"],
               right_text: Blink.Msg["opacity.visible"]
             })
@@ -670,7 +670,7 @@ function setBlockGroupProfile(e, Blink) {
               field?.set_constraints(controller.min, controller.max, 1)
               if (controller.leftText && controller.rightText) {
                 field?.set_controller_option({
-                  type: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.ControllerType.SLIDER,
+                  type: $$_$$_$$_$$_shared_packages_Crc_blink_src_index.I.ControllerType.SLIDER,
                   left_text: controller.leftText,
                   right_text: controller.rightText
                 })
@@ -815,7 +815,7 @@ function ve(e) {
     var /* [auto-meaningful-name] */h$getter
     var o = t.blocks[n]
     var /* [auto-meaningful-name] */o$mutation = o.mutation
-    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -866,7 +866,7 @@ function ve(e) {
     var /* [auto-meaningful-name] */h$setter
     var o = t.blocks[n]
     var /* [auto-meaningful-name] */o$mutation = o.mutation
-    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o$mutation)
+    var a = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(o$mutation)
     var s = a.getAttribute("property")
     var c = a.getAttribute("widget_type")
     var l = "true" === a.getAttribute("is_any_widget")
@@ -923,7 +923,7 @@ function ve(e) {
     var r = t.blocks[n]
     var o = e.getFieldValue(r, "WIDGET_ID") || ""
     var /* [auto-meaningful-name] */r$mutation = r.mutation
-    var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation)
+    var a = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation)
     var s = a.getAttribute("event")
     var c = e.getDynamicValue("__CURRENT_SCREEN_ID__")
     var l = a.getAttribute("widget_type")
@@ -954,13 +954,13 @@ function ve(e) {
   })
   e.insertBlockSnippetGenerator("widget_event_param", function (e, t) {
     var /* [auto-meaningful-name] */e$blocksT$mutation = e.blocks[t].mutation
-    var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
+    var r = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(e$blocksT$mutation).getAttribute("param")
     return "".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.a).concat(r)
   })
   e.insertBlockSnippetGenerator("widget_method", function (t, n) {
     var r = t.blocks[n]
     var /* [auto-meaningful-name] */r$mutation = r.mutation
-    var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation)
+    var i = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation)
     var a = i.getAttribute("method")
     var s = i.getAttribute("widget_type")
     var c = "true" === i.getAttribute("is_any_widget")
@@ -1017,21 +1017,21 @@ function ve(e) {
   e.insertBlockSnippetGenerator("color_picker", function (t, n) {
     var r
     var o = t.blocks[n]
-    var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(o.mutation)
+    var i = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(o.mutation)
     var a = function (r) {
       return e.valueToCode(t, n, r, e.ORDER_COMMA)
     }
     switch (Number(i.getAttribute("format"))) {
-      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.ColorPalette:
+      case $$_$$_$$_$$_shared_packages_Crc_blink_src_index.I.EColorFormat.ColorPalette:
         r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHex", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(i.getAttribute("color") || "")])
         break
-      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.ColorString:
+      case $$_$$_$$_$$_shared_packages_Crc_blink_src_index.I.EColorFormat.ColorString:
         r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHex", [a("COLOR_STRING")])
         break
-      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.HSVA:
+      case $$_$$_$$_$$_shared_packages_Crc_blink_src_index.I.EColorFormat.HSVA:
         r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorHsva", [a("H"), a("S"), a("V"), a("A")])
         break
-      case $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.I.EColorFormat.RGBA:
+      case $$_$$_$$_$$_shared_packages_Crc_blink_src_index.I.EColorFormat.RGBA:
         r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.s("getColorRgba", [a("R"), a("G"), a("B"), a("A")])
     }
     return r || ""

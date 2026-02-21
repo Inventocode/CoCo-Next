@@ -15,9 +15,9 @@ import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -514,12 +514,12 @@ var ZL = memo(function () {
       return e.apply(this, arguments)
     }
   }()
-  var je = React.createElement("div", null, React.createElement($_13_index.d, {
+  var je = React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "default",
     onClick: Ee
   }, $_710$a$formatMessage({
     id: "cloudGrid.cancel"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     disabled: J,
     onClick: function () {
@@ -672,7 +672,7 @@ var ZL = memo(function () {
   var De = function () {
     return B
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: e$visible,
     className: $_348.dataViewerGrid,
     title: React.createElement("div", {
@@ -680,7 +680,7 @@ var ZL = memo(function () {
     }, React.createElement("div", {
       className: $_348.title
     }, e$widgetName), React.createElement("div", {
-      className: N($_348.titleBtn, e$isProd ? $_348.prod : $_348.dev)
+      className: Classnames($_348.titleBtn, e$isProd ? $_348.prod : $_348.dev)
     }, $_710$a$formatMessage(e$isProd ? {
       id: "cloudGrid.prodData"
     } : {

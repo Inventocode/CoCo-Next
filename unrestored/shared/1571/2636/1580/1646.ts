@@ -4,4 +4,4 @@
  * 模块 ID：1646
  */
 
-require("./1785/534")(Math, "Math", true)
+require("./1282/534")(Math, "Math", true)

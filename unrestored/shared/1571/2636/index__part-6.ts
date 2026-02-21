@@ -7,7 +7,7 @@
 "use strict"
 
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -24,7 +24,7 @@ var we = memo(function (e) {
   return React.createElement("div", {
     className: $_8091.container
   }, React.createElement("div", {
-    className: N($_8091.image, (t = {}, k.a(t, $_8091.imageOnly, "image-only" === r), k.a(t, $_8091.imageText, "image-text" === r), t))
+    className: Classnames($_8091.image, (t = {}, k.a(t, $_8091.imageOnly, "image-only" === r), k.a(t, $_8091.imageText, "image-text" === r), t))
   }), i && React.createElement("div", {
     className: $_8091.text
   }, i))
