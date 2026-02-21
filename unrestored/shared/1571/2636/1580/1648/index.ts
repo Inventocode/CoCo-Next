@@ -6,20 +6,20 @@
 
 "use strict"
 
-var r = require("../1785/271")
-var o = require("../1782/194")
+var r = require("../1662/271")
+var o = require("../1785/194")
 var i = require("./829")
-var a = require("../1785/400")
-var s = require("../1785/334")
+var a = require("../1282/400/index")
+var s = require("../1282/334")
 var c = require("./714")
 var l = require("./952")
-var u = require("./757")
-var d = require("./1234")
+var u = require("../1581/757")
+var d = require("./1234/index")
 var p = require("../1659/168")
 var f = require("../1282/577/index")
-var /* [auto-meaningful-name] */require$_635$f = require("./635").f
-var /* [auto-meaningful-name] */require$_386_index$f = require("./386/index").f
-var /* [auto-meaningful-name] */require$_300$f = require("./300").f
+var /* [auto-meaningful-name] */require$$_1581_635$f = require("../1581/635").f
+var /* [auto-meaningful-name] */require$$_1581_386$f = require("../1581/386").f
+var /* [auto-meaningful-name] */require$$_1662_300_index$f = require("../1662/300/index").f
 var /* [auto-meaningful-name] */require$_761$trim = require("./761").trim
 var /* [auto-meaningful-name] */o$Number = o.Number
 var /* [auto-meaningful-name] */o$Number$prototype = o$Number.prototype
@@ -74,9 +74,9 @@ if (i("Number", !o$Number(" 0o1") || !o$Number("0b1") || o$Number("+0x1"))) {
       return n instanceof w && (y ? p(function () {
         o$Number$prototype.valueOf.call(n)
       }) : "Number" != c(n)) ? l(new o$Number(E(t)), n, w) : E(t)
-    }, C = r ? require$_635$f(o$Number) : "MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,EPSILON,isFinite,isInteger,isNaN,isSafeInteger,MAX_SAFE_INTEGER,MIN_SAFE_INTEGER,parseFloat,parseInt,isInteger,fromString,range".split(","), T = 0; C.length > T; T++) {
+    }, C = r ? require$$_1581_635$f(o$Number) : "MAX_VALUE,MIN_VALUE,NaN,NEGATIVE_INFINITY,POSITIVE_INFINITY,EPSILON,isFinite,isInteger,isNaN,isSafeInteger,MAX_SAFE_INTEGER,MIN_SAFE_INTEGER,parseFloat,parseInt,isInteger,fromString,range".split(","), T = 0; C.length > T; T++) {
     if (s(o$Number, O = C[T]) && !s(w, O)) {
-      require$_300$f(w, O, require$_386_index$f(o$Number, O))
+      require$$_1662_300_index$f(w, O, require$$_1581_386$f(o$Number, O))
     }
   }
   w.prototype = o$Number$prototype

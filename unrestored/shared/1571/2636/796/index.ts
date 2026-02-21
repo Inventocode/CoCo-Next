@@ -11,7 +11,7 @@ import { memo } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_710 from "../710"
-import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_751 from "./751"
 import /* [auto-meaningful-name] */$_7511 from "./751"
 function l(e) {
@@ -38,11 +38,11 @@ function l(e) {
     id: u
   })), React1.createElement("div", {
     className: $_7511.actions
-  }, React1.createElement($$_13_index.d, {
+  }, React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: e$onCancel
   }, $$_710$a$formatMessage({
     id: "notSave"
-  })), React1.createElement($$_13_index.d, {
+  })), React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     onClick: e$onOk
   }, $$_710$a$formatMessage({

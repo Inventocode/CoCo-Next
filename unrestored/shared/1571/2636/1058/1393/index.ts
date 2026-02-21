@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../207/787/399")
+var r = require("../../207/787/399/index")
 var i = require("../../207/787/572/index")
 var o = this && this.__importDefault || function (e) {
   return e && e.__esModule ? e : {
@@ -35,7 +35,7 @@ function d(e, t) {
       throw new Error(t)
     }
   } else {
-    require("./573")(e, t)
+    require("./573/index")(e, t)
   }
 }
 var h = false

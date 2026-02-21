@@ -267,10 +267,10 @@ if (!$$_$$_$$_$$_unrestored_shared_1571_2636_28_index.d()) {
   }
   window.CordovaWebsocketPlugin = B
 }
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_tools_index from "../../tools/index"
 function G(e, t, n, r) {
   var /* [auto-meaningful-name] */e$url
-  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || $$_$$_$$_$$_unrestored_shared_1571_2636_15.O(e.url || ""))) {
+  if (!((null === (e$url = e.url) || undefined === e$url ? undefined : e$url.includes("codemao.cn")) || $$_$$_tools_index.O(e.url || ""))) {
     window.CordovaWebsocketPlugin.wsConnect(e, function (e) {
       t(e)
     }, function (e) {
@@ -288,7 +288,7 @@ function U(e, t, n) {
   n = n || "bye"
   window.CordovaWebsocketPlugin.wsClose(e, t, n)
 }
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_428_346 from "../../../../unrestored/shared/1571/2636/20/428/346"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_34_347_346 from "../../../../unrestored/shared/1571/2636/34/347/346"
 function V() {
   return new Promise(function (e) {
     window.stepper.isStepCountingAvailable().then(function (t) {
@@ -345,17 +345,17 @@ X.interceptors.request.use(function (e) {
   if (e.baseURL) {
     t = e.baseURL + t.slice(1)
   }
-  return $$_$$_$$_$$_unrestored_shared_1571_2636_15.Y(t) ? e : Promise.reject(new Error("auth failed"))
+  return $$_$$_tools_index.Y(t) ? e : Promise.reject(new Error("auth failed"))
 }, function (e) {
   return Promise.reject(e)
 })
 var Q = X
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_index from "../../../../unrestored/shared/1571/2636/20/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_428_112 from "../../../../unrestored/shared/1571/2636/20/428/112"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_34_347_112 from "../../../../unrestored/shared/1571/2636/34/347/112"
 var $ = {
   isNative: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.d,
   filterXss: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.i,
-  getWidgetImageUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_20_428_112.b,
+  getWidgetImageUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_34_347_112.b,
   openLoginPage: $$_$$_$$_$$_unrestored_shared_1571_2636_28_index.q
 }
 var ee = new Map()
@@ -382,7 +382,7 @@ function ne(e) {
     case "websocket":
       return o
     case "brightness":
-      return $$_$$_$$_$$_unrestored_shared_1571_2636_20_428_346
+      return $$_$$_$$_$$_unrestored_shared_1571_2636_34_347_346
     case "stepper":
       return i
     case "axios":

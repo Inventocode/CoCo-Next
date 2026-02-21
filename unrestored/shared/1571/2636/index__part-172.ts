@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -69,9 +69,9 @@ var hI = memo(function (e) {
                   break
                 }
                 i = t$importFailResults[o]
-                a = te.ob(i.file)
+                a = $$_$$_$$_$$_src_shared_tools_index.ob(i.file)
                 e.next = 8
-                return te.c(i.file)
+                return $$_$$_$$_$$_src_shared_tools_index.c(i.file)
               case 8:
                 if (!e.sent) {
                   a = $_15271
@@ -110,13 +110,13 @@ var hI = memo(function (e) {
     }
   }, [t$fileType])
   return React.createElement("div", {
-    className: N($_6231.importFailToast, k.a({}, $_6231.extensional, m)),
+    className: Classnames($_6231.importFailToast, k.a({}, $_6231.extensional, m)),
     style: {
       display: t$visible ? "block" : "none"
     }
   }, React.createElement("div", {
     className: $_6231.title
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-warning"
   }), React.createElement("p", null, t$importFailResults.length, " ", $_710$a$formatMessage({
     id: y
@@ -146,7 +146,7 @@ var hI = memo(function (e) {
     })), React.createElement("span", null, e.name)), React.createElement("div", {
       className: $_6231.errorMessage
     }, e.message))
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     className: $_6231.confirmButton,
     onClick: C

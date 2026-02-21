@@ -18,10 +18,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as wn from "./90"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -57,12 +57,12 @@ var oh = memo(function (e) {
     return React.createElement(React.Fragment, null, e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.ONLY_TITLE && function (e, t) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N(nh.flexSC, nh.template1, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
+        className: Classnames(nh.flexSC, nh.template1, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
       }, React.createElement("div", {
         className: nh.title
       }, $_42_index.e(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)), React.createElement("div", {
         className: nh.iconBox
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: nh.icon
       }))))
@@ -70,14 +70,14 @@ var oh = memo(function (e) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N(nh.flexSC, nh.template2, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
+        className: Classnames(nh.flexSC, nh.template2, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
       }, rh.titleSlot ? React.createElement("div", {
         className: nh.title
       }, $_42_index.e(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t)) : React.createElement("div", null), React.createElement("div", {
-        className: N(nh.flexSC, nh.subTitleBox)
+        className: Classnames(nh.flexSC, nh.subTitleBox)
       }, rh.subTitleSlot && React.createElement("div", {
         className: nh.subTitle
-      }, $_42_index.e(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), React.createElement($_13_index.j, {
+      }, $_42_index.e(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: nh.icon
       }))))
@@ -86,16 +86,16 @@ var oh = memo(function (e) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N(nh.flexSC, nh.template3, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
+        className: Classnames(nh.flexSC, nh.template3, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
       }, React.createElement("div", {
         className: nh.title
       }, rh.imageSlot && React.createElement("div", {
         className: nh.smallImgBox
       }, $_42_index.e(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId, "imageSlot", e, t)), rh.titleSlot && React.createElement("div", null, $_42_index.e(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId, "titleSlot", e, t))), React.createElement("div", {
-        className: N(nh.flexSC, nh.subTitleBox)
+        className: Classnames(nh.flexSC, nh.subTitleBox)
       }, rh.subTitleSlot && React.createElement("div", {
         className: nh.subTitle
-      }, $_42_index.e(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), React.createElement($_13_index.j, {
+      }, $_42_index.e(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: nh.icon
       }))))
@@ -104,7 +104,7 @@ var oh = memo(function (e) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N(nh.flexSC, nh.template4, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
+        className: Classnames(nh.flexSC, nh.template4, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
       }, React.createElement("div", {
         className: nh.avatarAndTitle
       }, rh.avatarSlot && React.createElement("div", {
@@ -117,7 +117,7 @@ var oh = memo(function (e) {
         className: nh.subTitle
       }, $_42_index.e(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId, "subTitleSlot", e, t)))), React.createElement("div", {
         className: nh.iconBox
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: nh.icon
       }))))
@@ -126,7 +126,7 @@ var oh = memo(function (e) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N(nh.flexSC, nh.template5, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
+        className: Classnames(nh.flexSC, nh.template5, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
       }, React.createElement("div", {
         className: nh.imgAndTitleBox
       }, rh.imageSlot && React.createElement("div", {
@@ -137,7 +137,7 @@ var oh = memo(function (e) {
         className: nh.desc
       }, $_42_index.e(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId, "descSlot", e, t)))), React.createElement("div", {
         className: nh.iconBox
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: nh.icon
       }))))
@@ -148,7 +148,7 @@ var oh = memo(function (e) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$bannerSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N(nh.template6, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
+        className: Classnames(nh.template6, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
       }, React.createElement("div", {
         className: nh.avatarAndTitle
       }, rh.avatarSlot && React.createElement("div", {
@@ -171,7 +171,7 @@ var oh = memo(function (e) {
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
       var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N(nh.template6, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
+        className: Classnames(nh.template6, "tiled" === e$attributes$templateRenderType ? nh.itemTiled : nh.itemCard)
       }, rh.bannerSlot && React.createElement("div", {
         className: nh.bannerImgBox
       }, $_42_index.e(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId, "bannerSlot", e, t)), React.createElement("div", {
@@ -210,7 +210,7 @@ var oh = memo(function (e) {
     "data-max-width": $_172.i,
     "data-min-height": $_172.j,
     "data-max-height": $_172.h,
-    className: N(wn.b, k.a({}, nh.hide, !e$visible)),
+    className: Classnames(wn.b, k.a({}, nh.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,

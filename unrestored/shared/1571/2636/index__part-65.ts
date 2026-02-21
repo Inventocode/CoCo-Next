@@ -10,7 +10,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_277 from "./277"
@@ -18,7 +18,7 @@ var /* [auto-meaningful-name] */ShadowType_Math_number_FieldName_NUM_Constraints
 var Ah = {
   itemCount_: 1,
   addMutation: function (e) {
-    if ($_17_index.Blink.events.is_undoing()) {
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
       if ("number" === typeof e) {
         this.itemCount_ = e
         this.updateShape_()
@@ -32,11 +32,11 @@ var Ah = {
         old_value: this$itemCount_,
         new_value: this.itemCount_
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   removeMutation: function (e) {
-    if ($_17_index.Blink.events.is_undoing()) {
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
       if ("number" === typeof e) {
         this.itemCount_ = e
         this.updateShape_()
@@ -50,11 +50,11 @@ var Ah = {
         old_value: this$itemCount_,
         new_value: this.itemCount_
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   updateShape_: function () {
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (1 === this.itemCount_) {
       if (this.get_input("X")) {
         this.remove_input("X")
@@ -82,7 +82,7 @@ var Ah = {
       }
       this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(ep.q(undefined), "MUTATE_REMOVE_BUTTON")
     }
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
   },
   mutationToDom: function () {
     var e = document.createElement("mutation")
@@ -98,7 +98,7 @@ var Ah = {
 var Ih = {
   itemCount_: 1,
   addMutation: function (e) {
-    if ($_17_index.Blink.events.is_undoing()) {
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
       if ("number" === typeof e) {
         this.itemCount_ = e
         this.updateShape_()
@@ -112,11 +112,11 @@ var Ih = {
         old_value: this$itemCount_,
         new_value: this.itemCount_
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   removeMutation: function (e) {
-    if ($_17_index.Blink.events.is_undoing()) {
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
       if ("number" === typeof e) {
         this.itemCount_ = e
         this.updateShape_()
@@ -130,11 +130,11 @@ var Ih = {
         old_value: this$itemCount_,
         new_value: this.itemCount_
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   updateShape_: function () {
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (1 === this.itemCount_) {
       if (this.get_input("X")) {
         this.remove_input("X")
@@ -174,7 +174,7 @@ var Ih = {
       }
       this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(ep.q(undefined), "MUTATE_REMOVE_BUTTON")
     }
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
   },
   mutationToDom: function () {
     var e = document.createElement("mutation")
@@ -190,7 +190,7 @@ var Ih = {
 var jh = {
   itemCount_: 1,
   addMutation: function (e) {
-    if ($_17_index.Blink.events.is_undoing()) {
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
       if ("number" === typeof e) {
         this.itemCount_ = e
         this.updateShape_()
@@ -204,11 +204,11 @@ var jh = {
         old_value: this$itemCount_,
         new_value: this.itemCount_
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   removeMutation: function (e) {
-    if ($_17_index.Blink.events.is_undoing()) {
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_undoing()) {
       if ("number" === typeof e) {
         this.itemCount_ = e
         this.updateShape_()
@@ -222,11 +222,11 @@ var jh = {
         old_value: this$itemCount_,
         new_value: this.itemCount_
       })
-      $_17_index.Blink.events.fire(n)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(n)
     }
   },
   updateShape_: function () {
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (1 === this.itemCount_) {
       if (this.get_input("X")) {
         this.remove_input("X")
@@ -254,7 +254,7 @@ var jh = {
       }
       this.append_dummy_input("MUTATE_REMOVE_BUTTON").append_field(ep.q(undefined), "MUTATE_REMOVE_BUTTON")
     }
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
   },
   mutationToDom: function () {
     var e = document.createElement("mutation")
@@ -647,7 +647,7 @@ var Nh = {
         if (r && "FieldNumber" === r.field_type) {
           var o = "hue" === n ? 360 : 100
           r.set_controller_option({
-            type: $_17_index.I.ControllerType.SLIDER,
+            type: $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.ControllerType.SLIDER,
             left_text: "0",
             right_text: o.toString()
           })

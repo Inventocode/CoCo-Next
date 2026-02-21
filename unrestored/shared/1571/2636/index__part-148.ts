@@ -9,12 +9,12 @@
 import { gT, _T, vT } from "./index__part-146"
 import { OT } from "./index__part-147"
 import qC from "./99"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as Et from "./9"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch, useSelector } from "react-redux"
@@ -33,11 +33,11 @@ var TT = memo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
-      return $_17_index.BU.base.is_old_dropdown_option(e) ? "string" === typeof (null === (n = e[2]) || undefined === n ? undefined : n.src) : "basic" === e.type && "string" === typeof (null === (e$icon = e.icon) || undefined === e$icon ? undefined : e$icon.src)
+      return $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) ? "string" === typeof (null === (n = e[2]) || undefined === n ? undefined : n.src) : "basic" === e.type && "string" === typeof (null === (e$icon = e.icon) || undefined === e$icon ? undefined : e$icon.src)
     })
   }, [n])
-  return React.createElement($_13_index.w, {
-    className: N(qC.dynamicDataList, r && qC.imageTextDataList),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.w, {
+    className: Classnames(qC.dynamicDataList, r && qC.imageTextDataList),
     open: n.visible,
     value: n.value,
     onChange: function (e) {
@@ -48,12 +48,12 @@ var TT = memo(function () {
     }
   }, n.options.map(function (t, n) {
     var r
-    if ($_17_index.BU.base.is_old_dropdown_option(t)) {
+    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(t)) {
       return t[1] === Et.h && t[0] === Et.g ? React.createElement("div", {
         className: qC.nullItem
       }, $_710$a$formatMessage({
         id: "closeHeadline"
-      })) : React.createElement($_13_index.p, {
+      })) : React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
         value: t[1],
         key: n,
         className: qC.dropdownOption
@@ -77,7 +77,7 @@ var TT = memo(function () {
       if (t.value === Et.h && t.text === Et.g) {
         return
       }
-      return React.createElement($_13_index.p, {
+      return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
         value: t.value,
         key: n,
         className: qC.dropdownOption
@@ -87,10 +87,10 @@ var TT = memo(function () {
         className: $_9351.screenIndex
       }, ""), "string" === typeof (null === (t$icon = t.icon) || undefined === t$icon ? undefined : t$icon.src) && React.createElement("div", {
         className: qC.dropdownImageBox
-      }, "nextScreen" === t.value && React.createElement($_13_index.j, {
+      }, "nextScreen" === t.value && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         className: $_9351.dropdownImageScreen,
         type: "icon-prev-screen"
-      }), "prevScreen" === t.value && React.createElement($_13_index.j, {
+      }), "prevScreen" === t.value && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         className: $_9351.dropdownImageScreen,
         type: "icon-next-screen"
       }), React.createElement("img", {
@@ -99,7 +99,7 @@ var TT = memo(function () {
         alt: ""
       })), "object" === typeof (null === (t$icon1 = t.icon) || undefined === t$icon1 ? undefined : t$icon1.src) && React.createElement("div", {
         className: qC.dropdownIconBox
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-screen-variable"
       })), React.createElement("span", null, t.text))
     }

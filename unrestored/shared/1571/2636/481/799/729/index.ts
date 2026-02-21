@@ -9,14 +9,14 @@
 export { _ as b }
 export { A as a }
 import * as /* [auto-meaningful-name] */$$_38 from "../38"
-import * as /* [auto-meaningful-name] */$$_220_817 from "../220/817"
+import * as /* [auto-meaningful-name] */$_817 from "./817"
 import * as /* [auto-meaningful-name] */$_1064 from "./1064"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
 import * as /* [auto-meaningful-name] */$$_524 from "../524"
 import * as /* [auto-meaningful-name] */$_1477 from "./1477"
 import * as /* [auto-meaningful-name] */$$_775_index from "../775/index"
-import * as /* [auto-meaningful-name] */$$_775_776 from "../775/776"
-import * as /* [auto-meaningful-name] */$$_220_index from "../220/index"
+import * as /* [auto-meaningful-name] */$_776 from "./776"
+import * as /* [auto-meaningful-name] */$$_220 from "../220"
 function d() {
   var e = this.getScope()
   if (e) {
@@ -30,7 +30,7 @@ function d() {
   return {}
 }
 function h(e, t, n) {
-  return $$_220_index.c() ? undefined !== e.sampled ? (e.setMetadata({
+  return $$_220.c() ? undefined !== e.sampled ? (e.setMetadata({
     transactionSampling: {
       method: $_1064.a.Explicit
     }
@@ -65,7 +65,7 @@ function p(e, t) {
   var n
   var /* [auto-meaningful-name] */o$_experiments
   var o = (null === (n = this.getClient()) || undefined === n ? undefined : n.getOptions()) || {}
-  var a = new $$_775_776.a(e, this)
+  var a = new $_776.a(e, this)
   if ((a = h(a, o, $$_38.a({
     parentSampled: e.parentSampled,
     transactionContext: e
@@ -89,7 +89,7 @@ function _(e, t, n, i, o) {
 }
 function A() {
   !function () {
-    var e = $$_220_817.c()
+    var e = $_817.c()
     if (e.__SENTRY__) {
       e.__SENTRY__.extensions = e.__SENTRY__.extensions || {}
       if (!e.__SENTRY__.extensions.startTransaction) {
@@ -102,7 +102,7 @@ function A() {
   }()
   if ($$_524.b()) {
     (function () {
-      var t = $$_220_817.c()
+      var t = $_817.c()
       if (t.__SENTRY__) {
         var n = {
           mongodb: function () {

@@ -6,7 +6,7 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */$$_$$_8 from "../../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { createElement } from "react"
 import * as /* [auto-meaningful-name] */$$_$$_21 from "../../21"
 import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
@@ -54,7 +54,7 @@ function S(e) {
       style: {
         zIndex: e$zIndex
       },
-      className: $$_$$_8("".concat(e$prefixCls, "-mask"), e$className)
+      className: Classnames("".concat(e$prefixCls, "-mask"), e$className)
     })
   })
 }

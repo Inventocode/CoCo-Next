@@ -9,7 +9,7 @@
 import { u, l } from "./index__part-0"
 import { h, g, v, m, y, w } from "./index__part-1"
 import { F } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$_808 from "./808"
+import * as /* [auto-meaningful-name] */$_808_index from "./808/index"
 import * as /* [auto-meaningful-name] */$_275 from "./275"
 import * as /* [auto-meaningful-name] */$_273 from "./273"
 import * as /* [auto-meaningful-name] */$_1009_index from "./1009/index"
@@ -25,7 +25,7 @@ function j(e, t, n, r) {
     r = {}
   }
   if (!Intl.ListFormat) {
-    e$onError(new $_808.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"))
+    e$onError(new $_808_index.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"))
   }
   var c = $_273.e(r, M)
   try {
@@ -66,7 +66,7 @@ function H(e, t, n, r) {
     r = {}
   }
   if (!Intl.DisplayNames) {
-    e$onError(new $_808.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"))
+    e$onError(new $_808_index.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"))
   }
   var c = $_273.e(r, U)
   try {

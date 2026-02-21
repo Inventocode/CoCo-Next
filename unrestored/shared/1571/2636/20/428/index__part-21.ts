@@ -10,9 +10,9 @@ import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
-import * as /* [auto-meaningful-name] */$_346 from "./346"
+import * as /* [auto-meaningful-name] */$$_$$_34_347_346 from "../../34/347/346"
 var Ad = {
-  getBrightness: $_346.getBrightness,
+  getBrightness: $$_$$_34_347_346.getBrightness,
   setBrightness: function (e) {
     if ("number" === typeof e) {
       if (e > 100) {
@@ -34,7 +34,7 @@ var Ad = {
             n.style.opacity = String(r)
           }
         }
-        $_346.setBrightness(e)
+        $$_$$_34_347_346.setBrightness(e)
       }
     } else {
       $$_$$_14.a.condition(false, {
@@ -45,7 +45,7 @@ var Ad = {
   },
   setKeepScreenOn: function (e) {
     if ($$_$$_28_index.d()) {
-      $_346.setKeepScreenOn(e)
+      $$_$$_34_347_346.setKeepScreenOn(e)
     } else {
       $$_$$_14.a.condition(false, {
         type: "warning",

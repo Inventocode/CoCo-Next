@@ -18,7 +18,7 @@ import /* [auto-meaningful-name] */React from "react"
 import { useMemo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Color from "color"
-import * as /* [auto-meaningful-name] */$$_112 from "../112"
+import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
 var F = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
@@ -30,8 +30,8 @@ var F = function (e) {
   var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
   var /* [auto-meaningful-name] */e$attributes$iconId = e$attributes.iconId
   var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
-  var m = $$_112.a(e$attributes$iconId) || $$_$$_$$_82.c
-  var g = $$_112.b(e$attributes$backgroundImage) || $$_$$_$$_82.f
+  var m = $$_$$_$$_34_347_112.a(e$attributes$iconId) || $$_$$_$$_82.c
+  var g = $$_$$_$$_34_347_112.b(e$attributes$backgroundImage) || $$_$$_$$_82.f
   var _ = useMemo(function () {
     try {
       return Color(e$attributes$textColor.toString()).toString()

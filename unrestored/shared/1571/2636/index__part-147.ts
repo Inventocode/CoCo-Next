@@ -7,10 +7,10 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useSelector, useDispatch } from "react-redux"
@@ -29,7 +29,7 @@ var OT = memo(function () {
   var /* [auto-meaningful-name] */t$blockInfo$sourceBlockId = t$blockInfo.sourceBlockId
   var /* [auto-meaningful-name] */t$blockInfo$fieldName = t$blockInfo.fieldName
   var /* [auto-meaningful-name] */t$options = t.options
-  var a = $_17_index.Blink.mainWorkspace.get_block_by_id(t$blockInfo$sourceBlockId)
+  var a = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t$blockInfo$sourceBlockId)
   var s = (null === a || undefined === a ? undefined : a.get_field_value("WIDGET_ID")) || (null === a || undefined === a || null === (e = a.get_parent()) || undefined === e ? undefined : e.get_field_value("WIDGET_ID"))
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var l = useDispatch()
@@ -83,7 +83,7 @@ var OT = memo(function () {
       console.error("actorId is null")
     }
   }
-  return React.createElement($_13_index.w, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.w, {
     className: $_4231.container,
     open: t.visible,
     value: t.value,
@@ -98,18 +98,18 @@ var OT = memo(function () {
     switch (t$blockInfo$fieldName) {
       case "ACTOR_STYLE_ID":
         e = t$options.map(function (e, t) {
-          if (!$_17_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
+          if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
             var /* [auto-meaningful-name] */e$value = e.value
             var /* [auto-meaningful-name] */e$text = e.text
             if (e$value !== Et.h) {
               if ("DROPDOWN_ADD_BUTTON" === e$value) {
-                return React.createElement($_13_index.p, {
+                return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
                   value: "__EMPTY_VALUE__",
                   key: e$value
                 }, React.createElement("div", {
                   className: $_4231.addOption,
                   onClick: u
-                }, React.createElement($_13_index.j, {
+                }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
                   type: "icon-add"
                 }), $_710$a$formatMessage({
                   id: "actorAddStyle"
@@ -133,7 +133,7 @@ var OT = memo(function () {
                   }
                 }
               }(s, e$value)
-              return React.createElement($_13_index.p, {
+              return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
                 value: e$value,
                 key: e$value
               }, React.createElement("span", {
@@ -157,7 +157,7 @@ var OT = memo(function () {
         break
       case "ACTOR_ACTION_ID":
         e = t$options.map(function (e) {
-          if (!$_17_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
+          if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
             var /* [auto-meaningful-name] */e$text = e.text
             var /* [auto-meaningful-name] */e$value = e.value
             var r = function (e, t) {
@@ -175,17 +175,17 @@ var OT = memo(function () {
                 }
               }
             }(s, e$value)
-            return "DROPDOWN_ADD_BUTTON" === e$value ? React.createElement($_13_index.p, {
+            return "DROPDOWN_ADD_BUTTON" === e$value ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
               value: "__EMPTY_VALUE__",
               key: e$value
             }, React.createElement("div", {
               className: $_4231.addOption,
               onClick: u
-            }, React.createElement($_13_index.j, {
+            }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
               type: "icon-add"
             }), $_710$a$formatMessage({
               id: "ActorStyleDialog.addAction"
-            }))) : React.createElement($_13_index.p, {
+            }))) : React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
               value: e$value,
               key: e$value
             }, React.createElement("div", {

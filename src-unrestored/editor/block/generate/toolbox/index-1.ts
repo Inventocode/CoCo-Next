@@ -9,7 +9,7 @@
 var E
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4 from "../../../../../unrestored/shared/1571/2636/4"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index from "../../../../../unrestored/shared/1571/2636/17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_packages_Crc_blink_src_index from "../../../../shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../unrestored/shared/1571/2636/25/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_46_index from "../../../../../unrestored/shared/1571/2636/46/index"
 function w(e, t) {
@@ -530,7 +530,7 @@ function I(e) {
     return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.i("asyncScheduler.waitUntil", undefined, [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.g(r, true)])
   })
   e.insertBlockSnippetGenerator("console_log", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
       var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
         o.push(l)
@@ -540,7 +540,7 @@ function I(e) {
     return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n("consoleLog", [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(u), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r.id)].concat(o))
   })
   e.insertBlockSnippetGenerator("new_console_log", function (t, n) {
-    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
+    for (var r = t.blocks[n], o = e.getFieldValue(r, "TYPE"), i = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, s = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), c = s ? parseInt(s) : 0, l = 0; l < c; l++) {
       var u = e.valueToCode(t, n, "VALUE".concat(l), e.ORDER_FUNCTION_CALL)
       if (u) {
         i.push(u)
@@ -558,7 +558,7 @@ function I(e) {
     return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.n(ConsoleLog, [$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(p), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_4.o(r.id)].concat(i))
   })
   e.insertBlockSnippetGenerator("console_error", function (t, n) {
-    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_17_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
+    for (var r = t.blocks[n], o = [e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""], /* [auto-meaningful-name] */r$mutation = r.mutation, a = $$_$$_$$_$$_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(r$mutation).getAttribute("items"), s = a ? parseInt(a) : 0, c = 0; c < s; c++) {
       var l = e.valueToCode(t, n, "VALUE".concat(c), e.ORDER_FUNCTION_CALL)
       if (l) {
         o.push(l)

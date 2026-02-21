@@ -7,8 +7,8 @@
 "use strict"
 
 var Xe
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$_276 from "./276"
@@ -26,13 +26,13 @@ var ot = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var o = e$type === Xe.ERROR ? $_7501.error : $_7501.warn
   return React.createElement("div", {
-    className: N(o, $_7501.container)
+    className: Classnames(o, $_7501.container)
   }, React.createElement("span", {
     className: $_7501.message
   }, e$message), React.createElement("span", {
     className: $_7501.close,
     onClick: e$onClose
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close",
     className: $_7501.icon
   })))

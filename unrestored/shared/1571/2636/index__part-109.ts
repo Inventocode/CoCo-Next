@@ -21,12 +21,12 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as Yr from "./53"
 import * as Tn from "./68"
 import * as Et from "./9"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */Color from "color"
 import * as D from "./6"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -50,7 +50,7 @@ var TE = memo(function (e) {
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var g = Math.ceil(e$value * u)
   var _ = function (e) {
-    return te.p(function (e) {
+    return $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
       var t = parseInt(e)
       e$onChange(n, t /= u)
     }, e)
@@ -77,7 +77,7 @@ var SE = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
-    className: N($_202.formItemWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: Classnames($_202.formItemWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_202.labelWrapper
   }, React.createElement("span", null, $_710$a$formatMessage({
@@ -175,7 +175,7 @@ var jE = memo(function (e) {
   var c = useDispatch()
   var l = e$getValue("backgroundImage") || Pp.a
   return React.createElement("div", {
-    className: N($_202.formItemWrapper, $_202.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
+    className: Classnames($_202.formItemWrapper, $_202.buttonWrapper, "coco-form-item", "coco-form-item-vertical")
   }, React.createElement("div", {
     className: $_202.backgroundLabel
   }, React.createElement("span", null, $_710$a$formatMessage({
@@ -183,14 +183,14 @@ var jE = memo(function (e) {
   })), React.createElement("div", {
     className: $_202.modeActionWrapper
   }, React.createElement("div", {
-    className: N($_202.modeTemplate, i === Fp.a.TEMPLATE && $_202.backgroundSelected),
+    className: Classnames($_202.modeTemplate, i === Fp.a.TEMPLATE && $_202.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", Fp.a.TEMPLATE)
     }
   }, $_710$a$formatMessage({
     id: "template"
   })), React.createElement("div", {
-    className: N($_202.modeImage, i === Fp.a.IMAGE && $_202.backgroundSelected),
+    className: Classnames($_202.modeImage, i === Fp.a.IMAGE && $_202.backgroundSelected),
     onClick: function () {
       e$onChange("backgroundMode", Fp.a.IMAGE)
     }
@@ -208,7 +208,7 @@ var jE = memo(function (e) {
     },
     params: [o]
   }, IE.map(function (e) {
-    return React.createElement($_13_index.p, {
+    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
       key: e.value,
       value: e.value
     }, e.renderContent(o))
@@ -249,21 +249,21 @@ var jE = memo(function (e) {
     style: {
       marginTop: 8
     }
-  }, React.createElement($_13_index.s, {
-    className: N($_202.radioWrapper, $_202.sizeRadioBox),
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
+    className: Classnames($_202.radioWrapper, $_202.sizeRadioBox),
     value: e$getValue("imageResizeMode") || Fp.b.CONTAIN,
     onChange: function (e) {
       e$onChange("imageResizeMode", e)
     }
-  }, React.createElement($_13_index.t, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Fp.b.CONTAIN
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-contain"
   }), $_710$a$formatMessage({
     id: "".concat(Fp.b.CONTAIN)
-  })), React.createElement($_13_index.t, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Fp.b.STRETCH
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-stretch"
   }), $_710$a$formatMessage({
     id: "".concat(Fp.b.STRETCH)
@@ -287,8 +287,8 @@ var NE = memo(function (e) {
   var f = (null === p || undefined === p ? undefined : p.source) || (null === p || undefined === p ? undefined : p.cdnUrl)
   var m = e$getValue("resizeMode")
   var g = e$formConfig$stillImageShowResizeMode || f
-  return React.createElement(React.Fragment, null, React.createElement($_13_index.i, {
-    className: N($_747.formItemWrapper, $_747.changeImageWrapper),
+  return React.createElement(React.Fragment, null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_747.formItemWrapper, $_747.changeImageWrapper),
     align: "vertical",
     label: $_710$a$formatMessage({
       id: e$formConfig$label || "image"
@@ -314,13 +314,13 @@ var NE = memo(function (e) {
       e$onChange(n, "")
     },
     fileId: d
-  })), g && React.createElement($_13_index.i, {
-    className: N($_747.formItemWrapper, $_747.imageResizeMode, "changeImageResizeMode"),
+  })), g && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_747.formItemWrapper, $_747.imageResizeMode, "changeImageResizeMode"),
     label: $_710$a$formatMessage({
       id: "adapt"
     }),
     align: "vertical"
-  }, React.createElement($_13_index.i, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     className: "changeSizeFormItemWrapper"
   }, React.createElement($v, {
     mode: m,
@@ -351,7 +351,7 @@ var RE = memo(function (e) {
       })(e)(l)
     }
   }
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
     className: "".concat(qv.formItemWrapper, " ").concat(qv.formInputNumberRow)
   }, React.createElement("p", {
@@ -360,9 +360,9 @@ var RE = memo(function (e) {
     id: a || "coordinate"
   })), React.createElement("div", {
     className: qv.formInputNumberRow
-  }, React.createElement($_13_index.i, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     className: "changeLeft"
-  }, React.createElement($_13_index.o, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: "x",
     type: "number",
     defaultValue: Math.round(s.x),
@@ -380,9 +380,9 @@ var RE = memo(function (e) {
     onStep: function (e) {
       u(0)("x", e)
     }
-  })), React.createElement($_13_index.i, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     className: "changeTop"
-  }, React.createElement($_13_index.o, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: "y",
     type: "number",
     defaultValue: Math.round(s.y),
@@ -414,14 +414,14 @@ var kE = memo(function (e) {
   var l = $_710$a$formatMessage({
     id: e$formConfig.label || "content"
   })
-  var u = te.p(function (e) {
+  var u = $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
     e$onChange(n, e)
   }, 60)
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, "changeContent"),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, "changeContent"),
     label: l,
     align: "vertical"
-  }, React.createElement($_13_index.A, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.A, {
     ref: s,
     defaultValue: c,
     rows: 3,

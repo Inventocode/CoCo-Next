@@ -8,12 +8,12 @@
 
 import { Ge } from "./index__part-9"
 import * as Et from "./9"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as Z from "./97"
+import * as /* [auto-meaningful-name] */$_97_index from "./97/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -107,7 +107,7 @@ var Dt = memo(function () {
               return n.abrupt("return")
             case 2:
               n.prev = 2
-              o = Z.a(a)
+              o = $_97_index.a(a)
               n.next = 6
               return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(t, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
                 isUpdate: o,
@@ -139,7 +139,7 @@ var Dt = memo(function () {
                 break
               }
               n.next = 19
-              return te.f(g, "apkIcon.png")
+              return $$_$$_$$_$$_src_shared_tools_index.f(g, "apkIcon.png")
             case 19:
               n$sent = n.sent
               n.prev = 20
@@ -166,7 +166,7 @@ var Dt = memo(function () {
                 break
               }
               n.next = 34
-              return te.f(w, "apkSplash.png")
+              return $$_$$_$$_$$_src_shared_tools_index.f(w, "apkSplash.png")
             case 34:
               n$sent2 = n.sent
               n.prev = 35
@@ -334,7 +334,7 @@ var Dt = memo(function () {
       ae(false)
     }
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: i$packageDialogVisible,
     withPortal: true,
     className: $_1991.packageEditorContainer,
@@ -345,13 +345,13 @@ var Dt = memo(function () {
       var /* [auto-meaningful-name] */i$packageInfo$apkName
       return React.createElement(React.Fragment, null, React.createElement("div", {
         className: $_1991.plateFormTips
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-android-fill"
       }), $_710$a$formatMessage({
         id: "package.plateFormTips"
       })), React.createElement("div", {
         className: $_1991.footer
-      }, React.createElement($_13_index.d, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
         type: "primary",
         disabled: (!(null === (i$packageInfo$apkName = i$packageInfo.apkName) || undefined === i$packageInfo$apkName ? undefined : i$packageInfo$apkName.trim()) || !g || !!D) && !i$isPackaging && !d,
         onClick: se
@@ -375,7 +375,7 @@ var Dt = memo(function () {
     className: $_1991.packageItemLabel
   }, $_710$a$formatMessage({
     id: "package.projectTitle"
-  })), React.createElement($_13_index.k, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     type: "text",
     defaultValue: i$packageInfo.apkName,
     onBlur: function (e, n) {
@@ -428,7 +428,7 @@ var Dt = memo(function () {
       className: $_1991.packageIconWrapper
     }, kt.map(function (e) {
       return React.createElement("img", {
-        className: N($_1991.packageIconItem, g === e && $_1991.active),
+        className: Classnames($_1991.packageIconItem, g === e && $_1991.active),
         src: e,
         alt: "DEFAULT_ICON",
         key: e,
@@ -452,7 +452,7 @@ var Dt = memo(function () {
           n.current.click()
         }
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-upload-image"
     }), $_710$a$formatMessage({
       id: "uploadFileByLocal"
@@ -472,7 +472,7 @@ var Dt = memo(function () {
       }
     }
   }, React.createElement("div", {
-    className: N($_1991.cover, B && $_1991.visible)
+    className: Classnames($_1991.cover, B && $_1991.visible)
   }, React.createElement("div", {
     className: $_1991.replaceBtn
   }, $_710$a$formatMessage({
@@ -515,20 +515,20 @@ var Dt = memo(function () {
       className: $_1991.pageBtnBox
     }, React.createElement("div", {
       onClick: ue,
-      className: N($_1991.pageBtn, $_1991.prev, ie && $_1991.disable)
-    }, React.createElement($_13_index.j, {
+      className: Classnames($_1991.pageBtn, $_1991.prev, ie && $_1991.disable)
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-arrow-down"
     })), React.createElement("div", {
       onClick: de,
-      className: N($_1991.pageBtn, $_1991.next, !ie && $_1991.disable)
-    }, React.createElement($_13_index.j, {
+      className: Classnames($_1991.pageBtn, $_1991.next, !ie && $_1991.disable)
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-arrow-down"
     })))), React.createElement("div", {
       className: $_1991.packageSplashWrapper,
       ref: o
     }, xt.map(function (e) {
       return React.createElement("img", {
-        className: N($_1991.packageIconItem, w === e && $_1991.active),
+        className: Classnames($_1991.packageIconItem, w === e && $_1991.active),
         src: e,
         alt: "DEFAULT_ICON",
         key: e,
@@ -552,7 +552,7 @@ var Dt = memo(function () {
           r.current.click()
         }
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-upload-image"
     }), $_710$a$formatMessage({
       id: "uploadFileByLocal"
@@ -572,7 +572,7 @@ var Dt = memo(function () {
       }
     }
   }, React.createElement("div", {
-    className: N($_1991.cover, q && $_1991.visible)
+    className: Classnames($_1991.cover, q && $_1991.visible)
   }, React.createElement("div", {
     className: $_1991.replaceBtn
   }, $_710$a$formatMessage({

@@ -9,7 +9,7 @@
 import { LL, PL } from "../download-apk/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -46,7 +46,7 @@ var UL = memo(function () {
       }
     }
   }, [i, s, t, n])
-  return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
+  return React.createElement($$_$$_$$_$$_shared_ui_components_index.f, {
     visible: e,
     className: $_styles$module$css1.ReleaseInfoDialog,
     onClose: function () {
@@ -83,7 +83,7 @@ var UL = memo(function () {
     href: "https://codemao-guide.yuque.com/bfiekm/sbo5kh/update",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, "往期功能更新回顾", React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, "往期功能更新回顾", React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     className: $_styles$module$css1.iconLink,
     type: "icon-dropdown-down"
   }))))))

@@ -7,7 +7,7 @@
 "use strict"
 
 import { j } from "./index__part-1"
-import p from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import { isValidElement, cloneElement, useRef, useCallback, useContext, createElement, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -72,7 +72,7 @@ var te = function (e, t) {
   var /* [auto-meaningful-name] */a$mode = a.mode
   var /* [auto-meaningful-name] */a$rtl = a.rtl
   return createElement("ul", $$_19.a({
-    className: p(a$prefixCls, a$rtl && "".concat(a$prefixCls, "-rtl"), "".concat(a$prefixCls, "-sub"), "".concat(a$prefixCls, "-").concat("inline" === a$mode ? "inline" : "vertical"), e$className)
+    className: Classnames(a$prefixCls, a$rtl && "".concat(a$prefixCls, "-rtl"), "".concat(a$prefixCls, "-sub"), "".concat(a$prefixCls, "-").concat("inline" === a$mode ? "inline" : "vertical"), e$className)
   }, i, {
     "data-menu-list": true,
     ref: t

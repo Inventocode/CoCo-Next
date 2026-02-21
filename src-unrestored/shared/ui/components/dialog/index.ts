@@ -6,17 +6,17 @@
 
 "use strict"
 
-import * as r from "../../../../../unrestored/shared/1571/2636/6"
-import * as /* [auto-meaningful-name] */$$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as i from "../../../../../unrestored/shared/1571/2636/8"
-import a from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import { memo, useRef, useState, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
-import "../../../../../src/shared/ui/components/dialog/868"
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../unrestored/shared/1571/2636/94/index"
+import "./styles.css"
+import * as /* [auto-meaningful-name] */$$_iconfont_index from "../iconfont/index"
 var _a
 _a = memo(function (e) {
   var /* [auto-meaningful-name] */e$className = e.className
@@ -37,7 +37,7 @@ _a = memo(function (e) {
   var w = useRef(null)
   var C = useRef(null)
   var T = useState(false)
-  var S = $$_10_index.a(T, 2)
+  var S = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(T, 2)
   S[0]
   var A = S[1]
   var I = document.getElementById("_cocoDialogContainer")
@@ -81,17 +81,17 @@ _a = memo(function (e) {
     "data-html2canvas-ignore": "true",
     ref: w,
     tabIndex: -1,
-    className: a("coco-dialog", e$className),
-    style: r.a({
+    className: Classnames1("coco-dialog", e$className),
+    style: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_6.a({
       display: e$visible ? "block" : "none"
     }, e$style)
   }, h && React1.createElement("div", {
-    className: e$visible ? "coco-dialog-mask" : a("coco-dialog-mask", "hidden"),
+    className: e$visible ? "coco-dialog-mask" : Classnames1("coco-dialog-mask", "hidden"),
     onClick: N
   }), React1.createElement("div", {
     className: "coco-dialog-scroll"
   }, React1.createElement("div", {
-    className: e$visible ? a("coco-dialog-wrapper", "show") : a("coco-dialog-wrapper", "hidden"),
+    className: e$visible ? Classnames1("coco-dialog-wrapper", "show") : Classnames1("coco-dialog-wrapper", "hidden"),
     onAnimationEnd: function () {
       if (!e$visible) {
         A(false)
@@ -102,7 +102,7 @@ _a = memo(function (e) {
   }, e$title && React1.createElement("div", null, e$title), v && React1.createElement("span", {
     className: "coco-dialog-close",
     onClick: j
-  }, React1.createElement($$_94_index.a, {
+  }, React1.createElement($$_iconfont_index.a, {
     type: "icon-close"
   }))), React1.createElement("div", {
     className: "coco-dialog-content",

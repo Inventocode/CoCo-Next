@@ -11,10 +11,10 @@ import { memo, useRef, useState, useLayoutEffect, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import { useSelector, useDispatch } from "react-redux"
-import * as s from "./8"
-import c from "./8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_472 from "./472"
 import /* [auto-meaningful-name] */$_4721 from "./472"
@@ -106,14 +106,14 @@ _a = memo(function () {
       display: w$visible ? "block" : "none"
     }
   }, React1.createElement("div", {
-    className: c($_4721.menuItem),
+    className: Classnames1($_4721.menuItem),
     onMouseDown: function () {
       R($$_$$_$$_$$_src_editor_redux_common_actions.Ef(m.w(w$widgetId)))
     }
   }, $_710$a$formatMessage({
     id: "copyAndPaste"
   })), ![$$_$$_$$_$$_src_editor_widget_builtIn_types.a, $$_$$_$$_$$_src_editor_widget_builtIn_types.c].includes((null === A || undefined === A ? undefined : A.type) || "") && React1.createElement("div", {
-    className: c($_4721.menuItem, $_4721.copyTo),
+    className: Classnames1($_4721.menuItem, $_4721.copyTo),
     onMouseEnter: function () {
       E(true)
     },
@@ -122,7 +122,7 @@ _a = memo(function () {
     }
   }, React1.createElement("span", null, $_710$a$formatMessage({
     id: "copyTo"
-  })), " ", React1.createElement($_13_index.j, {
+  })), " ", React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-right"
   }), React1.createElement("ul", {
     ref: O,
@@ -168,7 +168,7 @@ _a = memo(function () {
         }
       }
     },
-    className: c($_4721.menuItem, $_4721.delete)
+    className: Classnames1($_4721.menuItem, $_4721.delete)
   }, $_710$a$formatMessage({
     id: "delete"
   })))

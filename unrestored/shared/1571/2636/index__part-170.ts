@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Yv } from "../../../../src/editor/ui/edit-area/widget-panel"
+import { Yv } from "../../../../src/editor/ui/edit-area/widget-panel/index"
 import { HC } from "./index__part-142"
 import { tT } from "./index__part-144"
 import { xT } from "./index__part-150"
@@ -20,7 +20,7 @@ import { LA } from "./index__part-168"
 import { $A } from "./index__part-169"
 import /* [auto-meaningful-name] */$_1060 from "./1060"
 import * as K from "./18"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -83,16 +83,16 @@ var oI = memo(function () {
       setBulkSelectVisible: i
     }
   }, React.createElement("div", null, React.createElement("div", {
-    className: N($_7061.content, e && $_7061.showContent),
+    className: Classnames($_7061.content, e && $_7061.showContent),
     style: {
       bottom: "".concat(c, "px")
     }
   }, React.createElement("div", {
-    className: N($_7061.hideComponent, e === K.h.DevTools && $_7061.showComponent)
+    className: Classnames($_7061.hideComponent, e === K.h.DevTools && $_7061.showComponent)
   }, React.createElement(cA, null)), React.createElement("div", {
-    className: N($_7061.hideComponent, e === K.h.ResourceLayout && $_7061.showComponent)
+    className: Classnames($_7061.hideComponent, e === K.h.ResourceLayout && $_7061.showComponent)
   }, React.createElement(LA, null))), React.createElement("div", {
-    className: N($_7061.searchInput, "search-outside"),
+    className: Classnames($_7061.searchInput, "search-outside"),
     ref: s
   }, React.createElement($A, {
     visible: o,
@@ -139,7 +139,7 @@ var iI = React.memo(function () {
     className: $_1060.wrapper,
     "data-html2canvas-ignore": "true"
   }, React.createElement(Yv, null), React.createElement(HC, null), React.createElement("div", {
-    className: N($_1060.toolboxMask, !e && $_1060.hide)
+    className: Classnames($_1060.toolboxMask, !e && $_1060.hide)
   }), React.createElement(xT, null), React.createElement(oI, null), t && React.createElement(KT, null), React.createElement(PS, null), React.createElement($T, {
     onToggle: function () {
       s(!a)

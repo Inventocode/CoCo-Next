@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -31,7 +31,7 @@ var JO = memo(function (e) {
     return React.createElement(React.Fragment, null)
   }
   return React.createElement("div", {
-    className: N($_6211.formItemWrapper, $_6211.storageFields)
+    className: Classnames($_6211.formItemWrapper, $_6211.storageFields)
   }, React.createElement("div", {
     className: $_6211.title
   }, React.createElement("div", null, $_710$a$formatMessage({

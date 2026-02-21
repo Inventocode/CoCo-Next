@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("../1661/86/index")
-var o = require("../1785/271")
-var i = require("../1782/194")
-var a = require("../1785/334")
+var r = require("../1662/86")
+var o = require("../1662/271")
+var i = require("../1785/194")
+var a = require("../1282/334")
 var s = require("../1282/231")
-var /* [auto-meaningful-name] */require$$_1648_300$f = require("../1648/300").f
+var /* [auto-meaningful-name] */require$$_1662_300_index$f = require("../1662/300/index").f
 var l = require("./1239")
 var /* [auto-meaningful-name] */i$Symbol = i.Symbol
 if (o && "function" == typeof i$Symbol && (!("description" in i$Symbol.prototype) || undefined !== i$Symbol().description)) {
@@ -30,7 +30,7 @@ if (o && "function" == typeof i$Symbol && (!("description" in i$Symbol.prototype
   var /* [auto-meaningful-name] */f$toString = f.toString
   var m = "Symbol(test)" == String(i$Symbol("test"))
   var g = /^Symbol\((.*)\)[^)]+$/
-  require$$_1648_300$f(f, "description", {
+  require$$_1662_300_index$f(f, "description", {
     configurable: true,
     get: function () {
       var e = s(this) ? this.valueOf() : this

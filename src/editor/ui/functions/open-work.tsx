@@ -8,36 +8,36 @@ import * as React from "react"
 
 import { me } from "../../../../unrestored/shared/1571/2636/index__part-5"
 import { AC, IC } from "../../../../unrestored/shared/1571/2636/index__part-140"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../../unrestored/shared/1571/2636/37/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../../unrestored/shared/1571/2636/37/index"
 import axios from "axios"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../shared/player/audit"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../unrestored/shared/1571/2636/297"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_player_audit from "../../../shared/player/audit"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../unrestored/shared/1571/2636/297"
 import * as Tools from "../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../redux/common/actions"
 import { IconFont } from "../../../shared/ui/components"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2646_index from "../../../../unrestored/shared/1571/2636/2646/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_1529 from "../../../../unrestored/shared/1571/2636/1529"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2646_index from "../../../../unrestored/shared/1571/2636/2646/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_1529 from "../../../../unrestored/shared/1571/2636/1529"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../../unrestored/shared/1571/2636/392/index"
 
 export function OpenWork() {
 
   const dispatch = useDispatch()
-  const formatMessage = $$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  const formatMessage = $$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   const courseList = useSelector((state) => state.common.courseList)
   const templateList = useSelector((state) => state.common.templateList)
   const hasWorkRef = React.useRef(false)
-  $$_$$_$$_unrestored_shared_1571_2636_288.getWhitelist()
+  $$_$$_$$_shared_player_audit.getWhitelist()
 
   React.useEffect(function () {
     function e() {
-      return (e = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+      return (e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
         var t
         var /* [auto-meaningful-name] */t$code
         var /* [auto-meaningful-name] */e$sent
@@ -77,12 +77,12 @@ export function OpenWork() {
   const openWorkById = React.useCallback(async (workId) => {
     try {
       hasWorkRef.current = true
-      const response = await $$_$$_$$_unrestored_shared_1571_2636_297.d(workId)
+      const response = await $$_$$_$$_$$_unrestored_shared_1571_2636_297.d(workId)
       hasWorkRef.current = false
       if (response.data) {
         const workInfo = response.data
         if (
-          !(await $$_$$_$$_unrestored_shared_1571_2636_288.getWhitelist()).includes(Number(workId)) &&
+          !(await $$_$$_$$_shared_player_audit.getWhitelist()).includes(Number(workId)) &&
           !workInfo.is_author &&
           workInfo.is_coll_work &&
           workInfo.content &&
@@ -113,7 +113,7 @@ export function OpenWork() {
           isAuthor: workInfo.is_author,
           projectId: workId,
           editPermission: workInfo.edit_permission,
-          jsonFrom: workInfo.is_coll_work ? $$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER : $$_$$_$$_unrestored_shared_1571_2636_18.d.MY_WORK
+          jsonFrom: workInfo.is_coll_work ? $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER : $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.MY_WORK
         }))
       } else {
         dispatch(Actions.asyncGetProjectErrorAction({
@@ -128,7 +128,7 @@ export function OpenWork() {
   var joinColl = React.useCallback(function (n, r) {
     (function (e, t) {
       return me.apply(this, arguments)
-    })(n, r).then($$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+    })(n, r).then($$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */$_37_index$d$getState$common$userInfo
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -137,8 +137,8 @@ export function OpenWork() {
               e.next = 2
               return openWorkById(n)
             case 2:
-              $_37_index$d$getState$common$userInfo = $$_$$_$$_unrestored_shared_1571_2636_37_index.d.getState().common.userInfo
-              $$_$$_$$_unrestored_shared_1571_2636_141_index.a("EnterCollaboration", {
+              $_37_index$d$getState$common$userInfo = $$_$$_$$_$$_unrestored_shared_1571_2636_37_index.d.getState().common.userInfo
+              $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("EnterCollaboration", {
                 collaborationId: (null === $_37_index$d$getState$common$userInfo || undefined === $_37_index$d$getState$common$userInfo ? undefined : $_37_index$d$getState$common$userInfo.id) || "",
                 collaborationName: (null === $_37_index$d$getState$common$userInfo || undefined === $_37_index$d$getState$common$userInfo ? undefined : $_37_index$d$getState$common$userInfo.nickname) || ""
               })
@@ -195,7 +195,7 @@ export function OpenWork() {
 
   var openNew = React.useCallback(function () {
     dispatch(Actions.warpAsyncCreateProject("localhost" === window.location.hostname ? undefined : {
-      json: $$_$$_$$_unrestored_shared_1571_2636_1529
+      json: $$_$$_$$_$$_unrestored_shared_1571_2636_1529
     }))
   }, [dispatch])
 
@@ -225,7 +225,7 @@ export function OpenWork() {
   }, [dispatch])
 
   var openArchive = React.useCallback(function () {
-    var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(n) {
+    var t = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(n) {
       var /* [auto-meaningful-name] */t$sent
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
@@ -234,14 +234,14 @@ export function OpenWork() {
               t.prev = 0
               hasWorkRef.current = true
               t.next = 4
-              return $$_$$_$$_unrestored_shared_1571_2636_297.e(n)
+              return $$_$$_$$_$$_unrestored_shared_1571_2636_297.e(n)
             case 4:
               t$sent = t.sent
               hasWorkRef.current = false
               if (t$sent) {
                 dispatch(Actions.warpAsyncCreateProject({
                   json: t$sent.content,
-                  editPermission: $$_$$_$$_unrestored_shared_1571_2636_18.c.Preview
+                  editPermission: $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Preview
                 }))
               } else {
                 console.error("归档内容不存在，加载空作品")
@@ -267,7 +267,7 @@ export function OpenWork() {
   }(), [dispatch, openNew])
 
   const openCourse = React.useCallback(function () {
-    var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(r) {
+    var t = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(r) {
       var i
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
@@ -281,8 +281,8 @@ export function OpenWork() {
                   t.json().then(function (t) {
                     dispatch(Actions.warpAsyncCreateProject({
                       json: t,
-                      jsonFrom: $$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE,
-                      sourceTag: $$_$$_$$_unrestored_shared_1571_2636_18.g.COURSE,
+                      jsonFrom: $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE,
+                      sourceTag: $$_$$_$$_$$_unrestored_shared_1571_2636_18.g.COURSE,
                       sourceId: r
                     }))
                     hasWorkRef.current = false
@@ -290,7 +290,7 @@ export function OpenWork() {
                 }).catch(function () {
                   hasWorkRef.current = false
                 })
-                $$_$$_$$_unrestored_shared_1571_2636_627.a.load({
+                $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.load({
                   onPlayerInit() {},
                   title: <div>
                     <span
@@ -299,17 +299,17 @@ export function OpenWork() {
                         right: 5
                       }}
                     >
-                      <$$_$$_$$_unrestored_shared_1571_2636_2646_index.a
+                      <$$_$$_$$_$$_unrestored_shared_1571_2636_2646_index.a
                         size={"esm"}
                         type={"transparent-fb"}
                         width={26}
                         height={14}
-                        onClick={$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t() {
+                        onClick={$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t() {
                           return RegeneratorRuntime.wrap(function (t) {
                             for (;;) {
                               switch (t.prev = t.next) {
                                 case 0:
-                                  $$_$$_$$_unrestored_shared_1571_2636_627.a.close({
+                                  $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.close({
                                     closeAnimationPos: {
                                       x: 150,
                                       y: 30
@@ -328,7 +328,7 @@ export function OpenWork() {
                           type={"icon-btn-fallback"}
                           className={"coco-video-back"}
                         />
-                      </$$_$$_$$_unrestored_shared_1571_2636_2646_index.a>
+                      </$$_$$_$$_$$_unrestored_shared_1571_2636_2646_index.a>
                     </span>
                     {i.title}
                   </div>,
@@ -338,14 +338,14 @@ export function OpenWork() {
                   useConfirmMask: true,
                   confirmPercent: .9,
                   onMinimizeBtnClick() {
-                    $$_$$_$$_unrestored_shared_1571_2636_627.a.hide()
+                    $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.hide()
                     dispatch(Actions.Qh($$_$$_$$_unrestored_shared_1571_2636_392_index.a, {
                       name: $$_$$_$$_unrestored_shared_1571_2636_392_index.a,
                       content: <$$_$$_$$_unrestored_shared_1571_2636_392_index.b />
                     }))
                   },
                   onClose() {
-                    $$_$$_$$_unrestored_shared_1571_2636_627.a.close({
+                    $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.close({
                       closeAnimationPos: {
                         x: 150,
                         y: 30
@@ -374,8 +374,8 @@ export function OpenWork() {
         response.json().then((json) => {
           dispatch(Actions.warpAsyncCreateProject({
             json,
-            jsonFrom: $$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_TEMPLATE,
-            sourceTag: $$_$$_$$_unrestored_shared_1571_2636_18.g.TEMPLATE,
+            jsonFrom: $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_TEMPLATE,
+            sourceTag: $$_$$_$$_$$_unrestored_shared_1571_2636_18.g.TEMPLATE,
             sourceId: templateInfo.name
           }))
           hasWorkRef.current = false

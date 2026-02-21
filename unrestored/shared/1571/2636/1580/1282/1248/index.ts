@@ -9,7 +9,7 @@
 var /* [auto-meaningful-name] */require$_1249$IteratorPrototype = require("./1249").IteratorPrototype
 var o = require("../577/index")
 var i = require("../631")
-var a = require("../../1785/534")
+var a = require("../534")
 var s = require("../../949/834")
 var c = function () {
   return this

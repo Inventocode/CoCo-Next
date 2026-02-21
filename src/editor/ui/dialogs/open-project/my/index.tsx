@@ -16,17 +16,17 @@ import * as Tools from "../../../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_components from "../../../../../shared/ui/components"
 import { IconFont } from "../../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_language from "../../../../../shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../shared/player/audit"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_player_audit from "../../../../../shared/player/audit"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181 from "../../../../../../unrestored/shared/1571/2636/418"
 
@@ -90,7 +90,7 @@ function ProjectItem({
         alt={project.name}
       />
     </div>
-    <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.a
+    <$$_$$_$$_$$_$$_shared_ui_components.a
       className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.name}
       text={project.name}
     />
@@ -116,7 +116,7 @@ function ProjectItem({
         content={<div
           className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuContent}
         >
-          <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l
+          <$$_$$_$$_$$_$$_shared_ui_components.l
             onClick={function (e) {
               if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
                 onDelete(project.id, project.name, project.isCollWork || filterType === Type.COLL)
@@ -124,7 +124,7 @@ function ProjectItem({
             }}
           >
             {c().map(function (e, t) {
-              return <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m
+              return <$$_$$_$$_$$_$$_shared_ui_components.m
                 value={e}
                 key={t}
               >
@@ -133,9 +133,9 @@ function ProjectItem({
                     id: "MyProject." + e
                   })}
                 </span>}
-              </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+              </$$_$$_$$_$$_$$_shared_ui_components.m>
             })}
-          </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+          </$$_$$_$$_$$_$$_shared_ui_components.l>
         </div>}
       >
         <div>
@@ -185,7 +185,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
       const { data } = response
       if (data) {
         if (
-          !(await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.getWhitelist()).includes(Number(id)) &&
+          !(await $$_$$_$$_$$_$$_shared_player_audit.getWhitelist()).includes(Number(id)) &&
           !data.is_author &&
           data.is_coll_work &&
           data.content &&
@@ -509,7 +509,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
       {i.length > 0 && <div
         className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.main}
       >
-        {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.v
+        {<$$_$$_$$_$$_$$_shared_ui_components.v
           offsetY={300}
           height={450}
           onScrollBottom={function () {
@@ -526,7 +526,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
               filterType={type}
             />
           })}
-        </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.v>}
+        </$$_$$_$$_$$_$$_shared_ui_components.v>}
       </div>}
     </div>}
   </div>

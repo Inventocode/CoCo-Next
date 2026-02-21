@@ -6,7 +6,7 @@
 
 "use strict"
 
-import i from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { createRef, createElement, Component, useCallback, cloneElement } from "react"
 import * as /* [auto-meaningful-name] */$$_1543_229 from "../1543/229"
 function f(e) {
@@ -272,7 +272,7 @@ var O = function (e) {
         var l = c && this$state$visible
         return createElement("div", {
           ref: this.scrollbarRef,
-          className: i("".concat(this$props$prefixCls, "-scrollbar"), h({}, "".concat(this$props$prefixCls, "-scrollbar-show"), c)),
+          className: Classnames("".concat(this$props$prefixCls, "-scrollbar"), h({}, "".concat(this$props$prefixCls, "-scrollbar-show"), c)),
           style: {
             width: 8,
             top: 0,
@@ -285,7 +285,7 @@ var O = function (e) {
           onMouseMove: this.delayHidden
         }, createElement("div", {
           ref: this.thumbRef,
-          className: i("".concat(this$props$prefixCls, "-scrollbar-thumb"), h({}, "".concat(this$props$prefixCls, "-scrollbar-thumb-moving"), this$state$dragging)),
+          className: Classnames("".concat(this$props$prefixCls, "-scrollbar-thumb"), h({}, "".concat(this$props$prefixCls, "-scrollbar-thumb-moving"), this$state$dragging)),
           style: {
             width: "100%",
             height: a,

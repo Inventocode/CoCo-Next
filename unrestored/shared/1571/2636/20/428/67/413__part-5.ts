@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_112 from "../112"
+import * as /* [auto-meaningful-name] */$$_$$_$$_34_347_112 from "../../../34/347/112"
 import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
-import /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef } from "react"
@@ -34,13 +34,13 @@ var V = memo(function (e) {
   var /* [auto-meaningful-name] */e$attributes$borderRadius = e$attributes.borderRadius
   var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
   var b = useRef(null)
-  var y = $$_112.b(e$attributes$fileId)
+  var y = $$_$$_$$_34_347_112.b(e$attributes$fileId)
   if (!y) {
     y = e$parentId ? $$_$$_$$_133.i : $$_$$_$$_133.m
   }
   return React.createElement("div", {
     id: t,
-    className: $$_$$_$$_8($$_$$_$$_5131.imageWidget, $$_$$_$$_90.b),
+    className: Classnames($$_$$_$$_5131.imageWidget, $$_$$_$$_90.b),
     "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v,
     "data-scale-mode": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.p.PROPORTIONAL,

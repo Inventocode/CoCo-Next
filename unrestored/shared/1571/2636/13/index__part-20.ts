@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
 import /* [auto-meaningful-name] */React from "react"
-import i from "../8"
+import i from "classnames"
 import "./880"
 var Be = $$_15.p(function (e) {
   if (e) {

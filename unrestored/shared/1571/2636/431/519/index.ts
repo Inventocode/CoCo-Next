@@ -4,8 +4,8 @@
  * 模块 ID：519
  */
 
-var r = require("./2383")
-var i = require("./2384/index")
+var r = require("./2383/index")
+var i = require("./2384")
 var o = i
 o.v1 = r
 o.v4 = i

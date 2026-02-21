@@ -13,10 +13,10 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector, useDispatch } from "react-redux"
@@ -177,8 +177,8 @@ var iT = memo(function () {
       }
     }
   }
-  return e$variable ? React.createElement($_13_index.f, {
-    className: N(qC.editDialog, $_4401.container),
+  return e$variable ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+    className: Classnames(qC.editDialog, $_4401.container),
     visible: e$visible,
     withPortal: true,
     onClose: F
@@ -190,28 +190,28 @@ var iT = memo(function () {
     className: qC.summary
   }, React.createElement("span", null, e$variable.name), React.createElement("div", {
     className: qC.count
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: B,
     type: "primary",
     ref: M
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add"
   })))), React.createElement("div", {
-    className: N(qC.list, $_4401.list),
+    className: Classnames(qC.list, $_4401.list),
     ref: s
   }, A.length > 0 ? React.createElement("ul", null, A.map(function (e, t) {
     var n = $_10_index.a(e, 2)
     var r = n[0]
     var o = n[1]
     return React.createElement("li", {
-      className: N($_4401.row, k.a({}, $_4401.focus, t === v)),
+      className: Classnames($_4401.row, k.a({}, $_4401.focus, t === v)),
       key: r
     }, React.createElement("div", {
       className: $_4401.keyItem
     }, React.createElement("input", {
       type: "text",
       defaultValue: r,
-      className: N($_4401.input, k.a({}, $_4401.error, d && v === t)),
+      className: Classnames($_4401.input, k.a({}, $_4401.error, d && v === t)),
       onClick: function () {
         D.current = 1
         b(t)
@@ -249,7 +249,7 @@ var iT = memo(function () {
     }, React.createElement("input", {
       type: "text",
       value: o,
-      className: N($_4401.input),
+      className: Classnames($_4401.input),
       onBlur: function (e) {
         !function (e, t) {
           var /* [auto-meaningful-name] */e$target$value = e.target.value
@@ -284,7 +284,7 @@ var iT = memo(function () {
           j($_25_index.a(A))
         }(t)
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-close"
     })))
   })) : React.createElement("div", {
@@ -303,7 +303,7 @@ var iT = memo(function () {
     className: $_4401.tips
   }, d ? $_710$a$formatMessage({
     id: "object.keyRepeat"
-  }) : ""), React.createElement($_13_index.d, {
+  }) : ""), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     className: $_4401.save,
     type: "primary",
     onClick: G,

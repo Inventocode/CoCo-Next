@@ -9,9 +9,9 @@
 import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as i from "../../../../../unrestored/shared/1571/2636/8"
-import a from "../../../../../unrestored/shared/1571/2636/8"
-import "../../../../../src/shared/ui/components/iconfont/841"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
+import "./styles.css"
 var s = function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$className = e.className
@@ -42,7 +42,7 @@ var s = function (e) {
     }
   }
   return React1.createElement("i", {
-    className: a("coco-iconfont", e$className, e$spinning && "coco-iconfont-spin")
+    className: Classnames1("coco-iconfont", e$className, e$spinning && "coco-iconfont-spin")
   }, React1.createElement("svg", {
     width: "1em",
     height: "1em",

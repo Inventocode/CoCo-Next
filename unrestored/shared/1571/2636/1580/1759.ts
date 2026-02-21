@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./1754/257/index")
-var /* [auto-meaningful-name] */require$_1754_401$forEach = require("./1754/401").forEach
+var r = require("./1758/257/index")
+var /* [auto-meaningful-name] */require$_1758_401$forEach = require("./1758/401").forEach
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("forEach", function (e) {
-  require$_1754_401$forEach(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
+  require$_1758_401$forEach(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
 })

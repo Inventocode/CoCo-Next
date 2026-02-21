@@ -35,24 +35,24 @@ import { qP } from "../../../unrestored/shared/1571/2636/index__part-216"
 import { ZP, JP } from "../../../unrestored/shared/1571/2636/index__part-217"
 import { iB } from "../../../unrestored/shared/1571/2636/index__part-218"
 import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_937 from "../../../unrestored/shared/1571/2636/937"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_15 from "../../shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_shared_tools from "../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_redux_common_actions from "../redux/common/actions"
 import * as Components from "../../shared/ui/components"
 import { CoCoDialog } from "../../shared/ui/components"
-import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_8 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_shared_ui_language from "../../shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_188 from "../../../unrestored/shared/1571/2636/188"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_2681_index from "../../../unrestored/shared/1571/2636/2681/index"
-import * as O from "../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_816 from "../../../unrestored/shared/1571/2636/816"
-import /* [auto-meaningful-name] */$_8161 from "../../../unrestored/shared/1571/2636/816"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_816 from "../../../unrestored/shared/1571/2636/816"
+import /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_8161 from "../../../unrestored/shared/1571/2636/816"
 
 var cB = memo(function () {
   const permissionDialogInfo = useSelector((state) => state.common.permissionDialogInfo)
@@ -81,15 +81,15 @@ var cB = memo(function () {
     showCloseButton={false}
     withPortal={true}
     maskClosable={false}
-    className={$$_$$_$$_unrestored_shared_1571_2636_8($_8161.dialog, permissionDialogInfo$className)}
+    className={$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_unrestored_shared_1571_2636_8161.dialog, permissionDialogInfo$className)}
   >
-    <img className={$_8161.permissionImage} src={imgUrl} alt="" />
+    <img className={$$_$$_$$_unrestored_shared_1571_2636_8161.permissionImage} src={imgUrl} alt="" />
     {<div
-      className={$_8161.content}
+      className={$$_$$_$$_unrestored_shared_1571_2636_8161.content}
     >
       <h3>授权提示</h3>
       <span>{tipText}</span>
-      {<div className={$$_$$_$$_unrestored_shared_1571_2636_8($_8161.dialogButtons)}>
+      {<div className={$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_unrestored_shared_1571_2636_8161.dialogButtons)}>
         <Components.d
           onClick={() => {
             if (permissionDialogInfo$onDeny) {
@@ -100,7 +100,7 @@ var cB = memo(function () {
               visible: false
             }))
           }}
-          className={$_8161.denyButton}
+          className={$$_$$_$$_unrestored_shared_1571_2636_8161.denyButton}
         >{c}</Components.d>
         {<Components.d
           type="primary"
@@ -135,7 +135,7 @@ function dB() {
   })
   var n = $$_$$_$$_unrestored_shared_1571_2636_97.a(t)
   var r = function () {
-    var t = O.a(RegeneratorRuntime.mark(function t() {
+    var t = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t() {
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
@@ -185,7 +185,7 @@ export const App = React.memo(function () {
   var n = useSelector(function (e) {
     return e.uiConfig.header
   })
-  var r = undefined !== $$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href).archiveId
+  var r = undefined !== $$_$$_shared_tools.N(window.location.href).archiveId
   return <$$_$$_$$_unrestored_shared_1571_2636_2681_index.b
     locale={e}
     messages={$$_$$_shared_ui_language.e[e] || $$_$$_shared_ui_language.e[$$_$$_shared_ui_language.b]}
@@ -251,7 +251,7 @@ export const App = React.memo(function () {
   </$$_$$_$$_unrestored_shared_1571_2636_2681_index.b>
 })
 var fB = function (e) {
-  if (e && e instanceof Function && !$$_$$_$$_unrestored_shared_1571_2636_15.h()) {
+  if (e && e instanceof Function && !$$_$$_shared_tools.h()) {
     import("../../../unrestored/shared/1571/2636/3327").then(function (t) {
       var /* [auto-meaningful-name] */t$getCLS = t.getCLS
       var /* [auto-meaningful-name] */t$getFID = t.getFID

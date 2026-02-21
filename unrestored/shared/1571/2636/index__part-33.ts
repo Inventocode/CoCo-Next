@@ -11,7 +11,7 @@ import { Wd } from "./index__part-32"
 import * as Qu from "./60"
 import * as po from "./49"
 import * as /* [auto-meaningful-name] */$_452_index from "./452/index"
-import /* [auto-meaningful-name] */$_279 from "../../../../src/editor/ui/preview-area/stage/style.css"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css from "../../../../src/editor/ui/preview-area/stage/style.css"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as kn from "./75"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
@@ -24,7 +24,7 @@ import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
@@ -190,7 +190,7 @@ var zd = React.memo(function () {
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
     ref: t,
-    className: N($_279.stage, k.a({}, $_279.isActorDragging, c)),
+    className: Classnames($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.stage, k.a({}, $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.isActorDragging, c)),
     onDrop: z,
     onDragOver: function (e) {
       e.preventDefault()
@@ -280,7 +280,7 @@ var zd = React.memo(function () {
     disabled: "screen" !== u
   })), React.createElement("div", {
     ref: n,
-    className: $_279.appZone,
+    className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.appZone,
     id: "COCO_APP_ZONE",
     onMouseDown: function (e) {
       o.current = Qu.d.NONE
@@ -455,7 +455,7 @@ var zd = React.memo(function () {
     var /* [auto-meaningful-name] */e$value = e.value
     var /* [auto-meaningful-name] */e$origin = e.origin
     return React.createElement("span", {
-      className: $_279.guideLine,
+      className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.guideLine,
       key: "v-".concat(t),
       style: {
         left: e$value,
@@ -469,7 +469,7 @@ var zd = React.memo(function () {
     var /* [auto-meaningful-name] */e$value = e.value
     var /* [auto-meaningful-name] */e$origin = e.origin
     return React.createElement("span", {
-      className: $_279.guideLine,
+      className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.guideLine,
       key: "h-".concat(t),
       style: {
         top: e$value,

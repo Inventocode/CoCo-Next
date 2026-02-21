@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
+var r = require("./1662/86")
 var o = require("./1723/958")
 r({
   target: "RegExp",

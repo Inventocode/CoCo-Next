@@ -14,9 +14,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.StreamReader = exports.EndOfStreamError = undefined
-var s = require("../1162")
+var s = require("../1162/index")
 var c = require("./2398")
-var u = require("../1162")
+var u = require("../1162/index")
 Object.defineProperty(exports, "EndOfStreamError", {
   enumerable: true,
   get: function () {

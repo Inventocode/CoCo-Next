@@ -10,12 +10,12 @@ import { B, G, H } from "../../../../unrestored/shared/1571/2636/index__part-2"
 import { Q } from "../../../../unrestored/shared/1571/2636/index__part-3"
 import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
 import { Ge } from "../../../../unrestored/shared/1571/2636/index__part-9"
-import { Ze } from "./right/user-info"
+import { Ze } from "./user-info/index"
 import { Xe, ot } from "../../../../unrestored/shared/1571/2636/index__part-11"
-import { St } from "./right/collaboration"
+import { St } from "./collaboration/index"
 import { Dt } from "../../../../unrestored/shared/1571/2636/index__part-15"
 import { Gt } from "../../../../unrestored/shared/1571/2636/index__part-16"
-import { on } from "../../../../unrestored/shared/1571/2636/index__part-18"
+import { on } from "./share/menu-item"
 import { dn, pn, fn } from "../../../../unrestored/shared/1571/2636/index__part-20"
 import { gn } from "../../../../unrestored/shared/1571/2636/index__part-21"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
@@ -23,14 +23,14 @@ import /* [auto-meaningful-name] */$_styles$module$css from "./styles.module.css
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_276 from "../../../../unrestored/shared/1571/2636/276"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_load from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454_index from "../../../../unrestored/shared/1571/2636/454/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools_index from "../../../shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97_index from "../../../../unrestored/shared/1571/2636/97/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454 from "../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_$$_redux_common_actions from "../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_ui_components_index from "../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627_index from "../../../../unrestored/shared/1571/2636/627/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../unrestored/shared/1571/2636/10/index"
@@ -122,24 +122,24 @@ var yn = function () {
     }
   }, React.createElement("div", {
     onClick: function () {
-      window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.A(), "/"), "_blank")
+      window.open("".concat($$_$$_$$_shared_tools_index.A(), "/"), "_blank")
     },
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_unrestored_shared_1571_2636_10531.cloudSpaceManager)
+    className: Classnames($$_$$_$$_$$_unrestored_shared_1571_2636_10531.cloudSpaceManager)
   }, p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "cloudSpace.outMaxLimit"
   }) && React.createElement("div", {
     className: $$_$$_$$_$$_unrestored_shared_1571_2636_10531.cloudIconError
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     type: "icon-cloud-manager-error"
   })), p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "cloudSpace.outWarnLimit"
   }) && React.createElement("div", {
     className: $$_$$_$$_$$_unrestored_shared_1571_2636_10531.cloudIconWarn
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     type: "icon-cloud-manager-warn"
   })), p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "cloudSpace.cloudSpace"
-  }) && React.createElement("div", null, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }) && React.createElement("div", null, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     type: "icon-cloud-manager-normal"
   }))))
 }
@@ -201,7 +201,7 @@ var En = React.memo(function (e) {
   var W = useSelector(function (e) {
     return e.project.jsonFrom
   })
-  var U = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(P)
+  var U = $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(P)
   var V = useRef(null)
   var X = useRef(null)
   var J = useRef(null)
@@ -216,7 +216,7 @@ var En = React.memo(function (e) {
   var ae = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
-  var le = undefined !== $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href).archiveId
+  var le = undefined !== $$_$$_$$_shared_tools_index.N(window.location.href).archiveId
   useEffect(function () {
     re(false)
   }, [P])
@@ -401,7 +401,7 @@ var En = React.memo(function (e) {
     }
   }()
   var Oe = function () {
-    window.location.href = $$_$$_$$_$$_unrestored_shared_1571_2636_15.B()
+    window.location.href = $$_$$_$$_shared_tools_index.B()
   }
   var we = useCallback(function () {
     var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, o) {
@@ -638,7 +638,7 @@ var En = React.memo(function (e) {
               }
               n = t[0]
               e.next = 4
-              return $$_$$_$$_$$_unrestored_shared_1571_2636_454_index.i(n)
+              return $$_$$_$$_$$_unrestored_shared_1571_2636_454.i(n)
             case 4:
               if (e$sent = e.sent) {
                 e.next = 8
@@ -772,7 +772,7 @@ var En = React.memo(function (e) {
     }
   }()
   var De = function () {
-    window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.B(), "/about/"), "_blank")
+    window.open("".concat($$_$$_$$_shared_tools_index.B(), "/about/"), "_blank")
   }
   return React.createElement("div", {
     className: $_styles$module$css.wrapper,
@@ -793,7 +793,7 @@ var En = React.memo(function (e) {
     className: $_styles$module$css.logoBox,
     id: "logo",
     onClick: Ee
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     type: "icon-dropdown-down",
     className: $_styles$module$css.back
   }), React.createElement("div", {
@@ -802,23 +802,23 @@ var En = React.memo(function (e) {
     className: $_styles$module$css.logoCutLine
   }), React.createElement("div", {
     className: $_styles$module$css.menu
-  }, Object.values(oe.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
+  }, Object.values(oe.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_shared_ui_components_index.g, {
     className: $_styles$module$css.fileDropdown,
-    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
+    overlay: React.createElement($$_$$_$$_shared_ui_components_index.l, {
       onClick: Ce
-    }, oe.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }, oe.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "CREATE_NEW_PROJECT"
     }, React.createElement("div", {
       className: $_styles$module$css.itemContent
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "HeaderDropdown.newProject"
-    }))), oe.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }))), oe.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "OPEN_MY_PROJECT"
     }, React.createElement("div", {
       className: $_styles$module$css.itemContent
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "HeaderDropdown.openProject"
-    }))), ke && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }))), ke && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "SAVE_AS"
     }, React.createElement("div", {
       className: $_styles$module$css.itemContent
@@ -826,32 +826,32 @@ var En = React.memo(function (e) {
       id: "HeaderDropdown.saveAs"
     }))), React.createElement("div", {
       className: $_styles$module$css.line
-    }), oe.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }), oe.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "HISTORY"
     }, React.createElement("div", {
       className: $_styles$module$css.itemContent
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "HeaderDropdown.history"
-    }))), !ge && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }))), !ge && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "IMPORT_EXTENSION_WIDGET"
-    }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B, {
+    }, React.createElement($$_$$_$$_shared_ui_components_index.B, {
       onChange: Ie,
       accept: ".js,.jsx",
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemUploadButton)
+      className: Classnames($_styles$module$css.itemUploadButton)
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "HeaderDropdown.importExtension"
     }))), (Re || Re) && React.createElement("div", {
       className: $_styles$module$css.line
-    }), Ne && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }), Ne && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "OPEN_LOCAL_FILE"
-    }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B, {
+    }, React.createElement($$_$$_$$_shared_ui_components_index.B, {
       onChange: Se,
       onCancel: Ae,
       accept: ".json",
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemUploadButton)
+      className: Classnames($_styles$module$css.itemUploadButton)
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "HeaderDropdown.openLocalFile"
-    }))), Re && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }))), Re && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "EXPORT_PROJECT_AS_JSON"
     }, React.createElement("div", {
       className: $_styles$module$css.itemContent
@@ -872,11 +872,11 @@ var En = React.memo(function (e) {
     }
   }, React.createElement("div", {
     className: $_styles$module$css.toolTipsBox
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-file"
-  })))), Object.values(oe.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
-    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, null, oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+  })))), Object.values(oe.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_shared_ui_components_index.g, {
+    overlay: React.createElement($$_$$_$$_shared_ui_components_index.l, null, oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "courseVideo"
     }, React.createElement("div", {
       className: $_styles$module$css.itemLinkContent,
@@ -885,7 +885,7 @@ var En = React.memo(function (e) {
       className: $_styles$module$css.link
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "courseVideo"
-    })))), oe.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    })))), oe.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "tutorial"
     }, React.createElement("div", {
       className: $_styles$module$css.itemLinkContent
@@ -898,7 +898,7 @@ var En = React.memo(function (e) {
       id: "seeTutorial"
     })))), React.createElement("div", {
       className: $_styles$module$css.line
-    }), oe.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }), oe.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "feedback"
     }, React.createElement("div", {
       className: $_styles$module$css.itemLinkContent
@@ -909,7 +909,7 @@ var En = React.memo(function (e) {
       className: $_styles$module$css.link
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "feedback"
-    })))), oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    })))), oe.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "releaseInfo"
     }, React.createElement("div", {
       className: $_styles$module$css.itemLinkContent,
@@ -920,7 +920,7 @@ var En = React.memo(function (e) {
       className: $_styles$module$css.link
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "releaseInfo"
-    })))), oe.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    })))), oe.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "aboutUs"
     }, React.createElement("div", {
       className: $_styles$module$css.itemLinkContent,
@@ -944,24 +944,24 @@ var En = React.memo(function (e) {
     }
   }, React.createElement("div", {
     className: $_styles$module$css.toolTipsBox
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-help-circle-active"
-  })))), Object.values(oe.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
-    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
+  })))), Object.values(oe.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && React.createElement($$_$$_$$_shared_ui_components_index.g, {
+    overlay: React.createElement($$_$$_$$_shared_ui_components_index.l, {
       onClick: je
-    }, oe.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }, oe.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "STAGE_RULER"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemContent, L && $_styles$module$css.disabled)
+      className: Classnames($_styles$module$css.itemContent, L && $_styles$module$css.disabled)
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage(y ? {
       id: "HeaderDropdown.hideRuler"
     } : {
       id: "HeaderDropdown.showRuler"
-    }))), oe.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }))), oe.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_shared_ui_components_index.m, {
       value: "STAGE_AREA"
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.itemContent, L && $_styles$module$css.disabled)
+      className: Classnames($_styles$module$css.itemContent, L && $_styles$module$css.disabled)
     }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage(w ? {
       id: "HeaderDropdown.hideWidgetAndStage"
     } : {
@@ -981,7 +981,7 @@ var En = React.memo(function (e) {
     }
   }, React.createElement("div", {
     className: $_styles$module$css.toolTipsBox
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     className: "coco-header-menuIcon",
     type: "icon-settings"
   }))))), !le && oe.cloudDBManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
@@ -996,11 +996,11 @@ var En = React.memo(function (e) {
       top: -7
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.iconWrapper, $_styles$module$css.cloudIconWrapper, C && $_styles$module$css.activeIconWrapper),
+    className: Classnames($_styles$module$css.iconWrapper, $_styles$module$css.cloudIconWrapper, C && $_styles$module$css.activeIconWrapper),
     onClick: function () {
       n(m ? $$_$$_redux_common_actions.jj(true) : $$_$$_redux_common_actions.Ch())
     }
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     type: "icon-database-manage-active",
     className: $_styles$module$css.databaseIcon
   }))), React.createElement(yn, null)), React.createElement("div", {
@@ -1009,11 +1009,11 @@ var En = React.memo(function (e) {
     className: $_styles$module$css.right
   }, !le && oe.coll === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
     className: $_styles$module$css.otWrapper
-  }, React.createElement(St, null)), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
+  }, React.createElement(St, null)), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_shared_ui_components_index.g, {
     className: $_styles$module$css.shareMenu,
-    overlay: React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, null, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, null, React.createElement(on, {
+    overlay: React.createElement($$_$$_$$_shared_ui_components_index.l, null, React.createElement($$_$$_$$_shared_ui_components_index.m, null, React.createElement(on, {
       target: "community"
-    })), React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, null, React.createElement(on, {
+    })), React.createElement($$_$$_$$_shared_ui_components_index.m, null, React.createElement(on, {
       target: "others"
     })))
   }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_748_index.a, {
@@ -1028,8 +1028,8 @@ var En = React.memo(function (e) {
       top: -4
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.shareWrapper)
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+    className: Classnames($_styles$module$css.shareWrapper)
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     type: "icon-share",
     className: $_styles$module$css.icon
   })))), !le && oe.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement("div", {
@@ -1045,9 +1045,9 @@ var En = React.memo(function (e) {
       var e = D
       var t = Date.now()
       var n = t - e
-      var o = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, 0)
-      var i = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, -1)
-      var a = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, -2)
+      var o = $$_$$_$$_shared_tools_index.G(t, 0)
+      var i = $$_$$_$$_shared_tools_index.G(t, -1)
+      var a = $$_$$_$$_shared_tools_index.G(t, -2)
       var s = new Date(e)
       var c = ""
       var l = "".concat($$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
@@ -1085,12 +1085,12 @@ var En = React.memo(function (e) {
       } else if (e > i) {
         c = l + (c = $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
           id: "MyProject.yesterday"
-        }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
+        }) + $$_$$_$$_shared_tools_index.K(s))
       } else {
         if (e > a) {
           c = l + (c = $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "MyProject.theDayBeforeYesterday"
-          }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
+          }) + $$_$$_$$_shared_tools_index.K(s))
         } else {
           c = "".concat(s.getFullYear()).concat($$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "MyProject.year"
@@ -1110,11 +1110,11 @@ var En = React.memo(function (e) {
       position: "relative",
       top: "8px"
     }
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.d, {
     onClick: function () {
       we(false, true)
     },
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.saveBtn, g && $_styles$module$css.saving)
+    className: Classnames($_styles$module$css.saveBtn, g && $_styles$module$css.saving)
   }, React.createElement("span", {
     className: $_styles$module$css.saveText
   }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
@@ -1123,14 +1123,14 @@ var En = React.memo(function (e) {
     className: $_styles$module$css.savingIcon
   }, React.createElement(Ge, {
     stroke: "#6e4ff4"
-  })))), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  })))), !le && oe.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && v && React.createElement($$_$$_$$_shared_ui_components_index.d, {
     className: $_styles$module$css.packageBtn,
     onClick: _e,
     disabled: T$isPackaging
   }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "package"
   })), T$packageDialogVisible && React.createElement(Dt, null), T$packageQrCodeVisible && React.createElement(Gt, null), !le && oe.userInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && React.createElement(Ze, null), React.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_8($_styles$module$css.saveTipsWrapper, W !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER && ne && !U && $_styles$module$css.show)
+    className: Classnames($_styles$module$css.saveTipsWrapper, W !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER && ne && !U && $_styles$module$css.show)
   }, $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "MyProject.newSaveTips"
   }), React.createElement("div", {
@@ -1138,7 +1138,7 @@ var En = React.memo(function (e) {
     onClick: function () {
       return re(false)
     }
-  }, React.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_shared_ui_components_index.j, {
     type: "icon-close"
   }))), pe && React.createElement(ot, {
     type: Xe.ERROR,

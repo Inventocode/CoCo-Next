@@ -10,8 +10,8 @@ import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import { memo, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as a from "../8"
-import s from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import "./878"
 var _a
 _a = memo(function (e) {
@@ -25,7 +25,7 @@ _a = memo(function (e) {
     u(!!e$checked)
   }, [e$checked])
   return React1.createElement("div", {
-    className: s("coco-switch", l && "coco-switch-checked"),
+    className: Classnames1("coco-switch", l && "coco-switch-checked"),
     onClick: function () {
       u(!l)
       if (e$onChange) {
@@ -33,7 +33,7 @@ _a = memo(function (e) {
       }
     }
   }, React1.createElement("div", {
-    className: s("coco-switch-handle", l && "coco-switch-handle-checked")
+    className: Classnames1("coco-switch-handle", l && "coco-switch-handle-checked")
   }))
 })
 export { _a as a }

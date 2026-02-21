@@ -11,11 +11,11 @@ import { P } from "./index__part-1"
 import { V } from "./index__part-2"
 import { q } from "./index__part-3"
 import * as /* [auto-meaningful-name] */$$_710 from "../710"
-import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_2681_index from "../2681/index"
-import N from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as u from "./70"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -36,7 +36,7 @@ var J = function () {
     className: $_1131.deviceBox
   }, n.callStatus === u.b.IDEL && React.createElement("div", {
     className: $_1131.callStatus
-  }, React.createElement($$_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-idle",
     className: $_1131.noCallIcon
   }), React.createElement("div", null, $$_710$a$formatMessage({
@@ -50,12 +50,12 @@ var J = function () {
   })), n.callStatus === u.b.OFFHOOK && React.createElement("div", null, $$_710$a$formatMessage({
     id: "emulator.onCalling"
   })))), React.createElement("div", {
-    className: N($_1131.callBtnBox, $_1131.flexSC)
+    className: Classnames($_1131.callBtnBox, $_1131.flexSC)
   }, React.createElement("div", {
     className: "dialOutCall" === n.callType && n.callStatus !== u.b.IDEL ? $_1131.active : ""
   }, React.createElement("div", {
     id: "emulatorDialCallEnd",
-    className: N($_1131.callBtnItem, $_1131.callEnd),
+    className: Classnames($_1131.callBtnItem, $_1131.callEnd),
     onClick: function () {
       if ("dialOutCall" === n.callType && n.callStatus !== u.b.IDEL) {
         $_302.press("emulatorDialCallEnd")
@@ -71,7 +71,7 @@ var J = function () {
         }))
       }
     }
-  }, React.createElement($$_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: $_1131.callBtnText
@@ -81,7 +81,7 @@ var J = function () {
     className: "dialOutCall" === n.callType && n.callStatus === u.b.RINGING ? $_1131.active : ""
   }, React.createElement("div", {
     id: "emulatorDialCallConnect",
-    className: N($_1131.callBtnItem, $_1131.callConnect),
+    className: Classnames($_1131.callBtnItem, $_1131.callConnect),
     onClick: function () {
       if ("dialOutCall" === n.callType && n.callStatus === u.b.RINGING) {
         $_302.press("emulatorDialCallConnect")
@@ -96,7 +96,7 @@ var J = function () {
         }))
       }
     }
-  }, React.createElement($$_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-dial"
   })), React.createElement("span", {
     className: $_1131.callBtnText
@@ -134,7 +134,7 @@ var $ = function () {
     className: $_1131.phoneNumber
   }, $$_710$a$formatMessage({
     id: "emulator.incomingNumber"
-  })), React.createElement($$_13_index.k, {
+  })), React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.k, {
     warning: !c,
     defaultValue: c,
     placeholder: $$_710$a$formatMessage({
@@ -148,12 +148,12 @@ var $ = function () {
   }, !c && React.createElement("span", null, $$_710$a$formatMessage({
     id: "emulator.incomingNumberPlaceHolder"
   })))), React.createElement("div", {
-    className: N($_1131.callBtnBox, $_1131.flexSC)
+    className: Classnames($_1131.callBtnBox, $_1131.flexSC)
   }, React.createElement("div", {
     className: "incomingCall" === n.callType && n.callStatus !== u.b.IDEL ? $_1131.active : ""
   }, React.createElement("div", {
     id: "emulatorReceiveCallEnd",
-    className: N($_1131.callBtnItem, $_1131.callEnd),
+    className: Classnames($_1131.callBtnItem, $_1131.callEnd),
     onClick: function () {
       if ("incomingCall" === n.callType && n.callStatus !== u.b.IDEL) {
         $_302.press("emulatorReceiveCallEnd")
@@ -169,7 +169,7 @@ var $ = function () {
         }))
       }
     }
-  }, React.createElement($$_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: $_1131.callBtnText
@@ -179,7 +179,7 @@ var $ = function () {
     className: n.callStatus === u.b.IDEL && c ? $_1131.active : ""
   }, React.createElement("div", {
     id: "emulatorReceiveCallConnect",
-    className: N($_1131.callBtnItem, $_1131.callConnect),
+    className: Classnames($_1131.callBtnItem, $_1131.callConnect),
     onClick: function () {
       if (n.callStatus === u.b.IDEL && c) {
         $_302.press("emulatorReceiveCallConnect")
@@ -198,7 +198,7 @@ var $ = function () {
         }))
       }
     }
-  }, React.createElement($$_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-dial"
   })), React.createElement("span", {
     className: $_1131.callBtnText
@@ -227,7 +227,7 @@ var ee = function () {
     className: $_1131.phoneNumber
   }, $$_710$a$formatMessage({
     id: "emulator.smsNumber"
-  })), React.createElement($$_13_index.k, {
+  })), React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.k, {
     defaultValue: s,
     warning: !s,
     placeholder: $$_710$a$formatMessage({
@@ -247,7 +247,7 @@ var ee = function () {
     className: $_1131.phoneNumber
   }, $$_710$a$formatMessage({
     id: "emulator.smsContent"
-  })), React.createElement($$_13_index.A, {
+  })), React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.A, {
     defaultValue: d,
     rows: 10,
     maxLength: 200,
@@ -275,7 +275,7 @@ var ee = function () {
         }))
       }
     },
-    className: N($_1131.receiveSmsBtn, (!s || !d) && $_1131.disabled)
+    className: Classnames($_1131.receiveSmsBtn, (!s || !d) && $_1131.disabled)
   }, $$_710$a$formatMessage({
     id: "emulator.receiveSms"
   })))
@@ -357,7 +357,7 @@ var ne = function (e) {
       }
     }
   }, React.createElement(q, null), React.createElement("div", {
-    className: N("emulator-panel-wrapper", a && "visible")
+    className: Classnames("emulator-panel-wrapper", a && "visible")
   }, React.createElement("div", {
     className: "emulator-contentWrapper"
   }, a && te.includes(a) && React.createElement(P, null), React.createElement(V, null), "DIAL_CALL" === a && React.createElement(J, null), "RECEIVE_CALL" === a && React.createElement($, null), "RECEIVE_SMS" === a && React.createElement(ee, null)))))

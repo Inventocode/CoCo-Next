@@ -12,7 +12,7 @@ import * as ep from "./4"
 import * as Jd from "./33"
 import * as kn from "./75"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector } from "react-redux"
@@ -47,7 +47,7 @@ var Pf = function (e) {
   var C = O[1]
   useEffect(function () {
     var e
-    if (te.U(o)) {
+    if ($$_$$_$$_$$_src_shared_tools_index.U(o)) {
       e = o
     } else {
       var t = Jd.hb(o)
@@ -57,7 +57,7 @@ var Pf = function (e) {
   }, [o, l])
   useEffect(function () {
     var e
-    if (te.U(a)) {
+    if ($$_$$_$$_$$_src_shared_tools_index.U(a)) {
       e = a
     } else {
       var t = Jd.hb(a)
@@ -67,7 +67,7 @@ var Pf = function (e) {
   }, [a, l])
   useEffect(function () {
     var e
-    if (te.U(c)) {
+    if ($$_$$_$$_$$_src_shared_tools_index.U(c)) {
       e = c
     } else {
       var t = Jd.hb(c)

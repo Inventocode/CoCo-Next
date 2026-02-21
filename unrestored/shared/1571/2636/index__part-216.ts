@@ -9,7 +9,7 @@
 import { nb } from "./index__part-92"
 import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector, useDispatch, batch } from "react-redux"
@@ -69,7 +69,7 @@ var qP = memo(function () {
       E($$_$$_$$_$$_src_editor_redux_common_actions.sh())
     }))
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: e$visible,
     className: $_7081.sliderImageDialog,
     title: $_710$a$formatMessage({
@@ -80,7 +80,7 @@ var qP = memo(function () {
         visible: false
       }))
     },
-    footer: React.createElement($_13_index.d, {
+    footer: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
       type: "primary",
       onClick: function () {
         batch(function () {

@@ -9,10 +9,10 @@ import { r } from "./index__part-1"
 var b = false
 import /* [auto-meaningful-name] */$_159 from "./159"
 import * as /* [auto-meaningful-name] */$$_77 from "../77"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import d from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */React from "react"
 import { useRef, useState, useEffect, useCallback, useLayoutEffect } from "react"
@@ -92,7 +92,7 @@ _a = function (e) {
     if (e$trackImageUrl) {
       Te.current = Te.current + 1
       var /* [auto-meaningful-name] */Te$current = Te.current
-      $$_15.gb(e$trackImageUrl, U === $$_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
+      $$_$$_$$_$$_$$_src_shared_tools_index.gb(e$trackImageUrl, U === $$_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
         if (!(Te.current > Te$current)) {
           ye(t)
         }
@@ -105,7 +105,7 @@ _a = function (e) {
     if (e$backgroundImageUrl) {
       Se.current = Se.current + 1
       var /* [auto-meaningful-name] */Se$current = Se.current
-      $$_15.gb(e$backgroundImageUrl, G === $$_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
+      $$_$$_$$_$$_$$_src_shared_tools_index.gb(e$backgroundImageUrl, G === $$_77.b.HORIZONTAL ? -90 : 90).then(function (t) {
         if (!(Se.current > Se$current)) {
           Ce(t)
         }
@@ -156,12 +156,12 @@ _a = function (e) {
       var t = Color(e).toString()
       return {
         default: {
-          stepBackgroundColor: $$_15.hb(t, .2),
+          stepBackgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(t, .2),
           handleBorderColor: t,
           trackBackgroundColor: t
         },
         disabled: {
-          stepBackgroundColor: $$_15.hb("#ccc", .2),
+          stepBackgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#ccc", .2),
           handleBorderColor: "#ccc",
           trackBackgroundColor: "#ccc"
         }
@@ -211,7 +211,7 @@ _a = function (e) {
     return e$attributes$value
   }, [D, e$attributes$maxValue, e$attributes$minValue, e$attributes$step, e$attributes$value])
   var Ne = useCallback(function (e) {
-    if ($$_15.W()) {
+    if ($$_$$_$$_$$_$$_src_shared_tools_index.W()) {
       b = true
       if (!e$attributes$disabled) {
         if (e$onStartToSlid) {
@@ -221,7 +221,7 @@ _a = function (e) {
     }
   }, [e$attributes$disabled, e$onStartToSlid, e$attributes$value])
   var Re = useCallback(function (e) {
-    if ($$_15.W() && !e$attributes$disabled) {
+    if ($$_$$_$$_$$_$$_src_shared_tools_index.W() && !e$attributes$disabled) {
       b = true
       var t = je(e.changedTouches[0].clientX, e.changedTouches[0].clientY)
       if (e$onSliderChange) {
@@ -271,10 +271,10 @@ _a = function (e) {
     }
   }, [re, se, e$attributes$maxValue, e$attributes$minValue, e$attributes$value, D, $, e$size])
   useEffect(function () {
-    if (!$$_15.W()) {
+    if (!$$_$$_$$_$$_$$_src_shared_tools_index.W()) {
       var e = e$attributes$value
       var t = e$attributes$value
-      var n = $$_15.p(function () {
+      var n = $$_$$_$$_$$_$$_src_shared_tools_index.p(function () {
         if (e$onSliderChange) {
           e$onSliderChange(e)
         }
@@ -342,7 +342,7 @@ _a = function (e) {
     id: n,
     "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.E,
-    className: d($$_90.b, $$_11.a({}, $_159.hide, !e$visible)),
+    className: Classnames($$_90.b, $$_11.a({}, $_159.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -361,7 +361,7 @@ _a = function (e) {
       backgroundColor: $ ? "transparent" : "#fff"
     }
   }, React.createElement("div", {
-    className: d($_159.step, D === $$_77.b.VERTICAL && $_159.vertical),
+    className: Classnames($_159.step, D === $$_77.b.VERTICAL && $_159.vertical),
     style: {
       width: "100%",
       height: "100%",
@@ -370,7 +370,7 @@ _a = function (e) {
       backgroundImage: $ ? "url(".concat(G === D ? e$backgroundImageUrl : we, ")") : undefined
     }
   }, React.createElement("div", {
-    className: d($_159.trackBox, D === $$_77.b.HORIZONTAL ? $_159.horizontalTrackBox : $_159.verticalTrackBox),
+    className: Classnames($_159.trackBox, D === $$_77.b.HORIZONTAL ? $_159.horizontalTrackBox : $_159.verticalTrackBox),
     ref: X,
     style: {
       backgroundColor: $ ? undefined : Ae.trackBackgroundColor
@@ -387,14 +387,14 @@ _a = function (e) {
     onTouchMove: Re,
     onTouchEnd: ke,
     ref: q,
-    className: d($_159.handle, $ ? $_159.imageHandle : $_159.templateHandle, H === D ? $_159.horizontalHandle : $_159.verticalHandle, H === $$_77.b.HORIZONTAL && D === $$_77.b.VERTICAL ? $_159.verticalRotate : $_159.horizontalRotate, e$isEditState && !S && $_159.handleNotSelected),
+    className: Classnames($_159.handle, $ ? $_159.imageHandle : $_159.templateHandle, H === D ? $_159.horizontalHandle : $_159.verticalHandle, H === $$_77.b.HORIZONTAL && D === $$_77.b.VERTICAL ? $_159.verticalRotate : $_159.horizontalRotate, e$isEditState && !S && $_159.handleNotSelected),
     style: {
       width: re,
       height: se,
       borderWidth: de,
       borderRadius: me,
       borderColor: Ae.handleBorderColor,
-      color: $$_15.hb(Ae.handleBorderColor, .3),
+      color: $$_$$_$$_$$_$$_src_shared_tools_index.hb(Ae.handleBorderColor, .3),
       backgroundImage: $ ? "url(".concat(e$handleImageUrl, ")") : undefined
     }
   }, !$ && e$attributes$mode === $$_77.c.PRIMARY && React.createElement("div", {

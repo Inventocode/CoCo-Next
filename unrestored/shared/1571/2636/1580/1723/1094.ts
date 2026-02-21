@@ -6,7 +6,7 @@
 
 var r = require("../1282/231")
 var o = require("../1648/714")
-var i = require("../1782/246/index")("match")
+var i = require("../1282/246/index")("match")
 module.exports = function (e) {
   var t
   return r(e) && (undefined !== (t = e[i]) ? !!t : "RegExp" == o(e))

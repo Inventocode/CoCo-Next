@@ -26,10 +26,10 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components from "../../../../shared/ui/components"
 import { IconFont } from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import { batch, useDispatch, useSelector } from "react-redux"
@@ -138,7 +138,7 @@ var Xr = React.forwardRef(function (e, t) {
     }
   }
   return <input
-    className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111.input, e$className, {
+    className={classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111.input, e$className, {
       "coco-input-warning-animation": b
     })}
     ref={w}
@@ -322,7 +322,7 @@ var Jr = React.memo(function (e) {
   }, [e$canEdit])
   return <div
     ref={v}
-    className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.selected, e$selected))}
+    className={classnames(styles.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.selected, e$selected))}
     key={e$screen.id}
   >
     {<div
@@ -1601,9 +1601,9 @@ export const ScreenList = React.memo(() => {
     }}
   >
     {<div
-      className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.stageMask, O && styles.visible)}
+      className={classnames(styles.stageMask, O && styles.visible)}
     />}
-    {<$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r
+    {<$$_$$_$$_$$_shared_ui_components.r
       content={G}
       onOpen={() => {
         w(true)
@@ -1615,7 +1615,7 @@ export const ScreenList = React.memo(() => {
       ref={n}
     >
       {<div
-        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.screenIconBox, !playing && styles.line)}
+        className={classnames(styles.screenIconBox, !playing && styles.line)}
       >
         {<IconFont
           type={"icon-screen-manage"}
@@ -1629,12 +1629,12 @@ export const ScreenList = React.memo(() => {
           })}
         </span>}
       </div>}
-    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r>}
+    </$$_$$_$$_$$_shared_ui_components.r>}
     {!playing && <div
       className={styles.screenIndexBox}
     >
       {<div
-        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.prev, d <= 0 && styles.hide)}
+        className={classnames(styles.prev, d <= 0 && styles.hide)}
         onClick={function () {
           var /* [auto-meaningful-name] */T$current
           if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1651,7 +1651,7 @@ export const ScreenList = React.memo(() => {
         />}
       </div>}
       {<div
-        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.next, d + v - 108 >= 38 * screens.size && styles.hide)}
+        className={classnames(styles.next, d + v - 108 >= 38 * screens.size && styles.hide)}
         onClick={function () {
           var /* [auto-meaningful-name] */T$current
           if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1674,7 +1674,7 @@ export const ScreenList = React.memo(() => {
         {screens.map(function (e, t) {
           return <div
             id={"screen_index_".concat(t)}
-            className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.index, currentScreenIndex === t && styles.active)}
+            className={classnames(styles.index, currentScreenIndex === t && styles.active)}
             key={t}
             onClick={W.bind(null, t)}
           >

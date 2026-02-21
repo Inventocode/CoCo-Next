@@ -13,10 +13,10 @@ exports.ProcedureManager = exports.register_procedure_json_generator = exports.r
 var r = require("tslib")
 var i = require("../../1058/125")
 var o = require("../734/387")
-var a = require("../../228/732")
+var a = require("../../../../../../src/shared/packages/@crc/blink/src/procedure/blocks")
 var s = require("../../1058/173")
-var c = require("../../228/733")
-var u = require("./1346")
+var c = require("../../228/733/index")
+var u = require("../../228/733/1346")
 var l = require("../734/index")
 var f = require("../../1058/762");
 (0, r.__exportStar)(require("./2146"), exports)

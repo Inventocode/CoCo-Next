@@ -8,7 +8,7 @@
 
 var r = require("../180")
 var i = require("../204")
-var o = require("../../../1058/1393/573")
+var o = require("../../../1058/1393/573/index")
 var /* [auto-meaningful-name] */require$$_979$breakableTypePattern = require("../979").breakableTypePattern
 var s = require("./2304/index")
 var c = require("./1141")

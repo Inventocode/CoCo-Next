@@ -14,7 +14,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_267 from "./267"
@@ -50,13 +50,13 @@ var n_ = {
         n = e_.FAILED
       }
     }
-    if (t && (this.updateShape_(), $_17_index.Blink.events.is_enabled())) {
+    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
       var r = ep.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: n
       })
-      $_17_index.Blink.events.fire(r)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   removeMutation: function (e) {
@@ -71,13 +71,13 @@ var n_ = {
         t = true
       }
     }
-    if (t && (this.updateShape_(), $_17_index.Blink.events.is_enabled())) {
+    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
       var r = ep.c("mutation", {
         block: this,
         old_value: n,
         new_value: undefined
       })
-      $_17_index.Blink.events.fire(r)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   updateShape_: function () {
@@ -91,7 +91,7 @@ var n_ = {
     var s
     var c
     var l = this
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("ERROR_MSG")) {
       this.remove_input("ERROR_MSG")
     }
@@ -107,13 +107,13 @@ var n_ = {
         l.remove_input(e$inputName)
       }
     })
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     if (this.get_input("ERROR")) {
       this.failedConnection = null === (e = this.get_input("ERROR")) || undefined === e || null === (e$connection = e.connection) || undefined === e$connection ? undefined : e$connection.target_connection
       if (this.failedStatement_) {
-        $_17_index.Blink.events.disable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("ERROR")
-        $_17_index.Blink.events.enable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("ERROR")
       }
@@ -123,16 +123,16 @@ var n_ = {
     if (this.get_input("SUCCESS")) {
       this.successConnection = null === (n = this.get_input("SUCCESS")) || undefined === n || null === (n$connection = n.connection) || undefined === n$connection ? undefined : n$connection.target_connection
       if (this.successStatement_) {
-        $_17_index.Blink.events.disable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("SUCCESS")
-        $_17_index.Blink.events.enable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("SUCCESS")
       }
     } else {
       this.successConnection = null
     }
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("SUCCESS_TEXT")) {
       this.remove_input("SUCCESS_TEXT")
     }
@@ -141,7 +141,7 @@ var n_ = {
     }
     this.append_dummy_input("SUCCESS_MUTATION_BTN")
     if (this.successStatement_) {
-      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($_17_index.Blink.Msg.ROOM_SUCCESS_TEXT)
+      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
       this.successInputList.forEach(function (e) {
         var /* [auto-meaningful-name] */e$inputName = e.inputName
         var /* [auto-meaningful-name] */e$default_shadow = e.default_shadow
@@ -160,7 +160,7 @@ var n_ = {
         this.remove_input("FAILED_MUTATION_BTN")
       }
       this.append_dummy_input("FAILED_MUTATION_BTN")
-      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($_17_index.Blink.Msg.ROOM_FAILED_TEXT)
+      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
       this.append_shadow_input("ERROR_MSG", "<shadow type=\"cloud_dict_fail_result\"/>", "FAILED_MUTATION_BTN")
       var /* [auto-meaningful-name] */f$connection
       var f = this.append_statement_input("ERROR", undefined, "cloud_dict_error_DO")
@@ -198,7 +198,7 @@ var n_ = {
         }
       }
     }
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     this.render()
   },
   domToMutation: function (e) {

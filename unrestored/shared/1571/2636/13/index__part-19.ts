@@ -10,7 +10,7 @@ var ve
 import /* [auto-meaningful-name] */React from "react"
 import { useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "../8"
+import i from "classnames"
 import "../541/index"
 import * as /* [auto-meaningful-name] */$_303_index from "./303/index"
 import /* [auto-meaningful-name] */$_303_index1 from "./303/index"

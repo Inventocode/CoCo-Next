@@ -11,9 +11,9 @@ import * as Tn from "./68"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -34,7 +34,7 @@ var $u = memo(function () {
   })
   return React.createElement("div", {
     className: $_3811.imageAddon
-  }, React.createElement($_13_index.B, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
     onChange: function (e) {
       if (e && n) {
         t($$_$$_$$_$$_src_editor_redux_common_actions.Zf(e, function (e) {
@@ -46,9 +46,9 @@ var $u = memo(function () {
     tooltip: $_710$a$formatMessage({
       id: "uploadFileByLocal"
     })
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-upload-image",
-    className: N($_3811.item)
+    className: Classnames($_3811.item)
   })), React.createElement("div", {
     className: $_3811.gap
   }), React.createElement($_748_index.a, {
@@ -71,9 +71,9 @@ var $u = memo(function () {
         }))
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-image-library",
-    className: N($_3811.item)
+    className: Classnames($_3811.item)
   }))))
 })
 var ed = memo(function () {
@@ -98,9 +98,9 @@ var ed = memo(function () {
         }
       })
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-attribute",
-    className: N($_3811.iconButton, $_3811.editIcon)
+    className: Classnames($_3811.iconButton, $_3811.editIcon)
   })))
 })
 var td = function () {
@@ -138,8 +138,8 @@ var td = function () {
         c($$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "options", s$attributes$options.slice(0, -1)))
       }
     },
-    className: N(k.a({}, $_3811.disabled, 1 === s$attributes$options.length))
-  }, React.createElement($_13_index.j, {
+    className: Classnames(k.a({}, $_3811.disabled, 1 === s$attributes$options.length))
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-minus"
   }))), React.createElement($_748_index.a, {
     placement: "bottom",
@@ -158,8 +158,8 @@ var td = function () {
         a(Date.now())
       }
     },
-    className: N(k.a({}, $_3811.disabled, 8 === s$attributes$options.length))
-  }, React.createElement($_13_index.j, {
+    className: Classnames(k.a({}, $_3811.disabled, 8 === s$attributes$options.length))
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add"
   }))))
 }
@@ -182,9 +182,9 @@ var nd = function () {
       }
     },
     className: $_3811.webViewAction
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-refresh",
-    className: N($_3811.iconButton)
+    className: Classnames($_3811.iconButton)
   })))
 }
 var rd = function () {

@@ -34,7 +34,7 @@ import { oTHelper } from "../../../editor/collaboration/ot-helper"
 import * as ExternalModule from "./external-module"
 import * as Store from "../../../editor/redux/store"
 import * as CommonActions from "../../../editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../tools"
+import * as /* [auto-meaningful-name] */$$_$$_tools from "../../tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as Shop from "./shop"
 import * as Restrict from "./restrict"
@@ -515,7 +515,7 @@ export async function loadCustomWidget(
     if (!url.startsWith(EXTERNAL_MODULE_BASE_URL) && !url.startsWith(OLD_EXTERNAL_MODULE_BASE_URL)) {
       return
     }
-    await $$_$$_$$_$$_unrestored_shared_1571_2636_15.cb(url)
+    await $$_$$_tools.cb(url)
   }
   code = (await import("@babel/core")).transformSync(code, {
     presets: [(await import("@babel/preset-react")).default]

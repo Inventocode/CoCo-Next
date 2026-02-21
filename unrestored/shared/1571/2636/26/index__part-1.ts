@@ -10,12 +10,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_block_toolbox 
 import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as l from "../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */$$_301_index from "../301/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 var h = new (function () {
   function e() {
     $$_27.a(this, e)
@@ -26,8 +26,8 @@ var h = new (function () {
     {
       key: "getToolbox",
       value: function () {
-        var /* [auto-meaningful-name] */$$_17_index$Blink$mainWorkspace
-        return null === ($$_17_index$Blink$mainWorkspace = $$_17_index.Blink.mainWorkspace) || undefined === $$_17_index$Blink$mainWorkspace ? undefined : $$_17_index$Blink$mainWorkspace.get_toolbox()
+        var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace
+        return null === ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) || undefined === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace ? undefined : $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace.get_toolbox()
       }
     }, {
       key: "convertBlockTypeToXml",
@@ -46,7 +46,7 @@ var h = new (function () {
           }
         })
         n += "</xml>"
-        return $$_17_index.Blink.xml.text_to_dom(n).children
+        return $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.xml.text_to_dom(n).children
       }
     }, {
       key: "getConfig",
@@ -139,8 +139,8 @@ var h = new (function () {
               name: e,
               text: t || l.text || $$_$$_$$_$$_$$_src_shared_ui_language.c($$_$$_$$_$$_$$_src_shared_ui_language.b, "untitled"),
               icon: {
-                font_id: $$_15.X(l.iconId) ? undefined : l.iconId,
-                html: $$_15.X(l.iconId) ? "<img draggable=\"false\" style=\"width: 16px; height: 16px;\" src=\"".concat(l.iconId, "\">") : undefined
+                font_id: $$_$$_$$_$$_$$_src_shared_tools_index.X(l.iconId) ? undefined : l.iconId,
+                html: $$_$$_$$_$$_$$_src_shared_tools_index.X(l.iconId) ? "<img draggable=\"false\" style=\"width: 16px; height: 16px;\" src=\"".concat(l.iconId, "\">") : undefined
               },
               blocks: a ? "ANY_".concat(n) : Array.isArray(l.blocks) ? this.convertBlockTypeToXml(l.blocks) : l.blocks
             })
@@ -254,9 +254,9 @@ var h = new (function () {
     }, {
       key: "updateToolBoxWidgetTitle",
       value: function (e, t) {
-        var /* [auto-meaningful-name] */$$_17_index$Blink$mainWorkspace
+        var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace
         var r
-        var o = null === ($$_17_index$Blink$mainWorkspace = $$_17_index.Blink.mainWorkspace) || undefined === $$_17_index$Blink$mainWorkspace || null === (r = $$_17_index$Blink$mainWorkspace.get_toolbox()) || undefined === r ? undefined : r.find_node_by_name(e)
+        var o = null === ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) || undefined === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace || null === (r = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace.get_toolbox()) || undefined === r ? undefined : r.find_node_by_name(e)
         if (o) {
           o.get_element().getElementsByClassName("blocklyTreeLabel")[0].textContent = t
         }
@@ -273,7 +273,7 @@ var h = new (function () {
           if ((null === r || undefined === r ? undefined : r.type) && [$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(r.type)) {
             n = r.id
           }
-          var o = null === (t = $$_17_index.Blink.mainWorkspace.get_toolbox()) || undefined === t ? undefined : t.find_node_by_name(n)
+          var o = null === (t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()) || undefined === t ? undefined : t.find_node_by_name(n)
           if (o) {
             o.get_element().classList.add("cocoWidgetSelected")
           }

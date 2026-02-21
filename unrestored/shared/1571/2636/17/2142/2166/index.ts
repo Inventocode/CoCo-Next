@@ -21,7 +21,7 @@ var l = function () {
   function e() {
     this.Blocks = Object.create(null)
     this.blocks_xml = {}
-    this.version = require("../../1352").version
+    this.version = require("../../../../../../../src/shared/packages/@crc/blink/package.json").version
     this.inject = s.Inject.bind(this)
     Object.assign(this.Msg, a.zh_hans);
     (0, o.init_shadows)(this)

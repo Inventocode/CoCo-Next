@@ -11,7 +11,7 @@ import { od, id } from "./index__part-29"
 import { ld } from "./index__part-30"
 import * as Qu from "./60"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import /* [auto-meaningful-name] */$_279 from "../../../../src/editor/ui/preview-area/stage/style.css"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css from "../../../../src/editor/ui/preview-area/stage/style.css"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
@@ -260,9 +260,9 @@ var hd = React.memo(function () {
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var t = useDispatch()
   return React.createElement("div", {
-    className: $_279.stageMask,
+    className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.stageMask,
     onDrop: function () {
-      var /* [auto-meaningful-name] */$_279$canvasFlash = $_279.canvasFlash
+      var /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash = $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.canvasFlash
       var r = $_710$a$formatMessage({
         id: "StageToast.addActorToCanvasTips"
       })
@@ -270,11 +270,11 @@ var hd = React.memo(function () {
       var o = document.querySelectorAll("[data-widget-type=\"CANVAS_WIDGET\"][data-role=\"WIDGET\"]")
       if (o) {
         o.forEach(function (e) {
-          if (!e.classList.contains($_279$canvasFlash)) {
-            e.classList.add($_279$canvasFlash)
+          if (!e.classList.contains($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash)) {
+            e.classList.add($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash)
             setTimeout(function () {
               try {
-                e.classList.remove($_279$canvasFlash)
+                e.classList.remove($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash)
               } catch (t) {
                 console.error("Canvas widget remove flush class error")
               }
@@ -287,7 +287,7 @@ var hd = React.memo(function () {
 })
 var md = React.memo(function () {
   return React.createElement("div", {
-    className: $_279.stageReadOnlyMask
+    className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.stageReadOnlyMask
   })
 })
 var gd = function (e, t, n, r) {

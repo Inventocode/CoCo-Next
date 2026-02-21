@@ -11,9 +11,9 @@ import { XA } from "./index__part-168"
 import * as /* [auto-meaningful-name] */$_110 from "./110"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch, useSelector } from "react-redux"
@@ -112,7 +112,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
         color: r.color,
         fontSize: r.fontSize
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: r.class
     })), React.createElement("span", {
       className: $_2371.text
@@ -190,9 +190,9 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     className: $_2371.leftSelect
   }, React.createElement("div", {
     className: $_2371.searchInputBox
-  }, React.createElement($_13_index.k, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     value: u,
-    className: N($_2371.searchInput),
+    className: Classnames($_2371.searchInput),
     onClearCallback: function () {
       d("")
     },
@@ -203,7 +203,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       d(e)
     },
     clearButtonVisible: !!u,
-    before: React.createElement($_13_index.j, {
+    before: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-material-search"
     })
   })), function () {
@@ -258,7 +258,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
         }, GS(r)))
       }
       return React.createElement("div", {
-        className: N($_2371.option, $_2371.selectedBox),
+        className: Classnames($_2371.option, $_2371.selectedBox),
         key: e.id
       }, React.createElement("div", {
         className: $_2371.categoryIcon,
@@ -266,7 +266,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
           color: n.color,
           fontSize: n.fontSize
         }
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: n.class
       })), React.createElement("div", {
         className: $_2371.name
@@ -276,14 +276,14 @@ var $A = React.memo(React.forwardRef(function (e, t) {
         onClick: function () {
           return C(e)
         },
-        className: N($_2371.closeIcon, "watchItemCloseIcon")
-      }, React.createElement($_13_index.j, {
+        className: Classnames($_2371.closeIcon, "watchItemCloseIcon")
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-close"
       })))
     }(e)
   })), React.createElement("div", {
     className: $_2371.actions
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     style: {
       width: "84px",
       marginRight: "14px"
@@ -291,7 +291,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     onClick: j
   }, $_710$a$formatMessage({
     id: "DataWatch.cancel"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     style: {
       width: "84px"
     },

@@ -23,7 +23,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../../unrestored/shared/1571/2636/392/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_144 from "../../../../unrestored/shared/1571/2636/144"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_restrict from "../../../shared/widget/custom/restrict"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_375 from "../../../../unrestored/shared/1571/2636/37/375"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97_375 from "../../../../unrestored/shared/1571/2636/97/375"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_48_345 from "../../../../unrestored/shared/1571/2636/48/345"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_410 from "../../../../unrestored/shared/1571/2636/410"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_515 from "../../../../unrestored/shared/1571/2636/37/515"
@@ -35,8 +35,8 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_storage fr
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_widget_custom_load from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_127 from "../../../../unrestored/shared/1571/2636/127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_145 from "../../../../unrestored/shared/1571/2636/145"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97_index from "../../../../unrestored/shared/1571/2636/97/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools_index from "../../../shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../unrestored/shared/1571/2636/49"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../unrestored/shared/1571/2636/24/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_shared_ui_language from "../../../shared/ui/language"
@@ -78,9 +78,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_39 from "../../../../unrestored/shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_ui_components_index from "../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_266 from "../../../../unrestored/shared/1571/2636/266"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2661 from "../../../../unrestored/shared/1571/2636/266"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_188 from "../../../../unrestored/shared/1571/2636/188"
@@ -106,33 +106,33 @@ var No = function (e) {
       e$onConfirm()
     }
   }
-  return React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
+  return React1.createElement($$_$$_$$_shared_ui_components_index.f, {
     visible: true,
     showCloseButton: false,
     withPortal: true,
     maskClosable: false,
     mask: g,
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialog, e$className, e$denyText && $$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogSecondary)
+    className: Classnames1($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialog, e$className, e$denyText && $$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogSecondary)
   }, React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.a, null, React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_188.b, {
     keys: "enter",
     callback: _
   })), React1.createElement("h3", null, e$title), React1.createElement("span", null, e$content), React1.createElement("div", {
-    className: $$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogButtons)
-  }, p && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+    className: Classnames1($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogButtons)
+  }, p && React1.createElement($$_$$_$$_shared_ui_components_index.d, {
     type: "light",
     onClick: function () {
       if (e$onCancel) {
         e$onCancel()
       }
     }
-  }, e$cancelText), e$denyText && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  }, e$cancelText), e$denyText && React1.createElement($$_$$_$$_shared_ui_components_index.d, {
     onClick: function () {
       if (e$onDeny) {
         e$onDeny()
       }
     },
     className: $$_$$_$$_$$_unrestored_shared_1571_2636_2661.denyButton
-  }, e$denyText), h && React1.createElement($$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  }, e$denyText), h && React1.createElement($$_$$_$$_shared_ui_components_index.d, {
     type: "primary",
     danger: e$isDangerous,
     onClick: _
@@ -2072,7 +2072,7 @@ function $a(e) {
           y.next = 33
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.o(e$payload$projectId))
         case 33:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.jb(e$payload$projectId)
+          $$_$$_$$_shared_tools_index.jb(e$payload$projectId)
           _ = g.sourceTag || $$_$$_$$_$$_unrestored_shared_1571_2636_18.g.FREEDOM
           v = g.sourceId || ""
           y.next = 44
@@ -2082,7 +2082,7 @@ function $a(e) {
           y.next = 41
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Tg(true))
         case 41:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["workId", "inviteCode", "jsonUrl"])
+          $$_$$_$$_shared_tools_index.k(["workId", "inviteCode", "jsonUrl"])
           y.next = 44
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(ts, _, v)
         case 44:
@@ -2133,10 +2133,10 @@ function $a(e) {
           }))
         case 72:
           if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["courseId"])
+            $$_$$_$$_shared_tools_index.k(["courseId"])
           }
           if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_TEMPLATE) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["templateId"])
+            $$_$$_$$_shared_tools_index.k(["templateId"])
           }
           y.next = 76
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(go)
@@ -2375,7 +2375,7 @@ function rs(e) {
           $.next = 5
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_shared_widget_custom_load.x, _, b)
         case 5:
-          I = $$_$$_$$_$$_unrestored_shared_1571_2636_97.f(e.screens)
+          I = $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.f(e.screens)
           $.next = 8
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_shared_widget_custom_load.w, _, I, m)
         case 8:
@@ -2384,7 +2384,7 @@ function rs(e) {
         case 10:
           $$sent = $.sent
           $$_$$_$$_$$_unrestored_shared_1571_2636_48_345.c(I, O)
-          N = $$_$$_$$_$$_unrestored_shared_1571_2636_97.e(e.screens, e$screenIds)
+          N = $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.e(e.screens, e$screenIds)
           $.next = 15
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($_actions.Th({
             screens: N,
@@ -2454,18 +2454,18 @@ function rs(e) {
               W[e.id] = e.cdnUrl
             }
           }), I) {
-            if ((H = I[U]).type === $$_$$_widget_builtIn_types.H && (H$attributes$fontFamily = H.attributes.fontFamily) && W[H$attributes$fontFamily] && !$$_$$_$$_$$_unrestored_shared_1571_2636_15.db[H$attributes$fontFamily]) {
-              $$_$$_$$_$$_unrestored_shared_1571_2636_15.bb(H$attributes$fontFamily, W[H$attributes$fontFamily])
-              $$_$$_$$_$$_unrestored_shared_1571_2636_15.db[H$attributes$fontFamily] = true
+            if ((H = I[U]).type === $$_$$_widget_builtIn_types.H && (H$attributes$fontFamily = H.attributes.fontFamily) && W[H$attributes$fontFamily] && !$$_$$_$$_shared_tools_index.db[H$attributes$fontFamily]) {
+              $$_$$_$$_shared_tools_index.bb(H$attributes$fontFamily, W[H$attributes$fontFamily])
+              $$_$$_$$_shared_tools_index.db[H$attributes$fontFamily] = true
             }
             if (H && H.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === H.type) {
               H$attributes = H.attributes
               H$attributes$content = H$attributes.content
               K = undefined === H$attributes$content ? "" : H$attributes$content
-              $$_$$_$$_$$_unrestored_shared_1571_2636_37_375.a(K).forEach(function (e) {
-                if (e && W[e] && !$$_$$_$$_$$_unrestored_shared_1571_2636_15.db[e]) {
-                  $$_$$_$$_$$_unrestored_shared_1571_2636_15.bb(e, W[e])
-                  $$_$$_$$_$$_unrestored_shared_1571_2636_15.db[e] = true
+              $$_$$_$$_$$_unrestored_shared_1571_2636_97_375.a(K).forEach(function (e) {
+                if (e && W[e] && !$$_$$_$$_shared_tools_index.db[e]) {
+                  $$_$$_$$_shared_tools_index.bb(e, W[e])
+                  $$_$$_$$_shared_tools_index.db[e] = true
                 }
               })
             }
@@ -3095,7 +3095,7 @@ function ds(e) {
           v.next = 16
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 16:
-          if (v$sent1 = v.sent, !$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(v$sent1)) {
+          if (v$sent1 = v.sent, !$$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(v$sent1)) {
             v.next = 21
             break
           }
@@ -3210,7 +3210,7 @@ function ps(e, t, n) {
           }
           return b.abrupt("return", null)
         case 10:
-          if (c = $$_$$_$$_$$_unrestored_shared_1571_2636_15.q(s.widget), c$attributes = c.attributes, s.isInvisibleWidget || undefined !== c.opacity || (c.opacity = 100), u(c$attributes), d = [], !s.widget.isGlobalWidget) {
+          if (c = $$_$$_$$_shared_tools_index.q(s.widget), c$attributes = c.attributes, s.isInvisibleWidget || undefined !== c.opacity || (c.opacity = 100), u(c$attributes), d = [], !s.widget.isGlobalWidget) {
             b.next = 19
             break
           }
@@ -3483,7 +3483,7 @@ function ms(e) {
         case 54:
           v$sent4 = v.sent
           v.next = 57
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.b, $$_$$_$$_shared_ui_language.c(v$sent4, "cloudDb.defaultName").toString(), $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(v$sent3) ? v$sent3 : "")
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.b, $$_$$_$$_shared_ui_language.c(v$sent4, "cloudDb.defaultName").toString(), $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(v$sent3) ? v$sent3 : "")
         case 57:
           if ((v$sent5 = v.sent).id) {
             v.next = 62
@@ -4027,7 +4027,7 @@ function Cs() {
         case 27:
           qt(r.map(function (e) {
             return e.attributes.cloudDbId
-          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(a$sent) ? a$sent : undefined)
+          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(a$sent) ? a$sent : undefined)
           a.next = 30
           return Os()
         case 30:
@@ -4119,7 +4119,7 @@ function Ts(e, t) {
             C.next = 49
             break
           }
-          if ($$_$$_$$_$$_unrestored_shared_1571_2636_97.a(n)) {
+          if ($$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(n)) {
             C.next = 43
             break
           }
@@ -4674,7 +4674,7 @@ function ks(e) {
             coverUrl: e$payload$coverUrl,
             workId: h$sent1,
             bcmcUrl: h$sent2.url,
-            playerUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_15.E(h$sent1)
+            playerUrl: $$_$$_$$_shared_tools_index.E(h$sent1)
           }
           h.next = 19
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.m, p)
@@ -4687,7 +4687,7 @@ function ks(e) {
         case 22:
           qt($$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().map(function (e) {
             return e.attributes.cloudDbId
-          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(h$sent1) ? h$sent1 : undefined)
+          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(h$sent1) ? h$sent1 : undefined)
           h.next = 26
           return Os()
         case 26:
@@ -4718,7 +4718,7 @@ function xs(e) {
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 2:
           f$sent = f.sent
-          n = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(f$sent)
+          n = $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(f$sent)
           f.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Ws, $_actions.tg({
             isUpdate: n,
@@ -4770,7 +4770,7 @@ function xs(e) {
           f$sent4 = f.sent
           qt($$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().map(function (e) {
             return e.attributes.cloudDbId
-          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(f$sent1) ? f$sent1 : undefined)
+          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(f$sent1) ? f$sent1 : undefined)
           f.next = 27
           return Os()
         case 27:
@@ -4814,13 +4814,13 @@ function Ds(e) {
             break
           }
           a.next = 10
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_97.b, e$payload$shouldCloneCloud)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_97_index.b, e$payload$shouldCloneCloud)
         case 10:
           a$sent2 = a.sent
           i = new Blob([JSON.stringify(a$sent2)], {
             type: "application/json,charset=utf-8;"
           })
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.s(URL.createObjectURL(i), a$sent1)
+          $$_$$_$$_shared_tools_index.s(URL.createObjectURL(i), a$sent1)
         case 13:
         case "end":
           return a.stop()
@@ -5014,7 +5014,7 @@ function Gs() {
               if (n && n.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === n.type) {
                 var /* [auto-meaningful-name] */n$attributes$content = n.attributes.content
                 var s = undefined === n$attributes$content ? "" : n$attributes$content
-                $$_$$_$$_$$_unrestored_shared_1571_2636_37_375.a(s).forEach(function (e) {
+                $$_$$_$$_$$_unrestored_shared_1571_2636_97_375.a(s).forEach(function (e) {
                   var n
                   if (!r[e] && (null === (n = t[e]) || undefined === n ? undefined : n.cdnUrl)) {
                     r[e] = t[e]
@@ -5168,7 +5168,7 @@ function Ws(e) {
             _ = "https://creation.codemao.cn/716/appcraft/IMAGE_ssdp_AuDw_1645089354494.png"
           }
           A.next = 67
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_97.b)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_97_index.b)
         case 67:
           A$sent4 = A.sent
           A.next = 70
@@ -5295,7 +5295,7 @@ function Ws(e) {
           A.next = 138
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vs)
         case 138:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.jb(A$sent6)
+          $$_$$_$$_shared_tools_index.jb(A$sent6)
           A.next = 141
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(vc, A$sent6)
         case 141:
@@ -5306,7 +5306,7 @@ function Ws(e) {
           A.next = 144
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.n())
         case 144:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["courseId", "templateId"])
+          $$_$$_$$_shared_tools_index.k(["courseId", "templateId"])
           Pn()
           return A.abrupt("return", A$sent6)
         case 147:
@@ -5633,7 +5633,7 @@ function Xs(e, t) {
         case 6:
           r$attributes$cloudDbId = r.attributes.cloudDbId
           i.next = 9
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Gt, r$attributes$cloudDbId, t, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(i$sent) ? i$sent : undefined)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Gt, r$attributes$cloudDbId, t, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(i$sent) ? i$sent : undefined)
         case 9:
         case "end":
           return i.stop()
@@ -5661,7 +5661,7 @@ function Qs(e, t) {
         case 6:
           r$attributes$cloudDbId = r.attributes.cloudDbId
           a.next = 9
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.p, r$attributes$cloudDbId, t, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(a$sent) ? a$sent : undefined)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.p, r$attributes$cloudDbId, t, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(a$sent) ? a$sent : undefined)
         case 9:
           a$sent1 = a.sent
           return a.abrupt("return", a$sent1 || t)
@@ -6673,7 +6673,7 @@ function fc() {
           n = []
           k.prev = 5
           k.next = 8
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Lt, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Lt, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(k$sent) ? k$sent : undefined)
         case 8:
           n = k.sent
           k.next = 17
@@ -6795,9 +6795,9 @@ function fc() {
             addItems: $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b$value.attributes.fields),
             editItems: [],
             deleteItems: []
-          }, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
+          }, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(k$sent) ? k$sent : undefined)
         case 70:
-          qt([k$sent2], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
+          qt([k$sent2], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(k$sent) ? k$sent : undefined)
         case 71:
           k.next = 61
           break
@@ -7090,7 +7090,7 @@ function mc(e) {
             addItems: l,
             editItems: u,
             deleteItems: d
-          }, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(m$sent) ? m$sent : undefined)
+          }, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(m$sent) ? m$sent : undefined)
         case 18:
           if ((m$sent1 = m.sent).addItems) {
             m$sent1.addItems.forEach(function (e) {
@@ -7126,7 +7126,7 @@ function mc(e) {
               }
             })
           }
-          qt([i$attributes$cloudDbId], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(m$sent) ? m$sent : undefined)
+          qt([i$attributes$cloudDbId], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(m$sent) ? m$sent : undefined)
         case 26:
         case "end":
           return m.stop()
@@ -7154,7 +7154,7 @@ function gc(e) {
           r = 1
           o = 500
           c.next = 8
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(c$sent) ? c$sent : undefined)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(c$sent) ? c$sent : undefined)
         case 8:
           if (c$sent1 = c.sent, n = n.concat(c$sent1.items), !((a = Math.ceil(c$sent1.total / o)) > 1)) {
             c.next = 21
@@ -7167,7 +7167,7 @@ function gc(e) {
             break
           }
           c.next = 16
-          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(c$sent) ? c$sent : undefined)
+          return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(c$sent) ? c$sent : undefined)
         case 16:
           c$sent2 = c.sent
           n = n.concat(c$sent2.items)
@@ -7413,7 +7413,7 @@ function yc(e) {
           u.next = 6
           return $$_$$_$$_$$_unrestored_shared_1571_2636_48_3_index.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
         case 6:
-          if (u$sent1 = u.sent, o = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(u$sent1), u$sent.title) {
+          if (u$sent1 = u.sent, o = $$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(u$sent1), u$sent.title) {
             u.next = 29
             break
           }

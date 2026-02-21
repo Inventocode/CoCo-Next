@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */Quill from "quill"
 import /* [auto-meaningful-name] */Quill1 from "quill"
 import "./2630"
@@ -38,7 +38,7 @@ var SP = function (e, t, n) {
 function AP(e) {
   return Array.isArray(e) ? e[0] : e
 }
-var IP = te.p(function (e, t) {
+var IP = $$_$$_$$_$$_src_shared_tools_index.p(function (e, t) {
   var n
   var r
   var o

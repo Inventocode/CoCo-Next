@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools from "../../../shared/tools"
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_328 from "../../../../unrestored/shared/1571/2636/328"
@@ -33,7 +33,7 @@ function X() {
         switch (t.prev = t.next) {
           case 0:
             t.next = 2
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_15.cb("https://res2.wx.qq.com/open/js/jweixin-1.6.0.js")
+            return $$_$$_$$_shared_tools.cb("https://res2.wx.qq.com/open/js/jweixin-1.6.0.js")
           case 2:
             window$wx = window.wx
             t.prev = 3
@@ -56,7 +56,7 @@ function X() {
             t.t0 = t.catch(3)
             console.error("getWeixinInfo error", t.t0)
           case 13:
-            a = $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href)
+            a = $$_$$_$$_shared_tools.N(window.location.href)
             s = a.title || title
             c = a.desc || description
             window$wx.ready(function () {
@@ -94,7 +94,7 @@ export const MobileH5Wrapper = React.memo(() => {
     var description
     var coverUrl
     let workId = window.location.pathname.match(/\/player\/([^/]*)/)?.[1]
-    const searchParams = $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href)
+    const searchParams = $$_$$_$$_shared_tools.N(window.location.href)
     if (searchParams.workId) {
       workId = searchParams.workId
     }

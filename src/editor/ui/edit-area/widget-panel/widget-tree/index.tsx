@@ -454,8 +454,7 @@ export const WidgetTree = memo(() => {
         isGlobalWidget: options?.isGlobalWidget,
         isInvisibleWidget: options?.isInvisibleWidget,
         isDragAndDeleteDisabled: widget.type === BuiltInWidgetTypes.LIST_VIEWER_WIDGET || widget.type === BuiltInWidgetTypes.NEW_LIST_VIEWER_WIDGET
-      })}</WidgetListItem>
-    )}</>
+      })}</WidgetListItem>)}</>
   }
 
   function renderWidgetList(widgets, options?: IRenderWidgetListOptions) {

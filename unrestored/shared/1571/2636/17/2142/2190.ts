@@ -342,5 +342,5 @@ var u = function (e) {
   };
   (0, r.__decorate)([(0, c.lazy_inject)(c.BINDING.Blink)], t.prototype, "Blink", undefined)
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./2187/1127").Controller)
+}(require("./2188/1127").Controller)
 exports.ColorController = u

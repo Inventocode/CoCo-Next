@@ -8,7 +8,7 @@ var r = require("./2595")
 var o = require("./2596")
 var i = require("./2597")
 var a = require("./2598/index")
-var s = require("./1464/index")
+var s = require("./1464")
 function c(e, t) {
   this.typeNumber = e
   this.errorCorrectLevel = t

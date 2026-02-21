@@ -22,15 +22,15 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_276 from "../../../../unrestored/shared/1571/2636/276"
 import * as LoadCustomWidget from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools from "../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_454 from "../../../../unrestored/shared/1571/2636/454"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_ui_components from "../../../shared/ui/components"
 import { IconFont } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../unrestored/shared/1571/2636/710"
 import { a as Tooltip } from "../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../unrestored/shared/1571/2636/10/index"
@@ -120,7 +120,7 @@ function CloudSpaceManager() {
       overlayInnerStyle={{ position: "relative", top: -7 }}
     >
       <div
-        onClick={() => window.open(`${$$_$$_$$_$$_unrestored_shared_1571_2636_15.A()}/`, "_blank")}
+        onClick={() => window.open(`${$$_$$_$$_shared_tools.A()}/`, "_blank")}
         className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(cloudSpaceManagerStyles.cloudSpaceManager)}
       >
         {p === $$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({ id: "cloudSpace.outMaxLimit" }) && (
@@ -212,7 +212,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
   var ae = $$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
-  var le = undefined !== $$_$$_$$_$$_unrestored_shared_1571_2636_15.N(window.location.href).archiveId
+  var le = undefined !== $$_$$_$$_shared_tools.N(window.location.href).archiveId
   React.useEffect(function () {
     re(false)
   }, [id])
@@ -397,7 +397,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     }
   }()
   var Oe = function () {
-    window.location.href = $$_$$_$$_$$_unrestored_shared_1571_2636_15.B()
+    window.location.href = $$_$$_$$_shared_tools.B()
   }
   const save = React.useCallback(async (isAutoSave, isNeedReport) => {
     if (!userInfo) {
@@ -723,7 +723,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
     }
   }()
   var De = function () {
-    window.open("".concat($$_$$_$$_$$_unrestored_shared_1571_2636_15.B(), "/about/"), "_blank")
+    window.open("".concat($$_$$_$$_shared_tools.B(), "/about/"), "_blank")
   }
   return (
     <div className={styles.wrapper} data-html2canvas-ignore="true">
@@ -744,71 +744,71 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
         {!le && uiConfig.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.logoCutLine} />}
         <div className={styles.menu}>
           {Object.values(uiConfig.file).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
+            <$$_$$_$$_shared_ui_components.g
               className={styles.fileDropdown}
               overlay={
-                <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l onClick={Ce}>
+                <$$_$$_$$_shared_ui_components.l onClick={Ce}>
                   {uiConfig.file.newProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="CREATE_NEW_PROJECT">
+                    <$$_$$_$$_shared_ui_components.m value="CREATE_NEW_PROJECT">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.newProject" })}
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {uiConfig.file.openMyProject === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="OPEN_MY_PROJECT">
+                    <$$_$$_$$_shared_ui_components.m value="OPEN_MY_PROJECT">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.openProject" })}
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {showSaveAs && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="SAVE_AS">
+                    <$$_$$_$$_shared_ui_components.m value="SAVE_AS">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.saveAs" })}
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   <div className={styles.line} />
                   {uiConfig.file.showHistory === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="HISTORY">
+                    <$$_$$_$$_shared_ui_components.m value="HISTORY">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.history" })}
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {!collWorkId && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="IMPORT_EXTENSION_WIDGET">
-                      <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B
+                    <$$_$$_$$_shared_ui_components.m value="IMPORT_EXTENSION_WIDGET">
+                      <$$_$$_$$_shared_ui_components.B
                         onChange={Ie}
                         accept=".js,.jsx"
                         className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.itemUploadButton)}
                       >
                         {formatMessage({ id: "HeaderDropdown.importExtension" })}
-                      </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                      </$$_$$_$$_shared_ui_components.B>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {(showExportLocalFile || showExportLocalFile) && <div className={styles.line} />}
                   {showOpenLocalFile && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="OPEN_LOCAL_FILE">
-                      <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B
+                    <$$_$$_$$_shared_ui_components.m value="OPEN_LOCAL_FILE">
+                      <$$_$$_$$_shared_ui_components.B
                         onChange={Se}
                         onCancel={Ae}
                         accept=".json"
                         className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.itemUploadButton)}
                       >
                         {formatMessage({ id: "HeaderDropdown.openLocalFile" })}
-                      </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.B>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                      </$$_$$_$$_shared_ui_components.B>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {showExportLocalFile && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="EXPORT_PROJECT_AS_JSON">
+                    <$$_$$_$$_shared_ui_components.m value="EXPORT_PROJECT_AS_JSON">
                       <div className={styles.itemContent}>
                         {formatMessage({ id: "HeaderDropdown.exportProjectAsJson" })}
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
-                </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+                </$$_$$_$$_shared_ui_components.l>
               }
             >
               <Tooltip
@@ -822,23 +822,23 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   <IconFont className="coco-header-menuIcon" type="icon-file" />
                 </div>
               </Tooltip>
-            </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
+            </$$_$$_$$_shared_ui_components.g>
           )}
           {Object.values(uiConfig.tutorial).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
+            <$$_$$_$$_shared_ui_components.g
               overlay={
-                <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+                <$$_$$_$$_shared_ui_components.l>
                   {uiConfig.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="courseVideo">
+                    <$$_$$_$$_shared_ui_components.m value="courseVideo">
                       <div className={styles.itemLinkContent} onClick={xe}>
                         <span className={styles.link}>
                           {formatMessage({ id: "courseVideo" })}
                         </span>
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {uiConfig.tutorial.tutorial === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="tutorial">
+                    <$$_$$_$$_shared_ui_components.m value="tutorial">
                       <div className={styles.itemLinkContent}>
                         <a
                           href="https://codemao-guide.yuque.com/bfiekm/sbo5kh"
@@ -849,11 +849,11 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                           {formatMessage({ id: "seeTutorial" })}
                         </a>
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   <div className={styles.line} />
                   {uiConfig.tutorial.feedback === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="feedback">
+                    <$$_$$_$$_shared_ui_components.m value="feedback">
                       <div className={styles.itemLinkContent}>
                         <a
                           href="https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd"
@@ -864,27 +864,27 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                           {formatMessage({ id: "feedback" })}
                         </a>
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {uiConfig.tutorial.releaseInfo === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="releaseInfo">
+                    <$$_$$_$$_shared_ui_components.m value="releaseInfo">
                       <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.showReleaseInfoDialog(true))}>
                         <span className={styles.link}>
                           {formatMessage({ id: "releaseInfo" })}
                         </span>
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {uiConfig.tutorial.about === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="aboutUs">
+                    <$$_$$_$$_shared_ui_components.m value="aboutUs">
                       <div className={styles.itemLinkContent} onClick={De}>
                         <span className={styles.link}>
                           {formatMessage({ id: "aboutUs" })}
                         </span>
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
-                </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+                </$$_$$_$$_shared_ui_components.l>
               }
             >
               <Tooltip
@@ -898,27 +898,27 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   <IconFont className="coco-header-menuIcon" type="icon-help-circle-active" />
                 </div>
               </Tooltip>
-            </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
+            </$$_$$_$$_shared_ui_components.g>
           )}
           {Object.values(uiConfig.help).includes($$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show) && !le && (
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
+            <$$_$$_$$_shared_ui_components.g
               overlay={
-                <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l onClick={je}>
+                <$$_$$_$$_shared_ui_components.l onClick={je}>
                   {uiConfig.help.ruler === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="STAGE_RULER">
+                    <$$_$$_$$_shared_ui_components.m value="STAGE_RULER">
                       <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
                   {uiConfig.help.stage === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
-                    <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value="STAGE_AREA">
+                    <$$_$$_$$_shared_ui_components.m value="STAGE_AREA">
                       <div className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.itemContent, playing && styles.disabled)}>
                         {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
                       </div>
-                    </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                    </$$_$$_$$_shared_ui_components.m>
                   )}
-                </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+                </$$_$$_$$_shared_ui_components.l>
               }
             >
               <Tooltip
@@ -932,7 +932,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                   <IconFont className="coco-header-menuIcon" type="icon-settings" />
                 </div>
               </Tooltip>
-            </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
+            </$$_$$_$$_shared_ui_components.g>
           )}
         </div>
         {!le && uiConfig.cloudDBManager === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
@@ -957,17 +957,17 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
       <div className={styles.right}>
         {!le && uiConfig.coll === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.otWrapper}><Collaboration /></div>}
         {!le && uiConfig.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
-          <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g
+          <$$_$$_$$_shared_ui_components.g
             className={styles.shareMenu}
             overlay={
-              <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
-                <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+              <$$_$$_$$_shared_ui_components.l>
+                <$$_$$_$$_shared_ui_components.m>
                   <ShareMenuItem target="community" />
-                </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
-                <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+                </$$_$$_$$_shared_ui_components.m>
+                <$$_$$_$$_shared_ui_components.m>
                   <ShareMenuItem target="others" />
-                </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
-              </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+                </$$_$$_$$_shared_ui_components.m>
+              </$$_$$_$$_shared_ui_components.l>
             }
           >
             <Tooltip
@@ -981,7 +981,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 <IconFont type="icon-share" className={styles.icon} />
               </div>
             </Tooltip>
-          </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
+          </$$_$$_$$_shared_ui_components.g>
         )}
         {!le && uiConfig.cutLine === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && <div className={styles.cutLine} />}
         {!le && uiConfig.save === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && (
@@ -994,9 +994,9 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               var e = lastSavedTime
               var t = Date.now()
               var n = t - e
-              var o = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, 0)
-              var i = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, -1)
-              var a = $$_$$_$$_$$_unrestored_shared_1571_2636_15.G(t, -2)
+              var o = $$_$$_$$_shared_tools.G(t, 0)
+              var i = $$_$$_$$_shared_tools.G(t, -1)
+              var a = $$_$$_$$_shared_tools.G(t, -2)
               var s = new Date(e)
               var c = ""
               var l = "".concat(formatMessage({ id: "MyProject.lastSaved" }), " ")
@@ -1018,10 +1018,10 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
                 }
                 c = l + (c += formatMessage({ id: "MyProject.ago" }))
               } else if (e > i) {
-                c = l + (c = formatMessage({ id: "MyProject.yesterday" }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
+                c = l + (c = formatMessage({ id: "MyProject.yesterday" }) + $$_$$_$$_shared_tools.K(s))
               } else {
                 if (e > a) {
-                  c = l + (c = formatMessage({ id: "MyProject.theDayBeforeYesterday" }) + $$_$$_$$_$$_unrestored_shared_1571_2636_15.K(s))
+                  c = l + (c = formatMessage({ id: "MyProject.theDayBeforeYesterday" }) + $$_$$_$$_shared_tools.K(s))
                 } else {
                   c = "".concat(s.getFullYear()).concat(formatMessage({ id: "MyProject.year" }))
                   c += "".concat(s.getMonth() + 1).concat(formatMessage({ id: "MyProject.month" }))
@@ -1033,7 +1033,7 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
             trigger={["hover", "click"]}
             overlayInnerStyle={{ position: "relative", top: "8px" }}
           >
-            <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+            <$$_$$_$$_shared_ui_components.d
               onClick={() => save(false, true)}
               className={$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.saveBtn, saving && styles.saving)}
             >
@@ -1043,17 +1043,17 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
               <span className={styles.savingIcon}>
                 <Ge stroke="#6e4ff4" />
               </span>
-            </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
+            </$$_$$_$$_shared_ui_components.d>
           </Tooltip>
         )}
         {!le && uiConfig.package === $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show && isAuthor && (
-          <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+          <$$_$$_$$_shared_ui_components.d
             className={styles.packageBtn}
             onClick={_e}
             disabled={isPackaging}
           >
             {formatMessage({ id: "package" })}
-          </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>
+          </$$_$$_$$_shared_ui_components.d>
         )}
         {packageDialogVisible && <Dt />}
         {packageQrCodeVisible && <Gt />}

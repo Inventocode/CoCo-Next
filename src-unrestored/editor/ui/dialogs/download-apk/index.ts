@@ -6,9 +6,9 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools_index from "../../../../shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -22,7 +22,7 @@ var ML = memo(function () {
   })
   var /* [auto-meaningful-name] */t$visible = t.visible
   var /* [auto-meaningful-name] */t$imgSrc = t.imgSrc
-  return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
+  return React.createElement($$_$$_$$_$$_shared_ui_components_index.f, {
     visible: t$visible,
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10621.blockImageDialog,
     onClose: function () {
@@ -41,7 +41,7 @@ var ML = memo(function () {
       e.download = "block.png"
       e.click()
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-download-apk"
   })))
 })
@@ -49,7 +49,7 @@ var LL = ["为了确保编程猫社区成员账户安全，我们将限制导入
 var PL = [
   {
     label: "Coco控件商城-投稿",
-    url: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b
+    url: $$_$$_$$_$$_shared_tools_index.b
   }
 ]
 export { ML }

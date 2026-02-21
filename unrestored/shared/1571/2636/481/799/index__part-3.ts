@@ -8,7 +8,7 @@
 
 import { f } from "./index__part-1"
 import { E } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$_220_index from "./220/index"
+import * as /* [auto-meaningful-name] */$_220 from "./220"
 import * as /* [auto-meaningful-name] */$_352 from "./352"
 import * as /* [auto-meaningful-name] */$_775_index from "./775/index"
 import * as /* [auto-meaningful-name] */$_729_index from "./729/index"
@@ -51,13 +51,13 @@ function D(e) {
     $_1549.a({
       callback: function (e) {
         !function (e, t, n) {
-          if (!$_220_index.c() || !e.fetchData || !t(e.fetchData.url)) {
+          if (!$_220.c() || !e.fetchData || !t(e.fetchData.url)) {
             return
           }
           if (e.endTimestamp && e.fetchData.__span) {
             return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus($_352.a.InternalError), o.finish(), delete n[e.fetchData.__span]))
           }
-          var r = $_220_index.b()
+          var r = $_220.b()
           if (r) {
             var o = r.startChild({
               data: i.a(i.a({}, e.fetchData), {
@@ -100,14 +100,14 @@ function D(e) {
         !function (e, t, n) {
           var /* [auto-meaningful-name] */e$xhr
           var /* [auto-meaningful-name] */e$xhr1
-          if (!$_220_index.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (e$xhr1 = e.xhr) || undefined === e$xhr1 ? undefined : e$xhr1.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
+          if (!$_220.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (e$xhr1 = e.xhr) || undefined === e$xhr1 ? undefined : e$xhr1.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
             return
           }
           var /* [auto-meaningful-name] */e$xhr$__sentry_xhr__ = e.xhr.__sentry_xhr__
           if (e.endTimestamp && e.xhr.__sentry_xhr_span_id__) {
             return void ((c = n[e.xhr.__sentry_xhr_span_id__]) && (c.setHttpStatus(e$xhr$__sentry_xhr__.status_code), c.finish(), delete n[e.xhr.__sentry_xhr_span_id__]))
           }
-          var s = $_220_index.b()
+          var s = $_220.b()
           if (s) {
             var c = s.startChild({
               data: i.a(i.a({}, e$xhr$__sentry_xhr__.data), {
@@ -221,7 +221,7 @@ var F = function () {
     if (this$options$markBackgroundTransactions) {
       if (f && f.document) {
         f.document.addEventListener("visibilitychange", function () {
-          var e = $_220_index.b()
+          var e = $_220.b()
           if (f.document.hidden && e) {
             $_264.a.log("[Tracing] Transaction: " + $_352.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
             if (!e.status) {
@@ -255,7 +255,7 @@ var F = function () {
           return t ? t.getAttribute("content") : null
         }("sentry-trace")
         if (e) {
-          return $_220_index.a(e)
+          return $_220.a(e)
         }
         return
       }() : undefined
@@ -283,7 +283,7 @@ var F = function () {
             t.setStatus($_352.a.DeadlineExceeded)
             t.setTag("maxTransactionDurationExceeded", "true")
           }
-        })($_220_index.e(this$options$maxTransactionDuration), e, n)
+        })($_220.e(this$options$maxTransactionDuration), e, n)
       })
       return v
     }

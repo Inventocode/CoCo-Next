@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 var r
 import * as H from "../6"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -44,7 +44,7 @@ function ne() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (r = u.length > 1 && undefined !== u[1] ? u[1] : 2, o = null === (n = $$_17_index.Blink.mainWorkspace.get_block_by_id(t)) || undefined === n ? undefined : n.svg_group) {
+            if (r = u.length > 1 && undefined !== u[1] ? u[1] : 2, o = null === (n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t)) || undefined === n ? undefined : n.svg_group) {
               e.next = 4
               break
             }
@@ -143,7 +143,7 @@ function ae() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (n = null === (t = $$_17_index.Blink.mainWorkspace.get_flyout()) || undefined === t ? undefined : t.get_workspace()) {
+            if (n = null === (t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_flyout()) || undefined === t ? undefined : t.get_workspace()) {
               e.next = 3
               break
             }
@@ -168,7 +168,7 @@ function ae() {
             return re(i$value, l)
           case 14:
             e.next = 16
-            return $$_15.lb(200)
+            return $$_$$_$$_$$_$$_src_shared_tools_index.lb(200)
           case 16:
             e.next = 7
             break
@@ -253,7 +253,7 @@ function le() {
             break
           case 12:
             a = document.createElementNS("http://www.w3.org/2000/svg", "style")
-            s = $$_17_index.Blink.di_container.get($$_1058_125.BINDING.css)
+            s = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.di_container.get($$_1058_125.BINDING.css)
             a.textContent = "".concat(s.CONTENT, " .blocklyDropdownArrow{ fill: rgba(0, 0, 0, .1); }");
             (l = t.getBBox()).x -= 5
             l.y -= 5

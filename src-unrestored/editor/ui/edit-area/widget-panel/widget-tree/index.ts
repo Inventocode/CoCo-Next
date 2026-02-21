@@ -7,29 +7,29 @@
 "use strict"
 
 import { Mv } from "../../../../../../unrestored/shared/1571/2636/index__part-88"
-import * as /* [auto-meaningful-name] */$_94_index from "../../../../../shared/ui/components/iconfont/index"
-import * as po from "../../../../../../unrestored/shared/1571/2636/49"
-import * as /* [auto-meaningful-name] */$_238 from "../../../../../../unrestored/shared/1571/2636/238"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../widget/built-in/types"
-import * as Et from "../../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$_26_index from "../../../../../../unrestored/shared/1571/2636/26/index"
-import * as /* [auto-meaningful-name] */$_190 from "../../../../../../unrestored/shared/1571/2636/190"
-import * as te from "../../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
-import * as K from "../../../../../../unrestored/shared/1571/2636/18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
-import * as k from "../../../../../../unrestored/shared/1571/2636/11"
-import N from "../../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710 from "../../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_components_iconfont_index from "../../../../../shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../../../unrestored/shared/1571/2636/49"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../../unrestored/shared/1571/2636/238"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_widget_builtIn_types from "../../../../widget/built-in/types"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_tools_index from "../../../../../shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_redux_common_actions from "../../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_components_index from "../../../../../shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../../unrestored/shared/1571/2636/11"
+import /* [auto-meaningful-name] */Classnames from "classnames"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useState, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_150 from "../../../../../../unrestored/shared/1571/2636/150"
-import /* [auto-meaningful-name] */$_1501 from "../../../../../../unrestored/shared/1571/2636/150"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_150 from "../../../../../../unrestored/shared/1571/2636/150"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501 from "../../../../../../unrestored/shared/1571/2636/150"
 var Bv = memo(function (e) {
   var t
   var n = e.id
@@ -52,17 +52,17 @@ var Bv = memo(function (e) {
   var /* [auto-meaningful-name] */e$readonly = e.readonly
   var w = undefined !== e$readonly && e$readonly
   var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var A = useRef(null)
   var j = useSelector(function (e) {
     return e.block.flyoutVisible
   })
   var R = useState(true)
-  var x = $_10_index.a(R, 2)
+  var x = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
   var D = x[0]
   var M = x[1]
   var L = useState(false)
-  var P = $_10_index.a(L, 2)
+  var P = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
   useEffect(function () {
@@ -96,8 +96,8 @@ var Bv = memo(function (e) {
     e$onCopyToCurrentScreen(n)
   }
   return React.createElement("div", {
-    className: N($_1501.itemWrapper, E)
-  }, React.createElement($_1213.a, {
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.itemWrapper, E)
+  }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a, {
     placement: "bottomLeft",
     trigger: "hover",
     onVisibleChange: function (e) {
@@ -110,28 +110,28 @@ var Bv = memo(function (e) {
     overlayClassName: "popoverOverlay",
     content: function () {
       return React.createElement("div", {
-        className: $_1501.popoverWrapper,
+        className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.popoverWrapper,
         onContextMenu: function (e) {
           return e.preventDefault()
         }
       }, !e$isInvisibleWidget && React.createElement("div", {
-        className: $_1501.menuItem,
+        className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.menuItem,
         onMouseDown: W
-      }, $_710$a$formatMessage({
+      }, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
         id: "copyAndPaste"
       })), React.createElement("div", {
-        className: N($_1501.menuItem, $_1501.delete),
+        className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.menuItem, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.delete),
         onMouseDown: G
-      }, $_710$a$formatMessage({
+      }, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
         id: "delete"
       })))
     }
   }, React.createElement("div", {
     ref: A,
-    className: N($_1501.item, (t = {}, k.a(t, $_1501.selected, e$selected && j), k.a(t, $_1501.selectedLight, e$selected && !j), k.a(t, $_1501.children, e$isChildren), k.a(t, $_1501.parent, !!e$children), k.a(t, $_1501.expanded, D), k.a(t, $_1501.notLast, !e$isLast && e$isChildren), t)),
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.item, (t = {}, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.selected, e$selected && j), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.selectedLight, e$selected && !j), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.children, e$isChildren), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.parent, !!e$children), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.expanded, D), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.notLast, !e$isLast && e$isChildren), t)),
     onContextMenu: function (e) {
       e.preventDefault()
-      if (!(w || e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.a && e$isChildren)) {
+      if (!(w || e$type !== $$_$$_$$_$$_widget_builtIn_types.c && e$type !== $$_$$_$$_$$_widget_builtIn_types.a && e$isChildren)) {
         F(true)
       }
     },
@@ -139,29 +139,29 @@ var Bv = memo(function (e) {
       e$onSelect(n)
     }
   }, React.createElement("div", {
-    className: $_1501.left
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.left
   }, React.createElement("span", {
-    className: $_1501.foldIconContainer,
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.foldIconContainer,
     onClick: function (e) {
       M(!D)
       e.stopPropagation()
     }
-  }, React.createElement($_94_index.a, {
+  }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a, {
     type: "icon-fold-left",
-    className: $_1501.foldIcon
-  })), te.X(e$icon) ? React.createElement("img", {
-    className: N($_1501.widgetIcon, $_1501.widgetUrlIcon),
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.foldIcon
+  })), $$_$$_$$_$$_$$_shared_tools_index.X(e$icon) ? React.createElement("img", {
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetIcon, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetUrlIcon),
     src: e$icon,
     alt: e$title,
     draggable: false
-  }) : React.createElement($_94_index.a, {
+  }) : React.createElement($$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a, {
     type: e$icon,
-    className: $_1501.widgetIcon
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetIcon
   }), React.createElement("span", {
-    className: N($_1501.label, !e$visible && $_1501.labelGray)
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.label, !e$visible && $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.labelGray)
   }, e$title)), React.createElement("div", {
-    className: $_1501.right
-  }, !e$isInvisibleWidget && e$type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && React.createElement("div", {
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.right
+  }, !e$isInvisibleWidget && e$type !== $$_$$_$$_$$_widget_builtIn_types.c && React.createElement("div", {
     onClick: function (e) {
       e.stopPropagation()
       if (!e$visible) {
@@ -170,23 +170,23 @@ var Bv = memo(function (e) {
         e$onHide(n)
       }
     },
-    className: N($_1501.controlIcon, $_1501.seeIcon)
-  }, React.createElement($_94_index.a, {
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.controlIcon, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.seeIcon)
+  }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a, {
     type: e$visible ? "icon-see" : "icon-see-disable"
   })), React.createElement("div", {
     onClick: function (e) {
       e.stopPropagation()
       e$toggleAttributeVisible(n)
     },
-    className: $_1501.controlIcon
-  }, React.createElement($_94_index.a, {
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.controlIcon
+  }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a, {
     type: "icon-attribute"
   }))))), D && e$children)
 })
 var Fv = memo(function () {
   var /* [auto-meaningful-name] */u$invisibleWidgetIds
   var t
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var r = useDispatch()
   var o = useRef()
   var i = useSelector(function (e) {
@@ -204,110 +204,110 @@ var Fv = memo(function () {
   var l = useSelector(function (e) {
     return e.block.flyoutVisible
   })
-  var u = $_238.d()
+  var u = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
   var d = useState(false)
-  var p = $_10_index.a(d, 2)
+  var p = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(d, 2)
   var m = p[0]
   var g = p[1]
   var v = useState(false)
-  var b = $_10_index.a(v, 2)
+  var b = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(v, 2)
   var y = b[0]
   var E = b[1]
   var O = useState(false)
-  var w = $_10_index.a(O, 2)
+  var w = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(O, 2)
   var C = w[0]
   var T = w[1]
   var A = useState(false)
-  var j = $_10_index.a(A, 2)
+  var j = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(A, 2)
   var R = j[0]
   var D = j[1]
   var M = useSelector(function (e) {
     return e.uiConfig.widgetEditor
-  }) === K.j.ReadOnly
+  }) === $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
   if (!u) {
     return null
   }
   var L = function (e) {
     var t
     var n
-    r($$_$$_$$_$$_src_editor_redux_common_actions.ug(e))
+    r($$_$$_$$_$$_redux_common_actions.ug(e))
     if (s === e && a) {
-      r($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
+      r($$_$$_$$_$$_redux_common_actions.fj(false))
     } else {
       if (s === e && l) {
-        $_26_index.g.setSelectedItem()
-        if (!(null === (t = $_26_index.g.getToolbox()) || undefined === t)) {
+        $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
+        if (!(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t)) {
           t.flyout.hide()
         }
       } else {
-        $_26_index.g.setSelectedItem(null === (n = $_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(e))
+        $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (n = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(e))
       }
     }
   }
   var P = function (e) {
     var t
     var n
-    if (!(r($$_$$_$$_$$_src_editor_redux_common_actions.ug(e)), s === e && l)) {
-      $_26_index.g.setSelectedItem(null === (t = $_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(e))
+    if (!(r($$_$$_$$_$$_redux_common_actions.ug(e)), s === e && l)) {
+      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(e))
     }
     if (s === e && a) {
-      r($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
-      if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
+      r($$_$$_$$_$$_redux_common_actions.fj(false))
+      if (!(null === (n = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n)) {
         n.refresh_selection()
       }
     } else {
-      r($$_$$_$$_$$_src_editor_redux_common_actions.fj(true))
+      r($$_$$_$$_$$_redux_common_actions.fj(true))
     }
   }
   var B = function (e) {
-    r($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "visible", true, true, true))
+    r($$_$$_$$_$$_redux_common_actions.Lg(e, "visible", true, true, true))
   }
   var F = function (e) {
-    r($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "visible", false, true, true))
+    r($$_$$_$$_$$_redux_common_actions.Lg(e, "visible", false, true, true))
   }
   var G = function (e) {
-    r($$_$$_$$_$$_src_editor_redux_common_actions.Ef(Et.w(e)))
+    r($$_$$_$$_$$_redux_common_actions.Ef($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.w(e)))
   }
   var W = function (e) {
-    var t = Et.Bb(e)
+    var t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
     if (t) {
-      var i = Et.Fb(t.id || "")
-      var a = $_710$a$formatMessage({
+      var i = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Fb(t.id || "")
+      var a = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
         id: "deleteWidget"
-      }) + "“" + $_190.f(i, 10) + "”?"
-      if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h) {
-        o.current = Et.Bb(e)
-        return void r($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+      }) + "“" + $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(i, 10) + "”?"
+      if (t.type === $$_$$_$$_$$_widget_builtIn_types.h) {
+        o.current = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
+        return void r($$_$$_$$_$$_redux_common_actions.zh({
           onConfirm: H,
           onClose: V,
-          allowText: $_710$a$formatMessage({
+          allowText: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "delete"
           }),
           isDangerous: true,
           title: a,
-          content: $_710$a$formatMessage({
+          content: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "cloudDB.DeleteWidgetsTips"
           })
         }))
       }
-      var s = $_26_index.z.checkFieldValueIsSelected("WIDGET_ID", e)
-      var c = $_26_index.z.checkSomeFieldValueIsSelected("WIDGET_ID", Et.U(e))
+      var s = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.checkFieldValueIsSelected("WIDGET_ID", e)
+      var c = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.checkSomeFieldValueIsSelected("WIDGET_ID", $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.U(e))
       if (s || c) {
-        o.current = Et.Bb(e)
-        r($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+        o.current = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
+        r($$_$$_$$_$$_redux_common_actions.zh({
           onConfirm: H,
           onClose: V,
-          allowText: $_710$a$formatMessage({
+          allowText: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: "delete"
           }),
           isDangerous: true,
           title: a,
-          content: $_710$a$formatMessage({
+          content: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
             id: c ? "deleteParentWidgetTips" : "deleteWidgetTips"
           })
         }))
       } else {
-        r($$_$$_$$_$$_src_editor_redux_common_actions.Mf(e, u.id))
+        r($$_$$_$$_$$_redux_common_actions.Mf(e, u.id))
         o.current = undefined
       }
     }
@@ -316,21 +316,21 @@ var Fv = memo(function () {
     var t
     var n
     var o = e
-    r($$_$$_$$_$$_src_editor_redux_common_actions.ug(o))
+    r($$_$$_$$_$$_redux_common_actions.ug(o))
     if (s === o && l) {
-      $_26_index.g.setSelectedItem()
-      if (!(null === (t = $_26_index.g.getToolbox()) || undefined === t)) {
+      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
+      if (!(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t)) {
         t.flyout.hide()
       }
     } else {
-      $_26_index.g.setSelectedItem(null === (n = $_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(o))
+      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (n = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(o))
     }
   }
   var H = function () {
     var /* [auto-meaningful-name] */o$current
     var t = null === (o$current = o.current) || undefined === o$current ? undefined : o$current.id
     if (t) {
-      r($$_$$_$$_$$_src_editor_redux_common_actions.Mf(t, u.id))
+      r($$_$$_$$_$$_redux_common_actions.Mf(t, u.id))
     }
   }
   var V = function () {
@@ -342,7 +342,7 @@ var Fv = memo(function () {
   var Z = []
   var J = new Map()
   u.widgetIds.forEach(function (e) {
-    var t = Et.Bb(e)
+    var t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
     if (t) {
       if (t && !t.parentId) {
         J.set(e, {
@@ -351,15 +351,15 @@ var Fv = memo(function () {
       }
       var /* [auto-meaningful-name] */t$type = t.type
       if (t && !Z.includes(t$type)) {
-        var o = Et.Db(t.type)
+        var o = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(t.type)
         if (o && o.hasAnyWidget) {
           Z.push(t$type)
           Q.push({
             type: "ANY_".concat(t$type),
             icon: o.icon,
-            title: $_710$a$formatMessage({
+            title: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
               id: "anyWidgetAny"
-            }) + $_710$a$formatMessage({
+            }) + $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
               id: o.title || o.previewAreaWidgetTitle
             })
           })
@@ -368,9 +368,9 @@ var Fv = memo(function () {
     }
   })
   J.forEach(function (e) {
-    if (!(e.widget.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.f && e.widget.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.x && e.widget.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.A)) {
+    if (!(e.widget.type !== $$_$$_$$_$$_widget_builtIn_types.f && e.widget.type !== $$_$$_$$_$$_widget_builtIn_types.x && e.widget.type !== $$_$$_$$_$$_widget_builtIn_types.A)) {
       e.widget.widgetIds.forEach(function (t) {
-        var n = Et.Bb(t)
+        var n = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(t)
         if (n) {
           if (!e.children) {
             e.children = []
@@ -388,7 +388,7 @@ var Fv = memo(function () {
   var ee = []
   if (!(null === (u$invisibleWidgetIds = u.invisibleWidgetIds) || undefined === u$invisibleWidgetIds)) {
     u$invisibleWidgetIds.forEach(function (e) {
-      var t = Et.Bb(e)
+      var t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
       if (t) {
         $.push({
           widget: t
@@ -400,8 +400,8 @@ var Fv = memo(function () {
   var ne = []
   var re = []
   c.forEach(function (e) {
-    var t = Et.Bb(e)
-    if (t && t.type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
+    var t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
+    if (t && t.type !== $$_$$_$$_$$_widget_builtIn_types.m) {
       ne.push({
         widget: t
       })
@@ -417,9 +417,9 @@ var Fv = memo(function () {
       return React.createElement(Bv, {
         className: t,
         id: r$widget.id,
-        icon: (null === (i = Et.Db(r$widget.type)) || undefined === i ? undefined : i.icon) || "",
+        icon: (null === (i = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(r$widget.type)) || undefined === i ? undefined : i.icon) || "",
         type: r$widget.type,
-        title: Et.Fb(r$widget.id),
+        title: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Fb(r$widget.id),
         visible: r$widget.visible,
         readonly: M,
         key: r$widget.id,
@@ -438,7 +438,7 @@ var Fv = memo(function () {
         parentId: r$widget.id,
         isGlobalWidget: null === n || undefined === n ? undefined : n.isGlobalWidget,
         isInvisibleWidget: null === n || undefined === n ? undefined : n.isInvisibleWidget,
-        isDragAndDeleteDisabled: r$widget.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.x || r$widget.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A
+        isDragAndDeleteDisabled: r$widget.type === $$_$$_$$_$$_widget_builtIn_types.x || r$widget.type === $$_$$_$$_$$_widget_builtIn_types.A
       }))
     }))
   }
@@ -453,17 +453,17 @@ var Fv = memo(function () {
           (function (e, t, n) {
             if (!(e < 0 || t < 0)) {
               if (null === n || undefined === n ? undefined : n.parentId) {
-                var o = Et.Bb(null === n || undefined === n ? undefined : n.parentId)
+                var o = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(null === n || undefined === n ? undefined : n.parentId)
                 var /* [auto-meaningful-name] */o$widgetIds = o.widgetIds
                 var a = o$widgetIds.length - e - 1
                 var s = o$widgetIds.length - t - 1
                 var c = o$widgetIds.splice(a, 1)
-                var l = $_10_index.a(c, 1)[0]
-                var d = $_25_index.a(o$widgetIds)
+                var l = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 1)[0]
+                var d = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(o$widgetIds)
                 d.splice(s, 0, l)
-                r($$_$$_$$_$$_src_editor_redux_common_actions.Mg(u.id, o.id, d, true, true, true))
+                r($$_$$_$$_$$_redux_common_actions.Mg(u.id, o.id, d, true, true, true))
               } else {
-                var /* [auto-meaningful-name] */po$oTHelper$widget
+                var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget
                 var f = X
                 var h = f.length - e - 1
                 var m = f.length - t - 1
@@ -477,114 +477,114 @@ var Fv = memo(function () {
                 }
                 u$widgetIds.splice(y, 1)
                 u$widgetIds.splice(b, 0, g)
-                r($$_$$_$$_$$_src_editor_redux_common_actions.Bj(u.id, $_25_index.a(u$widgetIds), null === n || undefined === n ? undefined : n.isInvisibleWidget))
-                if (!(null === (po$oTHelper$widget = po.oTHelper.widget) || undefined === po$oTHelper$widget)) {
-                  po$oTHelper$widget.clientOp.moveWidget(u.id, y, b)
+                r($$_$$_$$_$$_redux_common_actions.Bj(u.id, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(u$widgetIds), null === n || undefined === n ? undefined : n.isInvisibleWidget))
+                if (!(null === ($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
+                  $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.moveWidget(u.id, y, b)
                 }
               }
             }
           })(e, n, t)
         }
       },
-      lineClassName: $_1501.dragLine
+      lineClassName: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.dragLine
     }, ie(e, n, t))
   }
   return React.createElement("div", {
-    className: $_1501.wrapper
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.wrapper
   }, React.createElement("div", {
-    className: $_1501.list,
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.list,
     "data-updated-at": i
   }, React.createElement("div", {
-    className: $_1501.widgetCategory,
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetCategory,
     onClick: function () {
       g(!m)
     }
-  }, React.createElement("span", null, $_710$a$formatMessage({
+  }, React.createElement("span", null, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "components"
-  })), React.createElement($_13_index.j, {
+  })), React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-fold",
-    className: m ? $_1501.fold : $_1501.unFold
+    className: m ? $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.fold : $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.unFold
   })), !m && ae(q), !m && React.createElement("div", {
-    className: N($_1501.item, $_1501.screenItem, (t = {}, k.a(t, $_1501.selected, !s && l), k.a(t, $_1501.selectedLight, !s && !l), t)),
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.item, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.screenItem, (t = {}, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.selected, !s && l), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.selectedLight, !s && !l), t)),
     onContextMenu: function (e) {
       return e.preventDefault()
     },
     onClick: function () {
       var e
       var t
-      r($$_$$_$$_$$_src_editor_redux_common_actions.ug(undefined))
+      r($$_$$_$$_$$_redux_common_actions.ug(undefined))
       if (s || !a) {
         if (!s && l) {
-          $_26_index.g.setSelectedItem()
-          if (!(null === (e = $_26_index.g.getToolbox()) || undefined === e)) {
+          $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
+          if (!(null === (e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === e)) {
             e.flyout.hide()
           }
         } else {
-          $_26_index.g.setSelectedItem(null === (t = $_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(u.id))
+          $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(u.id))
         }
       } else {
-        r($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
+        r($$_$$_$$_$$_redux_common_actions.fj(false))
       }
     }
   }, React.createElement("div", {
-    className: $_1501.left
-  }, React.createElement($_13_index.j, {
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.left
+  }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-screen",
-    className: $_1501.widgetIcon
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetIcon
   }), React.createElement("span", {
-    className: $_1501.label
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.label
   }, u.title)), React.createElement("div", {
-    className: $_1501.right
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.right
   }, React.createElement("div", {
     onClick: function (e) {
       var t
       e.stopPropagation()
-      r($$_$$_$$_$$_src_editor_redux_common_actions.ug(undefined))
-      $_26_index.g.setSelectedItem(null === (t = $_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(u.id))
-      r(!s && a ? $$_$$_$$_$$_src_editor_redux_common_actions.fj(false) : $$_$$_$$_$$_src_editor_redux_common_actions.fj(true))
+      r($$_$$_$$_$$_redux_common_actions.ug(undefined))
+      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(u.id))
+      r(!s && a ? $$_$$_$$_$$_redux_common_actions.fj(false) : $$_$$_$$_$$_redux_common_actions.fj(true))
     },
-    className: N($_1501.controlIcon, $_1501.attributeIcon)
-  }, React.createElement($_13_index.j, {
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.controlIcon, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.attributeIcon)
+  }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-attribute"
   })), React.createElement("div", {
-    className: $_1501.screenBottomIcon
-  }, React.createElement($_13_index.j, {
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.screenBottomIcon
+  }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-screen-bottom"
   })))), ee.length > 0 && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_1501.widgetCategory,
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetCategory,
     onClick: function () {
       E(!y)
     }
-  }, React.createElement("span", null, $_710$a$formatMessage({
+  }, React.createElement("span", null, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "invisibleWidgetList"
-  })), React.createElement($_13_index.j, {
+  })), React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-fold",
-    className: y ? $_1501.fold : $_1501.unFold
+    className: y ? $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.fold : $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.unFold
   })), !y && ae($, {
     isInvisibleWidget: true
   })), re.length > 0 && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_1501.widgetCategory,
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetCategory,
     onClick: function () {
       T(!C)
     }
-  }, React.createElement("span", null, $_710$a$formatMessage({
+  }, React.createElement("span", null, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "globalWidgetList"
-  })), React.createElement($_13_index.j, {
+  })), React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-fold",
-    className: C ? $_1501.fold : $_1501.unFold
+    className: C ? $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.fold : $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.unFold
   })), !C && ae(ne, {
     isGlobalWidget: true,
     isInvisibleWidget: true
   })), Q.length > 0 && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_1501.widgetCategory,
+    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetCategory,
     onClick: function () {
       D(!R)
     }
-  }, React.createElement("span", null, $_710$a$formatMessage({
+  }, React.createElement("span", null, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "anyWidgetList"
-  })), React.createElement($_13_index.j, {
+  })), React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-fold",
-    className: R ? $_1501.fold : $_1501.unFold
+    className: R ? $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.fold : $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.unFold
   })), !R && (oe = Q, React.createElement("div", {
     onContextMenu: function (e) {
       return e.preventDefault()
@@ -597,19 +597,19 @@ var Fv = memo(function () {
     return React.createElement("div", {
       onClick: U.bind(null, e$type),
       key: e$type,
-      className: N($_1501.item, (t = {}, k.a(t, $_1501.selected, s === e$type && l), k.a(t, $_1501.selectedLight, s === e$type && !l), k.a(t, $_1501.parent, false), t))
+      className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.item, (t = {}, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.selected, s === e$type && l), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.selectedLight, s === e$type && !l), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.parent, false), t))
     }, React.createElement("div", {
-      className: N($_1501.left, $_1501.anyWidget)
-    }, te.X(e$icon) ? React.createElement("img", {
-      className: N($_1501.widgetIcon, $_1501.widgetUrlIcon),
+      className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.left, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.anyWidget)
+    }, $$_$$_$$_$$_$$_shared_tools_index.X(e$icon) ? React.createElement("img", {
+      className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetIcon, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetUrlIcon),
       src: e$icon,
       alt: e$title,
       draggable: false
-    }) : React.createElement($_13_index.j, {
+    }) : React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
       type: e$icon,
-      className: $_1501.widgetIcon
+      className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.widgetIcon
     }), React.createElement("span", {
-      className: N($_1501.label)
+      className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1501.label)
     }, e$title)))
   }))))))
 })

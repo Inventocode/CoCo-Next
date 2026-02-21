@@ -9,8 +9,8 @@
 import { EA } from "./index__part-164"
 import * as /* [auto-meaningful-name] */$_135 from "./135"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch, useSelector } from "react-redux"
@@ -40,7 +40,7 @@ var CA = function (e) {
     }
   }
   return React.createElement("div", {
-    className: N($_4731.SoundDragContainer, a && $_4731.isDragging),
+    className: Classnames($_4731.SoundDragContainer, a && $_4731.isDragging),
     onDrop: function (n) {
       if (!e.isReadOnly) {
         l($$_$$_$$_$$_src_editor_redux_common_actions.wf(n.dataTransfer.files, e$onSuccess, true))
@@ -91,7 +91,7 @@ var TA = function (e) {
     className: $_4731.imageLayoutList
   }, React.createElement("ul", null, React.createElement("li", {
     className: $_4731.uploadItem
-  }, React.createElement($_13_index.B, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
     onChange: function (e) {
       if (e) {
         n($$_$$_$$_$$_src_editor_redux_common_actions.wf(e, undefined, true))
@@ -101,7 +101,7 @@ var TA = function (e) {
     accept: $_135.h
   }, React.createElement("div", {
     className: $_4731.content
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add2",
     className: $_4731.icon
   }), React.createElement("div", {

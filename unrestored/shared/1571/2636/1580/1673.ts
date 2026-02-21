@@ -4,7 +4,7 @@
  * 模块 ID：1673
  */
 
-var r = require("./1661/86/index")
+var r = require("./1662/86")
 var o = require("./1659/168")
 var i = require("./1282/231")
 var /* [auto-meaningful-name] */Object$isFrozen = Object.isFrozen

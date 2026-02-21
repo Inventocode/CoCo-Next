@@ -11,7 +11,7 @@ import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
 import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_144 from "./144"
@@ -94,7 +94,7 @@ var Wh = {
         widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "方向",
         lineId: "rotate"
-      }), "<block type=\"actor_set_rotation\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"").concat($_17_index.I.ControllerType.ANGLE_SCALE, "\" constraints=\"-180,180,,true\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_face_to\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_rotate\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_rotate_around\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
+      }), "<block type=\"actor_set_rotation\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" controller=\"").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.ControllerType.ANGLE_SCALE, "\" constraints=\"-180,180,,true\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_face_to\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"actor_rotate\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"actor_rotate_around\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\",,1\">90</field>\n        </shadow>\n      </value>\n    </block>"), Jd.cb({
         widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
         title: "造型",
         lineId: "style"

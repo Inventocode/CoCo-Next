@@ -11,9 +11,9 @@ import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
 import /* [auto-meaningful-name] */$_525 from "./525"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -76,12 +76,12 @@ var Le = memo(function (e) {
       r($$_$$_$$_$$_src_editor_redux_common_actions.Xg())
     }
   }, React.createElement("div", {
-    className: N($_4951.emptyItem, $_4951.item)
+    className: Classnames($_4951.emptyItem, $_4951.item)
   }, React.createElement("div", {
     className: $_4951.emptyContent
   }, React.createElement("span", {
     className: $_4951.iconContainer
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add",
     className: $_4951.icon
   })), React.createElement("p", {
@@ -94,7 +94,7 @@ var Le = memo(function (e) {
         i(e.bcmUrl, e.name)
       }
     }, React.createElement("div", {
-      className: N($_4951.item),
+      className: Classnames($_4951.item),
       style: {
         backgroundImage: "url(".concat(e.image, ")")
       }
@@ -117,7 +117,7 @@ var Pe = memo(function (e) {
   var s = function (e) {
     r($$_$$_$$_$$_src_editor_redux_common_actions.Ah(e))
   }
-  return o$visible ? React.createElement($_13_index.f, {
+  return o$visible ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: o$visible,
     className: $_525.container,
     onClose: function () {
@@ -128,21 +128,21 @@ var Pe = memo(function (e) {
   }, React.createElement("header", {
     className: $_525.header
   }, React.createElement("div", {
-    className: N($_525.tabItem, k.a({}, $_525.selected, o$selected === K.f.CREATE_PROJECT)),
+    className: Classnames($_525.tabItem, k.a({}, $_525.selected, o$selected === K.f.CREATE_PROJECT)),
     onClick: function () {
       s(K.f.CREATE_PROJECT)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-new-project",
     className: $_525.icon
   }), $_710$a$formatMessage({
     id: "projectDialog.newProject"
   })), React.createElement("div", {
-    className: N($_525.tabItem, k.a({}, $_525.selected, o$selected === K.f.MY_PROJECT)),
+    className: Classnames($_525.tabItem, k.a({}, $_525.selected, o$selected === K.f.MY_PROJECT)),
     onClick: function () {
       s(K.f.MY_PROJECT)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-my-project",
     className: $_525.icon
   }), $_710$a$formatMessage({

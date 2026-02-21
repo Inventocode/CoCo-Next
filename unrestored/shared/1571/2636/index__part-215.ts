@@ -9,10 +9,10 @@
 var RP
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -101,7 +101,7 @@ var zP = memo(function () {
       c(e)
     }
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: e$visible,
     withPortal: true,
     onClose: function () {
@@ -113,7 +113,7 @@ var zP = memo(function () {
     onClick: function () {
       p(false)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-arrow-down",
     className: $_2821.backIcon
   })), $_710$a$formatMessage({
@@ -137,10 +137,10 @@ var zP = memo(function () {
   })), React.createElement("div", null, $_710$a$formatMessage({
     id: "ListViewerWidget.toCloudSpaceDomainTips"
   }))), React.createElement("div", {
-    className: N($_2821.confirmBox, $_2821.cloudSpaceConfirm)
-  }, React.createElement($_13_index.d, {
+    className: Classnames($_2821.confirmBox, $_2821.cloudSpaceConfirm)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: function () {
-      window.open("".concat(te.A(), "/dashboard/?createType=Table"), "_blank")
+      window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/?createType=Table"), "_blank")
       m($$_$$_$$_$$_src_editor_redux_common_actions.mh())
     },
     type: "primary"
@@ -154,8 +154,8 @@ var zP = memo(function () {
     className: $_2821.tableDataList
   }, React.createElement("div", {
     onClick: b.bind(null, RP.TABLE_DATA),
-    className: N($_2821.tableDataItem, $_2821.yellow, RP.TABLE_DATA === s && $_2821.active)
-  }, React.createElement($_13_index.j, {
+    className: Classnames($_2821.tableDataItem, $_2821.yellow, RP.TABLE_DATA === s && $_2821.active)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-source-table-data",
     className: $_2821.icon
   }), React.createElement("div", {
@@ -168,8 +168,8 @@ var zP = memo(function () {
     id: "ListViewerWidget.tableDataDesc"
   }))), React.createElement("div", {
     onClick: b.bind(null, RP.CLOUD_SPACE_TABLE),
-    className: N($_2821.tableDataItem, t ? $_2821.blue : $_2821.disable, RP.CLOUD_SPACE_TABLE === s && $_2821.active)
-  }, React.createElement($_13_index.j, {
+    className: Classnames($_2821.tableDataItem, t ? $_2821.blue : $_2821.disable, RP.CLOUD_SPACE_TABLE === s && $_2821.active)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-source-cloud-data",
     className: $_2821.icon
   }), t ? React.createElement("div", {
@@ -185,7 +185,7 @@ var zP = memo(function () {
     className: $_2821.name
   }, $_710$a$formatMessage({
     id: "ListViewerWidget.cloudTable"
-  }), React.createElement($_13_index.j, {
+  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-locked"
   }))), React.createElement("div", {
     className: $_2821.desc
@@ -193,7 +193,7 @@ var zP = memo(function () {
     id: "ListViewerWidget.cloudTableDesc"
   })))), React.createElement("div", {
     className: $_2821.confirmBox
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: v,
     type: "primary"
   }, $_710$a$formatMessage({

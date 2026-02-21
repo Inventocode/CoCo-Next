@@ -35,9 +35,9 @@ export { H as r }
 export { V as m }
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "../../../unrestored/shared/1571/2636/7"
-import * as /* [auto-meaningful-name] */$$_57_index from "../../../unrestored/shared/1571/2636/57/index"
-import * as /* [auto-meaningful-name] */$$_133 from "../../../unrestored/shared/1571/2636/133"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */$$_env from "../env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_133 from "../../../unrestored/shared/1571/2636/133"
 var /* [auto-meaningful-name] */Https__owfemtgc1d$feishu$cn_share_base_form_shrcnlokP3seuMFtmTLxCAh40Sc = "https://owfemtgc1d.feishu.cn/share/base/form/shrcnlokP3seuMFtmTLxCAh40Sc"
 function l(e) {
   return 0 === e.indexOf("data:")
@@ -77,7 +77,7 @@ function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (_ = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     return RegeneratorRuntime1.wrap(function (e) {
@@ -105,7 +105,7 @@ function v(e, t) {
   return b.apply(this, arguments)
 }
 function b() {
-  return (b = i.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (b = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var a
@@ -116,7 +116,7 @@ function b() {
             e.next = 2
             return g(t)
           case 2:
-            if ((e$sent = e.sent).type !== $$_133.c) {
+            if ((e$sent = e.sent).type !== $$_$$_$$_unrestored_shared_1571_2636_133.c) {
               e.next = 9
               break
             }
@@ -163,7 +163,7 @@ function E(e, t) {
   return O.apply(this, arguments)
 }
 function O() {
-  return (O = i.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (O = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var a
@@ -195,7 +195,7 @@ function w(e) {
   return C.apply(this, arguments)
 }
 function C() {
-  return (C = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (C = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -223,7 +223,7 @@ function T(e) {
   return S.apply(this, arguments)
 }
 function S() {
-  return (S = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (S = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
@@ -297,7 +297,7 @@ function x(e, t) {
   return window.location.origin + window.location.pathname + n
 }
 function D() {
-  return "production" === $$_57_index.b() ? "https://coco.codemao.cn" : window.location.origin
+  return "production" === $$_env.b() ? "https://coco.codemao.cn" : window.location.origin
 }
 function M(e) {
   return D() + "/editor/player/".concat(e, "?channel=community")
@@ -306,7 +306,7 @@ function L(e) {
   return D() + "/editor/player/".concat(e, "?channel=h5")
 }
 function P(e) {
-  var t = $$_57_index.b()
+  var t = $$_env.b()
   var n = ""
   if ("development" === t || "dev" === t) {
     n = "dev-"
@@ -322,7 +322,7 @@ function P(e) {
   return "https://".concat(n, "shequ.codemao.cn/work/").concat(e)
 }
 function B() {
-  var e = $$_57_index.b()
+  var e = $$_env.b()
   var t = ""
   if ("development" === e || "dev" === e) {
     t = "dev-"
@@ -338,7 +338,7 @@ function B() {
   return "https://".concat(t, "coco.codemao.cn")
 }
 function F() {
-  var e = $$_57_index.b()
+  var e = $$_env.b()
   var t = ""
   if ("development" === e || "dev" === e) {
     t = "dev-"
@@ -379,7 +379,7 @@ function H(e) {
 }
 function V() {
   return "https://".concat(function () {
-    var e = $$_57_index.b()
+    var e = $$_env.b()
     var t = ""
     if ("development" === e || "dev" === e) {
       t = "dev-"

@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
-var /* [auto-meaningful-name] */require$_1648_386_index$f = require("./1648/386/index").f
-var i = require("./1775/256")
-var a = require("./1785/310")
+var r = require("./1662/86")
+var /* [auto-meaningful-name] */require$_1581_386$f = require("./1581/386").f
+var i = require("./1771/256")
+var a = require("./1282/310")
 var s = require("./1724/1096")
-var c = require("./1723/424")
+var c = require("./1720/424")
 var l = require("./1724/1097")
 var u = require("./1581/533")
 var /* [auto-meaningful-name] */$endsWith = "".endsWith
@@ -21,7 +21,7 @@ r({
   target: "String",
   proto: true,
   forced: !(!u && !f && !!function () {
-    var e = require$_1648_386_index$f(String.prototype, "endsWith")
+    var e = require$_1581_386$f(String.prototype, "endsWith")
     return e && !e.writable
   }()) && !f
 }, {

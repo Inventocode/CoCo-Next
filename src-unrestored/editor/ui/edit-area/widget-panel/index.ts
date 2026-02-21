@@ -6,19 +6,19 @@
 
 "use strict"
 
-import { Fv } from "./widget-tree"
-import * as /* [auto-meaningful-name] */$_26_index from "../../../../../unrestored/shared/1571/2636/26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../shared/ui/components/index"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710 from "../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import { Fv } from "./widget-tree/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useEffect, useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_329 from "../../../../../unrestored/shared/1571/2636/329"
-import /* [auto-meaningful-name] */$_3291 from "../../../../../unrestored/shared/1571/2636/329"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_329 from "../../../../../unrestored/shared/1571/2636/329"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291 from "../../../../../unrestored/shared/1571/2636/329"
 var Uv = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$icon = e.icon
@@ -26,7 +26,7 @@ var Uv = memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$bgColor = e.bgColor
   var a = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var c = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
@@ -34,11 +34,11 @@ var Uv = memo(function (e) {
     return e.block.flyoutVisible
   })
   var u = useState(false)
-  var d = $_10_index.a(u, 2)
+  var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = useState("")
-  var v = $_10_index.a(g, 2)
+  var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
   var b = v[0]
   var y = v[1]
   useEffect(function () {
@@ -46,22 +46,22 @@ var Uv = memo(function (e) {
   }, [c, t, l, p, e$color, e$bgColor])
   return React.createElement("div", {
     key: t,
-    className: N($_3291.itemBlock, c === t && l && $_3291.itemSelected),
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.itemBlock, c === t && l && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.itemSelected),
     style: {
       backgroundColor: b
     },
     onClick: function () {
       var e
       var n
-      a($$_$$_$$_$$_src_editor_redux_common_actions.ug(t))
-      a($$_$$_$$_$$_src_editor_redux_common_actions.fj(false))
+      a($$_$$_$$_redux_common_actions.ug(t))
+      a($$_$$_$$_redux_common_actions.fj(false))
       if (c === t && l) {
-        $_26_index.g.setSelectedItem()
-        if (!(null === (e = $_26_index.g.getToolbox()) || undefined === e)) {
+        $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
+        if (!(null === (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === e)) {
           e.flyout.hide()
         }
       } else {
-        $_26_index.g.setSelectedItem(null === (n = $_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(t))
+        $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(t))
       }
     },
     onMouseEnter: function () {
@@ -71,13 +71,13 @@ var Uv = memo(function (e) {
       m(false)
     }
   }, React.createElement("div", {
-    className: $_3291.itemBlockIcon,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.itemBlockIcon,
     style: {
       color: e$color
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: e$icon
-  })), React.createElement("span", null, $_710$a$formatMessage({
+  })), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: e$label
   })))
 })
@@ -133,41 +133,41 @@ var Hv = [
   }
 ]
 var Vv = memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   return React.createElement("div", {
-    className: $_3291.basicBlockBox
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.basicBlockBox
   }, React.createElement("div", {
-    className: $_3291.categoryTitle
-  }, $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.categoryTitle
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "basicBlock"
   })), React.createElement("div", {
-    className: $_3291.blockList
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.blockList
   }, Hv.map(function (e) {
     return React.createElement(Uv, Object.assign({
       key: e.id
     }, e))
   })), React.createElement("div", {
-    className: $_3291.spaceLine
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.spaceLine
   }))
 })
 var zv = memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var t = useSelector(function (e) {
     return e.block.isBlockDragDeleteArea
   })
   return React.createElement("div", {
-    className: $_3291.deleteBlockBox
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteBlockBox
   }, React.createElement("div", {
-    className: N($_3291.deleteTopIconBox, t && $_3291.deleteTopIconBoxOff)
-  }, React.createElement($_13_index.j, {
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteTopIconBox, t && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteTopIconBoxOff)
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-delete-top",
-    className: $_3291.deleteBlockTopIcon
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteBlockTopIcon
   })), React.createElement("div", {
-    className: $_3291.deleteBottomIconBox
-  }, React.createElement($_13_index.j, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteBottomIconBox
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-delete-bottom",
-    className: $_3291.deleteBlockBottomIcon
-  })), React.createElement("div", null, $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteBlockBottomIcon
+  })), React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "Workspace.blockDragDeleteAreaTips"
   })))
 })
@@ -178,20 +178,20 @@ var Yv = memo(function () {
     return e.block.isBlockDragDeleteArea
   })
   return React.createElement("div", {
-    className: $_3291.wrapper,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.wrapper,
     onMouseEnter: function () {
-      return e($$_$$_$$_$$_src_editor_redux_common_actions.ui(true))
+      return e($$_$$_$$_redux_common_actions.ui(true))
     },
     onMouseLeave: function () {
-      return e($$_$$_$$_$$_src_editor_redux_common_actions.ui(false))
+      return e($$_$$_$$_redux_common_actions.ui(false))
     }
   }, React.createElement("div", {
-    className: $_3291.basicBlock
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.basicBlock
   }, React.createElement(Vv, null)), React.createElement("div", {
-    className: $_3291.widgetTree,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.widgetTree,
     ref: t
   }, React.createElement(Fv, null)), React.createElement("div", {
-    className: N($_3291.deleteBlockPanel, n && $_3291.deleteBlockPanelShow)
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteBlockPanel, n && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_3291.deleteBlockPanelShow)
   }, React.createElement(zv, null)))
 })
 export { Yv }

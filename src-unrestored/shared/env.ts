@@ -7,8 +7,8 @@
 "use strict"
 
 export { a as b }
-import * as /* [auto-meaningful-name] */$_778_index from "../../unrestored/shared/1571/2636/57/778/index"
-import /* [auto-meaningful-name] */$_778_index1 from "../../unrestored/shared/1571/2636/57/778/index"
+import * as r from "is-ip"
+import o from "is-ip"
 var i = {
   openServiceHost: "https://dev-open-service.codemao.cn",
   serverHost: "https://backend-dev.codemao.cn",
@@ -29,7 +29,7 @@ function a() {
     }
   }
   var /* [auto-meaningful-name] */window$location$hostname = window.location.hostname
-  return window$location$hostname.startsWith("dev") || "localhost" === window$location$hostname || $_778_index1(window$location$hostname) ? "development" : window$location$hostname.startsWith("test") ? "test" : window$location$hostname.startsWith("staging") ? "staging" : window$location$hostname.startsWith("press") ? "press" : "production"
+  return window$location$hostname.startsWith("dev") || "localhost" === window$location$hostname || o(window$location$hostname) ? "development" : window$location$hostname.startsWith("test") ? "test" : window$location$hostname.startsWith("staging") ? "staging" : window$location$hostname.startsWith("press") ? "press" : "production"
 }
 !function () {
   var e

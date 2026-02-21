@@ -9,7 +9,7 @@
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "../8"
+import i from "classnames"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import "./652"
 var ae = memo(function (e) {

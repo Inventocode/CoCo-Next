@@ -7,7 +7,7 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch } from "react-redux"
@@ -28,7 +28,7 @@ var dA = function (e) {
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   var u = useDispatch()
   return React.createElement("div", {
-    className: N($_3551.ImageDragContainer, s && $_3551.isDragging),
+    className: Classnames($_3551.ImageDragContainer, s && $_3551.isDragging),
     onDragEnter: function (t) {
       if (!e.isReadOnly) {
         c(true)
@@ -46,7 +46,7 @@ var dA = function (e) {
       }
     }
   }, e$children, e$isEmpty && React.createElement("div", {
-    className: N($_3551.ImageLayoutEmpty, e$className)
+    className: Classnames($_3551.ImageLayoutEmpty, e$className)
   }, React.createElement("h5", null, $_710$a$formatMessage({
     id: "emptyImageLibraryTitle"
   })), React.createElement("div", {

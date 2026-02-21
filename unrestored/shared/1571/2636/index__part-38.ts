@@ -17,7 +17,7 @@ import * as wn from "./90"
 import /* [auto-meaningful-name] */Color from "color"
 import * as D from "./6"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
 import { useRef, useState, useEffect } from "react"
@@ -120,7 +120,7 @@ var Op = function (e) {
     id: t,
     "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
     "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: N(wn.b, $_2391.textWidget, k.a({}, $_2391.hide, !e$visible)),
+    className: Classnames(wn.b, $_2391.textWidget, k.a({}, $_2391.hide, !e$visible)),
     "data-min-width": $_146.m,
     "data-min-height": $_146.l,
     ref: C,
@@ -142,7 +142,7 @@ var Op = function (e) {
   }, e$attributes$content + "\n"))), React.createElement("div", {
     "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     ref: O,
-    className: N(wn.b, $_2391.textWidget, "coco-widget-editor", k.a({}, $_2391.hide, !e$visible)),
+    className: Classnames(wn.b, $_2391.textWidget, "coco-widget-editor", k.a({}, $_2391.hide, !e$visible)),
     onMouseDown: function (e) {
       e.stopPropagation()
     },

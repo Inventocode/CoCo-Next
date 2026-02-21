@@ -6,7 +6,7 @@
 
 "use strict"
 
-var a = require("../../../13/780/1068/index")
+var a = require("../../../13/780/1068")
 var r = require("../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true
@@ -19,7 +19,7 @@ var u = r(require("../../../13/780/940"))
 var s = r(require("../../../13/780/1069/index"))
 var d = a(require("react"))
 var c = r(require("./2782"))
-var f = require("./2929/2701")
+var f = require("./2917/2701")
 var h = function (e) {
   function t(e, n) {
     var a;

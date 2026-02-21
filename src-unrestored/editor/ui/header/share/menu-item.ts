@@ -7,36 +7,36 @@
 "use strict"
 
 import { Ge } from "../../../../../unrestored/shared/1571/2636/index__part-9"
-import { Zt, Jt } from "../../../../../unrestored/shared/1571/2636/index__part-17"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_restrict from "../../../../shared/widget/custom/restrict"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../shared/widget/custom/storage"
-import /* [auto-meaningful-name] */$_1510 from "../../../../../unrestored/shared/1571/2636/1510"
-import /* [auto-meaningful-name] */$_1509 from "../../../../../unrestored/shared/1571/2636/1509"
-import /* [auto-meaningful-name] */$_1036_index from "../../../../../unrestored/shared/1571/2636/1036/index"
-import * as /* [auto-meaningful-name] */$_133 from "../../../../../unrestored/shared/1571/2636/133"
-import * as /* [auto-meaningful-name] */$_197_index from "../../../../../unrestored/shared/1571/2636/197/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../shared/widget/custom/type"
-import * as Et from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$_288 from "../../../../shared/player/audit"
-import * as /* [auto-meaningful-name] */$_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$_190 from "../../../../../unrestored/shared/1571/2636/190"
-import * as te from "../../../../../unrestored/shared/1571/2636/15"
-import * as Z from "../../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import N from "../../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$_710 from "../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as O from "../../../../../unrestored/shared/1571/2636/7"
+import { Zt, Jt } from "./dialogs/community"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_restrict from "../../../../shared/widget/custom/restrict"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_storage from "../../../../shared/widget/custom/storage"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1510 from "../../../../../unrestored/shared/1571/2636/1510"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1509 from "../../../../../unrestored/shared/1571/2636/1509"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1036_index from "../../../../../unrestored/shared/1571/2636/1036/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_133 from "../../../../../unrestored/shared/1571/2636/133"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_197_index from "../../../../../unrestored/shared/1571/2636/197/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_player_audit from "../../../../shared/player/audit"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools_index from "../../../../shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97_index from "../../../../../unrestored/shared/1571/2636/97/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1052 from "../../../../../unrestored/shared/1571/2636/1052"
-import /* [auto-meaningful-name] */$_10521 from "../../../../../unrestored/shared/1571/2636/1052"
-import * as /* [auto-meaningful-name] */$_281 from "../../../../../unrestored/shared/1571/2636/281"
-import /* [auto-meaningful-name] */$_2811 from "../../../../../unrestored/shared/1571/2636/281"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1052 from "../../../../../unrestored/shared/1571/2636/1052"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10521 from "../../../../../unrestored/shared/1571/2636/1052"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_281 from "../../../../../unrestored/shared/1571/2636/281"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811 from "../../../../../unrestored/shared/1571/2636/281"
 var rn = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
@@ -52,35 +52,35 @@ var rn = function (e) {
   var a = useSelector(function (e) {
     return e.project.projectSource
   })
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var c = useDispatch()
   var l = useState(false)
-  var u = $_10_index.a(l, 2)
+  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = useState(false)
-  var g = $_10_index.a(m, 2)
+  var g = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(m, 2)
   var v = g[0]
   var b = g[1]
   var y = useState("")
-  var w = $_10_index.a(y, 2)
+  var w = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(y, 2)
   var C = w[0]
   var T = w[1]
   var A = useState(false)
-  var j = $_10_index.a(A, 2)
+  var j = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(A, 2)
   var R = j[0]
   var k = j[1]
   var x = useState(false)
-  var D = $_10_index.a(x, 2)
+  var D = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(x, 2)
   var M = D[0]
   var L = D[1]
   var P = useState(false)
-  var B = $_10_index.a(P, 2)
+  var B = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(P, 2)
   var F = B[0]
   var G = B[1]
   var W = useRef(false)
   var U = useCallback(function (e, t) {
-    $_141_index.a("WorkShare", {
+    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkShare", {
       workId: o,
       workName: r.title,
       workTag: "",
@@ -92,7 +92,7 @@ var rn = function (e) {
       failReason: t
     })
   }, [o, a, r.title, i])
-  var H = useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var H = useCallback($$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -105,10 +105,10 @@ var rn = function (e) {
           case 2:
             e.prev = 2
             e.next = 5
-            return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(c, $$_$$_$$_$$_src_editor_redux_common_actions.Fh(r))
+            return $$_$$_$$_redux_common_actions.Nf(c, $$_$$_$$_redux_common_actions.Fh(r))
           case 5:
-            if (Z.a(o)) {
-              T(te.J(o))
+            if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(o)) {
+              T($$_$$_$$_$$_shared_tools_index.J(o))
             }
             k(false)
             L(false)
@@ -120,7 +120,7 @@ var rn = function (e) {
               e.next = 18
               break
             }
-            c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
+            c($$_$$_$$_redux_common_actions.mj({
               message: "分享失败，作品使用了未审核的自定义控件",
               type: "error"
             }))
@@ -128,8 +128,8 @@ var rn = function (e) {
             e$onClose()
             return e.abrupt("return")
           case 18:
-            c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-              message: $_710$a$formatMessage({
+            c($$_$$_$$_redux_common_actions.mj({
+              message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                 id: "Publish.shareQRError"
               }).toString(),
               type: "error"
@@ -142,9 +142,9 @@ var rn = function (e) {
         }
       }
     }, e, null, [[2, 11]])
-  })), [c, $_710$a$formatMessage, R, e$onClose, o, r, U, F])
+  })), [c, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage, R, e$onClose, o, r, U, F])
   function V() {
-    return (V = O.a(RegeneratorRuntime.mark(function e(t) {
+    return (V = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent1
@@ -162,18 +162,18 @@ var rn = function (e) {
               L(true)
               G(true)
               e.next = 7
-              return te.u(n)
+              return $$_$$_$$_$$_shared_tools_index.u(n)
             case 7:
               if (!(e$sent = e.sent)) {
                 e.next = 14
                 break
               }
               e.next = 11
-              return $_197_index.e(e$sent)
+              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e(e$sent)
             case 11:
               e$sent1 = e.sent
               e$sent1$url = e$sent1.url
-              c($$_$$_$$_$$_src_editor_redux_common_actions.Ti({
+              c($$_$$_$$_redux_common_actions.Ti({
                 img: e$sent1$url
               }))
             case 14:
@@ -182,8 +182,8 @@ var rn = function (e) {
             case 16:
               e.prev = 16
               e.t0 = e.catch(1)
-              c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710$a$formatMessage({
+              c($$_$$_$$_redux_common_actions.mj({
+                message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                   id: "Publish.coverImageUploadFail"
                 }).toString(),
                 type: "error"
@@ -201,23 +201,23 @@ var rn = function (e) {
     }))).apply(this, arguments)
   }
   function K() {
-    return (K = O.a(RegeneratorRuntime.mark(function e() {
+    return (K = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
-              if ($_190.a(C)) {
+              if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.a(C)) {
                 b(true)
-                c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                  message: $_710$a$formatMessage({
+                c($$_$$_$$_redux_common_actions.mj({
+                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                     id: "Publish.copyLinkSuccess"
                   }).toString(),
                   duration: 1e3,
                   type: "success"
                 }))
               } else {
-                c($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                  message: $_710$a$formatMessage({
+                c($$_$$_$$_redux_common_actions.mj({
+                  message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                     id: "Publish.copyLinkFailure"
                   }).toString(),
                   duration: 1e3,
@@ -246,20 +246,20 @@ var rn = function (e) {
       b(false)
     }
   }, [H, e$visible])
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_shared_ui_components_index.f, {
     onClose: e$onClose,
-    className: $_2811.shareToOthers,
-    title: $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.shareToOthers,
+    title: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "Publish.shareToOthers"
     }),
     withPortal: true,
     visible: e$visible
   }, React.createElement("div", {
-    className: $_2811.qrWrapper
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.qrWrapper
   }, (R || M || F) && React.createElement("div", {
-    className: $_2811.blocking
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.blocking
   }, React.createElement("div", {
-    className: $_2811.iconWrapper
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.iconWrapper
   }, M ? React.createElement("div", {
     onClick: function () {
       W.current = false
@@ -267,16 +267,16 @@ var rn = function (e) {
       L(false)
       b(false)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-refresh",
-    className: $_2811.refreshIcon
-  })) : React.createElement(Ge, null)), React.createElement("span", null, $_710$a$formatMessage(M ? {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.refreshIcon
+  })) : React.createElement(Ge, null)), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage(M ? {
     id: "Publish.refreshQrCode"
   } : {
     id: "Publish.creatingQrCode"
   }))), React.createElement("div", {
-    className: $_2811.qrCode
-  }, React.createElement($_1036_index, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.qrCode
+  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_1036_index, {
     value: C,
     size: 168,
     level: "M",
@@ -286,59 +286,59 @@ var rn = function (e) {
       src: "https://static.bcmcdn.com/coco/image/share-dialog/qrlogo.png"
     }
   })), React.createElement("div", {
-    className: $_2811.message
-  }, R || M ? "" : $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.message
+  }, R || M ? "" : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "Publish.shareQrCode"
   })), React.createElement("div", {
-    className: $_2811.shareLinkWrapper
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.shareLinkWrapper
   }, React.createElement("div", {
-    className: $_2811.link
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.link
   }, C), React.createElement("div", {
-    className: N($_2811.copyBtn, v && $_2811.copied, (R || M || F) && $_2811.disabled),
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.copyBtn, v && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.copied, (R || M || F) && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.disabled),
     onClick: function () {
       return K.apply(this, arguments)
     }
-  }, $_710$a$formatMessage(v ? {
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage(v ? {
     id: "Publish.shareLinkCopied"
   } : {
     id: "Publish.copyShareLink"
   })))), React.createElement("div", {
-    className: $_2811.lineWrapper
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.lineWrapper
   }, React.createElement("div", {
-    className: $_2811.line
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.line
   }), React.createElement("div", {
-    className: $_2811.settings,
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.settings,
     onClick: function () {
       return p(!d)
     }
-  }, React.createElement("span", null, $_710$a$formatMessage({
+  }, React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "Publish.moreSettings"
-  })), React.createElement($_13_index.j, {
+  })), React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-dropdown-down",
-    className: N($_2811.settingsIcon, d && $_2811.rotateSettingsIcon)
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.settingsIcon, d && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.rotateSettingsIcon)
   })), React.createElement("div", {
-    className: $_2811.line
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.line
   })), React.createElement("div", {
-    className: N($_2811.settingWrapper, !d && $_2811.invisible)
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.settingWrapper, !d && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.invisible)
   }, React.createElement("div", {
-    className: $_2811.workInfo
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.workInfo
   }, React.createElement("ul", null, React.createElement("li", null, React.createElement("p", {
-    className: $_2811.title
-  }, $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.title
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "Publish.shareTitle"
   }), React.createElement("span", {
-    className: $_2811.required
-  }, "*")), React.createElement($_13_index.k, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.required
+  }, "*")), React.createElement($$_$$_$$_$$_shared_ui_components_index.k, {
     defaultValue: r.title,
     maxLength: 20,
-    placeholder: $_710$a$formatMessage({
+    placeholder: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "Publish.inputPublishName"
     }),
     onBlur: function (e, t) {
       if (e !== r.title) {
         if ("" !== e) {
           L(true)
-          c($$_$$_$$_$$_src_editor_redux_common_actions.Ti({
+          c($$_$$_$$_redux_common_actions.Ti({
             title: e
           }))
         } else {
@@ -348,58 +348,58 @@ var rn = function (e) {
     },
     isTrimmed: true
   })), React.createElement("li", null, React.createElement("p", {
-    className: $_2811.title
-  }, $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.title
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "Publish.shareDescription"
-  })), React.createElement($_13_index.A, {
+  })), React.createElement($$_$$_$$_$$_shared_ui_components_index.A, {
     defaultValue: r.desc,
     maxLength: 25,
-    placeholder: $_710$a$formatMessage({
+    placeholder: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "Publish.inputShareDescription"
     }),
     rows: 3,
     onBlur: function (e) {
       if (e.target.value !== r.desc) {
         L(true)
-        c($$_$$_$$_$$_src_editor_redux_common_actions.Ti({
+        c($$_$$_$$_redux_common_actions.Ti({
           desc: e.target.value
         }))
       }
     }
   })))), React.createElement("div", null, React.createElement("p", {
-    className: $_2811.title
-  }, $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.title
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "Publish.workCover"
-  })), React.createElement($_13_index.c, {
+  })), React.createElement($$_$$_$$_$$_shared_ui_components_index.c, {
     width: 140,
     height: 138,
     sourceImage: r.img
   }), React.createElement("div", {
-    className: $_2811.changePoster
-  }, React.createElement($_13_index.B, {
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2811.changePoster
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.B, {
     onChange: function (e) {
       return V.apply(this, arguments)
     },
-    accept: $_133.f
-  }, $_710$a$formatMessage({
+    accept: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_133.f
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "Publish.changeWorkCover"
   }))))))
 }
 var on = function (e) {
   var /* [auto-meaningful-name] */e$target = e.target
   var n = {
-    icon: "community" === e$target ? $_1509 : $_1510,
+    icon: "community" === e$target ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_1509 : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_1510,
     message: "community" === e$target ? "Publish.shareToCommunity" : "Publish.shareToOthers",
     dialogType: "community" === e$target ? Zt.SHARE_COMMUNITY_DIALOG : Zt.SHARE_QR_DIALOG
   }
   var r = useState(Zt.NONE)
-  var o = $_10_index.a(r, 2)
+  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
   var i = o[0]
   var a = o[1]
   var s = useSelector(function (e) {
     return e.common.userInfo
   })
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
   var l = useSelector(function (e) {
     return e.project.id
   })
@@ -408,7 +408,7 @@ var on = function (e) {
   })
   var d = useDispatch()
   function p() {
-    return (p = O.a(RegeneratorRuntime.mark(function e() {
+    return (p = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       var t
       var r
       var o
@@ -422,20 +422,20 @@ var on = function (e) {
                 e.next = 3
                 break
               }
-              d($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
+              d($$_$$_$$_redux_common_actions.Ch())
               return e.abrupt("return")
             case 3:
               if (t = {}, u.forEach(function (e) {
-                var n = Et.Bb(e)
+                var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
                 if (n) {
                   t[e] = n
                 }
               }), r = new Set(), o = new Set(), Object.values(t).forEach(function (e) {
                 var /* [auto-meaningful-name] */e$type = e.type
-                var n = $$_$$_$$_$$_src_shared_widget_custom_storage.f(e$type)
-                if (e$type.includes($$_$$_$$_$$_src_shared_widget_custom_type.b) && n) {
+                var n = $$_$$_$$_$$_shared_widget_custom_storage.f(e$type)
+                if (e$type.includes($$_$$_$$_$$_shared_widget_custom_type.b) && n) {
                   var i = n
-                  $$_$$_$$_$$_src_shared_widget_custom_restrict.a.forEach(function (e) {
+                  $$_$$_$$_$$_shared_widget_custom_restrict.a.forEach(function (e) {
                     var /* [auto-meaningful-name] */i$code
                     if (null === (i$code = i.code) || undefined === i$code ? undefined : i$code.includes(e)) {
                       o.add(e)
@@ -447,12 +447,12 @@ var on = function (e) {
                 e.next = 11
                 break
               }
-              d($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-                allowText: $_710$a$formatMessage({
+              d($$_$$_$$_redux_common_actions.zh({
+                allowText: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                   id: "cloudDb.know"
                 }),
                 title: "error",
-                content: $_710$a$formatMessage({
+                content: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                   id: "Play.widgetNotSupportsForbiddenKeywords"
                 }, {
                   widgetTypeNames: Array.from(r).join("、"),
@@ -462,23 +462,23 @@ var on = function (e) {
               }))
               return e.abrupt("return")
             case 11:
-              i = Et.Eb(Et.j.EXTENSION).filter(function (e) {
-                return !$$_$$_$$_$$_src_shared_widget_custom_type.e(e.type)
+              i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
+                return !$$_$$_$$_$$_shared_widget_custom_type.e(e.type)
               })
               e.next = 14
-              return $_288.b()
+              return $$_$$_$$_$$_shared_player_audit.b()
             case 14:
               if (e.sent.includes(Number(l)) || !(i.length > 0)) {
                 e.next = 18
                 break
               }
-              d($$_$$_$$_$$_src_editor_redux_common_actions.zh({
-                allowText: $_710$a$formatMessage({
+              d($$_$$_$$_redux_common_actions.zh({
+                allowText: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                   id: "know"
                 }),
                 title: "",
                 content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: te.b,
+                  href: $$_$$_$$_$$_shared_tools_index.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
                 }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行分享。"),
@@ -490,10 +490,10 @@ var on = function (e) {
                 a(n.dialogType)
               }
               if (n.dialogType === Zt.SHARE_QR_DIALOG) {
-                $$_$$_$$_$$_src_editor_redux_common_actions.Nf(d, $$_$$_$$_$$_src_editor_redux_common_actions.Wf(p))
+                $$_$$_$$_redux_common_actions.Nf(d, $$_$$_$$_redux_common_actions.Wf(p))
               } else {
-                if (Et.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide")) {
-                  d($$_$$_$$_$$_src_editor_redux_common_actions.kj(true, "share", p))
+                if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide")) {
+                  d($$_$$_$$_redux_common_actions.kj(true, "share", p))
                 } else {
                   p()
                 }
@@ -510,28 +510,28 @@ var on = function (e) {
     return g.apply(this, arguments)
   }
   function g() {
-    return (g = O.a(RegeneratorRuntime.mark(function e() {
+    return (g = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
             case 0:
               e.prev = 0
               e.next = 3
-              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(d, $$_$$_$$_$$_src_editor_redux_common_actions.tg({
-                isUpdate: Z.a(l),
+              return $$_$$_$$_redux_common_actions.Nf(d, $$_$$_$$_redux_common_actions.tg({
+                isUpdate: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(l),
                 isAutoSave: true
               }))
             case 3:
               e.next = 5
-              return d($$_$$_$$_$$_src_editor_redux_common_actions.kh())
+              return d($$_$$_$$_redux_common_actions.kh())
             case 5:
               return e.abrupt("return", true)
             case 8:
               e.prev = 8
               e.t0 = e.catch(0)
               e.next = 12
-              return d($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710$a$formatMessage({
+              return d($$_$$_$$_redux_common_actions.mj({
+                message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
                   id: "Publish.projectSaveFail"
                 }),
                 type: "error"
@@ -553,14 +553,14 @@ var on = function (e) {
     onClick: function () {
       return p.apply(this, arguments)
     },
-    className: $_10521.shareBtn
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10521.shareBtn
   }, React.createElement("img", {
     src: n.icon,
     alt: e$target,
-    className: $_10521.shareIcon
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10521.shareIcon
   }), React.createElement("span", {
-    className: $_10521.shareMessage
-  }, $_710$a$formatMessage({
+    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10521.shareMessage
+  }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: n.message
   }))), React.createElement(Jt, {
     onClose: v,

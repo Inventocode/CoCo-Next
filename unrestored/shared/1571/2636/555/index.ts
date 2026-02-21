@@ -12,15 +12,15 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
-import * as c from "../8"
-import l from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_200 from "../200"
 import * as /* [auto-meaningful-name] */$_289 from "./289"
 import /* [auto-meaningful-name] */$_2891 from "./289"
-import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 var _ = function (e) {
   var /* [auto-meaningful-name] */e$text = e.text
   var /* [auto-meaningful-name] */e$isSelected = e.isSelected
@@ -44,7 +44,7 @@ var _ = function (e) {
         }
       }
     }
-    return n ? React1.createElement($$_13_index.j, {
+    return n ? React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: n,
       className: $_2891.selected
     }) : null
@@ -54,25 +54,25 @@ var _ = function (e) {
       return {
         default: {
           color: "inherit",
-          borderColor: $$_15.v(e),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
           borderWidth: 1
         },
         selected: {
           color: "inherit",
-          borderColor: $$_15.v(e),
-          backgroundColor: $$_15.v(e),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
           borderWidth: 1
         },
         correct: {
-          borderColor: $$_15.v($$_200.a),
-          color: $$_15.v($$_200.a),
-          backgroundColor: $$_15.v($$_200.a),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.a),
+          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.a),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.a),
           borderWidth: 1
         },
         inCorrect: {
-          borderColor: $$_15.v($$_200.d),
-          color: $$_15.v($$_200.d),
-          backgroundColor: $$_15.v($$_200.d),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.d),
+          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.d),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_200.d),
           borderWidth: 1
         },
         disabled: {
@@ -96,9 +96,9 @@ var _ = function (e) {
   return React1.createElement("div", {
     style: {
       color: null === v || undefined === v ? undefined : v.color,
-      backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && $$_15.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
+      backgroundColor: (null === v || undefined === v ? undefined : v.backgroundColor) && $$_$$_$$_$$_$$_src_shared_tools_index.hb(null === v || undefined === v ? undefined : v.backgroundColor, .1)
     },
-    className: l($_2891.defaultCheckbox, "checkbox-widget-box"),
+    className: Classnames1($_2891.defaultCheckbox, "checkbox-widget-box"),
     onClick: function (e) {
       var /* [auto-meaningful-name] */f$current = f.current
       if (f$current && e$onClick) {
@@ -150,7 +150,7 @@ _a = function (e) {
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
     "data-min-width": T.minWidth,
     "data-max-width": T.maxWidth,
-    className: l($_2891.checkboxWidget, $$_90.b, $$_11.a({}, $_2891.hide, !e$visible)),
+    className: Classnames1($_2891.checkboxWidget, $$_90.b, $$_11.a({}, $_2891.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,

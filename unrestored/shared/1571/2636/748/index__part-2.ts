@@ -11,7 +11,7 @@ import { v } from "./index__part-1"
 import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
 import * as /* [auto-meaningful-name] */$$_315 from "../315"
 import * as /* [auto-meaningful-name] */$_1031 from "./1031"
-import u from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_1544_index from "./1544/index"
 import { createElement, forwardRef, useContext, useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
@@ -68,7 +68,7 @@ function w(e, t) {
     })
     return createElement("span", {
       style: c,
-      className: u(e.props.className, "".concat(t, "-disabled-compatible-wrapper"))
+      className: Classnames(e.props.className, "".concat(t, "-disabled-compatible-wrapper"))
     }, f)
   }
   return e
@@ -220,8 +220,8 @@ var E = forwardRef(function (e, t) {
   var U
   var H = w($$_315.b(e$children) ? e$children : createElement("span", null, e$children), M)
   var /* [auto-meaningful-name] */H$props = H.props
-  var G = u(H$props.className, $$_35.a({}, e$openClassName || "".concat(M, "-open"), true))
-  var z = u(e$overlayClassName, (n = {}, $$_35.a(n, "".concat(M, "-rtl"), "rtl" === c$direction), $$_35.a(n, "".concat(M, "-").concat(e$color), e$color && b.test(e$color)), n))
+  var G = Classnames(H$props.className, $$_35.a({}, e$openClassName || "".concat(M, "-open"), true))
+  var z = Classnames(e$overlayClassName, (n = {}, $$_35.a(n, "".concat(M, "-rtl"), "rtl" === c$direction), $$_35.a(n, "".concat(M, "-").concat(e$color), e$color && b.test(e$color)), n))
   var Q = e$overlayInnerStyle
   if (e$color && !b.test(e$color)) {
     Q = $$_19.a($$_19.a({}, e$overlayInnerStyle), {

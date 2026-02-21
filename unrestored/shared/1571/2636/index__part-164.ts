@@ -10,10 +10,10 @@ import { fA } from "./index__part-163"
 import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_190 from "./190"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch } from "react-redux"
@@ -48,7 +48,7 @@ var EA = memo(function (e) {
     }
   }
   function v(e) {
-    var t = te.I(e)
+    var t = $$_$$_$$_$$_src_shared_tools_index.I(e)
     return [e.slice(0, e.lastIndexOf(t)), t]
   }
   useEffect(function () {
@@ -101,7 +101,7 @@ var EA = memo(function (e) {
         m(e)
       }
     }.bind(null, t)
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-delete"
   })), React.createElement("div", {
     className: $_3411.soundBox,
@@ -139,36 +139,36 @@ var EA = memo(function (e) {
     preload: "none"
   }), e$isPlaying ? React.createElement("div", {
     className: $_3411.soundPauseIconBox
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-sound-pause",
     className: $_3411.soundDefaultIcon
   }), React.createElement("div", {
-    className: N($_3411.progressWrapper, $_3411.rightWrapper)
+    className: Classnames($_3411.progressWrapper, $_3411.rightWrapper)
   }, React.createElement("div", {
-    className: N($_3411.circleProgress, $_3411.rightCircle),
+    className: Classnames($_3411.circleProgress, $_3411.rightCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   })), React.createElement("div", {
-    className: N($_3411.progressWrapper, $_3411.leftWrapper)
+    className: Classnames($_3411.progressWrapper, $_3411.leftWrapper)
   }, React.createElement("div", {
-    className: N($_3411.circleProgress, $_3411.leftCircle),
+    className: Classnames($_3411.circleProgress, $_3411.leftCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   }))) : React.createElement("div", {
     className: $_3411.soundIconBox
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-music",
     className: $_3411.soundDefaultIcon
   }), React.createElement("div", {
     className: $_3411.soundPlayIconBox
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-sound-play",
     className: $_3411.soundPlayIcon
   })))), React.createElement("div", {
     className: $_3411.soundDuration
-  }, te.w(e$isPlaying ? d : e$duration))), React.createElement("div", {
+  }, $$_$$_$$_$$_src_shared_tools_index.w(e$isPlaying ? d : e$duration))), React.createElement("div", {
     className: $_3411.fileItemName
   }, React.createElement(fA, {
     suffix: v(e$name)[1],

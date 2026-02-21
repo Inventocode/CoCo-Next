@@ -4,6 +4,6 @@
  * 模块 ID：1450
  */
 
-var r = require("../../../../2558/1167/1431/index")
+var r = require("../../../1167/1431/index")
 var i = require("./2537")(r)
 module.exports = i

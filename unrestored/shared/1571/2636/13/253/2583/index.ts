@@ -35,7 +35,7 @@ var r = function () {
 var i = require("react")
 var o = u(i)
 var a = u(require("../../797/101/index"))
-var s = u(require("./2584/index"))
+var s = u(require("./2584"))
 var c = function (e) {
   if (e && e.__esModule) {
     return e

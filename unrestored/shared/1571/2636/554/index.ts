@@ -10,8 +10,8 @@ import * as /* [auto-meaningful-name] */$$_11 from "../11"
 import { useRef } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as a from "../8"
-import s from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
@@ -20,8 +20,8 @@ import * as /* [auto-meaningful-name] */$$_148 from "../148"
 import * as /* [auto-meaningful-name] */$_245 from "./245"
 import /* [auto-meaningful-name] */$_2451 from "./245"
 import * as m from "../6"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_379 from "../379"
 var b = function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
@@ -43,7 +43,7 @@ var b = function (e) {
         t = "icon-radio-incorrect"
       }
     }
-    return t ? React1.createElement($$_13_index.j, {
+    return t ? React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: t
     }) : null
   }(e$state)
@@ -51,24 +51,24 @@ var b = function (e) {
     var e = function (e, t) {
       return t === $$_379.a.BUTTON ? {
         default: {
-          borderColor: $$_15.hb(e, .8),
-          backgroundColor: $$_15.hb(e, .2),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(e, .8),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(e, .2),
           color: "inherit"
         },
         selected: {
-          borderColor: $$_15.v(e),
-          backgroundColor: $$_15.hb(e, .4),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(e, .4),
           color: "inherit"
         },
         correct: {
           color: $$_148.c,
-          borderColor: $$_15.hb($$_148.c, .8),
-          backgroundColor: $$_15.hb($$_148.c, .1)
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.c, .8),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.c, .1)
         },
         inCorrect: {
           color: $$_148.f,
-          borderColor: $$_15.hb($$_148.f, .8),
-          backgroundColor: $$_15.hb($$_148.f, .1)
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.f, .8),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb($$_148.f, .1)
         },
         disabled: {
           borderColor: "#e6e6e6",
@@ -78,24 +78,24 @@ var b = function (e) {
       } : {
         default: {
           color: "inherit",
-          borderColor: $$_15.v(e),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
           borderWidth: 1
         },
         selected: {
           color: "inherit",
-          borderColor: $$_15.v(e),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v(e),
           borderWidth: 5
         },
         correct: {
-          borderColor: $$_15.v($$_148.c),
-          color: $$_15.v($$_148.c),
-          backgroundColor: $$_15.v($$_148.c),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.c),
+          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.c),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.c),
           borderWidth: 1
         },
         inCorrect: {
-          borderColor: $$_15.v($$_148.f),
-          color: $$_15.v($$_148.f),
-          backgroundColor: $$_15.v($$_148.f),
+          borderColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.f),
+          color: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.f),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.v($$_148.f),
           borderWidth: 1
         },
         disabled: {
@@ -126,7 +126,7 @@ var b = function (e) {
     style: m.a(m.a({}, O), {}, {
       padding: C.optionPadding
     }),
-    className: s($_2451.buttonRadio, "radio-widget-button"),
+    className: Classnames1($_2451.buttonRadio, "radio-widget-button"),
     onClick: w
   }, React1.createElement("p", {
     ref: y,
@@ -153,7 +153,7 @@ var b = function (e) {
       width: C.innerSize,
       height: C.innerSize
     },
-    className: s($_2451.inner, $$_11.a({}, $_2451.selected, e$isSelected))
+    className: Classnames1($_2451.inner, $$_11.a({}, $_2451.selected, e$isSelected))
   }, E), React1.createElement("p", {
     ref: y,
     style: {
@@ -190,7 +190,7 @@ _a = function (e) {
     "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C,
     "data-min-width": S.minWidth,
     "data-max-width": S.maxWidth,
-    className: s($_2451.radioWidget, $$_90.b, $$_11.a({}, $_2451.hide, !e$visible)),
+    className: Classnames1($_2451.radioWidget, $$_90.b, $$_11.a({}, $_2451.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,

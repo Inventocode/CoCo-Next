@@ -11,8 +11,8 @@ export { g$Consumer as a }
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
 import { useContext, createElement, createContext } from "react"
 import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as a from "../8"
-import s from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$_694_index from "./694/index"
 var u = function () {
   var e = (0, useContext(g).getPrefixCls)("empty-img-default")
@@ -131,7 +131,7 @@ var p = function (e) {
       src: u
     }) : u
     return createElement("div", $$_19.a({
-      className: s(c, (a = {}, $$_35.a(a, "".concat(c, "-normal"), u === h), $$_35.a(a, "".concat(c, "-rtl"), "rtl" === v$direction), a), e$className)
+      className: Classnames1(c, (a = {}, $$_35.a(a, "".concat(c, "-normal"), u === h), $$_35.a(a, "".concat(c, "-rtl"), "rtl" === v$direction), a), e$className)
     }, A), createElement("div", {
       className: "".concat(c, "-image"),
       style: e$imageStyle

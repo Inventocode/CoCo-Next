@@ -9,9 +9,9 @@ import * as React from "react"
 import { Ve } from "../../../../../unrestored/shared/1571/2636/index__part-9"
 var Ye
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools from "../../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components from "../../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -78,7 +78,7 @@ export const UserInfo = React.memo((__props) => {
             case 13:
               return e.abrupt("break", 16)
             case 14:
-              window.open($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.D(), "_blank")
+              window.open($$_$$_$$_$$_shared_tools.D(), "_blank")
               return e.abrupt("break", 16)
             case 16:
             case "end":
@@ -91,33 +91,33 @@ export const UserInfo = React.memo((__props) => {
       return e.apply(this, arguments)
     }
   }()
-  var i = <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+  var i = <$$_$$_$$_$$_shared_ui_components.l>
     {serviceAgreementList.map((service, index) => (
-      <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m key={index}>
+      <$$_$$_$$_$$_shared_ui_components.m key={index}>
         <div onClick={() => window.open(service.link, "_blank")}>{service.label}</div>
-      </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
+      </$$_$$_$$_$$_shared_ui_components.m>
     ))}
-  </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+  </$$_$$_$$_$$_shared_ui_components.l>
   return r ? (
     <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511.wrapper}>
-      <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g overlay={
-        <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l onClick={o}>
-          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value={Ye.ACCOUNT_SETTING}>
+      <$$_$$_$$_$$_shared_ui_components.g overlay={
+        <$$_$$_$$_$$_shared_ui_components.l onClick={o}>
+          <$$_$$_$$_$$_shared_ui_components.m value={Ye.ACCOUNT_SETTING}>
             <div>{formatMessage({ id: "accountSetting" })}</div>
-          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
-          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.y subMenu={i}>
+          </$$_$$_$$_$$_shared_ui_components.m>
+          <$$_$$_$$_$$_shared_ui_components.y subMenu={i}>
             <div>{formatMessage({ id: "serviceAgreement" })}</div>
-          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.y>
-          <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m value={Ye.LOGOUT}>
+          </$$_$$_$$_$$_shared_ui_components.y>
+          <$$_$$_$$_$$_shared_ui_components.m value={Ye.LOGOUT}>
             <div>{formatMessage({ id: "logout" })}</div>
-          </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m>
-        </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l>
+          </$$_$$_$$_$$_shared_ui_components.m>
+        </$$_$$_$$_$$_shared_ui_components.l>
       }>
         <div
           className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511.image}
           style={{ backgroundImage: `url(${r.avatar_url})` }}
         />
-      </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g>
+      </$$_$$_$$_$$_shared_ui_components.g>
     </div>
   ) : (
     <div

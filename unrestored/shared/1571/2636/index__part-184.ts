@@ -7,8 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -29,7 +29,7 @@ var Rj = memo(function (e) {
       onClick: function (t) {
         return e$handleGroupItemClick(t, e)
       },
-      className: N(e$isGroupItemSelected(e) && $_6241.selected),
+      className: Classnames(e$isGroupItemSelected(e) && $_6241.selected),
       key: t
     }, React.createElement("div", {
       className: $_6241.playArea
@@ -41,8 +41,8 @@ var Rj = memo(function (e) {
     }, React.createElement("div", {
       className: $_6241.nameArea
     }, t + 1), e$isGroupItemSelected(e) && React.createElement("div", {
-      className: N($_6241.btn, $_6241.selectedIconWrap)
-    }, React.createElement($_13_index.j, {
+      className: Classnames($_6241.btn, $_6241.selectedIconWrap)
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-style-selected"
     }))))
   }))

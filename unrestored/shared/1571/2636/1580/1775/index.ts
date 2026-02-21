@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../1754/257/index")
-var o = require("./256")
+var r = require("../1758/257/index")
+var o = require("../1771/256")
 var i = require("./715")
 var a = require("./962")
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;

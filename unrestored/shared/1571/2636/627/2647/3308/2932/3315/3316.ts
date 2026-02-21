@@ -13,7 +13,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.default = undefined
 var r = a(require("../../../../../50/index"))
 var o = a(require("react"))
-var i = a(require("../../../../../8"))
+var i = a(require("classnames"))
 var l = {
   percentage: r.default.string,
   vertical: r.default.bool,

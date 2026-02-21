@@ -15,12 +15,12 @@ import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import { useState, useRef, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as d from "../8"
-import p from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_262 from "../262"
-import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_75 from "../75"
 import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
 import * as /* [auto-meaningful-name] */$_672 from "./672"
@@ -193,7 +193,7 @@ function A() {
     className: $_1761.placeholderPoster
   }, React1.createElement("div", {
     className: $_1761.header
-  }, React1.createElement($$_13_index.j, {
+  }, React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-net"
   }), React1.createElement("span", null, "www.codemao.cn")), React1.createElement("div", {
     className: $_1761.main
@@ -221,7 +221,7 @@ _a = function (e) {
     "data-max-width": $$_75.e,
     "data-max-height": $$_75.d,
     "data-min-height": $$_262.b,
-    className: p($_1761.webViewWidget, $$_90.b, $$_11.a({}, $_1761.hide, !e$visible)),
+    className: Classnames1($_1761.webViewWidget, $$_90.b, $$_11.a({}, $_1761.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,

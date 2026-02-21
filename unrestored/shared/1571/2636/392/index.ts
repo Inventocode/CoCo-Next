@@ -14,7 +14,7 @@ import { useDispatch } from "react-redux"
 import * as /* [auto-meaningful-name] */$$_627_index from "../627/index"
 import * as /* [auto-meaningful-name] */$$_710 from "../710"
 import * as /* [auto-meaningful-name] */$$_748_index from "../748/index"
-import * as /* [auto-meaningful-name] */$$_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$_516 from "./516"
 import /* [auto-meaningful-name] */$_5161 from "./516"
@@ -35,7 +35,7 @@ _b = memo(function () {
       $$_627_index.a.show()
       e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ii(COURSE_ICON_NAME, false))
     }
-  }, React1.createElement($$_13_index.j, {
+  }, React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-video"
   }), React1.createElement("div", {
     className: $_5161.close,
@@ -50,7 +50,7 @@ _b = memo(function () {
       })
       e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Gh(COURSE_ICON_NAME))
     }
-  }, React1.createElement($$_13_index.j, {
+  }, React1.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close"
   }))))
 })

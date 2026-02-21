@@ -8,15 +8,15 @@
 
 var r = require("../../180")
 var i = require("../../204")
-var o = require("../../../../20/791/2385/283/index")
-var a = require("../../../../20/791/2385/284/index")
+var o = require("../../../../1058/1393/1143/283/index")
+var a = require("../../../../1058/1393/1143/284/index")
 var /* [auto-meaningful-name] */require$$_1358_1130_index$Syntax = require("../1358/1130/index").Syntax
 var c = require("./1360/index")
 var u = require("../1131")
 var l = require("../978")
 var f = require("./2236")
 var d = require("../1358/1359")
-var h = require("../../../../1058/1393/573")
+var h = require("../../../../1058/1393/573/index")
 var /* [auto-meaningful-name] */d$ParameterDefinition = d.ParameterDefinition
 var /* [auto-meaningful-name] */d$Definition = d.Definition
 var A = function (e) {

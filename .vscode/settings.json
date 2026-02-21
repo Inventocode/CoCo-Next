@@ -41,7 +41,8 @@
         "vikadata",
         "webdb",
         "weixin",
-        "workerpool"
+        "workerpool",
+        "xmlserializer"
     ],
     "explorer.fileNesting.enabled": true,
     "explorer.fileNesting.patterns": {

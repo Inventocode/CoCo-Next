@@ -11,9 +11,9 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import { memo, useCallback } from "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as s from "./8"
-import c from "./8"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import "./13/640"
 var _a
 _a = memo(function (e) {
@@ -37,25 +37,25 @@ _a = memo(function (e) {
       e$onStep("".concat(g - 1), e, "down")
     }
   }, [m, e$onStep, g])
-  return React1.createElement($_13_index.k, Object.assign({}, f, {
-    className: c(f.className, "coco-number-input-wrapper"),
+  return React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, Object.assign({}, f, {
+    className: Classnames1(f.className, "coco-number-input-wrapper"),
     defaultValue: e$defaultValue,
     min: e$min,
     max: e$max,
     disabled: e$disabled,
     after: React1.createElement(React1.Fragment, null, React1.createElement("div", {
-      className: c("coco-number-input-label")
+      className: Classnames1("coco-number-input-label")
     }, React1.createElement("span", null, e$label)), React1.createElement("div", {
       className: "coco-number-input"
     }, React1.createElement("span", {
       className: h || e$disabled ? "disable" : "",
       onClick: _
-    }, React1.createElement($_13_index.j, {
+    }, React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-up"
     })), React1.createElement("span", {
       className: m || e$disabled ? "disable" : "",
       onClick: v
-    }, React1.createElement($_13_index.j, {
+    }, React1.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-down"
     }))))
   }))

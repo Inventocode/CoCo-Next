@@ -6,7 +6,7 @@
 
 "use strict"
 
-import w from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_432 from "./432"
 import * as /* [auto-meaningful-name] */$_482 from "./482"
 import * as /* [auto-meaningful-name] */$_229 from "./229"
@@ -450,7 +450,7 @@ var K = function (e) {
           }
         }
         N = e$children($$_21.a($$_21.a({}, k), {}, {
-          className: w(F(e$motionName, C), (x = {}, $$_35.a(x, F(e$motionName, "".concat(C, "-").concat(D)), D), $$_35.a(x, e$motionName, "string" === typeof e$motionName), x)),
+          className: Classnames(F(e$motionName, C), (x = {}, $$_35.a(x, F(e$motionName, "".concat(C, "-").concat(D)), D), $$_35.a(x, e$motionName, "string" === typeof e$motionName), x)),
           style: S
         }), R)
       } else {
@@ -680,7 +680,7 @@ function ee(e) {
       style: {
         zIndex: e$zIndex
       },
-      className: w("".concat(e$prefixCls, "-mask"), e$className)
+      className: Classnames("".concat(e$prefixCls, "-mask"), e$className)
     })
   })
 }

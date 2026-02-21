@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
+var r = require("./1662/86")
 var o = require("./1282/231")
 var i = require("./1581/830")
 var a = require("./1775/715")
-var s = require("./1775/256")
+var s = require("./1771/256")
 var c = require("./1581/441")
 var l = require("./1597/716")
-var u = require("./1782/246/index")
+var u = require("./1282/246/index")
 var d = require("./1597/833")("slice")
 var p = u("species")
 var /* [auto-meaningful-name] */$slice = [].slice

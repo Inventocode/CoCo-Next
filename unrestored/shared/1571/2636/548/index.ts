@@ -12,12 +12,12 @@ import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Color from "color"
 import /* [auto-meaningful-name] */Color1 from "color"
-import * as c from "../8"
-import l from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_90 from "../90"
 import * as /* [auto-meaningful-name] */$$_131 from "../131"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as h from "../9"
 import * as /* [auto-meaningful-name] */$$_53 from "../53"
 import * as /* [auto-meaningful-name] */$$_163 from "../163"
@@ -50,15 +50,15 @@ _a = function (e) {
       var o = Color1(t).toString()
       return (n = {}, $$_11.a(n, $$_163.c.DEFAULT, {
         turnOn: {
-          backgroundColor: $$_15.hb(o, .3),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb(o, .3),
           handleColor: o
         },
         turnOff: {
-          backgroundColor: $$_15.hb("#000", .2),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .2),
           handleColor: "#ffffff"
         },
         disabled: {
-          backgroundColor: $$_15.hb("#000", .1),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .1),
           handleColor: "#ffffff"
         }
       }), $$_11.a(n, $$_163.c.PRIMARY, {
@@ -67,11 +67,11 @@ _a = function (e) {
           handleColor: "#ffffff"
         },
         turnOff: {
-          backgroundColor: $$_15.hb("#000", .2),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .2),
           handleColor: "#ffffff"
         },
         disabled: {
-          backgroundColor: $$_15.hb("#000", .1),
+          backgroundColor: $$_$$_$$_$$_$$_src_shared_tools_index.hb("#000", .1),
           handleColor: "#ffffff"
         }
       }), n)[e]
@@ -79,9 +79,9 @@ _a = function (e) {
     return e$attributes$disabled ? e.disabled : e$attributes$value ? e.turnOn : e.turnOff
   }()
   var D = h.hb(e$attributes$backgroundOpenImage)
-  var M = $$_15.U(e$attributes$backgroundOpenImage) ? e$attributes$backgroundOpenImage : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : $$_131.b
+  var M = $$_$$_$$_$$_$$_src_shared_tools_index.U(e$attributes$backgroundOpenImage) ? e$attributes$backgroundOpenImage : D ? (null === D || undefined === D ? undefined : D.source) || (null === D || undefined === D ? undefined : D.cdnUrl) : $$_131.b
   var L = h.hb(e$attributes$backgroundCloseImage)
-  var P = $$_15.U(e$attributes$backgroundCloseImage) ? e$attributes$backgroundCloseImage : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : $$_131.a
+  var P = $$_$$_$$_$$_$$_src_shared_tools_index.U(e$attributes$backgroundCloseImage) ? e$attributes$backgroundCloseImage : L ? (null === L || undefined === L ? undefined : L.source) || (null === L || undefined === L ? undefined : L.cdnUrl) : $$_131.a
   var B = React1.createElement("div", {
     ref: R,
     style: {
@@ -112,7 +112,7 @@ _a = function (e) {
     "data-max-width": $$_53.o,
     "data-min-height": $$_131.i,
     "data-max-height": $$_53.m,
-    className: l($_2011.switchWidget, $$_90.b, $$_11.a({}, $_2011.hide, !e$visible)),
+    className: Classnames1($_2011.switchWidget, $$_90.b, $$_11.a({}, $_2011.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -178,7 +178,7 @@ _a = function (e) {
       }
     }, React1.createElement("div", {
       ref: N,
-      className: l($_2011.handle),
+      className: Classnames1($_2011.handle),
       style: {
         height: e$size$height,
         width: e$size$height,
@@ -194,7 +194,7 @@ _a = function (e) {
         width: e$size$width
       }
     }, React1.createElement("div", {
-      className: l($_2011.handle),
+      className: Classnames1($_2011.handle),
       style: {
         backgroundColor: x.handleColor,
         height: e$size$height,

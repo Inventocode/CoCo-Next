@@ -25,7 +25,7 @@ export { G as x }
 export { W as y }
 export { H as r }
 export { V as m }
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
 import { getEnvironment } from "../env"
 import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_133 from "../../../unrestored/shared/1571/2636/133"
@@ -75,10 +75,10 @@ function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
+  return (_ = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
-    return RegeneratorRuntime1.wrap(function (e) {
+    return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -103,11 +103,11 @@ function v(e, t) {
   return b.apply(this, arguments)
 }
 function b() {
-  return (b = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (b = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var a
-    return RegeneratorRuntime1.wrap(function (e) {
+    return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -161,11 +161,11 @@ function E(e, t) {
   return O.apply(this, arguments)
 }
 function O() {
-  return (O = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (O = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var a
-    return RegeneratorRuntime1.wrap(function (e) {
+    return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -193,8 +193,8 @@ function w(e) {
   return C.apply(this, arguments)
 }
 function C() {
-  return (C = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
-    return RegeneratorRuntime1.wrap(function (e) {
+  return (C = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+    return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
@@ -221,9 +221,9 @@ function T(e) {
   return S.apply(this, arguments)
 }
 function S() {
-  return (S = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime1.mark(function e(t) {
+  return (S = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
-    return RegeneratorRuntime1.wrap(function (e) {
+    return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:

@@ -25,8 +25,8 @@ import * as Dn from "./19"
 import * as Tn from "./68"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector, useDispatch } from "react-redux"
@@ -53,7 +53,7 @@ var LA = memo(function () {
     return e.uiConfig.resourceLibrary === K.j.ReadOnly
   })
   return React.createElement("div", {
-    className: N($_5271.resourceLayout, c && $_5271.readonly),
+    className: Classnames($_5271.resourceLayout, c && $_5271.readonly),
     "data-updated-at": e
   }, React.createElement("div", {
     className: $_5271.header
@@ -66,7 +66,7 @@ var LA = memo(function () {
     onClick: function () {
       t($$_$$_$$_$$_src_editor_redux_common_actions.Vi(undefined))
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close-bold"
   }))), React.createElement("div", {
     className: $_5271.tab
@@ -85,11 +85,11 @@ var LA = memo(function () {
     }
   }, $_710$a$formatMessage({
     id: "Resource.ResourceMall"
-  }), React.createElement($_13_index.j, {
+  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-dropdown-down",
     className: $_5271.rotate
   }))), React.createElement("div", {
-    className: N($_5271.body)
+    className: Classnames($_5271.body)
   }, "image" === i && React.createElement(mA, {
     readOnly: c
   }), "icon" === i && React.createElement(kA, {
@@ -181,7 +181,7 @@ var PA = function (e) {
           return e
         }, {})
         var /* [auto-meaningful-name] */this$state$checked = this.state.checked
-        var C = N(this$props$prefixCls, this$props$className, (e = {}, Ln.a(e, "".concat(this$props$prefixCls, "-checked"), this$state$checked), Ln.a(e, "".concat(this$props$prefixCls, "-disabled"), this$props$disabled), e))
+        var C = Classnames(this$props$prefixCls, this$props$className, (e = {}, Ln.a(e, "".concat(this$props$prefixCls, "-checked"), this$state$checked), Ln.a(e, "".concat(this$props$prefixCls, "-disabled"), this$props$disabled), e))
         return React.createElement("span", {
           className: C,
           style: this$props$style
@@ -344,7 +344,7 @@ var WA = function (e, t) {
       })
     }
   }
-  var I = N(T, Ln.a({}, "".concat(T, "-rtl"), "rtl" === d$direction), e$className)
+  var I = Classnames(T, Ln.a({}, "".concat(T, "-rtl"), "rtl" === d$direction), e$className)
   return createElement("div", Dn.a({
     className: I,
     style: e$style
@@ -428,8 +428,8 @@ var zA = function (e, t) {
     E.checked = -1 !== v.value.indexOf(h.value)
     E.disabled = h.disabled || v.disabled
   }
-  var O = N((n = {}, Ln.a(n, "".concat(y, "-wrapper"), true), Ln.a(n, "".concat(y, "-rtl"), "rtl" === m$direction), Ln.a(n, "".concat(y, "-wrapper-checked"), E.checked), Ln.a(n, "".concat(y, "-wrapper-disabled"), E.disabled), n), e$className)
-  var w = N(Ln.a({}, "".concat(y, "-indeterminate"), s))
+  var O = Classnames((n = {}, Ln.a(n, "".concat(y, "-wrapper"), true), Ln.a(n, "".concat(y, "-rtl"), "rtl" === m$direction), Ln.a(n, "".concat(y, "-wrapper-checked"), E.checked), Ln.a(n, "".concat(y, "-wrapper-disabled"), E.disabled), n), e$className)
+  var w = Classnames(Ln.a({}, "".concat(y, "-indeterminate"), s))
   return createElement("label", {
     className: O,
     style: e$style,

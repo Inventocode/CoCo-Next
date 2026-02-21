@@ -12,9 +12,9 @@ var s
 var c
 var l
 var /* [auto-meaningful-name] */l$then
-var d = require("../../1782/194")
-var /* [auto-meaningful-name] */require$$_$$_1648_386_index$f = require("../../1648/386/index").f
-var /* [auto-meaningful-name] */require$$_$$_1783_1093_index$set = require("../../1783/1093/index").set
+var d = require("../../1785/194")
+var /* [auto-meaningful-name] */require$$_$$_1581_386$f = require("../../1581/386").f
+var /* [auto-meaningful-name] */require$$_$$_1783_1093$set = require("../../1783/1093").set
 var h = require("./1266")
 var m = require("./1687")
 var g = require("./1688")
@@ -23,7 +23,7 @@ var v = d.MutationObserver || d.WebKitMutationObserver
 var /* [auto-meaningful-name] */d$document = d.document
 var /* [auto-meaningful-name] */d$process = d.process
 var /* [auto-meaningful-name] */d$Promise = d.Promise
-var O = require$$_$$_1648_386_index$f(d, "queueMicrotask")
+var O = require$$_$$_1581_386$f(d, "queueMicrotask")
 var w = O && O.value
 if (!w) {
   r = function () {
@@ -59,7 +59,7 @@ if (!w) {
       a = _ ? function () {
         d$process.nextTick(r)
       } : function () {
-        require$$_$$_1783_1093_index$set.call(d, r)
+        require$$_$$_1783_1093$set.call(d, r)
       }
     }
   } else {

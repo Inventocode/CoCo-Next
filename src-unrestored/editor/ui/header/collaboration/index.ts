@@ -11,15 +11,15 @@ import { _t, vt, bt, yt } from "../../../../../unrestored/shared/1571/2636/index
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_136 from "../../../../../unrestored/shared/1571/2636/136"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_100 from "../../../../../unrestored/shared/1571/2636/100"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../../unrestored/shared/1571/2636/24/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../unrestored/shared/1571/2636/288"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_player_audit from "../../../../shared/player/audit"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools_index from "../../../../shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97_index from "../../../../../unrestored/shared/1571/2636/97/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_748_index from "../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
@@ -56,9 +56,9 @@ var wt = function (e) {
         return e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit, t, c)
       },
       className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item
-    }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
       type: "icon-selected",
-      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+      className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
     }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "OT.dialogCanEdit"
     }))), React.createElement("div", {
@@ -66,16 +66,16 @@ var wt = function (e) {
         return e.handleChangePermission($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly, t, c)
       },
       className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item
-    }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
       type: "icon-selected",
-      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+      className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon, e$permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
     }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "OT.dialogReadOnly"
     }))), React.createElement("div", {
       onClick: function () {
         return e.handleRemovePermission(t, c)
       },
-      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.remove)
+      className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.remove)
     }, React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "OT.dialogRemove"
     }))))),
@@ -92,18 +92,18 @@ var wt = function (e) {
     id: "OT.readonly"
   })), React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-dropdown-down",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
   })))) : React.createElement("div", {
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.disabled)
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.edit_role, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.disabled)
   }, React.createElement("span", null, e.permission === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "OT.edit"
   }) : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "OT.readonly"
   })), React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-dropdown-down",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
   })))
@@ -142,7 +142,7 @@ var Ct = React.memo(function () {
       edit_permission: 1
     })
   }
-  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(t)
+  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(t)
   var d = useSelector(function (e) {
     return e.oTState.editorInviteUrl
   })
@@ -177,7 +177,7 @@ var Ct = React.memo(function () {
                 return !$$_$$_$$_$$_shared_widget_custom_type.e(e.type)
               })
               e.next = 3
-              return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()
+              return $$_$$_$$_$$_shared_player_audit.b()
             case 3:
               if (e.sent.includes(Number(t)) || !(n.length > 0)) {
                 e.next = 8
@@ -190,7 +190,7 @@ var Ct = React.memo(function () {
                 }),
                 title: "",
                 content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b,
+                  href: $$_$$_$$_$$_shared_tools_index.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
                 }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
@@ -243,7 +243,7 @@ var Ct = React.memo(function () {
               return fe(r, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
             case 30:
               e$sent = e.sent
-              a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.x(r, e$sent)
+              a = $$_$$_$$_$$_shared_tools_index.x(r, e$sent)
               m($$_$$_$$_$$_$$_unrestored_shared_1571_2636_100.p(a))
             case 33:
               $$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("InviteCollaborationClick", {
@@ -328,12 +328,12 @@ var Ct = React.memo(function () {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.content
   }, a && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.header
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.d, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareButton,
     onClick: function () {
       return L.apply(this, arguments)
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.invitationIcon,
     type: "icon-ot-invitation"
   }), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
@@ -344,7 +344,7 @@ var Ct = React.memo(function () {
     return React.createElement("li", {
       key: t
     }, React.createElement("div", {
-      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.headerPhotoBorder),
+      className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.headerPhotoBorder),
       key: e.id,
       style: {
         marginRight: "8px",
@@ -403,7 +403,7 @@ var Ct = React.memo(function () {
               return fe(t, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly)
             case 7:
               e$sent = e.sent
-              o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.x(t, e$sent)
+              o = $$_$$_$$_$$_shared_tools_index.x(t, e$sent)
               m($$_$$_$$_$$_$$_unrestored_shared_1571_2636_100.r(o))
               j(n)
               e.next = 14
@@ -425,7 +425,7 @@ var Ct = React.memo(function () {
     style: {
       height: "100%"
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.r, {
     content: F,
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.oTButton,
     onOpen: function () {
@@ -447,11 +447,11 @@ var Ct = React.memo(function () {
       top: -4
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIconWrapper, D && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.activeCollIconWrapper)
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIconWrapper, D && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.activeCollIconWrapper)
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-collaborate-active",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.collIcon
-  })))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.f, {
+  })))), React.createElement($$_$$_$$_$$_shared_ui_components_index.f, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.shareOtDialog,
     visible: b,
     title: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
@@ -470,29 +470,29 @@ var Ct = React.memo(function () {
     onClick: function () {
       return W($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit)
     },
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
   }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "OT.editor"
   }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "OT.editorRules"
   })), T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-selected"
   }))), React.createElement("div", {
     onClick: function () {
       return W($$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly)
     },
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.tab, T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.selected)
   }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "OT.reader"
   }), React.createElement("span", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "OT.readerRules"
   })), T === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.c.ReadOnly && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.icon
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-selected"
-  })))), G() ? React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  })))), G() ? React.createElement($$_$$_$$_$$_shared_ui_components_index.d, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.copy,
     type: "primary",
     onClick: function () {
@@ -514,10 +514,10 @@ var Ct = React.memo(function () {
     }
   }, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
     id: "OT.copyLink"
-  })) : React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d, {
+  })) : React.createElement($$_$$_$$_$$_shared_ui_components_index.d, {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_136.loadingBtn,
     type: "primary"
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-loading2"
   }))))
 })
@@ -573,6 +573,6 @@ var St = React.memo(function () {
     }
   }), React.createElement(bt, {
     visible: s
-  }), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(e) && React.createElement(_t, null))
+  }), $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97_index.a(e) && React.createElement(_t, null))
 })
 export { St }

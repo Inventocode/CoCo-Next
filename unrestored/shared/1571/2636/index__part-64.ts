@@ -22,7 +22,7 @@ import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -552,7 +552,7 @@ var Oh = memo(function (e) {
   }, [I, $])
   return React.createElement("div", {
     id: M,
-    className: N(wn.b, (t = {}, k.a(t, $_741.highlight, d), k.a(t, $_741.outline, Z !== ee), t)),
+    className: Classnames(wn.b, (t = {}, k.a(t, $_741.highlight, d), k.a(t, $_741.outline, Z !== ee), t)),
     "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
     "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.f,
     "data-min-width": $_244.i,

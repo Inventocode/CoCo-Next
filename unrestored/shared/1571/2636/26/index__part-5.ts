@@ -12,8 +12,8 @@ import * as /* [auto-meaningful-name] */$$_207_index from "../207/index"
 import * as /* [auto-meaningful-name] */$$_228_index from "../228/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as /* [auto-meaningful-name] */$$_123_index from "../123/index"
@@ -28,10 +28,10 @@ var je = new (function () {
     $$_27.a(this, e)
     this.iconGroup = undefined
     this.iconGroup = function () {
-      var e = $$_17_index.BU.dom.create_svg_element("g", {
+      var e = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.dom.create_svg_element("g", {
         class: "blocklyDeleteIcon"
       })
-      $$_17_index.BU.dom.create_svg_element("g", {
+      $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.dom.create_svg_element("g", {
         id: "block_delete_icon_animate_id",
         class: "blocklyDeleteIconShow"
       }, e).innerHTML = Ie
@@ -53,11 +53,11 @@ var je = new (function () {
         var t
         this.removeDisposeAnimation()
         var n = function (e) {
-          var t = $$_17_index.vec2.fromValues(-12, -12)
-          if ($$_17_index.BU.base.is_workspace_comment(e)) {
-            return $$_17_index.vec2.add(t, t, e.is_expanded() ? Ae : Se)
+          var t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.vec2.fromValues(-12, -12)
+          if ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_workspace_comment(e)) {
+            return $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.vec2.add(t, t, e.is_expanded() ? Ae : Se)
           }
-          if (!$$_17_index.BU.base.is_block_svg(e)) {
+          if (!$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_block_svg(e)) {
             return t
           }
           var n = [0, 0]
@@ -68,7 +68,7 @@ var je = new (function () {
             var r = e.output_connection.check_ && e.output_connection.check_.indexOf("Boolean") > -1
             n[0] = r ? 10 : 4
           }
-          $$_17_index.vec2.add(t, t, n)
+          $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.vec2.add(t, t, n)
           return t
         }(e)
         this.iconGroup.setAttribute("transform", "translate(".concat(n[0], ", ").concat(n[1], ")"))
@@ -83,7 +83,7 @@ var je = new (function () {
         var e = this.iconGroup.querySelector("#".concat("block_delete_icon_animate_id"))
         if (e) {
           e.classList.add("blocklyDeleteIconDispose")
-          $$_17_index.BU.dom.remove_node(this.iconGroup)
+          $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.dom.remove_node(this.iconGroup)
         }
       }
     }
@@ -91,15 +91,15 @@ var je = new (function () {
   return e
 }())()
 function Ne() {
-  $$_17_index.Blink.mainWorkspace.add_event_listener($$_17_index.I.BlockEventType.UI, De)
-  $$_17_index.Blink.mainWorkspace.add_change_listener(xe)
-  $$_17_index.Blink.mainWorkspace.add_event_listener($$_17_index.I.BlockEventType.DELETE, function () {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.add_event_listener($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.UI, De)
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.add_change_listener(xe)
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.add_event_listener($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.DELETE, function () {
     Ee.eventBus.emit($$_207_index.a.DELETE_BLOCK)
   })
-  $$_17_index.Blink.mainWorkspace.add_event_listener($$_17_index.I.BlockEventType.START_DRAG, Pe)
-  $$_17_index.Blink.mainWorkspace.add_event_listener($$_17_index.I.BlockEventType.END_DRAG, Be)
-  $$_17_index.Blink.mainWorkspace.add_event_listener($$_17_index.I.BlockEventType.DRAG_AREA_CHANGE, Fe)
-  var /* [auto-meaningful-name] */$$_17_index$Blink$widget_div$DIV = $$_17_index.Blink.widget_div.DIV
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.add_event_listener($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.START_DRAG, Pe)
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.add_event_listener($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.END_DRAG, Be)
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.add_event_listener($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.DRAG_AREA_CHANGE, Fe)
+  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$widget_div$DIV = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.widget_div.DIV
   document.addEventListener("focusout", function (e) {
     var /* [auto-meaningful-name] */e$relatedTarget
     var /* [auto-meaningful-name] */e$relatedTarget1
@@ -112,40 +112,40 @@ function Ne() {
     var u = "menu-item" === (null === (e$relatedTarget = e.relatedTarget) || undefined === e$relatedTarget ? undefined : e$relatedTarget.className)
     var d = "blocklyHtmlInput" === (null === (e$relatedTarget1 = e.relatedTarget) || undefined === e$relatedTarget1 ? undefined : e$relatedTarget1.className)
     if (!(o || a || l || d || u)) {
-      $$_17_index.Blink.widget_div.hide()
+      $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.widget_div.hide()
     }
   })
-  if (!(null === $$_17_index$Blink$widget_div$DIV || undefined === $$_17_index$Blink$widget_div$DIV)) {
-    $$_17_index$Blink$widget_div$DIV.addEventListener("contextmenu", function (e) {
+  if (!(null === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$widget_div$DIV || undefined === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$widget_div$DIV)) {
+    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$widget_div$DIV.addEventListener("contextmenu", function (e) {
       e.preventDefault()
     })
   }
 }
 var Re
-var ke = [$$_17_index.I.BlockEventType.CHANGE, $$_17_index.I.BlockEventType.CREATE, $$_17_index.I.BlockEventType.DELETE, $$_17_index.I.BlockEventType.MOVE]
+var ke = [$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.CHANGE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.CREATE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.DELETE, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.BlockEventType.MOVE]
 function xe(e) {
   if (-1 !== ke.indexOf(e.type)) {
     Ee.eventBus.emit($$_207_index.a.COMMON_BLOCKS, {
-      canRedo: $$_17_index.Blink.mainWorkspace.get_redo_stack().length > 0,
-      canUndo: $$_17_index.Blink.mainWorkspace.get_undo_stack().length > 0
+      canRedo: $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_redo_stack().length > 0,
+      canUndo: $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_undo_stack().length > 0
     })
   }
 }
 function De(e) {
   switch (Ee.stopWarningAnimation(), e.type) {
-    case $$_17_index.I.UIEventType.SCALE:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.SCALE:
       !function (e) {
         var t = Number(e.get_new_value())
-        Ee.eventBus.emit($$_207_index.a.WORKSPACE_SCALE_CHANGE, $$_15.M(t, me, ge))
+        Ee.eventBus.emit($$_207_index.a.WORKSPACE_SCALE_CHANGE, $$_$$_$$_$$_$$_src_shared_tools_index.M(t, me, ge))
       }(e)
       break
-    case $$_17_index.I.UIEventType.FLYOUT_SHOW:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.FLYOUT_SHOW:
       !function (e) {
         var t = e.get_new_value()
         Ee.eventBus.emit($$_207_index.a.FLYOUT_CHANGE, !!t)
       }(e)
       break
-    case $$_17_index.I.UIEventType.CATEGORY_WILL_CHANGE:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.CATEGORY_WILL_CHANGE:
       !function (e) {
         var t
         var n = null === (t = e.get_new_value()) || undefined === t ? undefined : t.get_name()
@@ -154,7 +154,7 @@ function De(e) {
         }
       }(e)
       break
-    case $$_17_index.I.UIEventType.SELECTED:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.SELECTED:
       !function (e) {
         var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent
         var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent$emit
@@ -164,13 +164,13 @@ function De(e) {
         }
       }(e)
       break
-    case $$_17_index.I.UIEventType.CATEGORY:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.CATEGORY:
       Me(e)
       break
-    case $$_17_index.I.UIEventType.V_SCROLLBAR_SET:
-    case $$_17_index.I.UIEventType.H_SCROLLBAR_SET:
-    case $$_17_index.I.UIEventType.CLICK:
-    case $$_17_index.I.UIEventType.CONTEXT_MENU_OPEN:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.V_SCROLLBAR_SET:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.H_SCROLLBAR_SET:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.CLICK:
+    case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.UIEventType.CONTEXT_MENU_OPEN:
       We()
   }
 }
@@ -183,7 +183,7 @@ var Me = function (e) {
   var n = e.get_new_value()
   if (n) {
     var r = n.get_tree()
-    if (r !== Re && r && r !== $$_17_index.Blink.mainWorkspace.get_toolbox()) {
+    if (r !== Re && r && r !== $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()) {
       var o
       var /* [auto-meaningful-name] */o$classList
       var a
@@ -221,12 +221,12 @@ function Fe(e) {
   var /* [auto-meaningful-name] */e$is_in = e.is_in
   var o = e.get_block_id()
   t = o
-  var i = $$_17_index.Blink.mainWorkspace.get_block_by_id(t)
-  if (!$$_17_index.BU.base.is_workspace_comment(i) || !i.get_parent_block()) {
+  var i = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t)
+  if (!$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_workspace_comment(i) || !i.get_parent_block()) {
     switch (e$area) {
-      case $$_17_index.I.DragArea.INJECTION_DIV:
+      case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.DragArea.INJECTION_DIV:
         break
-      case $$_17_index.I.DragArea.DELETE_AREA:
+      case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.DragArea.DELETE_AREA:
         if (i) {
           (function (e, t) {
             if (Le) {
@@ -244,14 +244,14 @@ function Fe(e) {
           })(i, e$is_in)
         }
         break
-      case $$_17_index.I.DragArea.WORKSPACE:
+      case $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.I.DragArea.WORKSPACE:
     }
   }
 }
 function Ge(e) {
   var t
   if (!(e > 1 || e < 0)) {
-    var n = null === (t = $$_17_index.Blink.mainWorkspace.get_block_drag_surface()) || undefined === t ? undefined : t.get_group()
+    var n = null === (t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_drag_surface()) || undefined === t ? undefined : t.get_group()
     if (n) {
       if (1 === e) {
         n.removeAttribute("opacity")

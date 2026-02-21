@@ -13,10 +13,10 @@ import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-run
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
 import * as i from "./7"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
-$_57_index.a.backendHost
-var /* [auto-meaningful-name] */$_57_index$a$serverHost = $_57_index.a.serverHost
-var /* [auto-meaningful-name] */$_57_index$a$openServiceHost = $_57_index.a.openServiceHost
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
+$$_$$_$$_$$_src_shared_env.a.backendHost
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$serverHost = $$_$$_$$_$$_src_shared_env.a.serverHost
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$openServiceHost = $$_$$_$$_$$_src_shared_env.a.openServiceHost
 function u() {
   return d.apply(this, arguments)
 }
@@ -31,7 +31,7 @@ function d() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index$a$serverHost + "/coconut/primary-course/list")
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$serverHost + "/coconut/primary-course/list")
           case 3:
             if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
               e.next = 10
@@ -81,7 +81,7 @@ function f() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index$a$serverHost + "/coconut/sample/list")
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$serverHost + "/coconut/sample/list")
           case 3:
             if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
               e.next = 10
@@ -128,7 +128,7 @@ function m() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($_57_index$a$openServiceHost + "/content-security/image/sensor", {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_src_shared_env$a$openServiceHost + "/content-security/image/sensor", {
               businessCode: "coco",
               uri: t,
               params: ["PULP"]

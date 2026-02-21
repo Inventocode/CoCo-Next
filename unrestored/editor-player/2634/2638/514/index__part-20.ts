@@ -7,9 +7,9 @@
 "use strict"
 
 import be from "./71"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -57,7 +57,7 @@ var Ee = memo(function () {
     $$_$$_$$_$$_shared_1571_2636_20_index.emitWidgetEvent($$_$$_$$_$$_shared_1571_2636_684_480.a, "onContactPickerSelected", e.contactWidgetId, n, r)
   }
   return React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.contactBox, !e.contactPageVisible && be.contactBoxHide)
+    className: Classnames(be.contactBox, !e.contactPageVisible && be.contactBoxHide)
   }, React.createElement("div", {
     className: be.backBox,
     onClick: function () {
@@ -65,7 +65,7 @@ var Ee = memo(function () {
         contactPageVisible: false
       }))
     }
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-nav-back"
   })), React.createElement("div", {
     className: be.contactList
@@ -73,7 +73,7 @@ var Ee = memo(function () {
     return React.createElement("div", {
       onClick: n.bind(null, t.name, t.number, t.avatar),
       key: t.name,
-      className: $$_$$_$$_$$_shared_1571_2636_8(be.contactItem, be.flexSC)
+      className: Classnames(be.contactItem, be.flexSC)
     }, React.createElement("div", {
       className: be.flexCC
     }, React.createElement("img", {
@@ -84,7 +84,7 @@ var Ee = memo(function () {
       className: be.itemName
     }, t.name), React.createElement("div", {
       className: be.itemNumber
-    }, t.number))), React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+    }, t.number))), React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-fold-left"
     }))
   })))

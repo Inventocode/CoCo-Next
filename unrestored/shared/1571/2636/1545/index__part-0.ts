@@ -7,8 +7,8 @@
 "use strict"
 
 import { forwardRef, createElement } from "react"
-import * as o from "../8"
-import i from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$_800 from "./800"
 function s(e, t) {
   var n = Object.keys(e)
@@ -90,7 +90,7 @@ var u = forwardRef(function (e, t) {
     }
   }, createElement("div", {
     style: f,
-    className: i(l({}, "".concat(e$prefixCls, "-holder-inner"), e$prefixCls)),
+    className: Classnames1(l({}, "".concat(e$prefixCls, "-holder-inner"), e$prefixCls)),
     ref: t
   }, e$children)))
 })

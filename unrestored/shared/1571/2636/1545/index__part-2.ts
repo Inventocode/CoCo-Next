@@ -9,7 +9,7 @@
 import { d } from "./index__part-0"
 import { O, w } from "./index__part-1"
 import * as /* [auto-meaningful-name] */$$_1543_229 from "../1543/229"
-import i from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { useState, useEffect, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle, createElement, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$$_1543_482 from "../1543/482"
 function T(e, t) {
@@ -469,7 +469,7 @@ function Y(e, t) {
   var U = W(useState(false), 2)
   var Y = U[0]
   var K = U[1]
-  var q = i(o, e$className)
+  var q = Classnames(o, e$className)
   var X = e$data || V
   var Q = useRef()
   var Z = useRef()

@@ -4,5 +4,5 @@
  * 模块 ID：1089
  */
 
-var r = require("../1717/1276/634").match(/AppleWebKit\/(\d+)\./)
+var r = require("./1253/634").match(/AppleWebKit\/(\d+)\./)
 module.exports = !!r && +r[1]

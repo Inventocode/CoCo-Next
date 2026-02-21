@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as wn from "./90"
 import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import { useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -41,7 +41,7 @@ var tf = {
     var m = Jd.Fb(e$attributes$fileId) || $_133.m
     return React.createElement("div", {
       id: t,
-      className: N($_5131.imageWidget, wn.b, k.a({}, $_5131.hide, !e$visible)),
+      className: Classnames($_5131.imageWidget, wn.b, k.a({}, $_5131.hide, !e$visible)),
       "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
       "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.v,
       "data-scale-mode": $$_$$_$$_$$_src_editor_widget_builtIn_types.p.PROPORTIONAL,

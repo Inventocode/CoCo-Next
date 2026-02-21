@@ -15,8 +15,8 @@ import * as /* [auto-meaningful-name] */$_147 from "./147"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -333,7 +333,7 @@ var aP = memo(function () {
     url: null === (e = Bm[0]) || undefined === e ? undefined : e.url,
     label: "云数据表"
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: t,
     className: $_160.cloudDBManager,
     title: React.createElement("div", {
@@ -389,13 +389,13 @@ var aP = memo(function () {
   })), React.createElement("div", {
     className: $_160.description
   }, React.createElement("div", {
-    className: N($_160.point, $_160.dev)
+    className: Classnames($_160.point, $_160.dev)
   }), React.createElement("span", {
     className: $_160.text
   }, $_710$a$formatMessage({
     id: "cloudDBManager.testData"
   })), React.createElement("div", {
-    className: N($_160.point, $_160.prod)
+    className: Classnames($_160.point, $_160.prod)
   }), React.createElement("span", {
     className: $_160.text
   }, $_710$a$formatMessage({
@@ -424,20 +424,20 @@ var aP = memo(function () {
     onClick: function () {
       return Oe(true)
     },
-    className: N($_160.tab, i && $_160.selected_dev)
+    className: Classnames($_160.tab, i && $_160.selected_dev)
   }, $_710$a$formatMessage({
     id: "cloudDBManager.testData"
   })), React.createElement("div", {
     onClick: function () {
       return Oe(false)
     },
-    className: N($_160.tab, !i && $_160.selected_prod)
+    className: Classnames($_160.tab, !i && $_160.selected_prod)
   }, $_710$a$formatMessage({
     id: "cloudDBManager.prodData"
   }))), React.createElement("div", {
     className: $_160.gridArea
   }, te ? React.createElement("div", {
-    className: N($_160.container, $_160.loading)
+    className: Classnames($_160.container, $_160.loading)
   }, React.createElement("img", {
     src: $_15341,
     alt: "loading"

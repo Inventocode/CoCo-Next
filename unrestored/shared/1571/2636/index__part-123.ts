@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -22,12 +22,12 @@ var tw = memo(function (e) {
   var i = e$getValue(n)
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
-    className: N($_2081.formItemWrapper, $_2081.httpBody)
+    className: Classnames($_2081.formItemWrapper, $_2081.httpBody)
   }, React.createElement("div", {
     className: $_2081.title
   }, React.createElement("div", null, $_710$a$formatMessage({
     id: "HttpClientWidget.body"
-  }))), React.createElement($_13_index.A, {
+  }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.A, {
     onBlur: function (e, t) {
       e$onChange(n, e.target.value)
     },

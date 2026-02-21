@@ -8,7 +8,7 @@
 
 var _regeneratorRuntime = require("regenerator-runtime")
 var _slicedToArray = require("../../../207/787/572/index")
-var _createForOfIteratorHelper = require("../../../207/787/399")
+var _createForOfIteratorHelper = require("../../../207/787/399/index")
 var _objectSpread = require("../../../207/787/500")
 var _asyncToGenerator = require("../449")
 var Token = require("./2394/index")

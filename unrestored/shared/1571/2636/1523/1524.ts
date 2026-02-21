@@ -10,8 +10,8 @@ import * as /* [auto-meaningful-name] */$$_710 from "../710"
 import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as a from "../8"
-import s from "../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$_155 from "./155"
 import /* [auto-meaningful-name] */$_1551 from "./155"
 var _a
@@ -36,12 +36,12 @@ _a = function (e) {
     }
   }, React1.createElement("div", {
     onClick: d.bind(null, "number"),
-    className: s("number" === e$type && $_1551.active)
+    className: Classnames1("number" === e$type && $_1551.active)
   }, $$_710$a$formatMessage({
     id: "storageItemNumber"
   })), React1.createElement("div", {
     onClick: d.bind(null, "string"),
-    className: s("string" === e$type && $_1551.active)
+    className: Classnames1("string" === e$type && $_1551.active)
   }, $$_710$a$formatMessage({
     id: "storageItemString"
   })))

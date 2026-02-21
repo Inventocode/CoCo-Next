@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_118_index from "../../../../../unrestored/shared/1571/2636/118/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools_index from "../../../../shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_301_85 from "../../../../../unrestored/shared/1571/2636/301/85"
 function fe(e, t) {
   var n
@@ -28,7 +28,7 @@ function fe(e, t) {
       o = "<shadow type=\"widget_boolean\">\n      <field name=\"BOOL\">".concat(t ? "TRUE" : "FALSE", "</field>\n    </shadow>")
       break
     case "color":
-      o = "<shadow type=\"color_picker\">\n      <field name=\"COLOR_PALETTE\">".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.i(t) ? "#ffffff" : t, "</field>\n    </shadow>")
+      o = "<shadow type=\"color_picker\">\n      <field name=\"COLOR_PALETTE\">".concat($$_$$_$$_$$_shared_tools_index.i(t) ? "#ffffff" : t, "</field>\n    </shadow>")
       break
     case "image":
       o = "<shadow type=\"image_file_list_dropdown\">\n        <field name=\"IMAGE_FILE_ID\">".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.h, "</field>\n      </shadow>")

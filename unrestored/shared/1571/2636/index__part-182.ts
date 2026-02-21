@@ -7,8 +7,8 @@
 "use strict"
 
 import { fj, hj } from "./index__part-181"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
@@ -23,7 +23,7 @@ var bj = memo(function (e) {
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
   var /* [auto-meaningful-name] */e$selectHandler = e.selectHandler
   return React.createElement("div", {
-    className: N($_8151.IconLibraryItem, e$isSelect && $_8151.selected),
+    className: Classnames($_8151.IconLibraryItem, e$isSelect && $_8151.selected),
     onClick: function () {
       e$selectHandler({
         id: t,
@@ -36,7 +36,7 @@ var bj = memo(function (e) {
     }
   }, React.createElement("div", {
     className: $_8151.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-style-selected"
   })), React.createElement("div", {
     className: $_8151.content

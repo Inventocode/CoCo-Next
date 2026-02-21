@@ -8,7 +8,7 @@
 
 import { SS } from "./index__part-154"
 import * as D from "./6"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState } from "react"
@@ -96,13 +96,13 @@ var RS = memo(function (e) {
     }
   }
   return React.createElement(SS, {
-    className: N(e.className, $_7051.layout, e$resizable ? $_7051.resizable : undefined, T ? $_7051.resizing : undefined),
+    className: Classnames(e.className, $_7051.layout, e$resizable ? $_7051.resizable : undefined, T ? $_7051.resizing : undefined),
     style: D.a(D.a({}, e.style), {}, {
       width: l,
       height: m
     })
   }, e$children, e$resizable && e$placements && e$placements.length ? React.createElement("div", {
-    className: N($_7051.resizer, b ? $_7051.row : $_7051.col),
+    className: Classnames($_7051.resizer, b ? $_7051.row : $_7051.col),
     onMouseDown: function (e) {
       var t = I(e)
       if (t) {

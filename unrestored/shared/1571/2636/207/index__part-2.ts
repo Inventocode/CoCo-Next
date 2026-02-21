@@ -10,12 +10,12 @@ import { L } from "./index__part-1"
 var P
 import * as /* [auto-meaningful-name] */$_139 from "./139"
 import * as h from "../9"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$_430 from "./430"
 import * as /* [auto-meaningful-name] */$$_301_index from "../301/index"
 import * as u from "../4"
 import * as /* [auto-meaningful-name] */$_209_index from "./209/index"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import * as i from "../7"
@@ -182,8 +182,8 @@ var U = function () {
                 }
                 a = i.get_relative_to_surface_xy()[0]
                 s = i.get_relative_to_surface_xy()[1]
-                l = $$_17_index.Blink.mainWorkspace.get_metrics()
-                u = $$_17_index.Blink.mainWorkspace.get_scale()
+                l = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_metrics()
+                u = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_scale()
                 d = a * u
                 p = s * u
                 r$type = r.type
@@ -206,7 +206,7 @@ var U = function () {
                 A = p - y + O - l.contentTop
                 j = (S - C) / (I = 10)
                 N = (A - T) / I
-                if (R = $$_17_index.Blink.mainWorkspace.get_scrollbar()) {
+                if (R = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_scrollbar()) {
                   R.set(S, A)
                 }
                 k = 0
@@ -220,7 +220,7 @@ var U = function () {
                   R.set(C + k * j, T + k * N)
                 }
                 e.next = 30
-                return $$_15.lb(5)
+                return $$_$$_$$_$$_$$_src_shared_tools_index.lb(5)
               case 30:
                 e.next = 25
                 break
@@ -285,11 +285,11 @@ var U = function () {
                 s = r.get_svg_root()
                 r$svg_path.setAttribute("filter", "url(#".concat($_430.b.blocklyFocusedShadowFilterId, ")"))
                 r$svg_path.setAttribute("fill-backups", a)
-                if ($$_15.Q()) {
+                if ($$_$$_$$_$$_$$_src_shared_tools_index.Q()) {
                   r$svg_path.removeAttribute("fill")
                 }
                 r$svg_path.setAttribute("id", "@_BLOCK_SVG_PATH_ID_@")
-                if (c = G($$_15.ib(a, 0), $$_15.ib(a, .2), $$_15.ib(a, 0))) {
+                if (c = G($$_$$_$$_$$_$$_src_shared_tools_index.ib(a, 0), $$_$$_$$_$$_$$_src_shared_tools_index.ib(a, .2), $$_$$_$$_$$_$$_src_shared_tools_index.ib(a, 0))) {
                   s.appendChild(c)
                 }
               case 21:
@@ -412,9 +412,9 @@ var U = function () {
       value: function () {
         this.workspaceDataMap.clear()
         this.jsGenerator.clearAllDynamicValues()
-        $$_17_index.Blink.events.disable()
-        $$_17_index.Blink.mainWorkspace.clear()
-        $$_17_index.Blink.events.enable()
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clear()
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       }
     }, {
       key: "updateCurrentWorkspaceData",
@@ -422,11 +422,11 @@ var U = function () {
         var /* [auto-meaningful-name] */this$_currentScreenId = this._currentScreenId
         var t = this.getWorkspaceDataByScreenId(this$_currentScreenId)
         if (t) {
-          var n = $$_17_index.Blink.json.workspace_to_json($$_17_index.Blink.mainWorkspace)
+          var n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.json.workspace_to_json($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace)
           t.setWorkspaceJson(n)
           var r = {
-            x: $$_17_index.Blink.mainWorkspace.scroll_xy[0],
-            y: $$_17_index.Blink.mainWorkspace.scroll_xy[1]
+            x: $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.scroll_xy[0],
+            y: $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.scroll_xy[1]
           }
           t.setWorkspaceOffset(r)
         }
@@ -453,10 +453,10 @@ var U = function () {
         if (!a) {
           throw Error("Trying to copy screen from invalid id: ".concat(e, ". "))
         }
-        var s = $$_17_index.Blink.json.reset_element_ids(a.getWorkspaceJson())
+        var s = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.json.reset_element_ids(a.getWorkspaceJson())
         var l = {
-          x: $$_17_index.Blink.mainWorkspace.scroll_xy[0],
-          y: $$_17_index.Blink.mainWorkspace.scroll_xy[1]
+          x: $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.scroll_xy[0],
+          y: $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.scroll_xy[1]
         }
         if (s) {
           var /* [auto-meaningful-name] */s$blocks = s.blocks
@@ -536,7 +536,7 @@ var U = function () {
           var t = n.getBlockById(e)
           if (t && t.disabled) {
             var r = t.get_top_parent()
-            if ($$_17_index.BU.base.is_block_svg(r) && r.is_starting_block()) {
+            if ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_block_svg(r) && r.is_starting_block()) {
               o.push(t)
             }
           }
@@ -603,7 +603,7 @@ var U = function () {
           var n = this.workspaceDataMap.get(t)
           return 0 === Object.keys((null === n || undefined === n ? undefined : n.getWorkspaceJson().blocks) || {}).length
         }
-        return 0 === $$_17_index.Blink.mainWorkspace.get_all_blocks().length
+        return 0 === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().length
       }
     }, {
       key: "replaceWorkspaces",
@@ -634,25 +634,25 @@ var U = function () {
     }, {
       key: "disabledShortcut",
       value: function () {
-        $$_17_index.Blink.mainWorkspace.set_hotkey_enable(false)
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_hotkey_enable(false)
       }
     }, {
       key: "ableShortcut",
       value: function () {
-        $$_17_index.Blink.mainWorkspace.set_hotkey_enable(true)
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_hotkey_enable(true)
       }
     }, {
       key: "resizeWorkspace",
       value: function () {
-        $$_17_index.Blink.utils.svg_resize($$_17_index.Blink.mainWorkspace)
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.utils.svg_resize($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace)
       }
     }, {
       key: "unselectCurrentBlock",
       value: function () {
-        var /* [auto-meaningful-name] */$$_17_index$Blink$runtime_data
-        var /* [auto-meaningful-name] */$$_17_index$Blink$runtime_data$selected
-        if (!(null === ($$_17_index$Blink$runtime_data = $$_17_index.Blink.runtime_data) || undefined === $$_17_index$Blink$runtime_data || null === ($$_17_index$Blink$runtime_data$selected = $$_17_index$Blink$runtime_data.selected) || undefined === $$_17_index$Blink$runtime_data$selected)) {
-          $$_17_index$Blink$runtime_data$selected.unselect()
+        var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data
+        var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data$selected
+        if (!(null === ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.runtime_data) || undefined === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data || null === ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data$selected = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data.selected) || undefined === $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data$selected)) {
+          $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index$Blink$runtime_data$selected.unselect()
         }
       }
     }, {
@@ -682,7 +682,7 @@ var U = function () {
     }, {
       key: "getBlockById",
       value: function (e) {
-        return $$_17_index.Blink.mainWorkspace.get_block_by_id(e)
+        return $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(e)
       }
     }, {
       key: "getField",
@@ -698,14 +698,14 @@ var U = function () {
     }, {
       key: "checkFieldValueIsSelected",
       value: function (e, t) {
-        return $$_17_index.Blink.mainWorkspace.get_all_blocks().some(function (n) {
+        return $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().some(function (n) {
           return n.get_field_value(e) === t
         })
       }
     }, {
       key: "checkSomeFieldValueIsSelected",
       value: function (e, t) {
-        return $$_17_index.Blink.mainWorkspace.get_all_blocks().some(function (n) {
+        return $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().some(function (n) {
           var r = n.get_field_value(e)
           return !!r && t.includes(r)
         })
@@ -729,7 +729,7 @@ var U = function () {
     }, {
       key: "replaceFieldValue",
       value: function (e, t, n, r) {
-        $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
           var i
           if (o.type === e && o.get_field_value(t) === n) {
             if (!(null === (i = o.get_field(t)) || undefined === i)) {
@@ -741,7 +741,7 @@ var U = function () {
     }, {
       key: "replaceTextValue",
       value: function (e, t, n, r) {
-        $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
           var i
           var a
           if (o.type === e && (null === (i = o.get_field(t)) || undefined === i ? undefined : i.get_text()) === n) {
@@ -754,12 +754,12 @@ var U = function () {
     }, {
       key: "_renderWorkspaceByData",
       value: function (e) {
-        $$_17_index.Blink.events.disable()
-        $$_17_index.Blink.mainWorkspace.clear()
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clear()
         var t = e.getWorkspaceJson()
         var n = e.getWorkspaceOffset()
-        $$_17_index.Blink.json.json_to_workspace(t, $$_17_index.Blink.mainWorkspace)
-        $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.json.json_to_workspace(t, $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace)
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
           if (!("param" !== e.element_type || e.deletable_)) {
             e.set_deletable(true)
           }
@@ -768,14 +768,14 @@ var U = function () {
           x: 0,
           y: 0
         })
-        $$_17_index.Blink.mainWorkspace.set_undo_stack(e.getUndoStack())
-        $$_17_index.Blink.mainWorkspace.set_redo_stack(e.getRedoStack())
-        $$_17_index.Blink.events.enable()
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_undo_stack(e.getUndoStack())
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.set_redo_stack(e.getRedoStack())
+        $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       }
     }, {
       key: "_setWorkspaceOffset",
       value: function (e) {
-        var t = $$_17_index.Blink.mainWorkspace.get_metrics()
+        var t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_metrics()
         var n = {
           x: e.x,
           y: e.y
@@ -786,7 +786,7 @@ var U = function () {
         o = Math.max(o, t.viewHeight - t.contentTop - t.contentHeight)
         r = -n.x - t.contentLeft
         o = -n.y - t.contentTop
-        var i = $$_17_index.Blink.mainWorkspace.get_scrollbar()
+        var i = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_scrollbar()
         if (i) {
           i.set(r, o)
         }
@@ -835,8 +835,8 @@ var U = function () {
     }, {
       key: "refreshProcedureToolbox",
       value: function () {
-        var e = $$_17_index.Blink.mainWorkspace.get_toolbox()
-        var t = $$_17_index.Blink.mainWorkspace.get_flyout()
+        var e = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()
+        var t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_flyout()
         if (t && e && !t.is_auto_close()) {
           var n = e.get_selected()
           if (n && "toolbox-function" === n.get_name()) {

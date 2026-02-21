@@ -8,8 +8,8 @@
 
 import { Ge } from "./index__part-9"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -358,9 +358,9 @@ var SC = memo(function (e) {
       return e.apply(this, arguments)
     }
   }()
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
-    className: N($_4221.formItemWrapper, $_4221.bluetoothConnect, M && $_4221.connected),
+    className: Classnames($_4221.formItemWrapper, $_4221.bluetoothConnect, M && $_4221.connected),
     label: M ? "已连接" : "设备未连接"
   }, M ? React.createElement(React.Fragment, null, React.createElement("div", {
     className: $_4221.device
@@ -399,10 +399,10 @@ var SC = memo(function (e) {
     }
   }, React.createElement("div", {
     className: $_4221.more
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-more"
   }))))) : React.createElement("div", {
-    className: N($_4221.connect, d && $_4221.connecting),
+    className: Classnames($_4221.connect, d && $_4221.connecting),
     onClick: function () {
       return L.apply(this, arguments)
     }

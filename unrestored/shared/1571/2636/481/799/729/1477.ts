@@ -10,7 +10,7 @@ export { s as a }
 import * as /* [auto-meaningful-name] */$$_1549 from "../1549"
 import * as /* [auto-meaningful-name] */$$_264 from "../264"
 import * as /* [auto-meaningful-name] */$$_352 from "../352"
-import * as /* [auto-meaningful-name] */$$_220_index from "../220/index"
+import * as /* [auto-meaningful-name] */$$_220 from "../220"
 function s() {
   $$_1549.a({
     callback: c,
@@ -22,7 +22,7 @@ function s() {
   })
 }
 function c() {
-  var e = $$_220_index.b()
+  var e = $$_220.b()
   if (e) {
     $$_264.a.log("[Tracing] Transaction: " + $$_352.a.InternalError + " -> Global error occured")
     e.setStatus($$_352.a.InternalError)

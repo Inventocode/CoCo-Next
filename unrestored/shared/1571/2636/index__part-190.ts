@@ -14,21 +14,21 @@ import { Yj } from "./index__part-188"
 import { Xj } from "./index__part-189"
 import /* [auto-meaningful-name] */$_164 from "./164"
 var Nj
-import * as /* [auto-meaningful-name] */$_540_index from "../../../../src/shared/ui/components/dialog/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_dialog_index from "../../../../src/shared/ui/components/dialog/index"
 import * as ng from "./64"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as ro from "./39"
 import * as Tn from "./68"
 import * as Et from "./9"
 import /* [auto-meaningful-name] */Axios from "axios"
-import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as X from "./27"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -39,7 +39,7 @@ import { memo, useState, useRef, useLayoutEffect, useEffect, useMemo } from "rea
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$_1528 from "./1528"
 import /* [auto-meaningful-name] */$_15281 from "./1528"
-var Jj = ["staging", "press", "production"].includes($_57_index.b()) ? {
+var Jj = ["staging", "press", "production"].includes($$_$$_$$_$$_src_shared_env.b()) ? {
   icon: ["https://creation.codemao.cn/884/l4zcboqu.json", "https://creation.codemao.cn/884/l4zcbf62.json", "https://creation.codemao.cn/884/l4zcb9gi.json"],
   sound: ["https://creation.codemao.cn/884/l4zcb0p4.json", "https://creation.codemao.cn/884/l4zcb365.json"],
   image: ["https://creation.codemao.cn/884/l4zc64z0.json", "https://creation.codemao.cn/884/l4zc6s4c.json", "https://creation.codemao.cn/884/l4zc7haq.json", "https://creation.codemao.cn/884/l4zc8el6.json", "https://creation.codemao.cn/884/l4zc8tz0.json", "https://creation.codemao.cn/884/1epopn5u3oyo00.json", "https://creation.codemao.cn/884/l9wg26l9.json", "https://creation.codemao.cn/884/l4zcaecb.json"]
@@ -420,7 +420,7 @@ var nN = memo(function (e) {
     className: $_164.sidebar
   }, tN.map(function (e) {
     return React.createElement("div", {
-      className: N($_164.item, e.type === v && !e$searchName && $_164.selected),
+      className: Classnames($_164.item, e.type === v && !e$searchName && $_164.selected),
       key: e.name,
       onClick: function () {
         !function (e) {
@@ -434,7 +434,7 @@ var nN = memo(function (e) {
           W(1)
         }(e.type)
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-".concat(e.name),
       className: $_164.icon
     }), $_710$a$formatMessage({
@@ -448,7 +448,7 @@ var nN = memo(function (e) {
   }, $_710$a$formatMessage({
     id: "Resource.HowFindMaterial"
   }))), React.createElement("div", {
-    className: N($_164.itemContent, e.mode === Tn.c.ResourceLibrary && $_164.sidebarShow)
+    className: Classnames($_164.itemContent, e.mode === Tn.c.ResourceLibrary && $_164.sidebarShow)
   }, function () {
     var t = e$searchName && 3 === e.mode ? [l, u, d, p] : v === Tn.d.ICON ? eN.getMaterialFilter().icon : v === Tn.d.IMAGE ? eN.getMaterialFilter().image : v === Tn.d.SOUND ? eN.getMaterialFilter().sound : []
     return React.createElement("div", {
@@ -468,7 +468,7 @@ var nN = memo(function (e) {
             }
           }(e)
         },
-        className: N($_164.filter_item, R === e && $_164.selected),
+        className: Classnames($_164.filter_item, R === e && $_164.selected),
         key: e
       }, e)
     }))
@@ -644,7 +644,7 @@ var rN = memo(function () {
     return t
   }
   var ne = function (e, t, n) {
-    var r = "".concat(e, "-").concat(t + 1).concat(te.I(n))
+    var r = "".concat(e, "-").concat(t + 1).concat($$_$$_$$_$$_src_shared_tools_index.I(n))
     var o = Et.ib(e, t)
     return {
       id: o ? o.id : Et.z(r),
@@ -652,7 +652,7 @@ var rN = memo(function () {
       md5: "",
       groupId: e,
       groupImageIndex: t,
-      extension: te.I(n)
+      extension: $$_$$_$$_$$_src_shared_tools_index.I(n)
     }
   }
   var re = function (e) {
@@ -683,7 +683,7 @@ var rN = memo(function () {
       return {
         id: e.selectFrom === hj.Mall ? ng.a("SOUND") : e.id,
         md5: e.md5,
-        name: "".concat(e.name).concat(e.selectFrom === hj.Mall ? te.I(e.cdnUrl) : ""),
+        name: "".concat(e.name).concat(e.selectFrom === hj.Mall ? $$_$$_$$_$$_src_shared_tools_index.I(e.cdnUrl) : ""),
         cdnUrl: e.cdnUrl,
         duration: e.duration
       }
@@ -695,7 +695,7 @@ var rN = memo(function () {
       return e.type === fj.Image
     })
     var p = d.map(function (e) {
-      var t = e.urls && e.urls.length > 1 ? "" : te.I(e.cdnUrl)
+      var t = e.urls && e.urls.length > 1 ? "" : $$_$$_$$_$$_src_shared_tools_index.I(e.cdnUrl)
       return {
         id: e.selectFrom === hj.Mall ? "".concat(e.name).concat(t) : e.id,
         cdnUrl: e.cdnUrl,
@@ -747,10 +747,10 @@ var rN = memo(function () {
     R([])
     l()
   }
-  return React.createElement($_540_index.a, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_dialog_index.a, {
     withPortal: true,
     visible: e$visible,
-    className: N($_164.imageLibrary, e$mode === Tn.c.ResourceLibrary && $_164.mall),
+    className: Classnames($_164.imageLibrary, e$mode === Tn.c.ResourceLibrary && $_164.mall),
     showCloseButton: true,
     onClose: l
   }, e$visible && React.createElement("div", {
@@ -768,28 +768,28 @@ var rN = memo(function () {
   }) : ""), p && React.createElement("div", {
     className: $_164.tab
   }, React.createElement("div", {
-    className: N($_164.tabItem, w === Nj.Library && $_164.selected),
+    className: Classnames($_164.tabItem, w === Nj.Library && $_164.selected),
     onClick: function () {
       C(Nj.Library)
       Q()
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-project-resources",
     className: $_164.icon
   }), $_710$a$formatMessage({
     id: "Resource.ProjectLibrary"
   })), React.createElement("div", {
-    className: N($_164.tabItem, w === Nj.Mall && $_164.selected),
+    className: Classnames($_164.tabItem, w === Nj.Mall && $_164.selected),
     onClick: function () {
       C(Nj.Mall)
       Q()
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-material-store",
     className: $_164.icon
   }), $_710$a$formatMessage({
     id: "Resource.ResourceMall"
-  }))), React.createElement($_13_index.k, {
+  }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     ref: U,
     onClearCallback: Q,
     className: $_164.searchInput,
@@ -801,11 +801,11 @@ var rN = memo(function () {
     onCompositionStart: V,
     onCompositionEnd: K,
     clearButtonVisible: !!b,
-    before: React.createElement($_13_index.j, {
+    before: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-material-search"
     })
   })), React.createElement("div", {
-    className: N($_164.LibraryContent, j.length > 0 && $_164.footerShow, j.length > 0 && Z() && $_164.selectBarShow)
+    className: Classnames($_164.LibraryContent, j.length > 0 && $_164.footerShow, j.length > 0 && Z() && $_164.selectBarShow)
   }, w === Nj.Library && React.createElement(Pj, {
     mode: e$mode,
     searchName: b,
@@ -822,17 +822,17 @@ var rN = memo(function () {
     sidebarType: e$sidebarType,
     canShowMultiply: Z()
   })), Z() ? 0 === j.length ? F ? null : React.createElement("div", {
-    className: N($_164.selectBar, e$mode === Tn.c.ResourceLibrary && $_164.sidebarShow, $_164.fade),
+    className: Classnames($_164.selectBar, e$mode === Tn.c.ResourceLibrary && $_164.sidebarShow, $_164.fade),
     onAnimationEnd: function () {
       return G(true)
     }
   }) : React.createElement("div", {
     ref: W,
-    className: N($_164.selectBar, e$mode === Tn.c.ResourceLibrary && $_164.sidebarShow)
+    className: Classnames($_164.selectBar, e$mode === Tn.c.ResourceLibrary && $_164.sidebarShow)
   }, j.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: N($_164.selectedItem)
+      className: Classnames($_164.selectedItem)
     }, React.createElement("div", {
       className: $_164.delete,
       onClick: function () {
@@ -846,7 +846,7 @@ var rN = memo(function () {
           }
         }(e.id, e.cdnUrl)
       }
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-close",
       className: $_164.iconDelete
     })), React.createElement("div", {
@@ -859,14 +859,14 @@ var rN = memo(function () {
       alt: "",
       className: $_164.iconContent,
       src: e.cdnUrl
-    }), e.type === fj.Sound && React.createElement($_13_index.j, {
+    }), e.type === fj.Sound && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-music",
       className: $_164.soundContent
     })), React.createElement("div", {
       className: $_164.name
     }, e.name))
   })) : null, 0 === j.length ? M ? null : React.createElement("div", {
-    className: N($_164.footer, $_164.fade),
+    className: Classnames($_164.footer, $_164.fade),
     onAnimationEnd: function () {
       return L(true)
     }
@@ -875,14 +875,14 @@ var rN = memo(function () {
   }, React.createElement("div", {
     className: $_164.btns
   }, React.createElement("div", {
-    className: N($_164.btn, $_164.btnCancel),
+    className: Classnames($_164.btn, $_164.btnCancel),
     onClick: function () {
       return re(false)
     }
   }, $_710$a$formatMessage({
     id: "Resource.Clear"
   })), React.createElement("div", {
-    className: N($_164.btn, $_164.btnConfirm),
+    className: Classnames($_164.btn, $_164.btnConfirm),
     onClick: oe
   }, $_710$a$formatMessage({
     id: "Resource.Add"
@@ -891,14 +891,14 @@ var rN = memo(function () {
   }, React.createElement("div", {
     className: $_164.btns
   }, React.createElement("div", {
-    className: N($_164.btn, $_164.btnCancel),
+    className: Classnames($_164.btn, $_164.btnCancel),
     onClick: function () {
       return re(true)
     }
   }, $_710$a$formatMessage({
     id: "Resource.Cancel"
   })), React.createElement("div", {
-    className: N($_164.btn, $_164.btnConfirm),
+    className: Classnames($_164.btn, $_164.btnConfirm),
     onClick: oe
   }, $_710$a$formatMessage({
     id: "Resource.Apply"

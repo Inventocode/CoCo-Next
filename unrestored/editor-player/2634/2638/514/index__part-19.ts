@@ -7,10 +7,10 @@
 "use strict"
 
 import be from "./71"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_13_index from "../../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_components_index from "../../../../../src/shared/ui/components/index"
 var ce
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_20_index from "../../../../shared/1571/2636/20/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_8 from "../../../../shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_738_70 from "../../../../shared/1571/2636/738/70"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_37_219_index from "../../../../shared/1571/2636/37/219/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
@@ -90,7 +90,7 @@ var ye = memo(function () {
     })
   }
   return React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.callingBox, !n.callingPageVisible && be.callingBoxHide)
+    className: Classnames(be.callingBox, !n.callingPageVisible && be.callingBoxHide)
   }, "dialOutCall" === n.callType && React.createElement(React.Fragment, null, React.createElement("div", {
     className: be.phoneNumber
   }, n.phoneNumber), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING && React.createElement("div", {
@@ -100,13 +100,13 @@ var ye = memo(function () {
   })), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK && React.createElement("div", {
     className: be.phoneStatus
   }, s(o)), React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.callBtnBox, be.flexCC)
+    className: Classnames(be.callBtnBox, be.flexCC)
   }, React.createElement("div", {
     className: be.callBtnItemBox,
     onClick: u
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.callBtnItem, be.callEnd)
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+    className: Classnames(be.callBtnItem, be.callEnd)
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: be.callBtnText
@@ -121,13 +121,13 @@ var ye = memo(function () {
   })), n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.OFFHOOK && React.createElement("div", {
     className: be.phoneStatus
   }, s(o)), React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.callBtnBox, n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING ? be.flexSC : be.flexCC)
+    className: Classnames(be.callBtnBox, n.callStatus === $$_$$_$$_$$_shared_1571_2636_738_70.b.RINGING ? be.flexSC : be.flexCC)
   }, React.createElement("div", {
     className: be.callBtnItemBox,
     onClick: l
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.callBtnItem, be.callEnd)
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+    className: Classnames(be.callBtnItem, be.callEnd)
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-disconnect"
   })), React.createElement("span", {
     className: be.callBtnText
@@ -139,8 +139,8 @@ var ye = memo(function () {
     className: be.callBtnItemBox,
     onClick: d
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_shared_1571_2636_8(be.callBtnItem, be.callConnect)
-  }, React.createElement($$_$$_$$_$$_shared_1571_2636_13_index.j, {
+    className: Classnames(be.callBtnItem, be.callConnect)
+  }, React.createElement($$_$$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-phone-call-dial"
   })), React.createElement("span", {
     className: be.callBtnText

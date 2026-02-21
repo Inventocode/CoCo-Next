@@ -7,7 +7,7 @@
 "use strict"
 
 export { A as a }
-import * as /* [auto-meaningful-name] */$_184 from "./184"
+import * as /* [auto-meaningful-name] */$$_808_184 from "../808/184"
 import * as /* [auto-meaningful-name] */$$_1481_252 from "../1481/252"
 var o = /(?:[Eec]{1,6}|G{1,5}|[Qq]{1,5}|(?:[yYur]+|U{1,5})|[ML]{1,5}|d{1,2}|D{1,3}|F{1}|[abB]{1,5}|[hkHK]{1,2}|w{1,2}|W{1}|m{1,2}|s{1,2}|[zZOvVxX]{1,4})(?=([^']*'[^']*')*[^']*$)/g
 function a(e) {
@@ -201,17 +201,17 @@ function d(e) {
         t.compactDisplay = "long"
         continue
       case "scientific":
-        t = $_184.a($_184.a($_184.a({}, t), {
+        t = $$_808_184.a($$_808_184.a($$_808_184.a({}, t), {
           notation: "scientific"
         }), o.options.reduce(function (e, t) {
-          return $_184.a($_184.a({}, e), f(t))
+          return $$_808_184.a($$_808_184.a({}, e), f(t))
         }, {}))
         continue
       case "engineering":
-        t = $_184.a($_184.a($_184.a({}, t), {
+        t = $$_808_184.a($$_808_184.a($$_808_184.a({}, t), {
           notation: "engineering"
         }), o.options.reduce(function (e, t) {
-          return $_184.a($_184.a({}, e), f(t))
+          return $$_808_184.a($$_808_184.a({}, e), f(t))
         }, {}))
         continue
       case "notation-simple":
@@ -256,14 +256,14 @@ function d(e) {
         return ""
       })
       if (o.options.length) {
-        t = $_184.a($_184.a({}, t), u(o.options[0]))
+        t = $$_808_184.a($$_808_184.a({}, t), u(o.options[0]))
       }
     } else if (c.test(o.stem)) {
-      t = $_184.a($_184.a({}, t), u(o.stem))
+      t = $$_808_184.a($$_808_184.a({}, t), u(o.stem))
     } else {
       var a = l(o.stem)
       if (a) {
-        t = $_184.a($_184.a({}, t), a)
+        t = $$_808_184.a($$_808_184.a({}, t), a)
       }
     }
   }
@@ -282,7 +282,7 @@ var h = function (e) {
     }
     return a
   }
-  $_184.b(t, e)
+  $$_808_184.b(t, e)
   t.buildMessage = function (e, t) {
     function n(e) {
       return e.charCodeAt(0).toString(16).toUpperCase()
@@ -382,7 +382,7 @@ var p = function (e, t) {
   var B = Ce(",", false)
   var D = Ce("number", false)
   var I = function (e, t, n) {
-    return $_184.a({
+    return $$_808_184.a({
       type: "number" === t ? $$_1481_252.a.number : "date" === t ? $$_1481_252.a.date : $$_1481_252.a.time,
       style: n && n[2],
       value: e
@@ -562,7 +562,7 @@ var p = function (e, t) {
           if ((s = t) !== (u = a)) {
             xe("Mismatch tag \"" + s + "\" !== \"" + u + "\"", Ee())
           }
-          t = $_184.a({
+          t = $$_808_184.a({
             type: $$_1481_252.a.tag,
             value: s,
             children: c
@@ -598,7 +598,7 @@ var p = function (e, t) {
       if ((t = Pe()) !== o) {
         ge = e
         n = t
-        t = $_184.a({
+        t = $$_808_184.a({
           type: $$_1481_252.a.literal,
           value: n
         }, at())
@@ -634,7 +634,7 @@ var p = function (e, t) {
         if (s !== o) {
           ge = t
           c = a
-          n = $_184.a({
+          n = $$_808_184.a({
             type: $$_1481_252.a.argument,
             value: c
           }, at())
@@ -740,7 +740,7 @@ var p = function (e, t) {
                   if (t !== o) {
                     ge = e
                     i = t
-                    t = $_184.a({
+                    t = $$_808_184.a({
                       type: 0,
                       tokens: i,
                       parsedOptions: ct ? d(i) : {}
@@ -915,7 +915,7 @@ var p = function (e, t) {
                     if (n !== o) {
                       ge = t
                       c = n
-                      n = $_184.a({
+                      n = $$_808_184.a({
                         type: 1,
                         pattern: c,
                         parsedOptions: ct ? a(c) : {}
@@ -1104,7 +1104,7 @@ var p = function (e, t) {
                                 if (p !== o) {
                                   ge = t
                                   n = function (e, t, n, o) {
-                                    return $_184.a({
+                                    return $$_808_184.a({
                                       type: $$_1481_252.a.plural,
                                       pluralType: "plural" === t ? "cardinal" : "ordinal",
                                       value: e,
@@ -1261,7 +1261,7 @@ var p = function (e, t) {
                             if (d !== o) {
                               ge = t
                               n = function (e, t) {
-                                return $_184.a({
+                                return $$_808_184.a({
                                   type: $$_1481_252.a.select,
                                   value: e,
                                   options: t.reduce(function (e, t) {
@@ -1345,7 +1345,7 @@ var p = function (e, t) {
         }
         if (n !== o) {
           ge = t
-          n = $_184.a({
+          n = $$_808_184.a({
             type: $$_1481_252.a.pound
           }, at())
         }
@@ -1509,7 +1509,7 @@ var p = function (e, t) {
     if (n !== o) {
       ge = t
       f = n
-      n = $_184.a({
+      n = $$_808_184.a({
         type: $$_1481_252.a.literal,
         value: f.join("")
       }, at())
@@ -1945,7 +1945,7 @@ var p = function (e, t) {
             c = n
             u = a
             it.pop()
-            t = $_184.a({
+            t = $$_808_184.a({
               id: c,
               value: u
             }, at())
@@ -2030,7 +2030,7 @@ var p = function (e, t) {
             c = n
             u = a
             it.pop()
-            t = $_184.a({
+            t = $$_808_184.a({
               id: c,
               value: u
             }, at())
@@ -2659,7 +2659,7 @@ var p = function (e, t) {
 }
 var _ = /(^|[^\\])#/g
 function A(e, t) {
-  t = $_184.a({
+  t = $$_808_184.a({
     normalizeHashtagInPlural: true,
     shouldParseSkeleton: true
   }, t || {})
@@ -2680,7 +2680,7 @@ function A(e, t) {
             if (c) {
               var f = c.value.replace(_, "$1{" + t.value + ", number}")
               var d = p(f);
-              (a$value = a.value).splice.apply(a$value, $_184.c([s, 1], d))
+              (a$value = a.value).splice.apply(a$value, $$_808_184.c([s, 1], d))
             }
             e(a.value)
           })

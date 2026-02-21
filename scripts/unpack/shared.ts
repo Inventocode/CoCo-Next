@@ -23,7 +23,7 @@ unpack({
     externals: [
         { key: 0, source: "react", namedImport: true },
         { key: 1, source: "regenerator-runtime" },
-        { key: 8, source: "classnames"},
+        { key: 8, source: "classnames" },
         { key: 16, source: "react-redux", exportsNameMap: {
             a: "Provider",
             b: "batch",
@@ -76,6 +76,7 @@ unpack({
         5: "/editor/widget/built-in/types",
         13: "/shared/ui/components/index",
         15: "/shared/tools/index",
+        17: "/shared/packages/@crc/blink/src/index",
         312: "/shared/tools/url",
         "28__part-1": "/shared/player/utils",
         23: "/shared/ui/language",
@@ -108,8 +109,10 @@ unpack({
         347: "/shared/widget/custom/external-module",
         540: "/shared/ui/components/dialog/index",
         626: "/editor/ui/dialogs/release-info/styles.module.css",
+        732: "/shared/packages/@crc/blink/src/procedure/blocks",
         841: "/shared/ui/components/iconfont/styles.css",
         868: "/shared/ui/components/dialog/styles.css",
+        1352: "/shared/packages/@crc/blink/package.json",
         1532: ".",
         1571: ".",
         "2636__part-7": "/editor/ui/dialogs/open-project/my/index",

@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
 import * as D from "./6"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -30,7 +30,7 @@ var Yw = memo(function (e) {
     e$onChange("updatedAt", Date.now())
   }
   return React.createElement("div", {
-    className: N($_5261.formItemWrapper, $_5261.tableData)
+    className: Classnames($_5261.formItemWrapper, $_5261.tableData)
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
   }, React.createElement("div", {

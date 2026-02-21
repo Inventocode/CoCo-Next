@@ -7,7 +7,7 @@
 "use strict"
 
 import { m } from "./index__part-1"
-import _ from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { createElement, cloneElement, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_795 from "../795"
@@ -53,7 +53,7 @@ var O = function (e, t) {
     autoComplete: e$autoComplete || "off",
     type: "search",
     autoFocus: e$autoFocus,
-    className: _("".concat(e$prefixCls, "-selection-search-input"), null === (n = A) || undefined === n || null === (n$props = n.props) || undefined === n$props ? undefined : n$props.className),
+    className: Classnames("".concat(e$prefixCls, "-selection-search-input"), null === (n = A) || undefined === n || null === (n$props = n.props) || undefined === n$props ? undefined : n$props.className),
     style: $$_21.a($$_21.a({}, I$props$style), {}, {
       opacity: e$editable ? null : 0
     }),

@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_614 from "../614"
 import * as /* [auto-meaningful-name] */$$_1048_index from "../1048/index"
 import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
 import * as /* [auto-meaningful-name] */$$_486 from "../486"
-import l from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { createElement, isValidElement, Fragment, useContext, useState, createRef, useRef, Children, useEffect, forwardRef } from "react"
 import * as /* [auto-meaningful-name] */$$_107 from "../107"
 import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
@@ -149,7 +149,7 @@ var R = function (e, t) {
       re = "sm"
   }
   var ie = H ? "loading" : e$icon
-  var oe = l(te, (n = {}, $$_35.a(n, "".concat(te, "-").concat(e$type), e$type), $$_35.a(n, "".concat(te, "-").concat(b), "default" !== b && b), $$_35.a(n, "".concat(te, "-").concat(re), re), $$_35.a(n, "".concat(te, "-icon-only"), !e$children && 0 !== e$children && !!ie), $$_35.a(n, "".concat(te, "-background-ghost"), I && !B(e$type)), $$_35.a(n, "".concat(te, "-loading"), H), $$_35.a(n, "".concat(te, "-two-chinese-chars"), Q && ne), $$_35.a(n, "".concat(te, "-block"), F), $$_35.a(n, "".concat(te, "-dangerous"), !!e$danger), $$_35.a(n, "".concat(te, "-rtl"), "rtl" === K$direction), n), e$className)
+  var oe = Classnames(te, (n = {}, $$_35.a(n, "".concat(te, "-").concat(e$type), e$type), $$_35.a(n, "".concat(te, "-").concat(b), "default" !== b && b), $$_35.a(n, "".concat(te, "-").concat(re), re), $$_35.a(n, "".concat(te, "-icon-only"), !e$children && 0 !== e$children && !!ie), $$_35.a(n, "".concat(te, "-background-ghost"), I && !B(e$type)), $$_35.a(n, "".concat(te, "-loading"), H), $$_35.a(n, "".concat(te, "-two-chinese-chars"), Q && ne), $$_35.a(n, "".concat(te, "-block"), F), $$_35.a(n, "".concat(te, "-dangerous"), !!e$danger), $$_35.a(n, "".concat(te, "-rtl"), "rtl" === K$direction), n), e$className)
   var ae = e$icon && !H ? e$icon : createElement(C, {
     existIcon: !!e$icon,
     prefixCls: te,

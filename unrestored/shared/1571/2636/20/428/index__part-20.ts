@@ -9,7 +9,7 @@
 import * as /* [auto-meaningful-name] */$$_$$_6 from "../../6"
 import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
 import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_15 from "../../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -368,7 +368,7 @@ function Cd(e, t, n, r, o) {
   var i
   var s
   if ("number" === typeof t) {
-    if (!["color", "backgroundColor"].includes(r) || "string" !== typeof o || $$_$$_15.pb(o)) {
+    if (!["color", "backgroundColor"].includes(r) || "string" !== typeof o || $$_$$_$$_$$_$$_$$_src_shared_tools_index.pb(o)) {
       var c = null === (i = a.d(e)) || undefined === i ? undefined : i.templateSlotMap
       var l = null === (s = a.d(e)) || undefined === s ? undefined : s.dataSource
       if (c) {

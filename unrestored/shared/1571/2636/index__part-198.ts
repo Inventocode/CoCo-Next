@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$_315 from "./315"
 import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
 import * as Ln from "./35"
 import * as Dn from "./19"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { useContext, Children, createElement, isValidElement } from "react"
 import * as /* [auto-meaningful-name] */$_614 from "./614"
 $_614.a("topLeft", "topCenter", "topRight", "bottomLeft", "bottomCenter", "bottomRight")
@@ -34,10 +34,10 @@ var KM = function (e) {
   var h = n$getPrefixCls("dropdown", e$prefixCls)
   var m = Children.only(e$children)
   var g = $_315.a(m, {
-    className: N("".concat(h, "-trigger"), Ln.a({}, "".concat(h, "-rtl"), "rtl" === n$direction), m.props.className),
+    className: Classnames("".concat(h, "-trigger"), Ln.a({}, "".concat(h, "-rtl"), "rtl" === n$direction), m.props.className),
     disabled: e$disabled
   })
-  var _ = N(e$overlayClassName, Ln.a({}, "".concat(h, "-rtl"), "rtl" === n$direction))
+  var _ = Classnames(e$overlayClassName, Ln.a({}, "".concat(h, "-rtl"), "rtl" === n$direction))
   var v = e$disabled ? [] : e$trigger
   if (v && -1 !== v.indexOf("contextMenu")) {
     t = true

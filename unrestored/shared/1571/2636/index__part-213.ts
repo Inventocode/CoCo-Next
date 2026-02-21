@@ -12,10 +12,10 @@ import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
 import /* [auto-meaningful-name] */Quill from "quill"
 import * as Yr from "./53"
 import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch, useSelector } from "react-redux"
@@ -146,7 +146,7 @@ var kP = memo(function () {
             for (t.s(); !(e = t.n()).done;) {
               var /* [auto-meaningful-name] */e$value = e.value
               if (null === e$value || undefined === e$value ? undefined : e$value.cdnUrl) {
-                te.bb(e$value.id, e$value.cdnUrl)
+                $$_$$_$$_$$_src_shared_tools_index.bb(e$value.id, e$value.cdnUrl)
               }
             }
           } catch (r) {
@@ -244,8 +244,8 @@ var kP = memo(function () {
       }
     }
   }, [])
-  var N = te.H(m, null === m || undefined === m ? undefined : m.closest(".coco-dialog-wrapper"))
-  return React.createElement($_13_index.f, {
+  var N = $$_$$_$$_$$_src_shared_tools_index.H(m, null === m || undefined === m ? undefined : m.closest(".coco-dialog-wrapper"))
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: n$visible,
     withPortal: true,
     onClose: C,
@@ -265,7 +265,7 @@ var kP = memo(function () {
     ref: y
   }))), React.createElement("div", {
     className: $_7071.footer
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     className: $_7071.save,
     type: "primary",
     onClick: T
@@ -274,7 +274,7 @@ var kP = memo(function () {
   }))), React.createElement($_1213.a, {
     placement: "rightBottom",
     visible: l,
-    content: l && React.createElement($_13_index.q, {
+    content: l && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.q, {
       ref: b,
       onChange: j
     })

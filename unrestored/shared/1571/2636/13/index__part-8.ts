@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/sha
 import /* [auto-meaningful-name] */React from "react"
 import { createContext, memo, useState, useEffect, useCallback, useRef, useContext } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "../8"
+import i from "classnames"
 import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
 import "./870"
 var $ = createContext(null)

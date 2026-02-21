@@ -9,7 +9,7 @@
 import * as Tn from "./68"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -47,9 +47,9 @@ var yy = memo(function (e) {
     style: {
       color: e$color
     }
-  }, React.createElement($_13_index.z, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.z, {
     icon: s
-  })), React.createElement($_13_index.j, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-dropdown-down",
     className: $_10551.iconDropdown
   })))

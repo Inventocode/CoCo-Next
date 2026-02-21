@@ -21,10 +21,10 @@ import * as /* [auto-meaningful-name] */$_133 from "./133"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as D from "./6"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as O from "./7"
@@ -193,7 +193,7 @@ var SM = memo(function (e) {
   return React.createElement("div", {
     className: $_137.playerContainer
   }, React.createElement("div", {
-    className: N($_137.playButton, !e$styleList.length && $_137.disabled),
+    className: Classnames($_137.playButton, !e$styleList.length && $_137.disabled),
     onClick: function () {
       var /* [auto-meaningful-name] */e$styleList$length = e$styleList.length
       if (e$styleList$length) {
@@ -220,7 +220,7 @@ var SM = memo(function (e) {
         }
       }
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: _ ? "icon-pause" : "icon-play"
   })), React.createElement("div", {
     className: $_137.intervalContainer
@@ -248,18 +248,18 @@ var SM = memo(function (e) {
     }
   }), React.createElement("span", {
     className: $_137.tips
-  }, u, "ms"), React.createElement($_13_index.g, {
+  }, u, "ms"), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.g, {
     className: $_137.dropdown,
-    overlay: React.createElement($_13_index.l, {
+    overlay: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.l, {
       onClick: function (e) {
         d(e)
       }
     }, [100, 200, 500, 1e3].map(function (e) {
-      return React.createElement($_13_index.m, {
+      return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.m, {
         key: e,
         value: e.toString()
       }, React.createElement("div", {
-        className: N(u === e.toString() && $_137.selected)
+        className: Classnames(u === e.toString() && $_137.selected)
       }, e, "ms"))
     }))
   })))
@@ -391,7 +391,7 @@ function IM(e) {
           return React.createElement("li", Object.assign({
             ref: c$innerRef,
             key: e.id,
-            className: N($_137.styleItem, e.id, e$editingStyleId === e.id && $_137.selected),
+            className: Classnames($_137.styleItem, e.id, e$editingStyleId === e.id && $_137.selected),
             onClick: function () {
               e$setEditingStyleId(e.id)
             }
@@ -400,14 +400,14 @@ function IM(e) {
             onClick: function (e) {
               e$deleteStyle(e, t)
             }
-          }, React.createElement($_13_index.j, {
+          }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
             type: "icon-close-bold"
           })), React.createElement("div", {
             className: $_137.copyStyle,
             onClick: function (e) {
               e$copyStyle(e, t)
             }
-          }, React.createElement($_13_index.j, {
+          }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
             type: "icon-copy"
           })), React.createElement("img", {
             className: $_137.image,
@@ -723,7 +723,7 @@ var kM = memo(function () {
       r.current = false
     }
   }, [])
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     withPortal: true,
     visible: true,
     className: $_137.container,
@@ -816,7 +816,7 @@ var kM = memo(function () {
     }
   }, React.createElement("span", {
     className: $_137.addActionIcon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add"
   })), React.createElement("span", null, $_710$a$formatMessage({
     id: "ActorStyleDialog.addAction"
@@ -845,7 +845,7 @@ var kM = memo(function () {
     type: "button"
   }, React.createElement("div", {
     className: $_137.checkbox
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-style-selected",
     className: $_137.selectedIcon
   })), $_710$a$formatMessage({
@@ -924,10 +924,10 @@ var kM = memo(function () {
       }))
       G(n)
     }
-  }), React.createElement($_13_index.g, {
+  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.g, {
     className: $_137.addStyleContainer,
     showDropdownIcon: false,
-    overlay: React.createElement($_13_index.l, {
+    overlay: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.l, {
       onClick: function (e) {
         if (e === jM.OPEN_RESOURCE_LIBRARY) {
           t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ImageLibrary, function (e) {
@@ -935,9 +935,9 @@ var kM = memo(function () {
           }, true))
         }
       }
-    }, React.createElement($_13_index.m, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.m, {
       value: jM.UPLOAD_FILE
-    }, React.createElement($_13_index.B, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
       className: $_137.uploadBtn,
       multiple: true,
       onChange: function (e) {
@@ -968,14 +968,14 @@ var kM = memo(function () {
         }
       },
       accept: $_133.f
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-upload-image",
       className: $_137.btnIcon
     }), $_710$a$formatMessage({
       id: "uploadImageFile"
-    }))), React.createElement($_13_index.m, {
+    }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.m, {
       value: jM.OPEN_RESOURCE_LIBRARY
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-image-library",
       className: $_137.btnIcon
     }), $_710$a$formatMessage({
@@ -983,14 +983,14 @@ var kM = memo(function () {
     })))
   }, React.createElement("div", {
     className: $_137.addStyle
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     className: $_137.addIcon,
     type: "icon-add"
   }), React.createElement("span", null, $_710$a$formatMessage({
     id: "ActorStyleDialog.addStyle"
   })))))))), React.createElement("footer", {
     className: $_137.footer
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     onClick: te
   }, $_710$a$formatMessage({

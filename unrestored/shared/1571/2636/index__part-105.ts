@@ -13,11 +13,11 @@ import qv from "./88"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as Tn from "./68"
 import * as Et from "./9"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch, useSelector } from "react-redux"
@@ -47,10 +47,10 @@ var wy = memo(function () {
   var /* [auto-meaningful-name] */r$backgroundImageResizeMode = r.backgroundImageResizeMode
   var m = Et.hb(r$backgroundImage || "")
   var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl)
-  return React.createElement($_13_index.h, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.h, {
     "data-updated-at": t
-  }, React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, qv.formWidgetTitle, "changeTitle"),
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, qv.formWidgetTitle, "changeTitle"),
     align: "vertical",
     label: "名称"
   }, React.createElement(Xr, {
@@ -66,8 +66,8 @@ var wy = memo(function () {
     checkValueIsRepeat: function (e) {
       return Et.r(r.id, e)
     }
-  })), React.createElement("div", null, React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, "changeBackgroundColor"),
+  })), React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, "changeBackgroundColor"),
     label: $_710$a$formatMessage({
       id: "color"
     })
@@ -77,7 +77,7 @@ var wy = memo(function () {
     onVisibleChange: function (e) {
       c(e)
     },
-    content: s && React.createElement($_13_index.q, {
+    content: s && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.q, {
       value: r$backgroundColor,
       onChange: function (t) {
         e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundColor", t))
@@ -86,12 +86,12 @@ var wy = memo(function () {
   }, React.createElement("div", {
     className: qv.colorBlock,
     style: {
-      backgroundColor: te.i(r$backgroundColor) ? "#ffffff" : r$backgroundColor
+      backgroundColor: $$_$$_$$_$$_src_shared_tools_index.i(r$backgroundColor) ? "#ffffff" : r$backgroundColor
     }
-  }, te.i(r$backgroundColor) && React.createElement("div", {
+  }, $$_$$_$$_$$_src_shared_tools_index.i(r$backgroundColor) && React.createElement("div", {
     className: qv.slash
-  })))), React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, $_7471.changeImageWrapper),
+  })))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, $_7471.changeImageWrapper),
     align: "vertical",
     label: $_710$a$formatMessage({
       id: "backgroundImage"
@@ -116,8 +116,8 @@ var wy = memo(function () {
       e($$_$$_$$_$$_src_editor_redux_common_actions.Jg(r.id, "backgroundImage", ""))
     },
     fileId: r$backgroundImage
-  })), g && React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper),
+  })), g && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper),
     label: $_710$a$formatMessage({
       id: "adapt"
     }),

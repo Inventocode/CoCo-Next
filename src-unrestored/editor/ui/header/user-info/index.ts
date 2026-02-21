@@ -9,9 +9,9 @@
 import { Ve } from "../../../../../unrestored/shared/1571/2636/index__part-9"
 var Ye
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools_index from "../../../../shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -79,7 +79,7 @@ var Ze = memo(function (e) {
             case 13:
               return e.abrupt("break", 16)
             case 14:
-              window.open($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.D(), "_blank")
+              window.open($$_$$_$$_$$_shared_tools_index.D(), "_blank")
               return e.abrupt("break", 16)
             case 16:
             case "end":
@@ -92,8 +92,8 @@ var Ze = memo(function (e) {
       return e.apply(this, arguments)
     }
   }()
-  var i = React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, null, Qe.map(function (e, t) {
-    return React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+  var i = React.createElement($$_$$_$$_$$_shared_ui_components_index.l, null, Qe.map(function (e, t) {
+    return React.createElement($$_$$_$$_$$_shared_ui_components_index.m, {
       key: t
     }, React.createElement("div", {
       onClick: function () {
@@ -103,18 +103,18 @@ var Ze = memo(function (e) {
   }))
   return r ? React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10511.wrapper
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.g, {
-    overlay: React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.g, {
+    overlay: React.createElement($$_$$_$$_$$_shared_ui_components_index.l, {
       onClick: o
-    }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }, React.createElement($$_$$_$$_$$_shared_ui_components_index.m, {
       value: Ye.ACCOUNT_SETTING
     }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "accountSetting"
-    }))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.y, {
+    }))), React.createElement($$_$$_$$_$$_shared_ui_components_index.y, {
       subMenu: i
     }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "serviceAgreement"
-    }))), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+    }))), React.createElement($$_$$_$$_$$_shared_ui_components_index.m, {
       value: Ye.LOGOUT
     }, React.createElement("div", null, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "logout"

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1068/index")
+var r = require("./1068")
 var i = require("./571")
 Object.defineProperty(exports, "__esModule", {
   value: true

@@ -12,10 +12,10 @@ import * as Gf from "./77"
 import * as /* [auto-meaningful-name] */$_149 from "./149"
 import * as Yr from "./53"
 import * as Et from "./9"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector, useDispatch } from "react-redux"
@@ -116,7 +116,7 @@ var jO = memo(function (e) {
   }
   useEffect(function () {
     var e
-    if (te.U(u)) {
+    if ($$_$$_$$_$$_src_shared_tools_index.U(u)) {
       e = u
     } else {
       var t = Et.hb(u)
@@ -126,7 +126,7 @@ var jO = memo(function (e) {
   }, [u, a])
   useEffect(function () {
     var e
-    if (te.U(g)) {
+    if ($$_$$_$$_$$_src_shared_tools_index.U(g)) {
       e = g
     } else {
       var t = Et.hb(g)
@@ -134,7 +134,7 @@ var jO = memo(function (e) {
     }
     W(e)
     if (b === Gf.b.VERTICAL) {
-      te.gb(e, 90).then(function (e) {
+      $$_$$_$$_$$_src_shared_tools_index.gb(e, 90).then(function (e) {
         return x(e)
       }).catch(function () {
         return x("")
@@ -143,7 +143,7 @@ var jO = memo(function (e) {
   }, [b, g, a])
   useEffect(function () {
     var e
-    if (te.U(v)) {
+    if ($$_$$_$$_$$_src_shared_tools_index.U(v)) {
       e = v
     } else {
       var t = Et.hb(v)
@@ -151,15 +151,15 @@ var jO = memo(function (e) {
     }
     K(e)
     if (y === Gf.b.VERTICAL) {
-      te.gb(e, 90).then(function (e) {
+      $$_$$_$$_$$_src_shared_tools_index.gb(e, 90).then(function (e) {
         return A(e)
       }).catch(function () {
         return A("")
       })
     }
   }, [v, y, a])
-  return React.createElement($_13_index.i, {
-    className: N($_2231.formItemWrapper, $_2231.sliderMode, "changeSliderType")
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_2231.formItemWrapper, $_2231.sliderMode, "changeSliderType")
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
   }, $_710$a$formatMessage({
@@ -170,7 +170,7 @@ var jO = memo(function (e) {
     return React.createElement("div", {
       key: e.value,
       onClick: q.bind(null, e.value),
-      className: N($_2231.typeItem, s === e.value && $_2231.active)
+      className: Classnames($_2231.typeItem, s === e.value && $_2231.active)
     }, $_710$a$formatMessage({
       id: e.label
     }))
@@ -188,7 +188,7 @@ var jO = memo(function (e) {
     },
     params: [l]
   }, IO.map(function (e) {
-    return React.createElement($_13_index.p, {
+    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
       key: e.value,
       value: e.value
     }, e.renderContent(l))
@@ -222,7 +222,7 @@ var jO = memo(function (e) {
       backgroundImage: "url(".concat(y === Gf.b.HORIZONTAL ? V : T, ")")
     }
   }))), React.createElement("div", {
-    className: N($_2231.handleImage, m === Gf.b.VERTICAL && $_2231.rotate),
+    className: Classnames($_2231.handleImage, m === Gf.b.VERTICAL && $_2231.rotate),
     style: {
       width: 20 * d,
       height: 20 * d,
@@ -270,15 +270,15 @@ var NO = memo(function (e) {
   function d(e) {
     e$onChange("value", Number(e))
   }
-  return React.createElement($_13_index.i, {
-    className: N($_2231.formItemWrapper, $_2231.sliderRangeFormItem, $_2231.typeSelector, "changeSliderMode"),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_2231.formItemWrapper, $_2231.sliderRangeFormItem, $_2231.typeSelector, "changeSliderMode"),
     align: "vertical",
     label: $_710$a$formatMessage({
       id: "numberValue"
     })
   }, React.createElement("div", {
-    className: N($_2231.firstRow, $_2231.row)
-  }, React.createElement($_13_index.o, {
+    className: Classnames($_2231.firstRow, $_2231.row)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "minValue"
     }),
@@ -295,7 +295,7 @@ var NO = memo(function (e) {
     ]
   }), React.createElement("div", {
     className: $_2231.space
-  }), React.createElement($_13_index.o, {
+  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "maxValue"
     }),
@@ -318,7 +318,7 @@ var NO = memo(function (e) {
     ]
   })), React.createElement("div", {
     className: $_2231.row
-  }, React.createElement($_13_index.o, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "gap"
     }),
@@ -337,7 +337,7 @@ var NO = memo(function (e) {
     ]
   }), React.createElement("div", {
     className: $_2231.space
-  }), React.createElement($_13_index.o, {
+  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
     label: $_710$a$formatMessage({
       id: "initialValue"
     }),
@@ -368,14 +368,14 @@ var RO = memo(function (e) {
   var i = e$getValue(n) || Gf.b.HORIZONTAL
   var a = e$getValue("size")
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     align: "vertical",
-    className: N($_2231.formItemWrapper, $_2231.sliderDirection, "changeSliderDirection"),
+    className: Classnames($_2231.formItemWrapper, $_2231.sliderDirection, "changeSliderDirection"),
     label: $_710$a$formatMessage({
       id: "direction"
     })
-  }, React.createElement($_13_index.s, {
-    className: N($_2231.radioWrapper, $_2231.sizeRadioBox),
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
+    className: Classnames($_2231.radioWrapper, $_2231.sizeRadioBox),
     value: i,
     onChange: function (e) {
       if (e !== i) {
@@ -402,18 +402,18 @@ var RO = memo(function (e) {
         }
       }
     }
-  }, React.createElement($_13_index.t, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Gf.b.HORIZONTAL,
     key: Gf.b.HORIZONTAL
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: i === Gf.b.HORIZONTAL ? "icon-horizontal-active" : "icon-horizontal",
     className: $_2231.alignIcon
   }), React.createElement("span", null, $_710$a$formatMessage({
     id: "horizontal"
-  }))), React.createElement($_13_index.t, {
+  }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
     value: Gf.b.VERTICAL,
     key: Gf.b.VERTICAL
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: i === Gf.b.VERTICAL ? "icon-vertical-active" : "icon-vertical",
     className: $_2231.alignIcon
   }), React.createElement("span", null, $_710$a$formatMessage({
@@ -435,17 +435,17 @@ var kO = memo(function (e) {
   var p = e$getValue(n)
   p = Math.ceil(p * s)
   var f = function (e) {
-    return te.p(function (e) {
+    return $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
       var t = parseInt(e)
       e$onChange(n, t /= s)
     }, e)
   }
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, "changeFontSize"),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, "changeFontSize"),
     label: $_710$a$formatMessage({
       id: e$formConfig$label || "fontSize"
     })
-  }, React.createElement($_13_index.n, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.n, {
     className: "coco-number-inputRow",
     style: {
       width: 80

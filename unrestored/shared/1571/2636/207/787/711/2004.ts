@@ -4,7 +4,7 @@
  * 模块 ID：2004
  */
 
-var r = require("./1119/1327")
+var r = require("../399/1119/1327")
 module.exports = function (e) {
   if (Array.isArray(e)) {
     return r(e)

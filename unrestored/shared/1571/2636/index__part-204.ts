@@ -9,9 +9,9 @@
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../src/shared/widget/custom/shop"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -229,14 +229,14 @@ var kL = memo(function () {
       return e.apply(this, arguments)
     }
   }()
-  var W = React.createElement("div", null, React.createElement($_13_index.d, {
+  var W = React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "default",
     onClick: function () {
       R([])
     }
   }, $_710$a$formatMessage({
     id: "WidgetMall.clear"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     onClick: G
   }, $_710$a$formatMessage({
@@ -289,7 +289,7 @@ var kL = memo(function () {
       return e.apply(this, arguments)
     }
   }(), [m])
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     withPortal: true,
     visible: e,
     title: $_710$a$formatMessage({
@@ -297,7 +297,7 @@ var kL = memo(function () {
     }),
     footer: W,
     onClose: P,
-    className: N($_2701.widgetMallDialog, 0 !== j.length && $_2701.DialogFooter)
+    className: Classnames($_2701.widgetMallDialog, 0 !== j.length && $_2701.DialogFooter)
   }, i && React.createElement("div", {
     className: $_2701.networkError
   }, React.createElement("img", {
@@ -305,7 +305,7 @@ var kL = memo(function () {
     alt: "networkError"
   }), React.createElement("h3", null, $_710$a$formatMessage({
     id: "WidgetMall.networkError"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: function () {
       L()
     },
@@ -315,7 +315,7 @@ var kL = memo(function () {
   }))), !i && l.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: N($_2701.widgetLabel, m === e.id && $_2701.active),
+      className: Classnames($_2701.widgetLabel, m === e.id && $_2701.active),
       onClick: B.bind(null, e.id)
     }, e.name)
   }), !i && React.createElement("div", {
@@ -329,7 +329,7 @@ var kL = memo(function () {
   }, y.map(function (e) {
     return React.createElement("div", {
       key: e.id,
-      className: N($_2701.widgetCard, j.indexOf(e.id) >= 0 && $_2701.selectedWidgetCard)
+      className: Classnames($_2701.widgetCard, j.indexOf(e.id) >= 0 && $_2701.selectedWidgetCard)
     }, 2 === e.widget_type ? React.createElement("div", {
       className: $_2701.invisibleWidget
     }, React.createElement("div", {
@@ -369,8 +369,8 @@ var kL = memo(function () {
       id: "WidgetMall.added"
     }))) : j.includes(e.id) ? React.createElement("div", {
       onClick: F.bind(null, e.id),
-      className: N($_2701.icon, $_2701.selectedIcon)
-    }, React.createElement($_13_index.j, {
+      className: Classnames($_2701.icon, $_2701.selectedIcon)
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-selected"
     })) : React.createElement($_748_index.a, {
       placement: "bottom",
@@ -380,8 +380,8 @@ var kL = memo(function () {
       })
     }, React.createElement("div", {
       onClick: F.bind(null, e.id),
-      className: N($_2701.icon, $_2701.addIcon)
-    }, React.createElement($_13_index.j, {
+      className: Classnames($_2701.icon, $_2701.addIcon)
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-add"
     })))))
   })))

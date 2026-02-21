@@ -9,10 +9,10 @@
 import { lt, ft } from "./index__part-12"
 var pt
 import * as /* [auto-meaningful-name] */$_390 from "./390"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -172,7 +172,7 @@ var vt = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     className: $_1361.invalidUrlDialog,
     visible: e$visible,
     onClose: e$onClose
@@ -180,7 +180,7 @@ var vt = function (e) {
     id: "OT.urlIsInvalid"
   })), React.createElement("p", null, $_710$a$formatMessage({
     id: "OT.urlIsInvalidDetail"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     onClick: e$onClose
   }, $_710$a$formatMessage({
@@ -190,13 +190,13 @@ var vt = function (e) {
 var bt = function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     className: $_1361.loadingDialog,
     visible: e$visible,
     showCloseButton: false
   }, React.createElement("div", {
     className: $_1361.icon
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-loading2"
   })), React.createElement("p", null, $_710$a$formatMessage({
     id: "OT.isBuildingCollWork"
@@ -209,12 +209,12 @@ var yt = React.memo(function () {
   var t = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  var n = te.q(e).reverse()
+  var n = $$_$$_$$_$$_src_shared_tools_index.q(e).reverse()
   return React.createElement("div", {
     className: $_1361.users
   }, n.map(function (e, n) {
     return n + 1 > 3 ? null : React.createElement("div", {
-      className: N($_1361.headerPhotoBorder, $_1361.user),
+      className: Classnames($_1361.headerPhotoBorder, $_1361.user),
       key: e.id,
       style: {
         borderColor: t.get(e.id)
@@ -237,7 +237,7 @@ var yt = React.memo(function () {
         key: e.id,
         className: $_1361.avatarItem
       }, React.createElement("div", {
-        className: N($_1361.headerPhotoBorder, $_1361.user),
+        className: Classnames($_1361.headerPhotoBorder, $_1361.user),
         key: e.id,
         style: {
           borderColor: t.get(e.id)
@@ -255,7 +255,7 @@ var yt = React.memo(function () {
       }, e.nickname))
     }))
   }, React.createElement("div", {
-    className: N($_1361.count, $_1361.user)
+    className: Classnames($_1361.count, $_1361.user)
   }, React.createElement("div", {
     className: $_1361.countPhoto
   }, n.length))))

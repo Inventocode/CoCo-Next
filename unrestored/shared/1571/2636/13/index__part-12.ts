@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_27 from "../27"
 import /* [auto-meaningful-name] */React from "react"
 import { createRef, memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "../8"
+import i from "classnames"
 import "./872"
 function me(e) {
   return e.target.closest("[data-coco-draggable-index]")

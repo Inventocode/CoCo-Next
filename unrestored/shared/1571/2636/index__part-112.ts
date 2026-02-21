@@ -12,9 +12,9 @@ import { FE } from "./index__part-111"
 import qv from "./88"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -35,8 +35,8 @@ var HE = memo(function (e) {
   var c = undefined === e$formConfig$verticalKey ? "justifyContent" : e$formConfig$verticalKey
   var l = e$getValue(a)
   var u = e$getValue(c)
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, $_15191.content, "changeHorizontalAlign"),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, $_15191.content, "changeHorizontalAlign"),
     label: o,
     align: "vertical"
   }, React.createElement("div", null, React.createElement("div", {
@@ -68,8 +68,8 @@ var VE = function (e) {
   }
   var c = a.id
   var /* [auto-meaningful-name] */a$type = a.type
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper, qv.formWidgetTitle, "changeTitle", k.a({}, qv.formWidgetTitleWithDisableOrVisible, n)),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper, qv.formWidgetTitle, "changeTitle", k.a({}, qv.formWidgetTitleWithDisableOrVisible, n)),
     label: $_710$a$formatMessage({
       id: "WidgetForm.title"
     }),

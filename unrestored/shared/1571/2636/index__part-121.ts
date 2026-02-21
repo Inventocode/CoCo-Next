@@ -10,11 +10,11 @@ var cE
 import * as /* [auto-meaningful-name] */$_135 from "./135"
 import * as Tn from "./68"
 import * as Et from "./9"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector, useDispatch } from "react-redux"
@@ -139,18 +139,18 @@ var KO = memo(function (e) {
       content: React.createElement("div", {
         className: $_2131.soundPopover,
         onClick: M
-      }, React.createElement($_13_index.B, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
         className: $_2131.content,
         onChange: R,
         accept: $_135.h
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-upload"
       }), React.createElement("span", null, $_710$a$formatMessage({
         id: "Resource.upload"
       }))), React.createElement("div", {
         className: $_2131.content,
         onClick: k
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-open-resource-library"
       }), React.createElement("span", null, $_710$a$formatMessage({
         id: "Resource.SoundLibrary"
@@ -165,8 +165,8 @@ var KO = memo(function (e) {
       id: "Resource.Replace"
     })))
   }
-  return React.createElement($_13_index.i, {
-    className: N($_2131.formItemWrapper, $_2131.changeSoundFile)
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames($_2131.formItemWrapper, $_2131.changeSoundFile)
   }, React.createElement("div", {
     className: $_2131.title
   }, $_710$a$formatMessage({
@@ -175,7 +175,7 @@ var KO = memo(function (e) {
     className: $_2131.soundBox
   }, React.createElement("div", {
     tabIndex: -1,
-    className: N($_2131.soundInfo, (null === E || undefined === E ? undefined : E.id) && $_2131.soundBgGround),
+    className: Classnames($_2131.soundInfo, (null === E || undefined === E ? undefined : E.id) && $_2131.soundBgGround),
     onMouseEnter: function () {
       v(true)
     },
@@ -188,15 +188,15 @@ var KO = memo(function (e) {
         A(false)
       }
     }
-  }, (null === E || undefined === E ? undefined : E.id) ? React.createElement(React.Fragment, null, React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
+  }, (null === E || undefined === E ? undefined : E.id) ? React.createElement(React.Fragment, null, React.createElement(React.Fragment, null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-sound",
     className: $_2131.iconSound
   }), React.createElement("div", {
     className: $_2131.soundName
   }, null === E || undefined === E ? undefined : E.name), React.createElement("div", {
     className: $_2131.soundDuration
-  }, te.w(null === E || undefined === E ? undefined : E.duration))), React.createElement("div", {
-    className: N($_2131.playCover, (g || u) && $_2131.visible)
+  }, $$_$$_$$_$$_src_shared_tools_index.w(null === E || undefined === E ? undefined : E.duration))), React.createElement("div", {
+    className: Classnames($_2131.playCover, (g || u) && $_2131.visible)
   }, React.createElement("div", {
     className: $_2131.soundDelate,
     onClick: function () {
@@ -206,27 +206,27 @@ var KO = memo(function (e) {
       d(false)
       e$onChange(n, "")
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-delete"
   })), React.createElement("div", {
     className: $_2131.soundPlayBox,
     onClick: x
   }, u ? React.createElement("div", {
     className: $_2131.soundPauseIconBox
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-sound-pause",
     className: $_2131.soundDefaultIcon
   }), React.createElement("div", {
-    className: N($_2131.progressWrapper, $_2131.rightWrapper)
+    className: Classnames($_2131.progressWrapper, $_2131.rightWrapper)
   }, React.createElement("div", {
-    className: N($_2131.circleProgress, $_2131.rightCircle),
+    className: Classnames($_2131.circleProgress, $_2131.rightCircle),
     style: {
       animationDuration: "".concat(null === E || undefined === E ? undefined : E.duration, "s")
     }
   })), React.createElement("div", {
-    className: N($_2131.progressWrapper, $_2131.leftWrapper)
+    className: Classnames($_2131.progressWrapper, $_2131.leftWrapper)
   }, React.createElement("div", {
-    className: N($_2131.circleProgress, $_2131.leftCircle),
+    className: Classnames($_2131.circleProgress, $_2131.leftCircle),
     style: {
       animationDuration: "".concat(null === E || undefined === E ? undefined : E.duration, "s")
     }
@@ -234,16 +234,16 @@ var KO = memo(function (e) {
     className: $_2131.soundIconBox
   }, React.createElement("div", {
     className: $_2131.soundPlayIconBox
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-sound-play",
     className: $_2131.soundPlayIcon
   })))), React.createElement("div", {
     className: $_2131.soundName
-  }, null === E || undefined === E ? undefined : E.name), L())) : React.createElement(React.Fragment, null, React.createElement($_13_index.j, {
+  }, null === E || undefined === E ? undefined : E.name), L())) : React.createElement(React.Fragment, null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-sound",
     className: $_2131.iconDefaultSound
   }), React.createElement("div", {
-    className: N($_2131.cover, g && $_2131.visible)
+    className: Classnames($_2131.cover, g && $_2131.visible)
   }, L())))))
 })
 var qO = memo(function (e) {
@@ -253,12 +253,12 @@ var qO = memo(function (e) {
   var o = (0, e.getValue)(n)
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
-    className: N($_2131.formItemWrapper, "changeAudioVolume")
+    className: Classnames($_2131.formItemWrapper, "changeAudioVolume")
   }, React.createElement("div", {
     className: "coco-form-item-label"
   }, $_710$a$formatMessage({
     id: "AudioWidget.volume"
-  })), React.createElement($_13_index.x, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.x, {
     className: $_2131.volumeSlider,
     value: o,
     min: $_135.g,
@@ -278,12 +278,12 @@ var XO = memo(function (e) {
   var o = (0, e.getValue)(n)
   var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
   return React.createElement("div", {
-    className: N($_2131.formItemWrapper, "changeAudioVolume")
+    className: Classnames($_2131.formItemWrapper, "changeAudioVolume")
   }, React.createElement("div", {
     className: "coco-form-item-label"
   }, $_710$a$formatMessage({
     id: "AudioWidget.rate"
-  })), React.createElement($_13_index.x, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.x, {
     className: $_2131.volumeSlider,
     value: o,
     min: $_135.e,

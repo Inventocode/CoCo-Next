@@ -13,14 +13,14 @@ import "react"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_206 from "../../../206"
 import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../../../src/shared/widget/custom/storage"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../../../src/shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_8 from "../../../8"
-import /* [auto-meaningful-name] */$$_$$_$$_81 from "../../../8"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
 import * as /* [auto-meaningful-name] */$$_$$_$$_146 from "../../../146"
 import * as /* [auto-meaningful-name] */$$_$$_$$_239 from "../../../239"
@@ -62,7 +62,7 @@ var E = function (e) {
     id: t,
     "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H,
     "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: $$_$$_$$_81($$_$$_$$_90.b, $$_$$_$$_2391.textWidget, $$_$$_$$_11.a({}, $$_$$_$$_2391.hide, !e$visible)),
+    className: Classnames1($$_$$_$$_90.b, $$_$$_$$_2391.textWidget, $$_$$_$$_11.a({}, $$_$$_$$_2391.hide, !e$visible)),
     onClick: function () {
       e$onClick()
     },

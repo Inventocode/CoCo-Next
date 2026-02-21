@@ -26,7 +26,7 @@ import * as i from "./7"
 import * as a from "./33"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
 import * as c from "./53"
-import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
 function d(e, t, n, r, o, i, l, u, d, p, f, h) {
   var m = $$_$$_$$_$$_src_shared_widget_custom_storage.d()
@@ -118,7 +118,7 @@ function f() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch($_57_index.a.serverHost + "/coconut/web/build", {
+            return fetch($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/build", {
               method: "POST",
               credentials: "include",
               body: JSON.stringify({
@@ -159,7 +159,7 @@ function m() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch($_57_index.a.serverHost + "/coconut/web/build/progress?pack_label=" + t, {
+            return fetch($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/build/progress?pack_label=" + t, {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
@@ -192,7 +192,7 @@ function _() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch($_57_index.a.serverHost + "/coconut/web/apk/info/latest?work_id=" + t, {
+            return fetch($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/apk/info/latest?work_id=" + t, {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
@@ -225,7 +225,7 @@ function b() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch($_57_index.a.serverHost + "/coconut/web/apk/pack/stop?pack_label=" + t, {
+            return fetch($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/apk/pack/stop?pack_label=" + t, {
               mode: "cors",
               method: "put",
               cache: "no-cache",
@@ -258,7 +258,7 @@ function E() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch($_57_index.a.serverHost + "/coconut/web/apk/info?pack_label=" + encodeURIComponent(t), {
+            return fetch($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/apk/info?pack_label=" + encodeURIComponent(t), {
               mode: "cors",
               method: "GET",
               cache: "no-cache",
@@ -358,7 +358,7 @@ function A() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return fetch($_57_index.a.serverHost + "/coconut/web/token?work_id=".concat(t), {
+            return fetch($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/token?work_id=".concat(t), {
               mode: "cors",
               method: "GET",
               credentials: "include"
@@ -403,7 +403,7 @@ function j() {
             t$playerUrl = t.playerUrl
             t$workId = t.workId
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($_57_index.a.serverHost + "/coconut/web/work/".concat(t$workId, "/publish"), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/work/".concat(t$workId, "/publish"), {
               name: t$name,
               description: t$description,
               operation: t$operation,
@@ -433,7 +433,7 @@ function R() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index.a.serverHost + "/coconut/web/work/".concat(t, "/info"))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/work/".concat(t, "/info"))
           case 2:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data)
@@ -459,7 +459,7 @@ function x() {
           case 0:
             n = i.length > 1 && undefined !== i[1] ? i[1] : 1
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index.a.serverHost + "/coconut/web/work/".concat(t, "/load?channel=").concat(n))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/work/".concat(t, "/load?channel=").concat(n))
           case 3:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data)
@@ -482,7 +482,7 @@ function M() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($_57_index.a.serverHost + "/coconut/web/work/".concat(t, "/publish_h5"), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/work/".concat(t, "/publish_h5"), {
               bcmc_url: n
             })
           case 2:
@@ -507,7 +507,7 @@ function P() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index.a.serverHost + "/coconut/web/work/archive/list/".concat(t, "?offset=0&limit=").concat(50))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env.a.serverHost + "/coconut/web/work/archive/list/".concat(t, "?offset=0&limit=").concat(50))
           case 2:
             e$sent = e.sent
             return e.abrupt("return", e$sent.data.data.items)

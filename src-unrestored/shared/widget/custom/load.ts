@@ -54,7 +54,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$_externalModule from "./external-module"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_index from "../../../../unrestored/shared/1571/2636/37/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_editor_redux_common_actions from "../../../editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_tools_index from "../../tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */$_shop from "./shop"
 import * as /* [auto-meaningful-name] */$_restrict from "./restrict"
@@ -626,7 +626,7 @@ function H() {
                           e.next = 4
                           break
                         }
-                        return e.abrupt("return", $$_$$_$$_$$_unrestored_shared_1571_2636_15.cb(t))
+                        return e.abrupt("return", $$_$$_tools_index.cb(t))
                       case 4:
                         return e.abrupt("return", Promise.resolve())
                       case 5:

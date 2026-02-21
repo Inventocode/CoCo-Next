@@ -10,8 +10,8 @@ import { rA } from "./index__part-160"
 import * as /* [auto-meaningful-name] */AgGridReact from "ag-grid-react"
 import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -273,7 +273,7 @@ var iB = function () {
       height: P
     }
   }, React.createElement("div", {
-    className: N($_5291.header, "handle")
+    className: Classnames($_5291.header, "handle")
   }, React.createElement("div", {
     className: $_5291.toast
   }, React.createElement(rA, {
@@ -283,7 +283,7 @@ var iB = function () {
     setVisible: Z
   })), React.createElement("div", {
     className: $_5291.name
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-widget-table-data"
   }), React.createElement("span", null, K.name)), React.createElement("div", {
     className: $_5291.actions
@@ -296,14 +296,14 @@ var iB = function () {
   }, React.createElement("div", {
     className: $_5291.closeIconBox,
     onClick: J
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-resetData"
   }))), React.createElement("div", {
     className: $_5291.closeIconBox,
     onClick: function () {
       e($$_$$_$$_$$_src_editor_redux_common_actions.aj(false))
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-close-bold"
   })))), React.createElement(oB, null)))))
 }

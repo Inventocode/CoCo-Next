@@ -9,12 +9,12 @@
 import qC from "./99"
 import * as /* [auto-meaningful-name] */$_238 from "./238"
 import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as te from "../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector, useDispatch } from "react-redux"
@@ -149,7 +149,7 @@ var nT = memo(function () {
       var e = []
       a.forEach(function (t) {
         if ("string" === typeof t) {
-          e.push(te.mb(t))
+          e.push($$_$$_$$_$$_src_shared_tools_index.mb(t))
         } else {
           e.push(t)
         }
@@ -176,8 +176,8 @@ var nT = memo(function () {
       document.body.removeEventListener("paste", e)
     }
   }, [e$visible, T, a])
-  return React.createElement($_13_index.f, {
-    className: N(qC.editListDialog, qC.editDialog),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+    className: Classnames(qC.editListDialog, qC.editDialog),
     visible: e$visible,
     withPortal: true,
     onClose: A
@@ -191,7 +191,7 @@ var nT = memo(function () {
     className: qC.count
   }, React.createElement("span", null, $_710$a$formatMessage({
     id: "itemCount"
-  })), React.createElement($_13_index.k, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     type: "number",
     min: 0,
     max: 1e3,
@@ -200,7 +200,7 @@ var nT = memo(function () {
     className: qC.input,
     defaultValue: a.length || "0",
     dependency: a.length.toString()
-  }), React.createElement($_13_index.d, {
+  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: function () {
       if (!p.current) {
         a.push("")
@@ -218,7 +218,7 @@ var nT = memo(function () {
     },
     type: "primary",
     ref: v
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-add"
   })))), React.createElement("div", {
     className: qC.list
@@ -226,7 +226,7 @@ var nT = memo(function () {
     return React.createElement("li", {
       className: qC.listItem,
       key: t
-    }, React.createElement($_13_index.k, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
       type: "text",
       before: React.createElement("div", {
         className: qC.inputLabel
@@ -256,7 +256,7 @@ var nT = memo(function () {
     className: qC.label
   }, $_710$a$formatMessage({
     id: "variableListEmptyContentLabel"
-  })))), React.createElement($_13_index.d, {
+  })))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     className: qC.save,
     type: "primary",
     onClick: j

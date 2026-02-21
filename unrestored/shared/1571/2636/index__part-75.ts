@@ -11,7 +11,7 @@ import { Am } from "../../../../src/editor/widget/built-in/http-client-and-timer
 import * as rp from "./61"
 import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
 import * as ep from "./4"
-import * as /* [auto-meaningful-name] */$_17_index from "./17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as Et from "./9"
 import * as D from "./6"
@@ -49,13 +49,13 @@ var Nm = {
         n = jm.FAILED
       }
     }
-    if (t && (this.updateShape_(), $_17_index.Blink.events.is_enabled())) {
+    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
       var r = ep.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: n
       })
-      $_17_index.Blink.events.fire(r)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   removeMutation: function (e) {
@@ -70,13 +70,13 @@ var Nm = {
         t = true
       }
     }
-    if (t && (this.updateShape_(), $_17_index.Blink.events.is_enabled())) {
+    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
       var r = ep.c("mutation", {
         block: this,
         old_value: n,
         new_value: undefined
       })
-      $_17_index.Blink.events.fire(r)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   updateShape_: function () {
@@ -90,7 +90,7 @@ var Nm = {
     var s
     var c
     var l = this
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("ERROR_MSG")) {
       this.remove_input("ERROR_MSG")
     }
@@ -106,13 +106,13 @@ var Nm = {
         l.remove_input(e$inputName)
       }
     })
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     if (this.get_input("ERROR")) {
       this.failedConnection = null === (e = this.get_input("ERROR")) || undefined === e || null === (e$connection = e.connection) || undefined === e$connection ? undefined : e$connection.target_connection
       if (this.failedStatement_) {
-        $_17_index.Blink.events.disable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("ERROR")
-        $_17_index.Blink.events.enable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("ERROR")
       }
@@ -122,16 +122,16 @@ var Nm = {
     if (this.get_input("SUCCESS")) {
       this.successConnection = null === (n = this.get_input("SUCCESS")) || undefined === n || null === (n$connection = n.connection) || undefined === n$connection ? undefined : n$connection.target_connection
       if (this.successStatement_) {
-        $_17_index.Blink.events.disable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("SUCCESS")
-        $_17_index.Blink.events.enable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("SUCCESS")
       }
     } else {
       this.successConnection = null
     }
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("SUCCESS_TEXT")) {
       this.remove_input("SUCCESS_TEXT")
     }
@@ -140,7 +140,7 @@ var Nm = {
     }
     this.append_dummy_input("SUCCESS_MUTATION_BTN")
     if (this.successStatement_) {
-      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($_17_index.Blink.Msg.ROOM_SUCCESS_TEXT)
+      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
       this.successInputList.forEach(function (e) {
         var /* [auto-meaningful-name] */e$inputName = e.inputName
         var /* [auto-meaningful-name] */e$default_shadow = e.default_shadow
@@ -159,7 +159,7 @@ var Nm = {
         this.remove_input("FAILED_MUTATION_BTN")
       }
       this.append_dummy_input("FAILED_MUTATION_BTN")
-      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($_17_index.Blink.Msg.ROOM_FAILED_TEXT)
+      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
       this.append_shadow_input("ERROR_MSG", "<shadow type=\"room_error\"/>", "FAILED_MUTATION_BTN")
       var /* [auto-meaningful-name] */f$connection
       var f = this.append_statement_input("ERROR", undefined, "cloud_room_error_DO")
@@ -197,7 +197,7 @@ var Nm = {
         }
       }
     }
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     this.render()
   },
   domToMutation: function (e) {
@@ -263,7 +263,7 @@ var Lm = {
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    return ["<block type=\"room_receive_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE_LIST\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_receive_room_info\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_network_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"room_create_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >").concat($_17_index.Blink.Msg.ROOM_DEFAULT_ROOM_NAME, "</field>\n        </shadow>\n      </value>\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints='1,20,1'>2</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_create_nickname\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NICKNAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($_17_index.Blink.Msg.ROOM_DEFAULT_NICKNAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_get_room_list\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_enter_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($_17_index.Blink.Msg.ROOM_NAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_send_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_exit_room\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"room_get_current_room_name\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_get_current_online_users\" uncache=\"true\">\n      ".concat(t, "\n    </block>")]
+    return ["<block type=\"room_receive_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE_LIST\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_receive_room_info\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_network_error\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"room_create_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_DEFAULT_ROOM_NAME, "</field>\n        </shadow>\n      </value>\n      <value name=\"COUNT\">\n        <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints='1,20,1'>2</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_create_nickname\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NICKNAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_DEFAULT_NICKNAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_get_room_list\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_enter_room\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"ROOM_NAME\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_NAME, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"room_send_message\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"MESSAGE\">\n        <shadow type=\"array_get\"></shadow>\n      </value>\n    </block>"), "<block type=\"room_exit_room\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"room_get_current_room_name\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"room_get_current_online_users\" uncache=\"true\">\n      ".concat(t, "\n    </block>")]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
@@ -760,13 +760,13 @@ var Gm = {
         n = Fm.FAILED
       }
     }
-    if (t && (this.updateShape_(), $_17_index.Blink.events.is_enabled())) {
+    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
       var r = ep.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: n
       })
-      $_17_index.Blink.events.fire(r)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   removeMutation: function (e) {
@@ -781,13 +781,13 @@ var Gm = {
         t = true
       }
     }
-    if (t && (this.updateShape_(), $_17_index.Blink.events.is_enabled())) {
+    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
       var r = ep.c("mutation", {
         block: this,
         old_value: n,
         new_value: undefined
       })
-      $_17_index.Blink.events.fire(r)
+      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   updateShape_: function () {
@@ -801,7 +801,7 @@ var Gm = {
     var s
     var c
     var l = this
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("ERROR_MSG")) {
       this.remove_input("ERROR_MSG")
     }
@@ -817,13 +817,13 @@ var Gm = {
         l.remove_input(e$inputName)
       }
     })
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     if (this.get_input("ERROR")) {
       this.failedConnection = null === (e = this.get_input("ERROR")) || undefined === e || null === (e$connection = e.connection) || undefined === e$connection ? undefined : e$connection.target_connection
       if (this.failedStatement_) {
-        $_17_index.Blink.events.disable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("ERROR")
-        $_17_index.Blink.events.enable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("ERROR")
       }
@@ -833,16 +833,16 @@ var Gm = {
     if (this.get_input("SUCCESS")) {
       this.successConnection = null === (n = this.get_input("SUCCESS")) || undefined === n || null === (n$connection = n.connection) || undefined === n$connection ? undefined : n$connection.target_connection
       if (this.successStatement_) {
-        $_17_index.Blink.events.disable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("SUCCESS")
-        $_17_index.Blink.events.enable()
+        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("SUCCESS")
       }
     } else {
       this.successConnection = null
     }
-    $_17_index.Blink.events.disable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("SUCCESS_TEXT")) {
       this.remove_input("SUCCESS_TEXT")
     }
@@ -851,7 +851,7 @@ var Gm = {
     }
     this.append_dummy_input("SUCCESS_MUTATION_BTN")
     if (this.successStatement_) {
-      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($_17_index.Blink.Msg.ROOM_SUCCESS_TEXT)
+      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
       this.successInputList.forEach(function (e) {
         var /* [auto-meaningful-name] */e$inputName = e.inputName
         var /* [auto-meaningful-name] */e$default_shadow = e.default_shadow
@@ -870,7 +870,7 @@ var Gm = {
         this.remove_input("FAILED_MUTATION_BTN")
       }
       this.append_dummy_input("FAILED_MUTATION_BTN")
-      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($_17_index.Blink.Msg.ROOM_FAILED_TEXT)
+      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
       this.append_shadow_input("ERROR_MSG", "<shadow type=\"cloudDB_fail_result\"/>", "FAILED_MUTATION_BTN")
       var /* [auto-meaningful-name] */f$connection
       var f = this.append_statement_input("ERROR", undefined, "cloudDB_error_DO")
@@ -908,7 +908,7 @@ var Gm = {
         }
       }
     }
-    $_17_index.Blink.events.enable()
+    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     this.render()
   },
   domToMutation: function (e) {

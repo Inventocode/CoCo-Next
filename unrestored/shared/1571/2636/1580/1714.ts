@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
+var r = require("./1662/86")
 var o = require("./1724/1096")
-var i = require("./1723/424")
-var a = require("./1785/310")
+var i = require("./1720/424")
+var a = require("./1282/310")
 r({
   target: "String",
   proto: true,

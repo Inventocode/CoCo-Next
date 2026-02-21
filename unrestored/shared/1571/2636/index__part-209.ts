@@ -9,8 +9,8 @@
 import { we } from "./index__part-6"
 import * as /* [auto-meaningful-name] */$_557 from "./557"
 import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import /* [auto-meaningful-name] */React from "react"
@@ -60,14 +60,14 @@ var eP = memo(function (e) {
           return e.preventDefault()
         }
       }, React.createElement("div", {
-        className: N($_1601.menuItem, $_1601.delete),
+        className: Classnames($_1601.menuItem, $_1601.delete),
         onMouseDown: a
       }, $_710$a$formatMessage({
         id: "cloudDBManager.delete"
       })))
     }
   }), React.createElement("div", {
-    className: N($_1601.item, e.isSelected && $_1601.selected),
+    className: Classnames($_1601.item, e.isSelected && $_1601.selected),
     onClick: function (t) {
       e.handleClick(e.id)
       t.stopPropagation()
@@ -111,17 +111,17 @@ var nP = memo(function (e) {
       }, function (e) {
         switch (e) {
           case "boolean":
-            return React.createElement($_13_index.j, {
+            return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
               type: "icon-grid-boolean",
               className: $_1601.columnIcon
             })
           case "string":
-            return React.createElement($_13_index.j, {
+            return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
               type: "icon-grid-string",
               className: $_1601.columnIcon
             })
           case "number":
-            return React.createElement($_13_index.j, {
+            return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
               type: "icon-grid-number",
               className: $_1601.columnIcon
             })
@@ -171,7 +171,7 @@ var nP = memo(function (e) {
     onClick: function () {
       e.handleEdit(e.id)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     className: $_1601.icon,
     type: "icon-edit"
   }), $_710$a$formatMessage({

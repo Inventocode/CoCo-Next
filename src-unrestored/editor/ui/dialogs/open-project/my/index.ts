@@ -13,13 +13,13 @@ var Oe
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../../../unrestored/shared/1571/2636/297"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../../../unrestored/shared/1571/2636/15"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_tools_index from "../../../../../shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_redux_common_actions from "../../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_components_index from "../../../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_language from "../../../../../shared/ui/language"
@@ -29,7 +29,7 @@ import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useRef, useCallback, useEffect } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288 from "../../../../../../unrestored/shared/1571/2636/288"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_player_audit from "../../../../../shared/player/audit"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181 from "../../../../../../unrestored/shared/1571/2636/418"
 !function (e) {
@@ -74,7 +74,7 @@ function Ne(e) {
     return e
   }
   return React.createElement("div", {
-    className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.item),
+    className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.item),
     onClick: function () {
       e$onClick(e$project.id, e$project.name, e$project.updateTime)
     },
@@ -84,7 +84,7 @@ function Ne(e) {
   }, React.createElement("img", {
     src: null === (t = e$project.coverUrl || e$project.previewUrl) || undefined === t ? undefined : t.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/"),
     alt: e$project.name
-  })), React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.a, {
+  })), React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.a, {
     className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.name,
     text: e$project.name
   }), React.createElement("p", {
@@ -104,27 +104,27 @@ function Ne(e) {
     zIndex: 100,
     content: React.createElement("div", {
       className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuContent
-    }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.l, {
+    }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.l, {
       onClick: function (e) {
         if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
           e$onDelete(e$project.id, e$project.name, e$project.isCollWork || e$filterType === Oe.COLL)
         }
       }
     }, c().map(function (e, t) {
-      return React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.m, {
+      return React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.m, {
         value: e,
         key: t
       }, React.createElement("span", null, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
         id: "MyProject." + e
       })))
     })))
-  }, React.createElement("div", null, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement("div", null, React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-more"
   })))), React.createElement("div", {
     className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.badgeWrapper
-  }, (e$project.isCollWork || e$filterType === Oe.COLL) && "loaded" === e$status && React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, (e$project.isCollWork || e$filterType === Oe.COLL) && "loaded" === e$status && React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-collaborator"
-  }), !!e$project.publishedTime && React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }), !!e$project.publishedTime && React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-publish"
   })))
 }
@@ -174,7 +174,7 @@ var Re = memo(function (e) {
                 break
               }
               e.next = 8
-              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_288.b()
+              return $$_$$_$$_$$_$$_shared_player_audit.b()
             case 8:
               if (!(!e.sent.includes(Number(t)) && !e$sent$data.is_author && e$sent$data.is_coll_work && e$sent$data.content && e$sent$data.content.unsafeExtensionWidgetList && e$sent$data.content.unsafeExtensionWidgetList.length > 0)) {
                 e.next = 12
@@ -186,7 +186,7 @@ var Re = memo(function (e) {
                 }),
                 title: "",
                 content: React.createElement("div", null, "作品使用了未审核的自定义控件，需将控件提交至", React.createElement("a", {
-                  href: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.b,
+                  href: $$_$$_$$_$$_$$_shared_tools_index.b,
                   target: "__blank",
                   rel: "noopener noreferrer"
                 }, "Coco控件商城-投稿"), "，并等待审核通过后才能进行协作。"),
@@ -489,7 +489,7 @@ var Re = memo(function (e) {
     return React.createElement("div", {
       key: e,
       onClick: U.bind(null, e),
-      className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.filterItem, b === e && $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.active)
+      className: Classnames($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.filterItem, b === e && $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.active)
     }, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
       id: "MyProject.".concat(e)
     }))
@@ -502,7 +502,7 @@ var Re = memo(function (e) {
     type: l
   }), i.length > 0 && React.createElement("div", {
     className: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.main
-  }, React.createElement($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.v, {
+  }, React.createElement($$_$$_$$_$$_$$_shared_ui_components_index.v, {
     offsetY: 300,
     height: 450,
     onScrollBottom: function () {

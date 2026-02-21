@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
-var o = require("./1785/271")
-var i = require("./1677/955")
-var a = require("./1771/309")
+var r = require("./1662/86")
+var o = require("./1662/271")
+var i = require("./1662/955")
+var a = require("./1662/309")
 var s = require("./1581/632")
 var c = require("./1625/497")
-var /* [auto-meaningful-name] */require$_1648_386_index$f = require("./1648/386/index").f
+var /* [auto-meaningful-name] */require$_1581_386$f = require("./1581/386").f
 if (o) {
   r({
     target: "Object",
@@ -24,7 +24,7 @@ if (o) {
       var n = a(this)
       var r = s(e)
       do {
-        if (t = require$_1648_386_index$f(n, r)) {
+        if (t = require$_1581_386$f(n, r)) {
           return t.get
         }
       } while (n = c(n))

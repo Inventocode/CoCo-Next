@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
@@ -131,7 +131,7 @@ var PI = function (e) {
     onClick: function () {
       d(true)
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-edit"
   }))))
 }
@@ -239,12 +239,12 @@ var BI = memo(function () {
       }))
     }
   }
-  var L = React.createElement("div", null, React.createElement($_13_index.d, {
+  var L = React.createElement("div", null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "default",
     onClick: M
   }, $_710$a$formatMessage({
     id: "cancel"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     disabled: l,
     onClick: function () {
@@ -289,7 +289,7 @@ var BI = memo(function () {
   }, $_710$a$formatMessage({
     id: "confirm"
   })))
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: e$visible,
     className: $_6191.dataViewerGrid,
     title: React.createElement(PI, {

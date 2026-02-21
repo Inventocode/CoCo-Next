@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_55 from "../../../55"
 import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_206 from "../../../206"
-import * as /* [auto-meaningful-name] */$$_$$_$$_15 from "../../../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useCallback, useEffect } from "react"
@@ -132,7 +132,7 @@ _a = memo(function (e) {
         }
       },
       onTouchStart: function (e) {
-        if ($$_$$_$$_15.W()) {
+        if ($$_$$_$$_$$_$$_$$_$$_src_shared_tools_index.W()) {
           var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
           if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
             $$_$$_index.emitScreenPressIn(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)
@@ -143,7 +143,7 @@ _a = memo(function (e) {
         }
       },
       onTouchMove: function (e) {
-        if ($$_$$_$$_15.W()) {
+        if ($$_$$_$$_$$_$$_$$_$$_src_shared_tools_index.W()) {
           var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
           if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
             r.current.x = e.targetTouches[0].clientX
@@ -152,7 +152,7 @@ _a = memo(function (e) {
         }
       },
       onTouchEnd: function (e) {
-        if ($$_$$_$$_15.W()) {
+        if ($$_$$_$$_$$_$$_$$_$$_src_shared_tools_index.W()) {
           var /* [auto-meaningful-name] */e$target$dataset$screenId = e.target.dataset.screenId
           if (null === e$target$dataset$screenId || undefined === e$target$dataset$screenId ? undefined : e$target$dataset$screenId.startsWith($$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D)) {
             $$_$$_index.emitScreenPressOut(t, e.targetTouches[0].clientX, e.targetTouches[0].clientY)

@@ -4,7 +4,7 @@
  * 模块 ID：1240
  */
 
-var r = require("../../1785/334")
+var r = require("../../1282/334")
 var o = require("../441")
 var /* [auto-meaningful-name] */require$$_$$_1761_828$indexOf = require("../../1761/828").indexOf
 var a = require("../827")

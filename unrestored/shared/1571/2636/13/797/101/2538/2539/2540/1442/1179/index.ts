@@ -5,7 +5,7 @@
  */
 
 var r = require("./2517")
-var i = require("./1445")
+var i = require("../../2547/1456/1445")
 var /* [auto-meaningful-name] */Object$prototype$propertyIsEnumerable = Object.prototype.propertyIsEnumerable
 var /* [auto-meaningful-name] */Object$getOwnPropertySymbols = Object.getOwnPropertySymbols
 var s = Object$getOwnPropertySymbols ? function (e) {

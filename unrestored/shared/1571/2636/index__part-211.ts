@@ -8,8 +8,8 @@
 
 var tP
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useSelector, useDispatch } from "react-redux"
@@ -55,7 +55,7 @@ var _P = memo(function () {
     r(tP.STEP0)
     u($$_$$_$$_$$_src_editor_redux_common_actions.kj(false, "", function () {}))
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: o$visible,
     className: $_3851.cloudDBPublishDialog,
     onClose: d
@@ -106,11 +106,11 @@ var _P = memo(function () {
   }, function () {
     if (n !== tP.STEP0) {
       return React.createElement(React.Fragment, null, React.createElement("div", {
-        className: N($_3851.round, n === tP.STEP1 && $_3851.selected)
+        className: Classnames($_3851.round, n === tP.STEP1 && $_3851.selected)
       }), React.createElement("div", {
-        className: N($_3851.round, n === tP.STEP2 && $_3851.selected)
+        className: Classnames($_3851.round, n === tP.STEP2 && $_3851.selected)
       }), React.createElement("div", {
-        className: N($_3851.round, n === tP.STEP3 && $_3851.selected)
+        className: Classnames($_3851.round, n === tP.STEP3 && $_3851.selected)
       }))
     }
   }()), React.createElement("div", {
@@ -136,7 +136,7 @@ var _P = memo(function () {
     }
   }()), React.createElement("div", {
     className: $_3851.btn
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     onClick: function () {
       if (n !== tP.STEP0) {

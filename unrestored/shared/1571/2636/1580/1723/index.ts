@@ -6,15 +6,15 @@
 
 "use strict"
 
-var r = require("./960")
+var r = require("../1720/960")
 var o = require("./1094")
 var i = require("../1282/240")
-var a = require("./424")
+var a = require("../1720/424")
 var s = require("./956")
-var c = require("./1098")
-var l = require("../1775/256")
-var u = require("../1785/310")
-var d = require("./961")
+var c = require("../1720/1098")
+var l = require("../1771/256")
+var u = require("../1282/310")
+var d = require("../1720/961")
 var p = require("./958")
 var f = require("./1095")
 var h = require("../1659/168")

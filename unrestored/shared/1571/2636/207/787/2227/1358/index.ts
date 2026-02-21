@@ -8,15 +8,15 @@
 
 var r = require("../../../../1058/1393/1143/712/index")
 var i = require("../../../../1058/1393/1143/532")
-var o = require("../../../../20/791/2385/283/index")
-var a = require("../../../../20/791/2385/284/index")
+var o = require("../../../../1058/1393/1143/283/index")
+var a = require("../../../../1058/1393/1143/284/index")
 var s = require("../../180")
 var c = require("../../204")
 var /* [auto-meaningful-name] */require$_1130_index$Syntax = require("./1130/index").Syntax
 var l = require("../1131")
 var f = require("../978")
 var /* [auto-meaningful-name] */require$_1359$Definition = require("./1359").Definition
-var h = require("../../../../1058/1393/573")
+var h = require("../../../../1058/1393/573/index")
 function p(e) {
   return e.type === f.ClassName || e.type === f.Variable && "var" !== e.parent.kind
 }

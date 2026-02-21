@@ -5,5 +5,5 @@
  */
 
 var r = require("../1648/714")
-var o = require("../1782/194")
+var o = require("../1785/194")
 module.exports = "process" == r(o.process)

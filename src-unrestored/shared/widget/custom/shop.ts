@@ -20,8 +20,8 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"
 import * as /* [auto-meaningful-name] */$_type from "./type"
 import * as /* [auto-meaningful-name] */$$_$$_utils_network_axiosWithCredentials from "../../utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_57_index from "../../../../unrestored/shared/1571/2636/57/index"
-var d = "".concat($$_$$_$$_$$_unrestored_shared_1571_2636_57_index.a.serverHost, "/coconut")
+import * as /* [auto-meaningful-name] */$$_$$_env from "../../env"
+var d = "".concat($$_$$_env.a.serverHost, "/coconut")
 function p() {
   return f.apply(this, arguments)
 }
@@ -227,7 +227,7 @@ function O(e, t) {
         o = 3
       }
     }
-    $$_$$_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_unrestored_shared_1571_2636_57_index.a.serverHost + "/data-center/widget", {
+    $$_$$_utils_network_axiosWithCredentials.a.post($$_$$_env.a.serverHost + "/data-center/widget", {
       widget_code: e,
       widget_type: n.isInvisibleWidget ? 2 : 1,
       source_type: o,
@@ -248,7 +248,7 @@ function C() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_unrestored_shared_1571_2636_57_index.a.serverHost + "/data-center/widget/total", {
+            return $$_$$_utils_network_axiosWithCredentials.a.get($$_$$_env.a.serverHost + "/data-center/widget/total", {
               params: {
                 widget_code_list: t.join(",")
               }

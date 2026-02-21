@@ -26,9 +26,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_26
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../unrestored/shared/1571/2636/190"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_redux_common_actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../../../unrestored/shared/1571/2636/13/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import { useDispatch, useSelector, batch } from "react-redux"
@@ -139,7 +139,7 @@ var Xr = React.forwardRef(function (e, t) {
     }
   }
   return React.createElement("input", {
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111.input, e$className, {
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111.input, e$className, {
       "coco-input-warning-animation": b
     }),
     ref: w,
@@ -216,7 +216,7 @@ var Qr = function (e) {
   return React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.collaboration,
     title: c
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-collaborate"
   }))
 }
@@ -321,7 +321,7 @@ var Jr = React.memo(function (e) {
   }, [e$canEdit])
   return React.createElement("div", {
     ref: v,
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.selected, e$selected)),
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.selected, e$selected)),
     key: e$screen.id
   }, React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.view
@@ -335,7 +335,7 @@ var Jr = React.memo(function (e) {
       e.stopPropagation()
       e$onDeleteIconClick(e$screen)
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-delete-bold"
   })), !e$readonly && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.copy,
@@ -353,7 +353,7 @@ var Jr = React.memo(function (e) {
         m($$_$$_$$_redux_common_actions.Df(e$screen.id))
       }
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-copy"
   })), !!u && React.createElement(Qr, {
     screenId: e$screen.id
@@ -1485,7 +1485,7 @@ var to = memo(function () {
         n$current1.hideContent()
       }
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-close"
   })), React.createElement("section", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.popoverBody,
@@ -1549,7 +1549,7 @@ var to = memo(function () {
         c(r.size)
       }
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-add2",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.addBtn
   }))))
@@ -1563,8 +1563,8 @@ var to = memo(function () {
       width: v
     }
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.stageMask, O && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.visible)
-  }), React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.r, {
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.stageMask, O && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.visible)
+  }), React.createElement($$_$$_$$_$$_shared_ui_components_index.r, {
     content: G,
     onOpen: function () {
       w(true)
@@ -1575,8 +1575,8 @@ var to = memo(function () {
     autoClose: false,
     ref: n
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.screenIconBox, !j && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.line)
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.screenIconBox, !j && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.line)
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-screen-manage",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.screenIcon
   }), React.createElement("span", {
@@ -1586,7 +1586,7 @@ var to = memo(function () {
   })))), !j && React.createElement("div", {
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.screenIndexBox
   }, React.createElement("div", {
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.prev, d <= 0 && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.hide),
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.prev, d <= 0 && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.hide),
     onClick: function () {
       var /* [auto-meaningful-name] */T$current
       if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1596,11 +1596,11 @@ var to = memo(function () {
         })
       }
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-pick-up",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.prevIcon
   })), React.createElement("div", {
-    className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.next, d + v - 108 >= 38 * r.size && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.hide),
+    className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.next, d + v - 108 >= 38 * r.size && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.hide),
     onClick: function () {
       var /* [auto-meaningful-name] */T$current
       if (!(null === (T$current = T.current) || undefined === T$current)) {
@@ -1610,7 +1610,7 @@ var to = memo(function () {
         })
       }
     }
-  }, React.createElement($$_$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_shared_ui_components_index.j, {
     type: "icon-pick-up",
     className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.nextIcon
   })), React.createElement("div", {
@@ -1619,7 +1619,7 @@ var to = memo(function () {
   }, r.map(function (e, t) {
     return React.createElement("div", {
       id: "screen_index_".concat(t),
-      className: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.index, A === t && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.active),
+      className: Classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.index, A === t && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_2121.active),
       key: t,
       onClick: W.bind(null, t)
     }, t + 1)

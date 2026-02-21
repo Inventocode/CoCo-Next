@@ -8,7 +8,7 @@
 
 var r = require("../../../180")
 var i = require("../../../204")
-var o = require("../../../../../1058/1393/573")
+var o = require("../../../../../1058/1393/573/index")
 var /* [auto-meaningful-name] */require$$_1374$isCommentToken = require("../1374").isCommentToken
 var s = require("./2295/index")
 var c = require("./1140/index")

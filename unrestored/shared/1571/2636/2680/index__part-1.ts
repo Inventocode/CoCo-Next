@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */$$_616_802 from "../616/802"
 import * as /* [auto-meaningful-name] */$$_616_index from "../616/index"
 import * as /* [auto-meaningful-name] */$_615 from "./615"
 import * as /* [auto-meaningful-name] */$$_803 from "../803"
-import c from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_1542 from "./1542"
 import { useContext, createElement, Fragment } from "react"
 import * as /* [auto-meaningful-name] */$$_19 from "../19"
@@ -97,7 +97,7 @@ var y = function (e) {
   }, e$closeIcon || createElement($$_803.a, {
     className: "".concat(R, "-close-icon")
   }))
-  var M = c(e$wrapClassName, (t = {}, $$_35.a(t, "".concat(R, "-centered"), !!e$centered), $$_35.a(t, "".concat(R, "-wrap-rtl"), "rtl" === n$direction), t))
+  var M = Classnames(e$wrapClassName, (t = {}, $$_35.a(t, "".concat(R, "-centered"), !!e$centered), $$_35.a(t, "".concat(R, "-wrap-rtl"), "rtl" === n$direction), t))
   return createElement($_1542.a, $$_19.a({}, I, {
     getContainer: undefined === e$getContainer ? n$getPopupContainer : e$getContainer,
     prefixCls: R,

@@ -9,8 +9,8 @@
 import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
 import * as K from "./18"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
@@ -182,9 +182,9 @@ var ZC = memo(function () {
         id: "object.globalObject"
       })
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: e$visible,
-    className: N(qC.nameDialog),
+    className: Classnames(qC.nameDialog),
     withPortal: true,
     onClose: P
   }, React.createElement($_188.a, {
@@ -201,10 +201,10 @@ var ZC = memo(function () {
   }, {
     currentScreenIndex: D + 1
   })), React.createElement("div", {
-    className: N(qC.inputWrapper, u && qC.inputWaringWrapper)
+    className: Classnames(qC.inputWrapper, u && qC.inputWaringWrapper)
   }, React.createElement("span", null, $_710$a$formatMessage({
     id: "name"
-  })), React.createElement($_13_index.k, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
     ref: k,
     warning: !!u,
     onChange: L,
@@ -224,12 +224,12 @@ var ZC = memo(function () {
     className: qC.propertyBox,
     onMouseUp: G,
     onMouseDown: W
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     shape: "square",
     icon: "icon-style-selected",
     className: A === K.i.GLOBAL ? qC.active : "",
     onClick: V.bind(null, K.i.GLOBAL)
-  }, X), React.createElement($_13_index.d, {
+  }, X), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     shape: "square",
     icon: "icon-style-selected",
     className: A === K.i.SCREEN ? qC.active : "",
@@ -240,7 +240,7 @@ var ZC = memo(function () {
       position: "relative",
       marginRight: "4px"
     }
-  }, React.createElement($_13_index.j, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     className: "coco-iconfont-screen-bg",
     type: D > 8 ? "icon-screen-variable-plus" : "icon-screen-variable"
   }), React.createElement("span", {
@@ -260,11 +260,11 @@ var ZC = memo(function () {
     className: qC.confirmBox,
     onMouseUp: G,
     onMouseDown: W
-  }, React.createElement($_13_index.d, {
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: P
   }, $_710$a$formatMessage({
     id: "cancel"
-  })), React.createElement($_13_index.d, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: F,
     type: "primary",
     disabled: !!u || !g

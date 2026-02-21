@@ -8,8 +8,8 @@
 
 import { py } from "./index__part-102"
 import qv from "./88"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -26,7 +26,7 @@ var _w = memo(function (e) {
   var a = {
     backgroundColor: o
   }
-  return React.createElement($_13_index.i, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
     className: qv.formItemWrapper,
     label: i,
     align: "vertical"
@@ -50,17 +50,17 @@ var _w = memo(function (e) {
   })), React.createElement("div", {
     className: qv.textWrapper
   }, React.createElement("div", {
-    className: N(qv.line, qv.firstLine),
+    className: Classnames(qv.line, qv.firstLine),
     style: a
   }), React.createElement("div", {
-    className: N(qv.line, qv.secondLine),
+    className: Classnames(qv.line, qv.secondLine),
     style: a
   })), r === $_189.b.styleA ? React.createElement("div", {
     className: qv.buttonWrapper
   }, React.createElement("div", {
-    className: N(qv.button, qv.secondary)
+    className: Classnames(qv.button, qv.secondary)
   }, "BUTTON"), React.createElement("div", {
-    className: N(qv.button, qv.primary),
+    className: Classnames(qv.button, qv.primary),
     style: a
   }, "BUTTON")) : React.createElement("div", {
     className: qv.textButtonWrapper
@@ -84,8 +84,8 @@ var vw = memo(function (e) {
   var c = (0, $_710.a().formatMessage)({
     id: e$formConfig.label || "options"
   })
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper),
     label: c,
     align: "horizontal"
   }, React.createElement(py, {
@@ -97,7 +97,7 @@ var vw = memo(function (e) {
     value: a,
     optionLabelProp: "label",
     listHeight: 160,
-    suffixIcon: React.createElement($_13_index.j, {
+    suffixIcon: React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-dropdown-down"
     })
   }, s.map(function (e) {

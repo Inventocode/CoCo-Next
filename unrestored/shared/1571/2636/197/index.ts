@@ -23,14 +23,14 @@ import * as /* [auto-meaningful-name] */$_274 from "./274"
 import * as /* [auto-meaningful-name] */$_483_index from "./483/index"
 import * as p from "../9"
 import * as /* [auto-meaningful-name] */$$_64 from "../64"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$$_57_index from "../../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_env from "../../../../../src/shared/env"
 var g = new $_483_index.a({
-  env: $$_57_index.a.env,
-  projectName: $$_57_index.a.productCode,
+  env: $$_$$_$$_$$_$$_src_shared_env.a.env,
+  projectName: $$_$$_$$_$$_$$_src_shared_env.a.productCode,
   config: {
-    pid: $$_57_index.a.pid,
-    api: $$_57_index.a.openServiceHost
+    pid: $$_$$_$$_$$_$$_src_shared_env.a.pid,
+    api: $$_$$_$$_$$_$$_src_shared_env.a.openServiceHost
   }
 })
 var _ = function (e) {
@@ -62,7 +62,7 @@ function b() {
             e.next = 4
             return new Promise(function (e, o) {
               g.create(t, {
-                filename: "".concat($$_57_index.a.productCode, "/").concat($$_64.a(n), "_").concat(Date.now()) + $$_15.I(r),
+                filename: "".concat($$_$$_$$_$$_$$_src_shared_env.a.productCode, "/").concat($$_64.a(n), "_").concat(Date.now()) + $$_$$_$$_$$_$$_src_shared_tools_index.I(r),
                 onsuccess: function (t) {
                   return e(t)
                 },
@@ -120,20 +120,20 @@ function O() {
               e.next = 16
               break
             }
-            if (a = null, !$$_15.R(t$source)) {
+            if (a = null, !$$_$$_$$_$$_$$_src_shared_tools_index.R(t$source)) {
               e.next = 7
               break
             }
-            a = $$_15.o(t$source, t.id)
+            a = $$_$$_$$_$$_$$_src_shared_tools_index.o(t$source, t.id)
             e.next = 11
             break
           case 7:
-            if (!$$_15.P(t$source)) {
+            if (!$$_$$_$$_$$_$$_src_shared_tools_index.P(t$source)) {
               e.next = 11
               break
             }
             e.next = 10
-            return $$_15.f(t$source, t.id)
+            return $$_$$_$$_$$_$$_src_shared_tools_index.f(t$source, t.id)
           case 10:
             a = e.sent
           case 11:
@@ -218,20 +218,20 @@ function S() {
               e.next = 16
               break
             }
-            if (a = null, !$$_15.R(t$source)) {
+            if (a = null, !$$_$$_$$_$$_$$_src_shared_tools_index.R(t$source)) {
               e.next = 7
               break
             }
-            a = $$_15.o(t$source, t.id)
+            a = $$_$$_$$_$$_$$_src_shared_tools_index.o(t$source, t.id)
             e.next = 11
             break
           case 7:
-            if (!$$_15.P(t$source)) {
+            if (!$$_$$_$$_$$_$$_src_shared_tools_index.P(t$source)) {
               e.next = 11
               break
             }
             e.next = 10
-            return $$_15.g(t$source, t.id)
+            return $$_$$_$$_$$_$$_src_shared_tools_index.g(t$source, t.id)
           case 10:
             a = e.sent
           case 11:
@@ -270,7 +270,7 @@ function I() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (n = $$_15.m(t), "screenshot.png", !n) {
+            if (n = $$_$$_$$_$$_$$_src_shared_tools_index.m(t), "screenshot.png", !n) {
               e.next = 10
               break
             }
@@ -330,20 +330,20 @@ function R() {
               e.next = 16
               break
             }
-            if (a = null, !$$_15.R(t$source)) {
+            if (a = null, !$$_$$_$$_$$_$$_src_shared_tools_index.R(t$source)) {
               e.next = 7
               break
             }
-            a = $$_15.o(t$source, t.name)
+            a = $$_$$_$$_$$_$$_src_shared_tools_index.o(t$source, t.name)
             e.next = 11
             break
           case 7:
-            if (!$$_15.P(t$source)) {
+            if (!$$_$$_$$_$$_$$_src_shared_tools_index.P(t$source)) {
               e.next = 11
               break
             }
             e.next = 10
-            return $$_15.f(t$source, t.name)
+            return $$_$$_$$_$$_$$_src_shared_tools_index.f(t$source, t.name)
           case 10:
             a = e.sent
           case 11:

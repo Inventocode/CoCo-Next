@@ -8,7 +8,7 @@
 
 import { Z } from "./index__part-2"
 import * as /* [auto-meaningful-name] */$$_49 from "../49"
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 import * as /* [auto-meaningful-name] */$$_39 from "../39"
 import * as /* [auto-meaningful-name] */$$_27 from "../27"
@@ -68,7 +68,7 @@ var $ = new (function () {
               switch (e.prev = e.next) {
                 case 0:
                   e.next = 2
-                  return $$_15.lb(500)
+                  return $$_$$_$$_$$_$$_src_shared_tools_index.lb(500)
                 case 2:
                   this.disconnect()
                   e.next = 5

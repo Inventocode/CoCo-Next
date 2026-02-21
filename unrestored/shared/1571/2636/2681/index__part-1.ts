@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */$_275 from "./275"
 import * as /* [auto-meaningful-name] */$_273 from "./273"
-import * as /* [auto-meaningful-name] */$_808 from "./808"
+import * as /* [auto-meaningful-name] */$_808_index from "./808/index"
 var d = ["numeric", "style"]
 function h(e, t, n, r, i) {
   if (undefined === i) {
@@ -18,7 +18,7 @@ function h(e, t, n, r, i) {
     r = "second"
   }
   if (!Intl.RelativeTimeFormat) {
-    e.onError(new $_808.a("Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-relativetimeformat\"\n", "MISSING_INTL_API"))
+    e.onError(new $_808_index.a("Intl.RelativeTimeFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-relativetimeformat\"\n", "MISSING_INTL_API"))
   }
   try {
     return function (e, t, n) {
@@ -125,7 +125,7 @@ function w(e, t, n, r) {
     r = {}
   }
   if (!Intl.PluralRules) {
-    e$onError(new $_808.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"))
+    e$onError(new $_808_index.a("Intl.PluralRules is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-pluralrules\"\n", "MISSING_INTL_API"))
   }
   var c = $_273.e(r, b)
   try {

@@ -8,12 +8,12 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"
 import * as Type from "./type"
 import { axiosWithCredentials } from "../../utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_57_index from "../../env"
+import * as /* [auto-meaningful-name] */$$_$$_env from "../../env"
 
 import { MyResponse, PageResponse } from "../../utils/network/response"
 import * as Internal from "../../../editor/widget/internal/types"
 
-const baseURL: string = `${$$_$$_$$_$$_unrestored_shared_1571_2636_57_index.a.serverHost}/coconut`
+const baseURL: string = `${$$_$$_env.a.serverHost}/coconut`
 
 export interface Label {
   id: number
@@ -158,7 +158,7 @@ export function reportUse(type: string, userID?: number | undefined): void {
     } else if (Type.isExtensions(type)) {
       source = 3
     }
-    axiosWithCredentials.post($$_$$_$$_$$_unrestored_shared_1571_2636_57_index.a.serverHost + "/data-center/widget", {
+    axiosWithCredentials.post($$_$$_env.a.serverHost + "/data-center/widget", {
       widget_code: type,
       widget_type: widget.isInvisibleWidget ? 2 : 1,
       source_type: source,
@@ -171,7 +171,7 @@ export { reportUse as a }
 export async function getUsedTimes<T extends string>(widgetsType: T[]): Promise<Partial<Record<T, number>>> {
   const { data } = await axiosWithCredentials.get<MyResponse<{
     totalList: Partial<Record<T, number>>
-  }>>($$_$$_$$_$$_unrestored_shared_1571_2636_57_index.a.serverHost + "/data-center/widget/total", {
+  }>>($$_$$_env.a.serverHost + "/data-center/widget/total", {
     params: {
       widget_code_list: widgetsType.join(",")
     }

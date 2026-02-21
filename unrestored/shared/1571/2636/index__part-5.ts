@@ -10,10 +10,10 @@ import * as O from "./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */$_297 from "./297"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$_57_index from "../../../../src/shared/env"
-var /* [auto-meaningful-name] */$_57_index$a$oTServerHost = $_57_index.a.oTServerHost
-$_57_index.a.oTSocketHost
-$_57_index.a.serverHost
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
+var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$oTServerHost = $$_$$_$$_$$_src_shared_env.a.oTServerHost
+$$_$$_$$_$$_src_shared_env.a.oTSocketHost
+$$_$$_$$_$$_src_shared_env.a.serverHost
 function se(e) {
   return ce.apply(this, arguments)
 }
@@ -26,7 +26,7 @@ function ce() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($_57_index$a$oTServerHost + "/coll/coco/".concat(t))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_src_shared_env$a$oTServerHost + "/coll/coco/".concat(t))
           case 2:
             if (e$sent = e.sent, 200 !== (e$sent$data$code = e$sent.data.code) && 10000002 !== e$sent$data$code) {
               e.next = 8
@@ -61,7 +61,7 @@ function ue() {
             n = s.length > 1 && undefined !== s[1] ? s[1] : 1
             r = s.length > 2 && undefined !== s[2] ? s[2] : 200
             e.next = 4
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index$a$oTServerHost + "/coll/coco/collaborator/".concat(t), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$oTServerHost + "/coll/coco/collaborator/".concat(t), {
               params: {
                 work_id: t,
                 current_page: n,
@@ -100,7 +100,7 @@ function pe() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.delete($_57_index$a$oTServerHost + "/coll/coco/collaborator/".concat(t), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.delete($$_$$_$$_$$_src_shared_env$a$oTServerHost + "/coll/coco/collaborator/".concat(t), {
               params: {
                 work_id: t,
                 coll_user_id: n
@@ -133,7 +133,7 @@ function he() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($_57_index$a$oTServerHost + "/coll/coco/collaborator/code/".concat(t, "?edit_permission=").concat(n))
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$oTServerHost + "/coll/coco/collaborator/code/".concat(t, "?edit_permission=").concat(n))
           case 2:
             if (200 !== (e$sent = e.sent).data.code) {
               e.next = 5
@@ -158,7 +158,7 @@ function me() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($_57_index$a$oTServerHost + "/coll/coco/collaborator/code/add-collaborator", {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_src_shared_env$a$oTServerHost + "/coll/coco/collaborator/code/add-collaborator", {
               work_id: Number(t),
               invite_code: n
             })
@@ -184,7 +184,7 @@ function _e() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($_57_index$a$oTServerHost + "/coll/coco/collaborator/edit_permission/".concat(n), {
+            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.put($$_$$_$$_$$_src_shared_env$a$oTServerHost + "/coll/coco/collaborator/edit_permission/".concat(n), {
               work_id: n,
               coll_user_id: t,
               edit_permission: r

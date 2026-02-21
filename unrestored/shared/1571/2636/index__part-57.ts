@@ -11,9 +11,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_ty
 import * as wn from "./90"
 import * as Et from "./9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
 import * as k from "./11"
-import N from "./8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -65,7 +65,7 @@ var Xf = memo(function (e) {
     "data-max-width": $_127.k,
     "data-min-height": $_127.l,
     "data-max-height": $_127.j,
-    className: N(wn.b, k.a({}, Yf.hide, !e$visible)),
+    className: Classnames(wn.b, k.a({}, Yf.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -84,23 +84,23 @@ var Xf = memo(function (e) {
   }, e$attributes$templateType === $$_$$_$$_$$_src_editor_widget_builtIn_types.o.ONLY_TITLE && function () {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
-      className: N(Yf.flexSC, Yf.template1, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
+      className: Classnames(Yf.flexSC, Yf.template1, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
     }, qf.titleSlot ? React.createElement("div", {
       className: Yf.title
     }, $_42_index.d(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId)) : React.createElement("div", null), React.createElement("div", {
       className: Yf.iconBox
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-fold-left",
       className: Yf.icon
     }))), e$attributes$dataSource && React.createElement(React.Fragment, null, Kf.map(function (e) {
       return React.createElement("div", {
         key: e,
-        className: N(Yf.flexSC, Yf.template1, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
+        className: Classnames(Yf.flexSC, Yf.template1, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
       }, qf.titleSlot ? React.createElement("div", {
         className: Yf.titleSlot
       }) : React.createElement("div", null), React.createElement("div", {
         className: Yf.iconBox
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: Yf.icon
       })))
@@ -109,27 +109,27 @@ var Xf = memo(function (e) {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
-      className: N(Yf.flexSC, Yf.template2, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
+      className: Classnames(Yf.flexSC, Yf.template2, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
     }, qf.titleSlot ? React.createElement("div", {
       className: Yf.title
     }, $_42_index.d(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId)) : React.createElement("div", null), React.createElement("div", {
-      className: N(Yf.flexSC, Yf.subTitleBox)
+      className: Classnames(Yf.flexSC, Yf.subTitleBox)
     }, qf.subTitleSlot && React.createElement("div", {
       className: Yf.subTitle
-    }, $_42_index.d(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId)), React.createElement($_13_index.j, {
+    }, $_42_index.d(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId)), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-fold-left",
       className: Yf.icon
     }))), e$attributes$dataSource && React.createElement(React.Fragment, null, Kf.map(function (e) {
       return React.createElement("div", {
         key: e,
-        className: N(Yf.flexSC, Yf.template2, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
+        className: Classnames(Yf.flexSC, Yf.template2, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
       }, qf.titleSlot ? React.createElement("div", {
         className: Yf.titleSlot
       }) : React.createElement("div", null), React.createElement("div", {
-        className: N(Yf.flexSC, Yf.subTitleBox)
+        className: Classnames(Yf.flexSC, Yf.subTitleBox)
       }, qf.subTitleSlot && React.createElement("div", {
         className: Yf.subTitleSlot
-      }), React.createElement($_13_index.j, {
+      }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: Yf.icon
       })))
@@ -139,22 +139,22 @@ var Xf = memo(function (e) {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
-      className: N(Yf.flexSC, Yf.template3, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
+      className: Classnames(Yf.flexSC, Yf.template3, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
     }, React.createElement("div", {
       className: Yf.title
     }, qf.imageSlot && React.createElement("div", {
       className: Yf.smallImgBox
     }, $_42_index.d(null === (e$attributes$templateSlotMap$imageSlot = e$attributes$templateSlotMap.imageSlot) || undefined === e$attributes$templateSlotMap$imageSlot ? undefined : e$attributes$templateSlotMap$imageSlot.widgetId)), qf.titleSlot && React.createElement("div", null, $_42_index.d(null === (e$attributes$templateSlotMap$titleSlot = e$attributes$templateSlotMap.titleSlot) || undefined === e$attributes$templateSlotMap$titleSlot ? undefined : e$attributes$templateSlotMap$titleSlot.widgetId))), React.createElement("div", {
-      className: N(Yf.flexSC, Yf.subTitleBox)
+      className: Classnames(Yf.flexSC, Yf.subTitleBox)
     }, qf.subTitleSlot && React.createElement("div", {
       className: Yf.subTitle
-    }, $_42_index.d(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId)), React.createElement($_13_index.j, {
+    }, $_42_index.d(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId)), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-fold-left",
       className: Yf.icon
     }))), e$attributes$dataSource && React.createElement(React.Fragment, null, Kf.map(function (e) {
       return React.createElement("div", {
         key: e,
-        className: N(Yf.flexSC, Yf.template3, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
+        className: Classnames(Yf.flexSC, Yf.template3, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
       }, React.createElement("div", {
         className: Yf.title
       }, qf.imageSlot && React.createElement("div", {
@@ -167,10 +167,10 @@ var Xf = memo(function (e) {
       })), qf.titleSlot && React.createElement("div", {
         className: Yf.titleSlot
       })), React.createElement("div", {
-        className: N(Yf.flexSC, Yf.subTitleBox)
+        className: Classnames(Yf.flexSC, Yf.subTitleBox)
       }, qf.subTitleSlot && React.createElement("div", {
         className: Yf.subTitleSlot
-      }), React.createElement($_13_index.j, {
+      }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: Yf.icon
       })))
@@ -180,7 +180,7 @@ var Xf = memo(function (e) {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
-      className: N(Yf.flexSC, Yf.template4, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
+      className: Classnames(Yf.flexSC, Yf.template4, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
     }, React.createElement("div", {
       className: Yf.avatarAndTitle
     }, qf.avatarSlot && React.createElement("div", {
@@ -193,13 +193,13 @@ var Xf = memo(function (e) {
       className: Yf.subTitle
     }, $_42_index.d(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId)))), React.createElement("div", {
       className: Yf.iconBox
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-fold-left",
       className: Yf.icon
     }))), e$attributes$dataSource && React.createElement(React.Fragment, null, Kf.map(function (e) {
       return React.createElement("div", {
         key: e,
-        className: N(Yf.flexSC, Yf.template4, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
+        className: Classnames(Yf.flexSC, Yf.template4, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
       }, React.createElement("div", {
         className: Yf.avatarAndTitle
       }, qf.avatarSlot && React.createElement("div", {
@@ -217,7 +217,7 @@ var Xf = memo(function (e) {
         className: Yf.subTitleSlot
       }))), React.createElement("div", {
         className: Yf.iconBox
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: Yf.icon
       })))
@@ -227,7 +227,7 @@ var Xf = memo(function (e) {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$titleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
-      className: N(Yf.flexSC, Yf.template5, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
+      className: Classnames(Yf.flexSC, Yf.template5, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
     }, React.createElement("div", {
       className: Yf.imgAndTitleBox
     }, qf.imageSlot && React.createElement("div", {
@@ -238,13 +238,13 @@ var Xf = memo(function (e) {
       className: Yf.desc
     }, $_42_index.d(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId)))), React.createElement("div", {
       className: Yf.iconBox
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-fold-left",
       className: Yf.icon
     }))), e$attributes$dataSource && React.createElement(React.Fragment, null, Kf.map(function (e) {
       return React.createElement("div", {
         key: e,
-        className: N(Yf.flexSC, Yf.template5, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
+        className: Classnames(Yf.flexSC, Yf.template5, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
       }, React.createElement("div", {
         className: Yf.imgAndTitleBox
       }, qf.imageSlot && React.createElement("div", {
@@ -264,7 +264,7 @@ var Xf = memo(function (e) {
         className: Yf.descSlot
       }))), React.createElement("div", {
         className: Yf.iconBox
-      }, React.createElement($_13_index.j, {
+      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
         type: "icon-fold-left",
         className: Yf.icon
       })))
@@ -276,7 +276,7 @@ var Xf = memo(function (e) {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$bannerSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
-      className: N(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
+      className: Classnames(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
     }, React.createElement("div", {
       className: Yf.avatarAndTitle
     }, qf.avatarSlot && React.createElement("div", {
@@ -292,7 +292,7 @@ var Xf = memo(function (e) {
     }, $_42_index.d(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId)), qf.descSlot && React.createElement("div", {
       className: Yf.desc
     }, $_42_index.d(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId))), e$attributes$dataSource && React.createElement("div", {
-      className: N(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
+      className: Classnames(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
     }, React.createElement("div", {
       className: Yf.avatarAndTitle
     }, qf.avatarSlot && React.createElement("div", {
@@ -327,7 +327,7 @@ var Xf = memo(function (e) {
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$subTitleSlot
     var /* [auto-meaningful-name] */e$attributes$templateSlotMap$descSlot
     return React.createElement(React.Fragment, null, React.createElement("div", {
-      className: N(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
+      className: Classnames(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard)
     }, qf.bannerSlot && React.createElement("div", {
       className: Yf.bannerImgBox
     }, $_42_index.d(null === (e$attributes$templateSlotMap$bannerSlot = e$attributes$templateSlotMap.bannerSlot) || undefined === e$attributes$templateSlotMap$bannerSlot ? undefined : e$attributes$templateSlotMap$bannerSlot.widgetId)), React.createElement("div", {
@@ -343,7 +343,7 @@ var Xf = memo(function (e) {
     }, $_42_index.d(null === (e$attributes$templateSlotMap$subTitleSlot = e$attributes$templateSlotMap.subTitleSlot) || undefined === e$attributes$templateSlotMap$subTitleSlot ? undefined : e$attributes$templateSlotMap$subTitleSlot.widgetId)))), qf.descSlot && React.createElement("div", {
       className: Yf.desc
     }, $_42_index.d(null === (e$attributes$templateSlotMap$descSlot = e$attributes$templateSlotMap.descSlot) || undefined === e$attributes$templateSlotMap$descSlot ? undefined : e$attributes$templateSlotMap$descSlot.widgetId))), e$attributes$dataSource && React.createElement("div", {
-      className: N(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
+      className: Classnames(Yf.template6, "tiled" === e$attributes$templateRenderType ? Yf.itemTiled : Yf.itemCard, Yf.templateSlot)
     }, qf.bannerSlot && React.createElement("div", {
       className: Yf.bannerImgBox
     }, React.createElement("img", {

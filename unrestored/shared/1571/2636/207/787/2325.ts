@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./399")
+var r = require("./399/index")
 var i = require("./818/index")("eslint:source-code-fixer")
 function o(e, t) {
   return e.fix.range[0] - t.fix.range[0] || e.fix.range[1] - t.fix.range[1]

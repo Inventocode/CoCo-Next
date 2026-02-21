@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./399")
+var r = require("./399/index")
 var i = require("lodash")
 function o(e, t) {
   return e.line - t.line || e.column - t.column

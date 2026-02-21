@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("./1661/86/index")
-var o = require("./1728/444")
+var r = require("./1662/86")
+var o = require("./1731/444")
 r({
   target: "String",
   proto: true,
-  forced: require("./1728/445")("fixed")
+  forced: require("./1731/445")("fixed")
 }, {
   fixed: function () {
     return o(this, "tt", "", "")

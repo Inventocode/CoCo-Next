@@ -9,7 +9,7 @@
 import { N } from "./1542__part-2"
 import { H, V, G } from "./1542__part-3"
 import { ee, fe } from "./1542__part-4"
-import j from "../8"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_21 from "../21"
 import * as /* [auto-meaningful-name] */$$_107 from "../107"
 import * as /* [auto-meaningful-name] */$$_140 from "../140"
@@ -202,7 +202,7 @@ function ve(e) {
     var /* [auto-meaningful-name] */e$style1 = e.style
     return createElement("div", $$_19.a({
       style: $$_21.a($$_21.a({}, e$style1), e$style),
-      className: j("".concat(e$prefixCls, "-mask"), e$className)
+      className: Classnames("".concat(e$prefixCls, "-mask"), e$className)
     }, e$maskProps))
   })
 }
@@ -361,7 +361,7 @@ var xe = forwardRef(function (e, t) {
       role: "document",
       ref: t,
       style: $$_21.a($$_21.a($$_21.a({}, e$style1), e$style), U),
-      className: j(e$prefixCls, e$className, e$className1),
+      className: Classnames(e$prefixCls, e$className, e$className1),
       onMouseDown: e$onMouseDown,
       onMouseUp: e$onMouseUp
     }, createElement("div", {
@@ -494,7 +494,7 @@ function Oe(e) {
         F.current.changeActive(!e.shiftKey)
       }
     },
-    className: j("".concat(n, "-wrap"), e$wrapClassName),
+    className: Classnames("".concat(n, "-wrap"), e$wrapClassName),
     ref: R,
     onClick: X,
     role: "dialog",

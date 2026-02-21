@@ -11,7 +11,7 @@ import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
 import * as H from "../6"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
 import * as l from "../9"
-import * as /* [auto-meaningful-name] */$$_17_index from "../17/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
 import * as /* [auto-meaningful-name] */$$_11 from "../11"
 !function (e) {
   e.PRIMITIVE = "PRIMITIVE"
@@ -94,8 +94,8 @@ function ze(e, t, n) {
   var o = Ve()
   var /* [auto-meaningful-name] */oE$blocksList = o[e].blocksList
   var /* [auto-meaningful-name] */oE$fieldName = o[e].fieldName
-  if ($$_17_index.Blink.mainWorkspace) {
-    $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
+  if ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) {
+    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
       if (oE$blocksList.includes(e.type) && e.inputList.length) {
         var r
         var o = e.get_field(oE$fieldName)
@@ -108,7 +108,7 @@ function ze(e, t, n) {
         o.set_text(n)
       }
     })
-    if (!(null === (r = $$_17_index.Blink.mainWorkspace.get_toolbox()) || undefined === r)) {
+    if (!(null === (r = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()) || undefined === r)) {
       r.refresh_selection()
     }
   }
@@ -118,8 +118,8 @@ function Ye(e, t) {
   var r = Ve()
   var /* [auto-meaningful-name] */rE$blocksList = r[e].blocksList
   var /* [auto-meaningful-name] */rE$fieldName = r[e].fieldName
-  if ($$_17_index.Blink.mainWorkspace) {
-    $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
+  if ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) {
+    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
       if (rE$blocksList.includes(e.type) && e.inputList.length) {
         var n
         var r = e.get_field(rE$fieldName)
@@ -134,15 +134,15 @@ function Ye(e, t) {
         }
       }
     })
-    if (!(null === (n = $$_17_index.Blink.mainWorkspace.get_toolbox()) || undefined === n)) {
+    if (!(null === (n = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()) || undefined === n)) {
       n.refresh_selection()
     }
   }
 }
 function Ke() {
   var e
-  if ($$_17_index.Blink.mainWorkspace) {
-    $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
+  if ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) {
+    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (e) {
       var /* [auto-meaningful-name] */e$parent_block
       if (e.inputList.length) {
         !function (e) {
@@ -209,7 +209,7 @@ function Ke() {
         }
       }
     })
-    if (!(null === (e = $$_17_index.Blink.mainWorkspace.get_toolbox()) || undefined === e)) {
+    if (!(null === (e = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_toolbox()) || undefined === e)) {
       e.refresh_selection()
     }
   }
@@ -227,7 +227,7 @@ function Xe(e, t) {
 }
 function Qe(e, t, n) {
   var /* [auto-meaningful-name] */VeUe$CLOUD_DOC_KEYS$blocksList = Ve()[Ue.CLOUD_DOC_KEYS].blocksList
-  $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
     if (VeUe$CLOUD_DOC_KEYS$blocksList.includes(o.type)) {
       var i
       var /* [auto-meaningful-name] */o$parent_block = o.parent_block
@@ -244,8 +244,8 @@ function Qe(e, t, n) {
 function Ze(e) {
   var t = Ve()
   var n = t.LIST_VIEWER_WIDGET.blocksList.concat(t.NEW_LIST_VIEWER_WIDGET.blocksList)
-  if ($$_17_index.Blink.mainWorkspace) {
-    $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (t) {
+  if ($$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace) {
+    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (t) {
       if (n.includes(t.type) && t.inputList.length) {
         var r
         var o = t.get_field("WIDGET_ID")
@@ -272,7 +272,7 @@ function Ze(e) {
 }
 function Je(e, t) {
   var /* [auto-meaningful-name] */VeUe$DOC_KEYS$blocksList = Ve()[Ue.DOC_KEYS].blocksList
-  $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (r) {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (r) {
     if (VeUe$DOC_KEYS$blocksList.includes(r.type)) {
       var /* [auto-meaningful-name] */r$parent_block = r.parent_block
       if (r$parent_block && r$parent_block.get_field_value("WIDGET_ID") === e) {
@@ -297,7 +297,7 @@ function Je(e, t) {
 }
 function $e(e, t) {
   var /* [auto-meaningful-name] */VeUe$TABLE_DATA_COLUMN$blocksList = Ve()[Ue.TABLE_DATA_COLUMN].blocksList
-  $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (r) {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (r) {
     if (VeUe$TABLE_DATA_COLUMN$blocksList.includes(r.type)) {
       var /* [auto-meaningful-name] */r$parent_block = r.parent_block
       if (r$parent_block && r$parent_block.get_field_value("WIDGET_ID") === e) {
@@ -313,7 +313,7 @@ function $e(e, t) {
 }
 function et(e, t, n) {
   var /* [auto-meaningful-name] */VeUe$CLOUD_DICT_KEYS$blocksList = Ve()[Ue.CLOUD_DICT_KEYS].blocksList
-  $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
     if (VeUe$CLOUD_DICT_KEYS$blocksList.includes(o.type)) {
       var /* [auto-meaningful-name] */o$parent_block = o.parent_block
       var a = null === o$parent_block || undefined === o$parent_block ? undefined : o$parent_block.get_field_value("WIDGET_ID")
@@ -334,7 +334,7 @@ function et(e, t, n) {
 }
 function tt(e) {
   var /* [auto-meaningful-name] */VeUe$CLOUD_DICT_KEYS$blocksList = Ve()[Ue.CLOUD_DICT_KEYS].blocksList
-  $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (n) {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (n) {
     if (VeUe$CLOUD_DICT_KEYS$blocksList.includes(n.type)) {
       var /* [auto-meaningful-name] */n$parent_block = n.parent_block
       if (n$parent_block && n$parent_block.get_field_value("WIDGET_ID") === e) {
@@ -351,7 +351,7 @@ function tt(e) {
 }
 function nt(e, t, n) {
   var /* [auto-meaningful-name] */VeUe$CLOUD_TABLE_COLUMNS$blocksList = Ve()[Ue.CLOUD_TABLE_COLUMNS].blocksList
-  $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (o) {
     if (VeUe$CLOUD_TABLE_COLUMNS$blocksList.includes(o.type)) {
       var /* [auto-meaningful-name] */o$parent_block = o.parent_block
       var a = null === o$parent_block || undefined === o$parent_block ? undefined : o$parent_block.get_field_value("WIDGET_ID")
@@ -372,7 +372,7 @@ function nt(e, t, n) {
 }
 function rt(e) {
   var /* [auto-meaningful-name] */VeUe$CLOUD_TABLE_COLUMNS$blocksList = Ve()[Ue.CLOUD_TABLE_COLUMNS].blocksList
-  $$_17_index.Blink.mainWorkspace.get_all_blocks().forEach(function (n) {
+  $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_all_blocks().forEach(function (n) {
     if (VeUe$CLOUD_TABLE_COLUMNS$blocksList.includes(n.type)) {
       var /* [auto-meaningful-name] */n$parent_block = n.parent_block
       if (n$parent_block && n$parent_block.get_field_value("WIDGET_ID") === e) {

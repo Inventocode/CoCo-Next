@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import * as a from "./7"
 import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as l from "./97"
+import * as /* [auto-meaningful-name] */$_97_index from "./97/index"
 var u = function () {
   var e
   var /* [auto-meaningful-name] */$_37_index$d$getState$project$currentScreenIndex = $_37_index.d.getState().project.currentScreenIndex
@@ -49,7 +49,7 @@ function m() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return l.c()
+            return $_97_index.c()
           case 2:
             e$sent = e.sent
             Object.entries(e$sent.screens).forEach(function (e) {

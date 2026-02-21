@@ -21,7 +21,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../../unrestored/shared/1571/2636/392/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_144 from "../../../../unrestored/shared/1571/2636/144"
 import * as CustomWidgetRestrict from "../../../shared/widget/custom/restrict"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_375 from "../../../../unrestored/shared/1571/2636/37/375"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_375 from "../../../../unrestored/shared/1571/2636/97/375"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_48_345 from "../../../../unrestored/shared/1571/2636/48/345"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_410 from "../../../../unrestored/shared/1571/2636/410"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_515 from "../../../../unrestored/shared/1571/2636/37/515"
@@ -34,7 +34,7 @@ import * as LoadCustomWidget from "../../../shared/widget/custom/load"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_127 from "../../../../unrestored/shared/1571/2636/127"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_145 from "../../../../unrestored/shared/1571/2636/145"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools from "../../../shared/tools"
 import { oTHelper } from "../../../../unrestored/shared/1571/2636/49"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../unrestored/shared/1571/2636/24/index"
 import * as Language from "../../../shared/ui/language"
@@ -75,9 +75,9 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_39 from "../../../../unrestored/shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../unrestored/shared/1571/2636/8"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "../../../../unrestored/shared/1571/2636/8"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_13_index from "../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "classnames"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "classnames"
+import * as /* [auto-meaningful-name] */$$_$$_$$_shared_ui_components from "../../../shared/ui/components"
 import { CoCoDialog } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_266 from "../../../../unrestored/shared/1571/2636/266"
 import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2661 from "../../../../unrestored/shared/1571/2636/266"
@@ -123,7 +123,7 @@ var No = function (e) {
     <div
       className={$$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogButtons)}
     >
-      {p && <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+      {p && <$$_$$_$$_shared_ui_components.d
         type="light"
         onClick={function () {
           if (e$onCancel) {
@@ -132,8 +132,8 @@ var No = function (e) {
         }}
       >
         {e$cancelText}
-      </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>}
-      {e$denyText && <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+      </$$_$$_$$_shared_ui_components.d>}
+      {e$denyText && <$$_$$_$$_shared_ui_components.d
         onClick={function () {
           if (e$onDeny) {
             e$onDeny()
@@ -142,14 +142,14 @@ var No = function (e) {
         className={$$_$$_$$_$$_unrestored_shared_1571_2636_2661.denyButton}
       >
         {e$denyText}
-      </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>}
-      {h && <$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d
+      </$$_$$_$$_shared_ui_components.d>}
+      {h && <$$_$$_$$_shared_ui_components.d
         type="primary"
         danger={e$isDangerous}
         onClick={_}
       >
         {e$allowText}
-      </$$_$$_$$_$$_unrestored_shared_1571_2636_13_index.d>}
+      </$$_$$_$$_shared_ui_components.d>}
     </div>
   </CoCoDialog>
 }
@@ -2085,7 +2085,7 @@ function onAsyncCreateProject(e) {
           y.next = 33
           return ReduxSagaEffects.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.o(e$payload$projectId))
         case 33:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.jb(e$payload$projectId)
+          $$_$$_$$_shared_tools.jb(e$payload$projectId)
           _ = g.sourceTag || $$_$$_$$_$$_unrestored_shared_1571_2636_18.g.FREEDOM
           v = g.sourceId || ""
           y.next = 44
@@ -2095,7 +2095,7 @@ function onAsyncCreateProject(e) {
           y.next = 41
           return ReduxSagaEffects.e(Actions.Tg(true))
         case 41:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["workId", "inviteCode", "jsonUrl"])
+          $$_$$_$$_shared_tools.k(["workId", "inviteCode", "jsonUrl"])
           y.next = 44
           return ReduxSagaEffects.b(ts, _, v)
         case 44:
@@ -2146,10 +2146,10 @@ function onAsyncCreateProject(e) {
           }))
         case 72:
           if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["courseId"])
+            $$_$$_$$_shared_tools.k(["courseId"])
           }
           if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_TEMPLATE) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["templateId"])
+            $$_$$_$$_shared_tools.k(["templateId"])
           }
           y.next = 76
           return ReduxSagaEffects.b(go)
@@ -2466,18 +2466,18 @@ function loadWorkFromJSON(workJSON) {
               W[e.id] = e.cdnUrl
             }
           }), I) {
-            if ((H = I[U]).type === $$_$$_widget_builtIn_types.H && (H$attributes$fontFamily = H.attributes.fontFamily) && W[H$attributes$fontFamily] && !$$_$$_$$_$$_unrestored_shared_1571_2636_15.db[H$attributes$fontFamily]) {
-              $$_$$_$$_$$_unrestored_shared_1571_2636_15.bb(H$attributes$fontFamily, W[H$attributes$fontFamily])
-              $$_$$_$$_$$_unrestored_shared_1571_2636_15.db[H$attributes$fontFamily] = true
+            if ((H = I[U]).type === $$_$$_widget_builtIn_types.H && (H$attributes$fontFamily = H.attributes.fontFamily) && W[H$attributes$fontFamily] && !$$_$$_$$_shared_tools.db[H$attributes$fontFamily]) {
+              $$_$$_$$_shared_tools.bb(H$attributes$fontFamily, W[H$attributes$fontFamily])
+              $$_$$_$$_shared_tools.db[H$attributes$fontFamily] = true
             }
             if (H && H.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === H.type) {
               H$attributes = H.attributes
               H$attributes$content = H$attributes.content
               K = undefined === H$attributes$content ? "" : H$attributes$content
               $$_$$_$$_$$_unrestored_shared_1571_2636_37_375.a(K).forEach(function (e) {
-                if (e && W[e] && !$$_$$_$$_$$_unrestored_shared_1571_2636_15.db[e]) {
-                  $$_$$_$$_$$_unrestored_shared_1571_2636_15.bb(e, W[e])
-                  $$_$$_$$_$$_unrestored_shared_1571_2636_15.db[e] = true
+                if (e && W[e] && !$$_$$_$$_shared_tools.db[e]) {
+                  $$_$$_$$_shared_tools.bb(e, W[e])
+                  $$_$$_$$_shared_tools.db[e] = true
                 }
               })
             }
@@ -3223,7 +3223,7 @@ function ps(e, t, n) {
           }
           return regeneratorContext.abrupt("return", null)
         case 10:
-          if (c = $$_$$_$$_$$_unrestored_shared_1571_2636_15.q(s.widget), c$attributes = c.attributes, s.isInvisibleWidget || undefined !== c.opacity || (c.opacity = 100), u(c$attributes), d = [], !s.widget.isGlobalWidget) {
+          if (c = $$_$$_$$_shared_tools.q(s.widget), c$attributes = c.attributes, s.isInvisibleWidget || undefined !== c.opacity || (c.opacity = 100), u(c$attributes), d = [], !s.widget.isGlobalWidget) {
             regeneratorContext.next = 19
             break
           }
@@ -4598,7 +4598,7 @@ function* handlePublishWorkToCommunity(action) {
     coverUrl,
     workId,
     bcmcUrl: uploadPlayerDataResult.url,
-    playerUrl: $$_$$_$$_$$_unrestored_shared_1571_2636_15.getPlayerCommunityUrl(workId)
+    playerUrl: $$_$$_$$_shared_tools.getPlayerCommunityUrl(workId)
   }
   const publishResponse = yield ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.m, publishInfo)
   if (publishResponse.code !== 200) {
@@ -4736,7 +4736,7 @@ function Ds(e) {
           i = new Blob([JSON.stringify(a$sent1)], {
             type: "application/json,charset=utf-8;"
           })
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.s(URL.createObjectURL(i), _a$sent9)
+          $$_$$_$$_shared_tools.s(URL.createObjectURL(i), _a$sent9)
         case 13:
         case "end":
           return a.stop()
@@ -5211,7 +5211,7 @@ function Ws(e) {
           A.next = 138
           return ReduxSagaEffects.b(Vs)
         case 138:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.jb(_A$sent6)
+          $$_$$_$$_shared_tools.jb(_A$sent6)
           A.next = 141
           return ReduxSagaEffects.b(vc, _A$sent6)
         case 141:
@@ -5222,7 +5222,7 @@ function Ws(e) {
           A.next = 144
           return ReduxSagaEffects.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.n())
         case 144:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_15.k(["courseId", "templateId"])
+          $$_$$_$$_shared_tools.k(["courseId", "templateId"])
           Pn()
           return A.abrupt("return", _A$sent6)
         case 147:

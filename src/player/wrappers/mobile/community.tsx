@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_12101 from "../../../../unrestored/player/2635/2637/1210"
+import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1210 from "../../../../unrestored/player/2635/2637/1210"
 
 export const MobileCommunityWrapper = React.memo(() => {
 
@@ -64,13 +64,13 @@ export const MobileCommunityWrapper = React.memo(() => {
     }
   }, [blockCode, isLoading])
 
-  return playerProps ? <div className={$$_$$_$$_$$_unrestored_player_2635_2637_12101.community}>
+  return playerProps ? <div className={$$_$$_$$_$$_unrestored_player_2635_2637_1210.community}>
     <input
       type="file"
       accept="image/*"
       capture="camera"
       id="appcraft-camera-input"
-      className={$$_$$_$$_$$_unrestored_player_2635_2637_12101.camera}
+      className={$$_$$_$$_$$_unrestored_player_2635_2637_1210.camera}
     />
     {React.createElement($$_$$_$$_$$_unrestored_player_2635_2637_514_index.a, playerProps)}
   </div> : <></>

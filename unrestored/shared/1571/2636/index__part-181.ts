@@ -8,7 +8,7 @@
 
 var hj
 var fj
-import * as /* [auto-meaningful-name] */$_540_index from "../../../../src/shared/ui/components/dialog/index"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_dialog_index from "../../../../src/shared/ui/components/dialog/index"
 !function (e) {
   e[e.Image = 1] = "Image"
   e[e.Icon = 2] = "Icon"

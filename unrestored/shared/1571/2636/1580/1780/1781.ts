@@ -6,8 +6,8 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */require$$_1754_401$forEach = require("../1754/401").forEach
+var /* [auto-meaningful-name] */require$$_1758_401$forEach = require("../1758/401").forEach
 var o = require("../1608/717")("forEach")
 module.exports = o ? [].forEach : function (e) {
-  return require$$_1754_401$forEach(this, e, arguments.length > 1 ? arguments[1] : undefined)
+  return require$$_1758_401$forEach(this, e, arguments.length > 1 ? arguments[1] : undefined)
 }

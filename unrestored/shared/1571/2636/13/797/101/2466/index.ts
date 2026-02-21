@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.flattenNames = undefined
 var r = s(require("./2467"))
-var i = s(require("../2558/1167/index"))
+var i = s(require("./1167/index"))
 var o = s(require("./1436/index"))
 var a = s(require("./2477/index"))
 function s(e) {

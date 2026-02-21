@@ -50,11 +50,11 @@ import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15 from "../../../../shared/tools"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools from "../../../../shared/tools"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "../../../../../unrestored/shared/1571/2636/8"
+import classnames from "classnames"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
@@ -160,7 +160,7 @@ const ConfigItem = React.memo(({
       }
     >
       <div
-        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.widgetItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
+        className={classnames(styles.widgetItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
         draggable
         onMouseEnter={() => {
           if (isMallExtensionWidget && !isInvisibleWidget) {
@@ -215,15 +215,15 @@ const ConfigItem = React.memo(({
           if (!(type !== BuiltInWidgetTypes.a && type !== BuiltInWidgetTypes.c)) {
             dispatch(Actions.Yh(true))
           }
-          var /* [auto-meaningful-name] */e$target = event.target
-          var s = null === e$target || undefined === e$target ? undefined : e$target.getClientRects()[0]
-          if (e$target && e$target.dataset.widgetType && s) {
+          var /* [auto-meaningful-name] */event$target = event.target
+          var s = null === event$target || undefined === event$target ? undefined : event$target.getClientRects()[0]
+          if (event$target && event$target.dataset.widgetType && s) {
             var u = event.clientX - s.x
             var d = event.clientY - s.y
             event.dataTransfer.setData("widget/dragging-offset-x", u + "")
             event.dataTransfer.setData("widget/dragging-offset-y", d + "")
             event.dataTransfer.dropEffect = "copy"
-            event.dataTransfer.setData("widget/type", e$target.dataset.widgetType)
+            event.dataTransfer.setData("widget/type", event$target.dataset.widgetType)
             event.dataTransfer.setData("widget/action", BuiltInWidgetTypes.r.CREATE)
           }
         }}
@@ -234,7 +234,7 @@ const ConfigItem = React.memo(({
         }}
         data-widget-type={type}
       >
-        {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15.X(icon) ? (
+        {$$_$$_$$_$$_shared_tools.X(icon) ? (
           isInvisibleWidget ? (
             <img className={styles.icon} src={icon} alt={title} draggable={false} />
           ) : (
@@ -282,9 +282,9 @@ export const WidgetCategoryItem = React.memo<{
     return e ? JSON.parse(e) : {}
   }
   return configList.length ? (
-    <div className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.categoryItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.expanded, c))}>
+    <div className={classnames(styles.categoryItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.expanded, c))}>
       <div
-        className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.categoryHeader, window.innerWidth <= 1300 && styles.categoryMinHeader)}
+        className={classnames(styles.categoryHeader, window.innerWidth <= 1300 && styles.categoryMinHeader)}
         onClick={() => {
           l(!c)
           if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(title) && i && !d[title]) {
@@ -295,7 +295,7 @@ export const WidgetCategoryItem = React.memo<{
         }}
       >
         <div className={styles.categoryTitleBox}>
-          <h3 className={$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8(styles.categoryTitle)}>
+          <h3 className={classnames(styles.categoryTitle)}>
             {formatMessage({ id: title })}
           </h3>
           {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(title) && p && <div className={styles.newTips}>New</div>}

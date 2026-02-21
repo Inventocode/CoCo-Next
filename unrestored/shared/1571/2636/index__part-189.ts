@@ -7,8 +7,8 @@
 "use strict"
 
 import { fj, hj } from "./index__part-181"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import /* [auto-meaningful-name] */React from "react"
 import { memo } from "react"
@@ -37,7 +37,7 @@ var Xj = memo(function (e) {
       }
     },
     key: t,
-    className: N($_6251.iconMallItem, e$isSelect && $_6251.selected)
+    className: Classnames($_6251.iconMallItem, e$isSelect && $_6251.selected)
   }, React.createElement("div", {
     className: $_6251.playArea
   }, React.createElement("img", {
@@ -52,8 +52,8 @@ var Xj = memo(function (e) {
   }, $_710$a$formatMessage({
     id: "Resource.Added"
   })) : React.createElement("div", {
-    className: N($_6251.btn, $_6251.unselect)
-  }, React.createElement($_13_index.j, {
+    className: Classnames($_6251.btn, $_6251.unselect)
+  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-style-selected"
   }))))
 })

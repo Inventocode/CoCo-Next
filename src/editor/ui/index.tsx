@@ -9,7 +9,7 @@
 import { v } from "../../../unrestored/shared/1571/2636/index__part-1"
 import { App, fB, isDevelopment, registerServiceWorker } from "./app"
 import { store } from "../redux/store"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_57_index from "../../shared/env"
+import * as /* [auto-meaningful-name] */$$_$$_shared_env from "../../shared/env"
 import { Provider } from "react-redux"
 import ReactDom from "react-dom"
 import React from "react"
@@ -17,7 +17,7 @@ import "../../../unrestored/shared/1571/2636/1186"
 import "../../../unrestored/shared/1571/2636/2632"
 import "../../../unrestored/shared/1571/2636/2633"
 
-if (["staging", "production", "prod"].includes($$_$$_$$_unrestored_shared_1571_2636_57_index.b())) {
+if (["staging", "production", "prod"].includes($$_$$_shared_env.b())) {
   setInterval(() => {}, 100)
 }
 

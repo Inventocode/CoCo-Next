@@ -6,7 +6,7 @@
 
 var r = require("../../1282/231")
 var o = require("../../1581/830")
-var i = require("../../1782/246/index")("species")
+var i = require("../../1282/246/index")("species")
 module.exports = function (e) {
   var t
   if (o(e)) {

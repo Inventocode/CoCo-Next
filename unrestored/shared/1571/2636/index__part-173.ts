@@ -7,8 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_188 from "./188"
 import { useSelector, useDispatch } from "react-redux"
@@ -59,19 +59,19 @@ var bI = memo(function () {
     }
     O($$_$$_$$_$$_src_editor_redux_common_actions.Vg())
   }
-  return React.createElement($_13_index.f, {
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
     visible: t$visible,
     showCloseButton: false,
     onClose: T,
     withPortal: true,
     maskClosable: false,
-    className: N($_2661.dialog, t$className, t$denyText && $_2661.dialogSecondary)
+    className: Classnames($_2661.dialog, t$className, t$denyText && $_2661.dialogSecondary)
   }, React.createElement($_188.a, null, React.createElement($_188.b, {
     keys: "enter",
     callback: w
   })), React.createElement("h3", null, t$title), React.createElement("span", null, t$content), React.createElement("div", {
-    className: N($_2661.dialogButtons)
-  }, b && React.createElement($_13_index.d, {
+    className: Classnames($_2661.dialogButtons)
+  }, b && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "light",
     onClick: function () {
       if (t$onCancel) {
@@ -79,7 +79,7 @@ var bI = memo(function () {
       }
       T()
     }
-  }, p), t$denyText && React.createElement($_13_index.d, {
+  }, p), t$denyText && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     onClick: function () {
       if (t$onDeny) {
         t$onDeny()
@@ -87,7 +87,7 @@ var bI = memo(function () {
       T()
     },
     className: $_2661.denyButton
-  }, t$denyText), E && React.createElement($_13_index.d, {
+  }, t$denyText), E && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
     type: "primary",
     danger: t$isDangerous,
     onClick: w

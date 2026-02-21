@@ -10,8 +10,8 @@ import /* [auto-meaningful-name] */$_186 from "./186"
 import qv from "./88"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_13_index from "../../../../src/shared/ui/components/index"
-import N from "./8"
+import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */$_710 from "./710"
 import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
 import { useDispatch } from "react-redux"
@@ -51,7 +51,7 @@ var hw = memo(function (e) {
     }
   }
   return React.createElement("div", {
-    className: N($_186.formItemWrapper, "templateType")
+    className: Classnames($_186.formItemWrapper, "templateType")
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
   }, $_710$a$formatMessage({
@@ -60,12 +60,12 @@ var hw = memo(function (e) {
     className: $_186.cardBox
   }, React.createElement("div", {
     onClick: g.bind(null, "tiled"),
-    className: N($_186.cardItem, "tiled" === s && $_186.active)
+    className: Classnames($_186.cardItem, "tiled" === s && $_186.active)
   }, $_710$a$formatMessage({
     id: "ListViewerWidget.tiled"
   })), React.createElement("div", {
     onClick: g.bind(null, "card"),
-    className: N($_186.cardItem, "card" === s && $_186.active)
+    className: Classnames($_186.cardItem, "card" === s && $_186.active)
   }, $_710$a$formatMessage({
     id: "ListViewerWidget.card"
   })))), React.createElement("div", {
@@ -100,18 +100,18 @@ var hw = memo(function (e) {
     className: $_186.title
   }, $_710$a$formatMessage({
     id: "ListViewerWidget.templateType"
-  })), React.createElement($_13_index.j, {
+  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
     type: "icon-closed"
   })), React.createElement("div", {
     className: $_186.templateListBox
   }, Object.keys($$_$$_$$_$$_src_editor_widget_builtIn_types.o).map(function (e) {
     return React.createElement("div", {
-      className: N($_186.templateItem, e === a && $_186.active),
+      className: Classnames($_186.templateItem, e === a && $_186.active),
       key: e,
       onClick: v.bind(null, e)
     }, e === a && React.createElement("div", {
       className: $_186.selectIconBox
-    }, React.createElement($_13_index.j, {
+    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
       type: "icon-style-selected"
     })), React.createElement("img", {
       className: $_186.templateItemImg,
@@ -142,8 +142,8 @@ var mw = memo(function (e) {
       e$onChange(n, e)
     }
   }
-  return React.createElement($_13_index.i, {
-    className: N(qv.formItemWrapper),
+  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Classnames(qv.formItemWrapper),
     label: m,
     align: "horizontal"
   }, React.createElement("div", {
@@ -152,7 +152,7 @@ var mw = memo(function (e) {
     return React.createElement("div", {
       key: e.label,
       onClick: g.bind(null, e.value),
-      className: N(qv.option, d === e.value && qv.activeOption)
+      className: Classnames(qv.option, d === e.value && qv.activeOption)
     }, React.createElement("span", null, e.label))
   })))
 })
