@@ -109,7 +109,7 @@ const WidgetListItem = memo(function (e) {
         }
         const { dataTransfer } = event
         innerDragType = dataTransfer !== null && "_dragDropTouch" in dataTransfer ? "polyfill" : "native"
-        if (innerDragType === "polyfill") {
+        ;(() => {
           let wrapper = element!.parentElement
           if (wrapper === null) {
             return
@@ -121,7 +121,7 @@ const WidgetListItem = memo(function (e) {
           let eventHandlers = (wrapper as any)[eventHandlersKey]
           eventHandlers?.onMouseDown?.(lastMouseDownEvent)
           eventHandlers?.onTouchStart?.(lastTouchStartEvent)
-        }
+        })()
         originalDragStartListener?.(event)
         setDragType(innerDragType)
       }
