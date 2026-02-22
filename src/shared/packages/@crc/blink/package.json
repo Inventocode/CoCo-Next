@@ -1,7 +1,7 @@
 {
-    "name": "@crc/blink",
-    "version": "0.28.16",
-    "description": "Blink for Codemao",
+    "name": "@oldsquaw/blink",
+    "version": "0.28.17",
+    "description": "Blink for ~~Codemao~~Everyone",
     "publishConfig": {
         "@crc:registry": "https://gitlab.codemao.cn/api/v4/projects/1/packages/npm/"
     },
@@ -23,7 +23,7 @@
         "type": "git",
         "url": "ssh://git@gitlab.codemao.cn:crc/creation/platform/blink.git"
     },
-    "author": "Codemao",
+    "author": "Codemao, Oldsquaw",
     "license": "UNLICENSED",
     "devDependencies": {
         "@commitlint/cli": "^14.1.0",

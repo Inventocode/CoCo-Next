@@ -20,7 +20,7 @@ import "../../../unrestored/shared/1571/2636/2633"
 
 enableDragDropTouch(document, document, {
   isPressHoldMode: true,
-  pressHoldDelayMS: 200,
+  pressHoldDelayMS: 400,
   forceListen: true
 })
 

@@ -62,6 +62,7 @@ const WidgetListItem = memo(function (e) {
   var P = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(L, 2)
   var B = P[0]
   var F = P[1]
+  const [dragType, setDragType] = useState<"none" | "native" | "polyfill">("none")
   useEffect(function () {
     var e = function e() {
       F(false)
@@ -98,34 +99,60 @@ const WidgetListItem = memo(function (e) {
       if (element === null || element.getAttribute("data-drag-hook") === "true") {
         return
       }
-      let originalListener: ((event: DragEvent) => {}) | null = null
-      function wrapperListener(event: DragEvent) {
+      let innerDragType: typeof dragType = "none"
+      let lastMouseDownEvent: MouseEvent | null = null
+      let lastTouchStartEvent: TouchEvent | null = null
+      let originalDragStartListener: ((event: DragEvent) => {}) | null = null
+      function wrapperDragStartListener(event: DragEvent) {
+        if (innerDragType === "polyfill") {
+          return
+        }
+        const { dataTransfer } = event
+        innerDragType = dataTransfer !== null && "_dragDropTouch" in dataTransfer ? "polyfill" : "native"
+        if (innerDragType === "polyfill") {
+          let wrapper = element!.parentElement
+          if (wrapper === null) {
+            return
+          }
+          let eventHandlersKey = Object.keys(wrapper).find(key => key.startsWith("__reactEventHandlers"))
+          if (eventHandlersKey === undefined) {
+            return
+          }
+          let eventHandlers = (wrapper as any)[eventHandlersKey]
+          eventHandlers?.onMouseDown?.(lastMouseDownEvent)
+          eventHandlers?.onTouchStart?.(lastTouchStartEvent)
+        }
+        originalDragStartListener?.(event)
+        setDragType(innerDragType)
+      }
+      let originalDragEndListener: ((event: DragEvent) => {}) | null = null
+      function wrapperDragEndListener(event: DragEvent) {
         const { dataTransfer } = event
         // 触摸屏屏蔽掉原有的拖拽事件，只接受来自 Polyfill 的事件
         if (
+          innerDragType !== "polyfill" ||
           dataTransfer === null ||
-          navigator.maxTouchPoints === 0 ||
           "_dragDropTouch" in dataTransfer
         ) {
-          element!.style.transform = ""
-          originalListener?.(event)
+          originalDragEndListener?.(event)
+          innerDragType = "none"
+          setDragType(innerDragType)
         }
       }
-      element.addEventListener("dragstart", () => {
-        if (navigator.maxTouchPoints === 0) {
-          return
-        }
-        element!.style.transform = "scale(1.2)"
-      })
-      element.addEventListener("touchmove", () => {
-        F(false)
-      })
-      element.addEventListener("dragend", wrapperListener)
+      element.addEventListener("dragstart", wrapperDragStartListener)
+      element.addEventListener("touchmove", () => { F(false) })
+      element.addEventListener("dragend", wrapperDragEndListener)
       element.setAttribute("data-drag-hook", "true")
+      Object.defineProperty(element, "ondragstart", {
+        get() { return null },
+        set(value) { originalDragStartListener = value }
+      })
       Object.defineProperty(element, "ondragend", {
         get() { return null },
-        set(value) { originalListener = value }
+        set(value) { originalDragEndListener = value }
       })
+      element.addEventListener("mousedown", (event) => { lastMouseDownEvent = event })
+      element.addEventListener("touchstart", (event) => { lastTouchStartEvent = event })
       // 强制允许拖拽
       element.draggable = true
       const originalRemoveAttribute = element.removeAttribute
@@ -135,6 +162,11 @@ const WidgetListItem = memo(function (e) {
         }
         originalRemoveAttribute.call(this, qualifiedName)
       }
+    }}
+    // [CoCo Next] 移动端拖拽放大
+    style={{
+      transform: dragType === "polyfill" ? "scale(1.2)" : undefined,
+      transition: "transform .1s ease-in-out,box-shadow .1s"
     }}
     className={classnames(styles.itemWrapper, E)}
   >

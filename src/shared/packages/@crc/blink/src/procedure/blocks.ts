@@ -294,7 +294,8 @@ export function register_procedure_blocks(blink, procedure_manager, on_procedure
         var current_group = blink.events.get_group()
         blink.events.set_group(current_group || true)
         // 阻止右键事件
-        if (e.button !== 0) {
+        // [CoCo Next] 修复触屏设备无法拖拽函数中参数的问题。触碰设备没有 button 属性。
+        if ("button" in e && e.button !== 0) {
           return
         }
         var gesture = _this.workspace.get_gesture(e)
