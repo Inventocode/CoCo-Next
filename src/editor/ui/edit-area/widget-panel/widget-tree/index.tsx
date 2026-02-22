@@ -100,8 +100,10 @@ const WidgetListItem = memo(function (e) {
         return
       }
       let innerDragType: typeof dragType = "none"
-      let lastMouseDownEvent: MouseEvent | null = null
-      let lastTouchStartEvent: TouchEvent | null = null
+      let lastMouseDownEvent: MouseEvent = new MouseEvent("mousedown")
+      let lastTouchStartEvent: TouchEvent = new TouchEvent("touchstart")
+      Object.defineProperty(lastMouseDownEvent, "target", { value: element })
+      Object.defineProperty(lastTouchStartEvent, "target", { value: element })
       let originalDragStartListener: ((event: DragEvent) => {}) | null = null
       function wrapperDragStartListener(event: DragEvent) {
         if (innerDragType === "polyfill") {
