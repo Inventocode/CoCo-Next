@@ -51,6 +51,10 @@ jobs:
         run: |
           mv ./editor/dist/coco.codemao.cn ./dist
 
+      - name: 移动构建信息到分发目录
+        run: |
+          mv ./editor/dist/.build-info ./dist
+
       - name: 安装文档依赖
         run: npm ci
         working-directory: ./docs
