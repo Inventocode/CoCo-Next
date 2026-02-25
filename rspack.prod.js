@@ -1,4 +1,5 @@
 const rspack = require("@rspack/core")
+const { WebpackManifestPlugin } = require("webpack-manifest-plugin")
 
 const common = require("./rspack.common")
 
@@ -55,13 +56,15 @@ module.exports = (env) => {
         },
         plugins: [
             new rspack.CopyRspackPlugin({
-                patterns: [{
-                    from: "static"
-                }]
+                patterns: [
+                    { from: "package.json", to: "../.build-info/" },
+                    { from: "static" }
+                ]
             }),
             new rspack.CssExtractRspackPlugin({
                 filename: "static/styles/[name].[contenthash].css"
-            })
+            }),
+            new WebpackManifestPlugin({ fileName: "../.build-info/manifest.json" })
         ]
     }, env)
 
