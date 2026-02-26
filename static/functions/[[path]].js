@@ -86,12 +86,17 @@ export async function onRequest(context) {
         if (targetUrl) { // 处理编程猫 API 代理
 
             for (const rule of PROXY_REJECT_RULES) {
-                if (!rule.test.test(targetUrl)) {
+                if (rule.test.test(targetUrl)) {
                     return new Response(JSON.stringify(Object.assign(
                         {}, PROXY_INTERCEPT_RESPONSE, {
                             explanation: `该 API 用作 ${rule.function}，为保护用户免于${rule.consequence}，${PROTECT_NAME}禁止访问该 API`
                         }
-                    )), { status: 403 })
+                    )), {
+                        status: 403,
+                        headers: new Headers([
+                            ["content-type", "application/json"]
+                        ])
+                    })
                 }
             }
 
