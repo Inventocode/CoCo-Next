@@ -7,12 +7,14 @@ sidebar_position: 1
 ## 一、本地使用
 
 :::warning
-本地使用只是把 CoCo Next 的部分资源存储到了本地，仍有部分资源需要从网上加载。
+本地使用只是把 CoCo Next 的部分加载缓慢资源存储到了本地，仍有部分资源需要从网上加载。
 :::
 
-目前仅支持 Windows 系统。
+目前仅支持 64 位 Window 10 及以上版本的系统。
 
-到 [Release](https://gitee.com/oldsquaw-coco-next/CoCo-Next/releases) 界面下载 CoCo Next 服务，下载完成后双击程序启动。
+到 [发行版](https://gitee.com/oldsquaw-coco-next/CoCo-Next-Local-Server/releases) 界面下载 CoCo Next 本地服务，下载完成后双击程序启动。
+
+初次运行时先在程序内下载最新版本，下载完成后即可启动服务。
 
 ## 二、在线使用镜像仓库
 

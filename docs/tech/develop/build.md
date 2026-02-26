@@ -43,6 +43,7 @@ Rspack CLI 环境变量：
 |:-:|:-:|:-:|
 | publicPath | 加载资源文件的地址，详见 [Output - Rspack](https://rspack.rs/zh/config/output#outputpublicpath) | `/` |
 | analyze | 生成用于分析的构建信息 | / |
+| noPublicCDN | 不使用公共 CDN 来加载第三方依赖 | / |
 
 :::tip
 
