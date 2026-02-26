@@ -24,6 +24,7 @@ const PAGES = [
  * @typedef {Object} CommonEnv
  * @property {string} [publicPath]
  * @property {boolean} [analyze]
+ * @property {boolean} [noPublicCDN]
  */
 
 /**
@@ -50,7 +51,8 @@ module.exports = (moreConfig, env) => {
  */
 function commonConfig(development, env) {
 
-    const { publicPath = "/" } = env
+    const { publicPath = "/", noPublicCDN = false } = env
+    const publicCDN = !noPublicCDN
 
     /** @type {SWC.Config} */
     const commonSwcConfig = {
@@ -171,7 +173,7 @@ function commonConfig(development, env) {
                 process: "process/"
             }),
             // @ts-ignore
-            new WebpackCdnPlugin({
+            publicCDN && new WebpackCdnPlugin({
                 modules: [
                     {
                         name: "react",

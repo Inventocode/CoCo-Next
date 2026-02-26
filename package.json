@@ -20,7 +20,7 @@
     "build": "rspack --config rspack.prod.js",
     "build:dev": "rspack --config rspack.dev.js",
     "serve": "rspack serve --config rspack.server.js",
-    "release": "npm run build && node scripts/zip.js"
+    "release": "npm run build \"--\" --env noPublicCDN && node scripts/zip.js"
   },
   "dependencies": {
     "@ant-design/icons": "^6.0.0",
