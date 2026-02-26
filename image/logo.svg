@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="240">
+    <text
+        x="50%"
+        y="0"
+        text-anchor="middle"
+        dominant-baseline="hanging"
+        font-family="Calibri Light"
+        font-size="240"
+        color="black"
+        stroke="black"
+        stroke-width="10"
+    >CoCo Next</text>
+</svg>
