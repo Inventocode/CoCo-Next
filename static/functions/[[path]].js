@@ -141,8 +141,16 @@ export async function onRequest(context) {
             // 允许跨域请求
             newResponse.headers.set("access-control-allow-origin", origin.origin)
 
-            if (/https?:\/\/api\.codemao\.cn\/web\/users\/details/.test(targetUrl)) {
-                let data = newResponse.json();
+            if (/https?:\/\/api\.codemao\.cn\/tiger\/v3\/web\/accounts\/profile/.test(targetUrl)) {
+                let data = await newResponse.json();
+                Object.assign(data, {
+                    birthday: 0,
+                    birthday_note: `birthday 字段已被${PROTECT_NAME}拦截`,
+                    qq: `已被${PROTECT_NAME}拦截`
+                })
+                return new Response(JSON.stringify(data), newResponse)
+            } else if (/https?:\/\/api\.codemao\.cn\/web\/users\/details/.test(targetUrl)) {
+                let data = await newResponse.json();
                 Object.assign(data, {
                     birthday: 0,
                     birthday_note: `birthday 字段已被${PROTECT_NAME}拦截`,
@@ -153,7 +161,7 @@ export async function onRequest(context) {
                 })
                 return new Response(JSON.stringify(data), newResponse)
             } else if (/https?:\/\/api\.codemao\.cn\/api\/user\/info/.test(targetUrl)) {
-                let data = newResponse.json();
+                let data = await newResponse.json();
                 Object.assign(data, {
                     age: 0,
                     age_note: `age 字段已被${PROTECT_NAME}拦截`,
