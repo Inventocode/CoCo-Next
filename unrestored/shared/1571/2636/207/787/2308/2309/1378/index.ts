@@ -7,8 +7,8 @@
 var t
 var r
 var i
-t = require("./2317")
-r = require("./2318")
+t = require(/* 2317 */"./2317")
+r = require(/* 2318 */"./2318")
 i = function (e, n, i) {
   return r(t(e), n, i)
 }

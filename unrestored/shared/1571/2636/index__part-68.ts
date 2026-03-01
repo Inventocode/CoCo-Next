@@ -8,26 +8,25 @@
 
 import { Dh } from "./index__part-66"
 import { Wh } from "./index__part-67"
-import * as /* [auto-meaningful-name] */$_144 from "./144"
-import * as /* [auto-meaningful-name] */$_215 from "./215"
-import * as /* [auto-meaningful-name] */$_145 from "./145"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector, useDispatch, batch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useCallback, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_810 from "./810"
-import /* [auto-meaningful-name] */$_8101 from "./810"
+import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"./144"
+import * as /* [auto-meaningful-name] */Module_215 from /* 215 */"./215"
+import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"./145"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector, useDispatch, batch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_810 from /* 810 */"./810"
+import /* [auto-meaningful-name] */Module_8101 from /* 810 */"./810"
 var Vh = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$opacity = e.opacity
@@ -44,46 +43,46 @@ var Vh = function (e) {
   var /* [auto-meaningful-name] */e$attributes$rotation = e$attributes.rotation
   var /* [auto-meaningful-name] */e$attributes$selectedStyleId = e$attributes.selectedStyleId
   var /* [auto-meaningful-name] */e$attributes$pivotToCenter = e$attributes.pivotToCenter
-  var b = useRef(false)
-  var y = useRef(e$attributes$scaleAndLock)
-  var w = useState(true)
-  var C = $_10_index.a(w, 2)
+  var b = React1.useRef(false)
+  var y = React1.useRef(e$attributes$scaleAndLock)
+  var w = React1.useState(true)
+  var C = Module_10.a(w, 2)
   var T = C[0]
   var j = C[1]
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var k = t
   var x = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
   var D = useDispatch()
   var M = x === t
-  var L = useState(2)
-  var P = $_10_index.a(L, 2)
+  var L = React1.useState(2)
+  var P = Module_10.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = useState({
+  var G = React1.useState({
     x: 0,
     y: 0
   })
-  var W = $_10_index.a(G, 2)
+  var W = Module_10.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = useState({
+  var V = React1.useState({
     width: 0,
     height: 0,
     translateX: 0,
     translateY: 0,
     angle: 0
   })
-  var K = $_10_index.a(V, 2)
+  var K = Module_10.a(V, 2)
   var q = K[0]
   var X = K[1]
-  var Q = useState(false)
-  var Z = $_10_index.a(Q, 2)
+  var Q = React1.useState(false)
+  var Z = Module_10.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
-  var ee = useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t, n) {
+  var ee = React1.useCallback(function () {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
       var r
       var o
       return RegeneratorRuntime.wrap(function (e) {
@@ -97,20 +96,20 @@ var Vh = function (e) {
                   var t = e.id
                   var n = {
                     id: t,
-                    source: Jd.mb(e.source) || ""
+                    source: Module_33.mb(e.source) || ""
                   }
                   o.push(t)
                   r.push(n)
                 })
               })
-              r.unshift($_144.h)
+              r.unshift(Module_144.h)
               n.get_style_ids().forEach(function (e) {
                 if (!o.includes(e)) {
                   n.remove_style(e)
                 }
               })
               return e.abrupt("return", Promise.all(r.map(function (e) {
-                return $_145.a(t, n, e)
+                return Module_145.a(t, n, e)
               })))
             case 7:
             case "end":
@@ -123,8 +122,8 @@ var Vh = function (e) {
       return e.apply(this, arguments)
     }
   }(), [e$attributes$actionList])
-  var te = useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+  var te = React1.useCallback(function () {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var o
       var /* [auto-meaningful-name] */o$is_error
@@ -166,7 +165,7 @@ var Vh = function (e) {
               e.next = 15
               return ee(t, n)
             case 15:
-              $_145.c(t, k, e$position, e$attributes$pivotToCenter, e$attributes$scale, e$attributes$rotation, e$attributes$flipped, e$attributes$scaleAndLock)
+              Module_145.c(t, k, e$position, e$attributes$pivotToCenter, e$attributes$scale, e$attributes$rotation, e$attributes$flipped, e$attributes$scaleAndLock)
               t.render()
               j(false)
             case 18:
@@ -180,27 +179,27 @@ var Vh = function (e) {
       return e.apply(this, arguments)
     }
   }(), [e$parentId, k, ee])
-  useEffect(function () {
+  React1.useEffect(function () {
     y.current = e$attributes$scaleAndLock
   }, [e$attributes$scaleAndLock])
-  useEffect(function () {
-    var e = $_215.b(k)
+  React1.useEffect(function () {
+    var e = Module_215.b(k)
     if (e) {
       te(e)
     }
   }, [k, te])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
         var t = e.actors.get_actor(k)
         var /* [auto-meaningful-name] */t$is_error = t.is_error
         var /* [auto-meaningful-name] */t$value = t.value
         if (!t$is_error(t$value)) {
-          var o = e$attributes$selectedStyleId || $_144.i
+          var o = e$attributes$selectedStyleId || Module_144.i
           t$value.set_current_style(o)
           e.render()
-          if (o !== $_144.i && b.current) {
+          if (o !== Module_144.i && b.current) {
             setTimeout(function () {
               var t = t$value.get_width()
               var n = t$value.get_height()
@@ -210,7 +209,7 @@ var Vh = function (e) {
                 var a = Math.min(o, i)
                 var /* [auto-meaningful-name] */y$current = y.current
                 if (y$current) {
-                  D($$_$$_$$_$$_src_editor_redux_common_actions.Lg(k, "scaleAndLock", {
+                  D(Src_editor_redux_common_actions.Lg(k, "scaleAndLock", {
                     x: y$current.x * a,
                     y: y$current.x * a,
                     ratio: y$current.ratio
@@ -220,53 +219,53 @@ var Vh = function (e) {
             }, 80)
             b.current = false
           }
-          if (o === $_144.i) {
+          if (o === Module_144.i) {
             b.current = true
           }
         }
       }
     }
   }, [D, k, T, e$attributes$selectedStyleId, B])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
-        $_145.k(e, k, e$visible)
+        Module_145.k(e, k, e$visible)
       }
     }
   }, [k, T, e$visible])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
-        $_145.i(e, k, e$attributes$rotation)
+        Module_145.i(e, k, e$attributes$rotation)
       }
     }
   }, [k, T, e$attributes$rotation])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
-        $_145.h(e, k, e$position)
+        Module_145.h(e, k, e$position)
       }
     }
   }, [k, T, e$position])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
-        $_145.e(e, k, e$attributes$pivotToCenter)
+        Module_145.e(e, k, e$attributes$pivotToCenter)
       }
     }
   }, [k, T, e$attributes$pivotToCenter])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
         if (e$attributes$scaleAndLock) {
-          $_145.j(e, k, e$attributes$scaleAndLock.x, e$attributes$scaleAndLock.y)
+          Module_145.j(e, k, e$attributes$scaleAndLock.x, e$attributes$scaleAndLock.y)
         } else {
-          D($$_$$_$$_$$_src_editor_redux_common_actions.Lg(k, "scaleAndLock", {
+          D(Src_editor_redux_common_actions.Lg(k, "scaleAndLock", {
             x: e$attributes$scale || 1,
             y: e$attributes$scale || 1,
             ratio: 1
@@ -275,25 +274,25 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$scaleAndLock])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
-        $_145.g(e, k, e$opacity)
+        Module_145.g(e, k, e$opacity)
       }
     }
   }, [k, T, e$opacity])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e && e$attributes$flipped) {
-        $_145.f(e, k, e$attributes$flipped)
+        Module_145.f(e, k, e$attributes$flipped)
       }
     }
   }, [k, T, e$attributes$flipped])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!T) {
-      var e = $_215.b(k)
+      var e = Module_215.b(k)
       if (e) {
         var t = e.actors.get_actor(k)
         var /* [auto-meaningful-name] */t$is_error = t.is_error
@@ -305,9 +304,9 @@ var Vh = function (e) {
       }
     }
   }, [k, T, s])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (x === t) {
-      var e = $_215.b(t)
+      var e = Module_215.b(t)
       var n = null === e || undefined === e ? undefined : e.components.get_editor()
       if (!(null === n || undefined === n)) {
         n.set_btns_visible(true)
@@ -317,8 +316,8 @@ var Vh = function (e) {
       }
     }
   }, [t, x, T])
-  useEffect(function () {
-    var e = $_215.b(k)
+  React1.useEffect(function () {
+    var e = Module_215.b(k)
     if (e) {
       var t = function (e) {
         if (k === e.target_id) {
@@ -367,11 +366,11 @@ var Vh = function (e) {
       }
     }
   }, [k, D])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (e$parentId) {
-      var e = Jd.Cb(e$parentId)
+      var e = Module_33.Cb(e$parentId)
       if (e) {
-        var t = $_215.b(k)
+        var t = Module_215.b(k)
         if (t) {
           var n = t.actors.get_actor(k)
           var /* [auto-meaningful-name] */n$is_error = n.is_error
@@ -412,7 +411,7 @@ var Vh = function (e) {
       }
     }
   }, [e$position, e$attributes$pivotToCenter, e$attributes$rotation, e$attributes$scale, e$attributes$selectedStyleId, T, e$parentId, k])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e = document.querySelector("#".concat(e$parentId, "[data-role=\"WIDGET\"]"))
     if (e instanceof HTMLDivElement) {
       if (J) {
@@ -442,15 +441,15 @@ var Vh = function (e) {
       top: q.translateY
     }
   }, React.createElement("div", {
-    className: $_8101.iconWrapper,
+    className: Module_8101.iconWrapper,
     style: {
       position: "absolute",
       left: q.width / 2 + 28 / B,
       top: -q.height / 2 - 8 / B
     }
-  }, React.createElement($_748_index.a, {
+  }, React.createElement(Module_748.a, {
     placement: "right",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "actor.editProperty"
     }),
     trigger: ["hover", "click"]
@@ -458,39 +457,39 @@ var Vh = function (e) {
     onClick: function () {
       var e = !ne
       batch(function () {
-        D($$_$$_$$_$$_src_editor_redux_common_actions.fj(e))
+        D(Src_editor_redux_common_actions.fj(e))
         if (e) {
-          D($$_$$_$$_$$_src_editor_redux_common_actions.Fj(false))
+          D(Src_editor_redux_common_actions.Fj(false))
         }
       })
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-attribute",
-    className: Classnames($_8101.iconButton, $_8101.editIcon)
-  }))), React.createElement($_748_index.a, {
+    className: Classnames(Module_8101.iconButton, Module_8101.editIcon)
+  }))), React.createElement(Module_748.a, {
     placement: "right",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "actor.editActionStyle"
     }),
     trigger: ["hover", "click"]
   }, React.createElement("div", {
     onClick: function () {
-      D($$_$$_$$_$$_src_editor_redux_common_actions.Dh(k))
+      D(Src_editor_redux_common_actions.Dh(k))
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-edit-round",
-    className: Classnames($_8101.iconButton, $_8101.editStyleIcon)
+    className: Classnames(Module_8101.iconButton, Module_8101.editStyleIcon)
   })))))) : null
 }
 var zh = {
   icon: "icon-widget-actor",
   title: "defaultActorWidgetTitle",
   previewAreaWidgetTitle: "actor",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.a,
+  type: Src_editor_widget_builtIn_types.a,
   editConfig: Dh,
-  isInvisibleWidget: $_144.g,
+  isInvisibleWidget: Module_144.g,
   widget: {
-    isGlobalWidget: $_144.f,
+    isGlobalWidget: Module_144.f,
     attributes: {
       scale: 1,
       scaleAndLock: {
@@ -523,10 +522,10 @@ var Kh = [
   }
 ]
 var qh = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.e,
+  type: Src_editor_widget_builtIn_types.e,
   category: {
     iconId: "icon-widget-camera",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.e
+    blocks: Src_editor_widget_builtIn_types.e
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -536,10 +535,10 @@ var qh = {
     setBlockGroupSnippet: function (e) {
       e.insertBlockSnippetGenerator("camera_get_camera_take_photo", function (t, n) {
         var r = t.blocks[n]
-        var o = ep.o(r.id)
+        var o = Module_4.o(r.id)
         var i = e.valueToCode(t, n, "PHOTO", e.ORDER_FUNCTION_CALL)
         var a = e.statementToCode(t, n, "DO")
-        return ep.j("getCameraTakePhoto", [ep.k([i], a), o])
+        return Module_4.j("getCameraTakePhoto", [Module_4.k([i], a), o])
       })
       e.insertBlockSnippetGenerator("camera_get_camera_take_video_value", function () {
         return "video"
@@ -552,17 +551,17 @@ var qh = {
       })
       e.insertBlockSnippetGenerator("camera_get_camera_take_video", function (t, n) {
         var r = t.blocks[n]
-        var o = ep.o(r.id)
+        var o = Module_4.o(r.id)
         var i = e.valueToCode(t, n, "VIDEO", e.ORDER_FUNCTION_CALL)
         var a = e.statementToCode(t, n, "DO")
-        return ep.n("getCameraTakeVideo", [ep.k([i], a), o])
+        return Module_4.n("getCameraTakeVideo", [Module_4.k([i], a), o])
       })
       e.insertBlockSnippetGenerator("camera_get_camera_choose_photo", function (t, n) {
         var r = t.blocks[n]
-        var o = ep.o(r.id)
+        var o = Module_4.o(r.id)
         var i = e.valueToCode(t, n, "PHOTO", e.ORDER_FUNCTION_CALL)
         var a = e.statementToCode(t, n, "DO")
-        return ep.j("getCameraChoosePhoto", [ep.k([i], a), o])
+        return Module_4.j("getCameraChoosePhoto", [Module_4.k([i], a), o])
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -669,7 +668,7 @@ var qh = {
 var Xh = {
   icon: "icon-widget-camera",
   title: "CameraWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.e,
+  type: Src_editor_widget_builtIn_types.e,
   previewAreaWidgetTitle: "CameraWidget.widgetName",
   component: Yh,
   editConfig: Kh,

@@ -6,18 +6,18 @@
 
 "use strict"
 
-var r = require("./311")
+var r = require(/* 311 */"./311")
 var /* [auto-meaningful-name] */r$ArrayPrototypePop = r.ArrayPrototypePop
 var /* [auto-meaningful-name] */r$Promise = r.Promise
-var a = require("./583")
+var a = require(/* 583 */"./583")
 var /* [auto-meaningful-name] */a$isIterable = a.isIterable
 var /* [auto-meaningful-name] */a$isNodeStream = a.isNodeStream
 var /* [auto-meaningful-name] */a$isWebStream = a.isWebStream
-var /* [auto-meaningful-name] */require$_1159_index$pipelineImpl = require("./1159/index").pipelineImpl
-var /* [auto-meaningful-name] */require$_650$finished = require("./650").finished
-require("../1402/index")
+var /* [auto-meaningful-name] */require_1159_$_1159_index$pipelineImpl = require(/* 1159 */"./1159/index").pipelineImpl
+var /* [auto-meaningful-name] */require_650_$_650$finished = require(/* 650 */"./650").finished
+require(/* 1402 */"../1402/index")
 module.exports = {
-  finished: require$_650$finished,
+  finished: require_650_$_650$finished,
   pipeline: function () {
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
       t[n] = arguments[n]
@@ -31,7 +31,7 @@ module.exports = {
         f$signal = f.signal
         f$end = f.end
       }
-      require$_1159_index$pipelineImpl(t, function (t, r) {
+      require_1159_$_1159_index$pipelineImpl(t, function (t, r) {
         if (t) {
           n(t)
         } else {

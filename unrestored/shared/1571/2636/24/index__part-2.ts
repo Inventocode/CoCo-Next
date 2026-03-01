@@ -7,32 +7,32 @@
 "use strict"
 
 import { T, S, A, I, j, N, R, k, x, D, M, L, P, B, F, G, W, U } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_43 from "../43"
-import * as /* [auto-meaningful-name] */$$_49 from "../49"
-import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as /* [auto-meaningful-name] */$$_100 from "../100"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_390 from "../390"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as s from "../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"../43"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"../49"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../18"
+import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"../100"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_390 from /* 390 */"../390"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../738/66"
+import * as /* [auto-meaningful-name] */OtJson1 from /* 31 */"ot-json1"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 var o
 var r
-import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */Socket$ioClient from "socket.io-client"
-import /* [auto-meaningful-name] */Socket$ioClient1 from "socket.io-client"
-var /* [auto-meaningful-name] */require$$_$$_$$_$$_$$_src_shared_env$a$oTSocketHost = require("../../../../../src/shared/env").a.oTSocketHost
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../37/index"
+import * as /* [auto-meaningful-name] */Socket_ioClient from /* 485 */"socket.io-client"
+import /* [auto-meaningful-name] */Socket_ioClient1 from /* 485 */"socket.io-client"
+var /* [auto-meaningful-name] */require_57_$$_$$_$$_$$_$$_src_shared_env$a$oTSocketHost = require(/* 57 */"../../../../../src/shared/env").a.oTSocketHost
 var K = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.subject = undefined
     this.client = undefined
-    this.subject = Socket$ioClient1(require$$_$$_$$_$$_$$_src_shared_env$a$oTSocketHost, {
+    this.subject = Socket_ioClient1(require_57_$$_$$_$$_$$_$$_src_shared_env$a$oTSocketHost, {
       path: "/collaborate/",
       query: {
         work_id: n,
@@ -44,7 +44,7 @@ var K = function () {
     this.client = t
     this.onSocketEvent(n)
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "onSocketEvent",
       value: function (e) {
@@ -103,7 +103,7 @@ var K = function () {
 }()
 var q = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.applyClient = function (e, t) {
       e.sendOperation(e.revision, t)
       e.setState(new X(t))
@@ -115,7 +115,7 @@ var q = function () {
       return e
     }
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "applyServer",
       value: function (e, t) {
@@ -133,11 +133,11 @@ var q = function () {
 }()
 var X = function () {
   function e(t) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.outstanding = undefined
     this.outstanding = t
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "applyClient",
       value: function (e, t) {
@@ -173,13 +173,13 @@ var X = function () {
 }()
 var Q = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.outstanding = undefined
     this.buffer = undefined
     this.outstanding = t
     this.buffer = n
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "applyClient",
       value: function (t, n) {
@@ -230,7 +230,7 @@ var Q = function () {
 var Z = function () {
   function e(t) {
     var n = this
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this._socket = undefined
     this.revision = undefined
     this.adapter = undefined
@@ -265,7 +265,7 @@ var Z = function () {
     this.state = new q()
     this._canRefreshUrl = true
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "disconnect",
       value: function () {
@@ -344,7 +344,7 @@ var Z = function () {
     }, {
       key: "handleJoinAck",
       value: function () {
-        var e = s.a(RegeneratorRuntime.mark(function e(t) {
+        var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
           var /* [auto-meaningful-name] */t$code
           var /* [auto-meaningful-name] */t$data
           return RegeneratorRuntime.wrap(function (e) {
@@ -356,7 +356,7 @@ var Z = function () {
                     break
                   }
                   e.next = 5
-                  return $$_43.b()
+                  return Module_43.b()
                 case 5:
                   this.initDocData = e.sent
                   this._socket.subject.emit(S, {
@@ -413,8 +413,8 @@ var Z = function () {
     }, {
       key: "_distributeUserColor",
       value: function (e) {
-        var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent
-        var n = $$_43.c()
+        var /* [auto-meaningful-name] */Module_49$oTHelper$customEvent
+        var n = Module_43.c()
         Object.keys(n).forEach(function (t) {
           if (!e.some(function (e) {
             return e.id === Number(t)
@@ -425,33 +425,33 @@ var Z = function () {
         var r = []
         e.forEach(function (e) {
           n[e.id] = function (e) {
-            return $$_390.b.find(function (t) {
+            return Module_390.b.find(function (t) {
               return !e.includes(t.toUpperCase())
-            }) || $$_390.a
+            }) || Module_390.a
           }(r)
           r.push(n[e.id])
         })
-        if (!(null === ($$_49$oTHelper$customEvent = $$_49.oTHelper.customEvent) || undefined === $$_49$oTHelper$customEvent)) {
-          $$_49$oTHelper$customEvent.emit.userColors(n)
+        if (!(null === (Module_49$oTHelper$customEvent = Module_49.oTHelper.customEvent) || undefined === Module_49$oTHelper$customEvent)) {
+          Module_49$oTHelper$customEvent.emit.userColors(n)
         }
-        $$_37_index.a($$_100.t(n))
+        Module_37.a(Module_100.t(n))
       }
     }, {
       key: "handleServerUserStatusChanged",
       value: function (e) {
-        var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent
+        var /* [auto-meaningful-name] */Module_49$oTHelper$customEvent
         this._distributeUserColor(e)
         this._updateUserFocusInfoList(e)
-        $$_37_index.a($$_100.l(e))
-        if (!(null === ($$_49$oTHelper$customEvent = $$_49.oTHelper.customEvent) || undefined === $$_49$oTHelper$customEvent)) {
-          $$_49$oTHelper$customEvent.emit.focusItem("widget")
+        Module_37.a(Module_100.l(e))
+        if (!(null === (Module_49$oTHelper$customEvent = Module_49.oTHelper.customEvent) || undefined === Module_49$oTHelper$customEvent)) {
+          Module_49$oTHelper$customEvent.emit.focusItem("widget")
         }
       }
     }, {
       key: "_updateUserFocusInfoList",
       value: function (e) {
-        var t = $$_43.d()
-        $$_37_index.a($$_100.v($$_738_66.a.List(t.filter(function (t) {
+        var t = Module_43.d()
+        Module_37.a(Module_100.v(Module_66.a.List(t.filter(function (t) {
           return e.some(function (e) {
             return e.id === t.userId
           })
@@ -470,74 +470,74 @@ var Z = function () {
             edit_permission: e.edit_permission
           })
         })
-        $$_37_index.a($$_100.s(t))
+        Module_37.a(Module_100.s(t))
       }
     }, {
       key: "handleUserEliminated",
       value: function (e) {
-        var t = $$_37_index.b()
+        var t = Module_37.b()
         this.disconnect()
-        $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.zh({
+        Module_37.a(Src_editor_redux_common_actions.zh({
           onConfirm: function () {
-            $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Gf())
+            Module_37.a(Src_editor_redux_common_actions.Gf())
           },
-          allowText: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "confirm").toString(),
+          allowText: Src_shared_ui_language.c(t, "confirm").toString(),
           onClose: function () {
-            $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Gf())
+            Module_37.a(Src_editor_redux_common_actions.Gf())
           },
-          title: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
-          content: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
+          title: Src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteTitle" : "OT.editPermissionLostTitle").toString(),
+          content: Src_shared_ui_language.c(t, e === o.ProjectRemove ? "OT.currentProjectBeDeleteDescription" : "OT.editPermissionLostDescription").toString(),
           cancelBtnVisible: false
         }))
       }
     }, {
       key: "handleCustomEventRelay",
       value: function (e) {
-        var /* [auto-meaningful-name] */$$_49$oTHelper$customEvent
-        if (!(null === ($$_49$oTHelper$customEvent = $$_49.oTHelper.customEvent) || undefined === $$_49$oTHelper$customEvent)) {
-          $$_49$oTHelper$customEvent.accept(e)
+        var /* [auto-meaningful-name] */Module_49$oTHelper$customEvent
+        if (!(null === (Module_49$oTHelper$customEvent = Module_49.oTHelper.customEvent) || undefined === Module_49$oTHelper$customEvent)) {
+          Module_49$oTHelper$customEvent.accept(e)
         }
       }
     }, {
       key: "handleSetCollAutoSave",
       value: function () {
-        $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.di(true))
+        Module_37.a(Src_editor_redux_common_actions.di(true))
       }
     }, {
       key: "handleUserPermissionChange",
       value: function (e) {
-        var /* [auto-meaningful-name] */$$_37_index$d$getState$common$userInfo
-        var n = $$_37_index.b()
-        var r = e.edit_permission === $$_18.c.ReadOnly ? $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "OT.permissionChangeToReadOnly").toString() : $$_$$_$$_$$_$$_src_shared_ui_language.c(n, "OT.permissionChangeToEdit").toString()
-        var o = null === ($$_37_index$d$getState$common$userInfo = $$_37_index.d.getState().common.userInfo) || undefined === $$_37_index$d$getState$common$userInfo ? undefined : $$_37_index$d$getState$common$userInfo.id
+        var /* [auto-meaningful-name] */Module_37$d$getState$common$userInfo
+        var n = Module_37.b()
+        var r = e.edit_permission === Module_18.c.ReadOnly ? Src_shared_ui_language.c(n, "OT.permissionChangeToReadOnly").toString() : Src_shared_ui_language.c(n, "OT.permissionChangeToEdit").toString()
+        var o = null === (Module_37$d$getState$common$userInfo = Module_37.d.getState().common.userInfo) || undefined === Module_37$d$getState$common$userInfo ? undefined : Module_37$d$getState$common$userInfo.id
         var /* [auto-meaningful-name] */e$coll_user_id = e.coll_user_id
         if (o === e$coll_user_id) {
-          $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
+          Module_37.a(Src_editor_redux_common_actions.mj({
             visible: true,
             message: r,
             duration: 2e3
           }))
-          $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Ci(e.edit_permission === $$_18.c.ReadOnly ? $$_18.c.ReadOnly : $$_18.c.Edit))
+          Module_37.a(Src_editor_redux_common_actions.Ci(e.edit_permission === Module_18.c.ReadOnly ? Module_18.c.ReadOnly : Module_18.c.Edit))
         }
-        var a = Array.from($$_37_index.d.getState().oTState.cooperationUserList)
+        var a = Array.from(Module_37.d.getState().oTState.cooperationUserList)
         var s = a.find(function (e) {
           return e.id === e$coll_user_id
         })
         if (s) {
           s.edit_permission = e.edit_permission
         }
-        $$_37_index.a($$_100.s(a))
+        Module_37.a(Module_100.s(a))
       }
     }, {
       key: "forceSetDoc",
       value: function () {
-        var e = s.a(RegeneratorRuntime.mark(function e() {
+        var e = Module_7.a(RegeneratorRuntime.mark(function e() {
           return RegeneratorRuntime.wrap(function (e) {
             for (;;) {
               switch (e.prev = e.next) {
                 case 0:
                   e.next = 2
-                  return $$_43.b()
+                  return Module_43.b()
                 case 2:
                   this.initDocData = e.sent
                   this.adapter.setDoc(this.initDocData)
@@ -562,11 +562,11 @@ var Z = function () {
       key: "collSetDoc",
       value: function (e) {
         if (e.business_type === r.RevertProject) {
-          var t = $$_37_index.b()
-          $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.zh({
-            allowText: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "confirm").toString(),
-            title: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "OT.tips").toString(),
-            content: $$_$$_$$_$$_$$_src_shared_ui_language.c(t, "OT.revert").toString(),
+          var t = Module_37.b()
+          Module_37.a(Src_editor_redux_common_actions.zh({
+            allowText: Src_shared_ui_language.c(t, "confirm").toString(),
+            title: Src_shared_ui_language.c(t, "OT.tips").toString(),
+            content: Src_shared_ui_language.c(t, "OT.revert").toString(),
             cancelBtnVisible: false
           }))
         }

@@ -4,10 +4,10 @@
  * 模块 ID：497
  */
 
-var r = require("../1282/334")
-var o = require("../1662/309")
-var i = require("../1581/946")
-var a = require("../1700/1088")
+var r = require(/* 334 */"../1282/334")
+var o = require(/* 309 */"../1662/309")
+var i = require(/* 946 */"../1581/946")
+var a = require(/* 1088 */"../1700/1088")
 var s = i("IE_PROTO")
 var /* [auto-meaningful-name] */Object$prototype = Object.prototype
 module.exports = a ? Object.getPrototypeOf : function (e) {

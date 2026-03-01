@@ -6,21 +6,20 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_550 from "./550"
-import * as /* [auto-meaningful-name] */$_423 from "./423"
-import /* [auto-meaningful-name] */$_4231 from "./423"
-var OT = memo(function () {
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"./20/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_550 from /* 550 */"./550"
+import * as /* [auto-meaningful-name] */Module_423 from /* 423 */"./423"
+import /* [auto-meaningful-name] */Module_4231 from /* 423 */"./423"
+var OT = React1.memo(function () {
   var e
   var t = useSelector(function (e) {
     return e.block.dropdown
@@ -29,9 +28,9 @@ var OT = memo(function () {
   var /* [auto-meaningful-name] */t$blockInfo$sourceBlockId = t$blockInfo.sourceBlockId
   var /* [auto-meaningful-name] */t$blockInfo$fieldName = t$blockInfo.fieldName
   var /* [auto-meaningful-name] */t$options = t.options
-  var a = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t$blockInfo$sourceBlockId)
+  var a = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.get_block_by_id(t$blockInfo$sourceBlockId)
   var s = (null === a || undefined === a ? undefined : a.get_field_value("WIDGET_ID")) || (null === a || undefined === a || null === (e = a.get_parent()) || undefined === e ? undefined : e.get_field_value("WIDGET_ID"))
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var l = useDispatch()
   if (!s) {
     console.error("actorId is null")
@@ -39,7 +38,7 @@ var OT = memo(function () {
   }
   function u() {
     if (s) {
-      l($$_$$_$$_$$_src_editor_redux_common_actions.Dh(s, function (e, t) {
+      l(Src_editor_redux_common_actions.Dh(s, function (e, t) {
         var n = null === a || undefined === a ? undefined : a.type
         var r = null === a || undefined === a ? undefined : a.get_parent()
         switch (n) {
@@ -47,8 +46,8 @@ var OT = memo(function () {
           case "actor_action_input":
             if (r) {
               setTimeout(function () {
-                var n = $_20_index.getActorActionInputField(r)
-                var o = $_20_index.getActorStyleInputField(r)
+                var n = Module_20.getActorActionInputField(r)
+                var o = Module_20.getActorStyleInputField(r)
                 if (n) {
                   if (!(null === n || undefined === n)) {
                     n.set_value(e)
@@ -61,7 +60,7 @@ var OT = memo(function () {
                     }
                   } else {
                     if (!(null === o || undefined === o)) {
-                      o.set_value(Et.h)
+                      o.set_value(Module_9.h)
                     }
                   }
                 }
@@ -83,73 +82,73 @@ var OT = memo(function () {
       console.error("actorId is null")
     }
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.w, {
-    className: $_4231.container,
+  return React.createElement(Src_shared_ui_components_index.w, {
+    className: Module_4231.container,
     open: t.visible,
     value: t.value,
     onChange: function (e) {
       if ("__EMPTY_VALUE__" !== e) {
         t.setValue(e)
       }
-      l($$_$$_$$_$$_src_editor_redux_common_actions.gh())
+      l(Src_editor_redux_common_actions.gh())
     }
   }, function () {
     var e = []
     switch (t$blockInfo$fieldName) {
       case "ACTOR_STYLE_ID":
         e = t$options.map(function (e, t) {
-          if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
+          if (!Src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
             var /* [auto-meaningful-name] */e$value = e.value
             var /* [auto-meaningful-name] */e$text = e.text
-            if (e$value !== Et.h) {
+            if (e$value !== Module_9.h) {
               if ("DROPDOWN_ADD_BUTTON" === e$value) {
-                return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+                return React.createElement(Src_shared_ui_components_index.p, {
                   value: "__EMPTY_VALUE__",
                   key: e$value
                 }, React.createElement("div", {
-                  className: $_4231.addOption,
+                  className: Module_4231.addOption,
                   onClick: u
-                }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+                }, React.createElement(Src_shared_ui_components_index.j, {
                   type: "icon-add"
-                }), $_710$a$formatMessage({
+                }), Module_710$a$formatMessage({
                   id: "actorAddStyle"
                 })))
               }
               var o = function (e, t) {
-                var n = Et.Bb(e)
+                var n = Module_9.Bb(e)
                 if (n) {
                   var /* [auto-meaningful-name] */n$attributes$actionList = n.attributes.actionList
                   var o = []
                   n$attributes$actionList.forEach(function (e) {
                     var /* [auto-meaningful-name] */e$styleList = e.styleList
-                    o.push.apply(o, $_25_index.a(e$styleList))
+                    o.push.apply(o, Module_25.a(e$styleList))
                   })
                   var i = o.find(function (e) {
                     return e.id === t
                   })
                   if (i) {
                     var /* [auto-meaningful-name] */i$source = i.source
-                    return Et.mb(i$source)
+                    return Module_9.mb(i$source)
                   }
                 }
               }(s, e$value)
-              return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+              return React.createElement(Src_shared_ui_components_index.p, {
                 value: e$value,
                 key: e$value
               }, React.createElement("span", {
-                className: $_4231.itemIndex
+                className: Module_4231.itemIndex
               }, t + 1, "."), React.createElement("div", {
-                className: $_4231.styleItem
+                className: Module_4231.styleItem
               }, React.createElement("div", {
-                className: $_4231.imgContainer
+                className: Module_4231.imgContainer
               }, o ? React.createElement("img", {
-                className: $_4231.styleImg,
+                className: Module_4231.styleImg,
                 src: o,
                 alt: e$text
               }) : React.createElement("span", {
-                className: $_4231.styleEmptyImg
+                className: Module_4231.styleEmptyImg
               })), React.createElement("span", {
-                className: $_4231.styleName
+                className: Module_4231.styleName
               }, e$text)))
             }
           }
@@ -157,11 +156,11 @@ var OT = memo(function () {
         break
       case "ACTOR_ACTION_ID":
         e = t$options.map(function (e) {
-          if (!$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
+          if (!Src_shared_packages_Crc_blink_src_index.BU.base.is_old_dropdown_option(e) && "basic" === e.type) {
             var /* [auto-meaningful-name] */e$text = e.text
             var /* [auto-meaningful-name] */e$value = e.value
             var r = function (e, t) {
-              var n = Et.Bb(e)
+              var n = Module_9.Bb(e)
               if (n) {
                 var r = n.attributes.actionList.find(function (e) {
                   return e.id === t
@@ -170,39 +169,39 @@ var OT = memo(function () {
                   var o = r.styleList[0]
                   if (o) {
                     var /* [auto-meaningful-name] */o$source = o.source
-                    return Et.mb(o$source)
+                    return Module_9.mb(o$source)
                   }
                 }
               }
             }(s, e$value)
-            return "DROPDOWN_ADD_BUTTON" === e$value ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+            return "DROPDOWN_ADD_BUTTON" === e$value ? React.createElement(Src_shared_ui_components_index.p, {
               value: "__EMPTY_VALUE__",
               key: e$value
             }, React.createElement("div", {
-              className: $_4231.addOption,
+              className: Module_4231.addOption,
               onClick: u
-            }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+            }, React.createElement(Src_shared_ui_components_index.j, {
               type: "icon-add"
-            }), $_710$a$formatMessage({
+            }), Module_710$a$formatMessage({
               id: "ActorStyleDialog.addAction"
-            }))) : React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+            }))) : React.createElement(Src_shared_ui_components_index.p, {
               value: e$value,
               key: e$value
             }, React.createElement("div", {
-              className: $_4231.actionItem
+              className: Module_4231.actionItem
             }, React.createElement("div", {
-              className: $_4231.imgContainer
+              className: Module_4231.imgContainer
             }, r ? React.createElement("img", {
-              className: $_4231.actionImg,
+              className: Module_4231.actionImg,
               src: r,
               alt: e$text
             }) : React.createElement("span", {
-              className: $_4231.actionEmptyImg,
+              className: Module_4231.actionEmptyImg,
               style: {
-                backgroundImage: "url(".concat($_550.a, ")")
+                backgroundImage: "url(".concat(Module_550.a, ")")
               }
             })), React.createElement("span", {
-              className: $_4231.actionName
+              className: Module_4231.actionName
             }, e$text)))
           }
         })

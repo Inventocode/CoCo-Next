@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.BaseNode = undefined
-var r = require("../../../123/index")
+var r = require(/* 123 */"../../../123/index")
 var i = function () {
   function e(e) {
     this.children_ = []

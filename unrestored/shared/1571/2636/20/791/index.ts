@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("regenerator-runtime")
-var i = require("./449")
-var /* [auto-meaningful-name] */require$_2385_index$ReadableWebToNodeStream = require("./2385/index").ReadableWebToNodeStream
-var a = require("./2393/index")
+var r = require(/* 1 */"regenerator-runtime")
+var i = require(/* 449 */"./449")
+var /* [auto-meaningful-name] */require_2385_$_2385_index$ReadableWebToNodeStream = require(/* 2385 */"./2385/index").ReadableWebToNodeStream
+var a = require(/* 2393 */"./2393/index")
 function s() {
   return (s = i(r.mark(function e(t) {
     var n
@@ -18,7 +18,7 @@ function s() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = new require$_2385_index$ReadableWebToNodeStream(t)
+            n = new require_2385_$_2385_index$ReadableWebToNodeStream(t)
             e.next = 3
             return a.fromStream(n)
           case 3:

@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.uniSlice = exports.dlen = exports.eachOp = undefined
-var r = require("./1145")
+var r = require(/* 1145 */"./1145")
 var i = function (e) {
   if (!Array.isArray(e)) {
     throw Error("Op must be an array of components")

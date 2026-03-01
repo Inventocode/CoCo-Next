@@ -10,20 +10,20 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.BlockSvg = undefined
-var r = require("tslib")
-var i = require("@kitten-team/gl-matrix")
-var o = require("../../1058/125")
-var a = require("../../123/195/index")
-var s = require("../../123/537")
-var c = require("../../207/734/387")
-var u = require("../../123/293")
-var l = require("../../123/index")
-var f = require("../../1022/214")
-var d = require("../../1022/579")
-var h = require("../../123/478")
-var p = require("../499/975")
-var _ = require("../499/852")
-var A = require("./2169/763")
+var r = require(/* 93 */"tslib")
+var i = require(/* 258 */"@kitten-team/gl-matrix")
+var o = require(/* 125 */"../../1058/125")
+var a = require(/* 195 */"../../123/195/index")
+var s = require(/* 537 */"../../123/537")
+var c = require(/* 387 */"../../207/734/387")
+var u = require(/* 293 */"../../123/293")
+var l = require(/* 123 */"../../123/index")
+var f = require(/* 214 */"../../1022/214")
+var d = require(/* 579 */"../../1022/579")
+var h = require(/* 478 */"../../123/478")
+var p = require(/* 975 */"../499/975")
+var _ = require(/* 852 */"../499/852")
+var A = require(/* 763 */"./2169/763")
 var g = function (e) {
   function t(t) {
     var /* [auto-meaningful-name] */r$svg_group
@@ -2422,5 +2422,5 @@ var g = function (e) {
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.WorkspaceComment)], t.prototype, "workspace_comment_factory", undefined);
   (0, r.__decorate)([(0, o.lazy_inject)(o.BINDING.BlockGroup)], t.prototype, "block_group_factory", undefined)
   return t
-}(require("./977").WorkspaceElement)
+}(require(/* 977 */"./977").WorkspaceElement)
 exports.BlockSvg = g

@@ -7,12 +7,12 @@
 "use strict"
 
 var Me
-import * as /* [auto-meaningful-name] */$_217_index from "./217/index"
-import * as /* [auto-meaningful-name] */$$_105 from "../105"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$_126 from "./126";
+import * as /* [auto-meaningful-name] */Module_217 from /* 217 */"./217/index"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"../105"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_126 from /* 126 */"./126";
 (function () {
   function e(e, t) {
     this.actor_dialogs = new Map()
@@ -30,7 +30,7 @@ import * as /* [auto-meaningful-name] */$_126 from "./126";
   e.prototype.destroy_actor_dialog = function (e) {
     var t = this.actor_dialogs.get(e)
     if (!t) {
-      return new $_119.a("Actor dialog " + e + " has not been found")
+      return new Module_119.a("Actor dialog " + e + " has not been found")
     }
     var n = this.data.get_internal_actor(e)
     var r = this.actor_destroy_handlers.get(e)
@@ -58,7 +58,7 @@ import * as /* [auto-meaningful-name] */$_126 from "./126";
     var n = e.get_id()
     var r = this.dialog_containers.get(n)
     if (!r) {
-      r = new $_32_index.f()
+      r = new Module_32.f()
       e.addChild(r)
       this.dialog_containers.set(n, r)
       e.add_listener("destroy", function () {
@@ -73,7 +73,7 @@ import * as /* [auto-meaningful-name] */$_126 from "./126";
   e.prototype.destroy_dialog_container = function (e) {
     var t = this
     var /* [auto-meaningful-name] */e$parent = e.parent
-    if (c.m(e$parent)) {
+    if (Module_65.m(e$parent)) {
       this.dialog_containers.delete(e$parent.get_id())
       e.removeChildren().forEach(function (e) {
         if (e.name) {
@@ -88,8 +88,8 @@ import * as /* [auto-meaningful-name] */$_126 from "./126";
 var Ue = function () {
   function e(e, t, n) {
     var r = this
-    this.actor_dialog = new $_32_index.j()
-    this.text = new $_32_index.v("")
+    this.actor_dialog = new Module_32.j()
+    this.text = new Module_32.v("")
     this.content_width = 0
     this.content_height = 0
     this.on_change = function (e) {
@@ -122,7 +122,7 @@ var Ue = function () {
     this.actor_dialog.visible = e
   }
   e.prototype.update_dialog_position = function () {
-    var e = c.d(this.actor, this.actor.position)
+    var e = Module_65.d(this.actor, this.actor.position)
     this.actor_dialog.position.set(e.x, e.y - this.actor.height / 2 - this.actor_dialog.height)
     this.actor_dialog.scale.x = 1
     this.text.scale.x = 1
@@ -211,14 +211,14 @@ var Ge = function () {
     var r = this
     var i = this.data.get_internal_actor(e)
     if (!i) {
-      return new $_119.a("Actor " + e + " has not been found")
+      return new Module_119.a("Actor " + e + " has not been found")
     }
     var o = this.dialog_cache.get(e)
     if (!o) {
       var s = this.app.get_app_view_size()
       var /* [auto-meaningful-name] */s$width = s.width
       var /* [auto-meaningful-name] */s$height = s.height;
-      (o = new ze(i, n, s$width, s$height, this.app.get_renderer_type() === $_32_index.p.WEBGL)).get_graphics().setParent(i.wrapper)
+      (o = new ze(i, n, s$width, s$height, this.app.get_renderer_type() === Module_32.p.WEBGL)).get_graphics().setParent(i.wrapper)
       this.dialog_cache.set(e, o)
       i.add_listener("destroy", function () {
         r.destroy_actor_dialog(e)
@@ -229,7 +229,7 @@ var Ge = function () {
   e.prototype.destroy_actor_dialog = function (e) {
     var t = this.dialog_cache.get(e)
     if (!t) {
-      return new $_119.a("Actor dialog " + e + " has not been found")
+      return new Module_119.a("Actor dialog " + e + " has not been found")
     }
     this.dialog_cache.delete(e)
     t.destroy()
@@ -251,7 +251,7 @@ var ze = function (e) {
     s.DIALOG_MIN_WIDTH = 108
     s.DIALOG_MAX_WIDTH = 248
     s.TEXT_PADDING = 20
-    s.bubbles = new $_32_index.j()
+    s.bubbles = new Module_32.j()
     s.update_on_change = function (e) {
       if (e.position || e.scale || e.rotation) {
         s.update_dialog_position()
@@ -265,7 +265,7 @@ var ze = function (e) {
     s.update_dialog_style()
     if (o) {
       s.actor_dialog.filters = [
-        new $_32_index.h({
+        new Module_32.h({
           rotation: 45,
           distance: 3,
           alpha: .15,
@@ -290,7 +290,7 @@ var ze = function (e) {
     var t
     var n = this.text.width + 2 * this.TEXT_PADDING
     this.content_height = this.text.height + 30
-    this.content_width = $_217_index.a(this.DIALOG_MIN_WIDTH, this.DIALOG_MAX_WIDTH, n)
+    this.content_width = Module_217.a(this.DIALOG_MIN_WIDTH, this.DIALOG_MAX_WIDTH, n)
     var r = {
       start_x: .1 * this.DIALOG_MAX_WIDTH,
       center_x: .1 * this.DIALOG_MAX_WIDTH - 5
@@ -304,9 +304,9 @@ var ze = function (e) {
       y: this.content_height + 40
     }
     var s = this.content_height > 80 ? 40 : this.content_height / 2
-    var c = (null === (t = null === (this$actor = this.actor) || undefined === this$actor ? undefined : this$actor.app) || undefined === t ? undefined : t.get_app().renderer.type) === $_32_index.p.CANVAS
+    var c = (null === (t = null === (this$actor = this.actor) || undefined === this$actor ? undefined : this$actor.app) || undefined === t ? undefined : t.get_app().renderer.type) === Module_32.p.CANVAS
     switch (this.actor_dialog.clear(), this.bubbles.clear(), this.type) {
-      case $_126.a.SAYING:
+      case Module_126.a.SAYING:
         if (c) {
           this.actor_dialog.beginFill(0, .3)
           this.actor_dialog.drawRoundedRect(0, 0, this.content_width + 1, this.content_height + 1, 16)
@@ -323,7 +323,7 @@ var ze = function (e) {
         this.actor_dialog.endFill()
         this.bubbles.visible = false
         break
-      case $_126.a.THINKING:
+      case Module_126.a.THINKING:
         if (c) {
           this.bubbles.beginFill(0, .3)
           this.bubbles.drawEllipse(i.x + 1, i.y + 1, 13, 10)
@@ -473,14 +473,14 @@ var Bt = function (e) {
   }
   Tt(t, e)
   return t
-}($_32_index.j)
+}(Module_32.j)
 var Dt = function (e) {
   function t(t, n, r, i) {
     if (undefined === r) {
       r = 1
     }
     var o = e.call(this, t, n) || this
-    o.icon = new $_32_index.t()
+    o.icon = new Module_32.t()
     o.default_alpha = r
     o.active_alpha = undefined === i ? r : i
     o.icon.anchor.set(.5)
@@ -519,8 +519,8 @@ var Rt = function (e) {
   function t(t, n) {
     var r = e.call(this, t, n, it, ot) || this
     r.scale.set(rt)
-    if (r.app.get_renderer_type() === $_32_index.p.WEBGL) {
-      r.drop_shadow_filter = new $_32_index.h(at)
+    if (r.app.get_renderer_type() === Module_32.p.WEBGL) {
+      r.drop_shadow_filter = new Module_32.h(at)
       r.filters = [r.drop_shadow_filter]
     }
     return r
@@ -559,7 +559,7 @@ var Ft = function (e) {
       i = 1
     }
     var s = e.call(this, t, n) || this
-    s.text = new $_32_index.v("", lt)
+    s.text = new Module_32.v("", lt)
     s.default_alpha = i
     s.active_alpha = undefined === o ? i : o
     s.type = r
@@ -624,7 +624,7 @@ var Nt = function (e) {
     u.item_num_per_side = t$num_per_side
     u.item_gap = t$gap
     for (var l = t$width / 2, f = 0; f < 2 * u.item_num_per_side; f++) {
-      var d = new $_32_index.j()
+      var d = new Module_32.j()
       d.beginFill(t$color).drawRoundedRect(0, 0, t$width, u.max_item_height, l).endFill()
       d.position.x = f * t$gap
       u.addChild(d)
@@ -633,7 +633,7 @@ var Nt = function (e) {
   }
   Pt(t, e)
   t.prototype.set_item_height = function (e, t) {
-    if (e instanceof $_32_index.j) {
+    if (e instanceof Module_32.j) {
       e.height = t
       e.position.y = (this.max_item_height - t) / 2
     }
@@ -670,12 +670,12 @@ var Nt = function (e) {
     }
   }
   return t
-}($_32_index.j)
+}(Module_32.j)
 var Mt = function () {
   function e(e, t) {
     this.start_time = 0
     this.volume_bar = new Nt(e)
-    this.timer = new $_32_index.v("00:00", dt)
+    this.timer = new Module_32.v("00:00", dt)
     this.parent_graphics = t
   }
   e.prototype.set_text = function (e) {
@@ -801,7 +801,7 @@ var jt = function (e) {
     var u = wt
     var l = Ct
     var f = Ot
-    n.graphics = new $_32_index.j()
+    n.graphics = new Module_32.j()
     n.graphics.lineStyle(s, c).beginFill(u).drawRoundedRect(0, 0, r, i, o).endFill()
     n.timer.position.set((r - n.timer.width) / 2, (i - n.timer.height) / 2)
     n.timer.style.fill = f
@@ -836,7 +836,7 @@ var jt = function (e) {
   t.prototype.draw_point = function () {
     var e = Et
     var t = xt
-    var n = new $_32_index.j()
+    var n = new Module_32.j()
     n.beginFill(t).drawCircle(0, 0, e).endFill()
     return n
   }
@@ -1084,7 +1084,7 @@ var Wt = function () {
     var /* [auto-meaningful-name] */e$texture_name = e.texture_name
     var /* [auto-meaningful-name] */e$text_record = e.text_record
     var /* [auto-meaningful-name] */e$countdown_opt = e.countdown_opt
-    this.graphics = new $_32_index.j()
+    this.graphics = new Module_32.j()
     this.voice_type = Me.RECOGNITION
     this.dialog_width = 0
     this.dialog_height = 0
@@ -1133,7 +1133,7 @@ var Wt = function () {
         i.update_recorder_volume_panel_position()
         i.update_player_volume_panel_position()
         i.update_loading_icon_position()
-        i.graphics.hitArea = new $_32_index.q(0, -i.stage_height + i.dialog_height, i.stage_width, i.stage_height)
+        i.graphics.hitArea = new Module_32.q(0, -i.stage_height + i.dialog_height, i.stage_width, i.stage_height)
       }
     }
     this.app = t
@@ -1163,7 +1163,7 @@ var Wt = function () {
     this.cancel_btn.set_text(e$text_record.recorder_cancel)
     this.update_side_btns_position()
     this.graphics.addChild(this.confirm_btn, this.cancel_btn)
-    this.content = new $_32_index.v("", dt)
+    this.content = new Module_32.v("", dt)
     this.content.anchor.set(.5)
     this.update_content_position()
     this.graphics.addChild(this.content)
@@ -1172,14 +1172,14 @@ var Wt = function () {
     this.player_volume_panel = new jt(this.graphics)
     this.update_player_volume_panel_position()
     this.player_volume_panel.set_visible(false)
-    this.loading_icon = new $_32_index.t()
+    this.loading_icon = new Module_32.t()
     this.loading_icon.anchor.set(.5)
     this.loading_icon.scale.set(St)
     this.loading_icon.visible = false
     this.update_loading_icon_position()
     this.graphics.addChild(this.loading_icon)
-    if (this.app.get_renderer_type() === $_32_index.p.WEBGL) {
-      this.graphics.filters = [new $_32_index.h(tt)]
+    if (this.app.get_renderer_type() === Module_32.p.WEBGL) {
+      this.graphics.filters = [new Module_32.h(tt)]
     }
     var h = function () {
       i.update_loading_icon_position()
@@ -1255,7 +1255,7 @@ var Wt = function () {
     this.graphics.drawRoundedRect(0, 0, this.dialog_width, this.dialog_height, Ye)
     this.graphics.endFill()
     this.graphics.position.set(-n + Ke, r - Xe - e - t)
-    this.graphics.hitArea = new $_32_index.q(0, -this.stage_height + this.dialog_height, this.stage_width, this.stage_height)
+    this.graphics.hitArea = new Module_32.q(0, -this.stage_height + this.dialog_height, this.stage_width, this.stage_height)
   }
   e.prototype.show = function (e) {
     this.graphics.visible = true
@@ -1509,12 +1509,12 @@ var Jt = function (e) {
     s.events = o
     s.loader = r
     s.name = "stage_dialog"
-    s.preview = new $_32_index.t()
-    s.target_name = new $_32_index.v("", Yt)
-    s.content = new $_32_index.v("", qt)
-    s.next_text = new $_32_index.v("点击继续", $t)
+    s.preview = new Module_32.t()
+    s.target_name = new Module_32.v("", Yt)
+    s.content = new Module_32.v("", qt)
+    s.next_text = new Module_32.v("点击继续", $t)
     s.next_text.name = "next_text"
-    s.next_icon = new $_32_index.t()
+    s.next_icon = new Module_32.t()
     s.next_icon.name = "next_icon"
     s.print = new Kt(s.app)
     s.addListener("mouseup", s.on_mouse_up.bind(s))
@@ -1546,7 +1546,7 @@ var Jt = function (e) {
     this.lineStyle(2, 14276302, 1)
     this.beginFill(16777215, 1)
     this.drawRoundedRect(0, 0, r, 180, 4)
-    this.hitArea = new $_32_index.q(0, 0, r, 180)
+    this.hitArea = new Module_32.q(0, 0, r, 180)
     this.y = this$app$get_app$view$height / 2 - 180 - 12
     this.x = -this$app$get_app$view$width / 2 + 12
     this.endFill()
@@ -1562,7 +1562,7 @@ var Jt = function (e) {
   }
   t.prototype.set_component_size_and_position = function (e) {
     var t = 100
-    if (e === $$_105.d.Scene) {
+    if (e === Module_105.d.Scene) {
       t = 30
       this.preview.x = 0
     } else {
@@ -1580,10 +1580,10 @@ var Jt = function (e) {
     var o = this
     var s = this.data.get_target(e)
     if (!s) {
-      return new $_119.a("Cannot find target " + e)
+      return new Module_119.a("Cannot find target " + e)
     }
     this.visible = true
-    this.preview.texture = c.l(s) ? new $_32_index.y(s.texture.baseTexture) : $_32_index.y.EMPTY
+    this.preview.texture = Module_65.l(s) ? new Module_32.y(s.texture.baseTexture) : Module_32.y.EMPTY
     this.set_component_size_and_position(s.type)
     this.target_name.text = t
     var l = r ? undefined : i
@@ -1612,7 +1612,7 @@ var Jt = function (e) {
     }
   }
   t.prototype.get_max_content_width = function (e) {
-    return e === $$_105.d.Actor ? this.actor_line_width : this.bg_line_width
+    return e === Module_105.d.Actor ? this.actor_line_width : this.bg_line_width
   }
   t.prototype.set_next_text = function (e) {
     this.next_text.text = e
@@ -1632,7 +1632,7 @@ var Jt = function (e) {
     this.events.remove_listener("stage:resize", this.on_stage_resize)
   }
   return t
-}($_32_index.j)
+}(Module_32.j)
 var Zt = {
   width: 2,
   color: 14211288,
@@ -1663,12 +1663,12 @@ var rn = {
 var on = function () {
   function e(e, t) {
     var n = this
-    this.grid = new $_32_index.j()
-    this.axis_arrow = new $_32_index.j()
-    this.x_label = new $_32_index.v("X", nn)
-    this.y_label = new $_32_index.v("Y", nn)
-    this.x_label_shadow = new $_32_index.v("X", rn)
-    this.y_label_shadow = new $_32_index.v("Y", rn)
+    this.grid = new Module_32.j()
+    this.axis_arrow = new Module_32.j()
+    this.x_label = new Module_32.v("X", nn)
+    this.y_label = new Module_32.v("Y", nn)
+    this.x_label_shadow = new Module_32.v("X", rn)
+    this.y_label_shadow = new Module_32.v("Y", rn)
     this.set_parent = function (e) {
       n.grid.setParent(e)
     }
@@ -1737,16 +1737,16 @@ var on = function () {
     for (var t = 0, n = 0; n < this.stage_height / 2;) {
       var r = n.toString()
       var i = (-n).toString();
-      (s = new $_32_index.v(r, nn)).x = 5
+      (s = new Module_32.v(r, nn)).x = 5
       s.y = 5 - n
       s.alpha = .8;
-      (c = new $_32_index.v(i, nn)).x = 5
+      (c = new Module_32.v(i, nn)).x = 5
       c.y = n + 5
       c.alpha = .8;
-      (u = new $_32_index.v(r, rn)).x = 5
+      (u = new Module_32.v(r, rn)).x = 5
       u.y = 5 - n + 1
       u.alpha = .8;
-      (l = new $_32_index.v(i, rn)).x = 5
+      (l = new Module_32.v(i, rn)).x = 5
       l.y = n + 5 + 1
       l.alpha = .8
       this.grid.addChild(s, c, u, l)
@@ -1760,16 +1760,16 @@ var on = function () {
       var l
       var f = o.toString()
       var d = (-o).toString();
-      (s = new $_32_index.v(f, nn)).x = o + 5
+      (s = new Module_32.v(f, nn)).x = o + 5
       s.y = 5
       s.alpha = .8;
-      (c = new $_32_index.v(d, nn)).x = 5 - o
+      (c = new Module_32.v(d, nn)).x = 5 - o
       c.y = 5
       c.alpha = .8;
-      (u = new $_32_index.v(f, rn)).x = o + 5
+      (u = new Module_32.v(f, rn)).x = o + 5
       u.y = 6
       u.alpha = .8;
-      (l = new $_32_index.v(d, rn)).x = 5 - o
+      (l = new Module_32.v(d, rn)).x = 5 - o
       l.y = 6
       l.alpha = .8
       this.grid.addChild(s, c, u, l)
@@ -1880,8 +1880,8 @@ var cn = function (e) {
     r.app = t
     r.events = n
     r.visible = false
-    r.selection_container = new $_32_index.j()
-    r.selection_header = new $_32_index.j()
+    r.selection_container = new Module_32.j()
+    r.selection_header = new Module_32.j()
     var /* [auto-meaningful-name] */r$app$get_app$view = r.app.get_app().view
     var /* [auto-meaningful-name] */r$app$get_app$view$width = r$app$get_app$view.width
     var /* [auto-meaningful-name] */r$app$get_app$view$height = r$app$get_app$view.height
@@ -1892,9 +1892,9 @@ var cn = function (e) {
     r.selection_height = .0888 * r.stage_height
     r.init_selections()
     r.draw_header()
-    if (r.app.get_renderer_type() === $_32_index.p.WEBGL) {
+    if (r.app.get_renderer_type() === Module_32.p.WEBGL) {
       r.filters = [
-        new $_32_index.h({
+        new Module_32.h({
           rotation: 45,
           distance: 3,
           alpha: .15,
@@ -1910,10 +1910,10 @@ var cn = function (e) {
   an(t, e)
   t.prototype.init_selections = function () {
     for (var e = 0; e < 4; e++) {
-      var t = new $_32_index.f()
-      var n = new $_32_index.j()
-      var r = new $_32_index.j()
-      var i = new $_32_index.v("", sn)
+      var t = new Module_32.f()
+      var n = new Module_32.j()
+      var r = new Module_32.j()
+      var i = new Module_32.v("", sn)
       i.anchor.set(.5)
       i.visible = true
       n.clear()
@@ -1948,11 +1948,11 @@ var cn = function (e) {
     this.selection_container.visible = true
     this.selections.forEach(function (t, n) {
       var r = e.selection_container.children[n]
-      if (r instanceof $_32_index.f) {
+      if (r instanceof Module_32.f) {
         var i = r.children[0]
         var o = r.children[1]
         var s = r.children[2]
-        if (s instanceof $_32_index.v) {
+        if (s instanceof Module_32.v) {
           s.text = t
           s.style.fill = "black"
         }
@@ -1985,22 +1985,22 @@ var cn = function (e) {
   }
   t.prototype.on_pointer_over = function (e) {
     var t = this.selection_container.children[e]
-    if (t instanceof $_32_index.f) {
+    if (t instanceof Module_32.f) {
       t.children[0].visible = false
       t.children[1].visible = true
       var n = t.children[2]
-      if (n instanceof $_32_index.v) {
+      if (n instanceof Module_32.v) {
         n.style.fill = "white"
       }
     }
   }
   t.prototype.on_pointer_out = function (e) {
     var t = this.selection_container.children[e]
-    if (t instanceof $_32_index.f) {
+    if (t instanceof Module_32.f) {
       t.children[0].visible = true
       t.children[1].visible = false
       var n = t.children[2]
-      if (n instanceof $_32_index.v) {
+      if (n instanceof Module_32.v) {
         n.style.fill = "black"
       }
     }
@@ -2009,7 +2009,7 @@ var cn = function (e) {
     this.selection_header.beginFill(16777215, 1)
     this.selection_header.drawRoundedRect(0, 0, this.dialog_width, this.selection_height, 6)
     this.selection_header.endFill()
-    var e = new $_32_index.v("", sn)
+    var e = new Module_32.v("", sn)
     e.anchor.set(0, .5)
     e.position.x = 16
     this.selection_header.visible = false
@@ -2071,12 +2071,12 @@ var cn = function (e) {
   t.prototype.redraw_selections = function () {
     for (var e = 0; e < this.selection_container.children.length; e++) {
       var t = this.selection_container.children[e]
-      if (!(t instanceof $_32_index.f)) {
+      if (!(t instanceof Module_32.f)) {
         return
       }
       var n = t.children[0]
       var r = t.children[1]
-      if (!(n instanceof $_32_index.j && r instanceof $_32_index.j)) {
+      if (!(n instanceof Module_32.j && r instanceof Module_32.j)) {
         return
       }
       n.clear()
@@ -2091,7 +2091,7 @@ var cn = function (e) {
     }
   }
   return t
-}($_32_index.j)
+}(Module_32.j)
 export { Ge }
 export { Wt }
 export { Jt }

@@ -6,12 +6,12 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_7 from "../../../shared/1571/2636/7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_1571_2636_57_index from "../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../shared/1571/2636/7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Src_shared_utils_network_axiosWithCredentials from /* 41 */"../../../../src/shared/utils/network/axios-with-credentials"
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../src/shared/env"
 function V() {
-  var t = $$_$$_$$_shared_1571_2636_57_index.b()
+  var t = Src_shared_env.b()
   var e = "https://".concat({
     development: "backend-dev",
     test: "backend-test",
@@ -21,8 +21,8 @@ function V() {
   var n = {
     url: window.location.href
   }
-  return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post(e, n).then(function () {
-    var t = $$_$$_$$_shared_1571_2636_7.a(RegeneratorRuntime.mark(function t(e) {
+  return Src_shared_utils_network_axiosWithCredentials.a.post(e, n).then(function () {
+    var t = Module_7.a(RegeneratorRuntime.mark(function t(e) {
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {

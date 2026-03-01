@@ -9,19 +9,19 @@
 import { b } from "./index__part-1"
 import { T } from "./index__part-2"
 import { P } from "./index__part-4"
-import * as /* [auto-meaningful-name] */$_927 from "./927"
-import * as /* [auto-meaningful-name] */$_1047 from "./1047"
-import * as /* [auto-meaningful-name] */$_1045 from "./1045"
-import * as /* [auto-meaningful-name] */$_1046 from "./1046"
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$$_435 from "../435"
-import * as /* [auto-meaningful-name] */$_615 from "./615"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { createElement } from "react"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_364_index from "../364/index"
-import * as /* [auto-meaningful-name] */$_285_index from "./285/index"
+import * as /* [auto-meaningful-name] */Module_927 from /* 927 */"./927"
+import * as /* [auto-meaningful-name] */Module_1047 from /* 1047 */"./1047"
+import * as /* [auto-meaningful-name] */Module_1045 from /* 1045 */"./1045"
+import * as /* [auto-meaningful-name] */Module_1046 from /* 1046 */"./1046"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import * as /* [auto-meaningful-name] */Module_435 from /* 435 */"../435"
+import * as /* [auto-meaningful-name] */Module_615 from /* 615 */"./615"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"../364/index"
+import * as /* [auto-meaningful-name] */Module_285 from /* 285 */"./285/index"
 var I = function (e) {
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$onCancel = e.onCancel
@@ -48,7 +48,7 @@ var I = function (e) {
   var /* [auto-meaningful-name] */e$closeIcon = e.closeIcon
   var /* [auto-meaningful-name] */e$modalRender = e.modalRender
   var /* [auto-meaningful-name] */e$focusTriggerAfterClose = e.focusTriggerAfterClose
-  $$_364_index.a(!("string" === typeof e$icon && e$icon.length > 2), "Modal", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(e$icon, "` at https://ant.design/components/icon"))
+  Module_364.a(!("string" === typeof e$icon && e$icon.length > 2), "Modal", "`icon` is using ReactNode instead of string naming in v4. Please check `".concat(e$icon, "` at https://ant.design/components/icon"))
   var F = e.okType || "primary"
   var P = "".concat(e$prefixCls, "-confirm")
   var N = !("okCancel" in e) || e.okCancel
@@ -57,22 +57,22 @@ var I = function (e) {
   var j = undefined === e.mask || e.mask
   var U = undefined !== e.maskClosable && e.maskClosable
   var H = null !== e.autoFocusButton && (e.autoFocusButton || "ok")
-  var V = Classnames(P, "".concat(P, "-").concat(e.type), $$_35.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
-  var G = N && createElement(T, {
+  var V = Classnames(P, "".concat(P, "-").concat(e.type), Module_35.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
+  var G = N && React.createElement(T, {
     actionFn: e$onCancel,
     close: e$close,
     autoFocus: "cancel" === H,
     buttonProps: e$cancelButtonProps,
     prefixCls: "".concat(e$rootPrefixCls, "-btn")
   }, e$cancelText)
-  return createElement($_285_index.a, {
+  return React.createElement(Module_285.a, {
     prefixCls: e$rootPrefixCls,
     iconPrefixCls: e$iconPrefixCls,
     direction: e$direction
-  }, createElement(b, {
+  }, React.createElement(b, {
     prefixCls: e$prefixCls,
     className: V,
-    wrapClassName: Classnames($$_35.a({}, "".concat(P, "-centered"), !!e.centered)),
+    wrapClassName: Classnames(Module_35.a({}, "".concat(P, "-centered"), !!e.centered)),
     onCancel: function () {
       return e$close({
         triggerCancel: true
@@ -81,8 +81,8 @@ var I = function (e) {
     visible: e$visible,
     title: "",
     footer: "",
-    transitionName: $$_435.b(e$rootPrefixCls, "zoom", e.transitionName),
-    maskTransitionName: $$_435.b(e$rootPrefixCls, "fade", e.maskTransitionName),
+    transitionName: Module_435.b(e$rootPrefixCls, "zoom", e.transitionName),
+    maskTransitionName: Module_435.b(e$rootPrefixCls, "fade", e.maskTransitionName),
     mask: j,
     maskClosable: U,
     maskStyle: e$maskStyle,
@@ -98,17 +98,17 @@ var I = function (e) {
     closeIcon: e$closeIcon,
     modalRender: e$modalRender,
     focusTriggerAfterClose: e$focusTriggerAfterClose
-  }, createElement("div", {
+  }, React.createElement("div", {
     className: "".concat(P, "-body-wrapper")
-  }, createElement("div", {
+  }, React.createElement("div", {
     className: "".concat(P, "-body")
-  }, e$icon, undefined === e.title ? null : createElement("span", {
+  }, e$icon, undefined === e.title ? null : React.createElement("span", {
     className: "".concat(P, "-title")
-  }, e.title), createElement("div", {
+  }, e.title), React.createElement("div", {
     className: "".concat(P, "-content")
-  }, e.content)), createElement("div", {
+  }, e.content)), React.createElement("div", {
     className: "".concat(P, "-btns")
-  }, G, createElement(T, {
+  }, G, React.createElement(T, {
     type: F,
     actionFn: e$onOk,
     close: e$close,
@@ -135,7 +135,7 @@ var F = function (e, t) {
 }
 function N(e) {
   var t = document.createDocumentFragment()
-  var n = $$_19.a($$_19.a({}, e), {
+  var n = Module_19.a(Module_19.a({}, e), {
     close: s,
     visible: true
   })
@@ -164,14 +164,14 @@ function N(e) {
     var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
     var s = F(e, ["okText", "cancelText", "prefixCls"])
     setTimeout(function () {
-      var e = $_615.b()
-      var c = $_285_index.b()
+      var e = Module_615.b()
+      var c = Module_285.b()
       var /* [auto-meaningful-name] */c$getPrefixCls = c.getPrefixCls
       var /* [auto-meaningful-name] */c$getIconPrefixCls = c.getIconPrefixCls
       var d = c$getPrefixCls(undefined, P)
       var h = e$prefixCls || "".concat(d, "-modal")
       var p = c$getIconPrefixCls()
-      ReactDom.render(createElement(I, $$_19.a({}, s, {
+      ReactDom.render(React.createElement(I, Module_19.a({}, s, {
         prefixCls: h,
         rootPrefixCls: d,
         iconPrefixCls: p,
@@ -184,7 +184,7 @@ function N(e) {
     for (var t = this, /* [auto-meaningful-name] */arguments$length = arguments.length, s = new Array(arguments$length), c = 0; c < arguments$length; c++) {
       s[c] = arguments[c]
     }
-    a(n = $$_19.a($$_19.a({}, n), {
+    a(n = Module_19.a(Module_19.a({}, n), {
       visible: false,
       afterClose: function () {
         if ("function" === typeof e.afterClose) {
@@ -199,45 +199,45 @@ function N(e) {
   return {
     destroy: s,
     update: function (e) {
-      a(n = "function" === typeof e ? e(n) : $$_19.a($$_19.a({}, n), e))
+      a(n = "function" === typeof e ? e(n) : Module_19.a(Module_19.a({}, n), e))
     }
   }
 }
 function M(e) {
-  return $$_19.a($$_19.a({
-    icon: createElement($_927.a, null),
+  return Module_19.a(Module_19.a({
+    icon: React.createElement(Module_927.a, null),
     okCancel: false
   }, e), {
     type: "warning"
   })
 }
 function L(e) {
-  return $$_19.a($$_19.a({
-    icon: createElement($_1046.a, null),
+  return Module_19.a(Module_19.a({
+    icon: React.createElement(Module_1046.a, null),
     okCancel: false
   }, e), {
     type: "info"
   })
 }
 function j(e) {
-  return $$_19.a($$_19.a({
-    icon: createElement($_1045.a, null),
+  return Module_19.a(Module_19.a({
+    icon: React.createElement(Module_1045.a, null),
     okCancel: false
   }, e), {
     type: "success"
   })
 }
 function U(e) {
-  return $$_19.a($$_19.a({
-    icon: createElement($_1047.a, null),
+  return Module_19.a(Module_19.a({
+    icon: React.createElement(Module_1047.a, null),
     okCancel: false
   }, e), {
     type: "error"
   })
 }
 function H(e) {
-  return $$_19.a($$_19.a({
-    icon: createElement($_927.a, null),
+  return Module_19.a(Module_19.a({
+    icon: React.createElement(Module_927.a, null),
     okCancel: true
   }, e), {
     type: "confirm"

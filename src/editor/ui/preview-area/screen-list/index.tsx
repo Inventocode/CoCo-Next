@@ -9,42 +9,42 @@ import * as React from "react"
 import { Pn } from "../../../../../unrestored/shared/1571/2636/index__part-24"
 import { Xn, Zn, Jn, er, tr, nr, rr, or, ar, sr, cr, lr, ur, dr, pr, hr, mr, gr, wr, Nr, Rr, kr, xr, Dr, Mr, Lr, Pr, Br, Fr, Gr, Wr } from "../../../../../unrestored/shared/1571/2636/index__part-25"
 import { Cv } from "../widget-list"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_702 from "../../../../../unrestored/shared/1571/2636/702"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_142 from "../../../../../unrestored/shared/1571/2636/142"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_120 from "../../../../../unrestored/shared/1571/2636/120"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_362 from "../../../../../unrestored/shared/1571/2636/362"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_388 from "../../../../../unrestored/shared/1571/2636/388"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_106 from "../../../../../unrestored/shared/1571/2636/106"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_103 from "../../../../../unrestored/shared/1571/2636/103"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_35 from "../../../../../unrestored/shared/1571/2636/35"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_40_index from "../../../../../unrestored/shared/1571/2636/40/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_19 from "../../../../../unrestored/shared/1571/2636/19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_295 from "../../../../../unrestored/shared/1571/2636/295"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../../unrestored/shared/1571/2636/26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../unrestored/shared/1571/2636/190"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../unrestored/shared/1571/2636/18"
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_702 from "../../../../../unrestored/shared/1571/2636/702"
+import * as /* [auto-meaningful-name] */Module_142 from /* 142 */"../../../../../unrestored/shared/1571/2636/142"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../../../../unrestored/shared/1571/2636/120"
+import * as /* [auto-meaningful-name] */Module_362 from /* 362 */"../../../../../unrestored/shared/1571/2636/362"
+import * as /* [auto-meaningful-name] */Module_388 from /* 388 */"../../../../../unrestored/shared/1571/2636/388"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../../../../unrestored/shared/1571/2636/106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../../../../../unrestored/shared/1571/2636/103"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../../../../unrestored/shared/1571/2636/35"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../../../../unrestored/shared/1571/2636/40/index"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../../../unrestored/shared/1571/2636/19"
+import * as /* [auto-meaningful-name] */Module_295 from /* 295 */"../../../../../unrestored/shared/1571/2636/295"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components from "../../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../../shared/ui/components"
 import { IconFont } from "../../../../shared/ui/components"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
 import classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import { batch, useDispatch, useSelector } from "react-redux"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_553 from "../../../../../unrestored/shared/1571/2636/553"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_212 from "../../../../../unrestored/shared/1571/2636/212"
+import * as /* [auto-meaningful-name] */Module_553 from /* 553 */"../../../../../unrestored/shared/1571/2636/553"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"../../../../../unrestored/shared/1571/2636/238"
+import * as /* [auto-meaningful-name] */Module_212 from /* 212 */"../../../../../unrestored/shared/1571/2636/212"
 import styles from "../../../../../unrestored/shared/1571/2636/212"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1511 from "../../../../../unrestored/shared/1571/2636/1511"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111 from "../../../../../unrestored/shared/1571/2636/1511"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */Module_1511 from /* 1511 */"../../../../../unrestored/shared/1571/2636/1511"
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_1511 from "../../../../../unrestored/shared/1571/2636/1511"
 
 var Xr = React.forwardRef(function (e, t) {
   var n = useDispatch()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$checkValueIsRepeat = e.checkValueIsRepeat
   var /* [auto-meaningful-name] */e$renameInputValue = e.renameInputValue
@@ -52,11 +52,11 @@ var Xr = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$value = e.value
   var l = React.useRef(e$value)
   var u = React.useState(e$value)
-  var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
+  var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = React.useState(false)
-  var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
+  var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
   var E = React.useRef(null)
@@ -94,23 +94,23 @@ var Xr = React.forwardRef(function (e, t) {
   var T = function () {
     if (w.current) {
       var /* [auto-meaningful-name] */w$current$value = w.current.value
-      var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.b(w$current$value)
-      if (t > $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i) {
+      var t = Module_190.b(w$current$value)
+      if (t > Module_53.i) {
         C()
       }
       if (O.current) {
-        if (!w$current$value.match($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.D)) {
+        if (!w$current$value.match(Module_53.D)) {
           m(l.current)
           return void C()
         }
         y(false)
         var /* [auto-meaningful-name] */l$current = l.current
-        var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.b(l$current)
-        if (t <= $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i || t < r) {
+        var r = Module_190.b(l$current)
+        if (t <= Module_53.i || t < r) {
           m(w$current$value)
           return void (l.current = w$current$value)
         }
-        if (t > r && r >= $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i) {
+        if (t > r && r >= Module_53.i) {
           m(l.current)
           return void C()
         }
@@ -124,7 +124,7 @@ var Xr = React.forwardRef(function (e, t) {
         if (o > -1) {
           for (var a = l$current, s = o; s < w$current$value.length; s++) {
             var c = l$current.slice(0, o) + w$current$value.slice(o, s) + l$current.slice(o)
-            if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.b(c) > $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.i) {
+            if (Module_190.b(c) > Module_53.i) {
               break
             }
             a = c
@@ -138,7 +138,7 @@ var Xr = React.forwardRef(function (e, t) {
     }
   }
   return <input
-    className={classnames($$_$$_$$_$$_$$_unrestored_shared_1571_2636_15111.input, e$className, {
+    className={classnames(Unrestored_shared_1571_2636_1511.input, e$className, {
       "coco-input-warning-animation": b
     })}
     ref={w}
@@ -159,7 +159,7 @@ var Xr = React.forwardRef(function (e, t) {
         }
       } else {
         n(Actions.showCommonToastInfoAction({
-          message: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
+          message: Module_710$a$formatMessage({
             id: "blankInputValue"
           }),
           type: "error",
@@ -193,7 +193,7 @@ var Qr = function (e) {
     return e.oTState.userFocusOTInfoList
   })
   var o = React.useState([])
-  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(o, 2)
+  var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
   React.useEffect(function () {
@@ -229,16 +229,16 @@ var Zr = function (e) {
     function n() {
       var e
       var t
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_103.a(this, n)
+      Module_103.a(this, n)
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
         o[i] = arguments[i]
       }
-      t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_388.a(this, (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_362.a(n)).call.apply(e, [this].concat(o)))
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", React.createRef())
+      t = Module_388.a(this, (e = Module_362.a(n)).call.apply(e, [this].concat(o)))
+      Module_35.a(Module_142.a(Module_142.a(t)), "wrappedInstance", React.createRef())
       return t
     }
-    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_120.a(n, t)
-    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_106.a(n, [
+    Module_120.a(n, t)
+    Module_106.a(n, [
       {
         key: "componentDidMount",
         value: function () {
@@ -247,14 +247,14 @@ var Zr = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call")
+          Unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableHandle() call")
           return this.wrappedInstance.current
         }
       }, {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return React.createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
+          return React.createElement(e, Module_19.a({
             ref: t
           }, this.props))
         }
@@ -262,7 +262,7 @@ var Zr = function (e) {
     ])
     return n
   }(React.Component)
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "displayName", sr("sortableHandle", e))
+  Module_35.a(t, "displayName", sr("sortableHandle", e))
   return n
 }(function (e) {
   var /* [auto-meaningful-name] */e$screen = e.screen
@@ -291,7 +291,7 @@ var Jr = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$canEdit = e.canEdit
   var /* [auto-meaningful-name] */e$readonly = e.readonly
   var /* [auto-meaningful-name] */e$showDeleteIcon = e.showDeleteIcon
-  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.e(e$screen.id)
+  var c = Module_238.e(e$screen.id)
   var l = useSelector(function (e) {
     return e.project.screens
   })
@@ -299,7 +299,7 @@ var Jr = React.memo(function (e) {
     return e.oTState.collWorkId
   })
   var /* [auto-meaningful-name] */e$screen$title = e$screen.title
-  const formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  const formatMessage = Module_710.a().formatMessage
   const dispatch = useDispatch()
   var g = React.useRef(null)
   var v = React.useRef(null)
@@ -322,7 +322,7 @@ var Jr = React.memo(function (e) {
   }, [e$canEdit])
   return <div
     ref={v}
-    className={classnames(styles.item, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.selected, e$selected))}
+    className={classnames(styles.item, Module_11.a({}, styles.selected, e$selected))}
     key={e$screen.id}
   >
     {<div
@@ -382,21 +382,21 @@ var Jr = React.memo(function (e) {
       {e$canEdit && !e$readonly ? <Xr
         value={e$screen$title}
         checkValueIsRepeat={function (e) {
-          return $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.r(e$screen.id, e)
+          return Module_9.r(e$screen.id, e)
         }}
         onChange={function (e) {
           var n
           dispatch(Actions.Jg(e$screen.id, "title", e))
-          if (!(null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n)) {
+          if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
             n.refresh_selection()
           }
         }}
         ref={g}
         renameInputValue={function (e) {
           var n
-          var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Ob(e$screen.id, e, l)
+          var r = Module_9.Ob(e$screen.id, e, l)
           dispatch(Actions.Jg(e$screen.id, "title", r))
-          if (!(null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n)) {
+          if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
             n.refresh_selection()
           }
           return r
@@ -431,16 +431,16 @@ var $r = function (e) {
     function n() {
       var e
       var t
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_103.a(this, n)
+      Module_103.a(this, n)
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
         o[i] = arguments[i]
       }
-      t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_388.a(this, (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_362.a(n)).call.apply(e, [this].concat(o)))
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "wrappedInstance", React.createRef())
+      t = Module_388.a(this, (e = Module_362.a(n)).call.apply(e, [this].concat(o)))
+      Module_35.a(Module_142.a(Module_142.a(t)), "wrappedInstance", React.createRef())
       return t
     }
-    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_120.a(n, t)
-    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_106.a(n, [
+    Module_120.a(n, t)
+    Module_106.a(n, [
       {
         key: "componentDidMount",
         value: function () {
@@ -496,14 +496,14 @@ var $r = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call")
+          Unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableElement() call")
           return this.wrappedInstance.current
         }
       }, {
         key: "render",
         value: function () {
           var t = r.withRef ? this.wrappedInstance : null
-          return React.createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
+          return React.createElement(e, Module_19.a({
             ref: t
           }, Zn(this.props, Wr)))
         }
@@ -511,10 +511,10 @@ var $r = function (e) {
     ])
     return n
   }(React.Component)
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "displayName", sr("sortableElement", e))
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "contextType", Fr)
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "propTypes", Gr)
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "defaultProps", {
+  Module_35.a(t, "displayName", sr("sortableElement", e))
+  Module_35.a(t, "contextType", Fr)
+  Module_35.a(t, "propTypes", Gr)
+  Module_35.a(t, "defaultProps", {
     collection: 0
   })
   return n
@@ -525,7 +525,7 @@ var $r = function (e) {
   var /* [auto-meaningful-name] */e$updateCanEdit = e.updateCanEdit
   var /* [auto-meaningful-name] */e$editDomIndex = e.editDomIndex
   var /* [auto-meaningful-name] */e$screensSize = e.screensSize
-  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_295.a(e, ["screen", "screenIndex", "currentScreenIndex", "updateCanEdit", "editDomIndex", "screensSize"])
+  var s = Module_295.a(e, ["screen", "screenIndex", "currentScreenIndex", "updateCanEdit", "editDomIndex", "screensSize"])
   return React.createElement(Jr, Object.assign({
     key: e$screen.id,
     screen: e$screen,
@@ -546,10 +546,10 @@ var eo = function (e) {
   n = t = function (t) {
     function n(e) {
       var t
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_103.a(this, n)
-      t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_388.a(this, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_362.a(n).call(this, e))
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "state", {})
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleStart", function (e) {
+      Module_103.a(this, n)
+      t = Module_388.a(this, Module_362.a(n).call(this, e))
+      Module_35.a(Module_142.a(Module_142.a(t)), "state", {})
+      Module_35.a(Module_142.a(Module_142.a(t)), "handleStart", function (e) {
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$distance = t$props.distance
         var /* [auto-meaningful-name] */t$props$shouldCancelStart = t$props.shouldCancelStart
@@ -589,10 +589,10 @@ var eo = function (e) {
           }
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "nodeIsChild", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "nodeIsChild", function (e) {
         return e.sortableInfo.manager === t.manager
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleMove", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "handleMove", function (e) {
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$distance = t$props.distance
         var /* [auto-meaningful-name] */t$props$pressThreshold = t$props.pressThreshold
@@ -614,11 +614,11 @@ var eo = function (e) {
           }
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleEnd", function () {
+      Module_35.a(Module_142.a(Module_142.a(t)), "handleEnd", function () {
         t.touched = false
         t.cancel()
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "cancel", function () {
+      Module_35.a(Module_142.a(Module_142.a(t)), "cancel", function () {
         var /* [auto-meaningful-name] */t$props$distance = t.props.distance
         if (!t.state.sorting) {
           if (!t$props$distance) {
@@ -627,7 +627,7 @@ var eo = function (e) {
           t.manager.active = null
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handlePress", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "handlePress", function (e) {
         try {
           var n = t.manager.getActive()
           var r = function () {
@@ -802,7 +802,7 @@ var eo = function (e) {
           return Promise.reject(o)
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleSortMove", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "handleSortMove", function (e) {
         var /* [auto-meaningful-name] */t$props$onSortMove = t.props.onSortMove
         if ("function" === typeof e.preventDefault && e.cancelable) {
           e.preventDefault()
@@ -814,7 +814,7 @@ var eo = function (e) {
           t$props$onSortMove(e)
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleSortEnd", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "handleSortEnd", function (e) {
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$hideSortableGhost = t$props.hideSortableGhost
         var /* [auto-meaningful-name] */t$props$onSortEnd = t$props.onSortEnd
@@ -870,7 +870,7 @@ var eo = function (e) {
         }
         t.touched = false
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "autoscroll", function () {
+      Module_35.a(Module_142.a(Module_142.a(t)), "autoscroll", function () {
         var /* [auto-meaningful-name] */t$props$disableAutoscroll = t.props.disableAutoscroll
         var /* [auto-meaningful-name] */t$manager$isKeySorting = t.manager.isKeySorting
         if (t$props$disableAutoscroll) {
@@ -902,12 +902,12 @@ var eo = function (e) {
           })
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "onAutoScroll", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "onAutoScroll", function (e) {
         t.translate.x += e.left
         t.translate.y += e.top
         t.animateNodes()
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleKeyDown", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "handleKeyDown", function (e) {
         var /* [auto-meaningful-name] */e$keyCode = e.keyCode
         var /* [auto-meaningful-name] */t$props = t.props
         var /* [auto-meaningful-name] */t$props$shouldCancelStart = t$props.shouldCancelStart
@@ -938,7 +938,7 @@ var eo = function (e) {
           }
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "keyLift", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "keyLift", function (e) {
         var /* [auto-meaningful-name] */e$target = e.target
         var /* [auto-meaningful-name] */rrE$targetFunctionEReturnNullE$sortableInfo$sortableInfo = rr(e$target, function (e) {
           return null != e.sortableInfo
@@ -953,7 +953,7 @@ var eo = function (e) {
         }
         t.handlePress(e)
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "keyMove", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "keyMove", function (e) {
         var n = t.manager.getOrderedRefs()
         var /* [auto-meaningful-name] */nN$length1$node$sortableInfo$index = n[n.length - 1].node.sortableInfo.index
         var o = t.newIndex + e
@@ -984,18 +984,18 @@ var eo = function (e) {
           })
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "keyDrop", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "keyDrop", function (e) {
         t.handleSortEnd(e)
         if (t.initialFocusedNode) {
           t.initialFocusedNode.focus()
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "handleKeyEnd", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "handleKeyEnd", function (e) {
         if (t.manager.active) {
           t.keyDrop(e)
         }
       })
-      $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a($$_$$_$$_$$_$$_unrestored_shared_1571_2636_142.a(t)), "isValidSortingTarget", function (e) {
+      Module_35.a(Module_142.a(Module_142.a(t)), "isValidSortingTarget", function (e) {
         var /* [auto-meaningful-name] */t$props$useDragHandle = t.props.useDragHandle
         var /* [auto-meaningful-name] */e$target = e.target
         var o = rr(e$target, function (e) {
@@ -1017,8 +1017,8 @@ var eo = function (e) {
       }
       return t
     }
-    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_120.a(n, t)
-    $$_$$_$$_$$_$$_unrestored_shared_1571_2636_106.a(n, [
+    Module_120.a(n, t)
+    Module_106.a(n, [
       {
         key: "componentDidMount",
         value: function () {
@@ -1082,7 +1082,7 @@ var eo = function (e) {
               lockOffset: this$props$lockOffset,
               width: this.width
             })
-            var f = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_40_index.a(p, 2)
+            var f = Module_40.a(p, 2)
             var h = f[0]
             var m = f[1]
             var g = {
@@ -1241,7 +1241,7 @@ var eo = function (e) {
       }, {
         key: "getWrappedInstance",
         value: function () {
-          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call")
+          Unrestored_shared_1571_2636_702(r.withRef, "To access the wrapped instance, you need to pass in {withRef: true} as the second argument of the SortableContainer() call")
           return this.wrappedInstance.current
         }
       }, {
@@ -1257,7 +1257,7 @@ var eo = function (e) {
           return <Fr.Provider
             value={this.sortableContextValue}
           >
-            {React.createElement(e, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_19.a({
+            {React.createElement(e, Module_19.a({
               ref: t
             }, Zn(this.props, Lr)))}
           </Fr.Provider>
@@ -1291,13 +1291,13 @@ var eo = function (e) {
     ])
     return n
   }(React.Component)
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "displayName", sr("sortableList", e))
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "defaultProps", Mr)
-  $$_$$_$$_$$_$$_unrestored_shared_1571_2636_35.a(t, "propTypes", xr)
+  Module_35.a(t, "displayName", sr("sortableList", e))
+  Module_35.a(t, "defaultProps", Mr)
+  Module_35.a(t, "propTypes", xr)
   return n
 }(function (e) {
   var /* [auto-meaningful-name] */e$screens = e.screens
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_295.a(e, ["screens"])
+  var n = Module_295.a(e, ["screens"])
   var /* [auto-meaningful-name] */e$screens$size = e$screens.size
   var o = React.useRef(null)
   var i = React.useRef(0)
@@ -1348,7 +1348,7 @@ var eo = function (e) {
 
 export const ScreenList = React.memo(() => {
   var /* [auto-meaningful-name] */n$current
-  const formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  const formatMessage = Module_710.a().formatMessage
   var n = React.useRef(null)
   var screens = useSelector(function (e) {
     return e.project.screens
@@ -1357,19 +1357,19 @@ export const ScreenList = React.memo(() => {
     return e.common.stageWidth
   })
   var i = React.useState(-1)
-  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(i, 2)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = React.useState(0)
-  var u = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(l, 2)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = React.useState(0)
-  var g = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(m, 2)
+  var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
   var y = React.useState(false)
-  var E = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(y, 2)
+  var E = Module_10.a(y, 2)
   var O = E[0]
   var w = E[1]
   var C = React.useRef()
@@ -1380,10 +1380,10 @@ export const ScreenList = React.memo(() => {
   var playing = useSelector(function (e) {
     return e.project.playing
   })
-  var R = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
+  var R = Module_238.d()
   var screenPanel = useSelector(function (e) {
     return e.uiConfig.screenPanel
-  }) === $$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
+  }) === Module_18.j.ReadOnly
   const dispatch = useDispatch()
   React.useEffect(function () {
     var e = document.createElement("div")
@@ -1395,7 +1395,7 @@ export const ScreenList = React.memo(() => {
       setTimeout(function () {
         var e = document.getElementById(R.id)
         if (e) {
-          $$_$$_$$_$$_$$_unrestored_shared_1571_2636_553.a(e, 1).then(function (e) {
+          Module_553.a(e, 1).then(function (e) {
             dispatch(Actions.Xj(R.id, e))
           }).catch(function (e) {
             return console.error(e)
@@ -1475,7 +1475,7 @@ export const ScreenList = React.memo(() => {
       var o = n.get("title")
       var i = formatMessage({
         id: "deleteScreen"
-      }) + "“" + $$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(o, 10) + "”?"
+      }) + "“" + Module_190.f(o, 10) + "”?"
       dispatch(Actions.openConfirmDialogAction({
         onClose: B,
         onConfirm: F,
@@ -1535,7 +1535,7 @@ export const ScreenList = React.memo(() => {
         },
         onDeleteIconClick: function (e) {
           if (!function (e, t) {
-            return 0 === t.get("widgetIds").length && $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.isEmptyWorkspace(e.id, t.id)
+            return 0 === t.get("widgetIds").length && Module_26.z.isEmptyWorkspace(e.id, t.id)
           }(R, e)) {
             L(e.id)
           } else {
@@ -1548,7 +1548,7 @@ export const ScreenList = React.memo(() => {
           var /* [auto-meaningful-name] */e$newIndex = e.newIndex
           if (e$oldIndex === e$newIndex) {
             dispatch(Actions.vg(e$newIndex))
-            return void $$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("ScreenItemClick", {
+            return void Module_141.a("ScreenItemClick", {
               screenId: screens.getIn([e$newIndex, "id"]),
               screenName: screens.getIn([e$newIndex, "title"])
             })
@@ -1558,7 +1558,7 @@ export const ScreenList = React.memo(() => {
             dispatch(Actions.Fi(true))
             dispatch(Actions.yh(e$oldIndex, e$newIndex))
             dispatch(Actions.vg(e$newIndex))
-            if (!(null === (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === e)) {
+            if (!(null === (e = Module_26.g.getToolbox()) || undefined === e)) {
               e.refresh_selection()
             }
           })
@@ -1603,7 +1603,7 @@ export const ScreenList = React.memo(() => {
     {<div
       className={classnames(styles.stageMask, O && styles.visible)}
     />}
-    {<$$_$$_$$_$$_shared_ui_components.r
+    {<Shared_ui_components.r
       content={G}
       onOpen={() => {
         w(true)
@@ -1629,7 +1629,7 @@ export const ScreenList = React.memo(() => {
           })}
         </span>}
       </div>}
-    </$$_$$_$$_$$_shared_ui_components.r>}
+    </Shared_ui_components.r>}
     {!playing && <div
       className={styles.screenIndexBox}
     >

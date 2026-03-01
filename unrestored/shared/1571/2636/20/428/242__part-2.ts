@@ -8,11 +8,11 @@
 
 import { r, o, i } from "./242__part-0"
 var g
-import * as /* [auto-meaningful-name] */Animejs from "animejs"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_11 from "../../11"
-import * as /* [auto-meaningful-name] */$$_$$_25_index from "../../25/index"
-import * as /* [auto-meaningful-name] */$$_$$_738_302 from "../../738/302"
+import * as /* [auto-meaningful-name] */Animejs from /* 205 */"animejs"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../11"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../25/index"
+import * as /* [auto-meaningful-name] */Module_302 from /* 302 */"../../738/302"
 function v(e, t) {
   var n = document.querySelectorAll("#".concat(e, " .radio-widget-button"))[t]
   return n ? [
@@ -41,10 +41,10 @@ function b(e, t) {
   ] : []
 }
 g = {}
-$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w, r)
-$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.d, $$_$$_738_302)
-$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.C, o)
-$$_$$_11.a(g, $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.g, i)
+Module_11.a(g, Src_editor_widget_builtIn_types.w, r)
+Module_11.a(g, Src_editor_widget_builtIn_types.d, Module_302)
+Module_11.a(g, Src_editor_widget_builtIn_types.C, o)
+Module_11.a(g, Src_editor_widget_builtIn_types.g, i)
 var y = g
 var E = new Map()
 function O(e, t, n) {
@@ -55,7 +55,7 @@ function O(e, t, n) {
       i[s - 3] = arguments[s]
     }
     var c = r[n].apply(r, [e].concat(i))
-    E.set(e, [].concat($$_$$_25_index.a(E.get(e) || []), $$_$$_25_index.a(c)))
+    E.set(e, [].concat(Module_25.a(E.get(e) || []), Module_25.a(c)))
   }
 }
 function w(e) {

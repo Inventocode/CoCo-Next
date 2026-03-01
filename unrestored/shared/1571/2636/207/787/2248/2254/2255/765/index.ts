@@ -66,8 +66,8 @@ module.exports = {
   toHash: o,
   getProperty: c,
   escapeQuotes: u,
-  equal: require("./1137"),
-  ucs2length: require("./2258"),
+  equal: require(/* 1137 */"./1137"),
+  ucs2length: require(/* 2258 */"./2258"),
   varOccurences: function (e, t) {
     t += "[^0-9]"
     var n = e.match(new RegExp(t, "g"))

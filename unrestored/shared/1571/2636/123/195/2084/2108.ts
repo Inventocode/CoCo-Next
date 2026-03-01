@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.THEME_COLOR_MAP = undefined
-var r = require("../../../1022/579")
+var r = require(/* 579 */"../../../1022/579")
 exports.THEME_COLOR_MAP = {
   RED: new r.Color("#FF604B"),
   BLUE: new r.Color("#3882FF"),

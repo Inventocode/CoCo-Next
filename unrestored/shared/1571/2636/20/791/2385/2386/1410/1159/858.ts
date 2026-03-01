@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../311")
+var r = require(/* 311 */"../311")
 var /* [auto-meaningful-name] */r$ArrayIsArray = r.ArrayIsArray
 var /* [auto-meaningful-name] */r$ArrayPrototypeIncludes = r.ArrayPrototypeIncludes
 var /* [auto-meaningful-name] */r$ArrayPrototypeJoin = r.ArrayPrototypeJoin
@@ -21,7 +21,7 @@ var /* [auto-meaningful-name] */r$RegExpPrototypeExec = r.RegExpPrototypeExec
 var /* [auto-meaningful-name] */r$String = r.String
 var /* [auto-meaningful-name] */r$StringPrototypeToUpperCase = r.StringPrototypeToUpperCase
 var /* [auto-meaningful-name] */r$StringPrototypeTrim = r.StringPrototypeTrim
-var v = require("../../1402/402/index")
+var v = require(/* 402 */"../../1402/402/index")
 var /* [auto-meaningful-name] */v$hideStackFrames = v.hideStackFrames
 var /* [auto-meaningful-name] */v$codes = v.codes
 var /* [auto-meaningful-name] */v$codes$ERR_SOCKET_BAD_PORT = v$codes.ERR_SOCKET_BAD_PORT
@@ -29,10 +29,10 @@ var /* [auto-meaningful-name] */v$codes$ERR_INVALID_ARG_TYPE = v$codes.ERR_INVAL
 var /* [auto-meaningful-name] */v$codes$ERR_INVALID_ARG_VALUE = v$codes.ERR_INVALID_ARG_VALUE
 var /* [auto-meaningful-name] */v$codes$ERR_OUT_OF_RANGE = v$codes.ERR_OUT_OF_RANGE
 var /* [auto-meaningful-name] */v$codes$ERR_UNKNOWN_SIGNAL = v$codes.ERR_UNKNOWN_SIGNAL
-var /* [auto-meaningful-name] */require$$_$$_1402_427$normalizeEncoding = require("../../1402/427").normalizeEncoding
-var /* [auto-meaningful-name] */require$$_$$_1402_427$types = require("../../1402/427").types
-var /* [auto-meaningful-name] */require$$_$$_1402_427$types$isAsyncFunction = require$$_$$_1402_427$types.isAsyncFunction
-var /* [auto-meaningful-name] */require$$_$$_1402_427$types$isArrayBufferView = require$$_$$_1402_427$types.isArrayBufferView
+var /* [auto-meaningful-name] */require_427_$$_$$_1402_427$normalizeEncoding = require(/* 427 */"../../1402/427").normalizeEncoding
+var /* [auto-meaningful-name] */require_427_$$_$$_1402_427$types = require(/* 427 */"../../1402/427").types
+var /* [auto-meaningful-name] */require_427_$$_$$_1402_427$types$isAsyncFunction = require_427_$$_$$_1402_427$types.isAsyncFunction
+var /* [auto-meaningful-name] */require_427_$$_$$_1402_427$types$isArrayBufferView = require_427_$$_$$_1402_427$types.isArrayBufferView
 var B = {}
 var D = /^[0-7]+$/
 var I = v$hideStackFrames(function (e, t) {
@@ -122,7 +122,7 @@ var H = v$hideStackFrames(function (e, t) {
 })
 var V = v$hideStackFrames(function (e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : "buffer"
-  if (!require$$_$$_1402_427$types$isArrayBufferView(e)) {
+  if (!require_427_$$_$$_1402_427$types$isArrayBufferView(e)) {
     throw new v$codes$ERR_INVALID_ARG_TYPE(t, ["Buffer", "TypedArray", "DataView"], e)
   }
 })
@@ -137,7 +137,7 @@ var z = v$hideStackFrames(function (e, t) {
   }
 })
 var Q = v$hideStackFrames(function (e, t) {
-  if ("function" !== typeof e || require$$_$$_1402_427$types$isAsyncFunction(e)) {
+  if ("function" !== typeof e || require_427_$$_$$_1402_427$types$isAsyncFunction(e)) {
     throw new v$codes$ERR_INVALID_ARG_TYPE(t, "Function", e)
   }
 })
@@ -200,7 +200,7 @@ module.exports = {
   validateBuffer: V,
   validateDictionary: U,
   validateEncoding: function (e, t) {
-    var n = require$$_$$_1402_427$normalizeEncoding(t)
+    var n = require_427_$$_$$_1402_427$normalizeEncoding(t)
     var /* [auto-meaningful-name] */e$length = e.length
     if ("hex" === n && e$length % 2 !== 0) {
       throw new v$codes$ERR_INVALID_ARG_VALUE("encoding", t, "is invalid for data of length ".concat(e$length))

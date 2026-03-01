@@ -11,13 +11,13 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.decompressFrames = exports.decompressFrame = exports.parseGIF = undefined
 var r
-var o = (r = require("./2625")) && r.__esModule ? r : {
+var o = (r = require(/* 2625 */"./2625")) && r.__esModule ? r : {
   default: r
 }
-var i = require("./1473")
-var a = require("./1474")
-var s = require("./2626")
-var c = require("./2627")
+var i = require(/* 1473 */"./1473")
+var a = require(/* 1474 */"./1474")
+var s = require(/* 2626 */"./2626")
+var c = require(/* 2627 */"./2627")
 exports.parseGIF = function (e) {
   var t = new Uint8Array(e)
   return (0, i.parse)((0, a.buildStream)(t), o.default)

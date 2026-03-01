@@ -6,7 +6,7 @@
 
 "use strict"
 
-var n = require("./36")
+var n = require(/* 36 */"./36")
 var o = function () {
   function t() {}
   t.checkAndNudgePoints = function (t, e) {

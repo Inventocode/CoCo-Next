@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.rename_procedures_in_json = exports.delete_from_json = exports.load_from_json = undefined
-var r = require("./387")
-var i = require("../../1058/173")
-var o = require("../../1058/762")
+var r = require(/* 387 */"./387")
+var i = require(/* 173 */"../../1058/173")
+var o = require(/* 762 */"../../1058/762")
 function a(e, t) {
   return e.fields[t]
 }

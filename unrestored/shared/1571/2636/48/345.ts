@@ -9,24 +9,24 @@
 export { l as c }
 export { d as b }
 export { p as a }
-import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as i from "../9"
-import * as /* [auto-meaningful-name] */$$_95 from "../95"
-import * as /* [auto-meaningful-name] */$$_76 from "../76"
-import * as /* [auto-meaningful-name] */$$_131 from "../131"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../47/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_95 from /* 95 */"../95"
+import * as /* [auto-meaningful-name] */Module_76 from /* 76 */"../76"
+import * as /* [auto-meaningful-name] */Module_131 from /* 131 */"../131"
 function l(e, t) {
   for (var n in e) {
     var r = e[n]
     if (1 === t) {
-      if (r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v && "" === r.attributes.fileId) {
+      if (r.type === Src_editor_widget_builtIn_types.v && "" === r.attributes.fileId) {
         r.attributes.fileId = "https://creation.codemao.cn/coconut/web/1.10.0/static/media/defaultImage.8392642c.svg"
       }
-      if (r.type !== $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H || r.parentId) {
-        if (r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w) {
+      if (r.type !== Src_editor_widget_builtIn_types.H || r.parentId) {
+        if (r.type === Src_editor_widget_builtIn_types.w) {
           var /* [auto-meaningful-name] */r$attributes$sizeType = r.attributes.sizeType
           if (r$attributes$sizeType) {
-            var l = i.ob(r$attributes$sizeType)
+            var l = Module_9.ob(r$attributes$sizeType)
             r.size.height = l.height
             r.attributes.fontSize = l.fontSize
           }
@@ -36,13 +36,13 @@ function l(e, t) {
           if (r.attributes.mode) {
             r.attributes.templateMode = r.attributes.mode
           }
-          r.attributes.placeholderColor = $$_95.n
-          r.attributes.valueColor = $$_95.o
-          r.attributes.fontFamily = $$_95.f
-          r.attributes.backgroundMode = $$_76.a.TEMPLATE
-          r.attributes.backgroundImage = $$_95.a
-          r.attributes.imageResizeMode = $$_76.b.CONTAIN
-        } else if (r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.F) {
+          r.attributes.placeholderColor = Module_95.n
+          r.attributes.valueColor = Module_95.o
+          r.attributes.fontFamily = Module_95.f
+          r.attributes.backgroundMode = Module_76.a.TEMPLATE
+          r.attributes.backgroundImage = Module_95.a
+          r.attributes.imageResizeMode = Module_76.b.CONTAIN
+        } else if (r.type === Src_editor_widget_builtIn_types.F) {
           u(r)
         }
       } else {
@@ -62,18 +62,18 @@ function l(e, t) {
         var /* [auto-meaningful-name] */r$attributes$fontSize = r$attributes.fontSize
         var m = r$attributes.content.replace(/&nbsp;/g, " ")
         r.attributes.content = m
-        if (40 === r.size.width && 40 === r.size.height && r.attributes.sizeAdaptive === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_ALL) {
+        if (40 === r.size.width && 40 === r.size.height && r.attributes.sizeAdaptive === Src_editor_widget_builtIn_types.q.AUTO_ALL) {
           p.style.fontSize = "".concat(r$attributes$fontSize, "px")
           p.innerText = m
           r.size.width = Math.max(40, p.clientWidth)
           r.size.height = Math.max(40, p.clientHeight)
-          r.attributes.sizeAdaptive = $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT
+          r.attributes.sizeAdaptive = Src_editor_widget_builtIn_types.q.AUTO_HEIGHT
           p.innerText = ""
         } else {
-          r.attributes.sizeAdaptive = $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED
+          r.attributes.sizeAdaptive = Src_editor_widget_builtIn_types.q.FIXED
         }
       }
-    } else if (2 === t && r.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.F) {
+    } else if (2 === t && r.type === Src_editor_widget_builtIn_types.F) {
       u(r)
     }
   }
@@ -82,12 +82,12 @@ function u(e) {
   var /* [auto-meaningful-name] */e$attributes$mode = e.attributes.mode
   var /* [auto-meaningful-name] */e$attributes$sizeType = e.attributes.sizeType
   if (e$attributes$mode && e$attributes$sizeType) {
-    var r = $$_131.l[e$attributes$mode][e$attributes$sizeType]
+    var r = Module_131.l[e$attributes$mode][e$attributes$sizeType]
     e.size.width = r.width
     e.size.height = r.height
   }
-  e.attributes.backgroundMode = $$_76.a.TEMPLATE
-  e.attributes.imageResizeMode = $$_76.b.CONTAIN
+  e.attributes.backgroundMode = Module_76.a.TEMPLATE
+  e.attributes.imageResizeMode = Module_76.b.CONTAIN
 }
 function d(e) {
   var /* [auto-meaningful-name] */e$screens = e.screens
@@ -147,7 +147,7 @@ function p(e) {
 function f(e, t, n) {
   var o
   var i = {}
-  var a = $$_47_index.a(e)
+  var a = Module_47.a(e)
   try {
     for (a.s(); !(o = a.n()).done;) {
       var /* [auto-meaningful-name] */o$value = o.value

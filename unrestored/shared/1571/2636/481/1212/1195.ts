@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$_306 from "./306"
+import * as /* [auto-meaningful-name] */Module_306 from /* 306 */"./306"
 function i(e, t) {
   try {
     for (var n = e, r = [], i = 0, a = 0, /* [auto-meaningful-name] */$length = " > ".length, c = undefined; n && i++ < 5 && !("html" === (c = o(n, t)) || i > 1 && a + r.length * $length + c.length >= 80);) {
@@ -43,7 +43,7 @@ function o(e, t) {
     d.forEach(function (e) {
       f.push("[" + e[0] + "=\"" + e[1] + "\"]")
     })
-  } else if (l.id && f.push("#" + l.id), (l$className = l.className) && $_306.k(l$className)) {
+  } else if (l.id && f.push("#" + l.id), (l$className = l.className) && Module_306.k(l$className)) {
     for (a = l$className.split(/\s+/), u = 0; u < a.length; u++) {
       f.push("." + a[u])
     }

@@ -4,7 +4,7 @@
  * 模块 ID：1216
  */
 
-var r = require("./1795")
+var r = require(/* 1795 */"./1795")
 module.exports = function (e, t) {
   if (null == e) {
     return {}

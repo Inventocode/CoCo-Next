@@ -15,7 +15,7 @@ export { E as e }
 export { T as b }
 export { A as h }
 export { I as A }
-export { N as q }
+export { parseURLSearchParamsToObject as q }
 export { R as f }
 export { k as z }
 export { x as j }
@@ -26,9 +26,9 @@ export { W as y }
 export { H as r }
 export { V as m }
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../unrestored/shared/1571/2636/7"
 import { getEnvironment } from "../env"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_133 from "../../../unrestored/shared/1571/2636/133"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"../../../unrestored/shared/1571/2636/133"
 
 export const WIDGET_POST_FORM_URL = "https://owfemtgc1d.feishu.cn/share/base/form/shrcnlokP3seuMFtmTLxCAh40Sc"
 
@@ -75,7 +75,7 @@ function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+  return (_ = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     return RegeneratorRuntime.wrap(function (e) {
@@ -103,7 +103,7 @@ function v(e, t) {
   return b.apply(this, arguments)
 }
 function b() {
-  return (b = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (b = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var a
@@ -114,7 +114,7 @@ function b() {
             e.next = 2
             return g(t)
           case 2:
-            if ((e$sent = e.sent).type !== $$_$$_$$_unrestored_shared_1571_2636_133.c) {
+            if ((e$sent = e.sent).type !== Module_133.c) {
               e.next = 9
               break
             }
@@ -161,7 +161,7 @@ function E(e, t) {
   return O.apply(this, arguments)
 }
 function O() {
-  return (O = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (O = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var a
@@ -193,7 +193,7 @@ function w(e) {
   return C.apply(this, arguments)
 }
 function C() {
-  return (C = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+  return (C = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -221,7 +221,7 @@ function T(e) {
   return S.apply(this, arguments)
 }
 function S() {
-  return (S = $$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+  return (S = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -250,29 +250,30 @@ function A(e) {
 function I(e) {
   return URL.createObjectURL(e)
 }
-function j(e) {
-  var t = new URLSearchParams(e)
-  var /* [auto-meaningful-name] */inviteCode = "inviteCode"
-  var r = t.get(inviteCode)
-  if (r) {
-    t.set(inviteCode, r.split(" ")[0])
+
+export function parseURLSearchParams(searchParams: string) {
+  const result = new URLSearchParams(searchParams)
+  const inviteCodeKey = "inviteCode"
+  const inviteCode = result.get(inviteCodeKey)
+  if (inviteCode) {
+    result.set(inviteCodeKey, inviteCode.split(" ")[0]!)
   }
-  return t
+  return result
 }
-function N(e) {
-  var t = {}
-  var n = e.split("?")[1]
-  if (!n) {
+
+export function parseURLSearchParamsToObject(url: string) {
+  const result: Record<string, string> = {}
+  const searchParams = url.split("?")[1]
+  if (!searchParams) {
     return {}
   }
-  var r = j(n)
-  Array.from(r).forEach(function (e) {
-    t[e[0]] = e[1]
-  })
-  return t
+  var parsed = parseURLSearchParams(searchParams)
+  Array.from(parsed).forEach((item) => result[item[0]] = item[1])
+  return result
 }
+
 function R(e) {
-  var t = j(window.location.search)
+  var t = parseURLSearchParams(window.location.search)
   e.forEach(function (e) {
     t.delete(e)
   })
@@ -282,7 +283,7 @@ function R(e) {
 }
 function k(workId) {
   ((e) => {
-    var t = j(window.location.search)
+    var t = parseURLSearchParams(window.location.search)
     for (var n in e) t.set(n, e[n])
     var r = "?" + t.toString()
     window.history.replaceState(null, "", "/editor/".concat(r))

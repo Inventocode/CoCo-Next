@@ -10,14 +10,14 @@ import { Yh } from "./index__part-68"
 import { wg } from "./index__part-78"
 import { Ag } from "./index__part-79"
 var e_
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_267 from "./267"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_267 from /* 267 */"./267"
 !function (e) {
   e[e.SUCCESS = 1] = "SUCCESS"
   e[e.FAILED = 2] = "FAILED"
@@ -50,13 +50,13 @@ var n_ = {
         n = e_.FAILED
       }
     }
-    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
-      var r = ep.c("mutation", {
+    if (t && (this.updateShape_(), Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
+      var r = Module_4.c("mutation", {
         block: this,
         old_value: undefined,
         new_value: n
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   removeMutation: function (e) {
@@ -71,13 +71,13 @@ var n_ = {
         t = true
       }
     }
-    if (t && (this.updateShape_(), $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
-      var r = ep.c("mutation", {
+    if (t && (this.updateShape_(), Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled())) {
+      var r = Module_4.c("mutation", {
         block: this,
         old_value: n,
         new_value: undefined
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(r)
     }
   },
   updateShape_: function () {
@@ -91,7 +91,7 @@ var n_ = {
     var s
     var c
     var l = this
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("ERROR_MSG")) {
       this.remove_input("ERROR_MSG")
     }
@@ -107,13 +107,13 @@ var n_ = {
         l.remove_input(e$inputName)
       }
     })
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     if (this.get_input("ERROR")) {
       this.failedConnection = null === (e = this.get_input("ERROR")) || undefined === e || null === (e$connection = e.connection) || undefined === e$connection ? undefined : e$connection.target_connection
       if (this.failedStatement_) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("ERROR")
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("ERROR")
       }
@@ -123,16 +123,16 @@ var n_ = {
     if (this.get_input("SUCCESS")) {
       this.successConnection = null === (n = this.get_input("SUCCESS")) || undefined === n || null === (n$connection = n.connection) || undefined === n$connection ? undefined : n$connection.target_connection
       if (this.successStatement_) {
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
         this.remove_input("SUCCESS")
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+        Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
       } else {
         this.remove_input("SUCCESS")
       }
     } else {
       this.successConnection = null
     }
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.disable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.disable()
     if (this.get_input("SUCCESS_TEXT")) {
       this.remove_input("SUCCESS_TEXT")
     }
@@ -141,7 +141,7 @@ var n_ = {
     }
     this.append_dummy_input("SUCCESS_MUTATION_BTN")
     if (this.successStatement_) {
-      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
+      this.append_dummy_input("SUCCESS_TEXT", "SUCCESS_MUTATION_BTN").append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_SUCCESS_TEXT)
       this.successInputList.forEach(function (e) {
         var /* [auto-meaningful-name] */e$inputName = e.inputName
         var /* [auto-meaningful-name] */e$default_shadow = e.default_shadow
@@ -160,7 +160,7 @@ var n_ = {
         this.remove_input("FAILED_MUTATION_BTN")
       }
       this.append_dummy_input("FAILED_MUTATION_BTN")
-      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
+      this.append_dummy_input("FAILED_TEXT", "FAILED_MUTATION_BTN").append_field(Src_shared_packages_Crc_blink_src_index.Blink.Msg.ROOM_FAILED_TEXT)
       this.append_shadow_input("ERROR_MSG", "<shadow type=\"cloud_dict_fail_result\"/>", "FAILED_MUTATION_BTN")
       var /* [auto-meaningful-name] */f$connection
       var f = this.append_statement_input("ERROR", undefined, "cloud_dict_error_DO")
@@ -172,33 +172,33 @@ var n_ = {
     }
     if (this.successStatement_) {
       if (!(null === (o = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === o)) {
-        o.append_field(ep.q(e_.SUCCESS), "mutation_remove_button")
+        o.append_field(Module_4.q(e_.SUCCESS), "mutation_remove_button")
       }
     }
     if (this.failedStatement_) {
       if (!(null === (i = this.get_input("FAILED_MUTATION_BTN")) || undefined === i)) {
-        i.append_field(ep.q(e_.FAILED), "mutation_remove_button")
+        i.append_field(Module_4.q(e_.FAILED), "mutation_remove_button")
       }
     }
     if (!this.successStatement_) {
       if (this.failedStatement_) {
         if (!(null === (a = this.get_input("FAILED_MUTATION_BTN")) || undefined === a)) {
-          a.append_field(ep.p(), "mutation_add_button")
+          a.append_field(Module_4.p(), "mutation_add_button")
         }
       } else {
         if (!(null === (s = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === s)) {
-          s.append_field(ep.p(), "mutation_add_button")
+          s.append_field(Module_4.p(), "mutation_add_button")
         }
       }
     }
     if (!this.failedStatement_) {
       if (this.successStatement_) {
         if (!(null === (c = this.get_input("SUCCESS_MUTATION_BTN")) || undefined === c)) {
-          c.append_field(ep.p(), "")
+          c.append_field(Module_4.p(), "")
         }
       }
     }
-    $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.enable()
+    Src_shared_packages_Crc_blink_src_index.Blink.events.enable()
     this.render()
   },
   domToMutation: function (e) {
@@ -245,31 +245,31 @@ var a_ = Object.assign({}, n_, {
   successDO: "QUERY_ALL_KEYS"
 })
 var s_ = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
+  type: Src_editor_widget_builtIn_types.j,
   category: {
     iconId: "icon-widget-cloud-dict",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.j
+    blocks: Src_editor_widget_builtIn_types.j
   },
   getTemplate: function (e) {
     var t
     var n = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    var r = $_46_index.c().getCloudDictKeyList(e)
+    var r = Module_46.c().getCloudDictKeyList(e)
     var o = null === (t = r[1]) || undefined === t ? undefined : t.value
     if (undefined === o || Object.keys(Ag).includes(o)) {
       o = r[0].value
     }
     var i = "<field name=\"KEYS\">".concat(o, "</field>")
     return [
-      "<block type=\"cloud_space_dict_on_error\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), rp.d, Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
+      "<block type=\"cloud_space_dict_on_error\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Module_61.d, Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.j,
         title: "修改",
         lineId: "setter"
-      }), "<block type=\"cloud_space_dict_set_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_delete_key\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
+      }), "<block type=\"cloud_space_dict_set_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\" >0</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_delete_key\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.j,
         title: "查询",
         lineId: "query"
-      }), "<block type=\"cloud_space_dict_get_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_get_key_count\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"cloud_space_dict_get_all_keys\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
+      }), "<block type=\"cloud_space_dict_get_key_value\" uncache=\"true\">\n      ".concat(n, "\n      <value name=\"DICT_KEYS_WRAPPER\">\n        <shadow type=\"cloud_dict_all_key_dropdown\">").concat(i, "</shadow>\n      </value>\n    </block>"), "<block type=\"cloud_space_dict_get_key_count\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), "<block type=\"cloud_space_dict_get_all_keys\" uncache=\"true\">\n      ".concat(n, "\n    </block>"), Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.j,
         title: "清空",
         lineId: "clear"
       }), "<block type=\"cloud_space_dict_clear_data\" uncache=\"true\">\n      ".concat(n, "\n    </block>")
@@ -280,7 +280,7 @@ var s_ = {
       e.insertBlockSnippetGenerator("cloud_dict_all_key_dropdown", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "KEYS") || ""
-        return ep.o(o)
+        return Module_4.o(o)
       })
       e.insertBlockSnippetGenerator("cloud_dict_fail_result", function () {
         return "cloudDictFailResult"
@@ -307,7 +307,7 @@ var s_ = {
           return ""
         }
         var c = "".concat(o, "_").concat(i)
-        return ep.n("onCloudDictError", [ep.o(c)], s, [a])
+        return Module_4.n("onCloudDictError", [Module_4.o(c)], s, [a])
       })
       e.insertBlockSnippetGenerator("cloud_space_dict_set_key_value", function (t, n) {
         var r = t.blocks[n]
@@ -317,7 +317,7 @@ var s_ = {
         var s = e.statementToCode(t, n, "SUCCESS")
         var c = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var l = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("cloudDictSetKeyValue", [ep.o(o), i, a, ep.k([], s), ep.k([c], l)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("cloudDictSetKeyValue", [Module_4.o(o), i, a, Module_4.k([], s), Module_4.k([c], l)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("cloud_space_dict_delete_key", function (t, n) {
         var r = t.blocks[n]
@@ -326,7 +326,7 @@ var s_ = {
         var a = e.statementToCode(t, n, "SUCCESS")
         var s = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var c = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("cloudDictDeleteKey", [ep.o(o), i, ep.k([], a), ep.k([s], c)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("cloudDictDeleteKey", [Module_4.o(o), i, Module_4.k([], a), Module_4.k([s], c)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("cloud_space_dict_clear_data", function (t, n) {
         var r = t.blocks[n]
@@ -334,7 +334,7 @@ var s_ = {
         var i = e.statementToCode(t, n, "SUCCESS")
         var a = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var s = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("cloudDictClearData", [ep.o(o), ep.k([], i), ep.k([a], s)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("cloudDictClearData", [Module_4.o(o), Module_4.k([], i), Module_4.k([a], s)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("cloud_space_dict_get_key_value", function (t, n) {
         var r = t.blocks[n]
@@ -344,7 +344,7 @@ var s_ = {
         var s = e.statementToCode(t, n, "SUCCESS")
         var c = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var l = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("cloudDictGetValueByKey", [ep.o(o), i, ep.k([a], s), ep.k([c], l)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("cloudDictGetValueByKey", [Module_4.o(o), i, Module_4.k([a], s), Module_4.k([c], l)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("cloud_space_dict_get_key_count", function (t, n) {
         var r = t.blocks[n]
@@ -353,7 +353,7 @@ var s_ = {
         var a = e.statementToCode(t, n, "SUCCESS")
         var s = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var c = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("cloudDictGetKeyCount", [ep.o(o), ep.k([i], a), ep.k([s], c)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("cloudDictGetKeyCount", [Module_4.o(o), Module_4.k([i], a), Module_4.k([s], c)]), t.blocks[n], e, true)
       })
       e.insertBlockSnippetGenerator("cloud_space_dict_get_all_keys", function (t, n) {
         var r = t.blocks[n]
@@ -362,7 +362,7 @@ var s_ = {
         var a = e.statementToCode(t, n, "SUCCESS")
         var s = e.valueToCode(t, n, "ERROR_MSG", e.ORDER_FUNCTION_CALL)
         var c = e.statementToCode(t, n, "ERROR")
-        return ep.l(ep.j("cloudDictGetAllKey", [ep.o(o), ep.k([i], a), ep.k([s], c)]), t.blocks[n], e, true)
+        return Module_4.l(Module_4.j("cloudDictGetAllKey", [Module_4.o(o), Module_4.k([i], a), Module_4.k([s], c)]), t.blocks[n], e, true)
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -375,7 +375,7 @@ var s_ = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.j)
+          return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.j)
         }
       }
       e.insertBlockProfile("cloud_dict_all_key_dropdown", {
@@ -390,7 +390,7 @@ var s_ = {
               var /* [auto-meaningful-name] */this$source_block
               var /* [auto-meaningful-name] */this$source_block$parent_block
               var n = (null === (this$source_block = this.source_block) || undefined === this$source_block || null === (this$source_block$parent_block = this$source_block.parent_block) || undefined === this$source_block$parent_block ? undefined : this$source_block$parent_block.get_field_value("WIDGET_ID")) || undefined
-              return $_46_index.c().getCloudDictKeyList(n, this)
+              return Module_46.c().getCloudDictKeyList(n, this)
             }
           }
         ],
@@ -423,7 +423,7 @@ var s_ = {
       e.insertBlockProfile("cloud_dict_query_all_keys_result", {
         type: "cloud_dict_query_all_keys_result",
         message0: "%{BKY_ALL_KEYS_RESULT}",
-        args0: [ep.d("%{BKY_BLOCK_LIST_ICON}")],
+        args0: [Module_4.d("%{BKY_BLOCK_LIST_ICON}")],
         output: "Array",
         required_context: "".concat("cloud_dict_success_DO", "_QUERY_ALL_KEYS"),
         colour: "%{BKY_PARAM_BLOCK_COLOR}",
@@ -441,11 +441,11 @@ var s_ = {
         type: "cloud_space_dict_on_error",
         message0: "%{BKY_CLOUD_SPACE_DICT_ON_ERROR}",
         args0: [
-          ep.e("%{BKY_BLOCK_CLOUD_DICT_ICON}", true), D.a({}, n), {
+          Module_4.e("%{BKY_BLOCK_CLOUD_DICT_ICON}", true), Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "EVENT",
             custom: true,
-            options: [["%{BKY_EVENT_SETTER}", $_267.a.SETTER], ["%{BKY_EVENT_DELETE}", $_267.a.DELETE], ["%{BKY_EVENT_QUERY}", $_267.a.QUERY], ["%{BKY_EVENT_CLEAR}", $_267.a.CLEAR]]
+            options: [["%{BKY_EVENT_SETTER}", Module_267.a.SETTER], ["%{BKY_EVENT_DELETE}", Module_267.a.DELETE], ["%{BKY_EVENT_QUERY}", Module_267.a.QUERY], ["%{BKY_EVENT_CLEAR}", Module_267.a.CLEAR]]
           }, {
             type: "input_value",
             name: "CLOUD_DICT_ERROR_INFO",
@@ -467,7 +467,7 @@ var s_ = {
         type: "cloud_space_dict_set_key_value",
         message0: "%{BKY_CLOUD_SPACE_DICT_SET_KEY_VALUE}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DICT_KEYS_WRAPPER",
             check: ["String", "Number"]
@@ -497,7 +497,7 @@ var s_ = {
         type: "cloud_space_dict_delete_key",
         message0: "%{BKY_CLOUD_SPACE_DICT_DELETE_KEY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DICT_KEYS_WRAPPER",
             check: ["String", "Number"]
@@ -524,7 +524,7 @@ var s_ = {
         type: "cloud_space_dict_get_key_value",
         message0: "%{BKY_CLOUD_SPACE_DICT_GET_VALUE_BY_KEY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "DICT_KEYS_WRAPPER",
             check: ["String", "Number"]
@@ -551,7 +551,7 @@ var s_ = {
         type: "cloud_space_dict_get_key_count",
         message0: "%{BKY_CLOUD_SPACE_DICT_GET_KEY_COUNT}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_dummy",
             name: "DUMMY"
           }, {
@@ -573,7 +573,7 @@ var s_ = {
         type: "cloud_space_dict_get_all_keys",
         message0: "%{BKY_CLOUD_SPACE_DICT_GET_ALL_KEYS}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_dummy",
             name: "DUMMY"
           }, {
@@ -595,7 +595,7 @@ var s_ = {
         type: "cloud_space_dict_clear_data",
         message0: "%{BKY_CLOUD_SPACE_DICT_CLEAR_DATA}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_dummy",
             name: "DUMMY"
           }, {
@@ -629,7 +629,7 @@ var s_ = {
 var c_ = {
   icon: "icon-widget-cloud-dict",
   title: "CloudSpaceDictWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.j,
+  type: Src_editor_widget_builtIn_types.j,
   previewAreaWidgetTitle: "CloudSpaceDictWidget.widgetName",
   component: Yh,
   editConfig: wg,
@@ -642,7 +642,7 @@ var c_ = {
     },
     isGlobalWidget: true,
     attributes: {
-      cloudDictId: Jd.f
+      cloudDictId: Module_33.f
     }
   }
 }

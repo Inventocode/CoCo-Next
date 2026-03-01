@@ -7,9 +7,9 @@
 "use strict"
 
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
+import __WEBPACK_IMPORTED_MODULE_0_react___default from /* GiK3 */"react"
 var IconFontSVG = function IconFontSVG() {
   return __WEBPACK_IMPORTED_MODULE_0_react___default.createElement("svg", {
     "aria-hidden": "true",

@@ -8,27 +8,27 @@
 
 export { o as a }
 export { a as b }
-import { createContext, useMemo, createElement, useContext } from "react"
-import "../50/index"
-var i = createContext(null)
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 50 */"../50/index"
+var i = React.createContext(null)
 var o = function (e) {
   var /* [auto-meaningful-name] */e$utils = e.utils
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$locale = e.locale
   var /* [auto-meaningful-name] */e$libInstance = e.libInstance
-  var s = useMemo(function () {
+  var s = React.useMemo(function () {
     return new e$utils({
       locale: e$locale,
       instance: e$libInstance
     })
   }, [e$utils, e$libInstance, e$locale])
-  return createElement(i.Provider, {
+  return React.createElement(i.Provider, {
     value: s,
     children: e$children
   })
 }
 function a() {
-  var e = useContext(i);
+  var e = React.useContext(i);
   (function (e) {
     if (!e) {
       throw new Error("Can not find utils in context. You either a) forgot to wrap your component tree in MuiPickersUtilsProvider; or b) mixed named and direct file imports.  Recommendation: use named imports from the module index.")

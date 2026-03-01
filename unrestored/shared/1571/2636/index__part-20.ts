@@ -7,118 +7,117 @@
 "use strict"
 
 import { cn } from "./index__part-19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_806 from "./806"
-import /* [auto-meaningful-name] */$_8061 from "./806"
-var dn = memo(function (e) {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_806 from /* 806 */"./806"
+import /* [auto-meaningful-name] */Module_8061 from /* 806 */"./806"
+var dn = React1.memo(function (e) {
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$save = e.save
   var i = useDispatch()
   return React.createElement(cn, {
-    className: $_8061.container,
+    className: Module_8061.container,
     networkErrorVisible: e$visible,
     onRetry: e$save,
     onCancelRetry: e$onClose
-  }, React.createElement("h3", null, $_710$a$formatMessage({
+  }, React.createElement("h3", null, Module_710$a$formatMessage({
     id: "saveProject.failDialogTitle"
-  })), React.createElement("ul", null, React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  })), React.createElement("ul", null, React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "saveProject.failDialogTips1"
-  }))), React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  }))), React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "saveProject.failDialogTips2"
   }), React.createElement("button", {
     type: "button",
-    className: $_8061.saveBtn,
+    className: Module_8061.saveBtn,
     onClick: function () {
-      i($$_$$_$$_$$_src_editor_redux_common_actions.Of())
+      i(Src_editor_redux_common_actions.Of())
       e$onClose()
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "saveProject.failDialogSaveLocalTips"
-  })), $_710$a$formatMessage({
+  })), Module_710$a$formatMessage({
     id: "saveProject.failDialogTips3"
   })))))
 })
-var pn = memo(function (e) {
+var pn = React1.memo(function (e) {
   var t = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useSelector(function (e) {
     return e.project
   })
   var /* [auto-meaningful-name] */r$packageProgress = r.packageProgress
   var /* [auto-meaningful-name] */r$packageTaskLabel = r.packageTaskLabel
   var /* [auto-meaningful-name] */r$isPackaging = r.isPackaging
-  var s = useState(false)
-  var c = $_10_index.a(s, 2)
+  var s = React1.useState(false)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  useEffect(function () {
+  React1.useEffect(function () {
     u(!(!r$packageTaskLabel || -1 !== r$packageProgress || r$isPackaging))
   }, [r$isPackaging, r$packageProgress, r$packageTaskLabel])
   return React.createElement(cn, {
     networkErrorVisible: l,
     onRetry: function () {
       u(false)
-      t($$_$$_$$_$$_src_editor_redux_common_actions.Ki(0))
-      $$_$$_$$_$$_src_editor_redux_common_actions.Nf(t, $$_$$_$$_$$_src_editor_redux_common_actions.jg())
-      t($$_$$_$$_$$_src_editor_redux_common_actions.Li(true))
+      t(Src_editor_redux_common_actions.Ki(0))
+      Src_editor_redux_common_actions.Nf(t, Src_editor_redux_common_actions.jg())
+      t(Src_editor_redux_common_actions.Li(true))
     },
     onCancelRetry: function () {
       u(false)
     }
-  }, React.createElement("h3", null, $_710$a$formatMessage({
+  }, React.createElement("h3", null, Module_710$a$formatMessage({
     id: "package.buildFailedTitle"
-  })), React.createElement("ul", null, React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  })), React.createElement("ul", null, React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "package.buildFailedTips1"
-  }))), React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  }))), React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "package.buildFailedTips2"
-  }))), React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  }))), React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "package.buildFailedTips3"
-  }))), React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  }))), React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "package.buildFailedTips41"
   }), React.createElement("a", {
     href: "https://ozbws9i1yf.feishu.cn/share/base/form/shrcn5xCRSVjUiO4YnIrNRRdUDd",
     target: "_blank",
     rel: "noopener noreferrer"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "feedback"
-  })), $_710$a$formatMessage({
+  })), Module_710$a$formatMessage({
     id: "package.buildFailedTips42"
   })))))
 })
-var fn = memo(function (e) {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+var fn = React1.memo(function (e) {
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$save = e.save
   var i = useDispatch()
   return React.createElement(cn, {
-    className: $_8061.container,
+    className: Module_8061.container,
     networkErrorVisible: e$visible,
     onRetry: e$save,
     onCancelRetry: e$onClose
-  }, React.createElement("h3", null, $_710$a$formatMessage({
+  }, React.createElement("h3", null, Module_710$a$formatMessage({
     id: "package.networkErrorTitle"
-  })), React.createElement("ul", null, React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  })), React.createElement("ul", null, React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "package.networkErrorTips1"
-  }))), React.createElement("li", null, React.createElement("span", null, $_710$a$formatMessage({
+  }))), React.createElement("li", null, React.createElement("span", null, Module_710$a$formatMessage({
     id: "package.networkErrorTips2"
   }), React.createElement("button", {
     type: "button",
-    className: $_8061.saveBtn,
+    className: Module_8061.saveBtn,
     onClick: function () {
-      i($$_$$_$$_$$_src_editor_redux_common_actions.Of())
+      i(Src_editor_redux_common_actions.Of())
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "saveProject.failDialogSaveLocalTips"
-  })), $_710$a$formatMessage({
+  })), Module_710$a$formatMessage({
     id: "package.networkErrorTips3"
   })))))
 })

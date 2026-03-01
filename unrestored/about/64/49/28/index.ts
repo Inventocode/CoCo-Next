@@ -8,12 +8,12 @@
 
 export { l as a }
 export { f as b }
-import * as r from "../1"
-import * as /* [auto-meaningful-name] */$$_31 from "../31"
-import * as o from "../8"
-import * as a from "./24"
-import * as /* [auto-meaningful-name] */$$_12 from "../12"
-import * as u from "./29"
+import * as /* [auto-meaningful-name] */Module_1 from /* 1 */"../1"
+import * as /* [auto-meaningful-name] */Module_31 from /* 31 */"../31"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"../8"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"./24"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"../12"
+import * as /* [auto-meaningful-name] */Module_29 from /* 29 */"./29"
 var l = 1e3
 var c = function (e) {
   function t(t, n, r, i) {
@@ -26,12 +26,12 @@ var c = function (e) {
     o.transactionSpanId = r
     return o
   }
-  r.b(t, e)
+  Module_1.b(t, e)
   t.prototype.add = function (t) {
     var n = this
     if (t.spanId !== this.transactionSpanId) {
       t.finish = function (e) {
-        t.endTimestamp = "number" === typeof e ? e : $$_31.d()
+        t.endTimestamp = "number" === typeof e ? e : Module_31.d()
         n._popActivity(t.spanId)
       }
       if (undefined === t.endTimestamp) {
@@ -41,7 +41,7 @@ var c = function (e) {
     e.prototype.add.call(this, t)
   }
   return t
-}(a.b)
+}(Module_24.b)
 var f = function (e) {
   function t(t, n, r, i) {
     if (undefined === r) {
@@ -61,7 +61,7 @@ var f = function (e) {
     a._beforeFinishCallbacks = []
     if (n && i) {
       d(n)
-      o.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
+      Module_8.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
       n.configureScope(function (e) {
         return e.setSpan(a)
       })
@@ -73,20 +73,20 @@ var f = function (e) {
     }, a._idleTimeout)
     return a
   }
-  r.b(t, e)
+  Module_1.b(t, e)
   t.prototype.finish = function (t) {
     var n
     var /* [auto-meaningful-name] */l$return
     var u = this
     if (undefined === t) {
-      t = $$_31.d()
+      t = Module_31.d()
     }
     this._finished = true
     this.activities = {}
     if (this.spanRecorder) {
-      o.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
+      Module_8.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
       try {
-        for (var l = r.f(this._beforeFinishCallbacks), c = l.next(); !c.done; c = l.next()) {
+        for (var l = Module_1.f(this._beforeFinishCallbacks), c = l.next(); !c.done; c = l.next()) {
           (0, c.value)(this, t)
         }
       } catch (f) {
@@ -110,18 +110,18 @@ var f = function (e) {
         }
         if (!e.endTimestamp) {
           e.endTimestamp = t
-          e.setStatus($$_12.a.Cancelled)
-          o.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
+          e.setStatus(Module_12.a.Cancelled)
+          Module_8.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
         }
         var n = e.startTimestamp < t
         if (!n) {
-          o.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
+          Module_8.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
         }
         return n
       })
-      o.a.log("[Tracing] flushing IdleTransaction")
+      Module_8.a.log("[Tracing] flushing IdleTransaction")
     } else {
-      o.a.log("[Tracing] No active IdleTransaction")
+      Module_8.a.log("[Tracing] No active IdleTransaction")
     }
     if (this._onScope) {
       d(this._idleHub)
@@ -143,7 +143,7 @@ var f = function (e) {
           t._popActivity(e)
         }
       }, this.spanId, e)
-      o.a.log("Starting heartbeat")
+      Module_8.a.log("Starting heartbeat")
       this._pingHeartbeat()
     }
     this.spanRecorder.add(this)
@@ -153,20 +153,20 @@ var f = function (e) {
       clearTimeout(this._initTimeout)
       this._initTimeout = undefined
     }
-    o.a.log("[Tracing] pushActivity: " + e)
+    Module_8.a.log("[Tracing] pushActivity: " + e)
     this.activities[e] = true
-    o.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+    Module_8.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
   }
   t.prototype._popActivity = function (e) {
     var t = this
     if (this.activities[e]) {
-      o.a.log("[Tracing] popActivity " + e)
+      Module_8.a.log("[Tracing] popActivity " + e)
       delete this.activities[e]
-      o.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+      Module_8.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
     }
     if (0 === Object.keys(this.activities).length) {
       var /* [auto-meaningful-name] */this$_idleTimeout = this._idleTimeout
-      var r = $$_31.d() + this$_idleTimeout / 1e3
+      var r = Module_31.d() + this$_idleTimeout / 1e3
       setTimeout(function () {
         if (!t._finished) {
           t.finish(r)
@@ -188,8 +188,8 @@ var f = function (e) {
       }
       this._prevHeartbeatString = t
       if (this._heartbeatCounter >= 3) {
-        o.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
-        this.setStatus($$_12.a.DeadlineExceeded)
+        Module_8.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
+        this.setStatus(Module_12.a.DeadlineExceeded)
         this.setTag("heartbeat", "failed")
         this.finish()
       } else {
@@ -199,13 +199,13 @@ var f = function (e) {
   }
   t.prototype._pingHeartbeat = function () {
     var e = this
-    o.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
+    Module_8.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
     this._heartbeatTimer = setTimeout(function () {
       e._beat()
     }, 5e3)
   }
   return t
-}(u.a)
+}(Module_29.a)
 function d(e) {
   if (e) {
     var t = e.getScope()

@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("./86")
-var o = require("./271")
-var i = require("./955")
-var a = require("./309")
-var s = require("./443")
-var c = require("./300/index")
+var r = require(/* 86 */"./86")
+var o = require(/* 271 */"./271")
+var i = require(/* 955 */"./955")
+var a = require(/* 309 */"./309")
+var s = require(/* 443 */"./443")
+var c = require(/* 300 */"./300/index")
 if (o) {
   r({
     target: "Object",

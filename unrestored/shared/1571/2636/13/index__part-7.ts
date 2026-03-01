@@ -6,14 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useImperativeHandle } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_540_index from "../../../../../src/shared/ui/components/dialog/index"
-import "./869"
-var J = memo(React.forwardRef(function (e, t) {
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../../../../../src/shared/ui/components/dialog/index"
+import /* 869 */"./869"
+var J = React1.memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$onClick = e.onClick
@@ -25,22 +24,22 @@ var J = memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$shape = e.shape
   var m = undefined === e$shape ? "circle" : e$shape
-  var g = useRef(null)
-  useImperativeHandle(t, function () {
+  var g = React1.useRef(null)
+  React1.useImperativeHandle(t, function () {
     return {
       button: g.current
     }
   })
   return React.createElement("button", {
     ref: g,
-    className: i("coco-button", function () {
+    className: Classnames("coco-button", function () {
       var /* [auto-meaningful-name] */CocoButton = "coco-button-"
       return (e$type ? CocoButton + e$type : "") + " " + (e$danger ? CocoButton + "dangerous" : "") + " " + (m ? CocoButton + m : "")
     }(), e$className),
     disabled: e$disabled,
     style: u,
     onClick: e$onClick
-  }, e$icon && React.createElement($$_94_index.a, {
+  }, e$icon && React.createElement(Src_shared_ui_components_iconfont_index.a, {
     type: e$icon
   }), e$children)
 }))

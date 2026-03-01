@@ -6,6 +6,6 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_224_924_index from "../../224/924/index"
+import * as /* [auto-meaningful-name] */Module_924 from /* 924 */"../../224/924/index"
 var vn = "-ant-".concat(Date.now(), "-").concat(Math.random())
 export { vn }

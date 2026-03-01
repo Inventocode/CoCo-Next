@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../1662/443")
-var o = require("../1282/231")
+var r = require(/* 443 */"../1662/443")
+var o = require(/* 231 */"../1282/231")
 var /* [auto-meaningful-name] */$slice = [].slice
 var a = {}
 var s = function (e, t, n) {

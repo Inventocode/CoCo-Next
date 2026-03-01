@@ -8,21 +8,21 @@
 
 import { r } from "./817__part-1"
 import { h } from "./817__part-2"
-import * as /* [auto-meaningful-name] */$$_524 from "../524"
-import * as /* [auto-meaningful-name] */$$_264 from "../264"
-import * as /* [auto-meaningful-name] */$$_939 from "../939"
-import * as /* [auto-meaningful-name] */$$_365 from "../365"
-import * as /* [auto-meaningful-name] */$$_38 from "../38"
-import * as /* [auto-meaningful-name] */$$_439_index from "../439/index"
+import * as /* [auto-meaningful-name] */Module_524 from /* 524 */"../524"
+import * as /* [auto-meaningful-name] */Module_264 from /* 264 */"../264"
+import * as /* [auto-meaningful-name] */Module_939 from /* 939 */"../939"
+import * as /* [auto-meaningful-name] */Module_365 from /* 365 */"../365"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../38"
+import * as /* [auto-meaningful-name] */Module_439 from /* 439 */"../439/index"
 var A = function () {
   function e(e) {
     this.errors = 0
-    this.sid = $$_365.c()
+    this.sid = Module_365.c()
     this.duration = 0
     this.status = r.Ok
     this.init = true
     this.ignoreDuration = false
-    var t = $$_939.c()
+    var t = Module_939.c()
     this.timestamp = t
     this.started = t
     if (e) {
@@ -41,12 +41,12 @@ var A = function () {
         this.did = e.user.id || e.user.email || e.user.username
       }
     }
-    this.timestamp = e.timestamp || $$_939.c()
+    this.timestamp = e.timestamp || Module_939.c()
     if (e.ignoreDuration) {
       this.ignoreDuration = e.ignoreDuration
     }
     if (e.sid) {
-      this.sid = 32 === e.sid.length ? e.sid : $$_365.c()
+      this.sid = 32 === e.sid.length ? e.sid : Module_365.c()
     }
     if (undefined !== e.init) {
       this.init = e.init
@@ -100,7 +100,7 @@ var A = function () {
     }
   }
   e.prototype.toJSON = function () {
-    return $$_439_index.a({
+    return Module_439.a({
       sid: "" + this.sid,
       init: this.init,
       started: new Date(1e3 * this.started).toISOString(),
@@ -109,7 +109,7 @@ var A = function () {
       errors: this.errors,
       did: "number" === typeof this.did || "string" === typeof this.did ? "" + this.did : undefined,
       duration: this.duration,
-      attrs: $$_439_index.a({
+      attrs: Module_439.a({
         release: this.release,
         environment: this.environment,
         ip_address: this.ipAddress,
@@ -175,7 +175,7 @@ var g = function () {
     return this._stack[this._stack.length - 1]
   }
   e.prototype.captureException = function (e, t) {
-    var n = this._lastEventId = $$_365.c()
+    var n = this._lastEventId = Module_365.c()
     var r = t
     if (!t) {
       var i = undefined
@@ -189,13 +189,13 @@ var g = function () {
         syntheticException: i
       }
     }
-    this._invokeClient("captureException", e, $$_38.a($$_38.a({}, r), {
+    this._invokeClient("captureException", e, Module_38.a(Module_38.a({}, r), {
       event_id: n
     }))
     return n
   }
   e.prototype.captureMessage = function (e, t, n) {
-    var r = this._lastEventId = $$_365.c()
+    var r = this._lastEventId = Module_365.c()
     var i = n
     if (!n) {
       var a = undefined
@@ -209,14 +209,14 @@ var g = function () {
         syntheticException: a
       }
     }
-    this._invokeClient("captureMessage", e, t, $$_38.a($$_38.a({}, i), {
+    this._invokeClient("captureMessage", e, t, Module_38.a(Module_38.a({}, i), {
       event_id: r
     }))
     return r
   }
   e.prototype.captureEvent = function (e, t) {
-    var n = this._lastEventId = $$_365.c()
-    this._invokeClient("captureEvent", e, $$_38.a($$_38.a({}, t), {
+    var n = this._lastEventId = Module_365.c()
+    this._invokeClient("captureEvent", e, Module_38.a(Module_38.a({}, t), {
       event_id: n
     }))
     return n
@@ -235,11 +235,11 @@ var g = function () {
       var /* [auto-meaningful-name] */a$maxBreadcrumbs = a.maxBreadcrumbs
       var d = undefined === a$maxBreadcrumbs ? 100 : a$maxBreadcrumbs
       if (!(d <= 0)) {
-        var h = $$_939.b()
-        var p = $$_38.a({
+        var h = Module_939.b()
+        var p = Module_38.a({
           timestamp: h
         }, e)
-        var _ = l ? $$_365.a(function () {
+        var _ = l ? Module_365.a(function () {
           return l(p, t)
         }) : p
         if (null !== _) {
@@ -308,7 +308,7 @@ var g = function () {
     try {
       return t.getIntegration(e)
     } catch (n) {
-      $$_264.a.warn("Cannot retrieve integration " + e.id + " from the current Hub")
+      Module_264.a.warn("Cannot retrieve integration " + e.id + " from the current Hub")
       return null
     }
   }
@@ -351,14 +351,14 @@ var g = function () {
     var a = t$client && t$client.getOptions() || {}
     var /* [auto-meaningful-name] */a$release = a.release
     var /* [auto-meaningful-name] */a$environment = a.environment
-    var /* [auto-meaningful-name] */$$_365$b$navigator$userAgent = ($$_365.b().navigator || {}).userAgent
-    var f = new A($$_38.a($$_38.a($$_38.a({
+    var /* [auto-meaningful-name] */Module_365$b$navigator$userAgent = (Module_365.b().navigator || {}).userAgent
+    var f = new A(Module_38.a(Module_38.a(Module_38.a({
       release: a$release,
       environment: a$environment
     }, t$scope && {
       user: t$scope.getUser()
-    }), $$_365$b$navigator$userAgent && {
-      userAgent: $$_365$b$navigator$userAgent
+    }), Module_365$b$navigator$userAgent && {
+      userAgent: Module_365$b$navigator$userAgent
     }), e))
     if (t$scope) {
       var d = t$scope.getSession && t$scope.getSession()
@@ -391,7 +391,7 @@ var g = function () {
     var /* [auto-meaningful-name] */i$scope = i.scope
     var /* [auto-meaningful-name] */i$client = i.client
     if (i$client && i$client[e]) {
-      (t = i$client)[e].apply(t, $$_38.f(n, [i$scope]))
+      (t = i$client)[e].apply(t, Module_38.f(n, [i$scope]))
     }
   }
   e.prototype._callExtensionMethod = function (e) {
@@ -403,12 +403,12 @@ var g = function () {
     if (r$__SENTRY__ && r$__SENTRY__.extensions && "function" === typeof r$__SENTRY__.extensions[e]) {
       return r$__SENTRY__.extensions[e].apply(this, t)
     }
-    $$_264.a.warn("Extension method " + e + " couldn't be found, doing nothing.")
+    Module_264.a.warn("Extension method " + e + " couldn't be found, doing nothing.")
   }
   return e
 }()
 function v() {
-  var e = $$_365.b()
+  var e = Module_365.b()
   e.__SENTRY__ = e.__SENTRY__ || {
     extensions: {},
     hub: undefined
@@ -426,7 +426,7 @@ function y() {
   if (!(b(e) && !w(e).isOlderThan(4))) {
     E(e, new g())
   }
-  return $$_524.b() ? function (e) {
+  return Module_524.b() ? function (e) {
     var /* [auto-meaningful-name] */v$__SENTRY__
     var n
     var r

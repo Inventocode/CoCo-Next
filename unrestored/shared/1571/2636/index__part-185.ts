@@ -9,16 +9,15 @@
 import { fj, hj } from "./index__part-181"
 import { Rj } from "./index__part-184"
 var Ij
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_753 from "./753"
-import /* [auto-meaningful-name] */$_7531 from "./753"
-var Dj = memo(function (e) {
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_753 from /* 753 */"./753"
+import /* [auto-meaningful-name] */Module_7531 from /* 753 */"./753"
+var Dj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
@@ -26,15 +25,15 @@ var Dj = memo(function (e) {
   var /* [auto-meaningful-name] */e$urls = e.urls
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
   var /* [auto-meaningful-name] */e$selectHandler = e.selectHandler
-  var c = useState(false)
-  var l = $_10_index.a(c, 2)
+  var c = React1.useState(false)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = useState(e$urls && e$urls.length > 1 ? e$urls[0] : e$cdnUrl)
-  var m = $_10_index.a(p, 2)
+  var p = React1.useState(e$urls && e$urls.length > 1 ? e$urls[0] : e$cdnUrl)
+  var m = Module_10.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  var v = useRef(null)
+  var v = React1.useRef(null)
   var b = e$urls && e$urls.length > 1
   var y = "image" + t
   return React.createElement(Rj, {
@@ -64,7 +63,7 @@ var Dj = memo(function (e) {
     }
   }, React.createElement("div", {
     ref: v,
-    className: Classnames($_7531.ImageLibraryItem, e$isSelect && $_7531.selected),
+    className: Classnames(Module_7531.ImageLibraryItem, e$isSelect && Module_7531.selected),
     onClick: function () {
       if (!(b && !e$canShowMultiply)) {
         e$selectHandler({
@@ -78,15 +77,15 @@ var Dj = memo(function (e) {
       }
     }
   }, b && React.createElement("div", {
-    className: $_7531.groupIcon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_7531.groupIcon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-group"
   })), React.createElement("div", {
-    className: $_7531.icon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_7531.icon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-style-selected"
   })), React.createElement("div", {
-    className: $_7531.content,
+    className: Module_7531.content,
     onMouseOver: function () {
       if (b) {
         (function () {
@@ -98,7 +97,7 @@ var Dj = memo(function (e) {
               }) ? 1 : 0
               Ij = setInterval(function () {
                 var n = e$urls[t % e$urls.length]
-                e.setAttribute("src", "".concat(n).concat($$_$$_$$_$$_src_shared_tools_index.X(n) ? "?imageMogr2/thumbnail/!200x200r/blur/1x0/quality/100|imageslim" : "", " "))
+                e.setAttribute("src", "".concat(n).concat(Src_shared_tools_index.X(n) ? "?imageMogr2/thumbnail/!200x200r/blur/1x0/quality/100|imageslim" : "", " "))
                 t++
               }, 200)
             }
@@ -128,7 +127,7 @@ var Dj = memo(function (e) {
     alt: "",
     src: g || e$source
   })), React.createElement("div", {
-    className: $_7531.footer
+    className: Module_7531.footer
   }, t)))
 })
 export { Dj }

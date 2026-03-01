@@ -6,108 +6,108 @@
 
 "use strict"
 
-import * as Pp from "./95"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as D from "./6"
-import * as Fp from "./76"
+import * as /* [auto-meaningful-name] */Module_95 from /* 95 */"./95"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_76 from /* 76 */"./76"
 var Wp = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+  type: Src_editor_widget_builtIn_types.w,
   category: {
-    iconId: Pp.b,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.w
+    iconId: Module_95.b,
+    blocks: Src_editor_widget_builtIn_types.w
   },
   categoryClass: {
     text: "",
-    iconId: Pp.b,
+    iconId: Module_95.b,
     blocks: []
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"input_on_focus\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_blur\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_change\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<sep gap=\"50\"></sep>", Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+      "<block type=\"input_on_focus\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_blur\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<block type=\"input_on_change\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), "<sep gap=\"50\"></sep>", Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.w,
         title: "文案",
         lineId: "text"
-      }), "<block type=\"input_set_content\" uncache=\"true\">\n    ".concat(t, "\n    <value name=\"CONTENT\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.INPUT_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n  </block>"), Jd.sb({
+      }), "<block type=\"input_set_content\" uncache=\"true\">\n    ".concat(t, "\n    <value name=\"CONTENT\">\n      <shadow type=\"text\">\n        <field name=\"TEXT\">").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.INPUT_DEFAULT_VALUE, "</field>\n      </shadow>\n    </value>\n  </block>"), Module_33.sb({
         property: "contentColor",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "fontSize",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "textAlign",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
-      }), Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+      }), Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.w,
         title: "样式",
         lineId: "style"
-      }), Jd.qb({
+      }), Module_33.qb({
         property: "setTemplateMode",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.qb({
+      }), Module_33.qb({
         property: "setBackgroundImage",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+      }), Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.w,
         title: "通用",
         lineId: "common"
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__size",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"input_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints=',,1'>100</field>\n          </shadow>\n        </value>\n    </block>"), "<block type=\"input_set_visible\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"VISIBLE\">show</field>\n      </block>"), "<block type=\"input_set_disabled\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"DISABLE\">disabled</field>\n      </block>"), "<block type=\"input_set_error_message\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"OPEN\">open</field>\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.INPUT_DEFAULT_ERROR_MESSAGE, "</field>\n          </shadow>\n        </value>\n      </block>"), "<sep gap=\"50\"></sep>", Jd.cb({
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+      }), "<block type=\"input_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints=',,1'>100</field>\n          </shadow>\n        </value>\n    </block>"), "<block type=\"input_set_visible\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"VISIBLE\">show</field>\n      </block>"), "<block type=\"input_set_disabled\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"DISABLE\">disabled</field>\n      </block>"), "<block type=\"input_set_error_message\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"OPEN\">open</field>\n        <value name=\"CONTENT\">\n          <shadow type=\"text\">\n            <field name=\"TEXT\">").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.INPUT_DEFAULT_ERROR_MESSAGE, "</field>\n          </shadow>\n        </value>\n      </block>"), "<sep gap=\"50\"></sep>", Module_33.cb({
+        widgetType: Src_editor_widget_builtIn_types.w,
         title: "返回值",
         lineId: "getter"
-      }), "<block type=\"input_get_text\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), Jd.sb({
+      }), "<block type=\"input_get_text\" uncache=\"true\">\n        ".concat(t, "\n      </block>"), Module_33.sb({
         property: "errorMessage",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "contentColor",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "fontSize",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__size",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), "<block type=\"input_get_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n      </block>"), "<sep gap=\"50\"></sep>", Jd.sb({
+      }), "<block type=\"input_get_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n      </block>"), "<sep gap=\"50\"></sep>", Module_33.sb({
         property: "hasErrorMessage",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__visible",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__disabled",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.w,
+        widgetType: Src_editor_widget_builtIn_types.w,
         widgetId: e
       })
     ]
@@ -130,7 +130,7 @@ var Wp = {
           var o = n.blocks[r]
           var i = e.getFieldValue(o, "WIDGET_ID") || ""
           var a = e.statementToCode(n, r, "DO")
-          return a ? ep.n(t.funcName, [ep.o(i)], a) : ""
+          return a ? Module_4.n(t.funcName, [Module_4.o(i)], a) : ""
         })
       });
       [
@@ -148,56 +148,56 @@ var Wp = {
           var o = n.blocks[r]
           var i = e.getFieldValue(o, "WIDGET_ID") || ""
           var a = e.getFieldValue(o, t.field)
-          return a ? ep.n(t.funcName, [ep.o(i), ep.o(a)]) : ""
+          return a ? Module_4.n(t.funcName, [Module_4.o(i), Module_4.o(a)]) : ""
         })
       })
       e.insertBlockSnippetGenerator("input_field_color", function (t, n) {
         var r = t.blocks[n]
-        return ep.o(e.getFieldValue(r, "COLOR_VALUE") || "")
+        return Module_4.o(e.getFieldValue(r, "COLOR_VALUE") || "")
       })
       e.insertBlockSnippetGenerator("input_set_color", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.valueToCode(t, n, "COLOR", e.ORDER_FUNCTION_CALL)
-        return ep.n("setInputWidgetColor", [ep.o(o), i])
+        return Module_4.n("setInputWidgetColor", [Module_4.o(o), i])
       })
       e.insertBlockSnippetGenerator("input_set_position", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.getFieldValue(r, "POSITION_TYPE")
         var a = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL) || ""
-        return a && i ? ep.l(ep.n("positionX" === i ? "setInputWidgetPositionX" : "setInputWidgetPositionY", [ep.o(o), a]), r, e) : ""
+        return a && i ? Module_4.l(Module_4.n("positionX" === i ? "setInputWidgetPositionX" : "setInputWidgetPositionY", [Module_4.o(o), a]), r, e) : ""
       })
       e.insertBlockSnippetGenerator("input_set_visible", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = "show" === e.getFieldValue(r, "VISIBLE")
-        return ep.n("setInputWidgetVisible", [ep.o(o), i])
+        return Module_4.n("setInputWidgetVisible", [Module_4.o(o), i])
       })
       e.insertBlockSnippetGenerator("input_set_disabled", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = "disabled" === e.getFieldValue(r, "DISABLED")
-        return ep.l(ep.n("setInputWidgetDisabled", [ep.o(o), i]), r, e)
+        return Module_4.l(Module_4.n("setInputWidgetDisabled", [Module_4.o(o), i]), r, e)
       })
       e.insertBlockSnippetGenerator("input_set_error_message", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = "open" === e.getFieldValue(r, "ERROR_SWITCH")
         var a = e.valueToCode(t, n, "CONTENT", e.ORDER_FUNCTION_CALL) || ""
-        return i ? ep.n("setInputWidgetErrorMessage", [ep.o(o), a]) : ep.n("unsetInputWidgetErrorMessage", [ep.o(o)])
+        return i ? Module_4.n("setInputWidgetErrorMessage", [Module_4.o(o), a]) : Module_4.n("unsetInputWidgetErrorMessage", [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("input_set_content", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.getFieldValue(r, "TYPE")
         var a = e.valueToCode(t, n, "CONTENT", e.ORDER_FUNCTION_CALL) || ""
-        return i ? ep.n("setWidgetTextAttribute", [ep.o(o), ep.o(i), a]) : ""
+        return i ? Module_4.n("setWidgetTextAttribute", [Module_4.o(o), Module_4.o(i), a]) : ""
       })
       e.insertBlockSnippetGenerator("input_get_color", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return ep.s("getInputWidgetColor", [ep.o(o)])
+        return Module_4.s("getInputWidgetColor", [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("input_get_text", function (t, n) {
         var r = t.blocks[n]
@@ -208,7 +208,7 @@ var Wp = {
         }
         var a = ""
         a = "inputContent" === i ? "getInputWidgetValue" : "getInputWidgetPlaceholder"
-        return ep.s(a, [ep.o(o)])
+        return Module_4.s(a, [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("input_get_position", function (t, n) {
         var r = t.blocks[n]
@@ -219,12 +219,12 @@ var Wp = {
         }
         var a = ""
         a = "positionX" === i ? "getInputWidgetPositionX" : "getInputWidgetPositionY"
-        return ep.s(a, [ep.o(o)])
+        return Module_4.s(a, [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("input_assert_state", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return "error" === e.getFieldValue(r, "STATE") ? ep.s("checkIfInputWidgetHasErrorMessage", [ep.o(o)]) : "(\n          Coco.getInputWidgetDisabled(".concat(ep.o(o), ")\n        )")
+        return "error" === e.getFieldValue(r, "STATE") ? Module_4.s("checkIfInputWidgetHasErrorMessage", [Module_4.o(o)]) : "(\n          Coco.getInputWidgetDisabled(".concat(Module_4.o(o), ")\n        )")
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -233,7 +233,7 @@ var Wp = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType("INPUT_WIDGET")
+          return Module_46.c().getWidgetListByType("INPUT_WIDGET")
         }
       }
       function r(e) {
@@ -265,7 +265,7 @@ var Wp = {
           type: o.type,
           message0: o.message,
           args0: [
-            ep.e("%{BKY_BLOCK_INPUT_ICON}", true), D.a({}, n), {
+            Module_4.e("%{BKY_BLOCK_INPUT_ICON}", true), Module_6.a({}, n), {
               type: "input_dummy",
               align: "CENTRE"
             }, {
@@ -280,12 +280,12 @@ var Wp = {
           type: "input_set_mode",
           message0: "%{BKY_INPUT_SET_MODE}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "field_coco_dropdown",
               name: "MODE",
               custom: true,
               options: function () {
-                return [[t.Msg.INPUT_OUTLINED_NORMAL, Fp.c.OUTLINED_NORMAL], [t.Msg.INPUT_CONTAINED_NORMAL, Fp.c.CONTAINED_NORMAL], [t.Msg.INPUT_CONTAINED_ROUND, Fp.c.CONTAINED_ROUND], [t.Msg.INPUT_OUTLINED_FLAT, Fp.c.OUTLINED_FLAT]]
+                return [[t.Msg.INPUT_OUTLINED_NORMAL, Module_76.c.OUTLINED_NORMAL], [t.Msg.INPUT_CONTAINED_NORMAL, Module_76.c.CONTAINED_NORMAL], [t.Msg.INPUT_CONTAINED_ROUND, Module_76.c.CONTAINED_ROUND], [t.Msg.INPUT_OUTLINED_FLAT, Module_76.c.OUTLINED_FLAT]]
               }
             }
           ],
@@ -298,12 +298,12 @@ var Wp = {
           type: "input_set_size_type",
           message0: "%{BKY_INPUT_SET_SIZE}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "field_coco_dropdown",
               name: "SIZE_TYPE",
               custom: true,
               options: function () {
-                return [[t.Msg.SMALL, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.SMALL], [t.Msg.MEDIUM, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM], [t.Msg.LARGE, $$_$$_$$_$$_src_editor_widget_builtIn_types.s.LARGE]]
+                return [[t.Msg.SMALL, Src_editor_widget_builtIn_types.s.SMALL], [t.Msg.MEDIUM, Src_editor_widget_builtIn_types.s.MEDIUM], [t.Msg.LARGE, Src_editor_widget_builtIn_types.s.LARGE]]
               }
             }
           ],
@@ -316,7 +316,7 @@ var Wp = {
           type: "input_set_color",
           message0: "%{BKY_INPUT_SET_COLOR}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "input_value",
               check: ["Color", "String"],
               name: "COLOR"
@@ -334,7 +334,7 @@ var Wp = {
             {
               type: "field_colour",
               name: "COLOR_VALUE",
-              colour: Pp.e
+              colour: Module_95.e
             }
           ],
           colour: "#ffffff",
@@ -344,7 +344,7 @@ var Wp = {
           type: "input_set_position",
           message0: "%{BKY_INPUT_SET_POSITION}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -377,7 +377,7 @@ var Wp = {
               options: function () {
                 return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
               }
-            }, D.a({}, n)
+            }, Module_6.a({}, n)
           ],
           previousStatement: true,
           nextStatement: true,
@@ -395,7 +395,7 @@ var Wp = {
               options: function () {
                 return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]]
               }
-            }, D.a({}, n)
+            }, Module_6.a({}, n)
           ],
           previousStatement: true,
           nextStatement: true,
@@ -406,7 +406,7 @@ var Wp = {
           type: "input_set_content",
           message0: "%{BKY_INPUT_SET_INPUT_CONTENT}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "field_coco_dropdown",
               name: "TYPE",
               custom: true,
@@ -447,7 +447,7 @@ var Wp = {
                 return [[t.Msg.OPEN, "open"], [t.Msg.CLOSE, "close"]]
               },
               optOnchange: r
-            }, D.a({}, n)
+            }, Module_6.a({}, n)
           ],
           message1: "%1",
           args1: [
@@ -465,7 +465,7 @@ var Wp = {
         e.insertBlockProfile("input_get_color", {
           type: "input_get_color",
           message0: "%{BKY_INPUT_GET_COLOR}",
-          args0: [D.a({}, n)],
+          args0: [Module_6.a({}, n)],
           output: ["String", "Color"],
           colour: "%{BKY_APPEARANCE_HUE}",
           inputsInline: true
@@ -474,7 +474,7 @@ var Wp = {
           type: "input_get_text",
           message0: "%{BKY_INPUT_GET_PROPERTY}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "field_coco_dropdown",
               name: "TEXT",
               custom: true,
@@ -491,7 +491,7 @@ var Wp = {
           type: "input_get_position",
           message0: "%{BKY_INPUT_GET_PROPERTY}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "field_coco_dropdown",
               name: "POSITION_TYPE",
               custom: true,
@@ -508,7 +508,7 @@ var Wp = {
           type: "input_assert_state",
           message0: "%{BKY_INPUT_ASSERT_STATE}",
           args0: [
-            D.a({}, n), {
+            Module_6.a({}, n), {
               type: "field_coco_dropdown",
               name: "STATE",
               custom: true,

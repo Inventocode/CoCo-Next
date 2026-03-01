@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_events_blocks = undefined
-var r = require("./2610/581")
-var o = require("./2608/1466")
+var r = require(/* 581 */"./2610/581")
+var o = require(/* 1466 */"./2608/1466")
 exports.init_events_blocks = function (e) {
   var t = [
     {

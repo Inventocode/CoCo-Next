@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import /* [auto-meaningful-name] */React from "react"
-import i from "classnames"
-import "./880"
-var Be = $$_15.p(function (e) {
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* 880 */"./880"
+var Be = Src_shared_tools_index.p(function (e) {
   if (e) {
     e()
   }
@@ -26,7 +26,7 @@ var Fe = function (e) {
     style: {
       height: e$height
     },
-    className: i("coco-scroll-paginate", e$classnames),
+    className: Classnames("coco-scroll-paginate", e$classnames),
     onScroll: function (e) {
       var /* [auto-meaningful-name] */e$currentTarget = e.currentTarget
       if (e$currentTarget.scrollTop + e$height > e$currentTarget.scrollHeight - c && e$onScrollBottom) {

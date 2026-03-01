@@ -42,7 +42,7 @@ var o = function () {
     return t
   }
 }()
-var a = require("react")
+var a = require(/* 0 */"react")
 var s = (r = a) && r.__esModule ? r : {
   default: r
 }

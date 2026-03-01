@@ -8,12 +8,12 @@
 
 import { r } from "./index__part-0"
 import { F } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$_317 from "./317"
-import * as /* [auto-meaningful-name] */$_524 from "./524"
-import * as /* [auto-meaningful-name] */$_729_index from "./729/index"
-import * as /* [auto-meaningful-name] */$_264 from "./264"
-import * as i from "./38"
-import * as /* [auto-meaningful-name] */$_439_index from "./439/index"
+import * as /* [auto-meaningful-name] */Module_317 from /* 317 */"./317"
+import * as /* [auto-meaningful-name] */Module_524 from /* 524 */"./524"
+import * as /* [auto-meaningful-name] */Module_729 from /* 729 */"./729/index"
+import * as /* [auto-meaningful-name] */Module_264 from /* 264 */"./264"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"./38"
+import * as /* [auto-meaningful-name] */Module_439 from /* 439 */"./439/index"
 var j = function () {
   function e(t) {
     if (undefined === t) {
@@ -24,11 +24,11 @@ var j = function () {
   }
   e.prototype.setupOnce = function (e, t) {
     var /* [auto-meaningful-name] */r$native
-    var r = $_524.c("pg")
+    var r = Module_524.c("pg")
     if (r) {
       if (!this._usePgNative || (null === (r$native = r.native) || undefined === r$native ? undefined : r$native.Client)) {
         var /* [auto-meaningful-name] */This$_usePgNativeR$nativeR$Client = (this._usePgNative ? r.native : r).Client
-        $_439_index.b(This$_usePgNativeR$nativeR$Client.prototype, "query", function (e) {
+        Module_439.b(This$_usePgNativeR$nativeR$Client.prototype, "query", function (e) {
           return function (n, r, i) {
             var o
             var a
@@ -56,7 +56,7 @@ var j = function () {
               })
             }
             var u = "undefined" !== typeof r ? e.call(this, n, r) : e.call(this, n)
-            return $_317.j(u) ? u.then(function (e) {
+            return Module_317.j(u) ? u.then(function (e) {
               var t
               if (!(null === (t = c) || undefined === t)) {
                 t.finish()
@@ -66,10 +66,10 @@ var j = function () {
           }
         })
       } else {
-        $_264.a.error("Postgres Integration was unable to access 'pg-native' bindings.")
+        Module_264.a.error("Postgres Integration was unable to access 'pg-native' bindings.")
       }
     } else {
-      $_264.a.error("Postgres Integration was unable to require `pg` package.")
+      Module_264.a.error("Postgres Integration was unable to require `pg` package.")
     }
   }
   e.id = "Postgres"
@@ -80,9 +80,9 @@ var U = function () {
     this.name = e.id
   }
   e.prototype.setupOnce = function (e, t) {
-    var n = $_524.c("mysql/lib/Connection.js")
+    var n = Module_524.c("mysql/lib/Connection.js")
     if (n) {
-      $_439_index.b(n, "createQuery", function (e) {
+      Module_439.b(n, "createQuery", function (e) {
         return function (n, r, i) {
           var o
           var a
@@ -106,7 +106,7 @@ var U = function () {
         }
       })
     } else {
-      $_264.a.error("Mysql Integration was unable to require `mysql` package.")
+      Module_264.a.error("Mysql Integration was unable to require `mysql` package.")
     }
   }
   e.id = "Mysql"
@@ -148,11 +148,11 @@ var G = function () {
   }
   e.prototype.setupOnce = function (e, t) {
     var n = this._useMongoose ? "mongoose" : "mongodb"
-    var r = $_524.c(n)
+    var r = Module_524.c(n)
     if (r) {
       this._instrumentOperations(r.Collection, this._operations, t)
     } else {
-      $_264.a.error("Mongo Integration was unable to require `" + n + "` package.")
+      Module_264.a.error("Mongo Integration was unable to require `" + n + "` package.")
     }
   }
   e.prototype._instrumentOperations = function (e, t, n) {
@@ -164,7 +164,7 @@ var G = function () {
   e.prototype._patchOperation = function (e, t, n) {
     if (t in e.prototype) {
       var r = this._getSpanContextFromOperationArguments.bind(this)
-      $_439_index.b(e.prototype, t, function (e) {
+      Module_439.b(e.prototype, t, function (e) {
         return function () {
           for (var o, a, s, c, u = [], l = 0; l < arguments.length; l++) {
             u[l] = arguments[l]
@@ -174,8 +174,8 @@ var G = function () {
           var h = null === (o = d) || undefined === o ? undefined : o.getSpan()
           if ("function" !== typeof f || "mapReduce" === t && 2 === u.length) {
             var p = null === (a = h) || undefined === a ? undefined : a.startChild(r(this, t, u))
-            var _ = e.call.apply(e, i.f([this], u))
-            return $_317.j(_) ? _.then(function (e) {
+            var _ = e.call.apply(e, Module_38.f([this], u))
+            return Module_317.j(_) ? _.then(function (e) {
               var t
               if (!(null === (t = p) || undefined === t)) {
                 t.finish()
@@ -184,7 +184,7 @@ var G = function () {
             }) : (null === (s = p) || undefined === s || s.finish(), _)
           }
           var A = null === (c = h) || undefined === c ? undefined : c.startChild(r(this, t, u.slice(0, -1)))
-          return e.call.apply(e, i.f([this], u.slice(0, -1), [
+          return e.call.apply(e, Module_38.f([this], u.slice(0, -1), [
             function (e, t) {
               var n
               if (!(null === (n = A) || undefined === n)) {
@@ -215,7 +215,7 @@ var G = function () {
     }
     try {
       if ("mapReduce" === t) {
-        var c = i.d(n, 2)
+        var c = Module_38.d(n, 2)
         var u = c[0]
         var l = c[1]
         r[a[0]] = "string" === typeof u ? u : u.name || "<anonymous>"
@@ -231,10 +231,10 @@ var G = function () {
   e.id = "Mongo"
   return e
 }()
-var z = i.a(i.a({}, r), {
+var z = Module_38.a(Module_38.a({}, r), {
   BrowserTracing: F
 })
-$_729_index.a()
+Module_729.a()
 export { j }
 export { U }
 export { G }

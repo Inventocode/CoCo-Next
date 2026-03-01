@@ -454,7 +454,7 @@
     }
     return y.root
   }
-  t.version = require("./2232").version
+  t.version = require(/* 2232 */"./2232").version
   t.Syntax = r
   t.traverse = _
   t.replace = function (e, t) {

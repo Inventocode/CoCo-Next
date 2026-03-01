@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.CopyToClipboard = undefined
-var r = i(require("react"))
-var o = i(require("./2600/index"))
+var r = i(require(/* 0 */"react"))
+var o = i(require(/* 2600 */"./2600/index"))
 function i(e) {
   return e && e.__esModule ? e : {
     default: e

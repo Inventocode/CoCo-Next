@@ -7,14 +7,14 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$$_$$_27 from "../../27"
-import * as /* [auto-meaningful-name] */$$_$$_39 from "../../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../39"
 var i = function () {
   function e() {
-    $$_$$_27.a(this, e)
+    Module_27.a(this, e)
     this.listeners = {}
   }
-  $$_$$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "addEventListener",
       value: function (e, t) {

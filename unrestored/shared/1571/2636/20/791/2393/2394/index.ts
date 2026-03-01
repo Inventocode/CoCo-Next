@@ -6,13 +6,13 @@
 
 "use strict"
 
-var r = require("../../../../207/787/180")
-var i = require("../../../../207/787/204")
+var r = require(/* 180 */"../../../../207/787/180")
+var i = require(/* 204 */"../../../../207/787/204")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.AnsiStringType = exports.StringType = exports.BufferType = exports.Uint8ArrayType = exports.IgnoreType = exports.Float80_LE = exports.Float80_BE = exports.Float64_LE = exports.Float64_BE = exports.Float32_LE = exports.Float32_BE = exports.Float16_LE = exports.Float16_BE = exports.INT64_BE = exports.UINT64_BE = exports.INT64_LE = exports.UINT64_LE = exports.INT32_LE = exports.INT32_BE = exports.INT24_BE = exports.INT24_LE = exports.INT16_LE = exports.INT16_BE = exports.INT8 = exports.UINT32_BE = exports.UINT32_LE = exports.UINT24_BE = exports.UINT24_LE = exports.UINT16_BE = exports.UINT16_LE = exports.UINT8 = undefined
-var o = require("./1288")
+var o = require(/* 1288 */"./1288")
 function a(e) {
   return new DataView(e.buffer, e.byteOffset)
 }

@@ -6,30 +6,30 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_47_index from "../../47/index"
-import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_197_483_index from "../../197/483/index"
-import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */Axios1 from "axios"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_128 from "../128"
-new $$_$$_197_483_index.a({
-  env: $$_128.a.env,
-  projectName: $$_128.a.productCode,
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../47/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../7"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_483 from /* 483 */"../../197/483/index"
+import * as /* [auto-meaningful-name] */Axios from /* 129 */"axios"
+import /* [auto-meaningful-name] */Axios1 from /* 129 */"axios"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_128 from /* 128 */"../128"
+new Module_483.a({
+  env: Module_128.a.env,
+  projectName: Module_128.a.productCode,
   config: {
-    pid: $$_128.a.pid,
-    api: $$_128.a.openServiceHost
+    pid: Module_128.a.pid,
+    api: Module_128.a.openServiceHost
   }
 })
 function F(e) {
   return G.apply(this, arguments)
 }
 function G() {
-  return (G = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t) {
+  return (G = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     var o
@@ -45,7 +45,7 @@ function G() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = p.length > 1 && undefined !== p[1] ? p[1] : $$_128.a.cdnPath.root
+            n = p.length > 1 && undefined !== p[1] ? p[1] : Module_128.a.cdnPath.root
             e.next = 3
             return W(t.type, n)
           case 3:
@@ -57,7 +57,7 @@ function G() {
             s.append("file", t)
             s.append("key", o$filename)
             e.next = 11
-            return Axios1.post($$_128.a.apiQiniuHost, s)
+            return Axios1.post(Module_128.a.apiQiniuHost, s)
           case 11:
             e$sent1 = e.sent
             e$sent1$data = e$sent1.data
@@ -76,7 +76,7 @@ function W(e, t) {
   return U.apply(this, arguments)
 }
 function U() {
-  return (U = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (U = Module_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */e$sent
     var i = arguments
@@ -86,7 +86,7 @@ function U() {
           case 0:
             r = i.length > 2 && undefined !== i[2] ? i[2] : 1
             e.next = 3
-            return Axios1.get($$_128.a.apiOverseaServiceHost + "/tiger/kitten/cdn/token/".concat(r), {
+            return Axios1.get(Module_128.a.apiOverseaServiceHost + "/tiger/kitten/cdn/token/".concat(r), {
               params: {
                 type: t,
                 prefix: n,
@@ -108,26 +108,26 @@ function H(e) {
   return V.apply(this, arguments)
 }
 function V() {
-  return (V = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t) {
+  return (V = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             return e.abrupt("return", new Promise(function (e, n) {
-              if ($$_$$_$$_$$_$$_$$_src_shared_tools_index.T(t)) {
-                var r = $$_$$_$$_$$_$$_$$_src_shared_tools_index.m(t)
+              if (Src_shared_tools_index.T(t)) {
+                var r = Src_shared_tools_index.m(t)
                 if (r) {
                   e(r)
                 }
-              } else if ($$_$$_$$_$$_$$_$$_src_shared_tools_index.P(t)) {
-                $$_$$_$$_$$_$$_$$_src_shared_tools_index.e(t).then(function (t) {
+              } else if (Src_shared_tools_index.P(t)) {
+                Src_shared_tools_index.e(t).then(function (t) {
                   return e(t)
                 })
               } else {
-                if ($$_$$_$$_$$_$$_$$_src_shared_tools_index.S(t)) {
+                if (Src_shared_tools_index.S(t)) {
                   window.resolveLocalFileSystemURL(t, function (t) {
                     t.file(function () {
-                      var t = $$_$$_7.a(RegeneratorRuntime1.mark(function t(n) {
+                      var t = Module_7.a(RegeneratorRuntime1.mark(function t(n) {
                         var r
                         return RegeneratorRuntime1.wrap(function (t) {
                           for (;;) {
@@ -175,7 +175,7 @@ function z(e) {
   return Y.apply(this, arguments)
 }
 function Y() {
-  return (Y = $$_$$_7.a(RegeneratorRuntime1.mark(function e(t) {
+  return (Y = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
@@ -190,7 +190,7 @@ function Y() {
             }
             e.prev = 4
             e.next = 7
-            return F(e$sent, $$_128.a.cdnPath.playerUnstable)
+            return F(e$sent, Module_128.a.cdnPath.playerUnstable)
           case 7:
             return e.abrupt("return", e.sent)
           case 10:

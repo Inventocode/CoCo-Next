@@ -1,3 +1,5 @@
+import * as t from "@babel/types"
+
 import { Module, ModuleKey, ModuleMap } from "./types"
 
 export function getModuleByKey(modules: ModuleMap, key: ModuleKey): Module {
@@ -7,7 +9,6 @@ export function getModuleByKey(modules: ModuleMap, key: ModuleKey): Module {
     }
     return module
 }
-
 
 /**
  * 获取导入路径
@@ -30,4 +31,11 @@ export function getImportPath(context: Module, imported: Module): string {
         importedPath.unshift(last)
     }
     return rootPath + importedPath.join("/")
+}
+
+export function getImportSource(context: Module, imported: Module): t.StringLiteral {
+    return t.addComment(
+        t.stringLiteral(getImportPath(context, imported)),
+        "leading", ` ${imported.key} `, false
+    )
 }

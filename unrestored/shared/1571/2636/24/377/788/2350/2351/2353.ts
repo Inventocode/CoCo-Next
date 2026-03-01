@@ -11,11 +11,11 @@ Object.defineProperty(exports, "__esModule", {
 })
 exports.ConflictResolver = undefined
 var r
-var i = require("tslib")
-var o = require("../../../../../17/644")
-var a = require("../../../../../17/646")
-var s = (0, i.__importStar)(require("../../../../../17/536"))
-var c = require("../../../../../1022/214")
+var i = require(/* 93 */"tslib")
+var o = require(/* 644 */"../../../../../17/644")
+var a = require(/* 646 */"../../../../../17/646")
+var s = (0, i.__importStar)(require(/* 536 */"../../../../../17/536"))
+var c = require(/* 214 */"../../../../../1022/214")
 var u = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this
@@ -36,7 +36,7 @@ var u = function (e) {
     return n
   }
   t.prototype.analyze_local_operation = function (e) {
-    var /* [auto-meaningful-name] */f$source_block
+    var /* [auto-meaningful-name] */this$Blink$runtime_data$editing$source_block
     var n = new Set()
     var /* [auto-meaningful-name] */this$Blink$mainWorkspace$current_gesture_ = this.Blink.mainWorkspace.current_gesture_
     var o = null === this$Blink$mainWorkspace$current_gesture_ || undefined === this$Blink$mainWorkspace$current_gesture_ ? undefined : this$Blink$mainWorkspace$current_gesture_.target_block
@@ -78,7 +78,7 @@ var u = function (e) {
         if (!this$Blink$runtime_data$editing) {
           return
         }
-        if (this$Blink$runtime_data$editing.source_block === this$Blink$runtime_data$selected || (null === (f$source_block = this$Blink$runtime_data$editing.source_block) || undefined === f$source_block ? undefined : f$source_block.parent_block) === this$Blink$runtime_data$selected) {
+        if (this$Blink$runtime_data$editing.source_block === this$Blink$runtime_data$selected || (null === (this$Blink$runtime_data$editing$source_block = this$Blink$runtime_data$editing.source_block) || undefined === this$Blink$runtime_data$editing$source_block ? undefined : this$Blink$runtime_data$editing$source_block.parent_block) === this$Blink$runtime_data$selected) {
           return {
             type: r.EditField,
             target: this$Blink$runtime_data$editing
@@ -150,7 +150,7 @@ var u = function (e) {
   (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.Blink)], t.prototype, "Blink", undefined);
   (0, i.__decorate)([(0, o.lazy_inject)(a.BINDING.GroupEvent)], t.prototype, "group_event_factory", undefined)
   return t
-}(require("../../../737/1156").BasePlugin)
+}(require(/* 1156 */"../../../737/1156").BasePlugin)
 exports.ConflictResolver = u;
 (function (e) {
   e.Gesture = "Gesture"

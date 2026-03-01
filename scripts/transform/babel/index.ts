@@ -5,7 +5,7 @@ import workerpool from "workerpool"
 
 async function main() {
     bar.start(0, 0)
-    await Promise.all(["unrestored", "src-unrestored"].map(name => transform(path.resolve(process.cwd(), name))))
+    await Promise.all(["unrestored", "src"].map(name => transform(path.resolve(process.cwd(), name))))
     bar.stop()
     process.exit()
 }
@@ -18,6 +18,9 @@ async function transform(filepath: string) {
             name => transform(path.resolve(filepath, name))
         ))
     } else if (filepath.endsWith(".ts") || filepath.endsWith(".tsx")) {
+        if (!filepath.includes("unrestored")) {
+            return
+        }
         bar.setTotal(bar.getTotal() + 1)
         await pool.exec("transform", [filepath])
         bar.increment()

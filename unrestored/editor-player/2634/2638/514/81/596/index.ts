@@ -8,16 +8,16 @@
 
 var n
 var o
-var i = require("../56")
-var a = require("../167")
-var u = require("../336")
-var s = require("../597")
-var c = require("../182/index")
-var f = require("../108")
-var h = require("../102")
-var l = require("./743")
-var d = require("./916")
-var p = require("../227")
+var i = require(/* 56 */"../56")
+var a = require(/* 167 */"../167")
+var u = require(/* 336 */"../336")
+var s = require(/* 597 */"../597")
+var c = require(/* 182 */"../182/index")
+var f = require(/* 108 */"../108")
+var h = require(/* 102 */"../102")
+var l = require(/* 743 */"./743")
+var d = require(/* 916 */"./916")
+var p = require(/* 227 */"../227")
 function g() {
   if ("undefined" !== typeof window) {
     return window.BigInt || null

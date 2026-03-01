@@ -6,22 +6,22 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_7 from "../../../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_145 from "../../../145"
-import * as /* [auto-meaningful-name] */$$_$$_$$_10_index from "../../../10/index"
-import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import { useState, useEffect, useCallback } from "react"
-import { useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_144 from "../../../144"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"../../../145"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../10/index"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useSelector } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"../../../144"
 var Me = function () {
-  var e = $$_$$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r) {
+  var e = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r) {
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
             return e.abrupt("return", Promise.all(r.map(function (e) {
-              return $$_$$_$$_145.a(t, n, e)
+              return Module_145.a(t, n, e)
             })))
           case 1:
           case "end":
@@ -52,26 +52,26 @@ var Le = function (e) {
   var /* [auto-meaningful-name] */r$attributes$rotation = r$attributes.rotation
   var /* [auto-meaningful-name] */r$attributes$actionList = r$attributes.actionList
   var /* [auto-meaningful-name] */r$attributes$pivotToCenter = r$attributes.pivotToCenter
-  var v = useState(false)
-  var b = $$_$$_$$_10_index.a(v, 2)
+  var v = React.useState(false)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
   var O = t
   var C = useSelector(function (e) {
     return e.imageFileMap
   })
-  useEffect(function () {
+  React.useEffect(function () {
     if (y) {
-      var e = $$_$$_index.getActor(t)
+      var e = Module_20.getActor(t)
       if (!e) {
         return
       }
       e.set_position(r$position.x, r$position.y)
     }
   }, [t, y, r$position.x, r$position.y])
-  useEffect(function () {
+  React.useEffect(function () {
     if (y) {
-      var e = $$_$$_index.getActor(t)
+      var e = Module_20.getActor(t)
       if (!e) {
         return
       }
@@ -81,44 +81,44 @@ var Le = function (e) {
       e.set_scale(r$attributes$scaleAndLock.x, r$attributes$scaleAndLock.y)
     }
   }, [t, y, r$attributes$scaleAndLock])
-  useEffect(function () {
+  React.useEffect(function () {
     if (y) {
-      var e = $$_$$_index.getActor(t)
+      var e = Module_20.getActor(t)
       if (!e) {
         return
       }
       e.set_visible(r$visible)
     }
   }, [t, y, r$visible])
-  useEffect(function () {
+  React.useEffect(function () {
     if (y) {
-      var e = $$_$$_index.getActor(t)
+      var e = Module_20.getActor(t)
       if (e) {
         e.set_current_style(r$attributes$selectedStyleId)
       }
     }
   }, [O, t, y, r$attributes$selectedStyleId])
-  useEffect(function () {
+  React.useEffect(function () {
     if (y) {
-      var e = $$_$$_index.getActor(t)
+      var e = Module_20.getActor(t)
       if (!e) {
         return
       }
       e.set_rotation(r$attributes$rotation)
     }
   }, [t, y, r$attributes$rotation])
-  useEffect(function () {
+  React.useEffect(function () {
     if (y) {
-      var e = $$_$$_index.getActor(t)
+      var e = Module_20.getActor(t)
       if (!e) {
         return
       }
       e.set_alpha((undefined === r$opacity ? 100 : r$opacity) / 100)
     }
   }, [t, y, r$opacity])
-  useEffect(function () {
+  React.useEffect(function () {
     if (y) {
-      var e = $$_$$_index.getActor(t)
+      var e = Module_20.getActor(t)
       if (!e || !r$attributes$flipped) {
         return
       }
@@ -130,8 +130,8 @@ var Le = function (e) {
       }
     }
   }, [t, y, r$attributes$flipped])
-  var T = useCallback(function () {
-    var e = $$_$$_$$_7.a(RegeneratorRuntime.mark(function e(t) {
+  var T = React.useCallback(function () {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var r
       var /* [auto-meaningful-name] */RR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x
       var i
@@ -186,12 +186,12 @@ var Le = function (e) {
                 })
               })
               e.next = 11
-              return Me(t, a$value, [].concat(b, [$$_$$_$$_144.h]))
+              return Me(t, a$value, [].concat(b, [Module_144.h]))
             case 11:
               if (r$attributes$selectedStyleId) {
                 a$value.set_current_style(r$attributes$selectedStyleId)
               } else {
-                a$value.set_current_style($$_$$_$$_144.h.id)
+                a$value.set_current_style(Module_144.h.id)
               }
               a$value.set_visible(r$visible)
               a$value.set_draggable(false)
@@ -224,8 +224,8 @@ var Le = function (e) {
       return e.apply(this, arguments)
     }
   }(), [])
-  useEffect(function () {
-    var e = $$_$$_index.getStage(O)
+  React.useEffect(function () {
+    var e = Module_20.getStage(O)
     if (e) {
       T(e)
     } else {

@@ -7,13 +7,13 @@
 "use strict"
 
 import { He } from "./413__part-18"
-import * as /* [auto-meaningful-name] */$$_12 from "../12"
-import * as /* [auto-meaningful-name] */$$_$$_index from "../../index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$$_313 from "../313"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"../12"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_313 from /* 313 */"../313"
 function ze(e) {
   var /* [auto-meaningful-name] */e$widget = e.widget
   var /* [auto-meaningful-name] */e$forceRender = e.forceRender
@@ -22,8 +22,8 @@ function ze(e) {
   if (!e$widget.parentId || e$forceRender) {
     var i = ""
     if (e$widget.parentId) {
-      var a = $$_12.b(e$widget.parentId)
-      if ((null === a || undefined === a ? undefined : a.type) && [$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(a.type) && e$widget$type === $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
+      var a = Module_12.b(e$widget.parentId)
+      if ((null === a || undefined === a ? undefined : a.type) && [Src_editor_widget_builtIn_types.x, Src_editor_widget_builtIn_types.A].includes(a.type) && e$widget$type === Src_editor_widget_builtIn_types.v) {
         i += "coco-child-widget-full"
       }
     }
@@ -36,18 +36,18 @@ function ze(e) {
         onload: e$onload
       })))
     }
-    var u = $$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage.f(e$widget$type)
+    var u = Src_shared_widget_custom_storage.f(e$widget$type)
     if (!u) {
       console.error("getWidget error", e$widget$type)
       return null
     }
     var /* [auto-meaningful-name] */u$types = u.types
-    if ($$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load.q(e$widget$type) && false === u$types.isInvisibleWidget) {
-      var h = $$_$$_index.getWidgetInstance(e$widget.id)
+    if (Src_shared_widget_custom_load.q(e$widget$type) && false === u$types.isInvisibleWidget) {
+      var h = Module_20.getWidgetInstance(e$widget.id)
       return h ? React.createElement("div", {
         key: e$widget.id,
         id: e$widget.id,
-        "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
+        "data-role": Src_editor_widget_builtIn_types.M,
         "data-widget-type": e$widget.type,
         style: {
           position: "absolute",
@@ -65,7 +65,7 @@ function ze(e) {
 function Ye(e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$onload = e.onload
-  var r = $$_12.b(e$widgetId)
+  var r = Module_12.b(e$widgetId)
   return r ? ze({
     widget: r,
     forceRender: true,

@@ -7,25 +7,25 @@
 "use strict"
 
 var b
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as O from "./7"
-import "./1580/index"
-import * as /* [auto-meaningful-name] */$_2681_index from "./2681/index"
-import "./719"
-import * as /* [auto-meaningful-name] */$_188 from "./188"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$_627_index from "./627/index"
-import * as k from "./11"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* 1580 */"./1580/index"
+import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"./2681/index"
+import /* 719 */"./719"
+import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"./188"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"./627/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
 !function (e) {
   e[e.COMMON = 0] = "COMMON"
   e[e.GREEN = 1] = "GREEN"
@@ -215,12 +215,12 @@ function G(e) {
     return r
   }(e)
   var n = U(e.extraColor)
-  return D.a(D.a(D.a(D.a({}, t), n), e.lightThemeColors), {}, {
+  return Module_6.a(Module_6.a(Module_6.a(Module_6.a({}, t), n), e.lightThemeColors), {}, {
     t10: "#ffffff"
   })
 }
 function W(e, t) {
-  var n = $_25_index.a(e)
+  var n = Module_25.a(e)
   if (t) {
     var r = t.h
     var o = t.s
@@ -242,11 +242,11 @@ var U = function (e) {
   Object.keys(e).forEach(function (n) {
     var r
     var o = e[n]
-    var i = $_10_index.a(o, 3)
+    var i = Module_10.a(o, 3)
     var a = i[0]
     var s = i[1]
     var c = i[2]
-    t = Object.assign(t, (r = {}, k.a(r, n, W(o)), k.a(r, "".concat(n, "-h"), W([a, s + 5, c - 5])), k.a(r, "".concat(n, "-p"), W([a, s + 10, c - 10])), r))
+    t = Object.assign(t, (r = {}, Module_11.a(r, n, W(o)), Module_11.a(r, "".concat(n, "-h"), W([a, s + 5, c - 5])), Module_11.a(r, "".concat(n, "-p"), W([a, s + 10, c - 10])), r))
   })
   return t
 }

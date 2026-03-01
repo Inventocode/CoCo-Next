@@ -9,8 +9,8 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
-var r = require("./856/448")
-var i = require("./359")
+var r = require(/* 448 */"./856/448")
+var i = require(/* 359 */"./359")
 exports.injectable = function () {
   return function (e) {
     if (Reflect.hasOwnMetadata(i.PARAM_TYPES, e)) {

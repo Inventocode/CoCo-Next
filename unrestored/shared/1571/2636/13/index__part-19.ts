@@ -7,14 +7,13 @@
 "use strict"
 
 var ve
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import "../541/index"
-import * as /* [auto-meaningful-name] */$_303_index from "./303/index"
-import /* [auto-meaningful-name] */$_303_index1 from "./303/index"
-import "./879"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* 541 */"../541/index"
+import * as /* [auto-meaningful-name] */Module_303 from /* 303 */"./303/index"
+import /* [auto-meaningful-name] */Module_3031 from /* 303 */"./303/index"
+import /* 879 */"./879"
 var /* [auto-meaningful-name] */__EMPTY_ADVANCE_TEXT_TIP_ID__ = "@__EMPTY_ADVANCE_TEXT_TIP_ID__@"
 var Le = function () {
   var e
@@ -27,8 +26,8 @@ var Pe = function (e) {
   var /* [auto-meaningful-name] */e$duration = e.duration
   var r = undefined === e$duration ? 500 : e$duration
   var /* [auto-meaningful-name] */e$className = e.className
-  var c = useRef(null)
-  useEffect(function () {
+  var c = React1.useRef(null)
+  React1.useEffect(function () {
     return function () {
       Le()
     }
@@ -53,7 +52,7 @@ var Pe = function (e) {
       ve = setTimeout(function () {
         !function (e, t, n) {
           Le()
-          __EMPTY_ADVANCE_TEXT_TIP_ID__ = "coco-advanced-text-tip—" + $_303_index1()
+          __EMPTY_ADVANCE_TEXT_TIP_ID__ = "coco-advanced-text-tip—" + Module_3031()
           var r = document.createElement("div")
           r.innerHTML = e
           r.className = "coco-advanced-text-tip"
@@ -65,7 +64,7 @@ var Pe = function (e) {
         document.addEventListener("mousemove", i)
       }, r)
     },
-    className: i("icon-advanced-text", e$className)
+    className: Classnames("icon-advanced-text", e$className)
   }, e$text)
 }
 export { Pe }

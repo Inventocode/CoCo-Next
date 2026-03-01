@@ -6,13 +6,13 @@
 
 "use strict"
 
-var a = require("../../../../13/780/571")
+var a = require(/* 571 */"../../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.default = undefined
-var r = a(require("../../../../13/780/1066"))
-var o = a(require("../../../../13/780/1067"))
+var r = a(require(/* 1066 */"../../../../13/780/1066"))
+var o = a(require(/* 1067 */"../../../../13/780/1067"))
 var i = new (function () {
   function e() {
     (0, r.default)(this, e)

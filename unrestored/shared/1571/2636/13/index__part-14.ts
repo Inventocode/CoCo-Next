@@ -7,11 +7,10 @@
 "use strict"
 
 import { Ee, Oe } from "./index__part-13"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useContext } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import "./874"
-var we = memo(function (e) {
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* 874 */"./874"
+var we = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   return React.createElement(Ee, {
@@ -26,10 +25,10 @@ var we = memo(function (e) {
     className: "coco-menu"
   }, e$children))
 })
-var Ce = memo(function (e) {
+var Ce = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$value = e.value
-  var r = useContext(Oe)
+  var r = React1.useContext(Oe)
   return React.createElement("div", {
     className: "coco-menu-item",
     onClick: function () {

@@ -6,24 +6,24 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "../7"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$_209_index from "./209/index"
-import * as u from "../4"
-import * as /* [auto-meaningful-name] */$$_301_index from "../301/index"
-import * as /* [auto-meaningful-name] */$_430 from "./430"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as h from "../9"
-import * as /* [auto-meaningful-name] */$_139 from "./139"
-import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
-import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
-import * as v from "../6"
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$_787_index from "./787/index"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_209 from /* 209 */"./209/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"../4"
+import * as /* [auto-meaningful-name] */Module_301 from /* 301 */"../301/index"
+import * as /* [auto-meaningful-name] */Module_430 from /* 430 */"./430"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_139 from /* 139 */"./139"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../47/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_787 from /* 787 */"./787/index"
 var E = ["loopFinitely", "loopConditionally", "loopInfinitely", "loopStep", "loopStepClosedRange", "listForEach"]
 var O = ["breakLoop", "continueLoop"]
 var w = {
@@ -105,10 +105,10 @@ var T = {
     }
   }
 }
-var S = new $_787_index.Linter()
+var S = new Module_787.Linter()
 S.defineRule("no-loop-control-outside-loop", w)
 S.defineRule("widgets-must-exists", T)
-var A = $$_11.a({
+var A = Module_11.a({
   "consistent-return": "warn"
 }, "no-loop-control-outside-loop", "error")
 function I(e, t, n, r) {
@@ -128,7 +128,7 @@ function I(e, t, n, r) {
       sourceType: "module",
       ecmaFeatures: {}
     },
-    rules: v.a(v.a({}, A), {}, $$_11.a({}, "widgets-must-exists", [
+    rules: Module_6.a(Module_6.a({}, A), {}, Module_11.a({}, "widgets-must-exists", [
       "error", {
         screen: t
       }, n

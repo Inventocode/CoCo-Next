@@ -7,66 +7,65 @@
 "use strict"
 
 import { Sg } from "./index__part-79"
-import * as ng from "./64"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as po from "./49"
-import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1525 from "./1525"
-import /* [auto-meaningful-name] */$_15251 from "./1525"
-import * as /* [auto-meaningful-name] */$_236 from "./236"
-import /* [auto-meaningful-name] */$_2361 from "./236"
-var RT = memo(function (e) {
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"./49"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"./238"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../src/shared/ui/language"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1525 from /* 1525 */"./1525"
+import /* [auto-meaningful-name] */Module_15251 from /* 1525 */"./1525"
+import * as /* [auto-meaningful-name] */Module_236 from /* 236 */"./236"
+import /* [auto-meaningful-name] */Module_2361 from /* 236 */"./236"
+var RT = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$variableType = e.variableType
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var r = useState(true)
-  var o = $_10_index.a(r, 2)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var r = React1.useState(true)
+  var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = useState("")
-  var c = $_10_index.a(s, 2)
+  var s = React1.useState("")
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = useState("")
-  var p = $_10_index.a(d, 2)
+  var d = React1.useState("")
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = useState("")
-  var b = $_10_index.a(v, 2)
+  var v = React1.useState("")
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = useState(false)
-  var w = $_10_index.a(O, 2)
+  var O = React1.useState(false)
+  var w = Module_10.a(O, 2)
   var C = w[0]
   var j = w[1]
-  var R = useState([])
-  var k = $_10_index.a(R, 2)
+  var R = React1.useState([])
+  var k = Module_10.a(R, 2)
   var D = k[0]
   var M = k[1]
-  var L = useState([])
-  var P = $_10_index.a(L, 2)
+  var L = React1.useState([])
+  var P = Module_10.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = useState([])
-  var W = $_10_index.a(G, 2)
+  var G = React1.useState([])
+  var W = Module_10.a(G, 2)
   var U = W[0]
   var H = W[1]
   var V = useDispatch()
-  var q = $_238.d()
+  var q = Module_238.d()
   var X = useSelector(function (e) {
     return e.common.language
   })
@@ -82,26 +81,26 @@ var RT = memo(function (e) {
   var $ = useSelector(function (e) {
     return e.project.screens
   })
-  useEffect(function () {
+  React1.useEffect(function () {
     if (q) {
       M(q.primitiveVariables)
       F(q.arrayVariables)
       H(q.objectVariables)
-      if (e$variableType === K.b.PRIMITIVE && 0 === q.primitiveVariables.length && 0 === Q.length || e$variableType === K.b.ARRAY && 0 === q.arrayVariables.length && 0 === Z.length || e$variableType === K.b.OBJECT && 0 === q.objectVariables.length && 0 === J.length) {
+      if (e$variableType === Module_18.b.PRIMITIVE && 0 === q.primitiveVariables.length && 0 === Q.length || e$variableType === Module_18.b.ARRAY && 0 === q.arrayVariables.length && 0 === Z.length || e$variableType === Module_18.b.OBJECT && 0 === q.objectVariables.length && 0 === J.length) {
         a(false)
       } else {
         a(true)
       }
     }
   }, [q, e$variableType, Q, Z, J])
-  useEffect(function () {
-    var e = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace && $_26_index.g.getToolbox()
+  React1.useEffect(function () {
+    var e = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace && Module_26.g.getToolbox()
     if (e) {
       var t
       var n
       var r = null === (t = e.get_selected()) || undefined === t ? undefined : t.get_name()
       if ("toolbox-primitive" === r || "toolbox-array" === r || "toolbox-object" === r) {
-        if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
+        if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
           n.refresh_selection()
         }
       }
@@ -109,21 +108,21 @@ var RT = memo(function (e) {
   }, [i, B, D, U, C, y, Q, Z, J, l])
   var ee = function () {
     if (q) {
-      if (e$variableType === K.b.PRIMITIVE) {
-        var e = ng.a("VARIABLE")
-        V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+      if (e$variableType === Module_18.b.PRIMITIVE) {
+        var e = Module_64.a("VARIABLE")
+        V(Src_editor_redux_common_actions.nj({
           title: "addPrimitiveVariableName",
-          placeholder: $_710$a$formatMessage({
+          placeholder: Module_710$a$formatMessage({
             id: "addPrimitiveVariableNamePlaceholder"
           }),
           onConfirm: function (t, n) {
-            V($$_$$_$$_$$_src_editor_redux_common_actions.uf(n, e, t, 0, q.id, 0))
+            V(Src_editor_redux_common_actions.uf(n, e, t, 0, q.id, 0))
           },
           validators: [
             {
               validator: function (e, t) {
                 var n = q.primitiveVariables.concat(Q)
-                if (t === K.i.GLOBAL) {
+                if (t === Module_18.i.GLOBAL) {
                   $.forEach(function (e) {
                     n = n.concat(e.primitiveVariables)
                   })
@@ -132,27 +131,27 @@ var RT = memo(function (e) {
                   return t.name === e
                 })
               },
-              message: $_710$a$formatMessage({
+              message: Module_710$a$formatMessage({
                 id: "primitiveVariableNameRepeat"
               })
             }
-          ].concat($_25_index.a(Sg($_710$a$formatMessage)))
+          ].concat(Module_25.a(Sg(Module_710$a$formatMessage)))
         }))
-      } else if (e$variableType === K.b.ARRAY) {
-        var r = ng.a("ARRAY")
-        V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+      } else if (e$variableType === Module_18.b.ARRAY) {
+        var r = Module_64.a("ARRAY")
+        V(Src_editor_redux_common_actions.nj({
           title: "addArrayVariableName",
-          placeholder: $_710$a$formatMessage({
+          placeholder: Module_710$a$formatMessage({
             id: "addArrayVariableNamePlaceholder"
           }),
           onConfirm: function (e, t) {
-            V($$_$$_$$_$$_src_editor_redux_common_actions.of(t, r, e, [], q.id, 0))
+            V(Src_editor_redux_common_actions.of(t, r, e, [], q.id, 0))
           },
           validators: [
             {
               validator: function (e, t) {
                 var n = q.arrayVariables.concat(Z)
-                if (t === K.i.GLOBAL) {
+                if (t === Module_18.i.GLOBAL) {
                   $.forEach(function (e) {
                     n = n.concat(e.arrayVariables)
                   })
@@ -161,21 +160,21 @@ var RT = memo(function (e) {
                   return t.name === e
                 })
               },
-              message: $_710$a$formatMessage({
+              message: Module_710$a$formatMessage({
                 id: "arrayVariableNameRepeat"
               })
             }
-          ].concat($_25_index.a(Sg($_710$a$formatMessage)))
+          ].concat(Module_25.a(Sg(Module_710$a$formatMessage)))
         }))
-      } else if (e$variableType === K.b.OBJECT) {
-        var o = ng.a("OBJECT")
-        V($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+      } else if (e$variableType === Module_18.b.OBJECT) {
+        var o = Module_64.a("OBJECT")
+        V(Src_editor_redux_common_actions.nj({
           title: "object.createNewObject",
-          placeholder: $_710$a$formatMessage({
+          placeholder: Module_710$a$formatMessage({
             id: "object.createNewObjectNamePlaceholder"
           }),
           onConfirm: function (e, t) {
-            V($$_$$_$$_$$_src_editor_redux_common_actions.tf({
+            V(Src_editor_redux_common_actions.tf({
               scopeType: t,
               id: o,
               name: e,
@@ -188,7 +187,7 @@ var RT = memo(function (e) {
             {
               validator: function (e, t) {
                 var n = q.objectVariables.concat(J)
-                if (t === K.i.GLOBAL) {
+                if (t === Module_18.i.GLOBAL) {
                   $.forEach(function (e) {
                     n = n.concat(e.objectVariables)
                   })
@@ -197,11 +196,11 @@ var RT = memo(function (e) {
                   return t.name === e
                 })
               },
-              message: $_710$a$formatMessage({
+              message: Module_710$a$formatMessage({
                 id: "object.nameRepeat"
               })
             }
-          ].concat($_25_index.a(Sg($_710$a$formatMessage)))
+          ].concat(Module_25.a(Sg(Module_710$a$formatMessage)))
         }))
       }
     }
@@ -209,28 +208,28 @@ var RT = memo(function (e) {
   var ne = function (e, n) {
     var r
     var o
-    if (e$variableType === K.b.PRIMITIVE) {
+    if (e$variableType === Module_18.b.PRIMITIVE) {
       u(l !== e ? e : "")
     }
-    if (e$variableType === K.b.ARRAY && (q || Z.length > 0)) {
-      if (r = n === K.i.GLOBAL ? Z.find(function (t) {
+    if (e$variableType === Module_18.b.ARRAY && (q || Z.length > 0)) {
+      if (r = n === Module_18.i.GLOBAL ? Z.find(function (t) {
         return t.id === e
       }) : B.find(function (t) {
         return t.id === e
       })) {
-        V($$_$$_$$_$$_src_editor_redux_common_actions.qj({
+        V(Src_editor_redux_common_actions.qj({
           array: r,
           arrayType: n
         }))
       }
     }
-    if (e$variableType === K.b.OBJECT) {
-      if (o = n === K.i.GLOBAL ? J.find(function (t) {
+    if (e$variableType === Module_18.b.OBJECT) {
+      if (o = n === Module_18.i.GLOBAL ? J.find(function (t) {
         return t.id === e
       }) : U.find(function (t) {
         return t.id === e
       })) {
-        V($$_$$_$$_$$_src_editor_redux_common_actions.rj({
+        V(Src_editor_redux_common_actions.rj({
           variable: o,
           scopeType: n
         }))
@@ -242,20 +241,20 @@ var RT = memo(function (e) {
       var /* [auto-meaningful-name] */e$name = e.name
       g("")
       if (r !== e$name) {
-        if (!$$_$$_$$_$$_src_shared_tools_index.j(r)) {
+        if (!Src_shared_tools_index.j(r)) {
           if ("" !== r && r[0].match(/[0-9_]/)) {
-            V($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-              message: $$_$$_$$_$$_src_shared_ui_language.c(X, "invalidVariableFirstChar")
+            V(Src_editor_redux_common_actions.mj({
+              message: Src_shared_ui_language.c(X, "invalidVariableFirstChar")
             }))
           }
-          return void V($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-            message: $$_$$_$$_$$_src_shared_ui_language.c(X, "invalidVariableName")
+          return void V(Src_editor_redux_common_actions.mj({
+            message: Src_shared_ui_language.c(X, "invalidVariableName")
           }))
         }
         if (function (e, n) {
-          if (e$variableType === K.b.PRIMITIVE) {
+          if (e$variableType === Module_18.b.PRIMITIVE) {
             var r = D.concat(Q)
-            if (n === K.i.GLOBAL) {
+            if (n === Module_18.i.GLOBAL) {
               $.forEach(function (e) {
                 r = r.concat(e.primitiveVariables)
               })
@@ -264,9 +263,9 @@ var RT = memo(function (e) {
               return t.name === e
             })
           }
-          if (e$variableType === K.b.ARRAY) {
+          if (e$variableType === Module_18.b.ARRAY) {
             var o = B.concat(Z)
-            if (n === K.i.GLOBAL) {
+            if (n === Module_18.i.GLOBAL) {
               $.forEach(function (e) {
                 o = o.concat(e.arrayVariables)
               })
@@ -275,9 +274,9 @@ var RT = memo(function (e) {
               return t.name === e
             })
           }
-          if (e$variableType === K.b.OBJECT) {
+          if (e$variableType === Module_18.b.OBJECT) {
             var i = U.concat(J)
-            if (n === K.i.GLOBAL) {
+            if (n === Module_18.i.GLOBAL) {
               $.forEach(function (e) {
                 i = i.concat(e.objectVariables)
               })
@@ -290,31 +289,31 @@ var RT = memo(function (e) {
         }(r, n)) {
           var a
           switch (e$variableType) {
-            case K.b.PRIMITIVE:
+            case Module_18.b.PRIMITIVE:
               a = "primitiveVariableNameRepeat"
               break
-            case K.b.ARRAY:
+            case Module_18.b.ARRAY:
               a = "arrayVariableNameRepeat"
               break
-            case K.b.OBJECT:
+            case Module_18.b.OBJECT:
               a = "object.nameRepeat"
               break
             default:
               throw Error("Unreachable branch")
           }
-          V($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-            message: $$_$$_$$_$$_src_shared_ui_language.c(X, a)
+          V(Src_editor_redux_common_actions.mj({
+            message: Src_shared_ui_language.c(X, a)
           }))
           return void o.target.focus()
         }
-        if (e$variableType === K.b.PRIMITIVE) {
-          $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.Hg(n, e.id, "name", r, q.id))
+        if (e$variableType === Module_18.b.PRIMITIVE) {
+          Src_editor_redux_common_actions.Nf(V, Src_editor_redux_common_actions.Hg(n, e.id, "name", r, q.id))
         } else {
-          if (e$variableType === K.b.ARRAY) {
-            $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.yg(n, e.id, "name", r, q.id))
+          if (e$variableType === Module_18.b.ARRAY) {
+            Src_editor_redux_common_actions.Nf(V, Src_editor_redux_common_actions.yg(n, e.id, "name", r, q.id))
           } else {
-            if (e$variableType === K.b.OBJECT) {
-              V($$_$$_$$_$$_src_editor_redux_common_actions.Gg({
+            if (e$variableType === Module_18.b.OBJECT) {
+              V(Src_editor_redux_common_actions.Gg({
                 scopeType: n,
                 id: e.id,
                 key: "name",
@@ -328,9 +327,9 @@ var RT = memo(function (e) {
     }
   }
   var oe = function (e, t) {
-    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+    return React.createElement(Src_shared_ui_components_index.k, {
       type: "text",
-      className: $_2361.valueInput,
+      className: Module_2361.valueInput,
       maxLength: 20,
       defaultValue: e.defaultValue,
       onFocus: function (e) {
@@ -341,9 +340,9 @@ var RT = memo(function (e) {
           if (q) {
             var r = e
             if (r) {
-              r = $$_$$_$$_$$_src_shared_tools_index.mb(r)
+              r = Src_shared_tools_index.mb(r)
             }
-            V($$_$$_$$_$$_src_editor_redux_common_actions.Hg(n, t.id, "defaultValue", r, q.id))
+            V(Src_editor_redux_common_actions.Hg(n, t.id, "defaultValue", r, q.id))
           }
         }(n, e, t)
       },
@@ -358,7 +357,7 @@ var RT = memo(function (e) {
   var ae = function (e) {
     g(e)
   }
-  useEffect(function () {
+  React1.useEffect(function () {
     if (m) {
       var e = document.querySelector(".".concat("VARIABLE_ID_" + m, " input"))
       if (e && e instanceof HTMLInputElement) {
@@ -368,14 +367,14 @@ var RT = memo(function (e) {
   }, [m])
   var se = function (e, n) {
     if (q) {
-      if (e$variableType === K.b.PRIMITIVE) {
-        $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.Lf(n, e.id, q.id))
+      if (e$variableType === Module_18.b.PRIMITIVE) {
+        Src_editor_redux_common_actions.Nf(V, Src_editor_redux_common_actions.Lf(n, e.id, q.id))
       } else {
-        if (e$variableType === K.b.ARRAY) {
-          $$_$$_$$_$$_src_editor_redux_common_actions.Nf(V, $$_$$_$$_$$_src_editor_redux_common_actions.If(n, e.id, q.id))
+        if (e$variableType === Module_18.b.ARRAY) {
+          Src_editor_redux_common_actions.Nf(V, Src_editor_redux_common_actions.If(n, e.id, q.id))
         } else {
-          if (e$variableType === K.b.OBJECT) {
-            V($$_$$_$$_$$_src_editor_redux_common_actions.Kf(n, e.id, q.id))
+          if (e$variableType === Module_18.b.OBJECT) {
+            V(Src_editor_redux_common_actions.Kf(n, e.id, q.id))
           }
         }
       }
@@ -388,180 +387,180 @@ var RT = memo(function (e) {
       return React.createElement("div", null)
     }
     return React.createElement("div", {
-      className: Classnames($_2361.itemWrap, y === e$item.id && $_2361.select),
+      className: Classnames(Module_2361.itemWrap, y === e$item.id && Module_2361.select),
       id: e$item.id,
       key: e$item.id,
       onClick: function () {
-        var /* [auto-meaningful-name] */po$oTHelper$customEvent
-        var /* [auto-meaningful-name] */po$oTHelper$customEvent$emit
+        var /* [auto-meaningful-name] */Module_49$oTHelper$customEvent
+        var /* [auto-meaningful-name] */Module_49$oTHelper$customEvent$emit
         E(e$item.id)
-        if (!(null === (po$oTHelper$customEvent = po.oTHelper.customEvent) || undefined === po$oTHelper$customEvent || null === (po$oTHelper$customEvent$emit = po$oTHelper$customEvent.emit) || undefined === po$oTHelper$customEvent$emit)) {
-          po$oTHelper$customEvent$emit.focusItem("dynamicData", e$item.id)
+        if (!(null === (Module_49$oTHelper$customEvent = Module_49.oTHelper.customEvent) || undefined === Module_49$oTHelper$customEvent || null === (Module_49$oTHelper$customEvent$emit = Module_49$oTHelper$customEvent.emit) || undefined === Module_49$oTHelper$customEvent$emit)) {
+          Module_49$oTHelper$customEvent$emit.focusItem("dynamicData", e$item.id)
         }
       }
     }, React.createElement("div", {
-      className: $_2361.item
+      className: Module_2361.item
     }, React.createElement("div", {
-      className: Classnames($_2361.name)
-    }, m === e$item.id ? React.createElement($$_$$_$$_$$_src_shared_ui_components_index.k, {
+      className: Classnames(Module_2361.name)
+    }, m === e$item.id ? React.createElement(Src_shared_ui_components_index.k, {
       type: "text",
-      className: Classnames($_2361.nameInput, "".concat("VARIABLE_ID_" + e$item.id)),
+      className: Classnames(Module_2361.nameInput, "".concat("VARIABLE_ID_" + e$item.id)),
       maxLength: 20,
       defaultValue: e$item.name,
       onBlur: re.bind(null, e$item, e$type),
       onKeyDown: ie
     }) : React.createElement("div", {
-      className: Classnames($_2361.nameInputWrapper)
+      className: Classnames(Module_2361.nameInputWrapper)
     }, React.createElement("div", {
       onClick: ae.bind(null, e$item.id),
-      className: Classnames($_2361.noEditing)
+      className: Classnames(Module_2361.noEditing)
     }, e$item.name), React.createElement("div", {
-      className: Classnames($_2361.itemBtn, $_2361.delete),
+      className: Classnames(Module_2361.itemBtn, Module_2361.delete),
       onClick: se.bind(null, e$item, e$type)
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-close"
-    })), React.createElement($_748_index.a, {
+    })), React.createElement(Module_748.a, {
       placement: "bottom",
       trigger: ["hover", "click"],
-      title: $_710$a$formatMessage({
-        id: e$variableType === K.b.PRIMITIVE ? "editDefaultValue" : "edit"
+      title: Module_710$a$formatMessage({
+        id: e$variableType === Module_18.b.PRIMITIVE ? "editDefaultValue" : "edit"
       })
     }, React.createElement("div", {
-      className: $_2361.itemBtn,
+      className: Module_2361.itemBtn,
       onClick: ne.bind(null, e$item.id, e$type)
-    }, e$variableType === K.b.PRIMITIVE && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, e$variableType === Module_18.b.PRIMITIVE && React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-fold-left",
-      className: Classnames($_2361.itemExpand, l === e$item.id && $_2361.active)
-    }), e$variableType === K.b.ARRAY && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Classnames(Module_2361.itemExpand, l === e$item.id && Module_2361.active)
+    }), e$variableType === Module_18.b.ARRAY && React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-list"
-    }), e$variableType === K.b.OBJECT && React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }), e$variableType === Module_18.b.OBJECT && React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-list"
-    })))))), e$variableType === K.b.PRIMITIVE && y === e$item.id && l === e$item.id && React.createElement("div", {
-      className: $_2361.detail
-    }, $_710$a$formatMessage({
+    })))))), e$variableType === Module_18.b.PRIMITIVE && y === e$item.id && l === e$item.id && React.createElement("div", {
+      className: Module_2361.detail
+    }, Module_710$a$formatMessage({
       id: "initValue"
     }), oe(e$item, e$type)))
   }
   return React.createElement("div", {
     id: e.labelType,
-    className: $_2361.wrapper
+    className: Module_2361.wrapper
   }, function () {
     var e
     switch (e$variableType) {
-      case K.b.PRIMITIVE:
+      case Module_18.b.PRIMITIVE:
         e = "variable"
         break
-      case K.b.OBJECT:
+      case Module_18.b.OBJECT:
         e = "object"
         break
-      case K.b.ARRAY:
+      case Module_18.b.ARRAY:
         e = "list"
     }
     return React.createElement("div", {
-      className: $_2361.addBtn,
+      className: Module_2361.addBtn,
       onClick: ee
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-add",
-      className: $_2361.addIcon
-    }), $_710$a$formatMessage({
+      className: Module_2361.addIcon
+    }), Module_710$a$formatMessage({
       id: e
     }))
   }(), !i && React.createElement("div", {
-    className: $_2361.line
-  }), !C && (e$variableType === K.b.PRIMITIVE ? React.createElement("div", {
-    className: $_2361.content
+    className: Module_2361.line
+  }), !C && (e$variableType === Module_18.b.PRIMITIVE ? React.createElement("div", {
+    className: Module_2361.content
   }, Q.length ? React.createElement("div", {
-    className: $_2361.variableTitle
-  }, $_710$a$formatMessage({
+    className: Module_2361.variableTitle
+  }, Module_710$a$formatMessage({
     id: "globalVariable"
   })) : null, Q.map(function (e) {
     return React.createElement(ce, {
       item: e,
       key: e.id,
-      type: K.i.GLOBAL
+      type: Module_18.i.GLOBAL
     })
   }), D.length > 0 ? React.createElement("div", {
-    className: $_2361.variableTitle
-  }, $_710$a$formatMessage({
+    className: Module_2361.variableTitle
+  }, Module_710$a$formatMessage({
     id: "screenVariable"
   })) : null, D.map(function (e) {
     return React.createElement(ce, {
       item: e,
       key: e.id,
-      type: K.i.SCREEN
+      type: Module_18.i.SCREEN
     })
-  })) : e$variableType === K.b.ARRAY ? React.createElement("div", {
-    className: $_2361.content
+  })) : e$variableType === Module_18.b.ARRAY ? React.createElement("div", {
+    className: Module_2361.content
   }, Z.length > 0 ? React.createElement("div", {
-    className: $_2361.variableTitle
-  }, $_710$a$formatMessage({
+    className: Module_2361.variableTitle
+  }, Module_710$a$formatMessage({
     id: "globalArray"
   })) : null, Z.map(function (e) {
     return React.createElement(ce, {
       item: e,
       key: e.id,
-      type: K.i.GLOBAL
+      type: Module_18.i.GLOBAL
     })
   }), B.length > 0 ? React.createElement("div", {
-    className: $_2361.variableTitle
-  }, $_710$a$formatMessage({
+    className: Module_2361.variableTitle
+  }, Module_710$a$formatMessage({
     id: "screenArray"
   })) : null, B.map(function (e) {
     return React.createElement(ce, {
       item: e,
       key: e.id,
-      type: K.i.SCREEN
+      type: Module_18.i.SCREEN
     })
-  })) : e$variableType === K.b.OBJECT ? React.createElement("div", {
-    className: $_2361.content
+  })) : e$variableType === Module_18.b.OBJECT ? React.createElement("div", {
+    className: Module_2361.content
   }, J.length > 0 ? React.createElement("div", {
-    className: $_2361.variableTitle
-  }, $_710$a$formatMessage({
+    className: Module_2361.variableTitle
+  }, Module_710$a$formatMessage({
     id: "object.globalObject"
   })) : null, J.map(function (e) {
     return React.createElement(ce, {
       item: e,
       key: e.id,
-      type: K.i.GLOBAL
+      type: Module_18.i.GLOBAL
     })
   }), U.length > 0 ? React.createElement("div", {
-    className: $_2361.variableTitle
-  }, $_710$a$formatMessage({
+    className: Module_2361.variableTitle
+  }, Module_710$a$formatMessage({
     id: "object.screenObject"
   })) : null, U.map(function (e) {
     return React.createElement(ce, {
       item: e,
       key: e.id,
-      type: K.i.SCREEN
+      type: Module_18.i.SCREEN
     })
   })) : undefined), i && React.createElement("div", {
-    className: $_2361.footer
+    className: Module_2361.footer
   }, C && React.createElement("div", {
-    className: $_2361.ellipse
+    className: Module_2361.ellipse
   }, "..."), React.createElement("div", {
-    className: $_2361.expand
+    className: Module_2361.expand
   }, React.createElement("div", {
-    className: $_2361.foldBtn,
+    className: Module_2361.foldBtn,
     onClick: function () {
       return j(!C)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-fold",
-    className: C ? $_2361.expandIcon : $_2361.foldIcon
+    className: C ? Module_2361.expandIcon : Module_2361.foldIcon
   })))))
 })
-var kT = memo(function () {
+var kT = React1.memo(function () {
   return React.createElement("div", {
-    className: $_15251.wrapper
+    className: Module_15251.wrapper
   }, React.createElement(RT, {
-    variableType: K.b.PRIMITIVE,
-    labelType: $_26_index.b.PRIMITIVE
+    variableType: Module_18.b.PRIMITIVE,
+    labelType: Module_26.b.PRIMITIVE
   }), React.createElement(RT, {
-    variableType: K.b.ARRAY,
-    labelType: $_26_index.b.ARRAY
+    variableType: Module_18.b.ARRAY,
+    labelType: Module_26.b.ARRAY
   }), React.createElement(RT, {
-    variableType: K.b.OBJECT,
-    labelType: $_26_index.b.OBJECT
+    variableType: Module_18.b.OBJECT,
+    labelType: Module_26.b.OBJECT
   }))
 })
 export { kT }

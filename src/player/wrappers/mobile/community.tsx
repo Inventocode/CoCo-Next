@@ -8,12 +8,11 @@
 
 import { y, w, E, O, T } from "../../../../unrestored/player/2635/2637/index__part-0"
 import { addEditorIframe, checkUnsafeExtension, getWhitelist } from "../../../shared/player/audit"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
-import /* [auto-meaningful-name] */React from "react"
+import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../../unrestored/shared/1571/2636/177"
+import * as /* [auto-meaningful-name] */Module_514 from /* 514 */"../../../../unrestored/player/2635/2637/514/index"
+import React from "react"
 import { useState, useRef, useEffect } from "react"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1210 from "../../../../unrestored/player/2635/2637/1210"
+import /* [auto-meaningful-name] */Unrestored_player_2635_2637_1210 from "../../../../unrestored/player/2635/2637/1210"
 
 export const MobileCommunityWrapper = React.memo(() => {
 
@@ -25,7 +24,7 @@ export const MobileCommunityWrapper = React.memo(() => {
   async function load() {
     const workId = window.location.pathname.match(/\/player\/([^/]*)/)?.[1]
     if (workId) {
-      const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId, 1)).data.bcmc_url
+      const bcmcUrl = (await Module_177.g(workId, 1)).data.bcmc_url
       addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
       if (!(await getWhitelist()).includes(Number(workId))) {
@@ -64,14 +63,14 @@ export const MobileCommunityWrapper = React.memo(() => {
     }
   }, [blockCode, isLoading])
 
-  return playerProps ? <div className={$$_$$_$$_$$_unrestored_player_2635_2637_1210.community}>
+  return playerProps ? <div className={Unrestored_player_2635_2637_1210.community}>
     <input
       type="file"
       accept="image/*"
       capture="camera"
       id="appcraft-camera-input"
-      className={$$_$$_$$_$$_unrestored_player_2635_2637_1210.camera}
+      className={Unrestored_player_2635_2637_1210.camera}
     />
-    {React.createElement($$_$$_$$_$$_unrestored_player_2635_2637_514_index.a, playerProps)}
+    {React.createElement(Module_514.a, playerProps)}
   </div> : <></>
 })

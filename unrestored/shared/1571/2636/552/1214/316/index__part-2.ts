@@ -7,21 +7,21 @@
 "use strict"
 
 import { O, S } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$_696 from "./696"
-import * as /* [auto-meaningful-name] */$_2682_index from "./2682/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_699_233 from "../../../551/1211/699/233"
-import * as /* [auto-meaningful-name] */$$_$$_$$_35 from "../../../35"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_699_154_index from "../../../551/1211/699/154/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
-import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_98 from "../../../551/1211/98"
-import { forwardRef, useRef, createElement } from "react"
-import * as /* [auto-meaningful-name] */$_2676 from "./2676"
+import * as /* [auto-meaningful-name] */Module_696 from /* 696 */"./696"
+import * as /* [auto-meaningful-name] */Module_2682 from /* 2682 */"./2682/index"
+import * as /* [auto-meaningful-name] */Module_233 from /* 233 */"../../../551/1211/699/233"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../../35"
+import * as /* [auto-meaningful-name] */Module_154 from /* 154 */"../../../551/1211/699/154/index"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
+import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../../551/1211/98"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_2676 from /* 2676 */"./2676"
 var B = {
-  enter: $_696.b.enteringScreen,
-  exit: $_696.b.leavingScreen
+  enter: Module_696.b.enteringScreen,
+  exit: Module_696.b.leavingScreen
 }
-var D = forwardRef(function (e, t) {
+var D = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$BackdropProps = e.BackdropProps
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$classes = e.classes
@@ -47,7 +47,7 @@ var D = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onExiting = e.onExiting
   var /* [auto-meaningful-name] */e$open = e.open
   var /* [auto-meaningful-name] */e$PaperComponent = e.PaperComponent
-  var M = undefined === e$PaperComponent ? $_2676.a : e$PaperComponent
+  var M = undefined === e$PaperComponent ? Module_2676.a : e$PaperComponent
   var /* [auto-meaningful-name] */e$PaperProps = e.PaperProps
   var j = undefined === e$PaperProps ? {} : e$PaperProps
   var /* [auto-meaningful-name] */e$scroll = e.scroll
@@ -59,12 +59,12 @@ var D = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$TransitionProps = e.TransitionProps
   var K = e["aria-describedby"]
   var X = e["aria-labelledby"]
-  var Y = $$_$$_$$_54.a(e, ["BackdropProps", "children", "classes", "className", "disableBackdropClick", "disableEscapeKeyDown", "fullScreen", "fullWidth", "maxWidth", "onBackdropClick", "onClose", "onEnter", "onEntered", "onEntering", "onEscapeKeyDown", "onExit", "onExited", "onExiting", "open", "PaperComponent", "PaperProps", "scroll", "TransitionComponent", "transitionDuration", "TransitionProps", "aria-describedby", "aria-labelledby"])
-  var q = useRef()
-  return createElement($_2682_index.a, $$_$$_$$_19.a({
-    className: $$_$$_$$_551_1211_98.a(e$classes.root, e$className),
+  var Y = Module_54.a(e, ["BackdropProps", "children", "classes", "className", "disableBackdropClick", "disableEscapeKeyDown", "fullScreen", "fullWidth", "maxWidth", "onBackdropClick", "onClose", "onEnter", "onEntered", "onEntering", "onEscapeKeyDown", "onExit", "onExited", "onExiting", "open", "PaperComponent", "PaperProps", "scroll", "TransitionComponent", "transitionDuration", "TransitionProps", "aria-describedby", "aria-labelledby"])
+  var q = React.useRef()
+  return React.createElement(Module_2682.a, Module_19.a({
+    className: Module_98.a(e$classes.root, e$className),
     BackdropComponent: S,
-    BackdropProps: $$_$$_$$_19.a({
+    BackdropProps: Module_19.a({
       transitionDuration: Q
     }, e$BackdropProps),
     closeAfterTransition: true
@@ -76,7 +76,7 @@ var D = forwardRef(function (e, t) {
     onClose: e$onClose,
     open: e$open,
     ref: t
-  }, Y), createElement(G, $$_$$_$$_19.a({
+  }, Y), React.createElement(G, Module_19.a({
     appear: true,
     in: e$open,
     timeout: Q,
@@ -87,8 +87,8 @@ var D = forwardRef(function (e, t) {
     onExiting: e$onExiting,
     onExited: e$onExited,
     role: "none presentation"
-  }, e$TransitionProps), createElement("div", {
-    className: $$_$$_$$_551_1211_98.a(e$classes.container, e$classes["scroll".concat($$_$$_$$_551_1211_699_233.a(H))]),
+  }, e$TransitionProps), React.createElement("div", {
+    className: Module_98.a(e$classes.container, e$classes["scroll".concat(Module_233.a(H))]),
     onMouseUp: function (e) {
       if (e.target === e.currentTarget && e.target === q.current) {
         q.current = null
@@ -103,16 +103,16 @@ var D = forwardRef(function (e, t) {
     onMouseDown: function (e) {
       q.current = e.target
     }
-  }, createElement(M, $$_$$_$$_19.a({
+  }, React.createElement(M, Module_19.a({
     elevation: 24,
     role: "dialog",
     "aria-describedby": K,
     "aria-labelledby": X
   }, j, {
-    className: $$_$$_$$_551_1211_98.a(e$classes.paper, e$classes["paperScroll".concat($$_$$_$$_551_1211_699_233.a(H))], e$classes["paperWidth".concat($$_$$_$$_551_1211_699_233.a(String(b)))], j.className, _ && e$classes.paperFullScreen, m && e$classes.paperFullWidth)
+    className: Module_98.a(e$classes.paper, e$classes["paperScroll".concat(Module_233.a(H))], e$classes["paperWidth".concat(Module_233.a(String(b)))], j.className, _ && e$classes.paperFullScreen, m && e$classes.paperFullWidth)
   }), e$children))))
 })
-var I = $$_$$_$$_551_1211_699_154_index.a(function (e) {
+var I = Module_154.a(function (e) {
   return {
     root: {
       "@media print": {
@@ -167,31 +167,31 @@ var I = $$_$$_$$_551_1211_699_154_index.a(function (e) {
     },
     paperWidthXs: {
       maxWidth: Math.max(e.breakpoints.values.xs, 444),
-      "&$paperScrollBody": $$_$$_$$_35.a({}, e.breakpoints.down(Math.max(e.breakpoints.values.xs, 444) + 64), {
+      "&$paperScrollBody": Module_35.a({}, e.breakpoints.down(Math.max(e.breakpoints.values.xs, 444) + 64), {
         maxWidth: "calc(100% - 64px)"
       })
     },
     paperWidthSm: {
       maxWidth: e.breakpoints.values.sm,
-      "&$paperScrollBody": $$_$$_$$_35.a({}, e.breakpoints.down(e.breakpoints.values.sm + 64), {
+      "&$paperScrollBody": Module_35.a({}, e.breakpoints.down(e.breakpoints.values.sm + 64), {
         maxWidth: "calc(100% - 64px)"
       })
     },
     paperWidthMd: {
       maxWidth: e.breakpoints.values.md,
-      "&$paperScrollBody": $$_$$_$$_35.a({}, e.breakpoints.down(e.breakpoints.values.md + 64), {
+      "&$paperScrollBody": Module_35.a({}, e.breakpoints.down(e.breakpoints.values.md + 64), {
         maxWidth: "calc(100% - 64px)"
       })
     },
     paperWidthLg: {
       maxWidth: e.breakpoints.values.lg,
-      "&$paperScrollBody": $$_$$_$$_35.a({}, e.breakpoints.down(e.breakpoints.values.lg + 64), {
+      "&$paperScrollBody": Module_35.a({}, e.breakpoints.down(e.breakpoints.values.lg + 64), {
         maxWidth: "calc(100% - 64px)"
       })
     },
     paperWidthXl: {
       maxWidth: e.breakpoints.values.xl,
-      "&$paperScrollBody": $$_$$_$$_35.a({}, e.breakpoints.down(e.breakpoints.values.xl + 64), {
+      "&$paperScrollBody": Module_35.a({}, e.breakpoints.down(e.breakpoints.values.xl + 64), {
         maxWidth: "calc(100% - 64px)"
       })
     },

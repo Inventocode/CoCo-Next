@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../1758/257/index")
-var o = require("../1771/256")
-var i = require("./715")
-var a = require("./962")
+var r = require(/* 257 */"../1758/257/index")
+var o = require(/* 256 */"../1771/256")
+var i = require(/* 715 */"./715")
+var a = require(/* 962 */"./962")
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("subarray", function (e, t) {
   var n = r$aTypedArray(this)

@@ -6,25 +6,24 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import "react-redux"
-import "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_206 from "../../../206"
-import * as /* [auto-meaningful-name] */$$_$$_$$_9 from "../../../9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
-import * as /* [auto-meaningful-name] */$$_$$_$$_146 from "../../../146"
-import * as /* [auto-meaningful-name] */$$_$$_$$_239 from "../../../239"
-import /* [auto-meaningful-name] */$$_$$_$$_2391 from "../../../239"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_206 from /* 206 */"../../../206"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../9"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../11"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../../../90"
+import * as /* [auto-meaningful-name] */Module_146 from /* 146 */"../../../146"
+import * as /* [auto-meaningful-name] */Module_239 from /* 239 */"../../../239"
+import /* [auto-meaningful-name] */Module_2391 from /* 239 */"../../../239"
 var E = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
@@ -45,8 +44,8 @@ var E = function (e) {
   var T = {
     width: e$size.width,
     height: e$size.height,
-    minWidth: "".concat($$_$$_$$_146.m, "px"),
-    minHeight: "".concat($$_$$_$$_146.l, "px"),
+    minWidth: "".concat(Module_146.m, "px"),
+    minHeight: "".concat(Module_146.l, "px"),
     backgroundColor: Color1(e$attributes$backgroundColor).toString(),
     color: Color1(e$attributes$color).toString(),
     fontFamily: e$attributes$fontFamily,
@@ -60,15 +59,15 @@ var E = function (e) {
   }
   return React1.createElement("div", {
     id: t,
-    "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H,
-    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: Classnames1($$_$$_$$_90.b, $$_$$_$$_2391.textWidget, $$_$$_$$_11.a({}, $$_$$_$$_2391.hide, !e$visible)),
+    "data-widget-type": Src_editor_widget_builtIn_types.H,
+    "data-role": Src_editor_widget_builtIn_types.M,
+    className: Classnames1(Module_90.b, Module_2391.textWidget, Module_11.a({}, Module_2391.hide, !e$visible)),
     onClick: function () {
       e$onClick()
     },
     style: T
   }, React1.createElement("span", {
-    className: $$_$$_$$_2391.content
+    className: Module_2391.content
   }, e$attributes$content))
 }
 export { E }

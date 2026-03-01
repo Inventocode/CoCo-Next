@@ -7,15 +7,15 @@
 "use strict"
 
 import { f, d } from "./index__part-0"
-import * as /* [auto-meaningful-name] */$$_1023 from "../1023"
-import * as /* [auto-meaningful-name] */$$_119 from "../119"
-import * as /* [auto-meaningful-name] */$$_65 from "../65"
-import * as /* [auto-meaningful-name] */$$_$$_105 from "../../105"
-import * as /* [auto-meaningful-name] */$$_32_index from "../32/index"
-import * as /* [auto-meaningful-name] */$$_744 from "../744"
-import * as /* [auto-meaningful-name] */$$_523_index from "../523/index"
-import * as /* [auto-meaningful-name] */$$_217_index from "../217/index"
-import * as /* [auto-meaningful-name] */$_926 from "./926"
+import * as /* [auto-meaningful-name] */Module_1023 from /* 1023 */"../1023"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"../119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"../65"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"../../105"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"../32/index"
+import * as /* [auto-meaningful-name] */Module_744 from /* 744 */"../744"
+import * as /* [auto-meaningful-name] */Module_523 from /* 523 */"../523/index"
+import * as /* [auto-meaningful-name] */Module_217 from /* 217 */"../217/index"
+import * as /* [auto-meaningful-name] */Module_926 from /* 926 */"./926"
 var p = function () {
   function e(e, t, n) {
     this.cached_bounds_points_vertices = {
@@ -37,7 +37,7 @@ var p = function () {
     var /* [auto-meaningful-name] */this$cached_bounds_points_vertices$value
     if (this.cached_bounds_points_vertices.value) {
       var t = this.get_state_dependencies()
-      if ($_926.a(t, this.cached_bounds_points_vertices.dependencies)) {
+      if (Module_926.a(t, this.cached_bounds_points_vertices.dependencies)) {
         this$cached_bounds_points_vertices$value = this.cached_bounds_points_vertices.value
       } else {
         this.cached_bounds_points_vertices.value = undefined
@@ -49,7 +49,7 @@ var p = function () {
     var /* [auto-meaningful-name] */this$cached_internal_points_vertices$value
     if (this.cached_internal_points_vertices.value) {
       var t = this.get_state_dependencies()
-      if ($_926.a(t, this.cached_internal_points_vertices.dependencies)) {
+      if (Module_926.a(t, this.cached_internal_points_vertices.dependencies)) {
         this$cached_internal_points_vertices$value = this.cached_internal_points_vertices.value
       } else {
         this.cached_internal_points_vertices.value = undefined
@@ -75,8 +75,8 @@ var p = function () {
     var t
     var n = this
     e.forEach(function (e) {
-      var r = $$_65.c(e)
-      var i = $$_65.q(r, n.actor)
+      var r = Module_65.c(e)
+      var i = Module_65.q(r, n.actor)
       if (t) {
         t.max_x = Math.max(t.max_x, i.x)
         t.min_x = Math.min(t.min_x, i.x)
@@ -120,16 +120,16 @@ var p = function () {
     }
     var p = 0
     if (l >= c) {
-      p += $$_$$_105.b.RIGHT
+      p += Module_105.b.RIGHT
     }
     if (f <= -c) {
-      p += $$_$$_105.b.LEFT
+      p += Module_105.b.LEFT
     }
     if (d <= -u) {
-      p += $$_$$_105.b.TOP
+      p += Module_105.b.TOP
     }
     if (h >= u) {
-      p += $$_$$_105.b.BOTTOM
+      p += Module_105.b.BOTTOM
     }
     return p
   }
@@ -193,7 +193,7 @@ var _ = function () {
 var A = function (e) {
   function t(t, n) {
     var r = e.call(this) || this
-    r.type = $$_$$_105.c.ActorWrapper
+    r.type = Module_105.c.ActorWrapper
     r.actor = t
     r.scene = n
     r.id = t.get_id()
@@ -207,7 +207,7 @@ var A = function (e) {
     return this.actor
   }
   return t
-}($$_32_index.f)
+}(Module_32.f)
 var g = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -231,8 +231,8 @@ var g = function () {
 var v = function (e) {
   function t(t) {
     var n = e.call(this) || this
-    n.type = $$_$$_105.d.Actor
-    n.rotation_type = $$_$$_105.e.ALL
+    n.type = Module_105.d.Actor
+    n.rotation_type = Module_105.e.ALL
     n.rotation_value = 0
     n.is_vertical_flipped = false
     n.is_horizontal_flipped = false
@@ -249,7 +249,7 @@ var v = function (e) {
         var /* [auto-meaningful-name] */t$width = t.width
         var /* [auto-meaningful-name] */t$height = t.height
         n.hitArea = new f(n, function (e) {
-          return n.is_touching(new $$_32_index.o(e.x - t$width / 2, e.y - t$height / 2))
+          return n.is_touching(new Module_32.o(e.x - t$width / 2, e.y - t$height / 2))
         })
       }
     }
@@ -283,11 +283,11 @@ var v = function (e) {
         if (e.x < -t$width / 2 || e.x > t$width / 2 || e.y < -t$height / 2 || e.y > t$height / 2) {
           return
         }
-        var s = new $$_32_index.o(n.position.x + e.x - n.drag_data.old_pos.x, n.position.y + e.y - n.drag_data.old_pos.y)
+        var s = new Module_32.o(n.position.x + e.x - n.drag_data.old_pos.x, n.position.y + e.y - n.drag_data.old_pos.y)
         n.drag_data.old_pos = e
         if (n.has_drag_protection) {
-          var u = $$_65.d(n, s)
-          s.set($$_217_index.a(-t$width / 2, t$width / 2, u.x), $$_217_index.a(-t$height / 2, t$height / 2, u.y))
+          var u = Module_65.d(n, s)
+          s.set(Module_217.a(-t$width / 2, t$width / 2, u.x), Module_217.a(-t$height / 2, t$height / 2, u.y))
         }
         n.set_pixi_position(s.x, s.y)
         n.app.render()
@@ -313,7 +313,7 @@ var v = function (e) {
     }
     n.drag_end = function (e) {
       var t = new Date().getTime()
-      if (!(e && $$_744.a(e.type, ["touchendoutside", "mouseupoutside"])) && t - n.mouse_down_time < 1e3) {
+      if (!(e && Module_744.a(e.type, ["touchendoutside", "mouseupoutside"])) && t - n.mouse_down_time < 1e3) {
         var /* [auto-meaningful-name] */n$app$get_app$stage = n.app.get_app().stage
         var i = e ? e.data.getLocalPosition(n$app$get_app$stage) : n.position
         var a = i.x
@@ -365,20 +365,20 @@ var v = function (e) {
     var /* [auto-meaningful-name] */i$width = i.width
     var /* [auto-meaningful-name] */i$height = i.height
     n.hitArea = new f(n, function (e) {
-      return n.is_touching(new $$_32_index.o(e.x - i$width / 2, e.y - i$height / 2))
+      return n.is_touching(new Module_32.o(e.x - i$width / 2, e.y - i$height / 2))
     })
-    n.render_texture = new $$_32_index.r(new $$_32_index.d())
+    n.render_texture = new Module_32.r(new Module_32.d())
     n.brush = new d(n.app, n)
     n.pixel_detector = new p(n, n.app, n.data)
-    if (n.app.get_renderer_type() === $$_32_index.p.WEBGL) {
-      n.effects = new $$_1023.a(n.app, n)
+    if (n.app.get_renderer_type() === Module_32.p.WEBGL) {
+      n.effects = new Module_1023.a(n.app, n)
     }
     n.addListener("mousedown", n.drag_start)
-    n.addListener("mousemove", $$_65.w(n.drag_move, $$_65.a))
+    n.addListener("mousemove", Module_65.w(n.drag_move, Module_65.a))
     n.addListener("mouseup", n.drag_end)
     n.addListener("mouseupoutside", n.drag_end)
     n.addListener("touchstart", n.drag_start)
-    n.addListener("touchmove", $$_65.w(n.drag_move, $$_65.a))
+    n.addListener("touchmove", Module_65.w(n.drag_move, Module_65.a))
     n.addListener("touchend", n.drag_end)
     n.addListener("touchendoutside", n.drag_end)
     n.addListener("mousedown", function (e) {
@@ -439,14 +439,14 @@ var v = function (e) {
   }
   t.prototype.clone = function (e) {
     var n = new t({
-      actor_id: e || "cloned_" + $$_32_index.B.uid(),
+      actor_id: e || "cloned_" + Module_32.B.uid(),
       parent_scene: this.parent_scene,
       app: this.app,
       data: this.data,
       events: this.events
     })
-    n.styles = $$_523_index.a(this.styles)
-    n.current_style = $$_523_index.a(this.current_style)
+    n.styles = Module_523.a(this.styles)
+    n.current_style = Module_523.a(this.current_style)
     n.texture = this.texture
     n.position.set(this.position.x, this.position.y)
     n.scale.set(this.scale.x, this.scale.y)
@@ -477,19 +477,19 @@ var v = function (e) {
     })
   }
   t.prototype.add_style = function (e) {
-    this.styles[e.style_id] = $$_523_index.a(e)
+    this.styles[e.style_id] = Module_523.a(e)
   }
   t.prototype.get_style = function (e) {
-    return $$_523_index.a(this.styles[e])
+    return Module_523.a(this.styles[e])
   }
   t.prototype.set_current_style = function (e) {
     var t = this.styles[e]
     if (!t) {
-      return new $$_119.a("Cannot find style " + e + ", You should add style first")
+      return new Module_119.a("Cannot find style " + e + ", You should add style first")
     }
     var n = this.data.get_texture(t.texture_id)
     if (!n) {
-      return new $$_119.a("Cannot find texture " + t.texture_id)
+      return new Module_119.a("Cannot find texture " + t.texture_id)
     }
     this.current_style = t
     this.set_pixi_texture(n)
@@ -498,11 +498,11 @@ var v = function (e) {
   t.prototype.update_texture_of_style = function (e, t) {
     var n = this.styles[e]
     if (!n) {
-      return new $$_119.a("Cannot find style " + e + ", You should add style first")
+      return new Module_119.a("Cannot find style " + e + ", You should add style first")
     }
     var r = this.data.get_texture(t)
     if (!r) {
-      return new $$_119.a("Cannot find texture " + t)
+      return new Module_119.a("Cannot find texture " + t)
     }
     n.texture_id = t
     if (this.current_style && e === this.current_style.style_id) {
@@ -512,15 +512,15 @@ var v = function (e) {
   t.prototype.update_pivot_of_style = function (e, t) {
     var n = this.styles[e]
     if (!n) {
-      return new $$_119.a("Cannot find style " + e + ", You should add style first")
+      return new Module_119.a("Cannot find style " + e + ", You should add style first")
     }
-    n.pivot = $$_523_index.a(t)
+    n.pivot = Module_523.a(t)
     if (this.current_style && e === this.current_style.style_id) {
       this.set_pixi_pivot(n.pivot.x, n.pivot.y)
     }
   }
   t.prototype.get_current_style = function () {
-    return $$_523_index.a(this.current_style)
+    return Module_523.a(this.current_style)
   }
   t.prototype.get_style_ids = function () {
     return Object.keys(this.styles)
@@ -528,14 +528,14 @@ var v = function (e) {
   t.prototype.remove_style = function (e) {
     if (this.current_style && e === this.current_style.style_id) {
       this.current_style = undefined
-      this.set_pixi_texture($$_32_index.y.EMPTY)
+      this.set_pixi_texture(Module_32.y.EMPTY)
       this.set_pixi_pivot(0, 0)
     }
     delete this.styles[e]
   }
   t.prototype.set_z_index = function (e) {
     var t = this.parent_scene.get_actor_container()
-    var n = $$_217_index.a(0, t.children.length - 1, e)
+    var n = Module_217.a(0, t.children.length - 1, e)
     t.setChildIndex(this.wrapper, n)
   }
   t.prototype.set_position_x = function (e) {
@@ -601,20 +601,20 @@ var v = function (e) {
     this.rotation_value = e
   }
   t.prototype.set_rotation = function (e) {
-    var t = $$_65.s(e)
+    var t = Module_65.s(e)
     this.set_rotation_value(t)
     var n = 0
     var r = false
     switch (this.rotation_type) {
-      case $$_$$_105.e.ALL:
+      case Module_105.e.ALL:
         n = -t
         r = this.is_rotation_flipped
         break
-      case $$_$$_105.e.LEFT_RIGHT:
+      case Module_105.e.LEFT_RIGHT:
         n = 0
         r = (this.rotation_value >= Math.PI / 2 || this.rotation_value < -Math.PI / 2) !== this.is_rotation_flipped
         break
-      case $$_$$_105.e.NONE:
+      case Module_105.e.NONE:
         n = 0
         r = this.is_rotation_flipped
     }
@@ -649,10 +649,10 @@ var v = function (e) {
   }
   t.prototype.set_pivot_by_stage_point = function (e, t) {
     var n = this
-    var r = new $$_32_index.o(e, -t)
+    var r = new Module_32.o(e, -t)
     Object.keys(this.styles).forEach(function (e) {
       var t = n.styles[e]
-      var i = n.map_local_point_to_pivot(r, new $$_32_index.o(t.pivot.x, t.pivot.y))
+      var i = n.map_local_point_to_pivot(r, new Module_32.o(t.pivot.x, t.pivot.y))
       t.pivot.x = i.x
       t.pivot.y = i.y
     })
@@ -667,16 +667,16 @@ var v = function (e) {
       n.pivot.x = 0
       n.pivot.y = 0
     })
-    var t = $$_65.d(this, this.position)
+    var t = Module_65.d(this, this.position)
     this.set_pixi_position(t.x, t.y)
     this.set_pixi_pivot(0)
   }
   t.prototype.map_local_point_to_pivot = function (e, t) {
-    var n = new $$_32_index.o(this.position.x - t.x * this.scale.x, this.position.y - t.y * this.scale.y)
-    var r = $$_65.p(e, this.position, -this.rotation)
+    var n = new Module_32.o(this.position.x - t.x * this.scale.x, this.position.y - t.y * this.scale.y)
+    var r = Module_65.p(e, this.position, -this.rotation)
     var i = r.x - n.x
     var o = r.y - n.y
-    return new $$_32_index.o(i / this.scale.x, o / this.scale.y)
+    return new Module_32.o(i / this.scale.x, o / this.scale.y)
   }
   t.prototype.set_pixi_pivot = function (e, t) {
     this.pivot.set(e, t)
@@ -691,7 +691,7 @@ var v = function (e) {
     }
   }
   t.prototype.get_center_position = function () {
-    var e = $$_65.d(this, this.position)
+    var e = Module_65.d(this, this.position)
     return {
       x: e.x,
       y: -e.y
@@ -755,7 +755,7 @@ var v = function (e) {
     return this.prototype_actor_id
   }
   t.prototype.get_effects = function () {
-    return this.effects ? $$_119.b.success(this.effects) : $$_119.b.error("Effect not available. It needs support of WebGL.")
+    return this.effects ? Module_119.b.success(this.effects) : Module_119.b.error("Effect not available. It needs support of WebGL.")
   }
   t.prototype.set_draggable = function (e) {
     this.is_draggable = e
@@ -771,10 +771,10 @@ var v = function (e) {
   }
   t.prototype.check_bumped = function (e) {
     var t = this.data.get_internal_actor(e)
-    return t ? $$_119.b.success(this.check_bumped_other(t)) : $$_119.b.error("Cannot find actor " + e)
+    return t ? Module_119.b.success(this.check_bumped_other(t)) : Module_119.b.error("Cannot find actor " + e)
   }
   t.prototype.hit_test = function (e, t) {
-    return this.is_touching(new $$_32_index.o(e, -t))
+    return this.is_touching(new Module_32.o(e, -t))
   }
   t.prototype.get_bounds_LTRB = function () {
     var e = this.get_vertices()
@@ -805,7 +805,7 @@ var v = function (e) {
         right: Math.round(Math.min(t.max_x, n.max_x)),
         top: Math.round(Math.min(t.max_y, n.max_y)),
         bottom: Math.round(Math.max(t.min_y, n.min_y))
-      }, i = new $$_32_index.o(0, 0), o = 0, /* [auto-meaningful-name] */r$left = r.left; r$left < r.right; r$left += 2) {
+      }, i = new Module_32.o(0, 0), o = 0, /* [auto-meaningful-name] */r$left = r.left; r$left < r.right; r$left += 2) {
       i.x = r$left
       for (var /* [auto-meaningful-name] */r$top = r.top; r$top > r.bottom; r$top -= 2) {
         i.y = r$top
@@ -820,7 +820,7 @@ var v = function (e) {
     return false
   }
   t.prototype.check_bumped_color = function (e) {
-    return $$_119.b.success(this.bumped_color(e))
+    return Module_119.b.success(this.bumped_color(e))
   }
   t.prototype.bumped_color = function (e) {
     if (this.has_left_stage() || !this.current_style) {
@@ -837,13 +837,13 @@ var v = function (e) {
     var r = this.app.get_app_view_size()
     var /* [auto-meaningful-name] */r$width = r.width
     var /* [auto-meaningful-name] */r$height = r.height
-    var s = $$_65.f({
+    var s = Module_65.f({
       width: e.width,
       height: e.height
     })
     var u = this.get_visible()
     this.visible = false
-    var l = $$_65.g(e, {
+    var l = Module_65.g(e, {
       width: r$width,
       height: r$height
     })
@@ -854,10 +854,10 @@ var v = function (e) {
     })
     var f = this.app.get_extract_module().pixels(this.render_texture)
     this.visible = u
-    for (var d = $$_65.i(n), h = undefined, p = 0; p < t.length; p++) {
-      var _ = $$_65.c(t[p])
-      var A = $$_65.q(_, this)
-      var g = $$_65.t(new $$_32_index.o(A.x - e.x, A.y - e.y))
+    for (var d = Module_65.i(n), h = undefined, p = 0; p < t.length; p++) {
+      var _ = Module_65.c(t[p])
+      var A = Module_65.q(_, this)
+      var g = Module_65.t(new Module_32.o(A.x - e.x, A.y - e.y))
       var v = Math.floor(g.x)
       var m = Math.floor(g.y)
       if (!(v >= s.width || m >= s.height) && (h = 4 * v + m * s.width * 4, this.color_match(d, f, h))) {
@@ -875,10 +875,10 @@ var v = function (e) {
     var /* [auto-meaningful-name] */t$width = t.width
     var /* [auto-meaningful-name] */t$height = t.height
     var o = {
-      left: $$_217_index.a(-t$width / 2, t$width / 2, e.min_x - 5),
-      right: $$_217_index.a(-t$width / 2, t$width / 2, e.max_x + 5),
-      top: $$_217_index.a(-t$height / 2, t$height / 2, e.min_y - 5),
-      bottom: $$_217_index.a(-t$height / 2, t$height / 2, e.max_y + 5)
+      left: Module_217.a(-t$width / 2, t$width / 2, e.min_x - 5),
+      right: Module_217.a(-t$width / 2, t$width / 2, e.max_x + 5),
+      top: Module_217.a(-t$height / 2, t$height / 2, e.min_y - 5),
+      bottom: Module_217.a(-t$height / 2, t$height / 2, e.max_y + 5)
     }
     return {
       x: Math.round(o.left),
@@ -941,21 +941,21 @@ var v = function (e) {
           var l = Math.cos(this.rotation_value)
           var f = Math.sin(this.rotation_value)
           var d = []
-          if (this.pixel_detector.contains_edge(n, $$_$$_105.b.RIGHT)) {
+          if (this.pixel_detector.contains_edge(n, Module_105.b.RIGHT)) {
             l = -Math.abs(l)
-            d.push($$_$$_105.b.RIGHT)
+            d.push(Module_105.b.RIGHT)
           }
-          if (this.pixel_detector.contains_edge(n, $$_$$_105.b.LEFT)) {
+          if (this.pixel_detector.contains_edge(n, Module_105.b.LEFT)) {
             l = Math.abs(l)
-            d.push($$_$$_105.b.LEFT)
+            d.push(Module_105.b.LEFT)
           }
-          if (this.pixel_detector.contains_edge(n, $$_$$_105.b.TOP)) {
+          if (this.pixel_detector.contains_edge(n, Module_105.b.TOP)) {
             f = -Math.abs(f)
-            d.push($$_$$_105.b.TOP)
+            d.push(Module_105.b.TOP)
           }
-          if (this.pixel_detector.contains_edge(n, $$_$$_105.b.BOTTOM)) {
+          if (this.pixel_detector.contains_edge(n, Module_105.b.BOTTOM)) {
             f = Math.abs(f)
-            d.push($$_$$_105.b.BOTTOM)
+            d.push(Module_105.b.BOTTOM)
           }
           var h = Math.atan2(f, l)
           var p = this.rotation_value - h
@@ -964,8 +964,8 @@ var v = function (e) {
           var g = t
           if (p % (2 * Math.PI) !== 0) {
             if (0 !== this.pivot.x && 0 !== this.pivot.y) {
-              var v = $$_65.d(this, this.position)
-              var m = $$_65.p(this.position, v, p)
+              var v = Module_65.d(this, this.position)
+              var m = Module_65.p(this.position, v, p)
               this.set_pixi_position(m.x, m.y)
             }
             this.set_rotation(h)
@@ -974,16 +974,16 @@ var v = function (e) {
           }
           d.forEach(function (e) {
             switch (e) {
-              case $$_$$_105.b.RIGHT:
+              case Module_105.b.RIGHT:
                 _ = a - (g.max_x + 10)
                 break
-              case $$_$$_105.b.LEFT:
+              case Module_105.b.LEFT:
                 _ = -a - (g.min_x - 10)
                 break
-              case $$_$$_105.b.TOP:
+              case Module_105.b.TOP:
                 A = -u - (g.min_y - 10)
                 break
-              case $$_$$_105.b.BOTTOM:
+              case Module_105.b.BOTTOM:
                 A = u - (g.max_y + 10)
             }
           })
@@ -1018,12 +1018,12 @@ var v = function (e) {
     if (!t) {
       return false
     }
-    var n = $$_65.r(e, this)
-    var r = $$_65.f({
+    var n = Module_65.r(e, this)
+    var r = Module_65.f({
       width: this.texture.width,
       height: this.texture.height
     })
-    var i = $$_65.t(n)
+    var i = Module_65.t(n)
     return !(i.x > r.width || i.y > r.height || i.x < 0 || i.y < 0) && t[i.y * r.width + i.x] >>> 24 > 0
   }
   t.prototype.get_vertices = function () {
@@ -1056,23 +1056,23 @@ var v = function (e) {
     var /* [auto-meaningful-name] */r$current_rotate_around_actor
     var r = this.data.get_internal_actor(e)
     if (!r) {
-      return new $$_119.a("Cannot find actor " + e)
+      return new Module_119.a("Cannot find actor " + e)
     }
     if (!(this.current_rotate_around_actor && this.current_rotate_around_actor.actor_id === e)) {
       this.current_rotate_around_actor = {
         actor_id: e,
-        offset: new $$_32_index.o(this.get_position().x - r.get_position().x, this.get_position().y - r.get_position().y),
+        offset: new Module_32.o(this.get_position().x - r.get_position().x, this.get_position().y - r.get_position().y),
         is_rotating: true
       }
     }
     this.current_rotate_around_actor.is_rotating = true
     if (this.id === (null === (r$current_rotate_around_actor = r.current_rotate_around_actor) || undefined === r$current_rotate_around_actor ? undefined : r$current_rotate_around_actor.actor_id)) {
-      var i = $$_65.p(this.get_position(), r.get_position(), t)
+      var i = Module_65.p(this.get_position(), r.get_position(), t)
       var o = i.x
       var s = i.y
       this.set_position(o, s)
     } else {
-      this.current_rotate_around_actor.offset = $$_65.p(this.current_rotate_around_actor.offset, {
+      this.current_rotate_around_actor.offset = Module_65.p(this.current_rotate_around_actor.offset, {
         x: 0,
         y: 0
       }, t)
@@ -1082,5 +1082,5 @@ var v = function (e) {
     this.current_rotate_around_actor.is_rotating = false
   }
   return t
-}($$_32_index.t)
+}(Module_32.t)
 export { v }

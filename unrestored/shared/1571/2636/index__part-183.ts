@@ -7,20 +7,19 @@
 "use strict"
 
 import { fj, hj } from "./index__part-181"
-import * as /* [auto-meaningful-name] */$_431_index from "./431/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_332 from "./332"
-import /* [auto-meaningful-name] */$_3321 from "./332"
-var /* [auto-meaningful-name] */$_431_index$a$AudioPlayer = $_431_index.a.AudioPlayer
+import * as /* [auto-meaningful-name] */Module_431 from /* 431 */"./431/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_332 from /* 332 */"./332"
+import /* [auto-meaningful-name] */Module_3321 from /* 332 */"./332"
+var /* [auto-meaningful-name] */Module_431$a$AudioPlayer = Module_431.a.AudioPlayer
 var wj = {}
 var Cj = {}
-var Tj = memo(function (e) {
+var Tj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$name = e.name
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
@@ -28,8 +27,8 @@ var Tj = memo(function (e) {
   var /* [auto-meaningful-name] */e$duration = e.duration
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
-  var c = useState(0)
-  var l = $_10_index.a(c, 2)
+  var c = React1.useState(0)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
   function p(e) {
@@ -42,7 +41,7 @@ var Tj = memo(function (e) {
     }
     d(0)
     if (!Cj[t]) {
-      Cj[t] = $_431_index$a$AudioPlayer.load(t, e$cdnUrl || e$source || "", true)
+      Cj[t] = Module_431$a$AudioPlayer.load(t, e$cdnUrl || e$source || "", true)
     }
     Cj[t].play()
     Cj[t].on("play", function () {
@@ -67,7 +66,7 @@ var Tj = memo(function (e) {
       clearInterval(wj[t])
     }
   }
-  useEffect(function () {
+  React1.useEffect(function () {
     return function () {
       if (e$isPlaying && wj[t]) {
         if (Cj[t]) {
@@ -88,7 +87,7 @@ var Tj = memo(function (e) {
   }, [t, e$isPlaying])
   return React.createElement("div", {
     key: t,
-    className: Classnames($_3321.soundLibraryItem, e$isSelect && $_3321.selected),
+    className: Classnames(Module_3321.soundLibraryItem, e$isSelect && Module_3321.selected),
     onClick: function () {
       e.selectHandler({
         id: t,
@@ -100,50 +99,50 @@ var Tj = memo(function (e) {
       })
     }
   }, React.createElement("div", {
-    className: $_3321.icon
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3321.icon
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-style-selected"
   })), React.createElement("audio", {
     src: e$cdnUrl || e$source,
     preload: "none"
   }), React.createElement("div", {
-    className: $_3321.content
+    className: Module_3321.content
   }, React.createElement("div", {
-    className: $_3321.soundBox,
+    className: Module_3321.soundBox,
     onClick: p
   }, e$isPlaying ? React.createElement("div", {
-    className: $_3321.soundPauseIconBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3321.soundPauseIconBox
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-sound-pause",
-    className: $_3321.soundDefaultIcon
+    className: Module_3321.soundDefaultIcon
   }), React.createElement("div", {
-    className: Classnames($_3321.progressWrapper, $_3321.rightWrapper)
+    className: Classnames(Module_3321.progressWrapper, Module_3321.rightWrapper)
   }, React.createElement("div", {
-    className: Classnames($_3321.circleProgress, $_3321.rightCircle),
+    className: Classnames(Module_3321.circleProgress, Module_3321.rightCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   })), React.createElement("div", {
-    className: Classnames($_3321.progressWrapper, $_3321.leftWrapper)
+    className: Classnames(Module_3321.progressWrapper, Module_3321.leftWrapper)
   }, React.createElement("div", {
-    className: Classnames($_3321.circleProgress, $_3321.leftCircle),
+    className: Classnames(Module_3321.circleProgress, Module_3321.leftCircle),
     style: {
       animationDuration: "".concat(e$duration, "s")
     }
   }))) : React.createElement("div", {
-    className: $_3321.soundIconBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3321.soundIconBox
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-music",
-    className: $_3321.soundDefaultIcon
+    className: Module_3321.soundDefaultIcon
   }), React.createElement("div", {
-    className: $_3321.soundPlayIconBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_3321.soundPlayIconBox
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-sound-play",
-    className: $_3321.soundPlayIcon
+    className: Module_3321.soundPlayIcon
   })))), React.createElement("div", {
-    className: $_3321.soundDuration
-  }, $$_$$_$$_$$_src_shared_tools_index.w(e$isPlaying ? u : e$duration))), React.createElement("div", {
-    className: $_3321.footer
+    className: Module_3321.soundDuration
+  }, Src_shared_tools_index.w(e$isPlaying ? u : e$duration))), React.createElement("div", {
+    className: Module_3321.footer
   }, e$name))
 })
 export { Tj }

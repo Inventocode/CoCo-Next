@@ -11,19 +11,19 @@ import { m } from "./index__part-1"
 import { v } from "./index__part-2"
 import { S, N, x } from "./index__part-4"
 import { Ke } from "./index__part-6"
-import * as /* [auto-meaningful-name] */$$_490 from "../490"
-import * as /* [auto-meaningful-name] */$$_742 from "../742"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_331 from "../331"
-import { useRef, useMemo, useState, useEffect, useImperativeHandle, createElement, cloneElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$$_54 from "../54"
-import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
-import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
-import * as /* [auto-meaningful-name] */$$_21 from "../21"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$_1517 from "./1517"
-import * as /* [auto-meaningful-name] */$$_522_index from "../522/index"
+import * as /* [auto-meaningful-name] */Module_490 from /* 490 */"../490"
+import * as /* [auto-meaningful-name] */Module_742 from /* 742 */"../742"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_331 from /* 331 */"../331"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
+import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../79/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_1517 from /* 1517 */"./1517"
+import * as /* [auto-meaningful-name] */Module_522 from /* 522 */"../522/index"
 var Qe = ["prefixCls", "className", "id", "open", "defaultOpen", "options", "children", "mode", "value", "defaultValue", "labelInValue", "showSearch", "inputValue", "searchValue", "filterOption", "filterSort", "optionFilterProp", "autoClearSearchValue", "onSearch", "fieldNames", "allowClear", "clearIcon", "showArrow", "inputIcon", "menuItemSelectedIcon", "disabled", "loading", "defaultActiveFirstOption", "notFoundContent", "optionLabelProp", "backfill", "tabIndex", "getInputElement", "getRawInputElement", "getPopupContainer", "placement", "listHeight", "listItemHeight", "animation", "transitionName", "virtual", "dropdownStyle", "dropdownClassName", "dropdownMatchSelectWidth", "dropdownRender", "dropdownAlign", "showAction", "direction", "tokenSeparators", "tagRender", "onPopupScroll", "onDropdownVisibleChange", "onFocus", "onBlur", "onKeyUp", "onKeyDown", "onMouseDown", "onChange", "onSelect", "onDeselect", "onClear", "internalProps"]
 var Ze = ["removeIcon", "placeholder", "autoFocus", "maxTagCount", "maxTagTextLength", "maxTagPlaceholder", "choiceTransitionName", "onInputKeyDown", "tabIndex"]
 function Je(e) {
@@ -110,32 +110,32 @@ function Je(e) {
     var /* [auto-meaningful-name] */e$onClear = e.onClear
     var /* [auto-meaningful-name] */e$internalProps = e.internalProps
     var Ve = undefined === e$internalProps ? {} : e$internalProps
-    var ze = $$_54.a(e, Qe)
-    var Ye = Ve.mark === $_1517.a
+    var ze = Module_54.a(e, Qe)
+    var Ye = Ve.mark === Module_1517.a
     var Je = e$omitDOMProps ? e$omitDOMProps(ze) : ze
     Ze.forEach(function (e) {
       delete Je[e]
     })
-    var $e = useRef(null)
-    var et = useRef(null)
-    var tt = useRef(null)
-    var nt = useRef(null)
-    var rt = useMemo(function () {
+    var $e = React.useRef(null)
+    var et = React.useRef(null)
+    var tt = React.useRef(null)
+    var nt = React.useRef(null)
+    var rt = React.useMemo(function () {
       return (e$tokenSeparators || []).some(function (e) {
         return ["\n", "\r\n"].includes(e)
       })
     }, [e$tokenSeparators])
     var ot = function () {
       var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 10
-      var t = useState(false)
-      var n = $$_40_index.a(t, 2)
+      var t = React.useState(false)
+      var n = Module_40.a(t, 2)
       var r = n[0]
       var o = n[1]
-      var i = useRef(null)
+      var i = React.useRef(null)
       var a = function () {
         window.clearTimeout(i.current)
       }
-      useEffect(function () {
+      React.useEffect(function () {
         return a
       }, [])
       var c = function (t, n) {
@@ -149,16 +149,16 @@ function Je(e) {
       }
       return [r, c, a]
     }()
-    var it = $$_40_index.a(ot, 3)
+    var it = Module_40.a(ot, 3)
     var at = it[0]
     var st = it[1]
     var ct = it[2]
-    var lt = useState()
-    var ut = $$_40_index.a(lt, 2)
+    var lt = React.useState()
+    var ut = Module_40.a(lt, 2)
     var dt = ut[0]
     var pt = ut[1]
-    useEffect(function () {
-      pt("rc_select_".concat($$_490.a()))
+    React.useEffect(function () {
+      pt("rc_select_".concat(Module_490.a()))
     }, [])
     var ft = k || dt
     var ht = e$optionLabelProp
@@ -168,15 +168,15 @@ function Je(e) {
     var mt = "combobox" !== e$mode && e$labelInValue
     var gt = "tags" === e$mode || "multiple" === e$mode
     var _t = undefined !== e$showSearch ? e$showSearch : gt || "combobox" === e$mode
-    var vt = useState(false)
-    var bt = $$_40_index.a(vt, 2)
+    var vt = React.useState(false)
+    var bt = Module_40.a(vt, 2)
     var yt = bt[0]
     var Et = bt[1]
-    useEffect(function () {
+    React.useEffect(function () {
       Et(d())
     }, [])
-    var Ot = useRef(null)
-    useImperativeHandle(C, function () {
+    var Ot = React.useRef(null)
+    React.useImperativeHandle(C, function () {
       var /* [auto-meaningful-name] */tt$current
       var /* [auto-meaningful-name] */tt$current1
       var /* [auto-meaningful-name] */nt$current
@@ -189,27 +189,27 @@ function Je(e) {
     var wt = v(e$defaultValue, {
       value: e$value
     })
-    var Ct = $$_40_index.a(wt, 2)
+    var Ct = Module_40.a(wt, 2)
     var Tt = Ct[0]
     var St = Ct[1]
-    var At = useMemo(function () {
-      return $$_490.e(Tt, {
+    var At = React.useMemo(function () {
+      return Module_490.e(Tt, {
         labelInValue: mt,
         combobox: "combobox" === e$mode
       })
     }, [Tt, mt])
-    var It = $$_40_index.a(At, 2)
+    var It = Module_40.a(At, 2)
     var jt = It[0]
     var Nt = It[1]
-    var Rt = useMemo(function () {
+    var Rt = React.useMemo(function () {
       return new Set(jt)
     }, [jt])
-    var kt = useState(null)
-    var xt = $$_40_index.a(kt, 2)
+    var kt = React.useState(null)
+    var xt = Module_40.a(kt, 2)
     var Dt = xt[0]
     var Mt = xt[1]
-    var Lt = useState("")
-    var Pt = $$_40_index.a(Lt, 2)
+    var Lt = React.useState("")
+    var Pt = Module_40.a(Lt, 2)
     var Bt = Pt[0]
     var Ft = Pt[1]
     var Gt = Bt
@@ -224,7 +224,7 @@ function Je(e) {
         }
       }
     }
-    var Wt = useMemo(function () {
+    var Wt = React.useMemo(function () {
       var e = e$options
       if (undefined === e) {
         e = e$convertChildrenToData(e$children)
@@ -234,12 +234,12 @@ function Je(e) {
       }
       return e || []
     }, [e$options, e$children, e$mode, Tt])
-    var Ut = useMemo(function () {
+    var Ut = React.useMemo(function () {
       return e$flattenOptions(Wt, e)
     }, [Wt])
     var Ht = function (e) {
-      var t = useRef(null)
-      var n = useMemo(function () {
+      var t = React.useRef(null)
+      var n = React.useMemo(function () {
         var t = new Map()
         e.forEach(function (e) {
           var /* [auto-meaningful-name] */e$value1 = e.value
@@ -254,9 +254,9 @@ function Je(e) {
         }).filter(Boolean)
       }
     }(Ut)
-    var Vt = useMemo(function () {
+    var Vt = React.useMemo(function () {
       if (!Gt || !_t) {
-        return $$_79_index.a(Wt)
+        return Module_79.a(Wt)
       }
       var e = e$filterOptions(Gt, Wt, {
         optionFilterProp: q,
@@ -273,17 +273,17 @@ function Je(e) {
           key: "__RC_SELECT_TAG_PLACEHOLDER__"
         })
       }
-      return e$filterSort && Array.isArray(e) ? $$_79_index.a(e).sort(e$filterSort) : e
+      return e$filterSort && Array.isArray(e) ? Module_79.a(e).sort(e$filterSort) : e
     }, [Wt, Gt, e$mode, _t, e$filterSort])
-    var zt = useMemo(function () {
+    var zt = React.useMemo(function () {
       return e$flattenOptions(Vt, e)
     }, [Vt])
-    useEffect(function () {
+    React.useEffect(function () {
       if (nt.current && nt.current.scrollTo) {
         nt.current.scrollTo(0)
       }
     }, [Gt])
-    var Yt = useMemo(function () {
+    var Yt = React.useMemo(function () {
       var e = jt.map(function (e) {
         var t = Ht([e])
         var n = e$getLabeledValue(e, {
@@ -292,15 +292,15 @@ function Je(e) {
           labelInValue: mt,
           optionLabelProp: ht
         })
-        return $$_21.a($$_21.a({}, n), {}, {
+        return Module_21.a(Module_21.a({}, n), {}, {
           disabled: e$isValueDisabled(e, t)
         })
       })
       return e$mode || 1 !== e.length || null !== e[0].value || null !== e[0].label ? e : []
     }, [Tt, Wt, e$mode])
     Yt = function (e) {
-      var t = useRef(e)
-      return useMemo(function () {
+      var t = React.useRef(e)
+      return React.useMemo(function () {
         var n = new Map()
         t.current.forEach(function (e) {
           var /* [auto-meaningful-name] */e$value1 = e.value
@@ -311,7 +311,7 @@ function Je(e) {
         })
         var r = e.map(function (e) {
           var t = n.get(e.value)
-          return e.isCacheable && t ? $$_21.a($$_21.a({}, e), {}, {
+          return e.isCacheable && t ? Module_21.a(Module_21.a({}, e), {}, {
             label: t
           }) : e
         })
@@ -349,14 +349,14 @@ function Je(e) {
         }
       }
     }
-    var qt = useState([])
-    var Xt = $$_40_index.a(qt, 2)
+    var qt = React.useState([])
+    var Xt = Module_40.a(qt, 2)
     var Qt = Xt[0]
     var Zt = Xt[1]
     var Jt = function (t) {
       if (!Ye || !Ve.skipTriggerChange) {
         var n = Ht(t)
-        var r = $$_490.f(Array.from(t), {
+        var r = Module_490.f(Array.from(t), {
           labelInValue: mt,
           options: n,
           getLabeledValue: e$getLabeledValue,
@@ -370,7 +370,7 @@ function Je(e) {
             props: e
           })
           Zt(a.map(function (e, n) {
-            var r = $$_21.a({}, e)
+            var r = Module_21.a({}, e)
             Object.defineProperty(r, "_INTERNAL_OPTION_VALUE_", {
               get: function () {
                 return t[n]
@@ -419,7 +419,7 @@ function Je(e) {
       defaultValue: e$defaultOpen,
       value: e$open
     })
-    var rn = $$_40_index.a(nn, 2)
+    var rn = Module_40.a(nn, 2)
     var on = rn[0]
     var an = rn[1]
     var sn = on
@@ -444,12 +444,12 @@ function Je(e) {
       }
     }
     (function (e, t, n) {
-      var r = useRef(null)
+      var r = React.useRef(null)
       r.current = {
         open: t,
         triggerOpen: n
       }
-      useEffect(function () {
+      React.useEffect(function () {
         function t(t) {
           var /* [auto-meaningful-name] */t$target = t.target
           if (t$target.shadowRoot && t.composed) {
@@ -476,7 +476,7 @@ function Je(e) {
       var r = true
       var o = e
       Mt(null)
-      var i = n ? null : $$_522_index.g(e, e$tokenSeparators)
+      var i = n ? null : Module_522.g(e, e$tokenSeparators)
       var s = i
       if ("combobox" === e$mode) {
         if (t) {
@@ -494,7 +494,7 @@ function Je(e) {
             return null !== e
           })
         }
-        var c = Array.from(new Set([].concat($$_79_index.a(jt), $$_79_index.a(s))))
+        var c = Array.from(new Set([].concat(Module_79.a(jt), Module_79.a(s))))
         Jt(c)
         c.forEach(function (e) {
           Kt(e, true, "input")
@@ -508,7 +508,7 @@ function Je(e) {
       }
       return r
     }
-    useEffect(function () {
+    React.useEffect(function () {
       if (on && e$disabled) {
         an(false)
       }
@@ -516,18 +516,18 @@ function Je(e) {
         st(false)
       }
     }, [e$disabled])
-    useEffect(function () {
+    React.useEffect(function () {
       if (!(sn || gt || "combobox" === e$mode)) {
         pn("", false, false)
       }
     }, [sn])
     var fn = N()
-    var hn = $$_40_index.a(fn, 2)
+    var hn = Module_40.a(fn, 2)
     var mn = hn[0]
     var gn = hn[1]
-    var _n = useRef(false)
+    var _n = React.useRef(false)
     var vn = []
-    useEffect(function () {
+    React.useEffect(function () {
       return function () {
         vn.forEach(function (e) {
           return clearTimeout(e)
@@ -535,17 +535,17 @@ function Je(e) {
         vn.splice(0, vn.length)
       }
     }, [])
-    var bn = useState(0)
-    var yn = $$_40_index.a(bn, 2)
+    var bn = React.useState(0)
+    var yn = Module_40.a(bn, 2)
     var En = yn[0]
     var On = yn[1]
     var wn = undefined !== e$defaultActiveFirstOption ? e$defaultActiveFirstOption : "combobox" !== e$mode
-    var Cn = useState(null)
-    var Tn = $$_40_index.a(Cn, 2)
+    var Cn = React.useState(null)
+    var Tn = Module_40.a(Cn, 2)
     var Sn = Tn[0]
     var An = Tn[1]
-    var In = useState({})
-    var jn = $$_40_index.a(In, 2)[1]
+    var In = React.useState({})
+    var jn = Module_40.a(In, 2)[1]
     S(function () {
       if (un) {
         var /* [auto-meaningful-name] */$e$current
@@ -556,7 +556,7 @@ function Je(e) {
       }
     }, [un])
     var Nn
-    var Rn = createElement(e$components$optionList, {
+    var Rn = React.createElement(e$components$optionList, {
       ref: nt,
       prefixCls: j,
       id: ft,
@@ -570,7 +570,7 @@ function Je(e) {
       height: ge,
       itemHeight: ve,
       onSelect: function (e, t) {
-        $t(e, $$_21.a($$_21.a({}, t), {}, {
+        $t(e, Module_21.a(Module_21.a({}, t), {}, {
           source: "option"
         }))
       },
@@ -596,7 +596,7 @@ function Je(e) {
       direction: e$direction
     })
     if (!e$disabled && e$allowClear && (jt.length || Gt)) {
-      Nn = createElement($$_742.a, {
+      Nn = React.createElement(Module_742.a, {
         className: "".concat(j, "-clear"),
         onMouseDown: function () {
           if (Ye && Ve.onClear) {
@@ -614,8 +614,8 @@ function Je(e) {
     var kn
     var xn = undefined !== e$showArrow ? e$showArrow : e$loading || !gt && "combobox" !== e$mode
     if (xn) {
-      kn = createElement($$_742.a, {
-        className: Classnames("".concat(j, "-arrow"), $$_35.a({}, "".concat(j, "-arrow-loading"), e$loading)),
+      kn = React.createElement(Module_742.a, {
+        className: Classnames("".concat(j, "-arrow"), Module_35.a({}, "".concat(j, "-arrow-loading"), e$loading)),
         customizeIcon: e$inputIcon,
         customizeIconProps: {
           loading: e$loading,
@@ -626,8 +626,8 @@ function Je(e) {
         }
       })
     }
-    var Dn = Classnames(j, e$className, (A = {}, $$_35.a(A, "".concat(j, "-focused"), at), $$_35.a(A, "".concat(j, "-multiple"), gt), $$_35.a(A, "".concat(j, "-single"), !gt), $$_35.a(A, "".concat(j, "-allow-clear"), e$allowClear), $$_35.a(A, "".concat(j, "-show-arrow"), xn), $$_35.a(A, "".concat(j, "-disabled"), e$disabled), $$_35.a(A, "".concat(j, "-loading"), e$loading), $$_35.a(A, "".concat(j, "-open"), sn), $$_35.a(A, "".concat(j, "-customize-input"), en), $$_35.a(A, "".concat(j, "-show-search"), _t), A))
-    var Mn = createElement(Ke, {
+    var Dn = Classnames(j, e$className, (A = {}, Module_35.a(A, "".concat(j, "-focused"), at), Module_35.a(A, "".concat(j, "-multiple"), gt), Module_35.a(A, "".concat(j, "-single"), !gt), Module_35.a(A, "".concat(j, "-allow-clear"), e$allowClear), Module_35.a(A, "".concat(j, "-show-arrow"), xn), Module_35.a(A, "".concat(j, "-disabled"), e$disabled), Module_35.a(A, "".concat(j, "-loading"), e$loading), Module_35.a(A, "".concat(j, "-open"), sn), Module_35.a(A, "".concat(j, "-customize-input"), en), Module_35.a(A, "".concat(j, "-show-search"), _t), A))
+    var Mn = React.createElement(Ke, {
       ref: et,
       disabled: e$disabled,
       prefixCls: j,
@@ -649,9 +649,9 @@ function Je(e) {
         return Ot.current
       },
       onPopupVisibleChange: ln
-    }, tn ? cloneElement(tn, {
+    }, tn ? React.cloneElement(tn, {
       ref: m(Ot, tn.props.ref)
-    }) : createElement(x, $$_19.a({}, e, {
+    }) : React.createElement(x, Module_19.a({}, e, {
       domRef: Ot,
       prefixCls: j,
       inputElement: en,
@@ -670,7 +670,7 @@ function Je(e) {
       onSearch: pn,
       onSearchSubmit: function (e) {
         if (e && e.trim()) {
-          var t = Array.from(new Set([].concat($$_79_index.a(jt), [e])))
+          var t = Array.from(new Set([].concat(Module_79.a(jt), [e])))
           Jt(t)
           t.forEach(function (e) {
             Kt(e, true, "input")
@@ -679,13 +679,13 @@ function Je(e) {
         }
       },
       onSelect: function (e, t) {
-        $t(e, $$_21.a($$_21.a({}, t), {}, {
+        $t(e, Module_21.a(Module_21.a({}, t), {}, {
           source: "selection"
         }))
       },
       tokenWithEnter: rt
     })))
-    return tn ? Mn : createElement("div", $$_19.a({
+    return tn ? Mn : React.createElement("div", Module_19.a({
       className: Dn
     }, Je, {
       ref: $e,
@@ -716,7 +716,7 @@ function Je(e) {
         var /* [auto-meaningful-name] */nt$current
         var n = mn()
         var /* [auto-meaningful-name] */e$which = e.which
-        if (e$which === $$_331.a.ENTER) {
+        if (e$which === Module_331.a.ENTER) {
           if ("combobox" !== e$mode) {
             e.preventDefault()
           }
@@ -725,8 +725,8 @@ function Je(e) {
           }
         }
         gn(!!Gt)
-        if (e$which === $$_331.a.BACKSPACE && !n && gt && !Gt && jt.length) {
-          var o = $$_490.c(Yt, jt)
+        if (e$which === Module_331.a.BACKSPACE && !n && gt && !Gt && jt.length) {
+          var o = Module_490.c(Yt, jt)
           if (null !== o.removedValue) {
             Jt(o.values)
             Kt(o.removedValue, false, "input")
@@ -775,7 +775,7 @@ function Je(e) {
           if (Gt) {
             if ("tags" === e$mode) {
               pn("", false, false)
-              Jt(Array.from(new Set([].concat($$_79_index.a(jt), [Gt]))))
+              Jt(Array.from(new Set([].concat(Module_79.a(jt), [Gt]))))
             } else {
               if ("multiple" === e$mode) {
                 Ft("")
@@ -787,7 +787,7 @@ function Je(e) {
           }
         }
       }
-    }), at && !sn && createElement("span", {
+    }), at && !sn && React.createElement("span", {
       style: {
         width: 0,
         height: 0,
@@ -798,6 +798,6 @@ function Je(e) {
       "aria-live": "polite"
     }, "".concat(jt.join(", "))), Mn, kn, Nn)
   }
-  return forwardRef(C)
+  return React.forwardRef(C)
 }
 export { Je }

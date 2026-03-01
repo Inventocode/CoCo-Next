@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("./0")
-var i = require("react")
-var o = require("../71/35/index")
-var a = require("../71/20")
-var s = require("./65")
-var u = require("./66")
-var l = require("./7")
-var c = require("./15")
+var r = require(/* 0 */"./0")
+var i = require(/* 13 */"react")
+var o = require(/* 35 */"../71/35/index")
+var a = require(/* 20 */"../71/20")
+var s = require(/* 65 */"./65")
+var u = require(/* 66 */"./66")
+var l = require(/* 7 */"./7")
+var c = require(/* 15 */"./15")
 function f(e, t) {
   return Object.keys(e).reduce(function (n, i) {
     n[i] = r.a({
@@ -96,7 +96,7 @@ function h(e, t, n, i, o) {
   }
   return "string" === typeof E ? E : "string" === typeof n$defaultMessage ? n$defaultMessage : _
 }
-var m = require("./11/index")
+var m = require(/* 11 */"./11/index")
 var v = ["localeMatcher", "style", "currency", "currencyDisplay", "unit", "unitDisplay", "useGrouping", "minimumIntegerDigits", "minimumFractionDigits", "maximumFractionDigits", "minimumSignificantDigits", "maximumSignificantDigits", "compactDisplay", "currencyDisplay", "currencySign", "notation", "signDisplay", "unit", "unitDisplay", "numberingSystem"]
 function y(e, t, n) {
   var /* [auto-meaningful-name] */e$locale = e.locale
@@ -131,7 +131,7 @@ function b(e, t, n, r) {
   }
   return []
 }
-var _ = require("./26")
+var _ = require(/* 26 */"./26")
 var E = ["numeric", "style"]
 function O(e, t, n, r, i) {
   if (undefined === i) {
@@ -354,7 +354,7 @@ function F(e) {
     console.warn("[@formatjs/intl] \"defaultRichTextElements\" was specified but \"message\" was not pre-compiled. \nPlease consider using \"@formatjs/cli\" to pre-compile your messages for performance.\nFor more details see https://formatjs.io/docs/getting-started/message-distribution")
   }
 }
-var U = require("./43")
+var U = require(/* 43 */"./43")
 function z(e) {
   return {
     locale: e.locale,

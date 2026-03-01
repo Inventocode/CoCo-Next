@@ -29,10 +29,10 @@ exports.getNekoIframeUrl = function (e) {
   }
   return (0, i.getServiceOrigin)(e, "".concat(t, ".codemao.cn/editor").concat(r))
 }
-var r = require("../772")
-var o = require("../773/index")
-var i = require("../2618/885")
-var a = require("./2621")
+var r = require(/* 772 */"../772")
+var o = require(/* 773 */"../773/index")
+var i = require(/* 885 */"../2618/885")
+var a = require(/* 2621 */"./2621")
 var s = new r.ApiSpec("neko", {
   loadWork: new r.MethodType(),
   saveWork: new r.MethodType(),

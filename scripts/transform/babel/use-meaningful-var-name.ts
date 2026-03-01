@@ -6,15 +6,28 @@ const MARKING_COMMENT_CONTENT = " [auto-meaningful-name] "
 
 export function useMeaningfulVarName(): PluginObj {
     return { visitor: {
-        ImportDeclaration(path) {
+        ImportDeclaration(path, state) {
             const { node: importDeclaration } = path
-            const importSourceName = importDeclaration.source.value
+            const importSourceNode = importDeclaration.source
+            const commentName = importSourceNode.leadingComments?.[0]?.value.trim()
+            const importSourceName = importSourceNode.value
+            const newName =
+                (
+                    importSourceName.includes("/unrestored/") ||
+                    (
+                        /[\\\/]unrestored[\\\/]/.test(state.filename ?? "") &&
+                        !importSourceName.includes("/src/") &&
+                        importSourceName.startsWith(".")
+                    )
+                ) && commentName != null ?
+                `module_${commentName}` :
+                importSourceName.replace(/[\.\/]/g, " ").trim().replace(/[\s]+/g, "/")
             for (const specifier of path.get("specifiers")) {
                 if (specifier.isImportDefaultSpecifier()) {
-                    renameIfNeeds(specifier.get("local"), importSourceName, true)
+                    renameIfNeeds(specifier.get("local"), newName, true)
                 }
                 if (specifier.isImportNamespaceSpecifier()) {
-                    renameIfNeeds(specifier.get("local"), importSourceName, true)
+                    renameIfNeeds(specifier.get("local"), newName, true)
                 }
             }
         },

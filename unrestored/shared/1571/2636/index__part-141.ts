@@ -41,19 +41,18 @@ import { uC } from "./index__part-137"
 import { hC } from "./index__part-138"
 import { _C } from "./index__part-139"
 import { SC, AC, IC, jC } from "./index__part-140"
-import /* [auto-meaningful-name] */Axios from "axios"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_567 from "./567"
-import /* [auto-meaningful-name] */$_5671 from "./567"
+import /* [auto-meaningful-name] */Axios from /* 129 */"axios"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_567 from /* 567 */"./567"
+import /* [auto-meaningful-name] */Module_5671 from /* 567 */"./567"
 function kC() {
   return localStorage.getItem("lvmi_access_token")
 }
@@ -67,7 +66,7 @@ function DC() {
   return MC.apply(this, arguments)
 }
 function MC() {
-  return (MC = O.a(RegeneratorRuntime.mark(function e() {
+  return (MC = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -112,7 +111,7 @@ function LC() {
   return PC.apply(this, arguments)
 }
 function PC() {
-  return (PC = O.a(RegeneratorRuntime.mark(function e() {
+  return (PC = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime.wrap(function (e) {
@@ -148,19 +147,19 @@ function PC() {
     }, e)
   }))).apply(this, arguments)
 }
-var BC = memo(function (e) {
+var BC = React1.memo(function (e) {
   var t = useDispatch()
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var r = undefined === e$keyName ? "token" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var a = useState(false)
-  var s = $_10_index.a(a, 2)
+  var a = React1.useState(false)
+  var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
   var u = e$getValue(r)
   function d() {
-    return (d = O.a(RegeneratorRuntime.mark(function e() {
+    return (d = Module_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -205,7 +204,7 @@ var BC = memo(function (e) {
     }))).apply(this, arguments)
   }
   function p() {
-    return (p = O.a(RegeneratorRuntime.mark(function e() {
+    return (p = Module_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -213,7 +212,7 @@ var BC = memo(function (e) {
               if (e$onChange) {
                 e$onChange(r, "")
               }
-              t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
+              t(Src_editor_redux_common_actions.mj({
                 message: "已取消授权",
                 type: "info"
               }))
@@ -225,28 +224,28 @@ var BC = memo(function (e) {
       }, e)
     }))).apply(this, arguments)
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  return React.createElement(Src_shared_ui_components_index.i, {
     align: "vertical",
-    className: Classnames($_5671.formItemWrapper, $_5671.aqaraAuth, u && $_5671.connected),
+    className: Classnames(Module_5671.formItemWrapper, Module_5671.aqaraAuth, u && Module_5671.connected),
     label: u ? "已授权 绿米" : "未授权 绿米"
   }, u ? React.createElement("div", {
-    className: $_5671.connect,
+    className: Module_5671.connect,
     onClick: function () {
       return p.apply(this, arguments)
     }
   }, React.createElement("span", {
-    className: $_5671.text
+    className: Module_5671.text
   }, "取消授权")) : React.createElement("div", {
-    className: Classnames($_5671.connect, c && $_5671.connecting),
+    className: Classnames(Module_5671.connect, c && Module_5671.connecting),
     onClick: function () {
       return d.apply(this, arguments)
     }
   }, React.createElement("span", {
-    className: $_5671.icon
+    className: Module_5671.icon
   }, React.createElement(Ge, {
     stroke: "#847da4"
   })), React.createElement("span", {
-    className: $_5671.text
+    className: Module_5671.text
   }, "开始授权")))
 })
 var FC = {

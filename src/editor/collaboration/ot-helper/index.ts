@@ -5,44 +5,44 @@
  */
 
 import { widget, projectOt, screen, imageFileList, soundFileList, iconFileList, primitiveVariables, arrayVariables, objectVariables, broadcasts, customEvent, globalWidget, extensionWidget, cloudSpace, focus } from "./helpers"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_24_377_index from "../../../../unrestored/shared/1571/2636/24/377/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_43 from "../../../../unrestored/shared/1571/2636/43"
+import * as /* [auto-meaningful-name] */Module_377 from /* 377 */"../../../../unrestored/shared/1571/2636/24/377/index"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"../../../../unrestored/shared/1571/2636/43"
 import * as CommonActions from "../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../unrestored/shared/1571/2636/24/index"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"../../../../unrestored/shared/1571/2636/24/index"
 import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
 
 function yn(e, t) {
   var n
   var r
-  var o = null === (n = $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === n ? undefined : n.cloudDictKeysList
+  var o = null === (n = Module_24.a.getDoc()) || undefined === n ? undefined : n.cloudDictKeysList
   r = (null === o || undefined === o ? undefined : o[e]) ? OtJson1.replaceOp(["cloudDictKeysList", e.toString()], true, t) : OtJson1.insertOp(["cloudDictKeysList", e.toString()], t)
-  $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(r)
+  Module_24.a.applyClient(r)
 }
 function En(e, t) {
   var n
   var r
-  var o = null === (n = $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === n ? undefined : n.cloudTableColumnList
+  var o = null === (n = Module_24.a.getDoc()) || undefined === n ? undefined : n.cloudTableColumnList
   r = (null === o || undefined === o ? undefined : o[e]) ? OtJson1.replaceOp(["cloudTableColumnList", e.toString()], true, t) : OtJson1.insertOp(["cloudTableColumnList", e.toString()], t)
-  $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(r)
+  Module_24.a.applyClient(r)
 }
 function On(e, t) {
   var n
   var r
-  var o = null === (n = $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === n ? undefined : n.cloudTableDataList
+  var o = null === (n = Module_24.a.getDoc()) || undefined === n ? undefined : n.cloudTableDataList
   r = (null === o || undefined === o ? undefined : o[e]) ? OtJson1.replaceOp(["cloudTableDataList", e.toString()], true, t) : OtJson1.insertOp(["cloudTableDataList", e.toString()], t)
-  $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(r)
+  Module_24.a.applyClient(r)
 }
 function wn(e) {
   var t
   var n
-  n = (null === (t = $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === t ? undefined : t.cloudDictList) ? OtJson1.replaceOp(["cloudDictList"], true, e) : OtJson1.insertOp(["cloudDictList"], e)
-  $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(n)
+  n = (null === (t = Module_24.a.getDoc()) || undefined === t ? undefined : t.cloudDictList) ? OtJson1.replaceOp(["cloudDictList"], true, e) : OtJson1.insertOp(["cloudDictList"], e)
+  Module_24.a.applyClient(n)
 }
 function Cn(e) {
   var t
   var n
-  n = (null === (t = $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.getDoc()) || undefined === t ? undefined : t.cloudTableList) ? OtJson1.replaceOp(["cloudTableList"], true, e) : OtJson1.insertOp(["cloudTableList"], e)
-  $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.applyClient(n)
+  n = (null === (t = Module_24.a.getDoc()) || undefined === t ? undefined : t.cloudTableList) ? OtJson1.replaceOp(["cloudTableList"], true, e) : OtJson1.insertOp(["cloudTableList"], e)
+  Module_24.a.applyClient(n)
 }
 function Tn(e) {}
 function Sn(e, t) {
@@ -53,7 +53,7 @@ function Sn(e, t) {
       var n = e.op
       var r = e$path[1]
       var o = n.i
-      $$_$$_$$_$$_unrestored_shared_1571_2636_43.h(CommonActions.Ag(Number(r), o, false))
+      Module_43.h(CommonActions.Ag(Number(r), o, false))
     })(e)
   }
   if (function (e) {
@@ -64,7 +64,7 @@ function Sn(e, t) {
       var n = e.op
       var r = e$path[1]
       var o = n.i
-      $$_$$_$$_$$_unrestored_shared_1571_2636_43.h(CommonActions.Dg(Number(r), o, false))
+      Module_43.h(CommonActions.Dg(Number(r), o, false))
     })(e)
   }
   if (function (e) {
@@ -75,7 +75,7 @@ function Sn(e, t) {
       var n = e.op
       var r = e$path[1]
       var o = n.i
-      $$_$$_$$_$$_unrestored_shared_1571_2636_43.h(CommonActions.Nj(Number(r), o))
+      Module_43.h(CommonActions.Nj(Number(r), o))
     })(e)
   }
   if (function (e) {
@@ -84,7 +84,7 @@ function Sn(e, t) {
     (function (e) {
       e.path
       var /* [auto-meaningful-name] */e$op$i = e.op.i
-      $$_$$_$$_$$_unrestored_shared_1571_2636_43.h(CommonActions.Bg(e$op$i, false))
+      Module_43.h(CommonActions.Bg(e$op$i, false))
     })(e)
   }
   if (function (e) {
@@ -93,7 +93,7 @@ function Sn(e, t) {
     (function (e) {
       e.path
       var /* [auto-meaningful-name] */e$op$i = e.op.i
-      $$_$$_$$_$$_unrestored_shared_1571_2636_43.h(CommonActions.Eg(e$op$i, false))
+      Module_43.h(CommonActions.Eg(e$op$i, false))
     })(e)
   }
 }
@@ -101,7 +101,7 @@ function Sn(e, t) {
 export const oTHelper = new class {
 
   public projectOt?: typeof projectOt
-  public blink?: typeof $$_$$_$$_$$_unrestored_shared_1571_2636_24_377_index
+  public blink?: typeof Module_377
   public widget?: typeof widget
   public screen?: typeof screen
   public imageFileList?: typeof imageFileList
@@ -139,7 +139,7 @@ export const oTHelper = new class {
   }
 
   public init() {
-    this.blink = $$_$$_$$_$$_unrestored_shared_1571_2636_24_377_index
+    this.blink = Module_377
     this.widget = widget
     this.screen = screen
     this.imageFileList = imageFileList

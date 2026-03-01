@@ -6,15 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_624 from "./624"
-import /* [auto-meaningful-name] */$_6241 from "./624"
-var Rj = memo(function (e) {
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_624 from /* 624 */"./624"
+import /* [auto-meaningful-name] */Module_6241 from /* 624 */"./624"
+var Rj = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$urls = e.urls
@@ -23,30 +22,30 @@ var Rj = memo(function (e) {
   var /* [auto-meaningful-name] */e$isGroupItemSelected = e.isGroupItemSelected
   var /* [auto-meaningful-name] */e$getTooltipContainer = e.getTooltipContainer
   var c = React.createElement("ul", {
-    className: $_6241.groupPopoverContent
+    className: Module_6241.groupPopoverContent
   }, null === e$urls || undefined === e$urls ? undefined : e$urls.map(function (e, t) {
     return React.createElement("li", {
       onClick: function (t) {
         return e$handleGroupItemClick(t, e)
       },
-      className: Classnames(e$isGroupItemSelected(e) && $_6241.selected),
+      className: Classnames(e$isGroupItemSelected(e) && Module_6241.selected),
       key: t
     }, React.createElement("div", {
-      className: $_6241.playArea
+      className: Module_6241.playArea
     }, React.createElement("img", {
       alt: t.toString(),
       src: e
     })), React.createElement("div", {
-      className: $_6241.infoArea
+      className: Module_6241.infoArea
     }, React.createElement("div", {
-      className: $_6241.nameArea
+      className: Module_6241.nameArea
     }, t + 1), e$isGroupItemSelected(e) && React.createElement("div", {
-      className: Classnames($_6241.btn, $_6241.selectedIconWrap)
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Classnames(Module_6241.btn, Module_6241.selectedIconWrap)
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-style-selected"
     }))))
   }))
-  return React.createElement($_1213.a, {
+  return React.createElement(Module_1213.a, {
     content: c,
     placement: "rightTop",
     getTooltipContainer: e$getTooltipContainer,
@@ -61,7 +60,7 @@ var Rj = memo(function (e) {
       },
       offset: [-5, 0]
     },
-    overlayClassName: $_6241.groupPopover,
+    overlayClassName: Module_6241.groupPopover,
     onVisibleChange: e$onVisibleChange
   }, e$children)
 })

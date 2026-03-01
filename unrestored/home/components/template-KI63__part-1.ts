@@ -8,11 +8,11 @@
 
 /* harmony export (binding) */
 import { _createClass, _classCallCheck, _possibleConstructorReturn, _inherits, __decorate } from "./template-KI63__part-0"
-import * as __WEBPACK_IMPORTED_MODULE_3__sensorsData__ from "../sensorsData-yI2H"
-import * as __WEBPACK_IMPORTED_MODULE_2__cfg__ from "../cfg-dpNx"
-import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from "react-css-modules"
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
-import * as styles from "./styles-RQs1"
+import * as __WEBPACK_IMPORTED_MODULE_3__sensorsData__ from /* yI2H */"../sensorsData-yI2H"
+import * as __WEBPACK_IMPORTED_MODULE_2__cfg__ from /* dpNx */"../cfg-dpNx"
+import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from /* 211U */"react-css-modules"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
+import * as styles from /* RQs1 */"./styles-RQs1"
 var TemplateItemView = function (_React$Component) {
   _inherits(TemplateItemView, _React$Component)
   function TemplateItemView(props) {

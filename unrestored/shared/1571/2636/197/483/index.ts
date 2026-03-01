@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1499")
+var r = require(/* 1499 */"./1499")
 var i = function () {
   return (i = Object.assign || function (e) {
     for (var t, n = 1, /* [auto-meaningful-name] */arguments$length = arguments.length; n < arguments$length; n++) {

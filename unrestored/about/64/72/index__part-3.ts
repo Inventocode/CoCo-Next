@@ -8,16 +8,16 @@
 
 import { p, h, v } from "./index__part-0"
 import { C, N } from "./index__part-2"
-import * as T from "./70"
-import * as S from "./33"
-import * as /* [auto-meaningful-name] */$$_49_25 from "../49/25"
-import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
-import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
-import * as /* [auto-meaningful-name] */$$_16_32 from "../16/32"
-import * as /* [auto-meaningful-name] */$_36_index from "./36/index"
-import * as /* [auto-meaningful-name] */$$_49_9 from "../49/9"
-import * as /* [auto-meaningful-name] */$$_49_31 from "../49/31"
-import * as /* [auto-meaningful-name] */$$_49_17_index from "../49/17/index"
+import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"./70"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../49/25"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../49/14"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"../49/8"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"../16/32"
+import * as /* [auto-meaningful-name] */Module_36 from /* 36 */"./36/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../49/9"
+import * as /* [auto-meaningful-name] */Module_31 from /* 31 */"../49/31"
+import * as /* [auto-meaningful-name] */Module_17 from /* 17 */"../49/17/index"
 var D = []
 function M(e) {
   return e.reduce(function (e, t) {
@@ -59,9 +59,9 @@ function F(e) {
     t[e.name] = e;
     (function (e) {
       if (-1 === D.indexOf(e.name)) {
-        e.setupOnce($_36_index.b, $$_16_32.b)
+        e.setupOnce(Module_36.b, Module_32.b)
         D.push(e.name)
-        $$_49_8.a.log("Integration installed: " + e.name)
+        Module_8.a.log("Integration installed: " + e.name)
       }
     })(e)
   })
@@ -94,7 +94,7 @@ var z = function () {
   e.prototype.captureMessage = function (e, t, n, r) {
     var i = this
     var o = n && n.event_id
-    var a = $$_49_9.i(e) ? this._getBackend().eventFromMessage(String(e), t, n) : this._getBackend().eventFromException(e, n)
+    var a = Module_9.i(e) ? this._getBackend().eventFromMessage(String(e), t, n) : this._getBackend().eventFromException(e, n)
     this._process(a.then(function (e) {
       return i._captureEvent(e, n, r)
     }).then(function (e) {
@@ -112,7 +112,7 @@ var z = function () {
   e.prototype.captureSession = function (e) {
     if (this._isEnabled()) {
       if ("string" !== typeof e.release) {
-        $$_49_8.a.warn("Discarded session because of missing or non-string release")
+        Module_8.a.warn("Discarded session because of missing or non-string release")
       } else {
         this._sendSession(e)
         e.update({
@@ -120,7 +120,7 @@ var z = function () {
         })
       }
     } else {
-      $$_49_8.a.warn("SDK not enabled, will not capture session.")
+      Module_8.a.warn("SDK not enabled, will not capture session.")
     }
   }
   e.prototype.getDsn = function () {
@@ -153,7 +153,7 @@ var z = function () {
     try {
       return this._integrations[e.id] || null
     } catch (t) {
-      $$_49_8.a.warn("Cannot retrieve integration " + e.id + " from the current Client")
+      Module_8.a.warn("Cannot retrieve integration " + e.id + " from the current Client")
       return null
     }
   }
@@ -189,10 +189,10 @@ var z = function () {
         }
       }
     }
-    var c = e.status === T.a.Ok
+    var c = e.status === Module_70.a.Ok
     if (c && 0 === e.errors || c && i) {
       e.update(p(p({}, i && {
-        status: T.a.Crashed
+        status: Module_70.a.Crashed
       }), {
         errors: e.errors || Number(o || i)
       }))
@@ -204,7 +204,7 @@ var z = function () {
   }
   e.prototype._isClientDoneProcessing = function (e) {
     var t = this
-    return new S.a(function (n) {
+    return new Module_33.a(function (n) {
       var r = 0
       var i = setInterval(function () {
         if (0 == t._numProcessing) {
@@ -231,16 +231,16 @@ var z = function () {
     var /* [auto-meaningful-name] */this$getOptions$normalizeDepth = this.getOptions().normalizeDepth
     var o = undefined === this$getOptions$normalizeDepth ? 3 : this$getOptions$normalizeDepth
     var a = p(p({}, e), {
-      event_id: e.event_id || (n && n.event_id ? n.event_id : $$_49_14.i()),
-      timestamp: e.timestamp || $$_49_31.b()
+      event_id: e.event_id || (n && n.event_id ? n.event_id : Module_14.i()),
+      timestamp: e.timestamp || Module_31.b()
     })
     this._applyClientOptions(a)
     this._applyIntegrationsMetadata(a)
     var s = t
     if (n && n.captureContext) {
-      s = $_36_index.a.clone(s).update(n.captureContext)
+      s = Module_36.a.clone(s).update(n.captureContext)
     }
-    var u = S.a.resolve(a)
+    var u = Module_33.a.resolve(a)
     if (s) {
       u = s.applyToEvent(a, n)
     }
@@ -255,21 +255,21 @@ var z = function () {
     var n = p(p(p(p(p({}, e), e.breadcrumbs && {
       breadcrumbs: e.breadcrumbs.map(function (e) {
         return p(p({}, e), e.data && {
-          data: $$_49_17_index.d(e.data, t)
+          data: Module_17.d(e.data, t)
         })
       })
     }), e.user && {
-      user: $$_49_17_index.d(e.user, t)
+      user: Module_17.d(e.user, t)
     }), e.contexts && {
-      contexts: $$_49_17_index.d(e.contexts, t)
+      contexts: Module_17.d(e.contexts, t)
     }), e.extra && {
-      extra: $$_49_17_index.d(e.extra, t)
+      extra: Module_17.d(e.extra, t)
     })
     if (e.contexts && e.contexts.trace) {
       n.contexts.trace = e.contexts.trace
     }
     var /* [auto-meaningful-name] */this$getOptions$_experiments = this.getOptions()._experiments
-    return (undefined === this$getOptions$_experiments ? {} : this$getOptions$_experiments).ensureNoCircularStructures ? $$_49_17_index.d(n) : n
+    return (undefined === this$getOptions$_experiments ? {} : this$getOptions$_experiments).ensureNoCircularStructures ? Module_17.d(n) : n
   }
   e.prototype._applyClientOptions = function (e) {
     var t = this.getOptions()
@@ -288,15 +288,15 @@ var z = function () {
       e.dist = t$dist
     }
     if (e.message) {
-      e.message = $$_49_25.d(e.message, a)
+      e.message = Module_25.d(e.message, a)
     }
     var s = e.exception && e.exception.values && e.exception.values[0]
     if (s && s.value) {
-      s.value = $$_49_25.d(s.value, a)
+      s.value = Module_25.d(s.value, a)
     }
     var /* [auto-meaningful-name] */e$request = e.request
     if (e$request && e$request.url) {
-      e$request.url = $$_49_25.d(e$request.url, a)
+      e$request.url = Module_25.d(e$request.url, a)
     }
   }
   e.prototype._applyIntegrationsMetadata = function (e) {
@@ -313,7 +313,7 @@ var z = function () {
     return this._processEvent(e, t, n).then(function (e) {
       return e.event_id
     }, function (e) {
-      $$_49_8.a.error(e)
+      Module_8.a.error(e)
     })
   }
   e.prototype._processEvent = function (e, t, n) {
@@ -322,10 +322,10 @@ var z = function () {
     var /* [auto-meaningful-name] */i$beforeSend = i.beforeSend
     var /* [auto-meaningful-name] */i$sampleRate = i.sampleRate
     if (!this._isEnabled()) {
-      return S.a.reject(new C("SDK not enabled, will not capture event."))
+      return Module_33.a.reject(new C("SDK not enabled, will not capture event."))
     }
     var s = "transaction" === e.type
-    return !s && "number" === typeof i$sampleRate && Math.random() > i$sampleRate ? S.a.reject(new C("Discarding event because it's not included in the random sample (sampling rate = " + i$sampleRate + ")")) : this._prepareEvent(e, n, t).then(function (e) {
+    return !s && "number" === typeof i$sampleRate && Math.random() > i$sampleRate ? Module_33.a.reject(new C("Discarding event because it's not included in the random sample (sampling rate = " + i$sampleRate + ")")) : this._prepareEvent(e, n, t).then(function (e) {
       if (null === e) {
         throw new C("An event processor returned null, will not send event.")
       }
@@ -370,9 +370,9 @@ var z = function () {
   }
   e.prototype._ensureBeforeSendRv = function (e) {
     var /* [auto-meaningful-name] */BeforeSendMethodHasToReturnNullOrAValidEvent$ = "`beforeSend` method has to return `null` or a valid event."
-    if ($$_49_9.m(e)) {
+    if (Module_9.m(e)) {
       return e.then(function (e) {
-        if (!$$_49_9.h(e) && null !== e) {
+        if (!Module_9.h(e) && null !== e) {
           throw new C(BeforeSendMethodHasToReturnNullOrAValidEvent$)
         }
         return e
@@ -380,7 +380,7 @@ var z = function () {
         throw new C("beforeSend rejected with " + e)
       })
     }
-    if (!$$_49_9.h(e) && null !== e) {
+    if (!Module_9.h(e) && null !== e) {
       throw new C(BeforeSendMethodHasToReturnNullOrAValidEvent$)
     }
     return e
@@ -404,13 +404,13 @@ var B
 var G = function () {
   function e() {}
   e.prototype.sendEvent = function (e) {
-    return S.a.resolve({
+    return Module_33.a.resolve({
       reason: "NoopTransport: Event has been skipped because no Dsn is configured.",
       status: U.Skipped
     })
   }
   e.prototype.close = function (e) {
-    return S.a.resolve(true)
+    return Module_33.a.resolve(true)
   }
   return e
 }()
@@ -418,7 +418,7 @@ var q = function () {
   function e(e) {
     this._options = e
     if (!this._options.dsn) {
-      $$_49_8.a.warn("No DSN provided, backend will not do anything.")
+      Module_8.a.warn("No DSN provided, backend will not do anything.")
     }
     this._transport = this._setupTransport()
   }
@@ -430,16 +430,16 @@ var q = function () {
   }
   e.prototype.sendEvent = function (e) {
     this._transport.sendEvent(e).then(null, function (e) {
-      $$_49_8.a.error("Error while sending event: " + e)
+      Module_8.a.error("Error while sending event: " + e)
     })
   }
   e.prototype.sendSession = function (e) {
     if (this._transport.sendSession) {
       this._transport.sendSession(e).then(null, function (e) {
-        $$_49_8.a.error("Error while sending session: " + e)
+        Module_8.a.error("Error while sending session: " + e)
       })
     } else {
-      $$_49_8.a.warn("Dropping session because custom transport doesn't implement sendSession")
+      Module_8.a.warn("Dropping session because custom transport doesn't implement sendSession")
     }
   }
   e.prototype.getTransport = function () {

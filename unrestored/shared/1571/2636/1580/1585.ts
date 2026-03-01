@@ -4,4 +4,4 @@
  * 模块 ID：1585
  */
 
-require("./1581/442/index")("asyncIterator")
+require(/* 442 */"./1581/442/index")("asyncIterator")

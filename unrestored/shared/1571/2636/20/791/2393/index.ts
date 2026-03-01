@@ -6,18 +6,18 @@
 
 "use strict"
 
-var _regeneratorRuntime = require("regenerator-runtime")
-var _slicedToArray = require("../../../207/787/572/index")
-var _createForOfIteratorHelper = require("../../../207/787/399/index")
-var _objectSpread = require("../../../207/787/500")
-var _asyncToGenerator = require("../449")
-var Token = require("./2394/index")
-var strtok3 = require("./2395/index")
-var _require = require("./2400")
+var _regeneratorRuntime = require(/* 1 */"regenerator-runtime")
+var _slicedToArray = require(/* 572 */"../../../207/787/572/index")
+var _createForOfIteratorHelper = require(/* 399 */"../../../207/787/399/index")
+var _objectSpread = require(/* 500 */"../../../207/787/500")
+var _asyncToGenerator = require(/* 449 */"../449")
+var Token = require(/* 2394 */"./2394/index")
+var strtok3 = require(/* 2395 */"./2395/index")
+var _require = require(/* 2400 */"./2400")
 var stringToBytes = _require.stringToBytes
 var tarHeaderChecksumMatches = _require.tarHeaderChecksumMatches
 var uint32SyncSafeToken = _require.uint32SyncSafeToken
-var supported = require("./2401")
+var supported = require(/* 2401 */"./2401")
 var minimumBytes = 4100
 function fromStream(e) {
   return _fromStream.apply(this, arguments)

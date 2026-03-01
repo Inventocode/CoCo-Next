@@ -4,5 +4,5 @@
  * 模块 ID：2476
  */
 
-var r = require("../../../../1436/1176/1434")(Object.keys, Object)
+var r = require(/* 1434 */"../../../../1436/1176/1434")(Object.keys, Object)
 module.exports = r

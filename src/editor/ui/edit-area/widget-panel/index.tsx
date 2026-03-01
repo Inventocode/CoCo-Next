@@ -5,17 +5,17 @@
  */
 
 import { WidgetTree } from "./widget-tree"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../unrestored/shared/1571/2636/26/index"
 import * as CommonActions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_components_index from "../../../../shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Shared_ui_components_index from "../../../../shared/ui/components/index"
 import classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import { useDispatch, useSelector } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useEffect, useRef } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_329 from "../../../../../unrestored/shared/1571/2636/329"
+import * as /* [auto-meaningful-name] */Module_329 from /* 329 */"../../../../../unrestored/shared/1571/2636/329"
 import styles from "../../../../../unrestored/shared/1571/2636/329"
 var Uv = memo(function (e) {
   var t = e.id
@@ -24,7 +24,7 @@ var Uv = memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$bgColor = e.bgColor
   var a = useDispatch()
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
@@ -32,11 +32,11 @@ var Uv = memo(function (e) {
     return e.block.flyoutVisible
   })
   var u = useState(false)
-  var d = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(u, 2)
+  var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = useState("")
-  var v = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(g, 2)
+  var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
   useEffect(function () {
@@ -54,12 +54,12 @@ var Uv = memo(function (e) {
       a(CommonActions.ug(t))
       a(CommonActions.fj(false))
       if (c === t && l) {
-        $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
-        if (!(null === (e = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === e)) {
+        Module_26.g.setSelectedItem()
+        if (!(null === (e = Module_26.g.getToolbox()) || undefined === e)) {
           e.flyout.hide()
         }
       } else {
-        $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(t))
+        Module_26.g.setSelectedItem(null === (n = Module_26.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(t))
       }
     }}
     onMouseEnter={function () {
@@ -75,12 +75,12 @@ var Uv = memo(function (e) {
         color: e$color
       }}
     >
-      {<$$_$$_$$_$$_shared_ui_components_index.j
+      {<Shared_ui_components_index.j
         type={e$icon}
       />}
     </div>}
     {<span>
-      {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
+      {Module_710$a$formatMessage({
         id: e$label
       })}
     </span>}
@@ -138,14 +138,14 @@ var Hv = [
   }
 ]
 var Vv = memo(function () {
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   return <div
     className={styles.basicBlockBox}
   >
     {<div
       className={styles.categoryTitle}
     >
-      {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
+      {Module_710$a$formatMessage({
         id: "basicBlock"
       })}
     </div>}
@@ -165,7 +165,7 @@ var Vv = memo(function () {
 })
 
 var zv = memo(function () {
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useSelector(function (e) {
     return e.block.isBlockDragDeleteArea
   })
@@ -175,7 +175,7 @@ var zv = memo(function () {
     {<div
       className={classnames(styles.deleteTopIconBox, t && styles.deleteTopIconBoxOff)}
     >
-      {<$$_$$_$$_$$_shared_ui_components_index.j
+      {<Shared_ui_components_index.j
         type="icon-delete-top"
         className={styles.deleteBlockTopIcon}
       />}
@@ -183,13 +183,13 @@ var zv = memo(function () {
     {<div
       className={styles.deleteBottomIconBox}
     >
-      {<$$_$$_$$_$$_shared_ui_components_index.j
+      {<Shared_ui_components_index.j
         type="icon-delete-bottom"
         className={styles.deleteBlockBottomIcon}
       />}
     </div>}
     {<div>
-      {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
+      {Module_710$a$formatMessage({
         id: "Workspace.blockDragDeleteAreaTips"
       })}
     </div>}

@@ -13,24 +13,24 @@ export { j as f }
 export { N as d }
 export { R as e }
 export { k as a }
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as a from "../6"
-import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
-import * as c from "../7"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as d from "../9"
-import * as /* [auto-meaningful-name] */$$_26_index from "../26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$_375 from "./375"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../37/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../26/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Module_375 from /* 375 */"./375"
 function g(e) {
   return _.apply(this, arguments)
 }
 function _() {
-  return (_ = c.a(RegeneratorRuntime1.mark(function e(t) {
+  return (_ = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */r$common$userInfo
     var r
     var /* [auto-meaningful-name] */r$project
@@ -54,7 +54,7 @@ function _() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            r = $$_37_index.d.getState()
+            r = Module_37.d.getState()
             r$project = r.project
             r$project$title = r$project.title
             r$project$globalVariableList = r$project.globalVariableList
@@ -68,11 +68,11 @@ function _() {
             T = r.project.screens.map(function (e) {
               return e.id
             }).toJSON()
-            S = $$_26_index.z.getWorkspacesRecord()
+            S = Module_26.z.getWorkspacesRecord()
             A = E(S, r$project$globalWidgetIds)
             I = Lodash.cloneDeep(O(A))
-            j = $$_$$_$$_$$_$$_src_shared_widget_custom_storage.d()
-            N = $$_$$_$$_$$_$$_src_shared_widget_custom_storage.e()
+            j = Src_shared_widget_custom_storage.d()
+            N = Src_shared_widget_custom_storage.e()
             e.t0 = Lodash.cloneDeep
             e.t1 = y
             e.t2 = r$project$title
@@ -81,15 +81,15 @@ function _() {
             e.t5 = T
             e.t6 = S
             e.next = 19
-            return d.H()
+            return Module_9.H()
           case 19:
             e.t7 = e.sent
             e.next = 22
-            return d.I()
+            return Module_9.I()
           case 22:
             e.t8 = e.sent
             e.next = 25
-            return d.G()
+            return Module_9.G()
           case 25:
             e.t9 = e.sent
             e.t10 = v()
@@ -127,7 +127,7 @@ function _() {
             if (!t) {
               Object.keys(R.globalWidgets).forEach(function (e) {
                 var t = R.globalWidgets[e]
-                if (t.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
+                if (t.type === Src_editor_widget_builtIn_types.l) {
                   t.attributes.fields.forEach(function (e) {
                     e.value = ""
                   })
@@ -144,7 +144,7 @@ function _() {
   }))).apply(this, arguments)
 }
 function v() {
-  var e = $$_37_index.d.getState()
+  var e = Module_37.d.getState()
   var /* [auto-meaningful-name] */e$resource$fontFileList = e.resource.fontFileList
   var n = {}
   var /* [auto-meaningful-name] */e$project$screens = e.project.screens
@@ -155,8 +155,8 @@ function v() {
   })
   e$project$screens.forEach(function (e) {
     e.widgetIds.forEach(function (e) {
-      var t = d.Bb(e)
-      if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H || (null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.z || (null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.w) {
+      var t = Module_9.Bb(e)
+      if ((null === t || undefined === t ? undefined : t.type) === Src_editor_widget_builtIn_types.H || (null === t || undefined === t ? undefined : t.type) === Src_editor_widget_builtIn_types.z || (null === t || undefined === t ? undefined : t.type) === Src_editor_widget_builtIn_types.w) {
         var /* [auto-meaningful-name] */t$attributes$fontFamily = t.attributes.fontFamily
         if (!i[t$attributes$fontFamily]) {
           if (n[t$attributes$fontFamily].cdnUrl) {
@@ -168,7 +168,7 @@ function v() {
       if (t && t.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === t.type) {
         var /* [auto-meaningful-name] */t$attributes$content = t.attributes.content
         var s = undefined === t$attributes$content ? "" : t$attributes$content
-        $_375.a(s).forEach(function (e) {
+        Module_375.a(s).forEach(function (e) {
           if (!i[e]) {
             if (n[e].cdnUrl) {
               o.push(n[e])
@@ -185,7 +185,7 @@ function b() {
   return y.apply(this, arguments)
 }
 function y() {
-  return (y = c.a(RegeneratorRuntime1.mark(function e() {
+  return (y = Module_7.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */n$common$userInfo
     var n
     var /* [auto-meaningful-name] */n$project
@@ -211,7 +211,7 @@ function y() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            n = $$_37_index.d.getState()
+            n = Module_37.d.getState()
             n$project = n.project
             n$project$title = n$project.title
             n$project$globalVariableList = n$project.globalVariableList
@@ -229,9 +229,9 @@ function y() {
             N = n.project.screens.map(function (e) {
               return e.id
             }).toJSON()
-            R = $$_26_index.z.getWorkspacesRecord()
-            k = $$_$$_$$_$$_$$_src_shared_widget_custom_storage.d()
-            x = $$_$$_$$_$$_$$_src_shared_widget_custom_storage.e()
+            R = Module_26.z.getWorkspacesRecord()
+            k = Src_shared_widget_custom_storage.d()
+            x = Src_shared_widget_custom_storage.e()
             e.t0 = Lodash.cloneDeep
             e.t1 = _
             e.t2 = n$project$title
@@ -240,15 +240,15 @@ function y() {
             e.t5 = N
             e.t6 = R
             e.next = 22
-            return d.H()
+            return Module_9.H()
           case 22:
             e.t7 = e.sent
             e.next = 25
-            return d.I()
+            return Module_9.I()
           case 25:
             e.t8 = e.sent
             e.next = 28
-            return d.G()
+            return Module_9.G()
           case 28:
             e.t9 = e.sent
             e.t10 = n$project$globalVariableList
@@ -289,7 +289,7 @@ function y() {
             D = (0, e.t0)(e.t22)
             Object.keys(D.globalWidgets).forEach(function (e) {
               var t = D.globalWidgets[e]
-              if (t.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
+              if (t.type === Src_editor_widget_builtIn_types.l) {
                 t.attributes.fields.forEach(function (e) {
                   e.value = ""
                 })
@@ -312,20 +312,20 @@ function E(e, t) {
     if (o) {
       Object.keys(o).forEach(function (e) {
         var /* [auto-meaningful-name] */oE$fields$WIDGET_ID = o[e].fields.WIDGET_ID
-        if (oE$fields$WIDGET_ID && oE$fields$WIDGET_ID.startsWith($$_$$_$$_$$_$$_src_editor_widget_builtIn_types.l) && !n.includes(oE$fields$WIDGET_ID)) {
+        if (oE$fields$WIDGET_ID && oE$fields$WIDGET_ID.startsWith(Src_editor_widget_builtIn_types.l) && !n.includes(oE$fields$WIDGET_ID)) {
           n.push(oE$fields$WIDGET_ID)
         }
       })
     }
   })
-  return [].concat($$_25_index.a(t.filter(function (e) {
-    return !e.startsWith($$_$$_$$_$$_$$_src_editor_widget_builtIn_types.l)
+  return [].concat(Module_25.a(t.filter(function (e) {
+    return !e.startsWith(Src_editor_widget_builtIn_types.l)
   })), n)
 }
 function O(e) {
   var t = {}
   e.forEach(function (e) {
-    var n = d.Bb(e)
+    var n = Module_9.Bb(e)
     if (n && n.type) {
       t[e] = n
     }
@@ -348,7 +348,7 @@ function C(e) {
   return t
 }
 function T(e) {
-  return $$_25_index.a(e)
+  return Module_25.a(e)
 }
 function S(e) {
   var t = {}
@@ -366,18 +366,18 @@ function A(e) {
 }
 function I(e) {
   var /* [auto-meaningful-name] */e$invisibleWidgetIds
-  var n = Lodash.cloneDeep(a.a(a.a({}, e), {}, {
+  var n = Lodash.cloneDeep(Module_6.a(Module_6.a({}, e), {}, {
     widgets: {}
   }))
   e.widgetIds.forEach(function (e) {
-    var t = d.Bb(e)
+    var t = Module_9.Bb(e)
     if (t) {
       n.widgets[e] = t
     }
   })
   if (!(null === (e$invisibleWidgetIds = e.invisibleWidgetIds) || undefined === e$invisibleWidgetIds)) {
     e$invisibleWidgetIds.forEach(function (e) {
-      var t = d.Bb(e)
+      var t = Module_9.Bb(e)
       if (t) {
         n.widgets[e] = t
       }
@@ -388,10 +388,10 @@ function I(e) {
 function j(e) {
   var t = {}
   Object.entries(e).forEach(function (e) {
-    var n = $$_10_index.a(e, 2)
+    var n = Module_10.a(e, 2)
     n[0]
     var r = n[1]
-    t = a.a(a.a({}, t), r.widgets)
+    t = Module_6.a(Module_6.a({}, t), r.widgets)
   })
   return t
 }

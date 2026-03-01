@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_1500_index from "./1500/index"
-import * as /* [auto-meaningful-name] */$_774 from "./774"
-import /* [auto-meaningful-name] */$_7741 from "./774"
+import * as /* [auto-meaningful-name] */Module_1500 from /* 1500 */"./1500/index"
+import * as /* [auto-meaningful-name] */Module_774 from /* 774 */"./774"
+import /* [auto-meaningful-name] */Module_7741 from /* 774 */"./774"
 if (!self.Promise) {
-  self.Promise = $_1500_index.a
+  self.Promise = Module_1500.a
 }
 if (!Object.assign) {
-  Object.assign = $_7741
+  Object.assign = Module_7741
 }
 if (!(Date.now && Date.prototype.getTime)) {
   Date.now = function () {

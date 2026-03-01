@@ -7,9 +7,9 @@
 "use strict"
 
 export { c as DebugDraw }
-import * as /* [auto-meaningful-name] */$_3323 from "./3323"
-import * as /* [auto-meaningful-name] */$_470 from "./470"
-import * as /* [auto-meaningful-name] */$_185 from "./185"
+import * as /* [auto-meaningful-name] */Module_3323 from /* 3323 */"./3323"
+import * as /* [auto-meaningful-name] */Module_470 from /* 470 */"./470"
+import * as /* [auto-meaningful-name] */Module_185 from /* 185 */"./185"
 var l = function () {
   var t = function (r, e) {
     return (t = Object.setPrototypeOf || {
@@ -79,7 +79,7 @@ var c = function (t) {
     var /* [auto-meaningful-name] */this$m_ctx = this.m_ctx
     if (this$m_ctx) {
       this$m_ctx.save()
-      this$m_ctx.translate($_185.n(t.p.x) + this.half_width, $_185.n(t.p.y) + this.half_height)
+      this$m_ctx.translate(Module_185.n(t.p.x) + this.half_width, Module_185.n(t.p.y) + this.half_height)
       this$m_ctx.rotate(t.q.GetAngle())
     }
   }
@@ -93,9 +93,9 @@ var c = function (t) {
     var /* [auto-meaningful-name] */this$m_ctx = this.m_ctx
     if (this$m_ctx) {
       this$m_ctx.beginPath()
-      this$m_ctx.moveTo($_185.n(t[0].x), $_185.n(t[0].y))
+      this$m_ctx.moveTo(Module_185.n(t[0].x), Module_185.n(t[0].y))
       for (var n = 1; n < r; n++) {
-        this$m_ctx.lineTo($_185.n(t[n].x), $_185.n(t[n].y))
+        this$m_ctx.lineTo(Module_185.n(t[n].x), Module_185.n(t[n].y))
       }
       this$m_ctx.closePath()
       this$m_ctx.strokeStyle = e.MakeStyleString(1)
@@ -109,9 +109,9 @@ var c = function (t) {
     var /* [auto-meaningful-name] */this$m_ctx = this.m_ctx
     if (this$m_ctx) {
       this$m_ctx.beginPath()
-      this$m_ctx.moveTo($_185.n(t[0].x), $_185.n(t[0].y))
+      this$m_ctx.moveTo(Module_185.n(t[0].x), Module_185.n(t[0].y))
       for (var n = 1; n < r; n++) {
-        this$m_ctx.lineTo($_185.n(t[n].x), $_185.n(t[n].y))
+        this$m_ctx.lineTo(Module_185.n(t[n].x), Module_185.n(t[n].y))
       }
       this$m_ctx.closePath()
       this$m_ctx.fillStyle = e.MakeStyleString(.1)
@@ -124,7 +124,7 @@ var c = function (t) {
     var /* [auto-meaningful-name] */this$m_ctx = this.m_ctx
     if (this$m_ctx) {
       this$m_ctx.beginPath()
-      this$m_ctx.arc($_185.n(t.x), $_185.n(t.y), r, 0, 2 * $_3323.pi, true)
+      this$m_ctx.arc(Module_185.n(t.x), Module_185.n(t.y), r, 0, 2 * Module_3323.pi, true)
       this$m_ctx.strokeStyle = e.MakeStyleString(1)
       this$m_ctx.stroke()
     }
@@ -132,10 +132,10 @@ var c = function (t) {
   r.prototype.DrawSolidCircle = function (t, r, e, n) {
     var /* [auto-meaningful-name] */this$m_ctx = this.m_ctx
     if (this$m_ctx) {
-      var a = $_185.n(t.x)
-      var c = $_185.n(t.y)
+      var a = Module_185.n(t.x)
+      var c = Module_185.n(t.y)
       this$m_ctx.beginPath()
-      this$m_ctx.arc(a, c, r, 0, 2 * $_3323.pi, true)
+      this$m_ctx.arc(a, c, r, 0, 2 * Module_3323.pi, true)
       this$m_ctx.moveTo(a, c)
       this$m_ctx.lineTo(a + e.x * r, c + e.y * r)
       this$m_ctx.fillStyle = n.MakeStyleString(.5)
@@ -148,10 +148,10 @@ var c = function (t) {
     if (this.m_ctx) {
       for (var l = 0; l < n; ++l) {
         var a = t[l]
-        var c = (null === e || undefined === e ? undefined : e[l]) || new $_3323.Color(255, 255, 255, .5)
+        var c = (null === e || undefined === e ? undefined : e[l]) || new Module_3323.Color(255, 255, 255, .5)
         this.m_ctx.fillStyle = c.MakeStyleString()
         this.m_ctx.beginPath()
-        this.m_ctx.arc($_185.n(a.x), $_185.n(a.y), $_185.n(r), 0, 2 * $_3323.pi, true)
+        this.m_ctx.arc(Module_185.n(a.x), Module_185.n(a.y), Module_185.n(r), 0, 2 * Module_3323.pi, true)
         this.m_ctx.fill()
       }
     }
@@ -164,7 +164,7 @@ var c = function (t) {
         this.world.body_list.forEach(function (t) {
           var /* [auto-meaningful-name] */o$soft_filter
           var o = t.get_current_physics_body()
-          if (o.type === $_470.a.ELASTIC) {
+          if (o.type === Module_470.a.ELASTIC) {
             var /* [auto-meaningful-name] */o$particle_group$m_firstIndex = o.particle_group.m_firstIndex
             if (!(null === (o$soft_filter = o.soft_filter) || undefined === o$soft_filter)) {
               o$soft_filter.triangle_top_points.forEach(function (t) {
@@ -185,9 +185,9 @@ var c = function (t) {
         if (y && h && p) {
           this.m_ctx.fillStyle = "rgba(0,0,0,0.5)"
           this.m_ctx.beginPath()
-          this.m_ctx.moveTo($_185.n(y.x), $_185.n(y.y))
-          this.m_ctx.lineTo($_185.n(h.x), $_185.n(h.y))
-          this.m_ctx.lineTo($_185.n(p.x), $_185.n(p.y))
+          this.m_ctx.moveTo(Module_185.n(y.x), Module_185.n(y.y))
+          this.m_ctx.lineTo(Module_185.n(h.x), Module_185.n(h.y))
+          this.m_ctx.lineTo(Module_185.n(p.x), Module_185.n(p.y))
           this.m_ctx.closePath()
           this.m_ctx.stroke()
         } else {
@@ -200,8 +200,8 @@ var c = function (t) {
     var /* [auto-meaningful-name] */this$m_ctx = this.m_ctx
     if (this$m_ctx) {
       this$m_ctx.beginPath()
-      this$m_ctx.moveTo($_185.n(t.x), $_185.n(t.y))
-      this$m_ctx.lineTo($_185.n(r.x), $_185.n(r.y))
+      this$m_ctx.moveTo(Module_185.n(t.x), Module_185.n(t.y))
+      this$m_ctx.lineTo(Module_185.n(r.x), Module_185.n(r.y))
       this$m_ctx.strokeStyle = e.MakeStyleString(1)
       this$m_ctx.stroke()
     }
@@ -213,12 +213,12 @@ var c = function (t) {
       this$m_ctx.beginPath()
       this$m_ctx.moveTo(0, 0)
       this$m_ctx.lineTo(1, 0)
-      this$m_ctx.strokeStyle = $_3323.Color.RED.MakeStyleString(1)
+      this$m_ctx.strokeStyle = Module_3323.Color.RED.MakeStyleString(1)
       this$m_ctx.stroke()
       this$m_ctx.beginPath()
       this$m_ctx.moveTo(0, 0)
       this$m_ctx.lineTo(0, 1)
-      this$m_ctx.strokeStyle = $_3323.Color.GREEN.MakeStyleString(1)
+      this$m_ctx.strokeStyle = Module_3323.Color.GREEN.MakeStyleString(1)
       this$m_ctx.stroke()
       this.PopTransform(t)
     }
@@ -239,7 +239,7 @@ var c = function (t) {
       this$m_ctx.font = "15px DroidSans"
       var /* [auto-meaningful-name] */r$DrawString_s_color = r.DrawString_s_color
       this$m_ctx.fillStyle = r$DrawString_s_color.MakeStyleString()
-      this$m_ctx.fillText(o, $_185.n(t), $_185.n(e))
+      this$m_ctx.fillText(o, Module_185.n(t), Module_185.n(e))
       this$m_ctx.restore()
     }
   }
@@ -260,15 +260,15 @@ var c = function (t) {
     var /* [auto-meaningful-name] */this$m_ctx = this.m_ctx
     if (this$m_ctx) {
       this$m_ctx.strokeStyle = r.MakeStyleString()
-      var o = $_185.n(t.lowerBound.x)
-      var n = $_185.n(t.lowerBound.y)
-      var l = $_185.n(t.upperBound.x - t.lowerBound.x)
-      var a = $_185.n(t.upperBound.y - t.lowerBound.y)
+      var o = Module_185.n(t.lowerBound.x)
+      var n = Module_185.n(t.lowerBound.y)
+      var l = Module_185.n(t.upperBound.x - t.lowerBound.x)
+      var a = Module_185.n(t.upperBound.y - t.lowerBound.y)
       this$m_ctx.strokeRect(o, n, l, a)
     }
   }
-  r.DrawString_s_color = new $_3323.Color(.9, .6, .6)
-  r.DrawStringWorld_s_p = new $_3323.Vec2()
-  r.DrawStringWorld_s_color = new $_3323.Color(.5, .9, .5)
+  r.DrawString_s_color = new Module_3323.Color(.9, .6, .6)
+  r.DrawStringWorld_s_p = new Module_3323.Vec2()
+  r.DrawStringWorld_s_color = new Module_3323.Color(.5, .9, .5)
   return r
-}($_3323.Draw)
+}(Module_3323.Draw)

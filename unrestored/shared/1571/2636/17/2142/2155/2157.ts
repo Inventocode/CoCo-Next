@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.ContextMenuOptionEvent = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("../../../123/195/index")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 195 */"../../../123/195/index")
 var a = function (e) {
   function t(t) {
     var n = e.call(this) || this
@@ -25,5 +25,5 @@ var a = function (e) {
   }
   (0, r.__extends)(t, e)
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./851").BaseEvent)
+}(require(/* 851 */"./851").BaseEvent)
 exports.ContextMenuOptionEvent = a

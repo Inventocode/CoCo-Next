@@ -8,46 +8,45 @@
 
 import { py } from "./index__part-102"
 var Mw
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState, memo, useRef } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_368 from "./368"
-import /* [auto-meaningful-name] */$_3681 from "./368"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_368 from /* 368 */"./368"
+import /* [auto-meaningful-name] */Module_3681 from /* 368 */"./368"
 function aC() {
   var e = useDispatch()
   var t = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var n = Et.Bb(t || "")
-  var r = (null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.j ? "cloudDictList" : "cloudTableList"
+  var n = Module_9.Bb(t || "")
+  var r = (null === n || undefined === n ? undefined : n.type) === Src_editor_widget_builtIn_types.j ? "cloudDictList" : "cloudTableList"
   var o = useSelector(function (e) {
     return e.cloudSpace[r]
   })
-  var i = useState(false)
-  var a = $_10_index.a(i, 2)
+  var i = React1.useState(false)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = undefined
-  if ((null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.j) {
+  if ((null === n || undefined === n ? undefined : n.type) === Src_editor_widget_builtIn_types.j) {
     l = n.attributes.cloudDictId
   }
-  if ((null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.k) {
+  if ((null === n || undefined === n ? undefined : n.type) === Src_editor_widget_builtIn_types.k) {
     l = n.attributes.cloudTableId
   }
-  if (l === Et.i) {
+  if (l === Module_9.i) {
     l = undefined
   }
   if (!n) {
@@ -58,16 +57,16 @@ function aC() {
     }
   }
   var u = function () {
-    var t = O.a(RegeneratorRuntime.mark(function t(n) {
+    var t = Module_7.a(RegeneratorRuntime.mark(function t(n) {
       var r
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
               t.next = 2
-              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.Pf(n))
+              return Src_editor_redux_common_actions.Nf(e, Src_editor_redux_common_actions.Pf(n))
             case 2:
-              if (!(null === (r = $_26_index.g.getToolbox()) || undefined === r)) {
+              if (!(null === (r = Module_26.g.getToolbox()) || undefined === r)) {
                 r.refresh_selection()
               }
             case 3:
@@ -82,16 +81,16 @@ function aC() {
     }
   }()
   var d = function () {
-    var t = O.a(RegeneratorRuntime.mark(function t(n) {
+    var t = Module_7.a(RegeneratorRuntime.mark(function t(n) {
       var r
       return RegeneratorRuntime.wrap(function (t) {
         for (;;) {
           switch (t.prev = t.next) {
             case 0:
               t.next = 2
-              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.Rf(n, false))
+              return Src_editor_redux_common_actions.Nf(e, Src_editor_redux_common_actions.Rf(n, false))
             case 2:
-              if (!(null === (r = $_26_index.g.getToolbox()) || undefined === r)) {
+              if (!(null === (r = Module_26.g.getToolbox()) || undefined === r)) {
                 r.refresh_selection()
               }
             case 3:
@@ -110,21 +109,21 @@ function aC() {
     cloudDataSources: o,
     bindDataSourceId: function (t) {
       var r = ""
-      if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.j) {
+      if (n.type === Src_editor_widget_builtIn_types.j) {
         r = "cloudDictId"
         if (t) {
           u(t)
         }
-        $_26_index.r(n.id)
+        Module_26.r(n.id)
       }
-      if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.k) {
+      if (n.type === Src_editor_widget_builtIn_types.k) {
         r = "cloudTableId"
-        $_26_index.s(n.id)
+        Module_26.s(n.id)
         if (t) {
           d(t)
         }
       }
-      e($$_$$_$$_$$_src_editor_redux_common_actions.Lg(n.id, r, t, true, true, true))
+      e(Src_editor_redux_common_actions.Lg(n.id, r, t, true, true, true))
     },
     addItemHover: s,
     onMouseOver: function () {
@@ -142,24 +141,24 @@ function sC() {
 }
 function cC() {
   var e = function (e) {
-    window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/dict/").concat(e), "_blank")
+    window.open("".concat(Src_shared_tools_index.A(), "/dashboard/dict/").concat(e), "_blank")
   }
   var t = function (e) {
-    window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/table/").concat(e), "_blank")
+    window.open("".concat(Src_shared_tools_index.A(), "/dashboard/table/").concat(e), "_blank")
   }
   return {
     handleVisitCloudSpace: function (e) {
       if (e) {
-        window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/dashboard/?createType=").concat(e), "_blank")
+        window.open("".concat(Src_shared_tools_index.A(), "/dashboard/?createType=").concat(e), "_blank")
       } else {
-        window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A(), "/"), "_blank")
+        window.open("".concat(Src_shared_tools_index.A(), "/"), "_blank")
       }
     },
     handleVisitDataSource: function () {
       var n = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : "dict"
       var r = arguments.length > 1 ? arguments[1] : undefined
       if (!r) {
-        return window.open("".concat($$_$$_$$_$$_src_shared_tools_index.A()), "_blank")
+        return window.open("".concat(Src_shared_tools_index.A()), "_blank")
       }
       if ("dict" === n) {
         e(r)
@@ -175,12 +174,12 @@ function cC() {
   e.Table = "Table"
 }(Mw || (Mw = {}))
 var /* [auto-meaningful-name] */py$Option = py.Option
-var uC = memo(function (e) {
+var uC = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useDispatch()
-  var o = Et.Bb(e$widgetId)
-  var i = useRef(null)
+  var o = Module_9.Bb(e$widgetId)
+  var i = React1.useRef(null)
   var a = aC()
   var /* [auto-meaningful-name] */a$dataSourceId = a.dataSourceId
   var /* [auto-meaningful-name] */a$cloudDataSources = a.cloudDataSources
@@ -195,8 +194,8 @@ var uC = memo(function (e) {
   var y = useSelector(function (e) {
     return e.common.userInfo
   })
-  var E = useState(false)
-  var O = $_10_index.a(E, 2)
+  var E = React1.useState(false)
+  var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]
   if (!o) {
@@ -204,7 +203,7 @@ var uC = memo(function (e) {
   }
   var T = function () {
     C(false)
-    r($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
+    r(Src_editor_redux_common_actions.Ch())
   }
   var j = React.createElement(py, {
     disabled: !m,
@@ -221,7 +220,7 @@ var uC = memo(function (e) {
       var t = React.createElement(React.Fragment, null, React.createElement("div", {
         onMouseOut: a$onMouseOut,
         onMouseOver: a$onMouseOver,
-        className: Classnames($_3681.addDict),
+        className: Classnames(Module_3681.addDict),
         onClick: function () {
           var /* [auto-meaningful-name] */i$current
           if (!(null === i || undefined === i || null === (i$current = i.current) || undefined === i$current)) {
@@ -229,37 +228,37 @@ var uC = memo(function (e) {
           }
           g$handleVisitCloudSpace(Mw.Dict)
         }
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-add"
       }), React.createElement("div", {
-        className: $_3681.newText
-      }, $_710$a$formatMessage({
+        className: Module_3681.newText
+      }, Module_710$a$formatMessage({
         id: "cloudSpace.newDict"
       })), React.createElement("div", {
-        className: $_3681.suffixIcon
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+        className: Module_3681.suffixIcon
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-return-arrow"
       }))), a$cloudDataSources.length > 0 ? React.createElement("div", {
-        className: Classnames($_3681.line, a$addItemHover ? $_3681.hideLine : "")
+        className: Classnames(Module_3681.line, a$addItemHover ? Module_3681.hideLine : "")
       }) : "", a$cloudDataSources.length > 0 ? React.createElement("div", null, e) : "")
-      var r = React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+      var r = React.createElement(Src_shared_ui_components_index.d, {
         type: "primary",
         onClick: T
-      }, $_710$a$formatMessage({
+      }, Module_710$a$formatMessage({
         id: "cloudSpace.needLogin"
       }))
       return React.createElement("div", {
-        className: Classnames("cloudDictDropdown", y ? "" : $_3681.unLoginDropdown, a$addItemHover ? "addBtnActive" : "")
+        className: Classnames("cloudDictDropdown", y ? "" : Module_3681.unLoginDropdown, a$addItemHover ? "addBtnActive" : "")
       }, y ? t : r)
     },
     value: a$dataSourceId,
     defaultValue: undefined,
     onChange: function (e) {
       C(false)
-      a$bindDataSourceId(e || Et.i)
+      a$bindDataSourceId(e || Module_9.i)
     },
-    dropdownClassName: $_3681.cloudSpaceAntSelectDropdown,
-    placeholder: $_710$a$formatMessage({
+    dropdownClassName: Module_3681.cloudSpaceAntSelectDropdown,
+    placeholder: Module_710$a$formatMessage({
       id: "cloudSpace.ChooseDataSource"
     })
   }, a$cloudDataSources.map(function (e) {
@@ -268,35 +267,35 @@ var uC = memo(function (e) {
       value: e.id,
       key: e.id
     }, React.createElement("div", {
-      className: Classnames($_3681.optionRenderBox)
+      className: Classnames(Module_3681.optionRenderBox)
     }, React.createElement("div", {
-      className: Classnames($_3681.prefixIcon, "spaceCloud-select-icon")
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      className: Classnames(Module_3681.prefixIcon, "spaceCloud-select-icon")
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-widget-cloud-dict"
     })), React.createElement("div", {
-      className: Classnames($_3681.dictName, a$dataSourceId === e.id ? $_3681.optionSelected : "")
+      className: Classnames(Module_3681.dictName, a$dataSourceId === e.id ? Module_3681.optionSelected : "")
     }, React.createElement("div", {
-      className: $_3681.nameText
+      className: Module_3681.nameText
     }, e.name)), React.createElement("div", {
-      className: $_3681.suffixIcon,
+      className: Module_3681.suffixIcon,
       onClick: function (t) {
         g$handleVisitDataSource("dict", e.id)
       }
-    }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    }, React.createElement(Src_shared_ui_components_index.j, {
       type: "icon-return-arrow"
     }))))
   }))
   return React.createElement("div", {
-    className: Classnames($_3681.formItemWrapper, $_3681.dictFields)
+    className: Classnames(Module_3681.formItemWrapper, Module_3681.dictFields)
   }, React.createElement("div", {
-    className: $_3681.title
-  }, React.createElement("div", null, $_710$a$formatMessage({
+    className: Module_3681.title
+  }, React.createElement("div", null, Module_710$a$formatMessage({
     id: "cloudSpace.DataSource"
   }))), React.createElement("div", {
-    className: $_3681.bindSource
-  }, m ? j : React.createElement($_748_index.a, {
+    className: Module_3681.bindSource
+  }, m ? j : React.createElement(Module_748.a, {
     placement: "bottom",
-    title: $_710$a$formatMessage({
+    title: Module_710$a$formatMessage({
       id: "cloudSpace.onlyAuthorCanEdit"
     })
   }, j)))

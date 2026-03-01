@@ -26,9 +26,9 @@ export { w as q }
 export { C as c }
 export { T as b }
 export { S as t }
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$_1058_125 from "./1058/125"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_125 from /* 125 */"./1058/125"
 function a(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1]
   return {
@@ -104,7 +104,7 @@ function f(e, t, n, r) {
 }
 function h(e, t) {
   return "/* ".concat(Object.entries(t).map(function (e) {
-    var t = $_10_index.a(e, 2)
+    var t = Module_10.a(e, 2)
     var n = t[0]
     var o = t[1]
     return "".concat(n, "=").concat(o)
@@ -140,9 +140,9 @@ function y(e, t) {
   return "$" + t.replace(/-/g, "$") + "_" + n
 }
 var /* [auto-meaningful-name] */_param_ = "_param_"
-var O = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.di_container.get($_1058_125.BINDING.MutationAddButton)
-var w = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.di_container.get($_1058_125.BINDING.MutationRemoveButton)
-var C = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.di_container.get($_1058_125.BINDING.ChangeEvent)
+var O = Src_shared_packages_Crc_blink_src_index.Blink.di_container.get(Module_125.BINDING.MutationAddButton)
+var w = Src_shared_packages_Crc_blink_src_index.Blink.di_container.get(Module_125.BINDING.MutationRemoveButton)
+var C = Src_shared_packages_Crc_blink_src_index.Blink.di_container.get(Module_125.BINDING.ChangeEvent)
 function T(e, t, n, r) {
   if (!this.get_input(e)) {
     var /* [auto-meaningful-name] */this$rendered = this.rendered
@@ -155,12 +155,12 @@ function T(e, t, n, r) {
       this.render(true)
     }
     if (this.rendered) {
-      this.cacheId[e] = this.cacheId[e] || $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.utils.gen_uid()
+      this.cacheId[e] = this.cacheId[e] || Src_shared_packages_Crc_blink_src_index.Blink.utils.gen_uid()
     }
     if (this.cacheId[e]) {
       var /* [auto-meaningful-name] */a$connection
       var /* [auto-meaningful-name] */a$connection1
-      var l = $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.utils.string_to_dom(n)
+      var l = Src_shared_packages_Crc_blink_src_index.Blink.utils.string_to_dom(n)
       l.setAttribute("id", this.cacheId[e])
       if (undefined !== r && l.firstElementChild) {
         l.firstElementChild.textContent = r
@@ -171,13 +171,13 @@ function T(e, t, n, r) {
       if (!(null === (a$connection1 = a.connection) || undefined === a$connection1)) {
         a$connection1.respawn_shadow()
       }
-      if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
+      if (Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
         var u = C("mutation", {
           block: this,
           old_value: undefined,
           new_value: "1"
         })
-        $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(u)
+        Src_shared_packages_Crc_blink_src_index.Blink.events.fire(u)
       }
       this.rendered = this$rendered
     }
@@ -196,7 +196,7 @@ function S(e, t, n) {
       var /* [auto-meaningful-name] */i$connection1
       var l
       var u = null === (i$connection1 = i.connection) || undefined === i$connection1 ? undefined : i$connection1.get_shadow_dom()
-      this.cacheId[e] = (null === u || undefined === u ? undefined : u.getAttribute("id")) || $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.utils.gen_uid()
+      this.cacheId[e] = (null === u || undefined === u ? undefined : u.getAttribute("id")) || Src_shared_packages_Crc_blink_src_index.Blink.utils.gen_uid()
       a = (null === u || undefined === u || null === (l = u.querySelector("field[name=\"".concat(t, "\"]"))) || undefined === l ? undefined : l.textContent) || "1"
     }
     var /* [auto-meaningful-name] */this$rendered = this.rendered
@@ -208,13 +208,13 @@ function S(e, t, n) {
       })
       this.render(true)
     }
-    if ($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
+    if (Src_shared_packages_Crc_blink_src_index.Blink.events.is_enabled()) {
       var p = C("mutation", {
         block: this,
         old_value: a,
         new_value: undefined
       })
-      $$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.events.fire(p)
+      Src_shared_packages_Crc_blink_src_index.Blink.events.fire(p)
     }
     this.rendered = this$rendered
   }

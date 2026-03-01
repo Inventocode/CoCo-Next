@@ -7,10 +7,10 @@
 "use strict"
 
 import { he } from "./index__part-5"
-import * as /* [auto-meaningful-name] */$_395 from "./395"
-import * as /* [auto-meaningful-name] */$_918 from "./918"
-import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
-import * as /* [auto-meaningful-name] */$$_342 from "../342"
+import * as /* [auto-meaningful-name] */Module_395 from /* 395 */"./395"
+import * as /* [auto-meaningful-name] */Module_918 from /* 918 */"./918"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../799/38"
+import * as /* [auto-meaningful-name] */Module_342 from /* 342 */"../342"
 var be = 0
 function we() {
   return be > 0
@@ -50,19 +50,19 @@ function xe(e, t, n) {
       return e.handleEvent ? e.handleEvent.apply(this, i) : e.apply(this, i)
     } catch (a) {
       Ee()
-      $$_342.c(function (e) {
+      Module_342.c(function (e) {
         e.addEventProcessor(function (e) {
-          var n = $$_799_38.a({}, e)
+          var n = Module_38.a({}, e)
           if (t.mechanism) {
-            $_395.b(n, undefined, undefined)
-            $_395.a(n, t.mechanism)
+            Module_395.b(n, undefined, undefined)
+            Module_395.a(n, t.mechanism)
           }
-          n.extra = $$_799_38.a($$_799_38.a({}, n.extra), {
+          n.extra = Module_38.a(Module_38.a({}, n.extra), {
             arguments: r
           })
           return n
         })
-        $$_342.a(a)
+        Module_342.a(a)
       })
       throw a
     }
@@ -113,10 +113,10 @@ function Ce(e) {
       }
       (document.head || document.body).appendChild(t)
     } else {
-      $_918.a.error("Missing dsn option in showReportDialog call")
+      Module_918.a.error("Missing dsn option in showReportDialog call")
     }
   } else {
-    $_918.a.error("Missing eventId option in showReportDialog call")
+    Module_918.a.error("Missing eventId option in showReportDialog call")
   }
 }
 export { we }

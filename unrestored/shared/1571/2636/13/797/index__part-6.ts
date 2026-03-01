@@ -11,16 +11,15 @@ import { B } from "./index__part-1"
 import { z, Z, ee, ae, _e, Ae, Pe, Le } from "./index__part-2"
 import { ze, tt, at, st, ct, ut } from "./index__part-3"
 import { Et, Bt, Ut, qt, on, hn, bn, wn, xn } from "./index__part-5"
-import * as /* [auto-meaningful-name] */$_740_index from "./740/index"
-import * as /* [auto-meaningful-name] */$_325_index from "./325/index"
-import /* [auto-meaningful-name] */$$_$$_50_index from "../../50/index"
-import /* [auto-meaningful-name] */$_101_index from "./101/index"
-import * as /* [auto-meaningful-name] */$_101_index1 from "./101/index"
-import /* [auto-meaningful-name] */React from "react"
-import { PureComponent, Component } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_226 from "../226"
-import /* [auto-meaningful-name] */$$_2261 from "../226"
+import * as /* [auto-meaningful-name] */Module_740 from /* 740 */"./740/index"
+import * as /* [auto-meaningful-name] */Module_325 from /* 325 */"./325/index"
+import /* [auto-meaningful-name] */Module_50 from /* 50 */"../../50/index"
+import /* [auto-meaningful-name] */Module_101 from /* 101 */"./101/index"
+import * as /* [auto-meaningful-name] */Module_1011 from /* 101 */"./101/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_226 from /* 226 */"../226"
+import /* [auto-meaningful-name] */Module_2261 from /* 226 */"../226"
 var kn = function (e) {
   var t = 0
   var n = 0
@@ -34,7 +33,7 @@ var kn = function (e) {
   return t === n && e
 }
 var Sn = function (e, t) {
-  var n = e.hex ? $$_2261(e.hex) : $$_2261(e)
+  var n = e.hex ? Module_2261(e.hex) : Module_2261(e)
   var r = n.toHsl()
   var i = n.toHsv()
   var o = n.toRgb()
@@ -57,7 +56,7 @@ var Tn = function (e) {
     return true
   }
   var t = "#" === String(e).charAt(0) ? 1 : 0
-  return e.length !== 4 + t && e.length < 7 + t && $$_2261(e).isValid()
+  return e.length !== 4 + t && e.length < 7 + t && Module_2261(e).isValid()
 }
 var Bn = function (e) {
   if (!e) {
@@ -68,7 +67,7 @@ var Bn = function (e) {
 }
 var Dn = function (e, t) {
   var n = e.replace("°", "")
-  return $$_2261(t + " (" + n + ")")._ok
+  return Module_2261(t + " (" + n + ")")._ok
 }
 var In = Object.assign || function (e) {
   for (var t = 1; t < arguments.length; t++) {
@@ -183,7 +182,7 @@ var Fn = function (e) {
       }
     ])
     return n
-  }(PureComponent || Component)
+  }(React1.PureComponent || React1.Component)
   t.propTypes = In({}, e.propTypes)
   t.defaultProps = In({}, e.defaultProps, {
     color: {
@@ -320,7 +319,7 @@ var Hn = function (e) {
   var /* [auto-meaningful-name] */e$focusStyle = e.focusStyle
   var p = undefined === e$focusStyle ? {} : e$focusStyle
   var _ = "transparent" === e$color
-  var A = $_101_index({
+  var A = Module_101({
     default: {
       swatch: Un({
         background: e$color,
@@ -355,7 +354,7 @@ var Hn = function (e) {
 })
 var Vn = function (e) {
   var /* [auto-meaningful-name] */e$direction = e.direction
-  var n = $_101_index({
+  var n = Module_101({
     default: {
       picker: {
         width: "18px",
@@ -399,7 +398,7 @@ var zn = function (e) {
   var /* [auto-meaningful-name] */e$pointer = e.pointer
   var /* [auto-meaningful-name] */e$className = e.className
   var h = undefined === e$className ? "" : e$className
-  var p = $_101_index({
+  var p = Module_101({
     default: {
       picker: {
         position: "relative",
@@ -650,10 +649,10 @@ var hr = function (e, t, n, r, i, o) {
   o.delete(t)
   return h
 }
-var pr = _e($_325_index.a, "DataView")
-var _r = _e($_325_index.a, "Promise")
-var Ar = _e($_325_index.a, "Set")
-var gr = _e($_325_index.a, "WeakMap")
+var pr = _e(Module_325.a, "DataView")
+var _r = _e(Module_325.a, "Promise")
+var Ar = _e(Module_325.a, "Set")
+var gr = _e(Module_325.a, "WeakMap")
 var vr = ae(pr)
 var mr = ae(Ae)
 var yr = ae(_r)
@@ -692,8 +691,8 @@ var Or = function (e, t, n, r, i, o) {
   var l = "[object Object]" == (c = "[object Arguments]" == c ? "[object Object]" : c)
   var f = "[object Object]" == (u = "[object Arguments]" == u ? "[object Object]" : u)
   var d = c == u
-  if (d && $_740_index.a(e)) {
-    if (!$_740_index.a(t)) {
+  if (d && Module_740.a(e)) {
+    if (!Module_740.a(t)) {
       return false
     }
     a = true
@@ -918,7 +917,7 @@ var oi = function (e) {
   var /* [auto-meaningful-name] */e$colors = e.colors
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$onSwatchHover = e.onSwatchHover
-  var o = $_101_index({
+  var o = Module_101({
     default: {
       swatches: {
         marginRight: "-10px"
@@ -973,7 +972,7 @@ var ai = function (e) {
       }, n)
     }
   }
-  var A = $_101_index(qt({
+  var A = Module_101(qt({
     default: {
       card: {
         width: e$width,
@@ -1057,10 +1056,10 @@ var ai = function (e) {
   })))
 }
 ai.propTypes = {
-  width: $$_$$_50_index.oneOfType([$$_$$_50_index.string, $$_$$_50_index.number]),
-  colors: $$_$$_50_index.arrayOf($$_$$_50_index.string),
-  triangle: $$_$$_50_index.oneOf(["top", "hide"]),
-  styles: $$_$$_50_index.object
+  width: Module_50.oneOfType([Module_50.string, Module_50.number]),
+  colors: Module_50.arrayOf(Module_50.string),
+  triangle: Module_50.oneOf(["top", "hide"]),
+  styles: Module_50.object
 }
 ai.defaultProps = {
   width: 170,
@@ -1357,7 +1356,7 @@ var Ci = function (e) {
   var /* [auto-meaningful-name] */e$active = e.active
   var /* [auto-meaningful-name] */e$circleSize = e.circleSize
   var /* [auto-meaningful-name] */e$circleSpacing = e.circleSpacing
-  var l = $_101_index({
+  var l = Module_101({
     default: {
       swatch: {
         width: e$circleSize,
@@ -1404,7 +1403,7 @@ Ci.defaultProps = {
   circleSize: 28,
   circleSpacing: 14
 }
-var Oi = $_101_index1.handleHover(Ci)
+var Oi = Module_1011.handleHover(Ci)
 var ki = function (e) {
   var /* [auto-meaningful-name] */e$width = e.width
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -1417,7 +1416,7 @@ var ki = function (e) {
   var /* [auto-meaningful-name] */e$circleSpacing = e.circleSpacing
   var /* [auto-meaningful-name] */e$className = e.className
   var h = undefined === e$className ? "" : e$className
-  var p = $_101_index(qt({
+  var p = Module_101(qt({
     default: {
       card: {
         width: e$width,
@@ -1450,10 +1449,10 @@ var ki = function (e) {
   }))
 }
 ki.propTypes = {
-  width: $$_$$_50_index.oneOfType([$$_$$_50_index.string, $$_$$_50_index.number]),
-  circleSize: $$_$$_50_index.number,
-  circleSpacing: $$_$$_50_index.number,
-  styles: $$_$$_50_index.object
+  width: Module_50.oneOfType([Module_50.string, Module_50.number]),
+  circleSize: Module_50.number,
+  circleSpacing: Module_50.number,
+  styles: Module_50.object
 }
 ki.defaultProps = {
   width: 252,

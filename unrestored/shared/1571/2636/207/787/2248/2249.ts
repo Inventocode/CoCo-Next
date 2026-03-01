@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../500")
+var r = require(/* 500 */"../500")
 var i = {
   $schema: {
     type: "string"

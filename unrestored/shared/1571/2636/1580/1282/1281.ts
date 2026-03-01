@@ -4,9 +4,9 @@
  * 模块 ID：1281
  */
 
-var r = require("../1659/168")
-var o = require("./246/index")
-var i = require("../1581/533")
+var r = require(/* 168 */"../1659/168")
+var o = require(/* 246 */"./246/index")
+var i = require(/* 533 */"../1581/533")
 var a = o("iterator")
 module.exports = !r(function () {
   var e = new URL("b?a=1&b=2&c=3", "http://a")

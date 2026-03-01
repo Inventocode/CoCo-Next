@@ -6,20 +6,19 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_90 from "../../../90"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_11 from "../../../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../../src/editor/widget/built-in/types"
-import /* [auto-meaningful-name] */React from "react"
-import { useMemo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_6 from "../../../6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_322 from "../../../322"
-import * as /* [auto-meaningful-name] */$$_$$_$$_82 from "../../../82"
-import * as /* [auto-meaningful-name] */$$_$$_$$_60 from "../../../60"
-import * as /* [auto-meaningful-name] */$$_$$_$$_114 from "../../../114"
-import * as /* [auto-meaningful-name] */$$_$$_$$_218 from "../../../218"
-import /* [auto-meaningful-name] */$$_$$_$$_2181 from "../../../218"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../../../90"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../11"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../6"
+import * as /* [auto-meaningful-name] */Module_322 from /* 322 */"../../../322"
+import * as /* [auto-meaningful-name] */Module_82 from /* 82 */"../../../82"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"../../../60"
+import * as /* [auto-meaningful-name] */Module_114 from /* 114 */"../../../114"
+import * as /* [auto-meaningful-name] */Module_218 from /* 218 */"../../../218"
+import /* [auto-meaningful-name] */Module_2181 from /* 218 */"../../../218"
 var P = function (e) {
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$size = e.size
@@ -47,44 +46,44 @@ var P = function (e) {
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var P = "true" === e$attributes$textVisible.toString()
   var B = "true" === e$attributes$iconVisible.toString()
-  var F = P ? e$attributes$textAlign : $$_$$_$$_60.a.CENTER
+  var F = P ? e$attributes$textAlign : Module_60.a.CENTER
   var G = e$attributes$maxFontSize
   if (!P) {
-    G = $$_$$_$$_82.l
+    G = Module_82.l
   }
-  var W = 2 * $$_$$_$$_82.r
-  var U = 2 * $$_$$_$$_82.q
-  if (e$attributes$backgroundMode === $$_$$_$$_114.a.IMAGE) {
-    W = 2 * $$_$$_$$_82.j
-    U = 2 * $$_$$_$$_82.i
+  var W = 2 * Module_82.r
+  var U = 2 * Module_82.q
+  if (e$attributes$backgroundMode === Module_114.a.IMAGE) {
+    W = 2 * Module_82.j
+    U = 2 * Module_82.i
   }
   var H = (e$size.width - W) / 1.5
   var V = (e$size.height - U) / 1.5
   var z = Math.min(H, V, G)
-  z = Math.max(z, $$_$$_$$_82.o)
+  z = Math.max(z, Module_82.o)
   z = Math.floor(z)
-  var Y = useMemo(function () {
+  var Y = React1.useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}
-      $$_$$_$$_11.a(o, $$_$$_$$_114.b.RECTANGLE_FILL, {
+      Module_11.a(o, Module_114.b.RECTANGLE_FILL, {
         color: r ? "#e6e6e6" : t,
         backgroundColor: r ? "#cccccc" : n,
         borderRadius: e / 4
       })
-      $$_$$_$$_11.a(o, $$_$$_$$_114.b.RECTANGLE_OUTLINE, {
+      Module_11.a(o, Module_114.b.RECTANGLE_OUTLINE, {
         color: r ? "#e9e9e9" : t,
         border: "2px solid ".concat(r ? "#e9e9e9" : n),
         backgroundColor: "white",
         borderRadius: e / 4,
         padding: "0 10px"
       })
-      $$_$$_$$_11.a(o, $$_$$_$$_114.b.CIRCLE_FILL, {
+      Module_11.a(o, Module_114.b.CIRCLE_FILL, {
         color: r ? "#e6e6e6" : t,
         backgroundColor: r ? "#cccccc" : n,
         borderRadius: e / 2
       })
-      $$_$$_$$_11.a(o, $$_$$_$$_114.b.CIRCLE_OUTLINE, {
+      Module_11.a(o, Module_114.b.CIRCLE_OUTLINE, {
         color: r ? "#e9e9e9" : t,
         border: "2px solid ".concat(r ? "#e9e9e9" : n),
         backgroundColor: "white",
@@ -95,14 +94,14 @@ var P = function (e) {
     }(e$size.height, e$attributes$textColor, e$attributes$backgroundColor, e$attributes$disabled)
   }, [e$attributes$backgroundColor, e$attributes$disabled, e$size.height, e$attributes$textColor])
   var K = undefined
-  K = e$attributes$backgroundMode === $$_$$_$$_114.a.IMAGE ? {
+  K = e$attributes$backgroundMode === Module_114.a.IMAGE ? {
     color: e$attributes$disabled ? "#7E7E7E" : e$attributes$textColor,
     backgroundImage: "url(".concat(e$attributes$backgroundImage, ")"),
     backgroundRepeat: "no-repeat",
     backgroundPosition: "center center",
     backgroundSize: "contain" === e$attributes$imageResizeMode ? "contain" : "100% 100%"
   } : Y[e$attributes$templateMode]
-  var q = $$_$$_$$_6.a({
+  var q = Module_6.a({
     top: e$position.y,
     left: e$position.x,
     height: e$size.height,
@@ -111,18 +110,18 @@ var P = function (e) {
     fontFamily: e$attributes$fontFamily,
     justifyContent: F,
     opacity: undefined === e$opacity ? undefined : e$opacity / 100,
-    filter: e$attributes$disabled && e$attributes$backgroundMode === $$_$$_$$_114.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined,
-    padding: e$attributes$backgroundMode === $$_$$_$$_114.a.TEMPLATE || e$size.width < 2 * $$_$$_$$_82.j ? "0 ".concat($$_$$_$$_82.r, "px") : "0 ".concat($$_$$_$$_82.j, "px")
+    filter: e$attributes$disabled && e$attributes$backgroundMode === Module_114.a.IMAGE ? "saturate(0) brightness(1.1)" : undefined,
+    padding: e$attributes$backgroundMode === Module_114.a.TEMPLATE || e$size.width < 2 * Module_82.j ? "0 ".concat(Module_82.r, "px") : "0 ".concat(Module_82.j, "px")
   }, K)
   return React.createElement("button", {
     id: r,
-    className: Classnames($$_$$_$$_90.b, $$_$$_$$_2181.buttonWidget, !e$attributes$disabled && $$_$$_$$_2181.transform, $$_$$_$$_11.a({}, $$_$$_$$_2181.hide, !e$visible)),
-    "data-role": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    "data-widget-type": $$_$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.z,
-    "data-min-width": $$_$$_$$_82.p,
-    "data-max-width": $$_$$_$$_82.m,
-    "data-min-height": $$_$$_$$_82.n,
-    "data-max-height": $$_$$_$$_82.k,
+    className: Classnames(Module_90.b, Module_2181.buttonWidget, !e$attributes$disabled && Module_2181.transform, Module_11.a({}, Module_2181.hide, !e$visible)),
+    "data-role": Src_editor_widget_builtIn_types.M,
+    "data-widget-type": Src_editor_widget_builtIn_types.z,
+    "data-min-width": Module_82.p,
+    "data-max-width": Module_82.m,
+    "data-min-height": Module_82.n,
+    "data-max-height": Module_82.k,
     onClick: function () {
       if (e$onClick) {
         e$onClick()
@@ -138,13 +137,13 @@ var P = function (e) {
         e$onMouseUp()
       }
     },
-    style: $$_$$_$$_6.a($$_$$_$$_6.a({}, q), {}, {
-      flexDirection: F === $$_$$_$$_60.a.RIGHT ? "row-reverse" : "row"
+    style: Module_6.a(Module_6.a({}, q), {}, {
+      flexDirection: F === Module_60.a.RIGHT ? "row-reverse" : "row"
     })
   }, B && React.createElement("div", {
-    className: $$_$$_$$_2181.iconWrapper,
+    className: Module_2181.iconWrapper,
     style: {
-      color: e$attributes$disabled ? e$attributes$backgroundMode === $$_$$_$$_114.a.TEMPLATE ? K.color : "#7E7E7E" : e$attributes$iconColor
+      color: e$attributes$disabled ? e$attributes$backgroundMode === Module_114.a.TEMPLATE ? K.color : "#7E7E7E" : e$attributes$iconColor
     }
   }, "string" === typeof e$iconFileOrUrl ? React.createElement("img", {
     style: {
@@ -153,12 +152,12 @@ var P = function (e) {
     },
     src: e$iconFileOrUrl,
     alt: ""
-  }) : e$iconFileOrUrl && React.createElement($$_$$_$$_322.a, {
+  }) : e$iconFileOrUrl && React.createElement(Module_322.a, {
     icon: e$iconFileOrUrl
   })), P && React.createElement("div", {
-    className: Classnames($$_$$_$$_2181.textWrapper, B && e$attributes$text && (F === $$_$$_$$_60.a.RIGHT ? $$_$$_$$_2181.iconToTextRightSpacing : $$_$$_$$_2181.iconToTextLeftSpacing))
+    className: Classnames(Module_2181.textWrapper, B && e$attributes$text && (F === Module_60.a.RIGHT ? Module_2181.iconToTextRightSpacing : Module_2181.iconToTextLeftSpacing))
   }, React.createElement("div", {
-    className: $$_$$_$$_2181.text,
+    className: Module_2181.text,
     style: {
       display: "flex",
       textAlign: F

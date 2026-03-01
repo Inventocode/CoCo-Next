@@ -4,7 +4,7 @@
  * 模块 ID：2595
  */
 
-var r = require("./2598/1462")
+var r = require(/* 1462 */"./2598/1462")
 function o(e) {
   this.mode = r.MODE_8BIT_BYTE
   this.data = e

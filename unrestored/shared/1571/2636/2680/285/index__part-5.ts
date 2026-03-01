@@ -6,45 +6,45 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_140 from "../../140"
-import * as /* [auto-meaningful-name] */$$_$$_120 from "../../120"
-import * as /* [auto-meaningful-name] */$$_$$_106 from "../../106"
-import * as /* [auto-meaningful-name] */$$_$$_103 from "../../103"
-import { createElement, Component } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
-import * as /* [auto-meaningful-name] */$$_$$_1034 from "../../1034"
-import * as /* [auto-meaningful-name] */$$_$$_364_index from "../../364/index"
-import * as /* [auto-meaningful-name] */$$_615 from "../615"
-import * as /* [auto-meaningful-name] */$$_$$_801_694_923 from "../../801/694/923"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../../140"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../120"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../../103"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
+import * as /* [auto-meaningful-name] */Module_1034 from /* 1034 */"../../1034"
+import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"../../364/index"
+import * as /* [auto-meaningful-name] */Module_615 from /* 615 */"../615"
+import * as /* [auto-meaningful-name] */Module_923 from /* 923 */"../../801/694/923"
 var Ee = function (e) {
-  $$_$$_120.a(n, e)
-  var t = $$_$$_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n(e) {
     var r
-    $$_$$_103.a(this, n)
+    Module_103.a(this, n)
     r = t.call(this, e)
-    $$_615.a(e.locale && e.locale.Modal)
-    $$_$$_364_index.a("internalMark" === e._ANT_MARK__, "LocaleProvider", "`LocaleProvider` is deprecated. Please use `locale` with `ConfigProvider` instead: http://u.ant.design/locale")
+    Module_615.a(e.locale && e.locale.Modal)
+    Module_364.a("internalMark" === e._ANT_MARK__, "LocaleProvider", "`LocaleProvider` is deprecated. Please use `locale` with `ConfigProvider` instead: http://u.ant.design/locale")
     return r
   }
-  $$_$$_106.a(n, [
+  Module_106.a(n, [
     {
       key: "componentDidMount",
       value: function () {
-        $$_615.a(this.props.locale && this.props.locale.Modal)
+        Module_615.a(this.props.locale && this.props.locale.Modal)
       }
     }, {
       key: "componentDidUpdate",
       value: function (e) {
         var /* [auto-meaningful-name] */this$props$locale = this.props.locale
         if (e.locale !== this$props$locale) {
-          $$_615.a(this$props$locale && this$props$locale.Modal)
+          Module_615.a(this$props$locale && this$props$locale.Modal)
         }
       }
     }, {
       key: "componentWillUnmount",
       value: function () {
-        $$_615.a()
+        Module_615.a()
       }
     }, {
       key: "render",
@@ -52,19 +52,19 @@ var Ee = function (e) {
         var /* [auto-meaningful-name] */this$props = this.props
         var /* [auto-meaningful-name] */this$props$locale = this$props.locale
         var /* [auto-meaningful-name] */this$props$children = this$props.children
-        var o = $$_$$_1034.a(function (e) {
-          return $$_$$_19.a($$_$$_19.a({}, e), {
+        var o = Module_1034.a(function (e) {
+          return Module_19.a(Module_19.a({}, e), {
             exist: true
           })
         })(this$props$locale)
-        return createElement($$_$$_801_694_923.a.Provider, {
+        return React.createElement(Module_923.a.Provider, {
           value: o
         }, this$props$children)
       }
     }
   ])
   return n
-}(Component)
+}(React.Component)
 Ee.defaultProps = {
   locale: {}
 }

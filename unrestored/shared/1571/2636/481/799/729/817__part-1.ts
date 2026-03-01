@@ -8,7 +8,7 @@
 
 var i
 var r
-import * as /* [auto-meaningful-name] */$$_38 from "../38"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../38"
 !function (e) {
   e.Ok = "ok"
   e.Exited = "exited"

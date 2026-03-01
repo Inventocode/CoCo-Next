@@ -7,8 +7,8 @@
 "use strict"
 
 import { r } from "./693__part-0"
-import * as /* [auto-meaningful-name] */$$_291 from "../291"
+import * as /* [auto-meaningful-name] */Module_291 from /* 291 */"../291"
 function o(e, t) {
-  return !t || "object" !== r(t) && "function" !== typeof t ? $$_291.a(e) : t
+  return !t || "object" !== r(t) && "function" !== typeof t ? Module_291.a(e) : t
 }
 export { o }

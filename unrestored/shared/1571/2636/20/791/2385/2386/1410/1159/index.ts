@@ -4,11 +4,11 @@
  * 模块 ID：1159
  */
 
-var r = require("../../../../449")
-var i = require("regenerator-runtime")
-var o = require("./985/index")
-var a = require("./984/index")
-var s = require("./1404")
+var r = require(/* 449 */"../../../../449")
+var i = require(/* 1 */"regenerator-runtime")
+var o = require(/* 985 */"./985/index")
+var a = require(/* 984 */"./984/index")
+var s = require(/* 1404 */"./1404")
 function c(e) {
   var t
   var n
@@ -65,17 +65,17 @@ function u(e) {
 var l
 var f
 var d
-var h = require("process")
-var p = require("../311")
+var h = require(/* 298 */"process")
+var p = require(/* 311 */"../311")
 var /* [auto-meaningful-name] */p$ArrayIsArray = p.ArrayIsArray
 var /* [auto-meaningful-name] */p$Promise = p.Promise
 var /* [auto-meaningful-name] */p$SymbolAsyncIterator = p.SymbolAsyncIterator
 var /* [auto-meaningful-name] */p$SymbolDispose = p.SymbolDispose
-var m = require("../650")
-var /* [auto-meaningful-name] */require$$_$$_1402_427$once = require("../../1402/427").once
-var b = require("../../1402/769")
-var w = require("../../1402/584/index")
-var E = require("../../1402/402/index")
+var m = require(/* 650 */"../650")
+var /* [auto-meaningful-name] */require_427_$$_$$_1402_427$once = require(/* 427 */"../../1402/427").once
+var b = require(/* 769 */"../../1402/769")
+var w = require(/* 584 */"../../1402/584/index")
+var E = require(/* 402 */"../../1402/402/index")
 var /* [auto-meaningful-name] */E$aggregateTwoErrors = E.aggregateTwoErrors
 var /* [auto-meaningful-name] */E$codes = E.codes
 var /* [auto-meaningful-name] */E$codes$ERR_INVALID_ARG_TYPE = E$codes.ERR_INVALID_ARG_TYPE
@@ -84,10 +84,10 @@ var /* [auto-meaningful-name] */E$codes$ERR_MISSING_ARGS = E$codes.ERR_MISSING_A
 var /* [auto-meaningful-name] */E$codes$ERR_STREAM_DESTROYED = E$codes.ERR_STREAM_DESTROYED
 var /* [auto-meaningful-name] */E$codes$ERR_STREAM_PREMATURE_CLOSE = E$codes.ERR_STREAM_PREMATURE_CLOSE
 var /* [auto-meaningful-name] */E$AbortError = E.AbortError
-var I = require("./858")
+var I = require(/* 858 */"./858")
 var /* [auto-meaningful-name] */I$validateFunction = I.validateFunction
 var /* [auto-meaningful-name] */I$validateAbortSignal = I.validateAbortSignal
-var P = require("../583")
+var P = require(/* 583 */"../583")
 var /* [auto-meaningful-name] */P$isIterable = P.isIterable
 var /* [auto-meaningful-name] */P$isReadable = P.isReadable
 var /* [auto-meaningful-name] */P$isReadableNodeStream = P.isReadableNodeStream
@@ -96,7 +96,7 @@ var /* [auto-meaningful-name] */P$isTransformStream = P.isTransformStream
 var /* [auto-meaningful-name] */P$isWebStream = P.isWebStream
 var /* [auto-meaningful-name] */P$isReadableStream = P.isReadableStream
 var /* [auto-meaningful-name] */P$isReadableFinished = P.isReadableFinished
-var z = globalThis.AbortController || require("./857").AbortController
+var z = globalThis.AbortController || require(/* 857 */"./857").AbortController
 function Q(e, t, n) {
   var r = false
   e.on("close", function () {
@@ -139,7 +139,7 @@ function X() {
         switch (e.prev = e.next) {
           case 0:
             if (!f) {
-              f = require("../../1402/986/index")
+              f = require(/* 986 */"../../1402/986/index")
             }
             return e.delegateYield(s(c(f.prototype[p$SymbolAsyncIterator].call(t)), a), "t0", 2)
           case 2:
@@ -414,7 +414,7 @@ function Z(e, t, r) {
     E(new E$AbortError())
   }
   I$validateAbortSignal(u, "options.signal")
-  d = d || require("../../1402/427").addAbortListener
+  d = d || require(/* 427 */"../../1402/427").addAbortListener
   if (u) {
     i = d(u, p)
   }
@@ -497,7 +497,7 @@ function Z(e, t, r) {
           }
         } else {
           if (!l) {
-            l = require("../../1402/1408")
+            l = require(/* 1408 */"../../1402/1408")
           }
           var x = new l({
             objectMode: true
@@ -645,6 +645,6 @@ module.exports = {
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
       t[n] = arguments[n]
     }
-    return Z(t, require$$_$$_1402_427$once(W(t)))
+    return Z(t, require_427_$$_$$_1402_427$once(W(t)))
   }
 }

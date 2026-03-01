@@ -8,12 +8,12 @@
 
 /* harmony export (binding) */
 import { _createClass, _classCallCheck, _possibleConstructorReturn, _inherits, __decorate } from "./template-_TF1__part-0"
-import * as __WEBPACK_IMPORTED_MODULE_4__Button__ from "./Button-XdPl"
-import * as __WEBPACK_IMPORTED_MODULE_3__Dialog__ from "./Dialog-kQfo"
-import __WEBPACK_IMPORTED_MODULE_2_classnames___default from "classnames"
-import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from "react-css-modules"
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
-import * as styles from "./styles-JPI0"
+import * as __WEBPACK_IMPORTED_MODULE_4__Button__ from /* XdPl */"./Button-XdPl"
+import * as __WEBPACK_IMPORTED_MODULE_3__Dialog__ from /* kQfo */"./Dialog-kQfo"
+import __WEBPACK_IMPORTED_MODULE_2_classnames___default from /* HW6M */"classnames"
+import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from /* 211U */"react-css-modules"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
+import * as styles from /* JPI0 */"./styles-JPI0"
 var ConfirmDialogView = function (_React$Component) {
   _inherits(ConfirmDialogView, _React$Component)
   function ConfirmDialogView(props) {

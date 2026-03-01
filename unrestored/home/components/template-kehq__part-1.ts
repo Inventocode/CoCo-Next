@@ -8,12 +8,12 @@
 
 /* harmony export (binding) */
 import { _createClass, _classCallCheck, _possibleConstructorReturn, _inherits, __decorate } from "./template-kehq__part-0"
-import * as __WEBPACK_IMPORTED_MODULE_4__sensorsData__ from "../sensorsData-yI2H"
-import * as __WEBPACK_IMPORTED_MODULE_3__IconFont__ from "./IconFont-zVV7"
-import * as __WEBPACK_IMPORTED_MODULE_2__Dialog__ from "./Dialog-kQfo"
-import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from "react-css-modules"
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
-import * as styles from "./styles-MNNq"
+import * as __WEBPACK_IMPORTED_MODULE_4__sensorsData__ from /* yI2H */"../sensorsData-yI2H"
+import * as __WEBPACK_IMPORTED_MODULE_3__IconFont__ from /* zVV7 */"./IconFont-zVV7"
+import * as __WEBPACK_IMPORTED_MODULE_2__Dialog__ from /* kQfo */"./Dialog-kQfo"
+import * as __WEBPACK_IMPORTED_MODULE_1_react_css_modules__ from /* 211U */"react-css-modules"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
+import * as styles from /* MNNq */"./styles-MNNq"
 var CourseDialogView = function (_React$Component) {
   _inherits(CourseDialogView, _React$Component)
   function CourseDialogView(props) {

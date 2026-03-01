@@ -6,18 +6,18 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_53 from "../53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as a from "../6"
-import * as /* [auto-meaningful-name] */$$_100 from "../100"
-var Fe = $$_738_66.a.Record({
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../53"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../738/66"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"../100"
+var Fe = Module_66.a.Record({
   editorInviteUrl: "",
   readOnlyInviteUrl: "",
-  cooperationUserList: $$_738_66.a.List([]),
-  onlineCooperationUserList: $$_738_66.a.List([]),
-  userFocusOTInfoList: $$_738_66.a.List([]),
-  onlineCooperationUserColorRecord: $$_738_66.a.Record({})(),
+  cooperationUserList: Module_66.a.List([]),
+  onlineCooperationUserList: Module_66.a.List([]),
+  userFocusOTInfoList: Module_66.a.List([]),
+  onlineCooperationUserColorRecord: Module_66.a.Record({})(),
   isAuthor: true,
   collWorkId: null
 })()
@@ -25,29 +25,29 @@ function Ge(e, t) {
   t.payload.list.sort(function (e) {
     return 0 - Number(e.is_author)
   })
-  return e.set("cooperationUserList", $$_738_66.a.List(t.payload.list))
+  return e.set("cooperationUserList", Module_66.a.List(t.payload.list))
 }
 var We = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : Fe
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_100.h:
+    case Module_100.h:
       return Ge(e, t)
-    case $$_100.j:
-      return e.set("onlineCooperationUserList", $$_738_66.a.List(t.payload.list))
-    case $$_100.e:
+    case Module_100.j:
+      return e.set("onlineCooperationUserList", Module_66.a.List(t.payload.list))
+    case Module_100.e:
       return e.set("editorInviteUrl", t.payload.url)
-    case $$_100.g:
+    case Module_100.g:
       return e.set("readOnlyInviteUrl", t.payload.url)
-    case $$_100.f:
+    case Module_100.f:
       return e.set("isAuthor", t.payload.isAuthor)
-    case $$_100.d:
+    case Module_100.d:
       return e.set("collWorkId", t.payload.id)
-    case $$_100.k:
+    case Module_100.k:
       return e.set("userFocusOTInfoList", t.payload.list)
-    case $$_100.i:
-      return e.set("onlineCooperationUserColorRecord", $$_738_66.a.Record(t.payload.colors)())
-    case $$_100.c:
+    case Module_100.i:
+      return e.set("onlineCooperationUserColorRecord", Module_66.a.Record(t.payload.colors)())
+    case Module_100.c:
       return Fe
     default:
       return e
@@ -56,18 +56,18 @@ var We = function () {
 var Ue = {
   visible: false,
   multiple: false,
-  mode: require("../68").c.ResourceLibrary,
+  mode: require(/* 68 */"../68").c.ResourceLibrary,
   sidebarType: undefined,
   setTab: undefined
 }
-var He = $$_738_66.a.Record({
+var He = Module_66.a.Record({
   resourceLibraryDialogInfo: Ue,
   resourceLibraryDialogVisible: false,
   resourceLibraryUpdateAt: 0,
-  imageFileList: $$_738_66.a.List([]),
-  iconFileList: $$_738_66.a.List([]),
-  soundFileList: $$_738_66.a.List([]),
-  fontFileList: $$_738_66.a.List($$_53.a)
+  imageFileList: Module_66.a.List([]),
+  iconFileList: Module_66.a.List([]),
+  soundFileList: Module_66.a.List([]),
+  fontFileList: Module_66.a.List(Module_53.a)
 })()
 function Ve(e, t) {
   return e.update("imageFileList", function (e) {
@@ -171,39 +171,39 @@ var et = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : He
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ce:
-      return e.set("resourceLibraryDialogInfo", a.a({
+    case Src_editor_redux_common_actions.Ce:
+      return e.set("resourceLibraryDialogInfo", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.yc:
-      return e.set("resourceLibraryDialogInfo", a.a({}, Ue))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Le:
+    case Src_editor_redux_common_actions.yc:
+      return e.set("resourceLibraryDialogInfo", Module_6.a({}, Ue))
+    case Src_editor_redux_common_actions.Le:
       return e.set("resourceLibraryDialogVisible", t.payload.visible)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Xe:
+    case Src_editor_redux_common_actions.Xe:
       return e.set("resourceLibraryUpdateAt", Date.now())
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.f:
+    case Src_editor_redux_common_actions.f:
       return Ve(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.hc:
+    case Src_editor_redux_common_actions.hc:
       return ze(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Zc:
-      return e.set("soundFileList", $$_738_66.a.List(t.payload.soundFileList))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.m:
+    case Src_editor_redux_common_actions.Zc:
+      return e.set("soundFileList", Module_66.a.List(t.payload.soundFileList))
+    case Src_editor_redux_common_actions.m:
       return Ye(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Sb:
+    case Src_editor_redux_common_actions.Sb:
       return qe(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Rc:
+    case Src_editor_redux_common_actions.Rc:
       return Ke(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Tc:
+    case Src_editor_redux_common_actions.Tc:
       return Xe(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.e:
+    case Src_editor_redux_common_actions.e:
       return Qe(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Qb:
+    case Src_editor_redux_common_actions.Qb:
       return Ze(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Nc:
+    case Src_editor_redux_common_actions.Nc:
       return Je(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Vc:
-      return e.set("iconFileList", $$_738_66.a.List(t.payload.iconFileList))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Sc:
+    case Src_editor_redux_common_actions.Vc:
+      return e.set("iconFileList", Module_66.a.List(t.payload.iconFileList))
+    case Src_editor_redux_common_actions.Sc:
       return $e(e, t)
     default:
       return e

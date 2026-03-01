@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("../../1410/311")
+var r = require(/* 311 */"../../1410/311")
 var /* [auto-meaningful-name] */r$ArrayIsArray = r.ArrayIsArray
 var /* [auto-meaningful-name] */r$ObjectSetPrototypeOf = r.ObjectSetPrototypeOf
-var /* [auto-meaningful-name] */require$_983$EventEmitter = require("./983").EventEmitter
+var /* [auto-meaningful-name] */require_983_$_983$EventEmitter = require(/* 983 */"./983").EventEmitter
 function s(e) {
-  require$_983$EventEmitter.call(this, e)
+  require_983_$_983$EventEmitter.call(this, e)
 }
 function c(e, t, n) {
   if ("function" === typeof e.prependListener) {
@@ -27,8 +27,8 @@ function c(e, t, n) {
     e.on(t, n)
   }
 }
-r$ObjectSetPrototypeOf(s.prototype, require$_983$EventEmitter.prototype)
-r$ObjectSetPrototypeOf(s, require$_983$EventEmitter)
+r$ObjectSetPrototypeOf(s.prototype, require_983_$_983$EventEmitter.prototype)
+r$ObjectSetPrototypeOf(s, require_983_$_983$EventEmitter)
 s.prototype.pipe = function (e, t) {
   var n = this
   function r(t) {
@@ -64,7 +64,7 @@ s.prototype.pipe = function (e, t) {
   }
   function l(e) {
     f()
-    if (0 === require$_983$EventEmitter.listenerCount(this, "error")) {
+    if (0 === require_983_$_983$EventEmitter.listenerCount(this, "error")) {
       this.emit("error", e)
     }
   }

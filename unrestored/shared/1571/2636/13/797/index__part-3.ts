@@ -7,12 +7,12 @@
 "use strict"
 
 import { Z, ee, te } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$_325_index from "./325/index"
-import * as /* [auto-meaningful-name] */$_1505 from "./1505"
-var /* [auto-meaningful-name] */$_325_index$a$Uint8Array = $_325_index.a.Uint8Array
+import * as /* [auto-meaningful-name] */Module_325 from /* 325 */"./325/index"
+import * as /* [auto-meaningful-name] */Module_1505 from /* 1505 */"./1505"
+var /* [auto-meaningful-name] */Module_325$a$Uint8Array = Module_325.a.Uint8Array
 var Qe = function (e) {
   var t = new e.constructor(e.byteLength)
-  new $_325_index$a$Uint8Array(t).set(new $_325_index$a$Uint8Array(e))
+  new Module_325$a$Uint8Array(t).set(new Module_325$a$Uint8Array(e))
   return t
 }
 var We = function (e, t) {
@@ -81,7 +81,7 @@ var ut = function (e) {
 var lt = function (e) {
   return tt(e) && ut(e)
 }
-export { $_325_index$a$Uint8Array as ze }
+export { Module_325$a$Uint8Array as ze }
 export { We }
 export { Ke }
 export { qe }

@@ -8,19 +8,19 @@
 
 import { hS } from "./index__part-154"
 import { zM } from "./index__part-197"
-import * as /* [auto-meaningful-name] */$_1543_index from "./1543/index"
-import * as /* [auto-meaningful-name] */$_364_index from "./364/index"
-import * as /* [auto-meaningful-name] */$_315 from "./315"
-import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
-import * as Ln from "./35"
-import * as Dn from "./19"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { useContext, Children, createElement, isValidElement } from "react"
-import * as /* [auto-meaningful-name] */$_614 from "./614"
-$_614.a("topLeft", "topCenter", "topRight", "bottomLeft", "bottomCenter", "bottomRight")
+import * as /* [auto-meaningful-name] */Module_1543 from /* 1543 */"./1543/index"
+import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"./364/index"
+import * as /* [auto-meaningful-name] */Module_315 from /* 315 */"./315"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"./801/index"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_614 from /* 614 */"./614"
+Module_614.a("topLeft", "topCenter", "topRight", "bottomLeft", "bottomCenter", "bottomRight")
 var KM = function (e) {
   var t
-  var n = useContext($_801_index.b)
+  var n = React.useContext(Module_801.b)
   var /* [auto-meaningful-name] */n$getPopupContainer = n.getPopupContainer
   var /* [auto-meaningful-name] */n$getPrefixCls = n.getPrefixCls
   var /* [auto-meaningful-name] */n$direction = n.direction
@@ -32,17 +32,17 @@ var KM = function (e) {
   var /* [auto-meaningful-name] */e$getPopupContainer = e.getPopupContainer
   var /* [auto-meaningful-name] */e$overlayClassName = e.overlayClassName
   var h = n$getPrefixCls("dropdown", e$prefixCls)
-  var m = Children.only(e$children)
-  var g = $_315.a(m, {
-    className: Classnames("".concat(h, "-trigger"), Ln.a({}, "".concat(h, "-rtl"), "rtl" === n$direction), m.props.className),
+  var m = React.Children.only(e$children)
+  var g = Module_315.a(m, {
+    className: Classnames("".concat(h, "-trigger"), Module_35.a({}, "".concat(h, "-rtl"), "rtl" === n$direction), m.props.className),
     disabled: e$disabled
   })
-  var _ = Classnames(e$overlayClassName, Ln.a({}, "".concat(h, "-rtl"), "rtl" === n$direction))
+  var _ = Classnames(e$overlayClassName, Module_35.a({}, "".concat(h, "-rtl"), "rtl" === n$direction))
   var v = e$disabled ? [] : e$trigger
   if (v && -1 !== v.indexOf("contextMenu")) {
     t = true
   }
-  return createElement($_1543_index.a, Dn.a({
+  return React.createElement(Module_1543.a, Module_19.a({
     arrow: e$arrow,
     alignPoint: t
   }, e, {
@@ -62,17 +62,17 @@ var KM = function (e) {
         var n
         var /* [auto-meaningful-name] */e$overlay = e.overlay
         n = "function" === typeof e$overlay ? e$overlay() : e$overlay
-        var /* [auto-meaningful-name] */NChildren$onlyStringTypeofNCreateElementSpanNullNN$props = (n = Children.only("string" === typeof n ? createElement("span", null, n) : n)).props
-        $_364_index.a(!NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.mode || "vertical" === NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.mode, "Dropdown", "mode=\"".concat(NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.mode, "\" is not supported for Dropdown's Menu."))
-        var /* [auto-meaningful-name] */NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$selectable = NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.selectable
-        var a = undefined !== NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$selectable && NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$selectable
-        var /* [auto-meaningful-name] */NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon = NChildren$onlyStringTypeofNCreateElementSpanNullNN$props.expandIcon
-        var c = "undefined" !== typeof NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon && isValidElement(NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon) ? NChildren$onlyStringTypeofNCreateElementSpanNullNN$props$expandIcon : createElement("span", {
+        var /* [auto-meaningful-name] */NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props = (n = React.Children.only("string" === typeof n ? React.createElement("span", null, n) : n)).props
+        Module_364.a(!NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.mode || "vertical" === NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.mode, "Dropdown", "mode=\"".concat(NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.mode, "\" is not supported for Dropdown's Menu."))
+        var /* [auto-meaningful-name] */NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$selectable = NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.selectable
+        var a = undefined !== NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$selectable && NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$selectable
+        var /* [auto-meaningful-name] */NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon = NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props.expandIcon
+        var c = "undefined" !== typeof NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon && React.isValidElement(NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon) ? NReact$Children$onlyStringTypeofNReact$createElementSpanNullNN$props$expandIcon : React.createElement("span", {
           className: "".concat(t, "-menu-submenu-arrow")
-        }, createElement(hS, {
+        }, React.createElement(hS, {
           className: "".concat(t, "-menu-submenu-arrow-icon")
         }))
-        return "string" === typeof n.type ? n : $_315.a(n, {
+        return "string" === typeof n.type ? n : Module_315.a(n, {
           mode: "vertical",
           selectable: a,
           expandIcon: c

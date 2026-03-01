@@ -12,17 +12,17 @@ import { qn } from "../../../unrestored/shared/1571/2636/37/index__part-9"
 import { ho } from "../../../unrestored/shared/1571/2636/37/index__part-11"
 import { cl } from "../../../unrestored/shared/1571/2636/37/index__part-13"
 var ll
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../unrestored/shared/1571/2636/24/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../unrestored/shared/1571/2636/11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_48_3_index from "../../../unrestored/shared/1571/2636/48/3/index"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"../../../unrestored/shared/1571/2636/24/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../unrestored/shared/1571/2636/11"
+import * as /* [auto-meaningful-name] */Module_3 from /* 3 */"../../../unrestored/shared/1571/2636/48/3/index"
 import RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_100 from "../../../unrestored/shared/1571/2636/100"
+import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"../../../unrestored/shared/1571/2636/100"
 import * as Actions from "./common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../unrestored/shared/1571/2636/6"
 import { a as ReduxSaga } from "../../../unrestored/shared/1571/2636/48/489"
 import * as /* [auto-meaningful-name] */Redux from "redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_481_index from "../../../unrestored/shared/1571/2636/481/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_467 from "../../../unrestored/shared/1571/2636/467"
+import * as /* [auto-meaningful-name] */Module_481 from /* 481 */"../../../unrestored/shared/1571/2636/481/index"
+import * as /* [auto-meaningful-name] */Module_467 from /* 467 */"../../../unrestored/shared/1571/2636/467"
 var pl = RegeneratorRuntime.mark(gl)
 var fl = RegeneratorRuntime.mark(_l)
 var hl = RegeneratorRuntime.mark(vl)
@@ -35,27 +35,27 @@ function gl(e) {
         case 0:
           e$payload = e.payload
           n.next = 3
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Actions.ej(e.payload))
+          return Module_3.e(Actions.ej(e.payload))
         case 3:
           if (!e$payload) {
             n.next = 9
             break
           }
-          $$_$$_$$_unrestored_shared_1571_2636_481_index.a(e$payload.id, e$payload.nickname)
+          Module_481.a(e$payload.id, e$payload.nickname)
           n.next = 7
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.b(Ms)
+          return Module_3.b(Ms)
         case 7:
           n.next = 15
           break
         case 9:
-          $$_$$_$$_unrestored_shared_1571_2636_24_index.a.disconnect()
+          Module_24.a.disconnect()
           n.next = 12
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Actions.warpAsyncCreateProject())
+          return Module_3.e(Actions.warpAsyncCreateProject())
         case 12:
           n.next = 14
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($$_$$_$$_unrestored_shared_1571_2636_100.n())
+          return Module_3.e(Module_100.n())
         case 14:
-          $$_$$_$$_unrestored_shared_1571_2636_481_index.b()
+          Module_481.b()
         case 15:
         case "end":
           return n.stop()
@@ -71,11 +71,11 @@ function _l(e) {
         case 0:
           e.prev = 0
           e.next = 3
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_unrestored_shared_1571_2636_467.b)
+          return Module_3.b(Module_467.b)
         case 3:
           e$sent = e.sent
           e.next = 6
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Actions.gi(e$sent))
+          return Module_3.e(Actions.gi(e$sent))
         case 6:
           e.next = 10
           break
@@ -97,11 +97,11 @@ function vl(e) {
         case 0:
           e.prev = 0
           e.next = 3
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.b($$_$$_$$_unrestored_shared_1571_2636_467.c)
+          return Module_3.b(Module_467.c)
         case 3:
           e$sent = e.sent
           e.next = 6
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e(Actions.bj(e$sent))
+          return Module_3.e(Actions.bj(e$sent))
         case 6:
           e.next = 10
           break
@@ -116,20 +116,20 @@ function vl(e) {
   }, hl, null, [[0, 8]])
 }
 var bl
-var yl = qn((ll = {}, $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, Actions.wb, gl), $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, Actions.S, _l), $$_$$_$$_unrestored_shared_1571_2636_11.a(ll, Actions.W, vl), ll))
+var yl = qn((ll = {}, Module_11.a(ll, Actions.wb, gl), Module_11.a(ll, Actions.S, _l), Module_11.a(ll, Actions.W, vl), ll))
 function El() {
   return RegeneratorRuntime.wrap(function (e) {
     for (;;) {
       switch (e.prev = e.next) {
         case 0:
           e.next = 2
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([Actions.wb], yl)
+          return Module_3.g([Actions.wb], yl)
         case 2:
           e.next = 4
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([Actions.S], yl)
+          return Module_3.g([Actions.S], yl)
         case 4:
           e.next = 6
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g([Actions.W], yl)
+          return Module_3.g([Actions.W], yl)
         case 6:
         case "end":
           return e.stop()
@@ -148,7 +148,7 @@ function Tl(e) {
         case 0:
           e$payload$list = e.payload.list
           n.next = 3
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($$_$$_$$_unrestored_shared_1571_2636_100.u(e$payload$list))
+          return Module_3.e(Module_100.u(e$payload$list))
         case 3:
         case "end":
           return n.stop()
@@ -167,7 +167,7 @@ function Sl(e) {
         case 0:
           e$payload$info = e.payload.info
           i.next = 3
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.f(function (e) {
+          return Module_3.f(function (e) {
             return e.oTState.userFocusOTInfoList
           })
         case 3:
@@ -176,10 +176,10 @@ function Sl(e) {
             return e.userId === e$payload$info.userId
           })
           r = o > -1 ? i$sent.update(o, function () {
-            return $$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_unrestored_shared_1571_2636_6.a({}, i$sent.get(o)), e$payload$info)
+            return Module_6.a(Module_6.a({}, i$sent.get(o)), e$payload$info)
           }) : i$sent.push(e$payload$info)
           i.next = 8
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.e($$_$$_$$_unrestored_shared_1571_2636_100.v(r))
+          return Module_3.e(Module_100.v(r))
         case 8:
         case "end":
           return i.stop()
@@ -188,8 +188,8 @@ function Sl(e) {
   }, wl)
 }
 bl = {}
-$$_$$_$$_unrestored_shared_1571_2636_11.a(bl, $$_$$_$$_unrestored_shared_1571_2636_100.a, Tl)
-$$_$$_$$_unrestored_shared_1571_2636_11.a(bl, $$_$$_$$_unrestored_shared_1571_2636_100.b, Sl)
+Module_11.a(bl, Module_100.a, Tl)
+Module_11.a(bl, Module_100.b, Sl)
 var Il = bl
 var Al = qn(Il)
 function jl() {
@@ -198,7 +198,7 @@ function jl() {
       switch (e.prev = e.next) {
         case 0:
           e.next = 2
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.g(Object.keys(Il), Al)
+          return Module_3.g(Object.keys(Il), Al)
         case 2:
         case "end":
           return e.stop()
@@ -213,7 +213,7 @@ function Rl() {
       switch (e.prev = e.next) {
         case 0:
           e.next = 2
-          return $$_$$_$$_unrestored_shared_1571_2636_48_3_index.a([$$_$$_$$_unrestored_shared_1571_2636_48_3_index.d(wc), $$_$$_$$_unrestored_shared_1571_2636_48_3_index.d(cl), $$_$$_$$_unrestored_shared_1571_2636_48_3_index.d(El), $$_$$_$$_unrestored_shared_1571_2636_48_3_index.d(jl), $$_$$_$$_unrestored_shared_1571_2636_48_3_index.d(ho), $$_$$_$$_unrestored_shared_1571_2636_48_3_index.d(Si)])
+          return Module_3.a([Module_3.d(wc), Module_3.d(cl), Module_3.d(El), Module_3.d(jl), Module_3.d(ho), Module_3.d(Si)])
         case 2:
         case "end":
           return e.stop()

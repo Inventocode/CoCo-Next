@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("./1778/951")
-var o = require("./1628/1258")
+var r = require(/* 951 */"./1778/951")
+var o = require(/* 1258 */"./1628/1258")
 module.exports = r("Set", function (e) {
   return function () {
     return e(this, arguments.length ? arguments[0] : undefined)

@@ -9,14 +9,14 @@
 import { o } from "./3323__part-1"
 import { m, c, f, v, p, x, A, b, w, it, ht, _t, mt, ct, vt, pt, xt, gt, It, jt, Tt, Ot, zt, Nt, Jt, Xt, Zt, le, he, Be, Ae, ke, De } from "./3323__part-2"
 var ze
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_301_225 from "../301/225"
-import * as /* [auto-meaningful-name] */$$_301_203 from "../301/203"
-import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
-import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_225 from /* 225 */"../301/225"
+import * as /* [auto-meaningful-name] */Module_203 from /* 203 */"../301/203"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../58/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../59/index"
 var We = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.mass = 0
   this.center = new It(0, 0)
   this.I = 0
@@ -31,13 +31,13 @@ var We = function t() {
 }(ze || (ze = {}))
 var Qe = function () {
   function t(e, i) {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_type = ze.e_unknown
     this.m_radius = 0
     this.m_type = e
     this.m_radius = i
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -54,11 +54,11 @@ var Qe = function () {
   return t
 }()
 var Ye = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i() {
     var t
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (t = e.call(this, ze.e_edgeShape, b)).m_vertex1 = new It()
     t.m_vertex2 = new It()
     t.m_vertex0 = new It()
@@ -66,7 +66,7 @@ var Ye = function (t) {
     t.m_oneSided = false
     return t
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "SetOneSided",
       value: function (t, e, i, n) {
@@ -93,7 +93,7 @@ var Ye = function (t) {
     }, {
       key: "Copy",
       value: function (t) {
-        $$_301_225.a($$_301_203.a(i.prototype), "Copy", this).call(this, t)
+        Module_225.a(Module_203.a(i.prototype), "Copy", this).call(this, t)
         this.m_vertex1.Copy(t.m_vertex1)
         this.m_vertex2.Copy(t.m_vertex2)
         this.m_vertex0.Copy(t.m_vertex0)
@@ -222,18 +222,18 @@ Ye.RayCast_s_r = new It()
 Ye.ComputeAABB_s_v1 = new It()
 Ye.ComputeAABB_s_v2 = new It()
 var Ke = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i() {
     var t
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (t = e.call(this, ze.e_chainShape, b)).m_vertices = []
     t.m_count = 0
     t.m_prevVertex = new It()
     t.m_nextVertex = new It()
     return t
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "CreateLoop",
       value: function () {
@@ -322,7 +322,7 @@ var Ke = function (t) {
     }, {
       key: "Copy",
       value: function (t) {
-        $$_301_225.a($$_301_203.a(i.prototype), "Copy", this).call(this, t)
+        Module_225.a(Module_203.a(i.prototype), "Copy", this).call(this, t)
         this._CreateChain(function (e) {
           return t.m_vertices[e]
         }, t.m_count, t.m_prevVertex, t.m_nextVertex)
@@ -436,16 +436,16 @@ Ke.ComputeAABB_s_v2 = new It()
 Ke.ComputeAABB_s_lower = new It()
 Ke.ComputeAABB_s_upper = new It()
 var He = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i() {
     var t
     var s = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (t = e.call(this, ze.e_circleShape, s)).m_p = new It()
     return t
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "Set",
       value: function (t) {
@@ -462,7 +462,7 @@ var He = function (t) {
     }, {
       key: "Copy",
       value: function (t) {
-        $$_301_225.a($$_301_203.a(i.prototype), "Copy", this).call(this, t)
+        Module_225.a(Module_203.a(i.prototype), "Copy", this).call(this, t)
         this.m_p.Copy(t.m_p)
         return this
       }
@@ -738,7 +738,7 @@ function di(t, e, i, n, s) {
   t[t.e_edgeB = 2] = "e_edgeB"
 }(oi || (oi = {}))
 var vi = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.normal = new It()
   this.type = oi.e_unknown
   this.index = 0
@@ -757,13 +757,13 @@ var Vi = new It()
 var wi = new It()
 var ki = new It()
 var Mi = new function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.vertices = []
   this.normals = []
   this.count = 0
 }()
 var Pi = new function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.i1 = 0
   this.i2 = 0
   this.v1 = new It()
@@ -1094,18 +1094,18 @@ function $i(t, e, i, n, s) {
   }
 }
 var tn = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i() {
     var t
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (t = e.call(this, ze.e_polygonShape, b)).m_centroid = new It(0, 0)
     t.m_vertices = []
     t.m_normals = []
     t.m_count = 0
     return t
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "Clone",
       value: function () {
@@ -1114,7 +1114,7 @@ var tn = function (t) {
     }, {
       key: "Copy",
       value: function (t) {
-        $$_301_225.a($$_301_203.a(i.prototype), "Copy", this).call(this, t)
+        Module_225.a(Module_203.a(i.prototype), "Copy", this).call(this, t)
         this.m_centroid.Copy(t.m_centroid)
         this.m_count = t.m_count
         this.m_vertices = It.MakeArray(this.m_count)
@@ -1501,7 +1501,7 @@ var dn = new It()
 var vn = new It()
 var yn = new It()
 var pn = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.proxyA = new Nt()
   this.proxyB = new Nt()
   this.sweepA = new Ot()
@@ -1517,7 +1517,7 @@ var pn = function t() {
 }(hn || (hn = {}))
 var xn
 var Bn = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.state = hn.e_unknown
   this.t = 0
 }
@@ -1530,14 +1530,14 @@ var Bn = function t() {
 var Sn
 var An = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_sweepA = new Ot()
     this.m_sweepB = new Ot()
     this.m_type = xn.e_unknown
     this.m_localPoint = new It()
     this.m_axis = new It()
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Initialize",
       value: function (t, e, i, n, s, r) {
@@ -1803,12 +1803,12 @@ function Gn(t, e) {
 }(Sn || (Sn = {}))
 var Dn = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.linear = new It()
     this.angularA = 0
     this.angularB = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "SetZero",
       value: function () {
@@ -1831,13 +1831,13 @@ var Dn = function () {
 }()
 var Fn = function () {
   function t(e) {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this._other = null
     this.prev = null
     this.next = null
     this.joint = e
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "other",
       get: function () {
@@ -1864,7 +1864,7 @@ var Fn = function () {
   return t
 }()
 var Ln = function t(e) {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.type = Sn.e_unknownJoint
   this.userData = null
   this.collideConnected = false
@@ -1890,7 +1890,7 @@ function jn(t, e, i, n, s) {
 }
 var Tn = function () {
   function t(e) {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_type = Sn.e_unknownJoint
     this.m_prev = null
     this.m_next = null
@@ -1908,7 +1908,7 @@ var Tn = function () {
     this.m_collideConnected = m(e.collideConnected, false)
     this.m_userData = m(e.userData, null)
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "GetType",
       value: function () {
@@ -2001,11 +2001,11 @@ Tn.Draw_s_p2 = new It()
 Tn.Draw_s_color = new o(.5, .8, .8)
 Tn.Draw_s_c = new o()
 var On = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i() {
     var t
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (t = e.call(this, Sn.e_distanceJoint)).localAnchorA = new It()
     t.localAnchorB = new It()
     t.length = 1
@@ -2015,7 +2015,7 @@ var On = function (t) {
     t.damping = 0
     return t
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "Initialize",
       value: function (t, e, i, n) {
@@ -2032,11 +2032,11 @@ var On = function (t) {
   return i
 }(Ln)
 var qn = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i(t) {
     var s
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (s = e.call(this, t)).m_stiffness = 0
     s.m_damping = 0
     s.m_bias = 0
@@ -2076,7 +2076,7 @@ var qn = function (t) {
     s.m_damping = m(t.damping, 0)
     return s
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "GetAnchorA",
       value: function (t) {
@@ -2395,17 +2395,17 @@ qn.Draw_s_pRest = new It()
 qn.Draw_s_pMin = new It()
 qn.Draw_s_pMax = new It()
 var zn = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i() {
     var t
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (t = e.call(this, Sn.e_areaJoint)).bodies = []
     t.stiffness = 0
     t.damping = 0
     return t
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "AddBody",
       value: function (t) {
@@ -2423,11 +2423,11 @@ var zn = function (t) {
   return i
 }(Ln)
 var En = function (t) {
-  $$_58_index.a(i, t)
-  var e = $$_59_index.a(i)
+  Module_58.a(i, t)
+  var e = Module_59.a(i)
   function i(t) {
     var s
-    $$_27.a(this, i);
+    Module_27.a(this, i);
     (s = e.call(this, t)).m_stiffness = 0
     s.m_damping = 0
     s.m_impulse = 0
@@ -2457,7 +2457,7 @@ var En = function (t) {
     s.m_targetArea *= .5
     return s
   }
-  $$_39.a(i, [
+  Module_39.a(i, [
     {
       key: "GetAnchorA",
       value: function (t) {

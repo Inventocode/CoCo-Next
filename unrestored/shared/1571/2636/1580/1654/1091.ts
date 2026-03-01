@@ -4,7 +4,7 @@
  * 模块 ID：1091
  */
 
-var r = require("../1282/231")
+var r = require(/* 231 */"../1282/231")
 var /* [auto-meaningful-name] */Math$floor = Math.floor
 module.exports = function (e) {
   return !r(e) && isFinite(e) && Math$floor(e) === e

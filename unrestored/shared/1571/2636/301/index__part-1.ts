@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as g from "../9"
-import * as _ from "../4"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"../4"
 function v(e) {
   e.insertBlockProfile("phone_vibrate", {
     type: "phone_vibrate",
@@ -84,25 +84,25 @@ function b(e) {
 function y(e) {
   e.insertBlockSnippetGenerator("phone_vibrate", function (t, n) {
     var r = e.valueToCode(t, n, "SECONDS", e.ORDER_FUNCTION_CALL) || "0"
-    return _.n("startDeviceVibrating", [r + " * 1000"])
+    return Module_4.n("startDeviceVibrating", [r + " * 1000"])
   })
   e.insertBlockSnippetGenerator("brightness_set_brightness", function (t, n) {
     var r = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
     var o = t.blocks[n]
-    return _.l(_.j("brightness.setBrightness", [r]), o, e, true)
+    return Module_4.l(Module_4.j("brightness.setBrightness", [r]), o, e, true)
   })
   e.insertBlockSnippetGenerator("brightness_get_brightness", function (t, n) {
     var r = t.blocks[n]
-    return _.l(_.r("brightness.getBrightness"), r, e, true, true)
+    return Module_4.l(Module_4.r("brightness.getBrightness"), r, e, true, true)
   })
   e.insertBlockSnippetGenerator("brightness_set_keep_screen_on", function (t, n) {
     var r = t.blocks[n]
     var o = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-    return _.l(_.n("brightness.setKeepScreenOn", [o]), r, e)
+    return Module_4.l(Module_4.n("brightness.setKeepScreenOn", [o]), r, e)
   })
   e.insertBlockSnippetGenerator("phone_battery_level", function (t, n) {
     var r = t.blocks[n]
-    return _.l(_.r("device.getBatteryLevel"), r, e, true, true)
+    return Module_4.l(Module_4.r("device.getBatteryLevel"), r, e, true, true)
   })
 }
 export { v }

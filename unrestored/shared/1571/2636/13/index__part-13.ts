@@ -7,25 +7,24 @@
 "use strict"
 
 import { Q } from "./index__part-6"
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, createContext } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import "./873"
-var be = memo(function (e) {
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import /* 873 */"./873"
+var be = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$showDropdownIcon = e.showDropdownIcon
   var o = undefined === e$showDropdownIcon || e$showDropdownIcon
   var /* [auto-meaningful-name] */e$overlay = e.overlay
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$onClick = e.onClick
-  var d = useState(false)
-  var p = $$_10_index.a(d, 2)
+  var d = React1.useState(false)
+  var p = Module_10.a(d, 2)
   var f = p[0]
   var h = p[1]
-  var m = useRef(null)
+  var m = React1.useRef(null)
   function g(e) {
     var /* [auto-meaningful-name] */m$current
     var /* [auto-meaningful-name] */m$current1
@@ -40,7 +39,7 @@ var be = memo(function (e) {
     }
   }
   return React.createElement("div", {
-    className: i("coco-dropdown", e$className),
+    className: Classnames("coco-dropdown", e$className),
     onClick: function () {
       var /* [auto-meaningful-name] */m$current
       if (e$onClick) {
@@ -66,7 +65,7 @@ var be = memo(function (e) {
       h(false)
     }
   }, React.createElement("div", {
-    className: i("coco-dropdown-selector", {
+    className: Classnames("coco-dropdown-selector", {
       "coco-dropdown-active": f
     }),
     onClick: function () {
@@ -78,12 +77,12 @@ var be = memo(function (e) {
         }
       }
     }
-  }, e$children, o && React.createElement($$_94_index.a, {
+  }, e$children, o && React.createElement(Src_shared_ui_components_iconfont_index.a, {
     type: "icon-dropdown-down",
-    className: i("coco-dropdown-down-icon")
+    className: Classnames("coco-dropdown-down-icon")
   }))))
 })
-var ye = createContext(null)
+var ye = React1.createContext(null)
 var /* [auto-meaningful-name] */ye$Provider = ye.Provider
 var Oe = ye
 export { be }

@@ -7,8 +7,8 @@
 "use strict"
 
 export { a }
-import * as /* [auto-meaningful-name] */$$_81_index from "../81/index"
-import * as /* [auto-meaningful-name] */$_260 from "./260"
+import * as /* [auto-meaningful-name] */Module_81 from /* 81 */"../81/index"
+import * as /* [auto-meaningful-name] */Module_260 from /* 260 */"./260"
 var o = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -31,9 +31,9 @@ var o = function () {
 }()
 var a = function (t) {
   function e(e, n) {
-    return t.call(this, new $$_81_index.QRCodeReader(), e, n) || this
+    return t.call(this, new Module_81.QRCodeReader(), e, n) || this
   }
   o(e, t)
   return e
-}($_260.a)
+}(Module_260.a)
 export default a

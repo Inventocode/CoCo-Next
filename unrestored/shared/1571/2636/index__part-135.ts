@@ -6,15 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1204 from "./1204"
-import /* [auto-meaningful-name] */$_12041 from "./1204"
-var Jw = memo(function (e) {
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1204 from /* 1204 */"./1204"
+import /* [auto-meaningful-name] */Module_12041 from /* 1204 */"./1204"
+var Jw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "penSize" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -24,15 +23,15 @@ var Jw = memo(function (e) {
   var s = undefined === e$formConfig$label ? "brushPenSize" : e$formConfig$label
   var /* [auto-meaningful-name] */e$formConfig$min = e$formConfig.min
   var /* [auto-meaningful-name] */e$formConfig$max = e$formConfig.max
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var d = e$getValue(n)
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  return React.createElement(Src_shared_ui_components_index.i, {
     align: "vertical",
-    className: Classnames($_12041.formItemWrapper, $_12041.numberSlider),
-    label: $_710$a$formatMessage({
+    className: Classnames(Module_12041.formItemWrapper, Module_12041.numberSlider),
+    label: Module_710$a$formatMessage({
       id: s
     })
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.x, {
+  }, React.createElement(Src_shared_ui_components_index.x, {
     value: d,
     min: e$formConfig$min,
     max: e$formConfig$max,

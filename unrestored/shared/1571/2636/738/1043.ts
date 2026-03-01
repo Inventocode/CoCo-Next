@@ -7,7 +7,7 @@
 "use strict"
 
 export { j as a }
-import * as r from "./62"
+import * as /* [auto-meaningful-name] */Module_62 from /* 62 */"./62"
 var i = {}
 var a = i
 function o(e, t) {
@@ -391,7 +391,7 @@ c.prototype.n = function () {
   var t
   var n
   var r
-  var /* [auto-meaningful-name] */ELT$length
+  var /* [auto-meaningful-name] */EThis$gT$length
   var a = 0
   var /* [auto-meaningful-name] */this$c = this.c
   var /* [auto-meaningful-name] */this$g = this.g
@@ -400,7 +400,7 @@ c.prototype.n = function () {
     return s ? this.c.subarray(32768, this.b) : this.c.slice(32768, this.b)
   }
   for (t = 0, n = this$g.length; t < n; ++t) {
-    for (r = 0, ELT$length = (e = this$g[t]).length; r < ELT$length; ++r) {
+    for (r = 0, EThis$gT$length = (e = this$g[t]).length; r < EThis$gT$length; ++r) {
       c[a++] = e[r]
     }
   }
@@ -518,7 +518,7 @@ var H = {
     return i
   },
   calcBSplinePoint: function (e, t, n, i) {
-    for (var a = this.findSpan(e, i, t), o = this.calcBasisFunctions(a, i, e, t), s = new r.P(0, 0, 0, 0), l = 0; l <= e; ++l) {
+    for (var a = this.findSpan(e, i, t), o = this.calcBasisFunctions(a, i, e, t), s = new Module_62.P(0, 0, 0, 0), l = 0; l <= e; ++l) {
       var c = n[a - e + l]
       var u = o[l]
       var h = c.w * u
@@ -612,7 +612,7 @@ var H = {
       s[p] = f
     }
     for (p = o + 1; p <= a + 1; ++p) {
-      s[p] = new r.P(0, 0, 0)
+      s[p] = new Module_62.P(0, 0, 0)
     }
     return s
   },
@@ -632,7 +632,7 @@ var H = {
   calcRationalCurveDerivatives: function (e) {
     for (var /* [auto-meaningful-name] */e$length = e.length, n = [], i = [], a = 0; a < e$length; ++a) {
       var o = e[a]
-      n[a] = new r.O(o.x, o.y, o.z)
+      n[a] = new Module_62.O(o.x, o.y, o.z)
       i[a] = o.w
     }
     for (var s = [], l = 0; l < e$length; ++l) {
@@ -650,7 +650,7 @@ var H = {
   },
   calcSurfacePoint: function (e, t, n, i, a, o, s, l) {
     for (var c = this.findSpan(e, o, n), u = this.findSpan(t, s, i), h = this.calcBasisFunctions(c, o, e, n), d = this.calcBasisFunctions(u, s, t, i), p = [], f = 0; f <= t; ++f) {
-      p[f] = new r.P(0, 0, 0, 0)
+      p[f] = new Module_62.P(0, 0, 0, 0)
       for (var m = 0; m <= e; ++m) {
         var v = a[c - e + m][u - t + f].clone()
         var g = v.w
@@ -660,7 +660,7 @@ var H = {
         p[f].add(v.multiplyScalar(h[m]))
       }
     }
-    var y = new r.P(0, 0, 0, 0)
+    var y = new Module_62.P(0, 0, 0, 0)
     for (f = 0; f <= t; ++f) {
       y.add(p[f].multiplyScalar(d[f]))
     }
@@ -669,7 +669,7 @@ var H = {
   }
 }
 var G = function (e, t, n, i, a) {
-  r.h.call(this)
+  Module_62.h.call(this)
   this.degree = e
   this.knots = t
   this.controlPoints = []
@@ -677,12 +677,12 @@ var G = function (e, t, n, i, a) {
   this.endKnot = a || this.knots.length - 1
   for (var o = 0; o < n.length; ++o) {
     var s = n[o]
-    this.controlPoints[o] = new r.P(s.x, s.y, s.z, s.w)
+    this.controlPoints[o] = new Module_62.P(s.x, s.y, s.z, s.w)
   }
 };
-(G.prototype = Object.create(r.h.prototype)).constructor = G
+(G.prototype = Object.create(Module_62.h.prototype)).constructor = G
 G.prototype.getPoint = function (e, t) {
-  var n = t || new r.O()
+  var n = t || new Module_62.O()
   var i = this.knots[this.startKnot] + e * (this.knots[this.endKnot] - this.knots[this.startKnot])
   var a = H.calcBSplinePoint(this.degree, this.knots, this.controlPoints, i)
   if (1 != a.w) {
@@ -691,7 +691,7 @@ G.prototype.getPoint = function (e, t) {
   return n.set(a.x, a.y, a.z)
 }
 G.prototype.getTangent = function (e, t) {
-  var n = t || new r.O()
+  var n = t || new Module_62.O()
   var i = this.knots[0] + e * (this.knots[this.knots.length - 1] - this.knots[0])
   var a = H.calcNURBSDerivatives(this.degree, this.knots, this.controlPoints, i, 1)
   n.copy(a[1]).normalize()
@@ -702,7 +702,7 @@ var j = function () {
   var t
   var n
   function i(e) {
-    r.q.call(this, e)
+    Module_62.q.call(this, e)
   }
   function a(e, t) {
     this.textureLoader = e
@@ -728,12 +728,12 @@ var j = function () {
   function p(e) {
     return e / 46186158e3
   }
-  i.prototype = Object.assign(Object.create(r.q.prototype), {
+  i.prototype = Object.assign(Object.create(Module_62.q.prototype), {
     constructor: i,
     load: function (e, t, n, i) {
       var a = this
-      var o = "" === a.path ? r.r.extractUrlBase(e) : a.path
-      var s = new r.l(this.manager)
+      var o = "" === a.path ? Module_62.r.extractUrlBase(e) : a.path
+      var s = new Module_62.l(this.manager)
       s.setPath(a.path)
       s.setResponseType("arraybuffer")
       s.setRequestHeader(a.requestHeader)
@@ -782,7 +782,7 @@ var j = function () {
         }
         e = new l().parse(i)
       }
-      return new a(new r.M(this.manager).setPath(this.resourcePath || n).setCrossOrigin(this.crossOrigin), this.manager).parse(e)
+      return new a(new Module_62.M(this.manager).setPath(this.resourcePath || n).setCrossOrigin(this.crossOrigin), this.manager).parse(e)
     }
   })
   a.prototype = {
@@ -913,8 +913,8 @@ var j = function () {
       var /* [auto-meaningful-name] */e$WrapModeV = e.WrapModeV
       var o = undefined !== e$WrapModeU ? e$WrapModeU.value : 0
       var s = undefined !== e$WrapModeV ? e$WrapModeV.value : 0
-      n.wrapS = 0 === o ? r.G : r.f
-      n.wrapT = 0 === s ? r.G : r.f
+      n.wrapS = 0 === o ? Module_62.G : Module_62.f
+      n.wrapT = 0 === s ? Module_62.G : Module_62.f
       if ("Scaling" in e) {
         var /* [auto-meaningful-name] */e$Scaling$value = e.Scaling.value
         n.repeat.x = e$Scaling$value[0]
@@ -937,13 +937,13 @@ var j = function () {
         var c = this.manager.getHandler(".tga")
         if (null === c) {
           console.warn("FBXLoader: TGA loader not found, creating placeholder texture for", e.RelativeFilename)
-          a = new r.L()
+          a = new Module_62.L()
         } else {
           a = c.load(i)
         }
       } else if ("psd" === l) {
         console.warn("FBXLoader: PSD textures are not supported, creating placeholder texture for", e.RelativeFilename)
-        a = new r.L()
+        a = new Module_62.L()
       } else {
         a = this.textureLoader.load(i)
       }
@@ -977,14 +977,14 @@ var j = function () {
       var l = this.parseParameters(e, n, i)
       switch (e$ShadingModel.toLowerCase()) {
         case "phong":
-          s = new r.x()
+          s = new Module_62.x()
           break
         case "lambert":
-          s = new r.w()
+          s = new Module_62.w()
           break
         default:
           console.warn("THREE.FBXLoader: unknown material type \"%s\". Defaulting to MeshPhongMaterial.", e$ShadingModel)
-          s = new r.x()
+          s = new Module_62.x()
       }
       s.setValues(l)
       s.name = e$attrName
@@ -996,20 +996,20 @@ var j = function () {
         a.bumpScale = e.BumpFactor.value
       }
       if (e.Diffuse) {
-        a.color = new r.g().fromArray(e.Diffuse.value)
+        a.color = new Module_62.g().fromArray(e.Diffuse.value)
       } else {
         if (e.DiffuseColor && "Color" === e.DiffuseColor.type) {
-          a.color = new r.g().fromArray(e.DiffuseColor.value)
+          a.color = new Module_62.g().fromArray(e.DiffuseColor.value)
         }
       }
       if (e.DisplacementFactor) {
         a.displacementScale = e.DisplacementFactor.value
       }
       if (e.Emissive) {
-        a.emissive = new r.g().fromArray(e.Emissive.value)
+        a.emissive = new Module_62.g().fromArray(e.Emissive.value)
       } else {
         if (e.EmissiveColor && "Color" === e.EmissiveColor.type) {
-          a.emissive = new r.g().fromArray(e.EmissiveColor.value)
+          a.emissive = new Module_62.g().fromArray(e.EmissiveColor.value)
         }
       }
       if (e.EmissiveFactor) {
@@ -1028,10 +1028,10 @@ var j = function () {
         a.shininess = e.Shininess.value
       }
       if (e.Specular) {
-        a.specular = new r.g().fromArray(e.Specular.value)
+        a.specular = new Module_62.g().fromArray(e.Specular.value)
       } else {
         if (e.SpecularColor && "Color" === e.SpecularColor.type) {
-          a.specular = new r.g().fromArray(e.SpecularColor.value)
+          a.specular = new Module_62.g().fromArray(e.SpecularColor.value)
         }
       }
       var o = this
@@ -1047,14 +1047,14 @@ var j = function () {
           case "DiffuseColor":
           case "Maya|TEX_color_map":
             a.map = o.getTexture(n, e.ID)
-            a.map.encoding = r.S
+            a.map.encoding = Module_62.S
             break
           case "DisplacementColor":
             a.displacementMap = o.getTexture(n, e.ID)
             break
           case "EmissiveColor":
             a.emissiveMap = o.getTexture(n, e.ID)
-            a.emissiveMap.encoding = r.S
+            a.emissiveMap.encoding = Module_62.S
             break
           case "NormalMap":
           case "Maya|TEX_normal_map":
@@ -1062,12 +1062,12 @@ var j = function () {
             break
           case "ReflectionColor":
             a.envMap = o.getTexture(n, e.ID)
-            a.envMap.mapping = r.j
-            a.envMap.encoding = r.S
+            a.envMap.mapping = Module_62.j
+            a.envMap.encoding = Module_62.S
             break
           case "SpecularColor":
             a.specularMap = o.getTexture(n, e.ID)
-            a.specularMap.encoding = r.S
+            a.specularMap.encoding = Module_62.S
             break
           case "TransparentColor":
           case "TransparencyFactor":
@@ -1134,7 +1134,7 @@ var j = function () {
             ID: e.ID,
             indices: [],
             weights: [],
-            transformLink: new r.u().fromArray(i.TransformLink.a)
+            transformLink: new Module_62.u().fromArray(i.TransformLink.a)
           }
           if ("Indexes" in i) {
             a.indices = i.Indexes.a
@@ -1169,7 +1169,7 @@ var j = function () {
       return r
     },
     parseScene: function (i, a, o) {
-      n = new r.n()
+      n = new Module_62.n()
       var l = this.parseModels(i.skeletons, a, o)
       var /* [auto-meaningful-name] */e$Objects$Model = e.Objects.Model
       var u = this
@@ -1229,13 +1229,13 @@ var j = function () {
               break
             case "LimbNode":
             case "Root":
-              d = new r.c()
+              d = new Module_62.c()
               break
             case "Null":
             default:
-              d = new r.n()
+              d = new Module_62.n()
           }
-          d.name = u.attrName ? r.D.sanitizeNodeName(u.attrName) : ""
+          d.name = u.attrName ? Module_62.D.sanitizeNodeName(u.attrName) : ""
           d.ID = c
         }
         this.getTransformData(d, u)
@@ -1251,8 +1251,8 @@ var j = function () {
           s.rawBones.forEach(function (t, o) {
             if (t.ID === e.ID) {
               var l = a;
-              (a = new r.c()).matrixWorld.copy(t.transformLink)
-              a.name = i ? r.D.sanitizeNodeName(i) : ""
+              (a = new Module_62.c()).matrixWorld.copy(t.transformLink)
+              a.name = i ? Module_62.D.sanitizeNodeName(i) : ""
               a.ID = n
               s.bones[o] = a
               if (null !== l) {
@@ -1274,7 +1274,7 @@ var j = function () {
         }
       })
       if (undefined === i) {
-        n = new r.z()
+        n = new Module_62.z()
       } else {
         var a = 0
         if (undefined !== i.CameraProjectionType && 1 === i.CameraProjectionType.value) {
@@ -1302,17 +1302,17 @@ var j = function () {
         var d = i.FocalLength ? i.FocalLength.value : null
         switch (a) {
           case 0:
-            n = new r.B(h, u, o, s)
+            n = new Module_62.B(h, u, o, s)
             if (null !== d) {
               n.setFocalLength(d)
             }
             break
           case 1:
-            n = new r.A(-window$innerWidth / 2, window$innerWidth / 2, window$innerHeight / 2, -window$innerHeight / 2, o, s)
+            n = new Module_62.A(-window$innerWidth / 2, window$innerWidth / 2, window$innerHeight / 2, -window$innerHeight / 2, o, s)
             break
           default:
             console.warn("THREE.FBXLoader: Unknown camera type " + a + ".")
-            n = new r.z()
+            n = new Module_62.z()
         }
       }
       return n
@@ -1327,13 +1327,13 @@ var j = function () {
         }
       })
       if (undefined === i) {
-        n = new r.z()
+        n = new Module_62.z()
       } else {
         var a
         a = undefined === i.LightType ? 0 : i.LightType.value
         var o = 16777215
         if (undefined !== i.Color) {
-          o = new r.g().fromArray(i.Color.value)
+          o = new Module_62.g().fromArray(i.Color.value)
         }
         var s = undefined === i.Intensity ? 1 : i.Intensity.value / 100
         if (undefined !== i.CastLightOnObject && 0 === i.CastLightOnObject.value) {
@@ -1345,26 +1345,26 @@ var j = function () {
         }
         switch (a) {
           case 0:
-            n = new r.C(o, s, l, 1)
+            n = new Module_62.C(o, s, l, 1)
             break
           case 1:
-            n = new r.i(o, s)
+            n = new Module_62.i(o, s)
             break
           case 2:
             var c = Math.PI / 3
             if (undefined !== i.InnerAngle) {
-              c = r.s.degToRad(i.InnerAngle.value)
+              c = Module_62.s.degToRad(i.InnerAngle.value)
             }
             var u = 0
             if (undefined !== i.OuterAngle) {
-              u = r.s.degToRad(i.OuterAngle.value)
+              u = Module_62.s.degToRad(i.OuterAngle.value)
               u = Math.max(u, 1)
             }
-            n = new r.K(o, s, l, c, u, 1)
+            n = new Module_62.K(o, s, l, c, u, 1)
             break
           default:
             console.warn("THREE.FBXLoader: Unknown light type " + i.LightType.value + ", defaulting to a PointLight.")
-            n = new r.C(o, s)
+            n = new Module_62.C(o, s)
         }
         if (undefined !== i.CastShadows && 1 === i.CastShadows.value) {
           n.castShadow = true
@@ -1391,7 +1391,7 @@ var j = function () {
         if (s.length > 0) {
           o = s[0]
         } else {
-          o = new r.x({
+          o = new Module_62.x({
             color: 13421772
           })
           s.push(o)
@@ -1406,9 +1406,9 @@ var j = function () {
         s.forEach(function (e) {
           e.skinning = true
         });
-        (i = new r.J(a, o)).normalizeSkinWeights()
+        (i = new Module_62.J(a, o)).normalizeSkinWeights()
       } else {
-        i = new r.v(a, o)
+        i = new Module_62.v(a, o)
       }
       return i
     },
@@ -1419,11 +1419,11 @@ var j = function () {
         }
         return e
       }, null)
-      var i = new r.p({
+      var i = new Module_62.p({
         color: 3342591,
         linewidth: 1
       })
-      return new r.o(n, i)
+      return new Module_62.o(n, i)
     },
     getTransformData: function (e, t) {
       var n = {}
@@ -1471,7 +1471,7 @@ var j = function () {
                 i.target.position.fromArray(a$Lcl_Translation$value)
                 n.add(i.target)
               } else {
-                i.lookAt(new r.O().fromArray(a$Lcl_Translation$value))
+                i.lookAt(new Module_62.O().fromArray(a$Lcl_Translation$value))
               }
             }
           }
@@ -1487,7 +1487,7 @@ var j = function () {
             var o = e.ID
             t.get(o).parents.forEach(function (e) {
               if (i.has(e.ID)) {
-                i.get(e.ID).bind(new r.I(s.bones), a[e.ID])
+                i.get(e.ID).bind(new Module_62.I(s.bones), a[e.ID])
               }
             })
           }
@@ -1502,10 +1502,10 @@ var j = function () {
           var /* [auto-meaningful-name] */e$Objects$PoseI$PoseNode = e$Objects$Pose[i].PoseNode
           if (Array.isArray(e$Objects$PoseI$PoseNode)) {
             e$Objects$PoseI$PoseNode.forEach(function (e) {
-              t[e.Node] = new r.u().fromArray(e.Matrix.a)
+              t[e.Node] = new Module_62.u().fromArray(e.Matrix.a)
             })
           } else {
-            t[e$Objects$PoseI$PoseNode.Node] = new r.u().fromArray(e$Objects$PoseI$PoseNode.Matrix.a)
+            t[e$Objects$PoseI$PoseNode.Node] = new Module_62.u().fromArray(e$Objects$PoseI$PoseNode.Matrix.a)
           }
         }
       }
@@ -1518,8 +1518,8 @@ var j = function () {
         var a = e$GlobalSettings$AmbientColor$value[1]
         var o = e$GlobalSettings$AmbientColor$value[2]
         if (0 !== i || 0 !== a || 0 !== o) {
-          var s = new r.g(i, a, o)
-          n.add(new r.a(s, 1))
+          var s = new Module_62.g(i, a, o)
+          n.add(new Module_62.a(s, 1))
         }
       }
     },
@@ -1631,26 +1631,26 @@ var j = function () {
       }
     },
     genGeometry: function (e, t, n, i) {
-      var a = new r.e()
+      var a = new Module_62.e()
       if (e.attrName) {
         a.name = e.attrName
       }
       var o = this.parseGeoNode(e, t)
       var s = this.genBuffers(o)
-      var l = new r.m(s.vertex, 3)
+      var l = new Module_62.m(s.vertex, 3)
       l.applyMatrix4(i)
       a.setAttribute("position", l)
       if (s.colors.length > 0) {
-        a.setAttribute("color", new r.m(s.colors, 3))
+        a.setAttribute("color", new Module_62.m(s.colors, 3))
       }
       if (t) {
-        a.setAttribute("skinIndex", new r.N(s.weightsIndices, 4))
-        a.setAttribute("skinWeight", new r.m(s.vertexWeights, 4))
+        a.setAttribute("skinIndex", new Module_62.N(s.weightsIndices, 4))
+        a.setAttribute("skinWeight", new Module_62.m(s.vertexWeights, 4))
         a.FBX_Deformer = t
       }
       if (s.normal.length > 0) {
-        var c = new r.t().getNormalMatrix(i)
-        var u = new r.m(s.normal, 3)
+        var c = new Module_62.t().getNormalMatrix(i)
+        var u = new Module_62.m(s.normal, 3)
         u.applyNormalMatrix(c)
         a.setAttribute("normal", u)
       }
@@ -1659,7 +1659,7 @@ var j = function () {
         if (0 === t) {
           n = "uv"
         }
-        a.setAttribute(n, new r.m(s.uvs[t], 2))
+        a.setAttribute(n, new Module_62.m(s.uvs[t], 2))
       })
       if (o.material && "AllSame" !== o.material.mappingType) {
         var h = s.materialIndex[0]
@@ -1934,7 +1934,7 @@ var j = function () {
         vertexPositions: u
       }
       var f = this.genBuffers(p)
-      var m = new r.m(f.vertex, 3)
+      var m = new Module_62.m(f.vertex, 3)
       m.name = a || n.attrName
       m.applyMatrix4(i)
       e.morphAttributes.position.push(m)
@@ -2019,15 +2019,15 @@ var j = function () {
     parseNurbsGeometry: function (e) {
       if (undefined === G) {
         console.error("THREE.FBXLoader: The loader relies on NURBSCurve for any nurbs present in the model. Nurbs will show up as empty geometry.")
-        return new r.e()
+        return new Module_62.e()
       }
       var t = parseInt(e.Order)
       if (isNaN(t)) {
         console.error("THREE.FBXLoader: Invalid Order %s given for geometry ID: %s", e.Order, e.id)
-        return new r.e()
+        return new Module_62.e()
       }
       for (var n, i, a = t - 1, /* [auto-meaningful-name] */e$KnotVector$a = e.KnotVector.a, s = [], /* [auto-meaningful-name] */e$Points$a = e.Points.a, c = 0, /* [auto-meaningful-name] */e$Points$a$length = e$Points$a.length; c < e$Points$a$length; c += 4) {
-        s.push(new r.P().fromArray(e$Points$a, c))
+        s.push(new Module_62.P().fromArray(e$Points$a, c))
       }
       if ("Closed" === e.Form) {
         s.push(s[0])
@@ -2043,8 +2043,8 @@ var j = function () {
       h.forEach(function (e, t) {
         e.toArray(d, 3 * t)
       })
-      var p = new r.e()
-      p.setAttribute("position", new r.d(d, 3))
+      var p = new Module_62.e()
+      p.setAttribute("position", new Module_62.d(d, 3))
       return p
     }
   }
@@ -2135,7 +2135,7 @@ var j = function () {
                       return void console.warn("THREE.FBXLoader: Encountered a unused curve.", a)
                     }
                     var c = {
-                      modelName: u.attrName ? r.D.sanitizeNodeName(u.attrName) : "",
+                      modelName: u.attrName ? Module_62.D.sanitizeNodeName(u.attrName) : "",
                       ID: u.id,
                       initialPosition: [0, 0, 0],
                       initialRotation: [0, 0, 0],
@@ -2150,7 +2150,7 @@ var j = function () {
                       }
                     })
                     if (!c.transform) {
-                      c.transform = new r.u()
+                      c.transform = new Module_62.u()
                     }
                     if ("PreRotation" in u) {
                       c.preRotation = u.PreRotation.value
@@ -2174,7 +2174,7 @@ var j = function () {
                   var /* [auto-meaningful-name] */t$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID = t.get(t$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID).parents[0].ID
                   var /* [auto-meaningful-name] */t$getT$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID$parents0$ID = t.get(t$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID).parents[0].ID
                   c = {
-                    modelName: (u = e.Objects.Model[t$getT$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID$parents0$ID]).attrName ? r.D.sanitizeNodeName(u.attrName) : "",
+                    modelName: (u = e.Objects.Model[t$getT$getT$getT$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID$parents0$ID$parents0$ID$parents0$ID]).attrName ? Module_62.D.sanitizeNodeName(u.attrName) : "",
                     morphName: e.Objects.Deformer[t$getA$ID$parents$filterFunctionEReturnUndefinedE$relationship0$ID].attrName
                   }
                   l[o] = c
@@ -2210,18 +2210,18 @@ var j = function () {
       e.layer.forEach(function (e) {
         t = t.concat(n.generateTracks(e))
       })
-      return new r.b(e.name, -1, t)
+      return new Module_62.b(e.name, -1, t)
     },
     generateTracks: function (e) {
       var t = []
-      var n = new r.O()
-      var i = new r.E()
-      var a = new r.O()
+      var n = new Module_62.O()
+      var i = new Module_62.E()
+      var a = new Module_62.O()
       if (e.transform) {
         e.transform.decompose(n, i, a)
       }
       n = n.toArray()
-      i = new r.k().setFromQuaternion(i, e.eulerOrder).toArray()
+      i = new Module_62.k().setFromQuaternion(i, e.eulerOrder).toArray()
       a = a.toArray()
       if (undefined !== e.T && Object.keys(e.T.curves).length > 0) {
         var o = this.generateVectorTrack(e.modelName, e.T.curves, n, "position")
@@ -2252,34 +2252,34 @@ var j = function () {
     generateVectorTrack: function (e, t, n, i) {
       var a = this.getTimesForAllAxes(t)
       var o = this.getKeyframeTrackValues(a, t, n)
-      return new r.Q(e + "." + i, a, o)
+      return new Module_62.Q(e + "." + i, a, o)
     },
     generateRotationTrack: function (e, t, n, i, a, o) {
       if (undefined !== t.x) {
         this.interpolateRotations(t.x)
-        t.x.values = t.x.values.map(r.s.degToRad)
+        t.x.values = t.x.values.map(Module_62.s.degToRad)
       }
       if (undefined !== t.y) {
         this.interpolateRotations(t.y)
-        t.y.values = t.y.values.map(r.s.degToRad)
+        t.y.values = t.y.values.map(Module_62.s.degToRad)
       }
       if (undefined !== t.z) {
         this.interpolateRotations(t.z)
-        t.z.values = t.z.values.map(r.s.degToRad)
+        t.z.values = t.z.values.map(Module_62.s.degToRad)
       }
       var s = this.getTimesForAllAxes(t)
       var l = this.getKeyframeTrackValues(s, t, n)
       if (undefined !== i) {
-        (i = i.map(r.s.degToRad)).push(o)
-        i = new r.k().fromArray(i)
-        i = new r.E().setFromEuler(i)
+        (i = i.map(Module_62.s.degToRad)).push(o)
+        i = new Module_62.k().fromArray(i)
+        i = new Module_62.E().setFromEuler(i)
       }
       if (undefined !== a) {
-        (a = a.map(r.s.degToRad)).push(o)
-        a = new r.k().fromArray(a)
-        a = new r.E().setFromEuler(a).inverse()
+        (a = a.map(Module_62.s.degToRad)).push(o)
+        a = new Module_62.k().fromArray(a)
+        a = new Module_62.E().setFromEuler(a).inverse()
       }
-      for (var c = new r.E(), u = new r.k(), h = [], d = 0; d < l.length; d += 3) {
+      for (var c = new Module_62.E(), u = new Module_62.k(), h = [], d = 0; d < l.length; d += 3) {
         u.set(l[d], l[d + 1], l[d + 2], o)
         c.setFromEuler(u)
         if (undefined !== i) {
@@ -2290,7 +2290,7 @@ var j = function () {
         }
         c.toArray(h, d / 3 * 4)
       }
-      return new r.F(e + ".quaternion", s, h)
+      return new Module_62.F(e + ".quaternion", s, h)
     },
     generateMorphTrack: function (e) {
       var /* [auto-meaningful-name] */e$DeformPercent$curves$morph = e.DeformPercent.curves.morph
@@ -2298,7 +2298,7 @@ var j = function () {
         return e / 100
       })
       var a = n.getObjectByName(e.modelName).morphTargetDictionary[e.morphName]
-      return new r.y(e.modelName + ".morphTargetInfluences[" + a + "]", e$DeformPercent$curves$morph.times, i)
+      return new Module_62.y(e.modelName + ".morphTargetInfluences[" + a + "]", e$DeformPercent$curves$morph.times, i)
     },
     getTimesForAllAxes: function (e) {
       var t = []
@@ -2889,7 +2889,7 @@ var j = function () {
       if (i >= 0) {
         t = t.slice(0, i)
       }
-      return r.r.decodeText(new Uint8Array(t))
+      return Module_62.r.decodeText(new Uint8Array(t))
     }
   }
   h.prototype = {
@@ -2929,35 +2929,35 @@ var j = function () {
       return e
     }(f, r.buffer, a, o)
   }
-  var v = new r.k()
-  var g = new r.O()
+  var v = new Module_62.k()
+  var g = new Module_62.O()
   function y(e) {
     var t
-    var n = new r.u()
-    var i = new r.u()
-    var a = new r.u()
-    var o = new r.u()
-    var s = new r.u()
-    var l = new r.u()
-    var c = new r.u()
-    var u = new r.u()
-    var h = new r.u()
-    var d = new r.u()
-    var p = new r.u()
+    var n = new Module_62.u()
+    var i = new Module_62.u()
+    var a = new Module_62.u()
+    var o = new Module_62.u()
+    var s = new Module_62.u()
+    var l = new Module_62.u()
+    var c = new Module_62.u()
+    var u = new Module_62.u()
+    var h = new Module_62.u()
+    var d = new Module_62.u()
+    var p = new Module_62.u()
     var f = e.inheritType ? e.inheritType : 0
     if (e.translation) {
       n.setPosition(g.fromArray(e.translation))
     }
     if (e.preRotation) {
-      (t = e.preRotation.map(r.s.degToRad)).push(e.eulerOrder)
+      (t = e.preRotation.map(Module_62.s.degToRad)).push(e.eulerOrder)
       i.makeRotationFromEuler(v.fromArray(t))
     }
     if (e.rotation) {
-      (t = e.rotation.map(r.s.degToRad)).push(e.eulerOrder)
+      (t = e.rotation.map(Module_62.s.degToRad)).push(e.eulerOrder)
       a.makeRotationFromEuler(v.fromArray(t))
     }
     if (e.postRotation) {
-      (t = e.postRotation.map(r.s.degToRad)).push(e.eulerOrder)
+      (t = e.postRotation.map(Module_62.s.degToRad)).push(e.eulerOrder)
       o.makeRotationFromEuler(v.fromArray(t))
     }
     if (e.scale) {
@@ -2979,29 +2979,29 @@ var j = function () {
       d = e.parentMatrixWorld
     }
     var m = i.multiply(a).multiply(o)
-    var y = new r.u()
+    var y = new Module_62.u()
     d.extractRotation(y)
-    new r.u().copyPosition(d)
-    var x = new r.u()
+    new Module_62.u().copyPosition(d)
+    var x = new Module_62.u()
     x.getInverse(y).multiply(d)
-    var b = new r.u()
+    var b = new Module_62.u()
     if (0 === f) {
       b.copy(y).multiply(m).multiply(x).multiply(s)
     } else if (1 === f) {
       b.copy(y).multiply(x).multiply(m).multiply(s)
     } else {
-      var _ = new r.u().getInverse(s)
-      var w = new r.u().multiply(x).multiply(_)
+      var _ = new Module_62.u().getInverse(s)
+      var w = new Module_62.u().multiply(x).multiply(_)
       b.copy(y).multiply(m).multiply(w).multiply(s)
     }
-    var M = new r.u().getInverse(h)
-    var S = new r.u().getInverse(l)
-    var T = new r.u()
+    var M = new Module_62.u().getInverse(h)
+    var S = new Module_62.u().getInverse(l)
+    var T = new Module_62.u()
     T.copy(n).multiply(u).multiply(h).multiply(i).multiply(a).multiply(o).multiply(M).multiply(c).multiply(l).multiply(s).multiply(S)
-    var E = new r.u().copyPosition(T)
-    var A = new r.u().copy(d).multiply(E)
+    var E = new Module_62.u().copyPosition(T)
+    var A = new Module_62.u().copy(d).multiply(E)
     p.copyPosition(A)
-    return T = new r.u().multiply(p).multiply(b)
+    return T = new Module_62.u().multiply(p).multiply(b)
   }
   function x(e) {
     var t = ["ZYX", "YZX", "XZY", "ZXY", "YXZ", "XYZ"]
@@ -3019,7 +3019,7 @@ var j = function () {
     if (undefined === n) {
       n = e.byteLength
     }
-    return r.r.decodeText(new Uint8Array(e, t, n))
+    return Module_62.r.decodeText(new Uint8Array(e, t, n))
   }
   function w(e, t, n) {
     return e.slice(0, t).concat(n).concat(e.slice(t))

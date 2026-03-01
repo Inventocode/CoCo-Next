@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
 function x(e, t, n) {
   return n ? e[0] === t[0] : e[0] === t[0] && e[1] === t[1]
 }

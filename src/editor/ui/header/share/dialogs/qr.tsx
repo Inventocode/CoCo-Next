@@ -5,20 +5,20 @@
  */
 
 import { Ge } from "../../../../../../unrestored/shared/1571/2636/index__part-9"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1036_index from "../../../../../../unrestored/shared/1571/2636/1036/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_133 from "../../../../../../unrestored/shared/1571/2636/133"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_197_index from "../../../../../../unrestored/shared/1571/2636/197/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
+import /* [auto-meaningful-name] */Module_1036 from /* 1036 */"../../../../../../unrestored/shared/1571/2636/1036/index"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"../../../../../../unrestored/shared/1571/2636/133"
+import * as /* [auto-meaningful-name] */Module_197 from /* 197 */"../../../../../../unrestored/shared/1571/2636/197/index"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../../unrestored/shared/1571/2636/190"
 import * as Tools from "../../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../../unrestored/shared/1571/2636/97"
 import * as CommonActions from "../../../../redux/common/actions"
 import * as Components from "../../../../../shared/ui/components"
 import { CoCoDialog, IconFont } from "../../../../../shared/ui/components"
 import classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
@@ -34,7 +34,7 @@ export function ShareQRDialog({ visible, onClose }: {
   const id = useSelector((state) => state.project.id)
   const userInfo = useSelector((state) => state.common.userInfo)
   const projectSource = useSelector((state) => state.project.projectSource)
-  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  const { formatMessage } = Module_710.a()
   const dispatch = useDispatch()
   const [d, p] = useState(false)
   const [isLinkCopied, setIsLinkCopied] = useState(false)
@@ -45,7 +45,7 @@ export function ShareQRDialog({ visible, onClose }: {
   const isPublishedRef = useRef(false)
 
   const track = useCallback((isSuccess: boolean, failReason: string) => {
-    $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkShare", {
+    Module_141.a("WorkShare", {
       workId: id,
       workName: projectShareInfo.title,
       workTag: "",
@@ -64,7 +64,7 @@ export function ShareQRDialog({ visible, onClose }: {
     }
     try {
       await CommonActions.promisify(dispatch, CommonActions.publishWorkToH5Action(projectShareInfo))
-      if ($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id)) {
+      if (Module_97.a(id)) {
         setLink(Tools.getPlayerH5Url(id))
       }
       setIsPublishing(false)
@@ -92,7 +92,7 @@ export function ShareQRDialog({ visible, onClose }: {
   }, [dispatch, formatMessage, isPublishing, onClose, id, projectShareInfo, track, F])
 
   function handleChangeWorkCover() {
-    return (handleChangeWorkCover = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+    return (handleChangeWorkCover = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent1
@@ -117,7 +117,7 @@ export function ShareQRDialog({ visible, onClose }: {
                 break
               }
               e.next = 11
-              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e(e$sent)
+              return Module_197.e(e$sent)
             case 11:
               e$sent1 = e.sent
               e$sent1$url = e$sent1.url
@@ -150,7 +150,7 @@ export function ShareQRDialog({ visible, onClose }: {
   }
 
   async function handleCopyLink() {
-    if ($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.a(link)) {
+    if (Module_190.a(link)) {
       setIsLinkCopied(true)
       dispatch(CommonActions.showCommonToastInfoAction({
         message: formatMessage({
@@ -211,7 +211,7 @@ export function ShareQRDialog({ visible, onClose }: {
         </span>
       </div>}
       <div className={styles.qrCode}>
-        <$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1036_index
+        <Module_1036
           value={link}
           size={168}
           level="M"
@@ -296,7 +296,7 @@ export function ShareQRDialog({ visible, onClose }: {
         <div className={styles.changePoster}>
           <Components.B
             onChange={handleChangeWorkCover}
-            accept={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_133.f}
+            accept={Module_133.f}
           >{formatMessage({ id: "Publish.changeWorkCover" })}</Components.B>
         </div>
       </div>

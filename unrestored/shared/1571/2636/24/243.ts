@@ -13,9 +13,9 @@ export { l as d }
 export { u as g }
 export { d as c }
 export { p as a }
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
-import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
+import * as /* [auto-meaningful-name] */OtJson1 from /* 31 */"ot-json1"
 function a(e) {
   for (var t = [], n = [], i = [], a = [
       {
@@ -26,7 +26,7 @@ function a(e) {
     var c = 0
     for (c = 0; c < a.length; c++) {
       var l = a[c]
-      var u = $$_25_index.a(l.path)
+      var u = Module_25.a(l.path)
       var d = l.op
       var p = 0
       var f = function () {
@@ -44,12 +44,12 @@ function a(e) {
             if ("p" === a || "r" === a) {
               t.push({
                 path: o.slice(0),
-                op: $$_11.a({}, a, e[a])
+                op: Module_11.a({}, a, e[a])
               })
             } else if ("i" === a || "d" === a) {
               n.push({
                 path: o.slice(0),
-                op: $$_11.a({}, a, e[a])
+                op: Module_11.a({}, a, e[a])
               })
             } else {
               if ("es" !== a && "ena" !== a) {
@@ -57,7 +57,7 @@ function a(e) {
               }
               i.push({
                 path: o.slice(0),
-                op: $$_11.a({}, a, e[a])
+                op: Module_11.a({}, a, e[a])
               })
             }
           })

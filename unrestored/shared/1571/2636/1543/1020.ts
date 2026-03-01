@@ -6,29 +6,29 @@
 
 "use strict"
 
-import { forwardRef, useRef, useImperativeHandle, useEffect } from "react"
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
-import * as /* [auto-meaningful-name] */$_378 from "./378"
-var s = forwardRef(function (e, t) {
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
+import * as /* [auto-meaningful-name] */Module_378 from /* 378 */"./378"
+var s = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
   var /* [auto-meaningful-name] */e$children = e.children
-  var c = useRef()
-  useImperativeHandle(t, function () {
+  var c = React.useRef()
+  React.useImperativeHandle(t, function () {
     return {}
   })
-  var u = useRef(false)
-  if (!u.current && $_378.a()) {
+  var u = React.useRef(false)
+  if (!u.current && Module_378.a()) {
     c.current = e$getContainer()
     u.current = true
   }
-  useEffect(function () {
+  React.useEffect(function () {
     if (!(null === e$didUpdate || undefined === e$didUpdate)) {
       e$didUpdate(e)
     }
   })
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       var /* [auto-meaningful-name] */c$current
       var /* [auto-meaningful-name] */c$current$parentNode

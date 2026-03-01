@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./62/index")
+var r = require(/* 62 */"./62/index")
 var i = {
   childContextTypes: true,
   contextType: true,

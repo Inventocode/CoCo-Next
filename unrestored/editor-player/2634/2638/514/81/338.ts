@@ -7,8 +7,8 @@
 "use strict"
 
 var n
-var o = require("./247")
-var i = require("./63")
+var o = require(/* 247 */"./247")
+var i = require(/* 63 */"./63")
 !function (t) {
   t[t.L = 0] = "L"
   t[t.M = 1] = "M"

@@ -7,11 +7,10 @@
 "use strict"
 
 var r
-import * as o from "./27"
-import * as i from "./39"
-import { useContext, useEffect, useRef } from "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 if (navigator.platform.match("Mac")) {
   r = "osx"
 } else {
@@ -25,10 +24,10 @@ if (navigator.platform.match("Mac")) {
 }
 var c = function () {
   function e() {
-    o.a(this, e)
+    Module_27.a(this, e)
     this.handlers = new Array()
   }
-  i.a(e, [
+  Module_39.a(e, [
     {
       key: "addHandler",
       value: function (e) {
@@ -75,8 +74,8 @@ function d(e) {
   var /* [auto-meaningful-name] */e$keys = e.keys
   var /* [auto-meaningful-name] */e$callback = e.callback
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var o = useContext(l)
-  useEffect(function () {
+  var o = React.useContext(l)
+  React.useEffect(function () {
     if (!e$disabled) {
       var e = {
         keys: e$keys,
@@ -94,8 +93,8 @@ function p(e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$useCapture = e.useCapture
   var /* [auto-meaningful-name] */e$emitter = e.emitter
-  var o = useRef(new c())
-  useEffect(function () {
+  var o = React.useRef(new c())
+  React.useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */document$activeElement = document.activeElement
       if (document$activeElement) {

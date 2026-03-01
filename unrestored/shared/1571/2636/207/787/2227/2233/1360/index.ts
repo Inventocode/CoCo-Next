@@ -7,7 +7,7 @@
 !function () {
   "use strict"
 
-  var e = require("./2234")
+  var e = require(/* 2234 */"./2234")
   function r(e) {
     return null != e && "object" === typeof e && "string" === typeof e.type
   }
@@ -69,7 +69,7 @@
       }
     }
   }
-  exports.version = require("./2235").version
+  exports.version = require(/* 2235 */"./2235").version
   exports.Visitor = i
   exports.visit = function (e, t, n) {
     new i(t, n).visit(e)

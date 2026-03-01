@@ -8,10 +8,10 @@
 
 import { d } from "./index__part-0"
 import { O, w } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_1543_229 from "../1543/229"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { useState, useEffect, useRef, useCallback, useMemo, useLayoutEffect, useImperativeHandle, createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$$_1543_482 from "../1543/482"
+import * as /* [auto-meaningful-name] */Module_229 from /* 229 */"../1543/229"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_482 from /* 482 */"../1543/482"
 function T(e, t) {
   for (var n = 0; n < t.length; n++) {
     var r = t[n]
@@ -193,13 +193,13 @@ function R(e, t) {
   return r
 }
 function k(e, t, n) {
-  var o = N(useState(e), 2)
+  var o = N(React.useState(e), 2)
   var i = o[0]
   var a = o[1]
-  var s = N(useState(null), 2)
+  var s = N(React.useState(null), 2)
   var c = s[0]
   var l = s[1]
-  useEffect(function () {
+  React.useEffect(function () {
     var r = function (e, t, n) {
       var r
       var o
@@ -253,8 +253,8 @@ function x(e) {
 }
 var D = "object" === ("undefined" === typeof navigator ? "undefined" : x(navigator)) && /Firefox/i.test(navigator.userAgent)
 var M = function (e, t) {
-  var n = useRef(false)
-  var o = useRef(null)
+  var n = React.useRef(false)
+  var o = React.useRef(null)
   function i() {
     clearTimeout(o.current)
     n.current = true
@@ -262,7 +262,7 @@ var M = function (e, t) {
       n.current = false
     }, 50)
   }
-  var a = useRef({
+  var a = React.useRef({
     top: e,
     bottom: t
   })
@@ -463,18 +463,18 @@ function Y(e, t) {
   var T = H(e, L)
   var I = !(false === e$virtual || !e$height || !e$itemHeight)
   var N = I && e$data && e$itemHeight * e$data.length > e$height
-  var R = W(useState(0), 2)
+  var R = W(React.useState(0), 2)
   var x = R[0]
   var B = R[1]
-  var U = W(useState(false), 2)
+  var U = W(React.useState(false), 2)
   var Y = U[0]
   var K = U[1]
   var q = Classnames(o, e$className)
   var X = e$data || V
-  var Q = useRef()
-  var Z = useRef()
-  var J = useRef()
-  var $ = useCallback(function (e) {
+  var Q = React.useRef()
+  var Z = React.useRef()
+  var J = React.useRef()
+  var $ = React.useCallback(function (e) {
     return "function" === typeof e$itemKey ? e$itemKey(e) : null === e || undefined === e ? undefined : e[e$itemKey]
   }, [e$itemKey])
   var ee = {
@@ -493,20 +493,20 @@ function Y(e, t) {
       return n
     })
   }
-  var ne = useRef({
+  var ne = React.useRef({
     start: 0,
     end: X.length
   })
-  var re = useRef()
+  var re = React.useRef()
   var oe = W(k(X, $), 1)[0]
   re.current = oe
   var ie = W(function (e, t, n) {
-    var o = A(useState(0), 2)
+    var o = A(React.useState(0), 2)
     var i = o[0]
     var a = o[1]
-    var s = useRef(new Map())
-    var c = useRef(new S())
-    var l = useRef(0)
+    var s = React.useRef(new Map())
+    var c = React.useRef(new S())
+    var l = React.useRef(0)
     function u() {
       l.current += 1
       var /* [auto-meaningful-name] */l$current = l.current
@@ -514,7 +514,7 @@ function Y(e, t) {
         if (l$current === l.current) {
           s.current.forEach(function (e, t) {
             if (e && e.offsetParent) {
-              var n = $$_1543_482.a(e)
+              var n = Module_482.a(e)
               var /* [auto-meaningful-name] */n$offsetHeight = n.offsetHeight
               if (c.current.get(t) !== n$offsetHeight) {
                 c.current.set(t, n.offsetHeight)
@@ -555,7 +555,7 @@ function Y(e, t) {
   var se = ie[1]
   var ce = ie[2]
   var le = ie[3]
-  var ue = useMemo(function () {
+  var ue = React.useMemo(function () {
     if (!I) {
       return {
         scrollHeight: undefined,
@@ -608,21 +608,21 @@ function Y(e, t) {
   ne.current.start = ue$start
   ne.current.end = ue$end
   var me = ue$scrollHeight - e$height
-  var ge = useRef(me)
+  var ge = React.useRef(me)
   ge.current = me
   var _e = x <= 0
   var ve = x >= me
   var be = M(_e, ve)
   var ye = W(function (e, t, n, o) {
-    var i = useRef(0)
-    var a = useRef(null)
-    var s = useRef(null)
-    var c = useRef(false)
+    var i = React.useRef(0)
+    var a = React.useRef(null)
+    var s = React.useRef(null)
+    var c = React.useRef(false)
     var l = M(t, n)
     return [
       function (t) {
         if (e) {
-          $$_1543_229.a.cancel(a.current)
+          Module_229.a.cancel(a.current)
           var /* [auto-meaningful-name] */t$deltaY = t.deltaY
           i.current += t$deltaY
           s.current = t$deltaY
@@ -630,7 +630,7 @@ function Y(e, t) {
             if (!D) {
               t.preventDefault()
             }
-            a.current = $$_1543_229.a(function () {
+            a.current = Module_229.a(function () {
               var e = c.current ? 10 : 1
               o(i.current * e)
               i.current = 0
@@ -652,10 +652,10 @@ function Y(e, t) {
   var Oe = ye[1]
   !function (e, t, n) {
     var o
-    var i = useRef(false)
-    var a = useRef(0)
-    var s = useRef(null)
-    var c = useRef(null)
+    var i = React.useRef(false)
+    var a = React.useRef(0)
+    var s = React.useRef(null)
+    var c = React.useRef(null)
     var l = function (e) {
       if (i.current) {
         var t = Math.ceil(e.touches[0].pageY)
@@ -692,7 +692,7 @@ function Y(e, t) {
         s.current.removeEventListener("touchend", u)
       }
     }
-    useLayoutEffect(function () {
+    React.useLayoutEffect(function () {
       if (e) {
         t.current.addEventListener("touchstart", d)
       }
@@ -708,7 +708,7 @@ function Y(e, t) {
       deltaY: e
     }), true)
   })
-  useLayoutEffect(function () {
+  React.useLayoutEffect(function () {
     function e(e) {
       if (I) {
         e.preventDefault()
@@ -724,10 +724,10 @@ function Y(e, t) {
     }
   }, [I])
   var we = function (e, t, n, o, i, a, s, c) {
-    var l = useRef()
+    var l = React.useRef()
     return function (r) {
       if (null !== r && undefined !== r) {
-        $$_1543_229.a.cancel(l.current)
+        Module_229.a.cancel(l.current)
         if ("number" === typeof r) {
           s(r)
         } else if (r && "object" === j(r)) {
@@ -775,7 +775,7 @@ function Y(e, t) {
                   s(S)
                 }
               }
-              l.current = $$_1543_229.a(function () {
+              l.current = Module_229.a(function () {
                 if (g) {
                   a()
                 }
@@ -794,12 +794,12 @@ function Y(e, t) {
       J$current.delayHidden()
     }
   })
-  useImperativeHandle(t, function () {
+  React.useImperativeHandle(t, function () {
     return {
       scrollTo: we
     }
   })
-  useLayoutEffect(function () {
+  React.useLayoutEffect(function () {
     if (e$onVisibleChange) {
       var e = X.slice(ue$start, ue$end + 1)
       e$onVisibleChange(e, X)
@@ -810,7 +810,7 @@ function Y(e, t) {
     return e.slice(t, n + 1).map(function (e, n) {
       var a = i(e, t + n, {})
       var c = a$getKey(e)
-      return createElement(w, {
+      return React.createElement(w, {
         key: c,
         setRef: function (t) {
           return o(e, t)
@@ -828,12 +828,12 @@ function Y(e, t) {
       }
     }
   }
-  return createElement("div", P({
+  return React.createElement("div", P({
     style: F(F({}, e$style), {}, {
       position: "relative"
     }),
     className: q
-  }, T), createElement(b, {
+  }, T), React.createElement(b, {
     className: "".concat(o, "-holder"),
     style: Te,
     ref: Q,
@@ -846,13 +846,13 @@ function Y(e, t) {
         e$onScroll(e)
       }
     }
-  }, createElement(d, {
+  }, React.createElement(d, {
     prefixCls: o,
     height: ue$scrollHeight,
     offset: ue$offset,
     onInnerResize: se,
     ref: Z
-  }, Ce)), I && createElement(O, {
+  }, Ce)), I && React.createElement(O, {
     ref: J,
     prefixCls: o,
     scrollTop: x,
@@ -870,7 +870,7 @@ function Y(e, t) {
     }
   }))
 }
-var K = forwardRef(Y)
+var K = React.forwardRef(Y)
 K.displayName = "List"
 var q = K
 export { q }

@@ -11,29 +11,34 @@ export function markExternals(config: UnpackConfig, modules: ModuleMap): void {
             continue
         }
         module.external = movedPath == "." ? "." : `/${config.output.srcPath}${movedPath}`
-        module.path = `/${config.output.srcUnrestoredPath}/${movedPath}`.split("/").filter(Boolean)
+        module.path = `/${config.output.srcPath}/${movedPath}.unrestored`.split("/").filter(Boolean)
         module.moved = true
     }
     const externals = [
-        ...Object.entries(config.nodePolyfill ?? {}).map(([key, name]): External => ({
+        ...Object.entries(config?.bundle?.nodePolyfill ?? {}).map(([key, name]): External => ({
             key,
             source: `webpack-polyfill:${name}`
         })),
-        ...(config.externals ?? [])
+        ...(
+            Array.isArray(config.externals) ?
+            config.externals :
+            Object.entries(config.externals ?? {}).map(([key, name]): External => ({
+                key,
+                source: name
+            }))
+        )
     ]
     for (const external of externals) {
         for (const module of Object.values(modules)) {
             if ("key" in external) {
-                const { key, source, exportsNameMap, namedImport } = external
+                const { key, source } = external
                 if (module.key != key) {
                     continue
                 }
                 module.external = source
-                Object.assign(module.exportsNameMap, exportsNameMap)
-                module.namedImport ||= namedImport
             } else {
-                const { searchPath, replace, exportsNameMap, namedImport } = external
-                let path: string =  module.path.join("/")
+                const { searchPath, replace } = external
+                let path =  module.unrestoredPath.join("/")
                 if (path.endsWith("-" + String(module.key).replace(/\//g, "_"))) {
                     path = path.slice(0, -String(module.key).length - 1)
                 }
@@ -42,8 +47,6 @@ export function markExternals(config: UnpackConfig, modules: ModuleMap): void {
                 }
                 if (searchPath.test(path)) {
                     module.external = path.replace(searchPath, replace)
-                    Object.assign(module.exportsNameMap, exportsNameMap)
-                    module.namedImport ||= namedImport
                 }
             }
         }

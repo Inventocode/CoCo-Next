@@ -7,7 +7,7 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$_781 from "./781"
+import * as /* [auto-meaningful-name] */Module_781 from /* 781 */"./781"
 function i(e, t) {
   if ("function" !== typeof t && null !== t) {
     throw new TypeError("Super expression must either be null or a function")
@@ -20,7 +20,7 @@ function i(e, t) {
     }
   })
   if (t) {
-    $_781.a(e, t)
+    Module_781.a(e, t)
   }
 }
 export default i

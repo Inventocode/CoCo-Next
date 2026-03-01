@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_34_465 from "../34/465"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_465 from /* 465 */"../34/465"
 function _(t) {
   if (!t) {
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length > 1 ? arguments$length - 1 : 0), n = 1; n < arguments$length; n++) {
       i[n - 1] = arguments[n]
     }
-    throw $$_34_465.a(Error, i)
+    throw Module_465.a(Error, i)
   }
 }
 function m(t, e) {
@@ -60,7 +60,7 @@ var W = function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0
     var i = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
     var s = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.major = 0
     this.minor = 0
     this.revision = 0
@@ -68,7 +68,7 @@ var W = function () {
     this.minor = i
     this.revision = s
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "toString",
       value: function () {
@@ -112,7 +112,7 @@ function st(t) {}
 function rt(t) {}
 var ot = function () {
   function t(e) {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_stack = []
     this.m_count = 0
     this.m_stack = tt(e, function (t) {
@@ -120,7 +120,7 @@ var ot = function () {
     })
     this.m_count = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Reset",
       value: function () {
@@ -208,11 +208,11 @@ var It = function () {
   function t() {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0
     var i = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.x = e
     this.y = i
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Clone",
       value: function () {
@@ -602,7 +602,7 @@ It.s_t3 = new It()
 var Gt = new It(0, 0)
 var Dt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length), s = 0; s < arguments$length; s++) {
       i[s] = arguments[s]
     }
@@ -617,7 +617,7 @@ var Dt = function () {
       this.data = new Float32Array([r, o])
     }
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "x",
       get: function () {
@@ -840,7 +840,7 @@ var Dt = function () {
 }()
 var Ft = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length), s = 0; s < arguments$length; s++) {
       i[s] = arguments[s]
     }
@@ -856,7 +856,7 @@ var Ft = function () {
       this.data = new Float32Array([r, o, a])
     }
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "x",
       get: function () {
@@ -987,11 +987,11 @@ Ft.ZERO = new Ft(0, 0, 0)
 Ft.s_t0 = new Ft()
 var Lt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.ex = new It(1, 0)
     this.ey = new It(0, 1)
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Clone",
       value: function () {
@@ -1209,13 +1209,13 @@ var Lt = function () {
 Lt.IDENTITY = new Lt()
 var Rt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.data = new Float32Array([1, 0, 0, 0, 1, 0, 0, 0, 1])
     this.ex = new Ft(this.data.subarray(0, 3))
     this.ey = new Ft(this.data.subarray(3, 6))
     this.ez = new Ft(this.data.subarray(6, 9))
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Clone",
       value: function () {
@@ -1386,7 +1386,7 @@ Rt.IDENTITY = new Rt()
 var jt = function () {
   function t() {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.s = 0
     this.c = 1
     if (e) {
@@ -1394,7 +1394,7 @@ var jt = function () {
       this.c = Math.cos(e)
     }
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Clone",
       value: function () {
@@ -1493,11 +1493,11 @@ var jt = function () {
 jt.IDENTITY = new jt()
 var Tt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.p = new It()
     this.q = new jt()
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Clone",
       value: function () {
@@ -1620,7 +1620,7 @@ var Tt = function () {
 Tt.IDENTITY = new Tt()
 var Ot = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.localCenter = new It()
     this.c0 = new It()
     this.c = new It()
@@ -1628,7 +1628,7 @@ var Ot = function () {
     this.a = 0
     this.alpha0 = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Clone",
       value: function () {
@@ -1677,14 +1677,14 @@ var Ot = function () {
   return t
 }()
 var qt = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
 }
 var zt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_start = Date.now()
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Reset",
       value: function () {
@@ -1702,12 +1702,12 @@ var zt = function () {
 }()
 var Et = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_count = 0
     this.m_min_count = 0
     this.m_max_count = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "GetCount",
       value: function () {
@@ -1762,13 +1762,13 @@ var Et = function () {
 }()
 var Nt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_buffer = It.MakeArray(2)
     this.m_vertices = this.m_buffer
     this.m_count = 0
     this.m_radius = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -1843,13 +1843,13 @@ var Nt = function () {
 }()
 var Jt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.metric = 0
     this.count = 0
     this.indexA = [0, 0, 0]
     this.indexB = [0, 0, 0]
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Reset",
       value: function () {
@@ -1863,14 +1863,14 @@ var Jt = function () {
 }()
 var Xt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.proxyA = new Nt()
     this.proxyB = new Nt()
     this.transformA = new Tt()
     this.transformB = new Tt()
     this.useRadii = false
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Reset",
       value: function () {
@@ -1887,13 +1887,13 @@ var Xt = function () {
 }()
 var Zt = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.pointA = new It()
     this.pointB = new It()
     this.distance = 0
     this.iterations = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Reset",
       value: function () {
@@ -1908,7 +1908,7 @@ var Zt = function () {
   return t
 }()
 var Ut = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.proxyA = new Nt()
   this.proxyB = new Nt()
   this.transformA = new Tt()
@@ -1916,7 +1916,7 @@ var Ut = function t() {
   this.translationB = new It()
 }
 var Wt = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.point = new It()
   this.normal = new It()
   this.lambda = 0
@@ -1932,7 +1932,7 @@ function Ht() {
 }
 var $t = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.wA = new It()
     this.wB = new It()
     this.w = new It()
@@ -1940,7 +1940,7 @@ var $t = function () {
     this.indexA = 0
     this.indexB = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -1958,7 +1958,7 @@ var $t = function () {
 }()
 var te = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_v1 = new $t()
     this.m_v2 = new $t()
     this.m_v3 = new $t()
@@ -1968,7 +1968,7 @@ var te = function () {
     this.m_vertices[1] = this.m_v2
     this.m_vertices[2] = this.m_v3
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "ReadCache",
       value: function (t, e, i, n, s) {
@@ -2330,7 +2330,7 @@ function xe(t, e) {
 var Be
 var Se = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this._key = 0
     this._key_invalid = false
     this._indexA = 0
@@ -2338,7 +2338,7 @@ var Se = function () {
     this._typeA = 0
     this._typeB = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "key",
       get: function () {
@@ -2398,10 +2398,10 @@ var Se = function () {
 }()
 var Ae = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.cf = new Se()
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -2427,13 +2427,13 @@ var Ae = function () {
 }()
 var Ce = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.localPoint = new It()
     this.normalImpulse = 0
     this.tangentImpulse = 0
     this.id = new Ae()
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Reset",
       value: function () {
@@ -2473,14 +2473,14 @@ var Ce = function () {
 var be
 var ge = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.points = Ce.MakeArray(x)
     this.localNormal = new It()
     this.localPoint = new It()
     this.type = Be.e_unknown
     this.pointCount = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Reset",
       value: function () {
@@ -2515,12 +2515,12 @@ var ge = function () {
 }()
 var Ve = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.normal = new It()
     this.points = It.MakeArray(x)
     this.separations = it(x)
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Initialize",
       value: function (e, i, n, s, r) {
@@ -2610,11 +2610,11 @@ Ve.Initialize_s_clipPoint = new It();
 })(be || (be = {}))
 var ke = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.v = new It()
     this.id = new Ae()
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -2637,12 +2637,12 @@ var ke = function () {
 }()
 var Me = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.p1 = new It()
     this.p2 = new It()
     this.maxFraction = 1
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -2657,11 +2657,11 @@ var Me = function () {
 }()
 var Pe = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.normal = new It()
     this.fraction = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -2675,13 +2675,13 @@ var Pe = function () {
 }()
 var Ie = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.lowerBound = new It()
     this.upperBound = new It()
     this.m_cache_center = new It()
     this.m_cache_extent = new It()
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Copy",
       value: function (t) {
@@ -2871,7 +2871,7 @@ function Te(t) {
 var Oe = function () {
   function t() {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_id = 0
     this.aabb = new Ie()
     this._userData = null
@@ -2882,7 +2882,7 @@ var Oe = function () {
     this.moved = false
     this.m_id = e
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "userData",
       get: function () {
@@ -2913,13 +2913,13 @@ var Oe = function () {
 }()
 var qe = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_root = null
     this.m_freeList = null
     this.m_insertionCount = 0
     this.m_stack = new ot(256)
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Query",
       value: function (t, e) {
@@ -3396,20 +3396,20 @@ qe.s_node_id = 0
 qe.MoveProxy_s_fatAABB = new Ie()
 qe.MoveProxy_s_hugeAABB = new Ie()
 var Ee = function t(e, i) {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
   this.proxyA = e
   this.proxyB = i
 }
 var Ne = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_tree = new qe()
     this.m_proxyCount = 0
     this.m_moveBuffer = new Set()
     this.m_pairCount = 0
     this.m_pairBuffer = []
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "CreateProxy",
       value: function (t, e) {

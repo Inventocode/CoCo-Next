@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Redux from "redux"
-import * as /* [auto-meaningful-name] */$$_48_489 from "../48/489"
-import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
-import * as a from "../6"
-import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
-import * as /* [auto-meaningful-name] */$$_77 from "../77"
+import * as /* [auto-meaningful-name] */Redux from /* 156 */"redux"
+import * as /* [auto-meaningful-name] */Module_489 from /* 489 */"../48/489"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../738/66"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../18"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_type from /* 78 */"../../../../../src/shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */Module_77 from /* 77 */"../77"
 var p = window.localStorage.getItem("LANGUAGE") || navigator.language
 var f = {
   visible: false,
@@ -24,7 +24,7 @@ var f = {
   content: ""
 }
 var h = {
-  type: $$_18.e.camera,
+  type: Module_18.e.camera,
   visible: false,
   onClose: undefined,
   onConfirm: undefined
@@ -60,7 +60,7 @@ var b = {
 }
 var y = {
   visible: false,
-  selected: $$_18.f.CREATE_PROJECT
+  selected: Module_18.f.CREATE_PROJECT
 }
 var E = {
   visible: false,
@@ -84,7 +84,7 @@ function w(e) {
   }))
   return e
 }
-var C = $$_738_66.a.Record(a.a(a.a({
+var C = Module_66.a.Record(Module_6.a(Module_6.a({
   language: p,
   editAreaUpdatedAt: 0,
   previewAreaUpdatedAt: 0,
@@ -130,7 +130,7 @@ var C = $$_738_66.a.Record(a.a(a.a({
     visible: false,
     progress: 10
   },
-  consoleMessages: $$_738_66.a.List(),
+  consoleMessages: Module_66.a.List(),
   consoleHeight: 0,
   saving: false,
   widgetAttributeVisible: false,
@@ -144,7 +144,7 @@ var C = $$_738_66.a.Record(a.a(a.a({
   isHoverBlockArea: false,
   collAutoSave: false,
   historyArchiveId: "",
-  editPermission: $$_18.c.Edit,
+  editPermission: Module_18.c.Edit,
   historyDialogVisible: false,
   myExtensionWidgets: [],
   blockImageDialogInfo: {
@@ -168,14 +168,14 @@ var C = $$_738_66.a.Record(a.a(a.a({
   sliderImageDialogInfo: {
     visible: false,
     widgetId: "",
-    direction: $$_77.b.HORIZONTAL,
+    direction: Module_77.b.HORIZONTAL,
     handleImageFileId: "",
     handleImageRatio: 1.5,
-    handleImageDirection: $$_77.b.HORIZONTAL,
+    handleImageDirection: Module_77.b.HORIZONTAL,
     backgroundImageFileId: "",
-    backgroundImageDirection: $$_77.b.HORIZONTAL,
+    backgroundImageDirection: Module_77.b.HORIZONTAL,
     trackImageFileId: "",
-    trackImageDirection: $$_77.b.HORIZONTAL
+    trackImageDirection: Module_77.b.HORIZONTAL
   },
   switchImageDialogInfo: {
     visible: false,
@@ -211,15 +211,15 @@ var C = $$_738_66.a.Record(a.a(a.a({
   }
 }))()
 function T(e, t) {
-  return e.consoleMessages.push($$_738_66.a.Record(t.payload)())
+  return e.consoleMessages.push(Module_66.a.Record(t.payload)())
 }
 function S(e, t) {
   var /* [auto-meaningful-name] */t$payload = t.payload
-  return e.setIn(["gridStatus", "copiedContent"], a.a({}, t$payload))
+  return e.setIn(["gridStatus", "copiedContent"], Module_6.a({}, t$payload))
 }
 function A(e, t) {
   var /* [auto-meaningful-name] */t$payload = t.payload
-  return e.setIn(["gridStatus", "selectedContent"], a.a({}, t$payload))
+  return e.setIn(["gridStatus", "selectedContent"], Module_6.a({}, t$payload))
 }
 function I(e, t) {
   var /* [auto-meaningful-name] */t$payload$columnId = t.payload.columnId
@@ -247,7 +247,7 @@ function x(e, t) {
   var /* [auto-meaningful-name] */t$payload$widgetTypes = t.payload.widgetTypes
   return e.update("myExtensionWidgets", function (e) {
     return e.filter(function (e) {
-      return !t$payload$widgetTypes.includes($$_$$_$$_$$_$$_src_shared_widget_custom_type.c(e.type, true))
+      return !t$payload$widgetTypes.includes(Src_shared_widget_custom_type.c(e.type, true))
     })
   })
 }
@@ -255,7 +255,7 @@ function D(e, t) {
   var /* [auto-meaningful-name] */t$payload$name = t.payload.name
   return e.floatMiniIcons.temporaryIcons.find(function (e) {
     return e.name === t$payload$name
-  }) ? (console.error("float icon name existed!"), e) : e.setIn(["floatMiniIcons", "temporaryIcons"], [].concat($$_25_index.a(e.floatMiniIcons.temporaryIcons), [t.payload]))
+  }) ? (console.error("float icon name existed!"), e) : e.setIn(["floatMiniIcons", "temporaryIcons"], [].concat(Module_25.a(e.floatMiniIcons.temporaryIcons), [t.payload]))
 }
 function M(e, t) {
   var /* [auto-meaningful-name] */t$payload = t.payload
@@ -264,9 +264,9 @@ function M(e, t) {
   var s = e.floatMiniIcons.temporaryIcons.findIndex(function (e) {
     return e.name === t$payload$name
   })
-  return s >= 0 ? (e.floatMiniIcons.temporaryIcons.splice(s, 1, a.a(a.a({}, $$_$$_$$_$$_$$_src_editor_redux_common_actions.fh), t$payload$icon)), e.setIn(["floatMiniIcons", "temporaryIcons"], $$_25_index.a(e.floatMiniIcons.temporaryIcons))) : D(e, {
-    type: $$_$$_$$_$$_$$_src_editor_redux_common_actions.d,
-    payload: a.a(a.a({}, $$_$$_$$_$$_$$_src_editor_redux_common_actions.fh), t$payload$icon)
+  return s >= 0 ? (e.floatMiniIcons.temporaryIcons.splice(s, 1, Module_6.a(Module_6.a({}, Src_editor_redux_common_actions.fh), t$payload$icon)), e.setIn(["floatMiniIcons", "temporaryIcons"], Module_25.a(e.floatMiniIcons.temporaryIcons))) : D(e, {
+    type: Src_editor_redux_common_actions.d,
+    payload: Module_6.a(Module_6.a({}, Src_editor_redux_common_actions.fh), t$payload$icon)
   })
 }
 function L(e, t) {
@@ -285,7 +285,7 @@ function P(e, t) {
   if (a) {
     a.visible = t$payload$visible
   }
-  return e.setIn(["floatMiniIcons", "temporaryIcons"], $$_25_index.a(e.floatMiniIcons.temporaryIcons))
+  return e.setIn(["floatMiniIcons", "temporaryIcons"], Module_25.a(e.floatMiniIcons.temporaryIcons))
 }
 function B(e, t) {
   return e.setIn(["isProjectFinishedOpen"], t.payload)
@@ -294,160 +294,160 @@ var F = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : C
   var t = arguments.length > 1 ? arguments[1] : undefined
   switch (t.type) {
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.dd:
+    case Src_editor_redux_common_actions.dd:
       return e.set("language", t.payload.language)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Se:
+    case Src_editor_redux_common_actions.Se:
       return e.set("previewAreaUpdatedAt", Date.now())
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Qe:
+    case Src_editor_redux_common_actions.Qe:
       return e.set("editAreaUpdatedAt", Date.now())
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Re:
+    case Src_editor_redux_common_actions.Re:
       return e.set("extensionListUpdateAt", Date.now())
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.re:
-      return e.set("commonToastInfo", a.a({
+    case Src_editor_redux_common_actions.re:
+      return e.set("commonToastInfo", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.pc:
+    case Src_editor_redux_common_actions.pc:
       return e.set("commonToastInfo", {
         visible: false
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ec:
-      return e.set("confirmDialogInfo", a.a({
+    case Src_editor_redux_common_actions.Ec:
+      return e.set("confirmDialogInfo", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Wb:
+    case Src_editor_redux_common_actions.Wb:
       return e.set("confirmDialogInfo", m)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ke:
+    case Src_editor_redux_common_actions.Ke:
       return e.set("permissionDialogInfo", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Fc:
-      return e.set("iconLibraryDialog", a.a({
+    case Src_editor_redux_common_actions.Fc:
+      return e.set("iconLibraryDialog", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Yb:
+    case Src_editor_redux_common_actions.Yb:
       return e.set("iconLibraryDialog", _)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.nd:
+    case Src_editor_redux_common_actions.nd:
       return e.set("userInfoFetchDone", true)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.he:
+    case Src_editor_redux_common_actions.he:
       return e.set("userInfo", t.payload).set("userInfoFetchDone", true)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ae:
-      return e.set("importFailToastInfo", a.a({
+    case Src_editor_redux_common_actions.Ae:
+      return e.set("importFailToastInfo", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.xc:
-      return e.set("importFailToastInfo", a.a({}, v))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.De:
+    case Src_editor_redux_common_actions.xc:
+      return e.set("importFailToastInfo", Module_6.a({}, v))
+    case Src_editor_redux_common_actions.De:
       return e.set("stageToast", {
         visible: true,
         toast: t.payload.toast,
         showIcon: t.payload.showIcon || false
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.zc:
+    case Src_editor_redux_common_actions.zc:
       return e.set("stageToast", b)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.cd:
+    case Src_editor_redux_common_actions.cd:
       return e.setIn(["stageState", "isActorDragging"], t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Gc:
+    case Src_editor_redux_common_actions.Gc:
       return e.set("projectDialog", {
         visible: true,
         selected: t.payload.selected
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Zb:
-      return e.set("projectDialog", a.a({}, y))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Rd:
+    case Src_editor_redux_common_actions.Zb:
+      return e.set("projectDialog", Module_6.a({}, y))
+    case Src_editor_redux_common_actions.Rd:
       return e.set("isProjectModified", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Qd:
+    case Src_editor_redux_common_actions.Qd:
       return e.set("lastSavedTime", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Vd:
+    case Src_editor_redux_common_actions.Vd:
       return e.setIn(["projectSaveProgressDialog", "visible"], t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ud:
+    case Src_editor_redux_common_actions.Ud:
       return e.setIn(["projectSaveProgressDialog", "progress"], t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Xd:
+    case Src_editor_redux_common_actions.Xd:
       return e.set("saving", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.n:
+    case Src_editor_redux_common_actions.n:
       return e.set("consoleMessages", T(e, t))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Tb:
-      return e.set("consoleMessages", $$_738_66.a.List())
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.kd:
+    case Src_editor_redux_common_actions.Tb:
+      return e.set("consoleMessages", Module_66.a.List())
+    case Src_editor_redux_common_actions.kd:
       return e.set("consoleHeight", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.bc:
+    case Src_editor_redux_common_actions.bc:
       return e.set("signInDialogInfo", {
         visible: false
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ic:
+    case Src_editor_redux_common_actions.Ic:
       return e.set("signInDialogInfo", {
         visible: true,
         onSuccess: t.payload.onSuccess
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.be:
+    case Src_editor_redux_common_actions.be:
       return w(e.set("stageRulerVisible", t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ee:
+    case Src_editor_redux_common_actions.ee:
       return e.set("stageWidth", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.de:
+    case Src_editor_redux_common_actions.de:
       return e.set("stageVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ad:
+    case Src_editor_redux_common_actions.Ad:
       return e.set("isHoverBlockArea", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.gd:
+    case Src_editor_redux_common_actions.gd:
       return w(e.set("blockyToolboxPinned", t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ie:
+    case Src_editor_redux_common_actions.ie:
       return e.set("widgetAttributeVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ae:
+    case Src_editor_redux_common_actions.ae:
       return e.set("rightSideActiveMenu", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.td:
+    case Src_editor_redux_common_actions.td:
       return S(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.xd:
+    case Src_editor_redux_common_actions.xd:
       return A(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ud:
+    case Src_editor_redux_common_actions.ud:
       return I(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.wd:
+    case Src_editor_redux_common_actions.wd:
       return j(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.vd:
+    case Src_editor_redux_common_actions.vd:
       return N(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.rd:
+    case Src_editor_redux_common_actions.rd:
       return R(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.sd:
+    case Src_editor_redux_common_actions.sd:
       return e.setIn(["gridStatus", "isCustomWidth"], t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ce:
+    case Src_editor_redux_common_actions.ce:
       return e.set("stageScale", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.id:
+    case Src_editor_redux_common_actions.id:
       return e.set("collAutoSave", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.yd:
+    case Src_editor_redux_common_actions.yd:
       return e.set("historyArchiveId", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Od:
+    case Src_editor_redux_common_actions.Od:
       return e.set("editPermission", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ze:
+    case Src_editor_redux_common_actions.ze:
       return e.set("historyDialogVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ye:
-      return e.set("gridDialog", a.a({
+    case Src_editor_redux_common_actions.ye:
+      return e.set("gridDialog", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.wc:
-      return e.set("gridDialog", a.a({}, E))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ee:
-      return e.set("tableDataDialog", a.a({
+    case Src_editor_redux_common_actions.wc:
+      return e.set("gridDialog", Module_6.a({}, E))
+    case Src_editor_redux_common_actions.Ee:
+      return e.set("tableDataDialog", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ac:
-      return e.set("tableDataDialog", a.a({}, E))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.te:
-      return e.set("createTableDataDialog", a.a({
+    case Src_editor_redux_common_actions.Ac:
+      return e.set("tableDataDialog", Module_6.a({}, E))
+    case Src_editor_redux_common_actions.te:
+      return e.set("createTableDataDialog", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.rc:
-      return e.set("createTableDataDialog", a.a({}, O))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.je:
+    case Src_editor_redux_common_actions.rc:
+      return e.set("createTableDataDialog", Module_6.a({}, O))
+    case Src_editor_redux_common_actions.je:
       return e.set("widgetMallVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Wc:
+    case Src_editor_redux_common_actions.Wc:
       return e.set("myExtensionWidgets", t.payload.widgets)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.g:
+    case Src_editor_redux_common_actions.g:
       return k(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Oc:
+    case Src_editor_redux_common_actions.Oc:
       return x(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.hd:
+    case Src_editor_redux_common_actions.hd:
       return e.set("blockImageDialogInfo", {
         visible: t.payload.visible,
         imgSrc: t.payload.imgSrc
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Be:
+    case Src_editor_redux_common_actions.Be:
       return e.set("releaseInfoDialogVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ne:
+    case Src_editor_redux_common_actions.ne:
       return e.set("cloudDBGridDialogInfo", {
         widgetName: t.payload.widgetName,
         visible: t.payload.visible,
@@ -455,43 +455,43 @@ var F = function () {
         isProd: t.payload.isProd,
         callback: t.payload.callback
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.oe:
+    case Src_editor_redux_common_actions.oe:
       return e.set("cloudDBManagerDialogVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.pe:
+    case Src_editor_redux_common_actions.pe:
       return e.set("cloudDBPublishDialogInfo", {
         visible: t.payload.visible,
         type: t.payload.type,
         callback: t.payload.callback
       })
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Bd:
+    case Src_editor_redux_common_actions.Bd:
       return e.set("isOffLine", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Me:
-      return e.set("sliderImageDialogInfo", a.a({}, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ac:
+    case Src_editor_redux_common_actions.Me:
+      return e.set("sliderImageDialogInfo", Module_6.a({}, t.payload))
+    case Src_editor_redux_common_actions.ac:
       return e.set("richTextEditorDialogInfo", g)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Hc:
-      return e.set("richTextEditorDialogInfo", a.a({
+    case Src_editor_redux_common_actions.Hc:
+      return e.set("richTextEditorDialogInfo", Module_6.a({
         visible: true
       }, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ne:
-      return e.set("switchImageDialogInfo", a.a({}, t.payload))
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ge:
+    case Src_editor_redux_common_actions.Ne:
+      return e.set("switchImageDialogInfo", Module_6.a({}, t.payload))
+    case Src_editor_redux_common_actions.ge:
       return e.set("templateList", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.md:
+    case Src_editor_redux_common_actions.md:
       return e.set("courseList", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.ld:
+    case Src_editor_redux_common_actions.ld:
       return e.set("courseDialogVisible", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Wd:
+    case Src_editor_redux_common_actions.Wd:
       return e.set("projectSavePrompt", t.payload)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.d:
+    case Src_editor_redux_common_actions.d:
       return D(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Mc:
+    case Src_editor_redux_common_actions.Mc:
       return L(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Uc:
+    case Src_editor_redux_common_actions.Uc:
       return M(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.od:
+    case Src_editor_redux_common_actions.od:
       return P(e, t)
-    case $$_$$_$$_$$_$$_src_editor_redux_common_actions.Sd:
+    case Src_editor_redux_common_actions.Sd:
       return B(e, t)
     default:
       return e

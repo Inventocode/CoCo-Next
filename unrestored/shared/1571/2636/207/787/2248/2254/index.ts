@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../../500")
-var i = require("./2255/index")
-var o = require("./2289")
+var r = require(/* 500 */"../../500")
+var i = require(/* 2255 */"./2255/index")
+var o = require(/* 2289 */"./2289")
 module.exports = function () {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {}
   var t = new i(r({

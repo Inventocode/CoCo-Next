@@ -15,11 +15,11 @@ export { c as b }
 export { f as a }
 export { d as f }
 export { p as g }
-import * as r from "./19"
-import "./25"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
+import /* 25 */"./25"
 var i = {}
 function o() {
-  return r.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i
+  return Module_19.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i
 }
 function a() {
   var e = o()

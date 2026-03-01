@@ -6,6 +6,6 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */require$_2599_index$CopyToClipboard = require("./2599/index").CopyToClipboard
-require$_2599_index$CopyToClipboard.CopyToClipboard = require$_2599_index$CopyToClipboard
-module.exports = require$_2599_index$CopyToClipboard
+var /* [auto-meaningful-name] */require_2599_$_2599_index$CopyToClipboard = require(/* 2599 */"./2599/index").CopyToClipboard
+require_2599_$_2599_index$CopyToClipboard.CopyToClipboard = require_2599_$_2599_index$CopyToClipboard
+module.exports = require_2599_$_2599_index$CopyToClipboard

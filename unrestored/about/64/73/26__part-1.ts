@@ -7,7 +7,7 @@
 "use strict"
 
 var r
-import * as i from "./0"
+import * as /* [auto-meaningful-name] */Module_0 from /* 0 */"./0"
 !function (e) {
   e.MISSING_VALUE = "MISSING_VALUE"
   e.INVALID_VALUE = "INVALID_VALUE"
@@ -20,7 +20,7 @@ var o = function (e) {
     i.originalMessage = r
     return i
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   t.prototype.toString = function () {
     return "[formatjs Error: " + this.code + "] " + this.message
   }
@@ -30,21 +30,21 @@ var a = function (e) {
   function t(t, n, i, o) {
     return e.call(this, "Invalid values for \"" + t + "\": \"" + n + "\". Options are \"" + Object.keys(i).join("\", \"") + "\"", r.INVALID_VALUE, o) || this
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 var s = function (e) {
   function t(t, n, i) {
     return e.call(this, "Value for \"" + t + "\" must be of type " + n, r.INVALID_VALUE, i) || this
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 var u = function (e) {
   function t(t, n) {
     return e.call(this, "The intl string context variable \"" + t + "\" was not provided to the string \"" + n + "\"", r.MISSING_VALUE, n) || this
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 export { r }

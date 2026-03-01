@@ -4,7 +4,7 @@
  * 模块 ID：283
  */
 
-var r = require("./1120")
+var r = require(/* 1120 */"./1120")
 module.exports = function (e, t) {
   if ("function" !== typeof t && null !== t) {
     throw new TypeError("Super expression must either be null or a function")

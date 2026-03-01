@@ -4,5 +4,5 @@
  * 模块 ID：1266
  */
 
-var r = require("../../1774/1253/634")
+var r = require(/* 634 */"../../1774/1253/634")
 module.exports = /(?:ipad|iphone|ipod).*applewebkit/i.test(r)

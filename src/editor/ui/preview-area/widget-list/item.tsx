@@ -32,37 +32,37 @@ import { c_ } from "../../../../../unrestored/shared/1571/2636/index__part-80"
 import { __ } from "../../../../../unrestored/shared/1571/2636/index__part-81"
 import { tv } from "../../../../../unrestored/shared/1571/2636/index__part-85"
 var ev
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_682 from "../../../../../unrestored/shared/1571/2636/682"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_681 from "../../../../../unrestored/shared/1571/2636/681"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_680 from "../../../../../unrestored/shared/1571/2636/680"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_679 from "../../../../../unrestored/shared/1571/2636/679"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_688 from "../../../../../unrestored/shared/1571/2636/688"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_687 from "../../../../../unrestored/shared/1571/2636/687"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_678 from "../../../../../unrestored/shared/1571/2636/678"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_686 from "../../../../../unrestored/shared/1571/2636/686"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index from "../../../../../unrestored/shared/1571/2636/685/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index from "../../../../../unrestored/shared/1571/2636/684/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_683 from "../../../../../unrestored/shared/1571/2636/683"
+import * as /* [auto-meaningful-name] */Module_682 from /* 682 */"../../../../../unrestored/shared/1571/2636/682"
+import * as /* [auto-meaningful-name] */Module_681 from /* 681 */"../../../../../unrestored/shared/1571/2636/681"
+import * as /* [auto-meaningful-name] */Module_680 from /* 680 */"../../../../../unrestored/shared/1571/2636/680"
+import * as /* [auto-meaningful-name] */Module_679 from /* 679 */"../../../../../unrestored/shared/1571/2636/679"
+import * as /* [auto-meaningful-name] */Module_688 from /* 688 */"../../../../../unrestored/shared/1571/2636/688"
+import * as /* [auto-meaningful-name] */Module_687 from /* 687 */"../../../../../unrestored/shared/1571/2636/687"
+import * as /* [auto-meaningful-name] */Module_678 from /* 678 */"../../../../../unrestored/shared/1571/2636/678"
+import * as /* [auto-meaningful-name] */Module_686 from /* 686 */"../../../../../unrestored/shared/1571/2636/686"
+import * as /* [auto-meaningful-name] */Module_685 from /* 685 */"../../../../../unrestored/shared/1571/2636/685/index"
+import * as /* [auto-meaningful-name] */Module_684 from /* 684 */"../../../../../unrestored/shared/1571/2636/684/index"
+import * as /* [auto-meaningful-name] */Module_683 from /* 683 */"../../../../../unrestored/shared/1571/2636/683"
 import styles from "../../../../../unrestored/shared/1571/2636/196"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../unrestored/shared/1571/2636/238"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"../../../../../unrestored/shared/1571/2636/238"
 import * as BuiltInWidgetTypes from "../../../widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_type from "../../../../shared/widget/custom/type"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_widget_custom_load from "../../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_tools from "../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */Shared_widget_custom_type from "../../../../shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Shared_widget_custom_load from "../../../../shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Shared_tools from "../../../../shared/tools"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../../../../../unrestored/shared/1571/2636/1213"
 import * as Actions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../unrestored/shared/1571/2636/11"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../unrestored/shared/1571/2636/11"
 import classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_ui_language from "../../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Shared_ui_language from "../../../../shared/ui/language"
 import { useDispatch, useSelector } from "react-redux"
 import { IconFont } from "../../../../shared/ui/components/iconfont"
 import * as WidgetShop from "../../../../shared/widget/custom/shop"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_542 from "../../../../../unrestored/shared/1571/2636/542"
-var iv = [require("../../../../../unrestored/shared/1571/2636/543").a, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
+import * as /* [auto-meaningful-name] */Module_542 from /* 542 */"../../../../../unrestored/shared/1571/2636/542"
+var iv = [require(/* 543 */"../../../../../unrestored/shared/1571/2636/543").a, Module_542.a, "UNSAFE_EXTENSION_KANO_WAND_WIDGET"]
 
 const ConfigItem = React.memo(({
   icon, title, type, isMallExtensionWidget, isInvisibleWidget, widgetServerId
@@ -74,14 +74,14 @@ const ConfigItem = React.memo(({
   isInvisibleWidget: boolean
   widgetServerId?: number
 }) => {
-  const currentScreen = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
+  const currentScreen = Module_238.d()
   const dispatch = useDispatch()
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  const { formatMessage } = Module_710.a()
   const [menuVisible, setMenuVisible] = React.useState(false)
   const [bigImageVisible, setBigImageVisible] = React.useState(false)
   const [isMouseIn, setIsMouseIn] = React.useState(false)
   var R = React.useState(true)
-  var x = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
+  var x = Module_10.a(R, 2)
   var D = x[0]
   var M = x[1]
   const globalWidgetIds = useSelector((state) => state.project.globalWidgetIds)
@@ -111,7 +111,7 @@ const ConfigItem = React.memo(({
 
   let hasCanvasWidget = true
   if (!(type !== BuiltInWidgetTypes.ACTOR_WIDGET && type !== BuiltInWidgetTypes.BRUSH_WIDGET || !currentScreen)) {
-    hasCanvasWidget = currentScreen.widgetIds.some((id) => $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(id)?.type === BuiltInWidgetTypes.CANVAS_WIDGET)
+    hasCanvasWidget = currentScreen.widgetIds.some((id) => Module_9.Bb(id)?.type === BuiltInWidgetTypes.CANVAS_WIDGET)
   }
 
   const removeShopWidget = async () => {
@@ -137,7 +137,7 @@ const ConfigItem = React.memo(({
   }
 
   return (
-    <$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
+    <Module_1213.a
       placement="rightTop"
       trigger="hover"
       onVisibleChange={(event) => {
@@ -160,7 +160,7 @@ const ConfigItem = React.memo(({
       }
     >
       <div
-        className={classnames(styles.widgetItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
+        className={classnames(styles.widgetItem, Module_11.a({}, styles.disabled, !hasCanvasWidget || !D))}
         draggable
         onMouseEnter={() => {
           if (isMallExtensionWidget && !isInvisibleWidget) {
@@ -198,11 +198,11 @@ const ConfigItem = React.memo(({
               })
             } else {
               var n
-              var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(type)
+              var o = Module_9.Db(type)
               if (!o) {
                 return
               }
-              var i = null === (n = $$_$$_$$_$$_shared_ui_language.c(language, o.title)) || undefined === n ? undefined : n.toString()
+              var i = null === (n = Shared_ui_language.c(language, o.title)) || undefined === n ? undefined : n.toString()
               t = formatMessage({
                 id: "StageToast.addLimitedWidgetTips"
               }, {
@@ -234,7 +234,7 @@ const ConfigItem = React.memo(({
         }}
         data-widget-type={type}
       >
-        {$$_$$_$$_$$_shared_tools.X(icon) ? (
+        {Shared_tools.X(icon) ? (
           isInvisibleWidget ? (
             <img className={styles.icon} src={icon} alt={title} draggable={false} />
           ) : (
@@ -250,7 +250,7 @@ const ConfigItem = React.memo(({
         )}
         <span className={styles.title}>{title}</span>
       </div>
-    </$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a>
+    </Module_1213.a>
   )
 })
 
@@ -268,13 +268,13 @@ export const WidgetCategoryItem = React.memo<{
   title: string
   defaultExpanded: boolean
 }>(({ configList, title, defaultExpanded }) => {
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  const { formatMessage } = Module_710.a()
   var i = useSelector((state) => state.common.userInfo?.id)
   var a = React.useState(undefined === defaultExpanded || defaultExpanded)
-  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(a, 2)
+  var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = "newWidgetCategory_".concat($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f, "_").concat(i)
+  var u = "newWidgetCategory_".concat(Module_53.f, "_").concat(i)
   var d = m()
   var p = !i || !d[title]
   function m() {
@@ -282,12 +282,12 @@ export const WidgetCategoryItem = React.memo<{
     return e ? JSON.parse(e) : {}
   }
   return configList.length ? (
-    <div className={classnames(styles.categoryItem, $$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, styles.expanded, c))}>
+    <div className={classnames(styles.categoryItem, Module_11.a({}, styles.expanded, c))}>
       <div
         className={classnames(styles.categoryHeader, window.innerWidth <= 1300 && styles.categoryMinHeader)}
         onClick={() => {
           l(!c)
-          if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(title) && i && !d[title]) {
+          if (Module_53.k.includes(title) && i && !d[title]) {
             var e = m()
             e[title] = 1
             localStorage.setItem(u, JSON.stringify(e))
@@ -298,7 +298,7 @@ export const WidgetCategoryItem = React.memo<{
           <h3 className={classnames(styles.categoryTitle)}>
             {formatMessage({ id: title })}
           </h3>
-          {$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.k.includes(title) && p && <div className={styles.newTips}>New</div>}
+          {Module_53.k.includes(title) && p && <div className={styles.newTips}>New</div>}
         </div>
         <span className={styles.icon}>
           <IconFont type="icon-fold" />
@@ -320,7 +320,7 @@ export const WidgetCategoryItem = React.memo<{
                   }
                   type={type}
                   widgetServerId={widgetServerId}
-                  isMallExtensionWidget={$$_$$_$$_$$_shared_widget_custom_type.isSafeExtensions(type)}
+                  isMallExtensionWidget={Shared_widget_custom_type.isSafeExtensions(type)}
                   isInvisibleWidget={isInvisibleWidget}
                 />
               )
@@ -332,47 +332,47 @@ export const WidgetCategoryItem = React.memo<{
   ) : null
 })
 
-$$_$$_$$_$$_shared_widget_custom_load.s(r)
-$$_$$_$$_$$_shared_widget_custom_load.s(o)
-$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_680)
-$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_682)
-$$_$$_$$_$$_shared_widget_custom_load.s(a)
-$$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_681)
-$$_$$_$$_$$_shared_widget_custom_load.s(i)
-$$_$$_$$_$$_shared_widget_custom_load.s(s)
-$$_$$_$$_$$_shared_widget_custom_load.s(c)
-$$_$$_$$_$$_shared_widget_custom_load.s(l)
-$$_$$_$$_$$_shared_widget_custom_load.s(u)
-$$_$$_$$_$$_shared_widget_custom_load.s(d)
-$$_$$_$$_$$_shared_widget_custom_load.s(p)
-var cv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_679, tv)
-var lv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_686)
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.UI, [Cp, Lp, cv, Kp, tf, uf, _f, Tf, xf, Wf, Jf, ah, lv])
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.STAGE, [wh, xh, zh])
-var uv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_678)
-var dv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_688)
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.MEDIA, [Xh, nm, uv, dv])
-var pv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_687)
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SENSOR, [im, cm, pv])
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATE, [hm, ym, wm])
-var fv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_683)
-var hv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_684_index)
-var mv = $$_$$_$$_$$_shared_widget_custom_load.s($$_$$_$$_$$_$$_unrestored_shared_1571_2636_685_index)
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.NETWORK, [Sm, Pm, fv, hv, mv])
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.LOCAL_STORAGE, [qm, eg, gg])
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_STORAGE, [Og, zm])
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_SPACE, [c_, __])
-$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Nb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATABASE, [cg])
+Shared_widget_custom_load.s(r)
+Shared_widget_custom_load.s(o)
+Shared_widget_custom_load.s(Module_680)
+Shared_widget_custom_load.s(Module_682)
+Shared_widget_custom_load.s(a)
+Shared_widget_custom_load.s(Module_681)
+Shared_widget_custom_load.s(i)
+Shared_widget_custom_load.s(s)
+Shared_widget_custom_load.s(c)
+Shared_widget_custom_load.s(l)
+Shared_widget_custom_load.s(u)
+Shared_widget_custom_load.s(d)
+Shared_widget_custom_load.s(p)
+var cv = Shared_widget_custom_load.s(Module_679, tv)
+var lv = Shared_widget_custom_load.s(Module_686)
+Module_9.Nb(Module_9.j.UI, [Cp, Lp, cv, Kp, tf, uf, _f, Tf, xf, Wf, Jf, ah, lv])
+Module_9.Nb(Module_9.j.STAGE, [wh, xh, zh])
+var uv = Shared_widget_custom_load.s(Module_678)
+var dv = Shared_widget_custom_load.s(Module_688)
+Module_9.Nb(Module_9.j.MEDIA, [Xh, nm, uv, dv])
+var pv = Shared_widget_custom_load.s(Module_687)
+Module_9.Nb(Module_9.j.SENSOR, [im, cm, pv])
+Module_9.Nb(Module_9.j.DATE, [hm, ym, wm])
+var fv = Shared_widget_custom_load.s(Module_683)
+var hv = Shared_widget_custom_load.s(Module_684)
+var mv = Shared_widget_custom_load.s(Module_685)
+Module_9.Nb(Module_9.j.NETWORK, [Sm, Pm, fv, hv, mv])
+Module_9.Nb(Module_9.j.LOCAL_STORAGE, [qm, eg, gg])
+Module_9.Nb(Module_9.j.CLOUD_STORAGE, [Og, zm])
+Module_9.Nb(Module_9.j.CLOUD_SPACE, [c_, __])
+Module_9.Nb(Module_9.j.DATABASE, [cg])
 export const BuiltInWidgetList = React.memo(() => {
-  var t = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.UI)
-  var n = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.STAGE)
-  var r = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.MEDIA)
-  var o = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.DATE)
-  var i = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SENSOR)
-  var a = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.LOCAL_STORAGE)
-  var s = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.CLOUD_SPACE)
-  var c = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.NETWORK)
-  var l = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.SOCIAL)
+  var t = Module_9.Eb(Module_9.j.UI)
+  var n = Module_9.Eb(Module_9.j.STAGE)
+  var r = Module_9.Eb(Module_9.j.MEDIA)
+  var o = Module_9.Eb(Module_9.j.DATE)
+  var i = Module_9.Eb(Module_9.j.SENSOR)
+  var a = Module_9.Eb(Module_9.j.LOCAL_STORAGE)
+  var s = Module_9.Eb(Module_9.j.CLOUD_SPACE)
+  var c = Module_9.Eb(Module_9.j.NETWORK)
+  var l = Module_9.Eb(Module_9.j.SOCIAL)
   return (
     <div className={styles.scrollBasic}>
       <WidgetCategoryItem

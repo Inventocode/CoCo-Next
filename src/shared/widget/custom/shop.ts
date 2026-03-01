@@ -4,8 +4,8 @@
  * 模块 ID：183
  */
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"../../../../unrestored/shared/1571/2636/64"
 import * as Type from "./type"
 import { axiosWithCredentials } from "../../utils/network/axios-with-credentials"
 import * as /* [auto-meaningful-name] */$$_$$_env from "../../env"
@@ -144,11 +144,11 @@ export async function remove(widgetsID: number[]): Promise<boolean> {
 }
 
 export function reportUse(type: string, userID?: number | undefined): void {
-  var widget: Internal.Widget | null = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(type)
+  var widget: Internal.Widget | null = Module_9.Db(type)
   if (widget) {
     let guestID
     if (!(userID || (guestID = localStorage.getItem("guestId")))) {
-      guestID = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a("GUEST")
+      guestID = Module_64.a("GUEST")
       localStorage.setItem("guestId", guestID)
     }
     let source: number = 1

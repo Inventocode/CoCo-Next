@@ -7,14 +7,14 @@
 import /* [auto-meaningful-name] */React from "react"
 import { useState, useRef, useEffect } from "react"
 import { addEditorIframe, checkUnsafeExtension, getWhitelist } from "../../../shared/player/audit"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_1042 from "../../../../unrestored/player/2635/2637/1042"
+import /* [auto-meaningful-name] */Unrestored_player_2635_2637_1042 from "../../../../unrestored/player/2635/2637/1042"
 import { IconFont } from "../../../shared/ui/components"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_738_index from "../../../../unrestored/shared/1571/2636/738/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_player_2635_2637_514_index from "../../../../unrestored/player/2635/2637/514/index"
+import * as /* [auto-meaningful-name] */Module_738 from /* 738 */"../../../../unrestored/shared/1571/2636/738/index"
+import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../../unrestored/shared/1571/2636/177"
+import * as /* [auto-meaningful-name] */Module_514 from /* 514 */"../../../../unrestored/player/2635/2637/514/index"
 import classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_68 from "../../../../unrestored/shared/1571/2636/68"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../../../unrestored/shared/1571/2636/68"
+import * as /* [auto-meaningful-name] */Shared_tools from "../../../shared/tools"
 import styles from "../../../../unrestored/player/2635/2637/531"
 
 function gatTransform(scale: number) {
@@ -35,12 +35,12 @@ export const WebH5Wrapper = React.memo(() => {
 
   async function load() {
     let workId = window.location.pathname.match(/\/player\/([^/]*)/)?.[1]
-    const searchParams = $$_$$_$$_shared_tools.N(window.location.href)
+    const searchParams = Shared_tools.parseURLSearchParamsToObject(window.location.href)
     if (searchParams.workId) {
       workId = searchParams.workId
     }
     if (workId) {
-      const bcmcUrl = (await $$_$$_$$_$$_unrestored_shared_1571_2636_177.g(workId, 0)).data.bcmc_url
+      const bcmcUrl = (await Module_177.g(workId, 0)).data.bcmc_url
       addEditorIframe(bcmcUrl)
       let bcmc = await (await fetch(bcmcUrl)).json()
       if (!(await getWhitelist()).includes(Number(workId))) {
@@ -51,7 +51,7 @@ export const WebH5Wrapper = React.memo(() => {
   }
 
   function handleMessage({ data }: MessageEvent) {
-    if (data.type === $$_$$_$$_$$_unrestored_shared_1571_2636_68.b.DEVICE_VIBRATE) {
+    if (data.type === Module_68.b.DEVICE_VIBRATE) {
       var n = Date.now() + data.data.duration
       if (H.current && H.current >= n) {
         return
@@ -63,12 +63,12 @@ export const WebH5Wrapper = React.memo(() => {
       }, data.data.duration)
       return void (H.current = n)
     }
-    if (data.type === $$_$$_$$_$$_unrestored_shared_1571_2636_68.b.DEVICE_NOT_VIBRATE) {
+    if (data.type === Module_68.b.DEVICE_NOT_VIBRATE) {
       window.clearTimeout(W.current)
       H.current = 0
       O(false)
     } else {
-      if (data.type === $$_$$_$$_$$_unrestored_shared_1571_2636_68.b.EMULATOR && "string" === typeof data.data.visiblePanel) {
+      if (data.type === Module_68.b.EMULATOR && "string" === typeof data.data.visiblePanel) {
         setPanelIsVisible(!!data.data.visiblePanel)
       }
     }
@@ -127,11 +127,11 @@ export const WebH5Wrapper = React.memo(() => {
       }}
     >
       <div className={classnames(E && styles.vibrate, styles.playerWrapper)}>
-        {playerProps && React.createElement($$_$$_$$_$$_unrestored_player_2635_2637_514_index.a, playerProps)}
+        {playerProps && React.createElement(Module_514.a, playerProps)}
       </div>
       <div className={classnames(E && styles.vibrate, styles.deviceFrame)} />
       <div className={styles.emulatorWrapper}>
-        <$$_$$_$$_$$_unrestored_shared_1571_2636_738_index.a messageWindow={window} />
+        <Module_738.a messageWindow={window} />
       </div>
     </div>
     <div
@@ -140,7 +140,7 @@ export const WebH5Wrapper = React.memo(() => {
         window.open(window.location.origin.replace(/\d+/g, ""), "_blank")
       }}
     >
-      <img src={$$_$$_$$_$$_unrestored_player_2635_2637_1042} className={styles.appUrlBtnImg} alt="" />
+      <img src={Unrestored_player_2635_2637_1042} className={styles.appUrlBtnImg} alt="" />
       <span>去CoCo制作</span>
       <IconFont type="icon-fold-left" className={styles.appUrlBtnIcon} />
     </div>

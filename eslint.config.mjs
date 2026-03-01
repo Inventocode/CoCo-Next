@@ -11,8 +11,7 @@ export default defineConfig([
   {
     files: [
       "src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
-      "unrestored/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
-      "src-unrestored/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
+      "unrestored/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
     ],
     languageOptions: {
       globals: globals.browser,
@@ -44,7 +43,7 @@ export default defineConfig([
   },
   {
     files: [
-      "src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}",
+      "src/**/*.{js,mjs,cjs,ts,mts,cts,jsx,tsx}"
     ],
     languageOptions: {
       globals: globals.browser,
@@ -54,7 +53,21 @@ export default defineConfig([
       transform
     },
     rules: {
-      "transform/use-meaningful-var-name": ["warn"],
+      "transform/use-meaningful-var-name": ["warn"]
+    }
+  },
+  {
+    files: [
+      "src/**/*.{jsx,tsx}"
+    ],
+    languageOptions: {
+      globals: globals.browser,
+      parser: tseslint.parser
+    },
+    plugins: {
+      transform
+    },
+    rules: {
       "transform/no-create-element": ["warn"]
     }
   }

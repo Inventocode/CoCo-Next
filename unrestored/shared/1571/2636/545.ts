@@ -6,19 +6,18 @@
 
 "use strict"
 
-import * as r from "./6"
-import * as o from "./11"
-import "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as p from "./90"
-import * as /* [auto-meaningful-name] */$_239 from "./239"
-import /* [auto-meaningful-name] */$_2391 from "./239"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"./90"
+import * as /* [auto-meaningful-name] */Module_239 from /* 239 */"./239"
+import /* [auto-meaningful-name] */Module_2391 from /* 239 */"./239"
 var _a
 _a = function (e) {
   var t = e.id
@@ -46,19 +45,19 @@ _a = function (e) {
   }
   return React1.createElement("div", {
     id: t,
-    "data-widget-type": $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
-    "data-role": $$_$$_$$_$$_src_editor_widget_builtIn_types.M,
-    className: Classnames1(p.b, $_2391.textWidget, o.a({}, $_2391.hide, !e$visible)),
+    "data-widget-type": Src_editor_widget_builtIn_types.H,
+    "data-role": Src_editor_widget_builtIn_types.M,
+    className: Classnames1(Module_90.b, Module_2391.textWidget, Module_11.a({}, Module_2391.hide, !e$visible)),
     onClick: function () {
       if (e$onClick) {
         e$onClick()
       }
     },
-    style: r.a(r.a({}, y), {}, {
+    style: Module_6.a(Module_6.a({}, y), {}, {
       position: "static"
     })
   }, React1.createElement("span", {
-    className: $_2391.content,
+    className: Module_2391.content,
     style: {
       display: e$attributes$lineClamp ? "-webkit-box" : undefined,
       lineClamp: e$attributes$lineClamp || undefined,

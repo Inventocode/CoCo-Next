@@ -4,9 +4,9 @@
  * 模块 ID：1666
  */
 
-var r = require("./1662/86")
-var o = require("./1686/838/index")
-var i = require("./1597/716")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 838 */"./1686/838/index")
+var i = require(/* 716 */"./1597/716")
 r({
   target: "Object",
   stat: true

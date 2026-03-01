@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.SliderController = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("../../123/293")
-var a = require("../../1022/579")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 293 */"../../123/293")
+var a = require(/* 579 */"../../1022/579")
 var s = function (e) {
   function t() {
     var t = e.call(this) || this
@@ -158,5 +158,5 @@ var s = function (e) {
     }
   }
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./2188/1127").Controller)
+}(require(/* 1127 */"./2188/1127").Controller)
 exports.SliderController = s

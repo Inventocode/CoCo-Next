@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as Yr from "./53"
-import * as Pp from "./95"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Module_95 from /* 95 */"./95"
 var Bp = [
   {
     type: "WidgetTitle",
@@ -28,7 +28,7 @@ var Bp = [
     type: "WidgetOpacity"
   }, {
     type: "Size",
-    sizeRange: [[Pp.m, Yr.o], [Pp.l, Yr.m]]
+    sizeRange: [[Module_95.m, Module_53.o], [Module_95.l, Module_53.m]]
   }, {
     type: "Coordinate"
   }

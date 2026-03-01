@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as press }
-import * as /* [auto-meaningful-name] */Animejs from "animejs"
+import * as /* [auto-meaningful-name] */Animejs from /* 205 */"animejs"
 function o(e) {
   return [
     Animejs.default({

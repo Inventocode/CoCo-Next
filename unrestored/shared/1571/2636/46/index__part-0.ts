@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
 var i = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.profileMap = new Map()
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "insertBlockProfile",
       value: function (e, t) {

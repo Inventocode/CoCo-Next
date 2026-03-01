@@ -11,77 +11,77 @@ import { qn } from "../../../../unrestored/shared/1571/2636/37/index__part-9"
 import { $r, uo, go } from "../../../../unrestored/shared/1571/2636/37/index__part-11"
 import { store } from "../store"
 var _o
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_22 from "../../../../unrestored/shared/1571/2636/37/22"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_276 from "../../../../unrestored/shared/1571/2636/276"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_111 from "../../../../unrestored/shared/1571/2636/37/111"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_42_index from "../../../../unrestored/shared/1571/2636/42/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_110 from "../../../../unrestored/shared/1571/2636/110"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_174 from "../../../../unrestored/shared/1571/2636/174"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_20_index from "../../../../unrestored/shared/1571/2636/20/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_392_index from "../../../../unrestored/shared/1571/2636/392/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_144 from "../../../../unrestored/shared/1571/2636/144"
+import * as /* [auto-meaningful-name] */Module_22 from /* 22 */"../../../../unrestored/shared/1571/2636/37/22"
+import * as /* [auto-meaningful-name] */Module_276 from /* 276 */"../../../../unrestored/shared/1571/2636/276"
+import * as /* [auto-meaningful-name] */Module_111 from /* 111 */"../../../../unrestored/shared/1571/2636/37/111"
+import * as /* [auto-meaningful-name] */Module_42 from /* 42 */"../../../../unrestored/shared/1571/2636/42/index"
+import * as /* [auto-meaningful-name] */Module_110 from /* 110 */"../../../../unrestored/shared/1571/2636/110"
+import * as /* [auto-meaningful-name] */Module_174 from /* 174 */"../../../../unrestored/shared/1571/2636/174"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../../../unrestored/shared/1571/2636/20/index"
+import * as /* [auto-meaningful-name] */Module_392 from /* 392 */"../../../../unrestored/shared/1571/2636/392/index"
+import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"../../../../unrestored/shared/1571/2636/144"
 import * as CustomWidgetRestrict from "../../../shared/widget/custom/restrict"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_375 from "../../../../unrestored/shared/1571/2636/97/375"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_48_345 from "../../../../unrestored/shared/1571/2636/48/345"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_410 from "../../../../unrestored/shared/1571/2636/410"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_515 from "../../../../unrestored/shared/1571/2636/37/515"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_147 from "../../../../unrestored/shared/1571/2636/147"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_219_index from "../../../../unrestored/shared/1571/2636/37/219/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_37_376 from "../../../../unrestored/shared/1571/2636/37/376"
+import * as /* [auto-meaningful-name] */Module_375 from /* 375 */"../../../../unrestored/shared/1571/2636/97/375"
+import * as /* [auto-meaningful-name] */Module_345 from /* 345 */"../../../../unrestored/shared/1571/2636/48/345"
+import * as /* [auto-meaningful-name] */Module_410 from /* 410 */"../../../../unrestored/shared/1571/2636/410"
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_37_515 from "../../../../unrestored/shared/1571/2636/37/515"
+import * as /* [auto-meaningful-name] */Module_147 from /* 147 */"../../../../unrestored/shared/1571/2636/147"
+import * as /* [auto-meaningful-name] */Module_219 from /* 219 */"../../../../unrestored/shared/1571/2636/37/219/index"
+import * as /* [auto-meaningful-name] */Module_376 from /* 376 */"../../../../unrestored/shared/1571/2636/37/376"
 import * as CustomWidgetShop from "../../../shared/widget/custom/shop"
 import * as CustomWidgetStorage from "../../../shared/widget/custom/storage"
 import * as LoadCustomWidget from "../../../shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_127 from "../../../../unrestored/shared/1571/2636/127"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_145 from "../../../../unrestored/shared/1571/2636/145"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../unrestored/shared/1571/2636/97"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_tools from "../../../shared/tools"
+import * as /* [auto-meaningful-name] */Module_127 from /* 127 */"../../../../unrestored/shared/1571/2636/127"
+import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"../../../../unrestored/shared/1571/2636/145"
+import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */Shared_tools from "../../../shared/tools"
 import { oTHelper } from "../../../../unrestored/shared/1571/2636/49"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_24_index from "../../../../unrestored/shared/1571/2636/24/index"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"../../../../unrestored/shared/1571/2636/24/index"
 import * as Language from "../../../shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_64 from "../../../../unrestored/shared/1571/2636/64"
-import * as /* [auto-meaningful-name] */$$_$$_widget_builtIn_types from "../../widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_305 from "../../../../unrestored/shared/1571/2636/305"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_215 from "../../../../unrestored/shared/1571/2636/215"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_328 from "../../../../unrestored/shared/1571/2636/328"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_553 from "../../../../unrestored/shared/1571/2636/553"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_197_index from "../../../../unrestored/shared/1571/2636/197/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_207_139 from "../../../../unrestored/shared/1571/2636/207/139"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../unrestored/shared/1571/2636/26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../unrestored/shared/1571/2636/297"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_627 from "../../../../unrestored/shared/1571/2636/627"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"../../../../unrestored/shared/1571/2636/64"
+import * as /* [auto-meaningful-name] */Widget_builtIn_types from "../../widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_305 from /* 305 */"../../../../unrestored/shared/1571/2636/305"
+import * as /* [auto-meaningful-name] */Module_215 from /* 215 */"../../../../unrestored/shared/1571/2636/215"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_328 from /* 328 */"../../../../unrestored/shared/1571/2636/328"
+import * as /* [auto-meaningful-name] */Module_553 from /* 553 */"../../../../unrestored/shared/1571/2636/553"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */Module_197 from /* 197 */"../../../../unrestored/shared/1571/2636/197/index"
+import * as /* [auto-meaningful-name] */Module_139 from /* 139 */"../../../../unrestored/shared/1571/2636/207/139"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */Module_297 from /* 297 */"../../../../unrestored/shared/1571/2636/297"
+import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../../unrestored/shared/1571/2636/177"
+import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
 import * as Terser from "terser"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2680_index from "../../../../unrestored/shared/1571/2636/2680/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../unrestored/shared/1571/2636/11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */Module_2680 from /* 2680 */"../../../../unrestored/shared/1571/2636/2680/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../unrestored/shared/1571/2636/11"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrestored/shared/1571/2636/7"
 import * as ReduxSagaEffects from "../../../../unrestored/shared/1571/2636/48/3/index"
 import RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_100 from "../../../../unrestored/shared/1571/2636/100"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_47 from "../../../../unrestored/shared/1571/2636/47"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"../../../../unrestored/shared/1571/2636/100"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../../../unrestored/shared/1571/2636/47"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../unrestored/shared/1571/2636/53"
 import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as CustomWidgetType from "../../../shared/widget/custom/type"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "./actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_738_66 from "../../../../unrestored/shared/1571/2636/738/66"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../unrestored/shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../../../../unrestored/shared/1571/2636/738/66"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../unrestored/shared/1571/2636/25/index"
 import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_27 from "../../../../unrestored/shared/1571/2636/27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_39 from "../../../../unrestored/shared/1571/2636/39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../../../../unrestored/shared/1571/2636/27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../../../unrestored/shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
 import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "classnames"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_81 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_shared_ui_components from "../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */Classnames from "classnames"
+import /* [auto-meaningful-name] */Classnames1 from "classnames"
+import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../shared/ui/components"
 import { CoCoDialog } from "../../../shared/ui/components"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_266 from "../../../../unrestored/shared/1571/2636/266"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_2661 from "../../../../unrestored/shared/1571/2636/266"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_188 from "../../../../unrestored/shared/1571/2636/188"
+import * as /* [auto-meaningful-name] */Module_266 from /* 266 */"../../../../unrestored/shared/1571/2636/266"
+import /* [auto-meaningful-name] */Module_2661 from /* 266 */"../../../../unrestored/shared/1571/2636/266"
+import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"../../../../unrestored/shared/1571/2636/188"
 var No = function (e) {
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
@@ -110,20 +110,20 @@ var No = function (e) {
     withPortal={true}
     maskClosable={false}
     mask={g}
-    className={$$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialog, e$className, e$denyText && $$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogSecondary)}
+    className={Classnames1(Module_2661.dialog, e$className, e$denyText && Module_2661.dialogSecondary)}
   >
-    <$$_$$_$$_$$_unrestored_shared_1571_2636_188.a>
-      <$$_$$_$$_$$_unrestored_shared_1571_2636_188.b
+    <Module_188.a>
+      <Module_188.b
         keys="enter"
         callback={_}
       />
-    </$$_$$_$$_$$_unrestored_shared_1571_2636_188.a>
+    </Module_188.a>
     <h3>{e$title}</h3>
     <span>{e$content}</span>
     <div
-      className={$$_$$_$$_$$_unrestored_shared_1571_2636_81($$_$$_$$_$$_unrestored_shared_1571_2636_2661.dialogButtons)}
+      className={Classnames1(Module_2661.dialogButtons)}
     >
-      {p && <$$_$$_$$_shared_ui_components.d
+      {p && <Shared_ui_components.d
         type="light"
         onClick={function () {
           if (e$onCancel) {
@@ -132,46 +132,46 @@ var No = function (e) {
         }}
       >
         {e$cancelText}
-      </$$_$$_$$_shared_ui_components.d>}
-      {e$denyText && <$$_$$_$$_shared_ui_components.d
+      </Shared_ui_components.d>}
+      {e$denyText && <Shared_ui_components.d
         onClick={function () {
           if (e$onDeny) {
             e$onDeny()
           }
         }}
-        className={$$_$$_$$_$$_unrestored_shared_1571_2636_2661.denyButton}
+        className={Module_2661.denyButton}
       >
         {e$denyText}
-      </$$_$$_$$_shared_ui_components.d>}
-      {h && <$$_$$_$$_shared_ui_components.d
+      </Shared_ui_components.d>}
+      {h && <Shared_ui_components.d
         type="primary"
         danger={e$isDangerous}
         onClick={_}
       >
         {e$allowText}
-      </$$_$$_$$_shared_ui_components.d>}
+      </Shared_ui_components.d>}
     </div>
   </CoCoDialog>
 }
 var Ro = new (function () {
   function e() {
-    $$_$$_$$_$$_unrestored_shared_1571_2636_27.a(this, e)
+    Module_27.a(this, e)
     this.boxQueue = []
     this.currentBox = null
   }
-  $$_$$_$$_$$_unrestored_shared_1571_2636_39.a(e, [
+  Module_39.a(e, [
     {
       key: "appendDialog",
       value: function (e) {
         var t = this
         var n = document.createElement("div")
-        var r = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a("dialog")
+        var r = Module_64.a("dialog")
         n.id = r
         var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
         var /* [auto-meaningful-name] */e$onCancel = e.onCancel
         var /* [auto-meaningful-name] */e$onClose = e.onClose
         var c = function () {
-          var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+          var e = Module_7.a(RegeneratorRuntime.mark(function e() {
             return RegeneratorRuntime.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
@@ -196,7 +196,7 @@ var Ro = new (function () {
           }
         }()
         var l = function () {
-          var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+          var e = Module_7.a(RegeneratorRuntime.mark(function e() {
             return RegeneratorRuntime.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
@@ -221,7 +221,7 @@ var Ro = new (function () {
           }
         }()
         var u = function () {
-          var e = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+          var e = Module_7.a(RegeneratorRuntime.mark(function e() {
             return RegeneratorRuntime.wrap(function (e) {
               for (;;) {
                 switch (e.prev = e.next) {
@@ -245,7 +245,7 @@ var Ro = new (function () {
             return e.apply(this, arguments)
           }
         }()
-        var d = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, e), {}, {
+        var d = Module_6.a(Module_6.a({}, e), {}, {
           onConfirm: c,
           onClose: u,
           onCancel: l
@@ -339,7 +339,7 @@ function ti() {
       switch (t.prev = t.next) {
         case 0:
           t.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           t$sent = t.sent
           t.next = 5
@@ -368,7 +368,7 @@ function ni(e) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           o$sent = o.sent
           n = e.map(function (e) {
@@ -413,7 +413,7 @@ function ri(e, t) {
       switch (a.prev = a.next) {
         case 0:
           a.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           a$sent = a.sent
           r = Language.c(a$sent, t) ? Language.c(a$sent, t) : t
@@ -455,7 +455,7 @@ function oi(e, t) {
       switch (a.prev = a.next) {
         case 0:
           a.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           a$sent = a.sent
           r = Language.c(a$sent, t)
@@ -498,7 +498,7 @@ function ii() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
+          return ReduxSagaEffects.f(Module_22.r)
         case 2:
           if (!r.sent) {
             r.next = 21
@@ -507,8 +507,8 @@ function ii() {
           r.prev = 4
           r.next = 7
           return ReduxSagaEffects.a({
-            dicts: ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.g),
-            tables: ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.j)
+            dicts: ReduxSagaEffects.b(Module_111.g),
+            tables: ReduxSagaEffects.b(Module_111.j)
           })
         case 7:
           r$sent = r.sent
@@ -549,14 +549,14 @@ function ai() {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           o$sent = o.sent
           o.prev = 3
           o.next = 6
           return ReduxSagaEffects.a({
-            dicts: ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.g, o$sent),
-            tables: ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.j, o$sent)
+            dicts: ReduxSagaEffects.b(Module_111.g, o$sent),
+            tables: ReduxSagaEffects.b(Module_111.j, o$sent)
           })
         case 6:
           o$sent1 = o.sent
@@ -603,34 +603,34 @@ function si() {
       switch (_.prev = _.next) {
         case 0:
           _.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.z)
+          return ReduxSagaEffects.f(Module_22.z)
         case 2:
           _$sent = _.sent
           _.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.b)
+          return ReduxSagaEffects.f(Module_22.b)
         case 5:
           _$sent1 = _.sent
           _.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.d)
+          return ReduxSagaEffects.f(Module_22.d)
         case 8:
-          for (_$sent2 = _.sent, r = [], o = [], i = [], _$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE && $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.j && e.attributes.cloudDictId !== $$_$$_$$_$$_unrestored_shared_1571_2636_9.i) {
+          for (_$sent2 = _.sent, r = [], o = [], i = [], _$sent === Module_18.d.LOCAL_FILE && Module_42.b.forEach(function (e) {
+            if (e.type === Widget_builtIn_types.j && e.attributes.cloudDictId !== Module_9.i) {
               r.push(e)
             }
-            if (e.type === $$_$$_widget_builtIn_types.k && e.attributes.cloudTableId !== $$_$$_$$_$$_unrestored_shared_1571_2636_9.i) {
+            if (e.type === Widget_builtIn_types.k && e.attributes.cloudTableId !== Module_9.i) {
               o.push(e)
             }
-            if (e.type === $$_$$_widget_builtIn_types.A && "number" === typeof e.attributes.dataSource) {
+            if (e.type === Widget_builtIn_types.A && "number" === typeof e.attributes.dataSource) {
               i.push(e)
             }
-          }), $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.j && e.attributes.cloudDictId !== $$_$$_$$_$$_unrestored_shared_1571_2636_9.i) {
+          }), Module_42.g.forEach(function (e) {
+            if (e.type === Widget_builtIn_types.j && e.attributes.cloudDictId !== Module_9.i) {
               r.push(e)
             }
-            if (e.type === $$_$$_widget_builtIn_types.k && e.attributes.cloudTableId !== $$_$$_$$_$$_unrestored_shared_1571_2636_9.i) {
+            if (e.type === Widget_builtIn_types.k && e.attributes.cloudTableId !== Module_9.i) {
               o.push(e)
             }
-            if (e.type === $$_$$_widget_builtIn_types.A && "number" === typeof e.attributes.dataSource) {
+            if (e.type === Widget_builtIn_types.A && "number" === typeof e.attributes.dataSource) {
               i.push(e)
             }
           }), a = [], s = function () {
@@ -678,7 +678,7 @@ function ci(e) {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.h)
+          return ReduxSagaEffects.f(Module_22.h)
         case 2:
           n$sent = n.sent
           n.next = 5
@@ -697,7 +697,7 @@ function ci(e) {
           return ReduxSagaEffects.b(li, e.payload)
         case 13:
           if (!n$sent) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.rerenderCurrentScreenWorkspaceData()
+            Module_26.z.rerenderCurrentScreenWorkspaceData()
           }
         case 14:
         case "end":
@@ -731,7 +731,7 @@ function li(e) {
           }
           return i.abrupt("return", [])
         case 8:
-          n = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(i$sent)
+          n = Module_47.a(i$sent)
           i.prev = 9
           n.s()
         case 11:
@@ -739,27 +739,27 @@ function li(e) {
             i.next = 30
             break
           }
-          if ((r$value = r.value).type !== $$_$$_widget_builtIn_types.j) {
+          if ((r$value = r.value).type !== Widget_builtIn_types.j) {
             i.next = 18
             break
           }
           i.next = 16
-          return ReduxSagaEffects.e(Actions.Lg(r$value.id, "cloudDictId", $$_$$_$$_$$_unrestored_shared_1571_2636_9.i, false, true, true))
+          return ReduxSagaEffects.e(Actions.Lg(r$value.id, "cloudDictId", Module_9.i, false, true, true))
         case 16:
           i.next = 18
           return ReduxSagaEffects.e(Actions.Ih([r$value.attributes.cloudDictId]))
         case 18:
-          if (r$value.type !== $$_$$_widget_builtIn_types.k) {
+          if (r$value.type !== Widget_builtIn_types.k) {
             i.next = 23
             break
           }
           i.next = 21
-          return ReduxSagaEffects.e(Actions.Lg(r$value.id, "cloudTableId", $$_$$_$$_$$_unrestored_shared_1571_2636_9.i, false, true, true))
+          return ReduxSagaEffects.e(Actions.Lg(r$value.id, "cloudTableId", Module_9.i, false, true, true))
         case 21:
           i.next = 23
           return ReduxSagaEffects.e(Actions.Jh([r$value.attributes.cloudTableId]))
         case 23:
-          if (r$value.type !== $$_$$_widget_builtIn_types.A) {
+          if (r$value.type !== Widget_builtIn_types.A) {
             i.next = 28
             break
           }
@@ -824,14 +824,14 @@ function ui() {
     for (;;) {
       switch (N.prev = N.next) {
         case 0:
-          if (0 !== $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.size) {
+          if (0 !== Module_42.b.size) {
             N.next = 2
             break
           }
           return N.abrupt("return")
         case 2:
           N.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 4:
           if (N.sent) {
             N.next = 9
@@ -846,13 +846,13 @@ function ui() {
           return ReduxSagaEffects.b(li, false)
         case 11:
           if (N$sent = N.sent, t = new Set(), n = new Set(), N$sent.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.j) {
+            if (e.type === Widget_builtIn_types.j) {
               t.add(e.attributes.cloudDictId)
             }
-            if (e.type === $$_$$_widget_builtIn_types.k) {
+            if (e.type === Widget_builtIn_types.k) {
               n.add(e.attributes.cloudTableId)
             }
-            if (e.type === $$_$$_widget_builtIn_types.A && "number" === typeof e.attributes.dataSource) {
+            if (e.type === Widget_builtIn_types.A && "number" === typeof e.attributes.dataSource) {
               n.add(e.attributes.dataSource)
             }
           }), r = [], o = [], a = [], s = [], l = [], N.prev = 20, !(t.size > 0)) {
@@ -860,17 +860,17 @@ function ui() {
             break
           }
           N.next = 24
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.b, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t))
+          return ReduxSagaEffects.b(Module_111.b, Module_25.a(t))
         case 24:
           _N$sent = N.sent
           N$sent.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.j) {
-              var t = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(e.id)
+            if (e.type === Widget_builtIn_types.j) {
+              var t = Module_42.b.get(e.id)
               if (t) {
                 var n = _N$sent[e.attributes.cloudDictId]
-                if (n === $$_$$_$$_$$_unrestored_shared_1571_2636_9.e) {
+                if (n === Module_9.e) {
                   r.push(e)
-                  t.attributes.cloudDictId = $$_$$_$$_$$_unrestored_shared_1571_2636_9.i
+                  t.attributes.cloudDictId = Module_9.i
                 } else {
                   if (n) {
                     t.attributes.cloudDictId = parseInt(_N$sent[e.attributes.cloudDictId])
@@ -893,14 +893,14 @@ function ui() {
           N.next = 40400903 === N.t1 ? 35 : 37
           break
         case 35:
-          s.push.apply(s, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(N$sent.filter(function (e) {
-            return e.type === $$_$$_widget_builtIn_types.j
+          s.push.apply(s, Module_25.a(N$sent.filter(function (e) {
+            return e.type === Widget_builtIn_types.j
           })))
           return N.abrupt("break", 39)
         case 37:
           N.next = 39
           return ReduxSagaEffects.b(ri, N$sent.filter(function (e) {
-            return e.type === $$_$$_widget_builtIn_types.j
+            return e.type === Widget_builtIn_types.j
           }), d$msg)
         case 39:
           if (N.prev = 39, !(n.size > 0)) {
@@ -908,17 +908,17 @@ function ui() {
             break
           }
           N.next = 43
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.c, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(n))
+          return ReduxSagaEffects.b(Module_111.c, Module_25.a(n))
         case 43:
           _N$sent2 = N.sent
           N$sent.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.k) {
+            if (e.type === Widget_builtIn_types.k) {
               var t = _N$sent2[e.attributes.cloudTableId]
-              var n = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(e.id)
+              var n = Module_42.b.get(e.id)
               if (n) {
-                if (t === $$_$$_$$_$$_unrestored_shared_1571_2636_9.e) {
+                if (t === Module_9.e) {
                   o.push(e)
-                  n.attributes.cloudTableId = $$_$$_$$_$$_unrestored_shared_1571_2636_9.i
+                  n.attributes.cloudTableId = Module_9.i
                 } else {
                   if (t) {
                     n.attributes.cloudTableId = parseInt(_N$sent2[e.attributes.cloudTableId])
@@ -926,11 +926,11 @@ function ui() {
                 }
               }
             }
-            if (e.type === $$_$$_widget_builtIn_types.A) {
+            if (e.type === Widget_builtIn_types.A) {
               var r = _N$sent2[e.attributes.dataSource]
-              var i = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(e.id)
+              var i = Module_42.b.get(e.id)
               if (i) {
-                if (r === $$_$$_$$_$$_unrestored_shared_1571_2636_9.e) {
+                if (r === Module_9.e) {
                   a.push(e)
                   i.attributes.dataSource = ""
                 } else {
@@ -955,14 +955,14 @@ function ui() {
           N.next = 40400927 === N.t3 ? 54 : 56
           break
         case 54:
-          l.push.apply(l, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(N$sent.filter(function (e) {
-            return e.type === $$_$$_widget_builtIn_types.k || e.type === $$_$$_widget_builtIn_types.A
+          l.push.apply(l, Module_25.a(N$sent.filter(function (e) {
+            return e.type === Widget_builtIn_types.k || e.type === Widget_builtIn_types.A
           })))
           return N.abrupt("break", 58)
         case 56:
           N.next = 58
           return ReduxSagaEffects.b(ri, N$sent.filter(function (e) {
-            return e.type === $$_$$_widget_builtIn_types.k
+            return e.type === Widget_builtIn_types.k
           }), m$msg)
         case 58:
           if (!(r.length > 0 || o.length > 0 || a.length > 0)) {
@@ -987,8 +987,8 @@ function ui() {
           return ReduxSagaEffects.b(oi, [].concat(l), "cloudSpace.cloudTable")
         case 67:
           v = []
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.j) {
+          Module_42.b.forEach(function (e) {
+            if (e.type === Widget_builtIn_types.j) {
               v.push(e)
             }
           })
@@ -1001,7 +1001,7 @@ function ui() {
               for (;;) {
                 switch (e.prev = e.next) {
                   case 0:
-                    if (t = E[y], !(n = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(t.id))) {
+                    if (t = E[y], !(n = Module_42.b.get(t.id))) {
                       e.next = 8
                       break
                     }
@@ -1012,9 +1012,9 @@ function ui() {
                       return e.id === n.id
                     })
                     e.next = 7
-                    return ReduxSagaEffects.e(Actions.Lg(t.id, "cloudDictId", o || i ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.i : n.attributes.cloudDictId, true, true, true))
+                    return ReduxSagaEffects.e(Actions.Lg(t.id, "cloudDictId", o || i ? Module_9.i : n.attributes.cloudDictId, true, true, true))
                   case 7:
-                    $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.delete(t.id)
+                    Module_42.b.delete(t.id)
                   case 8:
                   case "end":
                     return e.stop()
@@ -1036,8 +1036,8 @@ function ui() {
           break
         case 76:
           O = []
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.k) {
+          Module_42.b.forEach(function (e) {
+            if (e.type === Widget_builtIn_types.k) {
               O.push(e)
             }
           })
@@ -1050,7 +1050,7 @@ function ui() {
               for (;;) {
                 switch (e.prev = e.next) {
                   case 0:
-                    if (t = T[C], !(n = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(t.id))) {
+                    if (t = T[C], !(n = Module_42.b.get(t.id))) {
                       e.next = 8
                       break
                     }
@@ -1061,9 +1061,9 @@ function ui() {
                       return e.id === n.id
                     })
                     e.next = 7
-                    return ReduxSagaEffects.e(Actions.Lg(t.id, "cloudTableId", o || i ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.i : n.attributes.cloudTableId, true, true, true))
+                    return ReduxSagaEffects.e(Actions.Lg(t.id, "cloudTableId", o || i ? Module_9.i : n.attributes.cloudTableId, true, true, true))
                   case 7:
-                    $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.delete(t.id)
+                    Module_42.b.delete(t.id)
                   case 8:
                   case "end":
                     return e.stop()
@@ -1085,8 +1085,8 @@ function ui() {
           break
         case 85:
           S = []
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.forEach(function (e) {
-            if (e.type === $$_$$_widget_builtIn_types.A) {
+          Module_42.b.forEach(function (e) {
+            if (e.type === Widget_builtIn_types.A) {
               S.push(e)
             }
           })
@@ -1099,7 +1099,7 @@ function ui() {
               for (;;) {
                 switch (e.prev = e.next) {
                   case 0:
-                    if (t = j[I], !(n = $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.get(t.id))) {
+                    if (t = j[I], !(n = Module_42.b.get(t.id))) {
                       e.next = 8
                       break
                     }
@@ -1112,7 +1112,7 @@ function ui() {
                     e.next = 7
                     return ReduxSagaEffects.e(Actions.Lg(t.id, "dataSource", o || i ? "" : n.attributes.dataSource, true, true, true))
                   case 7:
-                    $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.delete(t.id)
+                    Module_42.b.delete(t.id)
                   case 8:
                   case "end":
                     return e.stop()
@@ -1163,12 +1163,12 @@ function di() {
           t.next = 2
           return ReduxSagaEffects.e(Actions.ak({
             header: {
-              cloudDBManager: $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Hide
+              cloudDBManager: Module_18.j.Hide
             }
           }))
         case 2:
           t.next = 4
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.h)
+          return ReduxSagaEffects.b(Module_147.h)
         case 4:
           if (!((t$sent = t.sent) && t$sent.length > 0)) {
             t.next = 8
@@ -1177,7 +1177,7 @@ function di() {
           t.next = 8
           return ReduxSagaEffects.e(Actions.ak({
             header: {
-              cloudDBManager: $$_$$_$$_$$_unrestored_shared_1571_2636_18.j.Show
+              cloudDBManager: Module_18.j.Show
             }
           }))
         case 8:
@@ -1196,8 +1196,8 @@ function pi() {
       switch (r.prev = r.next) {
         case 0:
           e = {}
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (t) {
-            if (t.type === $$_$$_widget_builtIn_types.j && t.attributes.cloudDictId) {
+          Module_42.g.forEach(function (t) {
+            if (t.type === Widget_builtIn_types.j && t.attributes.cloudDictId) {
               e[t.attributes.cloudDictId] = false
             }
           })
@@ -1230,8 +1230,8 @@ function fi() {
       switch (r.prev = r.next) {
         case 0:
           e = {}
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (t) {
-            if (t.type === $$_$$_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
+          Module_42.g.forEach(function (t) {
+            if (t.type === Widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
               e[t.attributes.dataSource] = false
             }
           })
@@ -1271,25 +1271,25 @@ function hi(e) {
           e$payload$showToast = e$payload.showToast
           s.prev = 1
           s.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.u)
+          return ReduxSagaEffects.f(Module_22.u)
         case 4:
           s$sent = s.sent
           s.next = 7
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
+          return ReduxSagaEffects.f(Module_22.r)
         case 7:
           if (_s$sent = s.sent, a = [], !s$sent || _s$sent) {
             s.next = 15
             break
           }
           s.next = 12
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.k, e$payload$id, s$sent)
+          return ReduxSagaEffects.b(Module_111.k, e$payload$id, s$sent)
         case 12:
           a = s.sent
           s.next = 18
           break
         case 15:
           s.next = 17
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.f, e$payload$id)
+          return ReduxSagaEffects.b(Module_111.f, e$payload$id)
         case 17:
           a = s.sent
         case 18:
@@ -1335,7 +1335,7 @@ function mi(e) {
           e$payload$data = e$payload.data
           e$payload$isEmitOT = e$payload.isEmitOT
           f.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.a)
+          return ReduxSagaEffects.f(Module_22.a)
         case 3:
           f$sent = f.sent
           l = f$sent.find(function (e) {
@@ -1358,7 +1358,7 @@ function mi(e) {
                 if (e.id === n.id) {
                   t = false
                   if (e.key !== n.key) {
-                    p.push($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {}, {
+                    p.push(Module_6.a(Module_6.a({}, n), {}, {
                       oldKey: e.key
                     }))
                   }
@@ -1369,10 +1369,10 @@ function mi(e) {
               }
             })
             d.forEach(function (e) {
-              $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q($$_$$_$$_$$_unrestored_shared_1571_2636_26_index.c.CLOUD_DICT_KEYS, e.key)
+              Module_26.q(Module_26.c.CLOUD_DICT_KEYS, e.key)
             })
             p.forEach(function (e) {
-              $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.v(e$payload$id, e.oldKey, e.key)
+              Module_26.v(e$payload$id, e.oldKey, e.key)
             })
           }
         case 9:
@@ -1391,11 +1391,11 @@ function gi() {
       switch (r.prev = r.next) {
         case 0:
           e = {}
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (t) {
-            if (t.type === $$_$$_widget_builtIn_types.k && t.attributes.cloudTableId !== $$_$$_$$_$$_unrestored_shared_1571_2636_9.i) {
+          Module_42.g.forEach(function (t) {
+            if (t.type === Widget_builtIn_types.k && t.attributes.cloudTableId !== Module_9.i) {
               e[t.attributes.cloudTableId] = false
             }
-            if (t.type === $$_$$_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
+            if (t.type === Widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
               e[t.attributes.dataSource] = false
             }
           })
@@ -1435,25 +1435,25 @@ function _i(e) {
           e$payload$showToast = e$payload.showToast
           s.prev = 1
           s.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 4:
           s$sent = s.sent
           s.next = 7
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
+          return ReduxSagaEffects.f(Module_22.r)
         case 7:
           if (_s$sent2 = s.sent, !s$sent || _s$sent2) {
             s.next = 14
             break
           }
           s.next = 11
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.m, e$payload$id, s$sent)
+          return ReduxSagaEffects.b(Module_111.m, e$payload$id, s$sent)
         case 11:
           a = s.sent
           s.next = 17
           break
         case 14:
           s.next = 16
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.i, e$payload$id)
+          return ReduxSagaEffects.b(Module_111.i, e$payload$id)
         case 16:
           a = s.sent
         case 17:
@@ -1493,8 +1493,8 @@ function vi(e, t) {
       switch (d.prev = d.next) {
         case 0:
           n = []
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.g.forEach(function (t) {
-            if (t.type === $$_$$_widget_builtIn_types.A && t.attributes.dataSource === e) {
+          Module_42.g.forEach(function (t) {
+            if (t.type === Widget_builtIn_types.A && t.attributes.dataSource === e) {
               n.push(t)
             }
           })
@@ -1546,7 +1546,7 @@ function bi(e) {
           e$payload$columns = e$payload.columns
           e$payload$isEmitOT = e$payload.isEmitOT
           f.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.c)
+          return ReduxSagaEffects.f(Module_22.c)
         case 3:
           f$sent = f.sent
           l = f$sent.find(function (e) {
@@ -1568,7 +1568,7 @@ function bi(e) {
               if (e.id === n.id) {
                 t = false
                 if (e.name !== n.name) {
-                  p.push($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, n), {}, {
+                  p.push(Module_6.a(Module_6.a({}, n), {}, {
                     oldName: e.name
                   }))
                 }
@@ -1578,9 +1578,9 @@ function bi(e) {
               d.push(e)
             }
           }), d.forEach(function (e) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q($$_$$_$$_$$_unrestored_shared_1571_2636_26_index.c.CLOUD_TABLE_COLUMNS, e.name)
+            Module_26.q(Module_26.c.CLOUD_TABLE_COLUMNS, e.name)
           }), p.forEach(function (e) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.w(e$payload$id, e.oldName, e.name)
+            Module_26.w(e$payload$id, e.oldName, e.name)
           }), !(d.length > 0)) {
             f.next = 19
             break
@@ -1609,25 +1609,25 @@ function yi(e) {
           e$payload$id = e.payload.id
           a.prev = 1
           a.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.u)
+          return ReduxSagaEffects.f(Module_22.u)
         case 4:
           a$sent = a.sent
           a.next = 7
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
+          return ReduxSagaEffects.f(Module_22.r)
         case 7:
           if (_a$sent = a.sent, i = [], !a$sent || _a$sent) {
             a.next = 15
             break
           }
           a.next = 12
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.l, e$payload$id, a$sent)
+          return ReduxSagaEffects.b(Module_111.l, e$payload$id, a$sent)
         case 12:
           i = a.sent
           a.next = 18
           break
         case 15:
           a.next = 17
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.h, e$payload$id)
+          return ReduxSagaEffects.b(Module_111.h, e$payload$id)
         case 17:
           i = a.sent
         case 18:
@@ -1702,15 +1702,15 @@ function Oi(e) {
 }
 var wi
 _o = {}
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.cb, ui)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.C, ci)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.O, hi)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.Bb, mi)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.Q, _i)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.Db, bi)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.R, yi)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.Cb, Ei)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(_o, Actions.Eb, Oi)
+Module_11.a(_o, Actions.cb, ui)
+Module_11.a(_o, Actions.C, ci)
+Module_11.a(_o, Actions.O, hi)
+Module_11.a(_o, Actions.Bb, mi)
+Module_11.a(_o, Actions.Q, _i)
+Module_11.a(_o, Actions.Db, bi)
+Module_11.a(_o, Actions.R, yi)
+Module_11.a(_o, Actions.Cb, Ei)
+Module_11.a(_o, Actions.Eb, Oi)
 var Ci = _o
 var Ti = qn(Ci)
 function Si() {
@@ -1824,24 +1824,24 @@ function Xa(e) {
           e$payload$shouldSaveCurrentData = e$payload.shouldSaveCurrentData
           i = undefined === e$payload$shouldSaveCurrentData || e$payload$shouldSaveCurrentData
           p.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
+          return ReduxSagaEffects.f(Module_22.x)
         case 3:
           p$sent = p.sent
           p.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 6:
           if (p$sent1 = p.sent, l = p$sent1.get(e$payload$index), u = -1 === p$sent ? "__EMPTY_ID__" : (null === (t = p$sent1.get(p$sent)) || undefined === t ? undefined : t.id) || "__EMPTY_ID__", !(null === l || undefined === l ? undefined : l.id) || l.id === u) {
             p.next = 17
             break
           }
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
+          Module_26.g.setSelectedItem()
           p.next = 13
           return ReduxSagaEffects.e(Actions.Bi(e$payload$index))
         case 13:
           p.next = 15
           return ReduxSagaEffects.e(Actions.ug(undefined))
         case 15:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.selectWorkspaceByScreenId(l.id, i)
+          Module_26.z.selectWorkspaceByScreenId(l.id, i)
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$customEvent = oTHelper.customEvent) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$customEvent)) {
             $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$customEvent.emit.focusItem("widget")
           }
@@ -1869,17 +1869,17 @@ function Qa(e) {
         case 0:
           e$payload$index = e.payload.index
           p.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 3:
           p$sent = p.sent
           p.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 6:
           p$sent1 = p.sent
-          a = $$_$$_$$_$$_unrestored_shared_1571_2636_9.B(Language.c(p$sent, "defaultScreenTitle").toString(), p$sent1)
-          s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.A(a)
+          a = Module_9.B(Language.c(p$sent, "defaultScreenTitle").toString(), p$sent1)
+          s = Module_9.A(a)
           p$sent1$size = p$sent1.size
-          u = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.addWorkspaceData({
+          u = Module_26.z.addWorkspaceData({
             screenId: s.id
           })
           d = undefined !== e$payload$index ? e$payload$index : p$sent1$size
@@ -1910,11 +1910,11 @@ function Qa(e) {
   }, Ii)
 }
 function Za(e) {
-  var t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.A(Language.c(e, "defaultScreenTitle").toString())
+  var t = Module_9.A(Language.c(e, "defaultScreenTitle").toString())
   return {
     title: Language.c(e, "newProjectTitle").toString(),
-    version: $$_$$_$$_$$_unrestored_shared_1571_2636_53.e,
-    blockly: $$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, t.id, {
+    version: Module_53.e,
+    blockly: Module_11.a({}, t.id, {
       screenId: t.id,
       workspaceJson: {
         blocks: {},
@@ -1926,7 +1926,7 @@ function Za(e) {
         y: 0
       }
     }),
-    screens: $$_$$_$$_$$_unrestored_shared_1571_2636_11.a({}, t.id, $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, t), {}, {
+    screens: Module_11.a({}, t.id, Module_6.a(Module_6.a({}, t), {}, {
       widgets: {}
     })),
     screenIds: [t.id],
@@ -1945,7 +1945,7 @@ function Ja(e) {
         case 0:
           e$payload$code = e.payload.code
           r.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 3:
           r$sent = r.sent
           r.next = 6
@@ -2021,7 +2021,7 @@ function onAsyncCreateProject(e) {
           e$payload = e.payload
           e$payload$json = e$payload.json
           e$payload$jsonFrom = e$payload.jsonFrom
-          o = undefined === e$payload$jsonFrom ? $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER : e$payload$jsonFrom
+          o = undefined === e$payload$jsonFrom ? Module_18.d.OTHER : e$payload$jsonFrom
           e$payload$lastSavedTime = e$payload.lastSavedTime
           e$payload$projectId = e$payload.projectId
           e$payload$isCollWork = e$payload.isCollWork
@@ -2034,14 +2034,14 @@ function onAsyncCreateProject(e) {
           return ReduxSagaEffects.e(Actions.Gi(false))
         case 3:
           y.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 5:
           y$sent = y.sent
           y.next = 8
           return ReduxSagaEffects.e(Actions.Ug())
         case 8:
           g = e$payload$json
-          _ = e$payload$sourceTag || $$_$$_$$_$$_unrestored_shared_1571_2636_18.g.FREEDOM
+          _ = e$payload$sourceTag || Module_18.g.FREEDOM
           v = e$payload$sourceId || ""
           y.next = 13
           return ReduxSagaEffects.e(Actions.Di(o))
@@ -2053,7 +2053,7 @@ function onAsyncCreateProject(e) {
           return ReduxSagaEffects.b(loadWorkFromJSON, g)
         case 16:
           y.next = 18
-          return ReduxSagaEffects.e(Actions.Uh(e$payload$projectId || $$_$$_$$_$$_unrestored_shared_1571_2636_64.a("PROJECT")))
+          return ReduxSagaEffects.e(Actions.Uh(e$payload$projectId || Module_64.a("PROJECT")))
         case 18:
           y.next = 20
           return ReduxSagaEffects.e(Actions.Ei(e$payload$lastSavedTime))
@@ -2062,9 +2062,9 @@ function onAsyncCreateProject(e) {
           return ReduxSagaEffects.e(Actions.Fi(false))
         case 22:
           y.next = 24
-          return ReduxSagaEffects.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.n())
+          return ReduxSagaEffects.e(Module_100.n())
         case 24:
-          if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.MY_WORK) {
+          if (o !== Module_18.d.MY_WORK) {
             y.next = 29
             break
           }
@@ -2083,10 +2083,10 @@ function onAsyncCreateProject(e) {
             break
           }
           y.next = 33
-          return ReduxSagaEffects.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.o(e$payload$projectId))
+          return ReduxSagaEffects.e(Module_100.o(e$payload$projectId))
         case 33:
-          $$_$$_$$_shared_tools.jb(e$payload$projectId)
-          _ = g.sourceTag || $$_$$_$$_$$_unrestored_shared_1571_2636_18.g.FREEDOM
+          Shared_tools.jb(e$payload$projectId)
+          _ = g.sourceTag || Module_18.g.FREEDOM
           v = g.sourceId || ""
           y.next = 44
           break
@@ -2095,12 +2095,12 @@ function onAsyncCreateProject(e) {
           y.next = 41
           return ReduxSagaEffects.e(Actions.Tg(true))
         case 41:
-          $$_$$_$$_shared_tools.k(["workId", "inviteCode", "jsonUrl"])
+          Shared_tools.k(["workId", "inviteCode", "jsonUrl"])
           y.next = 44
           return ReduxSagaEffects.b(ts, _, v)
         case 44:
           y.next = 46
-          return ReduxSagaEffects.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.q(!!d))
+          return ReduxSagaEffects.e(Module_100.q(!!d))
         case 46:
           y.next = 48
           return ReduxSagaEffects.e(Actions.Sg())
@@ -2111,7 +2111,7 @@ function onAsyncCreateProject(e) {
           y.next = 52
           return ReduxSagaEffects.e(Actions.cg())
         case 52:
-          if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE) {
+          if (o !== Module_18.d.LOCAL_FILE) {
             y.next = 57
             break
           }
@@ -2131,11 +2131,11 @@ function onAsyncCreateProject(e) {
           return ReduxSagaEffects.b(fi)
         case 63:
           y.next = 65
-          return ReduxSagaEffects.e(Actions.Ci(e$payload$editPermission || $$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit))
+          return ReduxSagaEffects.e(Actions.Ci(e$payload$editPermission || Module_18.c.Edit))
         case 65:
-          y.t0 = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z
+          y.t0 = Module_26.z
           y.next = 68
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 68:
           y.t1 = y.sent
           y.t0.setCurrentProjectId.call(y.t0, y.t1)
@@ -2145,22 +2145,22 @@ function onAsyncCreateProject(e) {
             id: v
           }))
         case 72:
-          if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE) {
-            $$_$$_$$_shared_tools.k(["courseId"])
+          if (o !== Module_18.d.HOME_COURSE) {
+            Shared_tools.k(["courseId"])
           }
-          if (o !== $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_TEMPLATE) {
-            $$_$$_$$_shared_tools.k(["templateId"])
+          if (o !== Module_18.d.HOME_TEMPLATE) {
+            Shared_tools.k(["templateId"])
           }
           y.next = 76
           return ReduxSagaEffects.b(go)
         case 76:
-          if (e$payload$projectId && (b = Bn()) && Fn(b), o === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.HOME_COURSE || o === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.COURSE) {
+          if (e$payload$projectId && (b = Bn()) && Fn(b), o === Module_18.d.HOME_COURSE || o === Module_18.d.COURSE) {
             y.next = 81
             break
           }
-          if ($$_$$_$$_$$_unrestored_shared_1571_2636_627.a.isLoaded()) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.show()
-            $$_$$_$$_$$_unrestored_shared_1571_2636_627.a.close({
+          if (Module_627.a.isLoaded()) {
+            Module_627.a.show()
+            Module_627.a.close({
               closeAnimationPos: {
                 x: 150,
                 y: 30
@@ -2168,7 +2168,7 @@ function onAsyncCreateProject(e) {
             })
           }
           y.next = 81
-          return ReduxSagaEffects.e(Actions.Gh($$_$$_$$_$$_unrestored_shared_1571_2636_392_index.a))
+          return ReduxSagaEffects.e(Actions.Gh(Module_392.a))
         case 81:
           y.next = 83
           return ReduxSagaEffects.e(Actions.Gi(true))
@@ -2195,7 +2195,7 @@ function es(e) {
           i.next = 5
           return ReduxSagaEffects.e(Actions.Ug())
         case 5:
-          n = $$_$$_$$_$$_unrestored_shared_1571_2636_48_345.a(e$payload$json)
+          n = Module_345.a(e$payload$json)
           i.next = 8
           return ReduxSagaEffects.b(loadWorkFromJSON, n)
         case 8:
@@ -2221,18 +2221,18 @@ function es(e) {
           return ReduxSagaEffects.b(fi)
         case 22:
           i.next = 24
-          return ReduxSagaEffects.e(Actions.Ci($$_$$_$$_$$_unrestored_shared_1571_2636_18.c.Edit))
+          return ReduxSagaEffects.e(Actions.Ci(Module_18.c.Edit))
         case 24:
-          i.t0 = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z
+          i.t0 = Module_26.z
           i.next = 27
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 27:
           i.t1 = i.sent
           i.t0.setCurrentProjectId.call(i.t0, i.t1)
           i.next = 31
           return ReduxSagaEffects.e(Actions.Gi(true))
         case 31:
-          r = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.generateAllWorkspaceCodes(e$payload$json.screenList)
+          r = Module_26.z.generateAllWorkspaceCodes(e$payload$json.screenList)
           if (undefined !== (o = Terser.minify(r, {
             keep_fnames: true
           })).code) {
@@ -2257,14 +2257,14 @@ function ts(e, t) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           o$sent = o.sent
           o.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
+          return ReduxSagaEffects.f(Module_22.G)
         case 5:
           _o$sent2 = o.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkCreate", {
+          Module_141.a("WorkCreate", {
             sourceTag: e,
             sourceId: t,
             workId: o$sent,
@@ -2361,8 +2361,8 @@ function loadWorkFromJSON(workJSON) {
     for (;;) {
       switch (regeneratorContext.prev = regeneratorContext.next) {
         case 0:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_48_345.b(workJSON)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.clear()
+          Module_345.b(workJSON)
+          Module_42.b.clear()
           ;({
             blockly,
             title,
@@ -2387,16 +2387,16 @@ function loadWorkFromJSON(workJSON) {
           regeneratorContext.next = 5
           return ReduxSagaEffects.b(LoadCustomWidget.loadWidgetsFromFile, extensionWidgetList, unsafeExtensionWidgetList)
         case 5:
-          I = $$_$$_$$_$$_unrestored_shared_1571_2636_97.f(workJSON.screens)
+          I = Module_97.f(workJSON.screens)
           regeneratorContext.next = 8
           return ReduxSagaEffects.b(LoadCustomWidget.w, extensionWidgetList, I, globalWidgets)
         case 8:
           regeneratorContext.next = 10
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.z)
+          return ReduxSagaEffects.f(Module_22.z)
         case 10:
           regeneratorContext$sent = regeneratorContext.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_48_345.c(I, version)
-          N = $$_$$_$$_$$_unrestored_shared_1571_2636_97.e(workJSON.screens, screenIds)
+          Module_345.c(I, version)
+          N = Module_97.e(workJSON.screens, screenIds)
           regeneratorContext.next = 15
           return ReduxSagaEffects.e(Actions.Th({
             screens: N,
@@ -2408,27 +2408,27 @@ function loadWorkFromJSON(workJSON) {
           }))
         case 15:
           regeneratorContext.next = 17
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 17:
-          if (_regeneratorContext$sent = regeneratorContext.sent, $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.clearLocalDocuments(_regeneratorContext$sent, globalWidgetIds), $$_$$_$$_$$_unrestored_shared_1571_2636_174.a.clear(), regeneratorContext$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE) {
-            k = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Zb(globalWidgets)
-            x = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(k)
+          if (_regeneratorContext$sent = regeneratorContext.sent, Module_20.clearLocalDocuments(_regeneratorContext$sent, globalWidgetIds), Module_174.a.clear(), regeneratorContext$sent === Module_18.d.LOCAL_FILE) {
+            k = Module_9.Zb(globalWidgets)
+            x = Module_47.a(k)
             try {
               for (x.s(); !(D = x.n()).done;) {
                 D$value = D.value
-                $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.set(D$value.id, D$value)
+                Module_42.b.set(D$value.id, D$value)
               }
             } catch (ee) {
               x.e(ee)
             } finally {
               x.f()
             }
-            L = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Zb(I)
-            P = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(L)
+            L = Module_9.Zb(I)
+            P = Module_47.a(L)
             try {
               for (P.s(); !(B = P.n()).done;) {
                 B$value = B.value
-                $$_$$_$$_$$_unrestored_shared_1571_2636_42_index.b.set(B$value.id, B$value)
+                Module_42.b.set(B$value.id, B$value)
               }
             } catch (ee) {
               P.e(ee)
@@ -2436,13 +2436,13 @@ function loadWorkFromJSON(workJSON) {
               P.f()
             }
           }
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Sb($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, I), globalWidgets))
+          Module_9.Sb(Module_6.a(Module_6.a({}, I), globalWidgets))
           regeneratorContext.next = 24
           return ReduxSagaEffects.b(go)
         case 24:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Qb(imageFileList)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.replaceWorkspaces(blockly)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_37_376.b()
+          Module_9.Qb(imageFileList)
+          Module_26.z.replaceWorkspaces(blockly)
+          Module_376.b()
           regeneratorContext.next = 29
           return ReduxSagaEffects.b(Ms)
         case 29:
@@ -2459,40 +2459,40 @@ function loadWorkFromJSON(workJSON) {
           return ReduxSagaEffects.e(Actions.Zj())
         case 37:
           regeneratorContext.next = 39
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.j)
+          return ReduxSagaEffects.f(Module_22.j)
         case 39:
           for (U in _regeneratorContext$sent2 = regeneratorContext.sent, W = {}, _regeneratorContext$sent2.forEach(function (e) {
             if (e.cdnUrl) {
               W[e.id] = e.cdnUrl
             }
           }), I) {
-            if ((H = I[U]).type === $$_$$_widget_builtIn_types.H && (H$attributes$fontFamily = H.attributes.fontFamily) && W[H$attributes$fontFamily] && !$$_$$_$$_shared_tools.db[H$attributes$fontFamily]) {
-              $$_$$_$$_shared_tools.bb(H$attributes$fontFamily, W[H$attributes$fontFamily])
-              $$_$$_$$_shared_tools.db[H$attributes$fontFamily] = true
+            if ((H = I[U]).type === Widget_builtIn_types.H && (H$attributes$fontFamily = H.attributes.fontFamily) && W[H$attributes$fontFamily] && !Shared_tools.db[H$attributes$fontFamily]) {
+              Shared_tools.bb(H$attributes$fontFamily, W[H$attributes$fontFamily])
+              Shared_tools.db[H$attributes$fontFamily] = true
             }
             if (H && H.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === H.type) {
               H$attributes = H.attributes
               H$attributes$content = H$attributes.content
               K = undefined === H$attributes$content ? "" : H$attributes$content
-              $$_$$_$$_$$_unrestored_shared_1571_2636_37_375.a(K).forEach(function (e) {
-                if (e && W[e] && !$$_$$_$$_shared_tools.db[e]) {
-                  $$_$$_$$_shared_tools.bb(e, W[e])
-                  $$_$$_$$_shared_tools.db[e] = true
+              Module_375.a(K).forEach(function (e) {
+                if (e && W[e] && !Shared_tools.db[e]) {
+                  Shared_tools.bb(e, W[e])
+                  Shared_tools.db[e] = true
                 }
               })
             }
           }
-          if (regeneratorContext$sent === $$_$$_$$_$$_unrestored_shared_1571_2636_18.d.LOCAL_FILE) {
+          if (regeneratorContext$sent === Module_18.d.LOCAL_FILE) {
             regeneratorContext.next = 50
             break
           }
-          q = $$_$$_$$_$$_unrestored_shared_1571_2636_9.ab()
+          q = Module_9.ab()
           regeneratorContext.next = 47
           return ReduxSagaEffects.e(Actions.Sj(q.map(function (e) {
             return e.attributes.cloudDictId
           })))
         case 47:
-          X = $$_$$_$$_$$_unrestored_shared_1571_2636_9.rb()
+          X = Module_9.rb()
           regeneratorContext.next = 50
           return ReduxSagaEffects.e(Actions.Tj(X))
         case 50:
@@ -2591,7 +2591,7 @@ function os(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           o = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           m.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 3:
           m$sent = m.sent
           a = m$sent.findIndex(function (e) {
@@ -2599,20 +2599,20 @@ function os(e) {
           })
           s = m$sent.get(a)
           m.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
+          return ReduxSagaEffects.f(Module_22.x)
         case 8:
           m$sent1 = m.sent
           m.next = 11
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 11:
           if (_m$sent2 = m.sent, !(a > -1 && s && _m$sent2)) {
             m.next = 29
             break
           }
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q($$_$$_$$_$$_unrestored_shared_1571_2636_26_index.c.SCREEN, e$payload$screenId)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.removeWorkspaceByScreenId(e$payload$screenId)
+          Module_26.q(Module_26.c.SCREEN, e$payload$screenId)
+          Module_26.z.removeWorkspaceByScreenId(e$payload$screenId)
           s.get("widgetIds").forEach(function (e) {
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_9.F(e)
+            return Module_9.F(e)
           })
           d = a < m$sent1 ? Math.max(m$sent1 - 1, 0) : Math.min(m$sent1, m$sent.size - 2)
           m.next = 19
@@ -2625,11 +2625,11 @@ function os(e) {
           return ReduxSagaEffects.e(Actions.Fi(true))
         case 23:
           m.next = 25
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 25:
           m$sent2 = m.sent
           if ((f = m$sent2.get(d)) && f.id !== _m$sent2.id) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.selectWorkspaceByScreenId(f.id, false)
+            Module_26.z.selectWorkspaceByScreenId(f.id, false)
           }
           if (o) {
             if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$screen = oTHelper.screen) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$screen)) {
@@ -2672,7 +2672,7 @@ function is(e) {
         case 0:
           e$payload$screenId = e.payload.screenId
           T.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 3:
           T$sent = T.sent
           r = T$sent.findIndex(function (e) {
@@ -2680,24 +2680,24 @@ function is(e) {
           })
           o = T$sent.get(r)
           T.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 8:
           if (_T$sent = T.sent, s = r + 1, !o || !_T$sent) {
             T.next = 48
             break
           }
-          d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.B(o.get("title"), T$sent)
-          p = $$_$$_$$_$$_unrestored_shared_1571_2636_9.A(d)
+          d = Module_9.B(o.get("title"), T$sent)
+          p = Module_9.A(d)
           f = o.get("widgetIds")
-          h = $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(f)
+          h = Module_25.a(f)
           f.forEach(function (e) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_9.v(e, h)
+            Module_9.v(e, h)
           })
           p.widgetIds = h
           m = o.get("invisibleWidgetIds")
-          g = $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(m)
+          g = Module_25.a(m)
           m.forEach(function (e) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_9.v(e, g)
+            Module_9.v(e, g)
           })
           p.invisibleWidgetIds = g
           _ = new Map()
@@ -2707,7 +2707,7 @@ function is(e) {
           v = Lodash.cloneDeep(o.get("primitiveVariables"))
           b = new Map()
           v.forEach(function (e) {
-            var t = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a("VARIABLE")
+            var t = Module_64.a("VARIABLE")
             b.set(e.id, t)
             e.id = t
           })
@@ -2715,7 +2715,7 @@ function is(e) {
           y = Lodash.cloneDeep(o.get("arrayVariables"))
           E = new Map()
           y.forEach(function (e) {
-            var t = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a("VARIABLE")
+            var t = Module_64.a("VARIABLE")
             E.set(e.id, t)
             e.id = t
           })
@@ -2723,14 +2723,14 @@ function is(e) {
           O = Lodash.cloneDeep(o.get("objectVariables"))
           w = new Map()
           O.forEach(function (e) {
-            var t = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a("OBJECT")
+            var t = Module_64.a("OBJECT")
             w.set(e.id, t)
             e.id = t
           })
           p.objectVariables = O
           p.snapshot = o.get("snapshot")
           p.backgroundColor = o.get("backgroundColor")
-          C = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.copyWorkspaceData(o.toJS().id, p.id, _, b, E, w)
+          C = Module_26.z.copyWorkspaceData(o.toJS().id, p.id, _, b, E, w)
           p.backgroundImage = o.get("backgroundImage")
           p.backgroundImageResizeMode = o.get("backgroundImageResizeMode")
           T.next = 42
@@ -2761,7 +2761,7 @@ function as(e, t) {
     for (;;) {
       switch (r.prev = r.next) {
         case 0:
-          if (e.type !== $$_$$_widget_builtIn_types.y) {
+          if (e.type !== Widget_builtIn_types.y) {
             r.next = 5
             break
           }
@@ -2771,7 +2771,7 @@ function as(e, t) {
           r.next = 9
           break
         case 5:
-          if (e.type !== $$_$$_widget_builtIn_types.l) {
+          if (e.type !== Widget_builtIn_types.l) {
             r.next = 9
             break
           }
@@ -2782,8 +2782,8 @@ function as(e, t) {
           r.next = 9
           return ReduxSagaEffects.b(Ut, e.attributes.cloudDbId)
         case 9:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.F(e.id)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q(e.type, e.id)
+          Module_9.F(e.id)
+          Module_26.q(e.type, e.id)
           r.next = 13
           return ReduxSagaEffects.e(Actions.Lh(e.id))
         case 13:
@@ -2809,11 +2809,11 @@ function ss(e) {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           n$sent = n.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.yb(e).forEach(function (e) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q($$_$$_$$_$$_unrestored_shared_1571_2636_26_index.c.DOC_KEYS, e.id)
+          Module_9.yb(e).forEach(function (e) {
+            Module_26.q(Module_26.c.DOC_KEYS, e.id)
           })
           gn(n$sent)
         case 6:
@@ -2849,13 +2849,13 @@ function cs(e, t, n) {
     for (;;) {
       switch (S.prev = S.next) {
         case 0:
-          if (e$type = e.type, o = e.id, a = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e$type), e$type !== $$_$$_widget_builtIn_types.f) {
+          if (e$type = e.type, o = e.id, a = Module_9.Db(e$type), e$type !== Widget_builtIn_types.f) {
             S.next = 25
             break
           }
           s = e
-          l = $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(s.widgetIds)
-          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(l)
+          l = Module_25.a(s.widgetIds)
+          u = Module_47.a(l)
           S.prev = 7
           u.s()
         case 9:
@@ -2884,13 +2884,13 @@ function cs(e, t, n) {
           S.next = 48
           break
         case 25:
-          if (e$type !== $$_$$_widget_builtIn_types.x && e$type !== $$_$$_widget_builtIn_types.A) {
+          if (e$type !== Widget_builtIn_types.x && e$type !== Widget_builtIn_types.A) {
             S.next = 47
             break
           }
           f = e
-          h = $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(f.widgetIds)
-          m = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(h)
+          h = Module_25.a(f.widgetIds)
+          m = Module_47.a(h)
           S.prev = 29
           m.s()
         case 31:
@@ -2919,9 +2919,9 @@ function cs(e, t, n) {
           S.next = 48
           break
         case 47:
-          if (!(e$type !== $$_$$_widget_builtIn_types.c && e$type !== $$_$$_widget_builtIn_types.a)) {
-            if ((v = null === e || undefined === e ? undefined : e.parentId) && $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(v)) {
-              b = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(v)
+          if (!(e$type !== Widget_builtIn_types.c && e$type !== Widget_builtIn_types.a)) {
+            if ((v = null === e || undefined === e ? undefined : e.parentId) && Module_9.Bb(v)) {
+              b = Module_9.Bb(v)
               b$widgetIds = b.widgetIds
               if ((E = b$widgetIds.indexOf(o)) > -1) {
                 b$widgetIds.splice(E, 1)
@@ -2930,12 +2930,12 @@ function cs(e, t, n) {
                 }
               }
             }
-            if (w = $$_$$_$$_$$_unrestored_shared_1571_2636_215.b(o)) {
-              $$_$$_$$_$$_unrestored_shared_1571_2636_145.b(w, o)
+            if (w = Module_215.b(o)) {
+              Module_145.b(w, o)
             }
           }
         case 48:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.F(e.id)
+          Module_9.F(e.id)
           S.next = 51
           return ReduxSagaEffects.e(Actions.Mh(t, o, null === a || undefined === a ? undefined : a.isInvisibleWidget))
         case 51:
@@ -2953,9 +2953,9 @@ function cs(e, t, n) {
               }
             }
           }
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q(e$type, o)
+          Module_26.q(e$type, o)
           if (!("CANVAS_WIDGET" !== e$type && "ACTOR_WIDGET" !== e$type)) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.l()
+            Module_26.l()
           }
         case 56:
         case "end":
@@ -2973,13 +2973,13 @@ function ls(e) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           o$sent = o.sent
           o.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
+          return ReduxSagaEffects.f(Module_22.r)
         case 5:
-          if (_o$sent3 = o.sent, r = true, e.type !== $$_$$_widget_builtIn_types.l || _o$sent3) {
+          if (_o$sent3 = o.sent, r = true, e.type !== Widget_builtIn_types.l || _o$sent3) {
             o.next = 11
             break
           }
@@ -3008,17 +3008,17 @@ function us(e) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           o$sent = o.sent
           o.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.r)
+          return ReduxSagaEffects.f(Module_22.r)
         case 5:
-          if (_o$sent4 = o.sent, r = true, e.type !== $$_$$_widget_builtIn_types.l) {
+          if (_o$sent4 = o.sent, r = true, e.type !== Widget_builtIn_types.l) {
             o.next = 18
             break
           }
-          if (!($$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().length >= $$_$$_$$_$$_unrestored_shared_1571_2636_305.f)) {
+          if (!(Module_9.cb().length >= Module_305.f)) {
             o.next = 14
             break
           }
@@ -3078,9 +3078,9 @@ function ds(e) {
           e$payload$widgetId = e$payload.widgetId
           e$payload$isEmitOT = e$payload.isEmitOT
           i = undefined === e$payload$isEmitOT || e$payload$isEmitOT
-          a = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId)
+          a = Module_9.Bb(e$payload$widgetId)
           v.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.D)
+          return ReduxSagaEffects.f(Module_22.D)
         case 4:
           if (v$sent = v.sent, a) {
             v.next = 7
@@ -3101,22 +3101,22 @@ function ds(e) {
           }
           return v.abrupt("return")
         case 13:
-          if (a.type !== $$_$$_widget_builtIn_types.h) {
+          if (a.type !== Widget_builtIn_types.h) {
             v.next = 21
             break
           }
           v.next = 16
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 16:
-          if (_v$sent = v.sent, !$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_v$sent)) {
+          if (_v$sent = v.sent, !Module_97.a(_v$sent)) {
             v.next = 21
             break
           }
           a$attributes$cloudDbId = a.attributes.cloudDbId
           v.next = 21
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.d, a$attributes$cloudDbId, _v$sent)
+          return ReduxSagaEffects.b(Module_147.d, a$attributes$cloudDbId, _v$sent)
         case 21:
-          if (a.id === v$sent && e$payload$screenId && $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItemByWidgetId(e$payload$screenId), !a.isGlobalWidget) {
+          if (a.id === v$sent && e$payload$screenId && Module_26.g.setSelectedItemByWidgetId(e$payload$screenId), !a.isGlobalWidget) {
             v.next = 27
             break
           }
@@ -3133,12 +3133,12 @@ function ds(e) {
           v.next = 30
           return ReduxSagaEffects.b(cs, a, e$payload$screenId, i)
         case 30:
-          if (a.type !== $$_$$_widget_builtIn_types.G) {
+          if (a.type !== Widget_builtIn_types.G) {
             v.next = 57
             break
           }
-          d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.L($$_$$_widget_builtIn_types.A)
-          p = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(d)
+          d = Module_9.L(Widget_builtIn_types.A)
+          p = Module_47.a(d)
           v.prev = 33
           p.s()
         case 35:
@@ -3146,7 +3146,7 @@ function ds(e) {
             v.next = 47
             break
           }
-          if (f$value = f.value, (null === (m = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(f$value)) || undefined === m ? undefined : m.type) !== $$_$$_widget_builtIn_types.A || m.attributes.dataSource !== e$payload$widgetId) {
+          if (f$value = f.value, (null === (m = Module_9.Bb(f$value)) || undefined === m ? undefined : m.type) !== Widget_builtIn_types.A || m.attributes.dataSource !== e$payload$widgetId) {
             v.next = 45
             break
           }
@@ -3204,26 +3204,26 @@ function ps(e, t, n) {
         case 0:
           u = function (e) {
             return "string" === typeof e ? Language.f(regeneratorContext$sent, e) : (e.constructor !== Array && e.constructor !== Object || Object.entries(e).forEach(function (t) {
-              var n = $$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, 2)
+              var n = Module_11.a(t, 2)
               var r = n[0]
               var o = n[1]
               e[r] = u(o)
             }), e)
           }
           regeneratorContext.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 3:
           regeneratorContext$sent = regeneratorContext.sent
           regeneratorContext.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
+          return ReduxSagaEffects.f(Module_22.n)
         case 6:
-          if (regeneratorContext$sent1 = regeneratorContext.sent, s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e)) {
+          if (regeneratorContext$sent1 = regeneratorContext.sent, s = Module_9.Db(e)) {
             regeneratorContext.next = 10
             break
           }
           return regeneratorContext.abrupt("return", null)
         case 10:
-          if (c = $$_$$_$$_shared_tools.q(s.widget), c$attributes = c.attributes, s.isInvisibleWidget || undefined !== c.opacity || (c.opacity = 100), u(c$attributes), d = [], !s.widget.isGlobalWidget) {
+          if (c = Shared_tools.q(s.widget), c$attributes = c.attributes, s.isInvisibleWidget || undefined !== c.opacity || (c.opacity = 100), u(c$attributes), d = [], !s.widget.isGlobalWidget) {
             regeneratorContext.next = 19
             break
           }
@@ -3236,23 +3236,23 @@ function ps(e, t, n) {
             break
           }
           regeneratorContext.next = 22
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.H, n)
+          return ReduxSagaEffects.f(Module_22.H, n)
         case 22:
           if (regeneratorContext$sent2 = regeneratorContext.sent) {
-            d = [].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(regeneratorContext$sent2.widgetIds), $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(regeneratorContext$sent2.invisibleWidgetIds))
+            d = [].concat(Module_25.a(regeneratorContext$sent2.widgetIds), Module_25.a(regeneratorContext$sent2.invisibleWidgetIds))
           }
         case 24:
           f = s.title
           if (!!s.contentTextField && s.contentTextField) {
             s$contentTextField = s.contentTextField
             h = c$attributes[s$contentTextField]
-            h = $$_$$_$$_$$_unrestored_shared_1571_2636_9.D(e, d, h)
+            h = Module_9.D(e, d, h)
           } else {
             f = null === (g = Language.c(regeneratorContext$sent, s.title)) || undefined === g ? undefined : g.toString()
-            f = $$_$$_$$_$$_unrestored_shared_1571_2636_9.D(e, d, f)
+            f = Module_9.D(e, d, f)
           }
-          _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a(e)
-          v = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({
+          _ = Module_64.a(e)
+          v = Module_6.a(Module_6.a({
             animationRecord: {},
             size: {
               width: 10,
@@ -3301,13 +3301,13 @@ function hs(e, t) {
     for (;;) {
       switch (o.prev = o.next) {
         case 0:
-          if (n = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e.type)) {
+          if (n = Module_9.Db(e.type)) {
             o.next = 3
             break
           }
           return o.abrupt("return")
         case 3:
-          if ($$_$$_$$_$$_unrestored_shared_1571_2636_9.Ub(e.id, e), !e.isGlobalWidget) {
+          if (Module_9.Ub(e.id, e), !e.isGlobalWidget) {
             o.next = 9
             break
           }
@@ -3324,13 +3324,13 @@ function hs(e, t) {
           o.next = 12
           return ReduxSagaEffects.e(Actions.jf(t, e.id, n.isInvisibleWidget))
         case 12:
-          if (e.type !== $$_$$_widget_builtIn_types.B && e.type !== $$_$$_widget_builtIn_types.y) {
+          if (e.type !== Widget_builtIn_types.B && e.type !== Widget_builtIn_types.y) {
             o.next = 18
             break
           }
           e$attributes$fields = e.attributes.fields
           o.next = 16
-          return ReduxSagaEffects.e(Actions.bf($$_$$_$$_$$_unrestored_shared_1571_2636_110.a(e.type, {
+          return ReduxSagaEffects.e(Actions.bf(Module_110.a(e.type, {
             id: e.id,
             name: e.title,
             value: e$attributes$fields,
@@ -3342,12 +3342,12 @@ function hs(e, t) {
           o.next = 21
           break
         case 18:
-          if (e.type !== $$_$$_widget_builtIn_types.G) {
+          if (e.type !== Widget_builtIn_types.G) {
             o.next = 21
             break
           }
           o.next = 21
-          return ReduxSagaEffects.e(Actions.bf($$_$$_$$_$$_unrestored_shared_1571_2636_110.a($$_$$_widget_builtIn_types.G, {
+          return ReduxSagaEffects.e(Actions.bf(Module_110.a(Widget_builtIn_types.G, {
             id: e.id,
             name: e.title,
             value: e.attributes.db,
@@ -3389,7 +3389,7 @@ function ms(e) {
           e$payload$position = e$payload.position
           e$payload$attributes = e$payload.attributes
           e$payload$setBlockValue = e$payload.setBlockValue
-          s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e$payload$widgetType)
+          s = Module_9.Db(e$payload$widgetType)
           v.next = 4
           return ReduxSagaEffects.b(ps, e$payload$widgetType, e$payload$position, e$payload$screenId)
         case 4:
@@ -3410,9 +3410,9 @@ function ms(e) {
           return v.abrupt("return")
         case 13:
           v.next = 15
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 15:
-          if (_v$sent2 = v.sent, v$sent.type !== $$_$$_widget_builtIn_types.DATE_PICKER_WIDGET && v$sent.type !== $$_$$_widget_builtIn_types.TIME_PICKER_WIDGET) {
+          if (_v$sent2 = v.sent, v$sent.type !== Widget_builtIn_types.DATE_PICKER_WIDGET && v$sent.type !== Widget_builtIn_types.TIME_PICKER_WIDGET) {
             v.next = 20
             break
           }
@@ -3420,7 +3420,7 @@ function ms(e) {
           v.next = 68
           break
         case 20:
-          if (v$sent.type !== $$_$$_widget_builtIn_types.CLOUD_STORAGE_WIDGET) {
+          if (v$sent.type !== Widget_builtIn_types.CLOUD_STORAGE_WIDGET) {
             v.next = 30
             break
           }
@@ -3440,7 +3440,7 @@ function ms(e) {
           v.next = 68
           break
         case 30:
-          if (v$sent.type !== $$_$$_widget_builtIn_types.x && v$sent.type !== $$_$$_widget_builtIn_types.A) {
+          if (v$sent.type !== Widget_builtIn_types.x && v$sent.type !== Widget_builtIn_types.A) {
             v.next = 38
             break
           }
@@ -3453,7 +3453,7 @@ function ms(e) {
           v.next = 68
           break
         case 38:
-          if (v$sent.type !== $$_$$_widget_builtIn_types.m) {
+          if (v$sent.type !== Widget_builtIn_types.m) {
             v.next = 42
             break
           }
@@ -3471,12 +3471,12 @@ function ms(e) {
           v.next = 68
           break
         case 42:
-          if (v$sent.type !== $$_$$_widget_builtIn_types.h) {
+          if (v$sent.type !== Widget_builtIn_types.h) {
             v.next = 67
             break
           }
           v.next = 45
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 45:
           if (_v$sent4 = v.sent, _v$sent2) {
             v.next = 50
@@ -3492,11 +3492,11 @@ function ms(e) {
             break
           }
           v.next = 54
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 54:
           _v$sent5 = v.sent
           v.next = 57
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.b, Language.c(_v$sent5, "cloudDb.defaultName").toString(), $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_v$sent4) ? _v$sent4 : "")
+          return ReduxSagaEffects.b(Module_147.b, Language.c(_v$sent5, "cloudDb.defaultName").toString(), Module_97.a(_v$sent4) ? _v$sent4 : "")
         case 57:
           if ((v$sent2 = v.sent).id) {
             v.next = 62
@@ -3517,8 +3517,8 @@ function ms(e) {
           v.next = 68
           break
         case 67:
-          if (v$sent.type === $$_$$_widget_builtIn_types.G) {
-            v$sent.attributes.db = $$_$$_$$_$$_unrestored_shared_1571_2636_410.d()
+          if (v$sent.type === Widget_builtIn_types.G) {
+            v$sent.attributes.db = Module_410.d()
           }
         case 68:
           v.next = 70
@@ -3545,7 +3545,7 @@ function ms(e) {
           v.next = 74
           return ReduxSagaEffects.e(Actions.Fi(true))
         case 74:
-          if (v$sent.type === $$_$$_widget_builtIn_types.m) {
+          if (v$sent.type === Widget_builtIn_types.m) {
             v.next = 79
             break
           }
@@ -3579,12 +3579,12 @@ function gs(e) {
     for (;;) {
       switch (l.prev = l.next) {
         case 0:
-          if (e$payload$widgetType = e.payload.widgetType, $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e$payload$widgetType)) {
+          if (e$payload$widgetType = e.payload.widgetType, Module_9.Db(e$payload$widgetType)) {
             l.next = 17
             break
           }
           l.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.t)
+          return ReduxSagaEffects.f(Module_22.t)
         case 4:
           if (l$sent = l.sent, !(r = l$sent.find(function (e) {
             return CustomWidgetType.c(e.type, true) === e$payload$widgetType
@@ -3599,7 +3599,7 @@ function gs(e) {
           break
         case 11:
           l.next = 13
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 13:
           _l$sent = l.sent
           l.next = 16
@@ -3641,10 +3641,10 @@ function _s(e, t, n) {
       switch (f.prev = f.next) {
         case 0:
           f.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           f$sent = f.sent
-          o = $$_$$_$$_$$_unrestored_shared_1571_2636_127.n[n]
+          o = Module_127.n[n]
           i = []
           s = {}
           f.t0 = RegeneratorRuntime.keys(o)
@@ -3655,7 +3655,7 @@ function _s(e, t, n) {
           }
           f$t1$value = f.t1.value
           u = o[f$t1$value]
-          d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(u.widgetType)
+          d = Module_9.Db(u.widgetType)
           f.next = 13
           return ReduxSagaEffects.b(ps, u.widgetType, {
             x: 0,
@@ -3671,8 +3671,8 @@ function _s(e, t, n) {
         case 17:
           _f$sent.parentId = t
           _f$sent.title = Language.c(f$sent, u.titleMessageId).toString()
-          _f$sent.attributes = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, _f$sent.attributes), u.attributes)
-          if (_f$sent.type === $$_$$_widget_builtIn_types.H) {
+          _f$sent.attributes = Module_6.a(Module_6.a({}, _f$sent.attributes), u.attributes)
+          if (_f$sent.type === Widget_builtIn_types.H) {
             _f$sent.attributes.content = Language.c(f$sent, u.contentMessageId || "").toString()
             _f$sent.attributes.textAlign = "left"
           }
@@ -3713,9 +3713,9 @@ function vs(e) {
       switch (a.prev = a.next) {
         case 0:
           a.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
-          if (a$sent = a.sent, n = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e.type)) {
+          if (a$sent = a.sent, n = Module_9.Db(e.type)) {
             a.next = 6
             break
           }
@@ -3750,24 +3750,24 @@ function bs(e, t) {
       switch (c.prev = c.next) {
         case 0:
           c.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
-          if (c$sent = c.sent, o = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(t.type)) {
+          if (c$sent = c.sent, o = Module_9.Db(t.type)) {
             c.next = 6
             break
           }
           return c.abrupt("return")
         case 6:
           c.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 8:
           _c$sent = c.sent
           c.next = 11
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.u)
+          return ReduxSagaEffects.f(Module_22.u)
         case 11:
           _c$sent2 = c.sent
           s = null === (n = Language.c(c$sent, o.previewAreaWidgetTitle)) || undefined === n ? undefined : n.toString()
-          $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("AddWidgetToStage", {
+          Module_141.a("AddWidgetToStage", {
             screenId: e,
             screenName: (null === _c$sent || undefined === _c$sent ? undefined : _c$sent.title) || "",
             isCooperation: !!_c$sent2,
@@ -3801,9 +3801,9 @@ function ys(e) {
           e$payload$widgetId = e$payload.widgetId
           e$payload$templateType = e$payload.templateType
           e$payload$onSuccess = e$payload.onSuccess
-          s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId)
+          s = Module_9.Bb(e$payload$widgetId)
           h.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.g)
+          return ReduxSagaEffects.f(Module_22.g)
         case 4:
           if (h$sent = h.sent, s && h$sent) {
             h.next = 7
@@ -3811,13 +3811,13 @@ function ys(e) {
           }
           return h.abrupt("return")
         case 7:
-          if (s.type === $$_$$_widget_builtIn_types.x || s.type === $$_$$_widget_builtIn_types.A) {
+          if (s.type === Widget_builtIn_types.x || s.type === Widget_builtIn_types.A) {
             h.next = 9
             break
           }
           return h.abrupt("return")
         case 9:
-          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(s.widgetIds)
+          u = Module_47.a(s.widgetIds)
           h.prev = 10
           u.s()
         case 12:
@@ -3843,12 +3843,12 @@ function ys(e) {
           u.f()
           return h.finish(23)
         case 26:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.t(e$payload$widgetId)
+          Module_26.t(e$payload$widgetId)
           h.next = 29
           return ReduxSagaEffects.b(_s, h$sent, e$payload$widgetId, e$payload$templateType)
         case 29:
           _h$sent = h.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Wb(e$payload$widgetId, _h$sent.widgetIds)
+          Module_9.Wb(e$payload$widgetId, _h$sent.widgetIds)
           h.next = 33
           return ReduxSagaEffects.e(Actions.Kg(e$payload$widgetId, "templateSlotMap", _h$sent.templateSlotMap))
         case 33:
@@ -3888,7 +3888,7 @@ function Es(e) {
           e$payload$gridId = e$payload.gridId
           e$payload$deleteColumnIdList = e$payload.deleteColumnIdList
           m.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 3:
           if (m$sent = m.sent) {
             m.next = 6
@@ -3897,7 +3897,7 @@ function Es(e) {
           return m.abrupt("return")
         case 6:
           m$sent$id = m$sent.id
-          a = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(m$sent.widgetIds)
+          a = Module_47.a(m$sent.widgetIds)
           m.prev = 8
           a.s()
         case 10:
@@ -3905,7 +3905,7 @@ function Es(e) {
             m.next = 23
             break
           }
-          if (s$value = s.value, (null === (u = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(s$value)) || undefined === u ? undefined : u.type) !== $$_$$_widget_builtIn_types.x && (null === u || undefined === u ? undefined : u.type) !== $$_$$_widget_builtIn_types.A || u.attributes.dataSource !== e$payload$gridId) {
+          if (s$value = s.value, (null === (u = Module_9.Bb(s$value)) || undefined === u ? undefined : u.type) !== Widget_builtIn_types.x && (null === u || undefined === u ? undefined : u.type) !== Widget_builtIn_types.A || u.attributes.dataSource !== e$payload$gridId) {
             m.next = 21
             break
           }
@@ -3948,7 +3948,7 @@ function migrateCloudDb() {
   return ws.apply(this, arguments)
 }
 function ws() {
-  return (ws = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+  return (ws = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */store$getState$common$language
@@ -3956,14 +3956,14 @@ function ws() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (!(t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().map(function (e) {
+            if (!(t = Module_9.Y().map(function (e) {
               return e.attributes.cloudDbId
             })).length) {
               e.next = 6
               break
             }
             e.next = 4
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_147.j(t)
+            return Module_147.j(t)
           case 4:
             if (e$sent = e.sent) {
               store$getState$common$language = store.getState().common.language
@@ -3993,7 +3993,7 @@ function Cs() {
       switch (a.prev = a.next) {
         case 0:
           a.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           a$sent = a.sent
           a.next = 5
@@ -4003,7 +4003,7 @@ function Cs() {
         case 5:
           _a$sent2 = a.sent
           a.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 8:
           if (_a$sent3 = a.sent, _a$sent2) {
             a.next = 11
@@ -4021,13 +4021,13 @@ function Cs() {
           return a.abrupt("return")
         case 15:
           a.prev = 15
-          r = $$_$$_$$_$$_unrestored_shared_1571_2636_9.cb()
+          r = Module_9.cb()
           a.next = 19
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.A)
+          return ReduxSagaEffects.f(Module_22.A)
         case 19:
           _a$sent4 = a.sent
           a.next = 22
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.l, _a$sent4, _a$sent2)
+          return ReduxSagaEffects.b(Module_177.l, _a$sent4, _a$sent2)
         case 22:
           _a$sent5 = a.sent
           a.next = 25
@@ -4038,7 +4038,7 @@ function Cs() {
         case 27:
           migrateCloudDict(r.map(function (e) {
             return e.attributes.cloudDbId
-          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(a$sent) ? a$sent : undefined)
+          }), 2, 1, Module_97.a(a$sent) ? a$sent : undefined)
           a.next = 30
           return migrateCloudDb()
         case 30:
@@ -4069,25 +4069,25 @@ function Cs() {
  */
 function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
   var _
-  let id = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
-  const language = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
-  const screens = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
-  const globalVariableList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.m)
-  const globalArrayList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.k)
-  const globalObjectList = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.l)
-  const globalWidgetIds = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
-  const currentScreen = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
-  const apiToken = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
+  let id = yield ReduxSagaEffects.f(Module_22.y)
+  const language = yield ReduxSagaEffects.f(Module_22.s)
+  const screens = yield ReduxSagaEffects.f(Module_22.C)
+  const globalVariableList = yield ReduxSagaEffects.f(Module_22.m)
+  const globalArrayList = yield ReduxSagaEffects.f(Module_22.k)
+  const globalObjectList = yield ReduxSagaEffects.f(Module_22.l)
+  const globalWidgetIds = yield ReduxSagaEffects.f(Module_22.n)
+  const currentScreen = yield ReduxSagaEffects.f(Module_22.f)
+  const apiToken = yield ReduxSagaEffects.f(Module_22.v)
   if (!currentScreen) {
     return
   }
-  $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.updateCurrentWorkspaceData()
-  const hasCloudRoomBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudRoom")
-  const hasCloudStorageBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudStorage")
-  const hasCloudDbBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudDB")
-  const hasCloudDictBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudDict")
-  const hasBlockTableBlock = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.hasCloudBlock("cloudTable")
-  _ = $$_$$_$$_$$_unrestored_shared_1571_2636_9.q()
+  Module_26.z.updateCurrentWorkspaceData()
+  const hasCloudRoomBlock = Module_26.z.hasCloudBlock("cloudRoom")
+  const hasCloudStorageBlock = Module_26.z.hasCloudBlock("cloudStorage")
+  const hasCloudDbBlock = Module_26.z.hasCloudBlock("cloudDB")
+  const hasCloudDictBlock = Module_26.z.hasCloudBlock("cloudDict")
+  const hasBlockTableBlock = Module_26.z.hasCloudBlock("cloudTable")
+  _ = Module_9.q()
   if (
     hasCloudRoomBlock ||
     hasCloudDbBlock ||
@@ -4096,7 +4096,7 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
     hasBlockTableBlock ||
     _
   ) {
-    if (!$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id)) {
+    if (!Module_97.a(id)) {
       yield ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
         duration: 4000,
         showPrefixIcon: false,
@@ -4109,20 +4109,20 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
     }
     if (!apiToken) {
       yield ReduxSagaEffects.b(Vs)
-      apiToken = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.v)
+      apiToken = yield ReduxSagaEffects.f(Module_22.v)
     }
   }
   const initialScreenId = isPlayCurrentScreen ? currentScreen.id : screens.toArray()[0].id
   const soundFileMap = yield getSoundFileMap()
   const iconFileMap = yield getIconFileMap()
   const fontFileMap = yield getFontFileMap()
-  const result = $$_$$_$$_$$_unrestored_shared_1571_2636_177.c(
+  const result = Module_177.c(
     id,
-    $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z,
+    Module_26.z,
     screens.toArray(),
     globalVariableList,
     globalArrayList,
-    $$_$$_$$_$$_unrestored_shared_1571_2636_9.kb(),
+    Module_9.kb(),
     soundFileMap,
     iconFileMap,
     initialScreenId,
@@ -4131,7 +4131,7 @@ function* generatePlayerData(isPlayCurrentScreen: boolean, debug?: boolean) {
     globalObjectList
   )
   result.fontFileMap = fontFileMap
-  result.blockCode = $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.generateAllWorkspaceCodes(result.screenList, debug)
+  result.blockCode = Module_26.z.generateAllWorkspaceCodes(result.screenList, debug)
   const minifyResult = Terser.minify(result.blockCode, { keep_fnames: true })
   if (minifyResult.code !== undefined) {
     result.blockCode = minifyResult.code
@@ -4153,7 +4153,7 @@ function Ss() {
       switch (l.prev = l.next) {
         case 0:
           l.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.B)
+          return ReduxSagaEffects.f(Module_22.B)
         case 2:
           l$sent = l.sent
           l.next = 5
@@ -4173,7 +4173,7 @@ function Ss() {
             break
           }
           l.next = 14
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.a, l$sent)
+          return ReduxSagaEffects.b(Module_177.a, l$sent)
         case 14:
           l$sent1 = l.sent
           t = l$sent1.progress
@@ -4211,7 +4211,7 @@ function Ss() {
             break
           }
           l.next = 35
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.i, l$sent)
+          return ReduxSagaEffects.b(Module_177.i, l$sent)
         case 35:
           l$sent2 = l.sent
           _l$sent3$url = l$sent2.url
@@ -4269,23 +4269,23 @@ function As(e) {
       switch (a.prev = a.next) {
         case 0:
           a.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           a$sent = a.sent
           a.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.F)
+          return ReduxSagaEffects.f(Module_22.F)
         case 5:
           _a$sent6 = a.sent
           a.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.A)
+          return ReduxSagaEffects.f(Module_22.A)
         case 8:
           _a$sent7 = a.sent
           a.next = 11
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.w)
+          return ReduxSagaEffects.f(Module_22.w)
         case 11:
           _a$sent8 = a.sent
           i = _a$sent7.apkSplash.match(/splash0(\d)\.png/)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkPack", {
+          Module_141.a("WorkPack", {
             workId: a$sent,
             sourceTag: _a$sent6.tag,
             sourceId: _a$sent6.id,
@@ -4320,7 +4320,7 @@ function Is(e) {
         case 0:
           e$payload$isPlayCurrentScreen = e.payload.isPlayCurrentScreen
           f.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 3:
           f$sent = f.sent
           f.next = 6
@@ -4358,7 +4358,7 @@ function Is(e) {
                 if (LoadCustomWidget.q(e$type)) {
                   s.add(o.types.title)
                 } else {
-                  var p = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(e$type)
+                  var p = Module_9.Db(e$type)
                   if (p) {
                     var f = Language.c(f$sent, p.title)
                     s.add(f)
@@ -4398,12 +4398,12 @@ function Is(e) {
           }))
         case 25:
           f.next = 27
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 27:
           _f$sent3 = f.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.stopWarningAnimation()
+          Module_26.z.stopWarningAnimation()
           f.next = 31
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.b, _f$sent3, _f$sent2)
+          return ReduxSagaEffects.b(Module_177.b, _f$sent3, _f$sent2)
         case 31:
           f.next = 33
           return ReduxSagaEffects.e(Actions.Cj())
@@ -4411,7 +4411,7 @@ function Is(e) {
           f.next = 35
           return ReduxSagaEffects.b(js, _f$sent2$widgetMap)
         case 35:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_37_219_index.b({
+          Module_219.b({
             playing: true
           })
           f.next = 38
@@ -4420,7 +4420,7 @@ function Is(e) {
           f.next = 51
           break
         case 40:
-          if (f.prev = 40, f.t0 = f.catch(6), !(f.t0 instanceof $$_$$_$$_$$_unrestored_shared_1571_2636_207_139.b)) {
+          if (f.prev = 40, f.t0 = f.catch(6), !(f.t0 instanceof Module_139.b)) {
             f.next = 48
             break
           }
@@ -4462,7 +4462,7 @@ function js(e) {
       switch (p.prev = p.next) {
         case 0:
           p.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           p$sent = p.sent
           n = 0
@@ -4472,7 +4472,7 @@ function js(e) {
             p.next = 19
             break
           }
-          if ((o = r[n]).type !== $$_$$_widget_builtIn_types.E) {
+          if ((o = r[n]).type !== Widget_builtIn_types.E) {
             p.next = 16
             break
           }
@@ -4524,14 +4524,14 @@ function Ns(e) {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           r$sent = r.sent
           r.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
+          return ReduxSagaEffects.f(Module_22.G)
         case 5:
           _r$sent = r.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkRun", {
+          Module_141.a("WorkRun", {
             workId: r$sent,
             workName: _r$sent,
             workType: "APP工匠",
@@ -4554,7 +4554,7 @@ function Rs(e) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.e)
+          return ReduxSagaEffects.f(Module_22.e)
         case 2:
           o$sent = o.sent
           n = o$sent.filter(function (e) {
@@ -4565,7 +4565,7 @@ function Rs(e) {
           o$sent$filterFunctionEReturnWarningE$getType$size = o$sent.filter(function (e) {
             return "warning" === e.get("type")
           }).size
-          $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("ConsoleDetail", {
+          Module_141.a("ConsoleDetail", {
             errorCount: n,
             warningCount: o$sent$filterFunctionEReturnWarningE$getType$size,
             errorMessage: e.message,
@@ -4584,31 +4584,31 @@ function* handlePublishWorkToCommunity(action) {
   if (!playerData) {
     throw new Error("can not generate player data")
   }
-  const workId = yield ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+  const workId = yield ReduxSagaEffects.f(Module_22.y)
   yield ReduxSagaEffects.b(Actions.Bf, action.payload.name)
   const blob = new Blob([JSON.stringify(playerData)], { type: "application/json,charset=utf-8;" })
   const file = new File([blob], "test.json", { type: blob.type })
-  const uploadPlayerDataResult = yield ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e, file, "JSON")
+  const uploadPlayerDataResult = yield ReduxSagaEffects.b(Module_197.e, file, "JSON")
   const { payload } = action
   const { name, description, operation, coverUrl } = payload
   const publishInfo = {
     name: name,
-    description: description || $$_$$_$$_$$_unrestored_shared_1571_2636_328.a,
-    operation: operation || $$_$$_$$_$$_unrestored_shared_1571_2636_328.b,
+    description: description || Module_328.a,
+    operation: operation || Module_328.b,
     coverUrl,
     workId,
     bcmcUrl: uploadPlayerDataResult.url,
-    playerUrl: $$_$$_$$_shared_tools.getPlayerCommunityUrl(workId)
+    playerUrl: Shared_tools.getPlayerCommunityUrl(workId)
   }
-  const publishResponse = yield ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.m, publishInfo)
+  const publishResponse = yield ReduxSagaEffects.b(Module_177.m, publishInfo)
   if (publishResponse.code !== 200) {
     throw Error(`${publishResponse.code}`)
   }
   migrateCloudDict(
-    $$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().map((e) => e.attributes.cloudDbId),
+    Module_9.cb().map((e) => e.attributes.cloudDbId),
     2,
     1,
-    $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(workId) ? workId : undefined
+    Module_97.a(workId) ? workId : undefined
   )
   yield migrateCloudDb()
   return workId
@@ -4630,10 +4630,10 @@ function handlePublishWorkToH5(action) {
       switch (regeneratorContext.prev = regeneratorContext.next) {
         case 0:
           regeneratorContext.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           regeneratorContext$sent = regeneratorContext.sent
-          n = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(regeneratorContext$sent)
+          n = Module_97.a(regeneratorContext$sent)
           regeneratorContext.next = 6
           return ReduxSagaEffects.b(Ws, Actions.asyncSaveProjectAction({
             isUpdate: n,
@@ -4643,7 +4643,7 @@ function handlePublishWorkToH5(action) {
           _f$sent4 = regeneratorContext.sent
           action$payload$info = action.payload.info
           regeneratorContext.next = 10
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 10:
           _f$sent5 = regeneratorContext.sent
           regeneratorContext.next = 13
@@ -4664,7 +4664,7 @@ function handlePublishWorkToH5(action) {
           throw new Error("user not login")
         case 18:
           l = new Blob([
-            JSON.stringify($$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, regeneratorContext$sent1), {}, {
+            JSON.stringify(Module_6.a(Module_6.a({}, regeneratorContext$sent1), {}, {
               userInfo: {
                 name: _f$sent5.nickname,
                 avatarUrl: _f$sent5.avatar_url
@@ -4680,17 +4680,17 @@ function handlePublishWorkToH5(action) {
             type: l.type
           })
           regeneratorContext.next = 22
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e, u, "JSON")
+          return ReduxSagaEffects.b(Module_197.e, u, "JSON")
         case 22:
           _f$sent7 = regeneratorContext.sent
-          migrateCloudDict($$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().map(function (e) {
+          migrateCloudDict(Module_9.cb().map(function (e) {
             return e.attributes.cloudDbId
-          }), 2, 1, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_f$sent4) ? _f$sent4 : undefined)
+          }), 2, 1, Module_97.a(_f$sent4) ? _f$sent4 : undefined)
           regeneratorContext.next = 27
           return migrateCloudDb()
         case 27:
           regeneratorContext.next = 29
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.n, _f$sent4, _f$sent7.url)
+          return ReduxSagaEffects.b(Module_177.n, _f$sent4, _f$sent7.url)
         case 29:
           if (200 === (_f$sent8 = regeneratorContext.sent).code) {
             regeneratorContext.next = 32
@@ -4719,24 +4719,24 @@ function Ds(e) {
         case 0:
           e$payload$shouldCloneCloud = e.payload.shouldCloneCloud
           a.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 3:
           a$sent = a.sent
           a.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
+          return ReduxSagaEffects.f(Module_22.G)
         case 6:
           if (_a$sent9 = a.sent, !a$sent) {
             a.next = 13
             break
           }
           a.next = 10
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_97.b, e$payload$shouldCloneCloud)
+          return ReduxSagaEffects.b(Module_97.b, e$payload$shouldCloneCloud)
         case 10:
           a$sent1 = a.sent
           i = new Blob([JSON.stringify(a$sent1)], {
             type: "application/json,charset=utf-8;"
           })
-          $$_$$_$$_shared_tools.s(URL.createObjectURL(i), _a$sent9)
+          Shared_tools.s(URL.createObjectURL(i), _a$sent9)
         case 13:
         case "end":
           return a.stop()
@@ -4751,14 +4751,14 @@ function Ms() {
       switch (t.prev = t.next) {
         case 0:
           t.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 2:
           if (t$sent = t.sent, t.prev = 3, !t$sent) {
             t.next = 7
             break
           }
           t.next = 7
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_197_index.c, $$_$$_$$_$$_unrestored_shared_1571_2636_9.jb(), function (e) {
+          return ReduxSagaEffects.b(Module_197.c, Module_9.jb(), function (e) {
             var /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$imageFileList
             if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$imageFileList = oTHelper.imageFileList) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$imageFileList)) {
               $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$imageFileList.clientOp.replaceImageFileCdnUrl(e.id, e.cdnUrl)
@@ -4771,7 +4771,7 @@ function Ms() {
           t.prev = 9
           t.t0 = t.catch(3)
           t.t0
-          $$_$$_$$_$$_unrestored_shared_1571_2636_197_index.a
+          Module_197.a
           throw t.t0
         case 13:
         case "end":
@@ -4784,7 +4784,7 @@ function Ls(e, t) {
   return Ps.apply(this, arguments)
 }
 function Ps() {
-  return (Ps = $$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (Ps = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */e$sent
     return RegeneratorRuntime.wrap(function (e) {
@@ -4801,7 +4801,7 @@ function Ps() {
             }
             e.prev = 3
             e.next = 6
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_553.a(r, 1)
+            return Module_553.a(r, 1)
           case 6:
             t.snapshot = e.sent
             e.next = 12
@@ -4819,7 +4819,7 @@ function Ps() {
           case 14:
             e.prev = 14
             e.next = 17
-            return $$_$$_$$_$$_unrestored_shared_1571_2636_197_index.f(t.snapshot)
+            return Module_197.f(t.snapshot)
           case 17:
             e$sent = e.sent
             t.snapshot = e$sent
@@ -4829,7 +4829,7 @@ function Ps() {
             e.prev = 21
             e.t1 = e.catch(14)
             e.t1
-            $$_$$_$$_$$_unrestored_shared_1571_2636_197_index.a
+            Module_197.a
             console.error("uploadImageDataUrlToCdn error", e.t1)
           case 25:
           case "end":
@@ -4850,12 +4850,12 @@ function getSoundFileMap() {
         case 0:
           e = r.length > 0 && undefined !== r[0] && r[0]
           o.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.I)
+          return ReduxSagaEffects.f(Module_22.I)
         case 3:
           o$sent = o.sent
           n = {}
           o$sent.forEach(function (t) {
-            n[t.id] = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, t), {}, {
+            n[t.id] = Module_6.a(Module_6.a({}, t), {}, {
               cdnUrl: e && t.source || t.cdnUrl
             })
           })
@@ -4878,12 +4878,12 @@ function getIconFileMap() {
         case 0:
           e = r.length > 0 && undefined !== r[0] && r[0]
           o.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.o)
+          return ReduxSagaEffects.f(Module_22.o)
         case 3:
           o$sent = o.sent
           n = {}
           o$sent.forEach(function (t) {
-            n[t.id] = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, t), {}, {
+            n[t.id] = Module_6.a(Module_6.a({}, t), {}, {
               cdnUrl: e && t.source || t.cdnUrl
             })
           })
@@ -4905,12 +4905,12 @@ function getFontFileMap() {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.j)
+          return ReduxSagaEffects.f(Module_22.j)
         case 2:
           o$sent = o.sent
           t = {}
           o.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 6:
           _o$sent5 = o.sent
           r = {}
@@ -4919,8 +4919,8 @@ function getFontFileMap() {
           })
           _o$sent5.forEach(function (e) {
             e.widgetIds.forEach(function (e) {
-              var n = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
-              if ((null === n || undefined === n ? undefined : n.type) === $$_$$_widget_builtIn_types.H || (null === n || undefined === n ? undefined : n.type) === $$_$$_widget_builtIn_types.z || (null === n || undefined === n ? undefined : n.type) === $$_$$_widget_builtIn_types.w) {
+              var n = Module_9.Bb(e)
+              if ((null === n || undefined === n ? undefined : n.type) === Widget_builtIn_types.H || (null === n || undefined === n ? undefined : n.type) === Widget_builtIn_types.z || (null === n || undefined === n ? undefined : n.type) === Widget_builtIn_types.w) {
                 var o
                 var /* [auto-meaningful-name] */n$attributes$fontFamily = n.attributes.fontFamily
                 if (!r[n$attributes$fontFamily] && (null === (o = t[n$attributes$fontFamily]) || undefined === o ? undefined : o.cdnUrl)) {
@@ -4930,7 +4930,7 @@ function getFontFileMap() {
               if (n && n.attributes && "EXTENSION_QUILL_RICH_TEXT_WIDGET" === n.type) {
                 var /* [auto-meaningful-name] */n$attributes$content = n.attributes.content
                 var s = undefined === n$attributes$content ? "" : n$attributes$content
-                $$_$$_$$_$$_unrestored_shared_1571_2636_37_375.a(s).forEach(function (e) {
+                Module_375.a(s).forEach(function (e) {
                   var n
                   if (!r[e] && (null === (n = t[e]) || undefined === n ? undefined : n.cdnUrl)) {
                     r[e] = t[e]
@@ -4983,20 +4983,20 @@ function Ws(e) {
           e$payload$isAutoSave = e$payload.isAutoSave
           e$payload$isSaveAs = e$payload.isSaveAs
           A.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 3:
           A$sent = A.sent
           A.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 6:
           _A$sent = A.sent
           l = Math.ceil(10 * Math.random()) + 10
           A.next = 10
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 10:
           _A$sent2 = A.sent
           A.next = 13
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.F)
+          return ReduxSagaEffects.f(Module_22.F)
         case 13:
           A$sent1 = A.sent
           p = 20
@@ -5020,10 +5020,10 @@ function Ws(e) {
             A.next = 27
             break
           }
-          throw new Error($$_$$_$$_$$_unrestored_shared_1571_2636_276.a.CLOUD_SPACE_DATA_ERROR)
+          throw new Error(Module_276.a.CLOUD_SPACE_DATA_ERROR)
         case 27:
           A.next = 29
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
+          return ReduxSagaEffects.f(Module_22.G)
         case 29:
           if (f = A.sent, !e$payload$isSaveAs) {
             A.next = 35
@@ -5051,7 +5051,7 @@ function Ws(e) {
         case 43:
           g = h[0]
           _ = g.snapshot
-          v = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(h)
+          v = Module_47.a(h)
           A.prev = 46
           v.s()
         case 48:
@@ -5084,11 +5084,11 @@ function Ws(e) {
             _ = "https://creation.codemao.cn/716/appcraft/IMAGE_ssdp_AuDw_1645089354494.png"
           }
           A.next = 67
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_97.b)
+          return ReduxSagaEffects.b(Module_97.b)
         case 67:
           _A$sent4 = A.sent
           A.next = 70
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.h, JSON.stringify(_A$sent4))
+          return ReduxSagaEffects.b(Module_297.h, JSON.stringify(_A$sent4))
         case 70:
           _A$sent5 = A.sent
           A.next = 73
@@ -5106,11 +5106,11 @@ function Ws(e) {
             bcmUrl: _A$sent5,
             coverUrl: _,
             id: _A$sent,
-            saveType: e$payload$isAutoSave ? $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.AutoSave : $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.ByUser
+            saveType: e$payload$isAutoSave ? Module_53.g.AutoSave : Module_53.g.ByUser
           }
           A.prev = 77
           A.next = 80
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.g, C)
+          return ReduxSagaEffects.b(Module_297.g, C)
         case 80:
           if (!e$payload$isNeedReport) {
             A.next = 83
@@ -5157,12 +5157,12 @@ function Ws(e) {
             name: f.substring(0, p),
             bcmUrl: _A$sent5,
             coverUrl: _,
-            saveType: e$payload$isAutoSave ? $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.AutoSave : $$_$$_$$_$$_unrestored_shared_1571_2636_53.g.ByUser,
+            saveType: e$payload$isAutoSave ? Module_53.g.AutoSave : Module_53.g.ByUser,
             sourceTag: A$sent1.tag
           }
           A.prev = 107
           A.next = 110
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.f, T)
+          return ReduxSagaEffects.b(Module_297.f, T)
         case 110:
           if (_A$sent6 = A.sent, !e$payload$isNeedReport) {
             A.next = 114
@@ -5207,11 +5207,11 @@ function Ws(e) {
           A.next = 135
           return ReduxSagaEffects.e(Actions.Si(false))
         case 135:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.setCurrentProjectId(_A$sent6)
+          Module_26.z.setCurrentProjectId(_A$sent6)
           A.next = 138
           return ReduxSagaEffects.b(Vs)
         case 138:
-          $$_$$_$$_shared_tools.jb(_A$sent6)
+          Shared_tools.jb(_A$sent6)
           A.next = 141
           return ReduxSagaEffects.b(vc, _A$sent6)
         case 141:
@@ -5220,9 +5220,9 @@ function Ws(e) {
             break
           }
           A.next = 144
-          return ReduxSagaEffects.e($$_$$_$$_$$_unrestored_shared_1571_2636_100.n())
+          return ReduxSagaEffects.e(Module_100.n())
         case 144:
-          $$_$$_$$_shared_tools.k(["courseId", "templateId"])
+          Shared_tools.k(["courseId", "templateId"])
           Pn()
           return A.abrupt("return", _A$sent6)
         case 147:
@@ -5241,18 +5241,18 @@ function Us(e, t) {
       switch (i.prev = i.next) {
         case 0:
           i.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           i$sent = i.sent
           i.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
+          return ReduxSagaEffects.f(Module_22.G)
         case 5:
           _i$sent = i.sent
           i.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.F)
+          return ReduxSagaEffects.f(Module_22.F)
         case 8:
           _i$sent2 = i.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkSave", {
+          Module_141.a("WorkSave", {
             workId: i$sent,
             workName: _i$sent,
             workType: "APP工匠",
@@ -5293,11 +5293,11 @@ function Vs() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           n$sent = n.sent
           n.next = 5
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.k, n$sent)
+          return ReduxSagaEffects.b(Module_177.k, n$sent)
         case 5:
           _n$sent = n.sent
           n.next = 8
@@ -5343,9 +5343,9 @@ function zs(e) {
           d = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           e$payload$isBasePropertyPriority = e$payload.isBasePropertyPriority
           f = undefined === e$payload$isBasePropertyPriority || e$payload$isBasePropertyPriority
-          h = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId)
+          h = Module_9.Bb(e$payload$widgetId)
           b.next = 4
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 4:
           if (b$sent = b.sent, g = b$sent.find(function (e) {
             var /* [auto-meaningful-name] */e$invisibleWidgetIds
@@ -5356,7 +5356,7 @@ function zs(e) {
           }
           return b.abrupt("return")
         case 8:
-          if (d && (h.isGlobalWidget ? null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget = oTHelper.globalWidget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget || $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget.clientOp.replaceWidgetAttributeOp(e$payload$widgetId, e$payload$key.toString(), e$payload$value, f) : g && (null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget || $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.replaceWidgetAttributeOp(g.id, e$payload$widgetId, e$payload$key.toString(), e$payload$value, f))), !$$_$$_$$_$$_unrestored_shared_1571_2636_9.o.includes(e$payload$key) && !(e$payload$key in h) || !f) {
+          if (d && (h.isGlobalWidget ? null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget = oTHelper.globalWidget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget || $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$globalWidget.clientOp.replaceWidgetAttributeOp(e$payload$widgetId, e$payload$key.toString(), e$payload$value, f) : g && (null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget || $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.replaceWidgetAttributeOp(g.id, e$payload$widgetId, e$payload$key.toString(), e$payload$value, f))), !Module_9.o.includes(e$payload$key) && !(e$payload$key in h) || !f) {
             b.next = 14
             break
           }
@@ -5416,13 +5416,13 @@ function Ys(e) {
     for (;;) {
       switch (f.prev = f.next) {
         case 0:
-          if (e$payload = e.payload, e$payload$widgetId = e$payload.widgetId, e$payload$key = e$payload.key, e$payload$value = e$payload.value, $$_$$_$$_$$_unrestored_shared_1571_2636_9.Vb(e$payload$widgetId, e$payload$key, e$payload$value), store$getState$project$id = store.getState().project.id, e$payload$widgetId.includes($$_$$_widget_builtIn_types.G) && "db" === e$payload$key && $$_$$_$$_$$_unrestored_shared_1571_2636_174.a.get(e$payload$widgetId).then(function (e) {
+          if (e$payload = e.payload, e$payload$widgetId = e$payload.widgetId, e$payload$key = e$payload.key, e$payload$value = e$payload.value, Module_9.Vb(e$payload$widgetId, e$payload$key, e$payload$value), store$getState$project$id = store.getState().project.id, e$payload$widgetId.includes(Widget_builtIn_types.G) && "db" === e$payload$key && Module_174.a.get(e$payload$widgetId).then(function (e) {
             if (e) {
               ReduxSagaEffects.e(Actions.Pj(e$payload$widgetId, "value", e))
             } else {
               ReduxSagaEffects.e(Actions.Pj(e$payload$widgetId, "value", e$payload$value))
             }
-          }), !e$payload$widgetId.includes($$_$$_widget_builtIn_types.B) && !e$payload$widgetId.includes($$_$$_widget_builtIn_types.y)) {
+          }), !e$payload$widgetId.includes(Widget_builtIn_types.B) && !e$payload$widgetId.includes(Widget_builtIn_types.y)) {
             f.next = 14
             break
           }
@@ -5430,7 +5430,7 @@ function Ys(e) {
             f.next = 14
             break
           }
-          if (a = $$_$$_$$_$$_unrestored_shared_1571_2636_20_index.getLocalDocumentObject(store$getState$project$id, e$payload$widgetId)) {
+          if (a = Module_20.getLocalDocumentObject(store$getState$project$id, e$payload$widgetId)) {
             f.next = 12
             break
           }
@@ -5446,19 +5446,19 @@ function Ys(e) {
           f.next = 16
           return ReduxSagaEffects.e(Actions.Fi(true))
         case 16:
-          if (s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId)) {
+          if (s = Module_9.Bb(e$payload$widgetId)) {
             f.next = 19
             break
           }
           return f.abrupt("return")
         case 19:
-          if (s.type === $$_$$_widget_builtIn_types.B && "fields" === e$payload$key && $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.o(s.id, e$payload$value), s.type === $$_$$_widget_builtIn_types.G && "db" === e$payload$key && $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.p(s.id, e$payload$value), !s.title) {
+          if (s.type === Widget_builtIn_types.B && "fields" === e$payload$key && Module_26.o(s.id, e$payload$value), s.type === Widget_builtIn_types.G && "db" === e$payload$key && Module_26.p(s.id, e$payload$value), !s.title) {
             f.next = 23
             break
           }
           return f.abrupt("return")
         case 23:
-          if (l = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(s.type)) {
+          if (l = Module_9.Db(s.type)) {
             f.next = 26
             break
           }
@@ -5466,17 +5466,17 @@ function Ys(e) {
         case 26:
           if (l.contentTextField === e$payload$key) {
             s$contentTitle = s.contentTitle
-            if (d = (d = (d = e$payload$value).replace($$_$$_$$_$$_unrestored_shared_1571_2636_53.E, "")).trim()) {
-              d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.C(e$payload$widgetId, s.type, d)
+            if (d = (d = (d = e$payload$value).replace(Module_53.E, "")).trim()) {
+              d = Module_9.C(e$payload$widgetId, s.type, d)
             } else {
               p = l.previewAreaWidgetTitle
               p = Language.d(p)
-              d = $$_$$_$$_$$_unrestored_shared_1571_2636_9.C(e$payload$widgetId, s.type, p)
+              d = Module_9.C(e$payload$widgetId, s.type, p)
             }
             if (s$contentTitle !== d) {
               s.contentTitle = d
-              $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateToolBoxWidgetTitle(e$payload$widgetId, d)
-              $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.y(e$payload$widgetId, d, s.type)
+              Module_26.g.updateToolBoxWidgetTitle(e$payload$widgetId, d)
+              Module_26.y(e$payload$widgetId, d, s.type)
             }
           }
         case 28:
@@ -5492,7 +5492,7 @@ function Ks(e, t, n) {
     for (;;) {
       switch (o.prev = o.next) {
         case 0:
-          if (r = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(n)) {
+          if (r = Module_9.Bb(n)) {
             o.next = 3
             break
           }
@@ -5501,9 +5501,9 @@ function Ks(e, t, n) {
           o.next = 5
           return ReduxSagaEffects.e(Actions.Fi(true))
         case 5:
-          if ($$_$$_$$_$$_unrestored_shared_1571_2636_9.o.includes(e) || e in r) {
+          if (Module_9.o.includes(e) || e in r) {
             if (!("size" !== e && "position" !== e)) {
-              t = $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, r[e]), t)
+              t = Module_6.a(Module_6.a({}, r[e]), t)
             }
             r[e] = t
           }
@@ -5519,8 +5519,8 @@ function qs(e, t) {
     for (;;) {
       switch (n.prev = n.next) {
         case 0:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateToolBoxWidgetTitle(e, t)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.x(e, t)
+          Module_26.g.updateToolBoxWidgetTitle(e, t)
+          Module_26.x(e, t)
           n.next = 4
           return ReduxSagaEffects.e(Actions.Yj(e, t))
         case 4:
@@ -5539,9 +5539,9 @@ function Xs(e, t) {
       switch (i.prev = i.next) {
         case 0:
           i.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
-          if (i$sent = i.sent, (r = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)) && r.type === $$_$$_widget_builtIn_types.l) {
+          if (i$sent = i.sent, (r = Module_9.Bb(e)) && r.type === Widget_builtIn_types.l) {
             i.next = 6
             break
           }
@@ -5549,7 +5549,7 @@ function Xs(e, t) {
         case 6:
           r$attributes$cloudDbId = r.attributes.cloudDbId
           i.next = 9
-          return ReduxSagaEffects.b(Gt, r$attributes$cloudDbId, t, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(i$sent) ? i$sent : undefined)
+          return ReduxSagaEffects.b(Gt, r$attributes$cloudDbId, t, Module_97.a(i$sent) ? i$sent : undefined)
         case 9:
         case "end":
           return i.stop()
@@ -5567,9 +5567,9 @@ function Qs(e, t) {
       switch (a.prev = a.next) {
         case 0:
           a.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
-          if (a$sent = a.sent, (r = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)) && r.type === $$_$$_widget_builtIn_types.h) {
+          if (a$sent = a.sent, (r = Module_9.Bb(e)) && r.type === Widget_builtIn_types.h) {
             a.next = 6
             break
           }
@@ -5577,7 +5577,7 @@ function Qs(e, t) {
         case 6:
           r$attributes$cloudDbId = r.attributes.cloudDbId
           a.next = 9
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.p, r$attributes$cloudDbId, t, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(a$sent) ? a$sent : undefined)
+          return ReduxSagaEffects.b(Module_147.p, r$attributes$cloudDbId, t, Module_97.a(a$sent) ? a$sent : undefined)
         case 9:
           _a$sent1 = a.sent
           return a.abrupt("return", _a$sent1 || t)
@@ -5607,14 +5607,14 @@ function Zs(e) {
     for (;;) {
       switch (g.prev = g.next) {
         case 0:
-          if (e$payload = e.payload, e$payload$widgetId = e$payload.widgetId, e$payload$title = e$payload.title, e$payload$shouldUpdatePreviewArea = e$payload.shouldUpdatePreviewArea, e$payload$shouldUpdateEditArea = e$payload.shouldUpdateEditArea, e$payload$isEmitOT = e$payload.isEmitOT, s = undefined === e$payload$isEmitOT || e$payload$isEmitOT, l = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId)) {
+          if (e$payload = e.payload, e$payload$widgetId = e$payload.widgetId, e$payload$title = e$payload.title, e$payload$shouldUpdatePreviewArea = e$payload.shouldUpdatePreviewArea, e$payload$shouldUpdateEditArea = e$payload.shouldUpdateEditArea, e$payload$isEmitOT = e$payload.isEmitOT, s = undefined === e$payload$isEmitOT || e$payload$isEmitOT, l = Module_9.Bb(e$payload$widgetId)) {
             g.next = 4
             break
           }
           return g.abrupt("return")
         case 4:
           g.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 6:
           g$sent = g.sent
           d = null === g$sent || undefined === g$sent ? undefined : g$sent.id
@@ -5626,10 +5626,10 @@ function Zs(e) {
           return ReduxSagaEffects.b(Qs, e$payload$widgetId, e$payload$title)
         case 13:
           _g$sent = g.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Xb(e$payload$widgetId, _g$sent)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.Vb(e$payload$widgetId, "name", _g$sent)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateToolBoxWidgetTitle(e$payload$widgetId, _g$sent)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.y(e$payload$widgetId, _g$sent, l$type)
+          Module_9.Xb(e$payload$widgetId, _g$sent)
+          Module_9.Vb(e$payload$widgetId, "name", _g$sent)
+          Module_26.g.updateToolBoxWidgetTitle(e$payload$widgetId, _g$sent)
+          Module_26.y(e$payload$widgetId, _g$sent, l$type)
           g.next = 20
           return ReduxSagaEffects.e(Actions.Fi(true))
         case 20:
@@ -5744,7 +5744,7 @@ function $s(e) {
           e$payload$widgetCloneList = e$payload.widgetCloneList
           e$payload$screenId = e$payload.screenId
           i.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.g)
+          return ReduxSagaEffects.f(Module_22.g)
         case 3:
           if (i$sent = i.sent, e$payload$screenId && i$sent !== e$payload$screenId) {
             i.next = 9
@@ -5781,11 +5781,11 @@ function ec(e, t) {
       switch (f.prev = f.next) {
         case 0:
           f.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 2:
           f$sent = f.sent
           f.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 5:
           if (_f$sent9 = f.sent, o = f$sent.findIndex(function (e) {
             return e.id === t
@@ -5797,7 +5797,7 @@ function ec(e, t) {
             f.next = 36
             break
           }
-          s = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(e)
+          s = Module_47.a(e)
           f.prev = 11
           s.s()
         case 13:
@@ -5866,22 +5866,22 @@ function tc(e) {
       switch (_.prev = _.next) {
         case 0:
           _.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
+          return ReduxSagaEffects.f(Module_22.x)
         case 2:
           _$sent = _.sent
           _.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 5:
           _$sent1 = _.sent
           _.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 8:
           if (_$sent5 = _.sent, o = _$sent1.get(_$sent), !e.length || !o) {
             _.next = 50
             break
           }
           s = o.get("id")
-          l = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(e)
+          l = Module_47.a(e)
           _.prev = 13
           l.s()
         case 15:
@@ -5893,15 +5893,15 @@ function tc(e) {
             _.next = 29
             break
           }
-          if (u$value.position.x += 20, u$value.position.y -= 20, u$value.type !== $$_$$_widget_builtIn_types.a && u$value.type !== $$_$$_widget_builtIn_types.c) {
+          if (u$value.position.x += 20, u$value.position.y -= 20, u$value.type !== Widget_builtIn_types.a && u$value.type !== Widget_builtIn_types.c) {
             _.next = 27
             break
           }
-          if (!(f = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(u$value.parentId))) {
+          if (!(f = Module_9.Bb(u$value.parentId))) {
             _.next = 27
             break
           }
-          m = (h = f).widgetIds.includes(u$value.id) ? $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(h.widgetIds) : [].concat($$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(h.widgetIds), [u$value.id])
+          m = (h = f).widgetIds.includes(u$value.id) ? Module_25.a(h.widgetIds) : [].concat(Module_25.a(h.widgetIds), [u$value.id])
           _.next = 27
           return ReduxSagaEffects.e(Actions.Lg(u$value.parentId, "widgetIds", m, true, true, true, true))
         case 27:
@@ -5952,7 +5952,7 @@ function nc(e) {
   var /* [auto-meaningful-name] */e$payload
   var /* [auto-meaningful-name] */e$payload$widgetId
   var /* [auto-meaningful-name] */e$payload$position
-  var /* [auto-meaningful-name] */$$_$$_widget_builtIn_types$c
+  var /* [auto-meaningful-name] */Widget_builtIn_types$c
   var s
   var /* [auto-meaningful-name] */E$sent
   var /* [auto-meaningful-name] */E$sent1
@@ -5973,18 +5973,18 @@ function nc(e) {
           e$payload = e.payload
           e$payload$widgetId = e$payload.widgetId
           e$payload$position = e$payload.position
-          $$_$$_widget_builtIn_types$c = $$_$$_widget_builtIn_types.c
-          s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db($$_$$_widget_builtIn_types$c)
+          Widget_builtIn_types$c = Widget_builtIn_types.c
+          s = Module_9.Db(Widget_builtIn_types$c)
           E.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 5:
           E$sent = E.sent
           E.next = 8
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
+          return ReduxSagaEffects.f(Module_22.x)
         case 8:
           E$sent1 = E.sent
           E.next = 11
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 11:
           if (E$sent2 = E.sent, (p = E$sent1 > -1 ? E$sent2.get(E$sent1) : undefined) && s) {
             E.next = 15
@@ -5993,20 +5993,20 @@ function nc(e) {
           return E.abrupt("return")
         case 15:
           E.next = 17
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 17:
-          if (_E$sent3 = E.sent, s$widget$attributes = s.widget.attributes, s$widget$isGlobalWidget = s.widget.isGlobalWidget, g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$c, p.widgetIds, Language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$c), v = {
+          if (_E$sent3 = E.sent, s$widget$attributes = s.widget.attributes, s$widget$isGlobalWidget = s.widget.isGlobalWidget, g = s.title ? Module_9.D(Widget_builtIn_types$c, p.widgetIds, Language.c(E$sent, s.title).toString()) : "", _ = Module_64.a(Widget_builtIn_types$c), v = {
             id: _,
             title: g,
-            type: $$_$$_widget_builtIn_types.c,
+            type: Widget_builtIn_types.c,
             position: e$payload$position,
             visible: true,
             size: s.widget.size,
             parentId: e$payload$widgetId,
             animationRecord: {},
-            attributes: $$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, s$widget$attributes),
+            attributes: Module_6.a({}, s$widget$attributes),
             isGlobalWidget: s$widget$isGlobalWidget
-          }, $$_$$_$$_$$_unrestored_shared_1571_2636_9.Ub(_, v), !(b = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId))) {
+          }, Module_9.Ub(_, v), !(b = Module_9.Bb(e$payload$widgetId))) {
             E.next = 39
             break
           }
@@ -6027,7 +6027,7 @@ function nc(e) {
           return ReduxSagaEffects.b(bs, p.id, v)
         case 37:
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b.widgetIds))
+            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, Module_25.a(b.widgetIds))
           }
           CustomWidgetShop.a(v.type, null === _E$sent3 || undefined === _E$sent3 ? undefined : _E$sent3.id)
         case 39:
@@ -6042,7 +6042,7 @@ function rc(e) {
   var /* [auto-meaningful-name] */e$payload$widgetId
   var /* [auto-meaningful-name] */e$payload$position
   var o
-  var /* [auto-meaningful-name] */$$_$$_widget_builtIn_types$a
+  var /* [auto-meaningful-name] */Widget_builtIn_types$a
   var s
   var /* [auto-meaningful-name] */E$sent
   var /* [auto-meaningful-name] */E$sent1
@@ -6064,18 +6064,18 @@ function rc(e) {
           e$payload$widgetId = e$payload.widgetId
           e$payload$position = e$payload.position
           o = e$payload$widgetId
-          $$_$$_widget_builtIn_types$a = $$_$$_widget_builtIn_types.a
-          s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Db($$_$$_widget_builtIn_types$a)
+          Widget_builtIn_types$a = Widget_builtIn_types.a
+          s = Module_9.Db(Widget_builtIn_types$a)
           E.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 6:
           E$sent = E.sent
           E.next = 9
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.x)
+          return ReduxSagaEffects.f(Module_22.x)
         case 9:
           E$sent1 = E.sent
           E.next = 12
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 12:
           if (E$sent2 = E.sent, p = E$sent1 > -1 ? E$sent2.get(E$sent1) : undefined) {
             E.next = 16
@@ -6090,17 +6090,17 @@ function rc(e) {
           return E.abrupt("return")
         case 18:
           E.next = 20
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 20:
           if (_E$sent6 = E.sent, h = Lodash.cloneDeep(s.widget.attributes), s$widget$isGlobalWidget = s.widget.isGlobalWidget, h.actionList.push({
-            id: $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_$$_$$_unrestored_shared_1571_2636_144.a),
+            id: Module_64.a(Module_144.a),
             name: Language.c(E$sent, "ActorStyleDialog.defaultActionName").toString(),
             styleList: [],
             interval: 200
-          }), g = s.title ? $$_$$_$$_$$_unrestored_shared_1571_2636_9.D($$_$$_widget_builtIn_types$a, p.widgetIds, Language.c(E$sent, s.title).toString()) : "", _ = $$_$$_$$_$$_unrestored_shared_1571_2636_64.a($$_$$_widget_builtIn_types$a), v = {
+          }), g = s.title ? Module_9.D(Widget_builtIn_types$a, p.widgetIds, Language.c(E$sent, s.title).toString()) : "", _ = Module_64.a(Widget_builtIn_types$a), v = {
             id: _,
             title: g,
-            type: $$_$$_widget_builtIn_types.a,
+            type: Widget_builtIn_types.a,
             position: e$payload$position,
             visible: true,
             parentId: o,
@@ -6111,7 +6111,7 @@ function rc(e) {
             },
             attributes: h,
             isGlobalWidget: s$widget$isGlobalWidget
-          }, $$_$$_$$_$$_unrestored_shared_1571_2636_9.Ub(_, v), !(b = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(o))) {
+          }, Module_9.Ub(_, v), !(b = Module_9.Bb(o))) {
             E.next = 43
             break
           }
@@ -6132,7 +6132,7 @@ function rc(e) {
           return ReduxSagaEffects.b(bs, p.id, v)
         case 41:
           if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget = oTHelper.widget) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget)) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b.widgetIds))
+            $$_$$_$$_$$_unrestored_shared_1571_2636_49$oTHelper$widget.clientOp.addBrushAndActorWidgetOp(p.id, v, b.id, Module_25.a(b.widgetIds))
           }
           CustomWidgetShop.a(v.type, null === _E$sent6 || undefined === _E$sent6 ? undefined : _E$sent6.id)
         case 43:
@@ -6158,15 +6158,15 @@ function oc(e) {
           e$payload$screenId = e$payload.screenId
           e$payload$blockId = e$payload.blockId
           l.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 3:
           l$sent = l.sent
           l.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 6:
           _l$sent4 = l.sent
           l.next = 9
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 9:
           if (l$sent1 = l.sent, s = l$sent1.findIndex(function (e) {
             return e.id === e$payload$screenId
@@ -6175,7 +6175,7 @@ function oc(e) {
             break
           }
           l.next = 14
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.playWarningAnimation, e$payload$blockId)
+          return ReduxSagaEffects.b(Module_26.z.playWarningAnimation, e$payload$blockId)
         case 14:
           l.next = 19
           break
@@ -6187,12 +6187,12 @@ function oc(e) {
           l.next = 19
           return ReduxSagaEffects.b(Xa, Actions.vg(s))
         case 19:
-          if (!$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.getBlockById(e$payload$blockId)) {
+          if (!Module_26.z.getBlockById(e$payload$blockId)) {
             l.next = 25
             break
           }
           l.next = 23
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.playWarningAnimation, e$payload$blockId)
+          return ReduxSagaEffects.b(Module_26.z.playWarningAnimation, e$payload$blockId)
         case 23:
           l.next = 27
           break
@@ -6224,14 +6224,14 @@ function ic(e) {
         case 0:
           e$payload$screenIds = e.payload.screenIds
           l.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.C)
+          return ReduxSagaEffects.f(Module_22.C)
         case 3:
           l$sent = l.sent
           r = l$sent.map(function (e) {
             return e.id
           }).toJSON()
           l.next = 7
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 7:
           if (l$sent1 = l.sent, Lodash.isEqual(r, e$payload$screenIds)) {
             l.next = 16
@@ -6247,7 +6247,7 @@ function ic(e) {
             }
           })
           l.next = 13
-          return ReduxSagaEffects.e(Actions.Aj($$_$$_$$_$$_unrestored_shared_1571_2636_738_66.a.List(i)))
+          return ReduxSagaEffects.e(Actions.Aj(Module_66.a.List(i)))
         case 13:
           a = e$payload$screenIds.indexOf(l$sent1.id)
           l.next = 16
@@ -6278,7 +6278,7 @@ function ac(e) {
           l.next = 4
           return ReduxSagaEffects.b(qs, e$payload$screenId, e$payload$value)
         case 4:
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.y(e$payload$screenId, e$payload$value, "SCREEN")
+          Module_26.y(e$payload$screenId, e$payload$value, "SCREEN")
           l.next = 9
           break
         case 7:
@@ -6318,11 +6318,11 @@ function sc(e) {
           r = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           e$payload$widgetId = e$payload.widgetId
           u.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.f)
+          return ReduxSagaEffects.f(Module_22.f)
         case 3:
           u$sent = u.sent
           u.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.i)
+          return ReduxSagaEffects.f(Module_22.i)
         case 6:
           _u$sent = u.sent
           u.next = 9
@@ -6330,7 +6330,7 @@ function sc(e) {
         case 9:
           if (_u$sent) {
             setTimeout(function () {
-              return $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItemByWidgetId(e$payload$widgetId || u$sent.id)
+              return Module_26.g.setSelectedItemByWidgetId(e$payload$widgetId || u$sent.id)
             }, 10)
           }
           if (r) {
@@ -6396,7 +6396,7 @@ function lc(e) {
           e$payload$widgetIds = e$payload.widgetIds
           e$payload$isEmitOT = e$payload.isEmitOT
           a = undefined === e$payload$isEmitOT || e$payload$isEmitOT
-          if (s = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId)) {
+          if (s = Module_9.Bb(e$payload$widgetId)) {
             s.widgetIds = e$payload$widgetIds
           }
           u.next = 5
@@ -6430,15 +6430,15 @@ function uc() {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           o$sent = o.sent
           o.next = 5
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
+          return ReduxSagaEffects.f(Module_22.G)
         case 5:
           _o$sent6 = o.sent
           o.next = 8
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.e, o$sent)
+          return ReduxSagaEffects.b(Module_177.e, o$sent)
         case 8:
           if (!(_o$sent7 = o.sent) || !_o$sent7.pack_label) {
             o.next = 14
@@ -6460,7 +6460,7 @@ function uc() {
             apkName: _o$sent6
           }))
         case 16:
-          if (!($$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide"))) {
+          if (!(Module_9.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide"))) {
             o.next = 23
             break
           }
@@ -6491,24 +6491,24 @@ function dc() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.B)
+          return ReduxSagaEffects.f(Module_22.B)
         case 2:
           r$sent = r.sent
           r.next = 5
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.d, r$sent)
+          return ReduxSagaEffects.b(Module_177.d, r$sent)
         case 5:
           r.next = 7
           return ReduxSagaEffects.e(Actions.Li(false))
         case 7:
           r.next = 9
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 9:
           _r$sent2 = r.sent
           r.next = 12
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.A)
+          return ReduxSagaEffects.f(Module_22.A)
         case 12:
           _r$sent3 = r.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("CancelWorkPack", {
+          Module_141.a("CancelWorkPack", {
             workId: _r$sent2,
             apkName: _r$sent3.apkName
           })
@@ -6526,7 +6526,7 @@ function pc() {
       switch (t.prev = t.next) {
         case 0:
           t.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           t$sent = t.sent
           t.next = 5
@@ -6582,14 +6582,14 @@ function fc() {
       switch (k.prev = k.next) {
         case 0:
           k.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           k$sent = k.sent
-          t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.cb()
+          t = Module_9.cb()
           n = []
           k.prev = 5
           k.next = 8
-          return ReduxSagaEffects.b(Lt, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
+          return ReduxSagaEffects.b(Lt, Module_97.a(k$sent) ? k$sent : undefined)
         case 8:
           n = k.sent
           k.next = 17
@@ -6612,7 +6612,7 @@ function fc() {
               return t.id === e.attributes.cloudDbId
             })
           })
-          u = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(n)
+          u = Module_47.a(n)
           k.prev = 22
           u.s()
         case 24:
@@ -6641,11 +6641,11 @@ function fc() {
           return k.finish(36)
         case 39:
           n.reverse().forEach(function (e) {
-            var t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.cb().find(function (t) {
+            var t = Module_9.cb().find(function (t) {
               return t.attributes.cloudDbId === e.id
             })
             if (t) {
-              $$_$$_$$_$$_unrestored_shared_1571_2636_9.Vb(t.id, "fields", e.fields)
+              Module_9.Vb(t.id, "fields", e.fields)
               a.push(t)
             } else {
               s.push(e)
@@ -6660,7 +6660,7 @@ function fc() {
           }
           m = h[f]
           k.next = 45
-          return ReduxSagaEffects.b(ps, $$_$$_widget_builtIn_types.l, {
+          return ReduxSagaEffects.b(ps, Widget_builtIn_types.l, {
             x: 0,
             y: 0
           })
@@ -6680,14 +6680,14 @@ function fc() {
           k.next = 41
           break
         case 56:
-          if (!(l.length + a.length <= $$_$$_$$_$$_unrestored_shared_1571_2636_305.f)) {
+          if (!(l.length + a.length <= Module_305.f)) {
             k.next = 83
             break
           }
           _ = a.map(function (e) {
             return e.title
           })
-          v = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(l)
+          v = Module_47.a(l)
           k.prev = 59
           v.s()
         case 61:
@@ -6698,7 +6698,7 @@ function fc() {
           b$value = b.value
           if (_.includes(b$value.title)) {
             o = true
-            b$value.title = $$_$$_$$_$$_unrestored_shared_1571_2636_9.ac(b$value.title, _)
+            b$value.title = Module_9.ac(b$value.title, _)
             _.push(b$value.title)
           }
           k.next = 66
@@ -6708,12 +6708,12 @@ function fc() {
           b$value.attributes.cloudDbId = _k$sent2
           k.next = 70
           return ReduxSagaEffects.b(Yt, _k$sent2, {
-            addItems: $$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(b$value.attributes.fields),
+            addItems: Module_25.a(b$value.attributes.fields),
             editItems: [],
             deleteItems: []
-          }, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
+          }, Module_97.a(k$sent) ? k$sent : undefined)
         case 70:
-          migrateCloudDict([_k$sent2], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(k$sent) ? k$sent : undefined)
+          migrateCloudDict([_k$sent2], 2, 0, Module_97.a(k$sent) ? k$sent : undefined)
         case 71:
           k.next = 61
           break
@@ -6732,7 +6732,7 @@ function fc() {
           k.next = 106
           break
         case 83:
-          O = $$_$$_$$_$$_unrestored_shared_1571_2636_47.a(l)
+          O = Module_47.a(l)
           k.prev = 84
           O.s()
         case 86:
@@ -6743,8 +6743,8 @@ function fc() {
           w$value = w.value
           w$value$type = w$value.type
           w$value$id = w$value.id
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q(w$value$type, w$value$id)
-          $$_$$_$$_$$_unrestored_shared_1571_2636_9.F(w$value.id)
+          Module_26.q(w$value$type, w$value$id)
+          Module_9.F(w$value.id)
           k.next = 93
           return ReduxSagaEffects.e(Actions.Lh(w$value$id))
         case 93:
@@ -6766,9 +6766,9 @@ function fc() {
           I = Language.d("cloudDbCountOverflowDescription", {
             workDbCount: l.length.toString(),
             selfDbCount: a.length.toString(),
-            maxCount: $$_$$_$$_$$_unrestored_shared_1571_2636_305.f.toString()
+            maxCount: Module_305.f.toString()
           })
-          $$_$$_$$_$$_unrestored_shared_1571_2636_2680_index.a.info({
+          Module_2680.a.info({
             title: A,
             icon: null,
             centered: true,
@@ -6783,7 +6783,7 @@ function fc() {
           if (o) {
             j = Language.d("cloudDbNameConflictTitle")
             N = Language.d("cloudDbNameConflictDescription")
-            $$_$$_$$_$$_unrestored_shared_1571_2636_2680_index.a.info({
+            Module_2680.a.info({
               title: j,
               icon: null,
               centered: true,
@@ -6799,10 +6799,10 @@ function fc() {
           return ReduxSagaEffects.e(Actions.Qj())
         case 109:
           k.next = 111
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.n)
+          return ReduxSagaEffects.f(Module_22.n)
         case 111:
           _k$sent3 = k.sent
-          $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateGlobalWidget(_k$sent3)
+          Module_26.g.updateGlobalWidget(_k$sent3)
         case 113:
         case "end":
           return k.stop()
@@ -6822,16 +6822,16 @@ function hc() {
       switch (a.prev = a.next) {
         case 0:
           a.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 2:
           a$sent = a.sent
-          t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Y()
+          t = Module_9.Y()
           a.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.J)
+          return ReduxSagaEffects.f(Module_22.J)
         case 6:
           _a$sent10 = a.sent
           a.next = 9
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.K)
+          return ReduxSagaEffects.f(Module_22.K)
         case 9:
           if (a.sent) {
             a.next = 12
@@ -6853,7 +6853,7 @@ function hc() {
             break
           }
           t.forEach(function (e) {
-            $$_$$_$$_$$_unrestored_shared_1571_2636_9.F(e.id)
+            Module_9.F(e.id)
           })
           a.next = 20
           return ReduxSagaEffects.e(Actions.showCommonToastInfoAction({
@@ -6867,7 +6867,7 @@ function hc() {
           return a.abrupt("return")
         case 23:
           a.next = 25
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.g, "dev")
+          return ReduxSagaEffects.b(Module_147.g, "dev")
         case 25:
           if (_a$sent11 = a.sent) {
             a.next = 28
@@ -6885,16 +6885,16 @@ function hc() {
               if (e.title !== a.name) {
                 i = true
                 var /* [auto-meaningful-name] */a$name = a.name
-                $$_$$_$$_$$_unrestored_shared_1571_2636_9.Xb(n, a$name)
-                $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.updateToolBoxWidgetTitle(n, a$name)
-                $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.y(e.id, a$name, "CLOUD_DB")
-                $$_$$_$$_$$_unrestored_shared_1571_2636_9.Vb(n, "name", a$name)
+                Module_9.Xb(n, a$name)
+                Module_26.g.updateToolBoxWidgetTitle(n, a$name)
+                Module_26.y(e.id, a$name, "CLOUD_DB")
+                Module_9.Vb(n, "name", a$name)
                 store.dispatch(Actions.Uj())
                 store.dispatch(Actions.Qj())
               }
               if (e.attributes.primaryKey !== a.primary_column) {
                 i = true
-                $$_$$_$$_$$_unrestored_shared_1571_2636_9.Vb(n, "primaryKey", a.primary_column)
+                Module_9.Vb(n, "primaryKey", a.primary_column)
               }
               if (JSON.stringify(e.attributes.columns) !== JSON.stringify(a.columns)) {
                 i = true
@@ -6902,8 +6902,8 @@ function hc() {
               }
             } else {
               o = true
-              $$_$$_$$_$$_unrestored_shared_1571_2636_9.F(n)
-              $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.q("CLOUD_DB", n)
+              Module_9.F(n)
+              Module_26.q("CLOUD_DB", n)
             }
           }), !o) {
             a.next = 36
@@ -6957,7 +6957,7 @@ function mc(e) {
     for (;;) {
       switch (m.prev = m.next) {
         case 0:
-          if (e$payload = e.payload, e$payload$fields = e$payload.fields, e$payload$setBlockValue = e$payload.setBlockValue, e$payload$widgetId = e$payload.widgetId, (i = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e$payload$widgetId)) && i.type === $$_$$_widget_builtIn_types.l) {
+          if (e$payload = e.payload, e$payload$fields = e$payload.fields, e$payload$setBlockValue = e$payload.setBlockValue, e$payload$widgetId = e$payload.widgetId, (i = Module_9.Bb(e$payload$widgetId)) && i.type === Widget_builtIn_types.l) {
             m.next = 4
             break
           }
@@ -6969,7 +6969,7 @@ function mc(e) {
           u = []
           d = []
           m.next = 11
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 11:
           if (m$sent = m.sent, f = e$payload$fields.length !== i$attributes$fields.length, e$payload$fields.forEach(function (e) {
             var t = true
@@ -7006,7 +7006,7 @@ function mc(e) {
             addItems: l,
             editItems: u,
             deleteItems: d
-          }, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(m$sent) ? m$sent : undefined)
+          }, Module_97.a(m$sent) ? m$sent : undefined)
         case 18:
           if ((_m$sent4 = m.sent).addItems) {
             _m$sent4.addItems.forEach(function (e) {
@@ -7029,7 +7029,7 @@ function mc(e) {
               return t.id === e.id
             })
             if (t) {
-              $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.n(e$payload$widgetId, t.key, e.key)
+              Module_26.n(e$payload$widgetId, t.key, e.key)
             }
           })
           if (_m$sent4.deleteItems) {
@@ -7038,11 +7038,11 @@ function mc(e) {
                 return t.id === e.toString()
               })
               if (t) {
-                $$_$$_$$_$$_unrestored_shared_1571_2636_26_index.n(e$payload$widgetId, t.key, "")
+                Module_26.n(e$payload$widgetId, t.key, "")
               }
             })
           }
-          migrateCloudDict([i$attributes$cloudDbId], 2, 0, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(m$sent) ? m$sent : undefined)
+          migrateCloudDict([i$attributes$cloudDbId], 2, 0, Module_97.a(m$sent) ? m$sent : undefined)
         case 26:
         case "end":
           return m.stop()
@@ -7063,14 +7063,14 @@ function gc(e) {
       switch (c.prev = c.next) {
         case 0:
           c.next = 2
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 2:
           c$sent = c.sent
           n = []
           r = 1
           o = 500
           c.next = 8
-          return ReduxSagaEffects.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(c$sent) ? c$sent : undefined)
+          return ReduxSagaEffects.b(Vt, e, r, o, Module_97.a(c$sent) ? c$sent : undefined)
         case 8:
           if (c$sent1 = c.sent, n = n.concat(c$sent1.items), !((a = Math.ceil(c$sent1.total / o)) > 1)) {
             c.next = 21
@@ -7083,7 +7083,7 @@ function gc(e) {
             break
           }
           c.next = 16
-          return ReduxSagaEffects.b(Vt, e, r, o, $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(c$sent) ? c$sent : undefined)
+          return ReduxSagaEffects.b(Vt, e, r, o, Module_97.a(c$sent) ? c$sent : undefined)
         case 16:
           c$sent2 = c.sent
           n = n.concat(c$sent2.items)
@@ -7126,7 +7126,7 @@ function _c(e) {
             break
           }
           s.next = 9
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_297.e, e$payload$archiveId)
+          return ReduxSagaEffects.b(Module_297.e, e$payload$archiveId)
         case 9:
           if (s$sent1 = s.sent, !(_s$sent3$content = s$sent1.content)) {
             s.next = 32
@@ -7154,7 +7154,7 @@ function _c(e) {
           return ReduxSagaEffects.e(Actions.tj(false))
         case 26:
           s.next = 28
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.s)
+          return ReduxSagaEffects.f(Module_22.s)
         case 28:
           _s$sent4 = s.sent
           s.next = 31
@@ -7164,7 +7164,7 @@ function _c(e) {
           }))
         case 31:
           if (s$sent) {
-            if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_24_index$a$client = $$_$$_$$_$$_unrestored_shared_1571_2636_24_index.a.client) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_24_index$a$client)) {
+            if (!(null === ($$_$$_$$_$$_unrestored_shared_1571_2636_24_index$a$client = Module_24.a.client) || undefined === $$_$$_$$_$$_unrestored_shared_1571_2636_24_index$a$client)) {
               $$_$$_$$_$$_unrestored_shared_1571_2636_24_index$a$client.forceSetDoc()
             }
           }
@@ -7189,38 +7189,38 @@ function vc(e) {
       switch (s.prev = s.next) {
         case 0:
           Pn()
-          t = $$_$$_$$_$$_unrestored_shared_1571_2636_9.Y()
+          t = Module_9.Y()
           n = t.map(function (e) {
             return e.attributes.cloudDbId
           })
           s.next = 5
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_9.R)
+          return ReduxSagaEffects.b(Module_9.R)
         case 5:
           s$sent = s.sent
           s.next = 8
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_9.sb)
+          return ReduxSagaEffects.b(Module_9.sb)
         case 8:
           _s$sent5 = s.sent
           s.next = 11
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_9.S)
+          return ReduxSagaEffects.b(Module_9.S)
         case 11:
           _s$sent6 = s.sent
           s.next = 14
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_9.tb)
+          return ReduxSagaEffects.b(Module_9.tb)
         case 14:
           if (_s$sent7 = s.sent, !(t.length > 0)) {
             s.next = 18
             break
           }
           s.next = 18
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_147.a, n, e)
+          return ReduxSagaEffects.b(Module_147.a, n, e)
         case 18:
           if (s.prev = 18, !(s$sent.length > 0)) {
             s.next = 24
             break
           }
           s.next = 22
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.d, e, s$sent)
+          return ReduxSagaEffects.b(Module_111.d, e, s$sent)
         case 22:
           s.next = 24
           return ReduxSagaEffects.e(Actions.lf(s$sent))
@@ -7237,7 +7237,7 @@ function vc(e) {
             break
           }
           s.next = 33
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.v, e, _s$sent5)
+          return ReduxSagaEffects.b(Module_111.v, e, _s$sent5)
         case 33:
           s.next = 35
           return ReduxSagaEffects.e(Actions.Ih(_s$sent5))
@@ -7254,7 +7254,7 @@ function vc(e) {
             break
           }
           s.next = 44
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.e, e, _s$sent6)
+          return ReduxSagaEffects.b(Module_111.e, e, _s$sent6)
         case 44:
           s.next = 46
           return ReduxSagaEffects.e(Actions.mf(_s$sent6))
@@ -7271,7 +7271,7 @@ function vc(e) {
             break
           }
           s.next = 55
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_37_111.w, e, _s$sent7)
+          return ReduxSagaEffects.b(Module_111.w, e, _s$sent7)
         case 55:
           s.next = 57
           return ReduxSagaEffects.e(Actions.Jh(_s$sent7))
@@ -7323,13 +7323,13 @@ function yc(e) {
         case 0:
           e$payload$callback = e.payload.callback
           u.next = 3
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.E)
+          return ReduxSagaEffects.f(Module_22.E)
         case 3:
           u$sent = u.sent
           u.next = 6
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.y)
+          return ReduxSagaEffects.f(Module_22.y)
         case 6:
-          if (_u$sent2 = u.sent, o = $$_$$_$$_$$_unrestored_shared_1571_2636_97.a(_u$sent2), u$sent.title) {
+          if (_u$sent2 = u.sent, o = Module_97.a(_u$sent2), u$sent.title) {
             u.next = 29
             break
           }
@@ -7338,7 +7338,7 @@ function yc(e) {
             break
           }
           u.next = 12
-          return ReduxSagaEffects.b($$_$$_$$_$$_unrestored_shared_1571_2636_177.g, _u$sent2, 0)
+          return ReduxSagaEffects.b(Module_177.g, _u$sent2, 0)
         case 12:
           if (!(_u$sent3 = u.sent) || !_u$sent3.data) {
             u.next = 22
@@ -7355,25 +7355,25 @@ function yc(e) {
           u.next = 22
           return ReduxSagaEffects.e(Actions.Ti({
             title: _u$sent5.title,
-            desc: _u$sent5.description || $$_$$_$$_$$_unrestored_shared_1571_2636_328.c,
-            img: _u$sent5.coverUrl || $$_$$_$$_$$_unrestored_shared_1571_2636_37_515
+            desc: _u$sent5.description || Module_328.c,
+            img: _u$sent5.coverUrl || Unrestored_shared_1571_2636_37_515
           }))
         case 22:
           u.next = 29
           break
         case 24:
           u.next = 26
-          return ReduxSagaEffects.f($$_$$_$$_$$_unrestored_shared_1571_2636_37_22.G)
+          return ReduxSagaEffects.f(Module_22.G)
         case 26:
           _u$sent6 = u.sent
           u.next = 29
           return ReduxSagaEffects.e(Actions.Ti({
             title: _u$sent6,
-            desc: $$_$$_$$_$$_unrestored_shared_1571_2636_328.c,
-            img: $$_$$_$$_$$_unrestored_shared_1571_2636_37_515
+            desc: Module_328.c,
+            img: Unrestored_shared_1571_2636_37_515
           }))
         case 29:
-          if (!($$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide"))) {
+          if (!(Module_9.Y().length > 0 && "true" !== localStorage.getItem("cloudDBPublishGuide"))) {
             u.next = 35
             break
           }
@@ -7394,49 +7394,49 @@ function yc(e) {
   }, Ka)
 }
 wi = {}
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.H, Qa)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.M, ds)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.gb, ms)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.lb, gs)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.jb, Cs)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Jb, Ss)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.kb, Is)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Mb, zs)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Lb, Ys)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Ob, Zs)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.db, Js)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.nb, os)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.D, is)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.N, Ds)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.ASYNC_CREATE_PROJECT, onAsyncCreateProject)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.F, es)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.ASYNC_GET_PROJECT_ERROR, Ja)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.vb, Xa)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.E, $s)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.fb, nc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.eb, rc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.tb, Ws)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Ib, Vs)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.hb, oc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.y, Hs)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.xb, ic)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Kb, ac)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Bc, ns)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.Nb, lc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.ub, sc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.B, cc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.T, uc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.x, dc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.ab, fc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.zb, mc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.PUBLISH_WORK_TO_COMMUNITY, handlePublishWorkToCommunity)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.PUBLISH_WORK_TO_H5, handlePublishWorkToH5)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.z, ys)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.rb, Es)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.sb, _c)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.dc, bc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.bb, hc)
-$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(wi, Actions.V, yc)
+Module_11.a(wi, Actions.H, Qa)
+Module_11.a(wi, Actions.M, ds)
+Module_11.a(wi, Actions.gb, ms)
+Module_11.a(wi, Actions.lb, gs)
+Module_11.a(wi, Actions.jb, Cs)
+Module_11.a(wi, Actions.Jb, Ss)
+Module_11.a(wi, Actions.kb, Is)
+Module_11.a(wi, Actions.Mb, zs)
+Module_11.a(wi, Actions.Lb, Ys)
+Module_11.a(wi, Actions.Ob, Zs)
+Module_11.a(wi, Actions.db, Js)
+Module_11.a(wi, Actions.nb, os)
+Module_11.a(wi, Actions.D, is)
+Module_11.a(wi, Actions.N, Ds)
+Module_11.a(wi, Actions.ASYNC_CREATE_PROJECT, onAsyncCreateProject)
+Module_11.a(wi, Actions.F, es)
+Module_11.a(wi, Actions.ASYNC_GET_PROJECT_ERROR, Ja)
+Module_11.a(wi, Actions.vb, Xa)
+Module_11.a(wi, Actions.E, $s)
+Module_11.a(wi, Actions.fb, nc)
+Module_11.a(wi, Actions.eb, rc)
+Module_11.a(wi, Actions.tb, Ws)
+Module_11.a(wi, Actions.Ib, Vs)
+Module_11.a(wi, Actions.hb, oc)
+Module_11.a(wi, Actions.y, Hs)
+Module_11.a(wi, Actions.xb, ic)
+Module_11.a(wi, Actions.Kb, ac)
+Module_11.a(wi, Actions.Bc, ns)
+Module_11.a(wi, Actions.Nb, lc)
+Module_11.a(wi, Actions.ub, sc)
+Module_11.a(wi, Actions.B, cc)
+Module_11.a(wi, Actions.T, uc)
+Module_11.a(wi, Actions.x, dc)
+Module_11.a(wi, Actions.ab, fc)
+Module_11.a(wi, Actions.zb, mc)
+Module_11.a(wi, Actions.PUBLISH_WORK_TO_COMMUNITY, handlePublishWorkToCommunity)
+Module_11.a(wi, Actions.PUBLISH_WORK_TO_H5, handlePublishWorkToH5)
+Module_11.a(wi, Actions.z, ys)
+Module_11.a(wi, Actions.rb, Es)
+Module_11.a(wi, Actions.sb, _c)
+Module_11.a(wi, Actions.dc, bc)
+Module_11.a(wi, Actions.bb, hc)
+Module_11.a(wi, Actions.V, yc)
 var Ec = wi
 var Oc = qn(Ec)
 function wc() {

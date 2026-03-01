@@ -7,8 +7,8 @@
 "use strict"
 
 import { s } from "./index__part-0"
-import * as /* [auto-meaningful-name] */$$_457 from "../457"
-import * as /* [auto-meaningful-name] */$$_108 from "../108"
+import * as /* [auto-meaningful-name] */Module_457 from /* 457 */"../457"
+import * as /* [auto-meaningful-name] */Module_108 from /* 108 */"../108"
 var c = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -35,7 +35,7 @@ var l = function (t) {
   }
   c(e, t)
   e.prototype.parseInformation = function () {
-    var t = new $$_108.a()
+    var t = new Module_108.a()
     t.append("(01)")
     var n = t.length()
     var r = this.getGeneralDecoder().extractNumericValueFromBitArray(e.HEADER_SIZE, 4)
@@ -72,12 +72,12 @@ var f = function (t) {
   }
   d(e, t)
   e.prototype.parseInformation = function () {
-    var t = new $$_108.a()
+    var t = new Module_108.a()
     return this.getGeneralDecoder().decodeAllCodes(t, e.HEADER_SIZE)
   }
   e.HEADER_SIZE = 5
   return e
-}($$_457.a)
+}(Module_457.a)
 var h = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {

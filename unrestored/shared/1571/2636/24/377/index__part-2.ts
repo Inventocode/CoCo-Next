@@ -7,21 +7,21 @@
 "use strict"
 
 import { u, d } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_$$_43 from "../../43"
-import * as /* [auto-meaningful-name] */$$_index from "../index"
-import * as /* [auto-meaningful-name] */$_737_index from "./737/index"
-import * as /* [auto-meaningful-name] */$_788_index from "./788/index"
-import * as /* [auto-meaningful-name] */$$_$$_26_index from "../../26/index"
-import * as /* [auto-meaningful-name] */$$_243 from "../243"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"../../43"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"../index"
+import * as /* [auto-meaningful-name] */Module_737 from /* 737 */"./737/index"
+import * as /* [auto-meaningful-name] */Module_788 from /* 788 */"./788/index"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../26/index"
+import * as /* [auto-meaningful-name] */Module_243 from /* 243 */"../243"
 function m(e) {
-  var t = $$_index.a.getDoc()
-  var n = $$_$$_43.a()
+  var t = Module_24.a.getDoc()
+  var n = Module_43.a()
   if (e && t) {
     if (3 === e.length && "blockly" === e[0]) {
-      if (!$$_243.g(e[2])) {
-        if ($$_243.e(e[2])) {
+      if (!Module_243.g(e[2])) {
+        if (Module_243.e(e[2])) {
           (function (e) {
-            $$_$$_26_index.z.addWorkspaceData(e[2].i)
+            Module_26.z.addWorkspaceData(e[2].i)
           })(e)
         }
       }
@@ -35,18 +35,18 @@ function m(e) {
           window.confirm("协作异常，请刷新页面？")
         }
       }
-      var i = null === (r = $$_$$_26_index.z.getWorkspaceDataByScreenId(o)) || undefined === r ? undefined : r.getProcedureManager()
+      var i = null === (r = Module_26.z.getWorkspaceDataByScreenId(o)) || undefined === r ? undefined : r.getProcedureManager()
       var a = t.blockly[o]
       if (i && a.workspaceJson) {
         _.analyze_op_and_update(e, a.workspaceJson, i)
-        $$_$$_26_index.z.setWorkspaceDataByScreenId(o, a)
-        $$_$$_26_index.z.refreshProcedureToolbox()
+        Module_26.z.setWorkspaceDataByScreenId(o, a)
+        Module_26.z.refreshProcedureToolbox()
       }
     }
   }
 }
-var g = new $_788_index.OTAdapter(u, d)
-var _ = new $_737_index.ProcedurePlugin()
+var g = new Module_788.OTAdapter(u, d)
+var _ = new Module_737.ProcedurePlugin()
 g.register_plugins([_])
 export { m }
 export { g }

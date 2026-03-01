@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../180")
-var i = require("../204")
-var o = require("./1375")
+var r = require(/* 180 */"../180")
+var i = require(/* 204 */"../204")
+var o = require(/* 1375 */"./1375")
 function a(e) {
   return e.reachable
 }

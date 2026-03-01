@@ -7,7 +7,7 @@
 "use strict"
 
 var r
-import * as i from "./0"
+import * as /* [auto-meaningful-name] */Module_0 from /* 0 */"./0"
 !function (e) {
   e.FORMAT_ERROR = "FORMAT_ERROR"
   e.UNSUPPORTED_FORMATTER = "UNSUPPORTED_FORMATTER"
@@ -24,28 +24,28 @@ var o = function (e) {
     }
     return o
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(Error)
 var a = function (e) {
   function t(t, n) {
     return e.call(this, r.UNSUPPORTED_FORMATTER, t, n) || this
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 var s = function (e) {
   function t(t, n) {
     return e.call(this, r.INVALID_CONFIG, t, n) || this
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 var u = function (e) {
   function t(t, n) {
     return e.call(this, r.MISSING_DATA, t, n) || this
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 var l = function (e) {
@@ -54,7 +54,7 @@ var l = function (e) {
     a.descriptor = i
     return a
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 var c = function (e) {
@@ -63,7 +63,7 @@ var c = function (e) {
     i.descriptor = t
     return i
   }
-  i.b(t, e)
+  Module_0.b(t, e)
   return t
 }(o)
 export { r }

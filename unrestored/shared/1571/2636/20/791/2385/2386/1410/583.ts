@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./311")
+var r = require(/* 311 */"./311")
 var /* [auto-meaningful-name] */r$SymbolAsyncIterator = r.SymbolAsyncIterator
 var /* [auto-meaningful-name] */r$SymbolIterator = r.SymbolIterator
 var /* [auto-meaningful-name] */r$SymbolFor = r.SymbolFor

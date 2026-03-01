@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../1282/231")
-var o = require("../1662/300/index")
-var i = require("./497")
-var a = require("../1282/246/index")("hasInstance")
+var r = require(/* 231 */"../1282/231")
+var o = require(/* 300 */"../1662/300/index")
+var i = require(/* 497 */"./497")
+var a = require(/* 246 */"../1282/246/index")("hasInstance")
 var /* [auto-meaningful-name] */Function$prototype = Function.prototype
 if (!(a in Function$prototype)) {
   o.f(Function$prototype, a, {

@@ -6,8 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
 var s = function t() {
-  $$_27.a(this, t)
+  Module_27.a(this, t)
 }
 export { s }

@@ -4,8 +4,8 @@
  * 模块 ID：757
  */
 
-var r = require("../1282/476")
-var o = require("../1282/246/1235")
+var r = require(/* 476 */"../1282/476")
+var o = require(/* 1235 */"../1282/246/1235")
 module.exports = o ? function (e) {
   return "symbol" == typeof e
 } : function (e) {

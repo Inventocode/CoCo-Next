@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../../207/787/711/index")
+var r = require(/* 711 */"../../../207/787/711/index")
 exports.stringToBytes = function (e) {
   return r(e).map(function (e) {
     return e.charCodeAt(0)

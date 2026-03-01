@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("../56")
-var i = require("../222")
-var o = require("../108")
+var r = require(/* 56 */"../56")
+var i = require(/* 222 */"../222")
+var o = require(/* 108 */"../108")
 var a = function () {
   function t(t, e) {
     if (e) {
@@ -168,7 +168,7 @@ var h = function (t) {
   e.FNC1 = 10
   return e
 }(s)
-var p = require("../36")
+var p = require(/* 36 */"../36")
 var m = function (t) {
   var e = "function" === typeof Symbol && Symbol.iterator
   var n = e && t[e]

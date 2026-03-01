@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("../../180")
-var i = require("../../204")
-var o = require("../../../../1058/1393/1143/712/index")
-var a = require("../../../../1058/1393/1143/532")
-var s = require("../../../../1058/1393/1143/283/index")
-var c = require("../../../../1058/1393/1143/284/index")
-var u = require("./2243")
-var /* [auto-meaningful-name] */require$$_1362$normalizeOptions = require("../1362").normalizeOptions
+var r = require(/* 180 */"../../180")
+var i = require(/* 204 */"../../204")
+var o = require(/* 712 */"../../../../1058/1393/1143/712/index")
+var a = require(/* 532 */"../../../../1058/1393/1143/532")
+var s = require(/* 283 */"../../../../1058/1393/1143/283/index")
+var c = require(/* 284 */"../../../../1058/1393/1143/284/index")
+var u = require(/* 2243 */"./2243")
+var /* [auto-meaningful-name] */require_1362_$$_1362$normalizeOptions = require(/* 1362 */"../1362").normalizeOptions
 var f = Symbol("espree's internal state")
 var d = Symbol("espree's esprimaFinishNode")
 module.exports = function () {
@@ -34,7 +34,7 @@ module.exports = function () {
         if (!("string" === typeof n || n instanceof String)) {
           n = String(n)
         }
-        var o = require$$_1362$normalizeOptions(e)
+        var o = require_1362_$$_1362$normalizeOptions(e)
         var a = o.ecmaFeatures || {}
         var s = true === o.tokens ? new u(t, n) : null;
         (i = h.call(this, {

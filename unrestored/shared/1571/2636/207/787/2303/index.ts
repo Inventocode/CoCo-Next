@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("../180")
-var i = require("../204")
-var o = require("../../../1058/1393/573/index")
-var /* [auto-meaningful-name] */require$$_979$breakableTypePattern = require("../979").breakableTypePattern
-var s = require("./2304/index")
-var c = require("./1141")
-var u = require("./1376")
-var l = require("./1375")
+var r = require(/* 180 */"../180")
+var i = require(/* 204 */"../204")
+var o = require(/* 573 */"../../../1058/1393/573/index")
+var /* [auto-meaningful-name] */require_979_$$_979$breakableTypePattern = require(/* 979 */"../979").breakableTypePattern
+var s = require(/* 2304 */"./2304/index")
+var c = require(/* 1141 */"./1141")
+var u = require(/* 1376 */"./1376")
+var l = require(/* 1375 */"./1375")
 function f(e) {
   return Boolean(e.test)
 }
@@ -115,7 +115,7 @@ function A(e, t) {
       r.pushLoopContext(t.type, h(t))
       break
     case "LabeledStatement":
-      if (!require$$_979$breakableTypePattern.test(t.body.type)) {
+      if (!require_979_$$_979$breakableTypePattern.test(t.body.type)) {
         r.pushBreakContext(false, t.label.name)
       }
   }
@@ -356,7 +356,7 @@ var v = function () {
               r.popForkContext()
               break
             case "LabeledStatement":
-              if (!require$$_979$breakableTypePattern.test(t.body.type)) {
+              if (!require_979_$$_979$breakableTypePattern.test(t.body.type)) {
                 r.popBreakContext()
               }
           }

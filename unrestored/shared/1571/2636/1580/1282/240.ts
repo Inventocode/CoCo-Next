@@ -4,7 +4,7 @@
  * 模块 ID：240
  */
 
-var r = require("./231")
+var r = require(/* 231 */"./231")
 module.exports = function (e) {
   if (!r(e)) {
     throw TypeError(String(e) + " is not an object")

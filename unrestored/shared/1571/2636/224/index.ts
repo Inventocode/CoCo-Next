@@ -6,18 +6,17 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_21 from "../21"
-import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_54 from "../54"
-import { useContext, useEffect, forwardRef, createElement } from "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$_792 from "./792"
-import * as /* [auto-meaningful-name] */$$_107 from "../107"
-import * as /* [auto-meaningful-name] */$_924_index from "./924/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_792 from /* 792 */"./792"
+import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../107"
+import * as /* [auto-meaningful-name] */Module_924 from /* 924 */"./924/index"
 var p = {}
 function _(e, t) {
   0
@@ -92,7 +91,7 @@ function w(e, t) {
   return l
 }
 function E(e) {
-  return "object" === $$_107.a(e) && "string" === typeof e.name && "string" === typeof e.theme && ("object" === $$_107.a(e.icon) || "function" === typeof e.icon)
+  return "object" === Module_107.a(e) && "string" === typeof e.name && "string" === typeof e.theme && ("object" === Module_107.a(e.icon) || "function" === typeof e.icon)
 }
 function x() {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : {}
@@ -110,7 +109,7 @@ function x() {
   }, {})
 }
 function C(e) {
-  return $_924_index.a(e)[0]
+  return Module_924.a(e)[0]
 }
 function O(e) {
   return e ? Array.isArray(e) ? e : [e] : []
@@ -131,7 +130,7 @@ var B = function (e) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$primaryColor = e.primaryColor
   var /* [auto-meaningful-name] */e$secondaryColor = e.secondaryColor
-  var p = $$_54.a(e, S)
+  var p = Module_54.a(e, S)
   var _ = T
   if (e$primaryColor) {
     _ = {
@@ -141,9 +140,9 @@ var B = function (e) {
   }
   (function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : _n$anticon_nDisplayInlineBlock_nColorInherit_nFontStyleNormal_nLineHeight0_nTextAlignCenter_nTextTransformNone_nVerticalAlign0$125em_nTextRenderingOptimizeLegibility_nWebkitFontSmoothingAntialiased_nMozOsxFontSmoothingGrayscale_n_n_n$anticon_nLineHeight1_n_n_n$anticonSvg_nDisplayInlineBlock_n_n_n$anticonBefore_nDisplayNone_n_n_n$anticon$anticonIcon_nDisplayBlock_n_n_n$anticonTabindex_nCursorPointer_n_n_n$anticonSpinBefore_n$anticonSpin_nDisplayInlineBlock_nWebkitAnimationLoadingCircle1sInfiniteLinear_nAnimationLoadingCircle1sInfiniteLinear_n_n_nWebkitKeyframesLoadingCircle_n100_nWebkitTransformRotate360deg_nTransformRotate360deg_n_n_n_nKeyframesLoadingCircle_n100_nWebkitTransformRotate360deg_nTransformRotate360deg_n_n_n
-    var t = useContext($_792.a)
+    var t = React.useContext(Module_792.a)
     var /* [auto-meaningful-name] */t$csp = t.csp
-    useEffect(function () {
+    React.useEffect(function () {
       w(e, "@ant-design-icons", {
         prepend: true,
         csp: t$csp
@@ -158,21 +157,21 @@ var B = function (e) {
   }
   var A = e$icon
   if (A && "function" === typeof A.icon) {
-    A = $$_21.a($$_21.a({}, A), {}, {
+    A = Module_21.a(Module_21.a({}, A), {}, {
       icon: A.icon(_.primaryColor, _.secondaryColor)
     })
   }
   return function e(t, n, i) {
-    return i ? React1.createElement(t.tag, $$_21.a($$_21.a({
+    return i ? React1.createElement(t.tag, Module_21.a(Module_21.a({
       key: n
     }, x(t.attrs)), i), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i))
-    })) : React1.createElement(t.tag, $$_21.a({
+    })) : React1.createElement(t.tag, Module_21.a({
       key: n
     }, x(t.attrs)), (t.children || []).map(function (r, i) {
       return e(r, "".concat(n, "-").concat(t.tag, "-").concat(i))
     }))
-  }(A.icon, "svg-".concat(A.name), $$_21.a({
+  }(A.icon, "svg-".concat(A.name), Module_21.a({
     className: e$className,
     onClick: e$onClick,
     style: e$style,
@@ -185,7 +184,7 @@ var B = function (e) {
 }
 B.displayName = "IconReact"
 B.getTwoToneColors = function () {
-  return $$_21.a({}, T)
+  return Module_21.a({}, T)
 }
 B.setTwoToneColors = function (e) {
   var /* [auto-meaningful-name] */e$primaryColor = e.primaryColor
@@ -197,7 +196,7 @@ B.setTwoToneColors = function (e) {
 var D = B
 function I(e) {
   var t = O(e)
-  var n = $$_40_index.a(t, 2)
+  var n = Module_40.a(t, 2)
   var r = n[0]
   var o = n[1]
   return D.setTwoToneColors({
@@ -207,7 +206,7 @@ function I(e) {
 }
 var R = ["className", "icon", "spin", "rotate", "tabIndex", "onClick", "twoToneColor"]
 I("#1890ff")
-var F = forwardRef(function (e, t) {
+var F = React.forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$icon = e.icon
@@ -216,10 +215,10 @@ var F = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$tabIndex = e.tabIndex
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$twoToneColor = e.twoToneColor
-  var g = $$_54.a(e, R)
-  var /* [auto-meaningful-name] */useContext$_792$a$prefixCls = useContext($_792.a).prefixCls
-  var m = undefined === useContext$_792$a$prefixCls ? "anticon" : useContext$_792$a$prefixCls
-  var y = Classnames1(m, (n = {}, $$_35.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), $$_35.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
+  var g = Module_54.a(e, R)
+  var /* [auto-meaningful-name] */React$useContextModule_792$a$prefixCls = React.useContext(Module_792.a).prefixCls
+  var m = undefined === React$useContextModule_792$a$prefixCls ? "anticon" : React$useContextModule_792$a$prefixCls
+  var y = Classnames1(m, (n = {}, Module_35.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), Module_35.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
   var b = e$tabIndex
   if (undefined === b && e$onClick) {
     b = -1
@@ -229,10 +228,10 @@ var F = forwardRef(function (e, t) {
     transform: "rotate(".concat(e$rotate, "deg)")
   } : undefined
   var E = O(e$twoToneColor)
-  var x = $$_40_index.a(E, 2)
+  var x = Module_40.a(E, 2)
   var C = x[0]
   var k = x[1]
-  return createElement("span", $$_21.a($$_21.a({
+  return React.createElement("span", Module_21.a(Module_21.a({
     role: "img",
     "aria-label": e$icon.name
   }, g), {}, {
@@ -240,7 +239,7 @@ var F = forwardRef(function (e, t) {
     tabIndex: b,
     onClick: e$onClick,
     className: y
-  }), createElement(D, {
+  }), React.createElement(D, {
     icon: e$icon,
     primaryColor: C,
     secondaryColor: k,

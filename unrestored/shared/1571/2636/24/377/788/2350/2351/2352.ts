@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.GlobalCommentPlugin = undefined
-var r = require("tslib")
-var i = (0, r.__importStar)(require("../../../../../17/536"))
-var o = require("../../../../../17/644")
-var a = require("../../../../../17/646")
+var r = require(/* 93 */"tslib")
+var i = (0, r.__importStar)(require(/* 536 */"../../../../../17/536"))
+var o = require(/* 644 */"../../../../../17/644")
+var a = require(/* 646 */"../../../../../17/646")
 var s = function (e) {
   function t() {
     return null !== e && e.apply(this, arguments) || this
@@ -50,5 +50,5 @@ var s = function (e) {
   };
   (0, r.__decorate)([(0, o.lazy_inject)(a.BINDING.json)], t.prototype, "json", undefined)
   return t
-}(require("../../../737/1156").BasePlugin)
+}(require(/* 1156 */"../../../737/1156").BasePlugin)
 exports.GlobalCommentPlugin = s

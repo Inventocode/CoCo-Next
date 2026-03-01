@@ -4,7 +4,7 @@
  * 模块 ID：1631
  */
 
-var r = require("./1662/86")
+var r = require(/* 86 */"./1662/86")
 var /* [auto-meaningful-name] */Math$atanh = Math.atanh
 var /* [auto-meaningful-name] */Math$log = Math.log
 r({

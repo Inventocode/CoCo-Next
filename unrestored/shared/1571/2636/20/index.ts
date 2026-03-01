@@ -6,9 +6,9 @@
 
 import "./index__part-0"
 import { E, w, C, T, S } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$_428_index from "./428/index"
-import * as a from "./84"
-import * as /* [auto-meaningful-name] */$_429 from "./429"
+import * as /* [auto-meaningful-name] */Module_428 from /* 428 */"./428/index"
+import * as /* [auto-meaningful-name] */Module_84 from /* 84 */"./84"
+import * as /* [auto-meaningful-name] */Module_429 from /* 429 */"./429"
 export { a as EEventType } from "./84"
 export { b as addEventListener } from "./84"
 export { xc as removeEventListener } from "./84"

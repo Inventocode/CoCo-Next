@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../../180")
-var i = require("../../204")
-var o = require("./2305/index")
-var a = require("../1376")
+var r = require(/* 180 */"../../180")
+var i = require(/* 204 */"../../204")
+var o = require(/* 2305 */"./2305/index")
+var a = require(/* 1376 */"../1376")
 var s = function () {
   function e(t, n, i) {
     r(this, e)

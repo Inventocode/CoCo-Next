@@ -6,32 +6,32 @@
 
 "use strict"
 
-import { forwardRef, useRef, useImperativeHandle, useEffect } from "react"
-import * as /* [auto-meaningful-name] */ReactDom from "react-dom"
-import /* [auto-meaningful-name] */ReactDom1 from "react-dom"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
+import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
 function m() {
   return !("undefined" === typeof window || !window.document || !window.document.createElement)
 }
 var y
-var b = forwardRef(function (e, t) {
+var b = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
   var /* [auto-meaningful-name] */e$children = e.children
-  var a = useRef()
-  useImperativeHandle(t, function () {
+  var a = React.useRef()
+  React.useImperativeHandle(t, function () {
     return {}
   })
-  var s = useRef(false)
+  var s = React.useRef(false)
   if (!s.current && m()) {
     a.current = e$getContainer()
     s.current = true
   }
-  useEffect(function () {
+  React.useEffect(function () {
     if (!(null === e$didUpdate || undefined === e$didUpdate)) {
       e$didUpdate(e)
     }
   })
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       var /* [auto-meaningful-name] */a$current
       var /* [auto-meaningful-name] */a$current$parentNode

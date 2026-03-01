@@ -6,8 +6,8 @@
 
 var r
 var i
-var o = require("./1400")
-var a = require("./1401")
+var o = require(/* 1400 */"./1400")
+var a = require(/* 1401 */"./1401")
 var s = 0
 var c = 0
 module.exports = function (e, t, n) {

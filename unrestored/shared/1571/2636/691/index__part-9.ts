@@ -13,15 +13,15 @@ import { X, Z } from "./index__part-5"
 import { ae, se } from "./index__part-6"
 import { ue } from "./index__part-7"
 import { Ae, we } from "./index__part-8"
-import * as /* [auto-meaningful-name] */$_520_index from "./520/index"
-import * as /* [auto-meaningful-name] */$$_105 from "../105"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$_268_index from "./268/index"
-import * as /* [auto-meaningful-name] */$_470 from "./470"
-import * as /* [auto-meaningful-name] */$_185 from "./185"
-import * as /* [auto-meaningful-name] */$_1006 from "./1006"
+import * as /* [auto-meaningful-name] */Module_520 from /* 520 */"./520/index"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"../105"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_268 from /* 268 */"./268/index"
+import * as /* [auto-meaningful-name] */Module_470 from /* 470 */"./470"
+import * as /* [auto-meaningful-name] */Module_185 from /* 185 */"./185"
+import * as /* [auto-meaningful-name] */Module_1006 from /* 1006 */"./1006"
 var Oe = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -50,7 +50,7 @@ var ke = function () {
     this.scene_world = r
     this.actor = i
     this.get_strength = o
-    this.type = $_470.a.ELASTIC
+    this.type = Module_470.a.ELASTIC
     this.position_cache = new this.box2d.Vec2()
     this.particle_system = this.scene_world.world.m_particleSystemList
     this.start_rotation = this.actor.rotation
@@ -74,10 +74,10 @@ var ke = function () {
   e.prototype.set_enabled = function (e) {
     var /* [auto-meaningful-name] */this$actor$current_style
     if (e && !this.particle_group) {
-      var n = c.d(this.actor, this.actor.position)
+      var n = Module_65.d(this.actor, this.actor.position)
       this.init({
-        x: $_185.o(n.x),
-        y: $_185.o(n.y)
+        x: Module_185.o(n.x),
+        y: Module_185.o(n.y)
       }, null === (this$actor$current_style = this.actor.current_style) || undefined === this$actor$current_style ? undefined : this$actor$current_style.texture_id)
     } else if (!e && this.particle_group) {
       this.clear()
@@ -121,7 +121,7 @@ var ke = function () {
   e.prototype.set_rotation = function (e) {
     if (this.particle_group) {
       for (var t = e - this.get_rotation(), n = this.get_position(), /* [auto-meaningful-name] */this$particle_group$m_firstIndex = this.particle_group.m_firstIndex; this$particle_group$m_firstIndex < this.particle_group.m_lastIndex; this$particle_group$m_firstIndex++) {
-        var i = c.p(this.particle_system.m_positionBuffer.data[this$particle_group$m_firstIndex], n, t)
+        var i = Module_65.p(this.particle_system.m_positionBuffer.data[this$particle_group$m_firstIndex], n, t)
         this.particle_system.m_positionBuffer.data[this$particle_group$m_firstIndex] = new this.box2d.Vec2(i.x, i.y)
       }
     } else {
@@ -134,7 +134,7 @@ var ke = function () {
     }
     var e = this.particle_group.GetAnchorPosition()
     var t = this.get_particle_group_rotation()
-    var n = c.p(this.particle_group_anchor_offset, {
+    var n = Module_65.p(this.particle_group_anchor_offset, {
       x: 0,
       y: 0
     }, t)
@@ -212,7 +212,7 @@ var ke = function () {
             }
           }
         }
-        this.soft_filter = new $_1006.a({
+        this.soft_filter = new Module_1006.a({
           max_num_anchors: c,
           triangles: n$triangles
         })
@@ -246,7 +246,7 @@ var ke = function () {
           x: n.x + i.x,
           y: n.y + i.y
         }
-        o = c.p(o, n, e)
+        o = Module_65.p(o, n, e)
         var a = this.particle_system.m_positionBuffer.data[r + this.particle_group.m_firstIndex]
         t.push([this.map_physics_coord_to_pixi(o), this.map_physics_coord_to_pixi(a)])
       }
@@ -269,12 +269,12 @@ var ke = function () {
     if (i && r) {
       var o = this.actor.get_scale()
       var s = this.particle_system.GetRadius() * Math.SQRT2
-      var u = $_185.o(r.width * o.x)
-      var l = $_185.o(r.height * o.y)
+      var u = Module_185.o(r.width * o.x)
+      var l = Module_185.o(r.height * o.y)
       var f = Math.sqrt(Math.pow(u + s, 2) + Math.pow(l + s, 2)) / Math.sqrt(Math.pow(u, 2) + Math.pow(l, 2))
       var d = this.scale_points(i, f).map(function (e) {
-        var t = c.c(new $_32_index.o(e.x, e.y))
-        return new $_32_index.o($_185.o((t.x - r.width / 2) * n.actor.scale.x), $_185.o((t.y - r.height / 2) * n.actor.scale.y))
+        var t = Module_65.c(new Module_32.o(e.x, e.y))
+        return new Module_32.o(Module_185.o((t.x - r.width / 2) * n.actor.scale.x), Module_185.o((t.y - r.height / 2) * n.actor.scale.y))
       })
       var h = []
       if (d) {
@@ -376,8 +376,8 @@ var ke = function () {
     }
   }
   e.prototype.map_physics_coord_to_pixi = function (e) {
-    var t = $_185.n(e.x)
-    var n = $_185.n(e.y)
+    var t = Module_185.n(e.x)
+    var n = Module_185.n(e.y)
     var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
     return {
       x: t + this$app$get_app$view.width / 2,
@@ -454,7 +454,7 @@ var Se = function () {
     this.box2d = t
     this.scene_world = n
     this.actor = r
-    this.type = $_470.a.NORMAL
+    this.type = Module_470.a.NORMAL
     var s = new this.box2d.BodyDef()
     s.type = this.box2d.BodyType.b2_staticBody
     s.enabled = false
@@ -462,9 +462,9 @@ var Se = function () {
     s.id = this.actor.id
     this.body = this.scene_world.world.CreateBody(s)
     this.fixture_def = new this.box2d.FixtureDef()
-    this.fixture_def.density = i || $_185.b
-    this.fixture_def.friction = o || $_185.c
-    this.fixture_def.restitution = a || $_185.e
+    this.fixture_def.density = i || Module_185.b
+    this.fixture_def.friction = o || Module_185.c
+    this.fixture_def.restitution = a || Module_185.e
   }
   e.prototype.set_enabled = function (e) {
     this.body.SetEnabled(e)
@@ -569,8 +569,8 @@ var Se = function () {
           var i = new t.box2d.PolygonShape()
           var o = []
           e.forEach(function (e) {
-            var n = c.c(e)
-            o.push(new t.box2d.Vec2($_185.o(n.x - r.width / 2) * t.actor.scale.x, $_185.o(n.y - r.height / 2) * t.actor.scale.y))
+            var n = Module_65.c(e)
+            o.push(new t.box2d.Vec2(Module_185.o(n.x - r.width / 2) * t.actor.scale.x, Module_185.o(n.y - r.height / 2) * t.actor.scale.y))
           })
           i.Set(o)
           t.fixture_def.shape = i
@@ -637,7 +637,7 @@ var Te = function () {
     }
     this.set_strength = function (e) {
       s.group_strength = e
-      var t = s.bodies_cache[$_470.a.ELASTIC]
+      var t = s.bodies_cache[Module_470.a.ELASTIC]
       if (null === t || undefined === t ? undefined : t.particle_group) {
         t.particle_group.m_strength = s.group_strength
       }
@@ -647,7 +647,7 @@ var Te = function () {
     }
     this.physics_set_pixi_position = function (e, t) {
       if (!s.actor.is_dragging() || !s.is_enabled()) {
-        var n = s.convert_pixi_to_physics_position(new $_32_index.o(e, t))
+        var n = s.convert_pixi_to_physics_position(new Module_32.o(e, t))
         s.bodies_cache.forEach(function (e) {
           return e.set_position(n)
         })
@@ -686,40 +686,40 @@ var Te = function () {
         }
         var t = e.data.getLocalPosition(s.actor.parent)
         var n = {
-          x: $_185.o(t.x),
-          y: $_185.o(t.y)
+          x: Module_185.o(t.x),
+          y: Module_185.o(t.y)
         }
         var r = s.physics_body.get_dragged_body(n)
         var i = new s.box2d.MouseJointDef()
         i.bodyA = s.mouse_joint_dummy_body
         i.bodyB = r
         i.target.Set(n.x, n.y)
-        i.maxForce = $_185.i * r.m_mass
-        i.stiffness = $_185.k
-        i.damping = $_185.a
+        i.maxForce = Module_185.i * r.m_mass
+        i.stiffness = Module_185.k
+        i.damping = Module_185.a
         s.mouse_joint = s.scene_world.world.CreateJoint(i)
         r.SetAwake(true)
       }
     }
-    this.drag_move = c.w(function (e) {
+    this.drag_move = Module_65.w(function (e) {
       if ((s.collidable || s.forceable) && s.actor.is_dragging() && s.mouse_joint) {
         var /* [auto-meaningful-name] */s$app$get_app$view = s.app.get_app().view
         var /* [auto-meaningful-name] */s$app$get_app$view$width = s$app$get_app$view.width
         var /* [auto-meaningful-name] */s$app$get_app$view$height = s$app$get_app$view.height
         var i = e.data.getLocalPosition(s.actor.parent)
-        if (c.n(i, {
+        if (Module_65.n(i, {
           width: s$app$get_app$view$width,
           height: s$app$get_app$view$height
         })) {
           var o = {
-            x: $_185.o(i.x),
-            y: $_185.o(i.y)
+            x: Module_185.o(i.x),
+            y: Module_185.o(i.y)
           }
           s.mouse_joint.GetTarget().Set(o.x, o.y)
           s.mouse_joint.GetBodyB().SetAwake(true)
         }
       }
-    }, c.a)
+    }, Module_65.a)
     this.drag_end = function () {
       if ((s.collidable || s.forceable) && s.mouse_joint) {
         s.scene_world.world.DestroyJoint(s.mouse_joint)
@@ -779,38 +779,38 @@ var Te = function () {
     }
   }
   e.prototype.get_elastic_body = function () {
-    if (this.bodies_cache[$_470.a.ELASTIC]) {
-      return this.bodies_cache[$_470.a.ELASTIC]
+    if (this.bodies_cache[Module_470.a.ELASTIC]) {
+      return this.bodies_cache[Module_470.a.ELASTIC]
     }
     var e = new ke(this.app, this.data, this.box2d, this.scene_world, this.actor, this.get_strength)
-    this.bodies_cache[$_470.a.ELASTIC] = e
+    this.bodies_cache[Module_470.a.ELASTIC] = e
     return e
   }
   e.prototype.get_normal_body = function (e, t, n) {
-    if (this.bodies_cache[$_470.a.NORMAL]) {
-      return this.bodies_cache[$_470.a.NORMAL]
+    if (this.bodies_cache[Module_470.a.NORMAL]) {
+      return this.bodies_cache[Module_470.a.NORMAL]
     }
     var r = new Se(this.data, this.box2d, this.scene_world, this.actor, e, t, n)
-    this.bodies_cache[$_470.a.NORMAL] = r
+    this.bodies_cache[Module_470.a.NORMAL] = r
     return r
   }
   e.prototype.convert_pixi_to_physics_position = function (e) {
-    var t = c.d(this.actor, e)
+    var t = Module_65.d(this.actor, e)
     return {
-      x: $_185.o(t.x),
-      y: $_185.o(t.y)
+      x: Module_185.o(t.x),
+      y: Module_185.o(t.y)
     }
   }
   e.prototype.convert_physics_to_pixi_position = function (e, t, n) {
     var r = {
-      x: $_185.n(e),
-      y: $_185.n(t)
+      x: Module_185.n(e),
+      y: Module_185.n(t)
     }
     var i = {
       x: r.x + this.actor.pivot.x * this.actor.scale.x,
       y: r.y + this.actor.pivot.y * this.actor.scale.y
     }
-    return c.p(i, r, n)
+    return Module_65.p(i, r, n)
   }
   e.prototype.add_ids_to_collision_filter = function (e) {
     var t = this
@@ -910,7 +910,7 @@ var Te = function () {
       var o = this.is_enabled()
       this.physics_body.set_enabled(false)
       this.physics_body = e ? this.get_elastic_body() : this.get_normal_body()
-      if (this.physics_body.type === $_470.a.NORMAL) {
+      if (this.physics_body.type === Module_470.a.NORMAL) {
         this.physics_body.init(this.convert_pixi_to_physics_position(this.actor.position), null === (t = this.actor.get_current_style()) || undefined === t ? undefined : t.texture_id)
       }
       this.physics_body.set_enabled(o)
@@ -936,7 +936,7 @@ var Te = function () {
     var r = e.x
     var i = e.y
     var /* [auto-meaningful-name] */e$on_complete = e.on_complete
-    var a = Math.round(e$time / $_185.f)
+    var a = Math.round(e$time / Module_185.f)
     var s = 1
     this.force_handler_cache.add(function e() {
       if (s > a) {
@@ -970,12 +970,12 @@ var Te = function () {
     this.on_destroy()
   }
   e.prototype.convert_to_rotation_value = function (e) {
-    var t = c.s(-e)
-    return this.actor.is_rotation_flipped ? c.s(t + Math.PI) : t
+    var t = Module_65.s(-e)
+    return this.actor.is_rotation_flipped ? Module_65.s(t + Math.PI) : t
   }
   e.prototype.get_velocity_direction = function () {
     var e = this.physics_body.get_linear_velocity()
-    return c.v(Math.atan2(e.y, e.x))
+    return Module_65.v(Math.atan2(e.y, e.x))
   }
   e.prototype.get_current_physics_body = function () {
     return this.physics_body
@@ -1016,7 +1016,7 @@ var De = function () {
     this.edge_list = new Map()
     this.update_callbacks = new Set()
     this.update = function () {
-      o.world.Step($_185.f, $_185.l, $_185.j)
+      o.world.Step(Module_185.f, Module_185.l, Module_185.j)
       o.update_callbacks.forEach(function (e) {
         return e()
       })
@@ -1024,15 +1024,15 @@ var De = function () {
     this.on_scene_destroy = function () {
       return o.destroy()
     }
-    this.world = new r.World(new r.Vec2(0, i || $_185.d))
+    this.world = new r.World(new r.Vec2(0, i || Module_185.d))
     var a = new this.box2d.ParticleSystemDef()
     a.radius = 1.2
     this.world.CreateParticleSystem(a)
     var s = new r.ContactListener()
     var c = function (e, t) {
       if (e && t && e !== t) {
-        var n = $_185.m(e, t)
-        var r = $_185.m(t, e)
+        var n = Module_185.m(e, t)
+        var r = Module_185.m(t, e)
         o.collision_list.add(n)
         o.collision_list.add(r)
       }
@@ -1051,8 +1051,8 @@ var De = function () {
     }
     var u = function (e, t) {
       if (e && t && e !== t) {
-        var n = $_185.m(e, t)
-        var r = $_185.m(t, e)
+        var n = Module_185.m(e, t)
+        var r = Module_185.m(t, e)
         o.collision_list.delete(n)
         o.collision_list.delete(r)
       }
@@ -1126,8 +1126,8 @@ var De = function () {
       var /* [auto-meaningful-name] */this$app$get_app$view = this.app.get_app().view
       var /* [auto-meaningful-name] */this$app$get_app$view$width = this$app$get_app$view.width
       var /* [auto-meaningful-name] */this$app$get_app$view$height = this$app$get_app$view.height
-      var a = $_185.o(this$app$get_app$view$width) / 2
-      var s = $_185.o(this$app$get_app$view$height) / 2
+      var a = Module_185.o(this$app$get_app$view$width) / 2
+      var s = Module_185.o(this$app$get_app$view$height) / 2
       try {
         for (var c = Be(e), u = c.next(); !u.done; u = c.next()) {
           var /* [auto-meaningful-name] */u$value = u.value
@@ -1135,17 +1135,17 @@ var De = function () {
             var f = 0
             var d = 0
             switch (u$value) {
-              case $$_105.b.TOP:
-                d = -s - $_185.h
+              case Module_105.b.TOP:
+                d = -s - Module_185.h
                 break
-              case $$_105.b.BOTTOM:
-                d = s + $_185.h
+              case Module_105.b.BOTTOM:
+                d = s + Module_185.h
                 break
-              case $$_105.b.LEFT:
-                f = -a - $_185.h
+              case Module_105.b.LEFT:
+                f = -a - Module_185.h
                 break
-              case $$_105.b.RIGHT:
-                f = a + $_185.h
+              case Module_105.b.RIGHT:
+                f = a + Module_185.h
                 break
               default:
                 return
@@ -1154,8 +1154,8 @@ var De = function () {
               id: u$value.toString()
             })
             var p = new this.box2d.PolygonShape()
-            p.SetAsBox($_185.h, $_185.h)
-            h.CreateFixture(p, $_185.g)
+            p.SetAsBox(Module_185.h, Module_185.h)
+            h.CreateFixture(p, Module_185.g)
             h.SetPositionXY(f, d)
             this.edge_list.set(u$value, h)
           }
@@ -1243,8 +1243,8 @@ var De = function () {
     if (!i || !i.is_enabled() || !o || !o.is_enabled()) {
       return false
     }
-    var a = $_185.m(e, t)
-    var s = $_185.m(t, e)
+    var a = Module_185.m(e, t)
+    var s = Module_185.m(t, e)
     return this.collision_list.has(a) || this.collision_list.has(s)
   }
   e.prototype.check_collision_with_edge = function (e, t) {
@@ -1258,15 +1258,15 @@ var De = function () {
     if (!o || !o.is_enabled()) {
       return false
     }
-    var a = t ? [t] : [$$_105.b.TOP, $$_105.b.BOTTOM, $$_105.b.LEFT, $$_105.b.RIGHT]
+    var a = t ? [t] : [Module_105.b.TOP, Module_105.b.BOTTOM, Module_105.b.LEFT, Module_105.b.RIGHT]
     try {
       for (var s = Be(a), c = s.next(); !c.done; c = s.next()) {
         var /* [auto-meaningful-name] */c$value = c.value
         var l = this.edge_list.get(c$value)
         if (l) {
           var f = l.GetId()
-          var d = $_185.m(e, f)
-          var h = $_185.m(f, e)
+          var d = Module_185.m(e, f)
+          var h = Module_185.m(f, e)
           if (this.collision_list.has(d) || this.collision_list.has(h)) {
             return true
           }
@@ -1464,12 +1464,12 @@ var Pe = function () {
       return Re(this, function (l) {
         switch (l.label) {
           case 0:
-            return this.box2d ? [3, 2] : (r = this, [4, import("./3323")])
+            return this.box2d ? [3, 2] : (r = this, [4, import(/* 3323 */"./3323")])
           case 1:
             r.box2d = l.sent()
             l.label = 2
           case 2:
-            return !e || this.debug_draw ? [3, 4] : (this$app$get_app$view = this.app.get_app().view).parentElement ? ((o = document.createElement("canvas")).width = this$app$get_app$view.width, o.height = this$app$get_app$view.height, o.style.width = this$app$get_app$view.style.width, o.style.height = this$app$get_app$view.style.height, o.style.position = "absolute", o.style.top = "0", o.style.left = "0", o.style.pointerEvents = "none", this$app$get_app$view.parentElement.appendChild(o), [4, import("./3325")]) : [2]
+            return !e || this.debug_draw ? [3, 4] : (this$app$get_app$view = this.app.get_app().view).parentElement ? ((o = document.createElement("canvas")).width = this$app$get_app$view.width, o.height = this$app$get_app$view.height, o.style.width = this$app$get_app$view.style.width, o.style.height = this$app$get_app$view.style.height, o.style.position = "absolute", o.style.top = "0", o.style.left = "0", o.style.pointerEvents = "none", this$app$get_app$view.parentElement.appendChild(o), [4, import(/* 3325 */"./3325")]) : [2]
           case 3:
             l$sent$DebugDraw = l.sent().DebugDraw
             this.debug_draw = new l$sent$DebugDraw(o)
@@ -1519,7 +1519,7 @@ var Pe = function () {
     var /* [auto-meaningful-name] */this$draw_handler
     var n = this.world_list.get(e)
     if (!n) {
-      return new $_119.a("Can not find world with id " + e)
+      return new Module_119.a("Can not find world with id " + e)
     }
     this.world_list.delete(e)
     n.destroy()
@@ -1564,7 +1564,7 @@ var Pe = function () {
   }
   return e
 }()
-var Ne = new $_268_index.Container()
+var Ne = new Module_268.Container()
 Ne.bind(s.Events).to(j).inSingletonScope()
 Ne.bind(s.App).to(_)
 Ne.bind(s.Data).toFactory(function () {
@@ -1612,7 +1612,7 @@ Ne.bind(s.Actor).toFactory(function (e) {
     var r = Object.assign({}, t, {
       events: n
     })
-    return new $_520_index.a(r)
+    return new Module_520.a(r)
   }
 })
 Ne.bind(s.Actors).toFactory(function (e) {
@@ -1624,7 +1624,7 @@ Ne.bind(s.Actors).toFactory(function (e) {
 Ne.bind(s.Stage).to(Ae)
 var Le = function () {
   function e() {
-    this.loader = $_32_index.k.shared
+    this.loader = Module_32.k.shared
     this.tasks = []
     this.is_loading = false
   }

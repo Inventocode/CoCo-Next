@@ -1,4 +1,10 @@
-.coco-input-warning {
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：IzpB
+ */
+
+ .coco-input-warning {
     border-color: #f85b5e;
     background-color: #fff
 }

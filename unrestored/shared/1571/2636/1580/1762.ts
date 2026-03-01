@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./1758/257/index")
-var /* [auto-meaningful-name] */require$_1761_828$indexOf = require("./1761/828").indexOf
+var r = require(/* 257 */"./1758/257/index")
+var /* [auto-meaningful-name] */require_828_$_1761_828$indexOf = require(/* 828 */"./1761/828").indexOf
 var /* [auto-meaningful-name] */r$aTypedArray = r.aTypedArray;
 (0, r.exportTypedArrayMethod)("indexOf", function (e) {
-  return require$_1761_828$indexOf(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
+  return require_828_$_1761_828$indexOf(r$aTypedArray(this), e, arguments.length > 1 ? arguments[1] : undefined)
 })

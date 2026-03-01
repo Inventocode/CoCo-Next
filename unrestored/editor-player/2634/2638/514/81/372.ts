@@ -6,7 +6,7 @@
 
 "use strict"
 
-var n = require("./592")
+var n = require(/* 592 */"./592")
 var o = function () {
   function t() {}
   t.setGridSampler = function (e) {

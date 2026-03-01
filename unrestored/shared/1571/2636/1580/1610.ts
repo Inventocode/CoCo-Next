@@ -4,8 +4,8 @@
  * 模块 ID：1610
  */
 
-var r = require("./1662/86")
-var o = require("./1765/1251")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 1251 */"./1765/1251")
 r({
   target: "Array",
   proto: true,

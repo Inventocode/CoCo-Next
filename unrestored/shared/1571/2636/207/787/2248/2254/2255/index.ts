@@ -6,15 +6,15 @@
 
 "use strict"
 
-var r = require("./2256/index")
-var i = require("./1136/index")
-var o = require("./2260")
-var a = require("./1365")
-var s = require("./1366")
-var c = require("./2261")
-var u = require("./2262/index")
-var l = require("./2283")
-var f = require("./765/index")
+var r = require(/* 2256 */"./2256/index")
+var i = require(/* 1136 */"./1136/index")
+var o = require(/* 2260 */"./2260")
+var a = require(/* 1365 */"./1365")
+var s = require(/* 1366 */"./1366")
+var c = require(/* 2261 */"./2261")
+var u = require(/* 2262 */"./2262/index")
+var l = require(/* 2283 */"./2283")
+var f = require(/* 765 */"./765/index")
 module.exports = g
 g.prototype.validate = function (e, t) {
   var n
@@ -239,13 +239,13 @@ g.prototype._compile = function (e, t) {
     return n
   }
 }
-g.prototype.compileAsync = require("./2284")
-var d = require("./2285/index")
+g.prototype.compileAsync = require(/* 2284 */"./2284")
+var d = require(/* 2285 */"./2285/index")
 g.prototype.addKeyword = d.add
 g.prototype.getKeyword = d.get
 g.prototype.removeKeyword = d.remove
 g.prototype.validateKeyword = d.validate
-var h = require("./1138")
+var h = require(/* 1138 */"./1138")
 g.ValidationError = h.Validation
 g.MissingRefError = h.MissingRef
 g.$dataMetaSchema = l
@@ -325,13 +325,13 @@ function g(e) {
   (function (e) {
     var t
     if (e._opts.$data) {
-      t = require("./2288")
+      t = require(/* 2288 */"./2288")
       e.addMetaSchema(t, t.$id, true)
     }
     if (false === e._opts.meta) {
       return
     }
-    var r = require("./1372")
+    var r = require(/* 1372 */"./1372")
     if (e._opts.$data) {
       r = l(r, A)
     }

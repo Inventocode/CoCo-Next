@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"./801/index"
 var qb = {
   icon: {
     tag: "svg",

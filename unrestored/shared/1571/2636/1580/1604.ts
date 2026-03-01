@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("./1662/86")
-var o = require("./1603/1245")
-var i = require("./1662/309")
-var a = require("./1771/256")
-var s = require("./1662/443")
-var c = require("./1597/832/index")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 1245 */"./1603/1245")
+var i = require(/* 309 */"./1662/309")
+var a = require(/* 256 */"./1771/256")
+var s = require(/* 443 */"./1662/443")
+var c = require(/* 832 */"./1597/832/index")
 r({
   target: "Array",
   proto: true

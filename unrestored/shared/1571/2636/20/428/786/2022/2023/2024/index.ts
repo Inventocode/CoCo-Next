@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./2025")
+var r = require(/* 2025 */"./2025")
 function i(e, t) {
   for (var n = 0; n < e.length; n++) {
     e[n] += t

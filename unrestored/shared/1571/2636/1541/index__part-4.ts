@@ -7,21 +7,21 @@
 "use strict"
 
 import { C } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$$_742 from "../742"
-import * as /* [auto-meaningful-name] */$$_559_560 from "../559/560"
-import * as /* [auto-meaningful-name] */$$_795 from "../795"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_331 from "../331"
-import { useLayoutEffect, useEffect, useRef, useState, createElement, Fragment, useImperativeHandle, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_490 from "../490"
+import * as /* [auto-meaningful-name] */Module_742 from /* 742 */"../742"
+import * as /* [auto-meaningful-name] */Module_560 from /* 560 */"../559/560"
+import * as /* [auto-meaningful-name] */Module_795 from /* 795 */"../795"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_331 from /* 331 */"../331"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_490 from /* 490 */"../490"
 function S(e, t) {
-  if ($$_490.b) {
-    useLayoutEffect(e, t)
+  if (Module_490.b) {
+    React.useLayoutEffect(e, t)
   } else {
-    useEffect(e, t)
+    React.useEffect(e, t)
   }
 }
 var A = function (e) {
@@ -59,25 +59,25 @@ var I = function (e) {
   var /* [auto-meaningful-name] */e$onInputMouseDown = e.onInputMouseDown
   var /* [auto-meaningful-name] */e$onInputCompositionStart = e.onInputCompositionStart
   var /* [auto-meaningful-name] */e$onInputCompositionEnd = e.onInputCompositionEnd
-  var F = useRef(null)
-  var G = useState(0)
-  var W = $$_40_index.a(G, 2)
+  var F = React.useRef(null)
+  var G = React.useState(0)
+  var W = Module_40.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = useState(false)
-  var z = $$_40_index.a(V, 2)
+  var V = React.useState(false)
+  var z = Module_40.a(V, 2)
   var Y = z[0]
   var K = z[1]
   var q = "".concat(e$prefixCls, "-selection")
   var X = e$open || "tags" === e$mode ? e$searchValue : ""
   var Q = "tags" === e$mode || e$showSearch && (e$open || Y)
   function Z(e, t, n, r, i) {
-    return createElement("span", {
-      className: Classnames("".concat(q, "-item"), $$_35.a({}, "".concat(q, "-item-disabled"), n)),
+    return React.createElement("span", {
+      className: Classnames("".concat(q, "-item"), Module_35.a({}, "".concat(q, "-item-disabled"), n)),
       title: "string" === typeof e || "number" === typeof e ? e.toString() : undefined
-    }, createElement("span", {
+    }, React.createElement("span", {
       className: "".concat(q, "-item-content")
-    }, t), r && createElement($$_742.a, {
+    }, t), r && React.createElement(Module_742.a, {
       className: "".concat(q, "-item-remove"),
       onMouseDown: A,
       onClick: i,
@@ -87,7 +87,7 @@ var I = function (e) {
   S(function () {
     H(F.current.scrollWidth)
   }, [X])
-  var J = createElement("div", {
+  var J = React.createElement("div", {
     className: "".concat(q, "-search"),
     style: {
       width: U
@@ -98,7 +98,7 @@ var I = function (e) {
     onBlur: function () {
       K(false)
     }
-  }, createElement(C, {
+  }, React.createElement(C, {
     ref: e$inputRef,
     open: e$open,
     prefixCls: e$prefixCls,
@@ -117,13 +117,13 @@ var I = function (e) {
     onCompositionStart: e$onInputCompositionStart,
     onCompositionEnd: e$onInputCompositionEnd,
     tabIndex: e$tabIndex,
-    attrs: $$_795.a(e, true)
-  }), createElement("span", {
+    attrs: Module_795.a(e, true)
+  }), React.createElement("span", {
     ref: F,
     className: "".concat(q, "-search-mirror"),
     "aria-hidden": true
   }, X, " "))
-  var $ = createElement($$_559_560.a, {
+  var $ = React.createElement(Module_560.a, {
     prefixCls: "".concat(q, "-overflow"),
     data: e$values,
     renderItem: function (e) {
@@ -147,7 +147,7 @@ var I = function (e) {
         })
       }
       return "function" === typeof e$tagRender ? function (e, t, n, r, o) {
-        return createElement("span", {
+        return React.createElement("span", {
           onMouseDown: function (e) {
             A(e)
             e$onToggleOpen(!e$open)
@@ -169,7 +169,7 @@ var I = function (e) {
     itemKey: "key",
     maxCount: e$maxTagCount
   })
-  return createElement(Fragment, null, $, !e$values.length && !X && createElement("span", {
+  return React.createElement(React.Fragment, null, $, !e$values.length && !X && React.createElement("span", {
     className: "".concat(q, "-placeholder")
   }, e$placeholder))
 }
@@ -197,8 +197,8 @@ var j = function (e) {
   var /* [auto-meaningful-name] */e$onInputPaste = e.onInputPaste
   var /* [auto-meaningful-name] */e$onInputCompositionStart = e.onInputCompositionStart
   var /* [auto-meaningful-name] */e$onInputCompositionEnd = e.onInputCompositionEnd
-  var I = useState(false)
-  var j = $$_40_index.a(I, 2)
+  var I = React.useState(false)
+  var j = Module_40.a(I, 2)
   var N = j[0]
   var R = j[1]
   var k = "combobox" === e$mode
@@ -208,16 +208,16 @@ var j = function (e) {
   if (k && e$activeValue && !N) {
     M = e$activeValue
   }
-  useEffect(function () {
+  React.useEffect(function () {
     if (k) {
       R(false)
     }
   }, [k, e$activeValue])
   var L = !("combobox" !== e$mode && !e$open) && !!M
   var P = !D || "string" !== typeof D.label && "number" !== typeof D.label ? undefined : D.label.toString()
-  return createElement(Fragment, null, createElement("span", {
+  return React.createElement(React.Fragment, null, React.createElement("span", {
     className: "".concat(e$prefixCls, "-selection-search")
-  }, createElement(C, {
+  }, React.createElement(C, {
     ref: e$inputRef,
     prefixCls: e$prefixCls,
     id: r,
@@ -239,19 +239,19 @@ var j = function (e) {
     onCompositionStart: e$onInputCompositionStart,
     onCompositionEnd: e$onInputCompositionEnd,
     tabIndex: e$tabIndex,
-    attrs: $$_795.a(e, true),
+    attrs: Module_795.a(e, true),
     maxLength: k ? e$maxLength : undefined
-  })), !k && D && !L && createElement("span", {
+  })), !k && D && !L && React.createElement("span", {
     className: "".concat(e$prefixCls, "-selection-item"),
     title: P
-  }, D.label), !D && !L && createElement("span", {
+  }, D.label), !D && !L && React.createElement("span", {
     className: "".concat(e$prefixCls, "-selection-placeholder")
   }, e$placeholder))
 }
 function N() {
   var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 250
-  var t = useRef(null)
-  var n = useRef(null)
+  var t = React.useRef(null)
+  var n = React.useRef(null)
   function r(r) {
     if (r || null === t.current) {
       t.current = r
@@ -261,7 +261,7 @@ function N() {
       t.current = null
     }, e)
   }
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       window.clearTimeout(n.current)
     }
@@ -273,8 +273,8 @@ function N() {
   ]
 }
 var R = function (e, t) {
-  var n = useRef(null)
-  var o = useRef(false)
+  var n = React.useRef(null)
+  var o = React.useRef(false)
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$multiple = e.multiple
   var /* [auto-meaningful-name] */e$open = e.open
@@ -286,7 +286,7 @@ var R = function (e, t) {
   var /* [auto-meaningful-name] */e$onToggleOpen = e.onToggleOpen
   var /* [auto-meaningful-name] */e$onInputKeyDown = e.onInputKeyDown
   var /* [auto-meaningful-name] */e$domRef = e.domRef
-  useImperativeHandle(t, function () {
+  React.useImperativeHandle(t, function () {
     return {
       focus: function () {
         n.current.focus()
@@ -297,10 +297,10 @@ var R = function (e, t) {
     }
   })
   var b = N(0)
-  var y = $$_40_index.a(b, 2)
+  var y = Module_40.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = useRef(null)
+  var w = React.useRef(null)
   var C = function (e) {
     if (false !== e$onSearch(e, true, o.current)) {
       e$onToggleOpen(true)
@@ -310,16 +310,16 @@ var R = function (e, t) {
     inputRef: n,
     onInputKeyDown: function (e) {
       var /* [auto-meaningful-name] */e$which = e.which
-      if (!(e$which !== $$_331.a.UP && e$which !== $$_331.a.DOWN)) {
+      if (!(e$which !== Module_331.a.UP && e$which !== Module_331.a.DOWN)) {
         e.preventDefault()
       }
       if (e$onInputKeyDown) {
         e$onInputKeyDown(e)
       }
-      if (!(e$which !== $$_331.a.ENTER || "tags" !== e$mode || o.current || e$open)) {
+      if (!(e$which !== Module_331.a.ENTER || "tags" !== e$mode || o.current || e$open)) {
         e$onSearchSubmit(e.target.value)
       }
-      if (![$$_331.a.SHIFT, $$_331.a.TAB, $$_331.a.BACKSPACE, $$_331.a.ESC].includes(e$which)) {
+      if (![Module_331.a.SHIFT, Module_331.a.TAB, Module_331.a.BACKSPACE, Module_331.a.ESC].includes(e$which)) {
         e$onToggleOpen(true)
       }
     },
@@ -349,8 +349,8 @@ var R = function (e, t) {
       }
     }
   }
-  var S = e$multiple ? createElement(I, $$_19.a({}, e, T)) : createElement(j, $$_19.a({}, e, T))
-  return createElement("div", {
+  var S = e$multiple ? React.createElement(I, Module_19.a({}, e, T)) : React.createElement(j, Module_19.a({}, e, T))
+  return React.createElement("div", {
     ref: e$domRef,
     className: "".concat(e$prefixCls, "-selector"),
     onClick: function (e) {
@@ -378,7 +378,7 @@ var R = function (e, t) {
     }
   }, S)
 }
-var k = forwardRef(R)
+var k = React.forwardRef(R)
 k.displayName = "Selector"
 var x = k
 export { S }

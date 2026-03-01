@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../571")
+var r = require(/* 571 */"../571")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
@@ -25,4 +25,4 @@ exports.default = function (e, t, n, r) {
     }
   }
 }
-var i = r(require("react-dom"))
+var i = r(require(/* 80 */"react-dom"))

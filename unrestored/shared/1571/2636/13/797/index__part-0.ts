@@ -6,11 +6,10 @@
 
 "use strict"
 
-import { isValidElement, PureComponent, Component } from "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_101_index from "./101/index"
-import /* [auto-meaningful-name] */$_101_index1 from "./101/index"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_101 from /* 101 */"./101/index"
+import /* [auto-meaningful-name] */Module_1011 from /* 101 */"./101/index"
 var s = function (e, t, n, r, i) {
   var /* [auto-meaningful-name] */i$clientWidth = i.clientWidth
   var /* [auto-meaningful-name] */i$clientHeight = i.clientHeight
@@ -80,7 +79,7 @@ var f = function (e) {
   var /* [auto-meaningful-name] */e$borderRadius = e.borderRadius
   var /* [auto-meaningful-name] */e$boxShadow = e.boxShadow
   var /* [auto-meaningful-name] */e$children = e.children
-  var h = $_101_index1({
+  var h = Module_1011({
     default: {
       grid: {
         borderRadius: e$borderRadius,
@@ -90,7 +89,7 @@ var f = function (e) {
       }
     }
   })
-  return isValidElement(e$children) ? React1.cloneElement(e$children, l({}, e$children.props, {
+  return React.isValidElement(e$children) ? React1.cloneElement(e$children, l({}, e$children.props, {
     style: l({}, e$children.props.style, h.grid)
   })) : React1.createElement("div", {
     style: h.grid
@@ -206,7 +205,7 @@ var g = function (e) {
       value: function () {
         var e = this
         var /* [auto-meaningful-name] */this$props$rgb = this.props.rgb
-        var n = $_101_index1({
+        var n = Module_1011({
           default: {
             alpha: {
               absolute: "0px 0px 0px 0px",
@@ -281,7 +280,7 @@ var g = function (e) {
     }
   ])
   return t
-}(PureComponent || Component)
+}(React.PureComponent || React.Component)
 var v = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {
@@ -450,7 +449,7 @@ var b = function (e) {
       key: "render",
       value: function () {
         var e = this
-        var t = $_101_index1({
+        var t = Module_1011({
           default: {
             wrap: {
               position: "relative"
@@ -492,7 +491,7 @@ var b = function (e) {
     }
   ])
   return t
-}(PureComponent || Component)
+}(React.PureComponent || React.Component)
 var w = function (e, t, n, r) {
   var /* [auto-meaningful-name] */r$clientWidth = r.clientWidth
   var /* [auto-meaningful-name] */r$clientHeight = r.clientHeight
@@ -636,7 +635,7 @@ var O = function (e) {
         var e = this
         var /* [auto-meaningful-name] */this$props$direction = this.props.direction
         var n = undefined === this$props$direction ? "horizontal" : this$props$direction
-        var r = $_101_index1({
+        var r = Module_1011({
           default: {
             hue: {
               absolute: "0px 0px 0px 0px",
@@ -692,7 +691,7 @@ var O = function (e) {
     }
   ])
   return t
-}(PureComponent || Component)
+}(React.PureComponent || React.Component)
 export { d }
 export { g }
 export { b }

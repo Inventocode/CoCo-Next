@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_555_index from "./555/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_555 from /* 555 */"./555/index"
 var ff = function (e) {
   var /* [auto-meaningful-name] */e$onEdit = e.onEdit
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$attributes$options = e.attributes.options
-  return React.createElement($_555_index.a, Object.assign({}, e, {
+  return React.createElement(Module_555.a, Object.assign({}, e, {
     onHeadlineClick: function (e) {
       if (e$onEdit) {
         e$onEdit(e.target, function (e) {
@@ -22,7 +22,7 @@ var ff = function (e) {
             e$onChange("headline", e)
           }
         }, {
-          sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
+          sizeAdaptive: Src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
           maxLength: 200
         })
       }
@@ -32,10 +32,10 @@ var ff = function (e) {
         e$onEdit(o, function (t) {
           e$attributes$options[e].content = t
           if (e$onChange) {
-            e$onChange("options", $_25_index.a(e$attributes$options))
+            e$onChange("options", Module_25.a(e$attributes$options))
           }
         }, {
-          sizeAdaptive: $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
+          sizeAdaptive: Src_editor_widget_builtIn_types.q.AUTO_HEIGHT,
           maxLength: 200
         })
       }

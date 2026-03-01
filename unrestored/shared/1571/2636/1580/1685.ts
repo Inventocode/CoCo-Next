@@ -4,8 +4,8 @@
  * 模块 ID：1685
  */
 
-var r = require("./1662/86")
-var o = require("./1658/1261/index")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 1261 */"./1658/1261/index")
 r({
   global: true,
   forced: parseInt != o

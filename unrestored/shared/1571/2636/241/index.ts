@@ -6,4 +6,4 @@
 
 "use strict"
 
-module.exports = require("./1578")
+module.exports = require(/* 1578 */"./1578")

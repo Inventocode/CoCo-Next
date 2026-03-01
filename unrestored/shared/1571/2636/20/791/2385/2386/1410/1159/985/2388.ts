@@ -4,7 +4,7 @@
  * 模块 ID：2388
  */
 
-var r = require("../984/1405")
+var r = require(/* 1405 */"../984/1405")
 function i(e) {
   var t
   var n

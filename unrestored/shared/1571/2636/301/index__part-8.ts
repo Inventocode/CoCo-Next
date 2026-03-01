@@ -6,18 +6,18 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_327 from "./327"
-import * as /* [auto-meaningful-name] */$$_46_index from "../46/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_135 from "../135"
-var /* [auto-meaningful-name] */$_327$FieldNumber$prototype$show_editor = $_327.FieldNumber.prototype.show_editor
-$_327.FieldNumber.prototype.show_editor = function () {
+import * as /* [auto-meaningful-name] */Module_327 from /* 327 */"./327"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"../46/index"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_135 from /* 135 */"../135"
+var /* [auto-meaningful-name] */Module_327$FieldNumber$prototype$show_editor = Module_327.FieldNumber.prototype.show_editor
+Module_327.FieldNumber.prototype.show_editor = function () {
   var e = this
-  var t = $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.BU.dom.create_dom("input", "blocklyHtmlInput")
+  var t = Src_shared_packages_Crc_blink_src_index.BU.dom.create_dom("input", "blocklyHtmlInput")
   if (!this.source_block) {
     return t
   }
-  $_327$FieldNumber$prototype$show_editor.call(this)
+  Module_327$FieldNumber$prototype$show_editor.call(this)
   var n = this.get_absolute_xy()
   var r = this.source_block.is_shadow() && this.source_block.parent_block || this.source_block
   var o = r.workspace.get_scale()
@@ -30,8 +30,8 @@ $_327.FieldNumber.prototype.show_editor = function () {
   var d = ""
   if ("audio_set_volume_or_rate" === r.type) {
     var p = r.get_field_value("OP")
-    c = "SOUND_VOLUME" === p ? $$_135.g : $$_135.e
-    l = "SOUND_VOLUME" === p ? $$_135.f : $$_135.d
+    c = "SOUND_VOLUME" === p ? Module_135.g : Module_135.e
+    l = "SOUND_VOLUME" === p ? Module_135.f : Module_135.d
     u = "SOUND_VOLUME" === p ? "小" : "慢"
     d = "SOUND_VOLUME" === p ? "大" : "快"
     this.set_constraints(c, l, 1)
@@ -50,18 +50,18 @@ $_327.FieldNumber.prototype.show_editor = function () {
       },
       type: "SHOW_BLOCKS_SLIDER"
     }
-    $$_46_index.c().dispatchAction(f)
+    Module_46.c().dispatchAction(f)
   }
   return t
 }
-var /* [auto-meaningful-name] */$_327$FieldNumber$prototype$set_value = $_327.FieldNumber.prototype.set_value
-$_327.FieldNumber.prototype.set_value = function (e) {
-  $_327$FieldNumber$prototype$set_value.call(this, e)
-  if ($$_46_index.c().getSliderVisible()) {
+var /* [auto-meaningful-name] */Module_327$FieldNumber$prototype$set_value = Module_327.FieldNumber.prototype.set_value
+Module_327.FieldNumber.prototype.set_value = function (e) {
+  Module_327$FieldNumber$prototype$set_value.call(this, e)
+  if (Module_46.c().getSliderVisible()) {
     if (!e || isNaN(Number(e))) {
       return
     }
-    $$_46_index.c().dispatchAction({
+    Module_46.c().dispatchAction({
       payload: {
         value: e
       },

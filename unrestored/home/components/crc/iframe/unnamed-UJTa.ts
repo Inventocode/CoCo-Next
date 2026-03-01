@@ -12,9 +12,9 @@ Object.defineProperty(exports, "__esModule", {
 exports.createWoodIframeApi = createWoodIframeApi
 exports.createWoodParentApi = createWoodParentApi
 exports.getWoodIframeUrl = getWoodIframeUrl
-var base_1 = require("./unnamed-S9_H")
-var iframe_1 = require("./unnamed-IKhi")
-var utils_1 = require("./utils/1-MMZc")
+var base_1 = require(/* S9/H */"./unnamed-S9_H")
+var iframe_1 = require(/* IKhi */"./unnamed-IKhi")
+var utils_1 = require(/* MMZc */"./utils/1-MMZc")
 const iframeApiSpec = new base_1.ApiSpec("wood", {
   // NOTE: works
   setCurrentWoodProjectById: new base_1.MethodType(),

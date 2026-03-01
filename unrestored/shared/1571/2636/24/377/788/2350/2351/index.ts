@@ -10,21 +10,21 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.ConflictResolver = exports.GlobalCommentPlugin = exports.ProcedurePlugin = undefined
-var r = require("../../../737/index")
+var r = require(/* 737 */"../../../737/index")
 Object.defineProperty(exports, "ProcedurePlugin", {
   enumerable: true,
   get: function () {
     return r.ProcedurePlugin
   }
 })
-var i = require("./2352")
+var i = require(/* 2352 */"./2352")
 Object.defineProperty(exports, "GlobalCommentPlugin", {
   enumerable: true,
   get: function () {
     return i.GlobalCommentPlugin
   }
 })
-var o = require("./2353")
+var o = require(/* 2353 */"./2353")
 Object.defineProperty(exports, "ConflictResolver", {
   enumerable: true,
   get: function () {

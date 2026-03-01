@@ -9,23 +9,23 @@
 import { N } from "./1542__part-2"
 import { H, V, G } from "./1542__part-3"
 import { ee, fe } from "./1542__part-4"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_21 from "../21"
-import * as /* [auto-meaningful-name] */$$_107 from "../107"
-import * as /* [auto-meaningful-name] */$$_140 from "../140"
-import * as /* [auto-meaningful-name] */$$_120 from "../120"
-import * as /* [auto-meaningful-name] */$$_106 from "../106"
-import * as /* [auto-meaningful-name] */$$_103 from "../103"
-import { Fragment, createElement, Component, memo, forwardRef, useRef, useImperativeHandle, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_54 from "../54"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
+import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../107"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../140"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../120"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
 function he(e) {
   var t
-  t = e && "object" === $$_107.a(e) && "key" in e ? e : {
+  t = e && "object" === Module_107.a(e) && "key" in e ? e : {
     key: e
   }
-  return $$_21.a($$_21.a({}, t), {}, {
+  return Module_21.a(Module_21.a({}, t), {}, {
     key: String(t.key)
   })
 }
@@ -47,13 +47,13 @@ function _e() {
       if (s.key === e.key) {
         if (r < o) {
           n = n.concat(a.slice(r, o).map(function (e) {
-            return $$_21.a($$_21.a({}, e), {}, {
+            return Module_21.a(Module_21.a({}, e), {}, {
               status: "add"
             })
           }))
           r = o
         }
-        n.push($$_21.a($$_21.a({}, s), {}, {
+        n.push(Module_21.a(Module_21.a({}, s), {}, {
           status: "keep"
         }))
         r += 1
@@ -62,14 +62,14 @@ function _e() {
       }
     }
     if (!t) {
-      n.push($$_21.a($$_21.a({}, e), {}, {
+      n.push(Module_21.a(Module_21.a({}, e), {}, {
         status: "remove"
       }))
     }
   })
   if (r < t$length) {
     n = n.concat(a.slice(r).map(function (e) {
-      return $$_21.a($$_21.a({}, e), {}, {
+      return Module_21.a(Module_21.a({}, e), {}, {
         status: "add"
       })
     }))
@@ -99,11 +99,11 @@ var Ae = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
 !function (e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : fe
   var n = function (e) {
-    $$_120.a(i, e)
-    var n = $$_140.a(i)
+    Module_120.a(i, e)
+    var n = Module_140.a(i)
     function i() {
       var e
-      $$_103.a(this, i);
+      Module_103.a(this, i);
       (e = n.apply(this, arguments)).state = {
         keyEntities: []
       }
@@ -111,7 +111,7 @@ var Ae = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
         e.setState(function (e) {
           return {
             keyEntities: e.keyEntities.map(function (e) {
-              return e.key !== t ? e : $$_21.a($$_21.a({}, e), {}, {
+              return e.key !== t ? e : Module_21.a(Module_21.a({}, e), {}, {
                 status: "removed"
               })
             })
@@ -120,7 +120,7 @@ var Ae = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
       }
       return e
     }
-    $$_106.a(i, [
+    Module_106.a(i, [
       {
         key: "render",
         value: function () {
@@ -130,19 +130,19 @@ var Ae = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
           var /* [auto-meaningful-name] */this$props$component = this$props.component
           var /* [auto-meaningful-name] */this$props$children = this$props.children
           var /* [auto-meaningful-name] */this$props$onVisibleChanged = this$props.onVisibleChanged
-          var u = $$_54.a(this$props, ["component", "children", "onVisibleChanged"])
-          var l = this$props$component || Fragment
+          var u = Module_54.a(this$props, ["component", "children", "onVisibleChanged"])
+          var l = this$props$component || React.Fragment
           var f = {}
           Ae.forEach(function (e) {
             f[e] = u[e]
             delete u[e]
           })
           delete u.keys
-          return createElement(l, u, this$state$keyEntities.map(function (n) {
+          return React.createElement(l, u, this$state$keyEntities.map(function (n) {
             var /* [auto-meaningful-name] */n$status = n.status
-            var a = $$_54.a(n, ["status"])
+            var a = Module_54.a(n, ["status"])
             var u = "add" === n$status || "keep" === n$status
-            return createElement(t, $$_19.a({}, f, {
+            return React.createElement(t, Module_19.a({}, f, {
               key: a.key,
               visible: u,
               eventProps: a,
@@ -180,7 +180,7 @@ var Ae = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
       }
     ])
     return i
-  }(Component)
+  }(React.Component)
   n.defaultProps = {
     component: "div"
   }
@@ -192,7 +192,7 @@ function ve(e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$maskProps = e.maskProps
   var /* [auto-meaningful-name] */e$motionName = e.motionName
-  return createElement(ge, {
+  return React.createElement(ge, {
     key: "mask",
     visible: e$visible,
     motionName: e$motionName,
@@ -200,8 +200,8 @@ function ve(e) {
   }, function (e) {
     var /* [auto-meaningful-name] */e$className = e.className
     var /* [auto-meaningful-name] */e$style1 = e.style
-    return createElement("div", $$_19.a({
-      style: $$_21.a($$_21.a({}, e$style1), e$style),
+    return React.createElement("div", Module_19.a({
+      style: Module_21.a(Module_21.a({}, e$style1), e$style),
       className: Classnames("".concat(e$prefixCls, "-mask"), e$className)
     }, e$maskProps))
   })
@@ -225,7 +225,7 @@ function be(e, t) {
   }
   return n
 }
-var we = memo(function (e) {
+var we = React.memo(function (e) {
   return e.children
 }, function (e, t) {
   return !t.shouldUpdate
@@ -236,7 +236,7 @@ var Ee = {
   overflow: "hidden",
   outline: "none"
 }
-var xe = forwardRef(function (e, t) {
+var xe = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$closable = e.closable
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$width = e.width
@@ -260,10 +260,10 @@ var xe = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onMouseDown = e.onMouseDown
   var /* [auto-meaningful-name] */e$onMouseUp = e.onMouseUp
   var /* [auto-meaningful-name] */e$mousePosition = e.mousePosition
-  var S = useRef()
-  var T = useRef()
-  var B = useRef()
-  useImperativeHandle(t, function () {
+  var S = React.useRef()
+  var T = React.useRef()
+  var B = React.useRef()
+  React.useImperativeHandle(t, function () {
     return {
       focus: function () {
         var /* [auto-meaningful-name] */S$current
@@ -286,8 +286,8 @@ var xe = forwardRef(function (e, t) {
   var D
   var I
   var R
-  var F = useState()
-  var P = $$_40_index.a(F, 2)
+  var F = React.useState()
+  var P = Module_40.a(F, 2)
   var N = P[0]
   var L = P[1]
   var U = {}
@@ -316,35 +316,35 @@ var xe = forwardRef(function (e, t) {
     U.transformOrigin = N
   }
   if (e$footer) {
-    D = createElement("div", {
+    D = React.createElement("div", {
       className: "".concat(e$prefixCls, "-footer")
     }, e$footer)
   }
   if (e$title) {
-    I = createElement("div", {
+    I = React.createElement("div", {
       className: "".concat(e$prefixCls, "-header")
-    }, createElement("div", {
+    }, React.createElement("div", {
       className: "".concat(e$prefixCls, "-title"),
       id: e$ariaId
     }, e$title))
   }
   if (e$closable) {
-    R = createElement("button", {
+    R = React.createElement("button", {
       type: "button",
       onClick: e$onClose,
       "aria-label": "Close",
       className: "".concat(e$prefixCls, "-close")
-    }, e$closeIcon || createElement("span", {
+    }, e$closeIcon || React.createElement("span", {
       className: "".concat(e$prefixCls, "-close-x")
     }))
   }
-  var V = createElement("div", {
+  var V = React.createElement("div", {
     className: "".concat(e$prefixCls, "-content")
-  }, R, I, createElement("div", $$_19.a({
+  }, R, I, React.createElement("div", Module_19.a({
     className: "".concat(e$prefixCls, "-body"),
     style: e$bodyStyle
   }, e$bodyProps), e$children), D)
-  return createElement(ge, {
+  return React.createElement(ge, {
     visible: e$visible,
     onVisibleChanged: e$onVisibleChanged,
     onAppearPrepare: H,
@@ -356,22 +356,22 @@ var xe = forwardRef(function (e, t) {
   }, function (e, t) {
     var /* [auto-meaningful-name] */e$className1 = e.className
     var /* [auto-meaningful-name] */e$style1 = e.style
-    return createElement("div", {
+    return React.createElement("div", {
       key: "dialog-element",
       role: "document",
       ref: t,
-      style: $$_21.a($$_21.a($$_21.a({}, e$style1), e$style), U),
+      style: Module_21.a(Module_21.a(Module_21.a({}, e$style1), e$style), U),
       className: Classnames(e$prefixCls, e$className, e$className1),
       onMouseDown: e$onMouseDown,
       onMouseUp: e$onMouseUp
-    }, createElement("div", {
+    }, React.createElement("div", {
       tabIndex: 0,
       ref: S,
       style: Ee,
       "aria-hidden": "true"
-    }), createElement(we, {
+    }), React.createElement(we, {
       shouldUpdate: e$visible || e$forceRender
-    }, e$modalRender ? e$modalRender(V) : V), createElement("div", {
+    }, e$modalRender ? e$modalRender(V) : V), React.createElement("div", {
       tabIndex: 0,
       ref: T,
       style: Ee,
@@ -410,14 +410,14 @@ function Oe(e) {
   var T = undefined === e$maskClosable || e$maskClosable
   var /* [auto-meaningful-name] */e$maskStyle = e.maskStyle
   var /* [auto-meaningful-name] */e$maskProps = e.maskProps
-  var I = useRef()
-  var R = useRef()
-  var F = useRef()
-  var P = useState(c)
-  var N = $$_40_index.a(P, 2)
+  var I = React.useRef()
+  var R = React.useRef()
+  var F = React.useRef()
+  var P = React.useState(c)
+  var N = Module_40.a(P, 2)
   var L = N[0]
   var U = N[1]
-  var z = useRef()
+  var z = React.useRef()
   function Q(e) {
     if (!(null === e$onClose || undefined === e$onClose)) {
       e$onClose(e)
@@ -426,8 +426,8 @@ function Oe(e) {
   if (!z.current) {
     z.current = "rcDialogTitle".concat(ye += 1)
   }
-  var W = useRef(false)
-  var K = useRef()
+  var W = React.useRef(false)
+  var K = React.useRef()
   var X = null
   if (T) {
     X = function (e) {
@@ -440,21 +440,21 @@ function Oe(e) {
       }
     }
   }
-  useEffect(function () {
+  React.useEffect(function () {
     if (c) {
       U(true)
     }
     return function () {}
   }, [c])
-  useEffect(function () {
+  React.useEffect(function () {
     return function () {
       clearTimeout(K.current)
     }
   }, [])
-  useEffect(function () {
+  React.useEffect(function () {
     return L ? (null === e$scrollLocker || undefined === e$scrollLocker || e$scrollLocker.lock(), null === e$scrollLocker || undefined === e$scrollLocker ? undefined : e$scrollLocker.unLock) : function () {}
   }, [L, e$scrollLocker])
-  return createElement("div", $$_19.a({
+  return React.createElement("div", Module_19.a({
     className: "".concat(n, "-root")
   }, function (e) {
     var t
@@ -465,7 +465,7 @@ function Oe(e) {
       attr: true
     } : true === n ? {
       aria: true
-    } : $$_21.a({}, n)
+    } : Module_21.a({}, n)
     var r = {}
     Object.keys(e).forEach(function (n) {
       if (t.aria && ("role" === n || G(n, "aria-")) || t.data && G(n, "data-") || t.attr && V.includes(n)) {
@@ -475,15 +475,15 @@ function Oe(e) {
     return r
   }(e, {
     data: true
-  })), createElement(ve, {
+  })), React.createElement(ve, {
     prefixCls: n,
     visible: C && c,
     motionName: me(n, e$maskTransitionName, e$maskAnimation),
-    style: $$_21.a({
+    style: Module_21.a({
       zIndex: e$zIndex
     }, e$maskStyle),
     maskProps: e$maskProps
-  }), createElement("div", $$_19.a({
+  }), React.createElement("div", Module_19.a({
     tabIndex: -1,
     onKeyDown: function (e) {
       if (l && e.keyCode === H.ESC) {
@@ -499,12 +499,12 @@ function Oe(e) {
     onClick: X,
     role: "dialog",
     "aria-labelledby": e$title ? z.current : null,
-    style: $$_21.a($$_21.a({
+    style: Module_21.a(Module_21.a({
       zIndex: e$zIndex
     }, e$wrapStyle), {}, {
       display: L ? null : "none"
     })
-  }, e$wrapProps), createElement(Ce, $$_19.a({}, e, {
+  }, e$wrapProps), React.createElement(Ce, Module_19.a({}, e, {
     onMouseDown: function () {
       clearTimeout(K.current)
       W.current = true
@@ -558,25 +558,25 @@ var ke = function (e) {
   var /* [auto-meaningful-name] */e$destroyOnClose = e.destroyOnClose
   var c = undefined !== e$destroyOnClose && e$destroyOnClose
   var /* [auto-meaningful-name] */e$afterClose = e.afterClose
-  var l = useState(e$visible)
-  var f = $$_40_index.a(l, 2)
+  var l = React.useState(e$visible)
+  var f = Module_40.a(l, 2)
   var d = f[0]
   var h = f[1]
-  useEffect(function () {
+  React.useEffect(function () {
     if (e$visible) {
       h(true)
     }
   }, [e$visible])
-  return false === e$getContainer ? createElement(Oe, $$_19.a({}, e, {
+  return false === e$getContainer ? React.createElement(Oe, Module_19.a({}, e, {
     getOpenCount: function () {
       return 2
     }
-  })) : e$forceRender || !c || d ? createElement(N, {
+  })) : e$forceRender || !c || d ? React.createElement(N, {
     visible: e$visible,
     forceRender: e$forceRender,
     getContainer: e$getContainer
   }, function (t) {
-    return createElement(Oe, $$_19.a({}, e, {
+    return React.createElement(Oe, Module_19.a({}, e, {
       destroyOnClose: c,
       afterClose: function () {
         if (!(null === e$afterClose || undefined === e$afterClose)) {

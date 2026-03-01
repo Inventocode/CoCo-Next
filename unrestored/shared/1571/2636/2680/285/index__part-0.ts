@@ -6,21 +6,20 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_19 from "../../19"
-import { createContext } from "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_224_792 from "../../224/792"
-import * as /* [auto-meaningful-name] */$$_$$_54 from "../../54"
-import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"
-import * as /* [auto-meaningful-name] */$$_$$_21 from "../../21"
-import * as /* [auto-meaningful-name] */$$_$$_79_index from "../../79/index"
-import * as /* [auto-meaningful-name] */$$_$$_103 from "../../103"
-import * as /* [auto-meaningful-name] */$$_$$_106 from "../../106"
-import * as /* [auto-meaningful-name] */$$_$$_142 from "../../142"
-import * as /* [auto-meaningful-name] */$$_$$_120 from "../../120"
-import * as /* [auto-meaningful-name] */$$_$$_140 from "../../140"
-import * as /* [auto-meaningful-name] */$$_$$_241_index from "../../241/index"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_792 from /* 792 */"../../224/792"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../54"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
+import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../../79/index"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../../103"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../106"
+import * as /* [auto-meaningful-name] */Module_142 from /* 142 */"../../142"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../120"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../../140"
+import * as /* [auto-meaningful-name] */Module_241 from /* 241 */"../../241/index"
 var g = {}
 function v(e, t) {
   0
@@ -38,7 +37,7 @@ var /* [auto-meaningful-name] */RC_FORM_INTERNAL_HOOKS = "RC_FORM_INTERNAL_HOOKS
 var w = function () {
   y(false, "Can not find FormContext. Please make sure you wrap Field under Form.")
 }
-var E = createContext({
+var E = React.createContext({
   getFieldValue: w,
   getFieldsValue: w,
   getFieldError: w,

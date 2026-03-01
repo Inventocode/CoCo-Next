@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("./2257")
-var i = require("../765/1137")
-var o = require("../765/index")
-var a = require("../1365")
-var s = require("./2259")
+var r = require(/* 2257 */"./2257")
+var i = require(/* 1137 */"../765/1137")
+var o = require(/* 765 */"../765/index")
+var a = require(/* 1365 */"../1365")
+var s = require(/* 2259 */"./2259")
 function c(e, t, n) {
   var r = this._refs[n]
   if ("string" == typeof r) {

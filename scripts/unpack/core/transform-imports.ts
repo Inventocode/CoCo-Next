@@ -4,7 +4,7 @@ import * as template from "@babel/template"
 import cliProgress from "cli-progress"
 
 import { UnpackConfig, ModuleMap, ModuleKey, Module } from "./types"
-import { getModuleByKey, getImportPath } from "./utils"
+import { getModuleByKey, getImportSource } from "./utils"
 
 /**
  * 将模块的导入转换为 ESModule 或 CommonJS 格式，将它们链接到正确的位置，并构建导出映射
@@ -42,7 +42,7 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                         init.scope.getBinding(init.node.callee.object.name) == null &&
                         t.isIdentifier(init.node.callee.property, { name: "n" })
                     ) {
-                        if (!(config.useESImport ?? true)) {
+                        if (!(config.bundle?.useESImport ?? true)) {
                             continue
                         }
                         isDefault = true
@@ -67,7 +67,7 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                     }
                     try {
                         const importedModule: Module = getModuleByKey(modules, importedModuleKey)
-                        const importPath: string = getImportPath(module, importedModule)
+                        const importSource = getImportSource(module, importedModule)
                         if (!isDefault) {
                             const { scope } = localNameNodePath
                             const { referencePaths } = scope.getBinding(localNameNodePath.node.name) ?? {}
@@ -81,7 +81,7 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                                     continue
                                 }
                                 const propertyName = propertyPath.node.name
-                                const newName = importedModule.exportsNameMap[propertyName]
+                                const newName = importedModule.config.exportsNameMap?.[propertyName]
                                 if (newName == undefined) {
                                     continue
                                 }
@@ -91,12 +91,12 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                         if (isDefault) {
                             path.replaceWith(t.importDeclaration(
                                 [t.importDefaultSpecifier(localNameNodePath.node)],
-                                t.stringLiteral(importPath)
+                                importSource
                             ))
                             defaultImportIdentifiers.push(localNameNodePath.node)
                         } else if (module.AST.program.sourceType == "module") {
-                            if (config.useESImport ?? true) {
-                                if (importedModule.namedImport) {
+                            if (config.bundle?.useESImport ?? true) {
+                                if (importedModule.config.namedImported ?? false) {
                                     let needsNamespaceImport = false
                                     const importsName = new Set<string>()
                                     const { scope } = localNameNodePath
@@ -122,24 +122,24 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                                         Array.from(importsName).map((name) => t.importSpecifier(
                                             t.identifier(name), t.identifier(name)
                                         )),
-                                        t.stringLiteral(importPath)
+                                        importSource
                                     ))
                                     if (needsNamespaceImport) {
                                         path.insertAfter(t.importDeclaration(
                                             [t.importNamespaceSpecifier(localNameNodePath.node)],
-                                            t.stringLiteral(importPath)
+                                            importSource
                                         ))
                                     }
                                 } else {
                                     path.replaceWith(t.importDeclaration(
                                         [t.importNamespaceSpecifier(localNameNodePath.node)],
-                                        t.stringLiteral(importPath)
+                                        importSource
                                     ))
                                 }
                             } else {
                                 path.replaceWith(t.tsImportEqualsDeclaration(
                                     localNameNodePath.node,
-                                    t.tsExternalModuleReference(t.stringLiteral(importPath))
+                                    t.tsExternalModuleReference(importSource)
                                 ))
                             }
                         } else {
@@ -150,7 +150,7 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                                         localNameNodePath.node,
                                         t.callExpression(
                                             t.identifier("require"),
-                                            [t.stringLiteral(importPath)]
+                                            [importSource]
                                         )
                                     )]
                                 )
@@ -181,17 +181,17 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                         }
                         const importedModuleKey: ModuleKey = importedModuleKeyNodePath.node.value
                         const importedModule: Module | undefined = getModuleByKey(modules, importedModuleKey)
-                        const importPath: string = getImportPath(module, importedModule)
+                        const importSource = getImportSource(module, importedModule)
                         if (
-                            (config.useESImport ?? true) &&
+                            (config.bundle?.useESImport ?? true) &&
                             module.AST.program.sourceType == "module" &&
                             path.parentPath.parentPath?.isProgram()
                         ) {
-                            path.parentPath.replaceWith(t.importDeclaration([], t.stringLiteral(importPath)))
+                            path.parentPath.replaceWith(t.importDeclaration([], importSource))
                         } else {
                             path.replaceWith(t.callExpression(
                                 t.identifier("require"),
-                                [t.stringLiteral(importPath)]
+                                [importSource]
                             ))
                         }
                     } catch (error) {
@@ -249,7 +249,7 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                         const importedModule: Module = getModuleByKey(modules, importedModuleKey)
                         path.replaceWith(t.callExpression(
                             t.import(),
-                            [t.stringLiteral(getImportPath(module, importedModule))]
+                            [getImportSource(module, importedModule)]
                         ))
                     } catch (error) {
                         const errorString = error instanceof Error ? error.message : JSON.stringify(error)
@@ -277,10 +277,11 @@ export function transformImports(modules: ModuleMap, config: UnpackConfig): void
                 if (propertyPath.isIdentifier({ name: "n" })) {
                     memberExpressionPath.replaceWith(REQUIRE_DEFAULT_TEMPLATE())
                 } else if (propertyPath.isIdentifier({ name: "p" })) {
+                    let publicPath = config.bundle?.publicPath
                     memberExpressionPath.replaceWith(
-                        config.publicPath == null ?
+                        publicPath == null ?
                         PUBLIC_PATH_TEMPLATE() :
-                        t.stringLiteral(config.publicPath)
+                        t.stringLiteral(publicPath)
                     )
                 }
             }

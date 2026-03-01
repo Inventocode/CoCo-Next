@@ -1,0 +1,9 @@
+{
+    "nodePolyfill": {
+        "250": "global",
+        "298": "process",
+        "574": "module",
+        "576": "module"
+    },
+    "publicPath": "https://creation.codemao.cn/coconut/web/1.22.0-0/"
+}

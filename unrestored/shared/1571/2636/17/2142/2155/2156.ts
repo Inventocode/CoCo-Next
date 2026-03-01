@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.UIEvent = undefined
-var r = require("tslib")
-var i = require("inversify")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
 var o = function (e) {
   function t(t) {
     var n = e.call(this) || this
@@ -31,5 +31,5 @@ var o = function (e) {
     return this._old_value
   }
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./851").BaseEvent)
+}(require(/* 851 */"./851").BaseEvent)
 exports.UIEvent = o

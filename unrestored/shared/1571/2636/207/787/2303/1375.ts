@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../818/index")("eslint:code-path")
+var r = require(/* 818 */"../818/index")("eslint:code-path")
 function i(e) {
   return e.id + (e.reachable ? "" : "!")
 }

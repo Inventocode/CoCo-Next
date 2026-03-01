@@ -4,9 +4,9 @@
  * 模块 ID：1652
  */
 
-require("./1662/86")({
+require(/* 86 */"./1662/86")({
   target: "Number",
   stat: true
 }, {
-  isInteger: require("./1654/1091")
+  isInteger: require(/* 1091 */"./1654/1091")
 })

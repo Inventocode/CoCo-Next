@@ -7,22 +7,21 @@
 "use strict"
 
 import { fj, hj } from "./index__part-181"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_625 from "./625"
-import /* [auto-meaningful-name] */$_6251 from "./625"
-var Xj = memo(function (e) {
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_625 from /* 625 */"./625"
+import /* [auto-meaningful-name] */Module_6251 from /* 625 */"./625"
+var Xj = React1.memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$md5 = e.md5
   var /* [auto-meaningful-name] */e$name = e.name
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
   var /* [auto-meaningful-name] */e$isAdded = e.isAdded
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   return React.createElement("li", {
     onClick: function (i) {
       if (!e$isAdded) {
@@ -37,23 +36,23 @@ var Xj = memo(function (e) {
       }
     },
     key: t,
-    className: Classnames($_6251.iconMallItem, e$isSelect && $_6251.selected)
+    className: Classnames(Module_6251.iconMallItem, e$isSelect && Module_6251.selected)
   }, React.createElement("div", {
-    className: $_6251.playArea
+    className: Module_6251.playArea
   }, React.createElement("img", {
     alt: e$name,
     src: e$cdnUrl
   })), React.createElement("div", {
-    className: $_6251.infoArea
+    className: Module_6251.infoArea
   }, React.createElement("div", {
-    className: $_6251.nameArea
+    className: Module_6251.nameArea
   }, e$name), e$isAdded ? React.createElement("div", {
-    className: $_6251.add
-  }, $_710$a$formatMessage({
+    className: Module_6251.add
+  }, Module_710$a$formatMessage({
     id: "Resource.Added"
   })) : React.createElement("div", {
-    className: Classnames($_6251.btn, $_6251.unselect)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_6251.btn, Module_6251.unselect)
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-style-selected"
   }))))
 })

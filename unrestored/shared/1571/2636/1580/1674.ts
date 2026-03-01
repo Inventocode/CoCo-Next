@@ -4,9 +4,9 @@
  * 模块 ID：1674
  */
 
-var r = require("./1662/86")
-var o = require("./1659/168")
-var i = require("./1282/231")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 168 */"./1659/168")
+var i = require(/* 231 */"./1282/231")
 var /* [auto-meaningful-name] */Object$isSealed = Object.isSealed
 r({
   target: "Object",

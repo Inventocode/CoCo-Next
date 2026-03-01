@@ -89,6 +89,7 @@ export function loadModulesFromAST(AST?: t.Node | null | undefined): ModuleMap {
 export function loadModuleFromModuleFunctionExpression(key: ModuleKey, node: t.FunctionExpression): Module {
     return {
         key,
+        unrestoredPath: ["unnamed"],
         path: ["unnamed"],
         args: node.params.map((param: t.Node): string => (t.assertIdentifier(param), param.name)),
         AST: t.file(t.program(node.body.body, node.body.directives, "script")),
@@ -98,6 +99,7 @@ export function loadModuleFromModuleFunctionExpression(key: ModuleKey, node: t.F
         importsNameMap: {},
         importsNameToModuleMap: {},
         exportsNameMap: {},
-        namedImport: false
+        namedImport: false,
+        config: {}
     }
 }

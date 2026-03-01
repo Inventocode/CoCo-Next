@@ -6,20 +6,19 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_40_index from "../40/index"
-import * as /* [auto-meaningful-name] */$$_107 from "../107"
-import { createElement } from "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_486 from "../486"
-import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
-import * as /* [auto-meaningful-name] */$$_103 from "../103"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
+import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../107"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_486 from /* 486 */"../486"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../801/index"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
 var p = function e(t) {
-  $$_103.a(this, e)
+  Module_103.a(this, e)
   this.error = new Error("unreachable case: ".concat(JSON.stringify(t)))
 }
 var _ = function (e, t) {
@@ -38,7 +37,7 @@ var _ = function (e, t) {
   return n
 }
 var A = function (e) {
-  return createElement($$_801_index.a, null, function (t) {
+  return React.createElement(Module_801.a, null, function (t) {
     var n
     var /* [auto-meaningful-name] */t$getPrefixCls = t.getPrefixCls
     var /* [auto-meaningful-name] */t$direction = t.direction
@@ -61,8 +60,8 @@ var A = function (e) {
       default:
         console.warn(new p(e$size).error)
     }
-    var g = Classnames1(h, (n = {}, $$_35.a(n, "".concat(h, "-").concat(A), A), $$_35.a(n, "".concat(h, "-rtl"), "rtl" === t$direction), n), e$className)
-    return createElement("div", $$_19.a({}, d, {
+    var g = Classnames1(h, (n = {}, Module_35.a(n, "".concat(h, "-").concat(A), A), Module_35.a(n, "".concat(h, "-rtl"), "rtl" === t$direction), n), e$className)
+    return React.createElement("div", Module_19.a({}, d, {
       className: g
     }))
   })

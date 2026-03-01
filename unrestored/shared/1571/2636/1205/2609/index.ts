@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_extensions = undefined
-var r = (0, require("tslib").__importStar)(require("../../17/536"))
-var o = require("./648")
+var r = (0, require(/* 93 */"tslib").__importStar)(require(/* 536 */"../../17/536"))
+var o = require(/* 648 */"./648")
 exports.init_extensions = function (e) {
   e.extensions.register("parent_tooltip_when_inline", function () {
     var e = this

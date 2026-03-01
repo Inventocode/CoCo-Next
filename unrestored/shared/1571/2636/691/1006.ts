@@ -7,7 +7,7 @@
 "use strict"
 
 export { s as a }
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
 var i = function () {
   function e(e) {
     this.a = this.solve_a(e[0][0].x, e[0][0].y, e[0][1].x, e[1][0].x, e[1][0].y, e[1][1].x, e[2][0].x, e[2][0].y, e[2][1].x)
@@ -151,5 +151,5 @@ var s = function (e) {
     }
   }
   return t
-}($_32_index.i)
+}(Module_32.i)
 export default s

@@ -15,11 +15,11 @@ export { l as b }
 export { f as a }
 export { d as f }
 export { h as g }
-import * as /* [auto-meaningful-name] */$_2639_917 from "./2639/917"
-import "./746"
+import * as /* [auto-meaningful-name] */Module_917 from /* 917 */"./2639/917"
+import /* 746 */"./746"
 var i = {}
 function o() {
-  return $_2639_917.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i
+  return Module_917.b() ? global : "undefined" !== typeof window ? window : "undefined" !== typeof self ? self : i
 }
 function a() {
   var e = o()

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var a = require("../../../../13/780/571")
+var a = require(/* 571 */"../../../../13/780/571")
 Object.defineProperty(exports, "__esModule", {
   value: true
 })
@@ -98,9 +98,9 @@ exports.default = function () {
       return e
   }
 }
-var r = a(require("../3309/2708"))
-var o = require("../2780")
-var i = require("../2750/index")
+var r = a(require(/* 2708 */"../3309/2708"))
+var o = require(/* 2780 */"../2780")
+var i = require(/* 2750 */"../2750/index")
 var l = {
   currentSrc: null,
   duration: 0,

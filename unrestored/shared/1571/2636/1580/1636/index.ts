@@ -4,9 +4,9 @@
  * 模块 ID：1636
  */
 
-require("../1662/86")({
+require(/* 86 */"../1662/86")({
   target: "Math",
   stat: true
 }, {
-  fround: require("./1637")
+  fround: require(/* 1637 */"./1637")
 })

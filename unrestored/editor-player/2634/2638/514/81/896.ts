@@ -6,9 +6,9 @@
 
 "use strict"
 
-var n = require("./599")
-var o = require("./74")
-var i = require("./63")
+var n = require(/* 599 */"./599")
+var o = require(/* 74 */"./74")
+var i = require(/* 63 */"./63")
 !function () {
   function t() {}
   t.prototype.encode = function (t, e, r, a, u) {

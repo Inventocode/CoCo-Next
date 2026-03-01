@@ -6,17 +6,17 @@
 
 "use strict"
 
-var r = require("../../180")
-var i = require("../../204")
-var o = require("./1329")
-var a = require("../../../../1058/1393/1143/283/index")
-var s = require("../../../../1058/1393/1143/284/index")
-var c = require("../../572/index")
-var /* [auto-meaningful-name] */require$_1374$isCommentToken = require("./1374").isCommentToken
-var l = require("./2294/index")
-var f = require("../../979")
-var d = require("../../1373")
-var h = require("lodash")
+var r = require(/* 180 */"../../180")
+var i = require(/* 204 */"../../204")
+var o = require(/* 1329 */"./1329")
+var a = require(/* 283 */"../../../../1058/1393/1143/283/index")
+var s = require(/* 284 */"../../../../1058/1393/1143/284/index")
+var c = require(/* 572 */"../../572/index")
+var /* [auto-meaningful-name] */require_1374_$_1374$isCommentToken = require(/* 1374 */"./1374").isCommentToken
+var l = require(/* 2294 */"./2294/index")
+var f = require(/* 979 */"../../979")
+var d = require(/* 1373 */"../../1373")
+var h = require(/* 30 */"lodash")
 function p(e, t, n, r) {
   if (function (e, t) {
     return e.range[0] <= t.range[0] && e.range[1] >= t.range[0] || t.range[0] <= e.range[0] && t.range[1] >= e.range[0]
@@ -137,12 +137,12 @@ var _ = function (e) {
           if (("BlockStatement" === e.type || "ClassBody" === e.type) && 0 === e.body.length || "ObjectExpression" === e.type && 0 === e.properties.length || "ArrayExpression" === e.type && 0 === e.elements.length || "SwitchStatement" === e.type && 0 === e.cases.length) {
             t.trailing = this.getTokens(e, {
               includeComments: true,
-              filter: require$_1374$isCommentToken
+              filter: require_1374_$_1374$isCommentToken
             })
           }
           for (var n = this.getTokenBefore(e, {
             includeComments: true
-          }); n && require$_1374$isCommentToken(n) && !(e.parent && n.start < e.parent.start);) {
+          }); n && require_1374_$_1374$isCommentToken(n) && !(e.parent && n.start < e.parent.start);) {
             t.leading.push(n)
             n = this.getTokenBefore(n, {
               includeComments: true
@@ -150,7 +150,7 @@ var _ = function (e) {
           }
           for (t.leading.reverse(), n = this.getTokenAfter(e, {
             includeComments: true
-          }); n && require$_1374$isCommentToken(n) && !(e.parent && n.end > e.parent.end);) {
+          }); n && require_1374_$_1374$isCommentToken(n) && !(e.parent && n.end > e.parent.end);) {
             t.trailing.push(n)
             n = this.getTokenAfter(n, {
               includeComments: true
@@ -169,7 +169,7 @@ var _ = function (e) {
           var t = n.getTokenBefore(e, {
             includeComments: true
           })
-          return t && require$_1374$isCommentToken(t) && "Block" === t.type && "*" === t.value.charAt(0) && e.loc.start.line - t.loc.end.line <= 1 ? t : null
+          return t && require_1374_$_1374$isCommentToken(t) && "Block" === t.type && "*" === t.value.charAt(0) && e.loc.start.line - t.loc.end.line <= 1 ? t : null
         }
         var /* [auto-meaningful-name] */e$parent = e.parent
         switch (e.type) {

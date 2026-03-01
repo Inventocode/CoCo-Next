@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1190")
+var r = require(/* 1190 */"./1190")
 exports.a = function (e, t, n) {
   r.a(e, "[antd: ".concat(t, "] ").concat(n))
 }

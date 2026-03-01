@@ -7,37 +7,36 @@
 "use strict"
 
 var Tt
-import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1036_index from "./1036/index"
-import /* [auto-meaningful-name] */$_1036_index1 from "./1036/index"
-import * as /* [auto-meaningful-name] */$_1508_index from "./1508/index"
-import * as /* [auto-meaningful-name] */$_356 from "./356"
-import /* [auto-meaningful-name] */$_3561 from "./356"
-var Gt = memo(function () {
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"./141/index"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1036 from /* 1036 */"./1036/index"
+import /* [auto-meaningful-name] */Module_10361 from /* 1036 */"./1036/index"
+import * as /* [auto-meaningful-name] */Module_1508 from /* 1508 */"./1508/index"
+import * as /* [auto-meaningful-name] */Module_356 from /* 356 */"./356"
+import /* [auto-meaningful-name] */Module_3561 from /* 356 */"./356"
+var Gt = React1.memo(function () {
   var e = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var n = useState(false)
-  var r = $_10_index.a(n, 2)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var n = React1.useState(false)
+  var r = Module_10.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = useState("")
-  var s = $_10_index.a(a, 2)
+  var a = React1.useState("")
+  var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = useState(false)
-  var d = $_10_index.a(u, 2)
+  var u = React1.useState(false)
+  var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = useSelector(function (e) {
@@ -55,15 +54,15 @@ var Gt = memo(function () {
   var j = useSelector(function (e) {
     return e.common.userInfo
   })
-  useEffect(function () {
+  React1.useEffect(function () {
     if (g$packageUrl && g$packageInfo) {
-      var e = $$_$$_$$_$$_src_shared_tools_index.B()
+      var e = Src_shared_tools_index.B()
       var t = "".concat(e, "/download/?url=").concat(encodeURIComponent(g$packageUrl || ""), "&icon=").concat(encodeURIComponent(g$packageInfo.apkIcon || ""), "&name=").concat(g$packageInfo.apkName || "", "&projectId=").concat(A, "&version=").concat(g$packageInfo.version, "&expireTime=").concat(g$packageInfo.expireTime, "&startTimeTamp=").concat(g$packageInfo.startTimeTamp)
       l(t)
       m(false)
     }
   }, [g$packageUrl, g$packageInfo, A])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (Tt) {
       clearInterval(Tt)
     }
@@ -82,11 +81,11 @@ var Gt = memo(function () {
     if (Tt) {
       clearInterval(Tt)
     }
-    e($$_$$_$$_$$_src_editor_redux_common_actions.Mi(false))
-    e($$_$$_$$_$$_src_editor_redux_common_actions.Li(true))
+    e(Src_editor_redux_common_actions.Mi(false))
+    e(Src_editor_redux_common_actions.Li(true))
   }
   var k = function () {
-    var n = O.a(RegeneratorRuntime.mark(function n() {
+    var n = Module_7.a(RegeneratorRuntime.mark(function n() {
       return RegeneratorRuntime.wrap(function (n) {
         for (;;) {
           switch (n.prev = n.next) {
@@ -95,15 +94,15 @@ var Gt = memo(function () {
                 n.next = 3
                 break
               }
-              e($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
+              e(Src_editor_redux_common_actions.Ch())
               return n.abrupt("return")
             case 3:
               if (!g$isPackaging) {
                 n.next = 6
                 break
               }
-              e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $_710$a$formatMessage({
+              e(Src_editor_redux_common_actions.mj({
+                message: Module_710$a$formatMessage({
                   id: "package.packagePending"
                 }),
                 type: "success"
@@ -112,7 +111,7 @@ var Gt = memo(function () {
             case 6:
               n.prev = 6
               n.next = 9
-              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(e, $$_$$_$$_$$_src_editor_redux_common_actions.Vf())
+              return Src_editor_redux_common_actions.Nf(e, Src_editor_redux_common_actions.Vf())
             case 9:
               R()
               n.next = 14
@@ -131,41 +130,41 @@ var Gt = memo(function () {
       return n.apply(this, arguments)
     }
   }()
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: g$packageQrCodeVisible,
-    className: $_3561.packageQrCodeDialog,
+    className: Module_3561.packageQrCodeDialog,
     withPortal: true,
     onClose: R
   }, React.createElement("div", {
-    className: $_3561.packageInfo
+    className: Module_3561.packageInfo
   }, React.createElement("img", {
     src: g$packageInfo.apkIcon,
-    className: $_3561.packageIcon,
+    className: Module_3561.packageIcon,
     alt: ""
   }), React.createElement("div", null, React.createElement("div", {
-    className: $_3561.packageTitle
-  }, g$packageInfo.apkName), React.createElement($_1508_index.CopyToClipboard, {
+    className: Module_3561.packageTitle
+  }, g$packageInfo.apkName), React.createElement(Module_1508.CopyToClipboard, {
     text: "com.codemao.coco.apk_".concat(A),
     onCopy: function () {
-      e($$_$$_$$_$$_src_editor_redux_common_actions.mj({
-        message: $_710$a$formatMessage({
+      e(Src_editor_redux_common_actions.mj({
+        message: Module_710$a$formatMessage({
           id: "package.appidCopied"
         }),
         showPrefixIcon: false
       }))
     }
   }, React.createElement("div", {
-    className: Classnames($_3561.packageInfoItem, $_3561.packageAppId)
-  }, "APP ID：com.codemao.coco.apk_", A, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Classnames(Module_3561.packageInfoItem, Module_3561.packageAppId)
+  }, "APP ID：com.codemao.coco.apk_", A, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-copy",
-    className: $_3561.copyIcon
+    className: Module_3561.copyIcon
   }))), React.createElement("div", {
-    className: $_3561.packageInfoItem
+    className: Module_3561.packageInfoItem
   }, "Version Code：", g$packageInfo.version))), React.createElement("div", {
-    className: $_3561.qrCodeWrapper
+    className: Module_3561.qrCodeWrapper
   }, g$packageUrl && React.createElement("div", {
-    className: $_3561.qrcode
-  }, React.createElement($_1036_index1, {
+    className: Module_3561.qrcode
+  }, React.createElement(Module_10361, {
     value: c,
     size: 200,
     imageSettings: {
@@ -174,30 +173,30 @@ var Gt = memo(function () {
       src: "https://static.bcmcdn.com/coco/image/share-dialog/qrlogo.png"
     }
   }), p && React.createElement("div", {
-    className: $_3561.mask,
+    className: Module_3561.mask,
     onClick: k
   }, "二维码已过期", React.createElement("br", null), "若需扫码，请重新打包")), React.createElement("p", {
-    className: $_3561.apkText
-  }, " ", $_710$a$formatMessage({
+    className: Module_3561.apkText
+  }, " ", Module_710$a$formatMessage({
     id: "package.apkText"
   })), g$packageInfo.expireTime && React.createElement("p", {
-    className: $_3561.apkText
+    className: Module_3561.apkText
   }, "（二维码仅", Math.round(g$packageInfo.expireTime / 60), "分钟内有效）")), React.createElement("div", {
-    className: $_3561.footerWrapper
+    className: Module_3561.footerWrapper
   }, React.createElement("div", {
-    className: $_3561.footerBtn,
+    className: Module_3561.footerBtn,
     onClick: function () {
       if (g$packageUrl) {
-        document.body.querySelectorAll(".".concat($_3561.iframeDownloader)).forEach(function (e) {
+        document.body.querySelectorAll(".".concat(Module_3561.iframeDownloader)).forEach(function (e) {
           return e.remove()
         })
         var e = document.createElement("iframe")
         e.src = g$packageUrl
-        e.classList.add($_3561.iframeDownloader)
+        e.classList.add(Module_3561.iframeDownloader)
         document.body.appendChild(e)
         i(true)
         Download = "download"
-        $_141_index.a("InstallShareApk", {
+        Module_141.a("InstallShareApk", {
           workId: A,
           apkName: g$packageInfo.apkName || "",
           isScanCode: false,
@@ -207,10 +206,10 @@ var Gt = memo(function () {
       }
       var /* [auto-meaningful-name] */Download
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-package-download",
-    className: $_3561.qrBtn
-  }), React.createElement("p", null, $_710$a$formatMessage(o ? {
+    className: Module_3561.qrBtn
+  }), React.createElement("p", null, Module_710$a$formatMessage(o ? {
     id: "package.downloaded"
   } : {
     id: "package.download"

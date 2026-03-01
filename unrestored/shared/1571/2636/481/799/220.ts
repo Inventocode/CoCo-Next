@@ -11,12 +11,12 @@ export { a }
 export { s as b }
 export { c as d }
 export { u as e }
-import * as /* [auto-meaningful-name] */$_729_817 from "./729/817"
+import * as /* [auto-meaningful-name] */Module_817 from /* 817 */"./729/817"
 var i = new RegExp("^[ \\t]*([0-9a-f]{32})?-?([0-9a-f]{16})?-?([01])?[ \\t]*$")
 function o(e) {
   var t
   if (undefined === e) {
-    e = null === (t = $_729_817.b().getClient()) || undefined === t ? undefined : t.getOptions()
+    e = null === (t = Module_817.b().getClient()) || undefined === t ? undefined : t.getOptions()
   }
   return !!e && ("tracesSampleRate" in e || "tracesSampler" in e)
 }
@@ -42,7 +42,7 @@ function s(e) {
   var t
   var n
   if (undefined === e) {
-    e = $_729_817.b()
+    e = Module_817.b()
   }
   return null === (n = null === (t = e) || undefined === t ? undefined : t.getScope()) || undefined === n ? undefined : n.getTransaction()
 }

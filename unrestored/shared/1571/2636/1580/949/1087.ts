@@ -6,17 +6,17 @@
 
 "use strict"
 
-var r = require("../1662/86")
-var o = require("../1282/1248/index")
-var i = require("../1625/497")
-var a = require("../1706/638")
-var s = require("../1282/534")
-var c = require("../1782/425")
-var l = require("../1282/400/index")
-var u = require("../1282/246/index")
-var d = require("../1581/533")
-var p = require("./834")
-var f = require("../1282/1248/1249")
+var r = require(/* 86 */"../1662/86")
+var o = require(/* 1248 */"../1282/1248/index")
+var i = require(/* 497 */"../1625/497")
+var a = require(/* 638 */"../1706/638")
+var s = require(/* 534 */"../1282/534")
+var c = require(/* 425 */"../1782/425")
+var l = require(/* 400 */"../1282/400/index")
+var u = require(/* 246 */"../1282/246/index")
+var d = require(/* 533 */"../1581/533")
+var p = require(/* 834 */"./834")
+var f = require(/* 1249 */"../1282/1248/1249")
 var /* [auto-meaningful-name] */f$IteratorPrototype = f.IteratorPrototype
 var /* [auto-meaningful-name] */f$BUGGY_SAFARI_ITERATORS = f.BUGGY_SAFARI_ITERATORS
 var g = u("iterator")

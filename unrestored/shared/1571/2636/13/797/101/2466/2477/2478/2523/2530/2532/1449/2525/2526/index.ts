@@ -4,7 +4,7 @@
  * 模块 ID：2526
  */
 
-var r = require("./2527")
+var r = require(/* 2527 */"./2527")
 module.exports = function (e) {
   var t = r(e, function (e) {
     if (500 === t$cache.size) {

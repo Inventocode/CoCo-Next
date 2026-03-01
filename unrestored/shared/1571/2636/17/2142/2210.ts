@@ -10,13 +10,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.BlockGroup = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("@kitten-team/gl-matrix")
-var a = require("../../123/195/index")
-var s = require("../../207/734/387")
-var c = require("../../1022/214")
-var u = require("../../1205/2609/648")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 258 */"@kitten-team/gl-matrix")
+var a = require(/* 195 */"../../123/195/index")
+var s = require(/* 387 */"../../207/734/387")
+var c = require(/* 214 */"../../1022/214")
+var u = require(/* 648 */"../../1205/2609/648")
 var l = function (e) {
   function t(t) {
     var n = e.call(this, {
@@ -254,5 +254,5 @@ var l = function (e) {
     }
   }
   return t = (0, r.__decorate)([(0, i.injectable)()], t)
-}(require("./1355").BlockSvg)
+}(require(/* 1355 */"./1355").BlockSvg)
 exports.BlockGroup = l

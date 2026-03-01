@@ -8,15 +8,15 @@
 
 /* harmony export (binding) */
 import { _createClass, _classCallCheck, _possibleConstructorReturn, _inherits, __decorate, __awaiter } from "./template-ARYd__part-0"
-import * as __WEBPACK_IMPORTED_MODULE_7__api_login__ from "./api/login-yshM"
-import * as __WEBPACK_IMPORTED_MODULE_6__sensorsData__ from "../sensorsData-yI2H"
-import * as __WEBPACK_IMPORTED_MODULE_5__cfg__ from "../cfg-dpNx"
-import __WEBPACK_IMPORTED_MODULE_4_classnames___default from "classnames"
-import * as __WEBPACK_IMPORTED_MODULE_3_react_css_modules__ from "react-css-modules"
-import * as __WEBPACK_IMPORTED_MODULE_2_react__ from "react"
-import * as __WEBPACK_IMPORTED_MODULE_1__crc_iframe_api__ from "./crc/iframe/api-JrJq"
-import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from "@babel/runtime/regenerator"
-import * as styles from "./styles-xr0F"
+import * as __WEBPACK_IMPORTED_MODULE_7__api_login__ from /* yshM */"./api/login-yshM"
+import * as __WEBPACK_IMPORTED_MODULE_6__sensorsData__ from /* yI2H */"../sensorsData-yI2H"
+import * as __WEBPACK_IMPORTED_MODULE_5__cfg__ from /* dpNx */"../cfg-dpNx"
+import __WEBPACK_IMPORTED_MODULE_4_classnames___default from /* HW6M */"classnames"
+import * as __WEBPACK_IMPORTED_MODULE_3_react_css_modules__ from /* 211U */"react-css-modules"
+import * as __WEBPACK_IMPORTED_MODULE_2_react__ from /* GiK3 */"react"
+import * as __WEBPACK_IMPORTED_MODULE_1__crc_iframe_api__ from /* JrJq */"./crc/iframe/api-JrJq"
+import __WEBPACK_IMPORTED_MODULE_0_babel_runtime_regenerator___default from /* Xxa5 */"@babel/runtime/regenerator"
+import * as styles from /* xr0F */"./styles-xr0F"
 function getLanguage(language) {
   switch (language) {
     case "zh":

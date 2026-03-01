@@ -7,7 +7,7 @@
 "use strict"
 
 var r
-import * as /* [auto-meaningful-name] */$_306 from "./306"
+import * as /* [auto-meaningful-name] */Module_306 from /* 306 */"./306"
 !function (e) {
   e.PENDING = "PENDING"
   e.RESOLVED = "RESOLVED"
@@ -26,7 +26,7 @@ var o = function () {
     }
     this._setResult = function (e, n) {
       if (t._state === r.PENDING) {
-        if ($_306.m(n)) {
+        if (Module_306.m(n)) {
           n.then(t._resolve, t._reject)
         } else {
           t._state = e

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../../691/32/774")
+var r = require(/* 774 */"../../../691/32/774")
 function i(e, t) {
   if (e === t) {
     return 0
@@ -23,7 +23,7 @@ function i(e, t) {
 function o(e) {
   return global.Buffer && "function" === typeof global.Buffer.isBuffer ? global.Buffer.isBuffer(e) : !(null == e || !e._isBuffer)
 }
-var a = require("./1129/index")
+var a = require(/* 1129 */"./1129/index")
 var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object.prototype.hasOwnProperty
 var /* [auto-meaningful-name] */Array$prototype$slice = Array.prototype.slice
 var u = "foo" === function () {}.name

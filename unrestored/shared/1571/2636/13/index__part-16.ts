@@ -6,14 +6,13 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$$_748_index from "../748/index"
-import "./875"
-var je = memo(function (e) {
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../748/index"
+import /* 875 */"./875"
+var je = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$onCancel = e.onCancel
@@ -26,12 +25,12 @@ var je = memo(function (e) {
   var h = undefined === e$tooltip ? "" : e$tooltip
   var /* [auto-meaningful-name] */e$style = e.style
   var g = undefined === e$style ? {} : e$style
-  var _ = useRef(null)
-  var v = useState(false)
-  var b = $$_10_index.a(v, 2)
+  var _ = React1.useRef(null)
+  var v = React1.useState(false)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  useEffect(function () {
+  React1.useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */_$current$files
       if (y) {
@@ -54,9 +53,9 @@ var je = memo(function (e) {
         _$current.click()
       }
     },
-    className: i("coco-upload-button", e$className),
+    className: Classnames("coco-upload-button", e$className),
     style: g
-  }, React.createElement($$_748_index.a, {
+  }, React.createElement(Module_748.a, {
     placement: "right",
     title: h
   }, React.createElement("input", {
@@ -78,11 +77,11 @@ var je = memo(function (e) {
     className: "coco-upload-button-content"
   }, e$children)))
 })
-var Ne = memo(function (e) {
+var Ne = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
   return React.createElement("div", {
-    className: i(e$className, "coco-form")
+    className: Classnames(e$className, "coco-form")
   }, e$children)
 })
 export { je }

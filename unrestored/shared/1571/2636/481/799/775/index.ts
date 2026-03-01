@@ -8,12 +8,12 @@
 
 export { u as a }
 export { f as b }
-import * as /* [auto-meaningful-name] */$$_38 from "../38"
-import * as /* [auto-meaningful-name] */$$_939 from "../939"
-import * as /* [auto-meaningful-name] */$$_264 from "../264"
-import * as /* [auto-meaningful-name] */$_731 from "./731"
-import * as /* [auto-meaningful-name] */$$_352 from "../352"
-import * as /* [auto-meaningful-name] */$$_729_776 from "../729/776"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../38"
+import * as /* [auto-meaningful-name] */Module_939 from /* 939 */"../939"
+import * as /* [auto-meaningful-name] */Module_264 from /* 264 */"../264"
+import * as /* [auto-meaningful-name] */Module_731 from /* 731 */"./731"
+import * as /* [auto-meaningful-name] */Module_352 from /* 352 */"../352"
+import * as /* [auto-meaningful-name] */Module_776 from /* 776 */"../729/776"
 var u = 1e3
 var l = function (e) {
   function t(t, n, r, i) {
@@ -26,12 +26,12 @@ var l = function (e) {
     o.transactionSpanId = r
     return o
   }
-  $$_38.c(t, e)
+  Module_38.c(t, e)
   t.prototype.add = function (t) {
     var n = this
     if (t.spanId !== this.transactionSpanId) {
       t.finish = function (e) {
-        t.endTimestamp = "number" === typeof e ? e : $$_939.d()
+        t.endTimestamp = "number" === typeof e ? e : Module_939.d()
         n._popActivity(t.spanId)
       }
       if (undefined === t.endTimestamp) {
@@ -41,7 +41,7 @@ var l = function (e) {
     e.prototype.add.call(this, t)
   }
   return t
-}($_731.b)
+}(Module_731.b)
 var f = function (e) {
   function t(t, n, r, i) {
     if (undefined === r) {
@@ -61,7 +61,7 @@ var f = function (e) {
     a._beforeFinishCallbacks = []
     if (n && i) {
       d(n)
-      $$_264.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
+      Module_264.a.log("Setting idle transaction on scope. Span ID: " + a.spanId)
       n.configureScope(function (e) {
         return e.setSpan(a)
       })
@@ -73,20 +73,20 @@ var f = function (e) {
     }, a._idleTimeout)
     return a
   }
-  $$_38.c(t, e)
+  Module_38.c(t, e)
   t.prototype.finish = function (t) {
     var n
     var /* [auto-meaningful-name] */u$return
     var c = this
     if (undefined === t) {
-      t = $$_939.d()
+      t = Module_939.d()
     }
     this._finished = true
     this.activities = {}
     if (this.spanRecorder) {
-      $$_264.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
+      Module_264.a.log("[Tracing] finishing IdleTransaction", new Date(1e3 * t).toISOString(), this.op)
       try {
-        for (var u = $$_38.g(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
+        for (var u = Module_38.g(this._beforeFinishCallbacks), l = u.next(); !l.done; l = u.next()) {
           (0, l.value)(this, t)
         }
       } catch (f) {
@@ -110,18 +110,18 @@ var f = function (e) {
         }
         if (!e.endTimestamp) {
           e.endTimestamp = t
-          e.setStatus($$_352.a.Cancelled)
-          $$_264.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
+          e.setStatus(Module_352.a.Cancelled)
+          Module_264.a.log("[Tracing] cancelling span since transaction ended early", JSON.stringify(e, undefined, 2))
         }
         var n = e.startTimestamp < t
         if (!n) {
-          $$_264.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
+          Module_264.a.log("[Tracing] discarding Span since it happened after Transaction was finished", JSON.stringify(e, undefined, 2))
         }
         return n
       })
-      $$_264.a.log("[Tracing] flushing IdleTransaction")
+      Module_264.a.log("[Tracing] flushing IdleTransaction")
     } else {
-      $$_264.a.log("[Tracing] No active IdleTransaction")
+      Module_264.a.log("[Tracing] No active IdleTransaction")
     }
     if (this._onScope) {
       d(this._idleHub)
@@ -143,7 +143,7 @@ var f = function (e) {
           t._popActivity(e)
         }
       }, this.spanId, e)
-      $$_264.a.log("Starting heartbeat")
+      Module_264.a.log("Starting heartbeat")
       this._pingHeartbeat()
     }
     this.spanRecorder.add(this)
@@ -153,20 +153,20 @@ var f = function (e) {
       clearTimeout(this._initTimeout)
       this._initTimeout = undefined
     }
-    $$_264.a.log("[Tracing] pushActivity: " + e)
+    Module_264.a.log("[Tracing] pushActivity: " + e)
     this.activities[e] = true
-    $$_264.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+    Module_264.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
   }
   t.prototype._popActivity = function (e) {
     var t = this
     if (this.activities[e]) {
-      $$_264.a.log("[Tracing] popActivity " + e)
+      Module_264.a.log("[Tracing] popActivity " + e)
       delete this.activities[e]
-      $$_264.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
+      Module_264.a.log("[Tracing] new activities count", Object.keys(this.activities).length)
     }
     if (0 === Object.keys(this.activities).length) {
       var /* [auto-meaningful-name] */this$_idleTimeout = this._idleTimeout
-      var r = $$_939.d() + this$_idleTimeout / 1e3
+      var r = Module_939.d() + this$_idleTimeout / 1e3
       setTimeout(function () {
         if (!t._finished) {
           t.finish(r)
@@ -188,8 +188,8 @@ var f = function (e) {
       }
       this._prevHeartbeatString = t
       if (this._heartbeatCounter >= 3) {
-        $$_264.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
-        this.setStatus($$_352.a.DeadlineExceeded)
+        Module_264.a.log("[Tracing] Transaction finished because of no change for 3 heart beats")
+        this.setStatus(Module_352.a.DeadlineExceeded)
         this.setTag("heartbeat", "failed")
         this.finish()
       } else {
@@ -199,13 +199,13 @@ var f = function (e) {
   }
   t.prototype._pingHeartbeat = function () {
     var e = this
-    $$_264.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
+    Module_264.a.log("pinging Heartbeat -> current counter: " + this._heartbeatCounter)
     this._heartbeatTimer = setTimeout(function () {
       e._beat()
     }, 5e3)
   }
   return t
-}($$_729_776.a)
+}(Module_776.a)
 function d(e) {
   if (e) {
     var t = e.getScope()

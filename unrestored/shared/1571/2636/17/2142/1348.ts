@@ -10,10 +10,10 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.WorkspaceDragger = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("@kitten-team/gl-matrix")
-var a = require("../../1058/125")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 258 */"@kitten-team/gl-matrix")
+var a = require(/* 125 */"../../1058/125")
 var s = function () {
   function e(e) {
     this.start_scroll_xy_ = o.vec2.create()

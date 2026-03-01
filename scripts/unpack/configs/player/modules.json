@@ -1,0 +1,9 @@
+{
+    "2635": {
+        "write": false
+    },
+    "2637": {
+        "write": false,
+        "scopeLowering": true
+    }
+}

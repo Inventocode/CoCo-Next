@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./965/index")
+var r = require(/* 965 */"./965/index")
 module.exports = function (e) {
   return !(!e || "string" !== typeof e || e.length < 6) && !new RegExp("[^" + r.get().replace(/[|\\{}()[\]^$+*?.-]/g, "\\$&") + "]").test(e)
 }

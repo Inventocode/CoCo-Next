@@ -4,10 +4,10 @@
  * 模块 ID：1449
  */
 
-var r = require("../../../../../451")
-var i = require("../../../../2533/1180")
-var o = require("./2525/index")
-var a = require("./2528/index")
+var r = require(/* 451 */"../../../../../451")
+var i = require(/* 1180 */"../../../../2533/1180")
+var o = require(/* 2525 */"./2525/index")
+var a = require(/* 2528 */"./2528/index")
 module.exports = function (e, t) {
   return r(e) ? e : i(e, t) ? [e] : o(a(e))
 }

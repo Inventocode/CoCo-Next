@@ -69,7 +69,7 @@ var r = {
     other: "将近 {{count}} 年"
   }
 }
-var i = require("./487/700")
+var i = require(/* 700 */"./487/700")
 var o = {
   date: i.a({
     formats: {
@@ -99,8 +99,8 @@ var o = {
     defaultWidth: "full"
   })
 }
-var a = require("./487/436")
-var s = require("./487/104")
+var a = require(/* 436 */"./487/436")
+var s = require(/* 104 */"./487/104")
 function c(e, t, n, r) {
   return function (e, t, n) {
     s.a(2, arguments)
@@ -117,7 +117,7 @@ var u = {
   nextWeek: c,
   other: "PP p"
 }
-var l = require("./487/492")
+var l = require(/* 492 */"./487/492")
 var f = {
   ordinalNumber: function (e, t) {
     var n = Number(e)
@@ -239,8 +239,8 @@ var f = {
     defaultFormattingWidth: "wide"
   })
 }
-var d = require("./487/1025")
-var h = require("./487/493")
+var d = require(/* 1025 */"./487/1025")
+var h = require(/* 493 */"./487/493")
 var p = {
   code: "zh-CN",
   formatDistance: function (e, t, n) {

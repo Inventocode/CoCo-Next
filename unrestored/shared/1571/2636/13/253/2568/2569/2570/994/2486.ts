@@ -4,7 +4,7 @@
  * 模块 ID：2486
  */
 
-var r = require("./995/index")
+var r = require(/* 995 */"./995/index")
 module.exports = function () {
   this.__data__ = new r()
   this.size = 0

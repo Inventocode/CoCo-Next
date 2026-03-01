@@ -6,17 +6,16 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as D from "./6"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_526 from "./526"
-import /* [auto-meaningful-name] */$_5261 from "./526"
-var Yw = memo(function (e) {
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_526 from /* 526 */"./526"
+import /* [auto-meaningful-name] */Module_5261 from /* 526 */"./526"
+var Yw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "db" : e$keyName
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
@@ -25,48 +24,48 @@ var Yw = memo(function (e) {
   var a = e$getValue(n)
   var s = e$getValue("title")
   var c = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   function u() {
     e$onChange("updatedAt", Date.now())
   }
   return React.createElement("div", {
-    className: Classnames($_5261.formItemWrapper, $_5261.tableData)
+    className: Classnames(Module_5261.formItemWrapper, Module_5261.tableData)
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
   }, React.createElement("div", {
-    className: $_5261.label
-  }, $_710$a$formatMessage({
+    className: Module_5261.label
+  }, Module_710$a$formatMessage({
     id: "TableDataWidget.data"
   })), React.createElement("div", {
-    className: $_5261.data
+    className: Module_5261.data
   }, React.createElement("span", {
-    className: $_5261.length
-  }, $_710$a$formatMessage({
+    className: Module_5261.length
+  }, Module_710$a$formatMessage({
     id: "column"
   }), ":", Object.keys(a.header).length), React.createElement("span", {
-    className: $_5261.length
-  }, $_710$a$formatMessage({
+    className: Module_5261.length
+  }, Module_710$a$formatMessage({
     id: "row"
   }), ":", a.data.length))), React.createElement("div", {
-    className: $_5261.imageBox
+    className: Module_5261.imageBox
   }, React.createElement("img", {
-    className: $_5261.image,
+    className: Module_5261.image,
     src: "https://static.bcmcdn.com/coco/image/edit_grid_data_image.png",
     alt: ""
   }), React.createElement("div", {
-    className: $_5261.edit
+    className: Module_5261.edit
   }, React.createElement("div", {
-    className: $_5261.btn,
+    className: Module_5261.btn,
     onClick: function () {
-      c($$_$$_$$_$$_src_editor_redux_common_actions.zj({
-        grid: D.a({
+      c(Src_editor_redux_common_actions.zj({
+        grid: Module_6.a({
           id: e$widgetId,
           name: s
         }, a),
         onClose: u
       }))
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "edit"
   })))))
 })

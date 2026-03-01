@@ -4,7 +4,7 @@
  * 模块 ID：1803
  */
 
-var r = require("./1801/1287")
+var r = require(/* 1287 */"./1801/1287")
 module.exports = function (e, t) {
   if (e) {
     if ("string" === typeof e) {

@@ -6,14 +6,13 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_59_index from "./59/index"
-import * as /* [auto-meaningful-name] */$_58_index from "./58/index"
-import * as ro from "./39"
-import * as X from "./27"
-import /* [auto-meaningful-name] */React from "react"
-import { Component } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_291 from "./291"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"./59/index"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"./58/index"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_291 from /* 291 */"./291"
 if ("undefined" !== typeof Element && !Element.prototype.matches) {
   var /* [auto-meaningful-name] */Element$prototype = Element.prototype
   Element$prototype.matches = Element$prototype.matchesSelector || Element$prototype.mozMatchesSelector || Element$prototype.msMatchesSelector || Element$prototype.oMatchesSelector || Element$prototype.webkitMatchesSelector
@@ -42,17 +41,17 @@ var Rv = function () {
 var kv = 1
 var xv = 3
 var Dv = function (e) {
-  $_58_index.a(n, e)
-  var t = $_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e) {
     var r
-    X.a(this, n);
-    (r = t.call(this, e)).onTouchStart = r.onTouchStart.bind($_291.a(r))
-    r.onMouseDown = r.onMouseDown.bind($_291.a(r))
-    r.onDragStart = r.onDragStart.bind($_291.a(r))
-    r.onDragEnter = r.onDragEnter.bind($_291.a(r))
-    r.onDragEnd = r.onDragEnd.bind($_291.a(r))
-    r.autoScroll = r.autoScroll.bind($_291.a(r))
+    Module_27.a(this, n);
+    (r = t.call(this, e)).onTouchStart = r.onTouchStart.bind(Module_291.a(r))
+    r.onMouseDown = r.onMouseDown.bind(Module_291.a(r))
+    r.onDragStart = r.onDragStart.bind(Module_291.a(r))
+    r.onDragEnter = r.onDragEnter.bind(Module_291.a(r))
+    r.onDragEnd = r.onDragEnd.bind(Module_291.a(r))
+    r.autoScroll = r.autoScroll.bind(Module_291.a(r))
     r.state = {
       fromIndex: -1,
       toIndex: -1
@@ -62,7 +61,7 @@ var Dv = function (e) {
     r.direction = xv
     return r
   }
-  ro.a(n, [
+  Module_39.a(n, [
     {
       key: "componentWillUnmount",
       value: function () {
@@ -304,7 +303,7 @@ var Dv = function (e) {
     }
   ])
   return n
-}(Component)
+}(React1.Component)
 Dv.defaultProps = {
   nodeSelector: "tr",
   ignoreSelector: "",

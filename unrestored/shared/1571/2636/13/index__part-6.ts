@@ -6,13 +6,12 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React from "react"
-import { memo, forwardRef, useState, useRef, useEffect, useLayoutEffect, useImperativeHandle } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import "./867"
-var Q = memo(forwardRef(function (e, t) {
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import /* 867 */"./867"
+var Q = React1.memo(React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$defaultVisible = e.defaultVisible
   var /* [auto-meaningful-name] */e$className = e.className
@@ -26,17 +25,17 @@ var Q = memo(forwardRef(function (e, t) {
   var g = undefined === e$autoClose || e$autoClose
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var v = undefined !== e$disabled && e$disabled
-  var b = useState(!!e$defaultVisible)
-  var y = $$_10_index.a(b, 2)
+  var b = React1.useState(!!e$defaultVisible)
+  var y = Module_10.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = useRef(null)
-  useEffect(function () {
+  var w = React1.useRef(null)
+  React1.useEffect(function () {
     if (E && e$onOpen) {
       e$onOpen()
     }
   }, [E])
-  useLayoutEffect(function () {
+  React1.useLayoutEffect(function () {
     var e = function e(t) {
       var /* [auto-meaningful-name] */t$target = t.target
       if (w.current && !w.current.contains(t$target)) {
@@ -55,7 +54,7 @@ var Q = memo(forwardRef(function (e, t) {
       document.body.removeEventListener("click", e)
     }
   }, [E, e$onClose, g])
-  useImperativeHandle(t, function () {
+  React1.useImperativeHandle(t, function () {
     return {
       target: w.current,
       visible: E,
@@ -75,7 +74,7 @@ var Q = memo(forwardRef(function (e, t) {
   })
   return React.createElement("div", {
     style: e$style,
-    className: i("coco-popover", e$className),
+    className: Classnames("coco-popover", e$className),
     ref: w
   }, React.createElement("div", {
     className: "coco-popover-children",
@@ -83,7 +82,7 @@ var Q = memo(forwardRef(function (e, t) {
       O(true)
     }
   }, e$children), React.createElement("div", {
-    className: i("coco-popover-content", e$contentClassName, [E ? "show" : "hide"])
+    className: Classnames("coco-popover-content", e$contentClassName, [E ? "show" : "hide"])
   }, e$content), v && React.createElement("div", {
     className: "coco-popover-disabled-mask"
   }))

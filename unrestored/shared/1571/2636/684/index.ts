@@ -6,6 +6,6 @@
 
 import { r } from "./index__part-0"
 import "./index__part-1"
-import * as /* [auto-meaningful-name] */$_480 from "./480"
+import * as /* [auto-meaningful-name] */Module_480 from /* 480 */"./480"
 export { r as messages }
 export { b as types } from "./480"

@@ -4,7 +4,7 @@
  * 模块 ID：271
  */
 
-var r = require("../1659/168")
+var r = require(/* 168 */"../1659/168")
 module.exports = !r(function () {
   return 7 != Object.defineProperty({}, 1, {
     get: function () {

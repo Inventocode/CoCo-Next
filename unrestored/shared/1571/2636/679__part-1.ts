@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as o from "./6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as a from "./60"
-import * as s from "./82"
-import * as /* [auto-meaningful-name] */$_114 from "./114"
-import * as l from "./9"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Module_82 from /* 82 */"./82"
+import * as /* [auto-meaningful-name] */Module_114 from /* 114 */"./114"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
 var u = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.z,
-  icon: s.g,
+  type: Src_editor_widget_builtIn_types.z,
+  icon: Module_82.g,
   title: "widgetName",
   contentTextField: "text",
   platforms: ["web", "android", "ios"],
@@ -22,7 +22,7 @@ var u = {
   isInvisibleWidget: false,
   hasAnyWidget: true,
   properties: [
-    o.a({}, l.n), o.a({}, l.l), {
+    Module_6.a({}, Module_9.n), Module_6.a({}, Module_9.l), {
       key: "ButtonTextGroup",
       label: "ButtonTextGroup",
       valueType: "string",
@@ -88,13 +88,13 @@ var u = {
       key: "textColor",
       label: "textColor",
       valueType: "color",
-      defaultValue: s.e,
+      defaultValue: Module_82.e,
       hidePropertyEditor: true
     }, {
       key: "maxFontSize",
       label: "maxFontSize",
       valueType: "number",
-      defaultValue: s.h,
+      defaultValue: Module_82.h,
       hidePropertyEditor: true,
       blockOptions: {
         getter: {
@@ -103,11 +103,11 @@ var u = {
       },
       validators: {
         greaterThan: {
-          value: s.o,
+          value: Module_82.o,
           message: "outOfRange"
         },
         lessThan: {
-          value: s.l,
+          value: Module_82.l,
           message: "outOfRange"
         },
         isInteger: true
@@ -116,18 +116,18 @@ var u = {
       key: "textAlign",
       label: "textAlign",
       valueType: "string",
-      defaultValue: a.a.CENTER,
+      defaultValue: Module_60.a.CENTER,
       hidePropertyEditor: true,
       dropdown: [
         {
           label: "left",
-          value: a.a.LEFT
+          value: Module_60.a.LEFT
         }, {
           label: "center",
-          value: a.a.CENTER
+          value: Module_60.a.CENTER
         }, {
           label: "right",
-          value: a.a.RIGHT
+          value: Module_60.a.RIGHT
         }
       ],
       blockOptions: {
@@ -173,7 +173,7 @@ var u = {
       key: "iconColor",
       label: "iconColor",
       valueType: "color",
-      defaultValue: s.d,
+      defaultValue: Module_82.d,
       hidePropertyEditor: true,
       blockOptions: {
         getter: {
@@ -184,7 +184,7 @@ var u = {
       key: "fontFamily",
       label: "fontFamily",
       valueType: "string",
-      defaultValue: s.b,
+      defaultValue: Module_82.b,
       hidePropertyEditor: true,
       blockOptions: {
         generateBlock: false
@@ -193,7 +193,7 @@ var u = {
       key: "allowMinFontSize",
       label: "allowMinFontSize",
       valueType: "number",
-      defaultValue: s.o,
+      defaultValue: Module_82.o,
       hidePropertyEditor: true,
       blockOptions: {
         generateBlock: false
@@ -202,7 +202,7 @@ var u = {
       key: "allowMaxFontSize",
       label: "allowMaxFontSize",
       valueType: "number",
-      defaultValue: s.l,
+      defaultValue: Module_82.l,
       hidePropertyEditor: true,
       blockOptions: {
         generateBlock: false
@@ -211,7 +211,7 @@ var u = {
       key: "backgroundMode",
       label: "backgroundMode",
       valueType: "string",
-      defaultValue: $_114.a.TEMPLATE,
+      defaultValue: Module_114.a.TEMPLATE,
       hidePropertyEditor: true,
       blockOptions: {
         generateBlock: false
@@ -220,7 +220,7 @@ var u = {
       key: "templateMode",
       label: "templateMode",
       valueType: "string",
-      defaultValue: $_114.b.RECTANGLE_FILL,
+      defaultValue: Module_114.b.RECTANGLE_FILL,
       hidePropertyEditor: true,
       blockOptions: {
         generateBlock: false
@@ -229,7 +229,7 @@ var u = {
       key: "backgroundColor",
       label: "backgroundColor",
       valueType: "color",
-      defaultValue: s.a,
+      defaultValue: Module_82.a,
       hidePropertyEditor: true,
       blockOptions: {
         setter: {
@@ -243,7 +243,7 @@ var u = {
       key: "backgroundImage",
       label: "backgroundImage",
       valueType: "string",
-      defaultValue: s.f,
+      defaultValue: Module_82.f,
       hidePropertyEditor: true,
       blockOptions: {
         generateBlock: false
@@ -252,12 +252,12 @@ var u = {
       key: "imageResizeMode",
       label: "imageResizeMode",
       valueType: "string",
-      defaultValue: $_114.c.CONTAIN,
+      defaultValue: Module_114.c.CONTAIN,
       hidePropertyEditor: true,
       blockOptions: {
         generateBlock: false
       }
-    }, o.a(o.a({}, l.m), {}, {
+    }, Module_6.a(Module_6.a({}, Module_9.m), {}, {
       blockOptions: {
         setter: {
           line: "general"
@@ -272,8 +272,8 @@ var u = {
         generateBlock: false
       },
       validators: {
-        lessThan: s.m,
-        greaterThan: s.p
+        lessThan: Module_82.m,
+        greaterThan: Module_82.p
       }
     }, {
       key: "__height",
@@ -284,8 +284,8 @@ var u = {
         generateBlock: false
       },
       validators: {
-        lessThan: s.k,
-        greaterThan: s.n
+        lessThan: Module_82.k,
+        greaterThan: Module_82.n
       }
     }, {
       key: "__size",
@@ -319,26 +319,26 @@ var u = {
           label: "",
           valueType: "string",
           checkType: ["string"],
-          defaultValue: $_114.b.RECTANGLE_FILL,
+          defaultValue: Module_114.b.RECTANGLE_FILL,
           dropdown: [
             {
               label: "rectangleFill",
-              value: $_114.b.RECTANGLE_FILL,
+              value: Module_114.b.RECTANGLE_FILL,
               image: "https://static.bcmcdn.com/coco/image/button-rect-fill-template.png",
               isHideFieldImage: true
             }, {
               label: "rectangleOutline",
-              value: $_114.b.RECTANGLE_OUTLINE,
+              value: Module_114.b.RECTANGLE_OUTLINE,
               image: "https://static.bcmcdn.com/coco/image/button-rect-outline-template.png",
               isHideFieldImage: true
             }, {
               label: "circleFill",
-              value: $_114.b.CIRCLE_FILL,
+              value: Module_114.b.CIRCLE_FILL,
               image: "https://static.bcmcdn.com/coco/image/button-circle-fill-template.png",
               isHideFieldImage: true
             }, {
               label: "circleOutline",
-              value: $_114.b.CIRCLE_OUTLINE,
+              value: Module_114.b.CIRCLE_OUTLINE,
               image: "https://static.bcmcdn.com/coco/image/button-circle-outline-template.png",
               isHideFieldImage: true
             }
@@ -347,7 +347,7 @@ var u = {
           key: "backgroundColor",
           label: "color",
           valueType: "color",
-          defaultValue: s.a
+          defaultValue: Module_82.a
         }
       ]
     }, {

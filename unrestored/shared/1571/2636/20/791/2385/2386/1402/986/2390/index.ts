@@ -6,8 +6,8 @@
 
 "use strict"
 
-var /* [auto-meaningful-name] */require$_2391$Buffer = require("./2391").Buffer
-var i = require$_2391$Buffer.isEncoding || function (e) {
+var /* [auto-meaningful-name] */require_2391_$_2391$Buffer = require(/* 2391 */"./2391").Buffer
+var i = require_2391_$_2391$Buffer.isEncoding || function (e) {
   switch ((e = "" + e) && e.toLowerCase()) {
     case "hex":
     case "utf8":
@@ -58,7 +58,7 @@ function o(e) {
         }
       }
     }(e)
-    if ("string" !== typeof t && (require$_2391$Buffer.isEncoding === i || !i(e))) {
+    if ("string" !== typeof t && (require_2391_$_2391$Buffer.isEncoding === i || !i(e))) {
       throw new Error("Unknown encoding: " + e)
     }
     return t || e
@@ -83,7 +83,7 @@ function o(e) {
   }
   this.lastNeed = 0
   this.lastTotal = 0
-  this.lastChar = require$_2391$Buffer.allocUnsafe(t)
+  this.lastChar = require_2391_$_2391$Buffer.allocUnsafe(t)
 }
 function a(e) {
   return e <= 127 ? 0 : e >> 5 === 6 ? 2 : e >> 4 === 14 ? 3 : e >> 3 === 30 ? 4 : e >> 6 === 2 ? -1 : -2

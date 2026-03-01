@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("../../../../../207/787/500")
-var i = require("../1410/311")
+var r = require(/* 500 */"../../../../../207/787/500")
+var i = require(/* 311 */"../1410/311")
 var /* [auto-meaningful-name] */i$ObjectSetPrototypeOf = i.ObjectSetPrototypeOf
 var /* [auto-meaningful-name] */i$Symbol = i.Symbol
 module.exports = f
-var /* [auto-meaningful-name] */require$_402_index$codes$ERR_METHOD_NOT_IMPLEMENTED = require("./402/index").codes.ERR_METHOD_NOT_IMPLEMENTED
-var c = require("./584/index")
-var /* [auto-meaningful-name] */require$_988$getHighWaterMark = require("./988").getHighWaterMark
+var /* [auto-meaningful-name] */require_402_$_402_index$codes$ERR_METHOD_NOT_IMPLEMENTED = require(/* 402 */"./402/index").codes.ERR_METHOD_NOT_IMPLEMENTED
+var c = require(/* 584 */"./584/index")
+var /* [auto-meaningful-name] */require_988_$_988$getHighWaterMark = require(/* 988 */"./988").getHighWaterMark
 i$ObjectSetPrototypeOf(f.prototype, c.prototype)
 i$ObjectSetPrototypeOf(f, c)
 var l = i$Symbol("kCallback")
@@ -21,7 +21,7 @@ function f(e) {
   if (!(this instanceof f)) {
     return new f(e)
   }
-  var t = e ? require$_988$getHighWaterMark(this, e, "readableHighWaterMark", true) : null
+  var t = e ? require_988_$_988$getHighWaterMark(this, e, "readableHighWaterMark", true) : null
   if (0 === t) {
     e = r(r({}, e), {}, {
       highWaterMark: null,
@@ -76,7 +76,7 @@ function h() {
 }
 f.prototype._final = d
 f.prototype._transform = function (e, t, n) {
-  throw new require$_402_index$codes$ERR_METHOD_NOT_IMPLEMENTED("_transform()")
+  throw new require_402_$_402_index$codes$ERR_METHOD_NOT_IMPLEMENTED("_transform()")
 }
 f.prototype._write = function (e, t, n) {
   var r = this

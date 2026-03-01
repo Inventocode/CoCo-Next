@@ -8,23 +8,23 @@
 
 import { f } from "./index__part-1"
 import { w } from "./index__part-2"
-import * as c from "./6"
-import * as l from "./12"
-import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
-import * as /* [auto-meaningful-name] */$_23_index from "./23/index"
-import * as a from "./14"
-import * as o from "./8"
-import * as i from "./1"
-import * as j from "./25"
-import * as x from "./50"
-import * as C from "./9"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"./12"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"./28/index"
+import * as /* [auto-meaningful-name] */Module_23 from /* 23 */"./23/index"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"./14"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"./8"
+import * as /* [auto-meaningful-name] */Module_1 from /* 1 */"./1"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25"
+import * as /* [auto-meaningful-name] */Module_50 from /* 50 */"./50"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
 var R = {
   traceFetch: true,
   traceXHR: true,
   tracingOrigins: ["localhost", /^\//]
 }
 function P(e) {
-  var t = i.a(i.a({}, R), e)
+  var t = Module_1.a(Module_1.a({}, R), e)
   var /* [auto-meaningful-name] */t$traceFetch = t.traceFetch
   var /* [auto-meaningful-name] */t$traceXHR = t.traceXHR
   var /* [auto-meaningful-name] */t$tracingOrigins = t.tracingOrigins
@@ -36,8 +36,8 @@ function P(e) {
     }
     var t = t$tracingOrigins
     s[e] = t.some(function (t) {
-      return j.a(e, t)
-    }) && !j.a(e, "sentry_key")
+      return Module_25.a(e, t)
+    }) && !Module_25.a(e, "sentry_key")
     return s[e]
   }
   var f = u
@@ -48,19 +48,19 @@ function P(e) {
   }
   var d = {}
   if (t$traceFetch) {
-    x.a({
+    Module_50.a({
       callback: function (e) {
         !function (e, t, n) {
-          if (!c.c() || !e.fetchData || !t(e.fetchData.url)) {
+          if (!Module_6.c() || !e.fetchData || !t(e.fetchData.url)) {
             return
           }
           if (e.endTimestamp && e.fetchData.__span) {
-            return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus(l.a.InternalError), o.finish(), delete n[e.fetchData.__span]))
+            return void ((o = n[e.fetchData.__span]) && (e.response ? o.setHttpStatus(e.response.status) : e.error && o.setStatus(Module_12.a.InternalError), o.finish(), delete n[e.fetchData.__span]))
           }
-          var r = c.b()
+          var r = Module_6.b()
           if (r) {
             var o = r.startChild({
-              data: i.a(i.a({}, e.fetchData), {
+              data: Module_1.a(Module_1.a({}, e.fetchData), {
                 type: "fetch"
               }),
               description: e.fetchData.method + " " + e.fetchData.url,
@@ -71,14 +71,14 @@ function P(e) {
             var a = e.args[0] = e.args[0]
             var s = e.args[1] = e.args[1] || {}
             var /* [auto-meaningful-name] */s$headers = s.headers
-            if (C.g(a, Request)) {
+            if (Module_9.g(a, Request)) {
               s$headers = a.headers
             }
             if (s$headers) {
               if ("function" === typeof s$headers.append) {
                 s$headers.append("sentry-trace", o.toTraceparent())
               } else {
-                s$headers = Array.isArray(s$headers) ? i.e(s$headers, [["sentry-trace", o.toTraceparent()]]) : i.a(i.a({}, s$headers), {
+                s$headers = Array.isArray(s$headers) ? Module_1.e(s$headers, [["sentry-trace", o.toTraceparent()]]) : Module_1.a(Module_1.a({}, s$headers), {
                   "sentry-trace": o.toTraceparent()
                 })
               }
@@ -95,22 +95,22 @@ function P(e) {
     })
   }
   if (t$traceXHR) {
-    x.a({
+    Module_50.a({
       callback: function (e) {
         !function (e, t, n) {
           var /* [auto-meaningful-name] */e$xhr
           var /* [auto-meaningful-name] */e$xhr1
-          if (!c.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (e$xhr1 = e.xhr) || undefined === e$xhr1 ? undefined : e$xhr1.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
+          if (!Module_6.c() || (null === (e$xhr = e.xhr) || undefined === e$xhr ? undefined : e$xhr.__sentry_own_request__) || !(null === (e$xhr1 = e.xhr) || undefined === e$xhr1 ? undefined : e$xhr1.__sentry_xhr__) || !t(e.xhr.__sentry_xhr__.url)) {
             return
           }
           var /* [auto-meaningful-name] */e$xhr$__sentry_xhr__ = e.xhr.__sentry_xhr__
           if (e.endTimestamp && e.xhr.__sentry_xhr_span_id__) {
             return void ((u = n[e.xhr.__sentry_xhr_span_id__]) && (u.setHttpStatus(e$xhr$__sentry_xhr__.status_code), u.finish(), delete n[e.xhr.__sentry_xhr_span_id__]))
           }
-          var s = c.b()
+          var s = Module_6.b()
           if (s) {
             var u = s.startChild({
-              data: i.a(i.a({}, e$xhr$__sentry_xhr__.data), {
+              data: Module_1.a(Module_1.a({}, e$xhr$__sentry_xhr__.data), {
                 type: "xhr",
                 method: e$xhr$__sentry_xhr__.method,
                 url: e$xhr$__sentry_xhr__.url
@@ -132,9 +132,9 @@ function P(e) {
     })
   }
 }
-var N = a.e()
-var I = i.a({
-  idleTimeout: $_28_index.a,
+var N = Module_14.e()
+var I = Module_1.a({
+  idleTimeout: Module_28.a,
   markBackgroundTransactions: true,
   maxTransactionDuration: 600,
   routingInstrumentation: function (e, t, n) {
@@ -154,7 +154,7 @@ var I = i.a({
         })
       }
       if (n) {
-        x.a({
+        Module_50.a({
           callback: function (t) {
             var n = t.to
             var /* [auto-meaningful-name] */t$from = t.from
@@ -164,7 +164,7 @@ var I = i.a({
               if (t$from !== n) {
                 N$location$href = undefined
                 if (r) {
-                  o.a.log("[Tracing] Finishing current transaction with op: " + r.op)
+                  Module_8.a.log("[Tracing] Finishing current transaction with op: " + r.op)
                   r.finish()
                 }
                 r = e({
@@ -178,7 +178,7 @@ var I = i.a({
         })
       }
     } else {
-      o.a.warn("Could not initialize routing instrumentation due to invalid location")
+      Module_8.a.warn("Could not initialize routing instrumentation due to invalid location")
     }
   },
   startTransactionOnLocationChange: true,
@@ -195,7 +195,7 @@ var L = function () {
     } else {
       this._emitOptionsWarning = true
     }
-    this.options = i.a(i.a(i.a({}, I), t), {
+    this.options = Module_1.a(Module_1.a(Module_1.a({}, I), t), {
       tracingOrigins: R$tracingOrigins
     })
   }
@@ -203,8 +203,8 @@ var L = function () {
     var n = this
     this._getCurrentHub = t
     if (this._emitOptionsWarning) {
-      o.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.")
-      o.a.warn("[Tracing] We added a reasonable default for you: " + R.tracingOrigins)
+      Module_8.a.warn("[Tracing] You need to define `tracingOrigins` in the options. Set an array of urls or patterns to trace.")
+      Module_8.a.warn("[Tracing] We added a reasonable default for you: " + R.tracingOrigins)
     }
     var /* [auto-meaningful-name] */this$options = this.options
     var /* [auto-meaningful-name] */this$options$routingInstrumentation = this$options.routingInstrumentation
@@ -221,18 +221,18 @@ var L = function () {
     if (this$options$markBackgroundTransactions) {
       if (f && f.document) {
         f.document.addEventListener("visibilitychange", function () {
-          var e = c.b()
+          var e = Module_6.b()
           if (f.document.hidden && e) {
-            o.a.log("[Tracing] Transaction: " + l.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
+            Module_8.a.log("[Tracing] Transaction: " + Module_12.a.Cancelled + " -> since tab moved to the background, op: " + e.op)
             if (!e.status) {
-              e.setStatus(l.a.Cancelled)
+              e.setStatus(Module_12.a.Cancelled)
             }
             e.setTag("visibilitychange", "document.hidden")
             e.finish()
           }
         })
       } else {
-        o.a.warn("[Tracing] Could not set up background tab detection due to lack of global document")
+        Module_8.a.warn("[Tracing] Could not set up background tab detection due to lack of global document")
       }
     }
     P({
@@ -255,39 +255,39 @@ var L = function () {
           return t ? t.getAttribute("content") : null
         }("sentry-trace")
         if (e) {
-          return c.a(e)
+          return Module_6.a(e)
         }
         return
       }() : undefined
-      var p = i.a(i.a(i.a({}, e), d), {
+      var p = Module_1.a(Module_1.a(Module_1.a({}, e), d), {
         trimEnd: true
       })
       var h = "function" === typeof this$options$beforeNavigate ? this$options$beforeNavigate(p) : p
-      var m = undefined === h ? i.a(i.a({}, p), {
+      var m = undefined === h ? Module_1.a(Module_1.a({}, p), {
         sampled: false
       }) : h
       if (false === m.sampled) {
-        o.a.log("[Tracing] Will not send " + m.op + " transaction because of beforeNavigate.")
+        Module_8.a.log("[Tracing] Will not send " + m.op + " transaction because of beforeNavigate.")
       }
-      o.a.log("[Tracing] Starting " + m.op + " transaction on scope")
+      Module_8.a.log("[Tracing] Starting " + m.op + " transaction on scope")
       var v = this._getCurrentHub()
-      var /* [auto-meaningful-name] */a$e$location = a.e().location
-      var g = $_23_index.b(v, m, this$options$idleTimeout, true, {
-        location: a$e$location
+      var /* [auto-meaningful-name] */Module_14$e$location = Module_14.e().location
+      var g = Module_23.b(v, m, this$options$idleTimeout, true, {
+        location: Module_14$e$location
       })
       g.registerBeforeFinishCallback(function (e, n) {
         t._metrics.addPerformanceEntries(e);
         (function (e, t, n) {
           var r = n - t.startTimestamp
           if (n && (r > e || r < 0)) {
-            t.setStatus(l.a.DeadlineExceeded)
+            t.setStatus(Module_12.a.DeadlineExceeded)
             t.setTag("maxTransactionDurationExceeded", "true")
           }
-        })(c.e(this$options$maxTransactionDuration), e, n)
+        })(Module_6.e(this$options$maxTransactionDuration), e, n)
       })
       return g
     }
-    o.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.")
+    Module_8.a.warn("[Tracing] Did not create " + e.op + " transaction because _getCurrentHub is invalid.")
   }
   e.id = "BrowserTracing"
   return e
@@ -314,14 +314,14 @@ var A = function () {
               for (var e = [], r = 0; r < arguments.length; r++) {
                 e[r] = arguments[r]
               }
-              return n.call.apply(n, i.e([this], M(e, t)))
+              return n.call.apply(n, Module_1.e([this], M(e, t)))
             }
             return e
           }(e, t)
         })
       })(this._router, this._methods)
     } else {
-      o.a.error("ExpressIntegration is missing an Express instance")
+      Module_8.a.error("ExpressIntegration is missing an Express instance")
     }
   }
   e.id = "Express"
@@ -358,7 +358,7 @@ function D(e, t) {
           if (!(null === (e = s) || undefined === e)) {
             e.finish()
           }
-          o.call.apply(o, i.e([this], t))
+          o.call.apply(o, Module_1.e([this], t))
         })
       }
     case 4:
@@ -375,7 +375,7 @@ function D(e, t) {
           if (!(null === (e = u) || undefined === e)) {
             e.finish()
           }
-          a.call.apply(a, i.e([this], t))
+          a.call.apply(a, Module_1.e([this], t))
         })
       }
     default:

@@ -25,7 +25,7 @@ import { Ad, Nd, xd } from "./index__part-21"
 import { Pd, Bd, Gd, Ud, Vd, Kd, Xd, Zd, Jd, $d, ep, tp, np, rp, op, ip, ap, sp, lp, up, pp } from "./index__part-22"
 import { Np, kp, Dp, Lp, Bp, Gp } from "./index__part-24"
 import { Vp, Qp, Jp, ef, nf, of, sf } from "./index__part-25"
-import * as /* [auto-meaningful-name] */$_313 from "./313"
+import * as /* [auto-meaningful-name] */Module_313 from /* 313 */"./313"
 export { s as gd }
 export { c as bd }
 export { l as cd }

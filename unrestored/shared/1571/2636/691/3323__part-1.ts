@@ -6,21 +6,21 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
 var o = function () {
   function t() {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : .5
     var i = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : .5
     var s = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : .5
     var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : 1
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.r = e
     this.g = i
     this.b = s
     this.a = r
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "Clone",
       value: function () {
@@ -188,7 +188,7 @@ o.BLUE = new o(0, 0, 1)
 var a
 var u = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, i = new Array(arguments$length), s = 0; s < arguments$length; s++) {
       i[s] = arguments[s]
     }
@@ -205,7 +205,7 @@ var u = function () {
       this.data = new Float32Array([r, o, a, u])
     }
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "r",
       get: function () {
@@ -389,10 +389,10 @@ var u = function () {
 }(a || (a = {}))
 var l = function () {
   function t() {
-    $$_27.a(this, t)
+    Module_27.a(this, t)
     this.m_drawFlags = 0
   }
-  $$_39.a(t, [
+  Module_39.a(t, [
     {
       key: "SetFlags",
       value: function (t) {

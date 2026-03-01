@@ -91,10 +91,17 @@ export const useMeaningfulVarNameRule: Rule.RuleModule = {
 
         return {
             ImportDeclaration(node) {
-                const importSourceName = node.source.value as string
+                const { sourceCode } = context
+                const importSource = node.source
+                const commentName = sourceCode.getCommentsBefore(importSource)[0]?.value.trim()
+                const importSourceName = importSource.value as string
+                const newName =
+                    importSourceName.includes("unrestored") && commentName != null ?
+                    `module_${commentName}` :
+                    importSourceName.replace(/[\.\/]/g, " ").trim().replace(/[\s]+/g, "/")
                 for (const specifier of node.specifiers) {
                     if (specifier.type === "ImportDefaultSpecifier" || specifier.type === "ImportNamespaceSpecifier") {
-                        renameIfNeeds(specifier.local, importSourceName, true)
+                        renameIfNeeds(specifier.local, newName, true)
                     }
                 }
             },

@@ -7,58 +7,57 @@
 "use strict"
 
 import { hb, mb } from "./index__part-94"
-import qv from "./88"
-import * as Gf from "./77"
-import * as /* [auto-meaningful-name] */$_149 from "./149"
-import * as Yr from "./53"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_223 from "./223"
-import /* [auto-meaningful-name] */$_2231 from "./223"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Module_77 from /* 77 */"./77"
+import * as /* [auto-meaningful-name] */Module_149 from /* 149 */"./149"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_223 from /* 223 */"./223"
+import /* [auto-meaningful-name] */Module_2231 from /* 223 */"./223"
 var AO = [
   {
-    value: Gf.d.TEMPLATE,
+    value: Module_77.d.TEMPLATE,
     label: "slider.template"
   }, {
-    value: Gf.d.IMAGE,
+    value: Module_77.d.IMAGE,
     label: "slider.image"
   }
 ]
 var IO = [
   {
-    value: Gf.c.DEFAULT,
+    value: Module_77.c.DEFAULT,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: $_2231.default,
+        className: Module_2231.default,
         style: {
           background: e
         }
       }, React.createElement("div", {
-        className: $_2231.handle,
+        className: Module_2231.handle,
         style: {
           borderColor: e
         }
       }))
     }
   }, {
-    value: Gf.c.PRIMARY,
+    value: Module_77.c.PRIMARY,
     renderContent: function (e) {
       return React.createElement("div", {
-        className: $_2231.primary,
+        className: Module_2231.primary,
         style: {
           background: e
         }
       }, React.createElement("div", {
-        className: $_2231.handle,
+        className: Module_2231.handle,
         style: {
           color: e,
           borderColor: e
@@ -67,7 +66,7 @@ var IO = [
     }
   }
 ]
-var jO = memo(function (e) {
+var jO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sliderType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -76,37 +75,37 @@ var jO = memo(function (e) {
   var a = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  var s = e$getValue(n) || Gf.d.TEMPLATE
+  var s = e$getValue(n) || Module_77.d.TEMPLATE
   var c = e$getValue("mode")
   var l = e$getValue("color")
-  var u = e$getValue("handleImageFileId") || $_149.c
+  var u = e$getValue("handleImageFileId") || Module_149.c
   var d = e$getValue("handleImageRatio") || 1.5
-  var p = e$getValue("direction") || Gf.b.HORIZONTAL
-  var m = e$getValue("handleImageDirection") || Gf.b.HORIZONTAL
-  var g = e$getValue("backgroundImageFileId") || $_149.a
-  var v = e$getValue("trackImageFileId") || $_149.g
-  var b = e$getValue("backgroundImageDirection") || Gf.b.HORIZONTAL
-  var y = e$getValue("trackImageDirection") || Gf.b.HORIZONTAL
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var p = e$getValue("direction") || Module_77.b.HORIZONTAL
+  var m = e$getValue("handleImageDirection") || Module_77.b.HORIZONTAL
+  var g = e$getValue("backgroundImageFileId") || Module_149.a
+  var v = e$getValue("trackImageFileId") || Module_149.g
+  var b = e$getValue("backgroundImageDirection") || Module_77.b.HORIZONTAL
+  var y = e$getValue("trackImageDirection") || Module_77.b.HORIZONTAL
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var O = useDispatch()
-  var w = useState("")
-  var C = $_10_index.a(w, 2)
+  var w = React1.useState("")
+  var C = Module_10.a(w, 2)
   var T = C[0]
   var A = C[1]
-  var j = useState("")
-  var R = $_10_index.a(j, 2)
+  var j = React1.useState("")
+  var R = Module_10.a(j, 2)
   var k = R[0]
   var x = R[1]
-  var D = useState("")
-  var M = $_10_index.a(D, 2)
+  var D = React1.useState("")
+  var M = Module_10.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = useState("")
-  var F = $_10_index.a(B, 2)
+  var B = React1.useState("")
+  var F = Module_10.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = useState("")
-  var H = $_10_index.a(U, 2)
+  var U = React1.useState("")
+  var H = Module_10.a(U, 2)
   var V = H[0]
   var K = H[1]
   function q(e) {
@@ -114,70 +113,70 @@ var jO = memo(function (e) {
       e$onChange(n, e)
     }
   }
-  useEffect(function () {
+  React1.useEffect(function () {
     var e
-    if ($$_$$_$$_$$_src_shared_tools_index.U(u)) {
+    if (Src_shared_tools_index.U(u)) {
       e = u
     } else {
-      var t = Et.hb(u)
+      var t = Module_9.hb(u)
       e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl)
     }
-    P(e || $_149.c)
+    P(e || Module_149.c)
   }, [u, a])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e
-    if ($$_$$_$$_$$_src_shared_tools_index.U(g)) {
+    if (Src_shared_tools_index.U(g)) {
       e = g
     } else {
-      var t = Et.hb(g)
-      e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl) || $_149.a
+      var t = Module_9.hb(g)
+      e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl) || Module_149.a
     }
     W(e)
-    if (b === Gf.b.VERTICAL) {
-      $$_$$_$$_$$_src_shared_tools_index.gb(e, 90).then(function (e) {
+    if (b === Module_77.b.VERTICAL) {
+      Src_shared_tools_index.gb(e, 90).then(function (e) {
         return x(e)
       }).catch(function () {
         return x("")
       })
     }
   }, [b, g, a])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e
-    if ($$_$$_$$_$$_src_shared_tools_index.U(v)) {
+    if (Src_shared_tools_index.U(v)) {
       e = v
     } else {
-      var t = Et.hb(v)
-      e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl) || $_149.g
+      var t = Module_9.hb(v)
+      e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl) || Module_149.g
     }
     K(e)
-    if (y === Gf.b.VERTICAL) {
-      $$_$$_$$_$$_src_shared_tools_index.gb(e, 90).then(function (e) {
+    if (y === Module_77.b.VERTICAL) {
+      Src_shared_tools_index.gb(e, 90).then(function (e) {
         return A(e)
       }).catch(function () {
         return A("")
       })
     }
   }, [v, y, a])
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames($_2231.formItemWrapper, $_2231.sliderMode, "changeSliderType")
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_2231.formItemWrapper, Module_2231.sliderMode, "changeSliderType")
   }, React.createElement("div", {
     className: "coco-form-item coco-form-item-horizontal"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "slider.background"
   }), React.createElement("div", {
-    className: $_2231.sliderType
+    className: Module_2231.sliderType
   }, AO.map(function (e) {
     return React.createElement("div", {
       key: e.value,
       onClick: q.bind(null, e.value),
-      className: Classnames($_2231.typeItem, s === e.value && $_2231.active)
-    }, $_710$a$formatMessage({
+      className: Classnames(Module_2231.typeItem, s === e.value && Module_2231.active)
+    }, Module_710$a$formatMessage({
       id: e.label
     }))
-  }))), s === Gf.d.TEMPLATE && React.createElement("div", {
-    className: $_2231.templateBox
+  }))), s === Module_77.d.TEMPLATE && React.createElement("div", {
+    className: Module_2231.templateBox
   }, React.createElement("div", {
-    className: $_2231.templateMode
+    className: Module_2231.templateMode
   }, React.createElement(hb, {
     value: c,
     modeList: IO,
@@ -188,76 +187,76 @@ var jO = memo(function (e) {
     },
     params: [l]
   }, IO.map(function (e) {
-    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.p, {
+    return React.createElement(Src_shared_ui_components_index.p, {
       key: e.value,
       value: e.value
     }, e.renderContent(l))
   }))), React.createElement("div", {
-    className: $_2231.templateColor
-  }, React.createElement("span", null, $_710$a$formatMessage({
+    className: Module_2231.templateColor
+  }, React.createElement("span", null, Module_710$a$formatMessage({
     id: "templateColor"
   })), React.createElement(mb, {
     width: 42,
     keyName: "color",
     onChange: e$onChange,
     color: l
-  }))), s === Gf.d.IMAGE && React.createElement("div", {
-    className: $_2231.imageBox
+  }))), s === Module_77.d.IMAGE && React.createElement("div", {
+    className: Module_2231.imageBox
   }, React.createElement("div", {
-    className: $_2231.backgroundImage,
+    className: Module_2231.backgroundImage,
     style: {
       width: 254,
       height: 20,
-      backgroundImage: "url(".concat(b === Gf.b.HORIZONTAL ? G : k, ")")
+      backgroundImage: "url(".concat(b === Module_77.b.HORIZONTAL ? G : k, ")")
     }
   }, React.createElement("div", {
-    className: $_2231.trackImageBox,
+    className: Module_2231.trackImageBox,
     style: {
       width: 127
     }
   }, React.createElement("div", {
-    className: $_2231.trackImage,
+    className: Module_2231.trackImage,
     style: {
       width: 254,
-      backgroundImage: "url(".concat(y === Gf.b.HORIZONTAL ? V : T, ")")
+      backgroundImage: "url(".concat(y === Module_77.b.HORIZONTAL ? V : T, ")")
     }
   }))), React.createElement("div", {
-    className: Classnames($_2231.handleImage, m === Gf.b.VERTICAL && $_2231.rotate),
+    className: Classnames(Module_2231.handleImage, m === Module_77.b.VERTICAL && Module_2231.rotate),
     style: {
       width: 20 * d,
       height: 20 * d,
       backgroundImage: "url(".concat(L, ")")
     }
   }), React.createElement("div", {
-    className: $_2231.cover
+    className: Module_2231.cover
   }, React.createElement("div", {
-    className: $_2231.editBtn,
+    className: Module_2231.editBtn,
     onClick: function () {
-      O($$_$$_$$_$$_src_editor_redux_common_actions.Gj({
+      O(Src_editor_redux_common_actions.Gj({
         visible: true,
         widgetId: e$widgetId,
         direction: p,
-        handleImageFileId: Et.hb(u) ? u : $_149.c,
+        handleImageFileId: Module_9.hb(u) ? u : Module_149.c,
         handleImageRatio: d,
         handleImageDirection: m,
-        backgroundImageFileId: Et.hb(g) ? g : $_149.a,
+        backgroundImageFileId: Module_9.hb(g) ? g : Module_149.a,
         backgroundImageDirection: b,
-        trackImageFileId: Et.hb(v) ? v : $_149.g,
+        trackImageFileId: Module_9.hb(v) ? v : Module_149.g,
         trackImageDirection: y
       }))
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "edit"
   })))))
 })
-var NO = memo(function (e) {
+var NO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("maxValue")
   var o = e$getValue("minValue")
   var i = e$getValue("step")
   var a = e$getValue("value")
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   function c(e) {
     e$onChange("minValue", Number(e))
   }
@@ -270,56 +269,56 @@ var NO = memo(function (e) {
   function d(e) {
     e$onChange("value", Number(e))
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames($_2231.formItemWrapper, $_2231.sliderRangeFormItem, $_2231.typeSelector, "changeSliderMode"),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_2231.formItemWrapper, Module_2231.sliderRangeFormItem, Module_2231.typeSelector, "changeSliderMode"),
     align: "vertical",
-    label: $_710$a$formatMessage({
+    label: Module_710$a$formatMessage({
       id: "numberValue"
     })
   }, React.createElement("div", {
-    className: Classnames($_2231.firstRow, $_2231.row)
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
-    label: $_710$a$formatMessage({
+    className: Classnames(Module_2231.firstRow, Module_2231.row)
+  }, React.createElement(Src_shared_ui_components_index.o, {
+    label: Module_710$a$formatMessage({
       id: "minValue"
     }),
     type: "number",
     defaultValue: o,
     max: a,
-    min: Yr.r,
+    min: Module_53.r,
     onBlur: c,
     onStep: c,
     rules: [
       {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ]
   }), React.createElement("div", {
-    className: $_2231.space
-  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
-    label: $_710$a$formatMessage({
+    className: Module_2231.space
+  }), React.createElement(Src_shared_ui_components_index.o, {
+    label: Module_710$a$formatMessage({
       id: "maxValue"
     }),
     type: "number",
     defaultValue: r,
     min: a,
-    max: Yr.n,
+    max: Module_53.n,
     onBlur: l,
     onStep: l,
     rules: a >= 0 ? [
       {
-        rule: Yr.v
+        rule: Module_53.v
       }, {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ] : [
       {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ]
   })), React.createElement("div", {
-    className: $_2231.row
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
-    label: $_710$a$formatMessage({
+    className: Module_2231.row
+  }, React.createElement(Src_shared_ui_components_index.o, {
+    label: Module_710$a$formatMessage({
       id: "gap"
     }),
     type: "number",
@@ -330,15 +329,15 @@ var NO = memo(function (e) {
     onStep: u,
     rules: [
       {
-        rule: Yr.v
+        rule: Module_53.v
       }, {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ]
   }), React.createElement("div", {
-    className: $_2231.space
-  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.o, {
-    label: $_710$a$formatMessage({
+    className: Module_2231.space
+  }), React.createElement(Src_shared_ui_components_index.o, {
+    label: Module_710$a$formatMessage({
       id: "initialValue"
     }),
     type: "number",
@@ -349,40 +348,40 @@ var NO = memo(function (e) {
     max: r,
     rules: o >= 0 ? [
       {
-        rule: Yr.v
+        rule: Module_53.v
       }, {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ] : [
       {
-        rule: Yr.w(9)
+        rule: Module_53.w(9)
       }
     ]
   })))
 })
-var RO = memo(function (e) {
+var RO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "direction" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
-  var i = e$getValue(n) || Gf.b.HORIZONTAL
+  var i = e$getValue(n) || Module_77.b.HORIZONTAL
   var a = e$getValue("size")
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  return React.createElement(Src_shared_ui_components_index.i, {
     align: "vertical",
-    className: Classnames($_2231.formItemWrapper, $_2231.sliderDirection, "changeSliderDirection"),
-    label: $_710$a$formatMessage({
+    className: Classnames(Module_2231.formItemWrapper, Module_2231.sliderDirection, "changeSliderDirection"),
+    label: Module_710$a$formatMessage({
       id: "direction"
     })
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
-    className: Classnames($_2231.radioWrapper, $_2231.sizeRadioBox),
+  }, React.createElement(Src_shared_ui_components_index.s, {
+    className: Classnames(Module_2231.radioWrapper, Module_2231.sizeRadioBox),
     value: i,
     onChange: function (e) {
       if (e !== i) {
         if (e$onChange) {
           e$onChange(n, e)
         }
-        if (e === Gf.b.HORIZONTAL) {
+        if (e === Module_77.b.HORIZONTAL) {
           var t = {
             width: a.height,
             height: a.width
@@ -391,7 +390,7 @@ var RO = memo(function (e) {
             e$onChange("size", t)
           }
         }
-        if (e === Gf.b.VERTICAL) {
+        if (e === Module_77.b.VERTICAL) {
           var o = {
             width: a.height,
             height: a.width
@@ -402,25 +401,25 @@ var RO = memo(function (e) {
         }
       }
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
-    value: Gf.b.HORIZONTAL,
-    key: Gf.b.HORIZONTAL
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
-    type: i === Gf.b.HORIZONTAL ? "icon-horizontal-active" : "icon-horizontal",
-    className: $_2231.alignIcon
-  }), React.createElement("span", null, $_710$a$formatMessage({
+  }, React.createElement(Src_shared_ui_components_index.t, {
+    value: Module_77.b.HORIZONTAL,
+    key: Module_77.b.HORIZONTAL
+  }, React.createElement(Src_shared_ui_components_index.j, {
+    type: i === Module_77.b.HORIZONTAL ? "icon-horizontal-active" : "icon-horizontal",
+    className: Module_2231.alignIcon
+  }), React.createElement("span", null, Module_710$a$formatMessage({
     id: "horizontal"
-  }))), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
-    value: Gf.b.VERTICAL,
-    key: Gf.b.VERTICAL
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
-    type: i === Gf.b.VERTICAL ? "icon-vertical-active" : "icon-vertical",
-    className: $_2231.alignIcon
-  }), React.createElement("span", null, $_710$a$formatMessage({
+  }))), React.createElement(Src_shared_ui_components_index.t, {
+    value: Module_77.b.VERTICAL,
+    key: Module_77.b.VERTICAL
+  }, React.createElement(Src_shared_ui_components_index.j, {
+    type: i === Module_77.b.VERTICAL ? "icon-vertical-active" : "icon-vertical",
+    className: Module_2231.alignIcon
+  }), React.createElement("span", null, Module_710$a$formatMessage({
     id: "vertical"
   })))))
 })
-var kO = memo(function (e) {
+var kO = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fontSize" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -431,21 +430,21 @@ var kO = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$label = e$formConfig.label
   var /* [auto-meaningful-name] */e$formConfig$min = e$formConfig.min
   var /* [auto-meaningful-name] */e$formConfig$max = e$formConfig.max
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var p = e$getValue(n)
   p = Math.ceil(p * s)
   var f = function (e) {
-    return $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
+    return Src_shared_tools_index.p(function (e) {
       var t = parseInt(e)
       e$onChange(n, t /= s)
     }, e)
   }
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, "changeFontSize"),
-    label: $_710$a$formatMessage({
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, "changeFontSize"),
+    label: Module_710$a$formatMessage({
       id: e$formConfig$label || "fontSize"
     })
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.n, {
+  }, React.createElement(Src_shared_ui_components_index.n, {
     className: "coco-number-inputRow",
     style: {
       width: 80

@@ -379,7 +379,7 @@ exports.isFunction = E
 exports.isPrimitive = function (e) {
   return null === e || "boolean" === typeof e || "number" === typeof e || "string" === typeof e || "symbol" === typeof e || "undefined" === typeof e
 }
-exports.isBuffer = require("./2228")
+exports.isBuffer = require(/* 2228 */"./2228")
 var O = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
 function k() {
   var e = new Date()
@@ -392,7 +392,7 @@ function S(e, t) {
 exports.log = function () {
   console.log("%s - %s", k(), exports.format.apply(exports, arguments))
 }
-exports.inherits = require("./2229")
+exports.inherits = require(/* 2229 */"./2229")
 exports._extend = function (e, t) {
   if (!t || !y(t)) {
     return e

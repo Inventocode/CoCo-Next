@@ -4,8 +4,8 @@
  * 模块 ID：1645
  */
 
-var r = require("../1662/86")
-var o = require("./953")
+var r = require(/* 86 */"../1662/86")
+var o = require(/* 953 */"./953")
 var /* [auto-meaningful-name] */Math$exp = Math.exp
 r({
   target: "Math",

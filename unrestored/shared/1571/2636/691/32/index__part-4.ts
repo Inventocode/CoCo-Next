@@ -8,7 +8,7 @@
 
 import { ct, ht, _t, St, Gt, Rn, Nn, Vr, $r, ri, ai } from "./index__part-2"
 import { Bi, Di, Fi, Qi, Zi, Po, Lo, Uo } from "./index__part-3"
-import "../1006"
+import /* 1006 */"../1006"
 var va = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {

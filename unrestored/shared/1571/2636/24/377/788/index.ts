@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.OTAdapter = undefined
-var r = require("./2350/index")
-var i = require("./2354")
+var r = require(/* 2350 */"./2350/index")
+var i = require(/* 2354 */"./2354")
 var o = function () {
   function e(e, t) {
     this.transform_to_op = new i.TransformToOp(e, t)

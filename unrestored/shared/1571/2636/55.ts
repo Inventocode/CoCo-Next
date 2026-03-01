@@ -8,25 +8,25 @@
 
 export { EXTENSION_WIDGET_MESSAGE_TYPE as a }
 export { d as b }
-import * as r from "./6"
-import * as o from "./27"
-import * as i from "./39"
-import * as a from "./68"
-import * as /* [auto-meaningful-name] */$_28_index from "./28/index"
-import * as /* [auto-meaningful-name] */$_20_index from "./20/index"
-import * as l from "./91"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"./28/index"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"./20/index"
+import * as /* [auto-meaningful-name] */Module_91 from /* 91 */"./91"
 var /* [auto-meaningful-name] */EXTENSION_WIDGET_MESSAGE_TYPE = "EXTENSION_WIDGET_MESSAGE_TYPE"
 var d = new (function () {
   function e() {
-    o.a(this, e)
+    Module_27.a(this, e)
   }
-  i.a(e, [
+  Module_39.a(e, [
     {
       key: "_pushMessage",
       value: function (e) {
-        l.a({
-          type: a.b.RUNTIME_LOG,
-          data: r.a({
+        Module_91.a({
+          type: Module_68.b.RUNTIME_LOG,
+          data: Module_6.a({
             msgType: "WIDGET_MESSAGE_TYPE"
           }, e)
         })
@@ -34,10 +34,10 @@ var d = new (function () {
     }, {
       key: "_pushWidgetMessage",
       value: function (e) {
-        var t = $_20_index.currentContext()
-        l.a({
-          type: a.b.RUNTIME_LOG,
-          data: r.a(r.a({}, e), {}, {
+        var t = Module_20.currentContext()
+        Module_91.a({
+          type: Module_68.b.RUNTIME_LOG,
+          data: Module_6.a(Module_6.a({}, e), {}, {
             msgType: EXTENSION_WIDGET_MESSAGE_TYPE,
             screenId: "log" === e.type ? "" : (null === t || undefined === t ? undefined : t.screenId) || "",
             blockId: "log" === e.type ? "" : (null === t || undefined === t ? undefined : t.blockId) || ""
@@ -47,8 +47,8 @@ var d = new (function () {
     }, {
       key: "push",
       value: function (e) {
-        l.a({
-          type: a.b.RUNTIME_LOG,
+        Module_91.a({
+          type: Module_68.b.RUNTIME_LOG,
           data: e
         })
       }
@@ -70,7 +70,7 @@ var d = new (function () {
           type: "log",
           blockId: "",
           screenId: "",
-          message: $_28_index.o(e),
+          message: Module_28.o(e),
           values: t
         })
       }
@@ -105,28 +105,28 @@ var d = new (function () {
           widgetType: e.widgetType,
           blockId: "",
           screenId: "",
-          message: $_28_index.o(e.message),
+          message: Module_28.o(e.message),
           values: e.values
         })
       }
     }, {
       key: "widgetLog",
       value: function (e) {
-        this._pushWidgetMessage(r.a(r.a({}, e), {}, {
+        this._pushWidgetMessage(Module_6.a(Module_6.a({}, e), {}, {
           type: "log"
         }))
       }
     }, {
       key: "widgetWarn",
       value: function (e) {
-        this._pushWidgetMessage(r.a(r.a({}, e), {}, {
+        this._pushWidgetMessage(Module_6.a(Module_6.a({}, e), {}, {
           type: "warning"
         }))
       }
     }, {
       key: "widgetError",
       value: function (e) {
-        this._pushWidgetMessage(r.a(r.a({}, e), {}, {
+        this._pushWidgetMessage(Module_6.a(Module_6.a({}, e), {}, {
           type: "error"
         }))
       }

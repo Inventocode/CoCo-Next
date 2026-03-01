@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../187")
-var i = require("../461")
-var o = require("../338")
-var a = require("../63")
-var s = require("../222")
+var r = require(/* 187 */"../187")
+var i = require(/* 461 */"../461")
+var o = require(/* 338 */"../338")
+var a = require(/* 63 */"../63")
+var s = require(/* 222 */"../222")
 !function () {
   function t() {}
   t.prototype.write = function (e, n, s, u) {

@@ -4,4 +4,4 @@
  * 模块 ID：1594
  */
 
-require("./1581/442/index")("toPrimitive")
+require(/* 442 */"./1581/442/index")("toPrimitive")

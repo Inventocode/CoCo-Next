@@ -9,11 +9,11 @@ export function setPathsByImportName(config: UnpackConfig, modules: ModuleMap): 
         (module: Module): boolean => module.isEntry
     )
     for (const module of entryModules) {
-        module.path = ["index"]
+        module.unrestoredPath = ["index"]
     }
     const queue = new PriorityQueue<Module>({
         comparator(a: Module, b: Module): number {
-            return a.path.length - b.path.length
+            return a.unrestoredPath.length - b.unrestoredPath.length
         },
         initialValues: entryModules
     })
@@ -29,14 +29,14 @@ export function setPathsByImportName(config: UnpackConfig, modules: ModuleMap): 
                 if ((visited[key] ?? 0) >= 3) {
                     continue
                 }
-                importedModule.path = getModulePathFromImportName(name)
+                importedModule.unrestoredPath = getModulePathFromImportName(name)
                 visited[key] = 3
             } else if (/^__WEBPACK_IMPORTED_MODULE_[0-9]+__/.test(name)) {
                 if ((visited[key] ?? 0) >= 2) {
                     continue
                 }
-                importedModule.path = [
-                    ...module.path.slice(0, -1),
+                importedModule.unrestoredPath = [
+                    ...module.unrestoredPath.slice(0, -1),
                     ...getModulePathFromImportName(name)
                 ]
                 visited[key] = 2
@@ -44,8 +44,8 @@ export function setPathsByImportName(config: UnpackConfig, modules: ModuleMap): 
                 if ((visited[key] ?? 0) >= 1) {
                     continue
                 }
-                importedModule.path = [
-                    ...module.path.slice(0, -1),
+                importedModule.unrestoredPath = [
+                    ...module.unrestoredPath.slice(0, -1),
                     ...getModulePathFromImportName(name)
                 ]
                 visited[key] = 1
@@ -54,7 +54,7 @@ export function setPathsByImportName(config: UnpackConfig, modules: ModuleMap): 
         }
     }
     for (const [key, module] of Object.entries(modules)) {
-        module.path.push(module.path.pop() + "-" + String(key).replace(/\//g, "_"))
+        module.unrestoredPath.push(module.unrestoredPath.pop() + "-" + String(key).replace(/\//g, "_"))
     }
     postProcess(config, modules)
 }
@@ -74,11 +74,11 @@ export function setPathsByDependency(config: UnpackConfig, modules: ModuleMap): 
         (module: Module): boolean => module.isEntry
     )
     for (const module of entryModules) {
-        module.path = [String(module.key).replace(/\//g, "")]
+        module.unrestoredPath = [String(module.key).replace(/\//g, "")]
     }
     const queue = new PriorityQueue<Module>({
         comparator(a: Module, b: Module): number {
-            return a.path.length - b.path.length
+            return a.unrestoredPath.length - b.unrestoredPath.length
         },
         initialValues: entryModules
     })
@@ -90,7 +90,7 @@ export function setPathsByDependency(config: UnpackConfig, modules: ModuleMap): 
                 continue
             }
             visited[importedModule.key] = true
-            importedModule.path = [...module.path, String(importedModule.key).replace(/\//g, "")]
+            importedModule.unrestoredPath = [...module.unrestoredPath, String(importedModule.key).replace(/\//g, "")]
             queue.queue(importedModule)
         }
     }
@@ -99,14 +99,11 @@ export function setPathsByDependency(config: UnpackConfig, modules: ModuleMap): 
 
 function postProcess(config: UnpackConfig, modules: ModuleMap) {
     for (const module of Object.values(modules)) {
-        if (module.external) {
+        module.unrestoredPath.unshift(...config.output.unrestoredPath.split("/").filter(Boolean))
+        if (module.external && module.external != ".") {
             module.path = module.external.split("/").filter(Boolean)
-        }
-        if (module.external == ".") {
-            continue
-        }
-        if (!module.moved) {
-            module.path.unshift(...config.output.unrestoredPath.split("/").filter(Boolean))
+        } else {
+            module.path = module.unrestoredPath
         }
     }
 }

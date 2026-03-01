@@ -4,9 +4,9 @@
  * 模块 ID：1583
  */
 
-var r = require("../../1282/231")
-var o = require("../../1581/830")
-var i = require("../../1282/246/index")("species")
+var r = require(/* 231 */"../../1282/231")
+var o = require(/* 830 */"../../1581/830")
+var i = require(/* 246 */"../../1282/246/index")("species")
 module.exports = function (e) {
   var t
   if (o(e)) {

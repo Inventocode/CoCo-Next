@@ -6,6 +6,6 @@
 
 "use strict"
 
-var r = require("react")
+var r = require(/* 0 */"react")
 var i = r.createContext({})
 exports.a = i

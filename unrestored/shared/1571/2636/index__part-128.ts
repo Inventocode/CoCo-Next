@@ -6,54 +6,53 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_557 from "./557"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_147 from "./147"
-import * as /* [auto-meaningful-name] */$_1520 from "./1520"
-import /* [auto-meaningful-name] */$_15201 from "./1520"
-import * as /* [auto-meaningful-name] */$_421 from "./421"
-import /* [auto-meaningful-name] */$_4211 from "./421"
+import * as /* [auto-meaningful-name] */Module_557 from /* 557 */"./557"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_147 from /* 147 */"./147"
+import * as /* [auto-meaningful-name] */Module_1520 from /* 1520 */"./1520"
+import /* [auto-meaningful-name] */Module_15201 from /* 1520 */"./1520"
+import * as /* [auto-meaningful-name] */Module_421 from /* 421 */"./421"
+import /* [auto-meaningful-name] */Module_4211 from /* 421 */"./421"
 var Tw = {
   columns: [],
   rows: []
 }
-var Sw = memo(function (e) {
+var Sw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var r = e$getValue("cloudDbId")
   var o = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var a = Et.Bb(e$widgetId)
-  var s = useState(Tw)
-  var c = $_10_index.a(s, 2)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var a = Module_9.Bb(e$widgetId)
+  var s = React1.useState(Tw)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = useState(true)
-  var p = $_10_index.a(d, 2)
+  var d = React1.useState(true)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = useRef(false)
-  useEffect(function () {
+  var v = React1.useRef(false)
+  React1.useEffect(function () {
     return function () {
       v.current = true
     }
   }, [])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (a && r) {
       u(Tw)
       g(true)
-      Promise.all([$_147.e(r, "dev"), $_147.f(r, "dev", 0, 500)]).then(function (e) {
-        var t = $_10_index.a(e, 2)
+      Promise.all([Module_147.e(r, "dev"), Module_147.f(r, "dev", 0, 500)]).then(function (e) {
+        var t = Module_10.a(e, 2)
         var n = t[0]
         var r = t[1]
         g(false)
@@ -95,8 +94,8 @@ var Sw = memo(function (e) {
   }
   function b() {
     if (a) {
-      o($$_$$_$$_$$_src_editor_redux_common_actions.Xh(""))
-      o($$_$$_$$_$$_src_editor_redux_common_actions.ij(e$getValue("name"), true, r, false, function () {}))
+      o(Src_editor_redux_common_actions.Xh(""))
+      o(Src_editor_redux_common_actions.ij(e$getValue("name"), true, r, false, function () {}))
     }
   }
   var y = function (e) {
@@ -105,21 +104,21 @@ var Sw = memo(function (e) {
     var r = l.rows[e$index - 1]
     var /* [auto-meaningful-name] */l$columns = l.columns
     return 0 === e$index ? React.createElement("div", {
-      className: $_4211.listItem,
+      className: Module_4211.listItem,
       key: e$index,
       style: e$style
     }, l$columns.map(function (e, t) {
       return React.createElement("div", {
-        className: $_4211.column,
+        className: Module_4211.column,
         key: "".concat(e, "-").concat(t)
       }, e)
     })) : React.createElement("div", {
-      className: $_4211.listItem,
+      className: Module_4211.listItem,
       key: e$index,
       style: e$style
     }, r.value.map(function (e, t) {
       return React.createElement("div", {
-        className: $_4211.row,
+        className: Module_4211.row,
         key: "".concat(r.id, "-").concat(e, "-").concat(t)
       }, React.createElement("span", {
         title: String(e)
@@ -127,40 +126,40 @@ var Sw = memo(function (e) {
     }))
   }
   return React.createElement("div", {
-    className: Classnames($_4211.formItemWrapper, $_4211.cloudDBList)
+    className: Classnames(Module_4211.formItemWrapper, Module_4211.cloudDBList)
   }, m ? React.createElement("div", {
-    className: $_4211.loadingArea
+    className: Module_4211.loadingArea
   }, React.createElement("img", {
-    src: $_15201,
+    src: Module_15201,
     alt: "loading"
-  }), React.createElement("span", null, $_710$a$formatMessage({
+  }), React.createElement("span", null, Module_710$a$formatMessage({
     id: "cloudDBWidget.loading"
   }))) : React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_4211.title
-  }, React.createElement("div", null, $_710$a$formatMessage({
+    className: Module_4211.title
+  }, React.createElement("div", null, Module_710$a$formatMessage({
     id: "cloudDBWidget.data"
-  }), React.createElement($_1213.a, {
+  }), React.createElement(Module_1213.a, {
     content: React.createElement("div", {
-      className: $_4211.btnContent
-    }, React.createElement("div", null, " ", $_710$a$formatMessage({
+      className: Module_4211.btnContent
+    }, React.createElement("div", null, " ", Module_710$a$formatMessage({
       id: "cloudDBWidget.tipsContent"
     }))),
     placement: "rightTop",
     trigger: "click"
   }, React.createElement("div", {
-    className: $_4211.btn
+    className: Module_4211.btn
   }, "?"))), React.createElement("div", {
-    className: $_4211.editBtnBox
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
-    className: $_4211.editBtn,
+    className: Module_4211.editBtnBox
+  }, React.createElement(Src_shared_ui_components_index.d, {
+    className: Module_4211.editBtn,
     onClick: b
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-storage-edit"
   })))), React.createElement("div", {
-    className: $_4211.list
+    className: Module_4211.list
   }, React.createElement("div", {
-    className: $_4211.itemWrapper
-  }, l.columns && l.columns.length > 0 && React.createElement($_557.a, {
+    className: Module_4211.itemWrapper
+  }, l.columns && l.columns.length > 0 && React.createElement(Module_557.a, {
     width: l.columns.length >= 5 ? 100 * l.columns.length : "auto",
     height: 32 * (l.rows.length > 15 ? 14.5 : l.rows.length + 1),
     itemCount: l.rows.length + 1,

@@ -9,24 +9,23 @@
 import { l } from "./800__part-0"
 import { p } from "./800__part-1"
 import { h, m } from "./800__part-2"
-import * as /* [auto-meaningful-name] */$$_21 from "../21"
-import * as /* [auto-meaningful-name] */$$_241_index from "../241/index"
-import /* [auto-meaningful-name] */React from "react"
-import { Component, createContext, useRef, useContext, isValidElement, useMemo, useCallback, useEffect, createElement, cloneElement } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$$_103 from "../103"
-import * as /* [auto-meaningful-name] */$$_106 from "../106"
-import * as /* [auto-meaningful-name] */$$_120 from "../120"
-import * as /* [auto-meaningful-name] */$$_140 from "../140"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
+import * as /* [auto-meaningful-name] */Module_241 from /* 241 */"../241/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../106"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../120"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../140"
 var y = function (e) {
-  $$_120.a(n, e)
-  var t = $$_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n() {
-    $$_103.a(this, n)
+    Module_103.a(this, n)
     return t.apply(this, arguments)
   }
-  $$_106.a(n, [
+  Module_106.a(n, [
     {
       key: "render",
       value: function () {
@@ -35,28 +34,28 @@ var y = function (e) {
     }
   ])
   return n
-}(Component)
-var E = createContext(null)
+}(React1.Component)
+var E = React1.createContext(null)
 function O(e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$disabled = e.disabled
-  var r = useRef(null)
-  var i = useRef(null)
-  var c = useContext(E)
-  var u = useRef({
+  var r = React1.useRef(null)
+  var i = React1.useRef(null)
+  var c = React1.useContext(E)
+  var u = React1.useRef({
     width: 0,
     height: 0,
     offsetWidth: 0,
     offsetHeight: 0
   })
-  var d = isValidElement(e$children) && function (e) {
+  var d = React1.isValidElement(e$children) && function (e) {
     var /* [auto-meaningful-name] */r$prototype
     var /* [auto-meaningful-name] */e$prototype
-    var r = $$_241_index.isMemo(e) ? e.type.type : e.type
+    var r = Module_241.isMemo(e) ? e.type.type : e.type
     return !("function" === typeof r && !(null === (r$prototype = r.prototype) || undefined === r$prototype ? undefined : r$prototype.render)) && !("function" === typeof e && !(null === (e$prototype = e.prototype) || undefined === e$prototype ? undefined : e$prototype.render))
   }(e$children)
   var f = d ? e$children.ref : null
-  var g = useMemo(function () {
+  var g = React1.useMemo(function () {
     return function () {
       for (var /* [auto-meaningful-name] */arguments$length = arguments.length, t = new Array(arguments$length), n = 0; n < arguments$length; n++) {
         t[n] = arguments[n]
@@ -68,9 +67,9 @@ function O(e) {
       }
     }(f, r)
   }, [f, r])
-  var _ = useRef(e)
+  var _ = React1.useRef(e)
   _.current = e
-  var v = useCallback(function (e) {
+  var v = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */_$current = _.current
     var /* [auto-meaningful-name] */_$current$onResize = _$current.onResize
     var /* [auto-meaningful-name] */_$current$data = _$current.data
@@ -91,7 +90,7 @@ function O(e) {
       u.current = h
       var m = e$offsetWidth === Math.round(o$width) ? o$width : e$offsetWidth
       var g = e$offsetHeight === Math.round(o$height) ? o$height : e$offsetHeight
-      var v = $$_21.a($$_21.a({}, h), {}, {
+      var v = Module_21.a(Module_21.a({}, h), {}, {
         offsetWidth: m,
         offsetHeight: g
       })
@@ -105,7 +104,7 @@ function O(e) {
       }
     }
   }, [])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e
     var t
     var o = p(r.current) || p(i.current)
@@ -130,9 +129,9 @@ function O(e) {
       }(o, v)
     }
   }, [r.current, e$disabled])
-  return createElement(y, {
+  return React1.createElement(y, {
     ref: i
-  }, d ? cloneElement(e$children, {
+  }, d ? React1.cloneElement(e$children, {
     ref: g
   }) : e$children)
 }
@@ -145,7 +144,7 @@ function w(e) {
         if (Array.isArray(t)) {
           r = r.concat(e(t))
         } else {
-          if ($$_241_index.isFragment(t) && t.props) {
+          if (Module_241.isFragment(t) && t.props) {
             r = r.concat(e(t.props.children, n))
           } else {
             r.push(t)
@@ -156,7 +155,7 @@ function w(e) {
     return r
   }(e.children).map(function (t, n) {
     var i = (null === t || undefined === t ? undefined : t.key) || "".concat("rc-observer-key", "-").concat(n)
-    return createElement(O, $$_19.a({}, e, {
+    return React1.createElement(O, Module_19.a({}, e, {
       key: i
     }), t)
   })
@@ -164,10 +163,10 @@ function w(e) {
 w.Collection = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onBatchResize = e.onBatchResize
-  var r = useRef(0)
-  var i = useRef([])
-  var a = useContext(E)
-  var s = useCallback(function (e, t, o) {
+  var r = React1.useRef(0)
+  var i = React1.useRef([])
+  var a = React1.useContext(E)
+  var s = React1.useCallback(function (e, t, o) {
     r.current += 1
     var /* [auto-meaningful-name] */r$current = r.current
     i.current.push({
@@ -187,7 +186,7 @@ w.Collection = function (e) {
       a(e, t, o)
     }
   }, [e$onBatchResize, a])
-  return createElement(E.Provider, {
+  return React1.createElement(E.Provider, {
     value: s
   }, e$children)
 }

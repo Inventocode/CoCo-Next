@@ -5,23 +5,23 @@
  */
 
 import { Mv } from "../../../../../../unrestored/shared/1571/2636/index__part-88"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_components_iconfont_index from "../../../../../shared/ui/components/iconfont/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49 from "../../../../../../unrestored/shared/1571/2636/49"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238 from "../../../../../../unrestored/shared/1571/2636/238"
+import * as /* [auto-meaningful-name] */Shared_ui_components_iconfont_index from "../../../../../shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"../../../../../../unrestored/shared/1571/2636/49"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"../../../../../../unrestored/shared/1571/2636/238"
 import * as BuiltInWidgetTypes from "../../../../widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index from "../../../../../../unrestored/shared/1571/2636/26/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_tools from "../../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../../../../../../unrestored/shared/1571/2636/26/index"
+import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */Shared_tools from "../../../../../shared/tools"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../../unrestored/shared/1571/2636/18"
 import * as CommonActions from "../../../../redux/common/actions"
 import * as Components from "../../../../../shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11 from "../../../../../../unrestored/shared/1571/2636/11"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../../../../unrestored/shared/1571/2636/11"
 import classnames from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useRef, useState, useEffect } from "react"
@@ -49,17 +49,17 @@ const WidgetListItem = memo(function (e) {
   var /* [auto-meaningful-name] */e$readonly = e.readonly
   var w = undefined !== e$readonly && e$readonly
   var /* [auto-meaningful-name] */e$isInvisibleWidget = e.isInvisibleWidget
-  var /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var A = useRef(null)
   var j = useSelector(function (e) {
     return e.block.flyoutVisible
   })
   var R = useState(true)
-  var x = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(R, 2)
+  var x = Module_10.a(R, 2)
   var D = x[0]
   var M = x[1]
   var L = useState(false)
-  var P = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(L, 2)
+  var P = Module_10.a(L, 2)
   var B = P[0]
   var F = P[1]
   useEffect(function () {
@@ -93,7 +93,7 @@ const WidgetListItem = memo(function (e) {
     e$onCopyToCurrentScreen(n)
   }
   return <div className={classnames(styles.itemWrapper, E)}>
-    {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
+    {<Module_1213.a
       placement="bottomLeft"
       trigger="hover"
       onVisibleChange={function (e) {
@@ -115,7 +115,7 @@ const WidgetListItem = memo(function (e) {
             className={styles.menuItem}
             onMouseDown={W}
           >
-            {$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
+            {Module_710$a$formatMessage({
               id: "copyAndPaste"
             })}
           </div>}
@@ -123,7 +123,7 @@ const WidgetListItem = memo(function (e) {
             className={classnames(styles.menuItem, styles.delete)}
             onMouseDown={G}
           >
-            {$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710$a$formatMessage({
+            {Module_710$a$formatMessage({
               id: "delete"
             })}
           </div>}
@@ -132,7 +132,7 @@ const WidgetListItem = memo(function (e) {
     >
       {<div
         ref={A}
-        className={classnames(styles.item, (t = {}, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.selected, e$selected && j), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.selectedLight, e$selected && !j), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.children, e$isChildren), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.parent, !!e$children), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.expanded, D), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.notLast, !e$isLast && e$isChildren), t))}
+        className={classnames(styles.item, (t = {}, Module_11.a(t, styles.selected, e$selected && j), Module_11.a(t, styles.selectedLight, e$selected && !j), Module_11.a(t, styles.children, e$isChildren), Module_11.a(t, styles.parent, !!e$children), Module_11.a(t, styles.expanded, D), Module_11.a(t, styles.notLast, !e$isLast && e$isChildren), t))}
         onContextMenu={function (e) {
           e.preventDefault()
           if (!(w || e$type !== BuiltInWidgetTypes.c && e$type !== BuiltInWidgetTypes.a && e$isChildren)) {
@@ -153,17 +153,17 @@ const WidgetListItem = memo(function (e) {
               e.stopPropagation()
             }}
           >
-            {<$$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a
+            {<Shared_ui_components_iconfont_index.a
               type="icon-fold-left"
               className={styles.foldIcon}
             />}
           </span>}
-          {$$_$$_$$_$$_$$_shared_tools.X(e$icon) ? <img
+          {Shared_tools.X(e$icon) ? <img
             className={classnames(styles.widgetIcon, styles.widgetUrlIcon)}
             src={e$icon}
             alt={e$title}
             draggable={false}
-          /> : <$$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a
+          /> : <Shared_ui_components_iconfont_index.a
             type={e$icon}
             className={styles.widgetIcon}
           />}
@@ -187,7 +187,7 @@ const WidgetListItem = memo(function (e) {
             }}
             className={classnames(styles.controlIcon, styles.seeIcon)}
           >
-            {<$$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a
+            {<Shared_ui_components_iconfont_index.a
               type={e$visible ? "icon-see" : "icon-see-disable"}
             />}
           </div>}
@@ -198,13 +198,13 @@ const WidgetListItem = memo(function (e) {
             }}
             className={styles.controlIcon}
           >
-            {<$$_$$_$$_$$_$$_shared_ui_components_iconfont_index.a
+            {<Shared_ui_components_iconfont_index.a
               type="icon-attribute"
             />}
           </div>}
         </div>}
       </div>}
-    </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a>}
+    </Module_1213.a>}
     {D && e$children}
   </div>
 })
@@ -217,7 +217,7 @@ interface IRenderWidgetListOptions {
 }
 
 export const WidgetTree = memo(() => {
-  var { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  var { formatMessage } = Module_710.a()
   var r = useDispatch()
   var o = useRef()
   const editAreaUpdatedAt = useSelector((state) => state.common.editAreaUpdatedAt)
@@ -225,12 +225,12 @@ export const WidgetTree = memo(() => {
   const selectedWidgetId = useSelector((state) => state.project.selectedWidgetId)
   const globalWidgetIds = useSelector((state) => state.project.globalWidgetIds)
   const flyoutVisible = useSelector((state) => state.block.flyoutVisible)
-  const currentScreen = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_238.d()
+  const currentScreen = Module_238.d()
   const [isFold, setIsFold] = useState(false)
   const [y, E] = useState(false)
   const [C, T] = useState(false)
   const [R, D] = useState(false)
-  const readonly = useSelector((state) => state.uiConfig.widgetEditor) === $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.j.ReadOnly
+  const readonly = useSelector((state) => state.uiConfig.widgetEditor) === Module_18.j.ReadOnly
 
   if (!currentScreen) {
     return null
@@ -244,12 +244,12 @@ export const WidgetTree = memo(() => {
       r(CommonActions.fj(false))
     } else {
       if (selectedWidgetId === e && flyoutVisible) {
-        $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
-        if (!(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t)) {
+        Module_26.g.setSelectedItem()
+        if (!(null === (t = Module_26.g.getToolbox()) || undefined === t)) {
           t.flyout.hide()
         }
       } else {
-        $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (n = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(e))
+        Module_26.g.setSelectedItem(null === (n = Module_26.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(e))
       }
     }
   }
@@ -258,11 +258,11 @@ export const WidgetTree = memo(() => {
     var t
     var n
     if (!(r(CommonActions.ug(e)), selectedWidgetId === e && flyoutVisible)) {
-      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(e))
+      Module_26.g.setSelectedItem(null === (t = Module_26.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(e))
     }
     if (selectedWidgetId === e && widgetAttributeVisible) {
       r(CommonActions.fj(false))
-      if (!(null === (n = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n)) {
+      if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
         n.refresh_selection()
       }
     } else {
@@ -279,18 +279,18 @@ export const WidgetTree = memo(() => {
   }
 
   function G(e) {
-    r(CommonActions.Ef($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.w(e)))
+    r(CommonActions.Ef(Module_9.w(e)))
   }
 
   function W(e) {
-    var t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
+    var t = Module_9.Bb(e)
     if (t) {
-      var i = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Fb(t.id || "")
+      var i = Module_9.Fb(t.id || "")
       var a = formatMessage({
         id: "deleteWidget"
-      }) + "“" + $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(i, 10) + "”?"
+      }) + "“" + Module_190.f(i, 10) + "”?"
       if (t.type === BuiltInWidgetTypes.h) {
-        o.current = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
+        o.current = Module_9.Bb(e)
         return void r(CommonActions.zh({
           onConfirm: H,
           onClose: V,
@@ -304,10 +304,10 @@ export const WidgetTree = memo(() => {
           })
         }))
       }
-      var s = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.checkFieldValueIsSelected("WIDGET_ID", e)
-      var c = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.z.checkSomeFieldValueIsSelected("WIDGET_ID", $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.U(e))
+      var s = Module_26.z.checkFieldValueIsSelected("WIDGET_ID", e)
+      var c = Module_26.z.checkSomeFieldValueIsSelected("WIDGET_ID", Module_9.U(e))
       if (s || c) {
-        o.current = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(e)
+        o.current = Module_9.Bb(e)
         r(CommonActions.zh({
           onConfirm: H,
           onClose: V,
@@ -333,12 +333,12 @@ export const WidgetTree = memo(() => {
     var o = e
     r(CommonActions.ug(o))
     if (selectedWidgetId === o && flyoutVisible) {
-      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
-      if (!(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t)) {
+      Module_26.g.setSelectedItem()
+      if (!(null === (t = Module_26.g.getToolbox()) || undefined === t)) {
         t.flyout.hide()
       }
     } else {
-      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (n = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(o))
+      Module_26.g.setSelectedItem(null === (n = Module_26.g.getToolbox()) || undefined === n ? undefined : n.find_node_by_name(o))
     }
   }
 
@@ -360,14 +360,14 @@ export const WidgetTree = memo(() => {
   const currentScreenWidgetsMap = new Map()
 
   currentScreen.widgetIds.forEach((id) => {
-    const types = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(id)
+    const types = Module_9.Bb(id)
     if (types) {
       if (types && !types.parentId) {
         currentScreenWidgetsMap.set(id, { widget: types })
       }
       const { type } = types
       if (types && !currentScreenAnyWidgetIds.includes(type)) {
-        var o = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(types.type)
+        var o = Module_9.Db(types.type)
         if (o && o.hasAnyWidget) {
           currentScreenAnyWidgetIds.push(type)
           currentScreenAnyWidgets.push({
@@ -391,7 +391,7 @@ export const WidgetTree = memo(() => {
       entry.widget.type !== BuiltInWidgetTypes.NEW_LIST_VIEWER_WIDGET
     )) {
       entry.widget.widgetIds.forEach((widgetId) => {
-        const types = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(widgetId)
+        const types = Module_9.Bb(widgetId)
         if (types) {
           if (!entry.children) {
             entry.children = []
@@ -409,7 +409,7 @@ export const WidgetTree = memo(() => {
   const invisibleWidgets = []
   const invisibleWidgetIds = []
   currentScreen.invisibleWidgetIds?.forEach((type) => {
-    const types = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(type)
+    const types = Module_9.Bb(type)
     if (types) {
       invisibleWidgets.push({
         widget: types
@@ -421,7 +421,7 @@ export const WidgetTree = memo(() => {
   const globalWidgets = []
   const globalWidgetIdsExceptForDatabaseWidget: string[] = []
   globalWidgetIds.forEach((type) => {
-    const widget = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(type)
+    const widget = Module_9.Bb(type)
     if (widget && widget.type !== BuiltInWidgetTypes.DATABASE_WIDGET) {
       globalWidgets.push({ widget: widget })
       globalWidgetIdsExceptForDatabaseWidget.push(widget.id)
@@ -432,9 +432,9 @@ export const WidgetTree = memo(() => {
     return <>{widgets.reverse().map(({ widget, children }, index) => <WidgetListItem
       className={parentId}
       id={widget.id}
-      icon={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Db(widget.type)?.icon || ""}
+      icon={Module_9.Db(widget.type)?.icon || ""}
       type={widget.type}
-      title={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Fb(widget.id)}
+      title={Module_9.Fb(widget.id)}
       visible={widget.visible}
       readonly={readonly}
       key={widget.id}
@@ -474,13 +474,13 @@ export const WidgetTree = memo(() => {
               (function (fromIndex, toIndex, options) {
                 if (!(fromIndex < 0 || toIndex < 0)) {
                   if (options?.parentId) {
-                    var o = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(null === options || undefined === options ? undefined : options.parentId)
+                    var o = Module_9.Bb(null === options || undefined === options ? undefined : options.parentId)
                     var /* [auto-meaningful-name] */o$widgetIds = o.widgetIds
                     var a = o$widgetIds.length - fromIndex - 1
                     var s = o$widgetIds.length - toIndex - 1
                     var c = o$widgetIds.splice(a, 1)
-                    var l = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(c, 1)[0]
-                    var d = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(o$widgetIds)
+                    var l = Module_10.a(c, 1)[0]
+                    var d = Module_25.a(o$widgetIds)
                     d.splice(s, 0, l)
                     r(CommonActions.Mg(currentScreen.id, o.id, d, true, true, true))
                   } else {
@@ -498,8 +498,8 @@ export const WidgetTree = memo(() => {
                     }
                     widgetIds.splice(y, 1)
                     widgetIds.splice(b, 0, g)
-                    r(CommonActions.Bj(currentScreen.id, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(widgetIds), null === options || undefined === options ? undefined : options.isInvisibleWidget))
-                    if (!(null === (po$oTHelper$widget = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_49.oTHelper.widget) || undefined === po$oTHelper$widget)) {
+                    r(CommonActions.Bj(currentScreen.id, Module_25.a(widgetIds), null === options || undefined === options ? undefined : options.isInvisibleWidget))
+                    if (!(null === (po$oTHelper$widget = Module_49.oTHelper.widget) || undefined === po$oTHelper$widget)) {
                       po$oTHelper$widget.clientOp.moveWidget(currentScreen.id, y, b)
                     }
                   }
@@ -531,12 +531,12 @@ export const WidgetTree = memo(() => {
           r(CommonActions.ug(undefined))
           if (selectedWidgetId || !widgetAttributeVisible) {
             if (!selectedWidgetId && flyoutVisible) {
-              $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem()
-              if (!(null === (e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === e)) {
+              Module_26.g.setSelectedItem()
+              if (!(null === (e = Module_26.g.getToolbox()) || undefined === e)) {
                 e.flyout.hide()
               }
             } else {
-              $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(currentScreen.id))
+              Module_26.g.setSelectedItem(null === (t = Module_26.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(currentScreen.id))
             }
           } else {
             r(CommonActions.fj(false))
@@ -555,7 +555,7 @@ export const WidgetTree = memo(() => {
               var t
               e.stopPropagation()
               r(CommonActions.ug(undefined))
-              $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.setSelectedItem(null === (t = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_26_index.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(currentScreen.id))
+              Module_26.g.setSelectedItem(null === (t = Module_26.g.getToolbox()) || undefined === t ? undefined : t.find_node_by_name(currentScreen.id))
               r(!selectedWidgetId && widgetAttributeVisible ? CommonActions.fj(false) : CommonActions.fj(true))
             }}
             className={classnames(styles.controlIcon, styles.attributeIcon)}
@@ -611,10 +611,10 @@ export const WidgetTree = memo(() => {
             return <div
               onClick={U.bind(null, e$type)}
               key={e$type}
-              className={classnames(styles.item, (t = {}, $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.selected, selectedWidgetId === e$type && flyoutVisible), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.selectedLight, selectedWidgetId === e$type && !flyoutVisible), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_11.a(t, styles.parent, false), t))}
+              className={classnames(styles.item, (t = {}, Module_11.a(t, styles.selected, selectedWidgetId === e$type && flyoutVisible), Module_11.a(t, styles.selectedLight, selectedWidgetId === e$type && !flyoutVisible), Module_11.a(t, styles.parent, false), t))}
             >
               <div className={classnames(styles.left, styles.anyWidget)}>
-                {$$_$$_$$_$$_$$_shared_tools.X(e$icon) ? <img
+                {Shared_tools.X(e$icon) ? <img
                   className={classnames(styles.widgetIcon, styles.widgetUrlIcon)}
                   src={e$icon}
                   alt={e$title}

@@ -4,7 +4,7 @@
  * 模块 ID：2539
  */
 
-var r = require("./2540/index")
+var r = require(/* 2540 */"./2540/index")
 module.exports = function (e) {
   return r(e, 5)
 }

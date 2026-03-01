@@ -4,9 +4,9 @@
  * 模块 ID：2018
  */
 
-var r = require("../1334")
-var i = require("./2019")
-require("./1335")
+var r = require(/* 1334 */"../1334")
+var i = require(/* 2019 */"./2019")
+require(/* 1335 */"./1335")
 function o(e) {
   return undefined === e || null === e
 }

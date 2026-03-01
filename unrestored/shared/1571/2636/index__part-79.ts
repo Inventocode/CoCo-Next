@@ -7,21 +7,21 @@
 "use strict"
 
 import { yg } from "./index__part-150"
-import * as ng from "./64"
-import * as Yr from "./53"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_language from "../../../../src/shared/ui/language"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_123_index from "./123/index"
-import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_123 from /* 123 */"./123/index"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"./37/index"
 function Sg(e) {
-  var t = $_37_index.b()
+  var t = Module_37.b()
   return [
     {
       validator: function (e) {
@@ -29,36 +29,36 @@ function Sg(e) {
       },
       message: e ? e({
         id: "invalidVariableNoValue"
-      }) : $$_$$_$$_$$_src_shared_ui_language.c(t, "invalidVariableNoValue")
+      }) : Src_shared_ui_language.c(t, "invalidVariableNoValue")
     }, {
       validator: function (e) {
-        return Yr.A.test(e)
+        return Module_53.A.test(e)
       },
       message: e ? e({
         id: "invalidVariableFirstChar"
-      }) : $$_$$_$$_$$_src_shared_ui_language.c(t, "invalidVariableFirstChar")
+      }) : Src_shared_ui_language.c(t, "invalidVariableFirstChar")
     }, {
       validator: function (e) {
-        return Yr.B.test(e)
+        return Module_53.B.test(e)
       },
       message: e ? e({
         id: "invalidVariableName"
-      }) : $$_$$_$$_$$_src_shared_ui_language.c(t, "invalidVariableName")
+      }) : Src_shared_ui_language.c(t, "invalidVariableName")
     }, {
       validator: function (e) {
         return e.length <= 20
       },
       message: e ? e({
         id: "invalidVariableMaxLengthTips"
-      }) : $$_$$_$$_$$_src_shared_ui_language.c(t, "invalidVariableMaxLengthTips")
+      }) : Src_shared_ui_language.c(t, "invalidVariableMaxLengthTips")
     }
   ]
 }
 var Ag
 var Ig = {
   type: "basic",
-  value: Et.h,
-  text: Et.g
+  value: Module_9.h,
+  text: Module_9.g
 }
 function jg(e, t) {
   var /* [auto-meaningful-name] */c$invisibleWidgetIds
@@ -72,53 +72,53 @@ function jg(e, t) {
   var u = []
   if (c && c.widgetIds.length > 0) {
     c.widgetIds.forEach(function (n) {
-      var r = Et.dc.get(n)
+      var r = Module_9.dc.get(n)
       if (r && r.type === e) {
-        if (r.parentId && (e === $$_$$_$$_$$_src_editor_widget_builtIn_types.H || e === $$_$$_$$_$$_src_editor_widget_builtIn_types.v)) {
+        if (r.parentId && (e === Src_editor_widget_builtIn_types.H || e === Src_editor_widget_builtIn_types.v)) {
           return
         }
         if (t && t !== r.parentId) {
           return
         }
-        u.push([Et.Fb(r.id) || $$_$$_$$_$$_src_shared_ui_language.c(r$common$language, "untitled"), n])
+        u.push([Module_9.Fb(r.id) || Src_shared_ui_language.c(r$common$language, "untitled"), n])
       }
     })
   }
   if (c && (null === (c$invisibleWidgetIds = c.invisibleWidgetIds) || undefined === c$invisibleWidgetIds ? undefined : c$invisibleWidgetIds.length) > 0) {
     c.invisibleWidgetIds.forEach(function (t) {
-      var n = Et.dc.get(t)
+      var n = Module_9.dc.get(t)
       if (n && n.type === e) {
-        u.push([Et.Fb(n.id) || $$_$$_$$_$$_src_shared_ui_language.c(r$common$language, "untitled"), t])
+        u.push([Module_9.Fb(n.id) || Src_shared_ui_language.c(r$common$language, "untitled"), t])
       }
     })
   }
   if ((null === r$project$globalWidgetIds || undefined === r$project$globalWidgetIds ? undefined : r$project$globalWidgetIds.length) > 0) {
     r$project$globalWidgetIds.forEach(function (t) {
-      var n = Et.dc.get(t)
+      var n = Module_9.dc.get(t)
       if (n && n.type === e) {
-        u.push([Et.Fb(n.id) || $$_$$_$$_$$_src_shared_ui_language.c(r$common$language, "untitled"), t])
+        u.push([Module_9.Fb(n.id) || Src_shared_ui_language.c(r$common$language, "untitled"), t])
       }
     })
   }
   if (0 === u.length) {
-    u.push([Et.g, Et.h])
+    u.push([Module_9.g, Module_9.h])
   }
   return u
 }
 function Ng() {
   var /* [auto-meaningful-name] */yg$common$language = yg().common.language
   var t = []
-  Et.jb().forEach(function (e) {
+  Module_9.jb().forEach(function (e) {
     t.push({
       type: "basic",
       text: e.id,
       value: e.id
     })
   })
-  var n = $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "emptyImage")
+  var n = Src_shared_ui_language.c(yg$common$language, "emptyImage")
   var r = {
     type: "basic",
-    value: Et.f,
+    value: Module_9.f,
     text: n
   }
   t.push(Ig)
@@ -127,7 +127,7 @@ function Ng() {
 }
 function Rg() {
   var e = []
-  Et.gb().forEach(function (t) {
+  Module_9.gb().forEach(function (t) {
     e.push({
       type: "basic",
       text: t.name + ".svg",
@@ -141,7 +141,7 @@ function kg(e) {
   var /* [auto-meaningful-name] */yg$common$language = yg().common.language
   var n = []
   if (e) {
-    var r = Et.Bb(e)
+    var r = Module_9.Bb(e)
     if (r) {
       var /* [auto-meaningful-name] */r$attributes$actionList = r.attributes.actionList;
       (undefined === r$attributes$actionList ? [] : r$attributes$actionList).forEach(function (e) {
@@ -155,7 +155,7 @@ function kg(e) {
   }
   var i = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "ActorStyleDialog.addAction"),
+    text: Src_shared_ui_language.c(yg$common$language, "ActorStyleDialog.addAction"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {}
   }
@@ -164,7 +164,7 @@ function kg(e) {
 function xg(e, t) {
   var n = []
   if (e) {
-    var r = Et.Bb(e)
+    var r = Module_9.Bb(e)
     if (r) {
       var o
       var /* [auto-meaningful-name] */r$attributes$actionList = r.attributes.actionList
@@ -190,7 +190,7 @@ function xg(e, t) {
   var /* [auto-meaningful-name] */yg$common$language = yg().common.language
   var l = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "actorAddStyle"),
+    text: Src_shared_ui_language.c(yg$common$language, "actorAddStyle"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {}
   }
@@ -244,14 +244,14 @@ function Dg(e) {
   }
   var u = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addPrimitiveVariableName"),
+    text: Src_shared_ui_language.c(t$common$language, "addPrimitiveVariableName"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+      Module_37.a(Src_editor_redux_common_actions.nj({
         title: "addPrimitiveVariableName",
-        placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addPrimitiveVariableNamePlaceholder"),
+        placeholder: Src_shared_ui_language.c(t$common$language, "addPrimitiveVariableNamePlaceholder"),
         onConfirm: function (t, n) {
-          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.uf(n, ng.a("VARIABLE"), t, 0, a.id, 0, function (t) {
+          Module_37.a(Src_editor_redux_common_actions.uf(n, Module_64.a("VARIABLE"), t, 0, a.id, 0, function (t) {
             e.set_value(t)
           }))
         },
@@ -259,7 +259,7 @@ function Dg(e) {
           {
             validator: function (e, t) {
               var n = a.primitiveVariables.concat(t$project$globalVariableList)
-              if (t === K.i.GLOBAL) {
+              if (t === Module_18.i.GLOBAL) {
                 t$project$screens.forEach(function (e) {
                   n = n.concat(e.primitiveVariables)
                 })
@@ -268,9 +268,9 @@ function Dg(e) {
                 return t.name === e
               })
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "primitiveVariableNameRepeat")
+            message: Src_shared_ui_language.c(t$common$language, "primitiveVariableNameRepeat")
           }
-        ].concat($_25_index.a(Sg()))
+        ].concat(Module_25.a(Sg()))
       }))
     }
   }
@@ -324,14 +324,14 @@ function Mg(e) {
   }
   var u = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addArrayVariableName"),
+    text: Src_shared_ui_language.c(t$common$language, "addArrayVariableName"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+      Module_37.a(Src_editor_redux_common_actions.nj({
         title: "addArrayVariableName",
-        placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addArrayVariableNamePlaceholder"),
+        placeholder: Src_shared_ui_language.c(t$common$language, "addArrayVariableNamePlaceholder"),
         onConfirm: function (t, n) {
-          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.of(n, ng.a("VARIABLE"), t, [], a.id, 0, function (t) {
+          Module_37.a(Src_editor_redux_common_actions.of(n, Module_64.a("VARIABLE"), t, [], a.id, 0, function (t) {
             e.set_value(t)
           }))
         },
@@ -339,7 +339,7 @@ function Mg(e) {
           {
             validator: function (e, t) {
               var n = a.arrayVariables.concat(t$project$globalArrayList)
-              if (t === K.i.GLOBAL) {
+              if (t === Module_18.i.GLOBAL) {
                 t$project$screens.forEach(function (e) {
                   n = n.concat(e.arrayVariables)
                 })
@@ -348,9 +348,9 @@ function Mg(e) {
                 return t.name === e
               })
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "arrayVariableNameRepeat")
+            message: Src_shared_ui_language.c(t$common$language, "arrayVariableNameRepeat")
           }
-        ].concat($_25_index.a(Sg()))
+        ].concat(Module_25.a(Sg()))
       }))
     }
   }
@@ -362,7 +362,7 @@ function Mg(e) {
   e.FETCH_DATA_FAILED = "FETCH_DATA_FAILED"
 }(Ag || (Ag = {}))
 function Lg(e, t) {
-  var n = $_123_index.create_svg_element("g", {
+  var n = Module_123.create_svg_element("g", {
     class: "blocklyVariableDropdownIcon",
     "data-icon-id": "#icon-screen-variable"
   })
@@ -378,7 +378,7 @@ function Lg(e, t) {
   }
 }
 function Pg(e, t, n) {
-  var r = $_123_index.create_svg_element("g", {
+  var r = Module_123.create_svg_element("g", {
     "data-icon-id": "__CUSTOM__".concat("broadcast_scene_index"),
     "font-size": "16"
   })
@@ -439,16 +439,16 @@ function Bg(e) {
   }
   var u = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "object.createNewObject"),
+    text: Src_shared_ui_language.c(t$common$language, "object.createNewObject"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+      Module_37.a(Src_editor_redux_common_actions.nj({
         title: "object.createNewObject",
-        placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "object.createNewObjectNamePlaceholder"),
+        placeholder: Src_shared_ui_language.c(t$common$language, "object.createNewObjectNamePlaceholder"),
         onConfirm: function (t, n) {
-          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.tf({
+          Module_37.a(Src_editor_redux_common_actions.tf({
             scopeType: n,
-            id: ng.a("OBJECT"),
+            id: Module_64.a("OBJECT"),
             name: t,
             defaultValue: {},
             screenId: a.id,
@@ -462,7 +462,7 @@ function Bg(e) {
           {
             validator: function (e, t) {
               var n = a.objectVariables.concat(t$project$globalObjectList)
-              if (t === K.i.GLOBAL) {
+              if (t === Module_18.i.GLOBAL) {
                 t$project$screens.forEach(function (e) {
                   n = n.concat(e.arrayVariables)
                 })
@@ -471,9 +471,9 @@ function Bg(e) {
                 return t.name === e
               })
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "object.nameRepeat")
+            message: Src_shared_ui_language.c(t$common$language, "object.nameRepeat")
           }
-        ].concat($_25_index.a(Sg()))
+        ].concat(Module_25.a(Sg()))
       }))
     }
   }
@@ -481,7 +481,7 @@ function Bg(e) {
 }
 function Fg() {
   var e = []
-  Et.pb().forEach(function (t) {
+  Module_9.pb().forEach(function (t) {
     e.push({
       type: "basic",
       text: t.title,
@@ -492,7 +492,7 @@ function Fg() {
 }
 function Gg() {
   var e = []
-  Et.X().forEach(function (t) {
+  Module_9.X().forEach(function (t) {
     e.push({
       type: "basic",
       text: t.title,
@@ -503,7 +503,7 @@ function Gg() {
 }
 function Wg(e, t) {
   var n = []
-  return e ? (Et.V(e).slice().forEach(function (e) {
+  return e ? (Module_9.V(e).slice().forEach(function (e) {
     if (e.id) {
       n.push({
         type: "basic",
@@ -519,7 +519,7 @@ function Ug(e, t) {
   if (!e) {
     return [Ig]
   }
-  var o = Et.yb(e)
+  var o = Module_9.yb(e)
   o.slice().reverse().forEach(function (e) {
     if (e.key) {
       r.push({
@@ -534,16 +534,16 @@ function Ug(e, t) {
   }
   var i = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "addDocKey"),
+    text: Src_shared_ui_language.c(yg$common$language, "addDocKey"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+      Module_37.a(Src_editor_redux_common_actions.nj({
         title: "addDocKey",
-        placeholder: $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "addDocKeyPlaceholder"),
+        placeholder: Src_shared_ui_language.c(yg$common$language, "addDocKeyPlaceholder"),
         onConfirm: function (n) {
           if (o) {
             var r
-            var i = ng.a("DOC_KEY")
+            var i = Module_64.a("DOC_KEY")
             var a = o.concat([
               {
                 id: i,
@@ -552,12 +552,12 @@ function Ug(e, t) {
                 type: "string"
               }
             ])
-            $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e, "fields", a, false, true))
+            Module_37.a(Src_editor_redux_common_actions.Lg(e, "fields", a, false, true))
             if (t) {
               t.set_value(i)
             }
-            $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Qj())
-            if (!(null === (r = $_26_index.g.getToolbox()) || undefined === r)) {
+            Module_37.a(Src_editor_redux_common_actions.Qj())
+            if (!(null === (r = Module_26.g.getToolbox()) || undefined === r)) {
               r.refresh_selection()
             }
           }
@@ -569,7 +569,7 @@ function Ug(e, t) {
                 return t.key === e
               })
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(yg$common$language, "storageKeyExisted")
+            message: Src_shared_ui_language.c(yg$common$language, "storageKeyExisted")
           }
         ],
         inputLength: 150
@@ -580,7 +580,7 @@ function Ug(e, t) {
 }
 function Hg() {
   var e = []
-  Et.bb().forEach(function (t) {
+  Module_9.bb().forEach(function (t) {
     e.push({
       type: "basic",
       text: t.title,
@@ -596,7 +596,7 @@ function Vg(e, t) {
   if (!e) {
     return [Ig]
   }
-  var i = Et.yb(e)
+  var i = Module_9.yb(e)
   i.slice().reverse().forEach(function (e) {
     if (e.key) {
       o.push({
@@ -617,17 +617,17 @@ function Vg(e, t) {
   var /* [auto-meaningful-name] */n$common$userInfo = n.common.userInfo
   var c = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(n$common$language, "addDocKey"),
+    text: Src_shared_ui_language.c(n$common$language, "addDocKey"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
       if (n$common$userInfo) {
-        $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
+        Module_37.a(Src_editor_redux_common_actions.nj({
           title: "addDocKey",
-          placeholder: $$_$$_$$_$$_src_shared_ui_language.c(n$common$language, "addDocKeyPlaceholder"),
+          placeholder: Src_shared_ui_language.c(n$common$language, "addDocKeyPlaceholder"),
           onConfirm: function (t) {
             if (i) {
               var n
-              var r = ng.a("DOC_KEY")
+              var r = Module_64.a("DOC_KEY")
               var o = i.concat([
                 {
                   id: r,
@@ -636,8 +636,8 @@ function Vg(e, t) {
                   type: "string"
                 }
               ])
-              $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Cg(e, o, a))
-              if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
+              Module_37.a(Src_editor_redux_common_actions.Cg(e, o, a))
+              if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
                 n.refresh_selection()
               }
             }
@@ -649,13 +649,13 @@ function Vg(e, t) {
                   return t.key === e
                 })
               },
-              message: $$_$$_$$_$$_src_shared_ui_language.c(n$common$language, "storageKeyExisted")
+              message: Src_shared_ui_language.c(n$common$language, "storageKeyExisted")
             }
           ],
           inputLength: 150
         }))
       } else {
-        $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.Ch())
+        Module_37.a(Src_editor_redux_common_actions.Ch())
       }
     }
   }
@@ -692,21 +692,21 @@ function zg(e) {
   }
   var l = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addBroadcast"),
+    text: Src_shared_ui_language.c(t$common$language, "addBroadcast"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
-        title: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addBroadcastTitle", {
+      Module_37.a(Src_editor_redux_common_actions.nj({
+        title: Src_shared_ui_language.c(t$common$language, "addBroadcastTitle", {
           scene: i ? i.title : ""
         }),
-        placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addBroadcastTitlePlaceholder"),
-        tips: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addBroadcastOnlyCurrentScreenTips"),
+        placeholder: Src_shared_ui_language.c(t$common$language, "addBroadcastTitlePlaceholder"),
+        tips: Src_shared_ui_language.c(t$common$language, "addBroadcastOnlyCurrentScreenTips"),
         onConfirm: function (t) {
           var n
-          $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.pf(t, i.id, 0, function (t) {
+          Module_37.a(Src_editor_redux_common_actions.pf(t, i.id, 0, function (t) {
             e.set_value(t)
           }))
-          if (!(null === (n = $_26_index.g.getToolbox()) || undefined === n)) {
+          if (!(null === (n = Module_26.g.getToolbox()) || undefined === n)) {
             n.refresh_selection()
           }
         },
@@ -715,17 +715,17 @@ function zg(e) {
             validator: function (e) {
               return !i.broadcasts.includes(e.trim())
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "broadcastExisted")
+            message: Src_shared_ui_language.c(t$common$language, "broadcastExisted")
           }, {
             validator: function (e) {
               return "" !== e.trim()
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "broadcastCannotBeSpace")
+            message: Src_shared_ui_language.c(t$common$language, "broadcastCannotBeSpace")
           }, {
             validator: function (e) {
-              return Yr.t.test(e)
+              return Module_53.t.test(e)
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "broadcastInvalid")
+            message: Src_shared_ui_language.c(t$common$language, "broadcastInvalid")
           }
         ]
       }))
@@ -773,13 +773,13 @@ function qg() {
 function Xg(e, t) {
   var n = []
   if (e) {
-    var r = Et.Bb(e)
+    var r = Module_9.Bb(e)
     if (r) {
       var /* [auto-meaningful-name] */i$attributes
       var i = r
       if (null === (i$attributes = i.attributes) || undefined === i$attributes ? undefined : i$attributes.templateSlotMap) {
         Object.keys(i.attributes.templateSlotMap).reverse().forEach(function (e) {
-          var r = Et.Bb(i.attributes.templateSlotMap[e].widgetId)
+          var r = Module_9.Bb(i.attributes.templateSlotMap[e].widgetId)
           if (!(t && t !== (null === r || undefined === r ? undefined : r.type))) {
             n.push({
               type: "basic",
@@ -800,8 +800,8 @@ function Qg(e) {
   var o = []
   var i = []
   t$project$globalWidgetIds.forEach(function (e) {
-    var t = Et.Bb(e)
-    if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
+    var t = Module_9.Bb(e)
+    if ((null === t || undefined === t ? undefined : t.type) === Src_editor_widget_builtIn_types.m) {
       i.push(t)
     }
   })
@@ -818,20 +818,20 @@ function Qg(e) {
   }
   var a = {
     type: "basic",
-    text: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addGridName"),
+    text: Src_shared_ui_language.c(t$common$language, "addGridName"),
     value: "DROPDOWN_ADD_BUTTON",
     callback: function () {
-      $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.nj({
-        title: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addGridName"),
-        placeholder: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "addGridNamePlaceholder"),
+      Module_37.a(Src_editor_redux_common_actions.nj({
+        title: Src_shared_ui_language.c(t$common$language, "addGridName"),
+        placeholder: Src_shared_ui_language.c(t$common$language, "addGridNamePlaceholder"),
         onConfirm: function () {
-          var t = O.a(RegeneratorRuntime.mark(function t(n) {
+          var t = Module_7.a(RegeneratorRuntime.mark(function t(n) {
             var r
             return RegeneratorRuntime.wrap(function (t) {
               for (;;) {
                 switch (t.prev = t.next) {
                   case 0:
-                    $_37_index.a($$_$$_$$_$$_src_editor_redux_common_actions.hg("", $$_$$_$$_$$_src_editor_widget_builtIn_types.m, {
+                    Module_37.a(Src_editor_redux_common_actions.hg("", Src_editor_widget_builtIn_types.m, {
                       x: 0,
                       y: 0
                     }, {
@@ -839,7 +839,7 @@ function Qg(e) {
                     }, function (t) {
                       e.set_value(t)
                     }))
-                    if (!(null === (r = $_26_index.g.getToolbox()) || undefined === r)) {
+                    if (!(null === (r = Module_26.g.getToolbox()) || undefined === r)) {
                       r.refresh_selection()
                     }
                   case 2:
@@ -858,8 +858,8 @@ function Qg(e) {
             validator: function (e) {
               var t = []
               t$project$globalWidgetIds.forEach(function (e) {
-                var n = Et.dc.get(e)
-                if ((null === n || undefined === n ? undefined : n.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.m) {
+                var n = Module_9.dc.get(e)
+                if ((null === n || undefined === n ? undefined : n.type) === Src_editor_widget_builtIn_types.m) {
                   t.push(n)
                 }
               })
@@ -867,9 +867,9 @@ function Qg(e) {
                 return t.title === e
               })
             },
-            message: $$_$$_$$_$$_src_shared_ui_language.c(t$common$language, "gridNameRepeat")
+            message: Src_shared_ui_language.c(t$common$language, "gridNameRepeat")
           }
-        ].concat($_25_index.a(Sg()))
+        ].concat(Module_25.a(Sg()))
       }))
     }
   }
@@ -879,12 +879,12 @@ function Zg(e) {
   if (!e) {
     return [Ig]
   }
-  var t = Et.Bb(e)
+  var t = Module_9.Bb(e)
   if (!t) {
     return [Ig]
   }
   var n = []
-  if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
+  if (t.type === Src_editor_widget_builtIn_types.G) {
     for (var r in t.attributes.db.header) n.push({
       type: "basic",
       text: t.attributes.db.header[r].field,
@@ -901,12 +901,12 @@ function Jg(e, t) {
   }
   var o = yg()
   var /* [auto-meaningful-name] */o$common$language = o.common.language
-  var a = Et.Z(e)
+  var a = Module_9.Z(e)
   if (!a) {
     var s = {
       type: "basic",
       value: Ag.NO_BIND_DATA_SOURCE,
-      text: $$_$$_$$_$$_src_shared_ui_language.c(o$common$language, "cloudSpace.NotBindDataSource")
+      text: Src_shared_ui_language.c(o$common$language, "cloudSpace.NotBindDataSource")
     }
     r.push(s)
     return r
@@ -916,13 +916,13 @@ function Jg(e, t) {
   })) || undefined === n ? undefined : n.data
   if (!c) {
     var l = function () {
-      var e = O.a(RegeneratorRuntime.mark(function e() {
+      var e = Module_7.a(RegeneratorRuntime.mark(function e() {
         return RegeneratorRuntime.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return $$_$$_$$_$$_src_editor_redux_common_actions.Nf($_37_index.a, $$_$$_$$_$$_src_editor_redux_common_actions.Pf(a, true))
+                return Src_editor_redux_common_actions.Nf(Module_37.a, Src_editor_redux_common_actions.Pf(a, true))
               case 2:
                 if (!(null === t || undefined === t)) {
                   t.show_editor()
@@ -941,7 +941,7 @@ function Jg(e, t) {
     var u = {
       type: "basic",
       value: Ag.FETCH_DATA_FAILED,
-      text: $$_$$_$$_$$_src_shared_ui_language.c(o$common$language, "cloudSpace.fetchDataFailed"),
+      text: Src_shared_ui_language.c(o$common$language, "cloudSpace.fetchDataFailed"),
       callback: l
     }
     r.push(u)
@@ -951,7 +951,7 @@ function Jg(e, t) {
     var d = {
       type: "basic",
       value: Ag.EMPTY_KEYS_DATA,
-      text: $$_$$_$$_$$_src_shared_ui_language.c(o$common$language, "cloudSpace.emptyKeysData")
+      text: Src_shared_ui_language.c(o$common$language, "cloudSpace.emptyKeysData")
     }
     r.push(d)
     return r
@@ -971,12 +971,12 @@ function $g(e, t) {
   }
   var n = yg()
   var /* [auto-meaningful-name] */n$common$language = n.common.language
-  var o = Et.db(e)
+  var o = Module_9.db(e)
   if (!o) {
     var i = {
       type: "basic",
       value: Ag.NO_BIND_DATA_SOURCE,
-      text: $$_$$_$$_$$_src_shared_ui_language.c(n$common$language, "cloudSpace.NotBindDataSource")
+      text: Src_shared_ui_language.c(n$common$language, "cloudSpace.NotBindDataSource")
     }
     return [Ig, i]
   }
@@ -985,13 +985,13 @@ function $g(e, t) {
   })
   if (!a) {
     var s = function () {
-      var e = O.a(RegeneratorRuntime.mark(function e() {
+      var e = Module_7.a(RegeneratorRuntime.mark(function e() {
         return RegeneratorRuntime.wrap(function (e) {
           for (;;) {
             switch (e.prev = e.next) {
               case 0:
                 e.next = 2
-                return $$_$$_$$_$$_src_editor_redux_common_actions.Nf($_37_index.a, $$_$$_$$_$$_src_editor_redux_common_actions.Rf(o, true))
+                return Src_editor_redux_common_actions.Nf(Module_37.a, Src_editor_redux_common_actions.Rf(o, true))
               case 2:
                 if (!(null === t || undefined === t)) {
                   t.show_editor()
@@ -1010,7 +1010,7 @@ function $g(e, t) {
     var c = {
       type: "basic",
       value: Ag.FETCH_DATA_FAILED,
-      text: $$_$$_$$_$$_src_shared_ui_language.c(n$common$language, "cloudSpace.fetchDataFailed"),
+      text: Src_shared_ui_language.c(n$common$language, "cloudSpace.fetchDataFailed"),
       callback: s
     }
     return [Ig, c]
@@ -1019,7 +1019,7 @@ function $g(e, t) {
     var l = {
       type: "basic",
       value: Ag.EMPTY_KEYS_DATA,
-      text: $$_$$_$$_$$_src_shared_ui_language.c(n$common$language, "cloudSpace.emptyColumnsData")
+      text: Src_shared_ui_language.c(n$common$language, "cloudSpace.emptyColumnsData")
     }
     return [Ig, l]
   }

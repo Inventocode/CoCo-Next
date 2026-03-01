@@ -8,11 +8,11 @@
 
 import { fe } from "./index__part-1"
 import { X, q, $, ne, re, ge, be, xe, Ce, Oe, ke, Te, De, Ie, He, Ge, Qe, $e, Je, rt, it, ot, st, ct, ut, lt, ft, dt, ht, pt, _t, Et, xt, Ct, kt, Tt, It, Pt, Jt, nn, hn, An, vn, Bn, In, Mn, gr, vr, mr, br, Hr, Vr, Gr, zr, Xr } from "./index__part-2"
-import /* [auto-meaningful-name] */$_1338 from "./1338"
-import * as /* [auto-meaningful-name] */$_1198 from "./1198"
-import /* [auto-meaningful-name] */$_11981 from "./1198"
-import * as /* [auto-meaningful-name] */$_565 from "./565"
-import /* [auto-meaningful-name] */$_5651 from "./565"
+import /* [auto-meaningful-name] */Module_1338 from /* 1338 */"./1338"
+import * as /* [auto-meaningful-name] */Module_1198 from /* 1198 */"./1198"
+import /* [auto-meaningful-name] */Module_11981 from /* 1198 */"./1198"
+import * as /* [auto-meaningful-name] */Module_565 from /* 565 */"./565"
+import /* [auto-meaningful-name] */Module_5651 from /* 565 */"./565"
 function fi() {}
 function di(e, t, n, r) {
   var i = 0
@@ -207,10 +207,10 @@ var bi = function () {
     this._boundXhrOnTimeout = this._xhrOnTimeout.bind(this)
     this._boundXhrOnAbort = this._xhrOnAbort.bind(this)
     this._boundXhrOnLoad = this._xhrOnLoad.bind(this)
-    this.onStart = new $_5651()
-    this.onProgress = new $_5651()
-    this.onComplete = new $_5651()
-    this.onAfterMiddleware = new $_5651()
+    this.onStart = new Module_5651()
+    this.onProgress = new Module_5651()
+    this.onComplete = new Module_5651()
+    this.onAfterMiddleware = new Module_5651()
   }
   e.setExtensionLoadType = function (t, n) {
     wi(e._loadTypeMap, t, n)
@@ -500,7 +500,7 @@ var bi = function () {
       mi = document.createElement("a")
     }
     mi.href = e
-    var n = !(e = $_11981(mi.href, {
+    var n = !(e = Module_11981(mi.href, {
       strictMode: true
     })).port && "" === t.port || e.port === t.port
     var r = e.protocol ? e.protocol + ":" : ""
@@ -738,11 +738,11 @@ var ki = function () {
     this._queue = pi(this._boundLoadResource, n)
     this._queue.pause()
     this.resources = {}
-    this.onProgress = new $_5651()
-    this.onError = new $_5651()
-    this.onLoad = new $_5651()
-    this.onStart = new $_5651()
-    this.onComplete = new $_5651()
+    this.onProgress = new Module_5651()
+    this.onError = new Module_5651()
+    this.onLoad = new Module_5651()
+    this.onStart = new Module_5651()
+    this.onComplete = new Module_5651()
     for (var i = 0; i < e._defaultBeforeMiddleware.length; ++i) {
       this.pre(e._defaultBeforeMiddleware[i])
     }
@@ -846,7 +846,7 @@ var ki = function () {
   }
   e$prototype._prepareUrl = function (e) {
     var t
-    var n = $_11981(e, {
+    var n = Module_11981(e, {
       strictMode: true
     })
     t = n.protocol || !n.path || 0 === e.indexOf("//") ? e : this.baseUrl.length && this.baseUrl.lastIndexOf("/") !== this.baseUrl.length - 1 && "/" !== e.charAt(0) ? this.baseUrl + "/" + e : this.baseUrl + e
@@ -2499,7 +2499,7 @@ var co = {
         a.push(e$points.length / 2)
         e$points = e$points.concat(c.points)
       }
-      var u = $_1338(e$points, a, 2)
+      var u = Module_1338(e$points, a, 2)
       if (!u) {
         return
       }
@@ -2615,7 +2615,7 @@ var po = {
     }
   },
   triangulate: function (e, t) {
-    for (var /* [auto-meaningful-name] */e$points = e.points, /* [auto-meaningful-name] */t$points = t.points, /* [auto-meaningful-name] */t$indices = t.indices, o = t$points.length / 2, a = $_1338(e$points, null, 2), s = 0, /* [auto-meaningful-name] */a$length = a.length; s < a$length; s += 3) {
+    for (var /* [auto-meaningful-name] */e$points = e.points, /* [auto-meaningful-name] */t$points = t.points, /* [auto-meaningful-name] */t$indices = t.indices, o = t$points.length / 2, a = Module_1338(e$points, null, 2), s = 0, /* [auto-meaningful-name] */a$length = a.length; s < a$length; s += 3) {
       t$indices.push(a[s] + o)
       t$indices.push(a[s + 1] + o)
       t$indices.push(a[s + 2] + o)

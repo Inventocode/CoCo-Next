@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./122")
-var i = require("./167")
-var o = require("./227")
+var r = require(/* 122 */"./122")
+var i = require(/* 167 */"./167")
+var o = require(/* 227 */"./227")
 var a = function () {
   function t() {}
   t.castAsNonUtf8Char = function (t, e) {

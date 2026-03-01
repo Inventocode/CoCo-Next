@@ -4,9 +4,9 @@
  * 模块 ID：1170
  */
 
-var r = require("./2474")
-var i = require("./1172")
-var o = require("./1173")
+var r = require(/* 2474 */"./2474")
+var i = require(/* 1172 */"./1172")
+var o = require(/* 1173 */"./1173")
 var a = o && o.isTypedArray
 var s = a ? i(a) : r
 module.exports = s

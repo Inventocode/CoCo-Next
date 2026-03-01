@@ -8,9 +8,9 @@ import "./index__part-0"
 import { l } from "./index__part-1"
 import { d, y } from "./index__part-2"
 import { C, T, S } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$$_$$_$$_37_1412_index from "../../../37/1412/index"
-import * as /* [auto-meaningful-name] */$_689 from "./689"
-import * as /* [auto-meaningful-name] */$$_$$_$$_37_1412_675 from "../../../37/1412/675"
+import * as /* [auto-meaningful-name] */Module_1412 from /* 1412 */"../../../37/1412/index"
+import * as /* [auto-meaningful-name] */Module_689 from /* 689 */"./689"
+import * as /* [auto-meaningful-name] */Module_675 from /* 675 */"../../../37/1412/675"
 export { l as v1 }
 export { y as v3 }
 export { a as v4 } from "../../../37/1412/index"

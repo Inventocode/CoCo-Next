@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.WorkspaceAudio = undefined
-var r = require("tslib")
-var i = require("inversify")
-var o = require("../../123/index")
-var a = require("../../123/478")
-var s = require("../../1058/125")
+var r = require(/* 93 */"tslib")
+var i = require(/* 134 */"inversify")
+var o = require(/* 123 */"../../123/index")
+var a = require(/* 478 */"../../123/478")
+var s = require(/* 125 */"../../1058/125")
 var c = function () {
   function e(e) {
     this.last_sound_ = undefined

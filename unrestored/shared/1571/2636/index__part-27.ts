@@ -6,25 +6,24 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as X from "./27"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1512 from "./1512"
-import * as ro from "./39"
-import * as /* [auto-meaningful-name] */$_58_index from "./58/index"
-import * as /* [auto-meaningful-name] */$_59_index from "./59/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css from "../../../../src/editor/ui/preview-area/stage/style.css"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css1 from "../../../../src/editor/ui/preview-area/stage/style.css"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1512 from /* 1512 */"./1512"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"./58/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"./59/index"
+import * as /* [auto-meaningful-name] */Src_editor_ui_previewArea_stage_style_css from /* 279 */"../../../../src/editor/ui/preview-area/stage/style.css"
+import /* [auto-meaningful-name] */Src_editor_ui_previewArea_stage_style_css1 from /* 279 */"../../../../src/editor/ui/preview-area/stage/style.css"
 var co = function (e) {
-  $_58_index.a(n, e)
-  var t = $_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e) {
     var r
-    X.a(this, n);
+    Module_27.a(this, n);
     (r = t.call(this, e)).handleMouseDown = function (e) {
       if (0 === e.button) {
         r.setState({
@@ -49,7 +48,7 @@ var co = function (e) {
       })
       document.removeEventListener("mousemove", r.handleMouseMove)
       document.removeEventListener("mouseup", r.handleMouseUp)
-      $_26_index.z.resizeWorkspace()
+      Module_26.z.resizeWorkspace()
       var /* [auto-meaningful-name] */r$props$previewAreaRef$current = r.props.previewAreaRef.current
       if (null === r$props$previewAreaRef$current || undefined === r$props$previewAreaRef$current ? undefined : r$props$previewAreaRef$current.getClientRects()[0].width) {
         r.props.onDragEnd(r$props$previewAreaRef$current.getClientRects()[0].width)
@@ -60,13 +59,13 @@ var co = function (e) {
     }
     return r
   }
-  ro.a(n, [
+  Module_39.a(n, [
     {
       key: "render",
       value: function () {
         var /* [auto-meaningful-name] */this$state$isDragging = this.state.isDragging
         return React.createElement("div", {
-          className: Classnames($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css1.dragBar, k.a({}, $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css1.active, this$state$isDragging)),
+          className: Classnames(Src_editor_ui_previewArea_stage_style_css1.dragBar, Module_11.a({}, Src_editor_ui_previewArea_stage_style_css1.active, this$state$isDragging)),
           onMouseEnter: this.props.onEnter,
           onMouseLeave: this.props.onLeave,
           onMouseDown: this.handleMouseDown
@@ -76,5 +75,5 @@ var co = function (e) {
   ])
   return n
 }(React.PureComponent)
-var lo = memo(co)
+var lo = React1.memo(co)
 export { lo }

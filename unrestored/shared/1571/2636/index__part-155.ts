@@ -7,14 +7,13 @@
 "use strict"
 
 import { SS } from "./index__part-154"
-import * as D from "./6"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_705 from "./705"
-import /* [auto-meaningful-name] */$_7051 from "./705"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_705 from /* 705 */"./705"
+import /* [auto-meaningful-name] */Module_7051 from /* 705 */"./705"
 var jS = function (e) {
   return e > 0 ? 1 : -1
 }
@@ -23,27 +22,27 @@ var NS = function (e, t, n) {
     return e - t
   })[1]
 }
-var RS = memo(function (e) {
+var RS = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$resizable = e.resizable
   var /* [auto-meaningful-name] */e$placements = e.placements
   var /* [auto-meaningful-name] */e$onResize = e.onResize
   var i = e.width && NS(e.width, e.minWidth, e.maxWidth)
   var a = e.height && NS(e.height, e.minHeight, e.maxHeight)
-  var s = useState(i)
-  var c = $_10_index.a(s, 2)
+  var s = React1.useState(i)
+  var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = useState(a)
-  var p = $_10_index.a(d, 2)
+  var d = React1.useState(a)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var _ = useState(false)
-  var v = $_10_index.a(_, 2)
+  var _ = React1.useState(false)
+  var v = Module_10.a(_, 2)
   var b = v[0]
   var y = v[1]
-  var E = useState()
-  var O = $_10_index.a(E, 2)
+  var E = React1.useState()
+  var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]
   var T = !!w
@@ -96,13 +95,13 @@ var RS = memo(function (e) {
     }
   }
   return React.createElement(SS, {
-    className: Classnames(e.className, $_7051.layout, e$resizable ? $_7051.resizable : undefined, T ? $_7051.resizing : undefined),
-    style: D.a(D.a({}, e.style), {}, {
+    className: Classnames(e.className, Module_7051.layout, e$resizable ? Module_7051.resizable : undefined, T ? Module_7051.resizing : undefined),
+    style: Module_6.a(Module_6.a({}, e.style), {}, {
       width: l,
       height: m
     })
   }, e$children, e$resizable && e$placements && e$placements.length ? React.createElement("div", {
-    className: Classnames($_7051.resizer, b ? $_7051.row : $_7051.col),
+    className: Classnames(Module_7051.resizer, b ? Module_7051.row : Module_7051.col),
     onMouseDown: function (e) {
       var t = I(e)
       if (t) {
@@ -118,7 +117,7 @@ var RS = memo(function (e) {
   }, e$placements.map(function (e) {
     return React.createElement("div", {
       key: e,
-      className: $_7051[e.toLowerCase()]
+      className: Module_7051[e.toLowerCase()]
     })
   })) : null)
 })

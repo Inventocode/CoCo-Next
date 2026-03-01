@@ -8,13 +8,12 @@
 
 var x
 var E
-import * as /* [auto-meaningful-name] */$_275 from "./275"
-import * as /* [auto-meaningful-name] */$_273 from "./273"
-import { createElement, Fragment } from "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_2640 from "./2640"
-import * as /* [auto-meaningful-name] */$_2641_index from "./2641/index"
-import * as /* [auto-meaningful-name] */$_1481_index from "./1481/index"
+import * as /* [auto-meaningful-name] */Module_275 from /* 275 */"./275"
+import * as /* [auto-meaningful-name] */Module_273 from /* 273 */"./273"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_2640 from /* 2640 */"./2640"
+import * as /* [auto-meaningful-name] */Module_2641 from /* 2641 */"./2641/index"
+import * as /* [auto-meaningful-name] */Module_1481 from /* 1481 */"./1481/index"
 !function (e) {
   e[e.literal = 0] = "literal"
   e[e.argument = 1] = "argument"
@@ -71,14 +70,14 @@ function I(e, t) {
   if (!t) {
     return e
   }
-  var /* [auto-meaningful-name] */$_2641_index$a$formats = $_2641_index.a.formats
-  return S(S(S({}, $_2641_index$a$formats), e), {
-    date: D(B($_2641_index$a$formats.date, t), B(e.date || {}, t)),
-    time: D(B($_2641_index$a$formats.time, t), B(e.time || {}, t))
+  var /* [auto-meaningful-name] */Module_2641$a$formats = Module_2641.a.formats
+  return S(S(S({}, Module_2641$a$formats), e), {
+    date: D(B(Module_2641$a$formats.date, t), B(e.date || {}, t)),
+    time: D(B(Module_2641$a$formats.time, t), B(e.time || {}, t))
   })
 }
 function R(e, t) {
-  return Array.isArray(e) && t ? createElement.apply(React, T([Fragment, null], e)) : e
+  return Array.isArray(e) && t ? React.createElement.apply(React, T([React.Fragment, null], e)) : e
 }
 function F(e, t, n, r) {
   var /* [auto-meaningful-name] */e$locale = e.locale
@@ -96,7 +95,7 @@ function F(e, t, n, r) {
   }
   var p = n.id
   var /* [auto-meaningful-name] */n$defaultMessage = n.defaultMessage
-  $_2640.a(!!p, "[React Intl] An `id` must be provided to format a message.")
+  Module_2640.a(!!p, "[React Intl] An `id` must be provided to format a message.")
   var A = String(p)
   var g = e$messages && Object.prototype.hasOwnProperty.call(e$messages, A) && e$messages[A]
   if (Array.isArray(g) && 1 === g.length && g[0].type === E.literal) {
@@ -108,7 +107,7 @@ function F(e, t, n, r) {
   var v = r && function (e) {
     return Object.keys(e).reduce(function (t, n) {
       var r = e[n]
-      t[n] = $_1481_index.b(r) ? $_273.b(r) : r
+      t[n] = Module_1481.b(r) ? Module_273.b(r) : r
       return t
     }, {})
   }(r)
@@ -116,13 +115,13 @@ function F(e, t, n, r) {
   e$defaultFormats = I(e$defaultFormats, e$timeZone)
   if (!g) {
     if (!n$defaultMessage || e$locale && e$locale.toLowerCase() !== e$defaultLocale.toLowerCase()) {
-      e$onError(new $_275.d(n, e$locale))
+      e$onError(new Module_275.d(n, e$locale))
     }
     if (n$defaultMessage) {
       try {
         return R(t.getMessageFormat(n$defaultMessage, e$defaultLocale, e$defaultFormats).format(v), e$wrapRichTextChunksInFragment)
       } catch (m) {
-        e$onError(new $_275.b("Error formatting default message for: \"" + A + "\", rendering default message verbatim", e$locale, n, m))
+        e$onError(new Module_275.b("Error formatting default message for: \"" + A + "\", rendering default message verbatim", e$locale, n, m))
         return n$defaultMessage
       }
     }
@@ -133,13 +132,13 @@ function F(e, t, n, r) {
       formatters: t
     }).format(v), e$wrapRichTextChunksInFragment)
   } catch (m) {
-    e$onError(new $_275.b("Error formatting message: \"" + A + "\", using " + (n$defaultMessage ? "default message" : "id") + " as fallback.", e$locale, n, m))
+    e$onError(new Module_275.b("Error formatting message: \"" + A + "\", using " + (n$defaultMessage ? "default message" : "id") + " as fallback.", e$locale, n, m))
   }
   if (n$defaultMessage) {
     try {
       return R(t.getMessageFormat(n$defaultMessage, e$defaultLocale, e$defaultFormats).format(v), e$wrapRichTextChunksInFragment)
     } catch (m) {
-      e$onError(new $_275.b("Error formatting the default message for: \"" + A + "\", rendering message verbatim", e$locale, n, m))
+      e$onError(new Module_275.b("Error formatting the default message for: \"" + A + "\", rendering message verbatim", e$locale, n, m))
     }
   }
   return g || n$defaultMessage || A

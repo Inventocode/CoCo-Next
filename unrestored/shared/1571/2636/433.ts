@@ -8,14 +8,14 @@
 
 export { o as b }
 export { i as a }
-import * as /* [auto-meaningful-name] */$_206 from "./206"
+import * as /* [auto-meaningful-name] */Module_206 from /* 206 */"./206"
 function o(e) {
   switch (e) {
-    case $_206.a.CONTAIN:
+    case Module_206.a.CONTAIN:
       return "contain"
-    case $_206.a.COVER:
+    case Module_206.a.COVER:
       return "cover"
-    case $_206.a.STRETCH:
+    case Module_206.a.STRETCH:
       return "fill"
     default:
       return "cover"
@@ -23,11 +23,11 @@ function o(e) {
 }
 function i(e) {
   switch (e) {
-    case $_206.a.CONTAIN:
+    case Module_206.a.CONTAIN:
       return "contain"
-    case $_206.a.COVER:
+    case Module_206.a.COVER:
       return "cover"
-    case $_206.a.STRETCH:
+    case Module_206.a.STRETCH:
       return "100% 100%"
     default:
       return "cover"

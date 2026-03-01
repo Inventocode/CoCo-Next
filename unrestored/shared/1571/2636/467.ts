@@ -9,19 +9,19 @@
 export { u as b }
 export { p as c }
 export { h as a }
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "./7"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../src/shared/utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
-$$_$$_$$_$$_src_shared_env.a.backendHost
-var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$serverHost = $$_$$_$$_$$_src_shared_env.a.serverHost
-var /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env$a$openServiceHost = $$_$$_$$_$$_src_shared_env.a.openServiceHost
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import * as /* [auto-meaningful-name] */Src_shared_utils_network_axiosWithCredentials from /* 41 */"../../../../src/shared/utils/network/axios-with-credentials"
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../src/shared/env"
+Src_shared_env.a.backendHost
+var /* [auto-meaningful-name] */Src_shared_env$a$serverHost = Src_shared_env.a.serverHost
+var /* [auto-meaningful-name] */Src_shared_env$a$openServiceHost = Src_shared_env.a.openServiceHost
 function u() {
   return d.apply(this, arguments)
 }
 function d() {
-  return (d = i.a(RegeneratorRuntime1.mark(function e() {
+  return (d = Module_7.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
     var r
@@ -31,7 +31,7 @@ function d() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$serverHost + "/coconut/primary-course/list")
+            return Src_shared_utils_network_axiosWithCredentials.a.get(Src_shared_env$a$serverHost + "/coconut/primary-course/list")
           case 3:
             if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
               e.next = 10
@@ -71,7 +71,7 @@ function p() {
   return f.apply(this, arguments)
 }
 function f() {
-  return (f = i.a(RegeneratorRuntime1.mark(function e() {
+  return (f = Module_7.a(RegeneratorRuntime1.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
     var r
@@ -81,7 +81,7 @@ function f() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get($$_$$_$$_$$_src_shared_env$a$serverHost + "/coconut/sample/list")
+            return Src_shared_utils_network_axiosWithCredentials.a.get(Src_shared_env$a$serverHost + "/coconut/sample/list")
           case 3:
             if (e$sent = e.sent, 200 !== (e$sent$data = e$sent.data).code) {
               e.next = 10
@@ -119,7 +119,7 @@ function h(e) {
   return m.apply(this, arguments)
 }
 function m() {
-  return (m = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (m = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
     return RegeneratorRuntime1.wrap(function (e) {
@@ -128,7 +128,7 @@ function m() {
           case 0:
             e.prev = 0
             e.next = 3
-            return $$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post($$_$$_$$_$$_src_shared_env$a$openServiceHost + "/content-security/image/sensor", {
+            return Src_shared_utils_network_axiosWithCredentials.a.post(Src_shared_env$a$openServiceHost + "/content-security/image/sensor", {
               businessCode: "coco",
               uri: t,
               params: ["PULP"]

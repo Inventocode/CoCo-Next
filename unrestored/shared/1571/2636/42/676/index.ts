@@ -6,15 +6,14 @@
 
 "use strict"
 
-import { useRef, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
-import "./860"
-import { useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_64 from "../../64"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from /* 462 */"resize-observer-polyfill"
+import /* 860 */"./860"
+import { useSelector } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"../../64"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../../src/shared/tools/index"
 function u(e) {
   return e instanceof HTMLInputElement ? e.value : e.innerHTML || ""
 }
@@ -22,7 +21,7 @@ function d(e) {
   return e.replace(/<div><br><\/div>/g, "\n").replace(/<div>|<br>/g, "\n").replace(/<\/div>/g, "")
 }
 function p(e, t) {
-  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED
+  var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : Src_editor_widget_builtIn_types.q.FIXED
   var r = arguments.length > 3 ? arguments[3] : undefined
   var o = document.getElementById("COCO_APP_ZONE")
   var i = getComputedStyle(e)
@@ -35,12 +34,12 @@ function p(e, t) {
     var p = o.getClientRects()[0]
     var /* [auto-meaningful-name] */p$top = p.top
     var /* [auto-meaningful-name] */p$left = p.left
-    if (n & $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_WIDTH) {
+    if (n & Src_editor_widget_builtIn_types.q.AUTO_WIDTH) {
       t.style.width = "auto"
     } else {
       t.style.width = a$width / r + "px"
     }
-    if (n & $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT) {
+    if (n & Src_editor_widget_builtIn_types.q.AUTO_HEIGHT) {
       t.style.height = "auto"
     } else {
       t.style.height = a$height / r + "px"
@@ -69,17 +68,17 @@ function f(t) {
   var /* [auto-meaningful-name] */t$options = t.options
   var m = undefined === t$options ? {} : t$options
   var /* [auto-meaningful-name] */m$sizeAdaptive = m.sizeAdaptive
-  var _ = undefined === m$sizeAdaptive ? $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED : m$sizeAdaptive
+  var _ = undefined === m$sizeAdaptive ? Src_editor_widget_builtIn_types.q.FIXED : m$sizeAdaptive
   var /* [auto-meaningful-name] */m$maxLength = m.maxLength
   var b = undefined === m$maxLength ? 1 / 0 : m$maxLength
   var /* [auto-meaningful-name] */m$isMultipleRow = m.isMultipleRow
   var E = undefined === m$isMultipleRow || m$isMultipleRow
-  var O = useRef(null)
-  var w = useRef()
+  var O = React.useRef(null)
+  var w = React.useRef()
   var C = useSelector(function (e) {
     return e.common.stageScale
   })
-  useEffect(function () {
+  React.useEffect(function () {
     var /* [auto-meaningful-name] */O$current = O.current
     if (O$current && t$target) {
       w.current = t$target
@@ -88,14 +87,14 @@ function f(t) {
       O$current.contentEditable = "true"
       O$current.innerHTML = u(t$target)
       setImmediate(function () {
-        $$_$$_64.b(O$current)
+        Module_64.b(O$current)
       })
     }
   }, [t$callback, _, C, t$target])
-  useEffect(function () {
+  React.useEffect(function () {
     var /* [auto-meaningful-name] */O$current = O.current
     if (E && O$current) {
-      var t = $$_$$_$$_$$_$$_$$_src_shared_tools_index.p(function (e) {
+      var t = Src_shared_tools_index.p(function (e) {
         t$callback(e)
       }, 60)
       var n = new ResizeObserverPolyfill.default(function () {
@@ -126,7 +125,7 @@ function f(t) {
     onDoubleClick: function () {
       var /* [auto-meaningful-name] */O$current = O.current
       if (O$current) {
-        $$_$$_64.c(O$current)
+        Module_64.c(O$current)
       }
     },
     onInput: function (e) {
@@ -135,7 +134,7 @@ function f(t) {
         var n = d(O$current.innerHTML)
         if (n.length >= b) {
           O$current.innerHTML = n.slice(0, b)
-          $$_$$_64.b(O$current)
+          Module_64.b(O$current)
         }
       }
     },
@@ -153,13 +152,13 @@ function h(t) {
   var /* [auto-meaningful-name] */t$callback = t.callback
   var /* [auto-meaningful-name] */t$options = t.options
   var /* [auto-meaningful-name] */UndefinedT$optionsT$options$sizeAdaptive = (undefined === t$options ? {} : t$options).sizeAdaptive
-  var d = undefined === UndefinedT$optionsT$options$sizeAdaptive ? $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED : UndefinedT$optionsT$options$sizeAdaptive
-  var f = useRef(null)
-  var h = useRef()
+  var d = undefined === UndefinedT$optionsT$options$sizeAdaptive ? Src_editor_widget_builtIn_types.q.FIXED : UndefinedT$optionsT$options$sizeAdaptive
+  var f = React.useRef(null)
+  var h = React.useRef()
   var m = useSelector(function (e) {
     return e.common.stageScale
   })
-  useEffect(function () {
+  React.useEffect(function () {
     var /* [auto-meaningful-name] */f$current = f.current
     if (f$current && t$target) {
       var r = u(t$target)

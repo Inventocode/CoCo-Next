@@ -6,7 +6,7 @@
 
 "use strict"
 
-for (var r = require("../../1206/773/655/689"), i = [], o = 0; o < 256; ++o) {
+for (var r = require(/* 689 */"../../1206/773/655/689"), i = [], o = 0; o < 256; ++o) {
   i.push((o + 256).toString(16).substr(1))
 }
 exports.a = function (e) {

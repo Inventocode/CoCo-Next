@@ -6,14 +6,14 @@
 
 "use strict"
 
-var r = require("../../../180")
-var i = require("../../../204")
-var o = require("../../../../../1058/1393/573/index")
-var /* [auto-meaningful-name] */require$$_1374$isCommentToken = require("../1374").isCommentToken
-var s = require("./2295/index")
-var c = require("./1140/index")
-var u = require("./2302")
-var l = require("./854")
+var r = require(/* 180 */"../../../180")
+var i = require(/* 204 */"../../../204")
+var o = require(/* 573 */"../../../../../1058/1393/573/index")
+var /* [auto-meaningful-name] */require_1374_$$_1374$isCommentToken = require(/* 1374 */"../1374").isCommentToken
+var s = require(/* 2295 */"./2295/index")
+var c = require(/* 1140 */"./1140/index")
+var u = require(/* 2302 */"./2302")
+var l = require(/* 854 */"./854")
 var f = Symbol("tokens")
 var d = Symbol("comments")
 var h = Symbol("indexMap")
@@ -66,7 +66,7 @@ function A(e, t, n, r, i, o, a) {
   return "undefined" === typeof o && "undefined" === typeof a ? new c(e, t, n, r, i) : "number" === typeof o || "undefined" === typeof o ? new u(e, t, n, r, i, 0 | o, 0 | a) : _(s.forward, e, t, n, r, i, o)
 }
 function g(e) {
-  for (var t = [], n = e.getOneToken(); n && require$$_1374$isCommentToken(n);) {
+  for (var t = [], n = e.getOneToken(); n && require_1374_$$_1374$isCommentToken(n);) {
     t.push(n)
     n = e.getOneToken()
   }
@@ -212,7 +212,7 @@ module.exports = function () {
       value: function (e) {
         return this.getTokens(e, {
           includeComments: true,
-          filter: require$$_1374$isCommentToken
+          filter: require_1374_$$_1374$isCommentToken
         })
       }
     }

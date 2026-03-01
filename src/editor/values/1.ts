@@ -4,7 +4,7 @@
  * 模块 ID：53__part-1
  */
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_60 from "../../../unrestored/shared/1571/2636/60"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"../../../unrestored/shared/1571/2636/60"
 var _ = 20
 var v = 40
 export const RELEASE_VERSION = "1.21.7"

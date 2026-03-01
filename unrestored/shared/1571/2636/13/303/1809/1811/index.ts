@@ -8,8 +8,8 @@
 
 var r
 var i
-var o = require("./1812/index")
-require("../965/index")
+var o = require(/* 1812 */"./1812/index")
+require(/* 965 */"../965/index")
 module.exports = function (e) {
   var t = ""
   var n = Math.floor(.001 * (Date.now() - 1567752802062))

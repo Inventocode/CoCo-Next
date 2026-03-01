@@ -9,7 +9,7 @@
 var o
 var i
 var r
-import * as a from "./0"
+import * as /* [auto-meaningful-name] */Module_0 from /* 0 */"./0"
 function s(e) {
   return e.type === i.literal
 }
@@ -331,17 +331,17 @@ function P(e) {
         t.compactDisplay = "long"
         continue
       case "scientific":
-        t = a.a(a.a(a.a({}, t), {
+        t = Module_0.a(Module_0.a(Module_0.a({}, t), {
           notation: "scientific"
         }), i.options.reduce(function (e, t) {
-          return a.a(a.a({}, e), R(t))
+          return Module_0.a(Module_0.a({}, e), R(t))
         }, {}))
         continue
       case "engineering":
-        t = a.a(a.a(a.a({}, t), {
+        t = Module_0.a(Module_0.a(Module_0.a({}, t), {
           notation: "engineering"
         }), i.options.reduce(function (e, t) {
-          return a.a(a.a({}, e), R(t))
+          return Module_0.a(Module_0.a({}, e), R(t))
         }, {}))
         continue
       case "notation-simple":
@@ -409,18 +409,18 @@ function P(e) {
         return ""
       })
       if (i.options.length) {
-        t = a.a(a.a({}, t), j(i.options[0]))
+        t = Module_0.a(Module_0.a({}, t), j(i.options[0]))
       }
     } else if (S.test(i.stem)) {
-      t = a.a(a.a({}, t), j(i.stem))
+      t = Module_0.a(Module_0.a({}, t), j(i.stem))
     } else {
       var o = x(i.stem)
       if (o) {
-        t = a.a(a.a({}, t), o)
+        t = Module_0.a(Module_0.a({}, t), o)
       }
       var s = C(i.stem)
       if (s) {
-        t = a.a(a.a({}, t), s)
+        t = Module_0.a(Module_0.a({}, t), s)
       }
     }
   }
@@ -840,7 +840,7 @@ var J = function () {
       case "select":
         var y = this.clonePosition()
         if (this.bumpSpace(), !this.bumpIf(",")) {
-          return this.error(r.EXPECT_SELECT_ARGUMENT_OPTIONS, L(y, a.a({}, y)))
+          return this.error(r.EXPECT_SELECT_ARGUMENT_OPTIONS, L(y, Module_0.a({}, y)))
         }
         this.bumpSpace()
         var g = this.parseIdentifierIfPossible(),
@@ -1165,7 +1165,7 @@ function re(e, t) {
   if (undefined === t) {
     t = {}
   }
-  t = a.a({
+  t = Module_0.a({
     shouldParseSkeletons: true,
     requiresOtherClause: true
   }, t)

@@ -6,9 +6,9 @@
 
 "use strict"
 
-var r = require("./394")
-var i = require("./521")
-var o = require("./292")
+var r = require(/* 394 */"./394")
+var i = require(/* 521 */"./521")
+var o = require(/* 292 */"./292")
 function a(e) {
   return function t(n, a, s) {
     switch (arguments.length) {

@@ -7,8 +7,8 @@
 "use strict"
 
 export { o$Provider as a }
-import { createContext } from "react"
-var o = createContext(null)
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+var o = React.createContext(null)
 var /* [auto-meaningful-name] */o$Provider = o.Provider
 export { o as b }
 export default o$Provider

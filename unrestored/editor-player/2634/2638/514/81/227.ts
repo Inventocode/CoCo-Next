@@ -6,8 +6,8 @@
 
 "use strict"
 
-var n = require("./373")
-var o = require("./167")
+var n = require(/* 373 */"./373")
+var o = require(/* 167 */"./167")
 var i = function () {
   function t() {}
   t.decode = function (t, e) {

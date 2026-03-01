@@ -7,14 +7,14 @@
 "use strict"
 
 import { _ } from "./index__part-0"
-import * as /* [auto-meaningful-name] */$$_33 from "../33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */React from "react"
-import * as r from "../6"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"../33"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../src/shared/widget/custom/load"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
 var b = new Map()
 var y = new Map()
 var E = []
@@ -24,13 +24,13 @@ function O(e) {
   var /* [auto-meaningful-name] */e$zIndex = e.zIndex
   var a = undefined === e$zIndex ? 0 : e$zIndex
   if (e$forceRender || !e$widget.parentId) {
-    var l = $$_33.Db(e$widget.type)
+    var l = Module_33.Db(e$widget.type)
     if (!l) {
       return null
     }
     var /* [auto-meaningful-name] */l$component = l.component
-    if ($$_$$_$$_$$_$$_src_shared_widget_custom_load.q(e$widget.type) && !l.isInvisibleWidget) {
-      var p = new l$component(r.a(r.a({}, e$widget.attributes), {}, {
+    if (Src_shared_widget_custom_load.q(e$widget.type) && !l.isInvisibleWidget) {
+      var p = new l$component(Module_6.a(Module_6.a({}, e$widget.attributes), {}, {
         __widgetId: e$widget.id,
         __widgetType: e$widget.type,
         __width: e$widget.size.width,
@@ -52,8 +52,8 @@ function O(e) {
               height: e$widget.size.height,
               opacity: l.isInvisibleWidget || undefined === e$widget.opacity ? undefined : e$widget.opacity / 100
             },
-            className: Classnames($$_90.b),
-            "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.M
+            className: Classnames(Module_90.b),
+            "data-role": Src_editor_widget_builtIn_types.M
           }, React.createElement("div", {
             style: {
               position: "absolute",
@@ -81,7 +81,7 @@ function O(e) {
   }
 }
 function w(e, t) {
-  var n = $$_33.Cb(e)
+  var n = Module_33.Cb(e)
   return n ? O({
     widget: n,
     forceRender: true,
@@ -89,7 +89,7 @@ function w(e, t) {
   }) : null
 }
 function C(e) {
-  var t = $$_33.Cb(e)
+  var t = Module_33.Cb(e)
   return t ? O({
     widget: t,
     forceRender: true
@@ -97,18 +97,18 @@ function C(e) {
 }
 function T(e, t, n, o) {
   var i
-  var a = $$_33.Cb(e)
+  var a = Module_33.Cb(e)
   if (!a) {
     return null
   }
-  var s = $$_$$_$$_$$_$$_src_shared_tools_index.q(a)
-  var c = $$_33.Cb(s.parentId || "")
+  var s = Src_shared_tools_index.q(a)
+  var c = Module_33.Cb(s.parentId || "")
   if (!c) {
     console.error("getParentWidget error")
     return null
   }
   var d = c
-  if (d.attributes.disabled && s.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
+  if (d.attributes.disabled && s.type === Src_editor_widget_builtIn_types.H) {
     if (["titleSlot"].includes(t)) {
       s.attributes.color = "#7C7C7C"
     } else {
@@ -124,15 +124,15 @@ function T(e, t, n, o) {
   var p = null === (i = d.attributes.templateSlotMap[t]) || undefined === i ? undefined : i.dataBindings
   if (o && p) {
     var f = o[p]
-    if (s.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
+    if (s.type === Src_editor_widget_builtIn_types.H) {
       s.attributes.content = f || ""
     }
-    if (s.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.v && f && $$_33.Fb(f)) {
+    if (s.type === Src_editor_widget_builtIn_types.v && f && Module_33.Fb(f)) {
       s.attributes.fileId = f
     }
   }
   return O({
-    widget: r.a({}, s),
+    widget: Module_6.a({}, s),
     forceRender: true
   })
 }

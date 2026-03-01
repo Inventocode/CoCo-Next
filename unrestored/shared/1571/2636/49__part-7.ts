@@ -8,18 +8,18 @@
 
 var zt
 var Vt
-import * as ht from "./18"
-import * as Oe from "./43"
-import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
-import * as Y from "./39"
-import * as z from "./27"
-import * as Yt from "./6"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"./43"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"./24/index"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
 function Kt(e, t) {
-  var /* [auto-meaningful-name] */$_24_index$a$client
-  var r = Oe.e()
-  var o = Oe.a() || ""
+  var /* [auto-meaningful-name] */Module_24$a$client
+  var r = Module_43.e()
+  var o = Module_43.a() || ""
   if (!t) {
-    e = ht.k
+    e = Module_18.k
     t = ""
   }
   var i = {
@@ -30,8 +30,8 @@ function Kt(e, t) {
       type: e
     }
   }
-  if (!(null === ($_24_index$a$client = $_24_index.a.client) || undefined === $_24_index$a$client)) {
-    $_24_index$a$client.emitCustomEvent({
+  if (!(null === (Module_24$a$client = Module_24.a.client) || undefined === Module_24$a$client)) {
+    Module_24$a$client.emitCustomEvent({
       type: Vt.USER_FOCUS,
       data: i
     })
@@ -51,7 +51,7 @@ function Kt(e, t) {
 })(zt || (zt = {}))
 var qt = new (function () {
   function e() {
-    z.a(this, e)
+    Module_27.a(this, e)
     this.intervalTime = 1e4
     this.currentUserFocusInfo = undefined
     this.timeId = undefined
@@ -64,20 +64,20 @@ var qt = new (function () {
       }
     }
   }
-  Y.a(e, [
+  Module_39.a(e, [
     {
       key: "runIntervalTask",
       value: function (e) {
         var t = this
-        this.currentUserFocusInfo = Yt.a({}, e)
+        this.currentUserFocusInfo = Module_6.a({}, e)
         if (this.timeId) {
           clearInterval(this.timeId)
         }
         this.timeId = setInterval(function () {
-          var /* [auto-meaningful-name] */$_24_index$a$client
-          if (t.currentUserFocusInfo.path.type !== ht.k) {
-            if (!(null === ($_24_index$a$client = $_24_index.a.client) || undefined === $_24_index$a$client)) {
-              $_24_index$a$client.emitCustomEvent({
+          var /* [auto-meaningful-name] */Module_24$a$client
+          if (t.currentUserFocusInfo.path.type !== Module_18.k) {
+            if (!(null === (Module_24$a$client = Module_24.a.client) || undefined === Module_24$a$client)) {
+              Module_24$a$client.emitCustomEvent({
                 type: Vt.USER_FOCUS,
                 data: t.currentUserFocusInfo
               })
@@ -90,18 +90,18 @@ var qt = new (function () {
   return e
 }())()
 function Xt(e) {
-  var /* [auto-meaningful-name] */$_24_index$a$client
-  if (!(null === ($_24_index$a$client = $_24_index.a.client) || undefined === $_24_index$a$client)) {
-    $_24_index$a$client.emitCustomEvent({
+  var /* [auto-meaningful-name] */Module_24$a$client
+  if (!(null === (Module_24$a$client = Module_24.a.client) || undefined === Module_24$a$client)) {
+    Module_24$a$client.emitCustomEvent({
       type: Vt.USER_COLORS,
       data: e
     })
   }
 }
 function Qt(e, t, n, r) {
-  var /* [auto-meaningful-name] */$_24_index$a$client
-  if (!(null === ($_24_index$a$client = $_24_index.a.client) || undefined === $_24_index$a$client)) {
-    $_24_index$a$client.emitCustomEvent({
+  var /* [auto-meaningful-name] */Module_24$a$client
+  if (!(null === (Module_24$a$client = Module_24.a.client) || undefined === Module_24$a$client)) {
+    Module_24$a$client.emitCustomEvent({
       type: Vt.CLOUD_DATABASE,
       data: {
         type: e,

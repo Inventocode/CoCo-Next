@@ -4,10 +4,10 @@
  * 模块 ID：1784
  */
 
-var r = require("../1662/86")
-var o = require("../1785/194")
-var i = require("./1267/index")
-var a = require("./758")
+var r = require(/* 86 */"../1662/86")
+var o = require(/* 194 */"../1785/194")
+var i = require(/* 1267 */"./1267/index")
+var a = require(/* 758 */"./758")
 var /* [auto-meaningful-name] */o$process = o.process
 r({
   global: true,

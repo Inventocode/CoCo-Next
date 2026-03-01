@@ -7,10 +7,10 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$_779 from "./779"
+import * as /* [auto-meaningful-name] */Module_779 from /* 779 */"./779"
 function i(e) {
   if ("undefined" === typeof Symbol || null == e[Symbol.iterator]) {
-    if (Array.isArray(e) || (e = $_779.a(e))) {
+    if (Array.isArray(e) || (e = Module_779.a(e))) {
       var t = 0
       var n = function () {}
       return {

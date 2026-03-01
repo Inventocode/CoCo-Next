@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../73/index")
+var r = require(/* 73 */"../73/index")
 var i = function () {
   function t(t, e, n, i, o) {
     this.value = t

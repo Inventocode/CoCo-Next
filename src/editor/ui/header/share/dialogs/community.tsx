@@ -5,21 +5,21 @@
  */
 
 import { Ge } from "../../../../../../unrestored/shared/1571/2636/index__part-9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_133 from "../../../../../../unrestored/shared/1571/2636/133"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_197_index from "../../../../../../unrestored/shared/1571/2636/197/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"../../../../../../unrestored/shared/1571/2636/133"
+import * as /* [auto-meaningful-name] */Module_197 from /* 197 */"../../../../../../unrestored/shared/1571/2636/197/index"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../../unrestored/shared/1571/2636/141/index"
 import * as Tools from "../../../../../shared/tools"
 import { getCommunityWorkUrl } from "../../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../../unrestored/shared/1571/2636/97"
 import * as CommonActions from "../../../../redux/common/actions"
 import * as Components from "../../../../../shared/ui/components"
 import { CoCoDialog, IconFont } from "../../../../../shared/ui/components"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
 import { useSelector, useDispatch } from "react-redux"
 import /* [auto-meaningful-name] */React from "react"
 import { memo, useState, useRef, useEffect } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_177 from "../../../../../../unrestored/shared/1571/2636/177"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_328 from "../../../../../../unrestored/shared/1571/2636/328"
+import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../../../../unrestored/shared/1571/2636/177"
+import * as /* [auto-meaningful-name] */Module_328 from /* 328 */"../../../../../../unrestored/shared/1571/2636/328"
 import styles from "../../../../../../unrestored/shared/1571/2636/930"
 
 interface IPublishInfo {
@@ -40,7 +40,7 @@ export const ShareCommunityDialog = memo(({
   const title = useSelector((state) => state.project.title)
   const [isPublishing, setIsPublishing] = useState(false)
   const workCoverEditorRef = useRef(null)
-  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  const { formatMessage } = Module_710.a()
   const dispatch = useDispatch()
   const [publishInfo, setPublishInfo] = useState<IPublishInfo>({
     name: title,
@@ -88,7 +88,7 @@ export const ShareCommunityDialog = memo(({
       const coverDataUrl = coverCanvas.toDataURL("image/png")
       const processedCoverDataUrl = Tools.m(coverDataUrl)
       if (processedCoverDataUrl) {
-        coverUrl = (await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_197_index.e(processedCoverDataUrl)).url
+        coverUrl = (await Module_197.e(processedCoverDataUrl)).url
       }
     }
     try {
@@ -126,7 +126,7 @@ export const ShareCommunityDialog = memo(({
   }
 
   function track(publishInfo: IPublishInfo, isSuccess: boolean, failReason: string) {
-    $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("WorkPublish", {
+    Module_141.a("WorkPublish", {
       workId: id,
       workName: publishInfo.name,
       workType: "APP工匠",
@@ -140,12 +140,12 @@ export const ShareCommunityDialog = memo(({
 
   useEffect(function () {
     if (visible) {
-      if ($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id)) {
-        $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_177.j(id).then(({ data }) => {
+      if (Module_97.a(id)) {
+        Module_177.j(id).then(({ data }) => {
           setPublishInfo({
             name: data.name,
-            description: data.description === $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_328.a ? "" : data.description || "",
-            operation: data.operation === $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_328.b ? "" : data.operation || ""
+            description: data.description === Module_328.a ? "" : data.description || "",
+            operation: data.operation === Module_328.b ? "" : data.operation || ""
           })
           if (data.cover_url) {
             setWorkCover(data.cover_url)
@@ -179,7 +179,7 @@ export const ShareCommunityDialog = memo(({
         <div className={styles.changePoster}>
           <Components.B
             onChange={handleWorkCoverChange}
-            accept={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_133.f}
+            accept={Module_133.f}
           >
             <IconFont type="icon-player-upload-file" />
             {formatMessage({ id: "Publish.changeWorkCover" })}

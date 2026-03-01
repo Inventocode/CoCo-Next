@@ -8,11 +8,11 @@
 
 export { c as a }
 export { l as b }
-import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
-import * as /* [auto-meaningful-name] */$_306 from "./306"
-import * as /* [auto-meaningful-name] */$_2639_index from "./2639/index"
-import * as /* [auto-meaningful-name] */$_928 from "./928"
-import * as /* [auto-meaningful-name] */$_395 from "./395"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../799/38"
+import * as /* [auto-meaningful-name] */Module_306 from /* 306 */"./306"
+import * as /* [auto-meaningful-name] */Module_2639 from /* 2639 */"./2639/index"
+import * as /* [auto-meaningful-name] */Module_928 from /* 928 */"./928"
+import * as /* [auto-meaningful-name] */Module_395 from /* 395 */"./395"
 var c = function () {
   function e() {
     this._notifyingListeners = false
@@ -27,17 +27,17 @@ var c = function () {
   e.clone = function (t) {
     var n = new e()
     if (t) {
-      n._breadcrumbs = $$_799_38.f(t._breadcrumbs)
-      n._tags = $$_799_38.a({}, t._tags)
-      n._extra = $$_799_38.a({}, t._extra)
-      n._contexts = $$_799_38.a({}, t._contexts)
+      n._breadcrumbs = Module_38.f(t._breadcrumbs)
+      n._tags = Module_38.a({}, t._tags)
+      n._extra = Module_38.a({}, t._extra)
+      n._contexts = Module_38.a({}, t._contexts)
       n._user = t._user
       n._level = t._level
       n._span = t._span
       n._session = t._session
       n._transactionName = t._transactionName
       n._fingerprint = t._fingerprint
-      n._eventProcessors = $$_799_38.f(t._eventProcessors)
+      n._eventProcessors = Module_38.f(t._eventProcessors)
       n._requestSession = t._requestSession
     }
     return n
@@ -70,24 +70,24 @@ var c = function () {
     return this
   }
   e.prototype.setTags = function (e) {
-    this._tags = $$_799_38.a($$_799_38.a({}, this._tags), e)
+    this._tags = Module_38.a(Module_38.a({}, this._tags), e)
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setTag = function (e, t) {
     var n
-    this._tags = $$_799_38.a($$_799_38.a({}, this._tags), ((n = {})[e] = t, n))
+    this._tags = Module_38.a(Module_38.a({}, this._tags), ((n = {})[e] = t, n))
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setExtras = function (e) {
-    this._extra = $$_799_38.a($$_799_38.a({}, this._extra), e)
+    this._extra = Module_38.a(Module_38.a({}, this._extra), e)
     this._notifyScopeListeners()
     return this
   }
   e.prototype.setExtra = function (e, t) {
     var n
-    this._extra = $$_799_38.a($$_799_38.a({}, this._extra), ((n = {})[e] = t, n))
+    this._extra = Module_38.a(Module_38.a({}, this._extra), ((n = {})[e] = t, n))
     this._notifyScopeListeners()
     return this
   }
@@ -114,7 +114,7 @@ var c = function () {
     if (null === t) {
       delete this._contexts[e]
     } else {
-      this._contexts = $$_799_38.a($$_799_38.a({}, this._contexts), ((n = {})[e] = t, n))
+      this._contexts = Module_38.a(Module_38.a({}, this._contexts), ((n = {})[e] = t, n))
     }
     this._notifyScopeListeners()
     return this
@@ -156,9 +156,9 @@ var c = function () {
       return n instanceof e ? n : this
     }
     if (t instanceof e) {
-      this._tags = $$_799_38.a($$_799_38.a({}, this._tags), t._tags)
-      this._extra = $$_799_38.a($$_799_38.a({}, this._extra), t._extra)
-      this._contexts = $$_799_38.a($$_799_38.a({}, this._contexts), t._contexts)
+      this._tags = Module_38.a(Module_38.a({}, this._tags), t._tags)
+      this._extra = Module_38.a(Module_38.a({}, this._extra), t._extra)
+      this._contexts = Module_38.a(Module_38.a({}, this._contexts), t._contexts)
       if (t._user && Object.keys(t._user).length) {
         this._user = t._user
       }
@@ -172,11 +172,11 @@ var c = function () {
         this._requestSession = t._requestSession
       }
     } else {
-      if ($_306.h(t)) {
+      if (Module_306.h(t)) {
         t = t
-        this._tags = $$_799_38.a($$_799_38.a({}, this._tags), t.tags)
-        this._extra = $$_799_38.a($$_799_38.a({}, this._extra), t.extra)
-        this._contexts = $$_799_38.a($$_799_38.a({}, this._contexts), t.contexts)
+        this._tags = Module_38.a(Module_38.a({}, this._tags), t.tags)
+        this._extra = Module_38.a(Module_38.a({}, this._extra), t.extra)
+        this._contexts = Module_38.a(Module_38.a({}, this._contexts), t.contexts)
         if (t.user) {
           this._user = t.user
         }
@@ -213,10 +213,10 @@ var c = function () {
     if (n <= 0) {
       return this
     }
-    var i = $$_799_38.a({
-      timestamp: $_2639_index.a()
+    var i = Module_38.a({
+      timestamp: Module_2639.a()
     }, e)
-    this._breadcrumbs = $$_799_38.f(this._breadcrumbs, [i]).slice(-n)
+    this._breadcrumbs = Module_38.f(this._breadcrumbs, [i]).slice(-n)
     this._notifyScopeListeners()
     return this
   }
@@ -228,16 +228,16 @@ var c = function () {
   e.prototype.applyToEvent = function (e, t) {
     var /* [auto-meaningful-name] */this$_span$transaction
     if (this._extra && Object.keys(this._extra).length) {
-      e.extra = $$_799_38.a($$_799_38.a({}, this._extra), e.extra)
+      e.extra = Module_38.a(Module_38.a({}, this._extra), e.extra)
     }
     if (this._tags && Object.keys(this._tags).length) {
-      e.tags = $$_799_38.a($$_799_38.a({}, this._tags), e.tags)
+      e.tags = Module_38.a(Module_38.a({}, this._tags), e.tags)
     }
     if (this._user && Object.keys(this._user).length) {
-      e.user = $$_799_38.a($$_799_38.a({}, this._user), e.user)
+      e.user = Module_38.a(Module_38.a({}, this._user), e.user)
     }
     if (this._contexts && Object.keys(this._contexts).length) {
-      e.contexts = $$_799_38.a($$_799_38.a({}, this._contexts), e.contexts)
+      e.contexts = Module_38.a(Module_38.a({}, this._contexts), e.contexts)
     }
     if (this._level) {
       e.level = this._level
@@ -246,33 +246,33 @@ var c = function () {
       e.transaction = this._transactionName
     }
     if (this._span) {
-      e.contexts = $$_799_38.a({
+      e.contexts = Module_38.a({
         trace: this._span.getTraceContext()
       }, e.contexts)
       var i = null === (this$_span$transaction = this._span.transaction) || undefined === this$_span$transaction ? undefined : this$_span$transaction.name
       if (i) {
-        e.tags = $$_799_38.a({
+        e.tags = Module_38.a({
           transaction: i
         }, e.tags)
       }
     }
     this._applyFingerprint(e)
-    e.breadcrumbs = $$_799_38.f(e.breadcrumbs || [], this._breadcrumbs)
+    e.breadcrumbs = Module_38.f(e.breadcrumbs || [], this._breadcrumbs)
     e.breadcrumbs = e.breadcrumbs.length > 0 ? e.breadcrumbs : undefined
-    return this._notifyEventProcessors($$_799_38.f(u(), this._eventProcessors), e, t)
+    return this._notifyEventProcessors(Module_38.f(u(), this._eventProcessors), e, t)
   }
   e.prototype._notifyEventProcessors = function (e, t, n, o) {
     var s = this
     if (undefined === o) {
       o = 0
     }
-    return new $_928.a(function (a, c) {
+    return new Module_928.a(function (a, c) {
       var u = e[o]
       if (null === t || "function" !== typeof u) {
         a(t)
       } else {
-        var l = u($$_799_38.a({}, t), n)
-        if ($_306.m(l)) {
+        var l = u(Module_38.a({}, t), n)
+        if (Module_306.m(l)) {
           l.then(function (t) {
             return s._notifyEventProcessors(e, t, n, o + 1).then(a)
           }).then(null, c)
@@ -304,7 +304,7 @@ var c = function () {
   return e
 }()
 function u() {
-  var e = $_395.e()
+  var e = Module_395.e()
   e.__SENTRY__ = e.__SENTRY__ || {}
   e.__SENTRY__.globalEventProcessors = e.__SENTRY__.globalEventProcessors || []
   return e.__SENTRY__.globalEventProcessors

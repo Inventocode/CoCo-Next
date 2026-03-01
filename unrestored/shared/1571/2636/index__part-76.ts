@@ -11,31 +11,31 @@ import { tg } from "./index__part-75"
 var Jm
 var Zm
 var Qm
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as k from "./11"
-import * as ng from "./64"
-var rg = ng.a("COLUMN")
-var og = ng.a("COLUMN")
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
+var rg = Module_64.a("COLUMN")
+var og = Module_64.a("COLUMN")
 Qm = {}
-k.a(Qm, rg, {
+Module_11.a(Qm, rg, {
   field: "第1列"
 })
-k.a(Qm, og, {
+Module_11.a(Qm, og, {
   field: "第2列"
 })
 var ig = Qm
 var ag = [
   (Zm = {
-    rowId: ng.a("ROW")
-  }, k.a(Zm, rg, ""), k.a(Zm, og, ""), Zm), (Jm = {
-    rowId: ng.a("ROW")
-  }, k.a(Jm, rg, ""), k.a(Jm, og, ""), Jm)
+    rowId: Module_64.a("ROW")
+  }, Module_11.a(Zm, rg, ""), Module_11.a(Zm, og, ""), Zm), (Jm = {
+    rowId: Module_64.a("ROW")
+  }, Module_11.a(Jm, rg, ""), Module_11.a(Jm, og, ""), Jm)
 ]
 var sg = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.m,
+  type: Src_editor_widget_builtIn_types.m,
   category: {
     iconId: "icon-widget-local-storage",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.m
+    blocks: Src_editor_widget_builtIn_types.m
   },
   getTemplate: function (e) {
     return []
@@ -58,7 +58,7 @@ var sg = {
 var cg = {
   icon: "icon-widget-local-storage",
   title: "GridWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.m,
+  type: Src_editor_widget_builtIn_types.m,
   previewAreaWidgetTitle: "GridWidget.widgetName",
   component: Yh,
   editConfig: tg,

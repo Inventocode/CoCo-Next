@@ -7,15 +7,15 @@
 "use strict"
 
 import { qb } from "./index__part-98"
-import * as yb from "./21"
-import { createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$_224_index from "./224/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_224 from /* 224 */"./224/index"
 var Qb = function (e, t) {
-  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return React.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: qb
   }))
 }
 Qb.displayName = "DownOutlined"
-var Zb = forwardRef(Qb)
+var Zb = React.forwardRef(Qb)
 export { Zb }

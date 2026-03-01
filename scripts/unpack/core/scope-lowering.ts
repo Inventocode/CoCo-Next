@@ -18,7 +18,7 @@ export function scopeLowering(config: UnpackConfig, modules: ModuleMap) {
     for (const module of Object.values(modules)) {
         const { AST } = module
         const { program } = AST
-        if (module.external != null || program.sourceType != "module") {
+        if ((module.external != null && module.config.scopeLowering != true) || program.sourceType != "module") {
             bar.increment()
             continue
         }
@@ -52,9 +52,11 @@ export function scopeLowering(config: UnpackConfig, modules: ModuleMap) {
                 (statement.extra?.["isImport"] && !lastStatement?.extra?.["isImport"]) ||
                 moduleParts.length == 0
             ) {
+                const path = [...module.unrestoredPath.slice(0, -1), `${module.unrestoredPath.slice(-1)[0]}__part-${moduleParts.length}`]
                 moduleParts.push({
                     key: `${module.key}__part-${moduleParts.length}`,
-                    path: [...module.path.slice(0, -1), `${module.path.slice(-1)[0]}__part-${moduleParts.length}`],
+                    unrestoredPath: path,
+                    path,
                     args: module.args,
                     AST: t.file(t.program([], program.directives, "module")),
                     isEntry: false,
@@ -66,7 +68,8 @@ export function scopeLowering(config: UnpackConfig, modules: ModuleMap) {
                     importsMap: new Map(),
                     exports: new Set(),
                     count: moduleParts.length,
-                    namedImport: module.namedImport
+                    namedImport: module.namedImport,
+                    config: {}
                 })
             }
             addStatementToModulePart(moduleParts.slice(-1)[0]!, statement)
@@ -80,7 +83,7 @@ export function scopeLowering(config: UnpackConfig, modules: ModuleMap) {
             if (Object.hasOwn(config.moveToSrc ?? {}, modulePart.key)) {
                 const movedPath = config.moveToSrc![modulePart.key]
                 modulePart.external = movedPath == "." ? "." : `/${config.output.srcPath}${movedPath}`
-                modulePart.path = `/${config.output.srcUnrestoredPath}/${movedPath}`.split("/").filter(Boolean)
+                modulePart.unrestoredPath = `/${config.output.srcPath}/${movedPath}`.split("/").filter(Boolean)
                 modulePart.moved = true
             }
             modules[modulePart.key] = modulePart

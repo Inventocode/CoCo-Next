@@ -16,18 +16,18 @@ export { f as j }
 export { h as a }
 export { p as e }
 export { _ as d }
-import * as /* [auto-meaningful-name] */$$_$$_2680_285_211 from "../../2680/285/211"
+import * as /* [auto-meaningful-name] */Module_211 from /* 211 */"../../2680/285/211"
 function i(e, t, n) {
   return {
-    r: 255 * $$_$$_2680_285_211.a(e, 255),
-    g: 255 * $$_$$_2680_285_211.a(t, 255),
-    b: 255 * $$_$$_2680_285_211.a(n, 255)
+    r: 255 * Module_211.a(e, 255),
+    g: 255 * Module_211.a(t, 255),
+    b: 255 * Module_211.a(n, 255)
   }
 }
 function o(e, t, n) {
-  e = $$_$$_2680_285_211.a(e, 255)
-  t = $$_$$_2680_285_211.a(t, 255)
-  n = $$_$$_2680_285_211.a(n, 255)
+  e = Module_211.a(e, 255)
+  t = Module_211.a(t, 255)
+  n = Module_211.a(n, 255)
   var i = Math.max(e, t, n)
   var o = Math.min(e, t, n)
   var a = 0
@@ -69,9 +69,9 @@ function s(e, t, n) {
   var i
   var o
   var s
-  e = $$_$$_2680_285_211.a(e, 360)
-  t = $$_$$_2680_285_211.a(t, 100)
-  n = $$_$$_2680_285_211.a(n, 100)
+  e = Module_211.a(e, 360)
+  t = Module_211.a(t, 100)
+  n = Module_211.a(n, 100)
   if (0 === t) {
     o = n
     s = n
@@ -90,9 +90,9 @@ function s(e, t, n) {
   }
 }
 function c(e, t, n) {
-  e = $$_$$_2680_285_211.a(e, 255)
-  t = $$_$$_2680_285_211.a(t, 255)
-  n = $$_$$_2680_285_211.a(n, 255)
+  e = Module_211.a(e, 255)
+  t = Module_211.a(t, 255)
+  n = Module_211.a(n, 255)
   var i = Math.max(e, t, n)
   var o = Math.min(e, t, n)
   var a = 0
@@ -121,9 +121,9 @@ function c(e, t, n) {
   }
 }
 function u(e, t, n) {
-  e = 6 * $$_$$_2680_285_211.a(e, 360)
-  t = $$_$$_2680_285_211.a(t, 100)
-  n = $$_$$_2680_285_211.a(n, 100)
+  e = 6 * Module_211.a(e, 360)
+  t = Module_211.a(t, 100)
+  n = Module_211.a(n, 100)
   var i = Math.floor(e)
   var o = e - i
   var a = n * (1 - t)
@@ -137,11 +137,11 @@ function u(e, t, n) {
   }
 }
 function l(e, t, n, i) {
-  var o = [$$_$$_2680_285_211.e(Math.round(e).toString(16)), $$_$$_2680_285_211.e(Math.round(t).toString(16)), $$_$$_2680_285_211.e(Math.round(n).toString(16))]
+  var o = [Module_211.e(Math.round(e).toString(16)), Module_211.e(Math.round(t).toString(16)), Module_211.e(Math.round(n).toString(16))]
   return i && o[0].startsWith(o[0].charAt(1)) && o[1].startsWith(o[1].charAt(1)) && o[2].startsWith(o[2].charAt(1)) ? o[0].charAt(0) + o[1].charAt(0) + o[2].charAt(0) : o.join("")
 }
 function f(e, t, n, i, o) {
-  var a = [$$_$$_2680_285_211.e(Math.round(e).toString(16)), $$_$$_2680_285_211.e(Math.round(t).toString(16)), $$_$$_2680_285_211.e(Math.round(n).toString(16)), $$_$$_2680_285_211.e(d(i))]
+  var a = [Module_211.e(Math.round(e).toString(16)), Module_211.e(Math.round(t).toString(16)), Module_211.e(Math.round(n).toString(16)), Module_211.e(d(i))]
   return o && a[0].startsWith(a[0].charAt(1)) && a[1].startsWith(a[1].charAt(1)) && a[2].startsWith(a[2].charAt(1)) && a[3].startsWith(a[3].charAt(1)) ? a[0].charAt(0) + a[1].charAt(0) + a[2].charAt(0) + a[3].charAt(0) : a.join("")
 }
 function d(e) {

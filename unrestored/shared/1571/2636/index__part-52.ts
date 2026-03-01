@@ -6,20 +6,20 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_131 from "./131"
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as D from "./6"
-import /* [auto-meaningful-name] */React from "react"
-import * as /* [auto-meaningful-name] */$_548_index from "./548/index"
+import * as /* [auto-meaningful-name] */Module_131 from /* 131 */"./131"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_548 from /* 548 */"./548/index"
 var jf = function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  return React.createElement($_548_index.a, Object.assign({}, e, {
+  return React.createElement(Module_548.a, Object.assign({}, e, {
     onSwitch: function (n) {
-      if (Jd.r(e.id) && e$onChange) {
+      if (Module_33.r(e.id) && e$onChange) {
         e$onChange("value", n)
       }
     },
@@ -31,43 +31,43 @@ var Nf = {
   name: "WIDGET_ID",
   custom: true,
   options: function () {
-    return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.F)
+    return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.F)
   }
 }
 var Rf = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+  type: Src_editor_widget_builtIn_types.F,
   category: {
-    iconId: $_131.e,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.F
+    iconId: Module_131.e,
+    blocks: Src_editor_widget_builtIn_types.F
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"switch_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"switch_set_state\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"STATE_WRAPPER\">\n        <shadow type=\"switch_state_dropdown\"></shadow>\n      </value>\n    </block>"), rp.d, Jd.sb({
+      "<block type=\"switch_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"switch_set_state\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"STATE_WRAPPER\">\n        <shadow type=\"switch_state_dropdown\"></shadow>\n      </value>\n    </block>"), Module_61.d, Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+        widgetType: Src_editor_widget_builtIn_types.F,
         widgetId: e,
         isSetProperty: true
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__size",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+        widgetType: Src_editor_widget_builtIn_types.F,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"switch_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"switch_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"switch_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"switch_get_state\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
+      }), "<block type=\"switch_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"switch_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"switch_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"switch_get_state\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+        widgetType: Src_editor_widget_builtIn_types.F,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__size",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+        widgetType: Src_editor_widget_builtIn_types.F,
         widgetId: e
-      }), "<block type=\"switch_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.sb({
+      }), "<block type=\"switch_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, Module_33.sb({
         property: "__visible",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+        widgetType: Src_editor_widget_builtIn_types.F,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__disabled",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+        widgetType: Src_editor_widget_builtIn_types.F,
         widgetId: e
       })
     ]
@@ -85,7 +85,7 @@ var Rf = {
         var /* [auto-meaningful-name] */tNR$widgetId = t(n, r).widgetId
         var i = e.statementToCode(n, r, "DO")
         var a = e.valueToCode(n, r, "STATE", e.ORDER_FUNCTION_CALL)
-        return i ? ep.n("argsOnSwitchWidgetChange", [ep.o(tNR$widgetId)], i, [a]) : ""
+        return i ? Module_4.n("argsOnSwitchWidgetChange", [Module_4.o(tNR$widgetId)], i, [a]) : ""
       })
       e.insertBlockSnippetGenerator("switch_on_select_change", function () {
         return "state"
@@ -97,7 +97,7 @@ var Rf = {
       e.insertBlockSnippetGenerator("switch_set_state", function (n, r) {
         var /* [auto-meaningful-name] */tNR$widgetId = t(n, r).widgetId
         var i = e.valueToCode(n, r, "STATE_WRAPPER", e.ORDER_FUNCTION_CALL)
-        return ep.n("setSwitchWidgetState", [ep.o(tNR$widgetId), i])
+        return Module_4.n("setSwitchWidgetState", [Module_4.o(tNR$widgetId), i])
       })
       e.insertBlockSnippetGenerator("switch_set_position", function (n, r) {
         var o = t(n, r)
@@ -105,25 +105,25 @@ var Rf = {
         var /* [auto-meaningful-name] */o$block = o.block
         var s = "positionX" === e.getFieldValue(o$block, "POSITION_TYPE") ? "setSwitchWidgetPositionX" : "setSwitchWidgetPositionY"
         var c = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n(s, [ep.o(o$widgetId), c]), o$block, e)
+        return Module_4.l(Module_4.n(s, [Module_4.o(o$widgetId), c]), o$block, e)
       })
       e.insertBlockSnippetGenerator("switch_set_visible", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var /* [auto-meaningful-name] */o$block = o.block
         var s = "show" === e.getFieldValue(o$block, "VISIBLE")
-        return ep.n("setSwitchWidgetVisible", [ep.o(o$widgetId), s])
+        return Module_4.n("setSwitchWidgetVisible", [Module_4.o(o$widgetId), s])
       })
       e.insertBlockSnippetGenerator("switch_set_disabled", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var /* [auto-meaningful-name] */o$block = o.block
         var s = "disabled" === e.getFieldValue(o$block, "DISPLAY")
-        return ep.l(ep.n("setSwitchWidgetDisabled", [ep.o(o$widgetId), s]), o$block, e)
+        return Module_4.l(Module_4.n("setSwitchWidgetDisabled", [Module_4.o(o$widgetId), s]), o$block, e)
       })
       e.insertBlockSnippetGenerator("switch_get_state", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.s("getSwitchWidgetState", [ep.o(tEN$widgetId)])
+        return Module_4.s("getSwitchWidgetState", [Module_4.o(tEN$widgetId)])
       })
       e.insertBlockSnippetGenerator("switch_get_position", function (n, r) {
         var o = t(n, r)
@@ -137,10 +137,10 @@ var Rf = {
           case "positionY":
             s = "getSwitchWidgetPositionY"
         }
-        return ep.s(s, [ep.o(o$widgetId)])
+        return Module_4.s(s, [Module_4.o(o$widgetId)])
       })
       e.insertBlockSnippetGenerator("switch_on_change_state", function () {
-        return "".concat(ep.a, "state")
+        return "".concat(Module_4.a, "state")
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -148,7 +148,7 @@ var Rf = {
         type: "switch_on_change",
         message0: "%{BKY_SWITCH_ON_STATE_CHANGE}",
         args0: [
-          ep.e("%{BKY_BLOCK_TAB_ICON}", true), D.a({}, Nf), {
+          Module_4.e("%{BKY_BLOCK_TAB_ICON}", true), Module_6.a({}, Nf), {
             type: "input_value",
             name: "STATE",
             align: "CENTRE",
@@ -177,7 +177,7 @@ var Rf = {
         type: "switch_set_state",
         message0: "%{BKY_SWITCH_SET_STATE}",
         args0: [
-          D.a({}, Nf), {
+          Module_6.a({}, Nf), {
             type: "input_value",
             name: "STATE_WRAPPER",
             check: ["Boolean"]
@@ -207,7 +207,7 @@ var Rf = {
         type: "switch_set_position",
         message0: "%{BKY_SWITCH_SET_POSITION}",
         args0: [
-          D.a({}, Nf), {
+          Module_6.a({}, Nf), {
             type: "field_coco_dropdown",
             name: "POSITION_TYPE",
             custom: true,
@@ -228,7 +228,7 @@ var Rf = {
       e.insertBlockProfile("switch_get_state", {
         type: "switch_get_state",
         message0: "%{BKY_SWITCH_GET_STATE}",
-        args0: [D.a({}, Nf)],
+        args0: [Module_6.a({}, Nf)],
         output: ["Boolean"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -244,7 +244,7 @@ var Rf = {
             options: function () {
               return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
             }
-          }, D.a({}, Nf)
+          }, Module_6.a({}, Nf)
         ],
         previousStatement: true,
         nextStatement: true,
@@ -262,7 +262,7 @@ var Rf = {
             options: function () {
               return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]]
             }
-          }, D.a({}, Nf)
+          }, Module_6.a({}, Nf)
         ],
         previousStatement: true,
         nextStatement: true,
@@ -273,7 +273,7 @@ var Rf = {
         type: "switch_get_position",
         message0: "%{BKY_SWITCH_GET_POSITION}",
         args0: [
-          D.a({}, Nf), {
+          Module_6.a({}, Nf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -290,7 +290,7 @@ var Rf = {
   },
   categoryClass: {
     text: "",
-    iconId: $_131.e,
+    iconId: Module_131.e,
     blocks: []
   },
   renameBlocksInfo: {

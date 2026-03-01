@@ -9,26 +9,26 @@ import * as React from "react"
 import { ne } from "../../../../../../unrestored/shared/1571/2636/index__part-4"
 import { de } from "../../../../../../unrestored/shared/1571/2636/index__part-5"
 import { we } from "../../../../../../unrestored/shared/1571/2636/index__part-6"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index from "../../../../../../unrestored/shared/1571/2636/141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190 from "../../../../../../unrestored/shared/1571/2636/190"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297 from "../../../../../../unrestored/shared/1571/2636/297"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"../../../../../../unrestored/shared/1571/2636/141/index"
+import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"../../../../../../unrestored/shared/1571/2636/190"
+import * as /* [auto-meaningful-name] */Module_297 from /* 297 */"../../../../../../unrestored/shared/1571/2636/297"
 import * as Tools from "../../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213 from "../../../../../../unrestored/shared/1571/2636/1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18 from "../../../../../../unrestored/shared/1571/2636/18"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../../../../../../unrestored/shared/1571/2636/1213"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_components from "../../../../../shared/ui/components"
+import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../../../shared/ui/components"
 import { IconFont } from "../../../../../shared/ui/components"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index from "../../../../../../unrestored/shared/1571/2636/25/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index from "../../../../../../unrestored/shared/1571/2636/10/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_ui_language from "../../../../../shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../../../unrestored/shared/1571/2636/25/index"
+import /* [auto-meaningful-name] */Classnames from "classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../../unrestored/shared/1571/2636/10/index"
+import * as /* [auto-meaningful-name] */Shared_ui_language from "../../../../../shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useDispatch, useSelector } from "react-redux"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_shared_player_audit from "../../../../../shared/player/audit"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181 from "../../../../../../unrestored/shared/1571/2636/418"
+import * as /* [auto-meaningful-name] */Shared_player_audit from "../../../../../shared/player/audit"
+import * as /* [auto-meaningful-name] */Module_418 from /* 418 */"../../../../../../unrestored/shared/1571/2636/418"
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_418 from "../../../../../../unrestored/shared/1571/2636/418"
 
 enum Type {
   SELF = "self",
@@ -48,7 +48,7 @@ function je(e) {
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$type = e.type
   return "loaded" === e$type ? <></> : "emptyList" === e$type ? <div
-    className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.emptyContainer}
+    className={Unrestored_shared_1571_2636_418.emptyContainer}
   >
     {React.createElement(we, {
       text: e$title
@@ -64,7 +64,7 @@ function ProjectItem({
   filterType: Type
   status: "loading" | "loaded" | "emptyList"
 }) {
-  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  const { formatMessage } = Module_710.a()
   var t
   function c() {
     var e = []
@@ -78,24 +78,24 @@ function ProjectItem({
     return e
   }
   return <div
-    className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.item)}
+    className={Classnames(Unrestored_shared_1571_2636_418.item)}
     onClick={() => {
       onClick(project.id, project.name, project.updateTime)
     }}
     key={project.id}
   >
-    <div className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.cover}>
+    <div className={Unrestored_shared_1571_2636_418.cover}>
       <img
         src={(project.coverUrl || project.previewUrl)?.replace("https://static-creation.codemao.cn/", "https://creation.codemao.cn/")}
         alt={project.name}
       />
     </div>
-    <$$_$$_$$_$$_$$_shared_ui_components.a
-      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.name}
+    <Shared_ui_components.a
+      className={Unrestored_shared_1571_2636_418.name}
       text={project.name}
     />
     <p
-      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.time}
+      className={Unrestored_shared_1571_2636_418.time}
     >
       {React.createElement(ne, {
         time: project.updateTime,
@@ -103,20 +103,20 @@ function ProjectItem({
       })}
     </p>
     {!!c().length && <div
-      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuContainer}
+      className={Unrestored_shared_1571_2636_418.menuContainer}
       onClick={function (e) {
         e.stopPropagation()
       }}
     >
-      {<$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a
+      {<Module_1213.a
         placement={"rightTop"}
         trigger={"click"}
-        overlayClassName={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuPopover}
+        overlayClassName={Unrestored_shared_1571_2636_418.menuPopover}
         zIndex={100}
         content={<div
-          className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.menuContent}
+          className={Unrestored_shared_1571_2636_418.menuContent}
         >
-          <$$_$$_$$_$$_$$_shared_ui_components.l
+          <Shared_ui_components.l
             onClick={function (e) {
               if (!("deleteProject" !== e && "deleteCollProject" !== e)) {
                 onDelete(project.id, project.name, project.isCollWork || filterType === Type.COLL)
@@ -124,7 +124,7 @@ function ProjectItem({
             }}
           >
             {c().map(function (e, t) {
-              return <$$_$$_$$_$$_$$_shared_ui_components.m
+              return <Shared_ui_components.m
                 value={e}
                 key={t}
               >
@@ -133,9 +133,9 @@ function ProjectItem({
                     id: "MyProject." + e
                   })}
                 </span>}
-              </$$_$$_$$_$$_$$_shared_ui_components.m>
+              </Shared_ui_components.m>
             })}
-          </$$_$$_$$_$$_$$_shared_ui_components.l>
+          </Shared_ui_components.l>
         </div>}
       >
         <div>
@@ -143,10 +143,10 @@ function ProjectItem({
             type={"icon-more"}
           />}
         </div>
-      </$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1213.a>}
+      </Module_1213.a>}
     </div>}
     <div
-      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.badgeWrapper}
+      className={Unrestored_shared_1571_2636_418.badgeWrapper}
     >
       {(project.isCollWork || filterType === Type.COLL) && "loaded" === status && <IconFont
         type={"icon-collaborator"}
@@ -160,7 +160,7 @@ function ProjectItem({
 
 const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
   var r = React.useState([])
-  var o = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_10_index.a(r, 2)
+  var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
   const [status, setStatus] = React.useState<"loading" | "loaded" | "emptyList">("loaded")
@@ -178,14 +178,14 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
   var C = React.useRef(0)
   var A = React.useRef(1)
   var j = React.useRef(false)
-  const { formatMessage } = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  const { formatMessage } = Module_710.a()
   async function onClick(id, r, o) {
     try {
-      const response = await $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.d(id)
+      const response = await Module_297.d(id)
       const { data } = response
       if (data) {
         if (
-          !(await $$_$$_$$_$$_$$_shared_player_audit.getWhitelist()).includes(Number(id)) &&
+          !(await Shared_player_audit.getWhitelist()).includes(Number(id)) &&
           !data.is_author &&
           data.is_coll_work &&
           data.content &&
@@ -215,9 +215,9 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
           isCollWork: data.is_coll_work,
           isAuthor: data.is_author,
           editPermission: data.edit_permission,
-          jsonFrom: data.is_coll_work ? $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.d.OTHER : $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_18.d.MY_WORK
+          jsonFrom: data.is_coll_work ? Module_18.d.OTHER : Module_18.d.MY_WORK
         })
-        $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("OpenWork", {
+        Module_141.a("OpenWork", {
           workId: id,
           workType: type === Type.COLL ? 2 : 1,
           isSuccess: true,
@@ -230,7 +230,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
       }
     } catch (error) {
       console.error("getProjectJson error", error)
-      $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_141_index.a("OpenWork", {
+      Module_141.a("OpenWork", {
         workId: id,
         workType: type === Type.COLL ? 2 : 1,
         isSuccess: false,
@@ -240,7 +240,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     dispatch(Actions.closeProjectDialogAction())
   }
   var D = React.useCallback(function () {
-    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -310,7 +310,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     return L.apply(this, arguments)
   }
   function L() {
-    return (L = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t, n) {
+    return (L = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -323,12 +323,12 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
               return e.abrupt("return", t)
             case 2:
               e.next = 4
-              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.c(C.current, 20, n)
+              return Module_297.c(C.current, 20, n)
             case 4:
               e$sent = e.sent
               C.current += 20
               A.current = e$sent.total
-              return e.abrupt("return", [].concat($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(e$sent.list)))
+              return e.abrupt("return", [].concat(Module_25.a(t), Module_25.a(e$sent.list)))
             case 8:
             case "end":
               return e.stop()
@@ -341,7 +341,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     return B.apply(this, arguments)
   }
   function B() {
-    return (B = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+    return (B = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -355,11 +355,11 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
             case 2:
               C.current++
               e.next = 5
-              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.b(C.current, 20)
+              return Module_297.b(C.current, 20)
             case 5:
               e$sent = e.sent
               A.current = e$sent.total
-              return e.abrupt("return", [].concat($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(t), $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(e$sent.list)))
+              return e.abrupt("return", [].concat(Module_25.a(t), Module_25.a(e$sent.list)))
             case 8:
             case "end":
               return e.stop()
@@ -387,7 +387,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     }
   }
   var G = function () {
-    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(t) {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var r
       return RegeneratorRuntime.wrap(function (e) {
@@ -406,11 +406,11 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
               break
             case 6:
               e.next = 8
-              return $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_297.a(t)
+              return Module_297.a(t)
             case 8:
               if (n = e.sent) {
                 dispatch(Actions.showCommonToastInfoAction({
-                  message: $$_$$_$$_$$_$$_shared_ui_language.c(language, "MyProject.deleteProjectSuccess").toString()
+                  message: Shared_ui_language.c(language, "MyProject.deleteProjectSuccess").toString()
                 }))
               }
             case 10:
@@ -419,14 +419,14 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
                   return e.id === t
                 })) > -1) {
                   i.splice(r, 1)
-                  F($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_25_index.a(i))
+                  F(Module_25.a(i))
                   if (id === t) {
                     dispatch(Actions.warpAsyncCreateProject())
                   }
                 }
               } else {
                 dispatch(Actions.showCommonToastInfoAction({
-                  message: $$_$$_$$_$$_$$_shared_ui_language.c(language, "MyProject.deleteProjectError").toString(),
+                  message: Shared_ui_language.c(language, "MyProject.deleteProjectError").toString(),
                   duration: 1e3,
                   type: "error"
                 }))
@@ -452,7 +452,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
         title: formatMessage({
           id: "MyProject.quitCollWorkTitle"
         }, {
-          name: $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_190.f(t)
+          name: Module_190.f(t)
         }),
         content: formatMessage({
           id: "MyProject.quitCollWorkDescription"
@@ -464,7 +464,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
     }
   }
   var U = function () {
-    var e = $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e(type) {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(type) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -483,13 +483,13 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
   }()
   return <div>
     {<div
-      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.filter}
+      className={Unrestored_shared_1571_2636_418.filter}
     >
       {Ae.map(function (e) {
         return <div
           key={e}
           onClick={U.bind(null, e)}
-          className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_8($$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.filterItem, type === e && $$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.active)}
+          className={Classnames(Unrestored_shared_1571_2636_418.filterItem, type === e && Unrestored_shared_1571_2636_418.active)}
         >
           {formatMessage({
             id: "MyProject.".concat(e)
@@ -498,7 +498,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
       })}
     </div>}
     {<div
-      className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.container}
+      className={Unrestored_shared_1571_2636_418.container}
     >
       {React.createElement(je, {
         title: formatMessage({
@@ -507,9 +507,9 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
         type: status
       })}
       {i.length > 0 && <div
-        className={$$_$$_$$_$$_$$_$$_unrestored_shared_1571_2636_4181.main}
+        className={Unrestored_shared_1571_2636_418.main}
       >
-        {<$$_$$_$$_$$_$$_shared_ui_components.v
+        {<Shared_ui_components.v
           offsetY={300}
           height={450}
           onScrollBottom={function () {
@@ -526,7 +526,7 @@ const OpenMyProject = React.memo(({ visible, importProjectJson }) => {
               filterType={type}
             />
           })}
-        </$$_$$_$$_$$_$$_shared_ui_components.v>}
+        </Shared_ui_components.v>}
       </div>}
     </div>}
   </div>

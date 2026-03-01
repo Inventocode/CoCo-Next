@@ -7,19 +7,19 @@
 "use strict"
 
 import { b } from "./index__part-0"
-import /* [auto-meaningful-name] */$_1041 from "./1041"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { createContext, useContext, useRef, createElement, useMemo, Component, useEffect } from "react"
-import * as /* [auto-meaningful-name] */$$_54 from "../54"
-import * as /* [auto-meaningful-name] */$$_79_index from "../79/index"
-import * as /* [auto-meaningful-name] */$$_21 from "../21"
-import * as /* [auto-meaningful-name] */$$_35 from "../35"
-import * as /* [auto-meaningful-name] */$$_19 from "../19"
-import * as /* [auto-meaningful-name] */$_560 from "./560"
-import * as /* [auto-meaningful-name] */$$_103 from "../103"
-import * as /* [auto-meaningful-name] */$$_106 from "../106"
-import * as /* [auto-meaningful-name] */$$_120 from "../120"
-import * as /* [auto-meaningful-name] */$$_140 from "../140"
+import /* [auto-meaningful-name] */Module_1041 from /* 1041 */"./1041"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
+import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../79/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
+import * as /* [auto-meaningful-name] */Module_560 from /* 560 */"./560"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../106"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../120"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../140"
 var T = {
   MAC_ENTER: 3,
   BACKSPACE: 8,
@@ -199,7 +199,7 @@ var T = {
 }
 var S = T
 function A(e, t) {
-  var n = $$_21.a({}, e)
+  var n = Module_21.a({}, e)
   if (Array.isArray(t)) {
     t.forEach(function (e) {
       delete n[e]
@@ -208,14 +208,14 @@ function A(e, t) {
   return n
 }
 var I = ["children", "locked"]
-var j = createContext(null)
+var j = React.createContext(null)
 function N(e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$locked = e.locked
-  var r = $$_54.a(e, I)
-  var o = useContext(j)
+  var r = Module_54.a(e, I)
+  var o = React.useContext(j)
   var a = function (e, t, n) {
-    var r = useRef({})
+    var r = React.useRef({})
     if (!("value" in r.current && !n(r.current.condition, t))) {
       r.current.value = e()
       r.current.condition = t
@@ -223,7 +223,7 @@ function N(e) {
     return r.current.value
   }(function () {
     return function (e, t) {
-      var n = $$_21.a({}, e)
+      var n = Module_21.a({}, e)
       Object.keys(t).forEach(function (e) {
         var r = t[e]
         if (undefined !== r) {
@@ -233,14 +233,14 @@ function N(e) {
       return n
     }(o, r)
   }, [o, r], function (e, t) {
-    return !e$locked && (e[0] !== t[0] || !$_1041(e[1], t[1]))
+    return !e$locked && (e[0] !== t[0] || !Module_1041(e[1], t[1]))
   })
-  return createElement(j.Provider, {
+  return React.createElement(j.Provider, {
     value: a
   }, e$children)
 }
 function R(e, t, n, r) {
-  var o = useContext(j)
+  var o = React.useContext(j)
   var /* [auto-meaningful-name] */o$activeKey = o.activeKey
   var /* [auto-meaningful-name] */o$onActive = o.onActive
   var /* [auto-meaningful-name] */o$onInactive = o.onInactive
@@ -272,7 +272,7 @@ function R(e, t, n, r) {
 var k = ["item"]
 function x(e) {
   var /* [auto-meaningful-name] */e$item = e.item
-  var n = $$_54.a(e, k)
+  var n = Module_54.a(e, k)
   Object.defineProperty(n, "item", {
     get: function () {
       b(false, "`info.item` is deprecated since we will move to function component that not provides React Node instance in future.")
@@ -285,10 +285,10 @@ function D(e) {
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$props = e.props
   var /* [auto-meaningful-name] */e$children = e.children
-  return ("function" === typeof e$icon ? createElement(e$icon, $$_21.a({}, e$props)) : e$icon) || e$children || null
+  return ("function" === typeof e$icon ? React.createElement(e$icon, Module_21.a({}, e$props)) : e$icon) || e$children || null
 }
 function M(e) {
-  var t = useContext(j)
+  var t = React.useContext(j)
   var /* [auto-meaningful-name] */t$mode = t.mode
   var /* [auto-meaningful-name] */t$rtl = t.rtl
   var /* [auto-meaningful-name] */t$inlineIndent = t.inlineIndent
@@ -302,36 +302,36 @@ function M(e) {
   }
 }
 var L = []
-var P = createContext(null)
+var P = React.createContext(null)
 function B() {
-  return useContext(P)
+  return React.useContext(P)
 }
-var F = createContext(L)
+var F = React.createContext(L)
 function G(e) {
-  var t = useContext(F)
-  return useMemo(function () {
-    return undefined !== e ? [].concat($$_79_index.a(t), [e]) : t
+  var t = React.useContext(F)
+  return React.useMemo(function () {
+    return undefined !== e ? [].concat(Module_79.a(t), [e]) : t
   }, [t, e])
 }
-var W = createContext(null)
-var U = createContext(null)
+var W = React.createContext(null)
+var U = React.createContext(null)
 function H(e, t) {
   return undefined === e ? null : "".concat(e, "-").concat(t)
 }
 function V(e) {
-  return H(useContext(U), e)
+  return H(React.useContext(U), e)
 }
 var z = ["title", "attribute", "elementRef"]
 var Y = ["style", "className", "eventKey", "warnKey", "disabled", "itemIcon", "children", "role", "onMouseEnter", "onMouseLeave", "onClick", "onKeyDown", "onFocus"]
 var K = ["active"]
 var q = function (e) {
-  $$_120.a(n, e)
-  var t = $$_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n() {
-    $$_103.a(this, n)
+    Module_103.a(this, n)
     return t.apply(this, arguments)
   }
-  $$_106.a(n, [
+  Module_106.a(n, [
     {
       key: "render",
       value: function () {
@@ -339,9 +339,9 @@ var q = function (e) {
         var /* [auto-meaningful-name] */this$props$title = this$props.title
         var /* [auto-meaningful-name] */this$props$attribute = this$props.attribute
         var /* [auto-meaningful-name] */this$props$elementRef = this$props.elementRef
-        var i = A($$_54.a(this$props, z), ["eventKey"])
+        var i = A(Module_54.a(this$props, z), ["eventKey"])
         b(!this$props$attribute, "`attribute` of Menu.Item is deprecated. Please pass attribute directly.")
-        return createElement($_560.a.Item, $$_19.a({}, this$props$attribute, {
+        return React.createElement(Module_560.a.Item, Module_19.a({}, this$props$attribute, {
           title: "string" === typeof this$props$title ? this$props$title : undefined
         }, i, {
           ref: this$props$elementRef
@@ -350,7 +350,7 @@ var q = function (e) {
     }
   ])
   return n
-}(Component)
+}(React.Component)
 var X = function (e) {
   var t
   var /* [auto-meaningful-name] */e$style = e.style
@@ -366,9 +366,9 @@ var X = function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$onKeyDown = e.onKeyDown
   var /* [auto-meaningful-name] */e$onFocus = e.onFocus
-  var E = $$_54.a(e, Y)
+  var E = Module_54.a(e, Y)
   var O = V(e$eventKey)
-  var w = useContext(j)
+  var w = React.useContext(j)
   var /* [auto-meaningful-name] */w$prefixCls = w.prefixCls
   var /* [auto-meaningful-name] */w$onItemClick = w.onItemClick
   var /* [auto-meaningful-name] */w$disabled = w.disabled
@@ -377,14 +377,14 @@ var X = function (e) {
   var /* [auto-meaningful-name] */w$selectedKeys = w.selectedKeys
   var /* [auto-meaningful-name] */w$onActive = w.onActive
   var P = "".concat(w$prefixCls, "-item")
-  var B = useRef()
-  var F = useRef()
+  var B = React.useRef()
+  var F = React.useRef()
   var W = w$disabled || e$disabled
   var U = G(e$eventKey)
   var H = function (e) {
     return {
       key: e$eventKey,
-      keyPath: $$_79_index.a(U).reverse(),
+      keyPath: Module_79.a(U).reverse(),
       item: B.current,
       domEvent: e
     }
@@ -392,14 +392,14 @@ var X = function (e) {
   var z = e$itemIcon || w$itemIcon
   var X = R(e$eventKey, W, e$onMouseEnter, e$onMouseLeave)
   var /* [auto-meaningful-name] */X$active = X.active
-  var Z = $$_54.a(X, K)
+  var Z = Module_54.a(X, K)
   var J = w$selectedKeys.includes(e$eventKey)
   var $ = M(U.length)
   var ee = {}
   if ("option" === e.role) {
     ee["aria-selected"] = J
   }
-  return createElement(q, $$_19.a({
+  return React.createElement(q, Module_19.a({
     ref: B,
     elementRef: F,
     role: null === e$role ? "none" : e$role || "menuitem",
@@ -408,8 +408,8 @@ var X = function (e) {
   }, E, Z, ee, {
     component: "li",
     "aria-disabled": e$disabled,
-    style: $$_21.a($$_21.a({}, $), e$style),
-    className: Classnames(P, (t = {}, $$_35.a(t, "".concat(P, "-active"), X$active), $$_35.a(t, "".concat(P, "-selected"), J), $$_35.a(t, "".concat(P, "-disabled"), W), t), e$className),
+    style: Module_21.a(Module_21.a({}, $), e$style),
+    className: Classnames(P, (t = {}, Module_35.a(t, "".concat(P, "-active"), X$active), Module_35.a(t, "".concat(P, "-selected"), J), Module_35.a(t, "".concat(P, "-disabled"), W), t), e$className),
     onClick: function (e) {
       if (!W) {
         var t = H(e)
@@ -437,8 +437,8 @@ var X = function (e) {
         e$onFocus(e)
       }
     }
-  }), e$children, createElement(D, {
-    props: $$_21.a($$_21.a({}, e), {}, {
+  }), e$children, React.createElement(D, {
+    props: Module_21.a(Module_21.a({}, e), {}, {
       isSelected: J
     }),
     icon: z
@@ -448,7 +448,7 @@ var Q = function (e) {
   var /* [auto-meaningful-name] */e$eventKey = e.eventKey
   var n = B()
   var r = G(e$eventKey)
-  useEffect(function () {
+  React.useEffect(function () {
     if (n) {
       n.registerPath(e$eventKey, r)
       return function () {
@@ -456,7 +456,7 @@ var Q = function (e) {
       }
     }
   }, [r])
-  return n ? null : createElement(X, e)
+  return n ? null : React.createElement(X, e)
 }
 export { S }
 export { A }

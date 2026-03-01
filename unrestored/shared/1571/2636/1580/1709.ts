@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("./1282/400/index")
-var o = require("./1282/240")
-var i = require("./1282/310")
-var a = require("./1659/168")
-var s = require("./1708/957")
+var r = require(/* 400 */"./1282/400/index")
+var o = require(/* 240 */"./1282/240")
+var i = require(/* 310 */"./1282/310")
+var a = require(/* 168 */"./1659/168")
+var s = require(/* 957 */"./1708/957")
 var /* [auto-meaningful-name] */RegExp$prototype = RegExp.prototype
 var /* [auto-meaningful-name] */RegExp$prototype$toString = RegExp$prototype.toString
 var u = a(function () {

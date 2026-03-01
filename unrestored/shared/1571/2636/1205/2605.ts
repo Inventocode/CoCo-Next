@@ -10,8 +10,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_math_blocks = undefined
-var r = require("../1058/125")
-var o = require("./2610/581")
+var r = require(/* 125 */"../1058/125")
+var o = require(/* 581 */"./2610/581")
 exports.init_math_blocks = function (e) {
   var /* [auto-meaningful-name] */e$Blocks = e.Blocks
   e.define_blocks_with_json_array([

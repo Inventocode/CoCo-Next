@@ -7,42 +7,42 @@
 "use strict"
 
 import { $d } from "./index__part-35"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$_146 from "./146"
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as D from "./6"
-import * as ep from "./4"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as /* [auto-meaningful-name] */$_118_index from "./118/index"
-import * as rp from "./61"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_146 from /* 146 */"./146"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_118 from /* 118 */"./118/index"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
 var op = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+  type: Src_editor_widget_builtIn_types.H,
   category: {
-    iconId: $_146.b,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.H
+    iconId: Module_146.b,
+    blocks: Src_editor_widget_builtIn_types.H
   },
   categoryClass: {
     text: "",
-    iconId: $_146.b,
+    iconId: Module_146.b,
     blocks: []
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"text_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, "<block type=\"text_widget_set_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"CONTENT\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat($_146.e, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(Qu.n, ",,1'>16</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_align\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, Jd.sb({
+      "<block type=\"text_widget_on_press\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, "<block type=\"text_widget_set_content\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"CONTENT\">\n        <shadow type=\"text_multiline\">\n          <field name=\"TEXT\">").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_color\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"COLOR\">\n        <shadow type=\"color_picker\"><field name=\"COLOR_PALETTE\">").concat(Module_146.e, "</field></shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_font_size\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(Module_60.n, ",,1'>16</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_align\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+        widgetType: Src_editor_widget_builtIn_types.H,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"text_widget_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat($_146.l, ",").concat($_146.j, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints=',,1'>100</field>\n          </shadow>\n        </value>\n    </block>"), "<block type=\"text_widget_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, "<block type='text_widget_get_content' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_color' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_font_size' uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
+      }), "<block type=\"text_widget_set_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='").concat(Module_146.l, ",").concat(Module_146.j, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text_widget_set_position\" uncache=\"true\">\n        ".concat(t, "\n        <field name=\"POSITION_TYPE\">positionX</field>\n        <value name=\"NUM\">\n          <shadow type=\"math_number\">\n            <field name=\"NUM\" constraints=',,1'>100</field>\n          </shadow>\n        </value>\n    </block>"), "<block type=\"text_widget_set_visible\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), $d, "<block type='text_widget_get_content' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_color' uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type='text_widget_get_font_size' uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+        widgetType: Src_editor_widget_builtIn_types.H,
         widgetId: e
-      }), "<block type=\"text_widget_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"text_widget_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), $d, Jd.sb({
+      }), "<block type=\"text_widget_get_size\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"SIZE_TYPE\">height</field>\n    </block>"), "<block type=\"text_widget_get_position\" uncache=\"true\">\n      ".concat(t, "\n      <field name=\"POSITION_TYPE\">positionX</field>\n    </block>"), $d, Module_33.sb({
         property: "__visible",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.H,
+        widgetType: Src_editor_widget_builtIn_types.H,
         widgetId: e
       })
     ]
@@ -53,13 +53,13 @@ var op = {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.statementToCode(t, n, "DO")
-        return i ? ep.n("onTextPress", [ep.o(o)], i) : ""
+        return i ? Module_4.n("onTextPress", [Module_4.o(o)], i) : ""
       })
       e.insertBlockSnippetGenerator("text_widget_set_visible", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = "show" === e.getFieldValue(r, "DISPLAY")
-        return ep.n("setTextWidgetVisible", [ep.o(o), i])
+        return Module_4.n("setTextWidgetVisible", [Module_4.o(o), i])
       })
       e.insertBlockSnippetGenerator("text_widget_get_color", function (t, n) {
         var r = t.blocks[n]
@@ -69,16 +69,16 @@ var op = {
           return ""
         }
         var a = "textColor" === i ? "getTextWidgetFontColor" : "getTextWidgetBackgroundColor"
-        return ep.s(a, [ep.o(o)])
+        return Module_4.s(a, [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("text_widget_get_content", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        return o ? ep.s("getTextWidgetContent", [ep.o(o)]) : ""
+        return o ? Module_4.s("getTextWidgetContent", [Module_4.o(o)]) : ""
       })
       e.insertBlockSnippetGenerator("text_widget_field_color", function (t, n) {
         var r = t.blocks[n]
-        return ep.o(e.getFieldValue(r, "COLOR_VALUE") || "")
+        return Module_4.o(e.getFieldValue(r, "COLOR_VALUE") || "")
       })
       e.insertBlockSnippetGenerator("text_widget_get_property", function (t, n) {
         var r = t.blocks[n]
@@ -104,20 +104,20 @@ var op = {
           case "positionY":
             a = "getTextWidgetPositionY"
         }
-        return ep.s(a, [ep.o(o)])
+        return Module_4.s(a, [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("text_widget_set_content", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.valueToCode(t, n, "CONTENT", e.ORDER_FUNCTION_CALL)
-        return o ? ep.n("setTextWidgetContent", [ep.o(o), i]) : ""
+        return o ? Module_4.n("setTextWidgetContent", [Module_4.o(o), i]) : ""
       })
       e.insertBlockSnippetGenerator("text_widget_set_color", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getFieldValue(r, "COLOR_TYPE")
         var a = e.valueToCode(t, n, "COLOR", e.ORDER_FUNCTION_CALL)
-        return o && i && a ? ep.l(ep.n("textColor" === i ? "setTextWidgetFontColor" : "setTextWidgetBackgroundColor", [ep.o(o), a]), r, e) : ""
+        return o && i && a ? Module_4.l(Module_4.n("textColor" === i ? "setTextWidgetFontColor" : "setTextWidgetBackgroundColor", [Module_4.o(o), a]), r, e) : ""
       })
       e.insertBlockSnippetGenerator("text_widget_set_align", function (t, n) {
         var r = t.blocks[n]
@@ -128,7 +128,7 @@ var op = {
           return ""
         }
         var s = "horizontal" === i ? "setTextWidgetHorizontalAlignment" : "setTextWidgetVerticalAlignment"
-        return ep.n(s, [ep.o(o), ep.o(a)])
+        return Module_4.n(s, [Module_4.o(o), Module_4.o(a)])
       })
       e.insertBlockSnippetGenerator("text_widget_set_property", function (t, n) {
         var r = t.blocks[n]
@@ -155,44 +155,44 @@ var op = {
           case "positionY":
             s = "setTextWidgetPositionY"
         }
-        return ep.l(ep.n(s, [ep.o(o), a]), r, e)
+        return Module_4.l(Module_4.n(s, [Module_4.o(o), a]), r, e)
       })
       e.insertBlockSnippetGenerator("text_widget_set_position", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.getFieldValue(r, "POSITION_TYPE") || ""
         var a = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL) || ""
-        return ep.l(ep.n("positionX" === i ? "setTextWidgetPositionX" : "setTextWidgetPositionY", [ep.o(o), a]), r, e)
+        return Module_4.l(Module_4.n("positionX" === i ? "setTextWidgetPositionX" : "setTextWidgetPositionY", [Module_4.o(o), a]), r, e)
       })
       e.insertBlockSnippetGenerator("text_widget_get_position", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = "positionX" === (e.getFieldValue(r, "POSITION_TYPE") || "") ? "getTextWidgetPositionX" : "getTextWidgetPositionY"
-        return ep.s(i, [ep.o(o)])
+        return Module_4.s(i, [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("text_widget_set_size", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.valueToCode(t, n, "NUM", e.ORDER_FUNCTION_CALL)
         var a = "width" === e.getFieldValue(r, "SIZE_TYPE") ? "setTextWidgetWidth" : "setTextWidgetHeight"
-        return ep.l(ep.n(a, [ep.o(o), i]), r, e)
+        return Module_4.l(Module_4.n(a, [Module_4.o(o), i]), r, e)
       })
       e.insertBlockSnippetGenerator("text_widget_get_size", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = "width" === e.getFieldValue(r, "SIZE_TYPE") ? "getTextWidgetWidth" : "getTextWidgetHeight"
-        return ep.s(i, [ep.o(o)])
+        return Module_4.s(i, [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("text_widget_set_font_size", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
         var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n("setTextWidgetFontSize", [ep.o(o), i]), r, e)
+        return Module_4.l(Module_4.n("setTextWidgetFontSize", [Module_4.o(o), i]), r, e)
       })
       e.insertBlockSnippetGenerator("text_widget_get_font_size", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID")
-        return o ? ep.s("getTextWidgetFontSize", [ep.o(o)]) : ""
+        return o ? Module_4.s("getTextWidgetFontSize", [Module_4.o(o)]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -201,20 +201,20 @@ var op = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.H)
+          return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.H)
         }
       }
       function r(e) {
-        rp.l(this, e, [
+        Module_61.l(this, e, [
           {
             label: "width",
-            min: $_146.m,
-            max: $_146.k,
+            min: Module_146.m,
+            max: Module_146.k,
             value: 100
           }, {
             label: "height",
-            min: $_146.l,
-            max: $_146.j,
+            min: Module_146.l,
+            max: Module_146.j,
             value: 100
           }
         ])
@@ -223,7 +223,7 @@ var op = {
         type: "text_widget_on_press",
         message0: "%{BKY_TEXT_WIDGET_ON_PRESS}",
         args0: [
-          ep.e("%{BKY_BLOCK_TAB_ICON}", true), D.a({}, n), {
+          Module_4.e("%{BKY_BLOCK_TAB_ICON}", true), Module_6.a({}, n), {
             type: "input_dummy",
             align: "CENTRE"
           }, {
@@ -238,7 +238,7 @@ var op = {
         type: "text_widget_set_content",
         message0: "%{BKY_TEXT_WIDGET_SET_CONTENT}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "CONTENT",
             check: ["String", "Number", "Boolean", "Array", "Object"]
@@ -253,7 +253,7 @@ var op = {
         type: "text_widget_set_color",
         message0: "%{BKY_TEXT_WIDGET_SET_PROPERTY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "COLOR_TYPE",
             custom: true,
@@ -286,7 +286,7 @@ var op = {
         type: "text_widget_set_align",
         message0: "%{BKY_TEXT_WIDGET_SET_ALIGN}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "ALIGN_TYPE",
             custom: true,
@@ -299,7 +299,7 @@ var op = {
                 this$source_block.removeInput(this$source_block$inputListThis$source_block$inputList$length1$name)
                 var i = []
                 i = "horizontal" === e ? [[t.Msg.LEFT_ALIGN, "left"], [t.Msg.CENTER_ALIGN, "center"], [t.Msg.RIGHT_ALIGN, "right"]] : [[t.Msg.TOP_ALIGN, "flex-start"], [t.Msg.CENTER_ALIGN, "center"], [t.Msg.BOTTOM_ALIGN, "flex-end"]]
-                var a = new $_118_index.a({
+                var a = new Module_118.a({
                   type: "field_coco_dropdown",
                   name: "ALIGN_VALUE",
                   custom: true,
@@ -331,7 +331,7 @@ var op = {
         type: "text_widget_set_property",
         message0: "%{BKY_SET} %1 %{BKY_OF} %2 %{BKY_IS}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -368,7 +368,7 @@ var op = {
             name: "WIDGET_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.H)
+              return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.H)
             }
           }
         ],
@@ -380,7 +380,7 @@ var op = {
       e.insertBlockProfile("text_widget_get_content", {
         type: "text_widget_get_content",
         message0: "%{BKY_TEXT_WIDGET_GET_CONTENT}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["String"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -389,7 +389,7 @@ var op = {
         type: "text_widget_get_color",
         message0: "%{BKY_TEXT_WIDGET_GET_PROPERTY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "COLOR_TYPE",
             custom: true,
@@ -404,7 +404,7 @@ var op = {
         type: "text_widget_get_property",
         message0: "%{BKY_TEXT_WIDGET_GET_PROPERTY}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -421,7 +421,7 @@ var op = {
         type: "text_widget_set_position",
         message0: "%{BKY_SET} %1 %{BKY_OF} %2 %{BKY_IS}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "POSITION_TYPE",
             custom: true,
@@ -445,7 +445,7 @@ var op = {
         type: "text_widget_get_position",
         message0: "%1 %{BKY_OF} %2",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "POSITION_TYPE",
             custom: true,
@@ -462,7 +462,7 @@ var op = {
         type: "text_widget_set_size",
         message0: "%{BKY_SET} %1 %{BKY_OF} %2 %{BKY_IS} %3",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "SIZE_TYPE",
             custom: true,
@@ -483,7 +483,7 @@ var op = {
         type: "text_widget_get_size",
         message0: "%1 %{BKY_OF} %2",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             name: "SIZE_TYPE",
             custom: true,
@@ -498,7 +498,7 @@ var op = {
         type: "text_widget_set_font_size",
         message0: "%{BKY_TEXT_WIDGET_SET_FONT_SIZE}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "VALUE",
             check: ["Number"]
@@ -512,7 +512,7 @@ var op = {
       e.insertBlockProfile("text_widget_get_font_size", {
         type: "text_widget_get_font_size",
         message0: "%{BKY_TEXT_WIDGET_GET_FONT_SIZE}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         output: ["Number"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true

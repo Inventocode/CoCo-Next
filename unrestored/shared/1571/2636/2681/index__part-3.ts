@@ -9,13 +9,13 @@
 import { u, l } from "./index__part-0"
 import { h, g, v, m, y, w } from "./index__part-1"
 import { F } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$_808_index from "./808/index"
-import * as /* [auto-meaningful-name] */$_275 from "./275"
-import * as /* [auto-meaningful-name] */$_273 from "./273"
-import * as /* [auto-meaningful-name] */$_1009_index from "./1009/index"
-import { createElement, PureComponent } from "react"
-import * as /* [auto-meaningful-name] */$_1196 from "./1196"
-import /* [auto-meaningful-name] */$_11961 from "./1196"
+import * as /* [auto-meaningful-name] */Module_808 from /* 808 */"./808/index"
+import * as /* [auto-meaningful-name] */Module_275 from /* 275 */"./275"
+import * as /* [auto-meaningful-name] */Module_273 from /* 273 */"./273"
+import * as /* [auto-meaningful-name] */Module_1009 from /* 1009 */"./1009/index"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1196 from /* 1196 */"./1196"
+import /* [auto-meaningful-name] */Module_11961 from /* 1196 */"./1196"
 var M = ["localeMatcher", "type", "style"]
 var L = Date.now()
 function j(e, t, n, r) {
@@ -25,9 +25,9 @@ function j(e, t, n, r) {
     r = {}
   }
   if (!Intl.ListFormat) {
-    e$onError(new $_808_index.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"))
+    e$onError(new Module_808.a("Intl.ListFormat is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-listformat\"\n", "MISSING_INTL_API"))
   }
-  var c = $_273.e(r, M)
+  var c = Module_273.e(r, M)
   try {
     var u = {}
     var l = n.map(function (e, t) {
@@ -54,7 +54,7 @@ function j(e, t, n, r) {
       return e
     }, []) : t(e$locale, c).format(l)
   } catch (d) {
-    e$onError(new $_275.e("FORMAT_ERROR", "Error formatting list.", d))
+    e$onError(new Module_275.e("FORMAT_ERROR", "Error formatting list.", d))
   }
   return n
 }
@@ -66,13 +66,13 @@ function H(e, t, n, r) {
     r = {}
   }
   if (!Intl.DisplayNames) {
-    e$onError(new $_808_index.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"))
+    e$onError(new Module_808.a("Intl.DisplayNames is not available in this environment.\nTry polyfilling it using \"@formatjs/intl-displaynames\"\n", "MISSING_INTL_API"))
   }
-  var c = $_273.e(r, U)
+  var c = Module_273.e(r, U)
   try {
     return t(e$locale, c).of(n)
   } catch (u) {
-    e$onError(new $_275.e("FORMAT_ERROR", "Error formatting display name.", u))
+    e$onError(new Module_275.e("FORMAT_ERROR", "Error formatting display name.", u))
   }
 }
 var V = function () {
@@ -105,7 +105,7 @@ var G = function () {
     return e
   }).apply(this, arguments)
 }
-var z = $_11961 || $_1196
+var z = Module_11961 || Module_1196
 function Q(e) {
   return {
     locale: e.locale,
@@ -120,22 +120,22 @@ function Q(e) {
   }
 }
 function W(e, t) {
-  var n = $_273.c(t)
-  var r = G(G({}, $_273.a), e)
+  var n = Module_273.c(t)
+  var r = G(G({}, Module_273.a), e)
   var /* [auto-meaningful-name] */r$locale = r.locale
   var /* [auto-meaningful-name] */r$defaultLocale = r.defaultLocale
   var /* [auto-meaningful-name] */r$onError = r.onError
   if (r$locale) {
     if (!Intl.NumberFormat.supportedLocalesOf(r$locale).length && r$onError) {
-      r$onError(new $_275.c("Missing locale data for locale: \"" + r$locale + "\" in Intl.NumberFormat. Using default locale: \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"))
+      r$onError(new Module_275.c("Missing locale data for locale: \"" + r$locale + "\" in Intl.NumberFormat. Using default locale: \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"))
     } else {
       if (!Intl.DateTimeFormat.supportedLocalesOf(r$locale).length && r$onError) {
-        r$onError(new $_275.c("Missing locale data for locale: \"" + r$locale + "\" in Intl.DateTimeFormat. Using default locale: \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"))
+        r$onError(new Module_275.c("Missing locale data for locale: \"" + r$locale + "\" in Intl.DateTimeFormat. Using default locale: \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl#runtime-requirements for more details"))
       }
     }
   } else {
     if (r$onError) {
-      r$onError(new $_275.a("\"locale\" was not configured, using \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details"))
+      r$onError(new Module_275.a("\"locale\" was not configured, using \"" + r$defaultLocale + "\" as fallback. See https://formatjs.io/docs/react-intl/api#intlshape for more details"))
     }
     r.locale = r.defaultLocale || "en"
   }
@@ -157,7 +157,7 @@ function W(e, t) {
 var K = function (e) {
   function t() {
     var t = null !== e && e.apply(this, arguments) || this
-    t.cache = $_273.d()
+    t.cache = Module_273.d()
     t.state = {
       cache: t.cache,
       intl: W(Q(t.props), t.cache),
@@ -176,14 +176,14 @@ var K = function (e) {
     }
   }
   t.prototype.render = function () {
-    $_273.g(this.state.intl)
-    return createElement($_1009_index.b, {
+    Module_273.g(this.state.intl)
+    return React.createElement(Module_1009.b, {
       value: this.state.intl
     }, this.props.children)
   }
   t.displayName = "IntlProvider"
-  t.defaultProps = $_273.a
+  t.defaultProps = Module_273.a
   return t
-}(PureComponent)
+}(React.PureComponent)
 export { W }
 export { K }

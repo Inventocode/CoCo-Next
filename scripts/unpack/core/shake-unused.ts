@@ -19,8 +19,8 @@ export function shakeUnused(modules: ModuleMap): void {
     }
     for (const module of Object.values(modules)) {
         if (!visited.has(module.key) && module.external == null) {
-            module.path.unshift("unused")
-            module.external = module.path.join("/")
+            module.unrestoredPath.unshift("unused")
+            module.external = module.unrestoredPath.join("/")
         }
     }
 }

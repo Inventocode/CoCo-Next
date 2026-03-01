@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_logic_blocks = undefined
-var r = require("./2610/581")
+var r = require(/* 581 */"./2610/581")
 exports.init_logic_blocks = function (e) {
   var t = [
     {

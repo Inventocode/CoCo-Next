@@ -8,75 +8,74 @@
 
 import { fd, hd, md, gd, _d } from "./index__part-31"
 import { Wd } from "./index__part-32"
-import * as Qu from "./60"
-import * as po from "./49"
-import * as /* [auto-meaningful-name] */$_452_index from "./452/index"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css from "../../../../src/editor/ui/preview-area/stage/style.css"
-import * as /* [auto-meaningful-name] */$_238 from "./238"
-import * as kn from "./75"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as wn from "./90"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../src/shared/widget/custom/type"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$_190 from "./190"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as D from "./6"
-import * as k from "./11"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as /* [auto-meaningful-name] */$_188 from "./188"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_932 from "./932"
-import /* [auto-meaningful-name] */$_9321 from "./932"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"./49"
+import * as /* [auto-meaningful-name] */Module_452 from /* 452 */"./452/index"
+import /* [auto-meaningful-name] */Src_editor_ui_previewArea_stage_style_css from /* 279 */"../../../../src/editor/ui/preview-area/stage/style.css"
+import * as /* [auto-meaningful-name] */Module_238 from /* 238 */"./238"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"./90"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_type from /* 78 */"../../../../src/shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"./190"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"./188"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_932 from /* 932 */"./932"
+import /* [auto-meaningful-name] */Module_9321 from /* 932 */"./932"
 var Vd = function (e) {
   var t
   var /* [auto-meaningful-name] */e$position = e.position
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var o = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  var i = $_238.d()
+  var i = Module_238.d()
   if (!o) {
     return i ? React.createElement("div", {
-      className: $_9321.container
+      className: Module_9321.container
     }, React.createElement("div", null, i.get("title"))) : null
   }
-  var a = Et.Bb(o)
+  var a = Module_9.Bb(o)
   if (!a) {
     return null
   }
-  var s = Et.Fb(o)
-  if (null === (t = Et.Db(a.type)) || undefined === t ? undefined : t.isInvisibleWidget) {
+  var s = Module_9.Fb(o)
+  if (null === (t = Module_9.Db(a.type)) || undefined === t ? undefined : t.isInvisibleWidget) {
     return null
   }
-  if (a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.a || a.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.c) {
+  if (a.type === Src_editor_widget_builtIn_types.a || a.type === Src_editor_widget_builtIn_types.c) {
     return React.createElement("div", {
-      className: $_9321.container
-    }, React.createElement("div", null, s), React.createElement("div", null, $_710$a$formatMessage({
+      className: Module_9321.container
+    }, React.createElement("div", null, s), React.createElement("div", null, Module_710$a$formatMessage({
       id: "relativeCoordinate"
     }), " X:", e$position.x, " Y:", e$position.y))
   }
-  var c = a.parentId ? Et.Bb(a.parentId) : undefined
-  return (null === c || undefined === c ? undefined : c.type) && [$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(c.type) ? React.createElement("div", {
-    className: $_9321.container
+  var c = a.parentId ? Module_9.Bb(a.parentId) : undefined
+  return (null === c || undefined === c ? undefined : c.type) && [Src_editor_widget_builtIn_types.x, Src_editor_widget_builtIn_types.A].includes(c.type) ? React.createElement("div", {
+    className: Module_9321.container
   }, React.createElement("div", null, s), React.createElement("div", null, "X: - Y: -")) : React.createElement("div", {
-    className: $_9321.container
+    className: Module_9321.container
   }, React.createElement("div", null, s), React.createElement("div", null, "X:", e$position.x, " Y:", e$position.y))
 }
 var zd = React.memo(function () {
   var e
-  var t = useRef(null)
-  var n = useRef(null)
-  var r = null === (e = $_238.d()) || undefined === e ? undefined : e.id
-  var o = useRef(Qu.d.NONE)
+  var t = React1.useRef(null)
+  var n = React1.useRef(null)
+  var r = null === (e = Module_238.d()) || undefined === e ? undefined : e.id
+  var o = React1.useRef(Module_60.d.NONE)
   var i = useDispatch()
   var a = useSelector(function (e) {
     return e.project.selectedWidgetId
@@ -93,41 +92,41 @@ var zd = React.memo(function () {
   var u = useSelector(function (e) {
     return e.project.focusedWorkspaceArea
   })
-  var d = useState({
+  var d = React1.useState({
     x: 0,
     y: 0
   })
-  var p = $_10_index.a(d, 2)
+  var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = $_238.d()
-  var b = a ? Et.Bb(a) : undefined
+  var v = Module_238.d()
+  var b = a ? Module_9.Bb(a) : undefined
   var y = null === b || undefined === b ? undefined : b.type
-  var w = y ? Et.Db(y) : null
+  var w = y ? Module_9.Db(y) : null
   var T = null === b || undefined === b ? undefined : b.position
-  useEffect(function () {
+  React1.useEffect(function () {
     if (T) {
       g(T)
     }
   }, [T])
-  var A = useState(undefined)
-  var j = $_10_index.a(A, 2)
+  var A = React1.useState(undefined)
+  var j = Module_10.a(A, 2)
   var R = j[0]
   var x = j[1]
-  var M = useState([])
-  var L = $_10_index.a(M, 2)
+  var M = React1.useState([])
+  var L = Module_10.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = useState([])
-  var G = $_10_index.a(F, 2)
+  var F = React1.useState([])
+  var G = Module_10.a(F, 2)
   var W = G[0]
   var U = G[1]
-  var H = useRef([])
+  var H = React1.useRef([])
   var V = useSelector(function (e) {
     return e.uiConfig.stage
-  }) === K.j.ReadOnly
+  }) === Module_18.j.ReadOnly
   var z = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(t) {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */n$current
       var o
       var /* [auto-meaningful-name] */t$dataTransfer
@@ -149,24 +148,24 @@ var zd = React.memo(function () {
               if (s = t$dataTransfer.getData("widget/action"), c = t$dataTransfer.getData("widget/type"), u = t$dataTransfer.getData("widget/dragging-offset-x"), d = t$dataTransfer.getData("widget/dragging-offset-y"), p = Math.ceil((t.clientX - o.x - parseInt(u)) / l), f = Math.ceil((t.clientY - o.y - parseInt(d)) / l), h = {
                 x: p,
                 y: f
-              }, c !== $$_$$_$$_$$_src_editor_widget_builtIn_types.c && c !== $$_$$_$$_$$_src_editor_widget_builtIn_types.a) {
+              }, c !== Src_editor_widget_builtIn_types.c && c !== Src_editor_widget_builtIn_types.a) {
                 e.next = 14
                 break
               }
               return e.abrupt("return")
             case 14:
-              if (s !== $$_$$_$$_$$_src_editor_widget_builtIn_types.r.CREATE) {
+              if (s !== Src_editor_widget_builtIn_types.r.CREATE) {
                 e.next = 20
                 break
               }
-              if (i($$_$$_$$_$$_src_editor_redux_common_actions.ki("screen")), !$$_$$_$$_$$_src_shared_widget_custom_type.e(c)) {
+              if (i(Src_editor_redux_common_actions.ki("screen")), !Src_shared_widget_custom_type.e(c)) {
                 e.next = 19
                 break
               }
               e.next = 19
-              return $$_$$_$$_$$_src_editor_redux_common_actions.Nf(i, $$_$$_$$_$$_src_editor_redux_common_actions.lg(c))
+              return Src_editor_redux_common_actions.Nf(i, Src_editor_redux_common_actions.lg(c))
             case 19:
-              i($$_$$_$$_$$_src_editor_redux_common_actions.hg(v.id, c, h))
+              i(Src_editor_redux_common_actions.hg(v.id, c, h))
             case 20:
             case "end":
               return e.stop()
@@ -178,42 +177,42 @@ var zd = React.memo(function () {
       return e.apply(this, arguments)
     }
   }()
-  useEffect(function () {
-    x(v ? $_452_index.b(v.toJSON()) : undefined)
+  React1.useEffect(function () {
+    x(v ? Module_452.b(v.toJSON()) : undefined)
   }, [v, s])
-  var q = useRef()
+  var q = React1.useRef()
   var X = function () {
     if (a && r) {
-      i($$_$$_$$_$$_src_editor_redux_common_actions.Mf(a, r))
+      i(Src_editor_redux_common_actions.Mf(a, r))
     }
   }
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   return React.createElement("div", {
     ref: t,
-    className: Classnames($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.stage, k.a({}, $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.isActorDragging, c)),
+    className: Classnames(Src_editor_ui_previewArea_stage_style_css.stage, Module_11.a({}, Src_editor_ui_previewArea_stage_style_css.isActorDragging, c)),
     onDrop: z,
     onDragOver: function (e) {
       e.preventDefault()
     }
-  }, React.createElement(Wd, null), V && React.createElement(md, null), React.createElement($_188.a, {
+  }, React.createElement(Wd, null), V && React.createElement(md, null), React.createElement(Module_188.a, {
     useCapture: true
-  }, React.createElement($_188.b, {
+  }, React.createElement(Module_188.b, {
     keys: {
       osx: "command+c",
       windows: "control+c"
     },
     callback: function () {
       if (a) {
-        var e = Et.Bb(a)
-        var t = Et.Db((null === e || undefined === e ? undefined : e.type) || "")
-        var n = Et.qb(a)
-        if (!(!t || t.isInvisibleWidget || (null === n || undefined === n ? undefined : n.type) && [$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(n.type))) {
+        var e = Module_9.Bb(a)
+        var t = Module_9.Db((null === e || undefined === e ? undefined : e.type) || "")
+        var n = Module_9.qb(a)
+        if (!(!t || t.isInvisibleWidget || (null === n || undefined === n ? undefined : n.type) && [Src_editor_widget_builtIn_types.x, Src_editor_widget_builtIn_types.A].includes(n.type))) {
           q.current = a
         }
       }
     },
     disabled: "screen" !== u
-  }), React.createElement($_188.b, {
+  }), React.createElement(Module_188.b, {
     keys: {
       osx: "command+v",
       windows: "control+v"
@@ -221,58 +220,58 @@ var zd = React.memo(function () {
     callback: function () {
       if (q.current) {
         var e = undefined
-        if (q.current.startsWith($$_$$_$$_$$_src_editor_widget_builtIn_types.a) || q.current.startsWith($$_$$_$$_$$_src_editor_widget_builtIn_types.c)) {
+        if (q.current.startsWith(Src_editor_widget_builtIn_types.a) || q.current.startsWith(Src_editor_widget_builtIn_types.c)) {
           var t
           if (!a) {
             return
           }
-          var n = Et.Bb(a)
+          var n = Module_9.Bb(a)
           if (!n) {
             return
           }
-          if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
+          if (n.type === Src_editor_widget_builtIn_types.f) {
             e = n.id
           } else {
-            if (!n.parentId || (null === (t = Et.Bb(n.parentId)) || undefined === t ? undefined : t.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
+            if (!n.parentId || (null === (t = Module_9.Bb(n.parentId)) || undefined === t ? undefined : t.type) !== Src_editor_widget_builtIn_types.f) {
               return
             }
             var r
-            e = null === (r = Et.Bb(n.parentId)) || undefined === r ? undefined : r.id
+            e = null === (r = Module_9.Bb(n.parentId)) || undefined === r ? undefined : r.id
           }
         }
-        i($$_$$_$$_$$_src_editor_redux_common_actions.Ef(Et.w(q.current, true, e), null === v || undefined === v ? undefined : v.id))
+        i(Src_editor_redux_common_actions.Ef(Module_9.w(q.current, true, e), null === v || undefined === v ? undefined : v.id))
       }
     },
     disabled: "screen" !== u
-  }), React.createElement($_188.b, {
+  }), React.createElement(Module_188.b, {
     keys: ["backspace", "del", "delete"],
     callback: function () {
       if (a) {
-        var e = Et.qb(a)
-        if ((null === e || undefined === e ? undefined : e.type) && [$$_$$_$$_$$_src_editor_widget_builtIn_types.x, $$_$$_$$_$$_src_editor_widget_builtIn_types.A].includes(e.type)) {
+        var e = Module_9.qb(a)
+        if ((null === e || undefined === e ? undefined : e.type) && [Src_editor_widget_builtIn_types.x, Src_editor_widget_builtIn_types.A].includes(e.type)) {
           return
         }
-        var t = Et.Fb(a)
-        var n = $_710$a$formatMessage({
+        var t = Module_9.Fb(a)
+        var n = Module_710$a$formatMessage({
           id: "deleteWidget"
-        }) + "“" + $_190.f(t, 10) + "”?"
-        var o = $_26_index.z.checkFieldValueIsSelected("WIDGET_ID", a)
-        var s = $_26_index.z.checkSomeFieldValueIsSelected("WIDGET_ID", Et.U(a))
+        }) + "“" + Module_190.f(t, 10) + "”?"
+        var o = Module_26.z.checkFieldValueIsSelected("WIDGET_ID", a)
+        var s = Module_26.z.checkSomeFieldValueIsSelected("WIDGET_ID", Module_9.U(a))
         if (o || s) {
-          i($$_$$_$$_$$_src_editor_redux_common_actions.zh({
+          i(Src_editor_redux_common_actions.zh({
             onConfirm: X,
-            allowText: $_710$a$formatMessage({
+            allowText: Module_710$a$formatMessage({
               id: "delete"
             }),
             title: n,
             isDangerous: true,
-            content: $_710$a$formatMessage({
+            content: Module_710$a$formatMessage({
               id: s ? "deleteParentWidgetTips" : "deleteWidgetTips"
             })
           }))
         } else {
           if (r) {
-            i($$_$$_$$_$$_src_editor_redux_common_actions.Mf(a, r))
+            i(Src_editor_redux_common_actions.Mf(a, r))
           }
         }
       }
@@ -280,31 +279,31 @@ var zd = React.memo(function () {
     disabled: "screen" !== u
   })), React.createElement("div", {
     ref: n,
-    className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.appZone,
+    className: Src_editor_ui_previewArea_stage_style_css.appZone,
     id: "COCO_APP_ZONE",
     onMouseDown: function (e) {
-      o.current = Qu.d.NONE
+      o.current = Module_60.d.NONE
       var /* [auto-meaningful-name] */e$target = e.target
-      var n = e$target.closest("." + wn.b)
+      var n = e$target.closest("." + Module_90.b)
       var r = e$target.closest(".coco-widget-editor")
       var s = e$target.closest(".select-box")
-      i($$_$$_$$_$$_src_editor_redux_common_actions.ki("screen"))
+      i(Src_editor_redux_common_actions.ki("screen"))
       if (!(s || r)) {
         setTimeout(function () {
-          var /* [auto-meaningful-name] */po$oTHelper$customEvent
-          var /* [auto-meaningful-name] */po$oTHelper$customEvent$emit
+          var /* [auto-meaningful-name] */Module_49$oTHelper$customEvent
+          var /* [auto-meaningful-name] */Module_49$oTHelper$customEvent$emit
           if (n) {
             if (n.id !== a) {
-              i($$_$$_$$_$$_src_editor_redux_common_actions.ug(n.id))
-              o.current = Qu.d.DRAG
+              i(Src_editor_redux_common_actions.ug(n.id))
+              o.current = Module_60.d.DRAG
             } else {
-              o.current = Qu.d.CLICK
+              o.current = Module_60.d.CLICK
             }
           } else {
-            i($$_$$_$$_$$_src_editor_redux_common_actions.ug(undefined))
+            i(Src_editor_redux_common_actions.ug(undefined))
           }
-          if (!(null === (po$oTHelper$customEvent = po.oTHelper.customEvent) || undefined === po$oTHelper$customEvent || null === (po$oTHelper$customEvent$emit = po$oTHelper$customEvent.emit) || undefined === po$oTHelper$customEvent$emit)) {
-            po$oTHelper$customEvent$emit.focusItem("widget", null === n || undefined === n ? undefined : n.id)
+          if (!(null === (Module_49$oTHelper$customEvent = Module_49.oTHelper.customEvent) || undefined === Module_49$oTHelper$customEvent || null === (Module_49$oTHelper$customEvent$emit = Module_49$oTHelper$customEvent.emit) || undefined === Module_49$oTHelper$customEvent$emit)) {
+            Module_49$oTHelper$customEvent$emit.focusItem("widget", null === n || undefined === n ? undefined : n.id)
           }
         }, 0)
       }
@@ -313,17 +312,17 @@ var zd = React.memo(function () {
       if (0 === e.button) {
         var t = e.target instanceof HTMLElement && a ? e.target.closest("#".concat(a)) : null
         if (t instanceof HTMLElement) {
-          if (o.current === Qu.d.CLICK) {
-            t.dataset.clickType = Qu.d.CLICK
+          if (o.current === Module_60.d.CLICK) {
+            t.dataset.clickType = Module_60.d.CLICK
           } else {
-            t.dataset.clickType = Qu.d.NONE
+            t.dataset.clickType = Module_60.d.NONE
           }
         }
       }
     },
     onMouseMove: function () {
-      if (o.current === Qu.d.CLICK) {
-        o.current = Qu.d.DRAG
+      if (o.current === Module_60.d.CLICK) {
+        o.current = Module_60.d.DRAG
       }
     },
     style: {
@@ -337,7 +336,7 @@ var zd = React.memo(function () {
         var /* [auto-meaningful-name] */v$widgetIds = v.widgetIds
         var t = []
         v$widgetIds.forEach(function (e) {
-          var n = Et.Bb(e)
+          var n = Module_9.Bb(e)
           if (n && !n.parentId) {
             var /* [auto-meaningful-name] */n$position = n.position
             var /* [auto-meaningful-name] */n$size = n.size
@@ -359,18 +358,18 @@ var zd = React.memo(function () {
             t.push(l)
           }
         })
-        var n = kn.e
-        var r = kn.d
+        var /* [auto-meaningful-name] */Module_75$e = Module_75.e
+        var /* [auto-meaningful-name] */Module_75$d = Module_75.d
         t.push({
           id: v.id,
-          width: n,
-          height: r,
+          width: Module_75$e,
+          height: Module_75$d,
           left: 0,
           top: 0,
-          right: 0 + n,
-          bottom: 0 + r,
-          center: 0 + n / 2,
-          middle: 0 + r / 2
+          right: 0 + Module_75$e,
+          bottom: 0 + Module_75$d,
+          center: 0 + Module_75$e / 2,
+          middle: 0 + Module_75$d / 2
         })
         H.current = t
       }
@@ -382,7 +381,7 @@ var zd = React.memo(function () {
       if (!n) {
         return t
       }
-      g(D.a({}, t))
+      g(Module_6.a({}, t))
       var r = H.current.filter(function (t) {
         return t.id !== e
       })
@@ -435,7 +434,7 @@ var zd = React.memo(function () {
             vLines: r$lines
           }
         }
-      }(D.a({}, t), n, r)
+      }(Module_6.a({}, t), n, r)
       var /* [auto-meaningful-name] */o$position = o.position
       var /* [auto-meaningful-name] */o$lines = o.lines
       var /* [auto-meaningful-name] */o$lines$vLines = o$lines.vLines
@@ -445,17 +444,17 @@ var zd = React.memo(function () {
       return o$position
     },
     onMoveEnd: function () {
-      o.current = Qu.d.DRAG
+      o.current = Module_60.d.DRAG
       U([])
       B([])
     },
-    hidden: !a || !(null === b || undefined === b ? undefined : b.visible) || !!(null === b || undefined === b ? undefined : b.parentId) || (null === w || undefined === w ? undefined : w.isInvisibleWidget) || c && y === $$_$$_$$_$$_src_editor_widget_builtIn_types.f
+    hidden: !a || !(null === b || undefined === b ? undefined : b.visible) || !!(null === b || undefined === b ? undefined : b.parentId) || (null === w || undefined === w ? undefined : w.isInvisibleWidget) || c && y === Src_editor_widget_builtIn_types.f
   }), React.createElement(React.Fragment, null, W.map(function (e, t) {
     var /* [auto-meaningful-name] */e$length = e.length
     var /* [auto-meaningful-name] */e$value = e.value
     var /* [auto-meaningful-name] */e$origin = e.origin
     return React.createElement("span", {
-      className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.guideLine,
+      className: Src_editor_ui_previewArea_stage_style_css.guideLine,
       key: "v-".concat(t),
       style: {
         left: e$value,
@@ -469,7 +468,7 @@ var zd = React.memo(function () {
     var /* [auto-meaningful-name] */e$value = e.value
     var /* [auto-meaningful-name] */e$origin = e.origin
     return React.createElement("span", {
-      className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.guideLine,
+      className: Src_editor_ui_previewArea_stage_style_css.guideLine,
       key: "h-".concat(t),
       style: {
         top: e$value,

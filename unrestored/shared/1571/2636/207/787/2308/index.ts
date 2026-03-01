@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("../572/index")
-var i = require("../180")
-var o = require("../204")
-var a = require("./2309/index")
-var s = require("../1133")
-var c = require("../818/index")("eslint:config-comment-parser")
+var r = require(/* 572 */"../572/index")
+var i = require(/* 180 */"../180")
+var o = require(/* 204 */"../204")
+var a = require(/* 2309 */"./2309/index")
+var s = require(/* 1133 */"../1133")
+var c = require(/* 818 */"../818/index")("eslint:config-comment-parser")
 module.exports = function () {
   function e() {
     i(this, e)

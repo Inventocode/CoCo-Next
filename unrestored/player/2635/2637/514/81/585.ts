@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./63")
+var r = require(/* 63 */"./63")
 var i = function () {
   function t(t) {
     this.binarizer = t

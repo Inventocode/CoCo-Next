@@ -10,9 +10,9 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.draw_arrow = exports.position_dropdown = undefined
-var r = require("@kitten-team/gl-matrix")
-var i = require("../123/index")
-var o = require("../123/723")
+var r = require(/* 258 */"@kitten-team/gl-matrix")
+var i = require(/* 123 */"../123/index")
+var o = require(/* 723 */"../123/723")
 exports.position_dropdown = function (e, t) {
   var n = t.get_svg_root()
   if (!t.source_block || !n) {

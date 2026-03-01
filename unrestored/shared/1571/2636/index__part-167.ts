@@ -7,25 +7,24 @@
 "use strict"
 
 import { IA } from "./index__part-166"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_494 from "./494"
-import /* [auto-meaningful-name] */$_4941 from "./494"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_494 from /* 494 */"./494"
+import /* [auto-meaningful-name] */Module_4941 from /* 494 */"./494"
 var RA = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$isEmpty = e.isEmpty
-  var r = useState(false)
-  var o = $_10_index.a(r, 2)
+  var r = React1.useState(false)
+  var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useDispatch()
   function l(t) {
     if (!e.isReadOnly) {
@@ -38,62 +37,62 @@ var RA = function (e) {
     }
   }
   return React.createElement("div", {
-    className: Classnames($_4941.IconDragContainer, i && $_4941.isDragging),
+    className: Classnames(Module_4941.IconDragContainer, i && Module_4941.isDragging),
     onDragEnter: l,
     onDragLeave: u,
     onDrop: function (t) {
       if (!e.isReadOnly) {
-        c($$_$$_$$_$$_src_editor_redux_common_actions.rf(t.dataTransfer.files))
+        c(Src_editor_redux_common_actions.rf(t.dataTransfer.files))
         a(false)
       }
     }
   }, e$children, e$isEmpty && React.createElement("div", {
-    className: $_4941.IconLayoutEmpty,
+    className: Module_4941.IconLayoutEmpty,
     onDragEnter: l,
     onDragLeave: u
-  }, React.createElement("h5", null, $_710$a$formatMessage({
+  }, React.createElement("h5", null, Module_710$a$formatMessage({
     id: "emptyIconLibraryTitle"
   })), React.createElement("div", {
-    className: $_4941.emptyContent
-  }, $_710$a$formatMessage({
+    className: Module_4941.emptyContent
+  }, Module_710$a$formatMessage({
     id: "emptyIconLibraryTips1"
-  }), React.createElement("br", null), $_710$a$formatMessage({
+  }), React.createElement("br", null), Module_710$a$formatMessage({
     id: "emptyIconLibraryTips2"
-  }), React.createElement("br", null), $_710$a$formatMessage({
+  }), React.createElement("br", null), Module_710$a$formatMessage({
     id: "emptyIconLibraryTips3"
   }), React.createElement("br", null))))
 }
 var kA = function (e) {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (e) {
     return e.resource.iconFileList.reverse()
   })
   var r = useDispatch()
   return React.createElement("div", {
-    className: $_4941.iconLayout
+    className: Module_4941.iconLayout
   }, React.createElement(RA, {
     isReadOnly: e.readOnly,
     isEmpty: 0 === n.size
   }, React.createElement("div", {
-    className: $_4941.iconLayoutMain
+    className: Module_4941.iconLayoutMain
   }, React.createElement("div", {
-    className: $_4941.uploadItem
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
+    className: Module_4941.uploadItem
+  }, React.createElement(Src_shared_ui_components_index.B, {
     onChange: function (e) {
       if (e) {
-        r($$_$$_$$_$$_src_editor_redux_common_actions.rf(e))
+        r(Src_editor_redux_common_actions.rf(e))
       }
     },
     multiple: true,
     accept: "image/svg+xml"
   }, React.createElement("div", {
-    className: $_4941.content
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_4941.content
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-add2",
-    className: $_4941.icon
+    className: Module_4941.icon
   }), React.createElement("div", {
-    className: $_4941.name
-  }, $_710$a$formatMessage({
+    className: Module_4941.name
+  }, Module_710$a$formatMessage({
     id: "Resource.upload"
   }))))), n.map(function (e) {
     return React.createElement(IA, {

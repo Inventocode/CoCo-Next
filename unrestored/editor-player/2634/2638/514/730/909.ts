@@ -6,7 +6,7 @@
 
 "use strict"
 
-var n = require("../81/index")
+var n = require(/* 81 */"../81/index")
 var /* [auto-meaningful-name] */Http__www$w3$org_2000_svg = "http://www.w3.org/2000/svg"
 !function () {
   function t(t) {

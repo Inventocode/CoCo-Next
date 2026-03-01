@@ -9,10 +9,10 @@
 export { i as a }
 export { a as b }
 export { s as c }
-import * as /* [auto-meaningful-name] */$_13_303_index from "./13/303/index"
-import /* [auto-meaningful-name] */$_13_303_index1 from "./13/303/index"
+import * as /* [auto-meaningful-name] */Module_303 from /* 303 */"./13/303/index"
+import /* [auto-meaningful-name] */Module_3031 from /* 303 */"./13/303/index"
 function i(e) {
-  return e + "_" + $_13_303_index1.generate()
+  return e + "_" + Module_3031.generate()
 }
 function a(e) {
   var t = window.getSelection ? window.getSelection() : null
@@ -33,5 +33,5 @@ function s(e) {
     t.addRange(n)
   }
 }
-$_13_303_index1.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
+Module_3031.characters("0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-_")
 export default i

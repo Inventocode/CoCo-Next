@@ -8,16 +8,16 @@ import { ShareQRDialog } from "./dialogs/qr"
 import { ShareCommunityDialog } from "./dialogs/community"
 import * as CustomWidgetRestrict from "../../../../shared/widget/custom/restrict"
 import * as CustomWidgetStorage from "../../../../shared/widget/custom/storage"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1510 from "../../../../../unrestored/shared/1571/2636/1510"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_1509 from "../../../../../unrestored/shared/1571/2636/1509"
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_1510 from "../../../../../unrestored/shared/1571/2636/1510"
+import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_1509 from "../../../../../unrestored/shared/1571/2636/1509"
 import * as CustomWidgetType from "../../../../shared/widget/custom/type"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../unrestored/shared/1571/2636/9"
 import { getWhitelist } from "../../../../shared/player/audit"
 import * as Tools from "../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_97 from "../../../../../unrestored/shared/1571/2636/97"
+import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../unrestored/shared/1571/2636/97"
 import * as CommonActions from "../../../redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_710 from "../../../../../unrestored/shared/1571/2636/710"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_7 from "../../../../../unrestored/shared/1571/2636/7"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import { useSelector, useDispatch } from "react-redux"
 import React from "react"
@@ -33,14 +33,14 @@ enum EShareDialogType {
 export function ShareMenuItem({ target }: { target: "community" | "others" }) {
 
   const dialogInfo = {
-    icon: target === "community" ? $$_$$_$$_$$_$$_unrestored_shared_1571_2636_1509 : $$_$$_$$_$$_$$_unrestored_shared_1571_2636_1510,
+    icon: target === "community" ? Unrestored_shared_1571_2636_1509 : Unrestored_shared_1571_2636_1510,
     message: target === "community" ? "Publish.shareToCommunity" : "Publish.shareToOthers",
     dialogType: target === "community" ? EShareDialogType.SHARE_COMMUNITY_DIALOG : EShareDialogType.SHARE_QR_DIALOG
   }
 
   const [dialogType, setDialogType] = useState(EShareDialogType.NONE)
   const userInfo = useSelector((state) => state.common.userInfo)
-  const { formatMessage } = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_710.a()
+  const { formatMessage } = Module_710.a()
   const id = useSelector((state) => state.project.id)
   const globalWidgetIds = useSelector((state) => state.project.globalWidgetIds)
   const dispatch = useDispatch()
@@ -52,7 +52,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
     }
     const widgetTypesMap = {}
     globalWidgetIds.forEach((id) => {
-      var types = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Bb(id)
+      var types = Module_9.Bb(id)
       if (types) {
         widgetTypesMap[id] = types
       }
@@ -85,7 +85,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
       }))
       return
     }
-    const unsafeExtensions = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Eb($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.j.EXTENSION).filter(function (e) {
+    const unsafeExtensions = Module_9.Eb(Module_9.j.EXTENSION).filter(function (e) {
       return !CustomWidgetType.isSafeExtensions(e.type)
     })
     if (!(await getWhitelist()).includes(Number(id)) && unsafeExtensions.length > 0) {
@@ -108,7 +108,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
     const boundSetDialogType = () => { setDialogType(dialogInfo.dialogType) }
     if (dialogInfo.dialogType === EShareDialogType.SHARE_QR_DIALOG) {
       CommonActions.promisify(dispatch, CommonActions.Wf(boundSetDialogType))
-    } else if ($$_$$_$$_$$_$$_unrestored_shared_1571_2636_9.Y().length > 0 && localStorage.getItem("cloudDBPublishGuide") !== "true") {
+    } else if (Module_9.Y().length > 0 && localStorage.getItem("cloudDBPublishGuide") !== "true") {
       dispatch(CommonActions.kj(true, "share", boundSetDialogType))
     } else {
       boundSetDialogType()
@@ -119,7 +119,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
     return g.apply(this, arguments)
   }
   function g() {
-    return (g = $$_$$_$$_$$_$$_unrestored_shared_1571_2636_7.a(RegeneratorRuntime.mark(function e() {
+    return (g = Module_7.a(RegeneratorRuntime.mark(function e() {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -127,7 +127,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
               e.prev = 0
               e.next = 3
               return CommonActions.Nf(dispatch, CommonActions.tg({
-                isUpdate: $$_$$_$$_$$_$$_unrestored_shared_1571_2636_97.a(id),
+                isUpdate: Module_97.a(id),
                 isAutoSave: true
               }))
             case 3:

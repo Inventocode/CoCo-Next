@@ -4,7 +4,7 @@
  * 模块 ID：1001
  */
 
-var r = require("../../../../../../253/2588/1461/2586/1000")
+var r = require(/* 1000 */"../../../../../../253/2588/1461/2586/1000")
 module.exports = function (e) {
   if ("string" == typeof e || r(e)) {
     return e

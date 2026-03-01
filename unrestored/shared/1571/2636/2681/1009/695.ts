@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("../../241/index")
+var r = require(/* 241 */"../../241/index")
 var i = {
   childContextTypes: true,
   contextType: true,

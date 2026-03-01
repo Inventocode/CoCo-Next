@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_788_index from "./788/index"
-import * as /* [auto-meaningful-name] */$_737_index from "./737/index"
-import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
-import * as /* [auto-meaningful-name] */$$_index from "../index"
-import * as /* [auto-meaningful-name] */$$_$$_43 from "../../43"
+import * as /* [auto-meaningful-name] */Module_788 from /* 788 */"./788/index"
+import * as /* [auto-meaningful-name] */Module_737 from /* 737 */"./737/index"
+import * as /* [auto-meaningful-name] */OtJson1 from /* 31 */"ot-json1"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"../index"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"../../43"
 function u() {
-  var e = $$_$$_43.a()
-  var t = $$_index.a.getDoc()
+  var e = Module_43.a()
+  var t = Module_24.a.getDoc()
   if (e) {
     var n = null === t || undefined === t ? undefined : t.blockly[e].workspaceJson
     if (n) {
@@ -27,7 +27,7 @@ function u() {
   }
 }
 function d(e) {
-  var t = $$_$$_43.a()
+  var t = Module_43.a()
   if (t) {
     e.forEach(function (e) {
       if (!(null === e || undefined === e)) {
@@ -39,14 +39,14 @@ function d(e) {
       if (!(null === e || undefined === e)) {
         e.unshift("blockly")
       }
-      $$_index.a.applyClient(e)
+      Module_24.a.applyClient(e)
     })
   }
 }
 function p(e, t) {
   if (t) {
     var n = OtJson1.insertOp(["blockly", e], t)
-    $$_index.a.applyClient(n)
+    Module_24.a.applyClient(n)
   }
 }
 export { u }

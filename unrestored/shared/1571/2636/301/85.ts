@@ -11,10 +11,10 @@ export { c as b }
 export { l as e }
 export { u as d }
 export { d as a }
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_type from "../../../../../src/shared/widget/custom/type"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../37/index"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_type from /* 78 */"../../../../../src/shared/widget/custom/type"
 function s(e) {
   return "".concat(e, ".__widgetName")
 }
@@ -32,9 +32,9 @@ function l(e) {
     var i = c(e$type, e$key)
     n[i] = e$label
   })
-  var l = $$_37_index.b()
-  var u = $$_11.a({}, l, n)
-  $$_$$_$$_$$_$$_src_shared_ui_language.a(u)
+  var l = Module_37.b()
+  var u = Module_11.a({}, l, n)
+  Src_shared_ui_language.a(u)
 }
 function u(e, t) {
   for (var n in t) {
@@ -46,14 +46,14 @@ function u(e, t) {
     }
     t[n] = i
   }
-  $$_$$_$$_$$_$$_src_shared_ui_language.a(t)
+  Src_shared_ui_language.a(t)
 }
 function d(e, t, n) {
-  if ($$_$$_$$_$$_$$_src_shared_widget_custom_type.d(e)) {
+  if (Src_shared_widget_custom_type.d(e)) {
     return t
   }
   var r = "".concat(e, ".").concat(t)
-  var s = $$_37_index.b()
-  return $$_$$_$$_$$_$$_src_shared_ui_language.c(s, r, n)
+  var s = Module_37.b()
+  return Src_shared_ui_language.c(s, r, n)
 }
 export default d

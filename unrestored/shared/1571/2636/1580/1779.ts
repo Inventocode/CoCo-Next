@@ -6,8 +6,8 @@
 
 "use strict"
 
-require("./1778/951")("WeakSet", function (e) {
+require(/* 951 */"./1778/951")("WeakSet", function (e) {
   return function () {
     return e(this, arguments.length ? arguments[0] : undefined)
   }
-}, require("./1778/1279"))
+}, require(/* 1279 */"./1778/1279"))

@@ -4,5 +4,5 @@
  * 模块 ID：1253
  */
 
-var r = require("./634").match(/firefox\/(\d+)/i)
+var r = require(/* 634 */"./634").match(/firefox\/(\d+)/i)
 module.exports = !!r && +r[1]

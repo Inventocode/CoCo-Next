@@ -4,7 +4,7 @@
  * 模块 ID：2468
  */
 
-var r = require("./861")
+var r = require(/* 861 */"./861")
 var /* [auto-meaningful-name] */Object$prototype = Object.prototype
 var /* [auto-meaningful-name] */Object$prototype$hasOwnProperty = Object$prototype.hasOwnProperty
 var /* [auto-meaningful-name] */Object$prototype$toString = Object$prototype.toString

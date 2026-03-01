@@ -6,12 +6,12 @@
 
 "use strict"
 
-var r = require("../1720/960")
-var o = require("../1282/240")
-var i = require("../1720/424")
-var a = require("./1264")
-var s = require("../1282/310")
-var c = require("../1720/961")
+var r = require(/* 960 */"../1720/960")
+var o = require(/* 240 */"../1282/240")
+var i = require(/* 424 */"../1720/424")
+var a = require(/* 1264 */"./1264")
+var s = require(/* 310 */"../1282/310")
+var c = require(/* 961 */"../1720/961")
 r("search", function (e, t, n) {
   return [
     function (t) {

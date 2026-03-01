@@ -9,8 +9,8 @@ import { render } from "react-dom"
 
 import { zh_CN, messages } from "./language"
 import { a as ReactIntl } from "../../unrestored/about/64/73/index"
-import * as /* [auto-meaningful-name] */$$_$$_unrestored_about_64_71_index from "../../unrestored/about/64/71/index"
-import /* [auto-meaningful-name] */$$_$$_unrestored_about_64_30 from "../../unrestored/about/64/30"
+import * as /* [auto-meaningful-name] */Module_71 from /* 71 */"../../unrestored/about/64/71/index"
+import /* [auto-meaningful-name] */Unrestored_about_64_30 from "../../unrestored/about/64/30"
 import styles from "./styles.module.css"
 import Logo from "./assets/images/logo.png"
 import quotesLeft from "./assets/images/quotes/left.png"
@@ -78,10 +78,10 @@ const COURSE_DOWN_ITEMS: CourseItem[] = [
 ]
 
 function App() {
-  var formatMessage = $$_$$_unrestored_about_64_71_index.a().formatMessage
+  var formatMessage = Module_71.a().formatMessage
   return (
     <div className={styles.pageWrapper}>
-      <div className={$$_$$_unrestored_about_64_30(styles.flexTC, styles.bannerBox)}>
+      <div className={Unrestored_about_64_30(styles.flexTC, styles.bannerBox)}>
         <img className={styles.bannerLeftBg} src="https://static.codemao.cn/coco/image/about_page_left_banner.png" alt="" />
         <img className={styles.bannerRightBg} src="https://static.codemao.cn/coco/image/about_page_right_banner.png" alt="" />
         <div className={styles.left} />
@@ -100,13 +100,13 @@ function App() {
         <div className={styles.right} />
       </div>
 
-      <div className={$$_$$_unrestored_about_64_30(styles.flexTC, styles.courseAndFamilyBox)}>
+      <div className={Unrestored_about_64_30(styles.flexTC, styles.courseAndFamilyBox)}>
         <div className={styles.left} />
         <div className={styles.courseAndFamilyContent}>
           <h3 className={styles.courseTitle}>{formatMessage({ id: "about.toolCourse" })}</h3>
           <div className={styles.courseList}>
             <div className={styles.courseUpList}>{COURSE_UP_ITEMS.map((item, idx) =>
-              <div key={idx} className={$$_$$_unrestored_about_64_30(styles.courseItem, styles.courseUpItem)}>
+              <div key={idx} className={Unrestored_about_64_30(styles.courseItem, styles.courseUpItem)}>
                 <img className={styles.courseUpImg} src="https://static.codemao.cn/coco/image/about_page_timeline_up.png" alt="" />
                 <div className={styles.courseText}>
                   <p className={styles.courseItemTitle}>{item.time}</p>
@@ -117,7 +117,7 @@ function App() {
               <img className={styles.courseTimelineImg} src="https://static.codemao.cn/coco/image/about_page_timeline.png" alt="" />
             </div>
             <div className={styles.courseDownList}>{COURSE_DOWN_ITEMS.map((item, idx) =>
-              <div key={idx} className={$$_$$_unrestored_about_64_30(styles.courseItem, styles.courseDownItem)}>
+              <div key={idx} className={Unrestored_about_64_30(styles.courseItem, styles.courseDownItem)}>
                 <img className={styles.courseDownImg} src="https://static.codemao.cn/coco/image/about_page_timeline_down.png" alt="" />
                 <div className={styles.courseText}>
                   <p className={styles.courseItemTitle}>{item.time}</p>
@@ -139,7 +139,7 @@ function App() {
         <div className={styles.right} />
       </div>
 
-      <div className={$$_$$_unrestored_about_64_30(styles.flexTC, styles.TeamBox)}>
+      <div className={Unrestored_about_64_30(styles.flexTC, styles.TeamBox)}>
         <div className={styles.left} />
         <div className={styles.teamContent}>
           <div className={styles.thanksText}>— Thanks —</div>

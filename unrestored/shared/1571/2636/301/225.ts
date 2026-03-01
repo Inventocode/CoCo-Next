@@ -7,11 +7,11 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$_203 from "./203"
+import * as /* [auto-meaningful-name] */Module_203 from /* 203 */"./203"
 function i(e, t, n) {
   return (i = "undefined" !== typeof Reflect && Reflect.get ? Reflect.get : function (e, t, n) {
     var i = function (e, t) {
-      for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = $_203.a(e));) {
+      for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = Module_203.a(e));) {
         ;
       }
       return e

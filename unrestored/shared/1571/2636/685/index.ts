@@ -6,6 +6,6 @@
 
 import { r } from "./index__part-0"
 import "./index__part-1"
-import * as /* [auto-meaningful-name] */$_360 from "./360"
+import * as /* [auto-meaningful-name] */Module_360 from /* 360 */"./360"
 export { r as messages }
 export { b as types } from "./360"

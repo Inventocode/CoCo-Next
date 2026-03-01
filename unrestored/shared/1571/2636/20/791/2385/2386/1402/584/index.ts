@@ -6,8 +6,8 @@
 
 "use strict"
 
-var r = require("../../../../../../207/787/500")
-var i = require("../../1410/311")
+var r = require(/* 500 */"../../../../../../207/787/500")
+var i = require(/* 311 */"../../1410/311")
 var /* [auto-meaningful-name] */i$ObjectDefineProperties = i.ObjectDefineProperties
 var /* [auto-meaningful-name] */i$ObjectGetOwnPropertyDescriptor = i.ObjectGetOwnPropertyDescriptor
 var /* [auto-meaningful-name] */i$ObjectKeys = i.ObjectKeys
@@ -15,8 +15,8 @@ var /* [auto-meaningful-name] */i$ObjectSetPrototypeOf = i.ObjectSetPrototypeOf
 module.exports = A
 var u
 var l
-var f = require("../986/index")
-var d = require("../1161")
+var f = require(/* 986 */"../986/index")
+var d = require(/* 1161 */"../1161")
 i$ObjectSetPrototypeOf(A.prototype, f.prototype)
 i$ObjectSetPrototypeOf(A, f)
 for (var h = i$ObjectKeys(d.prototype), p = 0; p < h.length; p++) {
@@ -103,7 +103,7 @@ A.toWeb = function (e) {
 }
 A.from = function (e) {
   if (!l) {
-    l = require("./2392")
+    l = require(/* 2392 */"./2392")
   }
   return l(e, "body")
 }

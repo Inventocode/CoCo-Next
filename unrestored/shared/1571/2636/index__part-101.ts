@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_224_index from "./224/index"
-import * as yb from "./21"
-import { createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$_803 from "./803"
-import * as /* [auto-meaningful-name] */$_1044 from "./1044"
+import * as /* [auto-meaningful-name] */Module_224 from /* 224 */"./224/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_803 from /* 803 */"./803"
+import * as /* [auto-meaningful-name] */Module_1044 from /* 1044 */"./1044"
 var oy = {
   icon: {
     tag: "svg",
@@ -31,11 +31,11 @@ var oy = {
   theme: "outlined"
 }
 var iy = function (e, t) {
-  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return React.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: oy
   }))
 }
 iy.displayName = "SearchOutlined"
-var ay = forwardRef(iy)
+var ay = React.forwardRef(iy)
 export { ay }

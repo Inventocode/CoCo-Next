@@ -4,4 +4,4 @@
  * 模块 ID：1586
  */
 
-require("./1581/442/index")("hasInstance")
+require(/* 442 */"./1581/442/index")("hasInstance")

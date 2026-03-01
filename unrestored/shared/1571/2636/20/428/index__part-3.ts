@@ -7,19 +7,19 @@
 "use strict"
 
 import { z } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_$$_7 from "../../7"
-import * as /* [auto-meaningful-name] */$$_$$_47_index from "../../47/index"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_$$_14 from "../../14"
-import * as /* [auto-meaningful-name] */$$_$$_91 from "../../91"
-import * as /* [auto-meaningful-name] */$$_$$_68 from "../../68"
-import * as /* [auto-meaningful-name] */$$_$$_48_index from "../../48/index"
-import * as /* [auto-meaningful-name] */$$_$$_9 from "../../9"
-import * as /* [auto-meaningful-name] */$$_$$_37_index from "../../37/index"
-import * as /* [auto-meaningful-name] */$$_$$_64 from "../../64"
-import * as /* [auto-meaningful-name] */$$_$$_37_143 from "../../37/143"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../7"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../47/index"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../../14"
+import * as /* [auto-meaningful-name] */Module_91 from /* 91 */"../../91"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../68"
+import * as /* [auto-meaningful-name] */Module_48 from /* 48 */"../../48/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../9"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../../37/index"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"../../64"
+import * as /* [auto-meaningful-name] */Module_143 from /* 143 */"../../37/143"
 function te(e) {
   return String(e)
 }
@@ -31,7 +31,7 @@ function re(e) {
 }
 function oe(e) {
   var t = {}
-  for (var n in e) if (!(e[n].type !== $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.y && e[n].type !== $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B)) {
+  for (var n in e) if (!(e[n].type !== Src_editor_widget_builtIn_types.y && e[n].type !== Src_editor_widget_builtIn_types.B)) {
     (function () {
       var r = []
       e[n].attributes.fields.forEach(function (e) {
@@ -52,25 +52,25 @@ function ie(e, t) {
       r.push([ne(e, o), JSON.stringify(i)])
     }
   }
-  $$_$$_37_143.a.multiSet(r)
+  Module_143.a.multiSet(r)
 }
 function ae(e) {
-  var t = $$_$$_9.Bb(e)
+  var t = Module_9.Bb(e)
   var n = []
   t.attributes.fields.forEach(function (e) {
     return n.push(e)
   })
-  var /* [auto-meaningful-name] */$$_$$_37_index$d$getState$project$id = $$_$$_37_index.d.getState().project.id
+  var /* [auto-meaningful-name] */Module_37$d$getState$project$id = Module_37.d.getState().project.id
   if (t) {
-    var o = ne($$_$$_37_index$d$getState$project$id, t.id)
-    if ($$_$$_37_143.a.getItem(o)) {
-      $$_$$_37_143.a.setItem(o, JSON.stringify(n))
+    var o = ne(Module_37$d$getState$project$id, t.id)
+    if (Module_143.a.getItem(o)) {
+      Module_143.a.setItem(o, JSON.stringify(n))
     }
-    $$_$$_91.a({
-      type: $$_$$_68.b.PLAYER_DATA_WATCH,
+    Module_91.a({
+      type: Module_68.b.PLAYER_DATA_WATCH,
       data: {
-        screenId: $$_$$_48_index.a().getState().currentScreenId,
-        tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B,
+        screenId: Module_48.a().getState().currentScreenId,
+        tab: Src_editor_widget_builtIn_types.B,
         id: t.id,
         value: n
       }
@@ -78,15 +78,15 @@ function ae(e) {
   }
 }
 function se(e) {
-  var t = $$_$$_37_143.a.getAllKeys().filter(function (t) {
+  var t = Module_143.a.getAllKeys().filter(function (t) {
     return 0 === t.indexOf("@".concat(e, "_"))
   })
   t.push(re(e))
-  $$_$$_37_143.a.multiRemove(t)
+  Module_143.a.multiRemove(t)
 }
 function ce(e, t) {
   var n = ne(e, t)
-  var r = $$_$$_37_143.a.getItem(n)
+  var r = Module_143.a.getItem(n)
   if (r) {
     try {
       var o = JSON.parse(r)
@@ -96,16 +96,16 @@ function ce(e, t) {
       if ("object" === typeof o) {
         var i = []
         for (var a in o) i.push({
-          id: $$_$$_64.a("DOC_KEY"),
+          id: Module_64.a("DOC_KEY"),
           key: a,
           value: o[a],
           type: "string"
         })
-        $$_$$_37_143.a.setItem(n, JSON.stringify(i))
+        Module_143.a.setItem(n, JSON.stringify(i))
         return i
       }
     } catch (s) {
-      $$_$$_37_143.a.removeItem(n)
+      Module_143.a.removeItem(n)
     }
   }
 }
@@ -119,7 +119,7 @@ function le(e, t, n) {
   var i = o.find(function (e) {
     return e.key === n
   })
-  return i ? i.value : ($$_$$_14.a.condition(false, {
+  return i ? i.value : (Module_14.a.condition(false, {
     type: "error",
     messageId: "keyNotExists",
     values: {
@@ -131,7 +131,7 @@ function ue(e, t, n, r) {
   return de.apply(this, arguments)
 }
 function de() {
-  return (de = $$_$$_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
+  return (de = Module_7.a(RegeneratorRuntime.mark(function e(t, n, r, o) {
     var i
     var a
     var s
@@ -145,14 +145,14 @@ function de() {
               e.next = 3
               break
             }
-            $$_$$_14.a.log({
+            Module_14.a.log({
               type: "error",
               messageId: "localStorageInvalidKeyType",
               widgetId: n
             })
             return e.abrupt("return")
           case 3:
-            if (r = r.toString(), i = "number" === typeof o || "string" === typeof o, $$_$$_14.a.condition(i, {
+            if (r = r.toString(), i = "number" === typeof o || "string" === typeof o, Module_14.a.condition(i, {
               type: "error",
               messageId: "localStorageInvalidValueType",
               widgetId: n,
@@ -172,7 +172,7 @@ function de() {
             if ((s = a.find(function (e) {
               return e.key === r
             })) || (s = {
-              id: $$_$$_64.a("DOC_KEY"),
+              id: Module_64.a("DOC_KEY"),
               key: r,
               value: "",
               type: "string"
@@ -197,13 +197,13 @@ function de() {
           case 22:
             s.value = e.t0
             c = ne(t, n)
-            $$_$$_37_143.a.setItem(ne(t, n), JSON.stringify(a))
-            l = $$_$$_37_143.a.getItem(c)
-            $$_$$_91.a({
-              type: $$_$$_68.b.PLAYER_DATA_WATCH,
+            Module_143.a.setItem(ne(t, n), JSON.stringify(a))
+            l = Module_143.a.getItem(c)
+            Module_91.a({
+              type: Module_68.b.PLAYER_DATA_WATCH,
               data: {
-                screenId: $$_$$_48_index.a().getState().currentScreenId,
-                tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B,
+                screenId: Module_48.a().getState().currentScreenId,
+                tab: Src_editor_widget_builtIn_types.B,
                 id: n,
                 value: l ? JSON.parse(l) : ""
               }
@@ -220,7 +220,7 @@ function pe(e, t, n) {
   var r
   var o = ce(e, t)
   n = null === (r = n) || undefined === r ? undefined : r.toString()
-  $$_$$_14.a.condition(null === o || undefined === o ? undefined : o.find(function (e) {
+  Module_14.a.condition(null === o || undefined === o ? undefined : o.find(function (e) {
     return e.key === n
   }), {
     type: "error",
@@ -237,11 +237,11 @@ function pe(e, t, n) {
       o.splice(i, 1)
     }
     var a = ne(e, t)
-    $$_$$_37_143.a.setItem(a, JSON.stringify(o))
-    $$_$$_91.a({
-      type: $$_$$_68.b.PLAYER_DATA_WATCH,
+    Module_143.a.setItem(a, JSON.stringify(o))
+    Module_91.a({
+      type: Module_68.b.PLAYER_DATA_WATCH,
       data: {
-        screenId: $$_$$_48_index.a().getState().currentScreenId,
+        screenId: Module_48.a().getState().currentScreenId,
         tab: "",
         id: t,
         value: o
@@ -263,16 +263,16 @@ function me(e, t, n) {
 }
 function ge(e, t) {
   var n = ne(e, t)
-  if ($$_$$_37_143.a.getItem(n)) {
+  if (Module_143.a.getItem(n)) {
     try {
-      $$_$$_37_143.a.setItem(n, JSON.stringify([]))
-      $$_$$_91.a({
-        type: $$_$$_68.b.PLAYER_DATA_WATCH,
+      Module_143.a.setItem(n, JSON.stringify([]))
+      Module_91.a({
+        type: Module_68.b.PLAYER_DATA_WATCH,
         data: {
-          screenId: $$_$$_48_index.a().getState().currentScreenId,
-          tab: $$_$$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B,
+          screenId: Module_48.a().getState().currentScreenId,
+          tab: Src_editor_widget_builtIn_types.B,
           id: t,
-          value: $$_$$_37_143.a.getItem(n)
+          value: Module_143.a.getItem(n)
         }
       })
     } catch (r) {}
@@ -280,13 +280,13 @@ function ge(e, t) {
 }
 function _e(e, t) {
   var n
-  var r = $$_$$_47_index.a(t)
+  var r = Module_47.a(t)
   try {
     for (r.s(); !(n = r.n()).done;) {
       var o = ne(e, n.value)
-      if ($$_$$_37_143.a.getItem(o)) {
+      if (Module_143.a.getItem(o)) {
         try {
-          $$_$$_37_143.a.removeItem(o)
+          Module_143.a.removeItem(o)
         } catch (i) {}
       }
     }

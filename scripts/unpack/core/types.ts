@@ -10,42 +10,44 @@ export interface UnpackConfig {
         basePath: string
         unrestoredPath: string
         srcPath: string
-        srcUnrestoredPath: string
-        /**
-         * 生成模块信息表。
-         */
-        modulesInfo?: false | string | null | undefined
     }
     setPath: SetPath,
-    publicPath?: string | null | undefined
+    bundle?: BundleConfig | null | undefined
+    modules?: Record<string, ModuleConfig> | null | undefined
+    /**
+     * 被移动的模块移动到的目录。
+     */
+    movedDirs?: string[] | null | undefined
+    moveToSrc?: Record<string, string> | null | undefined
+}
+
+export interface BundleConfig {
     /**
      * 是否使用 ESModule 的导入方式。
      *
      * 部分代码使用 ESModule 的导入方式可能会导致异常。
      */
     useESImport?: boolean | null | undefined
-    /**
-     * 移动模块，标识模块被移动到了指定位置，被移动的模块不会被处理。
-     */
-    moveToSrc?: Record<ModuleKey, string> | null | undefined
-    /**
-     * 移除 Node Polyfill
-     */
+    publicPath?: string | null | undefined
     nodePolyfill?: Record<ModuleKey, string | null | undefined> | null | undefined
 }
 
-export type External = ({
+export interface ModuleConfig {
+    write?: boolean | null | undefined
+    namedImported?: boolean | number | null | undefined
+    scopeLowering?: boolean | null | undefined
+    exportsNameMap?: Record<string, string> | null | undefined
+}
+
+export type Externals = External[] | Record<string, string>
+
+export type External = {
     searchPath: RegExp
     replace: string
 } | {
     key: ModuleKey
     source: string
-}) & {
-    namedImport?: boolean
-    exportsNameMap?: Record<string, string> | null | undefined
 }
-
-export type Externals = External[]
 
 export enum SetPath {
     NO = "NO",
@@ -55,6 +57,7 @@ export enum SetPath {
 
 export interface Module {
     key: ModuleKey
+    unrestoredPath: string[]
     path: string[]
     moved?: boolean | null | undefined
     external?: string | null | undefined
@@ -66,9 +69,12 @@ export interface Module {
     importsNameMap: Record<ModuleKey, string>
     importsNameToModuleMap: Record<string, Module>
     exportsNameMap: Record<string, string>
-    namedImport: boolean | undefined
+    namedImport: boolean | number | null | undefined
+    config: ModuleConfig
 }
 
 export type ModuleKey = string | number
 
 export type ModuleMap = Record<string, Module>
+
+export type ModulesInfo = Record<string, string>

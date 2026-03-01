@@ -4,5 +4,5 @@
  * 模块 ID：634
  */
 
-var r = require("../../1282/476")
+var r = require(/* 476 */"../../1282/476")
 module.exports = r("navigator", "userAgent") || ""

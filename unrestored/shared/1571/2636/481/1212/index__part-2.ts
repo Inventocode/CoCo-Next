@@ -6,12 +6,12 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
-import * as /* [auto-meaningful-name] */$_1049 from "./1049"
-import * as /* [auto-meaningful-name] */$_2644 from "./2644"
-import * as /* [auto-meaningful-name] */$_918 from "./918"
-import * as /* [auto-meaningful-name] */$_395 from "./395"
-import * as /* [auto-meaningful-name] */$_746 from "./746"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../799/38"
+import * as /* [auto-meaningful-name] */Module_1049 from /* 1049 */"./1049"
+import * as /* [auto-meaningful-name] */Module_2644 from /* 2644 */"./2644"
+import * as /* [auto-meaningful-name] */Module_918 from /* 918 */"./918"
+import * as /* [auto-meaningful-name] */Module_395 from /* 395 */"./395"
+import * as /* [auto-meaningful-name] */Module_746 from /* 746 */"./746"
 var d = [/^Script error\.?$/, /^Javascript error: Script error\.? on line 0$/]
 var h = function () {
   function e(t) {
@@ -22,8 +22,8 @@ var h = function () {
     this.name = e.id
   }
   e.prototype.setupOnce = function () {
-    $_1049.b(function (t) {
-      var n = $_2644.a()
+    Module_1049.b(function (t) {
+      var n = Module_2644.a()
       if (!n) {
         return t
       }
@@ -38,7 +38,7 @@ var h = function () {
     })
   }
   e.prototype._shouldDropEvent = function (e, t) {
-    return this._isSentryError(e, t) ? ($_918.a.warn("Event dropped due to being internal Sentry Error.\nEvent: " + $_395.d(e)), true) : this._isIgnoredError(e, t) ? ($_918.a.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + $_395.d(e)), true) : this._isDeniedUrl(e, t) ? ($_918.a.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + $_395.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true) : !this._isAllowedUrl(e, t) && ($_918.a.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + $_395.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true)
+    return this._isSentryError(e, t) ? (Module_918.a.warn("Event dropped due to being internal Sentry Error.\nEvent: " + Module_395.d(e)), true) : this._isIgnoredError(e, t) ? (Module_918.a.warn("Event dropped due to being matched by `ignoreErrors` option.\nEvent: " + Module_395.d(e)), true) : this._isDeniedUrl(e, t) ? (Module_918.a.warn("Event dropped due to being matched by `denyUrls` option.\nEvent: " + Module_395.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true) : !this._isAllowedUrl(e, t) && (Module_918.a.warn("Event dropped due to not being matched by `allowUrls` option.\nEvent: " + Module_395.d(e) + ".\nUrl: " + this._getEventFilterUrl(e)), true)
   }
   e.prototype._isSentryError = function (e, t) {
     if (!t.ignoreInternal) {
@@ -53,7 +53,7 @@ var h = function () {
   e.prototype._isIgnoredError = function (e, t) {
     return !(!t.ignoreErrors || !t.ignoreErrors.length) && this._getPossibleEventMessages(e).some(function (e) {
       return t.ignoreErrors.some(function (t) {
-        return $_746.a(e, t)
+        return Module_746.a(e, t)
       })
     })
   }
@@ -63,7 +63,7 @@ var h = function () {
     }
     var n = this._getEventFilterUrl(e)
     return !!n && t.denyUrls.some(function (e) {
-      return $_746.a(n, e)
+      return Module_746.a(n, e)
     })
   }
   e.prototype._isAllowedUrl = function (e, t) {
@@ -72,7 +72,7 @@ var h = function () {
     }
     var n = this._getEventFilterUrl(e)
     return !n || t.allowUrls.some(function (e) {
-      return $_746.a(n, e)
+      return Module_746.a(n, e)
     })
   }
   e.prototype._mergeOptions = function (e) {
@@ -80,9 +80,9 @@ var h = function () {
       e = {}
     }
     return {
-      allowUrls: $$_799_38.f(this._options.whitelistUrls || [], this._options.allowUrls || [], e.whitelistUrls || [], e.allowUrls || []),
-      denyUrls: $$_799_38.f(this._options.blacklistUrls || [], this._options.denyUrls || [], e.blacklistUrls || [], e.denyUrls || []),
-      ignoreErrors: $$_799_38.f(this._options.ignoreErrors || [], e.ignoreErrors || [], d),
+      allowUrls: Module_38.f(this._options.whitelistUrls || [], this._options.allowUrls || [], e.whitelistUrls || [], e.allowUrls || []),
+      denyUrls: Module_38.f(this._options.blacklistUrls || [], this._options.denyUrls || [], e.blacklistUrls || [], e.denyUrls || []),
+      ignoreErrors: Module_38.f(this._options.ignoreErrors || [], e.ignoreErrors || [], d),
       ignoreInternal: "undefined" === typeof this._options.ignoreInternal || this._options.ignoreInternal
     }
   }
@@ -99,7 +99,7 @@ var h = function () {
         var o = undefined === t$value ? "" : t$value
         return ["" + o, r + ": " + o]
       } catch (a) {
-        $_918.a.error("Cannot extract message for event " + $_395.d(e))
+        Module_918.a.error("Cannot extract message for event " + Module_395.d(e))
         return []
       }
     }
@@ -131,7 +131,7 @@ var h = function () {
       }
       return null
     } catch (r) {
-      $_918.a.error("Cannot extract url for event " + $_395.d(e))
+      Module_918.a.error("Cannot extract url for event " + Module_395.d(e))
       return null
     }
   }

@@ -7,7 +7,7 @@
 import * as React from "react"
 
 import * as Tools from "../../../../shared/tools"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53 from "../../../../../unrestored/shared/1571/2636/53"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../../unrestored/shared/1571/2636/53"
 import * as Actions from "../../../redux/common/actions"
 import { IconFont } from "../../../../shared/ui/components"
 import { CoCoDialog } from "../../../../shared/ui/components"
@@ -39,9 +39,9 @@ export const ReleaseInfo = React.memo(() => {
   React.useEffect(function () {
     if (userInfoFetchDone) {
       if (!hasShown) {
-        if (localStorage.getItem("ReleaseVersion") !== $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f) {
+        if (localStorage.getItem("ReleaseVersion") !== Module_53.f) {
           dispatch(Actions.showReleaseInfoDialog(true))
-          localStorage.setItem("ReleaseVersion", $$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f)
+          localStorage.setItem("ReleaseVersion", Module_53.f)
         }
         setHasShown(true)
       }
@@ -60,7 +60,7 @@ export const ReleaseInfo = React.memo(() => {
       <div className={styles.right}>
         <div className={styles.content}>
           <div className={styles.updateInfo}>
-            <header>{`版本v${$$_$$_$$_$$_$$_unrestored_shared_1571_2636_53.f}更新`}</header>
+            <header>{`版本v${Module_53.f}更新`}</header>
             {RELEASE_MESSAGES.map(e => <p key={e}>{e}</p>)}
             <div className={styles.link}>
               {RELEASE_LINKS.map(e => (

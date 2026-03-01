@@ -4,8 +4,8 @@
  * 模块 ID：1099
  */
 
-var r = require("../1659/168")
-var o = require("../1658/1261/954")
+var r = require(/* 168 */"../1659/168")
+var o = require(/* 954 */"../1658/1261/954")
 module.exports = function (e) {
   return r(function () {
     return !!o[e]() || "​᠎" != "​᠎"[e]() || o[e].name !== e

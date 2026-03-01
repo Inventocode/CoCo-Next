@@ -24,14 +24,14 @@ export { M as l }
 export { L as m }
 export { P as h }
 export { B as b }
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "./7"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as l from "./64"
-import * as /* [auto-meaningful-name] */$_286 from "./286"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
+import * as /* [auto-meaningful-name] */Module_286 from /* 286 */"./286"
 var /* [auto-meaningful-name] */DataImage_pngBase64IVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAAC0lEQVQYV2NgAAIAAAUAAarVyFEAAAAASUVORK5CYII="
 function p(e) {
   var t = e.scenes.get_current_scene()
@@ -51,7 +51,7 @@ function f(e, t, n) {
   return h.apply(this, arguments)
 }
 function h() {
-  return (h = i.a(RegeneratorRuntime1.mark(function e(t, n, r) {
+  return (h = Module_7.a(RegeneratorRuntime1.mark(function e(t, n, r) {
     var i
     var a
     return RegeneratorRuntime1.wrap(function (e) {
@@ -62,7 +62,7 @@ function h() {
               e.next = 7
               break
             }
-            i = l.a("CANVAS_STYLE")
+            i = Module_64.a("CANVAS_STYLE")
             e.next = 5
             return t.textures.load_texture(i, n)
           case 5:
@@ -94,7 +94,7 @@ function m(e, t) {
   }
 }
 function g(e, t) {
-  if ($$_$$_$$_$$_src_shared_tools_index.i(t)) {
+  if (Src_shared_tools_index.i(t)) {
     e.set_background_color(0)
     e.set_background_alpha(0)
   } else {
@@ -131,7 +131,7 @@ function b(e, t, n) {
   return y.apply(this, arguments)
 }
 function y() {
-  return (y = i.a(RegeneratorRuntime1.mark(function e(t, n, r) {
+  return (y = Module_7.a(RegeneratorRuntime1.mark(function e(t, n, r) {
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -289,7 +289,7 @@ function C(e, t, n, r) {
   return T.apply(this, arguments)
 }
 function T() {
-  return (T = i.a(RegeneratorRuntime1.mark(function e(t, n, r, i) {
+  return (T = Module_7.a(RegeneratorRuntime1.mark(function e(t, n, r, i) {
     var a
     var s
     var /* [auto-meaningful-name] */s$is_error
@@ -330,7 +330,7 @@ function S(e, t, n, r, o, i, a) {
   return A.apply(this, arguments)
 }
 function A() {
-  return (A = i.a(RegeneratorRuntime1.mark(function e(t, n, r, i, a, s, c) {
+  return (A = Module_7.a(RegeneratorRuntime1.mark(function e(t, n, r, i, a, s, c) {
     var l
     var /* [auto-meaningful-name] */l$is_error
     var /* [auto-meaningful-name] */l$value
@@ -357,7 +357,7 @@ function A() {
               l$value.remove_style(n)
               t.textures.destroy_texture(n)
             }
-            f = a === $_286.a.ARROW ? O(r, i) : a === $_286.a.CIRCLE ? E(r, i) : w(r, 0, s, c)
+            f = a === Module_286.a.ARROW ? O(r, i) : a === Module_286.a.CIRCLE ? E(r, i) : w(r, 0, s, c)
             e.prev = 11
             e.next = 14
             return t.textures.load_texture(n, f)

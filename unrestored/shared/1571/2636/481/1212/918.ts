@@ -7,8 +7,8 @@
 "use strict"
 
 export { s as a }
-import * as /* [auto-meaningful-name] */$_395 from "./395"
-var i = $_395.e()
+import * as /* [auto-meaningful-name] */Module_395 from /* 395 */"./395"
+var i = Module_395.e()
 var /* [auto-meaningful-name] */SentryLogger = "Sentry Logger "
 var a = function () {
   function e() {
@@ -25,7 +25,7 @@ var a = function () {
       e[t] = arguments[t]
     }
     if (this._enabled) {
-      $_395.c(function () {
+      Module_395.c(function () {
         i.console.log(SentryLogger + "[Log]: " + e.join(" "))
       })
     }
@@ -35,7 +35,7 @@ var a = function () {
       e[t] = arguments[t]
     }
     if (this._enabled) {
-      $_395.c(function () {
+      Module_395.c(function () {
         i.console.warn(SentryLogger + "[Warn]: " + e.join(" "))
       })
     }
@@ -45,7 +45,7 @@ var a = function () {
       e[t] = arguments[t]
     }
     if (this._enabled) {
-      $_395.c(function () {
+      Module_395.c(function () {
         i.console.error(SentryLogger + "[Error]: " + e.join(" "))
       })
     }

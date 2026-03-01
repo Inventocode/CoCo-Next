@@ -7,7 +7,7 @@
 !function () {
   "use strict"
 
-  var t = require("./1364")
+  var t = require(/* 1364 */"./1364")
   function r(e, t) {
     return !(!t && "yield" === e) && i(e, t)
   }

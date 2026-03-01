@@ -7,29 +7,29 @@
 "use strict"
 
 import { xl } from "../../../../../src/editor/redux/store"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as on from "../9"
-import * as /* [auto-meaningful-name] */$$_47_index from "../47/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_127 from "../127"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_shop from "../../../../../src/shared/widget/custom/shop"
-import * as /* [auto-meaningful-name] */$_376 from "./376"
-import * as /* [auto-meaningful-name] */$_219_index from "./219/index"
-import * as /* [auto-meaningful-name] */$$_147 from "../147"
-import * as /* [auto-meaningful-name] */$_515 from "./515"
-import /* [auto-meaningful-name] */$_5151 from "./515"
-import * as /* [auto-meaningful-name] */$$_410 from "../410"
-import * as /* [auto-meaningful-name] */$$_48_345 from "../48/345"
-import * as /* [auto-meaningful-name] */$$_97_375 from "../97/375"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_restrict from "../../../../../src/shared/widget/custom/restrict"
-import * as /* [auto-meaningful-name] */$$_144 from "../144"
-import * as /* [auto-meaningful-name] */$$_392_index from "../392/index"
-import * as /* [auto-meaningful-name] */$$_20_index from "../20/index"
-import * as /* [auto-meaningful-name] */$$_174 from "../174"
-import * as /* [auto-meaningful-name] */$_143 from "./143"
-import * as /* [auto-meaningful-name] */$$_110 from "../110"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../47/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_127 from /* 127 */"../127"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_shop from /* 183 */"../../../../../src/shared/widget/custom/shop"
+import * as /* [auto-meaningful-name] */Module_376 from /* 376 */"./376"
+import * as /* [auto-meaningful-name] */Module_219 from /* 219 */"./219/index"
+import * as /* [auto-meaningful-name] */Module_147 from /* 147 */"../147"
+import * as /* [auto-meaningful-name] */Module_515 from /* 515 */"./515"
+import /* [auto-meaningful-name] */Module_5151 from /* 515 */"./515"
+import * as /* [auto-meaningful-name] */Module_410 from /* 410 */"../410"
+import * as /* [auto-meaningful-name] */Module_345 from /* 345 */"../48/345"
+import * as /* [auto-meaningful-name] */Module_375 from /* 375 */"../97/375"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_restrict from /* 232 */"../../../../../src/shared/widget/custom/restrict"
+import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"../144"
+import * as /* [auto-meaningful-name] */Module_392 from /* 392 */"../392/index"
+import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../20/index"
+import * as /* [auto-meaningful-name] */Module_174 from /* 174 */"../174"
+import * as /* [auto-meaningful-name] */Module_143 from /* 143 */"./143"
+import * as /* [auto-meaningful-name] */Module_110 from /* 110 */"../110"
 function Ln() {
   var /* [auto-meaningful-name] */t$common$userInfo
   var t = xl.getState()
@@ -42,7 +42,7 @@ function Pn() {
   var t = []
   try {
     var n
-    var r = $$_47_index.a(xl$getState$dataWatch$variableList)
+    var r = Module_47.a(xl$getState$dataWatch$variableList)
     try {
       for (r.s(); !(n = r.n()).done;) {
         var /* [auto-meaningful-name] */n$value = n.value
@@ -60,14 +60,14 @@ function Pn() {
       r.f()
     }
     var i = JSON.stringify(t)
-    $_143.a.setItem(Ln(), i)
+    Module_143.a.setItem(Ln(), i)
   } catch (s) {
     console.error("cache data watch failed", s)
   }
 }
 function Bn() {
   var e = Ln()
-  var t = $_143.a.getItem(e)
+  var t = Module_143.a.getItem(e)
   var n = []
   try {
     if (t) {
@@ -84,7 +84,7 @@ function Fn(e) {
   var /* [auto-meaningful-name] */n$project$screens = n.project.screens
   var /* [auto-meaningful-name] */n$project$id = n.project.id
   var i = []
-  var a = $$_47_index.a(e)
+  var a = Module_47.a(e)
   try {
     var s = function () {
       var /* [auto-meaningful-name] */t$value = t.value
@@ -106,7 +106,7 @@ function Fn(e) {
             return t.id === t$value.id
           })
           if (u) {
-            i.push($$_110.a("PRIMITIVE", u, {
+            i.push(Module_110.a("PRIMITIVE", u, {
               screenId: a.id
             }))
           }
@@ -116,7 +116,7 @@ function Fn(e) {
             return t.id === t$value.id
           })
           if (d) {
-            i.push($$_110.a("DICT", d, {
+            i.push(Module_110.a("DICT", d, {
               screenId: a.id
             }))
           }
@@ -126,7 +126,7 @@ function Fn(e) {
             return t.id === t$value.id
           })
           if (p) {
-            i.push($$_110.a("PRIMITIVE", p, {
+            i.push(Module_110.a("PRIMITIVE", p, {
               screenId: a.id
             }))
           }
@@ -142,7 +142,7 @@ function Fn(e) {
             return t.id === t$value.id
           })
           if (v) {
-            i.push($$_110.a("LIST", v))
+            i.push(Module_110.a("LIST", v))
           }
         }
         if ("DICT" === t$value.type) {
@@ -150,7 +150,7 @@ function Fn(e) {
             return t.id === t$value.id
           })
           if (b) {
-            i.push($$_110.a("DICT", b))
+            i.push(Module_110.a("DICT", b))
           }
         }
         if ("PRIMITIVE" === t$value.type) {
@@ -158,21 +158,21 @@ function Fn(e) {
             return t.id === t$value.id
           })
           if (y) {
-            i.push($$_110.a("PRIMITIVE", y))
+            i.push(Module_110.a("PRIMITIVE", y))
           }
         }
         if (n$project$globalWidgetIds.includes(t$value.id)) {
-          var E = on.Bb(t$value.id)
-          if (t$value.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.B || t$value.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.y) {
-            var O = $$_20_index.getLocalDocumentObject(n$project$id, t$value.id) || E.attributes.fields
-            i.push($$_110.a(t$value.type, {
+          var E = Module_9.Bb(t$value.id)
+          if (t$value.type === Src_editor_widget_builtIn_types.B || t$value.type === Src_editor_widget_builtIn_types.y) {
+            var O = Module_20.getLocalDocumentObject(n$project$id, t$value.id) || E.attributes.fields
+            i.push(Module_110.a(t$value.type, {
               id: t$value.id,
               name: t$value.name,
               value: O,
               defaultValue: "no-use"
             }))
-          } else if (t$value.type === $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.G) {
-            i.push($$_110.a($$_$$_$$_$$_$$_src_editor_widget_builtIn_types.G, {
+          } else if (t$value.type === Src_editor_widget_builtIn_types.G) {
+            i.push(Module_110.a(Src_editor_widget_builtIn_types.G, {
               id: t$value.id,
               name: t$value.name,
               value: {
@@ -198,13 +198,13 @@ function Fn(e) {
   }
   for (var u = 0, d = i; u < d.length; u++) {
     var p = d[u]
-    xl.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(p.id, "isWatching", true))
-    xl.dispatch($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(p.id, "selected", true))
+    xl.dispatch(Src_editor_redux_common_actions.Pj(p.id, "isWatching", true))
+    xl.dispatch(Src_editor_redux_common_actions.Pj(p.id, "selected", true))
   }
 }
 function Gn() {
   var e = Ln()
-  return $_143.a.removeItem(e)
+  return Module_143.a.removeItem(e)
 }
 export { Pn }
 export { Bn }

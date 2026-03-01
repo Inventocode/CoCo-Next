@@ -4,8 +4,8 @@
  * 模块 ID：1634
  */
 
-var r = require("./1662/86")
-var o = require("./1645/953")
+var r = require(/* 86 */"./1662/86")
+var o = require(/* 953 */"./1645/953")
 var /* [auto-meaningful-name] */Math$cosh = Math.cosh
 var /* [auto-meaningful-name] */Math$abs = Math.abs
 var /* [auto-meaningful-name] */Math$E = Math.E

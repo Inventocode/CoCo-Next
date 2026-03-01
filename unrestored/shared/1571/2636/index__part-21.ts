@@ -6,58 +6,57 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_566 from "./566"
-import /* [auto-meaningful-name] */$_5661 from "./566"
-var gn = memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_566 from /* 566 */"./566"
+import /* [auto-meaningful-name] */Module_5661 from /* 566 */"./566"
+var gn = React1.memo(function () {
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.common.projectSaveProgressDialog
   })
   var /* [auto-meaningful-name] */n$visible = n.visible
   var /* [auto-meaningful-name] */n$progress = n.progress
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.f, {
+  return React.createElement(Src_shared_ui_components_index.f, {
     visible: n$visible,
-    className: $_5661.container,
+    className: Module_5661.container,
     onClose: function () {
-      t($$_$$_$$_$$_src_editor_redux_common_actions.Qi(false))
+      t(Src_editor_redux_common_actions.Qi(false))
     }
   }, React.createElement("div", {
-    className: $_5661.main
+    className: Module_5661.main
   }, React.createElement("div", {
-    className: $_5661.progress
+    className: Module_5661.progress
   }, React.createElement("div", {
-    className: $_5661.progressText,
+    className: Module_5661.progressText,
     style: {
       width: "".concat(n$progress, "%")
     }
   }, "".concat(n$progress, "%")), React.createElement("div", {
-    className: $_5661.progressBg
+    className: Module_5661.progressBg
   }, React.createElement("div", {
-    className: $_5661.progressInner,
+    className: Module_5661.progressInner,
     style: {
       width: "".concat(n$progress, "%")
     }
   }))), React.createElement("div", null, React.createElement("p", {
-    className: $_5661.text
-  }, $_710$a$formatMessage({
+    className: Module_5661.text
+  }, Module_710$a$formatMessage({
     id: "ProjectSaveProgressDialog.content"
   }))), React.createElement("div", {
-    className: $_5661.footer
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.d, {
+    className: Module_5661.footer
+  }, React.createElement(Src_shared_ui_components_index.d, {
     type: "primary",
-    className: $_5661.cancelBtn,
+    className: Module_5661.cancelBtn,
     onClick: function () {
-      t($$_$$_$$_$$_src_editor_redux_common_actions.yf())
+      t(Src_editor_redux_common_actions.yf())
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "ProjectSaveProgressDialog.cancelSave"
   })))))
 })

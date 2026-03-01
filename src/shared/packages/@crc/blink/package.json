@@ -1,4 +1,8 @@
 {
+    "__unpack": [
+        "由 CoCo 源代码计划解包器解包",
+        { "模块 ID": 1352 }
+    ],
     "name": "@crc/blink",
     "version": "0.28.16",
     "description": "Blink for Codemao",

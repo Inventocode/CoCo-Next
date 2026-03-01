@@ -4,9 +4,9 @@
  * 模块 ID：1671
  */
 
-require("./1662/86")({
+require(/* 86 */"./1662/86")({
   target: "Object",
   stat: true
 }, {
-  is: require("./1722/1264")
+  is: require(/* 1264 */"./1722/1264")
 })

@@ -9,12 +9,12 @@
 import { a, u, l, p, v } from "./index__part-0"
 import { C, N } from "./index__part-2"
 import { U, B, q } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$$_49_17_index from "../49/17/index"
-import * as /* [auto-meaningful-name] */$$_49_9 from "../49/9"
-import * as S from "./33"
-import * as /* [auto-meaningful-name] */$$_49_14 from "../49/14"
-import * as /* [auto-meaningful-name] */$$_49_8 from "../49/8"
-import * as H from "./41"
+import * as /* [auto-meaningful-name] */Module_17 from /* 17 */"../49/17/index"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../49/9"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"../49/14"
+import * as /* [auto-meaningful-name] */Module_8 from /* 8 */"../49/8"
+import * as /* [auto-meaningful-name] */Module_41 from /* 41 */"./41"
 var V = "?"
 var W = /^\s*at (?:(.*?) ?\()?((?:file|https?|blob|chrome-extension|address|native|eval|webpack|<anonymous>|[-a-z]+:|.*bundle|\/).*?)(?::(\d+))?(?::(\d+))?\)?\s*$/i
 var $ = /^\s*(.*?)(?:\((.*?)\))?(?:^|@)?((?:file|https?|blob|chrome|webpack|resource|moz-extension|capacitor).*?:\/.*?|\[native code\]|[^@]*(?:bundle|\d+\.js)|\/[\w\-. /=]+)(?::(\d+))?(?::(\d+))?\s*$/i
@@ -225,15 +225,15 @@ function ie(e, t, n) {
   if (undefined === n) {
     n = {}
   }
-  if ($$_49_9.e(e) && e.error) {
+  if (Module_9.e(e) && e.error) {
     return r = ne(J(e = e.error))
   }
-  if ($$_49_9.a(e) || $$_49_9.b(e)) {
+  if (Module_9.a(e) || Module_9.b(e)) {
     var i = e
-    var o = i.name || ($$_49_9.a(i) ? "DOMError" : "DOMException")
+    var o = i.name || (Module_9.a(i) ? "DOMError" : "DOMException")
     var a = i.message ? o + ": " + i.message : o
     r = oe(a, t, n)
-    $$_49_14.b(r, a)
+    Module_14.b(r, a)
     if ("code" in i) {
       r.tags = u(u({}, r.tags), {
         "DOMException.code": "" + i.code
@@ -241,18 +241,18 @@ function ie(e, t, n) {
     }
     return r
   }
-  return $$_49_9.d(e) ? r = ne(J(e)) : $$_49_9.h(e) || $$_49_9.f(e) ? (r = function (e, t, n) {
+  return Module_9.d(e) ? r = ne(J(e)) : Module_9.h(e) || Module_9.f(e) ? (r = function (e, t, n) {
     var r = {
       exception: {
         values: [
           {
-            type: $$_49_9.f(e) ? e.constructor.name : n ? "UnhandledRejection" : "Error",
-            value: "Non-Error " + (n ? "promise rejection" : "exception") + " captured with keys: " + $$_49_17_index.b(e)
+            type: Module_9.f(e) ? e.constructor.name : n ? "UnhandledRejection" : "Error",
+            value: "Non-Error " + (n ? "promise rejection" : "exception") + " captured with keys: " + Module_17.b(e)
           }
         ]
       },
       extra: {
-        __serialized__: $$_49_17_index.e(e)
+        __serialized__: Module_17.e(e)
       }
     }
     if (t) {
@@ -262,9 +262,9 @@ function ie(e, t, n) {
       }
     }
     return r
-  }(e, t, n.rejection), $$_49_14.a(r, {
+  }(e, t, n.rejection), Module_14.a(r, {
     synthetic: true
-  }), r) : (r = oe(e, t, n), $$_49_14.b(r, "" + e, undefined), $$_49_14.a(r, {
+  }), r) : (r = oe(e, t, n), Module_14.b(r, "" + e, undefined), Module_14.a(r, {
     synthetic: true
   }), r)
 }
@@ -450,7 +450,7 @@ var ce = function () {
       sentry_key: this.getDsn().publicKey,
       sentry_version: "7"
     }
-    return $$_49_17_index.f(e)
+    return Module_17.f(e)
   }
   return e
 }()
@@ -465,7 +465,7 @@ var fe = function () {
   e.prototype.add = function (e) {
     var t = this
     if (!this.isReady()) {
-      return S.a.reject(new C("Not adding Promise due to buffer limit reached."))
+      return Module_33.a.reject(new C("Not adding Promise due to buffer limit reached."))
     }
     var n = e()
     if (-1 === this._buffer.indexOf(n)) {
@@ -486,13 +486,13 @@ var fe = function () {
   }
   e.prototype.drain = function (e) {
     var t = this
-    return new S.a(function (n) {
+    return new Module_33.a(function (n) {
       var r = setTimeout(function () {
         if (e && e > 0) {
           n(false)
         }
       }, e)
-      S.a.all(t._buffer).then(function () {
+      Module_33.a.all(t._buffer).then(function () {
         clearTimeout(r)
         n(true)
       }).then(null, function () {
@@ -530,7 +530,7 @@ var pe = function () {
     var /* [auto-meaningful-name] */e$reject = e.reject
     var a = U.fromHttpCode(e$response.status)
     if (this._handleRateLimit(e$headers)) {
-      $$_49_8.a.warn("Too many " + e$requestType + " requests, backing off until: " + this._disabledUntil(e$requestType))
+      Module_8.a.warn("Too many " + e$requestType + " requests, backing off until: " + this._disabledUntil(e$requestType))
     }
     if (a !== U.Success) {
       e$reject(e$response)
@@ -601,7 +601,7 @@ var pe = function () {
       }
       return true
     }
-    return !!s && (this._rateLimits.all = new Date(o + $$_49_14.g(o, s)), true)
+    return !!s && (this._rateLimits.all = new Date(o + Module_14.g(o, s)), true)
   }
   return e
 }()
@@ -611,8 +611,8 @@ var he = function (e) {
       n = function () {
         var e
         var /* [auto-meaningful-name] */o$contentWindow
-        var n = $$_49_14.e()
-        if (H.a(n.fetch)) {
+        var n = Module_14.e()
+        if (Module_41.a(n.fetch)) {
           return n.fetch.bind(n)
         }
         var /* [auto-meaningful-name] */n$document = n.document
@@ -627,7 +627,7 @@ var he = function (e) {
             }
             n$document.head.removeChild(o)
           } catch (a) {
-            $$_49_8.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", a)
+            Module_8.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", a)
           }
         }
         return n$fetch.bind(n)
@@ -657,7 +657,7 @@ var he = function (e) {
     var r = {
       body: e.body,
       method: "POST",
-      referrerPolicy: H.e() ? "origin" : ""
+      referrerPolicy: Module_41.e() ? "origin" : ""
     }
     if (undefined !== this.options.fetchParameters) {
       Object.assign(r, this.options.fetchParameters)
@@ -666,7 +666,7 @@ var he = function (e) {
       r.headers = this.options.headers
     }
     return this._buffer.add(function () {
-      return new S.a(function (t, i) {
+      return new Module_33.a(function (t, i) {
         n._fetch(e.url, r).then(function (r) {
           var o = {
             "x-sentry-rate-limits": r.headers.get("X-Sentry-Rate-Limits"),
@@ -704,7 +704,7 @@ var me = function (e) {
       reason: "Transport for " + e.type + " requests locked till " + this._disabledUntil(e.type) + " due to too many requests.",
       status: 429
     }) : this._buffer.add(function () {
-      return new S.a(function (t, r) {
+      return new Module_33.a(function (t, r) {
         var i = new XMLHttpRequest()
         for (var o in i.onreadystatechange = function () {
           if (4 === i.readyState) {
@@ -739,7 +739,7 @@ var ve = function (e) {
       var r = ie(t, n && n.syntheticException || undefined, {
         attachStacktrace: e.attachStacktrace
       })
-      $$_49_14.a(r, {
+      Module_14.a(r, {
         handled: true,
         type: "generic"
       })
@@ -747,7 +747,7 @@ var ve = function (e) {
       if (n && n.event_id) {
         r.event_id = n.event_id
       }
-      return S.a.resolve(r)
+      return Module_33.a.resolve(r)
     }(this._options, e, t)
   }
   t.prototype.eventFromMessage = function (e, t, n) {
@@ -765,7 +765,7 @@ var ve = function (e) {
       if (r && r.event_id) {
         i.event_id = r.event_id
       }
-      return S.a.resolve(i)
+      return Module_33.a.resolve(i)
     }(this._options, e, t, n)
   }
   t.prototype._setupTransport = function () {
@@ -777,7 +777,7 @@ var ve = function (e) {
       tunnel: this._options.tunnel,
       _metadata: this._options._metadata
     })
-    return this._options.transport ? new this._options.transport(t) : H.b() ? new he(t) : new me(t)
+    return this._options.transport ? new this._options.transport(t) : Module_41.b() ? new he(t) : new me(t)
   }
   return t
 }(q)

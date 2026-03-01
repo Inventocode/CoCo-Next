@@ -7,21 +7,21 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */$_394 from "./394"
-import * as /* [auto-meaningful-name] */$_292 from "./292"
+import * as /* [auto-meaningful-name] */Module_394 from /* 394 */"./394"
+import * as /* [auto-meaningful-name] */Module_292 from /* 292 */"./292"
 function o(e) {
   return function t(n, o) {
     switch (arguments.length) {
       case 0:
         return t
       case 1:
-        return $_292.a(n) ? t : $_394.a(function (t) {
+        return Module_292.a(n) ? t : Module_394.a(function (t) {
           return e(n, t)
         })
       default:
-        return $_292.a(n) && $_292.a(o) ? t : $_292.a(n) ? $_394.a(function (t) {
+        return Module_292.a(n) && Module_292.a(o) ? t : Module_292.a(n) ? Module_394.a(function (t) {
           return e(t, o)
-        }) : $_292.a(o) ? $_394.a(function (t) {
+        }) : Module_292.a(o) ? Module_394.a(function (t) {
           return e(n, t)
         }) : e(n, o)
     }

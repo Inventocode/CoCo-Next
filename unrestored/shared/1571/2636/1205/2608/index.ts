@@ -10,13 +10,13 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_color_blocks = undefined
-var r = require("tslib")
-var o = require("../../1022/579")
-var i = require("../../301/484")
-var a = (0, r.__importStar)(require("../../17/536"))
-var s = require("../../1058/125")
-var c = require("../2610/581")
-var l = require("./1466")
+var r = require(/* 93 */"tslib")
+var o = require(/* 579 */"../../1022/579")
+var i = require(/* 484 */"../../301/484")
+var a = (0, r.__importStar)(require(/* 536 */"../../17/536"))
+var s = require(/* 125 */"../../1058/125")
+var c = require(/* 581 */"../2610/581")
+var l = require(/* 1466 */"./1466")
 function u(e, t) {
   var n
   var r

@@ -6,95 +6,95 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_28_index from "../../28/index"
-import * as a from "./12"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../28/index"
+import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"./12"
 function s(e) {
   var t
-  return null === (t = a.f(e)) || undefined === t ? undefined : t.width
+  return null === (t = Module_12.f(e)) || undefined === t ? undefined : t.width
 }
 function c(e) {
   var t
-  return null === (t = a.e(e)) || undefined === t ? undefined : t.x
+  return null === (t = Module_12.e(e)) || undefined === t ? undefined : t.x
 }
 function l(e) {
   var t
-  return null === (t = a.e(e)) || undefined === t ? undefined : t.y
+  return null === (t = Module_12.e(e)) || undefined === t ? undefined : t.y
 }
 function u(e) {
-  return a.g(e)
+  return Module_12.g(e)
 }
 function d(e) {
   var t
-  return null === (t = a.d(e)) || undefined === t ? undefined : t.disabled
+  return null === (t = Module_12.d(e)) || undefined === t ? undefined : t.disabled
 }
 function p(e) {
   var t
-  return null === (t = a.d(e)) || undefined === t ? undefined : t.iconId
+  return null === (t = Module_12.d(e)) || undefined === t ? undefined : t.iconId
 }
 function f(e) {
   var t
-  return null === (t = a.d(e)) || undefined === t ? undefined : t.color
+  return null === (t = Module_12.d(e)) || undefined === t ? undefined : t.color
 }
 function h(e) {
   var t
-  return null === (t = a.d(e)) || undefined === t ? undefined : t.text
+  return null === (t = Module_12.d(e)) || undefined === t ? undefined : t.text
 }
 function m(e) {
   var t
-  return null === (t = a.d(e)) || undefined === t ? undefined : t.mode
+  return null === (t = Module_12.d(e)) || undefined === t ? undefined : t.mode
 }
 function g(e) {
   var t
-  return null === (t = a.d(e)) || undefined === t ? undefined : t.sizeType
+  return null === (t = Module_12.d(e)) || undefined === t ? undefined : t.sizeType
 }
 function _(e, t) {
-  a.l(e, t)
+  Module_12.l(e, t)
 }
 function v(e, t) {
-  a.j(e, t)
+  Module_12.j(e, t)
 }
 function b(e, t) {
-  a.j(e, {
+  Module_12.j(e, {
     x: t
   })
 }
 function y(e, t) {
-  a.j(e, {
+  Module_12.j(e, {
     y: t
   })
 }
 function E(e, t) {
-  a.k(e, {
+  Module_12.k(e, {
     width: t
   })
 }
 function O(e, t) {
-  a.h(e, {
+  Module_12.h(e, {
     color: t
   })
 }
 function w(e, t) {
-  a.h(e, {
+  Module_12.h(e, {
     disabled: t
   })
 }
 function C(e, t) {
-  a.h(e, {
+  Module_12.h(e, {
     iconId: t
   })
 }
 function T(e, t) {
-  a.h(e, {
-    text: $$_$$_28_index.p(t)
+  Module_12.h(e, {
+    text: Module_28.p(t)
   })
 }
 function S(e, t) {
-  a.h(e, {
+  Module_12.h(e, {
     mode: t
   })
 }
 function A(e, t) {
-  a.h(e, {
+  Module_12.h(e, {
     sizeType: t
   })
 }

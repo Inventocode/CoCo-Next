@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("react")
+var r = require(/* 0 */"react")
 var o = function () {
   function e(e, t) {
     for (var n = 0; n < t.length; n++) {

@@ -6,8 +6,8 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */React from "react"
-import "./1184"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 1184 */"./1184"
 var re = function () {
   return React.createElement("svg", {
     "aria-hidden": "true",

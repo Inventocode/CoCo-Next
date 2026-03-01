@@ -10,16 +10,16 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.TransformToIde = undefined
-var r = require("tslib")
-var i = require("../../../../17/499/976")
-var o = require("../../../../1058/173")
-var a = require("../../../../1058/125")
-var s = require("../../../../123/195/2051/1123")
-var c = (0, r.__importStar)(require("../../../../17/536"))
-var u = require("../../../../1022/214")
-var l = (0, r.__importStar)(require("../../737/1154"))
-var f = (0, r.__importStar)(require("../../737/1155"))
-var d = require("./2351/index")
+var r = require(/* 93 */"tslib")
+var i = require(/* 976 */"../../../../17/499/976")
+var o = require(/* 173 */"../../../../1058/173")
+var a = require(/* 125 */"../../../../1058/125")
+var s = require(/* 1123 */"../../../../123/195/2051/1123")
+var c = (0, r.__importStar)(require(/* 536 */"../../../../17/536"))
+var u = require(/* 214 */"../../../../1022/214")
+var l = (0, r.__importStar)(require(/* 1154 */"../../737/1154"))
+var f = (0, r.__importStar)(require(/* 1155 */"../../737/1155"))
+var d = require(/* 2351 */"./2351/index")
 var h = function () {
   function e() {
     this.plugins = new Set()

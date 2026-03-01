@@ -7,23 +7,23 @@
 "use strict"
 
 export { _ as a }
-import * as /* [auto-meaningful-name] */$$_799_38 from "../799/38"
-import * as /* [auto-meaningful-name] */$_2673 from "./2673"
-import * as /* [auto-meaningful-name] */$_395 from "./395"
-import * as /* [auto-meaningful-name] */$_2639_index from "./2639/index"
-import * as /* [auto-meaningful-name] */$_918 from "./918"
-import * as /* [auto-meaningful-name] */$_2639_917 from "./2639/917"
-import * as /* [auto-meaningful-name] */$_1049 from "./1049"
-import * as /* [auto-meaningful-name] */$_564_index from "./564/index"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"../799/38"
+import * as /* [auto-meaningful-name] */Module_2673 from /* 2673 */"./2673"
+import * as /* [auto-meaningful-name] */Module_395 from /* 395 */"./395"
+import * as /* [auto-meaningful-name] */Module_2639 from /* 2639 */"./2639/index"
+import * as /* [auto-meaningful-name] */Module_918 from /* 918 */"./918"
+import * as /* [auto-meaningful-name] */Module_917 from /* 917 */"./2639/917"
+import * as /* [auto-meaningful-name] */Module_1049 from /* 1049 */"./1049"
+import * as /* [auto-meaningful-name] */Module_564 from /* 564 */"./564/index"
 var f = function () {
   function e(e) {
     this.errors = 0
-    this.sid = $_395.i()
+    this.sid = Module_395.i()
     this.duration = 0
-    this.status = $_2673.a.Ok
+    this.status = Module_2673.a.Ok
     this.init = true
     this.ignoreDuration = false
-    var t = $_2639_index.b()
+    var t = Module_2639.b()
     this.timestamp = t
     this.started = t
     if (e) {
@@ -42,12 +42,12 @@ var f = function () {
         this.did = e.user.id || e.user.email || e.user.username
       }
     }
-    this.timestamp = e.timestamp || $_2639_index.b()
+    this.timestamp = e.timestamp || Module_2639.b()
     if (e.ignoreDuration) {
       this.ignoreDuration = e.ignoreDuration
     }
     if (e.sid) {
-      this.sid = 32 === e.sid.length ? e.sid : $_395.i()
+      this.sid = 32 === e.sid.length ? e.sid : Module_395.i()
     }
     if (undefined !== e.init) {
       this.init = e.init
@@ -91,9 +91,9 @@ var f = function () {
         status: e
       })
     } else {
-      if (this.status === $_2673.a.Ok) {
+      if (this.status === Module_2673.a.Ok) {
         this.update({
-          status: $_2673.a.Exited
+          status: Module_2673.a.Exited
         })
       } else {
         this.update()
@@ -101,7 +101,7 @@ var f = function () {
     }
   }
   e.prototype.toJSON = function () {
-    return $_564_index.a({
+    return Module_564.a({
       sid: "" + this.sid,
       init: this.init,
       started: new Date(1e3 * this.started).toISOString(),
@@ -110,7 +110,7 @@ var f = function () {
       errors: this.errors,
       did: "number" === typeof this.did || "string" === typeof this.did ? "" + this.did : undefined,
       duration: this.duration,
-      attrs: $_564_index.a({
+      attrs: Module_564.a({
         release: this.release,
         environment: this.environment,
         ip_address: this.ipAddress,
@@ -123,7 +123,7 @@ var f = function () {
 var d = function () {
   function e(e, t, n) {
     if (undefined === t) {
-      t = new $_1049.a()
+      t = new Module_1049.a()
     }
     if (undefined === n) {
       n = 4
@@ -145,7 +145,7 @@ var d = function () {
     }
   }
   e.prototype.pushScope = function () {
-    var e = $_1049.a.clone(this.getScope())
+    var e = Module_1049.a.clone(this.getScope())
     this.getStack().push({
       client: this.getClient(),
       scope: e
@@ -176,7 +176,7 @@ var d = function () {
     return this._stack[this._stack.length - 1]
   }
   e.prototype.captureException = function (e, t) {
-    var n = this._lastEventId = $_395.i()
+    var n = this._lastEventId = Module_395.i()
     var i = t
     if (!t) {
       var a = undefined
@@ -190,13 +190,13 @@ var d = function () {
         syntheticException: a
       }
     }
-    this._invokeClient("captureException", e, $$_799_38.a($$_799_38.a({}, i), {
+    this._invokeClient("captureException", e, Module_38.a(Module_38.a({}, i), {
       event_id: n
     }))
     return n
   }
   e.prototype.captureMessage = function (e, t, n) {
-    var i = this._lastEventId = $_395.i()
+    var i = this._lastEventId = Module_395.i()
     var a = n
     if (!n) {
       var s = undefined
@@ -210,14 +210,14 @@ var d = function () {
         syntheticException: s
       }
     }
-    this._invokeClient("captureMessage", e, t, $$_799_38.a($$_799_38.a({}, a), {
+    this._invokeClient("captureMessage", e, t, Module_38.a(Module_38.a({}, a), {
       event_id: i
     }))
     return i
   }
   e.prototype.captureEvent = function (e, t) {
-    var n = this._lastEventId = $_395.i()
-    this._invokeClient("captureEvent", e, $$_799_38.a($$_799_38.a({}, t), {
+    var n = this._lastEventId = Module_395.i()
+    this._invokeClient("captureEvent", e, Module_38.a(Module_38.a({}, t), {
       event_id: n
     }))
     return n
@@ -236,11 +236,11 @@ var d = function () {
       var /* [auto-meaningful-name] */c$maxBreadcrumbs = c.maxBreadcrumbs
       var d = undefined === c$maxBreadcrumbs ? 100 : c$maxBreadcrumbs
       if (!(d <= 0)) {
-        var h = $_2639_index.a()
-        var p = $$_799_38.a({
+        var h = Module_2639.a()
+        var p = Module_38.a({
           timestamp: h
         }, e)
-        var _ = l ? $_395.c(function () {
+        var _ = l ? Module_395.c(function () {
           return l(p, t)
         }) : p
         if (null !== _) {
@@ -309,7 +309,7 @@ var d = function () {
     try {
       return t.getIntegration(e)
     } catch (n) {
-      $_918.a.warn("Cannot retrieve integration " + e.id + " from the current Hub")
+      Module_918.a.warn("Cannot retrieve integration " + e.id + " from the current Hub")
       return null
     }
   }
@@ -352,20 +352,20 @@ var d = function () {
     var s = t$client && t$client.getOptions() || {}
     var /* [auto-meaningful-name] */s$release = s.release
     var /* [auto-meaningful-name] */s$environment = s.environment
-    var /* [auto-meaningful-name] */$_395$e$navigator$userAgent = ($_395.e().navigator || {}).userAgent
-    var d = new f($$_799_38.a($$_799_38.a($$_799_38.a({
+    var /* [auto-meaningful-name] */Module_395$e$navigator$userAgent = (Module_395.e().navigator || {}).userAgent
+    var d = new f(Module_38.a(Module_38.a(Module_38.a({
       release: s$release,
       environment: s$environment
     }, t$scope && {
       user: t$scope.getUser()
-    }), $_395$e$navigator$userAgent && {
-      userAgent: $_395$e$navigator$userAgent
+    }), Module_395$e$navigator$userAgent && {
+      userAgent: Module_395$e$navigator$userAgent
     }), e))
     if (t$scope) {
       var h = t$scope.getSession && t$scope.getSession()
-      if (h && h.status === $_2673.a.Ok) {
+      if (h && h.status === Module_2673.a.Ok) {
         h.update({
-          status: $_2673.a.Exited
+          status: Module_2673.a.Exited
         })
       }
       this.endSession()
@@ -392,7 +392,7 @@ var d = function () {
     var /* [auto-meaningful-name] */o$scope = o.scope
     var /* [auto-meaningful-name] */o$client = o.client
     if (o$client && o$client[e]) {
-      (t = o$client)[e].apply(t, $$_799_38.f(n, [o$scope]))
+      (t = o$client)[e].apply(t, Module_38.f(n, [o$scope]))
     }
   }
   e.prototype._callExtensionMethod = function (e) {
@@ -404,12 +404,12 @@ var d = function () {
     if (r$__SENTRY__ && r$__SENTRY__.extensions && "function" === typeof r$__SENTRY__.extensions[e]) {
       return r$__SENTRY__.extensions[e].apply(this, t)
     }
-    $_918.a.warn("Extension method " + e + " couldn't be found, doing nothing.")
+    Module_918.a.warn("Extension method " + e + " couldn't be found, doing nothing.")
   }
   return e
 }()
 function h() {
-  var e = $_395.e()
+  var e = Module_395.e()
   e.__SENTRY__ = e.__SENTRY__ || {
     extensions: {},
     hub: undefined
@@ -427,7 +427,7 @@ function _() {
   if (!(A(e) && !g(e).isOlderThan(4))) {
     v(e, new d())
   }
-  return $_2639_917.b() ? function (e) {
+  return Module_917.b() ? function (e) {
     var /* [auto-meaningful-name] */h$__SENTRY__
     var n
     var r
@@ -438,7 +438,7 @@ function _() {
       }
       if (!A(i) || g(i).isOlderThan(4)) {
         var o = g(e).getStackTop()
-        v(i, new d(o.client, $_1049.a.clone(o.scope)))
+        v(i, new d(o.client, Module_1049.a.clone(o.scope)))
       }
       return g(i)
     } catch (a) {

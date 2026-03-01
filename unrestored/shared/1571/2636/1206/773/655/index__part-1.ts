@@ -8,8 +8,8 @@
 
 var o
 var r
-import * as /* [auto-meaningful-name] */$$_$$_$$_37_1412_1032 from "../../../37/1412/1032"
-import * as /* [auto-meaningful-name] */$$_$$_$$_37_1412_675 from "../../../37/1412/675"
+import * as /* [auto-meaningful-name] */Module_1032 from /* 1032 */"../../../37/1412/1032"
+import * as /* [auto-meaningful-name] */Module_675 from /* 675 */"../../../37/1412/675"
 var s = 0
 var c = 0
 var l = function (e, t, n) {
@@ -18,7 +18,7 @@ var l = function (e, t, n) {
   var d = (e = e || {}).node || r
   var p = undefined !== e.clockseq ? e.clockseq : o
   if (null == d || null == p) {
-    var f = e.random || (e.rng || $$_$$_$$_37_1412_1032.a)()
+    var f = e.random || (e.rng || Module_1032.a)()
     if (null == d) {
       d = r = [1 | f[0], f[1], f[2], f[3], f[4], f[5]]
     }
@@ -56,6 +56,6 @@ var l = function (e, t, n) {
   for (var b = 0; b < 6; ++b) {
     u[l + b] = d[b]
   }
-  return t || $$_$$_$$_37_1412_675.a(u)
+  return t || Module_675.a(u)
 }
 export { l }

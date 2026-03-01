@@ -9,22 +9,21 @@
 import { Ue } from "./index__part-9"
 var nj
 var tj
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$_141_index from "./141/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_env from "../../../../src/shared/env"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useDispatch, useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useEffect, useCallback } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1206_index from "./1206/index"
-import * as /* [auto-meaningful-name] */$_162 from "./162"
-import * as /* [auto-meaningful-name] */$_1207 from "./1207"
-import /* [auto-meaningful-name] */$_12071 from "./1207"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"./141/index"
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useDispatch, useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1206 from /* 1206 */"./1206/index"
+import * as /* [auto-meaningful-name] */Module_162 from /* 162 */"./162"
+import * as /* [auto-meaningful-name] */Module_1207 from /* 1207 */"./1207"
+import /* [auto-meaningful-name] */Module_12071 from /* 1207 */"./1207"
 function dj(e) {
   switch (e) {
     case "zh":
@@ -53,7 +52,7 @@ function pj(e) {
       return "development"
   }
 }
-var mj = memo(function (e) {
+var mj = React1.memo(function (e) {
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.common.language
@@ -63,24 +62,24 @@ var mj = memo(function (e) {
   })
   var /* [auto-meaningful-name] */r$visible = r.visible
   var /* [auto-meaningful-name] */r$onSuccess = r.onSuccess
-  var a = useState(false)
-  var s = $_10_index.a(a, 2)
+  var a = React1.useState(false)
+  var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = useRef(null)
-  useEffect(function () {
+  var u = React1.useRef(null)
+  React1.useEffect(function () {
     if (r$visible) {
       nj = setTimeout(function () {
         l(false)
-        t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
-        t($$_$$_$$_$$_src_editor_redux_common_actions.mj({
+        t(Src_editor_redux_common_actions.Zg())
+        t(Src_editor_redux_common_actions.mj({
           type: "error",
           message: "登录页面加载失败，请稍后重试!"
         }))
       }, 5e3)
     }
   }, [r$visible, t])
-  var d = useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var d = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var n
     var r
     var /* [auto-meaningful-name] */e$sent
@@ -92,7 +91,7 @@ var mj = memo(function (e) {
             n = !(i.length > 0 && undefined !== i[0]) || i[0]
             r = i.length > 1 ? i[1] : undefined
             if (n) {
-              t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
+              t(Src_editor_redux_common_actions.Zg())
             }
             e.prev = 3
             e.next = 6
@@ -102,18 +101,18 @@ var mj = memo(function (e) {
               e.next = 17
               break
             }
-            t($$_$$_$$_$$_src_editor_redux_common_actions.wg(e$sent))
-            $_141_index.b(e$sent.id)
+            t(Src_editor_redux_common_actions.wg(e$sent))
+            Module_141.b(e$sent.id)
             if (r) {
               p(r, true, !n, "")
             }
-            t($$_$$_$$_$$_src_editor_redux_common_actions.cg())
-            t($$_$$_$$_$$_src_editor_redux_common_actions.dg())
-            t($_162.D())
+            t(Src_editor_redux_common_actions.cg())
+            t(Src_editor_redux_common_actions.dg())
+            t(Module_162.D())
             return e.abrupt("return", true)
           case 17:
-            Et.J()
-            t($$_$$_$$_$$_src_editor_redux_common_actions.wg(null))
+            Module_9.J()
+            t(Src_editor_redux_common_actions.wg(null))
             if (r) {
               p(r, false, !n, "")
             }
@@ -123,8 +122,8 @@ var mj = memo(function (e) {
           case 22:
             e.prev = 22
             e.t0 = e.catch(3)
-            Et.J()
-            t($$_$$_$$_$$_src_editor_redux_common_actions.hi())
+            Module_9.J()
+            t(Src_editor_redux_common_actions.hi())
             if (r) {
               p(r, false, !n, e.t0.message)
             }
@@ -136,18 +135,18 @@ var mj = memo(function (e) {
     }, e, null, [[3, 22]])
   })), [t])
   function p(e, t, n, r) {
-    $_141_index.a("LoginResult", {
+    Module_141.a("LoginResult", {
       loginMethod: e,
       isSuccess: t,
       isRegister: n,
       failReason: r
     })
   }
-  useEffect(function () {
+  React1.useEffect(function () {
     d(false, "")
   }, [d])
-  var m = useCallback(function () {
-    var e = O.a(RegeneratorRuntime.mark(function e(n) {
+  var m = React1.useCallback(function () {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e(n) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
           switch (e.prev = e.next) {
@@ -162,11 +161,11 @@ var mj = memo(function (e) {
               if (r$onSuccess) {
                 r$onSuccess()
               }
-              t($$_$$_$$_$$_src_editor_redux_common_actions.bg())
-              t($$_$$_$$_$$_src_editor_redux_common_actions.cg())
+              t(Src_editor_redux_common_actions.bg())
+              t(Src_editor_redux_common_actions.cg())
               l(false)
             case 7:
-              t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
+              t(Src_editor_redux_common_actions.Zg())
             case 8:
             case "end":
               return e.stop()
@@ -178,14 +177,14 @@ var mj = memo(function (e) {
       return e.apply(this, arguments)
     }
   }(), [t, r$onSuccess, d])
-  var g = useCallback(function (e) {
+  var g = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */e$error
     var /* [auto-meaningful-name] */e$error1
     var /* [auto-meaningful-name] */e$error1$error_body
     p((null === e || undefined === e ? undefined : e.source) || "", false, "register" === (null === e || undefined === e ? undefined : e.source), (null === e || undefined === e || null === (e$error = e.error) || undefined === e$error ? undefined : e$error.msg) || (null === e || undefined === e || null === (e$error1 = e.error) || undefined === e$error1 || null === (e$error1$error_body = e$error1.error_body) || undefined === e$error1$error_body ? undefined : e$error1$error_body.catastrophe))
   }, [])
-  useEffect(function () {
-    tj = $_1206_index.createCodemaoLoginIframeApi({
+  React1.useEffect(function () {
+    tj = Module_1206.createCodemaoLoginIframeApi({
       onEvent: function (e) {
         !function (e) {
           switch (e.event) {
@@ -223,7 +222,7 @@ var mj = memo(function (e) {
             case "BIND_PHONE_SUCCESS":
               break
             case "CLOSE_ANIMATION_END":
-              t($$_$$_$$_$$_src_editor_redux_common_actions.Zg())
+              t(Src_editor_redux_common_actions.Zg())
               l(false)
               break
             case "REPORT":
@@ -246,19 +245,19 @@ var mj = memo(function (e) {
       }
     }
   }, [d, t, g, m])
-  var v = $_1206_index.getCodemaoLoginIframeUrl({
-    env: pj($$_$$_$$_$$_src_shared_env.a.env),
+  var v = Module_1206.getCodemaoLoginIframeUrl({
+    env: pj(Src_shared_env.a.env),
     language: dj(n),
     onlyLogin: false,
     disableThirdParty: false,
     ageLimit: false,
     theme: "violet",
     pageView: "login",
-    pid: $$_$$_$$_$$_src_shared_env.a.pid,
-    productCode: $$_$$_$$_$$_src_shared_env.a.productCode
+    pid: Src_shared_env.a.pid,
+    productCode: Src_shared_env.a.productCode
   })
   return r$visible ? React.createElement("div", {
-    className: Classnames($_12071.wrapper, c && $_12071.ready)
+    className: Classnames(Module_12071.wrapper, c && Module_12071.ready)
   }, React.createElement("iframe", {
     allow: "autoplay; fullscreen; clipboard-read; clipboard-write; encrypted-media; microphone; geolocation; camera",
     ref: u,

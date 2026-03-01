@@ -41,8 +41,8 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.createIframeApi = createIframeApi
-var uuid_1 = require("./uuid/1-DlMc")
-var result_1 = require("./unnamed-rAiA")
+var uuid_1 = require(/* DlMc */"./uuid/1-DlMc")
+var result_1 = require(/* rAiA */"./unnamed-rAiA")
 const _iframeRequest = "_iframe_request"
 const _iframeResponse = "_iframe_response"
 function createIframeApi(spec, handler, options) {

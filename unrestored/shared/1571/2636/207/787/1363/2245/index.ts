@@ -6,4 +6,4 @@
 
 "use strict"
 
-module.exports = require("./2246")
+module.exports = require(/* 2246 */"./2246")

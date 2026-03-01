@@ -6,14 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$_454 from "./454"
-import * as X from "./27"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Module_454 from /* 454 */"./454/index"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
 var Q = new function e() {
   var t = this
-  X.a(this, e)
+  Module_27.a(this, e)
   this._store = undefined
   this.handle = function (e) {
     var n = t._store[e.data.type]

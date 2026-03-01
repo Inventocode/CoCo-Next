@@ -6,10 +6,10 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$_224_index from "./224/index"
-import * as yb from "./21"
-import { createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$_610 from "./610"
+import * as /* [auto-meaningful-name] */Module_224 from /* 224 */"./224/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_610 from /* 610 */"./610"
 var $b = {
   icon: {
     tag: "svg",
@@ -30,11 +30,11 @@ var $b = {
   theme: "outlined"
 }
 var ey = function (e, t) {
-  return createElement($_224_index.a, yb.a(yb.a({}, e), {}, {
+  return React.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: $b
   }))
 }
 ey.displayName = "CheckOutlined"
-var ty = forwardRef(ey)
+var ty = React.forwardRef(ey)
 export { ty }

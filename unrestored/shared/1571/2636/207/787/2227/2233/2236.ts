@@ -6,11 +6,11 @@
 
 "use strict"
 
-var r = require("../../180")
-var i = require("../../204")
-var o = require("../../../../1058/1393/1143/283/index")
-var a = require("../../../../1058/1393/1143/284/index")
-var /* [auto-meaningful-name] */require$$_1358_1130_index$Syntax = require("../1358/1130/index").Syntax
+var r = require(/* 180 */"../../180")
+var i = require(/* 204 */"../../204")
+var o = require(/* 283 */"../../../../1058/1393/1143/283/index")
+var a = require(/* 284 */"../../../../1058/1393/1143/284/index")
+var /* [auto-meaningful-name] */require_1130_$$_1358_1130_index$Syntax = require(/* 1130 */"../1358/1130/index").Syntax
 var c = function (e) {
   o(n, e)
   var t = a(n)
@@ -108,10 +108,10 @@ var c = function (e) {
       key: "isPattern",
       value: function (e) {
         var /* [auto-meaningful-name] */e$type = e.type
-        return e$type === require$$_1358_1130_index$Syntax.Identifier || e$type === require$$_1358_1130_index$Syntax.ObjectPattern || e$type === require$$_1358_1130_index$Syntax.ArrayPattern || e$type === require$$_1358_1130_index$Syntax.SpreadElement || e$type === require$$_1358_1130_index$Syntax.RestElement || e$type === require$$_1358_1130_index$Syntax.AssignmentPattern
+        return e$type === require_1130_$$_1358_1130_index$Syntax.Identifier || e$type === require_1130_$$_1358_1130_index$Syntax.ObjectPattern || e$type === require_1130_$$_1358_1130_index$Syntax.ArrayPattern || e$type === require_1130_$$_1358_1130_index$Syntax.SpreadElement || e$type === require_1130_$$_1358_1130_index$Syntax.RestElement || e$type === require_1130_$$_1358_1130_index$Syntax.AssignmentPattern
       }
     }
   ])
   return n
-}(require("./1360/index").Visitor)
+}(require(/* 1360 */"./1360/index").Visitor)
 module.exports = c

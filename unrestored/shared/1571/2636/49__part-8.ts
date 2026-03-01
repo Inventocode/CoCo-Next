@@ -7,21 +7,21 @@
 "use strict"
 
 import { Vt, zt } from "./49__part-7"
-import * as Oe from "./43"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$_24_index from "./24/index"
-import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
-import * as /* [auto-meaningful-name] */$_24_304 from "./24/304"
-import * as Q from "./7"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$_100 from "./100"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"./43"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"./24/index"
+import * as /* [auto-meaningful-name] */OtJson1 from /* 31 */"ot-json1"
+import * as /* [auto-meaningful-name] */Module_304 from /* 304 */"./24/304"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"./100"
 function Jt(e) {
   if (e.type === Vt.USER_COLORS) {
-    Oe.h($_100.t(e.data))
+    Module_43.h(Module_100.t(e.data))
   } else {
     if (e.type === Vt.USER_FOCUS) {
-      Oe.h($_100.m(e.data))
+      Module_43.h(Module_100.m(e.data))
     } else {
       if (e.type === Vt.CLOUD_DATABASE) {
         (function (e) {
@@ -30,7 +30,7 @@ function Jt(e) {
           var /* [auto-meaningful-name] */e$data$id = e$data.id
           var /* [auto-meaningful-name] */e$data$name = e$data.name
           if (e$data$type === zt.ADD_DOC && e$data$id && e$data$name) {
-            Oe.h($$_$$_$$_$$_src_editor_redux_common_actions.af(e$data$id, e$data$name))
+            Module_43.h(Src_editor_redux_common_actions.af(e$data$id, e$data$name))
           }
           zt.INITIAL
         })(e)
@@ -40,7 +40,7 @@ function Jt(e) {
 }
 function $t(e) {
   var t
-  var n = null === (t = $_24_index.a.getDoc()) || undefined === t ? undefined : t.globalWidgetIds
+  var n = null === (t = Module_24.a.getDoc()) || undefined === t ? undefined : t.globalWidgetIds
   var r = 0
   if (n && (r = n.findIndex(function (t) {
     return t === e
@@ -65,7 +65,7 @@ function rn(e) {
   return on.apply(this, arguments)
 }
 function on() {
-  return (on = Q.a(RegeneratorRuntime.mark(function e(t) {
+  return (on = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var n
     var r
     return RegeneratorRuntime.wrap(function (e) {
@@ -74,7 +74,7 @@ function on() {
           case 0:
             n = OtJson1.insertOp(en(t.id), t)
             r = OtJson1.insertOp($t(t.id), t.id)
-            $_24_index.a.applyClient(OtJson1.type.compose(r, n))
+            Module_24.a.applyClient(OtJson1.type.compose(r, n))
           case 3:
           case "end":
             return e.stop()
@@ -86,29 +86,29 @@ function on() {
 function an(e) {
   var t = OtJson1.removeOp($t(e))
   var n = OtJson1.removeOp(en(e))
-  $_24_index.a.applyClient(OtJson1.type.compose(t, n))
+  Module_24.a.applyClient(OtJson1.type.compose(t, n))
 }
 function sn(e, t, n) {
   var r
   var o = !(arguments.length > 3 && undefined !== arguments[3]) || arguments[3]
   var i = ["size", "position", "visible", "title", "widgetIds"]
-  var a = $_24_index.a.getDoc()
+  var a = Module_24.a.getDoc()
   if (i.includes(t) && o) {
     var s = en(e, t)
-    var c = a ? $_24_304.a({
-      path: ["$"].concat($_25_index.a(s)),
+    var c = a ? Module_304.a({
+      path: ["$"].concat(Module_25.a(s)),
       json: a
     }) : []
     r = 0 === c.length ? OtJson1.insertOp(s, n) : OtJson1.replaceOp(s, true, n)
   } else {
     var l = en(e, "attributes", t)
-    var u = a ? $_24_304.a({
-      path: ["$"].concat($_25_index.a(l)),
+    var u = a ? Module_304.a({
+      path: ["$"].concat(Module_25.a(l)),
       json: a
     }) : []
     r = 0 === u.length ? OtJson1.insertOp(l, n) : OtJson1.replaceOp(l, true, n)
   }
-  $_24_index.a.applyClient(r)
+  Module_24.a.applyClient(r)
 }
 export { Jt }
 export { tn }

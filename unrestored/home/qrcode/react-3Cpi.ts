@@ -11,9 +11,9 @@
 /* harmony export (binding) */
 export default QRCode
 /* harmony import */
-import * as __WEBPACK_IMPORTED_MODULE_0_react__ from "react"
+import * as __WEBPACK_IMPORTED_MODULE_0_react__ from /* GiK3 */"react"
 /* harmony import */
-import __WEBPACK_IMPORTED_MODULE_0_react___default from "react"
+import __WEBPACK_IMPORTED_MODULE_0_react___default from /* GiK3 */"react"
 var __defProp = Object.defineProperty
 var __getOwnPropSymbols = Object.getOwnPropertySymbols
 var __hasOwnProp = Object.prototype.hasOwnProperty

@@ -4,8 +4,8 @@
  * 模块 ID：1257
  */
 
-var r = require("../../1659/477")
-var o = require("../../1771/256")
+var r = require(/* 477 */"../../1659/477")
+var o = require(/* 256 */"../../1771/256")
 module.exports = function (e) {
   if (undefined === e) {
     return 0

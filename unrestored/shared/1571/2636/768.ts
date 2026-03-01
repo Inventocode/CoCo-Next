@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("./691/32/index")
-var o = require("./691/319")
-var i = require("./691/520/index")
-var a = require("./691/65")
+var r = require(/* 32 */"./691/32/index")
+var o = require(/* 319 */"./691/319")
+var i = require(/* 520 */"./691/520/index")
+var a = require(/* 65 */"./691/65")
 i.a.prototype.set_flipped = function (e) {
   switch (e) {
     case "vertical":

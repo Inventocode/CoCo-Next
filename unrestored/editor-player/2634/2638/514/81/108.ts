@@ -6,7 +6,7 @@
 
 "use strict"
 
-var n = require("./124")
+var n = require(/* 124 */"./124")
 var o = function () {
   function t(t) {
     if (undefined === t) {

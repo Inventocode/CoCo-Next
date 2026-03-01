@@ -6,9 +6,9 @@
 
 "use strict"
 
-import { createContext, useContext } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_552_1214_316_index from "../../../552/1214/316/index"
-import * as /* [auto-meaningful-name] */$_1547 from "./1547"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_316 from /* 316 */"../../../552/1214/316/index"
+import * as /* [auto-meaningful-name] */Module_1547 from /* 1547 */"./1547"
 function y(e) {
   var /* [auto-meaningful-name] */e$props = e.props
   var /* [auto-meaningful-name] */e$states = e.states
@@ -21,9 +21,9 @@ function y(e) {
     return e
   }, {})
 }
-var b = createContext()
+var b = React.createContext()
 function w() {
-  return useContext(b)
+  return React.useContext(b)
 }
 var E = b
 export { y }

@@ -8,17 +8,16 @@
 
 export { h as a }
 export { m as b }
-import "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_42_index from "../42/index"
-import * as /* [auto-meaningful-name] */$$_64 from "../64"
-import * as /* [auto-meaningful-name] */$$_206 from "../206"
-import * as /* [auto-meaningful-name] */$$_33 from "../33"
-import * as /* [auto-meaningful-name] */$_677 from "./677"
-import /* [auto-meaningful-name] */$_6771 from "./677"
-import * as /* [auto-meaningful-name] */$$_75 from "../75"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_42 from /* 42 */"../42/index"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"../64"
+import * as /* [auto-meaningful-name] */Module_206 from /* 206 */"../206"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"../33"
+import * as /* [auto-meaningful-name] */Module_677 from /* 677 */"./677"
+import /* [auto-meaningful-name] */Module_6771 from /* 677 */"./677"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"../75"
 function f(e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$widgetIds = e.widgetIds
@@ -29,22 +28,22 @@ function f(e) {
   var /* [auto-meaningful-name] */e$backgroundImageResizeMode = e.backgroundImageResizeMode
   var h = []
   e$widgetIds.forEach(function (e, t) {
-    var n = $$_42_index.g.get(e)
+    var n = Module_42.g.get(e)
     if (n) {
       n.zIndex = t
       h.push(n)
     }
   })
-  var m = $$_33.hb(e$backgroundImage)
+  var m = Module_33.hb(e$backgroundImage)
   var g = (null === m || undefined === m ? undefined : m.source) || (null === m || undefined === m ? undefined : m.cdnUrl)
   if (!(g || !e$backgroundImage.includes("://") && !e$backgroundImage.includes("data:image/"))) {
     g = e$backgroundImage
   }
   return React1.createElement("div", {
     id: t,
-    className: $_6771.screenView,
-    "data-role": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
-    "data-widget-type": $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
+    className: Module_6771.screenView,
+    "data-role": Src_editor_widget_builtIn_types.D,
+    "data-widget-type": Src_editor_widget_builtIn_types.D,
     style: {
       top: e$position.y,
       left: e$position.x,
@@ -52,29 +51,29 @@ function f(e) {
       height: e$size.height,
       backgroundColor: e$backgroundColor,
       backgroundImage: g ? "url(".concat(g, ")") : "none",
-      backgroundSize: e$backgroundImageResizeMode === $$_206.a.STRETCH ? "100% 100%" : e$backgroundImageResizeMode
+      backgroundSize: e$backgroundImageResizeMode === Module_206.a.STRETCH ? "100% 100%" : e$backgroundImageResizeMode
     }
   }, h.map(function (e) {
-    return $$_42_index.f({
+    return Module_42.f({
       widget: e
     })
   }))
 }
 function h(e) {
   return {
-    id: $$_64.a($$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D),
+    id: Module_64.a(Src_editor_widget_builtIn_types.D),
     title: e,
-    type: $$_$$_$$_$$_$$_src_editor_widget_builtIn_types.D,
+    type: Src_editor_widget_builtIn_types.D,
     position: {
       x: 0,
       y: 0
     },
-    backgroundColor: $$_75.c,
+    backgroundColor: Module_75.c,
     backgroundImage: "",
-    backgroundImageResizeMode: $$_206.a.COVER,
+    backgroundImageResizeMode: Module_206.a.COVER,
     size: {
-      width: $$_75.e,
-      height: $$_75.d
+      width: Module_75.e,
+      height: Module_75.d
     },
     widgetIds: [],
     invisibleWidgetIds: [],

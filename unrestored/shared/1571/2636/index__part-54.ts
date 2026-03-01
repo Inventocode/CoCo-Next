@@ -6,76 +6,75 @@
 
 "use strict"
 
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as Jd from "./33"
-import * as kn from "./75"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_149 from "./149"
-import * as /* [auto-meaningful-name] */$_549_index from "./549/index"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_149 from /* 149 */"./149"
+import * as /* [auto-meaningful-name] */Module_549 from /* 549 */"./549/index"
 var Pf = function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$attributes = e.attributes
   var /* [auto-meaningful-name] */e$attributes$handleImageFileId = e$attributes.handleImageFileId
-  var o = undefined === e$attributes$handleImageFileId ? $_149.c : e$attributes$handleImageFileId
+  var o = undefined === e$attributes$handleImageFileId ? Module_149.c : e$attributes$handleImageFileId
   var /* [auto-meaningful-name] */e$attributes$backgroundImageFileId = e$attributes.backgroundImageFileId
-  var a = undefined === e$attributes$backgroundImageFileId ? $_149.a : e$attributes$backgroundImageFileId
+  var a = undefined === e$attributes$backgroundImageFileId ? Module_149.a : e$attributes$backgroundImageFileId
   var /* [auto-meaningful-name] */e$attributes$trackImageFileId = e$attributes.trackImageFileId
-  var c = undefined === e$attributes$trackImageFileId ? $_149.g : e$attributes$trackImageFileId
+  var c = undefined === e$attributes$trackImageFileId ? Module_149.g : e$attributes$trackImageFileId
   var l = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  var u = useState("")
-  var d = $_10_index.a(u, 2)
+  var u = React1.useState("")
+  var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = useState("")
-  var v = $_10_index.a(g, 2)
+  var g = React1.useState("")
+  var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = useState("")
-  var O = $_10_index.a(E, 2)
+  var E = React1.useState("")
+  var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]
-  useEffect(function () {
+  React1.useEffect(function () {
     var e
-    if ($$_$$_$$_$$_src_shared_tools_index.U(o)) {
+    if (Src_shared_tools_index.U(o)) {
       e = o
     } else {
-      var t = Jd.hb(o)
+      var t = Module_33.hb(o)
       e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl)
     }
-    m(e || $_149.c)
+    m(e || Module_149.c)
   }, [o, l])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e
-    if ($$_$$_$$_$$_src_shared_tools_index.U(a)) {
+    if (Src_shared_tools_index.U(a)) {
       e = a
     } else {
-      var t = Jd.hb(a)
+      var t = Module_33.hb(a)
       e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl)
     }
-    y(e || $_149.a)
+    y(e || Module_149.a)
   }, [a, l])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e
-    if ($$_$$_$$_$$_src_shared_tools_index.U(c)) {
+    if (Src_shared_tools_index.U(c)) {
       e = c
     } else {
-      var t = Jd.hb(c)
+      var t = Module_33.hb(c)
       e = (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl)
     }
-    C(e || $_149.g)
+    C(e || Module_149.g)
   }, [c, l])
-  return React.createElement($_549_index.a, Object.assign({}, e, {
+  return React.createElement(Module_549.a, Object.assign({}, e, {
     onSliderChange: function (e) {
       if (e$onChange) {
         e$onChange("value", e, false)
@@ -92,39 +91,39 @@ var Bf = {
   name: "WIDGET_ID",
   custom: true,
   options: function () {
-    return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.E)
+    return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.E)
   }
 }
 var Ff = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
+  type: Src_editor_widget_builtIn_types.E,
   category: {
-    iconId: $_149.d,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.E
+    iconId: Module_149.d,
+    blocks: Src_editor_widget_builtIn_types.E
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
     return [
-      "<block type=\"slider_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_on_start_and_end\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"slider_set_range_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(kn.a, ",").concat(kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_slide_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(kn.a, ",").concat(kn.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), rp.d, Jd.sb({
+      "<block type=\"slider_on_change\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_on_start_and_end\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"slider_set_range_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(Module_75.a, ",").concat(Module_75.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_slide_value\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints='-").concat(Module_75.a, ",").concat(Module_75.a, ",1'>100</field>\n        </shadow>\n      </value>\n    </block>"), Module_61.d, Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
+        widgetType: Src_editor_widget_builtIn_types.E,
         widgetId: e,
         isSetProperty: true
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__size",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
+        widgetType: Src_editor_widget_builtIn_types.E,
         widgetId: e,
         isSetProperty: true
-      }), "<block type=\"slider_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"slider_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, "<block type=\"slider_get_range_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_slide_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Jd.sb({
+      }), "<block type=\"slider_set_position\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"NUM\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=',,1'>100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"slider_set_visible\" uncache=\"true\">\n    ".concat(t, "\n    </block>"), "<block type=\"slider_set_disabled\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, "<block type=\"slider_get_range_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_slide_value\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_33.sb({
         property: "__opacity",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
+        widgetType: Src_editor_widget_builtIn_types.E,
         widgetId: e
-      }), "<block type=\"slider_get_size\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), rp.d, Jd.sb({
+      }), "<block type=\"slider_get_size\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"slider_get_position\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), Module_61.d, Module_33.sb({
         property: "__visible",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
+        widgetType: Src_editor_widget_builtIn_types.E,
         widgetId: e
-      }), Jd.sb({
+      }), Module_33.sb({
         property: "__disabled",
-        widgetType: $$_$$_$$_$$_src_editor_widget_builtIn_types.E,
+        widgetType: Src_editor_widget_builtIn_types.E,
         widgetId: e
       })
     ]
@@ -142,7 +141,7 @@ var Ff = {
         var /* [auto-meaningful-name] */tNR$widgetId = t(n, r).widgetId
         var i = e.statementToCode(n, r, "DO")
         var a = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
-        return i ? ep.n("argsOnSliderWidgetChange", [ep.o(tNR$widgetId)], i, [a]) : ""
+        return i ? Module_4.n("argsOnSliderWidgetChange", [Module_4.o(tNR$widgetId)], i, [a]) : ""
       })
       e.insertBlockSnippetGenerator("slider_on_change_value", function () {
         return "value"
@@ -154,7 +153,7 @@ var Ff = {
         var s = e.statementToCode(n, r, "DO")
         var c = "startToSlide" === e.getFieldValue(o$block, "ACTION") ? "argsOnSliderWidgetStartToSlide" : "argsOnSliderWidgetEndToSlide"
         var l = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
-        return s ? ep.n(c, [ep.o(o$widgetId)], s, [l]) : ""
+        return s ? Module_4.n(c, [Module_4.o(o$widgetId)], s, [l]) : ""
       })
       e.insertBlockSnippetGenerator("slider_on_start_and_end_value", function () {
         return "value"
@@ -168,21 +167,21 @@ var Ff = {
           SetSliderWidgetMaxValue = "setSliderWidgetMinValue"
         }
         var c = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n(SetSliderWidgetMaxValue, [ep.o(o$widgetId), c]), o$block, e)
+        return Module_4.l(Module_4.n(SetSliderWidgetMaxValue, [Module_4.o(o$widgetId), c]), o$block, e)
       })
       e.insertBlockSnippetGenerator("slider_set_slide_value", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var /* [auto-meaningful-name] */o$block = o.block
         var s = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n("setSliderWidgetValue", [ep.o(o$widgetId), s]), o$block, e)
+        return Module_4.l(Module_4.n("setSliderWidgetValue", [Module_4.o(o$widgetId), s]), o$block, e)
       })
       e.insertBlockSnippetGenerator("slider_set_size", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var /* [auto-meaningful-name] */o$block = o.block
         var s = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n("setSliderWidgetWidth", [ep.o(o$widgetId), s]), o$block, e)
+        return Module_4.l(Module_4.n("setSliderWidgetWidth", [Module_4.o(o$widgetId), s]), o$block, e)
       })
       e.insertBlockSnippetGenerator("slider_set_position", function (n, r) {
         var o = t(n, r)
@@ -193,7 +192,7 @@ var Ff = {
           SetSliderWidgetPositionX = "setSliderWidgetPositionY"
         }
         var c = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n(SetSliderWidgetPositionX, [ep.o(o$widgetId), c]), o$block, e)
+        return Module_4.l(Module_4.n(SetSliderWidgetPositionX, [Module_4.o(o$widgetId), c]), o$block, e)
       })
       e.insertBlockSnippetGenerator("slider_set_value", function (n, r) {
         var o = t(n, r)
@@ -211,7 +210,7 @@ var Ff = {
             s = "setSliderWidgetValue"
         }
         var c = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n(s, [ep.o(o$widgetId), c]), o$block, e)
+        return Module_4.l(Module_4.n(s, [Module_4.o(o$widgetId), c]), o$block, e)
       })
       e.insertBlockSnippetGenerator("slider_set_property", function (n, r) {
         var o = t(n, r)
@@ -229,21 +228,21 @@ var Ff = {
             s = "setSliderWidgetWidth"
         }
         var c = e.valueToCode(n, r, "NUM", e.ORDER_FUNCTION_CALL)
-        return ep.l(ep.n(s, [ep.o(o$widgetId), c]), o$block, e)
+        return Module_4.l(Module_4.n(s, [Module_4.o(o$widgetId), c]), o$block, e)
       })
       e.insertBlockSnippetGenerator("slider_set_visible", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var /* [auto-meaningful-name] */o$block = o.block
         var s = "show" === e.getFieldValue(o$block, "VISIBLE")
-        return ep.n("setSliderWidgetVisible", [ep.o(o$widgetId), s])
+        return Module_4.n("setSliderWidgetVisible", [Module_4.o(o$widgetId), s])
       })
       e.insertBlockSnippetGenerator("slider_set_disabled", function (n, r) {
         var o = t(n, r)
         var /* [auto-meaningful-name] */o$widgetId = o.widgetId
         var /* [auto-meaningful-name] */o$block = o.block
         var s = "disabled" === e.getFieldValue(o$block, "DISPLAY")
-        return ep.l(ep.n("setSliderWidgetDisabled", [ep.o(o$widgetId), s]), o$block, e)
+        return Module_4.l(Module_4.n("setSliderWidgetDisabled", [Module_4.o(o$widgetId), s]), o$block, e)
       })
       e.insertBlockSnippetGenerator("slider_get_range_value", function (n, r) {
         var o = t(n, r)
@@ -253,11 +252,11 @@ var Ff = {
         if ("minValue" === e.getFieldValue(o$block, "PROPERTY")) {
           GetSliderWidgetMaxValue = "getSliderWidgetMinValue"
         }
-        return ep.s(GetSliderWidgetMaxValue, [ep.o(o$widgetId)])
+        return Module_4.s(GetSliderWidgetMaxValue, [Module_4.o(o$widgetId)])
       })
       e.insertBlockSnippetGenerator("slider_get_slide_value", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.s("getSliderWidgetValue", [ep.o(tEN$widgetId)])
+        return Module_4.s("getSliderWidgetValue", [Module_4.o(tEN$widgetId)])
       })
       e.insertBlockSnippetGenerator("slider_get_size", function (n, r) {
         var o = t(n, r)
@@ -267,7 +266,7 @@ var Ff = {
         if ("height" === e.getFieldValue(o$block, "PROPERTY")) {
           GetSliderWidgetWidth = "getSliderWidgetHeight"
         }
-        return ep.s(GetSliderWidgetWidth, [ep.o(o$widgetId)])
+        return Module_4.s(GetSliderWidgetWidth, [Module_4.o(o$widgetId)])
       })
       e.insertBlockSnippetGenerator("slider_get_position", function (n, r) {
         var o = t(n, r)
@@ -278,11 +277,11 @@ var Ff = {
           GetSliderWidgetPositionX = "getSliderWidgetPositionY"
         }
         var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
-        return ep.s(GetSliderWidgetPositionX, [ep.o(o$widgetId), c])
+        return Module_4.s(GetSliderWidgetPositionX, [Module_4.o(o$widgetId), c])
       })
       e.insertBlockSnippetGenerator("slider_get_value", function (e, n) {
         var /* [auto-meaningful-name] */tEN$widgetId = t(e, n).widgetId
-        return ep.s("getSliderWidgetValue", [ep.o(tEN$widgetId)])
+        return Module_4.s("getSliderWidgetValue", [Module_4.o(tEN$widgetId)])
       })
       e.insertBlockSnippetGenerator("slider_get_property", function (n, r) {
         var o = t(n, r)
@@ -309,26 +308,26 @@ var Ff = {
             s = "getSliderWidgetMinValue"
         }
         var c = e.valueToCode(n, r, "VALUE", e.ORDER_FUNCTION_CALL)
-        return ep.s(s, [ep.o(o$widgetId), c])
+        return Module_4.s(s, [Module_4.o(o$widgetId), c])
       })
     },
     setBlockGroupProfile: function (e, t) {
       function n(e) {
-        rp.l(this, e, [
+        Module_61.l(this, e, [
           {
             label: "width",
             min: 68,
-            max: kn.e,
+            max: Module_75.e,
             value: 100
           }, {
             label: "maxValue",
-            min: -kn.a,
-            max: kn.a,
+            min: -Module_75.a,
+            max: Module_75.a,
             value: 100
           }, {
             label: "minValue",
-            min: -kn.a,
-            max: kn.a,
+            min: -Module_75.a,
+            max: Module_75.a,
             value: 100
           }
         ])
@@ -337,7 +336,7 @@ var Ff = {
         type: "slider_on_change",
         message0: "%{BKY_SLIDER_ON_CHANGE}",
         args0: [
-          ep.e("%{BKY_BLOCK_TAB_ICON}", true), D.a({}, Bf), {
+          Module_4.e("%{BKY_BLOCK_TAB_ICON}", true), Module_6.a({}, Bf), {
             type: "input_value",
             name: "VALUE",
             align: "CENTRE",
@@ -367,7 +366,7 @@ var Ff = {
         type: "slider_on_start_and_end",
         message0: "%{BKY_SLIDER_ON_SLIDE_START_AND_END}",
         args0: [
-          ep.e("%{BKY_BLOCK_TAB_ICON}", true), D.a({}, Bf), {
+          Module_4.e("%{BKY_BLOCK_TAB_ICON}", true), Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "ACTION",
             custom: true,
@@ -404,7 +403,7 @@ var Ff = {
         type: "slider_set_range_value",
         message0: "%{BKY_SLIDER_SET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -427,7 +426,7 @@ var Ff = {
         type: "slider_set_slide_value",
         message0: "%{BKY_SLIDER_SET_SLIDE_VALUE}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "input_value",
             name: "NUM",
             check: ["Number"]
@@ -442,7 +441,7 @@ var Ff = {
         type: "slider_set_size",
         message0: "%{BKY_SLIDER_SET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -471,7 +470,7 @@ var Ff = {
         type: "slider_set_position",
         message0: "%{BKY_SLIDER_SET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -494,7 +493,7 @@ var Ff = {
         type: "slider_set_value",
         message0: "%{BKY_SLIDER_SET_VALUE}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -517,7 +516,7 @@ var Ff = {
         type: "slider_set_property",
         message0: "%{BKY_SLIDER_SET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -547,7 +546,7 @@ var Ff = {
             options: function () {
               return [[t.Msg.SHOW, "show"], [t.Msg.HIDE, "hide"]]
             }
-          }, D.a({}, Bf)
+          }, Module_6.a({}, Bf)
         ],
         previousStatement: true,
         nextStatement: true,
@@ -565,7 +564,7 @@ var Ff = {
             options: function () {
               return [[t.Msg.ABLE, "able"], [t.Msg.DISABLED, "disabled"]]
             }
-          }, D.a({}, Bf)
+          }, Module_6.a({}, Bf)
         ],
         previousStatement: true,
         nextStatement: true,
@@ -576,7 +575,7 @@ var Ff = {
         type: "slider_get_range_value",
         message0: "%{BKY_SLIDER_GET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -592,7 +591,7 @@ var Ff = {
       e.insertBlockProfile("slider_get_slide_value", {
         type: "slider_get_slide_value",
         message0: "%{BKY_SLIDER_GET_SLIDE_VALUE}",
-        args0: [D.a({}, Bf)],
+        args0: [Module_6.a({}, Bf)],
         output: ["Number"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -601,7 +600,7 @@ var Ff = {
         type: "slider_get_size",
         message0: "%{BKY_SLIDER_GET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -618,7 +617,7 @@ var Ff = {
         type: "slider_get_position",
         message0: "%{BKY_SLIDER_GET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -634,7 +633,7 @@ var Ff = {
       e.insertBlockProfile("slider_get_value", {
         type: "slider_get_value",
         message0: "%{BKY_SLIDER_GET_VALUE}",
-        args0: [D.a({}, Bf)],
+        args0: [Module_6.a({}, Bf)],
         output: ["Number"],
         colour: "%{BKY_APPEARANCE_HUE}",
         inputsInline: true
@@ -643,7 +642,7 @@ var Ff = {
         type: "slider_get_property",
         message0: "%{BKY_SLIDER_GET_PROPERTY}",
         args0: [
-          D.a({}, Bf), {
+          Module_6.a({}, Bf), {
             type: "field_coco_dropdown",
             name: "PROPERTY",
             custom: true,
@@ -660,7 +659,7 @@ var Ff = {
   },
   categoryClass: {
     text: "",
-    iconId: $_149.d,
+    iconId: Module_149.d,
     blocks: []
   },
   renameBlocksInfo: {

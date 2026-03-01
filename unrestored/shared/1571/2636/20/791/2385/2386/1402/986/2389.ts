@@ -6,17 +6,17 @@
 
 "use strict"
 
-var r = require("../../../../../../207/787/500")
-var i = require("regenerator-runtime")
-var o = require("../../../../../../207/787/180")
-var a = require("../../../../../../207/787/204")
-var s = require("../../1410/311")
+var r = require(/* 500 */"../../../../../../207/787/500")
+var i = require(/* 1 */"regenerator-runtime")
+var o = require(/* 180 */"../../../../../../207/787/180")
+var a = require(/* 204 */"../../../../../../207/787/204")
+var s = require(/* 311 */"../../1410/311")
 var /* [auto-meaningful-name] */s$StringPrototypeSlice = s.StringPrototypeSlice
 var /* [auto-meaningful-name] */s$SymbolIterator = s.SymbolIterator
 var /* [auto-meaningful-name] */s$TypedArrayPrototypeSet = s.TypedArrayPrototypeSet
 var /* [auto-meaningful-name] */s$Uint8Array = s.Uint8Array
-var /* [auto-meaningful-name] */require$$_333_index$Buffer = require("../333/index").Buffer
-var /* [auto-meaningful-name] */require$$_427$inspect = require("../427").inspect
+var /* [auto-meaningful-name] */require_333_$$_333_index$Buffer = require(/* 333 */"../333/index").Buffer
+var /* [auto-meaningful-name] */require_427_$$_427$inspect = require(/* 427 */"../427").inspect
 module.exports = function () {
   function e() {
     o(this, e)
@@ -88,9 +88,9 @@ module.exports = function () {
       key: "concat",
       value: function (e) {
         if (0 === this.length) {
-          return require$$_333_index$Buffer.alloc(0)
+          return require_333_$$_333_index$Buffer.alloc(0)
         }
-        for (var t = require$$_333_index$Buffer.allocUnsafe(e >>> 0), /* [auto-meaningful-name] */this$head = this.head, r = 0; this$head;) {
+        for (var t = require_333_$$_333_index$Buffer.allocUnsafe(e >>> 0), /* [auto-meaningful-name] */this$head = this.head, r = 0; this$head;) {
           s$TypedArrayPrototypeSet(t, this$head.data, r)
           r += this$head.data.length
           this$head = this$head.next
@@ -174,7 +174,7 @@ module.exports = function () {
     }, {
       key: "_getBuffer",
       value: function (e) {
-        var t = require$$_333_index$Buffer.allocUnsafe(e)
+        var t = require_333_$$_333_index$Buffer.allocUnsafe(e)
         var n = e
         var /* [auto-meaningful-name] */this$head = this.head
         var i = 0
@@ -206,7 +206,7 @@ module.exports = function () {
     }, {
       key: Symbol.for("nodejs.util.inspect.custom"),
       value: function (e, t) {
-        return require$$_427$inspect(this, r(r({}, t), {}, {
+        return require_427_$$_427$inspect(this, r(r({}, t), {}, {
           depth: 0,
           customInspect: false
         }))

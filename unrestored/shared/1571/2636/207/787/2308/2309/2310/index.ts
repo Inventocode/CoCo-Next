@@ -4,7 +4,7 @@
  * 模块 ID：2310
  */
 
-var /* [auto-meaningful-name] */require$_1377_index$reject
+var /* [auto-meaningful-name] */require_1377_$_1377_index$reject
 var /* [auto-meaningful-name] */______$source
 var i
 function o(e, t) {
@@ -75,7 +75,7 @@ function d(e, t) {
 function h(e) {
   return !e
 }
-require$_1377_index$reject = require("./1377/index").reject
+require_1377_$_1377_index$reject = require(/* 1377 */"./1377/index").reject
 ______$source = /\[\]\(\)}{:,/.source
 i = RegExp("(\"(?:\\\\\"|[^\"])*\")|('(?:\\\\'|[^'])*')|(/(?:\\\\/|[^/])*/[a-zA-Z]*)|(#.*#)|([" + ______$source + "])|([^\\s" + ______$source + "](?:\\s*[^\\s" + ______$source + "]+)*)|\\s*")
 module.exports = function (e, n, r) {
@@ -105,7 +105,7 @@ module.exports = function (e, n, r) {
       f = e.length ? d("array" === r$structure || "Array" === RT0$type ? ((h = a).unshift("["), h.push("]"), h) : ((p = a).unshift("("), p.push(")"), p)) : s
     }
     return f
-  }(require$_1377_index$reject(h, n.split(i)), e, r))) {
+  }(require_1377_$_1377_index$reject(h, n.split(i)), e, r))) {
     throw new Error("Error parsing '" + n + "'.")
   }
   return o

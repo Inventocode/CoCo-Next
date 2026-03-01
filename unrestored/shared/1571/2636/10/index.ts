@@ -7,11 +7,11 @@
 "use strict"
 
 export { a }
-import * as /* [auto-meaningful-name] */$_1479 from "./1479"
-import * as /* [auto-meaningful-name] */$$_47_779 from "../47/779"
-import * as /* [auto-meaningful-name] */$_1480 from "./1480"
+import * as /* [auto-meaningful-name] */Module_1479 from /* 1479 */"./1479"
+import * as /* [auto-meaningful-name] */Module_779 from /* 779 */"../47/779"
+import * as /* [auto-meaningful-name] */Module_1480 from /* 1480 */"./1480"
 function a(e, t) {
-  return $_1479.a(e) || function (e, t) {
+  return Module_1479.a(e) || function (e, t) {
     if ("undefined" !== typeof Symbol && Symbol.iterator in Object(e)) {
       var n = []
       var r = true
@@ -37,6 +37,6 @@ function a(e, t) {
       }
       return n
     }
-  }(e, t) || $$_47_779.a(e, t) || $_1480.a()
+  }(e, t) || Module_779.a(e, t) || Module_1480.a()
 }
 export default a

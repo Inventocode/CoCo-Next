@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.BlockEvent = undefined
-var r = require("tslib")
+var r = require(/* 93 */"tslib")
 var i = function (e) {
   function t(t) {
     var n = e.call(this) || this
@@ -23,5 +23,5 @@ var i = function (e) {
     return this._block_id
   }
   return t
-}(require("../2155/851").BaseEvent)
+}(require(/* 851 */"../2155/851").BaseEvent)
 exports.BlockEvent = i

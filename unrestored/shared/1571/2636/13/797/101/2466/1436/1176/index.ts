@@ -4,5 +4,5 @@
  * 模块 ID：1176
  */
 
-var r = require("./1434")(Object.getPrototypeOf, Object)
+var r = require(/* 1434 */"./1434")(Object.getPrototypeOf, Object)
 module.exports = r

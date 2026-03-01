@@ -4,7 +4,7 @@
  * 模块 ID：2576
  */
 
-var r = require("./2577")
+var r = require(/* 2577 */"./2577")
 var /* [auto-meaningful-name] */Math$max = Math.max
 module.exports = function (e, t, n) {
   t = Math$max(undefined === t ? e.length - 1 : t, 0)

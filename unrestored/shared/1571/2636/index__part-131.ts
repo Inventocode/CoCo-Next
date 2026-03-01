@@ -6,32 +6,31 @@
 
 "use strict"
 
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1203 from "./1203"
-import /* [auto-meaningful-name] */$_12031 from "./1203"
-var Gw = memo(function (e) {
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1203 from /* 1203 */"./1203"
+import /* [auto-meaningful-name] */Module_12031 from /* 1203 */"./1203"
+var Gw = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "opacity" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = e$getValue(n)
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  return React.createElement(Src_shared_ui_components_index.i, {
     align: "vertical",
-    className: Classnames($_12031.formItemWrapper, $_12031.changeOpacity),
-    label: $_710$a$formatMessage({
+    className: Classnames(Module_12031.formItemWrapper, Module_12031.changeOpacity),
+    label: Module_710$a$formatMessage({
       id: "WidgetForm.opacity"
     })
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.x, {
-    value: undefined === a ? Qu.j : a,
-    min: Qu.r,
-    max: Qu.j,
+  }, React.createElement(Src_shared_ui_components_index.x, {
+    value: undefined === a ? Module_60.j : a,
+    min: Module_60.r,
+    max: Module_60.j,
     onChange: function (e) {
       if (e$onChange) {
         e$onChange(n, e)

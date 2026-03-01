@@ -4,11 +4,11 @@
  * 模块 ID：1178
  */
 
-var r = require("./2495/index")
-var i = require("./2502/index")
-var o = require("./2504")
-var a = require("./2505")
-var s = require("./2506")
+var r = require(/* 2495 */"./2495/index")
+var i = require(/* 2502 */"./2502/index")
+var o = require(/* 2504 */"./2504")
+var a = require(/* 2505 */"./2505")
+var s = require(/* 2506 */"./2506")
 function c(e) {
   var t = -1
   var n = null == e ? 0 : e.length

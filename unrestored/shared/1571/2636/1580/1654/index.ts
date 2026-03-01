@@ -4,8 +4,8 @@
  * 模块 ID：1654
  */
 
-var r = require("../1662/86")
-var o = require("./1091")
+var r = require(/* 86 */"../1662/86")
+var o = require(/* 1091 */"./1091")
 var /* [auto-meaningful-name] */Math$abs = Math.abs
 r({
   target: "Number",

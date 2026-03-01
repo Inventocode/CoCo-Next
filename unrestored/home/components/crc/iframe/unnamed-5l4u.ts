@@ -43,10 +43,10 @@ Object.defineProperty(exports, "__esModule", {
 exports.createWxJsIframeApi = createWxJsIframeApi
 exports.createWxJsParentApi = createWxJsParentApi
 exports.autoCreateWxJsIframeApi = autoCreateWxJsIframeApi
-var base_1 = require("./unnamed-S9_H")
-var iframe_1 = require("./unnamed-IKhi")
-var result_1 = require("./unnamed-rAiA")
-var utils_1 = require("./utils/1-MMZc")
+var base_1 = require(/* S9/H */"./unnamed-S9_H")
+var iframe_1 = require(/* IKhi */"./unnamed-IKhi")
+var result_1 = require(/* rAiA */"./unnamed-rAiA")
+var utils_1 = require(/* MMZc */"./utils/1-MMZc")
 const iframeApiSpec = new base_1.ApiSpec("wxjs", {
   //
 })

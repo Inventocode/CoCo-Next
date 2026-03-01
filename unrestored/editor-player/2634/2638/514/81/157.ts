@@ -7,7 +7,7 @@
 "use strict"
 
 var n
-var o = require("./63")
+var o = require(/* 63 */"./63")
 !function (t) {
   t[t.TERMINATOR = 0] = "TERMINATOR"
   t[t.NUMERIC = 1] = "NUMERIC"

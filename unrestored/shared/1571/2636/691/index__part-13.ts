@@ -12,13 +12,13 @@ import { Ne, Le } from "./index__part-9"
 import { Ge, Wt, Jt, on, cn } from "./index__part-10"
 import { Cr, Fr } from "./index__part-11"
 import { Mr } from "./index__part-12"
-import * as /* [auto-meaningful-name] */$_471 from "./471"
-import * as /* [auto-meaningful-name] */$_126 from "./126"
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */$_268_index from "./268/index"
-import * as /* [auto-meaningful-name] */$_319 from "./319"
+import * as /* [auto-meaningful-name] */Module_471 from /* 471 */"./471"
+import * as /* [auto-meaningful-name] */Module_126 from /* 126 */"./126"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Module_268 from /* 268 */"./268/index"
+import * as /* [auto-meaningful-name] */Module_319 from /* 319 */"./319"
 var jr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -39,7 +39,7 @@ var jr = function () {
     t.prototype = null === n ? Object.create(n) : (r.prototype = n.prototype, new r())
   }
 }()
-var Ur = new $_32_index.x({
+var Ur = new Module_32.x({
   fontFamily: ["sans-serif", "Microsoft YaHei"],
   fontSize: "24px",
   fill: "#ffffff"
@@ -54,8 +54,8 @@ var Hr = function (e) {
     i.app = t
     i.loader = n
     i.url = r
-    i.loading_icon = new $_32_index.t()
-    i.name_text = new $_32_index.v("")
+    i.loading_icon = new Module_32.t()
+    i.name_text = new Module_32.v("")
     return i
   }
   jr(t, e)
@@ -121,7 +121,7 @@ var Hr = function (e) {
     })
   }
   return t
-}($_32_index.j)
+}(Module_32.j)
 var Vr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -156,7 +156,7 @@ var Gr = function (e) {
       r.endFill()
     }
     r.on_target_change = function (e) {
-      if (r.target && c.l(r.target)) {
+      if (r.target && Module_65.l(r.target)) {
         if (undefined !== e.visible) {
           r.visible = e.visible
         }
@@ -177,7 +177,7 @@ var Gr = function (e) {
     }
     r.app = t
     r.data = n
-    var i = new $_32_index.h({
+    var i = new Module_32.h({
       rotation: 0,
       distance: 0,
       alpha: .3,
@@ -192,7 +192,7 @@ var Gr = function (e) {
   t.prototype.set_target_actor = function (e) {
     var t = this.data.get_internal_actor(e)
     if (!t) {
-      return new $_119.a("Cannot find actor " + e)
+      return new Module_119.a("Cannot find actor " + e)
     }
     if (this.target !== t) {
       this.target = t
@@ -208,7 +208,7 @@ var Gr = function (e) {
     return null === (this$target = this.target) || undefined === this$target ? undefined : this$target.id
   }
   t.prototype.destroy = function () {
-    if (c.l(this.target)) {
+    if (Module_65.l(this.target)) {
       this.target.remove_listener("destroy", this.on_target_destroy)
     }
     e.prototype.destroy.call(this, true)
@@ -228,7 +228,7 @@ var Gr = function (e) {
     }
   }
   return t
-}($_32_index.j)
+}(Module_32.j)
 var zr = function () {
   var e = function (t, n) {
     return (e = Object.setPrototypeOf || {
@@ -401,7 +401,7 @@ var Kr = function (e) {
     }
   }
   t.prototype.load_video_box = function (e) {
-    if ($_471.b(e)) {
+    if (Module_471.b(e)) {
       return this.load_box(e)
     }
   }
@@ -436,7 +436,7 @@ var Kr = function (e) {
     this.cache.clear()
   }
   return t
-}($_32_index.f)
+}(Module_32.f)
 var Xr = function (e) {
   function t(t, n, r, i) {
     var o = e.call(this) || this
@@ -454,7 +454,7 @@ var Xr = function (e) {
       return o.destroy()
     }
     o.on_actor_update = function (e) {
-      if (c.l(o.target)) {
+      if (Module_65.l(o.target)) {
         if (undefined !== e.visible) {
           o.visible = e.visible && o.box_visible
         }
@@ -468,7 +468,7 @@ var Xr = function (e) {
       }
     }
     o.on_video_update = function (e) {
-      if ($_471.b(o.target)) {
+      if (Module_471.b(o.target)) {
         if (undefined !== e.visible) {
           o.visible = e.visible && o.box_visible
         }
@@ -484,7 +484,7 @@ var Xr = function (e) {
     o.target = n
     o.id = n.id
     o.visible = n.visible && o.box_visible
-    o.icon = new $_32_index.t()
+    o.icon = new Module_32.t()
     o.icon.width = o.ICON_WIDTH
     o.icon.height = o.ICON_HEIGHT
     o.load_texture(o.theme.icon_url).then(function (e) {
@@ -495,7 +495,7 @@ var Xr = function (e) {
     })
     o.addChild(o.icon)
     o.draw(o.target)
-    if (c.l(o.target)) {
+    if (Module_65.l(o.target)) {
       o.target.add_listener("change", o.on_actor_update)
       o.target.add_listener("destroy", o.on_target_destroy)
     } else {
@@ -509,7 +509,7 @@ var Xr = function (e) {
     return Qr(this, undefined, undefined, function () {
       var t
       return Wr(this, function (n) {
-        return e && $_32_index.B.TextureCache[e] ? [2, $_32_index.B.TextureCache[e]] : e && $_32_index.B.BaseTextureCache[e] ? [2, new $_32_index.y($_32_index.B.BaseTextureCache[e])] : (t = e ? $_32_index.y.from(e) : $_32_index.y.EMPTY).valid ? [2, t] : [
+        return e && Module_32.B.TextureCache[e] ? [2, Module_32.B.TextureCache[e]] : e && Module_32.B.BaseTextureCache[e] ? [2, new Module_32.y(Module_32.B.BaseTextureCache[e])] : (t = e ? Module_32.y.from(e) : Module_32.y.EMPTY).valid ? [2, t] : [
           2, new Promise(function (e, n) {
             t.baseTexture.on("loaded", function () {
               e(t)
@@ -557,7 +557,7 @@ var Xr = function (e) {
     this.visible = this.target.visible && this.box_visible
   }
   t.prototype.destroy = function () {
-    if (c.l(this.target)) {
+    if (Module_65.l(this.target)) {
       this.target.remove_listener("change", this.on_actor_update)
       this.target.remove_listener("destroy", this.on_target_destroy)
     } else {
@@ -570,7 +570,7 @@ var Xr = function (e) {
     })
   }
   return t
-}($_32_index.j)
+}(Module_32.j)
 var Yr = function () {
   function e(e, t, n) {
     var r = this
@@ -592,7 +592,7 @@ var Yr = function () {
             t.remove_listener("destroy", r.on_parent_scene_destroy)
           }
         }
-        t.addChildAt(r.get_scene_children_container(), $_126.h)
+        t.addChildAt(r.get_scene_children_container(), Module_126.h)
         t.add_listener("destroy", r.on_parent_scene_destroy)
       }
     }
@@ -607,43 +607,43 @@ var Yr = function () {
     var t
     var n = this
     if (!this.editor && e.editor) {
-      this.editor = new $_319.a(e.editor, this.app, this.data, this.events, this.loader)
-      this.components_z_index_array[$_126.c.EDITOR] = this.editor.set_parent
+      this.editor = new Module_319.a(e.editor, this.app, this.data, this.events, this.loader)
+      this.components_z_index_array[Module_126.c.EDITOR] = this.editor.set_parent
     }
     if (!this.grid && e.grid) {
       this.grid = new on(this.app, this.events)
-      this.components_z_index_array[$_126.c.GRID] = this.grid.set_parent
+      this.components_z_index_array[Module_126.c.GRID] = this.grid.set_parent
     }
     if (!this.draggable_container && e.draggable_container) {
       this.draggable_container = new Cr(this.app, this.events, this.data)
-      this.components_z_index_array[$_126.c.DRAGGABLE_CONTAINER] = this.draggable_container.set_parent
+      this.components_z_index_array[Module_126.c.DRAGGABLE_CONTAINER] = this.draggable_container.set_parent
     }
     if (!this.voice_dialog && e.voice_dialog) {
       this.voice_dialog = new Wt(e.voice_dialog, this.app, this.loader, this.events)
-      this.components_z_index_array[$_126.c.VOICE_DIALOG] = this.voice_dialog.set_parent
+      this.components_z_index_array[Module_126.c.VOICE_DIALOG] = this.voice_dialog.set_parent
     }
     if (!this.stage_dialog && e.stage_dialog) {
       this.stage_dialog = new Jt(this.app, this.data, this.loader, e.stage_dialog, this.events)
-      this.components_z_index_array[$_126.c.STAGE_DIALOG] = this.stage_dialog.set_parent
+      this.components_z_index_array[Module_126.c.STAGE_DIALOG] = this.stage_dialog.set_parent
     }
     if (!this.selection_dialog && e.selection_dialog) {
       this.selection_dialog = new cn(this.app, this.events)
-      this.components_z_index_array[$_126.c.SELECTION_DIALOG] = this.selection_dialog.set_parent
+      this.components_z_index_array[Module_126.c.SELECTION_DIALOG] = this.selection_dialog.set_parent
     }
     if (!this.translate_dialog && e.translate_dialog) {
       this.translate_dialog = new Fr(this.app, this.loader, this.events, e.translate_dialog)
-      this.components_z_index_array[$_126.c.TRANSLATE_DIALOG] = this.translate_dialog.set_parent
+      this.components_z_index_array[Module_126.c.TRANSLATE_DIALOG] = this.translate_dialog.set_parent
     }
     if (!this.playable_manager && e.playable_manager) {
-      this.playable_manager = new $_471.a(this.app, this.data, this.events, this.destroy_scene_children_container)
-      this.scene_children_container_children_z_index_array[$_126.g.PLAYABLE_CONTAINER] = this.playable_manager.set_video_container_parent
+      this.playable_manager = new Module_471.a(this.app, this.data, this.events, this.destroy_scene_children_container)
+      this.scene_children_container_children_z_index_array[Module_126.g.PLAYABLE_CONTAINER] = this.playable_manager.set_video_container_parent
       if (t = e.playable_manager.parent_scene_id) {
         this.on_parent_scene_change(t)
       }
     }
     if (!this.camera && e.camera) {
       this.camera = new Mr(this.app, this.destroy_scene_children_container)
-      this.scene_children_container_children_z_index_array[$_126.g.CAMERA] = this.camera.set_parent
+      this.scene_children_container_children_z_index_array[Module_126.g.CAMERA] = this.camera.set_parent
       if (t = e.camera.parent_scene_id) {
         this.on_parent_scene_change(t)
       }
@@ -656,11 +656,11 @@ var Yr = function () {
     }
     if (!this.border_box && e.border_box) {
       this.border_box = new Gr(this.app, this.data)
-      this.components_z_index_array[$_126.c.BORDER_BOX] = this.border_box.set_parent
+      this.components_z_index_array[Module_126.c.BORDER_BOX] = this.border_box.set_parent
     }
     if (!this.cooperation_box_container && e.cooperation_box_container) {
       this.cooperation_box_container = new Kr(e.cooperation_box_container, this.app, this.data)
-      this.components_z_index_array[$_126.c.COOPERATION_CONTAINER] = this.cooperation_box_container.set_parent
+      this.components_z_index_array[Module_126.c.COOPERATION_CONTAINER] = this.cooperation_box_container.set_parent
     }
     var /* [auto-meaningful-name] */this$app$get_app$stage = this.app.get_app().stage
     this.components_z_index_array.forEach(function (e) {
@@ -676,14 +676,14 @@ var Yr = function () {
   }
   e.prototype.get_scene_children_container = function () {
     if (!this.scene_children_container) {
-      this.scene_children_container = new $_32_index.f()
+      this.scene_children_container = new Module_32.f()
       this.events.add_listener("scene:current_scene_changed", this.on_parent_scene_change)
     }
     return this.scene_children_container
   }
   e.prototype.remove_scene_container_parent_scene_listener = function () {
     var /* [auto-meaningful-name] */this$get_scene_children_container$parent = this.get_scene_children_container().parent
-    if (c.m(this$get_scene_children_container$parent) && this.on_parent_scene_destroy) {
+    if (Module_65.m(this$get_scene_children_container$parent) && this.on_parent_scene_destroy) {
       this$get_scene_children_container$parent.remove_listener("destroy", this.on_parent_scene_destroy)
       this.on_parent_scene_destroy = undefined
     }
@@ -692,7 +692,7 @@ var Yr = function () {
     if (this.editor && e.editor) {
       this.editor.destroy()
       this.editor = undefined
-      this.components_z_index_array[$_126.c.EDITOR] = undefined
+      this.components_z_index_array[Module_126.c.EDITOR] = undefined
     }
     if (this.actor_dialog_manager && e.actor_dialog_manager) {
       this.actor_dialog_manager.destroy()
@@ -701,37 +701,37 @@ var Yr = function () {
     if (this.stage_dialog && e.stage_dialog) {
       this.stage_dialog.destroy()
       this.stage_dialog = undefined
-      this.components_z_index_array[$_126.c.STAGE_DIALOG] = undefined
+      this.components_z_index_array[Module_126.c.STAGE_DIALOG] = undefined
     }
     if (this.grid && e.grid) {
       this.grid.destroy()
       this.grid = undefined
-      this.components_z_index_array[$_126.c.GRID] = undefined
+      this.components_z_index_array[Module_126.c.GRID] = undefined
     }
     if (this.selection_dialog && e.selection_dialog) {
       this.selection_dialog.destroy()
       this.selection_dialog = undefined
-      this.components_z_index_array[$_126.c.SELECTION_DIALOG] = undefined
+      this.components_z_index_array[Module_126.c.SELECTION_DIALOG] = undefined
     }
     if (this.translate_dialog && e.translate_dialog) {
       this.translate_dialog.destroy()
       this.translate_dialog = undefined
-      this.components_z_index_array[$_126.c.TRANSLATE_DIALOG] = undefined
+      this.components_z_index_array[Module_126.c.TRANSLATE_DIALOG] = undefined
     }
     if (this.draggable_container && e.draggable_container) {
       this.draggable_container.destroy()
       this.draggable_container = undefined
-      this.components_z_index_array[$_126.c.DRAGGABLE_CONTAINER] = undefined
+      this.components_z_index_array[Module_126.c.DRAGGABLE_CONTAINER] = undefined
     }
     if (this.camera && e.camera) {
       this.camera.destroy()
       this.camera = undefined
-      this.scene_children_container_children_z_index_array[$_126.g.CAMERA] = undefined
+      this.scene_children_container_children_z_index_array[Module_126.g.CAMERA] = undefined
     }
     if (this.playable_manager && e.playable_manager) {
       this.playable_manager.destroy()
       this.playable_manager = undefined
-      this.scene_children_container_children_z_index_array[$_126.g.PLAYABLE_CONTAINER] = undefined
+      this.scene_children_container_children_z_index_array[Module_126.g.PLAYABLE_CONTAINER] = undefined
     }
     if (this.wood_loader && e.wood_loader) {
       this.wood_loader.destroy()
@@ -740,12 +740,12 @@ var Yr = function () {
     if (this.voice_dialog && e.voice_dialog) {
       this.voice_dialog.destroy()
       this.voice_dialog = undefined
-      this.components_z_index_array[$_126.c.VOICE_DIALOG] = undefined
+      this.components_z_index_array[Module_126.c.VOICE_DIALOG] = undefined
     }
     if (this.border_box && e.border_box) {
       this.border_box.destroy()
       this.border_box = undefined
-      this.components_z_index_array[$_126.c.BORDER_BOX] = undefined
+      this.components_z_index_array[Module_126.c.BORDER_BOX] = undefined
     }
   }
   e.prototype.get_editor = function () {
@@ -849,7 +849,7 @@ var ti = function (e) {
     return l
   }
   $r(t, e)
-  return t = Jr([$_268_index.injectable(), ei(0, $_268_index.inject(s.App)), ei(1, $_268_index.inject(s.Events)), ei(2, $_268_index.inject(s.Data)), ei(3, $_268_index.inject(s.Textures)), ei(4, $_268_index.inject(s.Scenes)), ei(5, $_268_index.inject(s.Actors)), ei(6, $_268_index.inject(s.StageAnimation)), ei(7, $_268_index.inject(s.Physics)), ei(8, $_268_index.inject(qr.Components)), Zr("design:paramtypes", [Object, Object, Function, Function, Function, Function, Function, Function, Function])], t)
+  return t = Jr([Module_268.injectable(), ei(0, Module_268.inject(s.App)), ei(1, Module_268.inject(s.Events)), ei(2, Module_268.inject(s.Data)), ei(3, Module_268.inject(s.Textures)), ei(4, Module_268.inject(s.Scenes)), ei(5, Module_268.inject(s.Actors)), ei(6, Module_268.inject(s.StageAnimation)), ei(7, Module_268.inject(s.Physics)), ei(8, Module_268.inject(qr.Components)), Zr("design:paramtypes", [Object, Object, Function, Function, Function, Function, Function, Function, Function])], t)
 }(Ae)
 var ni = Ne
 ni.bind(qr.Components).toFactory(function (e) {
@@ -859,11 +859,11 @@ ni.bind(qr.Components).toFactory(function (e) {
   }
 })
 ni.bind(qr.KittenStage).to(ti)
-var /* [auto-meaningful-name] */require$_2382$version = require("./2382").version
+var /* [auto-meaningful-name] */require_2382_$_2382$version = require(/* 2382 */"./2382").version
 function ii() {
   return function (e) {
     return ni.get(e)
   }(qr.KittenStage)
 }
-console.log("%cWelcome to ❤ Codemao Stage - v" + require$_2382$version + " ❤ for Kitten o(*￣▽￣*)ブ", "\n  color: #BC2424;\n  text-shadow: 0 1px 0 #8D1B1B;")
+console.log("%cWelcome to ❤ Codemao Stage - v" + require_2382_$_2382$version + " ❤ for Kitten o(*￣▽￣*)ブ", "\n  color: #BC2424;\n  text-shadow: 0 1px 0 #8D1B1B;")
 export { ii }

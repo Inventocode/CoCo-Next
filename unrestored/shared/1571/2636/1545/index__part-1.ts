@@ -6,9 +6,9 @@
 
 "use strict"
 
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import { createRef, createElement, Component, useCallback, cloneElement } from "react"
-import * as /* [auto-meaningful-name] */$$_1543_229 from "../1543/229"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_229 from /* 229 */"../1543/229"
 function f(e) {
   return (f = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
     return typeof e
@@ -130,8 +130,8 @@ var O = function (e) {
       n[o] = arguments[o]
     }
     (e = a.call.apply(a, [this].concat(n))).moveRaf = null
-    e.scrollbarRef = createRef()
-    e.thumbRef = createRef()
+    e.scrollbarRef = React.createRef()
+    e.thumbRef = React.createRef()
     e.visibleTimeout = null
     e.state = {
       dragging: false,
@@ -170,7 +170,7 @@ var O = function (e) {
       e.thumbRef.current.removeEventListener("touchstart", e.onMouseDown)
       e.thumbRef.current.removeEventListener("touchmove", e.onMouseMove)
       e.thumbRef.current.removeEventListener("touchend", e.onMouseUp)
-      $$_1543_229.a.cancel(e.moveRaf)
+      Module_229.a.cancel(e.moveRaf)
     }
     e.onMouseDown = function (t) {
       var /* [auto-meaningful-name] */e$props$onStartMove = e.props.onStartMove
@@ -190,14 +190,14 @@ var O = function (e) {
       var /* [auto-meaningful-name] */e$state$pageY = e$state.pageY
       var /* [auto-meaningful-name] */e$state$startTop = e$state.startTop
       var /* [auto-meaningful-name] */e$props$onScroll = e.props.onScroll
-      $$_1543_229.a.cancel(e.moveRaf)
+      Module_229.a.cancel(e.moveRaf)
       if (e$state$dragging) {
         var s = e$state$startTop + (E(t) - e$state$pageY)
         var c = e.getEnableScrollRange()
         var l = e.getEnableHeightRange()
         var u = l ? s / l : 0
         var d = Math.ceil(u * c)
-        e.moveRaf = $$_1543_229.a(function () {
+        e.moveRaf = Module_229.a(function () {
           e$props$onScroll(d)
         })
       }
@@ -270,7 +270,7 @@ var O = function (e) {
         var s = this.getTop()
         var c = this.showScroll()
         var l = c && this$state$visible
-        return createElement("div", {
+        return React.createElement("div", {
           ref: this.scrollbarRef,
           className: Classnames("".concat(this$props$prefixCls, "-scrollbar"), h({}, "".concat(this$props$prefixCls, "-scrollbar-show"), c)),
           style: {
@@ -283,7 +283,7 @@ var O = function (e) {
           },
           onMouseDown: this.onContainerMouseDown,
           onMouseMove: this.delayHidden
-        }, createElement("div", {
+        }, React.createElement("div", {
           ref: this.thumbRef,
           className: Classnames("".concat(this$props$prefixCls, "-scrollbar-thumb"), h({}, "".concat(this$props$prefixCls, "-scrollbar-thumb-moving"), this$state$dragging)),
           style: {
@@ -308,14 +308,14 @@ var O = function (e) {
     g(t, o)
   }
   return s
-}(Component)
+}(React.Component)
 function w(e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$setRef = e.setRef
-  var o = useCallback(function (e) {
+  var o = React.useCallback(function (e) {
     e$setRef(e)
   }, [])
-  return cloneElement(e$children, {
+  return React.cloneElement(e$children, {
     ref: o
   })
 }

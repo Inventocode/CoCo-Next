@@ -7,18 +7,17 @@
 "use strict"
 
 import { Ge } from "./index__part-9"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useRef, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_422 from "./422"
-import /* [auto-meaningful-name] */$_4221 from "./422"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_422 from /* 422 */"./422"
+import /* [auto-meaningful-name] */Module_4221 from /* 422 */"./422"
 var yC = {
   SERVICE: "64A70012-F691-4B93-A6F4-0968F5B648F8".toLowerCase(),
   BATTERY_CHAR: "64A70007-F691-4B93-A6F4-0968F5B648F8".toLowerCase(),
@@ -48,7 +47,7 @@ function CC(e, t) {
   return TC.apply(this, arguments)
 }
 function TC() {
-  return (TC = O.a(RegeneratorRuntime.mark(function e(t, n) {
+  return (TC = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var /* [auto-meaningful-name] */e$sent2
@@ -104,7 +103,7 @@ function TC() {
               var /* [auto-meaningful-name] */e$target$value = e.target.value
               c = e$target$value.getUint8(0)
             })
-            u = window.setInterval(O.a(RegeneratorRuntime.mark(function e() {
+            u = window.setInterval(Module_7.a(RegeneratorRuntime.mark(function e() {
               return RegeneratorRuntime.wrap(function (e) {
                 for (;;) {
                   switch (e.prev = e.next) {
@@ -127,7 +126,7 @@ function TC() {
             e.next = 24
             return e$sent3.startNotifications()
           case 24:
-            return e.abrupt("return", O.a(RegeneratorRuntime.mark(function e() {
+            return e.abrupt("return", Module_7.a(RegeneratorRuntime.mark(function e() {
               return RegeneratorRuntime.wrap(function (e) {
                 for (;;) {
                   switch (e.prev = e.next) {
@@ -154,39 +153,39 @@ function TC() {
     }, e)
   }))).apply(this, arguments)
 }
-var SC = memo(function (e) {
+var SC = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "device" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var i = useState(false)
-  var a = $_10_index.a(i, 2)
+  var i = React1.useState(false)
+  var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = useState(false)
-  var u = $_10_index.a(l, 2)
+  var l = React1.useState(false)
+  var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = useState(0)
-  var g = $_10_index.a(m, 2)
+  var m = React1.useState(0)
+  var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = useState(0)
-  var w = $_10_index.a(y, 2)
+  var y = React1.useState(0)
+  var w = Module_10.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = useState(0)
-  var I = $_10_index.a(A, 2)
+  var A = React1.useState(0)
+  var I = Module_10.a(A, 2)
   var j = I[0]
   var R = I[1]
-  var k = useRef()
-  var x = useRef()
+  var k = React1.useRef()
+  var x = React1.useRef()
   var D = useSelector(function (e) {
     return e.project.playing
   })
   var M = e$getValue(n)
   function L() {
-    return (L = O.a(RegeneratorRuntime.mark(function e() {
+    return (L = Module_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */wC$gatt
       var r
       var i
@@ -214,7 +213,7 @@ var SC = memo(function (e) {
               k.current = i
               a = Date.now()
               R(a)
-              wC.addEventListener("gattserverdisconnected", O.a(RegeneratorRuntime.mark(function e() {
+              wC.addEventListener("gattserverdisconnected", Module_7.a(RegeneratorRuntime.mark(function e() {
                 var t
                 var n
                 return RegeneratorRuntime.wrap(function (e) {
@@ -225,7 +224,7 @@ var SC = memo(function (e) {
                         console.info("keep alive seconds:", (Date.now() - a) / 1e3)
                         e.next = 4
                         return null === (n = i) || undefined === n ? undefined : n.connect().catch(function () {
-                          var e = O.a(RegeneratorRuntime.mark(function e(t) {
+                          var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
                             var n
                             var /* [auto-meaningful-name] */n$gatt
                             return RegeneratorRuntime.wrap(function (e) {
@@ -280,8 +279,8 @@ var SC = memo(function (e) {
       }, e, null, [[2, 18]])
     }))).apply(this, arguments)
   }
-  useEffect(function () {
-    O.a(RegeneratorRuntime.mark(function e() {
+  React1.useEffect(function () {
+    Module_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */k$current
       var /* [auto-meaningful-name] */x$current
       return RegeneratorRuntime.wrap(function (e) {
@@ -327,7 +326,7 @@ var SC = memo(function (e) {
     }))()
   }, [j])
   var P = function () {
-    var e = O.a(RegeneratorRuntime.mark(function e() {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */k$current
       var /* [auto-meaningful-name] */e$sent
       var /* [auto-meaningful-name] */e$sent1
@@ -358,24 +357,24 @@ var SC = memo(function (e) {
       return e.apply(this, arguments)
     }
   }()
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  return React.createElement(Src_shared_ui_components_index.i, {
     align: "vertical",
-    className: Classnames($_4221.formItemWrapper, $_4221.bluetoothConnect, M && $_4221.connected),
+    className: Classnames(Module_4221.formItemWrapper, Module_4221.bluetoothConnect, M && Module_4221.connected),
     label: M ? "已连接" : "设备未连接"
   }, M ? React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_4221.device
+    className: Module_4221.device
   }, M), React.createElement("div", {
-    className: $_4221.position
+    className: Module_4221.position
   }, React.createElement("span", null, "X: ", v), React.createElement("span", null, "Y: ", C)), React.createElement("div", {
-    className: $_4221.moreBox
-  }, React.createElement($_1213.a, {
+    className: Module_4221.moreBox
+  }, React.createElement(Module_1213.a, {
     content: React.createElement("div", {
-      className: $_4221.popoverBox
+      className: Module_4221.popoverBox
     }, React.createElement("div", {
-      className: $_4221.popoverItem,
+      className: Module_4221.popoverItem,
       onClick: P
     }, "重置坐标"), React.createElement("div", {
-      className: $_4221.popoverItem,
+      className: Module_4221.popoverItem,
       onClick: function () {
         var e
         c(false)
@@ -398,20 +397,20 @@ var SC = memo(function (e) {
       c(e)
     }
   }, React.createElement("div", {
-    className: $_4221.more
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_4221.more
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-more"
   }))))) : React.createElement("div", {
-    className: Classnames($_4221.connect, d && $_4221.connecting),
+    className: Classnames(Module_4221.connect, d && Module_4221.connecting),
     onClick: function () {
       return L.apply(this, arguments)
     }
   }, React.createElement("span", {
-    className: $_4221.icon
+    className: Module_4221.icon
   }, React.createElement(Ge, {
     stroke: "#847da4"
   })), React.createElement("span", {
-    className: $_4221.text
+    className: Module_4221.text
   }, "连接")))
 })
 var /* [auto-meaningful-name] */_9326741751927357445c6b5a = "9326741751927357445c6b5a"

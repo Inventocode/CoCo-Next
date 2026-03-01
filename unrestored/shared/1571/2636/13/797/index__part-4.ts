@@ -8,7 +8,7 @@
 
 import { Z } from "./index__part-2"
 import { $e, tt, ct } from "./index__part-3"
-import * as /* [auto-meaningful-name] */$_740_index from "./740/index"
+import * as /* [auto-meaningful-name] */Module_740 from /* 740 */"./740/index"
 var /* [auto-meaningful-name] */Function$prototype = Function.prototype
 var /* [auto-meaningful-name] */Object$prototype = Object.prototype
 var /* [auto-meaningful-name] */Function$prototype$toString = Function$prototype.toString

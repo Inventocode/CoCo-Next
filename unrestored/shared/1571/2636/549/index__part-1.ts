@@ -8,27 +8,26 @@
 
 import { b } from "./index"
 var r
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import "react"
-import * as /* [auto-meaningful-name] */React from "react"
-import /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */Color from "color"
-import /* [auto-meaningful-name] */Color1 from "color"
-import * as /* [auto-meaningful-name] */Classnames from "classnames"
-import /* [auto-meaningful-name] */Classnames1 from "classnames"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_90 from "../90"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
-import * as /* [auto-meaningful-name] */$$_77 from "../77"
-import * as /* [auto-meaningful-name] */$_159 from "./159"
-import /* [auto-meaningful-name] */$_1591 from "./159"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
+import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../90"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../28/index"
+import * as /* [auto-meaningful-name] */Module_77 from /* 77 */"../77"
+import * as /* [auto-meaningful-name] */Module_159 from /* 159 */"./159"
+import /* [auto-meaningful-name] */Module_1591 from /* 159 */"./159"
 !function (e) {
   e[e.DOWN = 0] = "DOWN"
   e[e.UP = 1] = "UP"
 }(r || (r = {}))
-if ($$_28_index.b() && $$_28_index.h()) {
+if (Module_28.b() && Module_28.h()) {
   document.body.addEventListener("touchmove", function (e) {
     if (b) {
       e.preventDefault()

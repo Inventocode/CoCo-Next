@@ -10,18 +10,18 @@ import { gn } from "./index__part-7"
 import { qn } from "./index__part-9"
 import { xl } from "../../../../../src/editor/redux/store"
 var Cc
-import * as _r from "./22"
-import * as /* [auto-meaningful-name] */$$_110 from "../110"
-import * as /* [auto-meaningful-name] */$$_49 from "../49"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as on from "../9"
-import * as /* [auto-meaningful-name] */$$_26_index from "../26/index"
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_48_3_index from "../48/3/index"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_295 from "../295"
+import * as /* [auto-meaningful-name] */Module_22 from /* 22 */"./22"
+import * as /* [auto-meaningful-name] */Module_110 from /* 110 */"../110"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"../49"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../9"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"../26/index"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_3 from /* 3 */"../48/3/index"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_295 from /* 295 */"../295"
 var Sc = RegeneratorRuntime.mark(Hc)
 var Ac = RegeneratorRuntime.mark(Vc)
 var Ic = RegeneratorRuntime.mark(zc)
@@ -47,13 +47,13 @@ function Hc() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return $$_48_3_index.f(_r.s)
+          return Module_3.f(Module_22.s)
         case 2:
           n$sent = n.sent
           n.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
+          return Module_3.e(Src_editor_redux_common_actions.mj({
             type: "error",
-            message: (null === (e = $$_$$_$$_$$_$$_src_shared_ui_language.c(n$sent, "noSelectDoc")) || undefined === e ? undefined : e.toString()) || "",
+            message: (null === (e = Src_shared_ui_language.c(n$sent, "noSelectDoc")) || undefined === e ? undefined : e.toString()) || "",
             showCloseIcon: false
           }))
         case 5:
@@ -74,7 +74,7 @@ function Vc(e) {
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var d
   var /* [auto-meaningful-name] */e$payload$index
-  var /* [auto-meaningful-name] */$$_49$oTHelper$primitiveVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$primitiveVariables
   return RegeneratorRuntime.wrap(function (h) {
     for (;;) {
       switch (h.prev = h.next) {
@@ -90,14 +90,14 @@ function Vc(e) {
           d = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           e$payload$index = e$payload.index
           h.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.gf(e$payload$variableType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
+          return Module_3.e(Src_editor_redux_common_actions.gf(e$payload$variableType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
         case 3:
           h.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bf($$_110.a("PRIMITIVE", {
+          return Module_3.e(Src_editor_redux_common_actions.bf(Module_110.a("PRIMITIVE", {
             id: e$payload$id,
             name: e$payload$name,
             type: "PRIMITIVE",
-            screenId: e$payload$variableType === $$_18.i.GLOBAL ? $$_18.i.GLOBAL : e$payload$screenId,
+            screenId: e$payload$variableType === Module_18.i.GLOBAL ? Module_18.i.GLOBAL : e$payload$screenId,
             value: e$payload$defaultValue,
             defaultValue: e$payload$defaultValue
           }, {
@@ -105,11 +105,11 @@ function Vc(e) {
           })))
         case 5:
           h.next = 7
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 7:
           if (d) {
-            if (!(null === ($$_49$oTHelper$primitiveVariables = $$_49.oTHelper.primitiveVariables) || undefined === $$_49$oTHelper$primitiveVariables)) {
-              $$_49$oTHelper$primitiveVariables.clientOp.add(e$payload$variableType, e$payload$screenId, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$index)
+            if (!(null === (Module_49$oTHelper$primitiveVariables = Module_49.oTHelper.primitiveVariables) || undefined === Module_49$oTHelper$primitiveVariables)) {
+              Module_49$oTHelper$primitiveVariables.clientOp.add(e$payload$variableType, e$payload$screenId, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$index)
             }
             if (e$payload$setBlockValue) {
               e$payload$setBlockValue(e$payload$id)
@@ -133,7 +133,7 @@ function zc(e) {
   var /* [auto-meaningful-name] */e$payload$index
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var p
-  var /* [auto-meaningful-name] */$$_49$oTHelper$arrayVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$arrayVariables
   return RegeneratorRuntime.wrap(function (h) {
     for (;;) {
       switch (h.prev = h.next) {
@@ -149,14 +149,14 @@ function zc(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           p = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           h.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Ye(e$payload$arrayType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
+          return Module_3.e(Src_editor_redux_common_actions.Ye(e$payload$arrayType, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$screenId, e$payload$index))
         case 3:
           h.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bf($$_110.a("LIST", {
+          return Module_3.e(Src_editor_redux_common_actions.bf(Module_110.a("LIST", {
             id: e$payload$id,
             name: e$payload$name,
             type: "LIST",
-            screenId: e$payload$arrayType === $$_18.i.GLOBAL ? $$_18.i.GLOBAL : e$payload$screenId,
+            screenId: e$payload$arrayType === Module_18.i.GLOBAL ? Module_18.i.GLOBAL : e$payload$screenId,
             value: e$payload$defaultValue,
             defaultValue: e$payload$defaultValue
           }, {
@@ -164,11 +164,11 @@ function zc(e) {
           })))
         case 5:
           h.next = 7
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 7:
           if (p) {
-            if (!(null === ($$_49$oTHelper$arrayVariables = $$_49.oTHelper.arrayVariables) || undefined === $$_49$oTHelper$arrayVariables)) {
-              $$_49$oTHelper$arrayVariables.clientOp.add(e$payload$arrayType, e$payload$screenId, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$index)
+            if (!(null === (Module_49$oTHelper$arrayVariables = Module_49.oTHelper.arrayVariables) || undefined === Module_49$oTHelper$arrayVariables)) {
+              Module_49$oTHelper$arrayVariables.clientOp.add(e$payload$arrayType, e$payload$screenId, e$payload$id, e$payload$name, e$payload$defaultValue, e$payload$index)
             }
             if (e$payload$setBlockValue) {
               e$payload$setBlockValue(e$payload$id)
@@ -187,7 +187,7 @@ function Yc(e) {
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var o
   var i
-  var /* [auto-meaningful-name] */$$_49$oTHelper$objectVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$objectVariables
   var s
   var /* [auto-meaningful-name] */i$scopeType
   var /* [auto-meaningful-name] */i$screenId
@@ -202,16 +202,16 @@ function Yc(e) {
           e$payload$setBlockValue = e$payload.setBlockValue
           e$payload$isEmitOT = e$payload.isEmitOT
           o = undefined === e$payload$isEmitOT || e$payload$isEmitOT
-          i = $$_295.a(e$payload, ["setBlockValue", "isEmitOT"])
+          i = Module_295.a(e$payload, ["setBlockValue", "isEmitOT"])
           m.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ff(i))
+          return Module_3.e(Src_editor_redux_common_actions.ff(i))
         case 3:
           m.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bf($$_110.a("DICT", {
+          return Module_3.e(Src_editor_redux_common_actions.bf(Module_110.a("DICT", {
             id: i.id,
             name: i.name,
             type: "DICT",
-            screenId: i.scopeType === $$_18.i.GLOBAL ? $$_18.i.GLOBAL : i.screenId,
+            screenId: i.scopeType === Module_18.i.GLOBAL ? Module_18.i.GLOBAL : i.screenId,
             value: i.defaultValue,
             defaultValue: i.defaultValue
           }, {
@@ -219,7 +219,7 @@ function Yc(e) {
           })))
         case 5:
           m.next = 7
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 7:
           if (o) {
             s = i.id
@@ -228,8 +228,8 @@ function Yc(e) {
             i$name = i.name
             i$defaultValue = i.defaultValue
             i$index = i.index
-            if (!(null === ($$_49$oTHelper$objectVariables = $$_49.oTHelper.objectVariables) || undefined === $$_49$oTHelper$objectVariables)) {
-              $$_49$oTHelper$objectVariables.clientOp.add(i$scopeType, i$screenId, s, i$name, i$defaultValue, i$index)
+            if (!(null === (Module_49$oTHelper$objectVariables = Module_49.oTHelper.objectVariables) || undefined === Module_49$oTHelper$objectVariables)) {
+              Module_49$oTHelper$objectVariables.clientOp.add(i$scopeType, i$screenId, s, i$name, i$defaultValue, i$index)
             }
             if (e$payload$setBlockValue) {
               e$payload$setBlockValue(s)
@@ -248,12 +248,12 @@ function Kc(e, t, n, r) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.zi(e, t, n, r))
+          return Module_3.e(Src_editor_redux_common_actions.zi(e, t, n, r))
         case 2:
           o.next = 4
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(t, "name", n))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(t, "name", n))
         case 4:
-          $$_26_index.m($$_26_index.c.PRIMITIVE, t, n)
+          Module_26.m(Module_26.c.PRIMITIVE, t, n)
         case 5:
         case "end":
           return o.stop()
@@ -270,7 +270,7 @@ function qc(e) {
   var /* [auto-meaningful-name] */e$payload$value
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var l
-  var /* [auto-meaningful-name] */$$_49$oTHelper$primitiveVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$primitiveVariables
   return RegeneratorRuntime.wrap(function (d) {
     for (;;) {
       switch (d.prev = d.next) {
@@ -280,7 +280,7 @@ function qc(e) {
             break
           }
           d.next = 4
-          return $$_48_3_index.b(Kc, e$payload$variableType, e$payload$id, e$payload$value.toString(), e$payload$screenId)
+          return Module_3.b(Kc, e$payload$variableType, e$payload$id, e$payload$value.toString(), e$payload$screenId)
         case 4:
           d.next = 17
           break
@@ -290,27 +290,27 @@ function qc(e) {
             break
           }
           d.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.yi(e$payload$variableType, e$payload$id, e$payload$value, e$payload$screenId))
+          return Module_3.e(Src_editor_redux_common_actions.yi(e$payload$variableType, e$payload$id, e$payload$value, e$payload$screenId))
         case 9:
           d.next = 11
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Hg(e$payload$variableType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
+          return Module_3.e(Src_editor_redux_common_actions.Hg(e$payload$variableType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
         case 11:
           d.next = 13
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
         case 13:
           if (xl.getState().project.playing) {
             d.next = 17
             break
           }
           d.next = 17
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
         case 17:
           d.next = 19
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 19:
           if (l) {
-            if (!(null === ($$_49$oTHelper$primitiveVariables = $$_49.oTHelper.primitiveVariables) || undefined === $$_49$oTHelper$primitiveVariables)) {
-              $$_49$oTHelper$primitiveVariables.clientOp.update(e$payload$variableType, e$payload$screenId, e$payload$id, e$payload$key, e$payload$value)
+            if (!(null === (Module_49$oTHelper$primitiveVariables = Module_49.oTHelper.primitiveVariables) || undefined === Module_49$oTHelper$primitiveVariables)) {
+              Module_49$oTHelper$primitiveVariables.clientOp.update(e$payload$variableType, e$payload$screenId, e$payload$id, e$payload$key, e$payload$value)
             }
           }
         case 20:
@@ -329,7 +329,7 @@ function Xc(e) {
   var /* [auto-meaningful-name] */e$payload$value
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var l
-  var /* [auto-meaningful-name] */$$_49$oTHelper$arrayVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$arrayVariables
   return RegeneratorRuntime.wrap(function (d) {
     for (;;) {
       switch (d.prev = d.next) {
@@ -339,7 +339,7 @@ function Xc(e) {
             break
           }
           d.next = 4
-          return $$_48_3_index.b(Qc, e$payload$arrayType, e$payload$id, e$payload$value.toString(), e$payload$screenId)
+          return Module_3.b(Qc, e$payload$arrayType, e$payload$id, e$payload$value.toString(), e$payload$screenId)
         case 4:
           d.next = 17
           break
@@ -349,27 +349,27 @@ function Xc(e) {
             break
           }
           d.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ai(e$payload$arrayType, e$payload$id, e$payload$value, e$payload$screenId))
+          return Module_3.e(Src_editor_redux_common_actions.ai(e$payload$arrayType, e$payload$id, e$payload$value, e$payload$screenId))
         case 9:
           d.next = 11
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.yg(e$payload$arrayType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
+          return Module_3.e(Src_editor_redux_common_actions.yg(e$payload$arrayType, e$payload$id, "value", e$payload$value, e$payload$screenId, true))
         case 11:
           d.next = 13
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
         case 13:
           if (xl.getState().project.playing) {
             d.next = 17
             break
           }
           d.next = 17
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
         case 17:
           d.next = 19
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 19:
           if (l) {
-            if (!(null === ($$_49$oTHelper$arrayVariables = $$_49.oTHelper.arrayVariables) || undefined === $$_49$oTHelper$arrayVariables)) {
-              $$_49$oTHelper$arrayVariables.clientOp.updateProperty(e$payload$arrayType, e$payload$screenId, e$payload$id, e$payload$key, e$payload$value)
+            if (!(null === (Module_49$oTHelper$arrayVariables = Module_49.oTHelper.arrayVariables) || undefined === Module_49$oTHelper$arrayVariables)) {
+              Module_49$oTHelper$arrayVariables.clientOp.updateProperty(e$payload$arrayType, e$payload$screenId, e$payload$id, e$payload$key, e$payload$value)
             }
           }
         case 20:
@@ -385,15 +385,15 @@ function Qc(e, t, n, r) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Zh(e, t, n, r))
+          return Module_3.e(Src_editor_redux_common_actions.Zh(e, t, n, r))
         case 2:
           o.next = 4
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 4:
           o.next = 6
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(t, "name", n))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(t, "name", n))
         case 6:
-          $$_26_index.m($$_26_index.c.ARRAY, t, n)
+          Module_26.m(Module_26.c.ARRAY, t, n)
         case 7:
         case "end":
           return o.stop()
@@ -418,7 +418,7 @@ function Jc(e) {
   var /* [auto-meaningful-name] */e$payload$value
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var l
-  var /* [auto-meaningful-name] */$$_49$oTHelper$objectVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$objectVariables
   return RegeneratorRuntime.wrap(function (d) {
     for (;;) {
       switch (d.prev = d.next) {
@@ -428,7 +428,7 @@ function Jc(e) {
             break
           }
           d.next = 4
-          return $$_48_3_index.b($c, e$payload$scopeType, e$payload$id, e$payload$value.toString(), e$payload$screenId)
+          return Module_3.b($c, e$payload$scopeType, e$payload$id, e$payload$value.toString(), e$payload$screenId)
         case 4:
           d.next = 15
           break
@@ -438,24 +438,24 @@ function Jc(e) {
             break
           }
           d.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.wi(e$payload$scopeType, e$payload$id, e$payload$value, e$payload$screenId))
+          return Module_3.e(Src_editor_redux_common_actions.wi(e$payload$scopeType, e$payload$id, e$payload$value, e$payload$screenId))
         case 9:
           d.next = 11
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(e$payload$id, "defaultValue", e$payload$value))
         case 11:
           if (xl.getState().project.playing) {
             d.next = 15
             break
           }
           d.next = 15
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(e$payload$id, "value", e$payload$value))
         case 15:
           d.next = 17
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 17:
           if (l) {
-            if (!(null === ($$_49$oTHelper$objectVariables = $$_49.oTHelper.objectVariables) || undefined === $$_49$oTHelper$objectVariables)) {
-              $$_49$oTHelper$objectVariables.clientOp.updateProperty(e$payload$scopeType, e$payload$screenId, e$payload$id, e$payload$key, e$payload$value)
+            if (!(null === (Module_49$oTHelper$objectVariables = Module_49.oTHelper.objectVariables) || undefined === Module_49$oTHelper$objectVariables)) {
+              Module_49$oTHelper$objectVariables.clientOp.updateProperty(e$payload$scopeType, e$payload$screenId, e$payload$id, e$payload$key, e$payload$value)
             }
           }
         case 18:
@@ -471,15 +471,15 @@ function $c(e, t, n, r) {
       switch (o.prev = o.next) {
         case 0:
           o.next = 2
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.xi(e, t, n, r))
+          return Module_3.e(Src_editor_redux_common_actions.xi(e, t, n, r))
         case 2:
           o.next = 4
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 4:
           o.next = 6
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Pj(t, "name", n))
+          return Module_3.e(Src_editor_redux_common_actions.Pj(t, "name", n))
         case 6:
-          $$_26_index.m($$_26_index.c.OBJECT, t, n)
+          Module_26.m(Module_26.c.OBJECT, t, n)
         case 7:
         case "end":
           return o.stop()
@@ -507,9 +507,9 @@ function el(e) {
           e$payload$fields = e$payload.fields
           e$payload$isEmitOT = e$payload.isEmitOT
           i = undefined === e$payload$isEmitOT || e$payload$isEmitOT
-          a = on.yb(e$payload$id)
+          a = Module_9.yb(e$payload$id)
           p.next = 4
-          return $$_48_3_index.f(_r.y)
+          return Module_3.f(Module_22.y)
         case 4:
           if (p$sent = p.sent, l = [], u = [], d = e$payload$fields.length !== a.length, a.forEach(function (e) {
             e$payload$fields.forEach(function (t) {
@@ -533,13 +533,13 @@ function el(e) {
             break
           }
           p.next = 12
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$payload$id, "fields", e$payload$fields, false, true, i))
+          return Module_3.e(Src_editor_redux_common_actions.Lg(e$payload$id, "fields", e$payload$fields, false, true, i))
         case 12:
           l.forEach(function (e) {
-            $$_26_index.m($$_26_index.c.DOC_KEYS, e.id, e.key)
+            Module_26.m(Module_26.c.DOC_KEYS, e.id, e.key)
           })
           u.forEach(function (e) {
-            $$_26_index.q($$_26_index.c.DOC_KEYS, e.id)
+            Module_26.q(Module_26.c.DOC_KEYS, e.id)
           })
           gn(p$sent)
         case 15:
@@ -556,7 +556,7 @@ function tl(e) {
   var /* [auto-meaningful-name] */e$payload$screenId
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var a
-  var /* [auto-meaningful-name] */$$_49$oTHelper$primitiveVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$primitiveVariables
   return RegeneratorRuntime.wrap(function (l) {
     for (;;) {
       switch (l.prev = l.next) {
@@ -568,20 +568,20 @@ function tl(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           a = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           l.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.dh(e$payload$variableType, e$payload$id, e$payload$screenId))
+          return Module_3.e(Src_editor_redux_common_actions.dh(e$payload$variableType, e$payload$id, e$payload$screenId))
         case 3:
           l.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 5:
-          $$_26_index.q($$_26_index.c.PRIMITIVE, e$payload$id)
+          Module_26.q(Module_26.c.PRIMITIVE, e$payload$id)
           if (a) {
-            if (!(null === ($$_49$oTHelper$primitiveVariables = $$_49.oTHelper.primitiveVariables) || undefined === $$_49$oTHelper$primitiveVariables)) {
-              $$_49$oTHelper$primitiveVariables.clientOp.remove(e$payload$variableType, e$payload$screenId, e$payload$id)
+            if (!(null === (Module_49$oTHelper$primitiveVariables = Module_49.oTHelper.primitiveVariables) || undefined === Module_49$oTHelper$primitiveVariables)) {
+              Module_49$oTHelper$primitiveVariables.clientOp.remove(e$payload$variableType, e$payload$screenId, e$payload$id)
             }
           }
-          $$_26_index.m($$_26_index.c.PRIMITIVE, e$payload$id, on.g)
+          Module_26.m(Module_26.c.PRIMITIVE, e$payload$id, Module_9.g)
           l.next = 10
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bh(e$payload$id))
+          return Module_3.e(Src_editor_redux_common_actions.bh(e$payload$id))
         case 10:
         case "end":
           return l.stop()
@@ -596,7 +596,7 @@ function nl(e) {
   var /* [auto-meaningful-name] */e$payload$screenId
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var a
-  var /* [auto-meaningful-name] */$$_49$oTHelper$arrayVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$arrayVariables
   return RegeneratorRuntime.wrap(function (l) {
     for (;;) {
       switch (l.prev = l.next) {
@@ -608,20 +608,20 @@ function nl(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           a = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           l.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ah(e$payload$arrayType, e$payload$id, e$payload$screenId))
+          return Module_3.e(Src_editor_redux_common_actions.ah(e$payload$arrayType, e$payload$id, e$payload$screenId))
         case 3:
           l.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 5:
-          $$_26_index.q($$_26_index.c.ARRAY, e$payload$id)
+          Module_26.q(Module_26.c.ARRAY, e$payload$id)
           if (a) {
-            if (!(null === ($$_49$oTHelper$arrayVariables = $$_49.oTHelper.arrayVariables) || undefined === $$_49$oTHelper$arrayVariables)) {
-              $$_49$oTHelper$arrayVariables.clientOp.remove(e$payload$arrayType, e$payload$screenId, e$payload$id)
+            if (!(null === (Module_49$oTHelper$arrayVariables = Module_49.oTHelper.arrayVariables) || undefined === Module_49$oTHelper$arrayVariables)) {
+              Module_49$oTHelper$arrayVariables.clientOp.remove(e$payload$arrayType, e$payload$screenId, e$payload$id)
             }
           }
-          $$_26_index.m($$_26_index.c.ARRAY, e$payload$id, on.g)
+          Module_26.m(Module_26.c.ARRAY, e$payload$id, Module_9.g)
           l.next = 10
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bh(e$payload$id))
+          return Module_3.e(Src_editor_redux_common_actions.bh(e$payload$id))
         case 10:
         case "end":
           return l.stop()
@@ -636,7 +636,7 @@ function rl(e) {
   var /* [auto-meaningful-name] */e$payload$screenId
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var a
-  var /* [auto-meaningful-name] */$$_49$oTHelper$objectVariables
+  var /* [auto-meaningful-name] */Module_49$oTHelper$objectVariables
   return RegeneratorRuntime.wrap(function (l) {
     for (;;) {
       switch (l.prev = l.next) {
@@ -648,19 +648,19 @@ function rl(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           a = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           l.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.ch(e$payload$scopeType, e$payload$id, e$payload$screenId))
+          return Module_3.e(Src_editor_redux_common_actions.ch(e$payload$scopeType, e$payload$id, e$payload$screenId))
         case 3:
           l.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 5:
-          $$_26_index.q($$_26_index.c.OBJECT, e$payload$id)
+          Module_26.q(Module_26.c.OBJECT, e$payload$id)
           if (a) {
-            if (!(null === ($$_49$oTHelper$objectVariables = $$_49.oTHelper.objectVariables) || undefined === $$_49$oTHelper$objectVariables)) {
-              $$_49$oTHelper$objectVariables.clientOp.remove(e$payload$scopeType, e$payload$screenId, e$payload$id)
+            if (!(null === (Module_49$oTHelper$objectVariables = Module_49.oTHelper.objectVariables) || undefined === Module_49$oTHelper$objectVariables)) {
+              Module_49$oTHelper$objectVariables.clientOp.remove(e$payload$scopeType, e$payload$screenId, e$payload$id)
             }
           }
           l.next = 9
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.bh(e$payload$id))
+          return Module_3.e(Src_editor_redux_common_actions.bh(e$payload$id))
         case 9:
         case "end":
           return l.stop()
@@ -676,7 +676,7 @@ function ol(e) {
   var /* [auto-meaningful-name] */e$payload$index
   var /* [auto-meaningful-name] */e$payload$isEmitOT
   var s
-  var /* [auto-meaningful-name] */$$_49$oTHelper$broadcasts
+  var /* [auto-meaningful-name] */Module_49$oTHelper$broadcasts
   return RegeneratorRuntime.wrap(function (u) {
     for (;;) {
       switch (u.prev = u.next) {
@@ -689,14 +689,14 @@ function ol(e) {
           e$payload$isEmitOT = e$payload.isEmitOT
           s = undefined === e$payload$isEmitOT || e$payload$isEmitOT
           u.next = 3
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Ze(e$payload$name, e$payload$screenId, e$payload$index))
+          return Module_3.e(Src_editor_redux_common_actions.Ze(e$payload$name, e$payload$screenId, e$payload$index))
         case 3:
           u.next = 5
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Fi(true))
+          return Module_3.e(Src_editor_redux_common_actions.Fi(true))
         case 5:
           if (s) {
-            if (!(null === ($$_49$oTHelper$broadcasts = $$_49.oTHelper.broadcasts) || undefined === $$_49$oTHelper$broadcasts)) {
-              $$_49$oTHelper$broadcasts.clientOp.add(e$payload$screenId, e$payload$name, e$payload$index)
+            if (!(null === (Module_49$oTHelper$broadcasts = Module_49.oTHelper.broadcasts) || undefined === Module_49$oTHelper$broadcasts)) {
+              Module_49$oTHelper$broadcasts.clientOp.add(e$payload$screenId, e$payload$name, e$payload$index)
             }
             if (e$payload$setBlockValue) {
               e$payload$setBlockValue(e$payload$name)
@@ -725,7 +725,7 @@ function il(e) {
     for (;;) {
       switch (f.prev = f.next) {
         case 0:
-          if (e$payload = e.payload, e$payload$id = e$payload.id, e$payload$columns = e$payload.columns, e$payload$isEmitOT = e$payload.isEmitOT, i = undefined === e$payload$isEmitOT || e$payload$isEmitOT, a = on.Y(), s = a.find(function (e) {
+          if (e$payload = e.payload, e$payload$id = e$payload.id, e$payload$columns = e$payload.columns, e$payload$isEmitOT = e$payload.isEmitOT, i = undefined === e$payload$isEmitOT || e$payload$isEmitOT, a = Module_9.Y(), s = a.find(function (e) {
             return e.attributes.cloudDbId === e$payload$id
           })) {
             f.next = 5
@@ -735,7 +735,7 @@ function il(e) {
         case 5:
           s$attributes$columns = s.attributes.columns
           f.next = 8
-          return $$_48_3_index.f(_r.y)
+          return Module_3.f(Module_22.y)
         case 8:
           f$sent = f.sent
           d = []
@@ -760,13 +760,13 @@ function il(e) {
             })
           }
           f.next = 14
-          return $$_48_3_index.e($$_$$_$$_$$_$$_src_editor_redux_common_actions.Lg(s.id, "columns", e$payload$columns, false, true, i))
+          return Module_3.e(Src_editor_redux_common_actions.Lg(s.id, "columns", e$payload$columns, false, true, i))
         case 14:
           p.forEach(function (e) {
-            $$_26_index.m($$_26_index.c.COLUMNS, e.id, e.newName)
+            Module_26.m(Module_26.c.COLUMNS, e.id, e.newName)
           })
           d.forEach(function (e) {
-            $$_26_index.q($$_26_index.c.COLUMNS, e.id)
+            Module_26.q(Module_26.c.COLUMNS, e.id)
           })
           gn(f$sent)
         case 17:
@@ -777,19 +777,19 @@ function il(e) {
   }, Wc)
 }
 Cc = {}
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Fb, el)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.ib, Hc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.u, Vc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.o, zc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.t, Yc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.L, tl)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.I, nl)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.K, rl)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.p, ol)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Hb, qc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.yb, Xc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Gb, Jc)
-$$_11.a(Cc, $$_$$_$$_$$_$$_src_editor_redux_common_actions.Ab, il)
+Module_11.a(Cc, Src_editor_redux_common_actions.Fb, el)
+Module_11.a(Cc, Src_editor_redux_common_actions.ib, Hc)
+Module_11.a(Cc, Src_editor_redux_common_actions.u, Vc)
+Module_11.a(Cc, Src_editor_redux_common_actions.o, zc)
+Module_11.a(Cc, Src_editor_redux_common_actions.t, Yc)
+Module_11.a(Cc, Src_editor_redux_common_actions.L, tl)
+Module_11.a(Cc, Src_editor_redux_common_actions.I, nl)
+Module_11.a(Cc, Src_editor_redux_common_actions.K, rl)
+Module_11.a(Cc, Src_editor_redux_common_actions.p, ol)
+Module_11.a(Cc, Src_editor_redux_common_actions.Hb, qc)
+Module_11.a(Cc, Src_editor_redux_common_actions.yb, Xc)
+Module_11.a(Cc, Src_editor_redux_common_actions.Gb, Jc)
+Module_11.a(Cc, Src_editor_redux_common_actions.Ab, il)
 var al = Cc
 var sl = qn(al)
 function cl() {
@@ -798,7 +798,7 @@ function cl() {
       switch (e.prev = e.next) {
         case 0:
           e.next = 2
-          return $$_48_3_index.g(Object.keys(al), sl)
+          return Module_3.g(Object.keys(al), sl)
         case 2:
         case "end":
           return e.stop()

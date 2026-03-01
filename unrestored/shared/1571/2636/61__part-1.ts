@@ -7,12 +7,12 @@
 "use strict"
 
 import { d } from "./61__part-0"
-import * as c from "./75"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_widget_custom_storage from "../../../../src/shared/widget/custom/storage"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as r from "./6"
-import * as p from "./33"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_storage from /* 96 */"../../../../src/shared/widget/custom/storage"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
 var f = "<sep gap=\"".concat(45, "\"></sep>")
 var /* [auto-meaningful-name] */DROPDOWN_PLACEHOLDER_OPTION_VALUE = "DROPDOWN_PLACEHOLDER_OPTION_VALUE"
 var m = "?"
@@ -20,7 +20,7 @@ var /* [auto-meaningful-name] */DROPDOWN_PLACEHOLDER_EMPTY_IMAGE_VALUE = "DROPDO
 var /* [auto-meaningful-name] */_nBlockType_Date_get_current_date_Uncache_True__n_block_nBlockType_Date_check_date_is_equal_Uncache_True__nValueName_DATE_A__nShadowType_Date_get_current_date__shadow_n_value_nValueName_DATE_B__nShadowType_Date_get_current_date__shadow_n_value_n_block_nBlockType_Date_get_date_minus_operation_Uncache_True__nValueName_DATE_A__nShadowType_Date_get_current_date__shadow_n_value_nValueName_DATE_B__nShadowType_Date_get_current_date__shadow_n_value_n_block = "\n  <block type=\"date_get_current_date\" uncache=\"true\">\n  </block>\n  <block type=\"date_check_date_is_equal\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>\n  <block type=\"date_get_date_minus_operation\" uncache=\"true\">\n    <value name=\"DATE_A\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n    <value name=\"DATE_B\">\n      <shadow type=\"date_get_current_date\"></shadow>\n    </value>\n  </block>"
 function v() {
   var e = [d]
-  p.K().forEach(function (t) {
+  Module_33.K().forEach(function (t) {
     if (t.blockConfig) {
       e.push(t.blockConfig)
     }
@@ -31,9 +31,9 @@ function v() {
           console.error("anyWidget is not supported")
           return []
         }
-        var o = $$_$$_$$_$$_src_shared_widget_custom_storage.f(t.type)
+        var o = Src_shared_widget_custom_storage.f(t.type)
         if (o) {
-          return $$_$$_$$_$$_src_shared_widget_custom_load.e(null, o.type, o.types, true)
+          return Src_shared_widget_custom_load.e(null, o.type, o.types, true)
         }
       }
       return t$blockConfig$getTemplate(e)
@@ -45,7 +45,7 @@ function b() {
   var e = new Map()
   var t = []
   v().forEach(function (e) {
-    t.push.apply(t, $_25_index.a(e.topBlocks))
+    t.push.apply(t, Module_25.a(e.topBlocks))
   })
   t.forEach(function (t) {
     e.set(t, true)
@@ -57,7 +57,7 @@ function y() {
   v().forEach(function (t) {
     e[t.type] = t.category
   })
-  return r.a({}, e)
+  return Module_6.a({}, e)
 }
 function E() {
   var e = {}
@@ -110,14 +110,14 @@ function T(e, t, n) {
     switch (t) {
       case "positionX":
       case "positionY":
-        o = -(r = "positionX" === t ? c.a : c.b)
+        o = -(r = "positionX" === t ? Module_75.a : Module_75.b)
         break
       case "width":
-        r = c.e
+        r = Module_75.e
         o = 24
         break
       case "height":
-        r = c.d
+        r = Module_75.d
         o = 24
         break
       case "fontSize":
@@ -128,7 +128,7 @@ function T(e, t, n) {
   }
   !function (e) {
     var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
-    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : c.b
+    var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : Module_75.b
     var r = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : 100
     var o = arguments.length > 4 && undefined !== arguments[4] ? arguments[4] : "NUM"
     var /* [auto-meaningful-name] */e$source_block = e.source_block

@@ -6,42 +6,41 @@
 
 "use strict"
 
-import qv from "./88"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as Yr from "./53"
-import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$_1213 from "./1213"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_419 from "./419"
-import /* [auto-meaningful-name] */$_4191 from "./419"
-var nb = memo(function (e) {
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_419 from /* 419 */"./419"
+import /* [auto-meaningful-name] */Module_4191 from /* 419 */"./419"
+var nb = React1.memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$onUploadFileChange = e.onUploadFileChange
   var /* [auto-meaningful-name] */e$onResourceLibraryClick = e.onResourceLibraryClick
   var /* [auto-meaningful-name] */e$onDelete = e.onDelete
   var /* [auto-meaningful-name] */e$fileId = e.fileId
   var /* [auto-meaningful-name] */e$style = e.style
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var c = useState(false)
-  var l = $_10_index.a(c, 2)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var c = React1.useState(false)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = useState(false)
-  var m = $_10_index.a(p, 2)
+  var p = React1.useState(false)
+  var m = Module_10.a(p, 2)
   var g = m[0]
   var _ = m[1]
-  if ($$_$$_$$_$$_src_shared_tools_index.U(e$fileId)) {
+  if (Src_shared_tools_index.U(e$fileId)) {
     t = e$fileId
   } else {
-    var v = Et.hb(e$fileId)
+    var v = Module_9.hb(e$fileId)
     t = (null === v || undefined === v ? undefined : v.source) || (null === v || undefined === v ? undefined : v.cdnUrl)
   }
   var b = function (e) {
@@ -51,28 +50,28 @@ var nb = memo(function (e) {
     _(false)
   }
   var E = function () {
-    return React.createElement($_1213.a, {
+    return React.createElement(Module_1213.a, {
       content: React.createElement("div", {
-        className: $_4191.imagePopover,
+        className: Module_4191.imagePopover,
         onClick: y
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.B, {
-        className: $_4191.content,
+      }, React.createElement(Src_shared_ui_components_index.B, {
+        className: Module_4191.content,
         onChange: e$onUploadFileChange,
-        accept: $_133.f
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+        accept: Module_133.f
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-upload"
       }), React.createElement("span", {
-        className: $_4191.contentTitle
-      }, $_710$a$formatMessage({
+        className: Module_4191.contentTitle
+      }, Module_710$a$formatMessage({
         id: "Resource.upload"
       }))), React.createElement("div", {
-        className: $_4191.content,
+        className: Module_4191.content,
         onClick: e$onResourceLibraryClick
-      }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+      }, React.createElement(Src_shared_ui_components_index.j, {
         type: "icon-open-resource-library"
       }), React.createElement("span", {
-        className: $_4191.contentTitle
-      }, $_710$a$formatMessage({
+        className: Module_4191.contentTitle
+      }, Module_710$a$formatMessage({
         id: "Resource.ImageLibrary"
       })))),
       placement: "bottomLeft",
@@ -80,16 +79,16 @@ var nb = memo(function (e) {
       visible: g,
       onVisibleChange: b
     }, React.createElement("div", {
-      className: $_4191.imageBtn
-    }, $_710$a$formatMessage({
+      className: Module_4191.imageBtn
+    }, Module_710$a$formatMessage({
       id: "Resource.Replace"
     })))
   }
   return React.createElement("div", {
-    className: $_4191.imageWrapper
+    className: Module_4191.imageWrapper
   }, React.createElement("div", {
     tabIndex: -1,
-    className: Classnames($_4191.imageBox),
+    className: Classnames(Module_4191.imageBox),
     style: e$style,
     onMouseEnter: function () {
       d(true)
@@ -107,21 +106,21 @@ var nb = memo(function (e) {
     alt: e$fileId,
     src: t
   }), React.createElement("div", {
-    className: Classnames($_4191.cover, u && $_4191.visible)
+    className: Classnames(Module_4191.cover, u && Module_4191.visible)
   }, e$onDelete && React.createElement("div", {
-    className: $_4191.imageDelete,
+    className: Module_4191.imageDelete,
     onClick: e$onDelete
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-delete"
   })), E())), !t && React.createElement(React.Fragment, null, React.createElement("div", {
-    className: $_4191.picDefault
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+    className: Module_4191.picDefault
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-pic-default"
   })), React.createElement("div", {
-    className: Classnames($_4191.cover, u && $_4191.visible)
+    className: Classnames(Module_4191.cover, u && Module_4191.visible)
   }, E()))))
 })
-var rb = memo(function (e) {
+var rb = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$sizeType = e.sizeType
   var /* [auto-meaningful-name] */e$sizeTypeList = e.sizeTypeList
   var /* [auto-meaningful-name] */e$width = e.width
@@ -130,10 +129,10 @@ var rb = memo(function (e) {
   var /* [auto-meaningful-name] */e$maxWidth = e.maxWidth
   var /* [auto-meaningful-name] */e$onWidthChange = e.onWidthChange
   var /* [auto-meaningful-name] */e$onSizeTypeChange = e.onSizeTypeChange
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var u = !Lodash.isFunction(e$onWidthChange)
   var d = function (e) {
-    return $$_$$_$$_$$_src_shared_tools_index.p(function (e) {
+    return Src_shared_tools_index.p(function (e) {
       if (!u) {
         if (e$onWidthChange) {
           e$onWidthChange(e)
@@ -142,19 +141,19 @@ var rb = memo(function (e) {
     }, e)
   }
   return React.createElement("div", {
-    className: Classnames(qv.formItemWrapper, qv.changeSizeFormItemWrapper)
+    className: Classnames(Module_88.formItemWrapper, Module_88.changeSizeFormItemWrapper)
   }, React.createElement("div", {
-    className: qv.formInputNumberRow
+    className: Module_88.formInputNumberRow
   }, React.createElement("p", {
     className: "coco-form-item-label"
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "size"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+  })), React.createElement(Src_shared_ui_components_index.i, {
     className: "changeWidth"
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.n, {
+  }, React.createElement(Src_shared_ui_components_index.n, {
     disabled: u,
     type: "number",
-    className: qv.justifyInputContent,
+    className: Module_88.justifyInputContent,
     defaultValue: e$width,
     onChange: d(200),
     onStep: d(0),
@@ -162,37 +161,37 @@ var rb = memo(function (e) {
     max: e$maxWidth,
     rules: [
       {
-        rule: Yr.v
+        rule: Module_53.v
       }
     ],
     before: React.createElement("span", {
       style: {
         color: "var(--dark-text-color-t5)"
       }
-    }, $_710$a$formatMessage({
+    }, Module_710$a$formatMessage({
       id: "width"
     }))
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, null, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.n, {
+  })), React.createElement(Src_shared_ui_components_index.i, null, React.createElement(Src_shared_ui_components_index.n, {
     disabled: true,
     type: "number",
     value: e$height,
-    className: qv.justifyInputContent,
-    before: React.createElement("span", null, $_710$a$formatMessage({
+    className: Module_88.justifyInputContent,
+    before: React.createElement("span", null, Module_710$a$formatMessage({
       id: "height"
     }))
   }))), React.createElement("div", {
-    className: qv.space
-  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
+    className: Module_88.space
+  }), React.createElement(Src_shared_ui_components_index.i, {
     className: "changeSizeFormItemWrapper"
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
-    className: Classnames(qv.radioWrapper, qv.sizeRadioBox),
+  }, React.createElement(Src_shared_ui_components_index.s, {
+    className: Classnames(Module_88.radioWrapper, Module_88.sizeRadioBox),
     value: e$sizeType,
     onChange: e$onSizeTypeChange
   }, e$sizeTypeList.map(function (e) {
-    return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
+    return React.createElement(Src_shared_ui_components_index.t, {
       value: e,
       key: e
-    }, $_710$a$formatMessage({
+    }, Module_710$a$formatMessage({
       id: e.toLocaleLowerCase() + "Size"
     }))
   }))))

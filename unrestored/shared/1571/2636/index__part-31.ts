@@ -9,21 +9,20 @@
 import { No, Ro, ko, xo, vi, Ci, Ti, ki, Ki, $i, ea, Ba, Wa, Ku } from "./index__part-28"
 import { od, id } from "./index__part-29"
 import { ld } from "./index__part-30"
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css from "../../../../src/editor/ui/preview-area/stage/style.css"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as D from "./6"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useDispatch, useSelector, batch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useState, useEffect, createElement, PureComponent, version, Component } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import "./2602"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import /* [auto-meaningful-name] */Src_editor_ui_previewArea_stage_style_css from /* 279 */"../../../../src/editor/ui/preview-area/stage/style.css"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useDispatch, useSelector, batch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* 2602 */"./2602"
 var ud = ["n", "nw", "ne", "s", "se", "sw", "e", "w"]
 var dd = ["e", "w"]
 var pd = ["n", "s"]
@@ -34,17 +33,17 @@ var fd = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$onMoveEnd = e.onMoveEnd
   var i = useDispatch()
   var a = React.useRef(null)
-  var s = useRef({})
-  var c = useState(false)
-  var l = $_10_index.a(c, 2)
+  var s = React1.useRef({})
+  var c = React1.useState(false)
+  var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = useState(ud)
-  var m = $_10_index.a(p, 2)
+  var p = React1.useState(ud)
+  var m = Module_10.a(p, 2)
   var g = m[0]
   var v = m[1]
   var b = React.useState()
-  var y = $_10_index.a(b, 2)
+  var y = Module_10.a(b, 2)
   var E = y[0]
   var O = y[1]
   var w = useSelector(function (e) {
@@ -53,13 +52,13 @@ var fd = React.memo(function (e) {
   var C = useSelector(function (e) {
     return e.common.previewAreaUpdatedAt
   })
-  useEffect(function () {
+  React1.useEffect(function () {
     setTimeout(function () {
       var /* [auto-meaningful-name] */a$current
       return null === (a$current = a.current) || undefined === a$current ? undefined : a$current.moveable.updateRect()
     }, 0)
   }, [C])
-  useEffect(function () {
+  React1.useEffect(function () {
     function e() {
       var /* [auto-meaningful-name] */a$current
       if (!(null === (a$current = a.current) || undefined === a$current)) {
@@ -71,7 +70,7 @@ var fd = React.memo(function (e) {
       window.removeEventListener("resize", e)
     }
   }, [])
-  useEffect(function () {
+  React1.useEffect(function () {
     setTimeout(function () {
       var e
       if (w) {
@@ -83,7 +82,7 @@ var fd = React.memo(function (e) {
       O(e)
     })
   }, [w])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (E) {
       var e = "true" === E.dataset.lockHeight
       var t = "true" === E.dataset.lockWidth
@@ -126,7 +125,7 @@ var fd = React.memo(function (e) {
         x: Math.round(e.left),
         y: Math.round(e.top)
       }
-      e$onMouseMove(e$target$id, D.a({}, n))
+      e$onMouseMove(e$target$id, Module_6.a({}, n))
     },
     onDragEnd: function (e) {
       var /* [auto-meaningful-name] */e$lastEvent = e.lastEvent
@@ -135,7 +134,7 @@ var fd = React.memo(function (e) {
       if (e$lastEvent) {
         var r = Math.round(e$lastEvent.left)
         var a = Math.round(e$lastEvent.top)
-        i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "position", {
+        i(Src_editor_redux_common_actions.Lg(e$target$id, "position", {
           x: r,
           y: a
         }, true, true))
@@ -146,28 +145,28 @@ var fd = React.memo(function (e) {
       d(true)
       s.current = {}
       var /* [auto-meaningful-name] */e$target$id = e.target.id
-      var n = Et.Bb(e$target$id)
-      if (n && n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.H) {
+      var n = Module_9.Bb(e$target$id)
+      if (n && n.type === Src_editor_widget_builtIn_types.H) {
         if (document.activeElement && "TEXTAREA" === document.activeElement.tagName.toUpperCase()) {
           document.activeElement.blur()
         }
-        if (n.attributes.sizeAdaptive & $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT && 0 !== e.direction[1]) {
-          i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "sizeAdaptive", $$_$$_$$_$$_src_editor_widget_builtIn_types.q.FIXED, true, true))
+        if (n.attributes.sizeAdaptive & Src_editor_widget_builtIn_types.q.AUTO_HEIGHT && 0 !== e.direction[1]) {
+          i(Src_editor_redux_common_actions.Lg(e$target$id, "sizeAdaptive", Src_editor_widget_builtIn_types.q.FIXED, true, true))
         }
       }
     },
     onResize: function (e) {
       var /* [auto-meaningful-name] */e$target$dataset = e.target.dataset
       var /* [auto-meaningful-name] */e$target$id = e.target.id
-      var r = Et.Bb(e$target$id)
+      var r = Module_9.Bb(e$target$id)
       if (r) {
-        var o = r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.H && r.attributes.sizeAdaptive & $$_$$_$$_$$_src_editor_widget_builtIn_types.q.AUTO_HEIGHT
+        var o = r.type === Src_editor_widget_builtIn_types.H && r.attributes.sizeAdaptive & Src_editor_widget_builtIn_types.q.AUTO_HEIGHT
         var a = "true" === e$target$dataset.lockWidth
         var c = "true" === e$target$dataset.lockHeight
-        var l = Number(e$target$dataset.minWidth) || Qu.u
-        var u = Number(e$target$dataset.maxWidth) || Qu.l
-        var d = Number(e$target$dataset.minHeight) || Qu.p
-        var p = Number(e$target$dataset.maxHeight) || Qu.g
+        var l = Number(e$target$dataset.minWidth) || Module_60.u
+        var u = Number(e$target$dataset.maxWidth) || Module_60.l
+        var d = Number(e$target$dataset.minHeight) || Module_60.p
+        var p = Number(e$target$dataset.maxHeight) || Module_60.g
         var f = Math.round(e.width)
         var h = Math.round(e.height)
         if (!a) {
@@ -210,14 +209,14 @@ var fd = React.memo(function (e) {
           height: h,
           translate: e.drag.beforeTranslate
         }
-        if (!(!r || (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.z && (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.E && (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.w && (null === r || undefined === r ? undefined : r.type) !== $$_$$_$$_$$_src_editor_widget_builtIn_types.F)) {
+        if (!(!r || (null === r || undefined === r ? undefined : r.type) !== Src_editor_widget_builtIn_types.z && (null === r || undefined === r ? undefined : r.type) !== Src_editor_widget_builtIn_types.E && (null === r || undefined === r ? undefined : r.type) !== Src_editor_widget_builtIn_types.w && (null === r || undefined === r ? undefined : r.type) !== Src_editor_widget_builtIn_types.F)) {
           Lodash.throttle(function () {
             if (undefined !== f || undefined !== h) {
               var e = {
                 width: f,
                 height: h
               }
-              i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "size", e, true, true))
+              i(Src_editor_redux_common_actions.Lg(e$target$id, "size", e, true, true))
             }
           }, 500)()
         }
@@ -226,7 +225,7 @@ var fd = React.memo(function (e) {
     onResizeEnd: function (e) {
       d(false)
       var /* [auto-meaningful-name] */e$target$id = e.target.id
-      var n = Et.Bb(e$target$id)
+      var n = Module_9.Bb(e$target$id)
       var r = s.current[e$target$id]
       if (r && n) {
         var /* [auto-meaningful-name] */r$width = r.width
@@ -242,14 +241,14 @@ var fd = React.memo(function (e) {
             e.target.style.left = "".concat(n$position.x, "px")
             e.target.style.top = "".concat(n$position.y, "px")
             e.target.style.transform = ""
-            i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "position", n$position, true, true))
+            i(Src_editor_redux_common_actions.Lg(e$target$id, "position", n$position, true, true))
           }
           if (undefined !== r$width || undefined !== r$height) {
             var u = {
               width: r$width,
               height: r$height
             }
-            i($$_$$_$$_$$_src_editor_redux_common_actions.Lg(e$target$id, "size", u, true, true))
+            i(Src_editor_redux_common_actions.Lg(e$target$id, "size", u, true, true))
           }
         })
       }
@@ -257,24 +256,24 @@ var fd = React.memo(function (e) {
   })
 })
 var hd = React.memo(function () {
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   return React.createElement("div", {
-    className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.stageMask,
+    className: Src_editor_ui_previewArea_stage_style_css.stageMask,
     onDrop: function () {
-      var /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash = $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.canvasFlash
-      var r = $_710$a$formatMessage({
+      var /* [auto-meaningful-name] */Src_editor_ui_previewArea_stage_style_css$canvasFlash = Src_editor_ui_previewArea_stage_style_css.canvasFlash
+      var r = Module_710$a$formatMessage({
         id: "StageToast.addActorToCanvasTips"
       })
-      t($$_$$_$$_$$_src_editor_redux_common_actions.xj(r))
+      t(Src_editor_redux_common_actions.xj(r))
       var o = document.querySelectorAll("[data-widget-type=\"CANVAS_WIDGET\"][data-role=\"WIDGET\"]")
       if (o) {
         o.forEach(function (e) {
-          if (!e.classList.contains($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash)) {
-            e.classList.add($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash)
+          if (!e.classList.contains(Src_editor_ui_previewArea_stage_style_css$canvasFlash)) {
+            e.classList.add(Src_editor_ui_previewArea_stage_style_css$canvasFlash)
             setTimeout(function () {
               try {
-                e.classList.remove($$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css$canvasFlash)
+                e.classList.remove(Src_editor_ui_previewArea_stage_style_css$canvasFlash)
               } catch (t) {
                 console.error("Canvas widget remove flush class error")
               }
@@ -287,7 +286,7 @@ var hd = React.memo(function () {
 })
 var md = React.memo(function () {
   return React.createElement("div", {
-    className: $$_$$_$$_$$_src_editor_ui_previewArea_stage_style$css.stageReadOnlyMask
+    className: Src_editor_ui_previewArea_stage_style_css.stageReadOnlyMask
   })
 })
 var gd = function (e, t, n, r) {
@@ -308,7 +307,7 @@ var gd = function (e, t, n, r) {
       })
       return t[t.length - 1] - t[0]
     }(u[r]),
-    origin: Math.min.apply(Math, $_25_index.a(u[r]))
+    origin: Math.min.apply(Math, Module_25.a(u[r]))
   }
 }
 var _d = function (e, t, n, r) {
@@ -376,13 +375,13 @@ var _d = function (e, t, n, r) {
   var i = Object.entries(o)
   if (i.length) {
     var a = i.sort(function (e, t) {
-      var n = $_10_index.a(e, 1)[0]
-      var r = $_10_index.a(t, 1)[0]
+      var n = Module_10.a(e, 1)[0]
+      var r = Module_10.a(t, 1)[0]
       var o = parseInt(n)
       var i = parseInt(r)
       return Math.abs(o) - Math.abs(i)
     })
-    var s = $_10_index.a(a[0], 2)
+    var s = Module_10.a(a[0], 2)
     var c = s[0]
     var l = s[1]
     var u = parseInt(c)
@@ -432,7 +431,7 @@ var bd = function (e) {
   }(t, e)
   var /* [auto-meaningful-name] */t$prototype = t.prototype
   t$prototype.render = function () {
-    return createElement("canvas", {
+    return React1.createElement("canvas", {
       ref: ko(this, "canvasElement"),
       style: this.props.style
     })
@@ -568,7 +567,7 @@ var bd = function (e) {
     lineColor: "#777777"
   }
   return t
-}(PureComponent)
+}(React1.PureComponent)
 var yd = ["type", "width", "height", "unit", "zoom", "style", "backgroundColor", "lineColor", "textColor", "direction", "textFormat", "scrollPos", "textAlign", "mainLineSize", "longLineSize", "shortLineSize", "negativeRuler"]
 var Ed = bd
 var Od = function (e, t) {
@@ -634,12 +633,12 @@ var Td = function (e) {
     var /* [auto-meaningful-name] */this$injector$className = this.injector.className
     var /* [auto-meaningful-name] */this$tag = this.tag
     var l = {}
-    if ((version || "").indexOf("simple") > -1 && this$props$portalContainer) {
+    if ((React1.version || "").indexOf("simple") > -1 && this$props$portalContainer) {
       l = {
         portalContainer: this$props$portalContainer
       }
     }
-    return createElement(this$tag, Cd({
+    return React1.createElement(this$tag, Cd({
       ref: (e = this, _Element = "element", function (n) {
         if (n) {
           e[_Element] = n
@@ -662,7 +661,7 @@ var Td = function (e) {
     return this.element
   }
   return t
-}(Component)
+}(React1.Component)
 var Sd = function (e, t) {
   var n = Wa(t)
   return function (t) {
@@ -840,29 +839,29 @@ var Pd = function (e) {
         p[e] = this$props1[e]
       }
     })
-    return createElement(Ld, {
+    return React1.createElement(Ld, {
       ref: ko(this, "manager"),
       cspNonce: this$props$cspNonce,
       className: jd("manager", this$props$type) + " " + this$props$className,
       portalContainer: this$props$portalContainer,
       style: this$props$style
-    }, createElement("div", {
+    }, React1.createElement("div", {
       className: jd("guide-origin"),
       ref: ko(this, "originElement")
-    }), createElement(Ed, Id({
+    }), React1.createElement(Ed, Id({
       ref: ko(this, "ruler"),
       style: this$props$rulerStyle
-    }, p)), createElement("div", {
+    }, p)), React1.createElement("div", {
       className: Rd,
       ref: ko(this, "guidesElement"),
       style: {
         transform: d + "(" + -this.scrollPos * this$props$zoom + "px)"
       }
-    }, this$props$displayDragPos && createElement("div", {
+    }, this$props$displayDragPos && React1.createElement("div", {
       className: Dd,
       ref: ko(this, "displayElement"),
       style: this$props$dragGuideStyle
-    }), createElement("div", {
+    }), React1.createElement("div", {
       className: Nd,
       ref: ko(this, "adderElement")
     }), this.renderGuides()))
@@ -879,7 +878,7 @@ var Pd = function (e) {
     this.guideElements = []
     if (this$props$showGuides) {
       return this$state$guides.map(function (t, o) {
-        return createElement("div", {
+        return React1.createElement("div", {
           className: jd("guide", this$props$type),
           ref: xo(e, "guideElements", o),
           key: o,
@@ -1062,7 +1061,7 @@ var Pd = function (e) {
     portalContainer: null
   }
   return t
-}(PureComponent)
+}(React1.PureComponent)
 export { fd }
 export { hd }
 export { md }

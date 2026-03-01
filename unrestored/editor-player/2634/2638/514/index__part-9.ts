@@ -6,20 +6,20 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_28_index from "../../../../shared/1571/2636/28/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_59_index from "../../../../shared/1571/2636/59/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index from "../../../../shared/1571/2636/58/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "../../../../shared/1571/2636/27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_687 from "../../../../shared/1571/2636/687"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_34_347_393 from "../../../../shared/1571/2636/34/347/393"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../../../shared/1571/2636/28/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../../../../shared/1571/2636/59/index"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../../../../shared/1571/2636/58/index"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../../../shared/1571/2636/39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../../../../shared/1571/2636/27"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Module_687 from /* 687 */"../../../../shared/1571/2636/687"
+import * as /* [auto-meaningful-name] */Module_393 from /* 393 */"../../../../shared/1571/2636/34/347/393"
 var vt = function (t) {
-  $$_$$_$$_$$_shared_1571_2636_58_index.a(n, t)
-  var e = $$_$$_$$_$$_shared_1571_2636_59_index.a(n)
+  Module_58.a(n, t)
+  var e = Module_59.a(n)
   function n(t) {
     var r
-    $$_$$_$$_$$_shared_1571_2636_27.a(this, n);
+    Module_27.a(this, n);
     (r = e.call(this, t)).stride = undefined
     r.stepCount = undefined
     r.isStopStep = undefined
@@ -29,14 +29,14 @@ var vt = function (t) {
     r.resetStepCount()
     return r
   }
-  $$_$$_$$_$$_shared_1571_2636_39.a(n, [
+  Module_39.a(n, [
     {
       key: "startStepUpdate",
       value: function () {
         var t = this
-        if (!$$_$$_$$_$$_shared_1571_2636_28_index.g()) {
+        if (!Module_28.g()) {
           var e = 0
-          $$_$$_$$_$$_shared_1571_2636_34_347_393.default.start(function (n) {
+          Module_393.default.start(function (n) {
             if (t.isStopStep && ++e % 2 === 0) {
               t.isStopStep = false
               t.stepInStopTime = n - t.stepCount
@@ -59,8 +59,8 @@ var vt = function (t) {
     }, {
       key: "stopStepUpdate",
       value: function () {
-        if (!$$_$$_$$_$$_shared_1571_2636_28_index.g()) {
-          $$_$$_$$_$$_shared_1571_2636_34_347_393.default.stop()
+        if (!Module_28.g()) {
+          Module_393.default.stop()
           this.isStopStep = true
         }
       }
@@ -68,11 +68,11 @@ var vt = function (t) {
       key: "resetStepCount",
       value: function () {
         var t = this
-        if (!$$_$$_$$_$$_shared_1571_2636_28_index.g()) {
+        if (!Module_28.g()) {
           this.stepCount = 0
           this.stepInStopTime = 0
           this.emit("onStepCountChange", 0)
-          $$_$$_$$_$$_shared_1571_2636_34_347_393.default.reset(function () {
+          Module_393.default.reset(function () {
             if (false === t.isStopStep) {
               t.startStepUpdate()
             }
@@ -82,5 +82,5 @@ var vt = function (t) {
     }
   ])
   return n
-}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+}(Src_shared_widget_custom_load.c)
 export { vt }

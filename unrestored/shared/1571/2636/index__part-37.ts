@@ -6,11 +6,11 @@
 
 "use strict"
 
-import * as Dn from "./19"
-import { useLayoutEffect, useRef, useCallback, createElement, forwardRef } from "react"
-import * as /* [auto-meaningful-name] */$_545 from "./545"
-import * as /* [auto-meaningful-name] */$_339 from "./339"
-var sp = useLayoutEffect
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_545 from /* 545 */"./545"
+import * as /* [auto-meaningful-name] */Module_339 from /* 339 */"./339"
+var /* [auto-meaningful-name] */React$useLayoutEffect = React.useLayoutEffect
 var cp = function (e, t) {
   if ("function" !== typeof e) {
     e.current = t
@@ -19,8 +19,8 @@ var cp = function (e, t) {
   }
 }
 var lp = function (e, t) {
-  var n = useRef()
-  return useCallback(function (r) {
+  var n = React.useRef()
+  return React.useCallback(function (r) {
     e.current = r
     if (n.current) {
       cp(n.current, null)
@@ -53,13 +53,13 @@ var hp = ["borderBottomWidth", "borderLeftWidth", "borderRightWidth", "borderTop
 var mp = !!document.documentElement.currentStyle
 var gp = function (e) {
   var t = function (e) {
-    var t = useRef(e)
-    sp(function () {
+    var t = React.useRef(e)
+    React$useLayoutEffect(function () {
       t.current = e
     })
     return t
   }(e)
-  useLayoutEffect(function () {
+  React.useLayoutEffect(function () {
     var e = function (e) {
       t.current(e)
     }
@@ -77,12 +77,12 @@ var _p = function (e, t) {
   var a = undefined === e$onChange ? fp : e$onChange
   var /* [auto-meaningful-name] */e$onHeightChange = e.onHeightChange
   var c = undefined === e$onHeightChange ? fp : e$onHeightChange
-  var l = $_339.a(e, ["cacheMeasurements", "maxRows", "minRows", "onChange", "onHeightChange"])
+  var l = Module_339.a(e, ["cacheMeasurements", "maxRows", "minRows", "onChange", "onHeightChange"])
   var u = undefined !== l.value
-  var d = useRef(null)
+  var d = React.useRef(null)
   var p = lp(d, t)
-  var h = useRef(0)
-  var m = useRef()
+  var h = React.useRef(0)
+  var m = React.useRef()
   var g = function () {
     var /* [auto-meaningful-name] */d$current = d.current
     var t = e$cacheMeasurements && m.current ? m.current : function (e) {
@@ -158,9 +158,9 @@ var _p = function (e, t) {
       }
     }
   }
-  useLayoutEffect(g)
+  React.useLayoutEffect(g)
   gp(g)
-  return createElement("textarea", Dn.a({}, l, {
+  return React.createElement("textarea", Module_19.a({}, l, {
     onChange: function (e) {
       if (!u) {
         g()
@@ -170,5 +170,5 @@ var _p = function (e, t) {
     ref: p
   }))
 }
-var vp = forwardRef(_p)
+var vp = React.forwardRef(_p)
 export { vp }

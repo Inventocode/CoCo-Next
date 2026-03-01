@@ -6,8 +6,8 @@
 
 "use strict"
 
-var n = require("./116")
-var o = require("./407/518")
+var n = require(/* 116 */"./116")
+var o = require(/* 518 */"./407/518")
 var i = function () {
   function t(t, e) {
     this.x = t

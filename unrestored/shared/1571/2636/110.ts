@@ -8,16 +8,16 @@
 
 export { o as a }
 export { a as b }
-import * as r from "./6"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
 function o(e, t) {
   var n = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : {}
-  var o = r.a({
+  var o = Module_6.a({
     isFold: true,
     screenId: "GLOBAL",
     isWatching: true,
     selected: true
   }, n)
-  var i = r.a(r.a({
+  var i = Module_6.a(Module_6.a({
     type: e
   }, o), t)
   if (i.isWatching) {

@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../../../180")
-var i = require("../../../204")
-var o = require("../../1141")
-var a = require("./2306")
+var r = require(/* 180 */"../../../180")
+var i = require(/* 204 */"../../../204")
+var o = require(/* 1141 */"../../1141")
+var a = require(/* 2306 */"./2306")
 function s(e, t, n, r) {
   for (var i = 0; i < r.length; ++i) {
     var o = r[i]

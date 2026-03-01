@@ -518,7 +518,7 @@ export { I as Bg } from "../../../../unrestored/shared/1571/2636/162"
 export { l as Eb } from "../../../../unrestored/shared/1571/2636/162"
 export { K as Eg } from "../../../../unrestored/shared/1571/2636/162"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_unrestored_shared_1571_2636_6 from "../../../../unrestored/shared/1571/2636/6"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
 
 export const SET_APP_LANGUAGE = "SET_APP_LANGUAGE"
 
@@ -1197,7 +1197,7 @@ var Xt = {
 export const ADD_FLOAT_ICON = "ADD_FLOAT_ICON"
 function Zt(e) {
   return {
-    payload: $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, Xt), e),
+    payload: Module_6.a(Module_6.a({}, Xt), e),
     type: ADD_FLOAT_ICON
   }
 }
@@ -1215,7 +1215,7 @@ function tn(e, t) {
   return {
     payload: {
       name: e,
-      icon: $$_$$_$$_$$_unrestored_shared_1571_2636_6.a($$_$$_$$_$$_unrestored_shared_1571_2636_6.a({}, Xt), t)
+      icon: Module_6.a(Module_6.a({}, Xt), t)
     },
     type: REPLACE_FLOAT_ICON
   }

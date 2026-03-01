@@ -4,7 +4,7 @@
  * 模块 ID：2290
  */
 
-var r = require("../../711/index")
+var r = require(/* 711 */"../../711/index")
 module.exports = function (e) {
   function t(e) {
     for (var t = 0, n = 0; n < e.length; n++) {
@@ -129,7 +129,7 @@ module.exports = function (e) {
     }
     return false
   }
-  i.humanize = require("./2291")
+  i.humanize = require(/* 2291 */"./2291")
   Object.keys(e).forEach(function (t) {
     i[t] = e[t]
   })

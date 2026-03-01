@@ -7,11 +7,11 @@
 "use strict"
 
 var P
-import * as /* [auto-meaningful-name] */$_119 from "./119"
-import * as c from "./65"
-import * as /* [auto-meaningful-name] */$_32_index from "./32/index"
-import * as /* [auto-meaningful-name] */Axios from "axios"
-import /* [auto-meaningful-name] */Axios1 from "axios"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"./119"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"./65"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"./32/index"
+import * as /* [auto-meaningful-name] */Axios from /* 129 */"axios"
+import /* [auto-meaningful-name] */Axios1 from /* 129 */"axios"
 var V = function (e, t, n, r) {
   return new (n || (n = Promise))(function (i, o) {
     function a(e) {
@@ -157,7 +157,7 @@ var X = function () {
     return V(this, undefined, undefined, function () {
       var n
       return G(this, function (r) {
-        return this.data.get_texture(e) ? [2, new $_119.a("Texture " + e + " already exists. Please use new texture id")] : (n = $_32_index.y.from(t), $_32_index.y.addToCache(n, e), n.valid ? [2, new $_119.a("This texture " + e + " is already available in pixi")] : [
+        return this.data.get_texture(e) ? [2, new Module_119.a("Texture " + e + " already exists. Please use new texture id")] : (n = Module_32.y.from(t), Module_32.y.addToCache(n, e), n.valid ? [2, new Module_119.a("This texture " + e + " is already available in pixi")] : [
           2, new Promise(function (e, t) {
             n.baseTexture.on("loaded", function () {
               e()
@@ -177,28 +177,28 @@ var X = function () {
   e.prototype.get_texture_img_url = function (e) {
     var t = this.data.get_texture(e)
     if (!t) {
-      return $_119.b.error("Cannot find texture " + e)
+      return Module_119.b.error("Cannot find texture " + e)
     }
     var n = t.baseTexture.getDrawableSource && t.baseTexture.getDrawableSource()
-    return n && n instanceof HTMLImageElement ? $_119.b.success(n.src) : $_119.b.error("Cannot get url because source is not ImageElement")
+    return n && n instanceof HTMLImageElement ? Module_119.b.success(n.src) : Module_119.b.error("Cannot get url because source is not ImageElement")
   }
   e.prototype.destroy_texture = function (e) {
     var t = this.data.get_texture(e)
-    return t ? this.data.is_texture_in_sprite_sheet(e) ? new $_119.a("Texture " + e + " is part of sprite sheet. Cannot destroy it alone") : (t.destroy(true), void this.data.clear_texture_points_cache(e)) : new $_119.a("Cannot find texture " + e)
+    return t ? this.data.is_texture_in_sprite_sheet(e) ? new Module_119.a("Texture " + e + " is part of sprite sheet. Cannot destroy it alone") : (t.destroy(true), void this.data.clear_texture_points_cache(e)) : new Module_119.a("Cannot find texture " + e)
   }
   e.prototype.clear_texture_cache = function (e) {
     if (!this.data.get_texture(e)) {
-      return new $_119.a("Cannot find texture " + e)
+      return new Module_119.a("Cannot find texture " + e)
     }
-    delete $_32_index.B.TextureCache[e]
+    delete Module_32.B.TextureCache[e]
     this.data.clear_texture_points_cache(e)
   }
   e.prototype.clear_all_textures_cache = function () {
     this.data.clear_all_textures_points_cache()
   }
   e.prototype.destroy_all_textures = function () {
-    $_32_index.B.destroyTextureCache()
-    $_32_index.B.clearTextureCache()
+    Module_32.B.destroyTextureCache()
+    Module_32.B.clearTextureCache()
     this.data.clear_all_textures_points_cache()
     this.data.clear_all_sprite_sheet_cache()
   }
@@ -217,11 +217,11 @@ var X = function () {
         switch (d.label) {
           case 0:
             if (t = this.data.get_sprite_sheet_data(e)) {
-              new $_119.a(SpriteSheetAlreadyExists$)
+              new Module_119.a(SpriteSheetAlreadyExists$)
               return [2, t.texture_ids]
             }
             if (this.loading_urls.has(e)) {
-              return [2, new $_119.a(SpriteSheetIsBeingLoaded$)]
+              return [2, new Module_119.a(SpriteSheetIsBeingLoaded$)]
             }
             this.loading_urls.add(e)
             n = function () {
@@ -238,9 +238,9 @@ var X = function () {
           case 3:
             o = d.sent()
             n()
-            return [2, new $_119.a(o)]
+            return [2, new Module_119.a(o)]
           case 4:
-            s = $_32_index.B.url.resolve(e, i$data.meta.image)
+            s = Module_32.B.url.resolve(e, i$data.meta.image)
             c = "SPRITE_SHEET_" + e
             d.label = 5
           case 5:
@@ -253,11 +253,11 @@ var X = function () {
           case 7:
             d.sent()
             n()
-            return [2, new $_119.a(CannotLoadTheImageOfSpriteSheet)]
+            return [2, new Module_119.a(CannotLoadTheImageOfSpriteSheet)]
           case 8:
-            return l ? [4, this.data.parse_and_cache_sprite_sheet_data(e, c, i$data)] : (n(), [2, new $_119.a(CannotLoadTheImageOfSpriteSheet)])
+            return l ? [4, this.data.parse_and_cache_sprite_sheet_data(e, c, i$data)] : (n(), [2, new Module_119.a(CannotLoadTheImageOfSpriteSheet)])
           case 9:
-            return (t = d.sent()) ? (n(), [2, t.texture_ids]) : (n(), [2, new $_119.a(CannotParseSpriteSheetTextures$)])
+            return (t = d.sent()) ? (n(), [2, t.texture_ids]) : (n(), [2, new Module_119.a(CannotParseSpriteSheetTextures$)])
         }
       })
     })
@@ -266,7 +266,7 @@ var X = function () {
     var t = this
     var n = this.data.get_sprite_sheet_data(e)
     if (!n) {
-      return new $_119.a("Cannot find sprite sheet " + e)
+      return new Module_119.a("Cannot find sprite sheet " + e)
     }
     n.texture_ids.forEach(function (e) {
       var n = t.data.get_texture(e)
@@ -315,7 +315,7 @@ var J = function () {
   e.prototype.update_attributes = function (e, t, n) {
     var r
     var i
-    if (!(e instanceof $_32_index.A)) {
+    if (!(e instanceof Module_32.A)) {
       switch (n) {
         case Y.X:
           i = t - e.x
@@ -363,7 +363,7 @@ var J = function () {
         n = $
     }
     var f = {}
-    if (!(e$target instanceof $_32_index.A)) {
+    if (!(e$target instanceof Module_32.A)) {
       if (undefined !== e$to_options1.x && e$to_options1.x - e$target.position.x !== 0) {
         f.update_x = this.update_attributes(e$target, e$to_options1.x, Y.X)
       }
@@ -422,7 +422,7 @@ var J = function () {
     var i = {
       angle: e.angle
     }
-    if (!(e instanceof $_32_index.A)) {
+    if (!(e instanceof Module_32.A)) {
       i.x = e.position.x
       i.y = e.position.x
       i.visible = e.visible
@@ -448,7 +448,7 @@ var J = function () {
     return this
   }
   e.prototype.set_target_initial_state = function (e, t) {
-    if (!(e instanceof $_32_index.A)) {
+    if (!(e instanceof Module_32.A)) {
       if (undefined !== t.x) {
         e.position.x = t.x
       }
@@ -611,11 +611,11 @@ var Z = function () {
     var /* [auto-meaningful-name] */n$view = n.view
     var /* [auto-meaningful-name] */n$view$width = n$view.width
     var /* [auto-meaningful-name] */n$view$height = n$view.height
-    var s = new $_32_index.r(new $_32_index.d({
+    var s = new Module_32.r(new Module_32.d({
       width: n$view$width,
       height: n$view$height
     }))
-    var u = new $_32_index.r(new $_32_index.d({
+    var u = new Module_32.r(new Module_32.d({
       width: n$view$width,
       height: n$view$height
     }))
@@ -629,21 +629,21 @@ var Z = function () {
     n.renderer.render(n.stage, {
       renderTexture: u
     })
-    this.out_sprite = $_32_index.t.from(s)
+    this.out_sprite = Module_32.t.from(s)
     this.out_sprite.anchor.set(.5)
-    this.in_sprite = $_32_index.t.from(u)
+    this.in_sprite = Module_32.t.from(u)
     this.in_sprite.anchor.set(.5)
     var l = Math.min(n$view$width, n$view$height)
-    var f = new $_32_index.o(n$view$width / 2, n$view$height / 2)
-    var d = new $_32_index.A({
+    var f = new Module_32.o(n$view$width / 2, n$view$height / 2)
+    var d = new Module_32.A({
       radius: l,
       angle: 0,
       padding: 10
     })
     d.offset = f
-    var h = new $_32_index.A({
+    var h = new Module_32.A({
       radius: l,
-      angle: c.b(189),
+      angle: Module_65.b(189),
       padding: 10
     })
     h.offset = f
@@ -657,7 +657,7 @@ var Z = function () {
     }).from_to(d, .5, {
       angle: 0
     }, {
-      angle: c.b(-227.8)
+      angle: Module_65.b(-227.8)
     }).from_to(this.in_sprite, .5, {
       visible: true,
       alpha: 0

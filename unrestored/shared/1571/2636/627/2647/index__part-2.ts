@@ -7,20 +7,20 @@
 "use strict"
 
 import { E, C, S } from "./index__part-1"
-import * as /* [auto-meaningful-name] */$$_$$_2646_index from "../../2646/index"
-import * as /* [auto-meaningful-name] */$_3308_index from "./3308/index"
-import /* [auto-meaningful-name] */$$_$$_1220_index from "../../1220/index"
-import * as /* [auto-meaningful-name] */$$_$$_1221 from "../../1221"
-import { createElement, Component } from "react"
-import /* [auto-meaningful-name] */$$_$$_2646_1219_index from "../../2646/1219/index"
-import * as /* [auto-meaningful-name] */$$_$$_35 from "../../35"
-import * as /* [auto-meaningful-name] */$$_$$_362 from "../../362"
-import * as /* [auto-meaningful-name] */$$_$$_388 from "../../388"
-import * as /* [auto-meaningful-name] */$$_$$_120 from "../../120"
-import * as /* [auto-meaningful-name] */$$_$$_142 from "../../142"
-import * as /* [auto-meaningful-name] */$$_$$_106 from "../../106"
-import * as /* [auto-meaningful-name] */$$_$$_103 from "../../103"
-import "./3321"
+import * as /* [auto-meaningful-name] */Module_2646 from /* 2646 */"../../2646/index"
+import * as /* [auto-meaningful-name] */Module_3308 from /* 3308 */"./3308/index"
+import /* [auto-meaningful-name] */Module_1220 from /* 1220 */"../../1220/index"
+import * as /* [auto-meaningful-name] */Module_1221 from /* 1221 */"../../1221"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* [auto-meaningful-name] */Module_1219 from /* 1219 */"../../2646/1219/index"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
+import * as /* [auto-meaningful-name] */Module_362 from /* 362 */"../../362"
+import * as /* [auto-meaningful-name] */Module_388 from /* 388 */"../../388"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../120"
+import * as /* [auto-meaningful-name] */Module_142 from /* 142 */"../../142"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../../103"
+import /* 3321 */"./3321"
 var P = {
   "./style_module.css": {
     video_container: "CUI-kitten-video-player-video_container",
@@ -64,44 +64,44 @@ function w(e) {
   }()
   return function () {
     var n
-    var a = $$_$$_362.a(e)
+    var a = Module_362.a(e)
     if (t) {
-      var /* [auto-meaningful-name] */$$_$$_362$aThis$constructor = $$_$$_362.a(this).constructor
-      n = Reflect.construct(a, arguments, $$_$$_362$aThis$constructor)
+      var /* [auto-meaningful-name] */Module_362$aThis$constructor = Module_362.a(this).constructor
+      n = Reflect.construct(a, arguments, Module_362$aThis$constructor)
     } else {
       n = a.apply(this, arguments)
     }
-    return $$_$$_388.a(this, n)
+    return Module_388.a(this, n)
   }
 }
 var /* [auto-meaningful-name] */CUIKittenVideoPlayerBound = "CUI-kitten-video-player-bound"
 var M = function (e) {
-  $$_$$_120.a(a, e)
+  Module_120.a(a, e)
   var t = w(a)
   function a(e) {
     var n
-    $$_$$_103.a(this, a)
+    Module_103.a(this, a)
     n = t.call(this, e)
-    $$_$$_35.a($$_$$_142.a(n), "videoElem", undefined)
-    $$_$$_35.a($$_$$_142.a(n), "controlBarElem", undefined)
-    $$_$$_35.a($$_$$_142.a(n), "hideControlbar", function () {
+    Module_35.a(Module_142.a(n), "videoElem", undefined)
+    Module_35.a(Module_142.a(n), "controlBarElem", undefined)
+    Module_35.a(Module_142.a(n), "hideControlbar", function () {
       if (n.controlBarElem) {
         n.controlBarElem.style.height = "0px"
         n.controlBarElem.style.bottom = "-4px"
         n.controlBarElem.style.backgroundImage = "linear-gradient(0deg,transparent,transparent)"
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "showControllber", function () {
+    Module_35.a(Module_142.a(n), "showControllber", function () {
       if (n.controlBarElem) {
         n.controlBarElem.style.height = "70px"
         n.controlBarElem.style.bottom = "0"
         n.controlBarElem.style.backgroundImage = "linear-gradient(0deg,#0000008a,transparent)"
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "videoContainerElem", undefined)
-    $$_$$_35.a($$_$$_142.a(n), "player", undefined)
-    $$_$$_35.a($$_$$_142.a(n), "maxWatchTime", 0)
-    $$_$$_35.a($$_$$_142.a(n), "onResizeStart", function (e, t, a, r) {
+    Module_35.a(Module_142.a(n), "videoContainerElem", undefined)
+    Module_35.a(Module_142.a(n), "player", undefined)
+    Module_35.a(Module_142.a(n), "maxWatchTime", 0)
+    Module_35.a(Module_142.a(n), "onResizeStart", function (e, t, a, r) {
       var /* [auto-meaningful-name] */a$getBoundingClientRect$right = a.getBoundingClientRect().right
       var /* [auto-meaningful-name] */a$getBoundingClientRect$bottom = a.getBoundingClientRect().bottom
       var /* [auto-meaningful-name] */a$offsetWidth = a.offsetWidth
@@ -132,18 +132,18 @@ var M = function (e) {
         n.lockResizableBox(s$height + s$top, s$width + s$left)
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "onResize", function (e, t, a, r) {
+    Module_35.a(Module_142.a(n), "onResize", function (e, t, a, r) {
       if (n.setResizableBoxPosition) {
         n.setResizableBoxPosition(t, r)
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "onReplayClick", function () {
+    Module_35.a(Module_142.a(n), "onReplayClick", function () {
       var /* [auto-meaningful-name] */n$player
       if (!(null === (n$player = n.player) || undefined === n$player)) {
         n$player.play()
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "setDraggablePosition", function (e, t) {
+    Module_35.a(Module_142.a(n), "setDraggablePosition", function (e, t) {
       n.setState({
         videoPosition: {
           x: t.x,
@@ -151,12 +151,12 @@ var M = function (e) {
         }
       })
     })
-    $$_$$_35.a($$_$$_142.a(n), "handleMiniPlayer", function () {
+    Module_35.a(Module_142.a(n), "handleMiniPlayer", function () {
       if (n.props.onMinimizeBtnClick) {
         n.props.onMinimizeBtnClick(n.player)
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "closeSelf", function () {
+    Module_35.a(Module_142.a(n), "closeSelf", function () {
       var /* [auto-meaningful-name] */n$props = n.props
       var /* [auto-meaningful-name] */n$props$onClose = n$props.onClose
       var /* [auto-meaningful-name] */n$props$reportMaxWatchTimeRepo = n$props.reportMaxWatchTimeRepo
@@ -167,7 +167,7 @@ var M = function (e) {
         n$props$onClose(n.player)
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "handleClosePlayer", function () {
+    Module_35.a(Module_142.a(n), "handleClosePlayer", function () {
       var /* [auto-meaningful-name] */n$player
       var /* [auto-meaningful-name] */n$player1
       var /* [auto-meaningful-name] */n$props$useConfirmMask = n.props.useConfirmMask
@@ -186,7 +186,7 @@ var M = function (e) {
         })
       }
     })
-    $$_$$_35.a($$_$$_142.a(n), "getRemainPercent", function () {
+    Module_35.a(Module_142.a(n), "getRemainPercent", function () {
       try {
         var /* [auto-meaningful-name] */n$player
         var t
@@ -232,7 +232,7 @@ var M = function (e) {
     document.body.appendChild(r)
     return n
   }
-  $$_$$_106.a(a, [
+  Module_106.a(a, [
     {
       key: "componentDidMount",
       value: function () {
@@ -382,7 +382,7 @@ var M = function (e) {
         var /* [auto-meaningful-name] */this$props$reportMiniClick = this$props.reportMiniClick
         var /* [auto-meaningful-name] */this$props$reportCloseClick = this$props.reportCloseClick
         var /* [auto-meaningful-name] */this$props$reportReplayClick = this$props.reportReplayClick
-        return createElement("div", {
+        return React.createElement("div", {
           className: "CUI-kitten-video-player-video_container",
           style: {
             zIndex: null != this.props.zIndex ? this.props.zIndex : 1
@@ -390,14 +390,14 @@ var M = function (e) {
           ref: function (t) {
             return t && (e.videoContainerElem = t)
           }
-        }, createElement($$_$$_1220_index, {
+        }, React.createElement(Module_1220, {
           allowAnyClick: true,
           defaultClassName: "CUI-kitten-video-player-draggable",
           handle: ".CUI-kitten-video-handler",
           bounds: "#".concat(CUIKittenVideoPlayerBound),
           position: this.state.videoPosition,
           onDrag: this.setDraggablePosition.bind(this)
-        }, createElement($$_$$_1221.a, {
+        }, React.createElement(Module_1221.a, {
           className: "box",
           defaultSize: {
             width: this.state.width,
@@ -411,26 +411,26 @@ var M = function (e) {
           minWidth: (S() - 40) * (16 / 9),
           maxHeight: this.state.boundHeight,
           maxWidth: this.state.boundWidth
-        }, createElement("div", {
+        }, React.createElement("div", {
           className: "CUI-kitten-video-player-video_wrap",
           style: {
             width: "100%"
           }
-        }, createElement("div", {
+        }, React.createElement("div", {
           className: "CUI-kitten-video-handler CUI-kitten-video-player-video_header"
-        }, createElement("div", {
+        }, React.createElement("div", {
           className: "CUI-kitten-video-player-title"
-        }, this.props.title), createElement("div", {
+        }, this.props.title), React.createElement("div", {
           className: "CUI-kitten-video-player-mini_btn",
           onClick: this.handleMiniPlayer,
           onTouchStart: this.handleMiniPlayer,
           "data-report-click": this$props$reportMiniClick
-        }), createElement("div", {
+        }), React.createElement("div", {
           className: "CUI-kitten-video-player-close_btn",
           onClick: this.handleClosePlayer,
           onTouchStart: this.handleClosePlayer,
           "data-report-click": this$props$reportCloseClick
-        })), createElement($_3308_index.Player, {
+        })), React.createElement(Module_3308.Player, {
           playsInline: true,
           src: this.props.videoSrc,
           ref: function (t) {
@@ -439,44 +439,44 @@ var M = function (e) {
             }
           },
           autoPlay: this.props.autoPlay
-        }, createElement($_3308_index.ControlBar, {
+        }, React.createElement(Module_3308.ControlBar, {
           autoHide: this.state.autoHide
-        }, createElement($_3308_index.ProgressControl, {
+        }, React.createElement(Module_3308.ProgressControl, {
           order: 3
-        }), createElement($_3308_index.CurrentTimeDisplay, {
+        }), React.createElement(Module_3308.CurrentTimeDisplay, {
           order: 4
-        }), createElement($_3308_index.TimeDivider, {
+        }), React.createElement(Module_3308.TimeDivider, {
           order: 4.1
-        }), createElement($_3308_index.DurationDisplay, {
+        }), React.createElement(Module_3308.DurationDisplay, {
           order: 4.2
-        }), createElement($_3308_index.VolumeMenuButton, {
+        }), React.createElement(Module_3308.VolumeMenuButton, {
           order: 7
-        })), this.state.showEndedMask ? createElement("div", {
+        })), this.state.showEndedMask ? React.createElement("div", {
           className: "CUI-video-finish-mask"
-        }, createElement("div", {
+        }, React.createElement("div", {
           className: "CUI-video-finish-mask-title"
-        }, "恭喜你看完了本节课程"), createElement("div", {
+        }, "恭喜你看完了本节课程"), React.createElement("div", {
           className: "CUI-video-finish-mask-text"
-        }, "快去创作属于自己的作品吧！"), createElement("div", {
+        }, "快去创作属于自己的作品吧！"), React.createElement("div", {
           className: "CUI-video-finish-mask-text"
-        }, "点击网页右上角的【保存】按钮，储存云端不丢失哦！"), createElement("div", {
+        }, "点击网页右上角的【保存】按钮，储存云端不丢失哦！"), React.createElement("div", {
           className: "CUI-finish-mask-btn CUI-replay-icon",
           onClick: this.onReplayClick,
           "data-report-click": this$props$reportReplayClick
-        }, createElement("span", null, "再看一遍"))) : this.state.closingConfirm ? createElement("div", {
+        }, React.createElement("span", null, "再看一遍"))) : this.state.closingConfirm ? React.createElement("div", {
           className: "CUI-kitten-video-player-video-react-pause-mask CUI-kitten-video-player-paused CUI-kitten-video-player-closing"
-        }, createElement("img", {
+        }, React.createElement("img", {
           className: "CUI-kitten-video-player-end-mask-img",
-          src: require("./3322")
-        }), createElement("div", {
+          src: require(/* 3322 */"./3322")
+        }), React.createElement("div", {
           className: "CUI-kitten-video-player-end-mask-title"
-        }, "真的不再坚持一下么？"), createElement("div", {
+        }, "真的不再坚持一下么？"), React.createElement("div", {
           className: "CUI-kitten-video-player-end-mask-text"
-        }, "还剩下", this.getRemainPercent(), "%就完成了"), createElement("div", null, " ", createElement($$_$$_2646_index.a, {
+        }, "还剩下", this.getRemainPercent(), "%就完成了"), React.createElement("div", null, " ", React.createElement(Module_2646.a, {
           type: "secondary",
           margin: "0 18px 0 0",
           onClick: this.closeSelf
-        }, "坚持退出"), createElement($$_$$_2646_index.a, {
+        }, "坚持退出"), React.createElement(Module_2646.a, {
           type: "primary",
           onClick: function () {
             var /* [auto-meaningful-name] */e$player
@@ -490,14 +490,14 @@ var M = function (e) {
               e$player.play()
             }
           }
-        }, "继续学习"))) : createElement("div", {
+        }, "继续学习"))) : React.createElement("div", {
           onClick: this.clickMask.bind(this),
-          className: $$_$$_2646_1219_index("video-react-pause-mask ".concat(this.state.paused ? "paused" : "playing"), P, {
+          className: Module_1219("video-react-pause-mask ".concat(this.state.paused ? "paused" : "playing"), P, {
             autoResolveMultipleImports: true,
             handleMissingStyleName: "throw"
           })
-        }, createElement("div", {
-          className: $$_$$_2646_1219_index("mask-icon", P, {
+        }, React.createElement("div", {
+          className: Module_1219("mask-icon", P, {
             autoResolveMultipleImports: true,
             handleMissingStyleName: "throw"
           })
@@ -506,5 +506,5 @@ var M = function (e) {
     }
   ])
   return a
-}(Component)
+}(React.Component)
 export { M }

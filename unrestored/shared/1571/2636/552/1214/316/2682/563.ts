@@ -7,14 +7,14 @@
 "use strict"
 
 export { o as a }
-import { useLayoutEffect, useEffect, useRef, useCallback } from "react"
-var i = "undefined" !== typeof window ? useLayoutEffect : useEffect
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+var i = "undefined" !== typeof window ? React.useLayoutEffect : React.useEffect
 function o(e) {
-  var t = useRef(e)
+  var t = React.useRef(e)
   i(function () {
     t.current = e
   })
-  return useCallback(function () {
+  return React.useCallback(function () {
     return t.current.apply(undefined, arguments)
   }, [])
 }

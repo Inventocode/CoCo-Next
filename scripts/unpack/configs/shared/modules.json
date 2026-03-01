@@ -1,0 +1,25 @@
+{
+    "13": {
+        "scopeLowering": true
+    },
+    "15": {
+        "scopeLowering": true
+    },
+    "16": {
+        "exportsNameMap": {
+            "a": "Provider",
+            "b": "batch",
+            "c": "connect",
+            "d": "useDispatch",
+            "e": "useSelector",
+            "f": "useStore"
+        },
+        "namedImported": true
+    },
+    "1532": {
+        "write": false
+    },
+    "1571": {
+        "write": false
+    }
+}

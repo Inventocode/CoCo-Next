@@ -7,10 +7,10 @@
 "use strict"
 
 export { i as a }
-import * as /* [auto-meaningful-name] */$$_269_1547 from "../269/1547"
+import * as /* [auto-meaningful-name] */Module_1547 from /* 1547 */"../269/1547"
 function i(e) {
   if ("string" !== typeof e) {
-    throw new Error($$_269_1547.a(7))
+    throw new Error(Module_1547.a(7))
   }
   return e.charAt(0).toUpperCase() + e.slice(1)
 }

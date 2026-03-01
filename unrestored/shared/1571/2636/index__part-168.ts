@@ -9,87 +9,86 @@
 import { mA } from "./index__part-163"
 import { TA } from "./index__part-165"
 import { kA } from "./index__part-167"
-import * as /* [auto-meaningful-name] */$_364_index from "./364/index"
-import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
-import * as yb from "./21"
-import * as vb from "./54"
-import * as /* [auto-meaningful-name] */$_140 from "./140"
-import * as /* [auto-meaningful-name] */$_486 from "./486"
-import * as /* [auto-meaningful-name] */$_79_index from "./79/index"
-import * as /* [auto-meaningful-name] */$_120 from "./120"
-import * as /* [auto-meaningful-name] */$_106 from "./106"
-import * as /* [auto-meaningful-name] */$_103 from "./103"
-import * as Ln from "./35"
-import * as /* [auto-meaningful-name] */$_40_index from "./40/index"
-import * as Dn from "./19"
-import * as Tn from "./68"
-import * as K from "./18"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import { useSelector, useDispatch } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, Component, createContext, useContext, useEffect, createElement, forwardRef, useRef } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_527 from "./527"
-import /* [auto-meaningful-name] */$_5271 from "./527"
+import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"./364/index"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"./801/index"
+import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"./54"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"./140"
+import * as /* [auto-meaningful-name] */Module_486 from /* 486 */"./486"
+import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"./79/index"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"./120"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"./106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"./103"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35"
+import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"./40/index"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
+import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"./68"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import { useSelector, useDispatch } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_527 from /* 527 */"./527"
+import /* [auto-meaningful-name] */Module_5271 from /* 527 */"./527"
 var MA = ["image", "icon", "sound"]
-var LA = memo(function () {
+var LA = React1.memo(function () {
   var e = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
   var t = useDispatch()
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  var r = useState("image")
-  var o = $_10_index.a(r, 2)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var r = React1.useState("image")
+  var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
   var s = function (e) {
     a(e)
   }
   var c = useSelector(function (e) {
-    return e.uiConfig.resourceLibrary === K.j.ReadOnly
+    return e.uiConfig.resourceLibrary === Module_18.j.ReadOnly
   })
   return React.createElement("div", {
-    className: Classnames($_5271.resourceLayout, c && $_5271.readonly),
+    className: Classnames(Module_5271.resourceLayout, c && Module_5271.readonly),
     "data-updated-at": e
   }, React.createElement("div", {
-    className: $_5271.header
+    className: Module_5271.header
   }, React.createElement("span", {
-    className: $_5271.title
-  }, $_710$a$formatMessage({
+    className: Module_5271.title
+  }, Module_710$a$formatMessage({
     id: "Resource.ProjectLibrary"
   })), React.createElement("span", {
-    className: $_5271.closeBtn,
+    className: Module_5271.closeBtn,
     onClick: function () {
-      t($$_$$_$$_$$_src_editor_redux_common_actions.Vi(undefined))
+      t(Src_editor_redux_common_actions.Vi(undefined))
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-close-bold"
   }))), React.createElement("div", {
-    className: $_5271.tab
+    className: Module_5271.tab
   }, React.createElement("ul", null, MA.map(function (e) {
     return React.createElement("li", {
       key: e,
-      className: i === e ? $_5271.selected : "",
+      className: i === e ? Module_5271.selected : "",
       onClick: s.bind(null, e)
-    }, React.createElement("span", null, $_710$a$formatMessage({
+    }, React.createElement("span", null, Module_710$a$formatMessage({
       id: e
     })))
   })), React.createElement("div", {
-    className: $_5271.openMallBtn,
+    className: Module_5271.openMallBtn,
     onClick: function () {
-      t($$_$$_$$_$$_src_editor_redux_common_actions.wj(Tn.c.ResourceLibrary, function () {}, false, "image" === i ? Tn.d.IMAGE : "icon" === i ? Tn.d.ICON : "sound" === i ? Tn.d.SOUND : undefined, s))
+      t(Src_editor_redux_common_actions.wj(Module_68.c.ResourceLibrary, function () {}, false, "image" === i ? Module_68.d.IMAGE : "icon" === i ? Module_68.d.ICON : "sound" === i ? Module_68.d.SOUND : undefined, s))
     }
-  }, $_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "Resource.ResourceMall"
-  }), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }), React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-dropdown-down",
-    className: $_5271.rotate
+    className: Module_5271.rotate
   }))), React.createElement("div", {
-    className: Classnames($_5271.body)
+    className: Classnames(Module_5271.body)
   }, "image" === i && React.createElement(mA, {
     readOnly: c
   }), "icon" === i && React.createElement(kA, {
@@ -99,11 +98,11 @@ var LA = memo(function () {
   })))
 })
 var PA = function (e) {
-  $_120.a(n, e)
-  var t = $_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n(e) {
     var r
-    $_103.a(this, n);
+    Module_103.a(this, n);
     (r = t.call(this, e)).handleChange = function (e) {
       var /* [auto-meaningful-name] */r$props = r.props
       var /* [auto-meaningful-name] */r$props$disabled = r$props.disabled
@@ -116,7 +115,7 @@ var PA = function (e) {
         }
         if (r$props$onChange) {
           r$props$onChange({
-            target: yb.a(yb.a({}, r.props), {}, {
+            target: Module_21.a(Module_21.a({}, r.props), {}, {
               checked: e.target.checked
             }),
             stopPropagation: function () {
@@ -139,7 +138,7 @@ var PA = function (e) {
     }
     return r
   }
-  $_106.a(n, [
+  Module_106.a(n, [
     {
       key: "focus",
       value: function () {
@@ -173,7 +172,7 @@ var PA = function (e) {
         var /* [auto-meaningful-name] */this$props$autoFocus = this$props.autoFocus
         var /* [auto-meaningful-name] */this$props$value = this$props.value
         var /* [auto-meaningful-name] */this$props$required = this$props.required
-        var E = vb.a(this$props, ["prefixCls", "className", "style", "name", "id", "type", "disabled", "readOnly", "tabIndex", "onClick", "onFocus", "onBlur", "onKeyDown", "onKeyPress", "onKeyUp", "autoFocus", "value", "required"])
+        var E = Module_54.a(this$props, ["prefixCls", "className", "style", "name", "id", "type", "disabled", "readOnly", "tabIndex", "onClick", "onFocus", "onBlur", "onKeyDown", "onKeyPress", "onKeyUp", "autoFocus", "value", "required"])
         var O = Object.keys(E).reduce(function (e, t) {
           if (!("aria-" !== t.substr(0, 5) && "data-" !== t.substr(0, 5) && "role" !== t)) {
             e[t] = E[t]
@@ -181,11 +180,11 @@ var PA = function (e) {
           return e
         }, {})
         var /* [auto-meaningful-name] */this$state$checked = this.state.checked
-        var C = Classnames(this$props$prefixCls, this$props$className, (e = {}, Ln.a(e, "".concat(this$props$prefixCls, "-checked"), this$state$checked), Ln.a(e, "".concat(this$props$prefixCls, "-disabled"), this$props$disabled), e))
+        var C = Classnames(this$props$prefixCls, this$props$className, (e = {}, Module_35.a(e, "".concat(this$props$prefixCls, "-checked"), this$state$checked), Module_35.a(e, "".concat(this$props$prefixCls, "-disabled"), this$props$disabled), e))
         return React.createElement("span", {
           className: C,
           style: this$props$style
-        }, React.createElement("input", Dn.a({
+        }, React.createElement("input", Module_19.a({
           name: this$props$name,
           id: this$props$id,
           type: this$props$type,
@@ -214,14 +213,14 @@ var PA = function (e) {
     {
       key: "getDerivedStateFromProps",
       value: function (e, t) {
-        return "checked" in e ? yb.a(yb.a({}, t), {}, {
+        return "checked" in e ? Module_21.a(Module_21.a({}, t), {}, {
           checked: e.checked
         }) : null
       }
     }
   ])
   return n
-}(Component)
+}(React1.Component)
 PA.defaultProps = {
   prefixCls: "rc-checkbox",
   className: "",
@@ -251,7 +250,7 @@ var FA = function (e, t) {
   }
   return n
 }
-var GA = createContext(null)
+var GA = React1.createContext(null)
 var WA = function (e, t) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$children = e.children
@@ -262,18 +261,18 @@ var WA = function (e, t) {
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var u = FA(e, ["defaultValue", "children", "options", "prefixCls", "className", "style", "onChange"])
-  var d = useContext($_801_index.b)
+  var d = React1.useContext(Module_801.b)
   var /* [auto-meaningful-name] */d$getPrefixCls = d.getPrefixCls
   var /* [auto-meaningful-name] */d$direction = d.direction
-  var m = useState(u.value || e$defaultValue || [])
-  var g = $_40_index.a(m, 2)
+  var m = React1.useState(u.value || e$defaultValue || [])
+  var g = Module_40.a(m, 2)
   var _ = g[0]
   var v = g[1]
-  var b = useState([])
-  var y = $_40_index.a(b, 2)
+  var b = React1.useState([])
+  var y = Module_40.a(b, 2)
   var E = y[0]
   var O = y[1]
-  useEffect(function () {
+  React1.useEffect(function () {
     if ("value" in u) {
       v(u.value || [])
     }
@@ -288,10 +287,10 @@ var WA = function (e, t) {
   }
   var C = d$getPrefixCls("checkbox", e$prefixCls)
   var T = "".concat(C, "-group")
-  var S = $_486.a(u, ["value", "disabled"])
+  var S = Module_486.a(u, ["value", "disabled"])
   if (i && i.length > 0) {
     e$children = w().map(function (e) {
-      return createElement(KA, {
+      return React1.createElement(KA, {
         prefixCls: C,
         key: e.value.toString(),
         disabled: "disabled" in e ? e.disabled : u.disabled,
@@ -306,7 +305,7 @@ var WA = function (e, t) {
   var A = {
     toggleOption: function (e) {
       var t = _.indexOf(e.value)
-      var n = $_79_index.a(_)
+      var n = Module_79.a(_)
       if (-1 === t) {
         n.push(e.value)
       } else {
@@ -333,7 +332,7 @@ var WA = function (e, t) {
     name: u.name,
     registerValue: function (e) {
       O(function (t) {
-        return [].concat($_79_index.a(t), [e])
+        return [].concat(Module_79.a(t), [e])
       })
     },
     cancelValue: function (e) {
@@ -344,18 +343,18 @@ var WA = function (e, t) {
       })
     }
   }
-  var I = Classnames(T, Ln.a({}, "".concat(T, "-rtl"), "rtl" === d$direction), e$className)
-  return createElement("div", Dn.a({
+  var I = Classnames(T, Module_35.a({}, "".concat(T, "-rtl"), "rtl" === d$direction), e$className)
+  return React1.createElement("div", Module_19.a({
     className: I,
     style: e$style
   }, S, {
     ref: t
-  }), createElement(GA.Provider, {
+  }), React1.createElement(GA.Provider, {
     value: A
   }, e$children))
 }
-var UA = forwardRef(WA)
-var HA = memo(UA)
+var UA = React1.forwardRef(WA)
+var HA = React1.memo(UA)
 var VA = function (e, t) {
   var n = {}
   for (var r in e) if (Object.prototype.hasOwnProperty.call(e, r) && t.indexOf(r) < 0) {
@@ -384,18 +383,18 @@ var zA = function (e, t) {
   var /* [auto-meaningful-name] */e$skipGroup = e.skipGroup
   var p = undefined !== e$skipGroup && e$skipGroup
   var h = VA(e, ["prefixCls", "className", "children", "indeterminate", "style", "onMouseEnter", "onMouseLeave", "skipGroup"])
-  var m = useContext($_801_index.b)
+  var m = React1.useContext(Module_801.b)
   var /* [auto-meaningful-name] */m$getPrefixCls = m.getPrefixCls
   var /* [auto-meaningful-name] */m$direction = m.direction
-  var v = useContext(GA)
-  var b = useRef(h.value)
-  useEffect(function () {
+  var v = React1.useContext(GA)
+  var b = React1.useRef(h.value)
+  React1.useEffect(function () {
     if (!(null === v || undefined === v)) {
       v.registerValue(h.value)
     }
-    $_364_index.a("checked" in h || !!v || !("value" in h), "Checkbox", "`value` is not a valid prop, do you mean `checked`?")
+    Module_364.a("checked" in h || !!v || !("value" in h), "Checkbox", "`value` is not a valid prop, do you mean `checked`?")
   }, [])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!p) {
       if (h.value !== b.current) {
         if (!(null === v || undefined === v)) {
@@ -411,7 +410,7 @@ var zA = function (e, t) {
     }
   }, [h.value])
   var y = m$getPrefixCls("checkbox", e$prefixCls)
-  var E = Dn.a({}, h)
+  var E = Module_19.a({}, h)
   if (v && !p) {
     E.onChange = function () {
       if (h.onChange) {
@@ -428,20 +427,20 @@ var zA = function (e, t) {
     E.checked = -1 !== v.value.indexOf(h.value)
     E.disabled = h.disabled || v.disabled
   }
-  var O = Classnames((n = {}, Ln.a(n, "".concat(y, "-wrapper"), true), Ln.a(n, "".concat(y, "-rtl"), "rtl" === m$direction), Ln.a(n, "".concat(y, "-wrapper-checked"), E.checked), Ln.a(n, "".concat(y, "-wrapper-disabled"), E.disabled), n), e$className)
-  var w = Classnames(Ln.a({}, "".concat(y, "-indeterminate"), s))
-  return createElement("label", {
+  var O = Classnames((n = {}, Module_35.a(n, "".concat(y, "-wrapper"), true), Module_35.a(n, "".concat(y, "-rtl"), "rtl" === m$direction), Module_35.a(n, "".concat(y, "-wrapper-checked"), E.checked), Module_35.a(n, "".concat(y, "-wrapper-disabled"), E.disabled), n), e$className)
+  var w = Classnames(Module_35.a({}, "".concat(y, "-indeterminate"), s))
+  return React1.createElement("label", {
     className: O,
     style: e$style,
     onMouseEnter: e$onMouseEnter,
     onMouseLeave: e$onMouseLeave
-  }, createElement(BA, Dn.a({}, E, {
+  }, React1.createElement(BA, Module_19.a({}, E, {
     prefixCls: y,
     className: w,
     ref: t
-  })), undefined !== e$children && createElement("span", null, e$children))
+  })), undefined !== e$children && React1.createElement("span", null, e$children))
 }
-var YA = forwardRef(zA)
+var YA = React1.forwardRef(zA)
 YA.displayName = "Checkbox"
 var KA = YA
 var qA = KA

@@ -4,7 +4,7 @@
  * 模块 ID：1797
  */
 
-var r = require("../../940")
+var r = require(/* 940 */"../../940")
 module.exports = function (e, t) {
   for (; !Object.prototype.hasOwnProperty.call(e, t) && null !== (e = r(e));) {
     ;

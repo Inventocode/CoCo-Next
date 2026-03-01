@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
+import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from /* 462 */"resize-observer-polyfill"
 var h = new Map()
 var m = new ResizeObserverPolyfill.default(function (e) {
   e.forEach(function (e) {

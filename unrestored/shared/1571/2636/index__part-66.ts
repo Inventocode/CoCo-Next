@@ -9,19 +9,18 @@
 import { ad } from "./index__part-29"
 import { Ch } from "./index__part-64"
 import { Nh } from "./index__part-65"
-import * as /* [auto-meaningful-name] */$_277 from "./277"
-import * as /* [auto-meaningful-name] */$_215 from "./215"
-import * as /* [auto-meaningful-name] */$_145 from "./145"
-import * as Jd from "./33"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as O from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useState, useCallback, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_286 from "./286"
+import * as /* [auto-meaningful-name] */Module_277 from /* 277 */"./277"
+import * as /* [auto-meaningful-name] */Module_215 from /* 215 */"./215"
+import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"./145"
+import * as /* [auto-meaningful-name] */Module_33 from /* 33 */"./33"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_286 from /* 286 */"./286"
 var kh = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
@@ -34,28 +33,28 @@ var kh = function (e) {
   var /* [auto-meaningful-name] */e$attributes$penSize = e$attributes.penSize
   var /* [auto-meaningful-name] */e$attributes$rotation = e$attributes.rotation
   var /* [auto-meaningful-name] */e$attributes$cursorShape = e$attributes.cursorShape
-  var p = undefined === e$attributes$cursorShape ? $_286.a.NONE : e$attributes$cursorShape
-  var m = useState(true)
-  var g = $_10_index.a(m, 2)
+  var p = undefined === e$attributes$cursorShape ? Module_286.a.NONE : e$attributes$cursorShape
+  var m = React1.useState(true)
+  var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = useState({
+  var y = React1.useState({
     x: 0,
     y: 0
   })
-  var w = $_10_index.a(y, 2)
+  var w = Module_10.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = useState({
+  var A = React1.useState({
     translateX: 0,
     translateY: 0,
     angle: 0
   })
-  var I = $_10_index.a(A, 2)
+  var I = Module_10.a(A, 2)
   var j = I[0]
   var N = I[1]
-  var R = useState(false)
-  var k = $_10_index.a(R, 2)
+  var R = React1.useState(false)
+  var k = Module_10.a(R, 2)
   var x = k[0]
   var D = k[1]
   var M = useSelector(function (e) {
@@ -63,13 +62,13 @@ var kh = function (e) {
   })
   var L = t
   var P = M === L
-  var B = useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var B = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            if (t = $_215.b(L)) {
+            if (t = Module_215.b(L)) {
               e.next = 4
               break
             }
@@ -77,7 +76,7 @@ var kh = function (e) {
             return e.abrupt("return")
           case 4:
             e.next = 6
-            return $_145.d(t, L, e$position, false)
+            return Module_145.d(t, L, e$position, false)
           case 6:
             b(false)
           case 7:
@@ -87,10 +86,10 @@ var kh = function (e) {
       }
     }, e)
   })), [])
-  useEffect(function () {
+  React1.useEffect(function () {
     B()
   }, [B])
-  var F = useCallback(O.a(RegeneratorRuntime.mark(function e() {
+  var F = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var /* [auto-meaningful-name] */t$attributes$coordinateRatio
     var r
@@ -105,13 +104,13 @@ var kh = function (e) {
             }
             return e.abrupt("return")
           case 2:
-            if (t = Jd.Cb(e$parentId)) {
+            if (t = Module_33.Cb(e$parentId)) {
               e.next = 5
               break
             }
             return e.abrupt("return")
           case 5:
-            if (t$attributes$coordinateRatio = t.attributes.coordinateRatio, r = undefined === t$attributes$coordinateRatio ? 2 : t$attributes$coordinateRatio, i = $_215.b(L)) {
+            if (t$attributes$coordinateRatio = t.attributes.coordinateRatio, r = undefined === t$attributes$coordinateRatio ? 2 : t$attributes$coordinateRatio, i = Module_215.b(L)) {
               e.next = 10
               break
             }
@@ -119,7 +118,7 @@ var kh = function (e) {
             return e.abrupt("return")
           case 10:
             e.next = 12
-            return $_145.r(i, L, e$attributes$penSize, e$attributes$color, p, r, false)
+            return Module_145.r(i, L, e$attributes$penSize, e$attributes$color, p, r, false)
           case 12:
           case "end":
             return e.stop()
@@ -127,8 +126,8 @@ var kh = function (e) {
       }
     }, e)
   })), [L, e$attributes$color, p, e$parentId, e$attributes$penSize])
-  useEffect(function () {
-    var e = $_215.b(L)
+  React1.useEffect(function () {
+    var e = Module_215.b(L)
     if (e) {
       var t = function (e) {
         if (e.target_id === L) {
@@ -149,9 +148,9 @@ var kh = function (e) {
       }
     }
   }, [L, e$parentId, e$position.x])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (e$parentId) {
-      var e = Jd.Cb(e$parentId)
+      var e = Module_33.Cb(e$parentId)
       if (e) {
         var /* [auto-meaningful-name] */e$size = e.size
         var /* [auto-meaningful-name] */e$size$width = e$size.width
@@ -167,9 +166,9 @@ var kh = function (e) {
       }
     }
   }, [e$position, e$parentId])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
-      var e = $_215.b(L)
+      var e = Module_215.b(L)
       if (e) {
         var t = e.actors.get_actor(L)
         var /* [auto-meaningful-name] */t$is_error = t.is_error
@@ -181,11 +180,11 @@ var kh = function (e) {
       }
     }
   }, [L, v, a])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
-      var e = $_215.b(L)
+      var e = Module_215.b(L)
       if (e) {
-        $_145.i(e, L, e$attributes$rotation)
+        Module_145.i(e, L, e$attributes$rotation)
         var t = e.actors.get_actor(L)
         var /* [auto-meaningful-name] */t$is_error = t.is_error
         var /* [auto-meaningful-name] */t$value = t.value
@@ -208,34 +207,34 @@ var kh = function (e) {
       }
     }
   }, [v, L, e$attributes$rotation])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
       F()
     }
   }, [v, F])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
-      var e = $_215.b(L)
+      var e = Module_215.b(L)
       if (e) {
-        $_145.h(e, L, e$position)
+        Module_145.h(e, L, e$position)
       } else {
         console.error("Brush widget get stage error")
       }
     }
   }, [e$position, L, v])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (!v) {
-      var e = $_215.b(L)
+      var e = Module_215.b(L)
       if (e) {
-        $_145.k(e, L, e$visible)
+        Module_145.k(e, L, e$visible)
       } else {
         console.error("Brush widget get stage error")
       }
     }
   }, [e$visible, L, v])
-  useEffect(function () {
+  React1.useEffect(function () {
     if (M === t) {
-      var e = $_215.b(t)
+      var e = Module_215.b(t)
       var n = null === e || undefined === e ? undefined : e.components.get_editor()
       if (!(null === n || undefined === n)) {
         n.set_btns_visible(false)
@@ -245,7 +244,7 @@ var kh = function (e) {
       }
     }
   }, [t, M, v])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e = document.querySelector("#".concat(e$parentId, "[data-role=\"WIDGET\"]"))
     if (e instanceof HTMLDivElement) {
       if (x) {
@@ -276,20 +275,20 @@ var xh = {
   icon: "icon-widget-brush",
   title: "defaultBrushWidgetTitle",
   previewAreaWidgetTitle: "brush",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.c,
+  type: Src_editor_widget_builtIn_types.c,
   editConfig: Ch,
-  isInvisibleWidget: $_277.i,
+  isInvisibleWidget: Module_277.i,
   widget: {
-    isGlobalWidget: $_277.h,
+    isGlobalWidget: Module_277.h,
     size: {
       width: 0,
       height: 0
     },
     attributes: {
-      color: $_277.a,
-      penSize: $_277.c,
+      color: Module_277.a,
+      penSize: Module_277.c,
       rotation: 0,
-      cursorShape: $_286.a.NONE
+      cursorShape: Module_286.a.NONE
     }
   },
   blockConfig: Nh,

@@ -6,17 +6,17 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as i from "../7"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_env from "../../../../../src/shared/env"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials from "../../../../../src/shared/utils/network/axios-with-credentials"
-var c = "".concat($$_$$_$$_$$_$$_src_shared_env.a.serverHost, "/coconut")
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */Src_shared_env from /* 57 */"../../../../../src/shared/env"
+import * as /* [auto-meaningful-name] */Src_shared_utils_network_axiosWithCredentials from /* 41 */"../../../../../src/shared/utils/network/axios-with-credentials"
+var c = "".concat(Src_shared_env.a.serverHost, "/coconut")
 function l(e) {
   return u.apply(this, arguments)
 }
 function u() {
-  return (u = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (u = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var r
     var /* [auto-meaningful-name] */e$sent
@@ -33,7 +33,7 @@ function u() {
               r.work_id = t
             }
             e.next = 5
-            return $$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(n, {
+            return Src_shared_utils_network_axiosWithCredentials.a.get(n, {
               params: r
             })
           case 5:
@@ -59,7 +59,7 @@ function d(e) {
   return p.apply(this, arguments)
 }
 function p() {
-  return (p = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (p = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
@@ -69,7 +69,7 @@ function p() {
           case 0:
             n = "".concat(c, "/webdb/admin/dict/").concat(t)
             e.next = 3
-            return $$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(n, {
+            return Src_shared_utils_network_axiosWithCredentials.a.get(n, {
               params: {
                 offset: 0,
                 limit: 1e3
@@ -103,7 +103,7 @@ function f(e, t) {
   return h.apply(this, arguments)
 }
 function h() {
-  return (h = i.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (h = Module_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
@@ -113,7 +113,7 @@ function h() {
           case 0:
             r = "".concat(c, "/webdb/v2/admin/").concat(t, "/keys")
             e.next = 3
-            return $$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.get(r, {
+            return Src_shared_utils_network_axiosWithCredentials.a.get(r, {
               params: {
                 offset: 0,
                 limit: 1e3,
@@ -148,7 +148,7 @@ function m(e, t) {
   return g.apply(this, arguments)
 }
 function g() {
-  return (g = i.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (g = Module_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
@@ -158,7 +158,7 @@ function g() {
           case 0:
             r = "".concat(c, "/webdb/v2/admin/reference")
             e.next = 3
-            return $$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post(r, {
+            return Src_shared_utils_network_axiosWithCredentials.a.post(r, {
               dict_ids: n
             }, {
               params: {
@@ -188,7 +188,7 @@ function _(e, t) {
   return v.apply(this, arguments)
 }
 function v() {
-  return (v = i.a(RegeneratorRuntime1.mark(function e(t, n) {
+  return (v = Module_7.a(RegeneratorRuntime1.mark(function e(t, n) {
     var r
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
@@ -198,7 +198,7 @@ function v() {
           case 0:
             r = "".concat(c, "/webdb/v2/admin/reference/batch")
             e.next = 3
-            return $$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.delete(r, {
+            return Src_shared_utils_network_axiosWithCredentials.a.delete(r, {
               params: {
                 work_id: t,
                 dict_ids: n.join(",")
@@ -227,7 +227,7 @@ function b(e) {
   return y.apply(this, arguments)
 }
 function y() {
-  return (y = i.a(RegeneratorRuntime1.mark(function e(t) {
+  return (y = Module_7.a(RegeneratorRuntime1.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent$data
@@ -237,7 +237,7 @@ function y() {
           case 0:
             n = "".concat(c, "/webdb/v2/admin/dict/copyBatch")
             e.next = 3
-            return $$_$$_$$_$$_$$_src_shared_utils_network_axiosWithCredentials.a.post(n, {
+            return Src_shared_utils_network_axiosWithCredentials.a.post(n, {
               dict_ids: t
             })
           case 3:

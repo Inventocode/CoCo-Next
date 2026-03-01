@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.inject_icon_symbols = exports.SYMBOL = undefined
-var r = (0, require("tslib").__importStar)(require("../../499/index"))
+var r = (0, require(/* 93 */"tslib").__importStar)(require(/* 499 */"../../499/index"))
 exports.SYMBOL = {
   DEGREE_MARK_MAJOR: "blocklyDegreeMarkMajor",
   DEGREE_MARK_MINOR: "blocklyDegreeMarkMinor",

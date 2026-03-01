@@ -6,33 +6,33 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import /* [auto-meaningful-name] */RegeneratorRuntime1 from "regenerator-runtime"
-import * as s from "../7"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
-import * as /* [auto-meaningful-name] */OtJson1 from "ot-json1"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_tools_index from "../../../../../src/shared/tools/index"
-import * as /* [auto-meaningful-name] */$$_738_66 from "../738/66"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$$_390 from "../390"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_ui_language from "../../../../../src/shared/ui/language"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_100 from "../100"
-import * as /* [auto-meaningful-name] */$$_18 from "../18"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$$_25_index from "../25/index"
-import * as /* [auto-meaningful-name] */$_304 from "./304"
-import * as /* [auto-meaningful-name] */$$_49 from "../49"
-import * as /* [auto-meaningful-name] */$$_43 from "../43"
-import * as /* [auto-meaningful-name] */$_243 from "./243"
+import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
+import * as /* [auto-meaningful-name] */OtJson1 from /* 31 */"ot-json1"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../738/66"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_390 from /* 390 */"../390"
+import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"../100"
+import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../18"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
+import * as /* [auto-meaningful-name] */Module_304 from /* 304 */"./304"
+import * as /* [auto-meaningful-name] */Module_49 from /* 49 */"../49"
+import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"../43"
+import * as /* [auto-meaningful-name] */Module_243 from /* 243 */"./243"
 var T = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this._doc = null
     this._previousDoc = null
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "setDoc",
       value: function (e) {
@@ -60,13 +60,13 @@ var T = function () {
     }, {
       key: "onGetSnapShort",
       value: function (e) {
-        $$_43.f(Lodash.cloneDeep(e))
+        Module_43.f(Lodash.cloneDeep(e))
       }
     }, {
       key: "applyServerOp2IDE",
       value: function (e) {
         var t = this
-        if ($_243.c(e)) {
+        if (Module_243.c(e)) {
           e.forEach(function (e) {
             t.handleServerOp2IDE(e)
           })
@@ -83,41 +83,41 @@ var T = function () {
           this.setDoc(n)
           if ("blockly" !== e[0]) {
             var r = new Map()
-            var o = $_243.b(e)
+            var o = Module_243.b(e)
             var /* [auto-meaningful-name] */o$picks = o.picks
             var /* [auto-meaningful-name] */o$drops = o.drops
             o$picks.forEach(function (e) {
-              if ($_243.f(e.op)) {
-                r.set(e.op.p, $_304.a({
-                  path: ["$"].concat($$_25_index.a(e.path)),
+              if (Module_243.f(e.op)) {
+                r.set(e.op.p, Module_304.a({
+                  path: ["$"].concat(Module_25.a(e.path)),
                   json: t._previousDoc
                 })[0])
               }
-              Object.entries($$_49.oTHelper).forEach(function (t) {
-                var n = $$_10_index.a(t, 2)[1]
+              Object.entries(Module_49.oTHelper).forEach(function (t) {
+                var n = Module_10.a(t, 2)[1]
                 if (n && n.serverOp && n.serverOp.pick) {
                   n.serverOp.pick(e)
                 }
               })
             })
             o$drops.forEach(function (e) {
-              if ($_243.d(e.op)) {
+              if (Module_243.d(e.op)) {
                 var t = r.get(e.op.d)
                 e.op = {
                   i: t
                 }
               }
-              Object.entries($$_49.oTHelper).forEach(function (t) {
-                var n = $$_10_index.a(t, 2)[1]
+              Object.entries(Module_49.oTHelper).forEach(function (t) {
+                var n = Module_10.a(t, 2)[1]
                 if (n && n.serverOp && n.serverOp.drop) {
                   n.serverOp.drop(e)
                 }
               })
             })
           } else {
-            var /* [auto-meaningful-name] */$$_49$oTHelper$blink
-            if (!(null === ($$_49$oTHelper$blink = $$_49.oTHelper.blink) || undefined === $$_49$oTHelper$blink)) {
-              $$_49$oTHelper$blink.serverOp.applyServerOp(e)
+            var /* [auto-meaningful-name] */Module_49$oTHelper$blink
+            if (!(null === (Module_49$oTHelper$blink = Module_49.oTHelper.blink) || undefined === Module_49$oTHelper$blink)) {
+              Module_49$oTHelper$blink.serverOp.applyServerOp(e)
             }
           }
         }

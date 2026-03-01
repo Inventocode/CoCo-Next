@@ -8,26 +8,25 @@
 
 import { B } from "./index__part-4"
 var P
-import * as /* [auto-meaningful-name] */$$_15 from "../../../../../src/shared/tools"
-import * as /* [auto-meaningful-name] */$_344 from "./344"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import /* [auto-meaningful-name] */Color from "color"
-import * as /* [auto-meaningful-name] */$$_1213 from "../1213"
-import * as /* [auto-meaningful-name] */$$_710 from "../710"
-import { useDispatch } from "react-redux"
-import * as A from "../7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */$$_94_index from "../../../../../src/shared/ui/components/iconfont/index"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useState, useMemo, forwardRef, useRef, useImperativeHandle, useEffect, useCallback } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import i from "classnames"
-import * as /* [auto-meaningful-name] */$$_10_index from "../10/index"
-import * as /* [auto-meaningful-name] */$_797_index from "./797/index"
-import * as /* [auto-meaningful-name] */$_253_index from "./253/index"
-import * as /* [auto-meaningful-name] */$_226 from "./226"
-import /* [auto-meaningful-name] */$_2261 from "./226"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_344 from /* 344 */"./344"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import /* [auto-meaningful-name] */Color from /* 51 */"color"
+import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"../1213"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../710"
+import { useDispatch } from /* 16 */"react-redux"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
+import * as /* [auto-meaningful-name] */Module_797 from /* 797 */"./797/index"
+import * as /* [auto-meaningful-name] */Module_253 from /* 253 */"./253/index"
+import * as /* [auto-meaningful-name] */Module_226 from /* 226 */"./226"
+import /* [auto-meaningful-name] */Module_2261 from /* 226 */"./226"
 !function (e) {
   e.HEX = "HEX"
   e.HSVA = "HSVA"
@@ -35,20 +34,20 @@ import /* [auto-meaningful-name] */$_2261 from "./226"
 }(P || (P = {}))
 var H
 var V = [P.HEX, P.HSVA, P.RGBA]
-var z = memo(function (e) {
+var z = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var o = useState(P.HEX)
-  var i = $$_10_index.a(o, 2)
+  var o = React1.useState(P.HEX)
+  var i = Module_10.a(o, 2)
   var c = i[0]
   var l = i[1]
-  var u = useMemo(function () {
-    var e = $_2261(e$color).toHex8()
-    var n = $_2261(e$color).toHsv()
+  var u = React1.useMemo(function () {
+    var e = Module_2261(e$color).toHex8()
+    var n = Module_2261(e$color).toHsv()
     n.a = Math.round(100 * n.a)
-    var r = $_2261(e$color).toHsl()
+    var r = Module_2261(e$color).toHsl()
     r.a = Math.round(100 * r.a)
-    var o = $_2261(e$color).toRgb()
+    var o = Module_2261(e$color).toRgb()
     o.a = Math.round(100 * o.a)
     return {
       hex: "#".concat(e),
@@ -64,9 +63,9 @@ var z = memo(function (e) {
   var g = function (e) {
     var t
     if (e.HEX) {
-      if ($_2261(e.HEX).isValid()) {
+      if (Module_2261(e.HEX).isValid()) {
         return void e$onChange({
-          hex: $_2261(e.HEX).toHexString(),
+          hex: Module_2261(e.HEX).toHexString(),
           hsl: u$hsl,
           rgb: u$rgb
         })
@@ -112,8 +111,8 @@ var z = memo(function (e) {
         }
       }
     }
-    if (t && $$_15.kb(t)) {
-      var r = $$_15.C(t, e.H || u$hsv.h)
+    if (t && Src_shared_tools_index.kb(t)) {
+      var r = Src_shared_tools_index.C(t, e.H || u$hsv.h)
       e$onChange(r)
     }
   }
@@ -123,7 +122,7 @@ var z = memo(function (e) {
     className: "coco-platte-input-box"
   }, c === P.HEX && React.createElement("div", {
     className: "coco-platte-hex-box"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "HEX",
     value: u$hex,
     onChange: g
@@ -131,25 +130,25 @@ var z = memo(function (e) {
     className: "coco-platte-flex-box"
   }, React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "H",
     value: Math.round(u$hsv.h),
     onChange: g
   })), React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "S",
     value: Math.round(100 * u$hsv.s),
     onChange: g
   })), React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "V",
     value: Math.round(100 * u$hsv.v),
     onChange: g
   })), React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "A",
     value: u$hsl.a,
     onChange: g
@@ -157,25 +156,25 @@ var z = memo(function (e) {
     className: "coco-platte-flex-box"
   }, React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "R",
     value: u$rgb.r,
     onChange: g
   })), React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "G",
     value: u$rgb.g,
     onChange: g
   })), React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "B",
     value: u$rgb.b,
     onChange: g
   })), React.createElement("div", {
     className: "coco-platte-field"
-  }, React.createElement($_253_index.EditableInput, {
+  }, React.createElement(Module_253.EditableInput, {
     label: "A",
     value: u$rgb.a,
     onChange: g
@@ -187,7 +186,7 @@ var z = memo(function (e) {
       var e = V.indexOf(c) - 1
       l(V[e = e < 0 ? 2 : e])
     }
-  }, React.createElement($$_94_index.a, {
+  }, React.createElement(Src_shared_ui_components_iconfont_index.a, {
     className: "coco-palette-arrow-up",
     type: "icon-fold"
   })), React.createElement("div", {
@@ -197,7 +196,7 @@ var z = memo(function (e) {
       e = e >= V.length ? 0 : e
       l(V[e])
     }
-  }, React.createElement($$_94_index.a, {
+  }, React.createElement(Src_shared_ui_components_iconfont_index.a, {
     className: "coco-palette-arrow-down",
     type: "icon-fold"
   }))))
@@ -245,12 +244,12 @@ var Y = {
     }
   }
 }
-var K = memo(function (e) {
+var K = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$handleColorChange = e.handleColorChange
   var r = function (e) {
     var /* [auto-meaningful-name] */e$hex = e.hex
-    if (!$$_15.i(e$hex)) {
+    if (!Src_shared_tools_index.i(e$hex)) {
       e$hex = undefined !== e.rgb.a ? "".concat(e.hex).concat(function (e) {
         var t = Math.round(255 * Lodash.clamp(e, 0, 1))
         var n = t.toString(16)
@@ -259,7 +258,7 @@ var K = memo(function (e) {
     }
     e$handleColorChange(e$hex)
   }
-  return React.createElement(React.Fragment, null, React.createElement($_797_index.a, {
+  return React.createElement(React.Fragment, null, React.createElement(Module_797.a, {
     onChange: r,
     color: e$color,
     presetColors: [],
@@ -271,7 +270,7 @@ var K = memo(function (e) {
   }))
 })
 var q = []
-var X = memo(forwardRef(function (e, t) {
+var X = React1.memo(React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$onClose = e.onClose
@@ -279,16 +278,16 @@ var X = memo(forwardRef(function (e, t) {
   var d = undefined === e$defaultValue ? "#000000ff" : e$defaultValue
   var /* [auto-meaningful-name] */e$style = e.style
   var f = undefined === e$style ? {} : e$style
-  var h = useRef(null)
-  var m = useRef(null)
-  var g = useRef(false)
+  var h = React1.useRef(null)
+  var m = React1.useRef(null)
+  var g = React1.useRef(false)
   var _ = useDispatch()
-  var /* [auto-meaningful-name] */$$_710$a$formatMessage = $$_710.a().formatMessage
-  var b = useState(e$value || d)
-  var y = $$_10_index.a(b, 2)
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  var b = React1.useState(e$value || d)
+  var y = Module_10.a(b, 2)
   var O = y[0]
   var w = y[1]
-  var C = useRef(O)
+  var C = React1.useRef(O)
   if (0 === q.length) {
     q.push(O)
   }
@@ -304,12 +303,12 @@ var X = memo(forwardRef(function (e, t) {
   var R = function (e) {
     T(e)
   }
-  useImperativeHandle(t, function () {
+  React1.useImperativeHandle(t, function () {
     return {
       setRGBA: w
     }
   })
-  useEffect(function () {
+  React1.useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */e$target = e.target
       var /* [auto-meaningful-name] */h$current = h.current
@@ -318,7 +317,7 @@ var X = memo(forwardRef(function (e, t) {
         if (e$onClose) {
           e$onClose(O)
         }
-        _($$_$$_$$_$$_$$_src_editor_redux_common_actions.hh())
+        _(Src_editor_redux_common_actions.hh())
         if (H) {
           var i = q.indexOf(H)
           if (i > -1) {
@@ -354,10 +353,10 @@ var X = memo(forwardRef(function (e, t) {
     })
     return t
   })
-  useEffect(function () {
+  React1.useEffect(function () {
     C.current = O
   }, [O])
-  useEffect(function () {
+  React1.useEffect(function () {
     var e = function () {
       g.current = true
       document.addEventListener("mouseup", function () {
@@ -371,18 +370,18 @@ var X = memo(forwardRef(function (e, t) {
       return document.removeEventListener("mousedown", e)
     }
   })
-  var L = useCallback(function () {
+  var L = React1.useCallback(function () {
     if (e$onChange) {
       e$onChange(C.current, g.current)
     }
   }, [e$onChange])
-  var P = useCallback(function (e) {
+  var P = React1.useCallback(function (e) {
     if (false === e && e$onChange) {
       e$onChange(C.current, g.current)
     }
   }, [e$onChange])
   var F = function () {
-    var e = A.a(RegeneratorRuntime.mark(function e() {
+    var e = Module_7.a(RegeneratorRuntime.mark(function e() {
       var t
       var /* [auto-meaningful-name] */e$sent
       var r
@@ -394,8 +393,8 @@ var X = memo(forwardRef(function (e, t) {
                 e.next = 3
                 break
               }
-              _($$_$$_$$_$$_$$_src_editor_redux_common_actions.mj({
-                message: $$_710$a$formatMessage({
+              _(Src_editor_redux_common_actions.mj({
+                message: Module_710$a$formatMessage({
                   id: "colorPicker.eyeDropperTips"
                 })
               }))
@@ -430,24 +429,24 @@ var X = memo(forwardRef(function (e, t) {
     }
   }()
   return React.createElement("div", {
-    className: i("coco-palette"),
+    className: Classnames("coco-palette"),
     style: f,
     ref: h
   }, React.createElement("div", {
     className: "coco-palette-body"
-  }, $_344.b.map(function (e, t) {
+  }, Module_344.b.map(function (e, t) {
     return React.createElement(B, {
       onClick: R,
       key: t,
       color: e,
       selected: O === e,
-      className: $$_15.V(e) ? "coco-palette-light-color-selected" : "coco-palette-dark-color-selected"
+      className: Src_shared_tools_index.V(e) ? "coco-palette-light-color-selected" : "coco-palette-dark-color-selected"
     })
   })), React.createElement("div", {
     className: "coco-palette-history-color"
   }, React.createElement("span", {
     className: "coco-palette-history-title"
-  }, $$_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "colorPicker.history"
   })), React.createElement("div", {
     className: "coco-palette-history-color-list"
@@ -457,7 +456,7 @@ var X = memo(forwardRef(function (e, t) {
       key: t,
       color: e
     })
-  }))), React.createElement($$_1213.a, {
+  }))), React.createElement(Module_1213.a, {
     placement: "rightBottom",
     overlayClassName: "coco-palette-picker",
     onVisibleChange: P,
@@ -469,7 +468,7 @@ var X = memo(forwardRef(function (e, t) {
     }, React.createElement("div", {
       className: "coco-palette-icon-picker-box",
       onClick: F
-    }, React.createElement($$_94_index.a, {
+    }, React.createElement(Src_shared_ui_components_iconfont_index.a, {
       type: "icon-picker-color"
     })), React.createElement(K, {
       color: O,
@@ -484,12 +483,12 @@ var X = memo(forwardRef(function (e, t) {
   }, React.createElement("img", {
     alt: "",
     className: "coco-palette-more-image",
-    src: require("./866")
+    src: require(/* 866 */"./866")
   }), React.createElement("span", {
     className: "coco-palette-more-title"
-  }, $$_710$a$formatMessage({
+  }, Module_710$a$formatMessage({
     id: "colorPicker.more"
-  }))), React.createElement($$_94_index.a, {
+  }))), React.createElement(Src_shared_ui_components_iconfont_index.a, {
     className: "coco-palette-more-arrow",
     type: "icon-fold"
   })))))

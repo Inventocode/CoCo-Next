@@ -6,36 +6,36 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$_374 from "./374"
-import * as /* [auto-meaningful-name] */$_503 from "./503"
-import * as /* [auto-meaningful-name] */$$_37_index from "../37/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_editor_redux_common_actions from "../../../../../src/editor/redux/common/actions"
-import * as /* [auto-meaningful-name] */$$_28_index from "../28/index"
-var /* [auto-meaningful-name] */$_374$FieldTextInput$prototype$show_editor = $_374.FieldTextInput.prototype.show_editor
-$_374.FieldTextInput.prototype.show_editor = function () {
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Module_374 from /* 374 */"./374"
+import * as /* [auto-meaningful-name] */Module_503 from /* 503 */"./503"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../37/index"
+import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../../src/editor/redux/common/actions"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../28/index"
+var /* [auto-meaningful-name] */Module_374$FieldTextInput$prototype$show_editor = Module_374.FieldTextInput.prototype.show_editor
+Module_374.FieldTextInput.prototype.show_editor = function () {
   var /* [auto-meaningful-name] */this$source_block
   var t = this
-  var n = $_374$FieldTextInput$prototype$show_editor.call(this)
+  var n = Module_374$FieldTextInput$prototype$show_editor.call(this)
   if ("text_rich_text" === (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.type)) {
-    $$_37_index.a($$_$$_$$_$$_$$_src_editor_redux_common_actions.Bh({
+    Module_37.a(Src_editor_redux_common_actions.Bh({
       content: this.get_value(),
       onConfirm: function (e) {
-        t.set_value($$_28_index.i(e))
+        t.set_value(Module_28.i(e))
       }
     }))
-    $$_$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.widget_div.hide()
+    Src_shared_packages_Crc_blink_src_index.Blink.widget_div.hide()
   }
   return n
 }
-$_374.FieldTextInput.prototype.get_display_text = function () {
+Module_374.FieldTextInput.prototype.get_display_text = function () {
   var /* [auto-meaningful-name] */this$source_block
   if ("text_rich_text" === (null === (this$source_block = this.source_block) || undefined === this$source_block ? undefined : this$source_block.type)) {
     var t = this.get_value()
     var n = document.createElement("div")
     n.innerHTML = t
     var /* [auto-meaningful-name] */n$innerText = n.innerText
-    return $$_28_index.i(n$innerText)
+    return Module_28.i(n$innerText)
   }
-  return $_503.Field.prototype.get_display_text.call(this)
+  return Module_503.Field.prototype.get_display_text.call(this)
 }

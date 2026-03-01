@@ -7,17 +7,16 @@
 "use strict"
 
 import { ID, uM, mM } from "./index__part-192"
-import * as Et from "./9"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import * as D from "./6"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import /* [auto-meaningful-name] */React from "react"
-import { memo, useRef, useState, useCallback, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_137 from "./137"
-import /* [auto-meaningful-name] */$_1371 from "./137"
-var vM = memo(function (e) {
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_137 from /* 137 */"./137"
+import /* [auto-meaningful-name] */Module_1371 from /* 137 */"./137"
+var vM = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$action = e.action
   var /* [auto-meaningful-name] */e$selected = e.selected
   var /* [auto-meaningful-name] */e$dragging = e.dragging
@@ -35,21 +34,21 @@ var vM = memo(function (e) {
     var t = e.styleList[0]
     if (t) {
       var /* [auto-meaningful-name] */t$source = t.source
-      return Et.mb(t$source)
+      return Module_9.mb(t$source)
     }
   }(e$action)
-  var _ = useRef(null)
-  var v = useState(false)
-  var b = $_10_index.a(v, 2)
+  var _ = React1.useRef(null)
+  var v = React1.useState(false)
+  var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = useCallback(function (e) {
+  var O = React1.useCallback(function (e) {
     var /* [auto-meaningful-name] */_$current = _.current
     if (_$current && e.target !== _$current) {
       _$current.blur()
     }
   }, [])
-  useEffect(function () {
+  React1.useEffect(function () {
     var /* [auto-meaningful-name] */_$current
     var /* [auto-meaningful-name] */_$current1
     if (y) {
@@ -65,17 +64,17 @@ var vM = memo(function (e) {
     ref: e$innerRef
   }, e$draggableProps, e$dragHandleProps, {
     id: c,
-    className: Classnames($_1371.actionItem, e$dragging && $_1371.dragging, e$selected && $_1371.selected),
+    className: Classnames(Module_1371.actionItem, e$dragging && Module_1371.dragging, e$selected && Module_1371.selected),
     onClick: e$onClick
   }), React.createElement("div", {
-    className: $_1371.actionImg
+    className: Module_1371.actionImg
   }, g ? React.createElement("img", {
     src: g,
     alt: e$action$name
   }) : React.createElement("div", {
-    className: $_1371.emptyImg
+    className: Module_1371.emptyImg
   })), React.createElement("div", {
-    className: $_1371.actionName
+    className: Module_1371.actionName
   }, y ? React.createElement("input", {
     type: "text",
     maxLength: 20,
@@ -90,10 +89,10 @@ var vM = memo(function (e) {
       var /* [auto-meaningful-name] */e$target$value = e.target.value
       E(false)
       if (e$target$value && 0 !== e$target$value.trim().length && e$target$value !== e$action$name) {
-        e$target$value = Et.ac(e$target$value, e$actionList.map(function (e) {
+        e$target$value = Module_9.ac(e$target$value, e$actionList.map(function (e) {
           return e.name
         }))
-        var r = D.a(D.a({}, e$action), {}, {
+        var r = Module_6.a(Module_6.a({}, e$action), {}, {
           name: e$target$value
         })
         e$onChange(r)
@@ -106,34 +105,34 @@ var vM = memo(function (e) {
       }
     },
     ref: _,
-    className: $_1371.nameInput
+    className: Module_1371.nameInput
   }) : React.createElement("div", {
-    className: $_1371.nameText,
+    className: Module_1371.nameText,
     onClick: function () {
       if (e$selected) {
         E(true)
       }
     }
   }, e$action$name)), !y && React.createElement("div", {
-    className: $_1371.deleteContainer
+    className: Module_1371.deleteContainer
   }, React.createElement("div", {
-    className: $_1371.copyButton,
+    className: Module_1371.copyButton,
     onClick: function (e) {
       e.stopPropagation()
       e$onCopy()
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-copy-slight",
-    className: $_1371.copyIcon
+    className: Module_1371.copyIcon
   })), React.createElement("div", {
-    className: $_1371.deleteButton,
+    className: Module_1371.deleteButton,
     onClick: function (e) {
       e.stopPropagation()
       e$onDelete()
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-close",
-    className: $_1371.deleteIcon
+    className: Module_1371.deleteIcon
   }))))
 })
 var bM = {
@@ -149,12 +148,12 @@ function yM(e) {
   var /* [auto-meaningful-name] */e$handleActionCopy = e.handleActionCopy
   var /* [auto-meaningful-name] */e$getActionDomId = e.getActionDomId
   var /* [auto-meaningful-name] */e$onActionListChange = e.onActionListChange
-  var l = useRef(bM)
-  var u = useState("")
-  var d = $_10_index.a(u, 2)
+  var l = React1.useRef(bM)
+  var u = React1.useState("")
+  var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = useCallback(function () {
+  var g = React1.useCallback(function () {
     var e
     var t
     var n = null === (e = document.getElementById("ACTION_LIST")) || undefined === e ? undefined : e.closest(".coco-dialog-wrapper.show")
@@ -164,7 +163,7 @@ function yM(e) {
       y: r.y
     } : bM
   }, [])
-  useEffect(function () {
+  React1.useEffect(function () {
     window.addEventListener("scroll", g)
     return function () {
       return window.removeEventListener("scroll", g)
@@ -196,7 +195,7 @@ function yM(e) {
   }, function (e) {
     return React.createElement("ul", Object.assign({
       id: "ACTION_LIST",
-      className: $_1371.actionList,
+      className: Module_1371.actionList,
       ref: e.innerRef
     }, e.droppableProps), e$actionList.map(function (e, c) {
       return React.createElement(uM, {
@@ -243,5 +242,5 @@ function yM(e) {
     }), e.placeholder)
   }))
 }
-memo(yM)
+React1.memo(yM)
 export { yM }

@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("./1136/index")
+var r = require(/* 1136 */"./1136/index")
 function i(e, t, n) {
   this.message = n || i.message(e, t)
   this.missingRef = r.url(e, t)

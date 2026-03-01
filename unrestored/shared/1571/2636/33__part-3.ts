@@ -7,29 +7,29 @@
 "use strict"
 
 import { N } from "../../../../src/editor/widget/internal/storage"
-import * as C from "./53"
-import * as /* [auto-meaningful-name] */$_26_index from "./26/index"
-import * as /* [auto-meaningful-name] */$_37_index from "./37/index"
-import * as E from "./75"
-import * as /* [auto-meaningful-name] */$_133 from "./133"
-import * as /* [auto-meaningful-name] */$_190 from "./190"
-import * as v from "./95"
-import * as /* [auto-meaningful-name] */$_314 from "./314"
-import * as g from "./83"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_tools_index from "../../../../src/shared/tools/index"
-import * as h from "./64"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_42_index from "./42/index"
-import * as /* [auto-meaningful-name] */$_47_index from "./47/index"
-import * as /* [auto-meaningful-name] */$_25_index from "./25/index"
-import * as l from "./6"
-import * as c from "./11"
-import * as /* [auto-meaningful-name] */$_10_index from "./10/index"
-import * as a from "./7"
-import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as /* [auto-meaningful-name] */$_48_3_index from "./48/3/index"
-import * as /* [auto-meaningful-name] */$_37_22 from "./37/22"
+import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
+import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
+import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"./37/index"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
+import * as /* [auto-meaningful-name] */Module_190 from /* 190 */"./190"
+import * as /* [auto-meaningful-name] */Module_95 from /* 95 */"./95"
+import * as /* [auto-meaningful-name] */Module_314 from /* 314 */"./314"
+import * as /* [auto-meaningful-name] */Module_83 from /* 83 */"./83"
+import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
+import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_42 from /* 42 */"./42/index"
+import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"./47/index"
+import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
+import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
+import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
+import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_3 from /* 3 */"./48/3/index"
+import * as /* [auto-meaningful-name] */Module_22 from /* 22 */"./37/22"
 var re = RegeneratorRuntime.mark(_e)
 var oe = RegeneratorRuntime.mark(ve)
 var ie = RegeneratorRuntime.mark(be)
@@ -42,8 +42,8 @@ var de = .8
 var pe = 1
 function fe() {
   var e = []
-  $_42_index.g.forEach(function (t) {
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.j) {
+  Module_42.g.forEach(function (t) {
+    if (t.type === Src_editor_widget_builtIn_types.j) {
       e.push(t)
     }
   })
@@ -51,11 +51,11 @@ function fe() {
 }
 function he() {
   var e = []
-  $_42_index.g.forEach(function (t) {
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.k && t.attributes.cloudTableId) {
+  Module_42.g.forEach(function (t) {
+    if (t.type === Src_editor_widget_builtIn_types.k && t.attributes.cloudTableId) {
       e.push(t.attributes.cloudTableId)
     }
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
+    if (t.type === Src_editor_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
       e.push(t.attributes.dataSource)
     }
   })
@@ -65,15 +65,15 @@ function me(e) {
   var t = []
   for (var n in e) {
     var r = e[n]
-    if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.j && r.attributes.cloudDictId !== se) {
+    if (r.type === Src_editor_widget_builtIn_types.j && r.attributes.cloudDictId !== se) {
       t.push(Lodash.cloneDeep(r))
       r.attributes.cloudDictId = se
     }
-    if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.k && r.attributes.cloudTableId !== se) {
+    if (r.type === Src_editor_widget_builtIn_types.k && r.attributes.cloudTableId !== se) {
       t.push(Lodash.cloneDeep(r))
       r.attributes.cloudTableId = se
     }
-    if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A && "number" === typeof r.attributes.dataSource) {
+    if (r.type === Src_editor_widget_builtIn_types.A && "number" === typeof r.attributes.dataSource) {
       t.push(Lodash.cloneDeep(r))
       r.attributes.dataSource = ""
     }
@@ -81,7 +81,7 @@ function me(e) {
   return t
 }
 function ge() {
-  return $_42_index.b.clear()
+  return Module_42.b.clear()
 }
 function _e() {
   var /* [auto-meaningful-name] */r$sent
@@ -92,14 +92,14 @@ function _e() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2
-          return $_48_3_index.f($_37_22.p)
+          return Module_3.f(Module_22.p)
         case 2:
           r$sent = r.sent
           t = fe()
           n = t.map(function (e) {
             return e.attributes.cloudDictId
           })
-          return r.abrupt("return", $$_$$_$$_$$_src_shared_tools_index.r(n, $_25_index.a(r$sent)).filter(function (e) {
+          return r.abrupt("return", Src_shared_tools_index.r(n, Module_25.a(r$sent)).filter(function (e) {
             return e !== se
           }))
         case 6:
@@ -117,11 +117,11 @@ function ve() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return $_48_3_index.f($_37_22.q)
+          return Module_3.f(Module_22.q)
         case 2:
           n$sent = n.sent
           t = he()
-          return n.abrupt("return", $$_$$_$$_$$_src_shared_tools_index.r(t, $_25_index.a(n$sent)).filter(function (e) {
+          return n.abrupt("return", Src_shared_tools_index.r(t, Module_25.a(n$sent)).filter(function (e) {
             return e !== se
           }))
         case 5:
@@ -140,14 +140,14 @@ function be() {
       switch (r.prev = r.next) {
         case 0:
           r.next = 2
-          return $_48_3_index.f($_37_22.p)
+          return Module_3.f(Module_22.p)
         case 2:
           r$sent = r.sent
           t = fe()
           n = t.map(function (e) {
             return e.attributes.cloudDictId
           })
-          return r.abrupt("return", $$_$$_$$_$$_src_shared_tools_index.r($_25_index.a(r$sent), n).filter(function (e) {
+          return r.abrupt("return", Src_shared_tools_index.r(Module_25.a(r$sent), n).filter(function (e) {
             return e !== se
           }))
         case 6:
@@ -165,11 +165,11 @@ function ye() {
       switch (n.prev = n.next) {
         case 0:
           n.next = 2
-          return $_48_3_index.f($_37_22.q)
+          return Module_3.f(Module_22.q)
         case 2:
           n$sent = n.sent
           t = he()
-          return n.abrupt("return", $$_$$_$$_$$_src_shared_tools_index.r($_25_index.a(n$sent), t).filter(function (e) {
+          return n.abrupt("return", Src_shared_tools_index.r(Module_25.a(n$sent), t).filter(function (e) {
             return e !== se
           }))
         case 5:
@@ -191,7 +191,7 @@ function Ee(e) {
           var r = (null === (n = N(t.type)) || undefined === n ? undefined : n.contentTextField) || ""
           return t.attributes[r] || ""
         }
-      }(e).replace(C.E, "").substr(0, 20)
+      }(e).replace(Module_53.E, "").substr(0, 20)
     }
     return n || ""
   }
@@ -230,17 +230,17 @@ function Oe(e, t) {
 }
 function we() {
   var e = false
-  $_42_index.g.forEach(function (t) {
-    if ((null === t || undefined === t ? undefined : t.type) === $$_$$_$$_$$_src_editor_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
+  Module_42.g.forEach(function (t) {
+    if ((null === t || undefined === t ? undefined : t.type) === Src_editor_widget_builtIn_types.A && "number" === typeof t.attributes.dataSource) {
       e = true
     }
   })
   return e
 }
 function Ce(e, t) {
-  var /* [auto-meaningful-name] */$_37_index$d$getState$project$screens = $_37_index.d.getState().project.screens
+  var /* [auto-meaningful-name] */Module_37$d$getState$project$screens = Module_37.d.getState().project.screens
   var r = new Set()
-  Array.from($_37_index$d$getState$project$screens).forEach(function (t) {
+  Array.from(Module_37$d$getState$project$screens).forEach(function (t) {
     if (t.id !== e) {
       r.add(t.title)
     }
@@ -248,27 +248,27 @@ function Ce(e, t) {
   return r.has(t)
 }
 function Te(e) {
-  $_42_index.g.delete(e)
+  Module_42.g.delete(e)
 }
 function Se(e) {
-  return $_42_index.g.get(e)
+  return Module_42.g.get(e)
 }
 function Ae(e) {
-  var t = $_42_index.g.get(e)
+  var t = Module_42.g.get(e)
   if (t && t.parentId) {
-    return $_42_index.g.get(t.parentId)
+    return Module_42.g.get(t.parentId)
   }
 }
 function Ie(e) {
   var t
   var n = []
-  var r = $_42_index.g.keys()
-  var o = $_47_index.a(r)
+  var r = Module_42.g.keys()
+  var o = Module_47.a(r)
   try {
     for (o.s(); !(t = o.n()).done;) {
       var i
       var /* [auto-meaningful-name] */t$value = t.value
-      if ((null === (i = $_42_index.g.get(t$value)) || undefined === i ? undefined : i.parentId) === e) {
+      if ((null === (i = Module_42.g.get(t$value)) || undefined === i ? undefined : i.parentId) === e) {
         n.push(t$value)
       }
     }
@@ -280,15 +280,15 @@ function Ie(e) {
   return n
 }
 function je() {
-  return $_37_index.d.getState().project.globalWidgetIds
+  return Module_37.d.getState().project.globalWidgetIds
 }
 function Ne(e, t) {
-  return $_42_index.g.set(e, t)
+  return Module_42.g.set(e, t)
 }
 function Re() {
   var e = []
-  $_42_index.g.forEach(function (t) {
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.l) {
+  Module_42.g.forEach(function (t) {
+    if (t.type === Src_editor_widget_builtIn_types.l) {
       e.push(t)
     }
   })
@@ -296,20 +296,20 @@ function Re() {
 }
 function ke() {
   var e = []
-  $_42_index.g.forEach(function (t) {
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.h) {
+  Module_42.g.forEach(function (t) {
+    if (t.type === Src_editor_widget_builtIn_types.h) {
       e.push(t)
     }
   })
   return e
 }
 function xe() {
-  var /* [auto-meaningful-name] */$_37_index$d$getState$project$currentScreenIndex = $_37_index.d.getState().project.currentScreenIndex
-  return $_37_index.d.getState().project.screens.get($_37_index$d$getState$project$currentScreenIndex)
+  var /* [auto-meaningful-name] */Module_37$d$getState$project$currentScreenIndex = Module_37.d.getState().project.currentScreenIndex
+  return Module_37.d.getState().project.screens.get(Module_37$d$getState$project$currentScreenIndex)
 }
 function De(e) {
   var t = []
-  $_42_index.g.forEach(function (n) {
+  Module_42.g.forEach(function (n) {
     if (n.type === e) {
       t.push(n.id)
     }
@@ -342,7 +342,7 @@ function Me(e) {
   return n
 }
 function Le(e) {
-  for (var t in $_42_index.g.clear(), e) $_42_index.g.set(t, e[t])
+  for (var t in Module_42.g.clear(), e) Module_42.g.set(t, e[t])
 }
 function Pe(e) {
   var t = !(arguments.length > 1 && undefined !== arguments[1]) || arguments[1]
@@ -360,7 +360,7 @@ function Pe(e) {
     }
     var a = i(o)
     r.push(a)
-    var s = h.a(o.type)
+    var s = Module_64.a(o.type)
     a.id = s
     if (o.title) {
       var c = vt(o.type, Me(o.type), o.title)
@@ -375,10 +375,10 @@ function Pe(e) {
       var d = Se(a.parentId)
       if (d) {
         var p = d
-        p.widgetIds = [].concat($_25_index.a(p.widgetIds), [s])
+        p.widgetIds = [].concat(Module_25.a(p.widgetIds), [s])
       }
     }
-    if (o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
+    if (o.type === Src_editor_widget_builtIn_types.f) {
       var m = a
       m.widgetIds = []
       o.widgetIds.forEach(function (e) {
@@ -391,7 +391,7 @@ function Pe(e) {
         }
       })
     }
-    if (o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.x || o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A) {
+    if (o.type === Src_editor_widget_builtIn_types.x || o.type === Src_editor_widget_builtIn_types.A) {
       var g = a
       for (var _ in g.widgetIds = [], o.attributes.templateSlotMap) {
         var v = Pe(o.attributes.templateSlotMap[_].widgetId, true, s)
@@ -423,7 +423,7 @@ function Be(e, t, n) {
         return t
       }(r);
       [].push(o)
-      var i = h.a(r.type)
+      var i = Module_64.a(r.type)
       o.id = i
       var a = t.indexOf(e)
       if (a > -1) {
@@ -434,7 +434,7 @@ function Be(e, t, n) {
       if (n) {
         o.parentId = n
       }
-      if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f) {
+      if (r.type === Src_editor_widget_builtIn_types.f) {
         var s = o
         s.widgetIds = []
         r.widgetIds.forEach(function (e) {
@@ -444,7 +444,7 @@ function Be(e, t, n) {
           }
         })
       }
-      if (r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.x || r.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.A) {
+      if (r.type === Src_editor_widget_builtIn_types.x || r.type === Src_editor_widget_builtIn_types.A) {
         var c = o
         for (var l in c.widgetIds = [], r.attributes.templateSlotMap) {
           var u = Be(r.attributes.templateSlotMap[l].widgetId, t, i)
@@ -476,39 +476,39 @@ function Ge(e, t) {
 function We(e, t, n) {
   var r = Se(e)
   if (r) {
-    r.attributes = l.a(l.a({}, r.attributes), {}, c.a({}, t, n))
+    r.attributes = Module_6.a(Module_6.a({}, r.attributes), {}, Module_11.a({}, t, n))
   }
 }
 function Ue(e, t) {
   switch (t) {
-    case g.b.CONTAINED_ICON:
-    case g.b.OUTLINED_ICON:
-      return $_314.e[e]
-    case g.b.CONTAINED_TEXT:
-    case g.b.OUTLINED_TEXT:
-      return $_314.f[e]
+    case Module_83.b.CONTAINED_ICON:
+    case Module_83.b.OUTLINED_ICON:
+      return Module_314.e[e]
+    case Module_83.b.CONTAINED_TEXT:
+    case Module_83.b.OUTLINED_TEXT:
+      return Module_314.f[e]
   }
 }
 var He = function (e) {
   switch (e) {
-    case g.b.OUTLINED_TEXT:
-    case g.b.CONTAINED_TEXT:
+    case Module_83.b.OUTLINED_TEXT:
+    case Module_83.b.CONTAINED_TEXT:
       return "TEXT"
-    case g.b.OUTLINED_ICON:
-    case g.b.CONTAINED_ICON:
+    case Module_83.b.OUTLINED_ICON:
+    case Module_83.b.CONTAINED_ICON:
       return "ICON"
   }
 }
 var Ve = function (e) {
-  var t = $_42_index.g.get(e)
-  return t && t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.d ? He(t.attributes.mode) : ""
+  var t = Module_42.g.get(e)
+  return t && t.type === Src_editor_widget_builtIn_types.d ? He(t.attributes.mode) : ""
 }
 var ze = function (e) {
-  return v.p[e]
+  return Module_95.p[e]
 }
 function Ye(e) {
-  return Array.from($_42_index.g).some(function (t) {
-    return t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v && t[1].attributes.fileId === e || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.z && t[1].attributes.backgroundImage === e || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.w && t[1].attributes.backgroundImage === e || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.E && (t[1].attributes.backgroundImageFileId === e || t[1].attributes.handleImageFileId === e || t[1].attributes.trackImageFileId === e) || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f && t[1].attributes.backgroundImage === e || !(t[1].type !== $$_$$_$$_$$_src_editor_widget_builtIn_types.a || !t[1].attributes.actionList.some(function (t) {
+  return Array.from(Module_42.g).some(function (t) {
+    return t[1].type === Src_editor_widget_builtIn_types.v && t[1].attributes.fileId === e || t[1].type === Src_editor_widget_builtIn_types.z && t[1].attributes.backgroundImage === e || t[1].type === Src_editor_widget_builtIn_types.w && t[1].attributes.backgroundImage === e || t[1].type === Src_editor_widget_builtIn_types.E && (t[1].attributes.backgroundImageFileId === e || t[1].attributes.handleImageFileId === e || t[1].attributes.trackImageFileId === e) || t[1].type === Src_editor_widget_builtIn_types.f && t[1].attributes.backgroundImage === e || !(t[1].type !== Src_editor_widget_builtIn_types.a || !t[1].attributes.actionList.some(function (t) {
       return t.styleList.some(function (t) {
         return t.source === e
       })
@@ -517,11 +517,11 @@ function Ye(e) {
 }
 function Ke(e) {
   var t = []
-  Array.from($_42_index.g).forEach(function (n) {
-    var r = $_10_index.a(n, 2)
+  Array.from(Module_42.g).forEach(function (n) {
+    var r = Module_10.a(n, 2)
     r[0]
     var o = r[1]
-    if (o.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.a && o.attributes.actionList.some(function (t) {
+    if (o.type === Src_editor_widget_builtIn_types.a && o.attributes.actionList.some(function (t) {
       return t.styleList.some(function (t) {
         return t.source === e
       })
@@ -532,38 +532,38 @@ function Ke(e) {
   return t
 }
 function qe(e) {
-  return Array.from($_42_index.g).some(function (t) {
-    return t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.b && t[1].attributes.fileId === e
+  return Array.from(Module_42.g).some(function (t) {
+    return t[1].type === Src_editor_widget_builtIn_types.b && t[1].attributes.fileId === e
   })
 }
 function Xe(e) {
-  return Array.from($_42_index.g).some(function (t) {
-    return (t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.d || t[1].type === $$_$$_$$_$$_src_editor_widget_builtIn_types.z) && t[1].attributes.iconId === e
+  return Array.from(Module_42.g).some(function (t) {
+    return (t[1].type === Src_editor_widget_builtIn_types.d || t[1].type === Src_editor_widget_builtIn_types.z) && t[1].attributes.iconId === e
   })
 }
 function Qe(e) {
   var /* [auto-meaningful-name] */e$size = e.size
-  return !e.attributes.fileId && e$size.height === $_133.h && e$size.width === $_133.l
+  return !e.attributes.fileId && e$size.height === Module_133.h && e$size.width === Module_133.l
 }
 function Ze(e) {
   var /* [auto-meaningful-name] */e$width = e.width
   var /* [auto-meaningful-name] */e$height = e.height
-  var r = E.d
-  var o = E.e
-  return e$width > o || e$height > r ? e$width / e$height > o / r ? {
-    width: o,
-    height: e$height / e$width * o
+  var /* [auto-meaningful-name] */Module_75$d = Module_75.d
+  var /* [auto-meaningful-name] */Module_75$e = Module_75.e
+  return e$width > Module_75$e || e$height > Module_75$d ? e$width / e$height > Module_75$e / Module_75$d ? {
+    width: Module_75$e,
+    height: e$height / e$width * Module_75$e
   } : {
-    width: e$width / e$height * r,
-    height: r
+    width: e$width / e$height * Module_75$d,
+    height: Module_75$d
   } : {
     width: e$width,
     height: e$height
   }
 }
 function Je(e, t) {
-  $_42_index.g.forEach(function (n) {
-    if (n.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v) {
+  Module_42.g.forEach(function (n) {
+    if (n.type === Src_editor_widget_builtIn_types.v) {
       if (n.attributes.fileId === e) {
         n.attributes.fileId = t
       }
@@ -595,13 +595,13 @@ function Je(e, t) {
   })
 }
 function $e() {
-  return $_42_index.a
+  return Module_42.a
 }
 function et() {
   var e = arguments.length > 0 && undefined !== arguments[0] && arguments[0]
   var t = {}
-  $_42_index.a.forEach(function (n) {
-    t[n.id] = l.a(l.a({}, n), {}, {
+  Module_42.a.forEach(function (n) {
+    t[n.id] = Module_6.a(Module_6.a({}, n), {}, {
       cdnUrl: e && n.source || n.cdnUrl
     })
   })
@@ -611,24 +611,24 @@ function tt(e) {
   return e.cdnUrl || e.source
 }
 function nt(e) {
-  var t = $_42_index.a.find(function (t) {
+  var t = Module_42.a.find(function (t) {
     return t.id === e
   })
   return (null === t || undefined === t ? undefined : t.source) || (null === t || undefined === t ? undefined : t.cdnUrl)
 }
 function rt(e) {
-  return $_42_index.a.find(function (t) {
+  return Module_42.a.find(function (t) {
     return t.id === e
   })
 }
 function ot(e, t) {
-  return $_42_index.a.find(function (n) {
+  return Module_42.a.find(function (n) {
     return n.groupId === e && n.groupImageIndex === t
   })
 }
 function it(e) {
   if ("string" === typeof e) {
-    if ($$_$$_$$_$$_src_shared_tools_index.U(e)) {
+    if (Src_shared_tools_index.U(e)) {
       return e
     }
     var t = rt(e)
@@ -643,13 +643,13 @@ function it(e) {
 }
 function at(e, t) {
   if (undefined !== t) {
-    $_42_index.a.splice(t, 0, e)
+    Module_42.a.splice(t, 0, e)
   } else {
-    $_42_index.a.push(e)
+    Module_42.a.push(e)
   }
 }
 function st(e, t) {
-  var n = $_42_index.a.find(function (t) {
+  var n = Module_42.a.find(function (t) {
     return t.id === e
   })
   if (n) {
@@ -657,7 +657,7 @@ function st(e, t) {
   }
 }
 function ct(e, t) {
-  $_42_index.a.filter(function (t) {
+  Module_42.a.filter(function (t) {
     return t.groupId === e
   }).forEach(function (e) {
     e.groupId = t
@@ -679,20 +679,20 @@ function ut(e, t, n) {
   }
 }
 function dt(e) {
-  return $_37_index.d.getState().resource.soundFileList.find(function (t) {
+  return Module_37.d.getState().resource.soundFileList.find(function (t) {
     return t.id === e
   })
 }
 function pt() {
-  return $_37_index.d.getState().resource.soundFileList
+  return Module_37.d.getState().resource.soundFileList
 }
 function ft(e) {
-  return $_37_index.d.getState().resource.iconFileList.find(function (t) {
+  return Module_37.d.getState().resource.iconFileList.find(function (t) {
     return t.id === e
   })
 }
 function ht() {
-  return $_37_index.d.getState().resource.iconFileList
+  return Module_37.d.getState().resource.iconFileList
 }
 function mt(e, t) {
   if (t.includes(e)) {
@@ -756,13 +756,13 @@ function yt(e, t, n) {
   r = r.filter(function (t) {
     return t !== e
   })
-  var o = n.replace(C.E, "")
+  var o = n.replace(Module_53.E, "")
   o = o.trim()
-  return o = vt(t, r, o = $_190.c(o, 40))
+  return o = vt(t, r, o = Module_190.c(o, 40))
 }
 function Et(e) {
   var t = e.slice(0, e.lastIndexOf(".") < 0 ? undefined : e.lastIndexOf("."))
-  var n = $$_$$_$$_$$_src_shared_tools_index.I(e)
+  var n = Src_shared_tools_index.I(e)
   var r = []
   $e().forEach(function (e) {
     if (e.extension === n) {
@@ -775,7 +775,7 @@ function Ot(e) {
   return wt.apply(this, arguments)
 }
 function wt() {
-  return (wt = a.a(RegeneratorRuntime.mark(function e(t) {
+  return (wt = Module_7.a(RegeneratorRuntime.mark(function e(t) {
     var n
     var /* [auto-meaningful-name] */e$sent
     var o
@@ -785,7 +785,7 @@ function wt() {
           case 0:
             n = Et(t.name)
             e.next = 3
-            return $$_$$_$$_$$_src_shared_tools_index.ob(t)
+            return Src_shared_tools_index.ob(t)
           case 3:
             if (!(e$sent = e.sent)) {
               e.next = 8
@@ -795,7 +795,7 @@ function wt() {
               cdnUrl: "",
               id: n,
               source: e$sent,
-              extension: $$_$$_$$_$$_src_shared_tools_index.I(t.name)
+              extension: Src_shared_tools_index.I(t.name)
             })
             return e.abrupt("return", o)
           case 8:
@@ -809,17 +809,17 @@ function wt() {
   }))).apply(this, arguments)
 }
 function Ct(e) {
-  $_42_index.a.length = 0
+  Module_42.a.length = 0
   var t
-  var n = $_47_index.a(e)
+  var n = Module_47.a(e)
   try {
     for (n.s(); !(t = n.n()).done;) {
       var /* [auto-meaningful-name] */t$value = t.value
       var /* [auto-meaningful-name] */t$value$source = t$value.source
-      if (t$value$source && $$_$$_$$_$$_src_shared_tools_index.R(t$value$source)) {
-        t$value.source = $$_$$_$$_$$_src_shared_tools_index.n(t$value$source)
+      if (t$value$source && Src_shared_tools_index.R(t$value$source)) {
+        t$value.source = Src_shared_tools_index.n(t$value$source)
       }
-      $_42_index.a.push(t$value)
+      Module_42.a.push(t$value)
     }
   } catch (i) {
     n.e(i)
@@ -831,7 +831,7 @@ function Tt() {
   return St.apply(this, arguments)
 }
 function St() {
-  return (St = a.a(RegeneratorRuntime.mark(function e() {
+  return (St = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var n
     var r
@@ -844,7 +844,7 @@ function St() {
         switch (e.prev = e.next) {
           case 0:
             t = []
-            n = $_47_index.a($_42_index.a)
+            n = Module_47.a(Module_42.a)
             e.prev = 2
             n.s()
           case 4:
@@ -852,12 +852,12 @@ function St() {
               e.next = 18
               break
             }
-            if (r$value = r.value, a = l.a({}, r$value), a$cdnUrl = a.cdnUrl, a$source = a.source, a$cdnUrl || !a$source || !$$_$$_$$_$$_src_shared_tools_index.P(a$source)) {
+            if (r$value = r.value, a = Module_6.a({}, r$value), a$cdnUrl = a.cdnUrl, a$source = a.source, a$cdnUrl || !a$source || !Src_shared_tools_index.P(a$source)) {
               e.next = 14
               break
             }
             e.next = 11
-            return $$_$$_$$_$$_src_shared_tools_index.d(a$source)
+            return Src_shared_tools_index.d(a$source)
           case 11:
             a.source = e.sent
             e.next = 15
@@ -896,7 +896,7 @@ function At() {
   return It.apply(this, arguments)
 }
 function It() {
-  return (It = a.a(RegeneratorRuntime.mark(function e() {
+  return (It = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var n
     var r
@@ -909,9 +909,9 @@ function It() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            t = $_37_index.d.getState().resource.soundFileList.toJS()
+            t = Module_37.d.getState().resource.soundFileList.toJS()
             n = []
-            r = $_47_index.a(t)
+            r = Module_47.a(t)
             e.prev = 3
             r.s()
           case 5:
@@ -919,12 +919,12 @@ function It() {
               e.next = 19
               break
             }
-            if (o$value = o.value, s = l.a({}, o$value), s$cdnUrl = s.cdnUrl, s$source = s.source, s$cdnUrl || !s$source || !$$_$$_$$_$$_src_shared_tools_index.P(s$source)) {
+            if (o$value = o.value, s = Module_6.a({}, o$value), s$cdnUrl = s.cdnUrl, s$source = s.source, s$cdnUrl || !s$source || !Src_shared_tools_index.P(s$source)) {
               e.next = 15
               break
             }
             e.next = 12
-            return $$_$$_$$_$$_src_shared_tools_index.d(s$source)
+            return Src_shared_tools_index.d(s$source)
           case 12:
             s.source = e.sent
             e.next = 16
@@ -963,7 +963,7 @@ function jt() {
   return Nt.apply(this, arguments)
 }
 function Nt() {
-  return (Nt = a.a(RegeneratorRuntime.mark(function e() {
+  return (Nt = Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var n
     var r
@@ -976,9 +976,9 @@ function Nt() {
       for (;;) {
         switch (e.prev = e.next) {
           case 0:
-            t = $_37_index.d.getState().resource.iconFileList.toJS()
+            t = Module_37.d.getState().resource.iconFileList.toJS()
             n = []
-            r = $_47_index.a(t)
+            r = Module_47.a(t)
             e.prev = 3
             r.s()
           case 5:
@@ -986,12 +986,12 @@ function Nt() {
               e.next = 19
               break
             }
-            if (o$value = o.value, s = l.a({}, o$value), s$cdnUrl = s.cdnUrl, s$source = s.source, s$cdnUrl || !s$source || !$$_$$_$$_$$_src_shared_tools_index.P(s$source)) {
+            if (o$value = o.value, s = Module_6.a({}, o$value), s$cdnUrl = s.cdnUrl, s$source = s.source, s$cdnUrl || !s$source || !Src_shared_tools_index.P(s$source)) {
               e.next = 15
               break
             }
             e.next = 12
-            return $$_$$_$$_$$_src_shared_tools_index.d(s$source)
+            return Src_shared_tools_index.d(s$source)
           case 12:
             s.source = e.sent
             e.next = 16
@@ -1027,28 +1027,28 @@ function Nt() {
   }))).apply(this, arguments)
 }
 function Rt(e) {
-  var t = $_42_index.a.findIndex(function (t) {
+  var t = Module_42.a.findIndex(function (t) {
     return t.id === e
   })
   !function (e) {
-    $_42_index.g.forEach(function (t) {
-      if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.v && t.attributes.fileId === e) {
+    Module_42.g.forEach(function (t) {
+      if (t.type === Src_editor_widget_builtIn_types.v && t.attributes.fileId === e) {
         t.attributes.fileId = ""
       }
-      if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.f && t.attributes.backgroundImage === e) {
+      if (t.type === Src_editor_widget_builtIn_types.f && t.attributes.backgroundImage === e) {
         t.attributes.backgroundImage = ""
       }
     })
   }(e)
-  $_42_index.a.splice(t, 1)
+  Module_42.a.splice(t, 1)
 }
 function kt(e) {
   var t = document.getElementById(e)
-  return (null === t || undefined === t ? undefined : t.dataset.clickType) === C.h.CLICK
+  return (null === t || undefined === t ? undefined : t.dataset.clickType) === Module_53.h.CLICK
 }
 function xt(e) {
-  $_42_index.g.forEach(function (t) {
-    if (t.type === $$_$$_$$_$$_src_editor_widget_builtIn_types.b && t.attributes.fileId === e) {
+  Module_42.g.forEach(function (t) {
+    if (t.type === Src_editor_widget_builtIn_types.b && t.attributes.fileId === e) {
       t.attributes.fileId = ""
     }
   })
@@ -1057,17 +1057,17 @@ function Dt(e) {
   return !!rt(e)
 }
 function Mt(e, t) {
-  var n = $_26_index.z.checkOtherScreenFieldValueIsSelected(e, t)
-  var /* [auto-meaningful-name] */$_37_index$d$getState$project$screens = $_37_index.d.getState().project.screens
-  var /* [auto-meaningful-name] */$_37_index$d$getState$project$currentScreenIndex = $_37_index.d.getState().project.currentScreenIndex
+  var n = Module_26.z.checkOtherScreenFieldValueIsSelected(e, t)
+  var /* [auto-meaningful-name] */Module_37$d$getState$project$screens = Module_37.d.getState().project.screens
+  var /* [auto-meaningful-name] */Module_37$d$getState$project$currentScreenIndex = Module_37.d.getState().project.currentScreenIndex
   var i = []
-  $_37_index$d$getState$project$screens.forEach(function (e, t) {
+  Module_37$d$getState$project$screens.forEach(function (e, t) {
     if (n.includes(e.id)) {
       i.push(t + 1)
     }
   })
-  if ($_26_index.z.checkFieldValueIsSelected(e, t) && !i.includes($_37_index$d$getState$project$currentScreenIndex + 1)) {
-    i.push($_37_index$d$getState$project$currentScreenIndex + 1)
+  if (Module_26.z.checkFieldValueIsSelected(e, t) && !i.includes(Module_37$d$getState$project$currentScreenIndex + 1)) {
+    i.push(Module_37$d$getState$project$currentScreenIndex + 1)
   }
   i.sort(function (e, t) {
     return e - t
@@ -1076,8 +1076,8 @@ function Mt(e, t) {
 }
 function Lt(e) {
   var t
-  var /* [auto-meaningful-name] */$_37_index$d$getState$project$screens = $_37_index.d.getState().project.screens
-  var r = $_47_index.a($_37_index$d$getState$project$screens)
+  var /* [auto-meaningful-name] */Module_37$d$getState$project$screens = Module_37.d.getState().project.screens
+  var r = Module_47.a(Module_37$d$getState$project$screens)
   try {
     for (r.s(); !(t = r.n()).done;) {
       if (t.value.backgroundImage === e) {
@@ -1092,13 +1092,13 @@ function Lt(e) {
   return false
 }
 function Pt(e) {
-  return Array.from($_42_index.g).some(function (t) {
+  return Array.from(Module_42.g).some(function (t) {
     return t[1].type === e
   })
 }
 function Bt(e) {
   var t = []
-  $_42_index.a.forEach(function (n) {
+  Module_42.a.forEach(function (n) {
     if (n.groupId === e) {
       t.push(n)
     }
@@ -1106,7 +1106,7 @@ function Bt(e) {
   return t
 }
 function Ft(e) {
-  return $_42_index.a.find(function (t) {
+  return Module_42.a.find(function (t) {
     return (null === t || undefined === t ? undefined : t.cdnUrl) === (null === e || undefined === e ? undefined : e.cdnUrl) && t.groupId === e.id
   })
 }

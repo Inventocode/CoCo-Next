@@ -7,14 +7,14 @@
 "use strict"
 
 export { A as a }
-import * as r from "./38"
-import * as /* [auto-meaningful-name] */$_317 from "./317"
-import * as /* [auto-meaningful-name] */$_264 from "./264"
-import * as /* [auto-meaningful-name] */$_365 from "./365"
-import * as /* [auto-meaningful-name] */$_439_index from "./439/index"
-import * as /* [auto-meaningful-name] */$_439_1007 from "./439/1007"
+import * as /* [auto-meaningful-name] */Module_38 from /* 38 */"./38"
+import * as /* [auto-meaningful-name] */Module_317 from /* 317 */"./317"
+import * as /* [auto-meaningful-name] */Module_264 from /* 264 */"./264"
+import * as /* [auto-meaningful-name] */Module_365 from /* 365 */"./365"
+import * as /* [auto-meaningful-name] */Module_439 from /* 439 */"./439/index"
+import * as /* [auto-meaningful-name] */Module_1007 from /* 1007 */"./439/1007"
 function u() {
-  if (!("fetch" in $_365.b())) {
+  if (!("fetch" in Module_365.b())) {
     return false
   }
   try {
@@ -30,7 +30,7 @@ function l(e) {
   return e && /^function fetch\(\)\s+\{\s+\[native code\]\s+\}$/.test(e.toString())
 }
 var f
-var d = $_365.b()
+var d = Module_365.b()
 var h = {}
 var p = {}
 function _(e) {
@@ -43,7 +43,7 @@ function _(e) {
           }
           ["debug", "info", "warn", "error", "log", "assert"].forEach(function (e) {
             if (e in d.console) {
-              $_439_index.b(d.console, e, function (t) {
+              Module_439.b(d.console, e, function (t) {
                 return function () {
                   for (var n = [], r = 0; r < arguments.length; r++) {
                     n[r] = arguments[r]
@@ -73,7 +73,7 @@ function _(e) {
           ["EventTarget", "Node"].forEach(function (t) {
             var n = d[t] && d[t].prototype
             if (n && n.hasOwnProperty && n.hasOwnProperty("addEventListener")) {
-              $_439_index.b(n, "addEventListener", function (t) {
+              Module_439.b(n, "addEventListener", function (t) {
                 return function (n, r, i) {
                   if ("click" === n || "keypress" == n) {
                     try {
@@ -92,7 +92,7 @@ function _(e) {
                   return t.call(this, n, r, i)
                 }
               })
-              $_439_index.b(n, "removeEventListener", function (e) {
+              Module_439.b(n, "removeEventListener", function (e) {
                 return function (t, n, r) {
                   if ("click" === t || "keypress" == t) {
                     try {
@@ -126,7 +126,7 @@ function _(e) {
           var e = []
           var t = []
           var /* [auto-meaningful-name] */XMLHttpRequest$prototype = XMLHttpRequest.prototype
-          $_439_index.b(XMLHttpRequest$prototype, "open", function (n) {
+          Module_439.b(XMLHttpRequest$prototype, "open", function (n) {
             return function () {
               for (var r = [], o = 0; o < arguments.length; o++) {
                 r[o] = arguments[o]
@@ -134,10 +134,10 @@ function _(e) {
               var a = this
               var c = r[1]
               a.__sentry_xhr__ = {
-                method: $_317.h(r[0]) ? r[0].toUpperCase() : r[0],
+                method: Module_317.h(r[0]) ? r[0].toUpperCase() : r[0],
                 url: r[1]
               }
-              if ($_317.h(c) && "POST" === a.__sentry_xhr__.method && c.match(/sentry_key/)) {
+              if (Module_317.h(c) && "POST" === a.__sentry_xhr__.method && c.match(/sentry_key/)) {
                 a.__sentry_own_request__ = true
               }
               var u = function () {
@@ -166,7 +166,7 @@ function _(e) {
                 }
               }
               if ("onreadystatechange" in a && "function" === typeof a.onreadystatechange) {
-                $_439_index.b(a, "onreadystatechange", function (e) {
+                Module_439.b(a, "onreadystatechange", function (e) {
                   return function () {
                     for (var t = [], n = 0; n < arguments.length; n++) {
                       t[n] = arguments[n]
@@ -181,7 +181,7 @@ function _(e) {
               return n.apply(a, r)
             }
           })
-          $_439_index.b(XMLHttpRequest$prototype, "send", function (n) {
+          Module_439.b(XMLHttpRequest$prototype, "send", function (n) {
             return function () {
               for (var r = [], i = 0; i < arguments.length; i++) {
                 r[i] = arguments[i]
@@ -204,7 +204,7 @@ function _(e) {
             if (!u()) {
               return false
             }
-            var e = $_365.b()
+            var e = Module_365.b()
             if (l(e.fetch)) {
               return true
             }
@@ -220,14 +220,14 @@ function _(e) {
                 }
                 e$document.head.removeChild(r)
               } catch (i) {
-                $_264.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", i)
+                Module_264.a.warn("Could not create sandbox iframe for pure fetch check, bailing to window.fetch: ", i)
               }
             }
             return t
           }()) {
             return
           }
-          $_439_index.b(d, "fetch", function (e) {
+          Module_439.b(d, "fetch", function (e) {
             return function () {
               for (var t = [], n = 0; n < arguments.length; n++) {
                 t[n] = arguments[n]
@@ -240,15 +240,15 @@ function _(e) {
                 },
                 startTimestamp: Date.now()
               }
-              g("fetch", r.a({}, i))
+              g("fetch", Module_38.a({}, i))
               return e.apply(d, t).then(function (e) {
-                g("fetch", r.a(r.a({}, i), {
+                g("fetch", Module_38.a(Module_38.a({}, i), {
                   endTimestamp: Date.now(),
                   response: e
                 }))
                 return e
               }, function (e) {
-                g("fetch", r.a(r.a({}, i), {
+                g("fetch", Module_38.a(Module_38.a({}, i), {
                   endTimestamp: Date.now(),
                   error: e
                 }))
@@ -261,7 +261,7 @@ function _(e) {
       case "history":
         !function () {
           if (!function () {
-            var e = $_365.b()
+            var e = Module_365.b()
             var /* [auto-meaningful-name] */e$chrome = e.chrome
             var n = e$chrome && e$chrome.app && e$chrome.app.runtime
             var r = "history" in e && !!e.history.pushState && !!e.history.replaceState
@@ -305,8 +305,8 @@ function _(e) {
               } catch (o) {}
             }
           }
-          $_439_index.b(d.history, "pushState", t)
-          $_439_index.b(d.history, "replaceState", t)
+          Module_439.b(d.history, "pushState", t)
+          Module_439.b(d.history, "replaceState", t)
         }()
         break
       case "error":
@@ -330,7 +330,7 @@ function _(e) {
         }
         break
       default:
-        $_264.a.warn("unknown instrumentation type:", e)
+        Module_264.a.warn("unknown instrumentation type:", e)
     }
   }
 }
@@ -346,12 +346,12 @@ function g(e, t) {
   var /* [auto-meaningful-name] */a$return
   if (e && h[e]) {
     try {
-      for (var a = r.g(h[e] || []), s = a.next(); !s.done; s = a.next()) {
+      for (var a = Module_38.g(h[e] || []), s = a.next(); !s.done; s = a.next()) {
         var /* [auto-meaningful-name] */s$value = s.value
         try {
           s$value(t)
         } catch (l) {
-          $_264.a.error("Error while triggering instrumentation handler.\nType: " + e + "\nName: " + $_439_1007.a(s$value) + "\nError: " + l)
+          Module_264.a.error("Error while triggering instrumentation handler.\nType: " + e + "\nName: " + Module_1007.a(s$value) + "\nError: " + l)
         }
       }
     } catch (f) {
@@ -375,13 +375,13 @@ function v(e) {
   if (undefined === e) {
     e = []
   }
-  return "Request" in d && $_317.d(e[0], Request) && e[0].method ? String(e[0].method).toUpperCase() : e[1] && e[1].method ? String(e[1].method).toUpperCase() : "GET"
+  return "Request" in d && Module_317.d(e[0], Request) && e[0].method ? String(e[0].method).toUpperCase() : e[1] && e[1].method ? String(e[1].method).toUpperCase() : "GET"
 }
 function m(e) {
   if (undefined === e) {
     e = []
   }
-  return "string" === typeof e[0] ? e[0] : "Request" in d && $_317.d(e[0], Request) ? e[0].url : String(e[0])
+  return "string" === typeof e[0] ? e[0] : "Request" in d && Module_317.d(e[0], Request) ? e[0].url : String(e[0])
 }
 var y
 var b

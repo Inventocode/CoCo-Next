@@ -7,29 +7,28 @@
 "use strict"
 
 import { gy } from "./index__part-103"
-import /* [auto-meaningful-name] */$_1037 from "./1037"
-import qv from "./88"
-import * as Qu from "./60"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_ui_components_index from "../../../../src/shared/ui/components/index"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_710 from "./710"
-import /* [auto-meaningful-name] */React from "react"
-import { memo } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_1038 from "./1038"
-import /* [auto-meaningful-name] */$_10381 from "./1038"
-var BE = memo(function (e) {
+import /* [auto-meaningful-name] */Module_1037 from /* 1037 */"./1037"
+import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
+import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_1038 from /* 1038 */"./1038"
+import /* [auto-meaningful-name] */Module_10381 from /* 1038 */"./1038"
+var BE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "textAlign" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var a = e$getValue(n)
-  var s = (0, $_710.a().formatMessage)({
+  var s = (0, Module_710.a().formatMessage)({
     id: e$formConfig.label || "horizontalAlignment"
   })
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, $_10381.content, "changeHorizontalAlign"),
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, Module_10381.content, "changeHorizontalAlign"),
     label: s,
     align: "vertical"
   }, React.createElement(gy, {
@@ -38,41 +37,41 @@ var BE = memo(function (e) {
     textAlign: a
   }))
 })
-var FE = memo(function (e) {
+var FE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "justifyContent" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$textAlign = e.textAlign
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.s, {
+  return React.createElement(Src_shared_ui_components_index.s, {
     value: e$textAlign,
-    className: $_1037.alignRadio,
+    className: Module_1037.alignRadio,
     onChange: function (e) {
       e$onChange(n, e)
     }
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
-    value: Qu.c.FLEX_START
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  }, React.createElement(Src_shared_ui_components_index.t, {
+    value: Module_60.c.FLEX_START
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-vertical-top"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
-    value: Qu.c.CENTER
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  })), React.createElement(Src_shared_ui_components_index.t, {
+    value: Module_60.c.CENTER
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-vertical-center"
-  })), React.createElement($$_$$_$$_$$_src_shared_ui_components_index.t, {
-    value: Qu.c.FLEX_END
-  }, React.createElement($$_$$_$$_$$_src_shared_ui_components_index.j, {
+  })), React.createElement(Src_shared_ui_components_index.t, {
+    value: Module_60.c.FLEX_END
+  }, React.createElement(Src_shared_ui_components_index.j, {
     type: "icon-vertical-bottom"
   })))
 })
-var GE = memo(function (e) {
+var GE = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "justifyContent" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
-  var /* [auto-meaningful-name] */$_710$a$formatMessage = $_710.a().formatMessage
-  return React.createElement($$_$$_$$_$$_src_shared_ui_components_index.i, {
-    className: Classnames(qv.formItemWrapper, $_10381.content, "changeVerticalAlign"),
-    label: $_710$a$formatMessage({
+  var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
+  return React.createElement(Src_shared_ui_components_index.i, {
+    className: Classnames(Module_88.formItemWrapper, Module_10381.content, "changeVerticalAlign"),
+    label: Module_710$a$formatMessage({
       id: "verticalAlignment"
     }),
     align: "vertical"

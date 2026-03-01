@@ -8,16 +8,16 @@
 
 import { p } from "./index__part-0"
 var _
-import * as /* [auto-meaningful-name] */$_698 from "./698"
-import * as /* [auto-meaningful-name] */$_1033 from "./1033"
-import { createRef, isValidElement, createElement, Component } from "react"
-import * as /* [auto-meaningful-name] */$$_140 from "../140"
-import * as /* [auto-meaningful-name] */$$_120 from "../120"
-import * as /* [auto-meaningful-name] */$$_142 from "../142"
-import * as /* [auto-meaningful-name] */$$_106 from "../106"
-import * as /* [auto-meaningful-name] */$$_103 from "../103"
-import * as /* [auto-meaningful-name] */$$_801_index from "../801/index"
-import * as /* [auto-meaningful-name] */$$_315 from "../315"
+import * as /* [auto-meaningful-name] */Module_698 from /* 698 */"./698"
+import * as /* [auto-meaningful-name] */Module_1033 from /* 1033 */"./1033"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../140"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../120"
+import * as /* [auto-meaningful-name] */Module_142 from /* 142 */"../142"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../801/index"
+import * as /* [auto-meaningful-name] */Module_315 from /* 315 */"../315"
 function v(e) {
   return !e || null === e.offsetParent || e.hidden
 }
@@ -26,12 +26,12 @@ function m(e) {
   return !(t && t[1] && t[2] && t[3]) || !(t[1] === t[2] && t[2] === t[3])
 }
 var y = function (e) {
-  $$_120.a(n, e)
-  var t = $$_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n() {
     var e
-    $$_103.a(this, n);
-    (e = t.apply(this, arguments)).containerRef = createRef()
+    Module_103.a(this, n);
+    (e = t.apply(this, arguments)).containerRef = React.createRef()
     e.animationStart = false
     e.destroyed = false
     e.onClick = function (t, n) {
@@ -41,22 +41,22 @@ var y = function (e) {
       var /* [auto-meaningful-name] */e$props$insertExtraNode = e$props.insertExtraNode
       if (!(e$props.disabled || !t || v(t) || t.className.indexOf("-leave") >= 0)) {
         e.extraNode = document.createElement("div")
-        var /* [auto-meaningful-name] */$$_142$aE$extraNode = $$_142.a(e).extraNode
+        var /* [auto-meaningful-name] */Module_142$aE$extraNode = Module_142.a(e).extraNode
         var /* [auto-meaningful-name] */e$context$getPrefixCls = e.context.getPrefixCls
-        $$_142$aE$extraNode.className = "".concat(e$context$getPrefixCls(""), "-click-animating-node")
+        Module_142$aE$extraNode.className = "".concat(e$context$getPrefixCls(""), "-click-animating-node")
         var f = e.getAttributeName()
         t.setAttribute(f, "true")
         if (n && "#ffffff" !== n && "rgb(255, 255, 255)" !== n && m(n) && !/rgba\((?:\d*, ){3}0\)/.test(n) && "transparent" !== n) {
-          $$_142$aE$extraNode.style.borderColor = n
+          Module_142$aE$extraNode.style.borderColor = n
           var d = (null === (t$getRootNode = t.getRootNode) || undefined === t$getRootNode ? undefined : t$getRootNode.call(t)) || t.ownerDocument
           var h = d instanceof Document ? d.body : null !== (d$firstChild = d.firstChild) && undefined !== d$firstChild ? d$firstChild : d
-          _ = $_1033.a("\n      [".concat(e$context$getPrefixCls(""), "-click-animating-without-extra-node='true']::after, .").concat(e$context$getPrefixCls(""), "-click-animating-node {\n        --antd-wave-shadow-color: ").concat(n, ";\n      }"), "antd-wave", {
+          _ = Module_1033.a("\n      [".concat(e$context$getPrefixCls(""), "-click-animating-without-extra-node='true']::after, .").concat(e$context$getPrefixCls(""), "-click-animating-node {\n        --antd-wave-shadow-color: ").concat(n, ";\n      }"), "antd-wave", {
             csp: e.csp,
             attachTo: h
           })
         }
         if (e$props$insertExtraNode) {
-          t.appendChild($$_142$aE$extraNode)
+          t.appendChild(Module_142$aE$extraNode)
         }
         ["transition", "animation"].forEach(function (n) {
           t.addEventListener("".concat(n, "start"), e.onTransitionStart)
@@ -105,20 +105,20 @@ var y = function (e) {
       var /* [auto-meaningful-name] */t$csp = t.csp
       var /* [auto-meaningful-name] */e$props$children = e.props.children
       e.csp = t$csp
-      if (!isValidElement(e$props$children)) {
+      if (!React.isValidElement(e$props$children)) {
         return e$props$children
       }
       var /* [auto-meaningful-name] */e$containerRef = e.containerRef
-      if ($_698.c(e$props$children)) {
-        e$containerRef = $_698.a(e$props$children.ref, e.containerRef)
+      if (Module_698.c(e$props$children)) {
+        e$containerRef = Module_698.a(e$props$children.ref, e.containerRef)
       }
-      return $$_315.a(e$props$children, {
+      return Module_315.a(e$props$children, {
         ref: e$containerRef
       })
     }
     return e
   }
-  $$_106.a(n, [
+  Module_106.a(n, [
     {
       key: "componentDidMount",
       value: function () {
@@ -168,11 +168,11 @@ var y = function (e) {
     }, {
       key: "render",
       value: function () {
-        return createElement($$_801_index.a, null, this.renderWave)
+        return React.createElement(Module_801.a, null, this.renderWave)
       }
     }
   ])
   return n
-}(Component)
-y.contextType = $$_801_index.b
+}(React.Component)
+y.contextType = Module_801.b
 export { y }

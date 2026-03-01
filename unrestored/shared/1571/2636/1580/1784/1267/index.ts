@@ -12,18 +12,18 @@ var s
 var c
 var l
 var /* [auto-meaningful-name] */l$then
-var d = require("../../1785/194")
-var /* [auto-meaningful-name] */require$$_$$_1581_386$f = require("../../1581/386").f
-var /* [auto-meaningful-name] */require$$_$$_1783_1093$set = require("../../1783/1093").set
-var h = require("./1266")
-var m = require("./1687")
-var g = require("./1688")
-var _ = require("../758")
+var d = require(/* 194 */"../../1785/194")
+var /* [auto-meaningful-name] */require_386_$$_$$_1581_386$f = require(/* 386 */"../../1581/386").f
+var /* [auto-meaningful-name] */require_1093_$$_$$_1783_1093$set = require(/* 1093 */"../../1783/1093").set
+var h = require(/* 1266 */"./1266")
+var m = require(/* 1687 */"./1687")
+var g = require(/* 1688 */"./1688")
+var _ = require(/* 758 */"../758")
 var v = d.MutationObserver || d.WebKitMutationObserver
 var /* [auto-meaningful-name] */d$document = d.document
 var /* [auto-meaningful-name] */d$process = d.process
 var /* [auto-meaningful-name] */d$Promise = d.Promise
-var O = require$$_$$_1581_386$f(d, "queueMicrotask")
+var O = require_386_$$_$$_1581_386$f(d, "queueMicrotask")
 var w = O && O.value
 if (!w) {
   r = function () {
@@ -59,7 +59,7 @@ if (!w) {
       a = _ ? function () {
         d$process.nextTick(r)
       } : function () {
-        require$$_$$_1783_1093$set.call(d, r)
+        require_1093_$$_$$_1783_1093$set.call(d, r)
       }
     }
   } else {

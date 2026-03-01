@@ -7,26 +7,25 @@
 "use strict"
 
 import { Pd } from "./index__part-31"
-import * as /* [auto-meaningful-name] */Lodash from "lodash"
-import * as kn from "./75"
-import { useSelector } from "react-redux"
-import /* [auto-meaningful-name] */React from "react"
-import { useRef, useEffect } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from "resize-observer-polyfill"
-import * as /* [auto-meaningful-name] */$_1054 from "./1054"
-import /* [auto-meaningful-name] */$_10541 from "./1054"
+import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
+import * as /* [auto-meaningful-name] */Module_75 from /* 75 */"./75"
+import { useSelector } from /* 16 */"react-redux"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from /* 462 */"resize-observer-polyfill"
+import * as /* [auto-meaningful-name] */Module_1054 from /* 1054 */"./1054"
+import /* [auto-meaningful-name] */Module_10541 from /* 1054 */"./1054"
 var Wd = React.memo(function () {
-  var e = useRef(null)
-  var t = useRef(null)
-  var n = useRef(null)
+  var e = React1.useRef(null)
+  var t = React1.useRef(null)
+  var n = React1.useRef(null)
   var r = useSelector(function (e) {
     return e.common.stageRulerVisible
   })
   var o = useSelector(function (e) {
     return e.common.stageScale
   })
-  useEffect(function () {
+  React1.useEffect(function () {
     if (n.current && r) {
       var i = Lodash.throttle(function () {
         if (n.current && t.current && e.current) {
@@ -34,9 +33,9 @@ var Wd = React.memo(function () {
           e.current.resize()
           var /* [auto-meaningful-name] */n$current$offsetWidth = n.current.offsetWidth
           var /* [auto-meaningful-name] */n$current$offsetHeight = n.current.offsetHeight
-          var a = (n$current$offsetWidth - kn.e * o) / 2
+          var a = (n$current$offsetWidth - Module_75.e * o) / 2
           a = a / o * -1
-          var s = (n$current$offsetHeight - kn.d * o) / 2
+          var s = (n$current$offsetHeight - Module_75.d * o) / 2
           s = s / o * -1
           e.current.scroll(a)
           t.current.scroll(s)
@@ -56,9 +55,9 @@ var Wd = React.memo(function () {
   }, [r, o])
   return r ? React.createElement("div", {
     ref: n,
-    className: $_10541.container
+    className: Module_10541.container
   }, React.createElement("div", {
-    className: $_10541.vRuler
+    className: Module_10541.vRuler
   }, React.createElement(Pd, {
     ref: function (e) {
       t.current = e
@@ -74,7 +73,7 @@ var Wd = React.memo(function () {
     longLineSize: 8,
     shortLineSize: 4
   })), React.createElement("div", {
-    className: $_10541.hRuler
+    className: Module_10541.hRuler
   }, React.createElement(Pd, {
     ref: function (t) {
       e.current = t

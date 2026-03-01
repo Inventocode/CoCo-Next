@@ -4,7 +4,7 @@
  * 模块 ID：2708
  */
 
-var a = require("../../../../13/780/755")
+var a = require(/* 755 */"../../../../13/780/755")
 module.exports = function (e) {
   for (var t = 1; t < arguments.length; t++) {
     var n = null != arguments[t] ? Object(arguments[t]) : {}

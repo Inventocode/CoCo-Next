@@ -6,22 +6,22 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_217_index from "../217/index"
-import * as /* [auto-meaningful-name] */$$_523_index from "../523/index"
-import * as /* [auto-meaningful-name] */$$_744 from "../744"
-import * as /* [auto-meaningful-name] */$$_32_index from "../32/index"
-import * as /* [auto-meaningful-name] */$$_$$_105 from "../../105"
-import * as /* [auto-meaningful-name] */$$_65 from "../65"
-import * as /* [auto-meaningful-name] */$$_119 from "../119"
-import * as /* [auto-meaningful-name] */$$_1023 from "../1023"
+import * as /* [auto-meaningful-name] */Module_217 from /* 217 */"../217/index"
+import * as /* [auto-meaningful-name] */Module_523 from /* 523 */"../523/index"
+import * as /* [auto-meaningful-name] */Module_744 from /* 744 */"../744"
+import * as /* [auto-meaningful-name] */Module_32 from /* 32 */"../32/index"
+import * as /* [auto-meaningful-name] */Module_105 from /* 105 */"../../105"
+import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"../65"
+import * as /* [auto-meaningful-name] */Module_119 from /* 119 */"../119"
+import * as /* [auto-meaningful-name] */Module_1023 from /* 1023 */"../1023"
 var f = function () {
   function e(e, t) {
     this.actor = e
     this.fn = t
   }
   e.prototype.contains = function (e, t) {
-    var n = this.actor.toGlobal(new $$_32_index.o(e, t))
-    return !!this.actor.containsPoint(new $$_32_index.o(n.x, n.y)) && this.fn(n)
+    var n = this.actor.toGlobal(new Module_32.o(e, t))
+    return !!this.actor.containsPoint(new Module_32.o(n.x, n.y)) && this.fn(n)
   }
   return e
 }()
@@ -111,29 +111,29 @@ var d = function () {
     this.app.render()
   }
   e.prototype.set_size = function (e) {
-    this.size = $$_217_index.a(1, 1e4, e)
+    this.size = Module_217.a(1, 1e4, e)
   }
   e.prototype.set_color = function (e) {
     this.stroke_color = e
-    this.hsl = $$_65.h(e)
+    this.hsl = Module_65.h(e)
   }
   e.prototype.set_alpha = function (e) {
-    this.alpha = $$_217_index.a(0, 1, e)
+    this.alpha = Module_217.a(0, 1, e)
   }
   e.prototype.set_hue = function (e) {
     if ((e %= 360) < 0) {
       e += 360
     }
     this.hsl[0] = e
-    this.stroke_color = $$_65.j(this.hsl[0], this.hsl[1], this.hsl[2])
+    this.stroke_color = Module_65.j(this.hsl[0], this.hsl[1], this.hsl[2])
   }
   e.prototype.set_saturation = function (e) {
-    this.hsl[1] = $$_217_index.a(0, 1, e)
-    this.stroke_color = $$_65.j(this.hsl[0], this.hsl[1], this.hsl[2])
+    this.hsl[1] = Module_217.a(0, 1, e)
+    this.stroke_color = Module_65.j(this.hsl[0], this.hsl[1], this.hsl[2])
   }
   e.prototype.set_brightness = function (e) {
-    this.hsl[2] = $$_217_index.a(0, 1, e)
-    this.stroke_color = $$_65.j(this.hsl[0], this.hsl[1], this.hsl[2])
+    this.hsl[2] = Module_217.a(0, 1, e)
+    this.stroke_color = Module_65.j(this.hsl[0], this.hsl[1], this.hsl[2])
   }
   e.prototype.get_size = function () {
     return this.size
@@ -176,7 +176,7 @@ var d = function () {
   }
   e.prototype.update_fill_point = function (e, t) {
     if (this.is_recording_fill_path) {
-      var n = new $$_32_index.o(e, t)
+      var n = new Module_32.o(e, t)
       this.fill_path.push(this.app.get_app().stage.toGlobal(n))
     }
   }
@@ -230,7 +230,7 @@ var d = function () {
     var /* [auto-meaningful-name] */this$ctx = this.ctx
     if (this$ctx) {
       var /* [auto-meaningful-name] */this$actor = this.actor
-      var n = $$_65.d(this$actor, this$actor.position)
+      var n = Module_65.d(this$actor, this$actor.position)
       var /* [auto-meaningful-name] */this$actor$rotation = this.actor.rotation
       var i = this.app.get_app_view_resolution()
       var o = this.app.get_app_view_size()

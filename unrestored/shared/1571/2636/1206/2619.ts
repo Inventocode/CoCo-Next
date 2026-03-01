@@ -6,7 +6,7 @@
 
 "use strict"
 
-var r = require("regenerator-runtime")
+var r = require(/* 1 */"regenerator-runtime")
 var o = this && this.__awaiter || function (e, t, n, r) {
   return new (n || (n = Promise))(function (o, i) {
     function a(e) {
@@ -405,10 +405,10 @@ exports.autoCreateWxJsIframeApi = function (e, t) {
     }
   }, t)
 }
-var i = require("./772")
-var a = require("./773/index")
-var s = require("./1185")
-var c = require("./2618/885")
+var i = require(/* 772 */"./772")
+var a = require(/* 773 */"./773/index")
+var s = require(/* 1185 */"./1185")
+var c = require(/* 885 */"./2618/885")
 var l = new i.ApiSpec("wxjs", {})
 var u = new i.ApiSpec(l.namespace, {
   captureImage: new i.MethodType(),

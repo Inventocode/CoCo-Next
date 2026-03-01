@@ -10,7 +10,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.JsonPythonGenerator = undefined
-var r = require("tslib")
+var r = require(/* 93 */"tslib")
 var i = function (e) {
   function t() {
     var t = e.call(this, "Python") || this
@@ -58,5 +58,5 @@ var i = function (e) {
     return this.prefix_lines(e, "# ")
   }
   return t
-}(require("./1356").JsonGenerator)
+}(require(/* 1356 */"./1356").JsonGenerator)
 exports.JsonPythonGenerator = i

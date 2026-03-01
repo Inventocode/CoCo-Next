@@ -6,15 +6,15 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_index from "../../../../shared/1571/2636/48/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_48_72 from "../../../../shared/1571/2636/48/72"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_28_index from "../../../../shared/1571/2636/28/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_59_index from "../../../../shared/1571/2636/59/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_58_index from "../../../../shared/1571/2636/58/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_39 from "../../../../shared/1571/2636/39"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_27 from "../../../../shared/1571/2636/27"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_src_shared_widget_custom_load from "../../../../../src/shared/widget/custom/load"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_shared_1571_2636_684_index from "../../../../shared/1571/2636/684/index"
+import * as /* [auto-meaningful-name] */Module_48 from /* 48 */"../../../../shared/1571/2636/48/index"
+import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
+import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../../../shared/1571/2636/28/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../../../../shared/1571/2636/59/index"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../../../../shared/1571/2636/58/index"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../../../shared/1571/2636/39"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../../../../shared/1571/2636/27"
+import * as /* [auto-meaningful-name] */Src_shared_widget_custom_load from /* 34 */"../../../../../src/shared/widget/custom/load"
+import * as /* [auto-meaningful-name] */Module_684 from /* 684 */"../../../../shared/1571/2636/684/index"
 var B = {
   pickContact: function (t) {
     navigator.contacts.pickContact(function (e) {
@@ -47,11 +47,11 @@ var B = {
   }
 }
 var P = function (t) {
-  $$_$$_$$_$$_shared_1571_2636_58_index.a(n, t)
-  var e = $$_$$_$$_$$_shared_1571_2636_59_index.a(n)
+  Module_58.a(n, t)
+  var e = Module_59.a(n)
   function n(t) {
     var r
-    $$_$$_$$_$$_shared_1571_2636_27.a(this, n);
+    Module_27.a(this, n);
     (r = e.call(this, t)).contactName = undefined
     r.phoneNumber = undefined
     r.contactAvatar = undefined
@@ -62,12 +62,12 @@ var P = function (t) {
     r.phoneNumberList = t.phoneNumberList
     return r
   }
-  $$_$$_$$_$$_shared_1571_2636_39.a(n, [
+  Module_39.a(n, [
     {
       key: "pickContact",
       value: function () {
         var t = this
-        if ($$_$$_$$_$$_shared_1571_2636_28_index.d()) {
+        if (Module_28.d()) {
           B.pickContact(function (e, n, r, i) {
             t.contactName = e
             t.phoneNumber = n
@@ -76,7 +76,7 @@ var P = function (t) {
             t.emit("onContactPickerSelected", e, n, r)
           })
         } else {
-          $$_$$_$$_$$_shared_1571_2636_48_index.a().dispatch($$_$$_$$_$$_shared_1571_2636_48_72.s({
+          Module_48.a().dispatch(Module_72.s({
             contactWidgetId: this.__widgetId,
             contactPageVisible: true
           }))
@@ -85,5 +85,5 @@ var P = function (t) {
     }
   ])
   return n
-}($$_$$_$$_$$_$$_src_shared_widget_custom_load.c)
+}(Src_shared_widget_custom_load.c)
 export { P }

@@ -7,14 +7,14 @@
 "use strict"
 
 var r
-import * as /* [auto-meaningful-name] */$$_301_225 from "../301/225"
-import * as /* [auto-meaningful-name] */$$_301_203 from "../301/203"
-import * as /* [auto-meaningful-name] */$$_11 from "../11"
-import * as /* [auto-meaningful-name] */$$_291 from "../291"
-import * as /* [auto-meaningful-name] */$$_58_index from "../58/index"
-import * as /* [auto-meaningful-name] */$$_59_index from "../59/index"
-import * as /* [auto-meaningful-name] */$$_27 from "../27"
-import * as /* [auto-meaningful-name] */$$_39 from "../39"
+import * as /* [auto-meaningful-name] */Module_225 from /* 225 */"../301/225"
+import * as /* [auto-meaningful-name] */Module_203 from /* 203 */"../301/203"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_291 from /* 291 */"../291"
+import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../58/index"
+import * as /* [auto-meaningful-name] */Module_59 from /* 59 */"../59/index"
+import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
+import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
 var d = 303
 var p = 1e3
 var f = 1001
@@ -165,14 +165,14 @@ var w = function () {
   function e() {
     var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isVector2", {
       value: true
     })
     this.x = t
     this.y = n
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "width",
       get: function () {
@@ -532,7 +532,7 @@ var w = function () {
 }()
 var M = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isMatrix3", {
       value: true
     })
@@ -541,7 +541,7 @@ var M = function () {
       console.error("THREE.Matrix3: the constructor no longer reads arguments. use .set() instead.")
     }
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t, n, r, i, a, o, s, l) {
@@ -1050,7 +1050,7 @@ var A = function () {
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
     var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0
     var i = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : 1
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isVector4", {
       value: true
     })
@@ -1059,7 +1059,7 @@ var A = function () {
     this.z = r
     this.w = i
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "width",
       get: function () {
@@ -1595,7 +1595,7 @@ var P = function () {
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
     var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0
     var i = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : 1
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isQuaternion", {
       value: true
     })
@@ -1604,7 +1604,7 @@ var P = function () {
     this._z = r
     this._w = i
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "x",
       get: function () {
@@ -2075,7 +2075,7 @@ var C = function () {
     var t = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 0
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
     var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isVector3", {
       value: true
     })
@@ -2083,7 +2083,7 @@ var C = function () {
     this.y = n
     this.z = r
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t, n) {
@@ -2634,14 +2634,14 @@ var I = new C()
 var O = new P()
 var k = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isBox3", {
       value: true
     })
     this.min = undefined !== t ? t : new C(1 / 0, 1 / 0, 1 / 0)
     this.max = undefined !== n ? n : new C(-1 / 0, -1 / 0, -1 / 0)
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t) {
@@ -2990,11 +2990,11 @@ var Y = new C()
 var Z = new k()
 var J = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.center = undefined !== t ? t : new C()
     this.radius = undefined !== n ? n : -1
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t) {
@@ -3122,11 +3122,11 @@ var ne = new C()
 var re = new C()
 var ie = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.origin = undefined !== t ? t : new C()
     this.direction = undefined !== n ? n : new C(0, 0, -1)
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t) {
@@ -3372,7 +3372,7 @@ var ie = function () {
 }()
 var ae = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isMatrix4", {
       value: true
     })
@@ -3381,7 +3381,7 @@ var ae = function () {
       console.error("THREE.Matrix4: the constructor no longer reads arguments. use .set() instead.")
     }
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t, n, r, i, a, o, s, l, c, u, h, d, p, f, m) {
@@ -4109,7 +4109,7 @@ var pe = function () {
     var n = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : 0
     var r = arguments.length > 2 && undefined !== arguments[2] ? arguments[2] : 0
     var i = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : e.DefaultOrder
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isEuler", {
       value: true
     })
@@ -4118,7 +4118,7 @@ var pe = function () {
     this._z = r
     this._order = i
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "x",
       get: function () {
@@ -4333,10 +4333,10 @@ var fe = new ae()
 var me = new P()
 var ve = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.mask = 1
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e) {
@@ -4862,14 +4862,14 @@ var Ie = new C()
 var Oe = new M()
 var ke = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isPlane", {
       value: true
     })
     this.normal = undefined !== t ? t : new C(1, 0, 0)
     this.constant = undefined !== n ? n : 0
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t) {
@@ -5021,12 +5021,12 @@ var je = new C()
 var Ve = new C()
 var We = function () {
   function e(t, n, r) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.a = undefined !== t ? t : new C()
     this.b = undefined !== n ? n : new C()
     this.c = undefined !== r ? r : new C()
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t, n) {
@@ -5412,13 +5412,13 @@ function Ke(e) {
 }
 var Qe = function () {
   function e(t, n, r) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isColor", {
       value: true
     })
     return undefined === n && undefined === r ? this.set(t) : this.setRGB(t, n, r)
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e) {
@@ -5808,7 +5808,7 @@ Qe.prototype.g = 1
 Qe.prototype.b = 1
 var $e = function () {
   function e(t, n, r, i, a, o) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.a = t
     this.b = n
     this.c = r
@@ -5818,7 +5818,7 @@ var $e = function () {
     this.vertexColors = Array.isArray(a) ? a : []
     this.materialIndex = undefined !== o ? o : 0
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "clone",
       value: function () {
@@ -6552,7 +6552,7 @@ ft.prototype = Object.create(at.prototype)
 ft.prototype.constructor = ft
 var mt = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.vertices = []
     this.normals = []
     this.colors = []
@@ -6570,7 +6570,7 @@ var mt = function () {
     this.uvsNeedUpdate = false
     this.groupsNeedUpdate = false
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "computeGroups",
       value: function (e) {
@@ -7553,8 +7553,8 @@ Gt.prototype = Object.assign(Object.create(Pe.prototype), {
   }
 })
 var Wt = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n() {
     var e
     var r = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : 1
@@ -7563,7 +7563,7 @@ var Wt = function (e) {
     var o = arguments.length > 3 && undefined !== arguments[3] ? arguments[3] : 1
     var l = arguments.length > 4 && undefined !== arguments[4] ? arguments[4] : 1
     var c = arguments.length > 5 && undefined !== arguments[5] ? arguments[5] : 1
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (e = t.call(this)).type = "BoxBufferGeometry"
     e.parameters = {
       width: r,
@@ -7573,7 +7573,7 @@ var Wt = function (e) {
       heightSegments: l,
       depthSegments: c
     }
-    var h = $$_291.a(e)
+    var h = Module_291.a(e)
     o = Math.floor(o)
     l = Math.floor(l)
     c = Math.floor(c)
@@ -8097,10 +8097,10 @@ var nn = new J()
 var rn = new C()
 var an = function () {
   function e(t, n, r, i, a, o) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.planes = [undefined !== t ? t : new ke(), undefined !== n ? n : new ke(), undefined !== r ? r : new ke(), undefined !== i ? i : new ke(), undefined !== a ? a : new ke(), undefined !== o ? o : new ke()]
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t, n, r, i, a) {
@@ -8347,11 +8347,11 @@ function sn(e, t) {
   }
 }
 var ln = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e, r, i, a) {
     var o
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (o = t.call(this)).type = "PlaneBufferGeometry"
     o.parameters = {
       width: e,
@@ -12017,9 +12017,9 @@ function ii(e, t, n) {
   U(2884)
   G(0)
   r = {}
-  $$_11.a(r, 100, 32774)
-  $$_11.a(r, 101, 32778)
-  $$_11.a(r, 102, 32779)
+  Module_11.a(r, 100, 32774)
+  Module_11.a(r, 101, 32778)
+  Module_11.a(r, 102, 32779)
   var z = r
   if (n$isWebGL2) {
     z[103] = 32775
@@ -12032,17 +12032,17 @@ function ii(e, t, n) {
     }
   }
   i = {}
-  $$_11.a(i, 200, 0)
-  $$_11.a(i, 201, 1)
-  $$_11.a(i, 202, 768)
-  $$_11.a(i, 204, 770)
-  $$_11.a(i, 210, 776)
-  $$_11.a(i, 208, 774)
-  $$_11.a(i, 206, 772)
-  $$_11.a(i, 203, 769)
-  $$_11.a(i, 205, 771)
-  $$_11.a(i, 209, 775)
-  $$_11.a(i, 207, 773)
+  Module_11.a(i, 200, 0)
+  Module_11.a(i, 201, 1)
+  Module_11.a(i, 202, 768)
+  Module_11.a(i, 204, 770)
+  Module_11.a(i, 210, 776)
+  Module_11.a(i, 208, 774)
+  Module_11.a(i, 206, 772)
+  Module_11.a(i, 203, 769)
+  Module_11.a(i, 205, 771)
+  Module_11.a(i, 209, 775)
+  Module_11.a(i, 207, 773)
   var H = i
   function G(t, n, r, i, a, o, s, l) {
     if (0 !== t) {
@@ -12565,17 +12565,17 @@ function ai(e, t, n, r, i, a, s) {
     }
   }
   l = {}
-  $$_11.a(l, p, 10497)
-  $$_11.a(l, f, 33071)
-  $$_11.a(l, 1002, 33648)
+  Module_11.a(l, p, 10497)
+  Module_11.a(l, f, 33071)
+  Module_11.a(l, 1002, 33648)
   var O = l
   c = {}
-  $$_11.a(c, 1003, 9728)
-  $$_11.a(c, 1004, 9984)
-  $$_11.a(c, 1005, 9986)
-  $$_11.a(c, 1006, 9729)
-  $$_11.a(c, 1007, 9985)
-  $$_11.a(c, 1008, 9987)
+  Module_11.a(c, 1003, 9728)
+  Module_11.a(c, 1004, 9984)
+  Module_11.a(c, 1005, 9986)
+  Module_11.a(c, 1006, 9729)
+  Module_11.a(c, 1007, 9985)
+  Module_11.a(c, 1008, 9987)
   var k = c
   function N(n, a, o) {
     if (o) {
@@ -14999,13 +14999,13 @@ pi.prototype = Object.assign(Object.create(di.prototype), {
   isWebGL1Renderer: true
 })
 var fi = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n() {
     var e
-    $$_27.a(this, n)
+    Module_27.a(this, n)
     e = t.call(this)
-    Object.defineProperty($$_291.a(e), "isScene", {
+    Object.defineProperty(Module_291.a(e), "isScene", {
       value: true
     })
     e.type = "Scene"
@@ -15016,16 +15016,16 @@ var fi = function (e) {
     e.autoUpdate = true
     if ("undefined" !== typeof __THREE_DEVTOOLS__) {
       __THREE_DEVTOOLS__.dispatchEvent(new CustomEvent("observe", {
-        detail: $$_291.a(e)
+        detail: Module_291.a(e)
       }))
     }
     return e
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "copy",
       value: function (e, t) {
-        $$_301_225.a($$_301_203.a(n.prototype), "copy", this).call(this, e, t)
+        Module_225.a(Module_203.a(n.prototype), "copy", this).call(this, e, t)
         if (null !== e.background) {
           this.background = e.background.clone()
         }
@@ -15045,7 +15045,7 @@ var fi = function (e) {
     }, {
       key: "toJSON",
       value: function (e) {
-        var t = $$_301_225.a($$_301_203.a(n.prototype), "toJSON", this).call(this, e)
+        var t = Module_225.a(Module_203.a(n.prototype), "toJSON", this).call(this, e)
         if (null !== this.background) {
           t.object.background = this.background.toJSON(e)
         }
@@ -17301,18 +17301,18 @@ function Xa(e, t) {
   }
 }
 var Ya = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e, r) {
     var i
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (i = t.call(this)).type = "ExtrudeBufferGeometry"
     i.parameters = {
       shapes: e,
       options: r
     }
     e = Array.isArray(e) ? e : [e]
-    for (var a = $$_291.a(i), o = [], l = [], c = 0, /* [auto-meaningful-name] */e$length = e.length; c < e$length; c++) {
+    for (var a = Module_291.a(i), o = [], l = [], c = 0, /* [auto-meaningful-name] */e$length = e.length; c < e$length; c++) {
       d(e[c])
     }
     function d(e) {
@@ -17602,7 +17602,7 @@ var Ya = function (e) {
     i.computeVertexNormals()
     return i
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "toJSON",
       value: function () {
@@ -17654,11 +17654,11 @@ var Za = {
   }
 }
 var Ja = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e, r) {
     var i
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (i = t.call(this)).type = "ExtrudeGeometry"
     i.parameters = {
       shapes: e,
@@ -17668,11 +17668,11 @@ var Ja = function (e) {
     i.mergeVertices()
     return i
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "toJSON",
       value: function () {
-        var e = $$_301_225.a($$_301_203.a(n.prototype), "toJSON", this).call(this)
+        var e = Module_225.a(Module_203.a(n.prototype), "toJSON", this).call(this)
         return function (e, t, n) {
           n.shapes = []
           if (Array.isArray(e)) {
@@ -17769,11 +17769,11 @@ Ka.prototype.constructor = Ka
 Qa.prototype = Object.create(xa.prototype)
 Qa.prototype.constructor = Qa
 var $a = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e, r) {
     var i
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (i = t.call(this)).type = "ShapeBufferGeometry"
     i.parameters = {
       shapes: e,
@@ -17835,7 +17835,7 @@ var $a = function (e) {
     i.setAttribute("uv", new pt(l, 2))
     return i
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "toJSON",
       value: function () {
@@ -17858,11 +17858,11 @@ var $a = function (e) {
   return n
 }(St)
 var eo = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e, r) {
     var i
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (i = t.call(this)).type = "ShapeGeometry"
     if ("object" === typeof r) {
       console.warn("THREE.ShapeGeometry: Options parameter has been removed.")
@@ -17876,7 +17876,7 @@ var eo = function (e) {
     i.mergeVertices()
     return i
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "toJSON",
       value: function () {
@@ -21134,7 +21134,7 @@ bs.prototype = Object.assign(Object.create(cs.prototype), {
 })
 var _s = function () {
   function e() {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isSphericalHarmonics3", {
       value: true
     })
@@ -21143,7 +21143,7 @@ var _s = function () {
       this.coefficients.push(new C())
     }
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e) {
@@ -22322,11 +22322,11 @@ Object.assign(function () {
   }
 })
 var Hs = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e) {
     var r
-    $$_27.a(this, n);
+    Module_27.a(this, n);
     (r = t.call(this)).type = "Audio"
     r.listener = e
     r.context = e.context
@@ -22351,7 +22351,7 @@ var Hs = function (e) {
     r.filters = []
     return r
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "getOutput",
       value: function () {
@@ -22594,13 +22594,13 @@ var Hs = function (e) {
 }(Pe)
 var Gs = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.analyser = t.context.createAnalyser()
     this.analyser.fftSize = undefined !== n ? n : 2048
     this.data = new Uint8Array(this.analyser.frequencyBinCount)
     t.getOutput().connect(this.analyser)
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "getFrequencyData",
       value: function () {
@@ -23242,7 +23242,7 @@ Object.assign(function () {
 })
 var el = function () {
   function e(t, n, r, i) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this._mixer = t
     this._clip = n
     this._localRoot = r || null
@@ -23277,7 +23277,7 @@ var el = function () {
     this.zeroSlopeAtStart = true
     this.zeroSlopeAtEnd = true
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "play",
       value: function () {
@@ -24023,14 +24023,14 @@ tl.prototype = Object.assign(Object.create(v.prototype), {
 })
 var nl = function () {
   function e(t) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     if ("string" === typeof t) {
       console.warn("THREE.Uniform: Type parameter is no longer needed.")
       t = arguments[1]
     }
     this.value = t
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "clone",
       value: function () {
@@ -24179,14 +24179,14 @@ Object.assign(al.prototype, {
 var ll = new w()
 var cl = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     Object.defineProperty(this, "isBox2", {
       value: true
     })
     this.min = undefined !== t ? t : new w(1 / 0, 1 / 0)
     this.max = undefined !== n ? n : new w(-1 / 0, -1 / 0)
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t) {
@@ -24346,11 +24346,11 @@ var ul = new C()
 var hl = new C()
 var dl = function () {
   function e(t, n) {
-    $$_27.a(this, e)
+    Module_27.a(this, e)
     this.start = undefined !== t ? t : new C()
     this.end = undefined !== n ? n : new C()
   }
-  $$_39.a(e, [
+  Module_39.a(e, [
     {
       key: "set",
       value: function (e, t) {
@@ -24466,11 +24466,11 @@ var fl = new C()
 var ml = new ae()
 var vl = new ae()
 var gl = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e) {
     var r
-    $$_27.a(this, n)
+    Module_27.a(this, n)
     for (var i = function e(t) {
         var n = []
         if (t && t.isBone) {
@@ -24506,7 +24506,7 @@ var gl = function (e) {
     r.matrixAutoUpdate = false
     return r
   }
-  $$_39.a(n, [
+  Module_39.a(n, [
     {
       key: "updateMatrixWorld",
       value: function (e) {
@@ -24527,18 +24527,18 @@ var gl = function (e) {
           }
         }
         this$geometry.getAttribute("position").needsUpdate = true
-        $$_301_225.a($$_301_203.a(n.prototype), "updateMatrixWorld", this).call(this, e)
+        Module_225.a(Module_203.a(n.prototype), "updateMatrixWorld", this).call(this, e)
       }
     }
   ])
   return n
 }(na)
 var yl = function (e) {
-  $$_58_index.a(n, e)
-  var t = $$_59_index.a(n)
+  Module_58.a(n, e)
+  var t = Module_59.a(n)
   function n(e, r, i, a) {
     var o
-    $$_27.a(this, n)
+    Module_27.a(this, n)
     e = e || 10
     r = r || 10
     i = new Qe(undefined !== i ? i : 4473924)
@@ -24572,13 +24572,13 @@ Math.pow(2, 8)
 var xl = [.125, .215, .35, .446, .526, .582]
 var bl = 5 + xl.length
 r = {}
-$$_11.a(r, 3e3, 0)
-$$_11.a(r, m, 1)
-$$_11.a(r, 3002, 2)
-$$_11.a(r, 3004, 3)
-$$_11.a(r, 3005, 4)
-$$_11.a(r, 3006, 5)
-$$_11.a(r, 3007, 6)
+Module_11.a(r, 3e3, 0)
+Module_11.a(r, m, 1)
+Module_11.a(r, 3002, 2)
+Module_11.a(r, 3004, 3)
+Module_11.a(r, 3005, 4)
+Module_11.a(r, 3006, 5)
+Module_11.a(r, 3007, 6)
 var _l = wl()
 _l._lodPlanes
 _l._sizeLods

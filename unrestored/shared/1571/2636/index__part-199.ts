@@ -8,63 +8,62 @@
 
 import { ES } from "./index__part-154"
 import { GM } from "./index__part-196"
-import * as /* [auto-meaningful-name] */$_364_index from "./364/index"
-import * as /* [auto-meaningful-name] */$_315 from "./315"
-import * as /* [auto-meaningful-name] */$_435 from "./435"
-import * as /* [auto-meaningful-name] */$_801_index from "./801/index"
-import * as /* [auto-meaningful-name] */$_241_index from "./241/index"
-import * as /* [auto-meaningful-name] */$_140 from "./140"
-import * as /* [auto-meaningful-name] */$_486 from "./486"
-import * as /* [auto-meaningful-name] */$_120 from "./120"
-import * as /* [auto-meaningful-name] */$_106 from "./106"
-import * as /* [auto-meaningful-name] */$_103 from "./103"
-import * as Ln from "./35"
-import * as Dn from "./19"
-import /* [auto-meaningful-name] */Classnames from "classnames"
-import * as /* [auto-meaningful-name] */$_748_index from "./748/index"
-import /* [auto-meaningful-name] */React from "react"
-import { createContext, useContext, createElement, Fragment, useMemo, Component } from "react"
-import * as /* [auto-meaningful-name] */React1 from "react"
-import * as /* [auto-meaningful-name] */$_559_index from "./559/index"
-import * as /* [auto-meaningful-name] */$_1034 from "./1034"
-var JM = createContext({
+import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"./364/index"
+import * as /* [auto-meaningful-name] */Module_315 from /* 315 */"./315"
+import * as /* [auto-meaningful-name] */Module_435 from /* 435 */"./435"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"./801/index"
+import * as /* [auto-meaningful-name] */Module_241 from /* 241 */"./241/index"
+import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"./140"
+import * as /* [auto-meaningful-name] */Module_486 from /* 486 */"./486"
+import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"./120"
+import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"./106"
+import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"./103"
+import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
+import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
+import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
+import /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_559 from /* 559 */"./559/index"
+import * as /* [auto-meaningful-name] */Module_1034 from /* 1034 */"./1034"
+var JM = React1.createContext({
   prefixCls: "",
   firstLevel: true,
   inlineCollapsed: false
 })
 var $M = function (e) {
-  var /* [auto-meaningful-name] */o$props
+  var /* [auto-meaningful-name] */e$icon$props
   var n
   var /* [auto-meaningful-name] */e$popupClassName = e.popupClassName
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$title = e.title
-  var a = useContext(JM)
+  var a = React1.useContext(JM)
   var /* [auto-meaningful-name] */a$prefixCls = a.prefixCls
   var /* [auto-meaningful-name] */a$inlineCollapsed = a.inlineCollapsed
   var /* [auto-meaningful-name] */a$antdMenuTheme = a.antdMenuTheme
-  var u = $_559_index.f()
+  var u = Module_559.f()
   if (e$icon) {
-    var d = $_315.b(e$title) && "span" === e$title.type
-    n = createElement(Fragment, null, $_315.a(e$icon, {
-      className: Classnames($_315.b(e$icon) ? null === (o$props = e$icon.props) || undefined === o$props ? undefined : o$props.className : "", "".concat(a$prefixCls, "-item-icon"))
-    }), d ? e$title : createElement("span", {
+    var d = Module_315.b(e$title) && "span" === e$title.type
+    n = React1.createElement(React1.Fragment, null, Module_315.a(e$icon, {
+      className: Classnames(Module_315.b(e$icon) ? null === (e$icon$props = e$icon.props) || undefined === e$icon$props ? undefined : e$icon$props.className : "", "".concat(a$prefixCls, "-item-icon"))
+    }), d ? e$title : React1.createElement("span", {
       className: "".concat(a$prefixCls, "-title-content")
     }, e$title))
   } else {
-    n = a$inlineCollapsed && !u.length && e$title && "string" === typeof e$title ? createElement("div", {
+    n = a$inlineCollapsed && !u.length && e$title && "string" === typeof e$title ? React1.createElement("div", {
       className: "".concat(a$prefixCls, "-inline-collapsed-noicon")
-    }, e$title.charAt(0)) : createElement("span", {
+    }, e$title.charAt(0)) : React1.createElement("span", {
       className: "".concat(a$prefixCls, "-title-content")
     }, e$title)
   }
-  var p = useMemo(function () {
-    return Dn.a(Dn.a({}, a), {
+  var p = React1.useMemo(function () {
+    return Module_19.a(Module_19.a({}, a), {
       firstLevel: false
     })
   }, [a])
-  return createElement(JM.Provider, {
+  return React1.createElement(JM.Provider, {
     value: p
-  }, createElement($_559_index.d, Dn.a({}, $_486.a(e, ["icon"]), {
+  }, React1.createElement(Module_559.d, Module_19.a({}, Module_486.a(e, ["icon"]), {
     title: n,
     popupClassName: Classnames(a$prefixCls, "".concat(a$prefixCls, "-").concat(a$antdMenuTheme), e$popupClassName)
   })))
@@ -77,7 +76,7 @@ function eL(e) {
       if (Array.isArray(e)) {
         n = n.concat(eL(e))
       } else {
-        if ($_241_index.isFragment(e) && e.props) {
+        if (Module_241.isFragment(e) && e.props) {
           n = n.concat(eL(e.props.children, t))
         } else {
           n.push(e)
@@ -103,14 +102,14 @@ var tL = function (e, t) {
   return n
 }
 var nL = function (e) {
-  $_120.a(n, e)
-  var t = $_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n() {
     var e
-    $_103.a(this, n);
+    Module_103.a(this, n);
     (e = t.apply(this, arguments)).renderItem = function (t) {
       var n
-      var /* [auto-meaningful-name] */g$props
+      var /* [auto-meaningful-name] */e$props1$icon$props
       var /* [auto-meaningful-name] */t$siderCollapsed = t.siderCollapsed
       var /* [auto-meaningful-name] */e$context = e.context
       var /* [auto-meaningful-name] */e$context$prefixCls = e$context.prefixCls
@@ -141,19 +140,19 @@ var nL = function (e) {
         y.visible = false
       }
       var /* [auto-meaningful-name] */eLE$props$children$length = eL(e$props$children).length
-      return createElement($_748_index.a, Dn.a({}, y, {
+      return React1.createElement(Module_748.a, Module_19.a({}, y, {
         placement: "rtl" === e$context$direction ? "left" : "right",
         overlayClassName: "".concat(e$context$prefixCls, "-inline-collapsed-tooltip")
-      }), createElement($_559_index.b, Dn.a({}, v, {
-        className: Classnames((n = {}, Ln.a(n, "".concat(e$context$prefixCls, "-item-danger"), e$props1$danger), Ln.a(n, "".concat(e$context$prefixCls, "-item-only-child"), 1 === (e$props1$icon ? eLE$props$children$length + 1 : eLE$props$children$length)), n), e$props$className),
+      }), React1.createElement(Module_559.b, Module_19.a({}, v, {
+        className: Classnames((n = {}, Module_35.a(n, "".concat(e$context$prefixCls, "-item-danger"), e$props1$danger), Module_35.a(n, "".concat(e$context$prefixCls, "-item-only-child"), 1 === (e$props1$icon ? eLE$props$children$length + 1 : eLE$props$children$length)), n), e$props$className),
         title: "string" === typeof e$props1$title ? e$props1$title : undefined
-      }), $_315.a(e$props1$icon, {
-        className: Classnames($_315.b(e$props1$icon) ? null === (g$props = e$props1$icon.props) || undefined === g$props ? undefined : g$props.className : "", "".concat(e$context$prefixCls, "-item-icon"))
+      }), Module_315.a(e$props1$icon, {
+        className: Classnames(Module_315.b(e$props1$icon) ? null === (e$props1$icon$props = e$props1$icon.props) || undefined === e$props1$icon$props ? undefined : e$props1$icon$props.className : "", "".concat(e$context$prefixCls, "-item-icon"))
       }), e.renderItemChildren(e$context$inlineCollapsed)))
     }
     return e
   }
-  $_106.a(n, [
+  Module_106.a(n, [
     {
       key: "renderItemChildren",
       value: function (e) {
@@ -163,22 +162,22 @@ var nL = function (e) {
         var /* [auto-meaningful-name] */this$props = this.props
         var /* [auto-meaningful-name] */this$props$icon = this$props.icon
         var /* [auto-meaningful-name] */this$props$children = this$props.children
-        var s = createElement("span", {
+        var s = React1.createElement("span", {
           className: "".concat(this$context$prefixCls, "-title-content")
         }, this$props$children)
-        return (!this$props$icon || $_315.b(this$props$children) && "span" === this$props$children.type) && this$props$children && e && this$context$firstLevel && "string" === typeof this$props$children ? createElement("div", {
+        return (!this$props$icon || Module_315.b(this$props$children) && "span" === this$props$children.type) && this$props$children && e && this$context$firstLevel && "string" === typeof this$props$children ? React1.createElement("div", {
           className: "".concat(this$context$prefixCls, "-inline-collapsed-noicon")
         }, this$props$children.charAt(0)) : s
       }
     }, {
       key: "render",
       value: function () {
-        return createElement(ES.Consumer, null, this.renderItem)
+        return React1.createElement(ES.Consumer, null, this.renderItem)
       }
     }
   ])
   return n
-}(Component)
+}(React1.Component)
 nL.contextType = JM
 var rL = function (e, t) {
   var n = {}
@@ -200,9 +199,9 @@ var oL = function (e) {
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$dashed = e.dashed
   var o = rL(e, ["prefixCls", "className", "dashed"])
-  var i = (0, useContext($_801_index.b).getPrefixCls)("menu", e$prefixCls)
-  var a = Classnames(Ln.a({}, "".concat(i, "-item-divider-dashed"), !!e$dashed), e$className)
-  return createElement($_559_index.a, Dn.a({
+  var i = (0, React1.useContext(Module_801.b).getPrefixCls)("menu", e$prefixCls)
+  var a = Classnames(Module_35.a({}, "".concat(i, "-item-divider-dashed"), !!e$dashed), e$className)
+  return React1.createElement(Module_559.a, Module_19.a({
     className: a
   }, o))
 }
@@ -222,11 +221,11 @@ var iL = function (e, t) {
   return n
 }
 var aL = function (e) {
-  $_120.a(n, e)
-  var t = $_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n(e) {
     var r
-    $_103.a(this, n);
+    Module_103.a(this, n);
     (r = t.call(this, e)).renderMenu = function (e) {
       var /* [auto-meaningful-name] */e$getPopupContainer = e.getPopupContainer
       var /* [auto-meaningful-name] */e$getPrefixCls = e.getPrefixCls
@@ -238,20 +237,20 @@ var aL = function (e) {
       var /* [auto-meaningful-name] */r$props$theme = r$props.theme
       var /* [auto-meaningful-name] */r$props$expandIcon = r$props.expandIcon
       var d = iL(r$props, ["prefixCls", "className", "theme", "expandIcon"])
-      var p = $_486.a(d, ["siderCollapsed", "collapsedWidth"])
+      var p = Module_486.a(d, ["siderCollapsed", "collapsedWidth"])
       var h = r.getInlineCollapsed()
       var m = {
         horizontal: {
           motionName: "".concat(i, "-slide-up")
         },
-        inline: $_435.a,
+        inline: Module_435.a,
         other: {
           motionName: "".concat(i, "-zoom-big")
         }
       }
       var g = e$getPrefixCls("menu", r$props$prefixCls)
       var _ = Classnames("".concat(g, "-").concat(r$props$theme), r$props$className)
-      var v = $_1034.a(function (e, t, n, r) {
+      var v = Module_1034.a(function (e, t, n, r) {
         return {
           prefixCls: e,
           inlineCollapsed: t || false,
@@ -260,11 +259,11 @@ var aL = function (e) {
           firstLevel: true
         }
       })(g, h, r$props$theme, e$direction)
-      return createElement(JM.Provider, {
+      return React1.createElement(JM.Provider, {
         value: v
-      }, createElement($_559_index.e, Dn.a({
+      }, React1.createElement(Module_559.e, Module_19.a({
         getPopupContainer: e$getPopupContainer,
-        overflowedIndicator: createElement(GM, null),
+        overflowedIndicator: React1.createElement(GM, null),
         overflowedIndicatorPopupClassName: "".concat(g, "-").concat(r$props$theme)
       }, p, {
         inlineCollapsed: h,
@@ -272,16 +271,16 @@ var aL = function (e) {
         prefixCls: g,
         direction: e$direction,
         defaultMotions: m,
-        expandIcon: $_315.a(r$props$expandIcon, {
+        expandIcon: Module_315.a(r$props$expandIcon, {
           className: "".concat(g, "-submenu-expand-icon")
         })
       })))
     }
-    $_364_index.a(!("inlineCollapsed" in e && "inline" !== e.mode), "Menu", "`inlineCollapsed` should only be used when `mode` is inline.")
-    $_364_index.a(!(undefined !== e.siderCollapsed && "inlineCollapsed" in e), "Menu", "`inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.")
+    Module_364.a(!("inlineCollapsed" in e && "inline" !== e.mode), "Menu", "`inlineCollapsed` should only be used when `mode` is inline.")
+    Module_364.a(!(undefined !== e.siderCollapsed && "inlineCollapsed" in e), "Menu", "`inlineCollapsed` not control Menu under Sider. Should set `collapsed` on Sider instead.")
     return r
   }
-  $_106.a(n, [
+  Module_106.a(n, [
     {
       key: "getInlineCollapsed",
       value: function () {
@@ -293,38 +292,38 @@ var aL = function (e) {
     }, {
       key: "render",
       value: function () {
-        return createElement($_801_index.a, null, this.renderMenu)
+        return React1.createElement(Module_801.a, null, this.renderMenu)
       }
     }
   ])
   return n
-}(Component)
+}(React1.Component)
 aL.defaultProps = {
   theme: "light"
 }
 var sL = function (e) {
-  $_120.a(n, e)
-  var t = $_140.a(n)
+  Module_120.a(n, e)
+  var t = Module_140.a(n)
   function n() {
-    $_103.a(this, n)
+    Module_103.a(this, n)
     return t.apply(this, arguments)
   }
-  $_106.a(n, [
+  Module_106.a(n, [
     {
       key: "render",
       value: function () {
         var e = this
-        return createElement(ES.Consumer, null, function (t) {
-          return createElement(aL, Dn.a({}, e.props, t))
+        return React1.createElement(ES.Consumer, null, function (t) {
+          return React1.createElement(aL, Module_19.a({}, e.props, t))
         })
       }
     }
   ])
   return n
-}(Component)
+}(React1.Component)
 sL.Divider = oL
 sL.Item = nL
 sL.SubMenu = $M
-sL.ItemGroup = $_559_index.c
+sL.ItemGroup = Module_559.c
 var cL = sL
 export { cL }

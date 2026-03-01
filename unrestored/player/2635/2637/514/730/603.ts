@@ -7,7 +7,7 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */$$_81_index from "../81/index"
+import * as /* [auto-meaningful-name] */Module_81 from /* 81 */"../81/index"
 var i = function () {
   var t = function (e, n) {
     return (t = Object.setPrototypeOf || {
@@ -58,7 +58,7 @@ var o = function (t) {
   }
   e.prototype.getRow = function (t, e) {
     if (t < 0 || t >= this.getHeight()) {
-      throw new $$_81_index.IllegalArgumentException("Requested row is outside the image: " + t)
+      throw new Module_81.IllegalArgumentException("Requested row is outside the image: " + t)
     }
     var n = this.getWidth()
     var i = t * n
@@ -94,7 +94,7 @@ var o = function (t) {
     return this
   }
   e.prototype.invert = function () {
-    return new $$_81_index.InvertedLuminanceSource(this)
+    return new Module_81.InvertedLuminanceSource(this)
   }
   e.prototype.getTempCanvasElement = function () {
     if (null === this.tempCanvasElement) {
@@ -129,5 +129,5 @@ var o = function (t) {
   }
   e.DEGREE_TO_RADIANS = Math.PI / 180
   return e
-}($$_81_index.LuminanceSource)
+}(Module_81.LuminanceSource)
 export default o

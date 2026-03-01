@@ -8,15 +8,15 @@
 
 import { d, p } from "./index__part-0"
 import { I } from "./index__part-2"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_2678_index from "../../../551/1211/269/2678/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_699_154_index from "../../../551/1211/699/154/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_1550 from "../../../551/1211/269/1550"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_709_index from "../../../551/1211/709/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_54 from "../../../54"
-import * as /* [auto-meaningful-name] */$$_$$_$$_19 from "../../../19"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_98 from "../../../551/1211/98"
-import { createElement, useEffect, useLayoutEffect, useRef, Fragment, createContext } from "react"
-import * as /* [auto-meaningful-name] */$$_$$_$$_551_1211_269_2684_index from "../../../551/1211/269/2684/index"
+import * as /* [auto-meaningful-name] */Module_2678 from /* 2678 */"../../../551/1211/269/2678/index"
+import * as /* [auto-meaningful-name] */Module_154 from /* 154 */"../../../551/1211/699/154/index"
+import * as /* [auto-meaningful-name] */Module_1550 from /* 1550 */"../../../551/1211/269/1550"
+import * as /* [auto-meaningful-name] */Module_709 from /* 709 */"../../../551/1211/709/index"
+import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
+import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
+import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../../551/1211/98"
+import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import * as /* [auto-meaningful-name] */Module_2684 from /* 2684 */"../../../551/1211/269/2684/index"
 function F(e, t) {
   return Array.isArray(t) ? t.every(function (t) {
     return -1 !== e.indexOf(t)
@@ -25,7 +25,7 @@ function F(e, t) {
 var P = 310
 var N = 325
 var M = 305
-var L = $$_$$_$$_551_1211_709_index.a(function (e) {
+var L = Module_709.a(function (e) {
   return {
     staticWrapperRoot: {
       overflow: "hidden",
@@ -41,7 +41,7 @@ var L = $$_$$_$$_551_1211_709_index.a(function (e) {
 var j = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var n = L()
-  return createElement("div", {
+  return React.createElement("div", {
     className: n.staticWrapperRoot,
     children: e$children
   })
@@ -61,36 +61,36 @@ var U = function (e) {
   var /* [auto-meaningful-name] */e$showTodayButton = e.showTodayButton
   e.showTabs
   var /* [auto-meaningful-name] */e$wider = e.wider
-  var b = $$_$$_$$_54.a(e, ["children", "classes", "onAccept", "onDismiss", "onClear", "onSetToday", "okLabel", "cancelLabel", "clearLabel", "todayLabel", "clearable", "showTodayButton", "showTabs", "wider"])
-  return createElement(I, $$_$$_$$_19.a({
+  var b = Module_54.a(e, ["children", "classes", "onAccept", "onDismiss", "onClear", "onSetToday", "okLabel", "cancelLabel", "clearLabel", "todayLabel", "clearable", "showTodayButton", "showTabs", "wider"])
+  return React.createElement(I, Module_19.a({
     role: "dialog",
     onClose: e$onDismiss,
     classes: {
-      paper: $$_$$_$$_551_1211_98.a(e$classes.dialogRoot, e$wider && e$classes.dialogRootWider)
+      paper: Module_98.a(e$classes.dialogRoot, e$wider && e$classes.dialogRootWider)
     }
-  }, b), createElement(p, {
+  }, b), React.createElement(p, {
     children: e$children,
     className: e$classes.dialog
-  }), createElement(d, {
+  }), React.createElement(d, {
     classes: {
-      root: $$_$$_$$_551_1211_98.a((e$clearable || e$showTodayButton) && e$classes.withAdditionalAction)
+      root: Module_98.a((e$clearable || e$showTodayButton) && e$classes.withAdditionalAction)
     }
-  }, e$clearable && createElement($$_$$_$$_551_1211_269_2678_index.a, {
+  }, e$clearable && React.createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onClear
-  }, e$clearLabel), e$showTodayButton && createElement($$_$$_$$_551_1211_269_2678_index.a, {
+  }, e$clearLabel), e$showTodayButton && React.createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onSetToday
-  }, e$todayLabel), e$cancelLabel && createElement($$_$$_$$_551_1211_269_2678_index.a, {
+  }, e$todayLabel), e$cancelLabel && React.createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onDismiss
-  }, e$cancelLabel), e$okLabel && createElement($$_$$_$$_551_1211_269_2678_index.a, {
+  }, e$cancelLabel), e$okLabel && React.createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onAccept
   }, e$okLabel)))
 }
 U.displayName = "ModalDialog"
-var H = $$_$$_$$_551_1211_269_1550.a({
+var H = Module_1550.a({
   dialogRoot: {
     minWidth: P
   },
@@ -109,10 +109,10 @@ var H = $$_$$_$$_551_1211_269_1550.a({
     }
   }
 })
-var V = $$_$$_$$_551_1211_699_154_index.a(H, {
+var V = Module_154.a(H, {
   name: "MuiPickersModal"
 })(U)
-var G = "undefined" === typeof window ? useEffect : useLayoutEffect
+var G = "undefined" === typeof window ? React.useEffect : React.useLayoutEffect
 function z(e, t) {
   var n = t[e.key]
   if (n) {
@@ -121,7 +121,7 @@ function z(e, t) {
   }
 }
 function Q(e, t) {
-  var n = useRef(t)
+  var n = React.useRef(t)
   n.current = t
   G(function () {
     if (e) {
@@ -153,11 +153,11 @@ var W = function (e) {
   var /* [auto-meaningful-name] */e$onAccept = e.onAccept
   var /* [auto-meaningful-name] */e$onDismiss = e.onDismiss
   var /* [auto-meaningful-name] */e$onSetToday = e.onSetToday
-  var b = $$_$$_$$_54.a(e, ["open", "children", "okLabel", "cancelLabel", "clearLabel", "todayLabel", "showTodayButton", "clearable", "DialogProps", "showTabs", "wider", "InputComponent", "DateInputProps", "onClear", "onAccept", "onDismiss", "onSetToday"])
+  var b = Module_54.a(e, ["open", "children", "okLabel", "cancelLabel", "clearLabel", "todayLabel", "showTodayButton", "clearable", "DialogProps", "showTabs", "wider", "InputComponent", "DateInputProps", "onClear", "onAccept", "onDismiss", "onSetToday"])
   Q(e$open, {
     Enter: e$onAccept
   })
-  return createElement(Fragment, null, createElement(e$InputComponent, $$_$$_$$_19.a({}, b, e$DateInputProps)), createElement(V, $$_$$_$$_19.a({
+  return React.createElement(React.Fragment, null, React.createElement(e$InputComponent, Module_19.a({}, b, e$DateInputProps)), React.createElement(V, Module_19.a({
     wider: e$wider,
     showTabs: e$showTabs,
     open: e$open,
@@ -194,14 +194,14 @@ var K = function (e) {
   e.showTabs
   var /* [auto-meaningful-name] */e$DateInputProps = e.DateInputProps
   var /* [auto-meaningful-name] */e$InputComponent = e.InputComponent
-  var f = $$_$$_$$_54.a(e, ["open", "wider", "children", "PopoverProps", "onClear", "onDismiss", "onSetToday", "onAccept", "showTabs", "DateInputProps", "InputComponent"])
-  var d = useRef()
+  var f = Module_54.a(e, ["open", "wider", "children", "PopoverProps", "onClear", "onDismiss", "onSetToday", "onAccept", "showTabs", "DateInputProps", "InputComponent"])
+  var d = React.useRef()
   Q(e$open, {
     Enter: e$onAccept
   })
-  return createElement(Fragment, null, createElement(e$InputComponent, $$_$$_$$_19.a({}, f, e$DateInputProps, {
+  return React.createElement(React.Fragment, null, React.createElement(e$InputComponent, Module_19.a({}, f, e$DateInputProps, {
     inputRef: d
-  })), createElement($$_$$_$$_551_1211_269_2684_index.a, $$_$$_$$_19.a({
+  })), React.createElement(Module_2684.a, Module_19.a({
     open: e$open,
     onClose: e$onDismiss,
     anchorEl: d.current,
@@ -216,10 +216,10 @@ var K = function (e) {
     children: e$children
   }, e$PopoverProps)))
 }
-var X = createContext(null)
+var X = React.createContext(null)
 var Y = function (e) {
   var /* [auto-meaningful-name] */e$variant = e.variant
-  var n = $$_$$_$$_54.a(e, ["variant"])
+  var n = Module_54.a(e, ["variant"])
   var i = function (e) {
     switch (e) {
       case "inline":
@@ -230,9 +230,9 @@ var Y = function (e) {
         return W
     }
   }(e$variant)
-  return createElement(X.Provider, {
+  return React.createElement(X.Provider, {
     value: e$variant || "dialog"
-  }, createElement(i, n))
+  }, React.createElement(i, n))
 }
 export { F }
 export { P }

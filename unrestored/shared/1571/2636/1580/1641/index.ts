@@ -4,9 +4,9 @@
  * 模块 ID：1641
  */
 
-require("../1662/86")({
+require(/* 86 */"../1662/86")({
   target: "Math",
   stat: true
 }, {
-  log1p: require("./1259")
+  log1p: require(/* 1259 */"./1259")
 })

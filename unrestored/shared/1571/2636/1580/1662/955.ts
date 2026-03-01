@@ -6,10 +6,10 @@
 
 "use strict"
 
-var r = require("../1581/533")
-var o = require("../1785/194")
-var i = require("../1659/168")
-var a = require("../1774/1089")
+var r = require(/* 533 */"../1581/533")
+var o = require(/* 194 */"../1785/194")
+var i = require(/* 168 */"../1659/168")
+var a = require(/* 1089 */"../1774/1089")
 module.exports = r || !i(function () {
   if (!(a && a < 535)) {
     var e = Math.random()

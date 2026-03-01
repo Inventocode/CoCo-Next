@@ -7,7 +7,7 @@
 "use strict"
 
 var r
-var i = require("./56")
+var i = require(/* 56 */"./56")
 var o = function (t) {
   var e = "function" === typeof Symbol && Symbol.iterator
   var n = e && t[e]

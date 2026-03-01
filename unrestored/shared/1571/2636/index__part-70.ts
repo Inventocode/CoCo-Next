@@ -9,15 +9,15 @@
 import { Yh, Qh } from "./index__part-68"
 var $h
 var Jh
-import * as /* [auto-meaningful-name] */$_135 from "./135"
-import * as rp from "./61"
-import * as /* [auto-meaningful-name] */$_46_index from "./46/index"
-import * as ep from "./4"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_shared_packages_Crc_blink_src_index from "../../../../src/shared/packages/@crc/blink/src/index"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as Et from "./9"
-import * as D from "./6"
-import * as em from "./14"
+import * as /* [auto-meaningful-name] */Module_135 from /* 135 */"./135"
+import * as /* [auto-meaningful-name] */Module_61 from /* 61 */"./61"
+import * as /* [auto-meaningful-name] */Module_46 from /* 46 */"./46/index"
+import * as /* [auto-meaningful-name] */Module_4 from /* 4 */"./4"
+import * as /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index from /* 17 */"../../../../src/shared/packages/@crc/blink/src/index"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"./9"
+import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
+import * as /* [auto-meaningful-name] */Module_14 from /* 14 */"./14"
 !function (e) {
   e.SOUND_MAN = "SOUND_MAN"
   e.SOUND_WOMAN = "SOUND_WOMAN"
@@ -30,42 +30,42 @@ import * as em from "./14"
   e.DECREASE = "DECREASE"
 })($h || ($h = {}))
 var tm = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.b,
+  type: Src_editor_widget_builtIn_types.b,
   category: {
-    iconId: $_135.c,
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.b
+    iconId: Module_135.c,
+    blocks: Src_editor_widget_builtIn_types.b
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
-    return ["<block type=\"audio_play_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_stop_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_pause_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_set_sound_file\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"SOUND_FILE_ID\">\n        <shadow type=\"audio_sound_file_list_dropdown\">\n          <field name=\"SOUND_FILE_ID\">").concat(rp.c, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"audio_set_volume_or_rate\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0,100,1\">100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"audio_change_volume_or_rate\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">10</field>\n        </shadow>\n      </value>\n    </block>"), rp.d, "<block type=\"text2speech_speak_text\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text2speech_speak_text_and_wait\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat($$_$$_$$_$$_src_shared_packages_Crc_blink_src_index.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>")]
+    return ["<block type=\"audio_play_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_stop_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_pause_sound\" uncache=\"true\">\n      ".concat(t, "\n    </block>"), "<block type=\"audio_set_sound_file\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"SOUND_FILE_ID\">\n        <shadow type=\"audio_sound_file_list_dropdown\">\n          <field name=\"SOUND_FILE_ID\">").concat(Module_61.c, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"audio_set_volume_or_rate\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\" constraints=\"0,100,1\">100</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"audio_change_volume_or_rate\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"math_number\">\n          <field name=\"NUM\">10</field>\n        </shadow>\n      </value>\n    </block>"), Module_61.d, "<block type=\"text2speech_speak_text\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>"), "<block type=\"text2speech_speak_text_and_wait\" uncache=\"true\">\n      ".concat(t, "\n      <value name=\"VALUE\">\n        <shadow type=\"text\">\n          <field name=\"TEXT\">").concat(Src_shared_packages_Crc_blink_src_index.Blink.Msg.TEXT2SPEECH_DEFAULT_TEXT, "</field>\n        </shadow>\n      </value>\n    </block>")]
   },
   blockDeclareGroup: {
     setBlockGroupSnippet: function (e) {
       e.insertBlockSnippetGenerator("audio_sound_file_list_dropdown", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "SOUND_FILE_ID") || ""
-        return o && o !== Et.h ? ep.o(o) : ""
+        return o && o !== Module_9.h ? Module_4.o(o) : ""
       })
       e.insertBlockSnippetGenerator("audio_play_sound", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return ep.n("audioPlaySound", [ep.o(o)])
+        return Module_4.n("audioPlaySound", [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("audio_stop_sound", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return ep.n("audioStopSound", [ep.o(o)])
+        return Module_4.n("audioStopSound", [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("audio_pause_sound", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
-        return ep.n("audioPauseSound", [ep.o(o)])
+        return Module_4.n("audioPauseSound", [Module_4.o(o)])
       })
       e.insertBlockSnippetGenerator("audio_set_sound_file", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.valueToCode(t, n, "SOUND_FILE_ID", e.ORDER_FUNCTION_CALL)
-        return i ? ep.n("audioSetSoundFile", [ep.o(o), i]) : (em.a.condition(false, {
+        return i ? Module_4.n("audioSetSoundFile", [Module_4.o(o), i]) : (Module_14.a.condition(false, {
           type: "warning",
           messageId: "soundBlockNoSelectFile"
         }), "")
@@ -75,7 +75,7 @@ var tm = {
         var o = e.getFieldValue(r, "WIDGET_ID") || ""
         var i = e.getFieldValue(r, "OP") || ""
         var a = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return "SOUND_VOLUME" === i ? ep.n("audioSetVolume", [ep.o(o), a]) : ep.n("audioSetRate", [ep.o(o), a])
+        return "SOUND_VOLUME" === i ? Module_4.n("audioSetVolume", [Module_4.o(o), a]) : Module_4.n("audioSetRate", [Module_4.o(o), a])
       })
       e.insertBlockSnippetGenerator("audio_change_volume_or_rate", function (t, n) {
         var r = t.blocks[n]
@@ -83,19 +83,19 @@ var tm = {
         var i = e.getFieldValue(r, "OP") || ""
         var a = e.getFieldValue(r, "CHANGE") || ""
         var s = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return "SOUND_VOLUME" === i ? ep.n("audioChangeVolume", [ep.o(o), ep.o(a), s]) : ep.n("audioChangeRate", [ep.o(o), ep.o(a), s])
+        return "SOUND_VOLUME" === i ? Module_4.n("audioChangeVolume", [Module_4.o(o), Module_4.o(a), s]) : Module_4.n("audioChangeRate", [Module_4.o(o), Module_4.o(a), s])
       })
       e.insertBlockSnippetGenerator("text2speech_speak_text", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "OP") || ""
         var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return (i = i.replace(/[#&%]/g, "").substr(0, 2048)) ? ep.n("text2speechSpeakText", [ep.o(o), i]) : ""
+        return (i = i.replace(/[#&%]/g, "").substr(0, 2048)) ? Module_4.n("text2speechSpeakText", [Module_4.o(o), i]) : ""
       })
       e.insertBlockSnippetGenerator("text2speech_speak_text_and_wait", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "OP") || ""
         var i = e.valueToCode(t, n, "VALUE", e.ORDER_FUNCTION_CALL) || ""
-        return (i = i.replace(/[#&%]/g, "").substr(0, 2048)) ? ep.j("text2speechSpeakTextAndWait", [ep.o(o), i]) : ""
+        return (i = i.replace(/[#&%]/g, "").substr(0, 2048)) ? Module_4.j("text2speechSpeakTextAndWait", [Module_4.o(o), i]) : ""
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -104,7 +104,7 @@ var tm = {
         name: "WIDGET_ID",
         custom: true,
         options: function () {
-          return $_46_index.c().getWidgetListByType($$_$$_$$_$$_src_editor_widget_builtIn_types.b)
+          return Module_46.c().getWidgetListByType(Src_editor_widget_builtIn_types.b)
         }
       }
       e.insertBlockProfile("audio_sound_file_list_dropdown", {
@@ -116,7 +116,7 @@ var tm = {
             name: "SOUND_FILE_ID",
             custom: true,
             options: function () {
-              return $_46_index.c().getSoundFiles()
+              return Module_46.c().getSoundFiles()
             }
           }
         ],
@@ -125,7 +125,7 @@ var tm = {
       e.insertBlockProfile("audio_play_sound", {
         type: "audio_play_sound",
         message0: "%{BKY_AUDIO_PLAY_SOUND}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         previousStatement: true,
         nextStatement: true,
         colour: "%{BKY_SOUND_HUE}",
@@ -134,7 +134,7 @@ var tm = {
       e.insertBlockProfile("audio_stop_sound", {
         type: "audio_stop_sound",
         message0: "%{BKY_AUDIO_STOP_SOUND}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         previousStatement: true,
         nextStatement: true,
         colour: "%{BKY_SOUND_HUE}",
@@ -143,7 +143,7 @@ var tm = {
       e.insertBlockProfile("audio_pause_sound", {
         type: "audio_pause_sound",
         message0: "%{BKY_AUDIO_PAUSE_SOUND}",
-        args0: [D.a({}, n)],
+        args0: [Module_6.a({}, n)],
         previousStatement: true,
         nextStatement: true,
         colour: "%{BKY_SOUND_HUE}",
@@ -153,7 +153,7 @@ var tm = {
         type: "audio_set_sound_file",
         message0: "%{BKY_AUDIO_SET_SOUND_FILE}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "input_value",
             name: "SOUND_FILE_ID",
             check: ["String"]
@@ -168,7 +168,7 @@ var tm = {
         type: "audio_set_volume_or_rate",
         message0: "%{BKY_AUDIO_SET_VOLUME_OR_RATE}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             custom: true,
             name: "OP",
@@ -178,8 +178,8 @@ var tm = {
               var n = e || (null === this$source_block || undefined === this$source_block ? undefined : this$source_block.get_field_value("OP")) || ""
               var r = null === this$source_block || undefined === this$source_block ? undefined : this$source_block.get_shadow_field("VALUE")
               if (r && "FieldNumber" === r.field_type) {
-                var o = "SOUND_VOLUME" === n ? $_135.f : $_135.d
-                var i = "SOUND_VOLUME" === n ? $_135.g : $_135.e
+                var o = "SOUND_VOLUME" === n ? Module_135.f : Module_135.d
+                var i = "SOUND_VOLUME" === n ? Module_135.g : Module_135.e
                 r.set_constraints(i, o, 1)
               }
             }
@@ -198,7 +198,7 @@ var tm = {
         type: "audio_change_volume_or_rate",
         message0: "%{BKY_AUDIO_CHANGE_VOLUME_OR_RATE}",
         args0: [
-          D.a({}, n), {
+          Module_6.a({}, n), {
             type: "field_coco_dropdown",
             custom: true,
             name: "OP",
@@ -263,7 +263,7 @@ var tm = {
   },
   categoryClass: {
     text: "",
-    iconId: $_135.c,
+    iconId: Module_135.c,
     blocks: []
   },
   renameBlocksInfo: {
@@ -273,16 +273,16 @@ var tm = {
   topBlocks: []
 }
 var nm = {
-  icon: $_135.c,
+  icon: Module_135.c,
   title: "AudioWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.b,
+  type: Src_editor_widget_builtIn_types.b,
   previewAreaWidgetTitle: "AudioWidget.widgetName",
   component: Yh,
   editConfig: Qh,
   blockConfig: tm,
-  isInvisibleWidget: $_135.b,
+  isInvisibleWidget: Module_135.b,
   widget: {
-    isGlobalWidget: $_135.a,
+    isGlobalWidget: Module_135.a,
     size: {
       width: 0,
       height: 0
@@ -300,10 +300,10 @@ var rm = [
   }
 ]
 var om = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.t,
+  type: Src_editor_widget_builtIn_types.t,
   category: {
     iconId: "icon-widget-gyroscope",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.t
+    blocks: Src_editor_widget_builtIn_types.t
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -313,15 +313,15 @@ var om = {
     setBlockGroupSnippet: function (e) {
       e.insertBlockSnippetGenerator("gyroscope_on_phone_shake", function (t, n) {
         var r = e.statementToCode(t, n, "DO")
-        return r ? ep.n("onGyroscopePhoneShake", [ep.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : ""
+        return r ? Module_4.n("onGyroscopePhoneShake", [Module_4.o(e.getDynamicValue("__CURRENT_SCREEN_ID__"))], r) : ""
       })
       e.insertBlockSnippetGenerator("gyroscope_phone_get_compass", function () {
-        return ep.s("getGyroscopeCompassValue")
+        return Module_4.s("getGyroscopeCompassValue")
       })
       e.insertBlockSnippetGenerator("gyroscope_phone_get_orientation_value", function (t, n) {
         var r = t.blocks[n]
         var o = e.getFieldValue(r, "ORIENTATION") || ""
-        return "gravity" === (e.getFieldValue(r, "TYPE") || "") ? ep.s("getGyroscopeGravity".concat(o.toUpperCase())) : ep.s("getGyroscopeRotation".concat(o.toUpperCase()))
+        return "gravity" === (e.getFieldValue(r, "TYPE") || "") ? Module_4.s("getGyroscopeGravity".concat(o.toUpperCase())) : Module_4.s("getGyroscopeRotation".concat(o.toUpperCase()))
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -329,7 +329,7 @@ var om = {
         type: "gyroscope_on_phone_shake",
         message0: "%{BKY_GYROSCOPE_ON_PHONE_SHAKE}",
         args0: [
-          ep.e("%{BKY_BLOCK_PHONE_SHAKE_ICON}", true), {
+          Module_4.e("%{BKY_BLOCK_PHONE_SHAKE_ICON}", true), {
             type: "input_dummy",
             align: "CENTRE"
           }, {
@@ -384,7 +384,7 @@ var om = {
 var im = {
   icon: "icon-widget-gyroscope",
   title: "GyroscopeWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.t,
+  type: Src_editor_widget_builtIn_types.t,
   previewAreaWidgetTitle: "GyroscopeWidget.widgetName",
   component: Yh,
   editConfig: rm,
@@ -405,10 +405,10 @@ var am = [
   }
 ]
 var sm = {
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.K,
+  type: Src_editor_widget_builtIn_types.K,
   category: {
     iconId: "icon-widget-volume-sensor",
-    blocks: $$_$$_$$_$$_src_editor_widget_builtIn_types.K
+    blocks: Src_editor_widget_builtIn_types.K
   },
   getTemplate: function (e) {
     var t = "<field name=\"WIDGET_ID\">".concat(e, "</field>")
@@ -420,15 +420,15 @@ var sm = {
         var r = t.blocks[n]
         switch (e.getFieldValue(r, "STATE")) {
           case "open":
-            return ep.j("startVolumeSensorDetection")
+            return Module_4.j("startVolumeSensorDetection")
           case "close":
-            return ep.n("stopVolumeSensorDetection")
+            return Module_4.n("stopVolumeSensorDetection")
           default:
             return ""
         }
       })
       e.insertBlockSnippetGenerator("volume_sensor_get_current_value", function () {
-        return ep.s("getVolumeSensorCurrentValue")
+        return Module_4.s("getVolumeSensorCurrentValue")
       })
     },
     setBlockGroupProfile: function (e, t) {
@@ -474,7 +474,7 @@ var sm = {
 var cm = {
   icon: "icon-widget-volume-sensor",
   title: "VolumeSensorWidget.widgetName",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.K,
+  type: Src_editor_widget_builtIn_types.K,
   previewAreaWidgetTitle: "VolumeSensorWidget.widgetName",
   component: Yh,
   editConfig: am,

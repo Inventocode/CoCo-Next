@@ -4,9 +4,9 @@
  * 模块 ID：2579
  */
 
-var r = require("./2580")
-var i = require("../../../../2570/1459/1181/1453")
-var o = require("../../993")
+var r = require(/* 2580 */"./2580")
+var i = require(/* 1453 */"../../../../2570/1459/1181/1453")
+var o = require(/* 993 */"../../993")
 var a = i ? function (e, t) {
   return i(e, "toString", {
     configurable: true,

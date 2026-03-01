@@ -8,34 +8,34 @@
 
 import { Af } from "./index__part-51"
 import { jf, Rf } from "./index__part-52"
-import * as /* [auto-meaningful-name] */$_131 from "./131"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_src_editor_widget_builtIn_types from "../../../../src/editor/widget/built-in/types"
-import * as /* [auto-meaningful-name] */$_163 from "./163"
+import * as /* [auto-meaningful-name] */Module_131 from /* 131 */"./131"
+import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../src/editor/widget/built-in/types"
+import * as /* [auto-meaningful-name] */Module_163 from /* 163 */"./163"
 var xf = {
-  icon: $_131.e,
+  icon: Module_131.e,
   title: "switch",
-  type: $$_$$_$$_$$_src_editor_widget_builtIn_types.F,
+  type: Src_editor_widget_builtIn_types.F,
   previewAreaWidgetTitle: "switch",
   component: jf,
   editConfig: Af,
   blockConfig: Rf,
-  isInvisibleWidget: $_131.h,
+  isInvisibleWidget: Module_131.h,
   widget: {
-    isGlobalWidget: $_131.g,
+    isGlobalWidget: Module_131.g,
     size: {
-      width: $_131.f,
-      height: $_131.d
+      width: Module_131.f,
+      height: Module_131.d
     },
     attributes: {
       disabled: false,
-      color: $_131.c,
-      sizeType: $$_$$_$$_$$_src_editor_widget_builtIn_types.s.MEDIUM,
-      mode: $_163.c.DEFAULT,
+      color: Module_131.c,
+      sizeType: Src_editor_widget_builtIn_types.s.MEDIUM,
+      mode: Module_163.c.DEFAULT,
       value: false,
-      backgroundMode: $_163.a.TEMPLATE,
-      backgroundOpenImage: $_131.b,
-      backgroundCloseImage: $_131.a,
-      imageResizeMode: $_163.b.CONTAIN
+      backgroundMode: Module_163.a.TEMPLATE,
+      backgroundOpenImage: Module_131.b,
+      backgroundCloseImage: Module_131.a,
+      imageResizeMode: Module_163.b.CONTAIN
     }
   }
 }

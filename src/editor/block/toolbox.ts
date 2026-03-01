@@ -10,7 +10,7 @@ export { SPACE as c }
 export { TOOLBOXES as f }
 export { l as e }
 export { u as d }
-import * as /* [auto-meaningful-name] */$$_$$_$$_unrestored_shared_1571_2636_9 from "../../../unrestored/shared/1571/2636/9"
+import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../unrestored/shared/1571/2636/9"
 import * as generate from "../../../unrestored/shared/1571/2636/301/index"
 var ADD = {
   PRIMITIVE: "PRIMITIVE",
@@ -201,7 +201,7 @@ const TOOLBOXES = {
   }
 }
 var l = function () {
-  return $$_$$_$$_unrestored_shared_1571_2636_9.O()
+  return Module_9.O()
 }
 var u = function (e) {
   var /* [auto-meaningful-name] */cN$text

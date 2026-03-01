@@ -6,17 +6,17 @@
 
 "use strict"
 
-var r = require("../../../../1058/1393/1143/712/index")
-var i = require("../../../../1058/1393/1143/532")
-var o = require("../../../../1058/1393/1143/283/index")
-var a = require("../../../../1058/1393/1143/284/index")
-var s = require("../../180")
-var c = require("../../204")
-var /* [auto-meaningful-name] */require$_1130_index$Syntax = require("./1130/index").Syntax
-var l = require("../1131")
-var f = require("../978")
-var /* [auto-meaningful-name] */require$_1359$Definition = require("./1359").Definition
-var h = require("../../../../1058/1393/573/index")
+var r = require(/* 712 */"../../../../1058/1393/1143/712/index")
+var i = require(/* 532 */"../../../../1058/1393/1143/532")
+var o = require(/* 283 */"../../../../1058/1393/1143/283/index")
+var a = require(/* 284 */"../../../../1058/1393/1143/284/index")
+var s = require(/* 180 */"../../180")
+var c = require(/* 204 */"../../204")
+var /* [auto-meaningful-name] */require_1130_$_1130_index$Syntax = require(/* 1130 */"./1130/index").Syntax
+var l = require(/* 1131 */"../1131")
+var f = require(/* 978 */"../978")
+var /* [auto-meaningful-name] */require_1359_$_1359$Definition = require(/* 1359 */"./1359").Definition
+var h = require(/* 573 */"../../../../1058/1393/573/index")
 function p(e) {
   return e.type === f.ClassName || e.type === f.Variable && "var" !== e.parent.kind
 }
@@ -52,10 +52,10 @@ var _ = function () {
         return false
       }
       if ("function" === e.type) {
-        if (t.type === require$_1130_index$Syntax.ArrowFunctionExpression && t.body.type !== require$_1130_index$Syntax.BlockStatement) {
+        if (t.type === require_1130_$_1130_index$Syntax.ArrowFunctionExpression && t.body.type !== require_1130_$_1130_index$Syntax.BlockStatement) {
           return false
         }
-        if (!(i = t.type === require$_1130_index$Syntax.Program ? t : t.body)) {
+        if (!(i = t.type === require_1130_$_1130_index$Syntax.Program ? t : t.body)) {
           return false
         }
       } else {
@@ -67,7 +67,7 @@ var _ = function () {
       if (r) {
         for (var o = 0, /* [auto-meaningful-name] */i$body$length = i.body.length; o < i$body$length; ++o) {
           var s = i.body[o]
-          if (s.type !== require$_1130_index$Syntax.DirectiveStatement) {
+          if (s.type !== require_1130_$_1130_index$Syntax.DirectiveStatement) {
             break
           }
           if ("\"use strict\"" === s.raw || "'use strict'" === s.raw) {
@@ -77,11 +77,11 @@ var _ = function () {
       } else {
         for (var c = 0, /* [auto-meaningful-name] */i$body$length1 = i.body.length; c < i$body$length1; ++c) {
           var f = i.body[c]
-          if (f.type !== require$_1130_index$Syntax.ExpressionStatement) {
+          if (f.type !== require_1130_$_1130_index$Syntax.ExpressionStatement) {
             break
           }
           var /* [auto-meaningful-name] */f$expression = f.expression
-          if (f$expression.type !== require$_1130_index$Syntax.Literal || "string" !== typeof f$expression.value) {
+          if (f$expression.type !== require_1130_$_1130_index$Syntax.Literal || "string" !== typeof f$expression.value) {
             break
           }
           if (null !== f$expression.raw && undefined !== f$expression.raw) {
@@ -221,14 +221,14 @@ var _ = function () {
     }, {
       key: "__define",
       value: function (e, t) {
-        if (e && e.type === require$_1130_index$Syntax.Identifier) {
+        if (e && e.type === require_1130_$_1130_index$Syntax.Identifier) {
           this.__defineGeneric(e.name, this.set, this.variables, e, t)
         }
       }
     }, {
       key: "__referencing",
       value: function (e, t, n, r, i, o) {
-        if (e && e.type === require$_1130_index$Syntax.Identifier && "super" !== e.name) {
+        if (e && e.type === require_1130_$_1130_index$Syntax.Identifier && "super" !== e.name) {
           var a = new l(e, this, t || l.READ, n, r, !!i, !!o)
           this.references.push(a)
           this.__left.push(a)
@@ -260,7 +260,7 @@ var _ = function () {
         var t
         var n
         var /* [auto-meaningful-name] */this$references$length
-        for (h(this.__isClosed(), "Scope should be closed."), h(e.type === require$_1130_index$Syntax.Identifier, "Target should be identifier."), n = 0, this$references$length = this.references.length; n < this$references$length; ++n) {
+        for (h(this.__isClosed(), "Scope should be closed."), h(e.type === require_1130_$_1130_index$Syntax.Identifier, "Target should be identifier."), n = 0, this$references$length = this.references.length; n < this$references$length; ++n) {
           if ((t = this.references[n]).identifier === e) {
             return t
           }
@@ -324,7 +324,7 @@ var A = function (e) {
         }
         for (var c = 0, /* [auto-meaningful-name] */t$length = t.length; c < t$length; ++c) {
           var l = t[c]
-          this.__defineImplicit(l.pattern, new require$_1359$Definition(f.ImplicitGlobalVariable, l.pattern, l.node, null, null, null))
+          this.__defineImplicit(l.pattern, new require_1359_$_1359$Definition(f.ImplicitGlobalVariable, l.pattern, l.node, null, null, null))
         }
         this.implicit.left = this.__left
         return r(i(n.prototype), "__close", this).call(this, e)
@@ -332,7 +332,7 @@ var A = function (e) {
     }, {
       key: "__defineImplicit",
       value: function (e, t) {
-        if (e && e.type === require$_1130_index$Syntax.Identifier) {
+        if (e && e.type === require_1130_$_1130_index$Syntax.Identifier) {
           this.__defineGeneric(e.name, this.implicit.set, this.implicit.variables, e, t)
         }
       }
@@ -355,7 +355,7 @@ var v = function (e) {
   function n(e, r, i) {
     var o
     s(this, n);
-    (o = t.call(this, e, "function-expression-name", r, i, false)).__define(i.id, new require$_1359$Definition(f.FunctionName, i.id, i, null, null, null))
+    (o = t.call(this, e, "function-expression-name", r, i, false)).__define(i.id, new require_1359_$_1359$Definition(f.FunctionName, i.id, i, null, null, null))
     o.functionExpressionScope = true
     return o
   }
@@ -420,7 +420,7 @@ var E = function (e) {
   function n(e, r, i, o) {
     var a
     s(this, n)
-    if ((a = t.call(this, e, "function", r, i, o)).block.type !== require$_1130_index$Syntax.ArrowFunctionExpression) {
+    if ((a = t.call(this, e, "function", r, i, o)).block.type !== require_1130_$_1130_index$Syntax.ArrowFunctionExpression) {
       a.__defineArguments()
     }
     return a
@@ -429,7 +429,7 @@ var E = function (e) {
     {
       key: "isArgumentsMaterialized",
       value: function () {
-        if (this.block.type === require$_1130_index$Syntax.ArrowFunctionExpression) {
+        if (this.block.type === require_1130_$_1130_index$Syntax.ArrowFunctionExpression) {
           return false
         }
         if (!this.isStatic()) {

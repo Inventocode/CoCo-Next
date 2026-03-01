@@ -10,11 +10,11 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 })
 exports.init_text_blocks = undefined
-var r = require("../1058/125")
-var o = require("../123/537")
-var i = require("../123/293")
-var a = require("../123/index")
-var s = require("./2610/581")
+var r = require(/* 125 */"../1058/125")
+var o = require(/* 537 */"../123/537")
+var i = require(/* 293 */"../123/293")
+var a = require(/* 123 */"../123/index")
+var s = require(/* 581 */"./2610/581")
 exports.init_text_blocks = function (e) {
   e.define_blocks_with_json_array([
     {

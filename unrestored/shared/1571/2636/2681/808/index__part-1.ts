@@ -7,7 +7,7 @@
 "use strict"
 
 var r
-import * as /* [auto-meaningful-name] */$_184 from "./184"
+import * as /* [auto-meaningful-name] */Module_184 from /* 184 */"./184"
 !function (e) {
   e.MISSING_VALUE = "MISSING_VALUE"
   e.INVALID_VALUE = "INVALID_VALUE"
@@ -20,7 +20,7 @@ var o = function (e) {
     i.originalMessage = r
     return i
   }
-  $_184.b(t, e)
+  Module_184.b(t, e)
   t.prototype.toString = function () {
     return "[formatjs Error: " + this.code + "] " + this.message
   }
@@ -30,21 +30,21 @@ var a = function (e) {
   function t(t, n, r, i) {
     return e.call(this, "Invalid values for \"" + t + "\": \"" + n + "\". Options are \"" + Object.keys(r).join("\", \"") + "\"", "INVALID_VALUE", i) || this
   }
-  $_184.b(t, e)
+  Module_184.b(t, e)
   return t
 }(o)
 var s = function (e) {
   function t(t, n, r) {
     return e.call(this, "Value for \"" + t + "\" must be of type " + n, "INVALID_VALUE", r) || this
   }
-  $_184.b(t, e)
+  Module_184.b(t, e)
   return t
 }(o)
 var c = function (e) {
   function t(t, n) {
     return e.call(this, "The intl string context variable \"" + t + "\" was not provided to the string \"" + n + "\"", "MISSING_VALUE", n) || this
   }
-  $_184.b(t, e)
+  Module_184.b(t, e)
   return t
 }(o)
 export { o }
