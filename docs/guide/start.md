@@ -12,7 +12,7 @@ sidebar_position: 1
 
 目前仅支持 64 位 Window 10 及以上版本的系统。
 
-到 [发行版](https://gitee.com/oldsquaw-coco-next/CoCo-Next-Local-Server/releases) 界面下载 CoCo Next 本地服务，下载完成后双击程序启动。
+到 [发行版 | CoCo Next 本地服务](https://gitee.com/oldsquaw-coco-next/CoCo-Next-Local-Server/releases) 下载 CoCo Next 本地服务，下载完成后启动程序。
 
 初次运行时先在程序内下载最新版本，下载完成后即可启动服务。
 
