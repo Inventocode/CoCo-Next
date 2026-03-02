@@ -1,0 +1,80 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=360,user-scalable=no"/><meta name="description" content="CoCo Next"/><title></title><link rel="icon" href="/favicon.svg"/><meta name="environment" content="production"><script defer="defer" src="https://use.sevencdn.com/npm/react@16.14.0/umd/react.production.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/react-dom@16.14.0/umd/react-dom.production.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/terser@5.44.0/dist/bundle.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/lodash@4.17.21/lodash.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/ag-grid-community@25.3.0/dist/ag-grid-community.min.noStyle.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/xlsx@0.17.5/dist/xlsx.full.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/dayjs@1.11.18/dayjs.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/antd@5.27.5/dist/antd.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/antd-mobile@5.41.1/bundle/antd-mobile.umd.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/html2canvas@1.4.1/dist/html2canvas.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/quill@2.0.3/dist/quill.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/intl@1.2.5/dist/Intl.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/prop-types@15.8.1/prop-types.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/react-intl@2.9.0/dist/react-intl.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/axios@0.21.1/dist/axios.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/redux-saga@0.16.2/dist/redux-saga.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/react-router@5.3.4/umd/react-router.min.js" crossorigin></script><script defer="defer" src="https://use.sevencdn.com/npm/react-redux@7.2.9/dist/react-redux.min.js" crossorigin></script><script defer="defer" src="/static/scripts/runtime.05075d080bfaabd4.js"></script><script defer="defer" src="/static/scripts/proxy.b7ed91e26ceaefd8.js"></script><script defer="defer" src="/static/scripts/447.b27df50c8311b12a.js"></script><script defer="defer" src="/static/scripts/111.2ca2e2c337817c9a.js"></script><script defer="defer" src="/static/scripts/328.f2deb45c24a3bec7.js"></script><script defer="defer" src="/static/scripts/801.1e7c1c0f9159098b.js"></script><script defer="defer" src="/static/scripts/349.2f642c240a085d44.js"></script><script defer="defer" src="/static/scripts/47.d83da141a2c63e78.js"></script><script defer="defer" src="/static/scripts/558.21801f9c8d129e10.js"></script><script defer="defer" src="/static/scripts/956.b6404ccfed459ca2.js"></script><script defer="defer" src="/static/scripts/741.60e8c29612c87f4a.js"></script><script defer="defer" src="/static/scripts/933.3baab68d15202a8c.js"></script><script defer="defer" src="/static/scripts/951.df2abe5227f403bf.js"></script><script defer="defer" src="/static/scripts/393.ab070ad75cf45ff4.js"></script><script defer="defer" src="/static/scripts/301.6e5a92244ecaa170.js"></script><script defer="defer" src="/static/scripts/546.40b736fb0845d3fd.js"></script><script defer="defer" src="/static/scripts/769.269756a9526f9519.js"></script><script defer="defer" src="/static/scripts/912.35d0c3d73e1ea3be.js"></script><script defer="defer" src="/static/scripts/player.d964a62cd40358b7.js"></script><link href="https://use.sevencdn.com/npm/antd-mobile@5.41.1/bundle/style.css" rel="stylesheet" crossorigin><link href="/static/styles/player.8343d4c886b7916a.css" rel="stylesheet"></head><body><script>try {
+                var url = new URL(window.location.href)
+                  , title = url.searchParams.get("title");
+                title && (document.title = title)
+            } catch (t) {
+                console.error("Set title error", t)
+            }</script><div id="loading"><style>#loading {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    position: fixed;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    z-index: -100;
+                }
+                #loading .logo {
+                    width: 128px;
+                }
+                #loading .process-bar--wrapper {
+                    border: 4px solid #6e4ff4;
+                    border-radius: 100px;
+                }
+                #loading .process-bar--fill--wrapper {
+                    width: 256px;
+                    margin: 4px;
+                }
+                #loading .process--fill {
+                    width: 0%;
+                    height: 8px;
+                    border-radius: 4px;
+                    background-color: #6e4ff4;
+                    transition: width 100ms;
+                }
+                #loading .text {
+                    margin: 4px;
+                }
+                #loading .percentage {
+                    float: right;
+                }</style><img class="logo" src="/favicon.svg" alt="logo.svg"><div class="info"><div class="process-bar--wrapper"><div class="process-bar--fill--wrapper"><div class="process--fill"></div></div></div><div class="text"><span class="prompt">努力加载中……</span>(<span class="ratio">0/0</span>)<span class="percentage">0%</span></div></div><script>const processFillElement = document.querySelector("#loading .process--fill")
+                const promptElement = document.querySelector("#loading .prompt")
+                const ratioElement = document.querySelector("#loading .ratio")
+                const percentageElement = document.querySelector("#loading .percentage")
+
+                let total = 0, loaded = 0, hasError = false
+
+                function increaseProcess() {
+                    loaded++
+                    updateProcessBar()
+                }
+
+                function updateProcessBar() {
+                    const process = loaded / total * 100
+                    processFillElement.style.width = `${process}%`
+                    ratioElement.innerText = `${loaded}/${total}`
+                    percentageElement.innerText = `${Math.round(process)}%`
+                }
+
+                function handleError() {
+                    if (!hasError) {
+                        promptElement.innerText = "❌ 加载失败"
+                        hasError = true
+                    }
+                }
+
+                for (const element of document.querySelectorAll("script[src], link[rel=stylesheet]")) {
+                    total++
+                    element.addEventListener("load", increaseProcess)
+                    element.addEventListener("error", handleError)
+                }
+
+                updateProcessBar()
+
+                addEventListener("load", () => {
+                    if (!hasError) {
+                        document.getElementById("loading").remove()
+                    }
+                })</script></div><noscript>You need to enable JavaScript to run this app.</noscript><div id="root"></div></body></html>
