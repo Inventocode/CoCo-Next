@@ -10,7 +10,8 @@ import { f, m } from "./index__part-0"
 import * as /* [auto-meaningful-name] */Module_62 from /* 62 */"./62"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useState, useEffect, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"../2681/index"
@@ -23,10 +24,10 @@ var M = function (e) {
 }
 var L = new Module_62.g("#f6f4fd")
 function P() {
-  var e = React1.useRef()
-  var t = React1.useRef(0)
-  var n = React1.useRef()
-  var a = React1.useState(false)
+  var e = useRef()
+  var t = useRef(0)
+  var n = useRef()
+  var a = useState(false)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var u = s[1]
@@ -35,7 +36,7 @@ function P() {
     return e
   })
   n.current = p
-  React1.useEffect(function () {
+  useEffect(function () {
     var t
     var n = {
       width: (null === (t = document.getElementById("emulatorCanvasWrapper")) || undefined === t ? undefined : t.clientWidth) || 340,
@@ -80,7 +81,7 @@ function P() {
   !function (e, t) {
     var n = React.useRef()
     var i = React.useRef()
-    var a = React1.useCallback(function (t) {
+    var a = useCallback(function (t) {
       if (undefined !== i.current) {
         var r = t - i.current
         e(r / 1e3)
@@ -171,7 +172,7 @@ function P() {
       }
     }
   })
-  var _ = React1.useCallback(function (t) {
+  var _ = useCallback(function (t) {
     if (t && e.current) {
       t.appendChild(e.current.renderer.domElement)
     }

@@ -15,14 +15,15 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_473 from /* 473 */"./473"
 import /* [auto-meaningful-name] */Module_4731 from /* 473 */"./473"
 var CA = function (e) {
   var /* [auto-meaningful-name] */e$onSuccess = e.onSuccess
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$isEmpty = e.isEmpty
-  var o = React1.useState(false)
+  var o = useState(false)
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
@@ -72,7 +73,7 @@ var TA = function (e) {
   var r = useSelector(function (e) {
     return e.resource.soundFileList.reverse()
   })
-  var o = React1.useState("")
+  var o = useState("")
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]

@@ -12,9 +12,10 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_189 from /* 189 */"./189"
-var _w = React1.memo(function (e) {
+var _w = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("style") || Module_189.b.styleA
@@ -72,7 +73,7 @@ var _w = React1.memo(function (e) {
     }
   }, "BUTTON")))))
 })
-var vw = React1.memo(function (e) {
+var vw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -107,7 +108,7 @@ var vw = React1.memo(function (e) {
     }, e.label)
   })))
 })
-var bw = React1.memo(function (e) {
+var bw = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig$url = e.formConfig.url
   return e$formConfig$url ? React.createElement("div", {
     style: {

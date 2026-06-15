@@ -7,7 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../../35"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, createElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import /* 50 */"../../../50/index"
 import * as /* [auto-meaningful-name] */Module_278 from /* 278 */"../../278"
@@ -20,7 +21,7 @@ import * as /* [auto-meaningful-name] */Module_396 from /* 396 */"./396"
 import * as /* [auto-meaningful-name] */Module_1550 from /* 1550 */"./1550"
 import * as /* [auto-meaningful-name] */Module_154 from /* 154 */"../699/154/index"
 import * as /* [auto-meaningful-name] */Module_2678 from /* 2678 */"./2678/index"
-var A = React.forwardRef(function (e, t) {
+var A = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$component = e.component
@@ -30,7 +31,7 @@ var A = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$variant = e.variant
   var h = undefined === e$variant ? "regular" : e$variant
   var p = Module_54.a(e, ["classes", "className", "component", "disableGutters", "variant"])
-  return React.createElement(a, Module_19.a({
+  return createElement(a, Module_19.a({
     className: Module_98.a(e$classes.root, e$classes[h], e$className, !f && e$classes.gutters),
     ref: t
   }, p))

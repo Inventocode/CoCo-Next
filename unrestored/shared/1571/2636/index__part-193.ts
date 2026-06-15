@@ -13,10 +13,11 @@ import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_137 from /* 137 */"./137"
 import /* [auto-meaningful-name] */Module_1371 from /* 137 */"./137"
-var vM = React1.memo(function (e) {
+var vM = memo(function (e) {
   var /* [auto-meaningful-name] */e$action = e.action
   var /* [auto-meaningful-name] */e$selected = e.selected
   var /* [auto-meaningful-name] */e$dragging = e.dragging
@@ -37,18 +38,18 @@ var vM = React1.memo(function (e) {
       return Module_9.mb(t$source)
     }
   }(e$action)
-  var _ = React1.useRef(null)
-  var v = React1.useState(false)
+  var _ = useRef(null)
+  var v = useState(false)
   var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useCallback(function (e) {
+  var O = useCallback(function (e) {
     var /* [auto-meaningful-name] */_$current = _.current
     if (_$current && e.target !== _$current) {
       _$current.blur()
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */_$current
     var /* [auto-meaningful-name] */_$current1
     if (y) {
@@ -148,12 +149,12 @@ function yM(e) {
   var /* [auto-meaningful-name] */e$handleActionCopy = e.handleActionCopy
   var /* [auto-meaningful-name] */e$getActionDomId = e.getActionDomId
   var /* [auto-meaningful-name] */e$onActionListChange = e.onActionListChange
-  var l = React1.useRef(bM)
-  var u = React1.useState("")
+  var l = useRef(bM)
+  var u = useState("")
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useCallback(function () {
+  var g = useCallback(function () {
     var e
     var t
     var n = null === (e = document.getElementById("ACTION_LIST")) || undefined === e ? undefined : e.closest(".coco-dialog-wrapper.show")
@@ -163,7 +164,7 @@ function yM(e) {
       y: r.y
     } : bM
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("scroll", g)
     return function () {
       return window.removeEventListener("scroll", g)
@@ -242,5 +243,5 @@ function yM(e) {
     }), e.placeholder)
   }))
 }
-React1.memo(yM)
+memo(yM)
 export { yM }

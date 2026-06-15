@@ -16,10 +16,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1039 from /* 1039 */"./1039"
 import /* [auto-meaningful-name] */Module_10391 from /* 1039 */"./1039"
-var WO = React1.memo(function (e) {
+var WO = memo(function (e) {
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$getValue = e.getValue

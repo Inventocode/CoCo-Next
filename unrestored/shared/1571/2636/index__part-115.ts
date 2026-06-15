@@ -15,7 +15,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_703 from /* 703 */"./703"
 import /* [auto-meaningful-name] */Module_7031 from /* 703 */"./703"
 var uO = Src_shared_tools_index.p(function () {
@@ -24,18 +25,18 @@ var uO = Src_shared_tools_index.p(function () {
     e.focus()
   }
 }, 60)
-var dO = React1.memo(function (e) {
+var dO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var i = e$getValue(n)
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var s = React1.useRef({})
+  var s = useRef({})
   var c = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */s$current = s.current
     if (s$current && c) {
       Object.entries(s$current).forEach(function (e) {

@@ -17,7 +17,8 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { forwardRef, useContext, createElement, memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1048 from /* 1048 */"./1048/index"
 import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"./364/index"
 var xw = function (e, t) {
@@ -35,7 +36,7 @@ var xw = function (e, t) {
   }
   return n
 }
-var Dw = React1.forwardRef(function (e, t) {
+var Dw = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$size = e.size
@@ -45,20 +46,20 @@ var Dw = React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$disabled = e.disabled
   var l = xw(e, ["prefixCls", "size", "loading", "className", "disabled"])
   Module_364.a("checked" in l || !("value" in l), "Switch", "`value` is not a valid prop, do you mean `checked`?")
-  var u = React1.useContext(Module_801.b)
+  var u = useContext(Module_801.b)
   var /* [auto-meaningful-name] */u$getPrefixCls = u.getPrefixCls
   var /* [auto-meaningful-name] */u$direction = u.direction
-  var h = React1.useContext(Module_517.b)
+  var h = useContext(Module_517.b)
   var m = u$getPrefixCls("switch", e$prefixCls)
-  var g = React1.createElement("div", {
+  var g = createElement("div", {
     className: "".concat(m, "-handle")
-  }, e$loading && React1.createElement(Module_610.a, {
+  }, e$loading && createElement(Module_610.a, {
     className: "".concat(m, "-loading-icon")
   }))
   var _ = Classnames((n = {}, Module_35.a(n, "".concat(m, "-small"), "small" === (e$size || h)), Module_35.a(n, "".concat(m, "-loading"), e$loading), Module_35.a(n, "".concat(m, "-rtl"), "rtl" === u$direction), n), s)
-  return React1.createElement(Module_1048.a, {
+  return createElement(Module_1048.a, {
     insertExtraNode: true
-  }, React1.createElement(Nw, Module_19.a({}, l, {
+  }, createElement(Nw, Module_19.a({}, l, {
     prefixCls: m,
     className: _,
     disabled: e$disabled || e$loading,
@@ -69,7 +70,7 @@ var Dw = React1.forwardRef(function (e, t) {
 Dw.__ANT_SWITCH = true
 Dw.displayName = "Switch"
 var Lw = Dw
-var Pw = React1.memo(function (e) {
+var Pw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "switch" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue

@@ -8,7 +8,7 @@
 
 export { o as a }
 import * as /* [auto-meaningful-name] */Module_434 from /* 434 */"../../434"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { Component } from /* 0 */"react"
 var o = function (e) {
   function t(t) {
     var n;
@@ -109,5 +109,5 @@ var o = function (e) {
     this._state = null
   }
   return t
-}(React.Component)
+}(Component)
 export default o

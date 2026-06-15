@@ -21,7 +21,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../../
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1509 from /* 1509 */"../../../../../../unrestored/shared/1571/2636/1509"
 import /* [auto-meaningful-name] */Module_15091 from /* 1509 */"../../../../../../unrestored/shared/1571/2636/1509"
 import * as /* [auto-meaningful-name] */Module_1510 from /* 1510 */"../../../../../../unrestored/shared/1571/2636/1510"
@@ -33,7 +34,7 @@ import * as /* [auto-meaningful-name] */Module_328 from /* 328 */"../../../../..
 import * as /* [auto-meaningful-name] */Module_930 from /* 930 */"../../../../../../unrestored/shared/1571/2636/930"
 import /* [auto-meaningful-name] */Module_9301 from /* 930 */"../../../../../../unrestored/shared/1571/2636/930"
 var Zt
-var Jt = React1.memo(function (e) {
+var Jt = memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
@@ -43,14 +44,14 @@ var Jt = React1.memo(function (e) {
   var i = useSelector(function (e) {
     return e.project.title
   })
-  var a = React1.useState(false)
+  var a = useState(false)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useRef(null)
+  var u = useRef(null)
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var p = useDispatch()
-  var m = React1.useState({
+  var m = useState({
     name: i,
     description: "",
     operation: ""
@@ -65,7 +66,7 @@ var Jt = React1.memo(function (e) {
   var w = useSelector(function (e) {
     return e.project.projectSource
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */u$current
     if (e$visible) {
       if (!(null === (u$current = u.current) || undefined === u$current)) {
@@ -73,18 +74,18 @@ var Jt = React1.memo(function (e) {
       }
     }
   }, [e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     b({
       description: "",
       operation: "",
       name: i
     })
   }, [i])
-  var C = React1.useState("")
+  var C = useState("")
   var T = Module_10.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var N = React1.useState(y || "")
+  var N = useState(y || "")
   var R = Module_10.a(N, 2)
   var k = R[0]
   var x = R[1]
@@ -210,7 +211,7 @@ var Jt = React1.memo(function (e) {
       failReason: n
     })
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       if (Module_97.a(o)) {
         Module_177.j(o).then(function (e) {

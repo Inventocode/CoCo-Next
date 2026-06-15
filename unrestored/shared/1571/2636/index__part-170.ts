@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Yv } from "../../../../src/editor/ui/edit-area/widget-panel/index"
+import { Yv } from "../../../../src/editor/ui/EditArea/WidgetPanel/index"
 import { HC } from "./index__part-142"
 import { tT } from "./index__part-144"
 import { xT } from "./index__part-150"
@@ -24,28 +24,29 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_706 from /* 706 */"./706"
 import /* [auto-meaningful-name] */Module_7061 from /* 706 */"./706"
 var nI = React.createContext({
   bulkSelectVisible: false,
   setBulkSelectVisible: function (e) {}
 })
-var oI = React1.memo(function () {
+var oI = memo(function () {
   var e = useSelector(function (e) {
     return e.common.rightSideActiveMenu
   })
   var t = useSelector(function (e) {
     return e.common.consoleHeight
   })
-  var n = React1.useState(false)
+  var n = useState(false)
   var r = Module_10.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = React1.useRef(null)
-  var s = React1.useRef(null)
+  var a = useRef(null)
+  var s = useRef(null)
   var c = t + 66
-  React1.useEffect(function () {
+  useEffect(function () {
     if (s.current) {
       tT(s.current, function (e, t) {
         var /* [auto-meaningful-name] */a$current
@@ -59,12 +60,12 @@ var oI = React1.memo(function () {
       })
     }
   }, [i])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!e) {
       i(false)
     }
   }, [e])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function () {
       i(false)
     }
@@ -73,7 +74,7 @@ var oI = React1.memo(function () {
       window.removeEventListener("drag", e)
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     i(false)
   }, [t])
   return React.createElement(nI.Provider, {
@@ -112,20 +113,20 @@ var iI = React.memo(function () {
   var r = useSelector(function (e) {
     return e.common.consoleMessages
   })
-  var o = React1.useState(false)
+  var o = useState(false)
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n) {
       d(true)
     }
   }, [n])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */r$filterFunctionEReturnLogE$getType$size = r.filter(function (e) {
       return "log" !== e.get("type")
     }).size

@@ -20,7 +20,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_197 from /* 197 */"./197/index"
 import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
 import * as /* [auto-meaningful-name] */Module_467 from /* 467 */"./467"
@@ -28,12 +29,12 @@ import * as /* [auto-meaningful-name] */Module_199 from /* 199 */"./199"
 import /* [auto-meaningful-name] */Module_1991 from /* 199 */"./199"
 var kt = ["https://static.bcmcdn.com/appcraft/package/icon01.png", "https://static.bcmcdn.com/appcraft/package/icon02.png", "https://static.bcmcdn.com/appcraft/package/icon03.png", "https://static.bcmcdn.com/appcraft/package/icon04.png", "https://static.bcmcdn.com/appcraft/package/icon05.png", "https://static.bcmcdn.com/appcraft/package/icon06.png", "https://static.bcmcdn.com/appcraft/package/icon07.png", "https://static.bcmcdn.com/appcraft/package/icon08.png"]
 var xt = ["https://static.bcmcdn.com/appcraft/package/splash01.png", "https://static.bcmcdn.com/appcraft/package/splash02.png", "https://static.bcmcdn.com/appcraft/package/splash03.png", "https://static.bcmcdn.com/appcraft/package/splash04.png", "https://static.bcmcdn.com/appcraft/package/splash05.png"]
-var Dt = React1.memo(function () {
+var Dt = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
-  var n = React1.useRef(null)
-  var r = React1.useRef(null)
-  var o = React1.useRef(null)
+  var n = useRef(null)
+  var r = useRef(null)
+  var o = useRef(null)
   var i = useSelector(function (e) {
     return e.project
   })
@@ -45,39 +46,39 @@ var Dt = React1.memo(function () {
   var d = useSelector(function (e) {
     return e.common.saving
   })
-  var p = React1.useState(i$packageInfo.apkIcon || "https://static.bcmcdn.com/appcraft/package/icon00.png")
+  var p = useState(i$packageInfo.apkIcon || "https://static.bcmcdn.com/appcraft/package/icon00.png")
   var m = Module_10.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = React1.useState(i$packageInfo.apkSplash || "https://static.bcmcdn.com/appcraft/package/splash01.png")
+  var b = useState(i$packageInfo.apkSplash || "https://static.bcmcdn.com/appcraft/package/splash01.png")
   var y = Module_10.a(b, 2)
   var w = y[0]
   var C = y[1]
-  var T = React1.useState(40)
+  var T = useState(40)
   var A = Module_10.a(T, 2)
   var j = A[0]
   var R = A[1]
-  var k = React1.useState("")
+  var k = useState("")
   var x = Module_10.a(k, 2)
   var D = x[0]
   var M = x[1]
-  var L = React1.useState(false)
+  var L = useState(false)
   var P = Module_10.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = React1.useState(false)
+  var G = useState(false)
   var W = Module_10.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = React1.useState(false)
+  var V = useState(false)
   var K = Module_10.a(V, 2)
   var q = K[0]
   var X = K[1]
-  var Q = React1.useState(false)
+  var Q = useState(false)
   var J = Module_10.a(Q, 2)
   var $ = J[0]
   var ne = J[1]
-  var re = React1.useState(true)
+  var re = useState(true)
   var oe = Module_10.a(re, 2)
   var ie = oe[0]
   var ae = oe[1]

@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"./40/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createContext } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"./103"
 import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"./106"
 import * as /* [auto-meaningful-name] */Module_388 from /* 388 */"./388"
@@ -433,7 +433,7 @@ function Br(e, t) {
   }
   return n && n.then ? n.then(t.bind(null, false), t.bind(null, true)) : t(false, value)
 }
-var Fr = React.createContext({
+var Fr = createContext({
   manager: {}
 })
 var Gr = {

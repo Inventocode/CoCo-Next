@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"./801/index"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"./40/index"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useContext, createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_616 from /* 616 */"./616/index"
 var UM = function (e, t) {
   var n = {}
@@ -31,7 +31,7 @@ var UM = function (e, t) {
 }
 var /* [auto-meaningful-name] */Module_616$a$Group = Module_616.a.Group
 var VM = function (e) {
-  var t = React.useContext(Module_801.b)
+  var t = useContext(Module_801.b)
   var /* [auto-meaningful-name] */t$getPopupContainer = t.getPopupContainer
   var /* [auto-meaningful-name] */t$getPrefixCls = t.getPrefixCls
   var /* [auto-meaningful-name] */t$direction = t.direction
@@ -52,7 +52,7 @@ var VM = function (e) {
   var /* [auto-meaningful-name] */e$getPopupContainer = e.getPopupContainer
   var /* [auto-meaningful-name] */e$href = e.href
   var /* [auto-meaningful-name] */e$icon = e.icon
-  var w = undefined === e$icon ? React.createElement(GM, null) : e$icon
+  var w = undefined === e$icon ? createElement(GM, null) : e$icon
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$buttonsRender = e.buttonsRender
   var S = undefined === e$buttonsRender ? function (e) {
@@ -81,14 +81,14 @@ var VM = function (e) {
   }
   D.placement = "placement" in e ? e$placement : "rtl" === t$direction ? "bottomLeft" : "bottomRight"
   var M = S([
-    React.createElement(Module_616.a, {
+    createElement(Module_616.a, {
       type: s,
       disabled: e$disabled,
       onClick: e$onClick,
       htmlType: e$htmlType,
       href: e$href,
       title: e$title
-    }, e$children), React.createElement(Module_616.a, {
+    }, e$children), createElement(Module_616.a, {
       type: s,
       icon: w
     })
@@ -96,9 +96,9 @@ var VM = function (e) {
   var L = Module_40.a(M, 2)
   var P = L[0]
   var B = L[1]
-  return React.createElement(Module_616$a$Group, Module_19.a({}, k, {
+  return createElement(Module_616$a$Group, Module_19.a({}, k, {
     className: Classnames(x, e$className)
-  }), P, React.createElement(qM, D, B))
+  }), P, createElement(qM, D, B))
 }
 VM.__ANT_BUTTON = true
 var zM = VM

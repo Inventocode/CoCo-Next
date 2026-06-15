@@ -7,7 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
 import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
@@ -26,7 +27,7 @@ import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../53"
 import * as /* [auto-meaningful-name] */Module_438 from /* 438 */"./438"
 import /* [auto-meaningful-name] */Module_4381 from /* 438 */"./438"
 var _a
-_a = React.memo(function (e) {
+_a = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -37,19 +38,19 @@ _a = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$attributes$color = e$attributes.color
   var /* [auto-meaningful-name] */e$attributes$fontSize = e$attributes.fontSize
   var /* [auto-meaningful-name] */e$attributes$timeStamp = e$attributes.timeStamp
-  var A = React.useRef(null)
+  var A = useRef(null)
   var I = new Date(e$attributes$timeStamp)
   var j = useSelector(function (e) {
     var /* [auto-meaningful-name] */e$project
     return null === e || undefined === e || null === (e$project = e.project) || undefined === e$project ? undefined : e$project.playing
   })
-  var N = React.useRef(false)
+  var N = useRef(false)
   var R = function (e) {
     if (N.current) {
       e.preventDefault()
     }
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if (Module_28.b() && Module_28.h()) {
       document.body.addEventListener("touchmove", R, {
         passive: false

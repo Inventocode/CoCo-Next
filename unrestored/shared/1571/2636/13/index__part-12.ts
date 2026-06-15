@@ -12,7 +12,8 @@ import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"../58/index"
 import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../39"
 import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { createRef, memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* 872 */"./872"
 function me(e) {
@@ -33,9 +34,9 @@ var _e = function (e) {
   function n(e) {
     var r
     Module_27.a(this, n);
-    (r = t.call(this, e)).separationLineRef = React1.createRef()
-    r.dragContentRef = React1.createRef()
-    r.dragWrapperRef = React1.createRef()
+    (r = t.call(this, e)).separationLineRef = createRef()
+    r.dragContentRef = createRef()
+    r.dragWrapperRef = createRef()
     r._dragResult = undefined
     r._mousedownTimeId = undefined
     r._mousemoveTimeId = undefined
@@ -188,8 +189,8 @@ var _e = function (e) {
   return n
 }(React.PureComponent)
 _e.DELAY = 200
-React1.memo(_e)
-React1.memo(function (e) {
+memo(_e)
+memo(function (e) {
   var /* [auto-meaningful-name] */e$index = e.index
   var /* [auto-meaningful-name] */e$children = e.children
   return React.createElement(fe, null, function (e) {

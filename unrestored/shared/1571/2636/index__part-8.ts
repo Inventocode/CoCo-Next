@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Re } from "../../../../src/editor/ui/dialogs/open-project/my/index"
+import { Re } from "../../../../src/editor/ui/dialogs/open-project/MyProject/index"
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"./141/index"
 import /* [auto-meaningful-name] */Module_525 from /* 525 */"./525"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
@@ -19,12 +19,13 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Axios from /* 129 */"axios"
 import /* [auto-meaningful-name] */Axios1 from /* 129 */"axios"
 import * as /* [auto-meaningful-name] */Module_495 from /* 495 */"./495"
 import /* [auto-meaningful-name] */Module_4951 from /* 495 */"./495"
-var Le = React1.memo(function (e) {
+var Le = memo(function (e) {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
   var r = useDispatch()
@@ -104,7 +105,7 @@ var Le = React1.memo(function (e) {
     })))
   })) : null
 })
-var Pe = React1.memo(function (e) {
+var Pe = memo(function (e) {
   var /* [auto-meaningful-name] */e$importProjectJson = e.importProjectJson
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useDispatch()

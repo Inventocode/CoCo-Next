@@ -13,7 +13,7 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../../801/index"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, useRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
 import * as /* [auto-meaningful-name] */Module_803 from /* 803 */"../../803"
 import * as /* [auto-meaningful-name] */Module_1045 from /* 1045 */"../1045"
@@ -131,35 +131,35 @@ function cn(e, t, n) {
   var v = undefined === e$duration ? Jt : e$duration
   var m = null
   if (e$icon) {
-    m = React.createElement("span", {
+    m = createElement("span", {
       className: "".concat(t, "-icon")
     }, e.icon)
   } else {
     if (e$type) {
-      m = React.createElement(sn[e$type] || null, {
+      m = createElement(sn[e$type] || null, {
         className: "".concat(t, "-icon ").concat(t, "-icon-").concat(e$type)
       })
     }
   }
-  var y = React.createElement("span", {
+  var y = createElement("span", {
     className: "".concat(t, "-close-x")
-  }, g || React.createElement(Module_803.a, {
+  }, g || createElement(Module_803.a, {
     className: "".concat(t, "-close-icon")
   }))
-  var b = !e$description && m ? React.createElement("span", {
+  var b = !e$description && m ? createElement("span", {
     className: "".concat(t, "-message-single-line-auto-margin")
   }) : null
   return {
-    content: React.createElement(Sn, {
+    content: createElement(Sn, {
       iconPrefixCls: n
-    }, React.createElement("div", {
+    }, createElement("div", {
       className: m ? "".concat(t, "-with-icon") : "",
       role: "alert"
-    }, m, React.createElement("div", {
+    }, m, createElement("div", {
       className: "".concat(t, "-message")
-    }, b, e$message), React.createElement("div", {
+    }, b, e$message), createElement("div", {
       className: "".concat(t, "-description")
-    }, e$description), e$btn ? React.createElement("span", {
+    }, e$description), e$btn ? createElement("span", {
       className: "".concat(t, "-btn")
     }, e$btn) : null)),
     duration: v,
@@ -258,7 +258,7 @@ un.useNotification = function (e, t) {
     var s = Module_40.a(a, 2)
     var c = s[0]
     var u = s[1]
-    var l = React.useRef({})
+    var l = useRef({})
     l.current.open = function (i) {
       var /* [auto-meaningful-name] */i$prefixCls = i.prefixCls
       var s = e$getPrefixCls("notification", i$prefixCls)
@@ -279,7 +279,7 @@ un.useNotification = function (e, t) {
       }
     })
     return [
-      l.current, React.createElement(Module_801.a, {
+      l.current, createElement(Module_801.a, {
         key: "holder"
       }, function (e) {
         e$getPrefixCls = e.getPrefixCls

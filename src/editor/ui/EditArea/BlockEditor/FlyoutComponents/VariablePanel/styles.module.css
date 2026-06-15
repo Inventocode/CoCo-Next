@@ -1,0 +1,247 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：236
+ */
+
+.wrapper {
+    transform: scale(1.25);
+    transform-origin: 0 0;
+    width: 280px;
+    padding: 0 0 3px
+}
+
+.wrapper :global(.coco-input), .wrapper :global(.coco-input-focus) {
+    background-color: transparent
+}
+
+.addBtn {
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f5f3fe;
+    border-radius: 4px;
+    color: #82778c;
+    cursor: pointer
+}
+
+.addBtn:hover {
+    border: 1px solid #6e4ff4
+}
+
+.disabledBtn {
+    background-color: #ccc!important;
+    color: #e6e6e6!important
+}
+
+.disabledBtn .addIcon {
+    color: #e6e6e6!important
+}
+
+.addBtnMarginTop {
+    margin-top: 16px
+}
+
+.addIcon {
+    font-size: 12px;
+    color: #6e4ff4;
+    margin-right: 4px
+}
+
+.variableTitle {
+    text-align: left;
+    height: 17px;
+    font-size: 12px;
+    font-weight: 400;
+    color: #77808c;
+    line-height: 17px;
+    margin-top: 20px;
+    padding: 0 5px
+}
+
+.itemWrap {
+    position: relative;
+    margin-top: 10px;
+    padding: 8px 12px 8px 8px;
+    background-color: #f3f6fa;
+    cursor: pointer;
+    border-radius: 4px
+}
+
+.itemWrap:hover {
+    background-color: #f6f4fe
+}
+
+.itemWrap:hover .delete {
+    display: block
+}
+
+.select {
+    background-color: #f6f4fe
+}
+
+.select .delete {
+    display: block;
+    cursor: pointer
+}
+
+.item {
+    width: 100%;
+    position: relative;
+    outline: none;
+    height: 24px;
+    display: flex;
+    align-items: center
+}
+
+.name {
+    height: 24px;
+    font-size: 14px;
+    flex-grow: 1
+}
+
+.itemBtn {
+    font-size: 20px;
+    height: 16px;
+    width: 16px;
+    line-height: 16px;
+    color: #857fa5;
+    cursor: pointer;
+    right: 0
+}
+
+.delete {
+    display: none;
+    right: 24px
+}
+
+.delete, .itemBtn {
+    position: absolute;
+    top: 3px
+}
+
+.detail {
+    width: 100%;
+    height: 20px;
+    margin: 10px 0 5px 10px;
+    display: flex;
+    position: relative
+}
+
+.footer {
+    width: 100%;
+    margin-top: 16px
+}
+
+.ellipse {
+    text-align: center;
+    height: 8px;
+    line-height: 1em;
+    color: #6e4ff4;
+    transform: translateY(-14px)
+}
+
+.expand, .line {
+    border-top: 1px solid #f2f2f2;
+    display: flex;
+    justify-content: center
+}
+
+.line {
+    margin-top: 16px
+}
+
+.foldBtn {
+    width: 40px;
+    height: 12px;
+    background-color: #f2f2f2;
+    border-radius: 0 0 4px 4px;
+    color: #857fa5;
+    line-height: 14px;
+    text-align: center;
+    cursor: pointer
+}
+
+.foldBtn:hover {
+    color: #fff;
+    background-color: #6e4ff4
+}
+
+.foldBtn:active {
+    color: #fff;
+    background-color: #5118ce
+}
+
+.foldIcon {
+    font-size: 14px;
+    transform: rotate(180deg) translateY(1px)
+}
+
+.expandIcon {
+    transform: translateY(-1px) rotate(0deg)
+}
+
+.expandIcon.active {
+    transform: translateY(-1px) rotate(90deg)
+}
+
+.itemExpand {
+    transform: translateY(-1px) rotate(-270deg)
+}
+
+.itemExpand.active {
+    transform: translateY(-1px) rotate(-90deg)
+}
+
+.nameInput, .noEditing {
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background-color: transparent
+}
+
+.nameInput {
+    outline: none;
+    padding: 0 16px 0 8px;
+    line-height: 22px;
+    border-radius: 0;
+    border: none!important
+}
+
+.noEditing {
+    margin-left: 10px;
+    border-bottom: 1px solid transparent;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 70%;
+    line-height: 24px
+}
+
+.nameInputWrapper {
+    display: flex;
+    align-items: center
+}
+
+.value {
+    position: relative
+}
+
+.value div {
+    margin-left: 6px
+}
+
+.valueInput {
+    width: 200px;
+    height: 24px;
+    margin-left: 7px;
+    line-height: 24px;
+    outline: none;
+    border: none!important;
+    border-bottom: 1px solid #6e4ff4!important;
+    background-color: transparent;
+    border-radius: 0
+}

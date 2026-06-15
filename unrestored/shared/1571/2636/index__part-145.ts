@@ -21,10 +21,11 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState, useEffect, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_440 from /* 440 */"./440"
 import /* [auto-meaningful-name] */Module_4401 from /* 440 */"./440"
-var iT = React1.memo(function () {
+var iT = memo(function () {
   var e = useSelector(function (e) {
     return e.block.get("editObjectDialog")
   })
@@ -36,28 +37,28 @@ var iT = React1.memo(function () {
     return e.project.globalObjectList
   })
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var s = React1.useRef(null)
+  var s = useRef(null)
   var c = Module_238.d()
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = React1.useState(0)
+  var m = useState(0)
   var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState(0)
+  var y = useState(0)
   var E = Module_10.a(y, 2)
   var O = E[0]
   var w = E[1]
-  var C = React1.useState([])
+  var C = useState([])
   var T = Module_10.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = React1.useRef(false)
-  var D = React1.useRef(0)
-  var M = React1.useRef(null)
-  React1.useEffect(function () {
+  var R = useRef(false)
+  var D = useRef(0)
+  var M = useRef(null)
+  useEffect(function () {
     if (c && e$visible) {
       var e = c.objectVariables.concat(i).find(function (e) {
         return e.id === o
@@ -84,7 +85,7 @@ var iT = React1.memo(function () {
       }
     })
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       p(false)
       b(0)
@@ -92,7 +93,7 @@ var iT = React1.memo(function () {
       D.current = 0
     }
   }, [e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (M.current) {
       return tT(M.current.button, function (e, t) {
         var /* [auto-meaningful-name] */M$current
@@ -105,7 +106,7 @@ var iT = React1.memo(function () {
     }
   }, [M.current])
   var P = useDispatch()
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       Module_26.z.unselectCurrentBlock()
     }
@@ -141,10 +142,10 @@ var iT = React1.memo(function () {
       }, 0)
     }
   }
-  var F = React1.useCallback(function () {
+  var F = useCallback(function () {
     P(Src_editor_redux_common_actions.ph())
   }, [P])
-  var G = React1.useCallback(function () {
+  var G = useCallback(function () {
     if (e$scopeType && o && c) {
       var e = {}
       A.forEach(function (t) {

@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */Module_315 from /* 315 */"../315"
 import * as /* [auto-meaningful-name] */Module_1031 from /* 1031 */"./1031"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_1544 from /* 1544 */"./1544/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, forwardRef, useContext, useState, useRef, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
@@ -66,16 +66,16 @@ function w(e, t) {
       style: l,
       className: null
     })
-    return React.createElement("span", {
+    return createElement("span", {
       style: c,
       className: Classnames(e.props.className, "".concat(t, "-disabled-compatible-wrapper"))
     }, f)
   }
   return e
 }
-var E = React.forwardRef(function (e, t) {
+var E = forwardRef(function (e, t) {
   var n
-  var c = React.useContext(Module_801.b)
+  var c = useContext(Module_801.b)
   var /* [auto-meaningful-name] */c$getPopupContainer = c.getPopupContainer
   var /* [auto-meaningful-name] */c$getPrefixCls = c.getPrefixCls
   var /* [auto-meaningful-name] */c$direction = c.direction
@@ -85,7 +85,7 @@ var E = React.forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */n$value = n.value
     var /* [auto-meaningful-name] */n$onChange = n.onChange
     var /* [auto-meaningful-name] */n$postState = n.postState
-    var u = React.useState(function () {
+    var u = useState(function () {
       return undefined !== n$value ? n$value : undefined !== n$defaultValue ? "function" === typeof n$defaultValue ? n$defaultValue() : n$defaultValue : "function" === typeof e ? e() : e
     })
     var l = Module_40.a(u, 2)
@@ -95,8 +95,8 @@ var E = React.forwardRef(function (e, t) {
     if (n$postState) {
       h = n$postState(h)
     }
-    var p = React.useRef(true)
-    React.useEffect(function () {
+    var p = useRef(true)
+    useEffect(function () {
       if (p.current) {
         p.current = false
       } else {
@@ -218,7 +218,7 @@ var E = React.forwardRef(function (e, t) {
     j = false
   }
   var U
-  var H = w(Module_315.b(e$children) ? e$children : React.createElement("span", null, e$children), M)
+  var H = w(Module_315.b(e$children) ? e$children : createElement("span", null, e$children), M)
   var /* [auto-meaningful-name] */H$props = H.props
   var G = Classnames(H$props.className, Module_35.a({}, e$openClassName || "".concat(M, "-open"), true))
   var z = Classnames(e$overlayClassName, (n = {}, Module_35.a(n, "".concat(M, "-rtl"), "rtl" === c$direction), Module_35.a(n, "".concat(M, "-").concat(e$color), e$color && b.test(e$color)), n))
@@ -231,7 +231,7 @@ var E = React.forwardRef(function (e, t) {
       background: e$color
     }
   }
-  return React.createElement(Module_1544.a, Module_19.a({}, T, {
+  return createElement(Module_1544.a, Module_19.a({}, T, {
     prefixCls: M,
     overlayClassName: z,
     getTooltipContainer: e$getPopupContainer || e$getTooltipContainer || c$getPopupContainer,
@@ -279,7 +279,7 @@ var E = React.forwardRef(function (e, t) {
       }
     },
     overlayInnerStyle: Q,
-    arrowContent: React.createElement("span", {
+    arrowContent: createElement("span", {
       className: "".concat(M, "-arrow-content"),
       style: U
     }),

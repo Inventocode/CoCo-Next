@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../107"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect, useLayoutEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_1030 from /* 1030 */"./1030"
 import * as /* [auto-meaningful-name] */Module_698 from /* 698 */"../../1048/698"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
@@ -73,12 +73,12 @@ function x(e, t) {
   })] : "".concat(e, "-").concat(t) : null
 }
 function C(e) {
-  var t = React.useRef(false)
-  var n = React.useState(e)
+  var t = useRef(false)
+  var n = useState(e)
   var r = Module_40.a(n, 2)
   var i = r[0]
   var a = r[1]
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       t.current = true
     }
@@ -91,7 +91,7 @@ function C(e) {
     }
   ]
 }
-var O = Module_466.a() ? React.useLayoutEffect : React.useEffect
+var O = Module_466.a() ? useLayoutEffect : useEffect
 export { b }
 export { w }
 export { E }

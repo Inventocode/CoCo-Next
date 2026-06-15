@@ -12,7 +12,8 @@ import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
 import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../79/index"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
@@ -24,7 +25,7 @@ function m(e, t) {
   var /* [auto-meaningful-name] */n$value = n.value
   var /* [auto-meaningful-name] */n$onChange = n.onChange
   var /* [auto-meaningful-name] */n$postState = n.postState
-  var c = React.useState(function () {
+  var c = useState(function () {
     return undefined !== n$value ? n$value : undefined !== n$defaultValue ? "function" === typeof n$defaultValue ? n$defaultValue() : n$defaultValue : "function" === typeof e ? e() : e
   })
   var u = Module_40.a(c, 2)
@@ -34,8 +35,8 @@ function m(e, t) {
   if (n$postState) {
     f = n$postState(f)
   }
-  var h = React.useRef(true)
-  React.useEffect(function () {
+  var h = useRef(true)
+  useEffect(function () {
     if (h.current) {
       h.current = false
     } else {

@@ -17,12 +17,13 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_623 from /* 623 */"./623"
 import /* [auto-meaningful-name] */Module_6231 from /* 623 */"./623"
 import * as /* [auto-meaningful-name] */Module_1527 from /* 1527 */"./1527"
 import /* [auto-meaningful-name] */Module_15271 from /* 1527 */"./1527"
-var hI = React1.memo(function (e) {
+var hI = memo(function (e) {
   var t = useSelector(function (e) {
     return e.common.importFailToastInfo
   })
@@ -30,23 +31,23 @@ var hI = React1.memo(function (e) {
   var /* [auto-meaningful-name] */t$importFailResults = t.importFailResults
   var /* [auto-meaningful-name] */t$fileType = t.fileType
   var i = useDispatch()
-  var a = React1.useState([])
+  var a = useState([])
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var d = React1.useState(false)
+  var d = useState(false)
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState("importImageFailTitle")
+  var v = useState("importImageFailTitle")
   var b = Module_10.a(v, 2)
   var y = b[0]
   var w = b[1]
   function C() {
     i(Src_editor_redux_common_actions.rh())
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     function e() {
       return (e = Module_7.a(RegeneratorRuntime.mark(function e() {
         var t
@@ -99,7 +100,7 @@ var hI = React1.memo(function (e) {
       e.apply(this, arguments)
     })()
   }, [t$importFailResults, t$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if ("sound" === t$fileType) {
       w("importSoundFailTitle")
     } else {

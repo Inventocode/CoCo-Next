@@ -16,7 +16,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_147 from /* 147 */"./147"
 import * as /* [auto-meaningful-name] */Module_1520 from /* 1520 */"./1520"
 import /* [auto-meaningful-name] */Module_15201 from /* 1520 */"./1520"
@@ -26,28 +27,28 @@ var Tw = {
   columns: [],
   rows: []
 }
-var Sw = React1.memo(function (e) {
+var Sw = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var r = e$getValue("cloudDbId")
   var o = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = Module_9.Bb(e$widgetId)
-  var s = React1.useState(Tw)
+  var s = useState(Tw)
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(true)
+  var d = useState(true)
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useRef(false)
-  React1.useEffect(function () {
+  var v = useRef(false)
+  useEffect(function () {
     return function () {
       v.current = true
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (a && r) {
       u(Tw)
       g(true)

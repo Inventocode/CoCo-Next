@@ -31,7 +31,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../unr
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useRef, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1052 from /* 1052 */"../../../../../unrestored/shared/1571/2636/1052"
 import /* [auto-meaningful-name] */Module_10521 from /* 1052 */"../../../../../unrestored/shared/1571/2636/1052"
 import * as /* [auto-meaningful-name] */Module_281 from /* 281 */"../../../../../unrestored/shared/1571/2636/281"
@@ -53,32 +54,32 @@ var rn = function (e) {
   })
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useDispatch()
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = React1.useState(false)
+  var m = useState(false)
   var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState("")
+  var y = useState("")
   var w = Module_10.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState(false)
+  var A = useState(false)
   var j = Module_10.a(A, 2)
   var R = j[0]
   var k = j[1]
-  var x = React1.useState(false)
+  var x = useState(false)
   var D = Module_10.a(x, 2)
   var M = D[0]
   var L = D[1]
-  var P = React1.useState(false)
+  var P = useState(false)
   var B = Module_10.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = React1.useRef(false)
-  var U = React1.useCallback(function (e, t) {
+  var W = useRef(false)
+  var U = useCallback(function (e, t) {
     Module_141.a("WorkShare", {
       workId: o,
       workName: r.title,
@@ -91,7 +92,7 @@ var rn = function (e) {
       failReason: t
     })
   }, [o, a, r.title, i])
-  var H = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
+  var H = useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
         switch (e.prev = e.next) {
@@ -231,7 +232,7 @@ var rn = function (e) {
       }, e)
     }))).apply(this, arguments)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       if (!W.current) {
         k(true)
@@ -391,7 +392,7 @@ var on = function (e) {
     message: "community" === e$target ? "Publish.shareToCommunity" : "Publish.shareToOthers",
     dialogType: "community" === e$target ? Zt.SHARE_COMMUNITY_DIALOG : Zt.SHARE_QR_DIALOG
   }
-  var r = React1.useState(Zt.NONE)
+  var r = useState(Zt.NONE)
   var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]

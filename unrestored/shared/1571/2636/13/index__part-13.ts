@@ -7,24 +7,25 @@
 "use strict"
 
 import { Q } from "./index__part-6"
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, createContext } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
 import /* 873 */"./873"
-var be = React1.memo(function (e) {
+var be = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$showDropdownIcon = e.showDropdownIcon
   var o = undefined === e$showDropdownIcon || e$showDropdownIcon
   var /* [auto-meaningful-name] */e$overlay = e.overlay
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$onClick = e.onClick
-  var d = React1.useState(false)
+  var d = useState(false)
   var p = Module_10.a(d, 2)
   var f = p[0]
   var h = p[1]
-  var m = React1.useRef(null)
+  var m = useRef(null)
   function g(e) {
     var /* [auto-meaningful-name] */m$current
     var /* [auto-meaningful-name] */m$current1
@@ -82,7 +83,7 @@ var be = React1.memo(function (e) {
     className: Classnames("coco-dropdown-down-icon")
   }))))
 })
-var ye = React1.createContext(null)
+var ye = createContext(null)
 var /* [auto-meaningful-name] */ye$Provider = ye.Provider
 var Oe = ye
 export { be }

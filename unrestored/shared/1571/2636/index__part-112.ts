@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Xr } from "../../../../src/editor/ui/preview-area/screen-list/index"
+import { Xr } from "../../../../src/editor/ui/PreviewArea/screen-list/index"
 import { gy } from "./index__part-103"
 import { FE } from "./index__part-111"
 import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
@@ -18,10 +18,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1519 from /* 1519 */"./1519"
 import /* [auto-meaningful-name] */Module_15191 from /* 1519 */"./1519"
-var HE = React1.memo(function (e) {
+var HE = memo(function (e) {
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig

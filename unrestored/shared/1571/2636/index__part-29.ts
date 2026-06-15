@@ -19,13 +19,14 @@ import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector, batch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
 import /* [auto-meaningful-name] */Lodash1 from /* 30 */"lodash"
 import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
 import * as /* [auto-meaningful-name] */Module_381 from /* 381 */"./381"
 import /* [auto-meaningful-name] */Module_3811 from /* 381 */"./381"
-var $u = React1.memo(function () {
+var $u = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
@@ -75,7 +76,7 @@ var $u = React1.memo(function () {
     className: Classnames(Module_3811.item)
   }))))
 })
-var ed = React1.memo(function () {
+var ed = memo(function () {
   var e = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (e) {
@@ -110,7 +111,7 @@ var td = function () {
   var n = useSelector(function (e) {
     return e.common.previewAreaUpdatedAt
   })
-  var r = React1.useState(0)
+  var r = useState(0)
   var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -223,7 +224,7 @@ var id = {
     }, React.createElement(td, null))
   }
 }
-var ad = React1.memo(rd)
+var ad = memo(rd)
 export { od }
 export { id }
 export { ad }

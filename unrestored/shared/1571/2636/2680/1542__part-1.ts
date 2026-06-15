@@ -6,32 +6,32 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, useRef, useImperativeHandle, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
 import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
 function m() {
   return !("undefined" === typeof window || !window.document || !window.document.createElement)
 }
 var y
-var b = React.forwardRef(function (e, t) {
+var b = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
   var /* [auto-meaningful-name] */e$children = e.children
-  var a = React.useRef()
-  React.useImperativeHandle(t, function () {
+  var a = useRef()
+  useImperativeHandle(t, function () {
     return {}
   })
-  var s = React.useRef(false)
+  var s = useRef(false)
   if (!s.current && m()) {
     a.current = e$getContainer()
     s.current = true
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if (!(null === e$didUpdate || undefined === e$didUpdate)) {
       e$didUpdate(e)
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       var /* [auto-meaningful-name] */a$current
       var /* [auto-meaningful-name] */a$current$parentNode

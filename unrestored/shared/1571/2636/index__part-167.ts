@@ -14,13 +14,14 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_494 from /* 494 */"./494"
 import /* [auto-meaningful-name] */Module_4941 from /* 494 */"./494"
 var RA = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$isEmpty = e.isEmpty
-  var r = React1.useState(false)
+  var r = useState(false)
   var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]

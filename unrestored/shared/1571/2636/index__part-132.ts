@@ -17,10 +17,11 @@ import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_704 from /* 704 */"./704"
 import /* [auto-meaningful-name] */Module_7041 from /* 704 */"./704"
-var Hw = React1.memo(function (e) {
+var Hw = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("content")

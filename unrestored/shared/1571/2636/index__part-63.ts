@@ -8,18 +8,19 @@
 
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
-import * as /* [auto-meaningful-name] */Module_472 from /* 472 */"./472"
-import /* [auto-meaningful-name] */Module_4721 from /* 472 */"./472"
-var bh = React1.memo(function (e) {
+import { memo, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
+import * as /* [auto-meaningful-name] */Module_472 from /* 472 */"../../../../src/editor/ui/PreviewArea/ContextMenu/styles.module.css"
+import /* [auto-meaningful-name] */Module_4721 from /* 472 */"../../../../src/editor/ui/PreviewArea/ContextMenu/styles.module.css"
+var bh = memo(function (e) {
   var /* [auto-meaningful-name] */e$actorId = e.actorId
   var /* [auto-meaningful-name] */e$top = e.top
   var /* [auto-meaningful-name] */e$left = e.left
   var /* [auto-meaningful-name] */e$stage = e.stage
   var /* [auto-meaningful-name] */e$onClose = e.onClose
-  var a = React1.useRef(null)
+  var a = useRef(null)
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */a$current = a.current
     var t = function (t) {
       if (!(t.target instanceof Element && (null === a$current || undefined === a$current ? undefined : a$current.contains(t.target)))) {

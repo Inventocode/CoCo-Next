@@ -14,7 +14,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_385 from /* 385 */"./385"
 import /* [auto-meaningful-name] */Module_3851 from /* 385 */"./385"
 import * as /* [auto-meaningful-name] */Module_1209 from /* 1209 */"./1209"
@@ -31,8 +32,8 @@ import /* [auto-meaningful-name] */Module_15371 from /* 1537 */"./1537"
   e[e.STEP2 = 2] = "STEP2"
   e[e.STEP3 = 3] = "STEP3"
 }(tP || (tP = {}))
-var _P = React1.memo(function () {
-  var e = React1.useState(tP.STEP0)
+var _P = memo(function () {
+  var e = useState(tP.STEP0)
   var t = Module_10.a(e, 2)
   var n = t[0]
   var r = t[1]
@@ -45,7 +46,7 @@ var _P = React1.memo(function () {
   var c = "share" === o$type ? "分享" : "打包"
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var u = useDispatch()
-  React1.useEffect(function () {
+  useEffect(function () {
     if (o$visible) {
       localStorage.setItem("cloudDBPublishGuide", "true")
     }

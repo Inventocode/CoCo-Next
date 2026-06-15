@@ -24,11 +24,12 @@ import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_45 from /* 45 */"./45"
 import /* [auto-meaningful-name] */Module_451 from /* 45 */"./45"
 var rh = {}
-var oh = React1.memo(function (e) {
+var oh = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible

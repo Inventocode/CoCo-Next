@@ -16,20 +16,21 @@ import * as /* [auto-meaningful-name] */Module_219 from /* 219 */"../../../../sh
 import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../shared/1571/2636/710"
-var ye = React1.memo(function () {
+var ye = memo(function () {
   var t = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = React1.useState(0)
+  var r = useState(0)
   var i = Module_10.a(r, 2)
   var o = i[0]
   var a = i[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (ce) {
       clearInterval(ce)
     }

@@ -14,7 +14,8 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useEffect, memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_569 from /* 569 */"./569"
 import /* [auto-meaningful-name] */Module_5691 from /* 569 */"./569"
 import * as /* [auto-meaningful-name] */Module_936 from /* 936 */"./936"
@@ -27,8 +28,8 @@ var rA = React.memo(function (e) {
   var i = undefined !== e$showIcon && e$showIcon
   var /* [auto-meaningful-name] */e$setVisible = e.setVisible
   var s = useDispatch()
-  var c = React1.useRef(null)
-  React1.useEffect(function () {
+  var c = useRef(null)
+  useEffect(function () {
     if (c.current) {
       clearTimeout(c.current)
     }
@@ -49,7 +50,7 @@ var rA = React.memo(function (e) {
     className: Module_9361.textWrapper
   }, "已重置为初始数据"))) : null
 })
-var oA = React1.memo(function () {
+var oA = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {

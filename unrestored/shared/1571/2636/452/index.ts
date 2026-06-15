@@ -8,7 +8,8 @@
 
 export { h as a }
 export { m as b }
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../src/editor/widget/built-in/types"
 import * as /* [auto-meaningful-name] */Module_42 from /* 42 */"../42/index"

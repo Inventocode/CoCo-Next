@@ -7,7 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
@@ -19,7 +20,7 @@ import * as /* [auto-meaningful-name] */Module_99 from /* 99 */"./99"
 import /* [auto-meaningful-name] */Module_991 from /* 99 */"./99"
 import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"./188"
 var _a
-_a = React.memo(function () {
+_a = memo(function () {
   var t = useSelector(function (e) {
     return e.block.get("commonInputDialog")
   })
@@ -33,17 +34,17 @@ _a = React.memo(function () {
   var /* [auto-meaningful-name] */t$confirmCallback = t.confirmCallback
   var /* [auto-meaningful-name] */t$cancelCallback = t.cancelCallback
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var O = React.useRef(null)
+  var O = useRef(null)
   var w = useDispatch()
-  var C = React.useState("")
+  var C = useState("")
   var T = Module_10.a(C, 2)
   var S = T[0]
   var A = T[1]
-  var I = React.useState(t$defaultValue || "")
+  var I = useState(t$defaultValue || "")
   var j = Module_10.a(I, 2)
   var N = j[0]
   var R = j[1]
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */O$current
     R(t$defaultValue || "")
     if (t$visible) {

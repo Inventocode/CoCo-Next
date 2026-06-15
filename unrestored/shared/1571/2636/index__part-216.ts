@@ -14,10 +14,11 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch, batch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_708 from /* 708 */"./708"
 import /* [auto-meaningful-name] */Module_7081 from /* 708 */"./708"
-var qP = React1.memo(function () {
+var qP = memo(function () {
   var e = useSelector(function (e) {
     return e.common.switchImageDialogInfo
   })
@@ -26,19 +27,19 @@ var qP = React1.memo(function () {
   var /* [auto-meaningful-name] */e$imageOpenFileId = e.imageOpenFileId
   var /* [auto-meaningful-name] */e$imageCloseFileId = e.imageCloseFileId
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var a = React1.useState("")
+  var a = useState("")
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState("")
+  var u = useState("")
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState("")
+  var g = useState("")
   var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       l(e$imageOpenFileId)
       m(e$imageCloseFileId)

@@ -14,7 +14,7 @@ import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"./120"
 import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"./106"
 import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"./103"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"./19"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { isValidElement, createRef, createElement, Component } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_1541 from /* 1541 */"./1541/index"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"./107"
 import * as /* [auto-meaningful-name] */Module_398 from /* 398 */"./398"
@@ -67,12 +67,12 @@ var Hb = function (e) {
   if (e$children) {
     var O = null
     Db(e$children).some(function (e) {
-      if (!React.isValidElement(e) || !e.type) {
+      if (!isValidElement(e) || !e.type) {
         return false
       }
       var /* [auto-meaningful-name] */e$type = e.type
       return !e$type.isSelectOption && (e$type.isSelectOptGroup ? !Db(e.props.children).every(function (t) {
-        return !(React.isValidElement(t) && e.type && !t.type.isSelectOption) || (O = t.type, false)
+        return !(isValidElement(t) && e.type && !t.type.isSelectOption) || (O = t.type, false)
       }) : (O = e$type, true))
     })
     if (O) {
@@ -104,7 +104,7 @@ var zb = function (e) {
     for (var /* [auto-meaningful-name] */arguments$length = arguments.length, o = new Array(arguments$length), i = 0; i < arguments$length; i++) {
       o[i] = arguments[i]
     }
-    (e = t.call.apply(t, [this].concat(o))).selectRef = React.createRef()
+    (e = t.call.apply(t, [this].concat(o))).selectRef = createRef()
     e.focus = function () {
       e.selectRef.current.focus()
     }
@@ -117,14 +117,14 @@ var zb = function (e) {
     {
       key: "render",
       value: function () {
-        return React.createElement(Vb, Module_19.a({
+        return createElement(Vb, Module_19.a({
           ref: this.selectRef
         }, this.props))
       }
     }
   ])
   return n
-}(React.Component)
+}(Component)
 zb.Option = Nb
 zb.OptGroup = kb
 var Yb = zb

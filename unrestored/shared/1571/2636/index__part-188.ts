@@ -15,10 +15,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_528 from /* 528 */"./528"
 import /* [auto-meaningful-name] */Module_5281 from /* 528 */"./528"
-var Yj = React1.memo(function (e) {
+var Yj = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$md5 = e.md5
   var /* [auto-meaningful-name] */e$name = e.name
@@ -29,17 +30,17 @@ var Yj = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$urls = e.urls
   var /* [auto-meaningful-name] */e$canShowMultiply = e.canShowMultiply
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var d = React1.useState(false)
+  var d = useState(false)
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
   var _ = e$urls && e$urls.length > 1
-  var v = React1.useRef(null)
+  var v = useRef(null)
   var b = e$cdnUrl
   if (e$frameMap && e$frameMap[e$cdnUrl]) {
     b = e$frameMap[e$cdnUrl].frames[0]
   }
-  var y = React1.useState(b)
+  var y = useState(b)
   var E = Module_10.a(y, 2)
   var O = E[0]
   var w = E[1]

@@ -23,11 +23,12 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_294 from /* 294 */"./294/index"
 import /* 2612 */"./2612"
-var fA = React1.memo(function (e) {
-  var t = React1.useState(false)
+var fA = memo(function (e) {
+  var t = useState(false)
   var n = Module_10.a(t, 2)
   var r = n[0]
   var o = n[1]
@@ -37,8 +38,8 @@ var fA = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$defaultValue = e.defaultValue
   var /* [auto-meaningful-name] */e$onBlur = e.onBlur
   var /* [auto-meaningful-name] */e$suffix = e.suffix
-  var d = React1.useRef(null)
-  React1.useEffect(function () {
+  var d = useRef(null)
+  useEffect(function () {
     if (r) {
       var /* [auto-meaningful-name] */d$current = d.current
       if (!(null === d$current || undefined === d$current)) {
@@ -82,7 +83,7 @@ var hA = function (e) {
   var /* [auto-meaningful-name] */e$item$cdnUrl = e$item.cdnUrl
   var /* [auto-meaningful-name] */e$item$urls = e$item.urls
   var /* [auto-meaningful-name] */e$item$id = e$item.id
-  var s = React1.useState(e$item$urls && e$item$urls.length > 1 ? e$item$urls[0] : e$item$cdnUrl)
+  var s = useState(e$item$urls && e$item$urls.length > 1 ? e$item$urls[0] : e$item$cdnUrl)
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]

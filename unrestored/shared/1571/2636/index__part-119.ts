@@ -20,10 +20,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useCallback, useMemo, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_397 from /* 397 */"./397"
 import /* [auto-meaningful-name] */Module_3971 from /* 397 */"./397"
-var MO = React1.memo(function (e) {
+var MO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "rotation" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -39,7 +40,7 @@ var MO = React1.memo(function (e) {
     c += 360
   }
   c = Math.round(c)
-  var l = React1.useState(true)
+  var l = useState(true)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
@@ -74,7 +75,7 @@ var MO = React1.memo(function (e) {
     dependency: s
   }))
 })
-var LO = React1.memo(function (e) {
+var LO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "flipped" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -138,7 +139,7 @@ var LO = React1.memo(function (e) {
   })))))
 })
 var PO = [[Module_144.e, Module_144.c], [Module_144.e, Module_144.c]]
-var BO = React1.memo(function (e) {
+var BO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "scaleAndLock" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -165,8 +166,8 @@ var BO = React1.memo(function (e) {
   var v = g.y
   var b = g.ratio || false
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var E = React1.useRef({})
-  var O = React1.useCallback(function () {
+  var E = useRef({})
+  var O = useCallback(function () {
     var /* [auto-meaningful-name] */E$current = E.current
     if (E$current && (undefined !== E$current.x || undefined !== E$current.y)) {
       e$onChange(n, E$current)
@@ -193,10 +194,10 @@ var BO = React1.memo(function (e) {
       }
     }
   }, [e$getValue, e$onChange, n])
-  var w = React1.useMemo(function () {
+  var w = useMemo(function () {
     return Lodash.debounce(O, 50)
   }, [O])
-  var C = React1.useCallback(function (e, t, n) {
+  var C = useCallback(function (e, t, n) {
     var r = Module_11.a({}, t, parseInt(n || "1") / d)
     if (b) {
       if ("x" === t) {
@@ -226,13 +227,13 @@ var BO = React1.memo(function (e) {
     E.current = Module_6.a(Module_6.a(Module_6.a({}, g), E$current), r)
     e()
   }, [d, b, g])
-  var T = React1.useMemo(function () {
+  var T = useMemo(function () {
     return C.bind(undefined, w, "x")
   }, [C, w])
-  var S = React1.useMemo(function () {
+  var S = useMemo(function () {
     return C.bind(undefined, w, "y")
   }, [C, w])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (undefined === e$getValue(n)) {
       e$onChange(n, p)
     }

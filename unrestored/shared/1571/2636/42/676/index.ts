@@ -6,7 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */ResizeObserverPolyfill from /* 462 */"resize-observer-polyfill"
 import /* 860 */"./860"
@@ -73,12 +74,12 @@ function f(t) {
   var b = undefined === m$maxLength ? 1 / 0 : m$maxLength
   var /* [auto-meaningful-name] */m$isMultipleRow = m.isMultipleRow
   var E = undefined === m$isMultipleRow || m$isMultipleRow
-  var O = React.useRef(null)
-  var w = React.useRef()
+  var O = useRef(null)
+  var w = useRef()
   var C = useSelector(function (e) {
     return e.common.stageScale
   })
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */O$current = O.current
     if (O$current && t$target) {
       w.current = t$target
@@ -91,7 +92,7 @@ function f(t) {
       })
     }
   }, [t$callback, _, C, t$target])
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */O$current = O.current
     if (E && O$current) {
       var t = Src_shared_tools_index.p(function (e) {
@@ -153,12 +154,12 @@ function h(t) {
   var /* [auto-meaningful-name] */t$options = t.options
   var /* [auto-meaningful-name] */UndefinedT$optionsT$options$sizeAdaptive = (undefined === t$options ? {} : t$options).sizeAdaptive
   var d = undefined === UndefinedT$optionsT$options$sizeAdaptive ? Src_editor_widget_builtIn_types.q.FIXED : UndefinedT$optionsT$options$sizeAdaptive
-  var f = React.useRef(null)
-  var h = React.useRef()
+  var f = useRef(null)
+  var h = useRef()
   var m = useSelector(function (e) {
     return e.common.stageScale
   })
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */f$current = f.current
     if (f$current && t$target) {
       var r = u(t$target)

@@ -17,7 +17,7 @@ import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
 import * as /* [auto-meaningful-name] */Module_435 from /* 435 */"../435"
 import * as /* [auto-meaningful-name] */Module_615 from /* 615 */"./615"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
 import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"../364/index"
@@ -58,18 +58,18 @@ var I = function (e) {
   var U = undefined !== e.maskClosable && e.maskClosable
   var H = null !== e.autoFocusButton && (e.autoFocusButton || "ok")
   var V = Classnames(P, "".concat(P, "-").concat(e.type), Module_35.a({}, "".concat(P, "-rtl"), "rtl" === e$direction), e.className)
-  var G = N && React.createElement(T, {
+  var G = N && createElement(T, {
     actionFn: e$onCancel,
     close: e$close,
     autoFocus: "cancel" === H,
     buttonProps: e$cancelButtonProps,
     prefixCls: "".concat(e$rootPrefixCls, "-btn")
   }, e$cancelText)
-  return React.createElement(Module_285.a, {
+  return createElement(Module_285.a, {
     prefixCls: e$rootPrefixCls,
     iconPrefixCls: e$iconPrefixCls,
     direction: e$direction
-  }, React.createElement(b, {
+  }, createElement(b, {
     prefixCls: e$prefixCls,
     className: V,
     wrapClassName: Classnames(Module_35.a({}, "".concat(P, "-centered"), !!e.centered)),
@@ -98,17 +98,17 @@ var I = function (e) {
     closeIcon: e$closeIcon,
     modalRender: e$modalRender,
     focusTriggerAfterClose: e$focusTriggerAfterClose
-  }, React.createElement("div", {
+  }, createElement("div", {
     className: "".concat(P, "-body-wrapper")
-  }, React.createElement("div", {
+  }, createElement("div", {
     className: "".concat(P, "-body")
-  }, e$icon, undefined === e.title ? null : React.createElement("span", {
+  }, e$icon, undefined === e.title ? null : createElement("span", {
     className: "".concat(P, "-title")
-  }, e.title), React.createElement("div", {
+  }, e.title), createElement("div", {
     className: "".concat(P, "-content")
-  }, e.content)), React.createElement("div", {
+  }, e.content)), createElement("div", {
     className: "".concat(P, "-btns")
-  }, G, React.createElement(T, {
+  }, G, createElement(T, {
     type: F,
     actionFn: e$onOk,
     close: e$close,
@@ -171,7 +171,7 @@ function N(e) {
       var d = c$getPrefixCls(undefined, P)
       var h = e$prefixCls || "".concat(d, "-modal")
       var p = c$getIconPrefixCls()
-      ReactDom.render(React.createElement(I, Module_19.a({}, s, {
+      ReactDom.render(createElement(I, Module_19.a({}, s, {
         prefixCls: h,
         rootPrefixCls: d,
         iconPrefixCls: p,
@@ -205,7 +205,7 @@ function N(e) {
 }
 function M(e) {
   return Module_19.a(Module_19.a({
-    icon: React.createElement(Module_927.a, null),
+    icon: createElement(Module_927.a, null),
     okCancel: false
   }, e), {
     type: "warning"
@@ -213,7 +213,7 @@ function M(e) {
 }
 function L(e) {
   return Module_19.a(Module_19.a({
-    icon: React.createElement(Module_1046.a, null),
+    icon: createElement(Module_1046.a, null),
     okCancel: false
   }, e), {
     type: "info"
@@ -221,7 +221,7 @@ function L(e) {
 }
 function j(e) {
   return Module_19.a(Module_19.a({
-    icon: React.createElement(Module_1045.a, null),
+    icon: createElement(Module_1045.a, null),
     okCancel: false
   }, e), {
     type: "success"
@@ -229,7 +229,7 @@ function j(e) {
 }
 function U(e) {
   return Module_19.a(Module_19.a({
-    icon: React.createElement(Module_1047.a, null),
+    icon: createElement(Module_1047.a, null),
     okCancel: false
   }, e), {
     type: "error"
@@ -237,7 +237,7 @@ function U(e) {
 }
 function H(e) {
   return Module_19.a(Module_19.a({
-    icon: React.createElement(Module_927.a, null),
+    icon: createElement(Module_927.a, null),
     okCancel: true
   }, e), {
     type: "confirm"

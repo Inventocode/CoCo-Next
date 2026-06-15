@@ -7,7 +7,7 @@
 "use strict"
 
 export { _ as a }
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useMemo, createElement, memo } from /* 0 */"react"
 import /* 50 */"../../../50/index"
 import * as /* [auto-meaningful-name] */Module_278 from /* 278 */"../../278"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../98"
@@ -75,13 +75,13 @@ var d = function (e) {
   var /* [auto-meaningful-name] */e$isInner = e.isInner
   var c = f()
   var u = Module_98.a(c.clockNumber, e$selected && c.clockNumberSelected)
-  var d = React.useMemo(function () {
+  var d = useMemo(function () {
     var e = l[e$index]
     return {
       transform: "translate(".concat(e[0], "px, ").concat(e[1], "px")
     }
   }, [e$index])
-  return React.createElement(Module_1065.a, {
+  return createElement(Module_1065.a, {
     component: "span",
     className: u,
     variant: e$isInner ? "body2" : "body1",
@@ -103,7 +103,7 @@ var h = function (e) {
       selected: u(l),
       isInner: !e$ampm && (0 === l || l > 12)
     }
-    s.push(React.createElement(d, Module_19.a({
+    s.push(createElement(d, Module_19.a({
       key: l
     }, h)))
   }
@@ -113,62 +113,62 @@ var p = function (e) {
   var /* [auto-meaningful-name] */e$value = e.value
   var /* [auto-meaningful-name] */e$utils$formatNumber = e.utils.formatNumber
   return [
-    React.createElement(d, {
+    createElement(d, {
       label: e$utils$formatNumber("00"),
       selected: 0 === e$value,
       index: 12,
       key: 12
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("05"),
       selected: 5 === e$value,
       index: 1,
       key: 1
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("10"),
       selected: 10 === e$value,
       index: 2,
       key: 2
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("15"),
       selected: 15 === e$value,
       index: 3,
       key: 3
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("20"),
       selected: 20 === e$value,
       index: 4,
       key: 4
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("25"),
       selected: 25 === e$value,
       index: 5,
       key: 5
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("30"),
       selected: 30 === e$value,
       index: 6,
       key: 6
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("35"),
       selected: 35 === e$value,
       index: 7,
       key: 7
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("40"),
       selected: 40 === e$value,
       index: 8,
       key: 8
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("45"),
       selected: 45 === e$value,
       index: 9,
       key: 9
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("50"),
       selected: 50 === e$value,
       index: 10,
       key: 10
-    }), React.createElement(d, {
+    }), createElement(d, {
       label: e$utils$formatNumber("55"),
       selected: 55 === e$value,
       index: 11,
@@ -185,7 +185,7 @@ var _ = function (e) {
   var /* [auto-meaningful-name] */e$date = e.date
   var /* [auto-meaningful-name] */e$minutesStep = e.minutesStep
   var d = Module_278.b()
-  var _ = React.useMemo(function () {
+  var _ = useMemo(function () {
     switch (e$type) {
       case Module_366.b.HOURS:
         return {
@@ -231,7 +231,7 @@ var _ = function (e) {
         throw new Error("You must provide the type for TimePickerView")
     }
   }, [e$ampm, e$date, e$onHourChange, e$onMinutesChange, e$onSecondsChange, e$type, d])
-  return React.createElement(Module_366.a, Module_19.a({
+  return createElement(Module_366.a, Module_19.a({
     type: e$type,
     ampm: e$ampm,
     minutesStep: e$minutesStep
@@ -242,5 +242,5 @@ _.defaultProps = {
   ampm: true,
   minutesStep: 1
 }
-React.memo(_)
+memo(_)
 export default _

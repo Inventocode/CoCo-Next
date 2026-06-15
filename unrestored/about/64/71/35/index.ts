@@ -9,10 +9,10 @@
 export { i$Provider as b }
 export { a }
 import /* 0 */"../../73/0"
-import * as /* [auto-meaningful-name] */React from /* 13 */"react"
+import { createContext } from /* 13 */"react"
 import /* 42 */"./42/index"
 import /* 20 */"../20"
-var i = React.createContext(null)
+var i = createContext(null)
 i.Consumer
 var /* [auto-meaningful-name] */i$Provider = i.Provider
 var a = i

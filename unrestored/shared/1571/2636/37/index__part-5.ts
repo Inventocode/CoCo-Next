@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { F } from "./index__part-0"
+import { F } from "../../../../../src/editor/redux/common/reducer"
 import { Ce, Ie } from "./index__part-1"
 import { Pe } from "./index__part-2"
 import { We, et } from "./index__part-3"

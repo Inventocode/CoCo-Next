@@ -19,7 +19,8 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_70 from /* 70 */"./70"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_302 from /* 302 */"./302"
 import * as /* [auto-meaningful-name] */Module_113 from /* 113 */"./113"
 import /* [auto-meaningful-name] */Module_1131 from /* 113 */"./113"
@@ -109,7 +110,7 @@ var $ = function () {
   var n = useSelector(function (e) {
     return e.phoneCallInfo
   })
-  var a = React1.useState(n.incomingPhoneNumber)
+  var a = useState(n.incomingPhoneNumber)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
@@ -208,11 +209,11 @@ var $ = function () {
 var ee = function () {
   var e = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var n = React1.useState("123 4567 8901")
+  var n = useState("123 4567 8901")
   var a = Module_10.a(n, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(Module_710$a$formatMessage({
+  var l = useState(Module_710$a$formatMessage({
     id: "emulator.smsContentDefault"
   }))
   var u = Module_10.a(l, 2)
@@ -289,8 +290,8 @@ var ne = function (e) {
   var s = useSelector(function (e) {
     return e.language
   })
-  var c = React1.useRef(null)
-  React1.useEffect(function () {
+  var c = useRef(null)
+  useEffect(function () {
     if (e$messageWindow) {
       n(function (e) {
         return {
@@ -300,7 +301,7 @@ var ne = function (e) {
       }(e$messageWindow))
     }
   }, [n, e$messageWindow])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */e$data = e.data
       var /* [auto-meaningful-name] */e$data$type = e$data.type

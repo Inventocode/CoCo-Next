@@ -8,7 +8,7 @@
 
 export { v as a }
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useCallback, createElement } from /* 0 */"react"
 import /* 50 */"../../50/index"
 import * as /* [auto-meaningful-name] */Module_278 from /* 278 */"../../551/278"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../551/1211/98"
@@ -86,7 +86,7 @@ var p = function (e) {
     var r = Module_278.b()
     return {
       meridiemMode: Module_366.d(e, r),
-      handleMeridiemChange: React.useCallback(function (i) {
+      handleMeridiemChange: useCallback(function (i) {
         var o = Module_366.c(e, i, Boolean(t), r)
         n(o, false)
       }, [t, e, n, r])
@@ -95,47 +95,47 @@ var p = function (e) {
   var /* [auto-meaningful-name] */m$meridiemMode = m.meridiemMode
   var /* [auto-meaningful-name] */m$handleMeridiemChange = m.handleMeridiemChange
   var w = e$isLandscape ? "h3" : "h2"
-  return React.createElement(Module_269.b, {
+  return createElement(Module_269.b, {
     isLandscape: e$isLandscape,
     className: Module_98.a(e$isLandscape ? v.toolbarLandscape : e$ampm && v.toolbarAmpmLeftPadding)
-  }, React.createElement("div", {
+  }, createElement("div", {
     className: Module_98.a(v.hourMinuteLabel, e$ampm && e$isLandscape && v.hourMinuteLabelAmpmLandscape, {
       rtl: v.hourMinuteLabelReverse
     }[g.direction])
-  }, Module_316.d(e$views, "hours") && React.createElement(Module_269.c, {
+  }, Module_316.d(e$views, "hours") && createElement(Module_269.c, {
     variant: w,
     onClick: function () {
       return e$setOpenView(Module_366.b.HOURS)
     },
     selected: e$openView === Module_366.b.HOURS,
     label: A.getHourText(e$date, Boolean(e$ampm))
-  }), Module_316.d(e$views, ["hours", "minutes"]) && React.createElement(Module_269.f, {
+  }), Module_316.d(e$views, ["hours", "minutes"]) && createElement(Module_269.f, {
     label: ":",
     variant: w,
     selected: false,
     className: v.separator
-  }), Module_316.d(e$views, "minutes") && React.createElement(Module_269.c, {
+  }), Module_316.d(e$views, "minutes") && createElement(Module_269.c, {
     variant: w,
     onClick: function () {
       return e$setOpenView(Module_366.b.MINUTES)
     },
     selected: e$openView === Module_366.b.MINUTES,
     label: A.getMinuteText(e$date)
-  }), Module_316.d(e$views, ["minutes", "seconds"]) && React.createElement(Module_269.f, {
+  }), Module_316.d(e$views, ["minutes", "seconds"]) && createElement(Module_269.f, {
     variant: "h2",
     label: ":",
     selected: false,
     className: v.separator
-  }), Module_316.d(e$views, "seconds") && React.createElement(Module_269.c, {
+  }), Module_316.d(e$views, "seconds") && createElement(Module_269.c, {
     variant: "h2",
     onClick: function () {
       return e$setOpenView(Module_366.b.SECONDS)
     },
     selected: e$openView === Module_366.b.SECONDS,
     label: A.getSecondText(e$date)
-  })), e$ampm && React.createElement("div", {
+  })), e$ampm && createElement("div", {
     className: Module_98.a(v.ampmSelection, e$isLandscape && v.ampmLandscape, Module_316.d(e$views, "seconds") && v.ampmSelectionWithSeconds)
-  }, React.createElement(Module_269.c, {
+  }, createElement(Module_269.c, {
     disableRipple: true,
     variant: "subtitle1",
     selected: "am" === m$meridiemMode,
@@ -144,7 +144,7 @@ var p = function (e) {
     onClick: function () {
       return m$handleMeridiemChange("am")
     }
-  }), React.createElement(Module_269.c, {
+  }), createElement(Module_269.c, {
     disableRipple: true,
     variant: "subtitle1",
     selected: "pm" === m$meridiemMode,

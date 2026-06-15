@@ -8,7 +8,8 @@
 
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"./24/index"
 import * as /* [auto-meaningful-name] */Module_100 from /* 100 */"./100"
 import * as /* [auto-meaningful-name] */Module_26 from /* 26 */"./26/index"
@@ -75,7 +76,7 @@ var ft = React.memo(function (e) {
   var n = useSelector(function (e) {
     return e.oTState.onlineCooperationUserColorRecord
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$list) {
       document.querySelectorAll(".".concat("focusSvgClassName")).forEach(function (e) {
         return e.style.removeProperty("filter")

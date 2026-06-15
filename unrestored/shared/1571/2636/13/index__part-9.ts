@@ -6,13 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useLayoutEffect, useCallback, useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
 import /* 871 */"./871"
-var oe = React1.memo(function (e) {
+var oe = memo(function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var n = undefined === e$type ? "info" : e$type
   var /* [auto-meaningful-name] */e$message = e.message
@@ -24,21 +25,21 @@ var oe = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$className = e.className
-  var g = React1.useState(true)
+  var g = useState(true)
   var _ = Module_10.a(g, 2)
   var v = _[0]
   var b = _[1]
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (undefined !== e$visible) {
       b(e$visible)
     }
   }, [e$visible])
-  var y = React1.useCallback(function (e) {
+  var y = useCallback(function (e) {
     if (undefined === e$visible) {
       b(e)
     }
   }, [e$visible])
-  var O = React1.useMemo(function () {
+  var O = useMemo(function () {
     var e = ""
     var t = ""
     switch (n) {
@@ -61,7 +62,7 @@ var oe = React1.memo(function (e) {
       className: t
     }
   }, [n])
-  var w = React1.useCallback(function () {
+  var w = useCallback(function () {
     y(false)
     if (e$onClose) {
       e$onClose()

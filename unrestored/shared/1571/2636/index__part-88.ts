@@ -11,7 +11,8 @@ import * as /* [auto-meaningful-name] */Module_58 from /* 58 */"./58/index"
 import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
 import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"./27"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { Component } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_291 from /* 291 */"./291"
 if ("undefined" !== typeof Element && !Element.prototype.matches) {
   var /* [auto-meaningful-name] */Element$prototype = Element.prototype
@@ -303,7 +304,7 @@ var Dv = function (e) {
     }
   ])
   return n
-}(React1.Component)
+}(Component)
 Dv.defaultProps = {
   nodeSelector: "tr",
   ignoreSelector: "",

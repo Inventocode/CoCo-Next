@@ -12,10 +12,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_526 from /* 526 */"./526"
 import /* [auto-meaningful-name] */Module_5261 from /* 526 */"./526"
-var Yw = React1.memo(function (e) {
+var Yw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "db" : e$keyName
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId

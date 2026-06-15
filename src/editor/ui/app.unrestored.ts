@@ -48,10 +48,11 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../unrestore
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_816 from /* 816 */"../../../unrestored/shared/1571/2636/816"
 import /* [auto-meaningful-name] */Module_8161 from /* 816 */"../../../unrestored/shared/1571/2636/816"
-var cB = React1.memo(function () {
+var cB = memo(function () {
   var e = useSelector(function (e) {
     return e.common.permissionDialogInfo
   })

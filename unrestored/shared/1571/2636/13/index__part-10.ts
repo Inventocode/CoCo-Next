@@ -7,11 +7,12 @@
 "use strict"
 
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
 import /* 652 */"./652"
-var ae = React1.memo(function (e) {
+var ae = memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$justify = e.justify
@@ -23,7 +24,7 @@ var ae = React1.memo(function (e) {
     className: Classnames("coco-row", e$className, (t = {}, Module_11.a(t, "coco-row-".concat(e$align), e$align), Module_11.a(t, "coco-row-".concat(e$justify), e$justify), t))
   }, e$children)
 })
-var se = React1.memo(function (e) {
+var se = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$span = e.span
   if ("string" === typeof e$span) {

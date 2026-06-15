@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */Module_224 from /* 224 */"./224/index"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, forwardRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_1543 from /* 1543 */"./1543/index"
 var BM = {
   icon: {
@@ -30,11 +30,11 @@ var BM = {
   theme: "outlined"
 }
 var FM = function (e, t) {
-  return React.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
+  return createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: BM
   }))
 }
 FM.displayName = "EllipsisOutlined"
-var GM = React.forwardRef(FM)
+var GM = forwardRef(FM)
 export { GM }

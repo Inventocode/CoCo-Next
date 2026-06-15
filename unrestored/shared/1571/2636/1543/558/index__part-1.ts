@@ -9,7 +9,8 @@
 var r
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../107"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_432 from /* 432 */"../432"
 import * as /* [auto-meaningful-name] */Module_1497 from /* 1497 */"./1497"

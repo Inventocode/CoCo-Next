@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */Module_517 from /* 517 */"../../517"
 import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../../801/index"
 import * as /* [auto-meaningful-name] */Module_694 from /* 694 */"../../801/694/index"
 import * as /* [auto-meaningful-name] */Module_792 from /* 792 */"../../224/792"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useCallback, useRef, useMemo, createElement, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
 import * as /* [auto-meaningful-name] */Module_609 from /* 609 */"../609"
 var wn = ["getTargetContainer", "getPopupContainer", "renderEmpty", "pageHeader", "input", "form"]
@@ -42,7 +42,7 @@ var Cn = function () {
   }
 }
 var On = function (e) {
-  var /* [auto-meaningful-name] */e$locale$Form
+  var /* [auto-meaningful-name] */l$Form
   var /* [auto-meaningful-name] */Module_609$a$Form
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$csp = e.csp
@@ -57,7 +57,7 @@ var On = function (e) {
   var /* [auto-meaningful-name] */e$legacyLocale = e.legacyLocale
   var /* [auto-meaningful-name] */e$parentContext = e.parentContext
   var /* [auto-meaningful-name] */e$iconPrefixCls = e.iconPrefixCls
-  var m = React.useCallback(function (t, n) {
+  var m = useCallback(function (t, n) {
     var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
     if (n) {
       return n
@@ -82,7 +82,7 @@ var On = function (e) {
     }
   })
   var b = function (e, t, n) {
-    var r = React.useRef({})
+    var r = useRef({})
     if (!("value" in r.current && !n(r.current.condition, t))) {
       r.current.value = e()
       r.current.condition = t
@@ -97,7 +97,7 @@ var On = function (e) {
       return e[n] !== t[n]
     })
   })
-  var w = React.useMemo(function () {
+  var w = useMemo(function () {
     return {
       prefixCls: e$iconPrefixCls,
       csp: e$csp
@@ -106,38 +106,38 @@ var On = function (e) {
   var E = e$children
   var x = {}
   if (e$locale) {
-    x = (null === (e$locale$Form = e$locale.Form) || undefined === e$locale$Form ? undefined : e$locale$Form.defaultValidateMessages) || (null === (Module_609$a$Form = Module_609.a.Form) || undefined === Module_609$a$Form ? undefined : Module_609$a$Form.defaultValidateMessages) || {}
+    x = (null === (l$Form = e$locale.Form) || undefined === l$Form ? undefined : l$Form.defaultValidateMessages) || (null === (Module_609$a$Form = Module_609.a.Form) || undefined === Module_609$a$Form ? undefined : Module_609$a$Form.defaultValidateMessages) || {}
   }
   if (e$form && e$form.validateMessages) {
     x = Module_19.a(Module_19.a({}, x), e$form.validateMessages)
   }
   if (Object.keys(x).length > 0) {
-    E = React.createElement(pe, {
+    E = createElement(pe, {
       validateMessages: x
     }, e$children)
   }
   if (e$locale) {
-    E = React.createElement(Ee, {
+    E = createElement(Ee, {
       locale: e$locale,
       _ANT_MARK__: "internalMark"
     }, E)
   }
   if (e$iconPrefixCls) {
-    E = React.createElement(Module_792.a.Provider, {
+    E = createElement(Module_792.a.Provider, {
       value: w
     }, E)
   }
   if (e$componentSize) {
-    E = React.createElement(Module_517.a, {
+    E = createElement(Module_517.a, {
       size: e$componentSize
     }, E)
   }
-  return React.createElement(Module_801.b.Provider, {
+  return createElement(Module_801.b.Provider, {
     value: b
   }, E)
 }
 var kn = function (e) {
-  React.useEffect(function () {
+  useEffect(function () {
     if (e.direction) {
       Vt.config({
         rtl: "rtl" === e.direction
@@ -147,9 +147,9 @@ var kn = function (e) {
       })
     }
   }, [e.direction])
-  return React.createElement(Module_694.a, null, function (t, n, o) {
-    return React.createElement(Module_801.a, null, function (t) {
-      return React.createElement(On, Module_19.a({
+  return createElement(Module_694.a, null, function (t, n, o) {
+    return createElement(Module_801.a, null, function (t) {
+      return createElement(On, Module_19.a({
         parentContext: t,
         legacyLocale: o
       }, e))

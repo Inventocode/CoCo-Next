@@ -18,7 +18,8 @@ import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_136 from /* 136 */"./136"
 import /* [auto-meaningful-name] */Module_1361 from /* 136 */"./136"
 var gt = function () {
@@ -32,22 +33,22 @@ var gt = function () {
     return e.oTState.onlineCooperationUserColorRecord
   })
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var o = React1.useState([])
+  var o = useState([])
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState({
+  var c = useState({
     left: 0,
     top: 0
   })
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(false)
+  var p = useState(false)
   var m = Module_10.a(p, 2)
   var g = m[0]
   var v = m[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var n = function (n) {
       v(false)
       if (pt) {
@@ -137,7 +138,7 @@ var _t = React.memo(function () {
   var n = e.filter(function (e) {
     return "block" === e.path.type
   }).toJSON()
-  React1.useEffect(function () {
+  useEffect(function () {
     var n = e.filter(function (e) {
       return "dynamicData" === e.path.type || "widget" === e.path.type
     }).toJSON()

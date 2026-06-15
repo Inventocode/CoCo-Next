@@ -15,13 +15,13 @@ import * as /* [auto-meaningful-name] */Module_154 from /* 154 */"../../../551/1
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../../551/1211/98"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, useRef, createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_2676 from /* 2676 */"./2676"
 var B = {
   enter: Module_696.b.enteringScreen,
   exit: Module_696.b.leavingScreen
 }
-var D = React.forwardRef(function (e, t) {
+var D = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$BackdropProps = e.BackdropProps
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$classes = e.classes
@@ -60,8 +60,8 @@ var D = React.forwardRef(function (e, t) {
   var K = e["aria-describedby"]
   var X = e["aria-labelledby"]
   var Y = Module_54.a(e, ["BackdropProps", "children", "classes", "className", "disableBackdropClick", "disableEscapeKeyDown", "fullScreen", "fullWidth", "maxWidth", "onBackdropClick", "onClose", "onEnter", "onEntered", "onEntering", "onEscapeKeyDown", "onExit", "onExited", "onExiting", "open", "PaperComponent", "PaperProps", "scroll", "TransitionComponent", "transitionDuration", "TransitionProps", "aria-describedby", "aria-labelledby"])
-  var q = React.useRef()
-  return React.createElement(Module_2682.a, Module_19.a({
+  var q = useRef()
+  return createElement(Module_2682.a, Module_19.a({
     className: Module_98.a(e$classes.root, e$className),
     BackdropComponent: S,
     BackdropProps: Module_19.a({
@@ -76,7 +76,7 @@ var D = React.forwardRef(function (e, t) {
     onClose: e$onClose,
     open: e$open,
     ref: t
-  }, Y), React.createElement(G, Module_19.a({
+  }, Y), createElement(G, Module_19.a({
     appear: true,
     in: e$open,
     timeout: Q,
@@ -87,7 +87,7 @@ var D = React.forwardRef(function (e, t) {
     onExiting: e$onExiting,
     onExited: e$onExited,
     role: "none presentation"
-  }, e$TransitionProps), React.createElement("div", {
+  }, e$TransitionProps), createElement("div", {
     className: Module_98.a(e$classes.container, e$classes["scroll".concat(Module_233.a(H))]),
     onMouseUp: function (e) {
       if (e.target === e.currentTarget && e.target === q.current) {
@@ -103,7 +103,7 @@ var D = React.forwardRef(function (e, t) {
     onMouseDown: function (e) {
       q.current = e.target
     }
-  }, React.createElement(M, Module_19.a({
+  }, createElement(M, Module_19.a({
     elevation: 24,
     role: "dialog",
     "aria-describedby": K,

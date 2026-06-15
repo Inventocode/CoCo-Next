@@ -10,10 +10,11 @@ import * as /* [auto-meaningful-name] */Module_1213 from /* 1213 */"./1213"
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_624 from /* 624 */"./624"
 import /* [auto-meaningful-name] */Module_6241 from /* 624 */"./624"
-var Rj = React1.memo(function (e) {
+var Rj = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$urls = e.urls

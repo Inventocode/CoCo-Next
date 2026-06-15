@@ -10,7 +10,7 @@ export { I as a }
 export { v as b }
 export { g as c }
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../../35"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useCallback, createElement, forwardRef, useContext, useRef, useEffect, useState, useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_50 from /* 50 */"../../../50/index"
 import * as /* [auto-meaningful-name] */Module_278 from /* 278 */"../../278"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../98"
@@ -104,10 +104,10 @@ var y = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var d = Module_54.a(e, ["onSelect", "forwardedRef", "value", "selected", "disabled", "children"])
   var h = m()
-  var p = React.useCallback(function () {
+  var p = useCallback(function () {
     return e$onSelect(e$value)
   }, [e$onSelect, e$value])
-  return React.createElement(Module_1065.a, Module_19.a({
+  return createElement(Module_1065.a, Module_19.a({
     role: "button",
     component: "div",
     tabIndex: e$disabled ? -1 : 0,
@@ -121,8 +121,8 @@ var y = function (e) {
   }, d))
 }
 y.displayName = "Year"
-var b = React.forwardRef(function (e, t) {
-  return React.createElement(y, Module_19.a({}, e, {
+var b = forwardRef(function (e, t) {
+  return createElement(y, Module_19.a({}, e, {
     forwardedRef: t
   }))
 })
@@ -145,9 +145,9 @@ var E = function (e) {
   var /* [auto-meaningful-name] */e$animateYearScrolling = e.animateYearScrolling
   var f = Module_278.b()
   var h = w()
-  var p = React.useContext(Module_316.b)
-  var _ = React.useRef(null)
-  React.useEffect(function () {
+  var p = useContext(Module_316.b)
+  var _ = useRef(null)
+  useEffect(function () {
     if (_.current && _.current.scrollIntoView) {
       try {
         _.current.scrollIntoView({
@@ -160,19 +160,19 @@ var E = function (e) {
     }
   }, [])
   var A = f.getYear(e$date)
-  var g = React.useCallback(function (e) {
+  var g = useCallback(function (e) {
     var i = f.setYear(e$date, e)
     if (e$onYearChange) {
       e$onYearChange(i)
     }
     e$onChange(i, true)
   }, [e$date, e$onChange, e$onYearChange, f])
-  return React.createElement("div", {
+  return createElement("div", {
     className: h.container
   }, f.getYearRange(e$minDate, e$maxDate).map(function (e) {
     var t = f.getYear(e)
     var n = t === A
-    return React.createElement(b, {
+    return createElement(b, {
       key: f.getYearText(e),
       selected: n,
       value: t,
@@ -220,10 +220,10 @@ var C = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var f = Module_54.a(e, ["selected", "onSelect", "disabled", "value", "children"])
   var d = x()
-  var h = React.useCallback(function () {
+  var h = useCallback(function () {
     e$onSelect(e$value)
   }, [e$onSelect, e$value])
-  return React.createElement(Module_1065.a, Module_19.a({
+  return createElement(Module_1065.a, Module_19.a({
     role: "button",
     component: "div",
     className: Module_98.a(d.root, e$selected && d.monthSelected, e$disabled && d.monthDisabled),
@@ -267,19 +267,19 @@ var k = function (e) {
     var d = l.isAfter(e, u)
     return f || d
   }
-  var p = React.useCallback(function (e) {
+  var p = useCallback(function (e) {
     var t = l.setMonth(e$date, e)
     e$onChange(t, true)
     if (e$onMonthChange) {
       e$onMonthChange(t)
     }
   }, [e$date, e$onChange, e$onMonthChange, l])
-  return React.createElement("div", {
+  return createElement("div", {
     className: f.container
   }, l.getMonthArray(e$date).map(function (e) {
     var t = l.getMonth(e)
     var n = l.format(e, "MMM")
-    return React.createElement(C, {
+    return createElement(C, {
       key: n,
       value: t,
       selected: t === d,
@@ -349,11 +349,11 @@ var I = function (e) {
   var y = Module_278.b()
   var b = D()
   var w = function (e) {
-    var t = React.useState(S())
+    var t = useState(S())
     var n = Module_40.a(t, 2)
     var r = n[0]
     var o = n[1]
-    var a = React.useCallback(function () {
+    var a = useCallback(function () {
       return o(S())
     }, [])
     Module_316.h(function () {
@@ -365,12 +365,12 @@ var I = function (e) {
     return "landscape" === (e || r)
   }(e$orientation)
   var x = function (e, t, n) {
-    var r = React.useState(t && Module_316.d(e, t) ? t : e[0])
+    var r = useState(t && Module_316.d(e, t) ? t : e[0])
     var o = Module_40.a(r, 2)
     var a = o[0]
     var s = o[1]
     return {
-      handleChangeAndOpenNext: React.useCallback(function (t, r) {
+      handleChangeAndOpenNext: useCallback(function (t, r) {
         var i = e[e.indexOf(a) + 1]
         if (r && i) {
           n(t, false)
@@ -385,39 +385,39 @@ var I = function (e) {
   var /* [auto-meaningful-name] */x$openView = x.openView
   var /* [auto-meaningful-name] */x$setOpenView = x.setOpenView
   var /* [auto-meaningful-name] */x$handleChangeAndOpenNext = x.handleChangeAndOpenNext
-  var B = React.useMemo(function () {
+  var B = useMemo(function () {
     return y.date(e$minDate)
   }, [e$minDate, y])
-  var I = React.useMemo(function () {
+  var I = useMemo(function () {
     return y.date(e$maxDate)
   }, [e$maxDate, y])
-  return React.createElement("div", {
+  return createElement("div", {
     className: Module_98.a(b.container, w && b.containerLandscape)
-  }, !e$disableToolbar && React.createElement(e$ToolbarComponent, Module_19.a({}, m, {
+  }, !e$disableToolbar && createElement(e$ToolbarComponent, Module_19.a({}, m, {
     views: e$views,
     isLandscape: w,
     date: e$date,
     onChange: e$onChange,
     setOpenView: x$setOpenView,
     openView: x$openView
-  })), React.createElement("div", {
+  })), createElement("div", {
     className: Module_98.a(b.pickerView, w && b.pickerViewLandscape)
-  }, "year" === x$openView && React.createElement(E, Module_19.a({}, m, {
+  }, "year" === x$openView && createElement(E, Module_19.a({}, m, {
     date: e$date,
     onChange: x$handleChangeAndOpenNext,
     minDate: B,
     maxDate: I
-  })), "month" === x$openView && React.createElement(k, Module_19.a({}, m, {
+  })), "month" === x$openView && createElement(k, Module_19.a({}, m, {
     date: e$date,
     onChange: x$handleChangeAndOpenNext,
     minDate: B,
     maxDate: I
-  })), "date" === x$openView && React.createElement(Module_699.a, Module_19.a({}, m, {
+  })), "date" === x$openView && createElement(Module_699.a, Module_19.a({}, m, {
     date: e$date,
     onChange: x$handleChangeAndOpenNext,
     minDate: B,
     maxDate: I
-  })), ("hours" === x$openView || "minutes" === x$openView || "seconds" === x$openView) && React.createElement(Module_739.a, Module_19.a({}, m, {
+  })), ("hours" === x$openView || "minutes" === x$openView || "seconds" === x$openView) && createElement(Module_739.a, Module_19.a({}, m, {
     date: e$date,
     type: x$openView,
     onHourChange: x$handleChangeAndOpenNext,

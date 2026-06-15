@@ -12,10 +12,11 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_806 from /* 806 */"./806"
 import /* [auto-meaningful-name] */Module_8061 from /* 806 */"./806"
-var dn = React1.memo(function (e) {
+var dn = memo(function (e) {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
@@ -45,7 +46,7 @@ var dn = React1.memo(function (e) {
     id: "saveProject.failDialogTips3"
   })))))
 })
-var pn = React1.memo(function (e) {
+var pn = memo(function (e) {
   var t = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useSelector(function (e) {
@@ -54,11 +55,11 @@ var pn = React1.memo(function (e) {
   var /* [auto-meaningful-name] */r$packageProgress = r.packageProgress
   var /* [auto-meaningful-name] */r$packageTaskLabel = r.packageTaskLabel
   var /* [auto-meaningful-name] */r$isPackaging = r.isPackaging
-  var s = React1.useState(false)
+  var s = useState(false)
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     u(!(!r$packageTaskLabel || -1 !== r$packageProgress || r$isPackaging))
   }, [r$isPackaging, r$packageProgress, r$packageTaskLabel])
   return React.createElement(cn, {
@@ -92,7 +93,7 @@ var pn = React1.memo(function (e) {
     id: "package.buildFailedTips42"
   })))))
 })
-var fn = React1.memo(function (e) {
+var fn = memo(function (e) {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onClose = e.onClose

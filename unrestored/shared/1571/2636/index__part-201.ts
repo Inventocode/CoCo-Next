@@ -10,16 +10,17 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_754 from /* 754 */"./754"
 import /* [auto-meaningful-name] */Module_7541 from /* 754 */"./754"
 import * as /* [auto-meaningful-name] */Module_1530 from /* 1530 */"./1530"
 import /* [auto-meaningful-name] */Module_15301 from /* 1530 */"./1530"
 import * as /* [auto-meaningful-name] */Module_1531 from /* 1531 */"./1531"
 import /* [auto-meaningful-name] */Module_15311 from /* 1531 */"./1531"
-var bL = React1.memo(function () {
+var bL = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var t = React1.useState(!function () {
+  var t = useState(!function () {
     var e = navigator.userAgent.toLowerCase()
     return e.includes("chrome") && !e.includes("qqbrowser") && !e.includes("opr") && !e.includes("se") && !e.includes("metasr") && /Google Inc/.test(navigator.vendor)
   }())

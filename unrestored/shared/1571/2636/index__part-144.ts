@@ -19,7 +19,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect, useCallback, useLayoutEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1040 from /* 1040 */"./1040"
 import /* [auto-meaningful-name] */Module_10401 from /* 1040 */"./1040"
 var eT = new Map()
@@ -43,34 +44,34 @@ function tT(e, t) {
     }
   }
 }
-var nT = React1.memo(function () {
+var nT = memo(function () {
   var e = useSelector(function (e) {
     return e.block.get("editArrayDialog")
   })
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$array = e.array
   var /* [auto-meaningful-name] */e$arrayType = e.arrayType
-  var o = React1.useState([])
+  var o = useState([])
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(0)
+  var c = useState(0)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef(1)
+  var p = useRef(1)
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var g = React1.useRef(null)
-  var v = React1.useRef(null)
+  var g = useRef(null)
+  var v = useRef(null)
   var b = useDispatch()
   var y = Module_238.d()
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$array) {
       s(Module_25.a(e$array.defaultValue))
       d(e$array.defaultValue.length)
     }
   }, [e$array])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (v.current) {
       e = tT(v.current.button, function (e, t) {
@@ -82,7 +83,7 @@ var nT = React1.memo(function () {
     }
     return e && e()
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */g$current
     if (e$visible) {
       if (!(null === (g$current = g.current) || undefined === g$current)) {
@@ -94,7 +95,7 @@ var nT = React1.memo(function () {
   var E = function (e) {
     d(e)
   }
-  var O = React1.useCallback(function (e) {
+  var O = useCallback(function (e) {
     var t = Number(e) - a.length
     if (t > 0) {
       for (var n = 0; n < t; n++) {
@@ -121,7 +122,7 @@ var nT = React1.memo(function () {
       }, 0)
     }
   }
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (p.current) {
       var e = document.querySelectorAll(".".concat(Module_99.list, " input"))[u - 1]
       if (!(null === e || undefined === e)) {
@@ -129,20 +130,20 @@ var nT = React1.memo(function () {
       }
     }
   }, [u])
-  var C = React1.useCallback(function (e) {
+  var C = useCallback(function (e) {
     a.splice(e, 1)
     s(Module_25.a(a))
     d(a.length)
     p.current = 0
   }, [a])
-  var T = React1.useCallback(function (e, t) {
+  var T = useCallback(function (e, t) {
     a.splice(e, 1, t)
     s(Module_25.a(a))
   }, [a])
-  var A = React1.useCallback(function () {
+  var A = useCallback(function () {
     b(Src_editor_redux_common_actions.oh())
   }, [b])
-  var j = React1.useCallback(function () {
+  var j = useCallback(function () {
     p.current = 0
     if (e$array && y) {
       var e = []
@@ -158,7 +159,7 @@ var nT = React1.memo(function () {
     }
     A()
   }, [e$array, y, A, a, b, e$arrayType])
-  React1.useEffect(function () {
+  useEffect(function () {
     function e(e) {
       var /* [auto-meaningful-name] */e$clipboardData
       var n = null === (e$clipboardData = e.clipboardData) || undefined === e$clipboardData ? undefined : e$clipboardData.getData("text")

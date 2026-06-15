@@ -6,7 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import /* 719 */"../../../shared/1571/2636/719"
 import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
@@ -19,7 +20,7 @@ import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../shared/
 import * as /* [auto-meaningful-name] */Module_514 from /* 514 */"./514/index"
 import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"../../../shared/1571/2636/177"
 var p = React1.memo(function () {
-  var t = React.useState()
+  var t = useState()
   var e = Module_10.a(t, 2)
   var n = e[0]
   var o = e[1]
@@ -55,7 +56,7 @@ var p = React1.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  React.useEffect(function () {
+  useEffect(function () {
     !function () {
       a.apply(this, arguments)
     }()

@@ -23,10 +23,11 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_475 from /* 475 */"./475"
 import /* [auto-meaningful-name] */Module_4751 from /* 475 */"./475"
-var ZP = React1.memo(function () {
+var ZP = memo(function () {
   var e = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (e) {
@@ -280,7 +281,7 @@ var ZP = React1.memo(function () {
     id: "moreCourseTips"
   })))))
 })
-var JP = React1.memo(function (e) {
+var JP = memo(function (e) {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useDispatch()
   var r = useSelector(function (e) {

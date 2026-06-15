@@ -7,7 +7,7 @@
 "use strict"
 
 import { d, p, h, g } from "./index__part-0"
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"

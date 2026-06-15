@@ -8,11 +8,6 @@ unpack({
         path.resolve(distPath, "main.0ac09eb1.chunk.js"),
         path.resolve(distPath, "2.39df20f7.chunk.js")
     ],
-    externals: [
-        { key: 2, source: "react/jsx-runtime" },
-        { key: 13, source: "react" },
-        { key: 48, source: "react-dom" }
-    ],
     output: {
         basePath: process.cwd(),
         unrestoredPath: "unrestored/about",
@@ -24,6 +19,16 @@ unpack({
             38: "module",
             44: "global",
             56: "process"
+        }
+    },
+    externals: [
+        { key: 2, source: "react/jsx-runtime" },
+        { key: 13, source: "react" },
+        { key: 48, source: "react-dom" }
+    ],
+    modules: {
+        13: {
+            namedImported: true
         }
     },
     movedDirs: ["about"],

@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
 import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../79/index"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_331 from /* 331 */"../331"
 var d = function () {
   if ("undefined" === typeof navigator || "undefined" === typeof window) {

@@ -7,7 +7,7 @@
 "use strict"
 
 import { w, E, C, O } from "./692__part-0"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useRef, useEffect, useCallback, useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
@@ -17,16 +17,16 @@ function T(e) {
   return "active" === e || "end" === e
 }
 var B = function (e, t) {
-  var n = React.useState("none")
+  var n = useState("none")
   var r = Module_40.a(n, 2)
   var i = r[0]
   var a = r[1]
   var c = function () {
-    var e = React.useRef(null)
+    var e = useRef(null)
     function t() {
       Module_416.a.cancel(e.current)
     }
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         t()
       }
@@ -76,7 +76,7 @@ var B = function (e, t) {
       }
     }
   }, [e, i])
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       f()
     }
@@ -121,14 +121,14 @@ function D(e, t, n, a) {
   var z = Module_40.a(G, 2)
   var Q = z[0]
   var W = z[1]
-  var K = React.useRef(false)
-  var X = React.useRef(null)
-  var Y = React.useRef(false)
-  var q = React.useRef(null)
+  var K = useRef(false)
+  var X = useRef(null)
+  var Y = useRef(false)
+  var q = useRef(null)
   function $() {
     return n() || q.current
   }
-  var J = React.useRef(false)
+  var J = useRef(false)
   function Z(e) {
     var t
     var n = $()
@@ -151,10 +151,10 @@ function D(e, t, n, a) {
     }
   }
   var ee = function (e) {
-    var t = React.useRef()
-    var n = React.useRef(e)
+    var t = useRef()
+    var n = useRef(e)
     n.current = e
-    var r = React.useCallback(function (e) {
+    var r = useCallback(function (e) {
       n.current(e)
     }, [])
     function i(e) {
@@ -163,7 +163,7 @@ function D(e, t, n, a) {
         e.removeEventListener(w, r)
       }
     }
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         i(t.current)
       }
@@ -182,7 +182,7 @@ function D(e, t, n, a) {
     ]
   }(Z)
   var te = Module_40.a(ee, 1)[0]
-  var ne = React.useMemo(function () {
+  var ne = useMemo(function () {
     var e
     var t
     var n
@@ -257,18 +257,18 @@ function D(e, t, n, a) {
       }
     }
   }, [t])
-  React.useEffect(function () {
+  useEffect(function () {
     if ("appear" === H && !f || "enter" === H && !u || "leave" === H && !h) {
       V("none")
     }
   }, [f, u, h])
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       clearTimeout(X.current)
       Y.current = true
     }
   }, [])
-  React.useEffect(function () {
+  useEffect(function () {
     if (undefined !== M && "none" === H) {
       if (!(null === a$onVisibleChanged || undefined === a$onVisibleChanged)) {
         a$onVisibleChanged(M)

@@ -19,16 +19,17 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useMemo, useRef, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_935 from /* 935 */"./935"
 import /* [auto-meaningful-name] */Module_9351 from /* 935 */"./935"
-var TT = React1.memo(function () {
+var TT = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.block.dropdown
   })
-  var r = React1.useMemo(function () {
+  var r = useMemo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -104,23 +105,23 @@ var TT = React1.memo(function () {
     }
   }))
 })
-var ST = React1.memo(function () {
-  var e = React1.useRef(null)
+var ST = memo(function () {
+  var e = useRef(null)
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.block.dropdown
   })
   var /* [auto-meaningful-name] */n$position = n.position
   var /* [auto-meaningful-name] */n$blockInfo = n.blockInfo
-  var i = React1.useState(0)
+  var i = useState(0)
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(-1e3)
+  var l = useState(-1e3)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n.visible) {
       if (n$position.top > window.innerHeight / 2 && e.current) {
         var /* [auto-meaningful-name] */e$current$clientHeight = e.current.clientHeight
@@ -140,7 +141,7 @@ var ST = React1.memo(function () {
       }
     }
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     function r(n) {
       var /* [auto-meaningful-name] */n$target = n.target
       var /* [auto-meaningful-name] */e$current = e.current

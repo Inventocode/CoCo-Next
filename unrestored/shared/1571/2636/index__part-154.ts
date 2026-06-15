@@ -19,7 +19,8 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useMemo, createContext, useContext, createElement, useState, forwardRef, useEffect, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_812 from /* 812 */"./812"
 import /* [auto-meaningful-name] */Module_8121 from /* 812 */"./812"
 var $T = React.memo(function (e) {
@@ -31,7 +32,7 @@ var $T = React.memo(function (e) {
   var o = useSelector(function (e) {
     return e.common.consoleHeight
   })
-  var i = React1.useMemo(function () {
+  var i = useMemo(function () {
     return {
       errorCount: r.filter(function (e) {
         return "error" === e.get("type") || "lintError" === e.get("type") || "customError" === e.get("type")
@@ -79,7 +80,7 @@ var eS = function (e, t) {
   }
   return n
 }
-var tS = React1.createContext({
+var tS = createContext({
   siderHook: {
     addSider: function () {
       return null
@@ -95,10 +96,10 @@ function nS(e) {
   var /* [auto-meaningful-name] */e$displayName = e.displayName
   return function (e) {
     var o = function (r) {
-      var /* [auto-meaningful-name] */React1$useContextModule_801$b$getPrefixCls = React1.useContext(Module_801.b).getPrefixCls
+      var /* [auto-meaningful-name] */useContextModule_801$b$getPrefixCls = useContext(Module_801.b).getPrefixCls
       var /* [auto-meaningful-name] */r$prefixCls = r.prefixCls
-      var a = React1$useContextModule_801$b$getPrefixCls(e$suffixCls, r$prefixCls)
-      return React1.createElement(e, Module_19.a({
+      var a = useContextModule_801$b$getPrefixCls(e$suffixCls, r$prefixCls)
+      return createElement(e, Module_19.a({
         prefixCls: a,
         tagName: e$tagName
       }, r))
@@ -114,7 +115,7 @@ var rS = function (e) {
   var /* [auto-meaningful-name] */e$tagName = e.tagName
   var i = eS(e, ["prefixCls", "className", "children", "tagName"])
   var a = Classnames(e$prefixCls, e$className)
-  return React1.createElement(e$tagName, Module_19.a({
+  return createElement(e$tagName, Module_19.a({
     className: a
   }, i), e$children)
 }
@@ -124,8 +125,8 @@ var oS = nS({
   displayName: "Layout"
 })(function (e) {
   var t
-  var /* [auto-meaningful-name] */React1$useContextModule_801$b$direction = React1.useContext(Module_801.b).direction
-  var r = React1.useState([])
+  var /* [auto-meaningful-name] */useContextModule_801$b$direction = useContext(Module_801.b).direction
+  var r = useState([])
   var o = Module_40.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -135,8 +136,8 @@ var oS = nS({
   var /* [auto-meaningful-name] */e$hasSider = e.hasSider
   var /* [auto-meaningful-name] */e$tagName = e.tagName
   var p = eS(e, ["prefixCls", "className", "children", "hasSider", "tagName"])
-  var h = Classnames(e$prefixCls, (t = {}, Module_35.a(t, "".concat(e$prefixCls, "-has-sider"), "boolean" === typeof e$hasSider ? e$hasSider : i.length > 0), Module_35.a(t, "".concat(e$prefixCls, "-rtl"), "rtl" === React1$useContextModule_801$b$direction), t), e$className)
-  var m = React1.useMemo(function () {
+  var h = Classnames(e$prefixCls, (t = {}, Module_35.a(t, "".concat(e$prefixCls, "-has-sider"), "boolean" === typeof e$hasSider ? e$hasSider : i.length > 0), Module_35.a(t, "".concat(e$prefixCls, "-rtl"), "rtl" === useContextModule_801$b$direction), t), e$className)
+  var m = useMemo(function () {
     return {
       siderHook: {
         addSider: function (e) {
@@ -154,9 +155,9 @@ var oS = nS({
       }
     }
   }, [])
-  return React1.createElement(tS.Provider, {
+  return createElement(tS.Provider, {
     value: m
-  }, React1.createElement(e$tagName, Module_19.a({
+  }, createElement(e$tagName, Module_19.a({
     className: h
   }, p), e$children))
 })
@@ -196,13 +197,13 @@ var lS = {
   theme: "outlined"
 }
 var uS = function (e, t) {
-  return React1.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
+  return createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: lS
   }))
 }
 uS.displayName = "BarsOutlined"
-var dS = React1.forwardRef(uS)
+var dS = forwardRef(uS)
 var pS = {
   icon: {
     tag: "svg",
@@ -223,13 +224,13 @@ var pS = {
   theme: "outlined"
 }
 var fS = function (e, t) {
-  return React1.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
+  return createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: pS
   }))
 }
 fS.displayName = "RightOutlined"
-var hS = React1.forwardRef(fS)
+var hS = forwardRef(fS)
 var mS = {
   icon: {
     tag: "svg",
@@ -250,13 +251,13 @@ var mS = {
   theme: "outlined"
 }
 var gS = function (e, t) {
-  return React1.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
+  return createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: mS
   }))
 }
 gS.displayName = "LeftOutlined"
-var _S = React1.forwardRef(gS)
+var _S = forwardRef(gS)
 var vS = function (e) {
   return !isNaN(parseFloat(e)) && isFinite(e)
 }
@@ -283,7 +284,7 @@ var yS = {
   xl: "1199.98px",
   xxl: "1599.98px"
 }
-var ES = React1.createContext({})
+var ES = createContext({})
 var OS = function () {
   var e = 0
   return function () {
@@ -292,7 +293,7 @@ var OS = function () {
     return "".concat(t).concat(e)
   }
 }()
-var wS = React1.forwardRef(function (e, t) {
+var wS = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$trigger = e.trigger
@@ -316,16 +317,16 @@ var wS = React1.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onCollapse = e.onCollapse
   var /* [auto-meaningful-name] */e$onBreakpoint = e.onBreakpoint
   var T = bS(e, ["prefixCls", "className", "trigger", "children", "defaultCollapsed", "theme", "style", "collapsible", "reverseArrow", "width", "collapsedWidth", "zeroWidthTriggerStyle", "breakpoint", "onCollapse", "onBreakpoint"])
-  var /* [auto-meaningful-name] */React1$useContextTS$siderHook = React1.useContext(tS).siderHook
-  var A = React1.useState("collapsed" in T ? T.collapsed : s)
+  var /* [auto-meaningful-name] */useContextTS$siderHook = useContext(tS).siderHook
+  var A = useState("collapsed" in T ? T.collapsed : s)
   var I = Module_40.a(A, 2)
   var j = I[0]
   var R = I[1]
-  var k = React1.useState(false)
+  var k = useState(false)
   var x = Module_40.a(k, 2)
   var D = x[0]
   var M = x[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if ("collapsed" in T) {
       R(T.collapsed)
     }
@@ -338,7 +339,7 @@ var wS = React1.forwardRef(function (e, t) {
       e$onCollapse(e, t)
     }
   }
-  var P = React1.useRef()
+  var P = useRef()
   P.current = function (e) {
     M(e.matches)
     if (!(null === e$onBreakpoint || undefined === e$onBreakpoint)) {
@@ -348,7 +349,7 @@ var wS = React1.forwardRef(function (e, t) {
       L(e.matches, "responsive")
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     function e(e) {
       return P.current(e)
     }
@@ -377,40 +378,40 @@ var wS = React1.forwardRef(function (e, t) {
       }
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = OS("ant-sider-")
-    React1$useContextTS$siderHook.addSider(e)
+    useContextTS$siderHook.addSider(e)
     return function () {
-      return React1$useContextTS$siderHook.removeSider(e)
+      return useContextTS$siderHook.removeSider(e)
     }
   }, [])
   var B = function () {
     L(!j, "clickTrigger")
   }
-  var /* [auto-meaningful-name] */React1$useContextModule_801$b$getPrefixCls = React1.useContext(Module_801.b).getPrefixCls
-  var G = React1.useMemo(function () {
+  var /* [auto-meaningful-name] */useContextModule_801$b$getPrefixCls = useContext(Module_801.b).getPrefixCls
+  var G = useMemo(function () {
     return {
       siderCollapsed: j
     }
   }, [j])
-  return React1.createElement(ES.Provider, {
+  return createElement(ES.Provider, {
     value: G
   }, function () {
     var e
-    var a = React1$useContextModule_801$b$getPrefixCls("layout-sider", e$prefixCls)
+    var a = useContextModule_801$b$getPrefixCls("layout-sider", e$prefixCls)
     var s = Module_486.a(T, ["collapsed"])
     var c = j ? y : v
     var u = vS(c) ? "".concat(c, "px") : String(c)
-    var p = 0 === parseFloat(String(y || 0)) ? React1.createElement("span", {
+    var p = 0 === parseFloat(String(y || 0)) ? createElement("span", {
       onClick: B,
       className: Classnames("".concat(a, "-zero-width-trigger"), "".concat(a, "-zero-width-trigger-").concat(g ? "right" : "left")),
       style: e$zeroWidthTriggerStyle
-    }, e$trigger || React1.createElement(dS, null)) : null
+    }, e$trigger || createElement(dS, null)) : null
     var m = {
-      expanded: g ? React1.createElement(hS, null) : React1.createElement(_S, null),
-      collapsed: g ? React1.createElement(_S, null) : React1.createElement(hS, null)
+      expanded: g ? createElement(hS, null) : createElement(_S, null),
+      collapsed: g ? createElement(_S, null) : createElement(hS, null)
     }[j ? "collapsed" : "expanded"]
-    var _ = null !== e$trigger ? p || React1.createElement("div", {
+    var _ = null !== e$trigger ? p || createElement("div", {
       className: "".concat(a, "-trigger"),
       onClick: B,
       style: {
@@ -424,12 +425,12 @@ var wS = React1.forwardRef(function (e, t) {
       width: u
     })
     var O = Classnames(a, "".concat(a, "-").concat(l), (e = {}, Module_35.a(e, "".concat(a, "-collapsed"), !!j), Module_35.a(e, "".concat(a, "-has-trigger"), h && null !== e$trigger && !p), Module_35.a(e, "".concat(a, "-below"), !!D), Module_35.a(e, "".concat(a, "-zero-width"), 0 === parseFloat(u)), e), e$className)
-    return React1.createElement("aside", Module_19.a({
+    return createElement("aside", Module_19.a({
       className: O
     }, s, {
       style: b,
       ref: t
-    }), React1.createElement("div", {
+    }), createElement("div", {
       className: "".concat(a, "-children")
     }, e$children), h || D && p ? _ : null)
   }())

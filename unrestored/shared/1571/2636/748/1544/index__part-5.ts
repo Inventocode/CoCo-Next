@@ -7,7 +7,7 @@
 "use strict"
 
 import { W } from "./index__part-4"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, useRef, useImperativeHandle, forwardRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../54"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../107"
@@ -18,7 +18,7 @@ var X = function (e) {
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var r = e.id
   var /* [auto-meaningful-name] */e$overlayInnerStyle = e.overlayInnerStyle
-  return React.createElement("div", {
+  return createElement("div", {
     className: "".concat(e$prefixCls, "-inner"),
     id: r,
     role: "tooltip",
@@ -52,8 +52,8 @@ var Y = function (e, t) {
   var /* [auto-meaningful-name] */e$getTooltipContainer = e.getTooltipContainer
   var /* [auto-meaningful-name] */e$overlayInnerStyle = e.overlayInnerStyle
   var I = Module_54.a(e, ["overlayClassName", "trigger", "mouseEnterDelay", "mouseLeaveDelay", "overlayStyle", "prefixCls", "children", "onVisibleChange", "afterVisibleChange", "transitionName", "animation", "motion", "placement", "align", "destroyTooltipOnHide", "defaultVisible", "getTooltipContainer", "overlayInnerStyle"])
-  var R = React.useRef(null)
-  React.useImperativeHandle(t, function () {
+  var R = useRef(null)
+  useImperativeHandle(t, function () {
     return R.current
   })
   var F = Module_21.a({}, I)
@@ -69,7 +69,7 @@ var Y = function (e, t) {
     P = true === S$keepParent
     N = false === S$keepParent
   }
-  return React.createElement(W, Module_19.a({
+  return createElement(W, Module_19.a({
     popupClassName: e$overlayClassName,
     prefixCls: A,
     popup: function () {
@@ -78,10 +78,10 @@ var Y = function (e, t) {
       var /* [auto-meaningful-name] */e$overlay = e.overlay
       var i = e.id
       return [
-        React.createElement("div", {
+        createElement("div", {
           className: "".concat(A, "-arrow"),
           key: "arrow"
-        }, n), React.createElement(X, {
+        }, n), createElement(X, {
           key: "content",
           prefixCls: A,
           id: i,
@@ -109,5 +109,5 @@ var Y = function (e, t) {
     mouseEnterDelay: f
   }, F), e$children)
 }
-var q = React.forwardRef(Y)
+var q = forwardRef(Y)
 export { q }

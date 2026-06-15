@@ -19,31 +19,32 @@ import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useMemo, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_340 from /* 340 */"./340"
 import /* [auto-meaningful-name] */Module_3401 from /* 340 */"./340"
-var DS = React1.memo(function (e) {
+var DS = memo(function (e) {
   var /* [auto-meaningful-name] */e$consoleVisible = e.consoleVisible
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var r = useSelector(function (e) {
     return e.common.consoleMessages
   })
-  var o = React1.useState(["error", "lintError", "warning", "print", "log", "customError", "customWarning"])
+  var o = useState(["error", "lintError", "warning", "print", "log", "customError", "customWarning"])
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(-1)
+  var c = useState(-1)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef(null)
-  var m = React1.useRef(.18 * document.body.clientHeight)
+  var p = useRef(null)
+  var m = useRef(.18 * document.body.clientHeight)
   var g = useSelector(function (e) {
     return e.project.playing
   })
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var b = useDispatch()
-  var y = React1.useMemo(function () {
+  var y = useMemo(function () {
     return {
       errorCount: r.filter(function (e) {
         return "error" === e.get("type") || "lintError" === e.get("type") || "customError" === e.get("type")
@@ -102,13 +103,13 @@ var DS = React1.memo(function (e) {
       isClear: t
     })
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     d(-1)
   }, [g])
-  React1.useEffect(function () {
+  useEffect(function () {
     b(Src_editor_redux_common_actions.ei(e$consoleVisible ? m.current : 0))
   }, [b, e$consoleVisible])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */p$current = p.current
     if (p$current) {
       p$current.scrollTop = p$current.scrollHeight

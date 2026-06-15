@@ -37,13 +37,14 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../11"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useCallback, useState, useMemo, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Color from /* 51 */"color"
 import * as /* [auto-meaningful-name] */Module_552 from /* 552 */"../../../552/index"
 var Ge = function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
-  var r = React1.useCallback(function (e) {
+  var r = useCallback(function (e) {
     var r = Module_28.k(e)
     Module_20.emitTimePickerSelectDone(t, r.time, r.h, r.min, r.s)
     Module_20.setWidgetAttribute(t, "timeStamp", new Date(e).getTime())
@@ -91,15 +92,15 @@ Module_11.a(We, Src_editor_widget_builtIn_types.w, function (e) {
   var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
   var /* [auto-meaningful-name] */e$size$width = e$size.width
   var /* [auto-meaningful-name] */e$size$height = e$size.height
-  var M = React1.useState(e$attributes$placeholder)
+  var M = useState(e$attributes$placeholder)
   var L = Module_10.a(M, 2)
   var P = L[0]
   var F = L[1]
-  var G = React1.useState(false)
+  var G = useState(false)
   var W = Module_10.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = React1.useMemo(function () {
+  var V = useMemo(function () {
     var e = e$attributes$errorMessage ? Module_95.d : e$attributes$backgroundColor
     try {
       return Color(e.toString()).toString()
@@ -113,7 +114,7 @@ Module_11.a(We, Src_editor_widget_builtIn_types.w, function (e) {
     }
   }, [e$attributes$backgroundColor, e$attributes$errorMessage, t, e$type])
   var K = Module_112.b(e$attributes$backgroundImage) || Module_95.a
-  var J = React1.useMemo(function () {
+  var J = useMemo(function () {
     if (!U || e$attributes$backgroundMode === Module_76.a.IMAGE) {
       return {}
     }
@@ -132,7 +133,7 @@ Module_11.a(We, Src_editor_widget_builtIn_types.w, function (e) {
     }(e$attributes$templateMode, e)
   }, [U, e$attributes$backgroundMode, e$attributes$errorMessage, V, e$attributes$templateMode])
   var $ = undefined
-  var ee = React1.useMemo(function () {
+  var ee = useMemo(function () {
     return function (e, t, n) {
       var r
       return (r = {}, Module_11.a(r, Module_76.c.OUTLINED_NORMAL, {
@@ -165,7 +166,7 @@ Module_11.a(We, Src_editor_widget_builtIn_types.w, function (e) {
       padding: "6px ".concat(14, "px")
     })
   }
-  var te = React1.useMemo(function () {
+  var te = useMemo(function () {
     if (e$attributes$disabled) {
       return function (e) {
         var t
@@ -185,10 +186,10 @@ Module_11.a(We, Src_editor_widget_builtIn_types.w, function (e) {
       }(e$attributes$templateMode)
     }
   }, [e$attributes$templateMode, e$attributes$disabled])
-  React1.useEffect(function () {
+  useEffect(function () {
     F(e$attributes$placeholder)
   }, [e$attributes$placeholder])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (!(null === (e = document.getElementById(t)) || undefined === e)) {
       e.style.setProperty("--input-placeholder-color", e$attributes$placeholderColor)

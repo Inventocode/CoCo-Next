@@ -24,7 +24,8 @@ import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../54"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { isValidElement, cloneElement, createElement, Fragment, Component, useContext, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
 import * as /* [auto-meaningful-name] */Module_783 from /* 783 */"../../522/783"
 function F(e, t, n, r) {
@@ -155,7 +156,7 @@ function q() {
             if (e.t0.errors) {
               p = e.t0.errors.map(function (e, t) {
                 var /* [auto-meaningful-name] */e$message = e.message
-                return React1.isValidElement(e$message) ? React1.cloneElement(e$message, {
+                return isValidElement(e$message) ? cloneElement(e$message, {
                   key: "error_".concat(t)
                 }) : e$message
               })
@@ -596,7 +597,7 @@ var re = function (e) {
         })
         return r
       }(e)
-      return 1 === n.length && React1.isValidElement(n[0]) ? {
+      return 1 === n.length && isValidElement(n[0]) ? {
         child: n[0],
         isFunction: false
       } : {
@@ -717,21 +718,21 @@ var re = function (e) {
         if (r.isFunction) {
           e = r$child
         } else {
-          if (React1.isValidElement(r$child)) {
-            e = React1.cloneElement(r$child, this.getControlled(r$child.props))
+          if (isValidElement(r$child)) {
+            e = cloneElement(r$child, this.getControlled(r$child.props))
           } else {
             y(!r$child, "`children` of Field is not validate ReactElement.")
             e = r$child
           }
         }
-        return React1.createElement(React1.Fragment, {
+        return createElement(Fragment, {
           key: this$state$resetCount
         }, e)
       }
     }
   ])
   return n
-}(React1.Component)
+}(Component)
 re.contextType = E
 re.defaultProps = {
   trigger: "onChange",
@@ -740,13 +741,13 @@ re.defaultProps = {
 var ie = function (e) {
   var /* [auto-meaningful-name] */e$name = e.name
   var n = Module_54.a(e, ee)
-  var o = React1.useContext(E)
+  var o = useContext(E)
   var a = undefined !== e$name ? N(e$name) : undefined
   var c = "keep"
   if (!n.isListField) {
     c = "_".concat((a || []).join("_"))
   }
-  return React1.createElement(re, Module_19.a({
+  return createElement(re, Module_19.a({
     key: c,
     name: a
   }, n, {
@@ -759,8 +760,8 @@ var oe = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$rules = e.rules
   var /* [auto-meaningful-name] */e$validateTrigger = e.validateTrigger
-  var s = React1.useContext(E)
-  var /* [auto-meaningful-name] */React1$useRefKeysId0$current = React1.useRef({
+  var s = useContext(E)
+  var /* [auto-meaningful-name] */useRefKeysId0$current = useRef({
     keys: [],
     id: 0
   }).current
@@ -770,11 +771,11 @@ var oe = function (e) {
   }
   var f = N(s.prefixName) || []
   var d = [].concat(Module_79.a(f), Module_79.a(N(e$name)))
-  return React1.createElement(E.Provider, {
+  return createElement(E.Provider, {
     value: Module_21.a(Module_21.a({}, s), {}, {
       prefixName: d
     })
-  }, React1.createElement(ie, {
+  }, createElement(ie, {
     name: [],
     shouldUpdate: function (e, t, n) {
       return "internal" !== n.source && e !== t
@@ -795,19 +796,19 @@ var oe = function (e) {
       add: function (e, t) {
         var n = u()
         if (t >= 0 && t <= n.length) {
-          React1$useRefKeysId0$current.keys = [].concat(Module_79.a(React1$useRefKeysId0$current.keys.slice(0, t)), [React1$useRefKeysId0$current.id], Module_79.a(React1$useRefKeysId0$current.keys.slice(t)))
+          useRefKeysId0$current.keys = [].concat(Module_79.a(useRefKeysId0$current.keys.slice(0, t)), [useRefKeysId0$current.id], Module_79.a(useRefKeysId0$current.keys.slice(t)))
           e$onChange([].concat(Module_79.a(n.slice(0, t)), [e], Module_79.a(n.slice(t))))
         } else {
-          React1$useRefKeysId0$current.keys = [].concat(Module_79.a(React1$useRefKeysId0$current.keys), [React1$useRefKeysId0$current.id])
+          useRefKeysId0$current.keys = [].concat(Module_79.a(useRefKeysId0$current.keys), [useRefKeysId0$current.id])
           e$onChange([].concat(Module_79.a(n), [e]))
         }
-        React1$useRefKeysId0$current.id += 1
+        useRefKeysId0$current.id += 1
       },
       remove: function (e) {
         var t = u()
         var n = new Set(Array.isArray(e) ? e : [e])
         if (!(n.size <= 0)) {
-          React1$useRefKeysId0$current.keys = React1$useRefKeysId0$current.keys.filter(function (e, t) {
+          useRefKeysId0$current.keys = useRefKeysId0$current.keys.filter(function (e, t) {
             return !n.has(t)
           })
           e$onChange(t.filter(function (e, t) {
@@ -819,7 +820,7 @@ var oe = function (e) {
         if (e !== t) {
           var n = u()
           if (!(e < 0 || e >= n.length || t < 0 || t >= n.length)) {
-            React1$useRefKeysId0$current.keys = W(React1$useRefKeysId0$current.keys, e, t)
+            useRefKeysId0$current.keys = W(useRefKeysId0$current.keys, e, t)
             e$onChange(W(n, e, t))
           }
         }
@@ -830,11 +831,11 @@ var oe = function (e) {
       h = []
     }
     return e$children(h.map(function (e, t) {
-      var n = React1$useRefKeysId0$current.keys[t]
+      var n = useRefKeysId0$current.keys[t]
       if (undefined === n) {
-        React1$useRefKeysId0$current.keys[t] = React1$useRefKeysId0$current.id
-        n = React1$useRefKeysId0$current.keys[t]
-        React1$useRefKeysId0$current.id += 1
+        useRefKeysId0$current.keys[t] = useRefKeysId0$current.id
+        n = useRefKeysId0$current.keys[t]
+        useRefKeysId0$current.id += 1
       }
       return {
         name: t,

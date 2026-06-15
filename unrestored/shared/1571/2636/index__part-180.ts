@@ -19,7 +19,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1206 from /* 1206 */"./1206/index"
 import * as /* [auto-meaningful-name] */Module_162 from /* 162 */"./162"
 import * as /* [auto-meaningful-name] */Module_1207 from /* 1207 */"./1207"
@@ -52,7 +53,7 @@ function pj(e) {
       return "development"
   }
 }
-var mj = React1.memo(function (e) {
+var mj = memo(function (e) {
   var t = useDispatch()
   var n = useSelector(function (e) {
     return e.common.language
@@ -62,12 +63,12 @@ var mj = React1.memo(function (e) {
   })
   var /* [auto-meaningful-name] */r$visible = r.visible
   var /* [auto-meaningful-name] */r$onSuccess = r.onSuccess
-  var a = React1.useState(false)
+  var a = useState(false)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useRef(null)
-  React1.useEffect(function () {
+  var u = useRef(null)
+  useEffect(function () {
     if (r$visible) {
       nj = setTimeout(function () {
         l(false)
@@ -79,7 +80,7 @@ var mj = React1.memo(function (e) {
       }, 5e3)
     }
   }, [r$visible, t])
-  var d = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
+  var d = useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var n
     var r
     var /* [auto-meaningful-name] */e$sent
@@ -142,10 +143,10 @@ var mj = React1.memo(function (e) {
       failReason: r
     })
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     d(false, "")
   }, [d])
-  var m = React1.useCallback(function () {
+  var m = useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(n) {
       return RegeneratorRuntime.wrap(function (e) {
         for (;;) {
@@ -177,13 +178,13 @@ var mj = React1.memo(function (e) {
       return e.apply(this, arguments)
     }
   }(), [t, r$onSuccess, d])
-  var g = React1.useCallback(function (e) {
+  var g = useCallback(function (e) {
     var /* [auto-meaningful-name] */e$error
     var /* [auto-meaningful-name] */e$error1
     var /* [auto-meaningful-name] */e$error1$error_body
     p((null === e || undefined === e ? undefined : e.source) || "", false, "register" === (null === e || undefined === e ? undefined : e.source), (null === e || undefined === e || null === (e$error = e.error) || undefined === e$error ? undefined : e$error.msg) || (null === e || undefined === e || null === (e$error1 = e.error) || undefined === e$error1 || null === (e$error1$error_body = e$error1.error_body) || undefined === e$error1$error_body ? undefined : e$error1$error_body.catastrophe))
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     tj = Module_1206.createCodemaoLoginIframeApi({
       onEvent: function (e) {
         !function (e) {

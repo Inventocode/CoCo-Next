@@ -19,7 +19,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_286 from /* 286 */"./286"
 var kh = function (e) {
   var t = e.id
@@ -34,18 +35,18 @@ var kh = function (e) {
   var /* [auto-meaningful-name] */e$attributes$rotation = e$attributes.rotation
   var /* [auto-meaningful-name] */e$attributes$cursorShape = e$attributes.cursorShape
   var p = undefined === e$attributes$cursorShape ? Module_286.a.NONE : e$attributes$cursorShape
-  var m = React1.useState(true)
+  var m = useState(true)
   var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState({
+  var y = useState({
     x: 0,
     y: 0
   })
   var w = Module_10.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState({
+  var A = useState({
     translateX: 0,
     translateY: 0,
     angle: 0
@@ -53,7 +54,7 @@ var kh = function (e) {
   var I = Module_10.a(A, 2)
   var j = I[0]
   var N = I[1]
-  var R = React1.useState(false)
+  var R = useState(false)
   var k = Module_10.a(R, 2)
   var x = k[0]
   var D = k[1]
@@ -62,7 +63,7 @@ var kh = function (e) {
   })
   var L = t
   var P = M === L
-  var B = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
+  var B = useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     return RegeneratorRuntime.wrap(function (e) {
       for (;;) {
@@ -86,10 +87,10 @@ var kh = function (e) {
       }
     }, e)
   })), [])
-  React1.useEffect(function () {
+  useEffect(function () {
     B()
   }, [B])
-  var F = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
+  var F = useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var t
     var /* [auto-meaningful-name] */t$attributes$coordinateRatio
     var r
@@ -126,7 +127,7 @@ var kh = function (e) {
       }
     }, e)
   })), [L, e$attributes$color, p, e$parentId, e$attributes$penSize])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Module_215.b(L)
     if (e) {
       var t = function (e) {
@@ -148,7 +149,7 @@ var kh = function (e) {
       }
     }
   }, [L, e$parentId, e$position.x])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$parentId) {
       var e = Module_33.Cb(e$parentId)
       if (e) {
@@ -166,7 +167,7 @@ var kh = function (e) {
       }
     }
   }, [e$position, e$parentId])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!v) {
       var e = Module_215.b(L)
       if (e) {
@@ -180,7 +181,7 @@ var kh = function (e) {
       }
     }
   }, [L, v, a])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!v) {
       var e = Module_215.b(L)
       if (e) {
@@ -207,12 +208,12 @@ var kh = function (e) {
       }
     }
   }, [v, L, e$attributes$rotation])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!v) {
       F()
     }
   }, [v, F])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!v) {
       var e = Module_215.b(L)
       if (e) {
@@ -222,7 +223,7 @@ var kh = function (e) {
       }
     }
   }, [e$position, L, v])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!v) {
       var e = Module_215.b(L)
       if (e) {
@@ -232,7 +233,7 @@ var kh = function (e) {
       }
     }
   }, [e$visible, L, v])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (M === t) {
       var e = Module_215.b(t)
       var n = null === e || undefined === e ? undefined : e.components.get_editor()
@@ -244,7 +245,7 @@ var kh = function (e) {
       }
     }
   }, [t, M, v])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = document.querySelector("#".concat(e$parentId, "[data-role=\"WIDGET\"]"))
     if (e instanceof HTMLDivElement) {
       if (x) {

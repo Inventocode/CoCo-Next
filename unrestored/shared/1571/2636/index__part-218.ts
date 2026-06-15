@@ -19,13 +19,14 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1220 from /* 1220 */"./1220/index"
 import /* [auto-meaningful-name] */Module_12201 from /* 1220 */"./1220/index"
 import * as /* [auto-meaningful-name] */Module_1221 from /* 1221 */"./1221"
 import * as /* [auto-meaningful-name] */Module_529 from /* 529 */"./529"
 import /* [auto-meaningful-name] */Module_5291 from /* 529 */"./529"
-var oB = React1.memo(function () {
+var oB = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */useSelectorFunctionEReturnE$dataWatch$tableDataDialog$id = useSelector(function (e) {
     return e.dataWatch.tableDataDialog
@@ -33,7 +34,7 @@ var oB = React1.memo(function () {
   var n = useSelector(function (e) {
     return e.dataWatch.variableList
   })
-  var r = React1.useState()
+  var r = useState()
   var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -122,39 +123,39 @@ var oB = React1.memo(function () {
 var iB = function () {
   var e = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var n = React1.useState({
+  var n = useState({
     x: document.body.clientWidth - 886,
     y: 100
   })
   var r = Module_10.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = React1.useState(0)
+  var a = useState(0)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState(0)
+  var u = useState(0)
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState(0)
+  var g = useState(0)
   var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = React1.useState(0)
+  var w = useState(0)
   var C = Module_10.a(w, 2)
   var T = C[0]
   var j = C[1]
-  var R = React1.useState(876)
+  var R = useState(876)
   var k = Module_10.a(R, 2)
   var x = k[0]
   var D = k[1]
-  var M = React1.useState(540)
+  var M = useState(540)
   var L = Module_10.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React1.useRef(x)
-  var G = React1.useRef(P)
+  var F = useRef(x)
+  var G = useRef(P)
   var W = useSelector(function (e) {
     return e.project.playing
   })
@@ -168,7 +169,7 @@ var iB = function () {
   }).find(function (e) {
     return e.id === H
   })
-  var q = React1.useState(false)
+  var q = useState(false)
   var X = Module_10.a(q, 2)
   var Q = X[0]
   var Z = X[1]

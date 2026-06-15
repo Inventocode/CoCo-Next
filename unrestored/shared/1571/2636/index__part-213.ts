@@ -20,10 +20,11 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_707 from /* 707 */"./707"
 import /* [auto-meaningful-name] */Module_7071 from /* 707 */"./707"
-var kP = React1.memo(function () {
+var kP = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
@@ -33,24 +34,24 @@ var kP = React1.memo(function () {
   var /* [auto-meaningful-name] */n$onConfirm = n.onConfirm
   var /* [auto-meaningful-name] */n$content = n.content
   var a = undefined === n$content ? "" : n$content
-  var s = React1.useState(false)
+  var s = useState(false)
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(null)
+  var d = useState(null)
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useRef(null)
-  var b = React1.useRef(null)
-  var y = React1.useRef(null)
-  var E = React1.useRef(null)
-  var O = React1.useRef(null)
-  var w = React1.useRef(null)
-  var C = React1.useCallback(function () {
+  var v = useRef(null)
+  var b = useRef(null)
+  var y = useRef(null)
+  var E = useRef(null)
+  var O = useRef(null)
+  var w = useRef(null)
+  var C = useCallback(function () {
     t(Src_editor_redux_common_actions.Yg())
   }, [t])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (y.current && w.current) {
       var t = {
         placeholder: Module_710$a$formatMessage({
@@ -129,12 +130,12 @@ var kP = React1.memo(function () {
       }
     }
   }, [Module_710$a$formatMessage])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n$visible && E.current) {
       E.current.root.innerHTML = Module_28.i(a)
     }
   }, [a, n$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (n$visible) {
       !function () {
         if (!CP) {
@@ -179,10 +180,10 @@ var kP = React1.memo(function () {
     }
     g(null)
   }, [n$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     v.current = m
   }, [m])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */E$current = E.current
     if (E$current && n$visible) {
       if (l) {
@@ -207,7 +208,7 @@ var kP = React1.memo(function () {
       }
     }
   }, [l, n$visible])
-  var T = React1.useCallback(function () {
+  var T = useCallback(function () {
     if (E.current) {
       var /* [auto-meaningful-name] */E$current$root$innerHTML = E.current.root.innerHTML
       if (n$onConfirm) {
@@ -216,13 +217,13 @@ var kP = React1.memo(function () {
     }
     C()
   }, [C, n$onConfirm])
-  var A = React1.useCallback(function (e) {
+  var A = useCallback(function (e) {
     var /* [auto-meaningful-name] */e$target = e.target
     if ((e$target instanceof Element ? e$target.closest("button.ql-clean") : null) && E.current && w.current) {
       IP(E.current, w.current)
     }
   }, [])
-  var j = React1.useCallback(function (e, t) {
+  var j = useCallback(function (e, t) {
     var /* [auto-meaningful-name] */document$activeElement
     if ("INPUT" !== (null === (document$activeElement = document.activeElement) || undefined === document$activeElement ? undefined : document$activeElement.nodeName) && !t) {
       var /* [auto-meaningful-name] */v$current = v.current

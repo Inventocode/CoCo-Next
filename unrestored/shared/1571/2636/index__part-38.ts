@@ -20,7 +20,8 @@ import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_239 from /* 239 */"./239"
 import /* [auto-meaningful-name] */Module_2391 from /* 239 */"./239"
 function Ep(e, t, n) {
@@ -54,15 +55,15 @@ var Op = function (e) {
   var /* [auto-meaningful-name] */e$attributes$textAlign = e$attributes.textAlign
   var /* [auto-meaningful-name] */e$attributes$overflow = e$attributes.overflow
   var E = undefined === e$attributes$overflow ? "hidden" : e$attributes$overflow
-  var O = React1.useRef(null)
-  var w = React1.useRef(null)
-  var C = React1.useRef(null)
-  var T = React1.useRef(Ep(e$position.y, e$size.height, e$attributes$justifyContent))
-  var A = React1.useState(false)
+  var O = useRef(null)
+  var w = useRef(null)
+  var C = useRef(null)
+  var T = useRef(Ep(e$position.y, e$size.height, e$attributes$justifyContent))
+  var A = useState(false)
   var I = Module_10.a(A, 2)
   var j = I[0]
   var R = I[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (j && e$selected && w.current) {
       var /* [auto-meaningful-name] */w$current = w.current
       w$current.focus()
@@ -70,13 +71,13 @@ var Op = function (e) {
       w$current.setSelectionRange(w$current$value$length, w$current$value$length)
     }
   }, [j, e$selected])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!e$selected) {
       R(false)
     }
   }, [e$selected])
   var x = e$attributes$sizeAdaptive !== Src_editor_widget_builtIn_types.q.FIXED
-  React1.useEffect(function () {
+  useEffect(function () {
     if (x && O.current && e$onChange) {
       var /* [auto-meaningful-name] */O$current = O.current
       var t = Math.floor(O$current.clientHeight)
@@ -96,7 +97,7 @@ var Op = function (e) {
       }
     }
   }, [e$attributes$fontSize, e$attributes$fontFamily, x, e$attributes$content, e$onChange, e$size.height])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Ep(e$position.y, e$size.height, e$attributes$justifyContent)
     T.current = e
   }, [e$attributes$justifyContent, e$onChange, e$position.y, e$size.height])

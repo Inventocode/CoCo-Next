@@ -14,7 +14,7 @@ export { d as e }
 export { p as d }
 export { f as c }
 import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrestored/shared/1571/2636/9"
-import * as /* [auto-meaningful-name] */$_type from /* 78 */"./type"
+import * as o from /* 78 */"./type"
 var i = new Map()
 var a = new Map()
 function s(e) {
@@ -33,7 +33,7 @@ function u(e) {
 }
 function d() {
   return Array.from(a.values()).filter(function (e) {
-    return $_type.d(e.type)
+    return o.d(e.type)
   }).map(function (e) {
     return {
       type: e.type,
@@ -57,7 +57,7 @@ function p() {
 }
 function f() {
   Array.from(a.keys()).forEach(function (e) {
-    if ($_type.d(e)) {
+    if (o.d(e)) {
       a.delete(e)
     }
   })

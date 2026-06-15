@@ -11,10 +11,11 @@ import * as /* [auto-meaningful-name] */Redux_common_actions from /* 2 */"../../
 import * as /* [auto-meaningful-name] */Shared_ui_components_index from /* 13 */"../../../../shared/ui/components/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
-import * as /* [auto-meaningful-name] */Module_1062 from /* 1062 */"../../../../../unrestored/shared/1571/2636/1062"
-import /* [auto-meaningful-name] */Module_10621 from /* 1062 */"../../../../../unrestored/shared/1571/2636/1062"
-var ML = React1.memo(function () {
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
+import * as /* [auto-meaningful-name] */Style_styles_module_css from /* 1062 */"./style/styles.module.css"
+import /* [auto-meaningful-name] */Style_styles_module_css1 from /* 1062 */"./style/styles.module.css"
+var ML = memo(function () {
   var e = useDispatch()
   var t = useSelector(function (e) {
     return e.common.blockImageDialogInfo
@@ -23,17 +24,17 @@ var ML = React1.memo(function () {
   var /* [auto-meaningful-name] */t$imgSrc = t.imgSrc
   return React.createElement(Shared_ui_components_index.f, {
     visible: t$visible,
-    className: Module_10621.blockImageDialog,
+    className: Style_styles_module_css1.blockImageDialog,
     onClose: function () {
       e(Redux_common_actions.bi(false, ""))
     }
   }, React.createElement("div", {
-    className: Module_10621.blockImageWrap
+    className: Style_styles_module_css1.blockImageWrap
   }, React.createElement("img", {
     src: t$imgSrc,
     alt: ""
   })), React.createElement("div", {
-    className: Module_10621.btnDownload,
+    className: Style_styles_module_css1.btnDownload,
     onClick: function () {
       var e = document.createElement("a")
       e.href = t$imgSrc

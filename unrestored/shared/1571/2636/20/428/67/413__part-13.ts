@@ -17,12 +17,13 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../11"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_172 from /* 172 */"../../../172"
 import * as /* [auto-meaningful-name] */Module_45 from /* 45 */"../../../45"
 import /* [auto-meaningful-name] */Module_451 from /* 45 */"../../../45"
 var Oe = {}
-var we = React1.memo(function (e) {
+var we = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$position = e.position

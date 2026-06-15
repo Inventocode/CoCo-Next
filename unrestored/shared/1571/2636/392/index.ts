@@ -7,7 +7,8 @@
 "use strict"
 
 export { COURSE_ICON_NAME as a }
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import { useDispatch } from /* 16 */"react-redux"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../627/index"
@@ -19,7 +20,7 @@ import * as /* [auto-meaningful-name] */Module_516 from /* 516 */"./516"
 import /* [auto-meaningful-name] */Module_5161 from /* 516 */"./516"
 var /* [auto-meaningful-name] */COURSE_ICON_NAME = "COURSE_ICON_NAME"
 var _b
-_b = React.memo(function () {
+_b = memo(function () {
   var e = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   return React1.createElement(Module_748.a, {

@@ -18,12 +18,13 @@ import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_320 from /* 320 */"./320"
 import /* [auto-meaningful-name] */Module_3201 from /* 320 */"./320"
 var QT = React.memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var t = React1.useState(Module_26.f)
+  var t = useState(Module_26.f)
   var n = Module_10.a(t, 2)
   var r = n[0]
   var o = n[1]
@@ -33,7 +34,7 @@ var QT = React.memo(function () {
   var a = useSelector(function (e) {
     return e.common.consoleHeight
   })
-  var s = React1.useState({
+  var s = useState({
     undo: true,
     redo: true,
     zoomOut: false,
@@ -43,7 +44,7 @@ var QT = React.memo(function () {
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     function e(e) {
       o(e)
       u({
@@ -73,7 +74,7 @@ var QT = React.memo(function () {
       Module_26.z.eventBus.removeEventListener(Module_207.a.WORKSPACE_SCALE_CHANGE, e)
     }
   }, [l.redo, l.undo, l.zoomIn, l.zoomOut, i])
-  React1.useEffect(function () {
+  useEffect(function () {
     u({
       undo: i,
       redo: i,
@@ -83,7 +84,7 @@ var QT = React.memo(function () {
     })
     Src_shared_packages_Crc_blink_src_index.Blink.context_menu.set_disabled(i)
   }, [i, l.zoomIn, l.zoomOut])
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace$clean_up = Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up
     Src_shared_packages_Crc_blink_src_index.Blink.mainWorkspace.clean_up = function () {
       Src_shared_packages_Crc_blink_src_index$Blink$mainWorkspace$clean_up.call(this, Src_shared_packages_Crc_blink_src_index.vec2.fromValues(100, 50))

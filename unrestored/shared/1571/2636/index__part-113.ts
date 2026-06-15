@@ -19,11 +19,12 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_541 from /* 541 */"./541/index"
 import * as /* [auto-meaningful-name] */Module_1056 from /* 1056 */"./1056"
 import /* [auto-meaningful-name] */Module_10561 from /* 1056 */"./1056"
-var qE = React1.memo(function (e) {
+var qE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "headline" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -31,15 +32,15 @@ var qE = React1.memo(function (e) {
   var i = e$getValue(n)
   var a = e$getValue("headlineVisible")
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var c = React1.useState(1)
+  var c = useState(1)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef(null)
+  var p = useRef(null)
   var m = useSelector(function (e) {
     return e.common.widgetAttributeVisible
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */p$current = p.current
     if (m && p$current) {
       p$current.setRows(Math.min(p$current.getRowCount(), 3))
@@ -76,7 +77,7 @@ var qE = React1.memo(function (e) {
   }))
 })
 var XE = [[Module_60.t, Module_60.l], [Module_60.o, Module_60.g]]
-var QE = React1.memo(function (e) {
+var QE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "size" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -92,7 +93,7 @@ var QE = React1.memo(function (e) {
   var u = e$getValue("type")
   var d = e$getValue("id")
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var m = React1.useRef({})
+  var m = useRef({})
   var g = function (e, t, r) {
     var i = {}
     i[e] = parseInt(r)

@@ -16,13 +16,14 @@ import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_42 from /* 42 */"./42/index"
 import * as /* [auto-meaningful-name] */Module_29 from /* 29 */"./29"
 import /* [auto-meaningful-name] */Module_291 from /* 29 */"./29"
 var Kf = [1, 2, 3]
 var qf = {}
-var Xf = React1.memo(function (e) {
+var Xf = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$position = e.position
   var /* [auto-meaningful-name] */e$visible = e.visible

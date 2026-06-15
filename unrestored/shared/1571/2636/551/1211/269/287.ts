@@ -7,10 +7,10 @@
 "use strict"
 
 export { o as a }
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useMemo } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_697 from /* 697 */"./697"
 function o(e, t) {
-  return React.useMemo(function () {
+  return useMemo(function () {
     return null == e && null == t ? null : function (n) {
       Module_697.a(e, n)
       Module_697.a(t, n)

@@ -41,7 +41,8 @@ import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrest
 import * as /* [auto-meaningful-name] */AntdMobile from /* 198 */"antd-mobile"
 import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
 import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
 import * as /* [auto-meaningful-name] */Utils_network_axiosWithCredentials from /* 41 */"../../utils/network/axios-with-credentials"
@@ -55,13 +56,13 @@ import * as /* [auto-meaningful-name] */Module_37 from /* 37 */"../../../../unre
 import * as /* [auto-meaningful-name] */Editor_redux_common_actions from /* 2 */"../../../editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */Tools_index from /* 15 */"../../tools/index"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../../../../unrestored/shared/1571/2636/53"
-import * as /* [auto-meaningful-name] */$_shop from /* 183 */"./shop"
+import * as I from /* 183 */"./shop"
 import * as /* [auto-meaningful-name] */Restrict from /* 232 */"./restrict"
 import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"../../../../unrestored/shared/1571/2636/39"
 import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../../../unrestored/shared/1571/2636/20/index"
 import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../../unrestored/shared/1571/2636/55"
 import * as /* [auto-meaningful-name] */Module_85 from /* 85 */"../../../../unrestored/shared/1571/2636/301/85"
-import * as /* [auto-meaningful-name] */$_type from /* 78 */"./type"
+import * as D from /* 78 */"./type"
 var M = function () {
   function e(t) {
     Module_27.a(this, e)
@@ -84,7 +85,7 @@ var M = function () {
       value: function (e) {
         var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
         var n = e
-        if (!$_type.d(this.__widgetType)) {
+        if (!D.d(this.__widgetType)) {
           n = Module_85.b(this.__widgetType, e)
         }
         Module_55.b.widgetLog({
@@ -99,7 +100,7 @@ var M = function () {
       value: function (e) {
         var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
         var n = e
-        if (!$_type.d(this.__widgetType)) {
+        if (!D.d(this.__widgetType)) {
           n = Module_85.b(this.__widgetType, e)
         }
         Module_55.b.widgetWarn({
@@ -114,7 +115,7 @@ var M = function () {
       value: function (e) {
         var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
         var n = e
-        if (!$_type.d(this.__widgetType)) {
+        if (!D.d(this.__widgetType)) {
           n = Module_85.b(this.__widgetType, e)
         }
         Module_55.b.widgetError({
@@ -175,7 +176,7 @@ var P = function () {
       value: function (e) {
         var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
         var n = e
-        if (!$_type.d(this.__widgetType)) {
+        if (!D.d(this.__widgetType)) {
           n = Module_85.b(this.__widgetType, e)
         }
         Module_55.b.widgetLog({
@@ -190,7 +191,7 @@ var P = function () {
       value: function (e) {
         var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
         var n = e
-        if (!$_type.d(this.__widgetType)) {
+        if (!D.d(this.__widgetType)) {
           n = Module_85.b(this.__widgetType, e)
         }
         Module_55.b.widgetWarn({
@@ -205,7 +206,7 @@ var P = function () {
       value: function (e) {
         var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
         var n = e
-        if (!$_type.d(this.__widgetType)) {
+        if (!D.d(this.__widgetType)) {
           n = Module_85.b(this.__widgetType, e)
         }
         Module_55.b.widgetError({
@@ -499,12 +500,12 @@ function G(e, t) {
         if (!e$readonly && !e$hidePropertyEditor) {
           var E = {
             type: y,
-            label: $_type.d(e$type) ? Module_85.b(e$type, e$key) : Module_85.b(e$type, e$label),
+            label: D.d(e$type) ? Module_85.b(e$type, e$key) : Module_85.b(e$type, e$label),
             key: e$key,
             addonAfter: e$unit
           }
           if (e$dropdown) {
-            if ($_type.d(e$type)) {
+            if (D.d(e$type)) {
               E.dropdown = e$dropdown
             } else {
               E.dropdown = e$dropdown.map(function (e) {
@@ -714,7 +715,7 @@ function H() {
                 })
               }
             }
-            CD$types.type = $_type.c(CD$types.type, r)
+            CD$types.type = D.c(CD$types.type, r)
             return e.abrupt("return", {
               types: CD$types,
               widget: C$widget
@@ -742,7 +743,7 @@ function V(e, t, n) {
     }
   }
   if (_Storage.g(e$types$type)) {
-    var c = $_type.f(e$types$type, false)
+    var c = D.f(e$types$type, false)
     Module_37.a(Editor_redux_common_actions.zh({
       onConfirm: s,
       onCancel: n,
@@ -1061,13 +1062,13 @@ function ne() {
           case 0:
             for (a in o = {}, n) {
               s = n[a]
-              if ($_type.e(s.type)) {
+              if (D.e(s.type)) {
                 o[s.type] = true
               }
             }
             for (c in r) {
               l = r[c]
-              if ($_type.e(l.type)) {
+              if (D.e(l.type)) {
                 o[l.type] = true
               }
             }
@@ -1082,7 +1083,7 @@ function ne() {
             d = 1
             p = 100
             e.next = 10
-            return $_shop.e(d, p)
+            return I.e(d, p)
           case 10:
             if (e$sent = e.sent, u = u.concat(e$sent.items), !((h = Math.ceil(e$sent.total / p)) > 1)) {
               e.next = 23
@@ -1095,7 +1096,7 @@ function ne() {
               break
             }
             e.next = 18
-            return $_shop.e(d, p)
+            return I.e(d, p)
           case 18:
             e$sent1 = e.sent
             u = u.concat(e$sent1.items)
@@ -1106,7 +1107,7 @@ function ne() {
           case 23:
             g = []
             u.forEach(function (e) {
-              var t = "".concat($_type.a).concat(e.widget_code)
+              var t = "".concat(D.a).concat(e.widget_code)
               if (o[t] && e.resource_url.startsWith("https")) {
                 g.push({
                   id: e.id,

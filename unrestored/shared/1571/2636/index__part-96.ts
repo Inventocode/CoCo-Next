@@ -9,7 +9,8 @@
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"./54"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { isValidElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_241 from /* 241 */"./241/index"
 function Db(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] ? arguments[1] : {}
@@ -46,7 +47,7 @@ function Pb(e) {
 function Bb(e) {
   var t = arguments.length > 1 && undefined !== arguments[1] && arguments[1]
   return Db(e).map(function (e, n) {
-    if (!React1.isValidElement(e) || !e.type) {
+    if (!isValidElement(e) || !e.type) {
       return null
     }
     var /* [auto-meaningful-name] */e$type$isSelectOptGroup = e.type.isSelectOptGroup

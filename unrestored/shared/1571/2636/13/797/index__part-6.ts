@@ -17,7 +17,8 @@ import /* [auto-meaningful-name] */Module_50 from /* 50 */"../../50/index"
 import /* [auto-meaningful-name] */Module_101 from /* 101 */"./101/index"
 import * as /* [auto-meaningful-name] */Module_1011 from /* 101 */"./101/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { PureComponent, Component } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_226 from /* 226 */"../226"
 import /* [auto-meaningful-name] */Module_2261 from /* 226 */"../226"
 var kn = function (e) {
@@ -182,7 +183,7 @@ var Fn = function (e) {
       }
     ])
     return n
-  }(React1.PureComponent || React1.Component)
+  }(PureComponent || Component)
   t.propTypes = In({}, e.propTypes)
   t.defaultProps = In({}, e.defaultProps, {
     color: {

@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */Module_808 from /* 808 */"./808/index"
 import * as /* [auto-meaningful-name] */Module_275 from /* 275 */"./275"
 import * as /* [auto-meaningful-name] */Module_273 from /* 273 */"./273"
 import * as /* [auto-meaningful-name] */Module_1009 from /* 1009 */"./1009/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, PureComponent } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_1196 from /* 1196 */"./1196"
 import /* [auto-meaningful-name] */Module_11961 from /* 1196 */"./1196"
 var M = ["localeMatcher", "type", "style"]
@@ -177,13 +177,13 @@ var K = function (e) {
   }
   t.prototype.render = function () {
     Module_273.g(this.state.intl)
-    return React.createElement(Module_1009.b, {
+    return createElement(Module_1009.b, {
       value: this.state.intl
     }, this.props.children)
   }
   t.displayName = "IntlProvider"
   t.defaultProps = Module_273.a
   return t
-}(React.PureComponent)
+}(PureComponent)
 export { W }
 export { K }

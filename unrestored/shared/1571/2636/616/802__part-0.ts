@@ -10,7 +10,8 @@ import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../107"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
@@ -37,7 +38,7 @@ var _ = function (e, t) {
   return n
 }
 var A = function (e) {
-  return React.createElement(Module_801.a, null, function (t) {
+  return createElement(Module_801.a, null, function (t) {
     var n
     var /* [auto-meaningful-name] */t$getPrefixCls = t.getPrefixCls
     var /* [auto-meaningful-name] */t$direction = t.direction
@@ -61,7 +62,7 @@ var A = function (e) {
         console.warn(new p(e$size).error)
     }
     var g = Classnames1(h, (n = {}, Module_35.a(n, "".concat(h, "-").concat(A), A), Module_35.a(n, "".concat(h, "-rtl"), "rtl" === t$direction), n), e$className)
-    return React.createElement("div", Module_19.a({}, d, {
+    return createElement("div", Module_19.a({}, d, {
       className: g
     }))
   })

@@ -4,8 +4,6 @@
  * 模块 ID：2636__part-220
  */
 
-"use strict"
-
 import { v } from "../../../unrestored/shared/1571/2636/index__part-1"
 import { App, fB, isDevelopment, registerServiceWorker } from "./app"
 import { store } from "../redux/store"

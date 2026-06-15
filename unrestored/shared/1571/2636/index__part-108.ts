@@ -20,7 +20,8 @@ import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_202 from /* 202 */"./202"
 import /* [auto-meaningful-name] */Module_2021 from /* 202 */"./202"
 var yE = [
@@ -66,7 +67,7 @@ var yE = [
     }
   }
 ]
-var EE = React1.memo(function (e) {
+var EE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -98,7 +99,7 @@ var EE = React1.memo(function (e) {
     }, e.renderContent(s, c))
   })))
 })
-var OE = React1.memo(function (e) {
+var OE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -134,7 +135,7 @@ var OE = React1.memo(function (e) {
     }
   })
 })
-var wE = React1.memo(function (e) {
+var wE = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage

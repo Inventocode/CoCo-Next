@@ -19,13 +19,14 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_431 from /* 431 */"./431/index"
 import * as /* [auto-meaningful-name] */Module_213 from /* 213 */"./213"
 import /* [auto-meaningful-name] */Module_2131 from /* 213 */"./213"
 var /* [auto-meaningful-name] */Module_431$a$AudioPlayer = Module_431.a.AudioPlayer
 var YO = ""
-var KO = React1.memo(function (e) {
+var KO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fileId" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -35,19 +36,19 @@ var KO = React1.memo(function (e) {
     return e.project.selectedWidgetId
   })
   var s = useDispatch()
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(false)
+  var p = useState(false)
   var m = Module_10.a(p, 2)
   var g = m[0]
   var v = m[1]
-  var b = React1.useState(undefined)
+  var b = useState(undefined)
   var y = Module_10.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = React1.useState(false)
+  var w = useState(false)
   var C = Module_10.a(w, 2)
   var T = C[0]
   var A = C[1]
@@ -99,7 +100,7 @@ var KO = React1.memo(function (e) {
       })
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     return function () {
       if (cE) {
         cE.stop()
@@ -115,7 +116,7 @@ var KO = React1.memo(function (e) {
       }
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (cE) {
       cE.stop()
     }
@@ -245,7 +246,7 @@ var KO = React1.memo(function (e) {
     className: Classnames(Module_2131.cover, g && Module_2131.visible)
   }, L())))))
 })
-var qO = React1.memo(function (e) {
+var qO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "audioVolume" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -270,7 +271,7 @@ var qO = React1.memo(function (e) {
     isShowRightInput: true
   }))
 })
-var XO = React1.memo(function (e) {
+var XO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "audioRate" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange

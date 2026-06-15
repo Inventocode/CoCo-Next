@@ -7,7 +7,7 @@
 "use strict"
 
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createRef, createElement, Component, useCallback, cloneElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_229 from /* 229 */"../1543/229"
 function f(e) {
   return (f = "function" === typeof Symbol && "symbol" === typeof Symbol.iterator ? function (e) {
@@ -130,8 +130,8 @@ var O = function (e) {
       n[o] = arguments[o]
     }
     (e = a.call.apply(a, [this].concat(n))).moveRaf = null
-    e.scrollbarRef = React.createRef()
-    e.thumbRef = React.createRef()
+    e.scrollbarRef = createRef()
+    e.thumbRef = createRef()
     e.visibleTimeout = null
     e.state = {
       dragging: false,
@@ -270,7 +270,7 @@ var O = function (e) {
         var s = this.getTop()
         var c = this.showScroll()
         var l = c && this$state$visible
-        return React.createElement("div", {
+        return createElement("div", {
           ref: this.scrollbarRef,
           className: Classnames("".concat(this$props$prefixCls, "-scrollbar"), h({}, "".concat(this$props$prefixCls, "-scrollbar-show"), c)),
           style: {
@@ -283,7 +283,7 @@ var O = function (e) {
           },
           onMouseDown: this.onContainerMouseDown,
           onMouseMove: this.delayHidden
-        }, React.createElement("div", {
+        }, createElement("div", {
           ref: this.thumbRef,
           className: Classnames("".concat(this$props$prefixCls, "-scrollbar-thumb"), h({}, "".concat(this$props$prefixCls, "-scrollbar-thumb-moving"), this$state$dragging)),
           style: {
@@ -308,14 +308,14 @@ var O = function (e) {
     g(t, o)
   }
   return s
-}(React.Component)
+}(Component)
 function w(e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$setRef = e.setRef
-  var o = React.useCallback(function (e) {
+  var o = useCallback(function (e) {
     e$setRef(e)
   }, [])
-  return React.cloneElement(e$children, {
+  return cloneElement(e$children, {
     ref: o
   })
 }

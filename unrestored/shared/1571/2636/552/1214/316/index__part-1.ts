@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */Module_154 from /* 154 */"../../../551/1
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../../551/1211/98"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, useRef, createElement, cloneElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../../35"
 import * as /* [auto-meaningful-name] */Module_233 from /* 233 */"../../../551/1211/699/233"
 import * as /* [auto-meaningful-name] */Module_2682 from /* 2682 */"./2682/index"
@@ -32,7 +32,7 @@ var C = {
   enter: Module_696.b.enteringScreen,
   exit: Module_696.b.leavingScreen
 }
-var O = React.forwardRef(function (e, t) {
+var O = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$disableStrictModeCompat = e.disableStrictModeCompat
   var s = undefined !== e$disableStrictModeCompat && e$disableStrictModeCompat
@@ -51,7 +51,7 @@ var O = React.forwardRef(function (e, t) {
   var k = Module_54.a(e, ["children", "disableStrictModeCompat", "in", "onEnter", "onEntered", "onEntering", "onExit", "onExited", "onExiting", "style", "TransitionComponent", "timeout"])
   var S = Module_690.a()
   var T = S.unstable_strictMode && !s
-  var B = React.useRef(null)
+  var B = useRef(null)
   var D = Module_287.a(e$children.ref, t)
   var I = Module_287.a(T ? B : undefined, D)
   var R = function (e) {
@@ -100,7 +100,7 @@ var O = React.forwardRef(function (e, t) {
     }
   })
   var j = R(e$onExited)
-  return React.createElement(g, Module_19.a({
+  return createElement(g, Module_19.a({
     appear: true,
     in: c,
     nodeRef: T ? B : undefined,
@@ -112,7 +112,7 @@ var O = React.forwardRef(function (e, t) {
     onExiting: M,
     timeout: O
   }, k), function (e, t) {
-    return React.cloneElement(e$children, Module_19.a({
+    return cloneElement(e$children, Module_19.a({
       style: Module_19.a({
         opacity: 0,
         visibility: "exited" !== e || c ? undefined : "hidden"
@@ -121,7 +121,7 @@ var O = React.forwardRef(function (e, t) {
     }, t))
   })
 })
-var k = React.forwardRef(function (e, t) {
+var k = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
@@ -132,10 +132,10 @@ var k = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$TransitionComponent = e.TransitionComponent
   var p = undefined === e$TransitionComponent ? O : e$TransitionComponent
   var _ = Module_54.a(e, ["children", "classes", "className", "invisible", "open", "transitionDuration", "TransitionComponent"])
-  return React.createElement(p, Module_19.a({
+  return createElement(p, Module_19.a({
     in: e$open,
     timeout: e$transitionDuration
-  }, _), React.createElement("div", {
+  }, _), createElement("div", {
     className: Module_98.a(e$classes.root, e$className, l && e$classes.invisible),
     "aria-hidden": true,
     ref: t

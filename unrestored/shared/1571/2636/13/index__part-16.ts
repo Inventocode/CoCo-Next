@@ -7,12 +7,13 @@
 "use strict"
 
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../748/index"
 import /* 875 */"./875"
-var je = React1.memo(function (e) {
+var je = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$onCancel = e.onCancel
@@ -25,12 +26,12 @@ var je = React1.memo(function (e) {
   var h = undefined === e$tooltip ? "" : e$tooltip
   var /* [auto-meaningful-name] */e$style = e.style
   var g = undefined === e$style ? {} : e$style
-  var _ = React1.useRef(null)
-  var v = React1.useState(false)
+  var _ = useRef(null)
+  var v = useState(false)
   var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function (e) {
       var /* [auto-meaningful-name] */_$current$files
       if (y) {
@@ -77,7 +78,7 @@ var je = React1.memo(function (e) {
     className: "coco-upload-button-content"
   }, e$children)))
 })
-var Ne = React1.memo(function (e) {
+var Ne = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$className = e.className
   return React.createElement("div", {

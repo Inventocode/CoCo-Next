@@ -14,16 +14,17 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_160 from /* 160 */"./160"
 import /* [auto-meaningful-name] */Module_1601 from /* 160 */"./160"
-var eP = React1.memo(function (e) {
-  var t = React1.useState(false)
+var eP = memo(function (e) {
+  var t = useState(false)
   var n = Module_10.a(t, 2)
   var r = n[0]
   var o = n[1]
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = function e() {
       o(false)
       document.removeEventListener("click", e, true)
@@ -89,7 +90,7 @@ var eP = React1.memo(function (e) {
     id: "cloudDBManager.hasImport"
   }))))
 })
-var nP = React1.memo(function (e) {
+var nP = memo(function (e) {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var /* [auto-meaningful-name] */e$renderColumns = e.renderColumns
   var /* [auto-meaningful-name] */e$renderRows = e.renderRows

@@ -7,7 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createContext } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_792 from /* 792 */"../../224/792"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../54"
@@ -37,7 +38,7 @@ var /* [auto-meaningful-name] */RC_FORM_INTERNAL_HOOKS = "RC_FORM_INTERNAL_HOOKS
 var w = function () {
   y(false, "Can not find FormContext. Please make sure you wrap Field under Form.")
 }
-var E = React.createContext({
+var E = createContext({
   getFieldValue: w,
   getFieldsValue: w,
   getFieldError: w,

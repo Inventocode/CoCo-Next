@@ -6,6 +6,7 @@
     "30": "lodash",
     "31": "ot-json1",
     "51": "color",
+    "66": "immutable",
     "80": "react-dom",
     "93": "tslib",
     "129": "axios",

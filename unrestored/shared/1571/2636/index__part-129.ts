@@ -10,10 +10,10 @@ import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"./54"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"./35"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"./40/index"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_1521 from /* 1521 */"./1521"
 import * as /* [auto-meaningful-name] */Module_1202 from /* 1202 */"./1202"
-var jw = React.forwardRef(function (e, t) {
+var jw = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var o = undefined === e$prefixCls ? "rc-switch" : e$prefixCls
@@ -46,7 +46,7 @@ var jw = React.forwardRef(function (e, t) {
     return n
   }
   var O = Classnames(o, e$className, (n = {}, Module_35.a(n, "".concat(o, "-checked"), b), Module_35.a(n, "".concat(o, "-disabled"), e$disabled), n))
-  return React.createElement("button", Object.assign({}, g, {
+  return createElement("button", Object.assign({}, g, {
     type: "button",
     role: "switch",
     "aria-checked": b,
@@ -71,7 +71,7 @@ var jw = React.forwardRef(function (e, t) {
         e$onClick(t, e)
       }
     }
-  }), e$loadingIcon, React.createElement("span", {
+  }), e$loadingIcon, createElement("span", {
     className: "".concat(o, "-inner")
   }, b ? e$checkedChildren : e$unCheckedChildren))
 })

@@ -17,15 +17,16 @@ import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_357 from /* 357 */"./357"
 import /* [auto-meaningful-name] */Module_3571 from /* 357 */"./357"
 var /* [auto-meaningful-name] */py$Option = py.Option
-var hC = React1.memo(function (e) {
+var hC = memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = Module_9.Bb(e$widgetId)
-  var o = React1.useRef(null)
+  var o = useRef(null)
   var i = useDispatch()
   var a = useSelector(function (e) {
     return e.common.userInfo
@@ -41,7 +42,7 @@ var hC = React1.memo(function (e) {
   var v = cC()
   var /* [auto-meaningful-name] */v$handleVisitCloudSpace = v.handleVisitCloudSpace
   var /* [auto-meaningful-name] */v$handleVisitDataSource = v.handleVisitDataSource
-  var E = React1.useState(false)
+  var E = useState(false)
   var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]

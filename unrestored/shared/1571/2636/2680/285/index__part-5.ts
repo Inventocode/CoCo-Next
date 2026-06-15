@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../../140"
 import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../120"
 import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../106"
 import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../../103"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, Component } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
 import * as /* [auto-meaningful-name] */Module_1034 from /* 1034 */"../../1034"
 import * as /* [auto-meaningful-name] */Module_364 from /* 364 */"../../364/index"
@@ -57,14 +57,14 @@ var Ee = function (e) {
             exist: true
           })
         })(this$props$locale)
-        return React.createElement(Module_923.a.Provider, {
+        return createElement(Module_923.a.Provider, {
           value: o
         }, this$props$children)
       }
     }
   ])
   return n
-}(React.Component)
+}(Component)
 Ee.defaultProps = {
   locale: {}
 }

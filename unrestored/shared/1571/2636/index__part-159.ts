@@ -24,7 +24,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_568 from /* 568 */"./568"
 import /* [auto-meaningful-name] */Module_5681 from /* 568 */"./568"
 import * as /* [auto-meaningful-name] */Module_110 from /* 110 */"./110"
@@ -224,7 +225,7 @@ var ZS = function (e) {
     n(Src_editor_redux_common_actions.Pj(e$watchItem.id, "isWatching", false))
     n(Src_editor_redux_common_actions.Pj(e$watchItem.id, "selected", false))
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$watchItem.type === Src_editor_widget_builtIn_types.G) {
       Module_174.a.get(e$watchItem.id).then(function (e) {
         if (e) {

@@ -13,7 +13,8 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../11"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_127 from /* 127 */"../../../127"
 import * as /* [auto-meaningful-name] */Module_29 from /* 29 */"../../../29"
 import /* [auto-meaningful-name] */Module_291 from /* 29 */"../../../29"
@@ -22,7 +23,7 @@ import * as /* [auto-meaningful-name] */Module_89 from /* 89 */"../89"
 import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"../12"
 import * as /* [auto-meaningful-name] */Module_67 from /* 67 */"./index"
 var _e = {}
-var ve = React1.memo(function (e) {
+var ve = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$position = e.position

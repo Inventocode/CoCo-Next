@@ -31,7 +31,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1208 from /* 1208 */"./1208/index"
 function OM(e) {
   return wM.apply(this, arguments)
@@ -164,7 +165,7 @@ function TM(e) {
   }
   return n
 }
-var SM = React1.memo(function (e) {
+var SM = memo(function (e) {
   var /* [auto-meaningful-name] */e$actionId = e.actionId
   var /* [auto-meaningful-name] */e$editingStyleId = e.editingStyleId
   var /* [auto-meaningful-name] */e$styleList = e.styleList
@@ -172,19 +173,19 @@ var SM = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$onIntervalChange = e.onIntervalChange
   var /* [auto-meaningful-name] */e$setEditingStyleId = e.setEditingStyleId
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var c = React1.useState(e$actionInterval.toString() || "200")
+  var c = useState(e$actionInterval.toString() || "200")
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef(200)
-  var m = React1.useState(false)
+  var p = useRef(200)
+  var m = useState(false)
   var g = Module_10.a(m, 2)
   var _ = g[0]
   var v = g[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     d(e$actionInterval.toFixed())
   }, [e$actionId])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (u !== e$actionInterval.toFixed()) {
       e$onIntervalChange(e$actionId, Number(u))
     }
@@ -274,8 +275,8 @@ function IM(e) {
   var /* [auto-meaningful-name] */e$deleteStyle = e.deleteStyle
   var /* [auto-meaningful-name] */e$copyStyle = e.copyStyle
   var /* [auto-meaningful-name] */e$onStyleListChange = e.onStyleListChange
-  var s = React1.useRef(AM)
-  var c = React1.useCallback(function () {
+  var s = useRef(AM)
+  var c = useCallback(function () {
     var e
     var t
     var n = null === (e = document.getElementById("THE_STYLE_LIST")) || undefined === e ? undefined : e.closest(".coco-dialog-wrapper.show")
@@ -285,13 +286,13 @@ function IM(e) {
       y: r.y
     } : AM
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("scroll", c)
     return function () {
       return window.removeEventListener("scroll", c)
     }
   }, [c])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = document.getElementById("THE_STYLE_LIST")
     if (e instanceof HTMLUListElement) {
       var t = e.querySelector("." + Module_137.selected)
@@ -421,7 +422,7 @@ function IM(e) {
   }))
 }
 var jM
-React1.memo(IM)
+memo(IM)
 function NM(e) {
   var t
   e.some(function (e) {
@@ -437,13 +438,13 @@ function RM(e) {
   e.UPLOAD_FILE = "UPLOAD_FILE"
   e.OPEN_RESOURCE_LIBRARY = "OPEN_RESOURCE_LIBRARY"
 }(jM || (jM = {}))
-var kM = React1.memo(function () {
+var kM = memo(function () {
   var e
   var t = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var r = React1.useRef(true)
-  var o = React1.useRef(undefined)
-  var i = React1.useState(false)
+  var r = useRef(true)
+  var o = useRef(undefined)
+  var i = useState(false)
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -456,31 +457,31 @@ var kM = React1.memo(function () {
   var /* [auto-meaningful-name] */Module_9$BbL$attributes = Module_9.Bb(l).attributes
   var /* [auto-meaningful-name] */Module_9$BbL$attributes$selectedStyleId = Module_9$BbL$attributes.selectedStyleId
   var /* [auto-meaningful-name] */Module_9$BbL$attributes$actionList = Module_9$BbL$attributes.actionList
-  var g = React1.useState(Module_9$BbL$attributes$selectedStyleId)
+  var g = useState(Module_9$BbL$attributes$selectedStyleId)
   var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = React1.useState(Lodash.cloneDeep(Module_9$BbL$attributes$actionList))
+  var w = useState(Lodash.cloneDeep(Module_9$BbL$attributes$actionList))
   var C = Module_10.a(w, 2)
   var T = C[0]
   var A = C[1]
   var j = null === (e = T[0]) || undefined === e ? undefined : e.id
-  var N = React1.useState(j)
+  var N = useState(j)
   var R = Module_10.a(N, 2)
   var k = R[0]
   var M = R[1]
   var L = T.find(function (e) {
     return e.id === k
   })
-  var P = React1.useState(undefined)
+  var P = useState(undefined)
   var B = Module_10.a(P, 2)
   var F = B[0]
   var G = B[1]
   var W = (null === L || undefined === L ? undefined : L.styleList) || []
   var U = (null === L || undefined === L ? undefined : L.interval) || 200
-  var H = React1.useRef()
-  var V = React1.useRef(null)
-  React1.useEffect(function () {
+  var H = useRef()
+  var V = useRef(null)
+  useEffect(function () {
     var e
     if (!W.some(function (e) {
       return e.id === F
@@ -489,7 +490,7 @@ var kM = React1.memo(function () {
       G(t)
     }
   }, [F, W])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (H.current) {
       var /* [auto-meaningful-name] */H$current = H.current
       var t = document.getElementById(H$current)
@@ -709,14 +710,14 @@ var kM = React1.memo(function () {
   var ne = function () {
     t(Src_editor_redux_common_actions.vh())
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (undefined === o.current) {
       o.current = false
     } else {
       o.current = true
     }
   }, [b, T])
-  React1.useEffect(function () {
+  useEffect(function () {
     r.current = true
     return function () {
       r.current = false

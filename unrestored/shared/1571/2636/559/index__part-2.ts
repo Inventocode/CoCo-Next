@@ -9,7 +9,8 @@
 import { j } from "./index__part-1"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { isValidElement, cloneElement, useRef, useCallback, useContext, createElement, forwardRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
 import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../79/index"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
@@ -33,7 +34,7 @@ function J(e, t) {
     })
     return r
   }(e).map(function (e, n) {
-    if (React1.isValidElement(e)) {
+    if (isValidElement(e)) {
       var r
       var /* [auto-meaningful-name] */e$props
       var /* [auto-meaningful-name] */e$key = e.key
@@ -45,15 +46,15 @@ function J(e, t) {
         key: s,
         eventKey: s
       }
-      return React1.cloneElement(e, c)
+      return cloneElement(e, c)
     }
     return e
   })
 }
 function $(e) {
-  var t = React1.useRef(e)
+  var t = useRef(e)
   t.current = e
-  var n = React1.useCallback(function () {
+  var n = useCallback(function () {
     for (var /* [auto-meaningful-name] */t$current, /* [auto-meaningful-name] */arguments$length = arguments.length, r = new Array(arguments$length), o = 0; o < arguments$length; o++) {
       r[o] = arguments[o]
     }
@@ -66,18 +67,18 @@ var te = function (e, t) {
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$children = e.children
   var i = Module_54.a(e, ee)
-  var a = React1.useContext(j)
+  var a = useContext(j)
   var /* [auto-meaningful-name] */a$prefixCls = a.prefixCls
   var /* [auto-meaningful-name] */a$mode = a.mode
   var /* [auto-meaningful-name] */a$rtl = a.rtl
-  return React1.createElement("ul", Module_19.a({
+  return createElement("ul", Module_19.a({
     className: Classnames(a$prefixCls, a$rtl && "".concat(a$prefixCls, "-rtl"), "".concat(a$prefixCls, "-sub"), "".concat(a$prefixCls, "-").concat("inline" === a$mode ? "inline" : "vertical"), e$className)
   }, i, {
     "data-menu-list": true,
     ref: t
   }), e$children)
 }
-var ne = React1.forwardRef(te)
+var ne = forwardRef(te)
 ne.displayName = "SubMenuList"
 var re = ne
 export { J }

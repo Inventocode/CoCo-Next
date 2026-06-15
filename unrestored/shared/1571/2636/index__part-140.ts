@@ -15,7 +15,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_422 from /* 422 */"./422"
 import /* [auto-meaningful-name] */Module_4221 from /* 422 */"./422"
 var yC = {
@@ -153,33 +154,33 @@ function TC() {
     }, e)
   }))).apply(this, arguments)
 }
-var SC = React1.memo(function (e) {
+var SC = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "device" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var i = React1.useState(false)
+  var i = useState(false)
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
-  var m = React1.useState(0)
+  var m = useState(0)
   var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState(0)
+  var y = useState(0)
   var w = Module_10.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState(0)
+  var A = useState(0)
   var I = Module_10.a(A, 2)
   var j = I[0]
   var R = I[1]
-  var k = React1.useRef()
-  var x = React1.useRef()
+  var k = useRef()
+  var x = useRef()
   var D = useSelector(function (e) {
     return e.project.playing
   })
@@ -279,7 +280,7 @@ var SC = React1.memo(function (e) {
       }, e, null, [[2, 18]])
     }))).apply(this, arguments)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     Module_7.a(RegeneratorRuntime.mark(function e() {
       var /* [auto-meaningful-name] */k$current
       var /* [auto-meaningful-name] */x$current

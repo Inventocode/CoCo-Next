@@ -16,6 +16,7 @@ import { getWhitelist } from "../../../../shared/player/audit"
 import * as Tools from "../../../../shared/tools"
 import * as /* [auto-meaningful-name] */Module_97 from /* 97 */"../../../../../unrestored/shared/1571/2636/97"
 import * as CommonActions from "../../../redux/common/actions"
+import { promisify, showCommonToastInfoAction } from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
@@ -107,7 +108,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
     }
     const boundSetDialogType = () => { setDialogType(dialogInfo.dialogType) }
     if (dialogInfo.dialogType === EShareDialogType.SHARE_QR_DIALOG) {
-      CommonActions.promisify(dispatch, CommonActions.Wf(boundSetDialogType))
+      promisify(dispatch, CommonActions.Wf(boundSetDialogType))
     } else if (Module_9.Y().length > 0 && localStorage.getItem("cloudDBPublishGuide") !== "true") {
       dispatch(CommonActions.kj(true, "share", boundSetDialogType))
     } else {
@@ -126,7 +127,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
             case 0:
               e.prev = 0
               e.next = 3
-              return CommonActions.Nf(dispatch, CommonActions.tg({
+              return promisify(dispatch, CommonActions.tg({
                 isUpdate: Module_97.a(id),
                 isAutoSave: true
               }))
@@ -139,7 +140,7 @@ export function ShareMenuItem({ target }: { target: "community" | "others" }) {
               e.prev = 8
               e.t0 = e.catch(0)
               e.next = 12
-              return dispatch(CommonActions.mj({
+              return dispatch(showCommonToastInfoAction({
                 message: formatMessage({
                   id: "Publish.projectSaveFail"
                 }),

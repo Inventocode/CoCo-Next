@@ -13,12 +13,13 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"./188"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_937 from /* 937 */"./937"
 import /* [auto-meaningful-name] */Module_9371 from /* 937 */"./937"
 import * as /* [auto-meaningful-name] */Module_266 from /* 266 */"./266"
 import /* [auto-meaningful-name] */Module_2661 from /* 266 */"./266"
-var bI = React1.memo(function () {
+var bI = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useSelector(function (e) {
     return e.common.confirmDialogInfo

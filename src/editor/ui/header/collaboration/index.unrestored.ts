@@ -27,13 +27,14 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../unr
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useEffect, useRef, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */Shared_widget_custom_type from /* 78 */"../../../../shared/widget/custom/type"
 var wt = function (e) {
   var t
   var /* [auto-meaningful-name] */e$permission
-  var r = React1.useState(false)
+  var r = useState(false)
   var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
@@ -41,7 +42,7 @@ var wt = function (e) {
   var c = function () {
     a(false)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!e.parentVisible) {
       a(false)
     }
@@ -149,16 +150,16 @@ var Ct = React.memo(function () {
     return e.oTState.readOnlyInviteUrl
   })
   var m = useDispatch()
-  var g = React1.useState(false)
+  var g = useState(false)
   var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var w = React1.useState(Module_18.c.Edit)
+  var w = useState(Module_18.c.Edit)
   var C = Module_10.a(w, 2)
   var T = C[0]
   var j = C[1]
-  var R = React1.useRef(null)
-  var k = React1.useState(false)
+  var R = useRef(null)
+  var k = useState(false)
   var x = Module_10.a(k, 2)
   var D = x[0]
   var M = x[1]
@@ -372,10 +373,10 @@ var Ct = React.memo(function () {
     var /* [auto-meaningful-name] */e$is_author
     var /* [auto-meaningful-name] */e$edit_permission
   })))
-  var G = React1.useCallback(function () {
+  var G = useCallback(function () {
     return T === Module_18.c.Edit ? d : T === Module_18.c.ReadOnly ? p : ""
   }, [d, p, T])
-  var W = React1.useCallback(function () {
+  var W = useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(n) {
       var /* [auto-meaningful-name] */e$sent
       var o
@@ -524,11 +525,11 @@ var St = React.memo(function () {
   var e = useSelector(function (e) {
     return e.project.id
   })
-  var t = React1.useState(false)
+  var t = useState(false)
   var n = Module_10.a(t, 2)
   var r = n[0]
   var o = n[1]
-  var i = React1.useState(false)
+  var i = useState(false)
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -536,7 +537,7 @@ var St = React.memo(function () {
   var u = useSelector(function (e) {
     return e.oTState.collWorkId
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (u) {
       c(true)
       le(u).then(function () {

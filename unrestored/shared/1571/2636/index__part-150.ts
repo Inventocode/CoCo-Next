@@ -12,7 +12,7 @@ import { nT } from "./index__part-144"
 import { iT } from "./index__part-145"
 import { pT } from "./index__part-146"
 import { ST } from "./index__part-148"
-import { kT } from "./index__part-149"
+import { kT } from "../../../../src/editor/ui/EditArea/BlockEditor/FlyoutComponents"
 import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"./43"
 import * as /* [auto-meaningful-name] */Module_1523 from /* 1523 */"./1523/index"
 import * as /* [auto-meaningful-name] */Module_207 from /* 207 */"./207/index"
@@ -37,9 +37,10 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useStore, useDispatch, useSelector, batch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState, useLayoutEffect, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* 2611 */"./2611"
-var xT = React1.memo(function () {
+var xT = memo(function () {
   var e = useStore()
   var t = useDispatch()
   var n = useSelector(function (e) {
@@ -48,8 +49,8 @@ var xT = React1.memo(function () {
   var r = useSelector(function (e) {
     return e.project.globalWidgetIds
   })
-  var o = React1.useRef()
-  var i = React1.useRef(null)
+  var o = useRef()
+  var i = useRef(null)
   var a = useSelector(function (e) {
     return e.common.blockyToolboxPinned
   })
@@ -59,12 +60,12 @@ var xT = React1.memo(function () {
   var c = useSelector(function (e) {
     return e.uiConfig.workspace
   }) === Module_18.j.ReadOnly
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = Module_238.d()
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var /* [auto-meaningful-name] */e$getState
     var /* [auto-meaningful-name] */Src_shared_packages_Crc_blink_src_index$Blink
     e$getState = e.getState
@@ -271,7 +272,7 @@ var xT = React1.memo(function () {
       }
     }
   }, [t, e.getState])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = document.getElementById("flyoutPinTitle")
     if (e) {
       e.textContent = a ? "取消固定" : "固定积木盒"
@@ -285,7 +286,7 @@ var xT = React1.memo(function () {
     }
   }, [a])
   var g = Module_238.a()
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Src_shared_tools_index.p(function () {
       Module_26.z.resizeWorkspace()
     }, 500)
@@ -294,19 +295,19 @@ var xT = React1.memo(function () {
       window.removeEventListener("resize", e)
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     Module_26.g.update(m)
   }, [m])
-  React1.useEffect(function () {
+  useEffect(function () {
     Module_26.g.updateGlobalWidget(r)
   }, [r])
-  React1.useEffect(function () {
+  useEffect(function () {
     Module_26.g.updateAnyWidget(g)
   }, [g])
-  React1.useEffect(function () {
+  useEffect(function () {
     Module_26.g.changeSelectWidgetCategoryStyle(n || (null === m || undefined === m ? undefined : m.id))
   }, [n, m])
-  React1.useEffect(function () {
+  useEffect(function () {
     function e(e) {
       p(e)
       t(Src_editor_redux_common_actions.ji(e))
@@ -321,8 +322,8 @@ var xT = React1.memo(function () {
       Module_26.z.eventBus.removeEventListener(Module_207.a.DELETE_BLOCK, n)
     }
   }, [t])
-  var v = React1.useRef(null)
-  React1.useEffect(function () {
+  var v = useRef(null)
+  useEffect(function () {
     var /* [auto-meaningful-name] */v$current = v.current
     if (v$current) {
       var n = function () {

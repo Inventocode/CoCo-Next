@@ -19,41 +19,42 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1191 from /* 1191 */"./1191"
 import /* [auto-meaningful-name] */Module_11911 from /* 1191 */"./1191"
 import * as /* [auto-meaningful-name] */Module_270 from /* 270 */"./270"
 import /* [auto-meaningful-name] */Module_2701 from /* 270 */"./270"
-var kL = React1.memo(function () {
+var kL = memo(function () {
   var e = useSelector(function (e) {
     return e.common.widgetMallVisible
   })
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useDispatch()
-  var r = React1.useState(false)
+  var r = useState(false)
   var o = Module_10.a(r, 2)
   var i = o[0]
   var a = o[1]
-  var s = React1.useState([])
+  var s = useState([])
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(undefined)
+  var d = useState(undefined)
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState([])
+  var v = useState([])
   var b = Module_10.a(v, 2)
   var y = b[0]
   var w = b[1]
-  var C = React1.useState([])
+  var C = useState([])
   var T = Module_10.a(C, 2)
   var j = T[0]
   var R = T[1]
-  var k = React1.useRef(1)
-  var D = React1.useRef(1)
-  var M = React1.useRef(false)
-  var L = React1.useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
+  var k = useRef(1)
+  var D = useRef(1)
+  var M = useRef(false)
+  var L = useCallback(Module_7.a(RegeneratorRuntime.mark(function e() {
     var /* [auto-meaningful-name] */e$sent
     var /* [auto-meaningful-name] */e$sent1
     var /* [auto-meaningful-name] */e$sent1$items
@@ -107,7 +108,7 @@ var kL = React1.memo(function () {
       }
     }, e, null, [[0, 12]])
   })), [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e) {
       k.current = 1
       L()
@@ -241,7 +242,7 @@ var kL = React1.memo(function () {
   }, Module_710$a$formatMessage({
     id: "WidgetMall.add"
   }), "(", j.length, ")"))
-  var U = React1.useCallback(function () {
+  var U = useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var /* [auto-meaningful-name] */e$sent
       return RegeneratorRuntime.wrap(function (e) {

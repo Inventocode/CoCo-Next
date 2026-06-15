@@ -18,7 +18,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useState, useImperativeHandle } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_237 from /* 237 */"./237"
 import /* [auto-meaningful-name] */Module_2371 from /* 237 */"./237"
 function JA(e, t) {
@@ -42,7 +43,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
   var r = useDispatch()
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$setVisible = e.setVisible
-  var a = React1.useRef(null)
+  var a = useRef(null)
   var s = function () {
     var e = useSelector(function (e) {
       return e.dataWatch.variableList
@@ -69,11 +70,11 @@ var $A = React.memo(React.forwardRef(function (e, t) {
       variableList: e
     }
   }()
-  var c = React1.useState("")
+  var c = useState("")
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef({})
+  var p = useRef({})
   var /* [auto-meaningful-name] */s$Primitives = s.Primitives
   var /* [auto-meaningful-name] */s$Lists = s.Lists
   var /* [auto-meaningful-name] */s$Dictionaries = s.Dictionaries
@@ -174,7 +175,7 @@ var $A = React.memo(React.forwardRef(function (e, t) {
     })
     e$setVisible(false)
   }
-  React1.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return {
       cancel: j
     }

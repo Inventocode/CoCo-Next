@@ -16,7 +16,8 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_811 from /* 811 */"./811"
 import /* [auto-meaningful-name] */Module_8111 from /* 811 */"./811"
 var hO = [
@@ -36,7 +37,7 @@ var hO = [
     }
   }
 ]
-var mO = React1.memo(function (e) {
+var mO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -62,7 +63,7 @@ var mO = React1.memo(function (e) {
     }, e.renderContent())
   })))
 })
-var gO = React1.memo(function (e) {
+var gO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -94,7 +95,7 @@ var gO = React1.memo(function (e) {
     }
   })
 })
-var _O = React1.memo(function (e) {
+var _O = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange

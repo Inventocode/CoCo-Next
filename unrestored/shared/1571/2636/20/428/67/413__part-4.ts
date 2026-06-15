@@ -15,7 +15,8 @@ import * as /* [auto-meaningful-name] */Module_55 from /* 55 */"../../../55"
 import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Color from /* 51 */"color"
 import * as /* [auto-meaningful-name] */Module_112 from /* 112 */"../../../34/347/112"
 var F = function (e) {
@@ -31,7 +32,7 @@ var F = function (e) {
   var /* [auto-meaningful-name] */e$attributes$backgroundImage = e$attributes.backgroundImage
   var m = Module_112.a(e$attributes$iconId) || Module_82.c
   var g = Module_112.b(e$attributes$backgroundImage) || Module_82.f
-  var _ = React1.useMemo(function () {
+  var _ = useMemo(function () {
     try {
       return Color(e$attributes$textColor.toString()).toString()
     } catch (e) {
@@ -43,7 +44,7 @@ var F = function (e) {
       return e$attributes$textColor
     }
   }, [t, e$attributes$textColor, e$type])
-  var v = React1.useMemo(function () {
+  var v = useMemo(function () {
     try {
       return Color(e$attributes$iconColor.toString()).toString()
     } catch (e) {
@@ -55,7 +56,7 @@ var F = function (e) {
       return e$attributes$iconColor
     }
   }, [t, e$attributes$iconColor, e$type])
-  var b = React1.useMemo(function () {
+  var b = useMemo(function () {
     try {
       return Color(e$attributes$backgroundColor.toString()).toString()
     } catch (e) {

@@ -15,23 +15,24 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrest
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1210 from /* 1210 */"../../../../unrestored/player/2635/2637/1210"
 import /* [auto-meaningful-name] */Module_12101 from /* 1210 */"../../../../unrestored/player/2635/2637/1210"
 var F = React.memo(function () {
-  var t = React1.useState()
+  var t = useState()
   var e = Module_10.a(t, 2)
   var n = e[0]
   var o = e[1]
-  var a = React1.useState(true)
+  var a = useState(true)
   var s = Module_10.a(a, 2)
   var u = s[0]
   var c = s[1]
-  var l = React1.useState("")
+  var l = useState("")
   var m = Module_10.a(l, 2)
   var b = m[0]
   var _ = m[1]
-  var A = React1.useRef()
+  var A = useRef()
   function S() {
     return I.apply(this, arguments)
   }
@@ -88,7 +89,7 @@ var F = React.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     y()
     S()
     T(S)
@@ -103,7 +104,7 @@ var F = React.memo(function () {
       }
     }, false)
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!u && A.current) {
       if (A.current.blockCode) {
         A.current.blockCode = b

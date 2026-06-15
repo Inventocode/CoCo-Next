@@ -23,7 +23,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrest
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useEffect, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_2646 from /* 2646 */"../../../../unrestored/shared/1571/2636/2646/index"
 import * as /* [auto-meaningful-name] */Module_1529 from /* 1529 */"../../../../unrestored/shared/1571/2636/1529"
 import * as /* [auto-meaningful-name] */Module_392 from /* 392 */"../../../../unrestored/shared/1571/2636/392/index"
@@ -36,9 +37,9 @@ var LM = function () {
   var r = useSelector(function (e) {
     return e.common.templateList
   })
-  var o = React1.useRef(false)
+  var o = useRef(false)
   Shared_player_audit.b()
-  React1.useEffect(function () {
+  useEffect(function () {
     function e() {
       return (e = Module_7.a(RegeneratorRuntime.mark(function e() {
         var t
@@ -76,7 +77,7 @@ var LM = function () {
       e.apply(this, arguments)
     }()
   }, [])
-  var i = React1.useCallback(function () {
+  var i = useCallback(function () {
     var n = Module_7.a(RegeneratorRuntime.mark(function n(r) {
       var /* [auto-meaningful-name] */n$sent
       var /* [auto-meaningful-name] */n$sent$data
@@ -151,7 +152,7 @@ var LM = function () {
       return n.apply(this, arguments)
     }
   }(), [e, Module_710$a$formatMessage])
-  var a = React1.useCallback(function (n, r) {
+  var a = useCallback(function (n, r) {
     (function (e, t) {
       return me.apply(this, arguments)
     })(n, r).then(Module_7.a(RegeneratorRuntime.mark(function e() {
@@ -218,12 +219,12 @@ var LM = function () {
       }
     })
   }, [e, Module_710$a$formatMessage, i])
-  var s = React1.useCallback(function () {
+  var s = useCallback(function () {
     e(Redux_common_actions.Gf("localhost" === window.location.hostname ? undefined : {
       json: Module_1529
     }))
   }, [e])
-  var c = React1.useCallback(function (t) {
+  var c = useCallback(function (t) {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
@@ -237,7 +238,7 @@ var LM = function () {
       o.current = false
     })
   }, [e, s])
-  var l = React1.useCallback(function (t) {
+  var l = useCallback(function (t) {
     o.current = true
     fetch(t).then(function (t) {
       t.json().then(function (t) {
@@ -246,7 +247,7 @@ var LM = function () {
       o.current = false
     })
   }, [e])
-  var u = React1.useCallback(function () {
+  var u = useCallback(function () {
     var t = Module_7.a(RegeneratorRuntime.mark(function t(n) {
       var /* [auto-meaningful-name] */t$sent
       return RegeneratorRuntime.wrap(function (t) {
@@ -287,7 +288,7 @@ var LM = function () {
       return t.apply(this, arguments)
     }
   }(), [e, s])
-  var d = React1.useCallback(function () {
+  var d = useCallback(function () {
     var t = Module_7.a(RegeneratorRuntime.mark(function t(r) {
       var i
       return RegeneratorRuntime.wrap(function (t) {
@@ -379,7 +380,7 @@ var LM = function () {
       return t.apply(this, arguments)
     }
   }(), [n, e])
-  var p = React1.useCallback(function () {
+  var p = useCallback(function () {
     var t = Module_7.a(RegeneratorRuntime.mark(function t(n) {
       var i
       return RegeneratorRuntime.wrap(function (t) {
@@ -415,7 +416,7 @@ var LM = function () {
       return t.apply(this, arguments)
     }
   }(), [e, r])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Shared_tools_index.N(window.location.href)
     var /* [auto-meaningful-name] */e$workId = e.workId
     var /* [auto-meaningful-name] */e$inviteCode = e.inviteCode

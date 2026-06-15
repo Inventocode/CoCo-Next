@@ -17,7 +17,8 @@ import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrest
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import * as /* [auto-meaningful-name] */Module_68 from /* 68 */"../../../../unrestored/shared/1571/2636/68"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Shared_ui_components_index from /* 13 */"../../../shared/ui/components/index"
 import * as /* [auto-meaningful-name] */Module_1042 from /* 1042 */"../../../../unrestored/player/2635/2637/1042"
 import /* [auto-meaningful-name] */Module_10421 from /* 1042 */"../../../../unrestored/player/2635/2637/1042"
@@ -28,33 +29,33 @@ function k(t) {
   return "translate(-50%, -50%) " + "scale(".concat(t, ")")
 }
 var R = React.memo(function () {
-  var t = React1.useState()
+  var t = useState()
   var e = Module_10.a(t, 2)
   var n = e[0]
   var o = e[1]
-  var a = React1.useState(1)
+  var a = useState(1)
   var s = Module_10.a(a, 2)
   var u = s[0]
   var l = s[1]
-  var m = React1.useState(false)
+  var m = useState(false)
   var S = Module_10.a(m, 2)
   var j = S[0]
   var R = S[1]
-  var N = React1.useState(false)
+  var N = useState(false)
   var x = Module_10.a(N, 2)
   var D = x[0]
   var L = x[1]
-  var B = React1.useState(true)
+  var B = useState(true)
   var P = Module_10.a(B, 2)
   var U = P[0]
   var F = P[1]
-  var W = React1.useState("")
+  var W = useState("")
   var H = Module_10.a(W, 2)
   var V = H[0]
   var G = H[1]
-  var z = React1.useRef()
-  var Y = React1.useRef()
-  var K = React1.useRef()
+  var z = useRef()
+  var Y = useRef()
+  var K = useRef()
   function X() {
     return (X = Module_7.a(RegeneratorRuntime.mark(function t() {
       var e
@@ -108,7 +109,7 @@ var R = React.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     y();
     (function () {
       X.apply(this, arguments)
@@ -128,7 +129,7 @@ var R = React.memo(function () {
       }
     }, false)
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!U && K.current) {
       if (K.current.blockCode) {
         K.current.blockCode = V
@@ -140,7 +141,7 @@ var R = React.memo(function () {
       O()
     }
   }, [V, U])
-  React1.useEffect(function () {
+  useEffect(function () {
     function t() {
       var /* [auto-meaningful-name] */window$innerWidth = window.innerWidth
       l(window$innerWidth > 1366 ? 1 : window$innerWidth > 992 ? .9 : window$innerWidth > 700 ? .83 : .57)
@@ -172,7 +173,7 @@ var R = React.memo(function () {
       }
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("message", q)
     return function () {
       window.removeEventListener("message", q)

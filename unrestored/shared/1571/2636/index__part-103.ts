@@ -10,10 +10,11 @@ import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
 import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1037 from /* 1037 */"./1037"
 import /* [auto-meaningful-name] */Module_10371 from /* 1037 */"./1037"
-var gy = React1.memo(function (e) {
+var gy = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "textAlign" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -38,7 +39,7 @@ var gy = React1.memo(function (e) {
     type: "icon-align-right"
   })))
 })
-var _y = React1.memo(function (e) {
+var _y = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "text" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue

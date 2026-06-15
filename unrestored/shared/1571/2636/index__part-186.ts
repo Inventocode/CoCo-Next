@@ -21,10 +21,11 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_164 from /* 164 */"./164"
 import /* [auto-meaningful-name] */Module_1641 from /* 164 */"./164"
-var Pj = React1.memo(function (e) {
+var Pj = memo(function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$searchName = e.searchName
   var /* [auto-meaningful-name] */e$selectedIds = e.selectedIds
@@ -37,7 +38,7 @@ var Pj = React1.memo(function (e) {
   var u = React.useCallback(function () {
     return l({})
   }, [])
-  var d = React1.useState("")
+  var d = useState("")
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]

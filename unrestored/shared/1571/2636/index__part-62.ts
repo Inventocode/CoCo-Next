@@ -11,25 +11,26 @@ import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_691 from /* 691 */"./691/index"
 import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"./145"
 import * as /* [auto-meaningful-name] */Module_215 from /* 215 */"./215"
 import * as /* [auto-meaningful-name] */Module_741 from /* 741 */"./741"
 import /* [auto-meaningful-name] */Module_7411 from /* 741 */"./741"
-var gh = React1.memo(function (e) {
+var gh = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$stage = e.stage
   var /* [auto-meaningful-name] */e$updateTimes = e.updateTimes
   var /* [auto-meaningful-name] */e$coordinateRatio = e.coordinateRatio
-  var i = React1.useState()
+  var i = useState()
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = useSelector(function (e) {
     return e.project.selectedWidgetId
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (l === t && e$stage && t) {
       var e = Module_33.Cb(t)
       c(Module_6.a({}, e))

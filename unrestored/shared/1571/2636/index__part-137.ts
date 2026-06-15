@@ -22,7 +22,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, memo, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_368 from /* 368 */"./368"
 import /* [auto-meaningful-name] */Module_3681 from /* 368 */"./368"
 function aC() {
@@ -35,7 +36,7 @@ function aC() {
   var o = useSelector(function (e) {
     return e.cloudSpace[r]
   })
-  var i = React1.useState(false)
+  var i = useState(false)
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
@@ -174,12 +175,12 @@ function cC() {
   e.Table = "Table"
 }(Mw || (Mw = {}))
 var /* [auto-meaningful-name] */py$Option = py.Option
-var uC = React1.memo(function (e) {
+var uC = memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useDispatch()
   var o = Module_9.Bb(e$widgetId)
-  var i = React1.useRef(null)
+  var i = useRef(null)
   var a = aC()
   var /* [auto-meaningful-name] */a$dataSourceId = a.dataSourceId
   var /* [auto-meaningful-name] */a$cloudDataSources = a.cloudDataSources
@@ -194,7 +195,7 @@ var uC = React1.memo(function (e) {
   var y = useSelector(function (e) {
     return e.common.userInfo
   })
-  var E = React1.useState(false)
+  var E = useState(false)
   var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]

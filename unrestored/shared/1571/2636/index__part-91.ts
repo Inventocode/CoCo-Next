@@ -11,12 +11,13 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
 import /* [auto-meaningful-name] */Module_881 from /* 88 */"./88"
 import * as /* [auto-meaningful-name] */Module_1201 from /* 1201 */"./1201"
 import /* [auto-meaningful-name] */Module_12011 from /* 1201 */"./1201"
-var Zv = React1.memo(function (e) {
+var Zv = memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$hasIcon = e.hasIcon
@@ -30,7 +31,7 @@ var Zv = React1.memo(function (e) {
   }, e$children)
 })
 var Jv = Object.values(Module_206.a)
-var $v = React1.memo(function (e) {
+var $v = memo(function (e) {
   var /* [auto-meaningful-name] */e$mode = e.mode
   var /* [auto-meaningful-name] */e$onModeChange = e.onModeChange
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage

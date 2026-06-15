@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */Module_391 from /* 391 */"./391"
 import * as /* [auto-meaningful-name] */Module_287 from /* 287 */"./287"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useEffect, useLayoutEffect, forwardRef, useRef, useImperativeHandle, useCallback, Children, isValidElement, cloneElement, createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_1028 from /* 1028 */"./1028"
 function fe(e, t, n) {
   return e === t ? e.firstChild : t && t.nextElementSibling ? t.nextElementSibling : n ? null : e.firstChild
@@ -45,8 +45,8 @@ function pe(e, t, n, r, i, o) {
     s = i(e, s, n)
   }
 }
-var _e = "undefined" === typeof window ? React.useEffect : React.useLayoutEffect
-var Ae = React.forwardRef(function (e, t) {
+var _e = "undefined" === typeof window ? useEffect : useLayoutEffect
+var Ae = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$actions = e.actions
   var /* [auto-meaningful-name] */e$autoFocus = e.autoFocus
   var o = undefined !== e$autoFocus && e$autoFocus
@@ -62,8 +62,8 @@ var Ae = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$variant = e.variant
   var v = undefined === e$variant ? "selectedMenu" : e$variant
   var m = Module_54.a(e, ["actions", "autoFocus", "autoFocusItem", "children", "className", "disabledItemsFocusable", "disableListWrap", "onKeyDown", "variant"])
-  var y = React.useRef(null)
-  var b = React.useRef({
+  var y = useRef(null)
+  var b = useRef({
     keys: [],
     repeating: true,
     previousKeyMatched: true,
@@ -74,7 +74,7 @@ var Ae = React.forwardRef(function (e, t) {
       y.current.focus()
     }
   }, [o])
-  React.useImperativeHandle(e$actions, function () {
+  useImperativeHandle(e$actions, function () {
     return {
       adjustStyleForScrollbar: function (e, t) {
         var n = !y.current.style.width
@@ -87,13 +87,13 @@ var Ae = React.forwardRef(function (e, t) {
       }
     }
   }, [])
-  var w = React.useCallback(function (e) {
+  var w = useCallback(function (e) {
     y.current = ReactDom.findDOMNode(e)
   }, [])
   var E = Module_287.a(w, t)
   var x = -1
-  React.Children.forEach(e$children, function (e, t) {
-    if (React.isValidElement(e)) {
+  Children.forEach(e$children, function (e, t) {
+    if (isValidElement(e)) {
       if (!e.props.disabled) {
         if ("selectedMenu" === v && e.props.selected || -1 === x) {
           x = t
@@ -101,7 +101,7 @@ var Ae = React.forwardRef(function (e, t) {
       }
     }
   })
-  var O = React.Children.map(e$children, function (e, t) {
+  var O = Children.map(e$children, function (e, t) {
     if (t === x) {
       var n = {}
       if (s) {
@@ -110,11 +110,11 @@ var Ae = React.forwardRef(function (e, t) {
       if (undefined === e.props.tabIndex && "selectedMenu" === v) {
         n.tabIndex = 0
       }
-      return React.cloneElement(e, n)
+      return cloneElement(e, n)
     }
     return e
   })
-  return React.createElement(ue, Module_19.a({
+  return createElement(ue, Module_19.a({
     role: "menu",
     ref: E,
     className: e$className,

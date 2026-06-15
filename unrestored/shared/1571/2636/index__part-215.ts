@@ -20,7 +20,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1538 from /* 1538 */"./1538"
 import /* [auto-meaningful-name] */Module_15381 from /* 1538 */"./1538"
 import * as /* [auto-meaningful-name] */Module_1539 from /* 1539 */"./1539"
@@ -33,7 +34,7 @@ import /* [auto-meaningful-name] */Module_2821 from /* 282 */"./282"
   e.TABLE_DATA = "TABLE_DATA"
   e.CLOUD_SPACE_TABLE = "CLOUD_SPACE_TABLE"
 }(RP || (RP = {}))
-var zP = React1.memo(function () {
+var zP = memo(function () {
   var e = useSelector(function (e) {
     return e.common.createTableDataDialog
   })
@@ -43,17 +44,17 @@ var zP = React1.memo(function () {
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$onConfirm = e.onConfirm
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var i = React1.useState(RP.TABLE_DATA)
+  var i = useState(RP.TABLE_DATA)
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
-  var l = React1.useState(false)
+  var l = useState(false)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
   var m = useDispatch()
   var g = Module_238.d()
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       p(false)
       c(RP.TABLE_DATA)

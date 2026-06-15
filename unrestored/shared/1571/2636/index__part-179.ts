@@ -24,10 +24,11 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_814 from /* 814 */"./814"
 import /* [auto-meaningful-name] */Module_8141 from /* 814 */"./814"
-var aj = React1.memo(function () {
+var aj = memo(function () {
   var e = useSelector(function (e) {
     return e.common.tableDataDialog
   })
@@ -37,39 +38,39 @@ var aj = React1.memo(function () {
   var /* [auto-meaningful-name] */e$isCreateNewGrid = e.isCreateNewGrid
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = useDispatch()
-  var s = React1.useState(false)
+  var s = useState(false)
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState()
+  var d = useState()
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState("")
+  var v = useState("")
   var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState({})
+  var O = useState({})
   var w = Module_10.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState([])
+  var A = useState([])
   var j = Module_10.a(A, 2)
   var N = j[0]
   var R = j[1]
-  var k = React1.useState(false)
+  var k = useState(false)
   var x = Module_10.a(k, 2)
   var M = x[0]
   var L = x[1]
-  var P = React1.useState(2)
+  var P = useState(2)
   var B = Module_10.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = React1.useState(2)
+  var W = useState(2)
   var U = Module_10.a(W, 2)
   var H = U[0]
   var V = U[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       a(Src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)

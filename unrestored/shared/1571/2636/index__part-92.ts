@@ -18,10 +18,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_419 from /* 419 */"./419"
 import /* [auto-meaningful-name] */Module_4191 from /* 419 */"./419"
-var nb = React1.memo(function (e) {
+var nb = memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$onUploadFileChange = e.onUploadFileChange
   var /* [auto-meaningful-name] */e$onResourceLibraryClick = e.onResourceLibraryClick
@@ -29,11 +30,11 @@ var nb = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$fileId = e.fileId
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState(false)
+  var p = useState(false)
   var m = Module_10.a(p, 2)
   var g = m[0]
   var _ = m[1]
@@ -120,7 +121,7 @@ var nb = React1.memo(function (e) {
     className: Classnames(Module_4191.cover, u && Module_4191.visible)
   }, E()))))
 })
-var rb = React1.memo(function (e) {
+var rb = memo(function (e) {
   var /* [auto-meaningful-name] */e$sizeType = e.sizeType
   var /* [auto-meaningful-name] */e$sizeTypeList = e.sizeTypeList
   var /* [auto-meaningful-name] */e$width = e.width

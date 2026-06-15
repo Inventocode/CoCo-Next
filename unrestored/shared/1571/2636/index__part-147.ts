@@ -15,11 +15,12 @@ import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"./25/index"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_550 from /* 550 */"./550"
 import * as /* [auto-meaningful-name] */Module_423 from /* 423 */"./423"
 import /* [auto-meaningful-name] */Module_4231 from /* 423 */"./423"
-var OT = React1.memo(function () {
+var OT = memo(function () {
   var e
   var t = useSelector(function (e) {
     return e.block.dropdown

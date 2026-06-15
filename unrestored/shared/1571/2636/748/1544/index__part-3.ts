@@ -7,7 +7,7 @@
 "use strict"
 
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
@@ -45,12 +45,12 @@ function S(e) {
       animation: e$maskAnimation
     }))
   }
-  return React.createElement(Module_692.a, Module_19.a({}, f, {
+  return createElement(Module_692.a, Module_19.a({}, f, {
     visible: e$visible,
     removeOnLeave: true
   }), function (e) {
     var /* [auto-meaningful-name] */e$className = e.className
-    return React.createElement("div", {
+    return createElement("div", {
       style: {
         zIndex: e$zIndex
       },

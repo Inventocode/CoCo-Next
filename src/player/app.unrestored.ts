@@ -21,7 +21,8 @@ import * as /* [auto-meaningful-name] */Shared_tools_index from /* 15 */"../shar
 import * as /* [auto-meaningful-name] */Module_28 from /* 28 */"../../unrestored/shared/1571/2636/28/index"
 import /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_328 from /* 328 */"../../unrestored/shared/1571/2636/328"
 import * as /* [auto-meaningful-name] */Module_1063 from /* 1063 */"../../unrestored/player/2635/2637/1063"
 import /* [auto-meaningful-name] */Module_10631 from /* 1063 */"../../unrestored/player/2635/2637/1063"
@@ -88,23 +89,23 @@ function X() {
   }))).apply(this, arguments)
 }
 var q = React.memo(function () {
-  var t = React1.useState()
+  var t = useState()
   var e = Module_10.a(t, 2)
   var n = e[0]
   var o = e[1]
-  var a = React1.useState(true)
+  var a = useState(true)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var m = React1.useState(true)
+  var m = useState(true)
   var b = Module_10.a(m, 2)
   var _ = b[0]
   var y = b[1]
-  var w = React1.useState("")
+  var w = useState("")
   var E = Module_10.a(w, 2)
   var O = E[0]
   var T = E[1]
-  var A = React1.useRef()
+  var A = useRef()
   function S() {
     return (S = Module_7.a(RegeneratorRuntime.mark(function t() {
       var e
@@ -165,7 +166,7 @@ var q = React.memo(function () {
       }, t)
     }))).apply(this, arguments)
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     !function () {
       S.apply(this, arguments)
     }()
@@ -180,7 +181,7 @@ var q = React.memo(function () {
       }
     }, false)
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!_ && A.current) {
       if (A.current.blockCode) {
         A.current.blockCode = O

@@ -11,10 +11,11 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_566 from /* 566 */"./566"
 import /* [auto-meaningful-name] */Module_5661 from /* 566 */"./566"
-var gn = React1.memo(function () {
+var gn = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {

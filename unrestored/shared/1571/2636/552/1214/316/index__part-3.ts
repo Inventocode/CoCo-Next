@@ -15,7 +15,7 @@ import * as /* [auto-meaningful-name] */Module_709 from /* 709 */"../../../551/1
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../../551/1211/98"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, useEffect, useLayoutEffect, useRef, Fragment, createContext } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_2684 from /* 2684 */"../../../551/1211/269/2684/index"
 function F(e, t) {
   return Array.isArray(t) ? t.every(function (t) {
@@ -41,7 +41,7 @@ var L = Module_709.a(function (e) {
 var j = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var n = L()
-  return React.createElement("div", {
+  return createElement("div", {
     className: n.staticWrapperRoot,
     children: e$children
   })
@@ -62,29 +62,29 @@ var U = function (e) {
   e.showTabs
   var /* [auto-meaningful-name] */e$wider = e.wider
   var b = Module_54.a(e, ["children", "classes", "onAccept", "onDismiss", "onClear", "onSetToday", "okLabel", "cancelLabel", "clearLabel", "todayLabel", "clearable", "showTodayButton", "showTabs", "wider"])
-  return React.createElement(I, Module_19.a({
+  return createElement(I, Module_19.a({
     role: "dialog",
     onClose: e$onDismiss,
     classes: {
       paper: Module_98.a(e$classes.dialogRoot, e$wider && e$classes.dialogRootWider)
     }
-  }, b), React.createElement(p, {
+  }, b), createElement(p, {
     children: e$children,
     className: e$classes.dialog
-  }), React.createElement(d, {
+  }), createElement(d, {
     classes: {
       root: Module_98.a((e$clearable || e$showTodayButton) && e$classes.withAdditionalAction)
     }
-  }, e$clearable && React.createElement(Module_2678.a, {
+  }, e$clearable && createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onClear
-  }, e$clearLabel), e$showTodayButton && React.createElement(Module_2678.a, {
+  }, e$clearLabel), e$showTodayButton && createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onSetToday
-  }, e$todayLabel), e$cancelLabel && React.createElement(Module_2678.a, {
+  }, e$todayLabel), e$cancelLabel && createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onDismiss
-  }, e$cancelLabel), e$okLabel && React.createElement(Module_2678.a, {
+  }, e$cancelLabel), e$okLabel && createElement(Module_2678.a, {
     color: "primary",
     onClick: e$onAccept
   }, e$okLabel)))
@@ -112,7 +112,7 @@ var H = Module_1550.a({
 var V = Module_154.a(H, {
   name: "MuiPickersModal"
 })(U)
-var G = "undefined" === typeof window ? React.useEffect : React.useLayoutEffect
+var G = "undefined" === typeof window ? useEffect : useLayoutEffect
 function z(e, t) {
   var n = t[e.key]
   if (n) {
@@ -121,7 +121,7 @@ function z(e, t) {
   }
 }
 function Q(e, t) {
-  var n = React.useRef(t)
+  var n = useRef(t)
   n.current = t
   G(function () {
     if (e) {
@@ -157,7 +157,7 @@ var W = function (e) {
   Q(e$open, {
     Enter: e$onAccept
   })
-  return React.createElement(React.Fragment, null, React.createElement(e$InputComponent, Module_19.a({}, b, e$DateInputProps)), React.createElement(V, Module_19.a({
+  return createElement(Fragment, null, createElement(e$InputComponent, Module_19.a({}, b, e$DateInputProps)), createElement(V, Module_19.a({
     wider: e$wider,
     showTabs: e$showTabs,
     open: e$open,
@@ -195,13 +195,13 @@ var K = function (e) {
   var /* [auto-meaningful-name] */e$DateInputProps = e.DateInputProps
   var /* [auto-meaningful-name] */e$InputComponent = e.InputComponent
   var f = Module_54.a(e, ["open", "wider", "children", "PopoverProps", "onClear", "onDismiss", "onSetToday", "onAccept", "showTabs", "DateInputProps", "InputComponent"])
-  var d = React.useRef()
+  var d = useRef()
   Q(e$open, {
     Enter: e$onAccept
   })
-  return React.createElement(React.Fragment, null, React.createElement(e$InputComponent, Module_19.a({}, f, e$DateInputProps, {
+  return createElement(Fragment, null, createElement(e$InputComponent, Module_19.a({}, f, e$DateInputProps, {
     inputRef: d
-  })), React.createElement(Module_2684.a, Module_19.a({
+  })), createElement(Module_2684.a, Module_19.a({
     open: e$open,
     onClose: e$onDismiss,
     anchorEl: d.current,
@@ -216,7 +216,7 @@ var K = function (e) {
     children: e$children
   }, e$PopoverProps)))
 }
-var X = React.createContext(null)
+var X = createContext(null)
 var Y = function (e) {
   var /* [auto-meaningful-name] */e$variant = e.variant
   var n = Module_54.a(e, ["variant"])
@@ -230,9 +230,9 @@ var Y = function (e) {
         return W
     }
   }(e$variant)
-  return React.createElement(X.Provider, {
+  return createElement(X.Provider, {
     value: e$variant || "dialog"
-  }, React.createElement(i, n))
+  }, createElement(i, n))
 }
 export { F }
 export { P }

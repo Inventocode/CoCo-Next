@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */Module_802 from /* 802 */"../616/802"
 import * as /* [auto-meaningful-name] */Module_616 from /* 616 */"../616/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect, createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
 import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
 import * as /* [auto-meaningful-name] */Module_1046 from /* 1046 */"./1046"
@@ -20,13 +20,13 @@ function S(e) {
   return !(!e || !e.then)
 }
 var T = function (e) {
-  var t = React.useRef(false)
-  var n = React.useRef()
-  var r = React.useState(false)
+  var t = useRef(false)
+  var n = useRef()
+  var r = useState(false)
   var a = Module_40.a(r, 2)
   var s = a[0]
   var c = a[1]
-  React.useEffect(function () {
+  useEffect(function () {
     var t
     if (e.autoFocus) {
       var /* [auto-meaningful-name] */n$current = n.current
@@ -44,7 +44,7 @@ var T = function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$prefixCls = e.prefixCls
   var /* [auto-meaningful-name] */e$buttonProps = e.buttonProps
-  return React.createElement(Module_616.a, Module_19.a({}, Module_802.a(e$type), {
+  return createElement(Module_616.a, Module_19.a({}, Module_802.a(e$type), {
     onClick: function (n) {
       var /* [auto-meaningful-name] */e$actionFn = e.actionFn
       var /* [auto-meaningful-name] */e$close = e.close

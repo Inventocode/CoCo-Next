@@ -10,7 +10,8 @@ var x
 var E
 import * as /* [auto-meaningful-name] */Module_275 from /* 275 */"./275"
 import * as /* [auto-meaningful-name] */Module_273 from /* 273 */"./273"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, Fragment } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import * as /* [auto-meaningful-name] */Module_2640 from /* 2640 */"./2640"
 import * as /* [auto-meaningful-name] */Module_2641 from /* 2641 */"./2641/index"
 import * as /* [auto-meaningful-name] */Module_1481 from /* 1481 */"./1481/index"
@@ -77,7 +78,7 @@ function I(e, t) {
   })
 }
 function R(e, t) {
-  return Array.isArray(e) && t ? React.createElement.apply(React, T([React.Fragment, null], e)) : e
+  return Array.isArray(e) && t ? createElement.apply(React, T([Fragment, null], e)) : e
 }
 function F(e, t, n, r) {
   var /* [auto-meaningful-name] */e$locale = e.locale

@@ -9,7 +9,8 @@
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../25/index"
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_557 from /* 557 */"../557"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
@@ -44,7 +45,7 @@ function S(t, n) {
   })
 }
 var _a
-_a = React.memo(function () {
+_a = memo(function () {
   var e = useSelector(function (e) {
     return e.block.storageDialogInfo
   })
@@ -56,46 +57,46 @@ _a = React.memo(function () {
   var /* [auto-meaningful-name] */e$onSave = e.onSave
   var j = null === e$widget || undefined === e$widget ? undefined : e$widget.type
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var R = React.useRef(-1)
-  var k = React.useRef(-1)
+  var R = useRef(-1)
+  var k = useRef(-1)
   var x = useDispatch()
-  var D = React.useState([])
+  var D = useState([])
   var M = Module_10.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = React.useState([])
+  var B = useState([])
   var F = Module_10.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = React.useState(-1)
+  var U = useState(-1)
   var H = Module_10.a(U, 2)
   var V = H[0]
   var z = H[1]
-  var Y = React.useState(-1)
+  var Y = useState(-1)
   var K = Module_10.a(Y, 2)
   var q = K[0]
   var X = K[1]
-  var Q = React.useState(0)
+  var Q = useState(0)
   var Z = Module_10.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
-  var ee = React.useState(false)
+  var ee = useState(false)
   var te = Module_10.a(ee, 2)
   var ne = te[0]
   var re = te[1]
-  var oe = React.useState(false)
+  var oe = useState(false)
   var ie = Module_10.a(oe, 2)
   var ae = ie[0]
   var se = ie[1]
-  var ce = React.useState(false)
+  var ce = useState(false)
   var le = Module_10.a(ce, 2)
   var ue = le[0]
   var de = le[1]
-  var pe = React.useState(false)
+  var pe = useState(false)
   var fe = Module_10.a(pe, 2)
   var he = fe[0]
   var me = fe[1]
-  var ge = React.useState(T)
+  var ge = useState(T)
   var _e = Module_10.a(ge, 2)
   var ve = _e[0]
   var be = _e[1]
@@ -199,13 +200,13 @@ _a = React.memo(function () {
       })
     }
   }
-  React.useEffect(function () {
+  useEffect(function () {
     W(Lodash.cloneDeep(e$data))
   }, [e$data])
-  React.useEffect(function () {
+  useEffect(function () {
     me(false)
   }, [e$visible])
-  React.useEffect(function () {
+  useEffect(function () {
     function e(t) {
       var /* [auto-meaningful-name] */t$target = t.target
       if (!(t$target.closest("." + Module_1551.typeSelectionList) || t$target.closest("." + Module_1551.typeFlag))) {
@@ -220,7 +221,7 @@ _a = React.memo(function () {
       document.removeEventListener("mousemove", e)
     }
   }, [ve])
-  React.useEffect(function () {
+  useEffect(function () {
     var e = {}
     G.forEach(function (t, n) {
       G.slice(n + 1, G.length).forEach(function (r, o) {
@@ -234,7 +235,7 @@ _a = React.memo(function () {
       return Number(e)
     }))
   }, [G])
-  React.useEffect(function () {
+  useEffect(function () {
     ye(V)
   }, [V])
   var xe = function (e) {
@@ -348,7 +349,7 @@ _a = React.memo(function () {
       W(Module_25.a(G))
     }
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if (ae || ue) {
       document.addEventListener("mousedown", function e() {
         se(false)

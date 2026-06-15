@@ -18,10 +18,10 @@ import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrestored/shared/1571/2636/7"
 import * as /* [auto-meaningful-name] */Module_9 from /* 9 */"../../../../unrestored/shared/1571/2636/9"
 import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"../../../../unrestored/shared/1571/2636/64"
-import * as /* [auto-meaningful-name] */$_type from /* 78 */"./type"
+import * as c from /* 78 */"./type"
 import * as /* [auto-meaningful-name] */Utils_network_axiosWithCredentials from /* 41 */"../../utils/network/axios-with-credentials"
-import * as /* [auto-meaningful-name] */$$_$$_env from /* 57 */"../../env"
-var d = "".concat($$_$$_env.a.serverHost, "/coconut")
+import * as u from /* 57 */"../../env"
+var d = "".concat(u.a.serverHost, "/coconut")
 function p() {
   return f.apply(this, arguments)
 }
@@ -219,15 +219,15 @@ function O(e, t) {
       localStorage.setItem("guestId", r)
     }
     var o = 1
-    if ($_type.e(e)) {
+    if (c.e(e)) {
       o = 2
-      e = e.replace($_type.a, "")
+      e = e.replace(c.a, "")
     } else {
-      if ($_type.d(e)) {
+      if (c.d(e)) {
         o = 3
       }
     }
-    Utils_network_axiosWithCredentials.a.post($$_$$_env.a.serverHost + "/data-center/widget", {
+    Utils_network_axiosWithCredentials.a.post(u.a.serverHost + "/data-center/widget", {
       widget_code: e,
       widget_type: n.isInvisibleWidget ? 2 : 1,
       source_type: o,
@@ -248,7 +248,7 @@ function C() {
         switch (e.prev = e.next) {
           case 0:
             e.next = 2
-            return Utils_network_axiosWithCredentials.a.get($$_$$_env.a.serverHost + "/data-center/widget/total", {
+            return Utils_network_axiosWithCredentials.a.get(u.a.serverHost + "/data-center/widget/total", {
               params: {
                 widget_code_list: t.join(",")
               }

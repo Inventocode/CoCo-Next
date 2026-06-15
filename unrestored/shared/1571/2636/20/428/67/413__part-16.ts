@@ -11,7 +11,7 @@ import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-r
 import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"../../../145"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../10/index"
 import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useEffect, useCallback } from /* 0 */"react"
 import { useSelector } from /* 16 */"react-redux"
 import * as /* [auto-meaningful-name] */Module_144 from /* 144 */"../../../144"
 var Me = function () {
@@ -52,7 +52,7 @@ var Le = function (e) {
   var /* [auto-meaningful-name] */r$attributes$rotation = r$attributes.rotation
   var /* [auto-meaningful-name] */r$attributes$actionList = r$attributes.actionList
   var /* [auto-meaningful-name] */r$attributes$pivotToCenter = r$attributes.pivotToCenter
-  var v = React.useState(false)
+  var v = useState(false)
   var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
@@ -60,7 +60,7 @@ var Le = function (e) {
   var C = useSelector(function (e) {
     return e.imageFileMap
   })
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = Module_20.getActor(t)
       if (!e) {
@@ -69,7 +69,7 @@ var Le = function (e) {
       e.set_position(r$position.x, r$position.y)
     }
   }, [t, y, r$position.x, r$position.y])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = Module_20.getActor(t)
       if (!e) {
@@ -81,7 +81,7 @@ var Le = function (e) {
       e.set_scale(r$attributes$scaleAndLock.x, r$attributes$scaleAndLock.y)
     }
   }, [t, y, r$attributes$scaleAndLock])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = Module_20.getActor(t)
       if (!e) {
@@ -90,7 +90,7 @@ var Le = function (e) {
       e.set_visible(r$visible)
     }
   }, [t, y, r$visible])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = Module_20.getActor(t)
       if (e) {
@@ -98,7 +98,7 @@ var Le = function (e) {
       }
     }
   }, [O, t, y, r$attributes$selectedStyleId])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = Module_20.getActor(t)
       if (!e) {
@@ -107,7 +107,7 @@ var Le = function (e) {
       e.set_rotation(r$attributes$rotation)
     }
   }, [t, y, r$attributes$rotation])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = Module_20.getActor(t)
       if (!e) {
@@ -116,7 +116,7 @@ var Le = function (e) {
       e.set_alpha((undefined === r$opacity ? 100 : r$opacity) / 100)
     }
   }, [t, y, r$opacity])
-  React.useEffect(function () {
+  useEffect(function () {
     if (y) {
       var e = Module_20.getActor(t)
       if (!e || !r$attributes$flipped) {
@@ -130,7 +130,7 @@ var Le = function (e) {
       }
     }
   }, [t, y, r$attributes$flipped])
-  var T = React.useCallback(function () {
+  var T = useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var r
       var /* [auto-meaningful-name] */RR$attributes$scaleAndLockR$attributes$scaleXR$attributes$scaleYR$attributes$scaleX1Y1$x
@@ -224,7 +224,7 @@ var Le = function (e) {
       return e.apply(this, arguments)
     }
   }(), [])
-  React.useEffect(function () {
+  useEffect(function () {
     var e = Module_20.getStage(O)
     if (e) {
       T(e)

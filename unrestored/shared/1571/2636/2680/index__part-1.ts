@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */Module_615 from /* 615 */"./615"
 import * as /* [auto-meaningful-name] */Module_803 from /* 803 */"../803"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_1542 from /* 1542 */"./1542"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useContext, createElement, Fragment } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../19"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
 import * as /* [auto-meaningful-name] */Module_435 from /* 435 */"../435"
@@ -48,7 +48,7 @@ if (g()) {
 }
 var y = function (e) {
   var t
-  var n = React.useContext(Module_801.b)
+  var n = useContext(Module_801.b)
   var /* [auto-meaningful-name] */n$getPopupContainer = n.getPopupContainer
   var /* [auto-meaningful-name] */n$getPrefixCls = n.getPrefixCls
   var /* [auto-meaningful-name] */n$direction = n.direction
@@ -69,9 +69,9 @@ var y = function (e) {
     var /* [auto-meaningful-name] */e$okType = e.okType
     var /* [auto-meaningful-name] */e$cancelText = e.cancelText
     var /* [auto-meaningful-name] */e$confirmLoading = e.confirmLoading
-    return React.createElement(React.Fragment, null, React.createElement(Module_616.a, Module_19.a({
+    return createElement(Fragment, null, createElement(Module_616.a, Module_19.a({
       onClick: y
-    }, e.cancelButtonProps), e$cancelText || t.cancelText), React.createElement(Module_616.a, Module_19.a({}, Module_802.a(e$okType), {
+    }, e.cancelButtonProps), e$cancelText || t.cancelText), createElement(Module_616.a, Module_19.a({}, Module_802.a(e$okType), {
       loading: e$confirmLoading,
       onClick: b
     }, e.okButtonProps), e$okText || t.okText))
@@ -88,17 +88,17 @@ var y = function (e) {
   var I = m(e, ["prefixCls", "footer", "visible", "wrapClassName", "centered", "getContainer", "closeIcon", "focusTriggerAfterClose"])
   var R = n$getPrefixCls("modal", e$prefixCls)
   var F = n$getPrefixCls()
-  var P = React.createElement(Module_694.a, {
+  var P = createElement(Module_694.a, {
     componentName: "Modal",
     defaultLocale: Module_615.b()
   }, w)
-  var N = React.createElement("span", {
+  var N = createElement("span", {
     className: "".concat(R, "-close-x")
-  }, e$closeIcon || React.createElement(Module_803.a, {
+  }, e$closeIcon || createElement(Module_803.a, {
     className: "".concat(R, "-close-icon")
   }))
   var M = Classnames(e$wrapClassName, (t = {}, Module_35.a(t, "".concat(R, "-centered"), !!e$centered), Module_35.a(t, "".concat(R, "-wrap-rtl"), "rtl" === n$direction), t))
-  return React.createElement(Module_1542.a, Module_19.a({}, I, {
+  return createElement(Module_1542.a, Module_19.a({}, I, {
     getContainer: undefined === e$getContainer ? n$getPopupContainer : e$getContainer,
     prefixCls: R,
     wrapClassName: M,

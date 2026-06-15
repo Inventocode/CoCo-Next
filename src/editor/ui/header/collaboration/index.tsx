@@ -8,7 +8,7 @@ import * as React from "react"
 
 import { se, le, de, fe, ge } from "../../../../../unrestored/shared/1571/2636/index__part-5"
 import { _t, vt as InvalidUrlDialog, bt as LoadingDialog, yt as Users } from "../../../../../unrestored/shared/1571/2636/index__part-13"
-import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_136 from "../../../../../unrestored/shared/1571/2636/136"
+import styles from "../../../../../unrestored/shared/1571/2636/136"
 import * as CollaborationMessage from "../../../../../unrestored/shared/1571/2636/100"
 import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"../../../../../unrestored/shared/1571/2636/24/index"
 import * as /* [auto-meaningful-name] */Shared_player_audit from "../../../../shared/player/audit"
@@ -20,7 +20,7 @@ import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../../u
 import * as Actions from "../../../redux/common/actions"
 import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../../shared/ui/components"
 import { CoCoDialog, IconFont } from "../../../../shared/ui/components"
-import /* [auto-meaningful-name] */Classnames from "classnames"
+import classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../../unrestored/shared/1571/2636/710"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"../../../../../unrestored/shared/1571/2636/748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
@@ -49,30 +49,30 @@ var PermissionDialog = function (e) {
     <Module_1213.a
       placement="bottom"
       content={(t = e.id, e$permission = e.permission, (
-        <div className={Unrestored_shared_1571_2636_136.permissionDialog}>
+        <div className={styles.permissionDialog}>
           <div
             onClick={() => e.handleChangePermission(Module_18.c.Edit, t, c)}
-            className={Unrestored_shared_1571_2636_136.item}
+            className={styles.item}
           >
             <IconFont
               type="icon-selected"
-              className={Classnames(Unrestored_shared_1571_2636_136.icon, e$permission === Module_18.c.Edit && Unrestored_shared_1571_2636_136.selected)}
+              className={classnames(styles.icon, e$permission === Module_18.c.Edit && styles.selected)}
             />
             <span>{Module_710$a$formatMessage({ id: "OT.dialogCanEdit" })}</span>
           </div>
           <div
             onClick={() => e.handleChangePermission(Module_18.c.ReadOnly, t, c)}
-            className={Unrestored_shared_1571_2636_136.item}
+            className={styles.item}
           >
             <IconFont
               type="icon-selected"
-              className={Classnames(Unrestored_shared_1571_2636_136.icon, e$permission === Module_18.c.ReadOnly && Unrestored_shared_1571_2636_136.selected)}
+              className={classnames(styles.icon, e$permission === Module_18.c.ReadOnly && styles.selected)}
             />
             <span>{Module_710$a$formatMessage({ id: "OT.dialogReadOnly" })}</span>
           </div>
           <div
             onClick={() => e.handleRemovePermission(t, c)}
-            className={Classnames(Unrestored_shared_1571_2636_136.item, Unrestored_shared_1571_2636_136.remove)}
+            className={classnames(styles.item, styles.remove)}
           >
             <span>{Module_710$a$formatMessage({ id: "OT.dialogRemove" })}</span>
           </div>
@@ -82,26 +82,26 @@ var PermissionDialog = function (e) {
       visible={i}
       onVisibleChange={(e) => a(e)}
     >
-      <div className={Unrestored_shared_1571_2636_136.edit_role}>
+      <div className={styles.edit_role}>
         <span>
           {e.permission === Module_18.c.Edit
             ? Module_710$a$formatMessage({ id: "OT.edit" })
             : Module_710$a$formatMessage({ id: "OT.readonly" })}
         </span>
-        <div className={Unrestored_shared_1571_2636_136.icon}>
-          <IconFont type="icon-dropdown-down" className={Unrestored_shared_1571_2636_136.icon} />
+        <div className={styles.icon}>
+          <IconFont type="icon-dropdown-down" className={styles.icon} />
         </div>
       </div>
     </Module_1213.a>
   ) : (
-    <div className={Classnames(Unrestored_shared_1571_2636_136.edit_role, Unrestored_shared_1571_2636_136.disabled)}>
+    <div className={classnames(styles.edit_role, styles.disabled)}>
       <span>
         {e.permission === Module_18.c.Edit
           ? Module_710$a$formatMessage({ id: "OT.edit" })
           : Module_710$a$formatMessage({ id: "OT.readonly" })}
       </span>
-      <div className={Unrestored_shared_1571_2636_136.icon}>
-        <IconFont type="icon-dropdown-down" className={Unrestored_shared_1571_2636_136.icon} />
+      <div className={styles.icon}>
+        <IconFont type="icon-dropdown-down" className={styles.icon} />
       </div>
     </div>
   )
@@ -282,19 +282,19 @@ var Ct = React.memo(function () {
     }
   }()
   var F = (
-    <div className={Unrestored_shared_1571_2636_136.content}>
+    <div className={styles.content}>
       {isAuthor && (
-        <div className={Unrestored_shared_1571_2636_136.header}>
+        <div className={styles.header}>
           <Shared_ui_components.d
-            className={Unrestored_shared_1571_2636_136.shareButton}
+            className={styles.shareButton}
             onClick={() => share.apply(this, arguments)}
           >
-            <IconFont className={Unrestored_shared_1571_2636_136.invitationIcon} type="icon-ot-invitation" />
+            <IconFont className={styles.invitationIcon} type="icon-ot-invitation" />
             {formatMessage({ id: "OT.inviteFriend" })}
           </Shared_ui_components.d>
         </div>
       )}
-      <ul className={Unrestored_shared_1571_2636_136.list}>
+      <ul className={styles.list}>
         {cooperationUserList.map((e, t) => {
           var n = e.id
           var e$is_author = e.is_author
@@ -302,7 +302,7 @@ var Ct = React.memo(function () {
           return (
             <li key={t}>
               <div
-                className={Classnames(Unrestored_shared_1571_2636_136.headerPhotoBorder)}
+                className={classnames(styles.headerPhotoBorder)}
                 key={e.id}
                 style={{
                   marginRight: "8px",
@@ -310,16 +310,16 @@ var Ct = React.memo(function () {
                 }}
               >
                 <div
-                  className={Unrestored_shared_1571_2636_136.headPhoto}
+                  className={styles.headPhoto}
                   style={{ backgroundImage: `url(${e.avatar_url})` }}
                 />
               </div>
-              <div className={Unrestored_shared_1571_2636_136.name}>
+              <div className={styles.name}>
                 <p>{e.nickname}</p>
                 <span>{e.id}</span>
               </div>
               {e$is_author ? (
-                <div className={Unrestored_shared_1571_2636_136.role}>
+                <div className={styles.role}>
                   <div>{formatMessage({ id: "OT.creator" })}</div>
                 </div>
               ) : (
@@ -390,7 +390,7 @@ var Ct = React.memo(function () {
     <div style={{ height: "100%" }}>
       <Shared_ui_components.r
         content={F}
-        className={Unrestored_shared_1571_2636_136.oTButton}
+        className={styles.oTButton}
         onOpen={() => M(true)}
         onClose={() => M(false)}
         ref={R}
@@ -402,39 +402,39 @@ var Ct = React.memo(function () {
           trigger={["hover", "click"]}
           overlayInnerStyle={{ position: "relative", top: -4 }}
         >
-          <div className={Classnames(Unrestored_shared_1571_2636_136.collIconWrapper, D && Unrestored_shared_1571_2636_136.activeCollIconWrapper)}>
-            <IconFont type="icon-collaborate-active" className={Unrestored_shared_1571_2636_136.collIcon} />
+          <div className={classnames(styles.collIconWrapper, D && styles.activeCollIconWrapper)}>
+            <IconFont type="icon-collaborate-active" className={styles.collIcon} />
           </div>
         </Module_748.a>
       </Shared_ui_components.r>
       <CoCoDialog
-        className={Unrestored_shared_1571_2636_136.shareOtDialog}
+        className={styles.shareOtDialog}
         visible={b}
         title={formatMessage({ id: "OT.copyCollInvitationUrl" })}
         onClose={() => y(false)}
       >
-        <div className={Unrestored_shared_1571_2636_136.dialogMain}>
-          <div className={Unrestored_shared_1571_2636_136.text}>{formatMessage({ id: "OT.expiration" })}</div>
+        <div className={styles.dialogMain}>
+          <div className={styles.text}>{formatMessage({ id: "OT.expiration" })}</div>
           <div
             onClick={() => W(Module_18.c.Edit)}
-            className={Classnames(Unrestored_shared_1571_2636_136.tab, T === Module_18.c.Edit && Unrestored_shared_1571_2636_136.selected)}
+            className={classnames(styles.tab, T === Module_18.c.Edit && styles.selected)}
           >
             {formatMessage({ id: "OT.editor" })}
             <span>{formatMessage({ id: "OT.editorRules" })}</span>
             {T === Module_18.c.Edit && (
-              <div className={Unrestored_shared_1571_2636_136.icon}>
+              <div className={styles.icon}>
                 <IconFont type="icon-selected" />
               </div>
             )}
           </div>
           <div
             onClick={() => W(Module_18.c.ReadOnly)}
-            className={Classnames(Unrestored_shared_1571_2636_136.tab, T === Module_18.c.ReadOnly && Unrestored_shared_1571_2636_136.selected)}
+            className={classnames(styles.tab, T === Module_18.c.ReadOnly && styles.selected)}
           >
             {formatMessage({ id: "OT.reader" })}
             <span>{formatMessage({ id: "OT.readerRules" })}</span>
             {T === Module_18.c.ReadOnly && (
-              <div className={Unrestored_shared_1571_2636_136.icon}>
+              <div className={styles.icon}>
                 <IconFont type="icon-selected" />
               </div>
             )}
@@ -442,7 +442,7 @@ var Ct = React.memo(function () {
         </div>
         {G() ? (
           <Shared_ui_components.d
-            className={Unrestored_shared_1571_2636_136.copy}
+            className={styles.copy}
             type="primary"
             onClick={() => {
               var e = document.createElement("input")
@@ -466,7 +466,7 @@ var Ct = React.memo(function () {
             {formatMessage({ id: "OT.copyLink" })}
           </Shared_ui_components.d>
         ) : (
-          <Shared_ui_components.d className={Unrestored_shared_1571_2636_136.loadingBtn} type="primary">
+          <Shared_ui_components.d className={styles.loadingBtn} type="primary">
             <IconFont type="icon-loading2" />
           </Shared_ui_components.d>
         )}

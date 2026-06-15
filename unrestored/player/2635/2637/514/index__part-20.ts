@@ -13,7 +13,8 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_480 from /* 480 */"../../../../shared/1571/2636/684/480"
 var Ee = [
   {
@@ -38,7 +39,7 @@ var Ee = [
     number: "123 4567 8905"
   }
 ]
-var Oe = React1.memo(function () {
+var Oe = memo(function () {
   var t = useDispatch()
   var e = useSelector(function (t) {
     return t.emulatorPhoneInfo

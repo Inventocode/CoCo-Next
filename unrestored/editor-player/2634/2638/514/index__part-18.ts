@@ -13,7 +13,8 @@ import * as /* [auto-meaningful-name] */Module_219 from /* 219 */"../../../../sh
 import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Src_shared_widget_custom_externalModule from /* 347 */"../../../../../src/shared/widget/custom/external-module"
 import /* 1187 */"./1187"
@@ -61,16 +62,16 @@ var ge = [
     letter: ""
   }
 ]
-var ve = React1.memo(function () {
+var ve = memo(function () {
   var t = useDispatch()
   var e = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
-  var n = React1.useState("")
+  var n = useState("")
   var r = Module_10.a(n, 2)
   var i = r[0]
   var o = r[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     o(e.phoneNumber)
   }, [e.phoneNumber])
   var a = function (t) {

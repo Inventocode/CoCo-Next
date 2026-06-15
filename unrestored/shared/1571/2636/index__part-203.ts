@@ -7,7 +7,7 @@
 "use strict"
 
 import { we } from "./index__part-6"
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../src/shared/ui/components/Iconfont/index"
 import * as /* [auto-meaningful-name] */Module_60 from /* 60 */"./60"
 import * as /* [auto-meaningful-name] */Module_177 from /* 177 */"./177"
 import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
@@ -18,12 +18,13 @@ import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_193 from /* 193 */"./193"
 import /* [auto-meaningful-name] */Module_1931 from /* 193 */"./193"
 var SL = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$item$data
-  var n = React1.useState(false)
+  var n = useState(false)
   var r = Module_10.a(n, 2)
   var o = r[0]
   var i = r[1]
@@ -113,7 +114,7 @@ var SL = React.memo(function (e) {
   }))))
 })
 var AL = React.memo(function () {
-  var e = React1.useState("")
+  var e = useState("")
   var t = Module_10.a(e, 2)
   var n = t[0]
   var r = t[1]
@@ -123,42 +124,42 @@ var AL = React.memo(function () {
   var i = useSelector(function (e) {
     return e.project.id
   })
-  var a = React1.useState([])
+  var a = useState([])
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState([])
+  var u = useState([])
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var b = React1.useState(undefined)
+  var b = useState(undefined)
   var y = Module_10.a(b, 2)
   var E = y[0]
   var O = y[1]
-  var w = React1.useState(false)
+  var w = useState(false)
   var C = Module_10.a(w, 2)
   var T = C[0]
   var A = C[1]
   var j = function (e) {
     r(e)
   }
-  var R = React1.useCallback(function () {
+  var R = useCallback(function () {
     r("")
     g(Src_editor_redux_common_actions.tj(false))
   }, [g])
   var k = function (e) {
     return e < 10 ? "0".concat(e) : String(e)
   }
-  var x = React1.useCallback(function (e) {
+  var x = useCallback(function (e) {
     var t = new Date(e)
     return {
       date: "".concat(t.getFullYear(), "年").concat(t.getMonth() + 1, "月").concat(t.getDate(), "日"),
       time: "".concat(k(t.getHours()), ":").concat(k(t.getMinutes()), ":").concat(k(t.getSeconds()))
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (i !== E) {
       l([])
       m([])
@@ -167,10 +168,10 @@ var AL = React.memo(function () {
       R()
     }
   }, [i, E, R])
-  React1.useEffect(function () {
+  useEffect(function () {
     A(false)
   }, [n])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (E && o) {
       if (E.includes(Module_60.v)) {
         l([])

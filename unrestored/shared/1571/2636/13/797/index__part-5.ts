@@ -16,7 +16,8 @@ import * as /* [auto-meaningful-name] */Module_325 from /* 325 */"./325/index"
 import /* [auto-meaningful-name] */Module_50 from /* 50 */"../../50/index"
 import /* [auto-meaningful-name] */Module_101 from /* 101 */"./101/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { PureComponent, Component } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1199 from /* 1199 */"./1199"
 var wt = Module_1199.a && Module_1199.a.isTypedArray
 var Et = wt ? yt(wt) : mt
@@ -693,7 +694,7 @@ var An = function (e) {
     }
   ])
   return t
-}(React1.PureComponent || React1.Component)
+}(PureComponent || Component)
 var gn = function (e, t) {
   for (var n = -1, r = null == e ? 0 : e.length; ++n < r && false !== t(e[n], n, e);) {
     ;

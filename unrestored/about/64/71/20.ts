@@ -11,18 +11,18 @@ export { u as a }
 export { l as b }
 export { c as d }
 import * as /* [auto-meaningful-name] */Module_0 from /* 0 */"../73/0"
-import * as /* [auto-meaningful-name] */React from /* 13 */"react"
+import { Fragment, Children } from /* 13 */"react"
 import * as /* [auto-meaningful-name] */Module_65 from /* 65 */"../73/65"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../73/11/index"
 function s(e) {
   Module_65.a(e, "[React Intl] Could not find required `intl` object. <IntlProvider> needs to exist in the component ancestry.")
 }
 var u = Module_0.a(Module_0.a({}, Module_11.a), {
-  textComponent: React.Fragment
+  textComponent: Fragment
 })
 function l(e) {
   return function (t) {
-    return e(React.Children.toArray(t))
+    return e(Children.toArray(t))
   }
 }
 function c(e, t) {

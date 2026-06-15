@@ -7,7 +7,8 @@
 "use strict"
 
 export { l as a }
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../710"
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../../src/shared/ui/components/index"
@@ -49,6 +50,6 @@ function l(e) {
   })))))
 }
 var _b
-_b = React.memo(l)
+_b = memo(l)
 export { _b as b }
 export default l

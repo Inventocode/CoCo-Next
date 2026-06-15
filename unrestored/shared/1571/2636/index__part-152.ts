@@ -14,32 +14,33 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_622 from /* 622 */"./622"
 import /* [auto-meaningful-name] */Module_6221 from /* 622 */"./622"
-var KT = React1.memo(function () {
+var KT = memo(function () {
   var e = useDispatch()
   var t = useSelector(function (e) {
     return e.project
   })
   var /* [auto-meaningful-name] */t$packageProgress = t.packageProgress
   var /* [auto-meaningful-name] */t$isPackaging = t.isPackaging
-  var o = React1.useState(false)
+  var o = useState(false)
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var l = React1.useRef(false)
+  var l = useRef(false)
   var u = function () {
     e(Src_editor_redux_common_actions.xf())
   }
-  var d = React1.useCallback(function () {
+  var d = useCallback(function () {
     e(Src_editor_redux_common_actions.Vg())
     if (100 === t$packageProgress) {
       e(Src_editor_redux_common_actions.Hi(false))
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (100 === t$packageProgress) {
       var e = setTimeout(function () {
         s(true)
@@ -50,7 +51,7 @@ var KT = React1.memo(function () {
     }
     s(false)
   }, [t$packageProgress])
-  React1.useEffect(function () {
+  useEffect(function () {
     var t = React.createElement("div", {
       className: Classnames(Module_6221.completePackage),
       onClick: function (t) {

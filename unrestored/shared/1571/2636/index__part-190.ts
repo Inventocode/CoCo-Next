@@ -14,7 +14,7 @@ import { Yj } from "./index__part-188"
 import { Xj } from "./index__part-189"
 import /* [auto-meaningful-name] */Module_164 from /* 164 */"./164"
 var Nj
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../../../../src/shared/ui/components/dialog/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../../../../src/shared/ui/components/Dialog/index"
 import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"./64"
 import * as /* [auto-meaningful-name] */Lodash from /* 30 */"lodash"
 import * as /* [auto-meaningful-name] */Module_39 from /* 39 */"./39"
@@ -35,7 +35,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useLayoutEffect, useEffect, useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1528 from /* 1528 */"./1528"
 import /* [auto-meaningful-name] */Module_15281 from /* 1528 */"./1528"
 var Jj = ["staging", "press", "production"].includes(Src_shared_env.b()) ? {
@@ -187,7 +188,7 @@ var tN = [
     type: Module_68.d.SOUND
   }
 ]
-var nN = React1.memo(function (e) {
+var nN = memo(function (e) {
   var t
   var /* [auto-meaningful-name] */e$visible = e.visible
   var /* [auto-meaningful-name] */e$selectedIds = e.selectedIds
@@ -208,32 +209,32 @@ var nN = React1.memo(function (e) {
   var p = Module_710$a$formatMessage({
     id: "Resource.Sound"
   })
-  var m = React1.useState(e.sidebarType || Z(e.mode))
+  var m = useState(e.sidebarType || Z(e.mode))
   var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState("")
+  var y = useState("")
   var w = Module_10.a(y, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState(l)
+  var A = useState(l)
   var j = Module_10.a(A, 2)
   var R = j[0]
   var x = j[1]
-  var D = React1.useState(6)
+  var D = useState(6)
   var M = Module_10.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = React1.useState(1)
+  var B = useState(1)
   var F = Module_10.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = React1.useState(false)
+  var U = useState(false)
   var H = Module_10.a(U, 2)
   var V = H[0]
   var Y = H[1]
-  var K = React1.useRef(null)
-  var q = React1.useRef(null)
+  var K = useRef(null)
+  var q = useRef(null)
   var X = useSelector(function (e) {
     return e.resource.soundFileList
   })
@@ -250,7 +251,7 @@ var nN = React1.memo(function (e) {
         return Module_68.d.IMAGE
     }
   }
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var e = true
     if (e$visible && !V) {
       (function () {
@@ -281,12 +282,12 @@ var nN = React1.memo(function (e) {
       e = false
     }
   }, [V, e$visible])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var t = e.sidebarType || Z(e.mode)
     b(t)
     W(1)
   }, [e.mode, e.sidebarType])
-  React1.useEffect(function () {
+  useEffect(function () {
     x(l)
     W(1)
   }, [l, e$searchName])
@@ -340,7 +341,7 @@ var nN = React1.memo(function (e) {
   Module_11.a(t, Module_68.d.ICON, [eN.materialResources.icon, Q, te])
   Module_11.a(t, Module_68.d.SOUND, [eN.materialResources.sound, X, ne])
   var re = t
-  var oe = React1.useMemo(function () {
+  var oe = useMemo(function () {
     if (e$searchName) {
       return eN.getSearchMaterialList(e$searchName)
     }
@@ -406,13 +407,13 @@ var nN = React1.memo(function (e) {
       K$current.style.paddingLeft = n + "px"
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("resize", se)
     return function () {
       window.removeEventListener("resize", se)
     }
   }, [])
-  React1.useEffect(function () {
+  useEffect(function () {
     se()
   })
   return React.createElement(React.Fragment, null, e.mode !== Module_68.c.ResourceLibrary ? null : React.createElement("div", {
@@ -495,7 +496,7 @@ var nN = React1.memo(function (e) {
   e[e.Library = 0] = "Library"
   e[e.Mall = 1] = "Mall"
 }(Nj || (Nj = {}))
-var rN = React1.memo(function () {
+var rN = memo(function () {
   var e = useSelector(function (e) {
     return e.resource.resourceLibraryDialogInfo
   })
@@ -511,34 +512,34 @@ var rN = React1.memo(function () {
     Q()
     c(Src_editor_redux_common_actions.sh())
   }
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState("")
+  var g = useState("")
   var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
-  var E = React1.useState(Nj.Mall)
+  var E = useState(Nj.Mall)
   var O = Module_10.a(E, 2)
   var w = O[0]
   var C = O[1]
-  var T = React1.useState([])
+  var T = useState([])
   var A = Module_10.a(T, 2)
   var j = A[0]
   var R = A[1]
-  var k = React1.useState(false)
+  var k = useState(false)
   var D = Module_10.a(k, 2)
   var M = D[0]
   var L = D[1]
-  var P = React1.useState(false)
+  var P = useState(false)
   var B = Module_10.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = React1.useRef(null)
-  var U = React1.useRef(null)
-  var H = React1.useRef(true)
-  React1.useLayoutEffect(function () {
+  var W = useRef(null)
+  var U = useRef(null)
+  var H = useRef(true)
+  useLayoutEffect(function () {
     if (e$mode === Module_68.c.ResourceLibrary) {
       m(false)
       C(Nj.Mall)
@@ -547,12 +548,12 @@ var rN = React1.memo(function () {
       C(Nj.Library)
     }
   }, [e$mode])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (!e$visible) {
       R([])
     }
   }, [e$visible])
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var /* [auto-meaningful-name] */W$current = W.current
     if (W$current) {
       var /* [auto-meaningful-name] */W$current$scrollWidth = W$current.scrollWidth

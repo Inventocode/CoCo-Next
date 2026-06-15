@@ -10,10 +10,11 @@ import { fj, hj } from "./index__part-181"
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_815 from /* 815 */"./815"
 import /* [auto-meaningful-name] */Module_8151 from /* 815 */"./815"
-var bj = React1.memo(function (e) {
+var bj = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$source = e.source
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl

@@ -26,11 +26,12 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState, useEffect, useCallback, useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_186 from /* 186 */"./186"
 import /* [auto-meaningful-name] */Module_1861 from /* 186 */"./186"
 var /* [auto-meaningful-name] */py$Option = py.Option
-var lw = React1.memo(function (e) {
+var lw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "dataSource" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -39,12 +40,12 @@ var lw = React1.memo(function (e) {
   var a = e$getValue("templateSlotMap")
   var s = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var l = React1.useRef(null)
-  var u = React1.useState(false)
+  var l = useRef(null)
+  var u = useState(false)
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  var g = React1.useState([])
+  var g = useState([])
   var v = Module_10.a(g, 2)
   var b = v[0]
   var y = v[1]
@@ -161,7 +162,7 @@ var lw = React1.memo(function (e) {
       e$onChange("templateSlotMap", a)
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Module_42.g.get(i)
     if ((null === e || undefined === e ? undefined : e.type) === Src_editor_widget_builtIn_types.m) {
       var /* [auto-meaningful-name] */e$attributes$db = e.attributes.db
@@ -362,7 +363,7 @@ var lw = React1.memo(function (e) {
 })
 var /* [auto-meaningful-name] */py$Option1 = py.Option
 var /* [auto-meaningful-name] */py$OptGroup = py.OptGroup
-var pw = React1.memo(function (e) {
+var pw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "dataSource" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -372,16 +373,16 @@ var pw = React1.memo(function (e) {
   var s = e$getValue("templateSlotMap")
   var c = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var u = React1.useRef(null)
-  var d = React1.useState([])
+  var u = useRef(null)
+  var d = useState([])
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState(false)
+  var v = useState(false)
   var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState(false)
+  var O = useState(false)
   var w = Module_10.a(O, 2)
   var C = w[0]
   var T = w[1]
@@ -397,7 +398,7 @@ var pw = React1.memo(function (e) {
   var x = useSelector(function (e) {
     return e.oTState.isAuthor
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (a) {
       if ("string" === typeof a) {
         var e = Module_42.g.get(a)
@@ -429,10 +430,10 @@ var pw = React1.memo(function (e) {
       g([])
     }
   }, [k, a, j])
-  var M = React1.useCallback(function () {
+  var M = useCallback(function () {
     c(Src_editor_redux_common_actions.ug(e$widgetId))
   }, [c, e$widgetId])
-  var L = React1.useCallback(function (e, t) {
+  var L = useCallback(function (e, t) {
     var /* [auto-meaningful-name] */u$current
     e.stopPropagation()
     if ("string" === typeof t) {
@@ -454,7 +455,7 @@ var pw = React1.memo(function (e) {
       u$current.blur()
     }
   }, [c, M])
-  var P = React1.useMemo(function () {
+  var P = useMemo(function () {
     var e = []
     j.forEach(function (t) {
       var n = Module_42.g.get(t)

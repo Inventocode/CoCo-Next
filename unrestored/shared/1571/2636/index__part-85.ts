@@ -17,7 +17,8 @@ import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useRef, useEffect, useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_322 from /* 322 */"./322"
 import * as /* [auto-meaningful-name] */Module_82 from /* 82 */"./82"
 import * as /* [auto-meaningful-name] */Module_114 from /* 114 */"./114"
@@ -48,24 +49,24 @@ var tv = function (e) {
   var /* [auto-meaningful-name] */e$attributes$imageResizeMode = e$attributes.imageResizeMode
   var /* [auto-meaningful-name] */e$attributes$disabled = e$attributes.disabled
   var A = e$attributes$textVisible ? e$attributes$textAlign : Module_60.a.CENTER
-  var I = React1.useState(false)
+  var I = useState(false)
   var j = Module_10.a(I, 2)
   var R = j[0]
   var x = j[1]
-  var M = React1.useState(false)
+  var M = useState(false)
   var L = Module_10.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React1.useRef(null)
-  var G = React1.useRef(null)
-  React1.useEffect(function () {
+  var F = useRef(null)
+  var G = useRef(null)
+  useEffect(function () {
     var /* [auto-meaningful-name] */F$current = F.current
     if (F$current && R) {
       F$current.innerText = e$attributes$text
       Module_64.b(F$current)
     }
   }, [R])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!e$selected) {
       x(false)
     }
@@ -87,7 +88,7 @@ var tv = function (e) {
   Y = Math.floor(Y)
   var K = Module_33.hb(e$attributes$backgroundImage)
   var q = Src_shared_tools_index.U(e$attributes$backgroundImage) ? e$attributes$backgroundImage : K ? (null === K || undefined === K ? undefined : K.source) || (null === K || undefined === K ? undefined : K.cdnUrl) : Module_82.f
-  var X = React1.useMemo(function () {
+  var X = useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}

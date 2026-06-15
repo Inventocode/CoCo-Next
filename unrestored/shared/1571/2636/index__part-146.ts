@@ -22,29 +22,30 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState, useEffect, useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1522 from /* 1522 */"./1522"
 import * as /* [auto-meaningful-name] */Module_207 from /* 207 */"./207/index"
 import * as /* [auto-meaningful-name] */Module_1523 from /* 1523 */"./1523/index"
 import * as /* [auto-meaningful-name] */Module_43 from /* 43 */"./43"
 import * as /* [auto-meaningful-name] */Module_1059 from /* 1059 */"./1059"
 import /* [auto-meaningful-name] */Module_10591 from /* 1059 */"./1059"
-var pT = React1.memo(function () {
-  var e = React1.useRef(null)
+var pT = memo(function () {
+  var e = useRef(null)
   var t = useDispatch()
-  var n = React1.useState(100)
+  var n = useState(100)
   var r = Module_10.a(n, 2)
   var o = r[0]
   var i = r[1]
   var a = useSelector(function (e) {
     return e.block.slider
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = parseInt(a.value)
     e = (e = e > a.max ? a.max : e) < a.min ? a.min : e
     i(e)
   }, [a])
-  React1.useEffect(function () {
+  useEffect(function () {
     function n(r) {
       var /* [auto-meaningful-name] */r$target = r.target
       var /* [auto-meaningful-name] */e$current = e.current
@@ -91,14 +92,14 @@ var pT = React1.memo(function () {
     className: Module_10591.rightSliderText
   }, a.maxText))
 })
-var fT = React1.memo(function (e) {
+var fT = memo(function (e) {
   var /* [auto-meaningful-name] */e$options = e.options
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var r = useDispatch()
   var o = useSelector(function (e) {
     return e.block.dropdown
   })
-  var i = React1.useMemo(function () {
+  var i = useMemo(function () {
     return e$options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -173,26 +174,26 @@ var fT = React1.memo(function (e) {
     }
   }))
 })
-var hT = React1.memo(function (e) {
+var hT = memo(function (e) {
   var /* [auto-meaningful-name] */e$group = e.group
   var /* [auto-meaningful-name] */e$group$name = e$group.name
   var /* [auto-meaningful-name] */e$group$options = e$group.options
-  var o = React1.useRef(null)
+  var o = useRef(null)
   var i = useSelector(function (e) {
     return e.block.dropdown
   })
-  var a = React1.useState("right")
+  var a = useState("right")
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
   var g = e$group$options.some(function (e) {
     return "value" in e && e.value === i.value || Array.isArray(e) && e[1] === i.value
   })
-  var v = React1.useMemo(function () {
+  var v = useMemo(function () {
     return Lodash.debounce(m, 100)
   }, [])
   return React.createElement("div", {
@@ -250,7 +251,7 @@ var hT = React1.memo(function (e) {
   }))))
 })
 var /* [auto-meaningful-name] */__EMPTY_VALUE__ = "__EMPTY_VALUE__"
-var gT = React1.memo(function () {
+var gT = memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
   var n = useSelector(function (e) {
@@ -259,7 +260,7 @@ var gT = React1.memo(function () {
   var r = useSelector(function (e) {
     return e.project.currentScreenIndex
   })
-  var o = React1.useMemo(function () {
+  var o = useMemo(function () {
     return n.options.some(function (e) {
       var /* [auto-meaningful-name] */e$icon
       var n
@@ -358,7 +359,7 @@ var gT = React1.memo(function () {
     }
   }))
 })
-var _T = React1.memo(function (e) {
+var _T = memo(function (e) {
   var /* [auto-meaningful-name] */e$type = e.type
   var n = useSelector(function (e) {
     return e.block.dropdown
@@ -403,7 +404,7 @@ var _T = React1.memo(function (e) {
     id: "emptyImage"
   })))
 })
-var vT = React1.memo(function () {
+var vT = memo(function () {
   var e = useSelector(function (e) {
     return e.block.dropdown
   })

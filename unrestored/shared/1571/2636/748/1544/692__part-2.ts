@@ -11,7 +11,7 @@ import { T, D } from "./692__part-1"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_698 from /* 698 */"../../1048/698"
 import * as /* [auto-meaningful-name] */Module_1030 from /* 1030 */"./1030"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { Component, forwardRef, useRef, useCallback, createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../107"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
@@ -36,7 +36,7 @@ var N = function (e) {
     }
   ])
   return n
-}(React.Component)
+}(Component)
 var M = function (e) {
   var t = e
   function n(e) {
@@ -45,7 +45,7 @@ var M = function (e) {
   if ("object" === Module_107.a(e)) {
     t = e.transitionSupport
   }
-  var l = React.forwardRef(function (e, t) {
+  var l = forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */e$visible = e.visible
     var l = undefined === e$visible || e$visible
     var /* [auto-meaningful-name] */e$removeOnLeave = e.removeOnLeave
@@ -56,8 +56,8 @@ var M = function (e) {
     var /* [auto-meaningful-name] */e$leavedClassName = e.leavedClassName
     var /* [auto-meaningful-name] */e$eventProps = e.eventProps
     var m = n(e)
-    var y = React.useRef()
-    var b = React.useRef()
+    var y = useRef()
+    var b = useRef()
     var w = D(m, l, function () {
       try {
         return Module_1030.a(y.current || b.current)
@@ -70,14 +70,14 @@ var M = function (e) {
     var O = E[1]
     var k = E[2]
     var S = E[3]
-    var B = React.useRef(S)
+    var B = useRef(S)
     if (S) {
       B.current = true
     }
-    var I = React.useRef(t)
+    var I = useRef(t)
     I.current = t
     var R
-    var F = React.useCallback(function (e) {
+    var F = useCallback(function (e) {
       y.current = e
       Module_698.b(I.current, e)
     }, [])
@@ -115,7 +115,7 @@ var M = function (e) {
     } else {
       R = null
     }
-    return React.createElement(N, {
+    return createElement(N, {
       ref: b
     }, R)
   })

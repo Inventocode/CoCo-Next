@@ -6,7 +6,8 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import /* 50 */"../../../50/index"
 import * as /* [auto-meaningful-name] */Module_278 from /* 278 */"../../278"

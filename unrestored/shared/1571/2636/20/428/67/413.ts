@@ -14,18 +14,19 @@ import * as /* [auto-meaningful-name] */Module_206 from /* 206 */"../../../206"
 import * as /* [auto-meaningful-name] */Src_shared_tools_index from /* 15 */"../../../../../../../src/shared/tools/index"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import { useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */Color from /* 51 */"color"
 export { ze as c }
 export { Ye as b }
 var _a
-_a = React1.memo(function (e) {
+_a = memo(function (e) {
   var t = e.id
   var n = useSelector(function (e) {
     return e.widgetMap
   })
-  var r = React1.useRef({
+  var r = useRef({
     x: 0,
     y: 0
   })
@@ -49,10 +50,10 @@ _a = React1.memo(function (e) {
       m++
     }
   })
-  var v = React1.useCallback(function (e) {
+  var v = useCallback(function (e) {
     Module_20.emitScreenOpen(e, h)
   }, [h])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (0 === m) {
       v(t)
     }
@@ -69,7 +70,7 @@ _a = React1.memo(function (e) {
       Module_20.offDeviceShake(e)
     }
   }, [m, t, v])
-  var b = React1.useCallback(function (e) {
+  var b = useCallback(function (e) {
     if (++g >= m) {
       v(t)
     }

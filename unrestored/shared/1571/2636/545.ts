@@ -8,7 +8,8 @@
 
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"./6"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
 import /* [auto-meaningful-name] */Color1 from /* 51 */"color"

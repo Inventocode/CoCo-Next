@@ -13,10 +13,11 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_813 from /* 813 */"./813"
 import /* [auto-meaningful-name] */Module_8131 from /* 813 */"./813"
-var PS = React1.memo(function () {
+var PS = memo(function () {
   var e = undefined !== Src_shared_tools_index.N(window.location.href).archiveId
   var t = useSelector(function (e) {
     return e.common.floatMiniIcons
@@ -24,7 +25,7 @@ var PS = React1.memo(function () {
   var /* [auto-meaningful-name] */t$fixedIcons = t.fixedIcons
   var /* [auto-meaningful-name] */t$temporaryIcons = t.temporaryIcons
   var o = useDispatch()
-  React1.useEffect(function () {
+  useEffect(function () {
     o(Src_editor_redux_common_actions.cf({
       name: "debugIcon",
       icon: "icon-data",

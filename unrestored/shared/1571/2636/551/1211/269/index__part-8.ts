@@ -12,9 +12,9 @@ import * as /* [auto-meaningful-name] */Module_1065 from /* 1065 */"../789/1065"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../../54"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../98"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, createElement } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_2642 from /* 2642 */"../699/2642"
-var je = React.forwardRef(function (e, t) {
+var je = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
@@ -35,12 +35,12 @@ var je = React.forwardRef(function (e, t) {
   if (m && !y) {
     y = m.variant
   }
-  return React.createElement(E.Provider, {
+  return createElement(E.Provider, {
     value: null
-  }, React.createElement(f, Module_19.a({
+  }, createElement(f, Module_19.a({
     className: Module_98.a(e$classes.root, e$className, "end" === e$position ? e$classes.positionEnd : e$classes.positionStart, h && e$classes.disablePointerEvents, m.hiddenLabel && e$classes.hiddenLabel, "filled" === y && e$classes.filled, "dense" === m.margin && e$classes.marginDense),
     ref: t
-  }, v), "string" !== typeof e$children || _ ? e$children : React.createElement(Module_1065.a, {
+  }, v), "string" !== typeof e$children || _ ? e$children : createElement(Module_1065.a, {
     color: "textSecondary"
   }, e$children)))
 })

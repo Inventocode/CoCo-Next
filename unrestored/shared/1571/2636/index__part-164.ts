@@ -18,13 +18,14 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_341 from /* 341 */"./341"
 import /* [auto-meaningful-name] */Module_3411 from /* 341 */"./341"
 var /* [auto-meaningful-name] */Module_431$a$AudioPlayer = Module_431.a.AudioPlayer
 var bA = {}
 var yA = {}
-var EA = React1.memo(function (e) {
+var EA = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
   var /* [auto-meaningful-name] */e$name = e.name
@@ -33,7 +34,7 @@ var EA = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var c = useDispatch()
-  var l = React1.useState(0)
+  var l = useState(0)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]
@@ -50,7 +51,7 @@ var EA = React1.memo(function (e) {
     var t = Src_shared_tools_index.I(e)
     return [e.slice(0, e.lastIndexOf(t)), t]
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     return function () {
       if (e$isPlaying && bA[t]) {
         if (yA[t]) {

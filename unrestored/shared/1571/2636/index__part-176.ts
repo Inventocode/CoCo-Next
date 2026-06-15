@@ -20,7 +20,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useState, useEffect, memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_619 from /* 619 */"./619"
 import /* [auto-meaningful-name] */Module_6191 from /* 619 */"./619"
 var PI = function (e) {
@@ -28,23 +29,23 @@ var PI = function (e) {
     return e.project.globalWidgetIds
   })
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var r = React1.useRef(null)
-  var o = React1.useState(e.gridName)
+  var r = useRef(null)
+  var o = useState(e.gridName)
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useState("")
+  var p = useState("")
   var m = Module_10.a(p, 2)
   var g = m[0]
   var v = m[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     s(e.gridName)
   }, [e.gridName])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (u && r.current) {
       r.current.focus()
     }
@@ -134,7 +135,7 @@ var PI = function (e) {
     type: "icon-edit"
   }))))
 }
-var BI = React1.memo(function () {
+var BI = memo(function () {
   var e = useSelector(function (e) {
     return e.common.gridDialog
   })
@@ -144,27 +145,27 @@ var BI = React1.memo(function () {
   var /* [auto-meaningful-name] */e$isCreateNewGrid = e.isCreateNewGrid
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = useDispatch()
-  var s = React1.useState(false)
+  var s = useState(false)
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState()
+  var d = useState()
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]
-  var v = React1.useState("")
+  var v = useState("")
   var b = Module_10.a(v, 2)
   var y = b[0]
   var E = b[1]
-  var O = React1.useState({})
+  var O = useState({})
   var w = Module_10.a(O, 2)
   var C = w[0]
   var T = w[1]
-  var A = React1.useState([])
+  var A = useState([])
   var j = Module_10.a(A, 2)
   var N = j[0]
   var R = j[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       a(Src_editor_redux_common_actions.ki("grid"))
       E(e$grid.name)

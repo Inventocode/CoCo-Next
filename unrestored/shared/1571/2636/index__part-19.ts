@@ -11,10 +11,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_188 from /* 188 */"./188"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_931 from /* 931 */"./931"
 import /* [auto-meaningful-name] */Module_9311 from /* 931 */"./931"
-var cn = React1.memo(function (e) {
+var cn = memo(function (e) {
   var /* [auto-meaningful-name] */e$networkErrorVisible = e.networkErrorVisible
   var /* [auto-meaningful-name] */e$title = e.title
   var o = undefined === e$title ? "" : e$title

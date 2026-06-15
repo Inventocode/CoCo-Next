@@ -13,8 +13,6 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    -webkit-user-select: none;
-    -ms-user-select: none;
     user-select: none
 }
 
@@ -31,7 +29,7 @@
     justify-content: center
 }
 
-.left,.logoBox {
+.left, .logoBox {
     display: flex;
     align-items: center;
     height: 100%
@@ -48,7 +46,6 @@
     margin-right: 4px;
     color: #eddbff;
     font-size: 8px;
-    -webkit-transform: rotate(90deg);
     transform: rotate(90deg)
 }
 
@@ -122,14 +119,6 @@ ul.tool li {
     color: var(--primary-color-9)
 }
 
-.input::-webkit-input-placeholder {
-    color: var(--primary-color-9)
-}
-
-.input:-ms-input-placeholder {
-    color: var(--primary-color-9)
-}
-
 .input::placeholder {
     color: var(--primary-color-9)
 }
@@ -154,7 +143,7 @@ ul.tool li {
     cursor: pointer
 }
 
-.iconWrapper:active,.iconWrapper:hover {
+.iconWrapper:active, .iconWrapper:hover {
     background: #5439ce;
     border-radius: 4px
 }
@@ -230,7 +219,6 @@ ul.tool li {
     font-size: 16px;
     margin-left: 5px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     left: 26px;
     pointer-events: none
@@ -239,7 +227,7 @@ ul.tool li {
 .packageBtn {
     width: 60px;
     height: 34px;
-    border: 1px solid hsla(0,0%,100%,.5);
+    border: 1px solid hsla(0, 0%, 100%, .5);
     background-color: transparent;
     margin-right: 4px;
     font-size: 14px;
@@ -252,8 +240,8 @@ ul.tool li {
     z-index: 3
 }
 
-.packageBtn:not(:disabled):active,.packageBtn:not(:disabled):hover {
-    border-color: hsla(0,0%,100%,.5);
+.packageBtn:not(:disabled):active, .packageBtn:not(:disabled):hover {
+    border-color: hsla(0, 0%, 100%, .5);
     background: #5439ce
 }
 
@@ -297,7 +285,7 @@ ul.tool li {
     opacity: .6
 }
 
-.menu :global(.coco-button),.menu :global(.coco-menu-item) {
+.menu :global(.coco-button), .menu :global(.coco-menu-item) {
     padding: 0
 }
 
@@ -316,7 +304,7 @@ ul.tool li {
     right: 8px
 }
 
-.menu :global(.coco-dropdown-active),.menu :global(.coco-dropdown-selector):hover {
+.menu :global(.coco-dropdown-active), .menu :global(.coco-dropdown-selector):hover {
     background: #5439ce
 }
 
@@ -336,21 +324,20 @@ ul.tool li {
     position: absolute;
     right: 8px;
     top: 50%;
-    -webkit-transform: translateY(-50%);
     transform: translateY(-50%);
     font-size: 16px
 }
 
 .projectTitleWrapper .projectTitle {
     border-radius: 6px;
-    border: 1px solid hsla(0,0%,100%,.3);
+    border: 1px solid hsla(0, 0%, 100%, .3);
     transition: all .2s;
-    color: hsla(0,0%,100%,.8);
+    color: hsla(0, 0%, 100%, .8);
     padding-right: 26px
 }
 
 .projectTitleWrapper .projectTitle ::-webkit-input-placeholder {
-    color: hsla(0,0%,100%,.5)
+    color: hsla(0, 0%, 100%, .5)
 }
 
 .projectTitleWrapper .projectTitle:hover {
@@ -385,7 +372,7 @@ ul.tool li {
     z-index: 3
 }
 
-.saveBtn .savingIcon,.saving .saveText {
+.saveBtn .savingIcon, .saving .saveText {
     display: none
 }
 
@@ -440,7 +427,7 @@ ul.tool li {
     font-size: 18px;
     text-align: center;
     border-radius: 50%;
-    background: hsla(0,0%,100%,.5);
+    background: hsla(0, 0%, 100%, .5);
     cursor: pointer
 }
 

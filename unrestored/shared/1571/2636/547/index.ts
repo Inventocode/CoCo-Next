@@ -6,13 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Module_111 from /* 11 */"../11"
+import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
 import * as /* [auto-meaningful-name] */Module_27 from /* 27 */"../27"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
@@ -111,12 +112,12 @@ function S(e) {
   var h
   var m = e$attributes$url
   var g = m.startsWith("http://") && !Module_28.d()
-  var _ = React.useState("loading")
+  var _ = useState("loading")
   var b = Module_10.a(_, 2)
   var w = b[0]
   var S = b[1]
-  var A = React.useRef(null)
-  React.useEffect(function () {
+  var A = useRef(null)
+  useEffect(function () {
     if (g) {
       S("http-protocol-error")
     } else {
@@ -220,7 +221,7 @@ _a = function (e) {
     "data-max-width": Module_75.e,
     "data-max-height": Module_75.d,
     "data-min-height": Module_262.b,
-    className: Classnames1(Module_1761.webViewWidget, Module_90.b, Module_111.a({}, Module_1761.hide, !e$visible)),
+    className: Classnames1(Module_1761.webViewWidget, Module_90.b, Module_11.a({}, Module_1761.hide, !e$visible)),
     style: {
       top: e$position.y,
       left: e$position.x,

@@ -26,9 +26,10 @@ import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../98"
 import * as /* [auto-meaningful-name] */Module_278 from /* 278 */"../../278"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { forwardRef, createElement, useCallback, cloneElement, useEffect, Fragment, Component } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_233 from /* 233 */"./233"
-var D = React1.forwardRef(function (e, t) {
+var D = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$color = e.color
@@ -55,7 +56,7 @@ var D = React1.forwardRef(function (e, t) {
     w.strokeDashoffset = "".concat(((100 - v) / 100 * C).toFixed(3), "px")
     E.transform = "rotate(-90deg)"
   }
-  return React1.createElement("div", Module_19.a({
+  return createElement("div", Module_19.a({
     className: Module_98.a(e$classes.root, e$className, "inherit" !== u && e$classes["color".concat(Module_233.a(u))], {
       determinate: e$classes.determinate,
       indeterminate: e$classes.indeterminate,
@@ -67,10 +68,10 @@ var D = React1.forwardRef(function (e, t) {
     }, E, e$style),
     ref: t,
     role: "progressbar"
-  }, x, b), React1.createElement("svg", {
+  }, x, b), createElement("svg", {
     className: e$classes.svg,
     viewBox: "".concat(22, " ").concat(22, " ").concat(44, " ").concat(44)
-  }, React1.createElement("circle", {
+  }, createElement("circle", {
     className: Module_98.a(e$classes.circle, f && e$classes.circleDisableShrink, {
       determinate: e$classes.circleDeterminate,
       indeterminate: e$classes.circleIndeterminate,
@@ -167,10 +168,10 @@ var N = function (e) {
   var /* [auto-meaningful-name] */e$onSelect = e.onSelect
   var /* [auto-meaningful-name] */e$dayInCurrentMonth = e.dayInCurrentMonth
   var u = Module_54.a(e, ["children", "value", "disabled", "onSelect", "dayInCurrentMonth"])
-  var l = React1.useCallback(function () {
+  var l = useCallback(function () {
     return e$onSelect(e$value)
   }, [e$onSelect, e$value])
-  return React1.createElement("div", Module_19.a({
+  return createElement("div", Module_19.a({
     role: "presentation",
     onClick: e$dayInCurrentMonth && !e$disabled ? l : undefined,
     onKeyPress: e$dayInCurrentMonth && !e$disabled ? l : undefined
@@ -234,14 +235,14 @@ var L = function (e) {
     enter: c["slideEnter-" + e$slideDirection],
     exitActive: c["slideExitActiveLeft-" + e$slideDirection]
   }
-  return React1.createElement(Module_2683.a, {
+  return createElement(Module_2683.a, {
     className: Module_98.a(c.transitionContainer, s),
     childFactory: function (e) {
-      return React1.cloneElement(e, {
+      return cloneElement(e, {
         classNames: u
       })
     }
-  }, React1.createElement(T, {
+  }, createElement(T, {
     mountOnEnter: true,
     unmountOnExit: true,
     key: e$transKey + e$slideDirection,
@@ -297,31 +298,31 @@ var U = function (e) {
   var A = Module_278.b()
   var g = j()
   var v = "rtl" === Module_690.a().direction
-  return React1.createElement("div", null, React1.createElement("div", {
+  return createElement("div", null, createElement("div", {
     className: g.switchHeader
-  }, React1.createElement(Module_2642.a, Module_19.a({}, e$leftArrowButtonProps, {
+  }, createElement(Module_2642.a, Module_19.a({}, e$leftArrowButtonProps, {
     disabled: e$disablePrevMonth,
     onClick: function () {
       return e$onMonthChange(A.getPreviousMonth(e$currentMonth), "right")
     },
     className: g.iconButton
-  }), v ? e$rightArrowIcon : e$leftArrowIcon), React1.createElement(L, {
+  }), v ? e$rightArrowIcon : e$leftArrowIcon), createElement(L, {
     slideDirection: e$slideDirection,
     transKey: e$currentMonth.toString(),
     className: g.transitionContainer
-  }, React1.createElement(Module_1065.a, {
+  }, createElement(Module_1065.a, {
     align: "center",
     variant: "body1"
-  }, A.getCalendarHeaderText(e$currentMonth))), React1.createElement(Module_2642.a, Module_19.a({}, e$rightArrowButtonProps, {
+  }, A.getCalendarHeaderText(e$currentMonth))), createElement(Module_2642.a, Module_19.a({}, e$rightArrowButtonProps, {
     disabled: e$disableNextMonth,
     onClick: function () {
       return e$onMonthChange(A.getNextMonth(e$currentMonth), "left")
     },
     className: g.iconButton
-  }), v ? e$leftArrowIcon : e$rightArrowIcon)), React1.createElement("div", {
+  }), v ? e$leftArrowIcon : e$rightArrowIcon)), createElement("div", {
     className: g.daysHeader
   }, A.getWeekdays().map(function (e, t) {
-    return React1.createElement(Module_1065.a, {
+    return createElement(Module_1065.a, {
       key: t,
       variant: "caption",
       className: g.dayLabel
@@ -330,7 +331,7 @@ var U = function (e) {
 }
 U.displayName = "CalendarHeader"
 U.defaultProps = {
-  leftArrowIcon: React1.createElement(function (e) {
+  leftArrowIcon: createElement(function (e) {
     return React.createElement(Module_2679.a, e, React.createElement("path", {
       d: "M15.41 16.59L10.83 12l4.58-4.59L14 6l-6 6 6 6 1.41-1.41z"
     }), React.createElement("path", {
@@ -338,7 +339,7 @@ U.defaultProps = {
       d: "M0 0h24v24H0V0z"
     }))
   }, null),
-  rightArrowIcon: React1.createElement(function (e) {
+  rightArrowIcon: createElement(function (e) {
     return React.createElement(Module_2679.a, e, React.createElement("path", {
       d: "M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z"
     }), React.createElement("path", {
@@ -351,7 +352,7 @@ U.defaultProps = {
 }
 var H = function (e) {
   var /* [auto-meaningful-name] */e$onKeyDown = e.onKeyDown
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("keydown", e$onKeyDown)
     return function () {
       window.removeEventListener("keydown", e$onKeyDown)
@@ -473,7 +474,7 @@ var V = function (e) {
       var /* [auto-meaningful-name] */n$props$utils = n$props.utils
       var /* [auto-meaningful-name] */n$props$classes = n$props.classes
       return n$props$utils.getWeekArray(n.state.currentMonth).map(function (e) {
-        return React1.createElement("div", {
+        return createElement("div", {
           key: "week-".concat(e[0].toString()),
           className: n$props$classes.week
         }, n.renderDays(e))
@@ -490,7 +491,7 @@ var V = function (e) {
       return e.map(function (e) {
         var t = n.shouldDisableDate(e)
         var i = n$props$utils.getMonth(e) === u
-        var l = React1.createElement(Module_1005.a, {
+        var l = createElement(Module_1005.a, {
           disabled: t,
           current: n$props$utils.isSameDay(e, s),
           hidden: !i,
@@ -499,7 +500,7 @@ var V = function (e) {
         if (n$props$renderDay) {
           l = n$props$renderDay(e, c, i, l)
         }
-        return React1.createElement(N, {
+        return createElement(N, {
           value: e,
           key: e.toString(),
           disabled: t,
@@ -587,10 +588,10 @@ var V = function (e) {
         var /* [auto-meaningful-name] */this$props$rightArrowButtonProps = this$props.rightArrowButtonProps
         var /* [auto-meaningful-name] */this$props$rightArrowIcon = this$props.rightArrowIcon
         var /* [auto-meaningful-name] */this$props$loadingIndicator = this$props.loadingIndicator
-        var d = this$props$loadingIndicator || React1.createElement(I, null)
-        return React1.createElement(React1.Fragment, null, this$props$allowKeyboardControl && "static" !== this.context && React1.createElement(H, {
+        var d = this$props$loadingIndicator || createElement(I, null)
+        return createElement(Fragment, null, this$props$allowKeyboardControl && "static" !== this.context && createElement(H, {
           onKeyDown: this.handleKeyDown
-        }), React1.createElement(U, {
+        }), createElement(U, {
           currentMonth: this$state$currentMonth,
           slideDirection: this$state$slideDirection,
           onMonthChange: this.handleChangeMonth,
@@ -600,13 +601,13 @@ var V = function (e) {
           rightArrowButtonProps: this$props$rightArrowButtonProps,
           disablePrevMonth: this.shouldDisablePrevMonth(),
           disableNextMonth: this.shouldDisableNextMonth()
-        }), React1.createElement(L, {
+        }), createElement(L, {
           slideDirection: this$state$slideDirection,
           transKey: this$state$currentMonth.toString(),
           className: this$props$classes.transitionContainer
-        }, React1.createElement(React1.Fragment, null, this.state.loadingQueue > 0 && React1.createElement("div", {
+        }, createElement(Fragment, null, this.state.loadingQueue > 0 && createElement("div", {
           className: this$props$classes.progressContainer
-        }, d) || React1.createElement("div", null, this.renderWeeks()))))
+        }, d) || createElement("div", null, this.renderWeeks()))))
       }
     }
   ], [
@@ -630,7 +631,7 @@ var V = function (e) {
     }
   ])
   return t
-}(React1.Component)
+}(Component)
 V.contextType = Module_316.b
 V.defaultProps = {
   minDate: new Date("1900-01-01"),
@@ -663,7 +664,7 @@ var G = Module_154.a(function (e) {
 })(function (e) {
   var t = function (t) {
     var n = Module_278.b()
-    return React1.createElement(e, Module_19.a({
+    return createElement(e, Module_19.a({
       utils: n
     }, t))
   }

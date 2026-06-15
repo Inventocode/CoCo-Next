@@ -6,7 +6,7 @@
 
 "use strict"
 
-import { Xr } from "../../../../src/editor/ui/preview-area/screen-list/index"
+import { Xr } from "../../../../src/editor/ui/PreviewArea/screen-list/index"
 import { $v } from "./index__part-91"
 import { nb } from "./index__part-92"
 import /* [auto-meaningful-name] */Module_88 from /* 88 */"./88"
@@ -22,10 +22,11 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_747 from /* 747 */"./747"
 import /* [auto-meaningful-name] */Module_7471 from /* 747 */"./747"
-var wy = React1.memo(function () {
+var wy = memo(function () {
   var e = useDispatch()
   var t = Module_238.b()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
@@ -33,7 +34,7 @@ var wy = React1.memo(function () {
   var o = useSelector(function (e) {
     return e.project.screens
   })
-  var i = React1.useState(false)
+  var i = useState(false)
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]

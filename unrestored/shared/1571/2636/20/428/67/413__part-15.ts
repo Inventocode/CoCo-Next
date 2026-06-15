@@ -10,7 +10,7 @@ import * as /* [auto-meaningful-name] */Module_145 from /* 145 */"../../../145"
 import * as /* [auto-meaningful-name] */Module_12 from /* 12 */"../12"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../10/index"
 import * as /* [auto-meaningful-name] */Module_20 from /* 20 */"../../index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useCallback, useEffect, useLayoutEffect } from /* 0 */"react"
 import { useSelector } from /* 16 */"react-redux"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
@@ -32,11 +32,11 @@ var xe = function (e) {
   var /* [auto-meaningful-name] */o$attributes$cursorShape = o$attributes.cursorShape
   var h = undefined === o$attributes$cursorShape ? Module_286.a.NONE : o$attributes$cursorShape
   var m = t
-  var g = React.useState(true)
+  var g = useState(true)
   var _ = Module_10.a(g, 2)
   var v = _[0]
   var b = _[1]
-  var y = React.useCallback(Module_7.a(RegeneratorRuntime1.mark(function e() {
+  var y = useCallback(Module_7.a(RegeneratorRuntime1.mark(function e() {
     var n
     return RegeneratorRuntime1.wrap(function (e) {
       for (;;) {
@@ -65,10 +65,10 @@ var xe = function (e) {
       }
     }, e)
   })), [])
-  React.useEffect(function () {
+  useEffect(function () {
     y()
   }, [y])
-  var E = React.useCallback(Module_7.a(RegeneratorRuntime1.mark(function e() {
+  var E = useCallback(Module_7.a(RegeneratorRuntime1.mark(function e() {
     var t
     var /* [auto-meaningful-name] */t$attributes$coordinateRatio
     var o
@@ -105,12 +105,12 @@ var xe = function (e) {
       }
     }, e)
   })), [m, o$attributes$color, h, e$parentId, o$attributes$penSize])
-  React.useEffect(function () {
+  useEffect(function () {
     if (!v) {
       E()
     }
   }, [v, E])
-  React.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (!v) {
       var e = Module_20.getActor(t)
       if (e) {
@@ -118,7 +118,7 @@ var xe = function (e) {
       }
     }
   }, [t, v, p])
-  React.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     if (!v) {
       var e = Module_20.getActor(t)
       if (e) {

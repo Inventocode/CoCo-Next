@@ -13,13 +13,14 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_332 from /* 332 */"./332"
 import /* [auto-meaningful-name] */Module_3321 from /* 332 */"./332"
 var /* [auto-meaningful-name] */Module_431$a$AudioPlayer = Module_431.a.AudioPlayer
 var wj = {}
 var Cj = {}
-var Tj = React1.memo(function (e) {
+var Tj = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$name = e.name
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
@@ -27,7 +28,7 @@ var Tj = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$duration = e.duration
   var /* [auto-meaningful-name] */e$isPlaying = e.isPlaying
   var /* [auto-meaningful-name] */e$isSelect = e.isSelect
-  var c = React1.useState(0)
+  var c = useState(0)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
@@ -66,7 +67,7 @@ var Tj = React1.memo(function (e) {
       clearInterval(wj[t])
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     return function () {
       if (e$isPlaying && wj[t]) {
         if (Cj[t]) {

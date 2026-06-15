@@ -8,7 +8,7 @@
 
 import * as /* [auto-meaningful-name] */Module_224 from /* 224 */"./224/index"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"./21"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, forwardRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_803 from /* 803 */"./803"
 import * as /* [auto-meaningful-name] */Module_1044 from /* 1044 */"./1044"
 var oy = {
@@ -31,11 +31,11 @@ var oy = {
   theme: "outlined"
 }
 var iy = function (e, t) {
-  return React.createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
+  return createElement(Module_224.a, Module_21.a(Module_21.a({}, e), {}, {
     ref: t,
     icon: oy
   }))
 }
 iy.displayName = "SearchOutlined"
-var ay = React.forwardRef(iy)
+var ay = forwardRef(iy)
 export { ay }

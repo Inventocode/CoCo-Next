@@ -25,8 +25,8 @@ import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../7"
-import * as /* [auto-meaningful-name] */Module_280 from /* 280 */"xlsx"
-import /* [auto-meaningful-name] */Module_2801 from /* 280 */"xlsx"
+import * as c from /* 280 */"xlsx"
+import l from /* 280 */"xlsx"
 import * as /* [auto-meaningful-name] */Src_shared_ui_language from /* 23 */"../../../../../src/shared/ui/language"
 import * as /* [auto-meaningful-name] */Module_64 from /* 64 */"../64"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"../53"
@@ -367,15 +367,15 @@ function D() {
                       switch (t.prev = t.next) {
                         case 0:
                           if ((v$result = v.result) && "string" !== typeof v$result) {
-                            for (r = Module_2801.read(v$result, {
+                            for (r = l.read(v$result, {
                               type: "array"
-                            }), o = r.Sheets[r.SheetNames[0]], i = Module_2801.utils.decode_range(o["!ref"] || ""), s = i.s.r; s <= i.e.r; ++s) {
+                            }), o = r.Sheets[r.SheetNames[0]], i = l.utils.decode_range(o["!ref"] || ""), s = i.s.r; s <= i.e.r; ++s) {
                               for (c = i.s.c; c <= i.e.c; ++c) {
                                 u = {
                                   c: c,
                                   r: s
                                 }
-                                d = Module_2801.utils.encode_cell(u)
+                                d = l.utils.encode_cell(u)
                                 if ((p = o[d]) && p.h) {
                                   p.w = undefined
                                   p.v = p.h
@@ -385,7 +385,7 @@ function D() {
                                 }
                               }
                             }
-                            f = Module_2801.utils.sheet_to_json(o, {
+                            f = l.utils.sheet_to_json(o, {
                               header: 1
                             })
                             h = L(f, _)
@@ -442,15 +442,15 @@ var M = function () {
                       switch (t.prev = t.next) {
                         case 0:
                           if ((o$result = o.result) && "string" !== typeof o$result) {
-                            for (i = Module_2801.read(o$result, {
+                            for (i = l.read(o$result, {
                               type: "array"
-                            }), s = i.Sheets[i.SheetNames[0]], c = Module_2801.utils.decode_range(s["!ref"] || ""), u = c.s.r; u <= c.e.r; ++u) {
+                            }), s = i.Sheets[i.SheetNames[0]], c = l.utils.decode_range(s["!ref"] || ""), u = c.s.r; u <= c.e.r; ++u) {
                               for (d = c.s.c; d <= c.e.c; ++d) {
                                 p = {
                                   c: d,
                                   r: u
                                 }
-                                f = Module_2801.utils.encode_cell(p)
+                                f = l.utils.encode_cell(p)
                                 if ((h = s[f]) && h.w && h.w.length > 1e3) {
                                   r({
                                     error: "cell length larger than 1000"
@@ -465,7 +465,7 @@ var M = function () {
                                 }
                               }
                             }
-                            m = Module_2801.utils.sheet_to_json(s, {
+                            m = l.utils.sheet_to_json(s, {
                               header: 1
                             })
                             g = L(m, "test", true)

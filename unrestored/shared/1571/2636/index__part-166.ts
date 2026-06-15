@@ -14,10 +14,11 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_752 from /* 752 */"./752"
 import /* [auto-meaningful-name] */Module_7521 from /* 752 */"./752"
-var IA = React1.memo(function (e) {
+var IA = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$cdnUrl = e.cdnUrl
   var /* [auto-meaningful-name] */e$name = e.name

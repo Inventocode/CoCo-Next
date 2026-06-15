@@ -21,34 +21,35 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_72 from /* 72 */"../../../../shared/1571/2636/48/72"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Module_360 from /* 360 */"../../../../shared/1571/2636/685/360"
-var je = React1.memo(function () {
+var je = memo(function () {
   var t = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
-  var r = React1.useState(n.sendSmsNumber)
+  var r = useState(n.sendSmsNumber)
   var i = Module_10.a(r, 2)
   var o = i[0]
   var a = i[1]
-  var s = React1.useState(n.sendSmsContent)
+  var s = useState(n.sendSmsContent)
   var u = Module_10.a(s, 2)
   var l = u[0]
   var d = u[1]
-  var m = React1.useState([])
+  var m = useState([])
   var b = Module_10.a(m, 2)
   var g = b[0]
   var v = b[1]
-  var _ = React1.useState(1)
+  var _ = useState(1)
   var y = Module_10.a(_, 2)
   var O = y[0]
   var w = y[1]
-  var E = React1.useRef(null)
-  var T = React1.useRef(null)
-  React1.useEffect(function () {
+  var E = useRef(null)
+  var T = useRef(null)
+  useEffect(function () {
     if (n.sendSmsPageVisible) {
       a(n.sendSmsNumber)
       d(n.sendSmsContent)
@@ -142,13 +143,13 @@ var je = React1.memo(function () {
     type: "icon-phone-send-sms"
   }))))
 })
-var Se = React1.memo(function () {
+var Se = memo(function () {
   var t = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (t) {
     return t.emulatorPhoneInfo
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (de) {
       clearTimeout(de)
     }
@@ -185,13 +186,13 @@ var Se = React1.memo(function () {
     className: Module_71.smsContent
   }, n.receiveSmsContent))
 })
-var Ae = React1.memo(function () {
+var Ae = memo(function () {
   return React.createElement("div", {
     className: Module_71.screenMask,
     id: "cocoScreenMask"
   })
 })
-var ke = React1.memo(function () {
+var ke = memo(function () {
   var t = useSelector(function (t) {
     return t.language
   })

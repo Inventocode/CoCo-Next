@@ -8,9 +8,9 @@
 
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../107"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, useEffect, useLayoutEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_694 from /* 694 */"../../801/694/index"
-import * as /* [auto-meaningful-name] */Module_8011 from /* 801 */"../../801/index"
+import * as /* [auto-meaningful-name] */Module_801 from /* 801 */"../../801/index"
 import * as /* [auto-meaningful-name] */Module_517 from /* 517 */"../../517"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
@@ -76,12 +76,12 @@ function Qe(e, t) {
   })] : "".concat(e, "-").concat(t) : null
 }
 function We(e) {
-  var t = React.useRef(false)
-  var n = React.useState(e)
+  var t = useRef(false)
+  var n = useState(e)
   var r = Module_40.a(n, 2)
   var o = r[0]
   var a = r[1]
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       t.current = true
     }
@@ -94,7 +94,7 @@ function We(e) {
     }
   ]
 }
-var Ke = Module_378.a() ? React.useLayoutEffect : React.useEffect
+var Ke = Module_378.a() ? useLayoutEffect : useEffect
 export { Ve }
 export { Ge }
 export { ze }

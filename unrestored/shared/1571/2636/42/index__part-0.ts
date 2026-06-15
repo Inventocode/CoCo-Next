@@ -7,7 +7,8 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useState, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
@@ -25,7 +26,7 @@ var _ = function (e) {
   var /* [auto-meaningful-name] */e$render = e.render
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$widgetType = e.widgetType
-  var a = React.useState()
+  var a = useState()
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
@@ -34,7 +35,7 @@ var _ = function (e) {
     return e.project.selectedWidgetId
   })
   var b = v === e$widgetId
-  var y = React.useCallback(function (e, t, r, o) {
+  var y = useCallback(function (e, t, r, o) {
     _(Src_editor_redux_common_actions.Lg(e$widgetId, e, t, r, o))
   }, [_, e$widgetId])
   var /* [auto-meaningful-name] */CocoWidgetWrapper = "coco-widget-wrapper"

@@ -10,7 +10,7 @@ import { B, G, H } from "../../../../unrestored/shared/1571/2636/index__part-2"
 import { Q } from "../../../../unrestored/shared/1571/2636/index__part-3"
 import { Pe } from "../../../../unrestored/shared/1571/2636/index__part-8"
 import { Ge } from "../../../../unrestored/shared/1571/2636/index__part-9"
-import { Ze } from "./user-info/index"
+import { Ze } from "./UserAvatar/index"
 import { Xe, ot } from "../../../../unrestored/shared/1571/2636/index__part-11"
 import { St } from "./collaboration/index"
 import { Dt } from "../../../../unrestored/shared/1571/2636/index__part-15"
@@ -38,7 +38,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../unrest
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useEffect, useRef, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_47 from /* 47 */"../../../../unrestored/shared/1571/2636/47/index"
 import * as /* [auto-meaningful-name] */Module_1053 from /* 1053 */"../../../../unrestored/shared/1571/2636/1053"
 import /* [auto-meaningful-name] */Module_10531 from /* 1053 */"../../../../unrestored/shared/1571/2636/1053"
@@ -53,15 +54,15 @@ var yn = function () {
   var r = useSelector(function (e) {
     return e.cloudSpace.cloudTableList
   })
-  var o = React1.useState(false)
+  var o = useState(false)
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     s(false)
     d(false)
     var e
@@ -146,15 +147,15 @@ var En = React.memo(function (e) {
   var /* [auto-meaningful-name] */e$children = e.children
   var n = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var o = React1.useState(false)
+  var o = useState(false)
   var i = Module_10.a(o, 2)
   var a = i[0]
   var s = i[1]
-  var c = React1.useState(false)
+  var c = useState(false)
   var l = Module_10.a(c, 2)
   var u = l[0]
   var d = l[1]
-  var p = React1.useRef()
+  var p = useRef()
   var m = useSelector(function (e) {
     return e.common.userInfo
   })
@@ -201,30 +202,30 @@ var En = React.memo(function (e) {
     return e.project.jsonFrom
   })
   var U = Module_97.a(P)
-  var V = React1.useRef(null)
-  var X = React1.useRef(null)
-  var J = React1.useRef(null)
-  var $ = React1.useState(false)
+  var V = useRef(null)
+  var X = useRef(null)
+  var J = useRef(null)
+  var $ = useState(false)
   var ee = Module_10.a($, 2)
   var ne = ee[0]
   var re = ee[1]
   var oe = useSelector(function (e) {
     return e.uiConfig.header
   })
-  var ie = React1.useState(false)
+  var ie = useState(false)
   var ae = Module_10.a(ie, 2)
   var se = ae[0]
   var ce = ae[1]
   var le = undefined !== Shared_tools_index.N(window.location.href).archiveId
-  React1.useEffect(function () {
+  useEffect(function () {
     re(false)
   }, [P])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (se) {
       we(false, true)
     }
   }, [b])
-  React1.useEffect(function () {
+  useEffect(function () {
     function e() {
       if (V.current) {
         clearTimeout(V.current)
@@ -239,7 +240,7 @@ var En = React.memo(function (e) {
     }
     return e
   }, [P, U])
-  var ue = React1.useState(false)
+  var ue = useState(false)
   var de = Module_10.a(ue, 2)
   var pe = de[0]
   var fe = de[1]
@@ -252,7 +253,7 @@ var En = React.memo(function (e) {
   var ge = useSelector(function (e) {
     return e.oTState.collWorkId
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     !function () {
       var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : H.PURPLE
       var t = G(e)
@@ -402,7 +403,7 @@ var En = React.memo(function (e) {
   var Oe = function () {
     window.location.href = Shared_tools_index.B()
   }
-  var we = React1.useCallback(function () {
+  var we = useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t, o) {
       var i
       return RegeneratorRuntime.wrap(function (e) {
@@ -485,7 +486,7 @@ var En = React.memo(function (e) {
       return e.apply(this, arguments)
     }
   }(), [n, Module_710$a$formatMessage, U, g, m])
-  React1.useEffect(function () {
+  useEffect(function () {
     function e() {
       if (X.current) {
         clearTimeout(X.current)
@@ -508,7 +509,7 @@ var En = React.memo(function (e) {
       e()
     }
   }, [U, M, we, ge, oe.save])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!g) {
       if (me) {
         if (M) {
@@ -534,7 +535,7 @@ var En = React.memo(function (e) {
       }
     }
   }, [M, me, we, n, g])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (he && M) {
       we(true).then(function () {
         n(Redux_common_actions.di(false))
@@ -578,7 +579,7 @@ var En = React.memo(function (e) {
         n(Redux_common_actions.Gi(false))
     }
   }
-  var Te = React1.useCallback(function (e) {
+  var Te = useCallback(function (e) {
     if (M) {
       n(Redux_common_actions.Ri({
         visible: true,
@@ -723,7 +724,7 @@ var En = React.memo(function (e) {
       }
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     if (oe.preventLeave === Module_18.j.Show) {
       window.onbeforeunload = function (e) {
         if (e) {
@@ -735,7 +736,7 @@ var En = React.memo(function (e) {
       window.onbeforeunload = function () {}
     }
   }, [oe.preventLeave])
-  React1.useEffect(function () {
+  useEffect(function () {
     window.addEventListener("message", Q.handle)
   }, [n])
   var Ne = oe.file.openLocalFile === Module_18.j.Show

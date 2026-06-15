@@ -13,22 +13,23 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1055 from /* 1055 */"./1055"
 import /* [auto-meaningful-name] */Module_10551 from /* 1055 */"./1055"
-var yy = React1.memo(function (e) {
+var yy = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$iconId = e.iconId
   var /* [auto-meaningful-name] */e$color = e.color
   var o = useDispatch()
-  var i = React1.useState()
+  var i = useState()
   var a = Module_10.a(i, 2)
   var s = a[0]
   var c = a[1]
   var l = useSelector(function (e) {
     return e.resource.resourceLibraryUpdateAt
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Module_9.fb(e$iconId)
     c(e)
   }, [e$iconId, l])

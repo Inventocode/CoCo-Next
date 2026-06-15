@@ -14,7 +14,8 @@ import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"./133"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"./11"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_513 from /* 513 */"./513"
 import /* [auto-meaningful-name] */Module_5131 from /* 513 */"./513"
 import * as /* [auto-meaningful-name] */Module_433 from /* 433 */"./433"
@@ -36,7 +37,7 @@ var tf = {
     var /* [auto-meaningful-name] */e$attributes$borderRadius = e$attributes.borderRadius
     var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
     var /* [auto-meaningful-name] */e$attributes$backgroundColor = e$attributes.backgroundColor
-    var p = React1.useRef(null)
+    var p = useRef(null)
     var m = Module_33.Fb(e$attributes$fileId) || Module_133.m
     return React.createElement("div", {
       id: t,

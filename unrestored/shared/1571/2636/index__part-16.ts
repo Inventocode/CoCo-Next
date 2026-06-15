@@ -18,24 +18,25 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1036 from /* 1036 */"./1036/index"
 import /* [auto-meaningful-name] */Module_10361 from /* 1036 */"./1036/index"
 import * as /* [auto-meaningful-name] */Module_1508 from /* 1508 */"./1508/index"
 import * as /* [auto-meaningful-name] */Module_356 from /* 356 */"./356"
 import /* [auto-meaningful-name] */Module_3561 from /* 356 */"./356"
-var Gt = React1.memo(function () {
+var Gt = memo(function () {
   var e = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var n = React1.useState(false)
+  var n = useState(false)
   var r = Module_10.a(n, 2)
   var o = r[0]
   var i = r[1]
-  var a = React1.useState("")
+  var a = useState("")
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
@@ -54,7 +55,7 @@ var Gt = React1.memo(function () {
   var j = useSelector(function (e) {
     return e.common.userInfo
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (g$packageUrl && g$packageInfo) {
       var e = Src_shared_tools_index.B()
       var t = "".concat(e, "/download/?url=").concat(encodeURIComponent(g$packageUrl || ""), "&icon=").concat(encodeURIComponent(g$packageInfo.apkIcon || ""), "&name=").concat(g$packageInfo.apkName || "", "&projectId=").concat(A, "&version=").concat(g$packageInfo.version, "&expireTime=").concat(g$packageInfo.expireTime, "&startTimeTamp=").concat(g$packageInfo.startTimeTamp)
@@ -62,7 +63,7 @@ var Gt = React1.memo(function () {
       m(false)
     }
   }, [g$packageUrl, g$packageInfo, A])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (Tt) {
       clearInterval(Tt)
     }

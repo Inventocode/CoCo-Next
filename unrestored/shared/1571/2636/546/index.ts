@@ -8,7 +8,8 @@
 
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../6"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../11"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Color from /* 51 */"color"
 import /* [auto-meaningful-name] */Color1 from /* 51 */"color"
@@ -40,10 +41,10 @@ _a = function (e) {
   var /* [auto-meaningful-name] */e$attributes$text = e$attributes.text
   var /* [auto-meaningful-name] */e$attributes$sizeType = e$attributes.sizeType
   var /* [auto-meaningful-name] */e$attributes$iconId = e$attributes.iconId
-  var N = React.useRef(null)
-  var R = React.useRef(null)
+  var N = useRef(null)
+  var R = useRef(null)
   var k = Module_33.O(e$attributes$mode) === Module_83.a.ICON
-  var x = React.useMemo(function () {
+  var x = useMemo(function () {
     var e = function (e, t) {
       var n
       var r = Color1(t).toString()
@@ -91,7 +92,7 @@ _a = function (e) {
     }(e$attributes$mode, e$attributes$color)
     return e$attributes$disabled ? e.disabled : e.default
   }, [e$attributes$mode, e$attributes$color, e$attributes$disabled])
-  var D = React.useMemo(function () {
+  var D = useMemo(function () {
     return Module_33.Q(e$attributes$sizeType, e$attributes$mode)
   }, [e$attributes$mode, e$attributes$sizeType])
   var /* [auto-meaningful-name] */D$height = D.height

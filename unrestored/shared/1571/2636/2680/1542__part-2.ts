@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../140"
 import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../120"
 import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../106"
 import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createRef, createElement, Component } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../79/index"
 var k = []
 var S = new RegExp("".concat("ant-scrolling-effect"), "g")
@@ -145,7 +145,7 @@ var N = function (e) {
     var r
     Module_103.a(this, n);
     (r = t.call(this, e)).container = undefined
-    r.componentRef = React.createRef()
+    r.componentRef = createRef()
     r.rafId = undefined
     r.scrollLocker = undefined
     r.renderComponent = undefined
@@ -274,7 +274,7 @@ var N = function (e) {
           scrollLocker: this.scrollLocker
         }
         if (this$props$forceRender || this$props$visible || this.componentRef.current) {
-          i = React.createElement(b, {
+          i = createElement(b, {
             getContainer: this.getContainer,
             ref: this.componentRef
           }, this$props$children(a))
@@ -284,5 +284,5 @@ var N = function (e) {
     }
   ])
   return n
-}(React.Component)
+}(Component)
 export { N }

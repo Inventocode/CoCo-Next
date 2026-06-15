@@ -7,7 +7,7 @@
 "use strict"
 
 import { u } from "./index__part-0"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { Component } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../../140"
 import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../120"
 import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../106"
@@ -47,7 +47,7 @@ var f = function (e) {
     }
   ])
   return n
-}(React.Component)
+}(Component)
 f.defaultProps = {
   componentName: "global"
 }

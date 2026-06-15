@@ -13,13 +13,14 @@ import * as /* [auto-meaningful-name] */Module_90 from /* 90 */"../../../90"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Color from /* 51 */"color"
 import * as /* [auto-meaningful-name] */Module_513 from /* 513 */"../../../513"
 import /* [auto-meaningful-name] */Module_5131 from /* 513 */"../../../513"
 import * as /* [auto-meaningful-name] */Module_433 from /* 433 */"../../../433"
 import * as /* [auto-meaningful-name] */Module_133 from /* 133 */"../../../133"
-var V = React1.memo(function (e) {
+var V = memo(function (e) {
   var t = e.id
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$position = e.position
@@ -32,7 +33,7 @@ var V = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$attributes$resizeMode = e$attributes.resizeMode
   var /* [auto-meaningful-name] */e$attributes$borderRadius = e$attributes.borderRadius
   var /* [auto-meaningful-name] */e$attributes$fileId = e$attributes.fileId
-  var b = React1.useRef(null)
+  var b = useRef(null)
   var y = Module_112.b(e$attributes$fileId)
   if (!y) {
     y = e$parentId ? Module_133.i : Module_133.m

@@ -1,0 +1,57 @@
+/**
+ * 由 CoCo 源代码计划解包器解包
+ *
+ * 模块 ID：1062
+ */
+
+.blockImageDialog {
+    display: flex;
+    flex-direction: column;
+    position: absolute
+}
+
+.blockImageDialog :global(.coco-dialog-content) {
+    width: 680px;
+    height: 520px;
+    border-radius: 4px;
+    background: #fff;
+    padding: 10px 19px 10px 20px;
+    position: relative
+}
+
+.blockImageDialog :global(.coco-dialog-close) {
+    top: 16px;
+    z-index: 1
+}
+
+.blockImageDialog .blockImageWrap {
+    width: 100%;
+    height: calc(100% - 70px);
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.blockImageDialog .blockImageWrap img {
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%
+}
+
+.blockImageDialog .btnDownload {
+    position: absolute;
+    bottom: 12px;
+    left: 315px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #6e4ff4;
+    cursor: pointer;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 22px
+}

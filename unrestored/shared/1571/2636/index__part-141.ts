@@ -50,7 +50,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_567 from /* 567 */"./567"
 import /* [auto-meaningful-name] */Module_5671 from /* 567 */"./567"
 function kC() {
@@ -147,13 +148,13 @@ function PC() {
     }, e)
   }))).apply(this, arguments)
 }
-var BC = React1.memo(function (e) {
+var BC = memo(function (e) {
   var t = useDispatch()
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var r = undefined === e$keyName ? "token" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
-  var a = React1.useState(false)
+  var a = useState(false)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]

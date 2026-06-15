@@ -30,9 +30,10 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_539 from /* 539 */"./539"
-var TE = React1.memo(function (e) {
+var TE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fontSize" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -71,7 +72,7 @@ var TE = React1.memo(function (e) {
     onStep: _(0)
   })
 })
-var SE = React1.memo(function (e) {
+var SE = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
@@ -161,7 +162,7 @@ var IE = [
     }
   }
 ]
-var jE = React1.memo(function (e) {
+var jE = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
@@ -268,7 +269,7 @@ var jE = React1.memo(function (e) {
     id: "".concat(Module_76.b.STRETCH)
   }))))))
 })
-var NE = React1.memo(function (e) {
+var NE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fileId" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -330,7 +331,7 @@ var NE = React1.memo(function (e) {
     }
   }))))
 })
-var RE = React1.memo(function (e) {
+var RE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "position" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -401,14 +402,14 @@ var RE = React1.memo(function (e) {
     }
   }))))
 })
-var kE = React1.memo(function (e) {
+var kE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "content" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$formConfig = e.formConfig
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var s = React1.useRef(null)
+  var s = useRef(null)
   var c = e$getValue(n)
   var l = Module_710$a$formatMessage({
     id: e$formConfig.label || "content"

@@ -11,10 +11,11 @@ import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1526 from /* 1526 */"./1526"
 import /* [auto-meaningful-name] */Module_15261 from /* 1526 */"./1526"
-var lI = React1.memo(function () {
+var lI = memo(function () {
   var e = useSelector(function (e) {
     return e.common.commonToastInfo
   })
@@ -25,13 +26,13 @@ var lI = React1.memo(function () {
   var i = undefined === e$duration ? 2e3 : e$duration
   var /* [auto-meaningful-name] */e$onClose = e.onClose
   var s = useDispatch()
-  var c = React1.useCallback(function () {
+  var c = useCallback(function () {
     if (e$onClose) {
       e$onClose()
     }
     s(Src_editor_redux_common_actions.kh())
   }, [e$onClose, s])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible && i) {
       if (rI) {
         window.clearTimeout(rI)

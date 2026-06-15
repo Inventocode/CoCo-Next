@@ -8,7 +8,8 @@
 
 import * as /* [auto-meaningful-name] */Module_294 from /* 294 */"../294/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useState, useEffect, useCallback } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../10/index"
 import * as /* [auto-meaningful-name] */Module_539 from /* 539 */"../539"
@@ -16,7 +17,7 @@ import /* 1101 */"./1101"
 import * as /* [auto-meaningful-name] */Module_780 from /* 780 */"./780/index"
 import /* [auto-meaningful-name] */Module_7801 from /* 780 */"./780/index"
 import /* 842 */"./842"
-var y = React1.memo(function (e) {
+var y = memo(function (e) {
   var /* [auto-meaningful-name] */e$step = e.step
   var n = undefined === e$step ? 1 : e$step
   var /* [auto-meaningful-name] */e$max = e.max
@@ -29,18 +30,18 @@ var y = React1.memo(function (e) {
   var /* [auto-meaningful-name] */e$isShowLeftInput = e.isShowLeftInput
   var /* [auto-meaningful-name] */e$isShowRightInput = e.isShowRightInput
   var /* [auto-meaningful-name] */e$inputAfter = e.inputAfter
-  var v = React1.useRef(null)
-  var y = React1.useState(e$value || u)
+  var v = useRef(null)
+  var y = useState(e$value || u)
   var E = Module_10.a(y, 2)
   var O = E[0]
   var w = E[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     if (undefined !== e$value) {
       T(e$value.toString())
       w(e$value)
     }
   }, [e$value])
-  var C = React1.useCallback(function (e) {
+  var C = useCallback(function (e) {
     T(e.toString())
     w(e)
     if (e$onChange) {

@@ -1,0 +1,42 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.OPPOSITE_TYPE = exports.CONNECTABLE_TYPE = exports.CONNECTION_TYPE = exports.OutputShape = void 0;
+var OutputShape;
+(function (OutputShape) {
+    OutputShape[OutputShape["ROUND"] = 0] = "ROUND";
+    OutputShape[OutputShape["HEXAGONAL"] = 1] = "HEXAGONAL";
+})(OutputShape = exports.OutputShape || (exports.OutputShape = {}));
+var CONNECTION_TYPE;
+(function (CONNECTION_TYPE) {
+    /**
+     * ENUM for a right-facing value input.  E.g. 'set item to' or 'return'.
+     */
+    CONNECTION_TYPE[CONNECTION_TYPE["INPUT_VALUE"] = 1] = "INPUT_VALUE";
+    /**
+     * ENUM for a left-facing value output.  E.g. 'random fraction'.
+     */
+    CONNECTION_TYPE[CONNECTION_TYPE["OUTPUT_VALUE"] = 2] = "OUTPUT_VALUE";
+    /**
+     * ENUM for a down-facing block stack.  E.g. 'if-do' or 'else'.
+     */
+    CONNECTION_TYPE[CONNECTION_TYPE["NEXT_STATEMENT"] = 3] = "NEXT_STATEMENT";
+    /**
+     * ENUM for an up-facing block stack.  E.g. 'break out of loop'.
+     */
+    CONNECTION_TYPE[CONNECTION_TYPE["PREVIOUS_STATEMENT"] = 4] = "PREVIOUS_STATEMENT";
+})(CONNECTION_TYPE = exports.CONNECTION_TYPE || (exports.CONNECTION_TYPE = {}));
+var CONNECTABLE_TYPE;
+(function (CONNECTABLE_TYPE) {
+    CONNECTABLE_TYPE[CONNECTABLE_TYPE["CAN_CONNECT"] = 0] = "CAN_CONNECT";
+    CONNECTABLE_TYPE[CONNECTABLE_TYPE["REASON_SELF_CONNECTION"] = 1] = "REASON_SELF_CONNECTION";
+    CONNECTABLE_TYPE[CONNECTABLE_TYPE["REASON_WRONG_TYPE"] = 2] = "REASON_WRONG_TYPE";
+    CONNECTABLE_TYPE[CONNECTABLE_TYPE["REASON_TARGET_NULL"] = 3] = "REASON_TARGET_NULL";
+    CONNECTABLE_TYPE[CONNECTABLE_TYPE["REASON_CHECKS_FAILED"] = 4] = "REASON_CHECKS_FAILED";
+    CONNECTABLE_TYPE[CONNECTABLE_TYPE["REASON_DIFFERENT_WORKSPACES"] = 5] = "REASON_DIFFERENT_WORKSPACES";
+    CONNECTABLE_TYPE[CONNECTABLE_TYPE["REASON_SHADOW_PARENT"] = 6] = "REASON_SHADOW_PARENT";
+})(CONNECTABLE_TYPE = exports.CONNECTABLE_TYPE || (exports.CONNECTABLE_TYPE = {}));
+exports.OPPOSITE_TYPE = [];
+exports.OPPOSITE_TYPE[CONNECTION_TYPE['INPUT_VALUE']] = CONNECTION_TYPE['OUTPUT_VALUE'];
+exports.OPPOSITE_TYPE[CONNECTION_TYPE['OUTPUT_VALUE']] = CONNECTION_TYPE['INPUT_VALUE'];
+exports.OPPOSITE_TYPE[CONNECTION_TYPE['NEXT_STATEMENT']] = CONNECTION_TYPE['PREVIOUS_STATEMENT'];
+exports.OPPOSITE_TYPE[CONNECTION_TYPE['PREVIOUS_STATEMENT']] = CONNECTION_TYPE['NEXT_STATEMENT'];

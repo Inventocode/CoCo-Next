@@ -9,7 +9,7 @@
 import { XM } from "./index__part-198"
 import { cL } from "./index__part-199"
 import * as /* [auto-meaningful-name] */Module_53 from /* 53 */"./53"
-import /* [auto-meaningful-name] */Src_editor_ui_header_styles_module_css from /* 161 */"../../../../src/editor/ui/header/styles.module.css"
+import /* [auto-meaningful-name] */Src_editor_ui_header_styles_module_css from /* 161 */"../../../../src/editor/ui/Header/styles.module.css"
 import * as /* [auto-meaningful-name] */Module_141 from /* 141 */"./141/index"
 import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
 import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 13 */"../../../../src/shared/ui/components/index"
@@ -19,13 +19,14 @@ import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector, batch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useState, useEffect, memo, useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_570 from /* 570 */"./570"
 import /* [auto-meaningful-name] */Module_5701 from /* 570 */"./570"
 var dL = React.memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var t = useDispatch()
-  var n = React1.useState(true)
+  var n = useState(true)
   var r = Module_10.a(n, 2)
   var o = r[0]
   var i = r[1]
@@ -35,7 +36,7 @@ var dL = React.memo(function () {
   var s = useSelector(function (e) {
     return e.project.screens
   })
-  React1.useEffect(function () {
+  useEffect(function () {
     if (1 === s.size) {
       i(true)
     }
@@ -98,7 +99,7 @@ var dL = React.memo(function () {
     type: "icon-dropdown-down"
   }))))
 })
-var pL = React1.memo(function (e) {
+var pL = memo(function (e) {
   var t = useSelector(function (e) {
     return e.project.id
   })
@@ -108,14 +109,14 @@ var pL = React1.memo(function (e) {
   var r = useSelector(function (e) {
     return e.oTState.isAuthor
   })
-  var o = React1.useRef(null)
+  var o = useRef(null)
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var a = useDispatch()
-  var s = React1.useState(false)
+  var s = useState(false)
   var c = Module_10.a(s, 2)
   var l = c[0]
   var u = c[1]
-  var d = React1.useState(n)
+  var d = useState(n)
   var p = Module_10.a(d, 2)
   var m = p[0]
   var g = p[1]

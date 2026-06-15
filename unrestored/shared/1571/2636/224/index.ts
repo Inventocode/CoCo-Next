@@ -10,7 +10,8 @@ import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../35"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useContext, useEffect, forwardRef, createElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
@@ -140,9 +141,9 @@ var B = function (e) {
   }
   (function () {
     var e = arguments.length > 0 && undefined !== arguments[0] ? arguments[0] : _n$anticon_nDisplayInlineBlock_nColorInherit_nFontStyleNormal_nLineHeight0_nTextAlignCenter_nTextTransformNone_nVerticalAlign0$125em_nTextRenderingOptimizeLegibility_nWebkitFontSmoothingAntialiased_nMozOsxFontSmoothingGrayscale_n_n_n$anticon_nLineHeight1_n_n_n$anticonSvg_nDisplayInlineBlock_n_n_n$anticonBefore_nDisplayNone_n_n_n$anticon$anticonIcon_nDisplayBlock_n_n_n$anticonTabindex_nCursorPointer_n_n_n$anticonSpinBefore_n$anticonSpin_nDisplayInlineBlock_nWebkitAnimationLoadingCircle1sInfiniteLinear_nAnimationLoadingCircle1sInfiniteLinear_n_n_nWebkitKeyframesLoadingCircle_n100_nWebkitTransformRotate360deg_nTransformRotate360deg_n_n_n_nKeyframesLoadingCircle_n100_nWebkitTransformRotate360deg_nTransformRotate360deg_n_n_n
-    var t = React.useContext(Module_792.a)
+    var t = useContext(Module_792.a)
     var /* [auto-meaningful-name] */t$csp = t.csp
-    React.useEffect(function () {
+    useEffect(function () {
       w(e, "@ant-design-icons", {
         prepend: true,
         csp: t$csp
@@ -206,7 +207,7 @@ function I(e) {
 }
 var R = ["className", "icon", "spin", "rotate", "tabIndex", "onClick", "twoToneColor"]
 I("#1890ff")
-var F = React.forwardRef(function (e, t) {
+var F = forwardRef(function (e, t) {
   var n
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$icon = e.icon
@@ -216,8 +217,8 @@ var F = React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$twoToneColor = e.twoToneColor
   var g = Module_54.a(e, R)
-  var /* [auto-meaningful-name] */React$useContextModule_792$a$prefixCls = React.useContext(Module_792.a).prefixCls
-  var m = undefined === React$useContextModule_792$a$prefixCls ? "anticon" : React$useContextModule_792$a$prefixCls
+  var /* [auto-meaningful-name] */useContextModule_792$a$prefixCls = useContext(Module_792.a).prefixCls
+  var m = undefined === useContextModule_792$a$prefixCls ? "anticon" : useContextModule_792$a$prefixCls
   var y = Classnames1(m, (n = {}, Module_35.a(n, "".concat(m, "-").concat(e$icon.name), !!e$icon.name), Module_35.a(n, "".concat(m, "-spin"), !!e$spin || "loading" === e$icon.name), n), e$className)
   var b = e$tabIndex
   if (undefined === b && e$onClick) {
@@ -231,7 +232,7 @@ var F = React.forwardRef(function (e, t) {
   var x = Module_40.a(E, 2)
   var C = x[0]
   var k = x[1]
-  return React.createElement("span", Module_21.a(Module_21.a({
+  return createElement("span", Module_21.a(Module_21.a({
     role: "img",
     "aria-label": e$icon.name
   }, g), {}, {
@@ -239,7 +240,7 @@ var F = React.forwardRef(function (e, t) {
     tabIndex: b,
     onClick: e$onClick,
     className: y
-  }), React.createElement(D, {
+  }), createElement(D, {
     icon: e$icon,
     primaryColor: C,
     secondaryColor: k,

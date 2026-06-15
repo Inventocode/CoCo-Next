@@ -7,30 +7,30 @@
 "use strict"
 
 import /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, useRef, useImperativeHandle, useEffect } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_1030 from /* 1030 */"./1030"
 import * as /* [auto-meaningful-name] */Module_698 from /* 698 */"../../1048/698"
 import * as /* [auto-meaningful-name] */Module_929 from /* 929 */"./929"
 import * as /* [auto-meaningful-name] */Module_466 from /* 466 */"../../2680/466"
-var b = React.forwardRef(function (e, t) {
+var b = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
   var /* [auto-meaningful-name] */e$children = e.children
-  var o = React.useRef()
-  React.useImperativeHandle(t, function () {
+  var o = useRef()
+  useImperativeHandle(t, function () {
     return {}
   })
-  var a = React.useRef(false)
+  var a = useRef(false)
   if (!a.current && Module_466.a()) {
     o.current = e$getContainer()
     a.current = true
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if (!(null === e$didUpdate || undefined === e$didUpdate)) {
       e$didUpdate(e)
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       var /* [auto-meaningful-name] */o$current
       var /* [auto-meaningful-name] */o$current$parentNode

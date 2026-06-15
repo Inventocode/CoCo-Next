@@ -4,10 +4,8 @@
  * 模块 ID：2636__part-219
  */
 
-"use strict"
-
-import { En } from "./header/wrapper"
-import { Sv } from "./preview-area/widget-list/index"
+import { En } from "./Header/wrapper"
+import { PreviewArea } from "./PreviewArea"
 import { iI, aI } from "../../../unrestored/shared/1571/2636/index__part-170"
 import { lI } from "../../../unrestored/shared/1571/2636/index__part-171"
 import { hI } from "../../../unrestored/shared/1571/2636/index__part-172"
@@ -24,7 +22,7 @@ import { wL } from "../../../unrestored/shared/1571/2636/index__part-202"
 import { AL } from "../../../unrestored/shared/1571/2636/index__part-203"
 import { kL } from "../../../unrestored/shared/1571/2636/index__part-204"
 import { ML } from "./dialogs/download-apk/index"
-import { ReleaseInfo } from "./dialogs/release-info/index"
+import { ReleaseInfo } from "./dialogs/ReleaseInfo/index"
 import { ZL } from "../../../unrestored/shared/1571/2636/index__part-208"
 import { aP } from "../../../unrestored/shared/1571/2636/index__part-210"
 import { _P } from "../../../unrestored/shared/1571/2636/index__part-211"
@@ -53,6 +51,7 @@ import { memo } from "react"
 import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_816 from /* 816 */"../../../unrestored/shared/1571/2636/816"
 import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_816 from "../../../unrestored/shared/1571/2636/816"
+import "./style/global.css"
 
 var cB = memo(function () {
   const permissionDialogInfo = useSelector((state) => state.common.permissionDialogInfo)
@@ -213,9 +212,9 @@ export const App = React.memo(function () {
       {<section
         className={Unrestored_shared_1571_2636_937.body}
       >
-        {<aside>
-          {<Sv/>}
-        </aside>}
+        <aside>
+          <PreviewArea/>
+        </aside>
         {<main
           className={Unrestored_shared_1571_2636_937.main}
         >
@@ -267,10 +266,12 @@ var fB = function (e) {
   }
 }
 
-export const isDevelopment = Boolean(window.location.hostname === "localhost" ||
+export const isDevelopment = Boolean(
+  window.location.hostname === "localhost" ||
   window.location.hostname === "dev-local.codemao.cn" ||
   window.location.hostname === "[::1]" ||
-  window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/))
+  window.location.hostname.match(/^127(?:\.(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)){3}$/)
+)
 
 export interface ServiceWorkerRegisterInfo {
   swUrl: string

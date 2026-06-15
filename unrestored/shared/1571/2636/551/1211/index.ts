@@ -8,7 +8,7 @@
 
 export { A as a }
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useMemo, createElement } from /* 0 */"react"
 import /* 50 */"../../50/index"
 import * as /* [auto-meaningful-name] */Module_278 from /* 278 */"../278"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"./98"
@@ -47,23 +47,23 @@ var d = function (e) {
   var /* [auto-meaningful-name] */e$openView = e.openView
   var d = Module_278.b()
   var h = f()
-  var p = React.useMemo(function () {
+  var p = useMemo(function () {
     return Module_699.d(e$views)
   }, [e$views])
-  var _ = React.useMemo(function () {
+  var _ = useMemo(function () {
     return Module_699.b(e$views)
   }, [e$views])
-  return React.createElement(Module_269.b, {
+  return createElement(Module_269.b, {
     isLandscape: e$isLandscape,
     className: Module_98.a(!p && h.toolbar, e$isLandscape && h.toolbarLandscape)
-  }, React.createElement(Module_269.c, {
+  }, createElement(Module_269.c, {
     variant: p ? "h3" : "subtitle1",
     onClick: function () {
       return e$setOpenView("year")
     },
     selected: "year" === e$openView,
     label: d.getYearText(e$date)
-  }), !p && !_ && React.createElement(Module_269.c, {
+  }), !p && !_ && createElement(Module_269.c, {
     variant: "h4",
     selected: "date" === e$openView,
     onClick: function () {
@@ -72,7 +72,7 @@ var d = function (e) {
     align: e$isLandscape ? "left" : "center",
     label: d.getDatePickerHeaderText(e$date),
     className: Module_98.a(e$isLandscape && h.dateLandscape)
-  }), _ && React.createElement(Module_269.c, {
+  }), _ && createElement(Module_269.c, {
     variant: "h4",
     onClick: function () {
       return e$setOpenView("month")

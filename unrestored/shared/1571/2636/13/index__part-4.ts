@@ -6,9 +6,10 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import /* [auto-meaningful-name] */RegeneratorRuntime1 from /* 1 */"regenerator-runtime"
@@ -25,7 +26,7 @@ import /* 651 */"./651"
 function L(e) {
   return "#ffffff" === Color1(e).hex().toLocaleLowerCase()
 }
-var B = React1.memo(function (e) {
+var B = memo(function (e) {
   var /* [auto-meaningful-name] */e$onClick = e.onClick
   var /* [auto-meaningful-name] */e$color = e.color
   var /* [auto-meaningful-name] */e$selected = e.selected

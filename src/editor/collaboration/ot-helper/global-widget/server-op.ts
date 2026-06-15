@@ -16,15 +16,16 @@ import * as /* [auto-meaningful-name] */Module_24 from /* 24 */"../../../../../u
 import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"../../../../../unrestored/shared/1571/2636/7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from "regenerator-runtime"
 import * as /* [auto-meaningful-name] */Widget_builtIn_types from "../../../widget/built-in/types"
-import * as /* [auto-meaningful-name] */$$_$$_$$_$$_$$_unrestored_shared_1571_2636_110 from /* 110 */"../../../../../unrestored/shared/1571/2636/110"
+import * as /* [auto-meaningful-name] */Module_110 from /* 110 */"../../../../../unrestored/shared/1571/2636/110"
 import * as CommonActions from "../../../redux/common/actions"
+import { asyncDeleteProjectWidgetAction } from "../../../redux/common/actions"
 
 export function pick(e) {
   if (nn(e.path)) {
     (function (e) {
       var t = e.path[1]
       if (t) {
-        Module_43.h(CommonActions.Mf(t, undefined, false))
+        Module_43.h(asyncDeleteProjectWidgetAction(t, undefined, false))
       }
     })(e)
   }
@@ -128,7 +129,7 @@ function pn() {
             Module_43.h(Redux_common_actions.hf(r.id))
             if (r.type === Widget_builtIn_types.B || r.type === Widget_builtIn_types.y) {
               r$attributes$fields = r.attributes.fields
-              Module_37.a(Redux_common_actions.bf($$_$$_$$_$$_$$_unrestored_shared_1571_2636_110.a(r.type, {
+              Module_37.a(Redux_common_actions.bf(Module_110.a(r.type, {
                 id: r.id,
                 name: r.title,
                 value: r$attributes$fields,
@@ -138,7 +139,7 @@ function pn() {
               })))
             } else {
               if (r.type === Widget_builtIn_types.G) {
-                Module_37.a(Redux_common_actions.bf($$_$$_$$_$$_$$_unrestored_shared_1571_2636_110.a(Widget_builtIn_types.G, {
+                Module_37.a(Redux_common_actions.bf(Module_110.a(Widget_builtIn_types.G, {
                   id: r.id,
                   name: r.title,
                   value: r.attributes.db,

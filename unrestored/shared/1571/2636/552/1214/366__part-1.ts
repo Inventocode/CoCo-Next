@@ -7,7 +7,7 @@
 "use strict"
 
 var r
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createElement, Component } from /* 0 */"react"
 import /* 50 */"../../50/index"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../551/1211/98"
 import * as /* [auto-meaningful-name] */Module_1550 from /* 1550 */"../../551/1211/269/1550"
@@ -59,17 +59,17 @@ var p = function (e) {
         var /* [auto-meaningful-name] */this$props = this.props
         var /* [auto-meaningful-name] */this$props$classes = this$props.classes
         var /* [auto-meaningful-name] */this$props$hasSelected = this$props.hasSelected
-        return React.createElement("div", {
+        return createElement("div", {
           style: this.getAngleStyle(),
           className: Module_98.a(this$props$classes.pointer, this.state.toAnimateTransform && this$props$classes.animateTransform)
-        }, React.createElement("div", {
+        }, createElement("div", {
           className: Module_98.a(this$props$classes.thumb, this$props$hasSelected && this$props$classes.noPoint)
         }))
       }
     }
   ])
   return t
-}(React.Component)
+}(Component)
 p.getDerivedStateFromProps = function (e, t) {
   return e.type !== t.previousType ? {
     toAnimateTransform: true,
@@ -227,11 +227,11 @@ var x = function (e) {
         var /* [auto-meaningful-name] */this$props$children = this$props.children
         var /* [auto-meaningful-name] */this$props$type = this$props.type
         var a = !this$props.ampm && this$props$type === h.HOURS && (this$props$value < 1 || this$props$value > 12)
-        return React.createElement("div", {
+        return createElement("div", {
           className: this$props$classes.container
-        }, React.createElement("div", {
+        }, createElement("div", {
           className: this$props$classes.clock
-        }, React.createElement("div", {
+        }, createElement("div", {
           role: "menu",
           tabIndex: -1,
           className: this$props$classes.squareMask,
@@ -239,9 +239,9 @@ var x = function (e) {
           onTouchEnd: this.handleTouchEnd,
           onMouseUp: this.handleMouseUp,
           onMouseMove: this.handleMove
-        }), React.createElement("div", {
+        }), createElement("div", {
           className: this$props$classes.pin
-        }), React.createElement(_, {
+        }), createElement(_, {
           type: this$props$type,
           value: this$props$value,
           isInner: a,
@@ -251,7 +251,7 @@ var x = function (e) {
     }
   ])
   return t
-}(React.Component)
+}(Component)
 x.defaultProps = {
   ampm: false,
   minutesStep: 1

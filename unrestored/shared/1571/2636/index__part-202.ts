@@ -10,7 +10,8 @@ import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"./18"
 import * as /* [auto-meaningful-name] */Src_editor_redux_common_actions from /* 2 */"../../../../src/editor/redux/common/actions"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useLayoutEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* 2628 */"./2628"
 import /* 2629 */"./2629"
 var yL = {
@@ -132,7 +133,7 @@ var wL = function () {
     return e.common.editPermission
   })
   var t = useDispatch()
-  React1.useLayoutEffect(function () {
+  useLayoutEffect(function () {
     var n
     var r = "readonly" === (n = function (e) {
       switch (e) {

@@ -66,7 +66,8 @@ import * as /* [auto-meaningful-name] */Lodash from "lodash"
 import * as CustomWidgetType from "../../../shared/widget/custom/type"
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "./actions"
-import * as /* [auto-meaningful-name] */Module_66 from /* 66 */"../../../../unrestored/shared/1571/2636/738/66"
+import { asyncDeleteProjectWidgetAction } from "./actions"
+import Immutable from /* 66 */"immutable"
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../unrestored/shared/1571/2636/6"
 import * as /* [auto-meaningful-name] */Module_25 from /* 25 */"../../../../unrestored/shared/1571/2636/25/index"
 import * as /* [auto-meaningful-name] */React from "react"
@@ -2865,7 +2866,7 @@ function cs(e, t, n) {
           }
           d$value = d.value
           S.next = 13
-          return ReduxSagaEffects.e(Actions.Mf(d$value, t, false))
+          return ReduxSagaEffects.e(asyncDeleteProjectWidgetAction(d$value, t, false))
         case 13:
           S.next = 9
           break
@@ -2900,7 +2901,7 @@ function cs(e, t, n) {
           }
           g$value = g.value
           S.next = 35
-          return ReduxSagaEffects.e(Actions.Mf(g$value, t, false))
+          return ReduxSagaEffects.e(asyncDeleteProjectWidgetAction(g$value, t, false))
         case 35:
           S.next = 31
           break
@@ -3587,7 +3588,7 @@ function gs(e) {
           return ReduxSagaEffects.f(Module_22.t)
         case 4:
           if (l$sent = l.sent, !(r = l$sent.find(function (e) {
-            return CustomWidgetType.c(e.type, true) === e$payload$widgetType
+            return CustomWidgetType.standardize(e.type, true) === e$payload$widgetType
           }))) {
             l.next = 11
             break
@@ -3827,7 +3828,7 @@ function ys(e) {
           }
           d$value = d.value
           h.next = 16
-          return ReduxSagaEffects.e(Actions.Mf(d$value, h$sent, true))
+          return ReduxSagaEffects.e(asyncDeleteProjectWidgetAction(d$value, h$sent, true))
         case 16:
           h.next = 12
           break
@@ -6247,7 +6248,7 @@ function ic(e) {
             }
           })
           l.next = 13
-          return ReduxSagaEffects.e(Actions.Aj(Module_66.a.List(i)))
+          return ReduxSagaEffects.e(Actions.Aj(Immutable.List(i)))
         case 13:
           a = e$payload$screenIds.indexOf(l$sent1.id)
           l.next = 16

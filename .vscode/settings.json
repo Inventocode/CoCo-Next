@@ -26,6 +26,7 @@
         "methodorder",
         "micromessenger",
         "momo",
+        "nums",
         "qiniu",
         "qrcode",
         "rsdoctor",
@@ -51,5 +52,5 @@
         "tsconfig.json": "tsconfig.*.json",
         "package.json": "package-lock.json"
     },
-    "typescript.tsdk": "node_modules\\typescript\\lib"
+    "js/ts.tsdk.path": "node_modules\\typescript\\lib"
 }

@@ -16,7 +16,7 @@ import * as /* [auto-meaningful-name] */Module_79 from /* 79 */"../../79/index"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
 import * as /* [auto-meaningful-name] */Module_35 from /* 35 */"../../35"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../../54"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { useRef, useState, createContext, useContext, createElement, useImperativeHandle, useEffect, useMemo, forwardRef } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../../40/index"
 var /* [auto-meaningful-name] */__Field_split__ = "__@field_split__"
@@ -705,8 +705,8 @@ var fe = function e(t) {
   this.forceRootUpdate = t
 }
 var de = function (e) {
-  var t = React.useRef()
-  var n = React.useState({})
+  var t = useRef()
+  var n = useState({})
   var r = Module_40.a(n, 2)[1]
   if (!t.current) {
     if (e) {
@@ -720,7 +720,7 @@ var de = function (e) {
   }
   return [t.current]
 }
-var he = React.createContext({
+var he = createContext({
   triggerFormChange: function () {},
   triggerFormFinish: function () {},
   registerForm: function () {},
@@ -731,9 +731,9 @@ var pe = function (e) {
   var /* [auto-meaningful-name] */e$onFormChange = e.onFormChange
   var /* [auto-meaningful-name] */e$onFormFinish = e.onFormFinish
   var /* [auto-meaningful-name] */e$children = e.children
-  var a = React.useContext(he)
-  var s = React.useRef({})
-  return React.createElement(he.Provider, {
+  var a = useContext(he)
+  var s = useRef({})
+  return createElement(he.Provider, {
     value: Module_21.a(Module_21.a({}, a), {}, {
       validateMessages: Module_21.a(Module_21.a({}, a.validateMessages), e$validateMessages),
       triggerFormChange: function (e, t) {
@@ -788,7 +788,7 @@ var ge = function (e, t) {
   var /* [auto-meaningful-name] */e$onFinish = e.onFinish
   var /* [auto-meaningful-name] */e$onFinishFailed = e.onFinishFailed
   var x = Module_54.a(e, Ae)
-  var C = React.useContext(_e)
+  var C = useContext(_e)
   var O = de(e$form)
   var k = Module_40.a(O, 1)[0]
   var S = k.getInternalHooks(b)
@@ -797,10 +797,10 @@ var ge = function (e, t) {
   var /* [auto-meaningful-name] */S$setCallbacks = S.setCallbacks
   var /* [auto-meaningful-name] */S$setValidateMessages = S.setValidateMessages
   var /* [auto-meaningful-name] */S$setPreserve = S.setPreserve
-  React.useImperativeHandle(t, function () {
+  useImperativeHandle(t, function () {
     return k
   })
-  React.useEffect(function () {
+  useEffect(function () {
     C.registerForm(e$name, k)
     return function () {
       C.unregisterForm(e$name)
@@ -827,7 +827,7 @@ var ge = function (e, t) {
     onFinishFailed: e$onFinishFailed
   })
   S$setPreserve(e$preserve)
-  var P = React.useRef(null)
+  var P = useRef(null)
   S$setInitialValues(e$initialValues, !P.current)
   if (!P.current) {
     P.current = true
@@ -838,8 +838,8 @@ var ge = function (e, t) {
     N = e$children(k.getFieldsValue(true), k)
   }
   S$useSubscribe(!M)
-  var L = React.useRef()
-  React.useEffect(function () {
+  var L = useRef()
+  useEffect(function () {
     if (!function (e, t) {
       if (e === t) {
         return true
@@ -863,15 +863,15 @@ var ge = function (e, t) {
     }
     L.current = e$fields
   }, [e$fields, k])
-  var j = React.useMemo(function () {
+  var j = useMemo(function () {
     return Module_21.a(Module_21.a({}, k), {}, {
       validateTrigger: g
     })
   }, [k, g])
-  var U = React.createElement(E.Provider, {
+  var U = createElement(E.Provider, {
     value: j
   }, N)
-  return false === p ? U : React.createElement(p, Module_19.a({}, x, {
+  return false === p ? U : createElement(p, Module_19.a({}, x, {
     onSubmit: function (e) {
       e.preventDefault()
       e.stopPropagation()
@@ -887,7 +887,7 @@ var ge = function (e, t) {
     }
   }), U)
 }
-var ve = React.forwardRef(ge)
+var ve = forwardRef(ge)
 ve.FormProvider = pe
 ve.Field = ie
 ve.List = oe

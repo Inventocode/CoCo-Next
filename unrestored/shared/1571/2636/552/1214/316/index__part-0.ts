@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, createElement } from /* 0 */"react"
 import /* 50 */"../../../50/index"
 import * as /* [auto-meaningful-name] */Module_98 from /* 98 */"../../../551/1211/98"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../19"
@@ -15,13 +15,13 @@ import * as /* [auto-meaningful-name] */Module_709 from /* 709 */"../../../551/1
 import * as /* [auto-meaningful-name] */Module_1550 from /* 1550 */"../../../551/1211/269/1550"
 import * as /* [auto-meaningful-name] */Module_154 from /* 154 */"../../../551/1211/699/154/index"
 import * as /* [auto-meaningful-name] */Module_2678 from /* 2678 */"../../../551/1211/269/2678/index"
-var f = React.forwardRef(function (e, t) {
+var f = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$disableSpacing = e.disableSpacing
   var s = undefined !== e$disableSpacing && e$disableSpacing
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
   var l = Module_54.a(e, ["disableSpacing", "classes", "className"])
-  return React.createElement("div", Module_19.a({
+  return createElement("div", Module_19.a({
     className: Module_98.a(e$classes.root, e$className, !s && e$classes.spacing),
     ref: t
   }, l))
@@ -42,13 +42,13 @@ var d = Module_154.a({
 }, {
   name: "MuiDialogActions"
 })(f)
-var h = React.forwardRef(function (e, t) {
+var h = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$classes = e.classes
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$dividers = e.dividers
   var u = undefined !== e$dividers && e$dividers
   var l = Module_54.a(e, ["classes", "className", "dividers"])
-  return React.createElement("div", Module_19.a({
+  return createElement("div", Module_19.a({
     className: Module_98.a(e$classes.root, e$className, u && e$classes.dividers),
     ref: t
   }, l))

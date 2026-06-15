@@ -11,17 +11,18 @@ import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../../../19"
 import * as /* [auto-meaningful-name] */Module_142 from /* 142 */"../../../../142"
 import * as /* [auto-meaningful-name] */Module_434 from /* 434 */"../../../../434"
 import /* 50 */"../../../../50/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { Children, isValidElement, cloneElement } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_805 from /* 805 */"./805"
 function l(e, t) {
   var n = Object.create(null)
   if (e) {
-    React.Children.map(e, function (e) {
+    Children.map(e, function (e) {
       return e
     }).forEach(function (e) {
       n[e.key] = function (e) {
-        return t && React.isValidElement(e) ? t(e) : e
+        return t && isValidElement(e) ? t(e) : e
       }(e)
     })
   }
@@ -66,15 +67,15 @@ function d(e, t, n) {
   }(t, r)
   Object.keys(i).forEach(function (o) {
     var a = i[o]
-    if (React.isValidElement(a)) {
+    if (isValidElement(a)) {
       var c = o in t
       var u = o in r
       var l = t[o]
-      var d = React.isValidElement(l) && !l.props.in
+      var d = isValidElement(l) && !l.props.in
       if (!u || c && !d) {
         if (u || !c || d) {
-          if (u && c && React.isValidElement(l)) {
-            i[o] = React.cloneElement(a, {
+          if (u && c && isValidElement(l)) {
+            i[o] = cloneElement(a, {
               onExited: n.bind(null, a),
               in: l.props.in,
               exit: f(a, "exit", e),
@@ -82,12 +83,12 @@ function d(e, t, n) {
             })
           }
         } else {
-          i[o] = React.cloneElement(a, {
+          i[o] = cloneElement(a, {
             in: false
           })
         }
       } else {
-        i[o] = React.cloneElement(a, {
+        i[o] = cloneElement(a, {
           onExited: n.bind(null, a),
           in: true,
           exit: f(a, "exit", e),
@@ -136,7 +137,7 @@ var p = function (e) {
     var /* [auto-meaningful-name] */t$handleExited = t.handleExited
     return {
       children: t.firstRender ? (n = e, r = t$handleExited, l(n.children, function (e) {
-        return React.cloneElement(e, {
+        return cloneElement(e, {
           onExited: r.bind(null, e),
           in: true,
           appear: f(e, "appear", n),

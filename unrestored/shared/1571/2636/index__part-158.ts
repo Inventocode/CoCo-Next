@@ -12,7 +12,8 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_748 from /* 748 */"./748/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_474 from /* 474 */"./474"
 import /* [auto-meaningful-name] */Module_4741 from /* 474 */"./474"
 var GS = function (e, t) {
@@ -35,7 +36,7 @@ var GS = function (e, t) {
 }
 var WS = React.memo(function () {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var t = React1.useRef(null)
+  var t = useRef(null)
   var /* [auto-meaningful-name] */React$useContextNI$setBulkSelectVisible = React.useContext(nI).setBulkSelectVisible
   return React.createElement("div", {
     className: Classnames(Module_4741.wrapper)

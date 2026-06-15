@@ -10,14 +10,15 @@ import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../../../unr
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../../../unrestored/shared/1571/2636/10/index"
 import * as /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* [auto-meaningful-name] */Classnames1 from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useRef, useState, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */ReactDom from /* 80 */"react-dom"
 import /* [auto-meaningful-name] */ReactDom1 from /* 80 */"react-dom"
 import /* 868 */"./styles.css"
 import * as /* [auto-meaningful-name] */Iconfont_index from /* 94 */"../iconfont/index"
 var _a
-_a = React.memo(function (e) {
+_a = memo(function (e) {
   var /* [auto-meaningful-name] */e$className = e.className
   var /* [auto-meaningful-name] */e$style = e.style
   var /* [auto-meaningful-name] */e$visible = e.visible
@@ -33,9 +34,9 @@ _a = React.memo(function (e) {
   var y = undefined !== e$withPortal && e$withPortal
   var /* [auto-meaningful-name] */e$title = e.title
   var /* [auto-meaningful-name] */e$footer = e.footer
-  var w = React.useRef(null)
-  var C = React.useRef(null)
-  var T = React.useState(false)
+  var w = useRef(null)
+  var C = useRef(null)
+  var T = useState(false)
   var S = Module_10.a(T, 2)
   S[0]
   var A = S[1]
@@ -44,17 +45,17 @@ _a = React.memo(function (e) {
     (I = document.createElement("div")).id = "_cocoDialogContainer"
     document.body.appendChild(I)
   }
-  var j = React.useCallback(function () {
+  var j = useCallback(function () {
     if (e$onClose) {
       e$onClose()
     }
   }, [e$onClose])
-  var N = React.useCallback(function () {
+  var N = useCallback(function () {
     if (p) {
       j()
     }
   }, [j, p])
-  React.useEffect(function () {
+  useEffect(function () {
     var /* [auto-meaningful-name] */w$current = w.current
     var t = function (e) {
       var /* [auto-meaningful-name] */C$current
@@ -71,7 +72,7 @@ _a = React.memo(function (e) {
       }
     }
   }, [])
-  React.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       A(true)
     }

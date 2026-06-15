@@ -20,7 +20,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_223 from /* 223 */"./223"
 import /* [auto-meaningful-name] */Module_2231 from /* 223 */"./223"
 var AO = [
@@ -66,7 +67,7 @@ var IO = [
     }
   }
 ]
-var jO = React1.memo(function (e) {
+var jO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sliderType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -88,23 +89,23 @@ var jO = React1.memo(function (e) {
   var y = e$getValue("trackImageDirection") || Module_77.b.HORIZONTAL
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var O = useDispatch()
-  var w = React1.useState("")
+  var w = useState("")
   var C = Module_10.a(w, 2)
   var T = C[0]
   var A = C[1]
-  var j = React1.useState("")
+  var j = useState("")
   var R = Module_10.a(j, 2)
   var k = R[0]
   var x = R[1]
-  var D = React1.useState("")
+  var D = useState("")
   var M = Module_10.a(D, 2)
   var L = M[0]
   var P = M[1]
-  var B = React1.useState("")
+  var B = useState("")
   var F = Module_10.a(B, 2)
   var G = F[0]
   var W = F[1]
-  var U = React1.useState("")
+  var U = useState("")
   var H = Module_10.a(U, 2)
   var V = H[0]
   var K = H[1]
@@ -113,7 +114,7 @@ var jO = React1.memo(function (e) {
       e$onChange(n, e)
     }
   }
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (Src_shared_tools_index.U(u)) {
       e = u
@@ -123,7 +124,7 @@ var jO = React1.memo(function (e) {
     }
     P(e || Module_149.c)
   }, [u, a])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (Src_shared_tools_index.U(g)) {
       e = g
@@ -140,7 +141,7 @@ var jO = React1.memo(function (e) {
       })
     }
   }, [b, g, a])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (Src_shared_tools_index.U(v)) {
       e = v
@@ -249,7 +250,7 @@ var jO = React1.memo(function (e) {
     id: "edit"
   })))))
 })
-var NO = React1.memo(function (e) {
+var NO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var r = e$getValue("maxValue")
@@ -359,7 +360,7 @@ var NO = React1.memo(function (e) {
     ]
   })))
 })
-var RO = React1.memo(function (e) {
+var RO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "direction" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -419,7 +420,7 @@ var RO = React1.memo(function (e) {
     id: "vertical"
   })))))
 })
-var kO = React1.memo(function (e) {
+var kO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "fontSize" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue

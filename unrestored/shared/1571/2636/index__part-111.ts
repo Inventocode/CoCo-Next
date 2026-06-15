@@ -14,10 +14,11 @@ import * as /* [auto-meaningful-name] */Src_shared_ui_components_index from /* 1
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1038 from /* 1038 */"./1038"
 import /* [auto-meaningful-name] */Module_10381 from /* 1038 */"./1038"
-var BE = React1.memo(function (e) {
+var BE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "textAlign" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue
@@ -37,7 +38,7 @@ var BE = React1.memo(function (e) {
     textAlign: a
   }))
 })
-var FE = React1.memo(function (e) {
+var FE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "justifyContent" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -62,7 +63,7 @@ var FE = React1.memo(function (e) {
     type: "icon-vertical-bottom"
   })))
 })
-var GE = React1.memo(function (e) {
+var GE = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "justifyContent" : e$keyName
   var /* [auto-meaningful-name] */e$getValue = e.getValue

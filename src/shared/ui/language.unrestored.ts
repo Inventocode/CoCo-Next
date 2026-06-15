@@ -13,7 +13,8 @@ export { m as c }
 export { g as f }
 export { _ as d }
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../unrestored/shared/1571/2636/6"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_2681 from /* 2681 */"../../../unrestored/shared/1571/2636/2681/index"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"../../../unrestored/shared/1571/2636/10/index"

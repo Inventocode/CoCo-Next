@@ -6,13 +6,14 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/iconfont/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_iconfont_index from /* 94 */"../../../../../src/shared/ui/components/Iconfont/index"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useRef, useImperativeHandle } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../../../../../src/shared/ui/components/dialog/index"
+import * as /* [auto-meaningful-name] */Src_shared_ui_components_dialog_index from /* 540 */"../../../../../src/shared/ui/components/Dialog/index"
 import /* 869 */"./869"
-var J = React1.memo(React.forwardRef(function (e, t) {
+var J = memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */e$icon = e.icon
   var /* [auto-meaningful-name] */e$onClick = e.onClick
@@ -24,8 +25,8 @@ var J = React1.memo(React.forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$children = e.children
   var /* [auto-meaningful-name] */e$shape = e.shape
   var m = undefined === e$shape ? "circle" : e$shape
-  var g = React1.useRef(null)
-  React1.useImperativeHandle(t, function () {
+  var g = useRef(null)
+  useImperativeHandle(t, function () {
     return {
       button: g.current
     }

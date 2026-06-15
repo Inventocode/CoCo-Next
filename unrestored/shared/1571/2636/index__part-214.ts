@@ -20,24 +20,25 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useSelector, useDispatch, batch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_249 from /* 249 */"./249"
 import /* [auto-meaningful-name] */Module_2491 from /* 249 */"./249"
-var MP = React1.memo(function (e) {
+var MP = memo(function (e) {
   var /* [auto-meaningful-name] */e$onUploadFileChange = e.onUploadFileChange
   var /* [auto-meaningful-name] */e$onResourceLibraryClick = e.onResourceLibraryClick
   var /* [auto-meaningful-name] */e$fileId = e.fileId
   var /* [auto-meaningful-name] */e$type = e.type
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var a = React1.useState(false)
+  var a = useState(false)
   var s = Module_10.a(a, 2)
   var c = s[0]
   var l = s[1]
-  var u = React1.useState("")
+  var u = useState("")
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (Src_shared_tools_index.U(e$fileId)) {
       e = e$fileId
@@ -115,7 +116,7 @@ var MP = React1.memo(function (e) {
     id: "Resource.Replace"
   })))))
 })
-var LP = React1.memo(function () {
+var LP = memo(function () {
   var e = useSelector(function (e) {
     return e.common.sliderImageDialogInfo
   })
@@ -131,59 +132,59 @@ var LP = React1.memo(function () {
   var /* [auto-meaningful-name] */e$trackImageDirection = e.trackImageDirection
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var p = useDispatch()
-  var m = React1.useState("")
+  var m = useState("")
   var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  var y = React1.useState(e$handleImageRatio)
+  var y = useState(e$handleImageRatio)
   var E = Module_10.a(y, 2)
   var O = E[0]
   var w = E[1]
-  var C = React1.useState(e$handleImageDirection)
+  var C = useState(e$handleImageDirection)
   var T = Module_10.a(C, 2)
   var A = T[0]
   var j = T[1]
-  var R = React1.useState("")
+  var R = useState("")
   var k = Module_10.a(R, 2)
   var x = k[0]
   var D = k[1]
-  var M = React1.useState(e$backgroundImageDirection)
+  var M = useState(e$backgroundImageDirection)
   var L = Module_10.a(M, 2)
   var P = L[0]
   var B = L[1]
-  var F = React1.useState("")
+  var F = useState("")
   var G = Module_10.a(F, 2)
   var W = G[0]
   var U = G[1]
-  var H = React1.useState(e$trackImageDirection)
+  var H = useState(e$trackImageDirection)
   var V = Module_10.a(H, 2)
   var K = V[0]
   var q = V[1]
-  var X = React1.useState(true)
+  var X = useState(true)
   var Q = Module_10.a(X, 2)
   var Z = Q[0]
   var J = Q[1]
-  var $ = React1.useState("")
+  var $ = useState("")
   var ee = Module_10.a($, 2)
   var ne = ee[0]
   var re = ee[1]
-  var oe = React1.useState("")
+  var oe = useState("")
   var ie = Module_10.a(oe, 2)
   var ae = ie[0]
   var se = ie[1]
-  var ce = React1.useState("")
+  var ce = useState("")
   var le = Module_10.a(ce, 2)
   var ue = le[0]
   var de = le[1]
-  var pe = React1.useState("")
+  var pe = useState("")
   var fe = Module_10.a(pe, 2)
   var he = fe[0]
   var me = fe[1]
-  var ge = React1.useState("")
+  var ge = useState("")
   var _e = Module_10.a(ge, 2)
   var ve = _e[0]
   var be = _e[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (Src_shared_tools_index.U(v)) {
       e = v
@@ -193,7 +194,7 @@ var LP = React1.memo(function () {
     }
     de(e || Module_149.c)
   }, [v])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (Src_shared_tools_index.U(x)) {
       e = x
@@ -208,7 +209,7 @@ var LP = React1.memo(function () {
       return se("")
     })
   }, [x, e$backgroundImageDirection])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e
     if (Src_shared_tools_index.U(W)) {
       e = W
@@ -223,21 +224,21 @@ var LP = React1.memo(function () {
       return re("")
     })
   }, [K, W])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       w(e$handleImageRatio)
       B(e$backgroundImageDirection)
       q(e$trackImageDirection)
     }
   }, [e$backgroundImageDirection, e$handleImageRatio, e$trackImageDirection, e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$direction === Module_77.b.HORIZONTAL) {
       J(true)
     } else {
       J(false)
     }
   }, [e$direction])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$visible) {
       b(e$handleImageFileId)
       U(e$trackImageFileId)

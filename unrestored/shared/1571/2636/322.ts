@@ -7,23 +7,24 @@
 "use strict"
 
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React from "react"
 import /* [auto-meaningful-name] */React1 from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_376 from /* 376 */"./37/376"
 import * as /* [auto-meaningful-name] */Module_82 from /* 82 */"./82"
 var _a
-_a = React.memo(function (e) {
-  var t = React.useState([])
+_a = memo(function (e) {
+  var t = useState([])
   var n = Module_10.a(t, 2)
   var c = n[0]
   var l = n[1]
-  var u = React.useState("0 0 1024 1024")
+  var u = useState("0 0 1024 1024")
   var d = Module_10.a(u, 2)
   var p = d[0]
   var f = d[1]
   var /* [auto-meaningful-name] */e$icon = e.icon
   var m = undefined === e$icon ? Module_82.c : e$icon
-  React.useEffect(function () {
+  useEffect(function () {
     var e = Module_376.a(m.id)
     if (e) {
       l(e.path)

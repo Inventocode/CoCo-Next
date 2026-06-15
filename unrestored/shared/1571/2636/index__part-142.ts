@@ -21,10 +21,11 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_1057 from /* 1057 */"./1057"
 import /* [auto-meaningful-name] */Module_10571 from /* 1057 */"./1057"
-var UC = React1.memo(function (e) {
+var UC = memo(function (e) {
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
   var /* [auto-meaningful-name] */e$editConfig = e.editConfig
   var /* [auto-meaningful-name] */e$widgetIcon = e.widgetIcon
@@ -84,7 +85,7 @@ var UC = React1.memo(function (e) {
     })
   }(e$editConfig, false)))
 })
-var HC = React1.memo(function () {
+var HC = memo(function () {
   var e = useDispatch()
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var n = useSelector(function (e) {

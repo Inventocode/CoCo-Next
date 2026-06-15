@@ -31,7 +31,8 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch, useSelector } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_175 from /* 175 */"./175"
 import /* [auto-meaningful-name] */Module_1751 from /* 175 */"./175"
 var $E = [
@@ -95,7 +96,7 @@ sE = {}
 Module_11.a(sE, Module_83.a.TEXT, [Module_83.c.SMALL, Module_83.c.MEDIUM, Module_83.c.LARGE])
 Module_11.a(sE, Module_83.a.ICON, [Module_83.c.TINY, Module_83.c.SMALL, Module_83.c.MEDIUM, Module_83.c.LARGE, Module_83.c.HUGE])
 var eO = sE
-var tO = React1.memo(function (e) {
+var tO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "mode" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -108,11 +109,11 @@ var tO = React1.memo(function (e) {
   var u = e$getValue("text")
   var d = Module_33.O(a)
   var p = useDispatch()
-  var m = React1.useState()
+  var m = useState()
   var g = Module_10.a(m, 2)
   var v = g[0]
   var b = g[1]
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Module_9.fb(l)
     b(e)
   }, [l])
@@ -183,7 +184,7 @@ var tO = React1.memo(function (e) {
     className: Classnames("coco-select-arrow")
   }))))
 })
-var nO = React1.memo(function (e) {
+var nO = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "sizeType" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -219,7 +220,7 @@ var nO = React1.memo(function (e) {
     }
   })
 })
-var rO = React1.memo(function (e) {
+var rO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
@@ -283,7 +284,7 @@ var rO = React1.memo(function (e) {
     textAlign: e$getValue("textAlign")
   })))))
 })
-var oO = React1.memo(function (e) {
+var oO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
@@ -361,7 +362,7 @@ var aO = [
     }
   }
 ]
-var sO = React1.memo(function (e) {
+var sO = memo(function (e) {
   var /* [auto-meaningful-name] */e$onChange = e.onChange
   var /* [auto-meaningful-name] */e$getValue = e.getValue
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage

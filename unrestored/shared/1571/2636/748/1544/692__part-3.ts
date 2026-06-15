@@ -12,7 +12,7 @@ import * as /* [auto-meaningful-name] */Module_140 from /* 140 */"../../140"
 import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../../120"
 import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../../106"
 import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../../103"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { Fragment, createElement, Component } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_107 from /* 107 */"../../107"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../../21"
 import * as /* [auto-meaningful-name] */Module_19 from /* 19 */"../../19"
@@ -128,18 +128,18 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
           var /* [auto-meaningful-name] */this$props$children = this$props.children
           var /* [auto-meaningful-name] */this$props$onVisibleChanged = this$props.onVisibleChanged
           var c = Module_54.a(this$props, ["component", "children", "onVisibleChanged"])
-          var u = this$props$component || React.Fragment
+          var u = this$props$component || Fragment
           var l = {}
           G.forEach(function (e) {
             l[e] = c[e]
             delete c[e]
           })
           delete c.keys
-          return React.createElement(u, c, this$state$keyEntities.map(function (n) {
+          return createElement(u, c, this$state$keyEntities.map(function (n) {
             var /* [auto-meaningful-name] */n$status = n.status
             var i = Module_54.a(n, ["status"])
             var c = "add" === n$status || "keep" === n$status
-            return React.createElement(t, Module_19.a({}, l, {
+            return createElement(t, Module_19.a({}, l, {
               key: i.key,
               visible: c,
               eventProps: i,
@@ -177,7 +177,7 @@ var G = ["eventProps", "visible", "children", "motionName", "motionAppear", "mot
       }
     ])
     return r
-  }(React.Component)
+  }(Component)
   n.defaultProps = {
     component: "div"
   }

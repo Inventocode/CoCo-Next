@@ -8,7 +8,8 @@
 
 var ve
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import /* 541 */"../541/index"
 import * as /* [auto-meaningful-name] */Module_303 from /* 303 */"./303/index"
@@ -26,8 +27,8 @@ var Pe = function (e) {
   var /* [auto-meaningful-name] */e$duration = e.duration
   var r = undefined === e$duration ? 500 : e$duration
   var /* [auto-meaningful-name] */e$className = e.className
-  var c = React1.useRef(null)
-  React1.useEffect(function () {
+  var c = useRef(null)
+  useEffect(function () {
     return function () {
       Le()
     }

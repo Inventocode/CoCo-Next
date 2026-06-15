@@ -13,7 +13,7 @@ export { p as d }
 export { g as c }
 export { v as f }
 export { m as b }
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { Fragment, Children } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_2641 from /* 2641 */"./2641/index"
 import * as /* [auto-meaningful-name] */Module_804 from /* 804 */"./2641/804"
 import /* [auto-meaningful-name] */Module_8041 from /* 804 */"./2641/804"
@@ -64,7 +64,7 @@ var h = {
   formats: {},
   messages: {},
   timeZone: undefined,
-  textComponent: React.Fragment,
+  textComponent: Fragment,
   defaultLocale: "en",
   defaultFormats: {},
   onError: function (e) {
@@ -200,7 +200,7 @@ function v(e, t, n, r) {
 }
 function m(e) {
   return function (t) {
-    return e(React.Children.toArray(t))
+    return e(Children.toArray(t))
   }
 }
 export default h

@@ -11,7 +11,8 @@ import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
 import * as /* [auto-meaningful-name] */Module_11 from /* 11 */"../../../11"
 import * as /* [auto-meaningful-name] */Src_editor_widget_builtIn_types from /* 5 */"../../../../../../../src/editor/widget/built-in/types"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useMemo } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_6 from /* 6 */"../../../6"
 import * as /* [auto-meaningful-name] */Module_322 from /* 322 */"../../../322"
 import * as /* [auto-meaningful-name] */Module_82 from /* 82 */"../../../82"
@@ -62,7 +63,7 @@ var P = function (e) {
   var z = Math.min(H, V, G)
   z = Math.max(z, Module_82.o)
   z = Math.floor(z)
-  var Y = React1.useMemo(function () {
+  var Y = useMemo(function () {
     return function (e, t, n, r) {
       var o
       o = {}

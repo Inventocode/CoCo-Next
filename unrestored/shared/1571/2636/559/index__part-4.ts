@@ -13,7 +13,7 @@ import * as /* [auto-meaningful-name] */Module_120 from /* 120 */"../120"
 import * as /* [auto-meaningful-name] */Module_106 from /* 106 */"../106"
 import * as /* [auto-meaningful-name] */Module_103 from /* 103 */"../103"
 import /* [auto-meaningful-name] */Classnames from /* 8 */"classnames"
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { forwardRef, useRef, useImperativeHandle, useEffect, useState, useLayoutEffect, useCallback, useMemo, Component, createElement, Fragment } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_54 from /* 54 */"../54"
 import * as /* [auto-meaningful-name] */Module_40 from /* 40 */"../40/index"
 import * as /* [auto-meaningful-name] */Module_21 from /* 21 */"../21"
@@ -47,25 +47,25 @@ function _e(e, t, n, r) {
 function ve() {
   return !("undefined" === typeof window || !window.document || !window.document.createElement)
 }
-var be = React.forwardRef(function (e, t) {
+var be = forwardRef(function (e, t) {
   var /* [auto-meaningful-name] */e$didUpdate = e.didUpdate
   var /* [auto-meaningful-name] */e$getContainer = e.getContainer
   var /* [auto-meaningful-name] */e$children = e.children
-  var i = React.useRef()
-  React.useImperativeHandle(t, function () {
+  var i = useRef()
+  useImperativeHandle(t, function () {
     return {}
   })
-  var a = React.useRef(false)
+  var a = useRef(false)
   if (!a.current && ve()) {
     i.current = e$getContainer()
     a.current = true
   }
-  React.useEffect(function () {
+  useEffect(function () {
     if (!(null === e$didUpdate || undefined === e$didUpdate)) {
       e$didUpdate(e)
     }
   })
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       var /* [auto-meaningful-name] */i$current
       var /* [auto-meaningful-name] */i$current$parentNode
@@ -136,12 +136,12 @@ function ke(e, t) {
   })] : "".concat(e, "-").concat(t) : null
 }
 function xe(e) {
-  var t = React.useRef(false)
-  var n = React.useState(e)
+  var t = useRef(false)
+  var n = useState(e)
   var r = Module_40.a(n, 2)
   var o = r[0]
   var i = r[1]
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       t.current = true
     }
@@ -154,22 +154,22 @@ function xe(e) {
     }
   ]
 }
-var De = ve() ? React.useLayoutEffect : React.useEffect
+var De = ve() ? useLayoutEffect : useEffect
 var Me = ["prepare", "start", "active", "end"]
 function Le(e) {
   return "active" === e || "end" === e
 }
 var Pe = function (e, t) {
-  var n = React.useState("none")
+  var n = useState("none")
   var r = Module_40.a(n, 2)
   var o = r[0]
   var i = r[1]
   var a = function () {
-    var e = React.useRef(null)
+    var e = useRef(null)
     function t() {
       pe.cancel(e.current)
     }
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         t()
       }
@@ -219,7 +219,7 @@ var Pe = function (e, t) {
       }
     }
   }, [e, o])
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       d()
     }
@@ -264,14 +264,14 @@ function Be(e, t, n, r) {
   var B = Module_40.a(P, 2)
   var F = B[0]
   var G = B[1]
-  var W = React.useRef(false)
-  var U = React.useRef(null)
-  var H = React.useRef(false)
-  var V = React.useRef(null)
+  var W = useRef(false)
+  var U = useRef(null)
+  var H = useRef(false)
+  var V = useRef(null)
   function z() {
     return n() || V.current
   }
-  var Y = React.useRef(false)
+  var Y = useRef(false)
   function K(e) {
     var t
     var n = z()
@@ -294,10 +294,10 @@ function Be(e, t, n, r) {
     }
   }
   var q = function (e) {
-    var t = React.useRef()
-    var n = React.useRef(e)
+    var t = useRef()
+    var n = useRef(e)
     n.current = e
-    var r = React.useCallback(function (e) {
+    var r = useCallback(function (e) {
       n.current(e)
     }, [])
     function o(e) {
@@ -306,7 +306,7 @@ function Be(e, t, n, r) {
         e.removeEventListener(Ne, r)
       }
     }
-    React.useEffect(function () {
+    useEffect(function () {
       return function () {
         o(t.current)
       }
@@ -325,7 +325,7 @@ function Be(e, t, n, r) {
     ]
   }(K)
   var X = Module_40.a(q, 1)[0]
-  var Q = React.useMemo(function () {
+  var Q = useMemo(function () {
     var e
     var t
     var n
@@ -400,18 +400,18 @@ function Be(e, t, n, r) {
       }
     }
   }, [t])
-  React.useEffect(function () {
+  useEffect(function () {
     if ("appear" === M && !d || "enter" === M && !c || "leave" === M && !f) {
       L("none")
     }
   }, [d, c, f])
-  React.useEffect(function () {
+  useEffect(function () {
     return function () {
       clearTimeout(U.current)
       H.current = true
     }
   }, [])
-  React.useEffect(function () {
+  useEffect(function () {
     if (undefined !== R && "none" === M) {
       if (!(null === r$onVisibleChanged || undefined === r$onVisibleChanged)) {
         r$onVisibleChanged(R)
@@ -442,7 +442,7 @@ var Fe = function (e) {
     }
   ])
   return n
-}(React.Component)
+}(Component)
 var Ge = function (e) {
   var t = e
   function n(e) {
@@ -451,7 +451,7 @@ var Ge = function (e) {
   if ("object" === Module_107.a(e)) {
     t = e.transitionSupport
   }
-  var r = React.forwardRef(function (e, t) {
+  var r = forwardRef(function (e, t) {
     var /* [auto-meaningful-name] */e$visible = e.visible
     var a = undefined === e$visible || e$visible
     var /* [auto-meaningful-name] */e$removeOnLeave = e.removeOnLeave
@@ -462,8 +462,8 @@ var Ge = function (e) {
     var /* [auto-meaningful-name] */e$leavedClassName = e.leavedClassName
     var /* [auto-meaningful-name] */e$eventProps = e.eventProps
     var _ = n(e)
-    var v = React.useRef()
-    var b = React.useRef()
+    var v = useRef()
+    var b = useRef()
     var y = Be(_, a, function () {
       try {
         return he(v.current || b.current)
@@ -476,14 +476,14 @@ var Ge = function (e) {
     var w = E[1]
     var C = E[2]
     var T = E[3]
-    var S = React.useRef(T)
+    var S = useRef(T)
     if (T) {
       S.current = true
     }
-    var A = React.useRef(t)
+    var A = useRef(t)
     A.current = t
     var I
-    var j = React.useCallback(function (e) {
+    var j = useCallback(function (e) {
       v.current = e
       ge(A.current, e)
     }, [])
@@ -521,7 +521,7 @@ var Ge = function (e) {
     } else {
       I = null
     }
-    return React.createElement(Fe, {
+    return createElement(Fe, {
       ref: b
     }, I)
   })
@@ -639,18 +639,18 @@ var Ve = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
           var /* [auto-meaningful-name] */this$props$children = this$props.children
           var /* [auto-meaningful-name] */this$props$onVisibleChanged = this$props.onVisibleChanged
           var u = Module_54.a(this$props, ["component", "children", "onVisibleChanged"])
-          var d = this$props$component || React.Fragment
+          var d = this$props$component || Fragment
           var p = {}
           Ve.forEach(function (e) {
             p[e] = u[e]
             delete u[e]
           })
           delete u.keys
-          return React.createElement(d, u, this$state$keyEntities.map(function (n) {
+          return createElement(d, u, this$state$keyEntities.map(function (n) {
             var /* [auto-meaningful-name] */n$status = n.status
             var i = Module_54.a(n, ["status"])
             var u = "add" === n$status || "keep" === n$status
-            return React.createElement(t, Module_19.a({}, p, {
+            return createElement(t, Module_19.a({}, p, {
               key: i.key,
               visible: u,
               eventProps: i,
@@ -688,7 +688,7 @@ var Ve = ["eventProps", "visible", "children", "motionName", "motionAppear", "mo
       }
     ])
     return o
-  }(React.Component)
+  }(Component)
   n.defaultProps = {
     component: "div"
   }
@@ -727,12 +727,12 @@ function Ke(e) {
       animation: e$maskAnimation
     }))
   }
-  return React.createElement(ze, Module_19.a({}, d, {
+  return createElement(ze, Module_19.a({}, d, {
     visible: e$visible,
     removeOnLeave: true
   }), function (e) {
     var /* [auto-meaningful-name] */e$className = e.className
-    return React.createElement("div", {
+    return createElement("div", {
       style: {
         zIndex: e$zIndex
       },

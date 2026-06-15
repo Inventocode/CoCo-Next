@@ -24,7 +24,8 @@ import * as /* [auto-meaningful-name] */Module_7 from /* 7 */"./7"
 import /* [auto-meaningful-name] */RegeneratorRuntime from /* 1 */"regenerator-runtime"
 import { useSelector, useDispatch, batch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { useRef, useState, useCallback, useEffect } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_810 from /* 810 */"./810"
 import /* [auto-meaningful-name] */Module_8101 from /* 810 */"./810"
 var Vh = function (e) {
@@ -43,9 +44,9 @@ var Vh = function (e) {
   var /* [auto-meaningful-name] */e$attributes$rotation = e$attributes.rotation
   var /* [auto-meaningful-name] */e$attributes$selectedStyleId = e$attributes.selectedStyleId
   var /* [auto-meaningful-name] */e$attributes$pivotToCenter = e$attributes.pivotToCenter
-  var b = React1.useRef(false)
-  var y = React1.useRef(e$attributes$scaleAndLock)
-  var w = React1.useState(true)
+  var b = useRef(false)
+  var y = useRef(e$attributes$scaleAndLock)
+  var w = useState(true)
   var C = Module_10.a(w, 2)
   var T = C[0]
   var j = C[1]
@@ -56,18 +57,18 @@ var Vh = function (e) {
   })
   var D = useDispatch()
   var M = x === t
-  var L = React1.useState(2)
+  var L = useState(2)
   var P = Module_10.a(L, 2)
   var B = P[0]
   var F = P[1]
-  var G = React1.useState({
+  var G = useState({
     x: 0,
     y: 0
   })
   var W = Module_10.a(G, 2)
   var U = W[0]
   var H = W[1]
-  var V = React1.useState({
+  var V = useState({
     width: 0,
     height: 0,
     translateX: 0,
@@ -77,11 +78,11 @@ var Vh = function (e) {
   var K = Module_10.a(V, 2)
   var q = K[0]
   var X = K[1]
-  var Q = React1.useState(false)
+  var Q = useState(false)
   var Z = Module_10.a(Q, 2)
   var J = Z[0]
   var $ = Z[1]
-  var ee = React1.useCallback(function () {
+  var ee = useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t, n) {
       var r
       var o
@@ -122,7 +123,7 @@ var Vh = function (e) {
       return e.apply(this, arguments)
     }
   }(), [e$attributes$actionList])
-  var te = React1.useCallback(function () {
+  var te = useCallback(function () {
     var e = Module_7.a(RegeneratorRuntime.mark(function e(t) {
       var n
       var o
@@ -179,16 +180,16 @@ var Vh = function (e) {
       return e.apply(this, arguments)
     }
   }(), [e$parentId, k, ee])
-  React1.useEffect(function () {
+  useEffect(function () {
     y.current = e$attributes$scaleAndLock
   }, [e$attributes$scaleAndLock])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Module_215.b(k)
     if (e) {
       te(e)
     }
   }, [k, te])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -226,7 +227,7 @@ var Vh = function (e) {
       }
     }
   }, [D, k, T, e$attributes$selectedStyleId, B])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -234,7 +235,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$visible])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -242,7 +243,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$rotation])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -250,7 +251,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$position])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -258,7 +259,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$pivotToCenter])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -274,7 +275,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$scaleAndLock])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -282,7 +283,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$opacity])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e && e$attributes$flipped) {
@@ -290,7 +291,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, e$attributes$flipped])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (!T) {
       var e = Module_215.b(k)
       if (e) {
@@ -304,7 +305,7 @@ var Vh = function (e) {
       }
     }
   }, [k, T, s])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (x === t) {
       var e = Module_215.b(t)
       var n = null === e || undefined === e ? undefined : e.components.get_editor()
@@ -316,7 +317,7 @@ var Vh = function (e) {
       }
     }
   }, [t, x, T])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = Module_215.b(k)
     if (e) {
       var t = function (e) {
@@ -366,7 +367,7 @@ var Vh = function (e) {
       }
     }
   }, [k, D])
-  React1.useEffect(function () {
+  useEffect(function () {
     if (e$parentId) {
       var e = Module_33.Cb(e$parentId)
       if (e) {
@@ -411,7 +412,7 @@ var Vh = function (e) {
       }
     }
   }, [e$position, e$attributes$pivotToCenter, e$attributes$rotation, e$attributes$scale, e$attributes$selectedStyleId, T, e$parentId, k])
-  React1.useEffect(function () {
+  useEffect(function () {
     var e = document.querySelector("#".concat(e$parentId, "[data-role=\"WIDGET\"]"))
     if (e instanceof HTMLDivElement) {
       if (J) {

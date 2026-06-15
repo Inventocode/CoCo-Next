@@ -16,9 +16,10 @@ import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"./710"
 import * as /* [auto-meaningful-name] */Module_10 from /* 10 */"./10/index"
 import { useDispatch } from /* 16 */"react-redux"
 import /* [auto-meaningful-name] */React from /* 0 */"react"
-import * as /* [auto-meaningful-name] */React1 from /* 0 */"react"
+import { memo, useState } from /* 0 */"react"
+import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_2680 from /* 2680 */"./2680/index"
-var hw = React1.memo(function (e) {
+var hw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "templateType" : e$keyName
   var /* [auto-meaningful-name] */e$widgetId = e.widgetId
@@ -28,7 +29,7 @@ var hw = React1.memo(function (e) {
   var s = e$getValue("templateRenderType")
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
   var l = useDispatch()
-  var u = React1.useState(false)
+  var u = useState(false)
   var d = Module_10.a(u, 2)
   var p = d[0]
   var m = d[1]
@@ -119,7 +120,7 @@ var hw = React1.memo(function (e) {
     }))
   }))))
 })
-var mw = React1.memo(function (e) {
+var mw = memo(function (e) {
   var /* [auto-meaningful-name] */e$keyName = e.keyName
   var n = undefined === e$keyName ? "options" : e$keyName
   var /* [auto-meaningful-name] */e$onChange = e.onChange
@@ -128,7 +129,7 @@ var mw = React1.memo(function (e) {
   var a = e$getValue(n)
   var s = e$formConfig.dropdown || []
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
-  var l = React1.useState(a)
+  var l = useState(a)
   var u = Module_10.a(l, 2)
   var d = u[0]
   var p = u[1]

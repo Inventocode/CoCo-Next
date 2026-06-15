@@ -6,7 +6,7 @@
 
 "use strict"
 
-import * as /* [auto-meaningful-name] */React from /* 0 */"react"
+import { createContext, useContext } from /* 0 */"react"
 import * as /* [auto-meaningful-name] */Module_316 from /* 316 */"../../../552/1214/316/index"
 import * as /* [auto-meaningful-name] */Module_1547 from /* 1547 */"./1547"
 function y(e) {
@@ -21,9 +21,9 @@ function y(e) {
     return e
   }, {})
 }
-var b = React.createContext()
+var b = createContext()
 function w() {
-  return React.useContext(b)
+  return useContext(b)
 }
 var E = b
 export { y }

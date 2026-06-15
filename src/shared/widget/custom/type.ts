@@ -24,7 +24,6 @@ export function standardize(type: string, isFromWidgetShop: boolean): string {
   }
   return type = type.toUpperCase()
 }
-export { standardize as c }
 
 export function toUnprefixed(type: string, isFromWidgetShop: boolean): string {
   if (isExtensions(type)) {
