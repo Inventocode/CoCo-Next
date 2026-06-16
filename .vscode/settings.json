@@ -36,13 +36,10 @@
         "slightning",
         "socketcoll",
         "socketcv",
-        "unminimize",
-        "unminimizing",
         "vika",
         "vikadata",
         "webdb",
         "weixin",
-        "workerpool",
         "xmlserializer"
     ],
     "explorer.fileNesting.enabled": true,
