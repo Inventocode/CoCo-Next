@@ -29,7 +29,7 @@ import * as /* [auto-meaningful-name] */Module_454 from /* 454 */"../../../../un
 import * as /* [auto-meaningful-name] */Module_18 from /* 18 */"../../../../unrestored/shared/1571/2636/18"
 import * as Actions from "../../redux/common/actions"
 import * as /* [auto-meaningful-name] */Shared_ui_components from "../../../shared/ui/components"
-import { IconFont } from "../../../shared/ui/components"
+import { IconFont, SubMenuItemWrapper } from "../../../shared/ui/components"
 import * as /* [auto-meaningful-name] */Module_627 from /* 627 */"../../../../unrestored/shared/1571/2636/627"
 import /* [auto-meaningful-name] */Classnames from "classnames"
 import * as /* [auto-meaningful-name] */Module_710 from /* 710 */"../../../../unrestored/shared/1571/2636/710"
@@ -43,6 +43,8 @@ import * as /* [auto-meaningful-name] */Module_1053 from /* 1053 */"../../../../
 
 import styles from "./styles.module.css"
 import cloudSpaceManagerStyles from "../../../../unrestored/shared/1571/2636/1053"
+import { useInnerWidth } from "../../../shared/utils/ui/use-inner-width"
+import { useCallback, useState } from "react"
 
 function CloudSpaceManager() {
   var /* [auto-meaningful-name] */Module_710$a$formatMessage = Module_710.a().formatMessage
@@ -665,6 +667,11 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
       return e.apply(this, arguments)
     }
   }()
+
+  // [CoCo Next] 小屏适配
+  const innerWidth = useInnerWidth()
+  const [isZoomOut, setIsZoomOut] = useState(false)
+
   var je = function (e) {
     if (!playing) {
       switch (e) {
@@ -673,6 +680,25 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
           break
         case "STAGE_AREA":
           dispatch(Actions.Yi(!stageVisible))
+          break
+        // [CoCo Next] 添加全屏和缩小显示
+        case "FULLSCREEN":
+          document.documentElement.requestFullscreen()
+          break
+        case "ZOOM_OUT":
+          const bodyStyle = document.body.style
+          if (isZoomOut) {
+            bodyStyle.minWidth = ""
+            bodyStyle.minHeight = ""
+          } else {
+            const scaleX = innerWidth / 1200
+            const scaleY = innerHeight / 640
+            const scale = Math.min(1, scaleX, scaleY)
+            bodyStyle.minWidth = `${1200 * scaleX / scale}px`
+            bodyStyle.minHeight = `${640 * scaleY / scale}px`
+          }
+          setIsZoomOut(!isZoomOut)
+          break
       }
     }
   }
@@ -727,6 +753,179 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
   var De = function () {
     window.open("".concat(Shared_tools.B(), "/about/"), "_blank")
   }
+
+  // [CoCo Next] 小屏设备折叠菜单
+  const fileMenu = (
+    <Shared_ui_components.l onClick={Ce}>
+      {uiConfig.file.newProject === Module_18.j.Show && (
+        <Shared_ui_components.m value="CREATE_NEW_PROJECT">
+          <div className={styles.itemContent}>
+            {formatMessage({ id: "HeaderDropdown.newProject" })}
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {uiConfig.file.openMyProject === Module_18.j.Show && (
+        <Shared_ui_components.m value="OPEN_MY_PROJECT">
+          <div className={styles.itemContent}>
+            {formatMessage({ id: "HeaderDropdown.openProject" })}
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {showSaveAs && (
+        <Shared_ui_components.m value="SAVE_AS">
+          <div className={styles.itemContent}>
+            {formatMessage({ id: "HeaderDropdown.saveAs" })}
+          </div>
+        </Shared_ui_components.m>
+      )}
+      <div className={styles.line} />
+      {uiConfig.file.showHistory === Module_18.j.Show && isAuthor && (
+        <Shared_ui_components.m value="HISTORY">
+          <div className={styles.itemContent}>
+            {formatMessage({ id: "HeaderDropdown.history" })}
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {
+      // [CoCo Next] 移除协作导入自定义控件限制
+      // !collWorkId &&
+      (
+        <Shared_ui_components.m value="IMPORT_EXTENSION_WIDGET">
+          <Shared_ui_components.B
+            onChange={Ie}
+            accept=".js,.jsx"
+            className={Classnames(styles.itemUploadButton)}
+          >
+            {formatMessage({ id: "HeaderDropdown.importExtension" })}
+          </Shared_ui_components.B>
+        </Shared_ui_components.m>
+      )}
+      {(showExportLocalFile || showExportLocalFile) && <div className={styles.line} />}
+      {showOpenLocalFile && (
+        <Shared_ui_components.m value="OPEN_LOCAL_FILE">
+          <Shared_ui_components.B
+            onChange={Se}
+            onCancel={Ae}
+            accept=".json"
+            className={Classnames(styles.itemUploadButton)}
+          >
+            {formatMessage({ id: "HeaderDropdown.openLocalFile" })}
+          </Shared_ui_components.B>
+        </Shared_ui_components.m>
+      )}
+      {showExportLocalFile && (
+        <Shared_ui_components.m value="EXPORT_PROJECT_AS_JSON">
+          <div className={styles.itemContent}>
+            {formatMessage({ id: "HeaderDropdown.exportProjectAsJson" })}
+          </div>
+        </Shared_ui_components.m>
+      )}
+    </Shared_ui_components.l>
+  )
+  const helpMenu = (
+    <Shared_ui_components.l>
+      {uiConfig.tutorial.releaseInfo === Module_18.j.Show && (
+        <Shared_ui_components.m value="courseVideo">
+          <div className={styles.itemLinkContent} onClick={xe}>
+            <span className={styles.link}>
+              {formatMessage({ id: "courseVideo" })}
+            </span>
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {uiConfig.tutorial.tutorial === Module_18.j.Show && (
+        <Shared_ui_components.m value="tutorial">
+          <div className={styles.itemLinkContent}>
+            {/* [CoCo Next] 替换帮助文档链接 */}
+            <a
+              href={packageInfo.document}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              {formatMessage({ id: "seeTutorial" })}
+            </a>
+          </div>
+        </Shared_ui_components.m>
+      )}
+      <div className={styles.line} />
+      {uiConfig.tutorial.feedback === Module_18.j.Show && (
+        <Shared_ui_components.m value="feedback">
+          <div className={styles.itemLinkContent}>
+            {/* [CoCo Next] 替换问题反馈链接 */}
+            <a
+              href={packageInfo.feedback}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={styles.link}
+            >
+              {formatMessage({ id: "feedback" })}
+            </a>
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {uiConfig.tutorial.releaseInfo === Module_18.j.Show && (
+        <Shared_ui_components.m value="releaseInfo">
+          <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.showReleaseInfoDialog(true))}>
+            <span className={styles.link}>
+              {formatMessage({ id: "releaseInfo" })}
+            </span>
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {uiConfig.tutorial.about === Module_18.j.Show && (
+        <Shared_ui_components.m value="aboutUs">
+          <div className={styles.itemLinkContent} onClick={De}>
+            <span className={styles.link}>
+              {formatMessage({ id: "aboutUs" })}
+            </span>
+          </div>
+        </Shared_ui_components.m>
+      )}
+    </Shared_ui_components.l>
+  )
+  const settingMenu = (
+    <Shared_ui_components.l onClick={je}>
+      {uiConfig.help.ruler === Module_18.j.Show && (
+        <Shared_ui_components.m value="STAGE_RULER">
+          <div className={Classnames(styles.itemContent, playing && styles.disabled)}>
+            {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {uiConfig.help.stage === Module_18.j.Show && (
+        <Shared_ui_components.m value="STAGE_AREA">
+          <div className={Classnames(styles.itemContent, playing && styles.disabled)}>
+            {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
+          </div>
+        </Shared_ui_components.m>
+      )}
+      {/* [CoCo Next] 添加全屏按钮 */}
+      <Shared_ui_components.m value="FULLSCREEN">
+        <div className={styles.itemContent}>
+          {formatMessage({ id: "HeaderDropdown.fullscreen" })}
+        </div>
+      </Shared_ui_components.m>
+      {/* [CoCo Next] 添加缩小显示按钮 */}
+      <Shared_ui_components.m value="ZOOM_OUT">
+        <div className={styles.itemContent}>
+          {formatMessage(!isZoomOut ? { id: "HeaderDropdown.zoomOut" } : { id: "HeaderDropdown.restoreZoomOut" })}
+        </div>
+      </Shared_ui_components.m>
+    </Shared_ui_components.l>
+  )
+
+  const handleClickMenu = useCallback((value) => {
+    switch (value) {
+      case "cloudDB":
+        dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())
+        break
+      case "cloudSpace":
+        window.open(`${Shared_tools.A()}/`, "_blank")
+        break
+    }
+  }, [dispatch, userInfo])
+
   return (
     <div className={styles.wrapper} data-html2canvas-ignore="true">
       <div className={styles.left}>
@@ -744,223 +943,114 @@ const Header = React.memo(({ children }: { children: JSX.Element }) => {
           </Tooltip>
         )}
         {!le && uiConfig.cutLine === Module_18.j.Show && <div className={styles.logoCutLine} />}
-        <div className={styles.menu}>
-          {Object.values(uiConfig.file).includes(Module_18.j.Show) && !le && (
-            <Shared_ui_components.g
-              className={styles.fileDropdown}
-              overlay={
-                <Shared_ui_components.l onClick={Ce}>
-                  {uiConfig.file.newProject === Module_18.j.Show && (
-                    <Shared_ui_components.m value="CREATE_NEW_PROJECT">
-                      <div className={styles.itemContent}>
-                        {formatMessage({ id: "HeaderDropdown.newProject" })}
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  {uiConfig.file.openMyProject === Module_18.j.Show && (
-                    <Shared_ui_components.m value="OPEN_MY_PROJECT">
-                      <div className={styles.itemContent}>
-                        {formatMessage({ id: "HeaderDropdown.openProject" })}
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  {showSaveAs && (
-                    <Shared_ui_components.m value="SAVE_AS">
-                      <div className={styles.itemContent}>
-                        {formatMessage({ id: "HeaderDropdown.saveAs" })}
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  <div className={styles.line} />
-                  {uiConfig.file.showHistory === Module_18.j.Show && isAuthor && (
-                    <Shared_ui_components.m value="HISTORY">
-                      <div className={styles.itemContent}>
-                        {formatMessage({ id: "HeaderDropdown.history" })}
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  {
-                  // [CoCo Next] 移除协作导入自定义控件限制
-                  // !collWorkId &&
-                  (
-                    <Shared_ui_components.m value="IMPORT_EXTENSION_WIDGET">
-                      <Shared_ui_components.B
-                        onChange={Ie}
-                        accept=".js,.jsx"
-                        className={Classnames(styles.itemUploadButton)}
-                      >
-                        {formatMessage({ id: "HeaderDropdown.importExtension" })}
-                      </Shared_ui_components.B>
-                    </Shared_ui_components.m>
-                  )}
-                  {(showExportLocalFile || showExportLocalFile) && <div className={styles.line} />}
-                  {showOpenLocalFile && (
-                    <Shared_ui_components.m value="OPEN_LOCAL_FILE">
-                      <Shared_ui_components.B
-                        onChange={Se}
-                        onCancel={Ae}
-                        accept=".json"
-                        className={Classnames(styles.itemUploadButton)}
-                      >
-                        {formatMessage({ id: "HeaderDropdown.openLocalFile" })}
-                      </Shared_ui_components.B>
-                    </Shared_ui_components.m>
-                  )}
-                  {showExportLocalFile && (
-                    <Shared_ui_components.m value="EXPORT_PROJECT_AS_JSON">
-                      <div className={styles.itemContent}>
-                        {formatMessage({ id: "HeaderDropdown.exportProjectAsJson" })}
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                </Shared_ui_components.l>
-              }
+        {/* [CoCo Next] 小屏设备折叠菜单 */}
+        {innerWidth >= 840 ? <>
+          <div className={styles.menu}>
+            {Object.values(uiConfig.file).includes(Module_18.j.Show) && !le && (
+              <Shared_ui_components.g className={styles.fileDropdown} overlay={fileMenu}>
+                <Tooltip
+                  mouseLeaveDelay={0}
+                  placement="bottom"
+                  trigger={["hover", "click"]}
+                  title={formatMessage({ id: "file" })}
+                  overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
+                >
+                  <div className={styles.toolTipsBox}>
+                    <IconFont className="coco-header-menuIcon" type="icon-file" />
+                  </div>
+                </Tooltip>
+              </Shared_ui_components.g>
+            )}
+            {Object.values(uiConfig.tutorial).includes(Module_18.j.Show) && !le && (
+              <Shared_ui_components.g overlay={helpMenu}>
+                <Tooltip
+                  mouseLeaveDelay={0}
+                  placement="bottom"
+                  trigger={["hover", "click"]}
+                  title={formatMessage({ id: "help" })}
+                  overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
+                >
+                  <div className={styles.toolTipsBox}>
+                    <IconFont className="coco-header-menuIcon" type="icon-help-circle-active" />
+                  </div>
+                </Tooltip>
+              </Shared_ui_components.g>
+            )}
+            {Object.values(uiConfig.help).includes(Module_18.j.Show) && !le && (
+              <Shared_ui_components.g overlay={settingMenu}>
+                <Tooltip
+                  mouseLeaveDelay={0}
+                  placement="bottom"
+                  trigger={["hover", "click"]}
+                  title={formatMessage({ id: "setting" })}
+                  overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
+                >
+                  <div className={styles.toolTipsBox}>
+                    <IconFont className="coco-header-menuIcon" type="icon-settings" />
+                  </div>
+                </Tooltip>
+              </Shared_ui_components.g>
+            )}
+          </div>
+          {!le && uiConfig.cloudDBManager === Module_18.j.Show && (
+            <Tooltip
+              mouseLeaveDelay={0}
+              placement="bottom"
+              title={formatMessage({ id: "cloudDBManager" })}
+              trigger={["hover", "click"]}
+              overlayInnerStyle={{ position: "relative", top: -7 }}
             >
-              <Tooltip
-                mouseLeaveDelay={0}
-                placement="bottom"
-                trigger={["hover", "click"]}
-                title={formatMessage({ id: "file" })}
-                overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
+              <div
+                className={Classnames(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
+                onClick={() => dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())}
               >
-                <div className={styles.toolTipsBox}>
-                  <IconFont className="coco-header-menuIcon" type="icon-file" />
-                </div>
-              </Tooltip>
-            </Shared_ui_components.g>
+                <IconFont type="icon-database-manage-active" className={styles.databaseIcon} />
+              </div>
+            </Tooltip>
           )}
-          {Object.values(uiConfig.tutorial).includes(Module_18.j.Show) && !le && (
-            <Shared_ui_components.g
-              overlay={
-                <Shared_ui_components.l>
-                  {uiConfig.tutorial.releaseInfo === Module_18.j.Show && (
-                    <Shared_ui_components.m value="courseVideo">
-                      <div className={styles.itemLinkContent} onClick={xe}>
-                        <span className={styles.link}>
-                          {formatMessage({ id: "courseVideo" })}
-                        </span>
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  {uiConfig.tutorial.tutorial === Module_18.j.Show && (
-                    <Shared_ui_components.m value="tutorial">
-                      <div className={styles.itemLinkContent}>
-                        {/* [CoCo Next] 替换帮助文档链接 */}
-                        <a
-                          href={packageInfo.document}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.link}
-                        >
-                          {formatMessage({ id: "seeTutorial" })}
-                        </a>
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  <div className={styles.line} />
-                  {uiConfig.tutorial.feedback === Module_18.j.Show && (
-                    <Shared_ui_components.m value="feedback">
-                      <div className={styles.itemLinkContent}>
-                        {/* [CoCo Next] 替换问题反馈链接 */}
-                        <a
-                          href={packageInfo.feedback}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className={styles.link}
-                        >
-                          {formatMessage({ id: "feedback" })}
-                        </a>
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  {uiConfig.tutorial.releaseInfo === Module_18.j.Show && (
-                    <Shared_ui_components.m value="releaseInfo">
-                      <div className={styles.itemLinkContent} onClick={() => dispatch(Actions.showReleaseInfoDialog(true))}>
-                        <span className={styles.link}>
-                          {formatMessage({ id: "releaseInfo" })}
-                        </span>
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  {uiConfig.tutorial.about === Module_18.j.Show && (
-                    <Shared_ui_components.m value="aboutUs">
-                      <div className={styles.itemLinkContent} onClick={De}>
-                        <span className={styles.link}>
-                          {formatMessage({ id: "aboutUs" })}
-                        </span>
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                </Shared_ui_components.l>
-              }
+          <CloudSpaceManager />
+        </> : <div className={styles.menu}>
+          <Shared_ui_components.g overlay={
+            <Shared_ui_components.l onClick={handleClickMenu}>
+              {Object.values(uiConfig.file).includes(Module_18.j.Show) && !le && (
+                <SubMenuItemWrapper subMenu={fileMenu}>
+                  <div className={styles.itemContent}>{formatMessage({ id: "file" })}</div>
+                </SubMenuItemWrapper>
+              )}
+              {Object.values(uiConfig.tutorial).includes(Module_18.j.Show) && !le && (
+                <SubMenuItemWrapper subMenu={helpMenu}>
+                  <div className={styles.itemContent}>{formatMessage({ id: "help" })}</div>
+                </SubMenuItemWrapper>
+              )}
+              {Object.values(uiConfig.help).includes(Module_18.j.Show) && !le && (
+                <SubMenuItemWrapper subMenu={settingMenu}>
+                  <div className={styles.itemContent}>{formatMessage({ id: "setting" })}</div>
+                </SubMenuItemWrapper>
+              )}
+              <Shared_ui_components.m value="cloudDB">
+                <div className={styles.itemContent}>{formatMessage({ id: "cloudDBManager" })}</div>
+              </Shared_ui_components.m>
+              <Shared_ui_components.m value="cloudSpace">
+                <div className={styles.itemContent}>{formatMessage({ id: "cloudSpace.cloudSpace" })}</div>
+              </Shared_ui_components.m>
+            </Shared_ui_components.l>
+          }>
+            <Tooltip
+              mouseLeaveDelay={0}
+              placement="bottom"
+              trigger={["hover", "click"]}
+              title={formatMessage({ id: "HeaderDropdown.more" })}
+              overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
             >
-              <Tooltip
-                mouseLeaveDelay={0}
-                placement="bottom"
-                trigger={["hover", "click"]}
-                title={formatMessage({ id: "help" })}
-                overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
-              >
-                <div className={styles.toolTipsBox}>
-                  <IconFont className="coco-header-menuIcon" type="icon-help-circle-active" />
-                </div>
-              </Tooltip>
-            </Shared_ui_components.g>
-          )}
-          {Object.values(uiConfig.help).includes(Module_18.j.Show) && !le && (
-            <Shared_ui_components.g
-              overlay={
-                <Shared_ui_components.l onClick={je}>
-                  {uiConfig.help.ruler === Module_18.j.Show && (
-                    <Shared_ui_components.m value="STAGE_RULER">
-                      <div className={Classnames(styles.itemContent, playing && styles.disabled)}>
-                        {formatMessage(stageRulerVisible ? { id: "HeaderDropdown.hideRuler" } : { id: "HeaderDropdown.showRuler" })}
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                  {uiConfig.help.stage === Module_18.j.Show && (
-                    <Shared_ui_components.m value="STAGE_AREA">
-                      <div className={Classnames(styles.itemContent, playing && styles.disabled)}>
-                        {formatMessage(stageVisible ? { id: "HeaderDropdown.hideWidgetAndStage" } : { id: "HeaderDropdown.showWidgetAndStage" })}
-                      </div>
-                    </Shared_ui_components.m>
-                  )}
-                </Shared_ui_components.l>
-              }
-            >
-              <Tooltip
-                mouseLeaveDelay={0}
-                placement="bottom"
-                trigger={["hover", "click"]}
-                title={formatMessage({ id: "setting" })}
-                overlayInnerStyle={{ position: "relative", top: "6px", left: "5px" }}
-              >
-                <div className={styles.toolTipsBox}>
-                  <IconFont className="coco-header-menuIcon" type="icon-settings" />
-                </div>
-              </Tooltip>
-            </Shared_ui_components.g>
-          )}
-        </div>
-        {!le && uiConfig.cloudDBManager === Module_18.j.Show && (
-          <Tooltip
-            mouseLeaveDelay={0}
-            placement="bottom"
-            title={formatMessage({ id: "cloudDBManager" })}
-            trigger={["hover", "click"]}
-            overlayInnerStyle={{ position: "relative", top: -7 }}
-          >
-            <div
-              className={Classnames(styles.iconWrapper, styles.cloudIconWrapper, cloudDBManagerDialogVisible && styles.activeIconWrapper)}
-              onClick={() => dispatch(userInfo ? Actions.jj(true) : Actions.openSignInDialogAction())}
-            >
-              <IconFont type="icon-database-manage-active" className={styles.databaseIcon} />
-            </div>
-          </Tooltip>
-        )}
-        <CloudSpaceManager />
+              <div className={styles.toolTipsBox}>
+                <IconFont className="coco-header-menuIcon" type="icon-more" />
+              </div>
+            </Tooltip>
+          </Shared_ui_components.g>
+        </div>}
       </div>
-      <div className={styles.center}>{children}</div>
+      {/* [CoCo Next] 小屏设备不在 header 上显示运行按钮和作品名称 */}
+      {innerWidth >= 1200 && <div className={styles.center}>{children}</div>}
       <div className={styles.right}>
         {!le && uiConfig.coll === Module_18.j.Show && <div className={styles.otWrapper}><Collaboration /></div>}
         {!le && uiConfig.package === Module_18.j.Show && isAuthor && (

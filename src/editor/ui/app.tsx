@@ -52,6 +52,9 @@ import * as /* [auto-meaningful-name] */React1 from "react"
 import * as /* [auto-meaningful-name] */Module_816 from /* 816 */"../../../unrestored/shared/1571/2636/816"
 import /* [auto-meaningful-name] */Unrestored_shared_1571_2636_816 from "../../../unrestored/shared/1571/2636/816"
 import "./style/global.css"
+import { SideBar } from "./SideBar"
+import { useInnerWidth } from "../../shared/utils/ui/use-inner-width"
+import { useInnerHeight } from "../../shared/utils/ui/use-inner-height"
 
 var cB = memo(function () {
   const permissionDialogInfo = useSelector((state) => state.common.permissionDialogInfo)
@@ -175,6 +178,10 @@ function dB() {
 }
 
 export const App = React.memo(function () {
+
+  const innerWidth = useInnerWidth()
+  const innerHeight = useInnerHeight()
+
   var e = useSelector(function (e) {
     return e.common.language
   })
@@ -212,6 +219,8 @@ export const App = React.memo(function () {
       {<section
         className={Unrestored_shared_1571_2636_937.body}
       >
+        {/* [CoCo Next] 添加侧栏 */}
+        {(innerWidth < 1200 || innerHeight < 640) && <SideBar />}
         <aside>
           <PreviewArea/>
         </aside>

@@ -102,9 +102,9 @@ const WidgetListItem = memo(function (e) {
       }
       let innerDragType: typeof dragType = "none"
       let lastMouseDownEvent: MouseEvent = new MouseEvent("mousedown")
-      let lastTouchStartEvent: TouchEvent = new TouchEvent("touchstart")
+      // 这里不能构造 TouchEvent，因为 Firefox 不支持 TouchEvent 构造器
+      let lastTouchStartEvent: TouchEvent | null = null
       Object.defineProperty(lastMouseDownEvent, "target", { value: element })
-      Object.defineProperty(lastTouchStartEvent, "target", { value: element })
       let originalDragStartListener: ((event: DragEvent) => {}) | null = null
       function wrapperDragStartListener(event: DragEvent) {
         if (innerDragType === "polyfill") {
@@ -123,7 +123,9 @@ const WidgetListItem = memo(function (e) {
           }
           let eventHandlers = (wrapper as any)[eventHandlersKey]
           eventHandlers?.onMouseDown?.(lastMouseDownEvent)
-          eventHandlers?.onTouchStart?.(lastTouchStartEvent)
+          if (lastTouchStartEvent !== null) {
+            eventHandlers?.onTouchStart?.(lastTouchStartEvent)
+          }
         })()
         originalDragStartListener?.(event)
         setDragType(innerDragType)

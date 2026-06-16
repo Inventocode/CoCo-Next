@@ -437,6 +437,7 @@ var u = Module_6.a(Module_6.a({}, {
   widgetManage: "控件管理",
   resourceManage: "资源管理",
   radioGroup: "单选框",
+  "HeaderDropdown.more": "展开菜单",
   "HeaderDropdown.openLocalFile": "打开电脑文件",
   "HeaderDropdown.exportProjectAsJson": "保存到电脑",
   "HeaderDropdown.importExtension": "导入自定义控件",
@@ -449,6 +450,10 @@ var u = Module_6.a(Module_6.a({}, {
   "HeaderDropdown.hideRuler": "隐藏标尺",
   "HeaderDropdown.showWidgetAndStage": "显示舞台",
   "HeaderDropdown.hideWidgetAndStage": "隐藏舞台",
+  // [CoCo Next] 添加全屏和缩小显示
+  "HeaderDropdown.fullscreen": "全屏",
+  "HeaderDropdown.zoomOut": "缩小显示",
+  "HeaderDropdown.restoreZoomOut": "正常显示",
   "projectDialog.newProject": "新建作品",
   "projectDialog.myProject": "我的作品",
   "ChromeTips.compatibility": "当前浏览器可能存在兼容问题，无法正常运行CoCo请使用谷歌Chrome浏览器打开该网页",

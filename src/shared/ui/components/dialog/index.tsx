@@ -5,11 +5,13 @@
  */
 
 import classnames from "classnames"
-import { memo, useRef, useState, useCallback, useEffect, CSSProperties, ReactNode } from "react"
+import { memo, useRef, useState, useCallback, useEffect, CSSProperties, ReactNode, useLayoutEffect } from "react"
 import React from "react"
 import ReactDom from "react-dom"
 import "./styles.css"
 import { IconFont } from "../Iconfont"
+import { useInnerWidth } from "../../../utils/ui/use-inner-width"
+import { useInnerHeight } from "../../../utils/ui/use-inner-height"
 
 export const CoCoDialog = memo(({
   className,
@@ -38,6 +40,7 @@ export const CoCoDialog = memo(({
 }) => {
 
   const elementRef = useRef<HTMLDivElement>(null)
+  const wrapperElementRef = useRef<HTMLDivElement>(null)
   const contentElementRef = useRef<HTMLDivElement>(null)
   const [, setIsAnimationFinished] = useState(false)
 
@@ -59,6 +62,24 @@ export const CoCoDialog = memo(({
       onCloseCallback()
     }
   }, [onCloseCallback, maskClosable])
+
+  // [CoCo Next] 缩小显示过大的对话框
+  const innerWidth = useInnerWidth()
+  const innerHeight = useInnerHeight()
+  useLayoutEffect(() => {
+    const wrapperElement = wrapperElementRef.current
+    if (wrapperElement === null) {
+      return
+    }
+    const zoomX = innerWidth / wrapperElement.offsetWidth
+    const zoomY = innerHeight / wrapperElement.offsetHeight
+    const zoom = Math.min(zoomX, zoomY)
+    if (zoom < 1) {
+      wrapperElement.style.zoom = `${zoom}`
+    } else {
+      wrapperElement.style.zoom = ""
+    }
+  }, [wrapperElementRef, innerWidth, innerHeight])
 
   useEffect(() => {
     const element = elementRef.current
@@ -99,6 +120,7 @@ export const CoCoDialog = memo(({
             setIsAnimationFinished(false)
           }
         }}
+        ref={wrapperElementRef}
       >
         <div className={title && showCloseButton ? "coco-dialog-title" : ""}>
           {title && <div>{title}</div>}

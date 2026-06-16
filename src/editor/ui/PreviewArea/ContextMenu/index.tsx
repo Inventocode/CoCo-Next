@@ -46,17 +46,25 @@ export const ContextMenu = memo(() => {
   const { formatMessage } = Module_710.a()
   const dispatch = useDispatch()
 
+  // [CoCo Next] 主菜单关闭后子菜单也关闭
+  useEffect(() => {
+    if (!visible) { setShowsScreens(false) }
+  }, [visible])
+
   useEffect(() => {
     function handleMouseDown() {
       setImmediate(() => {
         dispatch(closeContextMenuAction())
-        document.removeEventListener("mousedown", handleMouseDown, true)
+        // [CoCo Next] 不使用捕获事件，因为捕获事件难以阻断
+        document.removeEventListener("mousedown", handleMouseDown/* , true */)
       })
     }
     if (visible) {
-      document.addEventListener("mousedown", handleMouseDown, true)
+      // [CoCo Next] 不使用捕获事件
+      document.addEventListener("mousedown", handleMouseDown/* , true */)
     }
-    return () => document.removeEventListener("mousedown", handleMouseDown, true)
+    // [CoCo Next] 不使用捕获事件
+    return () => document.removeEventListener("mousedown", handleMouseDown/* , true */)
   }, [dispatch, visible])
 
   function copyWidgetToScreen(screenId) {
@@ -106,6 +114,14 @@ export const ContextMenu = memo(() => {
     {![BuiltInWidgetTypes.ACTOR_WIDGET, BuiltInWidgetTypes.BRUSH_WIDGET].includes(widget?.type || "") && (
       <div
         className={classnames(styles.menuItem, styles.copyTo)}
+        onMouseDown={(event) => {
+          // [CoCo Next] 打开子菜单时阻止主菜单关闭
+          event.nativeEvent.stopImmediatePropagation()
+        }}
+        onClick={() => {
+          // [CoCo Next] 触碰点击也能打开子菜单
+          setShowsScreens(true)
+        }}
         onMouseEnter={() => { setShowsScreens(true) }}
         onMouseLeave={() => { setShowsScreens(false) }}
       >

@@ -15,6 +15,7 @@ import { CoCoDialog } from "../../../../shared/ui/components"
 
 import styles from "./style/styles.module.css"
 import changelog from "../../../../../changelog.md"
+import packageInfo from "../../../../../package.json"
 
 import LeftSideImage from "../../../assets/images/release-info/left-side.png"
 
@@ -49,11 +50,26 @@ export const ReleaseInfo = React.memo(() => {
   useEffect(function () {
     if (userInfoFetchDone) {
       if (!hasShown) {
-        if (localStorage.getItem("ReleaseVersion") !== Module_53.f) {
+        const lastVersion = localStorage.getItem("ReleaseVersion")
+        setHasShown(true)
+        if (lastVersion === null) {
+          dispatch(Actions.openConfirmDialogAction({
+            title: "查看文档",
+            content: "首次运行 CoCo Next，建议查看文档，了解 CoCo Next 的基本功能和用法",
+            cancelText: "暂不查看",
+            allowText: "立即查看",
+            onConfirm() {
+              open(packageInfo.document)
+              localStorage.setItem("ReleaseVersion", Module_53.f)
+            },
+            onCancel() {
+              localStorage.setItem("ReleaseVersion", Module_53.f)
+            }
+          }))
+        } else if (lastVersion !== Module_53.f) {
           dispatch(Actions.showReleaseInfoDialog(true))
           localStorage.setItem("ReleaseVersion", Module_53.f)
         }
-        setHasShown(true)
       }
     }
   }, [hasShown, dispatch, userId, userInfoFetchDone])

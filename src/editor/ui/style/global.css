@@ -316,8 +316,9 @@ body, html {
 }
 
 body {
-    min-width: 1280px;
-    min-height: 640px;
+    /* [CoCo Next] 小屏优化，取消最小尺寸限制 */
+    /* min-width: 1280px; */
+    /* min-height: 640px; */
     position: relative;
 }
 

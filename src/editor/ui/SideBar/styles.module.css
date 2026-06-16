@@ -1,0 +1,50 @@
+.sideBar {
+    width: 52px;
+    display: flex;
+    background-color: #6e4ff4;
+    flex-direction: column;
+    z-index: 10;
+}
+.item {
+    margin: 8px;
+}
+.button {
+    composes: item;
+    height: 36px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.toggleHeader {
+    font-size: 22px;
+    color: #fff;
+    opacity: .6;
+}
+.line {
+    margin-inline: 16px;
+    height: 1px;
+    background-color: #fff;
+    opacity: .6;
+}
+.padding {
+    flex-grow: 1;
+}
+.toggleStage {
+    border-radius: 18px;
+    background-color: #00000040;
+}
+.toggleStageButton {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    font-size: 22px;
+    color: #fff;
+}
+.toggleStageButton.active {
+    transform: scale(1.1);
+    background-color: orange;
+}

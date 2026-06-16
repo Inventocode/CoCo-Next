@@ -1,5 +1,5 @@
 import * as React from "react"
-import { memo, useEffect, useLayoutEffect, useRef, useState } from "react"
+import { memo, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react"
 import classnames from "classnames"
 import { useDispatch, useSelector } from "react-redux"
 
@@ -47,28 +47,31 @@ export const PreviewArea = memo(() => {
   const widgetListWidth = useWidgetListWidth()
   const widgetListSingleColumn = useWidgetListSingleColumn(widgetListWidth)
 
+  // [CoCo Next] 提取长按菜单处理方法
+  const commonHandleContextMenu = useCallback((event: Event, target: HTMLElement, x: number, y: number) => {
+    const closestSelectable = target.closest("." + Module_90.b)
+    const id = closestSelectable?.id || ""
+    const editable = closestSelectable?.classList.contains(Module_90.a)
+    if (!editable) {
+      event.preventDefault()
+    }
+    if (!closestSelectable || editable || Module_9.Bb(id)?.parentId) {
+      dispatch(closeContextMenuAction())
+    } else {
+      dispatch(changeContextMenuInfoAction({
+        position: { x, y },
+        visible: true,
+        widgetId: closestSelectable.id
+      }))
+    }
+  }, [dispatch])
+
   useEffect(function () {
     const mainElement = mainElementRef.current
     function handleContextMenu(event: PointerEvent) {
       const { target, clientX, clientY } = event as PointerEvent & { target: HTMLElement }
-      const closestSelectable = target.closest("." + Module_90.b)
-      const id = closestSelectable?.id || ""
-      const editable = closestSelectable?.classList.contains(Module_90.a)
-      if (!editable) {
-        event.preventDefault()
-      }
-      if (!closestSelectable || editable || Module_9.Bb(id)?.parentId) {
-        dispatch(closeContextMenuAction())
-      } else {
-        dispatch(changeContextMenuInfoAction({
-          position: {
-            x: clientX,
-            y: clientY
-          },
-          visible: true,
-          widgetId: closestSelectable.id
-        }))
-      }
+      // [CoCo Next] 提取长按菜单处理方法
+      commonHandleContextMenu(event, target, clientX, clientY)
     }
     if (mainElement) {
       mainElement.addEventListener("contextmenu", handleContextMenu)
@@ -76,6 +79,37 @@ export const PreviewArea = memo(() => {
     return function () {
       if (mainElement) {
         mainElement.removeEventListener("contextmenu", handleContextMenu)
+      }
+    }
+  }, [dispatch, mainElementRef])
+
+  // [CoCo Next] 移动端长按菜单
+  useEffect(() => {
+    const mainElement = mainElementRef.current
+    let handle: ReturnType<typeof setTimeout> | null = null
+    function handleTouchStart(event: TouchEvent) {
+      const { target, touches: { 0: { clientX = 0, clientY = 0 } = {} } } = event as TouchEvent & { target: HTMLElement }
+      handle = setTimeout(() => {
+        commonHandleContextMenu(event, target, clientX, clientY)
+      }, 400)
+    }
+    function cancel() {
+      if (handle !== null) {
+        clearTimeout(handle)
+      }
+    }
+    if (mainElement) {
+      mainElement.addEventListener("touchstart", handleTouchStart)
+      mainElement.addEventListener("touchmove", cancel)
+      mainElement.addEventListener("touchcancel", cancel)
+      mainElement.addEventListener("touchend", cancel)
+    }
+    return function () {
+      if (mainElement) {
+        mainElement.removeEventListener("touchstart", handleTouchStart)
+        mainElement.removeEventListener("touchmove", cancel)
+        mainElement.removeEventListener("touchcancel", cancel)
+        mainElement.removeEventListener("touchend", cancel)
       }
     }
   }, [dispatch, mainElementRef])
@@ -95,7 +129,7 @@ export const PreviewArea = memo(() => {
         dispatch(setStageScaleAction(scale))
       }
     }
-  }, [dispatch])
+  }, [dispatch, innerWidth])
 
   useLayoutEffect(function () {
     if (previewAreaRef.current && mainElementRef.current) {

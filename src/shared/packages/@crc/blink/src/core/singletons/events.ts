@@ -426,7 +426,8 @@ export class Events {
           unbind_original()
         }
         // Calling preventDefault stops the browser from scrolling/zooming the page.
-        var preventDef = !opt_noPreventDefault
+        // [CoCo Next] 默认不阻止默认行为，因为阻止默认行为会导致触碰操作无法触发点击事件
+        var preventDef = !(opt_noPreventDefault ?? true)
         if (preventDef) {
           if (e.cancelable == false) {
             return

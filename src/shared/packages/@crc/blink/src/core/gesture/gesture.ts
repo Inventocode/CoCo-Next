@@ -391,7 +391,8 @@ export class Gesture {
   bind_mouse_events(e) {
     this.on_move_wrapper = this.events.bind_event_with_checks(document, "mousemove", undefined, this.handle_move.bind(this))
     this.on_up_wrapper = this.events.bind_event_with_checks(document, "mouseup", undefined, this.handle_up.bind(this))
-    e.preventDefault()
+    // [CoCo Next] 不阻止默认行为（滚动界面），因为阻止默认行为会导致触碰操作无法触发点击事件，况且该页面也无需滚动
+    // e.preventDefault()
     e.stopPropagation()
   }
 
